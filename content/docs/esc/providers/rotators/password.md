@@ -19,21 +19,6 @@ The `password` rotator enables you to rotate any user-defined key by generating 
 If you want to generate _memorable passphrases_ use the [passphrase rotator](/docs/esc/providers/rotators/passphrase/)
 {{% /notes %}}
 
-## Inputs
-
-| Property          | Type    | Description                                                                                          |
-|-------------------|---------|-----------------------------------------------------------------------------------------------------|
-| `length`          | int     | The length of the generated password (8–100). (default: `16`)                                       |
-| `lower`           | boolean | Whether to include lowercase characters. (default: `true`)                                          |
-| `upper`           | boolean | Whether to include uppercase characters. (default: `true`)                                          |
-| `numeric`         | boolean | Whether to include numbers. (default: `true`)                                                       |
-| `special`         | boolean | Whether to include special characters. (default: `true`)                                            |
-| `minLower`        | int     | The minimum number of lowercase characters to include (0–100). (default: `0`)                       |
-| `minUpper`        | int     | The minimum number of uppercase characters to include (0–100). (default: `0`)                       |
-| `minNumeric`      | int     | The minimum number of numeric characters to include (0–100). (default: `0`)                         |
-| `minSpecial`      | int     | The minimum number of special characters to include (0–100). (default: `0`)                         |
-| `overrideSpecial` | string  | The set of special characters to choose from. (default: `!@#$%&*()-_=+[]{}<>:?`)                    |
-
 ## Example
 
 The `password` rotator can be configured for any user-defined key.
@@ -63,19 +48,21 @@ When you open the environment, you should see output similar to the following:
 }
 ```
 
-## State (Optional)
+## Schema reference
 
-| Property   | Type   | Description                            |
-|------------|--------|----------------------------------------|
-| `current`  | string | The most recently generated password.  |
-| `previous` | string | The prior generated password.          |
+{{< esc-schema-updated >}}
 
-## Outputs
+### Inputs
 
-| Property   | Type   | Description                                            |
-|------------|--------|--------------------------------------------------------|
-| `current`  | string | The most recently generated password, stored as a secret. |
-| `previous` | string | The prior generated password, stored as a secret.      |
+{{< esc-schema type="rotator" name="password" section="inputs" >}}
+
+### State
+
+{{< esc-schema type="rotator" name="password" section="state" >}}
+
+### Outputs
+
+{{< esc-schema type="rotator" name="password" section="outputs" >}}
 
 ## Troubleshooting
 

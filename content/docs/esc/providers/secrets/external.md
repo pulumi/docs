@@ -88,6 +88,18 @@ In ESC, you should see output like the following:
 
 You can mark the entire response as secret with `secret: true` (the default).
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="external" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="external" section="outputs" >}}
+
 ## Building Custom Adapters
 
 ### Requirements
@@ -265,19 +277,3 @@ values:
       request:
         secretName: MY_API_KEY
 ```
-
-## Schema Reference
-
-### Inputs
-
-| Property  | Type    | Description                                | Required | Default |
-|-----------|---------|--------------------------------------------|----------|---------|
-| `url`     | string  | HTTPS URL to your adapter service          | Yes      | -       |
-| `request` | object  | Arbitrary JSON object sent to your adapter | No       | `{}`    |
-| `secret`  | boolean | Whether to mark the response as secret     | No       | `true`  |
-
-### Outputs
-
-| Property   | Type   | Description                                 |
-|------------|--------|---------------------------------------------|
-| `response` | object | The JSON response from your adapter service |

@@ -23,7 +23,7 @@ The SDK is designed for two primary use cases:
 
 ## When not to use the SDK
 
-Do not use the ESC SDK to consume environments from inside a Pulumi IaC program. In an IaC program, list the environment in the `environment` block of your `Pulumi.<stack>.yaml` stack configuration so its values flow into the stack as configuration and secrets. See [Use ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) for details.
+Do not use the ESC SDK to consume environments from inside a Pulumi IaC program. In an IaC program, list the environment in the `environment` block of your `Pulumi.<stack>.yaml` stack configuration so its values flow into the stack as configuration and secrets. See [Use ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) for details.
 
 ## Supported languages
 

@@ -2,19 +2,23 @@ import * as aws from "@pulumi/aws";
 
 import { PolicyPack, validateResourceOfType, ResourceValidationPolicy } from "@pulumi/policy";
 
-export const s3BucketPrefixPolicy: ResourceValidationPolicy = {
-    name: "s3-bucket-prefix",
-    description: "Ensures S3 buckets use the required naming prefix.",
+export const rdsStorageEncryptionPolicy: ResourceValidationPolicy = {
+    name: "rds-storage-encryption",
+    description: "Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
     enforcementLevel: "mandatory",
-    validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
-        const requiredPrefix = "mycompany-";
-        const bucketPrefix = bucket.bucketPrefix || "";
-        if (!bucketPrefix.startsWith(requiredPrefix)) {
-            reportViolation(`S3 bucket must use '${requiredPrefix}' prefix. Current prefix: '${bucketPrefix}'`);
+    validateResource: validateResourceOfType(aws.rds.Instance, (instance, args, reportViolation) => {
+        // Exempt instances explicitly tagged as non-production data.
+        if (instance.tags?.["data-classification"] === "non-production") {
+            return;
+        }
+        if (!instance.storageEncrypted) {
+            reportViolation(
+                "RDS instance must have storage encryption enabled " +
+                "(or be tagged 'data-classification=non-production').");
         }
     }),
 };
 
 new PolicyPack("aws-typescript", {
-    policies: [s3BucketPrefixPolicy],
+    policies: [rdsStorageEncryptionPolicy],
 });

@@ -42,6 +42,18 @@ values:
     appSecret: ${gcp.secrets.app-secret}
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="gcp-secrets" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="gcp-secrets" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google Cloud, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/gcp/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
@@ -67,32 +79,3 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
   }
 }
 ```
-
-## Inputs
-
-| Property | Type                                             | Description                                                                                                                           |
-|----------|--------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| `login`  | [GCPSecretsLogin](#gcpsecretslogin)              | Credentials used to log in to Google Cloud.                                                                                           |
-| `access` | map[string][GCPSecretsAccess](#gcpsecretsaccess) | A map from names to secrets to read from Google Cloud Secrets Manager. The outputs will map each name to the secret's sensitive data. |
-
-### GCPSecretsLogin
-
-| Property      | Type   | Description                                                                      |
-|---------------|--------|----------------------------------------------------------------------------------|
-| `project`     | string | The **numerical** ID of the GCP project, aka project number. (e.g. 951040570662) |
-| `accessToken` | string | The access token used to authenticate with Google Cloud.                         |
-| `tokenType`   | string | The type of the access token.                                                    |
-| `expiry`      | string | [Optional] - The access token's expiry time.                                     |
-
-### GCPSecretsAccess
-
-| Property       | Type   | Description                                       |
-|----------------|--------|---------------------------------------------------|
-| `name`         | string | The name of the secret to import.                 |
-| `version`      | string | [Optional] - The version of the secret to import. |
-
-## Outputs
-
-| Property | Type   | Description                         |
-|----------|--------|-------------------------------------|
-| N/A      | object | A map of names to imported Secrets. |

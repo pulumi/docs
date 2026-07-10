@@ -119,7 +119,7 @@ Hello, user!
 
 ## pulumiConfig
 
-The `pulumiConfig` reserved property contains values that should be exported as stack configuration for Pulumi IaC. See the [Pulumi IaC integration guide](/docs/esc/guides/integrate-with-pulumi-iac/) for an overview.
+The `pulumiConfig` reserved property contains values that should be exported as stack configuration for Pulumi IaC. See the [Pulumi IaC integration guide](/docs/esc/guides/pulumi-iac/) for an overview.
 
 ### Properties
 

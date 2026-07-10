@@ -44,6 +44,18 @@ values:
     appSecret: ${infisical.secrets.app-secret}
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="infisical-secrets" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="infisical-secrets" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Infisical, see
@@ -69,33 +81,3 @@ environment identifier respectively. You should see output similar to the follow
   }
 }
 ```
-
-## Inputs
-
-| Property | Type                                                   | Description                                                                                                                |
-|----------|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| `login`  | [InfisicalSecretsLogin](#infisicalsecretslogin)        | Credentials to use to log in to Infisical.                                                                                 |
-| `get`    | map[string][InfisicalSecretsGet](#infisicalsecretsget) | A map from names to secrets to read from Infisical Secrets. The outputs will map each name to the secret's sensitive data. |
-
-### InfisicalSecretsLogin
-
-| Property      | Type   | Description                                                                                                               |
-|---------------|--------|---------------------------------------------------------------------------------------------------------------------------|
-| `siteUrl`     | string | [Optional] - The base URL of the Infisical instance you authenticated to. May be omitted if default US instance was used. |
-| `accessToken` | string | The access token to use for authentication.                                                                               |
-
-### InfisicalSecretsGet
-
-| Property      | Type   | Description                                                                                                                                                                                                                                                                       |
-|---------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `projectId`   | string | The projectId of the project the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and click the *Copy Project ID* button.                                                                                                |
-| `environment` | string | The environment slug of the environment the secret lives in. In the Infisical web app, navigate to your Secrets project, click on *Project Settings*, and find the slug in the *Environments* list. Default values are `dev`, `staging`, and `prod`                               |
-| `secretKey`   | string | The name of the secret to import.                                                                                                                                                                                                                                                 |
-| `secretPath`  | string | [Optional] - The path inside the environment where the secret lives. For example, if your secret `dbPassword` lives within `DatabaseDetails` folder. The path would be `/DatabaseDetails`. If secretPath is not specified, the default path is `/` - the root environment folder. |
-| `type`        | string | [Optional] - The secret type, either `shared` or `personal`.                                                                                                                                                                                                                      |
-
-### Outputs
-
-| Property | Type   | Description                         |
-|----------|--------|-------------------------------------|
-| N/A      | object | A map of names to imported Secrets. |

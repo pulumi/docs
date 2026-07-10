@@ -1,0 +1,15 @@
+{{/*
+  Renders the "last updated" caption for an ESC provider/rotator schema-reference
+  section. The date lives in data/esc_schemas_updated.json and is stamped by the
+  esc-update-schemas GitHub workflow ONLY on runs where data/esc_schemas.json
+  actually changed, so it advances when the schemas change and never on a no-op
+  nightly refresh (no churn). The ESC schema API exposes no version metadata, so
+  this change-gated date is our "what version of the schema is this" signal.
+
+  Place once directly under the "## Schema reference" heading on each page.
+*/}}
+{{ with (site.Data.esc_schemas_updated).updated }}
+<p style="font-size:0.875rem;color:var(--docs-fg-muted,#6b7280);margin-top:-0.5rem;">
+  Reference schemas last updated on {{ . }}, synced automatically from the Pulumi Cloud ESC API.
+</p>
+{{ end }}

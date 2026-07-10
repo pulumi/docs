@@ -141,30 +141,14 @@ values:
     github:token: ${gh.accessToken}
 ```
 
-## Inputs
+## Schema reference
 
-| Property       | Type                      | Description                                                                 |
-|----------------|---------------------------|-----------------------------------------------------------------------------|
-| `appId`        | number                    | The ID of the GitHub App providing access tokens for the environment.       |
-| `privateKey`   | string                    | The private key of the GitHub App (in PEM format).                          |
-| `owner`        | string                    | The GitHub account for which to get an installation access token.           |
-| `repositories` | string[]                  | [Optional] List of repositories to allow access to.                         |
-| `permissions`  | object                    | [Optional] A map of the permissions that the token should have.             |
-| `ghe`          | [GHLoginGHE](#ghloginghe) | [Optional] Options for connecting to a GitHub Enterprise installation.      |
+{{< esc-schema-updated >}}
 
-### GHLoginGHE
+### Inputs
 
-| Property         | Type   | Description                                                                                  |
-|------------------|--------|----------------------------------------------------------------------------------------------|
-| `host`           | string | The hostname of your GitHub Enterprise server.                                               |
+{{< esc-schema type="provider" name="gh-login" section="inputs" >}}
 
-## Outputs
+### Outputs
 
-| Property         | Type   | Description                                                                      |
-|------------------|--------|----------------------------------------------------------------------------------|
-| `appId`          | number | The ID of the GitHub App providing access tokens for the environment.            |
-| `appSlug`        | string | The GitHub App's slug.                                                           |
-| `installationId` | number | The ID of the GitHub App installation.                                           |
-| `accessToken`    | string | The access token used to authenticate with the GitHub API.                       |
-| `expiry`         | string | [Optional] The access token's expiry time (RFC3339).                             |
-| `type`           | string | The access token's type.                                                         |
+{{< esc-schema type="provider" name="gh-login" section="outputs" >}}

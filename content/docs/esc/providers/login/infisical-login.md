@@ -34,38 +34,25 @@ values:
     INFISICAL_TOKEN: ${infisical.login.accessToken}
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="infisical-login" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="infisical-login" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Infisical, see
 the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/infisical/) documentation.
 
-## Inputs
+## Static credentials
 
-| Property  | Type                                          | Description                                                                                                                |
-|-----------|-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| `siteUrl` | string                                        | [Optional] - The base URL of the Infisical instance you want to connect to. May be omitted if default US instance is used. |
-| `oidc`    | [InfisicalLoginOIDC](#infisicalloginoidc)     | [Optional] - OIDC configuration to log in to Infisical.                                                                    |
-| `static`  | [InfisicalLoginStatic](#infisicalloginstatic) | [Optional] - A static set of credentials to use to log in to Infisical.                                                    |
-
-### InfisicalLoginOIDC
-
-| Property            | Type     | Description                                                                                                                                                                                              |
-|---------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `identityId`        | string   | The identityId of the Identity to assume.                                                                                                                                                                |
-| `subjectAttributes` | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
-
-### InfisicalLoginStatic
-
-On your Infisical Identity, add a new Auth method and select `Universal Auth`. Create a new Client secret and copy both
-the clientID and clientSecret from Universal Auth.
-| Property | Type | Description |
-|----------------|--------|-----------------------------------|
-| `clientId`     | string | The Universal Auth client id. |
-| `clientSecret` | string | The Universal Auth client secret. |
-
-## Outputs
-
-| Property      | Type   | Description                                                                                                               |
-|---------------|--------|---------------------------------------------------------------------------------------------------------------------------|
-| `siteUrl`     | string | [Optional] - The base URL of the Infisical instance you authenticated to. May be omitted if default US instance was used. |
-| `accessToken` | string | The access token to use for authentication.                                                                               |
+To use static credentials instead of OIDC, add a new Auth method on your Infisical Identity and
+select `Universal Auth`. Create a new client secret, then supply the `clientId` and `clientSecret`
+from Universal Auth as the provider's static credentials.

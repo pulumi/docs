@@ -86,6 +86,18 @@ values:
 
 Here, `onepasswordToken` is the value exported by the imported `onepassword/credentials` environment. You can use any secret store this way — for example, a token read from another `fn::open` provider.
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="1password-secrets" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="1password-secrets" section="outputs" >}}
+
 ## Reference syntax
 
 Each entry under `get` reads a single field from a 1Password item using a **secret reference** of the form:
@@ -133,28 +145,3 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
 | Authentication fails when opening the environment | The Service Account token is missing, malformed, or has been revoked. | Confirm `serviceAccountToken` resolves to a valid token beginning with `ops_`. Generate a new token in 1Password if the old one was rotated or deleted. |
 | A reference returns an "access denied" or "not found" vault error | The Service Account does not have access to the vault named in the `op://` reference. | Grant the Service Account read access to that vault in 1Password, then re-open the environment. |
 | A reference returns an item or field "not found" error | The vault, item, section, or field name in the `op://` reference is misspelled, or the item lacks the named field. | Verify the reference against the item in 1Password, including spaces, section names, and the field name. |
-
-## Inputs
-
-| Property | Type                                                   | Description                               |
-|----------|--------------------------------------------------------|-------------------------------------------|
-| `login`  | [1PasswordSecretsLogin](#1passwordsecretslogin)        | Credentials used to log in to 1Password.  |
-| `get`    | map[string][1PasswordSecretsGet](#1passwordsecretsget) | The secrets to get.                       |
-
-### 1PasswordSecretsLogin
-
-| Property              | Type   | Description                                                                   |
-|-----------------------|--------|-------------------------------------------------------------------------------|
-| `serviceAccountToken` | string | The [1Password Service Account token](#prerequisites) to use for authentication. |
-
-### 1PasswordSecretsGet
-
-| Property | Type   | Description                                  |
-|----------|--------|----------------------------------------------|
-| `ref`    | string | A [reference to a secret](#reference-syntax) of the form `op://vault-name/item-name/[section-name/]field-name` to read from 1Password.  |
-
-### Outputs
-
-| Property | Type   | Description                        |
-|----------|--------|------------------------------------|
-| N/A      | object | A map from names to secret values. |

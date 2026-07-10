@@ -48,6 +48,18 @@ values:
     secureKey: ${aws.params.secureKey}
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="aws-parameter-store" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="aws-parameter-store" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/aws/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
@@ -78,32 +90,3 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
   }
 }
 ```
-
-## Inputs
-
-| Property | Type                                       | Description                                                                                                                             |
-|----------|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `region` | string                                                   | The AWS region to use.                                                                                                    |
-| `login`  | [AWSParameterStoreLogin](#awsparameterstorelogin)        | Credentials to use to log in to AWS.                                                                                      |
-| `get`    | map[string][AWSParameterStoreGet](#awsparameterstoreget) | A map from names to parameters to read from AWS Parameter Store. The outputs will map each name to the parameter's data.  |
-
-### AWSParameterStoreLogin
-
-| Property          | Type   | Description                                 |
-|-------------------|--------|---------------------------------------------|
-| `accessKeyId`     | string | The AWS access key ID                       |
-| `secretAccessKey` | string | The AWS secret access key                   |
-| `sessionToken`    | string | [Optional] - The AWS session token, if any. |
-
-### AWSParameterStoreGet
-
-| Property  | Type    | Description                                                                                                                                                |
-|-----------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`    | string  | The name of the parameter to import. To query by parameter label, use `"name": "name:label"`. To query by parameter version, use `"name": "name:version"`. |
-| `decrypt` | boolean | [Optional] - Whether to decrypt the value.  Only affects values of type SecureString.                                                                      |
-
-## Outputs
-
-| Property | Type   | Description                            |
-|----------|--------|----------------------------------------|
-| N/A      | object | A map of names to imported parameters. |

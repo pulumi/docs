@@ -1,33 +1,34 @@
 import * as assert from "assert";
 import * as policy from "@pulumi/policy";
-import { s3BucketPrefixPolicy } from "../index";
+import { rdsStorageEncryptionPolicy } from "../index";
 import { runResourcePolicy, getEmptyArgs } from "./test-helpers";
 
-describe("s3-bucket-prefix-policy", () => {
-    it("should pass when bucket has correct prefix", () => {
+describe("rds-storage-encryption-policy", () => {
+    it("should pass when storage encryption is enabled", () => {
         const args = getEmptyArgs();
-        args.type = "aws.s3.Bucket";
-        args.props.bucketPrefix = "mycompany-data";
+        args.type = "aws:rds/instance:Instance";
+        args.props.storageEncrypted = true;
         assert.doesNotThrow(() => {
-            runResourcePolicy(s3BucketPrefixPolicy, args);
+            runResourcePolicy(rdsStorageEncryptionPolicy, args);
         });
     });
 
-    it("should fail when bucket has wrong prefix", () => {
+    it("should fail when storage encryption is not enabled", () => {
         const args = getEmptyArgs();
-        args.type = "aws.s3.Bucket";
-        args.props.bucketPrefix = "wrongprefix-data";
+        args.type = "aws:rds/instance:Instance";
+        args.props.storageEncrypted = false;
         assert.throws(() => {
-            runResourcePolicy(s3BucketPrefixPolicy, args);
+            runResourcePolicy(rdsStorageEncryptionPolicy, args);
         });
     });
 
-    it("should fail when bucket has no prefix", () => {
+    it("should pass when the instance is tagged as non-production data", () => {
         const args = getEmptyArgs();
-        args.type = "aws.s3.Bucket";
-        args.props.bucketPrefix = "";
-        assert.throws(() => {
-            runResourcePolicy(s3BucketPrefixPolicy, args);
+        args.type = "aws:rds/instance:Instance";
+        args.props.storageEncrypted = false;
+        args.props.tags = { "data-classification": "non-production" };
+        assert.doesNotThrow(() => {
+            runResourcePolicy(rdsStorageEncryptionPolicy, args);
         });
     });
 });

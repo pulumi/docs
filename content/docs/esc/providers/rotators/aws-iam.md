@@ -82,6 +82,22 @@ values:
         userArn: arn:aws:iam::<account id>:user/<username>
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="rotator" name="aws-iam" section="inputs" >}}
+
+### State
+
+{{< esc-schema type="rotator" name="aws-iam" section="state" >}}
+
+### Outputs
+
+{{< esc-schema type="rotator" name="aws-iam" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and AWS, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/aws/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
@@ -137,44 +153,6 @@ The minimum permissions required for the rotation role are:
   ]
 }
 ```
-
-## Inputs
-
-| Property   | Type                                                     | Description                                                                                                              |
-|------------|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `region`   | string                                                   | [Optional] - The AWS region to use.                                                                                      |
-| `login`    | [AWSIAMLogin](#awsiamlogin)                              | Credentials to use to log in to AWS.                                                                                     |
-| `userArn`  | string                                                   | The ARN of the IAM User.                                                                                                 |
-
-## State (Optional)
-
-| Property | Type                            | Description                                                                                                            |
-|----------|---------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| current  | [AWSIAMOutputs](#awsiamoutputs) | [Optional] - Current credential information. These are the newest and recommended credentials.                         |
-| previous | [AWSIAMOutputs](#awsiamoutputs) | [Optional] - Previous credential information. These credentials are still valid, but will be phased out next rotation. |
-
-### AWSIAMLogin
-
-| Property          | Type   | Description                                 |
-|-------------------|--------|---------------------------------------------|
-| `accessKeyId`     | string | The AWS access key ID                       |
-| `secretAccessKey` | string | The AWS secret access key                   |
-| `sessionToken`    | string | [Optional] - The AWS session token, if any. |
-
-## Outputs
-
-| Property | Type                            | Description                                                                                               |
-|----------|---------------------------------|-----------------------------------------------------------------------------------------------------------|
-| current  | [AWSIAMOutputs](#awsiamoutputs) | Current credential information. These are the newest and recommended credentials.                         |
-| previous | [AWSIAMOutputs](#awsiamoutputs) | Previous credential information. These credentials are still valid, but will be phased out next rotation. |
-
-### AWSIAMOutputs
-
-| Property          | Type   | Description                                    |
-|-------------------|--------|------------------------------------------------|
-| `accessKeyId`     | string | The AWS access key ID                          |
-| `secretAccessKey` | string | The AWS secret access key, stored as a secret. |
-| `createdAt`       | string | Creation timestamp (in RFC3339 format)         |
 
 ## Troubleshooting
 

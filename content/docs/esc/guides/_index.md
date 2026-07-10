@@ -18,9 +18,11 @@ For first-party ESC integrations (the Pulumi Service Provider, Automation API, t
 
 - [Configuring OIDC](/docs/esc/guides/configuring-oidc/) — set up OpenID Connect trust between ESC and AWS, Azure, GCP, Doppler, Infisical, or Vault.
 
-## Use ESC with Pulumi IaC
+## Use with Pulumi IaC
 
-- [Manage ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) — consume environments from a Pulumi program.
+- [Use ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) — how the integration works, plus guides for adopting ESC and migrating existing patterns to it.
+- [Adopt ESC for config and secrets](/docs/esc/guides/pulumi-iac/adopt-esc-for-config-and-secrets/) — move the config and secrets in your stack files into ESC, safely and at scale.
+- [Migrate from stack references to `pulumi-stacks`](/docs/esc/guides/pulumi-iac/migrate-from-stack-references/) — replace `StackReference` resources with the ESC `pulumi-stacks` provider.
 - [Sync secrets to external platforms](/docs/esc/guides/sync-secrets-to-external-platforms/) — push ESC secrets and config to AWS Secrets Manager, Azure Key Vault, GitHub, Vault, and more.
 
 ## Run commands
