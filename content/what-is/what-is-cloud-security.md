@@ -75,7 +75,7 @@ Customers always own data, identity, and configuration. The lower the abstractio
 The CIA triad is the canonical framework for what security controls should achieve. It maps cleanly onto cloud workloads.
 
 * **Confidentiality.** Only authorized identities can read sensitive data. Achieved through encryption at rest and in transit, IAM, network isolation, and secrets management.
-* **Integrity.** Data and infrastructure aren't modified by unauthorized parties, and when they are, the change is detected. Achieved through signed artifacts, immutable infrastructure, audit logs, and drift detection.
+* **Integrity.** Data and infrastructure aren't modified by unauthorized parties, and when they are, the change is detected. Achieved through signed artifacts, immutable infrastructure, audit logs, and [drift detection](/what-is/what-is-infrastructure-drift/).
 * **Availability.** Services stay reachable to the people meant to reach them, even during attack or failure. Achieved through redundancy, DDoS protection, capacity planning, and incident response.
 
 A handful of additional principles round out modern cloud security practice: **defense in depth** (multiple overlapping controls), **least privilege** (only the access strictly required), **zero trust** (no implicit trust based on network location), and **secure by default** (insecure configurations require a deliberate override).

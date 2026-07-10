@@ -35,7 +35,7 @@ At its core, Pulumi follows a declarative model where you describe your desired 
 
 The Pulumi SDK provides language-specific libraries that offer strongly-typed bindings for cloud resources across 150+ providers. These libraries enable developers to define infrastructure using familiar programming constructs like functions, loops, conditionals, and classes, while providing rich IDE support including IntelliSense, error checking, and refactoring capabilities.
 
-When you run a [Pulumi program](/docs/iac/concepts/projects/), the deployment engine analyzes your code, computes the necessary changes to reach your desired state, and executes those changes in the optimal order while respecting resource dependencies. The engine maintains a detailed record of your infrastructure state, enabling features like drift detection, rollback capabilities, and collaborative workflows.
+When you run a [Pulumi program](/docs/iac/concepts/projects/), the deployment engine analyzes your code, computes the necessary changes to reach your desired state, and executes those changes in the optimal order while respecting resource dependencies. The engine maintains a detailed record of your infrastructure state, enabling features like [drift detection](/what-is/what-is-infrastructure-drift/), rollback capabilities, and collaborative workflows.
 
 The [Pulumi CLI](/docs/iac/cli/) serves as the primary interface for managing deployments, providing commands for previewing changes, executing deployments, and managing the infrastructure lifecycle. For teams requiring additional collaboration and governance features, Pulumi Cloud offers a managed service that provides centralized state management, team collaboration tools, policy enforcement, and detailed audit trails.
 
