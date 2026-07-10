@@ -497,7 +497,7 @@ config:
 
 {{< /chooser >}}
 
-See [Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) for the full workflow.
+See [Integrate ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) for the full workflow.
 
 ### Going finer: micro-stacks
 

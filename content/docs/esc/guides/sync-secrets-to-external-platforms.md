@@ -13,7 +13,7 @@ menu:
 Traditional secret management leads to *secret sprawl*: the same secret is duplicated across repositories, cloud providers, and CI/CD pipelines, and every change has to be applied by hand in each place. This guide shows a pattern that uses Pulumi ESC together with [Pulumi IaC](/docs/iac/) and [Pulumi Deployments](/docs/pulumi-cloud/deployments/) to define secrets and configuration once in ESC and automatically push them out to the external platforms where they're consumed.
 
 {{< notes type="info" >}}
-**This guide is for existing Pulumi IaC and ESC users.** If you're new to ESC, start with the [ESC Get Started guide](/docs/esc/get-started/). To consume an environment from a Pulumi program, see [Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/).
+**This guide is for existing Pulumi IaC and ESC users.** If you're new to ESC, start with the [ESC Get Started guide](/docs/esc/get-started/). To consume an environment from a Pulumi program, see [Integrate ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/).
 {{< /notes >}}
 
 ## How it works
@@ -196,7 +196,7 @@ The same pattern works for other targets — adjust the `sync` block and the tar
 
 ## Next steps
 
-- [Integrate ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) — consume environments from a Pulumi program
+- [Integrate ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) — consume environments from a Pulumi program
 - [Webhooks](/docs/esc/concepts/webhooks/) — respond to environment changes in real time
 - [Secrets and configuration providers](/docs/esc/providers/secrets/) — dynamically import secrets from external systems
 - [Pulumi Deployments](/docs/pulumi-cloud/deployments/) — run Pulumi programs on a schedule or in response to events

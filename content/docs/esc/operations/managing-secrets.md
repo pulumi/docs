@@ -68,7 +68,7 @@ pulumi env get <org>/<project>/<env-name> apiKey
 
 ### Via Pulumi IaC or language SDKs
 
-You can also consume ESC secrets programmatically — either through [Pulumi IaC stacks that import the environment](/docs/esc/guides/integrate-with-pulumi-iac/), or directly using the [ESC SDK](/docs/esc/concepts/sdks/).
+You can also consume ESC secrets programmatically — either through [Pulumi IaC stacks that import the environment](/docs/esc/guides/pulumi-iac/), or directly using the [ESC SDK](/docs/esc/concepts/sdks/).
 
 ## Organizing secrets
 
@@ -121,7 +121,7 @@ Use [Role-Based Access Control](/docs/administration/access-identity/rbac/scopes
 
 ## Next steps
 
-- [Integrate with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) - Use secrets in your infrastructure code
+- [Integrate with Pulumi IaC](/docs/esc/guides/pulumi-iac/) - Use secrets in your infrastructure code
 - [Dynamic secrets](/docs/esc/providers/secrets/) - Pull secrets from AWS, Azure, GCP secret stores
 - [Running commands with pulumi env run](/docs/esc/guides/running-commands/) - Inject secrets into any command
 - [Access control reference](/docs/administration/access-identity/rbac/) - Complete RBAC documentation
