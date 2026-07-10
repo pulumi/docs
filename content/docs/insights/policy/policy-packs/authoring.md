@@ -640,6 +640,96 @@ When writing policies for dynamic providers:
 
 1. **Document your assumptions**: Clearly document which properties your policy uses to identify dynamic providers so that changes to the dynamic provider implementation don't inadvertently break policy enforcement.
 
+## Inspecting resource options
+
+Resource validation callbacks receive an `args.opts` object of type `PolicyResourceOptions`. It mirrors the [resource options](/docs/iac/concepts/options/) set on the resource under validation, letting policies make decisions based on how a resource is configured rather than only its properties. The available fields are:
+
+- `protect` — whether the resource is protected from deletion.
+- `ignoreChanges` (`ignore_changes` in Python) — properties whose changes the engine ignores.
+- `deleteBeforeReplace` (`delete_before_replace`) — whether the resource is deleted before its replacement is created.
+- `aliases` — additional URNs aliased to the resource.
+- `customTimeouts` (`custom_timeouts`) — custom create, update, and delete timeouts.
+- `additionalSecretOutputs` (`additional_secret_outputs`) — outputs always treated as secrets.
+- `parent` — the [URN](/docs/iac/concepts/resources/names/#urns) of the resource's [parent](/docs/iac/concepts/options/parent/). For a resource created directly at the stack root rather than as a child of another resource or component, this is the URN of the root stack resource (type `pulumi:pulumi:Stack`).
+
+### Example: Enforcing a resource's parent
+
+The `parent` option is useful for enforcing that certain resources are only created as children of the component that is supposed to manage them, rather than loose at the stack root or under the wrong parent. Because `parent` is the parent's URN, you can extract the parent's type token from it: a URN has the form `urn:pulumi:{stack}::{project}::{parentType}${resourceType}::{name}`, so the type is the third `::`-delimited segment, and the resource's own type is the token after the last `$`.
+
+The following example requires that every `aws:rds/instance:Instance` is a child of a `my:components:Database` component:
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+
+const requiredParentType = "my:components:Database";
+
+new PolicyPack("parent-policies", {
+    policies: [{
+        name: "rds-instance-parent",
+        description: "Requires RDS instances to be managed by a Database component.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(aws.rds.Instance, (instance, args, reportViolation) => {
+            // args.opts.parent is the parent's URN; for a resource at the stack root it is the root stack's URN (type pulumi:pulumi:Stack).
+            const parentUrn = args.opts.parent;
+            const parentType = parentUrn?.split("::")[2]?.split("$").pop();
+            if (parentType !== requiredParentType) {
+                reportViolation(
+                    `RDS instances must be a child of a '${requiredParentType}' component.`);
+            }
+        }),
+    }],
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
+
+REQUIRED_PARENT_TYPE = "my:components:Database"
+
+def rds_instance_parent(args: ResourceValidationArgs, report_violation: ReportViolation):
+    if args.resource_type == "aws:rds/instance:Instance":
+        # args.opts.parent is the parent's URN; for a resource at the stack root it is the root stack's URN (type pulumi:pulumi:Stack).
+        parent_urn = args.opts.parent
+        parent_type = parent_urn.split("::")[2].split("$")[-1] if parent_urn else None
+        if parent_type != REQUIRED_PARENT_TYPE:
+            report_violation(
+                f"RDS instances must be a child of a '{REQUIRED_PARENT_TYPE}' component.")
+
+PolicyPack(
+    "parent-policies",
+    policies=[
+        ResourceValidationPolicy(
+            name="rds-instance-parent",
+            description="Requires RDS instances to be managed by a Database component.",
+            enforcement_level=EnforcementLevel.MANDATORY,
+            validate=rds_instance_parent,
+        ),
+    ],
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+{{% notes type="info" %}}
+`args.opts` is available on `ResourceValidationArgs` (resource validation policies), not on `StackValidationArgs`. To reason about parent-child relationships across the full resource graph, use a [stack validation policy](#stack-validation-policies) and inspect `args.resources`. See [resource options](/docs/iac/concepts/options/) for what each option means on the resource side.
+{{% /notes %}}
+
 ## Running policies locally
 
 Test your policy pack locally before publishing.
