@@ -9,7 +9,6 @@ authors:
 tags:
     - azure
     - static-websites
-    - azure-top-5
 category: tutorials
 series: azure-top-5
 ---

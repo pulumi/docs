@@ -161,4 +161,4 @@ This provides essential details for debugging interop issues and schema mismatch
 
 - [Build a Component](/docs/iac/using-pulumi/build-a-component/)
 - [Testing Pulumi Programs](/docs/iac/guides/testing/)
-- [Pulumi Provider SDK](/docs/iac/build-with-pulumi/pulumi-provider-sdk/)
+- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)

@@ -10,7 +10,6 @@ tags:
     - best-practices
     - automation-api
     - go
-    - iac-best-practices
 category: best-practices
 series: iac-best-practices
 aliases:

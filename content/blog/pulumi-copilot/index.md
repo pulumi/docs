@@ -12,7 +12,6 @@ tags:
     - ai
     - copilot
     - insights
-    - pulumi-copilot
 category: product
 series: pulumi-copilot
 

@@ -6,7 +6,10 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # picks the day's articles by weighted fair queuing — score = importance
 # (strategic tier x traffic) x staleness (days since the page's effective last
 # review) — and this workflow then fans out one
-# content-review-article.yml run per selected article. Each worker reviews
+# content-review-article.yml run per selected article. The importance term is
+# strategic tier x traffic, nudged by bounded boost-only reader signals (Search
+# Console impressions/CTR, feedback-widget votes) when their export exists.
+# Each worker reviews
 # exactly one article and, if it finds a fix, opens a draft PR; the re-lint
 # gate promotes it to ready (firing the normal triage -> review chain) and
 # arms GitHub auto-merge. master requires an approving review + the build
@@ -23,6 +26,14 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # no-ops cleanly on any count<=0, so a stray '00'/'-1' still does no work.
 # workflow_dispatch always runs regardless (the testing path; see the
 # dry_run / count / paths inputs).
+#
+# DEGRADATION HEALTH (issue #20078 §3.4): three inputs degrade gracefully but
+# used to do so silently — the traffic snapshot (selection falls back to
+# tier-only), pulumi/console access (workers' screenshot lane 2 goes
+# unverifiable), and the holiday feed (gate fails open). The health steps at
+# the end of the review job track each signal's state in the ledger bucket
+# under health/ and post a one-line-per-signal note to #docs-ops once a signal
+# has been degraded for a week (see scripts/content-review/signal-health.py).
 
 on:
   schedule:
@@ -64,8 +75,14 @@ jobs:
   holiday-check:
     name: Company-holiday check
     runs-on: ubuntu-latest
+    # feed_status feeds the degradation-health lane at the end of the review
+    # job: unconfigured (an explicit off-switch, never alarmed) / fetch_failed /
+    # empty (feed fetched but parsed to no usable holiday events — a rotated
+    # token serving an error page looks exactly like a quiet day otherwise) /
+    # ok. The holiday DECISION below is unchanged and still fails open.
     outputs:
       is_holiday: ${{ steps.check.outputs.is_holiday }}
+      feed_status: ${{ steps.check.outputs.feed_status }}
     steps:
       - uses: actions/checkout@v7
       - id: check
@@ -74,16 +91,26 @@ jobs:
         run: |
           if [ -z "$ICS_URL" ]; then
             echo "BAMBOOHR_HOLIDAY_ICS_URL not set; not skipping for holidays"
-            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"
+            echo "feed_status=unconfigured" >> "$GITHUB_OUTPUT"; exit 0
           fi
           if ! curl -fsSL --max-time 20 "$ICS_URL" -o holidays.ics; then
             echo "::warning::holiday feed unavailable (404/fetch failure); failing open (dispatcher will run)"
-            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"
+            echo "feed_status=fetch_failed" >> "$GITHUB_OUTPUT"; exit 0
           fi
           if python3 scripts/content-review/is-holiday.py --ics holidays.ics --tz America/Chicago; then
             echo "is_holiday=true" >> "$GITHUB_OUTPUT"
           else
             echo "is_holiday=false" >> "$GITHUB_OUTPUT"
+          fi
+          # Health probe, separate from the decision: does the feed look alive
+          # (any matching holiday event within a year)?
+          if python3 scripts/content-review/is-holiday.py --ics holidays.ics --feed-check; then
+            echo "feed_status=ok" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::holiday feed parsed to zero usable holiday events (empty/garbage feed?)"
+            echo "feed_status=empty" >> "$GITHUB_OUTPUT"
           fi
 
   review:
@@ -114,6 +141,24 @@ jobs:
           # Selection reads git history (staleness clock: creation date and
           # newest non-bot edit per page), so a shallow clone won't do.
           fetch-depth: 0
+      # Lane-2 health probe: the per-article worker's screenshot lane 2
+      # verifies UI strings against the private pulumi/console repo using
+      # PULUMI_BOT_TOKEN from the SAME ESC environment this job holds — so
+      # probing access here, once per run, is a deterministic proxy for whether
+      # every worker dispatched today will silently degrade lane 2 to
+      # "unverifiable". Keep the two token sources coupled or this probe lies.
+      # Never fails; feeds the degradation-health steps at the end of the job.
+      - name: Probe pulumi/console access (lane-2 health)
+        id: console-probe
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          if gh repo view pulumi/console --json name -q .name >/dev/null 2>&1; then
+            echo "status=ok" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::pulumi/console not accessible to the bot token; screenshot lane 2 will be unverifiable"
+            echo "status=degraded" >> "$GITHUB_OUTPUT"
+          fi
       - name: Install Node
         uses: actions/setup-node@v6
         with:
@@ -168,6 +213,8 @@ jobs:
             --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
           if [ -n "$BUCKET" ]; then
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
+            # Degradation-health state lives in the same bucket, own prefix.
+            echo "health_uri=s3://$BUCKET/health/" >> "$GITHUB_OUTPUT"
           else
             echo "ledger bucket output unavailable; selection proceeds on git staleness alone"
           fi
@@ -204,6 +251,37 @@ jobs:
             echo "traffic snapshot unavailable; selection proceeds without it"
           fi
 
+      # The reader-signals export (Search Console impressions/CTR, docs
+      # feedback-widget vote counts, real-404 hits per URL) follows the exact
+      # same pattern as the traffic snapshot above: produced weekly by the data
+      # team, latest-object URI published on their Airflow stack. Until that
+      # export ships, this resolve logs the skip and selection scores exactly
+      # as before — the consumer side here is inert-but-ready by design
+      # (pulumi/docs#20078 item 4.5).
+      - name: Resolve reader-signals URI
+        id: signals-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output docsReaderSignalsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -n "$URI" ]; then
+            echo "resolved reader-signals export URI: $URI"
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "reader-signals export not yet published; selection proceeds without reader signals"
+          fi
+      - name: Fetch reader-signals snapshot from S3
+        if: steps.signals-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          if aws s3 cp "${{ steps.signals-uri.outputs.uri }}" .reader-signals.json --quiet; then
+            echo "fetched reader-signals snapshot: $(wc -c < .reader-signals.json) bytes"
+          else
+            echo "reader-signals snapshot unavailable; selection proceeds without it"
+          fi
+
       # The review ledger (one JSON object per page, key = slug) lives in S3, not
       # the repo — so the daily bookkeeping never round-trips through a PR. Sync
       # it down to a local cache that select-articles.py reads via --ledger-dir.
@@ -235,6 +313,9 @@ jobs:
           if [ -f .traffic-snapshot ]; then
             ARGS+=(--traffic-file .traffic-snapshot)
           fi
+          if [ -f .reader-signals.json ]; then
+            ARGS+=(--signals-file .reader-signals.json)
+          fi
           if [ -n "${{ github.event.inputs.paths }}" ]; then
             ARGS+=(--paths "${{ github.event.inputs.paths }}")
           fi
@@ -259,12 +340,14 @@ jobs:
           # pre-merge review uses. `path`/`lane` are still passed for the
           # concurrency group and the --paths fallback.
           TRAFFIC=$(jq -c '.traffic' .content-review-queue.json)
+          SIGNALS=$(jq -c '.reader_signals // null' .content-review-queue.json)
           GEN=$(jq -r '.generated' .content-review-queue.json)
           jq -c '.articles[]' .content-review-queue.json | while read -r a; do
             P=$(echo "$a" | jq -r '.path')
             L=$(echo "$a" | jq -r '.lane')
-            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" --arg gen "$GEN" \
-              '{generated: $gen, count: 1, traffic: $traffic, articles: [$art]}')
+            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
+              --argjson signals "$SIGNALS" --arg gen "$GEN" \
+              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: $signals, articles: [$art]}')
             echo "dispatching worker for $P (lane=$L)"
             gh workflow run content-review-article.yml \
               --repo "${{ github.repository }}" \
@@ -283,6 +366,60 @@ jobs:
           HALTED: ${{ steps.select.outputs.halted }}
         run: |
           echo "::warning::Existing-content selection halted: ${HALTED} (no articles dispatched)"
+
+      # --- Degradation-health lane (issue #20078 §3.4). Observability only:
+      # every step is fail-open (continue-on-error) and must never break the
+      # dispatcher. signal-health.py is a pure function of (state file,
+      # observations, today); these steps move the bytes: state is one JSON
+      # object in the ledger bucket under health/, and after THRESHOLD_DAYS of
+      # continuous degradation of any input (traffic snapshot, pulumi/console
+      # access, holiday feed) a one-message alert posts to #docs-ops (the
+      # check-links.yml posting pattern), re-alerting weekly, not daily.
+      # workflow_dispatch runs are log-only: the state is computed and printed
+      # but never synced up, and Slack is never posted, so test dispatches
+      # don't pollute the day-counters. The script also emits a ::warning::
+      # per degraded signal on every run — the stateless fallback that still
+      # surfaces in the run summary when S3 itself is what's broken.
+      - name: Fetch health state from S3
+        if: always() && steps.ledger-bucket.outputs.health_uri != ''
+        continue-on-error: true
+        run: |
+          aws s3 cp "${{ steps.ledger-bucket.outputs.health_uri }}state.json" .health-state.json --quiet \
+            || echo "no prior health state (first run or S3 unavailable)"
+      - name: Record degradation signals
+        if: always()
+        continue-on-error: true
+        run: |
+          python3 scripts/content-review/signal-health.py \
+            --state .health-state.json \
+            --queue .content-review-queue.json \
+            --console-status "${{ steps.console-probe.outputs.status }}" \
+            --holiday-status "${{ needs.holiday-check.outputs.feed_status }}" \
+            --alert-out .health-alert.txt \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "--- health state ---"
+          cat .health-state.json
+      # Post before persisting: a job that dies between the two steps then
+      # re-alerts next run (a harmless duplicate) instead of never alerting.
+      # The residual gap — post fails but persist succeeds, muting the re-alert
+      # for one REALERT_DAYS cycle — is covered by the script's per-run
+      # ::warning:: fallback.
+      - name: Post degradation alert to Slack
+        if: always() && github.event_name == 'schedule' && hashFiles('.health-alert.txt') != ''
+        continue-on-error: true
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --rawfile txt .health-alert.txt \
+              '{channel: $ch, text: $txt, unfurl_links: false}')"
+      - name: Persist health state to S3
+        if: always() && github.event_name == 'schedule' && steps.ledger-bucket.outputs.health_uri != ''
+        continue-on-error: true
+        run: |
+          aws s3 cp .health-state.json "${{ steps.ledger-bucket.outputs.health_uri }}state.json" --quiet
 
 env:
   ESC_ACTION_OIDC_AUTH: true

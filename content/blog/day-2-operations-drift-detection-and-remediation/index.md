@@ -18,7 +18,6 @@ tags:
     - platform-engineering
     - devops
     - remediation
-    - idp-best-practices
 category: best-practices
 
 social:

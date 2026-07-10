@@ -9,7 +9,6 @@ authors:
 tags:
     - kubernetes
     - google-cloud
-    - kubernetes-fundamentals
 category: tutorials
 series: kubernetes-fundamentals
 ---

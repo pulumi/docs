@@ -6,7 +6,6 @@ meta_desc: "Provisioning virtual machines and redeploying applications on existi
 authors:
     - sophia-parafina
 tags:
-    - architecture-as-code
     - virtual-machines
 category: best-practices
 series: architecture-as-code

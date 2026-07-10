@@ -83,10 +83,19 @@ MAX_RETRIES = 3  # API-level retries on 429 / 5xx / transient network
 # Maximum response tokens. The whole review body is echoed back verbatim, so
 # this must exceed the body's token count or the splice truncates. A ~60K-char
 # body is ~12K output tokens on Sonnet 4.6; Sonnet 5's ~30%-heavier tokenizer
-# pushes the same body to ~15-16K, which left almost no headroom under the old
-# 16K cap — so the cap is now 24K (still a single non-streamed response well
-# under SPLICE_TIMEOUT_S). Goes in the messages.create `max_tokens` field.
-MAX_OUTPUT_TOKENS = 24000
+# pushes the same body to ~15-16K. The 24K cap sized from that (~3.85 chars/
+# token) still truncated a trail-heavy body on pulumi/docs#20135: the 🔍 trail's
+# emoji/URL/citation density runs ~2.6 chars/token, so a ~70K-char body blew
+# past 24K and the amputated echo got posted. Cap is now 32K, and
+# extract_splice_output() rejects `stop_reason == "max_tokens"` outright so a
+# cap overrun defers to soft-floor (intact body) instead of publishing a
+# truncated one. Goes in the messages.create `max_tokens` field.
+MAX_OUTPUT_TOKENS = 32000
+# Minimum acceptable output/input length ratio for the body echo. Surgical
+# splices edit lines in place (reword a parenthetical, move a bullet) — they
+# never remove more than a few lines — so an echo materially shorter than the
+# input means the model dropped content even if stop_reason looks clean.
+SHRINK_FLOOR = 0.9
 # Maximum number of surgical violations to fold into a single batched Haiku
 # call. Pre-v16 was N sequential calls (each one rewrites the whole ~50KB
 # body — ~12K output tokens × ~250 tok/s = ~50s/call); a hot review with 30
@@ -432,7 +441,55 @@ def build_batched_prompt(violations: list[dict], body: str) -> str:
     )
 
 
-def dispatch_splice(prompt: str, api_key: str) -> str | None:
+def extract_splice_output(payload: dict, input_body_len: int) -> str | None:
+    """Extract the edited body from a Messages API response payload, or None
+    if the response cannot be trusted as a full-body echo.
+
+    Rejects (returns None, caller defers to soft-floor with the intact body):
+    - `stop_reason == "max_tokens"` — the echo hit the output cap and is
+      truncated mid-word. This is exactly what mangled pulumi/docs#20135:
+      the truncated body is non-empty, so an emptiness check alone lets it
+      through, Step D then sees 15 structural violations (amputated H3
+      sections), and the soft-floor path publishes the stump.
+    - Output shorter than SHRINK_FLOOR of the input body — surgical splices
+      edit lines in place; any wholesale shrink means content was lost.
+    """
+    stop_reason = payload.get("stop_reason")
+    if stop_reason == "max_tokens":
+        print(
+            "validator-fix.py: splice response hit max_tokens "
+            f"(cap {MAX_OUTPUT_TOKENS}) — body echo is truncated; discarding",
+            file=sys.stderr,
+        )
+        return None
+    content = payload.get("content") or []
+    text_parts = [c.get("text", "") for c in content if isinstance(c, dict) and c.get("type") == "text"]
+    output = "".join(text_parts).strip()
+    if not output:
+        print(
+            f"validator-fix.py: splice model returned empty content "
+            f"(stop_reason={stop_reason!r})",
+            file=sys.stderr,
+        )
+        return None
+    # Defensive: strip code fences if the model wrapped the output despite
+    # the system prompt's instruction.
+    if output.startswith("```"):
+        lines = output.splitlines()
+        if lines[0].startswith("```") and lines[-1].startswith("```"):
+            output = "\n".join(lines[1:-1])
+    if len(output) < SHRINK_FLOOR * input_body_len:
+        print(
+            f"validator-fix.py: splice output is {len(output)} chars vs "
+            f"{input_body_len} input (< {SHRINK_FLOOR:.0%} floor) — "
+            f"body echo lost content (stop_reason={stop_reason!r}); discarding",
+            file=sys.stderr,
+        )
+        return None
+    return output
+
+
+def dispatch_splice(prompt: str, api_key: str, input_body_len: int) -> str | None:
     """Run one splice call (Sonnet 5) via the Anthropic Messages API.
     Returns the edited body or None on error.
 
@@ -506,23 +563,7 @@ def dispatch_splice(prompt: str, api_key: str) -> str | None:
 
     # Successful 2xx → extract the assistant text content. The response shape:
     #   {"content": [{"type":"text","text":"<edited body>"}, ...], ...}
-    content = payload.get("content") or []
-    text_parts = [c.get("text", "") for c in content if isinstance(c, dict) and c.get("type") == "text"]
-    output = "".join(text_parts).strip()
-    if not output:
-        print(
-            f"validator-fix.py: splice model returned empty content "
-            f"(stop_reason={payload.get('stop_reason')!r})",
-            file=sys.stderr,
-        )
-        return None
-    # Defensive: strip code fences if Haiku wrapped the output despite
-    # the system prompt's instruction.
-    if output.startswith("```"):
-        lines = output.splitlines()
-        if lines[0].startswith("```") and lines[-1].startswith("```"):
-            output = "\n".join(lines[1:-1])
-    return output
+    return extract_splice_output(payload, input_body_len)
 
 
 def main() -> int:
@@ -599,7 +640,7 @@ def main() -> int:
     for rule_id in rule_order:
         rule_violations = by_rule[rule_id]
         prompt = build_batched_prompt(rule_violations, body)
-        edited = dispatch_splice(prompt, api_key)
+        edited = dispatch_splice(prompt, api_key, len(body))
         if edited is None:
             print(
                 f"validator-fix.py: splice dispatch failed for rule "
