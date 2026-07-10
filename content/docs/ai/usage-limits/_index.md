@@ -3,10 +3,6 @@ title: Usage limits
 title_tag: Neo usage limits
 h1: Neo usage limits
 meta_desc: "Set dollar spend limits on Pulumi Neo for your organization and members, with email alerts as usage approaches the limit."
-aliases:
-- /docs/pulumi-cloud/neo/usage-limits/
-- /docs/iac/neo/usage-limits/
-- /docs/ai/neo/usage-limits/
 menu:
     ai:
         name: Usage limits
@@ -31,8 +27,6 @@ The organization limit is a single monthly dollar amount that covers all Neo usa
 
 The limit can be as low as **$10** and as high as **$1,000,000**. When the month's Neo usage reaches the limit, Neo pauses for the entire organization until usage resets at the start of the next billing period.
 
-![The Manage token usage panel showing an organization limit of $100 per month with email notifications enabled.](manage-token-usage.png)
-
 ## Set per-member limits
 
 You can also set a limit for an individual member, so no single person consumes the whole organization's budget. Per-member limits are optional; a member without one is still bound by the organization limit.
@@ -47,8 +41,6 @@ The **Manage token usage** panel lists each member with these columns:
 | **Amount used** | Neo spend so far this billing period |
 | **Per-member limit** | The limit you set for this member, if any |
 | **Effective limit** | The smaller of the per-member limit and the organization limit |
-
-![The Per-member limits table showing each member's amount used, per-member limit, and effective limit.](per-member-limits.png)
 
 ## Email alerts
 
