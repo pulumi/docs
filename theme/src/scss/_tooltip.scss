@@ -34,6 +34,33 @@ pulumi-tooltip {
         }
     }
 
+    // Left placement (opt in with position="left"): bubble to the left of the
+    // target, vertically centered, caret on its right edge. For triggers where an
+    // above-centered tooltip would overflow (e.g. the code copy button).
+    &[position="left"] {
+        .tooltip-content {
+            top: 50%;
+            bottom: auto;
+            left: auto;
+            right: 100%;
+            margin: 0 8px 0 0;
+            transform: translateY(-50%);
+
+            &:after {
+                @apply absolute m-0;
+                top: 50%;
+                left: auto;
+                right: -3px;
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+
+        // Cancel the base active rule's `bottom: 100%` so it stays left when shown.
+        .tooltip-target.active + .tooltip-content {
+            bottom: auto;
+        }
+    }
+
     // To prevent a flash of unstyled/understyled slotted content, we hide that content until
     // it's rendered as a child of the tooltip component.
     [slot="content"] {

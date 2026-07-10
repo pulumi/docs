@@ -1,4 +1,4 @@
-import { Component, Element, Host, h, Method, State } from "@stencil/core";
+import { Component, Element, Host, h, Method, Prop, State } from "@stencil/core";
 import { getUUID } from "../../util/util";
 
 /**
@@ -31,6 +31,11 @@ export class Tooltip {
     // Whether the tooltip is currently visible.
     @State()
     active: boolean;
+
+    // Placement relative to the target: "top" (default, above-centered) or "left".
+    // Reflected so _tooltip.scss can key off [position="left"].
+    @Prop({ reflect: true })
+    position: "top" | "left" = "top";
 
     // Show the tooltip.
     @Method()

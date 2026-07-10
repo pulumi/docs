@@ -13,25 +13,14 @@ div.highlight {
 
         flex-direction: row;
         width: fit-content;
-        margin: 8px 7px 0 0;
-        background: var(--color-violet-primary);
-
+        background: transparent;
         border-radius: 4px;
         position: absolute;
         top: 0;
         right: 0;
 
         &:hover {
-            background: var(--color-violet-800);
-        }
-
-        &:active {
-            background: var(--color-violet-primary);
-        }
-
-
-        .code-mode-dark & {
-            background: var(--color-violet-primary);
+            background: color-mix(in oklch, var(--color-white) 8%, transparent);
         }
 
         button.copy-button {
@@ -40,7 +29,7 @@ div.highlight {
             gap: 4px;
         }
 
-        // Use a slightly narrower tooltip for these.
+        // Narrower tooltip; left placement is set via position="left" in copybutton.ts.
         pulumi-tooltip {
             .tooltip-content {
                 @apply w-auto whitespace-nowrap;
@@ -60,17 +49,14 @@ div.highlight {
 
     .copy-button {
         @include transition;
-        color: #fff;
+        // Muted icon on the dark panel; the docs-light theme darkens it.
+        color: var(--color-gray-400);
         font-size: 14px;
         font-family: 'Inter';
         padding: 8px 8px 8px 10px;
 
-        .code-mode-dark & {
-            @apply text-gray-600;
-
-            &:hover {
-                @apply text-gray-500;
-            }
+        &:hover {
+            color: var(--color-gray-200);
         }
     }
 }

@@ -1,7 +1,9 @@
 pulumi-chooser {
-    // Headless choosers' option lists are hidden.
+    // Headless choosers' option lists are hidden. Language choosers wrap the list in
+    // a .chooser-toolbar, so hide that wrapper too.
     &[option-style="none"] {
-        > ul {
+        > ul,
+        > .chooser-toolbar {
             display: none;
         }
     }

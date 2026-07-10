@@ -393,7 +393,7 @@ Stack outputs respect secret annotations and are encrypted appropriately. If a s
 
 To add a README to a stack, export a stack output named `readme` whose value is the rendered markdown — most commonly by reading from a template file checked into your project (for example, `Pulumi.README.md`):
 
-{{< chooser language "typescript,python,go,csharp,java" / >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -473,6 +473,8 @@ public class App {
 ```
 
 {{% /choosable %}}
+
+{{< /chooser >}}
 
 The template file can reference other stack outputs (or resource properties) with `${...}` placeholders that Pulumi Cloud resolves when rendering. For example:
 
