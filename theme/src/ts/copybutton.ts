@@ -102,7 +102,7 @@ function addCopyButton(container: HTMLElement) {
         "</svg>";
     var buttonHtml =
         '<div class="copy-button-container">' +
-        "    <pulumi-tooltip>" +
+        '    <pulumi-tooltip position="left">' +
         '        <button class="copy-button">' + copyIconSvg + "</button>" +
         '        <span slot="content">' +
         tooltipText +

@@ -1,0 +1,163 @@
+// Min Light code theme for /docs light mode — the light-mode counterpart to the
+// global Min Dark theme (_chroma.scss), on a Violet 50 background per the Pulumi
+// brand "Code highlighting" guideline. Mirror of the dark block in
+// _docs-theme.scss: gated on `html:not([data-theme="dark"]) body.section-docs`,
+// imported unlayered so it beats the layered component rules. Comments are bumped
+// from Min Light's #c2c3c5 (unreadable on violet-50) to #6e7781; the rest is the
+// canonical palette.
+html:not([data-theme="dark"]) body.section-docs {
+    // Flip the dark code surface + text (set in _chroma.scss / _code.scss).
+    pre {
+        background: var(--color-violet-50);
+        color: #212121;
+    }
+
+    .chroma,
+    .bg {
+        background-color: var(--color-violet-50);
+        color: #212121;
+    }
+
+    .chroma {
+        .x { color: #212121; }
+        .err { color: #cd3131; }
+        .hl { background-color: var(--color-violet-100); }
+
+        // Keywords / storage
+        .k,
+        .kd,
+        .kn,
+        .kr,
+        .kt,
+        .nn,
+        .ow { color: #D32F2F; }
+
+        // Constants, numbers, builtins, variables (Min Light blue)
+        .kc,
+        .kp,
+        .m,
+        .mb,
+        .mf,
+        .mh,
+        .mi,
+        .il,
+        .mo,
+        .nb,
+        .bp,
+        .no,
+        .nl,
+        .nv,
+        .vc,
+        .vg,
+        .vi,
+        .vm { color: #1976D2; }
+
+        // Functions, types, classes, decorators, attributes (Min Light purple)
+        .n,
+        .na,
+        .nc,
+        .nd,
+        .ne,
+        .nf,
+        .fm,
+        .ni,
+        .nx { color: #6f42c1; }
+
+        // Properties + punctuation render as base text in Min Light
+        .py,
+        .p { color: #212121; }
+        .o { color: #24292e; }
+
+        // Strings
+        .l,
+        .ld,
+        .s,
+        .sa,
+        .sb,
+        .sc,
+        .dl,
+        .s2,
+        .se,
+        .sh,
+        .si,
+        .sx,
+        .sr,
+        .s1,
+        .ss { color: #2b5581; }
+
+        // Tags
+        .nt { color: #22863a; }
+
+        // Comments (bumped from #c2c3c5 for contrast — see header)
+        .c,
+        .ch,
+        .cm,
+        .c1,
+        .cs,
+        .cp,
+        .cpf { color: #6e7781; font-style: italic; }
+
+        // Docstrings track the comment color
+        .sd { color: #6e7781; font-style: italic; }
+
+        // Generic / diff
+        .gd { color: #b31d28; background-color: #ffeef0; }
+        .gi { color: #22863a; background-color: #e6ffed; }
+        .gh { color: #1976D2; font-weight: bold; }
+        .gu { color: #1976D2; }
+        .gp { color: #6e7781; font-weight: bold; }
+        .go { color: #6e7781; }
+        .gr,
+        .gt { color: #cd3131; }
+        .gs { font-weight: bold; color: #cd3131; }
+    }
+
+    // Copy button: dark icon + faint hover on the light panel.
+    .copy-button-container:hover {
+        background: var(--color-violet-100);
+    }
+
+    .copy-button {
+        color: var(--color-gray-700);
+
+        &:hover {
+            color: var(--color-gray-900);
+        }
+    }
+
+    // example-program footer (the code panel's bottom lip).
+    .example-program .example-program-footer {
+        background: var(--color-violet-50);
+
+        a {
+            color: var(--color-gray-700);
+
+            &:hover {
+                color: var(--color-gray-900);
+            }
+        }
+    }
+
+    // code-tabbed (interactive multi-language demo).
+    .code-tabbed {
+        .code-tabbed-tabs,
+        .code-tabbed-content,
+        .code-tabbed-status {
+            background: var(--color-violet-50);
+        }
+
+        .code-tabbed-tab {
+            .code-tabbed-tab-label {
+                color: var(--color-gray-600);
+            }
+
+            &:hover .code-tabbed-tab-label {
+                color: var(--color-gray-800);
+            }
+
+            &.active .code-tabbed-tab-label {
+                color: var(--color-gray-900);
+            }
+        }
+    }
+}

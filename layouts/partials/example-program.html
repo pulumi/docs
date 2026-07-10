@@ -74,8 +74,8 @@
                 <div data-program-path="{{ $path }}" data-program-language="{{ $language }}" data-program-file="{{ $program }}" data-program-depfile="{{ $depfile }}">
                     {{ highlight $code $language }}
                 </div>
-                <div class="example-program-footer bg-white">
-                    <pulumi-tooltip>
+                <div class="example-program-footer">
+                    <pulumi-tooltip position="left">
                         <a href="https://github.com/pulumi/docs/tree/master/static/programs/{{ $path }}-{{ $language }}" target="_blank">
                             {{ partial "icon.html" (dict "name" "brand/github") }}
                         </a>
