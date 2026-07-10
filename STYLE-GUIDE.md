@@ -179,11 +179,12 @@ Both syntaxes work for plain text content, but use percent signs for shortcodes 
 ## Grammar and punctuation
 
 - Use the Oxford (serial) comma: "build, deploy, and manage," not "build, deploy and manage."
+- Use present tense for how the product behaves: "Neo pauses when the limit is reached," not "Neo will pause." Reserve the future tense for events that genuinely happen later.
 - Contractions are fine — preferred, even — in docs. They read more naturally.
 - Put commas and periods outside closing quotation marks unless they belong to the quoted text — e.g., write `"us-west-2"`, with the comma outside.
 - Em-dashes are fine when you write them yourself, but revise away the em-dashes, three-item series, and filler phrasings that LLMs tend to emit — they read as unedited machine output.
 
-For dates, times, numbers, point of view (*you* vs. *we*), and anything else this guide doesn't specify, defer to the brand `writing-style` guidelines.
+For dates, times, numbers, and anything else this guide doesn't specify, defer to the brand [writing-style guide](https://brand.pulumi.com/voice/writing-style/). On **point of view** — the most-missed rule — it uses the second person (*you*), not the first-person plural (*we*): in docs, "we aren't doing anything — the reader is." Reserve *we* for blog and community content.
 
 ---
 
