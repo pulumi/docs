@@ -53,3 +53,12 @@ announcements:
       label: Read the blog
       href: "/blog/the-agentic-infrastructure-era/"
     dismissible: true
+  - id: event-openclaw-guardrails-2026-07-Rk7mQ2
+    active: true
+    display: both
+    badge: Event
+    text: "**Live webinar · July 14:** Securing personal AI agents — the guardrails and infrastructure OpenClaw needs."
+    cta:
+      label: Register
+      href: "/events/autonomous-agents-need-guardrails-openclaw/?utm_source=announcement-banner&utm_medium=website&utm_campaign=openclaw-guardrails-webinar"
+    dismissible: true
