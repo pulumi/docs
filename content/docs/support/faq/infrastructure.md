@@ -6,7 +6,7 @@ h1: Infrastructure as Code FAQ
 menu:
     support:
         parent: support-faq
-        name: Infrastructure FAQ
+        name: IaC FAQ
         weight: 1
         identifier: support-faq-infrastructure
 aliases:
@@ -83,6 +83,12 @@ Pulumi is a declarative tool that uses imperative languages to define your end s
 ### How will Pulumi make me more productive?
 
 Pulumi uses strongly typed languages with programming languages that support [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) and the [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) which means when you are defining Pulumi programs, you rarely need to leave your IDE.
+
+## Experimental features
+
+### What does "experimental" mean?
+
+Some Pulumi functionality is released as _experimental_. Experimental features are always opt-in: you enable them explicitly with a flag, command, or environment variable (such as `PULUMI_EXPERIMENTAL=true`). They are not necessarily supported, and they can change or be removed at any time without a deprecation cycle, so you should not rely on them for production workflows. When an experimental feature proves valuable, Pulumi invests in stabilizing it and promoting it to general availability, but until then its behavior can't be relied on.
 
 ## Provider Version Support
 

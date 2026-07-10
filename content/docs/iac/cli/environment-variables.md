@@ -375,7 +375,7 @@ aliases:
     </dt>
     <dd>
         <p>
-            Enables experimental options and commands.
+            Enables experimental options and commands. See <a href="/docs/support/faq/infrastructure/#what-does-experimental-mean">What does "experimental" mean?</a> for what to expect.
         </p>
         <pre><code class="text-xs">PULUMI_EXPERIMENTAL=true</code></pre>
     </dd>
