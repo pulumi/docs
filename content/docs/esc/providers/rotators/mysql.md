@@ -110,63 +110,21 @@ When you open the environment after a rotation, you should see output similar to
 }
 ```
 
-## Inputs
+## Schema reference
 
-| Property      | Type                              | Description            |
-|---------------|-----------------------------------|------------------------|
-| `database`    | [DatabaseConfig](#databaseconfig) | Database configuration |
-| `rotateUsers` | [RotateUsers](#rotateusers)       | Users to rotate        |
+{{< esc-schema-updated >}}
 
-## State (Optional)
+### Inputs
 
-| Property | Type                              | Description                                                                                               |
-|----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------|
-| current  | [UserCredential](#usercredential) | Current credential information. These are the newest and recommended credentials.                         |
-| previous | [UserCredential](#usercredential) | Previous credential information. These credentials are still valid, but will be phased out next rotation. |
+{{< esc-schema type="rotator" name="mysql" section="inputs" >}}
 
-## Outputs
+### State
 
-| Property | Type                              | Description                                                                                               |
-|----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------|
-| current  | [UserCredential](#usercredential) | Current credential information. These are the newest and recommended credentials.                         |
-| previous | [UserCredential](#usercredential) | Previous credential information. These credentials are still valid, but will be phased out next rotation. |
+{{< esc-schema type="rotator" name="mysql" section="state" >}}
 
-### DatabaseConfig
+### Outputs
 
-| Property       | Type                                                | Description                                                                                         |
-|----------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| `connector`    | [Connector](#connector)                             | (Optional) Database connector configuration. Leave `connector` out if using Direct Connect rotation |
-| `database`     | string                                              | Name of the database to use                                                                         |
-| `host`         | string                                              | Endpoint of the database                                                                            |
-| `port`         | int                                                 | Port of the database server                                                                         |
-| `managingUser` | [UserCredential](#usercredential)                   | Credentials for a user that has privileges to change passwords                                      |
-
-### Connector
-
-| Property    | Type                                                | Description                      |
-|-------------|-----------------------------------------------------|----------------------------------|
-| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/operations/rotation/aws-lambda) needs to be setup |
-
-### AWSLambdaConfig
-
-| Property    | Type                                                                  | Description                                                     |
-|-------------|-----------------------------------------------------------------------|-----------------------------------------------------------------|
-| `login`     | [AWSLogin](/docs/esc/providers/login/aws-login) | AWS login that has access to assume `aws-lambda` connector role |
-| `lambdaArn` | string                                                                | The ARN of the `aws-lambda` connector                           |
-
-### RotateUsers
-
-| Property    | Type   | Description                                                                                                   |
-|-------------|--------|---------------------------------------------------------------------------------------------------------------|
-| `username1` | string | Username of user in the database to rotate. If no state is provided, this user will be the one to be rotated. |
-| `username2` | string | Username of user in the database to rotate.                                                                   |
-
-### UserCredential
-
-| Property   | Type   | Description                       |
-|------------|--------|-----------------------------------|
-| `username` | string | Username of user in the database. |
-| `password` | string | Password of user in the database. |
+{{< esc-schema type="rotator" name="mysql" section="outputs" >}}
 
 ## Troubleshooting
 

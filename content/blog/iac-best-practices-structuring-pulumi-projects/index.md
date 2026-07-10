@@ -10,7 +10,6 @@ authors:
 tags:
     - best-practices
     - cloud-engineering
-    - iac-best-practices
 category: best-practices
 series: iac-best-practices
 aliases:

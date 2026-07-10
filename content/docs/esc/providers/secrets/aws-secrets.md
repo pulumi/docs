@@ -128,6 +128,18 @@ values:
     apiKey: ${aws.secrets.api-key}
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="aws-secrets" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="aws-secrets" section="outputs" >}}
+
 ## Required IAM permissions
 
 The identity that `aws-secrets` logs in as — the assumed OIDC role or the static credentials — must be allowed to read each secret referenced in `get`:
@@ -222,33 +234,3 @@ Login failures (assume-role errors, audience or subject mismatches) are covered 
 **Cause:** the identity can call `GetSecretValue` but isn't allowed to decrypt with the secret's KMS key.
 
 **Fix:** add `kms:Decrypt` for the key to the identity's IAM policy, and make sure the KMS key policy also permits that principal. See [Required IAM permissions](#required-iam-permissions).
-
-## Inputs
-
-| Property | Type                                       | Description                                                                                                                  |
-|----------|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| `region` | string                                     | The AWS region to use.                                                                                                       |
-| `login`  | [AWSSecretsLogin](#awssecretslogin)        | Credentials to use to log in to AWS.                                                                                         |
-| `get`    | map[string][AWSSecretsGet](#awssecretsget) | A map from names to secrets to read from AWS Secrets Manager. The outputs will map each name to the secret's sensitive data. |
-
-### AWSSecretsLogin
-
-| Property          | Type   | Description                                 |
-|-------------------|--------|---------------------------------------------|
-| `accessKeyId`     | string | The AWS access key ID                       |
-| `secretAccessKey` | string | The AWS secret access key                   |
-| `sessionToken`    | string | [Optional] - The AWS session token, if any. |
-
-### AWSSecretsGet
-
-| Property       | Type   | Description                                             |
-|----------------|--------|---------------------------------------------------------|
-| `secretId`     | string | The ID of the secret to import.                         |
-| `versionId`    | string | [Optional] - The version of the secret to import.       |
-| `versionStage` | string | [Optional] - The version stage of the secret to import. |
-
-## Outputs
-
-| Property | Type   | Description                         |
-|----------|--------|-------------------------------------|
-| N/A      | object | A map of names to imported Secrets. |

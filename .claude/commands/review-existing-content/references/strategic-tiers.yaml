@@ -17,9 +17,17 @@
 #               regardless of evidence. This is the PRIMARY retirement
 #               guardrail (retirement is no longer gated to a lane). Tier 1
 #               implies no_retire; set it explicitly on lower tiers that are
-#               SEO-critical or contractually required. Once GSC data is
-#               flowing, high-impression entries can be regenerated from
-#               thresholds; hand-curated entries stay.
+#               SEO-critical or contractually required. GSC data now flows via
+#               the reader-signals export (select-articles.py --signals-file;
+#               per-page impressions/CTR ride each queue entry's signals.gsc
+#               block) — regenerating high-impression entries from thresholds
+#               remains a follow-up; hand-curated entries stay.
+#               The veto is CODE-ENFORCED: the publish job rejects a
+#               retirement verdict whose page matches a no_retire (or
+#               tier-1/tier-0) prefix, via
+#               scripts/content-review/check-retire-veto.py — the model's
+#               reading of the skill is the instruction, this file is the
+#               guarantee.
 #
 # Matching is LONGEST PREFIX WINS (so a deeper, more specific entry overrides
 # a broader one). Prefixes are repo paths, not URLs.

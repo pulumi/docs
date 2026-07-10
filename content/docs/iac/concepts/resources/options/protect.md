@@ -164,3 +164,7 @@ resources:
 ## Applying protection to all resources
 
 There is no built-in configuration flag to mark every resource in a stack as protected. To apply `protect: true` to all resources in a stack, use [stack transforms](/docs/iac/concepts/resources/options/transforms/#stack-transforms). A stack transform is a callback that the Pulumi engine invokes for every resource during deployment; it can inspect and modify resource options, including `protect`, before the resource is created or updated.
+
+## See also
+
+`protect` is one of several safeguards for keeping production infrastructure safe. For the full workflow, including reviewing previews, update plans, policy as code, and CI/CD gating, see [Protecting against undesired changes](/docs/iac/operations/stack-management/protecting-against-undesired-changes/).

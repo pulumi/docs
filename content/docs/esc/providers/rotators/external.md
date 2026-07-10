@@ -104,6 +104,22 @@ When opening the environment after rotation, you should see output like this:
 }
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="rotator" name="external" section="inputs" >}}
+
+### State
+
+{{< esc-schema type="rotator" name="external" section="state" >}}
+
+### Outputs
+
+{{< esc-schema type="rotator" name="external" section="outputs" >}}
+
 ## Building Custom Rotators
 
 ### Requirements
@@ -371,41 +387,6 @@ apiCredentials:
     rotatedAt: "2025-01-16T10:00:00Z"
     service: "my-api"
 ```
-
-## Schema Reference
-
-### Inputs
-
-| Property  | Type   | Description                                                | Required | Default |
-|-----------|--------|------------------------------------------------------------|----------|---------|
-| `url`     | string | HTTPS URL to your rotator adapter service                  | Yes      | -       |
-| `request` | object | [Rotate only] - Arbitrary JSON object sent to your adapter | No       | `{}`    |
-
-### State (Optional)
-
-You can optionally provide initial state in your ESC environment:
-
-```yaml
-values:
-  rotatedCredentials:
-    fn::rotate::external:
-      inputs:
-        url: https://my-adapter.example.com/rotate
-        request:
-          service: api
-      state:
-        current:
-          apiKey: existing-key-123
-          rotatedAt: "2025-01-01T00:00:00Z"
-```
-
-If no state is provided, the rotator passes `"state": null` on the first rotation.
-
-### Outputs
-
-| Property  | Type   | Description                                           |
-|-----------|--------|-------------------------------------------------------|
-| `current` | object | The JSON response from your adapter, marked as secret |
 
 ## Troubleshooting
 

@@ -176,7 +176,7 @@ html[data-theme="dark"] body.section-docs {
 // gated on `html[data-theme="dark"] body.section-docs`, so the light source in
 // _notes.scss, _tables.scss, _card.scss, _breadcrumb.scss, _docs-home.scss,
 // components/*, etc. is never touched and light mode is unchanged. Callout hues
-// keep their light identity in dark (info=violet, tip=green, warning=orange),
+// keep their light identity in dark (info=blue, tip=green, warning=orange),
 // each mapped to the brand's 950 background / 300 accent steps.
 // ===========================================================================
 html[data-theme="dark"] body.section-docs {
@@ -187,20 +187,23 @@ html[data-theme="dark"] body.section-docs {
         }
 
         &.note-info {
-            background: var(--color-violet-950);
+            background: var(--color-blue-950);
 
             a,
-            i,
-            svg.ph-icon {
-                color: var(--color-violet-300);
+            i {
+                color: var(--color-blue-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
+                color: var(--color-blue-300);
             }
 
             div.line {
-                background-color: var(--color-violet-300);
+                background-color: var(--color-blue-300);
             }
 
             code {
-                background-color: color-mix(in oklch, var(--color-violet-300) 22%, transparent);
+                background-color: color-mix(in oklch, var(--color-blue-300) 22%, transparent);
             }
         }
 
@@ -208,8 +211,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-green-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-green-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-green-300);
             }
 
@@ -226,8 +232,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-orange-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-orange-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-orange-300);
             }
 
@@ -437,13 +446,40 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // --- Language chooser + tabs (active indicator uses the shared
-    //     gradient-border violet-primary, too dark for the dark surface) -------
+    // --- Chooser tabs: re-assert the underline colors (inactive = transparent,
+    //     hover = border, active = link) so the unlayered `*` border reset below
+    //     doesn't override them. ---------------------------------------------
     pulumi-chooser > ul li {
-        border-color: var(--docs-border);
+        border-bottom-color: transparent;
 
         &:hover {
-            border-color: var(--color-gray-400);
+            border-bottom-color: var(--docs-border);
+        }
+
+        a {
+            color: var(--docs-fg-muted);
+
+            &:hover {
+                color: var(--docs-fg);
+            }
+        }
+
+        &.active {
+            border-bottom-color: var(--docs-link);
+
+            a {
+                color: var(--docs-fg);
+            }
+        }
+    }
+
+    // Language toolbar tabs: re-assert the underline colors (inactive = transparent,
+    // active = link) so the unlayered `*` border reset below doesn't override them.
+    .chooser-toolbar > ul li {
+        border-bottom-color: transparent;
+
+        &:hover {
+            border-bottom-color: var(--docs-border);
         }
 
         a {
@@ -668,13 +704,8 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // Code-block copy button stays primary violet-700 (the --color-violet-primary
-    // remap would otherwise turn it lavender).
-    .copy-button-container,
-    .copy-button-container:active,
-    .code-mode-dark .copy-button-container {
-        background: var(--color-violet-700);
-    }
+    // The copy button is a transparent ghost chip (see _copy-button.scss); it reads
+    // fine on the dark panel as-is, so dark mode needs no override here.
 
     // Masked chrome icons (nav toggles, TOC chevron + "On this page" glyph) bake
     // a fixed-color SVG behind a mask; drop the image and tint the mask so they

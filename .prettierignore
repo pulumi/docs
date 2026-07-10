@@ -79,3 +79,6 @@ static/js
 /.pr-body-draft.md
 /.lint.log
 /.lint-comment.md
+/.review-changes.patch
+/.review-changes.paths
+/.applied.paths

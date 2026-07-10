@@ -50,7 +50,9 @@ on:
         default: ''
 
 jobs:
-  # synchronize → just mark the existing pinned review stale.
+  # synchronize → mark the existing pinned review stale, and record whether
+  # the prior state was outstanding-issues so the auto-refresh job below can
+  # decide whether the push is a candidate for a scoped automatic update.
   mark-stale:
     if: |
       github.event_name == 'pull_request' &&
@@ -61,8 +63,11 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+    outputs:
+      was_outstanding: ${{ steps.transition.outputs.was_outstanding }}
     steps:
       - name: Mark previous Claude review as stale
+        id: transition
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
@@ -75,14 +80,119 @@ jobs:
           # are not transitioned: in-progress means a run is mid-flight,
           # error is a workflow failure (separate triage), and stale is
           # already terminal.
+          WAS_OUTSTANDING=false
           LABELS=$(gh pr view "$PR" --repo "${{ github.repository }}" --json labels --jq '[.labels[].name] | join(",")')
           if [[ ",$LABELS," == *",review:outstanding-issues,"* ]]; then
             gh pr edit "$PR" --repo "${{ github.repository }}" \
               --add-label "review:stale" --remove-label "review:outstanding-issues"
+            WAS_OUTSTANDING=true
           elif [[ ",$LABELS," == *",review:no-blockers,"* ]]; then
             gh pr edit "$PR" --repo "${{ github.repository }}" \
               --add-label "review:stale" --remove-label "review:no-blockers"
           fi
+          echo "was_outstanding=$WAS_OUTSTANDING" >> "$GITHUB_OUTPUT"
+
+  # Auto-refresh a just-staled review when the push delta is trivial — the
+  # "I fixed what you flagged" case. A deterministic gate
+  # (auto-refresh-gate.py) checks that every hunk of the push diff lands on
+  # (or within a few lines of) a 🚨 Outstanding finding's [L...] anchor and
+  # that the push is small; only then is claude-update.yml dispatched to run
+  # the scoped Sonnet fix-response pass. Anything the gate can't prove —
+  # large pushes, new files, hunks outside flagged lines, force-pushes,
+  # unparsable pinned comments — leaves the PR in review:stale exactly as
+  # before, with the documented explicit refresh paths
+  # (`@claude #update-review` / `#new-review` / draft→ready).
+  #
+  # Scope guards:
+  # - Only fires when mark-stale transitioned OFF review:outstanding-issues.
+  #   A stale no-blockers review has nothing to re-verify.
+  # - Same-repo head branches only. Fork PRs run pull_request with a
+  #   read-only token that can't dispatch workflows; they keep the manual
+  #   refresh flow.
+  # - Once per push comes free: one synchronize event per push, and
+  #   claude-update.yml's per-PR concurrency group (cancel-in-progress)
+  #   collapses stacked pushes onto the newest head.
+  auto-refresh:
+    needs: mark-stale
+    if: |
+      needs.mark-stale.outputs.was_outstanding == 'true' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      actions: write # gh workflow run claude-update.yml
+    steps:
+      # The gate scripts come from the BASE ref, never the PR head — the
+      # decision to spend model budget must not be steerable by the PR
+      # under review. Sparse checkout: this job only needs the scripts.
+      - name: Checkout gate scripts (base ref)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 1
+          sparse-checkout: .claude/commands/docs-review/scripts
+
+      - name: Evaluate auto-refresh gate
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.after }}
+        run: |
+          SCRIPTS=.claude/commands/docs-review/scripts
+          no_fire() {
+            echo "fire=false" >> "$GITHUB_OUTPUT"
+            echo "auto-refresh gate: no fire — $1" | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          }
+
+          bash "$SCRIPTS/pinned-comment.sh" fetch --pr "$PR" --repo "$REPO" \
+            > /tmp/pinned-body.md || true
+          [ -s /tmp/pinned-body.md ] || no_fire "no pinned review on PR #$PR"
+
+          LAST_SHA=$(bash "$SCRIPTS/pinned-comment.sh" last-reviewed-sha \
+            --pr "$PR" --repo "$REPO" 2>/dev/null || true)
+          [ -n "$LAST_SHA" ] || no_fire "no last-reviewed SHA in review history"
+
+          # Push delta via the compare API — no checkout depth games. The
+          # three-dot compare diffs merge-base..head: on a normal push the
+          # merge-base IS the last-reviewed SHA (exact push delta); after a
+          # force-push the merge-base drifts older, the diff inflates, and
+          # the gate fails closed downstream.
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/$REPO/compare/$LAST_SHA...$HEAD_SHA" > /tmp/push.diff \
+            || no_fire "compare $LAST_SHA...$HEAD_SHA failed (history rewritten?)"
+
+          gh pr view "$PR" --repo "$REPO" --json files \
+            --jq '[.files[].path]' > /tmp/pr-files.json \
+            || no_fire "could not list PR files"
+
+          RESULT=$(python3 "$SCRIPTS/auto-refresh-gate.py" \
+            --pinned-body /tmp/pinned-body.md \
+            --push-diff /tmp/push.diff \
+            --pr-files /tmp/pr-files.json) \
+            || no_fire "gate script error (fail closed)"
+
+          FIRE=$(echo "$RESULT" | jq -r '.fire')
+          REASON=$(echo "$RESULT" | jq -r '.reason')
+          echo "fire=$FIRE" >> "$GITHUB_OUTPUT"
+          echo "auto-refresh gate: fire=$FIRE — $REASON" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # Dispatch with GITHUB_TOKEN — same pattern as claude-new.yml's
+      # dispatch of this workflow. The dispatched run's actor becomes
+      # github-actions[bot]; claude-update.yml opts in via allowed_bots.
+      - name: Dispatch scoped update review
+        if: steps.gate.outputs.fire == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run claude-update.yml \
+            --repo "${{ github.repository }}" \
+            -f pr_number="${{ github.event.pull_request.number }}" \
+            -f head_sha="${{ github.event.after }}" \
+            -f auto=true
 
   claude-review:
     # Fire only for workflow_run events from Claude Triage that were

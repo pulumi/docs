@@ -34,26 +34,19 @@ values:
     DOPPLER_TOKEN: ${doppler.login.accessToken}
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="doppler-login" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="doppler-login" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Doppler, see
 the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/doppler/) documentation.
-
-## Inputs
-
-| Property  | Type                                          | Description                                                                                                                |
-|-----------|-----------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| `oidc`    | [DopplerLoginOIDC](#dopplerloginoidc)     | OIDC configuration to log in to Doppler.                                                                    |
-
-### DopplerLoginOIDC
-
-| Property            | Type     | Description                                                                                                                                                                                              |
-|---------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `identityId`        | string   | The identityId of the Doppler service account identity to assume.                                                                                                                                                                |
-| `subjectAttributes` | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
-
-## Outputs
-
-| Property      | Type   | Description                                                                                                               |
-|---------------|--------|---------------------------------------------------------------------------------------------------------------------------|
-| `accessToken` | string | The short lived access token to use for authentication.                                                                               |

@@ -241,13 +241,26 @@ div.highlight.line-numbers {
         }
 
         .example-program-footer {
-            @apply block bg-blue-900 -mt-1 pb-1 px-2 rounded-b text-base mb-4 text-right;
+            @apply block -mt-1 pb-1 px-2 rounded-b text-base mb-4 text-right;
+
+            // Always dark — the footer is the code panel's bottom lip.
+            background: var(--color-violet-950);
+
+            // Shrink the tooltip's positioning context to the icon (placement is
+            // set via <pulumi-tooltip position="left">).
+            pulumi-tooltip {
+                @apply inline-block;
+            }
+
+            .ph-icon {
+                @apply h-4 w-4;
+            }
 
             a {
-                @apply text-blue-300 ;
+                @apply text-gray-400;
 
                 &:hover {
-                    @apply text-blue-200;
+                    @apply text-gray-200;
                 }
             }
         }

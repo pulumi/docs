@@ -88,12 +88,12 @@ import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
 new PolicyPack("aws-typescript", {
     policies: [{
         name: "s3-no-public-read",
-        description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
+        description: "Prohibits setting the publicRead or publicReadWrite permission on AWS S3 bucket ACLs.",
         enforcementLevel: "mandatory",
-        validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
-            if (bucket.acl === "public-read" || bucket.acl === "public-read-write") {
+        validateResource: validateResourceOfType(aws.s3.BucketAcl, (bucketAcl, args, reportViolation) => {
+            if (bucketAcl.acl === "public-read" || bucketAcl.acl === "public-read-write") {
                 reportViolation(
-                    "You cannot set public-read or public-read-write on an S3 bucket. " +
+                    "You cannot set public-read or public-read-write on an S3 bucket ACL. " +
                     "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html");
             }
         }),
@@ -117,16 +117,16 @@ from pulumi_policy import (
 )
 
 def s3_no_public_read_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-    if args.resource_type == "aws:s3/bucket:Bucket" and "acl" in args.props:
+    if args.resource_type == "aws:s3/bucketAcl:BucketAcl" and "acl" in args.props:
         acl = args.props["acl"]
         if acl == "public-read" or acl == "public-read-write":
             report_violation(
-                "You cannot set public-read or public-read-write on an S3 bucket. " +
+                "You cannot set public-read or public-read-write on an S3 bucket ACL. " +
                 "Read more about ACLs here: https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html")
 
 s3_no_public_read = ResourceValidationPolicy(
     name="s3-no-public-read",
-    description="Prohibits setting the publicRead or publicReadWrite permission on AWS S3 buckets.",
+    description="Prohibits setting the publicRead or publicReadWrite permission on AWS S3 bucket ACLs.",
     enforcement_level=EnforcementLevel.MANDATORY,
     validate=s3_no_public_read_validator,
 )

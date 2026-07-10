@@ -77,7 +77,7 @@ CALMS (Culture, Automation, Lean, Measurement, Sharing) is one of the most widel
 | Pillar | What IaC contributes |
 |---|---|
 | **Culture** | Application and platform changes flow through the same review process. Operations stops being an out-of-band ticket queue and becomes a peer to development. |
-| **Automation** | Every cloud resource is provisioned by code. Manual console clicks are exceptions that get noticed by drift detection. |
+| **Automation** | Every cloud resource is provisioned by code. Manual console clicks are exceptions that get noticed by [drift detection](/what-is/what-is-infrastructure-drift/). |
 | **Lean** | Smaller, more frequent infrastructure changes replace big-bang quarterly migrations. Failed changes are reverted in minutes. |
 | **Measurement** | Deployment frequency, lead time, change-failure rate, and MTTR can be measured for the platform the same way they're measured for the product. |
 | **Sharing** | Reusable infrastructure components and policy packs ship between teams. Platform teams package vetted patterns; product teams consume them. |

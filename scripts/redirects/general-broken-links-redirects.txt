@@ -84,3 +84,5 @@ company/pulumi/jobs/index.html|/careers/
 blog/relaunching-pulumis-public-roadmap/index.html|/blog/
 brand/virtual-backgrounds/index.html|https://brand.pulumi.com/
 pricing/open-source-free-tier/index.html|/pricing/
+cf2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/
+migrate/cf2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/

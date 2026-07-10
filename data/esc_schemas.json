@@ -1,0 +1,2651 @@
+{
+  "providers": {
+    "1password-secrets": {
+      "description": "The [`1password-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/1password-secrets/) dynamically imports secrets from 1Password into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::1password-secrets:\n  login:\n    serviceAccountToken:\n      fn::secret: \"ops_123ABC\"\n  get:\n    email_section_example:\n      ref: \"op://Management/PagerDuty/Admin/email\"\n    anna_sans_section_example:\n      ref: \"op://dev/Stripe/publishable-key\"\n    olaf_attr_example:\n      ref: \"op://development/GitHub/Security/one-time password?attribute=otp\"\n    sven_ssh_example:\n      ref: \"op://Private/ssh keys/ssh key/private key?ssh-format=openssh\"\n    nokk_whitespace_example:\n      ref: \"op://development/aws/Access Keys/access_key_id\"\n    gale_unique_id_example:\n      ref: \"op://prod/yj3jfj2vzsbiwqabprflnl27lm/password\""
+          }
+        ],
+        "properties": {
+          "get": {
+            "additionalProperties": {
+              "description": "1Password Secrets properties.",
+              "properties": {
+                "ref": {
+                  "description": "A [reference to a secret](https://developer.1password.com/docs/cli/secrets-reference-syntax) of the form `op://vault-name/item-name/[section-name/]field-name` to read from 1Password.",
+                  "pattern": "op://.+",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ref"
+              ],
+              "title": "1PasswordSecretsGet",
+              "type": "object"
+            },
+            "description": "The secrets to get.",
+            "minProperties": 1,
+            "type": "object"
+          },
+          "login": {
+            "description": "Credentials used to log in to 1Password.",
+            "properties": {
+              "serviceAccountToken": {
+                "description": "The service account token to use for authentication.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "serviceAccountToken"
+            ],
+            "title": "1PasswordSecretsLogin",
+            "type": "object"
+          }
+        },
+        "required": [
+          "get",
+          "login"
+        ],
+        "type": "object"
+      },
+      "name": "1password-secrets",
+      "outputs": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map from names to secret values.",
+        "type": "object"
+      }
+    },
+    "aws-login": {
+      "description": "The [`aws-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/aws-login/) logs in to AWS using static credentials or OIDC.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::aws-login:\n  oidc:\n    duration: 1h\n    roleArn: arn:aws:iam::012345678912:role/role-abcd123\n    sessionName: pulumi-esc"
+          }
+        ],
+        "properties": {
+          "oidc": {
+            "description": "Options for temporary OIDC credentials.",
+            "properties": {
+              "duration": {
+                "default": "2h",
+                "description": "The duration of the role session.",
+                "pattern": "^([0-9]+h)?([0-9]+m)?([0-9]+s)?$",
+                "type": "string"
+              },
+              "policyArns": {
+                "description": "ARNs for additional policies to apply to the role session.",
+                "items": {
+                  "maxLength": 2048,
+                  "minLength": 20,
+                  "pattern": "[\\x{0009}\\x{000A}\\x{000D}\\x{0020}-\\x{007E}\\x{0085}\\x{00A0}-\\x{D7FF}\\x{E000}-\\x{FFFD}\\x{10000}-\\x{10FFFF}]+",
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "roleArn": {
+                "description": "The ARN of the role to assume.",
+                "maxLength": 2048,
+                "minLength": 20,
+                "pattern": "[\\x{0009}\\x{000A}\\x{000D}\\x{0020}-\\x{007E}\\x{0085}\\x{00A0}-\\x{D7FF}\\x{E000}-\\x{FFFD}\\x{10000}-\\x{10FFFF}]+",
+                "type": "string"
+              },
+              "sessionName": {
+                "description": "The name of the role session.",
+                "maxLength": 64,
+                "minLength": 2,
+                "pattern": "[\\w+=,.@-]*",
+                "type": "string"
+              },
+              "subjectAttributes": {
+                "description": "The attributes used to issue the oidc token subject.",
+                "items": {
+                  "enum": [
+                    "pulumi.user.login",
+                    "pulumi.organization.login",
+                    "currentEnvironment.name",
+                    "rootEnvironment.name"
+                  ],
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "sessionName",
+              "roleArn"
+            ],
+            "title": "AWSLoginOIDC",
+            "type": "object"
+          },
+          "static": {
+            "description": "Options for static credentials.",
+            "properties": {
+              "accessKeyId": {
+                "description": "The AWS access key ID.",
+                "type": "string"
+              },
+              "secretAccessKey": {
+                "description": "The AWS secret access key.",
+                "type": "string"
+              },
+              "sessionToken": {
+                "description": "The AWS session token, if any.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessKeyId",
+              "secretAccessKey"
+            ],
+            "title": "AWSLogin",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "name": "aws-login",
+      "outputs": {
+        "properties": {
+          "accessKeyId": {
+            "description": "The AWS access key ID.",
+            "type": "string"
+          },
+          "secretAccessKey": {
+            "description": "The AWS secret access key.",
+            "type": "string"
+          },
+          "sessionToken": {
+            "description": "The AWS session token, if any.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "accessKeyId",
+          "secretAccessKey"
+        ],
+        "title": "AWSLogin",
+        "type": "object"
+      }
+    },
+    "aws-parameter-store": {
+      "description": "The [`aws-parameter-store` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/aws-parameter-store/) dynamically imports Parameters from AWS Parameter Store into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::aws-parameter-store:\n  region: us-west-1\n  login: ${aws.login}\n  get:\n    myKey:\n      name: /myNamespace/myKey\n    myKeyByVersion:\n      name: /myNamespace/myKey:1\n    myKeyByVersionLabel:\n      name: /myNamespace/myKey:stable\n    secureKey:\n      name: /myNamespace/secureKey\n      decrypt: true\n    myList:\n      name: /myNamespace/myList"
+          }
+        ],
+        "properties": {
+          "get": {
+            "additionalProperties": {
+              "description": "Parameter Store Get properties.",
+              "properties": {
+                "decrypt": {
+                  "default": false,
+                  "description": "Whether to decrypt the parameter value.",
+                  "type": "boolean"
+                },
+                "name": {
+                  "description": "The name of the parameter to get. You can include a version number or label after a colon.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "title": "AWSParameterStoreGet",
+              "type": "object"
+            },
+            "description": "The parameters to get.",
+            "minProperties": 1,
+            "type": "object"
+          },
+          "login": {
+            "description": "The credentials to use to get parameters.",
+            "properties": {
+              "accessKeyId": {
+                "description": "The AWS access key ID.",
+                "type": "string"
+              },
+              "secretAccessKey": {
+                "description": "The AWS secret access key.",
+                "type": "string"
+              },
+              "sessionToken": {
+                "description": "The AWS session token, if any.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessKeyId",
+              "secretAccessKey"
+            ],
+            "title": "AWSLogin",
+            "type": "object"
+          },
+          "region": {
+            "description": "The region in which the parameters are stored.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "get",
+          "login",
+          "region"
+        ],
+        "type": "object"
+      },
+      "name": "aws-parameter-store",
+      "outputs": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map from names to parameter values.",
+        "type": "object"
+      }
+    },
+    "aws-secrets": {
+      "description": "The [`aws-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/aws-secrets/) dynamically imports Secrets from AWS Secrets Manager into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::aws-secrets:\n  region: us-west-1\n  login: ${aws.login}\n  get:\n    api-key:\n      secretId: api-key\n    app-secret:\n      secretId: app-secret"
+          }
+        ],
+        "properties": {
+          "get": {
+            "additionalProperties": {
+              "description": "AWS Secrets Manager secret properties.",
+              "properties": {
+                "secretId": {
+                  "description": "The ID of the secret to get.",
+                  "type": "string"
+                },
+                "versionId": {
+                  "description": "The version of the secret to get.",
+                  "type": "string"
+                },
+                "versionStage": {
+                  "description": "The version stage of the secret to get.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "secretId"
+              ],
+              "title": "AWSSecretsGet",
+              "type": "object"
+            },
+            "description": "The secrets to get.",
+            "minProperties": 1,
+            "type": "object"
+          },
+          "login": {
+            "description": "The credentials to use to get secrets.",
+            "properties": {
+              "accessKeyId": {
+                "description": "The AWS access key ID.",
+                "type": "string"
+              },
+              "secretAccessKey": {
+                "description": "The AWS secret access key.",
+                "type": "string"
+              },
+              "sessionToken": {
+                "description": "The AWS session token, if any.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessKeyId",
+              "secretAccessKey"
+            ],
+            "title": "AWSLogin",
+            "type": "object"
+          },
+          "region": {
+            "description": "The region in which the secrets are stored.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "get",
+          "login",
+          "region"
+        ],
+        "type": "object"
+      },
+      "name": "aws-secrets",
+      "outputs": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map from names to secret values.",
+        "type": "object"
+      }
+    },
+    "azure-login": {
+      "description": "The [`azure-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/azure-login/) logs in to Azure using OpenID Connect or static credentials.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::azure-login:\n  clientId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  tenantId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n  subscriptionId: /subscriptions/00000000-0000-0000-0000-000000000000\n  oidc: true"
+          }
+        ],
+        "properties": {
+          "clientId": {
+            "description": "The client ID to use.",
+            "type": "string"
+          },
+          "clientSecret": {
+            "description": "The client secret to use for authentication, if any.",
+            "type": "string"
+          },
+          "oidc": {
+            "description": "True to use OIDC for authentication.",
+            "type": "boolean"
+          },
+          "subjectAttributes": {
+            "description": "The attributes used to issue the oidc token subject.",
+            "items": {
+              "enum": [
+                "pulumi.user.login",
+                "pulumi.organization.login",
+                "currentEnvironment.name",
+                "rootEnvironment.name"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "subscriptionId": {
+            "description": "The subscription ID to use.",
+            "type": "string"
+          },
+          "tenantId": {
+            "description": "The tenant ID to use.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "clientId",
+          "tenantId"
+        ],
+        "type": "object"
+      },
+      "name": "azure-login",
+      "outputs": {
+        "properties": {
+          "clientId": {
+            "description": "The client ID to use.",
+            "type": "string"
+          },
+          "clientSecret": {
+            "description": "The client secret to use for authentication, if any.",
+            "type": "string"
+          },
+          "oidc": {
+            "description": "OIDC-related data, if OIDC is used for authentication.",
+            "properties": {
+              "token": {
+                "description": "The OIDC token to use for authentication.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "token"
+            ],
+            "type": "object"
+          },
+          "subscriptionId": {
+            "description": "The subscription ID to use.",
+            "type": "string"
+          },
+          "tenantId": {
+            "description": "The tenant ID to use.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "clientId",
+          "tenantId"
+        ],
+        "type": "object"
+      }
+    },
+    "azure-secrets": {
+      "description": "The [`azure-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/azure-secrets/) dynamically imports Secrets from Azure Key Vault into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::azure-secrets:\n  login: ${azure.login}\n  vault: example-vault-name\n  get:\n    api-key:\n      name: api-key\n    app-secret:\n      name: app-secret"
+          }
+        ],
+        "properties": {
+          "get": {
+            "additionalProperties": {
+              "description": "Azure Key Vault secret properties.",
+              "properties": {
+                "name": {
+                  "description": "The name of the secret to access.",
+                  "type": "string"
+                },
+                "version": {
+                  "description": "The secret version to access.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "title": "AzureSecretsGet",
+              "type": "object"
+            },
+            "description": "A map from names to secrets to read from Azure Key Vault. The outputs will map each name to the secret's sensitive data.",
+            "minProperties": 1,
+            "type": "object"
+          },
+          "login": {
+            "description": "The credentials to use to get secrets.",
+            "properties": {
+              "clientId": {
+                "description": "The client ID to use.",
+                "type": "string"
+              },
+              "clientSecret": {
+                "description": "The client secret to use for authentication, if any.",
+                "type": "string"
+              },
+              "oidc": {
+                "description": "OIDC-related data, if OIDC is used for authentication.",
+                "properties": {
+                  "token": {
+                    "description": "The OIDC token to use for authentication.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "token"
+                ],
+                "type": "object"
+              },
+              "subscriptionId": {
+                "description": "The subscription ID to use.",
+                "type": "string"
+              },
+              "tenantId": {
+                "description": "The tenant ID to use.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "clientId",
+              "tenantId"
+            ],
+            "type": "object"
+          },
+          "vault": {
+            "description": "The vault to read from",
+            "type": "string"
+          }
+        },
+        "required": [
+          "get",
+          "login",
+          "vault"
+        ],
+        "type": "object"
+      },
+      "name": "azure-secrets",
+      "outputs": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map from names to secret values.",
+        "type": "object"
+      }
+    },
+    "doppler-login": {
+      "description": "The [`doppler-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/doppler-login/) logs in to Doppler using OpenID Connect.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::doppler-login:\n  oidc:\n    identityId: 00000000-0000-0000-0000-000000000000"
+          }
+        ],
+        "properties": {
+          "oidc": {
+            "description": "Options for temporary OIDC credentials.",
+            "properties": {
+              "identityId": {
+                "description": "The identity ID to use.",
+                "pattern": "^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$",
+                "type": "string"
+              },
+              "subjectAttributes": {
+                "description": "The attributes used to issue the oidc token subject.",
+                "items": {
+                  "enum": [
+                    "pulumi.user.login",
+                    "pulumi.organization.login",
+                    "currentEnvironment.name",
+                    "rootEnvironment.name"
+                  ],
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "identityId"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "oidc"
+        ],
+        "type": "object"
+      },
+      "name": "doppler-login",
+      "outputs": {
+        "properties": {
+          "accessToken": {
+            "description": "The access token to use for authentication.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "accessToken"
+        ],
+        "type": "object"
+      }
+    },
+    "doppler-secrets": {
+      "description": "The [`doppler-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/doppler-secrets/) dynamically imports Secrets from Doppler into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::doppler-secrets:\n  login: ${doppler.login}\n  project: example-project\n  config: dev\n  get:\n    api-key:\n      name: API_KEY\n    app-secret:\n      name: APP_SECRET"
+          }
+        ],
+        "properties": {
+          "config": {
+            "description": "The config identifier.",
+            "type": "string"
+          },
+          "get": {
+            "additionalProperties": {
+              "description": "Doppler secret properties.",
+              "properties": {
+                "name": {
+                  "description": "The secret name in Doppler.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "title": "DopplerSecretsGet",
+              "type": "object"
+            },
+            "description": "A map from names to secrets to read from Doppler. The outputs will map each name to the secret's sensitive data.",
+            "minProperties": 1,
+            "type": "object"
+          },
+          "login": {
+            "description": "Credentials used to log in to Doppler.",
+            "properties": {
+              "accessToken": {
+                "description": "The access token to use for authentication.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessToken"
+            ],
+            "title": "DopplerSecretsLogin",
+            "type": "object"
+          },
+          "project": {
+            "description": "The project identifier.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "config",
+          "get",
+          "login",
+          "project"
+        ],
+        "type": "object"
+      },
+      "name": "doppler-secrets",
+      "outputs": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map from names to secret values.",
+        "type": "object"
+      }
+    },
+    "external": {
+      "description": "The [`external` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/external/) reads outputs from an external adapter service.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::external:\n  url: https://example.com/my-adapter\n  request:\n    key: value"
+          }
+        ],
+        "properties": {
+          "request": {
+            "additionalProperties": true,
+            "default": {},
+            "description": "The request body to send to the external adapter service.",
+            "type": "object"
+          },
+          "secret": {
+            "default": true,
+            "description": "Whether the output is marked as secret.",
+            "type": "boolean"
+          },
+          "url": {
+            "description": "The URL to the external service.",
+            "pattern": "^https://",
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ],
+        "type": "object"
+      },
+      "name": "external",
+      "outputs": {
+        "properties": {
+          "response": {
+            "additionalProperties": true,
+            "description": "The response from the external adapter service.",
+            "type": "object"
+          }
+        },
+        "required": [
+          "response"
+        ],
+        "type": "object"
+      }
+    },
+    "gcp-login": {
+      "description": "The [`gcp-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/gcp-login/) logs in to GCP using OpenID Connect or static credentials.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::gcp-login:\n  project: 123456789\n  oidc:\n    workloadPoolId: pulumi-esc\n    providerId: pulumi-esc\n    serviceAccount: pulumi-esc@foo-bar-123456.iam.gserviceaccount.com"
+          }
+        ],
+        "properties": {
+          "accessToken": {
+            "description": "Options for access token login.",
+            "properties": {
+              "accessToken": {
+                "description": "The token used to authenticate with Google Cloud.",
+                "type": "string"
+              },
+              "serviceAccount": {
+                "description": "The service account to impersonate, if any.",
+                "type": "string"
+              },
+              "tokenLifetime": {
+                "default": "1h",
+                "description": "The lifetime of the temporary credentials when impersonating a service account.",
+                "pattern": "^([0-9]+h)?([0-9]+m)?([0-9]+s)?$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessToken"
+            ],
+            "type": "object"
+          },
+          "oidc": {
+            "description": "Options for OIDC login.",
+            "properties": {
+              "providerId": {
+                "description": "The ID of the identity provider associated with the workload pool.",
+                "type": "string"
+              },
+              "region": {
+                "description": "The region of the GCP project.",
+                "type": "string"
+              },
+              "serviceAccount": {
+                "description": "The email address of the service account to use.",
+                "type": "string"
+              },
+              "subjectAttributes": {
+                "description": "The attributes used to issue the oidc token subject.",
+                "items": {
+                  "enum": [
+                    "pulumi.user.login",
+                    "pulumi.organization.login",
+                    "currentEnvironment.name",
+                    "rootEnvironment.name"
+                  ],
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "tokenLifetime": {
+                "default": "1h",
+                "description": "The lifetime of the temporary credentials.",
+                "pattern": "^([0-9]+h)?([0-9]+m)?([0-9]+s)?$",
+                "type": "string"
+              },
+              "workloadPoolId": {
+                "description": "The ID of the workload pool to use.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "workloadPoolId",
+              "providerId",
+              "serviceAccount"
+            ],
+            "type": "object"
+          },
+          "project": {
+            "description": "The GCP project number. This can be fetched using the `gcloud` CLI: `gcloud projects describe [project ID] --format=\"get(projectNumber)\"`",
+            "type": "number"
+          }
+        },
+        "required": [
+          "project"
+        ],
+        "type": "object"
+      },
+      "name": "gcp-login",
+      "outputs": {
+        "properties": {
+          "accessToken": {
+            "description": "The access token used to authenticate with Google Cloud.",
+            "type": "string"
+          },
+          "expiry": {
+            "description": "The access token's expiry time.",
+            "type": "string"
+          },
+          "project": {
+            "description": "The GCP project number.",
+            "type": "number"
+          },
+          "tokenType": {
+            "description": "The type of the access token.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "accessToken",
+          "project",
+          "tokenType"
+        ],
+        "type": "object"
+      }
+    },
+    "gcp-secrets": {
+      "description": "The [`gcp-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/gcp-secrets/) dynamically imports Secrets from Google Cloud Secrets Manager into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::gcp-secrets:\n  login: ${gcp.login}\n  access:\n    api-key:\n      name: api-key\n    app-secret:\n      name: app-secret"
+          }
+        ],
+        "properties": {
+          "access": {
+            "additionalProperties": {
+              "description": "Google Cloud Secret Manager secret properties.",
+              "properties": {
+                "name": {
+                  "description": "The name of the secret to access.",
+                  "type": "string"
+                },
+                "version": {
+                  "description": "The secret version to access.",
+                  "type": "number"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "title": "GCPSecretsAccess",
+              "type": "object"
+            },
+            "description": "A map from names to secrets to read from Google Cloud. The outputs will map each name to the secret's sensitive data.",
+            "minProperties": 1,
+            "type": "object"
+          },
+          "login": {
+            "description": "Credentials used to log in to Google Cloud.",
+            "properties": {
+              "accessToken": {
+                "description": "The access token to use for authentication.",
+                "type": "string"
+              },
+              "project": {
+                "description": "The GCP project number.",
+                "type": "number"
+              },
+              "tokenType": {
+                "description": "The type of the access token.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessToken",
+              "project",
+              "tokenType"
+            ],
+            "title": "GCPSecretsLogin",
+            "type": "object"
+          }
+        },
+        "required": [
+          "access",
+          "login"
+        ],
+        "type": "object"
+      },
+      "name": "gcp-secrets",
+      "outputs": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map from names to secret values.",
+        "type": "object"
+      }
+    },
+    "gh-login": {
+      "description": "The [`gh-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/gh-login/) logs in to GitHub API using application credentials.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::gh-login:\n  appId: 123456\n  privateKey:\n    fn::secret: |\n      -----BEGIN RSA PRIVATE KEY-----\n      ...\n      -----END RSA PRIVATE KEY-----\n  owner: octocat\n  repositories:\n    - \"Spoon-Knife\"\n  permissions:\n    contents: read\n    pull_requests: write"
+          }
+        ],
+        "properties": {
+          "appId": {
+            "description": "The ID of the GitHub App providing access tokens for the environment.",
+            "type": "number"
+          },
+          "ghe": {
+            "description": "Options for connecting to a GitHub Enterprise installation.",
+            "properties": {
+              "host": {
+                "description": "The hostname of your GitHub Enterprise server.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "host"
+            ],
+            "type": "object"
+          },
+          "owner": {
+            "description": "The repository owner to access.",
+            "type": "string"
+          },
+          "permissions": {
+            "description": "The permissions that the installation access token should have.",
+            "properties": {
+              "actions": {
+                "description": "The level of permission for `actions`.",
+                "type": "string"
+              },
+              "administration": {
+                "description": "The level of permission for `administration`.",
+                "type": "string"
+              },
+              "blocking": {
+                "description": "The level of permission for `blocking`.",
+                "type": "string"
+              },
+              "checks": {
+                "description": "The level of permission for `checks`.",
+                "type": "string"
+              },
+              "content_references": {
+                "description": "The level of permission for `content_references`.",
+                "type": "string"
+              },
+              "contents": {
+                "description": "The level of permission for `contents`.",
+                "type": "string"
+              },
+              "deployments": {
+                "description": "The level of permission for `deployments`.",
+                "type": "string"
+              },
+              "emails": {
+                "description": "The level of permission for `emails`.",
+                "type": "string"
+              },
+              "environments": {
+                "description": "The level of permission for `environments`.",
+                "type": "string"
+              },
+              "followers": {
+                "description": "The level of permission for `followers`.",
+                "type": "string"
+              },
+              "issues": {
+                "description": "The level of permission for `issues`.",
+                "type": "string"
+              },
+              "members": {
+                "description": "The level of permission for `members`.",
+                "type": "string"
+              },
+              "metadata": {
+                "description": "The level of permission for `metadata`.",
+                "type": "string"
+              },
+              "organization_administration": {
+                "description": "The level of permission for `organization_administration`.",
+                "type": "string"
+              },
+              "organization_hooks": {
+                "description": "The level of permission for `organization_hooks`.",
+                "type": "string"
+              },
+              "organization_plan": {
+                "description": "The level of permission for `organization_plan`.",
+                "type": "string"
+              },
+              "organization_pre_receive_hooks": {
+                "description": "The level of permission for `organization_pre_receive_hooks`.",
+                "type": "string"
+              },
+              "organization_projects": {
+                "description": "The level of permission for `organization_projects`.",
+                "type": "string"
+              },
+              "organization_secrets": {
+                "description": "The level of permission for `organization_secrets`.",
+                "type": "string"
+              },
+              "organization_self_hosted_runners": {
+                "description": "The level of permission for `organization_self_hosted_runners`.",
+                "type": "string"
+              },
+              "organization_user_blocking": {
+                "description": "The level of permission for `organization_user_blocking`.",
+                "type": "string"
+              },
+              "packages": {
+                "description": "The level of permission for `packages`.",
+                "type": "string"
+              },
+              "pages": {
+                "description": "The level of permission for `pages`.",
+                "type": "string"
+              },
+              "pull_requests": {
+                "description": "The level of permission for `pull_requests`.",
+                "type": "string"
+              },
+              "repository_hooks": {
+                "description": "The level of permission for `repository_hooks`.",
+                "type": "string"
+              },
+              "repository_pre_receive_hooks": {
+                "description": "The level of permission for `repository_pre_receive_hooks`.",
+                "type": "string"
+              },
+              "repository_projects": {
+                "description": "The level of permission for `repository_projects`.",
+                "type": "string"
+              },
+              "secret_scanning_alerts": {
+                "description": "The level of permission for `secret_scanning_alerts`.",
+                "type": "string"
+              },
+              "secrets": {
+                "description": "The level of permission for `secrets`.",
+                "type": "string"
+              },
+              "security_events": {
+                "description": "The level of permission for `security_events`.",
+                "type": "string"
+              },
+              "single_file": {
+                "description": "The level of permission for `single_file`.",
+                "type": "string"
+              },
+              "statuses": {
+                "description": "The level of permission for `statuses`.",
+                "type": "string"
+              },
+              "team_discussions": {
+                "description": "The level of permission for `team_discussions`.",
+                "type": "string"
+              },
+              "vulnerability_alerts": {
+                "description": "The level of permission for `vulnerability_alerts`.",
+                "type": "string"
+              },
+              "workflows": {
+                "description": "The level of permission for `workflows`.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "privateKey": {
+            "description": "The private key of the GitHub App (in PEM format).",
+            "type": "string"
+          },
+          "repositories": {
+            "description": "List of repositories to allow access to.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "appId",
+          "privateKey",
+          "owner"
+        ],
+        "type": "object"
+      },
+      "name": "gh-login",
+      "outputs": {
+        "properties": {
+          "accessToken": {
+            "description": "The access token used to authenticate with the GitHub API.",
+            "type": "string"
+          },
+          "appId": {
+            "description": "The ID of the GitHub App providing access tokens for the environment.",
+            "type": "number"
+          },
+          "appSlug": {
+            "description": "The GitHub App's slug.",
+            "type": "string"
+          },
+          "expiry": {
+            "description": "The access token's expiry time.",
+            "type": "string"
+          },
+          "installationId": {
+            "description": "The ID of the GitHub App installation.",
+            "type": "number"
+          },
+          "type": {
+            "description": "The access token's type.",
+            "enum": [
+              "installation"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "appId",
+          "appSlug",
+          "installationId",
+          "accessToken",
+          "expiry",
+          "type"
+        ],
+        "type": "object"
+      }
+    },
+    "infisical-login": {
+      "description": "The [`infisical-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/infisical-login/) logs in to Infisical using OpenID Connect or static credentials.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::infisical-login:\n  oidc:\n    identityId: aaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
+          }
+        ],
+        "properties": {
+          "oidc": {
+            "description": "Options for temporary OIDC credentials.",
+            "properties": {
+              "identityId": {
+                "description": "The identity id to use.",
+                "type": "string"
+              },
+              "subjectAttributes": {
+                "description": "The attributes used to issue the oidc token subject.",
+                "items": {
+                  "enum": [
+                    "pulumi.user.login",
+                    "pulumi.organization.login",
+                    "currentEnvironment.name",
+                    "rootEnvironment.name"
+                  ],
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "identityId"
+            ],
+            "type": "object"
+          },
+          "siteUrl": {
+            "description": "The site url to use.",
+            "type": "string"
+          },
+          "static": {
+            "description": "Options for static credentials.",
+            "properties": {
+              "clientId": {
+                "description": "The client id to use.",
+                "type": "string"
+              },
+              "clientSecret": {
+                "description": "The client secret to use.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "clientId",
+              "clientSecret"
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "name": "infisical-login",
+      "outputs": {
+        "properties": {
+          "accessToken": {
+            "description": "The access token to use for authentication.",
+            "type": "string"
+          },
+          "siteUrl": {
+            "description": "The site url to use.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "accessToken"
+        ],
+        "type": "object"
+      }
+    },
+    "infisical-secrets": {
+      "description": "The [`infisical-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/infisical-secrets/) dynamically imports Secrets from Infisical into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::infisical-secrets:\n  login: ${infisical.login}\n  get:\n    api-key:\n      projectId: xxxxxxx-bbbb-cccc-dddd-eeeeeeeeeeee\n      environment: prod\n      secretKey: api-key\n    app-secret:\n      projectId: xxxxxxx-bbbb-cccc-dddd-eeeeeeeeeeee\n      environment: dev\n      secretKey: app-secret"
+          }
+        ],
+        "properties": {
+          "get": {
+            "additionalProperties": {
+              "description": "Infisical secret properties.",
+              "properties": {
+                "environment": {
+                  "description": "The environment.",
+                  "type": "string"
+                },
+                "projectId": {
+                  "description": "The projectId.",
+                  "type": "string"
+                },
+                "secretKey": {
+                  "description": "The secretKey.",
+                  "type": "string"
+                },
+                "secretPath": {
+                  "description": "The secretPath.",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "The type, either 'shared' or 'personal'. May be omitted.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "projectId",
+                "environment",
+                "secretKey"
+              ],
+              "title": "InfisicalSecretsGet",
+              "type": "object"
+            },
+            "description": "A map from names to secrets to read from Infisical. The outputs will map each name to the secret's sensitive data.",
+            "minProperties": 1,
+            "type": "object"
+          },
+          "login": {
+            "description": "Credentials used to log in to Infisical.",
+            "properties": {
+              "accessToken": {
+                "description": "The access token to use for authentication.",
+                "type": "string"
+              },
+              "siteUrl": {
+                "description": "The site url to use.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessToken"
+            ],
+            "title": "InfisicalSecretsLogin",
+            "type": "object"
+          }
+        },
+        "required": [
+          "get",
+          "login"
+        ],
+        "type": "object"
+      },
+      "name": "infisical-secrets",
+      "outputs": {
+        "additionalProperties": {
+          "type": "string"
+        },
+        "description": "A map from names to secret values.",
+        "type": "object"
+      }
+    },
+    "pulumi-stacks": {
+      "description": "The [`pulumi-stacks` provider](https://www.pulumi.com/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) reads outputs from a Pulumi stack.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::pulumi-stacks:\n  stacks:\n    vpcInfra:\n      stack: vpc-infra/dev"
+          }
+        ],
+        "properties": {
+          "stacks": {
+            "additionalProperties": {
+              "description": "Pulumi stack properties.",
+              "properties": {
+                "stack": {
+                  "description": "The project-qualified name of the stack to read. e.g., 'myProjectName/dev'",
+                  "pattern": "^[a-zA-Z0-9-_.]{1,100}\\/[a-zA-Z0-9-_.]{1,100}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "stack"
+              ],
+              "title": "PulumiStack",
+              "type": "object"
+            },
+            "description": "A map from names to stacks to read from the service. The outputs will map each name to the raw output values for the specified stack.",
+            "minProperties": 1,
+            "type": "object"
+          }
+        },
+        "required": [
+          "stacks"
+        ],
+        "type": "object"
+      },
+      "name": "pulumi-stacks",
+      "outputs": {
+        "additionalProperties": true,
+        "description": "A map from names to raw output values for the specified stack.",
+        "type": "object"
+      }
+    },
+    "snowflake-login": {
+      "description": "The [`snowflake-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/snowflake-login/) logs into Snowflake using OIDC.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::snowflake-login:\n  oidc:\n    account: myorganization-account\n    user: ESC_LOGIN_USER\n    role: ESC_ROLE"
+          }
+        ],
+        "properties": {
+          "oidc": {
+            "properties": {
+              "account": {
+                "description": "Snowflake account identifier.",
+                "type": "string"
+              },
+              "role": {
+                "description": "Role to assume. See https://docs.snowflake.com/en/user-guide/oauth-ext-overview#scopes",
+                "type": "string"
+              },
+              "user": {
+                "description": "User login name.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "account",
+              "user"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "oidc"
+        ],
+        "type": "object"
+      },
+      "name": "snowflake-login",
+      "outputs": {
+        "properties": {
+          "account": {
+            "description": "Snowflake account identifier.",
+            "type": "string"
+          },
+          "token": {
+            "description": "Oauth token.",
+            "type": "string"
+          },
+          "user": {
+            "description": "User login name.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "account",
+          "token",
+          "user"
+        ],
+        "type": "object"
+      }
+    },
+    "terraform-state": {
+      "description": "The [`terraform-state` provider](https://www.pulumi.com/docs/esc/integrations/infrastructure/terraform/terraform-state/) reads outputs from Terraform state files stored in S3 or Terraform Cloud.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::terraform-state:\n  backend:\n    s3:\n      login:\n        fn::open::aws-login:\n          oidc:\n            roleArn: arn:aws:iam::123456789012:role/esc-oidc\n            sessionName: pulumi-environments-session\n      bucket: my-terraform-state-bucket\n      key: path/to/terraform.tfstate\n      region: us-west-2"
+          }
+        ],
+        "properties": {
+          "backend": {
+            "description": "Configuration for the Terraform state backend (S3 or remote).",
+            "oneOf": [
+              {
+                "properties": {
+                  "s3": {
+                    "description": "AWS S3 backend configuration.",
+                    "properties": {
+                      "bucket": {
+                        "description": "The S3 bucket name containing the state file.",
+                        "type": "string"
+                      },
+                      "key": {
+                        "description": "The S3 object key for the state file.",
+                        "type": "string"
+                      },
+                      "login": {
+                        "description": "The credentials to use to get the state file.",
+                        "properties": {
+                          "accessKeyId": {
+                            "description": "The AWS access key ID.",
+                            "type": "string"
+                          },
+                          "secretAccessKey": {
+                            "description": "The AWS secret access key.",
+                            "type": "string"
+                          },
+                          "sessionToken": {
+                            "description": "The AWS session token, if any.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "accessKeyId",
+                          "secretAccessKey"
+                        ],
+                        "title": "AWSLogin",
+                        "type": "object"
+                      },
+                      "region": {
+                        "description": "The AWS region where the bucket is located.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "bucket",
+                      "key",
+                      "login",
+                      "region"
+                    ],
+                    "title": "TerraformS3Backend",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "s3"
+                ],
+                "type": "object"
+              },
+              {
+                "properties": {
+                  "remote": {
+                    "description": "Terraform Cloud/Enterprise backend configuration.",
+                    "properties": {
+                      "hostname": {
+                        "default": "app.terraform.io",
+                        "description": "The hostname of Terraform Cloud/Enterprise.",
+                        "type": "string"
+                      },
+                      "organization": {
+                        "description": "The Terraform Cloud organization name.",
+                        "type": "string"
+                      },
+                      "token": {
+                        "description": "The Terraform Cloud API token.",
+                        "type": "string"
+                      },
+                      "workspace": {
+                        "description": "The workspace name.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "organization",
+                      "workspace",
+                      "token"
+                    ],
+                    "title": "TerraformRemoteBackend",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "remote"
+                ],
+                "type": "object"
+              }
+            ],
+            "type": ""
+          }
+        },
+        "required": [
+          "backend"
+        ],
+        "type": "object"
+      },
+      "name": "terraform-state",
+      "outputs": {
+        "properties": {
+          "outputs": {
+            "additionalProperties": true,
+            "description": "A map of all outputs from the Terraform state.",
+            "type": "object"
+          }
+        },
+        "required": [
+          "outputs"
+        ],
+        "type": "object"
+      }
+    },
+    "vault-login": {
+      "description": "The [`vault-login` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-login-credentials/vault-login/) logs in to Vault using OpenID Connect or static credentials.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::vault-login:\n  address: https://127.0.0.1:8200/\n  jwt:\n    role: example-role"
+          }
+        ],
+        "properties": {
+          "address": {
+            "description": "The URL of the Vault server. Must contain a scheme and hostname, but no path.",
+            "type": "string"
+          },
+          "jwt": {
+            "description": "Options for JWT login. JWT login uses an OIDC token issued by the Pulumi Cloud to generate an ephemeral token.",
+            "properties": {
+              "mount": {
+                "description": "The name of the authentication engine mount.",
+                "type": "string"
+              },
+              "role": {
+                "description": "The name of the role to use for login.",
+                "type": "string"
+              },
+              "subjectAttributes": {
+                "description": "The attributes used to issue the oidc token subject.",
+                "items": {
+                  "enum": [
+                    "pulumi.user.login",
+                    "pulumi.organization.login",
+                    "currentEnvironment.name",
+                    "rootEnvironment.name"
+                  ],
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "role"
+            ],
+            "type": "object"
+          },
+          "namespace": {
+            "description": "The namespace to log in to. Only available for Vault Enterprise.",
+            "type": "string"
+          },
+          "token": {
+            "description": "Options for token login. Token login creates an ephemeral child token.",
+            "properties": {
+              "displayName": {
+                "default": "pulumi",
+                "description": "The display name of the ephemeral token.",
+                "type": "string"
+              },
+              "maxTtl": {
+                "default": "2h",
+                "description": "The maximum TTL of the ephemeral token.",
+                "pattern": "^([0-9]+h)?([0-9]+m)?([0-9]+s)?$",
+                "type": "string"
+              },
+              "metadata": {
+                "description": "Arbitrary metadata to associate with the ephemeral token.",
+                "type": "object"
+              },
+              "policies": {
+                "description": "List of policies for the token.",
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "token": {
+                "description": "The parent token.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "token"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "address"
+        ],
+        "type": "object"
+      },
+      "name": "vault-login",
+      "outputs": {
+        "properties": {
+          "address": {
+            "description": "The URL of the vault server.",
+            "type": "string"
+          },
+          "namespace": {
+            "description": "The namespace to use for the session.",
+            "type": "string"
+          },
+          "token": {
+            "description": "The ephemeral token generated for the session.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "address",
+          "token"
+        ],
+        "type": "object"
+      }
+    },
+    "vault-secrets": {
+      "description": "The [`vault-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/vault-secrets/) dynamically imports Secrets from HashiCorp Vault into your Environment.",
+      "inputs": {
+        "examples": [
+          {
+            "snippet": "fn::open::vault-secrets:\n  login: ${vault.login}\n  read:\n    api-key:\n      path: api-key\n    app-secret:\n      path: app-secret"
+          }
+        ],
+        "properties": {
+          "login": {
+            "description": "Credentials used to log in to HashiCorp Vault.",
+            "properties": {
+              "address": {
+                "description": "The URL of the vault server.",
+                "type": "string"
+              },
+              "namespace": {
+                "description": "The namespace to use for the session.",
+                "type": "string"
+              },
+              "token": {
+                "description": "The ephemeral token generated for the session.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "address",
+              "token"
+            ],
+            "title": "VaultSecretsLogin",
+            "type": "object"
+          },
+          "read": {
+            "additionalProperties": {
+              "description": "HashiCorp Vault secret properties.",
+              "properties": {
+                "field": {
+                  "description": "The field of the value to read.",
+                  "type": "string"
+                },
+                "path": {
+                  "description": "The path to read.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "title": "VaultSecretsRead",
+              "type": "object"
+            },
+            "description": "A map from names to paths to read from the server. The outputs will map each name to the raw data for the value.",
+            "minProperties": 1,
+            "type": "object"
+          }
+        },
+        "required": [
+          "login",
+          "read"
+        ],
+        "type": "object"
+      },
+      "name": "vault-secrets",
+      "outputs": {
+        "additionalProperties": true,
+        "description": "A map from names to raw values as read from the server.",
+        "type": "object"
+      }
+    }
+  },
+  "rotators": {
+    "aws-iam": {
+      "description": "The [`aws-iam` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/aws-iam/) rotates access keys for an AWS IAM User.",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "examples": [
+              {
+                "snippet": "fn::rotate::aws-iam:\n  inputs:\n    region: ${environments.logins.production.aws.region}\n    login: ${environments.logins.production.aws.login}\n    userArn: arn:aws:iam::<account id>:user/<username>"
+              }
+            ],
+            "properties": {
+              "login": {
+                "description": "The AWS credentials to use.",
+                "properties": {
+                  "accessKeyId": {
+                    "description": "The AWS access key ID.",
+                    "type": "string"
+                  },
+                  "secretAccessKey": {
+                    "description": "The AWS secret access key.",
+                    "type": "string"
+                  },
+                  "sessionToken": {
+                    "description": "The AWS session token, if any.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accessKeyId",
+                  "secretAccessKey"
+                ],
+                "title": "AWSLogin",
+                "type": "object"
+              },
+              "region": {
+                "default": "us-east-1",
+                "description": "The AWS region.",
+                "type": "string"
+              },
+              "userArn": {
+                "description": "The ARN for the IAM user",
+                "type": "string"
+              }
+            },
+            "required": [
+              "login",
+              "userArn"
+            ],
+            "rotateOnly": [
+              "login"
+            ],
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "current": {
+                "description": "The AWS credentials for the IAM user.",
+                "properties": {
+                  "accessKeyId": {
+                    "description": "The AWS access key ID.",
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "description": "When the access key was created, in RFC3339 format.",
+                    "type": "string"
+                  },
+                  "secretAccessKey": {
+                    "description": "The AWS secret access key.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accessKeyId",
+                  "secretAccessKey"
+                ],
+                "type": "object"
+              },
+              "previous": {
+                "description": "The AWS credentials for the IAM user.",
+                "properties": {
+                  "accessKeyId": {
+                    "description": "The AWS access key ID.",
+                    "type": "string"
+                  },
+                  "createdAt": {
+                    "description": "When the access key was created, in RFC3339 format.",
+                    "type": "string"
+                  },
+                  "secretAccessKey": {
+                    "description": "The AWS secret access key.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "accessKeyId",
+                  "secretAccessKey"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "current"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "aws-iam",
+      "outputs": {
+        "properties": {
+          "current": {
+            "description": "The AWS credentials for the IAM user.",
+            "properties": {
+              "accessKeyId": {
+                "description": "The AWS access key ID.",
+                "type": "string"
+              },
+              "createdAt": {
+                "description": "When the access key was created, in RFC3339 format.",
+                "type": "string"
+              },
+              "secretAccessKey": {
+                "description": "The AWS secret access key.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessKeyId",
+              "secretAccessKey"
+            ],
+            "type": "object"
+          },
+          "previous": {
+            "description": "The AWS credentials for the IAM user.",
+            "properties": {
+              "accessKeyId": {
+                "description": "The AWS access key ID.",
+                "type": "string"
+              },
+              "createdAt": {
+                "description": "When the access key was created, in RFC3339 format.",
+                "type": "string"
+              },
+              "secretAccessKey": {
+                "description": "The AWS secret access key.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "accessKeyId",
+              "secretAccessKey"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "current"
+        ],
+        "type": "object"
+      }
+    },
+    "external": {
+      "description": "The [`external` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/external/) reads and rotates outputs from an external adapter service.",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "examples": [
+              {
+                "snippet": "fn::rotate::external:\n  inputs:\n    url: https://example.com/my-adapter\n    request:\n      key: value"
+              }
+            ],
+            "properties": {
+              "request": {
+                "additionalProperties": true,
+                "default": {},
+                "description": "The request body to send to the external adapter service.",
+                "type": "object"
+              },
+              "url": {
+                "description": "The URL to the external adapter service.",
+                "pattern": "^https://",
+                "type": "string"
+              }
+            },
+            "required": [
+              "url"
+            ],
+            "rotateOnly": [
+              "request"
+            ],
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "current": {
+                "additionalProperties": true,
+                "description": "The current state from the last rotation.",
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "external",
+      "outputs": {
+        "properties": {
+          "current": {
+            "additionalProperties": true,
+            "description": "The current state from the last rotation.",
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "mysql": {
+      "description": "The [`mysql` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/mysql/) rotates credentials for a MySQL instance",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "examples": [
+              {
+                "snippet": "fn::rotate::postgres:\n  inputs:\n    database:\n      connector:\n        awsLambda:\n          login: ${environments.rotatorExample.managingCredentials.awsLogin}\n          lambdaArn: arn:aws:lambda:aws-region:111111111111:function:PulumiEscSecretRotatorLambda-Function-xxxxxxx\n      database: rotator_example_db\n      host: rotator-example-postgres.cluster-xxxxxxxxxxxx.aws-region.rds.amazonaws.com\n      port: 5432\n      managingUser: ${environments.rotatorExample.managingCredentials.managingUser}\n    rotateUsers:\n      username1: user1\n      username2: user2"
+              }
+            ],
+            "properties": {
+              "database": {
+                "description": "The database configuration",
+                "properties": {
+                  "connector": {
+                    "description": "Configuration for connecting to the database",
+                    "oneOf": [
+                      {
+                        "properties": {
+                          "awsLambda": {
+                            "description": "Configuration for the AWS Lambda",
+                            "properties": {
+                              "lambdaArn": {
+                                "description": "The ARN of the rotator lambda",
+                                "type": "string"
+                              },
+                              "login": {
+                                "description": "The credentials to use to invoke the lambda.",
+                                "properties": {
+                                  "accessKeyId": {
+                                    "description": "The AWS access key ID.",
+                                    "type": "string"
+                                  },
+                                  "secretAccessKey": {
+                                    "description": "The AWS secret access key.",
+                                    "type": "string"
+                                  },
+                                  "sessionToken": {
+                                    "description": "The AWS session token, if any.",
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "accessKeyId",
+                                  "secretAccessKey"
+                                ],
+                                "title": "AWSLogin",
+                                "type": "object"
+                              }
+                            },
+                            "required": [
+                              "lambdaArn",
+                              "login"
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "required": [
+                          "awsLambda"
+                        ],
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "database": {
+                    "description": "The database name.",
+                    "type": "string"
+                  },
+                  "host": {
+                    "description": "The host name of the database.",
+                    "type": "string"
+                  },
+                  "managingUser": {
+                    "description": "The credentials of the user managing the db.",
+                    "properties": {
+                      "password": {
+                        "description": "Managing user password",
+                        "type": "string"
+                      },
+                      "username": {
+                        "description": "Managing user username",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "password",
+                      "username"
+                    ],
+                    "rotateOnly": [
+                      "password",
+                      "username"
+                    ],
+                    "type": "object"
+                  },
+                  "port": {
+                    "description": "The port number of the database.",
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "host",
+                  "port",
+                  "database",
+                  "managingUser"
+                ],
+                "rotateOnly": [
+                  "managingUser"
+                ],
+                "type": "object"
+              },
+              "rotateUsers": {
+                "description": "Users to rotate",
+                "properties": {
+                  "username1": {
+                    "description": "Name of user to rotate",
+                    "type": "string"
+                  },
+                  "username2": {
+                    "description": "Name of user to rotate",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username1",
+                  "username2"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "database",
+              "rotateUsers"
+            ],
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "current": {
+                "properties": {
+                  "password": {
+                    "description": "Previous user's password",
+                    "type": "string"
+                  },
+                  "username": {
+                    "description": "Name of previous user to rotate",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "password",
+                  "username"
+                ],
+                "type": "object"
+              },
+              "previous": {
+                "properties": {
+                  "password": {
+                    "description": "Previous user's password",
+                    "type": "string"
+                  },
+                  "username": {
+                    "description": "Name of previous user to rotate",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "password",
+                  "username"
+                ],
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "mysql",
+      "outputs": {
+        "properties": {
+          "current": {
+            "properties": {
+              "password": {
+                "description": "Previous user's password",
+                "type": "string"
+              },
+              "username": {
+                "description": "Name of previous user to rotate",
+                "type": "string"
+              }
+            },
+            "required": [
+              "password",
+              "username"
+            ],
+            "type": "object"
+          },
+          "previous": {
+            "properties": {
+              "password": {
+                "description": "Previous user's password",
+                "type": "string"
+              },
+              "username": {
+                "description": "Name of previous user to rotate",
+                "type": "string"
+              }
+            },
+            "required": [
+              "password",
+              "username"
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "passphrase": {
+      "description": "The [`passphrase` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/passphrase/) generates and rotates memorable passphrases.",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "description": "Options for generating memorable passphrases.",
+            "examples": [
+              {
+                "snippet": "fn::rotate::passphrase:\n  inputs:\n    separator: \"%\"\n    capitalize: true\n    length: 4"
+              }
+            ],
+            "properties": {
+              "capitalize": {
+                "default": false,
+                "description": "Whether or not to capitalize each word.",
+                "type": "boolean"
+              },
+              "length": {
+                "default": 5,
+                "description": "The number of words in the generated passphrase.",
+                "maximum": 15,
+                "minimum": 3,
+                "type": "number"
+              },
+              "separator": {
+                "default": "-",
+                "description": "The character to use to separate words.",
+                "maxLength": 1,
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "current": {
+                "description": "The most recently generated passphrase.",
+                "type": "string"
+              },
+              "previous": {
+                "description": "The prior generated passphrase.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "passphrase",
+      "outputs": {
+        "properties": {
+          "current": {
+            "description": "The most recently generated passphrase.",
+            "type": "string"
+          },
+          "previous": {
+            "description": "The prior generated passphrase.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "password": {
+      "description": "The [`password` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/password/) generates and rotates random passwords.",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "description": "Options for generating random passwords.",
+            "examples": [
+              {
+                "snippet": "fn::rotate::password:\n  inputs:\n    minLower: 2\n    minUpper: 3\n    minSpecial: 5\n    overrideSpecial: \"!@#$%&*()-_=+[]{}<>:\"\n    length: 15"
+              }
+            ],
+            "properties": {
+              "length": {
+                "default": 16,
+                "description": "The length of the generated password.",
+                "maximum": 100,
+                "minimum": 8,
+                "type": "number"
+              },
+              "lower": {
+                "default": true,
+                "description": "Whether or not to include lowercase characters.",
+                "type": "boolean"
+              },
+              "minLower": {
+                "default": 0,
+                "description": "The minimum number of lowercase characters to include.",
+                "maximum": 100,
+                "minimum": 0,
+                "type": "number"
+              },
+              "minNumeric": {
+                "default": 0,
+                "description": "The minimum number of numeric characters to include.",
+                "maximum": 100,
+                "minimum": 0,
+                "type": "number"
+              },
+              "minSpecial": {
+                "default": 0,
+                "description": "The minimum number of special characters to include.",
+                "maximum": 100,
+                "minimum": 0,
+                "type": "number"
+              },
+              "minUpper": {
+                "default": 0,
+                "description": "The minimum number of uppercase characters to include.",
+                "maximum": 100,
+                "minimum": 0,
+                "type": "number"
+              },
+              "numeric": {
+                "default": true,
+                "description": "Whether or not to include numbers.",
+                "type": "boolean"
+              },
+              "overrideSpecial": {
+                "default": "!@#$%&*()-_=+[]{}<>:?",
+                "description": "The special characters to choose from.",
+                "type": "string"
+              },
+              "special": {
+                "default": true,
+                "description": "Whether or not to include special characters.",
+                "type": "boolean"
+              },
+              "upper": {
+                "default": true,
+                "description": "Whether or not to include uppercase characters.",
+                "type": "boolean"
+              }
+            },
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "current": {
+                "description": "The most recently generated password.",
+                "type": "string"
+              },
+              "previous": {
+                "description": "The prior generated password.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "password",
+      "outputs": {
+        "properties": {
+          "current": {
+            "description": "The most recently generated password.",
+            "type": "string"
+          },
+          "previous": {
+            "description": "The prior generated password.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "postgres": {
+      "description": "The [`postgres` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/postgres/) rotates credentials for a Postgres instance",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "examples": [
+              {
+                "snippet": "fn::rotate::postgres:\n  inputs:\n    database:\n      connector:\n        awsLambda:\n          login: ${environments.rotatorExample.managingCredentials.awsLogin}\n          lambdaArn: arn:aws:lambda:aws-region:111111111111:function:PulumiEscSecretRotatorLambda-Function-xxxxxxx\n      database: rotator_example_db\n      host: rotator-example-postgres.cluster-xxxxxxxxxxxx.aws-region.rds.amazonaws.com\n      port: 5432\n      managingUser: ${environments.rotatorExample.managingCredentials.managingUser}\n    rotateUsers:\n      username1: user1\n      username2: user2"
+              }
+            ],
+            "properties": {
+              "database": {
+                "description": "The database configuration",
+                "properties": {
+                  "connector": {
+                    "description": "Configuration for connecting to the database",
+                    "oneOf": [
+                      {
+                        "properties": {
+                          "awsLambda": {
+                            "description": "Configuration for the AWS Lambda",
+                            "properties": {
+                              "lambdaArn": {
+                                "description": "The ARN of the rotator lambda",
+                                "type": "string"
+                              },
+                              "login": {
+                                "description": "The credentials to use to invoke the lambda.",
+                                "properties": {
+                                  "accessKeyId": {
+                                    "description": "The AWS access key ID.",
+                                    "type": "string"
+                                  },
+                                  "secretAccessKey": {
+                                    "description": "The AWS secret access key.",
+                                    "type": "string"
+                                  },
+                                  "sessionToken": {
+                                    "description": "The AWS session token, if any.",
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "accessKeyId",
+                                  "secretAccessKey"
+                                ],
+                                "title": "AWSLogin",
+                                "type": "object"
+                              }
+                            },
+                            "required": [
+                              "lambdaArn",
+                              "login"
+                            ],
+                            "type": "object"
+                          }
+                        },
+                        "required": [
+                          "awsLambda"
+                        ],
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
+                  },
+                  "database": {
+                    "description": "The database name.",
+                    "type": "string"
+                  },
+                  "host": {
+                    "description": "The host name of the database.",
+                    "type": "string"
+                  },
+                  "managingUser": {
+                    "description": "The credentials of the user managing the db.",
+                    "properties": {
+                      "password": {
+                        "description": "Managing user password",
+                        "type": "string"
+                      },
+                      "username": {
+                        "description": "Managing user username",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "password",
+                      "username"
+                    ],
+                    "rotateOnly": [
+                      "password",
+                      "username"
+                    ],
+                    "type": "object"
+                  },
+                  "port": {
+                    "description": "The port number of the database.",
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "host",
+                  "port",
+                  "database",
+                  "managingUser"
+                ],
+                "rotateOnly": [
+                  "managingUser"
+                ],
+                "type": "object"
+              },
+              "rotateUsers": {
+                "description": "Users to rotate",
+                "properties": {
+                  "username1": {
+                    "description": "Name of user to rotate",
+                    "type": "string"
+                  },
+                  "username2": {
+                    "description": "Name of user to rotate",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "username1",
+                  "username2"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "database",
+              "rotateUsers"
+            ],
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "current": {
+                "properties": {
+                  "password": {
+                    "description": "Previous user's password",
+                    "type": "string"
+                  },
+                  "username": {
+                    "description": "Name of previous user to rotate",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "password",
+                  "username"
+                ],
+                "type": "object"
+              },
+              "previous": {
+                "properties": {
+                  "password": {
+                    "description": "Previous user's password",
+                    "type": "string"
+                  },
+                  "username": {
+                    "description": "Name of previous user to rotate",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "password",
+                  "username"
+                ],
+                "type": "object"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "postgres",
+      "outputs": {
+        "properties": {
+          "current": {
+            "properties": {
+              "password": {
+                "description": "Previous user's password",
+                "type": "string"
+              },
+              "username": {
+                "description": "Name of previous user to rotate",
+                "type": "string"
+              }
+            },
+            "required": [
+              "password",
+              "username"
+            ],
+            "type": "object"
+          },
+          "previous": {
+            "properties": {
+              "password": {
+                "description": "Previous user's password",
+                "type": "string"
+              },
+              "username": {
+                "description": "Name of previous user to rotate",
+                "type": "string"
+              }
+            },
+            "required": [
+              "password",
+              "username"
+            ],
+            "type": "object"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "snowflake-user": {
+      "description": "The [`snowflake-user` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/snowflake-user/) rotates the keypair for a snowflake database user. See https://docs.snowflake.com/en/user-guide/key-pair-auth",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "examples": [
+              {
+                "snippet": "fn::rotate::snowflake-user:\n  inputs:\n    login: ${environments.logins.snowflake.snowflake.login}\n    targetUser: ESC_ROTATION_DEMO_USER"
+              }
+            ],
+            "properties": {
+              "login": {
+                "description": "The credentials used to perform rotation.",
+                "oneOf": [
+                  {
+                    "properties": {
+                      "privateKey": {
+                        "description": "Private key in PEM format.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "privateKey"
+                    ],
+                    "type": "object"
+                  },
+                  {
+                    "properties": {
+                      "token": {
+                        "description": "OAuth token (output of snowflake-login provider).",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "token"
+                    ],
+                    "type": "object"
+                  }
+                ],
+                "properties": {
+                  "account": {
+                    "description": "Snowflake account identifier.",
+                    "type": "string"
+                  },
+                  "user": {
+                    "description": "Managing user to connect as. This user must have permission to alter the target user.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "account",
+                  "user"
+                ],
+                "type": "object"
+              },
+              "targetUser": {
+                "description": "The user to rotate credentials for.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "login",
+              "targetUser"
+            ],
+            "rotateOnly": [
+              "login"
+            ],
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "account": {
+                "description": "Snowflake account identifier",
+                "type": "string"
+              },
+              "createdAt": {
+                "description": "When the keypair was generated, in RFC3339 format.",
+                "type": "string"
+              },
+              "privateKey": {
+                "description": "The private key in PEM format.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "account",
+              "createdAt",
+              "privateKey"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "snowflake-user",
+      "outputs": {
+        "properties": {
+          "account": {
+            "description": "Snowflake account identifier",
+            "type": "string"
+          },
+          "privateKey": {
+            "description": "Private key in PEM format.",
+            "type": "string"
+          },
+          "rotatedAt": {
+            "description": "When the keypair was generated, in RFC3339 format.",
+            "type": "string"
+          },
+          "user": {
+            "description": "The rotated user.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "account",
+          "privateKey",
+          "rotatedAt",
+          "user"
+        ],
+        "type": "object"
+      }
+    }
+  }
+}

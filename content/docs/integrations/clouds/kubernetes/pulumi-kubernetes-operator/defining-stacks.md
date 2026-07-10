@@ -1,176 +1,16 @@
 ---
-title_tag: "Pulumi Kubernetes Operator | Integrations"
-meta_desc: Use the Pulumi Kubernetes Operator to manage Pulumi stacks from within Kubernetes, driven by commits in git, Kubernetes objects, or Flux sources.
-title: Pulumi Kubernetes Operator
-h1: Pulumi Kubernetes Operator
+title_tag: "Defining stacks | Pulumi Kubernetes Operator"
+meta_desc: Create a Pulumi Stack resource from a Git repository, Flux source, or Program object, and set its configuration and environment variables.
+title: Defining stacks
+h1: "Pulumi Kubernetes Operator: Defining stacks"
 menu:
     integrations:
-        name: Pulumi Kubernetes Operator
-        parent: kubernetes-clouds
-        identifier: kubernetes-clouds-operator
-        weight: 5
-aliases:
-- /docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/
-- /docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
-- /docs/guides/continuous-delivery/pulumi-kubernetes-operator/
-- /docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/
-- /docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/
+        parent: kubernetes-clouds-operator
+        identifier: kubernetes-clouds-operator-defining-stacks
+        weight: 2
 ---
 
-This page details how to use the [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator) (PKO) to automate the deployment of Pulumi [stacks][stack]. The Pulumi program for a stack can come from a [Program resource][], from a Git repository, or from a [Flux source][flux-source], and may be authored in any supported Pulumi language (TypeScript, Python, Go, .NET, Java, YAML).
-
-[Program resource]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/programs.md
-[flux-source]: https://fluxcd.io/flux/components/source/
-
-## Overview
-
-The Pulumi Kubernetes Operator provides [custom resources][k8s-ext-pattern] to:
-
-- Provision a workspace (an execution environment) for a Pulumi project
-- Keep a Pulumi stack up-to-date using gitops
-- Write [Pulumi YAML][] programs as Kubernetes objects
-- Run Pulumi deployment operations
-
-Deploying Pulumi stacks using Kubernetes provides the capability to build out CI/CD and other automation systems, and to manage your infrastructure alongside your Kubernetes workloads or in dedicated control-plane clusters.
-
-Follow the sections below to install the operator, configure cluster access, and create your first stack.
-
-[k8s-ext-pattern]: https://kubernetes.io/docs/concepts/extend-kubernetes/operator/
-[stack]: /docs/concepts/stack/
-[Pulumi YAML]: /docs/iac/languages-sdks/yaml/
-
-## Install the Pulumi Kubernetes Operator
-
-### Using Helm
-
-Use [Helm 3.x][helm] to install the Pulumi Kubernetes Operator into your cluster.
-
-```bash
-helm install --create-namespace -n pulumi-kubernetes-operator pulumi-kubernetes-operator \
-    oci://ghcr.io/pulumi/helm-charts/pulumi-kubernetes-operator --version 2.3.0
-```
-
-[helm]: https://helm.sh/
-
-### Dev Install
-
-A simple "quickstart" installation manifest is provided for non-production environments.
-
-Install with `kubectl`:
-
-```bash
-kubectl apply -f https://raw.githubusercontent.com/pulumi/pulumi-kubernetes-operator/refs/tags/v2.2.0/deploy/quickstart/install.yaml
-```
-
-Note: the installation manifest creates a usable Kubernetes service account named `default/pulumi`
-for your convenience.
-
-## Create a Service Account
-
-The operator uses Kubernetes pods as the execution environment for Pulumi stack operations,
-with each Stack having a dedicated pod. A pod service account is needed to serve as the stack's identity
-and to authenticate users.
-
-Create a `ServiceAccount` named `default/pulumi` and grant the `system:auth-delegator` cluster role:
-
-```yaml
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  namespace: default
-  name: pulumi
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: default:pulumi:system:auth-delegator
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: system:auth-delegator # permissions: TokenReview, SubjectAccessReview
-subjects:
-- kind: ServiceAccount
-  namespace: default
-  name: pulumi
-```
-
- If your Pulumi program uses the [Kubernetes Provider][] to manage resources within the cluster, the stack’s service account will need extra permissions, e.g. a `ClusterRoleBinding` to the `cluster-admin` cluster role.
-
- See [“Kubernetes: Service Accounts”][service-accounts] for more information.
-
-[Kubernetes Provider]: https://www.pulumi.com/registry/packages/kubernetes/
-[service-accounts]: https://kubernetes.io/docs/concepts/security/service-accounts/
-
-## Configure Pulumi Cloud Access
-
-By default, the operator uses Pulumi Cloud as the state backend for your stacks.
-Please create a `Secret` containing a Pulumi access token to be used to authenticate to Pulumi Cloud. Follow [these instructions][tokens] to create a personal, organization, or team access token.
-
-Here’s an easy way to create a secret named `default/pulumi-api-secret`:
-
-```bash
-kubectl create secret generic -n default pulumi-api-secret \
-  --from-literal=accessToken=$PULUMI_ACCESS_TOKEN
-```
-
-In the Stack specification, use `spec.envRefs` to reference the secret:
-
-```yaml
-spec:
-  envRefs:
-    PULUMI_ACCESS_TOKEN:
-      type: Secret
-      secret:
-        name: pulumi-api-secret
-        key: accessToken
-```
-
-To use a DIY state backend, set the `spec.backend` field to a storage endpoint URL.
-Use `spec.envRefs` to attach credentials and to set environment variables for the backend as necessary.
-
-See ["States & Backends"][states-backends] for more information.
-
-{{< notes type="info" >}}
-To avoid storing long-lived Pulumi access tokens in your cluster, you can register the cluster as a Pulumi Cloud OIDC Issuer and have workspace pods exchange their projected service account tokens for short-lived Pulumi tokens. See [Configuring OpenID Connect for Amazon EKS](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/) or [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/).
-{{< /notes >}}
-
-[tokens]: https://www.pulumi.com/docs/administration/access-identity/access-tokens/
-[states-backends]: https://www.pulumi.com/docs/iac/concepts/state-and-backends/
-
-## Use Pulumi ESC for centralized configuration
-
-[Pulumi ESC (Environments, Secrets, and Configuration)][pulumi-esc] provides centralized management of secrets and configuration. You can attach ESC environments to Stack objects to access shared configuration and secrets across multiple stacks.
-
-Use the `spec.environment` field to specify one or more ESC environment names:
-
-```yaml
-apiVersion: pulumi.com/v1
-kind: Stack
-metadata:
-  name: my-app
-spec:
-  serviceAccountName: pulumi
-  stack: my-org/my-app/prod
-  projectRepo: https://github.com/example/app
-  branch: main
-  environment:
-    - prod-shared-config
-    - aws-credentials
-  envRefs:
-    PULUMI_ACCESS_TOKEN:
-      type: Secret
-      secret:
-        name: pulumi-api-secret
-        key: accessToken
-```
-
-ESC environments are accessed using your Pulumi access token. The configuration and secrets from these environments become available to your Pulumi program automatically.
-
-[pulumi-esc]: https://www.pulumi.com/docs/esc/
-
-## Create a Stack Resource
-
-The `Stack` Resource encapsulates a Pulumi project to provision infrastructure resources such as cloud VMs, object storage, and Kubernetes clusters and their workloads.
+The `Stack` resource encapsulates a Pulumi project to provision infrastructure resources such as cloud VMs, object storage, and Kubernetes clusters and their workloads.
 
 Set the `spec.serviceAccountName` field to the name of a `ServiceAccount` with the requisite permissions.
 
@@ -178,7 +18,7 @@ Set the `spec.stack` field to a unique Pulumi stack name, using a [supported for
 
 [supported format]: https://www.pulumi.com/docs/iac/concepts/stacks/#create-stack
 
-### Using a Git repository
+## Using a Git repository
 
 In this scenario, the stack draws on a Git repository for the program source code.
 
@@ -193,7 +33,6 @@ In the example below, we're creating a `Stack` for a Pulumi project called `kube
 
 [nginx-stack]: https://github.com/pulumi/examples/blob/master/kubernetes-ts-nginx/index.ts
 [k8s-provider]: /registry/packages/kubernetes/api-docs/provider/
-[default-kubeconfig]: /registry/packages/kubernetes/installation-configuration/#setup
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -415,7 +254,7 @@ func main() {
 {{% /choosable %}}
 {{% /chooser %}}
 
-### Using a Flux source
+## Using a Flux source
 
 [Flux][] offers a powerful alternative for fetching Pulumi program source code from
 a variety of sources, including OCI repositories and cloud storage buckets.
@@ -480,9 +319,10 @@ const mystack = new k8s.apiextensions.CustomResource("my-stack", {
 ```
 
 [flux]: https://fluxcd.io/
+[flux-source]: https://fluxcd.io/flux/components/source/
 [flux-install]: https://fluxcd.io/flux/installation/
 
-### Using a Program object
+## Using a Program object
 
 With the `Program` resource, you can define a Pulumi YAML program directly as a Kubernetes resource.
 The reference docs for the [Program
@@ -559,14 +399,7 @@ spec:
     aws:region: us-east-1
 ```
 
-## Explore other Features
-
-Here's some advanced options provided by the `Stack` resource.
-Detailed documentation on the Stack API is available [here][pko-stacks].
-
-[pko-stacks]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/stacks.md
-
-### Stack Configuration Values
+## Stack configuration values
 
 In many cases, different stacks for a single project will need differing values.
 For instance, you may want to use a different size for your AWS EC2 instance, or a different number of replicas
@@ -574,7 +407,7 @@ for a particular Kubernetes deployment. Pulumi offers a configuration system for
 see ["Configuration"][iac-config] for more information.
 
 Use the `spec.config` block to set stack configuration values. The values are merged
-into your project’s stack settings file.
+into your project's stack settings file.
 
 Use the `spec.secretsRef` block to set configuration values containing secrets.
 The value may be a literal value or may be a reference to a Kubernetes `Secret`.
@@ -587,12 +420,10 @@ Use the `spec.retryMaxBackoffDurationSeconds` field to control the maximum backo
 To customize the retention of Update objects created by the Stack controller, use the `spec.updateTemplate` field to set labels, annotations, and TTL (time-to-live) policies. See the [Update CR documentation][pko-updates] for details.
 
 [iac-config]: https://www.pulumi.com/docs/iac/concepts/config/
-
 [iac-secrets-provider]: https://www.pulumi.com/docs/intro/concepts/secrets/#initializing-a-stack-with-alternative-encryption
-
 [pko-updates]: https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/updates.md
 
-### Structured configuration
+## Structured configuration
 
 In addition to string values, Stack configuration supports complex data types including objects, arrays, numbers, and booleans. This enhancement allows you to express sophisticated configuration structures inline in your Stack manifests or load them from ConfigMaps with automatic JSON parsing.
 
@@ -667,7 +498,7 @@ spec:
 
 Note that Secrets are not a supported source of structured configuration values.
 
-### Environment Variables
+## Environment variables
 
 Use the `spec.envRefs` field to set environment variables for the Pulumi program,
 such as `PULUMI_ACCESS_TOKEN` or `AWS_SECRET_ACCESS_KEY`.
@@ -690,199 +521,3 @@ spec:
               echo "PULUMI_CONFIG_PASSPHRASE=my-passphrase" >> $PULUMI_ENV
               echo "MY_CUSTOM_VAR=value" >> $PULUMI_ENV
 ```
-
-### Drift Detection
-
-Drift detection means to detect unwanted changes to your provisioned infrastructure.
-The operator supports drift detection and remediation by periodically running `pulumi up`. This is referred to as re-synchronization.
-
-Use the `spec.continueResyncOnCommitMatch` field to enable periodic resyncs. Use the `spec.resyncFrequencySeconds` field to set the resync frequency.
-
-### State Refresh
-
-Use the `spec.refresh` field to refresh the state of the stack's resources before each update.
-
-{{< notes type="info" >}}
-  It is recommended that `spec.refresh` be enabled.
-{{< /notes >}}
-
-### Stack Cleanup
-
-Use the `spec.destroyOnFinalize` field to automatically destroy the Pulumi stack (i.e. `pulumi destroy -f`)
-when the `Stack` object is deleted. Enable this option to link the lifecycle of the Pulumi stack, and the resources it contains, to its `Stack` object.
-
-{{< notes type="info" >}}
-  Stack object deletion is slower when this option is enabled, because a Pulumi deployment operation
-  must be run during object finalization.
-{{< /notes >}}
-
-### Stack Prerequisites
-
-It is possible to declare that a particular `Stack` be dependent on another `Stack`.
-The dependent stack waits for the other stack to be successfully deployed.
-Use the `succeededWithinDuration` field to set a duration within which the prerequisite must have reached success; otherwise the dependency is automatically re-synced.
-
-### External Triggers
-
-It is possible to trigger a stack update for a stack at any time by applying
-the `pulumi.com/reconciliation-request` annotation:
-
-```bash
-kubectl annotate stack $STACK_NAME "pulumi.com/reconciliation-request=$(date)" --overwrite  
-```
-
-The value of the annotation is arbitrary, and we recommend using a timestamp.
-
-### Preview mode
-
-Preview mode enables you to run Pulumi stacks in dry-run fashion, allowing you to visualize what infrastructure changes would occur without actually applying them. When `spec.preview` is set to `true`, the operator runs `pulumi preview` instead of `pulumi up`.
-
-This is useful for:
-
-- Validating infrastructure changes before deployment
-- Comparing different configurations using multiple Stack resources pointing to the same Pulumi stack
-- Creating tick-tock rollout patterns where you toggle preview mode on and off
-
-Here's an example Stack with preview mode enabled:
-
-```yaml
-apiVersion: pulumi.com/v1
-kind: Stack
-metadata:
-  name: my-infrastructure-preview
-spec:
-  serviceAccountName: pulumi
-  stack: my-org/my-project/prod
-  projectRepo: https://github.com/example/infra
-  branch: feature-branch
-  preview: true  # Only runs pulumi preview
-  envRefs:
-    PULUMI_ACCESS_TOKEN:
-      type: Secret
-      secret:
-        name: pulumi-api-secret
-        key: accessToken
-```
-
-The Stack's Ready condition indicates preview success, and status includes preview links, standard output, and program outputs—all without making actual infrastructure changes.
-
-## Use With Argo CD
-
-We can use ArgoCD in combination with PKO to manage the lifetime of the Stack via the GitOps paradigm. This gives you the ability to use the ArgoCD UI or CLI to interact with the Stack, and to allow ArgoCD to reconcile changes to the Stack specification. The Pulumi Kubernetes Operator handles the details.
-
-{{% notes type="info" %}}
-For comprehensive ArgoCD integration guidance, including multi-cluster deployments, best practices, and advanced patterns, see our dedicated [ArgoCD with Pulumi Kubernetes Operator](/docs/iac/operations/continuous-delivery/argocd/) documentation.
-{{% /notes %}}
-
-First, we need to define a Pulumi stack as a Kubernetes manifest that ArgoCD can deploy. We assume here that this manifest lives in the same repository as the Pulumi program, in the subfolder `deploy/`.  However, this manifest could live in a separate repository, such as an "app-of-apps" repo. In this example, the manifest declares a service account and cluster role bindings to allow the stack to create resources in the cluster. Additionally, we expect a Secret to exist on the cluster containing a Pulumi access token.
-
-Note that the Stack's `projectRepo` and `branch` point to the location of the Pulumi program to be executed by the Pulumi Kubernetes Operator.
-
-```yaml
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: my-app:system:auth-delegator
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
-  labels:
-    app.kubernetes.io/instance: my-app
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: system:auth-delegator
-subjects:
-- kind: ServiceAccount
-  name: my-app
-  namespace: some-namespace
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: my-app:cluster-admin
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
-  labels:
-    app.kubernetes.io/instance: my-app
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: cluster-admin
-subjects:
-- kind: ServiceAccount
-  name: my-app
-  namespace: some-namespace
----
-apiVersion: pulumi.com/v1
-kind: Stack
-metadata:
-  name: my-app-dev
-  namespace: some-namespace
-  labels:
-    app.kubernetes.io/instance: my-app
-  annotations:
-    argocd.argoproj.io/sync-wave: "3"
-    pulumi.com/reconciliation-request: "before-first-update"
-    link.argocd.argoproj.io/external-link: http://app.pulumi.com/my-org/my-prject/dev
-spec:
-  serviceAccountName: my-app
-  stack: my-org/my-project/dev
-  projectRepo: "https://github.com/my-repo/my-app.git"
-  branch: main
-  refresh: true
-  resyncFrequencySeconds: 60
-  destroyOnFinalize: true
-  envRefs:
-    PULUMI_ACCESS_TOKEN:
-      type: Secret
-      secret:
-        name: pulumi-access-token-secret
-        key: PULUMI_ACCESS_TOKEN
-  workspaceTemplate:
-    spec:
-      image: pulumi/pulumi:3.134.1-nonroot
-```
-
-Next we create an ArgoCD `Application` object:
-
-```yaml
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: my-app
-  namespace: argocd
-  finalizers:
-    # best practice: use background cascading deletion when destroyOnFinalize is enabled.
-    - resources-finalizer.argocd.argoproj.io/background
-spec:
-  destination:
-    namespace: default
-    server: "https://kubernetes.default.svc"
-  syncPolicy:
-    automated:
-      prune: true
-  project: default
-  source:
-    repoURL: "https://github.com/my-repo/my-app.git"
-    path: "./deploy"  # the location of the Stack maifest
-    targetRevision: main
-```
-
-ArgoCD will sync the `Application` by applying the `Stack` object,
-which will in turn effect a Pulumi deployment. The result will look something like this in the ArgoCD UI:
-
-![ArgoCD PKO Example](/images/docs/reference/argocd/pko-example.png)
-
-## More Information
-
-### Examples
-
-More examples are available in the [pulumi/pulumi-kubernetes-operator][pko-examples] repository.
-
-[pko-examples]: https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples
-
-### Getting Help
-
-Check out [troubleshooting](https://github.com/pulumi/pulumi-kubernetes-operator/blob/master/docs/troubleshooting.md) for more details, look at [known issues](https://github.com/pulumi/pulumi-kubernetes-operator/issues/) or
-open a [new issue](https://github.com/pulumi/pulumi-kubernetes-operator/issues/new) in GitHub.

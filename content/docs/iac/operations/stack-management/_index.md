@@ -15,6 +15,8 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 
 ## Pages
 
+**[Protecting against undesired changes](/docs/iac/operations/stack-management/protecting-against-undesired-changes/)** - Production hygiene: protect critical resources from deletion, review previews before applying, and enforce guardrails with update plans, policy, and CI/CD gating.
+
 **[Targeted updates](/docs/iac/operations/stack-management/targeted-updates/)** - Limit which resources Pulumi operates on with `--target`, `--exclude`, and `--target-replace`. Learn the trade-offs of partial operations and when to use them.
 
 **[Running your program on refresh and destroy](/docs/iac/operations/stack-management/run-program/)** - Use `--run-program` to execute your Pulumi program before `refresh` or `destroy`. Required for dynamic credentials and useful for diff-clean provider upgrades.
