@@ -1,9 +1,9 @@
 ---
-title: Trigger deployments from Git tags on any supported VCS
+title: Trigger Pulumi deployments from Git tags
 date: 2026-06-05
-meta_desc: "Push a git tag to trigger a deployment, with optional glob filters, across GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS."
+meta_desc: You can now push a Git tag to trigger a Pulumi deployment from any supported service, including GitHub, GitLab, Bitbucket, Azure DevOps, and more.
 ---
 
-Push a git tag to trigger a deployment, with optional glob filters, across GitHub, GitLab, Bitbucket, Azure DevOps, and Custom VCS.
+You can now push a Git tag to your Pulumi Cloud-connected version control system to trigger a Pulumi deployment. Available to all Pulumi Cloud organizations, this new feature also supports optional glob filters and works across any supported VCS, including GitHub, GitLab, Bitbucket, Azure DevOps, and custom integrations.
 
-[Read the announcement](/blog/trigger-deployments-on-git-tags/) for the full story.
+To learn more about tag-based deployments and how to use them, [read the announcement post](/blog/trigger-deployments-on-git-tags/) or [check out Deployments documentation](/docs/deployments/concepts/settings/).

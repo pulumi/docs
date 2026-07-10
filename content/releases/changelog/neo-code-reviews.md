@@ -1,9 +1,13 @@
 ---
-title: "Neo code reviews: AI code review built for infrastructure"
-date: 2026-06-26
-meta_desc: "Neo reviews each pull request as an agent — code, preview plan, and infrastructure diff together — and posts inline findings on the affected lines."
+title: "Neo code reviews: AI code review for infrastructure"
+date: 2026-06-22
+meta_desc: Neo code reviews help you understand not your team's proposed changes, but how those changes affect your running environments.
 ---
 
-Neo reviews each pull request as an agent — reading the code, the preview plan, and the resulting infrastructure diff together — and posts inline findings on the affected lines.
+As of today, [Pulumi Neo code reviews](/docs/ai/code-reviews/) are available in public preview.
 
-[Read the announcement](/blog/neo-code-reviews/) for the full story.
+Building on the [Pulumi GitHub app](/docs/integrations/version-control/github-app/), which already posts rich diffs as PR comments on pull requests, Neo code reviews help you understand not just what's changing, but also how those changes relate to, and potentially impact, the rest of your running infrastructure.
+
+![An example code review in a Github PR comment](/blog/neo-code-reviews/neo-code-review.png)
+
+[Check out the blog](/blog/neo-code-reviews/) to learn more.

@@ -13,7 +13,7 @@
     <channel>
         <title>Pulumi Releases</title>
         <link>{{ .Permalink }}</link>
-        <description>A running log of major platform updates from the Pulumi team.</description>
+        <description>A running log of major and minor updates from the Pulumi team.</description>
         <language>{{ .Site.LanguageCode }}</language>
         {{ range .RegularPagesRecursive.ByDate.Reverse }}
             <item>

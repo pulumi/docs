@@ -1,6 +1,6 @@
 ---
 title: Releases
-meta_desc: A running log of major platform updates from the Pulumi team.
+meta_desc: A running log of major and minor updates from the Pulumi team.
 
 # Opt this section into JSON and RSS feeds (built in config/_default/config.yml).
 # JSON -> /releases/index.json (layouts/releases/list.json)
