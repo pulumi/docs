@@ -69,11 +69,7 @@ Pulumi providers can be written in any language that supports gRPC, and used in 
 
 We recommend using the Pulumi Go Provider SDK for Go providers, as it handles protocol complexity and generates schemas automatically. For other languages, or when you need full control over your schema and data structure mappings, use the [direct implementation](/docs/iac/guides/building-extending/providers/implementers/) approach.
 
-Some advantages of using the Pulumi Provider SDK:
-
-- **Minimal Code Required**: You define your resource types and implementation using Go structs and methods, and the SDK handles the rest (RPC, auto-generated schema for multi-language support, etc).
-- **Includes a Testing Framework**: Testing custom providers is made much easier with the SDK's built-in testing framework.
-- **Middleware Support**: Enhances providers with layers like dispatch logic, schema generation, and cancellation propagation.
+This guide focuses on building a custom resource. For the library's full capabilities—including [functions](/docs/iac/concepts/functions/) and [components](/docs/iac/concepts/components/), the built-in testing framework, and its internal architecture—see the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) overview.
 
 ## Example: Build a custom `file` provider
 

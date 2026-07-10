@@ -12,7 +12,7 @@ menu:
 
 A Pulumi provider can declare its own configuration keys, which users set via `pulumi config`, [Pulumi ESC](/docs/esc/) environments, or environment variables. Declaring configuration in the provider schema (rather than reading it ad hoc inside resource methods) gives you typed access in every language SDK, automatic secret handling, and automatic fallback to environment variables.
 
-This guide uses the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/providers/sdks/pulumi-go-provider-sdk/). For the underlying schema fields, see the [package schema reference](/docs/iac/guides/building-extending/packages/schema/#default).
+This guide uses the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/). For the underlying schema fields, see the [package schema reference](/docs/iac/guides/building-extending/packages/schema/#default).
 
 ## Declaring a config type
 
