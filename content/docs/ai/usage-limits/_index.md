@@ -31,7 +31,7 @@ The organization limit is a single monthly dollar amount that covers all Neo usa
 
 The limit can be as low as **$10** and as high as **$1,000,000**. When the month's Neo usage reaches the limit, Neo pauses for the entire organization until usage resets at the start of the next billing period.
 
-<!-- TODO(screenshot): "Manage token usage" panel with an organization limit set and the email-notifications toggle visible. PNG, ~1080px wide, cropped to the panel, co-located as manage-token-usage.png; add a 1px #999999 border if it blends into the page. -->
+![The Manage token usage panel showing an organization limit of $100 per month with email notifications enabled.](manage-token-usage.png)
 
 ## Set per-member limits
 
@@ -48,7 +48,7 @@ The **Manage token usage** panel lists each member with these columns:
 | **Per-member limit** | The limit you set for this member, if any |
 | **Effective limit** | The smaller of the per-member limit and the organization limit |
 
-<!-- TODO(screenshot): the per-member limits table (Name / Amount used / Per-member limit / Effective limit) with a row or two. PNG, ~1080px wide, co-located as per-member-limits.png. -->
+![The Per-member limits table showing each member's amount used, per-member limit, and effective limit.](per-member-limits.png)
 
 ## Email alerts
 
