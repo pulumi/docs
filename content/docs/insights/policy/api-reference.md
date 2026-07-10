@@ -39,12 +39,12 @@ import * as aws from "@pulumi/aws";
 new PolicyPack("my-policies", {
     policies: [
         {
-            name: "s3-no-public-read",
-            description: "Prohibits setting the publicRead ACL on S3 buckets.",
+            name: "rds-storage-encryption",
+            description: "Requires RDS instances to have storage encryption enabled.",
             enforcementLevel: "mandatory",
-            validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
-                if (bucket.acl === "public-read") {
-                    reportViolation("S3 buckets must not have the publicRead ACL.");
+            validateResource: validateResourceOfType(aws.rds.Instance, (instance, args, reportViolation) => {
+                if (!instance.storageEncrypted) {
+                    reportViolation("RDS instance must have storage encryption enabled.");
                 }
             }),
         },
