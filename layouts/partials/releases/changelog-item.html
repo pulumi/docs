@@ -1,0 +1,25 @@
+{{/*
+    Changelog Item
+
+    One hairline row on /releases/ linking to a changelog item's detail page:
+    title + optional tier badge on the left, the item's date + an arrow on the
+    right. The data-changelog-link attribute lets theme/src/ts/releases.ts
+    intercept the click and open the page's content in a modal (pushState-ing
+    the detail URL); without JS the row is a plain link.
+    /releases is not a /docs page, so no dark-mode tokens are needed.
+
+    Parameters:
+    - page: The changelog item's page object.
+*/}}
+
+{{ $page := .page }}
+
+<li class="m-0 border-b border-gray-200 last:border-b-0">
+    <a href="{{ $page.RelPermalink }}" data-changelog-link class="group/item flex items-center gap-2 py-4 no-underline hover:no-underline mb-0 text-service-black hover:text-violet-primary transition-colors">
+        <span class="flex items-center gap-1 sm:gap-2 flex-wrap">
+            <span class="heading-4 mb-0">{{ $page.Title }}</span>
+            {{ with $page.Params.tier }}<span class="whitespace-nowrap items-center align-middle rounded-full bg-gray-100 text-gray-600 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider leading-none">{{ . }}</span>{{ end }}
+        </span>
+        <time datetime="{{ $page.Date.Format "2006-01-02" }}" class="body-sm ml-auto shrink-0 whitespace-nowrap text-gray-700">{{ $page.Date.Format "Jan 2" }}</time>
+    </a>
+</li>

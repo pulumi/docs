@@ -18,6 +18,7 @@ import "./copybutton";
 import "./code-tabbed";
 import "./code-snippets-dropdown";
 import "./resources";
+import "./releases";
 import "./packages";
 import "./pricing-trial";
 import "./developer-advocates";
