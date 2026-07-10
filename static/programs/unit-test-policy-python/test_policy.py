@@ -1,44 +1,45 @@
 import pytest
 from pulumi_policy import ResourceValidationArgs
 
-# Define the validator function directly for testing
-# This is the same logic as in __main__.py
-REQUIRED_S3_PREFIX = "mycompany-"
-
-def s3_bucket_prefix_validator(args: ResourceValidationArgs, report_violation):
-    """Validates that S3 buckets use the required naming prefix."""
-    if args.resource_type == "aws:s3/bucket:Bucket" and "bucketPrefix" in args.props:
-        actual_prefix = args.props["bucketPrefix"]
-        if not actual_prefix.startswith(REQUIRED_S3_PREFIX):
+# Define the validator function directly for testing.
+# This is the same logic as in __main__.py.
+def rds_storage_encryption_validator(args: ResourceValidationArgs, report_violation):
+    """Requires RDS instances to have storage encryption enabled, unless tagged as non-production data."""
+    if args.resource_type == "aws:rds/instance:Instance":
+        # Exempt instances explicitly tagged as non-production data.
+        tags = args.props.get("tags", {}) or {}
+        if tags.get("data-classification") == "non-production":
+            return
+        if not args.props.get("storageEncrypted"):
             report_violation(
-                f"S3 bucket must use '{REQUIRED_S3_PREFIX}' prefix. Current prefix: '{actual_prefix}'")
+                "RDS instance must have storage encryption enabled "
+                "(or be tagged 'data-classification=non-production').")
 
-def test_bucket_with_correct_prefix():
-    """Test that policy passes when bucket has correct prefix."""
+def test_encrypted_instance_passes():
+    """Test that the policy passes when storage encryption is enabled."""
     args = ResourceValidationArgs(
-        resource_type="aws:s3/bucket:Bucket",
-        props={"bucketPrefix": "mycompany-data"},
-        urn="urn:pulumi:dev::test::aws:s3/bucket:Bucket::my-bucket",
-        name="my-bucket",
+        resource_type="aws:rds/instance:Instance",
+        props={"storageEncrypted": True},
+        urn="urn:pulumi:dev::test::aws:rds/instance:Instance::my-db",
+        name="my-db",
         opts={},
         provider="",
     )
 
-    # Should not raise any violations
     violations = []
     def report_violation(message: str):
         violations.append(message)
 
-    s3_bucket_prefix_validator(args, report_violation)
+    rds_storage_encryption_validator(args, report_violation)
     assert len(violations) == 0
 
-def test_bucket_with_wrong_prefix():
-    """Test that policy fails when bucket has wrong prefix."""
+def test_unencrypted_instance_fails():
+    """Test that the policy fails when storage encryption is not enabled."""
     args = ResourceValidationArgs(
-        resource_type="aws:s3/bucket:Bucket",
-        props={"bucketPrefix": "wrongprefix-data"},
-        urn="urn:pulumi:dev::test::aws:s3/bucket:Bucket::my-bucket",
-        name="my-bucket",
+        resource_type="aws:rds/instance:Instance",
+        props={"storageEncrypted": False},
+        urn="urn:pulumi:dev::test::aws:rds/instance:Instance::my-db",
+        name="my-db",
         opts={},
         provider="",
     )
@@ -47,17 +48,20 @@ def test_bucket_with_wrong_prefix():
     def report_violation(message: str):
         violations.append(message)
 
-    s3_bucket_prefix_validator(args, report_violation)
+    rds_storage_encryption_validator(args, report_violation)
     assert len(violations) == 1
-    assert "mycompany-" in violations[0]
+    assert "storage encryption" in violations[0]
 
-def test_bucket_with_no_prefix():
-    """Test that policy fails when bucket has no prefix."""
+def test_non_production_instance_is_exempt():
+    """Test that an unencrypted instance tagged as non-production data is exempt."""
     args = ResourceValidationArgs(
-        resource_type="aws:s3/bucket:Bucket",
-        props={"bucketPrefix": ""},
-        urn="urn:pulumi:dev::test::aws:s3/bucket:Bucket::my-bucket",
-        name="my-bucket",
+        resource_type="aws:rds/instance:Instance",
+        props={
+            "storageEncrypted": False,
+            "tags": {"data-classification": "non-production"},
+        },
+        urn="urn:pulumi:dev::test::aws:rds/instance:Instance::my-db",
+        name="my-db",
         opts={},
         provider="",
     )
@@ -66,5 +70,5 @@ def test_bucket_with_no_prefix():
     def report_violation(message: str):
         violations.append(message)
 
-    s3_bucket_prefix_validator(args, report_violation)
-    assert len(violations) == 1
+    rds_storage_encryption_validator(args, report_violation)
+    assert len(violations) == 0
