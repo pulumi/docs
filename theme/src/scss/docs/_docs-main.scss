@@ -231,6 +231,15 @@ body.section-registry {
             }
         }
 
+        // Once the sidebar becomes a persistent desktop sidebar (>1024px, matching
+        // the JS that strips the collapse state classes), the toggle tab is inert —
+        // hide it so it doesn't linger on narrow desktop widths.
+        @media (min-width: 1025px) {
+            .docs-nav-toggle {
+                display: none;
+            }
+        }
+
         .docs-main-nav-wrapper {
             position: relative;
             display: flex;
@@ -271,10 +280,6 @@ body.section-registry {
             display: flex;
             position: relative;
             top: 0;
-
-            .docs-nav-toggle {
-                display: none;
-            }
 
             + div.docs-main-content-wrapper {
                 margin-left: 0;
