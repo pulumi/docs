@@ -28,6 +28,7 @@
 {{ $image := .image }}
 {{ $imageAlt := .image_alt | default $title }}
 {{ $link := .link }}
+{{ $tier := .tier }}
 
 {{/* Span classes per variant (mobile is always single-column) */}}
 {{ $spanClass := "lg:col-span-1 lg:row-span-1" }}
@@ -50,7 +51,7 @@
     {{ end }}
 {{ end }}
 
-{{ $textBlockArgs := dict "icon" $icon "title" $title "description" $description "isLinked" $isLinked }}
+{{ $textBlockArgs := dict "icon" $icon "title" $title "description" $description "isLinked" $isLinked "tier" $tier }}
 
 {{ if $isLinked }}<a href="{{ $link }}" class="{{ $cardClasses }}">{{ else }}<div class="{{ $cardClasses }}">{{ end }}
 

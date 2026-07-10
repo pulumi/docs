@@ -1,0 +1,30 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
+{{- /*
+    Releases RSS feed -> /releases/rss.xml
+
+    Driven by this section's pages (.RegularPagesRecursive — see
+    content/releases/_index.md), emitted newest-first by date and mirroring
+    the JSON feed: one <item> per release page and per changelog item, linking
+    to the page's own URL. Descriptions come from short_description (releases)
+    or meta_desc (changelog items). Modeled on layouts/blog/rss.xml and
+    layouts/events/rss.xml.
+*/ -}}
+<rss version="2.0">
+    <channel>
+        <title>Pulumi Releases</title>
+        <link>{{ .Permalink }}</link>
+        <description>A running log of major and minor updates from the Pulumi team.</description>
+        <language>{{ .Site.LanguageCode }}</language>
+        {{ range .RegularPagesRecursive.ByDate.Reverse }}
+            <item>
+                <title>{{ .Title }}</title>
+                <link>{{ .Permalink }}</link>
+                <guid>{{ .Permalink }}</guid>
+                <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+                {{ with or .Params.short_description .Params.meta_desc }}
+                <description>{{ . | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " " }}</description>
+                {{ end }}
+            </item>
+        {{ end }}
+    </channel>
+</rss>

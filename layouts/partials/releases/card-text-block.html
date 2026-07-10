@@ -15,12 +15,15 @@
     - title:       Card title.
     - description: Card description (markdown).
     - isLinked:    Bool. Adds the inline arrow icon when true.
+    - tier:        Optional product tier (e.g. "Team"). Renders a badge inline after the
+                   title; the badge picks up a violet tint when a linked card is hovered.
 */}}
 
 {{ $icon := .icon }}
 {{ $title := .title }}
 {{ $description := .description }}
 {{ $isLinked := .isLinked }}
+{{ $tier := .tier }}
 
 <div class="flex flex-col gap-3">
     {{ with $icon }}
@@ -29,7 +32,7 @@
     </div>
     {{ end }}
     {{ with $title }}
-    <h3 class="heading-2 font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}</h3>
+    <h3 class="heading-2 font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}{{ with $tier }}<span class="inline-flex items-center align-middle ml-2 rounded-full bg-gray-100 text-gray-600 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider leading-none transition-colors group-hover/linked:bg-violet-100 group-hover/linked:text-violet-primary">{{ . }}</span>{{ end }}</h3>
     {{ end }}
     {{ with $description }}
     <div class="body-base text-service-black leading-6">
