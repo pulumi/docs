@@ -582,3 +582,18 @@ html[data-theme="dark"] body.section-docs tr[class^="property-depth-"] td {
 html[data-theme="dark"] body.section-docs tr.property-depth-2 td {
     background-color: color-mix(in oklch, var(--color-white) 8%, transparent);
 }
+
+/* ESC schema shortcode: label for oneOf/anyOf variant groups. Uses --docs-*
+   tokens so it flips in dark mode automatically. Inert on non-ESC pages. */
+.api-param-variant {
+    padding: 0.25rem 0;
+    border-bottom: none;
+}
+
+.api-param-variant-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--docs-fg-muted);
+}

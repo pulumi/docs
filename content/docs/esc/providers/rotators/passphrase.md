@@ -19,14 +19,6 @@ The `passphrase` rotator enables you to rotate any user-defined key in your ESC 
 If you want to generate _random passwords_ use the [password rotator](/docs/esc/providers/rotators/password/)
 {{% /notes %}}
 
-## Inputs
-
-| Property     | Type    | Description                                                                |
-|--------------|---------|---------------------------------------------------------------------------|
-| `separator`  | string  | A single character used as the word separator. (default: `-`)                  |
-| `capitalize` | boolean | Whether to capitalize each generated word. (default: `false`)                  |
-| `length`     | int     | The number of words in the generated passphrase (3–15). (default: `5`)         |
-
 ## Example
 
 The `passphrase` rotator can be configured for any user-defined key.
@@ -54,19 +46,21 @@ When you open the environment, you should see output similar to the following:
 }
 ```
 
-## State (Optional)
+## Schema reference
 
-| Property   | Type   | Description                              |
-|------------|--------|------------------------------------------|
-| `current`  | string | The most recently generated passphrase.  |
-| `previous` | string | The prior generated passphrase.          |
+{{< esc-schema-updated >}}
 
-## Outputs
+### Inputs
 
-| Property   | Type   | Description                                              |
-|------------|--------|----------------------------------------------------------|
-| `current`  | string | The most recently generated passphrase, stored as a secret. |
-| `previous` | string | The prior generated passphrase, stored as a secret.      |
+{{< esc-schema type="rotator" name="passphrase" section="inputs" >}}
+
+### State
+
+{{< esc-schema type="rotator" name="passphrase" section="state" >}}
+
+### Outputs
+
+{{< esc-schema type="rotator" name="passphrase" section="outputs" >}}
 
 ## Troubleshooting
 

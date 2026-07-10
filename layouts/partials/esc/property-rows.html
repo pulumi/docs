@@ -1,0 +1,115 @@
+{{/*
+  Renders ESC schema property list items, recursing into inline nested schemas.
+  ESC schemas (data/esc_schemas.json) are self-contained — nested objects are
+  inlined with a "title" rather than referenced via $ref — so unlike
+  layouts/partials/openapi/property-rows.html this partial resolves nesting
+  inline. Outputs <li class="api-param"> elements inside a caller-provided
+  <ul class="api-params">.
+
+  Input: dict with "properties", "required", "depth" (default 0), "maxDepth" (default 3).
+  Properties are rendered alphabetically — ESC schemas carry no explicit order.
+*/}}
+{{ $properties := .properties | default dict }}
+{{ $required := .required | default slice }}
+{{ $depth := .depth | default 0 }}
+{{ $maxDepth := 3 }}
+{{ if isset . "maxDepth" }}{{ $maxDepth = .maxDepth }}{{ end }}
+
+{{ $names := slice }}
+{{ range $name, $_ := $properties }}{{ $names = $names | append $name }}{{ end }}
+
+{{ range sort $names }}
+  {{ $propName := . }}
+  {{ $prop := index $properties $propName }}
+  {{ $nested := "" }}{{/* dict of {properties, required} to recurse into, or "" */}}
+  {{ $typeHTML := "" }}
+
+  {{ if eq $prop.type "array" }}
+    {{ $items := $prop.items | default dict }}
+    {{ if $items.properties }}
+      {{ $tn := $items.title | default "object" }}
+      {{ $typeHTML = printf "array[%s]" $tn }}
+      {{ $nested = dict "properties" $items.properties "required" ($items.required | default slice) }}
+    {{ else if $items.type }}
+      {{ $typeHTML = printf "array[%s]" $items.type }}
+    {{ else }}
+      {{ $typeHTML = "array" }}
+    {{ end }}
+  {{ else if eq $prop.type "object" }}
+    {{ if $prop.properties }}
+      {{ $typeHTML = $prop.title | default "object" }}
+      {{ $nested = dict "properties" $prop.properties "required" ($prop.required | default slice) }}
+    {{ else if isset $prop "additionalProperties" }}
+      {{ $ap := $prop.additionalProperties }}
+      {{ if eq (printf "%T" $ap) "bool" }}
+        {{ $typeHTML = "map[string]any" }}
+      {{ else if $ap.properties }}
+        {{ $tn := $ap.title | default "object" }}
+        {{ $typeHTML = printf "map[string]%s" $tn }}
+        {{ $nested = dict "properties" $ap.properties "required" ($ap.required | default slice) }}
+      {{ else if $ap.type }}
+        {{ $typeHTML = printf "map[string]%s" $ap.type }}
+      {{ else }}
+        {{ $typeHTML = "map[string]any" }}
+      {{ end }}
+    {{ else }}
+      {{ $typeHTML = $prop.title | default "object" }}
+    {{ end }}
+  {{ else if isset $prop "enum" }}
+    {{ $typeHTML = "enum" }}
+  {{ else }}
+    {{ $typeHTML = $prop.type | default "" }}
+  {{ end }}
+
+  <li class="api-param{{ with $depth }} api-param-depth-{{ . }}{{ end }}"{{ if gt $depth 0 }} style="margin-left: {{ mul $depth 16 }}px"{{ end }}>
+    <div class="api-param-header">
+      {{ if gt $depth 0 }}<span class="api-param-nested-indicator">&#8627;</span>{{ end }}
+      <code class="api-param-name">{{ $propName }}</code>
+      <span class="api-param-badge api-param-type">{{ $typeHTML }}</span>
+      <span class="api-param-badge api-param-required{{ if in $required $propName }} is-required{{ end }}">{{ if in $required $propName }}required{{ else }}optional{{ end }}</span>
+    </div>
+    {{ with $prop.description }}
+      <div class="api-param-description">{{ . | markdownify }}</div>
+    {{ end }}
+    {{ if isset $prop "enum" }}
+      <div class="api-param-enum">
+        <strong>Values:</strong>
+        {{ range $i, $v := $prop.enum }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
+      </div>
+    {{ end }}
+  </li>
+
+  {{ if and $nested (lt $depth $maxDepth) }}
+    {{ partial "esc/property-rows.html" (dict
+      "properties" $nested.properties
+      "required" $nested.required
+      "depth" (add $depth 1)
+      "maxDepth" $maxDepth
+    ) }}
+  {{ end }}
+
+  {{/* oneOf/anyOf: render the alternative shapes. A single option is inlined;
+       multiple options are labeled so the "choose one" constraint is clear. */}}
+  {{ $variants := slice }}
+  {{ $variantLabel := "" }}
+  {{ if isset $prop "oneOf" }}{{ $variants = $prop.oneOf }}{{ $variantLabel = "Exactly one of" }}
+  {{ else if isset $prop "anyOf" }}{{ $variants = $prop.anyOf }}{{ $variantLabel = "Any of" }}{{ end }}
+  {{ if and $variants (lt $depth $maxDepth) }}
+    {{ $multi := gt (len $variants) 1 }}
+    {{ range $vi, $opt := $variants }}
+      {{ if $opt.properties }}
+        {{ if $multi }}
+          <li class="api-param api-param-variant"{{ if gt $depth 0 }} style="margin-left: {{ mul (add $depth 1) 16 }}px"{{ end }}>
+            <div class="api-param-variant-label">{{ $variantLabel }} — option {{ add $vi 1 }}</div>
+          </li>
+        {{ end }}
+        {{ partial "esc/property-rows.html" (dict
+          "properties" $opt.properties
+          "required" ($opt.required | default slice)
+          "depth" (add $depth 1)
+          "maxDepth" $maxDepth
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
