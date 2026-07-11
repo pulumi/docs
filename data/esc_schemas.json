@@ -1841,6 +1841,205 @@
         "type": "object"
       }
     },
+    "azure-app-secret": {
+      "description": "The azure-app-secret rotator rotates client secrets for an Azure app registration.",
+      "inputs": {
+        "properties": {
+          "inputs": {
+            "examples": [
+              {
+                "snippet": "fn::rotate::azure-app-secret:\n  inputs:\n    login: ${environments.logins.azure.azure.login}\n    clientId: aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee\n    lifetimeInDays: 180"
+              }
+            ],
+            "properties": {
+              "clientId": {
+                "description": "The Application (client) ID of the app registration whose secret should be rotated.",
+                "type": "string"
+              },
+              "lifetimeInDays": {
+                "default": 180,
+                "description": "The number of days the secret should be valid.",
+                "maximum": 730,
+                "minimum": 1,
+                "type": "number"
+              },
+              "login": {
+                "description": "The credentials to use.",
+                "properties": {
+                  "clientId": {
+                    "description": "The client ID to use.",
+                    "type": "string"
+                  },
+                  "clientSecret": {
+                    "description": "The client secret to use for authentication, if any.",
+                    "type": "string"
+                  },
+                  "oidc": {
+                    "description": "OIDC-related data, if OIDC is used for authentication.",
+                    "properties": {
+                      "token": {
+                        "description": "The OIDC token to use for authentication.",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "token"
+                    ],
+                    "type": "object"
+                  },
+                  "subscriptionId": {
+                    "description": "The subscription ID to use.",
+                    "type": "string"
+                  },
+                  "tenantId": {
+                    "description": "The tenant ID to use.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "clientId",
+                  "tenantId"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "login",
+              "clientId"
+            ],
+            "rotateOnly": [
+              "login"
+            ],
+            "type": "object"
+          },
+          "state": {
+            "properties": {
+              "current": {
+                "description": "The current client secret.",
+                "properties": {
+                  "createdAt": {
+                    "description": "The creation timestamp of the secret.",
+                    "type": "string"
+                  },
+                  "expiresAt": {
+                    "description": "The expiration timestamp of the secret.",
+                    "type": "string"
+                  },
+                  "secretId": {
+                    "description": "The key ID of the client secret.",
+                    "type": "string"
+                  },
+                  "secretValue": {
+                    "description": "The client secret value.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "secretValue",
+                  "secretId"
+                ],
+                "type": "object"
+              },
+              "previous": {
+                "description": "The previous client secret.",
+                "properties": {
+                  "createdAt": {
+                    "description": "The creation timestamp of the secret.",
+                    "type": "string"
+                  },
+                  "expiresAt": {
+                    "description": "The expiration timestamp of the secret.",
+                    "type": "string"
+                  },
+                  "secretId": {
+                    "description": "The key ID of the client secret.",
+                    "type": "string"
+                  },
+                  "secretValue": {
+                    "description": "The client secret value.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "secretValue",
+                  "secretId"
+                ],
+                "type": "object"
+              }
+            },
+            "required": [
+              "current"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "inputs"
+        ],
+        "type": "object"
+      },
+      "name": "azure-app-secret",
+      "outputs": {
+        "properties": {
+          "current": {
+            "description": "The current client secret.",
+            "properties": {
+              "createdAt": {
+                "description": "The creation timestamp of the secret.",
+                "type": "string"
+              },
+              "expiresAt": {
+                "description": "The expiration timestamp of the secret.",
+                "type": "string"
+              },
+              "secretId": {
+                "description": "The key ID of the client secret.",
+                "type": "string"
+              },
+              "secretValue": {
+                "description": "The client secret value.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "secretValue",
+              "secretId"
+            ],
+            "type": "object"
+          },
+          "previous": {
+            "description": "The previous client secret.",
+            "properties": {
+              "createdAt": {
+                "description": "The creation timestamp of the secret.",
+                "type": "string"
+              },
+              "expiresAt": {
+                "description": "The expiration timestamp of the secret.",
+                "type": "string"
+              },
+              "secretId": {
+                "description": "The key ID of the client secret.",
+                "type": "string"
+              },
+              "secretValue": {
+                "description": "The client secret value.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "secretValue",
+              "secretId"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "current"
+        ],
+        "type": "object"
+      }
+    },
     "external": {
       "description": "The [`external` rotator](https://www.pulumi.com/docs/esc/integrations/rotated-secrets/external/) reads and rotates outputs from an external adapter service.",
       "inputs": {
@@ -1990,8 +2189,8 @@
                       "username"
                     ],
                     "rotateOnly": [
-                      "password",
-                      "username"
+                      "username",
+                      "password"
                     ],
                     "type": "object"
                   },
@@ -2389,8 +2588,8 @@
                       "username"
                     ],
                     "rotateOnly": [
-                      "password",
-                      "username"
+                      "username",
+                      "password"
                     ],
                     "type": "object"
                   },
