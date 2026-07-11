@@ -1,0 +1,31 @@
+# Flags future tense used for product behavior ("Neo will pause", "the CLI
+# will prompt") where the Google style guide -- and STYLE-GUIDE.md §Grammar
+# and punctuation -- call for present tense ("Neo pauses", "the CLI prompts").
+#
+# Deliberately NOT a blanket 'will' flagger: Google.Will (disabled in
+# .vale.ini) flags every 'will' and was too noisy on declarative technical
+# prose. This rule anchors on a product subject instead:
+#   - token 1: proper-noun products (Neo, Pulumi + optional product suffix,
+#     ESC, CrossGuard). Case-sensitive, so Title-Case headings self-exclude.
+#   - token 2: 'the/this <product-noun> will', with a corpus-frequency-curated
+#     noun list. 'tutorial', 'reader', 'value', 'output', 'file' are excluded
+#     on purpose -- future tense there is usually preview semantics, not drift.
+# 'will not' / "won't" (both apostrophe forms) are included: "Pulumi will not
+# share your data" is still a behavior statement. The trailing (?: \w+)? pulls
+# the following verb into the match so the message reads "Pulumi will remove",
+# not a bare "Pulumi will".
+#
+# No passive-future token ("will be created"): corpus sampling showed those
+# hits are dominated by legitimate preview/plan semantics ("resources that
+# will be created"), so flagging them would sink precision.
+#
+# Second-person futures ("you will need an AWS account") never match -- there
+# is no second-person subject in either token.
+extends: existence
+message: "Future tense ('%s') -- prefer present tense for product behavior: 'Neo pauses', not 'Neo will pause' (STYLE-GUIDE.md §Grammar and punctuation)."
+link: "https://developers.google.com/style/tense"
+level: warning
+ignorecase: false
+tokens:
+  - '(?:Neo|Pulumi(?: Cloud| ESC| IaC| AI| Deployments| Insights| Copilot| CrossGuard)?|ESC|CrossGuard) (?:will(?: not)?|won[''’]t)(?: \w+)?'
+  - '[Tt]h(?:e|is) (?:following )?(?:Pulumi )?(?:CLI|engine|provider|operator|agent|service|command|program|polic(?:y|ies)|stack|resource|deployment|update|preview|operation|process|console|backend|component|environment|plugin|webhook|token|API|SDK)(?:e?s)? (?:will(?: not)?|won[''’]t)(?: \w+)?'
