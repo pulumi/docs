@@ -1,6 +1,8 @@
 ---
 title: ESC webhooks for secret rotations
 date: 2026-06-26
+aliases:
+    - /releases/changelog/esc-secret-rotation-webhooks/
 meta_desc: ESC rotation webhooks notify you immediately whenever a secret rotation happens.
 ---
 
