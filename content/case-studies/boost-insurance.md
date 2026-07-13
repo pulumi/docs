@@ -3,7 +3,7 @@ title_tag: Boost Insurance | Case Studies
 title: "How Boost Insurance Eliminates Data Breach Risk with Pulumi"
 allow_long_title: true
 description: |
-    Boost Insurance built a self-service developer platform with Pulumi that provisions isolated, time-limited database environments entirely in the cloud—eliminating production data on developer laptops and the breach risk that came with it.
+    Boost Insurance built a self-service platform with Pulumi that provisions ephemeral, time-bound environments in the cloud, eliminating the risk of storing production data on developer machine.
 meta_desc: Boost Insurance eliminated production data on developer laptops by building a self-service platform with Pulumi, reducing breach risk and saving developer time.
 
 customer_name: Boost Insurance
@@ -18,16 +18,7 @@ quote_block:
   headline: production data on developer laptops, eliminating breach risk
 
 exec_summary: |
-    [Boost Insurance](https://www.boostinsurance.com/) operates in one of the most heavily
-    regulated industries in the United States, where even a test policy becomes a matter of
-    record. To debug real-world issues, developers had been downloading production database
-    snapshots to their laptops—putting hundreds of gigabytes of sensitive data on personal
-    machines and turning a single stolen laptop into a reportable, multi-state breach. Boost's
-    platform engineering team used Pulumi's Automation API, Pulumi Deployments, and Pulumi ESC
-    to build a self-service developer platform that provisions isolated, time-limited database
-    environments entirely within the cloud. Production data no longer leaves Boost's controlled
-    GCP infrastructure, developers save roughly 30 minutes per debugging session, and the
-    audit trail regulators require is built in.
+    [Boost Insurance](https://www.boostinsurance.com/) operates in one of the most heavily regulated industries in the United States. To debug production issues, developers had been downloading database snapshots to their laptops, bringing hundreds of gigabytes of sensitive data onto their personal machines. Boost's platform engineering team used Pulumi's Automation API, Pulumi Deployments, and Pulumi ESC to build a self-service platform enabling developers to provision isolated, time-limited database environments entirely in the cloud, ensuring production data no longer leaves Boost's controlled infrastructure and saving developers roughly 30 minutes per debugging session.
 
 sections:
     - label: Exec Summary
@@ -40,14 +31,14 @@ sections:
       anchor: results
     - label: How Pulumi Works
       anchor: how-pulumi-works
-    - label: Get Started
-      anchor: get-started
+    - label: Conclusion
+      anchor: conclusion
 ---
 
 ## The business challenge {#the-challenge}
 
 Boost Insurance operates in one of the most heavily regulated industries in the United States.
-Every policy the platform issues or binds—even a test policy—becomes a matter of record that
+Every policy the platform issues or binds — even a test policy — becomes a matter of record that
 must be reported to regulatory bodies. That means production data can't be used for testing, and
 reproducing production issues in a development environment is often impractical.
 
@@ -56,16 +47,11 @@ to download database snapshots to their laptops. For a 100 GB quoting database, 
 45-minute downloads for remote team members, hundreds of gigabytes of sensitive data stored on
 personal machines, and no guarantee that data stayed within the company's security perimeter.
 
-> "Someone goes and steals a developer's laptop—we now have a reportable breach. We have to
-> report not only to our partners, but to the state of New York, all 50 states, and the federal
-> government. We have to notify every single person that's ever had a policy with us. It becomes
-> a massive problem."
->
-> --- Richard Genthner, Platform Engineer at Boost Insurance
+"Someone goes and steals a developer's laptop — we now have a reportable breach," said Richard Genthner, Platform Engineer at Boost Insurance. "We have to report not only to our partners, but to the state of New York, all 50 states, and the federal government. We have to notify every single person that's ever had a policy with us. It becomes a massive problem."
 
 Boost has developers working remotely across multiple countries, and some partner contracts
-explicitly require that data never leaves the United States. The existing tooling—StrongDM for
-access control—handled credential management and query logging, but couldn't solve the
+explicitly require that data never leaves the United States. The existing tooling — StrongDM for
+access control — handled credential management and query logging, but couldn't solve the
 fundamental problem: production data was leaving the cloud and landing on laptops.
 
 ## What Boost built {#the-solution}
@@ -77,7 +63,7 @@ programmatically and offers developers three ways to interact with it: a web UI,
 desktop client.
 
 When a developer needs to debug a production issue, they log into the platform, select a database
-backup, and configure the environment—instance size, disk space, and a time-to-live ranging from
+backup, and configure the environment — instance size, disk space, and a time-to-live ranging from
 8 to 96 hours. The platform then provisions an isolated VPC with a Cloud SQL (PostgreSQL)
 instance, restores the backup using Cloud SQL's native import API directly from a GCS bucket, and
 sets up Identity-Aware Proxy (IAP)-protected routes with query logging for secure access.
@@ -90,22 +76,22 @@ tears itself down automatically.
 The platform addresses some of Boost's most critical risks while delivering measurable
 productivity gains:
 
-**Data breach risk eliminated.** Production data no longer leaves the cloud. Every isolated
+- **Data breach risk eliminated.** Production data no longer leaves the cloud. Every isolated
 environment lives within Boost's controlled GCP infrastructure, and data sovereignty requirements
-are satisfied by default. The scenario that kept leadership up at night—a stolen laptop triggering
-a multi-state regulatory notification—is no longer possible.
+are satisfied by default. The scenario that kept leadership up at night — a stolen laptop triggering
+a multi-state regulatory notification — is no longer possible.
 
-**30 minutes saved per developer per debugging session.** Restoring a database in the cloud takes
+- **30 minutes saved per developer per debugging session.** Restoring a database in the cloud takes
 about 15 minutes, compared to 45 or more minutes for a remote developer to download and restore
 locally. Across Boost's development team, that adds up to significant recovered engineering time.
 
-**Self-service replaces an operational bottleneck.** Before the platform, developers had to wait
+- **Self-service replaces an operational bottleneck.** Before the platform, developers had to wait
 for the platform engineering team to manually provision database environments. Now developers
 create, extend, and tear down isolated environments on their own, freeing up the platform team to
 focus on higher-value work.
 
-**Audit compliance built in.** Every database connection is routed through IAP-protected tunnels
-with full query logging, maintaining the audit trail that insurance regulators require—the same
+- **Audit compliance built in.** Every database connection is routed through IAP-protected tunnels
+with full query logging, maintaining the audit trail that insurance regulators require — the same
 capability that the previous tooling provided, now integrated directly into the platform.
 
 ## How Pulumi makes it work {#how-pulumi-works}
@@ -116,13 +102,13 @@ self-service, compliance-focused platform.
 The [Automation API](/docs/iac/concepts/automation-api/) is the foundation. Rather than shelling
 out to `pulumi up`, Boost's Go application embeds Pulumi as a library, programmatically creating
 and managing stacks for each developer's isolated environment. This is what enabled the team to
-build a polished self-service experience—a web UI, a CLI, and a desktop client—all backed by the
+build a polished self-service experience — a web UI, a CLI, and a desktop client — all backed by the
 same infrastructure-as-code logic.
 
 [Pulumi Deployments](/docs/deployments/) and its [TTL stacks](/docs/deployments/concepts/ttl/)
 feature handle the environment lifecycle. Each isolated database is a TTL stack with a
 configurable lifetime. When the TTL expires, Pulumi Deployments automatically destroys the stack
-and all of its resources—no cron jobs or manual cleanup required. This is what ensures that
+and all of its resources, no cron jobs or manual cleanup required. This is what ensures that
 isolated environments don't accumulate cost or become a security liability.
 
 [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) manages credentials across
@@ -132,16 +118,19 @@ provisioning and destroying environments. This eliminates long-lived service acc
 keeps the credential lifecycle fully automated.
 
 [Pulumi Cloud](/docs/pulumi-cloud/) ties it all together with centralized visibility into every
-active environment—stacks, resources, and update history in one place. For a regulated insurance
+active environment, with stacks, resources, and update history in one place. For a regulated insurance
 company, the ability to export audit logs from Pulumi Cloud gives the compliance team the records
-they need without building custom logging infrastructure.
+they need without having to build custom logging infrastructure themselves.
 
-## Get started {#get-started}
+## Conclusion {#conclusion}
 
-If your organization faces similar challenges with developer access to sensitive data, Pulumi's
-platform features make it possible to build self-service infrastructure that meets your security
-and compliance requirements.
+By building on Pulumi's Automation API, Pulumi Deployments, and Pulumi ESC, Boost turned a serious
+compliance liability into a self-service capability its developers actually enjoy using. Production
+data stays inside Boost's controlled GCP infrastructure, isolated environments spin up in about 15
+minutes and tear themselves down on schedule, and the audit trail regulators require is captured
+automatically — all without a ticket queue for the platform team.
 
-- Explore the [Automation API documentation](/docs/iac/concepts/automation-api/)
-- Learn about [Pulumi Deployments and TTL stacks](/docs/deployments/concepts/ttl/)
-- Get started with [Pulumi ESC](/docs/esc/)
+For any organization that has to reconcile fast developer access with strict data-handling
+requirements, Boost's platform shows the two aren't at odds. With infrastructure as code as the
+foundation, self-service and compliance reinforce each other rather than compete — freeing the
+platform team to keep raising the bar instead of fielding one-off provisioning requests.
