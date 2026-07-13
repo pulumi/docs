@@ -48,10 +48,10 @@ This release applies to users who sign in to Pulumi Cloud with an email address 
 
 Passwords have always been the weakest link in account security. Since they are shared secrets, they are vulnerable to phishing attacks, and every place you type one is a place that can be impersonated or a data store that can be leaked. Passkeys swap that out for a per-site key pair that lives on your device:
 
-* **Phishing-resistant by design.** A passkey is bound to the exact origin it was registered for. A look-alike domain can't trigger your authenticator.
-* **Synced across your devices.** Apple iCloud Keychain, Google Password Manager, 1Password, Dashlane, Bitwarden: most credential managers now sync passkeys end-to-end-encrypted to every device you've signed in on.
-* **Discoverable.** Pulumi Cloud doesn't need to know which user you are before you authenticate. Just select "Sign in with a passkey" and your device offers the right credential.
-* **Nothing to remember.** A passkey lives on your device. There's no string to memorize, and no sensitive credential stored by us.
+- **Phishing-resistant by design.** A passkey is bound to the exact origin it was registered for. A look-alike domain can't trigger your authenticator.
+- **Synced across your devices.** Apple iCloud Keychain, Google Password Manager, 1Password, Dashlane, Bitwarden: most credential managers now sync passkeys end-to-end-encrypted to every device you've signed in on.
+- **Discoverable.** Pulumi Cloud doesn't need to know which user you are before you authenticate. Just select "Sign in with a passkey" and your device offers the right credential.
+- **Nothing to remember.** A passkey lives on your device. There's no string to memorize, and no sensitive credential stored by us.
 
 ## Setting up a passkey
 
