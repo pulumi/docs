@@ -187,7 +187,7 @@ Pulumi identifies stacks as `org/project/stack`. Same project name means the sam
 {{< /notes >}}
 
 {{< blog/cta-card title="Run Kubernetes on AKS with code" >}}
-Provision your AKS cluster, container registry, and workloads in C#, then split infrastructure from apps into separate stacks. One `pulumi up` brings it all up.
+Provision your AKS cluster, container registry, and workloads in C#, then split infrastructure from apps into separate stacks so each ships on its own cadence.
 {{< /blog/cta-card >}}
 
 ## 6. GitOps is the way
