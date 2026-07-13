@@ -1182,6 +1182,10 @@ AI-Enhanced Development: Integration of AI tools to help generate, optimize, and
 
 These trends favor tools that embrace software engineering principles from the ground up, rather than attempting to retrofit programming capabilities onto template-based or DSL-limited approaches.
 
+{{< blog/cta-card title="Bring software engineering to IaC" >}}
+Define infrastructure across AWS, Azure, Google Cloud, and Kubernetes in the language your team already knows, with testing, IDE support, and reusable components.
+{{< /blog/cta-card >}}
+
 ## Migration and Adoption Strategies
 
 Organizations don't need to choose between maintaining existing infrastructure and adopting modern IaC approaches. Proven migration strategies enable gradual adoption while preserving operational stability.

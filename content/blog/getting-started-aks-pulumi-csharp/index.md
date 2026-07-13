@@ -186,6 +186,10 @@ Code: [`03-split/`](https://github.com/pulumi/workshops/tree/main/az-getting-sta
 Pulumi identifies stacks as `org/project/stack`. Same project name means the same stack. Rename it and you spin up a new cluster.
 {{< /notes >}}
 
+{{< blog/cta-card title="Run Kubernetes on AKS with code" >}}
+Provision your AKS cluster, container registry, and workloads in C#, then split infrastructure from apps into separate stacks. One `pulumi up` brings it all up.
+{{< /blog/cta-card >}}
+
 ## 6. GitOps is the way
 
 The final stage of the workshop is left as homework, and it's a great one to pick up. GitOps is the standard way to run Kubernetes at this point, the One True Way™ depending on who you ask. My position from the call: "I think I'm on team GitOps."

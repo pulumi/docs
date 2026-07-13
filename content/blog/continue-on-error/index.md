@@ -63,4 +63,8 @@ When `--continue-on-error` is used with older SDK versions, the Pulumi engine wi
 
 This feature was a [highly requested feature](https://github.com/pulumi/pulumi/issues/3304) in the Pulumi open source project, and we're constantly working to address these highly requested features across the open source projects, so jump in and give features you'd like to see us add a 👍.
 
+{{< blog/cta-card title="Manage large resource graphs with confidence" >}}
+Upgrade to a recent Pulumi CLI and SDK, then pass `--continue-on-error` to `pulumi up` and `pulumi destroy` to keep independent resources moving when one operation fails. Build and tear down complex stacks with more control.
+{{< /blog/cta-card >}}
+
 Give `--continue-on-error` a try and [let us know](https://slack.pulumi.com) what you think!

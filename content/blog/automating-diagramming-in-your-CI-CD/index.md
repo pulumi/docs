@@ -285,6 +285,10 @@ However, this approach also has limitations:
 
 This approach works best for teams that value diagram aesthetics and need multiple architectural views for different stakeholders, while accepting slightly more complexity and potential accuracy trade-offs in exchange for significantly better visual presentation.
 
+{{< blog/cta-card title="Generate diagrams from your code" href="/docs/ai/" >}}
+You can produce accurate architecture diagrams directly from your Pulumi state and preview, then wire the workflow into any coding agent through the Pulumi MCP server. Start a project to keep your diagrams in sync with your infrastructure.
+{{< /blog/cta-card >}}
+
 ## Pulumi Neo: Enterprise-scale intelligent diagramming
 
 Pulumi Neo brings the next evolution in infrastructure diagramming, with AI-powered intelligence that enables organization-wide diagram generation. Unlike the previous approaches that focus on individual stacks, Pulumi Neo provides enterprise-scale diagramming capabilities with intelligent customization for different stakeholders.

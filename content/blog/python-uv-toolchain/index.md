@@ -51,3 +51,7 @@ runtime:
 If you have uv installed, you can run `pulumi new python` and select uv as the toolchain to use for installing dependencies and running the program.
 
 You can find more information on how to use uv in Pulumi in our [Python documentation](/docs/iac/languages-sdks/python/#uv).
+
+{{< blog/cta-card title="Build infrastructure with Python" >}}
+Define your cloud infrastructure in Python, and let uv install your dependencies and manage your virtual environments. Deploy your first stack, and track it in Pulumi Cloud.
+{{< /blog/cta-card >}}

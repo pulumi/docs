@@ -1,0 +1,69 @@
+{{- /*
+    Renders the post body (.Content) and, for qualifying posts, injects a generic
+    "Program the Cloud" CTA card halfway through it. Called from blog/single.html
+    in place of a bare `{{ .Content }}`. Only the on-page HTML render passes
+    through here — RSS and the markdown/llms output formats render .Content
+    directly, so they are never touched.
+
+    A card is auto-inserted only when ALL of these hold:
+      - body_cta is not false          (frontmatter opt-out, default on)
+      - the post is not simple_layout   (those pages strip blog chrome)
+      - WordCount >= 800                (~4-min read; skip short posts)
+      - the post has no manual blog/cta-card shortcode
+        (a manually placed card suppresses the auto one; blog/cta-button, an
+        inline button, does not)
+
+    Insertion point: immediately before the <h2 whose byte offset is nearest the
+    midpoint of the content. Splitting on "<h2" can't land inside a blockquote,
+    list, or code block, and section boundaries are natural attention breaks.
+    (No heading render hook exists under layouts/_default/_markup/, so Goldmark
+    emits plain "<h2 id=...>" and the literal "<h2" is an unambiguous token.)
+
+    A qualifying post with no h2s simply gets no card. Every non-qualifying path
+    emits .Content unmodified.
+*/ -}}
+{{- $insert := and
+    (ne .Params.body_cta false)
+    (not .Params.simple_layout)
+    (ge .WordCount 800)
+    (not (.HasShortcode "blog/cta-card")) -}}
+{{- if not $insert -}}
+    {{- .Content -}}
+{{- else -}}
+    {{- $str := .Content | string -}}
+    {{- $chunks := split $str "<h2" -}}
+    {{- if lt (len $chunks) 2 -}}
+        {{- .Content -}}
+    {{- else -}}
+        {{- $mid := div (len $str) 2 -}}
+        {{- /* pass 1: find the h2 whose byte offset is nearest the midpoint.
+            $pos tracks the start offset of the current chunk; the "<h2" that
+            precedes it sits 3 bytes earlier. */ -}}
+        {{- $pos := 0 -}}
+        {{- $best := 0 -}}
+        {{- $bestDist := len $str -}}
+        {{- range $i, $chunk := $chunks -}}
+            {{- if gt $i 0 -}}
+                {{- $dist := int (math.Abs (sub (sub $pos 3) $mid)) -}}
+                {{- if lt $dist $bestDist -}}
+                    {{- $bestDist = $dist -}}
+                    {{- $best = $i -}}
+                {{- end -}}
+            {{- end -}}
+            {{- $pos = add (add $pos (len $chunk)) 3 -}}
+        {{- end -}}
+        {{- /* pass 2: rejoin, emitting the CTA before the chosen h2. */ -}}
+        {{- $cta := partial "blog/body-cta.html" (dict "track" "blog-body-cta-auto") -}}
+        {{- $out := "" -}}
+        {{- range $i, $chunk := $chunks -}}
+            {{- if eq $i 0 -}}
+                {{- $out = $chunk -}}
+            {{- else if eq $i $best -}}
+                {{- $out = printf "%s%s<h2%s" $out (string $cta) $chunk -}}
+            {{- else -}}
+                {{- $out = printf "%s<h2%s" $out $chunk -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $out | safeHTML -}}
+    {{- end -}}
+{{- end -}}

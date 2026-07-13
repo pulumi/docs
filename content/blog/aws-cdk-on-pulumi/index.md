@@ -193,6 +193,10 @@ export function remapCloudControlResource(
 
 In many cases, this is not needed, as AWS CDK on Pulumi offers builtin support for remapping many common resources. Over the coming months, as AWS Cloud Control API support expands to cover more of the CloudFormation resource model, these remappings will become less necessary in practice, with almost all resources being supported directly via Pulumi AWS Native.
 
+{{< blog/cta-card title="Use AWS CDK constructs with Pulumi" >}}
+Deploy your existing AWS CDK constructs through Pulumi, and combine them with resources from more than 80 cloud and SaaS providers in a single program.
+{{< /blog/cta-card >}}
+
 ## Using High-Level "L3" Constructs
 
 AWS CDK offers a mix of relatively low level (unopinionated) constructs, as well as high level (more opinionated) constructs.  With AWS CDK on Pulumi, we can use any of these.  This includes libraries like [`aws-ecs-patterns`](https://docs.aws.amazon.com/cdk/api/v1/docs/aws-ecs-patterns-readme.html) and [AWS Solutions Constructs](https://aws.amazon.com/solutions/constructs/patterns/).

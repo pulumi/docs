@@ -321,6 +321,10 @@ For my URL shortener tests, agent-browser used fewer tokens per cycle, and the r
 
 Playwright MCP still wins on depth. Network interception, multi-tab handling, PDF generation, better waiting logic—if you need those, you need Playwright. For complex browser automation, it's the more capable tool.
 
+{{< blog/cta-card title="Deploy what your agent builds" >}}
+Pulumi provisions the infrastructure your coding agent builds and tests, so a single `pulumi up` takes each verified change to the cloud.
+{{< /blog/cta-card >}}
+
 ## When to use each
 
 **Agent-browser** fits long autonomous sessions where context budget matters, basic navigation and verification tasks, and setups where you want to skip MCP configuration. CLI-based skills also avoid the schema overhead—tool definitions for multi-tool MCPs eat tokens even when idle.

@@ -360,6 +360,10 @@ Finally, further down in the dialog, we can enter the tags we'd like to enforce:
 
 Now that it is configured, all subsequent updates across the organization will run policy checks.
 
+{{< blog/cta-card title="Enforce policy as code" href="/docs/insights/policy/" >}}
+Write policy as code with Pulumi to catch missing tags, block risky configurations, and keep every deployment compliant across your team.
+{{< /blog/cta-card >}}
+
 ## Automatically Applying Tags
 
 In all cases, after manually fixing our bucket, and adding the correct tags, the policy will pass:

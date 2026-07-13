@@ -617,6 +617,10 @@ resources:
 
 Just declare an `AutoDeployer` resource for each stack, and any `downstream` stacks will automatically be updated whenever a stack in its dependency chain is updated.
 
+{{< blog/cta-card title="Automate your deployment pipeline" >}}
+Use Pulumi Deployments to trigger downstream stack updates automatically when an upstream stack changes. Keep your dependent infrastructure in sync without manual runbooks.
+{{< /blog/cta-card >}}
+
 ## Scale Infrastructure with Software
 
 At Pulumi, we build tools to help you scale your infrastructure footprint with software instead of just humans. Deployment Webhook Destinations and `pulumi-auto-deploy` give you the tools to keep all of your dependent infrastructure up to date with automation instead of manual runbooks and human-driven operations.

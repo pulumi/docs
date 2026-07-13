@@ -118,6 +118,10 @@ directory, or only support one operating system, or to be insensitive to perform
 needed an option that didn't make any of these sacrifices and, ideally, was also actively
 maintained.
 
+{{< blog/cta-card title="Prototype infrastructure with watch mode" >}}
+Run `pulumi watch` to get a hot-reload inner loop that applies changes to your stack as you save files.
+{{< /blog/cta-card >}}
+
 ## From library to binary and the carcinization of Pulumi
 
 One doesn't have to look hard to find CLIs that tackle this problem, many of which were at the top

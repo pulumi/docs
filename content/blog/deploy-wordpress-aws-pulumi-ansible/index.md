@@ -1882,6 +1882,10 @@ var playAnsiblePlaybookCmd = new Command.Local.Command("playAnsiblePlaybookCmd",
 
 That's it! The entirety of your infrastructure --- from the underlying AWS infrastructure, to the configuration commands to upgrade your server, to running the Ansible playbook which installs WordPress -- is declared in a single Pulumi program in your language of choice. The only step left is to deploy it!
 
+{{< blog/cta-card title="Provision and configure in one workflow" >}}
+Combine Pulumi provisioning with configuration management tools like Ansible to build repeatable environments. Deploy your AWS infrastructure and configure your servers with a single `pulumi up`.
+{{< /blog/cta-card >}}
+
 ## Seeing Everything in Action
 
 To deploy this, you just need to do a few things.

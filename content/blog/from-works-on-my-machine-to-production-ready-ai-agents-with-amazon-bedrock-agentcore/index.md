@@ -932,6 +932,10 @@ MCP GATEWAY DEMO SUMMARY
 
 The MCP Gateway tools provide additional context (merchant reputation, risk scores, fraud indicators) that helps the agent make better decisions.
 
+{{< blog/cta-card title="Ship your AI agents to production" href="/docs/ai/" >}}
+You can define the runtime, memory, gateway, and guardrails for your agents as infrastructure as code, and pair Pulumi with the coding agent you already use through the Pulumi MCP server. Start a project to deploy your own.
+{{< /blog/cta-card >}}
+
 ## Architecture Summary
 
 Here's the complete architecture:

@@ -88,6 +88,10 @@ If none of those four are biting, the SDK is probably enough, and adding a frame
 
 ![Decision flow for picking an agent stack. Start with the SDK. If you need multi-provider routing, multi-agent orchestration, deterministic typing, or deeper observability, add a framework. Otherwise stay with the SDK.](/blog/how-building-ai-agents-has-changed/decision.png)
 
+{{< blog/cta-card title="Point your agent at your infrastructure" href="/docs/ai/" >}}
+Give your coding agent grounded context from your Pulumi state graph through the Pulumi MCP server and Agent Skills, or reach for Pulumi Neo when you want an infrastructure agent built in.
+{{< /blog/cta-card >}}
+
 ## Where this lands for infrastructure work
 
 Two things from the new agent shape map cleanly onto infrastructure work. The first is that "built-in tools plus governed actions" is the model an IaC platform was already running. The SDK assumes the agent has tools that do real work. The platform assumes those tools have policies, audit logs, and short-lived credentials around them. Those assumptions stack.

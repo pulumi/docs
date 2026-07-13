@@ -407,6 +407,10 @@ Resources:
     + 9 to create
 ```
 
+{{< blog/cta-card title="Deploy infrastructure with Pulumi YAML" >}}
+Define your cloud resources in a single Pulumi.yaml file, combine multiple providers, and reuse components built in other Pulumi languages.
+{{< /blog/cta-card >}}
+
 ## Convert to Other Pulumi Languages
 
 When the complexity of infrastructure managed by a Pulumi YAML program grows beyond what can be managed easily with YAML, users have a variety of options to “grow up” without disruption to their infrastructure.

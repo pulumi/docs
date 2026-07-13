@@ -314,6 +314,10 @@ if err != nil {
 
 {{% /choosable %}}
 
+{{< blog/cta-card title="Ship containers to Azure with Pulumi" >}}
+Use the Azure Native provider to build a Docker image, publish it to Azure Container Registry, and deploy a serverless Container App from one program. Provision and manage it all in the language you already use.
+{{< /blog/cta-card >}}
+
 ## Deploy the container app
 
 Finally, we can define the Container App itself. We point the App to the environment resource and instruct it to run our custom image. Image container credentials are specified in the `configuration` block, with the password marked as a secret. We've also enabled external ingress to publish the app on the web.

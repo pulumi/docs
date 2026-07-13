@@ -280,6 +280,10 @@ Cosmos DB also has a Azure Table API and marketing material saying it's a better
 
 While both offer similar functionality, Cosmos DB's advanced features will cost you. If you know you aren't going to need scale read and writes or need multi-region writes or other features, Azure Table Storage's simpler, predictable pricing is the way to go.
 
+{{< blog/cta-card title="Provision Azure databases as code" >}}
+Whether you land on Cosmos DB, Azure SQL, or PostgreSQL, Pulumi lets you define and manage your entire Azure data layer in the language you already use.
+{{< /blog/cta-card >}}
+
 ## When Cosmos DB Makes Sense
 
 ![Diagram outlining the pros and cons of Cosmos DB. Pros include scale, flexibility, and consistency, while cons include cost, tooling limitations, and vendor lock-in.](pro-con.png)

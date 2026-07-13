@@ -917,6 +917,10 @@ Check out this video of authoring components in Java and consuming them in YAML 
 
 {{< youtube "wWpTegnYsSE?rel=0" >}}
 
+{{< blog/cta-card title="Build reusable infrastructure components" >}}
+Author a component once in your preferred language, then let your teams consume it from TypeScript, Python, Go, or YAML with Pulumi.
+{{< /blog/cta-card >}}
+
 ## Pro Tips
 
 - **Tagging Releases**: If you're working with Git-based components, you can tag version releases (both stable and preview versions). This ensures downstream users can easily choose specific versions without chasing a moving target.

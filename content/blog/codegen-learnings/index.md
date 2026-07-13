@@ -196,6 +196,10 @@ Monitoring these typechecking errors in production can also provide valuable ins
 
 Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts, and policy violations.
 
+{{< blog/cta-card title="Generate infrastructure code with Pulumi" >}}
+Turn a plain-language request into working infrastructure as code across AWS, Azure, Google Cloud, and Kubernetes, then preview and deploy it with Pulumi.
+{{< /blog/cta-card >}}
+
 ## From kitchen to table: testing what works
 
 The landscape of LLM-based code generation is moving fast, and we need to keep learning and adapting as we go. But with all this rapid technological change, it's crucial to ground our decisions in real numbers. We need to make sure each new advancement actually makes things better, both in our test environments and out in the real world.

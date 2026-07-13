@@ -1,0 +1,34 @@
+{{/*
+    Blog Body CTA Card Shortcode
+
+    Renders a full-width "Program the Cloud" style CTA card inside a post body.
+    All parameters are optional, so a bare shortcode renders the generic card.
+    Placing this card anywhere in a post suppresses the auto-inserted card (see
+    layouts/partials/blog/content-with-cta.html).
+
+    Usage (this template reads .Inner, so the shortcode must be closed or
+    self-closed — a bare unclosed {{< blog/cta-card >}} is a build error):
+        {{< blog/cta-card />}}
+        {{< blog/cta-card title="Ship Kubernetes faster" />}}
+        {{< blog/cta-card title="Try Pulumi" label="Get started free" href="/docs/get-started/" >}}
+            Manage your clusters with real code — loops, functions, and your IDE.
+        {{< /blog/cta-card >}}
+
+    Parameters (named only):
+        - title (optional): eyebrow heading (default "Program the Cloud")
+        - label (optional): button label (default from site.Params.cta.primary)
+        - href  (optional): button destination (default from site.Params.cta.primary)
+    Body (optional): card copy; falls back to the default sidebar copy when empty.
+*/}}
+{{ if and .Params (not .IsNamedParams) }}
+    {{ errorf "blog/cta-card shortcode only accepts named parameters (title, label, href): %s" .Position }}
+{{ end }}
+{{ $text := "" }}
+{{ with trim .Inner " \n\t\r" }}{{ $text = $.Inner | markdownify }}{{ end }}
+{{ partial "blog/body-cta.html" (dict
+    "title" (.Get "title")
+    "text" $text
+    "label" (.Get "label")
+    "href" (.Get "href")
+    "track" "blog-body-cta"
+) }}

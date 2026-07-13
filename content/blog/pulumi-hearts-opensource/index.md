@@ -17,3 +17,7 @@ We are unaffected by HashiCorp relicensing their software yesterday, and express
 Pulumi is [true open source](https://github.com/pulumi/pulumi), uses the Apache 2.0 license, and does not and never will depend on BSL-licensed software in any way, HashiCorp owned or otherwise.
 
 We look forward to continuing to serve our [new](https://app.pulumi.com/signup) and loyal customers, always with open source and our amazing, fast-growing community at our core.
+
+{{< blog/cta-card title="Build on open source Pulumi" >}}
+Pulumi is open source under the Apache 2.0 license. Build, deploy, and manage cloud infrastructure with the community behind you.
+{{< /blog/cta-card >}}

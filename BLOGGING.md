@@ -283,6 +283,31 @@ To embed a card linking to Pulumi Neo with a pre-filled prompt, use the `neo-car
 
 This renders a card with the Neo icon, subtitle, title, and a chevron arrow. Clicking the card opens Pulumi Neo with the specified prompt.
 
+#### CTA Cards
+
+To place a "Program the Cloud" call-to-action card in the body of a post, use the `blog/cta-card` shortcode. Every parameter is optional, so a bare, self-closed shortcode renders the generic get-started card (the self-closing `/>` is required when you omit the body):
+
+```plain
+{{< blog/cta-card />}}
+```
+
+Add a contextual title, body copy, and/or button to tailor the ask to the post's topic:
+
+```plain
+{{< blog/cta-card title="Ship Kubernetes faster" label="Get started free" href="/docs/get-started/" >}}
+Manage your clusters with real code — loops, functions, and your IDE, not YAML templates.
+{{< /blog/cta-card >}}
+```
+
+**Parameters:**
+
+- `title` (optional): The card's eyebrow heading (default: "Program the Cloud")
+- `label` (optional): The button label (default: the site's primary CTA, "Get started")
+- `href` (optional): The button destination (default: the site's primary CTA link)
+- Body (optional): The card's body copy; falls back to the default get-started copy when empty.
+
+**Auto-insertion:** If a post is at least 800 words (~4-minute read) and contains no `blog/cta-card` of its own, a generic card is inserted automatically, immediately before the section heading (`h2`) nearest the middle of the post. Placing your own `blog/cta-card` anywhere in the body suppresses this auto card, so you can substitute a contextual ask. (The button-only `blog/cta-button` shortcode does *not* suppress it.) To turn the auto card off entirely for a post, set `body_cta: false` in the frontmatter.
+
 #### Animated GIFs
 
 GIFs are welcome, but should be optimized. In general, animated GIFs should be no more than 1200 pixels wide and 3 MB in size. If you need help optimizing your GIF, consider [Gifsicle](https://www.lcdf.org/gifsicle/); it's available through Homebrew and has an easy-to-use command-line API. For example, to resize (e.g., downscale) and optimize a GIF in place:

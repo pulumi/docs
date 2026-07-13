@@ -153,6 +153,10 @@ const accessApp = new cloudflare.ZeroTrustAccessApplication("internal-tool", {
 });
 ```
 
+{{< blog/cta-card title="Manage your edge as code" >}}
+Define your DNS records, WAF rules, Workers, and Zero Trust policies as one Pulumi program, and deploy the same edge baseline to every environment with `pulumi up`.
+{{< /blog/cta-card >}}
+
 ## Validation
 
 Once you run `pulumi up`, you can validate your edge baseline with these steps:

@@ -580,6 +580,10 @@ The child resources created by the chart are presented to your program via the `
 of Pulumi Resource objects. In some SDKs, you can cast the resource into the appropriate resource type,
 e.g. `corev1.ConfigMap`. Not all SDKs support this (yet); see [pulumi/pulumi#15788](https://github.com/pulumi/pulumi/issues/15788).
 
+{{< blog/cta-card title="Deploy Helm charts with Pulumi" >}}
+Apply any Helm chart with the Chart v4 resource and manage the cloud resources it depends on, like IAM roles and storage buckets, in the same program.
+{{< /blog/cta-card >}}
+
 ## Example: Argo CD
 
 Here's a real-world example of installing [Argo CD](https://argoproj.github.io/cd/) into a Kubernetes cluster,

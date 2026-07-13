@@ -62,6 +62,10 @@ If the Pulumi CLI process is terminated between steps 2 and 3, then Pulumi does 
 
 ![Pending Operations Warning](pending-ops-warning.png)
 
+{{< blog/cta-card title="Keep your state in sync" >}}
+Run `pulumi refresh` to reconcile your stack with what actually exists in your cloud, then deploy changes with confidence. Manage state and history for your team in Pulumi Cloud.
+{{< /blog/cta-card >}}
+
 ## The Solution
 
 As of [#10394](https://github.com/pulumi/pulumi/pull/10394), the solution to both problems is [pulumi refresh](https://www.pulumi.com/docs/iac/cli/commands/pulumi_refresh/). The `pulumi refresh` command modifies Pulumi's state so it matches the state of the underlying providers. Most discrepancies can be resolved automatically by checking Pulumi's state against the underlying resource provider. For our AWS bucket example, Pulumi would ask the aws-native provider if bucket `my-bucket-6e3d099` exists and what tags it has.

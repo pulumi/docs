@@ -172,6 +172,10 @@ Tooling can close the gap further. The [Pulumi MCP server](/docs/iac/using-pulum
 This changes the workflow from "generate, fail, read error, retry" to "look up schema, generate correctly." Agent skills push this further by encoding working Pulumi idioms as structured prompts, so the model starts from a known-good baseline. Terraform has no equivalent to this MCP-based schema lookup. That difference matters more with every iteration.
 {{< /notes >}}
 
+{{< blog/cta-card title="Let agents generate deployable infrastructure" href="/docs/ai/mcp-server/" >}}
+Point Claude Opus, Codex, or any agent at the Pulumi MCP server so it looks up real resource schemas and generates infrastructure as code that deploys.
+{{< /blog/cta-card >}}
+
 ## Where the industry is heading
 
 One way to think about IaC language choice is through the lens of [AI engineering maturity levels](https://www.principalengineer.com/p/the-7-levels-of-software-engineering). At Level 3 (agentic coding), agents generate infrastructure from prompts. HCL's 21-33% token savings on generation matters here. At Levels 4-5, agents iterate on specifications, refactor code, and maintain systems over time. Our benchmark shows this is where Pulumi pulls ahead: 41% lower total pipeline cost with Opus, and more deployable refactored output with both models.

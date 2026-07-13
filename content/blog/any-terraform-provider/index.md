@@ -144,6 +144,10 @@ We’ve embraced this approach in many other areas as well:
 
 With the new support for Any Terraform Provider, we’re bringing this same experience to the Terraform and OpenTofu provider ecosystems.
 
+{{< blog/cta-card title="Use any Terraform provider" >}}
+Add any Terraform or OpenTofu provider to your Pulumi program with a single command, and manage it alongside the rest of your cloud infrastructure in one workflow.
+{{< /blog/cta-card >}}
+
 ## How Does This Work?
 
 Two new technologies in the Pulumi open source project underpin support for using any Terraform or OpenTofu provider.

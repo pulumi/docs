@@ -53,6 +53,12 @@ category: general
 # Specify explicitly to override auto-detection. See SCHEMA.md for details.
 schema_type: auto
 
+# Posts of at least 800 words get a "Program the Cloud" CTA card inserted
+# automatically near their middle. Placing your own {{</* blog/cta-card */>}}
+# shortcode in the body suppresses it; uncomment the line below to turn the
+# auto card off entirely for this post.
+# body_cta: false
+
 # Social media copy. When this post merges to master, these are automatically
 # posted to X, LinkedIn, and Bluesky via scripts/social/schedule-posts.py.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000.
