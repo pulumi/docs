@@ -1,6 +1,8 @@
 ---
 title: View team membership from the Members tab
 date: 2026-05-15
+aliases:
+    - /releases/changelog/team-membership-members-tab/
 meta_desc: The Members tab in Access Management now indicates which teams every organization member belongs to.
 ---
 

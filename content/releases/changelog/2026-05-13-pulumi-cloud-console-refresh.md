@@ -1,6 +1,8 @@
 ---
 title: A refreshed Pulumi Cloud console
 date: 2026-05-13
+aliases:
+    - /releases/changelog/pulumi-cloud-console-refresh/
 meta_desc: The Pulumi Cloud console has a refreshed look, with richer controls, new navigation, greater information density, and more.
 ---
 

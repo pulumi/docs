@@ -1,6 +1,8 @@
 ---
 title: Pulumi Service Provider v1.0
 date: 2026-05-28
+aliases:
+    - /releases/changelog/pulumi-service-provider-v1/
 meta_desc: The Pulumi Service Provider has reached v1.0 and is now generated from the public Pulumi Cloud OpenAPI specification.
 ---
 

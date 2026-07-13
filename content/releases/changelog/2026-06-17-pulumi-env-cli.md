@@ -1,6 +1,8 @@
 ---
 title: Retiring the standalone ESC CLI
 date: 2026-06-17
+aliases:
+    - /releases/changelog/pulumi-env-cli/
 meta_desc: The standalone Pulumi ESC CLI is being retired in favor of pulumi env.
 ---
 

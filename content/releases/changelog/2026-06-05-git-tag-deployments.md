@@ -1,6 +1,8 @@
 ---
 title: Trigger Pulumi deployments from Git tags
 date: 2026-06-05
+aliases:
+    - /releases/changelog/git-tag-deployments/
 meta_desc: You can now push a Git tag to trigger a Pulumi deployment from any supported service, including GitHub, GitLab, Bitbucket, Azure DevOps, and more.
 ---
 

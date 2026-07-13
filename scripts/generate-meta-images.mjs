@@ -159,6 +159,20 @@ const SECTIONS = [
     valid: (f) => !!f.title,
   },
   {
+    // Changelog entries (content/releases/changelog/<slug>.md) get the dark
+    // docs "info" card with a "Releases" badge. Scoped to the changelog subtree
+    // only — the /releases landing page is intentionally excluded (it gets a
+    // custom meta_image later). The changelog _index has build.render=never (no
+    // list page renders), so its card would never be referenced; skip it.
+    name: "releases/changelog",
+    template: "info",
+    recursive: true,
+    sampleGroupBy: () => "changelog",
+    skip: (fm) => fm.build && fm.build.render === "never",
+    fields: (fm) => ({ sectionLabel: "Releases", subSectionLabel: "", title: clean(fm.title), description: clean(fm.meta_desc) }),
+    valid: (f) => !!f.title,
+  },
+  {
     // Event / workshop cards (content/events/<slug>/index.md leaf bundles).
     // Individual events → the events card in two sizes (landscape OG meta image
     // + square second og:image). The /events/ index page → a plain title card,

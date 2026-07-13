@@ -1,6 +1,8 @@
 ---
 title: Clearer edit and review modes for ESC change requests
 date: 2026-05-22
+aliases:
+    - /releases/changelog/esc-change-request-edit-review/
 meta_desc: Pulumi ESC change requests now separate editing a draft from reviewing one, with deep-linkable modes so several people can co-edit before approval.
 tier: Enterprise
 ---

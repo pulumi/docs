@@ -1,6 +1,8 @@
 ---
 title: Individual user authentication for GitHub Enterprise Server
 date: 2026-06-17
+aliases:
+    - /releases/changelog/github-enterprise-server-individual-auth/
 meta_desc: Self-hosted GitHub Enterprise operations now run as the user who triggered them.
 tier: Business Critical
 ---

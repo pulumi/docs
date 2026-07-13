@@ -1,6 +1,8 @@
 ---
 title: Connect any Git or Mercurial repo with Custom VCS
 date: 2026-05-04
+aliases:
+    - /releases/changelog/custom-vcs/
 meta_desc: Custom VCS integrations allow you to connect any Git or Mercurial server, including self-hosted, to Pulumi Cloud.
 ---
 

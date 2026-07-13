@@ -63,6 +63,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function openModal(article: Element, trigger: HTMLElement | null): void {
         content.innerHTML = "";
         content.appendChild(article.cloneNode(true));
+        // WebKit (Safari + iOS) doesn't re-run the media resource selection
+        // algorithm for a <video> cloned out of a detached DOMParser document,
+        // so it never loads its <source>, shows no first frame, and never arms
+        // autoplay. Chrome/Firefox do. Force a fresh load, then kick off
+        // autoplay ourselves for the videos that ask for it.
+        content.querySelectorAll<HTMLVideoElement>("video").forEach(video => {
+            video.load();
+            if (video.autoplay) {
+                video.play().catch(() => { /* autoplay may be blocked (e.g. iOS Low Power Mode); the first frame still shows */ });
+            }
+        });
         modal.classList.remove("hidden");
         modal.scrollTop = 0;
         document.body.style.overflow = "hidden";
