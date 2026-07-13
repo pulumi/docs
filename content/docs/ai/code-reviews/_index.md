@@ -46,3 +46,7 @@ Neo code reviews run on GitHub.com. GitHub Enterprise Server is not supported. C
 ## Permissions
 
 Neo code reviews run with the same governance as any other [Neo task](/docs/ai/tasks/), including the [role-based access control](/docs/administration/access-identity/rbac/), guardrails, and audit logging your organization has configured. To turn them off, disable Neo code reviews in your [GitHub App integration settings](/docs/integrations/version-control/github-app/).
+
+## Troubleshooting
+
+If Neo isn't reviewing pull requests in a repository, confirm that the Pulumi GitHub App installation covering that repository is linked to your Pulumi organization. Installations created directly from the GitHub Marketplace can exist without a linked organization, and Neo skips reviews on their pull requests. When this happens, the Pulumi preview comment on the pull request includes a note with a link to finish connecting the installation. See [Link an existing installation](/docs/integrations/version-control/github-app/#link-an-existing-installation).
