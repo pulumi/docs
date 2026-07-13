@@ -5,8 +5,7 @@ draft: true
 meta_desc: "Pulumi Neo usage limits set a dollar boundary on monthly Neo spend. Neo pauses when it reaches your organization or per-member limit, with email alerts."
 feature_image: feature.png
 authors:
-    # Owner may swap to john-keiser before publish.
-    - neo-team
+    - john-keiser
 tags:
     - pulumi-neo
     - ai
@@ -23,7 +22,7 @@ social:
     bluesky: "Pulumi Neo now supports usage limits. Set a dollar limit on Neo's monthly spend; it pauses when it reaches the limit, and emails you along the way."
 ---
 
-As you hand more infrastructure work to [Pulumi Neo](/docs/ai/), its usage adds up. Usage limits let you set a monthly dollar limit on that usage, so Neo pauses when your organization reaches the limit instead of running past it.
+The more infrastructure work you hand [Pulumi Neo](/docs/ai/), the more its usage grows. Usage limits let you set a monthly dollar limit on that usage, so Neo pauses when your organization reaches the limit instead of running past it.
 
 <!--more-->
 
