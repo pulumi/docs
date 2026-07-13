@@ -32,11 +32,13 @@ social:
         Passkey sign-in is now live in Pulumi Cloud for users who sign in with email and password. Phishing-resistant, synced across devices. Here's how to enroll.
 ---
 
-Passwordless login is now supported in Pulumi Cloud! Today, we are officially support for passkeys. Click a button, approve with Touch ID, Face ID, Windows Hello, or your hardware key, and you're signed in.
+Pulumi Cloud now supports passkeys for users who sign in with email and password. Click a button, approve with Touch ID, Face ID, Windows Hello, or your hardware key, and you're signed in.
 
 A passkey is a public-key credential stored on your device: your phone, your laptop, a hardware key (YubiKey, Google Titan, etc.), or your password manager can all function as the authenticator. When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key.
 
-The private key is never stored in Pulumi Cloud, and Pulumi Cloud never stores any secret, as this stays on your device. Passkeys are built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard, so they're already supported on every major browser and operating system.
+The private key stays on your device — Pulumi Cloud never sees or stores it. Passkeys are built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard, so they're already supported on every major browser and operating system.
+
+<!--more-->
 
 ## Who this is for
 
@@ -53,7 +55,7 @@ Passwords have always been the weakest link in account security. Since they are 
 
 ## Setting up a passkey
 
-The next time you sign in with a password, you will be automatically prompted to ask if you'd like to configure a passkey.
+The next time you sign in with a password, Pulumi Cloud will ask if you'd like to configure a passkey. It's a single-step prompt, so you can enroll once and take advantage of passkeys on every subsequent sign-in.
 
 If you dismiss the prompt and would like to add one later, or want to add multiple passkeys, navigate to **Account Settings → Passkeys** under your user profile. Click **Register a passkey**, complete the OS-level prompt (Touch ID, Face ID, Windows Hello, or your hardware key), and you're done. Pulumi Cloud will pick a sensible default name like `"iCloud Keychain"` or `"Chrome on macOS"` based on the authenticator, but you can rename it inline anytime under **Account Settings → Passkeys**.
 
@@ -68,13 +70,11 @@ Depending on how you arrive:
 - **Explicit sign-in.** On the sign-in page, click **Sign in with a passkey**. Your browser opens the passkey picker, and you authenticate from there.
 - **Autofill.** If your browser supports [conditional mediation](https://web.dev/articles/passkey-form-autofill) (Chrome, Safari, Edge, recent Firefox), the email field on the sign-in page proactively offers your registered passkeys as autofill suggestions. Pick one and you're signed in.
 
-Right after sign-in with a password, if you don't have a passkey yet, Pulumi Cloud will offer to enroll one. It's a single-step prompt so you can take advantage of passkeys on every subsequent sign-in.
-
 ## What about my existing password and MFA?
 
 Your existing password still works. Passkeys are an additional sign-in option, not a replacement, and they don't disable password sign-in on your account. If you lose access to every registered passkey, you can still sign in with your email and password as you always have, then register a new passkey from settings.
 
-**Other 2FA still applies.** If you have TOTP-based MFA enabled on your Pulumi account, a passkey sign-in will still prompt for your second factor. WebAuthn doesn't tell us *how* you unlocked the passkey on your device (biometric, PIN, or something weaker), so we can't safely treat the passkey itself as proof of two factors. Your existing MFA configuration remains the boundary it always was.
+**Other 2FA still applies.** If you have TOTP-based MFA enabled on your Pulumi account, a passkey sign-in will still prompt for your second factor. WebAuthn doesn't reliably tell us *how* you unlocked the passkey on your device (biometric, PIN, or something weaker), so we can't safely treat the passkey itself as proof of two factors. Your existing MFA configuration remains the boundary it always was.
 
 ## Try it out
 
