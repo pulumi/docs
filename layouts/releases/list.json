@@ -4,7 +4,7 @@
     A single machine-readable document built from this section's pages
     (.RegularPagesRecursive — see content/releases/_index.md), emitted
     newest-first by date. One flat entry per page:
-      { type: "release" | "changelog", title, date, url, description?, tier? }
+      { type: "release" | "changelog", title, date, url, description?, tiers? }
     description comes from the page's short_description (releases) or
     meta_desc (changelog items). Individual release cards and changelog bodies
     are not expanded here — follow each entry's url for the full content.
@@ -22,7 +22,7 @@
     {{- with or .Params.short_description .Params.meta_desc -}}
         {{- $entry = merge $entry (dict "description" (. | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " ")) -}}
     {{- end -}}
-    {{- with .Params.tier -}}{{- $entry = merge $entry (dict "tier" .) -}}{{- end -}}
+    {{- with .Params.tiers -}}{{- $entry = merge $entry (dict "tiers" .) -}}{{- end -}}
     {{- $entries = $entries | append $entry -}}
 {{- end -}}
 

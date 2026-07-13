@@ -4,6 +4,8 @@ date: 2026-06-16
 aliases:
     - /releases/changelog/universal-search/
 meta_desc: A new, keyboard-friendly command palette lets you jump to any stack, environment, resource, or view from anywhere in the Pulumi Cloud console.
+authors:
+    - tom-king
 ---
 
 We've added a new, keyboard-friendly command palette that lets you jump to any stack, environment, resource, or view from anywhere in the Pulumi Console.
