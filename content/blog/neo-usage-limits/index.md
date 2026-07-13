@@ -1,7 +1,7 @@
 ---
 title: "Introducing Usage Limits for Pulumi Neo"
 date: 2026-07-13T08:00:00-07:00
-draft: true
+draft: false
 meta_desc: "Pulumi Neo usage limits set a dollar boundary on monthly Neo spend. Neo pauses when it reaches your organization or per-member limit, with email alerts."
 feature_image: feature.png
 authors:
