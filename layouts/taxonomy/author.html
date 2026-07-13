@@ -20,6 +20,7 @@
 
         {{ $posts := where .Data.Pages "Section" "blog" }}
         {{ $paginator := .Paginate $posts.ByDate.Reverse }}
+        {{ partial "blog/paginator.html" (dict "context" . "position" "top") }}
         <div data-post-list class="flex flex-col">
             {{ range $paginator.Pages }}{{ partial "blog/card/list-row.html" (dict "page" .) }}{{ end }}
         </div>
