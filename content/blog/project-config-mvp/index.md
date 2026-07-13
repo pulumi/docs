@@ -92,10 +92,6 @@ config:
 
 When we released our support for simple Pulumi programs in YAML we added some support for configuration with it. This was done via the [`configuration` key](https://www.pulumi.com/docs/languages-sdks/yaml/yaml-language-reference/#configuration) in the `Pulumi.yaml` file. We'll be deprecating support for that key now, as YAML will instead use the new standard project configuration.
 
-{{< blog/cta-card title="Manage configuration across stacks" >}}
-Set default configuration values in `Pulumi.yaml` and share them across every stack in your project. Define config schemas to validate inputs before you deploy.
-{{< /blog/cta-card >}}
-
 ### What's Next for Pulumi Configuration?
 
 This is just the start of our support for better config. We posted [a long comment to GitHub](https://github.com/pulumi/pulumi/issues/2307#issuecomment-1225592223) earlier this year to explain some of our future plans, and we do intend to continue improving this part of the Pulumi system as described in that comment.

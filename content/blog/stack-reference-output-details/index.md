@@ -105,10 +105,6 @@ This is not the case for other `Output` values.
 Their values only become available as `pulumi update` runs,
 so we cannot access them in the same way.
 
-{{< blog/cta-card title="Share outputs between stacks" >}}
-Use stack references to read outputs like VPC IDs and connection strings from one stack in another. Build layered infrastructure as code and manage every stack in Pulumi Cloud.
-{{< /blog/cta-card >}}
-
 ## Availability
 
 This feature is available in all stable SDKs for Pulumi, starting from v3.55.0. [Give it a spin](/docs/iac/get-started/) and share your thoughts with us on [Slack](https://slack.pulumi.com/)!

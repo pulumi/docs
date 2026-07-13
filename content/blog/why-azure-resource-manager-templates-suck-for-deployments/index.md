@@ -110,10 +110,6 @@ It’s clean. It’s familiar. And it works seamlessly with your .NET tooling.
 Pulumi is open source, and your Pulumi Cloud account is free for individuals and small teams, with advanced editions for large enterprises.
 [Try Pulumi Cloud for FREE->](https://app.pulumi.com/signup)
 
-{{< blog/cta-card title="Deploy Azure with C#" >}}
-Define your Azure infrastructure in C# with type safety, IDE support, and unit tests, then reuse the same libraries you already build your applications with.
-{{< /blog/cta-card >}}
-
 ## Why It Just Works for .NET Teams
 
 If your organization is built on Azure and .NET:

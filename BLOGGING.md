@@ -306,6 +306,8 @@ Manage your clusters with real code — loops, functions, and your IDE, not YAML
 - `href` (optional): The button destination (default: the site's primary CTA link)
 - Body (optional): The card's body copy; falls back to the default get-started copy when empty.
 
+The same length guidance applies whether the card is auto-inserted or hand-placed: only add a card to a post of at least ~800 words. On a very short post the card overwhelms the content, so skip it there.
+
 **Auto-insertion:** If a post is at least 800 words (~4-minute read) and contains no `blog/cta-card` of its own, a generic card is inserted automatically, immediately before the section heading (`h2`) nearest the middle of the post. Placing your own `blog/cta-card` anywhere in the body suppresses this auto card, so you can substitute a contextual ask. (The button-only `blog/cta-button` shortcode does *not* suppress it.) To turn the auto card off entirely for a post, set `body_cta: false` in the frontmatter.
 
 #### Animated GIFs
