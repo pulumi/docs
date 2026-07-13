@@ -32,7 +32,7 @@ social:
         Passkey sign-in is now live in Pulumi Cloud for users who sign in with email and password. Phishing-resistant, synced across devices. Here's how to enroll.
 ---
 
-Pulumi Cloud now supports passkeys for users who sign in with email and password. Click a button, approve with Touch ID, Face ID, Windows Hello, or your hardware key, and you're signed in.
+Pulumi Cloud now supports passkeys for users who sign in with email and password. Select a button, approve with Touch ID, Face ID, Windows Hello, or your hardware key, and you're signed in.
 
 A passkey is a public-key credential stored on your device: your phone, your laptop, a hardware key (YubiKey, Google Titan, etc.), or your password manager can all function as the authenticator. When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key.
 
@@ -50,14 +50,14 @@ Passwords have always been the weakest link in account security. Since they are 
 
 * **Phishing-resistant by design.** A passkey is bound to the exact origin it was registered for. A look-alike domain can't trigger your authenticator.
 * **Synced across your devices.** Apple iCloud Keychain, Google Password Manager, 1Password, Dashlane, Bitwarden: most credential managers now sync passkeys end-to-end-encrypted to every device you've signed in on.
-* **Discoverable.** Pulumi Cloud doesn't need to know which user you are before you authenticate. Just click "Sign in with a passkey" and your device offers the right credential.
+* **Discoverable.** Pulumi Cloud doesn't need to know which user you are before you authenticate. Just select "Sign in with a passkey" and your device offers the right credential.
 * **Nothing to remember.** A passkey lives on your device. There's no string to memorize, and no sensitive credential stored by us.
 
 ## Setting up a passkey
 
 The next time you sign in with a password, Pulumi Cloud will ask if you'd like to configure a passkey. It's a single-step prompt, so you can enroll once and take advantage of passkeys on every subsequent sign-in.
 
-If you dismiss the prompt and would like to add one later, or want to add multiple passkeys, navigate to **Account Settings → Passkeys** under your user profile. Click **Register a passkey**, complete the OS-level prompt (Touch ID, Face ID, Windows Hello, or your hardware key), and you're done. Pulumi Cloud will pick a sensible default name like `"iCloud Keychain"` or `"Chrome on macOS"` based on the authenticator, but you can rename it inline anytime under **Account Settings → Passkeys**.
+If you dismiss the prompt and would like to add one later, or want to add multiple passkeys, navigate to **Account Settings → Passkeys** under your user profile. Select **Register a passkey**, complete the OS-level prompt (Touch ID, Face ID, Windows Hello, or your hardware key), and you're done. Pulumi Cloud will pick a sensible default name like `"iCloud Keychain"` or `"Chrome on macOS"` based on the authenticator, but you can rename it inline anytime under **Account Settings → Passkeys**.
 
 ![Pulumi Cloud Account Settings page showing the Passkeys section, with a "Register a passkey" button and an enrolled passkey named "Pulumipus's iPhone".](./account-settings-passkeys.png)
 
@@ -67,7 +67,7 @@ You can register as many passkeys as you want. Typical setups are one per person
 
 Depending on how you arrive:
 
-- **Explicit sign-in.** On the sign-in page, click **Sign in with a passkey**. Your browser opens the passkey picker, and you authenticate from there.
+- **Explicit sign-in.** On the sign-in page, select **Sign in with a passkey**. Your browser opens the passkey picker, and you authenticate from there.
 - **Autofill.** If your browser supports [conditional mediation](https://web.dev/articles/passkey-form-autofill) (Chrome, Safari, Edge, recent Firefox), the email field on the sign-in page proactively offers your registered passkeys as autofill suggestions. Pick one and you're signed in.
 
 ## What about my existing password and MFA?
