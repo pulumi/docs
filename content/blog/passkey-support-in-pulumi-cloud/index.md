@@ -6,6 +6,7 @@ authors:
 meta_desc: "Pulumi Cloud now supports passkeys: a phishing-resistant alternative to typing your password, for users who sign in with email and password."
 meta_image: meta.png
 feature_image: feature.png
+category: product
 tags:
     - features
     - security
