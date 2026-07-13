@@ -41,6 +41,8 @@ To disable [Neo code reviews](/docs/ai/code-reviews/), navigate to your [VCS int
 If Neo was previously disabled, it will need to be enabled as outlined above.
 {{% /notes %}}
 
+To cap what your organization spends on Neo, see [Usage limits](/docs/ai/usage-limits/).
+
 ## Custom instructions
 
 Custom Instructions teach Neo your organization's standards, preferences, and requirements so they're applied automatically to every task. Instead of repeating context in each task, you define it once from a central location.
