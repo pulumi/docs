@@ -13,6 +13,7 @@
     <div class="container mx-auto px-4 py-8 lg:py-12">
         {{ $posts := (where .Data.Pages "Section" "blog").ByDate.Reverse }}
         {{ $paginator := .Paginate $posts }}
+        {{ partial "blog/paginator.html" (dict "context" . "position" "top") }}
         {{ partial "blog/interleaved-list.html" (dict "paginator" $paginator "pages" $posts) }}
         {{ partial "blog/paginator.html" . }}
     </div>
