@@ -36,7 +36,7 @@ Enforcement happens at a natural boundary in Neo's work, so a task already in pr
 
 You can also set an optional limit for an individual member. A member's effective limit is the smaller of their own limit and the organization limit, and a member without a personal limit is still bound by the org limit.
 
-Turn on **Enable email notifications** to get a heads-up before you reach the limit. Billing admins are alerted on the organization limit, and each member is alerted on their own usage, at 50%, 80%, and 95% of the limit, with a final notice at 100% when Neo pauses.
+Turn on **Enable email notifications** to get a heads-up before you reach the limit. Billing admins are alerted at 50%, 80%, and 95% of the organization limit, with a final notice at 100% when Neo pauses.
 
 ## Get started
 

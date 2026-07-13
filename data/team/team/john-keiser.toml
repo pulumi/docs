@@ -1,12 +1,11 @@
 id = "john-keiser"
 name = "John Keiser"
-# TODO(john): confirm your byline title + add any socials you want shown, then this is publish-ready.
-title = "Software Engineer"
+title = "Mad Scientist"
 weight = 1
 
 status = "active"
 
-# [social]
-# github = "jkeiser"
-# linkedin = ""
-# x = ""
+[social]
+linkedin = "jkeiser2"
+x = "jkeiser2"
+# github = "jkeiser"  # TODO(john): confirm handle, or drop if you'd rather not show github
