@@ -421,7 +421,7 @@ If `neo-bridge` fails to launch tasks:
 
 1. **Check Neo access**: Verify you have access to Pulumi Neo in your organization
 2. **Verify task description**: Ensure your task instructions are clear and actionable
-3. **Check organization limits**: Some organizations may have task limits
+3. **Check organization limits**: Some organizations may have task limits, and Neo pauses if the organization reaches its [usage limit](/docs/ai/usage-limits/)
 4. **Review error message**: Check the error details for specific issues
 
 ## Learn more
