@@ -1,6 +1,8 @@
 ---
 title: Neo task notifications
 date: 2026-05-05
+aliases:
+    - /releases/changelog/neo-task-notifications/
 meta_desc: Neo can now notify you when a task needs your input, through native desktop notifications, an audible sound, or both.
 ---
 

@@ -37,6 +37,10 @@ Surface claims about a competitor's *missing* features for author re-verificatio
 - **`last_updated` integrity → ⚠️**: bumping the date without semantic changes, or changing semantic content without bumping the date.
 - **Cosmetic edits** (typos, format) → silent.
 
+### Changelog entries (`content/releases/changelog/**`)
+
+New or renamed entries must be named `YYYY-MM-DD-<slug>.md`, and the date prefix must match the frontmatter `date:`. Assets under `images/`/`videos/` must be date-prefixed too (`YYYY-MM-DD-<slug>.<ext>`). `make lint` enforces both (`checkChangelogFilename` and `checkChangelogAssets` in `scripts/lint/lint-markdown.js`), so a violation is a hard build failure — surface it as 🚨 with the fix (rename the file/asset or correct the date; when renaming an asset, update its reference in the same change). A **renamed** entry (slug changed) also needs an `aliases:` entry pointing at the old `/releases/changelog/<old-slug>/` URL, or the old link 404s — flag a missing alias as ⚠️. Brand-new entries don't need an alias. See `archetypes/changelog.md` and the `/new-changelog` skill.
+
 ### Customer attributions
 
 When the diff touches a named-person quote or attribution (`"<quote>" — Jane Smith, CTO at AcmeCorp`), surface for author confirmation the person is still in role at the named company. ⚠️ — author likely knows. Skip when the quote is unchanged context around an unrelated edit.

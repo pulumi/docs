@@ -128,6 +128,17 @@ When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `la
 
 ---
 
+## Releases changelog entries
+
+Individual changelog items live in `content/releases/changelog/` — one markdown file per entry, listed by month on `/releases/` and rendered at `/releases/changelog/<slug>/` (`layouts/changelog/single.html`). Shared images/videos live in the `images/` and `videos/` subfolders and are referenced by absolute path (e.g. `/releases/changelog/images/2026-06-18-foo.png`), so entry renames don't affect them.
+
+- **Filenames must be `YYYY-MM-DD-<slug>.md`**, and the date prefix must match the frontmatter `date:`. `make lint` enforces both (`checkChangelogFilename` in `scripts/lint/lint-markdown.js`) — a mismatch or non-prefixed name is a hard build failure.
+- **Assets in `images/` and `videos/` must also be date-prefixed** as `YYYY-MM-DD-<slug>.<ext>` (use the referencing entry's date). `make lint` enforces this too (`checkChangelogAssets`). Rename the asset and update its reference together.
+- **Create a new entry with the `/new-changelog` skill** (or `hugo new --kind changelog content/releases/changelog/YYYY-MM-DD-<slug>.md`, which uses `archetypes/changelog.md`). The archetype derives `title` and `date` from the filename.
+- **Renaming an entry** (changing its slug) changes its URL, so add an `aliases:` entry pointing at the old `/releases/changelog/<old-slug>/` path — same SEO rule as moving any content file.
+
+---
+
 ## Dark mode (/docs)
 
 The `/docs` section supports a light/dark/system theme toggle. Dark is **light-first**: light is the baseline (unchanged from before) and dark is a pure override. The whole system lives in `theme/src/scss/docs/_docs-theme.scss` (read its header comment first) and is driven by semantic `--docs-*` tokens defined on `body.section-docs` and re-pointed under `html[data-theme="dark"]`. It is scoped entirely to docs pages; nothing here can affect a non-docs page.

@@ -1,6 +1,8 @@
 ---
 title: "Neo code reviews: AI code review for infrastructure"
 date: 2026-06-22
+aliases:
+    - /releases/changelog/neo-code-reviews/
 meta_desc: Neo code reviews help you understand not your team's proposed changes, but how those changes affect your running environments.
 ---
 
