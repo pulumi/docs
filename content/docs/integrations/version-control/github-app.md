@@ -39,6 +39,16 @@ To install the GitHub app, you must have admin permissions in **both** the targe
 1. Navigate to **Management** > **Version control**.
 1. Select **Add account** and choose **GitHub**, then follow the prompts.
 
+### Install from the GitHub Marketplace
+
+You can also start the installation from GitHub instead of Pulumi Cloud, either by installing the app from the GitHub Marketplace or by approving an installation request from a non-admin member of your GitHub organization. After the installation completes, GitHub redirects you to Pulumi Cloud, where you choose the Pulumi organization to link the installation to. If Pulumi can't verify that you control the installation, you're prompted to connect your GitHub account first. For installations on a GitHub organization account, you must be an admin of that GitHub organization, not just a member, because linking gives the Pulumi organization access to the repositories the installation covers.
+
+### Link an existing installation
+
+If the app is already installed in GitHub but not connected to your Pulumi organization, the **Management** > **Version control** page lists installations you can link, each with a **Link** action. The **Add account** > **GitHub** wizard offers the same **Link existing install** option when Pulumi finds one. As with Marketplace installs, you may be prompted to connect your GitHub account so Pulumi can verify that you control the installation.
+
+An installation can be linked to one Pulumi organization this way. If it's already linked to a different Pulumi organization, linking fails; see [Multiple GitHub organizations](#multiple-github-organizations) for sharing a GitHub organization across Pulumi organizations.
+
 ### Multiple GitHub organizations
 
 Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version control** > **Add account**.
@@ -199,8 +209,9 @@ Uninstalling the GitHub app will delete any push-to-deploy and review stack conf
 
 If you previously installed the GitHub app but Pulumi Cloud does not show it as connected to your desired organization, try the following:
 
-1. Ensure you're a GitHub admin of the GitHub organization where you're installing the app.
-1. Uninstall the app and re-install it following the steps above. See [Uninstallation](#uninstallation) for both methods.
+1. Navigate to **Management** > **Version control** and check whether the installation is listed as available to link, then select **Link**. See [Link an existing installation](#link-an-existing-installation).
+1. Ensure you're a GitHub admin of the GitHub organization where the app is installed.
+1. If the installation still doesn't appear, uninstall the app and re-install it following the steps above. See [Uninstallation](#uninstallation) for both methods.
 
 ### PR comments not appearing
 
