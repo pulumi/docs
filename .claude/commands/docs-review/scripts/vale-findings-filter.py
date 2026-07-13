@@ -109,6 +109,8 @@ RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.CommandBackticks": "unbacked CLI command",
     "Pulumi.HeadingSentenceCase": "heading capitalization",
     "Pulumi.Repetition": "repeated word",
+    "Pulumi.FutureTense": "future tense",
+    "Pulumi.NarrativeWe": "narrative voice",
     "Google.Acronyms": "acronym",
     "Google.Contractions": "contractions",
     "Google.Ellipses": "punctuation",
