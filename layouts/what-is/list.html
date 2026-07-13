@@ -40,7 +40,7 @@
     {{ end }}
 
     {{ with .Content }}
-        <section class="container mx-auto px-6 lg:px-0 pb-12">
+        <section class="container mx-auto px-6 lg:px-0 pb-8">
             <div class="max-w-3xl mx-auto text-gray-800 text-lg leading-relaxed">
                 {{ . }}
             </div>
@@ -48,49 +48,51 @@
     {{ end }}
 
     <div class="container mx-auto px-6 lg:px-0 pb-16">
-        {{/* Curated card sections. */}}
-        {{ range $data.sections }}
-            {{ $pages := slice }}
-            {{ range .slugs }}
-                {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+        <div class="max-w-4xl mx-auto">
+            {{/* Curated row groups. */}}
+            {{ range $data.sections }}
+                {{ $pages := slice }}
+                {{ range .slugs }}
+                    {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+                {{ end }}
+                {{ if $pages }}
+                    <section class="mb-12">
+                        <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
+                        <div class="divide-y divide-gray-200 border-t border-gray-200">
+                            {{ range $pages }}{{ partial "what-is/row.html" . }}{{ end }}
+                        </div>
+                    </section>
+                {{ end }}
             {{ end }}
-            {{ if $pages }}
-                <section class="mb-14">
-                    <h2 class="no-anchor text-2xl font-bold text-gray-900 mb-6">{{ .title }}</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {{ range $pages }}{{ partial "what-is/card.html" . }}{{ end }}
+
+            {{/* Fallback group for any explainer not yet placed in the data file. */}}
+            {{ if $other }}
+                <section class="mb-12">
+                    <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">Other concepts</h2>
+                    <div class="divide-y divide-gray-200 border-t border-gray-200">
+                        {{ range $other }}{{ partial "what-is/row.html" . }}{{ end }}
                     </div>
                 </section>
             {{ end }}
-        {{ end }}
 
-        {{/* Fallback group for any explainer not yet placed in the data file. */}}
-        {{ if $other }}
-            <section class="mb-14">
-                <h2 class="no-anchor text-2xl font-bold text-gray-900 mb-6">Other concepts</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {{ range $other }}{{ partial "what-is/card.html" . }}{{ end }}
-                </div>
-            </section>
-        {{ end }}
-
-        {{/* CLI recipes and error-resolution pages: compact links, not cards. */}}
-        {{ with $data.troubleshooting }}
-            {{ $pages := slice }}
-            {{ range .slugs }}
-                {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+            {{/* CLI recipes and error-resolution pages: compact links, not rows. */}}
+            {{ with $data.troubleshooting }}
+                {{ $pages := slice }}
+                {{ range .slugs }}
+                    {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+                {{ end }}
+                {{ if $pages }}
+                    <section class="mt-14 pt-8 border-t border-gray-200">
+                        <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
+                        <p class="text-sm text-gray-600 mb-4">Quick fixes and command references for running the AWS CLI with Pulumi ESC-issued dynamic credentials.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 list-none pl-0">
+                            {{ range $pages }}
+                                <li class="m-0"><a class="text-violet-700 hover:text-violet-900 hover:underline text-sm" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </section>
+                {{ end }}
             {{ end }}
-            {{ if $pages }}
-                <section class="mb-4 pt-8 border-t border-gray-200">
-                    <h2 class="no-anchor text-2xl font-bold text-gray-900 mb-2">{{ .title }}</h2>
-                    <p class="text-gray-600 mb-6">Quick fixes and command references for running the AWS CLI with Pulumi ESC-issued dynamic credentials.</p>
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 list-none pl-0">
-                        {{ range $pages }}
-                            <li class="m-0"><a class="text-violet-700 hover:text-violet-900 hover:underline text-sm" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                        {{ end }}
-                    </ul>
-                </section>
-            {{ end }}
-        {{ end }}
+        </div>
     </div>
 {{ end }}
