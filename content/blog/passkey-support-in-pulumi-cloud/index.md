@@ -32,24 +32,24 @@ social:
         Passkey sign-in is now live in Pulumi Cloud for users who sign in with email and password. Phishing-resistant, synced across devices. Here's how to enroll.
 ---
 
-If you sign in to Pulumi Cloud with an email and password, you now have a faster, more secure option: passkeys. Click a button, approve with Touch ID, Face ID, Windows Hello, or your hardware key, and you're signed in. No password typed, no phishable secret exchanged.
+Passwordless login is now supported in Pulumi Cloud! Today, we are officially support for passkeys. Click a button, approve with Touch ID, Face ID, Windows Hello, or your hardware key, and you're signed in.
 
-A passkey is a public-key credential stored on your device: your phone, your laptop, a hardware key (YubiKey, Google Titan, etc.), or your password manager can all function as the authenticator. When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key. The private key never leaves your device, and Pulumi Cloud never sees a secret it could leak in a breach. Passkeys are built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard, so they're already supported on every major browser and operating system.
+A passkey is a public-key credential stored on your device: your phone, your laptop, a hardware key (YubiKey, Google Titan, etc.), or your password manager can all function as the authenticator. When you sign in, your device authenticates you locally and signs a challenge from Pulumi Cloud with the private key.
 
-<!--more-->
+The private key is never stored in Pulumi Cloud, and Pulumi Cloud never stores any secret, as this stays on your device. Passkeys are built on the [WebAuthn](https://www.w3.org/TR/webauthn-3/) standard, so they're already supported on every major browser and operating system.
 
 ## Who this is for
 
-This release applies to users who sign in to Pulumi Cloud with an **email address and password**. If you sign in through an identity provider (IdP), such as GitHub OAuth, GitLab, Bitbucket, Google, or your organization's SAML SSO, your existing flow is unchanged. Use the same provider you always have; your IdP remains the source of truth for those accounts.
+This release applies to users who sign in to Pulumi Cloud with an email address and password. If you sign in through an identity provider (IdP), such as GitHub OAuth, GitLab, Bitbucket, Google, or your organization's SAML SSO, your existing flow is unchanged.
 
 ## Why passkeys
 
 Passwords have always been the weakest link in account security. Since they are shared secrets, they are vulnerable to phishing attacks, and every place you type one is a place that can be impersonated or a data store that can be leaked. Passkeys swap that out for a per-site key pair that lives on your device:
 
-- **Phishing-resistant by design.** A passkey is bound to the exact origin it was registered for. A look-alike domain can't trigger your authenticator. There is no equivalent of "tricking the user into typing their password into a clone."
-- **Synced across your devices.** Apple iCloud Keychain, Google Password Manager, 1Password, Dashlane, Bitwarden: most credential managers now sync passkeys end-to-end-encrypted to every device you've signed in on. Register once, sign in anywhere.
-- **Discoverable.** Pulumi Cloud doesn't need to know which user you are before you authenticate. Just click "Sign in with a passkey" and your device offers the right credential, no email field required.
-- **Nothing to remember.** A passkey lives on your device. There's no string to memorize, and nothing for someone else's breach to expose.
+* **Phishing-resistant by design.** A passkey is bound to the exact origin it was registered for. A look-alike domain can't trigger your authenticator.
+* **Synced across your devices.** Apple iCloud Keychain, Google Password Manager, 1Password, Dashlane, Bitwarden: most credential managers now sync passkeys end-to-end-encrypted to every device you've signed in on.
+* **Discoverable.** Pulumi Cloud doesn't need to know which user you are before you authenticate. Just click "Sign in with a passkey" and your device offers the right credential.
+* **Nothing to remember.** A passkey lives on your device. There's no string to memorize, and no sensitive credential stored by us.
 
 ## Setting up a passkey
 
@@ -63,16 +63,16 @@ You can register as many passkeys as you want. Typical setups are one per person
 
 ## Signing in
 
-Two flows, depending on how you arrive:
+Depending on how you arrive:
 
-- **Explicit sign-in.** On the sign-in page, click **Sign in with a passkey**. Your browser opens the passkey picker, you authenticate, and you're in. No email, no password.
-- **Autofill.** If your browser supports [conditional mediation](https://web.dev/articles/passkey-form-autofill) (Chrome, Safari, Edge, recent Firefox), the email field on the sign-in page proactively offers your registered passkeys as autofill suggestions. Pick one and you're signed in, no button click needed.
+- **Explicit sign-in.** On the sign-in page, click **Sign in with a passkey**. Your browser opens the passkey picker, and you authenticate from there.
+- **Autofill.** If your browser supports [conditional mediation](https://web.dev/articles/passkey-form-autofill) (Chrome, Safari, Edge, recent Firefox), the email field on the sign-in page proactively offers your registered passkeys as autofill suggestions. Pick one and you're signed in.
 
-Right after sign-in with a password, if you don't have a passkey yet, Pulumi Cloud offers to enroll one. It's a single-step prompt so you can take advantage of passkeys on every subsequent sign-in.
+Right after sign-in with a password, if you don't have a passkey yet, Pulumi Cloud will offer to enroll one. It's a single-step prompt so you can take advantage of passkeys on every subsequent sign-in.
 
 ## What about my existing password and MFA?
 
-**Your password still works.** Passkeys are an additional sign-in option, not a replacement, and they don't disable password sign-in on your account. If you lose access to every registered passkey (phone wiped, hardware key misplaced, browser profile reset), you can sign in with your email and password as you always have, then register a new passkey from settings.
+Your existing password still works. Passkeys are an additional sign-in option, not a replacement, and they don't disable password sign-in on your account. If you lose access to every registered passkey, you can still sign in with your email and password as you always have, then register a new passkey from settings.
 
 **Other 2FA still applies.** If you have TOTP-based MFA enabled on your Pulumi account, a passkey sign-in will still prompt for your second factor. WebAuthn doesn't tell us *how* you unlocked the passkey on your device (biometric, PIN, or something weaker), so we can't safely treat the passkey itself as proof of two factors. Your existing MFA configuration remains the boundary it always was.
 
