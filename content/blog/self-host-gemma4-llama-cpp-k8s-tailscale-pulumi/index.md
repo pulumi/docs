@@ -320,7 +320,7 @@ If you already have Pi configuration files, merge the `local-llama` provider and
 {{< figure src="pi.png" alt="Pi connected to local Gemma 4 through llama.cpp" width=100% >}}
 
 {{< blog/cta-card title="Manage your local AI stack as code" >}}
-Let Pulumi provision the Kubernetes cluster, service wiring, and Tailscale access around your host-native model, so you can rebuild the whole setup with `pulumi up`.
+Let Pulumi provision the Kubernetes cluster, service wiring, and Tailscale access around your self-hosted model, so you can rebuild the whole setup with `pulumi up`.
 {{< /blog/cta-card >}}
 
 ## Advanced: Linux GPU in-cluster serving

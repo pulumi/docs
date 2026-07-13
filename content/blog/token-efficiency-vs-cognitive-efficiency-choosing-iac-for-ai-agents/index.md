@@ -173,7 +173,7 @@ This changes the workflow from "generate, fail, read error, retry" to "look up s
 {{< /notes >}}
 
 {{< blog/cta-card title="Let agents generate deployable infrastructure" href="/docs/ai/mcp-server/" >}}
-Point Claude Opus, Codex, or any agent at the Pulumi MCP server so it looks up real resource schemas and generates infrastructure as code that deploys.
+Point Claude Code, Codex, or any agent at the Pulumi MCP server so it looks up real resource schemas and generates infrastructure as code that deploys.
 {{< /blog/cta-card >}}
 
 ## Where the industry is heading

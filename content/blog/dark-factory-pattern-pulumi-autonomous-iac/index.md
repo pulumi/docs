@@ -105,7 +105,7 @@ The happy-path orchestrator is small. It pulls a spec, runs `preview`, hands the
 The wall is the part that takes a week to get right. You write five plain-English scenarios for one stack ("after `pulumi up`, the bucket is private, has SSE-KMS, lives in eu-west-1, and is tagged `owner=team-x`") and a janky evaluator that runs `preview` and `up` against an ephemeral copy, queries the cloud, and asks a separate model whether the resulting state satisfies the scenario. Triple-run, 90% pass gate. Then you watch it for a few weeks before you let anything auto-apply.
 
 {{< blog/cta-card title="Ground your agent in real state" href="/product/neo/" >}}
-Pulumi Neo reasons over your actual state graph and runs in Review, Balanced, or Auto mode, so you can tighten the gates as your confidence grows.
+Pulumi Neo reasons over your actual state graph and runs in Review, Balanced, or Auto mode, so you can grant it more autonomy as your confidence grows.
 {{< /blog/cta-card >}}
 
 ## A four-phase rollout
