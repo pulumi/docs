@@ -140,10 +140,6 @@ That specialized model is wrapped in AgentCore. The platform handles isolation, 
 
 Seen this way, Nova Act is Amazon’s reference implementation for a certain class of enterprise agents: start with a strong general model, specialize it through domain-specific RL in a controlled environment, and run it on AgentCore with tools and policies around it. It’s the pattern AWS expects customers to adopt.
 
-{{< blog/cta-card title="Provision AWS infrastructure as code" href="/docs/ai/" >}}
-Describe the AWS resources you need and let your coding agent, or Pulumi Neo, build, preview, and deploy them through infrastructure as code.
-{{< /blog/cta-card >}}
-
 ## One stack to rule them all
 
 So Nova Forge, Trainium, AgentCore, and Nova Act connect. Trainium lowers the cost of big training runs. Nova Forge lets enterprises plug their own data and rewards into those runs. AgentCore is where the resulting models act, with tools, memory, and policy guardrails. Nova Act shows the pattern in action: a domain-specialized Nova model, trained in a controlled loop, running as a production agent.

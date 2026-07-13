@@ -130,10 +130,6 @@ This is the foundation for setting the superintelligence flywheel in motion.
 
 ---
 
-{{< blog/cta-card title="Bring AI agents to your infrastructure" href="/docs/ai/" >}}
-Manage cloud infrastructure as code so your coding agent, or Pulumi Neo, can plan, preview, and deploy changes within the guardrails you set.
-{{< /blog/cta-card >}}
-
 ## Evidence at Scale
 
 The flywheel isn’t theoretical. We're facilitating it daily with thousands of customers:
