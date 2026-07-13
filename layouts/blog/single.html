@@ -49,7 +49,7 @@
                     flex gap slot) with it. */ -}}
                 <div class="mb-8 empty:hidden md:hidden">{{ partial "blog/toc.html" (dict "page" . "collapsible" true) }}</div>
                 <section class="blog-post-content max-w-3xl">
-                    {{ partial "blog/content-with-cta.html" . }}
+                    {{ .Content }}
                 </section>
 
                 {{ partial "blog/post-resources.html" . }}

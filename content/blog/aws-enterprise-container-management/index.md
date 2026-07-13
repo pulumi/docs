@@ -29,9 +29,6 @@ tags:
     - kubernetes
 category: company
 
-# Company news (funding, partnerships, brand). Suppress the in-body
-# CTA card — this card targets evergreen search-and-discovery content.
-body_cta: false
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
 # for additional details, and please remove these comments before submitting for review.
 ---

@@ -306,11 +306,9 @@ Manage your clusters with real code — loops, functions, and your IDE, not YAML
 - `href` (optional): The button destination (default: the site's primary CTA link)
 - Body (optional): The card's body copy; falls back to the default get-started copy when empty.
 
-The same length guidance applies whether the card is auto-inserted or hand-placed: only add a card to a post of at least ~800 words. On a very short post the card overwhelms the content, so skip it there.
+Place the card yourself, wherever it reads best — usually at a natural section break past the middle of the post. There's no auto-insertion; a post gets a card only if you add one.
 
-**Auto-insertion:** If a post is at least 800 words (~4-minute read) and contains no `blog/cta-card` of its own, a generic card is inserted automatically, immediately before the section heading (`h2`) nearest the middle of the post. Placing your own `blog/cta-card` anywhere in the body suppresses this auto card, so you can substitute a contextual ask. (The button-only `blog/cta-button` shortcode does *not* suppress it.) To turn the auto card off entirely for a post, set `body_cta: false` in the frontmatter.
-
-The card is meant for evergreen, search-and-discovery content (comparisons, best-practices guides, how-to tutorials, explainers). For time-bound announcement or news content — funding, partnerships, brand milestones, year-in-review recaps — it's off-topic, so set `body_cta: false`. Every `category: company` post should carry `body_cta: false` for this reason; treat it as the default for that category.
+**When to add one:** the card suits evergreen, search-and-discovery content (comparisons, best-practices guides, how-to tutorials, explainers) of at least ~800 words. Skip it on very short posts, where it overwhelms the content, and on time-bound announcement or news content — funding, partnerships, brand milestones, year-in-review recaps, and `category: company` posts generally — where a "get started" ask is off-topic.
 
 #### Animated GIFs
 
