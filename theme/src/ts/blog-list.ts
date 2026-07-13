@@ -8,7 +8,7 @@
 //   [data-post-row]            one post row (also present in the rows fragment)
 //   [data-post-grid]           (term pages) the medium-card grid above the list
 //   [data-post-card]           one grid card
-//   [data-paginator]           the numbered pager; data-next-url = next page URL
+//   [data-paginator]           the pager wrapper (label + nav); data-next-url = next page URL
 //   [data-blog-filter]         the homepage filter bar
 //   [data-blog-filter] a[data-category]  a filter pill ("" = All), .is-active
 
@@ -18,6 +18,14 @@ const REVEAL_STEP = 10; // rows revealed per step when a category filter is acti
 document.addEventListener("DOMContentLoaded", () => {
     const list = document.querySelector<HTMLElement>("[data-post-list]");
     if (!list) {
+        return;
+    }
+
+    // Deep /page/N/ landings render classic pagination (server-rendered top +
+    // bottom pagers). Skip the infinite-scroll / load-more enhancement so those
+    // pagers stay visible and paging is done via normal navigation. Page 1 (no
+    // /page/N/ segment) keeps the enhancement.
+    if (/\/page\/\d+\/$/.test(location.pathname)) {
         return;
     }
 
@@ -73,18 +81,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Keep the address bar in sync with the page currently at the top of the
     // viewport (replaceState, so Back doesn't step through every loaded page).
-    const markerObserver = new IntersectionObserver(
-        entries => {
-            for (const e of entries) {
-                if (e.isIntersecting) {
-                    const url = (e.target as HTMLElement).dataset.pageUrl;
-                    if (url) {
-                        history.replaceState(null, "", url);
-                    }
-                }
+    // Driven by a scroll listener, NOT a thin-band IntersectionObserver: a normal
+    // wheel scroll can jump a 0-height boundary marker clean over a narrow band, so
+    // it never reports as intersecting and the URL would stall. Instead, on each
+    // scroll we take the LAST boundary marker that has passed the top of the
+    // viewport — monotonic, so it can never be skipped. Markers ([data-page-url])
+    // sit in page order in the list.
+    const TOP_THRESHOLD = 120; // a boundary counts as "passed" at/above this y
+    let syncScheduled = false;
+    function syncUrl(): void {
+        syncScheduled = false;
+        if (mode !== "paginate") {
+            return; // filtered/reveal mode owns the URL (a real category term page)
+        }
+        const markers = list.querySelectorAll<HTMLElement>("[data-page-url]");
+        let url = basePath;
+        for (let i = 0; i < markers.length; i++) {
+            if (markers[i].getBoundingClientRect().top <= TOP_THRESHOLD) {
+                url = markers[i].dataset.pageUrl || url;
+            } else {
+                break;
+            }
+        }
+        if (new URL(url, location.origin).pathname !== location.pathname) {
+            history.replaceState(null, "", url);
+        }
+    }
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!syncScheduled) {
+                syncScheduled = true;
+                requestAnimationFrame(syncUrl);
             }
         },
-        { rootMargin: "0px 0px -80% 0px" },
+        { passive: true },
     );
 
     function done(): boolean {
@@ -114,13 +145,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 const doc = new DOMParser().parseFromString(text, "text/html");
 
-                // Boundary marker for URL sync.
+                // Boundary marker (read by syncUrl on scroll) for URL sync.
                 const marker = document.createElement("div");
                 marker.dataset.pageUrl = url;
                 marker.style.height = "0";
                 marker.setAttribute("aria-hidden", "true");
                 list.appendChild(marker);
-                markerObserver.observe(marker);
 
                 // A term page's grid run can span pager pages: fetched grid
                 // cards continue the existing [data-post-grid] (the split point
