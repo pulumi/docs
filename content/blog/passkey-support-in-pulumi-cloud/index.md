@@ -59,7 +59,7 @@ The next time you sign in with a password, Pulumi Cloud will ask if you'd like t
 
 If you dismiss the prompt and would like to add one later, or want to add multiple passkeys, navigate to **Account Settings → Passkeys** under your user profile. Select **Register a passkey**, complete the OS-level prompt (Touch ID, Face ID, Windows Hello, or your hardware key), and you're done. Pulumi Cloud will pick a sensible default name like `"iCloud Keychain"` or `"Chrome on macOS"` based on the authenticator, but you can rename it inline anytime under **Account Settings → Passkeys**.
 
-![Pulumi Cloud Account Settings page showing the Passkeys section, with a "Register a passkey" button and an enrolled passkey named "Pulumipus's iPhone".](./account-settings-passkeys.png)
+![Pulumi Cloud Account Settings page showing the Passkeys section, with a "Register a passkey" button and an enrolled passkey named "Pulumipus's iPhone".](/blog/passkey-support-in-pulumi-cloud/account-settings-passkeys.png)
 
 You can register as many passkeys as you want. Typical setups are one per personal device, or one synced credential plus a hardware key as backup. Removing a passkey takes effect immediately; deleted credentials cannot be used to sign in.
 
