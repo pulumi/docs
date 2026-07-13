@@ -8,6 +8,13 @@ env:
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: GITHUB_TOKEN=PULUMI_BOT_TOKEN
 
 name: Update latest-dev-version
+
+# Serialize runs: dev builds can dispatch minutes apart, and a queue of pending
+# runs collapses to the newest one, which carries the newest version anyway.
+concurrency:
+  group: pulumi-cli-dev-version
+  cancel-in-progress: false
+
 on:
   repository_dispatch:
     types:
@@ -47,6 +54,32 @@ jobs:
         run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
         env:
           GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      # A still-open older dev-version PR is superseded by the PR this run just
+      # opened. Left alone it goes permanently conflicted the moment the newer PR
+      # merges (both rewrite the same line of static/latest-dev-version), so close
+      # it. Runs only after the successor PR exists, so a failed run never leaves
+      # us with no open dev-version PR. If the predecessor auto-merges in the
+      # brief window before this step closes it, this run's PR goes conflicted
+      # instead — and the next run's sweep closes it. Best-effort: a failed
+      # list/close only leaves a conflicted PR for the next run to clean up.
+      - name: Close superseded dev-version PRs
+        if: steps.create-pr.outputs.pr_created == 'true' && github.event.inputs.skip_auto_merge != 'true'
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          DEV_VERSION: ${{ github.event.inputs.dev_version || github.event.client_payload.dev_version }}
+          NEW_PR: ${{ steps.create-pr.outputs.pr_number }}
+        run: |
+          prs=$(gh pr list --repo "$GITHUB_REPOSITORY" \
+            --author pulumi-bot --label automation/pulumi-cli-docs --state open \
+            --json number,title \
+            --jq '.[] | select(.title | startswith("Regen dev version")) | .number') \
+            || { echo "::warning::Failed to list open dev-version PRs; skipping supersede step."; exit 0; }
+          for pr in $prs; do
+            [ "$pr" = "$NEW_PR" ] && continue
+            gh pr close "$pr" --repo "$GITHUB_REPOSITORY" --delete-branch \
+              --comment "Superseded by dev build \`$DEV_VERSION\` (#$NEW_PR, $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID); closing so it can't go stale-conflicted." \
+              || echo "::warning::Failed to close superseded PR #$pr; the next dev-version run will retry."
+          done
   update-latest-dev-version:
     runs-on: ubuntu-latest
     outputs:

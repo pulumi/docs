@@ -44,12 +44,12 @@ The **Manage token usage** panel lists each member with these columns:
 
 ## Email alerts
 
-Turn on **Enable email notifications** to be alerted by email as usage climbs toward a limit. Billing admins receive alerts for the organization limit; a member also receives alerts when their own per-member usage crosses a threshold.
+Turn on **Enable email notifications** to be alerted by email as usage climbs toward the organization limit. Billing managers and admins receive the alerts.
 
 Emails go out at these points:
 
 - **50%, 80%, and 95%.** Early warnings that give you time to raise the limit before Neo pauses.
-- **100%.** Neo has reached the limit and is now paused for the affected organization or member.
+- **100%.** Neo has reached the organization limit and is now paused for the organization.
 
 ## What happens when a limit is reached
 
