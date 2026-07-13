@@ -1,9 +1,9 @@
 {{- /*
     Releases index body — shared by /releases/ (list view) and
     /releases/changelog/ (expanded view). Both render the same month-grouped
-    feed of the releases section; the only difference is the data-releases-view
-    attribute, which the scoped CSS below uses to show either the compact
-    changelog rows (list) or each item's full body (expanded).
+    feed of the releases section; the view param picks each changelog item's
+    form — a compact row (list) or its full body (expanded) — in
+    releases/changelog-item.html.
 
     The view control is two plain links — no JS, no persisted state: List points
     at /releases/, Expanded at /releases/changelog/, and the current page's link
@@ -22,8 +22,6 @@
 {{- $expandedURL := "/releases/changelog/" -}}
 {{- with site.GetPage "/releases/changelog" }}{{ $expandedURL = .RelPermalink }}{{ end -}}
 <style>
-    [data-releases-view="list"] [data-changelog-body] { display: none; }
-    [data-releases-view="expanded"] [data-changelog-row] { display: none; }
     /* Active pill in the view toggle — mirrors the blog category filter's
        selected state ([data-blog-filter] .is-active). */
     [data-releases-toggle] [aria-current="page"] {
@@ -31,7 +29,7 @@
         background-color: var(--color-gray-100);
     }
 </style>
-<div data-releases-view="{{ $view }}" class="font-body container mx-auto mb-16 mt-8 px-4 md:px-8 flex flex-col gap-6 md:gap-8">
+<div class="font-body container mx-auto mb-16 mt-8 px-4 md:px-8 flex flex-col gap-6 md:gap-8">
 
     <header class="w-full max-w-6xl mx-auto px-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <h1 class="heading-xl font-display font-semibold m-0 md:my-4">{{ $releases.Title }}</h1>
@@ -77,7 +75,7 @@
             {{ with where .Pages "Type" "changelog" }}
             <ul class="list-none p-0 m-0 flex flex-col w-full max-w-6xl mx-auto px-8">
                 {{ range . }}
-                {{ partial "releases/changelog-item.html" (dict "page" .) }}
+                {{ partial "releases/changelog-item.html" (dict "page" . "view" $view) }}
                 {{ end }}
             </ul>
             {{ end }}
@@ -87,4 +85,8 @@
 
 </div>
 
+{{/* The modal only serves the compact rows; expanded items link straight to
+     their detail pages. */}}
+{{ if eq $view "list" }}
 {{ partial "releases/changelog-modal.html" $releases }}
+{{ end }}

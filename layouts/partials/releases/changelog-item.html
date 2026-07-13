@@ -1,36 +1,34 @@
 {{/*
     Changelog Item
 
-    One entry on /releases/, rendered in two forms toggled by the list page's
-    data-releases-view attribute (see layouts/releases/list.html and
-    theme/src/ts/releases.ts):
+    One entry in the releases feed, rendered in the caller's view (see
+    layouts/partials/releases/changelog-index.html):
 
-    - [data-changelog-row] (list view, the no-JS default): a compact hairline
-      row — title + optional tier badge on the left, date + arrow on the right.
-      The data-changelog-link attribute lets releases.ts intercept the click
-      and open the item's content in a modal; without JS it's a plain link.
-    - [data-changelog-body] (expanded view): the item's full rendered body
-      inline — heading, date, authors byline, and the markdown content — so
-      the whole changelog reads on one page.
+    - list (the default): a compact hairline row — title + optional tier badge
+      on the left, date + arrow on the right. The data-changelog-link attribute
+      lets theme/src/ts/releases.ts intercept the click and open the item's
+      content in a modal; without JS it's a plain link.
+    - expanded: the item's full rendered body inline — heading, date, authors
+      byline, and the markdown content — so the whole changelog reads on one
+      page.
+
+    Only the requested form is rendered: the expanded bodies carry images and
+    autoplaying videos, which browsers fetch even inside display:none subtrees,
+    so they must not ship hidden alongside the list view.
 
     /releases is not a /docs page, so no dark-mode tokens are needed.
 
     Parameters:
     - page: The changelog item's page object.
+    - view: "list" (default) | "expanded".
 */}}
 
 {{ $page := .page }}
+{{ $view := .view | default "list" }}
 
 <li class="m-0 border-b border-gray-200 last:border-b-0">
-    <a href="{{ $page.RelPermalink }}" data-changelog-link data-changelog-row class="group/item flex items-center gap-2 py-4 no-underline hover:no-underline mb-0 text-service-black hover:text-violet-primary transition-colors">
-        <span class="flex items-center gap-1 sm:gap-2 flex-wrap">
-            <span class="heading-4 mb-0">{{ $page.Title }}</span>
-            {{ range $page.Params.tiers }}<span class="whitespace-nowrap items-center align-middle rounded-full bg-gray-100 text-gray-600 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider leading-none">{{ . }}</span>{{ end }}
-        </span>
-        <time datetime="{{ $page.Date.Format "2006-01-02" }}" class="body-sm ml-auto shrink-0 whitespace-nowrap text-gray-700">{{ $page.Date.Format "Jan 2" }}</time>
-    </a>
-
-    <article data-changelog-body class="py-6 flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-8">
+    {{ if eq $view "expanded" }}
+    <article class="py-6 flex flex-col gap-2 md:grid md:grid-cols-3 md:gap-8">
         {{/* Left 1/3: date + tier, left-aligned; stacks above on mobile. */}}
         <div class="flex flex-col items-start gap-2 md:col-span-1">
             <time datetime="{{ $page.Date.Format "2006-01-02" }}" class="body-sm text-gray-700">{{ $page.Date.Format "January 2, 2006" }}</time>
@@ -48,4 +46,13 @@
             {{ partial "releases/changelog-authors.html" (dict "page" $page) }}
         </div>
     </article>
+    {{ else }}
+    <a href="{{ $page.RelPermalink }}" data-changelog-link class="group/item flex items-center gap-2 py-4 no-underline hover:no-underline mb-0 text-service-black hover:text-violet-primary transition-colors">
+        <span class="flex items-center gap-1 sm:gap-2 flex-wrap">
+            <span class="heading-4 mb-0">{{ $page.Title }}</span>
+            {{ range $page.Params.tiers }}<span class="whitespace-nowrap items-center align-middle rounded-full bg-gray-100 text-gray-600 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider leading-none">{{ . }}</span>{{ end }}
+        </span>
+        <time datetime="{{ $page.Date.Format "2006-01-02" }}" class="body-sm ml-auto shrink-0 whitespace-nowrap text-gray-700">{{ $page.Date.Format "Jan 2" }}</time>
+    </a>
+    {{ end }}
 </li>
