@@ -39,6 +39,34 @@
         {{ end }}
     {{ end }}
 
+    {{/* Resolve the ordered list of card groups that actually have pages, so
+         the jump-nav and the sections below stay in sync. */}}
+    {{ $groups := slice }}
+    {{ range $data.sections }}
+        {{ $pages := slice }}
+        {{ range .slugs }}
+            {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+        {{ end }}
+        {{ if $pages }}
+            {{ $groups = $groups | append (dict "title" .title "short" (.short | default .title) "id" (.title | urlize) "pages" $pages) }}
+        {{ end }}
+    {{ end }}
+    {{ if $other }}
+        {{ $groups = $groups | append (dict "title" "Other concepts" "short" "Other" "id" "other-concepts" "pages" $other) }}
+    {{ end }}
+
+    {{/* Troubleshooting group renders as links, not rows. */}}
+    {{ $ts := false }}
+    {{ with $data.troubleshooting }}
+        {{ $pages := slice }}
+        {{ range .slugs }}
+            {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+        {{ end }}
+        {{ if $pages }}
+            {{ $ts = dict "title" .title "short" (.short | default .title) "id" (.title | urlize) "pages" $pages }}
+        {{ end }}
+    {{ end }}
+
     {{ with .Content }}
         <section class="container mx-auto px-6 lg:px-0 pb-8">
             <div class="max-w-3xl mx-auto text-gray-800 text-lg leading-relaxed">
@@ -49,49 +77,40 @@
 
     <div class="container mx-auto px-6 lg:px-0 pb-16">
         <div class="max-w-4xl mx-auto">
-            {{/* Curated row groups. */}}
-            {{ range $data.sections }}
-                {{ $pages := slice }}
-                {{ range .slugs }}
-                    {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
-                {{ end }}
-                {{ if $pages }}
-                    <section class="mb-12">
-                        <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
-                        <div class="divide-y divide-gray-200 border-t border-gray-200">
-                            {{ range $pages }}{{ partial "what-is/row.html" . }}{{ end }}
-                        </div>
-                    </section>
-                {{ end }}
-            {{ end }}
+            {{/* Section jump nav: an underlined tab bar that scrolls
+                 horizontally if the tabs overflow the reading column. */}}
+            <nav aria-label="Sections" class="mb-12 border-b border-gray-200 overflow-x-auto">
+                <ul class="flex flex-nowrap gap-x-7 list-none pl-0 mb-0 -mb-px min-w-max">
+                    {{ range $groups }}
+                        <li class="m-0"><a href="#{{ .id }}" class="inline-block whitespace-nowrap py-3 text-sm font-medium text-gray-600 border-b-2 border-transparent hover:text-violet-700 hover:border-violet-500 transition-colors">{{ .short }}</a></li>
+                    {{ end }}
+                    {{ with $ts }}
+                        <li class="m-0"><a href="#{{ .id }}" class="inline-block whitespace-nowrap py-3 text-sm font-medium text-gray-600 border-b-2 border-transparent hover:text-violet-700 hover:border-violet-500 transition-colors">{{ .short }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
 
-            {{/* Fallback group for any explainer not yet placed in the data file. */}}
-            {{ if $other }}
-                <section class="mb-12">
-                    <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">Other concepts</h2>
+            {{/* Curated row groups. */}}
+            {{ range $groups }}
+                <section id="{{ .id }}" class="mb-12 scroll-mt-20">
+                    <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
                     <div class="divide-y divide-gray-200 border-t border-gray-200">
-                        {{ range $other }}{{ partial "what-is/row.html" . }}{{ end }}
+                        {{ range .pages }}{{ partial "what-is/row.html" . }}{{ end }}
                     </div>
                 </section>
             {{ end }}
 
             {{/* CLI recipes and error-resolution pages: compact links, not rows. */}}
-            {{ with $data.troubleshooting }}
-                {{ $pages := slice }}
-                {{ range .slugs }}
-                    {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
-                {{ end }}
-                {{ if $pages }}
-                    <section class="mt-14 pt-8 border-t border-gray-200">
-                        <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
-                        <p class="text-sm text-gray-600 mb-4">Quick fixes and command references for running the AWS CLI with Pulumi ESC-issued dynamic credentials.</p>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 list-none pl-0">
-                            {{ range $pages }}
-                                <li class="m-0"><a class="text-violet-700 hover:text-violet-900 hover:underline text-sm" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-                            {{ end }}
-                        </ul>
-                    </section>
-                {{ end }}
+            {{ with $ts }}
+                <section id="{{ .id }}" class="mt-14 pt-8 border-t border-gray-200 scroll-mt-20">
+                    <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
+                    <p class="text-sm text-gray-600 mb-4">Quick fixes and command references for running the AWS CLI with Pulumi ESC-issued dynamic credentials.</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 list-none pl-0">
+                        {{ range .pages }}
+                            <li class="m-0"><a class="text-violet-700 hover:text-violet-900 hover:underline text-sm" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    </ul>
+                </section>
             {{ end }}
         </div>
     </div>

@@ -18,6 +18,9 @@
 
 sections:
   - title: Core concepts
+    # `short` is the label used in the section jump-nav; `title` is the heading
+    # shown above the rows. Omit `short` to reuse the title.
+    short: Core concepts
     slugs:
       - what-is-infrastructure-as-code
       - what-is-pulumi
@@ -39,6 +42,7 @@ sections:
       - top-iac-tools
 
   - title: Infrastructure as code in practice
+    short: IaC in practice
     slugs:
       - infrastructure-as-code-for-devops
       - infrastructure-as-code-for-kubernetes
@@ -46,6 +50,7 @@ sections:
       - python-for-devops
 
   - title: Secrets management
+    short: Secrets
     slugs:
       - what-is-secrets-management
       - what-is-hashicorp-vault
@@ -60,6 +65,7 @@ sections:
       - what-is-a-cloudflare-secret
 
   - title: Compliance & frameworks
+    short: Compliance
     slugs:
       - what-is-soc-2
       - what-is-hipaa
@@ -78,6 +84,7 @@ sections:
 
 troubleshooting:
   title: Troubleshooting & CLI recipes
+  short: Troubleshooting
   slugs:
     - run-aws-sts-get-caller-identity-with-dynamic-credentials
     - run-aws-s3-ls-with-dynamic-credentials
