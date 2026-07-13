@@ -11,6 +11,10 @@ tags:
     - announcements
     - open-source
 category: company
+
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 ---
 
 Today, we're excited to announce that the [Pulumi open source project](https://github.com/pulumi/pulumi) has crossed the incredible milestone of 20,000 stars on GitHub. 🎉 This is a huge achievement, and it wouldn't have been possible without y'all - our incredible global community of developers.

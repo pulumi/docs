@@ -13,6 +13,9 @@ tags:
     - pulumi-culture
 category: company
 
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 ---
 
 What is user experience, or UX? There are plenty of answers depending on who you ask. At the core, UX is about asking questions and solving problems.

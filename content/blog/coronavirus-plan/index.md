@@ -3,6 +3,10 @@ title: "Pulumi’s Coronavirus Plan"
 authors: ["joe-duffy"]
 tags: [announcements]
 category: company
+
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 date: "2020-03-18"
 meta_desc: "Together, we’re facing an unprecedented situation with the COVID-19 pandemic. Learn about the steps we've taken."
 ---

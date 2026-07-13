@@ -310,6 +310,8 @@ The same length guidance applies whether the card is auto-inserted or hand-place
 
 **Auto-insertion:** If a post is at least 800 words (~4-minute read) and contains no `blog/cta-card` of its own, a generic card is inserted automatically, immediately before the section heading (`h2`) nearest the middle of the post. Placing your own `blog/cta-card` anywhere in the body suppresses this auto card, so you can substitute a contextual ask. (The button-only `blog/cta-button` shortcode does *not* suppress it.) To turn the auto card off entirely for a post, set `body_cta: false` in the frontmatter.
 
+The card is meant for evergreen, search-and-discovery content (comparisons, best-practices guides, how-to tutorials, explainers). For time-bound announcement or news content — funding, partnerships, brand milestones, year-in-review recaps — it's off-topic, so set `body_cta: false`. Every `category: company` post should carry `body_cta: false` for this reason; treat it as the default for that category.
+
 #### Animated GIFs
 
 GIFs are welcome, but should be optimized. In general, animated GIFs should be no more than 1200 pixels wide and 3 MB in size. If you need help optimizing your GIF, consider [Gifsicle](https://www.lcdf.org/gifsicle/); it's available through Homebrew and has an easy-to-use command-line API. For example, to resize (e.g., downscale) and optimize a GIF in place:

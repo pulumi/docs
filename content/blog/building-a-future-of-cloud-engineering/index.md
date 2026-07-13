@@ -5,6 +5,10 @@ meta_desc: "Using your favorite general purpose programming language to define y
 authors: ["joe-duffy"]
 tags: [announcements]
 category: company
+
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 ---
 
 

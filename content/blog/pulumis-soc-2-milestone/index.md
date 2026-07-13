@@ -8,6 +8,10 @@ authors:
 tags:
    - pulumi-enterprise
 category: company
+
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 ---
 
 ## Pulumi’s Commitment

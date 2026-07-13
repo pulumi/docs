@@ -4,6 +4,10 @@ allow_long_title: True
 authors: ["joe-duffy"]
 tags: [announcements]
 category: company
+
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 meta_desc: "Today I'm thrilled to announce that we've raised $37.5 million in a new Series B led by NEA to bring Cloud Engineering to the market."
 date: "2020-10-27"
 

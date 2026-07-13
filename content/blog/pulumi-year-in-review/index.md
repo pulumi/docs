@@ -36,6 +36,9 @@ tags:
     - features
 category: company
 
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
 # generated blog page. They are here strictly for reference.

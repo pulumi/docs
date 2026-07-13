@@ -3,6 +3,10 @@ title: "2019 Year at a Glance"
 authors: ["joe-duffy"]
 tags: [announcements]
 category: company
+
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 meta_desc: "As 2019 winds down, let's review Pulumi's most exciting recent milestones. This includes 1.0, our 2.0 roadmap, and dozens of other major features."
 date: "2019-12-31"
 ---

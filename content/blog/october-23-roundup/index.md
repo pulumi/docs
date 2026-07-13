@@ -4,6 +4,10 @@ allow_long_title: True
 authors: ["joe-duffy"]
 tags: [announcements]
 category: company
+
+# Company news (funding, partnerships, brand). Suppress the in-body
+# CTA card — this card targets evergreen search-and-discovery content.
+body_cta: false
 meta_desc: "In October 2023 we announced a $41M Series C to build the best infrastructure as code and tackle more of our customers' toughest cloud challenges."
 date: "2023-10-16"
 
