@@ -237,7 +237,7 @@ pulumi preview --stack prod
 The values feeding your resources are the same, so the plan should show no changes. Once you see a clean preview, run `pulumi up`, then delete the now-unused `StackReference` code.
 
 {{< notes type="info" >}}
-`StackReference.requireOutput` marks secret outputs as secret automatically. When you map an output that was secret through `pulumiConfig`, wrap it in [`fn::secret`](/docs/esc/concepts/secrets/) so it stays encrypted as it flows into your stack.
+`StackReference.requireOutput` marks secret outputs as secret automatically. When you map an output that was secret through `pulumiConfig`, wrap it in [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/) so it stays encrypted as it flows into your stack.
 {{< /notes >}}
 
 ## Migrate a chain at scale

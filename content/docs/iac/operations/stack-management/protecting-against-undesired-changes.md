@@ -112,7 +112,7 @@ Pulumi has no single flag to protect every resource in a stack. To apply `protec
 
 ## Retain data on delete
 
-Where `protect` refuses to delete a resource, [`retainOnDelete`](/docs/iac/concepts/resources/options/retainOnDelete/) takes the opposite approach: it lets Pulumi remove the resource from state without calling the provider's delete, leaving the underlying cloud resource in place. It's the right choice when you want to stop managing a resource with Pulumi, or hand it off, without destroying its data:
+Where `protect` refuses to delete a resource, [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) takes the opposite approach: it lets Pulumi remove the resource from state without calling the provider's delete, leaving the underlying cloud resource in place. It's the right choice when you want to stop managing a resource with Pulumi, or hand it off, without destroying its data:
 
 ```typescript
 const db = new Database("db", {}, { retainOnDelete: true });
