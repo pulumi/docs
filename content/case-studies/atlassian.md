@@ -74,7 +74,7 @@ Pulumi allows developers to build, deploy, and manage cloud infrastructure and a
 
 Mike chose Python to build cloud infrastructure since Bitbucket developers already used Python. He said, “Because all the developers on Bitbucket write Python, they can use all the skills they already have from their day-to-day job to write infrastructure code. There are also safety features you’d expect from a standard programming language. For example, you know if you're referencing something that isn't declared or if you're trying to use a property that doesn't exist.”
 
-Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool](/tf2pulumi) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
+Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.

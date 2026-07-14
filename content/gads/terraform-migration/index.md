@@ -1,6 +1,6 @@
 ---
 title: "Migrate from Terraform | Pulumi"
-meta_desc: "Migrate from Terraform to Python, TypeScript, Go, or C#. Free tf2pulumi converter. Pulumi Cloud manages existing Terraform state. Migrate at your pace."
+meta_desc: "Migrate from Terraform to Python, TypeScript, Go, or C#. Free, open-source converter in the Pulumi CLI. Pulumi Cloud manages existing Terraform state."
 layout: gads-template
 block_external_search_index: true
 
@@ -22,14 +22,14 @@ customer_quote:
 overview:
     title: Free Migration Tools.<br/>Keep Your Terraform Running.
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform migration path</span>? Convert HCL to Python, TypeScript, Go, or C# with the free tf2pulumi tool. Pulumi Cloud manages your existing Terraform state directly. Migrate at your pace, stack by stack. [Try the converter](/migrate/tf2pulumi/).
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform migration path</span>? Convert HCL to Python, TypeScript, Go, or C# with `pulumi convert`, the free converter built into the Pulumi CLI. Pulumi Cloud manages your existing Terraform state directly. Migrate at your pace, stack by stack. [Read the migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
 
 key_features_above:
     items:
-        - title: "Convert HCL to real code with tf2pulumi"
+        - title: "Convert HCL to real code with pulumi convert"
           sub_title: "Free Migration Tools"
           description:
-            Use the free tf2pulumi converter to turn Terraform .tf files into Pulumi programs in Python, TypeScript, Go, or C#. No resource caps. No forced deadlines. Keep your current infrastructure running while you migrate.
+            Run `pulumi convert --from terraform` to turn your .tf files into Pulumi programs in Python, TypeScript, Go, or C#. No resource caps. No forced deadlines. Keep your current infrastructure running while you migrate.
           ide:
             - title: main.tf
               language: hcl
@@ -51,9 +51,9 @@ key_features_above:
 
                 pulumi.export("bucket_name", bucket.bucket)
           features:
-              - title: tf2pulumi converter
+              - title: Convert with the Pulumi CLI
                 description: |
-                    Convert .tf files to Pulumi in your language of choice. Try it at [pulumi.com/migrate/tf2pulumi](/migrate/tf2pulumi/).
+                    Convert .tf files to Pulumi in your language of choice with `pulumi convert --from terraform`. [See the guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
                 icon: code
                 color: yellow
               - title: Import existing state
@@ -105,13 +105,13 @@ key_features:
         - title: "Migrate from Terraform in minutes"
           sub_title: "Free Migration Tools"
           description: |
-            Use tf2pulumi to convert your existing Terraform HCL to Python, TypeScript, Go, or C#. Import existing state with pulumi import. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
+            Use `pulumi convert` to turn your existing Terraform HCL into Python, TypeScript, Go, or C#. Import existing state with `pulumi import`. Keep your current infrastructure running while you migrate at your own pace. No forced deadlines. No resource caps.
           image: "/images/product/pulumi-iac-code.png"
           features:
               - title: Convert HCL to real code
                 icon: exchange
                 description: |
-                    The tf2pulumi tool converts your .tf files to Pulumi programs in your language of choice. [Try it at pulumi.com/migrate/tf2pulumi](/migrate/tf2pulumi/).
+                    `pulumi convert --from terraform` turns your .tf files into Pulumi programs in your language of choice. [Read the migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
               - title: Import existing state
                 icon: exchange
                 description: |
