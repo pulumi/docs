@@ -8,6 +8,6 @@
 */ -}}
 {{- $count := .count -}}
 <div class="relative isolate flex items-center">
-    <span class="relative inline-flex h-7 items-center whitespace-nowrap rounded-lg border border-gray-200 bg-white px-2 font-overline-sm text-service-black" style="z-index: {{ add $count 1 }}">{{ $count }} part series</span>
-    {{- if gt $count 1 }}{{ range $i := (seq (sub $count 1)) }}<span aria-hidden="true" class="relative -ml-[56px] h-7 w-16 shrink-0 rounded-lg border border-gray-200 bg-white" style="z-index: {{ sub $count $i }}"></span>{{ end }}{{ end -}}
+    <span class="badge badge-outline relative" style="z-index: {{ add $count 1 }}">{{ $count }} part series</span>
+    {{- if gt $count 1 }}{{ range $i := (seq (sub $count 1)) }}<span aria-hidden="true" class="relative -ml-[56px] h-5 w-16 shrink-0 rounded-full border border-gray-200 bg-white" style="z-index: {{ sub $count $i }}"></span>{{ end }}{{ end -}}
 </div>

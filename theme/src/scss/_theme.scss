@@ -26,6 +26,7 @@
     --color-docs-link: var(--docs-link);
 
     /* Site-specific overrides */
+    --text-xxs: 0.625rem; /* 10px — badge `sm` size (tier pills) */
     --breakpoint-xl: 1270px;
     --breakpoint-nav-desktop: 1345px;
     --background-image-lines-top-right: url("/images/bg-lines-top-right-1.svg");

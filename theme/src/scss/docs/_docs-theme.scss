@@ -507,18 +507,48 @@ html[data-theme="dark"] body.section-docs {
         border-bottom-color: var(--docs-link);
     }
 
-    // --- Badges (also render via chooser preview pills) ---------------------
+    // --- Badges -------------------------------------------------------------
+    // Soft variants are `{color}-muted` bg + `{color}-primary` text in light mode;
+    // dark flips them to a deep `{color}-950` fill + light `{color}-300` text.
     // The chooser pill is a bare `li > span` that gets its skin from
     // `@extend .badge-preview` (no literal class), so it needs naming here too.
+    .badge-warning,
     .badge-preview,
     pulumi-chooser > ul li > span {
         background-color: var(--color-orange-950);
         color: var(--color-orange-300);
     }
 
+    .badge-destructive,
     .badge-required {
-        border-color: var(--color-red-800);
+        background-color: var(--color-red-950);
         color: var(--color-red-300);
+    }
+
+    .badge-brand {
+        background-color: var(--color-violet-950);
+        color: var(--color-violet-300);
+    }
+
+    .badge-secondary {
+        background-color: var(--color-gray-800);
+        color: var(--color-gray-300);
+    }
+
+    .badge-success {
+        background-color: var(--color-green-950);
+        color: var(--color-green-300);
+    }
+
+    .badge-info {
+        background-color: var(--color-blue-950);
+        color: var(--color-blue-300);
+    }
+
+    .badge-outline {
+        background-color: transparent;
+        border-color: var(--docs-border);
+        color: var(--docs-fg);
     }
 
     // --- Resource-links (right-rail, docs-only) -----------------------------

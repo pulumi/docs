@@ -26,10 +26,7 @@
                     <div class="flex items-center gap-3">
                         <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h2>
                         {{ with $tier.badge }}
-                        <span
-                            class="inline-flex items-center rounded-full bg-violet-100 text-violet-primary px-2.5 py-0.5 text-xs font-mono uppercase tracking-wider"
-                            >{{ . }}</span
-                        >
+                        <span class="badge badge-brand">{{ . }}</span>
                         {{ end }}
                     </div>
                     <p class="mt-2 text-base text-gray-700 m-0 md:min-h-[3rem] block">{{ $tier.subtitle }}</p>

@@ -1,6 +1,5 @@
 {{ $text := "PulumiUP: A two-hour virtual event for cloud engineers. Save your spot!" }}
 {{ $url := relref . "/pulumi-up" }}
-{{ $color := "orange" }}
 
 
 <div class="mx-auto mb-12">
@@ -9,7 +8,7 @@
             href="{{ $url }}"
             class="block p-2 bg-violet-400 hover:bg-violet-300 transition-all items-center text-violet-100 leading-none rounded-full flex md:inline-flex "
         >
-            <span class="alert-chicklet flex rounded-full bg-{{ $color }}-700 border-4 border-{{ $color }}-600 uppercase text-white px-2 py-1 text-xs font-bold mr-2">New!</span>
+            <span class="alert-chicklet badge badge-warning mr-2">New!</span>
             <span class="alert-content text-left flex-auto text-white text-sm md:text-base leading-normal">
                 {{ $text | safeHTML }}
             </span>

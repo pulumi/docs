@@ -54,6 +54,7 @@ pulumi-chooser {
                 @apply ml-1;
                 @extend .badge;
                 @extend .badge-preview;
+                @extend .badge-sm; // keep the tab-row height compact
             }
         }
     }
@@ -133,6 +134,7 @@ pulumi-chooser {
                             @apply ml-1;
                             @extend .badge;
                             @extend .badge-preview;
+                            @extend .badge-sm; // keep the toolbar height compact
                         }
                     }
                 }

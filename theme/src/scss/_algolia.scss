@@ -83,7 +83,10 @@
 
                 // The result-count badge.
                 .count {
-                    @apply ml-2 text-xs flex items-center rounded bg-violet-100/60 text-gray-700 px-1.5 py-0.5;
+                    @extend .badge;
+                    @extend .badge-secondary;
+                    @extend .badge-sm;
+                    @apply ml-2;
 
                     // When the item count is zero, don't show a background.
                     &.count-0 {

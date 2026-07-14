@@ -47,7 +47,7 @@
        data-announcement-id="{{ .id }}">
     <div class="flex flex-1 min-w-0 items-center gap-3">
       {{ if $href }}<a href="{{ $href }}" tabindex="-1" class="contents text-white group-hover:text-white/90 hover:no-underline">{{ end }}
-        {{ with .badge }}<span class="shrink-0 inline-flex items-center rounded-full bg-violet-300 text-violet-950 px-2 py-0.5 font-mono text-xs font-semibold uppercase tracking-wide">{{ . }}</span>{{ end }}
+        {{ with .badge }}<span class="badge badge-brand shrink-0">{{ . }}</span>{{ end }}
         {{ with .icon }}{{ partial "icon.html" (dict "name" . "class" "size-5 shrink-0 text-violet-300" "weight" "fill") }}{{ end }}
         <div class="min-w-0 overflow-hidden whitespace-nowrap" data-announcement-marquee>
           <span class="inline-block" data-announcement-content>
