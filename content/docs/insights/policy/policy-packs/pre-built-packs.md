@@ -8,6 +8,7 @@ menu:
     parent: policy-packs
     weight: 10
 aliases:
+  - /docs/insights/policy/pre-built-packs/
   - /docs/insights/policy/policy-as-code/pre-built-packs/
   - /docs/pulumi-cloud/insights/pre-built-packs/
   - /docs/iac/crossguard/pre-built-packs/

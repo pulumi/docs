@@ -18,6 +18,7 @@ aliases:
 - /docs/iac/crossguard/
 - /docs/insights/policy-as-code/
 - /docs/insights/policy/core-concepts/
+- /docs/iac/crossguard/core-concepts/
 - /docs/iac/packages-and-automation/crossguard/core-concepts/
 - /docs/iac/using-pulumi/crossguard/core-concepts/
 ---

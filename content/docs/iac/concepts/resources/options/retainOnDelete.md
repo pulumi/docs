@@ -11,6 +11,7 @@ menu:
 aliases:
   - /docs/intro/concepts/resources/options/retainondelete/
   - /docs/concepts/options/retainondelete/
+  - /docs/iac/concepts/options/retainondelete/
   - /docs/iac/concepts/options/retainOnDelete/
 ---
 
