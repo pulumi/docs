@@ -137,9 +137,9 @@ No. Spacelift operates at a different layer than Pulumi's authoring engine, over
 
 No. Spacelift offers a managed state backend for Terraform and OpenTofu, but for Pulumi you bring your own backend. Spacelift runs `pulumi login` against the backend you configure, so Pulumi state continues to live in [Pulumi Cloud](/docs/iac/concepts/state-and-backends/) or a self-managed backend — Amazon S3, Azure Blob Storage, Google Cloud Storage, or a local file — even when Spacelift orchestrates the run.
 
-### Is Pulumi open source like Spacelift?
+### Is Spacelift open source like Pulumi?
 
-It's the other way around. Pulumi's CLI, SDKs, and providers are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial offering, with a free Individual tier and paid plans. Spacelift is proprietary, commercial software; it's built on open-source components like Open Policy Agent and Docker, but it isn't an open-source product itself.
+No. Pulumi's CLI, SDKs, and providers are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial offering, with a free Individual tier and paid plans. Spacelift is proprietary, commercial software; it's built on open-source components like Open Policy Agent and Docker, but it isn't an open-source product itself.
 
 ### Should I use Pulumi Deployments or Spacelift?
 
