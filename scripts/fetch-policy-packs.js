@@ -108,7 +108,23 @@ function sortKeys(value) {
 async function main() {
     const allowlist = yaml.load(fs.readFileSync(ALLOWLIST, "utf8"));
     const org = allowlist.org;
-    const packs = allowlist.sections.flatMap((s) => s.packs.map((p) => p.pack));
+    const entries = allowlist.sections.flatMap((s) => s.packs);
+
+    // Only packs built from pulumi/policy-packs-internal may be documented. The `pulumi`
+    // org is also where we publish policy packs for our own internal use (plus
+    // experiments and customer one-offs), and those are not products. Requiring every
+    // entry to name the repo directory that builds it means an internal-use pack cannot
+    // be added without someone first having to invent a `source:` path for it.
+    const undeclared = entries.filter((e) => !e.source || !String(e.source).startsWith("packs/"));
+    if (undeclared.length) {
+        throw new Error(
+            `these entries in data/policy_packs.yaml have no valid "source:" (a packs/... directory in\n` +
+                `       pulumi/policy-packs-internal): ${undeclared.map((e) => e.pack).join(", ")}\n` +
+                `       Only packs built from that repo may be documented — see the comment at the top of the file.`,
+        );
+    }
+
+    const packs = entries.map((e) => e.pack);
 
     console.log(`Fetching ${packs.length} policy packs from ${API} (org: ${org})...`);
 
