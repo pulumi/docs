@@ -7,7 +7,6 @@ security:
     getenv:
       - ASSET_BUNDLE_ID
       - CSS_BUNDLE_ID
-      - PULUMI_AI_WS_URL
       - GITHUB_TOKEN
       - ALGOLIA_APP_ID
       - ALGOLIA_APP_SEARCH_KEY
