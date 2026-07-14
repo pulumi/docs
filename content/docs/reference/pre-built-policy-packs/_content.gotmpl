@@ -1,0 +1,184 @@
+{{/*
+    Content adapter: generates one reference page per pre-built policy pack.
+
+    Inputs:
+      data/policy_packs.yaml            - the editorial allowlist (which packs, what titles)
+      data/policy_pack_policies/*.json  - the policies themselves, fetched from the Pulumi
+                                          Cloud API by scripts/fetch-policy-packs.js
+
+    To document a newly published pack, add it to data/policy_packs.yaml and rerun the
+    fetch script. No Markdown file is needed.
+
+    The one hand-written page left in this section is
+    aws-organizations-tag-policies/aws.md, which is prose rather than a policy listing.
+*/}}
+
+{{ $allowlist := site.Data.policy_packs }}
+{{ $packData := site.Data.policy_pack_policies }}
+
+{{ if not $packData }}
+    {{ warnf "policy packs: data/policy_pack_policies/ not found — run 'node scripts/fetch-policy-packs.js' with PULUMI_ACCESS_TOKEN set. Skipping policy pack page generation." }}
+{{ else }}
+
+{{ range $section := $allowlist.sections }}
+{{ range $entry := $section.packs }}
+
+    {{ $pack := index $packData $entry.pack }}
+    {{ if not $pack }}
+        {{ warnf "policy packs: no data for %q (listed in data/policy_packs.yaml). Skipping." $entry.pack }}
+    {{ else }}
+
+    {{/* ----------------------------------------------------------------
+         Pair each policy with its control reference(s).
+
+         A policy that maps to several controls arrives with both fields
+         semicolon-joined and positionally parallel, e.g.
+             reference:     "11.2; 11.4"
+             specification: "<spec for 11.2>; <spec for 11.4>"
+         so split both and zip them. If the two ever stop lining up, fall
+         back to showing the whole specification against each reference
+         rather than silently mispairing them.
+         ---------------------------------------------------------------- */}}
+    {{ $controlled := slice }}{{/* one entry per (policy, control) pair */}}
+    {{ $mapped := slice }}{{/* policies mapped to at least one control, once each */}}
+    {{ $unmapped := slice }}{{/* policies with no framework metadata at all */}}
+
+    {{ range $policy := $pack.policies }}
+        {{ $fw := $policy.framework }}
+        {{ if and $fw $fw.reference }}
+            {{ $mapped = $mapped | append $policy }}
+            {{ $refs := split $fw.reference "; " }}
+            {{ $specs := split (default "" $fw.specification) "; " }}
+            {{ $aligned := eq (len $refs) (len $specs) }}
+            {{ range $i, $ref := $refs }}
+                {{ $spec := cond $aligned (index $specs $i) (default "" $fw.specification) }}
+                {{ $controlled = $controlled | append (dict "ref" $ref "spec" $spec "policy" $policy) }}
+            {{ end }}
+        {{ else }}
+            {{ $unmapped = $unmapped | append $policy }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Distinct controls, ordered naturally: "1.2" before "1.10" before "2.1".
+         Zero-pad each leading run of digits so a plain string sort does the
+         right thing on references like "3.11", "01.a Access Control Policy". */}}
+    {{ $controls := slice }}
+    {{ $seen := slice }}
+    {{ range $pair := $controlled }}
+        {{ if not (in $seen $pair.ref) }}
+            {{ $seen = $seen | append $pair.ref }}
+            {{ $keyParts := slice }}
+            {{ range $seg := split $pair.ref "." }}
+                {{ $digits := "" }}
+                {{ with findRE "^[0-9]+" $seg 1 }}{{ $digits = index . 0 }}{{ end }}
+                {{ $rest := substr $seg (len $digits) }}
+                {{/* Left-pad as a string, not via `int`: references like "09.m" are
+                     common (HITRUST), and Go rejects "09" as an integer literal. */}}
+                {{ $width := math.Max 0 (sub 9 (len $digits)) }}
+                {{ $keyParts = $keyParts | append (printf "%s%s%s" (strings.Repeat (int $width) "0") $digits $rest) }}
+            {{ end }}
+            {{ $controls = $controls | append (dict "ref" $pair.ref "spec" $pair.spec "key" (delimit $keyParts ".")) }}
+        {{ end }}
+    {{ end }}
+    {{ $controls = sort $controls "key" }}
+
+    {{/* ---------------------------------------------------------------- */}}
+    {{ $md := slice }}
+
+    {{ $md = $md | append (printf "This page lists all %d policies in the **%s** pack for **%s**, as published in `%s` version `%s`.\n"
+        (len $pack.policies) $section.framework $entry.title $pack.name $pack.versionTag) }}
+
+    {{/* Index: browse by compliance control. Links only — the detail lives below,
+         so a policy that maps to several controls is not repeated wholesale. */}}
+    {{ if $controls }}
+        {{ $md = $md | append "## Policies by control\n" }}
+        {{ range $control := $controls }}
+            {{ $md = $md | append (printf "**%s** — %s\n" $control.ref $control.spec) }}
+            {{ $lines := slice }}
+            {{ range $pair := where $controlled "ref" $control.ref }}
+                {{ $lines = $lines | append (printf "- [%s](#%s)" $pair.policy.name (anchorize $pair.policy.name)) }}
+            {{ end }}
+            {{ $md = $md | append (printf "%s\n" (delimit $lines "\n")) }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Detail: one entry per control-mapped policy, alphabetical. Policies with no
+         control land in "Additional policies" below, so they are not repeated here. */}}
+    {{ $md = $md | append "## Policy details\n" }}
+    {{ range $policy := $mapped }}
+        {{ $md = $md | append (printf "### %s\n" $policy.name) }}
+
+        {{/* The control reference is deliberately not repeated here — the bullets
+             below list each control with its own specification, whereas this line
+             would show the raw semicolon-joined form for multi-control policies. */}}
+        {{ $facts := slice }}
+        {{ with $policy.severity }}{{ $facts = $facts | append (printf "**Severity:** %s" .) }}{{ end }}
+        {{ with $policy.enforcementLevel }}{{ $facts = $facts | append (printf "**Enforcement:** %s" .) }}{{ end }}
+        {{ if $facts }}
+            {{ $md = $md | append (printf "%s\n" (delimit $facts " · ")) }}
+        {{ end }}
+
+        {{ with $policy.description }}{{ $md = $md | append (printf "%s\n" .) }}{{ end }}
+
+        {{/* Each control this policy satisfies, with that control's own specification. */}}
+        {{ $mine := where $controlled "policy.name" $policy.name }}
+        {{ if $mine }}
+            {{ $specLines := slice }}
+            {{ range $pair := $mine }}
+                {{ $specLines = $specLines | append (printf "- **%s** — %s" $pair.ref $pair.spec) }}
+            {{ end }}
+            {{ $md = $md | append (printf "%s\n" (delimit $specLines "\n")) }}
+        {{ end }}
+
+        {{/* remediationSteps is authored as Markdown and leads with an "## Fix: ..."
+             heading. Demote its headings so they neither outrank the policy heading
+             nor land in the page's table of contents. The blank line after <details>
+             is what lets Goldmark parse the body as Markdown rather than raw HTML. */}}
+        {{ with $policy.remediationSteps }}
+            {{ $steps := partial "policy-packs/remediation.html" . }}
+            {{ $md = $md | append (printf "<details>\n<summary>Remediation</summary>\n\n%s\n\n</details>\n" $steps) }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Policies the pack ships that are not mapped to a control in this framework.
+         Real: 12 of the 115 policies in cis-aws land here. */}}
+    {{ if $unmapped }}
+        {{ $md = $md | append (printf "## Additional policies\n\nThese %d policies are included in the pack but are not mapped to a specific %s control.\n"
+            (len $unmapped) $section.framework) }}
+        {{ range $policy := $unmapped }}
+            {{ $md = $md | append (printf "### %s\n" $policy.name) }}
+            {{ with $policy.severity }}{{ $md = $md | append (printf "**Severity:** %s\n" .) }}{{ end }}
+            {{ with $policy.description }}{{ $md = $md | append (printf "%s\n" .) }}{{ end }}
+            {{ with $policy.remediationSteps }}
+                {{ $steps := partial "policy-packs/remediation.html" . }}
+                {{ $md = $md | append (printf "<details>\n<summary>Remediation</summary>\n\n%s\n\n</details>\n" $steps) }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{/* ---------------------------------------------------------------- */}}
+    {{ $.AddPage (dict
+        "path" (printf "%s/%s" $section.id $entry.slug)
+        "title" $entry.title
+        "kind" "page"
+        "params" (dict
+            "h1" $entry.h1
+            "meta_desc" $entry.metaDesc
+            "meta_image" "/images/docs/meta-images/docs-meta.png"
+        )
+        "menus" (dict "reference" (dict
+            "parent" $section.menu
+            "identifier" (printf "reference-pre-built-policy-packs-%s" $entry.pack)
+            "weight" $entry.weight
+        ))
+        "content" (dict
+            "value" (delimit $md "\n")
+            "mediaType" "text/markdown"
+        )
+    ) }}
+
+    {{ end }}{{/* if not $pack / else */}}
+{{ end }}{{/* range $section.packs */}}
+{{ end }}{{/* range $allowlist.sections */}}
+
+{{ end }}{{/* if not $packData / else */}}
