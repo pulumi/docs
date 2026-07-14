@@ -617,6 +617,8 @@ const baseSecurityHeadersConfig = {
     },
     strictTransportSecurity: {
         accessControlMaxAgeSec: 31536000,
+        includeSubdomains: true,
+        preload: true,
         override: false,
     },
     xssProtection: {
@@ -626,6 +628,19 @@ const baseSecurityHeadersConfig = {
     }
 };
 
+// CloudFront's securityHeadersConfig schema has no native Permissions-Policy support, so it's
+// added as a plain custom header instead. This site's own code has no use for any of these
+// features (verified: no geolocation/camera/microphone/payment/usb API usage, and the embedded
+// YouTube/Google Maps iframes don't request any of them via their `allow` attribute), so
+// they're disabled outright rather than allowlisted.
+const permissionsPolicyHeaderItem = {
+    header: "Permissions-Policy",
+    // interest-cohort=() is the FLoC opt-out, retained for older browsers/scanners that still
+    // check for it even though FLoC itself was discontinued in favor of the Topics API.
+    value: "geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()",
+    override: false,
+};
+
 // Fingerprinted/hashed assets get immutable browser caching (1 year).
 // This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
 // control CDN-level caching. Without this policy, browsers see no Cache-Control
@@ -633,7 +648,7 @@ const baseSecurityHeadersConfig = {
 const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-logo-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=1800",
             override: true,
@@ -644,7 +659,7 @@ const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-log
 const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
@@ -655,7 +670,7 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
 const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=3600",
             override: true,
@@ -666,7 +681,7 @@ const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-ca
 const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=31536000, immutable",
             override: true,
@@ -679,7 +694,7 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Vary",
             value: "Accept",
             override: false,
@@ -693,6 +708,9 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
 // each archived object's own Cache-Control (immutable 1y / manifest 5min) reach the browser.
 const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('versioned-docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [permissionsPolicyHeaderItem],
+    },
 });
 
 // baseCacheBehavior holds the fields shared by every behavior. TTLs and

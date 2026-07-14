@@ -53,7 +53,7 @@ Here is a summary of the key differences between OpenTofu and Terraform:
 | [Transformations](#transformations) | No | No |
 | [Import Code from other IaC Tools](#converting) | No | No |
 
-Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi so you can have greater developer productivity, ability to scale, and delivery velocity. Follow our comprehensive guides in our [Migration Hub](/blog/migration-hub/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. If you would like to deploy a simple program, follow our Get Started guide:
+Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi so you can have greater developer productivity, ability to scale, and delivery velocity. Follow our comprehensive [migration guides](/docs/iac/guides/migration/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. If you would like to deploy a simple program, follow our Get Started guide:
 
 {{< get-started >}}
 

@@ -24,6 +24,19 @@
     "item" "https://www.pulumi.com/what-is/"
   ) }}
 
+  {{/* Single pages terminate on their overview section (matching the visible
+       breadcrumb) rather than repeating the title. */}}
+  {{ if .IsPage }}
+    {{ $section := partial "what-is/section-for-page.html" . }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" $section.title
+      "item" (printf "https://www.pulumi.com%s" $section.url)
+    ) }}
+  {{ end }}
+
 {{ else if eq .Type "blog" }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
@@ -140,13 +153,15 @@
   ) }}
 {{ end }}
 
-{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. */}}
-{{ $position = add $position 1 }}
-{{ $breadcrumbs = $breadcrumbs | append (dict
-  "@type" "ListItem"
-  "position" $position
-  "name" (or .Params.page_title .Title)
-) }}
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. Skipped for what-is single pages, which terminate on their section above instead of repeating the title. */}}
+{{ if not (and (eq .Type "what-is") .IsPage) }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" (or .Params.page_title .Title)
+  ) }}
+{{ end }}
 
 {{/* Return breadcrumb entity */}}
 {{ return dict

@@ -14,11 +14,12 @@
 {{ end }}
 <header class="page-hero text-left">
     <div class="container mx-auto px-6 lg:px-0 flex flex-col items-start">
+        {{ $section := partial "what-is/section-for-page.html" . }}
         <nav aria-label="Breadcrumb" class="max-w-4xl mx-auto mb-6">
             <ol class="flex flex-wrap items-center gap-2 font-overline text-gray-600">
                 <li><a class="hover:text-violet-700" href="/what-is/">What Is</a></li>
                 <li aria-hidden="true" class="text-gray-400">/</li>
-                <li aria-current="page" class="text-gray-900 font-medium">{{ .Params.page_title | safeHTML }}</li>
+                <li class="text-gray-900 font-medium"><a class="hover:text-violet-700" href="{{ $section.url }}">{{ $section.title }}</a></li>
             </ol>
         </nav>
         <div class="page-hero-title">
@@ -26,7 +27,7 @@
                 <span><span data-text="{{ .Params.page_title }}">{{ .Params.page_title | safeHTML }}</span></span>
             </h1>
         </div>
-        <div class="max-w-4xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-gray-600">
+        <div class="max-w-4xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
             {{ with $modifiedDate }}
                 <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
                     Updated {{ .Format "January 2, 2006" }}
@@ -86,17 +87,6 @@
             <div class="bg-white px-3">
                 {{ .Content }}
             </div>
-        </div>
-    </div>
-</section>
-
-<section id="get-started" class="container px-6 lg:px-0 mx-auto my-16">
-    <div class="w-full bg-violet-50 card p-8 lg:p-12 text-center">
-        <div class="max-w-xl mx-auto">
-                <h2 class="text-gray-900 hidden lg:block mt-0 mb-4">Get started today</h2>
-                <h4 class="text-gray-900 mt-0 mb-4 lg:hidden">Get started today</h4>
-                <p class="text-gray-700 mb-8">Pulumi is open source and free to get started. Deploy your first stack today.</p>
-                <a class="btn btn-primary btn-xl" href="{{ site.Params.cta.primary.href }}" data-role="cta-get-started">{{ site.Params.cta.primary.label }}</a>
         </div>
     </div>
 </section>

@@ -14,53 +14,105 @@
 {{ end }}
 
 {{ define "main" }}
-    {{ $topics := (where (where $.Site.Pages "Type" "what-is") "IsPage" true).ByTitle }}
+    {{/* Map every what-is explainer by slug (filename without extension). */}}
+    {{ $bySlug := dict }}
+    {{ range (where (where $.Site.Pages "Type" "what-is") "IsPage" true) }}
+        {{ $bySlug = merge $bySlug (dict .File.ContentBaseName .) }}
+    {{ end }}
+
+    {{ $data := site.Data.what_is_sections }}
+
+    {{/* Track which slugs the data file explicitly places, so anything left
+         over can be surfaced in a fallback group rather than vanishing. */}}
+    {{ $placed := slice }}
+    {{ range $data.sections }}
+        {{ range .slugs }}{{ $placed = $placed | append . }}{{ end }}
+    {{ end }}
+    {{ with $data.troubleshooting }}
+        {{ range .slugs }}{{ $placed = $placed | append . }}{{ end }}
+    {{ end }}
+
+    {{ $other := slice }}
+    {{ range (where (where $.Site.Pages "Type" "what-is") "IsPage" true).ByTitle }}
+        {{ if not (in $placed .File.ContentBaseName) }}
+            {{ $other = $other | append . }}
+        {{ end }}
+    {{ end }}
+
+    {{/* Resolve the ordered list of card groups that actually have pages, so
+         the jump-nav and the sections below stay in sync. */}}
+    {{ $groups := slice }}
+    {{ range $data.sections }}
+        {{ $pages := slice }}
+        {{ range .slugs }}
+            {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+        {{ end }}
+        {{ if $pages }}
+            {{ $groups = $groups | append (dict "title" .title "short" (.short | default .title) "id" (.title | urlize) "pages" $pages) }}
+        {{ end }}
+    {{ end }}
+    {{ if $other }}
+        {{ $groups = $groups | append (dict "title" "Other concepts" "short" "Other" "id" "other-concepts" "pages" $other) }}
+    {{ end }}
+
+    {{/* Troubleshooting group renders as links, not rows. */}}
+    {{ $ts := false }}
+    {{ with $data.troubleshooting }}
+        {{ $pages := slice }}
+        {{ range .slugs }}
+            {{ with index $bySlug . }}{{ $pages = $pages | append . }}{{ end }}
+        {{ end }}
+        {{ if $pages }}
+            {{ $ts = dict "title" .title "short" (.short | default .title) "id" (.title | urlize) "pages" $pages }}
+        {{ end }}
+    {{ end }}
 
     {{ with .Content }}
-        <section class="container mx-auto px-6 lg:px-0 pb-12">
+        <section class="container mx-auto px-6 lg:px-0 pb-8">
             <div class="max-w-3xl mx-auto text-gray-800 text-lg leading-relaxed">
                 {{ . }}
             </div>
         </section>
     {{ end }}
 
-    <section class="container mx-auto px-6 lg:px-0 pb-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {{ range $topics }}
-                {{ $page := . }}
-
-                {{/* Read time */}}
-                {{ $wordCount := .Content | plainify | countwords }}
-                {{ if not $wordCount }}{{ $wordCount = 500 }}{{ end }}
-                {{ $readTime := div $wordCount 200 }}
-                {{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
-
-                {{/* Resolve first author from team data */}}
-                {{ $author := false }}
-                {{ with .Params.authors }}
-                    {{ range first 1 . }}
-                        {{ with index site.Data.team.team . }}
-                            {{ $author = . }}
-                        {{ end }}
-                    {{ end }}
+    <div class="container mx-auto px-6 lg:px-0 pb-16">
+        <div class="max-w-5xl mx-auto">
+            {{/* Section filter: an "All" pill plus one pill per section. The
+                 pills are real anchor links (no-JS fallback = jump to the
+                 section); what-is-list.ts intercepts clicks to show only the
+                 selected section in place and moves `.is-active`. */}}
+            <nav data-what-is-filter aria-label="Filter explainers" class="mb-10 flex flex-wrap items-center gap-3">
+                <button type="button" data-section="" data-track="what-is-filter-all" aria-current="page" class="btn btn-sm btn-outline text-sm is-active">All</button>
+                {{ range $groups }}
+                    <a href="#{{ .id }}" data-section="{{ .id }}" data-track="what-is-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .short }}</a>
                 {{ end }}
+                {{ with $ts }}
+                    <a href="#{{ .id }}" data-section="{{ .id }}" data-track="what-is-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .short }}</a>
+                {{ end }}
+            </nav>
 
-                <a class="group flex flex-col h-full p-6 rounded-lg border border-gray-200 bg-white hover:border-violet-400 hover:shadow-md transition" href="{{ .RelPermalink }}" data-track="what-is-card-{{ .Title | urlize }}">
-                    <h3 class="no-anchor text-lg font-semibold text-gray-900 group-hover:text-violet-700 mb-3">{{ .Params.title }}</h3>
-                    {{ with .Params.meta_desc }}
-                        <p class="text-sm text-gray-700 mb-6 line-clamp-3 flex-grow">{{ . }}</p>
-                    {{ end }}
-                    <div class="flex items-center justify-between text-xs text-gray-500 pt-4 border-t border-gray-100 mt-auto">
-                        <span class="flex items-center gap-2 min-w-0">
-                            {{ if $author }}
-                                <img class="w-6 h-6 rounded-full flex-shrink-0" src="/images/team/{{ $author.id }}.jpg" alt="{{ $author.name }}" title="{{ $author.name }}" loading="lazy" />
-                                <span class="truncate">{{ $author.name }}</span>
-                            {{ end }}
-                        </span>
-                        <span class="flex-shrink-0">{{ $readTime }} min read</span>
+            {{/* Curated row groups. */}}
+            {{ range $groups }}
+                <section id="{{ .id }}" data-section="{{ .id }}" class="mb-12 scroll-mt-20">
+                    <h2 data-section-label class="no-anchor font-overline mb-3">{{ .title }}</h2>
+                    <div>
+                        {{ range .pages }}{{ partial "what-is/row.html" . }}{{ end }}
                     </div>
-                </a>
+                </section>
+            {{ end }}
+
+            {{/* CLI recipes and error-resolution pages: compact links, not rows. */}}
+            {{ with $ts }}
+                <section id="{{ .id }}" data-section="{{ .id }}" class="mt-14 pt-8 scroll-mt-20">
+                    <h2 data-section-label class="no-anchor font-overline mb-3">{{ .title }}</h2>
+                    <p class="body-base text-gray-700 mb-4">Quick fixes and command references for running the AWS CLI with Pulumi ESC-issued dynamic credentials.</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 list-none pl-0">
+                        {{ range .pages }}
+                            <li class="m-0"><a class="body-base text-violet-primary hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                        {{ end }}
+                    </ul>
+                </section>
             {{ end }}
         </div>
-    </section>
+    </div>
 {{ end }}
