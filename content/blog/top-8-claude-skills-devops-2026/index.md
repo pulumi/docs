@@ -206,6 +206,10 @@ Treat skills like you treat any third-party dependency:
 
 Eight malicious skills were still publicly available on ClawHub when Snyk published their findings. The skills ecosystem is young, and the vetting infrastructure is still catching up.
 
+{{< blog/cta-card title="Build infrastructure with agent skills" href="/docs/ai/skills/" >}}
+Pulumi's Agent Skills teach Claude Code, Cursor, or any coding agent the infrastructure patterns covered here. Install them, then build and deploy your stacks with fewer corrections.
+{{< /blog/cta-card >}}
+
 ## Putting it together
 
 Stacking skills is where this pays off. Install the Pulumi skills and Claude writes better infrastructure code. Add monitoring and security on top and you start catching problems that used to slip through to production.

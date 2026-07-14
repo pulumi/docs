@@ -155,6 +155,10 @@ One of Pulumi's most significant benefits for SST users is the simplified mental
 
 Instead of having to navigate the complexities of intermediary formats, deployment pipelines, and the separation between infrastructure code and deployment code, SST users can now focus on writing their infrastructure logic in the same programming languages they use for their application code. This makes it much easier for them to understand, maintain, and extend their infrastructure as their needs evolve.
 
+{{< blog/cta-card title="Build across any cloud with Pulumi" >}}
+Define your infrastructure in TypeScript, Python, Go, or C#, and deploy it across AWS, Azure, Google Cloud, and on-premises environments from one consistent workflow.
+{{< /blog/cta-card >}}
+
 ## The Future of SST with Pulumi
 
 With Pulumi's foundation in place, they can now focus on further enhancing the developer experience and expanding the capabilities of their framework. Some of the key areas they are exploring include:

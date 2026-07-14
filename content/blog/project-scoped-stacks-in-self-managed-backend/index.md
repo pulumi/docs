@@ -141,6 +141,10 @@ $ pulumi stack rename --stack app-test test
 
 ![Diagram showing migration from a flat Pulumi stack name (app-test) to a project-scoped layout (app/test) using 'pulumi state upgrade' and 'pulumi stack rename test'.](upgrade-and-rename.png)
 
+{{< blog/cta-card title="Manage stacks across your projects" >}}
+Organize your infrastructure into projects and reuse stack names like `test` and `prod` across them. Store state in Pulumi Cloud or a self-managed backend, whichever fits your team.
+{{< /blog/cta-card >}}
+
 ## Referencing stacks in the CLI
 
 Many commands in the Pulumi CLI expect a stack name to be specified.

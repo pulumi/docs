@@ -326,6 +326,10 @@ const distribution = new aws.cloudfront.Distribution("frontend-distribution", {
 - One commit message simply read: "fix the fix that fixed the previous fix"
 - It wrote a test, ran the test, fixed the code to pass the test, then realized the test was wrong
 
+{{< blog/cta-card title="Pair your coding agent with Pulumi" href="/docs/ai/" >}}
+You can point Claude Code, Cursor, Codex, or any coding agent at Pulumi through the Pulumi MCP server and Agent Skills, and let infrastructure as code give it objective success criteria. Start a project to try it.
+{{< /blog/cta-card >}}
+
 ## Best practices for Ralph with Pulumi
 
 After running several experiments, here is what I have learned:

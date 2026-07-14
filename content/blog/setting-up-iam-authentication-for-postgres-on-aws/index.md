@@ -300,6 +300,10 @@ The application shows the database endpoint and IAM username it's using, and pro
 The full code for this example is available at [https://github.com/pulumi-demos/examples/tree/main/typescript/aws-iam-for-postgres](https://github.com/pulumi-demos/examples/tree/main/typescript/aws-iam-for-postgres). The example includes all the component code referenced in this post.
 {{% /notes %}}
 
+{{< blog/cta-card title="Make passwordless access your default" >}}
+Wrap this IAM authentication setup in a Pulumi component and apply the same passwordless pattern to every RDS cluster your team runs.
+{{< /blog/cta-card >}}
+
 ## Production considerations
 
 This example demonstrates IAM authentication in a working environment, but you'll want to make several adjustments for production use:

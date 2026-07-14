@@ -93,6 +93,10 @@ This use case---needing to have multiple, separate instances of the infrastructu
 
 Zephyr decided to initially start with two stacks: a production stack (named "prod") and a development stack (named "dev"). As you'll observe throughout this series, this is a decision that is easily adjusted over time as your organization's requirements change.
 
+{{< blog/cta-card title="Organize your infrastructure with stacks" >}}
+Model separate development, staging, and production environments as Pulumi stacks in a single project, each with its own state and configuration.
+{{< /blog/cta-card >}}
+
 ## Viewing the First Iteration of Code
 
 You can view the first iteration of Zephyr's Pulumi and application code---the iteration that corresponds to the decisions described in this blog post---by navigating to [the Zephyr App GitHub repository](https://github.com/pulumi/zephyr-app/). From the branch/tag dropdown, switch from the `main` branch to viewing the [`blog/original`](https://github.com/pulumi/zephyr-app/tree/blog/original/) branch.

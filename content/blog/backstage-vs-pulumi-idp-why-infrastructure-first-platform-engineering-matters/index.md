@@ -155,6 +155,10 @@ Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platf
 - Prefer to avoid building everything from scratch
 - Need to deploy quickly (hours vs months)
 
+{{< blog/cta-card title="Build your platform on infrastructure" href="/product/internal-developer-platforms/" >}}
+Pulumi IDP embeds governance, cost control, and security into your platform from day one, giving your teams self-service golden paths with policy enforced automatically.
+{{< /blog/cta-card >}}
+
 ## The shift to infrastructure platform engineering (IPE)
 
 Platform engineering isn't failing because the idea is flawed. It's failing because too many efforts start with the portal and leave infrastructure for later.

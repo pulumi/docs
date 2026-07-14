@@ -251,6 +251,10 @@ Strengths: visual development for serverless; direct AWS integration; AI suggest
 | Code assistants | Code assistant | Broad language support, IDE | No infrastructure context | Subscription | General code assistance |
 | AWS Composer | Visual builder | Visual serverless development | AWS- and CFN-only | Included with AWS | AWS serverless apps |
 
+{{< blog/cta-card title="See agentic infrastructure in action" label="Explore Pulumi Neo" href="/product/neo/" >}}
+Pulumi Neo generates, deploys, and governs cloud infrastructure across the resources you already have, with the policy guardrails you define.
+{{< /blog/cta-card >}}
+
 ## How to choose
 
 There's no universal best tool. Five questions sort the field quickly:

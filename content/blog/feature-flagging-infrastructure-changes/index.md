@@ -109,6 +109,10 @@ const webhook = new pulumiservice.Webhook("escEnvironmentWebhook", {
 
 When you update a flag value in ESC, the webhook fires, the Lambda identifies which stacks use that environment, and triggers their redeployment. This creates a continuous delivery pipeline for infrastructure configuration changes.
 
+{{< blog/cta-card title="Flag your infrastructure with Pulumi" >}}
+Define feature flags alongside the resources they control, store values in Pulumi ESC or your existing flagging service, and roll out infrastructure changes with less risk.
+{{< /blog/cta-card >}}
+
 ## Ingesting flag values from LaunchDarkly
 
 {{% notes type="info" %}}

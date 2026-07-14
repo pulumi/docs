@@ -90,6 +90,10 @@ The loop changes the shape of the work. It does not take it off your desk. And a
 
 Most of this thinking grew up around application code, where a bad run costs you a revert. When the loop reaches into infrastructure, the blast radius is a production outage rather than a revert, and the verification bar has to rise to meet it. The upside is that infrastructure hands the loop a better oracle than application code does. A plan diff is deterministic and machine-readable, a policy check returns a hard verdict, and drift and cost are numbers you can put a threshold on. A reviewer, whether human or agent, can read the change cold, with no memory of the prompt that produced it. That cold-context check is exactly what an unattended loop needs, and it's the reason an infrastructure loop can be built to hold together while you sleep. [Pulumi Neo reasons over the state graph directly](/blog/grounded-ai-why-neo-knows-your-infrastructure/), so the checker grounds every claim in what the change actually does, not in what the writer says it does.
 
+{{< blog/cta-card title="Give your loop a real oracle" href="/docs/ai/" >}}
+Infrastructure gives an agent loop a strong oracle: a deterministic plan diff to read and policy checks that return a hard verdict before anything ships. Wire that verification in through the Pulumi MCP server, Agent Skills, or Pulumi Neo.
+{{< /blog/cta-card >}}
+
 ## Where to start
 
 Pick the loop you can actually trust first. In order:

@@ -93,6 +93,10 @@ Pulumi is also different from CDKTF in several ways. One is that rather than tra
 
 Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best alternative for most teams looking to migrate.
 
+{{< blog/cta-card title="Migrate from CDKTF to Pulumi" href="/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/" >}}
+Keep writing infrastructure in TypeScript, Python, Go, C#, or Java, and use Pulumi's built-in convert and import commands to bring your CDKTF projects and state across.
+{{< /blog/cta-card >}}
+
 ## What migrating to Pulumi looks like
 
 Migrating a CDKTF project to Pulumi generally happens in three steps:

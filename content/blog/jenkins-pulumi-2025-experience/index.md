@@ -434,6 +434,10 @@ The beauty of this approach is that it combines the lessons learned from our Doc
 
 This setup gives you a production-ready Jenkins instance that can handle serious workloads while being completely reproducible and maintainable. But more importantly, it sets the foundation for the kind of advanced CI/CD practices that modern teams need. These practices go far beyond what we could achieve with our old VM-based approach.
 
+{{< blog/cta-card title="Build your infrastructure pipeline" >}}
+You can define your Jenkins deployment and the Pulumi programs it runs as code, version every change, and check updates with `pulumi preview` before they ship. Start a project to wire infrastructure as code into your pipeline.
+{{< /blog/cta-card >}}
+
 ## Configuring Our First Pipeline to Deploy a Pulumi Program
 
 Now comes the fun part: putting our Kubernetes-based Jenkins setup to work with a real-world scenario. What better way to test our new infrastructure than by creating a pipeline that deploys infrastructure itself? We're going to configure Jenkins to automatically deploy Pulumi programs using Kubernetes agents, creating a complete infrastructure-as-code CI/CD workflow.

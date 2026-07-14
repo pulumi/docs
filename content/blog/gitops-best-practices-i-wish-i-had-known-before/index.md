@@ -270,6 +270,10 @@ Reviews are great, but humans make mistakes. Policy-as-code adds an automated la
 Pro Tip: Start with a small set of high-impact policies (required labels, no privileged containers, resource limits) and expand over time. Trying to enforce 50 policies on Day 1 will create so much friction that teams will revolt.
 {{% /notes %}}
 
+{{< blog/cta-card title="Try infrastructure as code with Pulumi" >}}
+Define your cloud resources in TypeScript, Python, or Go, then pass stack outputs straight into your GitOps manifests so both layers stay in sync.
+{{< /blog/cta-card >}}
+
 ## 11. Bridge your IaC and GitOps (don't choose one)
 
 I hear this all the time: "We use Terraform for infrastructure and ArgoCD for deployments, and they live in completely separate worlds." Sound familiar? Most teams treat IaC and GitOps as independent workflows, but they're really two halves of the same story.

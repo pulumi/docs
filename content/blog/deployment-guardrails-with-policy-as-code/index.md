@@ -290,6 +290,10 @@ new PolicyPack("aws-compliance-ready-policies-typescript", {
 
 This automatically includes policies for major compliance frameworks like [PCI DSS](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for payment card industry standards, [SOC 2](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for security and compliance controls, [ISO 27001](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for information security management, and [CIS Benchmarks](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for security configuration standards.
 
+{{< blog/cta-card title="Add guardrails with policy as code" href="/docs/insights/policy/" >}}
+Write policies in Python or TypeScript, enforce them across every deployment, and give teams self-service infrastructure that stays secure and compliant.
+{{< /blog/cta-card >}}
+
 ## Best Practices for Policy Implementation
 
 After implementing policies at dozens of organizations, we've learned that successful policy adoption follows predictable patterns. The key is to adopt a product mindset: think of your policies as a product serving your development teams, not as bureaucratic rules imposed from above. Start small and iterate based on real feedback rather than trying to implement a comprehensive policy framework from day one.

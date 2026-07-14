@@ -750,6 +750,10 @@ Resources:
 Duration: 27m0s
 ```
 
+{{< blog/cta-card title="Deploy across regions from one stack" label="Learn more" href="/docs/iac/concepts/providers/#explicit-provider-configuration" >}}
+Configure explicit providers in your Pulumi program to provision resources across regions, accounts, and clusters from a single stack. Build and ship your multi-region infrastructure with one `pulumi up`.
+{{< /blog/cta-card >}}
+
 ## Winding Down
 
 In this article, you saw some reasons why deploying your infrastructure across multiple regions, accounts, or clusters may be necessary. You saw that Pulumi supports two forms of configuration -- implicit configuration set at the CLI with `pulumi config` as well as explicit provider configuration which is constructed and passed programmatically -- and how and when to use them, often in tandem with one another.

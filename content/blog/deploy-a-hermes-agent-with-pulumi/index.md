@@ -878,6 +878,10 @@ If the chat UI does not load, give the services a few minutes to finish their fi
 1. **Render dashboard logs** for the `hermes-agent` and `open-webui` services, to confirm both started and pulled their images.
 1. **Tailscale admin console** ([Machines](https://login.tailscale.com/admin/machines)), to confirm the `open-webui` node joined your tailnet. If it did not, the `TS_AUTHKEY` is likely expired or not reusable.
 
+{{< blog/cta-card title="Keep your AI agent private" >}}
+Deploy your Hermes agent across Render, Modal, and Tailscale as one Pulumi program, with secrets held in Pulumi ESC and nothing exposed to the public internet.
+{{< /blog/cta-card >}}
+
 ## Security considerations
 
 Self-hosted AI servers get found fast: scanners like [Shodan](https://www.shodan.io/) and [Censys](https://censys.io/) enumerate a freshly exposed one within hours to days, and the code-capable ones are already under [active attack](https://www.pillar.security/blog/operation-bizarre-bazaar-first-attributed-llmjacking-campaign-with-commercial-marketplace-monetization). Running an always-on agent on a machine you also use for everything else invites prompt injection on top of that. The answer here is to keep the agent unroutable from the internet and to isolate the code it runs. That defeats the scanner: nobody finds an open port to attack. It does less against the agent being turned against you from the inside, which is the harder problem.

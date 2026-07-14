@@ -362,6 +362,10 @@ And with those additions, we get this preview:
 
 This post demonstrates how you could use the Pulumi programming model to encapsulate and account for the hierarchical organization structure that your team desires or is required to have for any number of reasons. While an enterprise organization might be interested in this sort of a setup to ensure multiple teams in the organization operate in a similar way, smaller teams should also strongly consider organizing their AWS accounts in a way that enforces the principle of least privileged access. Especially, if you are looking to get SOC2 certified and need to ensure strict isolation of resources that hold any kind of real-world customer data.
 
+{{< blog/cta-card title="Manage AWS accounts as code" label="Learn more" href="/docs/iac/concepts/components/" >}}
+Use Pulumi component resources to provision AWS Organizations units, member accounts, and least-privilege roles in a repeatable way. Build a self-service account structure your team can request and review in a pull request.
+{{< /blog/cta-card >}}
+
 ## Next Steps
 
 There’s so much more you can do with AWS Organizations and Pulumi.

@@ -197,6 +197,10 @@ Restricting `tools` to read-only is the load-bearing line. The model only sees t
 
 The harness is not a one-time setup. Models improve, and rules written for last year's model often constrain this year's. A note like "always split refactors into single-file changes" might have saved you in 2024 and might block a beneficial cross-file edit in 2026. Anthropic suggests reviewing your CLAUDE.md files every three to six months, or whenever performance feels like it has plateaued after a major model release. The stop-hook reflection gives you a head start. The rest is on you.
 
+{{< blog/cta-card title="Extend the harness to your stack" href="/docs/ai/skills/" >}}
+Package your infrastructure workflows as Agent Skills and expose your Pulumi state through the Pulumi MCP server, so your coding agent works your stack the way your team does.
+{{< /blog/cta-card >}}
+
 ## Assign an owner
 
 The last piece is not technical. The teams that get value out of Claude Code at scale have someone who owns the harness. A small platform-engineering team, or one DRI, or a hybrid PM/engineer doing it half-time. Their job is the same shape as owning a CI pipeline: write the conventions, build the skills, run the LSP wrapper, version the hooks, evangelize what works, retire what does not.

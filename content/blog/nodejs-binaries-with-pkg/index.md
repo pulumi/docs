@@ -101,6 +101,10 @@ One adjustment to our configuration came from a [community contribution by @afre
 
 To resolve this issue, it’s as simple as changing the ‘linux’ targets to ‘linuxstatic’. E.g. `node18-linux-amd64` becomes `node18-linuxstatic-amd64`.
 
+{{< blog/cta-card title="Build infrastructure with Node.js" >}}
+Pulumi lets you define, deploy, and manage cloud infrastructure using TypeScript and JavaScript, with the same npm packages and tooling you already rely on. Start building your first stack in Pulumi Cloud.
+{{< /blog/cta-card >}}
+
 ## Multi-platform builds with a makefile
 
 We use makefiles to build our providers, so here's a brief outline of how we build for multiple platforms using GNU Make.

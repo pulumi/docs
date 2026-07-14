@@ -172,6 +172,10 @@ As organizations increase their use of AI across cloud-native systems, the need 
 
 This perspective mirrors what we’re seeing across modern DevSecOps practices: AI can amplify security, but only when paired with strong foundations in secrets management, governance, and cross-team collaboration.
 
+{{< blog/cta-card title="Build for an AI-first cloud" >}}
+Pulumi gives teams infrastructure as code, reusable components, and policy guardrails to deliver consistently across every cloud and AI workload.
+{{< /blog/cta-card >}}
+
 ## 7. Platform Engineering & Internal Developer Platforms (IDPs)
 
 According to [Gartner](https://www.gartner.com/en/articles/what-is-platform-engineering), **by 2026, 80% of large software engineering organizations will establish platform engineering teams** as internal providers of reusable services, components, and tools for application delivery. Platform engineering will ultimately solve the central problem of cooperation between software developers and operators.

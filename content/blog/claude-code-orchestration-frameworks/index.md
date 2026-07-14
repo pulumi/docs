@@ -163,6 +163,10 @@ My honest take: none of these is universally best. Knowing your failure mode is 
 | You ship features nobody asked for | GSTACK | Product review before engineering starts |
 | All of the above | GSTACK for direction, bolt on Superpowers TDD | No single framework covers everything yet |
 
+{{< blog/cta-card title="Point your coding agent at Pulumi" href="/docs/ai/" >}}
+Whichever framework and agent you run, Pulumi defines infrastructure in TypeScript, Python, and Go, so your agent generates cloud resources it already knows how to write.
+{{< /blog/cta-card >}}
+
 ## Combining frameworks with Pulumi workflows
 
 These frameworks solve the "how" of agent orchestration. [Skills](/blog/top-8-claude-skills-devops-2026/) (like the ones from [Pulumi Agent Skills](https://github.com/pulumi/agent-skills)) solve the "what," teaching agents the right patterns for specific technologies. Frameworks and skills complement each other. A skill tells the agent to use [OIDC](/docs/esc/guides/configuring-oidc/aws/) instead of hardcoded credentials. A framework makes sure the agent still remembers that instruction 200K tokens later.

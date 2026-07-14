@@ -168,6 +168,10 @@ Bob watches as the operation completes in about 17 seconds.
 
 "Exactly, Bob. That's what makes using Pulumi for this use case so helpful. While it doesn't eliminate the need for our per-developer stacks, it gives developers a way to quickly see changes we're making to the source code in very little time. When we are satisfied that the changes are working as we expect, then we can deploy to our dev stack to be sure that the changes are ready to work their way to production."
 
+{{< blog/cta-card title="Speed up your inner dev loop" >}}
+Use Pulumi and the Docker provider to build and deploy your application locally, then promote the same program to your cloud stacks. Get started in Pulumi Cloud.
+{{< /blog/cta-card >}}
+
 ## Try this out yourself
 
 Now that you've seen how Alice uses Pulumi to streamline testing the Zephyr online store's application code locally, feel free to try this out yourself! The code that you saw in this blog post is available [in the `zephyr-app` repository on GitHub](https://github.com/pulumi/zephyr-app/). Just select the [`blog/inner-dev-loop`](https://github.com/pulumi/zephyr-app/tree/blog/inner-dev-loop/) branch and go to the `develop/pulumi` folder.

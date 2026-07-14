@@ -217,6 +217,10 @@ For teams that want this continuously, Pulumi Cloud adds [scheduled drift detect
 
 Drift detection still depends on accurate provider behavior and a healthy state backend, so it complements review and operational discipline rather than replacing them.
 
+{{< blog/cta-card title="Adopt Pulumi at your own pace" >}}
+Bring your existing Terraform infrastructure across one stack at a time, using general-purpose languages and the software workflows your team already relies on.
+{{< /blog/cta-card >}}
+
 ## Import and migrate incrementally
 
 Teams rarely get to rebuild infrastructure from scratch. Pulumi supports incremental adoption with [`pulumi import`](https://www.pulumi.com/docs/iac/adopting-pulumi/import/), generated code, and Terraform interoperability paths. That makes it possible to start with one resource, one component, or one stack instead of forcing a big-bang migration.

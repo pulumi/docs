@@ -198,6 +198,10 @@ Detecting drift is only valuable if the right people know about it. Pulumi's [we
 
 You can route notifications wherever your team actually pays attention. Send alerts directly to Slack channels where your ops team congregates. Push notifications to Microsoft Teams if that's your collaboration platform. Use custom webhooks to integrate with PagerDuty, Datadog, or any other monitoring system. You can even use deployment triggers to automatically run dependent stacks when drift is detected and fixed.
 
+{{< blog/cta-card title="Automate drift detection with Pulumi" >}}
+Connect your stacks to Pulumi Deployments, schedule drift checks across every environment, and route alerts to Slack or Teams the moment your infrastructure diverges from code.
+{{< /blog/cta-card >}}
+
 ## Handling Common Drift Scenarios
 
 Every organization faces similar drift scenarios. Understanding how to handle these common cases will prepare you for real-world operations.

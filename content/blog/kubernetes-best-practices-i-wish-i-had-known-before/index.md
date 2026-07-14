@@ -230,6 +230,10 @@ Labels and annotations are the metadata layer that everything — Services, Netw
 - Add organization-specific labels for **owner**, **cost-center**, **environment**, and **SLO tier** — your FinOps and on-call processes will need them.
 - Reserve [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for non-identifying metadata: build SHA, change-ticket, last-deployed timestamp, ingress controller hints.
 
+{{< blog/cta-card title="Manage Kubernetes with code" >}}
+Provision your clusters, their cloud resources, and the workloads on them from one Pulumi program, and use stacks to promote changes from dev to production.
+{{< /blog/cta-card >}}
+
 ## 12. How should you separate Kubernetes environments?
 
 **The rule:** production is its own cluster. Dev and staging can share — sometimes. Mixing prod with anything else couples blast radius, upgrade cadence, and quotas.

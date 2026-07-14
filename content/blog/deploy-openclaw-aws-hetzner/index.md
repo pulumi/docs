@@ -760,6 +760,10 @@ Open the gateway dashboard using the `tailscaleUrlWithToken` output and use the 
 
 Your personal AI assistant is now running 24/7 on your own infrastructure, accessible securely through Tailscale.
 
+{{< blog/cta-card title="Redeploy OpenClaw with one command" >}}
+With your infrastructure defined in Pulumi, you can move OpenClaw to a new region, rebuild it, or tear it down with `pulumi destroy`, without remembering which console buttons you clicked.
+{{< /blog/cta-card >}}
+
 ## Security considerations
 
 When self-hosting an AI assistant, security matters. OpenClaw's rapid adoption meant thousands of instances spun up in days, and not everyone locked them down. The community noticed:

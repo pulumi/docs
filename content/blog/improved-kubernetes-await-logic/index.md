@@ -267,6 +267,10 @@ If the resource doesn't appear to follow well-known conventions, Pulumi will mai
 
 Please don't hesitate to reach out on [GitHub](https://github.com/pulumi/pulumi-kubernetes/issues/new) or [Slack](https://pulumi-community.slack.com/archives/CRFURDVQB) if you're excited about this feature; if you experience any issues with it; or if you have any feedback to share!
 
+{{< blog/cta-card title="Manage Kubernetes readiness with Pulumi" >}}
+Express complex rollout and readiness relationships in the language you already use, and let Pulumi wait for your cluster resources to become ready before it continues.
+{{< /blog/cta-card >}}
+
 ## Additional improvements
 
 Several other bug fixes related to the Pulumi Kubernetes provider's await logic are also worth mentioning.

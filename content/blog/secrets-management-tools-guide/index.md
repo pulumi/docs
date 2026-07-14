@@ -314,6 +314,10 @@ High availability with automatic failover and disaster recovery ensures that sec
 
 Effective performance and scalability ensure that secret management enhances rather than hinders application performance, enabling organizations to scale their security practices alongside their infrastructure growth.
 
+{{< blog/cta-card title="Try secrets orchestration" href="/docs/esc/" >}}
+Pulumi ESC connects your existing secret stores behind a single interface, adding configuration as code and dynamic, short-lived credentials.
+{{< /blog/cta-card >}}
+
 ## Key Considerations for Choosing Secrets Management Tools
 
 ### Orchestration vs. Replacement Strategy
