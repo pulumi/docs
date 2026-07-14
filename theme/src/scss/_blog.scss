@@ -65,9 +65,12 @@
     @apply justify-center;
 
     input:not(.hs-button) {
-        // Match the adjacent submit (.btn-lg): h-10 + rounded-lg. Overrides the
-        // base .newsletter py-3, which otherwise renders the input a touch tall.
-        @apply h-10 rounded-lg py-0 border-gray-300 bg-white text-service-black;
+        // This single-field newsletter form has no <fieldset>, so the normalized
+        // `.hs-form fieldset input` base never reaches it — set chrome in full here.
+        // h-10 + rounded-lg matches the adjacent submit (.btn-lg). Vertical padding
+        // comes from the .newsletter base py-3 in _hubspot.scss (same specificity,
+        // later import — it wins the tie); h-10 pins the height regardless.
+        @apply h-10 rounded-lg border-gray-300 bg-white text-service-black;
 
         &:focus {
             @apply border-violet-primary outline-none ring-2 ring-violet-primary/30;
@@ -85,6 +88,10 @@
     @apply relative;
 
     input:not(.hs-button) {
+        // No <fieldset> in this newsletter form, so set chrome in full here (the
+        // bg-white also masks the footer's global dark newsletter-inline palette).
+        // z-10 on focus lifts the input above the seam so its full (focused) border
+        // renders over the adjacent button.
         @apply relative h-9 w-44 rounded-l-lg rounded-r-none! border-gray-300 bg-white py-1.75 text-sm text-service-black;
 
         &:focus {
