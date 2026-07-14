@@ -274,11 +274,27 @@ jobs:
             2. Then `## Social Media Review` and the per-platform sections.
             3. End with a footer line: `_Updated for commit \`${{ github.event.pull_request.head.sha || github.event.workflow_run.head_sha }}\` (short: \`$(echo "${{ github.event.pull_request.head.sha || github.event.workflow_run.head_sha }}" | cut -c1-7)\`) at $(date -u '+%Y-%m-%d %H:%M UTC')._`
 
-            Use the Write tool. Do not run `gh pr comment`.
+            Use the Write tool. Do not run `gh pr comment`. Your response text is
+            discarded — the only output that counts is the `.social-review.md` file.
+            Writing it is mandatory, even if every platform passes.
           claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Glob,Grep,Agent,Write,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(date:*)"'
 
-      - name: Find existing social review comment
+      # The review agent occasionally finishes without writing the file (it puts
+      # the review in its response text instead). Degrade to a warning rather
+      # than hard-failing the job on the missing file; a re-run usually fixes it.
+      - name: Check review file was written
         if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
+        id: review-file
+        run: |
+          if [ -s .social-review.md ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::Claude review completed but .social-review.md was not written; skipping the review comment. Re-run this job to retry."
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Find existing social review comment
+        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true' && steps.review-file.outputs.exists == 'true'
         id: find-social-comment
         uses: peter-evans/find-comment@v4
         with:
@@ -287,7 +303,7 @@ jobs:
           direction: last
 
       - name: Post or update social review comment
-        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
+        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true' && steps.review-file.outputs.exists == 'true'
         uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ steps.pr-info.outputs.number }}
