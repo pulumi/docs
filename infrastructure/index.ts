@@ -635,7 +635,9 @@ const baseSecurityHeadersConfig = {
 // they're disabled outright rather than allowlisted.
 const permissionsPolicyHeaderItem = {
     header: "Permissions-Policy",
-    value: "geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=()",
+    // interest-cohort=() is the FLoC opt-out, retained for older browsers/scanners that still
+    // check for it even though FLoC itself was discontinued in favor of the Topics API.
+    value: "geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()",
     override: false,
 };
 
