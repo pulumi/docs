@@ -6,6 +6,7 @@ description: |
 meta_desc: XM Cyber partnered with Pulumi on a modern multi-cloud infrastructure management strategy featuring AWS EKS, Python, and an internal developer platform.
 
 customer_name: XM Cyber
+industry: security
 customer_logo: /logos/customers/xm-cyber-logo.svg
 customer_url: https://www.xmcyber.com/
 

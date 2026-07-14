@@ -6,6 +6,7 @@ description: |
 meta_desc: Read why SST switched to Pulumi and stopped using CDK because of its limitations around speed, error handling, leaky abstractions, non-AWS provider support, and more.
 
 customer_name: SST
+industry: developer-tools
 customer_logo: /logos/customers/sst-logo.svg
 customer_url: https://sst.dev/blog/moving-away-from-cdk
 redirect_to: https://sst.dev/blog/moving-away-from-cdk

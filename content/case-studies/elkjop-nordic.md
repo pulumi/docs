@@ -12,6 +12,7 @@ meta_desc: |
     guardrails that uphold security and compliance.
 
 customer_name: Elkjøp Nordic
+industry: retail
 customer_logo: /logos/customers/elkjop-nordic-logo.svg
 
 redirect_to: /blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure

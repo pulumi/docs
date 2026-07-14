@@ -23,6 +23,21 @@ const BLOG_CATEGORIES = (function () {
 })();
 
 /**
+ * Allowed case-study industry ids, loaded once from the single source of truth
+ * at data/case_study_industries.yaml. See that file's header for the rules.
+ */
+const CASE_STUDY_INDUSTRIES = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/case_study_industries.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.industries || []).map(i => i.id);
+    } catch (e) {
+        console.warn(`Warning: could not load case-study industries: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
  * Defined blog series slugs, loaded once from data/blog_series.yml. Used to
  * enforce that every series member is wired up consistently (see
  * checkSeriesConsistency).
@@ -153,6 +168,42 @@ function checkBlogCategory(category, legacyCategories, fullPath) {
     }
     if (!BLOG_CATEGORIES.includes(category)) {
         return `Invalid blog category value: '${category}'. Allowed: ${BLOG_CATEGORIES.join(", ")}. See data/blog_categories.yaml.`;
+    }
+
+    return null;
+}
+
+/**
+ * checkCaseStudyIndustry validates the `industry:` front matter on case studies
+ * against the closed set in data/case_study_industries.yaml. It applies ONLY to
+ * individual case-study pages (content/case-studies/<slug>.md), not the section
+ * index (_index.md) or any other content.
+ *
+ * Industry is REQUIRED and SINGULAR: every case study declares exactly one
+ * `industry:` scalar value from the allowed set — a customer belongs to one
+ * vertical. A list value, a missing value, or a value outside the set is an
+ * error. `industry` is a dedicated Hugo taxonomy (see config.yml), so any value
+ * generates a public term page at /case-studies/industry/<slug>/; a typo would
+ * silently ship an orphan URL, which this guard prevents.
+ *
+ * @param {*} industry The `industry` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkCaseStudyIndustry(industry, fullPath) {
+    const isCaseStudy =
+        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+    if (!isCaseStudy) {
+        return null;
+    }
+
+    if (Array.isArray(industry)) {
+        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/case_study_industries.yaml.";
+    }
+    if (!industry) {
+        return "Case study is missing a required 'industry' value. Add exactly one industry from data/case_study_industries.yaml.";
+    }
+    if (!CASE_STUDY_INDUSTRIES.includes(industry)) {
+        return `Invalid case-study industry value: '${industry}'. Allowed: ${CASE_STUDY_INDUSTRIES.join(", ")}. See data/case_study_industries.yaml.`;
     }
 
     return null;
@@ -404,6 +455,7 @@ function searchForMarkdown(paths) {
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
+                    caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                 };
@@ -526,6 +578,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.blogCategory,
+                });
+            }
+            if (frontMatterErrors.caseStudyIndustry) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.caseStudyIndustry,
                 });
             }
             if (frontMatterErrors.seriesConsistency) {

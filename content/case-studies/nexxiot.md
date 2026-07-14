@@ -6,6 +6,7 @@ description: |
 meta_desc: Learn how Nexxiot worked with Pulumi to transform their infrastructure management, saving engineering resources and improving reliability.
 
 customer_name: Nexxiot
+industry: iot-transportation
 customer_logo: /logos/customers/nexxiot.svg
 customer_url: https://www.nexxiot.com/
 

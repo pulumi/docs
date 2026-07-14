@@ -6,6 +6,7 @@ description: |
 meta_desc: By leveraging Pulumi, the Unity Aura team successfully modernized their CI/CD & infrastructure management.
 
 customer_name: Unity
+industry: gaming-entertainment
 customer_logo: /logos/customers/unity.png
 customer_url: https://unity.com/
 

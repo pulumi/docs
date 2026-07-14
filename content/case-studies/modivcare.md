@@ -7,6 +7,7 @@ description: |
 meta_desc: See how Modivcare used Pulumi to unify fragmented AWS infrastructure across acquisitions, reducing costs by up to 25%.
 
 customer_name: Modivcare
+industry: healthcare
 customer_logo: /logos/customers/modivcare.png
 customer_url: https://www.modivcare.com/
 

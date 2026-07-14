@@ -6,6 +6,7 @@ description: |
 meta_desc: Open-source Postgres platform scales from single-region manual deployments to 16-region automated infrastructure with 80,000 Pulumi resources.
 
 customer_name: Supabase
+industry: data-analytics
 customer_logo: /logos/customers/supabase-wordmark.svg
 customer_url: https://supabase.com/
 

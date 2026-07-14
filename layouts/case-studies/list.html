@@ -16,52 +16,32 @@
         </div>
     </section>
 
+    {{/* Browse by industry — links to each /case-studies/industry/<slug>/ term
+        page, in the order defined by data/case_study_industries.yaml. Only
+        industries that actually have a case study are shown. */}}
+    {{ if site.Taxonomies.industry }}
+    <section id="browse-by-industry" aria-labelledby="browse-by-industry-heading">
+        <h2 id="browse-by-industry-heading" class="heading-4 text-center mb-6">Browse by industry</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+            {{ range site.Data.case_study_industries.industries }}
+            {{ $entry := . }}
+            {{ with index site.Taxonomies.industry $entry.id }}
+            <a href="/case-studies/industry/{{ $entry.id }}/" data-track="case-study-industry-{{ $entry.id }}" class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 body-sm text-service-black no-underline transition-colors hover:border-violet-primary hover:text-violet-primary">
+                <span>{{ $entry.name }}</span>
+                <span class="text-gray-500">{{ .Count }}</span>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </section>
+    {{ end }}
+
     {{/* Case study cards */}}
     <section id="customer-stories">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {{ $items := where (where .Site.Pages "Type" "case-studies") "Kind" "eq" "page" }}
             {{ range sort $items ".Params.customer_name" }}
-            {{ $page := . }}
-            <div class="template-card">
-                <div class="flex flex-col h-full w-full">
-                    <div class="flex flex-col gap-4 mb-8">
-                        {{ with .Params.customer_logo }}
-                        <div class="h-10 flex items-center">
-                            {{ $fpSrc := strings.TrimPrefix "/" . }}
-                            {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
-                            {{ if $fpAsset }}
-                                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" (printf "%s logo" $page.Params.customer_name) "class" "h-8 w-auto") }}
-                            {{ else }}
-                                <img src="{{ . }}" alt="{{ $page.Params.customer_name }} logo" class="h-8 w-auto" />
-                            {{ end }}
-                        </div>
-                        {{ end }}
-                        <h3 class="card-title m-0">
-                            {{ if (isset .Params "redirect_to") }}
-                                <a href="{{ .Params.redirect_to }}" class="text-black hover:text-black no-underline">{{ .Params.customer_name }}</a>
-                            {{ else }}
-                                <a href="{{ .RelPermalink }}" class="text-black hover:text-black no-underline">{{ .Params.customer_name }}</a>
-                            {{ end }}
-                        </h3>
-                    </div>
-                    <div class="card-description mb-6">
-                        {{ .Description | markdownify }}
-                    </div>
-                    <div class="mt-auto">
-                        {{ if (isset .Params "redirect_to") }}
-                        <a href="{{ .Params.redirect_to }}" class="btn btn-link btn-xl">
-                            Read the story
-                            {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
-                        </a>
-                        {{ else }}
-                        <a href="{{ .RelPermalink }}" class="btn btn-link btn-xl">
-                            Read the story
-                            {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
-                        </a>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
+            {{ partial "case-studies/card.html" . }}
             {{ end }}
         </div>
     </section>

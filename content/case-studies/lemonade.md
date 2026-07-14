@@ -7,6 +7,7 @@ description: |
 meta_desc: Learn how Lemonade worked with Pulumi to standardize infrastructure components and enforce best practices across its growing team of developers.
 
 customer_name: Lemonade
+industry: financial-services
 customer_logo: /logos/customers/lemonade.svg
 customer_url: https://www.lemonade.com/
 

@@ -6,6 +6,7 @@ description: |
 meta_desc: Starburst switched from Terraform to Pulumi, achieving 112x faster deployments, enhanced developer productivity, improved security, and cost savings.
 
 customer_name: Starburst
+industry: data-analytics
 customer_logo: /logos/customers/starburst.png
 
 exec_summary: |

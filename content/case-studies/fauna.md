@@ -6,6 +6,7 @@ description: |
 meta_desc: Learn how Fauna worked with Pulumi to develop Region Groups by giving developers the capabilities they needed to build and deploy quickly and safely.
 
 customer_name: Fauna
+industry: data-analytics
 customer_logo: /logos/customers/fauna-wordmark.svg
 customer_url: https://faunadb.org/
 

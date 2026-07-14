@@ -6,6 +6,7 @@ description: |
 meta_desc: Aptos Labs used Pulumi to transform development, increasing velocity by up to 10x while improving security, compliance, and cost control.
 
 customer_name: Aptos Labs
+industry: blockchain
 customer_logo: /logos/customers/aptos.png
 customer_url: https://aptoslabs.com/
 

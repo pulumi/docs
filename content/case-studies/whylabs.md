@@ -6,6 +6,7 @@ description: |
 meta_desc: Learn how WhyLabs worked with Pulumi to enable engineers to continuously and reliably ship new features faster than before for improved time-to-market.
 
 customer_name: WhyLabs
+industry: ai-ml
 customer_logo: /logos/customers/whylabs-wordmark.svg
 customer_url: https://whylabs.ai/
 

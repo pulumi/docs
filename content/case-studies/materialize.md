@@ -7,6 +7,7 @@ description: |
 meta_desc: Learn how Pulumi supports Materialize in operating multi-cluster Kubernetes environments at scale. 
 
 customer_name: Materialize
+industry: data-analytics
 customer_logo: /logos/customers/materialize.svg
 customer_url:
 

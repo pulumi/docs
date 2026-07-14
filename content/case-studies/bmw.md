@@ -6,6 +6,7 @@ description: |
 meta_desc: Learn how BMW's Software Factory uses Pulumi to manage 20,000+ cloud resources with Python-based infrastructure code.
 
 customer_name: BMW
+industry: automotive
 customer_logo: /logos/customers/bmw.svg
 customer_url: https://www.bmwusa.com/
 
