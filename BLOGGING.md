@@ -141,6 +141,10 @@ Set `updated: YYYY-MM-DD` to show an "Updated \<date\>" line next to the publish
 
 Use `updated`, **not** `lastmod`, for this. `updated` is the reader-facing field this site renders; `lastmod` is a generic Hugo built-in that only feeds the sitemap and schema.org `dateModified`, which the site already derives automatically from the commit date (`enableGitInfo: true`). A hand-stamped `lastmod` is invisible to readers and redundant with git, so don't add one.
 
+**Draft**
+
+Set `draft: true` to keep a post out of the built site. Note that a draft is visible **only** on your local dev server (`make serve`) — it's excluded from both PR previews and production, so it isn't a good way to share a post for review. See [How `draft` and `date` behave across environments](#how-draft-and-date-behave-across-environments) for the full matrix of how `draft` and `date` interact with local dev, PR previews, and production.
+
 **Related posts**
 
 The bottom of every post shows up to four related posts, auto-selected by Hugo's Related Content. To pin specific posts first, set `related_posts` to a list of post slugs (the folder names under `content/blog/`); Hugo fills any remaining slots automatically:
@@ -306,7 +310,30 @@ Once merged to master, your post will go live on <https://www.pulumi.com/> (afte
 
 ## A Note on Dates and Scheduling for Future Publishing
 
-Because the website is deployed in response to a commit to pulumi/docs `master`, it isn't possible to schedule a post to be released automatically at a precise date and time. (The `date` frontmatter property is used only for sorting and display purposes; it has no effect on whether or when a post gets published.) You can, however, influence the timing of the publishing process manually. See the [Merging and Releasing section of the README](README.md#merging-and-releasing) for details.
+### How `draft` and `date` behave across environments
+
+Two front-matter fields decide whether a post is visible: `draft` (a boolean) and `date` (the publish timestamp). What they do depends on *where* the site is being built, because each environment passes Hugo a different combination of `--buildDrafts` and `--buildFuture`:
+
+| Environment | Command | `draft: true` | Future `date` |
+|---|---|---|---|
+| **Local dev** (`make serve`) | `hugo server --buildDrafts --buildFuture` | Visible | Visible |
+| **PR preview** (and the `testing` deploy) | `hugo --buildFuture` | Hidden | Visible |
+| **Production** (`www.pulumi.com`) | `hugo` (no draft/future flags) | Hidden | Hidden |
+
+So, in practice:
+
+- **`draft: true`** shows up only on your local dev server. It is excluded from PR previews and production alike, which makes it a poor way to share work-in-progress for review — a reviewer looking at the PR preview URL won't see the post at all. Remove `draft` (or set it to `false`) before you expect the post to appear on the preview.
+- **A future `date`** shows up locally and in PR previews, but **not** in production. This is Hugo's standard "future publishing" behavior: production is built without `--buildFuture`, so a post dated ahead of the build time is simply left out until its date arrives.
+
+To preview a future-dated post locally *as production would render it* (future content hidden), run the dev server with future builds disabled:
+
+```zsh
+BUILD_FUTURE=false make serve
+```
+
+### Why you can't schedule to a precise time
+
+Because the website is deployed in response to a commit to pulumi/docs `master`, it isn't possible to schedule a post to publish automatically at a precise date and time. A future `date` keeps the post out of production, but production only rebuilds when something lands on `master` — so the post goes live at the **next build that happens after its date has passed**, not at the moment the clock ticks over. To publish a future-dated post on time, you (or a scheduled/manual deploy) must trigger a build once the date is in the past. See the [Merging and Releasing section of the README](README.md#merging-and-releasing) for details.
 
 ## Publishing Checklist
 
