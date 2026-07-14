@@ -132,6 +132,8 @@ $sitenav-offset: calc($sitenav-height + 16px);
 }
 
 @layer components {
+    // Imported FIRST: later partials (_hubspot, _blog, _footer) @include its mixins.
+    @import "forms";
     @import "about";
     @import "accordion";
     @import "algolia";
@@ -375,9 +377,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
-    section.newsletter-input pulumi-hubspot-form input.hs-input {
-        @apply rounded-lg;
-    }
 }
 
 @import "consent-banner";
