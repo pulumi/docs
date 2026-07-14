@@ -8,4 +8,4 @@ status = "active"
 [social]
 linkedin = "jkeiser2"
 x = "jkeiser2"
-# github = "jkeiser"  # TODO(john): confirm handle, or drop if you'd rather not show github
+github = "jkeiser"

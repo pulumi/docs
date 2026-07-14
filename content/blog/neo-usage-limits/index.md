@@ -1,6 +1,6 @@
 ---
 title: "Introducing Usage Limits for Pulumi Neo"
-date: 2026-07-13T08:00:00-07:00
+date: 2026-07-14T08:00:00-07:00
 draft: false
 meta_desc: "Set monthly organization or per-member Pulumi Neo dollar limits and get alerts via email."
 feature_image: feature.png
@@ -13,8 +13,6 @@ tags:
     - features
 category: product
 schema_type: auto
-
-# canonical_url: set to /docs/ai/usage-limits/ before publish (docs page is live).
 
 social:
     twitter: "Now Pulumi Neo supports monthly usage limits, putting your Neo spend under control so you can hand it more and more infrastructure work."
