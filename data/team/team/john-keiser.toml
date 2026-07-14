@@ -1,0 +1,11 @@
+id = "john-keiser"
+name = "John Keiser"
+title = "Software Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "jkeiser2"
+x = "jkeiser2"
+github = "jkeiser"
