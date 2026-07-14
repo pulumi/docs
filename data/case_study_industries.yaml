@@ -5,8 +5,8 @@
 #   - scripts/lint/lint-markdown.js (checkCaseStudyIndustry): `make lint` fails
 #     any content/case-studies/*.md whose `industry:` is missing, is a list, or
 #     is a value not listed here.
-#   - layouts/taxonomy/industry.html and industry.terms.html: term-page title +
-#     description and the /case-studies/industry/ directory both read from here.
+#   - layouts/taxonomy/industry.html and industry.terms.html: term-page title and
+#     the /case-studies/industry/ directory both read from here.
 #   - layouts/case-studies/list.html: the industry nav on the index.
 #
 # Industry is SINGULAR and REQUIRED: every case study declares exactly one
@@ -22,96 +22,52 @@
 # FIELDS
 #   id          Stable slug used in front matter, by the linter, and in the URL.
 #   name        Human-readable display name (term-page heading, nav label).
-#   description Reader-facing blurb shown on the industry term page header and as
-#               its meta/og description. Write it for site visitors.
+#   description Optional reader-facing blurb. The templates render it under the
+#               term-page heading and in the directory when present; omit it and
+#               the heading stands alone.
 #
 industries:
   - id: financial-services
     name: "Financial Services & Insurance"
-    description: >-
-      How banks, lenders, and insurers use Pulumi to modernize infrastructure
-      while meeting security and compliance requirements.
 
   - id: security
     name: "Security"
-    description: >-
-      How security companies use Pulumi to operate their platforms at scale,
-      ship faster, and keep infrastructure secure by default.
 
   - id: data-analytics
     name: "Data & Analytics"
-    description: >-
-      How data platforms and analytics companies use Pulumi to build
-      repeatable, testable, multi-region infrastructure.
 
   - id: developer-tools
     name: "Developer Tools"
-    description: >-
-      How software and developer-tools companies use Pulumi to boost developer
-      productivity and standardize infrastructure across teams.
 
   - id: ai-ml
     name: "AI & Machine Learning"
-    description: >-
-      How AI and machine-learning companies use Pulumi to ship infrastructure
-      fast — including with AI agents writing the infrastructure code.
 
   - id: automotive
     name: "Automotive"
-    description: >-
-      How automotive companies use Pulumi to manage cloud infrastructure at
-      scale and bring their application and infrastructure teams together.
 
   - id: education
     name: "Education & EdTech"
-    description: >-
-      How education and EdTech organizations use Pulumi to deliver applications
-      and infrastructure reliably and at scale.
 
   - id: gaming-entertainment
     name: "Gaming & Entertainment"
-    description: >-
-      How gaming and entertainment companies use Pulumi to give developers
-      self-service infrastructure and modernize their delivery pipelines.
 
   - id: retail
     name: "Retail"
-    description: >-
-      How retailers and e-commerce companies use Pulumi to move faster,
-      scale for peak traffic, and enable developer self-service.
 
   - id: healthcare
     name: "Healthcare"
-    description: >-
-      How healthcare organizations use Pulumi to unify infrastructure, control
-      costs, and stay compliant without disrupting critical services.
 
   - id: blockchain
     name: "Technology"
-    description: >-
-      How blockchain and Web3 companies use Pulumi to transform their
-      development process while improving security and cost control.
 
   - id: iot-transportation
     name: "Transportation & Logistics"
-    description: >-
-      How IoT, transportation, and logistics companies use Pulumi to manage the
-      infrastructure behind connected fleets and devices.
 
   - id: manufacturing
     name: "Manufacturing & Industrial"
-    description: >-
-      How manufacturing and industrial companies use Pulumi to modernize
-      operations and cut deployment time.
 
   - id: public-sector
     name: "Public Sector"
-    description: >-
-      How public-sector and research organizations use Pulumi to manage
-      multi-cloud infrastructure with small teams.
 
   - id: marketing-adtech
     name: "Marketing & AdTech"
-    description: >-
-      How marketing and advertising-technology companies use Pulumi to migrate
-      to the cloud and customize their infrastructure.
