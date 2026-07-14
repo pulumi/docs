@@ -38,7 +38,7 @@ When usage reaches the limit, Neo pauses for the rest of the billing period and 
 
 ![The Manage token usage panel, where an admin sets the organization's monthly Neo limit and turns on email notifications.](manage-token-usage.png)
 
-Enforcement happens at a natural boundary in Neo's work, so a task already in progress finishes its current step before pausing. As a result, usage can go a few dollars over the limit. That is expected, not a billing error.
+Enforcement happens at a natural boundary in Neo's work, so a task already in progress finishes its current step before pausing. As a result, usage can go a few dollars over the set limit.
 
 ## Per-member limits and alerts
 
