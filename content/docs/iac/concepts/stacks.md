@@ -11,6 +11,7 @@ menu:
     concepts:
         weight: 2
 aliases:
+- /docs/iac/concepts/stacks/stackreference/
 - /docs/reference/stack/
 - /docs/tour/programs-exports/
 - /docs/intro/concepts/stack/
