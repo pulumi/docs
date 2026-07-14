@@ -28,7 +28,13 @@ social:
 
 ## How usage limits work
 
-Your organization limit is a single monthly dollar amount covering all Neo usage across the org. You set it in Pulumi Cloud. When usage reaches the limit, Neo pauses for the rest of the billing period and resumes automatically at the start of the next one. An Admin or Billing Manager can raise the limit to resume before then.
+Your organization limit is a single monthly dollar amount covering all Neo usage across the org. To set one:
+
+1. In the Pulumi Cloud console, navigate to **Settings → Billing & usage → Neo token usage**.
+1. In the **Manage token usage** panel, enter an organization limit.
+1. Save your changes.
+
+When usage reaches the limit, Neo pauses for the rest of the billing period and resumes automatically at the start of the next one. An Admin or Billing Manager can raise the limit to resume before then.
 
 ![The Manage token usage panel, where an admin sets the organization's monthly Neo limit and turns on email notifications.](manage-token-usage.png)
 
