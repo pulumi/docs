@@ -708,6 +708,9 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
 // each archived object's own Cache-Control (immutable 1y / manifest 5min) reach the browser.
 const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('versioned-docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [permissionsPolicyHeaderItem],
+    },
 });
 
 // baseCacheBehavior holds the fields shared by every behavior. TTLs and
