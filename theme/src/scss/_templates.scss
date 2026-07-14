@@ -664,7 +664,8 @@
     }
 
     .event-card-tag {
-        @apply inline-block font-body text-gray-700 rounded-md text-[0.7rem] py-0.5 px-2 bg-violet-50 border border-violet-200;
+        @extend .badge;
+        @extend .badge-secondary;
     }
 
     .event-card-cta {
