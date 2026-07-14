@@ -13,7 +13,7 @@ customer_url: https://www.boostinsurance.com/
 quote_block:
   quote: |
       "You're telling me I don't have to store 400 gigs worth of database backups on my laptop in order to debug production?"
-  quote_attrib: Richard Genthner, Platform Engineer at Boost Insurance
+  quote_attrib: Richard Genthner, CISO at Boost Insurance
   headline_stat: Zero
   headline: production data on developer laptops, eliminating breach risk
 
@@ -47,7 +47,7 @@ to download database snapshots to their laptops. For a 100 GB quoting database, 
 45-minute downloads for remote team members, hundreds of gigabytes of sensitive data stored on
 personal machines, and no guarantee that data stayed within the company's security perimeter.
 
-"Someone goes and steals a developer's laptop — we now have a reportable breach," said Richard Genthner, Platform Engineer at Boost Insurance. "We have to report not only to our partners, but to the state of New York, all 50 states, and the federal government. We have to notify every single person that's ever had a policy with us. It becomes a massive problem."
+"Someone goes and steals a developer's laptop — we now have a reportable breach," said Richard Genthner, CISO at Boost Insurance. "We have to report not only to our partners, but to the state of New York, all 50 states, and the federal government. We have to notify every single person that's ever had a policy with us. It becomes a massive problem."
 
 Boost has developers working remotely across multiple countries, and some partner contracts
 explicitly require that data never leaves the United States. The existing tooling — StrongDM for
