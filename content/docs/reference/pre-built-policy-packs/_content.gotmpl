@@ -104,55 +104,27 @@
 
     {{/* Detail: one entry per control-mapped policy, alphabetical. Policies with no
          control land in "Additional policies" below, so they are not repeated here. */}}
-    {{ $md = $md | append "## Policy details\n" }}
-    {{ range $policy := $mapped }}
-        {{ $md = $md | append (printf "### %s\n" $policy.name) }}
-
-        {{/* The control reference is deliberately not repeated here — the bullets
-             below list each control with its own specification, whereas this line
-             would show the raw semicolon-joined form for multi-control policies. */}}
-        {{ $facts := slice }}
-        {{ with $policy.severity }}{{ $facts = $facts | append (printf "**Severity:** %s" .) }}{{ end }}
-        {{ with $policy.enforcementLevel }}{{ $facts = $facts | append (printf "**Enforcement:** %s" .) }}{{ end }}
-        {{ if $facts }}
-            {{ $md = $md | append (printf "%s\n" (delimit $facts " · ")) }}
-        {{ end }}
-
-        {{ with $policy.description }}{{ $md = $md | append (printf "%s\n" .) }}{{ end }}
-
-        {{/* Each control this policy satisfies, with that control's own specification. */}}
-        {{ $mine := where $controlled "policy.name" $policy.name }}
-        {{ if $mine }}
-            {{ $specLines := slice }}
-            {{ range $pair := $mine }}
-                {{ $specLines = $specLines | append (printf "- **%s** — %s" $pair.ref $pair.spec) }}
-            {{ end }}
-            {{ $md = $md | append (printf "%s\n" (delimit $specLines "\n")) }}
-        {{ end }}
-
-        {{/* remediationSteps is authored as Markdown and leads with an "## Fix: ..."
-             heading. Demote its headings so they neither outrank the policy heading
-             nor land in the page's table of contents. The blank line after <details>
-             is what lets Goldmark parse the body as Markdown rather than raw HTML. */}}
-        {{ with $policy.remediationSteps }}
-            {{ $steps := partial "policy-packs/remediation.html" . }}
-            {{ $md = $md | append (printf "<details>\n<summary>Remediation</summary>\n\n%s\n\n</details>\n" $steps) }}
+    {{ with $mapped }}
+        {{ $md = $md | append "## Policy details\n" }}
+        {{ range $policy := . }}
+            {{ $md = $md | append (partial "policy-packs/policy-entry.html" (dict "policy" $policy "controlled" $controlled)) }}
         {{ end }}
     {{ end }}
 
-    {{/* Policies the pack ships that are not mapped to a control in this framework.
-         Real: 12 of the 115 policies in cis-aws land here. */}}
-    {{ if $unmapped }}
-        {{ $md = $md | append (printf "## Additional policies\n\nThese %d policies are included in the pack but are not mapped to a specific %s control.\n"
-            (len $unmapped) $section.framework) }}
-        {{ range $policy := $unmapped }}
-            {{ $md = $md | append (printf "### %s\n" $policy.name) }}
-            {{ with $policy.severity }}{{ $md = $md | append (printf "**Severity:** %s\n" .) }}{{ end }}
-            {{ with $policy.description }}{{ $md = $md | append (printf "%s\n" .) }}{{ end }}
-            {{ with $policy.remediationSteps }}
-                {{ $steps := partial "policy-packs/remediation.html" . }}
-                {{ $md = $md | append (printf "<details>\n<summary>Remediation</summary>\n\n%s\n\n</details>\n" $steps) }}
-            {{ end }}
+    {{/* Policies the pack ships that this framework does not map to a control.
+         Both cases are real: 12 of cis-aws's 115 policies land here, while
+         hitrust-awsnative carries no framework metadata at all, so every one of its
+         policies does — and it gets a plain "Policies" heading rather than being
+         framed as an addendum to a control listing that does not exist. */}}
+    {{ with $unmapped }}
+        {{ if $mapped }}
+            {{ $md = $md | append (printf "## Additional policies\n\nThese %d policies are included in the pack but are not mapped to a specific %s control.\n"
+                (len .) $section.framework) }}
+        {{ else }}
+            {{ $md = $md | append "## Policies\n" }}
+        {{ end }}
+        {{ range $policy := . }}
+            {{ $md = $md | append (partial "policy-packs/policy-entry.html" (dict "policy" $policy "controlled" $controlled)) }}
         {{ end }}
     {{ end }}
 

@@ -45,8 +45,6 @@ sections:
     menu: reference-pre-built-policy-packs-cis-kubernetes
     framework: CIS Kubernetes
     packs:
-      # Note: the org also publishes `cis-kubernetes-gcp`, a duplicate of
-      # `cis-kubernetes-google-cloud` (same 50 policies). Only the latter is documented.
       - pack: cis-kubernetes-aws
         slug: aws
         title: AWS (EKS)
@@ -59,12 +57,26 @@ sections:
         h1: CIS Kubernetes - Azure (AKS)
         metaDesc: Complete list of CIS Kubernetes Benchmark compliance policies for Azure AKS.
         weight: 2
-      - pack: cis-kubernetes-google-cloud
+      # `cis-kubernetes-gcp`, not `cis-kubernetes-google-cloud`. Both are published,
+      # but only this one is still built by policy-packs-internal; the -google-cloud
+      # name is a stale earlier publish that no longer receives updates.
+      - pack: cis-kubernetes-gcp
         slug: google-cloud
         title: Google Cloud (GKE)
         h1: CIS Kubernetes - Google Cloud (GKE)
         metaDesc: Complete list of CIS Kubernetes Benchmark compliance policies for Google Cloud GKE.
         weight: 3
+
+  - id: cmmc
+    menu: reference-pre-built-policy-packs-cmmc
+    framework: CMMC 2.0
+    packs:
+      - pack: cmmc-aws
+        slug: aws
+        title: AWS
+        h1: CMMC 2.0 - AWS
+        metaDesc: Complete list of CMMC 2.0 compliance policies for AWS.
+        weight: 1
 
   - id: hitrust
     menu: reference-pre-built-policy-packs-hitrust
@@ -88,6 +100,15 @@ sections:
         h1: HITRUST CSF 11.5 - Google Cloud
         metaDesc: Complete list of HITRUST CSF 11.5 compliance policies for Google Cloud.
         weight: 3
+      # Targets the AWS Cloud Control provider (@pulumi/aws-native) rather than the
+      # classic AWS provider. None of its policies carry HITRUST control metadata, so
+      # the whole page renders as an unmapped policy list.
+      - pack: hitrust-awsnative
+        slug: aws-native
+        title: AWS Native
+        h1: HITRUST CSF 11.5 - AWS Native
+        metaDesc: Complete list of HITRUST CSF 11.5 compliance policies for the AWS Native provider.
+        weight: 4
 
   - id: iso-27001
     menu: reference-pre-built-policy-packs-iso-27001
@@ -99,6 +120,18 @@ sections:
         h1: ISO/IEC 27001 - AWS
         metaDesc: Complete list of ISO/IEC 27001:2022 compliance policies for AWS.
         weight: 1
+      - pack: iso-27001-azure
+        slug: azure
+        title: Azure
+        h1: ISO/IEC 27001 - Azure
+        metaDesc: Complete list of ISO/IEC 27001:2022 compliance policies for Azure.
+        weight: 2
+      - pack: iso-27001-google-cloud
+        slug: google-cloud
+        title: Google Cloud
+        h1: ISO/IEC 27001 - Google Cloud
+        metaDesc: Complete list of ISO/IEC 27001:2022 compliance policies for Google Cloud.
+        weight: 3
 
   - id: nist
     menu: reference-pre-built-policy-packs-nist
@@ -110,12 +143,18 @@ sections:
         h1: NIST SP 800-53 - AWS
         metaDesc: Complete list of NIST SP 800-53 compliance policies for AWS.
         weight: 1
+      - pack: nist-azure
+        slug: azure
+        title: Azure
+        h1: NIST SP 800-53 - Azure
+        metaDesc: Complete list of NIST SP 800-53 compliance policies for Azure.
+        weight: 2
       - pack: nist-google-cloud
         slug: google-cloud
         title: Google Cloud
         h1: NIST SP 800-53 - Google Cloud
         metaDesc: Complete list of NIST SP 800-53 compliance policies for Google Cloud.
-        weight: 2
+        weight: 3
 
   - id: pci-dss
     menu: reference-pre-built-policy-packs-pci-dss
@@ -127,6 +166,18 @@ sections:
         h1: PCI DSS v4.0.1 - AWS
         metaDesc: Complete list of PCI DSS v4.0.1 compliance policies for AWS.
         weight: 1
+      - pack: pci-dss-azure
+        slug: azure
+        title: Azure
+        h1: PCI DSS v4.0.1 - Azure
+        metaDesc: Complete list of PCI DSS v4.0.1 compliance policies for Azure.
+        weight: 2
+      - pack: pci-dss-google-cloud
+        slug: google-cloud
+        title: Google Cloud
+        h1: PCI DSS v4.0.1 - Google Cloud
+        metaDesc: Complete list of PCI DSS v4.0.1 compliance policies for Google Cloud.
+        weight: 3
 
   - id: pulumi-best-practices
     menu: reference-pre-built-policy-packs-pulumi-best-practices
@@ -151,18 +202,23 @@ sections:
         metaDesc: Complete list of Pulumi Best Practices compliance policies for Google Cloud.
         weight: 3
 
-# Published to the `pulumi` org but not documented yet. Adding a page for any of
-# these is an editorial call (new public URL, and CMMC would need a new menu
-# group in config/_default/menus.yml), so they are listed rather than enabled:
+# Every pack that policy-packs-internal builds AND publishes to the `pulumi` org now
+# has a page above, with two deliberate exceptions:
 #
-#   iso-27001-azure         (158 policies)  -> iso-27001/azure
-#   iso-27001-google-cloud  (153 policies)  -> iso-27001/google-cloud
-#   nist-azure              (158 policies)  -> nist/azure
-#   pci-dss-azure           (127 policies)  -> pci-dss/azure
-#   cmmc-aws                ( 54 policies)  -> needs a CMMC menu group
-#   hitrust-awsnative       (114 policies)  -> no framework metadata on any policy
+#   aws-organizations-tag-policies  Its page (aws-organizations-tag-policies/aws.md)
+#                                   is hand-written prose pointing at the integration
+#                                   guide, not a policy listing. Stays hand-maintained.
+#   cis-kubernetes-google-cloud     A stale earlier publish, superseded by
+#                                   cis-kubernetes-gcp. See the cis-kubernetes section.
 #
-# `aws-organizations-tag-policies` is also published, but its page
-# (content/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws.md)
-# is hand-written prose pointing at the integration guide, not a policy listing.
-# It stays hand-maintained and is deliberately not generated.
+# The org additionally holds packs this repo does not build — internal, experimental,
+# or customer one-offs. They must NOT be documented:
+#
+#   approved-component-versions-bad, auto-policy, aws-cis-optimized,
+#   aws-iso27001-compliance-ready-policies-typescript, continuous-policy,
+#   hitrust-aws-test, kubernetes, pulumi-internal-policies, pulumi-vanta-policies,
+#   snyk-container-scanning-2, super-policy, testpack-aws-api
+#
+# To re-check this list, compare `GET /api/orgs/pulumi/policypacks` against the pack
+# names the repo builds:
+#   grep -rho 'new PolicyPack("[^"]*"' packs --include=index.ts | sed 's/.*("//;s/"//'
