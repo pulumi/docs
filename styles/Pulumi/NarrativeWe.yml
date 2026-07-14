@@ -1,0 +1,37 @@
+# Flags narrative walkthrough voice ("Let's create a bucket", "now we'll
+# deploy") where docs voice calls for imperative second person ("Create a
+# bucket") -- STYLE-GUIDE.md §Grammar and punctuation, and the brand
+# writing-style guide's point-of-view rule.
+#
+# Deliberately NOT a blanket first-person flagger: Google.We (disabled in
+# .vale.ini) flags every 'we'/'us'/'our'/"let's". A voice-norm audit found
+# ~93% of first-person drift in docs is this narrative-walkthrough shape, so
+# the rule targets only those constructions and never matches bare 'we',
+# 'us', 'our', 'we recommend', or 'contact us'. 'let us' carries a negative
+# lookahead so "let us know" (community-feedback idiom) stays clean; the
+# lookahead compiles via Vale's regexp2 fallback (RE2-pure alternative if it
+# ever errors: 'let us [a-jl-z]\w*').
+#
+# Both apostrophe forms are matched -- the ['’] character class covers
+# straight and curly apostrophes (both appear in the corpus).
+#
+# Scope: docs + tutorials only. Blog, what-is/learn, and generated CLI pages
+# are opted out per-path in .vale.ini -- narrative voice is the medium in
+# blog posts and out of scope for explainers.
+extends: existence
+message: "Narrative walkthrough voice ('%s') -- prefer imperative second person: 'Create a bucket', not 'Let's create a bucket' (STYLE-GUIDE.md §Grammar and punctuation)."
+link: "https://brand.pulumi.com/voice/writing-style/"
+level: warning
+ignorecase: true
+tokens:
+  - "let['’]s"
+  - 'let us (?!know\b)\w+'
+  - "we['’]ll"
+  - "we will"
+  - "we['’]re going to"
+  - "we are going to"
+  - "we can now"
+  - "we['’]ve now"
+  - "we have now"
+  - "now,? we"
+  - "next,? we"

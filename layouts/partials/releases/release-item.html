@@ -37,10 +37,7 @@
     <div class="flex flex-col lg:flex-row items-center">
         <div class="pb-0 xl:pl-52 flex-1 min-w-0 flex flex-col gap-5 px-8 py-10 md:px-12 md:py-14 lg:px-16 lg:py-16">
             {{ with $overline }}
-            <span
-                class="inline-flex items-center self-start rounded-full bg-violet-100 text-violet-primary px-4 py-2 text-xs font-mono uppercase tracking-wider"
-                >{{ . }}</span
-            >
+            <span class="badge badge-brand badge-lg self-start">{{ . }}</span>
             {{ end }}
             {{ with $heading }}
             <h2 class="heading-xl font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}</h2>

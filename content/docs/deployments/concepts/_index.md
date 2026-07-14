@@ -19,6 +19,7 @@ aliases:
 - /docs/pulumi-cloud/deployments/platform/
 - /docs/pulumi-cloud/deployments/using/
 - /docs/pulumi-cloud/deployments/using-deployments/
+- /docs/deployments/deployments/using/
 - /docs/deployments/deployments/reference/
 - /docs/pulumi-cloud/deployments/reference/
 - /docs/platform/deployments/reference/

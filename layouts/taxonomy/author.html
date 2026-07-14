@@ -10,7 +10,7 @@
                 <div class="flex flex-col gap-2">
                     <h2 class="heading-1 m-0!">{{ .name }}</h2>
                     <div class="flex flex-wrap items-center gap-2">
-                        {{ if eq .status "guest" }}<span class="inline-flex items-center rounded-lg bg-violet-100 px-2 py-0.5 font-overline-sm text-violet-primary">Guest</span>{{ end }}
+                        {{ if eq .status "guest" }}<span class="badge badge-brand">Guest</span>{{ end }}
                         {{ with .title }}<span class="font-overline-sm">{{ . }}</span>{{ end }}
                     </div>
                     {{ with .social }}{{ partial "widgets/social-icons.html" (dict "social" .) }}{{ end }}
@@ -20,6 +20,7 @@
 
         {{ $posts := where .Data.Pages "Section" "blog" }}
         {{ $paginator := .Paginate $posts.ByDate.Reverse }}
+        {{ partial "blog/paginator.html" (dict "context" . "position" "top") }}
         <div data-post-list class="flex flex-col">
             {{ range $paginator.Pages }}{{ partial "blog/card/list-row.html" (dict "page" .) }}{{ end }}
         </div>

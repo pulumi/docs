@@ -86,6 +86,10 @@ sections:
     heading: Automations
     link: /docs/ai/automations/
     description: Turn any Neo task into recurring work that produces pull requests on a schedule.
+  - icon: shield
+    heading: Usage limits
+    link: /docs/ai/usage-limits/
+    description: Set monthly dollar limits on Neo usage for your organization and members.
 
 - type: flat
   heading: Have questions?
