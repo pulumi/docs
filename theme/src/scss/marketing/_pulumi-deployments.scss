@@ -1,6 +1,5 @@
 div.pulumi-deployments {
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-    --tw-shadow: 0 10px 15px -3pxrgba(0,0,0,.1),0 4px 6px -2pxrgba(0,0,0,.05)
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     padding: 2.5rem;
     background-color: #fff;
     border: 1px solid #e5e5df;
@@ -32,19 +31,8 @@ div.pulumi-deployments {
         opacity: .5;
     }
 
-    input:not([type="submit"]):not([type="checkbox"]),
-    textarea {
-        background-color: #fff;
-        border-color: #e5e5df;
-        border-radius: 0.25rem;
-        border-width: 1px;
-        padding: 0.5rem;
-        margin: 0.5rem 0 16px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
+    // Control chrome comes from the normalized base in _forms.scss/_hubspot.scss;
+    // only the deployments-specific margins remain here.
     input[type="submit"] {
         margin-top: 8px;
     }

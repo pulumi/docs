@@ -43,16 +43,26 @@ import { Component, h, Element, Prop, Method, Listen } from "@stencil/core";
             pointer-events: auto;
         }
 
+        /* SVG chevron caret, sitting in the toggle's pr-7 gutter. This data-URI is
+           duplicated from $form-caret-svg in theme/src/scss/_forms.scss (shadow DOM
+           can't read the SCSS var) — keep the two in sync. */
         .toggle slot::after {
             position: absolute;
-            right: 0.5em;
+            right: 0.625rem;
             top: 50%;
+            width: 1rem;
+            height: 1rem;
+            content: "";
             transform: translateY(-50%);
-            content: "▾";
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%239997a0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1rem;
+            transition: transform 100ms;
         }
 
         :host([expanded]) .toggle slot::after {
-            transform: rotate(180deg) translateY(50%);
+            transform: translateY(-50%) rotate(180deg);
         }
     `,
 })

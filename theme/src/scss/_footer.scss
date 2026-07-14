@@ -40,13 +40,18 @@
         @apply ml-0!;
     }
 
-    input {
+    // Dark re-skin + joined-left layout. This single-field newsletter form has no
+    // <fieldset>, so the normalized `.hs-form fieldset input` base never reaches it —
+    // the control chrome (border, height, radius) is set in full here.
+    input:not(.hs-button) {
         @apply bg-black text-white border border-gray-800 rounded-l-lg rounded-r-none! h-10 py-0;
 
         &::placeholder { @apply text-gray-500; }
+    }
 
-        &.hs-button {
-            @apply leading-none bg-violet-primary text-white rounded-l-none! rounded-r-lg! h-10 px-2! py-0 ml-0;
-        }
+    input.hs-button {
+        // 1px violet-primary border so the button's edges line up with the input's
+        // border in the joined control (.btn ships a transparent border otherwise).
+        @apply leading-none bg-violet-primary text-white border-violet-primary rounded-l-none! rounded-r-lg! h-10 px-2! py-0 ml-0;
     }
 }

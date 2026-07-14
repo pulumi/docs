@@ -959,6 +959,44 @@ body[data-theme="dark"] {
 }
 
 // ---------------------------------------------------------------------------
+// Form controls (_forms.scss). The .form-* classes are painted with @apply
+// utilities (bg-white, text-gray-950, border-gray-300, the inset shadow), which
+// the docs dark remap can't reach — so re-skin them here to the docs tokens.
+// Currently the only docs form controls are the feedback-widget textarea + email
+// input (layouts/partials/docs/feedback.html). Unlayered → wins over the layered
+// @apply base regardless of specificity.
+// ---------------------------------------------------------------------------
+html[data-theme="dark"] body.section-docs {
+    .form-input,
+    .form-textarea,
+    .form-select {
+        background-color: var(--docs-card);
+        color: var(--docs-fg);
+        border-color: var(--docs-border);
+        // Black inner shadow is invisible/wrong on the dark surface. No-op shadow,
+        // NOT `none` — `none` inside the focus shadow list below would invalidate
+        // the whole declaration and drop the ring (see _forms.scss).
+        --form-resting-shadow: 0 0 #0000;
+
+        &::placeholder {
+            color: var(--docs-fg-muted);
+        }
+
+        // Lighter (violet-300) focus ring for contrast on the dark surface.
+        &:focus,
+        &:focus-visible {
+            border-color: var(--docs-ring);
+            box-shadow: inset 0 0 0 2px var(--docs-ring), var(--form-resting-shadow, none);
+        }
+    }
+
+    // Light caret for the dark surface. Duplicated from $form-caret-svg-light.
+    .form-select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23cbcace' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    }
+}
+
+// ---------------------------------------------------------------------------
 // Sidebar theme toggle — pinned to the bottom of the docs nav. Three icon
 // buttons (sun / moon / monitor); the active one reflects data-theme-pref.
 // ---------------------------------------------------------------------------
