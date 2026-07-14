@@ -1,32 +1,17 @@
 {{- /*
-    Generic blog badge/pill — mono uppercase (Monaspace, 12px, 0.6px tracking).
-    Variants (from Figma):
-      outline    (default) white bg + gray-200 border — categories, "Part N"
-      secondary  gray-50 bg, no border — tags
-      dark       service-black bg + gray-800 border, white text — on violet-950
+    Blog badge/pill — thin wrapper over the shared `partials/badge.html`. Kept so the
+    ~8 blog callers (category/tag/series badges, card partials) need no changes. The
+    variant names map 1:1 onto the shared system; `outline` is the default.
+
     Params:
       text    (required) label
-      variant outline | secondary | dark
-      href    optional → renders a link (with hover); `relative z-10` keeps it
-              clickable above a card's stretched title link
+      variant outline (default) | secondary | dark
+      href    optional → renders a link
       track   optional data-track value
 */ -}}
-{{- $text := .text -}}
 {{- $variant := .variant | default "outline" -}}
-{{- $href := .href -}}
-{{- $track := .track -}}
-{{- $base := "inline-flex items-center justify-center px-2 py-0.5 rounded-lg font-overline-sm whitespace-nowrap" -}}
-{{- $skin := "bg-white border border-gray-200 text-service-black" -}}
-{{- $hover := "hover:border-violet-primary hover:text-violet-primary" -}}
-{{- if eq $variant "secondary" -}}
-    {{- $skin = "bg-gray-50 text-service-black" -}}
-    {{- $hover = "hover:bg-gray-100 hover:text-violet-primary" -}}
-{{- else if eq $variant "dark" -}}
-    {{- $skin = "bg-service-black border border-gray-800 text-white" -}}
-    {{- $hover = "hover:border-violet-300 hover:text-white" -}}
-{{- end -}}
-{{- if $href -}}
-<a href="{{ $href }}"{{ with $track }} data-track="{{ . }}"{{ end }} class="relative z-10 {{ $base }} {{ $skin }} transition-colors {{ $hover }}">{{ $text }}</a>
-{{- else -}}
-<span class="{{ $base }} {{ $skin }}">{{ $text }}</span>
-{{- end -}}
+{{- partial "badge.html" (dict
+    "text" .text
+    "variant" $variant
+    "href" .href
+    "track" .track) -}}

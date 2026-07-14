@@ -184,10 +184,9 @@ body.section-registry {
                 gap: 4px;
 
                 span.count-badge {
-                    font-size: 11px;
-                    padding: 0px 4px;
-                    border: 1px solid var(--color-violet-primary);
-                    border-radius: 6px;
+                    @extend .badge;
+                    @extend .badge-secondary;
+                    @extend .badge-sm;
                 }
             }
 
