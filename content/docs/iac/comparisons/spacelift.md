@@ -63,7 +63,7 @@ Spacelift is proprietary software, though it's built on open-source components s
 
 This is the distinction that shapes every other one. Pulumi is an infrastructure as code platform: it's where infrastructure is *authored*, in a general-purpose language, and it ships with a management layer — Pulumi Cloud and Pulumi Deployments — for state, policy, access control, and remote runs. Spacelift authors nothing. It's an orchestration platform that takes infrastructure you've written in some other tool and runs it, adding governance and collaboration on top. In the landscape of infrastructure tooling, Spacelift sits alongside offerings like Terraform Cloud: a management plane for infrastructure code, not the code itself.
 
-A like-for-like comparison, then, is less "Pulumi vs. Spacelift" than "Pulumi Cloud and Pulumi Deployments vs. Spacelift." And because Spacelift runs Pulumi as one of its supported tools, the most common outcome is teams using them together, authoring with Pulumi and orchestrating with Spacelift. The rest of this page compares the overlapping management features, then covers how the two combine.
+A like-for-like comparison, then, is less "Pulumi vs. Spacelift" than "Pulumi Cloud and Pulumi Deployments vs. Spacelift." And because Spacelift runs Pulumi as one of its supported tools, the most common outcome is teams using them together, authoring with Pulumi and orchestrating with Spacelift.
 
 ### Infrastructure authoring and language support
 
@@ -117,7 +117,7 @@ You can adopt Pulumi alongside or in place of Spacelift in a few common ways, an
 
 1. **Run Pulumi on Spacelift.** Configure a Spacelift stack with the [Pulumi vendor](https://docs.spacelift.io/vendors/pulumi/), point it at your Pulumi backend, and Spacelift orchestrates `pulumi preview` and `pulumi up` on every change while your state stays in Pulumi Cloud or your own backend. This lets a team keep authoring in Pulumi while running a mixed-tool estate through one control plane.
 1. **Standardize on Pulumi Cloud and Pulumi Deployments.** If you'd rather not operate a separate orchestration platform, [Pulumi Deployments](/docs/deployments/) provides remote runs, drift detection, review stacks, and Git-driven deploys as an integrated part of Pulumi.
-1. **Migrate from Terraform on Spacelift to Pulumi.** If most of your Spacelift estate is Terraform and you want to move to Pulumi, [`pulumi convert`](/docs/iac/concepts/converters/) translates HCL into a Pulumi program, and [`pulumi import`](/docs/iac/guides/migration/import/) brings already-provisioned resources under Pulumi management. You can keep orchestrating with Spacelift or move those workloads to Pulumi Deployments. See [Migrating from Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for a walkthrough.
+1. **Bring a Terraform estate on Spacelift into Pulumi.** If much of your Spacelift estate is Terraform, Pulumi can embrace it rather than replace it — [use existing Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), [work with any Terraform or OpenTofu provider](/docs/iac/concepts/providers/any-terraform-provider/), and [convert HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) with `pulumi convert --from terraform` — while [`pulumi import`](/docs/iac/guides/migration/import/) brings already-provisioned resources under management. You can keep orchestrating with Spacelift or move those workloads to Pulumi Deployments.
 
 ## Frequently asked questions
 
@@ -132,6 +132,10 @@ Yes. Spacelift supports Pulumi as a first-class runtime for C#, Go, TypeScript, 
 ### Does Spacelift replace Pulumi?
 
 No. Spacelift operates at a different layer than Pulumi's authoring engine, overlapping instead with Pulumi's management layer, Pulumi Cloud and Pulumi Deployments. You still author infrastructure with Pulumi (or another tool); Spacelift orchestrates the runs.
+
+### If you run Terraform on Spacelift, should you consider Pulumi?
+
+Often, yes. Teams frequently adopt Spacelift to add collaboration and governance on top of Terraform. Pulumi offers a different path: rather than orchestrating Terraform in place, you can bring that Terraform investment into a general-purpose IaC platform with an integrated management layer. Pulumi [uses existing Terraform modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), [works with any Terraform or OpenTofu provider](/docs/iac/concepts/providers/any-terraform-provider/), and [converts your HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) with `pulumi convert --from terraform`, so your existing work carries forward. For a team weighing how to evolve its Terraform estate, that's often a stronger long-term move than adding an orchestration layer on top of it.
 
 ### Does Spacelift manage Pulumi state?
 
