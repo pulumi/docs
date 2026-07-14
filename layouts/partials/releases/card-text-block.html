@@ -33,7 +33,7 @@
     </div>
     {{ end }}
     {{ with $title }}
-    <h3 class="heading-2 font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}{{ range $tiers }}<span class="inline-flex items-center align-middle ml-2 rounded-full bg-gray-100 text-gray-600 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider leading-none transition-colors group-hover/linked:bg-violet-100 group-hover/linked:text-violet-primary">{{ . }}</span>{{ end }}</h3>
+    <h3 class="heading-2 font-display font-semibold tracking-tighter text-service-black m-0 leading-[1.1]">{{ . }}{{ range $tiers }}<span class="badge badge-secondary badge-sm ml-2 group-hover/linked:bg-violet-100 group-hover/linked:text-violet-primary">{{ . }}</span>{{ end }}</h3>
     {{ end }}
     {{ with $description }}
     <div class="body-base text-service-black leading-6">

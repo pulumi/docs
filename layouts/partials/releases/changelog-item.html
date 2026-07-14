@@ -50,7 +50,7 @@
     <a href="{{ $page.RelPermalink }}" data-changelog-link class="group/item flex items-center gap-2 py-4 no-underline hover:no-underline mb-0 text-service-black hover:text-violet-primary transition-colors">
         <span class="flex items-center gap-1 sm:gap-2 flex-wrap">
             <span class="heading-4 mb-0">{{ $page.Title }}</span>
-            {{ range $page.Params.tiers }}<span class="whitespace-nowrap items-center align-middle rounded-full bg-gray-100 text-gray-600 px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider leading-none">{{ . }}</span>{{ end }}
+            {{ range $page.Params.tiers }}<span class="badge badge-secondary badge-sm">{{ . }}</span>{{ end }}
         </span>
         <time datetime="{{ $page.Date.Format "2006-01-02" }}" class="body-sm ml-auto shrink-0 whitespace-nowrap text-gray-700">{{ $page.Date.Format "Jan 2" }}</time>
     </a>
