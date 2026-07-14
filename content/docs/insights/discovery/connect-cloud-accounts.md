@@ -130,7 +130,7 @@ For AWS, choose the regions to scan. The defaults are `us-east-1`, `us-east-2`, 
 
 ### Policy pack
 
-Policy evaluation is enabled by default with a provider-specific pack: the CIS AWS Foundations Benchmark, CIS Microsoft Azure Foundations Benchmark, or CIS Google Cloud Platform Foundations Benchmark. You can choose NIST 800-53 instead, or turn policy off. See [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for what each pack checks.
+Policy evaluation is enabled by default, and the pack depends on your organization's plan. The Team and Enterprise editions apply the Pulumi Best Practices pack for your provider. The Business Critical edition applies a provider-specific compliance pack by default (the CIS AWS Foundations Benchmark, CIS Microsoft Azure Foundations Benchmark, or CIS Google Cloud Platform Foundations Benchmark), and you can choose NIST 800-53 instead. You can also turn policy off. See [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for what each pack checks, and [Pricing](/pricing/) for plan availability.
 
 ## Step 5: Review the summary
 
