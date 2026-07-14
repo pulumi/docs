@@ -2,7 +2,7 @@
 title: "Introducing Usage Limits for Pulumi Neo"
 date: 2026-07-13T08:00:00-07:00
 draft: false
-meta_desc: "Pulumi Neo usage limits set a dollar boundary on monthly Neo spend. Neo pauses when it reaches your organization or per-member limit, with email alerts."
+meta_desc: "Set monthly dollar limits on Pulumi Neo usage for your organization or per member, with email alerts as usage climbs."
 feature_image: feature.png
 authors:
     - john-keiser
@@ -14,15 +14,15 @@ tags:
 category: product
 schema_type: auto
 
-# canonical_url: set to /docs/ai/usage-limits/ once that docs page is live (not merged yet).
+# canonical_url: set to /docs/ai/usage-limits/ before publish (docs page is live).
 
 social:
-    twitter: "Now Pulumi Neo supports monthly usage limits, so you can hand it more infrastructure work, without worrying about the bill."
-    linkedin: "Introducing usage limits for Pulumi Neo. Set a monthly dollar limit on Neo usage, for your whole organization or per member, so you can hand it more infrastructure work without worrying about the bill. Neo pauses when spend reaches the limit, and admins get email alerts as usage climbs."
-    bluesky: "Now Pulumi Neo supports monthly usage limits, so you can hand it more infrastructure work, without worrying about the bill."
+    twitter: "Now Pulumi Neo supports monthly usage limits, putting your Neo spend under control so you can hand it more and more infrastructure work."
+    linkedin: "Introducing usage limits for Pulumi Neo. Set a monthly dollar limit on Neo usage, for your whole organization or per member, and keep your Neo spend under control as you hand it more and more infrastructure work. Neo pauses when spend reaches the limit, and admins get email alerts as usage climbs."
+    bluesky: "Now Pulumi Neo supports monthly usage limits, putting your Neo spend under control so you can hand it more and more infrastructure work."
 ---
 
-When you use [Pulumi Neo](/docs/ai/) to take on infrastructure work, it's natural to want to hand it more and more. A monthly usage limit lets you do exactly that, without worrying about the bill: set a dollar limit on Neo's spend, and it pauses when your organization reaches the limit instead of running past it.
+[Pulumi Neo](/docs/ai/) is an AI agent that takes on real infrastructure work, and it's natural to want to hand it more and more. Usage limits give you control so you can do exactly that: set a monthly dollar limit, and Neo pauses when your organization reaches it.
 
 <!--more-->
 
@@ -32,11 +32,11 @@ Your organization limit is a single monthly dollar amount covering all Neo usage
 
 ![The Manage token usage panel, where an admin sets the organization's monthly Neo limit and turns on email notifications.](manage-token-usage.png)
 
-Enforcement happens at a natural boundary in Neo's work, so a task already in progress finishes its current step before pausing. A limit can therefore land a few dollars over, which is expected rather than a billing error.
+Enforcement happens at a natural boundary in Neo's work, so a task already in progress finishes its current step before pausing. As a result, usage can go a few dollars over the limit. That is expected, not a billing error.
 
 ## Per-member limits and alerts
 
-You can also set separate limits for each individual member, which pauses Neo for them after they hit the limit, without affecting others. (The organization limit still applies, no matter what.)
+You can also set a separate limit for each member. A member is paused at whichever limit is smaller: their own or the organization's. For example, a member with a $200 limit under a $150 organization limit pauses at $150, because the organization limit is smaller.
 
 ![The per-member limits table, showing each member's amount used and effective limit for the billing period.](per-member-limits.png)
 
@@ -44,7 +44,7 @@ Turn on **Enable email notifications** to get a heads-up before you reach the li
 
 ## Get started
 
-Set a limit once, and hand Neo more of your infrastructure work with confidence. Usage limits are available today for organizations on a paid plan, and an **Admin** or **Billing Manager** can set them.
+Set your usage limits and stay in control as your organization hands Neo more and more work. Usage limits are available today for organizations on a paid plan, and an **Admin** or **Billing Manager** can set them.
 
 - [Sign in to Pulumi Cloud](https://app.pulumi.com/signin) and set your first organization limit
 - [Read the Neo usage limits documentation](/docs/ai/usage-limits/) for per-member limits, alerts, and enforcement details
