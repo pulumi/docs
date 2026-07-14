@@ -67,7 +67,7 @@ After deciding on Pulumi, Jacob and his team built a system based on a “develo
 
 #### Migrating Infrastructure to Pulumi
 
-First, the platform team [migrated](/tf2pulumi/) its infrastructure from Terraform to Pulumi. This included Kubernetes resources, Google Cloud resources, GitHub repos, DataDog, CloudFlare, Confluent for Kafka, Consul, and Vault. This enabled them to build, deploy, and manage all of their cloud and SaaS resources from a single platform, using Go as their language of choice.
+First, the platform team [migrated](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) its infrastructure from Terraform to Pulumi. This included Kubernetes resources, Google Cloud resources, GitHub repos, DataDog, CloudFlare, Confluent for Kafka, Consul, and Vault. This enabled them to build, deploy, and manage all of their cloud and SaaS resources from a single platform, using Go as their language of choice.
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
