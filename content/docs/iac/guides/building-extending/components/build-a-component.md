@@ -9,6 +9,7 @@ menu:
         parent: iac-guides-components
         weight: 10
 aliases:
+- /docs/reference/component-tutorial/
 - /docs/iac/using-pulumi/build-a-component/
 - /docs/iac/using-pulumi/extending-pulumi/build-a-component/
 ---

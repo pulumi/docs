@@ -22,6 +22,7 @@ aliases:
   - /docs/troubleshooting/
   - /docs/troubleshooting/overview/
   - /docs/iac/support/
+  - /docs/iac/support/troubleshooting/
   - /docs/iac/troubleshooting/
 
 sections:

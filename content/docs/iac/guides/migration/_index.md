@@ -10,6 +10,7 @@ menu:
         weight: 50
         identifier: iac-guides-migration
 aliases:
+    - /docs/guides/adopting/
     - /docs/iac/adopting-pulumi/
     - /docs/iac/adopting-pulumi/migrating-to-pulumi/
     - /docs/using-pulumi/adopting-pulumi/

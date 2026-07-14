@@ -12,6 +12,7 @@ menu:
         parent: azure-get-started
         weight: 2
 aliases:
+    - /docs/get-started/azure/begin/
     - /docs/quickstart/azure/begin/
     - /docs/quickstart/azure/install-pulumi/
     - /docs/quickstart/azure/install-language-runtime/

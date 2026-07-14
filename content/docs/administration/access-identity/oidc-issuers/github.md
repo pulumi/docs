@@ -13,6 +13,7 @@ aliases:
 - /docs/administration/access-identity/oidc-client/github/
 - /docs/pulumi-cloud/oidc/client/github/
 - /docs/pulumi-cloud/access-management/oidc-client/github/
+- /docs/pulumi-cloud/access-management/oidc/client/github/
 ---
 
 This document outlines the steps required to configure Pulumi Cloud to accept GitHub id_tokens and exchange them for Pulumi access tokens. Three token types are supported — [organization](#organization-tokens), [team](#team-tokens), and [personal](#personal-tokens) — subject to your [Pulumi edition](/docs/administration/access-identity/oidc-issuers/#token-types-by-edition).

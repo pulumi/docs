@@ -12,6 +12,7 @@ menu:
         weight: 6
 
 aliases:
+    - /docs/get-started/kubernetes/modify-program/
     - /docs/quickstart/kubernetes/modify-program/
     - /docs/quickstart/kubernetes/deploy-changes/
 ---

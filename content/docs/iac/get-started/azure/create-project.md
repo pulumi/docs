@@ -11,6 +11,7 @@ menu:
         parent: azure-get-started
         weight: 4
 aliases:
+    - /docs/get-started/azure/create-project/
     - /docs/quickstart/azure/create-project/
     - /docs/clouds/azure/get-started/create-project/
     - /docs/quickstart/azure/review-project/
