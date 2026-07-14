@@ -16,9 +16,12 @@ Three checks bundled (single content-tree walk + redirects scan):
 
 1. **Menu-parent validation.** For each `menu.<name>.parent: <X>` in a changed
    file's frontmatter, verify `(name, X)` exists somewhere in the global
-   identifier map. The canonical bug: `menu.iac.parent: azure-clouds`
-   resolves only against `menu.integrations.identifier: azure-clouds` —
-   wrong-named-menu.
+   identifier map. The map unifies identifiers declared in content frontmatter
+   (`menu.<name>.identifier:`) and in `config/_default/menus.yml` — Hugo
+   accepts parents from either source, and section-level parents (e.g.
+   `reference-pre-built-policy-packs`) live only in menus.yml. The canonical
+   bug: `menu.iac.parent: azure-clouds` resolves only against
+   `menu.integrations.identifier: azure-clouds` — wrong-named-menu.
 
 2. **Alias collision detection.** Two sub-checks:
    - PR-internal: any alias appearing in 2+ PR-changed files.
@@ -253,10 +256,52 @@ def flatten_frontmatter_keys(fm: dict) -> list[str]:
     return keys
 
 
+def build_config_menu_identifiers(repo_root: Path) -> dict[tuple[str, str], list[str]]:
+    """Parse `config/_default/menus.yml` for menu identifiers.
+
+    Hugo menu entries can be declared in site config as well as in content
+    frontmatter, and this repo defines its section-level entries (the ones
+    most often used as parents) in menus.yml. Without these, every
+    `menu.<name>.parent:` pointing at a config-defined identifier is a false
+    "missing parent".
+
+    Returns {(menu_name, identifier): ["config/_default/menus.yml:<line>", ...]}.
+    Line-by-line parse (same no-PyYAML constraint as `parse_minimal_yaml`):
+    a column-0 `<name>:` line opens a menu; any indented `identifier: <X>`
+    line inside it records (name, X). Missing file returns an empty map.
+    """
+    out: dict[tuple[str, str], list[str]] = {}
+    menus_path = repo_root / "config" / "_default" / "menus.yml"
+    try:
+        lines = menus_path.read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return out
+    rel = menus_path.relative_to(repo_root).as_posix()
+    menu_name = None
+    for ln_num, line in enumerate(lines, start=1):
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        if not line.startswith((" ", "\t", "-")):
+            key, sep, rest = line.partition(":")
+            if sep and not rest.strip():
+                menu_name = key.strip()
+            continue
+        if menu_name is None:
+            continue
+        key, sep, rest = stripped.lstrip("- ").partition(":")
+        if sep and key.strip() == "identifier":
+            ident = rest.strip().strip('"').strip("'")
+            if ident:
+                out.setdefault((menu_name, ident), []).append(f"{rel}:{ln_num}")
+    return out
+
+
 def build_global_maps(repo_root: Path) -> tuple[dict, dict, dict]:
     """Walk content/**/*.md + scripts/redirects/*.txt and build:
 
-    - identifier_map: {(menu_name, identifier): [file, ...]}
+    - identifier_map: {(menu_name, identifier): [file, ...]}  -- frontmatter
+      identifiers plus config-defined ones from `config/_default/menus.yml`
     - alias_map: {alias: [file, ...]}  -- Hugo aliases only, used by alias-collision
     - url_ownership_map: {url: [{file, scope}, ...]}  -- unified Hugo aliases + S3 redirects
 
@@ -264,7 +309,7 @@ def build_global_maps(repo_root: Path) -> tuple[dict, dict, dict]:
     "who claims this URL" view; alias_map remains as the narrower "who's declared
     it as a Hugo alias" view that alias-collision uses.
     """
-    identifier_map: dict[tuple[str, str], list[str]] = {}
+    identifier_map: dict[tuple[str, str], list[str]] = build_config_menu_identifiers(repo_root)
     alias_map: dict[str, list[str]] = {}
     url_ownership_map: dict[str, list[dict]] = {}
     content_root = repo_root / "content"
