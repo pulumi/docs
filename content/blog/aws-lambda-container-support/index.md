@@ -474,7 +474,7 @@ That is the entire program. `pulumi up` provisions everything in the right order
 }
 </script>
 
-{{< blog/cta-card title="Deploy Lambda containers with Pulumi" >}}
+{{< blog/cta-card title="Deploy Lambda containers with Pulumi" href="/docs/iac/guides/clouds/aws/ecr/" >}}
 Build the image, push it to Amazon ECR, wire up the IAM role, and deploy the function from one program in TypeScript, Python, Go, or the language you already use.
 {{< /blog/cta-card >}}
 

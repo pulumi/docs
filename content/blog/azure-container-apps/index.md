@@ -314,7 +314,7 @@ if err != nil {
 
 {{% /choosable %}}
 
-{{< blog/cta-card title="Ship containers to Azure with Pulumi" >}}
+{{< blog/cta-card title="Ship containers to Azure with Pulumi" href="/templates/container-service/azure/" >}}
 Use the Azure Native provider to build a Docker image, publish it to Azure Container Registry, and deploy a serverless Container App from one program. Provision and manage it all in the language you already use.
 {{< /blog/cta-card >}}
 

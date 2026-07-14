@@ -163,7 +163,7 @@ const randomSite = new aws.s3.BucketObject("random.html", {
 
 Note how we now need to specify the content of `random.html`, since we no longer have the random pet in the same program.  In this case we use a [stack reference](https://www.pulumi.com/learn/building-with-pulumi/stack-references/) to reference the output from the source program.  It is of course up to the user how to re-create the output.  It could also come from config, or be hardcoded depending on the use-case.
 
-{{< blog/cta-card title="Refactor your infrastructure safely" >}}
+{{< blog/cta-card title="Refactor your infrastructure safely" label="Learn more" href="/tutorials/move-resources-between-stacks/" >}}
 Use `pulumi state move` to split a growing project into focused stacks without recreating your cloud resources. Organize your infrastructure as code and manage every stack in Pulumi Cloud.
 {{< /blog/cta-card >}}
 

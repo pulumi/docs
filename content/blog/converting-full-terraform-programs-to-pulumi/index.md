@@ -179,7 +179,7 @@ After addressing the remaining TODOs and some other tweaks so that the code comp
 
 The converter has saved us a ton of time, converting over 1,000 lines of Terraform to a modern Pulumi language, with only a small number of manual fix-ups required. From here, we can leverage our IDE and compiler to further refactor and improve the code, one of the many benefits of Pulumi!
 
-{{< blog/cta-card title="Convert your Terraform to Pulumi" >}}
+{{< blog/cta-card title="Convert your Terraform to Pulumi" label="Learn more" href="/docs/iac/guides/migration/converters/" >}}
 Run `pulumi convert` to migrate your existing Terraform projects and modules to TypeScript, Python, Go, or C#, then refine the result with your language's own tooling.
 {{< /blog/cta-card >}}
 

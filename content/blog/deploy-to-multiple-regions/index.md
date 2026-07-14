@@ -750,7 +750,7 @@ Resources:
 Duration: 27m0s
 ```
 
-{{< blog/cta-card title="Deploy across regions from one stack" >}}
+{{< blog/cta-card title="Deploy across regions from one stack" label="Learn more" href="/docs/iac/concepts/providers/#explicit-provider-configuration" >}}
 Configure explicit providers in your Pulumi program to provision resources across regions, accounts, and clusters from a single stack. Build and ship your multi-region infrastructure with one `pulumi up`.
 {{< /blog/cta-card >}}
 
