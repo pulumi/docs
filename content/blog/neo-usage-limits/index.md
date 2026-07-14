@@ -2,7 +2,7 @@
 title: "Introducing Usage Limits for Pulumi Neo"
 date: 2026-07-13T08:00:00-07:00
 draft: false
-meta_desc: "Set monthly dollar limits on Pulumi Neo usage for your organization or per member, with email alerts as usage climbs."
+meta_desc: "Set monthly Pulumi Neo dollar limits for your organization or per member, and get alerts via email."
 feature_image: feature.png
 authors:
     - john-keiser
