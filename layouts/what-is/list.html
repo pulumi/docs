@@ -76,25 +76,26 @@
     {{ end }}
 
     <div class="container mx-auto px-6 lg:px-0 pb-16">
-        <div class="max-w-4xl mx-auto">
-            {{/* Section jump nav: an underlined tab bar that scrolls
-                 horizontally if the tabs overflow the reading column. */}}
-            <nav aria-label="Sections" class="mb-12 border-b border-gray-200 overflow-x-auto">
-                <ul class="flex flex-nowrap gap-x-7 list-none pl-0 mb-0 -mb-px min-w-max">
-                    {{ range $groups }}
-                        <li class="m-0"><a href="#{{ .id }}" class="inline-block whitespace-nowrap py-3 text-sm font-medium text-gray-600 border-b-2 border-transparent hover:text-violet-700 hover:border-violet-500 transition-colors">{{ .short }}</a></li>
-                    {{ end }}
-                    {{ with $ts }}
-                        <li class="m-0"><a href="#{{ .id }}" class="inline-block whitespace-nowrap py-3 text-sm font-medium text-gray-600 border-b-2 border-transparent hover:text-violet-700 hover:border-violet-500 transition-colors">{{ .short }}</a></li>
-                    {{ end }}
-                </ul>
+        <div class="max-w-5xl mx-auto">
+            {{/* Section filter: an "All" pill plus one pill per section. The
+                 pills are real anchor links (no-JS fallback = jump to the
+                 section); what-is-list.ts intercepts clicks to show only the
+                 selected section in place and moves `.is-active`. */}}
+            <nav data-what-is-filter aria-label="Filter explainers" class="mb-10 flex flex-wrap items-center gap-3">
+                <button type="button" data-section="" data-track="what-is-filter-all" aria-current="page" class="btn btn-sm btn-outline text-sm is-active">All</button>
+                {{ range $groups }}
+                    <a href="#{{ .id }}" data-section="{{ .id }}" data-track="what-is-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .short }}</a>
+                {{ end }}
+                {{ with $ts }}
+                    <a href="#{{ .id }}" data-section="{{ .id }}" data-track="what-is-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .short }}</a>
+                {{ end }}
             </nav>
 
             {{/* Curated row groups. */}}
             {{ range $groups }}
-                <section id="{{ .id }}" class="mb-12 scroll-mt-20">
-                    <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
-                    <div class="divide-y divide-gray-200 border-t border-gray-200">
+                <section id="{{ .id }}" data-section="{{ .id }}" class="mb-12 scroll-mt-20">
+                    <h2 data-section-label class="no-anchor font-overline mb-3">{{ .title }}</h2>
+                    <div>
                         {{ range .pages }}{{ partial "what-is/row.html" . }}{{ end }}
                     </div>
                 </section>
@@ -102,12 +103,12 @@
 
             {{/* CLI recipes and error-resolution pages: compact links, not rows. */}}
             {{ with $ts }}
-                <section id="{{ .id }}" class="mt-14 pt-8 border-t border-gray-200 scroll-mt-20">
-                    <h2 class="no-anchor text-xl font-bold text-gray-900 mb-1">{{ .title }}</h2>
-                    <p class="text-sm text-gray-600 mb-4">Quick fixes and command references for running the AWS CLI with Pulumi ESC-issued dynamic credentials.</p>
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2 list-none pl-0">
+                <section id="{{ .id }}" data-section="{{ .id }}" class="mt-14 pt-8 scroll-mt-20">
+                    <h2 data-section-label class="no-anchor font-overline mb-3">{{ .title }}</h2>
+                    <p class="body-base text-gray-700 mb-4">Quick fixes and command references for running the AWS CLI with Pulumi ESC-issued dynamic credentials.</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 list-none pl-0">
                         {{ range .pages }}
-                            <li class="m-0"><a class="text-violet-700 hover:text-violet-900 hover:underline text-sm" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                            <li class="m-0"><a class="body-base text-violet-primary hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
                         {{ end }}
                     </ul>
                 </section>
