@@ -153,6 +153,10 @@ Policy as code can be applied in two key ways:
 
 By combining [IaC and policy as code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
 
+{{< blog/cta-card title="Build your internal developer platform" label="Explore Pulumi IDP" href="/product/internal-developer-platforms/" >}}
+Give developers self-service infrastructure with reusable components, golden paths, and governance built in using Pulumi IDP.
+{{< /blog/cta-card >}}
+
 ## Step 7: Evolving Towards Self-Service
 
 As your platform matures, the ultimate goal is to empower your application teams with self-service capabilities, allowing them to provision the infrastructure and resources they need quickly and autonomously. This self-service model can take various forms, from pre-defined infrastructure modules to fully automated deployment pipelines.

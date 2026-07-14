@@ -128,6 +128,10 @@ The new Pythonic input types are available in the latest release of the Pulumi S
 Due to a performance issue in MyPy, type checking of TypedDict-based inputs is currently disabled when using MyPy as a type checker.  We are working on helping resolve [this issue](https://github.com/python/mypy/issues/17231). In the meantime, we recommend using Pyright as a type checker to get the most complete type checking possible for Dict-based Pulumi Python programs.
 {{% /notes %}}
 
+{{< blog/cta-card title="Build infrastructure in Python" >}}
+Write your cloud infrastructure in Python with Poetry, built-in type checking, and idiomatic input types. Deploy your first stack, and manage it in Pulumi Cloud.
+{{< /blog/cta-card >}}
+
 ## Summary
 
 We hope you enjoy using these new features and we look forward to hearing your feedback. If you have any questions or need help, please don't hesitate to reach out to us on [Slack](https://pulumi-community.slack.com/) or [GitHub](https://github.com/pulumi/pulumi).

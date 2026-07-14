@@ -379,6 +379,10 @@ $ kubectl get update
 No resources found in default namespace.
 ```
 
+{{< blog/cta-card title="Run Pulumi inside your cluster" >}}
+Use the Pulumi Kubernetes Operator to deploy and manage cloud infrastructure with the Stack custom resource, driven by the Git changes your cluster already watches.
+{{< /blog/cta-card >}}
+
 ## Migration
 
 Ready to leverage these new features? Let's quickly cover how to migrate your existing setup to Pulumi Kubernetes Operator 2.0.

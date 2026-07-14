@@ -605,6 +605,10 @@ Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `
 
 ![img_6.png](pulumi_idp_deployment_git_view.png)
 
+{{< blog/cta-card title="Build golden paths with Pulumi" >}}
+Package your infrastructure patterns into reusable components and templates, publish them to a private registry, and let teams deploy production-ready stacks in minutes.
+{{< /blog/cta-card >}}
+
 ## Best Practices for Reusable Infrastructure Components and Templates
 
 Well-designed components and templates are the foundation of scalable, self-service infrastructure. These best practices ensure your abstractions are maintainable, discoverable, and production-ready.

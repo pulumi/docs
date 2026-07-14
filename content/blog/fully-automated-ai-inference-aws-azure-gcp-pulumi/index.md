@@ -548,6 +548,10 @@ The full programs, all three `Pulumi.<cloud>.yaml` files, and the shared `cloud-
 
 {{< github-card repo="dirien/fully-automated-ai-inference-pulumi" >}}
 
+{{< blog/cta-card title="Run GPU inference across three clouds" >}}
+Stand up an Ollama GPU box on AWS, Azure, or Google Cloud from one Pulumi program, with short-lived credentials brokered by Pulumi ESC and no static keys to rotate.
+{{< /blog/cta-card >}}
+
 ## Deploying
 
 Create a project, install the provider for your cloud, point the stack at `pulumi-idp/auth`, and deploy. For AWS:

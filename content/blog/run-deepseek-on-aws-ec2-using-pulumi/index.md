@@ -526,6 +526,10 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
+{{< blog/cta-card title="Deploy GPU infrastructure with Pulumi" >}}
+Provision the GPU EC2 instance, network, and IAM role for your self-hosted LLM in one program, then switch models with a single config change.
+{{< /blog/cta-card >}}
+
 ## How do I switch models?
 
 Ollama hosts every major open-weight family in its [model library](https://ollama.com/library). Pulling a different model is two commands inside the EC2 instance—or a one-line edit to the cloud-init script if you want it provisioned automatically:

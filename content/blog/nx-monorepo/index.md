@@ -277,6 +277,10 @@ Nx read the output from the cache instead of running the command for 2 out of 5 
 
 We can see that Nx used the cached results for 2 of our tasks, `s3folder` and `website-deploy` didn't change, so Nx skips rebuilding them. Nx also ran the other 3 tasks to generate the website's HTML, building the infra package and finally deploying the infra package.
 
+{{< blog/cta-card title="Ship infrastructure from your monorepo" >}}
+Colocate reusable Pulumi component resources, infrastructure programs, and application code in one monorepo, then build and deploy them together with Nx. Manage every stack in Pulumi Cloud.
+{{< /blog/cta-card >}}
+
 ## Conclusion
 
 In this post we've shown how we can combine Pulumi's code level abstractions with a build system to create a seamless developer workflow. By using a monorepo we can colocate our reusable components with the Pulumi programs that use the components, as well as our application code. Tools like Nx allow us to intelligently manage the dependencies between the packages in the monorepo, ensuring we are always deploying the correct version of the code.

@@ -307,6 +307,10 @@ The solution uses several key packages:
 - `@kubernetes/client-node`: For direct Kubernetes API access
 - Argo Rollouts CRDs installed in your cluster
 
+{{< blog/cta-card title="Manage Kubernetes config as code" >}}
+You can express patching logic, owner references, and rollout coordination in TypeScript instead of static YAML, and version every change to your cluster. Start a project to build your own revision workflow.
+{{< /blog/cta-card >}}
+
 ## When should you use this approach?
 
 This pattern is a good fit if you:

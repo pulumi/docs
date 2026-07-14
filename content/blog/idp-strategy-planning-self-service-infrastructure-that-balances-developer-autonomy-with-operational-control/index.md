@@ -235,6 +235,10 @@ When we walked through the demo in our workshop, what you saw was the culminatio
 Developers can discover available services, deploy infrastructure through whatever interface makes sense for them, and manage their resources over time, all without requiring tickets or manual intervention from platform teams.
 That's the promise of a well-designed IDP: developer autonomy without operational chaos.
 
+{{< blog/cta-card title="Put your IDP strategy into practice" >}}
+Build reusable components, golden paths, and self-service workflows on Pulumi, and give developers autonomy while you keep governance and costs in check.
+{{< /blog/cta-card >}}
+
 ## How to Implement Your IDP Strategy
 
 ### Supporting Different Personas in Your Internal Developer Platform Design

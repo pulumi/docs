@@ -169,6 +169,10 @@ This baseline covers the resources a platform team needs to standardize first:
 1. **Notebook**: stores the workload artifact in the workspace.
 1. **Job**: schedules the notebook on policy-constrained compute.
 
+{{< blog/cta-card title="Govern Databricks from day one" >}}
+Define your cluster policies, notebooks, jobs, and permissions in Pulumi, then promote the same governed baseline across every workspace with stacks.
+{{< /blog/cta-card >}}
+
 ## Validation
 
 After running `pulumi up`, you can validate your Databricks baseline:
