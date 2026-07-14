@@ -2,7 +2,7 @@
 title: "Connect Your Cloud Accounts to Pulumi in Minutes"
 date: 2026-07-15
 draft: false
-meta_desc: "Onboard your AWS, Azure, and Google Cloud accounts to Pulumi Insights in bulk with the new Connect cloud accounts wizard. OIDC-based, no stored secrets."
+meta_desc: "Onboard your AWS, Azure, and Google Cloud accounts to Pulumi Insights in bulk with the new Connect cloud accounts wizard. OIDC-based, no long-lived secrets."
 feature_image: feature.png
 authors:
     - levi-blackstone
@@ -17,17 +17,17 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        Onboarding a cloud account to Pulumi Insights used to mean manual OIDC setup and a hand-written ESC environment. In a recent demo, we connected 14 accounts across AWS, Azure, and Google Cloud in about 3 minutes.
+        Onboarding a cloud account to Pulumi Insights used to mean manual OIDC setup and a hand-written ESC environment. With the new Connect cloud accounts wizard, you can connect accounts across AWS, Azure, and Google Cloud in about 3 minutes.
 
         Here's what changed.
     linkedin: |
         Getting complete visibility across your cloud footprint has always had a bootstrapping problem: before Pulumi Insights can scan anything, every account has to be connected. Connecting one meant manual OIDC configuration, a hand-written ESC environment, and per-account scan and policy setup. Multiply that by hundreds of AWS accounts, Azure subscriptions, and Google Cloud projects, and many teams stopped short of a complete picture.
 
-        We just shipped a different approach. In a recent demo, we onboarded 14 accounts across all three clouds in about three minutes, with no long-lived secrets stored in Pulumi Cloud, read-only access where security teams require it, and scans and compliance policies running from day one.
+        We just shipped a different approach. The new wizard onboards a whole batch of accounts across all three clouds in about three minutes, with no long-lived secrets stored in Pulumi Cloud, read-only access where security teams require it, and scans and policies running from day one.
 
         Here's how the new Connect cloud accounts wizard works, and exactly what it creates in your accounts.
     bluesky: |
-        14 accounts across AWS, Azure, and Google Cloud, connected to Pulumi Insights in about three minutes. The same setup used to take hours to days of per-account OIDC and ESC configuration.
+        Connect your AWS, Azure, and Google Cloud accounts to Pulumi Insights in about three minutes. The same setup used to take hours to days of per-account OIDC and ESC configuration.
 
         We built a wizard that handles all of it. Here's how it works.
 ---
@@ -38,14 +38,14 @@ social:
 
 ## From hours of setup to a single flow
 
-The time savings are real: in a recent demo, I onboarded 14 accounts across AWS, Azure, and Google Cloud in about three minutes. Setting up those same accounts with the manual per-account workflow would have taken hours to days.
+The time savings are real: connecting a batch of accounts across AWS, Azure, and Google Cloud takes about three minutes end to end. Setting up those same accounts with the manual per-account workflow would take hours to days.
 
 The wizard handles the entire onboarding lifecycle for AWS, Microsoft Azure, and Google Cloud:
 
 - **Bulk discovery**: Authenticate once with your cloud organization and the wizard lists every account, subscription, or project you can access. Accounts that are already connected are recognized and skipped.
 - **Automatic OIDC setup**: The recommended flows configure each account with short-lived credentials based on OpenID Connect (OIDC) and workload identity federation. No long-lived cloud secrets are stored in Pulumi Cloud.
-- **ESC environments, created for you**: The wizard generates the [Pulumi ESC](/docs/esc/) environments that previously had to be written by hand, following the same patterns as the manual OIDC guides.
-- **Scans and policies from day one**: By default, scheduled discovery scans and a [pre-built compliance pack](/docs/insights/policy/policy-packs/pre-built-packs/) — CIS or NIST 800-53 — are applied to every account as part of setup.
+- **ESC environments, created for you**: The wizard generates [Pulumi ESC](/docs/esc/) environments that follow the best practices from the manual OIDC guides — environments that previously had to be authored one by one.
+- **Scans and policies from day one**: By default, scheduled discovery scans and a [pre-built policy pack](/docs/insights/policy/policy-packs/pre-built-packs/) are applied to every account as part of setup: the Pulumi Best Practices pack on the Team and Enterprise editions, or a compliance pack — CIS or NIST 800-53 — on Business Critical.
 
 ## How it works
 
@@ -59,7 +59,7 @@ Authentication uses each provider's native federation mechanism: IAM Identity Ce
 
 Not every team wants to grant write access on day one. The wizard offers two access levels, and you can set them per account:
 
-- **Build & Manage (read and write)**: Enables the full platform: [Pulumi Neo](/product/neo/), infrastructure as code, deployments, and policies that remediate issues automatically.
+- **Build & Manage (read and write)**: Enables the full platform: [Pulumi Neo](/product/neo/), infrastructure as code, deployments, and policies that remediate issues automatically (Business Critical).
 - **Discovery & Policy (read-only)**: Limited to discovery scanning and inventory. Pulumi can't modify your infrastructure.
 
 If your security review requires it, start everything read-only and raise access for specific accounts later.
