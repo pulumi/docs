@@ -26,9 +26,7 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 
 ## Account creation
 
-{{< video title="Column Selection" src="https://pulumi.com/uploads/insights-create-account.mp4" autoplay="true" loop="false" >}}
-
-1. After logging into the Pulumi Cloud Console, navigate to the **Accounts** tab.  
+1. After logging into the Pulumi Cloud Console, navigate to **Insights** > **Accounts**.  
 1. On this page, select the **Connect cloud accounts** button to open the connection wizard.  
 1. Select your provider.
 {{< notes type="info" >}}  
@@ -38,11 +36,10 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 {{< notes type="info" >}}  
   See below for details on how to set up the ESC environment for each provider.  
 {{< /notes >}}
-1. On the **Discovery** step, choose whether to enable scheduled scans or run them manually, and optionally enable a default policy pack. For AWS, also select the regions you want scanned; global services are always scanned.
-Scheduled scans run every 24 hours by default; you can switch to a 12-hour schedule instead.  
+1. On the **Discovery** step, review the defaults: scheduled scans and policy evaluation are both enabled, with a default policy pack pre-selected, and you can turn either off. Scans run every 24 hours; you can switch to a 12-hour schedule instead. For AWS, also select the [partition](#aws-partitions) the account belongs to and the regions you want scanned; global services are always scanned.  
 1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. The account is named after the selected ESC environment.
 {{< notes type="info" >}}  
-  Pulumi automatically names child accounts using `/`. For more information, see **Account Hierarchies** below.  
+  Child accounts are automatically named with a `/` separator (for example, `<account>/us-east-1`). For more information, see **Account hierarchies** below.  
 {{< /notes >}}
 
 {{< notes type="info" >}}  
@@ -101,7 +98,7 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
 
 #### AWS partitions
 
-Pulumi Insights supports every AWS partition. Select the partition that matches the account you are scanning when you create the Insights account:
+Pulumi Insights supports every AWS partition. Select the partition that matches the account you are scanning on the **Discovery** step when you create the Insights account:
 
 * AWS Standard (commercial)
 * AWS GovCloud (US)
@@ -112,7 +109,7 @@ Pulumi Insights supports every AWS partition. Select the partition that matches 
 * AWS European Sovereign Cloud
 * AWS China
 
-The selected partition determines which STS endpoint the scanner uses to exchange credentials and which regions are available for discovery. Within a partition, you can also exclude specific regions from scanning — useful when a region is disabled for your account or out of scope for a given audit.
+The selected partition determines which STS endpoint the scanner uses to exchange credentials and which regions are available for discovery. Within a partition, you choose which regions to scan — useful when a region is disabled for your account or out of scope for a given audit.
 
 ![Choosing an AWS partition when creating an Insights account](/docs/insights/assets/insights-account-discovery-aws-partitions.png)
 

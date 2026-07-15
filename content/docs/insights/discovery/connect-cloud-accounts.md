@@ -10,14 +10,14 @@ menu:
     weight: 15
 ---
 
-The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. No long-lived cloud secrets are stored in Pulumi Cloud.
+The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. With the recommended authentication options, no long-lived cloud secrets are stored in Pulumi Cloud.
 
 The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
 
 ## Prerequisites
 
 - You must have permission in your Pulumi organization to connect cloud accounts and create ESC environments. Organization admins have these permissions by default. Members without them see a screen asking them to contact an organization admin.
-- You need administrative access to the cloud organization you are connecting: the ability to authorize applications and create IAM resources in AWS, grant admin consent in Microsoft Entra ID, or grant organization-level roles in Google Cloud. The exact permissions for each provider are described in [Step 2: Authenticate](#step-2-authenticate).
+- You need administrative access to the cloud organization you are connecting: the ability to authorize applications and create IAM resources in AWS, grant admin consent in Microsoft Entra ID, or grant organization-level roles in Google Cloud. The access each provider flow requests is described in [Step 2: Authenticate](#step-2-authenticate).
 
 {{% notes type="info" %}}
 Resource scans and policy evaluations consume workflow minutes and can incur charges beyond your plan's included allowance. See [Pulumi pricing](/pricing/) for details.
@@ -134,7 +134,9 @@ For AWS, choose the regions to scan. The defaults are `us-east-1`, `us-east-2`, 
 
 ### Policy pack
 
-Policy evaluation is enabled by default, and the pack depends on your organization's plan. The Team and Enterprise editions apply the Pulumi Best Practices pack for your provider. The Business Critical edition applies a provider-specific compliance pack by default (the CIS AWS Foundations Benchmark, CIS Microsoft Azure Foundations Benchmark, or CIS Google Cloud Platform Foundations Benchmark), and you can choose NIST 800-53 instead. You can also turn policy off. See [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for what each pack checks, and [Pricing](/pricing/) for plan availability.
+Policy evaluation is enabled by default, and the pack depends on your organization's plan. The Team and Enterprise editions apply the Pulumi Best Practices pack for your provider. The Business Critical edition applies a provider-specific compliance pack by default (the CIS AWS Foundations Benchmark, CIS Microsoft Azure Foundations Benchmark, or CIS Google Cloud Platform Foundations Benchmark), and for AWS or Google Cloud, you can choose NIST 800-53 instead. You can also turn policy off. See [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for what each pack checks, and [Pricing](/pricing/) for plan availability.
+
+When you're done, select **Next**. The wizard then creates the resources described in [What the wizard creates](#what-the-wizard-creates) and connects each selected account.
 
 ## Step 5: Review the summary
 
@@ -181,8 +183,11 @@ Connecting a cloud account creates an ESC environment and a trust role in your c
 
 ## Next steps
 
-- [Get started with Insights Discovery](/docs/insights/discovery/get-started/)
 - [Search your discovered resources](/docs/insights/discovery/search/)
 - [Review policy findings](/docs/insights/policy/policy-findings/)
 - [Import discovered resources into Pulumi IaC](/docs/insights/discovery/visual-import/)
-- [Learn more about Pulumi ESC](/docs/esc/)
+
+## Learn more
+
+- [Get started with Insights Discovery](/docs/insights/discovery/get-started/)
+- [Pulumi ESC](/docs/esc/)

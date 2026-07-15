@@ -84,7 +84,7 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 
     ![Insights Policies - New Policy Pack](/docs/insights/assets/enable-policy-pack.png)
 
-1. Now add your insights account to the policy group. Select **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. insights-aws-account/us-west-2) Finally, select **Add account to policy group**
+1. Now add your insights account to the policy group. Select **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. insights-discovery-env/us-west-2) Finally, select **Add account to policy group**
 
 {{% notes type="info" %}}
 By default, all accounts and stacks are automatically added to the `default-policy-group`.
@@ -93,7 +93,7 @@ By default, all accounts and stacks are automatically added to the `default-poli
 ![Insights Policies - New Policy Pack](/docs/insights/assets/new-policy-pack.png)
 
 {{< notes type="info" >}}
-When adding accounts to a policy group, make sure to include both the parent account name and the region if you want to evaluate region-specific resources. For example: `insights-aws-account/us-west-2`
+When adding accounts to a policy group, make sure to include both the parent account name and the region if you want to evaluate region-specific resources. For example: `insights-discovery-env/us-west-2`
 {{< /notes >}}
 
 ## Running a policy scan
