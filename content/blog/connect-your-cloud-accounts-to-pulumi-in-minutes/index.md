@@ -45,7 +45,7 @@ The wizard handles the entire onboarding lifecycle for AWS, Microsoft Azure, and
 - **Bulk discovery**: Authenticate once with your cloud organization and the wizard lists every account, subscription, or project you can access. Accounts that are already connected are recognized and skipped.
 - **Automatic OIDC setup**: The recommended flows configure each account with short-lived credentials based on OpenID Connect (OIDC) and workload identity federation. No long-lived cloud secrets are stored in Pulumi Cloud.
 - **ESC environments, created for you**: The wizard generates [Pulumi ESC](/docs/esc/) environments that follow the best practices from the manual OIDC guides — environments that previously had to be authored one by one.
-- **Scans and policies from day one**: By default, scheduled discovery scans and a [pre-built policy pack](/docs/insights/policy/policy-packs/pre-built-packs/) are applied to every account as part of setup: the Pulumi Best Practices pack on the Team and Enterprise editions, or a compliance pack — CIS or NIST 800-53 — on Business Critical.
+- **Scans and policies from day one**: By default, scheduled discovery scans and a [pre-built policy pack](/docs/insights/policy/policy-packs/pre-built-packs/) are applied to every account as part of setup: the Pulumi Best Practices pack on the Team and Enterprise editions, or a compliance pack (CIS, or NIST 800-53 for AWS and Google Cloud) on Business Critical.
 
 ## How it works
 
