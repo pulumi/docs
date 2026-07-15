@@ -22,6 +22,12 @@ date: {{ substr .Name 0 10 }}
 # Required — the build fails the linter without it. Max length 160 characters.
 meta_desc:
 
+# Who authored the entry — a YAML array of team ids from data/team/team,
+# rendered as an "— Name" byline. Defaults to the changelog's usual author;
+# change it (or, rarely, remove the field) when someone else wrote the entry.
+authors:
+    - christian-nunciato
+
 # Optional pricing-tier availability, shown as badge(s) beside the date. A YAML
 # array drawn only from the four pricing tiers (Free, Team, Enterprise, Business
 # Critical — see content/pricing/_index.md); `make lint` enforces the set. List

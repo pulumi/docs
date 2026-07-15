@@ -5,7 +5,7 @@ aliases:
     - /releases/changelog/esc-change-request-edit-review/
 meta_desc: Pulumi ESC change requests now separate editing a draft from reviewing one, with deep-linkable modes so several people can co-edit before approval.
 authors:
-    - claire-gaestel
+    - christian-nunciato
 tiers:
     - Enterprise
     - Business Critical

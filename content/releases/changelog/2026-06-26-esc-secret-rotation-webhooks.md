@@ -5,7 +5,7 @@ aliases:
     - /releases/changelog/esc-secret-rotation-webhooks/
 meta_desc: ESC rotation webhooks notify you immediately whenever a secret rotation happens.
 authors:
-    - sean-yeh
+    - christian-nunciato
 ---
 
 [ESC secret-rotation webhooks](/docs/esc/concepts/webhooks/) enable you to be notified whenever an ESC secret rotation happens, so your dependent services can take action accordingly.

@@ -5,7 +5,7 @@ aliases:
     - /releases/changelog/git-tag-deployments/
 meta_desc: You can now push a Git tag to trigger a Pulumi deployment from any supported service, including GitHub, GitLab, Bitbucket, Azure DevOps, and more.
 authors:
-    - michael-fallihee
+    - christian-nunciato
 ---
 
 You can now push a Git tag to your Pulumi Cloud-connected version control system to trigger a Pulumi deployment. Available to all Pulumi Cloud organizations, this new feature also supports optional glob filters and works across any supported VCS, including GitHub, GitLab, Bitbucket, Azure DevOps, and custom integrations.

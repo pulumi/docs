@@ -5,7 +5,7 @@ aliases:
     - /releases/changelog/neo-task-notifications/
 meta_desc: Neo can now notify you when a task needs your input, through native desktop notifications, an audible sound, or both.
 authors:
-    - mark-huber
+    - christian-nunciato
 ---
 
 Neo can now notify you when a task needs your input, either through native desktop notifications, an audible sound, or both. As you delegate more tasks to Neo and work more asynchronously, you'll know right away whenever Neo is finished and waiting for you.

@@ -5,7 +5,7 @@ aliases:
     - /releases/changelog/pulumi-env-cli/
 meta_desc: The standalone Pulumi ESC CLI is being retired in favor of pulumi env.
 authors:
-    - boris-schlosser
+    - christian-nunciato
 ---
 
 When we introduced Pulumi ESC, we shipped it as both a [standalone CLI tool](https://github.com/pulumi/esc) (`esc`) as well as a subcommand of the Pulumi CLI (`pulumi env`). Both offered the same functionality, but since the majority of ESC users also use Pulumi IaC, we've chosen to retire the standalone CLI in favor of a unified [`pulumi env`](/docs/iac/cli/commands/pulumi_env/).

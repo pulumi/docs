@@ -5,7 +5,7 @@ aliases:
     - /releases/changelog/neo-code-reviews/
 meta_desc: Neo code reviews help you understand not just your team's proposed changes, but how those changes affect your running environments.
 authors:
-    - neo-team
+    - christian-nunciato
 ---
 
 As of today, [Pulumi Neo code reviews](/docs/ai/code-reviews/) are available in public preview.

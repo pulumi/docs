@@ -5,7 +5,7 @@ aliases:
     - /releases/changelog/github-enterprise-server-individual-auth/
 meta_desc: Self-hosted GitHub Enterprise operations now run as the user who triggered them.
 authors:
-    - luke-ward
+    - christian-nunciato
 tiers:
     - Business Critical
 ---

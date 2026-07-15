@@ -3,7 +3,7 @@ title: "Usage limits for Pulumi Neo"
 date: 2026-07-14
 meta_desc: Set a monthly dollar limit on Pulumi Neo usage, for your whole organization or per member, with email alerts as usage climbs.
 authors:
-    - john-keiser
+    - christian-nunciato
 ---
 
 You can now set monthly usage limits for [Pulumi Neo](/docs/ai/) to help keep your costs under control as you use Neo to handle more infrastructure tasks.
