@@ -110,7 +110,7 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // Theme-aware logos (the docs-top-nav header and docs-home cards emit both a
+    // Theme-aware logos (the header nav and docs-home cards emit both a
     // .docs-logo-light and .docs-logo-dark image): show the dark-variant image,
     // hide the light one. .docs-logo-dark is display:none by default (below), so
     // light/non-docs pages are untouched.
@@ -122,17 +122,33 @@ html[data-theme="dark"] body.section-docs {
         display: inline-block;
     }
 
-    // Top header (docs-top-nav.html) — utilities: bg-white, border-gray-200, text-gray-950.
-    header.docs-top-nav {
+    // Marketing nav (header/nav.html), now reused on docs — dark skin. The bar
+    // lives at `body > header`; its desktop dropdown popup, mobile sheet, and the
+    // logo brand menu render as body-level siblings, so they're matched on their
+    // data-attributes rather than nested under the header. Utilities in play:
+    // bg-white, border-gray-200/100, text-gray-950/800/600/500, text-violet-700,
+    // hover:bg-violet-50 — none of which flip on their own.
+    > header {
         background-color: var(--docs-bg);
         border-bottom-color: var(--docs-border);
         color: var(--docs-fg);
+    }
 
+    // Ghost + outline buttons in the bar and the mobile sheet footer.
+    > header,
+    [data-nav-sheet] {
         .btn-ghost-nav {
             color: var(--docs-fg);
 
             &:hover {
                 background-color: var(--docs-surface);
+                color: var(--color-violet-300);
+            }
+
+            // Open/active trigger — `.btn-ghost-nav` pins `aria-expanded:bg-violet-50`
+            // (a light lavender) that doesn't flip on its own.
+            &[aria-expanded="true"] {
+                background-color: color-mix(in oklch, var(--color-violet-300) 16%, transparent);
                 color: var(--color-violet-300);
             }
         }
@@ -147,19 +163,78 @@ html[data-theme="dark"] body.section-docs {
                 border-color: var(--docs-border);
             }
         }
+    }
 
-        [data-logo-nav-menu] {
-            background-color: var(--color-gray-950);
+    // Dropdown popup (desktop), mobile sheet panel, and the logo brand menu —
+    // all `card bg-white text-gray-950` surfaces. Repaint the card + its text,
+    // borders, icon accents, and item hover states.
+    [data-nav-popup],
+    [data-nav-sheet],
+    [data-brand-menu] {
+        background-color: var(--docs-card);
+        color: var(--docs-fg);
+        border-color: var(--docs-card-border);
+
+        .text-gray-950,
+        .text-gray-800 {
+            color: var(--docs-fg);
+        }
+
+        .text-gray-600,
+        .text-gray-500,
+        .text-gray-400 {
+            color: var(--docs-fg-muted);
+        }
+
+        .border-gray-200,
+        .border-gray-100 {
+            border-color: var(--docs-border);
+        }
+
+        // Dropdown-item icon accent pins literal violet-700 (doesn't flip).
+        .text-violet-700 {
+            color: var(--color-violet-300);
+        }
+
+        // Item hover: nav-dropdown-item `.group`, sheet nav links, collapsible
+        // triggers, and brand-menu items. Violet tint + lighter text/icon.
+        .group:hover,
+        > ul a:hover,
+        > ul button:hover,
+        nav > a:hover,
+        [data-nav-collapsible-trigger]:hover {
+            background-color: color-mix(in oklch, var(--color-violet-300) 16%, transparent);
+            color: var(--color-violet-200);
+        }
+
+        .group:hover {
+            .text-gray-950,
+            .text-gray-800 {
+                color: var(--color-violet-200);
+            }
+
+            .border-gray-200 {
+                border-color: color-mix(in oklch, var(--color-violet-300) 40%, transparent);
+            }
+        }
+    }
+
+    // Footer CTA band (footer/cta.html) — a near-white lavender in light mode;
+    // darken to the docs alt surface so it reads on a dark page. Its outline
+    // button reuses the transparent dark treatment; the primary button keeps its
+    // pinned violet fill.
+    section.bg-violet-background {
+        background-color: var(--docs-bg-alt);
+        color: var(--docs-fg);
+
+        .btn-outline {
+            background-color: transparent;
             color: var(--docs-fg);
             border-color: var(--docs-border);
 
-            a {
-                color: var(--docs-fg);
-
-                &:hover {
-                    background-color: color-mix(in oklch, var(--color-violet-300) 16%, transparent);
-                    color: var(--color-violet-200);
-                }
+            &:hover {
+                background-color: var(--docs-surface);
+                border-color: var(--docs-border);
             }
         }
     }
