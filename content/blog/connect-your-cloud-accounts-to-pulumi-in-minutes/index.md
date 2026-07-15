@@ -49,7 +49,7 @@ The wizard handles the entire onboarding lifecycle for AWS, Microsoft Azure, and
 
 ## How it works
 
-The wizard walks you through five steps: choose a provider, authenticate, select accounts, configure discovery and policy, and review the results. You can open it from **Insights** > **Accounts** in the Pulumi Cloud console, or from the **Get to know Pulumi** card on the home dashboard.
+The wizard walks you through five steps: choose a provider, authenticate, select accounts, configure discovery and policy, and review the results. You can open it from **Management** > **Accounts** in the Pulumi Cloud console, or from the **Get to know Pulumi** card on the home dashboard.
 
 Authentication uses each provider's native federation mechanism: IAM Identity Center (SSO) for AWS, Microsoft Entra ID workload identity federation for Azure, and Workload Identity Federation for Google Cloud. After you sign in, the wizard discovers the accounts in your organization and pre-selects everything that isn't already connected. You can search, select all, or toggle individual accounts.
 
@@ -78,7 +78,7 @@ For security reviewers, the docs include a full accounting of [what the wizard c
 
 The Connect cloud accounts wizard is available now for all Pulumi Cloud organizations. To connect your first accounts:
 
-1. Navigate to [**Insights** > **Accounts**](https://app.pulumi.com/) in the Pulumi Cloud console and select **Connect cloud accounts**.
+1. Navigate to [**Management** > **Accounts**](https://app.pulumi.com/) in the Pulumi Cloud console and select **Connect cloud accounts**.
 1. Follow the guided flow for AWS, Azure, or Google Cloud.
 1. Explore your [discovered resources](/docs/insights/discovery/search/) and [policy findings](/docs/insights/policy/policy-findings/).
 
