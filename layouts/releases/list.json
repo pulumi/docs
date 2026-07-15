@@ -4,14 +4,18 @@
     A single machine-readable document built from this section's pages
     (.RegularPagesRecursive — see content/releases/_index.md), emitted
     newest-first by date. One flat entry per page:
-      { type: "release" | "changelog", title, date, url, description?, tier? }
+      { type: "release" | "changelog", title, date, url, description?, tiers?, body? }
     description comes from the page's short_description (releases) or
-    meta_desc (changelog items). Individual release cards and changelog bodies
-    are not expanded here — follow each entry's url for the full content.
+    meta_desc (changelog items). body is the entry's rendered HTML content —
+    the minimal fragment (no page chrome), with root-relative links and assets
+    rewritten to absolute URLs so off-domain consumers resolve them. Present
+    only when the page has a body (changelog items always do; full releases
+    render from section params and usually don't).
     Mirrors layouts/index.json and the dict/slice/append + jsonify style of
     layouts/docs/list.llmsitemap.json.
 */ -}}
 {{- $entries := slice -}}
+{{- $base := strings.TrimSuffix "/" site.BaseURL -}}
 {{- range .RegularPagesRecursive.ByDate.Reverse -}}
     {{- $type := cond (eq .Type "changelog") "changelog" "release" -}}
     {{- $entry := dict
@@ -22,7 +26,13 @@
     {{- with or .Params.short_description .Params.meta_desc -}}
         {{- $entry = merge $entry (dict "description" (. | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " ")) -}}
     {{- end -}}
-    {{- with .Params.tier -}}{{- $entry = merge $entry (dict "tier" .) -}}{{- end -}}
+    {{- with .Params.tiers -}}{{- $entry = merge $entry (dict "tiers" .) -}}{{- end -}}
+    {{- with .Content -}}
+        {{- /* Absolutize root-relative links/assets ("/..."), skipping
+             protocol-relative "//" URLs, so off-domain consumers resolve them. */ -}}
+        {{- $body := . | chomp | replaceRE "(href|src)=\"/([^/])" (printf "${1}=\"%s/${2}" $base) -}}
+        {{- $entry = merge $entry (dict "body" $body) -}}
+    {{- end -}}
     {{- $entries = $entries | append $entry -}}
 {{- end -}}
 

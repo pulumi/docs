@@ -1,0 +1,92 @@
+{{- /*
+    Releases index body — shared by /releases/ (list view) and
+    /releases/changelog/ (expanded view). Both render the same month-grouped
+    feed of the releases section; the view param picks each changelog item's
+    form — a compact row (list) or its full body (expanded) — in
+    releases/changelog-item.html.
+
+    The view control is two plain links — no JS, no persisted state: List points
+    at /releases/, Expanded at /releases/changelog/, and the current page's link
+    carries aria-current="page" for the selected style. In list view the compact
+    rows open in a modal (theme/src/ts/releases.ts); in expanded view each item's
+    heading links straight to its detail page.
+
+    Params:
+    - releases: the /releases section page (iterated for entries; also supplies
+      the title and the RSS output format).
+    - view: "list" | "expanded".
+*/ -}}
+{{- $releases := .releases -}}
+{{- $view := .view -}}
+{{- $listURL := $releases.RelPermalink -}}
+{{- $expandedURL := "/releases/changelog/" -}}
+{{- with site.GetPage "/releases/changelog" }}{{ $expandedURL = .RelPermalink }}{{ end -}}
+<style>
+    /* Active pill in the view toggle — mirrors the blog category filter's
+       selected state ([data-blog-filter] .is-active). */
+    [data-releases-toggle] [aria-current="page"] {
+        border-color: var(--color-gray-500);
+        background-color: var(--color-gray-100);
+    }
+</style>
+<div class="font-body container mx-auto mb-16 mt-8 px-4 md:px-8 flex flex-col gap-6 md:gap-8">
+
+    <header class="w-full max-w-6xl mx-auto px-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <h1 class="heading-xl font-display font-semibold m-0 md:my-4">{{ $releases.Title }}</h1>
+
+        <div class="flex items-center gap-3">
+            {{/* List / Expanded view toggle — plain links to the two URLs. */}}
+            <div data-releases-toggle role="group" aria-label="Changelog view" class="btn-group">
+                <a href="{{ $listURL }}" {{ if eq $view "list" }}aria-current="page"{{ end }} aria-label="Compact list view" title="Compact list" class="btn btn-icon-sm btn-outline">
+                    {{ partial "icon.html" (dict "name" "list-dashes") }}
+                </a>
+                <a href="{{ $expandedURL }}" {{ if eq $view "expanded" }}aria-current="page"{{ end }} aria-label="Expanded view" title="Expanded" class="btn btn-icon-sm btn-outline">
+                    {{ partial "icon.html" (dict "name" "rows") }}
+                </a>
+            </div>
+
+            {{ with $releases.OutputFormats.Get "rss" }}
+            <a href="{{ .RelPermalink }}" target="_blank" rel="noopener" aria-label="Pulumi Releases RSS feed" data-track="releases-rss" class="btn btn-icon btn-ghost shrink-0">
+                {{ partial "icon.html" (dict "name" "rss" "class" "size-6") }}
+            </a>
+            {{ end }}
+        </div>
+    </header>
+
+    <div class="flex flex-col gap-8">
+        {{/* Newest-first month groups of auto-discovered pages (see the releases
+             section's _index.md): full releases render as large cards, changelog
+             items as compact rows (list view) or full inline bodies (expanded). */}}
+        {{ range $releases.RegularPagesRecursive.GroupByDate "January 2006" }}
+        <section class="flex flex-col gap-6">
+            <h2 class="font-overline font-normal w-full max-w-6xl mx-auto px-8 m-0 -mb-2">{{ .Key }}</h2>
+
+            {{ range where .Pages "Type" "releases" }}
+            {{ partial "releases/release-item.html" (dict
+                "overline" .Params.label
+                "heading" .Title
+                "description" .Params.short_description
+                "feature_image" .Params.feature_image
+                "feature_image_alt" .Params.feature_image_alt
+                "link" .RelPermalink
+            ) }}
+            {{ end }}
+
+            {{ with where .Pages "Type" "changelog" }}
+            <ul class="list-none p-0 m-0 flex flex-col w-full max-w-6xl mx-auto px-8">
+                {{ range . }}
+                {{ partial "releases/changelog-item.html" (dict "page" . "view" $view) }}
+                {{ end }}
+            </ul>
+            {{ end }}
+        </section>
+        {{ end }}
+    </div>
+
+</div>
+
+{{/* The modal only serves the compact rows; expanded items link straight to
+     their detail pages. */}}
+{{ if eq $view "list" }}
+{{ partial "releases/changelog-modal.html" $releases }}
+{{ end }}

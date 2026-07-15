@@ -7,6 +7,10 @@
 // navigation renders the full page. Closing the modal goes back in history;
 // back/forward buttons close/reopen it via popstate.
 
+// The List / Expanded view control is two plain links (list -> /releases/,
+// expanded -> /releases/changelog/), so it needs no JS — see
+// layouts/partials/releases/changelog-index.html.
+
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.querySelector<HTMLElement>("[data-changelog-modal]");
     if (!modal) return;
@@ -71,7 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
         content.querySelectorAll<HTMLVideoElement>("video").forEach(video => {
             video.load();
             if (video.autoplay) {
-                video.play().catch(() => { /* autoplay may be blocked (e.g. iOS Low Power Mode); the first frame still shows */ });
+                video.play().catch(() => {
+                    /* autoplay may be blocked (e.g. iOS Low Power Mode); the first frame still shows */
+                });
             }
         });
         modal.classList.remove("hidden");

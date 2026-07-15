@@ -1,0 +1,50 @@
+{
+    "_comment": "Eval fixtures for the /event-meta-image skill. Each runs the skill headless via claude -p (see run.mjs). All use STANDALONE mode + an explicit output dir so they never mutate content/events/. CORE fixtures (web:false) resolve entirely from local files / the bundled logo cache, so they are deterministic and gate a model's pass/fail. WEB fixtures (web:true) exercise live WebSearch/WebFetch sourcing; they run and report separately and only gate under --web-strict, because search results and headshot availability shift over time. `expect.logosInclude` / `expect.additionalTextIncludes` are case-insensitive substring matches; `expect.speakers` is config.speakers.length. `forceMissLogo` names a cache basename run.mjs deletes before AND after the run so the fixture always forces a real web fetch and leaves the committed cache clean. `soft:true` marks a fixture whose failures are always WARN (never gate), for inherently flaky resolution like auth-gated headshots.",
+    "outBase": ".context/event-images/eval",
+    "fixtures": [
+        {
+            "id": "standalone-basic",
+            "web": false,
+            "prompt": "Standalone mode, no questions. Do not touch content/events. Write config.json and all five PNGs into OUTDIR. Title: \"Eval Basic Card One\". Overline: WEBINAR. No presenters, no partners.",
+            "expect": { "showButton": false, "speakers": 0, "logosInclude": ["pulumi"] }
+        },
+        {
+            "id": "with-presenters",
+            "web": false,
+            "prompt": "Standalone mode, no questions. Do not touch content/events. Write config.json and all five PNGs into OUTDIR. Title: \"Eval Presenters Card Two\". Overline: WORKSHOP. Two presenters: Piers Karsenbarg - Senior Solutions Engineer, Pulumi (photo /images/team/piers-karsenbarg.jpg) and Torian Crane - Senior Technical Content Engineer, Pulumi (photo /images/team/torian-crane.jpg). No partner logos.",
+            "expect": { "showButton": false, "speakers": 2, "logosInclude": ["pulumi"] }
+        },
+        {
+            "id": "button-requested",
+            "web": false,
+            "prompt": "Standalone mode, no questions. Do not touch content/events. Write config.json and all five PNGs into OUTDIR. Title: \"Eval Button Card Three\". Overline: WEBINAR. Include a Register button on the card.",
+            "expect": { "showButton": true, "speakers": 0, "logosInclude": ["pulumi"] }
+        },
+        {
+            "id": "partner-logo-cached",
+            "web": false,
+            "prompt": "Standalone mode, no questions. Do not touch content/events. Write config.json and all five PNGs into OUTDIR. Title: \"Eval Partner Card Four\". Overline: WORKSHOP. This workshop is co-hosted with Microsoft — include the Microsoft logo alongside Pulumi.",
+            "expect": { "showButton": false, "speakers": 0, "logosInclude": ["pulumi", "microsoft"] }
+        },
+        {
+            "id": "unattended",
+            "web": false,
+            "prompt": "--yes standalone. Do not touch content/events. Write config.json and all five PNGs into OUTDIR. Title: \"Eval Unattended Card Five\". Overline: PANEL. Run end to end with sensible defaults and ask me nothing.",
+            "expect": { "showButton": false, "speakers": 0, "logosInclude": ["pulumi"] }
+        },
+        {
+            "id": "partner-logo-web",
+            "web": true,
+            "forceMissLogo": "nvidia",
+            "prompt": "Standalone mode, no questions. Do not touch content/events. Write config.json and all five PNGs into OUTDIR. Title: \"Eval Web Logo Card\". Overline: WORKSHOP. This workshop is co-hosted with NVIDIA — source the NVIDIA logo from the web (a transparent, horizontal wordmark) and include it alongside Pulumi.",
+            "expect": { "showButton": false, "speakers": 0, "logosInclude": ["pulumi", "nvidia"] }
+        },
+        {
+            "id": "external-presenter-web",
+            "web": true,
+            "soft": true,
+            "prompt": "Standalone mode, no questions. Do not touch content/events. Write config.json and all five PNGs into OUTDIR. Title: \"Eval Web Speaker Card\". Overline: WEBINAR. Co-presented with Kelsey Hightower (independent). Search the web for a headshot; if you cannot find one, still list him in the byline.",
+            "expect": { "showButton": false, "additionalTextIncludes": ["Kelsey Hightower"], "logosInclude": ["pulumi"] }
+        }
+    ]
+}

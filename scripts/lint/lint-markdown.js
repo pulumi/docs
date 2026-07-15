@@ -265,6 +265,59 @@ function checkChangelogFilename(date, fullPath) {
 }
 
 /**
+ * The four pricing tiers (see content/pricing/_index.md). A changelog entry's
+ * optional `tiers:` front matter may only draw from this closed set. Kept in
+ * sync by hand — the pricing tiers change rarely.
+ */
+const CHANGELOG_TIERS = ["Free", "Team", "Enterprise", "Business Critical"];
+
+/**
+ * checkChangelogTiers validates the optional `tiers:` front matter on individual
+ * changelog entries: it must be a YAML array whose values are all drawn from the
+ * four pricing tiers (CHANGELOG_TIERS). Authors list every tier the feature is
+ * available in; since a lower tier implies the tiers above it, that means the
+ * lowest applicable tier and all tiers above it. The legacy singular `tier:`
+ * scalar is rejected in favor of `tiers:`. Applies only to entry pages, not the
+ * section `_index.md`.
+ *
+ * @param {*} tiers The front matter `tiers` value.
+ * @param {*} tier The front matter `tier` value (legacy; rejected if present).
+ * @param {string} fullPath The absolute path of the file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkChangelogTiers(tiers, tier, fullPath) {
+    const normalized = fullPath.replace(/\\/g, "/");
+    const isChangelogEntry =
+        normalized.includes("/content/releases/changelog/") &&
+        path.basename(normalized) !== "_index.md";
+    if (!isChangelogEntry) {
+        return null;
+    }
+
+    if (tier !== undefined) {
+        return "Changelog `tier:` has been replaced by `tiers:`, a YAML array (e.g. `tiers:` then `    - Enterprise`). List every tier the feature is available in — the lowest applicable tier and all tiers above it.";
+    }
+    if (tiers === undefined) {
+        return null;
+    }
+    if (!Array.isArray(tiers)) {
+        return "Changelog `tiers:` must be a YAML array (e.g. `tiers:` then `    - Enterprise`), not a single value.";
+    }
+    const invalid = tiers.filter(function (t) {
+        return !CHANGELOG_TIERS.includes(t);
+    });
+    if (invalid.length > 0) {
+        const quoted = invalid
+            .map(function (t) {
+                return "'" + t + "'";
+            })
+            .join(", ");
+        return "Changelog `tiers:` value(s) " + quoted + " not allowed. Use only the pricing tiers: " + CHANGELOG_TIERS.join(", ") + ".";
+    }
+    return null;
+}
+
+/**
  * Asset directories under content/releases/changelog/ whose files must be
  * date-prefixed, mirroring the entry-filename convention (checkChangelogFilename)
  * so the shared folders don't turn into an undated jumble.
@@ -406,6 +459,7 @@ function searchForMarkdown(paths) {
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
+                    changelogTiers: checkChangelogTiers(obj.tiers, obj.tier, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -538,6 +592,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.changelogFilename,
+                });
+            }
+            if (frontMatterErrors.changelogTiers) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.changelogTiers,
                 });
             }
         }

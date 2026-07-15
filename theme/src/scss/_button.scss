@@ -14,7 +14,7 @@
            disabled:pointer-events-none disabled:opacity-50
            aria-disabled:pointer-events-none aria-disabled:opacity-50
            aria-invalid:border-red-600 aria-invalid:ring-3 aria-invalid:ring-red-600/20
-           [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4
+           [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-5
            h-9 px-2.5 py-1.75;
 }
 
@@ -40,6 +40,24 @@
     > .btn:hover, > .btn:focus-visible      { @apply z-10; }
     > .btn:first-child                      { @apply rounded-r-none; }
     > .btn:last-child                       { @apply rounded-l-none -ml-px px-2; }
+}
+
+// Button group — joins two or more .btn segments into one flush control (e.g. a
+// segmented toggle). -ml-px overlaps adjacent borders into a single seam; only
+// the outer corners round. relative + z-on-hover/focus/active lifts the engaged
+// segment so its full border (including the seam edge) renders above neighbors —
+// mark the selected segment with aria-pressed="true" (toggle buttons) or
+// aria-current="page" (links).
+.btn-group {
+    @apply inline-flex;
+
+    > .btn                                          { @apply relative rounded-none; }
+    > .btn:hover, > .btn:focus-visible,
+    > .btn[aria-pressed="true"],
+    > .btn[aria-current="page"]                      { @apply z-10; }
+    > .btn:not(:first-child)                         { @apply -ml-px; }
+    > .btn:first-child                               { @apply rounded-l-lg; }
+    > .btn:last-child                                { @apply rounded-r-lg; }
 }
 
 // Sizes — override the base h-9 / px-2.5

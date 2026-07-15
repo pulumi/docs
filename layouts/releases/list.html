@@ -2,43 +2,8 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="font-body container mx-auto mb-16 mt-8 px-4 md:px-8 flex flex-col gap-6 md:gap-8">
-
-    <header class="text-center max-w-3xl mx-auto">
-        <h1 class="heading-xl font-display font-semibold m-0 md:my-4">{{ .Title }}</h1>
-    </header>
-
-    <div class="flex flex-col gap-8">
-        {{/* Newest-first month groups of auto-discovered pages (see _index.md):
-             full releases render as large cards, changelog items as linked rows
-             that open in a modal (theme/src/ts/releases.ts). */}}
-        {{ range .RegularPagesRecursive.GroupByDate "January 2006" }}
-        <section class="flex flex-col gap-6">
-            <h2 class="font-mono text-xs tracking-wider uppercase text-service-black font-normal w-full max-w-6xl mx-auto px-8 m-0 -mb-2">{{ .Key }}</h2>
-
-            {{ range where .Pages "Type" "releases" }}
-            {{ partial "releases/release-item.html" (dict
-                "overline" .Params.label
-                "heading" .Title
-                "description" .Params.short_description
-                "feature_image" .Params.feature_image
-                "feature_image_alt" .Params.feature_image_alt
-                "link" .RelPermalink
-            ) }}
-            {{ end }}
-
-            {{ with where .Pages "Type" "changelog" }}
-            <ul class="list-none p-0 m-0 flex flex-col w-full max-w-6xl mx-auto px-8">
-                {{ range . }}
-                {{ partial "releases/changelog-item.html" (dict "page" .) }}
-                {{ end }}
-            </ul>
-            {{ end }}
-        </section>
-        {{ end }}
-    </div>
-
-</div>
-
-{{ partial "releases/changelog-modal.html" . }}
+{{/* /releases/ — the compact list view. The expanded counterpart lives at
+     /releases/changelog/ (layouts/changelog/list.html); both share
+     layouts/partials/releases/changelog-index.html. */}}
+{{ partial "releases/changelog-index.html" (dict "releases" . "view" "list") }}
 {{ end }}

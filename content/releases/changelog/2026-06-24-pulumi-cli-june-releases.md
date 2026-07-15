@@ -4,6 +4,8 @@ date: 2026-06-24
 aliases:
     - /releases/changelog/pulumi-cli-june-releases/
 meta_desc: Our slate of June releases adds new Pulumi commands, improvements to developer and agent UX, and richer, more structured CLI output.
+authors:
+    - christian-nunciato
 ---
 
 We shipped many new features and fixes in the Pulumi CLI and SDK this month. A few highlights:

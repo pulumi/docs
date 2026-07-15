@@ -4,6 +4,8 @@ date: 2026-05-28
 aliases:
     - /releases/changelog/pulumi-service-provider-v1/
 meta_desc: The Pulumi Service Provider has reached v1.0 and is now generated from the public Pulumi Cloud OpenAPI specification.
+authors:
+    - christian-nunciato
 ---
 
 The [Pulumi Service Provider](/registry/packages/pulumiservice/) has officially [reached v1.0](/blog/generating-a-pulumi-provider-from-an-openapi-spec/#whats-new-in-v10) and is now generated from the public Pulumi Cloud [OpenAPI specification](/docs/reference/cloud-rest-api/), which commits to a stable contract for the existing resource surface and keeps the provider up to date automatically.
