@@ -1,5 +1,1 @@
-{{ if or (hasPrefix .RelPermalink "/docs/") (hasPrefix .RelPermalink "/tutorials/") }}
-{{ partial "docs-top-nav" . }}
-{{ else }}
 {{ partial "header/nav.html" . }}
-{{ end }}
