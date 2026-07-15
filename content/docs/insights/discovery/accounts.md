@@ -21,7 +21,7 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 
 ## Prerequisites
 
-* You must be an admin of your Pulumi organization.
+* You must be an admin of your Pulumi organization, or have permission to connect cloud accounts and create ESC environments.
 * Permissions required to create credentials within the provider account you want to scan.
 
 ## Account creation
@@ -37,13 +37,13 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
   See below for details on how to set up the ESC environment for each provider.  
 {{< /notes >}}
 1. On the **Discovery** step, review the defaults: scheduled scans and policy evaluation are both enabled, with a default policy pack pre-selected, and you can turn either off. Scans run every 24 hours; you can switch to a 12-hour schedule instead. For AWS, also select the [partition](#aws-partitions) the account belongs to and the regions you want scanned; global services are always scanned.  
-1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. The account is named after the selected ESC environment.
+1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. Accounts connected with existing ESC credentials are named after the selected ESC environment; accounts connected with a browser-based sign-in are named after the cloud account.
 {{< notes type="info" >}}  
   Child accounts are automatically named with a `/` separator (for example, `<account>/us-east-1`). For more information, see **Account hierarchies** below.  
 {{< /notes >}}
 
 {{< notes type="info" >}}  
-  A scan should be kicked off immediately, if you are creating a new Insights account for AWS, see the **child accounts** (one for each region) for scan status.
+  A scan should be kicked off immediately. If you are creating a new Insights account for AWS, see the **child accounts** (one for each region) for scan status.
 {{< /notes >}}
 
 ## Account hierarchies
@@ -111,8 +111,6 @@ Pulumi Insights supports every AWS partition. Select the partition that matches 
 
 The selected partition determines which STS endpoint the scanner uses to exchange credentials and which regions are available for discovery. Within a partition, you choose which regions to scan — useful when a region is disabled for your account or out of scope for a given audit.
 
-![Choosing an AWS partition when creating an Insights account](/docs/insights/assets/insights-account-discovery-aws-partitions.png)
-
 {{< notes type="info" >}}
 When creating the IAM trust policy below, use the ARN prefix for your partition (for example, `arn:aws-us-gov:iam::...` for GovCloud or `arn:aws-cn:iam::...` for China) instead of the default `arn:aws:`.
 {{< /notes >}}
@@ -131,7 +129,7 @@ When creating the IAM trust policy below, use the ARN prefix for your partition 
                 "Action": "sts:AssumeRoleWithWebIdentity",
                 "Condition": {
                     "StringEquals": {
-                        "api.pulumi.com/oidc:aud": "aws:pulumi"
+                        "api.pulumi.com/oidc:aud": "aws:<YOUR_PULUMI_ORG>"
                     }
                 }
             }

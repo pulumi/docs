@@ -23,7 +23,7 @@ Discovery integrates with [Pulumi ESC](/docs/esc/) to securely manage credential
 
 1. **Account management**: Create and configure accounts through the [Accounts page](/docs/insights/discovery/accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
 
-2. **Resource scanning**: Discovery authenticates to your cloud provider using short-lived credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the Insights supergraph with the latest state.
+2. **Resource scanning**: Discovery authenticates to your cloud provider using credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the Insights supergraph with the latest state.
 
 3. **Exploration**: Once scanning completes, explore your infrastructure through [Resource Search](/docs/insights/discovery/search/), which provides powerful filtering, grouping, and natural language queries via [Pulumi Neo](/docs/ai/).
 

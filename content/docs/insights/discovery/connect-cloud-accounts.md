@@ -164,7 +164,7 @@ The recommended flows authenticate with OIDC and workload identity federation, s
 ### In Pulumi Cloud
 
 - ESC environments in a project named `discover`. AWS and Google Cloud get one environment per account or project, named `discover/<name>-<accountId>-env`. Azure gets one shared environment per tenant, named `discover/azure-<tenantId>-env`, which every subscription's Insights account references.
-- An Insights account for each selected cloud account, subscription, or project.
+- An Insights account for each selected cloud account, subscription, or project, named after the cloud account it represents.
 - The scan schedule and, if enabled, the policy pack you chose.
 
 ## Troubleshooting
