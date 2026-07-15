@@ -211,11 +211,11 @@ Task modes are presets that control what actions Neo can take automatically. Eac
 
 ### Available modes
 
-Organization administrators can set the default task mode. The available modes determine how much automation Neo applies:
+Organization administrators can set the default task mode. The available modes determine how much autonomy Neo has during execution:
 
-- **Auto mode**: Automatically approves all requests without user intervention
-- **Balanced mode**: Automatically approves requests that don't run `pulumi up`
-- **Review mode**: Requires manual approval before any request runs
+- **Review mode**: Neo requires approval before running `pulumi preview`, running `pulumi up`, and opening a pull request
+- **Balanced mode**: Neo requires approval only before running `pulumi up`
+- **Auto mode**: Neo does not require any approvals
 
 ### Configuring default task mode
 
