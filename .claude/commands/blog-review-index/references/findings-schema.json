@@ -1,0 +1,71 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Blog review findings sentinel (.blog-review-findings.json)",
+    "description": "The review model's only structured output. Enforced deterministically by scripts/blog-review/validate-findings.py; this document is the human/model-readable statement of the same contract. Category and severity sets must stay in sync with references/issue-taxonomy.md.",
+    "type": "object",
+    "required": ["schema_version", "path", "slug", "issues", "clean", "noindex_signal"],
+    "additionalProperties": false,
+    "properties": {
+        "schema_version": { "const": 1 },
+        "path": {
+            "type": "string",
+            "pattern": "^content/blog/.+/index\\.md$",
+            "description": "Must match the queue entry exactly."
+        },
+        "slug": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Must match the queue entry exactly."
+        },
+        "issues": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["id", "category", "severity", "summary", "evidence", "location"],
+                "additionalProperties": false,
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Unique within the file; convention <category>-<nn>."
+                    },
+                    "category": {
+                        "enum": ["factual-rot", "dead-link", "broken-code", "deprecated-product", "seo-thin", "ai-positioning", "frontmatter", "rendering"]
+                    },
+                    "severity": { "enum": ["blocker", "major", "minor"] },
+                    "summary": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "One sentence stating the defect."
+                    },
+                    "evidence": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "Concrete, checkable evidence: the URL and its response, the claim and the contradicting source. Required — unevidenced issues are rejected."
+                    },
+                    "location": {
+                        "type": "string",
+                        "minLength": 1,
+                        "description": "A heading, line range, or section pointer a human can find."
+                    }
+                }
+            }
+        },
+        "clean": {
+            "type": "boolean",
+            "description": "true iff issues is empty; the gate enforces the biconditional."
+        },
+        "noindex_signal": {
+            "type": "object",
+            "required": ["assessment", "rationale"],
+            "additionalProperties": false,
+            "properties": {
+                "assessment": {
+                    "enum": ["keep", "candidate", "strong-candidate"],
+                    "description": "Advisory only (see references/noindex-rubric.md). strong-candidate requires at least one recorded issue."
+                },
+                "rationale": { "type": "string", "minLength": 1 }
+            }
+        }
+    }
+}
