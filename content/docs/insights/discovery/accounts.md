@@ -16,7 +16,7 @@ aliases:
 This document outlines the steps required to create and manage a Pulumi Insights account used to scan provider resources.
 
 {{% notes type="info" %}}
-To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect cloud accounts wizard](/docs/insights/discovery/connect-cloud-accounts/). This page covers connecting a single account using an ESC environment you configure yourself.
+To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect cloud accounts wizard](/docs/insights/discovery/connect-cloud-accounts/). This page covers connecting a single account using a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configure yourself.
 {{% /notes %}}
 
 ## Prerequisites

@@ -19,7 +19,7 @@ Pulumi Insights Discovery enables organizations to gain complete visibility into
 
 ## How discovery works
 
-Discovery integrates with [Pulumi ESC](/docs/esc/) to securely manage credentials and scan your cloud infrastructure. The process involves:
+Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to securely manage credentials and scan your cloud infrastructure. The process involves:
 
 1. **Account management**: Create and configure accounts through the [Accounts page](/docs/insights/discovery/accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
 
@@ -75,6 +75,9 @@ Resource search is available to all organization members, but users can only see
 ## Next steps
 
 - [Get started with Insights Discovery](/docs/insights/discovery/get-started/)
+
+## Learn more
+
 - [Connect cloud accounts in bulk](/docs/insights/discovery/connect-cloud-accounts/)
 - [Create and manage accounts](/docs/insights/discovery/accounts/)
 - [Learn Resource Search syntax](/docs/insights/discovery/search/)
