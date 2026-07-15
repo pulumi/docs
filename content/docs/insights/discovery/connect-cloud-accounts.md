@@ -107,7 +107,7 @@ The wizard shows how many accounts, subscriptions, or projects it discovered and
 
 The access level determines which permissions Pulumi receives in each account:
 
-- **Build & Manage (read and write)**: the default. Enables [Pulumi Neo](/docs/ai/), infrastructure as code, deployments, and policies that remediate issues automatically. Grants `AdministratorAccess` in AWS, **Contributor** in Azure, or **Editor** in Google Cloud.
+- **Build & Manage (read and write)**: the default. Enables [Pulumi Neo](/docs/ai/), infrastructure as code, deployments, and policies that remediate issues automatically (Business Critical edition). Grants `AdministratorAccess` in AWS, **Contributor** in Azure, or **Editor** in Google Cloud.
 - **Discovery & Policy (read-only)**: limited to discovery scanning and inventory. Pulumi can't modify your infrastructure. Grants `ReadOnlyAccess` in AWS, **Reader** in Azure, or **Viewer** in Google Cloud.
 
 Select **Change access level** to switch the default, or set a different level for individual accounts under **Per account access**. If your security review requires it, start with read-only access; you can raise access for specific accounts later.
