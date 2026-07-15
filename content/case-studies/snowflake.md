@@ -8,6 +8,8 @@ meta_desc: Learn how Snowflake worked with Pulumi to easily develop infrastructu
 customer_name: Snowflake
 industry: data-analytics
 customer_logo: /logos/customers/snowflake-logo.svg
+logo_bg_color: "#29B5E8"
+logo_style: white
 customer_url: https://www.snowflake.com/
 
 quote_block:

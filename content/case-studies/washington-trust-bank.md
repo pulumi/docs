@@ -8,6 +8,8 @@ meta_desc: |
 customer_name: Washington Trust Bank
 industry: financial-services
 customer_logo: /logos/customers/washington-trust-wordmark.svg
+logo_bg_color: "#004163"
+logo_style: white
 
 redirect_to: /blog/how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation
 ---

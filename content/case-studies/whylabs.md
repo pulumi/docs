@@ -8,6 +8,8 @@ meta_desc: Learn how WhyLabs worked with Pulumi to enable engineers to continuou
 customer_name: WhyLabs
 industry: ai-ml
 customer_logo: /logos/customers/whylabs-wordmark.svg
+logo_bg_color: "#228798"
+logo_style: white
 customer_url: https://whylabs.ai/
 
 quote_block:

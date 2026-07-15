@@ -9,6 +9,8 @@ meta_desc: Learn how Atlassian Bitbucket worked with Pulumi to improve developer
 customer_name: Atlassian
 industry: developer-tools
 customer_logo: /logos/customers/atlassian-wordmark.svg
+logo_bg_color: "#0052CC"
+logo_style: white
 customer_url: https://www.atlassian.com/
 
 quote_block:

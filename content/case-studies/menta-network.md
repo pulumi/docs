@@ -10,6 +10,8 @@ meta_desc: Learn how Menta Network worked with Pulumi and GitLab to build epheme
 customer_name: Menta Network
 industry: retail
 customer_logo: /logos/customers/menta_logo.svg
+logo_bg_color: "#6EC829"
+logo_style: dark
 customer_url:
 
 quote_block:

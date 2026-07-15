@@ -7,7 +7,9 @@ meta_desc: XM Cyber partnered with Pulumi on a modern multi-cloud infrastructure
 
 customer_name: XM Cyber
 industry: security
-customer_logo: /logos/customers/xm-cyber-logo.svg
+customer_logo: /logos/customers/xm-cyber-logo-navy.svg
+card_logo: /logos/customers/xm-cyber-logo-white.svg
+logo_bg_color: "#000035"
 customer_url: https://www.xmcyber.com/
 
 quote_block:

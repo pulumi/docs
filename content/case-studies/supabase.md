@@ -8,6 +8,8 @@ meta_desc: Open-source Postgres platform scales from single-region manual deploy
 customer_name: Supabase
 industry: data-analytics
 customer_logo: /logos/customers/supabase-wordmark.svg
+logo_bg_color: "#3ECF8E"
+logo_style: dark
 customer_url: https://supabase.com/
 
 quote_block:

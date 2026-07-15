@@ -8,6 +8,9 @@ meta_desc: Learn how BMW's Software Factory uses Pulumi to manage 20,000+ cloud 
 customer_name: BMW
 industry: automotive
 customer_logo: /logos/customers/bmw.svg
+card_logo: /logos/customers/bmw-group-dark.svg
+logo_bg_color: "#10162C"
+logo_size: lg
 customer_url: https://www.bmwusa.com/
 
 quote_block:

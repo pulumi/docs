@@ -8,6 +8,8 @@ meta_desc: Imagine Learning used Pulumi with GitOps to modernize their IDP, redu
 customer_name: Imagine Learning
 industry: education
 customer_logo: /images/case-studies/imagine-learning.png
+logo_bg_color: "#00007C"
+logo_style: white
 customer_url: https://www.imaginelearning.com/
 
 exec_summary: |

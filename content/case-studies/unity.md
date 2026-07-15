@@ -8,6 +8,8 @@ meta_desc: By leveraging Pulumi, the Unity Aura team successfully modernized the
 customer_name: Unity
 industry: gaming-entertainment
 customer_logo: /logos/customers/unity.png
+logo_bg_color: "#000000"
+logo_style: white
 customer_url: https://unity.com/
 
 quote_block:

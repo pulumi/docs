@@ -9,6 +9,8 @@ meta_desc: See how Modivcare used Pulumi to unify fragmented AWS infrastructure 
 customer_name: Modivcare
 industry: healthcare
 customer_logo: /logos/customers/modivcare.png
+logo_bg_color: "#002A3A"
+logo_style: white
 customer_url: https://www.modivcare.com/
 
 quote_block:

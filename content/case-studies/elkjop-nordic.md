@@ -14,6 +14,8 @@ meta_desc: |
 customer_name: Elkjøp Nordic
 industry: retail
 customer_logo: /logos/customers/elkjop-nordic-logo.svg
+logo_bg_color: "#1E1B58"
+logo_style: white
 
 redirect_to: /blog/how-elkjop-nordic-enables-developers-to-self-serve-infrastructure
 ---

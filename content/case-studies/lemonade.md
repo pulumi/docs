@@ -9,6 +9,8 @@ meta_desc: Learn how Lemonade worked with Pulumi to standardize infrastructure c
 customer_name: Lemonade
 industry: financial-services
 customer_logo: /logos/customers/lemonade.svg
+logo_bg_color: "#FF0083"
+logo_style: white
 customer_url: https://www.lemonade.com/
 
 quote_block:

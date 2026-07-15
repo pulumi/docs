@@ -29,7 +29,7 @@
 {{ define "main" }}
 <div class="font-body container mx-auto mb-16 mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-16">
 
-    {{/* Quote block */}}
+    {{/* Quote block (or a plain rule when the page has none) */}}
     {{ with .Params.quote_block }}
     <div class="max-w-6xl mx-auto w-full">
         {{ partial "case-studies/quote-panel.html" (dict
@@ -41,6 +41,8 @@
             "headline" .headline
         ) }}
     </div>
+    {{ else }}
+    <hr class="max-w-6xl mx-auto w-full border-gray-300 m-0" />
     {{ end }}
 
     {{/* Mobile "On this page" (collapsible, visible below lg) */}}

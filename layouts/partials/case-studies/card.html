@@ -9,6 +9,20 @@
               match this card's industry, the card is server-hidden so a direct
               term-page load / no-JS visit shows only the right cards.
               case-studies-list.ts toggles this in place on the client.
+
+    Logo tile front matter (per case study):
+      card_logo      logo used on the tile only (e.g. a white-on-brand-color
+                     variant). Falls back to customer_logo, which other
+                     surfaces (quote panel, product-page partials) render on
+                     light backgrounds — never point customer_logo at a
+                     white/light asset.
+      logo_bg_color  background color of the logo tile (the customer's brand
+                     color). Omit to fall back to gray-100.
+      logo_style     "white" or "dark" renders the logo as a monochrome
+                     silhouette via CSS filters (for logos that don't ship a
+                     mono variant). Omit to show the logo in its original colors.
+      logo_size      "lg" renders the logo larger, for wide wordmarks (or SVGs
+                     with baked-in padding) that read too small at the default size.
 */ -}}
 {{ $page := .page }}
 {{ $active := .active }}
@@ -19,40 +33,64 @@
 {{ range site.Data.case_study_industries.industries }}
     {{ if eq .id $industry }}{{ $industryName = .name }}{{ end }}
 {{ end }}
-{{ $href := cond (isset $page.Params "redirect_to") (string $page.Params.redirect_to) $page.RelPermalink }}
+{{- /* redirect_to cards don't lead to a case-study detail page (they point at
+    a blog post or an external site), so they open in a new tab and swap the
+    hover cue's arrow for an open-in-new icon. */ -}}
+{{ $isRedirect := isset $page.Params "redirect_to" }}
+{{ $href := cond $isRedirect (string $page.Params.redirect_to) $page.RelPermalink }}
+{{- /* Force the rendered height (h-*, not max-h-*): SVG logos with small
+    intrinsic dimensions (e.g. a 121x23 viewBox) would otherwise render at
+    their tiny natural size, since max-* caps never scale up. Wide wordmarks
+    overflow the width cap and object-contain scales them back down. */ -}}
+{{ $logoClass := "h-20 w-auto max-w-[60%] object-contain" }}
+{{ if eq $page.Params.logo_size "lg" }}
+    {{ $logoClass = "h-28 w-auto max-w-[75%] object-contain" }}
+{{ end }}
+{{ if eq $page.Params.logo_style "white" }}
+    {{ $logoClass = printf "%s brightness-0 invert" $logoClass }}
+{{ else if eq $page.Params.logo_style "dark" }}
+    {{ $logoClass = printf "%s brightness-0" $logoClass }}
+{{ end }}
 {{- /* The whole card is clickable: the customer-name link is stretched over the
     card (after:absolute after:inset-0), so a click anywhere follows it. The
     "Read the story" cue only appears on hover/focus (group-hover / -focus-within);
     it's decorative (aria-hidden) since the stretched link already labels the card.
     Card hover affordance reuses the shared .card-hover (theme/src/scss/_card.scss). */ -}}
-<div class="card card-hover group relative flex flex-1 items-start p-8 pb-0" data-case-study-card data-industry="{{ $industry }}"{{ if $hidden }} hidden{{ end }}>
-    <div class="flex flex-col h-full w-full">
-        <div class="flex flex-col gap-4 mb-8">
-            {{ with $page.Params.customer_logo }}
-            <div class="h-10 flex items-center">
-                {{ $fpSrc := strings.TrimPrefix "/" . }}
-                {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
-                {{ if $fpAsset }}
-                    {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" (printf "%s logo" $page.Params.customer_name) "class" "h-8 w-auto") }}
-                {{ else }}
-                    <img src="{{ . }}" alt="{{ $page.Params.customer_name }} logo" class="h-8 w-auto" />
-                {{ end }}
-            </div>
+<div class="card card-hover group relative flex flex-1 flex-col overflow-hidden" data-case-study-card data-industry="{{ $industry }}"{{ if $hidden }} hidden{{ end }}>
+    {{- /* Logo tile: the logo centered on the customer's brand color (gray-100
+        when no color is set). The customer name lives in the sr-only heading
+        below, so the tile is presentation-only. */ -}}
+    <div class="aspect-[4/2] w-full flex items-center justify-center{{ if not $page.Params.logo_bg_color }} bg-gray-100{{ end }}"{{ with $page.Params.logo_bg_color }} style="{{ printf "background-color:%s" . | safeCSS }}"{{ end }}>
+        {{ with $page.Params.card_logo | default $page.Params.customer_logo }}
+            {{ $fpSrc := strings.TrimPrefix "/" . }}
+            {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
+            {{ if $fpAsset }}
+                {{ partial "fingerprinted-img.html" (dict "src" $fpSrc "alt" (printf "%s logo" $page.Params.customer_name) "class" $logoClass) }}
+            {{ else }}
+                <img src="{{ . }}" alt="{{ $page.Params.customer_name }} logo" class="{{ $logoClass }}" />
             {{ end }}
-            <h3 class="heading-3 m-0!">
-                <a href="{{ $href }}" class="text-black no-underline transition-colors group-hover:text-violet-primary after:absolute after:inset-0 after:content-['']">{{ $page.Params.customer_name }}</a>
-            </h3>
-            {{ with $industryName }}
+        {{ end }}
+    </div>
+    <div class="flex flex-1 flex-col px-8 pt-5">
+        {{- /* The customer name is visually replaced by the logo tile but kept
+            for search engines and screen readers. The stretched link lives
+            outside the heading: sr-only is position:absolute + clip, so an
+            after:inset-0 overlay inside it would anchor to the clipped 1x1
+            heading box instead of the card and nothing would be clickable. */ -}}
+        <h3 class="sr-only">{{ $page.Params.customer_name }}</h3>
+        <a href="{{ $href }}" class="absolute inset-0" aria-label="{{ $page.Params.customer_name }} case study"{{ if $isRedirect }} target="_blank" rel="noopener noreferrer"{{ end }}></a>
+        {{ with $industryName }}
+        <div class="mb-5">
             {{ partial "badge.html" (dict "text" . "variant" "outline") }}
-            {{ end }}
         </div>
+        {{ end }}
         <div class="body-base mb-6">
             {{ $page.Description | markdownify }}
         </div>
         <div class="mt-auto">
             <span class="btn btn-link btn-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100" aria-hidden="true">
                 Read the story
-                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                {{ partial "icon.html" (dict "name" (cond $isRedirect "arrow-square-out" "arrow-right") "weight" "bold" "class" "size-4") }}
             </span>
         </div>
     </div>

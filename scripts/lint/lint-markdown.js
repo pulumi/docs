@@ -210,6 +210,48 @@ function checkCaseStudyIndustry(industry, fullPath) {
 }
 
 /**
+ * checkCaseStudyLogoTile validates the optional logo-tile front matter on case
+ * studies, rendered by layouts/partials/case-studies/card.html (see its header
+ * comment for what each field does):
+ *   - logo_bg_color: a hex color ("#RRGGBB" or "#RGB")
+ *   - logo_style: "white" or "dark", lowercase
+ *   - logo_size: "lg"
+ * All are optional; this guard rejects present-but-malformed values, which
+ * would otherwise ship silently — the template compares exactly, so e.g.
+ * `logo_style: White` just renders the logo in its original colors, and a bad
+ * hex paints no tile background at all.
+ *
+ * @param {*} obj The parsed front matter object.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkCaseStudyLogoTile(obj, fullPath) {
+    const isCaseStudy =
+        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+    if (!isCaseStudy) {
+        return null;
+    }
+
+    const errors = [];
+    if (obj.logo_bg_color !== undefined && !/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(String(obj.logo_bg_color))) {
+        errors.push(
+            `Invalid 'logo_bg_color' value: '${obj.logo_bg_color}'. Use a quoted hex color like "#0052CC".`,
+        );
+    }
+    if (obj.logo_style !== undefined && !["white", "dark"].includes(obj.logo_style)) {
+        errors.push(
+            `Invalid 'logo_style' value: '${obj.logo_style}'. Allowed: white, dark (lowercase), or omit to render the logo in its original colors.`,
+        );
+    }
+    if (obj.logo_size !== undefined && obj.logo_size !== "lg") {
+        errors.push(
+            `Invalid 'logo_size' value: '${obj.logo_size}'. Allowed: lg, or omit for the default size.`,
+        );
+    }
+
+    return errors.length > 0 ? errors.join(" ") : null;
+}
+
+/**
  * checkSeriesConsistency enforces that a blog post's series wiring is correct.
  *
  * Series membership is driven solely by the `series: <slug>` key:
@@ -456,6 +498,7 @@ function searchForMarkdown(paths) {
                     metaImage: checkMetaImage(obj.meta_image),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
+                    caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                 };
@@ -584,6 +627,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.caseStudyIndustry,
+                });
+            }
+            if (frontMatterErrors.caseStudyLogoTile) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.caseStudyLogoTile,
                 });
             }
             if (frontMatterErrors.seriesConsistency) {

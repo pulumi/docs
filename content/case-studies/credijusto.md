@@ -9,6 +9,8 @@ meta_desc: Learn how Credijusto worked with Pulumi to help its development team 
 customer_name: Credijusto
 industry: financial-services
 customer_logo: /logos/customers/credijusto_logo.svg
+logo_bg_color: "#FE9E2C"
+logo_style: dark
 
 quote_block:
   quote: |

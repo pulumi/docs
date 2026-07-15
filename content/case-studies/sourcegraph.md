@@ -8,6 +8,9 @@ meta_desc: Learn how Pulumi helps Sourcegraph supercharge their Kubernetes deplo
 customer_name: Sourcegraph
 industry: developer-tools
 customer_logo: /logos/customers/sourcegraph-logo.svg
+logo_bg_color: "#A112FF"
+logo_style: white
+logo_size: lg
 customer_url: https://about.sourcegraph.com/
 
 quote_block:

@@ -8,6 +8,8 @@ meta_desc: Learn how Spear AI used Pulumi to achieve government Authorization to
 customer_name: Spear AI
 industry: ai-ml
 customer_logo: /logos/customers/spearAI.svg
+logo_bg_color: "#000031"
+logo_style: white
 customer_url: https://www.spear.ai/
 
 quote_block:

@@ -8,6 +8,7 @@ meta_desc: Learn how Compostable AI built a software factory where AI agents wri
 customer_name: Compostable AI
 industry: ai-ml
 customer_logo: /logos/customers/compostable-ai.svg
+logo_bg_color: "#E9ECEF"
 customer_url: https://compostable.ai
 
 quote_block:

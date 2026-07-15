@@ -9,6 +9,8 @@ meta_desc: See how Learning Machine worked with Pulumi to streamline its DevOps 
 customer_name: Learning Machine
 industry: education
 customer_logo: /logos/customers/learning-machine_logo.svg
+logo_bg_color: "#151828"
+logo_style: white
 customer_url: https://www.hyland.com/
 
 quote_block:
