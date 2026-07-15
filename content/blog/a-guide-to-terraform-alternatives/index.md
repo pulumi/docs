@@ -13,20 +13,9 @@ tags:
     - platform-engineering
 category: general
 schema_type: auto
-social:
-    twitter: |
-        Evaluating a Terraform alternative?
-
-        A field guide to OpenTofu, Pulumi, AWS CDK, and Crossplane: what each one is for, the criteria that actually separate them, and how to migrate without a big-bang rewrite.
-    linkedin: |
-        Teams look past Terraform for licensing, language, and lock-in reasons, and the field of alternatives has grown well beyond a single obvious replacement.
-
-        This guide breaks the alternatives into categories (drop-in forks, general-purpose-language tools, cloud-native options, and Kubernetes-native control planes), lays out the criteria that separate them, and covers how to migrate off Terraform incrementally.
-    bluesky: |
-        A field guide to Terraform alternatives: OpenTofu, Pulumi, AWS CDK, and Crossplane, the criteria that separate them, and how to migrate incrementally.
 ---
 
-The search for a Terraform alternative used to be niche. It went mainstream in August 2023, when HashiCorp moved Terraform from an open source license to the Business Source License, and again in February 2025, when IBM acquired HashiCorp. Those events pushed a lot of teams to ask a question they had never needed to ask before: if Terraform is not the default anymore, what is? The answer depends on why you are looking, because the alternatives now span several distinct categories, each solving a different problem.
+Terraform has been a cornerstone of infrastructure as code for the better part of a decade, and for many teams it remains a great fit. Even so, more organizations are now taking a look at what else is out there, whether prompted by Terraform's 2023 move to the Business Source License, a preference for writing infrastructure in a general-purpose language, or a specific operational need. If you are running that kind of evaluation, the useful question is less about whether Terraform is good and more about which tool best fits your constraints, because the alternatives now span several distinct categories, each suited to a different situation.
 
 ## TL;DR
 
