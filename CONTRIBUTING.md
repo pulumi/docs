@@ -54,12 +54,13 @@ The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't del
 
 The pinned comment is also the pipeline's outcome ledger: after a PR closes, a weekly scrape derives what happened to each finding (fixed, conceded, disputed, or merged over) and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned over time.
 
-### Trivial and frontmatter-only short-circuits
+### Trivial, frontmatter-only, and oversized short-circuits
 
-Two label-driven short-circuits skip the full Claude review (linters still run):
+Three label-driven short-circuits skip the full Claude review (linters still run):
 
 - **`review:trivial`** — ≤10 added lines, prose-only body changes, ≤2 docs/blog `.md` files, no frontmatter changes, no link changes, no code blocks. Typo fixes, wording polish, small same-claim sweeps across siblings, and removal-dominant cleanup (no upper bound on deletions). Marketing/website pages (`domain:website`) get full review regardless of size.
 - **`review:frontmatter-only`** — any number of docs/blog `.md` files where every change is inside the frontmatter block. Aliases sweeps, `draft: false` flips, `meta_desc` rewrites, social copy edits.
+- **`review:oversized`** — more than 15K changed lines. At that scale the bulk is invariably generated output: the review can't finish inside its job timeout and wouldn't add value to generated lines anyway. Triage posts a `<!-- TRIAGE_OVERSIZED -->` advisory comment suggesting the hand-written source be split into its own PR. `@claude #new-review` force-overrides the skip.
 
 For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
 
