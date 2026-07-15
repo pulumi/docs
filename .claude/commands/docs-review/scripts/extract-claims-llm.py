@@ -110,6 +110,18 @@ RENAME_TO_RE = re.compile(r"^rename to (.+)$")
 # correctly demote to `not-a-claim — unchanged`.
 RENAME_BODY_SKIP_THRESHOLD = 95
 
+# Blog prose defaults to full-file (heightened) extraction — posts are usually
+# drafted whole-file, often with AI assistance, and AI hallucinates surrounding
+# prose, not just changed lines. That rationale doesn't hold for a small edit
+# to an already-published post: the unchanged body was reviewed at publish
+# time, and full-file extraction re-litigates it at ~dozens of claims per
+# file. (PR #20224: a 3-line CTA insert into 75 posts → 1,080 verified claims
+# → the 25-minute job timeout.) Pin such edits to `standard` (changed-lines)
+# scope when BOTH bounds hold — the added prose itself still gets extracted.
+SMALL_EDIT_MAX_ADDED_LINES = 30    # demote when added lines ≤ this ...
+SMALL_EDIT_MAX_ADDED_RATIO = 0.20  # ... AND added / file body lines ≤ this
+BLOG_PREFIX = "content/blog/"
+
 # Claim types the schema allows — kept in sync with references/claim-extraction.md.
 CLAIM_TYPES = [
     "numerical", "version", "temporal", "feature", "behavior", "api-surface",
@@ -344,6 +356,11 @@ def changed_line_ranges(patch: str, target: str) -> list[str]:
     return [f"L{a}" if a == b else f"L{a}-{b}" for a, b in ranges]
 
 
+def added_line_count(patch: str, target: str) -> int:
+    """Number of added (`+`) lines in this file's hunks."""
+    return sum(1 for raw in _file_patch_lines(patch, target) if raw.startswith("+"))
+
+
 def numbered_hunks(patch: str, target: str) -> str:
     """The file's diff hunks with new-file line numbers prefixed on +/context lines.
 
@@ -412,11 +429,19 @@ def number_lines(text: str) -> str:
 
 
 def build_user_message(repo_root: Path, patch: str, path: str, scrutiny: str) -> tuple[str, str | None]:
-    """Return (user_message_text, note) for one file. `note` is a non-fatal warning, if any."""
+    """Return (user_message_text, note) for one file. `note` is a non-fatal warning, if any.
+
+    Scrutiny is resolved per file: the `--scrutiny` flag is the global default
+    (`heightened` acts as a force-override for testing/manual runs), and the
+    guards below bump or pin each file's effective scope from there.
+    """
     effective = scrutiny
     note = None
-    if scrutiny == "standard" and is_new_file(patch, path):
+    new_file = is_new_file(patch, path)
+    if scrutiny == "standard" and new_file:
         effective = "heightened"  # a brand-new file: extract from the whole thing
+    if scrutiny == "standard" and path.startswith(BLOG_PREFIX):
+        effective = "heightened"  # blog prose: full-file by default (see small-edit guard below)
 
     # Pure-rename guard: a high-similarity rename's body carries no *new* claims —
     # only the diff hunks (frontmatter changes etc.) do. Pin scope to the hunks
@@ -428,9 +453,23 @@ def build_user_message(repo_root: Path, patch: str, path: str, scrutiny: str) ->
         effective = "standard"
 
     file_path = repo_root / path
+    file_text = file_path.read_text(encoding="utf-8", errors="replace") if file_path.is_file() else None
+
+    # Small-edit guard: a per-file `heightened` bump on an *existing* file whose
+    # diff adds only a few lines pins back to `standard` — the added prose still
+    # gets extracted, the long-since-reviewed unchanged body doesn't. Never
+    # applies to new files or under a global `--scrutiny heightened` override.
+    if scrutiny == "standard" and effective == "heightened" and not new_file and file_text is not None:
+        added = added_line_count(patch, path)
+        body_lines = len(file_text.splitlines()) or 1
+        if 0 < added <= SMALL_EDIT_MAX_ADDED_LINES and added / body_lines <= SMALL_EDIT_MAX_ADDED_RATIO:
+            note = (f"{path} is a small edit ({added} added line(s), {body_lines}-line file) — "
+                    f"extracting from the diff hunks only (unchanged body skipped)")
+            effective = "standard"
+
     if effective == "heightened":
-        if file_path.is_file():
-            numbered = number_lines(file_path.read_text(encoding="utf-8", errors="replace"))
+        if file_text is not None:
+            numbered = number_lines(file_text)
             changed = changed_line_ranges(patch, path)
             changed_note = (
                 f"This PR added/modified these line ranges: {', '.join(changed)}."
@@ -646,7 +685,9 @@ def main() -> int:
     p.add_argument("--changed-files", help="Comma-separated content/**/*.md paths (testing; overrides PR-derived list)")
     p.add_argument("--repo-root", default=".", help="Repo root (default: cwd)")
     p.add_argument("--pass", dest="pass_name", required=True, choices=["atomic", "holistic"])
-    p.add_argument("--scrutiny", default="standard", choices=["standard", "heightened"])
+    p.add_argument("--scrutiny", default="standard", choices=["standard", "heightened"],
+                   help="Global default; per-file guards bump blog/new files to heightened and pin "
+                        "renames/small edits back to standard. `heightened` forces full-file everywhere.")
     p.add_argument("--model", default=DEFAULT_MODEL)
     p.add_argument("--out", required=True, help="Output JSON path")
     p.add_argument("--dry-run", action="store_true", help="Don't call the API; emit placeholder claims (testing)")
@@ -687,6 +728,10 @@ def main() -> int:
 
     skipped_over_cap: list[str] = []
     if len(files) > FILE_CAP:
+        # Spend the cap on the biggest edits first (stable sort keeps the
+        # original order for ties), so a bulk PR's one substantive rewrite
+        # isn't crowded out of Layer B by dozens of small mechanical edits.
+        files.sort(key=lambda f: -added_line_count(patch, f))
         skipped_over_cap = files[FILE_CAP:]
         files = files[:FILE_CAP]
 

@@ -81,6 +81,8 @@ Workflow pre-step: `extract-claims.py` (a deterministic regex floor — numbers,
 - Default (`scrutiny=standard`): extract claims from the diff only -- lines added or modified
 - `scrutiny=heightened`: extract claims from the **full file**, not just the diff. AI hallucinates surrounding prose, not just changed lines.
 
+The Layer-B pre-step (`extract-claims-llm.py`) resolves scrutiny **per file**: blog files and brand-new files bump to `heightened`; high-similarity renames and small edits to existing files (≤30 added lines and ≤20% of the body) pin back to `standard` -- the added lines still get extracted, the already-published unchanged body doesn't. Each pin is surfaced as a note in the artifact's `errors[]`.
+
 ### Frontmatter sweep
 
 Hugo posts duplicate the same load-bearing phrasing across the body, `meta_desc`, and `social:` sub-keys (`twitter`, `linkedin`, `bluesky`). When extracting a claim from any of these locations, scan the rest of the file -- body plus every prose-bearing frontmatter key -- for the same factual phrasing or a near-paraphrase, and treat all occurrences as one claim with multiple cited locations. A single finding then renders one suggestion-block per location, so a verified-false claim is fixed everywhere in one pass.

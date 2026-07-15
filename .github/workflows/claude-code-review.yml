@@ -592,23 +592,6 @@ jobs:
       # All steps continue-on-error with schema-matching `||` stubs; the scripts'
       # safe_main() surfaces failures *inside* the artifact (`errors: [...]`),
       # not via file-presence heuristics.
-      - name: Pre-compute claim scrutiny scope
-        if: steps.pr-context.outputs.skip_reason == ''
-        id: claim-scrutiny
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ steps.pr-context.outputs.pr_number }}
-        run: |
-          # `heightened` (full-file extraction) when any blog file changed —
-          # AI hallucinates surrounding prose, not just changed lines. Per-file
-          # new-file bumping happens inside extract-claims-llm.py.
-          BLOG=$(gh pr diff "$PR" --name-only | grep -E '^content/blog/.*\.md$' || true)
-          if [ -n "$BLOG" ]; then
-            echo "value=heightened" >> "$GITHUB_OUTPUT"
-          else
-            echo "value=standard" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Extract candidate claims (Layer A — regex floor)
         if: steps.pr-context.outputs.skip_reason == ''
         id: extract-claims-regex
@@ -629,7 +612,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PR: ${{ steps.pr-context.outputs.pr_number }}
-          SCRUTINY: ${{ steps.claim-scrutiny.outputs.value }}
         run: |
           # Run the two Sonnet extraction passes concurrently — wall-clock
           # collapses from sum(atomic + holistic) to max(atomic, holistic).
@@ -637,13 +619,15 @@ jobs:
           # independently. Per pre-step fallback discipline, failure is
           # surfaced INSIDE the artifact (errors: [...]), not via a
           # missing-file or silent-empty heuristic.
+          # Scrutiny is resolved per file inside the script (blog/new files
+          # bump to heightened; renames and small edits pin to standard).
           set +e
           python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
-            --pr "$PR" --pass atomic --scrutiny "${SCRUTINY:-standard}" \
+            --pr "$PR" --pass atomic --scrutiny standard \
             --out .candidate-claims-llm-1.json &
           ATOMIC_PID=$!
           python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
-            --pr "$PR" --pass holistic --scrutiny "${SCRUTINY:-standard}" \
+            --pr "$PR" --pass holistic --scrutiny standard \
             --out .candidate-claims-llm-2.json &
           HOLISTIC_PID=$!
           wait "$ATOMIC_PID";   ATOMIC_RC=$?
