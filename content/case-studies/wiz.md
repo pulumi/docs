@@ -7,7 +7,10 @@ description: |
 meta_desc: See how Wiz uses Pulumi to operate thousands of Kubernetes clusters globally, processing hundreds of thousands of infrastructure updates daily.
 
 customer_name: Wiz
+industry: security
 customer_logo: /logos/customers/wiz.png
+logo_bg_color: "#0254EC"
+logo_style: white
 customer_url: https://www.wiz.io/
 
 quote_block:

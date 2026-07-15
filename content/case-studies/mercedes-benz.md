@@ -7,7 +7,10 @@ description: |
 meta_desc: Learn how Mercedes-Benz Research and Development worked with Pulumi to bring their application and infrastructure teams closer together.
 
 customer_name: Mercedes-Benz Research and Development
-customer_logo: /logos/customers/mercedes-benz-RDNA_logo.png
+industry: automotive
+customer_logo: /logos/customers/mbrdna-logo-blk.png
+logo_bg_color: "#000000"
+logo_style: white
 customer_url: https://mbrdna.com/
 
 quote_block:

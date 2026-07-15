@@ -21,6 +21,15 @@ from collections.abc import Iterable
 
 WEBPACK_RE = re.compile(r"^webpack\.[^/]+\.js$")
 
+# Above this many changed lines (additions + deletions), the PR is `oversized`:
+# too big for the review pipeline to finish inside its job timeout, and at this
+# scale the bulk is invariably generated output that an LLM line-review adds no
+# value to (PR #20274: ~100K generated lines; the main review step was killed
+# at the 25-minute mark on every attempt). Triage labels it `review:oversized`
+# and the review workflow skips it with an advisory comment instead of
+# error-cycling. Hand-written PRs run one to two orders of magnitude smaller.
+OVERSIZED_TOTAL_LINES = 15_000
+
 
 def classify_path(path: str) -> str | None:
     # Programs first — both static/programs/** AND scripts/programs/** are
@@ -295,6 +304,7 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         "mixed": len(domains) > 1,
         "trivial": trivial,
         "frontmatter_only": frontmatter_only,
+        "oversized": total_lines > OVERSIZED_TOTAL_LINES,
         "prose_check_needed": trivial or frontmatter_only,
         "summary": {
             "lines": total_lines,

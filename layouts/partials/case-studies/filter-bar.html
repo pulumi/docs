@@ -1,0 +1,34 @@
+{{- /*
+    Case-study industry filter: an "All" pill plus one pill per industry that has
+    at least one study, in the order defined by data/case_study_industries.yaml.
+    Mirrors the blog homepage filter (partials/blog/filter-bar.html): the pills
+    are real links to the canonical term pages (the crawler / no-JS fallback);
+    case-studies-list.ts intercepts clicks to filter the cards in place, swaps the
+    address bar to the term-page URL, and moves `.is-active`.
+
+    Params:
+      active  the currently-selected industry id ("" = All), used to pre-render
+              the active pill server-side so a direct term-page load matches.
+*/ -}}
+{{- $active := .active -}}
+{{- $total := len (where (where site.Pages "Type" "case-studies") "Kind" "eq" "page") -}}
+{{- /* Wrapper adds the white edge fades; from lg up the fades switch off and the
+    row wraps/centers (see .case-study-filter in _templates.scss). On md and down
+    the nav is a single-row horizontal scroller with the scrollbar hidden. */ -}}
+<div class="case-study-filter-scroll">
+    <nav data-case-study-filter aria-label="Filter case studies by industry" class="case-study-filter">
+        <a href="/case-studies/" data-industry="" data-track="case-study-filter-all"{{ if eq $active "" }} aria-current="page"{{ end }} class="btn btn-sm btn-outline text-sm{{ if eq $active "" }} is-active{{ end }}">
+            All
+            {{ partial "badge.html" (dict "text" $total "variant" "ghost" "size" "sm") }}
+        </a>
+        {{- range site.Data.case_study_industries.industries -}}
+            {{- $entry := . -}}
+            {{- with index site.Taxonomies.industry $entry.id }}
+        <a href="/case-studies/industry/{{ $entry.id }}/" data-industry="{{ $entry.id }}" data-track="case-study-filter-{{ $entry.id }}"{{ if eq $active $entry.id }} aria-current="page"{{ end }} class="btn btn-sm btn-outline text-sm{{ if eq $active $entry.id }} is-active{{ end }}">
+            {{ $entry.name }}
+            {{ partial "badge.html" (dict "text" .Count "variant" "ghost" "size" "sm") }}
+        </a>
+            {{- end -}}
+        {{- end }}
+    </nav>
+</div>

@@ -1,8 +1,8 @@
 {{/*
-    Template Case Study Hero Partial
+    Case Study Quote Panel
 
     A single-panel card for featuring a customer quote and headline stat.
-    Used on the case-studies single page (quote block).
+    Used on the case-studies single page (layouts/case-studies/single.html).
 
     Parameters:
     - customer_logo: Path to customer logo image
@@ -24,7 +24,7 @@
 {{ $link := .link }}
 {{ $anchor := .anchor }}
 
-<div class="template-case-study-hero card overflow-hidden"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+<div class="case-study-hero card overflow-hidden"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col md:flex-row">
         {{/* Left: logo + quote (white background) */}}
         <div class="case-study-hero-quote-panel p-8 md:p-12">

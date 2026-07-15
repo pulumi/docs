@@ -14,6 +14,7 @@ import "./event-filtering";
 import "./blog-list";
 import "./blog-post";
 import "./what-is-list";
+import "./case-studies-list";
 import "./details-dropdown";
 import "./copybutton";
 import "./code-tabbed";

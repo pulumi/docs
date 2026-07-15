@@ -6,7 +6,10 @@ description: |
 meta_desc: Learn how Snowflake worked with Pulumi to easily develop infrastructure that is repeatable, testable and scalable.
 
 customer_name: Snowflake
+industry: data-analytics
 customer_logo: /logos/customers/snowflake-logo.svg
+logo_bg_color: "#29B5E8"
+logo_style: white
 customer_url: https://www.snowflake.com/
 
 quote_block:
