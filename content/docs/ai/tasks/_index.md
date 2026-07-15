@@ -54,9 +54,9 @@ If your task is straightforward and you could describe the outcome in a sentence
 
 Task modes control how much autonomy Neo has during execution. At any time during a task, the operating mode can be set to:
 
-- **Review mode**: Neo requires approval before running `pulumi preview`, running `pulumi up`, and opening a pull request.
+- **Review mode** (default): Neo requires approval before running `pulumi preview`, running `pulumi up`, and opening a pull request.
 - **Balanced mode**: Neo requires approval only before running `pulumi up`.
-- **Auto mode**: Neo does not require any approvals.
+- **Auto mode**: Neo will not request any approvals.
 
 Task modes are independent of Plan Mode. Task modes control what approvals Neo requires during execution, while Plan Mode controls what happens before execution. You can combine them: for example, use Plan Mode with Auto Mode to review the approach thoroughly up front, then let Neo execute without stopping.
 
