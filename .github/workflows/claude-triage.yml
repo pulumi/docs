@@ -108,9 +108,13 @@ jobs:
           REPO_FULL="${{ github.repository }}"
           AUTHOR="${{ github.event.pull_request.user.login }}"
 
-          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+          # GitHub App bots are not collaborators, so the permission API
+          # below returns "none" for them. Trusted agent bots that open
+          # PRs on this repo are whitelisted by name instead. Keep this
+          # list in sync with the matching check in claude-code-review.yml.
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ Copilot bot $AUTHOR is whitelisted for triage"
+            echo "✓ Bot $AUTHOR is whitelisted for triage"
             exit 0
           fi
 
