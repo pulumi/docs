@@ -13,9 +13,9 @@ Find your situation:
 | Your situation | What to do |
 |---|---|
 | An internal event (Pulumi hosts only), and you just need the shared image to look good | Nothing. The build generates it from frontmatter. |
+| You want the extra social sizes (portrait, tall, or square-large) | Run [the render script](#extra-sizes-without-ai). It reads the same frontmatter, so you don't need the skill. |
 | An external co-host whose photo is in `presenters` | Nothing needed for the photo, though the card won't show their company logo. Add the logo with the skill. |
 | You want the co-host's company logo on the card | Use the [`/event-meta-image` skill](#custom-cards-with-the-event-meta-image-skill). |
-| You want the extra social sizes (portrait, tall, or square-large) | Run [the render script](#extra-sizes-without-ai). |
 
 ## What the build generates automatically
 

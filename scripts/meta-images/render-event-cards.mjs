@@ -43,7 +43,7 @@ function parseArgs(argv) {
 
 const args = parseArgs(process.argv.slice(2))
 if (!args.target) {
-  console.error("usage: render-event-frontmatter.mjs <slug-or-path-to-index.md> [--out <dir>]")
+  console.error("usage: render-event-cards.mjs <slug-or-path-to-index.md> [--out <dir>]")
   process.exit(2)
 }
 
