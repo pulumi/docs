@@ -246,10 +246,19 @@
              Blog" doesn't. $blogTerm drives the suffix branch. */ -}}
         {{ $blogTerm := false }}
         {{ $seriesTerm := false }}
+        {{ $industryTerm := false }}
         {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
             {{ $blogTerm = true }}
             {{ $title = partial "blog/term-name.html" . }}
             {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
+        {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
+            {{- /* Case-study industry term page: use the display name from the
+                 data-file source of truth instead of Hugo's slug-derived .Title
+                 ("Developer-Tools"), and suffix "| Case Studies" below. */ -}}
+            {{ $industryTerm = true }}
+            {{ range site.Data.case_study_industries.industries }}
+                {{ if eq .id $.Data.Term }}{{ $title = .name }}{{ end }}
+            {{ end }}
         {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
             {{ $blogTerm = true }}
             {{ $title = "Categories" }}
@@ -302,6 +311,8 @@
             <title>{{ $title }} | Pulumi Docs</title>
         {{ else if eq .Type "registry" }}
             <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
+        {{ else if $industryTerm }}
+            <title>{{ $title }} | Case Studies | Pulumi</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
         {{ end }}

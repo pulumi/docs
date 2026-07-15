@@ -12,6 +12,8 @@
       - tutorial collections (/tutorials/*)          — since pulumi/docs#18483
       - blog category TERM pages (/blog/category/*)  — curated kinds with
         hand-written descriptions
+      - case-study industry TERM pages (/case-studies/industry/*) — curated
+        customer-story landing pages, one per vertical (data-file source of truth)
       - blog series pages (/blog/series/ and /blog/series/*) — curated
         multi-part landing pages with unique, blog-only titles. Both the
         directory and each series term page are indexed (the directory was an
@@ -26,7 +28,7 @@
     {{- $indexable = false -}}
     {{- if or (eq .Data.Singular "collection") (eq .Data.Singular "series") -}}
         {{- $indexable = true -}}
-    {{- else if and (eq .Kind "term") (eq .Data.Singular "category") -}}
+    {{- else if and (eq .Kind "term") (or (eq .Data.Singular "category") (eq .Data.Singular "industry")) -}}
         {{- $indexable = true -}}
     {{- end -}}
 {{- end -}}

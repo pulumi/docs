@@ -49,6 +49,11 @@
 .badge-dark {
     @apply bg-service-black border-gray-800 text-white;
 }
+.badge-ghost {
+    // Chromeless soft pill — no fill or border, just muted text. Used for the
+    // count on the case-study industry filter pills.
+    @apply bg-transparent text-gray-primary;
+}
 
 // Back-compat aliases — the chooser (`_chooser.scss` @extend) and hand-authored
 // content (`saml/sso.md`) reference these names directly, so they must persist.
@@ -89,4 +94,7 @@ a.badge-outline:hover {
 }
 a.badge-dark:hover {
     @apply border-violet-300;
+}
+a.badge-ghost:hover {
+    @apply bg-gray-100 text-violet-primary;
 }

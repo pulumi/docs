@@ -1,14 +1,34 @@
 {{- /*
-    A single case-study card. Shared by the case-studies index
-    (layouts/case-studies/list.html) and the industry term pages
-    (layouts/taxonomy/industry.html). Context is the case-study page.
+    A single case-study card. Shared by the case-studies board
+    (layouts/partials/case-studies/board.html), which drives both the
+    /case-studies/ index and the industry term pages.
+
+    Params:
+      page    the case-study page.
+      active  the selected industry id ("" = All). When non-empty and it doesn't
+              match this card's industry, the card is server-hidden so a direct
+              term-page load / no-JS visit shows only the right cards.
+              case-studies-list.ts toggles this in place on the client.
 */ -}}
-{{ $page := . }}
-{{ $href := cond (isset .Params "redirect_to") (string .Params.redirect_to) .RelPermalink }}
-<div class="template-card">
+{{ $page := .page }}
+{{ $active := .active }}
+{{ $industry := $page.Params.industry }}
+{{ $hidden := and (ne $active "") (ne $active $industry) }}
+{{- /* Look up the industry display name from the data-file source of truth. */ -}}
+{{ $industryName := "" }}
+{{ range site.Data.case_study_industries.industries }}
+    {{ if eq .id $industry }}{{ $industryName = .name }}{{ end }}
+{{ end }}
+{{ $href := cond (isset $page.Params "redirect_to") (string $page.Params.redirect_to) $page.RelPermalink }}
+{{- /* The whole card is clickable: the customer-name link is stretched over the
+    card (after:absolute after:inset-0), so a click anywhere follows it. The
+    "Read the story" cue only appears on hover/focus (group-hover / -focus-within);
+    it's decorative (aria-hidden) since the stretched link already labels the card.
+    Card hover affordance reuses the shared .card-hover (theme/src/scss/_card.scss). */ -}}
+<div class="card card-hover group relative flex flex-1 items-start p-8 pb-0" data-case-study-card data-industry="{{ $industry }}"{{ if $hidden }} hidden{{ end }}>
     <div class="flex flex-col h-full w-full">
         <div class="flex flex-col gap-4 mb-8">
-            {{ with .Params.customer_logo }}
+            {{ with $page.Params.customer_logo }}
             <div class="h-10 flex items-center">
                 {{ $fpSrc := strings.TrimPrefix "/" . }}
                 {{ $fpAsset := resources.Get (printf "fingerprinted/%s" $fpSrc) }}
@@ -19,18 +39,21 @@
                 {{ end }}
             </div>
             {{ end }}
-            <h3 class="card-title m-0">
-                <a href="{{ $href }}" class="text-black hover:text-black no-underline">{{ .Params.customer_name }}</a>
+            <h3 class="heading-3 m-0!">
+                <a href="{{ $href }}" class="text-black no-underline transition-colors group-hover:text-violet-primary after:absolute after:inset-0 after:content-['']">{{ $page.Params.customer_name }}</a>
             </h3>
+            {{ with $industryName }}
+            {{ partial "badge.html" (dict "text" . "variant" "outline") }}
+            {{ end }}
         </div>
-        <div class="card-description mb-6">
-            {{ .Description | markdownify }}
+        <div class="body-base mb-6">
+            {{ $page.Description | markdownify }}
         </div>
         <div class="mt-auto">
-            <a href="{{ $href }}" class="btn btn-link btn-xl">
+            <span class="btn btn-link btn-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-within:opacity-100" aria-hidden="true">
                 Read the story
                 {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
-            </a>
+            </span>
         </div>
     </div>
 </div>

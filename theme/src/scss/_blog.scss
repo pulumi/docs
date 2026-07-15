@@ -39,7 +39,8 @@
 // blog-list.ts) and the /what-is/ section filter pill (moved by what-is-list.ts).
 // Styled to match the mockup's selected pill.
 [data-blog-filter] .is-active,
-[data-what-is-filter] .is-active {
+[data-what-is-filter] .is-active,
+[data-case-study-filter] .is-active {
     @apply border-gray-500 bg-gray-100;
 }
 
@@ -53,7 +54,8 @@
 // the link whose section is currently in view. The `!` is required: this file
 // compiles into @layer components, and the link's own text-service-black lives
 // in the later utilities layer, which wins regardless of specificity.
-[data-blog-toc] a.is-active {
+[data-blog-toc] a.is-active,
+[data-case-study-toc] a.is-active {
     @apply text-violet-primary!;
 }
 

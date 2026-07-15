@@ -2,49 +2,5 @@
 {{ end }}
 
 {{ define "main" }}
-<div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
-
-    {{/* Hero */}}
-    <section class="template-hero template-hero--centered" id="hero">
-        <div class="flex flex-col items-center gap-12">
-            <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-                <h1 class="title mb-6">{{ .Title }}</h1>
-                {{ with .Params.description }}
-                <p class="description mb-10 max-w-2xl">{{ . | markdownify }}</p>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
-    {{/* Browse by industry — links to each /case-studies/industry/<slug>/ term
-        page, in the order defined by data/case_study_industries.yaml. Only
-        industries that actually have a case study are shown. */}}
-    {{ if site.Taxonomies.industry }}
-    <section id="browse-by-industry" aria-labelledby="browse-by-industry-heading">
-        <h2 id="browse-by-industry-heading" class="heading-4 text-center mb-6">Browse by industry</h2>
-        <div class="flex flex-wrap justify-center gap-3">
-            {{ range site.Data.case_study_industries.industries }}
-            {{ $entry := . }}
-            {{ with index site.Taxonomies.industry $entry.id }}
-            <a href="/case-studies/industry/{{ $entry.id }}/" data-track="case-study-industry-{{ $entry.id }}" class="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 body-sm text-service-black no-underline transition-colors hover:border-violet-primary hover:text-violet-primary">
-                <span>{{ $entry.name }}</span>
-                <span class="text-gray-500">{{ .Count }}</span>
-            </a>
-            {{ end }}
-            {{ end }}
-        </div>
-    </section>
-    {{ end }}
-
-    {{/* Case study cards */}}
-    <section id="customer-stories">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {{ $items := where (where .Site.Pages "Type" "case-studies") "Kind" "eq" "page" }}
-            {{ range sort $items ".Params.customer_name" }}
-            {{ partial "case-studies/card.html" . }}
-            {{ end }}
-        </div>
-    </section>
-
-</div>
+{{ partial "case-studies/board.html" (dict "active" "") }}
 {{ end }}

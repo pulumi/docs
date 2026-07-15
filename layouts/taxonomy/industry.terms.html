@@ -8,25 +8,21 @@
         Only industries that actually have a case study are listed. */ -}}
     <div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-12 overflow-hidden">
 
-        <section class="template-hero template-hero--centered" id="hero">
-            <div class="flex flex-col items-center gap-6">
-                <a href="/case-studies/" class="btn btn-link">
-                    {{ partial "icon.html" (dict "name" "arrow-left" "weight" "bold" "class" "size-4") }}
-                    All case studies
-                </a>
-                <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-                    <h1 class="title mb-0">Case studies by industry</h1>
-                </div>
-            </div>
+        <section id="hero" class="flex flex-col items-center text-center gap-6 w-full max-w-4xl mx-auto">
+            <a href="/case-studies/" class="btn btn-link">
+                {{ partial "icon.html" (dict "name" "arrow-left" "weight" "bold" "class" "size-4") }}
+                All case studies
+            </a>
+            <h1 class="heading-1 text-black mb-0">Case studies by industry</h1>
         </section>
 
         <div class="grid grid-cols-1 gap-8 lg:gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {{ range site.Data.case_study_industries.industries }}
             {{ $entry := . }}
             {{ with index site.Taxonomies.industry $entry.id }}
-            <article class="group relative flex flex-col items-start gap-2">
-                <h2 class="heading-4 m-0!"><a href="/case-studies/industry/{{ $entry.id }}/" data-track="case-study-industry-{{ $entry.id }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $entry.name }}</a> <span class="body-sm text-gray-500">{{ .Count }}</span></h2>
-                {{ with $entry.description }}<p class="m-0! body-sm text-service-black max-w-sm">{{ . }}</p>{{ end }}
+            <article class="group relative flex flex-row items-center gap-2">
+                <h2 class="heading-4 m-0!"><a href="/case-studies/industry/{{ $entry.id }}/" data-track="case-study-industry-{{ $entry.id }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $entry.name }}</a></h2>
+                {{ partial "badge.html" (dict "text" .Count "variant" "ghost" "size" "sm") }}
             </article>
             {{ end }}
             {{ end }}
