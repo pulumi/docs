@@ -41,6 +41,7 @@ See also:
 * [Build and deployment guide](./BUILD-AND-DEPLOY.md)
 * [Publishing a Pulumi blog post](./BLOGGING.md)
 * [Documentation and coding style guide](./STYLE-GUIDE.md)
+* [Event social cards (OpenGraph / meta images)](./EVENT-SOCIAL-CARDS.md)
 * [AI agent instructions](./AGENTS.md)
 
 # Setup and Development

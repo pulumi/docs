@@ -244,17 +244,18 @@ export async function eventsTree(fields, { w, h: height }) {
       h("div", { style: { display: "flex", flexDirection: "column", width: innerW, height: innerH } }, main, bottom))
   }
 
-  // portrait: speakers on top, text below. A gap below the speaker row keeps the
-  // text clear of the accent lines that curve down around the photo (space-between
-  // pushes the text block to the bottom, mirroring the Figma frame).
-  const topH = n ? spec.speakersRowH : 0
-  const portraitGap = n ? 64 : 0
+  // portrait: speakers on top, text below. The speaker band is ALWAYS reserved —
+  // even with no speakers — so the text block stays clear of the accent lines that
+  // curve down the top of the frame (an empty spacer holds the space a photo row
+  // would occupy). space-between then pushes the text to the bottom, per Figma.
+  const topH = spec.speakersRowH
+  const portraitGap = 64
   const top = n
     ? h("div", { style: { display: "flex", alignItems: "center", width: innerW, height: topH, flexShrink: 0 } }, speakerCluster(speakers, sS, spec.s))
-    : null
+    : h("div", { style: { width: innerW, height: topH, flexShrink: 0 } })
   const main = mainColumn(fields, spec, font, innerW, innerH - topH - portraitGap)
   return frame(w, height, spec,
-    h("div", { style: { display: "flex", flexDirection: "column", width: innerW, height: innerH, justifyContent: speakers.length ? "space-between" : "flex-start" } }, top, main))
+    h("div", { style: { display: "flex", flexDirection: "column", width: innerW, height: innerH, justifyContent: "space-between" } }, top, main))
 }
 
 // --- Field builders / resolvers ----------------------------------------------
