@@ -33,24 +33,28 @@
         }
     }
 
-    h2 {
-        @apply text-2xl;
-    }
+    // Scope content heading sizes to `main` so they don't override the site
+    // footer's `.footer-heading` (which shares the same `h3` etc. tags).
+    main {
+        h2 {
+            @apply text-2xl;
+        }
 
-    h3 {
-        @apply text-xl;
-    }
+        h3 {
+            @apply text-xl;
+        }
 
-    h4 {
-        @apply text-lg;
-    }
+        h4 {
+            @apply text-lg;
+        }
 
-    h5 {
-        @apply text-base;
-    }
+        h5 {
+            @apply text-base;
+        }
 
-    h6 {
-        @apply text-sm;
+        h6 {
+            @apply text-sm;
+        }
     }
 
     // Summaries may not end up in `p` tags (which would style them automatically), so
