@@ -10,7 +10,7 @@ menu:
     weight: 15
 ---
 
-The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. No long-lived cloud secrets are stored in Pulumi Cloud.
+The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. No long-lived cloud secrets are stored in Pulumi Cloud.
 
 The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
 
@@ -107,7 +107,7 @@ The wizard shows how many accounts, subscriptions, or projects it discovered and
 
 The access level determines which permissions Pulumi receives in each account:
 
-- **Build & Manage (read and write)**: the default. Enables Pulumi Neo, infrastructure as code, deployments, and policies that remediate issues automatically. Grants `AdministratorAccess` in AWS, **Contributor** in Azure, or **Editor** in Google Cloud.
+- **Build & Manage (read and write)**: the default. Enables [Pulumi Neo](/docs/ai/), infrastructure as code, deployments, and policies that remediate issues automatically. Grants `AdministratorAccess` in AWS, **Contributor** in Azure, or **Editor** in Google Cloud.
 - **Discovery & Policy (read-only)**: limited to discovery scanning and inventory. Pulumi can't modify your infrastructure. Grants `ReadOnlyAccess` in AWS, **Reader** in Azure, or **Viewer** in Google Cloud.
 
 Select **Change access level** to switch the default, or set a different level for individual accounts under **Per account access**. If your security review requires it, start with read-only access; you can raise access for specific accounts later.

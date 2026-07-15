@@ -29,18 +29,18 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 {{< video title="Column Selection" src="https://pulumi.com/uploads/insights-create-account.mp4" autoplay="true" loop="false" >}}
 
 1. After logging into the Pulumi Cloud Console, navigate to the **Accounts** tab.  
-2. On this page, click the **Connect cloud accounts** button to open the connection wizard.  
-3. Select your provider.
+1. On this page, select the **Connect cloud accounts** button to open the connection wizard.  
+1. Select your provider.
 {{< notes type="info" >}}  
   Currently, Pulumi supports AWS, Azure, Google Cloud, Oracle Cloud, and Kubernetes as providers for Insights accounts.  
 {{< /notes >}}
-4. On the **Authentication** step, choose **Connect using existing ESC credentials** and select an ESC environment that has the correct credentials to scan the selected provider, then click **Next**. Pulumi validates the credentials stored in the environment.  
+1. On the **Authentication** step, choose **Connect using existing ESC credentials** and select an ESC environment that has the correct credentials to scan the selected provider, then select **Next**. Pulumi validates the credentials stored in the environment.  
 {{< notes type="info" >}}  
   See below for details on how to set up the ESC environment for each provider.  
 {{< /notes >}}
-5. On the **Discovery** step, choose whether to enable scheduled scans or run them manually, and optionally enable a default policy pack. For AWS, also select the regions you want scanned; global services are always scanned.
+1. On the **Discovery** step, choose whether to enable scheduled scans or run them manually, and optionally enable a default policy pack. For AWS, also select the regions you want scanned; global services are always scanned.
 Scheduled scans run every 24 hours by default; you can switch to a 12-hour schedule instead.  
-6. Click **Next**. You should see a success notification, and the wizard shows a summary with next steps. The account is named after the selected ESC environment.
+1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. The account is named after the selected ESC environment.
 {{< notes type="info" >}}  
   Pulumi automatically names child accounts using `/`. For more information, see **Account Hierarchies** below.  
 {{< /notes >}}
