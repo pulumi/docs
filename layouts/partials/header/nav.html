@@ -1,7 +1,11 @@
 {{- $nav := site.Data.header_nav -}}
+{{- /* Docs/tutorials keep a header that scrolls away (their sticky sidebar +
+       TOC are sized from the header's visible bottom); everywhere else the nav
+       is pinned. Same URL test the header used to branch the docs nav on. */ -}}
+{{- $docsChrome := or (hasPrefix .RelPermalink "/docs/") (hasPrefix .RelPermalink "/tutorials/") -}}
 
 <header
-  class="sticky top-0 z-40 w-full border-b border-gray-200 bg-white"
+  class="{{ if $docsChrome }}relative{{ else }}sticky top-0{{ end }} z-40 w-full border-b border-gray-200 bg-white"
 >
   <div class="flex h-16 items-center justify-between gap-2 px-4 md:px-6">
 
@@ -9,7 +13,8 @@
        data-logo-brand-menu
        class="flex shrink-0 items-center rounded-md transition-opacity hover:opacity-80 focus-visible:ring-3 focus-visible:ring-violet-400/50 focus-visible:ring-offset-4 focus-visible:outline-1 focus-visible:outline-transparent"
        aria-label="Pulumi home">
-      {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
+      {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-white.svg" "alt" "Pulumi logo" "class" "docs-logo-light h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
+      {{ partial "fingerprinted-img.html" (dict "src" "logos/brand/logo-on-black.svg" "alt" "Pulumi logo" "class" "docs-logo-dark h-7 w-auto" "width" "112" "height" "28" "loading" "eager") }}
     </a>
 
     {{ partial "header/nav-desktop.html" $nav }}

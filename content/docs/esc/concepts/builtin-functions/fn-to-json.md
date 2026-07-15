@@ -30,4 +30,4 @@ fn::toJSON: value-to-encode
 
 ### Returns
 
-The decoded value.
+The encoded value.
