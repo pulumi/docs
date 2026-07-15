@@ -1026,6 +1026,10 @@ Terratest is battle-tested and widely adopted, particularly for Terraform module
 
 With Pulumi, there's no context switch. The same developer who writes the infrastructure writes the tests in the same language, using the same IDE, the same debugger, and the same CI pipeline. That cohesion is a productivity multiplier.
 
+{{< blog/cta-card title="Test your infrastructure with Pulumi" >}}
+Write unit tests, integration tests, and policy checks in the language you already use, then run them on every pull request.
+{{< /blog/cta-card >}}
+
 ## How to set up IaC testing with Pulumi
 
 Follow these steps to add a complete test suite to a Pulumi project. The examples use Python, but the pattern is identical in TypeScript, Go, C#, or Java.

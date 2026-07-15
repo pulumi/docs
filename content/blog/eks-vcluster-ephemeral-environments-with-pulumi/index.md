@@ -213,6 +213,10 @@ const vclusterProvider = new k8s.Provider("vcluster-provider", {
 });
 ```
 
+{{< blog/cta-card title="Provision environments on demand" >}}
+Model your host cluster, vCluster tenants, and guardrails in Pulumi so your platform team can hand developers isolated test environments and clean them up as code.
+{{< /blog/cta-card >}}
+
 ## Operational caveats
 
 * **RBAC and permissions**: vCluster generates default RBAC rules that work for most scenarios. However, if your host cluster is heavily locked down, you may need to provide additional permissions to the vCluster service account.

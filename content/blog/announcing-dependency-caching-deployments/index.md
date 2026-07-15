@@ -20,7 +20,7 @@ When using Pulumi Deployments, installing dependencies can be a time-consuming p
 
 ## How dependency caching works
 
-Pulumi Deployments now can automatically cache dependencies for [popular package managers](/docs/pulumi-cloud/deployments/faq/#dependency-caching), such as npm, pip, and go modules. When a deployment is triggered, Pulumi will:
+Pulumi Deployments now can automatically cache dependencies for [popular package managers](/docs/deployments/concepts/settings/#dependency-caching), such as npm, pip, and go modules. When a deployment is triggered, Pulumi will:
 
 1.	Check for an existing cache of your dependencies.
 2.	If a cache already exists, Pulumi will reuse those dependencies, bypassing the need to install them from scratch.
@@ -75,9 +75,9 @@ const settings = new service.DeploymentSettings("deployment_settings", {
 
 ### Using the REST API
 
-You can also enable dependency caching using the Pulumi REST API. See the [API documentation](/docs/pulumi-cloud/deployments/api/#cache-options) for more information.
+You can also enable dependency caching using the Pulumi REST API. See the [dependency caching documentation](/docs/deployments/concepts/settings/#dependency-caching) for more information.
 
-For more information on how dependency caching works with Pulumi Cloud Deployments and the list of supported package managers, check out the [FAQ](/docs/pulumi-cloud/deployments/faq/#dependency-caching) on dependency caching.
+For more information on how dependency caching works with Pulumi Cloud Deployments and the list of supported package managers, check out the [dependency caching documentation](/docs/deployments/concepts/settings/#dependency-caching).
 
 ## What’s next?
 

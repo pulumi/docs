@@ -205,6 +205,10 @@ of other property names you want treated as secrets including computed
 output properties of a resource which might be sensitive, like generated
 passwords or access credentials.
 
+{{< blog/cta-card title="Manage secrets with Pulumi ESC" href="/docs/esc/" >}}
+Store encrypted secrets, pull short-lived cloud credentials, and share configuration across your stacks and environments from a single source with Pulumi ESC.
+{{< /blog/cta-card >}}
+
 ## Configuring Your Secrets Provider
 
 You might be wondering how these values are actually encrypted. We use

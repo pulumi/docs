@@ -4,10 +4,6 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-# URLs to Pulumi utility services.
-export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production-www url)}"
-export PULUMI_AI_WS_URL=${PULUMI_AI_WS_URL:-$(pulumi stack output --stack pulumi/pulumigpt-api/corp websocketUri)}
-
 printf "Compiling theme JavaScript and CSS...\n\n"
 export ASSET_BUNDLE_ID="$(build_identifier)"
 export CSS_BUNDLE_ID="${ASSET_BUNDLE_ID}"

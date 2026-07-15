@@ -662,6 +662,10 @@ Direct streaming is the fastest path, but two other patterns are available in th
 
 We'll walk through both patterns in detail in upcoming posts.
 
+{{< blog/cta-card title="Stamp out data pipelines with components" >}}
+Encapsulate your Snowflake loading logic in a Pulumi component, then create new pipelines with a handful of configuration values instead of copied files.
+{{< /blog/cta-card >}}
+
 ## Publishing as reusable components
 
 Once your components are battle-tested, you can share them across teams and projects instead of copying files around.

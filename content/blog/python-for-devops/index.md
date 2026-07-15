@@ -267,6 +267,10 @@ lambda_function = aws.lambda_.Function("custom-lambda",
   </figcaption>
 </span>
 
+{{< blog/cta-card title="Manage your cloud in Python" >}}
+Define AWS Lambda, ECR, and the rest of your infrastructure with real Python instead of YAML, and reuse the same loops, functions, and tests you already know.
+{{< /blog/cta-card >}}
+
 ## Bringing it all together
 
 <span style="width: 50%; float: right; margin-left: 20px;">

@@ -161,6 +161,10 @@ As demonstrated, your sensitive information is encrypted, and the value doesn't 
 
 Using Pulumi and its secret management capabilities is an important step toward more secure deployments in general. But also, it enables developers to reach "zero-knowledge" of any sensitive information, effectively separating code and deployment from passwords and other sensitive information.
 
+{{< blog/cta-card title="Put these patterns to work" >}}
+Name your resources clearly, keep secrets encrypted, and build infrastructure in a language you already know with Pulumi.
+{{< /blog/cta-card >}}
+
 ## Summary
 
 For this first article, we laid down the important foundations of infrastructure-as-code. Here is a quick summary:

@@ -93,6 +93,10 @@ Every parallelism story has a catch list. The application-code version lists por
 
 **PR pile-up is the same problem.** Five reviewed diffs are still five things waiting on the merge queue. The infra-flavored mitigations: stack-scoped reviewers (the human who owns the stack approves the change to it), the [Pulumi Cloud audit log](/docs/administration/security-compliance/audit-logs/) for grouping by stack and time, and auto-merge for the narrow class of changes where the preview diff is clean and every policy passes. That last one is where most of the throughput hides.
 
+{{< blog/cta-card title="Run any agent on your stacks" href="/docs/ai/" >}}
+Pulumi hands every coding agent a deterministic preview, isolated stacks, and policy as code to work against, whether that agent is Claude Code, Cursor, or Pulumi Neo.
+{{< /blog/cta-card >}}
+
 ## Where to start, this afternoon
 
 Three steps, in order, on a stack with a small blast radius.

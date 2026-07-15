@@ -116,6 +116,10 @@ The last pillar is the one that keeps the other six honest. Some decisions shoul
 
 Pulumi Deployments approvals already play that role for human changes. [Pulumi Neo's review steps](/product/neo/) add the AI-aware version: a structured plan, a diff, a named approver, and a record of what they decided and why. I walked through what this looks like in practice in [*Self-Verifying AI Agents*](/blog/self-verifying-ai-agents-vercels-agent-browser-in-the-ralph-wiggum-loop/). Short version: an agent that proposes is much safer than an agent that commits.
 
+{{< blog/cta-card title="Govern agent changes through your platform" href="/docs/ai/" >}}
+Route changes from any coding agent, including Claude Code, Cursor, and Pulumi Neo, through the same infrastructure as code controls, policies, and audit trail your team already runs.
+{{< /blog/cta-card >}}
+
 ## Why IaC is the natural substrate for this
 
 Step back from the seven pillars and look at what they have in common. Context, integrations, governed actions, deterministic policy, audit, review, approval. None of those are new problems that AI agents invented. They're the problems infrastructure-as-code has been quietly solving for a decade, for human developers.

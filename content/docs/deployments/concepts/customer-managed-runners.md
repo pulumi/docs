@@ -90,6 +90,12 @@ Regardless of the deploy target, each agent process runs **one deployment at a t
 | **Scaling** | Run more agent processes (for example, more hosts or systemd units) | Run more agent replicas, or use `single_run` with a `Job`/`CronJob` for ephemeral per-job runners |
 | **Best fit** | A single VM or host where you want the simplest setup | An existing Kubernetes environment that should schedule and bound runner resources |
 
+## Dependency caching
+
+Pulumi's [dependency caching](/docs/deployments/concepts/settings/#dependency-caching) is not available on customer-managed runner pools. If a stack is assigned to a customer-managed pool, the setting has no effect.
+
+Because you control the runner environment and image, you can manage caching yourself — for example, by persisting package manager caches and the Pulumi plugin directory (`~/.pulumi/plugins`) across jobs, or by pre-baking them into your runner image.
+
 ## Providing cloud credentials to workflow runners
 
 {{% notes type="info" %}}

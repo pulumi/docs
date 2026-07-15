@@ -211,6 +211,10 @@ The QA preview stage uses `availabilityStrategy: All`, meaning freight must pass
 
 Different approval gates may require different approvers. Using the [custom roles](#setting-up-approver-roles) described earlier, you can grant specific users or groups the `promote` permission on individual approval gates. For example, security team members might have the `promote` permission on `approvalgateqasec`, while functional testers have it on `approvalgateqa`. This ensures the right people review changes at each checkpoint.
 
+{{< blog/cta-card title="Manage Kubernetes change with Pulumi" >}}
+Define your Pulumi stacks as Kubernetes resources, then promote and verify infrastructure changes across dev, staging, and production with controlled, staged rollouts.
+{{< /blog/cta-card >}}
+
 ## Verification
 
 After each stage completes, Kargo can verify that the operation succeeded before promoting to the next stage. This example uses [analysis templates](https://docs.kargo.io/user-guide/reference-docs/analysis-templates/) to query the Pulumi API and confirm deployments completed successfully.

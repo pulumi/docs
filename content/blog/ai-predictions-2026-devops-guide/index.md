@@ -114,6 +114,10 @@ For each capability, you just have a bit of metadata or description that loads u
 
 For DevOps, this translates to modular infrastructure definitions, on-demand capability loading, and efficient resource utilization. Think about how you can apply this pattern to your own automation.
 
+{{< blog/cta-card title="Equip your agents with Pulumi skills" href="/docs/ai/skills/" >}}
+Give Claude Code, Cursor, or any coding agent working Pulumi patterns through Agent Skills and the Pulumi MCP server, so it generates infrastructure that deploys.
+{{< /blog/cta-card >}}
+
 ## Agent-to-agent protocols are finally happening
 
 Agent-to-agent protocols are where AI agents operate in a peer network, discover each other's capabilities in real time, and interact autonomously. When Google released their [A2A protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) earlier this year, there was a ton of buzz. A lot of people thought it was going to be the next big standard, like the next MCP. But then it kind of fell to the wayside.

@@ -153,6 +153,10 @@ With the new [Pulumi Kubernetes Operator 2.3](https://www.pulumi.com/blog/pulumi
 
 Documentation: [Using the Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/)
 
+{{< blog/cta-card title="Kubernetes beyond YAML" >}}
+Define clusters, workloads, and policies in TypeScript, Python, or Go, and manage EKS, AKS, and GKE from a single code-first workflow.
+{{< /blog/cta-card >}}
+
 ## Intelligent Infrastructure Across Every Cloud
 
 Kubernetes has become the control plane for everything from application deployments to AI and ML workloads across clouds and environments. Engineering teams are running clusters on Amazon EKS, Microsoft AKS, and Google GKE while also managing edge, hybrid, and on-premises environments. Pulumi extends Kubernetes automation across all of them, unifying clusters, workloads, and cloud resources under a consistent model of infrastructure as code.

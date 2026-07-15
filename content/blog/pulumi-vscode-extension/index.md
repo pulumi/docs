@@ -100,6 +100,10 @@ You can also:
 
 <img width="300" src="tag-revision.png" alt="Revisions and tags" />
 
+{{< blog/cta-card title="Manage infrastructure from your editor" >}}
+Pulumi brings infrastructure as code and Pulumi ESC into the tools you already work in. Build, deploy, and debug your stacks, then manage secrets and configuration in Pulumi Cloud.
+{{< /blog/cta-card >}}
+
 ## Pulumi YAML Support
 
 Along with support for many popular programming languages including TypeScript, Python, Go, .NET and Java - Pulumi also supports a simple declarative YAML language for defining and managing infrastructure.  VS Code already has great support for all the other languages Pulumi supports, but for Pulumi YAML, the Pulumi VS Code Extension offers great support for working in this YAML dialect, including support for type checking, completion lists, colorization and more.

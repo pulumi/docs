@@ -88,6 +88,10 @@ The system isn't finished, either. It's probably never finished. I'm still tweak
 
 And the ADHD angle is real but it's not magic. There are still days where the paralysis wins. AI lowers the activation energy for starting; it doesn't eliminate it. I'm still the one who has to show up. I suppose I could automate that too, but then we'd be in a whole different kind of dystopia.
 
+{{< blog/cta-card title="Turn your workflows into skills" href="/docs/ai/skills/" >}}
+Pulumi's Agent Skills bring the same modular approach to infrastructure, teaching your coding agent the conventions your team relies on.
+{{< /blog/cta-card >}}
+
 ## Lessons to share
 
 **Know your models and their costs.** At Pulumi we primarily use Claude, and I work in [Claude Code](https://claude.ai/claude-code); for most tasks I reach for Sonnet rather than Opus. Opus is excellent, but it's significantly more expensive, and well-crafted instructions to Sonnet handle the vast majority of my work just as effectively.

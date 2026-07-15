@@ -493,6 +493,10 @@ public class App {
 
 The Pulumi output, `ref`, provides a convenient way to reference the pushed image in downstream Pulumi resources like [ECS TaskDefinitions](https://www.pulumi.com/registry/packages/aws/api-docs/ecs/taskdefinition/) or [Kubernetes Deployments](https://www.pulumi.com/registry/packages/kubernetes/api-docs/apps/v1/deployment/).
 
+{{< blog/cta-card title="Build container images with Pulumi" >}}
+Use the Docker Build provider to build multi-platform images, cache layers across builds, and push to your registry of choice as part of your Pulumi program.
+{{< /blog/cta-card >}}
+
 ## Migrating from docker.Image to docker_build.Image
 
 The new `docker_build.Image` replaces the old `docker.Image` resource. It adds new features and addresses many bugs with the previous resource by fully aligning with Docker's underlying [buildx] commands. From now on, we will continue to invest in Docker Build and the `docker_build.Image` resource.
