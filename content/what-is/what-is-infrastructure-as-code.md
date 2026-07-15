@@ -64,7 +64,7 @@ A typical workflow looks like this:
 
 1. **Write the desired state as code.** Describe the resources you want (a network, a Kubernetes cluster, a database, an IAM policy) in a configuration file or program.
 1. **Build a plan.** The IaC tool reads your code and constructs a model of the desired state.
-1. **Compare against reality.** The tool compares that desired state against a record of what already exists, usually kept in a *state file* that tracks the resources it manages.
+1. **Compare against reality.** The tool compares that desired state against a record of what already exists, usually kept in a [*state file*](/what-is/what-is-terraform-state/) that tracks the resources it manages.
 1. **Preview the changes.** Before anything happens, you get a diff showing exactly what will be created, updated, replaced, or deleted.
 1. **Reconcile.** Once approved, the engine calls the cloud provider APIs to make the real infrastructure match your code, handling ordering and dependencies along the way.
 
@@ -261,7 +261,7 @@ Most tools have their own. Terraform and OpenTofu use HCL, CloudFormation uses Y
 
 ### Which infrastructure as code tool should I use?
 
-The right answer usually comes down to three things: what languages your team is comfortable in, which clouds you're targeting, and how much you care about testing and abstraction. Pulumi tends to be the best fit when you want general-purpose languages, multi-cloud support, and the ability to unit-test your infrastructure. Terraform and OpenTofu have the largest install base and a mature module ecosystem. CloudFormation, ARM/Bicep, and Deployment Manager make the most sense when you're committed to a single cloud and want the deepest native integration.
+The right answer usually comes down to three things: what languages your team is comfortable in, which clouds you're targeting, and how much you care about testing and abstraction. Pulumi tends to be the best fit when you want general-purpose languages, multi-cloud support, and the ability to unit-test your infrastructure. Terraform and OpenTofu have the largest install base and a mature [module ecosystem](/what-is/what-is-a-terraform-module/). CloudFormation, ARM/Bicep, and Deployment Manager make the most sense when you're committed to a single cloud and want the deepest native integration.
 
 ### Can I use infrastructure as code with my existing infrastructure?
 
