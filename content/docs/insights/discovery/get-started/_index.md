@@ -39,9 +39,10 @@ For an overview of how Pulumi Insights works, check out the following 5-min vide
 
 This guide will take you through the following steps to get started with Pulumi Insights Account Discovery and Resource Explorer:
 
-1. Setting up and configuring Pulumi to access your cloud accounts.
-2. Create a new Insights Account
-3. Use Insights Resource Explorer to understand your infrastructure.
-4. Ask natural language questions about your resources using Pulumi Neo.
+1. Confirm the prerequisites for connecting your cloud accounts.
+1. Connect a cloud account and run your first discovery scan.
+1. Manage your accounts and launch scans on demand.
+1. Use Insights Resource Explorer to understand your infrastructure, and ask natural language questions using Pulumi Neo.
+1. Apply policies to your discovered resources.
 
 {{< get-started-stepper >}}
