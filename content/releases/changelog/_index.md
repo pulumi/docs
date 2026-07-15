@@ -1,6 +1,6 @@
 ---
 title: Changelog
-meta_desc: The full Pulumi releases changelog, with each entry's complete announcement.
+meta_desc: Dispatches from the Pulumi team covering new platform features, updates, fixes, deprecations, and more.
 
 # Each changelog item is its own page in this directory: title, date, and an
 # optional tier badge in front matter, with the full announcement as the
