@@ -1,0 +1,86 @@
+// Case-studies section (/case-studies/) styles. Split out of _templates.scss so
+// the case-study pages are decoupled from the template-page component system.
+// Imported right after "templates" in main.scss, so the shared `edge-fade` and
+// `section-description` mixins defined there are in scope here.
+
+// Case-study article body. Appearance comes from the default heading / link /
+// paragraph styles (main.scss + _base-shared.scss); this only offsets the
+// anchored headings so "On this page" jumps clear the sticky site nav
+// (mirrors .blog-post-content in _blog.scss).
+.case-study-content :is(h2, h3, h4, h5, h6) {
+    scroll-margin-top: 6rem;
+}
+
+// Quote / stat panel on the single case-study page
+// (layouts/partials/case-studies/quote-panel.html).
+.case-study-hero {
+    .case-study-hero-logo {
+        @apply h-8 w-auto;
+    }
+
+    .case-study-hero-quote-panel {
+        @apply bg-white flex-[2];
+    }
+
+    .case-study-hero-stat {
+        @apply font-bold text-black heading-3 leading-relaxed;
+    }
+
+    .case-study-hero-headline {
+        @include section-description();
+        @apply text-gray-800;
+    }
+
+    .case-study-hero-quote {
+        @include section-description();
+        @apply m-0 text-black;
+    }
+
+    .case-study-hero-attrib {
+        @apply font-body mt-4 mb-0 text-gray-600;
+    }
+
+    .case-study-hero-stat-panel {
+        @apply flex-1 bg-violet-50 border-t border-violet-200 flex flex-col justify-center;
+
+        @include screen-md {
+            @apply border-t-0 border-l;
+        }
+    }
+}
+
+// Industry filter bar (layouts/partials/case-studies/filter-bar.html). On md and
+// down it's a single-row horizontal scroller with the scrollbar hidden and white
+// edge fades signalling the overflow; from lg up the fades switch off and the
+// pills wrap and center like a normal row.
+.case-study-filter-scroll {
+    @apply relative;
+    @include edge-fade;
+
+    @include screen-lg {
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+}
+
+.case-study-filter {
+    // pl-10 matches the 40px left fade so the leftmost pill sits clear of the
+    // overlay at rest; the fade only covers it once the row is scrolled.
+    @apply flex flex-nowrap items-center gap-3 overflow-x-auto pl-10;
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE/Edge
+
+    &::-webkit-scrollbar {
+        display: none; // Chrome/Safari
+    }
+
+    > a {
+        @apply shrink-0; // pills keep their width instead of compressing
+    }
+
+    @include screen-lg {
+        @apply flex-wrap justify-center overflow-visible pl-0;
+    }
+}

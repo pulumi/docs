@@ -128,6 +128,16 @@ When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `la
 
 ---
 
+## Case studies
+
+Case studies live at `content/case-studies/<slug>.md` — scaffold a new one with `hugo new content/case-studies/<slug>.md` (uses `archetypes/case-studies.md`). Rules that trip people up:
+
+- **`industry`** — required, singular, closed set defined in `data/case_study_industries.yaml` (`make lint` enforces it). That file's header comment is the authoritative reference.
+- **Logo tile** — the cards on `/case-studies/` and the industry term pages render each logo centered on a brand-color tile, driven by optional front matter (`logo_bg_color`, `logo_style: white|dark`, `logo_size: lg`, `card_logo`), all documented in `layouts/partials/case-studies/card.html` and format-checked by `make lint`.
+- **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the product-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
+
+---
+
 ## Releases changelog entries
 
 Individual changelog items live in `content/releases/changelog/` — one markdown file per entry, listed by month on `/releases/` and rendered at `/releases/changelog/<slug>/` (`layouts/changelog/single.html`). Shared images/videos live in the `images/` and `videos/` subfolders and are referenced by absolute path (e.g. `/releases/changelog/images/2026-06-18-foo.png`), so entry renames don't affect them.

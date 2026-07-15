@@ -441,44 +441,6 @@
     }
 }
 
-// Case study hero card
-.template-case-study-hero {
-    .case-study-hero-logo {
-        @apply h-8 w-auto;
-    }
-
-    .case-study-hero-quote-panel {
-        @apply bg-white flex-[2];
-    }
-
-    .case-study-hero-stat {
-        @apply font-bold text-black heading-3 leading-relaxed;
-    }
-
-    .case-study-hero-headline {
-        @include section-description();
-        @apply text-gray-800;
-    }
-
-    .case-study-hero-quote {
-        @include section-description();
-        @apply m-0 text-black;
-    }
-
-    .case-study-hero-attrib {
-        @apply font-body mt-4 mb-0 text-gray-600;
-    }
-
-    .case-study-hero-stat-panel {
-        @apply flex-1 bg-violet-50 border-t border-violet-200 flex flex-col justify-center;
-
-        @include screen-md {
-            @apply border-t-0 border-l;
-        }
-    }
-}
-
-
 .template-section-header {
 
     .section-header-image-above-img {

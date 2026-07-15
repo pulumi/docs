@@ -6,7 +6,10 @@ description: |
 meta_desc: Starburst switched from Terraform to Pulumi, achieving 112x faster deployments, enhanced developer productivity, improved security, and cost savings.
 
 customer_name: Starburst
-customer_logo: /logos/customers/starburst.png
+industry: data-analytics
+customer_logo: /logos/customers/starburst.svg
+logo_bg_color: "#9747FF"
+logo_style: white
 
 exec_summary: |
     Starburst, a leading data analytics company, transformed its infrastructure provisioning and management processes by switching from Terraform to Pulumi. The adoption of Pulumi resulted in a 112x faster deployment time, reducing infrastructure deployments from 2 weeks to just 3 hours. Pulumi's object-oriented programming support enabled the creation of abstractions for Kubernetes clusters and managed services across Azure, AWS, and Google Cloud. The transition to Pulumi Cloud provided access to deployments, dashboarding, analytics, state management, and security functionality, further enhancing Starburst's ability to innovate and grow their business rapidly. With Pulumi, Starburst achieved significant improvements in developer productivity, security, governance, and cost savings, positioning the company for continued success in the data analytics industry.

@@ -6,7 +6,10 @@ description: |
 meta_desc: Learn how DevOps team at SANS Institute worked with Pulumi to streamline delivering applications and infrastructure and reduce deployment times by 70%.
 
 customer_name: SANS Institute
+industry: education
 customer_logo: /logos/customers/sans-wordmark.svg
+logo_bg_color: "#064C70"
+logo_style: white
 customer_url: https://www.sans.org/
 
 quote_block:

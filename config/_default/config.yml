@@ -107,6 +107,29 @@ cascade:
       path: /collections/**
     outputs:
       - HTML
+  # The `industry` taxonomy (case-study verticals) is non-blog, like collections
+  # above: the default `term` outputs would give every industry an empty "Pulumi
+  # Blog: <Industry>" RSS feed (term.rss.xml filters to Section=blog → no items)
+  # that head.html would then advertise, plus an unused `rows` fragment. Hugo
+  # also defaults the taxonomy LIST page to HTML+RSS. Scope BOTH kinds back to
+  # HTML only so nothing leaks into our feeds. NOTE: cascade `path` matches the
+  # page's LOGICAL path (taxonomy plural `/industry/...`), NOT the permalink URL
+  # (/case-studies/industry/...) — same as the /collections/** target above.
+  - _target:
+      kind: term
+      path: /industry/**
+    outputs:
+      - HTML
+  - _target:
+      kind: taxonomy
+      path: /industry/**
+    outputs:
+      - HTML
+  - _target:
+      kind: taxonomy
+      path: /industry
+    outputs:
+      - HTML
 
 taxonomies:
   tag: tags
@@ -122,6 +145,12 @@ taxonomies:
   # pages land at /blog/series/:slug/. See layouts/taxonomy/series.html and
   # data/blog_series.yml (single source of truth for series titles/desc).
   series: series
+  # Plural is intentionally "industry" (not "industries") so Hugo reads the
+  # scalar `industry:` front matter on case studies and casts it to a one-term
+  # list. Term pages land at /case-studies/industry/:slug/. See
+  # layouts/taxonomy/industry.html and data/case_study_industries.yaml (single
+  # source of truth for term titles/desc). Non-blog: no RSS (scoped above).
+  industry: industry
 
 permalinks:
   term:
@@ -130,6 +159,7 @@ permalinks:
     collections: /tutorials/:slug/
     category: /blog/category/:slug/
     series: /blog/series/:slug/
+    industry: /case-studies/industry/:slug/
   # The category/series taxonomy LIST pages (the directories rendered by
   # layouts/taxonomy/category.terms.html and layouts/taxonomy/series.terms.html).
   # Without these they would sit at Hugo's default /category/ and /series/,
@@ -138,6 +168,7 @@ permalinks:
   taxonomy:
     category: /blog/category/
     series: /blog/series/
+    industry: /case-studies/industry/
 
 # Built-in Related Content, used by layouts/partials/blog/related-posts.html to
 # top up a post's related list. Tags dominate; category and recency break ties.

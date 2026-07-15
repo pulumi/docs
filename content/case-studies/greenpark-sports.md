@@ -6,7 +6,9 @@ description: |
 meta_desc: Learn how GreenPark Sports worked with Pulumi to empower its developers with self-service cloud infrastructure through a “developer-first” approach.
 
 customer_name: GreenPark Sports
+industry: gaming-entertainment
 customer_logo: /logos/customers/greenpark-sports-wordmark.png
+logo_bg_color: "#000000"
 customer_url: https://greenparksports.com/
 
 quote_block:
