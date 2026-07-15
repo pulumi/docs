@@ -118,11 +118,15 @@ Select **Change access level** to switch the default, or set a different level f
 
 These settings apply to every account you're connecting. You can adjust each account's scanning and policy settings after setup from its **Manage** tab.
 
-![The discovery step showing the scanning toggle, scan frequency dropdown, scan regions selector, and policy pack settings](/docs/insights/assets/connect-cloud-accounts-discovery.png)
+![The discovery step showing the scanning toggle, scan frequency dropdown, AWS partition selector, scan regions selector, and policy pack settings](/docs/insights/assets/connect-cloud-accounts-discovery.png)
 
 ### Scan schedule
 
 Scheduled scans are enabled by default and run every 24 hours. You can switch to a 12-hour schedule, or turn scanning off and enable it later from the **Accounts** page.
+
+### AWS partition (AWS only)
+
+For AWS, choose the partition your accounts run in. The default is AWS Standard, and alternative partitions such as AWS GovCloud (US) and AWS China are also available.
 
 ### Scan regions (AWS only)
 
