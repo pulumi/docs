@@ -32,8 +32,8 @@ youll_learn:
 prereqs:
     - The [Pulumi CLI](/docs/install/)
     - A [Pulumi Cloud Team, Enterprise, or Business Critical account](https://app.pulumi.com/signup)
-    - An [ESC environment and AWS credentials created and configured](/docs/insights/get-started/begin/)
-    - A [Pulumi Insights account](/docs/insights/get-started/create-accounts/)
+    - An [ESC environment and AWS credentials created and configured](/docs/insights/discovery/accounts/#configure-esc-credentials)
+    - A [Pulumi Insights account](/docs/insights/discovery/accounts/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/) configured for use with your AWS account
     - The [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
