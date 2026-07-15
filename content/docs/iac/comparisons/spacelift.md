@@ -32,7 +32,7 @@ For teams coming from Spacelift, the closest points of comparison are [Pulumi Cl
 
 ## What is Spacelift?
 
-[Spacelift](https://spacelift.io/) is a commercial CI/CD and orchestration platform for infrastructure as code, founded in 2020. Rather than defining infrastructure itself, it runs the IaC tools you already use and wraps a management layer around them: version-control integration, policy enforcement, access control, and continuous drift detection. Spacelift supports [Terraform, OpenTofu, Terragrunt, Pulumi, AWS CloudFormation, Kubernetes, and Ansible](https://docs.spacelift.io/vendors/) as run backends, so an organization can manage a heterogeneous mix of tools from one control plane.
+[Spacelift](https://spacelift.io/) is a commercial CI/CD and orchestration platform for infrastructure as code. It runs the IaC tools you already use and wraps a management layer around them: version-control integration, policy enforcement, access control, and continuous drift detection. Spacelift supports [Terraform, OpenTofu, Terragrunt, Pulumi, AWS CloudFormation, Kubernetes, and Ansible](https://docs.spacelift.io/vendors/) as run backends, so an organization can manage a heterogeneous mix of tools from one control plane.
 
 Work in Spacelift is organized into [stacks](https://docs.spacelift.io/concepts/stack/) — each a combination of source code, state, and configuration tied to a Git repository — that execute runs when changes are pushed. Runs execute on [worker pools](https://docs.spacelift.io/concepts/worker-pools): a public pool hosted by Spacelift, or private workers you operate in your own cloud account for tighter control over credentials and network access. Governance is handled through [policies](https://docs.spacelift.io/concepts/policy/) written in [Open Policy Agent's](https://www.openpolicyagent.org/) Rego language, which Spacelift evaluates at distinct decision points across a run's lifecycle, from login and stack access to plan approval and notification routing.
 
@@ -61,7 +61,7 @@ Spacelift is proprietary software, though it's built on open-source components s
 
 ### Two layers: an infrastructure as code platform and an orchestration platform
 
-This is the distinction that shapes every other one. Pulumi is an infrastructure as code platform: it's where infrastructure is *authored*, in a general-purpose language, and it ships with a management layer — Pulumi Cloud and Pulumi Deployments — for state, policy, access control, and remote runs. Spacelift authors nothing. It's an orchestration platform that takes infrastructure you've written in some other tool and runs it, adding governance and collaboration on top. In the landscape of infrastructure tooling, Spacelift sits alongside offerings like Terraform Cloud: a management plane for infrastructure code, not the code itself.
+Pulumi and Spacelift come at infrastructure from opposite ends. Pulumi is an infrastructure as code platform: it's where infrastructure is *authored*, in a general-purpose language, and it ships with a management layer — Pulumi Cloud and Pulumi Deployments — for state, policy, access control, and remote runs. Spacelift's core job is orchestration: it runs infrastructure you've written in another tool and adds governance and collaboration on top. In the landscape of infrastructure tooling, Spacelift sits alongside offerings like Terraform Cloud: a management plane for infrastructure code more than the code itself.
 
 A like-for-like comparison, then, is less "Pulumi vs. Spacelift" than "Pulumi Cloud and Pulumi Deployments vs. Spacelift." And because Spacelift runs Pulumi as one of its supported tools, the most common outcome is teams using them together, authoring with Pulumi and orchestrating with Spacelift.
 
@@ -75,21 +75,25 @@ Both platforms give you managed, Git-driven runs, and they reach a similar exper
 
 ### State and secrets
 
-State is where the layering shows through. Pulumi manages [state in Pulumi Cloud](/docs/iac/concepts/state-and-backends/) by default, or in a self-managed backend such as Amazon S3, Azure Blob Storage, or Google Cloud Storage, and it treats [secrets as a first-class primitive](/docs/iac/concepts/secrets/): values marked secret are encrypted in transit and at rest, with per-stack encryption keys and pluggable KMS providers. [Pulumi ESC](/docs/esc/) extends this into centralized secrets and configuration shared across stacks and environments.
+Pulumi manages [state in Pulumi Cloud](/docs/iac/concepts/state-and-backends/) by default, or in a self-managed backend such as Amazon S3, Azure Blob Storage, or Google Cloud Storage, and it treats [secrets as a first-class primitive](/docs/iac/concepts/secrets/): values marked secret are encrypted in transit and at rest, with per-stack encryption keys and pluggable KMS providers. [Pulumi ESC](/docs/esc/) extends this into centralized secrets and configuration shared across stacks and environments.
 
 Spacelift provides a managed state backend too, but only for Terraform and OpenTofu. For Pulumi, Spacelift runs `pulumi login` against a backend you configure, which means your Pulumi state still lives in Pulumi Cloud or your own self-managed backend even when Spacelift orchestrates the run. Spacelift secures its own configuration and credentials with encrypted environment variables and contexts. The upshot is that adopting Spacelift for orchestration doesn't move your Pulumi state off Pulumi's backends; the two responsibilities stay cleanly separated.
 
 ### Policy as code and governance
 
-[Pulumi Policies](/docs/insights/policy/) runs as part of `pulumi preview` and `pulumi up`, and policies can be written in Python, TypeScript, or Open Policy Agent Rego. It's open source and free, and Pulumi Cloud adds centralized management, policy groups, and [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) for frameworks like CIS, HITRUST, NIST, and PCI DSS. Spacelift also builds on Open Policy Agent, but takes a broader, orchestration-oriented view: [Rego policies](https://docs.spacelift.io/concepts/policy/) run at distinct points in a run's lifecycle — who can log in, who can access a stack, whether a plan is approved, how a Git push is interpreted, and how notifications are routed. If you want policy expressed in the same general-purpose language as your infrastructure, Pulumi Policies fits naturally. If you want a single Rego-based control plane governing many tools at once, that's Spacelift's model.
+[Pulumi Policies](/docs/insights/policy/) runs as part of `pulumi preview` and `pulumi up`, and policies can be written in Python, TypeScript, or Open Policy Agent Rego. It's open source and free, and Pulumi Cloud adds centralized management, policy groups, and [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) for frameworks like CIS, HITRUST, NIST, and PCI DSS. Spacelift also builds on Open Policy Agent, but takes a broader, orchestration-oriented view: [Rego policies](https://docs.spacelift.io/concepts/policy/) run at distinct points in a run's lifecycle — who can log in, who can access a stack, whether a plan is approved, how a Git push is interpreted, and how notifications are routed. Because Pulumi Policies run inside the deployment itself, they apply on Spacelift too; Pulumi's enforcement and compliance packs stay in force even when Spacelift orchestrates the run. The two operate at different scopes: Pulumi Policies govern Pulumi deployments, while Spacelift's Rego policies govern the whole run lifecycle across every tool it orchestrates.
 
 ### Building platforms programmatically
 
 Pulumi's [Automation API](/docs/iac/concepts/automation-api/) lets a host application drive Pulumi directly, without shelling out to the CLI, which is useful for embedding provisioning in a SaaS product, building an internal developer platform, or generating preview environments from CI. It puts the IaC engine inside your software. Spacelift exposes a GraphQL API, a `spacectl` CLI, and a Terraform/OpenTofu provider for managing Spacelift objects like stacks and policies. The difference is one of altitude: the Automation API embeds infrastructure provisioning in your own code, while Spacelift's API automates the orchestration platform that runs your infrastructure tools.
 
+### AI and agents
+
+Both platforms have moved into AI-assisted infrastructure from different starting points. Spacelift's [Intelligence](https://spacelift.io/platform/intelligence) layer comprises an assistant that answers questions about your estate; [Intent](https://docs.spacelift.io/concepts/intent), which provisions from natural language by generating Terraform or OpenTofu; and a hosted [MCP server](https://docs.spacelift.io/integrations/api-development-with-mcp) that applies Spacelift's policies and access controls to AI coding tools like Claude Code and Codex. Pulumi comes at it from the authoring side: because infrastructure lives in general-purpose languages, the coding agents your team already uses can read and change it directly through [Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/product/neo/) is a purpose-built infrastructure agent for deeper, governed automation. Use your own agent, use Neo, or use both. Either way, both keep humans and policy in the loop, and the split mirrors the rest of this comparison: Spacelift governs AI-driven changes to the tools it orchestrates, while Pulumi brings AI to authoring and managing infrastructure as code.
+
 ### Using Pulumi and Spacelift together
 
-Because Spacelift treats Pulumi as a first-class runtime, running the two together is a supported, documented path rather than a workaround. Spacelift's [Pulumi integration](https://docs.spacelift.io/vendors/pulumi/) works with the C#, Go, TypeScript, and Python runtimes. On each run it executes `pulumi login` against your backend, selects your stack, and runs `pulumi preview` and `pulumi up` with refresh and diff enabled. Plan policies receive the Pulumi plan as structured input, and Pulumi secrets are redacted as `[secret]` rather than shown in plaintext. A couple of Pulumi features are limited under Spacelift today: module CI/CD isn't available, and `pulumi import` isn't supported, so you import resources with tasks instead. For teams that would rather not operate a separate orchestration platform, Pulumi Deployments provides the same Git-driven runs, drift detection, and review environments as an integrated part of Pulumi.
+Because Spacelift treats Pulumi as a first-class runtime, running the two together is a supported, documented path rather than a workaround. Spacelift's [Pulumi integration](https://docs.spacelift.io/vendors/pulumi/) runs the Pulumi CLI directly, so your Pulumi programs behave as they do anywhere the CLI runs. On each run it executes `pulumi login` against your backend, selects your stack, and runs `pulumi preview` and `pulumi up` with refresh and diff enabled. Plan policies receive the Pulumi plan as structured input, and Pulumi secrets are redacted as `[secret]` rather than shown in plaintext. A couple of Pulumi features are limited under Spacelift today: module CI/CD isn't available, and `pulumi import` isn't supported, so you import resources with tasks instead. For teams that would rather not operate a separate orchestration platform, Pulumi Deployments provides the same Git-driven runs, drift detection, and review environments as an integrated part of Pulumi.
 
 ## When to choose Pulumi vs. Spacelift
 
@@ -109,7 +113,7 @@ Because Spacelift orchestrates Pulumi, this often isn't an either-or decision. W
 1. Want a tool-agnostic CI/CD platform for infrastructure, with version-control-driven runs, worker pools in your own cloud, and Rego policy spanning the run lifecycle.
 1. Are consolidating orchestration for teams that have each standardized on a different tool.
 
-If you author with Pulumi but want Spacelift as the orchestration plane across a mixed estate, you don't have to choose. See [Adoption](#adoption-using-pulumi-with-spacelift) below.
+If you author with Pulumi but want Spacelift as the orchestration plane across a mixed estate, you don't have to choose.
 
 ## Adoption: using Pulumi with Spacelift
 
@@ -123,11 +127,11 @@ You can adopt Pulumi alongside or in place of Spacelift in a few common ways, an
 
 ### Is Spacelift an infrastructure as code tool?
 
-No. Spacelift is an orchestration and CI/CD platform for infrastructure as code. It doesn't define infrastructure itself; it runs the IaC tools you author with — Pulumi, Terraform, OpenTofu, CloudFormation, Ansible, and Kubernetes — and adds state, policy, access control, and drift detection around them.
+No. Spacelift is an orchestration and CI/CD platform for infrastructure as code, not an IaC language or framework of its own; it runs the IaC tools you author with — Pulumi, Terraform, OpenTofu, CloudFormation, Ansible, and Kubernetes — and adds state, policy, access control, and drift detection around them.
 
 ### Can Pulumi run on Spacelift?
 
-Yes. Spacelift supports Pulumi as a first-class runtime for C#, Go, TypeScript, and Python. On each run it executes `pulumi login` against your configured backend, then `pulumi preview` and `pulumi up` with refresh and diff. Two Pulumi-specific features are limited: module CI/CD isn't available, and `pulumi import` isn't supported, so you import resources with tasks instead. See [Spacelift's Pulumi documentation](https://docs.spacelift.io/vendors/pulumi/) for details.
+Yes. Spacelift runs Pulumi as a first-class vendor, invoking the Pulumi CLI on its workers. On each run it executes `pulumi login` against your configured backend, then `pulumi preview` and `pulumi up` with refresh and diff. Two Pulumi-specific features are limited: module CI/CD isn't available, and `pulumi import` isn't supported, so you import resources with tasks instead. See [Spacelift's Pulumi documentation](https://docs.spacelift.io/vendors/pulumi/) for details.
 
 ### Does Spacelift replace Pulumi?
 
@@ -144,10 +148,6 @@ No. Spacelift offers a managed state backend for Terraform and OpenTofu, but for
 ### Is Spacelift open source like Pulumi?
 
 No. Pulumi's CLI, SDKs, and providers are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial offering, with a free Individual tier and paid plans. Spacelift is proprietary, commercial software; it's built on open-source components like Open Policy Agent and Docker, but it isn't an open-source product itself.
-
-### Which should you use, Pulumi Deployments or Spacelift?
-
-If you've standardized on Pulumi and want an integrated management layer with no separate platform to operate, [Pulumi Deployments](/docs/deployments/) covers remote runs, drift detection, review stacks, and Git-driven deploys. If you run several IaC tools and want a single orchestration plane across them all, Spacelift's tool-agnostic model is the better fit, and it can orchestrate Pulumi alongside the rest.
 
 ## Next steps
 
