@@ -21,6 +21,7 @@ aliases:
 If your team has already provisioned infrastructure using AWS CloudFormation, and you'd like to adopt Pulumi, you have several strategies you can take:
 
 * **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your CloudFormation templates and import existing resources with zero downtime
+* **[Discovered Stacks](/docs/insights/discovery/discovered-stacks/)**: Scan your AWS account and Pulumi Cloud automatically groups your CloudFormation stacks into discovered stacks you can migrate from the console, with per-resource status tracking.
 * [**Coexist**](#referencing-stack-outputs) with resources provisioned by CloudFormation by referencing stack outputs.
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing resources into Pulumi in the usual way.
 * [**Convert**](#converting-stacks-and-resources) your deployments to use Pulumi and then incrementally migrate resources.

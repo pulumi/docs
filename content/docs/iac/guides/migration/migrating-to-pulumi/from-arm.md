@@ -23,6 +23,7 @@ Pulumi offers a flexible, code-first alternative to Azure ARM templates using C#
 If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides several paths to move forward:
 
 * **[Neo](/product/neo/) (Recommended)**: Use Neo to automatically convert your ARM templates and import existing resources with zero downtime
+* **[Discovered Stacks](/docs/insights/discovery/discovered-stacks/)**: Scan your Azure account and Pulumi Cloud automatically groups your ARM deployments into discovered stacks you can migrate from the console, with per-resource status tracking.
 * [**Coexist**](#coexist-with-arm) with resources provisioned by ARM by referencing deployment outputs.
 * [**Import**](/docs/using-pulumi/adopting-pulumi/import/) existing Azure resources into Pulumi in the usual way.
 * [**Convert**](#convert-arm-templates-to-pulumi) your deployments to use Pulumi and then incrementally migrate resources.
