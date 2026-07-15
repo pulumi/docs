@@ -1,6 +1,6 @@
 ---
 name: event-meta-image
-description: "Generate on-brand social cards for a Pulumi event/workshop in five sizes (1200x628 OG, 1200x675, 628x628, 1080x1080, 540x960) using the shared Satori events renderer. Enriches the build-time default with people not in frontmatter (external co-presenters + their photos) and company/partner logos (Pulumi + e.g. Microsoft). Runs event-bound (writes into a content/events/<slug>/ bundle + sets meta_image / meta_image_square) or standalone (just emit the five PNGs to a folder). Use when the user types /event-meta-image or asks to create, generate, regenerate, or enrich an event's meta image, social card, OpenGraph image, or speaker/workshop card."
+description: "Generate on-brand social cards for a Pulumi event/workshop in five sizes (1200x628 OG, 1200x675, 628x628, 1080x1080, 540x960) using the shared Satori events renderer. Enriches the build-time default with people not in frontmatter (external co-presenters + their photos) and company/partner logos (Pulumi + e.g. Microsoft). Runs event-bound (writes into a content/events/<slug>/ bundle + sets meta_image / meta_image_square) or standalone (just emit the five PNGs to a folder). Use when the user types /event-meta-image or asks to create, generate, regenerate, or enrich an event's meta image, social card, OpenGraph image, or speaker/workshop card. Pass -y / --yes / --non-interactive (or 'no questions') to run end-to-end with sensible defaults and no prompts. A Register button is never added unless explicitly requested."
 ---
 
 # `/event-meta-image` — Generate event / workshop social cards
@@ -10,7 +10,7 @@ You generate the branded event card (the Figma "Workshop / event images" compone
 **Skill directory**: `.claude/commands/event-meta-image/` — paths below are relative to the **repo root** unless noted.
 **Renderer CLI**: `scripts/meta-images/render-event.mjs` (shared with the build). One JSON config → one PNG per size.
 
-> **You do not need a custom card for most events.** Every event already gets an on-brand landscape + square card automatically at build time from its frontmatter (`scripts/generate-meta-images.mjs`). Use this skill only to (a) enrich a card with people/logos not in frontmatter, (b) override the auto default, or (c) grab the extra social sizes (square-large, portrait, tall) for manual use.
+> **You do not need a custom card for most events.** Every event already gets an on-brand landscape + square card automatically at build time from its frontmatter (`scripts/generate-meta-images.mjs`). Use this skill only to (a) enrich a card with people/logos not in frontmatter, (b) override the auto default, or (c) grab the extra social sizes (square-large, portrait, tall) for manual use. (For a plain default with no enrichment, `scripts/meta-images/render-event-cards.mjs <slug>` renders all five sizes from frontmatter without a config.)
 
 ---
 
@@ -20,6 +20,17 @@ You generate the branded event card (the Figma "Workshop / event images" compone
 - **Standalone** — the user just wants images ("generate event images for …", no event attached). Collect inputs directly (Steps 3–5), skip frontmatter, and write the PNGs to an output dir (default `.context/event-images/<slug>/`, or a path the user gives). **No** frontmatter or bundle writes.
 
 Everything below applies to both modes **except** the bundle/frontmatter writes in Step 6 (event-bound only).
+
+## Interaction mode — when to ask questions
+
+Orthogonal to event-bound/standalone, pick how much to prompt. **Default to searching, not asking:** in both modes you still auto-resolve people and logos via the ladders in Steps 3–4 (including `WebSearch`/`WebFetch`). The modes differ only in what happens when something can't be resolved or is genuinely ambiguous.
+
+- **Unattended — never ask.** Trigger when `$ARGUMENTS` contains `-y`, `--yes`, `--non-interactive`, `--no-input`, `no questions`, or "just do it" (and automatically whenever you're running non-interactively, e.g. under `claude -p` or the eval, where `AskUserQuestion` can't be answered). Skip **every** `AskUserQuestion`. Derive all inputs automatically:
+  - **overline** = `event_type`; **title** = frontmatter `title`; **speakers** = frontmatter `presenters[].photo`; **additionalText** = the derived "With …" line.
+  - **people** = frontmatter presenters **plus** any external co-presenter named in the title/body.
+  - **logos** = `["pulumi"]` **plus** any partner company named in the title/body.
+  - Auto-resolve each derived photo/logo via the Step 3 / Step 4 ladders. **On a resolution miss, skip that one asset with a warning and keep going — never block.** No button, no secondary title.
+- **Default — ask only when needed.** Same automatic derivation and search as unattended mode, but fall back to a single targeted `AskUserQuestion` **only** when an asset can't be resolved, or an input is genuinely ambiguous (multiple candidate events, missing `title`, a partner named but not identifiable). Do **not** ask to confirm things already known from frontmatter or `$ARGUMENTS`.
 
 ## [Step 1/6] Locate the event (event-bound)
 
@@ -41,7 +52,7 @@ The build default already uses exactly these. If the user only wants the default
 
 ## [Step 3/6] Add people not in frontmatter (external co-presenters)
 
-Ask (with `AskUserQuestion`) whether to add anyone beyond the `presenters:` list — e.g. a partner-company co-host. For each added person collect **name** + **role/company**, then resolve a **color photo** via this ladder (stop at the first hit):
+Add anyone beyond the `presenters:` list — e.g. a partner-company co-host. **Derive these from the event first** (the title/body and `$ARGUMENTS`); only fall back to `AskUserQuestion` per the interaction mode (default: ask when a person is named but you can't identify or resolve them; unattended: skip an unresolvable person with a warning, never ask). For each added person collect **name** + **role/company**, then resolve a **color photo** via this ladder (stop at the first hit):
 
 1. An existing `presenters[].photo` (already have it).
 2. `static/images/team/<kebab-name>.{jpg,jpeg,png}`.
@@ -55,7 +66,7 @@ Save any fetched/provided external photo to a real file (e.g. `.context/event-im
 
 Pulumi is **always** included (`"pulumi"` → the bundled brand mark — never re-color or restyle it). The renderer lays the logos out in a row joined by a muted **`+`** (Pulumi `+` Microsoft `+` …), so each entry should read as a company on its own.
 
-Ask whether to add partner/company logos (e.g. Microsoft, GitHub, Google Cloud, NVIDIA). Three hard rules when sourcing each one:
+Add partner/company logos (e.g. Microsoft, GitHub, Google Cloud, NVIDIA) for any partner named in the event's title/body or `$ARGUMENTS`. **Derive them from the event first** — only fall back to `AskUserQuestion` per the interaction mode (default: ask when a partner is named but you can't source a compliant logo; unattended: skip an unresolvable logo with a warning, never ask). Three hard rules when sourcing each one:
 
 - **Default to the WORDMARK** — the lockup that includes the **company name** (e.g. the Microsoft squares *plus* "Microsoft"), not the bare glyph. A mark-only icon next to "Pulumi" reads as unfinished. Only fall back to a glyph if no wordmark exists or the glyph IS the brand (rare).
 - **Prefer the HORIZONTAL variant.** The renderer scales every logo to a fixed row *height*, so a vertical/**stacked** lockup (mark stacked above the name) renders its text tiny and unbalanced next to Pulumi. Choose the horizontal lockup (mark beside the name, or the wordmark alone). Rule of thumb: check the SVG `viewBox` / PNG dimensions and prefer an **aspect ratio ≳ 3:1**; reject stacked or roughly-square lockups (aspect ≲ 2) even when they're technically a wordmark, and keep looking (a company's brand/press page usually offers both a "horizontal" and a "stacked" variant — take the horizontal one).
@@ -72,12 +83,13 @@ Resolve each via this ladder, stopping at the first hit that satisfies both rule
 
 ## [Step 5/6] Options
 
-Confirm with `AskUserQuestion` (skip anything `$ARGUMENTS` already answered):
+Default every option and move on. Only reach for `AskUserQuestion` per the interaction mode (and never in unattended mode); never re-confirm what `$ARGUMENTS` or frontmatter already answered.
 
-- **overline** — default `event_type` (e.g. `WORKSHOP`, `WEBINAR`, `PANEL`). Allow an override.
-- **secondary title** — hidden by default; offer to set a small line above the title.
-- **show "Register" button?** — default **no**.
+- **overline** — default `event_type` (e.g. `WORKSHOP`, `WEBINAR`, `PANEL`); honor an override if `$ARGUMENTS` gives one.
+- **secondary title** — hidden. Set it only if the user explicitly asks for a small line above the title.
 - **which people / logos to include and their order** — when there are more than 5 people, pick the 5 to show; order logos Pulumi-first.
+
+**Never add a button.** `showButton` stays `false` unless the user's prompt *explicitly* asks for one (e.g. "with a Register button", "add a CTA", "include a sign-up button"). Do not offer it, do not ask about it, and never enable it in unattended mode. Only when explicitly requested, set `showButton: true` and `buttonText` accordingly.
 
 ## [Step 6/6] Render the five sizes
 
@@ -92,13 +104,14 @@ Write **one** config JSON (e.g. `.context/event-images/<slug>/config.json`), the
   "secondaryTitle": "",
   "additionalText": "With Jane Doe - Staff Engineer, Acme and John Roe",
   "showButton": false,
-  "buttonText": "Register",
+  "buttonText": "Register",         // opt-in only — see below; leave showButton false unless explicitly requested
   "speakers": ["/images/people/jane.jpg", ".context/event-images/<slug>/john-roe.jpg"],
   "logos": ["pulumi", ".claude/commands/event-meta-image/assets/logos/microsoft.svg"]
 }
 ```
 
 - `additionalText` is the literal "With …" line. Compose it yourself: one presenter → `With {name} - {role}`; many → names only, Oxford comma (`With A, B, and C`). (Omit to let the CLI derive it from a `presenters: [{name, role}]` array instead.)
+- `showButton` is **off unless the user explicitly asked for a button** (see Step 5). Omit it or leave `false` in every default and unattended run.
 - `speakers` / `logos` resolve as: `data:` URI → path relative to the config file → repo path (`/images/…`, `static/`, `assets/fingerprinted/`, `static/logos/**`) → absolute path. Unresolved entries are skipped with a warning.
 
 **Render loop** — same config, five sizes:
