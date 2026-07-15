@@ -317,9 +317,9 @@ jobs:
 
           # force=true (set by claude-new.yml on #new-review dispatch)
           # bypasses the auto-skip heuristics. The user explicitly asked
-          # for a regenerate; trivial / fmonly / draft / bot-author /
-          # already-reviewed are all overridable. Empty-diff is NOT
-          # overridable — there's nothing to review.
+          # for a regenerate; trivial / fmonly / oversized / draft /
+          # bot-author / already-reviewed are all overridable. Empty-diff is
+          # NOT overridable — there's nothing to review.
           SKIP=""
           if [[ "$FORCE" != "true" ]]; then
             if [[ "$IS_DRAFT" == "true" ]]; then
@@ -328,6 +328,13 @@ jobs:
               SKIP="trivial"
             elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
               SKIP="frontmatter-only"
+            # Oversized PRs (triage-set; >15K changed lines — in practice
+            # generated corpora) can't finish inside the job timeout: every
+            # attempt burns ~25 minutes of runner + API spend, then
+            # error-cycles the labels. Triage posts a TRIAGE_OVERSIZED
+            # advisory comment explaining the skip and the alternatives.
+            elif [[ ",$LABELS_CSV," == *",review:oversized,"* ]]; then
+              SKIP="oversized"
             # Bot-authored PRs are slop-skipped — EXCEPT content-review/*, which
             # are first-class automated docs fixes we want reviewed. Those fall
             # through to the already-reviewed guard below (so they still can't
@@ -504,6 +511,23 @@ jobs:
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
             --label review:in-progress
+
+      # An oversized skip supersedes any leftover terminal state from earlier
+      # attempts (typically review:error from a pre-label timeout run) —
+      # without this, the stale error label sits next to review:oversized and
+      # reads as "the pipeline is still broken" when the skip is deliberate.
+      # Other skip paths (trivial / fmonly / draft / bot) never had a prior
+      # state label, so they don't need this.
+      - name: Clear stale review-state label (oversized skip)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == 'oversized'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --clear
 
       # Run Vale on PR-changed files in content/docs and content/blog. Findings
       # are filtered to PR-introduced lines only, capped (10/file, 50 total),
