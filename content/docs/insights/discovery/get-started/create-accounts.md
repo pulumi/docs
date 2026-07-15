@@ -22,7 +22,7 @@ Currently while in public preview, Pulumi Insights Account discovery supports AW
 
 ## Create an Insights account
 
-1. Navigate to **Insights** > **Accounts** in the Pulumi Cloud console. You will be directed to the Accounts landing page where you'll be able to create and manage all your Insights accounts and view scan statuses.
+1. Navigate to **Management** > **Accounts** in the Pulumi Cloud console. You will be directed to the Accounts landing page where you'll be able to create and manage all your Insights accounts and view scan statuses.
 
 1. Select **Connect cloud accounts** and choose your cloud provider. For this example, choose **AWS**.
 

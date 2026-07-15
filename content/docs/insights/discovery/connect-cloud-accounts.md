@@ -27,7 +27,7 @@ Resource scans and policy evaluations consume workflow minutes and can incur cha
 
 You can open the wizard from two places in the Pulumi Cloud console:
 
-- Navigate to **Insights** > **Accounts** and select **Connect cloud accounts**.
+- Navigate to **Management** > **Accounts** and select **Connect cloud accounts**.
 - On the home dashboard, select the **Connect cloud accounts** task on the **Get to know Pulumi** card.
 
 The wizard opens as a panel and walks you through the onboarding steps.
