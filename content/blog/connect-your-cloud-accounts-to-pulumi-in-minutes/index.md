@@ -17,7 +17,7 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        Onboarding a cloud account to Pulumi Insights used to mean manual OIDC setup and a hand-written ESC environment. With the new Connect cloud accounts wizard, you can connect accounts across AWS, Azure, and Google Cloud in about 3 minutes.
+        Onboarding a cloud account to Pulumi Insights used to mean manual OIDC setup and a hand-written ESC environment. With the new Connect cloud accounts wizard, you can connect accounts across AWS, Azure, and Google Cloud in 3 minutes.
 
         Here's what changed.
     linkedin: |
