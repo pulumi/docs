@@ -12,8 +12,8 @@ Creates a new changelog entry under `content/releases/changelog/` with the requi
 
 - Each entry is a single markdown file in `content/releases/changelog/` (not a leaf bundle). Shared images and videos live in the `images/` and `videos/` subfolders and are referenced by absolute path (e.g. `/releases/changelog/images/foo.png`).
 - **Filenames must be `YYYY-MM-DD-slug.md`**, and the date prefix must match the frontmatter `date:`. `make lint` enforces both (see `scripts/lint/lint-markdown.js`, `checkChangelogFilename`).
-- The section `_index.md` sets `cascade.type: changelog` (routes entries to `layouts/changelog/single.html`) and `build.render: never` (no list page for the folder itself). Don't touch it when adding an entry.
-- These are short announcements — a paragraph or two that lead with what the reader can now do, then link to the announcement blog post and/or docs. There are no authors, tags, categories, feature images, or social copy (unlike blog posts).
+- The section `_index.md` sets `cascade.type: changelog` (routes entries to `layouts/changelog/single.html`) and renders the expanded `/releases/changelog/` view. Don't touch it when adding an entry.
+- These are short announcements — a paragraph or two that lead with what the reader can now do, then link to the announcement blog post and/or docs. They carry an **author byline** (`authors:`, included by default) and an optional pricing-`tiers:` badge, but no tags, categories, feature images, or social copy (unlike blog posts).
 
 ## Instructions for Claude
 
@@ -31,7 +31,8 @@ Ask the user for the following using AskUserQuestion, seeding smart defaults:
   2. label: "Enter a specific date" / description: "You'll provide YYYY-MM-DD"
   - Replace `{current-date}` with the actual current date in `YYYY-MM-DD`. Validate any custom date matches `YYYY-MM-DD`.
 - **Summary (`meta_desc`)**: Suggest a concise one- or two-sentence summary (max 160 characters) based on the title. Required — the linter fails without it.
-- **Tier badge (optional)**: Ask whether the release applies only to a particular Pulumi product tier. Options are Team, Enterprise, and Business Critical. Default is none. Only add the `tier:` field if the user specifies one.
+- **Author (`authors`)**: Included by default — the archetype pre-fills the changelog's usual author (`christian-nunciato`). Confirm it, or set a different team id (from `data/team/team`) when someone else wrote the entry. Only drop the field in the rare case the entry should have no byline; opting out is a deliberate choice, not the default.
+- **Tiers (optional)**: Ask whether the release is gated to particular pricing tiers. The `tiers:` field is a YAML array drawn only from the four pricing tiers (Free, Team, Enterprise, Business Critical). Default is none. If gated, list **every** applicable tier — the lowest one plus all tiers above it (e.g. an Enterprise feature lists both `Enterprise` and `Business Critical`). `make lint` enforces the set and rejects the legacy singular `tier:`.
 
 If the user already provided the announcement details or a link to a blog post, use them to draft the body in Step 4 instead of asking again.
 
@@ -56,7 +57,11 @@ If Hugo isn't available or errors, write the file directly with this frontmatter
 title: "Title in Title Case"
 date: YYYY-MM-DD
 meta_desc: "One- or two-sentence summary (<= 160 chars)"
-# tier: public preview   # optional — remove if no badge
+authors:
+    - christian-nunciato   # the changelog's usual author — change if someone else wrote it
+# tiers:                    # optional — omit unless the feature is tier-gated
+#     - Enterprise
+#     - Business Critical
 ---
 ```
 
@@ -64,7 +69,7 @@ meta_desc: "One- or two-sentence summary (<= 160 chars)"
 
 1. Remove the archetype's instructional comments from the frontmatter.
 2. Set `title`, `date`, and `meta_desc` to the gathered values (the archetype pre-fills `title`/`date` from the filename — verify and tidy the title).
-3. Add the `tier:` field only if the user specified one; otherwise omit it.
+3. Keep the pre-filled `authors:` field, changing the id if a different person wrote the entry (drop it only in the rare no-byline case). Add `tiers:` only if the user specified tier gating; otherwise omit it.
 4. Replace the placeholder body with the announcement: a short paragraph or two that lead with the reader benefit, then link out to the blog post (`/blog/...`) and/or docs (`/docs/...`). Follow `STYLE-GUIDE.md` (H1 = Title Case, H2+ = Sentence case; sentence-case running prose; lowercase common nouns like "stack").
 5. If the entry needs an image or video, place it in `content/releases/changelog/images/` or `.../videos/` **with a date-prefixed, lowercase-hyphenated filename** (`YYYY-MM-DD-slug.ext`, using this entry's date — e.g. `2026-07-11-command-palette.mp4`), and reference it by absolute path (e.g. `/releases/changelog/images/2026-07-11-foo.png`). `make lint` enforces the asset naming too. Markdown must end with a trailing newline.
 

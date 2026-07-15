@@ -1,0 +1,28 @@
+{{- /*
+    Changelog authors byline
+
+    Renders a changelog item's optional `authors:` front matter (a list of
+    team ids from data/team/team) as a plain "— Name, Name" attribution line
+    (placed at the end of the entry by the caller), each name linked to that
+    author's page. Names only — no avatars — per the releases changelog
+    design. Author-page link resolution mirrors
+    layouts/partials/blog/post-authors.html: prefer an /authors/<id> or
+    /community/team/<id> page, else fall back to /blog/author/<id>/. Unknown
+    ids (no team-data entry) are skipped. Call with dict "page".
+    /releases is not a /docs page, so no dark-mode tokens are needed.
+*/ -}}
+{{- $page := .page -}}
+{{- with $page.Params.authors -}}
+    {{- $links := slice -}}
+    {{- range $id := . -}}
+        {{- with index site.Data.team.team $id -}}
+            {{- $href := printf "/blog/author/%s/" ($id | urlize) -}}
+            {{- with $page.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}{{ $href = .RelPermalink }}{{ end -}}
+            {{- with $page.Site.GetPage (printf "/community/team/%s" $id) }}{{ $href = .RelPermalink }}{{ end -}}
+            {{- $links = $links | append (printf "<a href=\"%s\" class=\"text-service-black transition-colors hover:text-violet-primary\">%s</a>" $href .name) -}}
+        {{- end -}}
+    {{- end -}}
+    {{- with $links }}
+    <p class="text-base m-0 mt-6 text-gray-500">&mdash; {{ delimit . ", " | safeHTML }}</p>
+    {{- end -}}
+{{- end -}}

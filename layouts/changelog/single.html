@@ -21,12 +21,13 @@
     <article data-changelog-article>
         <p class="body-sm m-0 mb-3">
             <time class="text-gray-700" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-            {{ with .Params.tier }}<span class="badge badge-secondary badge-sm ml-2">{{ . }}</span>{{ end }}
+            {{ range .Params.tiers }}<span class="badge badge-secondary badge-sm ml-2">{{ . }}</span>{{ end }}
         </p>
         <h1 class="heading-2 font-display font-semibold text-service-black m-0 mb-4">{{ .Title }}</h1>
         <div class="text-base leading-relaxed">
             {{ .Content }}
         </div>
+        {{ partial "releases/changelog-authors.html" (dict "page" .) }}
     </article>
 </div>
 {{ end }}

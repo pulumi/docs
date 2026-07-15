@@ -22,9 +22,21 @@ date: {{ substr .Name 0 10 }}
 # Required — the build fails the linter without it. Max length 160 characters.
 meta_desc:
 
-# Optional tier badge shown beside the date (e.g. "public preview", "ga").
-# Remove this line if you don't need a badge.
-# tier: public preview
+# Who authored the entry — a YAML array of team ids from data/team/team,
+# rendered as an "— Name" byline. Defaults to the changelog's usual author;
+# change it (or, rarely, remove the field) when someone else wrote the entry.
+authors:
+    - christian-nunciato
+
+# Optional pricing-tier availability, shown as badge(s) beside the date. A YAML
+# array drawn only from the four pricing tiers (Free, Team, Enterprise, Business
+# Critical — see content/pricing/_index.md); `make lint` enforces the set. List
+# every tier the feature is available in — since a lower tier implies the tiers
+# above it, that means the lowest applicable tier and all tiers above it. Remove
+# if not tier-gated.
+# tiers:
+#     - Enterprise
+#     - Business Critical
 ---
 
 Describe what shipped in a short paragraph or two. Lead with what the reader can now do, then link out to the announcement post and/or the docs for details.
