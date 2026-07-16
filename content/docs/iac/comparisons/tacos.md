@@ -75,22 +75,23 @@ Teams reach for a TACOS because they already have Terraform and need to operate 
 
 AI is arriving across the category. Spacelift has added [Intelligence and Intent](https://spacelift.io/platform/intelligence) for natural-language provisioning and a hosted MCP server, and other vendors are moving the same way. Pulumi approaches it from the authoring side: because infrastructure is code in general-purpose languages, the coding agents your team already uses — Claude Code, Cursor, Codex — can work with it through [Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/product/neo/) is a purpose-built infrastructure agent for deeper, governed automation. Use your own agent, use Neo, or use both.
 
-## When to choose Pulumi vs. a TACOS
+## When to use Pulumi or a TACOS
 
-**Choose Pulumi when** you:
+These aren't mutually exclusive. Pulumi authors infrastructure and manages it, so it works as a complete platform on its own. A TACOS adds an orchestration layer on top of your IaC, and because Spacelift and env0 run Pulumi, the two pair cleanly: author in Pulumi and orchestrate through the platform your team already runs. The guidance below is about where each earns its place, not about picking a side.
+
+**Lead with Pulumi when** you:
 
 1. Want infrastructure in a general-purpose language, with the tests, package managers, and IDE tooling that come with it.
-1. Want authoring and management in one platform, rather than Terraform plus a separate service to run it.
+1. Want authoring and management in one platform, rather than one tool to write infrastructure and a separate service to run it.
 1. Are starting fresh, or are ready to modernize a Terraform estate while keeping its modules and providers.
 1. Want to embed provisioning in your own software through the [Automation API](/docs/iac/concepts/automation-api/).
 
-**Choose a TACOS when** you:
+**Reach for a TACOS alongside Pulumi when** you:
 
-1. Are committed to Terraform or OpenTofu and want to keep authoring in HCL, adding automation and governance around it.
-1. Need to run several IaC tools through one workflow — Spacelift and env0 span Terraform, OpenTofu, Pulumi, and more.
-1. Want an open-source, pull-request-driven runner with no vendor relationship, which is where Atlantis fits.
+1. Run several IaC tools and want one orchestration plane across them — Spacelift and env0 run Pulumi next to Terraform, OpenTofu, and the rest.
+1. Have already standardized on Spacelift or env0 and want to keep its run workflow, policies, and RBAC while authoring in Pulumi.
 
-**Use both when** you author in Pulumi but run a TACOS such as Spacelift or env0 as your orchestration layer.
+Even if you're staying in HCL for now, Pulumi is worth a look: it [adopts your existing Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) so none of that work is wasted and gives you a language-based platform in place of HCL — and it runs on Spacelift or env0 if you'd rather keep a TACOS in the loop.
 
 ## Adoption
 
