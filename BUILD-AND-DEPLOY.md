@@ -1443,6 +1443,7 @@ The repository includes 10 additional utility workflows for automation and proje
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
 - **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
 - **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page
+- **blog-review-index.yml**: Daily blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
 
 The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
 

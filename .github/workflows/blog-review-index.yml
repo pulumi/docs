@@ -1,0 +1,561 @@
+name: "Scheduled jobs: Blog review index"
+
+# Daily (workdays) automated review of EXISTING blog posts, building the
+# blog's known-issues index in S3. This is the blog sibling of the docs
+# existing-content review (review-existing-content.yml), with one structural
+# difference: it is FLAG-ONLY. Runs record findings (dead links, factual
+# rot, deprecated products, thin content) into the index; they never edit
+# posts and never open PRs, so the whole pipeline fits in a single workflow
+# with a job matrix instead of the docs dispatcher/worker pair.
+#
+# The index's eventual consumer is a future decision process that marks
+# rotted, low-value posts `block_external_search_index: true` (the site's
+# per-page noindex knob) — combining these content findings with traffic and
+# Search Console thresholds, behind human-reviewed PRs. This workflow only
+# gathers the evidence.
+#
+# Pipeline: deterministic selection (scripts/blog-review/select-posts.py —
+# the model never chooses) → one UNPRIVILEGED model review per post (matrix;
+# no credentials, tree must stay clean, output is one findings JSON) → one
+# DETERMINISTIC credentialed record job (validates findings against the
+# closed taxonomy, writes ledger + index + run-log objects to S3, rebuilds
+# the index summary).
+#
+# SINGLE SWITCH (default-on) — the BLOG_REVIEW_COUNT repo variable is both
+# the on/off and the cadence knob, same convention as CONTENT_REVIEW_COUNT:
+#   unset -> on, 5 posts/run (the default; ~7 months to sweep ~800 posts)
+#   '0'   -> off: the whole run is skipped (no runner, no spend)
+#   'N'   -> on, N posts/run
+# workflow_dispatch always runs regardless (the testing path; see the
+# dry_run / count / paths inputs).
+
+on:
+  schedule:
+    # Weekdays at 2:30PM UTC — offset from review-existing-content (14:00)
+    # and check-links (15:00) so the scheduled Claude consumers don't contend.
+    - cron: '30 14 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of posts to review'
+        required: false
+        default: '5'
+      dry_run:
+        description: 'Selection only — no Claude, no S3 writes, no spend'
+        type: boolean
+        required: false
+        default: false
+      paths:
+        description: 'Comma-separated content paths (bypasses scoring; for testing)'
+        required: false
+        default: ''
+
+# The review is flag-only: nothing in this workflow writes to the repo.
+permissions:
+  contents: read
+  id-token: write # Required for ESC OIDC auth + AWS OIDC role + claude-code-action
+
+# One run at a time: a manual dispatch during the scheduled run would race
+# the per-slug S3 writes and the summary rebuild.
+concurrency:
+  group: blog-review-index
+  cancel-in-progress: false
+
+jobs:
+  # Skip the scheduled run on company holidays — same fail-open pattern and
+  # script as review-existing-content.yml (see the comments there). Manual
+  # workflow_dispatch ignores this via the `select` gate.
+  holiday-check:
+    name: Company-holiday check
+    runs-on: ubuntu-latest
+    outputs:
+      is_holiday: ${{ steps.check.outputs.is_holiday }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: check
+        env:
+          ICS_URL: ${{ vars.BAMBOOHR_HOLIDAY_ICS_URL }}
+        run: |
+          if [ -z "$ICS_URL" ]; then
+            echo "BAMBOOHR_HOLIDAY_ICS_URL not set; not skipping for holidays"
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if ! curl -fsSL --max-time 20 "$ICS_URL" -o holidays.ics; then
+            echo "::warning::holiday feed unavailable; failing open (review will run)"
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          if python3 scripts/content-review/is-holiday.py --ics holidays.ics --tz America/Chicago; then
+            echo "is_holiday=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_holiday=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  # Deterministic selection. Credentialed (ESC + AWS via OIDC) because it
+  # reads the S3 ledger and the traffic/GSC snapshots — but the model never
+  # runs here. Every external input degrades gracefully: with no snapshots
+  # and no ledger, selection is a pure oldest-unreviewed-first sweep.
+  select:
+    name: Select posts
+    needs: holiday-check
+    runs-on: ubuntu-latest
+    # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
+    # select the environment to resolve the ledger bucket stack output.
+    environment: production
+    timeout-minutes: 15
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (vars.BLOG_REVIEW_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
+    outputs:
+      has_posts: ${{ steps.select.outputs.has_posts }}
+      count: ${{ steps.select.outputs.count }}
+      posts: ${{ steps.emit.outputs.posts }}
+      meta: ${{ steps.emit.outputs.meta }}
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # Selection reads git history (staleness clock: newest non-bot
+          # edit per post), so a shallow clone won't do.
+          fetch-depth: 0
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Configure AWS credentials
+        id: aws-creds
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: blog-review-index
+          aws-region: us-west-2
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+
+      # The blog-review state shares the content-review ledger bucket under
+      # its own blog-review/ prefix — resolved from the stack output, never
+      # hardcoded (same pattern as review-existing-content.yml).
+      - name: Resolve state bucket
+        id: state-bucket
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "ledger_uri=s3://$BUCKET/blog-review/ledger/" >> "$GITHUB_OUTPUT"
+          else
+            echo "state bucket output unavailable; selection proceeds on git staleness alone"
+          fi
+
+      # The blog-traffic export (pageviews per /blog/ path) mirrors the docs
+      # one: produced by the data team's Airflow, latest-object URI published
+      # as a stack output. Until that export ships this resolve logs the skip
+      # and selection scores on staleness alone — the consumer side is
+      # inert-but-ready by design, exactly like the docs reader-signals were.
+      - name: Resolve blog-traffic snapshot URI
+        id: traffic-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output blogTrafficPageviewsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -n "$URI" ]; then
+            echo "resolved blog-traffic export URI: $URI"
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "blog-traffic export not yet published; selection proceeds on staleness alone"
+          fi
+      - name: Fetch blog-traffic snapshot from S3
+        if: steps.traffic-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          if aws s3 cp "${{ steps.traffic-uri.outputs.uri }}" .blog-traffic-snapshot --quiet; then
+            echo "fetched blog-traffic snapshot: $(wc -c < .blog-traffic-snapshot) bytes"
+          else
+            echo "blog-traffic snapshot unavailable; selection proceeds without it"
+          fi
+
+      # Blog reader-signals (Search Console impressions/CTR per /blog/ URL) —
+      # same inert-but-ready pattern as the traffic snapshot above.
+      - name: Resolve blog reader-signals URI
+        id: signals-uri
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          URI=$(pulumi stack output blogReaderSignalsLatestS3Uri \
+            --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -n "$URI" ]; then
+            echo "resolved blog reader-signals export URI: $URI"
+            echo "uri=$URI" >> "$GITHUB_OUTPUT"
+          else
+            echo "blog reader-signals export not yet published; selection proceeds without it"
+          fi
+      - name: Fetch blog reader-signals snapshot from S3
+        if: steps.signals-uri.outputs.uri != ''
+        continue-on-error: true
+        run: |
+          if aws s3 cp "${{ steps.signals-uri.outputs.uri }}" .blog-reader-signals.json --quiet; then
+            echo "fetched blog reader-signals snapshot: $(wc -c < .blog-reader-signals.json) bytes"
+          fi
+
+      # The review ledger (one JSON object per post, key = slug) lives in S3,
+      # not the repo. Sync it down for select-posts.py's staleness clock.
+      - name: Fetch review ledger from S3
+        if: steps.state-bucket.outputs.ledger_uri != ''
+        continue-on-error: true
+        run: |
+          mkdir -p .ledger-cache
+          aws s3 sync "${{ steps.state-bucket.outputs.ledger_uri }}" .ledger-cache/ --quiet \
+            || echo "review ledger unavailable; selection proceeds on git staleness alone"
+
+      # Deterministic selection: the model never chooses what to review.
+      - name: Select posts
+        id: select
+        run: |
+          # Count precedence: a manual workflow_dispatch input wins; otherwise
+          # the scheduled run uses the BLOG_REVIEW_COUNT repo variable; otherwise 5.
+          ARGS=(--count "${{ github.event.inputs.count || vars.BLOG_REVIEW_COUNT || '5' }}" --out .blog-review-queue.json)
+          if [ -d .ledger-cache ]; then
+            ARGS+=(--ledger-dir .ledger-cache)
+          fi
+          if [ -f .blog-traffic-snapshot ]; then
+            ARGS+=(--traffic-file .blog-traffic-snapshot)
+          fi
+          if [ -f .blog-reader-signals.json ]; then
+            ARGS+=(--signals-file .blog-reader-signals.json)
+          fi
+          if [ -n "${{ github.event.inputs.paths }}" ]; then
+            ARGS+=(--paths "${{ github.event.inputs.paths }}")
+          fi
+          python3 scripts/blog-review/select-posts.py "${ARGS[@]}"
+          echo "--- queue ---"
+          cat .blog-review-queue.json
+
+      # Hand the queue to the matrix as job outputs: `posts` fans out one
+      # review job per entry; `meta` carries the shared selection provenance
+      # (generated timestamp, snapshot availability) so each review job can
+      # reconstruct its exact single-post queue.
+      - name: Emit queue outputs
+        id: emit
+        run: |
+          echo "posts=$(jq -c '.posts' .blog-review-queue.json)" >> "$GITHUB_OUTPUT"
+          echo "meta=$(jq -c '{generated, halted, traffic, reader_signals}' .blog-review-queue.json)" >> "$GITHUB_OUTPUT"
+
+  # One UNPRIVILEGED model review per selected post. Same privilege posture
+  # as the docs per-article worker's review job: `contents: read` to clone,
+  # `id-token: write` because claude-code-action requests an OIDC token at
+  # startup, no ESC, no AWS, persist-credentials off, and a preflight assert.
+  # The model's only deliverable is `.blog-review-findings.json`; the tree
+  # must stay clean (flag-only), and the record job below distrusts anything
+  # that breaks that contract.
+  review:
+    name: "Review: ${{ matrix.post.slug }}"
+    needs: select
+    if: needs.select.outputs.has_posts == 'true' && github.event.inputs.dry_run != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      id-token: write
+    strategy:
+      fail-fast: false
+      # Bound concurrent API spend; queued matrix jobs wait their turn.
+      max-parallel: 2
+      matrix:
+        post: ${{ fromJSON(needs.select.outputs.posts) }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # The claim pipeline diffs against history and the skill reads
+          # sibling docs; keep the full clone, keep the token out of
+          # .git/config (nothing in this job pushes).
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Assert the model environment is credential-free
+        run: |
+          FAIL=0
+          if [ -n "${AWS_ACCESS_KEY_ID:-}${AWS_SECRET_ACCESS_KEY:-}${AWS_SESSION_TOKEN:-}" ]; then
+            echo "::error::AWS credentials are present in the review job; they belong in select/record only"
+            FAIL=1
+          fi
+          if git config --local --get-regexp '^http\..*\.extraheader$' > /dev/null 2>&1; then
+            echo "::error::a git credential extraheader is persisted in .git/config; set persist-credentials: false"
+            FAIL=1
+          fi
+          exit "$FAIL"
+      # Vale (and other mise-pinned tools) for the whole-file prose-lint
+      # pre-step.
+      - name: Install mise-managed tools
+        uses: jdx/mise-action@v4
+        with:
+          cache: true
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+
+      # Reconstruct this post's single-entry queue from the matrix entry +
+      # the shared meta — the same selection facts the dispatcher computed,
+      # so the record job's provenance is deterministic.
+      - name: Build single-post queue
+        env:
+          POST_JSON: ${{ toJSON(matrix.post) }}
+          META_JSON: ${{ needs.select.outputs.meta }}
+        run: |
+          jq -n --argjson post "$POST_JSON" --argjson meta "$META_JSON" \
+            '$meta + {count: 1, posts: [$post]}' > .blog-review-queue.json
+          echo "--- queue ---"
+          cat .blog-review-queue.json
+
+      # Run the docs-review deterministic pre-computation as a REAL workflow
+      # step — not a model instruction (same pipeline the docs worker uses,
+      # minus the docs-only cross-sibling pass; the PR-bound editorial
+      # balance detector can't run here, so the model applies those criteria
+      # from its whole-file read). Each command degrades gracefully (`|| stub`) so
+      # one pre-step failure never blocks the run; the model notes missing
+      # artifacts in its findings evidence.
+      - name: Pre-compute review artifacts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          POST_PATH: ${{ matrix.post.path }}
+        run: |
+          set +e
+          S=.claude/commands/docs-review/scripts
+          git diff --no-index /dev/null "$POST_PATH" > .synthetic.patch || true
+
+          python3 $S/extract-urls-and-fetch.py \
+            --patch-file .synthetic.patch --out .fetched-urls.json \
+            || echo '[]' > .fetched-urls.json
+          python3 $S/extract-claims.py \
+            --patch-file .synthetic.patch --out .candidate-claims-regex.json \
+            || echo '{"schema_version": 1, "claims": [], "renames": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
+          python3 $S/extract-claims-llm.py \
+            --patch-file .synthetic.patch --changed-files "$POST_PATH" \
+            --pass atomic --scrutiny heightened --out .candidate-claims-llm-1.json \
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+          python3 $S/extract-claims-llm.py \
+            --patch-file .synthetic.patch --changed-files "$POST_PATH" \
+            --pass holistic --scrutiny heightened --out .candidate-claims-llm-2.json \
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+          python3 $S/merge-claims.py \
+            --regex .candidate-claims-regex.json \
+            --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
+            --out .candidate-claims.json \
+            || echo '{"schema_version": 1, "claims": [], "errors": ["merge-claims.py failed to start"], "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "llm_input_tokens": 0, "llm_output_tokens": 0, "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0}}' > .candidate-claims.json
+          python3 $S/verify-claims.py \
+            --in .candidate-claims.json --fetched-urls .fetched-urls.json \
+            --out .verified-claims.json \
+            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+          python3 $S/frontmatter-validate.py \
+            --changed-files "$POST_PATH" --out .frontmatter-validation.json \
+            || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
+          python3 $S/readthrough.py \
+            --patch-file .synthetic.patch --changed-files "$POST_PATH" \
+            --out .readthrough-findings.json \
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+
+          vale --no-exit --output=JSON "$POST_PATH" > .vale-raw.json 2>/dev/null \
+            || echo '{}' > .vale-raw.json
+          python3 $S/vale-findings-filter.py \
+            --in .vale-raw.json --out .vale-findings.json \
+            || echo '[]' > .vale-findings.json
+
+          echo "--- pre-compute artifacts ---"
+          ls -1 .fetched-urls.json .candidate-claims.json .verified-claims.json \
+            .vale-findings.json .frontmatter-validation.json \
+            .readthrough-findings.json 2>/dev/null || true
+
+      - name: Run Claude Code
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Scheduled runs surface a Bot actor, which claude-code-action@v1
+          # rejects by default — same allowance the docs worker makes.
+          allowed_bots: 'github-actions[bot]'
+          prompt: |
+            The blog-review-index workflow selected one blog post in
+            `.blog-review-queue.json` at the repo root, and has ALREADY run
+            the deterministic pre-computation pipeline over it. The artifacts
+            are at the repo root: `.candidate-claims.json`,
+            `.verified-claims.json`, `.vale-findings.json`,
+            `.frontmatter-validation.json`, `.readthrough-findings.json`,
+            `.fetched-urls.json`. Read them; do NOT regenerate them.
+
+            Follow `.claude/commands/blog-review-index/SKILL.md` exactly.
+            This review is FLAG-ONLY: make NO edits to any file in the
+            repository, run no `git commit`/`git push`/`gh pr create`, create
+            no branches, and do not run `make lint` or `make build`. A
+            workflow step verifies the tree is untouched after you finish —
+            any tracked-file change invalidates this run's findings.
+
+            Review the post per the skill (fact-check-first, using the
+            criteria in `.claude/commands/docs-review/references/blog.md`),
+            classify every defensible issue into the closed taxonomy in
+            `.claude/commands/blog-review-index/references/issue-taxonomy.md`
+            with per-issue evidence, assess the advisory noindex signal per
+            `references/noindex-rubric.md`, and write your ONLY output —
+            `.blog-review-findings.json` at the repo root — matching
+            `references/findings-schema.json`. A deterministic gate validates
+            it; an invalid file (open taxonomy, missing evidence, path
+            mismatch) is discarded and the run is recorded incomplete.
+          # Broad Bash is deliberate — this job holds no push token, no AWS
+          # creds, and no production environment (same rationale as the docs
+          # worker's review job).
+          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
+
+      # Flag-only contract check + run facts for the record job. Tracked-file
+      # changes (staged or unstaged) mark the run dirty; untracked scratch
+      # files are harmless because nothing here ever commits. Restore the
+      # tree either way so nothing model-written can leak beyond the
+      # findings file this step deliberately copies out.
+      - name: Collect run facts
+        if: always()
+        run: |
+          mkdir -p .blog-review-handoff
+          if git diff --quiet && git diff --cached --quiet; then
+            echo "clean" > .blog-review-handoff/tree-status
+          else
+            echo "::warning::the review modified tracked files; findings will be recorded incomplete"
+            git status --porcelain | head -20
+            echo "dirty" > .blog-review-handoff/tree-status
+            git checkout -- . || true
+          fi
+          echo "${{ steps.claude.outcome }}" > .blog-review-handoff/claude-outcome
+          git rev-parse HEAD > .blog-review-handoff/head-sha
+          cp .blog-review-queue.json .blog-review-handoff/queue.json
+          [ -f .blog-review-findings.json ] \
+            && cp .blog-review-findings.json .blog-review-handoff/findings.json \
+            || echo "no findings sentinel produced"
+      - name: Upload findings artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: blog-review-findings-${{ matrix.post.slug }}
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+          path: .blog-review-handoff/
+
+  # DETERMINISTIC record job (no model): validate every findings file
+  # against the closed-taxonomy gate and write the S3 state — ledger (the
+  # staleness clock), index (the known-issues entries), immutable run logs
+  # (warehouse ingestion), and the rebuilt index summary.
+  record:
+    name: Validate and record (deterministic, credentialed)
+    needs: [select, review]
+    # Runs even when review jobs failed — the ledger must record incomplete
+    # outcomes so those posts stay due — but not when the run was cancelled.
+    if: >-
+      always() && needs.select.outputs.has_posts == 'true' &&
+      github.event.inputs.dry_run != 'true' && needs.review.result != 'cancelled'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Install Python deps
+        run: python3 -m pip install --quiet pyyaml
+
+      - name: Download findings artifacts
+        continue-on-error: true
+        uses: actions/download-artifact@v7
+        with:
+          pattern: blog-review-findings-*
+          path: .findings-artifacts
+
+      - name: Configure AWS credentials
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: blog-review-record
+          aws-region: us-west-2
+      - name: Install Pulumi CLI
+        uses: pulumi/actions@v7
+      - name: Resolve state bucket
+        id: state-bucket
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "ledger_uri=s3://$BUCKET/blog-review/ledger/" >> "$GITHUB_OUTPUT"
+            echo "index_uri=s3://$BUCKET/blog-review/index/" >> "$GITHUB_OUTPUT"
+            echo "runs_uri=s3://$BUCKET/blog-review/runs/" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::state bucket output unavailable; records will be written locally only"
+          fi
+
+      # One canonical record per selected post, `if: always()` semantics via
+      # the loop: a matrix job that died without an artifact still lands an
+      # incomplete ledger record (rebuilt from the select job's queue), so
+      # the post stays due and is retried under the attempt cap.
+      - name: Record findings
+        env:
+          BLOG_REVIEW_LEDGER_URI: ${{ steps.state-bucket.outputs.ledger_uri }}
+          BLOG_REVIEW_INDEX_URI: ${{ steps.state-bucket.outputs.index_uri }}
+          BLOG_REVIEW_RUNS_URI: ${{ steps.state-bucket.outputs.runs_uri }}
+          POSTS_JSON: ${{ needs.select.outputs.posts }}
+          META_JSON: ${{ needs.select.outputs.meta }}
+        run: |
+          FAILED=0
+          # Process substitution, not a pipe: the loop must run in this
+          # shell so FAILED propagates to the exit below.
+          while read -r post; do
+            SLUG=$(echo "$post" | jq -r '.slug')
+            DIR=".findings-artifacts/blog-review-findings-$SLUG"
+            if [ -f "$DIR/queue.json" ]; then
+              QUEUE="$DIR/queue.json"
+            else
+              echo "::warning::no artifact for $SLUG (review job died before handoff); recording incomplete"
+              QUEUE=".queue-$SLUG.json"
+              jq -n --argjson post "$post" --argjson meta "$META_JSON" \
+                '$meta + {count: 1, posts: [$post]}' > "$QUEUE"
+            fi
+            python3 scripts/blog-review/record-findings.py \
+              --queue "$QUEUE" \
+              --findings "$DIR/findings.json" \
+              --claude-outcome "$(cat "$DIR/claude-outcome" 2>/dev/null || echo unknown)" \
+              --tree-status "$(cat "$DIR/tree-status" 2>/dev/null || echo dirty)" \
+              --head-sha "$(cat "$DIR/head-sha" 2>/dev/null || true)" \
+              || FAILED=1
+          done < <(echo "$POSTS_JSON" | jq -c '.[]')
+          exit "$FAILED"
+
+      # Rebuild the index summary from the full index prefix (all entries,
+      # not just today's) and upload it back. The summary is what the future
+      # noindex process, humans, and the warehouse read first.
+      - name: Rebuild index summary
+        if: steps.state-bucket.outputs.index_uri != ''
+        continue-on-error: true
+        run: |
+          mkdir -p .index-cache
+          aws s3 sync "${{ steps.state-bucket.outputs.index_uri }}" .index-cache/ --quiet \
+            --exclude "_summary.json"
+          python3 scripts/blog-review/build-summary.py \
+            --index-dir .index-cache --out .index-summary.json
+          cat .index-summary.json
+          aws s3 cp .index-summary.json "${{ steps.state-bucket.outputs.index_uri }}_summary.json" --quiet
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

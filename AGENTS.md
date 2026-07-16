@@ -126,6 +126,10 @@ When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `la
 
 **Do not reach for `lastmod`.** It's a Hugo built-in that only feeds the sitemap and schema.org `dateModified`, and the site already sets `enableGitInfo: true` (`config/_default/config.yml`), so Hugo derives `.Lastmod` from the commit date automatically. A hand-stamped `lastmod` is therefore invisible to readers *and* redundant with git. It's easy to default to because `lastmod` is the generic Hugo idiom for "last changed" — but on this site the reader-facing, canonical field is `updated`.
 
+### Blog known-issues index (automated daily review)
+
+A scheduled workflow (`.github/workflows/blog-review-index.yml`) reviews a few existing blog posts per day — selected deterministically by `scripts/blog-review/select-posts.py` (traffic/GSC-weighted staleness; oldest-unreviewed-first until the blog data exports ship) — and records structured findings (dead links, factual rot, deprecated products, thin content) into an S3 known-issues index. It is **flag-only state, not content**: nothing is committed to the repo, no fixes are applied, and no PRs are opened. State lives in the content-review ledger bucket under the `blog-review/` prefix (`ledger/`, `index/`, `runs/`, and `index/_summary.json`); the on/off/cadence switch is the `BLOG_REVIEW_COUNT` repo variable (unset = 5 posts/run, `'0'` = off). The review skill is `.claude/commands/blog-review-index/SKILL.md`; its closed issue taxonomy lives in that skill's `references/issue-taxonomy.md` and is enforced by `scripts/blog-review/validate-findings.py`. The index is evidence for a future, human-reviewed process that marks rotted, low-value posts `block_external_search_index: true` — do not add that frontmatter based on the index without going through that process.
+
 ---
 
 ## Case studies
