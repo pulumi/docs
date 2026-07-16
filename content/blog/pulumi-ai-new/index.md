@@ -10,6 +10,7 @@ tags:
     - ai
     - llm
 category: product
+faq_schema: true
 ---
 
 {{< notes type="info" >}}

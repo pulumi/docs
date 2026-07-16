@@ -15,6 +15,7 @@ tags:
     - kubernetes
     - devops
 category: general
+faq_schema: true
 ---
 
 Infrastructure as Code (IaC) has evolved beyond simple automation into a fundamental shift toward applying software engineering practices to infrastructure management. In 2025, leading organizations aren't just provisioning infrastructure—they're treating it as software, complete with testing, version control, code reviews, and continuous integration.
