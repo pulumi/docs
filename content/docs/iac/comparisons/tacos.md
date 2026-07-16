@@ -1,9 +1,9 @@
 ---
-title_tag: "Pulumi vs. TACOS"
+title_tag: "Pulumi vs. Terraform Automation and Collaboration Software (TACOS)"
 authors: ["cam-soper"]
-meta_desc: "Pulumi vs. TACOS (Terraform Automation and Collaboration Software): how Pulumi compares with Spacelift, HCP Terraform, env0, Scalr, and Atlantis."
+meta_desc: "Pulumi vs. Terraform Automation and Collaboration Software (TACOS): how Pulumi compares with Spacelift, HCP Terraform, env0, Scalr, and Atlantis."
 title: TACOS
-h1: Pulumi vs. TACOS
+h1: Pulumi vs. Terraform Automation and Collaboration Software (TACOS)
 menu:
     iac:
         name: TACOS
@@ -20,7 +20,7 @@ aliases:
 - /docs/iac/concepts/vs/tacos/
 ---
 
-[TACOS](https://scalr.com/learning-center/tacos-terraform-automation-and-collaboration-software/) — Terraform Automation and Collaboration Software — is the category of platforms that wrap automation, collaboration, and governance around Terraform. [HCP Terraform](https://www.hashicorp.com/products/terraform) (formerly Terraform Cloud), [Spacelift](https://spacelift.io/), [env0](https://www.env0.com/), [Scalr](https://scalr.com/), and the open-source [Atlantis](https://www.runatlantis.io/) all fall under it. They exist because Terraform on its own leaves you to assemble remote state, run automation, policy, drift detection, and access control yourself, and a TACOS bundles that scaffolding into one service.
+[Terraform Automation and Collaboration Software](https://scalr.com/learning-center/tacos-terraform-automation-and-collaboration-software/) (TACOS) is the category of platforms that wrap automation, collaboration, and governance around Terraform. [HCP Terraform](https://www.hashicorp.com/products/terraform) (formerly Terraform Cloud), [Spacelift](https://spacelift.io/), [env0](https://www.env0.com/), [Scalr](https://scalr.com/), and the open-source [Atlantis](https://www.runatlantis.io/) all fall under it. They exist because Terraform on its own leaves you to assemble remote state, run automation, policy, drift detection, and access control yourself, and a TACOS bundles that scaffolding into one service.
 
 Pulumi covers the same management ground from a different starting point. Rather than sitting on top of Terraform, Pulumi is a full infrastructure as code platform: you write infrastructure in a general-purpose language (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) instead of HCL, and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) and [Pulumi Deployments](/docs/deployments/) provide the state, policy, RBAC, and Git-driven runs a TACOS is bought for. The decision between them comes down to the authoring layer: keep writing HCL and add a platform to manage it, or move to a platform where the language and the management are built together. This page compares the two approaches, shows where they overlap, and covers how teams run them side by side.
 

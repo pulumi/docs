@@ -37,7 +37,7 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [Crossplane](/docs/iac/comparisons/crossplane/)
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
 * [Spacelift](/docs/iac/comparisons/spacelift/)
-* [TACOS (Terraform Automation Tools)](/docs/iac/comparisons/tacos/)
+* [Terraform Automation and Collaboration Software (TACOS)](/docs/iac/comparisons/tacos/)
 * [Helm](/docs/iac/comparisons/helm/)
 * [Kubernetes YAML Manifests](/docs/iac/comparisons/k8s-yaml-dsls/)
 * [Serverless Framework](/docs/iac/comparisons/serverless/)
