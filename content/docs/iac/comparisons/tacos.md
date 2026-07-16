@@ -1,7 +1,7 @@
 ---
 title_tag: "Pulumi vs. Terraform Automation and Collaboration Software (TACOS)"
 authors: ["cam-soper"]
-meta_desc: "Pulumi vs. Terraform Automation and Collaboration Software (TACOS): how Pulumi compares with Spacelift, HCP Terraform, env0, Scalr, and Atlantis."
+meta_desc: "Pulumi is a full infrastructure as code platform; TACOS tools like Spacelift, HCP Terraform, env0, and Scalr add a management layer to Terraform."
 title: TACOS
 h1: Pulumi vs. Terraform Automation and Collaboration Software (TACOS)
 menu:
@@ -46,7 +46,7 @@ The tools don't all cover the same ground. [HCP Terraform](https://www.hashicorp
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, and Google Cloud Storage | Managed Terraform state with locking, a core feature across the category |
 | Remote execution | [Pulumi Deployments](/docs/deployments/) for Git-driven runs; the [Automation API](/docs/iac/concepts/automation-api/); or the local CLI | Managed runs triggered by version control or pull requests, on hosted or self-hosted runners |
 | Drift detection | [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) and `pulumi preview --diff`; [scheduled detection and remediation](/docs/deployments/concepts/drift/) in Pulumi Deployments | Scheduled drift detection, common across the category |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/) in Python, TypeScript, or Open Policy Agent Rego; open source, with [compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) in Pulumi Cloud | Policy enforcement, usually Open Policy Agent Rego, or Sentinel on HCP Terraform |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/) in Python, TypeScript, or Open Policy Agent Rego; open source, with [compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) in Pulumi Cloud | Policy enforcement with Open Policy Agent Rego, or Sentinel on HCP Terraform |
 | Secrets management | [First-class encrypted secrets](/docs/iac/concepts/secrets/) plus [Pulumi ESC](/docs/esc/) for centralized secrets and configuration | Encrypted variables, with integrations for external secret stores |
 | Access control | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) teams, role-based access control, SSO/SAML, and audit logs | Per-scope RBAC and SSO/SAML, varying by vendor and tier |
 | AI and agents | [Pulumi Neo](/product/neo/), the [Pulumi MCP server](/docs/ai/mcp-server/), and [Agent Skills](/docs/ai/skills/); author with any coding agent | Emerging and vendor-specific, such as [Spacelift Intelligence and Intent](https://spacelift.io/platform/intelligence) |
@@ -65,7 +65,7 @@ State, run automation, drift detection, policy, and access control appear on bot
 
 ### Bringing your Terraform with you
 
-Teams usually reach for a TACOS because they already have Terraform and need to operate it at scale. Pulumi can carry that investment forward rather than discarding it: it [uses existing Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), works with [any Terraform or OpenTofu provider](/docs/iac/concepts/providers/any-terraform-provider/), and [converts HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) with `pulumi convert --from terraform`. The question that leaves is whether your next step is more HCL with a platform layered on top, or a language-based platform that still consumes what you've already built.
+Teams reach for a TACOS because they already have Terraform and need to operate it at scale. Pulumi can carry that investment forward rather than discarding it: it [uses existing Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), works with [any Terraform or OpenTofu provider](/docs/iac/concepts/providers/any-terraform-provider/), and [converts HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) with `pulumi convert --from terraform`. The question that leaves is whether your next step is more HCL with a platform layered on top, or a language-based platform that still consumes what you've already built.
 
 ### Running Pulumi on a TACOS
 
@@ -116,7 +116,7 @@ Yes, with the ones that support it. Spacelift and env0 run Pulumi as a first-cla
 
 ### Do I still need a TACOS if I adopt Pulumi?
 
-Usually not. Pulumi Cloud and Pulumi Deployments provide the managed state, RBAC, policy, drift detection, and Git-driven runs a TACOS is bought for, as part of the same platform you author in.
+Not necessarily. Pulumi Cloud and Pulumi Deployments provide the managed state, RBAC, policy, drift detection, and Git-driven runs a TACOS is bought for, as part of the same platform you author in. Teams running several IaC tools may still want a TACOS to orchestrate all of them from one place.
 
 ### How do I move a Terraform estate onto Pulumi?
 
