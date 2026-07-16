@@ -91,7 +91,7 @@ These aren't mutually exclusive. Pulumi authors infrastructure and manages it, s
 1. Run several IaC tools and want one orchestration plane across them — Spacelift and env0 run Pulumi next to Terraform, OpenTofu, and the rest.
 1. Have already standardized on Spacelift or env0 and want to keep its run workflow, policies, and RBAC while authoring in Pulumi.
 
-Even if you're staying in HCL for now, Pulumi is worth a look: it [adopts your existing Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) so none of that work is wasted and gives you a language-based platform in place of HCL — and it runs on Spacelift or env0 if you'd rather keep a TACOS in the loop.
+Even if you're staying in HCL for now, you can move to Pulumi without throwing that work away: it [adopts your existing Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) and replaces HCL with a general-purpose language, and it still runs on Spacelift or env0 if you'd rather keep a TACOS in the loop.
 
 ## Adoption
 
