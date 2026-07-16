@@ -43,7 +43,7 @@ Misconfigurations are rarely the result of negligence. They are the predictable 
 
 **Speed and pressure.** Teams shipping quickly take shortcuts. A permission is widened to unblock a deploy, a security group is opened to debug connectivity, and the intended cleanup never happens.
 
-**Human error.** Industry analysis attributes the overwhelming majority of cloud security failures to human mistakes rather than provider faults. The Cloud Security Alliance reports that [up to 99% of cloud failures trace back to human error](https://cloudsecurityalliance.org/blog/2023/08/14/managing-cloud-misconfigurations-risks), which is why removing manual steps is so effective at reducing them.
+**Human error.** Industry analysis attributes the overwhelming majority of cloud security failures to customer-side mistakes rather than provider faults. Gartner has predicted that [through 2025, 99% of cloud security failures would be the customer's fault](https://cloudsecurityalliance.org/blog/2023/08/14/managing-cloud-misconfigurations-risks), which is why removing manual steps is so effective at reducing them.
 
 ## What are the most common types of cloud misconfiguration?
 
@@ -137,7 +137,7 @@ Cloud misconfiguration is an insecure setting on a cloud resource. It means a re
 
 ### What causes cloud misconfigurations?
 
-They are caused by the collision of complexity, speed, and manual processes: insecure or permissive defaults, the sheer number of settings across a large cloud estate, changes made by clicking through a console with no review, configuration drift from out-of-band edits, and human error. Industry analysis attributes up to 99% of cloud security failures to human mistakes, which is why automating configuration reduces them so effectively.
+They are caused by the collision of complexity, speed, and manual processes: insecure or permissive defaults, the sheer number of settings across a large cloud estate, changes made by clicking through a console with no review, configuration drift from out-of-band edits, and human error. Gartner has predicted that 99% of cloud security failures through 2025 would be the customer's fault, which is why automating configuration reduces them so effectively.
 
 ### What are examples of cloud misconfiguration?
 
