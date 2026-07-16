@@ -153,6 +153,30 @@ config:
 
 Keys that include an explicit namespace other than the project name (such as `aws:region`) are unaffected and do not need to change. Alternatively, you can recreate each value using `pulumi config set` (or `pulumi config set --secret` for sensitive values) after updating `Pulumi.yaml`.
 
+## Move resources between stacks {#move-resources-between-stacks}
+
+As a project grows, you may want to reorganize how its resources are grouped into stacks: splitting a monolithic stack into smaller, independently managed stacks, consolidating several small stacks into one, or moving a handful of resources into a stack owned by a different team. The [`pulumi state move`](/docs/iac/cli/commands/pulumi_state_move/) command handles this by transferring resources directly between two stacks' state. Because it operates on state rather than on your cloud infrastructure, the moved resources are never destroyed and recreated, so there's no disruption to what's actually running.
+
+```bash
+$ pulumi state move --source myorg/myproject/dev --dest myorg/myproject-aws/dev 'urn:pulumi:dev::myproject::aws:s3/bucket:Bucket::b'
+```
+
+Both `--source` and `--dest` accept a simple stack name when it refers to the current project, or a fully qualified `<org>/<project>/<stack>` name when the destination lives in a different project. If you omit `--source`, Pulumi uses the currently selected stack. Resources are identified by their [URN](/docs/concepts/resources/names/#urns); moving a resource automatically brings along its children, and dependencies between the resources you're moving are preserved. Pass `--include-parents` to bring a resource's ancestors along too, and add `-y`/`--yes` to skip the confirmation prompt once you're comfortable with the plan. Both stacks must use the same backend — you can't move resources directly between, say, Pulumi Cloud and a self-managed backend.
+
+To move resources safely:
+
+1. **Back up both stacks' state** with `pulumi stack export --file backup.json` (repeat for the source and destination stacks, or Pulumi Cloud, which lets you download the state for any past update from the Stack Details page). A move is reversible with `pulumi stack import`, but only if you have a backup to restore from.
+1. **Find the URNs of the resources you're moving.** Run `pulumi stack --show-urns` against the source stack to list every resource and its URN. Because URNs contain characters your shell may interpret, always wrap them in single quotes.
+1. **Run `pulumi state move`** with `--source`, `--dest`, and the URNs to move. Review the plan Pulumi prints — including any cross-stack dependencies it flags — before confirming.
+1. **Update both programs' source code.** The command only rewrites state; it does not touch your program. Copy the moved resources' declarations from the source program into the destination program, and remove them from the source. Where the destination program needs an output from a resource that stayed behind, use a [stack reference](/docs/concepts/stack/#stackreferences) rather than trying to share values directly between programs.
+1. **Run `pulumi preview` on both stacks** to confirm each shows no changes before your next `pulumi up`. An unexpected diff usually means the destination program's resource declaration doesn't exactly match what was moved.
+
+{{% notes type="warning" %}}
+`pulumi state move` changes state but not your program. If the destination program declares a moved resource with a different name, parent, or type than the source did, add an [`aliases`](/docs/iac/operations/stack-management/refactoring-with-aliases/) resource option so Pulumi recognizes it as the same resource instead of planning a replacement.
+{{% /notes %}}
+
+See the [`pulumi state move` CLI reference](/docs/iac/cli/commands/pulumi_state_move/) for the complete flag list, the [Move resources between stacks tutorial](/tutorials/move-resources-between-stacks/) for a guided walkthrough, and the [announcement blog post](/blog/move-resources-between-stacks/) for the background on why the command exists.
+
 ## Generate an update plan
 
 {{% experimental-feature %}}
