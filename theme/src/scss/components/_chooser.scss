@@ -1,24 +1,24 @@
 pulumi-chooser {
-    // Standard (non-language) chooser: a gray strip of small tabs matching the
-    // language chooser's toolbar — surface background, rounded top, 1px bottom
-    // border that the active tab's underline sits on. --docs-* tokens (with
-    // non-docs fallbacks); the dark rule in _docs-theme.scss re-asserts the
-    // border colors the unlayered `*` border reset would otherwise override.
+    // Standard (non-language) chooser: a flat violet chrome strip of small tabs
+    // matching the language chooser's toolbar — chrome background, rounded top,
+    // 1px bottom border that the active tab's underline sits on. --chrome-* tokens
+    // (with non-docs gray fallbacks); the dark rule in _docs-theme.scss re-asserts
+    // the border colors the unlayered `*` border reset would otherwise override.
     > ul {
         @apply m-0 mb-4 flex rounded-t-lg;
 
         padding: 0 !important;
         list-style-type: none !important;
 
-        background: var(--docs-surface, theme("colors.gray.100"));
-        border-bottom: 1px solid var(--docs-border, theme("colors.gray.200"));
+        background: var(--chrome-bg, theme("colors.gray.100"));
+        border-bottom: 1px solid var(--chrome-border, theme("colors.gray.200"));
 
         li {
             @apply font-display text-xs p-0 m-0 border-b-2 border-transparent transition text-center w-full;
             @include transition;
 
             &:hover {
-                border-bottom-color: var(--docs-border, theme("colors.gray.200"));
+                border-bottom-color: var(--chrome-border-hover, theme("colors.gray.200"));
             }
 
             &.active {
@@ -69,14 +69,14 @@ pulumi-chooser {
         @apply block rounded-lg px-4 pb-4 mb-4 overflow-hidden;
 
         background: var(--docs-card, theme("colors.white"));
-        border: 1px solid var(--docs-border, theme("colors.gray.200"));
+        border: 1px solid var(--chrome-border, theme("colors.gray.200"));
 
         // Height comes from the label's padding; the tabs stretch to fill it so each
         // tab's bottom border sits flush with the toolbar's bottom edge.
         .chooser-toolbar {
             @apply -mx-4 mb-4 flex justify-between gap-2 px-4;
 
-            background: var(--docs-surface, theme("colors.gray.100"));
+            background: var(--chrome-bg, theme("colors.gray.100"));
 
             // On mobile the logo + name label is hidden and the tab row scrolls
             // horizontally; from md up the label returns and the tabs right-align.
@@ -109,7 +109,7 @@ pulumi-chooser {
                     @include transition;
 
                     &:hover {
-                        border-bottom-color: var(--docs-border, theme("colors.gray.200"));
+                        border-bottom-color: var(--chrome-border-hover, theme("colors.gray.200"));
                     }
 
                     &.active {
@@ -188,7 +188,7 @@ pulumi-chooser {
                 @apply  mb-0;
 
                 //background: transparent;
-                border-bottom: 1px solid var(--docs-border, theme("colors.gray.200"));
+                border-bottom: 1px solid var(--chrome-border, theme("colors.gray.200"));
             }
         }
 

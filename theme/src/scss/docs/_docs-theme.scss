@@ -27,6 +27,17 @@ body.section-docs {
     --docs-card-border: var(--color-gray-200);
     --docs-ring: var(--color-violet-700);
 
+    // Code chrome — the flat violet tint on code-adjacent "chrome" (chooser
+    // toolbars, tab strips, card borders, terminal dots), mirroring marketing-web
+    // (apps/www). Centralized in four tunable props so the tint lives in one place;
+    // the dark block below re-points them to the standard brand inversion. All
+    // values trace to @pulumi/design-tokens. (--chrome-dots is defined for parity
+    // with www; docs has no light-chrome terminal title bar consuming it yet.)
+    --chrome-bg: var(--color-violet-100);
+    --chrome-border: var(--color-violet-200);
+    --chrome-border-hover: var(--color-violet-300);
+    --chrome-dots: var(--color-violet-400);
+
     // Re-expose the semantic tokens under Tailwind's --color-* namespace so the
     // generated utilities (bg-docs-bg, text-docs-fg, border-docs-border, …) resolve
     // and flip with the theme. This MUST live here, not just in @theme: a --color-*
@@ -59,6 +70,13 @@ html[data-theme="dark"] body.section-docs {
     --docs-card: var(--color-service-black);
     --docs-card-border: var(--color-gray-800);
     --docs-ring: var(--color-violet-300);
+
+    // Code chrome — standard brand inversion of the light steps above (100↔900,
+    // 200↔800, 300↔700; dots use 300 so they stay visible on the darker chrome).
+    --chrome-bg: var(--color-violet-900);
+    --chrome-border: var(--color-violet-800);
+    --chrome-border-hover: var(--color-violet-700);
+    --chrome-dots: var(--color-violet-300);
 
     // Brand rule: the primary violet flips to lavender in dark mode everywhere
     // EXCEPT solid buttons (those pin violet-700, re-pinned below). Remapping the
@@ -521,14 +539,31 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // --- Chooser chrome: the violet card border, standard-strip bottom border,
+    //     and standalone-toolbar bottom border are all flattened to --docs-border
+    //     by the unlayered `*` border reset below; re-assert the --chrome-border
+    //     step so the dark chrome stays violet. (Backgrounds flip automatically —
+    //     --chrome-* is a per-mode custom property and `*` only resets border-color.)
+    pulumi-chooser > ul {
+        border-bottom-color: var(--chrome-border);
+    }
+
+    pulumi-chooser[type="language"]:not([option-style="none"]) {
+        border-color: var(--chrome-border);
+
+        .chooser-toolbar {
+            border-bottom-color: var(--chrome-border);
+        }
+    }
+
     // --- Chooser tabs: re-assert the underline colors (inactive = transparent,
-    //     hover = border, active = link) so the unlayered `*` border reset below
-    //     doesn't override them. ---------------------------------------------
+    //     hover = chrome-border-hover, active = link) so the unlayered `*` border
+    //     reset below doesn't override them. ----------------------------------
     pulumi-chooser > ul li {
         border-bottom-color: transparent;
 
         &:hover {
-            border-bottom-color: var(--docs-border);
+            border-bottom-color: var(--chrome-border-hover);
         }
 
         a {
@@ -549,12 +584,13 @@ html[data-theme="dark"] body.section-docs {
     }
 
     // Language toolbar tabs: re-assert the underline colors (inactive = transparent,
-    // active = link) so the unlayered `*` border reset below doesn't override them.
+    // hover = chrome-border-hover, active = link) so the unlayered `*` border reset
+    // below doesn't override them.
     .chooser-toolbar > ul li {
         border-bottom-color: transparent;
 
         &:hover {
-            border-bottom-color: var(--docs-border);
+            border-bottom-color: var(--chrome-border-hover);
         }
 
         a {
