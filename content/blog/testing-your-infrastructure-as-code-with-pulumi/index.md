@@ -46,7 +46,7 @@ are a few examples:
   inside of your compute infrastructure, to ensure that it is healthy
   after your infrastructure has been provisioned
 
-As we see, there's a broad spectrum of [infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+As we see, there's a broad spectrum of [infrastructure testing](/blog/how-to-test-infrastructure-as-code/)
 options available. Pulumi has mechanisms available for testing at each point
 along this spectrum. Let's dig in and see how.
 
