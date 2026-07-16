@@ -9,6 +9,10 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "London Platform User Group (LOPUG)"
+  title: "Stop Wasting GPUs: How We Built a Golden Path for GPU Sharing on Kubernetes"
+  url: "https://www.meetup.com/london-platform-user-group-lopug/events/313277993/"
+  date: 2026-07-08T18:30:00.000+01:00
 - event: "Cloud Native Summit Munich 2026"
   title: "The Ralph Wiggum Loop: How Autonomous AI Loops Built My Serverless SaaS While I Slept"
   url: "https://www.cnsmunich.com/schedule/"
