@@ -28,6 +28,8 @@ But as the AI tsunami whips up reams of code, what happens to it becomes just as
 
 <!--more-->
 
+[See Pulumi Neo in action →](/product/neo/) Neo is the agent at the center of everything below: it previews changes, checks them against policy, and opens PRs for your review.
+
 ## LLMs are natural coders
 
 It is remarkable to look back and note that frontier models, less than two years ago, in August 2024, scored just 33% on SWE-bench Verified. Present-day models score 86%, which represents a 4x reduction in the errors models will make when coding. This enables models to solve increasingly difficult coding problems, and humans can lean more heavily on them to offload tasks. Anthropic's new Mythos model scores 94% and, although it isn't generally available at the time of this article, there's no question we'll close in on 95% by the end of 2026. That is another 2.3x reduction in error rates. This very naturally puts us onto the last mile of fully agentic coding.
@@ -162,7 +164,7 @@ We've also invested in making Pulumi maximally legible to agents, because the be
 
 We're primarily focused on two pillars as we go forward:
 
-First, we are making agentic infrastructure a reality with increasingly autonomous workflows. The pace and scale of infrastructure in an AI era are beyond anything we've seen before, and we need to ensure infrastructure doesn't become the bottleneck to velocity. We will be shipping steady improvements that help agents score better on InfraBench as a measure of their abilities. This will begin with new building blocks and in-context improvements, but we're really excited that every improvement the frontier labs ship in general-purpose coding ability is automatically an improvement in agentic infrastructure on Pulumi, at zero cost to us or to our users. The result is that Pulumi-equipped agents will consistently and measurably outperform raw agents on real infrastructure work, and that gap will compound as the substrate and the models both improve.
+First, we are making [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) a reality with increasingly autonomous workflows. The pace and scale of infrastructure in an AI era are beyond anything we've seen before, and we need to ensure infrastructure doesn't become the bottleneck to velocity. We will be shipping steady improvements that help agents score better on InfraBench as a measure of their abilities. This will begin with new building blocks and in-context improvements, but we're really excited that every improvement the frontier labs ship in general-purpose coding ability is automatically an improvement in agentic infrastructure on Pulumi, at zero cost to us or to our users. The result is that Pulumi-equipped agents will consistently and measurably outperform raw agents on real infrastructure work, and that gap will compound as the substrate and the models both improve.
 
 Next, a world in which agents are provisioning, updating, monitoring, and managing all of our infrastructure changes the human/agent/infrastructure interface greatly. We need better change management, policy enforcement, and observability tools. Going from a single human doing a single infrastructure task at a time, to a single agent doing that task, to teams of agents doing lots of autonomous infrastructure tasks at once, will reveal new bottlenecks needed to fully govern your infrastructure. We have a lot of those facilities in Pulumi Cloud already but we will continue pushing here to improve them and ensure they scale up as fast as they need to. This is the layer that matters even as agents themselves get great at infrastructure. The smartest agent in the world still needs guardrails, audit trails, and policy enforcement to be trusted with production systems at scale, and that layer gets more valuable as agents get more capable, not less.
 
@@ -175,6 +177,8 @@ It was remarkable to see in practice and at scale that what's good for humans is
 Languages and verifiability already provide strong foundations, however, there are still clear areas we need to improve, beginning with making the full suite of infrastructure automation, security, and governance tools more accessible to agents. That's what today is all about. To deep dive on details of [the launches](/releases/agentic-infrastructure-era/), check out the [companion blog posts](/releases/agentic-infrastructure-era/#from-the-blog) released today.
 
 Agentic infrastructure is a super exciting one-way door for our industry. We're pushing hard to take this beyond 20% and toward 100% in the years ahead. This is uniquely enabled by infrastructure as code in languages the models already speak combined with built-in verifiability that makes agentic work automatically safe. There's more to be done, however, today's launch will bend the curve even further upwards. We're still only just getting started.
+
+[Get started with Pulumi free →](/docs/install/) Install the CLI and provision your first agentic-ready stack in minutes.
 
 Happy clouding,
 
