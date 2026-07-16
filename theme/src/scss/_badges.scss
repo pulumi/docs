@@ -38,7 +38,7 @@
     @apply bg-green-muted text-green-primary;
 }
 .badge-warning {
-    @apply bg-orange-muted text-orange-primary;
+    @apply bg-yellow-muted text-yellow-primary;
 }
 .badge-destructive {
     @apply bg-red-muted text-red-primary;
@@ -57,8 +57,11 @@
 
 // Back-compat aliases — the chooser (`_chooser.scss` @extend) and hand-authored
 // content (`saml/sso.md`) reference these names directly, so they must persist.
+// "PREVIEW" / "BETA" status. Split off its own orange rule (rather than
+// @extend .badge-warning) so warning can follow the token's yellow semantic
+// while preview/beta keeps its established amber identity.
 .badge-preview {
-    @extend .badge-warning; // "PREVIEW" / "BETA" status
+    @apply bg-orange-muted text-orange-primary;
 }
 .badge-required {
     @extend .badge-destructive; // "REQUIRED"

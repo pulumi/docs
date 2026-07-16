@@ -155,7 +155,7 @@
         // the inline dark (_footer) and light (_blog) variants own it; the plain
         // newsletter falls back to the browser-default white input.
         input:not(.hs-button) {
-            @apply block py-3 px-4 rounded-lg border;
+            @apply block py-3 px-4 rounded-md border;
 
             // Resting inner shadow, matching the .form-input system. Set only here
             // (no variant sets box-shadow), so every newsletter input — plain, blog

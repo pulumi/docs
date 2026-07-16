@@ -52,12 +52,12 @@ html[data-theme="dark"] body.section-docs {
     --docs-bg: var(--color-service-black);
     --docs-bg-alt: var(--color-violet-950);
     --docs-surface: var(--color-gray-900);
-    --docs-fg: var(--color-white);
+    --docs-fg: var(--color-gray-50);
     --docs-fg-muted: var(--color-gray-300);
-    --docs-border: #ffffff1a;
+    --docs-border: var(--color-gray-800);
     --docs-link: var(--color-violet-300);
     --docs-card: var(--color-service-black);
-    --docs-card-border: #ffffff1a;
+    --docs-card-border: var(--color-gray-800);
     --docs-ring: var(--color-violet-300);
 
     // Brand rule: the primary violet flips to lavender in dark mode everywhere
@@ -585,9 +585,14 @@ html[data-theme="dark"] body.section-docs {
     // --- Badges -------------------------------------------------------------
     // Soft variants are `{color}-muted` bg + `{color}-primary` text in light mode;
     // dark flips them to a deep `{color}-950` fill + light `{color}-300` text.
+    // Warning follows the token's yellow semantic; preview/beta keeps amber.
+    .badge-warning {
+        background-color: var(--color-yellow-950);
+        color: var(--color-yellow-300);
+    }
+
     // The chooser pill is a bare `li > span` that gets its skin from
     // `@extend .badge-preview` (no literal class), so it needs naming here too.
-    .badge-warning,
     .badge-preview,
     pulumi-chooser > ul li > span {
         background-color: var(--color-orange-950);
