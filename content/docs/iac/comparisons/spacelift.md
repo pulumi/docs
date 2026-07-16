@@ -22,7 +22,7 @@ aliases:
 
 Pulumi and [Spacelift](https://spacelift.io/) sit at different layers of the infrastructure stack. Pulumi is an infrastructure as code platform: you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) and [Pulumi Deployments](/docs/deployments/) manage state, enforce policy, and run deployments. Spacelift is a CI/CD and orchestration platform for infrastructure as code: it doesn't author infrastructure itself, but runs and manages the IaC tools you already use — including Pulumi, Terraform, OpenTofu, CloudFormation, Ansible, and Kubernetes — from a single control plane.
 
-Because Spacelift runs Pulumi as a first-class runtime, the two are frequently used together. Where they genuinely overlap is the management layer: Spacelift's orchestration, policy, and collaboration features cover much the same ground as Pulumi Cloud and Pulumi Deployments. This page covers what each tool is, a feature-by-feature comparison, the key differences in detail, and the ways Pulumi and Spacelift can work together or stand in for each other.
+Because Spacelift runs Pulumi as a first-class runtime, the two are frequently used together. Where they genuinely overlap is the management layer: Spacelift's orchestration, policy, and collaboration features cover much the same ground as Pulumi Cloud and Pulumi Deployments. This page covers what each tool is, a feature-by-feature comparison, the key differences in detail, and how Pulumi and Spacelift work together.
 
 ## What is Pulumi?
 
@@ -134,7 +134,7 @@ Yes. Spacelift runs Pulumi as a first-class vendor, invoking the Pulumi CLI on i
 
 ### Does Spacelift replace Pulumi?
 
-No. Spacelift operates at a different layer than Pulumi's authoring engine, overlapping instead with Pulumi's management layer, Pulumi Cloud and Pulumi Deployments. You still author infrastructure with Pulumi (or another tool); Spacelift orchestrates the runs.
+No — the two work together at different layers. You author infrastructure with Pulumi, and Spacelift orchestrates the runs. Where Spacelift overlaps with Pulumi is the management layer, Pulumi Cloud and Pulumi Deployments, not Pulumi's authoring engine.
 
 ### If you run Terraform on Spacelift, should you consider Pulumi?
 
