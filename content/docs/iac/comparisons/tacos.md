@@ -77,7 +77,7 @@ AI is arriving across the category. Spacelift has added [Intelligence and Intent
 
 ## When to use Pulumi or a TACOS
 
-These aren't mutually exclusive. Pulumi authors infrastructure and manages it, so it works as a complete platform on its own. A TACOS adds an orchestration layer on top of your IaC, and because Spacelift and env0 run Pulumi, the two pair cleanly: author in Pulumi and orchestrate through the platform your team already runs. The guidance below is about where each earns its place, not about picking a side.
+These aren't mutually exclusive. Pulumi authors infrastructure and manages it, so it works as a complete platform on its own. A TACOS adds an orchestration layer on top of your IaC, and because Spacelift and env0 run Pulumi, the two pair cleanly: author in Pulumi and orchestrate through the platform your team already runs.
 
 **Lead with Pulumi when** you:
 
