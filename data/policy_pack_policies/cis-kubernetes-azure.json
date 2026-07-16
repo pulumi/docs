@@ -1,0 +1,1537 @@
+{
+  "applied": false,
+  "displayName": "",
+  "name": "cis-kubernetes-azure",
+  "policies": [
+    {
+      "configSchema": {
+        "properties": {
+          "allowAdminUserRegistries": {
+            "description": "Registry names allowed to have admin user enabled",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowAnonymousPullForPublic": {
+            "default": false,
+            "description": "Allow anonymous pull for public registries",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptRegistries": {
+            "description": "List of registry names/patterns exempt from access restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requirePrivateEndpoints": {
+            "default": false,
+            "description": "Require all registries to use private endpoints",
+            "type": "boolean"
+          },
+          "requiredIPRanges": {
+            "description": "Required IP ranges for public access (CIDR format)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Azure Container Registry has minimized user access with proper authentication and network restrictions.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.1 Container Registry Security",
+        "specification": "Ensure Image Vulnerability Scanning using Microsoft Defender for Cloud (MDC). Minimize user access to Azure Container Registry (ACR).",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "acr-user-access-minimized",
+      "remediationSteps": "## Fix: Minimize User Access to Azure Container Registry\n\n### Step 1: Disable Admin User and Use Service Principals\n\n```typescript\nimport * as azuread from \"@pulumi/azuread\";\n\n// Create service principal for ACR access\nconst acrServicePrincipal = new azuread.ServicePrincipal(\"acr-sp\", {\n    applicationId: acrApp.applicationId,\n});\n\nconst registry = new azure.containerregistry.Registry(\"registry\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: \"myregistry\",\n    sku: {\n        name: \"Premium\",  // Premium SKU for advanced features\n    },\n    adminUserEnabled: false,  // Disable admin user\n    publicNetworkAccess: \"Disabled\",  // Disable public access\n    anonymousPullEnabled: false,  // Disable anonymous pull\n    // ... other config\n});\n\n// Grant AcrPull role to service principal\nconst acrPullRole = new azure.authorization.RoleAssignment(\"acr-pull\", {\n    principalId: acrServicePrincipal.objectId,\n    principalType: \"ServicePrincipal\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d\", // AcrPull\n    scope: registry.id,\n});\n```\n\n### Step 2: Configure Private Endpoints\n\n```typescript\nconst privateEndpoint = new azure.network.PrivateEndpoint(\"acr-pe\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    subnet: {\n        id: privateSubnet.id,\n    },\n    privateLinkServiceConnections: [{\n        name: \"acr-connection\",\n        privateLinkServiceId: registry.id,\n        groupIds: [\"registry\"],\n    }],\n});\n\nconst privateDnsZone = new azure.network.PrivateZone(\"acr-dns\", {\n    resourceGroupName: resourceGroup.name,\n    privateZoneName: \"privatelink.azurecr.io\",\n});\n```\n\n### Step 3: Configure Network Rules for Limited Public Access (if required)\n\n```typescript\nconst registry = new azure.containerregistry.Registry(\"registry\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: \"myregistry\",\n    sku: {\n        name: \"Premium\",\n    },\n    adminUserEnabled: false,\n    publicNetworkAccess: \"Enabled\",  // Enable with restrictions\n    networkRuleSet: {\n        defaultAction: \"Deny\",  // Deny by default\n        ipRules: [\n            {\n                action: \"Allow\",\n                ipAddressOrRange: \"203.0.113.0/24\",  // Office network\n            },\n            {\n                action: \"Allow\",\n                ipAddressOrRange: \"198.51.100.0/24\",  // VPN range\n            },\n        ],\n        virtualNetworkRules: [\n            {\n                action: \"Allow\",\n                virtualNetworkResourceId: subnet.id,\n            },\n        ],\n    },\n    // ... other config\n});\n```\n\n### Step 4: Use Managed Identity for AKS Access\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    identity: {\n        type: \"SystemAssigned\",\n    },\n    // ... other config\n});\n\n// Grant AcrPull to AKS managed identity\nconst acrPullForAKS = new azure.authorization.RoleAssignment(\"aks-acr-pull\", {\n    principalId: cluster.identity.apply(i => i!.principalId),\n    principalType: \"ServicePrincipal\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d\", // AcrPull\n    scope: registry.id,\n});\n```\n\n**Azure Container Registry Roles:**\n- **AcrPull**: Pull images only\n- **AcrPush**: Pull and push images\n- **AcrDelete**: Pull, push, and delete images\n- **AcrImageSigner**: Sign images\n- **Owner**: Full control over registry",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowWriteAccessRegistries": {
+            "description": "Registry names that allow write access for CI/CD purposes",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of AKS cluster names exempt from readonly requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireReadonlyAccess": {
+            "default": true,
+            "description": "Require AcrPull role (readonly) for all AKS clusters",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS clusters have read-only access to Azure Container Registry, preventing unauthorized image pushes.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.1 Container Registry Security",
+        "specification": "Ensure Image Vulnerability Scanning using Microsoft Defender for Cloud (MDC). Minimize user access to Azure Container Registry (ACR).",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-acr-readonly-access",
+      "remediationSteps": "## Fix: Configure Read-Only ACR Access for AKS\n\n### Step 1: Remove Excessive Permissions\n\n```bash\n# Remove existing role assignments with push permissions\naz role assignment delete \\\n    --assignee <aks-managed-identity-object-id> \\\n    --role AcrPush \\\n    --scope <acr-resource-id>\n\naz role assignment delete \\\n    --assignee <aks-managed-identity-object-id> \\\n    --role Contributor \\\n    --scope <acr-resource-id>\n```\n\n### Step 2: Grant AcrPull (Read-Only) Access to AKS\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    identity: {\n        type: \"SystemAssigned\",\n    },\n    // ... other config\n});\n\nconst registry = new azure.containerregistry.Registry(\"registry\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: \"myregistry\",\n    sku: {\n        name: \"Premium\",\n    },\n    // ... other config\n});\n\n// Grant read-only access (AcrPull) to AKS cluster\nconst acrPullRole = new azure.authorization.RoleAssignment(\"aks-acr-pull\", {\n    principalId: cluster.identity.apply(i => i!.principalId!),\n    principalType: \"ServicePrincipal\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d\", // AcrPull\n    scope: registry.id,\n});\n```\n\n### Step 3: Use Separate Service Principal for CI/CD Push\n\n```typescript\nimport * as azuread from \"@pulumi/azuread\";\n\n// Create service principal for CI/CD pipelines (push access)\nconst cicdApp = new azuread.Application(\"cicd-app\", {\n    displayName: \"ACR Push CI/CD\",\n});\n\nconst cicdSp = new azuread.ServicePrincipal(\"cicd-sp\", {\n    applicationId: cicdApp.applicationId,\n});\n\nconst cicdPassword = new azuread.ServicePrincipalPassword(\"cicd-password\", {\n    servicePrincipalId: cicdSp.id,\n});\n\n// Grant push access only to CI/CD service principal\nconst acrPushRole = new azure.authorization.RoleAssignment(\"cicd-acr-push\", {\n    principalId: cicdSp.objectId,\n    principalType: \"ServicePrincipal\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/8311e382-0749-4cb8-b61a-304f252e45ec\", // AcrPush\n    scope: registry.id,\n});\n```\n\n### Step 4: Use Attachment for ACR Integration\n\n```typescript\n// Alternatively, use attachACR for simplified setup\nconst acrAttachment = new azure.containerservice.ManagedClusterAcrAttachment(\"acr-attachment\", {\n    resourceGroupName: resourceGroup.name,\n    resourceName: cluster.name,\n    acrName: registry.name,\n});\n```\n\n**Azure Container Registry Roles:**\n- **AcrPull** (7f951dda-4ed3-4680-a7ca-43fe172d538d): Pull images only - **recommended for AKS**\n- **AcrPush** (8311e382-0749-4cb8-b61a-304f252e45ec): Pull and push images - use only for CI/CD\n- **AcrDelete** (c2f4ef07-c644-48eb-af81-4b1b4947fb11): Pull, push, and delete - use sparingly\n- **Contributor**: Full control - avoid for container operations\n\n**Best Practices:**\n- AKS clusters should only have AcrPull (read-only) access\n- Use separate service principals/managed identities for CI/CD push operations\n- Audit role assignments regularly\n- Use Azure Policy to enforce ACR access controls",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowDockerHubImages": {
+            "default": [],
+            "description": "Specific Docker Hub images allowed (e.g., nginx:1.21, postgres:14)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "approvedRegistries": {
+            "default": [],
+            "description": "List of approved container registry domains (e.g., myregistry.azurecr.io, gcr.io/my-project)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptWorkloads": {
+            "description": "List of pod/deployment names exempt from registry restrictions (format: namespace/name or name)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireFullyQualifiedImages": {
+            "default": true,
+            "description": "Require fully qualified image names with explicit tags (no :latest)",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Kubernetes workloads only pull container images from approved registries to prevent supply chain attacks.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.1 Container Registry Security",
+        "specification": "Ensure Image Vulnerability Scanning using Microsoft Defender for Cloud (MDC). Minimize user access to Azure Container Registry (ACR).",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-approved-registries-only",
+      "remediationSteps": "## Fix: Restrict Container Images to Approved Registries\n\n### Step 1: Define Approved Registry List\n\n```typescript\n// Configure policy with approved registries\nconst policyConfig = {\n    \"aks-approved-registries-only\": {\n        approvedRegistries: [\n            \"mycompany.azurecr.io\",           // Corporate ACR\n            \"production.azurecr.io\",          // Production ACR\n            \"gcr.io/my-project\",              // GCP registry if needed\n            \"mycompany.io\",                   // Custom domain\n        ],\n        allowSameSubscriptionACR: true,       // Allow *.azurecr.io\n        requireFullyQualifiedImages: true,    // Prevent :latest tags\n        allowDevNamespaces: [\"dev\", \"test\"],  // Dev exemptions\n    },\n};\n```\n\n### Step 2: Deploy Applications Using Approved Registries\n\n```typescript\nimport * as k8s from \"@pulumi/kubernetes\";\n\nconst deployment = new k8s.apps.v1.Deployment(\"my-app\", {\n    metadata: {\n        name: \"my-app\",\n    },\n    spec: {\n        replicas: 3,\n        selector: {\n            matchLabels: { app: \"my-app\" },\n        },\n        template: {\n            metadata: {\n                labels: { app: \"my-app\" },\n            },\n            spec: {\n                containers: [{\n                    name: \"app\",\n                    // GOOD: Using approved ACR registry with specific tag\n                    image: \"mycompany.azurecr.io/my-app:v1.2.3\",\n                    ports: [{ containerPort: 8080 }],\n                }],\n            },\n        },\n    },\n});\n\n// BAD examples (will fail policy):\n// image: \"docker.io/untrusted/image:latest\"      // Unapproved registry\n// image: \"mycompany.azurecr.io/my-app:latest\"    // Using :latest tag\n// image: \"mycompany.azurecr.io/my-app\"           // Implicit :latest\n```\n\n### Step 3: Use Image Pull Secrets for Private Registries\n\n```typescript\nimport * as k8s from \"@pulumi/kubernetes\";\nimport * as pulumi from \"@pulumi/pulumi\";\n\n// Create Docker config secret for ACR authentication\nconst dockerConfig = pulumi.secret({\n    auths: {\n        \"mycompany.azurecr.io\": {\n            username: \"<service-principal-id>\",\n            password: \"<service-principal-password>\",\n            email: \"notused@example.com\",\n            auth: \"<base64-encoded-username:password>\",\n        },\n    },\n});\n\nconst acrSecret = new k8s.core.v1.Secret(\"acr-secret\", {\n    metadata: {\n        name: \"acr-secret\",\n        namespace: \"default\",\n    },\n    type: \"kubernetes.io/dockerconfigjson\",\n    stringData: {\n        \".dockerconfigjson\": dockerConfig.apply(c => JSON.stringify(c)),\n    },\n});\n\n// Deployment using the image pull secret\nconst deployment = new k8s.apps.v1.Deployment(\"my-app\", {\n    metadata: { name: \"my-app\" },\n    spec: {\n        replicas: 3,\n        selector: { matchLabels: { app: \"my-app\" } },\n        template: {\n            metadata: { labels: { app: \"my-app\" } },\n            spec: {\n                imagePullSecrets: [{ name: acrSecret.metadata.name }],\n                containers: [{\n                    name: \"app\",\n                    image: \"mycompany.azurecr.io/my-app:v1.2.3\",\n                }],\n            },\n        },\n    },\n});\n```\n\n### Step 4: Use AKS ACR Integration (Recommended)\n\n```typescript\nimport * as azure from \"@pulumi/azure-native\";\n\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    identity: {\n        type: \"SystemAssigned\",\n    },\n    // ... other config\n});\n\nconst registry = new azure.containerregistry.Registry(\"registry\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: \"mycompany\",\n    sku: { name: \"Premium\" },\n});\n\n// Grant AKS pull access to ACR\nconst acrPullRole = new azure.authorization.RoleAssignment(\"aks-acr-pull\", {\n    principalId: cluster.identity.apply(i => i!.principalId!),\n    principalType: \"ServicePrincipal\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/7f951dda-4ed3-4680-a7ca-43fe172d538d\", // AcrPull\n    scope: registry.id,\n});\n```\n\n**Best Practices:**\n- Maintain a corporate list of approved registries\n- Use ACR with Azure AD integration for authentication\n- Scan images in approved registries with Defender for Containers\n- Use image signing and verification (e.g., Notary, Cosign)\n- Avoid :latest tags; use specific version tags\n- Implement admission controllers (Gatekeeper, Kyverno) for enforcement\n- Regularly audit images in use across clusters",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from Azure AD requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireDisableLocalAccounts": {
+            "default": true,
+            "description": "Require local accounts to be disabled",
+            "type": "boolean"
+          },
+          "requiredAdminGroups": {
+            "description": "Required Azure AD admin group object IDs",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS clusters are integrated with Azure AD for centralized user authentication and management.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.5 Azure AD Integration",
+        "specification": "Manage Kubernetes RBAC users with Azure AD. Use Azure RBAC for Kubernetes Authorization.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-azure-ad-integration-enabled",
+      "remediationSteps": "## Fix: Enable Azure AD Integration for AKS Cluster\n\n### Step 1: Create Azure AD Groups for Cluster Administration\n\n```typescript\nimport * as azuread from \"@pulumi/azuread\";\n\nconst clusterAdminsGroup = new azuread.Group(\"aks-cluster-admins\", {\n    displayName: \"AKS Cluster Admins\",\n    securityEnabled: true,\n    description: \"Administrators for AKS clusters\",\n});\n\nconst clusterUsersGroup = new azuread.Group(\"aks-cluster-users\", {\n    displayName: \"AKS Cluster Users\",\n    securityEnabled: true,\n    description: \"Users for AKS clusters\",\n});\n```\n\n### Step 2: Configure AKS with Azure AD Integration\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    aadProfile: {\n        managed: true,  // Enable managed Azure AD integration\n        enableAzureRBAC: false,  // Use Kubernetes RBAC (or true for Azure RBAC)\n        adminGroupObjectIDs: [\n            clusterAdminsGroup.objectId,  // Azure AD group for cluster admins\n        ],\n        tenantID: tenantId,  // Optional: specify tenant ID\n    },\n    disableLocalAccounts: true,  // Disable local accounts for security\n    // ... other config\n});\n```\n\n### Step 3: Configure Azure AD with Azure RBAC (Optional - Enhanced Security)\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    aadProfile: {\n        managed: true,\n        enableAzureRBAC: true,  // Use Azure RBAC for Kubernetes authorization\n        adminGroupObjectIDs: [\n            clusterAdminsGroup.objectId,\n        ],\n    },\n    disableLocalAccounts: true,\n    // ... other config\n});\n\n// Assign Azure roles for Kubernetes access\nconst adminRoleAssignment = new azure.authorization.RoleAssignment(\"aks-admin-role\", {\n    principalId: clusterAdminsGroup.objectId,\n    principalType: \"Group\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/0ab0b1a8-8aac-4efd-b8c2-3ee1fb270be8\", // Azure Kubernetes Service Cluster Admin Role\n    scope: cluster.id,\n});\n```\n\n**Important Notes:**\n- Managed Azure AD is the recommended approach (legacy AAD is deprecated)\n- Disabling local accounts ensures all access goes through Azure AD\n- Consider using Azure RBAC for Kubernetes for centralized access management\n- Users need appropriate Azure AD group membership to access the cluster",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from Azure RBAC requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS clusters use Azure RBAC for Kubernetes authorization, providing centralized access control.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.5 Azure AD Integration",
+        "specification": "Manage Kubernetes RBAC users with Azure AD. Use Azure RBAC for Kubernetes Authorization.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-azure-rbac-enabled",
+      "remediationSteps": "## Fix: Enable Azure RBAC for Kubernetes Authorization\n\n**Note:** Azure RBAC requires managed Azure AD integration. Ensure the aks-azure-ad-integration-enabled policy is satisfied first.\n\n### Step 1: Enable Azure RBAC on AKS Cluster\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    aadProfile: {\n        managed: true,  // Managed Azure AD integration is required\n        enableAzureRBAC: true,  // Enable Azure RBAC for Kubernetes\n        adminGroupObjectIDs: [\n            clusterAdminsGroup.objectId,\n        ],\n        tenantID: tenantId,\n    },\n    disableLocalAccounts: true,  // Recommended with Azure RBAC\n    // ... other config\n});\n```\n\n### Step 2: Assign Azure Built-in Roles for Kubernetes Access\n\n```typescript\n// Cluster Admin Role\nconst clusterAdminRole = new azure.authorization.RoleAssignment(\"cluster-admin\", {\n    principalId: adminGroup.objectId,\n    principalType: \"Group\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/0ab0b1a8-8aac-4efd-b8c2-3ee1fb270be8\", // Azure Kubernetes Service Cluster Admin Role\n    scope: cluster.id,\n});\n\n// Cluster User Role\nconst clusterUserRole = new azure.authorization.RoleAssignment(\"cluster-user\", {\n    principalId: userGroup.objectId,\n    principalType: \"Group\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/4abbcc35-e782-43d8-92c5-2d3f1bd2253f\", // Azure Kubernetes Service Cluster User Role\n    scope: cluster.id,\n});\n\n// RBAC Admin (manage roles and bindings)\nconst rbacAdminRole = new azure.authorization.RoleAssignment(\"rbac-admin\", {\n    principalId: rbacAdminGroup.objectId,\n    principalType: \"Group\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/3498e952-d568-435e-9b2c-8d77e338d7f7\", // Azure Kubernetes Service RBAC Admin\n    scope: cluster.id,\n});\n\n// RBAC Reader (view resources)\nconst rbacReaderRole = new azure.authorization.RoleAssignment(\"rbac-reader\", {\n    principalId: readerGroup.objectId,\n    principalType: \"Group\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/7f6c6a51-bcf8-42ba-9220-52d62157d7db\", // Azure Kubernetes Service RBAC Reader\n    scope: cluster.id,\n});\n\n// RBAC Writer (modify resources)\nconst rbacWriterRole = new azure.authorization.RoleAssignment(\"rbac-writer\", {\n    principalId: writerGroup.objectId,\n    principalType: \"Group\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/a7ffa36f-339b-4b5c-8bfd-d2d2f9b8018d\", // Azure Kubernetes Service RBAC Writer\n    scope: cluster.id,\n});\n```\n\n### Step 3: Create Custom Role for Specific Permissions (Optional)\n\n```typescript\nconst customK8sRole = new azure.authorization.RoleDefinition(\"custom-k8s-role\", {\n    roleName: \"AKS Custom Developer\",\n    description: \"Custom role for developers with limited Kubernetes permissions\",\n    assignableScopes: [subscription.id],\n    permissions: [{\n        actions: [\n            \"Microsoft.ContainerService/managedClusters/listClusterUserCredential/action\",\n            \"Microsoft.ContainerService/managedClusters/read\",\n        ],\n        dataActions: [\n            \"Microsoft.ContainerService/managedClusters/apps/deployments/write\",\n            \"Microsoft.ContainerService/managedClusters/apps/deployments/read\",\n            \"Microsoft.ContainerService/managedClusters/core/pods/read\",\n            \"Microsoft.ContainerService/managedClusters/core/pods/logs/read\",\n        ],\n    }],\n});\n\nconst customRoleAssignment = new azure.authorization.RoleAssignment(\"custom-role-assignment\", {\n    principalId: devGroup.objectId,\n    principalType: \"Group\",\n    roleDefinitionId: customK8sRole.id,\n    scope: cluster.id,\n});\n```\n\n**Azure Built-in Kubernetes Roles:**\n- **Azure Kubernetes Service Cluster Admin**: Full access to all resources\n- **Azure Kubernetes Service Cluster User**: List cluster credentials, basic access\n- **Azure Kubernetes Service RBAC Admin**: Manage RBAC permissions\n- **Azure Kubernetes Service RBAC Writer**: Create/update most resources\n- **Azure Kubernetes Service RBAC Reader**: View most resources\n- **Azure Kubernetes Service RBAC Cluster Admin**: Full admin within namespaces",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from audit logging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS clusters have audit logging enabled via diagnostic settings for security monitoring and compliance.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "2.1 Audit Logging",
+        "specification": "Enable audit logs for AKS clusters to track all API server requests and administrative actions.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-cluster-audit-logging-enabled",
+      "remediationSteps": "## Fix: Enable Audit Logging for AKS Cluster\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    addonProfiles: {\n        omsagent: {\n            enabled: true,\n            config: {\n                logAnalyticsWorkspaceResourceID: workspace.id,\n            },\n        },\n    },\n    // ... other config\n});\n\n// Also create diagnostic settings for detailed logs\nconst diagnosticSetting = new azure.insights.DiagnosticSetting(\"clusterDiagnostics\", {\n    resourceUri: cluster.id,\n    workspaceId: workspace.id,\n    logs: [\n        { category: \"kube-apiserver\", enabled: true },\n        { category: \"kube-audit\", enabled: true },\n        { category: \"kube-audit-admin\", enabled: true },\n        { category: \"kube-controller-manager\", enabled: true },\n        { category: \"kube-scheduler\", enabled: true },\n        { category: \"cluster-autoscaler\", enabled: true },\n        { category: \"guard\", enabled: true },\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedIPRanges": {
+            "default": [],
+            "description": "Allowed IP ranges for public API access (CIDR format)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from access restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maxIPRanges": {
+            "default": 10,
+            "description": "Maximum number of IP ranges allowed",
+            "type": "number"
+          },
+          "requirePrivateCluster": {
+            "default": false,
+            "description": "Require all clusters to be private (no public endpoint)",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS cluster API server has restricted public access through private endpoints or authorized IP ranges.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure clusters are created with Private Endpoints and Private Nodes. Enable Network Policy. Encrypt traffic to HTTPS load balancers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-cluster-endpoint-restrict-public-access",
+      "remediationSteps": "## Fix: Restrict API Server Access for AKS Cluster\n\n### Option 1: Create a Private Cluster (Recommended)\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    apiServerAccessProfile: {\n        enablePrivateCluster: true,\n        enablePrivateClusterPublicFQDN: false, // Disable public FQDN\n        privateDNSZone: \"system\", // Or specify custom private DNS zone ID\n    },\n    // ... other config\n});\n```\n\n### Option 2: Restrict to Specific IP Ranges\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    apiServerAccessProfile: {\n        enablePrivateCluster: false,\n        authorizedIPRanges: [\n            \"203.0.113.0/24\",    // Office network\n            \"198.51.100.0/24\",   // VPN range\n            \"192.0.2.1/32\",      // Specific management IP\n        ],\n    },\n    // ... other config\n});\n```\n\n### Option 3: Private Cluster with Limited Public Access\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    apiServerAccessProfile: {\n        enablePrivateCluster: true,\n        enablePrivateClusterPublicFQDN: true, // Enable public FQDN for specific scenarios\n        privateDNSZone: privateZone.id,\n        authorizedIPRanges: [\n            \"203.0.113.0/24\", // Backup access from specific network\n        ],\n    },\n    // ... other config\n});\n```\n\n**Best Practices:**\n- Use private clusters for production environments\n- If public access is required, always restrict to specific IP ranges\n- Regularly review and update authorized IP ranges\n- Use Azure Firewall or Network Security Groups for additional protection",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowSystemNamespaces": {
+            "default": true,
+            "description": "Allow system namespaces to use default service account",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "default": [],
+            "description": "List of namespaces exempt from dedicated service account requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names exempt (format: namespace/name or name)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireExplicitServiceAccount": {
+            "default": true,
+            "description": "Require explicit service account specification (reject if not specified)",
+            "type": "boolean"
+          },
+          "requireNamingPattern": {
+            "description": "Regular expression pattern for service account names (e.g., ^[a-z0-9-]+-sa$)",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Kubernetes workloads use dedicated service accounts instead of the default service account for better access control and auditability.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.2 Service Accounts",
+        "specification": "Prefer using dedicated AKS Service Accounts.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-dedicated-service-accounts",
+      "remediationSteps": "## Fix: Use Dedicated Service Accounts for Workloads\n\n### Recommended: Use Azure Workload Identity (for AKS with Azure resource access)\n\n```typescript\nimport * as azuread from \"@pulumi/azuread\";\nimport * as azure from \"@pulumi/azure-native\";\n\n// Create Azure AD app and federated credential\nconst app = new azuread.Application(\"app\", {\n    displayName: \"my-app-identity\",\n});\n\nconst sp = new azuread.ServicePrincipal(\"app-sp\", {\n    applicationId: app.applicationId,\n});\n\nconst federatedIdentity = new azuread.ApplicationFederatedIdentityCredential(\"federated-id\", {\n    applicationObjectId: app.objectId,\n    displayName: \"my-app-k8s-federation\",\n    audiences: [\"api://AzureADTokenExchange\"],\n    issuer: cluster.oidcIssuerProfile.apply(p => p!.issuerUrl!),\n    subject: \"system:serviceaccount:production:my-app-sa\",\n});\n\n// Create service account with workload identity annotation\nconst appServiceAccount = new k8s.core.v1.ServiceAccount(\"app-sa\", {\n    metadata: {\n        name: \"my-app-sa\",\n        namespace: \"production\",\n        annotations: {\n            \"azure.workload.identity/client-id\": app.applicationId,\n        },\n        labels: {\n            \"azure.workload.identity/use\": \"true\",\n        },\n    },\n});\n\n// Grant Azure permissions\nconst roleAssignment = new azure.authorization.RoleAssignment(\"app-role\", {\n    principalId: sp.objectId,\n    principalType: \"ServicePrincipal\",\n    roleDefinitionId: \"/providers/Microsoft.Authorization/roleDefinitions/2a2b9908-6ea1-4ae2-8e65-a410df84e7d1\", // Storage Blob Data Reader\n    scope: storageAccount.id,\n});\n```\n\n### Alternative: Basic Service Account (for K8s API access only)\n\n```typescript\nimport * as k8s from \"@pulumi/kubernetes\";\n\n// Create dedicated service account\nconst appServiceAccount = new k8s.core.v1.ServiceAccount(\"app-sa\", {\n    metadata: {\n        name: \"my-app-sa\",\n        namespace: \"production\",\n    },\n    automountServiceAccountToken: false,  // Only mount if needed\n});\n\n// Optional: Add RBAC permissions\nconst appRole = new k8s.rbac.v1.Role(\"app-role\", {\n    metadata: {\n        name: \"my-app-role\",\n        namespace: \"production\",\n    },\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"configmaps\"],\n        verbs: [\"get\", \"list\"],\n    }],\n});\n\nconst appRoleBinding = new k8s.rbac.v1.RoleBinding(\"app-binding\", {\n    metadata: {\n        name: \"my-app-binding\",\n        namespace: \"production\",\n    },\n    subjects: [{\n        kind: \"ServiceAccount\",\n        name: appServiceAccount.metadata.name,\n        namespace: \"production\",\n    }],\n    roleRef: {\n        kind: \"Role\",\n        name: appRole.metadata.name,\n        apiGroup: \"rbac.authorization.k8s.io\",\n    },\n});\n\n// Deploy application\nconst deployment = new k8s.apps.v1.Deployment(\"app\", {\n    metadata: {\n        name: \"my-app\",\n        namespace: \"production\",\n    },\n    spec: {\n        replicas: 3,\n        selector: { matchLabels: { app: \"my-app\" } },\n        template: {\n            metadata: { labels: { app: \"my-app\" } },\n            spec: {\n                serviceAccountName: appServiceAccount.metadata.name,\n                automountServiceAccountToken: true,  // Only if app needs K8s API access\n                containers: [{\n                    name: \"app\",\n                    image: \"myapp:v1.0.0\",\n                }],\n            },\n        },\n    },\n});\n```\n\n**Best Practices:**\n- Create a dedicated service account for each application or microservice\n- Use descriptive names (e.g., `app-name-sa`)\n- Set `automountServiceAccountToken: false` by default; only enable when needed\n- Grant minimal RBAC permissions using Roles/RoleBindings\n- Consider Azure Workload Identity for accessing Azure resources\n- Never use the `default` service account for production workloads\n- Document the purpose of each service account in annotations\n- Regularly audit service account usage and permissions",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptRegistries": {
+            "description": "List of registry names/patterns exempt from scanning requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumSKU": {
+            "default": "Standard",
+            "description": "Minimum SKU tier required for registries",
+            "enum": [
+              "Basic",
+              "Standard",
+              "Premium"
+            ],
+            "type": "string"
+          },
+          "requireQuarantinePolicy": {
+            "default": true,
+            "description": "Require quarantine policy for Premium registries",
+            "type": "boolean"
+          },
+          "requireTrustPolicy": {
+            "default": false,
+            "description": "Require trust policy (content trust) for signed images",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure container registries have vulnerability scanning enabled through Microsoft Defender for Cloud or third-party solutions.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.1 Container Registry Security",
+        "specification": "Ensure Image Vulnerability Scanning using Microsoft Defender for Cloud (MDC). Minimize user access to Azure Container Registry (ACR).",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-defender-container-scanning-enabled",
+      "remediationSteps": "## Fix: Enable Vulnerability Scanning for Container Registry\n\n### Step 1: Upgrade Registry SKU (if using Basic)\n\n```typescript\nconst registry = new azure.containerregistry.Registry(\"registry\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: \"myregistry\",\n    sku: {\n        name: \"Standard\",  // Or \"Premium\" for advanced features\n    },\n    dataEndpointEnabled: true,  // Enable for better performance\n    // ... other config\n});\n```\n\n### Step 2: Enable Microsoft Defender for Container Registries\n\n```typescript\nimport * as azure from \"@pulumi/azure-native\";\n\n// Enable Defender for Container Registries at the subscription level\nconst defenderPlan = new azure.security.Pricing(\"containerRegistry\", {\n    pricingName: \"ContainerRegistry\",\n    pricingTier: \"Standard\",\n});\n\n// The registry will automatically integrate with Defender for vulnerability scanning\n// Ensure the registry SKU is Standard or Premium (Basic does not support scanning)\n```\n\n### Step 3: Enable Quarantine Policy (Premium SKU)\n\n```typescript\nconst registry = new azure.containerregistry.Registry(\"registry\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: \"myregistry\",\n    sku: {\n        name: \"Premium\",\n    },\n    policies: {\n        quarantinePolicy: {\n            status: \"enabled\",  // Quarantine unscanned images\n        },\n        trustPolicy: {\n            status: \"enabled\",  // Require signed images (optional)\n            type: \"Notary\",\n        },\n        retentionPolicy: {\n            status: \"enabled\",\n            days: 30,  // Retain images for 30 days\n        },\n    },\n    dataEndpointEnabled: true,\n});\n```\n\n### Step 4: Integrate with Third-Party Scanner (Optional)\n\n```typescript\n// Example: Configure webhook for third-party scanning\nconst webhook = new azure.containerregistry.Webhook(\"scanner-webhook\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: registry.name,\n    webhookName: \"scanner\",\n    location: resourceGroup.location,\n    serviceUri: \"https://scanner.example.com/webhook\",\n    actions: [\"push\"],\n    status: \"enabled\",\n    scope: \"myapp/*:*\",  // Scan all tags in myapp repositories\n});\n```\n\n### Step 5: Set Up Continuous Scanning\n\n```typescript\n// Task to scan all images in the registry\nconst scanTask = new azure.containerregistry.Task(\"scan-task\", {\n    resourceGroupName: resourceGroup.name,\n    registryName: registry.name,\n    taskName: \"scan-images\",\n    location: resourceGroup.location,\n    platform: {\n        os: \"Linux\",\n    },\n    step: {\n        type: \"Docker\",\n        dockerFilePath: \"Dockerfile\",\n        contextPath: \"https://github.com/Azure/acr-cli.git\",\n        imageNames: [\"scan:{{.Run.ID}}\"],\n    },\n    trigger: {\n        timerTriggers: [{\n            name: \"daily-scan\",\n            schedule: \"0 2 * * *\",  // Run daily at 2 AM\n        }],\n    },\n});\n```\n\n**Best Practices:**\n- Enable Microsoft Defender for all production registries\n- Use Premium SKU for production workloads requiring quarantine and trust policies\n- Implement CI/CD pipeline integration for automatic scanning on push\n- Set up notifications for critical vulnerabilities\n- Regularly review and act on vulnerability scan results\n- Consider content trust (image signing) for production images",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowInternalWithoutTLS": {
+            "default": false,
+            "description": "Allow internal load balancers without TLS",
+            "type": "boolean"
+          },
+          "allowedHTTPPorts": {
+            "default": [],
+            "description": "Allowed HTTP ports for services that don't require encryption",
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptServices": {
+            "description": "List of service names/namespaces exempt from TLS requirements (format: namespace/name or name)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure load balancers use TLS encryption for HTTPS traffic with proper certificate configuration.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure clusters are created with Private Endpoints and Private Nodes. Enable Network Policy. Encrypt traffic to HTTPS load balancers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-load-balancer-tls-encryption",
+      "remediationSteps": "## Fix: Enable TLS Encryption for LoadBalancer Services\n\n```typescript\nimport * as k8s from \"@pulumi/kubernetes\";\n\nconst service = new k8s.core.v1.Service(\"my-service\", {\n    metadata: {\n        name: \"my-service\",\n        annotations: {\n            // Azure Load Balancer with SSL certificate\n            \"service.beta.kubernetes.io/azure-load-balancer-ssl-cert\": \"my-ssl-cert\",\n            \"service.beta.kubernetes.io/azure-load-balancer-ssl-ports\": \"443\",\n            // Optional: Use internal load balancer\n            \"service.beta.kubernetes.io/azure-load-balancer-internal\": \"true\",\n        },\n    },\n    spec: {\n        type: \"LoadBalancer\",\n        ports: [{\n            name: \"https\",\n            port: 443,\n            targetPort: 8080,\n            protocol: \"TCP\",\n        }],\n        selector: {\n            app: \"my-app\",\n        },\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedNetworkPolicies": {
+            "default": [
+              "azure",
+              "calico"
+            ],
+            "description": "Allowed network policy providers",
+            "items": {
+              "enum": [
+                "azure",
+                "calico",
+                "cilium"
+              ],
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from network policy requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requiredNetworkPlugin": {
+            "description": "Required network plugin for the cluster",
+            "enum": [
+              "azure",
+              "kubenet"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS clusters have network policy enabled to control traffic flow between pods, namespaces, and external networks.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure clusters are created with Private Endpoints and Private Nodes. Enable Network Policy. Encrypt traffic to HTTPS load balancers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-network-policy-enabled",
+      "remediationSteps": "## Fix: Enable Network Policy for AKS Cluster\n\n### Option 1: Azure CNI with Azure Network Policy\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    networkProfile: {\n        networkPlugin: \"azure\",\n        networkPolicy: \"azure\",  // Azure network policy\n        serviceCidr: \"10.0.0.0/16\",\n        dnsServiceIP: \"10.0.0.10\",\n    },\n    // ... other config\n});\n```\n\n### Option 2: Azure CNI with Calico Network Policy\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    networkProfile: {\n        networkPlugin: \"azure\",\n        networkPolicy: \"calico\",  // Calico network policy\n        serviceCidr: \"10.0.0.0/16\",\n        dnsServiceIP: \"10.0.0.10\",\n    },\n    // ... other config\n});\n```\n\n### Option 3: Kubenet with Calico Network Policy\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    networkProfile: {\n        networkPlugin: \"kubenet\",\n        networkPolicy: \"calico\",  // Only Calico works with kubenet\n        podCidr: \"10.244.0.0/16\",\n        serviceCidr: \"10.0.0.0/16\",\n        dnsServiceIP: \"10.0.0.10\",\n    },\n    // ... other config\n});\n```\n\n**Note:** Azure network policy requires Azure CNI network plugin. Kubenet only supports Calico network policy.",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from private endpoint requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS clusters are created with private endpoint enabled and public access disabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure clusters are created with Private Endpoints and Private Nodes. Enable Network Policy. Encrypt traffic to HTTPS load balancers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-private-endpoint-enabled",
+      "remediationSteps": "## Fix: Enable Private Endpoint for AKS Cluster\n\n**Note:** This policy mandates that clusters must use private endpoints. For detailed private cluster configuration validation, see the aks-cluster-endpoint-restrict-public-access policy.\n\n### Option 1: Private Cluster with System-Managed DNS\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    apiServerAccessProfile: {\n        enablePrivateCluster: true,\n        enablePrivateClusterPublicFQDN: false,\n        privateDNSZone: \"system\", // Azure manages the private DNS zone\n    },\n    // ... other config\n});\n```\n\n### Option 2: Private Cluster with Custom Private DNS Zone\n\n```typescript\nconst privateDnsZone = new azure.network.PrivateDnsZone(\"aksPrivateDns\", {\n    resourceGroupName: resourceGroup.name,\n    location: \"global\",\n    privateZoneName: \"privatelink.eastus.azmk8s.io\", // Region-specific\n});\n\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    apiServerAccessProfile: {\n        enablePrivateCluster: true,\n        enablePrivateClusterPublicFQDN: false,\n        privateDNSZone: privateDnsZone.id, // Custom private DNS zone\n    },\n    // ... other config\n});\n```\n\n### Option 3: Private Cluster with No Private DNS Zone (BYO DNS)\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    apiServerAccessProfile: {\n        enablePrivateCluster: true,\n        enablePrivateClusterPublicFQDN: false,\n        privateDNSZone: \"none\", // Manage DNS resolution yourself\n    },\n    // ... other config\n});\n```\n\n**Important Notes:**\n- Private clusters require network connectivity from where kubectl is run\n- Configure VPN or ExpressRoute for accessing private clusters\n- Private DNS zones must be linked to the virtual network\n- Consider using Azure Bastion or jump boxes for cluster management",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptAgentPools": {
+            "description": "List of agent pool names/patterns that are allowed to have public IPs",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from private node requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS cluster nodes are private without public IP addresses assigned.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.4 Network Security",
+        "specification": "Restrict Access to the Control Plane Endpoint. Ensure clusters are created with Private Endpoints and Private Nodes. Enable Network Policy. Encrypt traffic to HTTPS load balancers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-private-nodes-enabled",
+      "remediationSteps": "## Fix: Disable Public IPs for AKS Cluster Nodes\n\n### Option 1: Private Nodes with Load Balancer Outbound (Default)\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    networkProfile: {\n        networkPlugin: \"azure\",\n        outboundType: \"loadBalancer\", // NAT through Azure Load Balancer\n        loadBalancerProfile: {\n            managedOutboundIPs: {\n                count: 1, // Number of managed public IPs for outbound\n            },\n        },\n    },\n    agentPoolProfiles: [{\n        name: \"agentpool\",\n        count: 3,\n        vmSize: \"Standard_DS2_v2\",\n        enableNodePublicIP: false, // No public IPs on nodes\n        vnetSubnetID: subnet.id,\n        mode: \"System\",\n    }],\n    // ... other config\n});\n```\n\n### Option 2: Private Nodes with User-Defined Routing (Most Secure)\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    networkProfile: {\n        networkPlugin: \"azure\",\n        outboundType: \"userDefinedRouting\", // Route through firewall/NVA\n        serviceCidr: \"10.0.0.0/16\",\n        dnsServiceIP: \"10.0.0.10\",\n    },\n    agentPoolProfiles: [{\n        name: \"agentpool\",\n        count: 3,\n        vmSize: \"Standard_DS2_v2\",\n        enableNodePublicIP: false, // No public IPs on nodes\n        vnetSubnetID: subnet.id, // Subnet must have route table configured\n        mode: \"System\",\n    }],\n    // ... other config\n});\n```\n\n### Option 3: Private Nodes with NAT Gateway\n\n```typescript\nconst natGateway = new azure.network.NatGateway(\"natGateway\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    sku: {\n        name: \"Standard\",\n    },\n});\n\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    networkProfile: {\n        networkPlugin: \"azure\",\n        outboundType: \"managedNATGateway\", // Or \"userAssignedNATGateway\"\n        natGatewayProfile: {\n            managedOutboundIPProfile: {\n                count: 1,\n            },\n        },\n    },\n    agentPoolProfiles: [{\n        name: \"agentpool\",\n        count: 3,\n        vmSize: \"Standard_DS2_v2\",\n        enableNodePublicIP: false, // No public IPs on nodes\n        vnetSubnetID: subnet.id,\n        mode: \"System\",\n    }],\n    // ... other config\n});\n```\n\n**Important Notes:**\n- User-defined routing requires proper route table configuration on the subnet\n- Ensure egress firewall rules are configured when using user-defined routing\n- NAT Gateway provides better SNAT port allocation for high-scale scenarios",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusters": {
+            "description": "List of cluster names/patterns exempt from encryption requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireCustomerManagedKeys": {
+            "default": false,
+            "description": "Require customer-managed keys for encryption",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure AKS clusters have encryption at rest enabled for Kubernetes secrets stored in etcd.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "5.3 Encryption",
+        "specification": "Ensure Kubernetes Secrets are encrypted.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "aks-secrets-encryption-enabled",
+      "remediationSteps": "## Fix: Enable Secrets Encryption for AKS Cluster\n\n### Option 1: Enable Encryption at Host (Platform-Managed Keys)\n\n```typescript\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    agentPoolProfiles: [{\n        name: \"agentpool\",\n        count: 3,\n        vmSize: \"Standard_DS2_v2\",\n        enableEncryptionAtHost: true,  // Enable encryption at host\n        osDiskSizeGB: 128,\n        mode: \"System\",\n    }],\n    // ... other config\n});\n```\n\n### Option 2: Use Customer-Managed Keys with Azure Key Vault\n\n```typescript\nconst keyVault = new azure.keyvault.Vault(\"vault\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    tenantId: tenantId,\n    sku: {\n        family: \"A\",\n        name: \"standard\",\n    },\n    enabledForDiskEncryption: true,\n});\n\nconst key = new azure.keyvault.Key(\"key\", {\n    keyVaultId: keyVault.id,\n    keyType: \"RSA\",\n    keySize: 2048,\n    keyOpts: [\"encrypt\", \"decrypt\", \"wrapKey\", \"unwrapKey\"],\n});\n\nconst diskEncryptionSet = new azure.compute.DiskEncryptionSet(\"des\", {\n    resourceGroupName: resourceGroup.name,\n    location: resourceGroup.location,\n    identity: {\n        type: \"SystemAssigned\",\n    },\n    encryptionType: \"EncryptionAtRestWithCustomerKey\",\n    activeKey: {\n        keyUrl: key.keyUriWithVersion,\n        sourceVault: {\n            id: keyVault.id,\n        },\n    },\n});\n\nconst cluster = new azure.containerservice.ManagedCluster(\"cluster\", {\n    resourceGroupName: resourceGroup.name,\n    diskEncryptionSetID: diskEncryptionSet.id,  // Use customer-managed keys\n    agentPoolProfiles: [{\n        name: \"agentpool\",\n        count: 3,\n        vmSize: \"Standard_DS2_v2\",\n        enableEncryptionAtHost: true,\n        osDiskSizeGB: 128,\n        mode: \"System\",\n    }],\n    // ... other config\n});\n```\n\n**Note:** Encryption at host must be enabled on your Azure subscription before use.",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBindings": {
+            "description": "List of ClusterRoleBinding names to exempt from validation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure cluster-admin ClusterRole is bound to a minimal number of users and service accounts.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-cluster-admin-role-binding-minimized",
+      "remediationSteps": "## Fix: Minimize cluster-admin Role Bindings\n\nUse more specific roles instead of cluster-admin:\n\n```typescript\n// Instead of binding cluster-admin, create specific roles\nconst role = new k8s.rbac.v1.Role(\"specificRole\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"pods\"],\n        verbs: [\"get\", \"list\", \"watch\"],\n    }],\n});\n\nconst roleBinding = new k8s.rbac.v1.RoleBinding(\"specificBinding\", {\n    metadata: { namespace: \"default\" },\n    roleRef: {\n        apiGroup: \"rbac.authorization.k8s.io\",\n        kind: \"Role\",\n        name: role.metadata.name,\n    },\n    subjects: [{\n        kind: \"User\",\n        name: \"specific-user\",\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowClusterResources": {
+            "default": true,
+            "description": "Allow cluster-level resources which don't have namespaces",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "List of resource types allowed in default namespace (e.g., 'ConfigMap', 'Secret')",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptResources": {
+            "description": "List of resource names/patterns that are allowed in default namespace",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure workloads are not deployed to the default namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.5-4.6 Secret Management and Namespaces",
+        "specification": "Prefer using secrets as files over secrets as environment variables. Ensure default namespace is not used for workloads. Apply security context to pods and containers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-default-namespace-not-used",
+      "remediationSteps": "## Fix: Use Dedicated Namespaces\n\nCreate and use dedicated namespaces:\n\n```typescript\nconst namespace = new k8s.core.v1.Namespace(\"app-namespace\", {\n    metadata: {\n        name: \"my-app\",\n    },\n});\n\nconst deployment = new k8s.apps.v1.Deployment(\"app\", {\n    metadata: {\n        namespace: namespace.metadata.name,\n    },\n    // ... rest of deployment spec\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedServiceAccounts": {
+            "description": "Allowed service account names considered as acceptable defaults",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces where default service account is allowed",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use default service account",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure workloads do not use the default service account.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-default-service-accounts-not-used",
+      "remediationSteps": "## Fix: Use Dedicated Service Accounts\n\nCreate and use dedicated service accounts for workloads:\n\n```typescript\nconst serviceAccount = new k8s.core.v1.ServiceAccount(\"appServiceAccount\", {\n    metadata: {\n        namespace: \"default\",\n        name: \"my-app-sa\",\n    },\n});\n\nconst deployment = new k8s.apps.v1.Deployment(\"app\", {\n    spec: {\n        template: {\n            spec: {\n                serviceAccountName: serviceAccount.metadata.name,\n                // ... rest of pod spec\n            },\n        },\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowDefaultDenyOnly": {
+            "default": false,
+            "description": "Only accept default-deny network policies (denying all traffic by default)",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "default": [],
+            "description": "List of namespaces exempt from network policy requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireBothIngressEgress": {
+            "default": false,
+            "description": "Require both ingress and egress policies for each namespace",
+            "type": "boolean"
+          },
+          "systemNamespaces": {
+            "default": [
+              "kube-system",
+              "kube-public",
+              "kube-node-lease"
+            ],
+            "description": "System namespaces that don't require network policies",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure all namespaces have network policies defined to control pod-to-pod communication and implement network segmentation.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.4 Network Policies",
+        "specification": "Ensure that all Namespaces have Network Policies defined.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-namespaces-network-policies-defined",
+      "remediationSteps": "## Fix: Define Network Policies for All Namespaces\n\n### Step 1: Create Default Deny Network Policies\n\n```typescript\nimport * as k8s from \"@pulumi/kubernetes\";\n\n// Create namespace with label\nconst namespace = new k8s.core.v1.Namespace(\"app-namespace\", {\n    metadata: {\n        name: \"production\",\n        labels: {\n            name: \"production\",\n            environment: \"prod\",\n        },\n    },\n});\n\n// Default deny all ingress\nconst denyAllIngress = new k8s.networking.v1.NetworkPolicy(\"deny-all-ingress\", {\n    metadata: {\n        name: \"default-deny-ingress\",\n        namespace: namespace.metadata.name,\n    },\n    spec: {\n        podSelector: {},  // Applies to all pods\n        policyTypes: [\"Ingress\"],\n    },\n});\n\n// Default deny all egress\nconst denyAllEgress = new k8s.networking.v1.NetworkPolicy(\"deny-all-egress\", {\n    metadata: {\n        name: \"default-deny-egress\",\n        namespace: namespace.metadata.name,\n    },\n    spec: {\n        podSelector: {},  // Applies to all pods\n        policyTypes: [\"Egress\"],\n    },\n});\n\n// Allow specific ingress traffic\nconst allowIngress = new k8s.networking.v1.NetworkPolicy(\"allow-ingress\", {\n    metadata: {\n        name: \"allow-from-frontend\",\n        namespace: namespace.metadata.name,\n    },\n    spec: {\n        podSelector: {\n            matchLabels: { app: \"api\" },\n        },\n        policyTypes: [\"Ingress\"],\n        ingress: [{\n            from: [\n                {\n                    namespaceSelector: {\n                        matchLabels: { name: \"frontend\" },\n                    },\n                },\n                {\n                    podSelector: {\n                        matchLabels: { app: \"web\" },\n                    },\n                },\n            ],\n            ports: [{\n                protocol: \"TCP\",\n                port: 8080,\n            }],\n        }],\n    },\n});\n\n// Allow DNS and specific egress\nconst allowEgress = new k8s.networking.v1.NetworkPolicy(\"allow-egress\", {\n    metadata: {\n        name: \"allow-to-services\",\n        namespace: namespace.metadata.name,\n    },\n    spec: {\n        podSelector: {\n            matchLabels: { app: \"api\" },\n        },\n        policyTypes: [\"Egress\"],\n        egress: [\n            // Allow database access\n            {\n                to: [{\n                    namespaceSelector: {\n                        matchLabels: { name: \"database\" },\n                    },\n                    podSelector: {\n                        matchLabels: { app: \"postgres\" },\n                    },\n                }],\n                ports: [{\n                    protocol: \"TCP\",\n                    port: 5432,\n                }],\n            },\n            // Allow DNS\n            {\n                to: [{\n                    namespaceSelector: {\n                        matchLabels: { name: \"kube-system\" },\n                    },\n                    podSelector: {\n                        matchLabels: { \"k8s-app\": \"kube-dns\" },\n                    },\n                }],\n                ports: [{\n                    protocol: \"UDP\",\n                    port: 53,\n                }],\n            },\n        ],\n    },\n});\n```\n\n### Step 2: Additional Network Policy Patterns\n\n```typescript\n// Allow traffic within same namespace only\nconst allowSameNamespace = new k8s.networking.v1.NetworkPolicy(\"allow-same-namespace\", {\n    metadata: {\n        name: \"allow-same-namespace\",\n        namespace: namespace.metadata.name,\n    },\n    spec: {\n        podSelector: {},  // Applies to all pods\n        policyTypes: [\"Ingress\"],\n        ingress: [{\n            from: [{\n                podSelector: {},  // All pods in same namespace\n            }],\n        }],\n    },\n});\n\n// Allow traffic from ingress controller\nconst allowFromIngress = new k8s.networking.v1.NetworkPolicy(\"allow-from-ingress\", {\n    metadata: {\n        name: \"allow-from-ingress\",\n        namespace: namespace.metadata.name,\n    },\n    spec: {\n        podSelector: {\n            matchLabels: { expose: \"true\" },\n        },\n        policyTypes: [\"Ingress\"],\n        ingress: [{\n            from: [\n                {\n                    namespaceSelector: {\n                        matchLabels: { name: \"ingress-nginx\" },\n                    },\n                },\n                {\n                    podSelector: {\n                        matchLabels: { \"app.kubernetes.io/name\": \"ingress-nginx\" },\n                    },\n                },\n            ],\n        }],\n    },\n});\n```\n\n**Best Practices:**\n- Start with default-deny policies (deny all ingress/egress)\n- Explicitly allow only required traffic flows\n- Use namespace and pod selectors for fine-grained control\n- Always allow DNS (UDP 53 to kube-dns)\n- Document the purpose of each network policy\n- Test network policies in non-production first\n- Use tools like `kubectl auth can-i` to verify connectivity\n- Consider using Calico or Cilium for enhanced network policy features",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptContainers": {
+            "description": "List of container names/patterns that are allowed privilege escalation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from privilege escalation restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed privilege escalation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not allow privilege escalation.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-allow-privilege-escalation-minimized",
+      "remediationSteps": "## Fix: Disable Privilege Escalation\n\nSet allowPrivilegeEscalation to false in container security context:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n            securityContext: {\n                allowPrivilegeEscalation: false,\n                runAsNonRoot: true,\n                capabilities: {\n                    drop: [\"ALL\"],\n                },\n            },\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "default": [],
+            "description": "List of namespaces exempt from security context requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workloads exempt (format: namespace/name or name)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maxRunAsUser": {
+            "description": "Maximum allowed UID for runAsUser (0 = root, not recommended)",
+            "type": "number"
+          },
+          "minRunAsUser": {
+            "default": 1000,
+            "description": "Minimum allowed UID for runAsUser",
+            "type": "number"
+          },
+          "requireFsGroup": {
+            "default": false,
+            "description": "Require fsGroup to be set for volume permissions",
+            "type": "boolean"
+          },
+          "requireReadOnlyRootFS": {
+            "default": false,
+            "description": "Require readOnlyRootFilesystem to be set to true",
+            "type": "boolean"
+          },
+          "requireRunAsNonRoot": {
+            "default": true,
+            "description": "Require runAsNonRoot to be set to true",
+            "type": "boolean"
+          },
+          "requiredDropCapabilities": {
+            "default": [
+              "ALL"
+            ],
+            "description": "Required capabilities to be dropped (e.g., ALL, NET_RAW)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure security context is applied to pods and containers with appropriate security settings for defense in depth.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.5-4.6 Secret Management and Namespaces",
+        "specification": "Prefer using secrets as files over secrets as environment variables. Ensure default namespace is not used for workloads. Apply security context to pods and containers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-context-applied",
+      "remediationSteps": "## Fix: Apply Security Context to Pods and Containers\n\n### Step 1: Create Deployment with Basic Security Context\n\n```typescript\nimport * as k8s from \"@pulumi/kubernetes\";\n\nconst deployment = new k8s.apps.v1.Deployment(\"secure-app\", {\n    metadata: {\n        name: \"secure-app\",\n        namespace: \"production\",\n    },\n    spec: {\n        replicas: 3,\n        selector: {\n            matchLabels: { app: \"secure-app\" },\n        },\n        template: {\n            metadata: {\n                labels: { app: \"secure-app\" },\n            },\n            spec: {\n                // Pod-level security context\n                securityContext: {\n                    runAsNonRoot: true,\n                    runAsUser: 1000,\n                    runAsGroup: 3000,\n                    fsGroup: 2000,\n                    seccompProfile: {\n                        type: \"RuntimeDefault\",\n                    },\n                },\n                containers: [{\n                    name: \"app\",\n                    image: \"myapp:v1.0.0\",\n                    // Container-level security context\n                    securityContext: {\n                        allowPrivilegeEscalation: false,\n                        readOnlyRootFilesystem: true,\n                        runAsNonRoot: true,\n                        runAsUser: 1000,\n                        capabilities: {\n                            drop: [\"ALL\"],\n                        },\n                        seccompProfile: {\n                            type: \"RuntimeDefault\",\n                        },\n                    },\n                    volumeMounts: [\n                        {\n                            name: \"tmp\",\n                            mountPath: \"/tmp\",\n                        },\n                        {\n                            name: \"cache\",\n                            mountPath: \"/app/cache\",\n                        },\n                    ],\n                    resources: {\n                        requests: {\n                            cpu: \"100m\",\n                            memory: \"128Mi\",\n                        },\n                        limits: {\n                            cpu: \"500m\",\n                            memory: \"512Mi\",\n                        },\n                    },\n                }],\n                volumes: [\n                    {\n                        name: \"tmp\",\n                        emptyDir: { sizeLimit: \"100Mi\" },\n                    },\n                    {\n                        name: \"cache\",\n                        emptyDir: { sizeLimit: \"1Gi\" },\n                    },\n                ],\n            },\n        },\n    },\n});\n```\n\n### Step 2: Hardened Deployment with Read-Only Root Filesystem\n\n```typescript\nconst hardenedDeployment = new k8s.apps.v1.Deployment(\"hardened-app\", {\n    metadata: {\n        name: \"hardened-app\",\n        namespace: \"production\",\n    },\n    spec: {\n        replicas: 3,\n        selector: {\n            matchLabels: { app: \"hardened-app\" },\n        },\n        template: {\n            metadata: {\n                labels: { app: \"hardened-app\" },\n            },\n            spec: {\n                securityContext: {\n                    runAsNonRoot: true,\n                    runAsUser: 10001,  // High UID (non-system user)\n                    fsGroup: 10001,\n                    seccompProfile: {\n                        type: \"RuntimeDefault\",\n                    },\n                },\n                containers: [{\n                    name: \"app\",\n                    image: \"myapp:v1.0.0\",\n                    securityContext: {\n                        allowPrivilegeEscalation: false,\n                        privileged: false,\n                        readOnlyRootFilesystem: true,\n                        runAsNonRoot: true,\n                        capabilities: {\n                            drop: [\"ALL\"],\n                            // Only add if absolutely necessary\n                            // add: [\"NET_BIND_SERVICE\"],  // For binding to ports < 1024\n                        },\n                        seccompProfile: {\n                            type: \"RuntimeDefault\",\n                        },\n                    },\n                    volumeMounts: [\n                        {\n                            name: \"tmp\",\n                            mountPath: \"/tmp\",\n                        },\n                        {\n                            name: \"app-data\",\n                            mountPath: \"/app/data\",\n                        },\n                    ],\n                }],\n                volumes: [\n                    {\n                        name: \"tmp\",\n                        emptyDir: { sizeLimit: \"100Mi\" },\n                    },\n                    {\n                        name: \"app-data\",\n                        persistentVolumeClaim: {\n                            claimName: \"app-data-pvc\",\n                        },\n                    },\n                ],\n            },\n        },\n    },\n});\n```\n\n### Step 3: Enforce Pod Security Standards at Namespace Level\n\n```typescript\n// Create namespace with Pod Security Standards labels\nconst productionNamespace = new k8s.core.v1.Namespace(\"production\", {\n    metadata: {\n        name: \"production\",\n        labels: {\n            // Restricted is the most secure PSS level\n            \"pod-security.kubernetes.io/enforce\": \"restricted\",\n            \"pod-security.kubernetes.io/enforce-version\": \"latest\",\n            \"pod-security.kubernetes.io/audit\": \"restricted\",\n            \"pod-security.kubernetes.io/warn\": \"restricted\",\n        },\n    },\n});\n```\n\n**Security Context Fields Reference:**\n\n**Pod-Level Security Context:**\n- `runAsUser`: UID to run pod processes (avoid 0/root)\n- `runAsGroup`: GID to run pod processes\n- `runAsNonRoot`: Enforce non-root user\n- `fsGroup`: Group for volume ownership\n- `supplementalGroups`: Additional groups\n- `seccompProfile`: Seccomp profile (RuntimeDefault recommended)\n- `seLinuxOptions`: SELinux context\n- `fsGroupChangePolicy`: How fsGroup is applied\n\n**Container-Level Security Context:**\n- `runAsUser`: UID for container (overrides pod)\n- `runAsGroup`: GID for container (overrides pod)\n- `runAsNonRoot`: Enforce non-root (overrides pod)\n- `readOnlyRootFilesystem`: Immutable root FS\n- `allowPrivilegeEscalation`: Prevent privilege escalation\n- `privileged`: Run as privileged (never use)\n- `capabilities`: Add/drop Linux capabilities\n- `seccompProfile`: Seccomp profile\n- `seLinuxOptions`: SELinux context\n\n**Best Practices:**\n- Always set `runAsNonRoot: true`\n- Use high UIDs (>= 1000) to avoid conflicts\n- Drop all capabilities, add only required ones\n- Use `readOnlyRootFilesystem: true` with volume mounts for writable dirs\n- Set `allowPrivilegeEscalation: false`\n- Use `seccompProfile: RuntimeDefault` for syscall filtering\n- Apply Pod Security Standards at namespace level\n- Test security context settings in non-prod first",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowForWorkloadTypes": {
+            "description": "Allow host IPC for specific types of workloads (e.g., DaemonSet)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from host IPC restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use host IPC",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not share the host IPC namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-host-ipc-minimized",
+      "remediationSteps": "## Fix: Disable Host IPC Sharing\n\nRemove hostIPC from pod spec:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        hostIPC: false,  // Explicitly set to false or remove\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowForWorkloadTypes": {
+            "description": "Allow host network for specific types of workloads (e.g., DaemonSet)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from host network restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use host network",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not share the host network namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-host-network-minimized",
+      "remediationSteps": "## Fix: Disable Host Network Sharing\n\nRemove hostNetwork from pod spec:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        hostNetwork: false,  // Explicitly set to false or remove\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowForWorkloadTypes": {
+            "description": "Allow host PID for specific types of workloads (e.g., DaemonSet)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from host PID restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use host PID",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not share the host process ID namespace.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-host-pid-minimized",
+      "remediationSteps": "## Fix: Disable Host PID Sharing\n\nRemove hostPID from pod spec:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        hostPID: false,  // Explicitly set to false or remove\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n        }],\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptContainers": {
+            "description": "List of container names/patterns that are allowed to run privileged",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces exempt from privileged container restrictions (e.g., kube-system, kube-public)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use privileged containers",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure containers do not run in privileged mode.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.2 Pod Security",
+        "specification": "Minimize the admission of privileged containers and containers with dangerous capabilities.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-pod-security-privileged-containers-minimized",
+      "remediationSteps": "## Fix: Disable Privileged Mode\n\nRemove privileged flag from container security context:\n\n```typescript\nconst pod = new k8s.core.v1.Pod(\"pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"nginx\",\n            securityContext: {\n                privileged: false,  // Explicitly set to false or remove\n                runAsNonRoot: true,\n                capabilities: {\n                    drop: [\"ALL\"],\n                },\n            },\n        }],\n    },\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterRoles": {
+            "description": "List of cluster role names/patterns exempt from pod creation restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptRoles": {
+            "description": "List of role names/patterns exempt from pod creation restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Roles and ClusterRoles do not grant excessive permissions to create pods or resources that can create pods (deployments, jobs, etc.).",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-rbac-create-pods-minimized",
+      "remediationSteps": "## Fix: Minimize Pod Creation Permissions\n\nAvoid granting create permissions on pods and pod-creating resources:\n\n```typescript\n// Good: Read-only access to pods\nconst podReader = new k8s.rbac.v1.Role(\"podReader\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"pods\"],\n        verbs: [\"get\", \"list\", \"watch\"],  // Read-only\n    }],\n});\n\n// Bad: Avoid granting pod creation abilities\nconst podCreator = new k8s.rbac.v1.Role(\"podCreator\", {\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"pods\", \"pods/exec\", \"pods/attach\"],\n        verbs: [\"create\", \"*\"],  // DON'T DO THIS unless absolutely necessary\n    }],\n});\n```\n\nResources that can create pods and should be restricted:\n- pods, pods/exec, pods/attach, pods/portforward\n- deployments, replicasets, statefulsets, daemonsets, jobs, cronjobs\n- replicationcontrollers",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterRoles": {
+            "description": "List of cluster roles exempt from secret access restrictions (e.g., cluster-admin, system:*)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespacePatterns": {
+            "description": "Namespace patterns to exclude from validation (supports wildcards, e.g., kube-*)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptRoles": {
+            "description": "List of roles exempt from secret access restrictions (e.g., system:controller:*, system:kube-*)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Roles and ClusterRoles do not grant excessive permissions to secrets (create, update, patch, delete, or wildcard verbs).",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-rbac-secret-access-minimized",
+      "remediationSteps": "## Fix: Minimize Secret Access Permissions\n\nLimit secret access to read-only (get, list, watch) unless write access is explicitly required:\n\n```typescript\n// Good: Read-only secret access\nconst readOnlyRole = new k8s.rbac.v1.Role(\"secretReader\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"secrets\"],\n        verbs: [\"get\", \"list\", \"watch\"],  // Read-only access\n    }],\n});\n\n// Bad: Avoid granting write access to secrets\nconst writeRole = new k8s.rbac.v1.Role(\"secretWriter\", {\n    rules: [{\n        apiGroups: [\"\"],\n        resources: [\"secrets\"],\n        verbs: [\"*\"],  // DON'T DO THIS\n    }],\n});\n```\n\nOnly grant create/update/delete/patch permissions when absolutely necessary and document the justification.",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedWildcardApiGroups": {
+            "description": "Allow wildcards for specific API groups",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedWildcardResources": {
+            "description": "Allow wildcards for specific resource types",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedWildcardVerbs": {
+            "description": "Allow wildcards for specific verbs",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterRoles": {
+            "description": "List of cluster role names/patterns exempt from wildcard restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptRoles": {
+            "description": "List of role names/patterns exempt from wildcard restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Roles and ClusterRoles do not use wildcards for resources, verbs, or apiGroups.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-rbac-wildcard-use-minimized",
+      "remediationSteps": "## Fix: Remove Wildcards from RBAC Rules\n\nBe specific about resources, verbs, and API groups:\n\n```typescript\nconst role = new k8s.rbac.v1.Role(\"specificRole\", {\n    metadata: { namespace: \"default\" },\n    rules: [{\n        apiGroups: [\"\"],  // Specific API group, not \"*\"\n        resources: [\"pods\", \"services\"],  // Specific resources, not \"*\"\n        verbs: [\"get\", \"list\", \"watch\"],  // Specific verbs, not \"*\"\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedNamespaces": {
+            "description": "List of allowed namespaces for workloads (if specified, workloads in other namespaces will be flagged)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "preventCrossNamespaceRefs": {
+            "default": false,
+            "description": "Prevent cross-namespace service references",
+            "type": "boolean"
+          },
+          "requireEnvironmentMatch": {
+            "default": false,
+            "description": "Require namespace to match environment tag/label",
+            "type": "boolean"
+          },
+          "requireLimitRanges": {
+            "default": false,
+            "description": "Require limit ranges to be defined in namespaces",
+            "type": "boolean"
+          },
+          "requireResourceQuotas": {
+            "default": false,
+            "description": "Require resource quotas to be defined in namespaces",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure administrative boundaries are maintained between resources using namespaces for proper multi-tenancy and resource isolation.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.5-4.6 Secret Management and Namespaces",
+        "specification": "Prefer using secrets as files over secrets as environment variables. Ensure default namespace is not used for workloads. Apply security context to pods and containers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-resource-namespace-boundaries",
+      "remediationSteps": "## Fix: Establish Proper Namespace Boundaries\n\n### Step 1: Create Namespaces with Resource Quotas and Limits\n\n```typescript\nimport * as k8s from \"@pulumi/kubernetes\";\n\n// Create production namespace\nconst prodNamespace = new k8s.core.v1.Namespace(\"production\", {\n    metadata: {\n        name: \"production\",\n        labels: {\n            environment: \"production\",\n            team: \"platform\",\n            \"cost-center\": \"engineering\",\n        },\n        annotations: {\n            description: \"Production environment workloads\",\n        },\n    },\n});\n\n// Create resource quota\nconst prodQuota = new k8s.core.v1.ResourceQuota(\"prod-quota\", {\n    metadata: {\n        name: \"compute-quota\",\n        namespace: prodNamespace.metadata.name,\n    },\n    spec: {\n        hard: {\n            \"requests.cpu\": \"100\",\n            \"requests.memory\": \"200Gi\",\n            \"limits.cpu\": \"200\",\n            \"limits.memory\": \"400Gi\",\n            \"persistentvolumeclaims\": \"10\",\n            \"pods\": \"50\",\n        },\n    },\n});\n\n// Create limit range\nconst prodLimits = new k8s.core.v1.LimitRange(\"prod-limits\", {\n    metadata: {\n        name: \"resource-limits\",\n        namespace: prodNamespace.metadata.name,\n    },\n    spec: {\n        limits: [\n            {\n                type: \"Container\",\n                default: {\n                    cpu: \"500m\",\n                    memory: \"512Mi\",\n                },\n                defaultRequest: {\n                    cpu: \"100m\",\n                    memory: \"128Mi\",\n                },\n                max: {\n                    cpu: \"2\",\n                    memory: \"4Gi\",\n                },\n                min: {\n                    cpu: \"50m\",\n                    memory: \"64Mi\",\n                },\n            },\n            {\n                type: \"Pod\",\n                max: {\n                    cpu: \"4\",\n                    memory: \"8Gi\",\n                },\n            },\n        ],\n    },\n});\n\n// Deploy application in proper namespace\nconst deployment = new k8s.apps.v1.Deployment(\"app\", {\n    metadata: {\n        name: \"my-app\",\n        namespace: prodNamespace.metadata.name,  // Use dedicated namespace\n        labels: {\n            app: \"my-app\",\n            environment: \"production\",\n        },\n    },\n    spec: {\n        replicas: 3,\n        selector: {\n            matchLabels: { app: \"my-app\" },\n        },\n        template: {\n            metadata: {\n                labels: { app: \"my-app\" },\n            },\n            spec: {\n                containers: [{\n                    name: \"app\",\n                    image: \"myapp:v1.0.0\",\n                    resources: {\n                        requests: {\n                            cpu: \"100m\",\n                            memory: \"128Mi\",\n                        },\n                        limits: {\n                            cpu: \"500m\",\n                            memory: \"512Mi\",\n                        },\n                    },\n                }],\n            },\n        },\n    },\n});\n```\n\n### Step 2: Configure RBAC for Namespace Isolation\n\n```typescript\n// Create development namespace\nconst devNamespace = new k8s.core.v1.Namespace(\"development\", {\n    metadata: {\n        name: \"development\",\n        labels: {\n            environment: \"development\",\n            team: \"platform\",\n        },\n    },\n});\n\n// Create role for namespace-scoped access\nconst developerRole = new k8s.rbac.v1.Role(\"developer\", {\n    metadata: {\n        name: \"developer\",\n        namespace: devNamespace.metadata.name,\n    },\n    rules: [{\n        apiGroups: [\"\", \"apps\", \"batch\"],\n        resources: [\"pods\", \"deployments\", \"jobs\", \"configmaps\", \"secrets\"],\n        verbs: [\"get\", \"list\", \"watch\", \"create\", \"update\", \"patch\", \"delete\"],\n    }],\n});\n\n// Bind role to team\nconst developersBinding = new k8s.rbac.v1.RoleBinding(\"developers\", {\n    metadata: {\n        name: \"developers\",\n        namespace: devNamespace.metadata.name,\n    },\n    subjects: [{\n        kind: \"Group\",\n        name: \"developers\",\n        apiGroup: \"rbac.authorization.k8s.io\",\n    }],\n    roleRef: {\n        kind: \"Role\",\n        name: developerRole.metadata.name,\n        apiGroup: \"rbac.authorization.k8s.io\",\n    },\n});\n```\n\n**Best Practices:**\n- Create separate namespaces for environments (prod, staging, dev)\n- Use namespaces for team or application boundaries\n- Set resource quotas to prevent resource exhaustion\n- Define limit ranges for default resource constraints\n- Use RBAC to restrict access to specific namespaces\n- Label namespaces consistently (environment, team, cost-center)\n- Never deploy production workloads in `default` namespace\n- Consider using namespace-as-a-service tools (Hierarchical Namespace Controller)\n- Monitor namespace resource usage and quota limits",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedSecretEnvVars": {
+            "description": "List of secret names that are allowed as environment variables",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptContainers": {
+            "description": "List of container names/patterns that are allowed to use secret env vars",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces where secret env vars are allowed",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to use secret env vars",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure secrets are mounted as files via volumes rather than exposed as environment variables.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.5-4.6 Secret Management and Namespaces",
+        "specification": "Prefer using secrets as files over secrets as environment variables. Ensure default namespace is not used for workloads. Apply security context to pods and containers.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-secrets-as-files-not-env-vars",
+      "remediationSteps": "## Fix: Mount Secrets as Files\n\nUse volume mounts instead of environment variables for secrets:\n\n```typescript\n// Bad: Using secrets as environment variables\nconst badPod = new k8s.core.v1.Pod(\"bad-pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"myapp:latest\",\n            env: [{\n                name: \"DB_PASSWORD\",\n                valueFrom: {\n                    secretKeyRef: {\n                        name: \"db-secret\",\n                        key: \"password\",\n                    },\n                },\n            }],\n        }],\n    },\n});\n\n// Good: Mount secrets as files\nconst goodPod = new k8s.core.v1.Pod(\"good-pod\", {\n    spec: {\n        containers: [{\n            name: \"app\",\n            image: \"myapp:latest\",\n            volumeMounts: [{\n                name: \"secret-volume\",\n                mountPath: \"/etc/secrets\",\n                readOnly: true,\n            }],\n        }],\n        volumes: [{\n            name: \"secret-volume\",\n            secret: {\n                secretName: \"db-secret\",\n            },\n        }],\n    },\n});\n// Access secret via: cat /etc/secrets/password\n```\n\n**Benefits of file-based secrets:**\n- Not visible in process listings\n- Not logged by default\n- Can be rotated without container restart (with proper file watching)",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowUndefinedAutomount": {
+            "default": true,
+            "description": "Allow undefined automount (uses cluster default)",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptNamespaces": {
+            "description": "List of namespaces where automount is allowed",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptServiceAccounts": {
+            "description": "List of service accounts that are allowed to automount by default",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptWorkloads": {
+            "description": "List of workload names/patterns that are allowed to automount tokens",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure service account tokens are not automatically mounted in pods unless explicitly required.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CIS",
+        "reference": "4.1 RBAC and Authentication",
+        "specification": "Restrict administrator privileges to dedicated administrator accounts on enterprise assets. Implement proper RBAC controls.",
+        "version": "8.1.2"
+      },
+      "message": "",
+      "name": "k8s-service-account-token-mounted-minimized",
+      "remediationSteps": "## Fix: Disable Service Account Token Auto-Mounting\n\nSet `automountServiceAccountToken: false` unless the pod needs Kubernetes API access:\n\n```typescript\n// Good: Disable auto-mounting when not needed\nconst pod = new k8s.core.v1.Pod(\"myPod\", {\n    metadata: { name: \"my-pod\" },\n    spec: {\n        automountServiceAccountToken: false,  // Explicitly disable\n        containers: [{\n            name: \"app\",\n            image: \"nginx:latest\",\n        }],\n    },\n});\n\n// Also disable at ServiceAccount level\nconst sa = new k8s.core.v1.ServiceAccount(\"myServiceAccount\", {\n    metadata: { name: \"my-sa\" },\n    automountServiceAccountToken: false,  // Disable by default\n});\n```\n\nOnly enable when the pod explicitly requires Kubernetes API access.",
+      "severity": "medium"
+    }
+  ],
+  "version": 2,
+  "versionTag": "1.0.1"
+}

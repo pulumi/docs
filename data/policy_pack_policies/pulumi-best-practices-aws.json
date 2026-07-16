@@ -1,0 +1,1935 @@
+{
+  "applied": true,
+  "displayName": "",
+  "name": "pulumi-best-practices-aws",
+  "policies": [
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures API Gateway stages have access logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "api-gateway-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging for API Gateway Stage\n\nConfigure the `accessLogSettings` property with a CloudWatch Log Group ARN to enable comprehensive audit logging:\n\n```typescript\nconst logGroup = new aws.cloudwatch.LogGroup(\"api-logs\", {\n    retentionInDays: 30,\n});\n\nconst stage = new aws.apigateway.Stage(\"my-stage\", {\n    restApi: api.id,\n    stageName: \"prod\",\n    deployment: deployment.id,\n    accessLogSettings: { // Enable access logging\n        destinationArn: logGroup.arn, // Specify CloudWatch Log Group\n        format: \"$context.requestId\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt stage names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptStages": {
+            "description": "List of stage names to exempt from SSL certificate requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures API Gateway REST API stages have client certificates configured for SSL/TLS authentication to protect data in transit.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "api-gateway-ssl-certificate-required",
+      "remediationSteps": "## Fix: Configure Client Certificate for API Gateway Stage\n\nFirst, create a client certificate:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create a client certificate for SSL/TLS authentication\nconst clientCert = new aws.apigateway.ClientCertificate(\"api-client-cert\", {\n    description: \"Client certificate for API Gateway SSL authentication\",\n});\n```\n\nThen, associate the certificate with your API Gateway stage:\n\n```typescript\nconst stage = new aws.apigateway.Stage(\"api-stage\", {\n    restApi: restApi.id,\n    deployment: deployment.id,\n    stageName: \"production\",\n    clientCertificateId: clientCert.id, // Add this property to enable SSL certificate validation\n});\n```\n",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures API Gateway V2 stages have access logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "api-gateway-v2-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging for API Gateway V2 Stage\n\nConfigure the `accessLogSettings` property with a CloudWatch Log Group ARN to enable comprehensive audit logging:\n\n```typescript\nconst logGroup = new aws.cloudwatch.LogGroup(\"api-v2-logs\", {\n    retentionInDays: 30,\n});\n\nconst stage = new aws.apigatewayv2.Stage(\"my-stage\", {\n    apiId: api.id,\n    name: \"prod\",\n    accessLogSettings: { // Enable access logging\n        destinationArn: logGroup.arn, // Specify CloudWatch Log Group\n        format: \"$context.requestId\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "minimumTrailCount": {
+            "default": 1,
+            "description": "Minimum number of trails required",
+            "type": "number"
+          },
+          "requireMultiRegionTrail": {
+            "default": false,
+            "description": "Require at least one multi-region trail",
+            "type": "boolean"
+          },
+          "requiredRegions": {
+            "description": "List of regions to check for trails",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures CloudTrail is enabled with at least one active trail for audit logging.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloudtrail-enabled",
+      "remediationSteps": "## Fix: Enable CloudTrail for audit logging\n\nCreate a CloudTrail trail to capture API activity and management events:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create an S3 bucket for CloudTrail logs\nconst trailBucket = new aws.s3.Bucket(\"cloudtrail-logs\", {\n    forceDestroy: true, // Only for demo - remove in production\n});\n\n// Create CloudTrail trail\nconst trail = new aws.cloudtrail.Trail(\"main-trail\", {\n    s3BucketName: trailBucket.bucket,\n    isMultiRegionTrail: true, // Enable for all regions\n    includeGlobalServiceEvents: true,\n    enableLogFileValidation: true, // Ensure log integrity\n});\n```\n\nKey configuration:\n- Set `isMultiRegionTrail: true` to capture events across all AWS regions\n- Enable `includeGlobalServiceEvents` to capture IAM and STS events\n- Use `enableLogFileValidation` to ensure log integrity",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt log group names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLogGroups": {
+            "description": "List of log group names to exempt from retention requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumRetentionDays": {
+            "description": "Maximum retention period in days (0 means never expire)",
+            "type": "number"
+          },
+          "minimumRetentionDays": {
+            "default": 365,
+            "description": "Minimum retention period in days",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures CloudWatch log groups have appropriate retention periods for compliance.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "cloudwatch-log-retention",
+      "remediationSteps": "## Fix: Configure CloudWatch Log Group Retention Period\n\nSet the `retentionInDays` property to at least 365 days to meet audit record retention requirements.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst logGroup = new aws.cloudwatch.LogGroup(\"my-log-group\", {\n    name: \"/aws/lambda/my-function\",\n    retentionInDays: 365, // Set retention to at least 365 days for compliance\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt instance identifiers",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptInstances": {
+            "description": "List of replication instance identifiers to exempt",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures DMS replication instances are not publicly accessible to maintain security.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "dms-no-public-access",
+      "remediationSteps": "## Fix: Disable Public Accessibility\n\n```typescript\nconst replicationInstance = new aws.dms.ReplicationInstance(\"my-replication-instance\", {\n    replicationInstanceClass: \"dms.t3.micro\",\n    publiclyAccessible: false,  // Set to false to prevent public access\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowOnDemandMode": {
+            "default": true,
+            "description": "Allow on-demand billing mode as an alternative to auto-scaling",
+            "type": "boolean"
+          },
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt table names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTables": {
+            "description": "List of table names to exempt from auto scaling requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireBothReadWrite": {
+            "default": true,
+            "description": "Require both read and write auto-scaling",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures DynamoDB tables have auto-scaling or on-demand mode enabled for capacity management.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "dynamodb-auto-scaling-enabled",
+      "remediationSteps": "## Fix: Enable DynamoDB Auto-Scaling or On-Demand Mode\n\nConfigure auto-scaling targets and policies for your DynamoDB table's read and write capacity, or switch to on-demand billing mode:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst table = new aws.dynamodb.Table(\"myTable\", {\n    name: \"my-table\",\n    billingMode: \"PROVISIONED\", // Use provisioned mode with auto-scaling\n    readCapacity: 5,\n    writeCapacity: 5,\n    attributes: [{ name: \"id\", type: \"S\" }],\n    hashKey: \"id\",\n});\n\n// Configure read capacity auto-scaling\nconst readTarget = new aws.appautoscaling.Target(\"readTarget\", {\n    resourceId: pulumi.interpolate`table/${table.name}`,\n    scalableDimension: \"dynamodb:table:ReadCapacityUnits\",\n    serviceNamespace: \"dynamodb\",\n    minCapacity: 5,\n    maxCapacity: 100, // Set appropriate scaling limits\n});\n\nnew aws.appautoscaling.Policy(\"readPolicy\", {\n    resourceId: readTarget.resourceId,\n    scalableDimension: readTarget.scalableDimension,\n    serviceNamespace: readTarget.serviceNamespace,\n    policyType: \"TargetTrackingScaling\",\n    targetTrackingScalingPolicyConfiguration: {\n        targetValue: 70.0, // Target utilization percentage\n        predefinedMetricSpecification: {\n            predefinedMetricType: \"DynamoDBReadCapacityUtilization\",\n        },\n    },\n});\n\n// Configure write capacity auto-scaling\nconst writeTarget = new aws.appautoscaling.Target(\"writeTarget\", {\n    resourceId: pulumi.interpolate`table/${table.name}`,\n    scalableDimension: \"dynamodb:table:WriteCapacityUnits\",\n    serviceNamespace: \"dynamodb\",\n    minCapacity: 5,\n    maxCapacity: 100,\n});\n\nnew aws.appautoscaling.Policy(\"writePolicy\", {\n    resourceId: writeTarget.resourceId,\n    scalableDimension: writeTarget.scalableDimension,\n    serviceNamespace: writeTarget.serviceNamespace,\n    policyType: \"TargetTrackingScaling\",\n    targetTrackingScalingPolicyConfiguration: {\n        targetValue: 70.0,\n        predefinedMetricSpecification: {\n            predefinedMetricType: \"DynamoDBWriteCapacityUtilization\",\n        },\n    },\n});\n\n// Alternative: Use on-demand billing mode (no auto-scaling needed)\n// const table = new aws.dynamodb.Table(\"myTable\", {\n//     billingMode: \"PAY_PER_REQUEST\", // On-demand mode handles scaling automatically\n//     attributes: [{ name: \"id\", type: \"S\" }],\n//     hashKey: \"id\",\n// });\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt table names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTables": {
+            "description": "List of table names to exempt from KMS encryption requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures DynamoDB tables have encryption enabled using KMS keys.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "dynamodb-kms-encryption-enabled",
+      "remediationSteps": "## Fix: Enable Customer-Managed KMS Encryption for DynamoDB Table\n\nConfigure the DynamoDB table with a customer-managed KMS key for encryption at rest:\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create or reference a customer-managed KMS key\nconst kmsKey = new aws.kms.Key(\"table-encryption-key\", {\n    description: \"KMS key for DynamoDB table encryption\",\n    deletionWindowInDays: 10,\n});\n\nconst table = new aws.dynamodb.Table(\"my-table\", {\n    // ... other configuration ...\n    serverSideEncryption: {\n        enabled: true,  // Enable encryption\n        kmsKeyArn: kmsKey.arn,  // Use customer-managed KMS key (not AWS-managed)\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforces that all DynamoDB tables have Stream settings enabled to capture all changes",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "dynamodb-streams-enabled",
+      "remediationSteps": "## Fix: Enable DynamoDB Streams\n\nSet the `streamEnabled` property to true on your DynamoDB table:\n\n```typescript\nconst table = new aws.dynamodb.Table(\"my-table\", {\n    name: \"my-table\",\n    attributes: [\n        { name: \"id\", type: \"S\" },\n    ],\n    hashKey: \"id\",\n    streamEnabled: true, // Enable DynamoDB Streams\n    billingMode: \"PAY_PER_REQUEST\",\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EBS volumes are encrypted.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "ebs-volume-encryption-required",
+      "remediationSteps": "## Fix: Enable EBS Volume Encryption\n\nSet the `encrypted` property to `true` on your EBS volume resource.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst volume = new aws.ebs.Volume(\"my-volume\", {\n    availabilityZone: \"us-west-2a\",\n    size: 100,\n    encrypted: true, // Enable encryption\n});\n```\n",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 instances do not have a public IP address.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "ec2-instance-disallow-public-ip",
+      "remediationSteps": "## Fix: Disable Public IP Assignment\n\n```typescript\nconst instance = new aws.ec2.Instance(\"app-server\", {\n    ami: \"ami-12345678\",\n    instanceType: \"t3.medium\",\n    associatePublicIpAddress: false,  // Disable public IP to prevent direct internet access\n    subnetId: privateSubnet.id,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 instances do not have unencrypted block devices.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "ec2-instance-disallow-unencrypted-block-device",
+      "remediationSteps": "## Fix: Enable Encryption for EBS Block Devices\n\nSet the `encrypted` property to `true` for all EBS block devices attached to EC2 instances:\n\n```typescript\nconst instance = new aws.ec2.Instance(\"my-instance\", {\n    ami: \"ami-12345678\",\n    instanceType: \"t3.micro\",\n    ebsBlockDevices: [{\n        deviceName: \"/dev/sdf\",\n        volumeSize: 20,\n        encrypted: true, // Enable encryption for the EBS volume\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 instances does not have unencrypted root volumes.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "ec2-instance-disallow-unencrypted-root-block-device",
+      "remediationSteps": "## Fix: Enable Encryption for Root Block Device\n\nSet the `encrypted` property to true in the `rootBlockDevice` configuration:\n\n```typescript\nconst instance = new aws.ec2.Instance(\"my-instance\", {\n    instanceType: \"t3.micro\",\n    ami: \"ami-12345678\",\n    rootBlockDevice: {\n        encrypted: true, // Enable encryption for root volume\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 Launch Configurations do not have unencrypted block devices.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "ec2-launch-configuration-disallow-unencrypted-block-device",
+      "remediationSteps": "## Fix: Enable EBS Block Device Encryption\n\nSet the `encrypted` property to `true` for all EBS block devices in the Launch Configuration:\n\n```typescript\nconst launchConfig = new aws.ec2.LaunchConfiguration(\"my-launch-config\", {\n    imageId: \"ami-12345678\",\n    instanceType: \"t3.medium\",\n    ebsBlockDevices: [{\n        deviceName: \"/dev/sdf\",\n        volumeSize: 100,\n        encrypted: true, // Enable encryption for all EBS block devices\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 Launch Templates do not have unencrypted block device.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "ec2-launch-template-disallow-unencrypted-block-device",
+      "remediationSteps": "## Fix: Enable EBS Volume Encryption in Launch Template\n\nSet the `encrypted` property to \"true\" for all block device mappings in the Launch Template:\n\n```typescript\nconst launchTemplate = new aws.ec2.LaunchTemplate(\"my-template\", {\n    imageId: \"ami-12345678\",\n    instanceType: \"t3.micro\",\n    blockDeviceMappings: [{\n        deviceName: \"/dev/sda1\",\n        ebs: {\n            encrypted: \"true\", // Enable encryption for the EBS volume\n            volumeSize: 20,\n            volumeType: \"gp3\",\n        },\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Check that ELB Load Balancers uses access logging.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "elb-access-logging-enabled",
+      "remediationSteps": "## Fix: Enable Access Logging for ELB Load Balancer\n\nConfigure the `accessLogs` property with an S3 bucket to store access logs:\n\n```typescript\nconst loadBalancer = new aws.elb.LoadBalancer(\"my-lb\", {\n    availabilityZones: [\"us-west-2a\", \"us-west-2b\"],\n    listeners: [{ /* ... */ }],\n    accessLogs: {\n        enabled: true,  // Enable access logging\n        bucket: \"my-elb-logs-bucket\",  // S3 bucket for logs\n        bucketPrefix: \"my-app\",  // Optional prefix for log files\n    },\n});\n```\n",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt load balancers (e.g., 'dev-*')",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLoadBalancers": {
+            "description": "Classic Load Balancers exempt from cross-zone load balancing requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Classic Load Balancers must have cross-zone load balancing enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "elb-cross-zone-load-balancing-enabled",
+      "remediationSteps": "## Fix: Enable cross-zone load balancing on Classic Load Balancer\n\nSet the `crossZoneLoadBalancing` property to `true` to distribute traffic evenly across all availability zones.\n\n```typescript\nconst loadBalancer = new aws.elb.LoadBalancer(\"my-load-balancer\", {\n    availabilityZones: [\"us-west-2a\", \"us-west-2b\"],\n    listeners: [{\n        instancePort: 80,\n        instanceProtocol: \"http\",\n        lbPort: 80,\n        lbProtocol: \"http\",\n    }],\n    crossZoneLoadBalancing: true, // Enable cross-zone load balancing\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Check that ELB Load Balancers do not allow unencrypted (HTTP) traffic.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "elb-disallow-unencrypted-traffic",
+      "remediationSteps": "## Fix: Configure HTTPS/SSL listeners instead of HTTP\n\nUpdate your ELB Load Balancer to use HTTPS or SSL protocol instead of HTTP:\n\n```typescript\nconst loadBalancer = new aws.elb.LoadBalancer(\"my-lb\", {\n    listeners: [\n        {\n            instancePort: 443,\n            instanceProtocol: \"https\",\n            lbPort: 443,\n            lbProtocol: \"https\", // Use \"https\" or \"ssl\" instead of \"http\"\n            sslCertificateId: \"arn:aws:iam::123456789012:server-certificate/my-cert\", // Required for HTTPS/SSL\n        },\n    ],\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedEnvironmentValues": {
+            "description": "List of allowed environment values",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "environmentTagName": {
+            "default": "Environment",
+            "description": "Name of the tag used to specify environment",
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "Resource types exempt from environment tagging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures that resources are tagged to distinguish between production and non-production environments",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "5. Tagging",
+        "specification": "Enforce standardized resource tags for ownership, environment, and compliance tracking.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "environment-separation-tagging",
+      "remediationSteps": "## Fix: Add Environment Tag to Resource\n\nAdd an \"Environment\" tag to the resource with a valid environment value (e.g., production, development, staging, testing):\n\n```typescript\nconst instance = new aws.ec2.Instance(\"web-server\", {\n    instanceType: \"t3.micro\",\n    ami: \"ami-12345678\",\n    tags: {\n        \"Environment\": \"production\", // Add environment tag for proper separation\n        \"Name\": \"web-server\",\n    },\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM group policies follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "iam-group-policy-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst groupPolicy = new aws.iam.GroupPolicy(\"my-group-policy\", {\n    group: myGroup.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"cloudwatch:PutMetricData\",  // Specify exact actions needed\n            ],\n            Resource: \"*\",  // Some AWS services require \"*\" for resource\n            Condition: {\n                StringEquals: {\n                    \"cloudwatch:namespace\": \"MyApp\",  // Use conditions to scope access\n                },\n            },\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM policies follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "iam-policy-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions that grant only the minimum required access:\n\n```typescript\nconst policy = new aws.iam.Policy(\"my-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:GetObject\",        // Specify exact actions needed\n                \"s3:PutObject\",\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM roles follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "iam-role-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources in inline policies with explicit, scoped permissions:\n\n```typescript\nconst role = new aws.iam.Role(\"my-role\", {\n    assumeRolePolicy: assumePolicyDoc,\n    inlinePolicies: [{\n        name: \"my-inline-policy\",\n        policy: JSON.stringify({\n            Version: \"2012-10-17\",\n            Statement: [{\n                Effect: \"Allow\",\n                Action: [\n                    \"dynamodb:GetItem\",    // Specify exact actions needed\n                    \"dynamodb:PutItem\",\n                ],\n                Resource: [\n                    \"arn:aws:dynamodb:us-east-1:123456789012:table/MyTable\",  // Scope to specific resources\n                ],\n            }],\n        }),\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM role policies follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "iam-role-policy-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst rolePolicy = new aws.iam.RolePolicy(\"my-role-policy\", {\n    role: myRole.id,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"ec2:DescribeInstances\",   // Specify exact actions needed\n                \"ec2:StartInstances\",\n                \"ec2:StopInstances\",\n            ],\n            Resource: [\n                \"arn:aws:ec2:us-east-1:123456789012:instance/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM user policies follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "iam-user-policy-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst userPolicy = new aws.iam.UserPolicy(\"my-user-policy\", {\n    user: myUser.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedKeySpecs": {
+            "description": "An optional array of allowed key specs (e.g., SYMMETRIC_DEFAULT, RSA_2048, etc.)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedKeyUsages": {
+            "description": "An optional array of allowed key usages (e.g., ENCRYPT_DECRYPT, SIGN_VERIFY)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "requireCustomerMasterKeys": {
+            "description": "Whether to require customer-managed keys (not AWS managed keys)",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Validates KMS key creation with appropriate specifications and origins",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "kms-key-creation",
+      "remediationSteps": "## Fix: Configure KMS Key with Proper Specifications\n\nAdd a description, configure an appropriate deletion window (7-30 days), and ensure key specifications match your security requirements:\n\n```typescript\nconst key = new aws.kms.Key(\"my-key\", {\n    description: \"Key for encrypting application data\", // Add clear description\n    customerMasterKeySpec: \"SYMMETRIC_DEFAULT\", // Use approved key spec\n    keyUsage: \"ENCRYPT_DECRYPT\", // Specify key usage\n    deletionWindowInDays: 30, // Set deletion window between 7-30 days\n    enableKeyRotation: true,\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "criticalKeyTags": {
+            "description": "Tag keys that identify critical keys requiring special protection",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maximumDeletionWindow": {
+            "description": "Maximum deletion window in days (default: 30)",
+            "type": "number"
+          },
+          "minimumDeletionWindow": {
+            "description": "Minimum deletion window in days (default: 7)",
+            "type": "number"
+          },
+          "requireDeletionProtection": {
+            "description": "Whether to require deletion protection for critical keys",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Validates KMS key deletion windows and lifecycle management",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "kms-key-deletion-lifecycle",
+      "remediationSteps": "## Fix: Configure KMS Key Deletion Window and Lifecycle Management\n\nSet a `deletionWindowInDays` between 7 and 30 days, add descriptive tags, and provide a clear description for proper lifecycle management:\n\n```typescript\nconst kmsKey = new aws.kms.Key(\"my-key\", {\n    description: \"Encryption key for application data\",\n    deletionWindowInDays: 30, // Set deletion window between 7-30 days\n    tags: {\n        Environment: \"production\",\n        Owner: \"security-team\",\n        Purpose: \"data-encryption\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that KMS Keys have key rotation enabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "14. Key Management & Rotation",
+        "specification": "Manage encryption keys securely and enforce periodic key rotation to reduce the risk of compromise.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "kms-key-rotation-enabled",
+      "remediationSteps": "## Fix: Enable automatic key rotation for KMS keys\n\nSet the `enableKeyRotation` property to `true` on your KMS key resource to enable automatic annual rotation of the key material.\n\n```typescript\nconst key = new aws.kms.Key(\"my-key\", {\n    description: \"My KMS key\",\n    enableKeyRotation: true, // Enable automatic key rotation\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt function names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from concurrency requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumReservedConcurrency": {
+            "description": "Maximum allowed reserved concurrent executions",
+            "type": "number"
+          },
+          "minimumReservedConcurrency": {
+            "default": 1,
+            "description": "Minimum reserved concurrent executions required",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Lambda functions must have concurrent execution limits configured to protect resource availability",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "lambda-concurrent-execution-limits-required",
+      "remediationSteps": "## Fix: Configure Reserved Concurrent Executions\n\nSet the `reservedConcurrentExecutions` property on your Lambda function to limit concurrent executions and prevent resource exhaustion.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\nconst myFunction = new aws.lambda.Function(\"myFunction\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./function\"),\n    }),\n    // Set reserved concurrent executions to limit resource consumption\n    reservedConcurrentExecutions: 10,\n});\n```\n\nChoose a value based on your function's expected load and account limits. Setting this prevents the function from consuming all available concurrency and impacting other functions in your account.",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt function names",
+            "type": "boolean"
+          },
+          "allowedTargetTypes": {
+            "default": [
+              "SQS",
+              "SNS"
+            ],
+            "description": "List of allowed DLQ target resource types (SQS, SNS)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "asyncInvocationOnly": {
+            "default": false,
+            "description": "Only require DLQ for functions with async invocation configuration",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from DLQ requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Lambda functions must have dead letter queues configured for error handling and incident response",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "8. Require DLQ",
+        "specification": "Ensure all asynchronous messaging systems are configured with a dead-letter queue to handle failures.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "lambda-dead-letter-queue-required",
+      "remediationSteps": "## Fix: Configure Dead Letter Queue for Lambda Function\n\nAdd a `deadLetterConfig` property to your Lambda function with a target SQS queue or SNS topic ARN to capture failed invocations for incident analysis.\n\n```typescript\nimport * as aws from \"@pulumi/aws\";\n\n// Create a dead letter queue\nconst dlq = new aws.sqs.Queue(\"my-function-dlq\", {\n    messageRetentionSeconds: 1209600, // 14 days\n});\n\nconst lambdaFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./function\"),\n    }),\n    // Add dead letter configuration to capture failed invocations\n    deadLetterConfig: {\n        targetArn: dlq.arn, // ARN of SQS queue or SNS topic\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "minimumDescriptionLength": {
+            "default": 10,
+            "description": "Minimum required length for Lambda function description",
+            "minimum": 1,
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures all AWS Lambda functions have a documented description attribute",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "12. Documentation",
+        "specification": "Maintain up-to-date documentation of architectures, configurations, policies, and procedures to ensure clarity, consistency, and auditability.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "lambda-function-documentation",
+      "remediationSteps": "## Fix: Add Description to Lambda Function\n\nAdd a meaningful `description` attribute to your Lambda function that is at least 10 characters long:\n\n```typescript\nconst myFunction = new aws.lambda.Function(\"my-function\", {\n    code: new pulumi.asset.FileArchive(\"./function\"),\n    role: lambdaRole.arn,\n    handler: \"index.handler\",\n    runtime: \"nodejs20.x\",\n    description: \"Processes user authentication requests and validates credentials\", // Add descriptive documentation\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maxTimeoutSeconds": {
+            "description": "Maximum allowed timeout in seconds for Lambda functions",
+            "maximum": 900,
+            "minimum": 1,
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures that AWS Lambda functions are configured to time out after a specified duration to prevent extended access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "limit-lambda-execution-time",
+      "remediationSteps": "## Fix: Configure Lambda Function Timeout\n\nSet the `timeout` property to limit function execution time (default maximum: 300 seconds):\n\n```typescript\nconst myFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs20.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./app\"),\n    }),\n    timeout: 300, // Set timeout to prevent extended access (max 300 seconds by default)\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that Neptune Cluster Instances public access is not enabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "neptune-clusterinstance-no-public-access",
+      "remediationSteps": "## Fix: Disable Public Access for Neptune Cluster Instance\n\nSet the `publiclyAccessible` property to `false`:\n\n```typescript\nconst neptuneInstance = new aws.neptune.ClusterInstance(\"neptune-instance\", {\n    clusterIdentifier: neptuneCluster.id,\n    instanceClass: \"db.r5.large\",\n    engine: \"neptune\",\n    publiclyAccessible: false,  // Disable public access\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM policies follow least privilege principles for Pub/Sub services (SNS, SQS, Kinesis)",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "pubsub-least-privilege-iam",
+      "remediationSteps": "## Fix: Use Specific Pub/Sub IAM Actions and Resource ARNs\n\nReplace wildcard permissions with specific actions and resource ARNs for Pub/Sub services:\n\n```typescript\nconst queuePolicy = new aws.iam.Policy(\"queue-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"sqs:SendMessage\",      // Use specific actions instead of sqs:*\n                \"sqs:ReceiveMessage\",\n                \"sqs:DeleteMessage\",\n            ],\n            Resource: \"arn:aws:sqs:us-east-1:123456789012:my-queue\", // Use specific ARN instead of *\n        }],\n    }),\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that RDS Clusters storage is encrypted.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-cluster-disallow-unencrypted-storage",
+      "remediationSteps": "## Fix: Enable RDS Cluster Storage Encryption\n\nSet the `storageEncrypted` property to `true` to enable encryption at rest for the RDS cluster:\n\n```typescript\nconst cluster = new aws.rds.Cluster(\"my-cluster\", {\n    engine: \"aurora-mysql\",\n    engineVersion: \"8.0.mysql_aurora.3.02.0\",\n    masterUsername: \"admin\",\n    masterPassword: dbPassword,\n    storageEncrypted: true, // Enable storage encryption\n    databaseName: \"mydb\",\n    skipFinalSnapshot: true,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that RDS Cluster Instances public access is not enabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-cluster-instance-disallow-public-access",
+      "remediationSteps": "## Fix: Disable Public Access for RDS Cluster Instance\n\nSet the `publiclyAccessible` property to `false` to ensure the RDS Cluster Instance is not accessible from the public internet:\n\n```typescript\nconst clusterInstance = new aws.rds.ClusterInstance(\"my-cluster-instance\", {\n    clusterIdentifier: cluster.id,\n    instanceClass: \"db.r5.large\",\n    engine: \"aurora-postgresql\",\n    publiclyAccessible: false, // Disable public access\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt cluster instance identifiers",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterInstances": {
+            "description": "List of cluster instance identifiers to exempt from SSL encryption requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures RDS cluster instances have SSL/TLS encryption enabled through parameter group configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-clusterinstance-ssl-encryption",
+      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for Aurora Cluster Instance\n\nConfigure a parameter group to enforce SSL/TLS connections for your Aurora cluster instance:\n\n```typescript\nconst clusterParamGroup = new aws.rds.ParameterGroup(\"cluster-params\", {\n    family: \"aurora-postgresql14\",\n    parameters: [\n        {\n            name: \"rds.force_ssl\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst clusterInstance = new aws.rds.ClusterInstance(\"my-cluster-instance\", {\n    clusterIdentifier: cluster.id,\n    instanceClass: \"db.r5.large\",\n    engine: cluster.engine,\n    dbParameterGroupName: clusterParamGroup.name, // Attach parameter group with SSL enforcement\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that RDS instance storage is encrypted.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-encryption-enabled",
+      "remediationSteps": "## Fix: Enable RDS Storage Encryption\n\nEnable the `storageEncrypted` property on your RDS instance:\n\n```typescript\nconst myRdsInstance = new aws.rds.Instance(\"my-db\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    storageEncrypted: true, // Enable encryption at rest\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that RDS Instances backup retention policy is enabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-instance-enable-backup-retention",
+      "remediationSteps": "## Fix: Enable automated backup retention for RDS instance\n\nSet the `backupRetentionPeriod` property to specify the number of days to retain automated backups (1-35 days):\n\n```typescript\nconst db = new aws.rds.Instance(\"my-db\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    backupRetentionPeriod: 7, // Enable automated backups with 7-day retention\n});\n```\n",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures RDS instances have Multi-AZ deployment enabled for high availability",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "7. High Availability",
+        "specification": "Deploy resources in redundant, fault-tolerant configurations to ensure service continuity.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-instance-high-availability",
+      "remediationSteps": "## Fix: Enable Multi-AZ Deployment for RDS Instance\n\nSet the `multiAz` property to `true` to enable automatic failover to a standby replica in a different Availability Zone:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"my-database\", {\n    allocatedStorage: 20,\n    engine: \"mysql\",\n    engineVersion: \"8.0\",\n    instanceClass: \"db.t3.micro\",\n    username: \"admin\",\n    password: dbPassword,\n    multiAz: true, // Enable Multi-AZ deployment for high availability\n    skipFinalSnapshot: true,\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt instance identifiers",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptInstances": {
+            "description": "List of instance identifiers to exempt from SSL encryption requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures RDS instances have SSL/TLS encryption enabled through parameter group configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-instance-ssl-encryption",
+      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for RDS Instance\n\nConfigure a parameter group to enforce SSL/TLS connections for your RDS instance:\n\n```typescript\nconst dbParamGroup = new aws.rds.ParameterGroup(\"db-params\", {\n    family: \"mysql8.0\",\n    parameters: [\n        {\n            name: \"require_secure_transport\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst db = new aws.rds.Instance(\"my-database\", {\n    engine: \"mysql\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    parameterGroupName: dbParamGroup.name, // Attach parameter group with SSL enforcement\n    username: \"admin\",\n    password: dbPassword,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Validates that RDS DB subnet groups contain only private subnets",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-private-subnet-validation",
+      "remediationSteps": "## Fix: Deploy RDS DB Subnet Group in Private Subnets\n\nEnsure the DB subnet group only contains subnets that do not have routes to an Internet Gateway. Private subnets should route internet-bound traffic through a NAT Gateway instead:\n\n```typescript\nconst privateSubnetGroup = new aws.rds.SubnetGroup(\"db-subnet-group\", {\n    subnetIds: [\n        privateSubnet1.id,  // Private subnet without Internet Gateway route\n        privateSubnet2.id,  // Private subnet without Internet Gateway route\n    ],\n    tags: {\n        Name: \"Private DB Subnet Group\",\n    },\n});\n\nconst db = new aws.rds.Instance(\"database\", {\n    dbSubnetGroupName: privateSubnetGroup.name,\n    publiclyAccessible: false,\n    // ... other configuration\n});\n```,",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures RDS instances have SSL/TLS encryption enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "3. Transport Layer Encryption",
+        "specification": "Require secure protocols (e.g., TLS) for all data in transit to prevent interception or tampering.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "rds-ssl-encryption",
+      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for RDS Instance\n\nSet the `caCertIdentifier` and configure a parameter group to enforce SSL/TLS connections for your RDS instance:\n\n```typescript\nconst dbParamGroup = new aws.rds.ParameterGroup(\"db-params\", {\n    family: \"mysql8.0\",\n    parameters: [\n        {\n            name: \"require_secure_transport\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst db = new aws.rds.Instance(\"my-database\", {\n    engine: \"mysql\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    caCertIdentifier: \"rds-ca-rsa2048-g1\", // Specify CA certificate for SSL/TLS\n    parameterGroupName: dbParamGroup.name, // Attach parameter group with SSL enforcement\n    username: \"admin\",\n    password: dbPassword,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures AWS resource names do not exceed the service-specific character limits imposed by AWS",
+      "displayName": "",
+      "enforcementLevel": "mandatory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "9. Resource Availability",
+        "specification": "Define and enforce timeouts, quotas, and capacity limits to prevent resource exhaustion.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "resource-name-length",
+      "remediationSteps": "## Fix: Shorten the Resource Name\n\nAWS enforces hard character limits on resource names. The most constrained services are:\n\n| Service | Property | Max length | Notes |\n|---|---|---|---|\n| Elastic Beanstalk environment | `name` | 23 chars | Forms a DNS hostname |\n| ElastiCache cluster | `clusterId` | 20 chars | Alphanumeric + hyphens only |\n| Lambda function | `name` | 64 chars | |\n| IAM role / user | `name` | 64 chars | |\n| S3 bucket | `bucket` | 63 chars | Must be globally unique |\n| RDS instance | `identifier` | 63 chars | Forms a DNS endpoint |\n| SQS queue | `name` | 80 chars | FIFO queues: 80 chars incl. `.fifo` |\n| EKS cluster | `name` | 100 chars | |\n| CloudFormation stack | `name` | 128 chars | |\n| EC2 Auto Scaling group | `name` | 255 chars | |\n| SNS topic | `name` | 256 chars | |\n\nShorten the name before running `pulumi up`. Do not rely on truncation helpers — truncated names can collide silently.",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "Resource types exempt from tagging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requiredTags": {
+            "description": "List of required tags for all resources. If not specified, only requires at least one tag to exist.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures all AWS resources must include tags for proper change tracking",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "5. Tagging",
+        "specification": "Enforce standardized resource tags for ownership, environment, and compliance tracking.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "resource-tagging",
+      "remediationSteps": "## Fix: Add Required Tags to AWS Resources\n\nAdd a `tags` property with meaningful values to enable proper change tracking and documentation:\n\n```typescript\nconst instance = new aws.ec2.Instance(\"my-instance\", {\n    ami: \"ami-0c55b159cbfafe1f0\",\n    instanceType: \"t3.micro\",\n    tags: {\n        Environment: \"production\", // Add meaningful tags for change tracking\n        Owner: \"team-name\",\n        Application: \"web-app\",\n    },\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures each S3 bucket has access logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "s3-bucket-access-logging",
+      "remediationSteps": "## Fix: Enable S3 Bucket Access Logging\n\nCreate a BucketLogging resource with a target bucket and prefix to enable access logging:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst logBucket = new aws.s3.Bucket(\"log-bucket\", {\n    // Configure log bucket settings\n});\n\nconst bucketLogging = new aws.s3.BucketLogging(\"my-bucket-logging\", {\n    bucket: myBucket.id,\n    targetBucket: logBucket.id, // Specify target bucket for logs\n    targetPrefix: \"logs/my-bucket/\", // Specify prefix for organization\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt bucket names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBuckets": {
+            "description": "List of bucket names exempt from encryption requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireBucketKeyEnabled": {
+            "default": false,
+            "description": "Require bucket key to be enabled for KMS encryption (reduces API calls and costs)",
+            "type": "boolean"
+          },
+          "requireCustomerManagedKey": {
+            "default": true,
+            "description": "Require customer-managed KMS keys when using KMS encryption",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "S3 buckets must have server-side encryption configured using BucketServerSideEncryptionConfiguration resource",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "2. Resource Encryption at Rest",
+        "specification": "Encrypt all stored data using approved encryption mechanisms to protect against unauthorized access.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "s3-bucket-encryption",
+      "remediationSteps": "## Fix: Configure S3 Bucket Server-Side Encryption\n\nCreate a separate `BucketServerSideEncryptionConfigurationV2` resource for your S3 bucket with encryption rules. Use AES256 or KMS encryption:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add encryption configuration resource\nconst bucketEncryption = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            sseAlgorithm: \"aws:kms\", // Enable KMS encryption\n            kmsMasterKeyId: kmsKey.arn, // Specify customer-managed key\n        },\n        bucketKeyEnabled: true, // Enable bucket key for cost optimization\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Prevents overly permissive S3 bucket policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "1. Least Privilege",
+        "specification": "Ensure all identities and services have only the minimum permissions required to perform their tasks.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "s3-bucket-least-privilege",
+      "remediationSteps": "## Fix: Use Specific Actions, Resources, and Principals\n\nReplace wildcard (*) values in S3 bucket policy statements with specific, scoped permissions:\n\n```typescript\nconst bucketPolicy = new aws.s3.BucketPolicy(\"policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: {\n                AWS: \"arn:aws:iam::123456789012:role/specific-role\" // Specify exact principal ARN\n            },\n            Action: [\"s3:GetObject\", \"s3:PutObject\"], // Use specific S3 actions\n            Resource: `${arn}/*` // Scope to specific bucket\n        }]\n    }))\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures each S3 bucket has a public access block with all settings enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "4. No Public Access",
+        "specification": "Prohibit direct public exposure of resources unless explicitly approved and required.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "s3-bucket-public-access-block",
+      "remediationSteps": "## Fix: Enable All Public Access Block Settings\n\nCreate a BucketPublicAccessBlock resource with all four settings set to `true`:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst publicAccessBlock = new aws.s3.BucketPublicAccessBlock(\"my-bucket-public-access-block\", {\n    bucket: myBucket.id,\n    blockPublicAcls: true,       // Blocks new public ACLs\n    blockPublicPolicy: true,     // Blocks new public bucket policies\n    ignorePublicAcls: true,      // Ignores existing public ACLs\n    restrictPublicBuckets: true, // Restricts public access to buckets with public policies\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt bucket names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBuckets": {
+            "description": "List of bucket names exempt from replication requirements. Supports wildcard patterns when allowPatternMatching is true (e.g., '*-replica', '*-backup')",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptDestinationBuckets": {
+            "default": true,
+            "description": "Automatically exempt buckets that are used as replication destinations to prevent infinite recursion",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures S3 buckets have replication configured for enhanced availability",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "s3-bucket-replication"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt bucket names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBuckets": {
+            "description": "List of bucket names exempt from versioning requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "S3 buckets must have versioning enabled using BucketVersioning resource",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "13. Data Backup and Recovery",
+        "specification": "Regularly back up critical data and systems, store backups securely, and test recovery procedures to ensure timely restoration after failures or disasters.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "s3-bucket-versioning",
+      "remediationSteps": "## Fix: Enable S3 Bucket Versioning\n\nCreate a separate `BucketVersioning` resource with status set to \"Enabled\" for each S3 bucket:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-data-bucket\",\n});\n\nconst versioning = new aws.s3.BucketVersioning(\"my-bucket-versioning\", {\n    bucket: bucket.id,\n    versioningConfiguration: {\n        status: \"Enabled\", // Enable versioning for data integrity and recovery\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt security groups (e.g., 'bastion-*')",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptSecurityGroups": {
+            "description": "Security groups exempt from default deny requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures Security Groups follow default deny with explicit allow principle",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "security-group-default-deny",
+      "remediationSteps": "## Fix: Replace Unrestricted CIDR Blocks with Specific IP Ranges\n\nReplace 0.0.0.0/0 in ingress and egress rules with specific CIDR blocks or security group references to follow the default deny with explicit allow principle:\n\n```typescript\nconst webSecurityGroup = new aws.ec2.SecurityGroup(\"web-sg\", {\n    vpcId: vpc.id,\n    ingress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n    egress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures security groups do not allow SSH/RDP from the internet",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "security-group-ssh-rdp",
+      "remediationSteps": "## Fix: Remove Public SSH and RDP Access\n\nRemove or restrict ingress rules that allow SSH (port 22) or RDP (port 3389) from 0.0.0.0/0. Use specific CIDR blocks for trusted networks or implement alternative secure access methods:\n\n```typescript\nconst securityGroup = new aws.ec2.SecurityGroup(\"my-sg\", {\n    vpcId: vpc.id,\n    ingress: [\n        {\n            fromPort: 22,\n            toPort: 22,\n            protocol: \"tcp\",\n            cidrBlocks: [\"10.0.0.0/16\"], // Restrict to specific network, not 0.0.0.0/0\n        },\n        {\n            fromPort: 3389,\n            toPort: 3389,\n            protocol: \"tcp\",\n            cidrBlocks: [\"10.0.0.0/16\"], // Restrict to specific network, not 0.0.0.0/0\n        },\n    ],\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures security groups follow strict firewall rules with default deny",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "11. Networking",
+        "specification": "Only allow required inbound and outbound traffic through network security groups, firewalls, or ACLs.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "security-group-strict",
+      "remediationSteps": "## Fix: Configure Strict Security Group Rules\n\nRestrict ingress rules to specific CIDR blocks instead of allowing access from the entire internet (0.0.0.0/0). Use specific protocols and narrow port ranges:\n\n```typescript\nconst securityGroup = new aws.ec2.SecurityGroup(\"my-sg\", {\n    vpcId: vpc.id,\n    ingress: [\n        {\n            protocol: \"tcp\", // Use specific protocol, not \"-1\" (all)\n            fromPort: 443,\n            toPort: 443,\n            cidrBlocks: [\"10.0.0.0/8\"], // Restrict to internal network, not \"0.0.0.0/0\"\n        },\n    ],\n    egress: [\n        {\n            protocol: \"-1\",\n            fromPort: 0,\n            toPort: 0,\n            cidrBlocks: [\"0.0.0.0/0\"],\n        },\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures SQS queues have dead letter queue configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "8. Require DLQ",
+        "specification": "Ensure all asynchronous messaging systems are configured with a dead-letter queue to handle failures.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "sqs-dead-letter-queue",
+      "remediationSteps": "## Fix: Configure Dead Letter Queue for SQS Queue\n\nSet the `redrivePolicy` with a `deadLetterTargetArn` pointing to a DLQ and specify `maxReceiveCount` to capture failed messages:\n\n```typescript\n// Create a dead letter queue first\nconst dlq = new aws.sqs.Queue(\"my-dlq\", {\n    messageRetentionSeconds: 1209600, // 14 days\n});\n\n// Configure the main queue with redrive policy\nconst queue = new aws.sqs.Queue(\"my-queue\", {\n    redrivePolicy: pulumi.interpolate`{\n        \"deadLetterTargetArn\": \"${dlq.arn}\",\n        \"maxReceiveCount\": 3\n    }`, // Configure DLQ to capture messages that fail processing\n    messageRetentionSeconds: 345600,\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "approvedLogDestinations": {
+            "description": "List of approved log destinations (S3 bucket ARNs, CloudWatch log group ARNs, or Kinesis stream ARNs)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures VPC flow logs use approved destinations for centralized monitoring",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "Pulumi Best Practices",
+        "reference": "6. Enforce Logging",
+        "specification": "Enable and retain audit logs for all security-relevant actions and events.",
+        "version": "1.0"
+      },
+      "message": "",
+      "name": "vpc-flow-logs",
+      "remediationSteps": "## Fix: Configure VPC Flow Logs with Approved Destination\n\nConfigure VPC Flow Logs to use one of the approved log destinations specified in the policy configuration:\n\n```typescript\nconst flowLog = new aws.ec2.FlowLog(\"vpc-flow-log\", {\n    vpcId: vpc.id,\n    trafficType: \"ALL\",\n    logDestination: \"arn:aws:s3:::approved-logging-bucket\", // Use approved destination\n    logDestinationType: \"s3\",\n});\n```",
+      "severity": "medium"
+    }
+  ],
+  "version": 14,
+  "versionTag": "1.4.1"
+}

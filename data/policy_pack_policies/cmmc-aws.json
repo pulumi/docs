@@ -1,0 +1,1784 @@
+{
+  "applied": false,
+  "displayName": "",
+  "name": "cmmc-aws",
+  "policies": [
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures EC2 instances have anti-malware/EDR agents deployed",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SI.L1-3.14.2 Provide protection from malicious code",
+        "specification": "Provide protection from malicious code at designated locations within organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "anti-malware-edr",
+      "remediationSteps": "## Fix: Deploy Anti-Malware/EDR Agent via User Data\n\nInclude anti-malware or EDR agent installation commands in the instance's userData:\n\n```typescript\nconst instance = new aws.ec2.Instance(\"protected-instance\", {\n    instanceType: \"t3.medium\",\n    ami: \"ami-0c55b159cbfafe1f0\",\n    userData: \"#!/bin/bash\\nyum install -y amazon-ssm-agent\\nsystemctl enable amazon-ssm-agent\\nsystemctl start amazon-ssm-agent\", // Install SSM agent\n    subnetId: subnet.id,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures API Gateway stages have access logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AU.L1-3.3.1 Create and retain system audit logs",
+        "specification": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "api-gateway-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging for API Gateway Stage\n\nConfigure the `accessLogSettings` property with a CloudWatch Log Group ARN to enable comprehensive audit logging:\n\n```typescript\nconst logGroup = new aws.cloudwatch.LogGroup(\"api-logs\", {\n    retentionInDays: 30,\n});\n\nconst stage = new aws.apigateway.Stage(\"my-stage\", {\n    restApi: api.id,\n    stageName: \"prod\",\n    deployment: deployment.id,\n    accessLogSettings: { // Enable access logging\n        destinationArn: logGroup.arn, // Specify CloudWatch Log Group\n        format: \"$context.requestId\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedAuthorizationTypes": {
+            "default": [
+              "AWS_IAM",
+              "COGNITO_USER_POOLS",
+              "CUSTOM",
+              "JWT"
+            ],
+            "description": "List of allowed authorization types for API Gateway methods",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures API Gateway methods use strong authorization instead of NONE",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.15 Protect authenticity of communications sessions",
+        "specification": "Protect the authenticity of communications sessions.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "api-gateway-authorization",
+      "remediationSteps": "## Fix: Enable Strong Authorization for API Gateway Method\n\nSet the `authorization` property to a strong authorization type (AWS_IAM, COGNITO_USER_POOLS, CUSTOM, or JWT) instead of \"NONE\":\n\n```typescript\nconst method = new aws.apigateway.Method(\"my-method\", {\n    restApi: api.id,\n    resourceId: resource.id,\n    httpMethod: \"GET\",\n    authorization: \"AWS_IAM\", // Use strong authorization instead of \"NONE\"\n    // For CUSTOM authorization, also specify the authorizer:\n    // authorizerId: authorizer.id,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures API Gateway V2 stages have access logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AU.L1-3.3.1 Create and retain system audit logs",
+        "specification": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "api-gateway-v2-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging for API Gateway V2 Stage\n\nConfigure the `accessLogSettings` property with a CloudWatch Log Group ARN to enable comprehensive audit logging:\n\n```typescript\nconst logGroup = new aws.cloudwatch.LogGroup(\"api-v2-logs\", {\n    retentionInDays: 30,\n});\n\nconst stage = new aws.apigatewayv2.Stage(\"my-stage\", {\n    apiId: api.id,\n    name: \"prod\",\n    accessLogSettings: { // Enable access logging\n        destinationArn: logGroup.arn, // Specify CloudWatch Log Group\n        format: \"$context.requestId\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures public-facing API Gateways have WAF associations",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L1-3.13.1 Monitor and control communications at boundaries",
+        "specification": "Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "api-gateway-waf-association",
+      "remediationSteps": "## Fix: Associate WAF Web ACL with API Gateway Stage\n\nCreate a WAF Web ACL association for your API Gateway stage:\n\n```typescript\n// Create a WAF Web ACL association for the API Gateway stage\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"api-waf-association\", {\n    resourceArn: pulumi.interpolate`arn:aws:apigateway:${region}::/restapis/${restApi.id}/stages/${stage.stageName}`, // Stage ARN\n    webAclArn: webAcl.arn, // Reference the WAF Web ACL ARN\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures public-facing AppSync GraphQL APIs have WAF associations",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L1-3.13.1 Monitor and control communications at boundaries",
+        "specification": "Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "appsync-waf-association",
+      "remediationSteps": "## Fix: Associate WAF Web ACL with AppSync GraphQL API\n\nCreate a WAF Web ACL association to protect your AppSync GraphQL API:\n\n```typescript\n// Create a WAF Web ACL association for the AppSync GraphQL API\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"appsync-waf-association\", {\n    resourceArn: graphqlApi.arn, // Reference the GraphQL API ARN\n    webAclArn: webAcl.arn, // Reference the WAF Web ACL ARN\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that CloudFront distributions only allow encypted ingress traffic.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.8 Implement cryptographic mechanisms for transmission",
+        "specification": "Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission unless otherwise protected by alternative physical safeguards.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "cloudfront-distribution-disallow-unencrypted-traffic",
+      "remediationSteps": "## Fix: Enforce HTTPS for CloudFront Distribution\n\nSet the `viewerProtocolPolicy` to \"redirect-to-https\" or \"https-only\" for both default and ordered cache behaviors to ensure all traffic is encrypted:\n\n```typescript\nconst distribution = new cloudfront.Distribution(\"my-distribution\", {\n    enabled: true,\n    defaultCacheBehavior: {\n        targetOriginId: origin.originId,\n        viewerProtocolPolicy: \"redirect-to-https\", // Enforce HTTPS for all traffic\n        allowedMethods: [\"GET\", \"HEAD\"],\n        cachedMethods: [\"GET\", \"HEAD\"],\n        forwardedValues: {\n            queryString: false,\n            cookies: { forward: \"none\" },\n        },\n    },\n    orderedCacheBehaviors: [{\n        pathPattern: \"/api/*\",\n        targetOriginId: origin.originId,\n        viewerProtocolPolicy: \"https-only\", // Enforce HTTPS-only for API paths\n        allowedMethods: [\"GET\", \"HEAD\", \"OPTIONS\"],\n        cachedMethods: [\"GET\", \"HEAD\"],\n        forwardedValues: {\n            queryString: true,\n            cookies: { forward: \"none\" },\n        },\n    }],\n    origins: [origin],\n    viewerCertificate: {\n        cloudfrontDefaultCertificate: true,\n    },\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures CloudFront distributions have WAF associations",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L1-3.13.1 Monitor and control communications at boundaries",
+        "specification": "Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "cloudfront-waf-association",
+      "remediationSteps": "## Fix: Associate WAF Web ACL with CloudFront Distribution\n\nSet the `webAclId` property to associate your CloudFront distribution with a WAF Web ACL:\n\n```typescript\nconst distribution = new aws.cloudfront.Distribution(\"my-distribution\", {\n    enabled: true,\n    webAclId: webAcl.arn, // Associate the WAF Web ACL with the distribution\n    origins: [{\n        domainName: bucket.bucketRegionalDomainName,\n        originId: \"S3Origin\",\n    }],\n    defaultCacheBehavior: {\n        targetOriginId: \"S3Origin\",\n        viewerProtocolPolicy: \"redirect-to-https\",\n        allowedMethods: [\"GET\", \"HEAD\"],\n        cachedMethods: [\"GET\", \"HEAD\"],\n        forwardedValues: {\n            queryString: false,\n            cookies: { forward: \"none\" },\n        },\n    },\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures DocumentDB cluster instances have automated minor version upgrades enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "CM.L1-3.4.2 Establish and enforce security configuration settings; MA.L1-3.7.1 Perform system maintenance; RA.L2-3.11.3 Remediate vulnerabilities",
+        "specification": "Establish and enforce security configuration settings for information technology products employed in organizational systems.; Perform maintenance on organizational systems.; Remediate vulnerabilities in accordance with risk assessments.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "docdb-clusterinstance-managed-service-patching",
+      "remediationSteps": "## Fix: Enable Automatic Minor Version Upgrades for DocumentDB Cluster Instance\n\nSet the `autoMinorVersionUpgrade` property to `true` to enable automated patching for managed service security updates:\n\n```typescript\nconst clusterInstance = new aws.docdb.ClusterInstance(\"my-cluster-instance\", {\n    clusterIdentifier: cluster.id,\n    instanceClass: \"db.r5.large\",\n    autoMinorVersionUpgrade: true, // Enable automatic minor version upgrades\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforces that all DynamoDB tables have Stream settings enabled to capture all changes",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AU.L1-3.3.1 Create and retain system audit logs; CM.L2-3.4.3 Track and log configuration changes",
+        "specification": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.; Track, review, approve or disapprove, and log changes to organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "dynamodb-streams-enabled",
+      "remediationSteps": "## Fix: Enable DynamoDB Streams\n\nSet the `streamEnabled` property to true on your DynamoDB table:\n\n```typescript\nconst table = new aws.dynamodb.Table(\"my-table\", {\n    name: \"my-table\",\n    attributes: [\n        { name: \"id\", type: \"S\" },\n    ],\n    hashKey: \"id\",\n    streamEnabled: true, // Enable DynamoDB Streams\n    billingMode: \"PAY_PER_REQUEST\",\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EBS volumes are encrypted.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "MP.L1-3.8.1 Protect system media containing CUI; SC.L2-3.13.16 Protect confidentiality of CUI at rest",
+        "specification": "Protect (i.e., physically control and securely store) system media containing CUI, both paper and digital.; Protect the confidentiality of CUI at rest.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ebs-volume-disallow-unencrypted-volume",
+      "remediationSteps": "## Fix: Enable EBS Volume Encryption\n\nSet the `encrypted` property to `true` on the EBS volume:\n\n```typescript\nconst volume = new aws.ebs.Volume(\"my-volume\", {\n    availabilityZone: \"us-west-2a\",\n    size: 100,\n    encrypted: true, // Enable encryption for the volume\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EC2 instances do not have a public IP address.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L1-3.1.1 Limit system access to authorized users; AC.L2-3.1.22 Control CUI on publicly accessible systems",
+        "specification": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).; Control CUI posted or processed on publicly accessible systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ec2-instance-disallow-public-ip",
+      "remediationSteps": "## Fix: Disable Public IP Address Assignment\n\nSet `associatePublicIpAddress` to `false` to prevent the instance from receiving a public IP address:\n\n```typescript\nconst instance = new ec2.Instance(\"my-instance\", {\n    instanceType: \"t3.micro\",\n    ami: \"ami-12345678\",\n    associatePublicIpAddress: false, // Disable public IP assignment\n    subnetId: privateSubnet.id,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Check that EC2 Security Groups do not allow inbound HTTP traffic.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "CM.L2-3.4.7 Restrict nonessential programs and services",
+        "specification": "Restrict, disable, or prevent the use of nonessential programs, functions, ports, protocols, and services.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ec2-security-group-disallow-inbound-http-traffic",
+      "remediationSteps": "## Fix: Remove HTTP Inbound Traffic Rules\n\nRemove any ingress rules that allow HTTP traffic on port 80, or use HTTPS (port 443) instead:\n\n```typescript\nconst securityGroup = new ec2.SecurityGroup(\"my-sg\", {\n    vpcId: vpc.id,\n    ingress: [\n        {\n            protocol: \"tcp\",\n            fromPort: 443, // Use HTTPS instead of HTTP (port 80)\n            toPort: 443,\n            cidrBlocks: [\"0.0.0.0/0\"],\n        },\n        // Remove any rules with fromPort: 80 or toPort: 80\n    ],\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures ECR repositories have image scanning enabled for vulnerability management",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "RA.L2-3.11.2 Scan for vulnerabilities; SI.L2-3.14.5 Perform periodic and real-time scans",
+        "specification": "Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems and applications are identified.; Perform periodic scans of organizational systems and real-time scans of files from external sources as files are downloaded, opened, or executed.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ecr-image-scanning",
+      "remediationSteps": "## Fix: Enable Image Scanning for ECR Repository\n\nSet the `imageScanningConfiguration` with `scanOnPush: true` to automatically scan container images for vulnerabilities when they are pushed:\n\n```typescript\nconst repository = new aws.ecr.Repository(\"my-repo\", {\n    name: \"my-application\",\n    imageScanningConfiguration: {\n        scanOnPush: true, // Enable automatic vulnerability scanning\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that ECR repositories have 'scan-on-push' enabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "RA.L2-3.11.2 Scan for vulnerabilities; SI.L1-3.14.1 Identify and correct system flaws; SI.L2-3.14.5 Perform periodic and real-time scans",
+        "specification": "Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems and applications are identified.; Identify, report, and correct system flaws in a timely manner.; Perform periodic scans of organizational systems and real-time scans of files from external sources as files are downloaded, opened, or executed.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ecr-repository-enable-image-scan",
+      "remediationSteps": "## Fix: Enable Scan-on-Push for ECR Repository\n\nSet `scanOnPush` to `true` in the `imageScanningConfiguration` to automatically scan container images for vulnerabilities when pushed:\n\n```typescript\nconst repository = new aws.ecr.Repository(\"my-repository\", {\n    imageScanningConfiguration: {\n        scanOnPush: true, // Enable automatic vulnerability scanning\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedImages": {
+            "description": "An optional array of allowed image identifiers",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures ECS task definitions use images from repositories with vulnerability scanning",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "RA.L2-3.11.2 Scan for vulnerabilities; SI.L2-3.14.5 Perform periodic and real-time scans",
+        "specification": "Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems and applications are identified.; Perform periodic scans of organizational systems and real-time scans of files from external sources as files are downloaded, opened, or executed.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "ecs-task-definition-image-scanning",
+      "remediationSteps": "## Fix: Use ECR Images with Scanning Enabled\n\nUpdate your ECS task definition to use container images from ECR repositories that have vulnerability scanning enabled:\n\n```typescript\nconst taskDefinition = new aws.ecs.TaskDefinition(\"my-task\", {\n    family: \"my-app\",\n    containerDefinitions: JSON.stringify([{\n        name: \"app\",\n        image: \"123456789012.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest\", // Use ECR image with scanning\n        memory: 512,\n        cpu: 256,\n    }]),\n    requiresCompatibilities: [\"FARGATE\"],\n    networkMode: \"awsvpc\",\n    cpu: \"256\",\n    memory: \"512\",\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that EFS File Systems do not have an unencrypted file system.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.16 Protect confidentiality of CUI at rest",
+        "specification": "Protect the confidentiality of CUI at rest.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "efs-file-system-disallow-unencrypted-file-system",
+      "remediationSteps": "## Fix: Enable Encryption for EFS File System\n\nSet the `encrypted` property to `true` when creating an EFS file system:\n\n```typescript\nconst fileSystem = new aws.efs.FileSystem(\"my-efs\", {\n    encrypted: true, // Enable encryption at rest\n    kmsKeyId: kmsKey.arn, // Optional: specify a custom KMS key\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Check that ELB Load Balancers do not allow unencrypted (HTTP) traffic.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.13 Employ cryptographic mechanisms for remote access; SC.L2-3.13.8 Implement cryptographic mechanisms for transmission; SC.L2-3.13.15 Protect authenticity of communications sessions",
+        "specification": "Employ cryptographic mechanisms to protect the confidentiality of remote access sessions.; Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission unless otherwise protected by alternative physical safeguards.; Protect the authenticity of communications sessions.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "elb-load-balancer-disallow-unencrypted-traffic",
+      "remediationSteps": "## Fix: Use HTTPS Instead of HTTP for Load Balancer Listeners\n\nConfigure all listeners to use HTTPS (port 443) instead of HTTP (port 80) to ensure encrypted traffic:\n\n```typescript\nconst lb = new aws.elb.LoadBalancer(\"my-lb\", {\n    availabilityZones: [\"us-west-2a\", \"us-west-2b\"],\n    listeners: [{\n        instancePort: 443,\n        instanceProtocol: \"https\",\n        lbPort: 443,\n        lbProtocol: \"https\", // Use HTTPS instead of HTTP\n        sslCertificateId: \"arn:aws:iam::123456789012:server-certificate/my-cert\",\n    }],\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedEnvironmentValues": {
+            "description": "List of allowed environment values",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "environmentTagName": {
+            "default": "Environment",
+            "description": "Name of the tag used to specify environment",
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "Resource types exempt from environment tagging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures that resources are tagged to distinguish between production and non-production environments",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "MP.L2-3.8.4 Mark media with CUI markings",
+        "specification": "Mark media with necessary CUI markings and distribution limitations.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "environment-separation-tagging",
+      "remediationSteps": "## Fix: Add Environment Tag to Resource\n\nAdd an \"Environment\" tag to the resource with a valid environment value (e.g., production, development, staging, testing):\n\n```typescript\nconst instance = new aws.ec2.Instance(\"web-server\", {\n    instanceType: \"t3.micro\",\n    ami: \"ami-12345678\",\n    tags: {\n        \"Environment\": \"production\", // Add environment tag for proper separation\n        \"Name\": \"web-server\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure IAM password policy requires minimum length of 14 or greater.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "IA.L2-3.5.7 Enforce minimum password complexity",
+        "specification": "Enforce a minimum password complexity and change of characters when new passwords are created.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-password-policy-minimum-password-length",
+      "remediationSteps": "## Fix: Set Minimum Password Length to 14 Characters\n\nSet the `minimumPasswordLength` to 14 or greater for the IAM Account Password Policy:\n\n```typescript\nconst passwordPolicy = new aws.iam.AccountPasswordPolicy(\"account-password-policy\", {\n    minimumPasswordLength: 14, // Set minimum length to at least 14 characters\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "minimumPasswordHistory": {
+            "default": 24,
+            "description": "Minimum number of previous passwords that cannot be reused (default: 24)",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure IAM password policy prevents password reuse.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "IA.L2-3.5.8 Prohibit password reuse",
+        "specification": "Prohibit password reuse for a specified number of generations.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-password-policy-prevent-reuse",
+      "remediationSteps": "## Fix: Configure Password Reuse Prevention\n\nSet the `passwordReusePrevention` property to 24 to prevent users from reusing their previous 24 passwords:\n\n```typescript\nconst accountPasswordPolicy = new aws.iam.AccountPasswordPolicy(\"password-policy\", {\n    minimumPasswordLength: 14,\n    requireNumbers: true,\n    requireSymbols: true,\n    requireUppercaseCharacters: true,\n    requireLowercaseCharacters: true,\n    passwordReusePrevention: 24, // Prevent reuse of previous 24 passwords\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM policies follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L1-3.1.1 Limit system access to authorized users; AC.L1-3.1.2 Limit system access to authorized transaction types; AC.L2-3.1.4 Separate the duties of individuals; AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.6 Use non-privileged accounts for nonsecurity functions; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions; AC.L2-3.1.15 Authorize remote execution of privileged commands; AU.L2-3.3.9 Limit audit logging management to privileged users; CM.L2-3.4.5 Define access restrictions for system changes; IA.L1-3.5.1 Identify system users and devices; MA.L1-3.7.2 Provide controls on maintenance tools and personnel",
+        "specification": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).; Limit system access to the types of transactions and functions that authorized users are permitted to execute.; Separate the duties of individuals to reduce the risk of malevolent activity without collusion.; Employ the principle of least privilege, including for specific security functions and privileged accounts.; Use non-privileged accounts or roles when accessing nonsecurity functions.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.; Authorize remote execution of privileged commands and remote access to security-relevant information.; Limit management of audit logging functionality to a subset of privileged users.; Define, document, approve, and enforce physical and logical access restrictions associated with changes to organizational systems.; Identify system users, processes acting on behalf of users, and devices.; Provide controls on the tools, techniques, mechanisms, and personnel used to conduct system maintenance.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-policy-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions that grant only the minimum required access:\n\n```typescript\nconst policy = new aws.iam.Policy(\"my-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:GetObject\",        // Specify exact actions needed\n                \"s3:PutObject\",\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptRolePatterns": {
+            "default": [],
+            "description": "List of role name patterns to exempt from MFA requirement (supports wildcards like 'service-*')",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM roles require MFA when assumed by human users (not AWS services)",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "IA.L1-3.5.2 Authenticate identities of users and devices; IA.L2-3.5.3 Use multifactor authentication; MA.L2-3.7.5 Require MFA for nonlocal maintenance",
+        "specification": "Authenticate (or verify) the identities of users, processes, or devices, as a prerequisite to allowing access to organizational systems.; Use multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts.; Require multifactor authentication to establish nonlocal maintenance sessions via external network connections and terminate such connections when nonlocal maintenance is complete.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-role-assume-role-mfa-enforcement",
+      "remediationSteps": "## Fix: Add MFA Condition to Role Trust Policy\n\nAdd the `aws:MultiFactorAuthPresent` condition to any assume role statement that allows human principals to assume the role:\n\n```typescript\nconst adminRole = new aws.iam.Role(\"admin-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: {\n                AWS: \"arn:aws:iam::123456789012:root\" // Root account (human)\n            },\n            Action: \"sts:AssumeRole\",\n            Condition: {\n                Bool: {\n                    \"aws:MultiFactorAuthPresent\": \"true\" // Require MFA\n                }\n            }\n        }],\n    }),\n});\n\nconst userAssumeRole = new aws.iam.Role(\"user-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: {\n                AWS: \"arn:aws:iam::123456789012:user/john.doe\" // IAM user (human)\n            },\n            Action: \"sts:AssumeRole\",\n            Condition: {\n                Bool: {\n                    \"aws:MultiFactorAuthPresent\": \"true\" // Require MFA\n                }\n            }\n        }],\n    }),\n});\n\n// Service roles are automatically exempt (no MFA condition needed)\nconst ecsTaskRole = new aws.iam.Role(\"ecs-task-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: {\n                Service: \"ecs-tasks.amazonaws.com\" // Service principal - no MFA needed\n            },\n            Action: \"sts:AssumeRole\"\n        }],\n    }),\n});\n\n// Role principals are never flagged (could be cross-account service roles)\nconst crossAccountRole = new aws.iam.Role(\"cross-account-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: {\n                AWS: \"arn:aws:iam::111111111111:role/service-role\" // Role principal - not checked\n            },\n            Action: \"sts:AssumeRole\"\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM roles follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L1-3.1.1 Limit system access to authorized users; AC.L1-3.1.2 Limit system access to authorized transaction types; AC.L2-3.1.4 Separate the duties of individuals; AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.6 Use non-privileged accounts for nonsecurity functions; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions; AC.L2-3.1.15 Authorize remote execution of privileged commands; AU.L2-3.3.9 Limit audit logging management to privileged users; CM.L2-3.4.5 Define access restrictions for system changes; IA.L1-3.5.1 Identify system users and devices; MA.L1-3.7.2 Provide controls on maintenance tools and personnel",
+        "specification": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).; Limit system access to the types of transactions and functions that authorized users are permitted to execute.; Separate the duties of individuals to reduce the risk of malevolent activity without collusion.; Employ the principle of least privilege, including for specific security functions and privileged accounts.; Use non-privileged accounts or roles when accessing nonsecurity functions.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.; Authorize remote execution of privileged commands and remote access to security-relevant information.; Limit management of audit logging functionality to a subset of privileged users.; Define, document, approve, and enforce physical and logical access restrictions associated with changes to organizational systems.; Identify system users, processes acting on behalf of users, and devices.; Provide controls on the tools, techniques, mechanisms, and personnel used to conduct system maintenance.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-role-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources in inline policies with explicit, scoped permissions:\n\n```typescript\nconst role = new aws.iam.Role(\"my-role\", {\n    assumeRolePolicy: assumePolicyDoc,\n    inlinePolicies: [{\n        name: \"my-inline-policy\",\n        policy: JSON.stringify({\n            Version: \"2012-10-17\",\n            Statement: [{\n                Effect: \"Allow\",\n                Action: [\n                    \"dynamodb:GetItem\",    // Specify exact actions needed\n                    \"dynamodb:PutItem\",\n                ],\n                Resource: [\n                    \"arn:aws:dynamodb:us-east-1:123456789012:table/MyTable\",  // Scope to specific resources\n                ],\n            }],\n        }),\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM role policies follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L1-3.1.1 Limit system access to authorized users; AC.L1-3.1.2 Limit system access to authorized transaction types; AC.L2-3.1.4 Separate the duties of individuals; AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.6 Use non-privileged accounts for nonsecurity functions; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions; AC.L2-3.1.15 Authorize remote execution of privileged commands; AU.L2-3.3.9 Limit audit logging management to privileged users; CM.L2-3.4.5 Define access restrictions for system changes; IA.L1-3.5.1 Identify system users and devices; MA.L1-3.7.2 Provide controls on maintenance tools and personnel",
+        "specification": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).; Limit system access to the types of transactions and functions that authorized users are permitted to execute.; Separate the duties of individuals to reduce the risk of malevolent activity without collusion.; Employ the principle of least privilege, including for specific security functions and privileged accounts.; Use non-privileged accounts or roles when accessing nonsecurity functions.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.; Authorize remote execution of privileged commands and remote access to security-relevant information.; Limit management of audit logging functionality to a subset of privileged users.; Define, document, approve, and enforce physical and logical access restrictions associated with changes to organizational systems.; Identify system users, processes acting on behalf of users, and devices.; Provide controls on the tools, techniques, mechanisms, and personnel used to conduct system maintenance.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-role-policy-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst rolePolicy = new aws.iam.RolePolicy(\"my-role-policy\", {\n    role: myRole.id,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"ec2:DescribeInstances\",   // Specify exact actions needed\n                \"ec2:StartInstances\",\n                \"ec2:StopInstances\",\n            ],\n            Resource: [\n                \"arn:aws:ec2:us-east-1:123456789012:instance/*\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "administrativeMaxDuration": {
+            "default": 7200,
+            "description": "Maximum session duration in seconds for administrative roles",
+            "maximum": 43200,
+            "minimum": 3600,
+            "type": "number"
+          },
+          "crossAccountMaxDuration": {
+            "default": 14400,
+            "description": "Maximum session duration in seconds for cross-account roles",
+            "maximum": 43200,
+            "minimum": 3600,
+            "type": "number"
+          },
+          "defaultMaxDuration": {
+            "default": 3600,
+            "description": "Default maximum session duration in seconds for general roles",
+            "maximum": 43200,
+            "minimum": 3600,
+            "type": "number"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "roleSpecificLimits": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "description": "Role name to maximum duration mapping for specific role overrides",
+            "type": "object"
+          },
+          "serviceMaxDuration": {
+            "default": 28800,
+            "description": "Maximum session duration in seconds for service roles",
+            "maximum": 43200,
+            "minimum": 3600,
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforces maximum session duration for IAM roles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.11 Terminate user sessions after inactivity",
+        "specification": "Terminate (automatically) a user session after a defined condition.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-role-session-duration",
+      "remediationSteps": "## Fix: Set Appropriate Maximum Session Duration for IAM Role\n\nConfigure the `maxSessionDuration` property based on the role type to limit credential exposure window:\n\n```typescript\nconst appRole = new aws.iam.Role(\"app-role\", {\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { Service: \"ec2.amazonaws.com\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n    maxSessionDuration: 3600, // 1 hour for general roles (default)\n});\n\nconst adminRole = new aws.iam.Role(\"admin-role\", {\n    name: \"AdminRole\",\n    assumeRolePolicy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: { AWS: \"arn:aws:iam::123456789012:root\" },\n            Action: \"sts:AssumeRole\",\n        }],\n    }),\n    maxSessionDuration: 7200, // 2 hours for administrative roles\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "mfaExemptUsers": {
+            "default": [],
+            "description": "List of IAM user names that are exempt from MFA requirements (e.g., break-glass accounts)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM users with console access have MFA devices",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "IA.L1-3.5.2 Authenticate identities of users and devices; IA.L2-3.5.3 Use multifactor authentication",
+        "specification": "Authenticate (or verify) the identities of users, processes, or devices, as a prerequisite to allowing access to organizational systems.; Use multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-user-mfa-console-access",
+      "remediationSteps": "## Fix: Enable MFA for IAM User Console Access\n\nCreate a Virtual MFA Device for each IAM user with console access:\n\n```typescript\nconst user = new aws.iam.User(\"example-user\", {\n    name: \"example-user\",\n});\n\nconst loginProfile = new aws.iam.UserLoginProfile(\"example-login\", {\n    user: user.name,\n});\n\n// Create Virtual MFA Device for the user\nconst mfaDevice = new aws.iam.VirtualMfaDevice(\"example-user-mfa\", {\n    virtualMfaDeviceName: \"example-user-mfa\", // Name must match pattern: <username>-mfa or <username>-mfa-device\n    userName: user.name, // Associate MFA device with the user\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM user policies follow least privilege principles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L1-3.1.1 Limit system access to authorized users; AC.L1-3.1.2 Limit system access to authorized transaction types; AC.L2-3.1.4 Separate the duties of individuals; AC.L2-3.1.5 Employ the principle of least privilege; AC.L2-3.1.6 Use non-privileged accounts for nonsecurity functions; AC.L2-3.1.7 Prevent non-privileged users from executing privileged functions; AC.L2-3.1.15 Authorize remote execution of privileged commands; AU.L2-3.3.9 Limit audit logging management to privileged users; CM.L2-3.4.5 Define access restrictions for system changes; IA.L1-3.5.1 Identify system users and devices; MA.L1-3.7.2 Provide controls on maintenance tools and personnel",
+        "specification": "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems).; Limit system access to the types of transactions and functions that authorized users are permitted to execute.; Separate the duties of individuals to reduce the risk of malevolent activity without collusion.; Employ the principle of least privilege, including for specific security functions and privileged accounts.; Use non-privileged accounts or roles when accessing nonsecurity functions.; Prevent non-privileged users from executing privileged functions and capture the execution of such functions in audit logs.; Authorize remote execution of privileged commands and remote access to security-relevant information.; Limit management of audit logging functionality to a subset of privileged users.; Define, document, approve, and enforce physical and logical access restrictions associated with changes to organizational systems.; Identify system users, processes acting on behalf of users, and devices.; Provide controls on the tools, techniques, mechanisms, and personnel used to conduct system maintenance.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "iam-user-policy-least-privilege",
+      "remediationSteps": "## Fix: Replace Wildcard Permissions with Specific Actions and Resources\n\nReplace wildcard actions and resources with explicit, scoped permissions:\n\n```typescript\nconst userPolicy = new aws.iam.UserPolicy(\"my-user-policy\", {\n    user: myUser.name,\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"s3:ListBucket\",         // Specify exact actions needed\n            ],\n            Resource: [\n                \"arn:aws:s3:::my-bucket\",  // Scope to specific resources\n            ],\n        }],\n    }),\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedKeySpecs": {
+            "description": "An optional array of allowed key specs (e.g., SYMMETRIC_DEFAULT, RSA_2048, etc.)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowedKeyUsages": {
+            "description": "An optional array of allowed key usages (e.g., ENCRYPT_DECRYPT, SIGN_VERIFY)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "requireCustomerMasterKeys": {
+            "description": "Whether to require customer-managed keys (not AWS managed keys)",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Validates KMS key creation with appropriate specifications and origins",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.10 Establish and manage cryptographic keys; SC.L2-3.13.11 Employ FIPS-validated cryptography",
+        "specification": "Establish and manage cryptographic keys for cryptography employed in organizational systems.; Employ FIPS-validated cryptography when used to protect the confidentiality of CUI.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "kms-key-creation",
+      "remediationSteps": "## Fix: Configure KMS Key with Proper Specifications\n\nAdd a description, configure an appropriate deletion window (7-30 days), and ensure key specifications match your security requirements:\n\n```typescript\nconst key = new aws.kms.Key(\"my-key\", {\n    description: \"Key for encrypting application data\", // Add clear description\n    customerMasterKeySpec: \"SYMMETRIC_DEFAULT\", // Use approved key spec\n    keyUsage: \"ENCRYPT_DECRYPT\", // Specify key usage\n    deletionWindowInDays: 30, // Set deletion window between 7-30 days\n    enableKeyRotation: true,\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "criticalKeyTags": {
+            "description": "Tag keys that identify critical keys requiring special protection",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maximumDeletionWindow": {
+            "description": "Maximum deletion window in days (default: 30)",
+            "type": "number"
+          },
+          "minimumDeletionWindow": {
+            "description": "Minimum deletion window in days (default: 7)",
+            "type": "number"
+          },
+          "requireDeletionProtection": {
+            "description": "Whether to require deletion protection for critical keys",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Validates KMS key deletion windows and lifecycle management",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.10 Establish and manage cryptographic keys",
+        "specification": "Establish and manage cryptographic keys for cryptography employed in organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "kms-key-deletion-lifecycle",
+      "remediationSteps": "## Fix: Configure KMS Key Deletion Window and Lifecycle Management\n\nSet a `deletionWindowInDays` between 7 and 30 days, add descriptive tags, and provide a clear description for proper lifecycle management:\n\n```typescript\nconst kmsKey = new aws.kms.Key(\"my-key\", {\n    description: \"Encryption key for application data\",\n    deletionWindowInDays: 30, // Set deletion window between 7-30 days\n    tags: {\n        Environment: \"production\",\n        Owner: \"security-team\",\n        Purpose: \"data-encryption\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that KMS Keys have key rotation enabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.10 Establish and manage cryptographic keys",
+        "specification": "Establish and manage cryptographic keys for cryptography employed in organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "kms-key-enable-key-rotation",
+      "remediationSteps": "## Fix: Enable Automatic Key Rotation for KMS Keys\n\nSet the `enableKeyRotation` property to `true` for all KMS keys to ensure cryptographic keys are automatically rotated annually:\n\n```typescript\nconst key = new kms.Key(\"my-key\", {\n    description: \"KMS key with automatic rotation\",\n    enableKeyRotation: true, // Enable automatic annual key rotation\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures that all Lambda functions have their environment variables encrypted using AWS KMS",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.16 Protect confidentiality of CUI at rest",
+        "specification": "Protect the confidentiality of CUI at rest.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "lambda-environment-variables-encryption",
+      "remediationSteps": "## Fix: Encrypt Lambda Environment Variables with KMS\n\nConfigure a KMS key for Lambda function environment variable encryption by setting the `kmsKeyArn` property:\n\n```typescript\nconst kmsKey = new aws.kms.Key(\"lambda-env-key\", {\n    description: \"KMS key for Lambda environment variable encryption\",\n});\n\nconst lambdaFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: role.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./function\"),\n    }),\n    environment: {\n        variables: {\n            DATABASE_URL: \"postgres://example.com/db\",\n        },\n    },\n    kmsKeyArn: kmsKey.arn, // Encrypt environment variables with KMS\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "minimumLogLevel": {
+            "default": "INFO",
+            "description": "Minimum required log level",
+            "enum": [
+              "DEBUG",
+              "INFO",
+              "WARN"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures that all AWS Lambda functions have logging enabled to track output data processing",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AU.L1-3.3.1 Create and retain system audit logs",
+        "specification": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "lambda-function-logging",
+      "remediationSteps": "## Fix: Enable Lambda Function Logging Configuration\n\nAdd the `loggingConfig` property to your Lambda function with an appropriate `applicationLogLevel` (DEBUG, INFO, or WARN):\n\n```typescript\nconst myFunction = new aws.lambda.Function(\"my-function\", {\n    runtime: \"nodejs18.x\",\n    handler: \"index.handler\",\n    role: lambdaRole.arn,\n    code: new pulumi.asset.AssetArchive({\n        \".\": new pulumi.asset.FileArchive(\"./app\"),\n    }),\n    loggingConfig: {\n        logFormat: \"JSON\",\n        applicationLogLevel: \"INFO\", // Set log level to INFO or DEBUG for adequate logging\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures public-facing Load Balancers have WAF associations",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L1-3.13.1 Monitor and control communications at boundaries",
+        "specification": "Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "load-balancer-waf-association",
+      "remediationSteps": "## Fix: Associate WAF Web ACL with Load Balancer\n\nCreate a WAF Web ACL association to protect your public-facing Load Balancer:\n\n```typescript\n// Create a WAF Web ACL association for the Load Balancer\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"lb-waf-association\", {\n    resourceArn: loadBalancer.arn, // Reference the Load Balancer ARN\n    webAclArn: webAcl.arn, // Reference the WAF Web ACL ARN\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures IAM policies follow least privilege principles for Pub/Sub services (SNS, SQS, Kinesis)",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.5 Employ the principle of least privilege",
+        "specification": "Employ the principle of least privilege, including for specific security functions and privileged accounts.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "pubsub-least-privilege-iam",
+      "remediationSteps": "## Fix: Use Specific Pub/Sub IAM Actions and Resource ARNs\n\nReplace wildcard permissions with specific actions and resource ARNs for Pub/Sub services:\n\n```typescript\nconst queuePolicy = new aws.iam.Policy(\"queue-policy\", {\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Action: [\n                \"sqs:SendMessage\",      // Use specific actions instead of sqs:*\n                \"sqs:ReceiveMessage\",\n                \"sqs:DeleteMessage\",\n            ],\n            Resource: \"arn:aws:sqs:us-east-1:123456789012:my-queue\", // Use specific ARN instead of *\n        }],\n    }),\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures RDS instances have audit logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AU.L1-3.3.1 Create and retain system audit logs",
+        "specification": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "rds-audit-logging",
+      "remediationSteps": "## Fix: Enable RDS Audit Logging to CloudWatch\n\nConfigure `enabledCloudwatchLogsExports` with appropriate audit log types for your database engine:\n\n```typescript\n// For MySQL/MariaDB\nconst db = new aws.rds.Instance(\"my-db\", {\n    engine: \"mysql\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"audit\", \"error\", \"general\", \"slowquery\"], // Enable audit logs\n    // ... other configuration\n});\n\n// For PostgreSQL\nconst pgDb = new aws.rds.Instance(\"my-pg-db\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    enabledCloudwatchLogsExports: [\"postgresql\"], // Enable PostgreSQL logs\n    // ... other configuration\n});\n\n// For Aurora clusters\nconst cluster = new aws.rds.Cluster(\"my-cluster\", {\n    engine: \"aurora-mysql\",\n    enabledCloudwatchLogsExports: [\"audit\", \"error\", \"general\", \"slowquery\"], // Enable audit logs\n    // ... other configuration\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt cluster instance identifiers",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptClusterInstances": {
+            "description": "List of cluster instance identifiers to exempt from SSL encryption requirement",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures RDS cluster instances have SSL/TLS encryption enabled through parameter group configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.13 Employ cryptographic mechanisms for remote access; SC.L2-3.13.8 Implement cryptographic mechanisms for transmission",
+        "specification": "Employ cryptographic mechanisms to protect the confidentiality of remote access sessions.; Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission unless otherwise protected by alternative physical safeguards.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "rds-clusterinstance-ssl-encryption",
+      "remediationSteps": "## Fix: Configure SSL/TLS Encryption for Aurora Cluster Instance\n\nConfigure a parameter group to enforce SSL/TLS connections for your Aurora cluster instance:\n\n```typescript\nconst clusterParamGroup = new aws.rds.ParameterGroup(\"cluster-params\", {\n    family: \"aurora-postgresql14\",\n    parameters: [\n        {\n            name: \"rds.force_ssl\",\n            value: \"1\", // Enforce SSL/TLS for all connections\n        },\n    ],\n});\n\nconst clusterInstance = new aws.rds.ClusterInstance(\"my-cluster-instance\", {\n    clusterIdentifier: cluster.id,\n    instanceClass: \"db.r5.large\",\n    engine: cluster.engine,\n    dbParameterGroupName: clusterParamGroup.name, // Attach parameter group with SSL enforcement\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that RDS Instance public access is not enabled.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.22 Control CUI on publicly accessible systems",
+        "specification": "Control CUI posted or processed on publicly accessible systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "rds-instance-disallow-public-access",
+      "remediationSteps": "## Fix: Disable Public Access for RDS Instance\n\nSet `publiclyAccessible` to `false` to prevent the RDS instance from being accessible from the internet:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"my-database\", {\n    allocatedStorage: 20,\n    engine: \"mysql\",\n    engineVersion: \"8.0\",\n    instanceClass: \"db.t3.micro\",\n    dbSubnetGroupName: privateSubnetGroup.name,\n    vpcSecurityGroupIds: [dbSecurityGroup.id],\n    publiclyAccessible: false, // Disable public access\n    username: dbUsername,\n    password: dbPassword,\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Checks that RDS instance storage is encrypted.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "MP.L2-3.8.9 Protect confidentiality of backup CUI; SC.L2-3.13.16 Protect confidentiality of CUI at rest",
+        "specification": "Protect the confidentiality of backup CUI at storage locations.; Protect the confidentiality of CUI at rest.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "rds-instance-disallow-unencrypted-storage",
+      "remediationSteps": "## Fix: Enable RDS Storage Encryption\n\nSet the `storageEncrypted` property to true to encrypt the RDS instance storage:\n\n```typescript\nconst dbInstance = new aws.rds.Instance(\"my-db\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    storageEncrypted: true, // Enable storage encryption\n    username: \"admin\",\n    password: adminPassword,\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures RDS instances have automated minor version upgrades enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "CM.L1-3.4.2 Establish and enforce security configuration settings; MA.L1-3.7.1 Perform system maintenance; RA.L2-3.11.3 Remediate vulnerabilities; SI.L1-3.14.1 Identify and correct system flaws",
+        "specification": "Establish and enforce security configuration settings for information technology products employed in organizational systems.; Perform maintenance on organizational systems.; Remediate vulnerabilities in accordance with risk assessments.; Identify, report, and correct system flaws in a timely manner.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "rds-instance-managed-service-patching",
+      "remediationSteps": "## Fix: Enable Automatic Minor Version Upgrades for RDS\n\nSet the `autoMinorVersionUpgrade` property to `true` to enable automated patching for managed service security updates:\n\n```typescript\nconst db = new aws.rds.Instance(\"my-database\", {\n    engine: \"postgres\",\n    instanceClass: \"db.t3.micro\",\n    allocatedStorage: 20,\n    dbName: \"mydb\",\n    username: \"admin\",\n    password: dbPassword,\n    autoMinorVersionUpgrade: true, // Enable automatic minor version upgrades\n    skipFinalSnapshot: true,\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResourceTypes": {
+            "description": "Resource types exempt from tagging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requiredTags": {
+            "description": "List of required tags for all resources. If not specified, only requires at least one tag to exist.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures all AWS resources must include tags for proper change tracking",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "MP.L2-3.8.4 Mark media with CUI markings",
+        "specification": "Mark media with necessary CUI markings and distribution limitations.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "resource-tagging",
+      "remediationSteps": "## Fix: Add Required Tags to AWS Resources\n\nAdd a `tags` property with meaningful values to enable proper change tracking and documentation:\n\n```typescript\nconst instance = new aws.ec2.Instance(\"my-instance\", {\n    ami: \"ami-0c55b159cbfafe1f0\",\n    instanceType: \"t3.micro\",\n    tags: {\n        Environment: \"production\", // Add meaningful tags for change tracking\n        Owner: \"team-name\",\n        Application: \"web-app\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures each S3 bucket has access logging enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AU.L1-3.3.1 Create and retain system audit logs",
+        "specification": "Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "s3-bucket-access-logging",
+      "remediationSteps": "## Fix: Enable S3 Bucket Access Logging\n\nCreate a BucketLogging resource with a target bucket and prefix to enable access logging:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst logBucket = new aws.s3.Bucket(\"log-bucket\", {\n    // Configure log bucket settings\n});\n\nconst bucketLogging = new aws.s3.BucketLogging(\"my-bucket-logging\", {\n    bucket: myBucket.id,\n    targetBucket: logBucket.id, // Specify target bucket for logs\n    targetPrefix: \"logs/my-bucket/\", // Specify prefix for organization\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard pattern matching for exempt bucket names",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBuckets": {
+            "description": "List of bucket names exempt from encryption requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireBucketKeyEnabled": {
+            "default": false,
+            "description": "Require bucket key to be enabled for KMS encryption (reduces API calls and costs)",
+            "type": "boolean"
+          },
+          "requireCustomerManagedKey": {
+            "default": true,
+            "description": "Require customer-managed KMS keys when using KMS encryption",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "S3 buckets must have server-side encryption configured using BucketServerSideEncryptionConfiguration resource",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "MP.L1-3.8.1 Protect system media containing CUI; MP.L2-3.8.9 Protect confidentiality of backup CUI; SC.L2-3.13.11 Employ FIPS-validated cryptography; SC.L2-3.13.16 Protect confidentiality of CUI at rest",
+        "specification": "Protect (i.e., physically control and securely store) system media containing CUI, both paper and digital.; Protect the confidentiality of backup CUI at storage locations.; Employ FIPS-validated cryptography when used to protect the confidentiality of CUI.; Protect the confidentiality of CUI at rest.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "s3-bucket-encryption",
+      "remediationSteps": "## Fix: Configure S3 Bucket Server-Side Encryption\n\nCreate a separate `BucketServerSideEncryptionConfigurationV2` resource for your S3 bucket with encryption rules. Use AES256 or KMS encryption:\n\n```typescript\nconst bucket = new aws.s3.BucketV2(\"my-bucket\", {\n    bucket: \"my-secure-bucket\",\n});\n\n// Add encryption configuration resource\nconst bucketEncryption = new aws.s3.BucketServerSideEncryptionConfiguration(\"my-bucket-encryption\", {\n    bucket: bucket.id,\n    rules: [{\n        applyServerSideEncryptionByDefault: {\n            sseAlgorithm: \"aws:kms\", // Enable KMS encryption\n            kmsMasterKeyId: kmsKey.arn, // Specify customer-managed key\n        },\n        bucketKeyEnabled: true, // Enable bucket key for cost optimization\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Prevents overly permissive S3 bucket policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L1-3.1.2 Limit system access to authorized transaction types; AC.L2-3.1.5 Employ the principle of least privilege; MP.L1-3.8.2 Limit access to CUI on system media",
+        "specification": "Limit system access to the types of transactions and functions that authorized users are permitted to execute.; Employ the principle of least privilege, including for specific security functions and privileged accounts.; Limit access to CUI on system media to authorized users.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "s3-bucket-least-privilege",
+      "remediationSteps": "## Fix: Use Specific Actions, Resources, and Principals\n\nReplace wildcard (*) values in S3 bucket policy statements with specific, scoped permissions:\n\n```typescript\nconst bucketPolicy = new aws.s3.BucketPolicy(\"policy\", {\n    bucket: bucket.id,\n    policy: bucket.arn.apply(arn => JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: {\n                AWS: \"arn:aws:iam::123456789012:role/specific-role\" // Specify exact principal ARN\n            },\n            Action: [\"s3:GetObject\", \"s3:PutObject\"], // Use specific S3 actions\n            Resource: `${arn}/*` // Scope to specific bucket\n        }]\n    }))\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures each S3 bucket has lifecycle rules configured for retention/disposal",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "MP.L1-3.8.3 Sanitize or destroy system media before disposal",
+        "specification": "Sanitize or destroy system media containing CUI before disposal or release for reuse.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "s3-bucket-lifecycle",
+      "remediationSteps": "## Fix: Configure Lifecycle Rules for S3 Bucket\n\nCreate a BucketLifecycleConfiguration resource with at least one enabled rule:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst lifecycleConfig = new aws.s3.BucketLifecycleConfiguration(\"my-bucket-lifecycle\", {\n    bucket: myBucket.id,\n    rules: [\n        {\n            id: \"delete-old-objects\",\n            status: \"Enabled\", // Rule must be enabled\n            expiration: {\n                days: 90, // Define retention period (e.g., expire after 90 days)\n            },\n        },\n    ],\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures each S3 bucket has a public access block with all settings enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.22 Control CUI on publicly accessible systems; MP.L1-3.8.2 Limit access to CUI on system media",
+        "specification": "Control CUI posted or processed on publicly accessible systems.; Limit access to CUI on system media to authorized users.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "s3-bucket-public-access-block",
+      "remediationSteps": "## Fix: Enable All Public Access Block Settings\n\nCreate a BucketPublicAccessBlock resource with all four settings set to `true`:\n\n```typescript\nconst myBucket = new aws.s3.Bucket(\"my-bucket\", {\n    // Bucket configuration\n});\n\nconst publicAccessBlock = new aws.s3.BucketPublicAccessBlock(\"my-bucket-public-access-block\", {\n    bucket: myBucket.id,\n    blockPublicAcls: true,       // Blocks new public ACLs\n    blockPublicPolicy: true,     // Blocks new public bucket policies\n    ignorePublicAcls: true,      // Ignores existing public ACLs\n    restrictPublicBuckets: true, // Restricts public access to buckets with public policies\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Check that Secrets Manager Secrets use a customer-manager KMS key.",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.16 Protect confidentiality of CUI at rest",
+        "specification": "Protect the confidentiality of CUI at rest.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "secrets-manager-secret-configure-customer-managed-key",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key for Secrets Manager Secret\n\nSet the `kmsKeyId` property to reference a customer-managed KMS key for encrypting the secret:\n\n```typescript\nconst secret = new aws.secretsmanager.Secret(\"my-secret\", {\n    name: \"my-application-secret\",\n    kmsKeyId: kmsKey.arn, // Use customer-managed KMS key\n    description: \"Sensitive application credentials\",\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow pattern matching for exempt security groups (e.g., 'bastion-*')",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptSecurityGroups": {
+            "description": "Security groups exempt from default deny requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures Security Groups follow default deny with explicit allow principle",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "CM.L2-3.4.6 Employ principle of least functionality; SC.L2-3.13.6 Deny network traffic by default",
+        "specification": "Employ the principle of least functionality by configuring organizational systems to provide only essential capabilities.; Deny network communications traffic by default and allow network communications traffic by exception (i.e., deny all, permit by exception).",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "security-group-default-deny",
+      "remediationSteps": "## Fix: Replace Unrestricted CIDR Blocks with Specific IP Ranges\n\nReplace 0.0.0.0/0 in ingress and egress rules with specific CIDR blocks or security group references to follow the default deny with explicit allow principle:\n\n```typescript\nconst webSecurityGroup = new aws.ec2.SecurityGroup(\"web-sg\", {\n    vpcId: vpc.id,\n    ingress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n    egress: [{\n        protocol: \"tcp\",\n        fromPort: 443,\n        toPort: 443,\n        cidrBlocks: [\"10.0.0.0/16\"], // Use specific CIDR block instead of 0.0.0.0/0\n    }],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures security groups follow strict firewall rules with default deny",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.3 Control the flow of CUI; CM.L2-3.4.6 Employ principle of least functionality; CM.L2-3.4.7 Restrict nonessential programs and services; SC.L1-3.13.1 Monitor and control communications at boundaries; SC.L2-3.13.6 Deny network traffic by default",
+        "specification": "Control the flow of CUI in accordance with approved authorizations.; Employ the principle of least functionality by configuring organizational systems to provide only essential capabilities.; Restrict, disable, or prevent the use of nonessential programs, functions, ports, protocols, and services.; Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.; Deny network communications traffic by default and allow network communications traffic by exception (i.e., deny all, permit by exception).",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "security-group-strict",
+      "remediationSteps": "## Fix: Configure Strict Security Group Rules\n\nRestrict ingress rules to specific CIDR blocks instead of allowing access from the entire internet (0.0.0.0/0). Use specific protocols and narrow port ranges:\n\n```typescript\nconst securityGroup = new aws.ec2.SecurityGroup(\"my-sg\", {\n    vpcId: vpc.id,\n    ingress: [\n        {\n            protocol: \"tcp\", // Use specific protocol, not \"-1\" (all)\n            fromPort: 443,\n            toPort: 443,\n            cidrBlocks: [\"10.0.0.0/8\"], // Restrict to internal network, not \"0.0.0.0/0\"\n        },\n    ],\n    egress: [\n        {\n            protocol: \"-1\",\n            fromPort: 0,\n            toPort: 0,\n            cidrBlocks: [\"0.0.0.0/0\"],\n        },\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures subnets are distributed across multiple availability zones",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L1-3.13.2 Employ architectural designs promoting security",
+        "specification": "Employ architectural designs, software development techniques, and systems engineering principles that promote effective information security within organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "subnet-multi-az",
+      "remediationSteps": "## Fix: Distribute Subnets Across Multiple Availability Zones\n\nCreate subnets in at least 2 different availability zones to ensure high availability and fault tolerance:\n\n```typescript\nconst subnet1 = new aws.ec2.Subnet(\"subnet-az1\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.1.0/24\",\n    availabilityZone: \"us-east-1a\", // Specify explicit AZ\n});\n\nconst subnet2 = new aws.ec2.Subnet(\"subnet-az2\", {\n    vpcId: vpc.id,\n    cidrBlock: \"10.0.2.0/24\",\n    availabilityZone: \"us-east-1b\", // Use different AZ for redundancy\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures that VPC endpoints are associated with security policies that limit access to specified resources",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L1-3.13.2 Employ architectural designs promoting security",
+        "specification": "Employ architectural designs, software development techniques, and systems engineering principles that promote effective information security within organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "vpc-endpoint-security-policy",
+      "remediationSteps": "## Fix: Configure Restrictive VPC Endpoint Policy\n\nAdd a policy to your VPC endpoint that specifies explicit principals and resources instead of wildcards:\n\n```typescript\nconst vpcEndpoint = new aws.ec2.VpcEndpoint(\"my-endpoint\", {\n    vpcId: vpc.id,\n    serviceName: \"com.amazonaws.us-west-2.s3\",\n    policy: JSON.stringify({\n        Version: \"2012-10-17\",\n        Statement: [{\n            Effect: \"Allow\",\n            Principal: {\n                AWS: \"arn:aws:iam::123456789012:role/MyRole\" // Specify explicit principal ARN\n            },\n            Action: \"s3:GetObject\",\n            Resource: \"arn:aws:s3:::my-bucket/*\" // Specify explicit resource ARN\n        }]\n    }),\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "approvedLogDestinations": {
+            "description": "List of approved log destinations (S3 bucket ARNs, CloudWatch log group ARNs, or Kinesis stream ARNs)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures VPC flow logs use approved destinations for centralized monitoring",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "AC.L2-3.1.3 Control the flow of CUI; AC.L2-3.1.12 Monitor and control remote access sessions; AU.L1-3.3.1 Create and retain system audit logs; SC.L1-3.13.1 Monitor and control communications at boundaries; SI.L2-3.14.6 Monitor systems to detect attacks",
+        "specification": "Control the flow of CUI in accordance with approved authorizations.; Monitor and control remote access sessions.; Create and retain system audit logs and records to the extent needed to enable the monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity.; Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.; Monitor organizational systems, including inbound and outbound communications traffic, to detect attacks and indicators of potential attacks.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "vpc-flow-logs",
+      "remediationSteps": "## Fix: Configure VPC Flow Logs with Approved Destination\n\nConfigure VPC Flow Logs to use one of the approved log destinations specified in the policy configuration:\n\n```typescript\nconst flowLog = new aws.ec2.FlowLog(\"vpc-flow-log\", {\n    vpcId: vpc.id,\n    trafficType: \"ALL\",\n    logDestination: \"arn:aws:s3:::approved-logging-bucket\", // Use approved destination\n    logDestinationType: \"s3\",\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensures all VPCs and subnets have flow logs enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L2-3.13.5 Implement subnetworks for publicly accessible components; SI.L2-3.14.6 Monitor systems to detect attacks",
+        "specification": "Implement subnetworks for publicly accessible system components that are physically or logically separated from internal networks.; Monitor organizational systems, including inbound and outbound communications traffic, to detect attacks and indicators of potential attacks.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "vpc-subnet-flow-logs",
+      "remediationSteps": "## Fix: Enable VPC Flow Logs for Network Monitoring\n\nCreate a VPC Flow Log resource and associate it with your VPC or subnet to capture network traffic information:\n\n```typescript\nconst vpc = new aws.ec2.Vpc(\"my-vpc\", {\n    cidrBlock: \"10.0.0.0/16\",\n});\n\n// Enable flow logs for the VPC\nconst flowLog = new aws.ec2.FlowLog(\"vpc-flow-log\", {\n    vpcId: vpc.id, // Associate flow log with VPC\n    trafficType: \"ALL\", // Capture all traffic (ACCEPT, REJECT, ALL)\n    logDestinationType: \"cloud-watch-logs\",\n    logDestination: logGroup.arn,\n    iamRoleArn: flowLogRole.arn,\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Validates WAF Web ACL associations are properly configured",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "CMMC",
+        "reference": "SC.L1-3.13.1 Monitor and control communications at boundaries",
+        "specification": "Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems.",
+        "version": "2.0"
+      },
+      "message": "",
+      "name": "waf-association-validation",
+      "remediationSteps": "## Fix: Configure WAF Web ACL Association Properties\n\nEnsure both `resourceArn` and `webAclArn` are specified in the WAF association:\n\n```typescript\nconst wafAssociation = new aws.wafv2.WebAclAssociation(\"my-waf-association\", {\n    resourceArn: resource.arn, // Specify the resource ARN to protect\n    webAclArn: webAcl.arn, // Specify the WAF Web ACL ARN\n});\n```",
+      "severity": "critical"
+    }
+  ],
+  "version": 2,
+  "versionTag": "1.0.2"
+}

@@ -1,0 +1,114 @@
+# Keeps the pre-built policy pack reference pages in sync with what is actually
+# published to the `pulumi` org, by refetching each pack's policies from the
+# Pulumi Cloud API. The pages themselves are generated at build time by
+# content/docs/reference/pre-built-policy-packs/_content.gotmpl.
+#
+# Git pushes, PR creation, and auto-merge all use PULUMI_BOT_TOKEN (a PAT from
+# ESC), so the built-in GITHUB_TOKEN only needs id-token: write for esc-action's
+# OIDC auth and contents: read for the default checkout in the pull-request job.
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+name: Policy Packs - Update Policies
+on:
+  workflow_dispatch:
+    inputs:
+      skip_auto_merge:
+        description: "Skip enabling auto-merge on the generated PR (for testing)"
+        type: boolean
+        default: false
+  schedule:
+    # Nightly at 07:30 UTC, keeping the pre-built policy pack reference pages in
+    # sync with the packs published to the `pulumi` org.
+    - cron: "30 7 * * *"
+jobs:
+  update-policy-packs:
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.commit.outputs.has_changes }}
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Fetch policy pack policies
+        run: node scripts/fetch-policy-packs.js
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+      - name: git status
+        run: git status && git diff --stat
+      - name: Commit changes
+        id: commit
+        run: |
+          git config --local user.email "bot@pulumi.com"
+          git config --local user.name "pulumi-bot"
+          git checkout -b policy-packs/${{ github.run_id }}-${{ github.run_number }}
+          git add data/policy_pack_policies
+          if git diff --cached --quiet; then
+            echo "No policy pack changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Update pre-built policy pack policies"
+            git push origin policy-packs/${{ github.run_id }}-${{ github.run_number }}
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: update-policy-packs
+    if: needs.update-policy-packs.outputs.has_changes == 'true'
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+      - name: Open pull request
+        id: create-pr
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "policy-packs/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Update pre-built policy pack policies"
+          pr_body: "Automated regeneration of `data/policy_pack_policies/` from the policy packs published to the `pulumi` org. Renders the reference pages under /docs/reference/pre-built-policy-packs/."
+          pr_label: "automation/merge"
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pr_created == 'true' && github.event.inputs.skip_auto_merge != 'true'
+        run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [update-policy-packs, pull-request]
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "Policy pack update failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png
