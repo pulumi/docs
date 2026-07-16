@@ -136,7 +136,7 @@ You can manage state yourself with a DIY backend that stores state in AWS S3, Az
 
 Use [`pulumi stack migrate`](/docs/iac/cli/commands/pulumi_stack_migrate/) to migrate a stack between different backends. The command migrates the stack to the backend where you are currently logged in and opens the source backend URL directly, so you do not need to log out of the target backend.
 
-Before migrating, protect local stack configuration files. When source and target stack names match, the command rewrites `Pulumi.<stack>.yaml` and creates a `.bak.*` backup. When the target stack has a different name, the command replaces any existing `Pulumi.<target>.yaml`, including its ESC environment imports, without retaining a backup after a successful migration. Move or back up that file before migrating.
+Migration updates the target stack's local configuration. When source and target stack names match, the command updates `Pulumi.<stack>.yaml` and creates a `.bak.*` backup. When the target stack has a different name, the command replaces any existing `Pulumi.<target>.yaml`, including its ESC environment imports. Save a copy of that file before migrating if you need its current contents.
 
 For example, log in to Pulumi Cloud, then migrate `my-app-production` from a local backend:
 
