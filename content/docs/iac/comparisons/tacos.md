@@ -32,7 +32,7 @@ If you're weighing a TACOS, the parts of Pulumi that line up with it are [Pulumi
 
 ## What are TACOS?
 
-TACOS platforms turn Terraform into a managed, team-ready workflow. [Scalr](https://scalr.com/learning-center/tacos-terraform-automation-and-collaboration-software/), which helped coin the term, calls them CI/CD reimagined for infrastructure as code. In practice they give you remote state with locking, policy enforcement, drift detection, private module and provider registries, and per-scope access control — the operational pieces Terraform leaves you to build.
+TACOS platforms turn Terraform into a managed, team-ready workflow. [Scalr](https://scalr.com/learning-center/tacos-terraform-automation-and-collaboration-software/), which helped coin the term, describes them as bringing CI/CD-style automation to infrastructure as code. In practice they give you remote state with locking, policy enforcement, drift detection, private module and provider registries, and per-scope access control — the operational pieces Terraform leaves you to build.
 
 The tools don't all cover the same ground. [HCP Terraform](https://www.hashicorp.com/products/terraform) is HashiCorp's own service and runs Terraform. [Scalr](https://scalr.com/) and the open-source [Atlantis](https://www.runatlantis.io/) focus on Terraform and OpenTofu. [Spacelift](https://spacelift.io/) and [env0](https://www.env0.com/) reach wider: alongside Terraform and OpenTofu, both also run Pulumi, plus tools like CloudFormation and Kubernetes. That last detail matters here, because adopting Pulumi doesn't always mean leaving your TACOS behind.
 
