@@ -313,8 +313,11 @@ Store the deduped claim list for the verification phase. No interim user output.
                "route": "pass0"|"pass1"|"pass2"|"pass3",
                "verdict": "verified"|"matches"|"not-a-claim"|"unverifiable"|"contradicted"|"mismatch",
                "confidence", "evidence", "source", "framing_note"?, "intuition_flag"?, "model_usage"}],
- "errors": [...], "meta": {"n_claims", "n_pass0", "n_pass1", "n_pass2", "n_pass3", ...}}
+ "errors": [...], "meta": {"n_claims", "n_pass0", "n_pass1", "n_pass2", "n_pass3", ...,
+                           "advisor_model", "advisor_input_tokens", "advisor_output_tokens", "advisor_calls"}}
 ```
+
+The Pass 1 / Pass 3 verifiers also carry Anthropic's server-side **advisor tool** (beta): the Sonnet executor may consult a stronger model (default Opus 4.8, `--advisor-model none` to disable) at most once per claim, reserved for ambiguous or conflicting evidence, an imminent `contradicted`/`mismatch`, an imminent escalation, or a non-converging loop. This is deterministic-script-only — the §Routed verification fallback below (the in-review, model-run path) has no advisor and is unchanged. Advisor tokens bill at the advisor model's rates and are reported separately under the `advisor_*` keys in `model_usage`/`meta` (verify-claims spend is tracked in this artifact, not in `per-tool-spend.py`, which prices only the main review run's tool calls).
 
 **This is the claim floor *and* the verdict source on the normal path** — `verdicts[]` carries one entry per candidate claim (it's a superset of `.candidate-claims.json`). Don't also open `.candidate-claims.json` when `.verified-claims.json` is present with a non-empty `verdicts[]` (see §Pre-step artifact `.candidate-claims.json`). **Read `.verified-claims.json` once. Do not re-verify.** For each verdict, render one line in §🔍 Verification trail using the verdict's `evidence` and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`). The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verifier recorded, or inventing a `contradicted`/`mismatch` it didn't find). The review's irreducible work is:
 

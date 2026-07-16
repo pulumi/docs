@@ -11,6 +11,18 @@ server-side `web_search` tool, then ends with a `verify_claim` call. Pass 2 is
 a single forced `verify_claim` call over the pre-packed `.fetched-urls.json`
 content for the cited URL.
 
+Pass 1 and Pass 3 also carry Anthropic's server-side **advisor tool** (beta):
+the Sonnet executor can consult a stronger model (default Opus 4.8) that reads
+the full transcript server-side and returns guidance mid-generation. The prompt
+scopes it to at most one consult per claim, and only where it changes the
+outcome — ambiguous/conflicting evidence, an imminent `contradicted`/`mismatch`
+verdict, an imminent escalation, or a loop that isn't converging. Advisor
+errors are non-fatal (the executor continues without advice), and advisor
+tokens are tracked separately in `model_usage`/`meta` because they bill at the
+advisor model's rates. Disable with `--advisor-model none`. Pass 2 never
+carries the tool: its forced `verify_claim` tool_choice precludes advisor
+calls, and its request shape stays byte-identical to before.
+
 The result lands in `.verified-claims.json`; the main review reads it as the
 verdict *source* (it does not re-verify), and `validate-pinned.py`'s
 `verified-claims-trail-faithful` rule fails the review if the rendered
@@ -51,7 +63,8 @@ Routing (first match wins):
 Usage:
     verify-claims.py --in .candidate-claims.json \
         --fetched-urls .fetched-urls.json --out .verified-claims.json \
-        [--pr <N>] [--repo <owner/repo>] [--repo-root <dir>] [--model <m>] [--dry-run]
+        [--pr <N>] [--repo <owner/repo>] [--repo-root <dir>] [--model <m>] \
+        [--advisor-model <m>|none] [--dry-run]
 
 Output schema:
     {
@@ -71,13 +84,17 @@ Output schema:
          "intuition_flag": "...",      # optional
          "model_usage": {"input_tokens": T, "output_tokens": T,
                          "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
+                         "advisor_input_tokens": T, "advisor_output_tokens": T,
+                         "advisor_calls": N,     # advisor_* bill at the advisor model's rates
                          "turns": N}},
         ...
       ],
       "errors": [ "<per-claim failures>" ],
       "meta": {"n_claims": N, "n_pass0": Z, "n_pass1": A, "n_pass2": B, "n_pass3": C,
                "input_tokens": T, "output_tokens": T,
-               "cache_read_input_tokens": T, "cache_creation_input_tokens": T}
+               "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
+               "advisor_model": "claude-opus-4-8",   # "" when disabled
+               "advisor_input_tokens": T, "advisor_output_tokens": T, "advisor_calls": N}
     }
 
 `n_pass0` claims are resolved with no API call; the review folds them into the
@@ -112,6 +129,15 @@ SCHEMA_VERSION = 1
 DEFAULT_MODEL = "claude-sonnet-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
+
+# Advisor tool (beta): the pass1/pass3 executor can consult a stronger model
+# mid-generation; the advisor reads the full transcript server-side and returns
+# guidance. Opus 4.8 (not Fable) because its `advisor_result` is plaintext —
+# auditable in CI artifacts — and the docs put a Sonnet-executor/Opus-advisor
+# pair at similar-or-lower total cost. `--advisor-model none` disables.
+ADVISOR_BETA = "advisor-tool-2026-03-01"
+DEFAULT_ADVISOR_MODEL = "claude-opus-4-8"
+ADVISOR_MAX_TOKENS = 2048   # docs-recommended cap: ~7x output reduction, near-zero truncation
 
 MAX_TOKENS_VERIFY = 2048
 HTTP_TIMEOUT = 120          # seconds per API call
@@ -225,6 +251,14 @@ READ_FILE_TOOL = {
 # inline, so no client round-trip is needed for the search itself.
 WEB_SEARCH_TOOL = {"type": "web_search_20250305", "name": "web_search", "max_uses": 3}
 
+
+def advisor_tool(model: str) -> dict:
+    # `max_uses` is a per-REQUEST cap and each loop turn is a new request, so
+    # the real once-per-claim limit lives in ADVISOR_ROUTE_NOTE's prompt
+    # guidance; this cap just bounds the worst case to one call per turn.
+    return {"type": "advisor_20260301", "name": "advisor", "model": model,
+            "max_uses": 1, "max_tokens": ADVISOR_MAX_TOKENS}
+
 ALLOWED_GH_SUBCOMMANDS = {"search", "api", "release", "issue", "pr"}
 _SHELL_META_RE = re.compile(r"[|;&`$\\]|\$\(")
 
@@ -292,6 +326,24 @@ ROUTE_HEADERS = {
     "pass3": ("ROUTE: pass3 (external; no pre-fetched URL). Tools: web_search, verify_claim. Search, read the results, "
               "cross-check the YEAR on numerical claims, then emit verify_claim."),
 }
+
+# Appended to the pass1/pass3 route header when the advisor tool is enabled.
+ADVISOR_ROUTE_NOTE = (
+    " An `advisor` tool is also available: a stronger reviewer model that reads your full transcript "
+    "(it takes NO parameters — everything you've seen is forwarded automatically). Consult it at most "
+    "once per claim, and only when it would change the outcome: the evidence you've gathered is ambiguous "
+    "or conflicting, you are about to emit `contradicted` or `mismatch`, you are about to set "
+    "`route_escalation`, or you are burning turns without converging. Do not consult it for claims you "
+    "can close directly from a source."
+)
+
+# Appended to the pass1/pass3 user message when the advisor tool is enabled.
+# The advisor sees user messages as quoted context, and a direct address like
+# this trims its output far more reliably than third-person instructions.
+ADVISOR_BREVITY_NOTE = (
+    "(Advisor: if consulted, keep your guidance under 80 words — the fastest path to a verdict, "
+    "not a comprehensive plan.)"
+)
 
 
 # ---- routing ---------------------------------------------------------------
@@ -555,15 +607,29 @@ def exec_read_file(inp: dict, repo_root: Path) -> str:
 # ---- Anthropic API ---------------------------------------------------------
 
 
+def _betas_for_body(body: dict) -> str:
+    """Beta header value a request body needs; empty when none. The advisor
+    tool is the only beta in play — sent conditionally so the pass2 request
+    shape stays byte-identical to before."""
+    tools = body.get("tools") or []
+    if any(isinstance(t, dict) and str(t.get("type", "")).startswith("advisor_") for t in tools):
+        return ADVISOR_BETA
+    return ""
+
+
 def _post_messages(api_key: str, body: dict) -> dict:
+    headers = {
+        "x-api-key": api_key,
+        "anthropic-version": ANTHROPIC_VERSION,
+        "content-type": "application/json",
+    }
+    betas = _betas_for_body(body)
+    if betas:
+        headers["anthropic-beta"] = betas
     req = urllib.request.Request(
         ANTHROPIC_URL,
         data=json.dumps(body).encode("utf-8"),
-        headers={
-            "x-api-key": api_key,
-            "anthropic-version": ANTHROPIC_VERSION,
-            "content-type": "application/json",
-        },
+        headers=headers,
         method="POST",
     )
     last_err: Exception | None = None
@@ -591,12 +657,19 @@ def _post_messages(api_key: str, body: dict) -> dict:
     raise last_err or RuntimeError("request failed")
 
 
-def tools_for_route(route: str) -> list[dict]:
+def tools_for_route(route: str, advisor_model: str = "") -> list[dict]:
+    # The advisor rides only on the agent-loop lanes (tool_choice auto). pass2
+    # forces `verify_claim`, which both precludes an advisor call and must not
+    # change shape, so it never carries the tool.
     if route == "pass1":
-        return [GH_QUERY_TOOL, READ_FILE_TOOL, VERIFY_CLAIM_TOOL]
-    if route == "pass3":
-        return [WEB_SEARCH_TOOL, VERIFY_CLAIM_TOOL]
-    return [VERIFY_CLAIM_TOOL]  # pass2
+        tools = [GH_QUERY_TOOL, READ_FILE_TOOL, VERIFY_CLAIM_TOOL]
+    elif route == "pass3":
+        tools = [WEB_SEARCH_TOOL, VERIFY_CLAIM_TOOL]
+    else:
+        return [VERIFY_CLAIM_TOOL]  # pass2
+    if advisor_model:
+        tools.append(advisor_tool(advisor_model))
+    return tools
 
 
 def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
@@ -638,12 +711,35 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
 
 def _zero_usage() -> dict:
     return {"input_tokens": 0, "output_tokens": 0,
-            "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}
+            "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0,
+            "advisor_input_tokens": 0, "advisor_output_tokens": 0, "advisor_calls": 0}
+
+
+_EXECUTOR_USAGE_KEYS = ("input_tokens", "output_tokens",
+                        "cache_read_input_tokens", "cache_creation_input_tokens")
 
 
 def _accumulate_usage(agg: dict, usage: dict) -> None:
-    for k in agg:
-        agg[k] += int((usage or {}).get(k, 0) or 0)
+    """Fold one response's `usage` into `agg`. Advisor sub-inference tokens are
+    reported only in `usage.iterations[]` (type `advisor_message`) and bill at
+    the advisor model's rates, so they are tracked under separate advisor_*
+    keys rather than folded into the executor totals."""
+    usage = usage or {}
+    iterations = usage.get("iterations")
+    if isinstance(iterations, list) and iterations:
+        for it in iterations:
+            if not isinstance(it, dict):
+                continue
+            if it.get("type") == "advisor_message":
+                agg["advisor_input_tokens"] += int(it.get("input_tokens", 0) or 0)
+                agg["advisor_output_tokens"] += int(it.get("output_tokens", 0) or 0)
+                agg["advisor_calls"] += 1
+            else:
+                for k in _EXECUTOR_USAGE_KEYS:
+                    agg[k] += int(it.get(k, 0) or 0)
+        return
+    for k in _EXECUTOR_USAGE_KEYS:
+        agg[k] += int(usage.get(k, 0) or 0)
 
 
 def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns: int) -> dict:
@@ -675,7 +771,7 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
 
 def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | None,
                  model: str, repo_root: Path, dry_run: bool, allow_escalate: bool = True,
-                 impl_refs: list[str] | None = None) -> dict:
+                 impl_refs: list[str] | None = None, advisor_model: str = "") -> dict:
     """Run one claim through one lane (with at most one pass1→pass3 escalation hop)."""
     if dry_run:
         return {
@@ -686,17 +782,30 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
             "source": "dry-run", "model_usage": {**_zero_usage(), "turns": 0},
         }
 
+    use_advisor = bool(advisor_model) and route in ("pass1", "pass3")
+    route_header = ROUTE_HEADERS.get(route, ROUTE_HEADERS["pass1"])
+    if use_advisor:
+        route_header += ADVISOR_ROUTE_NOTE
     system = [
         {"type": "text", "text": VERIFY_SYSTEM, "cache_control": {"type": "ephemeral"}},
-        {"type": "text", "text": ROUTE_HEADERS.get(route, ROUTE_HEADERS["pass1"])},
+        {"type": "text", "text": route_header},
     ]
-    tools = tools_for_route(route)
+    tools = tools_for_route(route, advisor_model if use_advisor else "")
     tool_choice: dict = ({"type": "tool", "name": "verify_claim"} if route == "pass2" else {"type": "auto"})
-    messages: list[dict] = [{"role": "user", "content": build_user_message(claim, route, evidence_pack, impl_refs)}]
+    user_text = build_user_message(claim, route, evidence_pack, impl_refs)
+    if use_advisor:
+        user_text += "\n\n" + ADVISOR_BREVITY_NOTE
+    messages: list[dict] = [{"role": "user", "content": user_text}]
     agg_usage = _zero_usage()
     max_turns = MAX_TURNS.get(route, 4)
 
-    for turn in range(1, max_turns + 1):
+    # `turns` counts reasoning turns against the lane budget; `requests` counts
+    # API round-trips including `pause_turn` resumes (a dangling advisor call),
+    # which don't advance reasoning and get a small extra allowance.
+    turns = 0
+    requests = 0
+    while turns < max_turns and requests < max_turns + 4:
+        requests += 1
         body = {
             "model": model,
             "max_tokens": MAX_TOKENS_VERIFY,
@@ -720,23 +829,32 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         verify_block = next((b for b in tool_uses if b.get("name") == "verify_claim"), None)
         if verify_block is not None:
             inp = verify_block.get("input") or {}
-            rec = _finalize_verdict(claim, route, inp, agg_usage, turn)
+            rec = _finalize_verdict(claim, route, inp, agg_usage, requests)
             esc = inp.get("route_escalation")
             if esc == "pass3" and route == "pass1" and allow_escalate:
                 rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run,
-                                    allow_escalate=False, impl_refs=impl_refs)
-                for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
-                    rec2["model_usage"][k] += rec["model_usage"][k]
-                rec2["model_usage"]["turns"] += rec["model_usage"]["turns"]
+                                    allow_escalate=False, impl_refs=impl_refs,
+                                    advisor_model=advisor_model)
+                for k, val in rec["model_usage"].items():
+                    rec2["model_usage"][k] = rec2["model_usage"].get(k, 0) + val
                 rec2["evidence"] = f"(escalated from pass1) {rec2['evidence']}"
                 return rec2
             return rec
 
-        # Echo the assistant turn back (including any server_tool_use / web_search_tool_result blocks).
+        # Echo the assistant turn back (including any server_tool_use /
+        # web_search_tool_result / advisor_tool_result blocks — advisor blocks
+        # must round-trip verbatim while the advisor tool stays in `tools`).
         messages.append({"role": "assistant", "content": content})
 
+        if resp.get("stop_reason") == "pause_turn":
+            # A server-side tool call (the advisor) is still pending: re-send
+            # the transcript unchanged — no user message — and let the API
+            # finish it. Doesn't count against the reasoning-turn budget.
+            continue
+        turns += 1
+
         if not tool_uses:
-            # The model emitted text (and maybe a server-side search) but no client tool call.
+            # The model emitted text (and maybe a server-side search/consult) but no client tool call.
             messages.append({"role": "user", "content": "Use what you have. Emit exactly one verify_claim tool call now."})
             continue
 
@@ -760,13 +878,14 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         "type": claim.get("type", ""), "route": route, "verdict": "unverifiable",
         "confidence": "low",
         "evidence": f"verification did not converge within {max_turns} turns",
-        "source": "verify-claims.py", "model_usage": {**agg_usage, "turns": max_turns},
+        "source": "verify-claims.py", "model_usage": {**agg_usage, "turns": requests},
     }
 
 
 def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
                   model: str, repo_root: Path, dry_run: bool,
-                  impl_refs: list[str] | None = None) -> tuple[dict, str | None]:
+                  impl_refs: list[str] | None = None,
+                  advisor_model: str = "") -> tuple[dict, str | None]:
     route = claim.get("__route", "pass1")
     evidence_pack = None
     if route == "pass2":
@@ -775,7 +894,7 @@ def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
             route = "pass3"  # we routed to pass2 but the URL turned out not to be in the fetched set
     try:
         rec = run_verifier(api_key, claim, route, evidence_pack, model, repo_root, dry_run,
-                           impl_refs=impl_refs)
+                           impl_refs=impl_refs, advisor_model=advisor_model)
         return rec, None
     except Exception as e:  # noqa: BLE001
         # NOTE: the "verifier failed:" prefix (err) and "verify-claims.py errored
@@ -832,14 +951,20 @@ def main() -> int:
     p.add_argument("--repo", help="Docs repo (owner/repo) for the --pr body lookup, e.g. pulumi/docs")
     p.add_argument("--repo-root", default=".", help="Repo root for read_file (default: cwd)")
     p.add_argument("--model", default=DEFAULT_MODEL)
+    p.add_argument("--advisor-model", default=DEFAULT_ADVISOR_MODEL,
+                   help="Advisor model for the pass1/pass3 agent lanes (server-side advisor tool). "
+                        "Pass `none` (or empty) to disable.")
     p.add_argument("--dry-run", action="store_true", help="Don't call the API; emit placeholder verdicts (testing)")
     args = p.parse_args()
+    advisor_model = "" if args.advisor_model.strip().lower() in ("", "none", "off") else args.advisor_model.strip()
 
     out_path = Path(args.out)
     repo_root = Path(args.repo_root).resolve()
     base_meta = {"n_claims": 0, "n_pass0": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0,
                  "input_tokens": 0, "output_tokens": 0,
-                 "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}
+                 "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0,
+                 "advisor_model": advisor_model,
+                 "advisor_input_tokens": 0, "advisor_output_tokens": 0, "advisor_calls": 0}
 
     # Load the claim floor.
     try:
@@ -896,7 +1021,8 @@ def main() -> int:
     errors: list[str] = []
     if routed_claims:
         with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(routed_claims))) as pool:
-            futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run, impl_refs)
+            futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run,
+                                impl_refs, advisor_model)
                     for c in routed_claims]
             for fut in futs:
                 rec, err = fut.result()
@@ -924,7 +1050,8 @@ def main() -> int:
     meta["n_pass3"] = n_by_route["pass3"]
     for v in verdicts:
         mu = v.get("model_usage") or {}
-        for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
+        for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens",
+                  "advisor_input_tokens", "advisor_output_tokens", "advisor_calls"):
             meta[k] += int(mu.get(k, 0) or 0)
 
     write_payload(out_path, args.model, verdicts, errors, meta)
@@ -934,7 +1061,10 @@ def main() -> int:
         f"verify-claims: {len(verdicts)} verdict(s) "
         f"({meta['n_pass0']} pass0, {n_by_route['pass1']} pass1, {n_by_route['pass2']} pass2, {n_by_route['pass3']} pass3; "
         f"{n_contra} contradicted/mismatch, {n_unver} unverifiable); "
-        f"in={meta['input_tokens']} out={meta['output_tokens']} cache_read={meta['cache_read_input_tokens']} → {out_path}",
+        f"in={meta['input_tokens']} out={meta['output_tokens']} cache_read={meta['cache_read_input_tokens']}"
+        + (f"; advisor[{advisor_model}] calls={meta['advisor_calls']} "
+           f"in={meta['advisor_input_tokens']} out={meta['advisor_output_tokens']}" if advisor_model else "")
+        + f" → {out_path}",
         file=sys.stderr,
     )
     return 0
@@ -968,7 +1098,9 @@ def safe_main() -> int:
                     "errors": [f"verify-claims uncaught exception: {type(e).__name__}: {e}"],
                     "meta": {"n_claims": 0, "n_pass0": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0,
                              "input_tokens": 0, "output_tokens": 0,
-                             "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0},
+                             "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0,
+                             "advisor_model": "", "advisor_input_tokens": 0,
+                             "advisor_output_tokens": 0, "advisor_calls": 0},
                 }, indent=2) + "\n")
             except OSError:
                 pass
