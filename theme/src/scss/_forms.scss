@@ -20,7 +20,7 @@
 
 // Single radius knob — retune every control at once. Buttons don't vary radius by
 // size, so neither do inputs. Plain border-radius (not @apply) so the CSS var flows.
-$form-radius: var(--radius-lg);
+$form-radius: var(--radius-md);
 
 // Inset depth shadows layered on top of the border (brand tokens shadow.input /
 // shadow.select). Inputs get a top inner shadow; selects a bottom inner shadow.
@@ -35,7 +35,7 @@ $form-select-shadow: inset 0 -2px 4px 0 rgb(0 0 0 / 0.08);
 // Focus adds a 2px violet-800 inset ring ON TOP of the resting shadow, and the
 // border also goes violet-800 — the two merge into one clean ~3px edge.
 $form-focus-ring: inset 0 0 0 2px var(--color-violet-800);
-$form-invalid-ring: inset 0 0 0 2px var(--color-red-600);
+$form-invalid-ring: inset 0 0 0 2px var(--color-red-800);
 
 // Caret chevron drawn as a background SVG (class-wide fix for flush carets). The
 // gray-500 (#9997a0) stroke matches placeholder text; the light variant (gray-300
@@ -75,11 +75,11 @@ $form-radio-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     // Invalid state — aria-invalid (hand-authored) and HubSpot's .error class.
     &[aria-invalid="true"],
     &.error {
-        @apply border-red-600;
+        @apply border-red-800;
 
         &:focus,
         &:focus-visible {
-            @apply border-red-600;
+            @apply border-red-800;
             box-shadow: $form-invalid-ring, var(--form-resting-shadow, none);
         }
     }
@@ -190,4 +190,4 @@ $form-radio-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 
 .form-label { @apply block text-sm mb-1 text-gray-950; }
 .form-help  { @apply block text-xs text-gray-500 mt-1; }
-.form-error { @apply block text-xs text-red-600 mt-1; }
+.form-error { @apply block text-xs text-red-800 mt-1; }
