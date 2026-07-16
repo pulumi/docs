@@ -108,8 +108,6 @@ jobs:
     outputs:
       has_posts: ${{ steps.select.outputs.has_posts }}
       count: ${{ steps.select.outputs.count }}
-      posts: ${{ steps.emit.outputs.posts }}
-      meta: ${{ steps.emit.outputs.meta }}
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -237,10 +235,41 @@ jobs:
           echo "--- queue ---"
           cat .blog-review-queue.json
 
-      # Hand the queue to the matrix as job outputs: `posts` fans out one
-      # review job per entry; `meta` carries the shared selection provenance
-      # (generated timestamp, snapshot availability) so each review job can
-      # reconstruct its exact single-post queue.
+      # The queue can't ride out of this job as outputs: the ESC step above
+      # registers secret masks (one fetched value is the literal string
+      # "pulumi"), and GitHub silently drops any job output containing a
+      # masked value — which the queue JSON nearly always does, because most
+      # post slugs contain "pulumi" ("Skip output 'posts' since it may
+      # contain secret"). Hand it off as an artifact instead; the secret-free
+      # queue job below re-emits it as outputs the matrix can consume.
+      - name: Upload queue artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: blog-review-queue
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+          path: .blog-review-queue.json
+
+  # Re-emit the queue as job outputs from a job that runs no ESC/AWS steps,
+  # so no secret masks are registered and the outputs survive verbatim.
+  # `posts` fans out one review job per entry; `meta` carries the shared
+  # selection provenance (generated timestamp, snapshot availability) so
+  # each review job can reconstruct its exact single-post queue.
+  queue:
+    name: Emit queue outputs
+    needs: select
+    if: needs.select.outputs.has_posts == 'true' && github.event.inputs.dry_run != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      posts: ${{ steps.emit.outputs.posts }}
+      meta: ${{ steps.emit.outputs.meta }}
+    steps:
+      - name: Download queue artifact
+        uses: actions/download-artifact@v7
+        with:
+          name: blog-review-queue
       - name: Emit queue outputs
         id: emit
         run: |
@@ -256,7 +285,7 @@ jobs:
   # that breaks that contract.
   review:
     name: "Review: ${{ matrix.post.slug }}"
-    needs: select
+    needs: [select, queue]
     if: needs.select.outputs.has_posts == 'true' && github.event.inputs.dry_run != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -268,7 +297,7 @@ jobs:
       # Bound concurrent API spend; queued matrix jobs wait their turn.
       max-parallel: 2
       matrix:
-        post: ${{ fromJSON(needs.select.outputs.posts) }}
+        post: ${{ fromJSON(needs.queue.outputs.posts) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -305,7 +334,7 @@ jobs:
       - name: Build single-post queue
         env:
           POST_JSON: ${{ toJSON(matrix.post) }}
-          META_JSON: ${{ needs.select.outputs.meta }}
+          META_JSON: ${{ needs.queue.outputs.meta }}
         run: |
           jq -n --argjson post "$POST_JSON" --argjson meta "$META_JSON" \
             '$meta + {count: 1, posts: [$post]}' > .blog-review-queue.json
@@ -449,11 +478,13 @@ jobs:
   # (warehouse ingestion), and the rebuilt index summary.
   record:
     name: Validate and record (deterministic, credentialed)
-    needs: [select, review]
+    needs: [select, queue, review]
     # Runs even when review jobs failed — the ledger must record incomplete
-    # outcomes so those posts stay due — but not when the run was cancelled.
+    # outcomes so those posts stay due — but not when the run was cancelled
+    # (and not without a queue: there is nothing to record against).
     if: >-
       always() && needs.select.outputs.has_posts == 'true' &&
+      needs.queue.result == 'success' &&
       github.event.inputs.dry_run != 'true' && needs.review.result != 'cancelled'
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -476,6 +507,21 @@ jobs:
         with:
           pattern: blog-review-findings-*
           path: .findings-artifacts
+
+      # A pattern download only namespaces per-artifact directories when it
+      # matched MORE than one artifact; a single match is extracted flat
+      # into the path root. Restore the named-directory layout the record
+      # loop expects, keyed by the slug inside the artifact's own queue.
+      - name: Normalize single-artifact layout
+        run: |
+          if [ -f .findings-artifacts/queue.json ]; then
+            SLUG=$(jq -r '.posts[0].slug' .findings-artifacts/queue.json)
+            mkdir .artifact-tmp
+            mv .findings-artifacts/* .artifact-tmp/
+            mkdir -p ".findings-artifacts/blog-review-findings-$SLUG"
+            mv .artifact-tmp/* ".findings-artifacts/blog-review-findings-$SLUG/"
+            rmdir .artifact-tmp
+          fi
 
       - name: Configure AWS credentials
         continue-on-error: true
@@ -511,8 +557,8 @@ jobs:
           BLOG_REVIEW_LEDGER_URI: ${{ steps.state-bucket.outputs.ledger_uri }}
           BLOG_REVIEW_INDEX_URI: ${{ steps.state-bucket.outputs.index_uri }}
           BLOG_REVIEW_RUNS_URI: ${{ steps.state-bucket.outputs.runs_uri }}
-          POSTS_JSON: ${{ needs.select.outputs.posts }}
-          META_JSON: ${{ needs.select.outputs.meta }}
+          POSTS_JSON: ${{ needs.queue.outputs.posts }}
+          META_JSON: ${{ needs.queue.outputs.meta }}
         run: |
           FAILED=0
           # Process substitution, not a pipe: the loop must run in this
