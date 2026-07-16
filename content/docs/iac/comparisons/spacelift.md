@@ -95,11 +95,11 @@ Both platforms have moved into AI-assisted infrastructure from different startin
 
 Because Spacelift treats Pulumi as a first-class runtime, running the two together is a supported, documented path rather than a workaround. Spacelift's [Pulumi integration](https://docs.spacelift.io/vendors/pulumi/) runs the Pulumi CLI directly, so your Pulumi programs behave as they do anywhere the CLI runs. On each run it executes `pulumi login` against your backend, selects your stack, and runs `pulumi preview` and `pulumi up` with refresh and diff enabled. Plan policies receive the Pulumi plan as structured input, and Pulumi secrets are redacted as `[secret]` rather than shown in plaintext. A couple of Pulumi features are limited under Spacelift today: module CI/CD isn't available, and `pulumi import` isn't supported, so you import resources with tasks instead. For teams that would rather not operate a separate orchestration platform, Pulumi Deployments provides the same Git-driven runs, drift detection, and review environments as an integrated part of Pulumi.
 
-## When to choose Pulumi vs. Spacelift
+## When to use Pulumi or Spacelift
 
-Because Spacelift orchestrates Pulumi, this often isn't an either-or decision. When the real question is which management and orchestration layer to standardize on, here's how the two line up.
+These aren't mutually exclusive. Pulumi authors infrastructure and manages it, so it works as a complete platform on its own. Spacelift runs Pulumi as a first-class tool, so the two pair cleanly: author in Pulumi and orchestrate through Spacelift. They overlap at the management layer, where Pulumi Cloud and Pulumi Deployments cover the same ground Spacelift does for the tools it runs.
 
-**Choose Pulumi (with Pulumi Cloud and Pulumi Deployments) when** you:
+**Lead with Pulumi (with Pulumi Cloud and Pulumi Deployments) when** you:
 
 1. Want a single platform that both authors and manages infrastructure, without operating a separate orchestration tool.
 1. Are standardizing on Pulumi and want a management layer built for it — managed state, first-class encrypted secrets, [Pulumi ESC](/docs/esc/), [review stacks](/docs/deployments/concepts/review-stacks/), and [drift detection](/docs/deployments/concepts/drift/).
@@ -107,13 +107,12 @@ Because Spacelift orchestrates Pulumi, this often isn't an either-or decision. W
 1. Prefer policy authored in the same general-purpose languages as your infrastructure.
 1. Want an open-source engine you can run anywhere, on any CI/CD system.
 
-**Choose Spacelift when** you:
+**Reach for Spacelift alongside Pulumi when** you:
 
-1. Run a heterogeneous estate of IaC tools — say Terraform, Pulumi, CloudFormation, and Ansible side by side — and want one orchestration and governance plane across the whole estate.
-1. Want a tool-agnostic CI/CD platform for infrastructure, with version-control-driven runs, worker pools in your own cloud, and Rego policy spanning the run lifecycle.
-1. Are consolidating orchestration for teams that have each standardized on a different tool.
+1. Run a heterogeneous estate of IaC tools — Terraform, Pulumi, CloudFormation, and Ansible side by side — and want one orchestration plane across all of them, with Pulumi running next to the rest.
+1. Have already standardized on Spacelift and want to keep its worker pools, Rego policies, and run workflow while authoring in Pulumi.
 
-If you author with Pulumi but want Spacelift as the orchestration plane across a mixed estate, you don't have to choose.
+Whichever way you run it, Pulumi is where infrastructure is authored and managed; Spacelift or Pulumi Deployments handles the orchestration.
 
 ## Adoption: using Pulumi with Spacelift
 
