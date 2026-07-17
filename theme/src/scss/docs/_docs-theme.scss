@@ -27,16 +27,11 @@ body.section-docs {
     --docs-card-border: var(--color-gray-200);
     --docs-ring: var(--color-violet-700);
 
-    // Code chrome — the flat violet tint on code-adjacent "chrome" (chooser
-    // toolbars, tab strips, card borders, terminal dots), mirroring marketing-web
-    // (apps/www). Centralized in four tunable props so the tint lives in one place;
-    // the dark block below re-points them to the standard brand inversion. All
-    // values trace to @pulumi/design-tokens. (--chrome-dots is defined for parity
-    // with www; docs has no light-chrome terminal title bar consuming it yet.)
-    --chrome-bg: var(--color-violet-100);
-    --chrome-border: var(--color-violet-200);
-    --chrome-border-hover: var(--color-violet-300);
-    --chrome-dots: var(--color-violet-400);
+    // Code chrome (--chrome-bg/-border/-border-hover/-dots) — the light-mode violet
+    // tint now lives as a SITE-WIDE default on `body` in components/_chooser.scss, so
+    // every chooser reads violet regardless of section, not just docs. The dark block
+    // below re-points those props to the standard brand inversion; docs is the only
+    // section with a dark-mode toggle, so this file still owns the dark half.
 
     // Re-expose the semantic tokens under Tailwind's --color-* namespace so the
     // generated utilities (bg-docs-bg, text-docs-fg, border-docs-border, …) resolve
