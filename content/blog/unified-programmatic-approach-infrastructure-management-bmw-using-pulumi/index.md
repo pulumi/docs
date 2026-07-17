@@ -90,7 +90,7 @@ However, as the demand for software-driven features grew, the complexity of mana
 
 ## The Evolution of BMW's Software Development Toolchain
 
-BMW's journey to streamline its software development process has been gradual and iterative. The company's initial approach involved using [Ansible](https://www.pulumi.com/docs/iac/concepts/vs/chef-puppet-etc/) for deployment and a custom-built deployment scripting solution for its OpenShift cluster.
+BMW's journey to streamline its software development process has been gradual and iterative. The company's initial approach involved using [Ansible](https://www.pulumi.com/docs/iac/comparisons/chef-puppet-etc/) for deployment and a custom-built deployment scripting solution for its OpenShift cluster.
 
 As the complexity of the platform increased, BMW turned to Helm and Kubernetes to manage its containerized services. However, as the company ventured into the public cloud, the limitations of these tools became apparent. The team recognized the need for a more comprehensive and scalable solution to manage their infrastructure as code.
 
