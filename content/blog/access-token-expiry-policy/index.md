@@ -12,7 +12,7 @@ tags:
     - security
 social:
     twitter: |
-        A never-expiring access token is a breach waiting for a timeline. Pulumi Cloud organizations can now enforce a maximum expiry on every access token used against them — personal, organization, and team.
+        A never-expiring access token is a breach waiting for a timeline. Pulumi Cloud organizations can now enforce a maximum expiry on every access token used against them.
 
         Set the cap once; the platform enforces it on every request.
     linkedin: |
@@ -24,7 +24,9 @@ social:
 
         Here's how it works and how to roll it out to your organization.
     bluesky: |
-        Token rotation policies are easy to write and hard to enforce. Pulumi Cloud now enforces them for you: org admins can cap the max expiry of every access token used against their organization, checked on every request.
+        Token rotation policies are easy to write and hard to enforce.
+
+        Pulumi Cloud now enforces them for you: org admins can cap the max expiry of every access token used against their organization, checked on every request.
 ---
 
 Pulumi Cloud organizations can now enforce a maximum expiry on the access tokens used against them. Organization admins set a cap in days, and from that point on, personal, organization, and team tokens must carry an expiration within the cap for requests against the organization to succeed. Tokens that never expire, or that have too much lifetime remaining, are rejected with an error that tells the user exactly how to regain access.
