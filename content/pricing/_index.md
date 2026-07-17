@@ -474,10 +474,10 @@ comparison_table:
               - title: On-demand resource price
                 items:
                   - content: Free
-                  - content: $0.000025/hour
-                    subtext: $0.0185/month
-                  - content: Starting at $0.00005/hour
-                    subtext: $0.0365/month
+                  - content: $0.00025/hour
+                    subtext: $0.1825/month
+                  - content: Starting at $0.0005/hour
+                    subtext: $0.365/month
                   - content: Custom
               - title: Workflow cost per minute / included per month
                 link: /pricing#faq
