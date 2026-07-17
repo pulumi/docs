@@ -1,3 +1,20 @@
+// Code chrome — the flat violet tint on code-adjacent "chrome" (chooser toolbars,
+// tab strips, card borders, terminal dots), mirroring marketing-web (apps/www).
+// These are the site-wide LIGHT defaults so every chooser reads violet regardless
+// of section (docs, templates, product, blog, homepage, …); the fallbacks baked
+// into the rules below are now only a belt-and-suspenders for the theoretical case
+// of a chooser rendered before this declaration applies. Docs re-points these to
+// the brand dark inversion under html[data-theme="dark"] (see _docs-theme.scss);
+// docs is the only section with a dark-mode toggle. Values trace to
+// @pulumi/design-tokens. (--chrome-dots is defined for parity with www; nothing in
+// light mode consumes it yet.)
+body {
+    --chrome-bg: var(--color-violet-100);
+    --chrome-border: var(--color-violet-200);
+    --chrome-border-hover: var(--color-violet-300);
+    --chrome-dots: var(--color-violet-400);
+}
+
 pulumi-chooser {
     // Standard (non-language) chooser: a flat violet chrome strip of small tabs
     // matching the language chooser's toolbar — chrome background, rounded top,

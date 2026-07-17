@@ -152,6 +152,7 @@ community:
   - pulumi-interns
   - pulumi-culture
   - kubecon
+  - april-fools          # satirical April Fools' Day posts; noindexed
 
 ecosystem:
   # Non-Pulumi tools and platforms we compare to or integrate with.

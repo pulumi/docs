@@ -10,6 +10,7 @@ tags:
     - announcements
     - april-fools
 category: product
+block_external_search_index: true
 ---
 
 {{< notes type="info" >}}
