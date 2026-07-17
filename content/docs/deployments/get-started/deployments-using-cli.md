@@ -77,7 +77,7 @@ Now that we have a GitHub repository, we can configure it to use Pulumi Deployme
 1. The `random-typescript` template needs no cloud credentials, so you can leave the remaining settings at their defaults. When you later deploy a project that provisions cloud resources, this is where you'd configure things like:
 
    * [OIDC Connect](/docs/pulumi-cloud/oidc/) for cloud authentication
-   * [Environment Variables](/docs/deployments/concepts/settings/#environment-variables)
+   * [Environment Variables](/docs/deployments/concepts/settings/environment-variables/)
 
    See [Pulumi Deployment Settings](/docs/deployments/concepts/settings) for more information about the available settings.
 

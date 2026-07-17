@@ -168,7 +168,7 @@ All Pulumi stack updates are reported to the GitHub Checks API. You can see the 
 
 Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the main branch. See the [push-to-deploy documentation](/docs/deployments/concepts/triggers/#push-to-deploy) for setup instructions.
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/tag-filtering/).
 
 ### Review stacks
 
@@ -176,12 +176,12 @@ You can also deploy on git tag pushes — for example, on every `v*` release tag
 
 ### GitHub token in deployments
 
-When [Pulumi Deployments](/docs/deployments/) runs a deployment whose source repository is connected through the GitHub app, Pulumi automatically injects a `GITHUB_TOKEN` environment variable into the deployment. Your Pulumi program and [pre-run commands](/docs/deployments/concepts/settings/#pre-run-commands) can use it to authenticate to GitHub — for example, to install a private module or clone another repository — without configuring a token yourself. This is why deploying from a GitHub-connected repository "just works" for GitHub-hosted dependencies.
+When [Pulumi Deployments](/docs/deployments/) runs a deployment whose source repository is connected through the GitHub app, Pulumi automatically injects a `GITHUB_TOKEN` environment variable into the deployment. Your Pulumi program and [pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/) can use it to authenticate to GitHub — for example, to install a private module or clone another repository — without configuring a token yourself. This is why deploying from a GitHub-connected repository "just works" for GitHub-hosted dependencies.
 
 The value is a short-lived GitHub App installation access token: it is valid for about an hour and re-minted for each deployment. If you instead configured the source with your own personal access token, that token is promoted to `GITHUB_TOKEN` as-is.
 
 {{% notes type="warning" %}}
-The token is **not** limited to the source repository. It carries the full scope of the Pulumi GitHub App installation: every repository you granted the app, with the same permissions the app holds — which include write access to repository contents. In practice a deployment can therefore read from and write to any repository the installation can reach, so treat `GITHUB_TOKEN` as a broadly privileged credential. If you need a narrower credential, set your own `GITHUB_TOKEN` (or another token) through [custom environment variables](/docs/deployments/concepts/settings/#environment-variables); an explicit value always overrides the one Pulumi provides.
+The token is **not** limited to the source repository. It carries the full scope of the Pulumi GitHub App installation: every repository you granted the app, with the same permissions the app holds — which include write access to repository contents. In practice a deployment can therefore read from and write to any repository the installation can reach, so treat `GITHUB_TOKEN` as a broadly privileged credential. If you need a narrower credential, set your own `GITHUB_TOKEN` (or another token) through [custom environment variables](/docs/deployments/concepts/settings/environment-variables/); an explicit value always overrides the one Pulumi provides.
 {{% /notes %}}
 
 On GitHub Enterprise Server, Pulumi additionally sets `GH_HOST`, `GITHUB_ENTERPRISE_TOKEN`, and `GH_ENTERPRISE_TOKEN` so the [`gh` CLI](https://cli.github.com/) and other tooling authenticate against your server.

@@ -32,7 +32,7 @@ Deployments OIDC predates Pulumi ESC and was originally the only way to use OIDC
 - Pulumi ESC Environments support [versioning](/docs/esc/concepts/versioning/), allowing you to roll out changes to an environment in a controlled fashion by pinning Environment imports to a specific version of an Environment.
 
 {{% notes type="info" %}}
-One important difference to be mindful of is that Pulumi Deployments OIDC is available to [pre-run commands](/docs/deployments/concepts/settings/#pre-run-commands), whereas a Pulumi ESC environment is not: an ESC environment applies only to the Pulumi IaC operation (e.g. `pulumi up`), not to the rest of the Deployments process. To use ESC-supplied credentials in a pre-run command, prefix the command with [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) so it executes in the context of the specified Pulumi ESC Environment.
+One important difference to be mindful of is that Pulumi Deployments OIDC is available to [pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/), whereas a Pulumi ESC environment is not: an ESC environment applies only to the Pulumi IaC operation (e.g. `pulumi up`), not to the rest of the Deployments process. To use ESC-supplied credentials in a pre-run command, prefix the command with [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) so it executes in the context of the specified Pulumi ESC Environment.
 
 For example, to install packages from a private repository, you might run the following pre-run command:
 
