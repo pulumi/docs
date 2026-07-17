@@ -3,7 +3,7 @@ title_tag: Deploy a Virtual Machine to AWS
 title: Virtual Machine on AWS
 layout: template
 schema_type: howto
-meta_desc: Deploy an Amazon EC2 virtual machine on AWS running Amazon Linux 2023 with Pulumi in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy an Amazon EC2 virtual machine on AWS running Amazon Linux 2023 with Pulumi in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on AWS with Pulumi and Amazon EC2.
 template:
@@ -15,6 +15,7 @@ template:
       - go
       - csharp
       - yaml
+      - hcl
 cloud:
   name: Amazon Web Services
   slug: aws
@@ -61,11 +62,28 @@ $ open $(pulumi stack output url)
 
 Projects created with the Virtual Machine template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 instanceType
 : The EC2 instance type to use for the VM. Defaults to `t3.micro`.
 
 vpcNetworkCidr
 : The network CIDR to use for the VPC. Defaults to `10.0.0.0/16`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+instance_type
+: The EC2 instance type to use for the VM. Defaults to `t3.micro`.
+
+vpc_network_cidr
+: The network CIDR to use for the VPC. Defaults to `10.0.0.0/16`.
+
+service_port
+: The HTTP service port to expose on the VM. Defaults to `80`.
+
+{{% /choosable %}}
 
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 
