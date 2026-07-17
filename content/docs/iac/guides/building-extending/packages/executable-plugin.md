@@ -76,7 +76,7 @@ ${pluginDownloadURL}/pulumi-${kind}-${name}-v${version}-${os}-${arch}.tar.gz
 
 The CLI interpolates four variables into `pluginDownloadURL` itself if they appear there:
 
-- `${NAME}` — the package name.
+- `${NAME}` — the package name (interpolated since Pulumi v3.92.0).
 - `${VERSION}` — the plugin version (without the leading `v`).
 - `${OS}` — the consumer's OS (typically `darwin`, `linux`, or `windows`).
 - `${ARCH}` — the consumer's architecture (typically `amd64` or `arm64`).
