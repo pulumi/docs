@@ -131,7 +131,7 @@ comparison_table:
                   items:
                     - content: Free
                     - content: $0.00025/hour
-                      subtext: $0.185/month
+                      subtext: $0.1825/month
                     - content: Starting at $0.0005/hour
                       subtext: $0.365/month
                     - content: Custom
@@ -690,7 +690,7 @@ faq:
             Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
         - question: How are IaC resources billed?
           answer: |
-            IaC resources are billed hourly at the rate of $0.00025 for Team ($0.185 per resource per month) and starting at $0.0005 for Enterprise ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
+            IaC resources are billed hourly at the rate of $0.00025 for Team ($0.1825 per resource per month) and starting at $0.0005 for Enterprise ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
 
             Enterprise plans receive volume discounts, so that the more resources you consume, the lower the incremental rate. This is true of self-serve pay-as-you-go plans, although prepaid plans offer more considerable discounts.
 
