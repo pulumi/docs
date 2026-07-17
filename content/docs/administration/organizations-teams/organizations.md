@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud Organizations"
 meta_desc: Organizations are a space for you to collaborate on shared projects and stacks. Learn more about how Organizations work in the Pulumi Cloud.
 title: "Organizations"
 h1: Pulumi Cloud organizations
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Organizations
@@ -101,6 +100,19 @@ To update billing information:
 1. Under **Payment methods**, select **Update**.
 
 If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
+
+## Changing the company name on invoices
+
+The company name that appears on Pulumi invoices is sourced from your organization's display name. To change it, update the display name. The updated name will appear on your next invoice, and updates take effect shortly after saving.
+
+To update your organization's display name:
+
+1. Navigate to **Settings** > **General**.
+1. Update the **Display Name** field and save your changes.
+
+Updating the display name requires the `organization:rename` permission, which is granted to organization admins.
+
+If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/).
 
 ## Transferring stacks
 

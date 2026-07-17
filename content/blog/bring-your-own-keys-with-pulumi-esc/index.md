@@ -3,12 +3,12 @@ title: "Bring Your Own Keys With Pulumi ESC"
 date: 2025-06-18T13:25:26-03:00
 draft: false
 meta_desc: "You can Bring Your Own Keys (BYOK) to encrypt secrets on Pulumi ESC."
-meta_image: meta.png
 canonical_url: "https://www.pulumi.com/docs/pulumi-cloud/admin/customer-managed-keys/"
 authors:
     - pablo-terradillos
     - boris-schlosser
 tags: ["esc", "aws", "features", "secrets"]
+category: product
 ---
 
 Today we’re excited to launch support for Customer-Managed Keys (CMKs) in Pulumi ESC. This feature gives your organization full control over how your secrets and state are encrypted — empowering you to meet the most demanding compliance requirements like HIPAA, GDPR, and FedRAMP, all while maintaining the ease-of-use that Pulumi is known for.

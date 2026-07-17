@@ -44,7 +44,7 @@ using Pulumi.Esc.Sdk;
 using var client = EscClient.CreateDefault();
 ```
 
-This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using Pulumi CLI or ESC CLI.
+This method will first look for the `PULUMI_ACCESS_TOKEN` environment variable, and if it's not present, it will fall back to CLI credentials that are present on your machine if you have logged in using the Pulumi CLI.
 
 If the default behavior does not work for you, you can always pass an access token directly to the client constructor:
 

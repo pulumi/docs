@@ -15,7 +15,6 @@ social:
       - Future-proof your infrastructure management
 
       Learn why many organizations are choosing Pulumi to modernize their cloud engineering practices.
-meta_image: meta.png
 authors:
 - engin-diri
 tags:
@@ -24,6 +23,7 @@ tags:
 - infrastructure-as-code
 - cloud-management
 - hcl
+category: general
 ---
 
 The Java Language Architect at Oracle, Brian Goetz, author of Java Concurrency in Practice, has commented how declarative

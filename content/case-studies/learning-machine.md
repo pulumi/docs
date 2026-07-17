@@ -7,7 +7,10 @@ description: |
 meta_desc: See how Learning Machine worked with Pulumi to streamline its DevOps processes and eliminate several hundred thousand lines of configuration code.
 
 customer_name: Learning Machine
+industry: education
 customer_logo: /logos/customers/learning-machine_logo.svg
+logo_bg_color: "#151828"
+logo_style: white
 customer_url: https://www.hyland.com/
 
 quote_block:
@@ -50,7 +53,7 @@ standards communities, including Blockcerts, IMS Global, and the W3C.
 
 Like many Software as a Service companies, Learning Machine started off with a basic
 infrastructure and a simple development process. They selected Amazon Web Services as
-their public cloud partner, and began using Cloud Formation to specify their
+their public cloud partner, and began using CloudFormation to specify their
 infrastructure. Most of the development team was focused on higher-level business logic,
 and very quickly, the task of infrastructure specification became specialized. As a
 result, few folks on the development team had the time to jump in and understand the

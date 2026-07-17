@@ -22,7 +22,6 @@ meta_desc: "My hands-on experience using Jenkins with Pulumi in 2025. Learn abou
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -37,6 +36,7 @@ tags:
     - ci-cd
     - devops
     - automation
+category: tutorials
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -433,6 +433,10 @@ This Pulumi program does several things that would be much more cumbersome with 
 The beauty of this approach is that it combines the lessons learned from our Docker-based Jenkins setup with modern cloud-native practices. Agents are still containerized and ephemeral, but now they're managed by Kubernetes rather than the Docker plugin. Storage is persistent but managed by Kubernetes PVCs. And everything is defined as code using a real programming language rather than YAML.
 
 This setup gives you a production-ready Jenkins instance that can handle serious workloads while being completely reproducible and maintainable. But more importantly, it sets the foundation for the kind of advanced CI/CD practices that modern teams need. These practices go far beyond what we could achieve with our old VM-based approach.
+
+{{< blog/cta-card title="Build your infrastructure pipeline" >}}
+You can define your Jenkins deployment and the Pulumi programs it runs as code, version every change, and check updates with `pulumi preview` before they ship. Start a project to wire infrastructure as code into your pipeline.
+{{< /blog/cta-card >}}
 
 ## Configuring Our First Pipeline to Deploy a Pulumi Program
 

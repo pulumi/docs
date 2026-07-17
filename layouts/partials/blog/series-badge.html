@@ -1,0 +1,26 @@
+{{- /*
+    Series badge for the post hero — "<Series Title>: Part N" (outline pill)
+    linking to the series page (/blog/series/<slug>/). Shown in place of the category
+    badge on posts that belong to a series. Call with the post page context;
+    renders nothing if the post isn't in a series or the slug isn't a known series.
+
+    Part N is the post's position among the series' published posts, oldest-first
+    — the same numbering as the series sidebar and series page.
+*/ -}}
+{{- $slug := .Params.series -}}
+{{- with $slug -}}
+    {{- $seriesData := false -}}
+    {{- with site.Data.blog_series }}{{ range .series }}{{ if eq .slug $slug }}{{ $seriesData = . }}{{ end }}{{ end }}{{ end -}}
+    {{- with $seriesData -}}
+        {{- $parts := (where (where site.RegularPages "Params.series" $slug) "Date" "lt" now).ByDate -}}
+        {{- $num := 0 -}}
+        {{- range $i, $p := $parts }}{{ if eq $p.RelPermalink $.RelPermalink }}{{ $num = add $i 1 }}{{ end }}{{ end -}}
+        {{- if $num -}}
+            {{- partial "blog/badge.html" (dict
+                "text" (printf "%s: Part %d" .title $num)
+                "variant" "outline"
+                "href" (printf "/blog/series/%s/" $slug)
+                "track" (printf "blog-series-%s" $slug)) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}

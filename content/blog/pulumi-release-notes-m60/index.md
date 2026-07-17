@@ -3,12 +3,12 @@ title: "August 18 releases: EKS, Pulumi Component methods, dependsOn"
 date: 2021-08-18T08:00:00-07:00
 draft: false
 meta_desc: "`dependsOn` improvements in Pulumi Component Packages, EKS Package with more managed node group options, support for methods in Pulumi Component Packages"
-meta_image: meta.png
 authors:
     - alex-mullans
 tags:
     - features
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 Summer is quickly flying by, and we've been hard at work with more new features and updates across the Pulumi ecosystem!
@@ -51,7 +51,7 @@ In this milestone, we shipped Pulumi versions [3.9.0](https://github.com/pulumi/
 
 ### `dependsOn` now works for Pulumi Component Packages, and more
 
-The [`dependsOn` option](/docs/concepts/resources#dependson) creates a list of explicit dependencies between resources, which can be useful when you need to explicity specify additional dependencies that Pulumi doesn’t know about but must still respect. Previously, `dependsOn` worked differently depending on the language your Pulumi code was written in or when referencing a component inside a Pulumi Component Package. Now, depending on a Pulumi Component Package's component will always wait on all of that component's children, regardless of language. Additionally, you can now pass `Input`s and `Output`s to `dependsOn`, which can be especially useful in Kubernetes and Helm workflows where you need to depend on the output of a resource created by a Helm chart.
+The [`dependsOn` option](/docs/concepts/resources#dependson) creates a list of explicit dependencies between resources, which can be useful when you need to explicitly specify additional dependencies that Pulumi doesn’t know about but must still respect. Previously, `dependsOn` worked differently depending on the language your Pulumi code was written in or when referencing a component inside a Pulumi Component Package. Now, depending on a Pulumi Component Package's component will always wait on all of that component's children, regardless of language. Additionally, you can now pass `Input`s and `Output`s to `dependsOn`, which can be especially useful in Kubernetes and Helm workflows where you need to depend on the output of a resource created by a Helm chart.
 
 To see this work in action, check out the [Staged App Rollout Gated by Prometheus Checks](https://github.com/pulumi/examples/tree/ca40203279f393c0c159dadcadc97c6007122997/kubernetes-ts-staged-rollout-with-prometheus) example, where we create a staged rollout (from 3-replica canary -> 10-replica staging) gated by confirming that the P90 response time reported by Prometheus is less than some amount. The relevant code is the last line of this snippet, which lets your Kubernetes deployment depend on a Prometheus resource:
 

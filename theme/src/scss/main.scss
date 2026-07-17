@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+// Drive the `dark:` variant off our docs theme attribute instead of the v4
+// default (prefers-color-scheme). This is the standard Tailwind v4 mechanism for
+// attribute/selector-based dark mode. Because the inline head script only writes
+// data-theme on docs pages, `dark:` utilities are automatically scoped to /docs
+// and track the three-state toggle (system resolves to dark there).
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 // Tell Tailwind v4 where to scan for utility class usage in templates.
 // Paths are relative to this file (theme/src/scss/).
 @source "../../../layouts/**/*.html";
@@ -114,9 +121,19 @@ $sitenav-offset: calc($sitenav-height + 16px);
     [role="button"]:not(:disabled) {
         cursor: pointer;
     }
+
+    // Round all YouTube embeds. The `youtube` shortcode and youtube.html partial
+    // render a full-bleed iframe in a bare wrapper, so putting the radius on the
+    // iframe itself clips its corners regardless of the surrounding markup.
+    iframe[src*="youtube.com/embed"],
+    iframe[src*="youtube-nocookie.com/embed"] {
+        @apply rounded-lg;
+    }
 }
 
 @layer components {
+    // Imported FIRST: later partials (_hubspot, _blog, _footer) @include its mixins.
+    @import "forms";
     @import "about";
     @import "accordion";
     @import "algolia";
@@ -128,6 +145,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "marketing/automation-api";
     @import "badges";
     @import "benefits";
+    @import "blog";
     @import "breadcrumb";
     @import "button";
     @import "buttons";
@@ -160,7 +178,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "github-card";
     @import "neo-card";
     @import "docs/packages";
-    @import "pagination";
     @import "marketing/product";
     @import "responsive-video";
     @import "marketing/pulumi-deployments";
@@ -173,6 +190,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "marketing/workshop-signup";
     @import "marketing/slot-machine";
     @import "marketing/stacked-carousel";
+    @import "marketing/state-of-agentic-infrastructure";
     @import "docs/registry";
     @import "docs/tutorials";
     @import "tables";
@@ -183,7 +201,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "components/banner";
     @import "components/chooser";
     @import "components/choosable";
-    @import "components/convert";
     @import "components/docs-nav";
     @import "components/filter-select";
     @import "components/greenhouse-jobs-list";
@@ -198,6 +215,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "components/user-toggle";
     @import "components/tabs";
     @import "templates";
+    @import "case-studies";
     @import "neo-mode";
 
     .nav-main {
@@ -348,12 +366,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
-    .blog-list-description {
-        // Make the min height of the section equal to the anchor-wrapped image
-        // and padding, so the border isn't misaligned on items with shorter descriptions.
-        min-height: 178px;
-    }
-
     pulumi-tree-item {
         &::part(expand-collapse-button) {
             @apply text-xs;
@@ -365,12 +377,20 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
-    section.newsletter-input pulumi-hubspot-form input.hs-input {
-        @apply rounded;
-    }
 }
 
 @import "consent-banner";
+
+// Docs dark mode. Imported UNLAYERED (not inside @layer components) so its dark
+// overrides win against the Tailwind utilities used by the docs header/buttons —
+// utilities beat the components layer regardless of specificity. Everything in
+// the partial is scoped to body.section-docs + html[data-theme="dark"], so it
+// cannot affect any non-docs page.
+@import "docs/docs-theme";
+
+// Min Light code theme for /docs light mode. Unlayered (like docs-theme above) so
+// it beats the layered component rules; scoped + documented in the partial.
+@import "docs/code-light";
 
 // Auth-aware header swap. The inline script in head.html adds .is-signed-in
 // to <html> when the auth cookie is present, before first paint. These rules

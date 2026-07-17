@@ -24,7 +24,6 @@ meta_desc: |
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -35,6 +34,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - kubernetes
+category: product
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -266,6 +266,10 @@ If the resource doesn't appear to follow well-known conventions, Pulumi will mai
 (Generic readiness criteria are determined by [cli-utils](https://github.com/kubernetes-sigs/cli-utils/tree/master/pkg/kstatus) (a collection of Go libraries maintained by the [SIG CLI](https://github.com/kubernetes/community/blob/master/sig-cli/README.md)), and behavior is unchanged for any resources that Pulumi already waits for readiness.)
 
 Please don't hesitate to reach out on [GitHub](https://github.com/pulumi/pulumi-kubernetes/issues/new) or [Slack](https://pulumi-community.slack.com/archives/CRFURDVQB) if you're excited about this feature; if you experience any issues with it; or if you have any feedback to share!
+
+{{< blog/cta-card title="Manage Kubernetes readiness with Pulumi" >}}
+Express complex rollout and readiness relationships in the language you already use, and let Pulumi wait for your cluster resources to become ready before it continues.
+{{< /blog/cta-card >}}
 
 ## Additional improvements
 

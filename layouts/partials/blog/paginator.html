@@ -1,7 +1,50 @@
-<!--
-    Pagination widget.
--->
+{{- /*
+    Blog paginator — custom markup over .Paginator (Previous / windowed numbers /
+    Next). Replaces _internal/pagination.html.
 
-<div class="text-center">
-    {{ template "_internal/pagination.html" . }}
+    Both forms render a "Page N of total" label (left) and the pager controls
+    (right) inside a justify-between wrapper.
+
+    Two call forms:
+      Bottom (default): {{ partial "blog/paginator.html" . }} — passes the page.
+        The wrapper carries the `data-paginator` / `data-next-url` hook the
+        infinite-scroll JS reads and hides (as a unit) once it upgrades; the
+        numbered links are the no-JS / crawler fallback.
+      Top (deep pages only): {{ partial "blog/paginator.html" (dict "context" . "position" "top") }}
+        A visible-only copy shown above the list on /page/N/ (N >= 2) landings,
+        where the JS disables infinite scroll and classic pagination takes over.
+        Omits the JS hook (no data-paginator / data-next-url) so it never competes
+        with the bottom pager's querySelector, and renders nothing on page 1.
+
+    Call after .Paginate has run.
+*/ -}}
+{{- $ctx := . -}}
+{{- $top := false -}}
+{{- if reflect.IsMap . -}}{{ $ctx = .context }}{{ $top = eq .position "top" }}{{- end -}}
+{{- $p := $ctx.Paginator -}}
+{{- if and (gt $p.TotalPages 1) (or (not $top) (gt $p.PageNumber 1)) -}}
+{{- $cur := $p.PageNumber -}}
+{{- $total := $p.TotalPages -}}
+{{- $start := cond (gt (sub $cur 2) 1) (sub $cur 2) 1 -}}
+{{- $end := cond (lt (add $cur 2) $total) (add $cur 2) $total -}}
+<div{{ if not $top }} data-paginator{{ end }} class="flex flex-wrap items-center justify-between gap-4{{ if $top }} mb-8{{ else }} mt-12{{ end }}"{{ if not $top }}{{ with $p.Next }} data-next-url="{{ .URL }}"{{ end }}{{ end }}>
+    <p class="m-0! font-overline-sm text-gray-700">Page {{ $cur }} of {{ $total }}</p>
+    <nav aria-label="Blog pagination{{ if $top }} (top){{ end }}" class="flex flex-wrap items-center justify-end gap-2">
+    {{- with $p.Prev }}<a href="{{ .URL }}" rel="prev" data-track="paginator-prev" class="btn btn-sm btn-outline">Previous</a>{{ end }}
+    {{- if gt $start 1 }}
+        <a href="{{ (index $p.Pagers 0).URL }}" data-track="paginator-1" class="btn btn-icon-sm btn-ghost">1</a>
+        {{- if gt $start 2 }}<span class="px-1 text-gray-400" aria-hidden="true">…</span>{{ end }}
+    {{- end }}
+    {{- range $n := (seq $start $end) }}
+        {{- $pg := index $p.Pagers (sub $n 1) }}
+        {{- if eq $n $cur }}<span aria-current="page" class="btn btn-icon-sm btn-secondary">{{ $n }}</span>
+        {{- else }}<a href="{{ $pg.URL }}" data-track="paginator-{{ $n }}" class="btn btn-icon-sm btn-ghost">{{ $n }}</a>{{ end }}
+    {{- end }}
+    {{- if lt $end $total }}
+        {{- if lt $end (sub $total 1) }}<span class="px-1 text-gray-400" aria-hidden="true">…</span>{{ end }}
+        <a href="{{ (index $p.Pagers (sub $total 1)).URL }}" data-track="paginator-{{ $total }}" class="btn btn-icon-sm btn-ghost">{{ $total }}</a>
+    {{- end }}
+    {{- with $p.Next }}<a href="{{ .URL }}" rel="next" data-track="paginator-next" class="btn btn-sm btn-outline">Next</a>{{ end }}
+    </nav>
 </div>
+{{- end -}}

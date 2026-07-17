@@ -3,7 +3,6 @@ title_tag: "Pulumi ESC vs Doppler"
 meta_desc: Learn about the major differences between Pulumi ESC and Doppler.
 title: Pulumi ESC vs Doppler
 h1: Pulumi ESC vs Doppler
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     esc:
         Name: Doppler
@@ -12,17 +11,6 @@ menu:
         weight: 3
 aliases:
 ---
-
-<style>
-    main table {
-        font-size: 0.94em;
-    }
-
-    main table th,
-    main table td {
-        width: 33.3%;
-    }
-</style>
 
 Choosing the right [secrets management](/what-is/what-is-secrets-management/) tool is important, and we want you to have as much information as possible to make the choice that best suits your needs. We’ve created this document to help you understand how Pulumi ESC compares with Doppler.
 
@@ -40,6 +28,7 @@ There are a couple of fundamental differences between Doppler and Pulumi ESC. Do
 
 Here's a detailed comparison of the two:
 
+<div class="table-wrapper">
 <table>
     <tr>
         <th>Feature</th>
@@ -79,7 +68,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>CLI</td>
-        <td>Yes, available via <code>esc</code> CLI and <code>pulumi</code> CLI</td>
+        <td>Yes, available via the <code>pulumi</code> CLI</td>
         <td>Yes</td>
     </tr>
     <tr>
@@ -162,7 +151,7 @@ Here's a detailed comparison of the two:
     </tr>
     <tr>
         <td>Secure Environment Variables</td>
-        <td>Yes, the <code>esc run</code> CLI command can be used to specify which secrets are available as environment variables</td>
+        <td>Yes, the <code>pulumi env run</code> CLI command can be used to specify which secrets are available as environment variables</td>
         <td>No, all values are available as environment variables</td>
     </tr>
         <td>Plaintext Read Only Mode</td>
@@ -170,5 +159,6 @@ Here's a detailed comparison of the two:
         <td>No</td>
     </tr>
 </table>
+</div>
 
 {{< get-started-esc >}}

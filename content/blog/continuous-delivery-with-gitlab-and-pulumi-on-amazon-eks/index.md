@@ -1,11 +1,12 @@
 ---
 title: "Continuous Delivery with GitLab and Pulumi on Amazon EKS"
 authors: ["nishi-davidson"]
-tags: ["AWS","Kubernetes","continuous-delivery"]
+tags: [aws, kubernetes, continuous-delivery]
+category: tutorials
 meta_desc: "In this blog, we'll walk through how to use Pulumi to enable GitLab-based continuous delivery with your Kubernetes workloads on Amazon EKS."
 date: "2019-05-22"
 
-meta_image: "post-image.png"
+
 ---
 
 In this blog, we will work through an example that shows how to use Pulumi to enable GitLab-based

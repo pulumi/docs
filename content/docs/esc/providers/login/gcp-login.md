@@ -3,7 +3,6 @@ title_tag: gcp-login Pulumi ESC Provider
 meta_desc: The gcp-login Pulumi ESC Provider enables you to log in to Google Cloud using OIDC or by providing static credentials.
 title: gcp-login
 h1: gcp-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: gcp-login
@@ -61,46 +60,22 @@ values:
     CLOUDSDK_AUTH_ACCESS_TOKEN: ${gcp.login.accessToken}
 ```
 
-## Configuring OIDC
+## Schema reference
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google Cloud, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/gcp/) documentation.
+{{< esc-schema-updated >}}
 
-## Inputs
+### Inputs
 
-| Property      | Type                                        | Description                                                                      |
-|---------------|---------------------------------------------|----------------------------------------------------------------------------------|
-| `project`     | number                                      | The **numerical** ID of the GCP project, aka project number. (e.g. 951040570662) |
-| `accessToken` | [GCPLoginAccessToken](#gcploginaccesstoken) | [Optional] Options for access token login.                                       |
-| `oidc`        | [GCPLoginOIDC](#gcploginoidc)               | [Optional] Options for OIDC login.                                               |
-
-### GCPLoginAccessToken
-
-| Property         | Type   | Description                                                                                  |
-|------------------|--------|----------------------------------------------------------------------------------------------|
-| `accessToken`    | string | The token used to authenticate with Google Cloud.                                            |
-| `serviceAccount` | string | [Optional] - The service account to impersonate, if any.                                     |
-| `tokenLifetime`  | string | [Optional] - The lifetime of the temporary credentials when impersonating a service account. |
-
-### GCPLoginOIDC
-
-| Property         | Type   | Description                                                                |
-|------------------|--------|----------------------------------------------------------------------------|
-| `workloadPoolId` | string | The (short) ID of the workload pool to use.                                |
-| `providerId`     | string | The (short) ID of the identity provider associated with the workload pool. |
-| `serviceAccount` | string | The email address of the service account to use.                           |
-| `region`         | string | [Optional] - The location of the Workload Identity Pool. For standard Workload Identity Pools, this should be `global` (the default). Only specify a regional value if you have explicitly created a regional Workload Identity Pool. |
-| `tokenLifetime`  | string | [Optional] - The lifetime of the temporary credentials.                    |
-| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
+{{< esc-schema type="provider" name="gcp-login" section="inputs" >}}
 
 {{< notes type="info" >}}
 If you encounter authentication errors with GCP OIDC, see the [GCP OIDC troubleshooting guide](/docs/esc/guides/configuring-oidc/gcp/#troubleshooting) for common issues and solutions.
 {{< /notes >}}
 
-## Outputs
+### Outputs
 
-| Property      | Type   | Description                                                                      |
-|---------------|--------|----------------------------------------------------------------------------------|
-| `project`     | string | The **numerical** ID of the GCP project, aka project number. (e.g. 951040570662) |
-| `accessToken` | string | The access token used to authenticate with Google Cloud.                         |
-| `tokenType`   | string | The type of the access token.                                                    |
-| `expiry`      | string | [Optional] - The access token's expiry time.                                     |
+{{< esc-schema type="provider" name="gcp-login" section="outputs" >}}
+
+## Configuring OIDC
+
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Google Cloud, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/gcp/) documentation.

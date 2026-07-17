@@ -1,5 +1,6 @@
 ---
 title: "Advanced AWS Networking: Part 1"
+feature_image: feature.png
 
 # The date represents the post's publish date,
 # and by default corresponds with the date this file was generated.
@@ -19,7 +20,6 @@ meta_desc: Learn how to create a hub-and-spoke architecture in AWS using Pulumi 
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect ratio
 # has been provided for you.
-meta_image: aws-advanced-networking-part-1.png
 
 authors:
     - josh-kodroff
@@ -31,7 +31,7 @@ tags:
     - networking
     - hub-and-spoke
     - python
-    - aws-networking-advanced
+category: tutorials
 series: aws-networking-advanced
 ---
 

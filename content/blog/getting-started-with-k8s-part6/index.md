@@ -1,13 +1,13 @@
 ---
 title: "Getting Started With Kubernetes: Day 2"
+feature_image: feature.png
 date: 2020-08-10
 meta_desc: "How to use infrastructure as code for day 2 maintenance tasks in Kubernetes."
-meta_image: day_2.png
 authors:
     - sophia-parafina
 tags:
     - kubernetes
-    - kubernetes-getting-started
+category: tutorials
 series: kubernetes-getting-started
 ---
 

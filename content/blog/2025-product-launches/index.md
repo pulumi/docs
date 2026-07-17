@@ -4,13 +4,13 @@ allow_long_title: true
 date: 2025-12-22
 draft: false
 meta_desc: "Pulumi 2025 launches: Neo AI agent for platform engineers, next-gen policy management, IDP, ESC integrations, and IaC enhancements."
-meta_image: meta.png
 authors:
     - arun-loganathan
 tags:
     - features
     - product-launches
     - pulumi-cloud
+category: product
 ---
 
 The era of AI-accelerated development has arrived, creating both unprecedented opportunity and unprecedented challenge. Developers ship code faster than ever, but platform teams struggle to keep pace. The velocity gap threatens to become a bottleneck.

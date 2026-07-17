@@ -2,11 +2,11 @@
 title: "Introducing AWS CDK on Pulumi"
 date: 2022-05-04T06:56:00-07:00
 meta_desc: "Use AWS CDK constructs from within Pulumi, combining Pulumi and AWS CDK resources, and getting the performance and rich features of the Pulumi platform."
-meta_image: aws-cdk-on-pulumi.png
 authors:
     - luke-hoban
 tags:
     - aws-cdk
+category: product
 ---
 
 {{% notes type="warning" %}}
@@ -192,6 +192,10 @@ export function remapCloudControlResource(
 ```
 
 In many cases, this is not needed, as AWS CDK on Pulumi offers builtin support for remapping many common resources. Over the coming months, as AWS Cloud Control API support expands to cover more of the CloudFormation resource model, these remappings will become less necessary in practice, with almost all resources being supported directly via Pulumi AWS Native.
+
+{{< blog/cta-card title="Use AWS CDK constructs with Pulumi" label="Learn more" href="/docs/iac/guides/clouds/aws/cdk/" >}}
+Deploy your existing AWS CDK constructs through Pulumi, and combine them with resources from hundreds of cloud and SaaS providers in a single program.
+{{< /blog/cta-card >}}
 
 ## Using High-Level "L3" Constructs
 

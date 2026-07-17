@@ -3,7 +3,6 @@ title: Previews
 title_tag: Running previews with Pulumi Neo
 h1: Running previews with Pulumi Neo
 meta_desc: Learn how Neo uses Pulumi preview to validate infrastructure changes before creating pull requests.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/running-previews/
 - /docs/iac/neo/running-previews/
@@ -27,7 +26,7 @@ To execute a `pulumi preview`, Neo needs the necessary configuration and credent
 - Applicable cloud provider credentials, such as [AWS](https://www.pulumi.com/registry/packages/aws/installation-configuration/#set-credentials-as-environment-variables), [Azure](https://www.pulumi.com/registry/packages/azure-native/installation-configuration/#set-configuration-using-environment-variables), or [GCP](https://www.pulumi.com/registry/packages/gcp/installation-configuration/#authenticate-using-a-service-account.)
 - Any additional configuration required by your Pulumi programs
 
- The configuration and credentials can be supplied via [stack config](/docs/iac/concepts/config/) or an [ESC environment](/docs/esc/environments/).
+ The configuration and credentials can be supplied via [stack config](/docs/iac/concepts/config/) or an [ESC environment](/docs/esc/concepts/environments/).
 
 ### Stack Config
 
@@ -37,7 +36,7 @@ To execute a `pulumi preview`, Neo needs the necessary configuration and credent
 
 Using [ESC](https://www.pulumi.com/docs/esc/) is the recommended approach for defining stack configuration and secrets. It is the most flexible and scalable option, and has native OIDC integration with all of the major cloud providers.
 
-Learn more about [ESC](/docs/esc/) and [associating an ESC](/docs/esc/guides/integrate-with-pulumi-iac/) environment with a stack.
+Learn more about [ESC](/docs/esc/) and [associating an ESC](/docs/esc/guides/pulumi-iac/) environment with a stack.
 
 ## Using previews
 

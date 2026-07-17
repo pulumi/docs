@@ -4,7 +4,6 @@ meta_desc: Pulumi integrates with AWS, Azure, Google Cloud, Kubernetes, and thou
 title: Clouds
 linktitle: Clouds
 h1: Clouds
-meta_image: /images/docs/meta-images/docs-meta.png
 docs_home: true
 notitle: true
 norightnav: true

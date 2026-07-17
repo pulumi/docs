@@ -4,7 +4,6 @@ title: Building with Pulumi
 layout: module
 description: Learn how to use Pulumi for more complex configurations with multiple environments.
 meta_desc: Learn how to create multiple Pulumi programs and work with them interdependently with this tutorial.
-meta_image: meta.png
 weight: 2
 summary: |
     This tutorial digs a little deeper into what it means to create multiple Pulumi programs and work with them interdependently. We will also cover how Pulumi uses secrets and how you can test your Pulumi programs.

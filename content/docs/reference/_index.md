@@ -8,7 +8,6 @@ menu:
     identifier: reference-home
     weight: 1
 meta_desc: Complete reference documentation for Pulumi CLI, Cloud REST API, language SDKs, and configuration syntax.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Reference Documentation
 description: <p>Reference documentation for Pulumi command-line tools, REST APIs, language SDKs, and configuration syntax.</p>
 aliases:
@@ -22,11 +21,6 @@ sections:
     heading: Pulumi CLI
     description: Command reference for the Pulumi infrastructure as code CLI.
     link: /docs/iac/cli/
-
-  - icon: pulumi-secrets
-    heading: ESC CLI
-    description: Command reference for the Pulumi ESC secrets and configuration CLI.
-    link: /docs/esc/cli/
 
 - type: button-cards
   heading: Language SDKs
@@ -108,7 +102,7 @@ sections:
   - icon: gear
     heading: ESC Environment Syntax
     description: Reference for ESC environment definitions, interpolations, functions, and providers.
-    link: /docs/esc/environments/syntax/
+    link: /docs/esc/concepts/environments/
 
   - icon: link
     heading: Property Paths

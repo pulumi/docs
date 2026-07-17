@@ -4,7 +4,6 @@ meta_desc: An overview of the Pulumi CLI and common commands used to deploy clou
 title: Pulumi CLI
 h1: Pulumi CLI overview
 no_on_this_page: true
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     name: Pulumi CLI
@@ -13,7 +12,7 @@ menu:
     parent: iac-home
   reference:
     name: Pulumi CLI
-    parent: reference-cli
+    parent: reference-home
     weight: 1
 aliases:
     - /docs/reference/commands/
@@ -51,9 +50,8 @@ The most common commands in the CLI that you'll be using are as follows:
 
 ## Complete Reference
 
-Below is the complete documentation for all available commands:
-
-{{< pulumi-command >}}
+For the complete, versioned documentation of every Pulumi CLI command, see the
+[CLI command reference](/docs/iac/cli/commands/).
 
 ## Environment Variables
 

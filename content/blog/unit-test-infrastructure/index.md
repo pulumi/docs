@@ -2,12 +2,11 @@
 title: "Unit Testing Infrastructure"
 date: 2020-03-24
 meta_desc: "Unit testing for infrastructure is now available using Node.js, Python, .NET, and Go"
-meta_image: tdd.png
 authors:
     - sophia-parafina
 tags:
     - testing
-    - testing
+category: product
 ---
 
 We’re pleased to announce that unit testing with Node.js, Python, .NET, and Go is supported in recent releases. You can test resources before deploying your infrastructure using familiar tools and test frameworks. Check your resource configuration and responses without the wait of deploying them and speed up infrastructure development and production deployments.

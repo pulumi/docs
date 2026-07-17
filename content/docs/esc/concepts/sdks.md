@@ -7,7 +7,7 @@ menu:
   esc:
     parent: esc-concepts
     identifier: esc-concepts-sdks
-    weight: 6
+    weight: 13
 ---
 
 The Pulumi ESC SDKs are language libraries that let you work with [environments](/docs/esc/concepts/) from your own code. They provide a programmatic interface to create, read, update, and delete environment definitions, and to open environments so you can read their evaluated configuration and resolved secrets.
@@ -19,11 +19,11 @@ The Pulumi ESC SDKs are language libraries that let you work with [environments]
 The SDK is designed for two primary use cases:
 
 - **Retrieving environment values from workloads at runtime.** An application or service opens an environment with the SDK and reads its resolved configuration and secrets while the workload runs. Because environments are evaluated when they are opened, dynamic values—such as short-lived cloud credentials—are generated fresh each time, rather than being baked into the workload.
-- **Managing environments programmatically.** Automation and tooling can use the SDK to create, update, tag, decrypt, and delete environment definitions, list environments and revisions, and check definitions for errors—the same operations you can perform with the `esc` CLI or the Pulumi Cloud console.
+- **Managing environments programmatically.** Automation and tooling can use the SDK to create, update, tag, decrypt, and delete environment definitions, list environments and revisions, and check definitions for errors—the same operations you can perform with the `pulumi env` commands or the Pulumi Cloud console.
 
 ## When not to use the SDK
 
-Do not use the ESC SDK to consume environments from inside a Pulumi IaC program. In an IaC program, list the environment in the `environment` block of your `Pulumi.<stack>.yaml` stack configuration so its values flow into the stack as configuration and secrets. See [Use ESC with Pulumi IaC](/docs/esc/guides/integrate-with-pulumi-iac/) for details.
+Do not use the ESC SDK to consume environments from inside a Pulumi IaC program. In an IaC program, list the environment in the `environment` block of your `Pulumi.<stack>.yaml` stack configuration so its values flow into the stack as configuration and secrets. See [Use ESC with Pulumi IaC](/docs/esc/guides/pulumi-iac/) for details.
 
 ## Supported languages
 

@@ -3,7 +3,6 @@ title_tag: "Stacks | Pulumi Concepts"
 meta_desc: Every Pulumi program is deployed to a stack and a project can have as many stacks as you need. Learn more about Pulumi stacks and how to use them.
 title: Stacks
 h1: Stacks
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Stacks
@@ -12,6 +11,7 @@ menu:
     concepts:
         weight: 2
 aliases:
+- /docs/iac/concepts/stacks/stackreference/
 - /docs/reference/stack/
 - /docs/tour/programs-exports/
 - /docs/intro/concepts/stack/
@@ -155,9 +155,9 @@ Keys that include an explicit namespace other than the project name (such as `aw
 
 ## Generate an update plan
 
-{{% notes type="warning" %}}
-[Update plans](/docs/concepts/plans/) are currently in experimental preview and will only show up in `--help` if the environment variable `PULUMI_EXPERIMENTAL` is set to `true`.
-{{% /notes %}}
+{{% experimental-feature %}}
+[Update plans](/docs/concepts/plans/) only show up in `--help` when the environment variable `PULUMI_EXPERIMENTAL` is set to `true`.
+{{% /experimental-feature %}}
 
 To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/concepts/config/) for the active stack.
 
@@ -394,7 +394,7 @@ Stack outputs respect secret annotations and are encrypted appropriately. If a s
 
 To add a README to a stack, export a stack output named `readme` whose value is the rendered markdown — most commonly by reading from a template file checked into your project (for example, `Pulumi.README.md`):
 
-{{< chooser language "typescript,python,go,csharp,java" / >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -474,6 +474,8 @@ public class App {
 ```
 
 {{% /choosable %}}
+
+{{< /chooser >}}
 
 The template file can reference other stack outputs (or resource properties) with `${...}` placeholders that Pulumi Cloud resolves when rendering. For example:
 

@@ -3,6 +3,18 @@
 title: "{{ replace .Name "-" " " | title }}"
 meta_desc: ""
 
+# Social card. Leave blank to auto-generate an on-brand event card at build time
+# (overline + title + presenter "With…" line + Pulumi logo + presenter photos).
+# A square 1:1 card is generated alongside it as a second og:image. Set either
+# field to override with a custom image committed to this bundle, e.g.
+# /events/{{ .Name }}/meta.png. The /event-meta-image skill can produce both,
+# plus extra social sizes, and add external co-presenters and partner logos.
+# meta_image:
+# meta_image_square:
+
+# Overline shown on the generated card. Defaults to event_type (uppercased).
+# overline:
+
 # A featured event displays first in the list.
 featured: false
 

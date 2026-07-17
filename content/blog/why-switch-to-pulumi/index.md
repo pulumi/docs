@@ -2,13 +2,13 @@
 title: "Why Switch to Pulumi for Infrastructure as Code?"
 date: 2024-07-23T19:47:50-07:00
 meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and leverage AI to revolutionize infrastructure management."
-meta_image: meta.png
 authors:
     - aaron-kao
 tags:
     - infrastructure-as-code
     - platform-engineering
     - ai
+category: general
 
 social:
     twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits.

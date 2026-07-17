@@ -52,23 +52,31 @@
                 @apply text-base;
             }
 
+            // Small-select chrome (mirrors form-select-sm in _forms.scss). The caret
+            // lives in the component's shadow DOM (filter-select-option-group.tsx);
+            // the pr-7 gutter leaves room for it. This block out-specifies the shared
+            // components/_filter-select.scss rule, so keep the two visually in sync.
             .toggle {
-                @apply pl-2 pr-5 py-1 rounded bg-white border border-gray-300 transition-all whitespace-nowrap;
+                @apply flex items-center h-8 pl-2 pr-7 bg-white border border-gray-300 transition-all whitespace-nowrap cursor-pointer;
                 width: auto;
+                border-radius: $form-radius;
+                box-shadow: $form-select-shadow;
 
                 @include screen-lg {
-                    @apply pr-6;
+                    @apply pr-8;
                 }
 
                 &:hover {
-                    @apply text-black;
-                    background-color: #e8e8ec;
+                    @apply border-gray-500 bg-gray-100;
                 }
             }
 
+            // Panel matches the main-nav dropdown (.card + shadow): gray-200 border,
+            // rounded-lg, Tailwind `shadow`.
             .options {
-                @apply absolute bg-white py-2 pl-1 pr-4 rounded shadow mt-1 border border-gray-300 leading-loose z-50;
+                @apply absolute bg-white py-2 pl-1 pr-4 shadow mt-1 border border-gray-200 leading-loose z-50;
                 max-width: calc(100vw - 2rem);
+                border-radius: $form-radius;
 
                 @include screen-lg {
                     @apply pr-8;
@@ -76,16 +84,10 @@
                 }
             }
 
-            &:hover,
-            &[expanded] {
-                &::part(toggle) {
-                    @apply text-black;
-                }
-
-                .toggle {
-                    @apply text-black;
-                    background-color: #e8e8ec;
-                }
+            // Open state — violet-800 focus-ring treatment shared with form controls.
+            &[expanded] .toggle {
+                @apply border-violet-800;
+                box-shadow: $form-focus-ring, $form-select-shadow;
             }
         }
     }

@@ -3,7 +3,6 @@ title_tag: "Logging in Pulumi for Debugging"
 meta_desc: "Learn about logging in Pulumi including CLI verbose logging for troubleshooting and program logging for diagnostics."
 title: Logging
 h1: Logging
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Logging

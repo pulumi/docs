@@ -3,7 +3,6 @@ title: "The Claude Skills I Actually Use for DevOps"
 date: 2026-02-09
 draft: false
 meta_desc: "Skills teach AI agents how to work like experienced practitioners. In this post, we share several skills that can improve how you build cloud infrastructure."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -13,9 +12,10 @@ tags:
     - platform-engineering
     - claude-code
     - ai-agents
+category: best-practices
 ---
 
-When Claude Code first released [skills](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/skills), I ignored them. They looked like fancy prompts, another feature to add to the pile of things I would get around to learning eventually. Then I watched a few engineers demonstrate what skills actually do, and something clicked. By default, language models do not write good code. They write plausible code based on what they have read. Plausible code turns into bugs, horrible UX, and infrastructure that breaks at 3am.
+When Claude Code first released [skills](https://docs.anthropic.com/en/docs/claude-code/skills), I ignored them. They looked like fancy prompts, another feature to add to the pile of things I would get around to learning eventually. Then I watched a few engineers demonstrate what skills actually do, and something clicked. By default, language models do not write good code. They write plausible code based on what they have read. Plausible code turns into bugs, horrible UX, and infrastructure that breaks at 3am.
 
 <!--more-->
 
@@ -205,6 +205,10 @@ Treat skills like you treat any third-party dependency:
 1. Stick to known repositories. Every skill recommended in this post comes from a repository with visible maintainers and community activity.
 
 Eight malicious skills were still publicly available on ClawHub when Snyk published their findings. The skills ecosystem is young, and the vetting infrastructure is still catching up.
+
+{{< blog/cta-card title="Build infrastructure with agent skills" href="/docs/ai/skills/" >}}
+Pulumi's Agent Skills teach Claude Code, Cursor, or any coding agent the infrastructure patterns covered here. Install them, then build and deploy your stacks with fewer corrections.
+{{< /blog/cta-card >}}
 
 ## Putting it together
 

@@ -3,7 +3,6 @@ title_tag: "Resources | Pulumi Concepts"
 meta_desc: Resources represent the fundamental units that make up your cloud infrastructure. Learn how Pulumi resources work and how to use them in this guide.
 title: Resources
 h1: Resources
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Resources
@@ -122,7 +121,7 @@ All resources have a required [`name`](/docs/concepts/resources/names) argument,
 
 The `args` argument is an object with a set of named property input values that are used to initialize the resource. These can be normal raw values—such as strings, integers, lists, and maps—or [outputs](/docs/concepts/inputs-outputs/) from other resources. Each resource has a number of named input properties that control the behavior of the resulting infrastructure. To determine what arguments a resource supports, refer to that resource’s API documentation in the [Registry](/registry/).
 
-The [`options`](/docs/concepts/options) argument is optional, but lets you control certain aspects of the resource. For example, you can show explicit dependencies, use a custom provider configuration, or import an existing infrastructure.
+The [`options`](/docs/concepts/options) argument is optional, but lets you control certain aspects of the resource. For example, you can show explicit dependencies, use a custom provider configuration, or import existing infrastructure.
 
 ## Related topics
 

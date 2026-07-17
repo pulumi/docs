@@ -1,7 +1,7 @@
 # Pulumi Documentation Style Guide
 
 This guide defines Pulumi-specific style rules for our documentation.  
-For topics not addressed here, refer to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
+It's the repo-specific layer. For brand-level conventions, defer to the [Pulumi brand guidelines](https://brand.pulumi.com/) (see [Brand guidelines](#brand-guidelines) below); for anything neither covers, fall back to the [Google Developer Documentation Style Guide](https://developers.google.com/style).
 
 ---
 
@@ -16,6 +16,20 @@ The following exceptions are specifically excluded from this style guide:
 
 ---
 
+## Brand guidelines
+
+Brand-level conventions — voice and tone, writing style, typography, logo and visual usage, and color — live in the [Pulumi brand guidelines](https://brand.pulumi.com/). Precedence, highest first:
+
+1. **This style guide** — repo-specific conventions for this repository's Hugo content.
+1. **Pulumi brand guidelines** — brand-wide voice, writing style, and visual rules.
+1. **[Google Developer Documentation Style Guide](https://developers.google.com/style)** — anything neither covers.
+
+When this guide and the brand guidelines diverge, this guide wins here — but flag the divergence rather than inventing a third convention.
+
+Approved logos and other brand assets come from the self-describing brand asset API (`https://brand.pulumi.com/api`) — no setup, just fetch the URL. Working in an interactive agent or editor? Installing the [Pulumi Brand MCP server](https://brand.pulumi.com/mcp) puts the full guidelines, logos, palette, and a contrast checker inline.
+
+---
+
 ## Inclusive Language
 
 Pulumi strives to use language that is clear, inclusive, and respectful.  
@@ -26,7 +40,7 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - Avoid unnecessarily gendered language (e.g., use _folks_, _everyone_).  
 - Avoid violent or aggressive terms (e.g., avoid _kill_).  
 - Avoid pop-culture references that may not be globally understood.  
-- Instead of "click," use "select."  
+- Instead of "click," use "select" (or "choose").  
 - Instead of "go to," use "navigate."  
 - Avoid directional terms (e.g., "see above"); link directly.  
 - Avoid words like "easy" or "simple." These judge difficulty and may alienate readers.
@@ -42,6 +56,8 @@ Pulumi strives to use language that is clear, inclusive, and respectful.
 - Use capitalization only for proper nouns. For example, use "stack" not "Stack."
 - Do not end headings with punctuation, with one exception: headings in a "Frequently asked questions" section may end with `?` so the site's FAQPage JSON-LD auto-collector (`layouts/partials/schema/collectors/faq-entity.html`) detects them as questions.
 - Headings should be surrounded by blank lines.
+
+> **Title vs. headings.** The brand guide's sentence-case rule governs *headings*, and it treats the H1 as the page **title**, not a heading. Title Case for the H1 — rendered from front-matter `title`, consistent with the Title Case used for navigation menu items — is therefore in keeping with the [Pulumi brand writing-style guidelines](https://brand.pulumi.com/), not an exception to them. Sentence case applies to H2 and deeper. Don't "fix" existing H1s to sentence case.
 
 **Navigation menu items**: Use **Title Case** for frontmatter menu fields (`menu.name`, `menu.title`). Navigation items are UI labels, not prose headings, and follow Title Case conventions consistent with industry standards.
 
@@ -110,8 +126,11 @@ If the page also links to related child pages, use standard markdown (lists, tab
 ## Images and Media
 
 - Use root-relative paths for all image references (see [Links](#links) above).
-- Provide descriptive alt text for all images.
+- Provide descriptive alt text for all images. Describe the image's content or function in a few words, and omit lead-ins like "image of" or "screenshot of" — screen readers already announce those.
+- Name image files descriptively (helps accessibility and SEO); avoid generic names like `screenshot-1.png`.
 - For partial screenshots where the image may be hard to distinguish from the page background, add a 1px gray #999999 border.
+
+**Brand assets.** Use approved logos from the brand asset API (`https://brand.pulumi.com/api`); don't recolor, distort, or otherwise alter the logo, and never AI-generate Pulumi brand imagery or the Pulumipus mascot.
 
 ---
 
@@ -154,6 +173,18 @@ Both syntaxes work for plain text content, but use percent signs for shortcodes 
 - Separate paragraphs with a blank line.  
 - Do not use line breaks within paragraphs. Let text wrap naturally.  
 - Keep paragraphs short (ideally ≤3 sentences).
+
+---
+
+## Grammar and punctuation
+
+- Use the Oxford (serial) comma: "build, deploy, and manage," not "build, deploy and manage."
+- Use present tense for how the product behaves: "Neo pauses when the limit is reached," not "Neo will pause." Reserve the future tense for events that genuinely happen later.
+- Contractions are fine — preferred, even — in docs. They read more naturally.
+- Put commas and periods outside closing quotation marks unless they belong to the quoted text — e.g., write `"us-west-2"`, with the comma outside.
+- Em-dashes are fine when you write them yourself, but revise away the em-dashes, three-item series, and filler phrasings that LLMs tend to emit — they read as unedited machine output.
+
+For dates, times, numbers, and anything else this guide doesn't specify, defer to the brand [writing-style guide](https://brand.pulumi.com/voice/writing-style/). On **point of view** — the most-missed rule — it uses the second person (*you*), not the first-person plural (*we*): in docs, "we aren't doing anything — the reader is." Reserve *we* for blog and community content.
 
 ---
 
@@ -285,7 +316,9 @@ See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Me
   - Pulumi ESC (Environments, Secrets, and Configuration)  
   - Pulumi IDP (Internal Developer Platform)  
   - Pulumi Insights  
-  - Pulumi Cloud
+  - Pulumi Cloud (also Pulumi console / Pulumi Cloud console — but not "Pulumi UI")
+  - Pulumi Deployments
+  - Pulumi Neo
   - Pulumi Policies  
 - Expand product acronyms at first mention. Use just the product name after.  
 - For non-Pulumi acronyms: spell out on first use, then use the acronym.  
@@ -328,10 +361,27 @@ Use **"Pulumi package"** (not "cross-language package") when referring to compon
 
 ---
 
+## Cross-reference sections
+
+Many pages end with a block of links to other pages. Use one of exactly two headings, chosen by the reader's intent — do not invent variants ("Related resources," "See also," "Additional resources," "What's next," "Further reading," and the like):
+
+- **Next steps** — the reader should continue in a sequence: the next tutorial, the next step in a getting-started flow, or a recommended follow-on task. Use when there is a natural forward order.
+- **Learn more** — links to related or reference material with no implied order: concept pages, other pages on the same topic, or external references. Use for lateral cross-references.
+
+Rules:
+
+- Use `##` (H2), sentence case: **Next steps** and **Learn more**, never "Next Steps" or "Learn More."
+- Place the section at the end of the page.
+- Choose by intent, not by page type. A concept page may have **Next steps**; a tutorial may have **Learn more**.
+- If a page has both sequential and lateral links, use two sections named **Next steps** and **Learn more** — don't coin a third heading.
+
+Exempt: the generated `SEE ALSO` blocks on CLI command pages (`content/docs/iac/cli/commands/`) and the auto-rendered "Related templates" aside on template pages, which are produced by tooling.
+
+---
+
 ## Tutorials
 
-- If the tutorial is followed by another, end with a **Next steps** section.  
-- If pointing to references or further reading, end with a **Learn more** section.
+- End with a **Next steps** or **Learn more** section as appropriate — see [Cross-reference sections](#cross-reference-sections).
 
 ---
 

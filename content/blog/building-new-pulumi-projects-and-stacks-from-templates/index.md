@@ -2,9 +2,9 @@
 title: "Building new Pulumi projects and stacks from templates"
 date: "2018-10-01"
 meta_desc: "This blog shows how to build Pulumi projects and stacks from templates."
-meta_image: "meta.png"
 authors: ["marc-holmes"]
 tags: ["features"]
+category: tutorials
 canonical_url: "https://www.pulumi.com/docs/pulumi-cloud/developer-platforms/new-project-wizard/"
 ---
 

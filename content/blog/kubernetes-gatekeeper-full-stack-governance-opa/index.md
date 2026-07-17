@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-03-19
 draft: false
 meta_desc: "OPA/Rego is now a stable, first-class policy language for Pulumi with Kubernetes Gatekeeper compatibility and full feature parity."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - levi-blackstone
@@ -14,6 +13,7 @@ tags:
     - opa
     - kubernetes
     - insights
+category: product
 social:
     twitter: |
         OPA policy support for Pulumi is now stable! Reuse your existing Kubernetes Gatekeeper .rego files as Pulumi policies, and write Rego policies for any cloud resource Pulumi manages.

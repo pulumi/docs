@@ -3,12 +3,12 @@ title: "How to Deploy Apps with AWS App Runner and Pulumi"
 date: 2021-05-18
 updated: 2025-03-24
 meta_desc: "Learn how to deploy containerized apps using AWS App Runner and Pulumi. Automate scaling, networking, and security in minutes with minimal configuration."
-meta_image: aws-app-runner.png
 authors:
     - lee-zen
 tags:
-    - AWS
-    - App Runner
+    - aws
+    - app-runner
+category: tutorials
 
 ---
 

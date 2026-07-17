@@ -3,7 +3,6 @@ title_tag: Deploying into Air-Gapped Environments | Self-Hosting Pulumi
 meta_desc: Learn how to deploy Pulumi self-hosted into air-gapped environments.
 title: Air-Gapped
 h1: Deploying Pulumi Self-Hosted into Air-Gapped Environments
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Air-Gapped

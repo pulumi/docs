@@ -15,17 +15,40 @@ Read `.broken-links.json` from the repo root. Shape:
 ```json
 {
   "generated": "2026-06-02T15:00:00.000Z",
-  "internal": [{ "source": "...", "destination": "...", "reason": "HTTP_404" }],
+  "internal": [
+    { "source": "...", "destination": "...", "reason": "HTTP_404", "hits": 210 },
+    { "source": "(server logs)", "destination": "...", "reason": "REAL_404", "hits": 94 }
+  ],
   "external": [{ "source": "...", "destination": "...", "reason": "HTTP_404" }]
 }
 ```
 
 - `source` — the live page the broken link was found **on**.
 - `destination` — the URL that failed.
-- `reason` — BLC reason code (`HTTP_404`, `HTTP_410`, `ERRNO_ENOTFOUND`, …).
+- `reason` — BLC reason code (`HTTP_404`, `HTTP_410`, `ERRNO_ENOTFOUND`, …), or
+  `REAL_404` for entries merged from server logs (below).
 - `internal` — `destination` is on `pulumi.com`; `external` — third-party.
+- `hits` — optional: real 404 requests on that destination from server logs
+  over the export window (merged in by
+  `scripts/link-checker/merge-404-signal.py`). The list is sorted by `hits`
+  descending — **work highest-hits first**; entries without `hits` follow.
 
 If both lists are empty, do nothing (the workflow won't invoke you in that case, but be defensive).
+
+### Real-404 signal (`reason: "REAL_404"`)
+
+These entries come from **server logs**, not the crawler: URLs readers actually
+requested that returned 404 — external referrers, bookmarks, stale search
+results. That means:
+
+- `source` is `(server logs)` — there is no on-site page to edit; the fix is
+  almost always a **Hugo alias** or **S3 redirect** to the obvious successor
+  page, or the nearest section index when none exists.
+- Verify the URL still 404s before fixing (the export is up to a week old; it
+  may have been fixed since).
+- Residual noise the export's bot filter missed (crawler probes, exploit
+  scans) goes under **False positives / not actioned** — never give junk paths
+  a redirect.
 
 ## Verify each link before fixing it
 

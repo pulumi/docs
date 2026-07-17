@@ -4,16 +4,16 @@ updated: 2025-03-20
 title: "Deploy an AI/ML Chatbot Frontend on Vercel with Pulumi"
 allow_long_title: true
 meta_desc: "Deploy your AI chatbot frontend on Vercel using Pulumi and Python. Follow this step-by-step guide to streamline your AI DevOps workflow."
-meta_image: meta.png
 authors:
     - adora-nwodo
 tags:
     - ai
     - ml
-    - iac
+    - infrastructure-as-code
     - vercel
     - vuejs
     - chatbot
+category: tutorials
 
 ---
 

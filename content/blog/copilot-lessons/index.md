@@ -1,17 +1,20 @@
 ---
 title: "AI Engineering Lessons from Building Pulumi Copilot"
+feature_image: feature.png
 date: 2024-12-12T13:56:13-05:00
+lastmod: 2026-06-30
 draft: false
 meta_desc: Learn key engineering lessons from building Pulumi Copilot, including how to minimize LLM workload, validate outputs, and deal with hallucination.
-meta_image: meta.png
 authors:
     - artur-laksberg
     - simon-howe
     - adam-gordon-bell
 tags:
-    - Copilot
+    - copilot
     - ai
-    - iac
+    - infrastructure-as-code
+category: engineering
+series: pulumi-copilot
 social:
     twitter: >
         Building Pulumi Copilot taught us key lessons about AI-powered tools: hallucinations reveal missing features, prompt engineering isn’t always the answer, and balancing LLMs with traditional code is critical. Learn more: https://www.pulumi.com/blog/copilot-lessons/

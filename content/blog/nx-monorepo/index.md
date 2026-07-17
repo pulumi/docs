@@ -22,7 +22,6 @@ meta_desc: Using Pulumi with Node.js monorepo tooling like Nx to colocate reusab
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -35,6 +34,7 @@ tags:
     - development-environment
     - monorepo
     - nx
+category: tutorials
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
@@ -276,6 +276,10 @@ Nx read the output from the cache instead of running the command for 2 out of 5 
 ```
 
 We can see that Nx used the cached results for 2 of our tasks, `s3folder` and `website-deploy` didn't change, so Nx skips rebuilding them. Nx also ran the other 3 tasks to generate the website's HTML, building the infra package and finally deploying the infra package.
+
+{{< blog/cta-card title="Ship infrastructure from your monorepo" >}}
+Colocate reusable Pulumi component resources, infrastructure programs, and application code in one monorepo, then build and deploy them together with Nx. Manage every stack in Pulumi Cloud.
+{{< /blog/cta-card >}}
 
 ## Conclusion
 

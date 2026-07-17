@@ -104,18 +104,14 @@ You can validate your configuration is working by connecting to snowflake with u
   --token=<snowflake.login.token>
 ```
 
-## Inputs
+## Schema reference
 
-| Property            | Type   | Description                                                                             |
-|---------------------|--------|-----------------------------------------------------------------------------------------|
-| `oidc.account`      | string | Required. Snowflake account identifier.                                                 |
-| `oidc.user`         | string | Required. User login name.                                                              |
-| `oidc.role`         | string | Optional. Role to assume. See [Snowflake OAuth Scopes](https://docs.snowflake.com/en/user-guide/oauth-ext-overview#scopes) for more information. |
+{{< esc-schema-updated >}}
 
-## Outputs
+### Inputs
 
-| Property   | Type   | Description                              |
-|------------|--------|------------------------------------------|
-| `account`  | string | Snowflake account identifier.            |
-| `user`     | string | User login name.                         |
-| `token`    | string | OAuth token (stored as a secret).        |
+{{< esc-schema type="provider" name="snowflake-login" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="snowflake-login" section="outputs" >}}

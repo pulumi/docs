@@ -1,14 +1,13 @@
 ---
 title_tag: "Infrastructure AI"
-meta_desc: Pulumi Neo enables conversational infrastructure management through natural language interactions with purpose-built automation agents.
+meta_desc: Use AI agents with Pulumi. Bring Claude Code, Codex, or Cursor via Agent Skills and the MCP server, or use Neo, the purpose-built infrastructure agent.
 title: Infrastructure AI
 linktitle: Infrastructure AI
 docs_home: true
 notitle: true
 norightnav: true
 h1: Infrastructure AI
-description: <p>Pulumi Neo provides AI-powered infrastructure automation with natural language assistance for platform engineering tasks.</p>
-meta_image: /images/docs/meta-images/docs-meta.png
+description: <p>Pulumi works with the AI agents you already use and provides Neo, a purpose-built infrastructure agent, for the deepest integration.</p>
 aliases:
 - /docs/pulumi-cloud/neo/
 - /docs/iac/neo/
@@ -28,12 +27,32 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Pulumi Neo is an AI agent that enables platform engineers to make natural language requests for routine tasks, analysis, and infrastructure management. Rather than writing code or running CLI commands for every operation, you can describe what you need and let Neo handle the implementation.
+    Pulumi is built to be driven by AI agents, including the coding agents your team already uses. Because Pulumi infrastructure is real code with a verifiable plan for every change, agents like Claude Code, Codex, Cursor, and GitHub Copilot can write, preview, and deploy it directly. The [Pulumi CLI](/docs/iac/cli/) is designed for them: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](/docs/iac/cli/direct-resource-operations/), and parse structured `--json` output. [Pulumi Agent Skills](/docs/ai/skills/) teach agents proven Pulumi workflows, the [Pulumi MCP server](/docs/ai/mcp-server/) offers the same reach over MCP, and [agent accounts](/docs/administration/organizations-teams/agent-accounts/) remove signup friction entirely.
 
-    Neo works across your entire infrastructure, understanding dependencies and creating execution plans that go through pull requests for review, ensuring human oversight while automating complex multi-step workflows.
+    Pulumi Neo is Pulumi's own infrastructure agent. It ships with these skills built in, and adds organizational context, policy guardrails, human-in-the-loop approvals, and scheduled autonomous work. Use your favorite agent, use Neo, or use both together: Neo for long-running, governed infrastructure tasks, and your coding agent for interactive development.
 
 - type: button-cards
-  heading: Getting started
+  heading: Bring your own agent
+  cards:
+  - icon: lightbulb
+    heading: Agent Skills
+    link: /docs/ai/skills/
+    description: Teach Claude Code, Codex, Cursor, Copilot, and other agents Pulumi workflows.
+  - icon: terminal
+    heading: Pulumi CLI
+    link: /docs/iac/cli/
+    description: An agent-friendly CLI, from npx pulumi and pulumi do to structured JSON output.
+  - icon: plug
+    heading: MCP server
+    link: /docs/ai/mcp-server/
+    description: Give any MCP-capable agent access to your Pulumi Cloud resources and the Registry.
+  - icon: rocket-launch
+    heading: Agent Accounts
+    link: /docs/administration/organizations-teams/agent-accounts/
+    description: Ephemeral Pulumi Cloud accounts provisioned automatically for AI agents.
+
+- type: button-cards
+  heading: Pulumi Neo
   cards:
   - icon: rocket-launch
     heading: Get Started
@@ -47,6 +66,10 @@ sections:
     heading: Pull Requests
     link: /docs/ai/pull-requests/
     description: AI-proposed changes submitted as pull requests for review.
+  - icon: list-checks
+    heading: Code Reviews
+    link: /docs/ai/code-reviews/
+    description: Neo reviews your pull requests against what Pulumi Cloud knows about your running infrastructure.
   - icon: eye
     heading: Previews
     link: /docs/ai/running-previews/
@@ -56,13 +79,17 @@ sections:
     link: /docs/ai/integrations/
     description: Connect Neo to external services, cloud CLIs, GitHub, and Slack.
   - icon: terminal
-    heading: Pulumi CLI
+    heading: Neo in the CLI
     link: /docs/ai/pulumi-cli/
     description: Run pulumi neo to start an interactive Neo session in your terminal.
   - icon: clock
     heading: Automations
     link: /docs/ai/automations/
     description: Turn any Neo task into recurring work that produces pull requests on a schedule.
+  - icon: shield
+    heading: Usage limits
+    link: /docs/ai/usage-limits/
+    description: Set monthly dollar limits on Neo usage for your organization and members.
 
 - type: flat
   heading: Have questions?

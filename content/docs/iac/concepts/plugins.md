@@ -3,7 +3,6 @@ title_tag: Plugins
 meta_desc: Learn about Pulumi plugins, the core extensibility mechanism that enables Pulumi to work with cloud providers, languages, and tools.
 title: Plugins
 h1: Plugins
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Plugins

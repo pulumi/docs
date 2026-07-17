@@ -3,7 +3,6 @@ title_tag: "Frequently Asked Questions (FAQs) | Pulumi Policies"
 meta_desc: This page contains Frequently Asked Questions about Pulumi Policies and Policy Packs.
 title: Policies FAQ
 h1: Policies FAQ
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     support:
         name: Policies FAQ

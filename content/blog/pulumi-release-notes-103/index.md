@@ -4,12 +4,12 @@ allow_long_title: true
 date: 2024-04-15T11:06:04-08:00
 draft: false
 meta_desc: The latest Pulumi updates include a new Pulumi ESC Key Value Table Editor, 1Password ESC Provider, Pulumi CLI & SDK Dev Releases, and more!
-meta_image: meta.png
 authors:
     - arun-loganathan
 tags:
     - features
     - release-notes
+category: product
 ---
 
 As always, we have been actively rolling out new features in response to the invaluable feedback from our ever-growing community.  We've shipped several security and usability features to [Pulumi ESC](/docs/esc) in response to feedback from our growing user base. Moreover, we've also added new enhancements to our core Platform CLI and Providers. In addition to the release notes, stay up-to-date with all things Pulumi by following the [new features blogs](/blog/tag/features) and the [pulumi/pulumi repo changelog](https://github.com/pulumi/pulumi-aws-native/releases). With so much to explore, let’s dive into the major updates across Pulumi from the past two months!

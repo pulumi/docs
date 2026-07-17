@@ -18,7 +18,7 @@ The `postgres` rotator enables you to rotate user credentials for a PostgreSQL d
 There are 2 methods to use this rotator:
 
 - **Direct Connect rotation** - when your database is publicly accessible
-- **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/environments/rotation#rotation-connectors) in your network. Note: Connector-based rotation is only available for Enterprise and Business Critical customers.
+- **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/concepts/rotators#rotation-connectors) in your network. Note: Connector-based rotation is only available for Enterprise and Business Critical customers.
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ values:
               login: ${environments.rotatorExample.managingCredentials.awsLogin} # An implicit import from the above environment (assuming it's called rotatorExample/managingCredentials)
               lambdaArn: arn:aws:lambda:aws-region:111111111111:function:PulumiEscSecretRotatorLambda-Function-xxxxxxx
           database: rotator_example_db
-          host: rotator-example-mysql.cluster-xxxxxxxxxxxx.aws-region.rds.amazonaws.com
+          host: rotator-example-postgres.cluster-xxxxxxxxxxxx.aws-region.rds.amazonaws.com
           port: 5432
           managingUser: ${environments.rotatorExample.managingCredentials.managingUser} # An implicit import from the above environment (assuming it's called rotatorExample/managingCredentials)
         rotateUsers:
@@ -93,62 +93,51 @@ state:
     username: user2
 ```
 
-## Setup
+When you open the environment after a rotation, you should see output similar to the following:
 
-## Inputs
+```json
+{
+  "dbRotator": {
+    "current": {
+      "username": "user1",
+      "password": "[secret]"
+    },
+    "previous": {
+      "username": "user2",
+      "password": "[secret]"
+    }
+  }
+}
+```
 
-| Property      | Type                              | Description            |
-|---------------|-----------------------------------|------------------------|
-| `database`    | [DatabaseConfig](#databaseconfig) | Database configuration |
-| `rotateUsers` | [RotateUsers](#rotateusers)       | Users to rotate        |
+## Schema reference
 
-## State (Optional)
+{{< esc-schema-updated >}}
 
-| Property | Type                              | Description                                                                                               |
-|----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------|
-| current  | [UserCredential](#usercredential) | Current credential information. These are the newest and recommended credentials.                         |
-| previous | [UserCredential](#usercredential) | Previous credential information. These credentials are still valid, but will be phased out next rotation. |
+### Inputs
 
-## Outputs
+{{< esc-schema type="rotator" name="postgres" section="inputs" >}}
 
-| Property | Type                              | Description                                                                                               |
-|----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------|
-| current  | [UserCredential](#usercredential) | Current credential information. These are the newest and recommended credentials.                         |
-| previous | [UserCredential](#usercredential) | Previous credential information. These credentials are still valid, but will be phased out next rotation. |
+### State
 
-### DatabaseConfig
+{{< esc-schema type="rotator" name="postgres" section="state" >}}
 
-| Property       | Type                                                | Description                                                                                         |
-|----------------|-----------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| `connector`    | [Connector](#connector)                             | (Optional) Database connector configuration. Leave `connector` out if using Direct Connect rotation |
-| `database`     | string                                              | Name of the database to use                                                                         |
-| `host`         | string                                              | Endpoint of the database                                                                            |
-| `port`         | int                                                 | Port of the database server                                                                         |
-| `managingUser` | [UserCredential](#usercredential)                   | Credentials for a user that has privileges to change passwords                                      |
+### Outputs
 
-### Connector
+{{< esc-schema type="rotator" name="postgres" section="outputs" >}}
 
-| Property    | Type                                | Description                      |
-|-------------|-------------------------------------|----------------------------------|
-| `awsLambda` | [AWSLambdaConfig](#awslambdaconfig) | An [AWS Lambda connector](/docs/esc/operations/rotation/aws-lambda) needs to be setup |
+## Troubleshooting
 
-### AWSLambdaConfig
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails to connect to the database | The `host` or `port` is wrong, or the database is in a private network without a connector. | Verify `host` and `port`. For databases in a private network, configure a [rotation connector](/docs/esc/operations/rotation/aws-lambda) and set `database.connector`. |
+| Rotation fails with a permissions or authentication error | The `managingUser` may lack the privileges needed to change the rotated users' passwords. | Grant the managing user the privileges described in [database user setup](/docs/esc/operations/rotation/db-user-setup), then rotate again. |
+| Applications fail to authenticate after a rotation | Apps may be reading the `previous` credentials, or rotation may run more frequently than apps refresh their configuration. | Configure applications to read `current`, and ensure the rotation schedule is less frequent than the application configuration refresh interval. |
 
-| Property    | Type                                                                  | Description                                                     |
-|-------------|-----------------------------------------------------------------------|-----------------------------------------------------------------|
-| `login`     | [AWSLogin](/docs/esc/providers/login/aws-login) | AWS login that has access to assume `aws-lambda` connector role |
-| `lambdaArn` | string                                                                | The ARN of the `aws-lambda` connector                           |
+## Related
 
-### RotateUsers
-
-| Property    | Type   | Description                                                                                                   |
-|-------------|--------|---------------------------------------------------------------------------------------------------------------|
-| `username1` | string | Username of user in the database to rotate. If no state is provided, this user will be the one to be rotated. |
-| `username2` | string | Username of user in the database to rotate.                                                                   |
-
-### UserCredential
-
-| Property   | Type   | Description                       |
-|------------|--------|-----------------------------------|
-| `username` | string | Username of user in the database. |
-| `password` | string | Password of user in the database. |
+- [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+- [Rotation connectors](/docs/esc/operations/rotation/) - Reach databases in a private network
+- [Database user setup](/docs/esc/operations/rotation/db-user-setup) - Prepare database users for rotation
+- [mysql rotator](/docs/esc/providers/rotators/mysql/) - Rotate credentials for a MySQL database
+- [aws-login](/docs/esc/providers/login/aws-login/) - Authenticate with AWS for connector-based rotation

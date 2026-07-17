@@ -81,6 +81,8 @@ Workflow pre-step: `extract-claims.py` (a deterministic regex floor — numbers,
 - Default (`scrutiny=standard`): extract claims from the diff only -- lines added or modified
 - `scrutiny=heightened`: extract claims from the **full file**, not just the diff. AI hallucinates surrounding prose, not just changed lines.
 
+The Layer-B pre-step (`extract-claims-llm.py`) resolves scrutiny **per file**: blog files and brand-new files bump to `heightened`; high-similarity renames and small edits to existing files (≤30 added lines and ≤20% of the body) pin back to `standard` -- the added lines still get extracted, the already-published unchanged body doesn't. Each pin is surfaced as a note in the artifact's `errors[]`.
+
 ### Frontmatter sweep
 
 Hugo posts duplicate the same load-bearing phrasing across the body, `meta_desc`, and `social:` sub-keys (`twitter`, `linkedin`, `bluesky`). When extracting a claim from any of these locations, scan the rest of the file -- body plus every prose-bearing frontmatter key -- for the same factual phrasing or a near-paraphrase, and treat all occurrences as one claim with multiple cited locations. A single finding then renders one suggestion-block per location, so a verified-false claim is fixed everywhere in one pass.
@@ -99,7 +101,7 @@ When a new or changed file lives in a structurally-templated directory (≥3 par
 
 **Pre-step artifact `.frontmatter-validation.json`** (workflow pre-step `frontmatter-validate.py`). Three checks bundled in one content-tree walk + redirect-table scan:
 
-- `menu_parents` — for each `menu.<name>.parent` declared in the file, did the parent identifier resolve in the same named menu? Carries `parent_exists_in_menu` (boolean) and `found_in_other_menus` (list — when the identifier exists in a different menu, the canonical "wrong-menu parent" bug).
+- `menu_parents` — for each `menu.<name>.parent` declared in the file, did the parent identifier resolve in the same named menu? Resolution covers identifiers declared in content frontmatter *and* in `config/_default/menus.yml` (Hugo accepts parents from either source; section-level parents live only in the config file). Carries `parent_exists_in_menu` (boolean) and `found_in_other_menus` (list — when the identifier exists in a different menu, the canonical "wrong-menu parent" bug).
 - `alias_collisions` — `{alias, collides_with, scope: pr-internal|repo-wide}` records. Built from a global walk of `aliases:` blocks across `content/**/*.md`; cross-references the PR file's *declared* aliases against everything else.
 - `url_collisions` — `{file, scope: hugo-alias|s3-redirect}` records keyed off the PR file's *rendered* URL. The pre-step builds a unified URL-ownership map combining Hugo aliases and `scripts/redirects/*.txt` entries (with normalization across `index.html`, `.html`, and trailing-slash conventions). When the PR's URL is already claimed by another file's alias or by an S3 redirect source, it surfaces here. Hugo's own aliases and the move-doc skill's redirect-table maintenance are the canonical signal of "this URL is already taken" — there is no hand-maintained pattern table to keep in sync.
 
@@ -249,7 +251,7 @@ The 🤔 bucket is therefore **small and specific**: claims whose shape was susp
 
 **When `.candidate-claims.json` provided the floor (the normal CI path — see §Pre-step artifact above), do NOT dispatch the four claim-finder subagents below.** The discovery they did inside the review's context — and the run-to-run variance in *which* claims they found — is exactly what the pre-step lifted out: on claims-heavy content, a single Opus run can miss a real blocking finding another run catches because the in-review discovery is model-judgment under attention pressure. Instead: take the pre-computed `claims` list, **classify** each entry — sort it into the four type-buckets below (`numerical` / `cross-reference` / `capability` / `framing`), set its `source_class` per §Source-class classification, set `cross_specialist_corroboration: true` when the `framing` heuristic also matches the entry's text — then fold in any additional claims you spot in the diff yourself, and run the §Combine step over the union. The four subagents are a **fallback**, run only when the artifact is absent or carries a non-empty `errors` array (degraded pre-step, or interactive `/docs-review`).
 
-When the four subagents *do* run (fallback path): spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`, Sonnet 4.6 each). Each specialist owns a narrow slice of §Claim extraction; the slices are non-overlapping by design except for `framing`, which is a heuristic specialist that scans across canonical types.
+When the four subagents *do* run (fallback path): spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`). Each specialist owns a narrow slice of §Claim extraction; the slices are non-overlapping by design except for `framing`, which is a heuristic specialist that scans across canonical types.
 
 - **`numerical`** -- `Numerical` + `Version/availability` rows + §Temporal-claim handling trigger list.
 - **`cross-reference`** -- `Cross-reference` row + §Cross-sibling consistency *templated-section detection* and *what to extract* (the per-record list -- not the rendering / promotion / calibration tail). Identifies which siblings need reading; the reads themselves are a separate fan-out (see §Cross-sibling consistency).
@@ -303,10 +305,10 @@ Store the deduped claim list for the verification phase. No interim user output.
 
 *Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
-**The review reads `.verified-claims.json`; it does not produce per-claim verdicts itself.** Workflow pre-step `verify-claims.py` (`.claude/commands/docs-review/scripts/verify-claims.py`) takes every entry in `.candidate-claims.json` (the floor), tries a deterministic pass-0 resolution (no model call — a `:latest` Docker tag → `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check → `verified`), routes the rest — Pass 1 (`pulumi-internal`: `gh` + local reads), Pass 2 (`external` with a fetched URL: consults `.fetched-urls.json`), Pass 3 (`external` with no fetched URL: server-side `web_search`) — fires parallel Sonnet 4.6 verifiers via direct `/v1/messages` with a forced `verify_claim` tool, and emits `.verified-claims.json` at the repo root:
+**The review reads `.verified-claims.json`; it does not produce per-claim verdicts itself.** Workflow pre-step `verify-claims.py` (`.claude/commands/docs-review/scripts/verify-claims.py`) takes every entry in `.candidate-claims.json` (the floor), tries a deterministic pass-0 resolution (no model call — a `:latest` Docker tag → `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check → `verified`), routes the rest — Pass 1 (`pulumi-internal`: `gh` + local reads), Pass 2 (`external` with a fetched URL: consults `.fetched-urls.json`), Pass 3 (`external` with no fetched URL: server-side `web_search`) — fires parallel Sonnet 5 verifiers via direct `/v1/messages` with a forced `verify_claim` tool, and emits `.verified-claims.json` at the repo root:
 
 ```
-{"schema_version": 1, "model": "claude-sonnet-4-6",
+{"schema_version": 1, "model": "claude-sonnet-5",
  "verdicts": [{"claim_id", "file", "line_range", "text", "type",
                "route": "pass0"|"pass1"|"pass2"|"pass3",
                "verdict": "verified"|"matches"|"not-a-claim"|"unverifiable"|"contradicted"|"mismatch",
@@ -346,6 +348,8 @@ Main agent walks §Verification source order steps 1-3 sequentially during the c
 
 **Don't iterate to find prior discussion.** Specifically: don't loop `gh api repos/pulumi/docs/issues` or `gh api repos/pulumi/docs/pulls` searching for prior PRs / issues / discussions about a topic. That's exploration, not verification — read the actual code path, release notes, or `pulumi/pulumi` source instead. One targeted `gh search code` or `gh api` call resolves the typical pulumi-internal claim; if that doesn't close it, the claim isn't pulumi-internal and belongs in another lane.
 
+**But DO follow an implementing PR the docs PR explicitly links.** The "don't trawl pulls" rule is about *blind* discovery; a PR the docs body cites by number (`Documents pulumi/pulumi#NNNN`) is a canonical source — read it with `gh pr diff NNNN -R pulumi/pulumi`. For docs that ship *alongside* a feature, the new symbol isn't on `master` or in the published reference yet, so `gh search code` and a docs-site WebSearch both come up empty. A symbol confirmed only in a linked, not-yet-merged impl PR is **`verified`** (confidence `medium`, "not yet on default branch / released") — **not** 🤷; "not in the published reference yet" is a lag, not a doubt. *(On the CI path `verify-claims.py` threads these refs into the verifier prompt automatically — `fetch_impl_refs`; this is the in-review equivalent.)*
+
 If the inline check fails to resolve a claim that was classified `pulumi-internal` (e.g., a Pulumi-related claim that turns out to also depend on external confirmation), reclassify it to `ambiguous` and route to Pass 1.
 
 **Canonical sources for pulumi-internal verification.** Read the canonical source first.
@@ -356,6 +360,8 @@ If the inline check fails to resolve a claim that was classified `pulumi-interna
 | Example-program | `static/programs/<name>-<lang>/` |
 | Sibling-pattern (frontmatter, file location, alias) | Nearest sibling under `content/docs/<closest>/` |
 | Resource schema / API surface | `pulumi/pulumi-<provider>` |
+| New symbol (flag/command/API) the docs PR links an implementing PR for | The linked `pulumi/*` PR/commit — `gh pr diff <n> -R pulumi/<repo>` — authoritative for a feature not yet on `master` or in the published reference |
+| Pricing / edition / tier / limit / quota | `content/pricing/_index.md` — a large feature×tier matrix; **grep it for the feature name**, don't trust a truncated head-read (a value deep in the table reads as absent otherwise) |
 | Shortcode | `layouts/shortcodes/<name>.html` |
 | Alias / redirect | `aliases:` frontmatter + `scripts/redirects/*` |
 | Frontmatter field semantics | An existing page in the same content tree that uses the field |
@@ -371,7 +377,7 @@ Search-order rules:
 
 ### Pass 1 lane (`ambiguous`)
 
-Spawn parallel subagents (`general-purpose`, Sonnet 4.6), batched **up to 4 at a time**. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller). If more than 20 ambiguous claims are extracted, batch by file rather than per-claim.
+Spawn parallel subagents (`general-purpose`), batched **up to 4 at a time**. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller). If more than 20 ambiguous claims are extracted, batch by file rather than per-claim.
 
 For each claim, walk §Verification source order steps **1-3** only (skip step 4 / WebFetch entirely):
 
@@ -395,11 +401,11 @@ For each `external-public` claim whose URL appears in `.fetched-urls.json`:
 - If the cited URL's `status` is 200 and `content_text` addresses the claim → render verdict (`verified` / `contradicted`) per spot-check.
 - If `status` is non-2xx (dead link / paywall / soft-404) **or** `content_text` exists but doesn't address the claim → bounce to **Pass 3** for a fresh search; do not emit ⚠️ unverifiable from Pass 2.
 
-**Dispatch unit:** Pass 2 typically runs inline (the content is already in `.fetched-urls.json`; no subagent needed). Spawn a Sonnet 4.6 subagent only when the claim requires substantial reasoning over the fetched content (multi-paragraph framing comparison, table extraction, etc.). At small N, the subagent overhead dominates -- prefer inline reads.
+**Dispatch unit:** Pass 2 typically runs inline (the content is already in `.fetched-urls.json`; no subagent needed). Spawn a subagent only when the claim requires substantial reasoning over the fetched content (multi-paragraph framing comparison, table extraction, etc.). At small N, the subagent overhead dominates -- prefer inline reads.
 
 ### Pass 3 lane (`external-public` without URL in diff)
 
-For each `external-public` claim that does NOT have a URL in the PR diff, dispatch Sonnet 4.6 subagents (`general-purpose`) **in parallel**. Pass 3 is the search-then-fetch lane: WebSearch a query derived from the claim, then WebFetch the top 1-3 results.
+For each `external-public` claim that does NOT have a URL in the PR diff, dispatch subagents (`general-purpose`) **in parallel**. Pass 3 is the search-then-fetch lane: WebSearch a query derived from the claim, then WebFetch the top 1-3 results.
 
 **Mandatory dispatch.** Pass 3 cannot be skipped for external-public claims that need it. The model cannot silently roll an external-public claim into the Inline / Pass 1 lane to avoid the search dispatch -- the validator's `pass-3-dispatch-mandate` rule trips when external-public claims exist with no URL fetched and Pass 3 count is 0.
 
@@ -443,6 +449,10 @@ gh api "repos/pulumi/pulumi/commits?path=<file>&since=<date>"
 # Find prior decisions, "we decided not to ship this," or "this was renamed"
 gh issue list -R pulumi/<repo> --search "<term> in:title,body"
 gh pr list -R pulumi/<repo> --search "<term>"
+
+# Read an implementing PR the docs PR explicitly links — canonical for a symbol
+# not yet on master (e.g. docs PR body says "Documents pulumi/pulumi#23691")
+gh pr diff <n> -R pulumi/<repo>
 
 # Read provider schema generation source for resource property claims
 gh api repos/pulumi/pulumi-<provider>/contents/provider/cmd/...

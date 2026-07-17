@@ -54,9 +54,9 @@ Easily deploy the most common cloud architectures, from [static websites](/templ
 
 ## Dive into the docs
 
-Read more about Pulumi's architecture and foundational concepts in depth, including [projects](/docs/concepts/projects/), [stacks](/docs/concepts/stack/), [configuration](/docs/concepts/config/), [secrets](/docs/concepts/secrets/), [resources](/docs/concepts/resources/), [state](/docs/concepts/state/), and more.
+Read more about Pulumi's architecture and foundational concepts in depth, including [projects](/docs/iac/concepts/projects/), [stacks](/docs/iac/concepts/stacks/), [configuration](/docs/iac/concepts/config/), [secrets](/docs/iac/concepts/secrets/), [resources](/docs/iac/concepts/resources/), [state](/docs/iac/concepts/state-and-backends/), and more.
 
-{{< get-started-next-step path="/docs/concepts/" label="Read the docs" ref="gs-gcp-docs" >}}
+{{< get-started-next-step path="/docs/iac/concepts/" label="Read the docs" ref="gs-gcp-docs" >}}
 
 ## Check out the blog
 

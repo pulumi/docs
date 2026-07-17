@@ -5,17 +5,17 @@ date: 2024-08-05
 draft: false
 social_media: "TBD"
 meta_desc: "Pulumi Patterns and Practices Platform (P3): A reference architecture for building Pulumi-based internal platforms at enterprise scale."
-meta_image: meta.png
 authors:
     - troy-howard
 tags:
     - platform-engineering
     - patterns-and-practices-platform
-    - developer-experience-devex
+    - developer-experience
     - devsecops
     - architecture
     - enterprise
     - devops
+category: best-practices
 ---
 
 {{< notes type="info" >}}

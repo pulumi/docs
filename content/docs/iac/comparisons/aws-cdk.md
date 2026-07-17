@@ -1,9 +1,9 @@
 ---
 title_tag: "Pulumi vs. AWS CDK"
+authors: ["joe-duffy"]
 meta_desc: "Compare Pulumi and AWS CDK: language support, multi-cloud coverage, state, secrets, policy, and migration paths. Neutral, side-by-side, with adoption guidance."
 title: AWS CDK
 h1: Pulumi vs. AWS CDK
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: AWS CDK
@@ -150,7 +150,7 @@ AWS CDK inherits CloudFormation's [500-resource-per-template limit](https://docs
 
 ### Can Pulumi detect drift like CloudFormation?
 
-Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/deployments/drift/).
+Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/concepts/drift/).
 
 ## Next steps
 

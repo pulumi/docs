@@ -11,7 +11,6 @@ menu:
 
 
 meta_desc: Build self-service infrastructure workflows with reusable components, templates, and golden paths—from Day 0 to Day 2.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Internal Developer Platform
 description: Build self-service infrastructure workflows with reusable components, templates, and golden paths—from Day 0 to Day 2.
 
@@ -65,6 +64,11 @@ sections:
     heading: Guides
     link: /docs/idp/guides/
     description: Learn best practices, the Four Factors framework, and how to automate component publishing.
+
+  - icon: link
+    heading: Integrations
+    link: /docs/idp/integrations/
+    description: Surface self-service workflows in the tools your developers already use, like the Deploy with Pulumi button and the Backstage plugin.
 
 - type: flat
   heading: Have questions?

@@ -3,13 +3,13 @@ title: "Deploy Serverless Containers on Google Cloud Run with Pulumi"
 date: 2020-02-04
 updated: 2025-03-24
 meta_desc: "Learn how to deploy serverless containers on Google Cloud Run using Pulumi and Docker. Compare it to AWS Fargate and Azure for cost-effective scaling."
-meta_image: "meta.png"
 authors:
     - mikhail-shilkov
 tags:
     - google-cloud
-    - "Serverless"
-    - "containers"
+    - serverless
+    - containers
+category: tutorials
 ---
 
 Google [Cloud Run](https://cloud.google.com/run/) is the latest addition to the serverless compute family. While it may look similar to existing services of public cloud, the feature set makes Cloud Run unique:

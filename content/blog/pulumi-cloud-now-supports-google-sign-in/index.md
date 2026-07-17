@@ -3,7 +3,6 @@ title: "Pulumi Cloud Now Supports Google Sign-In"
 date: 2026-03-10
 draft: false
 meta_desc: "Pulumi Cloud now supports Google as an identity provider, letting you sign in, sign up, and link your Google account alongside GitHub, GitLab, and Atlassian."
-meta_image: meta.png
 feature_image: feature.png
 authors:
   - pablo-seibelt
@@ -13,6 +12,7 @@ tags:
   - security
   - authentication
   - pulumi-cloud
+category: product
 social:
   twitter: "Pulumi Cloud now supports Google sign-in. Use the same Google account you already use for email and cloud console access — no extra credentials needed."
   linkedin: "Pulumi Cloud now supports Google as an identity provider. Sign in, sign up, or link your Google account alongside GitHub, GitLab, and Atlassian. If your team uses Google Workspace, your existing security policies like 2FA and device management carry over automatically."

@@ -3,7 +3,6 @@ title: "Why Choose Pulumi Over Terraform?"
 date: 2026-06-02
 lastmod: 2026-06-05
 meta_desc: "See why teams choose Pulumi over Terraform for modern infrastructure as code, with examples for refactoring, secrets, testing, and safer changes."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - pablo-seibelt
@@ -12,6 +11,7 @@ tags:
     - terraform
     - pulumi
     - platform-engineering
+category: general
 schema_type: auto
 social:
     twitter: |
@@ -216,6 +216,10 @@ Infrastructure drifts when something changes outside your IaC tool: a hotfix in 
 For teams that want this continuously, Pulumi Cloud adds [scheduled drift detection and remediation](https://www.pulumi.com/docs/deployments/deployments/drift/) that runs on a configurable cadence and can automatically remediate drift when it is detected. That turns finding and correcting out-of-band changes into a managed workflow rather than something a person has to remember to check.
 
 Drift detection still depends on accurate provider behavior and a healthy state backend, so it complements review and operational discipline rather than replacing them.
+
+{{< blog/cta-card title="Adopt Pulumi at your own pace" >}}
+Bring your existing Terraform infrastructure across one stack at a time, using general-purpose languages and the software workflows your team already relies on.
+{{< /blog/cta-card >}}
 
 ## Import and migrate incrementally
 

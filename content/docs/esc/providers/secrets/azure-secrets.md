@@ -37,13 +37,28 @@ values:
             name: api-key
           app-secret:
             name: app-secret
+  pulumiConfig:
+    apiKey: ${azure.secrets.api-key}
+    appSecret: ${azure.secrets.app-secret}
 ```
+
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="azure-secrets" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="azure-secrets" section="outputs" >}}
 
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Azure, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/azure/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
-* `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
@@ -66,40 +81,3 @@ Make sure to replace `<org>`, `<project>`, and `<environment>` with the values o
   }
 }
 ```
-
-## Inputs
-
-| Property | Type                                           | Description                                                                                                              |
-|----------|------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| `login`  | [AzureSecretsLogin](#azuresecretslogin)        | Credentials used to log in to Azure.                                                                                     |
-| `vault`  | string                                         | The vault to read from.                                                                                                  |
-| `get`    | map[string][AzureSecretsGet](#azuresecretsget) | A map from names to secrets to read from Azure Key Vault. The outputs will map each name to the secret's sensitive data. |
-
-### AzureSecretsLogin
-
-| Property         | Type                              | Description                                                         |
-|------------------|-----------------------------------|---------------------------------------------------------------------|
-| `clientId`       | string                            | The configured client ID                                            |
-| `tenantId`       | string                            | The configured tenant ID                                            |
-| `subscriptionId` | string                            | The configured subscription ID                                      |
-| `clientSecret`   | string                            | [Optional] - The client secret used for authentication, if any.     |
-| `oidc`           | [AzureLoginOIDC](#azureloginoidc) | [Optional] - OIDC-related data, if OIDC is used for authentication. |
-
-### AzureLoginOIDC
-
-| Property | Type     | Description                               |
-|----------|----------|-------------------------------------------|
-| `token`  | string   | The OIDC token to use for authentication. |
-
-### AzureSecretsGet
-
-| Property       | Type   | Description                                       |
-|----------------|--------|---------------------------------------------------|
-| `name`         | string | The name of the secret to import.                 |
-| `version`      | string | [Optional] - The version of the secret to import. |
-
-### Outputs
-
-| Property | Type   | Description                         |
-|----------|--------|-------------------------------------|
-| N/A      | object | A map of names to imported Secrets. |

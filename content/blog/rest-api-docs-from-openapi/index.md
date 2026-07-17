@@ -3,7 +3,6 @@ title: "Pulumi Cloud REST API Docs, Now Generated from OpenAPI"
 date: 2026-04-20
 draft: false
 meta_desc: "The Pulumi Cloud REST API reference at /docs/reference/cloud-rest-api/ is now generated directly from the live OpenAPI spec, so it stays in sync with the API."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - devon-grove
@@ -11,6 +10,7 @@ tags:
     - pulumi-cloud
     - features
     - api
+category: product
 social:
     twitter: |
         If you called a Pulumi Cloud REST API endpoint and got back a field the docs never mentioned, that was real drift. The reference was hand-maintained and the API kept moving.

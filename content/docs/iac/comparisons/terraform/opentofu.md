@@ -1,9 +1,10 @@
 ---
 title_tag: "OpenTofu vs. Terraform"
+authors: ["joe-duffy"]
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
 title: OpenTofu vs. Terraform
 h1: OpenTofu vs. Terraform
-meta_image: /images/docs/meta-images/docs-meta.png
+include_floqer: true
 menu:
     iac:
         name: OpenTofu vs. Terraform
@@ -17,17 +18,6 @@ aliases:
     - /docs/concepts/vs/terraform/opentofu/
     - /docs/iac/concepts/vs/terraform/opentofu/
 ---
-
-<style>
-    main table {
-        font-size: 0.94em;
-    }
-
-    main table th,
-    main table td {
-        width: 33.3%;
-    }
-</style>
 
 OpenTofu and Terraform are both infrastructure as code technologies that have similarities but fundamental differences. They both provide infrastructure as code software for cloud service management with a consistent CLI workflow. They allow you to write, plan, and apply changes to deliver infrastructure as code. In this comprehensive guide, we'll explore their key differences and similarities to help you choose the right infrastructure as code platform to meet your needs.
 
@@ -56,14 +46,14 @@ Here is a summary of the key differences between OpenTofu and Terraform:
 | [Embed within Application Code](#embedding) | No | No |
 | [Third-party CI/CD Tools Support](#cicd) | No | Yes |
 | [Policy as Code](#policy) | No | Yes |
-| [Secrets Management](#secrets) | No. Secrets can be stored in a 3rd party product. There is no way to encrypt them in the state file. | No. Secrets are stored in a  separate product (Vault). There is no way to encrypt them in the state file. |
+| [Secrets Management](#secrets) | No. Secrets can be stored in a 3rd party product. There is no way to encrypt them in the state file. | No. Secrets are stored in a separate product (Vault). There is no way to encrypt them in the state file. |
 | [Audit Capabilities](#auditing) | No | Limited |
 | [Adopt Existing Resources](#adopting) | Yes. No code generation capabilities. | Yes. No code generation capabilities. |
 | [Aliases](#aliases) | Limited | Limited |
 | [Transformations](#transformations) | No | No |
 | [Import Code from other IaC Tools](#converting) | No | No |
 
-Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi so you can have greater developer productivity, ability to scale, and delivery velocity. Follow our comprehensive guides in our [Migration Hub](/blog/migration-hub/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. If you would like to deploy a simple program, follow our Get Started guide:
+Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi so you can have greater developer productivity, ability to scale, and delivery velocity. Follow our comprehensive [migration guides](/docs/iac/guides/migration/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. If you would like to deploy a simple program, follow our Get Started guide:
 
 {{< get-started >}}
 

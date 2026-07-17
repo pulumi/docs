@@ -1,9 +1,8 @@
 ---
 title_tag: Using Any Terraform Provider
-meta_desc: Learn how to use any Terraform or OpenTofu provider with Pulumi by generating local packages in your preferred programming language.
+meta_desc: Learn how to use any Terraform or OpenTofu provider with Pulumi by generating local SDKs in your preferred programming language.
 title: Any Terraform Provider
 h1: Using any Terraform provider
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Any Terraform Provider
@@ -15,9 +14,9 @@ Pulumi enables you to use any [Terraform](https://registry.terraform.io) or [Ope
 
 ## Overview
 
-The Any Terraform Provider feature allows you to generate a Pulumi SDK locally for any Terraform or OpenTofu provider. When you run `pulumi package add terraform-provider <provider-name>`, Pulumi generates a fully-typed [local package](/docs/iac/guides/building-extending/packages/local-packages/) in your programming language (TypeScript, Python, Go, C#, Java, or YAML) that works just like any other Pulumi provider. You get the same developer experience: strong typing, IDE autocompletion, inline documentation, and the full power of general-purpose programming languages.
+The Any Terraform Provider feature allows you to generate a Pulumi SDK locally for any Terraform or OpenTofu provider. When you run `pulumi package add terraform-provider <provider-name>`, Pulumi generates a fully-typed [local SDK](/docs/iac/guides/building-extending/packages/local-sdks/) in your programming language (TypeScript, Python, Go, C#, Java, or YAML) that works just like any other Pulumi provider. You get the same developer experience: strong typing, IDE autocompletion, inline documentation, and the full power of general-purpose programming languages.
 
-Common scenarios for generating local packages include:
+Common scenarios for generating local SDKs include:
 
 - Using providers not available in the [Pulumi Registry](/registry/)
 - Working with internal or custom Terraform providers developed by your organization
@@ -334,9 +333,9 @@ pulumi install
 
 This command reads the `packages` configuration in your `Pulumi.yaml` file and ensures the provider binaries are present on their machine. If the SDK directory wasn't committed, it will also generate the local SDK.
 
-## How local packages work
+## How local SDKs work
 
-Local packages are generated SDKs stored in your project directory rather than pulled from package registries like npm or PyPI. The SDK files are generated in a language-specific subdirectory (typically `./sdks/<provider-name>`).
+Local SDKs are generated in your project directory rather than pulled from package registries like npm or PyPI. The SDK files are generated in a language-specific subdirectory (typically `./sdks/<provider-name>`).
 
 The generated SDK includes:
 
@@ -347,7 +346,7 @@ The generated SDK includes:
 
 These generated SDKs are virtually identical to Pulumi's published packages, providing the same IDE integration, type safety, and developer experience you expect from providers in the Pulumi Registry.
 
-Local packages are versioned when you include a version in the `pulumi package add` command (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration), and the version information is stored in your `Pulumi.yaml` file. This ensures consistent builds across different environments and team members.
+Local SDKs are versioned when you include a version in the `pulumi package add` command (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration), and the version information is stored in your `Pulumi.yaml` file. This ensures consistent builds across different environments and team members.
 
 ## Relationship to the Pulumi Registry
 
@@ -367,20 +366,20 @@ For providers not in the Pulumi Registry, or for custom internal providers, you 
    pulumi package add terraform-provider honeycombio/honeycombio
    ```
 
-1. **Use `pulumi install`**: Always use [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to set up projects, as it handles both standard package manager dependencies and local packages.
+1. **Use `pulumi install`**: Always use [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to set up projects, as it handles both standard package manager dependencies and local SDKs.
 
 ## Limitations
 
 While the Any Terraform Provider feature is powerful, there are some considerations:
 
-- **Documentation**: Generated SDKs for local packages include inline documentation, but you won't have dedicated web documentation in the Pulumi Registry (unless the provider has been added to the Registry).
+- **Documentation**: Local SDKs include inline documentation, but you won't have dedicated web documentation in the Pulumi Registry (unless the provider has been added to the Registry).
 - **Support**: For issues with the provider's functionality (not the bridge itself), you'll need to work with the Terraform provider's maintainers.
 
 ## Related resources
 
 - [Pulumi Registry: Terraform Provider](/registry/packages/terraform-provider/) - Installation and configuration guide
 - [Pulumi Packages](/docs/iac/concepts/packages/) - Learn about Pulumi's package system
-- [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) - Deep dive into local package generation
+- [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) - Deep dive into local SDK generation
 - [Resource Providers](/docs/iac/concepts/providers/) - Understanding Pulumi's provider system
 - [Getting Started: Use Terraform Providers](/docs/iac/get-started/terraform/terraform-providers/) - Quick start guide
 - [Pulumi CLI: `pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) - Command reference

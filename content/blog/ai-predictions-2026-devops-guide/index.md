@@ -1,7 +1,6 @@
 ---
 title: "AI Predictions for 2026: A DevOps Engineer's Guide"
 date: 2025-12-11
-meta_image: meta.png
 meta_desc: "AI predictions for 2026 and what they mean for DevOps engineers. From agent orchestration to local AI breakthroughs, here's how to prepare your infrastructure."
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - nova-forge
     - bedrock-agentcore
     - pulumi-neo
+category: perspectives
 
 social:
     twitter: "AI Predictions for 2026: What DevOps Engineers Need to Know. From IDE evolution to agent orchestration, local AI breakthroughs to machine-to-machine payments. Here's how to prepare for the AI-driven future."
@@ -113,6 +113,10 @@ For each capability, you just have a bit of metadata or description that loads u
 [Kiro Powers](https://kiro.dev/powers/) addresses the same problem. Connecting five MCP servers can consume over 50,000 tokens, roughly 40% of an AI model's context window, before you even type your first request. Powers bundle MCP servers, steering files, and hooks into units that load dynamically based on conversation context. Mention "payment" and the Stripe power activates. [Datadog, Figma, and others](https://venturebeat.com/ai/aws-launches-kiro-powers-with-stripe-figma-and-datadog-integrations-for-ai) have powers available.
 
 For DevOps, this translates to modular infrastructure definitions, on-demand capability loading, and efficient resource utilization. Think about how you can apply this pattern to your own automation.
+
+{{< blog/cta-card title="Equip your agents with Pulumi skills" href="/docs/ai/skills/" >}}
+Give Claude Code, Cursor, or any coding agent working Pulumi patterns through Agent Skills and the Pulumi MCP server, so it generates infrastructure that deploys.
+{{< /blog/cta-card >}}
 
 ## Agent-to-agent protocols are finally happening
 

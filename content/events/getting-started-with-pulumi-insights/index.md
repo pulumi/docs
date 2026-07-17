@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Pulumi Insights
 meta_desc: In this workshop, you will learn how you can improve your team's productivity with the Search, Analytics, and Intelligence capabilities of Pulumi AI
-meta_image:
+meta_image: /events/getting-started-with-pulumi-insights/meta.png
+meta_image_square: /events/getting-started-with-pulumi-insights/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -58,7 +59,7 @@ presenters:
       role: Sr. Partner Solutions Architect, AWS
       photo: /images/team/marina-novikova.jpg
     - name: Bryce Lampe
-      role: Software Engineer, Pulumim
+      role: Software Engineer, Pulumi
       photo: /images/team/bryce-lampe.jpg
 
 # case-sensitive

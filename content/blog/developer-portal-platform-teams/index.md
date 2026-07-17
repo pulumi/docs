@@ -6,7 +6,6 @@ date: 2023-10-11T04:00:00-07:00
 
 meta_desc: "Announcing new features in Pulumi Cloud to support platform teams across developer portals, policy and compliance, and deployments and delivery"
 
-meta_image: meta.png
 
 authors:
     - luke-hoban
@@ -17,6 +16,7 @@ tags:
     - policy-as-code
     - backstage
     - platform-engineering
+category: product
 ---
 
 Over the last two years, we’ve seen a huge surge in adoption of Pulumi by __Platform Teams__ -- centralized teams within a business responsible for building out core cloud infrastructure and providing tools to the rest of the organization to maximize the productivity, cost efficacy, compliance and velocity of application and service delivery throughout the organization. These teams use Pulumi to manage their own cloud infrastructure complexity, to offer best practices components to their organizations, to enforce organizational policy, and to drive infrastructure delivery automation.

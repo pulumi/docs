@@ -3,7 +3,6 @@ title_tag: Property Paths
 meta_desc: Property Paths are used to refer to elements in a configuration object.
 title: Property Paths
 h1: Property Paths
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     reference:
         name: Property Paths
@@ -48,5 +47,5 @@ Property paths are used in the following Pulumi features (this list is not exhau
 - [`replaceOnChanges`](/docs/iac/concepts/resources/options/replaceonchanges/) resource option
 - [`hideDiffs`](/docs/iac/concepts/resources/options/hidediffs/) resource option
 - [`pulumi config set --path`](/docs/iac/cli/commands/pulumi_config_set/) flag
-- [ESC interpolations and references](/docs/esc/environments/syntax/interpolations-and-references/)
+- [ESC interpolations and references](/docs/esc/concepts/interpolations-and-references/)
 - [Insights resource search](/docs/insights/discovery/search/)

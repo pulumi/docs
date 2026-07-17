@@ -4,7 +4,6 @@ date: 2024-09-16
 draft: false
 meta_desc: |
     Pulumi launches its Partner Program, helping cloud and SaaS companies accelerate projects with seamless integrations and go-to-market activities
-meta_image: partners-blog.png
 authors:
     - isaac-harris
     - tejitha-raju
@@ -12,6 +11,7 @@ tags:
     - platform-engineering
     - pulumi-community
     - enterprise
+category: company
 ---
 We are excited to announce the launch of the [Pulumi Partner Program](https://www.pulumi.com/partners/), a strategic initiative designed to empower our partners and their customers to accelerate cloud projects and achieve faster time-to-market. This program is crafted for cloud and SaaS companies who are building, integrating, and going to market with Pulumi.
 

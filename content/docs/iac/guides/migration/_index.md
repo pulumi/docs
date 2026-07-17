@@ -3,7 +3,6 @@ title_tag: "Migrating to Pulumi"
 meta_desc: Learn how Pulumi compares to other solutions, how to migrate to Pulumi, use converters to convert your code to Pulumi, and import resources to Pulumi.
 title: Migration
 h1: Migrating to Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Migration
@@ -11,6 +10,7 @@ menu:
         weight: 50
         identifier: iac-guides-migration
 aliases:
+    - /docs/guides/adopting/
     - /docs/iac/adopting-pulumi/
     - /docs/iac/adopting-pulumi/migrating-to-pulumi/
     - /docs/using-pulumi/adopting-pulumi/

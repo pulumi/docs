@@ -19,7 +19,7 @@ aliases:
 
 Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
 
-- Created a Pulumi new project.
+- Created a new Pulumi project.
 - Provisioned a new S3 bucket.
 - Turned it into a static website.
 - Created a website component for easy reuse.

@@ -3,7 +3,6 @@ title_tag: Troubleshooting SAML SSO | SAML SSO
 meta_desc: Troubleshooting guide for SAML SSO configuration issues in Pulumi Cloud.
 title: Troubleshooting
 h1: SAML SSO troubleshooting
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Troubleshooting

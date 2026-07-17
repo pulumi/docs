@@ -17,7 +17,7 @@ Pulumi Automation API includes methods for interacting with Pulumi ESC Environme
 
 Automation API methods for ESC include:
 
-- `addEnvironments(...)`: Add environments in order to your Pulumi stacks' [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
+- `addEnvironments(...)`: Add environments in order to your Pulumi stacks' [import](/docs/esc/concepts/environments/#using-environments-with-pulumi-iac) list.
 - `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
 - `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
 
@@ -25,9 +25,9 @@ These methods provide the building blocks for advanced automation scenarios such
 
 If you haven't used Automation API before, get started [here](/docs/iac/guides/building-extending/automation-api/).
 
-Pulumi ESC Automation API capabilities are available for [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments), and [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments). Here are some examples:
+Full Pulumi ESC Automation API support — adding, listing, and removing environments — is available for [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments), and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments). The [.NET SDK](/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html) supports adding and removing environments (`AddEnvironmentsAsync` and `RemoveEnvironmentAsync`) but does not provide a method to list them. Here are some examples:
 
-{{< chooser language "typescript,python,go" />}}
+{{< chooser language "typescript,python,go,csharp" />}}
 
 {{% choosable language typescript %}}
 
@@ -188,6 +188,40 @@ func main() {
 		log.Fatalf("Failed to list environments: %v", err)
 	}
 	fmt.Println("Updated environments:", envs) // Output: map[env2:{env2}]
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+The .NET SDK supports adding and removing environments, but does not provide a method to list them.
+
+```csharp
+using System.Threading.Tasks;
+using Pulumi.Automation;
+
+class ManageEnvironments
+{
+    static async Task Main()
+    {
+        var projectName = "myProject";
+        var stackName = "dev";
+
+        // Set up an inline (empty) program, since we're only manipulating
+        // environments, not deploying resources.
+        var stackArgs = new InlineProgramArgs(projectName, stackName, PulumiFn.Create(() => { }));
+
+        // Create or select an existing stack.
+        var stack = await LocalWorkspace.CreateOrSelectStackAsync(stackArgs);
+
+        // Add environments to the stack's import list.
+        // This is like adding them to the `imports` section of an ESC environment.
+        await stack.AddEnvironmentsAsync(new[] { "env1", "env2" });
+
+        // Remove an environment from the stack's import list.
+        await stack.RemoveEnvironmentAsync("env1");
+    }
 }
 ```
 

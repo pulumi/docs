@@ -3,6 +3,8 @@ title: Pricing
 meta_desc: Pulumi IaC and Pulumi ESC are available in various editions and are free to individuals
 type: page
 layout: pricing
+schema_type: product
+include_floqer: true
 menu:
     header:
         weight: 2
@@ -30,7 +32,7 @@ tiers:
                   - Unlimited projects, stacks, and environments
                   - Unlimited updates and history
                   - Up to 500 workflow minutes
-                  - Neo, our infrastructure agent
+                  - Pulumi Neo with 5M free tokens/mo
             - title: Team
               subtitle: Everything you need to get started.
               price: $40
@@ -45,6 +47,7 @@ tiers:
               features:
                   - Up to 10 users
                   - Secure collaboration and CI/CD
+                  - Neo code reviews and Slack integration
                   - Resource search
                   - OIDC and org access tokens
                   - Webhooks
@@ -68,6 +71,7 @@ tiers:
               features:
                   - Unlimited users
                   - SAML/SSO and RBAC
+                  - Neo scheduled tasks
                   - Internal developer platform (IDP)
                   - Audit logs
                   - Drift detection and remediation
@@ -561,11 +565,46 @@ comparison_table:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
                 items:
-                  - content: 15M tokens/mo
+                  - content: 5M tokens/mo
                     subtext: free
                   - content: $3/M tokens
                   - content: $3/M tokens
                   - content: $3/M tokens
+              - title: Neo in the CLI
+                link: /docs/ai/pulumi-cli/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: MCP & CLI Integrations
+                link: /docs/ai/integrations/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Neo code reviews
+                link: /docs/ai/pull-requests/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Slack integration
+                link: /docs/ai/integrations/slack/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Scheduled tasks
+                link: /docs/ai/automations/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
           ## Pulumi Workflow table
           - header: Internal Developer Platform
             icon: custom/pulumi-idp
@@ -699,7 +738,7 @@ faq:
           answer: |
             You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/reference/environments/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will be billed $0.05.
 
-            API usage includes any calls from the [CLI](/docs/esc/cli/), [SDK](/docs/esc/development/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/reference/environments/) call that hits the ReadOpen API endpoint
+            API usage includes any calls from the [CLI](/docs/iac/cli/commands/pulumi_env/), [SDK](/docs/esc/development/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/reference/environments/) call that hits the ReadOpen API endpoint
         - question: What are workflow minutes?
           answer: |
             Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
@@ -781,8 +820,6 @@ faq:
           answer: You can keep track of current usage and upcoming charges by navigating to Settings and then Billing & Usage in the Pulumi Cloud console.
         - question: When will I be billed for using Team or Enterprise Edition?
           answer: In addition to your monthly up-front fee, you will be billed for the previous month’s on-demand usage on the first day of each month.
-        - question: How can groups not seeking a profit use Pulumi for free?
-          answer: The [Open-Source Free Edition](/pricing/open-source-free-tier/) allows organizations not seeking a profit with projects under an open-source license to use Pulumi for free.
         - question: What payment options do you accept?
           answer: For the Pulumi Team Edition, you can pay with a credit card (we use Stripe for processing). Pulumi Enterprise Edition offers additional payment options. Please [contact us](/contact/?form=sales) for those options.
         - question: What if I have billing or account issues?

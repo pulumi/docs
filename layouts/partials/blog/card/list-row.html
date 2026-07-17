@@ -1,0 +1,18 @@
+{{- /*
+    Hairline list row: title (h4) left; category badge + avatar stack + date
+    right. `data-post-row` marks it for the client-side infinite-scroll /
+    category-filter JS to extract and append. Whole row is a stretched link.
+
+    Params: page (required) the post page.
+*/ -}}
+{{- $page := .page -}}
+<article data-post-row data-category="{{ $page.Params.category }}" class="group relative flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 border-b border-gray-200 py-6 last:border-0">
+    <h4 class="m-0! min-w-0 flex-1 md:truncate"><a href="{{ $page.RelPermalink }}" data-track="blog-row-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h4>
+    <div class="flex shrink-0 items-center gap-2">
+        <span class="hidden md:inline-flex">{{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}</span>
+        <span class="w-32 mx-auto hidden md:inline-flex justify-center">
+        {{ partial "blog/avatars.html" (dict "authors" $page.Params.authors "label" false) }}
+        </span>
+        <time class="body-sm whitespace-nowrap text-service-black md:w-28 md:text-right" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
+    </div>
+</article>

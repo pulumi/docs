@@ -2,11 +2,11 @@
 title: "Converting Full Terraform Programs to Pulumi"
 date: 2023-06-12
 meta_desc: Learn how to convert whole Terraform programs to Pulumi using the new Terraform converter
-meta_image: meta.png
 authors:
     - justin-vanpatten
 tags:
     - migration
+category: tutorials
 ---
 
 Over the last 2 years, we've seen an increasing trend of cloud development teams migrating to Pulumi from Terraform. These teams often have experience with and meaningful investment in Terraform, but have also typically run into limits of expressivity, productivity, scalability, or reliability with their existing tools. One of the first questions we hear when they decide to move to Pulumi is "how will I migrate my existing Terraform projects over?".
@@ -178,6 +178,10 @@ var plainDomain = args.VaultDnsAddress
 After addressing the remaining TODOs and some other tweaks so that the code compiles, we can now run the converted program with `pulumi up` to provision the Vault installation with Pulumi.
 
 The converter has saved us a ton of time, converting over 1,000 lines of Terraform to a modern Pulumi language, with only a small number of manual fix-ups required. From here, we can leverage our IDE and compiler to further refactor and improve the code, one of the many benefits of Pulumi!
+
+{{< blog/cta-card title="Convert your Terraform to Pulumi" label="Learn more" href="/docs/iac/guides/migration/converters/" >}}
+Run `pulumi convert` to migrate your existing Terraform projects and modules to TypeScript, Python, Go, or C#, then refine the result with your language's own tooling.
+{{< /blog/cta-card >}}
 
 ## Importing State
 

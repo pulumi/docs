@@ -37,7 +37,22 @@ values:
             name: API_KEY
           app-secret:
             name: APP_SECRET
+  pulumiConfig:
+    apiKey: ${doppler.secrets.api-key}
+    appSecret: ${doppler.secrets.app-secret}
 ```
+
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="doppler-secrets" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="doppler-secrets" section="outputs" >}}
 
 ## Configuring OIDC
 
@@ -45,7 +60,7 @@ To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Doppler
 the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/doppler/) documentation. Once you have completed
 these steps, you can validate that your configuration is working by running either of the following:
 
-* `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
+* `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
 
 Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and
@@ -64,30 +79,3 @@ environment identifier respectively. You should see output similar to the follow
   }
 }
 ```
-
-## Inputs
-
-| Property | Type                                                   | Description                                                                                                                |
-|----------|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| `login`  | [DopplerSecretsLogin](#dopplersecretslogin)        | Credentials to use to log in to Doppler.                                                                                 |
-| `project`   | string | The project identifier in Doppler |
-| `config`   | string | The config identifier in Doppler |
-| `get`    | map[string][DopplerSecretsGet](#dopplersecretsget) | A map from names to secrets to read from Doppler Secrets. The outputs will map each name to the secret's sensitive data. |
-
-### DopplerSecretsLogin
-
-| Property      | Type   | Description |
-|---------------|--------|---------------------------------------------------------------------------------------------------------------------------|
-| `accessToken` | string | The access token to use for authentication.                                                                               |
-
-### DopplerSecretsGet
-
-| Property      | Type   | Description |
-|---------------|--------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`   | string | The secret name in Doppler |
-
-### Outputs
-
-| Property | Type   | Description                         |
-|----------|--------|-------------------------------------|
-| N/A      | object | A map of names to imported Secrets. |

@@ -4,7 +4,6 @@ title: VPC
 h1: AWS Virtual Private Cloud (VPC)
 meta_desc: The AWSx VPC component provides simple, out of the box VPC functionality that follows widely accepted best
            practices.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds-aws

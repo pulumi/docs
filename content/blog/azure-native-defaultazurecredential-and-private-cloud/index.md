@@ -24,7 +24,6 @@ meta_desc: |
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -38,6 +37,7 @@ tags:
     - azure
     - features
     - releases
+category: product
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -188,7 +188,7 @@ Ensure that the application pods using workload identity include the label `azur
 
 {{% /notes %}}
 
-### Walkthough
+### Walkthrough
 
 Let's use [Pulumi Kubernetes Operator (PKO)][pko1] to demonstrate a use case where you'd run Pulumi deployment operations in a pod
 and could benefit from workload identity.

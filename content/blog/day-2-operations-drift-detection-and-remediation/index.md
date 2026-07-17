@@ -1,15 +1,15 @@
 ---
 title: "Day 2 Operations: Drift Detection and Remediation"
+feature_image: feature.png
 allow_long_title: true
 meta_desc: "Implement automated drift detection for your IDP using Pulumi. Maintain infrastructure integrity with scheduled checks and real-time alerts."
-meta_image: meta.png
 date: 2025-10-24
 series: idp-best-practices
 authors:
     - mitch-gerdisch
     - josh-kodroff
 tags:
-    - idp
+    - internal-developer-platform
     - drift-detection
     - day-2-operations
     - infrastructure-as-code
@@ -18,7 +18,7 @@ tags:
     - platform-engineering
     - devops
     - remediation
-    - idp-best-practices
+category: best-practices
 
 social:
     twitter: |
@@ -197,6 +197,10 @@ Detecting drift is only valuable if the right people know about it. Pulumi's [we
 ![img_3.png](img_3.png)
 
 You can route notifications wherever your team actually pays attention. Send alerts directly to Slack channels where your ops team congregates. Push notifications to Microsoft Teams if that's your collaboration platform. Use custom webhooks to integrate with PagerDuty, Datadog, or any other monitoring system. You can even use deployment triggers to automatically run dependent stacks when drift is detected and fixed.
+
+{{< blog/cta-card title="Automate drift detection with Pulumi" >}}
+Connect your stacks to Pulumi Deployments, schedule drift checks across every environment, and route alerts to Slack or Teams the moment your infrastructure diverges from code.
+{{< /blog/cta-card >}}
 
 ## Handling Common Drift Scenarios
 

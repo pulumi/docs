@@ -1,12 +1,15 @@
 ---
 title_tag: Starburst | Case Studies
-title: "Starburst:  112x Deployment Acceleration"
+title: "Starburst: 112x Deployment Acceleration"
 description: |
     Starburst transformed its infrastructure provisioning and management processes by switching from Terraform to Pulumi, resulting in a 112x faster deployment time and significant cost savings.
 meta_desc: Starburst switched from Terraform to Pulumi, achieving 112x faster deployments, enhanced developer productivity, improved security, and cost savings.
 
 customer_name: Starburst
-customer_logo: /logos/customers/starburst.png
+industry: data-analytics
+customer_logo: /logos/customers/starburst.svg
+logo_bg_color: "#9747FF"
+logo_style: white
 
 exec_summary: |
     Starburst, a leading data analytics company, transformed its infrastructure provisioning and management processes by switching from Terraform to Pulumi. The adoption of Pulumi resulted in a 112x faster deployment time, reducing infrastructure deployments from 2 weeks to just 3 hours. Pulumi's object-oriented programming support enabled the creation of abstractions for Kubernetes clusters and managed services across Azure, AWS, and Google Cloud. The transition to Pulumi Cloud provided access to deployments, dashboarding, analytics, state management, and security functionality, further enhancing Starburst's ability to innovate and grow their business rapidly. With Pulumi, Starburst achieved significant improvements in developer productivity, security, governance, and cost savings, positioning the company for continued success in the data analytics industry.
@@ -78,7 +81,7 @@ Starburst also found Pulumi AI to be a game-changer in terms of productivity. Th
 
 With Pulumi Cloud's drift detection feature, Starburst could proactively identify and address manual changes to their infrastructure, preventing potential issues and ensuring consistent deployments. For example, someone on-call might make a manual change which could break the next release. With drift detection, an alert will happen, allowing the drift to be remediated without breaking future releases.
 
-Starburst also plans to use Pulumi ESC (Environments, Secrets, and Configuration).  Previously, each developer environment required manual configuration and copying of keys from AWS Key Management Service (KMS), which was a slow and potentially insecure process. With ESC, each developer environment can securely pull credentials and configurations from a centralized location, significantly improving security and efficiency. ESC also enables dynamic credential management, further enhancing security by eliminating the need to share static credentials across environments.
+Starburst also plans to use Pulumi ESC (Environments, Secrets, and Configuration). Previously, each developer environment required manual configuration and copying of keys from AWS Key Management Service (KMS), which was a slow and potentially insecure process. With ESC, each developer environment can securely pull credentials and configurations from a centralized location, significantly improving security and efficiency. ESC also enables dynamic credential management, further enhancing security by eliminating the need to share static credentials across environments.
 
 ### Cost Savings
 

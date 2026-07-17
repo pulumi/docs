@@ -1,9 +1,9 @@
 ---
 title_tag: "Pulumi vs. Serverless Framework"
+authors: ["joe-duffy"]
 meta_desc: "Compare Pulumi and the Serverless Framework: a multi-cloud IaC platform in general-purpose languages versus an AWS-focused tool for deploying Lambda apps."
 title: Serverless Framework
 h1: Pulumi vs. Serverless Framework
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Serverless Framework

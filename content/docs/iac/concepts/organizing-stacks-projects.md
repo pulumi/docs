@@ -1,3 +1,3 @@
 ---
-redirect_to: /docs/guides/organizing-projects-stacks/
+redirect_to: /docs/iac/guides/basics/organizing-projects-stacks/
 ---

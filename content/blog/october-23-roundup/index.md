@@ -2,10 +2,11 @@
 title: "A recap of October 2023 - A big month at Pulumi!"
 allow_long_title: True
 authors: ["joe-duffy"]
-tags: ["pulumi-news"]
+tags: [announcements]
+category: company
 meta_desc: "In October 2023 we announced a $41M Series C to build the best infrastructure as code and tackle more of our customers' toughest cloud challenges."
 date: "2023-10-16"
-meta_image: "oct-23.png"
+
 ---
 
 We've been hard at work and are having the biggest month ever at Pulumi. That includes two new products, Pulumi ESC and Pulumi for Platform Teams, and news of our Series C. That's a boatload of fresh infrastructure as code innovation. And October isn't even over yet!

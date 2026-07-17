@@ -2,13 +2,13 @@
 title: "Build a Pulumi VS Code Devcontainer Environment"
 date: 2020-07-14
 meta_desc: "Build a VS Code devcontainer for Pulumi infrastructure as code projects."
-meta_image: devcontainer.png
 authors:
     - sophia-parafina
 tags:
     - development-environment
     - containers
     - docker
+category: tutorials
 ---
 
 One of the major advantages of using containers for development is reducing the need to install software and associated dependencies. Developers can start writing code without configuring a development environment that emulates production. The Visual Studio Code Remote - Containers extension lets you develop inside a container. If you want to use Pulumi’s infrastructure as code engine without installing the Pulumi CLI, this blog post is for you!
@@ -127,7 +127,7 @@ One alternative is to set the environment variables on your local machine and pa
 
 Another alternative is to use a devcontainer.env file, which contains your credentials.
 
-1. Create a file with your crendentials.
+1. Create a file with your credentials.
 
     ```
     AWS_ACCESS_KEY_ID=AKIAI44QH8DHBEXAMPLE

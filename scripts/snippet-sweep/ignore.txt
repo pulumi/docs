@@ -1,0 +1,18 @@
+# Snippet-sweep false-positive suppressions.
+#
+# A block listed here is counted as `suppressed` and never flagged. Two
+# line formats (comments with `#`; blank lines ignored):
+#
+#   <content-path><TAB><hash12>   suppress one block. hash12 is the value
+#                                 from the finding's `hash` field (sha256
+#                                 of the block content with trailing
+#                                 whitespace and outer blank lines
+#                                 stripped) — editing the block changes
+#                                 the hash and re-exposes it.
+#   <regex over content-path>     suppress every block on matching pages.
+#
+# Keep a trailing comment on every entry saying WHY it is suppressed.
+# `sweep.py --explain-ignores` lists entries that no longer match, for
+# periodic cleanup.
+
+content/docs/iac/concepts/inputs-outputs/apply.md	94c1851bbc13	# intentional mix of import block, func decl, and "inside a program" statements — not one parseable unit

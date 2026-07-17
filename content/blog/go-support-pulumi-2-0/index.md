@@ -2,11 +2,11 @@
 title: "Welcoming Go to the Pulumi Family"
 date: 2020-05-19
 meta_desc: "Go is fully supported in Pulumi 2.0 for Infrastructure as Code."
-meta_image: superfriends.png
 authors:
     - evan-boyle
 tags:
-    - Go
+    - go
+category: product
 ---
 
 Over the last 10 years, Go has quickly become the "language of the cloud" for building application servers and services that run in and on today's cloud platforms. With [Pulumi 2.0](/blog/pulumi-2-0/), Go can also be used to manage and provision modern infrastructure as well.  Across any cloud (AWS, Azure, GCP, Kubernetes and [more than 50 others](/registry/)!) and across a variety of workloads (containers, serverless, kubernetes, core infrastructure and more), you can now use the rich software engineering strengths of the Go language and ecosystem to manage your cloud infrastructure.  The [Pulumi open source project](https://github.com/pulumi/pulumi) itself has been built on Go from day 1, and so we're really excited to bring full Go support for cloud infrastructure as code to the same language ecosystem that Pulumi itself has been part of.
@@ -145,7 +145,7 @@ ctx.Export("endpoint", group.Fqdn)
 
 ### Kubernetes
 
-Pulumi provides access not just to your cloud (AWS, Azure, GCP and more), but also to the whole Kubernetes API.  The Pulumi  [Kubernetes provider](https://github.com/pulumi/pulumi-kubernetes) is based on the OpenAPI specification, so is always up to date with the full functionality of the Kubernetes API. Using Pulumi to provision your Kuberentes resources gives you the declarative benefits of YAML without any of the drawbacks. Using a familiar, general-purpose language to orchestrate resources brings the benefits of strong typing, safety, and opens up options for encapsulation. Here’s a snippet from the [guestbook example](https://github.com/pulumi/examples/tree/master/kubernetes-go-guestbook):
+Pulumi provides access not just to your cloud (AWS, Azure, GCP and more), but also to the whole Kubernetes API.  The Pulumi  [Kubernetes provider](https://github.com/pulumi/pulumi-kubernetes) is based on the OpenAPI specification, so is always up to date with the full functionality of the Kubernetes API. Using Pulumi to provision your Kubernetes resources gives you the declarative benefits of YAML without any of the drawbacks. Using a familiar, general-purpose language to orchestrate resources brings the benefits of strong typing, safety, and opens up options for encapsulation. Here’s a snippet from the [guestbook example](https://github.com/pulumi/examples/tree/master/kubernetes-go-guestbook):
 
 ```go
 // Redis leader Service

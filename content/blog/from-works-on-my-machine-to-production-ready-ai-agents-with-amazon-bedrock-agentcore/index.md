@@ -3,7 +3,6 @@ title: "From 'Works on My Machine' to Production-Ready: Building AI Agents with 
 date: 2025-12-15T00:00:00+02:00
 draft: false
 meta_desc: "Transform local AI agent prototypes into production-ready deployments using Amazon Bedrock AgentCore, Strands SDK, and Pulumi."
-meta_image: meta.png
 authors:
   - engin-diri
 tags:
@@ -12,6 +11,7 @@ tags:
   - bedrock-agentcore
   - pulumi
   - infrastructure-as-code
+category: tutorials
 allow_long_title: true
 ---
 
@@ -931,6 +931,10 @@ MCP GATEWAY DEMO SUMMARY
 ```
 
 The MCP Gateway tools provide additional context (merchant reputation, risk scores, fraud indicators) that helps the agent make better decisions.
+
+{{< blog/cta-card title="Ship your AI agents to production" href="/docs/ai/" >}}
+You can define the runtime, memory, gateway, and guardrails for your agents as infrastructure as code, and pair Pulumi with the coding agent you already use through the Pulumi MCP server. Start a project to deploy your own.
+{{< /blog/cta-card >}}
 
 ## Architecture Summary
 

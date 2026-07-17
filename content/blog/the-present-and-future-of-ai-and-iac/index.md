@@ -4,11 +4,11 @@ allow_long_title: true
 authors: ["luke-hoban"]
 meta_desc: "The future of AI and Infrastructure as Code (IaC), for how we author and build cloud solutions and AI-driven applications"
 date: "2024-02-14T07:00:00-08:00"
-meta_image: "meta.png"
 tags:
     - ai
     - llm
     - infrastructure-as-code
+category: perspectives
 ---
 
 {{< notes type="info" >}}

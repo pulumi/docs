@@ -1,7 +1,6 @@
 ---
 title: What is HIPAA?
 meta_desc: "HIPAA is the US law that sets national standards for protecting health information. Learn its rules, who it covers, penalties, and how to comply."
-meta_image: /images/what-is/what-is-hipaa-meta.png
 type: what-is
 page_title: "What is HIPAA?"
 authors: ["alex-leventer"]

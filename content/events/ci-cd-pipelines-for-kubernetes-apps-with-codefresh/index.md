@@ -1,8 +1,9 @@
 ---
 # Name of the event, <= 60 characters
 title: GitOps with Pulumi and Codefresh
-meta_desc: Learn how Pulumi’s infrastructure as code platform and Codefresh makes it easy to manage infrastructure code as part of your continuous delivery process.
-meta_image:
+meta_desc: Learn how Pulumi’s infrastructure as code platform and Codefresh make it easy to manage infrastructure code as part of your continuous delivery process.
+meta_image: /events/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/meta.png
+meta_image_square: /events/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -44,7 +45,7 @@ location: virtual
 description: |
     Traditionally organizations had completely different methods of deploying
     infrastructure and applications. Teams had to learn completely different tools
-    as the lifecycle of an application vs the instrustructure it is hosted on have
+    as the lifecycle of an application vs the infrastructure it is hosted on have
     different requirements and limitations.
 
     GitOps is a set of best practices that redefines the way changes are applied and can be used

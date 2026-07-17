@@ -3,7 +3,6 @@ title: Pull requests
 title_tag: Pull requests with Pulumi Neo
 h1: Pull requests with Pulumi Neo
 meta_desc: Learn how Neo creates and manages pull requests to implement infrastructure changes through your existing review process.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/pull-requests/
 - /docs/iac/neo/pull-requests/
@@ -22,6 +21,8 @@ Pull requests are the bridge between Neo's AI capabilities and your production i
 - CI/CD pipeline validation
 - Team collaboration and knowledge sharing
 - Audit trail and rollback capability
+
+Neo also analyzes pull requests that your team opens and leaves its feedback right in the PR. See [Neo code reviews](/docs/ai/code-reviews/).
 
 ## Prerequisites
 

@@ -2,12 +2,12 @@
 title: "Announcing: Pulumi Deployments, YAML GA, Arch Templates"
 date: 2022-11-02T06:15:00-07:00
 meta_desc: "Announcing new launches from Cloud Engineering Days 2022, including Pulumi Deployments, YAML GA, Architecture Templates and Project-level Configuration"
-meta_image: ced-announcements.png
 authors:
     - luke-hoban
 tags:
     - yaml
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 {{% notes type="warning" %}}

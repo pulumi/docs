@@ -213,17 +213,17 @@ Review some of the generated project files:
 
 {{% choosable language "typescript,python,go,csharp,java" %}}
 
-- `Pulumi.yaml` defines the [project](/docs/concepts/projects/).
+- `Pulumi.yaml` defines the [project](/docs/iac/concepts/projects/).
 
 {{% /choosable %}}
 
 {{% choosable language yaml %}}
 
-- `Pulumi.yaml` defines both the [project](/docs/concepts/projects/) and the program that manages your stack resources.
+- `Pulumi.yaml` defines both the [project](/docs/iac/concepts/projects/) and the program that manages your stack resources.
 
 {{% /choosable %}}
 
-- If present, `Pulumi.dev.yaml` would contain [configuration](/docs/concepts/config/) values for the [stack](/docs/concepts/stack/) we initialized. However, it's empty since this project doesn't require any configuration.
+- If present, `Pulumi.dev.yaml` would contain [configuration](/docs/iac/concepts/config/) values for the [stack](/docs/iac/concepts/stacks/) we initialized. However, it's empty since this project doesn't require any configuration.
 
 {{% choosable language java %}}
 

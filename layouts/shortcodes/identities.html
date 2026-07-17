@@ -1,22 +1,22 @@
-<div class="my-4 bg-gray-100 border-t border-b border-gray-300 md:flex justify-between items-center px-4 py-2 max-w-6xl">
-    <a class="block rounded hover:bg-gray-200 transition-all my-2 py-4 text-center px-6" href="https://id.atlassian.com/login" target="_blank">
-        <img class="inline-block h-8 w-auto -mb-2" src="/logos/tech/atlassian.svg" />
-        <p>Atlassian</p>
+<div class="my-4 bg-gray-100 dark:bg-gray-900 rounded-md md:flex justify-between items-center px-4 py-2 max-w-6xl [&_span]:block">
+    <a class="block rounded transition-all my-2 py-4 text-center px-6 hover:bg-gray-200 dark:hover:bg-white/10" href="https://id.atlassian.com/login" target="_blank">
+        <img class="inline-block h-8 w-auto mb-2 brightness-0 opacity-80 dark:invert" src="/logos/tech/atlassian.svg" alt="Atlassian" />
+        <span>Atlassian</span>
     </a>
-    <a class="block rounded hover:bg-gray-200 transition-all my-2 text-center md:mx-2 py-4 px-6" href="https://github.com/login" target="_blank">
-        {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/github.svg" "alt" "GitHub" "class" "inline-block h-8 w-auto") }}
-        <p>GitHub</p>
+    <a class="block rounded transition-all my-2 text-center md:mx-2 py-4 px-6 hover:bg-gray-200 dark:hover:bg-white/10" href="https://github.com/login" target="_blank">
+        {{ partial "fingerprinted-img.html" (dict "src" "logos/tech/github.svg" "alt" "GitHub" "class" "inline-block h-8 w-auto mb-2 brightness-0 opacity-80 dark:invert") }}
+        <span>GitHub</span>
     </a>
-    <a class="block rounded hover:bg-gray-200 transition-all my-2 text-center md:mx-2 py-4 px-6" href="https://gitlab.com/users/sign_in" target="_blank">
-        <img class="inline-block h-8 w-auto" src="/logos/tech/gitlab.svg" />
-        <p>GitLab</p>
+    <a class="block rounded transition-all my-2 text-center md:mx-2 py-4 px-6 hover:bg-gray-200 dark:hover:bg-white/10" href="https://gitlab.com/users/sign_in" target="_blank">
+        <img class="inline-block h-8 w-auto mb-2 brightness-0 opacity-80 dark:invert" src="/logos/tech/gitlab.svg" alt="GitLab" />
+        <span>GitLab</span>
     </a>
-    <a class="block rounded hover:bg-gray-200 transition-all my-2 text-center md:mx-2 py-4 px-6" href="https://accounts.google.com" target="_blank">
-        <img class="inline-block h-8 w-auto" src="/logos/tech/google.svg" alt="Google" />
-        <p>Google</p>
+    <a class="block rounded transition-all my-2 text-center md:mx-2 py-4 px-6 hover:bg-gray-200 dark:hover:bg-white/10" href="https://accounts.google.com" target="_blank">
+        <img class="inline-block h-8 w-auto mb-2 brightness-0 opacity-80 dark:invert" src="/logos/tech/google.svg" alt="Google" />
+        <span>Google</span>
     </a>
-    <a class="block rounded hover:bg-gray-200 transition-all my-2 py-4 text-center px-6" href="{{ relref . "/docs/administration/access-identity/saml/" }}" target="_blank">
-        <img class="inline-block h-8 w-auto" src="/logos/tech/saml.svg" />
-        <p>SAML 2.0</p>
+    <a class="block rounded transition-all my-2 py-4 text-center px-6 hover:bg-gray-200 dark:hover:bg-white/10" href="{{ relref . "/docs/administration/access-identity/saml/" }}" target="_blank">
+        <img class="inline-block h-8 w-auto mb-2 brightness-0 opacity-80 dark:invert" src="/logos/tech/saml.svg" alt="SAML 2.0" />
+        <span>SAML 2.0</span>
     </a>
 </div>

@@ -3,7 +3,6 @@ title_tag: "hooks | Resource Options"
 meta_desc: The hooks resource option provides a set of resource hooks linked to a resource.
 title: "hooks"
 h1: "Resource option: hooks"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: hooks

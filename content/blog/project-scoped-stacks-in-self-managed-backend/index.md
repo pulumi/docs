@@ -3,13 +3,13 @@ title: "Aligning Projects between Service and DIY Backend"
 date: 2023-04-03
 updated: 2025-03-24
 meta_desc: Pulumi DIY backends now support project-scoped stacks—aligning with the Pulumi Service and enabling easier stack management across projects and environments.
-meta_image: meta.png
 authors:
     - justin-vanpatten
     - abhinav-gupta
 tags:
     - features
-    - pulumi-releases
+    - releases
+category: product
 ---
 
 At Pulumi, our goal is to offer the best Infrastructure as Code experience for all cloud developers.
@@ -140,6 +140,10 @@ $ pulumi stack rename --stack app-test test
 ```
 
 ![Diagram showing migration from a flat Pulumi stack name (app-test) to a project-scoped layout (app/test) using 'pulumi state upgrade' and 'pulumi stack rename test'.](upgrade-and-rename.png)
+
+{{< blog/cta-card title="Manage stacks across your projects" >}}
+Organize your infrastructure into projects and reuse stack names like `test` and `prod` across them. Store state in Pulumi Cloud or a self-managed backend, whichever fits your team.
+{{< /blog/cta-card >}}
 
 ## Referencing stacks in the CLI
 

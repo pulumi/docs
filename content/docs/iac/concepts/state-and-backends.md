@@ -9,7 +9,6 @@ keywords:
  - state backend
  - pulumi refresh
  - drift detection
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: State & backends
@@ -212,9 +211,9 @@ $ pulumi preview --refresh
 
 ### Automated drift detection
 
-For teams that want to detect and remediate out-of-band changes on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/deployments/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
+For teams that want to detect and remediate [out-of-band changes](/what-is/what-is-infrastructure-drift/) on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/concepts/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
 
-To learn more, see [Drift detection](/docs/deployments/deployments/drift/) for the Pulumi Cloud feature, and [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) for the CLI-side workflow (remediation vs. adoption, GitOps continuous reconciliation, and false-positive reduction).
+To learn more, see [Drift detection](/docs/deployments/concepts/drift/) for the Pulumi Cloud feature, and [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) for the CLI-side workflow (remediation vs. adoption, GitOps continuous reconciliation, and false-positive reduction).
 
 ## Advanced State
 
@@ -230,7 +229,7 @@ To learn more about importing existing resources, see [Importing Infrastructure]
 
 Pulumi state is usually stored in a transactional snapshot called a _checkpoint_. Pulumi records checkpoints early and often as it executes so that Pulumi can operate reliably, similar to how database transactions work. The basic functions of state allow Pulumi to diff your program's goal state against the last known update, recover from failure, and destroy resources accurately to clean up afterwards. The checkpoint format augments this with additional failure recovery capabilities in the face of partial failure.
 
-The Pulumi Cloud backend records every checkpoint through a transactional API, making it possible to recover from unusual failure scenarios such as network interruptions during updates. DIY backends also maintain checkpoint history (in the `.pulumi/history/` directory), but blob storage backends use a less transactional protocol that may have more difficulty recovering from partial failures.
+The Pulumi Cloud backend records every checkpoint through a transactional API, making it possible to transparently recover from unusual failure scenarios such as network interruptions during updates. DIY backends also maintain checkpoint history (in the `.pulumi/history/` directory), but because they are fundamentally limited by the non-transactional protocols of blob storage, they cannot transparently recover from certain kinds of partial failures (read more about how Pulumi Cloud addresses this with [journaling](/blog/journaling/)). This same limitation is why DIY backends offer only a blunt instrument for tuning performance on large stacks: [skipping checkpoints](/docs/iac/cli/environment-variables/) altogether, trading durability for speed.
 
 ### State Encryption
 

@@ -1,7 +1,7 @@
 ---
 title: password
 title_tag: password Pulumi ESC Rotator
-meta_desc: The `password` rotator enables you to rotate any user defined key by generating random passwords.
+meta_desc: The `password` rotator enables you to rotate any user-defined key by generating random passwords.
 h1: password
 menu:
   esc:
@@ -13,26 +13,15 @@ aliases:
   - /docs/esc/concepts/providers/rotators/password/
 ---
 
-The `password` rotator enables you to rotate any user defined key by generating random passwords.
+The `password` rotator enables you to rotate any user-defined key by generating random passwords.
 
 {{% notes "info" %}}
 If you want to generate _memorable passphrases_ use the [passphrase rotator](/docs/esc/providers/rotators/passphrase/)
 {{% /notes %}}
 
-## Inputs
-
-- **length**: The length of the generated passwords. (default `16`)
-- **lower**: If `true` the generated passwords will contain lowercase characters. (default: `true`)
-- **upper**: If `true` the generated passwords will contain uppercase characters. (default: `true`)
-- **special**: If `true` the generated passwords will contain special  characters. (default: `true`)
-- **minUpper**: The minimum number of uppercase characters that the generated passwords will contain. (default: `0`)
-- **minLower**: The minimum number of lowercase characters that the generated passwords will contain. (default: `0`)
-- **minSpecial**: The minimum number of special characters that the generated passwords will contain. (default: `0`)
-- **overrideSpecial**: a string containing all the special characters that can be used to generate passwords. (default: `!@#$%&*()-_=+[]{}<>:?`)
-
 ## Example
 
-The `password` rotator can be configured for any random user defined key.
+The `password` rotator can be configured for any user-defined key.
 
 ```yaml
 values:
@@ -47,3 +36,43 @@ values:
 ```
 
 The previous example will generate passwords like: `wn#ZQH}z$[H_&h*`
+
+When you open the environment, you should see output similar to the following:
+
+```json
+{
+  "mypassword": {
+    "current": "[secret]",
+    "previous": "[secret]"
+  }
+}
+```
+
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="rotator" name="password" section="inputs" >}}
+
+### State
+
+{{< esc-schema type="rotator" name="password" section="state" >}}
+
+### Outputs
+
+{{< esc-schema type="rotator" name="password" section="outputs" >}}
+
+## Troubleshooting
+
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails with an invalid input error | `length` is outside 8–100, or the sum of `minLower`, `minUpper`, `minNumeric`, and `minSpecial` exceeds `length`. | Set `length` within range and lower the minimum-count inputs so they fit within the password length. |
+| Generated passwords are missing a character class | The class is disabled (`lower`, `upper`, `numeric`, or `special` set to `false`) or its minimum is `0`. | Enable the character class and set its corresponding minimum to require at least one character. |
+
+## Related
+
+- [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+- [passphrase rotator](/docs/esc/providers/rotators/passphrase/) - Generate memorable passphrases instead of random passwords
+- [Rotators reference](/docs/esc/providers/rotators/) - Catalog of all ESC rotators

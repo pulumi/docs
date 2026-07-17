@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Day-two Operation of Multi-cloud Kubernetes and Vault"
 meta_desc: In this session you learn how Snowflake worked towards implementation and the day-2 experience of using Pulumi to manage Kubernetes and Vault.
+meta_image: /events/day-two-operation-of-multi-cloud-kubernetes-and-vault/meta.png
+meta_image_square: /events/day-two-operation-of-multi-cloud-kubernetes-and-vault/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

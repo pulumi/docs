@@ -4,10 +4,12 @@ title: "Nexxiot: Infrastructure Management for IoT Operations"
 description: |
     Nexxiot adopted Pulumi to streamline cloud infrastructure management, removing the burden of maintaining custom tooling while achieving zero infrastructure-related outages.
 meta_desc: Learn how Nexxiot worked with Pulumi to transform their infrastructure management, saving engineering resources and improving reliability.
-meta_image: "/images/case-studies/nexxiot.png"
 
 customer_name: Nexxiot
+industry: iot-transportation
 customer_logo: /logos/customers/nexxiot.svg
+logo_bg_color: "#6357FF"
+logo_style: white
 customer_url: https://www.nexxiot.com/
 
 quote_block:

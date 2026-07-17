@@ -1,0 +1,439 @@
+---
+name: review-existing-content
+description: Review existing documentation pages selected by the daily content-review workflow. Runs the docs-review claim pipeline over whole files via synthetic diffs, applies high-confidence fixes only, and opens one auditable PR per article. Invoked by the review-existing-content workflow; not user-invocable.
+user-invocable: false
+---
+
+# Review Existing Content
+
+You are reviewing existing documentation pages — not a PR diff. The selection
+script has already chosen today's articles; your job is to run the docs-review
+machinery over each whole file and apply only the fixes you can defend with an
+authoritative source. Everything judgment-level goes in the PR description for
+a human, not in the diff.
+
+You run **unprivileged**: the review job holds no push token, so you edit the
+working tree only — never `git commit`, `git push`, or `gh pr create`. The
+workflow's publish job validates your changes against a deterministic gate
+(`scripts/content-review/publish-gate.py`: verdict shape, diff scope,
+`no_retire`), derives the branch name from the queue, and opens the draft PR
+with the body you edited. Changes outside the gate's scope are rejected
+wholesale, so keep every edit inside the bounds each step names.
+
+## Input
+
+Read `.content-review-queue.json` from the repo root (written by
+`scripts/content-review/select-articles.py`). Shape:
+
+```json
+{
+  "generated": "2026-06-12T14:00:00+00:00",
+  "count": 3,
+  "halted": null,
+  "traffic": { "available": true, "period": "2026-05", "pages_matched": 731 },
+  "reader_signals": {
+    "available": true,
+    "gsc": { "available": true, "period": {"start": "2026-03-14", "end": "2026-06-11"},
+             "pages_matched": 612, "median_ctr": 0.031, "max_impressions": 88012 },
+    "feedback": { "available": true, "pages_matched": 214 }
+  },
+  "articles": [
+    { "path": "content/docs/iac/concepts/stacks/_index.md",
+      "url": "/docs/iac/concepts/stacks/",
+      "slug": "docs-iac-concepts-stacks",
+      "lane": "priority",
+      "tier": 1,
+      "no_retire": true,
+      "monthly_visits": 12345,
+      "signals": {
+        "gsc": { "impressions": 15234, "ctr": 0.0205, "opportunity": 0.41,
+                 "multiplier": 1.1025, "low_ctr_flag": true },
+        "feedback": { "yes": 4, "no": 9, "neg_rate": 0.6923, "multiplier": 1.27 }
+      },
+      "last_reviewed": null,
+      "score": 0.91 }
+  ]
+}
+```
+
+- `lane` — `priority` (scored pick) or `manual` (workflow_dispatch override).
+- `stale_claims` (when present) — count of this page's volatile claims the
+  nightly re-verification found contradicted (see §Claims index below). A
+  non-zero count is why the page jumped the queue: treat the ledger markers'
+  entity keys and evidence as priority findings to re-check first.
+- `no_retire` — when true, retirement must never be proposed for this page.
+  This is the **hard veto** on retirement — honor it regardless of evidence.
+- `reader_signals` / `signals` — Search Console and feedback-widget figures
+  from the optional reader-signals export; `null` when the export wasn't
+  available for the run (a signal-blind run says so, it never fabricates).
+  These fed the selection score and the composed "Why this page" block — they
+  are selection facts, not review instructions.
+- If `articles` is empty or `halted` is set, do nothing (the workflow won't
+  invoke you in that case, but be defensive).
+- `traffic.available: false` is not your problem to fix: the dispatcher's
+  degradation-health lane (`scripts/content-review/signal-health.py`) tracks
+  it — along with pulumi/console access and the holiday feed — and alerts
+  #docs-ops after a week of continuous degradation.
+
+Process articles **sequentially**, one at a time, completing each article's
+fix set and verdict before starting the next.
+
+## Per-article procedure
+
+### 1. Branch — the workflow owns this
+
+You do not create branches. The publish job derives the **exact** branch name
+from the queue entry's `slug` and your verdict's `retirement` flag —
+`content-review/<slug>` for a fix, `content-review/retire-<slug>` for a
+retirement proposal (see below) — and a deterministic pre-check has already
+skipped the run (with a `skipped` verdict) if an open PR owns either branch,
+so you never need to check for one.
+
+### 2. Pre-compute (deterministic floor) — the workflow runs this for you
+
+The `content-review-article` workflow generates the synthetic whole-file diff
+and runs the docs-review pre-steps **before invoking you**, exactly as the PR
+review workflow does. The artifacts are already at the repo root when you
+start: `.fetched-urls.json`, `.candidate-claims.json`, `.verified-claims.json`,
+`.vale-findings.json`, `.frontmatter-validation.json`, and
+`.cross-sibling-discovery.json`. **Read them — do not regenerate them.**
+
+For reference (and for local runs outside CI), the exact pipeline the workflow
+executes — scripts live in `.claude/commands/docs-review/scripts/`:
+
+```bash
+git diff --no-index /dev/null <path> > .synthetic.patch || true
+
+python3 .claude/commands/docs-review/scripts/extract-urls-and-fetch.py \
+    --patch-file .synthetic.patch --out .fetched-urls.json
+python3 .claude/commands/docs-review/scripts/extract-claims.py \
+    --patch-file .synthetic.patch --out .candidate-claims-regex.json
+python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+    --patch-file .synthetic.patch --changed-files <path> \
+    --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json
+python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
+    --patch-file .synthetic.patch --changed-files <path> \
+    --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json
+python3 .claude/commands/docs-review/scripts/merge-claims.py \
+    --regex .candidate-claims-regex.json \
+    --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
+    --out .candidate-claims.json
+python3 .claude/commands/docs-review/scripts/verify-claims.py \
+    --in .candidate-claims.json --fetched-urls .fetched-urls.json \
+    --out .verified-claims.json
+python3 .claude/commands/docs-review/scripts/frontmatter-validate.py \
+    --changed-files <path> --out .frontmatter-validation.json
+python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
+    --changed-files <path> --out .cross-sibling-discovery.json
+```
+
+Run Vale the way the review workflow does, in whole-file mode (no `--pr`):
+
+```bash
+vale --no-exit --output=JSON <path> > .vale-raw.json 2>/dev/null || echo '{}' > .vale-raw.json
+python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
+    --in .vale-raw.json --out .vale-findings.json || echo '[]' > .vale-findings.json
+```
+
+If any artifact is missing or carries an `errors` field, continue with the
+artifacts you have and say so in the PR description; never fabricate artifact
+contents. (Consult flag names with `--help` if running a script by hand —
+do not guess alternate flags.)
+
+### 3. Triage and fix — HIGH-CONFIDENCE ONLY
+
+Read the artifacts and triage per
+`docs-review:references:pre-computation`'s contract (scripts find facts; you
+make editorial judgments). The bar for **applying** a fix is strict. Apply
+only:
+
+- **Contradicted claims with an unambiguous correction** — `.verified-claims.json`
+  verdict `contradicted` or `mismatch`, where the authoritative source states
+  the correct value outright (a version number, a price, a flag name). If the
+  correction requires interpretation, do not apply it.
+- **Dead or redirected internal links** — fix to the canonical full path
+  (`/docs/...`, never `../`).
+- **Frontmatter violations** from `.frontmatter-validation.json` (broken menu
+  parent, alias collision).
+- **Deterministic-fix Vale findings** — findings in `.vale-findings.json` stamped
+  `deterministic_fix: true`. The stamp (from the allowlist in
+  `.claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml` — fixed
+  substitutions, canonical spelling, the closed-set cross-reference heading
+  rename) means Vale already knows the exact replacement, so you don't have to
+  author one. It does **not** mean apply blindly. For each, apply the
+  replacement named in the finding's `message` **only after confirming it
+  preserves meaning in this context** — read the surrounding sentence/section.
+  Skip and record under "Findings not applied" (with the reason) when the swap
+  would change meaning, e.g. `click`→`select` inside "click event", a product
+  rename inside a historical quote, or a `See also`/`Related` block whose links
+  are actually sequential (that wants **Next steps**, not the rule's default
+  **Learn more** — apply the correct heading or flag it, don't mislabel intent).
+  This is verify-a-proposed-fix, not compose-a-fix; it is still a judgment.
+  Vale findings *without* the flag are style/judgment nags — leave them for the
+  human (see `docs-review:references:spelling-grammar`).
+- **Readthrough `local_repair` findings** — `.readthrough-findings.json`
+  findings with `fix_class: "local_repair"` (per `docs-review:references:readthrough`).
+  Apply the finding's `proposed_fix` and nothing beyond it: reorder so a
+  prerequisite precedes its use, add a missing definition/step, split a
+  mixed-concept H2, delete a genuinely redundant passage, or surface a buried
+  outcome. The change stays inside the one page and preserves its purpose — that
+  bound is what makes it high-confidence. If applying it would mean touching
+  other files or reshaping the whole page, it isn't `local_repair`; treat it as
+  `reconception`.
+
+Everything else — `unverifiable` verdicts, low-confidence corrections,
+prose-quality findings, structural suggestions, **every readthrough finding with
+`fix_class: "reconception"`** (a whole-page rewrite, cross-file split/merge, or
+purpose change — flag, never auto-rewrite), anything you'd phrase with
+"consider" — goes in the PR description's **Findings not applied** section
+(one line of reasoning each), not in the diff. That list is the
+almost-made-the-cut record the human reviewer adjudicates. When you flag a
+`reconception`, set `clarity_flag: true` in the verdict sentinel (step 8) so the
+ledger carries the signal even on an otherwise-clean page.
+
+Record every fix you apply as an entry in the verdict sentinel's `applied`
+array (step 8): its category, file, **pre-fix** line range, and a pointer to
+the artifact finding it implements. The publish job deterministically verifies
+that every hunk in your exported changes falls within the line range of a
+recorded finding (`scripts/content-review/verify-fix-scope.py`); an edit
+outside the recorded findings fails that gate and nothing is pushed — so if a
+change doesn't trace to a finding above, don't make it.
+
+Editing guardrails:
+
+- Never rewrite prose beyond the specific correction.
+- Stay inside the publish gate's scope: a fix review may touch only the
+  queued article itself plus the shared render-time sources named in step 6
+  (`layouts/shortcodes/`, `layouts/partials/`, `data/`); a retirement may
+  touch `content/`, `scripts/redirects/`, and `data/docs_menu_sections.yml`.
+  Any other changed path makes the gate reject the whole review.
+- A `low_ctr_flag` on the queue entry's `signals.gsc` block is **FLAG-ONLY**:
+  never rewrite `title` or `meta_desc` in response to it. The composer has
+  already pre-stubbed a "Search opportunity" row under Findings not applied —
+  keep it (you may add one line of observation, e.g. what the title fails to
+  say); a human runs `/seo-analyze` on it. Meta rewrites are the canonical
+  slop risk this restriction exists for.
+- Ordered lists keep their `1.` numbering; files end with a newline; H1 Title
+  Case, H2+ sentence case (see `STYLE-GUIDE.md` — but don't re-case headings
+  that aren't otherwise wrong).
+- Never edit anything under a tier-0 (generated) path — selection excludes
+  them, but be defensive.
+- Never add the `automation/merge` label to anything.
+
+### 4. Screenshot / UI pass (only when the page has images)
+
+This pass is **gated**: the workflow pre-fills the PR's "Screenshot check"
+section with "No images." when the source references no content images (a
+deterministic source check — the shared `meta_image` card doesn't count). Run
+this pass only when that section still carries a `<TODO>`. When you do, follow
+`references/screenshot-verification.md` for every image the article references.
+Verified-stale screenshots are **flagged in the PR description** (Screenshot
+check section), never regenerated or deleted by you.
+
+### 5. Validate
+
+`make lint` must pass on your working tree. Fix what it surfaces; if you cannot, drop
+the offending change rather than shipping a lint failure. **Do not run `make
+build` here** — the full build is left to the PR's normal CI, and step 6 runs it
+only on the pages that actually need the rendered pass.
+
+### 6. Rendered content pass (only when the page assembles render-time content)
+
+Source review misses content the page assembles at render time — shared
+snippets from shortcodes, values from `data/` files, partial-driven sections.
+But most docs pages assemble nothing the source doesn't already show (plain
+prose, code tabs, callouts, stepper chrome), so this pass is **gated** too: the
+workflow pre-fills the "Rendered content" section with "Skipped" when the source
+uses no content-bearing shortcode/partial/include, and leaves a `<TODO>` only
+when one is present (it names the triggering shortcode). Run this pass only when
+that `<TODO>` is there. When you do, first run `make build` (it produces the
+rendered views), then check both:
+
+**HTML view** — `public/<url path>/index.html`:
+
+1. Extract the main content area's text (skip nav/footer/banner chrome).
+2. Compare against the source markdown's prose. Rendered text **absent from
+   the source** is shortcode/data-sourced content — extract checkable
+   claims from exactly that residue (it's small) and verify them through
+   the same lanes as step 3.
+3. Trace each residue finding to its origin: the shortcode call in the
+   page source → `layouts/shortcodes/<name>.html` / partials / `data/`
+   files. A fix at a shared source affects every page that includes it, so
+   shared-source corrections meeting the high-confidence bar may be
+   applied, and the PR description must flag them as multi-page
+   ("also rendered on N other pages" — grep for other callers).
+
+You do **not** check the markdown view (`index.md`) for leaked shortcode
+delimiters here. Whether a shortcode renders cleanly to markdown is a property of
+the shortcode, not the page, so it's covered once across the whole built corpus
+by `scripts/content-review/check-rendered-markdown.py` (run periodically / in CI),
+not re-paid per review. Content-*mangling* in the markdown output (a template
+that silently drops or rewrites content) is a rendering-pipeline bug for the
+templating owner, tracked separately — not something to fix in a content review.
+
+If this pass applied any fix, re-run `make build` and then `make lint` (as
+separate commands) before opening the PR.
+
+### 7. PR body — only when you applied a fix
+
+You do not open the PR — the publish job creates a **draft** PR to `master`
+whose body is `.pr-body-draft.md`, exactly as you leave it. You do **not**
+write that body from scratch: the workflow composed it (via
+`compose-pr-body.py`, the assemble-then-judge model — the composer ASSEMBLES
+facts, you JUDGE) with every section present and each pre-found finding
+pre-bucketed under a `<TODO>`. **Edit that draft** in place, resolve every
+`<TODO>`, and strip the HTML-comment hints. After opening the PR the workflow
+re-runs `make lint` on the published branch and **promotes the PR to ready
+only if lint passes** — that ready transition is what triggers triage and the
+docs review (a clean lint means it flows through the normal pipeline; a
+trivial fix is short-circuited there). A lint failure leaves the PR a draft
+with a comment for a human; humans merge. The sections (each is checked for):
+
+- **Auto-merge notice** (top `> [!IMPORTANT]` block): the re-lint gate arms
+  GitHub auto-merge on the PR, so the body flags that approving merges it.
+  **Leave verbatim** — do not move, reword, or remove it.
+- **Why this page**: composed from the selection queue (lane, tier, traffic
+  figure + period, Search/Reader-feedback figures when the reader-signals
+  export was available, last reviewed). **Leave verbatim** — do not
+  re-narrate it.
+- **Fixes applied**: pre-stubbed one row per high-confidence finding. Keep a row
+  only for a fix you actually applied (fill its Correction); move the rest down.
+- **Findings not applied**: pre-stubbed with the lower-confidence findings, plus
+  any row you moved down. One line of reasoning each. End the section with: "For
+  the judgment-level items above, run `/glow-up <path>`."
+- **Screenshot check**: per image — current / stale (what differs) /
+  unverifiable; note any aging reference screenshots (see
+  `references/screenshot-verification.md`).
+- **Rendered content**: outcomes of the rendered pass — residue claims
+  checked in the HTML view, the markdown view's shortcode-template status,
+  and any shared-source (shortcode/partial/data) findings with their
+  page-reach ("also rendered on N other pages").
+- **Verification**: the composer renders the pre-step artifact inventory; the
+  `make lint` result is stamped by the re-lint gate — leave the
+  `<!-- LINT-RESULT -->` line untouched. Note any pre-step that failed.
+
+Do **not** record `pr_number` or `head_sha` yourself — the workflow derives
+them from the branch it publishes. A clean article (zero applicable fixes)
+gets no PR and needs no body edits — set `"verdict": "clean"` in the sentinel
+(next step).
+
+### 8. Verdict sentinel — your only structured output
+
+Write `.content-review-verdict.json` at the repo root. This — plus your
+working-tree edits and the PR body draft — is all you produce for the
+workflow; do not write a ledger or a results file. The workflow derives the
+PR facts (existence, number, head SHA) from the branch it publishes, builds
+the canonical ledger record, and uploads it to S3 keyed by slug.
+
+```json
+{
+  "verdict": "fixed",
+  "reason": "",
+  "fixes": 2,
+  "skipped_findings": 2,
+  "retirement": false,
+  "clarity_flag": true,
+  "applied": [
+    { "category": "claim", "file": "content/docs/iac/concepts/stacks/_index.md",
+      "lines": [42, 43], "source": "verified-claims:c3" },
+    { "category": "link", "file": "content/docs/iac/concepts/stacks/_index.md",
+      "lines": [88, 88], "source": "dead link /docs/intro/concepts/state/" }
+  ]
+}
+```
+
+- `verdict`: `"fixed"` (you applied fixes — the publish job opens the PR),
+  `"clean"` (zero applicable fixes, no PR), or `"skipped"` (a previous run
+  already owns this page's PR — normally stamped by the workflow's
+  deterministic pre-check before you even start).
+- `reason`: one line — **required** for `clean` and `skipped`; omit/empty for
+  `fixed`.
+- `fixes`: applied changes; `skipped_findings`: Findings-not-applied count.
+- `retirement`: `true` only for a retirement PR (branch
+  `content-review/retire-<slug>`).
+- `applied`: one entry per applied fix — `category` (one of `claim`, `link`,
+  `frontmatter`, `vale`, `readthrough`), `file`, `lines` (`[start, end]`,
+  inclusive, **pre-fix** line numbers — the file as it was on master, the same
+  numbering the pre-step artifacts use), and `source` (the artifact finding it
+  implements, e.g. `verified-claims:<claim_id>`, `vale:<rule>@L<line>`,
+  `readthrough:L40-58`, or the dead link's old path). `fixes` should equal
+  `len(applied)`. The workflow's scope gate cross-checks these against the
+  artifacts and the branch diff; for link fixes (which have no artifact) the
+  declared lines must actually carry the link in the pre-fix file.
+- `clarity_flag`: optional; `true` when you flagged a readthrough `reconception`
+  for this page. Carries onto the ledger record so the page's structural
+  follow-up is durable even when the verdict is `clean` or `fixed` (the
+  reconception itself lives in the PR's Findings-not-applied section). Omit when
+  there's no reconception to flag.
+
+If you exit without writing this file, the workflow records the page as
+`incomplete`. An incomplete outcome does **not** advance the staleness clock, so
+the page stays due and is retried on a later sweep — up to an attempt cap, after
+which it backs off for a human. Always write the sentinel, even for a clean or
+skipped verdict.
+
+## Retirement proposals
+
+For any article with `"no_retire": false`, retirement is a valid outcome
+**instead of** a fix PR when the strict evidence standard below is met.
+`no_retire: true` is the primary guardrail and an absolute veto — never propose
+retiring such a page no matter how strong the evidence. The veto is
+**code-enforced twice** in the publish job, before anything is pushed: the
+publish gate rejects a `retirement: true` verdict for a page the queue stamps
+`no_retire`, and `scripts/content-review/check-retire-veto.py` independently
+re-derives the veto from `strategic-tiers.yaml` and the trusted dispatch
+`path` input, so neither a model-edited queue nor a model-edited verdict can
+clear it. Retirement is no longer
+restricted to a particular lane; it can be proposed on any review that clears
+the bar, with the full reasoning documented in the PR.
+
+- **Evidence required (two-sided):** the page appears in the traffic report
+  with near-zero views (absence from the report is NOT evidence — the page
+  may be new or alias-attributed), **and** GSC impressions/clicks are low
+  over its window when that data is present — read them from the queue
+  entry's `signals.gsc` block (a `signals: null` run has no GSC evidence, so
+  this leg cannot be satisfied); **or** the page is demonstrably
+  redundant with a named page (cite `.cross-sibling-discovery.json`). Check
+  the page's age in git — never propose retiring a page younger than a year.
+- **Retire = redirect, never 404.** The PR must redirect the page to its
+  superseding target: add the page's URL to the target's `aliases:` (or an
+  S3 redirect under `scripts/redirects/` for non-Hugo paths), update inbound
+  internal links in `/docs/`, `/product/`, `/tutorials/`, and remove the
+  page + its menu entry. Follow `move-doc` reference mechanics.
+- **Branch**: set `"retirement": true` in the verdict sentinel — the publish
+  job derives `content-review/retire-<slug>` from it. The PR description
+  leads with the full evidence (traffic + GSC numbers and period, redundancy
+  target, inbound-link inventory).
+- When in doubt, don't propose retirement — review the page normally and
+  note the low-traffic observation under Findings not applied.
+
+## Output
+
+The verdict sentinel (step 8), your working-tree edits, and the edited PR body
+draft are your only outputs. The workflow publishes the branch, records the
+ledger, and drives the docs review from them — there is no results file to
+write.
+
+## Claims index and stale-claim boosts
+
+Alongside the ledger record, the workflow persists the page's
+`.verified-claims.json` to a **claims index** — one snapshot object per page
+at `claims/<slug>.json` in the ledger bucket, written by
+`scripts/content-review/record-claims.py`. Each kept claim carries the
+`entity_key` / `volatile` fields stamped by the docs-review pipeline
+(`entity_key.py`), so downstream consumers can join claims across pages by
+the entity they assert something about.
+
+The nightly `claims-reverify.yml` workflow re-checks volatile entities
+(version pins, prices, limits) straight from this index
+(`scripts/content-review/reverify-claims.py`). When an entity re-verifies
+contradicted, every page asserting it gets a `stale_claims` marker in its
+ledger entry, and `select-articles.py` boosts those pages to the front of the
+next sweep — that is how a page can arrive in your queue the day after a
+release changed a fact it states.
+
+None of this is yours to write: this worker's whole-page runs are the index's
+**only** writer, and the workflow runs `record-claims.py` itself after your
+review. The markers clear automatically when your review's ledger and claims
+rewrites land. Do not create, edit, or upload `claims/` objects or
+`stale_claims` fields.

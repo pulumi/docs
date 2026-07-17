@@ -28,17 +28,6 @@ Through progressive examples, you'll discover how to:
 * Convert HCL code to Pulumi when beneficial
 * Orchestrate both Terraform and Pulumi deployments together
 
-## Prerequisites
-
-* Basic Terraform knowledge and existing Terraform infrastructure
-* AWS account with appropriate permissions
-* Docker installed locally (for containerization examples)
-* Git for version control
-
-## Time estimate
-
-**30-45 minutes** to complete all sections
-
 ## Overview of examples
 
 You'll build a containerized web application managed by Pulumi that integrates with ECS infrastructure managed by Terraform.
@@ -51,5 +40,16 @@ The examples demonstrate:
 3. **Module reuse**: Leveraging existing Terraform modules
 4. **Selective conversion**: Converting specific HCL when advantageous
 5. **Orchestration**: Managing both tools in unified workflows
+
+## Prerequisites
+
+* Basic Terraform knowledge and existing Terraform infrastructure
+* AWS account with appropriate permissions
+* Docker installed locally (for containerization examples)
+* Git for version control
+
+## Time estimate
+
+**30-45 minutes** to complete all sections
 
 {{< get-started-stepper >}}

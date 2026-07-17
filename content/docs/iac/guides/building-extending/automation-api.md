@@ -3,7 +3,6 @@ title_tag: "Using Automation API"
 meta_desc: A step-by-step guide to provisioning infrastructure programmatically with the Pulumi Automation API by deploying an inline program.
 title: Automation API
 h1: Using Automation API
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         identifier: using-automation-api
@@ -534,6 +533,8 @@ A `Stack` object operates within the context of a `Workspace`. A `Workspace` is 
 
 ## Configure your provider plugins
 
+Automation API drives the same engine as the CLI, so it downloads any missing provider plugin automatically before an operation---the explicit `installPlugin` call below isn't required for providers published to the [Pulumi Registry](/registry/). It's shown here to pin a specific plugin version; you also need it for [local or parameterized packages](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api). See [Plugins](/docs/iac/concepts/automation-api/#plugins) for details.
+
 The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
@@ -589,20 +590,20 @@ stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 
 {{< /chooser >}}
 
-## Using local packages with Automation API {#using-local-packages-with-automation-api}
+## Using local SDKs with Automation API {#using-local-packages-with-automation-api}
 
-When working with Automation API, you may need to use [local packages](/docs/iac/guides/building-extending/packages/local-packages/) that aren't published to the Pulumi Registry. This is common when using parameterized providers like [`terraform-provider`](/registry/packages/terraform-provider/) or when developing custom providers.
+When working with Automation API, you may need to use [local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) that aren't published to the Pulumi Registry. This is common when using parameterized providers like [`terraform-provider`](/registry/packages/terraform-provider/) or when developing custom providers.
 
-### Generating and installing local packages
+### Generating and installing local SDKs
 
-To use a local package with Automation API, you need to:
+To use a local SDK with Automation API, you need to:
 
 1. Generate the SDK for your target language using [`pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/)
 1. Manually install the plugin (not the provider) in your workspace
 1. Reference the generated SDK in your Automation API program
 
 {{% notes type="warning" %}}
-For local packages, you must install the **plugin**, not the provider. The plugin is what the Pulumi engine uses to communicate with resources during deployments.
+For local SDKs, you must install the **plugin**, not the provider. The plugin is what the Pulumi engine uses to communicate with resources during deployments.
 {{% /notes %}}
 
 ### Example: Using a local Terraform provider
@@ -634,7 +635,7 @@ const stack = await automation.LocalWorkspace.createOrSelectStack({
     }
 });
 
-// Install the plugin for the local package
+// Install the plugin for the local SDK
 await stack.workspace.installPlugin("terraform-provider", "v1.0.2");
 
 // Configure any required settings
@@ -672,7 +673,7 @@ stack = auto.create_or_select_stack(
     program=pulumi_program
 )
 
-# Install the plugin for the local package
+# Install the plugin for the local SDK
 stack.workspace.install_plugin("terraform-provider", "v1.0.2")
 
 # Configure any required settings
@@ -729,7 +730,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Install the plugin for the local package
+	// Install the plugin for the local SDK
 	w := s.Workspace()
 	err = w.InstallPlugin(ctx, "terraform-provider", "v1.0.2")
 	if err != nil {
@@ -785,7 +786,7 @@ var stackName = "dev";
 var stackArgs = new InlineProgramArgs(projectName, stackName, program);
 var stack = await LocalWorkspace.CreateOrSelectStackAsync(stackArgs);
 
-// Install the plugin for the local package
+// Install the plugin for the local SDK
 await stack.Workspace.InstallPluginAsync("terraform-provider", "v1.0.2");
 
 // Run the deployment
@@ -833,7 +834,7 @@ public class App {
                 .program(program)
                 .build());
             
-            // Install the plugin for the local package
+            // Install the plugin for the local SDK
             stack.workspace().installPlugin("terraform-provider", "v1.0.2");
             
             // Run the deployment
@@ -855,7 +856,7 @@ public class App {
 
 {{< /chooser >}}
 
-For more information about working with local packages, see the [Local Packages guide](/docs/iac/guides/building-extending/packages/local-packages/).
+For more information about working with local SDKs, see the [Local SDKs guide](/docs/iac/guides/building-extending/packages/local-sdks/).
 
 ## Invoke Pulumi commands against the stack
 

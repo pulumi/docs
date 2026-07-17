@@ -3,11 +3,11 @@ title: "Pulumi + Python: Bringing the Best of Modern Python to IaC"
 date: 2024-07-03T14:17:38+02:00
 draft: false
 meta_desc: A big step forward for Python + Pulumi, with new Pythonic input types, built in type checking and support for Poetry.
-meta_image: meta.png
 authors:
     - julien-poissonnier
 tags:
     - python
+category: product
 social:
     twitter:
     linkedin:
@@ -127,6 +127,10 @@ The new Pythonic input types are available in the latest release of the Pulumi S
 {{% notes type="info" %}}
 Due to a performance issue in MyPy, type checking of TypedDict-based inputs is currently disabled when using MyPy as a type checker.  We are working on helping resolve [this issue](https://github.com/python/mypy/issues/17231). In the meantime, we recommend using Pyright as a type checker to get the most complete type checking possible for Dict-based Pulumi Python programs.
 {{% /notes %}}
+
+{{< blog/cta-card title="Build infrastructure in Python" >}}
+Write your cloud infrastructure in Python with Poetry, built-in type checking, and idiomatic input types. Deploy your first stack, and manage it in Pulumi Cloud.
+{{< /blog/cta-card >}}
 
 ## Summary
 

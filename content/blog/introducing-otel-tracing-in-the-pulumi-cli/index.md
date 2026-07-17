@@ -3,13 +3,13 @@ title: "Introducing OTel Tracing in the Pulumi CLI"
 date: 2026-04-01
 draft: false
 meta_desc: "The Pulumi CLI now supports OpenTelemetry tracing, replacing the deprecated OpenTracing integration. Learn how to export traces via gRPC or to a file."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - thomas-gummerer
 tags:
     - features
     - pulumi-cli
+category: product
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

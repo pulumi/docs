@@ -1,23 +1,24 @@
 ---
 title: "Benefits of Policy as Code"
 date: 2020-05-27
+lastmod: 2026-07-12
 meta_desc: "An organization can benefit from Policy as Code through cost control, compliance, and best practices."
-meta_image: pac-benefits.png
 authors:
     - sophia-parafina
 tags:
     - policy-as-code
+category: general
 ---
 
 Writing infrastructure policy in a high-level programming language helps automate and enforce best practices. When policies are written with code, you can apply software development practices such as testing, automated deployment, and version control. Cloud providers typically offer a GUI to create policies,  but creating policies is not easily repeatable, nor can you version policies. Moreover, policies must be tested against a live system, which means using an existing system or configuring and deploying an ephemeral version.
 
-While the benefits of writing policies as code are evident for developers and operators, the organizational benefits are even more significant. Organizations can realize cost savings, improved compliance, efficient deployments, fine-grained control over infrastructure, and better use of cloud provider native resources. Let’s take a look at these benefits in-depth.
+While the benefits of writing [policies as code](/what-is/what-is-policy-as-code/) are evident for developers and operators, the organizational benefits are even more significant. Organizations can realize cost savings, improved compliance, efficient deployments, fine-grained control over infrastructure, and better use of cloud provider native resources. Let’s take a look at these benefits in-depth.
 
 <!--more-->
 
 ## Controlling Costs
 
-A sizeable monthly cloud bill due to unused resources left running or using over-sized instances for small tasks is an industry cliché. One way to control costs is to set policies based on pricing. With pricing data online, we can calculate the cost of a resource ahead of time and create a policy that limits the amount spent to deploy it. In a [previous article](/blog/manage-infrastructure-with-pac#controlling-cost-on-aws)), we provided an example policy that finds all the resources in a deployment and calculates the total monthly cost. The policy sets the monthly cost permitted and sends a warning if the deployment exceeds it.
+A sizeable monthly cloud bill due to unused resources left running or using over-sized instances for small tasks is an industry cliché. One way to control costs is to set policies based on pricing. With pricing data online, we can calculate the cost of a resource ahead of time and create a policy that limits the amount spent to deploy it. In a [previous article](/blog/manage-infrastructure-with-pac#controlling-cost-on-aws), we provided an example policy that finds all the resources in a deployment and calculates the total monthly cost. The policy sets the monthly cost permitted and sends a warning if the deployment exceeds it.
 
 But what about unused or abandoned resources? We can use a cloud provider’s resources to implement a watchdog function with a policy that cleans up unused resources. In this [article](/blog/controlling-aws-costs-with-lambda-and-pulumi/), we show how to use a serverless function to find unused resources daily and shut them down. We implemented this system at Pulumi and [reduced our operating costs by 64%](/blog/controlling-aws-costs-with-lambda-and-pulumi#in-conclusion).
 
@@ -45,9 +46,9 @@ In either case, your infrastructure is validated before it’s deployed, saving 
 
 ## Best Practices as Policies
 
-All cloud providers offer a set of best practices for deploying resources. Best practices can be implemented as policies, but instead of managing them as individual policies, wouldn’t it be more efficient to organized similar policies as a bundle? This is the idea behind [Policy Packs](/docs/using-pulumi/crossguard/core-concepts#policy-pack). They provide a way to group similar policies based on how you manage your infrastructure. For example, you may have several policies for storage based on how they are tagged. Policy packs don’t restrict which policies you combine; you can have Kubernetes policies bundled with container registry policies. You create Policy Packs according to the requirements and needs of your organization.
+All cloud providers offer a set of best practices for deploying resources. Best practices can be implemented as policies, but instead of managing them as individual policies, wouldn’t it be more efficient to organized similar policies as a bundle? This is the idea behind [Policy Packs](/docs/insights/policy/policy-packs/). They provide a way to group similar policies based on how you manage your infrastructure. For example, you may have several policies for storage based on how they are tagged. Policy packs don’t restrict which policies you combine; you can have Kubernetes policies bundled with container registry policies. You create Policy Packs according to the requirements and needs of your organization.
 
-You can apply a Policy Pack to a single stack of resources or across multiple stacks. A group of stacks that use the same Policy Pack is a [Policy Group](/docs/using-pulumi/crossguard/core-concepts#policy-group). Note that a stack can belong to multiple Policy Groups. A typical application of Policy Groups is to set policies for environments; for example, you might have a more permissive Policy Group for your development and staging environments and more restrictive one for production.
+You can apply a Policy Pack to a single stack of resources or across multiple stacks. A group of stacks that use the same Policy Pack is a [Policy Group](/docs/insights/policy/policy-groups/). Note that a stack can belong to multiple Policy Groups. A typical application of Policy Groups is to set policies for environments; for example, you might have a more permissive Policy Group for your development and staging environments and more restrictive one for production.
 
 Policy as code enables you to deploy best practices as policies. Moreover, you can organize policies in bundles or Policy Packs based on your organizational requirements. This provides repeatable and fine-grained control over the resources you deploy. You can apply Policy Packs on individual resource stacks or across multiple stacks as Policy Groups, giving you granular control over how and which resources are deployed.
 
@@ -69,4 +70,4 @@ We often talk about Policy as Code in terms of repeatability, versioning, and te
 - encoding best practices for resource stacks,
 - and working with cloud provider native resources to provide best of breed security and granular control.
 
-Learn more about using programming languages for [Policy as Code with our docs](/docs/using-pulumi/crossguard/).
+Learn more about using programming languages for [Policy as Code with our docs](/docs/insights/policy/).

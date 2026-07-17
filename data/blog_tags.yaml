@@ -1,0 +1,163 @@
+# Canonical blog tag vocabulary — authoring guidance, NOT build-enforced.
+#
+# Tags are the topical axis of a blog post (subjects: clouds, languages,
+# products, scenarios). Unlike `categories` (data/blog_categories.yaml, a
+# CLOSED, lint-enforced set), tags are curated-but-OPEN: prefer a tag from this
+# list, and only mint a new one when nothing here fits.
+#
+# This file is the deduplicated, canonical survivor list after the consolidation
+# in .context/tag-map.json. It mirrors the groupings used in BLOGGING.md.
+#
+# RULES FOR AUTHORS / AGENTS
+#   - Tags are lowercase and hyphenated (e.g. `automation-api`, not
+#     `Automation API`).
+#   - REUSE an existing tag. Before adding a tag, search this file and avoid
+#     near-duplicates: don't add `k8s` (use `kubernetes`), `iac` (use
+#     `infrastructure-as-code`), `pulumi-news` (use `announcements`),
+#     `pulumi-service` (use `pulumi-cloud`), `gcp` (use `google-cloud`),
+#     `c#`/`.net` (use `dotnet`).
+#   - Only add a cloud-provider or feature tag if we expect multiple posts about
+#     it.
+#   - Keep the count low: every tag added makes the system harder to grok.
+#   - The list below is canonical but not exhaustive — niche, one-off topical
+#     tags (specific services, libraries, tools) live on individual posts and
+#     are intentionally not all enumerated here.
+#
+# Slugs only; counts are approximate and drift as posts are added.
+
+pulumi:
+  # Pulumi products, features, and company concepts.
+  - pulumi
+  - pulumi-cloud          # formerly "pulumi-service"
+  - pulumi-enterprise
+  - pulumi-neo
+  - copilot
+  - esc                   # Pulumi ESC (secrets/config); not "pulumi-esc"
+  - insights
+  - automation-api
+  - pulumi-deployments
+  - deployments
+  - crossguard
+  - packages
+  - registry
+  - providers
+  - native-providers
+  - components
+  - templates
+  - pulumi-cli
+  - import
+  - announcements         # company news; not "pulumi-news"
+  - releases              # release announcements; not "pulumi-releases"
+  - release-notes
+  - features
+  - product-launches
+
+clouds:
+  # Add a provider tag only when we expect multiple posts about it.
+  - aws
+  - azure
+  - google-cloud          # not "gcp"
+  - digitalocean
+  - multi-cloud
+
+languages:
+  # Use for language/ecosystem-specific posts.
+  - typescript
+  - javascript
+  - nodejs
+  - python
+  - go
+  - dotnet                # the .NET / C# family
+  - java
+  - yaml
+
+ai:
+  - ai
+  - ai-agents
+  - llm
+  - ml
+  - mlops
+  - claude
+  - claude-code
+  - mcp
+  - chatbot
+
+kubernetes-and-containers:
+  - kubernetes            # not "k8s"
+  - kubernetes-getting-started
+  - containers
+  - docker
+  - helm
+  - eks
+  - aks
+  - gke
+  - ecs
+  - operators
+  - argocd
+  - gitops
+
+platform-engineering:
+  - platform-engineering
+  - platform-teams
+  - internal-developer-platform   # not "idp"
+  - developer-portals
+  - developer-experience
+  - backstage
+  - cloud-engineering
+  - infrastructure-as-code         # not "iac"
+  - architecture
+  - architecture-as-code
+  - best-practices
+  - infrastructure-lifecycle-management
+  - configuration
+  - configuration-management
+
+security-and-governance:
+  - security
+  - secrets
+  - secrets-management
+  - policy-as-code
+  - compliance
+  - governance
+  - iam
+  - rbac
+  - oidc
+  - devsecops
+
+scenarios:
+  # User scenarios and technology areas.
+  - serverless
+  - lambda
+  - continuous-delivery
+  - ci-cd
+  - github-actions
+  - devops
+  - automation
+  - migration
+  - testing
+  - performance
+  - networking
+  - cloud-native
+  - static-websites
+  - data-and-analytics
+  - data-warehouse
+  - virtual-machines
+  - development-environment
+
+community:
+  - community
+  - guest-post
+  - case-studies
+  - pulumi-events
+  - pulumi-interns
+  - pulumi-culture
+  - kubecon
+
+ecosystem:
+  # Non-Pulumi tools and platforms we compare to or integrate with.
+  - terraform
+  - cloudformation
+  - aws-cdk
+  - hcl
+  - github
+  - gitlab

@@ -3,7 +3,6 @@ title: "Introducing the Pulumi Puluminaries 2.0 Program"
 date: 2025-02-10T12:15:00-08:00
 allow_long_title: true
 meta_desc: "Introducing Pulumi Puluminaries 2.0 - celebrating community leaders who share best practices and help fellow practitioners succeed with Pulumi."
-meta_image: meta.png
 
 authors:
 - engin-diri
@@ -12,6 +11,7 @@ tags:
 - puluminaries
 - community
 - program
+category: community
 
 social:
   twitter: |

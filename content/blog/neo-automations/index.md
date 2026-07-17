@@ -2,7 +2,6 @@
 title: "Neo Automations: Scheduled Tasks Shipped as Pull Requests"
 date: 2026-05-21T07:00:00-07:00
 meta_desc: "Schedule any Neo task on a cadence. Drift checks, provider freshness, and encryption audits run themselves and deliver results as pull requests."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - neo-team
@@ -11,6 +10,7 @@ tags:
     - ai-agents
     - features
     - pulumi-neo
+category: product
 social:
     twitter: |
         Recurring platform work slips. Provider versions fall behind, drift accumulates between checks, and the quarterly audit keeps getting pushed back.

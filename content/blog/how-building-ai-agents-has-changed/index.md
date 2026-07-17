@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-05-14
 draft: false
 meta_desc: "A year ago, building an AI agent meant frameworks, RAG, and glue code. The Claude Agent SDK, Codex SDK, and skills replaced most of that middle layer."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - claude
     - mcp
     - rag
+category: perspectives
 social:
     twitter: |
         A year ago, building an AI agent meant picking a framework, defining tools, setting up RAG, and writing a pile of glue code.
@@ -87,6 +87,10 @@ The mental model that works for me: start with the SDK, reach for a framework wh
 If none of those four are biting, the SDK is probably enough, and adding a framework on top is a layer you'll regret in six months.
 
 ![Decision flow for picking an agent stack. Start with the SDK. If you need multi-provider routing, multi-agent orchestration, deterministic typing, or deeper observability, add a framework. Otherwise stay with the SDK.](/blog/how-building-ai-agents-has-changed/decision.png)
+
+{{< blog/cta-card title="Point your agent at your infrastructure" href="/docs/ai/" >}}
+Give your coding agent grounded context from your Pulumi state graph through the Pulumi MCP server and Agent Skills, or reach for Pulumi Neo when you want an infrastructure agent built in.
+{{< /blog/cta-card >}}
 
 ## Where this lands for infrastructure work
 

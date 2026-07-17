@@ -3,7 +3,6 @@ title: What are Docker Configs?
 meta_desc: |
      Learn more about what Docker Configs are and how to use them.
 
-meta_image: /images/what-is/what-are-docker-configs-meta.png
 type: what-is
 page_title: "What are Docker Configs?"
 authors: ["torian-crane"]
@@ -112,7 +111,7 @@ kf8ysfgiipkb   myservice.1   nginx:latest   ip-172-31-30-90.eu-central-1.compute
 
 Now that you have created a service with a config, you can access the value of this config from within the container.
 
-First, login to the container using the `docker exec` command:
+First, log in to the container using the `docker exec` command:
 
 ```bash
 docker exec -it <container_id> /bin/bash
@@ -166,11 +165,6 @@ Docker Configs, similar to Docker Secrets, provide a useful way to manage config
 
 ## Conclusion
 
-Docker Configs offer a flexible and secure way to manage non-sensitive configuration data in Docker environments. By storing configuration outside of application code, Docker Configs facilitate a more modular and maintainable architecture.
+The defining choice with Docker Configs is what they deliberately leave out: encryption. That single omission is what separates them from Docker Secrets and tells you exactly where the line sits. Configs are for the data you'd be comfortable reading in plaintext off the container's filesystem, and the moment a value stops fitting that description, it belongs in a Secret instead. Treat the Config-versus-Secret decision as a data classification step you make before deployment, not a storage detail you sort out afterward.
 
-Now that you're equipped with the knowledge of Docker Configs, take your cloud infrastructure management to the next level with Pulumi. Explore these key resources to deepen your understanding and enhance your implementation strategies:
-
-- **Advanced configuration management**: Discover how to efficiently manage configuration data in your cloud applications. Dive into Pulumi's [Configuration Management docs](/docs/concepts/config/) for in-depth information on creating and managing configuration across stacks and projects.
-- **Container management solutions**: Learn about deploying containers with ease using Pulumi. Whether you prefer low-management solutions like AWS Fargate and Microsoft ACI for ease of deployment or require complete control with Kubernetes-based solutions, our [Container Management](/templates/container-service/) docs provide comprehensive insights. They cover everything from managing clusters and infrastructure to deploying application containers in various environments.
-
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

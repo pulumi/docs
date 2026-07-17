@@ -3,15 +3,15 @@ title: "A Recipe for a Better AI-based Code Generator"
 date: 2025-01-07T20:00:00-05:00
 draft: false
 meta_desc: Learnings from building a RAG for Pulumi code generator
-meta_image: meta.png
 math: true
 authors:
     - artur-laksberg
     - simon-howe
 tags:
-    - Copilot
+    - copilot
     - ai
-    - iac
+    - infrastructure-as-code
+category: engineering
 
 ---
 
@@ -195,6 +195,10 @@ We observed that many generated TypeScript programs that fail to typecheck conta
 Monitoring these typechecking errors in production can also provide valuable insight into the quality of the data used by the RAG and even suggest specific solutions. For example, failure to typecheck a member-access expression is a likely indicator of a missing type schema (a recall problem) or a "wrong" schema brought in by an irrelevant document (a precision problem).
 
 Self-debugging can also be extended to include the `pulumi preview` command, which is a "dry run" operation before the actual deployment and can detect many real or potential problems such as destructive actions, incorrect configurations that cannot be detected at compile time, dependency conflicts, and policy violations.
+
+{{< blog/cta-card title="Generate infrastructure code with Pulumi Neo" label="Learn more" href="/product/neo/" >}}
+Turn a natural-language request into working infrastructure as code across AWS, Azure, Google Cloud, and Kubernetes, then preview and deploy it with Pulumi Neo.
+{{< /blog/cta-card >}}
 
 ## From kitchen to table: testing what works
 

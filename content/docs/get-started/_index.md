@@ -4,7 +4,6 @@ meta_desc: Step-by-step guides for creating, deploying, and managing infrastruct
 title: Get Started #Breadcrumb
 h1: Get Started with Pulumi # Page title
 no_on_this_page: true
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     get-started:
         name: Get Started
@@ -33,7 +32,7 @@ Choose a cloud provider to get started:
                     <div class="icon aws-40"></div>
                 </div>
                 <div class="label">
-                    <span class="text-sm text-gray-800">Get started with Pulumi &amp; AWS &rarr;</span>
+                    <span class="text-sm text-gray-800 dark:text-gray-300">Get started with Pulumi &amp; AWS &rarr;</span>
                 </div>
             </a>
             <a data-track="azure-get-started" href="/docs/iac/get-started/azure/">
@@ -41,7 +40,7 @@ Choose a cloud provider to get started:
                     <div class="icon azure-40"></div>
                 </div>
                 <div class="label">
-                    <span class="text-sm text-gray-800">Get started with Pulumi &amp; Azure &rarr;</span>
+                    <span class="text-sm text-gray-800 dark:text-gray-300">Get started with Pulumi &amp; Azure &rarr;</span>
                 </div>
             </a>
             <a data-track="google-get-started" href="/docs/iac/get-started/gcp/">
@@ -49,7 +48,7 @@ Choose a cloud provider to get started:
                     <div class="icon google-cloud-40"></div>
                 </div>
                 <div class="label">
-                    <span class="text-sm text-gray-800">Get started with Pulumi &amp; Google Cloud &rarr;</span>
+                    <span class="text-sm text-gray-800 dark:text-gray-300">Get started with Pulumi &amp; Google Cloud &rarr;</span>
                 </div>
             </a>
             <a data-track="kubernetes-get-started" href="/docs/iac/get-started/kubernetes/">
@@ -57,7 +56,7 @@ Choose a cloud provider to get started:
                     <div class="icon kubernetes-40"></div>
                 </div>
                 <div class="label">
-                    <span class="text-sm text-gray-800">Get started with Pulumi &amp; Kubernetes &rarr;</span>
+                    <span class="text-sm text-gray-800 dark:text-gray-300">Get started with Pulumi &amp; Kubernetes &rarr;</span>
                 </div>
             </a>
         </div>

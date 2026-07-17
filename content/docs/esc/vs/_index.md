@@ -3,7 +3,6 @@ title_tag: "Pulumi ESC Compared to Alternatives"
 meta_desc: Learn how Pulumi ESC compares with alternative Environments, Secrets, and Configurations solutions.
 title: Comparisons
 h1: Compare Pulumi ESC to other solutions
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     parent: esc-home

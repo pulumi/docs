@@ -3,13 +3,13 @@ title: "Converting Terraform to Pulumi Just Got Easier"
 date: 2025-03-04
 updated: 2025-09-17
 meta_desc: "Pulumi's conversion tools now automatically handle any Terraform provider, making migration easier than ever"
-meta_image: meta.png
 authors:
     - brandon-pollack
     - meagan-cojocar
 tags:
   - terraform
   - features
+category: product
 ---
 Big news for infrastructure teams looking to migrate – we've significantly improved Pulumi's Terraform conversion capabilities, making modernization smoother and reducing the amount of manual work usually required.
 

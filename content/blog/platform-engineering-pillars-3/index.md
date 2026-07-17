@@ -1,14 +1,15 @@
 ---
 title: "Self-Service Infrastructure: From Tickets to Tools"
+feature_image: feature.png
 date: 2025-03-06
+updated: 2026-07-09
 draft: false
 meta_desc: Unlock developer productivity with self-service infrastructure through modular abstraction and intent-based specifications for your internal developer platform.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
-    - platform-engineering-pillars
+category: best-practices
 series: platform-engineering-pillars
 social:
     twitter: >
@@ -25,7 +26,7 @@ social:
             🛠️ The Solution:
             Implement modular, intent-based infrastructure with a two-level abstraction model as a core pillar of your internal developer platform.
 ---
-[Previous articles](/blog/tag/platform-engineering-pillars/) in this series explored [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) principles and how Infrastructure as Code creates a solid foundation. But there's still an important challenge to address: the infrastructure provisioning process itself. Without proper modularity and a clear separation between intent and infrastructure details, things get messy—leading to friction, delays, and unnecessary complexity.
+[Previous articles](/blog/series/platform-engineering-pillars/) in this series explored [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) principles and how Infrastructure as Code creates a solid foundation. But there's still an important challenge to address: the infrastructure provisioning process itself. Without proper modularity and a clear separation between intent and infrastructure details, things get messy—leading to friction, delays, and unnecessary complexity.
 
 <!--more-->
 
@@ -218,7 +219,7 @@ The next key decision is how developers will actually *use* this platform.  The 
 
 In this approach, platform teams build reusable infrastructure modules while developers consume them directly through code. Developers use familiar IaC tools like Pulumi CLI to instantiate these modules, with changes flowing through version control like any other code.
 
-The key strength is transparency and familiarity. Developers maintain visibility and ownership of their intent-based defintions. This code-centric workflow integrates naturally with existing development practices.
+The key strength is transparency and familiarity. Developers maintain visibility and ownership of their intent-based definitions. This code-centric workflow integrates naturally with existing development practices.
 
 However, this flexibility creates governance challenges and requires either strong trust or approval processes that might reintroduce bottlenecks. The approach also assumes developers have some IaC knowledge, making it best suited for organizations with mature DevOps practices and experienced teams.
 
@@ -267,4 +268,4 @@ As you build out your self-service approach, consider how Pulumi might fit in. W
 - A [Platform-in-the-box](https://www.pulumi.com/product/internal-developer-platforms/) experience for those who want a portal-first experience for self-service infrastructure.
 - [A Backstage plugin](https://www.pulumi.com/docs/pulumi-cloud/developer-portals/backstage/) for those who prefer to use Backstage for an IDP.
 
-A great self-service workflow and abstraction layer are key to making platform engineering work. [Next in this series](/blog/tag/platform-engineering-pillars/), we’ll tackle developer experience directly.
+A great self-service workflow and abstraction layer are key to making platform engineering work. [Next in this series](/blog/series/platform-engineering-pillars/), we’ll tackle developer experience directly.

@@ -3,7 +3,6 @@ title: What is a Cloudflare Secret?
 meta_desc: |
     Learn more about Cloudflare secrets and how to use them.
 
-meta_image: /images/what-is/what-is-a-cloudflare-secret-meta.png
 type: what-is
 page_title: "What is a Cloudflare Secret?"
 authors: ["diana-esteves"]
@@ -129,20 +128,18 @@ Secret: dragons and unicorns are real
 
 Using Cloudflare secrets comes with particular challenges and considerations:
 
-- **Management of secrets overhead:**  As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
+- **Management of secrets overhead:** As the number of secrets and contexts grows, managing them can become challenging. Teams must actively track and monitor the usage of secrets, identifying where and by whom they are employed.
 - **Access control complexity:** Setting up fine-grained access controls is crucial but can become complex as teams and projects scale. Defining and maintaining access permissions for different roles and responsibilities can be challenging. Clearly define roles and duties to determine who needs access to specific secrets. Use role-based access control (RBAC) principles to simplify and organize permissions.
-- **Integration with external secret management systems:**  Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudflare secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudflare and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements. Two popular secret management systems include [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/) and [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/).
+- **Integration with external secret management systems:** Organizations may already have established processes for secrets management using external tools, and integrating these with Cloudflare secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with Cloudflare and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements. Two popular secret management systems include [AWS Secrets Manager](/what-is/what-is-aws-secrets-manager/) and [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager/).
 
 Addressing these challenges and considerations requires a thoughtful approach to [secrets management](
 /what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices. A beta product to facilitate secrets management and tackle the above challenges is available for Cloudflare as the [Cloudflare Secrets Store](https://blog.cloudflare.com/secrets-store/).
 
 ## Conclusion  
 
-Following security best practices for Cloudflare secrets are crucial in managing sensitive information in your solutions, applications, and cloud environments.
+The thing to notice about Cloudflare secrets is that their convenience is also their boundary: they are encrypted environment variables scoped to a Worker, which makes them convenient but ties each secret to a single execution context. The hard part of secrets management isn't storing one value safely, it's governing many of them across Workers, teams, and other clouds without losing track of who can read what. If you're integrating Cloudflare into a larger estate, treat the Worker secret as one storage backend among others and decide early how rotation, access control, and external secret stores fit together, rather than retrofitting that structure once the number of secrets has already grown.
 
-Now that you know Cloudflare secrets, take your cloud infrastructure management to the next level with [Pulumi](https://www.pulumi.com/):
-
-- **Streamlined infrastructure management with Infrastructure as Code (IaC)**: Learn about other Cloudflare resources using Pulumi’s IaC capabilities. Pulumi lets you define and provision your cloud infrastructure using familiar programming languages, directly integrating secrets management into your workflows. Discover how to integrate Cloudflare secrets into your broader cloud infrastructure with Pulumi by exploring the [Cloudflare Provider documentation](https://www.pulumi.com/registry/packages/cloudflare/). Below are some examples of how to create a Cloudflare secret in several supported programming languages:
+To manage Cloudflare secrets alongside the rest of your infrastructure as code, see the [Cloudflare Provider documentation](https://www.pulumi.com/registry/packages/cloudflare/). Below are examples of how to create a Cloudflare secret in the supported programming languages:
 
 ```bash
 $ pulumi config set secrets-demo --secret
@@ -249,6 +246,6 @@ func main() {
 {{% /choosable %}}
 
 - **Get started tutorial**: Follow a simple tutorial to [deploy a Hello World web application using Cloudflare Workers and Pulumi](https://developers.cloudflare.com/pulumi/tutorial/hello-world/)
-- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the Pulumi ESC documentation for the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Advanced secrets management**: For organizations that use more than one secrets manager or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across various environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
 
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

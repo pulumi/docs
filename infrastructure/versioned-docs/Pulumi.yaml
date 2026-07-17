@@ -1,0 +1,3 @@
+name: pulumi-docs-versioned
+description: Permanent archive bucket + GitHub-OIDC publisher role for versioned SDK & CLI docs.
+runtime: nodejs

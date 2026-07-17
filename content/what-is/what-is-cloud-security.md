@@ -1,7 +1,6 @@
 ---
 title: What is Cloud Security?
 meta_desc: "Cloud security is the practice of protecting cloud workloads, data, and identities. Learn the shared responsibility model, key risks, and proven controls."
-meta_image: /images/what-is/what-is-cloud-security-meta.png
 type: what-is
 page_title: "What is Cloud Security?"
 authors: ["cam-soper"]
@@ -76,7 +75,7 @@ Customers always own data, identity, and configuration. The lower the abstractio
 The CIA triad is the canonical framework for what security controls should achieve. It maps cleanly onto cloud workloads.
 
 * **Confidentiality.** Only authorized identities can read sensitive data. Achieved through encryption at rest and in transit, IAM, network isolation, and secrets management.
-* **Integrity.** Data and infrastructure aren't modified by unauthorized parties, and when they are, the change is detected. Achieved through signed artifacts, immutable infrastructure, audit logs, and drift detection.
+* **Integrity.** Data and infrastructure aren't modified by unauthorized parties, and when they are, the change is detected. Achieved through signed artifacts, immutable infrastructure, audit logs, and [drift detection](/what-is/what-is-infrastructure-drift/).
 * **Availability.** Services stay reachable to the people meant to reach them, even during attack or failure. Achieved through redundancy, DDoS protection, capacity planning, and incident response.
 
 A handful of additional principles round out modern cloud security practice: **defense in depth** (multiple overlapping controls), **least privilege** (only the access strictly required), **zero trust** (no implicit trust based on network location), and **secure by default** (insecure configurations require a deliberate override).
@@ -164,7 +163,7 @@ Both the cloud provider and the customer. The provider secures the physical infr
 
 ### What are the most common causes of cloud breaches?
 
-Misconfigurations. Public storage, IAM roles with overly broad permissions, open security groups, and leaked long-lived credentials account for the majority of incidents — far more than vulnerabilities in the cloud platforms themselves.
+Misconfigurations. Public storage, IAM roles with overly broad permissions, open security groups, and leaked long-lived credentials account for the majority of incidents, far more than vulnerabilities in the cloud platforms themselves.
 
 ### What is the shared responsibility model?
 
@@ -172,7 +171,7 @@ A formal split of security duties between the cloud provider and the customer. T
 
 ### What is the difference between cloud security and cybersecurity?
 
-Cybersecurity is the broader discipline of protecting any digital system. Cloud security is the specialization that focuses on workloads and data hosted in cloud environments, with extra emphasis on identity, API surfaces, and configuration — the areas where cloud differs most from on-premises.
+Cybersecurity is the broader discipline of protecting any digital system. Cloud security is the specialization that focuses on workloads and data hosted in cloud environments, with extra emphasis on identity, API surfaces, and configuration, the areas where cloud differs most from on-premises.
 
 ### Is the cloud more secure than on-premises infrastructure?
 

@@ -31,7 +31,7 @@ Learn more about [Pulumi Private Registry](/docs/idp/concepts/private-registry/)
 
 Depending on their use case and the available golden paths, developers may choose to scaffold several components in a Pulumi YAML program. Alternatively, they can point and click to deploy a no-code workload directly from the Pulumi console using the [New Project Wizard](/docs/idp/concepts/new-project-wizard/). Or, in custom use cases, they may write a Pulumi program in their preferred programming language. Regardless, thanks to the bottom-up approach of the Pulumi IDP, workloads are deployed via golden paths, leveraging artifacts that have been authored and approved by platform teams.
 
-Learn more about the [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [no-code workflows](/docs/idp/concepts/no-code-stacks/), and [Pulumi Deployments](/docs/deployments/deployments/).
+Learn more about the [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [no-code workflows](/docs/idp/concepts/no-code-stacks/), and [Pulumi Deployments](/docs/deployments/concepts/).
 
 ## Day 2 - Confidently maintain and extend infrastructure
 
@@ -41,4 +41,4 @@ Learn more about [no-code workflows](/docs/idp/concepts/no-code-stacks/) and [Pu
 
 ## Custom IDP
 
-Pulumi's flexible building blocks can support organizations with bespoke needs who need to build their own IDP. You can integrate Pulumi with your existing developer portal using [Organization Templates](/docs/idp/concepts/organization-templates/), the [Pulumi Backstage Plugin](/docs/idp/concepts/backstage-plugin/), or by [publishing from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).
+Pulumi's flexible building blocks can support organizations with bespoke needs who need to build their own IDP. You can integrate Pulumi with your existing developer portal using [Organization Templates](/docs/idp/concepts/organization-templates/), the [Pulumi Backstage Plugin](/docs/idp/integrations/backstage-plugin/), or by [publishing from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).

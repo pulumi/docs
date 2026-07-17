@@ -11,15 +11,22 @@ import "./noselect";
 import "./tracking";
 import "./docs-feedback";
 import "./event-filtering";
+import "./blog-list";
+import "./blog-post";
+import "./what-is-list";
+import "./case-studies-list";
+import "./details-dropdown";
 import "./copybutton";
 import "./code-tabbed";
 import "./code-snippets-dropdown";
 import "./resources";
+import "./releases";
 import "./packages";
 import "./pricing-trial";
 import "./developer-advocates";
 import "./toc";
 import "./docs-main";
+import "./docs-theme";
 import "./redirects";
 // Algolia is built as a separate entry point (algolia-entry.ts) and loaded
 // only on pages with a #search element. See assets.html.

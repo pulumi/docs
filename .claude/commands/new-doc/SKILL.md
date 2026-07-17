@@ -25,7 +25,7 @@ Create documentation pages with proper frontmatter, menu structure, and SEO opti
 3. **[Step 3/7]** Interactive directory navigation (if needed)
 4. **[Step 4/7]** Gather content details (title, meta_desc, etc.)
 5. **[Step 5/7]** Calculate menu weight
-6. **[Step 6/7]** Generate menu metadata (identifier, parent, meta_image)
+6. **[Step 6/7]** Generate menu metadata (identifier, parent; meta_image optional — generated if omitted)
 7. **[Step 7/7]** Create file and validate
 
 ## Steps
@@ -241,11 +241,11 @@ If conflict, append `-2`, `-3`, etc.
 - Top-level index: no parent
 - Subsection index: identifier of parent directory's _index.md
 
-**Meta image**: Use cloud-specific images for AWS, Azure, GCP, Kubernetes paths, default for others.
+**Meta image**: Optional. Leave `meta_image` blank and an on-brand social card is generated at build time. Only set it to override with a custom image (e.g. the cloud-specific docs images).
 
-**For complete mapping**: See `new-doc:references:meta-images`
+**For override options**: See `new-doc:references:meta-images`
 
-**Display result**: "Menu identifier: {identifier}, Parent: {parent}, Meta image: {meta_image}"
+**Display result**: "Menu identifier: {identifier}, Parent: {parent}, Meta image: {meta_image or 'generated'}"
 
 ### [Step 7/7] Create File and Validate
 

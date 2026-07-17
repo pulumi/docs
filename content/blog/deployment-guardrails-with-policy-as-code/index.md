@@ -1,15 +1,15 @@
 ---
 title: "How to Implement Robust Security Guardrails Using Policy as Code"
+feature_image: feature.png
 allow_long_title: true
 date: 2025-09-30
 draft: false
 meta_desc: "Implement deployment guardrails with Pulumi CrossGuard to create safe self-service infrastructure balancing developer autonomy and control."
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 series: idp-best-practices
 tags:
-    - idp
+    - internal-developer-platform
     - platform-engineering
     - policy-as-code
     - crossguard
@@ -17,7 +17,7 @@ tags:
     - security
     - self-service
     - guardrails
-    - idp-best-practices
+category: best-practices
 ---
 
 Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi CrossGuard](/docs/iac/packages-and-automation/crossguard) to create deployment guardrails that make self-service infrastructure both powerful and safe.
@@ -289,6 +289,10 @@ new PolicyPack("aws-compliance-ready-policies-typescript", {
 ```
 
 This automatically includes policies for major compliance frameworks like [PCI DSS](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for payment card industry standards, [SOC 2](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for security and compliance controls, [ISO 27001](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for information security management, and [CIS Benchmarks](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for security configuration standards.
+
+{{< blog/cta-card title="Add guardrails with policy as code" href="/docs/insights/policy/" >}}
+Write policies in Python or TypeScript, enforce them across every deployment, and give teams self-service infrastructure that stays secure and compliant.
+{{< /blog/cta-card >}}
 
 ## Best Practices for Policy Implementation
 

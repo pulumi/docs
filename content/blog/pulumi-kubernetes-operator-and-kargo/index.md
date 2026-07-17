@@ -3,11 +3,11 @@ title: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 h1: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 authors: 
   - "elisabeth-lichtie"
-tags: ["kargo", "kubernetes", "pko", "change management", "gitops", "argocd", "verification"]
+tags: [kargo, kubernetes, pko, change-management, gitops, argocd, verification]
+category: best-practices
 meta_desc: "Use Kargo with the Pulumi Kubernetes Operator to control how infrastructure changes are promoted across environments."
 date: "2025-11-25"
 updated: 2026-02-03
-meta_image: "kargo-change-mgmt.png"
 allow_long_title: true
 summary: |
     The Pulumi Kubernetes Operator (PKO) manages Pulumi stacks as Kubernetes resources, while Kargo provides controlled promotion of changes across environments. Used together, they let you manage infrastructure as code with Pulumi while systematically testing and promoting changes through dev, staging, and production environments.
@@ -62,9 +62,9 @@ To demonstrate how these tools work together, let's look at an example setup tha
 
 This architecture includes six main components working together:
 
-1. **[Security Scanner repository](https://github.com/lichtie/security-scanner)**: Contains your Pulumi infrastructure code. Kargo watches this repository for new commits or releases.
+1. **[Security Scanner repository](https://github.com/pulumi-csa/security-scanner)**: Contains your Pulumi infrastructure code. Kargo watches this repository for new commits or releases.
 1. **Kargo**: Controls the release pipeline. When it detects new code in the security scanner repository, it triggers an update to promote that code to the next stage.
-1. **[Kargo manifests repository](https://github.com/lichtie/kargo-manifests)**: Stores the Kubernetes manifests that define PKO Stack resources. Kargo updates this repository with the new Git references when promoting freight.
+1. **[Kargo manifests repository](https://github.com/pulumi-csa/kargo-manifests)**: Stores the Kubernetes manifests that define PKO Stack resources. Kargo updates this repository with the new Git references when promoting freight.
 1. **Argo CD**: Watches the Kargo manifests repository and creates or updates Stack objects in Kubernetes when it detects changes.
 1. **Pulumi Kubernetes Operator**: Watches Stack objects and deploys them to Pulumi, triggering stack updates or previews.
 1. **Pulumi**: Performs the actual infrastructure deployments and previews based on PKO's instructions.
@@ -82,7 +82,7 @@ The flow diagram above maps out your complete promotion path with color-coded st
 Status indicators on each stage show real-time health information, eliminating the need to manually check multiple systems or run status commands. This single-pane view reduces context switching, speeds up troubleshooting when issues arise, and gives an understanding of exactly what infrastructure is deployed where.
 
 {{% notes type="info" %}}
-You can see the complete setup for this example, including configuration files and manifests, in the [pulumi-operator-with-kargo-change-management](https://github.com/lichtie/pulumi-operator-with-kargo-change-management) repository.
+You can see the complete setup for this example, including configuration files and manifests, in the [pulumi-operator-with-kargo-change-management](https://github.com/pulumi-csa/pulumi-operator-with-kargo-change-management) repository.
 {{% /notes %}}
 
 ## Setting up the environment
@@ -210,6 +210,10 @@ The QA preview stage uses `availabilityStrategy: All`, meaning freight must pass
 ### Custom approver roles
 
 Different approval gates may require different approvers. Using the [custom roles](#setting-up-approver-roles) described earlier, you can grant specific users or groups the `promote` permission on individual approval gates. For example, security team members might have the `promote` permission on `approvalgateqasec`, while functional testers have it on `approvalgateqa`. This ensures the right people review changes at each checkpoint.
+
+{{< blog/cta-card title="Manage Kubernetes change with Pulumi" >}}
+Define your Pulumi stacks as Kubernetes resources, then promote and verify infrastructure changes across dev, staging, and production with controlled, staged rollouts.
+{{< /blog/cta-card >}}
 
 ## Verification
 

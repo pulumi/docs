@@ -39,7 +39,7 @@ benefits:
           icon: security
           icon_color: violet
           description: |
-            Pulumi provides first class support for secrets so you can confidently store values that contain sensitive data, such as database passwords or service tokens. Pulumi automatically tracks your secrets across your program’s execution and ensure that secret values are encrypted in the state file and never exposed as plain text.
+            Pulumi provides first class support for secrets so you can confidently store values that contain sensitive data, such as database passwords or service tokens. Pulumi automatically tracks your secrets across your program’s execution and ensures that secret values are encrypted in the state file and never exposed as plain text.
 
         - title: Empower developers
           icon: gear
@@ -64,12 +64,12 @@ diagrams:
         - title: 2. Identify which stacks need to be modernized
           image: /images/solutions/terraform/terraform-diagram-two.svg
           content: |
-            Identify all the stack that you want modernized. There are two strategies to this:  you can either pick the highest value stacks or the lowest risk stack to move and focus on first. The former allows you to get the greatest business benefit while the latter allows you to incrementally build up to the critical pieces.
+            Identify all the stacks that you want modernized. There are two strategies to this:  you can either pick the highest value stacks or the lowest risk stack to move and focus on first. The former allows you to get the greatest business benefit while the latter allows you to incrementally build up to the critical pieces.
 
         - title: 3. Convert Terraform templates to Pulumi programs
           image: /images/solutions/terraform/terraform-diagram-three.svg
           content: |
-            There are two options to migrating the identified stacks. You can convert the code for each of the identified stacks or you can read the outputs from a Terraform state file and reference the existing stack from within your Pulumi program. The former allows you to fully take advantage of all the benefits of using Pulumi to manage all your infrastructure. You can either use the [Terraform converter](/tf2pulumi/) to automatically translate HCL to a Pulumi program or you can translate manually. The latter allows you to use Pulumi with existing infrastructure agnostic to the choices other teams have already made.
+            There are two options to migrating the identified stacks. You can convert the code for each of the identified stacks or you can read the outputs from a Terraform state file and reference the existing stack from within your Pulumi program. The former allows you to fully take advantage of all the benefits of using Pulumi to manage all your infrastructure. You can either use [`pulumi convert`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) to automatically translate HCL to a Pulumi program or you can translate manually. The latter allows you to use Pulumi with existing infrastructure agnostic to the choices other teams have already made.
 
         - title: 4. Incorporate software development best practices
           image: /images/solutions/terraform/terraform-diagram-four.svg

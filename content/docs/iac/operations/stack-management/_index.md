@@ -3,7 +3,6 @@ title_tag: "Stack management | Pulumi Operations"
 meta_desc: Manage Pulumi stacks day-to-day with targeted updates, update plans, safe state file editing, and self-managed state backends.
 title: Stack management
 h1: Stack management
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Stack Management
@@ -15,6 +14,8 @@ menu:
 These pages cover the day-to-day operations of running Pulumi stacks: scoping updates to specific resources, previewing changes before they apply, safely editing state when recovery is needed, and configuring a self-managed state backend.
 
 ## Pages
+
+**[Protecting against undesired changes](/docs/iac/operations/stack-management/protecting-against-undesired-changes/)** - Production hygiene: protect critical resources from deletion, review previews before applying, and enforce guardrails with update plans, policy, and CI/CD gating.
 
 **[Targeted updates](/docs/iac/operations/stack-management/targeted-updates/)** - Limit which resources Pulumi operates on with `--target`, `--exclude`, and `--target-replace`. Learn the trade-offs of partial operations and when to use them.
 

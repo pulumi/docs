@@ -4,7 +4,6 @@ title_tag: "Deploy with GitHub Actions and Pulumi ESC"
 layout: single
 description: Use Pulumi ESC and Github Actions to manage secrets.
 meta_desc: Use Pulumi ESC and Github Actions to manage secrets.
-meta_image: meta.png
 weight: 999
 summary: |
     This tutorial demonstrates how you can use GitHub Actions and Pulumi ESC to inject secrets dynamically at runtime, instead of storing long-lived credentials in GitHub. You will use OpenID Connect (OIDC) to fetch a short-lived Pulumi token and AWS credentials for secure infrastructure deployments.
@@ -14,7 +13,7 @@ youll_learn:
     - How to Deploy infrastructure on AWS using Pulumi in GitHub Actions
 prereqs:
     - A [Pulumi Cloud](https://app.pulumi.com/signup) account
-    - The [Pulumi ESC CLI](/docs/install/esc/)
+    - The [Pulumi CLI](/docs/iac/download-install/)
     - Complete the [configure OIDC guide](/docs/pulumi-cloud/access-management/oidc/provider/aws/)
     - A GitHub repository
 estimated_time: 15
@@ -143,7 +142,7 @@ jobs:
           requested-token-type: urn:pulumi:token-type:access_token:organization
 
       - name: Install and inject AWS credentials
-        uses: pulumi/esc-action@v1
+        uses: pulumi/esc-action@v3
         with:
           environment: '<your-organization>/<your-esc-env>'
 

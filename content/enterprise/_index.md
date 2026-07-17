@@ -151,7 +151,7 @@ capabilities:
           description: |
             Pulumi runs in an AWS VPC and our architecture follows industry best practices. All network communication is encrypted using TLS and Pulumi’s endpoints are only accessible via HTTPS. Your data is also encrypted at-rest and Pulumi is compliant with SOC 2 Type II. To learn more about our architecture and security practices, [read our whitepaper](/security/pulumi-cloud-security-whitepaper).
 
-        - title: Migration Hub
+        - title: Migration Tools
           icon: code-window
           icon_color: violet
           description: |
@@ -178,8 +178,8 @@ get_started:
           link: /product/self-hosted/#self-hosted-trial
           link_text: Request Free Trial
 
-        - title: Migration Hub
-          link: /migrate
+        - title: Migration Guide
+          link: /docs/iac/guides/migration/
           link_text: Learn More
 
         - title: Enterprise Whitepaper

@@ -2,7 +2,6 @@
 title: Top Infrastructure as Code Tools
 meta_desc: |
      Compare the top infrastructure as code (IaC) tools — Pulumi, Terraform, OpenTofu, CloudFormation, and more — on multi-cloud support, state, and ecosystem.
-meta_image: /images/what-is/top-iac-tools-meta.png
 type: what-is
 page_title: "Top Infrastructure as Code Tools"
 authors: ["adam-gordon-bell"]
@@ -34,7 +33,7 @@ Terraform is a multi-cloud Infrastructure as Code (IaC) tool that utilizes the H
 
 For state management, Terraform uses a state file to track the current state of your infrastructure. While this approach requires manual configuration, including setting up remote backends and state locking, it does offer fine-grained control over state.
 
-Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs).  Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
+Terraform integrates well with existing development workflows and CI/CD pipelines. A Kubernetes provider exists that supports the Kubernetes Core APIs and offers some support for Custom Resource Definitions (CRDs). Terraform is popular, with a large ecosystem and also has a wide range of plugins, integrations, and comprehensive documentation.
 
 - **Flexibility**: Utilizes HCL. Lacks full programming constructs.
 - **Multi-cloud**: Offers support for AWS, Azure, GCP, Oracle cloud and many others.
@@ -62,7 +61,7 @@ OpenTofu is a recent fork of Terraform 1.6.x. It shares many core functionalitie
 
 While OpenTofu aims to maintain compatibility with Terraform, it's expected to develop its own unique features and community-driven improvements over time. The primary difference currently lies in the licensing model, with OpenTofu using the Mozilla Public License 2.0.
 
-For a more detailed comparison between OpenTofu and other IaC tools, including Terraform and Pulumi, please refer to our in-depth article: [Terraform vs.OpenTofu](/docs/iac/comparisons/terraform/opentofu/).
+For a more detailed comparison between OpenTofu and other IaC tools, including Terraform and Pulumi, please refer to our in-depth article: [Terraform vs. OpenTofu](/docs/iac/comparisons/terraform/opentofu/).
 
 - **Flexibility**: Utilizes HCL, offering similar capabilities to Terraform in terms of infrastructure definition.
 - **Multi-cloud**: Supports multiple cloud providers, mirroring Terraform's broad compatibility.
@@ -91,12 +90,12 @@ CloudFormation can be used to create and manage Amazon EKS (Elastic Kubernetes S
 Managing complex templates can be challenging, and template size limitations and cryptic error messages are among the most common online complaints. Managing dependencies between resources can become complex past a certain scale, and testing capabilities for templates are limited. Despite its limitations, AWS CloudFormation is favored by those deeply invested in the AWS ecosystem who want a platform native tool.  
 
 - **Flexibility**: Some support for abstraction and modularity through nested stacks and reusable templates.
-- **Integration**:  Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management, though it has limited direct support for managing individual Kubernetes resources.
+- **Integration**: Integrates well with AWS-native CI/CD and supports Amazon EKS for Kubernetes cluster management, though it has limited direct support for managing individual Kubernetes resources.
 - **Ecosystem**: Supported by extensive documentation, providing resources for learning and troubleshooting.
 
 ### [Azure Resource Manager](https://azure.microsoft.com/fr-fr/get-started/azure-portal/resource-manager)
 
-Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - a ARM-specific DSL. ARM integrates deeply with Azure services including Azure DevOps, and can be integrated with other CI/CD workflows using its `az` cli tool. ARM provides comprehensive support for Kubernetes features through Azure Kubernetes Service (AKS), Self-managed Kubernetes clusters on Azure are not included, however. Azure Resource Manager is preferred by those who want a native Azure tool and are deeply invested in the Azure ecosystem.
+Azure Resource Manager (ARM) supports JSON-based configuration or using Bicep - an ARM-specific DSL. ARM integrates deeply with Azure services including Azure DevOps, and can be integrated with other CI/CD workflows using its `az` cli tool. ARM provides comprehensive support for Kubernetes features through Azure Kubernetes Service (AKS), Self-managed Kubernetes clusters on Azure are not included, however. Azure Resource Manager is preferred by those who want a native Azure tool and are deeply invested in the Azure ecosystem.
 
 - **Flexibility**: Uses JSON-based templates or Bicep - a DSL. Lacks some of the abstraction and modularity of other tools.
 - **Integration**: Offers deep integration with Azure services, including Azure DevOps and Azure Kubernetes Service. Broader integration to non-Azure CI/CD is possible, while native Kubernetes cluster support is not.
@@ -132,9 +131,9 @@ Each tool offers unique strengths and potential trade-offs:
 
 2. Cloud-specific tools like AWS CloudFormation, Azure Resource Manager, and Google Cloud Deployment Manager offer deep integration with their respective platforms. They provide tight integration with native services. The trade-off is that they lock you into a single cloud ecosystem and limit the portability of your skills.
 
-We've shown you the options – now let us make our case for Pulumi. Pulumi's use of general-purpose programming languages for infrastructure definition provides familiar syntax, powerful abstractions, and seamless integration with existing development workflows. Its multi-cloud support allows you to manage resources across AWS, Azure, Google Cloud, and many other providers using a single tool and consistent approach. Sure, the community is a little smaller than Terraform's, but the combination of language flexibility and multi-cloud capability offers a uniquely powerful and adaptable IaC solution. It's something you need to experience. Don't take our word for it – [try it yourself](https://www.pulumi.com/product/infrastructure-as-code/).
+The real decision isn't which tool has the longest feature list. It's which trade-off you're willing to live with: the deep native integration of a cloud-specific tool comes at the cost of portability, while a multi-cloud tool buys you that portability at the cost of some platform-specific features. Notice too that two axes are often conflated but are independent: whether you write in a DSL or a general-purpose programming language, and whether you target one cloud or many. A tool like Pulumi shows you can pick a real programming language without giving up multi-cloud reach, which is why language choice, not vendor breadth, is usually the constraint that ends up shaping how your team works day to day.
 
-But regardless of the tool you choose, the benefits of embracing Infrastructure as Code are clear. IaC brings consistency to deployments, enables version control for infrastructure, increases automation, and improves scalability. If you're new to IaC, the most important step is to start now. If you're already using it, focus on refining your approach. IaC continues to deliver value as your needs evolve.
+If you want to see how the programming-language approach feels in practice, [try Pulumi](https://www.pulumi.com/product/infrastructure-as-code/).
 
 ## Learn more
 

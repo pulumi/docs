@@ -3,7 +3,6 @@ title_tag: "Migrating from Serverless Framework"
 meta_desc: Migrate your Serverless Framework apps to Pulumi. Import existing resources and translate serverless.yml to Pulumi code.
 title: Serverless Framework
 h1: "Migrating from Serverless Framework to Pulumi"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         identifier: iac-migration-serverless

@@ -9,13 +9,13 @@ menu:
     identifier: administration-home
     weight: 1
 meta_desc: Manage organizations, teams, access control, security, and self-hosted deployments.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Administration
 description: <p>Manage your Pulumi Cloud organization, control access, configure security, and deploy self-hosted infrastructure.</p>
 aliases:
   - /docs/administration/
   - /docs/pulumi-cloud/
   - /docs/pulumi-cloud/admin/
+  - /docs/intro/console/
 
 link_buttons:
   primary:

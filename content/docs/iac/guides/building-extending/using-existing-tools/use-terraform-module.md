@@ -3,7 +3,6 @@ title_tag: "Use a Terraform Module in Pulumi"
 meta_desc: "Learn how to use existing Terraform modules directly in your Pulumi programs."
 title: Use a Terraform Module in Pulumi
 h1: Use a Terraform Module in Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Use a Terraform Module
@@ -72,7 +71,7 @@ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
 This will generate a local SDK in your programming language that you can import into your Pulumi program.
 
 {{% notes type="tip" %}}
-See [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) for details on generating and using SDKs from local or parameterized providers.
+See [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) for details on generating and using SDKs from local or parameterized providers.
 {{% /notes %}}
 
 ### Using a Local Terraform Module
@@ -941,4 +940,4 @@ Current limitations include:
 
 ## Conclusion
 
-Using Terraform modules directly in Pulumi allows you to leverage the vast ecosystem of Terraform modules and your existing investments into custom modules, while maintaining all the benefits of Pulumi's rich programming model. This approach enables the two products to coexist, allowing teams continue to collaborate while using the best tools for their specific needs, and enables a gradual migration path from Terraform to Pulumi.
+Using Terraform modules directly in Pulumi allows you to leverage the vast ecosystem of Terraform modules and your existing investments into custom modules, while maintaining all the benefits of Pulumi's rich programming model. This approach enables the two products to coexist, allowing teams to continue to collaborate while using the best tools for their specific needs, and enables a gradual migration path from Terraform to Pulumi.

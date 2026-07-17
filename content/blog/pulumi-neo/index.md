@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: "Meet Pulumi Neo: AI agent for platform engineers that automates infrastructure tasks with built-in guardrails. Focus on strategic work, not tedium."
 
-meta_image: meta.png
 
 authors:
     - neo-team
@@ -17,6 +16,7 @@ tags:
     - ai-agents
     - platform-engineering
     - pulumi-neo
+category: product
 
 ---
 

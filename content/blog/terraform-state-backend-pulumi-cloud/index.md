@@ -4,7 +4,6 @@ date: 2026-03-05
 allow_long_title: true
 draft: false
 meta_desc: "Pulumi Cloud now serves as a Terraform state backend with encrypted state, audit policies, and unified resource visibility — no workflow changes required."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - claire-gaestel
@@ -13,7 +12,8 @@ tags:
     - features
     - terraform
     - pulumi-cloud
-    - iac
+    - infrastructure-as-code
+category: product
 
 social:
     twitter: "Exciting launch: Pulumi Cloud can now serve as a Terraform state backend! Migrate your state in minutes — keep using the Terraform CLI while gaining encrypted state, RBAC, audit policies, and unified resource visibility across your entire infrastructure estate."

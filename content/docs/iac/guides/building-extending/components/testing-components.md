@@ -3,7 +3,6 @@ title_tag: "Testing Pulumi Components"
 meta_desc: "Learn strategies and tools for testing Pulumi Components during development and in CI/CD workflows."
 title: Testing Pulumi Components
 h1: Testing Pulumi Components
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Testing Components
@@ -162,4 +161,4 @@ This provides essential details for debugging interop issues and schema mismatch
 
 - [Build a Component](/docs/iac/using-pulumi/build-a-component/)
 - [Testing Pulumi Programs](/docs/iac/guides/testing/)
-- [Pulumi Provider SDK](/docs/iac/build-with-pulumi/pulumi-provider-sdk/)
+- [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)

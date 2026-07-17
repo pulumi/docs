@@ -4,7 +4,6 @@ title: "Introducing Dark Mode for Pulumi Cloud"
 date: 2025-12-17
 
 meta_desc: Pulumi Cloud now features the ability to choose a dark or light theme.
-meta_image: "meta.png"
 
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself
@@ -15,8 +14,9 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - pulumi-service
+    - pulumi-cloud
     - user-experience
+category: product
 
 ---
 [Pulumi Cloud](/product/pulumi-cloud/) helps teams manage and operate their cloud infrastructure in one place, from state and secrets to deployments, visibility, and policy enforcement.

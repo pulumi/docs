@@ -20,11 +20,17 @@ aliases:
 - External Secrets Operator supports multiple different sources, so you can use the same operator to manage secrets and configuration from different sources.
 - Take advantage of the advanced features of the secret provider, such as encryption of data at rest and scenarios like secret rotation.
 
-Since version `0.10.0` External Secrets Operator supports [Pulumi ESC as a secret provider](https://external-secrets.io/latest/provider/pulumi/).
+Since version `0.9.13` External Secrets Operator supports [Pulumi ESC as a secret provider](https://external-secrets.io/latest/provider/pulumi/).
 
 ## Authentication
 
 Pulumi [Access Tokens](/docs/administration/access-identity/access-tokens/) are recommended to access Pulumi ESC.
+
+Store the access token in a Kubernetes secret that the `SecretStore` (or `ClusterSecretStore`) can reference:
+
+```bash
+kubectl create secret generic <NAME_OF_KUBE_SECRET> --from-literal=<KEY_IN_KUBE_SECRET>=<PULUMI_ACCESS_TOKEN>
+```
 
 ## Creating a SecretStore
 
@@ -73,7 +79,7 @@ spec:
 
 ## Referencing Secrets
 
-Secrets can be referenced by defining the `key` containing the JSON path to the secret. Pulumi ESC secrets are internally organized as a JSON object.
+Secrets can be referenced by defining the `key` containing the Pulumi path to the secret. Pulumi ESC secrets are internally organized as a JSON object.
 
 ```yaml
 apiVersion: external-secrets.io/v1beta1
@@ -115,7 +121,7 @@ spec:
 
 ## PushSecrets
 
-With the latest release of Pulumi ESC, secrets can be pushed to the Pulumi service. This can be done by creating a [`PushSecrets`](https://external-secrets.io/latest/api/pushsecret/) object.
+Since version `0.10.0`, External Secrets Operator can also push secrets to a Pulumi ESC environment by creating a [`PushSecret`](https://external-secrets.io/latest/api/pushsecret/) object.
 
 Here is a basic example of how to define a `PushSecret` object:
 
@@ -139,7 +145,7 @@ spec:
         remoteKey: <PULUMI_PATH_SYNTAX>
 ```
 
-This will then push the secret to the Pulumi service. If the secret already exists, it will be updated.
+This will then push the secret to the Pulumi ESC environment configured in the `SecretStore`. If the secret already exists, it will be updated.
 
 ## Limitations
 

@@ -1,5 +1,6 @@
 ---
 title: "Pulumi Copilot is Now Available in VS Code"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -8,6 +9,7 @@ title: "Pulumi Copilot is Now Available in VS Code"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2025-02-03
+lastmod: 2026-06-30
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -22,7 +24,6 @@ meta_desc: "Pulumi Copilot is now available in Visual Studio Code Copilot- offlo
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -35,6 +36,8 @@ authors:
 tags:
     - releases
     - features
+category: product
+series: pulumi-copilot
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -44,7 +47,7 @@ social:
     twitter: "🎉 Pulumi Copilot is now available in Visual Studio Code! Offload tasks to Pulumi Copilot right in your IDE by typing @pulumi in Copilot Chat. Build, deploy, and manage cloud infrastructure more efficiently than ever."
     linkedin: "Exciting news! Pulumi Copilot is now available in Visual Studio Code Copilot, bringing AI-powered cloud infrastructure management directly to your IDE. Simply install the Pulumi extension and type @pulumi in Copilot Chat to access Pulumi's cloud intelligence and streamline your infrastructure workflows.
 
-    Learn how Pulumi Copilot is revolutionizing cloud development: [Link]"
+        Learn how Pulumi Copilot is revolutionizing cloud development: [Link]"
 
 ---
 

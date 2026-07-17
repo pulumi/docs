@@ -8,7 +8,6 @@ notitle: true
 norightnav: true
 h1: Self-hosting the Pulumi Cloud
 description: <p>Deploy Pulumi Cloud in your own infrastructure with full control over data, security, and operations.</p>
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Self-Hosting

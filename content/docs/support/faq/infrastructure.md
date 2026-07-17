@@ -3,11 +3,10 @@ title_tag: Pulumi IaC FAQ
 meta_desc: A collection of Frequently Asked Questions (FAQ) about Pulumi IaC.
 title: Infrastructure FAQ
 h1: Infrastructure as Code FAQ
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     support:
         parent: support-faq
-        name: Infrastructure FAQ
+        name: IaC FAQ
         weight: 1
         identifier: support-faq-infrastructure
 aliases:
@@ -43,7 +42,7 @@ To synchronize Pulumi's recorded state with the actual state of your cloud resou
 $ pulumi refresh
 ```
 
-You can also refresh and apply your desired state in a single step using `pulumi up --refresh`. For automated drift detection and remediation on a schedule, Pulumi Cloud provides built-in [drift detection](/docs/deployments/deployments/drift/).
+You can also refresh and apply your desired state in a single step using `pulumi up --refresh`. For automated drift detection and remediation on a schedule, Pulumi Cloud provides built-in [drift detection](/docs/deployments/concepts/drift/).
 
 For a detailed explanation of refresh behavior, see [Refreshing state](/docs/iac/concepts/state-and-backends/#refreshing-state).
 
@@ -84,6 +83,12 @@ Pulumi is a declarative tool that uses imperative languages to define your end s
 ### How will Pulumi make me more productive?
 
 Pulumi uses strongly typed languages with programming languages that support [IntelliSense](https://code.visualstudio.com/docs/editor/intellisense) and the [Language Server Protocol](https://en.wikipedia.org/wiki/Language_Server_Protocol) which means when you are defining Pulumi programs, you rarely need to leave your IDE.
+
+## Experimental features
+
+### What does "experimental" mean?
+
+Some Pulumi functionality is released as _experimental_. Experimental features are always opt-in: you enable them explicitly with a flag, command, or environment variable (such as `PULUMI_EXPERIMENTAL=true`). They are not necessarily supported, and they can change or be removed at any time without a deprecation cycle, so you should not rely on them for production workflows. When an experimental feature proves valuable, Pulumi invests in stabilizing it and promoting it to general availability, but until then its behavior can't be relied on.
 
 ## Provider Version Support
 

@@ -2,7 +2,6 @@
 title: How to Step Up Cloud Infrastructure Testing
 meta_desc: "Learn how to test cloud infrastructure as code: unit, property, integration, and security tests, where each fits in CI/CD, and the tools to use."
 
-meta_image: /images/what-is/how-to-step-up-cloud-infrastructure-testing-meta.png
 type: what-is
 page_title: "Stepping Up Your Infrastructure Testing: A Quick Introduction"
 
@@ -202,7 +201,7 @@ Policy as code is the operating model for organization-wide rules: things like "
 
 ### Do compliance frameworks (SOC 2, HIPAA, PCI) accept IaC test results as evidence?
 
-Yes — SOC 2, HIPAA, and PCI DSS audits routinely accept IaC test output and policy-as-code run logs as evidence that a control is enforced. A Pulumi Policies run, for example, produces a record of a control being checked against a specific change at a specific time, which is more concrete than a written policy with no enforcement mechanism behind it.
+Increasingly, yes. Auditors for SOC 2, HIPAA, and PCI DSS can accept IaC test output and policy-as-code run logs as evidence that a control is enforced, though what any given engagement will take varies by auditor. A Pulumi Policies run, for example, produces a record of a control being checked against a specific change at a specific time, which is stronger evidence than a written policy with no enforcement mechanism behind it.
 
 ### How do I introduce testing to an existing IaC codebase?
 

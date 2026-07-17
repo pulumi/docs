@@ -3,7 +3,6 @@ title_tag: "Unit Testing Pulumi Programs"
 meta_desc: "Guide to unit testing of Pulumi programs: mock-based tests across Node.js, Python, Go, .NET, and Java."
 title: Unit Testing
 h1: Unit Testing Pulumi Programs
-meta_image: /images/docs/meta-images/docs-meta.png
 weight: 1
 menu:
     iac:
@@ -50,7 +49,7 @@ You are free to use your favorite frameworks and libraries for writing unit test
 
 {{% choosable language "typescript" %}}
 
-This guide uses Mocha as the testing framework. [Install Mocha](https://mochajs.org/#installation) to your development environment.
+This guide uses Mocha as the testing framework. [Install Mocha](https://legacy.mochajs.org/#installation) to your development environment.
 
 ```bash
 npm install --global mocha
@@ -1084,7 +1083,7 @@ $ go test
 
 {{% /choosable %}}
 {{% choosable language "csharp" %}}
-Run the following command to execute your Python tests:
+Run the following command to execute your C# tests:
 
 ```bash
 $ dotnet test

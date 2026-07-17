@@ -1,5 +1,6 @@
 ---
 title: "Organizational Patterns: An Automation Team"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -19,7 +20,6 @@ meta_desc: In this continuing series, we explore an organizational pattern of us
 # The meta_image appears in social-media previews and on the blog home page.
 # A placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the `id`
 # properties of the team member files at /data/team/team. Create a file for yourself
@@ -30,7 +30,7 @@ authors:
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - development-environment
-    - organizational-patterns
+category: best-practices
 series: organizational-patterns
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
@@ -79,4 +79,4 @@ One of the more important recommendations for this pattern is to avoid trying to
 
 This is a pattern that works well at a larger organization, where it would be beyond the scope of a single group to be able to wrap their understanding around hundreds of services. However, it is a pattern that can be applied to smaller organizations as well!
 
-Watch for the next post in this series, where we will dig into some other patterns! Or revist the first post, [Organizational Patterns - A Single Infra Repo](https://www.pulumi.com/blog/organizational-patterns-infra-repo/).
+Watch for the next post in this series, where we will dig into some other patterns! Or revisit the first post, [Organizational Patterns - A Single Infra Repo](https://www.pulumi.com/blog/organizational-patterns-infra-repo/).

@@ -1,8 +1,8 @@
 ---
 title: "How We Eliminated Long-Lived CI Secrets Across 70+ Repos"
 date: "2026-03-31"
+updated: 2026-06-16
 meta_desc: "Learn how Pulumi eliminated static CI secrets across 70+ repos using Pulumi ESC and OIDC, reducing supply chain attack risk with short-lived credentials."
-meta_image: "meta.png"
 feature_image: "feature.png"
 authors:
   - boris-schlosser
@@ -11,6 +11,7 @@ tags:
   - security
   - github-actions
   - continuous-delivery
+category: engineering
 social:
   twitter: "We eliminated all long-lived CI secrets across 70+ repos using @PulumiCorp ESC and OIDC. Short-lived credentials mean a compromised GitHub Action gets nothing persistent. Here's how we did it:"
   linkedin: "Supply chain attacks on CI/CD pipelines are accelerating. At Pulumi, we eliminated all static GitHub Secrets across 70+ provider repositories by using Pulumi ESC for OIDC-based short-lived credentials. Now, if a compromised GitHub Action runs in our CI, there are no stored secrets to exfiltrate and no long-lived tokens to reuse. Here's how we built a zero-static-secrets CI architecture."
@@ -106,7 +107,7 @@ permissions:
 
 steps:
   - name: Fetch secrets from ESC
-    uses: pulumi/esc-action@v1
+    uses: pulumi/esc-action@v3
     with:
       environment: '<your-organization>/<your-esc-env>'
 ```

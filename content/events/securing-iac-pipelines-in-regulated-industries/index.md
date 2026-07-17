@@ -46,7 +46,7 @@ description: |
 learn:
     - Best practices for ensuring security and compliance for cloud infrastructure and secrets.
     - How to use tools like policy as code and automated drift detection.
-    - How to to use Policy as Code and ESC (Environments, Secrets, and Config) to improve your organization's security posture.
+    - How to use Policy as Code and ESC (Environments, Secrets, and Config) to improve your organization's security posture.
 
 # The event presenters
 presenters:

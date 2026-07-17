@@ -3,7 +3,6 @@ title_tag: "Using AWS Elastic Load Balancing (ELB)"
 title: ELB
 h1: AWS Elastic Load Balancing (ELB)
 meta_desc: The AWSx ELB component provides easy provisioning of Application and Network Load Balancers, and easily integrates with other AWS services.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds-aws

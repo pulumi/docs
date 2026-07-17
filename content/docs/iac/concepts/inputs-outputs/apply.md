@@ -3,7 +3,6 @@ title_tag: "Accessing Single Outputs with Apply | Inputs and Outputs"
 meta_desc: "Learn how to access a single output value using the apply method in Pulumi."
 title: Accessing single outputs with Apply
 h1: Accessing single outputs with Apply
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Apply

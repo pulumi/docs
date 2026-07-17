@@ -49,7 +49,7 @@ description: |
 learn:
     - What Spot is and how to use it in Azure.
     - How Spot ensures security and compliance while scaling.
-    - How Pulumi and Spot facilitates AKS usage at enterprise scale.
+    - How Pulumi and Spot facilitate AKS usage at enterprise scale.
 
 # The event presenters
 presenters:

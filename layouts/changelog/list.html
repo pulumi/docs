@@ -1,0 +1,10 @@
+{{ define "hero" }}
+{{ end }}
+
+{{ define "main" }}
+{{/* /releases/changelog/ — the expanded view of the releases feed. Iterates the
+     /releases section (same entries as /releases/) but renders each changelog
+     item's full body inline. Shares the body with the compact /releases/ list
+     view via layouts/partials/releases/changelog-index.html. */}}
+{{ partial "releases/changelog-index.html" (dict "releases" (site.GetPage "/releases") "view" "expanded") }}
+{{ end }}

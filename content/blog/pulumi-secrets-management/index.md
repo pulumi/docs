@@ -2,12 +2,12 @@
 title: "Pulumi Secrets Management"
 date: 2022-03-16T09:15:57-08:00
 meta_desc: A practical example of storing secrets in a Pulumi program
-meta_image: meta.png
 authors:
     - sanjay-bhagia
 tags:
     - community
     - secrets
+category: tutorials
 
 canonical_url: https://www.sanjaybhagia.com/2021/01/26/pulumi-secrets-management
 ---

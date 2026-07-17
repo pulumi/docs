@@ -7,7 +7,10 @@ description: |
 meta_desc: Learn how 4IR worked with Pulumi to cut deployment time from days to hours and saved $75k annually on outsourcing costs.
 
 customer_name: 4IR
+industry: manufacturing
 customer_logo: /logos/customers/4ir.png
+logo_bg_color: "#0085E4"
+logo_style: white
 customer_url: https://www.4ir.cloud/
 
 quote_block:

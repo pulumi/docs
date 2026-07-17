@@ -8,6 +8,52 @@ const markdownIt = require("markdown-it");
 const USE_NEW_FRONTMATTER_VALIDATION = true;
 
 /**
+ * Allowed blog post category ids, loaded once from the single source of truth
+ * at data/blog_categories.yaml. See that file's header for the rules.
+ */
+const BLOG_CATEGORIES = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/blog_categories.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.categories || []).map(c => c.id);
+    } catch (e) {
+        console.warn(`Warning: could not load blog categories: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
+ * Allowed case-study industry ids, loaded once from the single source of truth
+ * at data/case_study_industries.yaml. See that file's header for the rules.
+ */
+const CASE_STUDY_INDUSTRIES = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/case_study_industries.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.industries || []).map(i => i.id);
+    } catch (e) {
+        console.warn(`Warning: could not load case-study industries: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
+ * Defined blog series slugs, loaded once from data/blog_series.yml. Used to
+ * enforce that every series member is wired up consistently (see
+ * checkSeriesConsistency).
+ */
+const BLOG_SERIES_SLUGS = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/blog_series.yml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return new Set((doc.series || []).map(s => s.slug).filter(Boolean));
+    } catch (e) {
+        console.warn(`Warning: could not load blog series: ${e.message}`);
+        return new Set();
+    }
+})();
+
+/**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
  *
  *     ---
@@ -89,6 +135,343 @@ function checkMetaImage(image) {
 }
 
 /**
+ * checkBlogCategory validates the `category:` front matter on blog posts against
+ * the closed set in data/blog_categories.yaml. It applies ONLY to individual
+ * blog posts (content/blog/<slug>/index.md), not section pages (_index.md), tag
+ * pages, or non-blog content.
+ *
+ * Category is REQUIRED and SINGULAR: every post must declare exactly one
+ * `category:` scalar value from the allowed set. Use `general` (the default)
+ * for posts that don't clearly fit a specific kind. A list value, a missing
+ * value, or a value outside the set is an error. (The legacy plural `categories`
+ * field is no longer accepted.)
+ *
+ * @param {string} category The `category` front matter value.
+ * @param {*} legacyCategories The legacy `categories` front matter value, if any.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkBlogCategory(category, legacyCategories, fullPath) {
+    const isBlogPost =
+        fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
+    if (!isBlogPost) {
+        return null;
+    }
+
+    if (typeof legacyCategories !== "undefined") {
+        return "Blog post uses the legacy 'categories' field. Use a singular 'category:' scalar instead (e.g. 'category: general'). See data/blog_categories.yaml.";
+    }
+    if (Array.isArray(category)) {
+        return "Blog post 'category' must be a single scalar value, not a list (e.g. 'category: general'). See data/blog_categories.yaml.";
+    }
+    if (!category) {
+        return "Blog post is missing a required 'category' value. Add exactly one category from data/blog_categories.yaml (use 'general' if it doesn't fit a specific kind).";
+    }
+    if (!BLOG_CATEGORIES.includes(category)) {
+        return `Invalid blog category value: '${category}'. Allowed: ${BLOG_CATEGORIES.join(", ")}. See data/blog_categories.yaml.`;
+    }
+
+    return null;
+}
+
+/**
+ * checkCaseStudyIndustry validates the `industry:` front matter on case studies
+ * against the closed set in data/case_study_industries.yaml. It applies ONLY to
+ * individual case-study pages (content/case-studies/<slug>.md), not the section
+ * index (_index.md) or any other content.
+ *
+ * Industry is REQUIRED and SINGULAR: every case study declares exactly one
+ * `industry:` scalar value from the allowed set — a customer belongs to one
+ * vertical. A list value, a missing value, or a value outside the set is an
+ * error. `industry` is a dedicated Hugo taxonomy (see config.yml), so any value
+ * generates a public term page at /case-studies/industry/<slug>/; a typo would
+ * silently ship an orphan URL, which this guard prevents.
+ *
+ * @param {*} industry The `industry` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkCaseStudyIndustry(industry, fullPath) {
+    const isCaseStudy =
+        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+    if (!isCaseStudy) {
+        return null;
+    }
+
+    if (Array.isArray(industry)) {
+        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/case_study_industries.yaml.";
+    }
+    if (!industry) {
+        return "Case study is missing a required 'industry' value. Add exactly one industry from data/case_study_industries.yaml.";
+    }
+    if (!CASE_STUDY_INDUSTRIES.includes(industry)) {
+        return `Invalid case-study industry value: '${industry}'. Allowed: ${CASE_STUDY_INDUSTRIES.join(", ")}. See data/case_study_industries.yaml.`;
+    }
+
+    return null;
+}
+
+/**
+ * checkCaseStudyLogoTile validates the optional logo-tile front matter on case
+ * studies, rendered by layouts/partials/case-studies/card.html (see its header
+ * comment for what each field does):
+ *   - logo_bg_color: a hex color ("#RRGGBB" or "#RGB")
+ *   - logo_style: "white" or "dark", lowercase
+ *   - logo_size: "lg"
+ * All are optional; this guard rejects present-but-malformed values, which
+ * would otherwise ship silently — the template compares exactly, so e.g.
+ * `logo_style: White` just renders the logo in its original colors, and a bad
+ * hex paints no tile background at all.
+ *
+ * @param {*} obj The parsed front matter object.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkCaseStudyLogoTile(obj, fullPath) {
+    const isCaseStudy =
+        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+    if (!isCaseStudy) {
+        return null;
+    }
+
+    const errors = [];
+    if (obj.logo_bg_color !== undefined && !/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(String(obj.logo_bg_color))) {
+        errors.push(
+            `Invalid 'logo_bg_color' value: '${obj.logo_bg_color}'. Use a quoted hex color like "#0052CC".`,
+        );
+    }
+    if (obj.logo_style !== undefined && !["white", "dark"].includes(obj.logo_style)) {
+        errors.push(
+            `Invalid 'logo_style' value: '${obj.logo_style}'. Allowed: white, dark (lowercase), or omit to render the logo in its original colors.`,
+        );
+    }
+    if (obj.logo_size !== undefined && obj.logo_size !== "lg") {
+        errors.push(
+            `Invalid 'logo_size' value: '${obj.logo_size}'. Allowed: lg, or omit for the default size.`,
+        );
+    }
+
+    return errors.length > 0 ? errors.join(" ") : null;
+}
+
+/**
+ * checkSeriesConsistency enforces that a blog post's series wiring is correct.
+ *
+ * Series membership is driven solely by the `series: <slug>` key:
+ *   - single.html renders the "In This Series" sidebar, finding siblings via
+ *     `where .Params.series`.
+ *   - the dedicated `series` taxonomy generates the landing page at
+ *     /blog/series/<slug>/ (see layouts/taxonomy/series.html + config.yml).
+ * The slug must name a series defined in data/blog_series.yml (any value
+ * generates a public term page, so a typo would ship a junk URL) and must NOT
+ * also appear in `tags`: that was the old workaround for manufacturing a landing
+ * page under the `tags` taxonomy, and it now only produces a stray
+ * /blog/tag/<slug>/ page and surfaces the slug as a topical tag pill. Applies
+ * only to blog posts (content/blog/<slug>/index.md).
+ *
+ * @param {*} series The `series` front matter value.
+ * @param {*} tags The `tags` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkSeriesConsistency(series, tags, fullPath) {
+    const isBlogPost =
+        fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
+    if (!isBlogPost || BLOG_SERIES_SLUGS.size === 0) {
+        return null;
+    }
+
+    const tagList = Array.isArray(tags) ? tags : typeof tags === "string" ? [tags] : [];
+
+    if (Array.isArray(series)) {
+        return "Blog post 'series' must be a single scalar value (the series slug), not a list. See data/blog_series.yml.";
+    }
+
+    // Every `series:` value mints a public, indexable /blog/series/<value>/ term
+    // page, so it must name a defined series — a typo would silently ship a bare
+    // fallback listing at a junk URL.
+    if (series && !BLOG_SERIES_SLUGS.has(series)) {
+        return `Blog post has 'series: ${series}', which is not a defined blog series. Every series value generates a public /blog/series/ page, so it must match a slug in data/blog_series.yml — fix the typo, or add the series to the data file.`;
+    }
+
+    // A defined series slug must not be used as a tag; the `series` taxonomy owns
+    // the landing page now, keyed off the `series:` front matter.
+    for (const t of tagList) {
+        if (BLOG_SERIES_SLUGS.has(t)) {
+            const addKey = series === t ? "" : ` and add 'series: ${t}'`;
+            return `Blog post is tagged '${t}', a defined blog series. Series now live in their own taxonomy at /blog/series/${t}/ (driven by the 'series:' key), so the slug must not be a tag. Remove '${t}' from tags${addKey}. See data/blog_series.yml.`;
+        }
+    }
+
+    return null;
+}
+
+/**
+ * Normalizes a front matter `date:` value to a YYYY-MM-DD string. js-yaml parses
+ * an unquoted ISO date into a Date, while a quoted one stays a string, so handle
+ * both. Returns null if the value is missing or unparseable.
+ *
+ * @param {Date|string|undefined} date The raw front matter date value.
+ * @returns {string|null} The date as YYYY-MM-DD, or null.
+ */
+function normalizeDate(date) {
+    if (!date) {
+        return null;
+    }
+    if (date instanceof Date) {
+        return date.toISOString().slice(0, 10);
+    }
+    const match = String(date).trim().match(/^\d{4}-\d{2}-\d{2}/);
+    return match ? match[0] : null;
+}
+
+/**
+ * checkChangelogFilename enforces the naming convention for individual changelog
+ * entries under content/releases/changelog/: files must be named
+ * `YYYY-MM-DD-<slug>.md`, and the date prefix must match the front matter
+ * `date:` so the two never drift. Applies only to entry pages, not the section
+ * `_index.md`. See archetypes/changelog.md and the /new-changelog skill.
+ *
+ * @param {Date|string|undefined} date The front matter date value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkChangelogFilename(date, fullPath) {
+    const normalized = fullPath.replace(/\\/g, "/");
+    const isChangelogEntry =
+        normalized.includes("/content/releases/changelog/") &&
+        path.basename(normalized) !== "_index.md";
+    if (!isChangelogEntry) {
+        return null;
+    }
+
+    const filename = path.basename(normalized);
+    const match = filename.match(/^(\d{4}-\d{2}-\d{2})-[a-z0-9]+(?:-[a-z0-9]+)*\.md$/);
+    if (!match) {
+        return "Changelog entry filenames must be date-prefixed and lowercase-hyphenated, as 'YYYY-MM-DD-slug.md' (e.g. 2026-07-11-universal-search.md). See archetypes/changelog.md or run /new-changelog.";
+    }
+
+    // The filename date prefix must agree with the front matter `date:`.
+    const prefix = match[1];
+    const fmDate = normalizeDate(date);
+    if (fmDate && fmDate !== prefix) {
+        return `Changelog entry filename date prefix '${prefix}' does not match front matter 'date: ${fmDate}'. Rename the file or fix the date so they agree.`;
+    }
+
+    return null;
+}
+
+/**
+ * The four pricing tiers (see content/pricing/_index.md). A changelog entry's
+ * optional `tiers:` front matter may only draw from this closed set. Kept in
+ * sync by hand — the pricing tiers change rarely.
+ */
+const CHANGELOG_TIERS = ["Free", "Team", "Enterprise", "Business Critical"];
+
+/**
+ * checkChangelogTiers validates the optional `tiers:` front matter on individual
+ * changelog entries: it must be a YAML array whose values are all drawn from the
+ * four pricing tiers (CHANGELOG_TIERS). Authors list every tier the feature is
+ * available in; since a lower tier implies the tiers above it, that means the
+ * lowest applicable tier and all tiers above it. The legacy singular `tier:`
+ * scalar is rejected in favor of `tiers:`. Applies only to entry pages, not the
+ * section `_index.md`.
+ *
+ * @param {*} tiers The front matter `tiers` value.
+ * @param {*} tier The front matter `tier` value (legacy; rejected if present).
+ * @param {string} fullPath The absolute path of the file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkChangelogTiers(tiers, tier, fullPath) {
+    const normalized = fullPath.replace(/\\/g, "/");
+    const isChangelogEntry =
+        normalized.includes("/content/releases/changelog/") &&
+        path.basename(normalized) !== "_index.md";
+    if (!isChangelogEntry) {
+        return null;
+    }
+
+    if (tier !== undefined) {
+        return "Changelog `tier:` has been replaced by `tiers:`, a YAML array (e.g. `tiers:` then `    - Enterprise`). List every tier the feature is available in — the lowest applicable tier and all tiers above it.";
+    }
+    if (tiers === undefined) {
+        return null;
+    }
+    if (!Array.isArray(tiers)) {
+        return "Changelog `tiers:` must be a YAML array (e.g. `tiers:` then `    - Enterprise`), not a single value.";
+    }
+    const invalid = tiers.filter(function (t) {
+        return !CHANGELOG_TIERS.includes(t);
+    });
+    if (invalid.length > 0) {
+        const quoted = invalid
+            .map(function (t) {
+                return "'" + t + "'";
+            })
+            .join(", ");
+        return "Changelog `tiers:` value(s) " + quoted + " not allowed. Use only the pricing tiers: " + CHANGELOG_TIERS.join(", ") + ".";
+    }
+    return null;
+}
+
+/**
+ * Asset directories under content/releases/changelog/ whose files must be
+ * date-prefixed, mirroring the entry-filename convention (checkChangelogFilename)
+ * so the shared folders don't turn into an undated jumble.
+ */
+const CHANGELOG_ASSET_DIRS = [
+    "../../content/releases/changelog/images",
+    "../../content/releases/changelog/videos",
+];
+
+/** Date-prefixed, lowercase-hyphenated asset filename, e.g. 2026-07-11-foo.png. */
+const CHANGELOG_ASSET_NAME_REGEX = /^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*\.[a-z0-9]+$/;
+
+/**
+ * Scans the changelog asset directories and returns an error group for every
+ * file whose name isn't date-prefixed as YYYY-MM-DD-<slug>.<ext>. Hidden files
+ * (e.g. .DS_Store, .gitkeep) are ignored. Missing directories yield no errors.
+ * The shape matches groupLintErrorOutput's output so results merge cleanly.
+ *
+ * @returns {{path: string, errors: Object[]}[]} One error group per bad file.
+ */
+function checkChangelogAssets() {
+    const errors = [];
+
+    function walk(dir) {
+        let entries;
+        try {
+            entries = fs.readdirSync(dir, { withFileTypes: true });
+        } catch (e) {
+            return; // Directory doesn't exist; nothing to check.
+        }
+        entries.forEach(function (entry) {
+            const full = path.join(dir, entry.name);
+            if (entry.isDirectory()) {
+                walk(full);
+                return;
+            }
+            if (entry.name.startsWith(".")) {
+                return;
+            }
+            if (!CHANGELOG_ASSET_NAME_REGEX.test(entry.name)) {
+                errors.push({
+                    path: full,
+                    errors: [
+                        {
+                            lineNumber: "Filename",
+                            ruleDescription:
+                                "Changelog asset filenames must be date-prefixed and lowercase-hyphenated, as 'YYYY-MM-DD-slug.ext' (e.g. 2026-07-11-universal-search.png). Rename the file and update its references.",
+                        },
+                    ],
+                });
+            }
+        });
+    }
+
+    CHANGELOG_ASSET_DIRS.forEach(function (rel) {
+        walk(path.resolve(__dirname, rel));
+    });
+    return errors;
+}
+
+/**
  * Builds an array of markdown files to lint and checks each file's front matter
  * for formatting errors.
  *
@@ -166,6 +549,12 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
+                    blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
+                    caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
+                    caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
+                    seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
+                    changelogFilename: checkChangelogFilename(obj.date, fullPath),
+                    changelogTiers: checkChangelogTiers(obj.tiers, obj.tier, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -282,6 +671,42 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.metaImage,
                 });
             }
+            if (frontMatterErrors.blogCategory) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.blogCategory,
+                });
+            }
+            if (frontMatterErrors.caseStudyIndustry) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.caseStudyIndustry,
+                });
+            }
+            if (frontMatterErrors.caseStudyLogoTile) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.caseStudyLogoTile,
+                });
+            }
+            if (frontMatterErrors.seriesConsistency) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.seriesConsistency,
+                });
+            }
+            if (frontMatterErrors.changelogFilename) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.changelogFilename,
+                });
+            }
+            if (frontMatterErrors.changelogTiers) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.changelogTiers,
+                });
+            }
         }
 
         if (lintErrors.length > 0) {
@@ -371,6 +796,16 @@ Object.values(filesByConfig).forEach(group => {
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);
+
+// Changelog assets (images/videos) aren't markdown, so the walk above never
+// sees them. Enforce their date-prefix naming during the full CI scan; skip it
+// when linting an explicit file list (lint-staged) to avoid surfacing errors
+// for files the caller didn't touch.
+if (filesFromArgs.length === 0) {
+    checkChangelogAssets().forEach(function (assetError) {
+        errors.push(assetError);
+    });
+}
 
 // Get the total number of errors.
 const errorsArray = errors.map(function (err) {

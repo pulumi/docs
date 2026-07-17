@@ -7,13 +7,13 @@ draft: false
 
 meta_desc: Introducing short-lived access tokens in Pulumi Cloud for enhanced security and flexibility, now available in the console and REST API.
 
-meta_image: meta.png
 
 authors:
     - meagan-cojocar
 
 tags:
     - releases
+category: product
 
 ---
 

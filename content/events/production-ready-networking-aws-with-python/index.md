@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Production-Ready Networking on AWS with Python
 meta_desc: "Hands-on Workshop: Learn to apply Infrastructure as Code concepts to build a hub and spoke network topology with an inspection VPC."
-meta_image: /images/production-ready-networking-aws-python.png
+meta_image: /events/production-ready-networking-aws-with-python/meta.png
+meta_image_square: /events/production-ready-networking-aws-with-python/meta-square.png
 # A featured event will display first in the list.
 featured: false
 

@@ -3,7 +3,6 @@ title_tag: "Go | Languages & SDKs"
 meta_desc: An overview of how to use the Go language with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Go
 h1: Pulumi & Go
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Go
@@ -140,5 +139,3 @@ For more information on when and how to use dev builds, see [Using dev builds fo
 
 - [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
 - [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
-</content>
-</invoke>

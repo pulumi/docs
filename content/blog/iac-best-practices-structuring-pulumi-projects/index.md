@@ -1,16 +1,16 @@
 ---
 title: "IaC Best Practices: Structuring Pulumi Projects"
+feature_image: feature.png
 date: 2023-03-17
 updated: 2025-03-04
 meta_desc: See how you can structures Pulumi projects as your infrastructure grows. Learn best practices for managing complexity and scaling teams.
-meta_image: meta.png
 authors:
     - christian-nunciato
     - scott-lowe
 tags:
     - best-practices
     - cloud-engineering
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-structuring-pulumi-projects/

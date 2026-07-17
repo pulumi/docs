@@ -2,7 +2,8 @@
 title: "Kubernetes RBAC in AWS EKS with open source Pulumi packages"
 h1: "Simplify Kubernetes RBAC in Amazon EKS with open source Pulumi packages"
 authors: ["nishi-davidson"]
-tags: ["AWS","Kubernetes","TypeScript","EKS"]
+tags: [aws, kubernetes, typescript, eks]
+category: tutorials
 date: "2019-04-24"
 meta_desc: "This post contrasts the traditional approach with Pulumi's modern method for simplifying Kubernetes RBAC in Amazon EKS."
 ---
@@ -17,7 +18,7 @@ production involves creating and managing role-based access control
 implemented halfway, or the configuration becomes impossible to
 maintain.
 
-Fortunately, Pulumi makes RBAC on Kuberenetes so easy that you'll never create an insecure cluster again. In this post, we will contrast the traditional way of working
+Fortunately, Pulumi makes RBAC on Kubernetes so easy that you'll never create an insecure cluster again. In this post, we will contrast the traditional way of working
 with RBAC on EKS with using Pulumi.
 <!--more-->
 

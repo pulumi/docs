@@ -3,7 +3,6 @@ title_tag: "Using Argo CD with Pulumi | CI/CD"
 meta_desc: This page details how to use Argo CD with the Pulumi Kubernetes Operator to deploy infrastructure and applications through pull-based GitOps workflows.
 title: Argo CD
 h1: Using Argo CD with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Argo CD
@@ -21,7 +20,7 @@ aliases:
 
 ## How Pulumi works with Argo CD
 
-Argo CD does not run `pulumi` commands directly. Instead, Pulumi infrastructure is represented as a [`Stack` custom resource](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/#create-a-stack-resource)—a Kubernetes manifest that the Pulumi Kubernetes Operator knows how to reconcile.
+Argo CD does not run `pulumi` commands directly. Instead, Pulumi infrastructure is represented as a [`Stack` custom resource](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/defining-stacks/)—a Kubernetes manifest that the Pulumi Kubernetes Operator knows how to reconcile.
 
 {{% notes type="info" %}}
 The `Stack` custom resource is not the same thing as a [Pulumi stack](/docs/iac/concepts/stacks/). A Pulumi stack is an isolated instance of a Pulumi program, identified as `organization/project/stack`. The `Stack` custom resource is a Kubernetes object that tells PKO which Pulumi stack to deploy and how—each one targets a single Pulumi stack through its `spec.stack` field.
@@ -245,7 +244,7 @@ spec:
     - aws-credentials
 ```
 
-PKO runs `pulumi preview` instead of `pulumi up`. The `Stack` status surfaces the preview link and program outputs without changing any infrastructure, and Argo CD shows the preview `Stack` as healthy once the dry run succeeds. Point the preview `Stack` at a dedicated Pulumi stack (`myorg/webapp/preview` above) to avoid state contention with your real environments. See [Preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/#preview-mode) in the PKO documentation for more detail.
+PKO runs `pulumi preview` instead of `pulumi up`. The `Stack` status surfaces the preview link and program outputs without changing any infrastructure, and Argo CD shows the preview `Stack` as healthy once the dry run succeeds. Point the preview `Stack` at a dedicated Pulumi stack (`myorg/webapp/preview` above) to avoid state contention with your real environments. See [Preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) in the PKO documentation for more detail.
 
 ### Deploy to dev or staging on merge to main
 
@@ -308,7 +307,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
 ```
 
-For dependencies between Pulumi stacks—for example, creating a cluster before deploying applications into it—use the `Stack` resource's own `spec.prerequisites` field, which lets one `Stack` wait for another to succeed. See [Stack Prerequisites](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/#stack-prerequisites) in the PKO documentation.
+For dependencies between Pulumi stacks—for example, creating a cluster before deploying applications into it—use the `Stack` resource's own `spec.prerequisites` field, which lets one `Stack` wait for another to succeed. See [Stack prerequisites](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#stack-prerequisites) in the PKO documentation.
 
 ## Monitor deployments
 
