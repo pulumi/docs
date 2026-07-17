@@ -210,11 +210,10 @@ params:
     cta:
         primary:
             label: "Get started"
-            label_short: "Sign up"
-            href: "https://app.pulumi.com/signup"
+            href: "/docs/iac/get-started"
         secondary:
-            label: "Contact us"
-            href: "/contact/?form=sales"
+            label: "Sign up"
+            href: "https://app.pulumi.com/signup"
 
     canonicalURL: https://www.pulumi.com
     contentRepositoryURL: https://github.com/pulumi/docs
