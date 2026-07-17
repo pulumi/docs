@@ -236,5 +236,5 @@ Related reading:
 * [What is DevOps?](/what-is/what-is-devops/)
 * [What is CI/CD?](/what-is/what-is-ci-cd/)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
-* [How to Step Up Cloud Infrastructure Testing](/blog/how-to-test-infrastructure-as-code/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [What is Configuration Management?](/what-is/what-is-configuration-management/)

@@ -240,5 +240,5 @@ Related reading:
 * [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
-* [How to Step Up Cloud Infrastructure Testing](/blog/how-to-test-infrastructure-as-code/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [Python for DevOps](/what-is/python-for-devops/)

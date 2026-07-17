@@ -286,7 +286,7 @@ There are many other practices related to infrastructure as code, read more:
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes)
 * [Top Infrastructure as Code Tools](/blog/infrastructure-as-code-tools)
-* [How to Step Up Cloud Infrastructure Testing](/blog/how-to-test-infrastructure-as-code)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code)
 * [What is Infrastructure as Software?](/what-is/what-is-infrastructure-as-software)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering)
 * [What is Secrets Management?](/what-is/what-is-secrets-management)

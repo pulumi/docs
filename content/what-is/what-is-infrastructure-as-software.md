@@ -187,4 +187,4 @@ Related reading:
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
-* [How to Step Up Cloud Infrastructure Testing](/blog/how-to-test-infrastructure-as-code/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
