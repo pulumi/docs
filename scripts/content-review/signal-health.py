@@ -8,8 +8,9 @@ gracefully — and, before this script, silently:
   traffic         a missing docs-traffic snapshot flattens article selection to
                   tier-only scoring, quietly erasing intra-tier prioritization
   console-access  the per-article worker's screenshot lane 2 verifies UI strings
-                  against the private pulumi/console repo; without token access
-                  every UI claim silently becomes "unverifiable"
+                  against the console source (cmd/console2) in the private
+                  pulumi/pulumi-service repo; without token access every UI
+                  claim silently becomes "unverifiable"
   holiday-feed    the BambooHR ICS holiday gate fails open by design, so a feed
                   that has been 404ing (or serving garbage) for weeks is invisible
 
@@ -87,9 +88,10 @@ CONSEQUENCES = {
         "it points at."
     ),
     "console-access": (
-        "pulumi/console access: pulumi-bot has had no access for {days} day(s) — "
-        "screenshot lane 2 is marking every UI-string check \"unverifiable\". "
-        "Check the bot token's access to the pulumi/console repo."
+        "pulumi/pulumi-service access: pulumi-bot has had no access for {days} "
+        "day(s) — screenshot lane 2 is marking every UI-string check "
+        "\"unverifiable\". Check the bot token's access to the "
+        "pulumi/pulumi-service repo (console source: cmd/console2)."
     ),
     "holiday-feed": (
         "holiday feed: degraded for {days} day(s) ({detail}) — the holiday gate "
@@ -282,7 +284,8 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("--state", help="health state JSON (read+written in place)")
     p.add_argument("--queue", help="selection queue JSON (source of the traffic signal)")
-    p.add_argument("--console-status", help="pulumi/console probe result: ok|degraded")
+    p.add_argument("--console-status",
+                   help="pulumi/pulumi-service probe result: ok|degraded")
     p.add_argument("--holiday-status",
                    help="holiday feed status: ok|empty|fetch_failed|unconfigured")
     p.add_argument("--alert-out", default=".health-alert.txt",

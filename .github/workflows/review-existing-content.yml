@@ -29,7 +29,7 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 #
 # DEGRADATION HEALTH (issue #20078 §3.4): three inputs degrade gracefully but
 # used to do so silently — the traffic snapshot (selection falls back to
-# tier-only), pulumi/console access (workers' screenshot lane 2 goes
+# tier-only), pulumi/pulumi-service access (workers' screenshot lane 2 goes
 # unverifiable), and the holiday feed (gate fails open). The health steps at
 # the end of the review job track each signal's state in the ledger bucket
 # under health/ and post a one-line-per-signal note to #docs-ops once a signal
@@ -142,21 +142,22 @@ jobs:
           # newest non-bot edit per page), so a shallow clone won't do.
           fetch-depth: 0
       # Lane-2 health probe: the per-article worker's screenshot lane 2
-      # verifies UI strings against the private pulumi/console repo using
+      # verifies UI strings against the Pulumi Cloud Console source — the
+      # cmd/console2 app in the private pulumi/pulumi-service repo — using
       # PULUMI_BOT_TOKEN from the SAME ESC environment this job holds — so
       # probing access here, once per run, is a deterministic proxy for whether
       # every worker dispatched today will silently degrade lane 2 to
       # "unverifiable". Keep the two token sources coupled or this probe lies.
       # Never fails; feeds the degradation-health steps at the end of the job.
-      - name: Probe pulumi/console access (lane-2 health)
+      - name: Probe pulumi/pulumi-service access (lane-2 health)
         id: console-probe
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
         run: |
-          if gh repo view pulumi/console --json name -q .name >/dev/null 2>&1; then
+          if gh repo view pulumi/pulumi-service --json name -q .name >/dev/null 2>&1; then
             echo "status=ok" >> "$GITHUB_OUTPUT"
           else
-            echo "::warning::pulumi/console not accessible to the bot token; screenshot lane 2 will be unverifiable"
+            echo "::warning::pulumi/pulumi-service not accessible to the bot token; screenshot lane 2 will be unverifiable"
             echo "status=degraded" >> "$GITHUB_OUTPUT"
           fi
       - name: Install Node
@@ -372,7 +373,7 @@ jobs:
       # dispatcher. signal-health.py is a pure function of (state file,
       # observations, today); these steps move the bytes: state is one JSON
       # object in the ledger bucket under health/, and after THRESHOLD_DAYS of
-      # continuous degradation of any input (traffic snapshot, pulumi/console
+      # continuous degradation of any input (traffic snapshot, pulumi/pulumi-service
       # access, holiday feed) a one-message alert posts to #docs-ops (the
       # check-links.yml posting pattern), re-alerting weekly, not daily.
       # workflow_dispatch runs are log-only: the state is computed and printed
