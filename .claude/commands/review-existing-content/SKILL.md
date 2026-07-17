@@ -72,8 +72,8 @@ Read `.content-review-queue.json` from the repo root (written by
   invoke you in that case, but be defensive).
 - `traffic.available: false` is not your problem to fix: the dispatcher's
   degradation-health lane (`scripts/content-review/signal-health.py`) tracks
-  it — along with pulumi/pulumi-service (console-source) access and the
-  holiday feed — and alerts
+  it — along with pulumi/pulumi-service (console-source) access, the
+  holiday feed, and the nightly claims re-verify — and alerts
   #docs-ops after a week of continuous degradation.
 
 Process articles **sequentially**, one at a time, completing each article's

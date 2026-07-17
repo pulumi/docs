@@ -34,6 +34,8 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # the end of the review job track each signal's state in the ledger bucket
 # under health/ and post a one-line-per-signal note to #docs-ops once a signal
 # has been degraded for a week (see scripts/content-review/signal-health.py).
+# claims-reverify.yml contributes a fourth signal (`reverify`) to the same
+# state object; this workflow neither observes nor overwrites it.
 
 on:
   schedule:
