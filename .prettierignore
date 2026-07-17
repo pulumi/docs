@@ -82,3 +82,4 @@ static/js
 /.review-changes.patch
 /.review-changes.paths
 /.applied.paths
+/.review-admin-cache/
