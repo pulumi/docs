@@ -784,7 +784,7 @@ spec:
 License: Mozilla Public License 2.0  
 Best For: Teams seeking an open-source Terraform alternative with community governance
 
-OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/concepts/vs/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
+OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/comparisons/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
 
 Key Features:
 
