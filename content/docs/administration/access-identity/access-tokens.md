@@ -32,7 +32,7 @@ Pulumi offers three types of access tokens:
 When using tokens, be mindful of the following security best practices:
 
 * Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
-* Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture.
+* Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture. Organization administrators can make expiries mandatory with an [access token expiry policy](#access-token-expiry-policy).
 * Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. The stack creator will automatically become its owner and will have all stack permissions, including deletion. See [RBAC](/docs/administration/access-identity/rbac/) for more on how org-wide settings and role scopes interact.
 
 ## Personal access tokens
@@ -108,6 +108,36 @@ As with organization tokens, team token activity is recorded in audit logs with 
 Organization admins and team admins can create and delete team tokens. Tokens are found under the team's page (**Teams** > select a team > **Access Tokens**) and are not owned by the admin who created them. Each token name must be unique across all organization and team tokens in the organization, including deleted tokens.
 
 Deleting a token immediately revokes its access. The token name is permanently reserved after deletion to preserve audit log integrity.
+
+## Access token expiry policy
+
+Organization administrators can enforce a maximum expiry on the access tokens used against their organization. When a policy is set, personal, organization, and team tokens must have an expiration date, and the time remaining until that expiration must be within the policy's cap, for requests against the organization to succeed.
+
+### Setting a policy
+
+To set an access token expiry policy:
+
+1. Navigate to **Settings** > **Access Management** and select the **Access Tokens** tab.
+1. Under **Access token expiry policy**, enter the maximum expiry in days (between 1 and 3650).
+1. Optionally, select **Preview affected tokens** to see which of the organization's machine tokens would stop authenticating before you save.
+1. Select **Save access token expiry policy**.
+
+To remove the policy, set the value to 0 (or clear the field) and save. Policy changes are recorded in the organization's [audit logs](/docs/administration/security-compliance/audit-logs/).
+
+### How compliance is evaluated
+
+A token complies with the policy if it has an expiration date and its remaining lifetime — the time between now and its expiration — is within the policy maximum. Compliance is evaluated on every request, not just when the token is created:
+
+* A token that never expires violates any policy.
+* A token created with a long expiry becomes compliant once its remaining lifetime falls within the cap. For example, under a 30-day policy, a token that expires 20 days from now is compliant even if it was originally created with a one-year expiry.
+
+### What the policy affects
+
+* **Organization and team tokens** must be created with a compliant expiry once a policy is in place. The token creation dialog caps the expiry picker at the policy maximum, and the API rejects creation requests that exceed it or omit an expiry. Existing tokens that don't meet the policy stop authenticating against the organization and must be recreated with a compliant expiry.
+* **Personal tokens** are user-scoped and span all of a user's organizations, so they can't be blocked at creation. Instead, requests made with a non-compliant personal token against an organization that enforces a policy are rejected, and the member must create a new token with a compliant expiry to regain access to that organization. When a member creates a personal token, the dialog warns them if the chosen expiry doesn't meet the policy of an organization they belong to.
+* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/access-identity/oidc-issuers/).
+
+Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy.
 
 ## Legacy organization token types
 
