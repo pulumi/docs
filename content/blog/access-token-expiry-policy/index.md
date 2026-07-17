@@ -20,7 +20,7 @@ social:
 
         Pulumi Cloud organizations can now enforce a maximum access token expiry — for personal, organization, and team tokens alike. Admins set a cap in days; the platform checks compliance on every request against the organization.
 
-        Tokens that never expire, or whose remaining lifetime exceeds the cap, are rejected with a clear error telling the user exactly how to get back in: create a new token that meets the policy. Web console sessions are unaffected, and a built-in preview shows exactly which machine tokens would be affected before you save.
+        Tokens that never expire, or whose remaining lifetime exceeds the cap, are rejected with a clear error telling the user exactly how to get back in: create a new token that meets the policy. Web console sessions are unaffected.
 
         Here's how it works and how to roll it out to your organization.
     bluesky: |
