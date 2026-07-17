@@ -81,7 +81,7 @@ Actions taken by organization tokens appear in audit logs attributed to the orga
 
 ### Who can manage organization tokens
 
-Any organization admin can create, view, and delete organization tokens via **Settings** > **Access Tokens**. Tokens are not owned by the admin who created them — if that person leaves the organization, other admins retain full access. Each token's name must be unique across all organization and team tokens in the organization, including deleted tokens, so that tokens can be reliably identified in audit logs and incident response.
+Any organization admin can create, view, and delete organization tokens via **Settings** > **Access Management** > **Access Tokens**. Tokens are not owned by the admin who created them — if that person leaves the organization, other admins retain full access. Each token's name must be unique across all organization and team tokens in the organization, including deleted tokens, so that tokens can be reliably identified in audit logs and incident response.
 
 Deleting a token immediately revokes its access; all further operations using it will fail as unauthorized. The token name is permanently reserved after deletion to preserve audit log integrity.
 
@@ -135,7 +135,7 @@ A token complies with the policy if it has an expiration date and its remaining 
 
 * **Organization and team tokens** must be created with a compliant expiry once a policy is in place. The token creation dialog caps the expiry picker at the policy maximum, and the API rejects creation requests that exceed it or omit an expiry. Existing tokens that don't meet the policy stop authenticating against the organization and must be recreated with a compliant expiry.
 * **Personal tokens** are user-scoped and span all of a user's organizations, so they can't be blocked at creation. Instead, requests made with a non-compliant personal token against an organization that enforces a policy are rejected, and the member must create a new token with a compliant expiry to regain access to that organization. When a member creates a personal token, the dialog warns them if the chosen expiry doesn't meet the policy of an organization they belong to.
-* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/access-identity/oidc-issuers/).
+* **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/access-identity/oidc-issuers/) and internally issued credentials such as deployment agent pool tokens.
 
 Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy.
 
