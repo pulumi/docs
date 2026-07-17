@@ -3,7 +3,7 @@ title_tag: Deploy a Helm Chart to a Kubernetes Cluster
 title: Helm Chart on Kubernetes
 layout: template
 schema_type: howto
-meta_desc: Deploy a Helm chart to an existing Kubernetes cluster with Pulumi in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a Helm chart to an existing Kubernetes cluster with Pulumi in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a Helm chart to a Kubernetes cluster with Pulumi.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Helm Chart
   slug: helm-chart
@@ -51,15 +52,39 @@ Output values like these are useful in many ways, most commonly as inputs for ot
 
 Projects created with the Helm Chart template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 k8sNamespace
 : The name of the namespace to be created in your existing cluster. Defaults to `nginx-ingress`.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+k8s_namespace
+: The name of the namespace to be created in your existing cluster. Defaults to `nginx-ingress`.
+
+{{% /choosable %}}
+
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ pulumi config set k8sNamespace my-namespace
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ pulumi config set k8s_namespace my-namespace
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 You can customize the Helm chart by passing values to it in your Pulumi code. An example of passing a few values to the chart is included in the template for reference.
 

@@ -3,7 +3,7 @@ title_tag: Deploy a Virtual Machine to Google Cloud
 title: Virtual Machine on Google Cloud
 layout: template
 schema_type: howto
-meta_desc: Deploy a Google Cloud virtual machine with Pulumi and Compute Engine in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a Google Cloud virtual machine with Pulumi and Compute Engine in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Google Cloud
   slug: gcp
@@ -42,6 +43,8 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 ip
 : The IP address of the virtual machine.
 
@@ -50,6 +53,21 @@ hostname
 
 url
 : The fully-qualified HTTP URL of the HTTP server running on the virtual machine.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+name
+: The name of the virtual machine instance.
+
+ip
+: The IP address of the virtual machine.
+
+url
+: The fully-qualified HTTP URL of the HTTP server running on the virtual machine.
+
+{{% /choosable %}}
 
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources. The computed `url`, for example, can be used from the command line to open the newly deployed website in your favorite web browser:
 
@@ -60,6 +78,8 @@ $ open $(pulumi stack output url)
 ## Customizing the project
 
 Projects created with the Virtual Machine template expose the following [configuration](/docs/iac/concepts/config/) settings:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 machineType
 : The Compute Engine machine type to use for the VM. Defaults to `e2-micro`.
@@ -72,6 +92,24 @@ instanceTag
 
 servicePort
 : The HTTP service port to expose on the VM. Defaults to `80`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+machine_type
+: The Compute Engine machine type to use for the VM. Defaults to `e2-micro`.
+
+os_image
+: The OS image type to use for the VM. Defaults to `debian-11`.
+
+instance_tag
+: The tag to apply to the VM instance. Defaults to `webserver`.
+
+service_port
+: The HTTP service port to expose on the VM. Defaults to `80`.
+
+{{% /choosable %}}
 
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
 

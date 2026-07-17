@@ -3,7 +3,7 @@ title_tag: Deploy a Container Service to Azure
 title: Container Service on Azure
 layout: template
 schema_type: howto
-meta_desc: Deploy a container service on Azure with Pulumi, Azure Container Instances, and Azure Container Registry in TypeScript, Python, Go, or C#.
+meta_desc: Deploy a container service on Azure with Pulumi, Azure Container Instances, and Azure Container Registry in TypeScript, Python, Go, C#, or HCL.
 meta_image: meta.png
 card_desc: Deploy a container service on Azure with Pulumi and Azure Container Instances.
 template:
@@ -14,6 +14,7 @@ template:
     - python
     - go
     - csharp
+    - hcl
 cloud:
   name: Microsoft Azure
   slug: azure
@@ -60,6 +61,8 @@ $ open $(pulumi stack output url)
 
 Projects created with the Container Service template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
+{{% choosable language "typescript,python,go,csharp" %}}
+
 appPath
 : The path to the folder containing the application and Dockerfile. Defaults to `app`, which contains a "Hello world" example.
 
@@ -78,12 +81,49 @@ imageName
 imageTag
 : The tag applied to published container images. Defaults to `latest`.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+app_path
+: The path to the folder containing the application and Dockerfile. Defaults to `./app`, which contains a "Hello world" example.
+
+image_name
+: The name of the container image to be published to Azure Container Registry. Defaults to `my-app`.
+
+image_tag
+: The tag applied to published container images. Defaults to `latest`.
+
+container_port
+: The port to expose on the container. Defaults to `80`.
+
+cpu
+: The number of CPU cores to allocate on the container. Defaults to `1`.
+
+memory
+: The amount of memory, in GB, to allocate on the container. Defaults to `2`.
+
+{{% /choosable %}}
+
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
+
+{{% choosable language "typescript,python,go,csharp" %}}
 
 ```bash
 $ pulumi config set containerPort 8080
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ pulumi config set container_port 8080
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 ## Cleaning up
 

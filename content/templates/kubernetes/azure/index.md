@@ -3,7 +3,7 @@ title_tag: Deploy a Managed Kubernetes Cluster to Azure
 title: Kubernetes Cluster on Azure
 layout: template
 schema_type: howto
-meta_desc: Deploy a managed Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS) in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a managed Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS) in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a Kubernetes cluster on Azure with Pulumi and Azure Kubernetes Service (AKS).
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Microsoft Azure
   slug: azure
@@ -34,6 +35,8 @@ Follow the prompts to complete the new-project wizard. When it's done, you'll ha
 
 ## Deploying the project
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 You must supply two values to deploy the cluster. You can input both through the new-project wizard:
 
 mgmtGroupId
@@ -44,11 +47,21 @@ sshPubKey
 
 Once the project is created, you can deploy it with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+The template requires no additional configuration. Once the new project is created, you can deploy it immediately with [`pulumi up`](/docs/iac/cli/commands/pulumi_up):
+
+{{% /choosable %}}
+
 ```bash
 $ pulumi up
 ```
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 rgname
 : The name of the Azure Resource Group containing the Kubernetes cluster resources.
@@ -62,11 +75,25 @@ clusterName
 kubeconfig
 : The cluster's kubeconfig file, which you can use with `kubectl` to access and communicate with your cluster.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+cluster_name
+: The name of the AKS cluster.
+
+kubeconfig
+: The cluster's kubeconfig file, which you can use with `kubectl` to access and communicate with your cluster.
+
+{{% /choosable %}}
+
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources.
 
 ## Customizing the project
 
 Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/iac/concepts/config/) settings:
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 numWorkerNodes
 : The number of nodes in your cluster. Defaults to `3`.
@@ -80,12 +107,40 @@ prefixForDns
 nodeVmSize
 : The VM instance type used to run your nodes. Defaults to `Standard_DS2_v2`.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+node_count
+: The number of worker nodes in the cluster. Defaults to `3`.
+
+dns_prefix
+: The unique DNS prefix to use for the cluster. Defaults to `pulumi`.
+
+node_vm_size
+: The VM size to use for worker nodes. Defaults to `Standard_DS2_v2`.
+
+{{% /choosable %}}
+
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ pulumi config set numWorkerNodes 5
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ pulumi config set node_count 5
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 ## Cleaning up
 

@@ -3,7 +3,7 @@ title_tag: Deploy a Web Application to a Kubernetes Cluster
 title: Web Application on Kubernetes
 layout: template
 schema_type: howto
-meta_desc: Deploy a web application to an existing Kubernetes cluster with Pulumi in TypeScript, Python, Go, C#, or YAML.
+meta_desc: Deploy a web application to an existing Kubernetes cluster with Pulumi in TypeScript, Python, Go, C#, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a web application to a Kubernetes cluster with Pulumi.
 template:
@@ -15,6 +15,7 @@ template:
     - go
     - csharp
     - yaml
+    - hcl
 cloud:
   name: Web Application
   slug: web-application
@@ -42,11 +43,25 @@ $ pulumi up
 
 When the deployment completes, Pulumi exports the following [stack output](/docs/iac/concepts/stacks/#outputs) values:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 deploymentName
 : The name of your new Kubernetes Deployment.
 
 serviceName
 : The name of your new Kubernetes Service.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+deployment_name
+: The name of your new Kubernetes Deployment.
+
+service_name
+: The name of your new Kubernetes Service.
+
+{{% /choosable %}}
 
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources.
 
@@ -54,18 +69,45 @@ Output values like these are useful in many ways, most commonly as inputs for ot
 
 Projects created with the Kubernetes Application template expose the following [configuration](/docs/iac/concepts/config/) settings:
 
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
+
 namespace
 : The name of the namespace to be created in your existing cluster. Defaults to `default`.
 
 replicas
 : The number of replicated Pods to be created in your new Deployment. Defaults to `1`.
 
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+k8s_namespace
+: The name of the namespace to be created in your existing cluster. Defaults to `webapp`.
+
+num_replicas
+: The number of replicated Pods to be created in your new Deployment. Defaults to `1`.
+
+{{% /choosable %}}
+
 All of these settings are optional and may be adjusted either by editing the stack configuration file directly (by default, `Pulumi.dev.yaml`) or by changing their values with [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set):
+
+{{% choosable language "typescript,python,go,csharp,yaml" %}}
 
 ```bash
 $ pulumi config set replicas 3
 $ pulumi up
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ pulumi config set num_replicas 3
+$ pulumi up
+```
+
+{{% /choosable %}}
 
 ## Cleaning up
 
