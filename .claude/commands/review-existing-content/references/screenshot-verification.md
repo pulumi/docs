@@ -54,15 +54,17 @@ docs-team"). Keep flagging it on every run until the reference is refreshed.
 
 Mirrors the fact-check Pass 1 lane (Pulumi-internal verification via `gh`).
 Use it to verify **UI strings the prose asserts** — button labels, menu
-names, setting names — against the Pulumi Cloud Console source.
+names, setting names — against the Pulumi Cloud Console source: the
+`cmd/console2` app in the private `pulumi/pulumi-service` repo.
 
-1. **Feasibility gate, once per run:** `gh repo view pulumi/console`
-   (the console repo may be private to the workflow token). If it fails,
+1. **Feasibility gate, once per run:** `gh repo view pulumi/pulumi-service`
+   (the repo is private, so the workflow token may lack access). If it fails,
    skip lane 2 for the whole run and mark prose UI claims `unverifiable —
    needs human check` instead. Never guess.
-2. When accessible, search for the literal UI string:
-   `gh search code --repo pulumi/console "<label>"` or
-   `gh api` on likely paths. A hit verifies the label; a confident miss
+2. When accessible, search for the literal UI string scoped to the console
+   app: `gh search code --repo pulumi/pulumi-service "<label> path:cmd/console2"`
+   or `gh api` on likely paths under `cmd/console2/src/`. A hit verifies the
+   label; a confident miss
    (searched variants, found the surrounding component with a different
    label) is evidence of staleness — quote what the source says instead.
 3. Source-verified corrections to **prose** (a renamed button, a moved menu
@@ -79,5 +81,5 @@ lane 2):
 - static/images/docs/stacks-list.png — stale: left nav lacks "Insights & Governance"
   (added 2025); reference: pulumi-cloud-console-current.png (captured 2026-05-29)
 - static/images/docs/arch-diagram.png — n/a, not Pulumi UI
-- prose L42 "click **New Project**" — verified (console: src/routes/projects/new.tsx)
+- prose L42 "click **New Project**" — verified (pulumi-service: cmd/console2/src/app/new/new.component.ts)
 ```
