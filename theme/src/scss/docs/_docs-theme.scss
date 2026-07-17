@@ -610,6 +610,30 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // --- Code panels (dark): mirror the light treatment in _code-light.scss —
+    //     wash the code surface with the darkest violet step at 50% opacity (the
+    //     page shows through the rest) and give standalone fenced code blocks the
+    //     chooser's --chrome-border, so a lone block reads as a bordered card. The
+    //     solid violet-950 surface + Min Dark syntax colors otherwise come from
+    //     _code.scss / _chroma.scss. The border shorthand also restores width/style
+    //     the unlayered `*` reset (color-only) can't touch. -------------------
+    pre:not(.mermaid),
+    .chroma,
+    .bg {
+        background-color: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
+    }
+
+    .example-program .example-program-footer,
+    .code-tabbed .code-tabbed-tabs,
+    .code-tabbed .code-tabbed-content,
+    .code-tabbed .code-tabbed-status {
+        background: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
+    }
+
+    .highlight:not(pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) pre:not(.mermaid) {
+        border: 1px solid var(--chrome-border);
+    }
+
     pulumi-tabs::part(tab) {
         border-bottom-color: var(--docs-border);
     }
