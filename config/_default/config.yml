@@ -212,8 +212,8 @@ params:
             label: "Get started"
             href: "/docs/iac/get-started"
         secondary:
-            label: "Sign up"
-            href: "https://app.pulumi.com/signup"
+            label: "Contact us"
+            href: "/contact/?form=sales"
 
     canonicalURL: https://www.pulumi.com
     contentRepositoryURL: https://github.com/pulumi/docs
