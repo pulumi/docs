@@ -32,11 +32,11 @@ tiers:
                   - Unlimited projects, stacks, and environments
                   - Unlimited updates and history
                   - Up to 500 workflow minutes
-                  - Pulumi Neo with 5M free tokens/mo
+                  - Pulumi Neo with 5M free tokens/month
             - title: Team
               subtitle: Everything you need to get started.
               price: $40
-              price_label: /mo base
+              price_label: /month base
               unit: "**Includes 40 Credits**"
               note: Up to 500 resources, additional usage billed on demand
               cta:
@@ -57,7 +57,7 @@ tiers:
               subtitle: Security and collaboration for large teams.
               badge: Popular
               price: $400
-              price_label: /mo base
+              price_label: /month base
               unit: "**Includes 400 Credits**"
               note: Up to 2,000 resources, additional usage billed on demand
               cta:
@@ -356,9 +356,9 @@ comparison_table:
                 items:
                   - content: 25 free
                   - content: $0.000685/hour
-                    subtext: $0.50/mo
+                    subtext: $0.50/month
                   - content: $0.001/hour
-                    subtext: $0.75/mo
+                    subtext: $0.75/month
                   - content: Custom
               - title: Price per plaintext config
                 items:
@@ -565,7 +565,7 @@ comparison_table:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
                 items:
-                  - content: 5M tokens/mo
+                  - content: 5M tokens/month
                     subtext: free
                   - content: $3/M tokens
                   - content: $3/M tokens
@@ -690,7 +690,7 @@ faq:
             Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
         - question: How are IaC resources billed?
           answer: |
-            IaC resources are billed hourly at the rate of $0.00025 for Team ($0.1825 per resource per month) and starting at $0.0005 for Enterprise ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
+            IaC resources are billed hourly at the rate of $0.00025 for Team ($0.185 per resource per month) and starting at $0.0005 for Enterprise ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
 
             Enterprise plans receive volume discounts, so that the more resources you consume, the lower the incremental rate. This is true of self-serve pay-as-you-go plans, although prepaid plans offer more considerable discounts.
 
