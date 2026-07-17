@@ -83,13 +83,7 @@ $ pulumi new yaml -y
 ```bash
 $ mkdir ../my-second-app
 $ cd ../my-second-app
-```
-
-There is no `pulumi new` template for Pulumi HCL yet, so create the project file by hand. Add a `Pulumi.yaml` with the following contents:
-
-```yaml
-name: my-second-app
-runtime: hcl
+$ pulumi new hcl -y
 ```
 
 {{% /choosable %}}
