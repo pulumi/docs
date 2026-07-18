@@ -61,7 +61,7 @@ Pulumi ships an MCP server in two forms, aimed at slightly different setups. Bot
 
 The **hosted server** lives at `https://mcp.ai.pulumi.com/mcp`, documented at [pulumi.com/docs/ai/mcp-server](https://www.pulumi.com/docs/ai/mcp-server/). It exposes tools such as `get-stacks`, `resource-search` (Lucene-style queries, for example `type:aws:s3/bucket:Bucket`), `get-policy-violations`, `get-users`, the registry lookups (`get-type`, `get-resource`, `get-function`, `list-resources`, `list-functions`), and the Neo delegation tools described below. It also ships prompts like `deploy-to-aws`, `convert-terraform-to-typescript`, and CDK migration helpers.
 
-The **local server** is the `@pulumi/mcp-server` npm package (binary `pulumi-mcp-server`), run over stdio. It exposes the same registry lookups plus CLI-driven tools: `pulumi-cli-preview`, `pulumi-cli-up`, `pulumi-stack-output`, `pulumi-cli-refresh`, and `neo-task-launcher`. Because it shells out to the Pulumi CLI on your machine, it needs the CLI installed and a `PULUMI_ACCESS_TOKEN` set for any tool that deploys or reads Pulumi Cloud data.
+The **local server** is the `@pulumi/mcp-server` npm package (binary `pulumi-mcp-server`), run over stdio. It exposes the same registry lookups plus CLI-driven tools: `pulumi-cli-preview`, `pulumi-cli-up`, `pulumi-stack-output`, `pulumi-cli-refresh`, and `neo-bridge` for delegating tasks to Neo. Because it shells out to the Pulumi CLI on your machine, it needs the CLI installed and a `PULUMI_ACCESS_TOKEN` set for any tool that deploys or reads Pulumi Cloud data.
 
 ## How to connect Pulumi to your AI agent
 
@@ -86,7 +86,7 @@ The fastest path is the hosted server, since it needs no local installation beyo
    ```bash
    claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
    ```
-3. Authenticate when your client opens the OAuth browser popup. Paste the access token you created in step 1 and select the Pulumi organization you want the agent to operate against.
+3. Authenticate when your client opens the browser popup: paste the access token you created in step 1 when prompted, then select the Pulumi organization you want the agent to operate against.
 4. Confirm the connection by asking your agent a read-only question, such as "What stacks do I have in my Pulumi organization?" or "Show me all the S3 buckets across my stacks." A working connection returns real data pulled live from Pulumi Cloud.
 5. Once the connection is confirmed, ask the agent to generate and preview infrastructure, for example: "I need to create an AWS Lambda that processes S3 events. Look up the Lambda and S3 properties and generate the TypeScript code." The agent uses the registry tools to look up accurate resource properties before writing code, then can run a preview through the same connection.
 
@@ -111,7 +111,7 @@ Or in a raw MCP client configuration (Claude Desktop, VS Code, and similar):
 }
 ```
 
-VS Code uses a `servers` key instead of `mcpServers` in its `settings.json`; otherwise the shape is the same. Set `PULUMI_ACCESS_TOKEN` in your environment for any tool that reads or writes to Pulumi Cloud.
+VS Code uses a `servers` key instead of `mcpServers`, and the config lives in a dedicated `mcp.json` (workspace `.vscode/mcp.json` or the user-level MCP settings) rather than `settings.json`; otherwise the shape is the same. Set `PULUMI_ACCESS_TOKEN` in your environment for any tool that reads or writes to Pulumi Cloud.
 
 ## Generate infrastructure in your language: TypeScript and Python
 
@@ -147,6 +147,7 @@ export const bucketName = bucket.bucket;
 And this in a Python stack:
 
 ```python
+import pulumi
 import pulumi_aws as aws
 
 bucket = aws.s3.BucketV2(
@@ -178,7 +179,7 @@ Both programs declare the same three resources with the same configuration; only
 
 ## Delegate to Neo through MCP
 
-Pulumi's MCP server also exposes Neo, Pulumi's infrastructure engineering agent, as a delegation target. Tools like `neo-bridge` and `neo-task-launcher` let any MCP-connected client hand off a longer-running, autonomous task to Neo rather than working through it turn by turn.
+Pulumi's MCP server also exposes Neo, Pulumi's infrastructure engineering agent, as a delegation target. Tools like `neo-bridge`, `neo-get-tasks`, `neo-continue-task`, and `neo-reset-conversation` let any MCP-connected client hand off a longer-running, autonomous task to Neo, check on its progress, and continue the conversation rather than working through it turn by turn.
 
 For example, asking your agent "Ask Neo to analyze all my S3 buckets for security issues and create a pull request with fixes" triggers Neo to run the analysis and open a PR, returning a tracking link on [app.pulumi.com](https://app.pulumi.com) so you can follow the task to completion.
 
