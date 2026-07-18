@@ -4,6 +4,7 @@ date: 2026-07-20T08:00:00-05:00
 draft: false
 meta_desc: "Agent Sandbox gives AI agents kernel-isolated, disposable environments as a Kubernetes resource. Here's what it is, why gVisor matters, and how to deploy it on GKE with Pulumi."
 meta_image: browser-vscode-sandbox.png
+feature_image: browser-vscode-sandbox.png
 authors:
   - adam-gordon-bell
 tags:
@@ -13,7 +14,7 @@ tags:
 category: tutorials
 ---
 
-When you use a coding agent, it can seem like there's a trade-off between autonomy and permissions. Let it do whatever it likes and it works more autonomously, but as the [nx supply-chain attack](https://www.stepsecurity.io/blog/supply-chain-security-alert-popular-nx-build-system-package-compromised-with-data-stealing-malware) and the many incidents since have shown, that can go badly.[^3]
+When you use a coding agent, it can seem like there's a trade-off between autonomy and permissions. Let it do whatever it likes and it works more autonomously, but as the [nx supply-chain attack](https://www.stepsecurity.io/blog/supply-chain-security-alert-popular-nx-build-system-package-compromised-with-data-stealing-malware) and the many incidents since have shown, that can go badly.
 
 The fix, though, is to give the agent a sandbox: a box it's *allowed* to wreck, with limited permissions. The only files are the checkout you handed it, the only credentials are the task's own, and trashing the machine just means a disposable pod gets garbage-collected early. [Pulumi Neo](/product/neo/) works this way, and if you want to scale that pattern up inside your own organization, the Kubernetes project Agent Sandbox is a great path to building your own. This post is what it is and how to deploy it on GKE with Pulumi.
 
@@ -54,7 +55,7 @@ In the second, you have your own agent harness, a Neo or a Devin, that needs an 
 
 So why do we need gVisor or Kata Containers at all? The agent already runs inside a container. Isn't that the box?
 
-Not really. A container isn't much of a security barrier. Every container on a host shares one kernel, and the Linux kernel exposes a huge surface area, 450+ syscalls, to every one of them. CVE-2019-5736 is the canonical example: a malicious container tricks runc into overwriting the *host's own runc binary*, and after that every `docker run` on the host runs attacker code as root[^8]. Put a prompt-injectable AI agent in that container, and the risk is obvious.
+Not really. A container isn't much of a security barrier. Every container on a host shares one kernel, and the Linux kernel exposes a huge surface area, 450+ syscalls, to every one of them. [CVE-2019-5736](https://unit42.paloaltonetworks.com/breaking-docker-via-runc-explaining-cve-2019-5736/) is the canonical example: a malicious container tricks runc into overwriting the *host's own runc binary*, and after that every `docker run` on the host runs attacker code as root. Put a prompt-injectable AI agent in that container, and the risk is obvious.
 
 gVisor, the runtime underneath Agent Sandbox's default path, puts a userspace kernel written in Go between your agent and the host, which limits the possible security surface area. A kernel bug the agent can reach becomes, mostly, a crash in a userspace process rather than a root shell on your node. That is what makes an Agent Sandbox secure.
 
@@ -64,7 +65,7 @@ gVisor, the runtime underneath Agent Sandbox's default path, puts a userspace ke
 **GKE Sandbox** is GKE's gVisor feature: a `RuntimeClass` named `gvisor` that runs a pod under the userspace kernel described above. It predates Agent Sandbox by years and is a per-pod isolation primitive, not an agent tool. **Agent Sandbox** is the lifecycle layer that sits on top of it: the CRD's runtime selection points down at gVisor (or Kata) for the actual kernel isolation. They compose. On GKE, Agent Sandbox with `runtimeClassName: gvisor` is literally using GKE Sandbox underneath.
 {{< /notes >}}
 
-Google engineers in Kubernetes SIG Apps maintain Agent Sandbox, Janet Kuo and Justin Santa Barbara (of kOps) among them, and it launched at KubeCon NA in November 2025. It's also one layer of a broader cloud-native agent stack taking shape: agent-sandbox for isolation, kagenti (IBM) for identity, kagent (Solo.io, a CNCF Sandbox project) for agent logic, agent-substrate for density. As Solo.io's Lin Sun puts it, "Sandboxing your agents is necessary, but not sufficient."[^6]
+Google engineers in Kubernetes SIG Apps maintain Agent Sandbox, Janet Kuo and Justin Santa Barbara (of kOps) among them, and it launched at KubeCon NA in November 2025. It's also one layer of a broader cloud-native agent stack taking shape: agent-sandbox for isolation, kagenti (IBM) for identity, kagent (Solo.io, a CNCF Sandbox project) for agent logic, agent-substrate for density. As Solo.io's Lin Sun puts it, ["Sandboxing your agents is necessary, but not sufficient."](https://www.cncf.io/blog/2026/07/07/why-sandboxing-your-agent-is-not-enough/)
 
 {{< notes type="info" >}}
 **The rung above gVisor: hardware microVMs**
@@ -78,7 +79,7 @@ Isolation is the hard part, but it isn't the only one. If you're using Agent San
 
 ![Scenario 2: a harness outside the sandboxes, routing each session to a box where tools run, suspending and resuming them from snapshots](scenario-2.png)
 
-Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing for a rolling deployment, but enough that the maintainers say it "breaks the continuity" of an interaction[^5]. So Agent Sandbox avoids re-booting altogether: it suspends and resumes pods from memory snapshots and keeps warm pools ready, the same move E2B (~150ms) and Fly's Sprites (~300ms) use to pull a cold start well under a second[^15].
+Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing for a rolling deployment, but enough that the maintainers say it ["breaks the continuity"](https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/) of an interaction. So Agent Sandbox avoids re-booting altogether: it suspends and resumes pods from memory snapshots and keeps warm pools ready, the same move E2B (~150ms) and Fly's Sprites (~300ms) use to pull a cold start well under a second[^15].
 
 ## Deploying it on GKE with Pulumi
 
@@ -189,9 +190,5 @@ The full program, everything in this post, deploy to teardown, is at [pulumi/exa
 
 {{< github-card repo="pulumi/examples" >}}
 
-[^3]: StepSecurity, "Nx build system package compromised with data-stealing malware" (s1ngularity), Aug 2025.
-[^5]: Janet Kuo & Justin Santa Barbara, "Running Agents on Kubernetes with Agent Sandbox," kubernetes.io blog, 2026-03-20.
-[^6]: Lin Sun, "Why sandboxing your agent is not enough," Solo.io / CNCF blog, 2026-07-07.
-[^8]: Unit 42 (Palo Alto Networks), "Breaking Docker via runC — explaining CVE-2019-5736."
-[^15]: Google, KubeCon EU 2026 announcements (300 sandboxes/sec; echoed by Lovable co-founder Fabian Hedin).
-[^22]: internal: `research/topics/secrets-and-multitenancy.md` — swap at fact-check.
+[^15]: Warm pools plus snapshot restore are how the managed version keeps this fast at scale: Google's GKE Agent Sandbox launch cites 300 sandboxes per second at sub-second latency. See [Bringing you Agent Sandbox on GKE and Agent Substrate](https://cloud.google.com/blog/products/containers-kubernetes/bringing-you-agent-sandbox-on-gke-and-agent-substrate).
+[^22]: The upstream install manifests set up the CRDs and controller but don't define an egress `NetworkPolicy` for your sandbox pods, so restricting egress is left to you. See [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox).
