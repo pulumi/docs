@@ -54,10 +54,27 @@
      flag keeps this a reusable template mechanism (not a per-page hack) while
      avoiding that regression; add `faq_schema: true` to any blog post's
      frontmatter once it has a genuine FAQ section (## or ### headings ending
-     in "?") to pick up FAQPage schema automatically. */}}
+     in "?") to pick up FAQPage schema automatically.
+     Docs *section* pages (Hugo branch bundles, e.g. an `_index.md` with child
+     pages) are `.Kind "section"`, so `.IsPage` is false for them and they never
+     reach this block even when they carry a genuine multi-question FAQ (for
+     example content/docs/iac/comparisons/terraform/_index.md, which has its own
+     children terraform/opentofu.md and terraform/terminology.md). A repo-wide
+     scan of docs section pages found several with a single narrative heading
+     that happens to end in "?" (e.g. "## Why integration testing?") which is
+     not a real FAQ block, so relaxing the gate to all docs sections would
+     mirror the blog false-positive problem. Instead, docs sections opt in the
+     same way blog posts do: set `faq_schema: true` in a section's frontmatter
+     once it has a genuine Q&A block, and faq-entity.html's own "?"-heading
+     extraction still governs what actually gets emitted. */}}
 {{ $faqPage := dict }}
 {{ $isDedicatedFaqPage := or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq") (strings.Contains (lower .Title) "frequently asked") }}
-{{ if and .IsPage (not $isDedicatedFaqPage) (or (eq .Type "what-is") (eq .Type "docs") (and (eq .Type "blog") .Params.faq_schema)) }}
+{{ $qualifiesForFaqSchema := or
+  (and .IsPage (or (eq .Type "what-is") (eq .Type "docs")))
+  (and (eq .Type "blog") .Params.faq_schema)
+  (and (eq .Type "docs") (not .IsPage) .Params.faq_schema)
+}}
+{{ if and $qualifiesForFaqSchema (not $isDedicatedFaqPage) }}
   {{ $faqPage = partial "schema/collectors/faq-entity.html" . }}
   {{ if and $faqPage (ne $faqPage (dict)) }}
     {{ $faqPage = merge $faqPage (dict "@id" "#faq") }}

@@ -125,7 +125,7 @@ The shared tradeoff: hyperscaler GPU compute typically runs 2–3x the per-hour 
 
 ## Part 2: AI-powered infrastructure management tools
 
-This is where the more interesting product shift is happening. Instead of running AI on infrastructure, these tools point AI at your infrastructure and let it do work. They're a newer, AI-native layer on top of the broader [infrastructure as code tooling landscape](/what-is/top-iac-tools/).
+This is where the more interesting product shift is happening. Instead of running AI on infrastructure, these tools point AI at your infrastructure and let it do work. They're a newer, AI-native layer on top of the broader [infrastructure as code tooling landscape](/blog/infrastructure-as-code-tools/).
 
 ### From code generation to agentic execution
 

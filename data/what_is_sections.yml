@@ -39,7 +39,6 @@ sections:
       - what-is-serverless
       - what-is-cloud-infrastructure-autoscaling
       - what-is-yaml
-      - top-iac-tools
 
   - title: Infrastructure as code in practice
     short: IaC in practice
@@ -79,7 +78,6 @@ sections:
 
   - title: Guides
     slugs:
-      - how-to-step-up-cloud-infrastructure-testing
       - guide-to-automating-file-expiration-in-aws-s3
 
 troubleshooting:

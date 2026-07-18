@@ -106,7 +106,7 @@ The principle is the same as application CI: fast feedback for in-progress chang
 * **Policy as code** enforces organizational rules across every change. [Pulumi Policies](/docs/insights/policy/) lets you write policies in TypeScript, Python, or OPA's Rego and run them against `pulumi preview` so non-compliant changes never merge. Those policies apply to Pulumi stacks written in any supported language.
 * **Security scans** (Checkov, tfsec, Snyk IaC) run on every commit and surface known-bad configurations.
 
-For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/).
+For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/).
 
 ## How does IaC enable platform engineering and self-service?
 
@@ -236,5 +236,5 @@ Related reading:
 * [What is DevOps?](/what-is/what-is-devops/)
 * [What is CI/CD?](/what-is/what-is-ci-cd/)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [What is Configuration Management?](/what-is/what-is-configuration-management/)

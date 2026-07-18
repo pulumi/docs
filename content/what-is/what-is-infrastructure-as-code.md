@@ -201,7 +201,7 @@ The IaC tooling landscape has grown a lot since CFEngine kicked off the category
 * **Ansible** started life as a configuration management tool and is often used procedurally to manage long-lived servers. It's owned by Red Hat.
 * **Chef and Puppet** are earlier-generation configuration management tools focused on the state of running servers.
 
-For a closer look at each of these options and how to choose between them, see our guide to the [top infrastructure as code tools](/what-is/top-iac-tools/). To see how Pulumi compares head-to-head, take a look at [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/), [Pulumi vs. CloudFormation](/docs/iac/comparisons/cloudformation/), or the full [comparisons index](/docs/iac/comparisons/).
+For a closer look at each of these options and how to choose between them, see our guide to the [top infrastructure as code tools](/blog/infrastructure-as-code-tools/). To see how Pulumi compares head-to-head, take a look at [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/), [Pulumi vs. CloudFormation](/docs/iac/comparisons/cloudformation/), or the full [comparisons index](/docs/iac/comparisons/).
 
 ## How do I get started with infrastructure as code?
 
@@ -227,7 +227,7 @@ You probably already have a lot of existing infrastructure. Make sure you can [i
 
 ### Integrate with existing engineering practices
 
-Assuming your infrastructure code is integrated with your continuous delivery pipeline, you can start instituting the same best practices you use with your application software. For example, to understand your infrastructure's correctness, [you'll need tests](/docs/iac/guides/testing/). Some tests should run before delivering the infrastructure to ensure that the program is logically correct and that it provisions the infrastructure correctly. Other tests should run when you deploy your infrastructure to ensure that the deployment was successful. For a tour of the options, see how to [step up your cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/).
+Assuming your infrastructure code is integrated with your continuous delivery pipeline, you can start instituting the same best practices you use with your application software. For example, to understand your infrastructure's correctness, [you'll need tests](/docs/iac/guides/testing/). Some tests should run before delivering the infrastructure to ensure that the program is logically correct and that it provisions the infrastructure correctly. Other tests should run when you deploy your infrastructure to ensure that the deployment was successful. For a tour of the options, see how to [step up your cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/).
 
 ### Think about policies and security
 
@@ -285,8 +285,8 @@ There are many other practices related to infrastructure as code, read more:
 
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes)
-* [Top Infrastructure as Code Tools](/what-is/top-iac-tools)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing)
+* [Top Infrastructure as Code Tools](/blog/infrastructure-as-code-tools)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code)
 * [What is Infrastructure as Software?](/what-is/what-is-infrastructure-as-software)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering)
 * [What is Secrets Management?](/what-is/what-is-secrets-management)
