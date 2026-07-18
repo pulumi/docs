@@ -14,6 +14,23 @@ tags:
     - devops
 category: general
 faq_schema: true
+social:
+    twitter: |
+        AI coding agents are now part of most infrastructure workflows, reshaping how teams evaluate Terraform alternatives in 2026.
+
+        We compared eight options on multi-cloud reach, governance, and how well each works with an agent in the loop.
+    linkedin: |
+        Terraform remains a capable, widely used tool. But as AI coding agents become part of everyday infrastructure work, teams are re-evaluating what they need from their IaC platform.
+
+        Agents reason best about code they were trained on: real, general-purpose languages with tests, functions, and packages, not a single proprietary DSL. That's prompting a fresh look at the Terraform-alternatives landscape.
+
+        We lined up eight alternatives, from a community-governed HCL-compatible fork to Kubernetes-native frameworks to general-purpose-language platforms, against the same three questions: multi-cloud reach, governance, and agent-readiness.
+
+        Which one wins depends on which of those three questions matters most to your team, and it isn't the same answer for everyone.
+    bluesky: |
+        Terraform alternatives in 2026 split into three camps: general-purpose-language platforms, HCL-compatible forks, and cloud-specific tools.
+
+        The one that fits your team increasingly depends on something most comparisons skip: how well it works with an AI coding agent in the loop.
 ---
 
 The strongest Terraform alternatives in 2026 split into three groups: general-purpose-language platforms like Pulumi and AWS CDK, HCL-compatible forks like OpenTofu, and cloud- or platform-specific tools like AWS CloudFormation, Azure Bicep, and Crossplane. Which one fits depends less on syntax preference than on how well it lets your team, and increasingly your AI coding agents, read, test, and safely change infrastructure code.
