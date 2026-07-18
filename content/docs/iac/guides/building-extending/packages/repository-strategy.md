@@ -21,7 +21,7 @@ A [source-based plugin package](/docs/iac/guides/building-extending/components/p
 1. Apply a semver Git tag (for example, `v1.2.3`) to the repository.
 1. Run [`pulumi package publish`](/docs/iac/cli/commands/pulumi_package_publish/) to send the package metadata to Pulumi Cloud and place the package in the Private Registry. This step often runs automated tests before publishing.
 
-Semver-tagged releases are only required for publishing to the Private Registry. Source-based packages referenced directly from a `Pulumi.yaml` file can use any Git ref (tag, branch, or commit), regardless of whether it is a valid semantic version.
+Semver-tagged releases are only required for publishing to the Private Registry. Source-based packages referenced directly from a `Pulumi.yaml` file can pin either a semver Git tag or a Git commit hash; branches and non-semver tags aren't supported. When no version is specified, Pulumi uses the latest semver tag, or the default branch's latest commit if the repository has no tags.
 
 ### Executable-based packages
 
