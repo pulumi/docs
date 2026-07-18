@@ -1,7 +1,7 @@
 ---
 title_tag: "Best Terraform Cloud Alternative for Multi-Cloud Teams"
 authors: ["content-team"]
-meta_desc: "The best Terraform Cloud (HCP Terraform) alternative for large multi-cloud teams: Pulumi pairs real programming languages with one unified platform for policy, secrets, and AI-driven infrastructure."
+meta_desc: "The best Terraform Cloud alternative for large multi-cloud teams: Pulumi pairs real languages with one platform for policy, secrets, and AI."
 title: Terraform Cloud
 h1: "Pulumi vs. Terraform Cloud: The Best Alternative for Large Multi-Cloud Teams"
 menu:
