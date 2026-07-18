@@ -123,7 +123,13 @@ Return a single JSON object via the `extract_claims` tool:
       "line_range": "L42",                    // or "L42-47" for a multi-line assertion; cite the line numbers from the provided numbered file body
       "text": "S3 bucket server-side encryption is enabled by default in this example.",
       "type": "behavior",
-      "source_hint": "https://docs.aws.amazon.com/...",   // optional — a URL or named source if the claim cites one
+      "source_hint": "https://docs.aws.amazon.com/...",   // optional — a URL or named source if the claim cites one.
+                                                          // MUST be the source THIS claim cites. When a source line carries
+                                                          // several links, bind each claim to its own anchor's URL — a hint
+                                                          // pointing at a neighboring link routes verification to the wrong
+                                                          // page and manufactures a false contradiction. If the claim's own
+                                                          // URL is already in `text`, the hint is redundant; never substitute
+                                                          // a different page.
       "confidence": "high"                     // high | medium | low
     }
   ]

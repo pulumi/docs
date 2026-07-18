@@ -420,6 +420,15 @@ Each Pass 3 subagent walks §Verification source order step **4** (WebFetch / We
 
 Output: claims close as `verified` (high/medium/low confidence), `contradicted`, or `unverifiable` (genuinely unfetchable -- defensible now because Pass 3 actively searched and the trail entry names the search).
 
+### Source discipline (all lanes)
+
+Four hard rules for every verifier, in-review or pre-step. Each exists because violating it produced false `contradicted` verdicts in the 2026-07 ledger re-adjudication (17 of 22 contradicted verdicts were false; most traced to these):
+
+1. **Target alignment.** A claim is verdicted only against the source the claim itself names. A pre-fetched or hinted page whose URL differs from the URL in the claim text is the *wrong target* — the verdict from comparing against it is `unverifiable` (note the target mismatch), never `contradicted`. When one doc line carries several links, each claim binds to its own anchor's target, never the neighbor's. (`verify-claims.py` enforces the routing side: claim-text URLs take precedence over `source_hint`.)
+1. **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but never by itself contradicts other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency (both suspect), resolved against product source via `gh`/reads; sibling-consistency claims verdict as `mismatch`. If code can't settle it, `unverifiable`. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence.
+1. **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables, via `_content.gotmpl`) make *transcription* claims: verify the doc text against the data file. A disagreement between the product metadata and the external framework it cites is upstream product feedback (author-question buffer / upstream issue), not a doc `contradicted`.
+1. **Quote only what you fetched.** A `contradicted` resting on a quoted passage must quote content observed in the current session's fetched/read output — never memory of what a page used to say. Pages change; a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
+
 ### Verification source order (cheapest first)
 
 #### 1. Local repo / linked docs
