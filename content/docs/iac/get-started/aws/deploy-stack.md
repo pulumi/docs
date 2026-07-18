@@ -87,6 +87,8 @@ however, so the update will finish in just a few seconds.
 The bucket ID can be accessed with the `pulumi stack output` command. You can use this to easily list
 the contents of your new bucket -- which of course will be empty:
 
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
 {{% choosable os "linux,macos" %}}
 
 {{% choosable language "typescript,go,csharp,java,yaml" %}}

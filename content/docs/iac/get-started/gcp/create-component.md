@@ -24,6 +24,8 @@ complexity and enable sharing and reuse. Instead of copy-pasting common patterns
 You will now create your first component that packages up your Google Cloud Storage website so you can stamp out
 entire websites in a few lines of code:
 
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
 {{% choosable language typescript %}}
 
 ```typescript

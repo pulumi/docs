@@ -23,6 +23,8 @@ complexity and enable sharing and reuse. Instead of copy-pasting common patterns
 You will now create your first component that packages up your Kubernetes NGINX deployment so you can stamp out
 entire NGINX services in a few lines of code:
 
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
 {{% choosable language typescript %}}
 
 ```typescript

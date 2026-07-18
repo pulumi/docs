@@ -35,6 +35,8 @@ To turn your bucket into a static website, start by adding three new AWS S3 reso
 3. [`BucketPublicAccessBlock`](/registry/packages/aws/api-docs/s3/bucketpublicaccessblock/): permits
     public access to your bucket; this is disabled by default so you don't allow access over the Internet by accident
 
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
 Open up {{< langfile >}} in your editor and add them right after your S3 bucket:
 
 {{% choosable language "typescript" %}}

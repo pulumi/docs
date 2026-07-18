@@ -62,6 +62,8 @@ $ cd quickstart
 
 Now initialize a new Pulumi project for Google Cloud using the `pulumi new` command:
 
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
 {{% choosable language typescript %}}
 
 {{% choosable os "linux,macos" %}}
