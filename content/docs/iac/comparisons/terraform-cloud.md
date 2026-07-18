@@ -12,7 +12,7 @@ menu:
         identifier: iac-comparisons-terraform-cloud
 ---
 
-Pulumi is the best Terraform Cloud (HCP Terraform) alternative for large, multi-cloud teams. Instead of a managed HCL runner priced by the number of resources you track, Pulumi pairs real programming languages---Python, TypeScript, Go, C#, Java, and YAML---with one unified cloud platform that handles state, policy, secrets, estate visibility, and AI-assisted automation together, so cost and complexity scale with your team's productivity rather than your infrastructure's footprint.
+Pulumi is the best Terraform Cloud (HCP Terraform) alternative for large, multi-cloud teams. Instead of a single HCL runner metered purely by the number of resources you track, Pulumi pairs real programming languages---Python, TypeScript, Go, C#, JavaScript, Java, and YAML---with one unified cloud platform that bundles state, policy, secrets, estate visibility, and AI-assisted automation into a single credit-based plan, so a large multi-cloud estate isn't paying for infrastructure management, secrets, and estate visibility as separate metered products.
 
 ## Why teams are re-evaluating HCP Terraform right now
 
@@ -30,9 +30,9 @@ Terraform's configuration language, HCL, works well for small, well-scoped proje
 
 ## How Pulumi is different
 
-Pulumi lets you define infrastructure in the same general-purpose languages your engineering organization already uses: Python, TypeScript, Go, C#, and Java, plus YAML for teams that prefer a markup format. That means real loops, conditionals, classes, and functions instead of a DSL's limited expressiveness; the testing frameworks, linters, and IDE tooling (autocomplete, type checking, go-to-definition) your teams already rely on for application code; and dependency management through the same package managers---npm, PyPI, NuGet, Maven, Go modules---your teams use everywhere else. Infrastructure code becomes software, reviewed, tested, and refactored the same way, rather than a separate discipline bolted onto the side of engineering.
+Pulumi lets you define infrastructure in the same general-purpose languages your engineering organization already uses: Python, TypeScript, JavaScript, Go, C#, and Java, plus YAML for teams that prefer a markup format. That means real loops, conditionals, classes, and functions instead of a DSL's limited expressiveness; the testing frameworks, linters, and IDE tooling (autocomplete, type checking, go-to-definition) your teams already rely on for application code; and dependency management through the same package managers---npm, PyPI, NuGet, Maven, Go modules---your teams use everywhere else. Infrastructure code becomes software, reviewed, tested, and refactored the same way, rather than a separate discipline bolted onto the side of engineering.
 
-That same language flexibility carries through to cloud coverage. Pulumi supports [180+ providers](/registry/) spanning AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms, including schema-generated native providers for [Kubernetes](/registry/packages/kubernetes/), [Azure Native](/registry/packages/azure-native/), [AWS Cloud Control](/registry/packages/aws-native/), and [Google Cloud Native](/registry/packages/google-native/) that ship support for new cloud APIs without waiting on a hand-authored release. For an organization running true multi-cloud, that means one platform, one state model, and one policy framework across every provider, rather than stitching together separate workspaces and separate governance for each cloud.
+That same language flexibility carries through to cloud coverage. Pulumi supports [150+ providers](/registry/) spanning AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms, including schema-generated native providers for [Kubernetes](/registry/packages/kubernetes/), [Azure Native](/registry/packages/azure-native/), [AWS Cloud Control](/registry/packages/aws-native/), and [Google Cloud Native](/registry/packages/google-native/) that ship support for new cloud APIs without waiting on a hand-authored release. For an organization running true multi-cloud, that means one platform, one state model, and one policy framework across every provider, rather than stitching together separate workspaces and separate governance for each cloud.
 
 ## One unified platform, not a pile of point tools
 
@@ -52,14 +52,14 @@ Mercedes-Benz Research & Development adopted Pulumi specifically to unify applic
 
 | | Pulumi | HCP Terraform |
 | --- | --- | --- |
-| Language | Python, TypeScript, Go, C#, Java, and YAML---general-purpose languages with native testing, IDE support, and package management | HCL, a configuration-focused DSL; `terraform test` covers native unit testing, but reuse and abstraction are limited to the module system |
-| Pricing model | Pulumi Cloud plans; cost is not driven by the number of resources under management | Resources Under Management (RUM)---billed by the count of resources tracked in state, in addition to plan tier |
+| Language | Python, TypeScript, JavaScript, Go, C#, and Java, plus YAML---general-purpose languages with native testing, IDE support, and package management | HCL, a configuration-focused DSL; `terraform test` covers native unit testing, but reuse and abstraction are limited to the module system |
+| Pricing model | One Pulumi Cloud plan bundles IaC, secrets, estate visibility, and AI usage under a single credit allotment, with on-demand pricing for usage beyond it; the Individual tier is free with no resource cap | Resources Under Management (RUM)---billed by the count of resources tracked in state, in addition to plan tier |
 | Free tier | Individual tier is free with no resource cap for personal use | Enhanced Free tier caps out at 500 managed resources per organization |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/), written in Python, TypeScript, or OPA Rego, enforced on every `pulumi up` as part of the same platform | Sentinel or OPA policy checks, run as a distinct step in the HCP Terraform run pipeline |
 | Secrets and configuration | [Pulumi ESC](/docs/esc/) centralizes secrets and config across infrastructure and applications | Workspace variables plus a separate HashiCorp Vault integration for centralized secrets |
 | Estate visibility | [Pulumi Insights](/docs/insights/) inventories every resource across every provider, however it was provisioned | No equivalent; visibility is scoped to what's tracked in HCP Terraform workspaces |
 | AI and agent readiness | [Pulumi Neo](/docs/ai/) and general-purpose AI coding agents operate directly on real, familiar code | Agents must generate and reason about HCL, a narrower and less common training target |
-| Multi-cloud coverage | 180+ providers, one state model, one policy framework across every cloud | Large, mature provider ecosystem; state and policy are scoped per workspace, so multi-cloud governance is assembled by the platform team |
+| Multi-cloud coverage | 150+ providers, one state model, one policy framework across every cloud | Large, mature provider ecosystem; state and policy are scoped per workspace, so multi-cloud governance is assembled by the platform team |
 | Migration path | `pulumi convert` and `pulumi import` bring existing HCL and already-provisioned resources under Pulumi management incrementally | N/A |
 | Ecosystem maturity | Fast-growing registry, with any existing Terraform provider or module usable from Pulumi | The largest and most mature IaC provider and module ecosystem in the industry today |
 
@@ -77,7 +77,7 @@ HCP Terraform's enhanced Free tier remains available, but it's capped at 500 man
 
 ### How does Pulumi's pricing compare to HCP Terraform's Resources Under Management model?
 
-HCP Terraform bills primarily by Resources Under Management, so cost rises directly with the size of your infrastructure footprint. Pulumi Cloud's plans are not driven by a per-resource count, which means a large multi-cloud estate doesn't see its platform bill climb in lockstep with the number of subnets, security group rules, and managed services it operates.
+HCP Terraform bills primarily by Resources Under Management, so cost rises directly with the size of your infrastructure footprint, and that's the only meter running. Pulumi Cloud also has on-demand resource pricing beyond its included allotment, but that allotment sits inside one credit pool that covers IaC state, secrets, estate visibility, and AI usage together, so a large multi-cloud estate is buying one consolidated capability rather than paying separately for a policy engine, a secrets vault, and a resource inventory on top of its Terraform runner.
 
 ### How do I migrate my existing Terraform state and code to Pulumi?
 
@@ -85,7 +85,7 @@ Three options, usable independently or together: convert HCL to a Pulumi program
 
 ### Can Pulumi manage multiple clouds in a single project?
 
-Yes. Pulumi supports [180+ providers](/registry/) across AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms from the same program, in the same state, under the same policy framework, which is what large organizations with genuinely multi-cloud estates use it for today.
+Yes. Pulumi supports [150+ providers](/registry/) across AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms from the same program, in the same state, under the same policy framework, which is what large organizations with genuinely multi-cloud estates use it for today.
 
 ### Does Pulumi work with AI coding agents?
 
