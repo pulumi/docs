@@ -26,6 +26,8 @@ The fix, though, is to give the agent a sandbox: a box it's *allowed* to wreck, 
 **Agent Sandbox** is a Kubernetes SIGs project that gives AI agents isolated, disposable environments as Kubernetes resources: a `Sandbox` custom resource, backed by gVisor or Kata Containers for kernel-level isolation.
 {{< /notes >}}
 
+The project's home is [agent-sandbox.sigs.k8s.io](https://agent-sandbox.sigs.k8s.io/), and the source is on [GitHub](https://github.com/kubernetes-sigs/agent-sandbox).[^announce]
+
 You could build Agent Sandbox yourself. You'd need gVisor support, a userspace kernel that sits between the agent's code and your host. With that in place, you could approximate a sandbox for every agent by stringing together a StatefulSet of size one, a headless Service, and a PersistentVolumeClaim, plus some lifecycle machinery to keep warm pools of nodes around. Agent Sandbox wraps all of that up as a CRD, so you can run a Kubernetes cluster where each sandbox is a disposable, kernel-isolated environment a coding agent runs in.
 
 ```yaml
@@ -190,5 +192,6 @@ The full program, everything in this post, deploy to teardown, is at [pulumi/exa
 
 {{< github-card repo="pulumi/examples" >}}
 
+[^announce]: Agent Sandbox was announced at KubeCon NA in November 2025. See [Unleashing autonomous AI agents: why Kubernetes needs a new standard for agent execution](https://opensource.googleblog.com/2025/11/unleashing-autonomous-ai-agents-why-kubernetes-needs-a-new-standard-for-agent-execution.html).
 [^15]: Warm pools plus snapshot restore are how the managed version keeps this fast at scale: Google's GKE Agent Sandbox launch cites 300 sandboxes per second at sub-second latency. See [Bringing you Agent Sandbox on GKE and Agent Substrate](https://cloud.google.com/blog/products/containers-kubernetes/bringing-you-agent-sandbox-on-gke-and-agent-substrate).
 [^22]: The upstream install manifests set up the CRDs and controller but don't define an egress `NetworkPolicy` for your sandbox pods, so restricting egress is left to you. See [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox).
