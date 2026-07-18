@@ -81,6 +81,7 @@ sections:
     slugs:
       - how-to-step-up-cloud-infrastructure-testing
       - guide-to-automating-file-expiration-in-aws-s3
+      - mcp-for-infrastructure-as-code
 
 troubleshooting:
   title: Troubleshooting & CLI recipes
