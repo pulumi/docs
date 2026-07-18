@@ -15,7 +15,7 @@ Building a container image as part of a Pulumi program gives you a single, versi
 
 ## How Pulumi decides to rebuild an image
 
-`docker-build.Image` computes a `contextHash` output — a preliminary hash of the build context (the Dockerfile and the files it references) — and uses it during the diff calculation to determine whether an image *may* need to be rebuilt. This preliminary check lets `pulumi preview` report a likely change without invoking a full BuildKit build. It's a hash of your inputs to the build, not of the resulting image, so it only catches changes Pulumi can see: edits to the Dockerfile and files copied into the context. It does not, and cannot, know if a `FROM` base image was updated upstream, since that's resolved at build time, not diff time. If your Dockerfile pulls `FROM node:20` and a new `20.x` patch lands, the context hash is unchanged and Pulumi won't report a pending rebuild — the next build simply picks up whatever `node:20` currently resolves to. Pin base images by digest (`FROM node:20@sha256:...`) when you need the build itself, not just Pulumi's plan, to be fully reproducible.
+`docker-build.Image` computes a `contextHash` output, a preliminary hash of the build context (the Dockerfile and the files it references), and uses it during the diff calculation to determine whether an image *may* need to be rebuilt. This preliminary check lets `pulumi preview` report a likely change without invoking a full BuildKit build. It's a hash of your inputs to the build, not of the resulting image, so it only catches changes Pulumi can see: edits to the Dockerfile and files copied into the context. It cannot know if a `FROM` base image was updated upstream, since that's resolved at build time, not diff time. If your Dockerfile pulls `FROM node:20` and a new `20.x` patch lands, the context hash is unchanged and Pulumi does not report a pending rebuild — the next build picks up whatever `node:20` currently resolves to. Pin base images by digest (`FROM node:20@sha256:...`) when you need the build itself, not only Pulumi's plan, to be fully reproducible.
 
 The classic `docker.Image` resource takes a different approach: it always invokes a Docker build on `pulumi up` and delegates the rebuild-avoidance decision entirely to the Docker daemon or BuildKit's own layer cache, rather than computing a context hash of its own. In practice this means `docker.Image` is more prone to appearing to "do work" on every update — the image is always rebuilt from Pulumi's perspective, even if BuildKit determines every layer is already cached and the build completes in milliseconds. `docker-build.Image`'s context hash gives Pulumi a better signal for `preview` output and change summaries, on top of whatever caching you configure for the underlying build.
 
@@ -134,7 +134,7 @@ The same principle applies to a Kubernetes `Deployment`: reference `image.digest
 
 `docker-build.Image` delegates all caching to BuildKit through its `cacheFrom` and `cacheTo` inputs — the equivalents of Docker's `--cache-from` and `--cache-to` flags — rather than reimplementing caching logic itself. That matters for CI: a registry-backed cache (`type=registry` in Docker terms) lets any runner, on any CI system, pull the layers a previous run already built, without needing a persistent local disk or a CI-specific cache feature. The classic `docker.Image` resource's own `cacheFrom` parameter predates BuildKit-native caching and requires extra environment variables to behave correctly; `docker-build.Image`'s version is a thin, direct mapping onto Docker's own cache backends (registry, GitHub Actions, S3, Azure Blob, or local disk), so it behaves exactly the way `docker buildx build --cache-from=... --cache-to=...` would from the command line.
 
-Push the cache to a dedicated tag in the same repository you're already pushing images to — Amazon ECR, Google Artifact Registry, and Docker Hub all support this identically, since it's just another manifest push:
+Push the cache to a dedicated tag in the same repository you're already pushing images to. Most registries — including Google Artifact Registry and Docker Hub — accept this as just another manifest push; Amazon ECR needs the OCI-manifest options shown below (`imageManifest` and `ociMediaTypes`) because it doesn't accept BuildKit's default image-index cache manifest.
 
 {{< chooser language "typescript,python" >}}
 
@@ -220,7 +220,7 @@ pulumi.export("image_ref", image.ref)
 
 {{< /chooser >}}
 
-`imageManifest` and `ociMediaTypes` on the cache-to side aren't strictly required for every registry, but setting both is a safe default — some registries (Google Artifact Registry among them) reject the non-OCI cache manifest format that BuildKit produces without them.
+`imageManifest` and `ociMediaTypes` on the cache-to side aren't strictly required for every registry, but setting both is a safe default — some registries (Amazon ECR among them) reject the non-OCI cache manifest format that BuildKit produces without them.
 
 Because the build lives inside the Pulumi program rather than in a separate `docker build` CI step, the GitHub Actions workflow itself stays simple: it only needs to authenticate and run `pulumi up`.
 
@@ -418,7 +418,7 @@ task_definition = aws.ecs.TaskDefinition("app-task",
 
 {{< /chooser >}}
 
-This split only works cleanly when both stacks can reliably read and write state and each other's outputs regardless of which machine or CI runner is doing the reading — which is exactly what the [Pulumi Cloud state backend](/docs/iac/concepts/state-and-backends/) is built for. A self-managed backend (an S3 bucket or similar) can technically serve the same `StackReference` calls, but you take on the concurrency locking, access control, and availability of that storage yourself, on top of the infrastructure you actually set out to manage. Pulumi Cloud handles state locking, versioned state history, and encrypted output storage for you, and layers Pulumi ESC and Pulumi Deployments on top for exactly this build-stack/deploy-stack promotion workflow — it's the backend to default to for anything beyond a single-developer experiment.
+This split only works cleanly when both stacks can reliably read and write state and each other's outputs regardless of which machine or CI runner is doing the reading — which is exactly what the [Pulumi Cloud state backend](/docs/iac/concepts/state-and-backends/) is built for. A self-managed backend (an S3 bucket or similar) can technically serve the same `StackReference` calls, but you take on the access control, availability, and durability of that storage yourself, on top of the infrastructure you actually set out to manage. Pulumi Cloud handles state locking, versioned state history, and encrypted output storage for you, and layers Pulumi ESC and Pulumi Deployments on top for exactly this build-stack/deploy-stack promotion workflow — it's the backend to default to for anything beyond a single-developer experiment.
 
 ## Choosing between `docker-build` and `docker`
 
@@ -434,4 +434,3 @@ That doesn't make `docker.Image` a poor choice for programs already built on it.
 - [Stacks and stack references](/docs/iac/concepts/stacks/#stackreferences) — the mechanism behind the build/deploy split above.
 - [State and backends](/docs/iac/concepts/state-and-backends/) — why Pulumi Cloud is the recommended backend for multi-stack workflows like this one.
 - [AWS ECS](/docs/iac/guides/clouds/aws/ecs/) — deploying containerized applications to Amazon ECS with Pulumi.
-
