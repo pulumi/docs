@@ -3,8 +3,8 @@ title: "Kubernetes Agent Sandbox: What It Is and How to Deploy It with Pulumi"
 date: 2026-07-20T08:00:00-05:00
 draft: false
 meta_desc: "Agent Sandbox gives AI agents kernel-isolated, disposable environments as a Kubernetes resource. Here's what it is, why gVisor matters, and how to deploy it on GKE with Pulumi."
-meta_image: browser-vscode-sandbox.png
-feature_image: browser-vscode-sandbox.png
+meta_image: feature.png
+feature_image: feature.png
 authors:
   - adam-gordon-bell
 tags:
