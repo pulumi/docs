@@ -82,7 +82,7 @@ Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing 
 
 ## Deploying it on GKE with Pulumi
 
-If you already have a cluster and want to try Agent Sandbox, the `kubectl apply` from the project's quickstart will probably get you going. But productionized use takes a bit more. Let's walk through setting up a cluster with a sane access policy, named individuals, and a dedicated environment per user. The full program is at [pulumi/agent-sandbox-gke](https://github.com/pulumi/agent-sandbox-gke).<!-- ⚠ placeholder link -->
+If you already have a cluster and want to try Agent Sandbox, the `kubectl apply` from the project's quickstart will probably get you going. But productionized use takes a bit more. Let's walk through setting up a cluster with a sane access policy, named individuals, and a dedicated environment per user. The full program is at [pulumi/examples/gcp-ts-agent-sandbox](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox).
 
 **Move 1: the cluster.** First we stand up a GKE cluster with a gVisor node pool. The one line that matters is the `sandboxConfig`, with `sandboxType: "gvisor"`. As far as I'm aware, this can only be done on GKE:
 
@@ -185,9 +185,9 @@ Open it on any device signed into your tailnet and you're in a full VS Code (cod
 
 Agent Sandbox makes a kernel-isolated, disposable agent environment a first-class Kubernetes object, and Pulumi is how you stand one up as one program instead of a runbook.
 
-The full program, everything in this post, deploy to teardown, is at [pulumi/agent-sandbox-gke](https://github.com/pulumi/agent-sandbox-gke). Clone it, point it at a GCP project, and you have your own dedicated agent cluster in about twelve minutes. If you're new to Pulumi, [get started here](/docs/iac/get-started/).
+The full program, everything in this post, deploy to teardown, is at [pulumi/examples/gcp-ts-agent-sandbox](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox). Clone it, point it at a GCP project, and you have your own dedicated agent cluster in about twelve minutes. If you're new to Pulumi, [get started here](/docs/iac/get-started/).
 
-{{< github-card repo="pulumi/agent-sandbox-gke" >}}
+{{< github-card repo="pulumi/examples" >}}
 
 [^3]: StepSecurity, "Nx build system package compromised with data-stealing malware" (s1ngularity), Aug 2025.
 [^5]: Janet Kuo & Justin Santa Barbara, "Running Agents on Kubernetes with Agent Sandbox," kubernetes.io blog, 2026-03-20.
