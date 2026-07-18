@@ -15,6 +15,8 @@ tags:
     - kubernetes
     - devops
 category: general
+aliases:
+    - /what-is/top-iac-tools/
 faq_schema: true
 ---
 
