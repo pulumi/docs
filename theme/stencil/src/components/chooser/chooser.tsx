@@ -73,16 +73,6 @@ export interface Choice {
     value: ChooserOption;
 }
 
-// Special-purpose languages (HCL, OPA) are only offered on a handful of pages (e.g. the
-// Terraform/HCL and stack-reference tutorials). Unlike the mainstream languages, they
-// must not linger as a global preference: left set, every page that doesn't offer them
-// renders a blank/inconsistent fallback, and inline helpers like <langfile> show the
-// wrong filename. So when a visible language tab bar can't honor one of these, it resets
-// the global preference to its fallback (see preferredOrDefault). Pages that *do* offer
-// HCL/OPA still keep it, since their choosers find it among their options and never fall
-// back.
-const specialPurposeLanguages: LanguageKey[] = ["hcl", "opa"];
-
 /**
  * The Chooser component renders a set of selectable tabs based on the type and options
  * properties provided. For example, this definition:
@@ -233,27 +223,11 @@ export class Chooser {
                 }
 
                 if (!this.currentOptions.find(o => o.key === key)) {
-                    const fallback = this.currentOptions[0].key;
+                    key = this.currentOptions[0].key;
 
-                    // A visible language tab bar (anything but a headless option-style="none"
-                    // helper like <langfile>) that can't honor a special-purpose language
-                    // clears it from the store, so the whole page -- and any page navigated
-                    // to next -- renders the fallback consistently. Read option-style off the
-                    // host element rather than this.optionStyle, which componentWillLoad
-                    // overwrites to "tabbed".
-                    const isVisibleLanguageTabBar = this.type === "language" && this.el.getAttribute("option-style") !== "none";
-
-                    if (isVisibleLanguageTabBar && specialPurposeLanguages.includes(key as LanguageKey)) {
-                        this.setLanguage(fallback as LanguageKey);
-                    } else {
-                        // Mainstream preferences are left untouched: fall back for display
-                        // only so a subset page never clobbers a page-wide selection (#18303).
-                        this.choosables.forEach(choosable => {
-                            choosable.setAttribute("mode", "local");
-                        });
-                    }
-
-                    key = fallback;
+                    this.choosables.forEach(choosable => {
+                        choosable.setAttribute("mode", "local");
+                    });
                 }
                 return { selection: key };
             };
