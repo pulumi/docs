@@ -1,5 +1,6 @@
 {{- $path := .Get "path" -}}
 {{- $languages := default "javascript,typescript,python,go,csharp,java,yaml" (.Get "languages") -}}
+{{- $dedent := eq (.Get "dedent") "true" -}}
 {{- $programsDir := slice "static" "programs" -}}
 {{- $showChooser := gt (len (split $languages ",")) 1 -}}
 {{- if $showChooser -}}
@@ -75,6 +76,30 @@
 {{- $lineCount := add (sub (int $to) (int $from)) 1 -}}
 {{- $toTo := first $lineCount $toEnd -}}
 {{- $code = delimit $toTo "\n" -}}
+{{- if $dedent -}}
+{{- /* Per the brand style guide, quoted snippets omit the source's leading indentation. Strip the whitespace common to every non-blank line so a nested block renders flush-left; a block already at column 0 is left untouched. */ -}}
+{{- $codeLines := split $code "\n" -}}
+{{- $min := -1 -}}
+{{- range $codeLines -}}
+{{- if ne (trim . " \t") "" -}}
+{{- $lead := len (index (findRE "^[ \t]*" . 1) 0) -}}
+{{- if or (eq $min -1) (lt $lead $min) -}}
+{{- $min = $lead -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+{{- if gt $min 0 -}}
+{{- $dedented := slice -}}
+{{- range $codeLines -}}
+{{- if ge (len .) $min -}}
+{{- $dedented = $dedented | append (substr . $min) -}}
+{{- else -}}
+{{- $dedented = $dedented | append . -}}
+{{- end -}}
+{{- end -}}
+{{- $code = delimit $dedented "\n" -}}
+{{- end -}}
+{{- end -}}
 <div data-program-path="{{ $path }}" data-program-language="{{ $language }}" data-program-file="{{ $program }}" data-program-depfile="{{ $depfile }}">
 {{ highlight $code $language }}
 </div>
