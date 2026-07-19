@@ -1,13 +1,13 @@
 name: sample-components-yaml
-description: A Pulumi YAML program that builds and uses a static page component
+description: A Pulumi YAML program that builds and uses a static website component
 runtime:
   name: yaml
 packages:
   sample-components: ./sample-components
 resources:
-  my-static-page:
-    type: sample-components:StaticPage
+  my-static-website:
+    type: sample-components:StaticWebsite
     properties:
       indexContent: "<h1>I love Pulumi!</h1>"
 outputs:
-  websiteURL: http://${my-static-page.endpoint}
+  websiteURL: http://${my-static-website.endpoint}

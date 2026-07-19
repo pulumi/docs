@@ -1,4 +1,4 @@
-package staticpagecomponent
+package staticwebsitecomponent
 
 import (
 	"encoding/json"
@@ -8,18 +8,18 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-type StaticPageArgs struct {
+type StaticWebsiteArgs struct {
 	IndexContent pulumi.StringInput `pulumi:"indexContent"`
 }
 
-type StaticPage struct {
+type StaticWebsite struct {
 	pulumi.ResourceState
 	Endpoint pulumi.StringOutput `pulumi:"endpoint"`
 }
 
-func NewStaticPage(ctx *pulumi.Context, name string, args *StaticPageArgs, opts ...pulumi.ResourceOption) (*StaticPage, error) {
-	comp := &StaticPage{}
-	err := ctx.RegisterComponentResource("sample-components:index:StaticPage", name, comp, opts...)
+func NewStaticWebsite(ctx *pulumi.Context, name string, args *StaticWebsiteArgs, opts ...pulumi.ResourceOption) (*StaticWebsite, error) {
+	comp := &StaticWebsite{}
+	err := ctx.RegisterComponentResource("sample-components:index:StaticWebsite", name, comp, opts...)
 	if err != nil {
 		return nil, err
 	}

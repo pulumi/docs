@@ -64,11 +64,11 @@ In this example, we'll create a static website component in AWS Simple Storage S
 
 The component will take as input the contents of the file you wish to host, and will output the S3 endpoint used to access it.
 
-***Example:** Using the custom StaticPage component in a Pulumi Program*
+***Example:** Using the custom StaticWebsite component in a Pulumi Program*
 
 {{< example-program path="sample-components" languages="yaml" >}}
 
-The core implementation of the AWS API is handled by the [Pulumi AWS Provider](/registry/packages/aws/), which gives us those five underlying resource types. Our `StaticPage` component will work with those existing _resource_ types and create a new type of resource with a simpler API.
+The core implementation of the AWS API is handled by the [Pulumi AWS Provider](/registry/packages/aws/), which gives us those five underlying resource types. Our `StaticWebsite` component will work with those existing _resource_ types and create a new type of resource with a simpler API.
 
 The walkthrough below focuses on the component class itself. The surrounding project layout — the directory, `PulumiPlugin.yaml`, language manifest (`package.json`, `pyproject.toml`, `go.mod`, `.csproj`, or `pom.xml`), and entry file — is covered in [Authoring a Source-Based Plugin Package](/docs/iac/guides/building-extending/packages/source-based-plugin/). You can scaffold the project there first and return here for the class implementation, or write the class first and wrap it later.
 
@@ -84,11 +84,11 @@ Components typically require two parts: a subclass of `pulumi.ComponentResource`
 
 {{% choosable language typescript %}}
 
-First create a file called `StaticPage.ts`, and add the imports we will need:
+First create a file called `StaticWebsite.ts`, and add the imports we will need:
 
-***Example:** `StaticPage.ts` required imports*
+***Example:** `StaticWebsite.ts` required imports*
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:1-2" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:1-2" >}}
 
 The `@pulumi/pulumi` package is the core Pulumi SDK, which provides the base classes and types needed to define components and resources. The `@pulumi/aws` package is the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
 
@@ -96,11 +96,11 @@ The `@pulumi/pulumi` package is the core Pulumi SDK, which provides the base cla
 
 {{% choosable language python %}}
 
-First create a file called `static_page.py`, and add the imports we will need:
+First create a file called `static_website.py`, and add the imports we will need:
 
-***Example:** `static_page.py` required dependencies*
+***Example:** `static_website.py` required dependencies*
 
-{{< example-program path="sample-components" languages="python:static_page.py:1-6" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:1-6" >}}
 
 The `pulumi` package is the core Pulumi SDK, which provides the base classes and types needed to define components and resources. The `pulumi_aws` package is the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
 
@@ -108,11 +108,11 @@ The `pulumi` package is the core Pulumi SDK, which provides the base classes and
 
 {{% choosable language go %}}
 
-First create a directory called `staticpagecomponent` and create a file called `static_page.go` inside it. This will be our importable Go package:
+First create a directory called `staticwebsitecomponent` and create a file called `static_website.go` inside it. This will be our importable Go package:
 
-***Example:** `staticpagecomponent/static_page.go` required dependencies*
+***Example:** `staticwebsitecomponent/static_website.go` required dependencies*
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:1-9" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:1-9" >}}
 
 The `github.com/pulumi/pulumi/sdk/v3/go/pulumi` package is the core Pulumi SDK, which provides the base types needed to define components and resources. The `github.com/pulumi/pulumi-aws/sdk/v7/go/aws/s3` package is the Pulumi AWS provider's S3 module, which gives us the resource types we need to create AWS infrastructure.
 
@@ -120,11 +120,11 @@ The `github.com/pulumi/pulumi/sdk/v3/go/pulumi` package is the core Pulumi SDK, 
 
 {{% choosable language csharp %}}
 
-First create a file called `StaticPage.cs`, and add the imports we will need:
+First create a file called `StaticWebsite.cs`, and add the imports we will need:
 
-***Example:** `StaticPage.cs` required imports*
+***Example:** `StaticWebsite.cs` required imports*
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:1-8" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:1-8" >}}
 
 The `Pulumi` namespace is the core Pulumi SDK, which provides the base classes and types needed to define components and resources. The `Pulumi.Aws.S3` namespace is from the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
 
@@ -132,11 +132,11 @@ The `Pulumi` namespace is the core Pulumi SDK, which provides the base classes a
 
 {{% choosable language java %}}
 
-First create a file called `StaticPage.java`, and add the imports we will need:
+First create a file called `StaticWebsite.java`, and add the imports we will need:
 
-***Example:** `StaticPage.java` required imports*
+***Example:** `StaticWebsite.java` required imports*
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:1-24" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:1-24" >}}
 
 The `com.pulumi.resources` and `com.pulumi.core` packages are from the core Pulumi SDK, which provide the base classes and types needed to define components and resources. The `com.pulumi.aws.s3` package is from the Pulumi AWS provider, which gives us the resource types we need to create AWS infrastructure.
 
@@ -158,9 +158,9 @@ Next, we will declare the component's arguments. Most languages model these as a
 
 {{% choosable language typescript %}}
 
-***Example:** `StaticPage.ts` the Component arguments implementation*
+***Example:** `StaticWebsite.ts` the Component arguments implementation*
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:4-6" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:4-6" >}}
 
 Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. Certain types like union types (e.g., `string | number`) and functions are not supported due to schema inference limitations. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
@@ -168,9 +168,9 @@ Note that argument classes must be *serializable* and use `pulumi.Input` types, 
 
 {{% choosable language python %}}
 
-***Example:** `static_page.py` the Component arguments implementation*
+***Example:** `static_website.py` the Component arguments implementation*
 
-{{< example-program path="sample-components" languages="python:static_page.py:9-11" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:9-11" >}}
 
 Note that argument classes must be *serializable* and use `pulumi.Input` types, rather than the language's default types. This means certain types like union types and functions are not supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
@@ -179,9 +179,9 @@ Python class properties are typically written in lowercase with words separated 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-***Example:** `static_page.go` the Component arguments implementation*
+***Example:** `static_website.go` the Component arguments implementation*
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:11-13" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:11-13" >}}
 
 Note that argument struct fields must be *serializable* and use `pulumi.*Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
@@ -191,9 +191,9 @@ Go struct fields are typically written in title case, with the first letter capi
 
 {{% choosable language csharp %}}
 
-***Example:** `StaticPage.cs` the Component arguments implementation*
+***Example:** `StaticWebsite.cs` the Component arguments implementation*
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:10-13" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:10-13" >}}
 
 Note that argument classes must be *serializable* and use `Pulumi.Input` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
@@ -201,9 +201,9 @@ Note that argument classes must be *serializable* and use `Pulumi.Input` types, 
 
 {{% choosable language java %}}
 
-***Example:** `StaticPage.java` the Component arguments implementation*
+***Example:** `StaticWebsite.java` the Component arguments implementation*
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:26-40" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:26-40" >}}
 
 Note that argument classes must be *serializable* and use `com.pulumi.core.Output<T>` types, rather than the language's default types. This means complex or platform-specific types may not be supported. For details on type requirements and limitations, see [Component arguments and type requirements](#component-arguments-and-type-requirements).
 
@@ -233,9 +233,9 @@ Inputs can be any basic type (e.g. `boolean`, `integer`, `string`) or an `array`
 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `self.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `StaticPage.ts` the Component implementation*
+***Example:** `StaticWebsite.ts` the Component implementation*
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:8-83" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:8-83" >}}
 
 {{% /choosable %}}
 
@@ -243,18 +243,18 @@ Now we can implement the component itself. Components should inherit from `pulum
 
 Now we can implement the component itself. Components should inherit from `pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `self.register_outputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `static_page.py` the Component implementation*
+***Example:** `static_website.py` the Component implementation*
 
-{{< example-program path="sample-components" languages="python:static_page.py:14-59" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:14-59" >}}
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-Now we can implement the component itself. Component structs should include `pulumi.ResourceState` and define the consumable outputs, which follow the same general rules as inputs. Go has no constructors, so all the work for building our component happens in the `NewStaticPage` factory function.
+Now we can implement the component itself. Component structs should include `pulumi.ResourceState` and define the consumable outputs, which follow the same general rules as inputs. Go has no constructors, so all the work for building our component happens in the `NewStaticWebsite` factory function.
 
-***Example:** `static_page.go` the Component implementation*
+***Example:** `static_website.go` the Component implementation*
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:15-96" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:15-96" >}}
 
 {{% /choosable %}}
 
@@ -262,9 +262,9 @@ Now we can implement the component itself. Component structs should include `pul
 
 Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `this.RegisterOutputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `StaticPage.cs` the Component implementation*
+***Example:** `StaticWebsite.cs` the Component implementation*
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:15-68" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:15-68" >}}
 
 {{% /choosable %}}
 
@@ -272,9 +272,9 @@ Now we can implement the component itself. Components should inherit from `Pulum
 
 Now we can implement the component itself. Components should inherit from `Pulumi.ComponentResource`, and should accept the arguments class we just defined in the constructor. All the work for our component happens in the constructor, and outputs are returned via class properties. At the end of the process, calling `this.registerOutputs` signals Pulumi that the process of creating the component resource has completed.
 
-***Example:** `StaticPage.java` the Component implementation*
+***Example:** `StaticWebsite.java` the Component implementation*
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:42-125" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:42-125" >}}
 
 {{% /choosable %}}
 
@@ -291,7 +291,7 @@ components:
     outputs:        # one or more output values
 ```
 
-Here's the full code for our `StaticPage` component:
+Here's the full code for our `StaticWebsite` component:
 
 ***Example:** `PulumiPlugin.yaml` the Component implementation*
 
@@ -311,19 +311,19 @@ Let's dissect this component implementation piece-by-piece:
 
 #### Inheriting from the base class
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:8-8" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:8-8" >}}
 
 Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:9-9" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:9-9" >}}
 
 We use a class property to store the output value. Component outputs should always use `pulumi.Output<T>` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `pulumi.Output<T>`, without any additional unwrapping or conversion.
 
 #### The Component constructor
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:11-12" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:11-12" >}}
 
 The constructor has a few standard arguments:
 
@@ -341,7 +341,7 @@ Changing the resource type name after a component has been deployed will cause a
 
 All five child resources — `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock`, and `BucketPolicy` — are created inside the constructor:
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:14-61" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:14-61" >}}
 
 When creating child resources inside the component:
 
@@ -358,15 +358,15 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:63-67" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:63-67" >}}
 
 #### Helper functions
 
 In addition to the constructor logic, we also have a helper function `allowGetObjectPolicy`:
 
-***Example:** `StaticPage.ts` a helper function*
+***Example:** `StaticWebsite.ts` a helper function*
 
-{{< example-program path="sample-components" languages="typescript:StaticPage.ts:70-82" >}}
+{{< example-program path="sample-components" languages="typescript:StaticWebsite.ts:70-82" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `apply(...)`. That means that the `bucketName`, which is normally a `pulumi.Output<string>` value, can be materialized as a normal TypeScript string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `JSON.stringify(...)` function takes the object as input and returns it as a JSON formatted string.
 
@@ -376,19 +376,19 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Inheriting from the base class
 
-{{< example-program path="sample-components" languages="python:static_page.py:14-14" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:14-14" >}}
 
 Inheriting from `pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-{{< example-program path="sample-components" languages="python:static_page.py:15-16" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:15-16" >}}
 
 We use a class property to store the output value. Component outputs should always use `pulumi.Output[T]` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `pulumi.Output[T]`, without any additional unwrapping or conversion.
 
 #### The Component constructor
 
-{{< example-program path="sample-components" languages="python:static_page.py:18-23" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:18-23" >}}
 
 The constructor has a few standard arguments:
 
@@ -406,7 +406,7 @@ Changing the resource type name after a component has been deployed will cause a
 
 All five child resources — `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock`, and `BucketPolicy` — are created inside the constructor:
 
-{{< example-program path="sample-components" languages="python:static_page.py:25-53" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:25-53" >}}
 
 When creating child resources inside the component:
 
@@ -423,15 +423,15 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `self.register_outputs` signals Pulumi that the component creation process has completed.
 
-{{< example-program path="sample-components" languages="python:static_page.py:55-59" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:55-59" >}}
 
 #### Helper functions
 
 In addition to the constructor logic, we also have a helper function `_allow_getobject_policy`:
 
-***Example:** `static_page.py` a helper function*
+***Example:** `static_website.py` a helper function*
 
-{{< example-program path="sample-components" languages="python:static_page.py:62-75" >}}
+{{< example-program path="sample-components" languages="python:static_website.py:62-75" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `apply(...)`. That means that the `bucket_name`, which is normally a `pulumi.Output[str]` value, can be materialized as a normal Python string, and is passed into this function that way. Note that you can't modify the value of `bucket_name`, but you can *read* the value and use it to construct the policy document. The `json.dumps(...)` function takes the dictionary as input and returns it as a JSON formatted string.
 
@@ -441,19 +441,19 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Defining the struct
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:15-18" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:15-18" >}}
 
 The struct must embed the `pulumi.ResourceState` struct. This gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as struct fields
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:17-17" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:17-17" >}}
 
 We use a struct field to store the output value. Component outputs should always use a `pulumi.*Output` type (such as `pulumi.StringOutput`) rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept these output types, without any additional unwrapping or conversion. The `pulumi:"endpoint"` tag defines the name of the property and allows for reflection to generate schema.
 
 #### The component factory function
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:20-25" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:20-25" >}}
 
 The factory function has a few standard arguments:
 
@@ -472,7 +472,7 @@ Changing the resource type name after a component has been deployed will cause a
 
 All five child resources — `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock`, and `BucketPolicy` — are created inside the factory function:
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:27-91" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:27-91" >}}
 
 When creating child resources inside the component:
 
@@ -489,15 +489,15 @@ The last part of the factory function handles output values. First we set the `E
 
 Finally, return the component instance.
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:93-96" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:93-96" >}}
 
 #### Helper functions
 
 In addition to the factory function logic, we also had this inline helper function `allowGetObjectPolicy`:
 
-***Example:** `static_page.go` a helper function*
+***Example:** `static_website.go` a helper function*
 
-{{< example-program path="sample-components" languages="go:staticpagecomponent/static_page.go:64-81" >}}
+{{< example-program path="sample-components" languages="go:staticwebsitecomponent/static_website.go:64-81" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `ApplyT(...)`. That means that the `bucketName`, which is normally an asynchronous `pulumi.StringOutput` value, can be materialized as a normal Go string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `json.Marshal(...)` function takes the map as input and returns it as a JSON formatted string.
 
@@ -507,19 +507,19 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Inheriting from the base class
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:15-15" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:15-15" >}}
 
 Inheriting from `Pulumi.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:16-17" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:16-17" >}}
 
 We use a class property to store the output value. Component outputs should always use `Pulumi.Output<T>` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `Pulumi.Output<T>`, without any additional unwrapping or conversion.
 
 #### The Component constructor
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:19-21" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:19-21" >}}
 
 The constructor has a few standard arguments:
 
@@ -537,7 +537,7 @@ Changing the resource type name after a component has been deployed will cause a
 
 All five child resources — `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock`, and `BucketPolicy` — are created inside the constructor:
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:22-44" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:22-44" >}}
 
 When creating child resources inside the component:
 
@@ -554,15 +554,15 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `this.RegisterOutputs` signals Pulumi that the component creation process has completed.
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:46-51" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:46-51" >}}
 
 #### Helper functions
 
 In addition to the constructor logic, we also have a helper function `AllowGetObjectPolicy`:
 
-***Example:** `StaticPage.cs` a helper function*
+***Example:** `StaticWebsite.cs` a helper function*
 
-{{< example-program path="sample-components" languages="csharp:StaticPage.cs:53-67" >}}
+{{< example-program path="sample-components" languages="csharp:StaticWebsite.cs:53-67" >}}
 
 This function is used to create a S3 policy document, allowing public access to the objects in our bucket. It will be invoked within the context of `Apply(...)`. That means that the `bucketName`, which is normally a `Pulumi.Output<string>` value, can be materialized as a regular .NET string, and is passed into this function that way. Note that you can't modify the value of `bucketName`, but you can *read* the value and use it to construct the policy document. The `JsonConvert.SerializeObject(...)` function takes the object as input and returns it as a JSON formatted string.
 
@@ -572,13 +572,13 @@ This function is used to create a S3 policy document, allowing public access to 
 
 #### Inheriting from the base class
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:42-42" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:42-42" >}}
 
 Inheriting from `com.pulumi.resources.ComponentResource` gives us some built-in behind-the-scenes behavior that allows the component state to be tracked and run within the Pulumi engine and within its host provider. It also allows the underlying library to find and infer the schema of the component.
 
 #### Outputs as class properties
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:43-44" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:43-44" >}}
 
 We use a class property to store the output value. Component outputs should always use `com.pulumi.core.Output<T>` rather than plain types. This ensures that outputs can be passed directly to other Pulumi resource inputs, which also accept `Output<T>`, without any additional unwrapping or conversion.
 
@@ -586,7 +586,7 @@ The `@Export` annotation marks this as an exported output, and allows us to set 
 
 #### The Component constructor
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:46-47" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:46-47" >}}
 
 The constructor has a few standard arguments:
 
@@ -604,7 +604,7 @@ Changing the resource type name after a component has been deployed will cause a
 
 All five child resources — `Bucket`, `BucketWebsiteConfiguration`, `BucketObject`, `BucketPublicAccessBlock`, and `BucketPolicy` — are created inside the constructor:
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:49-118" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:49-118" >}}
 
 When creating child resources inside the component:
 
@@ -621,7 +621,7 @@ The last part of the constructor handles output values. First we set the `endpoi
 
 Finally, calling `this.registerOutputs` signals Pulumi that the component creation process has completed.
 
-{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticPage.java:120-124" >}}
+{{< example-program path="sample-components" languages="java:src/main/java/myproject/StaticWebsite.java:120-124" >}}
 
 {{% /choosable %}}
 
@@ -987,7 +987,7 @@ YAML components don't have a separate "args class" — inputs are declared inlin
 
 ```yaml
 components:
-  StaticPage:
+  StaticWebsite:
     inputs:
       indexContent:
         type: string

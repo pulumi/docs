@@ -1,7 +1,7 @@
 runtime: yaml
 name: sample-components
 components:
-  StaticPage:
+  StaticWebsite:
     inputs:
       indexContent:
         type: string

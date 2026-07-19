@@ -7,7 +7,7 @@ return await Deployment.RunAsync(() =>
 {
     var pageHTML = "<h1>I love Pulumi!</h1>";
 
-    var page = new StaticPage("my-static-page", new StaticPageArgs {
+    var page = new StaticWebsite("my-static-website", new StaticWebsiteArgs {
         IndexContent = pageHTML,
     });
 

@@ -1,5 +1,5 @@
 name: sample-components-csharp
-description: A Pulumi C# program that builds and uses a static page component
+description: A Pulumi C# program that builds and uses a static website component
 runtime:
   name: dotnet
 config:

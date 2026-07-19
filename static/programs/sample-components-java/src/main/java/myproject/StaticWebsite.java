@@ -23,7 +23,7 @@ import com.pulumi.resources.ComponentResourceOptions;
 import com.pulumi.resources.CustomResourceOptions;
 import com.pulumi.resources.ResourceArgs;
 
-class StaticPageArgs extends ResourceArgs {
+class StaticWebsiteArgs extends ResourceArgs {
     @Import(name = "indexContent", required = true)
     private Output<String> IndexContent;
 
@@ -31,20 +31,20 @@ class StaticPageArgs extends ResourceArgs {
         return this.IndexContent;
     }
 
-    private StaticPageArgs() {
+    private StaticWebsiteArgs() {
     }
 
-    public StaticPageArgs(Output<String> indexContent) {
+    public StaticWebsiteArgs(Output<String> indexContent) {
         this.IndexContent = indexContent;
     }
 }
 
-class StaticPage extends ComponentResource {
+class StaticWebsite extends ComponentResource {
     @Export(name = "endpoint", refs = { String.class }, tree = "[0]")
     public final Output<String> endpoint;
 
-    public StaticPage(String name, StaticPageArgs args, ComponentResourceOptions opts) {
-        super("sample-components:index:StaticPage", name, null, opts);
+    public StaticWebsite(String name, StaticWebsiteArgs args, ComponentResourceOptions opts) {
+        super("sample-components:index:StaticWebsite", name, null, opts);
 
         var bucket = new Bucket(
                 String.format("%s-bucket", name),

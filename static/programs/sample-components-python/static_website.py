@@ -6,21 +6,21 @@ from pulumi import ResourceOptions
 from pulumi_aws import s3
 
 
-class StaticPageArgs(TypedDict):
+class StaticWebsiteArgs(TypedDict):
     index_content: pulumi.Input[str]
     """The HTML content for index.html."""
 
 
-class StaticPage(pulumi.ComponentResource):
+class StaticWebsite(pulumi.ComponentResource):
     endpoint: pulumi.Output[str]
     """The URL of the static website."""
 
     def __init__(self,
                  name: str,
-                 args: StaticPageArgs,
+                 args: StaticWebsiteArgs,
                  opts: Optional[ResourceOptions] = None) -> None:
 
-        super().__init__("sample-components:index:StaticPage", name, {}, opts)
+        super().__init__("sample-components:index:StaticWebsite", name, {}, opts)
 
         bucket = s3.Bucket(
             f"{name}-bucket",

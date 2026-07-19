@@ -1,9 +1,9 @@
 import * as pulumi from "@pulumi/pulumi";
-import { StaticPage } from "./StaticPage";
+import { StaticWebsite } from "./StaticWebsite";
 
 const pageHTML = "<h1>I love Pulumi!</h1>";
 
-const page = new StaticPage("my-static-page", {
+const page = new StaticWebsite("my-static-website", {
     indexContent: pageHTML,
 });
 
