@@ -1,5 +1,5 @@
 ---
-title: MCP for Infrastructure as Code: What It Means for Pulumi Users
+title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
 meta_desc: MCP connects AI agents to your cloud infrastructure. Learn what the Model Context Protocol is and how Pulumi users connect IaC to MCP agents today.
 type: what-is
 page_title: "MCP for Infrastructure as Code: What It Means for Pulumi Users"
@@ -86,6 +86,7 @@ The fastest path is the hosted server, since it needs no local installation beyo
    ```bash
    claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
    ```
+
 3. Restart or reload your client so it picks up the new server entry. On first use of a Pulumi tool, the client opens a browser popup: paste the access token you created in step 1 when prompted, then select the Pulumi organization you want the agent to operate against.
 4. Confirm the connection by asking your agent a read-only question, such as "What stacks do I have in my Pulumi organization?" or "Show me all the S3 buckets across my stacks." A working connection returns real data pulled live from Pulumi Cloud.
 5. Once the connection is confirmed, ask the agent to generate and preview infrastructure, for example: "I need to create an AWS Lambda that processes S3 events. Look up the Lambda and S3 properties and generate the TypeScript code." The agent uses the registry tools to look up accurate resource properties before writing code, then can run a preview through the same connection.
