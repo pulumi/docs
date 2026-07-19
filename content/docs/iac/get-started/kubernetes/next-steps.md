@@ -4,16 +4,18 @@ meta_desc: This page provides a list of tutorials that take a deeper dive into K
            across all major cloud providers.
 title: Next steps
 h1: "Pulumi & Kubernetes: Next steps"
-weight: 9
+weight: 8
 menu:
   iac:
     name: Next steps
     identifier: kubernetes-get-started.next-steps
     parent: kubernetes-get-started
-    weight: 9
+    weight: 8
 
 aliases:
     - /docs/quickstart/kubernetes/next-steps/
+    - /docs/iac/get-started/kubernetes/create-component/
+    - /docs/quickstart/kubernetes/create-component/
 ---
 
 Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are some next steps, depending on your learning style.
@@ -23,6 +25,12 @@ Congrats! You've deployed your first project to Kubernetes with Pulumi. Here are
 Take a deeper look at Pulumi with Kubernetes with this video tutorial.
 
 {{< get-started-next-step path="https://www.youtube.com/watch?v=2P8JLgAc5QI" label="Kubernetes in ~10 minutes" ref="gs-k8s-video" >}}
+
+## Create reusable components
+
+[Components](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components and stamp out entire pieces of infrastructure in just a few lines of code. Learn more about components and follow the [step-by-step guide](/docs/iac/guides/building-extending/components/build-a-component/) to build your first one.
+
+{{< get-started-next-step path="/docs/iac/concepts/resources/components/" label="Learn about components" ref="gs-k8s-components" >}}
 
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
