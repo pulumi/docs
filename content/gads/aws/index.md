@@ -37,9 +37,9 @@ key_features_above:
                     Full API coverage for EC2, EKS, Lambda, S3, RDS, DynamoDB, and every other AWS service. Same-day updates when new services and features launch.
                 icon: global
                 color: yellow
-              - title: AWSx
+              - title: Component libraries
                 description: |
-                    Deploy production-ready VPCs, ECS Fargate services, and EKS clusters in just a few lines of code using Pulumi's AWSx component library.
+                    Deploy production-ready VPCs, ECS Fargate services, and EKS clusters in just a few lines of code using Pulumi's component libraries, like AWSx.
                 icon: code
                 color: yellow
               - title: AI-powered infrastructure
@@ -52,9 +52,9 @@ key_features:
     title: Key features
     items:
         - title: "Production-ready AWS in minutes"
-          sub_title: "Pulumi AWSx"
+          sub_title: "Pulumi component libraries"
           description: |
-            Stop writing hundreds of lines of boilerplate for VPCs, subnets, and security groups. AWSx gives you production-ready architectures with built-in best practices for ECS, EKS, API Gateway, and more — in just a few lines of code.
+            Stop writing hundreds of lines of boilerplate for VPCs, subnets, and security groups. Pulumi's component libraries, like AWSx, give you production-ready architectures with built-in best practices for ECS, EKS, API Gateway, and more — in just a few lines of code.
           ide:
             - title: index.ts
               language: typescript
@@ -179,10 +179,10 @@ key_features:
                 icon: cloud
                 description: |
                     Full API coverage for every AWS service with same-day updates when new features launch. No waiting for third-party support.
-              - title: AWSx
+              - title: Component libraries
                 icon: abstract-shapes
                 description: |
-                    Adopt well-architected best practices for VPC, ECS, EKS, API Gateway, and more with pre-built high-level components.
+                    Adopt well-architected best practices for VPC, ECS, EKS, API Gateway, and more with pre-built high-level components like AWSx.
               - title: Migrate from CloudFormation
                 icon: exchange
                 description: |
