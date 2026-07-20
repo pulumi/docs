@@ -545,12 +545,23 @@ jobs:
               || { echo "::error::fix-scope gate failed; report follows"; cat .fix-scope-report.json; exit 1; }
           fi
 
-      # Branch, push, and draft PR — the write half of what used to be the
+      # Branch, push, and open the PR — the write half of what used to be the
       # model's SKILL.md steps 1 and 7. The branch name comes from the gate
       # (queue slug + verdict retirement), never from the model, and the
       # applied paths are re-checked against the gate's scope rules after
       # `git apply` — the staged tree, not the patch text, is what ships.
-      - name: Create branch and draft PR
+      #
+      # We run the authoritative `make lint` on the applied tree BEFORE opening
+      # the PR — we don't trust the model's self-report that lint passed. On
+      # PASS the PR opens READY for review, which fires triage → review
+      # (content-review/* PRs flow through the normal triage → review chain; see
+      # claude-triage.yml / claude-code-review.yml). On FAIL it opens as a DRAFT
+      # so triage never fires, and the next step comments the lint output for a
+      # human. Either way the next step stamps the authoritative result into the
+      # PR body. Deciding ready-vs-draft at creation time (rather than opening a
+      # draft and promoting it) means a passing PR is born ready and never
+      # depends on a separate promotion transition firing.
+      - name: Create branch and PR
         id: publish
         if: steps.gate.outputs.publish == 'true'
         env:
@@ -581,22 +592,30 @@ jobs:
           # `|| true` covers the common case where the branch doesn't exist.
           git fetch origin "$BRANCH" || true
           git push --force-with-lease -u origin "$BRANCH"
-          gh pr create --draft --title "$TITLE" --body-file .pr-body-draft.md \
-            --base master --head "$BRANCH"
+          # Authoritative lint gate: open ready on PASS, draft on FAIL. The
+          # result is recorded as a step output so the next step can stamp the
+          # body and arm auto-merge / comment without re-running lint.
+          if make lint > .lint.log 2>&1; then
+            echo "lint passed on $BRANCH; opening PR ready for review (fires triage → review)"
+            echo "lint_result=passed" >> "$GITHUB_OUTPUT"
+            gh pr create --title "$TITLE" --body-file .pr-body-draft.md \
+              --base master --head "$BRANCH"
+          else
+            echo "::warning::make lint failed on $BRANCH; opening PR as draft"
+            echo "lint_result=failed" >> "$GITHUB_OUTPUT"
+            gh pr create --draft --title "$TITLE" --body-file .pr-body-draft.md \
+              --base master --head "$BRANCH"
+          fi
 
-      # Lint re-gate + ready promotion. The PR opens as a DRAFT and we don't
-      # trust the model's self-report that `make lint` passed: re-run lint on
-      # the applied tree ourselves. On PASS, promote the PR to ready — that
-      # draft→ready transition is what fires triage and the docs review
-      # (content-review/* PRs flow through the normal triage → review chain; see
-      # claude-triage.yml / claude-code-review.yml). On FAIL, leave it draft (so
-      # triage never fires) and comment the output for a human. Either way, stamp
-      # the authoritative result into the PR body's `<!-- LINT-RESULT -->`
-      # placeholder — this gate is the authority on lint, not the model. The
-      # ledger still records `reviewed`. Build is left to the PR's normal CI.
-      # On a ready PR we also arm GitHub auto-merge (squash); `master` requires
-      # 1 approval + the build check, so it merges only after a human approves.
-      - name: Re-lint, promote, and arm auto-merge
+      # Post-publish bookkeeping. The authoritative `make lint` already ran in
+      # the publish step and decided whether the PR opened ready (PASS) or draft
+      # (FAIL); here we stamp that result into the PR body's `<!-- LINT-RESULT -->`
+      # placeholder — this gate is the authority on lint, not the model — and,
+      # on PASS, arm GitHub auto-merge (squash). On FAIL we comment the lint
+      # output for a human. The ledger still records `reviewed`. Build is left
+      # to the PR's normal CI. `master` requires 1 approval + the build check,
+      # so auto-merge never merges on its own.
+      - name: Stamp lint result and arm auto-merge
         id: lint
         if: steps.publish.outcome == 'success' && steps.gate.outputs.publish == 'true'
         continue-on-error: true
@@ -611,11 +630,9 @@ jobs:
             python3 scripts/content-review/stamp-lint-result.py \
               --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)" || true
           }
-          if make lint > .lint.log 2>&1; then
-            echo "lint passed on $BRANCH; promoting draft → ready (fires triage → review)"
+          if [ "${{ steps.publish.outputs.lint_result }}" = "passed" ]; then
             stamp_body passed
-            gh pr ready "$BRANCH" || echo "::warning::could not promote $BRANCH to ready"
-            # Arm auto-merge (squash) on the now-ready PR. `master` requires 1
+            # Arm auto-merge (squash) on the ready PR. `master` requires 1
             # approving review AND the "Install deps and build site" check, so
             # this NEVER merges on its own — the PR merges only once a human
             # approves and the build is green, which just removes the manual
@@ -624,10 +641,9 @@ jobs:
             gh pr merge "$BRANCH" --auto --squash \
               || echo "::warning::could not enable auto-merge on $BRANCH"
           else
-            echo "::warning::make lint failed on $BRANCH; leaving PR as draft"
             stamp_body failed
             {
-              echo "Automated review note: \`make lint\` failed on this branch, so the PR was left as a draft and no review was triggered. Lint output:"
+              echo "Automated review note: \`make lint\` failed on this branch, so the PR was opened as a draft and no review was triggered. Lint output:"
               echo ""
               echo '```'
               tail -c 4000 .lint.log
