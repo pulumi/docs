@@ -33,7 +33,7 @@ Pulumi supports hundreds of cloud providers, though most organizations use AWS, 
 
 **Recommended approach:** Use Pulumi ESC's OpenID Connect (OIDC) support for [dynamic, short-lived credentials](/docs/esc/providers/login/). This is the most secure method and should be preferred for supported providers.
 
-**Alternative approach:** If your chosen cloud lacks Pulumi ESC OIDC support, consult the registry documentation. Each provider has an "Install & config" section with authentication guidance. See [AWS Installation & Configuration](/docs/esc/providers/login/) as an example. Pulumi uses native tools and techniques for authentication, keeping it consistent with your existing usage patterns.
+**Alternative approach:** If your chosen cloud lacks Pulumi ESC OIDC support, consult the registry documentation. Each provider has an "Install & config" section with authentication guidance. See [AWS Installation & Configuration](/registry/packages/aws/installation-configuration/) as an example. Pulumi uses native tools and techniques for authentication, keeping it consistent with your existing usage patterns.
 
 ## Test your infrastructure code
 
