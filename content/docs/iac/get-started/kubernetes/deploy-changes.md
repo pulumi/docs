@@ -52,10 +52,37 @@ $ pulumi stack output ip
 ```
 
 {{% notes type="info" %}}
-If you're using Minikube, a `LoadBalancer` service won't receive an external IP on its own. You have two options:
+**If using Minikube:** You have two options to access your service:
 
-- Run `minikube tunnel` in a separate terminal (it may require sudo), then set `isMinikube` to `false` and reach the service at its external IP.
-- Set `isMinikube` to `true` and forward a local port to the service instead. Find its name with `kubectl get service`, then run `kubectl port-forward service/<name> 8080:80` and reach it at `http://localhost:8080`.
+### Option 1: Use `minikube tunnel` (recommended)
+
+Minikube can provide LoadBalancer support via the `minikube tunnel` command. In a separate terminal, run:
+
+```bash
+$ minikube tunnel
+```
+
+This assigns an external IP to LoadBalancer services. With the tunnel running, you can set `isMinikube` to `false` and access your service via the external IP. Note that `minikube tunnel` may require administrator/sudo privileges.
+
+### Option 2: Use port forwarding
+
+Alternatively, set `isMinikube` to `true` and use port forwarding:
+
+```bash
+$ kubectl get service
+NAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
+kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP   44h
+nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
+```
+
+The assigned name for this particular nginx service is `nginx-9e5d5cd4`; yours will be different. In a new terminal window, run:
+
+```bash
+$ kubectl port-forward service/nginx-9e5d5cd4 8080:80
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+```
+
 {{% /notes %}}
 
 Once the service is reachable, `curl` it to verify NGINX is running:
