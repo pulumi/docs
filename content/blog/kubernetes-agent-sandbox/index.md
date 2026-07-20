@@ -14,17 +14,13 @@ tags:
 category: tutorials
 ---
 
-When you use a coding agent, it can seem like there's a trade-off between autonomy and permissions. Let it do whatever it likes and it works more autonomously, but as the [nx supply-chain attack](https://www.stepsecurity.io/blog/supply-chain-security-alert-popular-nx-build-system-package-compromised-with-data-stealing-malware) and the many incidents since have shown, that can go badly.
+When you use a coding agent, it can seem like there's a trade-off between autonomy and permissions. Let it do whatever it likes and it works more autonomously, but as the [nx supply-chain attack](https://www.stepsecurity.io/blog/supply-chain-security-alert-popular-nx-build-system-package-compromised-with-data-stealing-malware) showed, that can go badly. However, if you approve each command, you're not getting much autonomy at all.
 
-The fix, though, is to give the agent a sandbox: a box it's *allowed* to wreck, with limited permissions. The only files are the checkout you handed it, the only credentials are the task's own, and trashing the machine just means a disposable pod gets garbage-collected early. [Pulumi Neo](/product/neo/) works this way, and if you want to scale that pattern up inside your own organization, the Kubernetes project Agent Sandbox is a great path to building your own. This post is what it is and how to deploy it on GKE with Pulumi.
+The fix is to give the agent a sandbox: a box it's _allowed_ to wreck, with limited permissions. The only files are the checkout you handed it, the only credentials are the task's own, and trashing the machine just means a disposable pod gets garbage-collected early. [Pulumi Neo](/product/neo/) works this way, and if you want to scale that pattern up inside your own organization, the Kubernetes project Agent Sandbox is a great path to building your own. This post is what it is and how to deploy it on GKE with Pulumi.
 
 <!--more-->
-
 ## What is Agent Sandbox?
-
-{{< notes type="info" >}}
-**Agent Sandbox** is a Kubernetes SIGs project that gives AI agents isolated, disposable environments as Kubernetes resources: a `Sandbox` custom resource, backed by gVisor or Kata Containers for kernel-level isolation.
-{{< /notes >}}
+{{< notes type="info" >}} **Agent Sandbox** is a Kubernetes SIGs project that gives AI agents isolated, disposable environments as Kubernetes resources: a `Sandbox` custom resource, backed by gVisor or Kata Containers for kernel-level isolation. {{< /notes >}}
 
 The project's home is [agent-sandbox.sigs.k8s.io](https://agent-sandbox.sigs.k8s.io/), and the source is on [GitHub](https://github.com/kubernetes-sigs/agent-sandbox).[^announce]
 
@@ -51,45 +47,31 @@ There are two common patterns for using it. In the first, every coding agent ses
 
 ![Scenario 1: a dedicated agent cluster giving each developer their own kernel-isolated sandbox with a coding agent and IDE inside](scenario-1.png)
 
-Here's a quick demo of that first pattern in action — the setup we'll build in this post:
-
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Recorded a little demo: Here&#39;s how every developer gets their own kernel-isolated dev box on Kubernetes: VS Code + Claude Code in a pod behind Tailscale with gVisor underneath for security isolation. write up coming</p>&mdash; Adam Gordon Bell (@adamgordonbell) <a href="https://twitter.com/adamgordonbell/status/2079203736803549566">July 20, 2026</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-In the second, you're building your own Neo or Devin: an agent harness of your own that needs execution environments. The harness lives outside the sandboxes and hands each task a disposable box, and Agent Sandbox is what spins those boxes up and down, suspending and resuming them. When I said Pulumi Neo works this way, this is the scenario I meant: Neo is a harness, and every task it runs gets a box like these.
+In the second, you're building your own Neo or Devin: an agent harness of your own that needs execution environments. The harness lives outside the sandboxes and hands each task a disposable box, and Agent Sandbox is what spins those boxes up and down, suspending and resuming them.
 
 ## Why not just run agents in Docker?
-
 So why do we need gVisor or Kata Containers at all? The agent already runs inside a container. Isn't that the box?
 
-Not really. A container isn't much of a security barrier. Every container on a host shares one kernel, and the Linux kernel exposes a huge surface area, 450+ syscalls, to every one of them. [CVE-2019-5736](https://unit42.paloaltonetworks.com/breaking-docker-via-runc-explaining-cve-2019-5736/) is the canonical example: a malicious container tricks runc into overwriting the *host's own runc binary*, and after that every `docker run` on the host runs attacker code as root. Put a prompt-injectable AI agent in that container, and the risk is obvious.
+Not really. A container isn't much of a security barrier. Every container on a host shares one kernel, and the Linux kernel exposes a huge surface area, 450+ syscalls, to every one of them. [CVE-2019-5736](https://unit42.paloaltonetworks.com/breaking-docker-via-runc-explaining-cve-2019-5736/) is the canonical example: a malicious container tricks runc into overwriting the _host's own runc binary_, and after that every `docker run` on the host runs attacker code as root. Put a prompt-injectable AI agent in that container, and the risk is obvious.
 
 gVisor, the runtime underneath Agent Sandbox's default path, puts a userspace kernel written in Go between your agent and the host, which limits the possible security surface area. A kernel bug the agent can reach becomes, mostly, a crash in a userspace process rather than a root shell on your node. That is what makes an Agent Sandbox secure.
 
-{{< notes type="info" >}}
-**What is GKE Sandbox?**
+{{< notes type="info" >}} **What is GKE Sandbox?**
 
-**GKE Sandbox** is GKE's gVisor feature: a `RuntimeClass` named `gvisor` that runs a pod under the userspace kernel described above. It predates Agent Sandbox by years and is a per-pod isolation primitive, not an agent tool. **Agent Sandbox** is the lifecycle layer that sits on top of it: the CRD's runtime selection points down at gVisor (or Kata) for the actual kernel isolation. They compose. On GKE, Agent Sandbox with `runtimeClassName: gvisor` is literally using GKE Sandbox underneath.
-{{< /notes >}}
+**GKE Sandbox** is GKE's gVisor feature: a `RuntimeClass` named `gvisor` that runs a pod under the userspace kernel described above. It predates Agent Sandbox by years and is a per-pod isolation primitive, not an agent tool. **Agent Sandbox** is the lifecycle layer that sits on top of it: the CRD's runtime selection points down at gVisor (or Kata) for the actual kernel isolation. They compose. On GKE, Agent Sandbox with `runtimeClassName: gvisor` is literally using GKE Sandbox underneath. {{< /notes >}}
 
 Google engineers in Kubernetes SIG Apps maintain Agent Sandbox, Janet Kuo and Justin Santa Barbara (of kOps) among them, and it launched at KubeCon NA in November 2025. It's also one layer of a broader cloud-native agent stack taking shape: agent-sandbox for isolation, kagenti (IBM) for identity, kagent (Solo.io, a CNCF Sandbox project) for agent logic, agent-substrate for density. As Solo.io's Lin Sun puts it, ["Sandboxing your agents is necessary, but not sufficient."](https://www.cncf.io/blog/2026/07/07/why-sandboxing-your-agent-is-not-enough/)
 
-{{< notes type="info" >}}
-**The rung above gVisor: hardware microVMs**
+{{< notes type="info" >}} **The rung above gVisor: hardware microVMs**
 
-gVisor filters syscalls in a userspace kernel. The heavier option gives the workload its own guest kernel behind hardware virtualization (KVM), so an escape has to cross a CPU-enforced boundary. **Firecracker**, the VMM AWS built for Lambda (and the isolation layer under [Bedrock AgentCore](/blog/from-works-on-my-machine-to-production-ready-ai-agents-with-amazon-bedrock-agentcore/)), keeps that boundary cheap: roughly 50,000 lines of Rust against QEMU's ~1.4 million lines of C. Google's [kvmCTF](https://google.github.io/security-research/kvmctf/rules.html) pays $250,000 for a KVM escape, which is how the market rates that boundary. Agent Sandbox reaches this rung through **Kata Containers** via the same `runtime` selection, and the tradeoff isn't linear: Kata can beat gVisor on I/O-heavy work, because its guest runs a real kernel servicing syscalls natively.
-{{< /notes >}}
-
+gVisor filters syscalls in a userspace kernel. The heavier option gives the workload its own guest kernel behind hardware virtualization (KVM), so an escape has to cross a CPU-enforced boundary. **Firecracker**, the VMM AWS built for Lambda (and the isolation layer under [Bedrock AgentCore](/blog/from-works-on-my-machine-to-production-ready-ai-agents-with-amazon-bedrock-agentcore/)), keeps that boundary cheap: roughly 50,000 lines of Rust against QEMU's ~1.4 million lines of C. Google's [kvmCTF](https://google.github.io/security-research/kvmctf/rules.html) pays $250,000 for a KVM escape, which is how the market rates that boundary. Agent Sandbox reaches this rung through **Kata Containers** via the same `runtime` selection, and the tradeoff isn't linear: Kata can beat gVisor on I/O-heavy work, because its guest runs a real kernel servicing syscalls natively. {{< /notes >}}
 ## The one-second problem
-
 Isolation is the hard part, but it isn't the only one. If you're in scenario 2, using Agent Sandbox pods as the backing instances for your own agent harness, startup time is a challenge too. People abandon chat sessions, and when they come back they expect the agent to pick up quickly, not wait on a machine to boot.
 
 ![Scenario 2: a harness outside the sandboxes, routing each session to a box where tools run, suspending and resuming them from snapshots](scenario-2.png)
 
 Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing for a rolling deployment, but enough that the maintainers say it ["breaks the continuity"](https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/) of an interaction. So Agent Sandbox avoids re-booting altogether: it suspends and resumes pods from memory snapshots and keeps warm pools ready, the same move E2B (~150ms) and Fly's Sprites (~300ms) use to pull a cold start well under a second[^15].
-
 ## Deploying it on GKE with Pulumi
-
 If you already have a cluster and want to try Agent Sandbox, the `kubectl apply` from the project's quickstart will probably get you going. But productionized use takes a bit more. Let's walk through setting up a cluster with a sane access policy, named individuals, and a dedicated environment per user. The full program is at [pulumi/examples/gcp-ts-agent-sandbox](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox).
 
 **Move 1: the cluster.** First we stand up a GKE cluster with a gVisor node pool. The one line that matters is the `sandboxConfig`, with `sandboxType: "gvisor"`. As far as I'm aware, this can only be done on GKE:
@@ -185,16 +167,18 @@ Each box also boots with a task. The prompt in the demo asks the agent to figure
 
 ![A browser VS Code (code-server) session running live inside the gVisor sandbox pod](browser-vscode-sandbox.png)
 
-## When to use Agent Sandbox
+Here's the finished result in motion — the demo of everything this post just built:
 
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Recorded a little demo: Here&#39;s how every developer gets their own kernel-isolated dev box on Kubernetes: VS Code + Claude Code in a pod behind Tailscale with gVisor underneath for security isolation. write up coming</p>&mdash; Adam Gordon Bell (@adamgordonbell) <a href="https://twitter.com/adamgordonbell/status/2079203736803549566">July 20, 2026</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## When to use Agent Sandbox
 **Use it now if** you're a platform team on GCP, building agent execution for many users. A dedicated cluster on GCP encoded in TypeScript or Python is the solution you probably want.
 
 **Watch it if** you need scale-to-zero, or auto-wake. Non-GKE clusters can run it, but you're hand-wiring gVisor or Kata onto your nodes.
 
 **Rent instead if** you're one developer, or one prototype. A hosted LLM sandbox, an E2B or a Fly Sprite, will have you running an isolated agent this afternoon with none of this operational surface.
-
 ## Wrapping up
-
 Agent Sandbox makes a kernel-isolated, disposable agent environment a first-class Kubernetes object, and Pulumi is how you stand one up as one program instead of a runbook.
 
 The full program, everything in this post, deploy to teardown, is at [pulumi/examples/gcp-ts-agent-sandbox](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox). Clone it, point it at a GCP project, and you have your own dedicated agent cluster in about twelve minutes. If you're new to Pulumi, [get started here](/docs/iac/get-started/).
