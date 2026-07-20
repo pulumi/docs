@@ -210,6 +210,18 @@ export class Chooser {
             // global, they'd all hide, since none matches the unavailable preference);
             // from then on they mirror this chooser's selection via applyChoice.
             const preferredOrDefault = (key: ChooserKey) => {
+                // Guard against an empty option set. A store update can arrive before
+                // this component finished parsing its options -- its "rendered" listener
+                // is attached in connectedCallback, which runs before componentWillLoad
+                // populates currentOptions -- so currentOptions may still be []. With
+                // nothing to fall back to, keep the preferred key and let render() cope
+                // (it renders no active tab until the real options land). Dereferencing
+                // currentOptions[0] here is what threw "can't access property 'key',
+                // this.currentOptions[0] is undefined".
+                if (this.currentOptions.length === 0) {
+                    return { selection: key };
+                }
+
                 if (!this.currentOptions.find(o => o.key === key)) {
                     key = this.currentOptions[0].key;
 
