@@ -454,7 +454,7 @@ jobs:
           # below returns "none" for them. Trusted agent bots that open
           # PRs on this repo are whitelisted by name instead. Keep this
           # list in sync with the matching check in claude-triage.yml.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" ]]; then
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Bot $AUTHOR is whitelisted for Claude reviews"
             exit 0
