@@ -19,7 +19,7 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        Your infrastructure is code. Your on-call setup is still forty clicks in a web UI, done once, by someone who changed teams.
+        Your infrastructure is code. Your on-call setup is forty clicks in a web UI, done once, by someone who changed teams.
 
         Engin Diri wires PagerDuty and AWS together in one Pulumi program: teams, schedules, escalation policies, and the alarm that pages you.
     linkedin: |
@@ -29,7 +29,7 @@ social:
 
         The post also covers the same wiring for Azure Monitor and Google Cloud Monitoring, a reusable component that gives every new service a pager by default, and pulumi import for the setup you already clicked together.
     bluesky: |
-        Your infra is code. Your on-call setup is forty clicks in a web UI from two years ago.
+        Your infra is code. Your on-call setup is forty clicks in a web UI, done once.
 
         Engin Diri wires PagerDuty + AWS in one Pulumi program: teams, schedules, escalation policies, and the alarm that pages you. Integration keys flow as dependencies, nothing gets forgotten.
 ---
