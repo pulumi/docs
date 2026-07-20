@@ -1,5 +1,5 @@
 ---
-title: "Improved pnpm Support for Node.js Projects"
+title: "Improved pnpm support for Node.js projects"
 date: 2026-07-17
 meta_desc: Pulumi now supports pnpm 11 and reliably serializes Node.js functions in pnpm and symlinked workspaces.
 authors:
