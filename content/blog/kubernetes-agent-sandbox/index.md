@@ -15,9 +15,18 @@ category: tutorials
 social:
     twitter: |
         Coding agents keep getting run with the guardrails off, and it keeps
-        ending badly. Kubernetes Agent Sandbox takes a different approach: a
-        kernel-isolated, disposable box the agent is allowed to wreck. Here's
-        what it is and how to deploy it on GKE.
+        ending badly.
+
+        Kubernetes Agent Sandbox takes a different approach: a kernel-isolated,
+        disposable box the agent is allowed to wreck. Here's what it is and how
+        to deploy it on GKE.
+    bluesky: |
+        A container isn't much of a security boundary: every one on a host
+        shares the same kernel. Kubernetes Agent Sandbox gives AI agents a
+        kernel-isolated, disposable box instead.
+
+        Adam Gordon Bell deployed it on GKE with Pulumi, one sandbox per
+        developer. Here's how it's wired together.
     linkedin: |
         A container is not a security boundary. Every container on a host
         shares one kernel, with 450+ syscalls of attack surface. That matters
@@ -30,11 +39,10 @@ social:
 
         Adam Gordon Bell walks through what the project is, why running agents
         with the guardrails off keeps ending badly, and a full GKE deployment
-        with Pulumi: one program that stands up the cluster, the gVisor node
-        pool, one sandbox per developer, locked-down egress, and private
-        access over Tailscale. The sandboxes and the access policy that
-        governs them are generated from the same developer list, so the two
-        can never drift apart.
+        with Pulumi, from the gVisor node pool down to one sandbox per
+        developer behind Tailscale. The best part is the trick that keeps each
+        sandbox and its access policy from ever drifting apart — that one's in
+        the post.
 ---
 
 When you use a coding agent, it can seem like there's a trade-off between autonomy and permissions. If you approve every command, it's safe but slow. Let it do whatever it likes and it works more autonomously, but as the [nx supply-chain attack](https://www.stepsecurity.io/blog/supply-chain-security-alert-popular-nx-build-system-package-compromised-with-data-stealing-malware) showed, that can go badly.
