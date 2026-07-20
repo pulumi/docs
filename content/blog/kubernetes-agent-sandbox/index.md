@@ -110,7 +110,7 @@ Isolation is the hard part, but it isn't the only one. If you're in scenario 2, 
 
 ![Scenario 2: a harness outside the sandboxes, routing each session to a box where tools run, suspending and resuming them from snapshots](scenario-2.png)
 
-Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing for a rolling deployment, but enough that the maintainers say it ["breaks the continuity"](https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/) of an interaction. So Agent Sandbox avoids re-booting altogether: it suspends and resumes pods from memory snapshots and keeps warm pools ready, the same snapshot-restore move E2B (~150ms) and Fly's Sprites (~300ms) use to pull the effective cold start well under a second[^15].
+Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing for a rolling deployment, but enough that the maintainers say it ["breaks the continuity"](https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/) of an interaction. So Agent Sandbox avoids paying that cost twice: suspend a sandbox and its pod goes away while its workspace and identity persist, and warm pools keep pre-booted pods ready for new sandboxes to adopt. The managed GKE version goes further and restores from memory snapshots, the same snapshot-restore move E2B (~150ms) and Fly's Sprites (~300ms) use to pull the effective cold start well under a second[^15].
 
 ## Deploying it on GKE with Pulumi
 
@@ -131,6 +131,8 @@ const gvisorPool = new gcp.container.NodePool("gvisor-pool", {
 
 GKE installs the `gvisor` RuntimeClass, labels the nodes, and taints them so only pods that opt in land there.
 
+That auto-install is the GKE convenience, not a requirement. Agent Sandbox itself is just CRDs and a controller, so on any other cluster you can [install gVisor yourself](https://gvisor.dev/docs/user_guide/install/) (or Kata), register a `RuntimeClass`, and everything below works the same.
+
 **Move 2: the install, pinned.** Next we apply the core manifest and the warm-pool extensions:
 
 ```typescript
@@ -141,7 +143,7 @@ const agentSandbox = new k8s.yaml.v2.ConfigGroup("agent-sandbox", {
 });
 ```
 
-This is a pre-1.0 project on a weekly release train, and the API group already graduated once (`v1alpha` to `v1beta1`).
+Pinning matters here: releases land every week or two, and the API group already graduated once (`v1alpha` to `v1beta1`).
 
 **Move 3: sandboxes are a loop, not a manifest.** This is where Pulumi really shows its advantages. In practice you don't create sandboxes by hand, because they're per-user or per-task. So the demo reads a list and maps over it:
 
