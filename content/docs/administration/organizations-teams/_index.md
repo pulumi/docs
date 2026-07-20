@@ -11,8 +11,6 @@ menu:
     parent: administration-home
     weight: 10
     identifier: administration-organizations-teams
-aliases:
-  - /docs/pulumi-cloud/
 h1: Organizations & Teams
 description: <p>Manage your Pulumi Cloud organizations, teams, user accounts, and billing settings.</p>
 
