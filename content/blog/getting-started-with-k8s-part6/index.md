@@ -43,10 +43,4 @@ Kubernetes Cluster Services provide logging and monitoring at the cluster level 
 
 Maintaining a Kubernetes cluster and modern applications can be varied and complex. However, infrastructure as code lets developers and operators use a common language to manage the cluster and resources. Pulumi has a rich toolset to help you accomplish Day 2 tasks, whether managing cluster components such as secrets, changing cluster components to scale applications, or logging and monitoring your cluster and resources.
 
-Each article in this series is intended to be independent of each other. However, we build upon concepts introduced in previous articles. If some concepts or terminology are unfamiliar, I encourage reading the earlier articles:
-
-- [Building a Kubernetes cluster on cloud providers](/blog/getting-started-with-k8s-part1/)
-- [Basic application deployment](/blog/getting-started-with-k8s-part2/)
-- [Advance application deployment and Helm charts](/blog/getting-started-with-k8s-part3/)
-- [Stateful applications](/blog/getting-started-with-k8s-part4/)
-- [Networking](/blog/getting-started-with-k8s-part5/)
+Each article in this series is intended to be independent of each other. However, we build upon concepts introduced in previous articles.

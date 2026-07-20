@@ -20,16 +20,6 @@ This post continues our series of blog posts focused on IaC best practices. In e
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. You've seen these practices emerge over the course of the series---not all immediately, and not all right away. Structuring the blog series in this way is a deliberate decision; many best practices are "point in time" recommendations: they are context-dependent and the recommendations for any given company, like Zephyr, may change as the company and its needs change.
 
-For ease of navigation, here are links to all the blog posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* **IaC Best Practices: Implementing RBAC and Security (the post you're reading)**
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
-
 ## Evolving Project Structure to Enhance Security and Scalability
 
 So far, you've read about how Zephyr started out with a single project and a single Git repository. Adding short-lived per-developer stacks, as described in the post on [best practices for developer stacks and Git branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/), didn't really impact this structure. However, as the company grew, Zephyr's project and Git repository structure evolved into its current form:

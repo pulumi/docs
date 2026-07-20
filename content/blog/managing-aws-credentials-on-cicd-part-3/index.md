@@ -18,15 +18,6 @@ This article is the third part of a series on best practices for securely managi
 last leg of the continuous delivery process to update your AWS resources and how to store sensitive data using Pulumi securely.
 <!--more-->
 
-Posts in this series:
-
-- [Create a dedicated IAM User for your CI/CD](/blog/managing-aws-credentials-on-cicd-part-1#create-new-iam-user)
-- [Provide the IAM User’s credentials to your CI/CD system](/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials)
-- [Comparison with using hosted secret managers](/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service)
-- [Automate Rotating and Revoking AWS Credentials](/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation)
-- [Assuming IAM Roles for performing updates](#assuming-iam-roles)
-- [Securing sensitive data using Pulumi](#secrets-in-pulumi)
-
 ## Recap
 
 In [part 1](/blog/managing-aws-credentials-on-cicd-part-1/), we created a dedicated IAM User with

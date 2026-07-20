@@ -77,15 +77,6 @@ The good news? You can do both, with a clear strategy and the right approach. Th
 
 These lessons come from real-world implementations across industries and company sizes—and are built to grow with you.
 
-This post is part of our IDP Best Practices series. You can explore the full series below:
-
-- **How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure** (you are here)
-- [Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates](/blog/golden-paths-infrastructure-components-and-templates/)
-- [Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails](/blog/deployment-guardrails-with-policy-as-code)
-- [Day 2 Operations: Drift Detection and Remediation](/blog/day-2-operations-drift-detection-and-remediation)
-- Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-- Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
-
 ## Understanding the Platform Engineering Layers in Your Internal Developer Platform
 
 ![internal-developer-platform-key-layers.png](internal-developer-platform-key-layers.png)

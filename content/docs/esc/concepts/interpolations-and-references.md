@@ -107,12 +107,32 @@ In addition to referencing properties defined within an environment, references 
 
 ### context
 
-The `context` built-in property provides information about the user evaluating an ESC environment. It exposes the login of the requesting user at `context.pulumi.user.login` and the login of their organization at `context.pulumi.organization.login`.
+The `context` built-in property provides information about the user and the access token evaluating an ESC environment:
+
+* `context.pulumi.user.login`: the login of the requesting user
+* `context.pulumi.organization.login`: the login of their organization
+* `context.pulumi.token.type`: the type of the access token used to open the environment, such as `personal`, `team`, or `organization`
+* `context.pulumi.token.team`: the name of the team a team-scoped token belongs to
+* `context.pulumi.token.name`: the token's name
+
+Each `context.pulumi.token` property resolves to an empty string when it doesn't apply to the credential in use. `token.team` is empty for tokens that aren't team-scoped, and `token.name` is empty for personal and web tokens.
 
 ```yaml
 values:
   greeting: Hello, ${context.pulumi.organization.login}/${context.pulumi.user.login}!
 ```
+
+#### Differentiating callers by token
+
+For team and organization tokens, both `user.login` and `organization.login` resolve to the organization name, so neither one distinguishes a team token from an individual user. The `context.pulumi.token` properties are the way to tell those callers apart:
+
+```yaml
+values:
+  callerType: ${context.pulumi.token.type}
+  callerTeam: ${context.pulumi.token.team}
+```
+
+`token.type` and `token.team` are also available as OIDC subject attributes, which lets a cloud provider's trust policy scope an assumable role to a specific team. `token.name` is deliberately excluded from subject claims because token names are chosen by the user and could be crafted to forge a subject. See [Custom token claim](/docs/esc/guides/configuring-oidc/#custom-token-claim).
 
 ### environments
 

@@ -20,16 +20,6 @@ Welcome to the sixth post in our series of blog posts focused on Infrastructure 
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. These practices have unfolded organically, as a direct response to Zephyr's evolving needs. The aim is to demonstrate that best practices are not set in stone, but are rather "point in time" recommendations that adapt as your company grows.
 
-For ease of navigation, here are links to all the posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* **IaC Best Practices: Using Automation API** (you are here)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
-
 ## Managing Complexity in a Multi-Project Pulumi Setup
 
 Over the course of this series, you've seen how Zephyr's use of Pulumi has grown and changed. For the sake of completeness, here's a quick recap:

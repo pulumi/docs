@@ -42,16 +42,6 @@ The recommendations in this series describe a general "one-size fits most" appro
 management, which requires a minimal amount of work to configure and maintain. Depending on your
 specific environment, needs, and constraints, there may be a better alternative for your use case.
 
-Here's the full set of steps in our series, walking through the creation of a secure CI/CD environment
-to deploy AWS resources using Pulumi:
-
-- [Create a dedicated IAM User for your CI/CD](#create-new-iam-user)
-- [Provide the IAM User’s credentials to your CI/CD system](/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials)
-- [Comparison with using hosted secret managers](/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service)
-- [Automate Rotating and Revoking AWS Credentials](/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation)
-- [Assuming IAM Roles for performing updates](/blog/managing-aws-credentials-on-cicd-part-3#assuming-iam-roles)
-- [Securing sensitive data using Pulumi](/blog/managing-aws-credentials-on-cicd-part-3#secrets-in-pulumi)
-
 ## Create a dedicated IAM User for your CI/CD {#create-new-iam-user}
 
 The first step for securely automating CI/CD is to create a dedicated IAM User for use in your CI/CD

@@ -26,15 +26,6 @@ Platform engineering presents a fundamental tension: we want to enable developer
 
 <!--more-->
 
-This post is part of our IDP Best Practices series:
-
-* [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control)
-* [Build Golden Paths with Infrastructure Components and Templates](/blog/golden-paths-infrastructure-components-and-templates)
-* **Deployment Guardrails with Policy as Code** (you are here)
-* [Day 2 Operations: Drift Detection and Remediation](/blog/day-2-operations-drift-detection-and-remediation)
-* Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-* Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
-
 {{% notes type="tip" %}}
 **Want hands-on experience?** Access the [complete demo code](https://github.com/pulumi/workshops/tree/main/idp-component-policies) and [policy examples](https://github.com/pulumi/workshops/tree/main/idp-component-policies/demo-policies) from this workshop.
 {{% /notes %}}

@@ -20,16 +20,6 @@ This is the fourth post in a series of blog posts focused on Zephyr Archaeotech 
 
 As you may have read in earlier Zephyr posts, the ultimate goal of the Zephyr series is to share best practices on the use of Pulumi to manage your infrastructure and application resources (using a fictional company and a somewhat complex containerized application as the use case). The series exposes those practices over time---not all right away, and not without also discussing the context for the recommendations. This is deliberate, demonstrating how "point-in-time" recommendations change based on the needs of the company and its requirements.
 
-Here are links to all the blog posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* **IaC Best Practices: Applying Stack References** (you are here)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
-
 ## Reviewing Zephyr's Current Status
 
 This post continues the previous post in the series. Zephyr's infrastructure footprint and Pulumi codebase is the same; that is, Zephyr now has _three_ Pulumi projects (zephyr-infra, zephyr-k8s, and zephyr-app). Each of these projects handles a different aspect of Zephyr's online store:
