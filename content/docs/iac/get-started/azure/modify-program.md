@@ -80,8 +80,6 @@ EOT
 
 {{% /choosable %}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
 Now open {{< langfile >}} in your editor and enable static website support by adding a [`StorageAccountStaticWebsite`](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account is created:
 
 {{% choosable language typescript %}}

@@ -60,8 +60,6 @@ $ cd pulumi-start-aws
 
 Now initialize a new Pulumi project for AWS using the `pulumi new` command:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
 {{% choosable language typescript %}}
 
 {{% choosable os "linux,macos" %}}

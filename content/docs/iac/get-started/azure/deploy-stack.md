@@ -81,8 +81,6 @@ may take a bit longer, so the update could finish in 20-30 seconds.
 
 The storage account name is available as a stack output. To view it:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
 {{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```bash

@@ -24,8 +24,6 @@ complexity and enable sharing and reuse. Instead of copy-pasting common patterns
 You will now create your first component that packages up your Azure static website so you can easily stamp out
 entire websites in just a few lines of code:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
 {{% choosable language typescript %}}
 
 ```typescript
