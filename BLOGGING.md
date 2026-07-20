@@ -335,6 +335,15 @@ Before submitting your post:
 
 Once merged to master, your post will go live on <https://www.pulumi.com/> (after its publish date).
 
+### Getting approved
+
+You merge your own PR once a maintainer approves. For most posts, approval comes to you: when your PR is ready for review, the automated review shows `review:no-blockers`, and CI is green, a scheduled maintainer sweep approves it with a one-line rubber-stamp comment — usually within a business day, no reviewer request needed. If the review flags outstanding findings, resolve them (see `CONTRIBUTING.md` § After review) and the sweep picks the PR up on a later pass.
+
+Two cases where a human approval is the point:
+
+- **Needs a product/launch/security sign-off** (pricing announcements, security feature claims, embargoed launches, case studies): apply the **`needs-product-review`** label and request the person who owns that sign-off. The sweep skips the PR entirely and leaves it to them.
+- **You requested a specific reviewer**: the sweep defers to them — it never approves around a human you asked for.
+
 ## A Note on Dates and Scheduling for Future Publishing
 
 ### How `draft` and `date` behave across environments

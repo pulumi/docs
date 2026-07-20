@@ -66,6 +66,17 @@ For both categories, triage runs a focused spelling/grammar pass on the relevant
 
 Classification is deterministic and lives in `.claude/commands/docs-review/scripts/triage-classify.py` — domain (path-precedence), triviality, and frontmatter-only detection are all path/grep rules. The model is invoked only for the prose check, only when the shell pre-classifies as trivial or frontmatter-only.
 
+### Adjudication and merge
+
+Pulumi convention: **authors merge their own PRs** after a maintainer approves. Approval is driven by the pinned review, and for clean PRs it usually arrives without you asking: a scheduled maintainer sweep approves ready PRs that are `review:no-blockers` with green CI — docs, infra, **and blog posts** — leaving a fixed one-line rubber-stamp comment. You don't need to request a reviewer to get unblocked; mark the PR ready, get the review green, and the sweep will find it. (The sweep is deliberately cautious: it punts anything oversized, sensitive, or resting on claims it can't confirm to a human instead of approving.)
+
+Two blog-specific carve-outs:
+
+- **`needs-product-review`** — apply this label (and request the reviewer you have in mind) when a post needs a named product, launch, or security sign-off before publishing: pricing/packaging announcements, security feature claims, embargoed launches, case studies. The sweep skips labeled PRs entirely; the human you asked owns the approval.
+- If you've **requested any human reviewer** on a blog PR, the sweep defers to them and won't approve around them.
+
+A ready PR with **no `review:*` label at all** fell through the pipeline (this predates the current tooling, or triage errored). The sweep flags these for manual triage rather than reviewing them — comment `@claude #new-review` to generate a fresh review and rejoin the normal flow.
+
 ## Documentation structure
 
 The mapping from documentation page to section and table-of-contents (TOC) is stored largely in each page's front matter, leveraging [Hugo Menus](https://gohugo.io/content-management/menus/). Menus for the CLI commands and API reference are specified in `./config.toml`.

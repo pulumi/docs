@@ -33,6 +33,7 @@ Load-bearing — these gate workflow execution.
 | `review:stale` | `ededed` | New commits landed since the last Claude review; refresh on next ready-transition or `@claude` mention. |
 | `review:error` | `e11d21` | Workflow failed before publishing a review. See the Actions logs. |
 | `needs-author-response` | `f7c6c7` | Review surfaced unverifiable claims; author needs to provide sources or fix. Applied by `pr-review`. |
+| `needs-product-review` | `d876e3` | Blog post needs a named product/launch/security sign-off (pricing, security claims, embargoed launches, case studies). Applied by the author or a maintainer; the maintainer rubber-stamp sweep skips labeled PRs — the requested human owns the approval. |
 
 The six `review:*` state labels are **mutually exclusive**. Setting one removes the others. `set-review-label.sh` (under `.claude/commands/docs-review/scripts/`) enforces this atomically and supports a `--clear` mode that strips any state label without adding a new one (used by claude-triage.yml's `if: always()` cleanup).
 
@@ -57,6 +58,7 @@ gh label create "review:no-blockers"     --color 0e8a16 --description "Claude re
 gh label create "review:stale"           --color ededed --description "New commits since last Claude review; refresh on next ready-transition or @claude mention"
 gh label create "review:error"           --color e11d21 --description "Workflow failed before publishing a review; see Actions logs"
 gh label create "needs-author-response"  --color f7c6c7 --description "Review surfaced unverifiable claims; author owes a response"
+gh label create "needs-product-review"   --color d876e3 --description "Blog post needs a named product/launch/security sign-off; the rubber-stamp sweep skips it"
 ```
 
 ## Migrate from the old two-label scheme
