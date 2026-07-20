@@ -51,7 +51,7 @@ There are two common patterns for using it. In the first, every coding agent ses
 
 ![Scenario 1: a dedicated agent cluster giving each developer their own kernel-isolated sandbox with a coding agent and IDE inside](scenario-1.png)
 
-In the second, you have your own agent harness, a Neo or a Devin, that needs an execution environment, and you use Agent Sandbox to spin these up and down, suspending and resuming them.
+In the second, you have your own agent harness that needs execution environments: a Neo or a Devin. The harness lives outside the sandboxes and hands each task a disposable box, and Agent Sandbox is what spins those boxes up and down, suspending and resuming them. When I said Pulumi Neo works this way, this is the scenario I meant: Neo is a harness, and every task it runs gets a box like these.
 
 ## Why not just run agents in Docker?
 
@@ -72,12 +72,12 @@ Google engineers in Kubernetes SIG Apps maintain Agent Sandbox, Janet Kuo and Ju
 {{< notes type="info" >}}
 **The rung above gVisor: hardware microVMs**
 
-gVisor filters syscalls in a userspace kernel. The heavier option gives the workload its own guest kernel behind hardware virtualization (KVM), so an escape has to cross a CPU-enforced boundary. **Firecracker**, the VMM AWS built for Lambda, keeps that boundary cheap: roughly 50,000 lines of Rust against QEMU's ~1.4 million lines of C. Google's [kvmCTF](https://google.github.io/security-research/kvmctf/rules.html) pays $250,000 for a KVM escape, which is how the market rates that boundary. Agent Sandbox reaches this rung through **Kata Containers** via the same `runtime` selection, and the tradeoff isn't linear: Kata can beat gVisor on I/O-heavy work, because its guest runs a real kernel servicing syscalls natively.
+gVisor filters syscalls in a userspace kernel. The heavier option gives the workload its own guest kernel behind hardware virtualization (KVM), so an escape has to cross a CPU-enforced boundary. **Firecracker**, the VMM AWS built for Lambda (and the isolation layer under [Bedrock AgentCore](/blog/from-works-on-my-machine-to-production-ready-ai-agents-with-amazon-bedrock-agentcore/)), keeps that boundary cheap: roughly 50,000 lines of Rust against QEMU's ~1.4 million lines of C. Google's [kvmCTF](https://google.github.io/security-research/kvmctf/rules.html) pays $250,000 for a KVM escape, which is how the market rates that boundary. Agent Sandbox reaches this rung through **Kata Containers** via the same `runtime` selection, and the tradeoff isn't linear: Kata can beat gVisor on I/O-heavy work, because its guest runs a real kernel servicing syscalls natively.
 {{< /notes >}}
 
 ## The one-second problem
 
-Isolation is the hard part, but it isn't the only one. If you're using Agent Sandbox pods as the backing instances for your own agent harness, startup time is a challenge too. People abandon chat sessions, and when they come back they expect the agent to pick up quickly, not wait on a machine to boot.
+Isolation is the hard part, but it isn't the only one. If you're in scenario 2, using Agent Sandbox pods as the backing instances for your own agent harness, startup time is a challenge too. People abandon chat sessions, and when they come back they expect the agent to pick up quickly, not wait on a machine to boot.
 
 ![Scenario 2: a harness outside the sandboxes, routing each session to a box where tools run, suspending and resuming them from snapshots](scenario-2.png)
 
@@ -132,6 +132,8 @@ export const sandboxes = developers.map(dev => new AgentSandbox(`sbx-${dev.name}
 
 That `developers` array is read at runtime, so it could just as easily be a GitHub team or whoever currently has a session open, none of which `kubectl apply -k` can loop over.
 
+Nothing in the sandbox is Claude-specific, either. The agent is just what the image installs: swap in Codex CLI, or point one of the [Claude Code orchestration frameworks](/blog/claude-code-orchestration-frameworks/) at it, and the isolation story doesn't change.
+
 **Move 4: the egress policy.** Agent Sandbox ships **no default NetworkPolicy**[^22], so out of the box a sandboxed agent has kernel isolation and wide-open egress. We set a policy that lets the agent reach `api.anthropic.com` and npm but not any private IPs:
 
 ```typescript
@@ -174,6 +176,8 @@ $ pulumi stack output sandboxUrls
 
 Open it on any device signed into your tailnet and you're in a full VS Code (code-server), running inside the sandbox pod, on the gVisor node pool, behind the egress policy set above.
 
+Each box also boots with a task. The prompt in the demo asks the agent to figure out where it is: read `/proc/version`, decide whether it's in a container or a VM, and write up the evidence in a `REPORT.md`. An agent doing forensics on its own jail is a decent smoke test that the isolation is real.
+
 ![A browser VS Code (code-server) session running live inside the gVisor sandbox pod](browser-vscode-sandbox.png)
 
 ## When to use Agent Sandbox
@@ -182,7 +186,7 @@ Open it on any device signed into your tailnet and you're in a full VS Code (cod
 
 **Watch it if** you need scale-to-zero, or auto-wake. Non-GKE clusters can run it, but you're hand-wiring gVisor or Kata onto your nodes.
 
-**Rent instead if** you're one developer, or one prototype. E2B or Fly will have you running an isolated agent this afternoon with none of this operational surface.
+**Rent instead if** you're one developer, or one prototype. A hosted LLM sandbox, an E2B or a Fly Sprite, will have you running an isolated agent this afternoon with none of this operational surface.
 
 ## Wrapping up
 
