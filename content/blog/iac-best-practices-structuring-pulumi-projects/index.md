@@ -20,16 +20,6 @@ This is the third post in a series of blog posts focused on Zephyr Archaeotech E
 
 The first post about [organizing code and stacks](/blog/iac-best-practices-understanding-code-organization-stacks/) specifically mentions that the series will show "how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth." While the ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application, it's important to note that many best practices are "point in time" recommendations: best practices are context-dependent and the recommended practices for a given organization will change as the company and its infrastructure needs also change. This blog post is an example of that evolution in action: the practices that worked well for Zephyr while they were smaller and had smaller infrastructure and less teams working on that infrastructure are no longer ideal as the company has grown.
 
-Here are links to all the blog posts in the series:
-
-* [IaC Best Practices: Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* **IaC Best Practices: Structuring Pulumi Projects** (this post)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
-
 ## Growing Development Teams
 
 As a result of launching its online presence, Zephyr saw amazing success. The market for arcane artifacts and novel curiosities is booming, and Zephyr is becoming a leader in this market. Funded by this success, Zephyr has grown rapidly. Along with this growth, Zephyr's software engineering and IT teams also grew and expanded. Fortunately, Zephyr's [use of per-developer stacks with short-lived ephemeral Git branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/) positioned the development teams well for this growth.
