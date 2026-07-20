@@ -85,7 +85,7 @@ Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a confi
 
 You can use path filters to limit deployments to commits that change files matching specific glob patterns (e.g., `infrastructure/**`).
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/tag-filtering/).
 
 {{% notes type="warning" %}}
 GitLab integrations created before tag triggers were introduced did not subscribe to GitLab's **Tag push events** webhook, so they will not receive tag pushes until that event is enabled. You don't need to re-create the integration — instead, edit the existing group webhook in GitLab under **Settings** > **Webhooks**, open the Pulumi webhook (the `https://api.pulumi.com/workflow/gitlab` endpoint), and enable **Tag push events**. Re-creating the integration also works, since new integrations subscribe to tag push events automatically.
