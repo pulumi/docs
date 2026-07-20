@@ -21,7 +21,7 @@ social:
     bluesky:
 ---
 
-[Pulumi ESC](/docs/esc/) makes it easy to store configuration and secrets for your Pulumi programs, and with [Approvals for ESC](/docs/esc/concepts/approvals/) you can stage changes before they go live. But until now, there was no easy way to see how a proposed change would actually affect your stack. With the new `--override-env` flag, you can preview any environment change, including an unapproved draft, before it becomes the latest version.
+[Pulumi ESC](/docs/esc/) makes it easy to store configuration and secrets for your Pulumi programs, and with [Approvals for ESC](/docs/esc/concepts/approvals/) you can review and approve changes before they go live. The new `--override-env` flag lets you preview any environment change, including an unapproved draft, to see exactly how it would affect your stack before it becomes the latest version.
 
 <!--more-->
 
@@ -31,7 +31,7 @@ Let's say your team uses ESC for storing configuration for your production app, 
 
 ## Introducing: draft references and the --override-env flag
 
-We are introducing a new `--override-env` flag to the Pulumi CLI that works for all Pulumi operations that can consume ESC environments: `preview`, `up`, `refresh`, and `destroy`. This makes it super easy to test config changes without modifying your stack config.
+We are introducing a new `--override-env` flag to the Pulumi CLI that works for all Pulumi operations that can consume ESC environments: `preview`, `up`, `refresh`, and `destroy`. This makes it super easy to test config changes on the fly.
 
 ### Example usages
 
@@ -50,13 +50,13 @@ The `--override-env` flag not only works with draft references, but for any envi
 pulumi up --override-env "aws-login/prod=aws-login/testing"
 ```
 
-Note: `--override-env` can also override environments that are imported (directly or indirectly) from the ESC environment in your stack config. This is especially useful if you have access to an imported environment but not the root environment.
+Note: `--override-env` can also override environments that are imported (directly or indirectly) from the ESC environment in your stack config. This allows you to override any environment in the import chain for full flexibility.
 
-## When to use it
+## Ways to use it
 
 - Validate a draft ESC environment with your stack before approving
-- Preview a proposed environment change on a PR as part of a CI check
 - One-off debugging without editing stack config
+- Run a preview when a draft environment is created/updated with custom webhooks
 
 ## Get started
 
