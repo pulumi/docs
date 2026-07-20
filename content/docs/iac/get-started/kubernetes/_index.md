@@ -1,8 +1,8 @@
 ---
-title_tag: Get Started Pulumi and Kubernetes
+title_tag: Get started with Pulumi and Kubernetes
 meta_desc: This page provides an overview and guide on how to get started with Kubernetes.
 title: Kubernetes
-h1: Get Started with Pulumi and Kubernetes
+h1: Get started with Pulumi and Kubernetes
 menu:
     iac:
         name: Kubernetes
@@ -17,14 +17,10 @@ aliases:
     - /docs/get-started/kubernetes/
     - /docs/quickstart/kubernetes/
     - /docs/clouds/kubernetes/get-started/
-    - /docs/iac/get-started/kubernetes/deploy-changes/
-    - /docs/iac/get-started/kubernetes/review-project/
 ---
 
-**Infrastructure as code (IaC)** lets you deploy, change, and manage infrastructure safely, consistently,
-and repeatably using code rather than a graphical user interface.
-
-Complete this step-by-step tutorial to deploy an [NGINX](https://www.nginx.com/) web server on Kubernetes using IaC.
+Infrastructure as code (IaC) lets you deploy, change, and manage infrastructure safely, consistently,
+and repeatably using code rather than a graphical user interface. In this tutorial, you'll use Pulumi to deploy an [NGINX](https://www.nginx.com/) web server on Kubernetes using IaC.
 
 ## Before you begin
 

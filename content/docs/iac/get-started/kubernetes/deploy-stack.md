@@ -1,40 +1,26 @@
 ---
 title_tag: Deploy the Stack | Kubernetes
+title: Deploy the stack
+h1: "Deploy the stack"
 meta_desc: Learn how to deploy your stack to a Kubernetes project in this guide.
-title: Deploy to Kubernetes
-h1: "Get started with Pulumi and Kubernetes"
-weight: 5
+weight: 6
 menu:
     iac:
-        name: Deploy
+        name: Deploy the stack
         identifier: kubernetes-get-started.deploy-stack
         parent: kubernetes-get-started
-        weight: 5
-
+        weight: 6
 aliases:
     - /docs/quickstart/kubernetes/deploy-stack/
 ---
 
-## Deploy to Kubernetes
-
-Now run `pulumi up` to start deploying your NGINX deployment:
-
-{{% choosable "os" "macos,linux" %}}
+Now deploy the stack with `pulumi up`:
 
 ```bash
 $ pulumi up
 ```
 
-{{% /choosable %}}
-{{% choosable "os" "windows" %}}
-
-```powershell
-> pulumi up
-```
-
-{{% /choosable %}}
-
-This command first shows you a **preview** of the changes that will be made:
+This command first shows you a preview of the changes to be made:
 
 ```
 Previewing update (dev):
@@ -52,14 +38,9 @@ Do you want to perform this update?
   details
 ```
 
-No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to see more information about the proposed update like your deployment's properties.
-
-### Performing the update
-
-To proceed and deploy your NGINX deployment, select `yes`. This begins an **update**:
+Choosing `yes` proceeds with an update, which creates the resources in your cluster:
 
 ```
-Do you want to perform this update? yes
 Updating (dev):
 
      Type                              Name            Status
@@ -75,30 +56,20 @@ Resources:
 Duration: 4s
 ```
 
-Updates can take some time since they wait for the Kubernetes resources to finish being created. The deployment will finish in just a few seconds.
+The update completes when all resources are created. The deployment finishes in just a few seconds.
 
 {{< auto-naming-note resource="deployment" suffix="bec13562" >}}
 
 {{% notes type="warning" %}}
-If you get the error `configured Kubernetes cluster is unreachable` or
-`unable to load schema information from the API server`, verify your cluster access:
-
-1. Check your kubeconfig: `kubectl config view`
-2. Test cluster connectivity: `kubectl cluster-info`
-3. Verify authentication: `kubectl auth can-i get pods`
-
-If these commands fail, return to the [Configure access](/docs/iac/get-started/kubernetes/configure/)
-step to set up your Kubernetes cluster and kubectl.
+If you get `configured Kubernetes cluster is unreachable` or `unable to load schema information from the API server`, verify your cluster access with `kubectl cluster-info` and `kubectl auth can-i get pods`. If those fail, revisit the [Configure access](/docs/iac/get-started/kubernetes/configure/) step.
 {{% /notes %}}
 
-### View your update on Pulumi Cloud
+Notice the deployment's name was emitted as a [stack output](/docs/iac/concepts/stacks/#outputs). You can retrieve the output's value with `pulumi stack output`:
 
-If you are logged into [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/), you'll see "View Live" hyperlinks in the CLI output during your update. These go to [a page](https://app.pulumi.com/signin) with detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
+```bash
+$ pulumi stack output name
+```
 
-<a href="/images/getting-started/console-update.png" target="_blank">
-    <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />
-</a>
-
-Now that the NGINX deployment has been provisioned, you'll update it to do something more interesting.
+Next, you'll expose the deployment with a service.
 
 {{< get-started-stepper >}}
