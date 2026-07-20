@@ -46,11 +46,11 @@ From pulumi v3.254.0 onward, we automatically produce log files for every operat
 
 Note that the logs are rotated out after 7 days, or after the log directory has reached 500 MB. This way logs will never fill up your disk, but will still be available after running pulumi commands.
 
-Locally these logs can be decrypted using `pulumi logs decrypt`. For this to work the same stack's secret manager as was used for the command needs to be available.
+Locally these logs can be decrypted using [`pulumi logs decrypt`](/docs/iac/cli/commands/pulumi_logs_decrypt/). For this to work the same stack's secret manager as was used for the command needs to be available.
 
 ## Sharing logs
 
-Previously there was no good way to securely share the logs with us. Users were always forced to find a way to send the logs to us on their own. With the latest pulumi version, we introduce the `pulumi logs share` command. This will automatically create a key, safely stored on the server side, and re-encrypt the log with that key, redacting all the secrets by default.
+Previously there was no good way to securely share the logs with us. Users were always forced to find a way to send the logs to us on their own. With the latest pulumi version, we introduce the [`pulumi logs share`](/docs/iac/cli/commands/pulumi_logs_share/) command. This will automatically create a key, safely stored on the server side, and re-encrypt the log with that key, redacting all the secrets by default.
 
 This key can then be accessed by Pulumi employees and Pulumi employees only via an internal tool to decrypt the log. Again we encrypt the log using AES256-GCM. Given this encryption the log can be shared over unsafe channels, and still be secure, even if it's posted on a GitHub issue.
 
