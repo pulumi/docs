@@ -29,6 +29,7 @@ of these are complementary and can be used together, whereas some are "either or
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
 
 * [HashiCorp Terraform](/docs/iac/comparisons/terraform/)
+* [HCP Terraform (Terraform Cloud)](/docs/iac/comparisons/terraform-cloud/)
 * [AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 * [AWS CDK](/docs/iac/comparisons/aws-cdk/)
 * [CDKTF](/docs/iac/comparisons/cdktf/)
