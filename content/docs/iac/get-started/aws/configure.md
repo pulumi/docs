@@ -1,6 +1,7 @@
 ---
 title_tag: Configure access | AWS
 title: Configure access to AWS
+linkTitle: Configure access
 h1: "Configure access to AWS"
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
 weight: 3

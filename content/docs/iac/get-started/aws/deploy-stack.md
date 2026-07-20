@@ -62,7 +62,7 @@ The update completes when all resources are created. For an S3 bucket, this take
 
 {{< auto-naming-note resource="bucket" suffix="58ce361" >}}
 
-Notice the bucket's name was emitted as a [stack output](/docs/iac/concepts/stacks/#outputs). You can also retrieve an output's value directly with `pulumi stack output`:
+Notice the bucket's name was emitted as a [stack output](/docs/iac/concepts/stacks/#outputs). You can retrieve the output's value with `pulumi stack output`:
 
 {{% choosable language "typescript,go,csharp,java,yaml" %}}
 

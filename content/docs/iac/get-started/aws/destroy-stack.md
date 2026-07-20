@@ -54,6 +54,6 @@ Choose `yes` to destroy the stack. When the operation completes, your cloud reso
 $ pulumi stack rm
 ```
 
-Confirm the removal when prompted to complete the tutorial.
+Confirm the removal when prompted, and you're done.
 
 {{< get-started-stepper >}}

@@ -44,10 +44,10 @@ Open {{< langfile >}} and replace it with the following code:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-// Create an S3 bucket:
+// Create an S3 bucket
 const bucket = new aws.s3.Bucket("my-bucket");
 
-// Configure the bucket as a website:
+// Configure the bucket as a website
 const website = new aws.s3.BucketWebsiteConfiguration("website", {
     bucket: bucket.id,
     indexDocument: {
@@ -55,7 +55,7 @@ const website = new aws.s3.BucketWebsiteConfiguration("website", {
     },
 });
 
-// Configure ownership controls for the bucket:
+// Configure ownership controls for the bucket
 const ownershipControls = new aws.s3.BucketOwnershipControls("ownership-controls", {
     bucket: bucket.id,
     rule: {
@@ -63,13 +63,13 @@ const ownershipControls = new aws.s3.BucketOwnershipControls("ownership-controls
     },
 });
 
-// Enable public access to the bucket:
+// Enable public access to the bucket
 const publicAccessBlock = new aws.s3.BucketPublicAccessBlock("public-access-block", {
     bucket: bucket.id,
     blockPublicAcls: false,
 });
 
-// Upload index.html to the bucket:
+// Upload index.html to the bucket
 const bucketObject = new aws.s3.BucketObject("index.html", {
     bucket: bucket.id,
     source: new pulumi.asset.FileAsset("index.html"),
@@ -77,7 +77,7 @@ const bucketObject = new aws.s3.BucketObject("index.html", {
     acl: "public-read",
 }, { dependsOn: [ownershipControls, publicAccessBlock] });
 
-// Export the bucket's name and website URL:
+// Export the bucket's name and website URL
 export const bucketName = bucket.id;
 export const url = pulumi.interpolate`http://${website.websiteEndpoint}`;
 ```
@@ -90,17 +90,17 @@ export const url = pulumi.interpolate`http://${website.websiteEndpoint}`;
 import pulumi
 from pulumi_aws import s3
 
-# Create an S3 bucket:
+# Create an S3 bucket
 bucket = s3.Bucket('my-bucket')
 
-# Configure the bucket as a website:
+# Configure the bucket as a website
 website = s3.BucketWebsiteConfiguration("website",
     bucket=bucket.id,
     index_document={
         "suffix": "index.html",
     })
 
-# Configure ownership controls for the bucket:
+# Configure ownership controls for the bucket
 ownership_controls = s3.BucketOwnershipControls(
     'ownership-controls',
     bucket=bucket.id,
@@ -109,12 +109,12 @@ ownership_controls = s3.BucketOwnershipControls(
     },
 )
 
-# Enable public access to the bucket:
+# Enable public access to the bucket
 public_access_block = s3.BucketPublicAccessBlock(
     'public-access-block', bucket=bucket.id, block_public_acls=False
 )
 
-# Upload index.html to the bucket:
+# Upload index.html to the bucket
 bucket_object = s3.BucketObject(
     'index.html',
     bucket=bucket.id,
@@ -124,7 +124,7 @@ bucket_object = s3.BucketObject(
     opts=pulumi.ResourceOptions(depends_on=[ownership_controls, public_access_block]),
 )
 
-# Export the bucket's name and website URL:
+# Export the bucket's name and website URL
 pulumi.export('bucket_name', bucket.id)
 pulumi.export('url', pulumi.Output.concat('http://', website.website_endpoint))
 ```
@@ -145,13 +145,13 @@ import (
 
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
-        // Create an S3 bucket:
+        // Create an S3 bucket
         bucket, err := s3.NewBucket(ctx, "my-bucket", nil)
         if err != nil {
             return err
         }
 
-        // Configure the bucket as a website:
+        // Configure the bucket as a website
         website, err := s3.NewBucketWebsiteConfiguration(ctx, "website", &s3.BucketWebsiteConfigurationArgs{
             Bucket: bucket.ID(),
             IndexDocument: &s3.BucketWebsiteConfigurationIndexDocumentArgs{
@@ -162,7 +162,7 @@ func main() {
             return err
         }
 
-        // Configure ownership controls for the bucket:
+        // Configure ownership controls for the bucket
         ownershipControls, err := s3.NewBucketOwnershipControls(ctx, "ownership-controls", &s3.BucketOwnershipControlsArgs{
             Bucket: bucket.ID(),
             Rule: &s3.BucketOwnershipControlsRuleArgs{
@@ -173,7 +173,7 @@ func main() {
             return err
         }
 
-        // Enable public access to the bucket:
+        // Enable public access to the bucket
         publicAccessBlock, err := s3.NewBucketPublicAccessBlock(ctx, "public-access-block", &s3.BucketPublicAccessBlockArgs{
             Bucket:          bucket.ID(),
             BlockPublicAcls: pulumi.Bool(false),
@@ -182,7 +182,7 @@ func main() {
             return err
         }
 
-        // Upload index.html to the bucket:
+        // Upload index.html to the bucket
         _, err = s3.NewBucketObject(ctx, "index.html", &s3.BucketObjectArgs{
             Bucket:      bucket.ID(),
             Source:      pulumi.NewFileAsset("index.html"),
@@ -193,7 +193,7 @@ func main() {
             return err
         }
 
-        // Export the bucket's name and website URL:
+        // Export the bucket's name and website URL
         ctx.Export("bucketName", bucket.ID())
         ctx.Export("url", website.WebsiteEndpoint.ApplyT(func(websiteEndpoint string) (string, error) {
             return fmt.Sprintf("http://%v", websiteEndpoint), nil
@@ -215,10 +215,10 @@ using System.Collections.Generic;
 
 return await Pulumi.Deployment.RunAsync(() =>
 {
-    // Create an S3 bucket:
+    // Create an S3 bucket
     var bucket = new Bucket("my-bucket");
 
-    // Configure the bucket as a website:
+    // Configure the bucket as a website
     var website = new BucketWebsiteConfiguration("website", new()
     {
         Bucket = bucket.Id,
@@ -228,7 +228,7 @@ return await Pulumi.Deployment.RunAsync(() =>
         },
     });
 
-    // Configure ownership controls for the bucket:
+    // Configure ownership controls for the bucket
     var ownershipControls = new BucketOwnershipControls("ownership-controls", new()
     {
         Bucket = bucket.Id,
@@ -238,14 +238,14 @@ return await Pulumi.Deployment.RunAsync(() =>
         },
     });
 
-    // Enable public access to the bucket:
+    // Enable public access to the bucket
     var publicAccessBlock = new BucketPublicAccessBlock("public-access-block", new()
     {
         Bucket = bucket.Id,
         BlockPublicAcls = false,
     });
 
-    // Upload index.html to the bucket:
+    // Upload index.html to the bucket
     var bucketObject = new BucketObject("index.html", new()
     {
         Bucket = bucket.Id,
@@ -261,7 +261,7 @@ return await Pulumi.Deployment.RunAsync(() =>
         },
     });
 
-    // Export the bucket's name and website URL:
+    // Export the bucket's name and website URL
     return new Dictionary<string, object?>
     {
         ["bucketName"] = bucket.Id,
@@ -288,10 +288,10 @@ import com.pulumi.aws.s3.inputs.*;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            // Create an S3 bucket:
+            // Create an S3 bucket
             var bucket = new Bucket("my-bucket");
 
-            // Configure the bucket as a website:
+            // Configure the bucket as a website
             var website = new BucketWebsiteConfiguration("website", BucketWebsiteConfigurationArgs.builder()
                 .bucket(bucket.id())
                 .indexDocument(BucketWebsiteConfigurationIndexDocumentArgs.builder()
@@ -299,7 +299,7 @@ public class App {
                     .build())
                 .build());
 
-            // Configure ownership controls for the bucket:
+            // Configure ownership controls for the bucket
             var ownershipControls = new BucketOwnershipControls("ownershipControls", BucketOwnershipControlsArgs.builder()
                 .bucket(bucket.id())
                 .rule(BucketOwnershipControlsRuleArgs.builder()
@@ -307,13 +307,13 @@ public class App {
                     .build())
                 .build());
 
-            // Enable public access to the bucket:
+            // Enable public access to the bucket
             var publicAccessBlock = new BucketPublicAccessBlock("publicAccessBlock", BucketPublicAccessBlockArgs.builder()
                 .bucket(bucket.id())
                 .blockPublicAcls(false)
                 .build());
 
-            // Upload index.html to the bucket:
+            // Upload index.html to the bucket
             var bucketObject = new BucketObject("index.html", BucketObjectArgs.builder()
                 .bucket(bucket.id())
                 .source(new FileAsset("index.html"))
@@ -325,7 +325,7 @@ public class App {
                         publicAccessBlock)
                     .build());
 
-            // Export the bucket's name and website URL:
+            // Export the bucket's name and website URL
             ctx.export("bucketName", bucket.bucket());
             ctx.export("url", website.websiteEndpoint().applyValue(
                 websiteEndpoint -> String.format("http://%s", websiteEndpoint)));
@@ -344,11 +344,11 @@ runtime: yaml
 description: A minimal AWS Pulumi YAML program
 
 resources:
-  # Create an S3 bucket:
+  # Create an S3 bucket
   my-bucket:
     type: aws:s3:Bucket
 
-  # Configure the bucket as a website:
+  # Configure the bucket as a website
   website:
     type: aws:s3:BucketWebsiteConfiguration
     properties:
@@ -356,7 +356,7 @@ resources:
       indexDocument:
         suffix: index.html
 
-  # Configure ownership controls for the bucket:
+  # Configure ownership controls for the bucket
   ownership-controls:
     type: aws:s3:BucketOwnershipControls
     properties:
@@ -364,14 +364,14 @@ resources:
       rule:
         objectOwnership: ObjectWriter
 
-  # Enable public access to the bucket:
+  # Enable public access to the bucket
   public-access-block:
     type: aws:s3:BucketPublicAccessBlock
     properties:
       bucket: ${my-bucket.id}
       blockPublicAcls: false
 
-  # Upload index.html to the bucket:
+  # Upload index.html to the bucket
   index.html:
     type: aws:s3:BucketObject
     properties:
@@ -386,7 +386,7 @@ resources:
         - ${public-access-block}
 
 outputs:
-  # Export the bucket's name and website URL:
+  # Export the bucket's name and website URL
   bucketName: ${my-bucket.id}
   url: http://${website.websiteEndpoint}
 ```
