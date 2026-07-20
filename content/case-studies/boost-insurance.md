@@ -7,6 +7,7 @@ description: |
 meta_desc: Boost Insurance uses Pulumi to meet regulatory compliance and data residency needs, keeping production data off laptops and eliminating breach risk.
 
 customer_name: Boost Insurance
+industry: financial-services
 customer_logo: /logos/customers/boost-insurance.svg
 customer_url: https://www.boostinsurance.com/
 
