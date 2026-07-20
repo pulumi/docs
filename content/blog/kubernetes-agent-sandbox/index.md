@@ -51,7 +51,7 @@ There are two common patterns for using it. In the first, every coding agent ses
 
 ![Scenario 1: a dedicated agent cluster giving each developer their own kernel-isolated sandbox with a coding agent and IDE inside](scenario-1.png)
 
-In the second, you have your own agent harness that needs execution environments: a Neo or a Devin. The harness lives outside the sandboxes and hands each task a disposable box, and Agent Sandbox is what spins those boxes up and down, suspending and resuming them. When I said Pulumi Neo works this way, this is the scenario I meant: Neo is a harness, and every task it runs gets a box like these.
+In the second, you're building your own Neo or Devin: an agent harness of your own that needs execution environments. The harness lives outside the sandboxes and hands each task a disposable box, and Agent Sandbox is what spins those boxes up and down, suspending and resuming them. When I said Pulumi Neo works this way, this is the scenario I meant: Neo is a harness, and every task it runs gets a box like these.
 
 ## Why not just run agents in Docker?
 
