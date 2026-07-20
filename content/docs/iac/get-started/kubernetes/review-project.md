@@ -295,6 +295,4 @@ outputs:
 
 This program declares an NGINX [Deployment](/registry/packages/kubernetes/api-docs/apps/v1/deployment/) [resource](/docs/iac/concepts/resources) and exports the deployment's name as a [stack output](/docs/iac/concepts/stacks/#outputs). Resources are just objects with [properties](/docs/iac/concepts/inputs-outputs) that capture their inputs and outputs. Exporting the deployment's name makes it easy to reference later.
 
-Now you're ready to deploy!
-
 {{< get-started-stepper >}}

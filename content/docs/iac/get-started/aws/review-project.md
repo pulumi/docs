@@ -165,6 +165,4 @@ outputs:
 
 This program declares an S3 [Bucket](/registry/packages/aws/api-docs/s3/bucket/) [resource](/docs/iac/concepts/resources) and exports its ID as a [stack output](/docs/iac/concepts/stacks/#outputs). Resources are just objects with [properties](/docs/iac/concepts/inputs-outputs) that capture their inputs and outputs. Exporting the bucket's ID makes it easy to reference later.
 
-Now you're ready to deploy!
-
 {{< get-started-stepper >}}

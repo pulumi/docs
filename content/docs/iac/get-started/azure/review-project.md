@@ -230,6 +230,4 @@ outputs:
 
 This program declares an Azure [Resource Group](/registry/packages/azure-native/api-docs/resources/resourcegroup/) and [Storage Account](/registry/packages/azure-native/api-docs/storage/storageaccount/) and exports the storage account's name as a [stack output](/docs/iac/concepts/stacks/#outputs). Resources are just objects with [properties](/docs/iac/concepts/inputs-outputs) that capture their inputs and outputs. Exporting the storage account's name makes it easy to reference later.
 
-Now you're ready to deploy!
-
 {{< get-started-stepper >}}
