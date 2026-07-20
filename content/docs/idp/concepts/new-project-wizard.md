@@ -23,7 +23,7 @@ The New Project Wizard supports three primary workflows:
 
 1. **Create a new project from a template**: Create a new project and its first stack by forking code from a Pulumi organization [template](/docs/idp/concepts/organization-templates/). This creates a copy of the template code in your repository, which you can then modify independently.
 1. **Add a no-code stack to a template**: Add a new stack to an organization template without forking the template code. The template code remains the single source of truth, and the stack references the template directly.
-1. **Add a stack to an existing project**: Add a new stack to any existing Pulumi project, whether or not it was originally created from a template.
+1. **Add a stack to an existing project**: Add a new stack to any existing Pulumi project. If the project references an upstream template (via `pulumi:template` in its `Pulumi.yaml`), the wizard regenerates the project's program from that template when it adds the stack, so local changes that have diverged from the template are not preserved. Projects without a template reference keep their existing program unchanged.
 
 ## Configuration options
 
