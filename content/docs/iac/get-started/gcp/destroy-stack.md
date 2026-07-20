@@ -1,44 +1,27 @@
 ---
 title_tag: Destroy the Stack | Google Cloud
-title: Destroy stack
-h1: "Get started with Pulumi and Google Cloud"
+title: Destroy the stack
+h1: "Destroy the stack"
 meta_desc: This page provides an overview of how to destroy a Pulumi stack of a Google Cloud project.
-weight: 7
+weight: 9
 menu:
     iac:
-        name: Cleanup & destroy
+        name: Destroy the stack
         identifier: gcp-get-started.destroy-stack
         parent: gcp-get-started
-        weight: 7
-
+        weight: 9
 aliases:
     - /docs/quickstart/gcp/destroy-stack/
     - /docs/clouds/gcp/get-started/destroy-stack/
 ---
 
-## Cleanup & destroy the stack
-
-Our final step is to clean up all of the resources we've allocated in this tutorial.
-
-Run the `pulumi destroy` command to delete all cloud resources in this project/stack:
-
-{{% choosable os "linux,macos" %}}
+Now that you've seen how to provision and manage resources with Pulumi, you can clean up the resources you created. Run `pulumi destroy` to delete every cloud resource in the stack:
 
 ```bash
 $ pulumi destroy
 ```
 
-{{% /choosable %}}
-
-{{% choosable os "windows" %}}
-
-```powershell
-> pulumi destroy
-```
-
-{{% /choosable %}}
-
-Just like `pulumi up`, you'll be shown a preview to ensure that you want to proceed:
+Once again, you'll see a preview before anything happens:
 
 ```
 Previewing destroy (dev):
@@ -50,6 +33,7 @@ Previewing destroy (dev):
  -   └─ gcp:storage:Bucket            my-bucket          delete
 
 Outputs:
+  - bucketName: "gs://my-bucket-daa12be"
   - url       : "http://storage.googleapis.com/my-bucket-daa12be/index.html"
 
 Resources:
@@ -61,49 +45,12 @@ Do you want to perform this destroy?
   details
 ```
 
-As with an update, we can choose `no` or `details`; select `yes` to proceed:
-
-```
-Destroying (dev):
-
-     Type                             Name               Status
- -   pulumi:pulumi:Stack              quickstart-dev     deleted (0.31s)
- -   ├─ gcp:storage:BucketIAMBinding  my-bucket-binding  deleted (6s)
- -   ├─ gcp:storage:BucketObject      index.html         deleted (0.78s)
- -   └─ gcp:storage:Bucket            my-bucket          deleted (1s)
-
-Outputs:
-  - url       : "http://storage.googleapis.com/my-bucket-daa12be/index.html"
-
-Resources:
-    - 4 deleted
-
-Duration: 9s
-```
-
-At this stage, your stack still exists, but all cloud resources have been deleted from it.
-
-## Remove the stack
-
-The final step is to remove the stack itself. Destroy keeps the stack around so that you still have the full
-history of what happened to the stack. Running [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_rm) will
-delete it entirely, including all history and state snapshots. Be careful, this step cannot be undone!
-
-{{% choosable "os" "macos,linux" %}}
+Choose `yes` to destroy the stack. When the operation completes, your cloud resources no longer exist, but the stack and its configuration settings still do. You can delete the stack, including all of its state and update history, with [`pulumi stack rm`](/docs/iac/cli/commands/pulumi_stack_rm/):
 
 ```bash
 $ pulumi stack rm
 ```
 
-{{% /choosable %}}
-{{% choosable "os" "windows" %}}
-
-```powershell
-> pulumi stack rm
-```
-
-{{% /choosable %}}
-
-You'll be prompted to confirm the removal. Confirm it to successfully complete this tutorial.
+Confirm the removal when prompted, and you're done.
 
 {{< get-started-stepper >}}

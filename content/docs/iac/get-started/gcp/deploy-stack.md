@@ -1,33 +1,30 @@
 ---
 title_tag: Deploy the Stack | Google Cloud
-title: Deploy to Google Cloud
-h1: "Get started with Pulumi and Google Cloud"
+title: Deploy the stack
+h1: "Deploy the stack"
 meta_desc: Learn how to deploy your stack to a Google Cloud project in this guide.
-weight: 5
+weight: 6
 menu:
     iac:
-        name: Deploy
+        name: Deploy the stack
         identifier: gcp-get-started.deploy-stack
         parent: gcp-get-started
-        weight: 5
-
+        weight: 6
 aliases:
     - /docs/quickstart/gcp/deploy-stack/
     - /docs/clouds/gcp/get-started/deploy-stack/
 ---
 
-## Deploy to Google Cloud
-
-Now run `pulumi up` to start deploying your new storage bucket:
+Now deploy the stack with `pulumi up`:
 
 ```bash
 $ pulumi up
 ```
 
-This command first shows you a **preview** of the changes that will be made:
+This command first shows you a preview of the changes to be made:
 
 ```
-Previewing update (dev)
+Previewing update (dev):
 
      Type                   Name            Plan
  +   pulumi:pulumi:Stack    quickstart-dev  create
@@ -45,15 +42,9 @@ Do you want to perform this update?
   details
 ```
 
-No changes have been made yet. You may decline to proceed by selecting `no` or choose `details` to
-see more information about the proposed update like your bucket's properties.
-
-### Performing the update
-
-To proceed and deploy your new storage bucket, select `yes`. This begins an **update**:
+Choosing `yes` proceeds with an update, which creates the resources in Google Cloud:
 
 ```
-Do you want to perform this update? yes
 Updating (dev):
 
      Type                   Name            Status
@@ -69,25 +60,19 @@ Resources:
 Duration: 4s
 ```
 
-Updates can take some time since they wait for the cloud resources to finish being created. Storage buckets
-are quick, however, so the update will finish in just a few seconds.
+The update completes when all resources are created. For a storage bucket, this takes only a few seconds.
 
 {{< auto-naming-note resource="bucket" suffix="daa12be" >}}
 
-### Using stack outputs
+Notice the bucket's name was emitted as a [stack output](/docs/iac/concepts/stacks/#outputs). You can retrieve the output's value with `pulumi stack output`:
 
-The bucket name is available as a stack output. To view it:
-
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
-
-{{% choosable language typescript %}}
+{{% choosable language "typescript,go,csharp,java,yaml" %}}
 
 ```bash
 $ pulumi stack output bucketName
 ```
 
 {{% /choosable %}}
-
 {{% choosable language python %}}
 
 ```bash
@@ -96,48 +81,6 @@ $ pulumi stack output bucket_name
 
 {{% /choosable %}}
 
-{{% choosable language go %}}
-
-```bash
-$ pulumi stack output bucketName
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-```bash
-$ pulumi stack output bucketName
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-```bash
-$ pulumi stack output bucketName
-```
-
-{{% /choosable %}}
-
-{{% choosable language yaml %}}
-
-```bash
-$ pulumi stack output bucketName
-```
-
-{{% /choosable %}}
-
-Running that command will print out the name of your bucket.
-
-### View your update on Pulumi Cloud
-
-If you are logged into [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/), you'll see "View Live" hyperlinks in the CLI output during your update. These go to [a page](https://app.pulumi.com/signin) with detailed information about your stack including resources, configuration, a full history of updates, and more. Navigate to it to review the details of your update:
-
-<a href="/images/getting-started/console-update.png" target="_blank">
-    <img src="/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" />
-</a>
-
-Now that the storage bucket has been provisioned, you'll update it to host a static website.
+Next, you'll turn the bucket into a static website.
 
 {{< get-started-stepper >}}
