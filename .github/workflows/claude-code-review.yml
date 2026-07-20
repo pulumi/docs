@@ -451,10 +451,16 @@ jobs:
           AUTHOR="${{ steps.pr-context.outputs.author }}"
 
           # GitHub App bots are not collaborators, so the permission API
-          # below returns "none" for them. Trusted agent bots that open
-          # PRs on this repo are whitelisted by name instead. Keep this
-          # list in sync with the matching check in claude-triage.yml.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" ]]; then
+          # below returns "none" for them. Trusted bots that open PRs on this
+          # repo are whitelisted by name instead. `workprentice` is Joe Duffy's
+          # docs-automation identity (the Docs Groundskeeper agent) and is
+          # trusted like an internal author. The author string differs by source:
+          # this workflow reads `gh pr view --json author` (`app/workprentice`)
+          # while claude-triage.yml reads the REST webhook `user.login`
+          # (`workprentice[bot]`), so both forms are listed in both files. Keep
+          # this list in sync with the matching check in claude-triage.yml.
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+             || "$AUTHOR" == "app/workprentice" || "$AUTHOR" == "workprentice[bot]" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Bot $AUTHOR is whitelisted for Claude reviews"
             exit 0

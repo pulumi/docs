@@ -62,9 +62,11 @@ case "$CONTRIBUTOR_TYPE" in
     # Strip "app/" prefix that gh returns for GitHub Apps so the match works
     BOT_NAME="${AUTHOR#app/}"
     BOT_NAME="${BOT_NAME%\[bot\]}"
-    # Known good bots get high; unknown bots get low
+    # Known good bots get high; unknown bots get low. `workprentice` is a
+    # trusted first-party docs-automation identity (the Docs Groundskeeper
+    # agent), treated like an internal author.
     case "$BOT_NAME" in
-      dependabot*|pulumi-bot|renovate*|copilot*|github-actions*)
+      dependabot*|pulumi-bot|renovate*|copilot*|github-actions*|workprentice*)
         ETIQUETTE_TRUST="high"
         ;;
       *)

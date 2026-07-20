@@ -38,7 +38,7 @@ def marker(result: str, sha: str) -> str:
     if result == "passed":
         return f"✅ `make lint` re-verified by the workflow on `{sha}`"
     return (
-        f"❌ `make lint` FAILED on `{sha}` — PR returned to draft; "
+        f"❌ `make lint` FAILED on `{sha}` — PR opened as a draft; "
         "see the automated lint comment on this PR"
     )
 

@@ -16,8 +16,9 @@ You run **unprivileged**: the review job holds no push token, so you edit the
 working tree only — never `git commit`, `git push`, or `gh pr create`. The
 workflow's publish job validates your changes against a deterministic gate
 (`scripts/content-review/publish-gate.py`: verdict shape, diff scope,
-`no_retire`), derives the branch name from the queue, and opens the draft PR
-with the body you edited. Changes outside the gate's scope are rejected
+`no_retire`), derives the branch name from the queue, and opens the PR
+(ready when the re-lint passes, draft only on lint failure) with the body you
+edited. Changes outside the gate's scope are rejected
 wholesale, so keep every edit inside the bounds each step names.
 
 ## Input
@@ -277,18 +278,18 @@ separate commands) before opening the PR.
 
 ### 7. PR body — only when you applied a fix
 
-You do not open the PR — the publish job creates a **draft** PR to `master`
-whose body is `.pr-body-draft.md`, exactly as you leave it. You do **not**
-write that body from scratch: the workflow composed it (via
-`compose-pr-body.py`, the assemble-then-judge model — the composer ASSEMBLES
-facts, you JUDGE) with every section present and each pre-found finding
-pre-bucketed under a `<TODO>`. **Edit that draft** in place, resolve every
-`<TODO>`, and strip the HTML-comment hints. After opening the PR the workflow
-re-runs `make lint` on the published branch and **promotes the PR to ready
-only if lint passes** — that ready transition is what triggers triage and the
-docs review (a clean lint means it flows through the normal pipeline; a
-trivial fix is short-circuited there). A lint failure leaves the PR a draft
-with a comment for a human; humans merge. The sections (each is checked for):
+You do not open the PR — the publish job creates the PR to `master` whose body
+is `.pr-body-draft.md`, exactly as you leave it. You do **not** write that body
+from scratch: the workflow composed it (via `compose-pr-body.py`, the
+assemble-then-judge model — the composer ASSEMBLES facts, you JUDGE) with every
+section present and each pre-found finding pre-bucketed under a `<TODO>`. **Edit
+that draft** in place, resolve every `<TODO>`, and strip the HTML-comment hints.
+Before opening the PR the workflow runs the authoritative `make lint` on the
+published branch and **opens the PR ready for review only if lint passes** —
+opening ready is what triggers triage and the docs review (a clean lint means it
+flows through the normal pipeline; a trivial fix is short-circuited there). A
+lint failure opens the PR as a draft instead, with a comment for a human; humans
+merge. The sections (each is checked for):
 
 - **Auto-merge notice** (top `> [!IMPORTANT]` block): the re-lint gate arms
   GitHub auto-merge on the PR, so the body flags that approving merges it.
