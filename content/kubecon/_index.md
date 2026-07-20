@@ -144,7 +144,7 @@ footer_cta:
       style: secondary
       track: footer-cta-kubecon-contact-sales
     - label: Try Pulumi
-      href: /signup
+      href: /signup/
       style: primary
       track: footer-cta-kubecon-signup
 ---
