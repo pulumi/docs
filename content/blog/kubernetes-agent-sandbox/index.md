@@ -133,13 +133,13 @@ GKE installs the `gvisor` RuntimeClass, labels the nodes, and taints them so onl
 
 That auto-install is the GKE convenience, not a requirement. Agent Sandbox itself is just CRDs and a controller, so on any other cluster you can [install gVisor yourself](https://gvisor.dev/docs/user_guide/install/) (or Kata), register a `RuntimeClass`, and everything below works the same.
 
-**Move 2: the install, pinned.** Next we apply the core manifest and the warm-pool extensions:
+**Move 2: the install, pinned.** Next we install the controller and the CRDs, using the all-in-one `sandbox-with-extensions.yaml` manifest that shipped in last week's v0.5.2[^052]:
 
 ```typescript
-const base = `https://github.com/kubernetes-sigs/agent-sandbox/releases/download/v0.5.1`;
+const base = `https://github.com/kubernetes-sigs/agent-sandbox/releases/download/v0.5.2`;
 
 const agentSandbox = new k8s.yaml.v2.ConfigGroup("agent-sandbox", {
-    files: [`${base}/manifest.yaml`, `${base}/extensions.yaml`],
+    files: [`${base}/sandbox-with-extensions.yaml`],
 });
 ```
 
@@ -222,5 +222,6 @@ The full program, everything in this post, deploy to teardown, is at [pulumi/exa
 
 {{< github-card repo="pulumi/examples" >}}
 
+[^052]: The all-in-one manifest is new in [v0.5.2](https://github.com/kubernetes-sigs/agent-sandbox/releases/tag/v0.5.2) (July 17): earlier releases split the install into `manifest.yaml` plus `extensions.yaml`, and v0.5.2 renamed the core file — one more reason to pin the version you deploy.
 [^15]: Warm pools plus snapshot restore are how the managed version keeps this fast at scale: Google's GKE Agent Sandbox launch cites 300 sandboxes per second at sub-second latency. See [Bringing you Agent Sandbox on GKE and Agent Substrate](https://cloud.google.com/blog/products/containers-kubernetes/bringing-you-agent-sandbox-on-gke-and-agent-substrate).
-[^22]: Verified against the v0.5.1 release manifests: the core `manifest.yaml` defines no `NetworkPolicy`, and `extensions.yaml` defaults `networkPolicyManagement` to `Managed` only for `SandboxTemplate`-created sandboxes. A directly-created `Sandbox` gets neither, so restricting egress is left to you. See the [v0.5.1 release](https://github.com/kubernetes-sigs/agent-sandbox/releases/tag/v0.5.1).
+[^22]: Verified against the v0.5.2 release manifests: `sandbox-with-extensions.yaml` installs no `NetworkPolicy` objects, and `networkPolicyManagement` defaults to `Managed` only for `SandboxTemplate`-created sandboxes. A directly-created `Sandbox` gets neither, so restricting egress is left to you. See the [v0.5.2 release](https://github.com/kubernetes-sigs/agent-sandbox/releases/tag/v0.5.2).
