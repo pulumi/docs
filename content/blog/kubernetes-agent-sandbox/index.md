@@ -110,7 +110,7 @@ Isolation is the hard part, but it isn't the only one. If you're in scenario 2, 
 
 ![Scenario 2: a harness outside the sandboxes, routing each session to a box where tools run, suspending and resuming them from snapshots](scenario-2.png)
 
-Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing for a rolling deployment, but enough that the maintainers say it ["breaks the continuity"](https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/) of an interaction. So Agent Sandbox avoids re-booting altogether: it suspends and resumes pods from memory snapshots and keeps warm pools ready, the same move E2B (~150ms) and Fly's Sprites (~300ms) use to pull a cold start well under a second[^15].
+Booting a fresh Kubernetes pod costs about a second of overhead. That's nothing for a rolling deployment, but enough that the maintainers say it ["breaks the continuity"](https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/) of an interaction. So Agent Sandbox avoids re-booting altogether: it suspends and resumes pods from memory snapshots and keeps warm pools ready, the same snapshot-restore move E2B (~150ms) and Fly's Sprites (~300ms) use to pull the effective cold start well under a second[^15].
 
 ## Deploying it on GKE with Pulumi
 
@@ -159,11 +159,11 @@ export const sandboxes = developers.map(dev => new AgentSandbox(`sbx-${dev.name}
 }, { dependsOn: [agentSandbox, operator, acl] }));
 ```
 
-That `developers` array is read at runtime, so it could just as easily be a GitHub team or whoever currently has a session open, none of which `kubectl apply -k` can loop over.
+That `developers` array is read at runtime, so it could just as easily be a GitHub team or whoever currently has a session open, none of which `kubectl apply -k` can loop over. (The `developers` list and the per-box credentials are stack config; the [example's README](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox#running-the-example) has the exact `pulumi config set` commands.)
 
 Nothing in the sandbox is Claude-specific, either. The agent is just what the image installs: swap in Codex CLI, or point one of the [Claude Code orchestration frameworks](/blog/claude-code-orchestration-frameworks/) at it, and the isolation story doesn't change.
 
-**Move 4: the egress policy.** Agent Sandbox ships **no default NetworkPolicy**[^22], so out of the box a sandboxed agent has kernel isolation and wide-open egress. We set a policy that lets the agent reach `api.anthropic.com` and npm but not any private IPs:
+**Move 4: the egress policy.** Create a `Sandbox` directly, as we do here, and **no NetworkPolicy applies**[^22]: kernel isolation, but wide-open egress. (The `SandboxTemplate` extension manages a default policy for template-created sandboxes; a raw `Sandbox` gets nothing.) We set a policy that lets the agent reach `api.anthropic.com` and npm but not any private IPs:
 
 ```typescript
 egress: [{
@@ -221,4 +221,4 @@ The full program, everything in this post, deploy to teardown, is at [pulumi/exa
 {{< github-card repo="pulumi/examples" >}}
 
 [^15]: Warm pools plus snapshot restore are how the managed version keeps this fast at scale: Google's GKE Agent Sandbox launch cites 300 sandboxes per second at sub-second latency. See [Bringing you Agent Sandbox on GKE and Agent Substrate](https://cloud.google.com/blog/products/containers-kubernetes/bringing-you-agent-sandbox-on-gke-and-agent-substrate).
-[^22]: The upstream install manifests set up the CRDs and controller but don't define an egress `NetworkPolicy` for your sandbox pods, so restricting egress is left to you. See [kubernetes-sigs/agent-sandbox](https://github.com/kubernetes-sigs/agent-sandbox).
+[^22]: Verified against the v0.5.1 release manifests: the core `manifest.yaml` defines no `NetworkPolicy`, and `extensions.yaml` defaults `networkPolicyManagement` to `Managed` only for `SandboxTemplate`-created sandboxes. A directly-created `Sandbox` gets neither, so restricting egress is left to you. See the [v0.5.1 release](https://github.com/kubernetes-sigs/agent-sandbox/releases/tag/v0.5.1).
