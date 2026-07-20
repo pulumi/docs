@@ -219,7 +219,7 @@ const escalation = new pagerduty.EscalationPolicy("platform-escalation", {
 });
 ```
 
-Page whoever the primary schedule says is on call. If nobody acknowledges within 15 minutes, page Lena directly. If the whole chain runs dry, `numLoops: 2` starts it over once more before PagerDuty gives up. When someone asks what actually happens when this fires at 3 AM, the answer is a dozen lines of reviewed code, not a screenshot of a UI that may or may not be current.
+Page whoever the primary schedule says is on call. If nobody acknowledges within 15 minutes, page Lena directly. If the whole chain runs dry, `numLoops: 2` starts it over twice more before PagerDuty gives up. When someone asks what actually happens when this fires at 3 AM, the answer is a dozen lines of reviewed code, not a screenshot of a UI that may or may not be current.
 
 ## The service
 
@@ -334,7 +334,7 @@ new azure.monitor.ActionGroup("checkout-pagerduty", {
 });
 ```
 
-The `location: "global"` is not a placeholder. Action groups are a global service, and Azure rejects regular regions like `westeurope` for them; leave `location` out and the resource inherits your resource group's region, which fails the same way.
+The `location: "global"` is not a placeholder. Action groups are a global service, and Azure rejects regular regions like `westeurope` for them; setting it explicitly makes that intent obvious in the code.
 
 Same program, same key handoff, different cloud. If your platform spans all three, the PagerDuty side does not care.
 
