@@ -108,7 +108,11 @@ export function generateOnThisPage() {
     let found = false;
     const headingItems: { element: HTMLElement, listItems: HTMLElement[] }[] = [];
 
-    document.querySelectorAll("h2, h3").forEach((el: HTMLElement) => {
+    // Scope to the main content region so headings in page chrome (e.g. the
+    // screen-reader-only "Navigation" heading in the mobile nav sheet, which
+    // renders in the header, outside #main) don't leak into the TOC.
+    const content = document.querySelector("#main") || document;
+    content.querySelectorAll("h2, h3").forEach((el: HTMLElement) => {
         if (el.closest('.hidden')) {
             return;
         }
