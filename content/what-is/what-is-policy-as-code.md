@@ -212,6 +212,7 @@ Related reading:
 * [OPA support for Pulumi Policies](/blog/opa-support-for-crossguard/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
 * [What is infrastructure drift?](/what-is/what-is-infrastructure-drift/)
+* [Most Effective Infrastructure as Code (IaC) Tools](/blog/infrastructure-as-code-tools/)
 * [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)
 * [What is platform engineering?](/what-is/what-is-platform-engineering/)
