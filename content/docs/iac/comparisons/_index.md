@@ -36,6 +36,7 @@ Here are several useful comparisons that will help you understand Pulumi's place
 * [Azure Resource Manager (ARM) Templates](/docs/iac/comparisons/arm-templates/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
+* [Spacelift](/docs/iac/comparisons/spacelift/)
 * [Helm](/docs/iac/comparisons/helm/)
 * [Kubernetes YAML Manifests](/docs/iac/comparisons/k8s-yaml-dsls/)
 * [Serverless Framework](/docs/iac/comparisons/serverless/)
