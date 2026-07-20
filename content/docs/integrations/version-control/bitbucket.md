@@ -86,7 +86,7 @@ Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a confi
 
 You can use path filters to limit deployments to commits that change files matching specific glob patterns (e.g., `infrastructure/**`).
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/tag-filtering/).
 
 ### Review stacks
 
