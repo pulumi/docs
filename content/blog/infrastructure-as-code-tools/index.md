@@ -799,12 +799,12 @@ spec:
 License: Mozilla Public License 2.0  
 Best For: Teams seeking an open-source Terraform alternative with community governance
 
-OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/comparisons/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
+OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [high, but not full, compatibility with Terraform](/docs/iac/comparisons/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
 
 Key Features:
 
 - **True open source**: MPL 2.0 license with community governance via Linux Foundation ensuring long-term accessibility
-- **Terraform compatibility**: Drop-in replacement maintaining existing workflows, modules, and provider ecosystem
+- **Terraform compatibility**: Largely maintains existing workflows, modules, and provider ecosystem, with some divergence emerging as the projects evolve independently
 - **Community-driven development**: Transparent roadmap, open contribution process, and vendor-neutral governance
 - **License certainty**: Removes concerns about future licensing restrictions for commercial use
 
@@ -925,7 +925,7 @@ License: Apache 2.0
 Best For: Enterprise environments requiring strong governance and compliance
 
 > [!INFO]
-> Puppet is a configuration management tool, not an Infrastructure as Code tool. Puppet specializes in maintaining desired configuration state on existing systems and ensuring compliance, rather than provisioning cloud infrastructure.
+> Puppet is primarily a configuration management tool, not a pure Infrastructure as Code tool. Puppet specializes in maintaining desired configuration state on existing systems and ensuring compliance, rather than provisioning cloud infrastructure.
 
 Puppet offers enterprise-grade configuration management with a focus on compliance, governance, and declarative system state management.
 
