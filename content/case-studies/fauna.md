@@ -57,7 +57,7 @@ Fauna chose Pulumi because it would allow its developers to adopt modern, [cloud
 
 Fauna runs its database service on multiple clouds, including AWS and Google Cloud. With the Region Groups feature, Fauna creates and manages database clusters that are multi-region and consist of VPCs, subnets, VMs, and load balancers. In addition, Fauna needed to make sure the clusters could auto-scale and it needed the ability to spin up new clusters in a Region Group based on demand in a few hours.
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/fauna-architecture-diagram.png">
+![Fauna multi-cloud architecture diagram](/images/case-studies/fauna-architecture-diagram.png)
 
 With Pulumi, Fauna’s developers could build, deploy, and manage infrastructure as code across multiple clouds using Python, their language of choice. They could use programming concepts and tools that they were already familiar with, such as object-oriented programming, reusability, IDEs, and standard Python libraries. This gave them the flexibility to model complex infrastructure with the full expressivity of modern languages, and share and reuse it like any software code.
 

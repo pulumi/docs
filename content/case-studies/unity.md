@@ -72,8 +72,7 @@ Despite these improvements, Jenkins upgrades and plugin management continued to 
 
 To further accelerate deployment times, and to maintain security best practices, Aura adopted [GitHub Actions](https://github.com/features/actions/) with self-hosted runners on EKS. Once again, the team used Pulumi to manage the EKS and workload deployments and related AWS resources. To improve performance, the team broke up monolithic Jenkins jobs into smaller tasks in GitHub Actions.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/unity-gh-diagram.png" alt="Unity GitHub Actions diagram">
+![Unity GitHub Actions diagram](/images/case-studies/unity-gh-diagram.png)
 
 ## Empowering Developers with Pulumi's Automation API {#empowering-developers}
 

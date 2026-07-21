@@ -92,8 +92,7 @@ Supabase takes a pragmatic approach to cloud vendors, using the best tool for ea
 
 With Pulumi, Supabase's application teams compose multi-cloud stacks atomically within a single deployment. A typical stack might include AWS services for compute, Cloudflare routing, and DNS configuration, and additional providers, all without having to jump between three different cloud consoles.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/supabase-architecture-diagram.png" alt="supabase-architecture-diagram">
+![Supabase multi-cloud architecture diagram](/images/case-studies/supabase-architecture-diagram.png)
 
 ## Results: From Single Region to Global Infrastructure {#results}
 

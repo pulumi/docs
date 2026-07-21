@@ -39,8 +39,7 @@ Manufacturing veterans are currently experiencing an "IT-OT Convergence." Compan
 
 While this trend continues to accelerate, a large skill gap remains. [4IR Solutions](https://www.4ir.cloud/) was founded with the mission to fill this gap, by using the best tools and practices from the IT industry to operate OT infrastructure for manufacturers at scale. With its FactoryStack™ and PharmaStack™ products, 4IR offers infrastructure and "DevOps-as-a-Service" to manufacturers, taking care of provisioning and operations including backup, upgrades, security services, secrets management, and CI/CD pipelines for OT software.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-factorystack.png" alt="FactoryStack architecture diagram">
+![FactoryStack architecture diagram](/images/case-studies/4ir-factorystack.png)
 
 ## Selecting Pulumi and its Business Impact
 
@@ -66,8 +65,7 @@ Adopting Kubernetes was not an easy decision. Although cloud provider-managed of
 
 4IR created three projects. The first project provides the Kubernetes application layer, which uses Pulumi's Kubernetes provider and is written to be cloud agnostic. The second project is an AWS-specific layer which operates resources such as VPCs, EKS, and PostgreSQL on RDS. The third project is similar to the second, except that it is specific to Azure, and runs similar services, such as VNETs, AKS, and Azure Database for PostgreSQL. In short, both the AWS and Azure projects run the core compute, database, and networking infrastructure primitives, while the Kubernetes layer deploys Kubernetes applications across either cloud.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-multicloud.png" alt="Multi-cloud architecture diagram with Apps on Azure Native and AWS">
+![Multi-cloud architecture diagram with Apps on Azure Native and AWS](/images/case-studies/4ir-multicloud.png)
 
 ### Supporting Hybrid Cloud with Components
 
@@ -75,18 +73,15 @@ Manufacturers in regulated industries such as pharmaceuticals and nuclear energy
 
 4IR realized that in order to operate on-premise, certain cloud-native services, such as managed databases would not be available to them. They needed a way to selectively deploy parts of their infrastructure customized to their hosting environment.  Pulumi's Component Resources turned out to be the perfect solution.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-pulumi-components.png" alt="Architecture diagram using Pulumi Components">
+![Architecture diagram using Pulumi Components](/images/case-studies/4ir-pulumi-components.png)
 
 4IR created new Pulumi Components that the other projects would be able to selectively import from, depending on the environment into which they were deployed. Since 4IR’s engineering team programmed in TypeScript, they used an internal npm repository to store these packages.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-react-code-sample.png" alt="Code snippet for FactoryStack Designer React application">
+![Code snippet for FactoryStack Designer React application](/images/case-studies/4ir-react-code-sample.png)
 
 With this solution in hand, 4IR was able to make customizing their solutions even simpler.  “We created a front-end React application that we coined FactoryStack™ Designer. It provides a "drag-and-drop" interface to configure a customer's environment,” shared Dolivo. “The application, like all of our Pulumi code, is written in TypeScript. It can import interfaces from our Pulumi Components and keeps the front-end in sync with our Pulumi code. In the future, we plan for this application to integrate even more seamlessly with Pulumi via the Automation API.”
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-designer-screenshot-1.png" alt="Screenshot of FactoryStack Designer showing drag and drop interface">
+![Screenshot of FactoryStack Designer showing drag and drop interface](/images/case-studies/4ir-designer-screenshot-1.png)
 
 ### Over the Edge
 

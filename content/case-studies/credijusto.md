@@ -127,7 +127,7 @@ each application to scale with demand.
 >
 > &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/credijusto-architecture.png" alt="Credijusto architecture">
+![Credijusto architecture](/images/case-studies/credijusto-architecture.png)
 
 ## Results
 

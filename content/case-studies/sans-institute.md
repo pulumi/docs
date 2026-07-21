@@ -69,8 +69,7 @@ Tyler and Chris wanted to significantly simplify this architecture by eliminatin
 
 Here is a high-level diagram of the game server service used by SANS Labs.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/sans-game-server-diagram.png" alt="SANS Game Server">
+![SANS game server diagram](/images/case-studies/sans-game-server-diagram.png)
 
 The architecture uses a GitHub-centric approach. All cloud resources are deployed with Pulumi via CI/CD pipelines.
 
@@ -90,8 +89,7 @@ Chris added, “We’re using a polyrepo, in case that isn't apparent. We have a
 
 This diagram shows the code promotion workflow, where developers develop different projects and deploy them to the sandbox environments.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/sans-code-promotion-diagram.png" alt="SANS Institute Code Promotion">
+![SANS Institute code promotion workflow](/images/case-studies/sans-code-promotion-diagram.png)
 
 ### Enforcing security and best practices with Pulumi
 
