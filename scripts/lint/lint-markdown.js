@@ -1,4 +1,5 @@
 const fs = require("fs");
+const zlib = require("zlib");
 const yaml = require("js-yaml");
 const { lint: markdownlint, readConfig } = require("markdownlint/sync");
 const path = require("path");
@@ -184,10 +185,11 @@ function imageDimensions(file) {
 /**
  * checkFeatureImageDimensions enforces that a blog post's `feature_image` is a
  * template-sized 1884x1256 image. The blog-feature-image skill only ever renders
- * templates at this size, so an off-size image is a strong signal the file was
- * hand-made or AI-generated rather than rendered from a template. Only blog posts
- * carry a fixed-size feature image, and only post-local (relative) paths are
- * checked; shared/legacy absolute paths (/images/...) are out of scope.
+ * templates at this size (and designer-supplied images are expected to match it),
+ * so an off-size image is a strong signal it's AI-generated slop rather than a
+ * template render or a real designer image. Only blog posts carry a fixed-size
+ * feature image, and only post-local (relative) paths are checked; shared/legacy
+ * absolute paths (/images/...) are out of scope.
  *
  * @param {string} featureImage The `feature_image` front-matter value.
  * @param {string} fullPath Absolute path to the markdown file being linted.
@@ -211,7 +213,177 @@ function checkFeatureImageDimensions(featureImage, fullPath) {
         return `Feature image '${featureImage}' could not be read as a PNG/JPEG; render it with the /blog-feature-image skill.`;
     }
     if (size.width !== FEATURE_IMAGE_WIDTH || size.height !== FEATURE_IMAGE_HEIGHT) {
-        return `Feature image '${featureImage}' is ${size.width}x${size.height}, but blog feature images must be ${FEATURE_IMAGE_WIDTH}x${FEATURE_IMAGE_HEIGHT}. Render it with the /blog-feature-image skill (never hand-made or AI-generated art).`;
+        return `Feature image '${featureImage}' is ${size.width}x${size.height}, but blog feature images must be ${FEATURE_IMAGE_WIDTH}x${FEATURE_IMAGE_HEIGHT}. Render it with the /blog-feature-image skill or use a designer-supplied image (never AI-generated).`;
+    }
+
+    return null;
+}
+
+/** Canonical blog feature image background color (the templates' backdrop). */
+const FEATURE_IMAGE_BG = { r: 0x23, g: 0x1f, b: 0x33 };
+
+/** PNG Paeth predictor, used to reverse filter type 4. */
+function paethPredictor(a, b, c) {
+    const p = a + b - c;
+    const pa = Math.abs(p - a);
+    const pb = Math.abs(p - b);
+    const pc = Math.abs(p - c);
+    if (pa <= pb && pa <= pc) return a;
+    if (pb <= pc) return b;
+    return c;
+}
+
+/**
+ * Decodes an 8-bit, non-interlaced PNG and returns its four corner pixels as
+ * {r,g,b}, ordered [top-left, top-right, bottom-left, bottom-right]. Uses only
+ * Node's built-in zlib — no image dependency. Returns null for anything it can't
+ * safely decode (non-PNG, 16-bit, interlaced, unknown/paletteless color type),
+ * so callers skip the check rather than raising a false positive.
+ *
+ * @param {string} file Absolute path to a PNG file.
+ * @returns {{r:number,g:number,b:number}[]|null}
+ */
+function pngCornerColors(file) {
+    let buf;
+    try {
+        buf = fs.readFileSync(file);
+    } catch (e) {
+        return null;
+    }
+    if (buf.length < 33 || buf.readUInt32BE(0) !== 0x89504e47) {
+        return null; // Not a PNG.
+    }
+
+    const width = buf.readUInt32BE(16);
+    const height = buf.readUInt32BE(20);
+    const bitDepth = buf[24];
+    const colorType = buf[25];
+    const interlace = buf[28];
+    const channels = { 0: 1, 2: 3, 3: 1, 4: 2, 6: 4 }[colorType];
+    if (bitDepth !== 8 || interlace !== 0 || !channels || width < 1 || height < 1) {
+        return null;
+    }
+
+    // Walk the chunk stream: concatenate IDAT payloads and grab the palette.
+    let offset = 8;
+    const idatParts = [];
+    let palette = null;
+    while (offset + 8 <= buf.length) {
+        const length = buf.readUInt32BE(offset);
+        const type = buf.toString("ascii", offset + 4, offset + 8);
+        const dataStart = offset + 8;
+        if (type === "IDAT") {
+            idatParts.push(buf.subarray(dataStart, dataStart + length));
+        } else if (type === "PLTE") {
+            palette = buf.subarray(dataStart, dataStart + length);
+        } else if (type === "IEND") {
+            break;
+        }
+        offset = dataStart + length + 4; // Skip the chunk data and its 4-byte CRC.
+    }
+    if (idatParts.length === 0 || (colorType === 3 && !palette)) {
+        return null;
+    }
+
+    let raw;
+    try {
+        raw = zlib.inflateSync(Buffer.concat(idatParts));
+    } catch (e) {
+        return null;
+    }
+
+    const stride = width * channels;
+    if (raw.length < (stride + 1) * height) {
+        return null; // Truncated/unexpected data.
+    }
+
+    // Reverse the per-scanline filters into a contiguous raster. Every row must be
+    // un-filtered because filters can reference the pixel directly above.
+    const out = Buffer.alloc(stride * height);
+    for (let y = 0; y < height; y++) {
+        const filter = raw[y * (stride + 1)];
+        const inStart = y * (stride + 1) + 1;
+        const outStart = y * stride;
+        const prevStart = outStart - stride;
+        for (let x = 0; x < stride; x++) {
+            const rawByte = raw[inStart + x];
+            const left = x >= channels ? out[outStart + x - channels] : 0;
+            const up = y > 0 ? out[prevStart + x] : 0;
+            const upLeft = y > 0 && x >= channels ? out[prevStart + x - channels] : 0;
+            let value;
+            switch (filter) {
+                case 0:
+                    value = rawByte;
+                    break;
+                case 1:
+                    value = rawByte + left;
+                    break;
+                case 2:
+                    value = rawByte + up;
+                    break;
+                case 3:
+                    value = rawByte + ((left + up) >> 1);
+                    break;
+                case 4:
+                    value = rawByte + paethPredictor(left, up, upLeft);
+                    break;
+                default:
+                    return null; // Unknown filter type.
+            }
+            out[outStart + x] = value & 0xff;
+        }
+    }
+
+    function pixel(x, y) {
+        const i = y * stride + x * channels;
+        if (colorType === 3) {
+            const idx = out[i] * 3;
+            return { r: palette[idx], g: palette[idx + 1], b: palette[idx + 2] };
+        }
+        if (colorType === 0 || colorType === 4) {
+            return { r: out[i], g: out[i], b: out[i] };
+        }
+        return { r: out[i], g: out[i + 1], b: out[i + 2] };
+    }
+
+    return [pixel(0, 0), pixel(width - 1, 0), pixel(0, height - 1), pixel(width - 1, height - 1)];
+}
+
+/**
+ * checkFeatureImageBackground enforces that a blog post's `feature_image` uses
+ * the canonical #231F33 backdrop by sampling the four corners (every template
+ * renders a flat #231F33 background, so an off-color corner means the file was
+ * not rendered from a template). Scope matches checkFeatureImageDimensions:
+ * blog posts only, post-local paths only. Non-PNG/undecodable files are skipped
+ * (the dimension check remains the size guard).
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageBackground(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    const corners = pngCornerColors(imgPath);
+    if (!corners) {
+        return null; // Not a decodable PNG; leave sizing to the dimension check.
+    }
+
+    const { r, g, b } = FEATURE_IMAGE_BG;
+    const offColor = corners.find(c => c.r !== r || c.g !== g || c.b !== b);
+    if (offColor) {
+        const toHex = c => "#" + [c.r, c.g, c.b].map(n => n.toString(16).padStart(2, "0")).join("").toUpperCase();
+        return `Feature image '${featureImage}' has a ${toHex(offColor)} background, but blog feature images must be #231F33. Render it with the /blog-feature-image skill or use a designer-supplied image (never AI-generated).`;
     }
 
     return null;
@@ -633,6 +805,7 @@ function searchForMarkdown(paths) {
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
                     featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
+                    featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
                     caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
@@ -759,6 +932,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.featureImageDimensions,
+                });
+            }
+            if (frontMatterErrors.featureImageBackground) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageBackground,
                 });
             }
             if (frontMatterErrors.blogCategory) {
