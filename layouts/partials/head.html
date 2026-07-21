@@ -19,6 +19,8 @@
     {{- if eq hugo.Environment "production" }}
     <!-- Preconnect to Common Room (production only). -->
     <link rel="preconnect" href="https://cdn.cr-relay.com" crossorigin />
+    <!-- Preconnect to OpenAI ad pixel CDN (production only). -->
+    <link rel="preconnect" href="https://bzrcdn.openai.com" crossorigin />
     {{- end }}
 
     <!-- Preload critical fonts (skip monospace on the homepage — not used above the fold). -->
@@ -471,6 +473,14 @@
                     }, {})
                 );
                 document.head.appendChild(script);
+            });
+        </script>
+
+        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) -->
+        <script>
+            window.addEventListener('load', function() {
+                !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
+                oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
             });
         </script>
 
