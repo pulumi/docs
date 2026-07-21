@@ -20,7 +20,7 @@ Every ESC command is available in the [Pulumi CLI](/docs/install/) under the [`p
 
 The standalone binary no longer receives updates. New ESC features ship in the Pulumi CLI only, so a workflow pinned to `esc` will drift further behind with each release.
 
-Nothing changes on the service side. Your environments, values, versions, and access controls are unaffected — this is a change to how you invoke ESC from your terminal, not to ESC itself.
+Nothing changes in Pulumi Cloud. Your environments, values, versions, and access controls are unaffected — this is a change to how you invoke ESC from your terminal, not to ESC itself.
 
 ## Command mapping
 
