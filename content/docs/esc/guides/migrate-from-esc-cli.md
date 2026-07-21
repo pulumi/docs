@@ -43,7 +43,7 @@ Two details are worth calling out:
 - `esc open` and `esc run` were top-level shortcuts for `esc env open` and `esc env run`. Both forms map to the same `pulumi env` command, so `esc open` and `esc env open` both become `pulumi env open`.
 - `login`, `logout`, and `version` are Pulumi CLI commands, not `pulumi env` commands. `esc login` becomes `pulumi login`, not `pulumi env login`.
 
-Everything else — `clone`, `diff`, `edit`, `get`, `init`, `rm`, `rotate`, `schedule`, `set`, `settings`, `tag`, `version`, `webhook`, and the `provider` login commands — keeps its name under `pulumi env`. See the [`pulumi env` reference](/docs/iac/cli/commands/pulumi_env/) for the full surface.
+Everything else — like `edit` or `get` — keeps its name under `pulumi env`. See the [`pulumi env` reference](/docs/iac/cli/commands/pulumi_env/) for the full surface.
 
 ## Migrate your setup
 
