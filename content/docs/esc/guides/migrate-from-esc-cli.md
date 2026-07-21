@@ -2,7 +2,7 @@
 title_tag: Migrate from the ESC CLI to pulumi env
 title: Migrate from the ESC CLI
 h1: Migrate from the ESC CLI to pulumi env
-meta_desc: The standalone esc CLI is retired as of v0.26.0. Learn how to map every esc command to its pulumi env equivalent in the Pulumi CLI.
+meta_desc: The standalone esc CLI retired as of v0.26.0. Learn how to map every esc command to its pulumi env equivalent in the Pulumi CLI.
 menu:
   esc:
     parent: esc-guides
