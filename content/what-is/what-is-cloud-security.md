@@ -112,7 +112,7 @@ Centralized logging, SIEM, threat detection, behavior analytics, and cloud-nativ
 
 The OWASP Cloud-Native Application Security Top 10 and the Cloud Security Alliance's "Top Threats" reports converge on a fairly consistent list:
 
-1. **Misconfigurations.** Publicly accessible storage, overly permissive IAM, open security groups. The single biggest source of cloud breaches.
+1. **[Misconfigurations](/what-is/what-is-cloud-misconfiguration/).** Publicly accessible storage, overly permissive IAM, open security groups. The single biggest source of cloud breaches.
 1. **Identity and credential compromise.** Phished users, leaked access keys, long-lived service account credentials.
 1. **Insecure APIs and interfaces.** Unauthenticated endpoints, broken object-level authorization, missing rate limits.
 1. **Insider threat and account abuse.** Employees, contractors, or compromised accounts with more access than they need.
