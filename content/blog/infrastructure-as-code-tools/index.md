@@ -18,6 +18,19 @@ category: general
 aliases:
     - /what-is/top-iac-tools/
 faq_schema: true
+itemlist_name: "Core Infrastructure as Code Tools"
+itemlist:
+    - name: "Pulumi"
+      url: "https://www.pulumi.com/"
+    - name: "Terraform"
+    - name: "AWS Cloud Development Kit (CDK)"
+    - name: "AWS CloudFormation"
+    - name: "Azure Resource Manager (ARM)"
+    - name: "Azure Bicep"
+    - name: "Google Cloud Infrastructure Manager"
+    - name: "Kubernetes YAML"
+    - name: "Crossplane"
+    - name: "OpenTofu"
 ---
 
 Infrastructure as Code (IaC) has evolved beyond simple automation into a fundamental shift toward applying software engineering practices to infrastructure management. In 2026, leading organizations aren't just provisioning infrastructure—they're treating it as software, complete with testing, version control, code reviews, and continuous integration.
