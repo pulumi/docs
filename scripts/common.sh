@@ -35,6 +35,30 @@ post_github_pr_comment() {
          $pr_comment_api_url > /dev/null
 }
 
+# Converts a Hugo content file path to its published, root-relative URL, following
+# the same rules the site uses: strip the leading "content/", strip the ".md"
+# extension, collapse section landing pages ("/_index") and leaf-bundle pages
+# ("/index") to their directory, and guarantee a leading and trailing slash.
+# Usage:
+#   content_path_to_url content/docs/foo/bar.md          # => /docs/foo/bar/
+#   content_path_to_url content/blog/my-post/index.md    # => /blog/my-post/
+#   content_path_to_url content/_index.md                # => /
+content_path_to_url() {
+    local path=$1
+
+    path="${path#content/}"     # Strip the leading content/ prefix.
+    path="${path%.md}"          # Strip the trailing .md extension.
+
+    if [[ "$path" == "_index" || "$path" == "index" ]]; then
+        path=""                 # Site root (content/_index.md).
+    else
+        path="${path%/_index}"  # Collapse section landing pages (_index.md).
+        path="${path%/index}"   # Collapse leaf-bundle pages (index.md).
+    fi
+
+    echo "/${path}/" | sed 's#//*#/#g'
+}
+
 # Returns the Git SHA of the HEAD commit. For pull requests, we take this from GitHub event metadata, since in that case, the HEAD commit will contain the SHA of the merge commit with the base branch.
 git_sha() {
     if [[ "$GITHUB_EVENT_NAME" == "pull_request" && ! -z "$GITHUB_EVENT_PATH" ]]; then
