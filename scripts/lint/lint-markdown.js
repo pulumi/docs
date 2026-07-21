@@ -390,6 +390,70 @@ function checkFeatureImageBackground(featureImage, fullPath) {
 }
 
 /**
+ * PNG Software tag written by the blog-feature-image renderer
+ * (compose_meta_image.py). This string is a shared constant between the renderer
+ * and this allowlist — keep the two in sync if it ever changes.
+ */
+const FEATURE_IMAGE_SOFTWARE = "pulumi-blog-feature-image";
+
+/**
+ * Reads a PNG's `tEXt` Software value straight from the file bytes — no decode
+ * library. Returns the string, or null when there's no tEXtSoftware chunk.
+ *
+ * @param {Buffer} buf The raw PNG file contents.
+ * @returns {string|null}
+ */
+function readPngSoftware(buf) {
+    const match = /tEXtSoftware\x00([ -~]*)/.exec(buf.toString("latin1"));
+    return match ? match[1] : null;
+}
+
+/**
+ * checkFeatureImageSoftware enforces that a blog post's `feature_image` was
+ * produced by the approved pipeline, using an allowlist on the PNG Software tag
+ * rather than a denylist (so a new bad generator fails by default). Allowed:
+ * "Figma" (designer exports), our renderer's stamp, or no tag at all (legacy
+ * skill output — Pillow wrote no Software tag before the stamp was added). Any
+ * other stamp (Matplotlib, PIL, DALL·E, Midjourney, etc.) fails. Scope matches
+ * the other feature-image checks: blog posts, post-local PNG paths only.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageSoftware(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    let buf;
+    try {
+        buf = fs.readFileSync(imgPath);
+    } catch (e) {
+        return null;
+    }
+    if (buf.length < 8 || buf.readUInt32BE(0) !== 0x89504e47) {
+        return null; // Not a PNG; leave format/sizing to the other checks.
+    }
+
+    // Allowlist: Figma exports, our renderer's stamp, or no tag (legacy renders).
+    const software = readPngSoftware(buf);
+    if (software === null || software === "Figma" || software === FEATURE_IMAGE_SOFTWARE) {
+        return null;
+    }
+
+    return `Feature image '${featureImage}' was produced by '${software}', which is not an approved source. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
+}
+
+/**
  * checkBlogCategory validates the `category:` front matter on blog posts against
  * the closed set in data/blog_categories.yaml. It applies ONLY to individual
  * blog posts (content/blog/<slug>/index.md), not section pages (_index.md), tag
@@ -806,6 +870,7 @@ function searchForMarkdown(paths) {
                     metaImage: checkMetaImage(obj.meta_image),
                     featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
                     featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
+                    featureImageSoftware: checkFeatureImageSoftware(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
                     caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
@@ -938,6 +1003,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.featureImageBackground,
+                });
+            }
+            if (frontMatterErrors.featureImageSoftware) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageSoftware,
                 });
             }
             if (frontMatterErrors.blogCategory) {
