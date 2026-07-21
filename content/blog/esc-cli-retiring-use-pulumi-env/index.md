@@ -50,7 +50,7 @@ In addition to consistency, ESC and the Pulumi CLI share a lot of capabilities t
 
 ### Playing nicer with humans and AI agents
 
-A single CLI means one binary to install, one login to manage, and one place to look things up. That matters whether the operator is a person or an agent.
+A single CLI means one binary to install, one login to manage, and one place to look things up. This simplicity is beneficial whether the operator is a person or an agent.
 
 AI agents love code, and they love CLIs. By unifying the Pulumi CLI and ESC we offer a single place to look up operations around your Pulumi programs. Agents can now reason better about where to store configuration and secrets, without being confused by multiple CLI options that interface against the same service.
 
