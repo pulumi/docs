@@ -1,6 +1,6 @@
 ---
 title: "Enforce Access Token Expiry Policies in Pulumi Cloud"
-date: 2026-07-17
+date: 2026-07-21
 draft: false
 meta_desc: "Organization admins can now cap the maximum expiry of personal, organization, and team access tokens, so no credential outlives your rotation policy."
 feature_image: feature.png
