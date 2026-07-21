@@ -42,8 +42,6 @@ The [ESC repository](https://github.com/pulumi/esc) has been archived and the co
 
 <!--more-->
 
-We have decided to stop delivering ESC as a standalone CLI. The `pulumi env` commands were never a reimplementation — the Pulumi CLI has built them from the ESC CLI's own code since ESC's first release, which is why the same command surface has always been available under [`pulumi env`](/docs/iac/cli/commands/pulumi_env/).
-
 ## Why are we making this change
 
 Pulumi ESC is the best way to store and manage configuration and secrets in your Pulumi programs and while you can certainly use ESC to store secrets and configurations for your applications or to manage your AI agents' credentials, it's still a core feature of [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/), and we want to make sure we deliver a consistent experience across our entire suite.
@@ -61,6 +59,10 @@ AI agents love code, and they love CLIs. By unifying the Pulumi CLI and ESC we o
 With a shared CLI, any improvement to account management is automatically delivered to both: Pulumi and ESC users. At the same time, both benefit from ESC improvements and new features from day 1.
 
 ESC is a core component of our platform; a separate interface no longer makes sense.
+
+### The same code all along
+
+If you're wondering what actually changes under the hood: nothing about how the commands work. The `pulumi env` commands were never a reimplementation — the Pulumi CLI has built them from the ESC CLI's own code since ESC's first release, which is why the same command surface has always been available under [`pulumi env`](/docs/iac/cli/commands/pulumi_env/). What we're retiring is a second way to ship and install that code, not the code itself.
 
 ## Do I need to update?
 

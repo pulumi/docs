@@ -61,7 +61,9 @@ Everything else — like `edit` or `get` — keeps its name under `pulumi env`. 
 
 ## Authentication
 
-You do not need to log in again. The ESC CLI used the Pulumi CLI's credential store, so an existing `pulumi login` session already covers `pulumi env`.
+In most cases you do not need to log in again. Both CLIs use the same credential store, so `pulumi env` picks up your existing `pulumi login` session automatically. Run `pulumi env ls` to confirm you see the environments you expect.
+
+If you deliberately kept `esc` pointed at a different account or backend than `pulumi`, that separation goes away — run `pulumi login` for the account you want `pulumi env` to use.
 
 `PULUMI_ACCESS_TOKEN` works the same way in both, which means CI pipelines that set it need no credential changes — only the command names change.
 
