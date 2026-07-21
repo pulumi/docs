@@ -134,6 +134,89 @@ function checkMetaImage(image) {
     return null;
 }
 
+/** Canonical blog feature image dimensions, matching the blog-feature-image templates. */
+const FEATURE_IMAGE_WIDTH = 1884;
+const FEATURE_IMAGE_HEIGHT = 1256;
+
+/**
+ * Reads the intrinsic pixel dimensions from a PNG or JPEG file by inspecting its
+ * header bytes — no image library required. Returns { width, height } or null if
+ * the file can't be read or isn't a recognized PNG/JPEG.
+ *
+ * @param {string} file Absolute path to the image file.
+ * @returns {{width: number, height: number}|null}
+ */
+function imageDimensions(file) {
+    let buf;
+    try {
+        buf = fs.readFileSync(file);
+    } catch (e) {
+        return null;
+    }
+
+    // PNG: 8-byte signature (\x89PNG...), then the IHDR chunk whose width/height
+    // are big-endian uint32s at byte offsets 16 and 20.
+    if (buf.length >= 24 && buf.readUInt32BE(0) === 0x89504e47) {
+        return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+    }
+
+    // JPEG: starts with FFD8; scan the marker segments for a Start-Of-Frame
+    // (SOF0-SOF15, excluding the non-frame C4/C8/CC markers), which carries the
+    // image height and width as big-endian uint16s.
+    if (buf.length >= 4 && buf[0] === 0xff && buf[1] === 0xd8) {
+        let offset = 2;
+        while (offset + 9 < buf.length) {
+            if (buf[offset] !== 0xff) {
+                offset++;
+                continue;
+            }
+            const marker = buf[offset + 1];
+            if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+                return { height: buf.readUInt16BE(offset + 5), width: buf.readUInt16BE(offset + 7) };
+            }
+            offset += 2 + buf.readUInt16BE(offset + 2);
+        }
+    }
+
+    return null;
+}
+
+/**
+ * checkFeatureImageDimensions enforces that a blog post's `feature_image` is a
+ * template-sized 1884x1256 image. The blog-feature-image skill only ever renders
+ * templates at this size, so an off-size image is a strong signal the file was
+ * hand-made or AI-generated rather than rendered from a template. Only blog posts
+ * carry a fixed-size feature image, and only post-local (relative) paths are
+ * checked; shared/legacy absolute paths (/images/...) are out of scope.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageDimensions(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return `Feature image '${featureImage}' was not found next to the post.`;
+    }
+
+    const size = imageDimensions(imgPath);
+    if (!size) {
+        return `Feature image '${featureImage}' could not be read as a PNG/JPEG; render it with the /blog-feature-image skill.`;
+    }
+    if (size.width !== FEATURE_IMAGE_WIDTH || size.height !== FEATURE_IMAGE_HEIGHT) {
+        return `Feature image '${featureImage}' is ${size.width}x${size.height}, but blog feature images must be ${FEATURE_IMAGE_WIDTH}x${FEATURE_IMAGE_HEIGHT}. Render it with the /blog-feature-image skill (never hand-made or AI-generated art).`;
+    }
+
+    return null;
+}
+
 /**
  * checkBlogCategory validates the `category:` front matter on blog posts against
  * the closed set in data/blog_categories.yaml. It applies ONLY to individual
@@ -549,6 +632,7 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
+                    featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
                     caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
@@ -669,6 +753,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.metaImage,
+                });
+            }
+            if (frontMatterErrors.featureImageDimensions) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageDimensions,
                 });
             }
             if (frontMatterErrors.blogCategory) {
