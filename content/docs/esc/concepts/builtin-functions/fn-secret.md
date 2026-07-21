@@ -30,6 +30,8 @@ Add a secret using the `--secret` flag:
 pulumi env set <org>/<project>/<env-name> apiKey my-secret-value --secret
 ```
 
+Running the same command again replaces the value. Every change creates a new environment revision, so a replaced secret can be audited or rolled back — see [Versioning](/docs/esc/concepts/versioning/). For secret types ESC supports natively, [rotators](/docs/esc/concepts/rotators/) can replace credentials automatically on a schedule instead.
+
 ### Via the Pulumi Cloud console
 
 In the environment editor, wrap a value in `fn::secret` and select **Save**:

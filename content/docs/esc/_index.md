@@ -60,7 +60,7 @@ sections:
   - icon: lock-key
     heading: Manage secrets
     description: Store, retrieve, and organize secrets in ESC environments.
-    link: /docs/esc/operations/managing-secrets/
+    link: /docs/esc/concepts/environments/
   - icon: play
     heading: Run commands with pulumi env run
     description: Inject environment values into any command or script.

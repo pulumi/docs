@@ -2,6 +2,7 @@
 title: "Introducing the Latest ESC Editor Enhancements for Improved Authoring"
 allow_long_title: true
 date: 2024-02-22T00:00:00-07:00
+updated: 2026-07-21
 draft: false
 meta_desc: "The new enhancements to Pulumi ESC Editor streamlines the authoring experience of environments for developers"
 authors:
@@ -34,14 +35,16 @@ We have also added support for accessing contextual information from within an E
 
 - `context.rootEnvironment.name`: the name of the root environment being evaluated
 - `context.currentEnvironment.name`: the name of the current environment being evaluated
-- `context.user.login`: the login of the user evaluating the environment
-- `context.organization.login`: the name of the user's organization
+- `context.pulumi.user.login`: the login of the user evaluating the environment
+- `context.pulumi.organization.login`: the name of the user's organization
 
 ```yaml
 values:
   rootEnv: ${context.rootEnvironment.name}
-  currentUser: ${context.user.login}
+  currentUser: ${context.pulumi.user.login}
 ```
+
+For the current, complete list of `context` properties, see [Built-in properties](/docs/esc/concepts/interpolations-and-references/#context).
 
 ## A Seamless Authoring Experience Awaits
 

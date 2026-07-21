@@ -81,7 +81,7 @@ By default (when `subjectAttributes` is not set), the subject claim has the form
 
 When you set `subjectAttributes`, the subject instead begins with the fixed prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}`, and each configured attribute is appended to it as a `:<attribute>:<value>` pair, in the order listed.
 
-The following attributes are available:
+The following attributes are available. This is a deliberately restricted subset of the `context` built-in property — see [Built-in properties](/docs/esc/concepts/interpolations-and-references/#context) for the full set of values you can interpolate anywhere in an environment.
 
 * `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
 * `currentEnvironment.name`: the full name (including the project) of the environment where the ESC login provider and `subjectAttributes` are defined
