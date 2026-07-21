@@ -454,6 +454,55 @@ function checkFeatureImageSoftware(featureImage, fullPath) {
 }
 
 /**
+ * Every C2PA (content-credentials) manifest embeds a JUMBF superbox whose
+ * description box carries the ASCII label `jumdc2pa\0` — the same 9 bytes in a
+ * JPEG APP11 segment or a PNG chunk, so one needle covers both formats.
+ */
+const C2PA_MARKER = "jumdc2pa\x00";
+
+/**
+ * checkFeatureImageC2pa fails a blog post's `feature_image` that carries a C2PA
+ * content-credentials manifest. AI image generators (Google, OpenAI, Adobe
+ * Firefly) sign their output with C2PA precisely to mark it as AI-generated,
+ * and neither of our approved sources emits it — compose_meta_image.py writes
+ * plain Pillow PNGs and Figma exports carry no manifest — so any C2PA marker
+ * means the file did not come from an approved pipeline. This closes the gap
+ * the other checks leave: a generated image resized to 1884x1256 with a
+ * template-colored backdrop and no PNG Software tag would otherwise pass.
+ * Scope matches the other feature-image checks: blog posts, post-local paths.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageC2pa(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    let buf;
+    try {
+        buf = fs.readFileSync(imgPath);
+    } catch (e) {
+        return null;
+    }
+
+    if (buf.toString("latin1").indexOf(C2PA_MARKER) !== -1) {
+        return `Feature image '${featureImage}' carries a C2PA content-credentials manifest, which marks it as AI-generated output. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
+    }
+
+    return null;
+}
+
+/**
  * checkBlogCategory validates the `category:` front matter on blog posts against
  * the closed set in data/blog_categories.yaml. It applies ONLY to individual
  * blog posts (content/blog/<slug>/index.md), not section pages (_index.md), tag
@@ -871,6 +920,7 @@ function searchForMarkdown(paths) {
                     featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
                     featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
                     featureImageSoftware: checkFeatureImageSoftware(obj.feature_image, fullPath),
+                    featureImageC2pa: checkFeatureImageC2pa(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
                     caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
@@ -1009,6 +1059,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.featureImageSoftware,
+                });
+            }
+            if (frontMatterErrors.featureImageC2pa) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageC2pa,
                 });
             }
             if (frontMatterErrors.blogCategory) {
