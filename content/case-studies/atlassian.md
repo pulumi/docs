@@ -105,8 +105,7 @@ Once the instance is ready, the developer simply SSH’s into it, and the instan
 
 Below is a diagram showing how a Bitbucket cloud instance is architected:
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/bitbucket-cloud-diagram.png" alt="Bitbucket Cloud and Pulumi">
+![Bitbucket Cloud and Pulumi](/images/case-studies/bitbucket-cloud-diagram.png)
 
 ### Using the Automation API
 
