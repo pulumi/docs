@@ -122,8 +122,7 @@ to automate delivery of mission-critical KPIs to customers' executive dashboards
 made configuring and deploying all of these resources across each customer's environment a
 snap.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/menta-architecture.png" alt="Menta architecture">
+![A diagram of Menta's cloud architecture](/images/case-studies/menta-architecture.png)
 
 ## Results
 
