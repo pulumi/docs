@@ -32,7 +32,7 @@ Run your cloud's identity check. If it prints your account, identity, or cluster
 
 ## Set up access for your cloud
 
-If the check above didn't succeed — or you'd like to review the details — each getting started guide has a configuration page for its cloud. These pages are part of the full tutorial flow, so the Previous and Next buttons on each page take you back to installing Pulumi or onward to creating and deploying your first project.
+If the check above didn't succeed — or you'd like to review the details — each getting started guide has a configuration page for its cloud. Each of those pages is part of its cloud's full tutorial flow, and its Previous and Next buttons take you back to installing Pulumi or onward to creating and deploying your first project.
 
 <section class="docs-home mt-4 mb-12">
     <div class="docs-home-section">
@@ -79,5 +79,5 @@ Long-lived static keys are the most common source of credential leaks. [Pulumi E
 
 ## Next steps
 
-1. Pick your cloud above and continue its getting started flow — configuration is step 3 of the tutorial.
+1. Pick your cloud above to configure access, then continue that cloud's tutorial to create and deploy your first project.
 1. New to Pulumi entirely? Start from the [getting started overview](/docs/get-started/).
