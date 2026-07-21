@@ -148,7 +148,7 @@ A pending change is a difference between your code and the cloud that *you creat
 
 ### Can you prevent infrastructure drift entirely?
 
-Not entirely—any environment where more than one actor can change resources will drift eventually. But you can reduce it and control its impact: mark cloud-owned properties with `ignoreChanges`, protect resources that must never be destroyed, codify best practices into reusable components and a self-service platform so the console is rarely the easy path, enforce policy that blocks non-compliant changes from being adopted, and, where the environment allows, run a continuous GitOps reconciliation loop.
+Not entirely—any environment where more than one actor can change resources will drift eventually. But you can reduce it and control its impact: mark cloud-owned properties with `ignoreChanges`, protect resources that must never be destroyed, codify best practices into reusable components and a self-service platform so the console is rarely the easy path, enforce policy that blocks non-compliant changes from being adopted, and, where the environment allows, run a continuous [GitOps](/what-is/what-is-gitops/) reconciliation loop.
 
 ### Is infrastructure drift a security risk?
 

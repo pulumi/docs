@@ -33,7 +33,7 @@ The combination of AI coding tools with Pulumi's platform capabilities, particul
 
 At its core, Pulumi follows a declarative model where you describe your desired infrastructure state in code, and the platform handles the complexities of provisioning, updating, and managing cloud resources to achieve that state. This process involves several key components working together seamlessly.
 
-The Pulumi SDK provides language-specific libraries that offer strongly-typed bindings for cloud resources across 150+ providers. These libraries enable developers to define infrastructure using familiar programming constructs like functions, loops, conditionals, and classes, while providing rich IDE support including IntelliSense, error checking, and refactoring capabilities.
+The Pulumi SDK provides language-specific libraries that offer strongly-typed bindings for cloud resources across 200+ providers. These libraries enable developers to define infrastructure using familiar programming constructs like functions, loops, conditionals, and classes, while providing rich IDE support including IntelliSense, error checking, and refactoring capabilities.
 
 When you run a [Pulumi program](/docs/iac/concepts/projects/), the deployment engine analyzes your code, computes the necessary changes to reach your desired state, and executes those changes in the optimal order while respecting resource dependencies. The engine maintains a detailed record of your infrastructure state, enabling features like [drift detection](/what-is/what-is-infrastructure-drift/), rollback capabilities, and collaborative workflows.
 
@@ -53,7 +53,7 @@ The **state management** system maintains a comprehensive record of your infrast
 
 ## The Pulumi Registry: A comprehensive ecosystem
 
-The [Pulumi Registry](/registry/) represents one of Pulumi's most significant advantages over traditional infrastructure tools. This comprehensive ecosystem provides access to over 150 cloud and SaaS providers through a unified, multi-language interface that goes far beyond what any single cloud provider offers.
+The [Pulumi Registry](/registry/) represents one of Pulumi's most significant advantages over traditional infrastructure tools. This comprehensive ecosystem provides access to over 200 cloud and SaaS providers through a unified, multi-language interface that goes far beyond what any single cloud provider offers.
 
 ### Native cloud providers
 
