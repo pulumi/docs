@@ -1,13 +1,22 @@
 ---
 name: blog-feature-image
-description: "Generate the feature image (1884x1256) for a blog post — the in-body hero art. Reads the blog post, selects a feature template (neo, platform, rocket, shield, lightbulb, a 1-3 logo variant, or a shape template — circle, square, diamond, hexagon, lock, shield, speech-bubble, sync-diamond — with a centered solid phosphor icon or single small logo), renders feature.png, and sets feature_image in frontmatter. The OpenGraph/social meta image is no longer produced here — it is generated on-brand at build time from the title + feature image (scripts/meta-images/blog.mjs). Use when the user types /blog-feature-image (formerly /blog-meta-image) or asks to create, generate, or regenerate a blog post's feature image, hero image, or social card. Accepts optional arguments like a feature template name, logo names, or a phosphor icon name."
+description: "Render the feature image (1884x1256) for a blog post — the in-body hero art. Reads the blog post, selects a feature template (neo, platform, rocket, shield, lightbulb, a 1-3 logo variant, or a shape template — circle, square, diamond, hexagon, lock, shield, speech-bubble, sync-diamond — with a centered solid phosphor icon or single small logo), renders feature.png, and sets feature_image in frontmatter. The OpenGraph/social meta image is no longer produced here — it is generated on-brand at build time from the title + feature image (scripts/meta-images/blog.mjs). Use when the user types /blog-feature-image (formerly /blog-meta-image) or asks to create, generate, or regenerate a blog post's feature image, hero image, or social card. Accepts optional arguments like a feature template name, logo names, or a phosphor icon name."
 ---
 
-# `/blog-feature-image` — Generate a Blog Feature Image
+# `/blog-feature-image` — Render a Blog Feature Image
 
 > Formerly `/blog-meta-image`. This skill now produces **only** the feature image. The 1200×628 OpenGraph/social card is generated at build time by `scripts/meta-images/blog.mjs` (via `scripts/generate-meta-images.mjs`) from the post title and this feature image — do not composite or commit a `meta.png`.
 
-You are generating the **feature image** (1884×1256) for a Pulumi blog post — the hero art shown at the top of the post and in the blog listing. Follow these steps precisely.
+You are rendering the **feature image** (1884×1256) for a Pulumi blog post — the hero art shown at the top of the post and in the blog listing. Follow these steps precisely.
+
+> ## ⛔ Hard rule: never create the image yourself
+>
+> There are exactly **two** valid ways `feature.png` may be produced, and no others:
+>
+> 1. **`compose_meta_image.py` renders one of the built-in templates** in `assets/templates/` (the normal path — Steps 2–3).
+> 2. **You copy a file the user explicitly gave you a path to**, and that file is a **human/designer-supplied image** (e.g. from the design team, `needs-design`).
+>
+> You must **NEVER** create, draw, paint, illustrate, synthesize, or otherwise author original image content for `feature.png`, and you must **NEVER** use any image-generation tool/model (or ask another agent to) to produce it. An **AI-generated image is never an acceptable feature image** — no matter how well it fits the post, how much better it might look, or how the "custom image" option is phrased below. If no template fits and no designer-supplied file exists, pick the closest template or stop and ask the user — do **not** invent one.
 
 **Skill directory**: `.claude/commands/blog-feature-image/` — all paths below are relative to the project root unless noted.
 
@@ -53,18 +62,20 @@ Ask questions **progressively** (one at a time) using `AskUserQuestion`. Skip an
 
 ```
 header: "Feature Image Source"
-question: "Provide a custom feature image, or use a built-in template? (To request a custom image from the design team, label your PR with `needs-design`. If you can't get one fast enough, continue with templates.)"
+question: "Use a designer-supplied custom image, or a built-in template? (To request a custom image from the design team, label your PR with `needs-design`. If you can't get one fast enough, continue with templates.)"
 options:
-  - label: "I have a custom image"
-    description: "Provide a path to your own feature image file"
+  - label: "I have a designer-supplied image"
+    description: "Provide a path to a human/designer-made feature image file (never an AI-generated one)"
   - label: "Use a template"
     description: "Choose from the built-in Pulumi feature image templates"
 ```
 
-If **I have a custom image** is selected:
+The "custom image" option is only for a **designer-supplied file** (a designer, the `needs-design` team, or the author) — never an AI-generated stand-in. If the user doesn't already have one, use a template instead.
+
+If **I have a designer-supplied image** is selected:
 1. First, check whether `feature.png` already exists in the blog post's directory.
    - If it does, use that file without asking — skip straight to Step 4.
-   - If it does not exist, ask the user for the file path.
+   - If it does not exist, ask the user for the file path to their designer-supplied image.
 2. If a path was provided, copy it into the blog post directory and rename it to `feature.png`:
    ```bash
    cp "<provided-path>" "<blog-dir>/feature.png"
@@ -310,7 +321,7 @@ Render the feature image. Skip if the user provided a custom image.
 
 ## [Step 4/4] Confirm & Update Frontmatter
 
-1. Verify `feature.png` was created at its expected path
+1. Verify `feature.png` was created at its expected path (a template render, or the designer-supplied file the user handed you — never an AI-generated image)
 2. Update the blog post's frontmatter — add or update the feature image field only:
    ```yaml
    feature_image: feature.png
