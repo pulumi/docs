@@ -73,7 +73,7 @@ spec:
           command: ["sleep", "infinity"]
 ```
 
-{{< figcaption >}}The `Sandbox` CRD, the whole idea in one manifest.{{< /figcaption >}}
+{{< figcaption >}}The <code>Sandbox</code> CRD, the whole idea in one manifest.{{< /figcaption >}}
 
 There are two common patterns for using it. In the first, every coding agent session in the organization maps to its own pod with a persistent volume, basically Claude Code running across a whole fleet of pods, each one an individual user's session.
 
