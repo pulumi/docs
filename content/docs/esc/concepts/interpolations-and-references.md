@@ -107,7 +107,18 @@ In addition to referencing properties defined within an environment, references 
 
 ### context
 
-The `context` built-in property provides information about the user and the access token evaluating an ESC environment:
+The `context` built-in property provides information about the environment being evaluated, the user requesting it, and the access token they used.
+
+#### Environment identity
+
+* `context.currentEnvironment.name`: the name of the environment in which the reference is written, including its project
+* `context.rootEnvironment.name`: the name of the environment that was opened, including its project
+
+These two differ only inside imported environments. A reference written in an imported environment sees its own name in `currentEnvironment.name`, but the name of the environment that started the evaluation in `rootEnvironment.name`. For a worked example, see [How attributes resolve across imported environments](/docs/esc/guides/configuring-oidc/#how-attributes-resolve-across-imported-environments).
+
+For environments in the legacy `default` project, both properties resolve to the environment name alone, without a project prefix.
+
+#### Caller identity
 
 * `context.pulumi.user.login`: the login of the requesting user
 * `context.pulumi.organization.login`: the login of their organization
@@ -121,6 +132,12 @@ Each `context.pulumi.token` property resolves to an empty string when it doesn't
 values:
   greeting: Hello, ${context.pulumi.organization.login}/${context.pulumi.user.login}!
 ```
+
+#### Open duration
+
+* `context.pulumi.openDuration`: how long the opened environment's values remain valid, as a [Go duration](https://pkg.go.dev/time#ParseDuration) string such as `2h0m0s`
+
+This reflects the lifetime requested for this particular open, so the same environment can evaluate it differently from one open to the next. Opening with `esc env open <environment> --lifetime 30m` resolves it to `30m0s`; opening without a lifetime resolves it to the default of `2h0m0s`. Use it to align a credential's own expiry with the lifetime of the environment that issued it.
 
 #### Differentiating callers by token
 
