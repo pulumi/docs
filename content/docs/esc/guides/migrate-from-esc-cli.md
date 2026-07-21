@@ -12,7 +12,7 @@ aliases:
   - /docs/esc-cli/
 ---
 
-The standalone Pulumi ESC CLI (`esc`) is retired. [v0.26.0](https://github.com/pulumi/esc/releases/tag/v0.26.0) is its final release, the [`pulumi/esc`](https://github.com/pulumi/esc) repository is archived, and the code now lives in [`pulumi/pulumi`](https://github.com/pulumi/pulumi).
+The standalone Pulumi ESC CLI (`esc`) retired. [v0.26.0](https://github.com/pulumi/esc/releases/tag/v0.26.0) is its final release, the [`pulumi/esc`](https://github.com/pulumi/esc) repository is archived, and the code now lives in [`pulumi/pulumi`](https://github.com/pulumi/pulumi).
 
 Every ESC command is available in the [Pulumi CLI](/docs/install/) under the [`pulumi env`](/docs/iac/cli/commands/pulumi_env/) sub-command, and has been since ESC's first release. If you are already using the Pulumi CLI, nothing changes for you. If you have the standalone `esc` binary installed, this guide shows you how to switch.
 
