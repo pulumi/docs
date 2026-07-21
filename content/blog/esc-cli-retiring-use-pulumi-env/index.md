@@ -1,5 +1,5 @@
 ---
-title: "The Standalone ESC CLI Is Retiring: Use pulumi env"
+title: "The Standalone ESC CLI Retired: Use pulumi env"
 date: 2026-07-22
 draft: false
 meta_desc: "The standalone esc CLI is archived as of v0.26.0. Every ESC command is available in the Pulumi CLI under pulumi env: one binary to install and upgrade."
