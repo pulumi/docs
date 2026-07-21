@@ -56,7 +56,6 @@ Note: `--override-env` can also override environments that are imported (directl
 
 - Validate a draft ESC environment with your stack before approving
 - One-off debugging without editing stack config
-- Run a preview when a draft environment is created/updated with custom webhooks
 
 ## Get started
 
