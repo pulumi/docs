@@ -79,6 +79,7 @@ sections:
   - title: Guides
     slugs:
       - guide-to-automating-file-expiration-in-aws-s3
+      - mcp-for-infrastructure-as-code
 
 troubleshooting:
   title: Troubleshooting & CLI recipes
