@@ -955,7 +955,15 @@ jobs:
           # (workflow_run after triage) is gated by claude-triage.yml's
           # own access checks, so opening this door doesn't widen the
           # trust surface.
-          allowed_bots: 'github-actions[bot]'
+          #
+          # workprentice is also listed: it's a whitelisted PR author (see
+          # the has_write_access step above), and on the auto-fire path a
+          # push by the bot makes it the workflow_run's triggering actor,
+          # which claude-code-action@v1 checks independently of our own
+          # gate. Both the bare and `[bot]`-suffixed forms are listed
+          # because the action reports the actor as bare `workprentice`
+          # while github.actor renders it as `workprentice[bot]`.
+          allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
           # The CI prompt lives at .claude/commands/docs-review/ci.md and is
