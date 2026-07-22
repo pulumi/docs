@@ -34,7 +34,7 @@ event_type: workshop
 youtube_url:
 
 # Sortable date. The datetime Hugo will use to sort the events in date order.
-sortable_date: 2026-09-17T10:00:00.000+02:00
+sortable_date: 2026-10-14T10:00:00.000+02:00
 
 # Duration of the event.
 duration: 60 minutes
