@@ -338,9 +338,11 @@ pulumi package get-schema terraform-provider tailscale/tailscale | jq '.config.v
   "baseUrl",
   "oauthClientId",
   "oauthClientSecret",
-  "tailnet"
+  "tailnet",
+  ...
 ]
 ```
+
 {{% /notes %}}
 
 ## Version control considerations
