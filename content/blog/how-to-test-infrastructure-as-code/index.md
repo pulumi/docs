@@ -11,6 +11,7 @@ tags:
     - testing
 category: best-practices
 schema_type: faq
+faq_schema: true
 aliases:
     - /what-is/how-to-step-up-cloud-infrastructure-testing/
 ---
