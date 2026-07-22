@@ -2200,6 +2200,10 @@
                       "password",
                       "username"
                     ],
+                    "rotateOnly": [
+                      "username",
+                      "password"
+                    ],
                     "type": "object"
                   },
                   "port": {
@@ -2594,6 +2598,10 @@
                     "required": [
                       "password",
                       "username"
+                    ],
+                    "rotateOnly": [
+                      "username",
+                      "password"
                     ],
                     "type": "object"
                   },
