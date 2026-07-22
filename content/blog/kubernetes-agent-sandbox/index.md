@@ -160,7 +160,7 @@ export const sandboxes = developers.map(dev => new AgentSandbox(`sbx-${dev.name}
 }, { dependsOn: [agentSandbox, operator, acl] }));
 ```
 
-That `developers` array is read at runtime, so it could just as easily be a GitHub team or whoever currently has a session open, none of which `kubectl apply -k` can loop over. (The `developers` list and the per-box credentials are stack config; the [example's README](https://github.com/pulumi/examples/tree/master/gcp-ts-agent-sandbox#running-the-example) has the exact `pulumi config set` commands.)
+That `developers` array is read at runtime, so it could just as easily be a GitHub team or whoever currently has a session open, none of which `kubectl apply -k` can loop over. (The `developers` list and the per-box credentials are stack config; the [example's README](/registry/packages/gcp/how-to-guides/gcp-ts-agent-sandbox/#running-the-example) has the exact `pulumi config set` commands.)
 
 Nothing in the sandbox is Claude-specific, either. The agent is just what the image installs: swap in Codex CLI, or point one of the [Claude Code orchestration frameworks](/blog/claude-code-orchestration-frameworks/) at it, and the isolation story doesn't change.
 
