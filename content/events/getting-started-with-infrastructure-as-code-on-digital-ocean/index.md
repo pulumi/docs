@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Infrastructure as Code on DigitalOcean
 meta_desc: In this hands-on workshop, you will learn how to stand up basic services using Infrastructure as Code through a series of hands-on labs.
-meta_image:
+meta_image: /events/getting-started-with-infrastructure-as-code-on-digital-ocean/meta.png
+meta_image_square: /events/getting-started-with-infrastructure-as-code-on-digital-ocean/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -42,7 +43,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    In this hands-on workshop, the Pulumi and the DigitalOcean teams will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs.ects.
+    In this hands-on workshop, the Pulumi and the DigitalOcean teams will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs.
 
 learn:
     - How to use Pulumi to provision cloud resources

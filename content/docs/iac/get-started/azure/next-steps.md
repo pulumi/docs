@@ -22,7 +22,7 @@ Congratulations! You've successfully provisioned some cloud resources using Pulu
 - Created a Pulumi new project.
 - Provisioned a new Azure Storage account.
 - Enabled the static website feature on the storage account.
-- Created a website component for easy reuse.
+- Created a website component for reuse.
 - Destroyed all of the resources you've provisioned.
 
 Below are some recommended next steps, including examples and tutorials that you can explore or use them as a foundation for your own applications and infrastructure projects. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
@@ -35,7 +35,7 @@ With Pulumi ESC you can:
 
 - **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
 - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 
 {{< get-started-next-step path="/docs/esc/get-started/" label="Learn more about Pulumi ESC" ref="gs-azure-esc" >}}
 
@@ -47,7 +47,7 @@ Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in
 
 ## Launch a new project with a template
 
-Easily deploy the most common cloud architectures, from [static websites](/templates/static-website/azure/) to [serverless applications](/templates/serverless-application/azure/), [virtual machines](/templates/virtual-machine/azure/), [container services](/templates/container-service/azure/), and [Kubernetes clusters](/templates/kubernetes/azure/).
+Deploy the most common cloud architectures, from [static websites](/templates/static-website/azure/) to [serverless applications](/templates/serverless-application/azure/), [virtual machines](/templates/virtual-machine/azure/), [container services](/templates/container-service/azure/), and [Kubernetes clusters](/templates/kubernetes/azure/).
 
 {{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-azure-guides" >}}
 

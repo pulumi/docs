@@ -4,11 +4,11 @@ date: 2024-09-18T8:57:00-00:00
 draft: false
 meta_desc: Pulumi Insights 2.0 brings the power of a new suite of Insights tools to all of your cloud infrastructure, not just the infrastructure managed by Pulumi IaC.
 
-meta_image: meta.png
 authors:
     - craig-symonds
 tags:
     - insights
+category: product
 ---
 
 {{< notes type="info" >}}

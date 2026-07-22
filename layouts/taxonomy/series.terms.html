@@ -1,0 +1,18 @@
+{{ define "main" }}
+    {{- /* The series taxonomy list page, placed at /blog/series/ by the
+        permalinks.taxonomy config. Renders a directory of the blog series
+        (title + description from data/blog_series.yml, linked to each term
+        page), mirroring layouts/taxonomy/category.terms.html. */ -}}
+    {{ partial "blog/header.html" (dict "title" "Series" "url" .RelPermalink "context" .) }}
+
+    <div class="container mx-auto px-4 py-8 lg:py-12">
+        {{ with .Content }}<div class="blog-post-content mb-10 max-w-3xl">{{ . }}</div>{{ end }}
+
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {{ range site.Data.blog_series.series }}
+                {{ $count := len (where (where site.RegularPages "Params.series" .slug) "Date" "lt" now) }}
+                {{ partial "blog/card/series.html" (dict "series" . "count" $count) }}
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

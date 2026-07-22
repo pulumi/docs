@@ -3,7 +3,6 @@ title: "Policy Packs Can Now Access Pulumi ESC Environments"
 date: 2026-04-23
 draft: false
 meta_desc: "Policy packs can now reference Pulumi ESC environments for secrets and configuration, replacing hardcoded credentials with centralized, secure management."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - dan-biwer
@@ -11,6 +10,7 @@ tags:
     - esc
     - policy-as-code
     - features
+category: product
 schema_type: auto
 
 social:

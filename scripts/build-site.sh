@@ -4,10 +4,6 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-# URLs to Pulumi utility services.
-export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production-www url)}"
-export PULUMI_AI_WS_URL=${PULUMI_AI_WS_URL:-$(pulumi stack output --stack pulumi/pulumigpt-api/corp websocketUri)}
-
 printf "Compiling theme JavaScript and CSS...\n\n"
 export ASSET_BUNDLE_ID="$(build_identifier)"
 export CSS_BUNDLE_ID="${ASSET_BUNDLE_ID}"
@@ -24,6 +20,12 @@ export REL_JS_BUNDLE="/js/bundle.min.${ASSET_BUNDLE_ID}.js"
 printf "Copying prebuilt docs...\n\n"
 make copy_static_prebuilt
 
+# Generate OpenGraph meta images. Ephemeral: written into the gitignored
+# assets/images/generated/ (cached in CI via actions/cache), not committed.
+# Must run before Hugo so templates can resolve the cards.
+printf "Generating meta images...\n\n"
+node scripts/generate-meta-images.mjs
+
 printf "Running Hugo...\n\n"
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
@@ -37,11 +39,27 @@ else
     fi
 fi
 
+# Add the version selector to the live SDK reference pages (build-time, no commit churn).
+printf "Injecting live SDK version selectors...\n\n"
+./scripts/versioned-docs/inject-live-sdk-selectors.sh public || true
+
 # Generate docs JSON.
 node scripts/content/generate-docs-content.js
 
 # Purge unused CSS.
 yarn run minify-css
+
+# Derive the shared, stable archive theme bundle from the just-built (and purged) docs CSS.
+# Versioned CLI archives reference this single contract URL (/css/versioned-docs-archive.css)
+# instead of vendoring a frozen per-version copy of the fingerprinted site CSS, so the entire
+# CLI back-catalog re-themes whenever the site does. snapshot-cli-docs.sh rewrites archive
+# CSS references to this path; the name is un-fingerprinted on purpose (a permanent contract).
+printf "Deriving versioned-docs archive theme bundle...\n\n"
+if [ -f "public/css/bundle.${CSS_BUNDLE_ID}.css" ]; then
+    cp "public/css/bundle.${CSS_BUNDLE_ID}.css" "public/css/versioned-docs-archive.css"
+else
+    echo "WARNING: docs CSS bundle public/css/bundle.${CSS_BUNDLE_ID}.css not found; archive theme bundle not refreshed" >&2
+fi
 
 # Inline critical CSS for the homepage.
 node scripts/inline-critical-css.js

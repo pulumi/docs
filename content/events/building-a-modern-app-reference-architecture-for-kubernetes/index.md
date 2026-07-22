@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Building a Modern App Reference Architecture for Kubernetes"
 meta_desc: In this talk, we will discuss the NGINX MARA project; a turnkey modern application reference architecture.
+meta_image: /events/building-a-modern-app-reference-architecture-for-kubernetes/meta.png
+meta_image_square: /events/building-a-modern-app-reference-architecture-for-kubernetes/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

@@ -3,7 +3,6 @@ title: Filing GitHub Issues
 title_tag: "Filing GitHub Issues with Pulumi"
 meta_desc: Learn how to file bugs and feature requests in the correct Pulumi repository for faster resolution.
 h1: Filing GitHub Issues
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     support:
         name: Filing Issues

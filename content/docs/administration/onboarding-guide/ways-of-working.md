@@ -91,8 +91,8 @@ It's common to give developers their own stacks for development and testing. Pul
 
 - **Individual developer stacks**: Each developer gets their own complete environment
 - **Shared infrastructure**: Developers share costly resources like databases while having their own application instances
-- **[Review stacks](/docs/deployments/deployments/review-stacks/)**: Short-lived stacks for each pull request that are automatically torn down
-- **[TTL stacks](/docs/deployments/deployments/ttl/)**: Automatically destroyed after a specified timeframe to prevent cloud waste
+- **[Review stacks](/docs/deployments/concepts/review-stacks/)**: Short-lived stacks for each pull request that are automatically torn down
+- **[TTL stacks](/docs/deployments/concepts/ttl/)**: Automatically destroyed after a specified timeframe to prevent cloud waste
 
 Use [stack references](/blog/iac-best-practices-applying-stack-references/) to factor out shared infrastructure and create flexible project architectures.
 
@@ -125,7 +125,7 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 
 **CI/CD platform options:**
 
-- **[Pulumi Deployments](/docs/deployments/deployments/)** (recommended): Purpose-built for IaC deployments and integrated into Pulumi Cloud
+- **[Pulumi Deployments](/docs/deployments/concepts/)** (recommended): Purpose-built for IaC deployments and integrated into Pulumi Cloud
 - **[Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)**: Trigger deployments from within Kubernetes clusters
 - **Existing CI/CD solutions**: GitHub Actions, GitLab CI, Octopus Deploy, and [many others](/docs/iac/operations/continuous-delivery/)
 
@@ -142,7 +142,7 @@ While most teams start by running the Pulumi CLI manually, you'll eventually wan
 
 ### Guarding against drift
 
-Drift occurs when changes happen outside your IaC pipeline, causing conflicts between your last known deployment and your cloud resources' current state. This can cause security issues or outages during your next deployment. Pulumi supports [detecting and remediating drift](/docs/deployments/deployments/drift).
+Drift occurs when changes happen outside your IaC pipeline, causing conflicts between your last known deployment and your cloud resources' current state. This can cause security issues or outages during your next deployment. Pulumi supports [detecting and remediating drift](/docs/deployments/concepts/drift).
 
 ## Integrating with and extending Pulumi
 
@@ -156,7 +156,7 @@ The well-documented, powerful API that powers the CLI and cloud console experien
 **[Pulumi Automation API](/docs/iac/concepts/automation-api/)**
 Embed IaC capabilities into any software, enabling custom tools, self-serve portals, complex deployment orchestrations, and even SaaS products that provision cloud resources.
 
-**[Pulumi Cloud Webhooks](/docs/deployments/webhooks/)**
+**[Pulumi Cloud Webhooks](/docs/deployments/concepts/webhooks/)**
 React to lifecycle events in Pulumi Cloud by invoking custom REST API endpoints. Use these for posting to Slack channels, triggering test runs after deployments, and more.
 
 ### Writing your own IaC providers

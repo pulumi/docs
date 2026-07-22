@@ -3,7 +3,6 @@ title: "New: Helm Chart v4 resource with new features and languages"
 date: 2024-06-13T00:00:00-07:00
 meta_desc: >-
   Pulumi Kubernetes v4.13 offers a new resource for applying Helm charts consistently across Pulumi SDKs, with new features and SDK support.
-meta_image: chartv4.png
 authors:
     - eron-wright
 
@@ -12,6 +11,7 @@ tags:
     - yaml
     - java
     - helm
+category: product
 ---
 
 Today we're happy to announce a new "v4" version of the Chart resource, available now in v4.13 of the Pulumi Kubernetes provider.
@@ -579,6 +579,10 @@ child resources.
 The child resources created by the chart are presented to your program via the `resources` output, as an array
 of Pulumi Resource objects. In some SDKs, you can cast the resource into the appropriate resource type,
 e.g. `corev1.ConfigMap`. Not all SDKs support this (yet); see [pulumi/pulumi#15788](https://github.com/pulumi/pulumi/issues/15788).
+
+{{< blog/cta-card title="Deploy Helm charts with Pulumi" >}}
+Apply any Helm chart with the Chart v4 resource and manage the cloud resources it depends on, like IAM roles and storage buckets, in the same program.
+{{< /blog/cta-card >}}
 
 ## Example: Argo CD
 

@@ -3,7 +3,6 @@ title: CLI Reference
 title_tag: "CLI Reference | Pulumi Policies"
 h1: Policy CLI Reference
 meta_desc: Use the pulumi policy CLI commands to create, publish, install, enable, and manage policy packs and policy groups from the command line.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     name: CLI Reference

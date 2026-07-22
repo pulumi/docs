@@ -1,0 +1,165 @@
+/*
+ * Versioned SDK & CLI docs — version-selector styles.
+ *
+ * PERMANENT CONTRACT URL: /js/versioned-docs.css (loaded by versioned-docs.js).
+ * All selector/banner styling lives here so the chrome can be restyled at any time
+ * without ever republishing archives.
+ *
+ * Colors use the docs theme's semantic tokens with literal fallbacks, so the control
+ * adapts to light/dark on live /docs pages (where the tokens are defined) and stays
+ * legible on archived SDK pages (native skins, where the fallbacks apply).
+ */
+
+/* Shared control: the "Version" label + dropdown, identical in every context. */
+.vdocs-control,
+.vdocs-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.vdocs-inline-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.vdocs-select {
+  font: inherit;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--docs-border, #cfc7ea);
+  border-radius: 6px;
+  background: var(--docs-surface, #ffffff);
+  color: var(--docs-fg, #2b2235);
+  cursor: pointer;
+}
+
+/*
+ * Fixed top bar — used on archives and live SDK pages (their own generator themes, no
+ * site chrome). position:fixed + max z-index means it is never clipped by a theme's own
+ * fixed sidebar/header; versioned-docs.js measures the rendered height into --vdocs-bar-h
+ * and we reserve exactly that much space (so a wrapped two-line bar still fits).
+ */
+.vdocs-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483000;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.45rem 0.9rem;
+  font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--docs-bg-alt, #f4f1fe);
+  color: var(--docs-fg, #2b2235);
+  border-bottom: 1px solid var(--docs-border, #e3ddf7);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.vdocs-bar-text {
+  font-weight: 500;
+}
+
+.vdocs-bar--latest .vdocs-bar-text {
+  font-weight: 600;
+}
+
+.vdocs-bar-link {
+  color: var(--docs-link, #8b5cf6);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.vdocs-bar .vdocs-control {
+  margin-left: auto;
+}
+
+/*
+ * Reserve room for the fixed bar and push the known generator themes' own fixed chrome
+ * below it. We pad <html> (not <body>) so themes that already pad <body> for their own
+ * fixed header keep that padding; fixed elements get an explicit offset since padding
+ * doesn't move them.
+ */
+html.vdocs-has-bar {
+  padding-top: var(--vdocs-bar-h, 44px);
+}
+html.vdocs-has-bar .wy-nav-side,        /* Sphinx Read-the-Docs sidebar (fixed) */
+html.vdocs-has-bar header,              /* DocFX (.NET / ESC .NET): the position:fixed <header> wrapping the navbar — this, NOT .navbar-fixed-top, is what DocFX fixes. Also matches TypeDoc's <header class="tsd-page-toolbar"> (same offset, harmless); Sphinx has no <header> and Javadoc's is static, so both are unaffected. */
+html.vdocs-has-bar .tsd-page-toolbar,   /* TypeDoc (nodejs + policy/ESC) — sticky top:0 */
+html.vdocs-has-bar .fixedNav {          /* Javadoc (java) — fixed top:0 */
+  top: var(--vdocs-bar-h, 44px);
+}
+
+/* Trimmed CLI-archive left-nav (built by trim-cli-nav.py). */
+/* Client-side command filter (injected by versioned-docs.js). */
+.vdocs-cli-filter {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 0.6rem;
+  padding: 0.4rem 0.6rem;
+  font: inherit;
+  font-size: 13px;
+  border: 1px solid var(--docs-border, #cfc7ea);
+  border-radius: 6px;
+  background: var(--docs-surface, #ffffff);
+  color: var(--docs-fg, #2b2235);
+}
+.vdocs-cli-filter::placeholder {
+  color: var(--docs-fg-muted, #8a8398);
+}
+.vdocs-cli-filter:focus {
+  outline: none;
+  border-color: var(--docs-link, #8b5cf6);
+  box-shadow: 0 0 0 2px var(--docs-ring, rgba(139, 92, 246, 0.25));
+}
+
+/* Copy Page menu (injected by versioned-docs.js on CLI archives). The .llm-menu-* base styles
+ * ship in the shared archive theme bundle; these only restore the sizing the live component set
+ * via inline styles (trigger icon + chevron) and animate the chevron on open. */
+.vdocs-copy-menu .llm-menu-trigger > svg {
+  width: 14px;
+  height: 14px;
+}
+.vdocs-copy-menu .vdocs-copy-chevron {
+  margin-left: 0.25rem;
+  transition: transform 0.15s ease;
+}
+.vdocs-copy-menu .llm-menu-trigger.vdocs-copy-open .vdocs-copy-chevron {
+  transform: rotate(180deg);
+}
+
+.vdocs-cli-nav-wrap .vdocs-nav-home,
+.vdocs-cli-nav-wrap .vdocs-nav-latest {
+  display: block;
+  font-weight: 600;
+  color: var(--docs-link, #8b5cf6);
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+.vdocs-cli-nav-wrap .vdocs-nav-latest {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--docs-border, #e3ddf7);
+}
+.vdocs-cli-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.vdocs-cli-nav li {
+  margin: 0;
+}
+.vdocs-cli-nav a {
+  display: block;
+  padding: 0.15rem 0;
+  color: var(--docs-fg-muted, #555);
+  text-decoration: none;
+}
+.vdocs-cli-nav a:hover {
+  color: var(--docs-link, #8b5cf6);
+}

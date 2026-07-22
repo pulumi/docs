@@ -3,7 +3,6 @@ title_tag: gh-login Pulumi ESC Provider
 meta_desc: The gh-login Pulumi ESC Provider enables you to log in to GitHub using app credentials.
 title: gh-login
 h1: gh-login
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   esc:
     identifier: gh-login
@@ -21,7 +20,7 @@ installation access token that can be used to access the GitHub API and reposito
 
 The provider works as a GitHub App to produce an installation access token for the specified GitHub account, as described
 in "[Authenticating as a GitHub App installation](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-as-a-github-app-installation)".
-Use the token with the [Pulumi ESC GitHub Action](/docs/esc/guides/github-actions/),
+Use the token with the [Pulumi ESC GitHub Action](/docs/esc/guides/integrate-with/github-actions/),
 the [GitHub CLI](https://cli.github.com/), etc. The token will expire after 1 hour.
 
 ## App Registration
@@ -50,7 +49,9 @@ for instructions on how to generate a private key (in PEM format) and download t
 
 Private keys do not expire and need to be manually revoked. You must keep private keys for GitHub Apps secure.
 Store the private key as a secret by using the `fn::secret` function.
-See "[Managing Secrets](/docs/esc/operations/managing-secrets/#storing-secrets)".
+See "[`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/#storing-secrets)".
+
+Because the PEM-formatted private key spans multiple lines, wrap it in a YAML block scalar (`|`) so the newlines are preserved. See "[Multi-line secrets](/docs/esc/concepts/builtin-functions/fn-secret/#multi-line-secrets)".
 
 ```yaml
 appId: 123456
@@ -140,30 +141,14 @@ values:
     github:token: ${gh.accessToken}
 ```
 
-## Inputs
+## Schema reference
 
-| Property       | Type                      | Description                                                                 |
-|----------------|---------------------------|-----------------------------------------------------------------------------|
-| `appId`        | number                    | The ID of the GitHub App providing access tokens for the environment.       |
-| `privateKey`   | string                    | The private key of the GitHub App (in PEM format).                          |
-| `owner`        | string                    | The GitHub account for which to get an installation access token.           |
-| `repositories` | string[]                  | [Optional] List of repositories to allow access to.                         |
-| `permissions`  | object                    | [Optional] A map of the permissions that the token should have.             |
-| `ghe`          | [GHLoginGHE](#ghloginghe) | [Optional] Options for connecting to a GitHub Enterprise installation.      |
+{{< esc-schema-updated >}}
 
-### GHLoginGHE
+### Inputs
 
-| Property         | Type   | Description                                                                                  |
-|------------------|--------|----------------------------------------------------------------------------------------------|
-| `host`           | string | The hostname of your GitHub Enterprise server.                                               |
+{{< esc-schema type="provider" name="gh-login" section="inputs" >}}
 
-## Outputs
+### Outputs
 
-| Property         | Type   | Description                                                                      |
-|------------------|--------|----------------------------------------------------------------------------------|
-| `appId`          | number | The ID of the GitHub App providing access tokens for the environment.            |
-| `appSlug`        | string | The GitHub App's slug.                                                           |
-| `installationId` | number | The ID of the GitHub App installation.                                           |
-| `accessToken`    | string | The access token used to authenticate with the GitHub API.                       |
-| `expiry`         | string | [Optional] The access token's expiry time (RFC3339).                             |
-| `type`           | string | The access token's type.                                                         |
+{{< esc-schema type="provider" name="gh-login" section="outputs" >}}

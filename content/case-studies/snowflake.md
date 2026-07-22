@@ -6,7 +6,10 @@ description: |
 meta_desc: Learn how Snowflake worked with Pulumi to easily develop infrastructure that is repeatable, testable and scalable.
 
 customer_name: Snowflake
+industry: data-analytics
 customer_logo: /logos/customers/snowflake-logo.svg
+logo_bg_color: "#29B5E8"
+logo_style: white
 customer_url: https://www.snowflake.com/
 
 quote_block:
@@ -61,7 +64,7 @@ Raman Hariharan, Director of Cloud Platform Engineering says, “For us, Pulumi 
 
 Pulumi’s first-class support for Kubernetes was an additional benefit. According to Raman, “Kubernetes lets us treat all the public clouds like a single utility -- it’s AC power for cloud computing. If Kubernetes is AC power, Pulumi is like the universal travel adapter that lets us plug into all these resources and abstract away the complexities of each individual platform. With Pulumi, Kubernetes just works.”
 
-Snowflake also liked Pulumi’s approach to managing secrets and its support for the Vault  key-management service. Another feature was the Pulumi concept of a stack, which made managing multiple configurations much simpler than before. Because a stack supports inheritance of the most common elements, developers only have to change a few variables to get a deployment up and running. Finally, the developers found the Pulumi providers for the different cloud services to be extremely easy to use.
+Snowflake also liked Pulumi’s approach to managing secrets and its support for the Vault key-management service. Another feature was the Pulumi concept of a stack, which made managing multiple configurations much simpler than before. Because a stack supports inheritance of the most common elements, developers only have to change a few variables to get a deployment up and running. Finally, the developers found the Pulumi providers for the different cloud services to be extremely easy to use.
 
 The responsiveness of the Pulumi engineering team also helped ensure that Snowflake met their goals. Whether the question was about Pulumi’s support for Go or an implementation issue such as support for charts, Snowflake looked to the Pulumi team for help and got the help they needed.
 
@@ -77,4 +80,4 @@ Changing what you use to write your software is a big decision but Snowflake fou
 
 ## Next Steps
 
-Snowflake has big plans for the future and Pulumi is a part of them. One initiative is to leverage Pulumi to expand their support for Google Cloud. Given the scale of their multi-cloud, multi-region environments, security and automation are two strategic investment areas. Snowflake plans to  use Pulumi to help manage this complexity and streamline deployments: “We’re looking forward to using Pulumi Policies to apply security policies to protect our stacks and the new native Pulumi Azure provider is going to be a huge timesaver for us as well because it automatically supports all the latest Azure features,” says Jonas-Taha El Sesiy. “Beyond that, we’re investing a lot in testability and using the Automation API for infrastructure so we can move to more of a GitOps model, and Pulumi will play a huge role in enabling that too.”
+Snowflake has big plans for the future and Pulumi is a part of them. One initiative is to leverage Pulumi to expand their support for Google Cloud. Given the scale of their multi-cloud, multi-region environments, security and automation are two strategic investment areas. Snowflake plans to use Pulumi to help manage this complexity and streamline deployments: “We’re looking forward to using Pulumi Policies to apply security policies to protect our stacks and the new native Pulumi Azure provider is going to be a huge timesaver for us as well because it automatically supports all the latest Azure features,” says Jonas-Taha El Sesiy. “Beyond that, we’re investing a lot in testability and using the Automation API for infrastructure so we can move to more of a GitOps model, and Pulumi will play a huge role in enabling that too.”

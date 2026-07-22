@@ -2,7 +2,7 @@
 title: Secrets and configuration providers
 title_tag: Pulumi ESC secrets and configuration providers
 h1: Secrets and configuration providers
-meta_desc: Pulumi ESC providers dynamically import secrets, configuration, Pulumi stack outputs, and Terraform state values into your environment.
+meta_desc: Pulumi ESC secrets and configuration providers dynamically import secrets and configuration from external systems of record into your environment.
 menu:
   esc:
     name: Secrets & config
@@ -29,6 +29,6 @@ Secrets and configuration providers dynamically import values from an external s
 | [gcp-secrets](/docs/esc/providers/secrets/gcp-secrets/) | Import secrets from Google Cloud Secret Manager. |
 | [infisical-secrets](/docs/esc/providers/secrets/infisical-secrets/) | Import secrets from Infisical. |
 | [vault-secrets](/docs/esc/providers/secrets/vault-secrets/) | Import secrets from HashiCorp Vault. |
-| [pulumi-stacks](/docs/esc/providers/secrets/pulumi-stacks/) | Import outputs from a Pulumi stack (including Terraform state stored in Pulumi Cloud). |
-| [terraform-state](/docs/esc/providers/secrets/terraform-state/) | Import outputs from a Terraform state file in S3 or Terraform Cloud. |
 | [external](/docs/esc/providers/secrets/external/) | Import secrets from a custom service adapter. |
+
+To import outputs from a Pulumi stack or a Terraform state file, see the [infrastructure as code providers](/docs/esc/providers/iac/).

@@ -3,7 +3,6 @@ title_tag: "Using Azure DevOps with Pulumi | CI/CD"
 meta_desc: Run Pulumi in Azure Pipelines with the Pulumi Task Extension, authenticate with Pulumi Cloud, and ship infrastructure through a trunk-based CI/CD workflow.
 title: Azure DevOps
 h1: Using Azure DevOps with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     name: Azure DevOps
@@ -120,7 +119,7 @@ git tag release-2026-05-20
 git push origin release-2026-05-20
 ```
 
-For an optional ephemeral environment on each pull request, pair the preview step with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions and tears down a per-PR environment automatically.
+For an optional ephemeral environment on each pull request, pair the preview step with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions and tears down a per-PR environment automatically.
 
 ## PR comments
 

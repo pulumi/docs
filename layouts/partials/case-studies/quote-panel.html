@@ -1,0 +1,67 @@
+{{/*
+    Case Study Quote Panel
+
+    A single-panel card for featuring a customer quote and headline stat.
+    Used on the case-studies single page (layouts/case-studies/single.html).
+
+    Parameters:
+    - customer_logo: Path to customer logo image
+    - customer_name: Customer company name
+    - quote: Customer quote text
+    - quote_attrib: Quote attribution (optional)
+    - headline_stat: Large stat number/text (optional)
+    - headline: Stat description text (optional)
+    - link: Link to case study page (optional, renders a CTA button)
+    - anchor: Optional anchor for section id
+*/}}
+
+{{ $customerLogo := .customer_logo }}
+{{ $customerName := .customer_name }}
+{{ $quote := .quote }}
+{{ $quoteAttrib := .quote_attrib }}
+{{ $headlineStat := .headline_stat }}
+{{ $headline := .headline }}
+{{ $link := .link }}
+{{ $anchor := .anchor }}
+
+<div class="case-study-hero card overflow-hidden"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    <div class="flex flex-col md:flex-row">
+        {{/* Left: logo + quote (white background) */}}
+        <div class="case-study-hero-quote-panel p-8 md:p-12">
+            {{ if $customerLogo }}
+            <div class="mb-6">
+                {{ partial "fingerprinted-img.html" (dict "src" $customerLogo "alt" $customerName "class" "case-study-hero-logo") }}
+            </div>
+            {{ end }}
+
+            {{ if $quote }}
+            <p class="case-study-hero-quote">{{ $quote | markdownify }}</p>
+            {{ end }}
+
+            {{ if $quoteAttrib }}
+            <p class="case-study-hero-attrib">— {{ $quoteAttrib }}</p>
+            {{ end }}
+
+            {{ if $link }}
+            <div class="flex flex-row gap-4 mt-8">
+                <a href="{{ $link }}" class="btn btn-primary btn-xl">
+                    Read the story
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
+            </div>
+            {{ end }}
+        </div>
+
+        {{/* Right: stat (colored background) */}}
+        {{ if or $headlineStat $headline }}
+        <div class="case-study-hero-stat-panel p-8 md:p-12">
+            {{ if $headlineStat }}
+            <div class="case-study-hero-stat">{{ $headlineStat }}</div>
+            {{ end }}
+            {{ if $headline }}
+            <div class="case-study-hero-headline">{{ $headline | markdownify }}</div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</div>

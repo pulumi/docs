@@ -17,7 +17,7 @@
 */}}
 
 {{ $ctaLink := site.Params.cta.primary.href }}
-{{ $ctaLabel := site.Params.cta.primary.label }}
+{{ $ctaLabel := "Try Pulumi" }}
 
 {{ range $item := .items }}
 <div class="border-t p-8 md:p-16 lg:p-32 relative">
@@ -40,8 +40,9 @@
 
     {{ partial "gads/feature-grid.html" (dict "items" $item.features) }}
 
-    <div class="pt-8 text-center">
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
         <a href="{{ $ctaLink }}" class="btn btn-primary btn-lg" data-role="cta-get-started">{{ $ctaLabel }}</a>
+        {{ partial "gads/cta-contact.html" (dict "class" "btn btn-outline btn-lg") }}
     </div>
 </div>
 {{ end }}

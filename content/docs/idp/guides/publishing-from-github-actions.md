@@ -3,7 +3,6 @@ title: Publishing Components from GitHub Actions
 title_tag: Publishing Pulumi Components from GitHub Actions to Private Registry
 h1: Publishing Components from GitHub Actions
 meta_desc: Learn how to set up automated publishing of Pulumi components from GitHub Actions to your Pulumi Cloud private registry.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
   - /docs/idp/concepts/publishing-from-github-actions/
   - /docs/idp/get-started/publishing-from-github-actions/
@@ -108,7 +107,7 @@ clean:
 
 ### Unit Tests
 
-Write unit tests that validate your component's logic without creating cloud resources by using the `integration` library from the [Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/). Here we can set up a mock provider server to catch calls for resource creation and return mock resources back.
+Write unit tests that validate your component's logic without creating cloud resources by using the `integration` library from the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/). Here we can set up a mock provider server to catch calls for resource creation and return mock resources back.
 
 ```go
 // ./main_test.go
@@ -421,7 +420,7 @@ jobs:
 
 Once your automated publishing workflow is established, consider these enhancements:
 
-- **Deployment Hooks**: Set up Pulumi Cloud [webhooks](/docs/deployments/deployments/using/triggers/#deployment-webhooks) to trigger deployments when new component versions are published
+- **Deployment Hooks**: Set up Pulumi Cloud [webhooks](/docs/deployments/concepts/triggers/#deployment-webhooks) to trigger deployments when new component versions are published
 - **Version Compatibility Testing**: Test new versions against existing consumer programs
 - **Progressive Rollouts**: Implement canary releases and blue/green deployments for high-impact components
 - **Integration with Policies**: Create [Pulumi Policies](/docs/insights/policy/) policies that ensure only *approved* component versions are deployed

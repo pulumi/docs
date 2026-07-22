@@ -3,7 +3,6 @@ title_tag: "Configuration | Pulumi Concepts"
 meta_desc: This page provides an overview of how Pulumi manages cloud application configuration settings.
 title: Configuration
 h1: Configuration
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Configuration
@@ -640,7 +639,7 @@ outputs:
 
 ## Project Level Configuration
 
-There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hieararchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
+There are cases where configuration for more than one stack in a given project is the same. For example, `aws:region` may be the same across multiple or all stacks in a project. Project level configuration (also sometimes referred to as hierarchical configuration) allows setting configuration at the project level instead of having to repeat the configuration setting in each stack's configuration file.
 
 ### Setting Project Level Configuration
 
@@ -782,7 +781,7 @@ Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overvie
 
 Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC can help with that!
 
-Once you have an [environment](/docs/esc/concepts/) set up and you are [projecting pulumi configuration](/docs/esc/environments/working-with-environments/#projecting-pulumi-config), you can [import that environment](/docs/esc/providers/secrets/pulumi-stacks/) (or multiple environments) into your Pulumi stack.
+Once you have an [environment](/docs/esc/concepts/) set up and you are [projecting pulumi configuration](/docs/esc/concepts/outputs/#pulumiconfig), you can [import that environment](/docs/esc/providers/iac/pulumi-stacks/) (or multiple environments) into your Pulumi stack.
 
 ```yaml
 # import the test environment and all of its configuration
@@ -791,3 +790,5 @@ environment:
 config:
     # normal pulumi config
 ```
+
+When a key is set both by an imported environment and explicitly in your stack configuration, the explicit stack value takes precedence. See [Precedence](/docs/esc/concepts/outputs/#precedence-1) for the full rules.

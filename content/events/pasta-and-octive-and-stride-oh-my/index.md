@@ -2,6 +2,8 @@
 # Name of the event.
 title: "PASTA and OCTIVE and STRIDE, Oh My!"
 meta_desc: Learn how the Threat Modeling Manifesto serves as a guide to define or tailor a methodology that fits enhances software development rather than holding it up.
+meta_image: /events/pasta-and-octive-and-stride-oh-my/meta.png
+meta_image_square: /events/pasta-and-octive-and-stride-oh-my/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -37,7 +39,7 @@ duration: "20 minutes"
 description: |
     Threat modeling is an extremely valuable tool in the security software development pipeline. Some studies suggest it has greater impact on security posture than other more widely practiced security activities. There are many different frameworks, models, and methodologies that have been developed in an attempt to make threat modeling easier. However, these popular approaches to threat modeling are still too cumbersome, structured, or time consuming to fit into modern DevSecOps
 
-    In 2020, a group of 15 security professional released the Threat Modeling Manifesto to formalize decades of combined experience into a declared vision of what threat modeling truly is and what makes it important. Learn from one of these authors about the values and principles of what threat modeling should be. Discover how this often-over-looked activity can actually make our CI/CD pipelines more efficient while improving overall security of software. Get practical examples of how the manifesto serves as a guide to define or tailor a methodology that fits enhances software development rather than holding it up.
+    In 2020, a group of 15 security professionals released the Threat Modeling Manifesto to formalize decades of combined experience into a declared vision of what threat modeling truly is and what makes it important. Learn from one of these authors about the values and principles of what threat modeling should be. Discover how this often-over-looked activity can actually make our CI/CD pipelines more efficient while improving overall security of software. Get practical examples of how the manifesto serves as a guide to define or tailor a methodology that fits enhances software development rather than holding it up.
 
 # The event presenters
 presenters:

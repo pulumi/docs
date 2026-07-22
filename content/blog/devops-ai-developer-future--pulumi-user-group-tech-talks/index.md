@@ -4,7 +4,6 @@ date: 2023-11-13T22:05:34Z
 updated: 2025-03-10
 draft: false
 meta_desc: Explore how AI is transforming DevOps. Learn about AI-driven automation, monitoring, security, and how DevOps teams can leverage AI for efficiency & innovation.
-meta_image: ai-in-devops-meta-image.png
 authors:
     - sara-huddleston
     - scott-lowe
@@ -15,6 +14,7 @@ tags:
     - ml
     - community
     - platform-engineering
+category: community
 ---
 
 The integration of artificial intelligence (AI) with DevOps signals a new era in software development. DevOps possesses unique characteristics and needs that make it exceptionally compatible with AI augmentation. Given that code fundamentally relies on language, and large language models (LLMs) serve as the core of GPT functionality, these models are particularly well-suited for tasks such as code generation. This article unwraps the topics addressed during our “AI: Friends or Foe | AI Talks for DevOps” event in San Francisco.

@@ -3,7 +3,6 @@ title: "Database Comparison: Cosmos DB vs DynamoDB"
 meta_desc: |
      Compare NoSQL databases Cosmos DB vs DynamoDB. See the similarities and differences between these databases to determine which is best for you.
 
-meta_image: /images/what-is/database-comparison-cosmos-db-vs-dynamodb-meta.png
 type: what-is
 page_title: "Database Comparison: Cosmos DB vs DynamoDB"
 
@@ -46,7 +45,7 @@ The most significant difference between Cosmos DB and DynamoDB is that Cosmos DB
 
 ### Pros and Cons of Cosmos DB
 
-Cosmos DB offers a high degree of flexibility, thanks to its variety of available data models and the ability to use SQL-like queries in addition to Gremlin, Azure Tables, and MongoDB APIs when interacting with your data. While DynamoDB functions only as a document or a key-value database, Cosmos DB can function as document, key-value, wide column, and graph-based database. Its five consistency models (eventually consistent, consistent prefix, session, bounded staleness, and strong consistency) allow you to fine-tune your latency, and it scales quite well. It is priced according to storage and throughput.
+Cosmos DB offers a high degree of flexibility, thanks to its variety of available data models and the ability to use SQL-like queries in addition to Gremlin, Azure Tables, and MongoDB APIs when interacting with your data. While DynamoDB functions only as a document or a key-value database, Cosmos DB can function as a document, key-value, wide column, and graph-based database. Its five consistency models (eventually consistent, consistent prefix, session, bounded staleness, and strong consistency) allow you to fine-tune your latency, and it scales quite well. It is priced according to storage and throughput.
 
 However, this flexibility can make Cosmos DB somewhat more difficult to use at first. Understanding the various data models available to you and the intended use case of each one is key to ensuring that you are getting the most optimum performance for the price, according to your application's specific needs.
 
@@ -62,8 +61,6 @@ Cosmos DB is best if you need the wider flexibility of more data models, as well
 
 DynamoDB is best if the rest of your infrastructure is already on AWS or your priority is high performance for low cost over flexibility.
 
-Both Cosmos DB and DynamoDB are quick to stand up when using Pulumi. Try [Cosmos DB](/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/) and [DynamoDB](/docs/aws/dynamodb/) for yourself!
+Often, the deciding factor isn't the feature matrix at all: it's which cloud you already operate in. Both databases are managed, globally distributed, and fast enough that the day-to-day differences rarely outweigh the cost of running across two providers. Cosmos DB's extra data models and SQL-style queries matter when you actually need them, but if your stack lives on AWS or Azure, the gravity of your existing IAM, networking, and billing tends to settle the question before any benchmark does.
 
-## Pulumi Corporation
-
-Pulumi lets infrastructure, developer, and security teams deliver infrastructure as code faster, using programming ([Python](/docs/languages-sdks/python/), [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript/), [Go](/docs/languages-sdks/go/), [.NET (C#, F#, VB)](/docs/languages-sdks/dotnet/), and [Java](/docs/languages-sdks/java/)) and markup ([YAML, JSON, and CUE](/docs/languages-sdks/yaml/)) languages they already know. It provides a single pipeline for delivering and securing infrastructure and applications on any cloud. [Get started for free today!](/docs/get-started/)
+Pulumi can provision either one as infrastructure as code in the language you already use. Try [Cosmos DB](/blog/how-to-build-globally-distributed-applications-with-azure-cosmos-db-and-pulumi/) and [DynamoDB](/docs/aws/dynamodb/) for yourself.

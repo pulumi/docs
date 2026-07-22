@@ -1,0 +1,7 @@
+id = "jeff-merrick"
+name = "Jeff Merrick"
+title = "Senior Design Engineer"
+company = "Pulumi"
+weight = 1
+
+status = "active"

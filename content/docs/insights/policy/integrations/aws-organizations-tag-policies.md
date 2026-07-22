@@ -4,7 +4,6 @@ meta_desc: Enforce AWS Organizations Tag Policies on infrastructure as code, blo
 title: AWS Organizations Tag Policies
 h1: AWS Organizations Tag Policies
 weight: 2
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     insights:
         name: AWS Organizations Tag Policies

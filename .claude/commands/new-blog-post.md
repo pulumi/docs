@@ -41,7 +41,21 @@ When this command is invoked, you should:
 - **Title**: The blog post title (will be Title Case in frontmatter). If the user doesn't have a title yet, ask for a working title or topic to generate a slug and suggested meta description/tags. Be clear that the user can update the title later before publishing.
 - **Author ID**: The author's ID (e.g., "jane-doe"). Prepopulate with the suggested author ID from git config if detected.
 - **Summary**: Suggest a concise, one-sentence meta description based on the post title (50-160 characters, optimized for SEO and social media)
-- **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Common tags include: features, product-launches, pulumi-cloud, aws, azure, kubernetes, tutorials, announcements
+- **Tags**: Suggest 1-3 relevant tags based on the post title and similar existing blog posts. Tags are the topical axis (clouds, languages, products, scenarios). **Reuse existing tags from `data/blog_tags.yaml`** and avoid minting near-duplicates (e.g. use `kubernetes` not `k8s`, `infrastructure-as-code` not `iac`, `pulumi-cloud` not `pulumi-service`, `dotnet` not `c#`/`.net`). Common tags: features, releases, pulumi-cloud, aws, azure, kubernetes, ai, platform-engineering, security.
+- **Category**: A category is **required** and **singular** — exactly one value (a scalar). Categories are a CLOSED, lint-enforced set defined in `data/blog_categories.yaml`. Ask using AskUserQuestion, seeding the options from the allowed list with a smart default inferred from the title/tags. `general` is the default — recommend it for posts that don't clearly fit a specific kind (e.g. SEO comparisons or "what is X" explainers):
+  - Question: "What kind of post is this?"
+  - Header: "Category"
+  - Options (label / description):
+    1. `product` / Releases, new features, announcements, recaps, roadmaps
+    2. `engineering` / How we built it, deep dives, performance, internals
+    3. `community` / Events, meetups, webinars, guest posts, open source, interns
+    4. `best-practices` / Architecture, IaC, platform-engineering, and security/governance patterns
+    5. `tutorials` / Step-by-step how-tos and getting-started guides
+    6. `customers` / Customer stories and case studies for a named customer
+    7. `perspectives` / Thought leadership / opinion — an original argument in the author's voice
+    8. `company` / Funding, hiring, partnerships, brand, year-in-review
+    9. `general` (default) / Catch-all for posts that don't fit a specific kind (SEO comparisons, "what is X" explainers, listicles); relies on tags
+  - Do NOT invent categories or accept values outside this list. Write it as a singular scalar: `category: general`.
 - **Date**: Publication date. Ask using AskUserQuestion with these options:
   - Question: "When should this blog post be published?"
   - Header: "Publish Date"
@@ -105,9 +119,9 @@ Inform the user if author information was auto-populated and give them a chance 
 
 1. **Generate slug**: Convert title to lowercase, replace spaces with hyphens, keep only alphanumeric characters and hyphens (remove all other special characters)
 2. **Create directory**: `content/blog/{slug}/`
-3. **Copy placeholder images**: Use Bash to copy both placeholders:
-   - `.claude/commands/_common/images/blog-post-meta-placeholder.png` → `content/blog/{slug}/meta.png`
+3. **Copy the placeholder feature image**: Use Bash to copy the placeholder:
    - `.claude/commands/_common/images/blog-post-feature-placeholder.png` → `content/blog/{slug}/feature.png`
+   (No `meta.png` — the social/OpenGraph card is generated on-brand at build time from the title + feature image.)
 4. **Create index.md** with this structure:
 
 ```markdown
@@ -118,7 +132,6 @@ title: "Title in Title Case"
 date: YYYY-MM-DD  # Use 2099-01-01 if "I don't know yet" was selected, otherwise use the chosen date
 draft: false
 meta_desc: "The one-sentence summary provided by user"
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - author-id-1
@@ -126,6 +139,10 @@ authors:
 tags:
     - tag1
     - tag2
+# Required: exactly one category (a scalar) from the closed set in
+# data/blog_categories.yaml. Use "general" for posts that don't clearly fit a
+# specific kind. Validated by `make lint`.
+category: category-id
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
@@ -155,10 +172,11 @@ Before finishing:
 - Verify all author files exist and are valid TOML
 - Verify all author IDs in the frontmatter match the author IDs that were created/found (prevent typos)
 - Verify the blog post directory was created
-- Verify meta.png and feature.png were copied to the blog post directory
+- Verify feature.png was copied to the blog post directory
 - Verify index.md has valid YAML frontmatter
 - Verify the user is not committing to `master` directly (if so, warn them)
 - Check that all required fields are present (especially meta_desc, authors, tags)
+- Verify `category` is present, is a single scalar value (not a list), and is a valid id from `data/blog_categories.yaml` — `make lint` requires it. Use `general` when the post doesn't fit a specific kind.
 - If information was auto-populated, remind user to double-check author profile accuracy
 
 ### 5. Provide Next Steps
@@ -173,7 +191,7 @@ After creating the files, tell the user:
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
    - **If date was set to 2099-01-01**: Update the publication date in frontmatter before publishing! The current placeholder date will prevent the post from appearing on the live site.
-   - Replace the placeholder `meta.png` and `feature.png` with your own images. To request a custom feature image from the design team, label your PR with `needs-design`. You can also run `/blog-meta-image` to generate them automatically, or create them manually (feature image: 1884×1256px, meta image: 1200×628px).
+   - Replace the placeholder `feature.png` with your own hero image (1884×1256px). To request a custom feature image from the design team, label your PR with `needs-design`. You can also run `/blog-feature-image` to generate one automatically. The social/OpenGraph card is generated on-brand at build time from the title + feature image — no `meta.png` needed.
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
@@ -207,7 +225,7 @@ Claude: I'll help you create a new blog post. Let me first check your git config
 [Suggests tags based on the post title by looking at similar blog posts]
 [Asks remaining questions via AskUserQuestion, pre-populating detected values]
 [Creates all needed author profiles, using auto-detected information where possible]
-[Creates blog post structure with files: content/blog/my-new-post/index.md and content/blog/my-new-post/meta.png]
+[Creates blog post structure with files: content/blog/my-new-post/index.md and content/blog/my-new-post/feature.png]
 [Includes all author IDs in the frontmatter authors array]
 [Provides next steps with summary of what was auto-populated]
 ```

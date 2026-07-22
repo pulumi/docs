@@ -36,7 +36,7 @@ menu:
 <p>The Personal Data that we collect directly from you may include the following:</p>
 <ul>
 	<li>if you express an interest in obtaining additional information about our services, request customer support, use our "Contact Us" or similar features, register to use our websites, sign up for an event or webinar, or download certain content, we generally require you to provide us with your contact information, such as your name, job title, company name, address, phone number, email address, or username and password;</li>
-	<li>if you makes purchases via our websites or register for an event, we may also require you to provide us with financial information and billing information, such as billing name and address, credit card number, or bank account information;</li>
+	<li>if you make purchases via our websites or register for an event, we may also require you to provide us with financial information and billing information, such as billing name and address, credit card number, or bank account information;</li>
 	<li>if you attend an event, we may, upon your consent, scan your attendee badge which will provide us with your name, title and company name, address, country, phone number and email address;</li>
 	<li>if you register for an online community that we host, we may ask you to provide a username, photo and/or biographical information, such as your occupation, social media profiles, company name, and areas of expertise;</li>
 	<li>if you use and interact with our websites, we automatically collect log files and other information about your device and your usage of our websites through cookies, web beacons or similar technologies, such as IP-addresses or other identifiers, which may qualify as Personal Data (view the "What device and usage data we process" section below);</li>
@@ -47,7 +47,7 @@ menu:
 <p>We may also collect information about you from other sources, including third parties from whom we have purchased Personal Data, and combine this information with Personal Data provided by you. This helps us to update, expand and analyze our records, identify new customers, and create more tailored advertising to provide services that may be of interest to you. In particular, we collect Personal Data from the following sources:</p>
 <br />
 <ul>
-	<li>Business contact information, including mailing address, job title, email address,  phone number, ‘intent data’ which is web user behavior data, IP addresses, social handles, LinkedIn URL and custom profiles from third party data providers for the purposes of targeted advertising, delivering relevant email content, event promotion and profiling;</li>
+	<li>Business contact information, including mailing address, job title, email address, phone number, ‘intent data’ which is web user behavior data, IP addresses, social handles, LinkedIn URL and custom profiles from third party data providers for the purposes of targeted advertising, delivering relevant email content, event promotion and profiling;</li>
 	<li>Pulumi uses platforms such as GitHub to manage code check-ins and pull requests. If you participate in an open source or community development project, we may associate your code repository username with your community account so that we can inform you of program changes that are important to your participation or additional security requirements.</li>
 </ul>
 <br />

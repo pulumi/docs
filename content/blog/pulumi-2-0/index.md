@@ -3,9 +3,10 @@ date: "2020-04-21"
 updated: "2025-04-16"
 title: "Announcing Pulumi 2.0, Now with Superpowers"
 authors: ["joe-duffy"]
-tags: ["pulumi-news"]
+tags: [announcements]
+category: product
 meta_desc: "Today we are announcing Pulumi 2.0, a modern infrastructure as code platform with advanced capabilities including new languages, testing, and policy as code."
-meta_image: "pulumi-2-0.png"
+
 ---
 
 > [!INFO]
@@ -56,7 +57,7 @@ After [shipping 1.0 last year](/blog/pulumi-1-0/), we've been hard at work helpi
 
 ## Welcome to the Team, Pulumipus!
 
-<img src="/images/mascot/pulumipus.svg" style="max-width: 240px; float: right; margin-top: -80px; padding: 4px;">
+<img src="/images/mascot/legacy/pulumipus.svg" style="max-width: 240px; float: right; margin-top: -80px; padding: 4px;">
 
 We're also taking the opportunity to have a little fun with the launch and introducing a new mascot, _The Pulumipus_. You may have met them already at an event or at PulumiHQ, and we're happy to welcome them as the official mascot going forward.
 

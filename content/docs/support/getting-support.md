@@ -3,7 +3,6 @@ title: Getting Support
 title_tag: "Getting Pulumi Support"
 meta_desc: Learn what Pulumi support is available to your organization — community channels, paid support plans, and how to upgrade.
 h1: Getting Pulumi Support
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     support:
         name: Getting Support

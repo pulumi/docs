@@ -1,7 +1,7 @@
 ---
 # Name of the event, <= 60 characters
 title: Antwerp Pints with Pulumi Happy Hour
-meta_desc: Calling all Belgium Pulumi users!  Join us for a Happy Hour to meet, mingle, and make connections.
+meta_desc: Calling all Belgium Pulumi users! Join us for a Happy Hour to meet, mingle, and make connections.
 meta_image:
 
 # A featured event will display first in the list.

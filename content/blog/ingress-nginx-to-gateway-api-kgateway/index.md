@@ -3,7 +3,6 @@ title: "How to Move to the Gateway API: post ingress-nginx Retirement"
 date: 2026-01-02T11:35:51+01:00
 draft: false
 meta_desc: With ingress-nginx retiring in 2026, this post explores the technical shift to Gateway API and evaluates kgateway as a production-grade successor.
-meta_image: meta.png
 authors:
     - engin-diri
 tags:
@@ -12,6 +11,7 @@ tags:
     - kgateway
     - ingress
     - networking
+category: tutorials
 schema_type: auto
 social:
     twitter:
@@ -459,6 +459,10 @@ export const httpbinUrl = gatewayIP.apply(ip =>
 
 > [!INFO]
 > The demo uses [nip.io](https://nip.io), a wildcard DNS service that resolves `*.IP.nip.io` hostnames to the specified IP address. This eliminates the need to configure separate DNS records during testing. Once deployed, the `httpbinUrl` output provides a ready-to-use endpoint for validating the gateway configuration.
+
+{{< blog/cta-card title="Migrate to the Gateway API" >}}
+You can provision your cluster, install kgateway, and define your Gateway API resources in one Pulumi program, then migrate services incrementally and review each change. Start a project to plan your migration.
+{{< /blog/cta-card >}}
 
 ## The short-term option: Chainguard's ingress-nginx fork
 

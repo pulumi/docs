@@ -3,7 +3,6 @@ title_tag: "Implement a Provider in Python"
 meta_desc: "Build a Pulumi provider in Python using the gRPC bindings directly."
 title: Implement a Provider in Python
 h1: Implement a Provider in Python
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Python
@@ -550,7 +549,7 @@ So far we have only used our provider from YAML, and on our local machine. To ma
 
 **Full provider distribution**: Generate language-specific SDKs and publish them to language package registries (npm, PyPI, NuGet, etc.). This is the approach taken by the providers you can find in the [Pulumi Registry](https://www.pulumi.com/registry/). See [Publishing packages](/docs/iac/guides/building-extending/packages/publishing-packages/) for complete details.
 
-**Local packages**: This approach requires less setup and tooling. The language-specific SDKs are generated locally, on the machine where the provider is used. In this case only the provider source needs to be published, for example on GitHub or GitLab instance. See [Local packages](/docs/iac/guides/building-extending/packages/local-packages/) for this approach.
+**Local SDKs**: This approach requires less setup and tooling. The language-specific SDKs are generated locally, on the machine where the provider is used. In this case only the provider source needs to be published, for example on GitHub or GitLab instance. See [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) for this approach.
 
 ## Debugging
 

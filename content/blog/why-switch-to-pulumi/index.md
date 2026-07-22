@@ -2,13 +2,13 @@
 title: "Why Switch to Pulumi for Infrastructure as Code?"
 date: 2024-07-23T19:47:50-07:00
 meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and leverage AI to revolutionize infrastructure management."
-meta_image: meta.png
 authors:
     - aaron-kao
 tags:
     - infrastructure-as-code
     - platform-engineering
     - ai
+category: general
 
 social:
     twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits.
@@ -363,7 +363,7 @@ scalability, and collaboration.
     security teams and empower them with tools that work. Whereas Pulumi
     unblocks infrastructure as the bottleneck for software delivery.
 
-[Read more >>](/docs/concepts/vs/terraform/)
+[Read more >>](/docs/iac/comparisons/terraform/)
 
 #### Why Pulumi vs. AWS Cloud Development Kit (CDK)?
 
@@ -376,7 +376,7 @@ differences:
     all the time. CDK depends on CloudFormation as the deployment
     engine; it shares many of the same benefits and limitations as
     CloudFormation (see [Pulumi vs.
-    CloudFormation](https://www.pulumi.com/docs/concepts/vs/cloud-templates/cloudformation/))
+    CloudFormation](https://www.pulumi.com/docs/iac/comparisons/cloudformation/#what-is-aws-cloudformation))
 
 - **Execution > Translation.** Pulumi and CDK support similar
     programming languages but differ fundamentally in their deployment
@@ -400,7 +400,7 @@ differences:
     This makes Pulumi\'s testing approach more comprehensive and
     flexible than CDK\'s.
 
-[Read more >>](/docs/concepts/vs/cloud-template-transpilers/aws-cdk/)
+[Read more >>](/docs/iac/comparisons/aws-cdk/)
 
 #### Why Pulumi vs. 3rd party internal developer portal providers?
 

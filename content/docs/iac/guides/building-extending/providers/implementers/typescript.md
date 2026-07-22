@@ -3,7 +3,6 @@ title_tag: "Implement a Provider in TypeScript"
 meta_desc: "Build a Pulumi provider in TypeScript using the gRPC bindings directly."
 title: Implement a Provider in TypeScript
 h1: Implement a Provider in TypeScript
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: TypeScript

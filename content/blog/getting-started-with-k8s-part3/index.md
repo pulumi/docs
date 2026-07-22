@@ -1,28 +1,19 @@
 ---
 title: "Getting Started With Kubernetes: Advanced Deployment"
+feature_image: feature.png
 date: 2020-07-09
 meta_desc: "Part 3 of a 3-part tutorial for getting started with Kubernetes using Infrastructure as Code."
-meta_image: getting-started.png
 authors:
     - sophia-parafina
 tags:
-    - Kubernetes
-    - kubernetes-getting-started
+    - kubernetes
+category: tutorials
 series: kubernetes-getting-started
 ---
 
 Welcome to the third article in a series using infrastructure as code to deploy applications with Kubernetes. In the previous post, we reviewed basic Kubernetes objects and abstractions used when deploying an application. We examined code examples across the cloud providers to show how to use infrastructure as code to deploy an application using Kubernetes objects. In this installment, we’ll progress from a simple deployment with just a single application container to a complex application with multiple containers and Pods.
 
 <!--more-->
-
-This series walks you through:
-
-- [Building a Kubernetes cluster on cloud providers](/blog/getting-started-with-k8s-part1/)
-- [Basic application deployment](/blog/getting-started-with-k8s-part2/)
-- Advance application deployment and Helm charts
-- Stateful applications
-- Networking
-- “Day 2” activities such as migrating node groups.
 
 This article reviews three types of application deployment scenarios with commonly used examples. The first scenario is a [12-factor](https://12factor.net/) microservices multi-tier application consisting of multiple frontend and backend services backed by databases and a messaging queue to handle requests. The second scenario takes the Kubernetes guestbook and turns the Service and Deployment into a single component, demonstrating another pattern for organizing your stack. The third scenario shows how to deploy a popular web application using a [Helm](https://helm.sh/), the package manager for Kubernetes.
 

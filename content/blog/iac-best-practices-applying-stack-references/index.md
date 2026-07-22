@@ -1,16 +1,16 @@
 ---
 title: "IaC Best Practices: Applying Stack References"
+feature_image: feature.png
 date: 2023-03-31
 updated: 2025-03-04
 meta_desc: Learn how to apply Pulumi stack references to share data across projects. Improve modularity and maintainability with best practices for stack dependencies.
-meta_image: meta.png
 authors:
     - scott-lowe
 tags:
     - best-practices
     - cloud-engineering
     - kubernetes
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-using-stack-references/
@@ -19,16 +19,6 @@ aliases:
 This is the fourth post in a series of blog posts focused on Zephyr Archaeotech Emporium---our fictional company---and their use of Pulumi to manage their online retail store. In the first three posts, you saw how Zephyr's initial use of Pulumi changed as the company grew, and how the use of short-lived per-developer stacks helped Zephyr's application development team meet the demands of a fast-growing company. This post is a complement to the earlier post on structuring Pulumi projects, discussing how Zephyr uses [Stack References](/tutorials/building-with-pulumi/stack-references/) to link their projects together and sharing some IaC best practices around the use of Stack References.<!--more-->
 
 As you may have read in earlier Zephyr posts, the ultimate goal of the Zephyr series is to share best practices on the use of Pulumi to manage your infrastructure and application resources (using a fictional company and a somewhat complex containerized application as the use case). The series exposes those practices over time---not all right away, and not without also discussing the context for the recommendations. This is deliberate, demonstrating how "point-in-time" recommendations change based on the needs of the company and its requirements.
-
-Here are links to all the blog posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* **IaC Best Practices: Applying Stack References** (you are here)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
 ## Reviewing Zephyr's Current Status
 

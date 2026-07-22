@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting started on AWS with Python
 meta_desc: Learn how Pulumi makes working with AWS easier by using general-purpose languages like Python to manage infrastructure resources.
-meta_image:
+meta_image: /events/getting-started-with-iac-on-aws-python/meta.png
+meta_image_square: /events/getting-started-with-iac-on-aws-python/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

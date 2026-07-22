@@ -4,7 +4,7 @@ layout: serverless
 url: /serverless
 
 meta_desc:
-    Pulumi makes serverless applications easy by letting manage infrastructure in
+    Pulumi makes serverless applications easy by letting you manage infrastructure in
     the same familiar language you're already writing code in.
 
 hero:
@@ -236,7 +236,7 @@ examples:
       title: Subscribe to an SNS endpoint
       body: >
           This example uses an SNS topic to hold a list of website URLs to crawl,
-          and does so everytime a new message arrives.
+          and does so every time a new message arrives.
       code: |
           import * as aws from "@pulumi/aws";
           import * as fetch from "node-fetch";

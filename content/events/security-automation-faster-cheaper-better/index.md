@@ -1,8 +1,9 @@
 ---
 # Name of the event, <= 60 characters
 title: Security Automation—Faster. Cheaper. Better.
-meta_desc: Join us for an insightful fireside chat, with by Joe Duffy, co-founder/CEO of Pulumi, featuring David Giambruno, VP of Engineering and DevOps at Tivity Health.
-meta_image:
+meta_desc: Join us for an insightful fireside chat, with Joe Duffy, co-founder/CEO of Pulumi, featuring David Giambruno, VP of Engineering and DevOps at Tivity Health.
+meta_image: /events/security-automation-faster-cheaper-better/meta.png
+meta_image_square: /events/security-automation-faster-cheaper-better/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

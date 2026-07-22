@@ -22,7 +22,6 @@ meta_desc: 'Introducing Dev Releases for the Pulumi CLI and SDKs: early releases
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -35,6 +34,7 @@ tags:
   - cli
   - sdk
   - pre-release
+category: product
 ---
 
 At Pulumi, the stability of our CLI and SDK releases is critically important.  A lot of infrastructure is built and deployed using Pulumi, and any bugs in how that infrastructure is deployed can cause outages.  While we put a lot of emphasis on unit and integration testing, we are also constantly investing in new ways to provide additional safeguards to ensure we always deliver stable releases.  To that end, we are introducing new dev releases of our CLI and SDKs, which will enable users who want to work with the very latest bits to try them out before they are deployed widely to the entire Pulumi user base.  This blog post will walk you through how we are using them internally, and how you can too!

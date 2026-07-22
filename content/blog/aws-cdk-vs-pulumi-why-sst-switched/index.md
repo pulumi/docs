@@ -23,7 +23,6 @@ meta_desc: Why did SST move from AWS CDK to Pulumi? Learn how this shift unlocks
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: "sst-with-pulumi-infrastructure-as-code-deployments.png"
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -36,7 +35,8 @@ tags:
     - cloudformation
     - aws-cdk
     - case-studies
-    - developer-experience-devex
+    - developer-experience
+category: customers
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -92,9 +92,9 @@ This was the driving force behind the creation of [SST (Serverless Stack)](https
 
 As the SST's team continued to work with CDK and CloudFormation, they encountered several challenges that led them to reevaluate their approach. One key issue was the disconnect between application developers' thinking and working and traditional IaC tools' operating methods.
 
-With CDK and [CloudFormation](https://www.pulumi.com/docs/iac/concepts/vs/cloud-templates/cloudformation/#what-is-cloudformation), the infrastructure code is essentially a code generator, producing an intermediary format (such as YAML or JSON) that is then executed to deploy the resources. This means that the actual code you write as a developer is not the same as the code running during the deployment process. This can lead to several problems, such as difficulty debugging, lack of visibility into the deployment process, and challenges in extending or customizing the deployment workflow.
+With CDK and [CloudFormation](https://www.pulumi.com/docs/iac/comparisons/cloudformation/#what-is-aws-cloudformation), the infrastructure code is essentially a code generator, producing an intermediary format (such as YAML or JSON) that is then executed to deploy the resources. This means that the actual code you write as a developer is not the same as the code running during the deployment process. This can lead to several problems, such as difficulty debugging, lack of visibility into the deployment process, and challenges in extending or customizing the deployment workflow.
 
-Additionally, as the SST's team expanded its focus beyond the AWS ecosystem and started exploring other cloud providers and even on-premises infrastructure, it found that the [AWS-centric nature of CDK](https://www.pulumi.com/docs/iac/concepts/vs/cloud-template-transpilers/aws-cdk/#what-is-aws-cdk) and CloudFormation was becoming a limitation. It needed a more flexible and provider-agnostic solution that would allow it to deploy and manage infrastructure across a wide range of platforms.
+Additionally, as the SST's team expanded its focus beyond the AWS ecosystem and started exploring other cloud providers and even on-premises infrastructure, it found that the [AWS-centric nature of CDK](https://www.pulumi.com/docs/iac/comparisons/aws-cdk/#what-is-aws-cdk) and CloudFormation was becoming a limitation. It needed a more flexible and provider-agnostic solution that would allow it to deploy and manage infrastructure across a wide range of platforms.
 
 | Feature                 | AWS CDK                      | Pulumi                         |
 |-------------------------|----------------------------|--------------------------------|
@@ -129,7 +129,7 @@ Additionally, they had to carefully consider how to handle the various edge case
 
 As they worked through the transition to Pulumi, they realized the significant benefits that Pulumi offered to both the SST team as the framework developers and the users.
 
-![A quote from the Founding Engineer at SST: "With Pulumi, the deployment process feels like a natural extensino of writing code - it's intuitive and powerful and capable of advanced things that traditional IaC tools can't handle."](sst-with-pulumi-infrastructure-as-code-deployments.png)
+![A quote from the Founding Engineer at SST: "With Pulumi, the deployment process feels like a natural extension of writing code - it's intuitive and powerful and capable of advanced things that traditional IaC tools can't handle."](sst-with-pulumi-infrastructure-as-code-deployments.png)
 
 ### Improved Visibility and Debugging
 
@@ -154,6 +154,10 @@ This flexibility has been particularly valuable for their users, who may have wo
 One of Pulumi's most significant benefits for SST users is the simplified mental model it provides. By treating the infrastructure code as a first-class program, Pulumi aligns much more closely with how application developers think and work.
 
 Instead of having to navigate the complexities of intermediary formats, deployment pipelines, and the separation between infrastructure code and deployment code, SST users can now focus on writing their infrastructure logic in the same programming languages they use for their application code. This makes it much easier for them to understand, maintain, and extend their infrastructure as their needs evolve.
+
+{{< blog/cta-card title="Build across any cloud with Pulumi" >}}
+Define your infrastructure in TypeScript, Python, Go, or C#, and deploy it across AWS, Azure, Google Cloud, and on-premises environments from one consistent workflow.
+{{< /blog/cta-card >}}
 
 ## The Future of SST with Pulumi
 

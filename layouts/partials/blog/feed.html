@@ -1,0 +1,53 @@
+{{- /*
+    Blog homepage feed — the single source of truth shared by
+    layouts/blog/list.html (rendering) and layouts/partials/head.html
+    (pagination init).
+
+    Returns: dict "featured" <pages> "feed" <pages> "posts" <pages>
+      posts     all published blog posts, newest-first (helper pages excluded)
+      featured  the 4 featured slots (hero + 3 small cards), resolved from
+                blog_home.yaml `featured` (pinned slugs + auto-fill)
+      feed      posts minus featured — the paginated list below the fold
+
+    Both callers MUST paginate `feed` (not the default .Pages): `.Paginate` /
+    `.Paginator` is a per-page singleton whose FIRST caller fixes the collection,
+    and head.html renders before list.html's main block. If head touched the
+    default `.Paginator`, the feed would paginate the unfiltered section pages and
+    leak the featured (and helper) pages back into the list.
+
+    Global (depends only on site data), so callers use partialCached with a
+    constant key — computed once per build.
+*/ -}}
+{{- $posts := where (where site.RegularPages "Section" "blog") "Params.layout" nil -}}
+{{- $posts = $posts.ByDate.Reverse -}}
+{{- $pool := where $posts "Params.category" "!=" "general" -}}
+{{- $pinned := slice -}}
+{{- range site.Data.blog_home.featured -}}
+    {{- if and . (ne . "auto") -}}
+        {{- with site.GetPage (printf "/blog/%s" .) }}{{ $pinned = $pinned | append . }}{{ end -}}
+    {{- end -}}
+{{- end -}}
+{{- $featured := slice -}}
+{{- range site.Data.blog_home.featured -}}
+    {{- if or (not .) (eq . "auto") -}}
+        {{- range $pool -}}
+            {{- if and (not (in $featured .)) (not (in $pinned .)) -}}
+                {{- $featured = $featured | append . -}}
+                {{- break -}}
+            {{- end -}}
+        {{- end -}}
+    {{- else -}}
+        {{- with site.GetPage (printf "/blog/%s" .) -}}
+            {{- $featured = $featured | append . -}}
+        {{- else -}}
+            {{- warnf "blog_home.yaml: featured slug %q did not resolve to a post" . -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- range $pool -}}
+    {{- if and (lt (len $featured) 4) (not (in $featured .)) -}}
+        {{- $featured = $featured | append . -}}
+    {{- end -}}
+{{- end -}}
+{{- $featured = first 4 $featured -}}
+{{- return dict "featured" $featured "feed" (complement $featured $posts) "posts" $posts -}}

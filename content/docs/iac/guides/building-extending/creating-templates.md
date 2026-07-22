@@ -3,7 +3,6 @@ title_tag: "Creating Templates | Guides"
 meta_desc: Learn how to create Pulumi templates that can be used with pulumi new to bootstrap new projects.
 title: Creating Templates
 h1: Creating Pulumi templates
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Creating Templates

@@ -7,7 +7,6 @@ draft: false
 meta_desc: |
   Kubernetes best practices for 2026: resource limits, RBAC, NetworkPolicy, autoscaling, GitOps, policy-as-code, SBOM, and FinOps — with anti-patterns and fixes.
 
-meta_image: meta.png
 
 authors:
 - engin-diri
@@ -15,8 +14,8 @@ authors:
 tags:
 - kubernetes
 - best-practices
-- k8s
 - devops
+category: best-practices
 social:
   twitter: |
     Learn best practices for Kubernetes that I wish I had known earlier. Avoid common pitfalls and save time, money, and headaches.
@@ -230,6 +229,10 @@ Labels and annotations are the metadata layer that everything — Services, Netw
 - Adopt the [recommended labels](https://kubernetes.io/docs/concepts/overview/working-with-objects/common-labels/): `app.kubernetes.io/name`, `app.kubernetes.io/instance`, `app.kubernetes.io/version`, `app.kubernetes.io/component`, `app.kubernetes.io/part-of`, `app.kubernetes.io/managed-by`.
 - Add organization-specific labels for **owner**, **cost-center**, **environment**, and **SLO tier** — your FinOps and on-call processes will need them.
 - Reserve [annotations](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/) for non-identifying metadata: build SHA, change-ticket, last-deployed timestamp, ingress controller hints.
+
+{{< blog/cta-card title="Manage Kubernetes with code" >}}
+Provision your clusters, their cloud resources, and the workloads on them from one Pulumi program, and use stacks to promote changes from dev to production.
+{{< /blog/cta-card >}}
 
 ## 12. How should you separate Kubernetes environments?
 

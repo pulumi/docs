@@ -1,14 +1,14 @@
 ---
 title: "Managing AWS Credentials on CI/CD: Part 1"
+feature_image: feature.png
 date: 2020-03-12
 meta_desc: "Best practices for managing AWS credentials on CI/CD: Part 1 in series"
-meta_image: meta.png
 authors:
     - chris-smith
     - sophia-parafina
 tags:
     - continuous-delivery
-    - aws-credentials-cicd
+category: best-practices
 series: aws-credentials-cicd
 ---
 
@@ -41,16 +41,6 @@ configuring your specific CI/CD service, whether you want to use [CircleCI](http
 The recommendations in this series describe a general "one-size fits most" approach for credential
 management, which requires a minimal amount of work to configure and maintain. Depending on your
 specific environment, needs, and constraints, there may be a better alternative for your use case.
-
-Here's the full set of steps in our series, walking through the creation of a secure CI/CD environment
-to deploy AWS resources using Pulumi:
-
-- [Create a dedicated IAM User for your CI/CD](#create-new-iam-user)
-- [Provide the IAM User’s credentials to your CI/CD system](/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials)
-- [Comparison with using hosted secret managers](/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service)
-- [Automate Rotating and Revoking AWS Credentials](/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation)
-- [Assuming IAM Roles for performing updates](/blog/managing-aws-credentials-on-cicd-part-3#assuming-iam-roles)
-- [Securing sensitive data using Pulumi](/blog/managing-aws-credentials-on-cicd-part-3#secrets-in-pulumi)
 
 ## Create a dedicated IAM User for your CI/CD {#create-new-iam-user}
 

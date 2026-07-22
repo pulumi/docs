@@ -3,7 +3,6 @@ title_tag: "retainOnDelete | Resource Options"
 meta_desc: The `retainOnDelete` resource option marks a resource to be retained during a delete operation.
 title: "retainOnDelete"
 h1: "Resource option: retainOnDelete"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: retainOnDelete
@@ -12,6 +11,7 @@ menu:
 aliases:
   - /docs/intro/concepts/resources/options/retainondelete/
   - /docs/concepts/options/retainondelete/
+  - /docs/iac/concepts/options/retainondelete/
   - /docs/iac/concepts/options/retainOnDelete/
 ---
 

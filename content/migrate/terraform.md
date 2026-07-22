@@ -2,8 +2,6 @@
 title: Pulumi for Terraform Users
 layout: terraform
 url: /terraform
-meta_image: /images/migrate/oss-meta.png
-
 
 benefits:
   title: The benefits of using Pulumi

@@ -59,4 +59,4 @@ A true cloud programming platform will offer a clear path to finally realizing t
 
 ### Spin up with Pulumi
 
-It is the dawn of a new age for all aspects of the software development lifecycle: cloud programs at every developer's fingertips. We look forward to playing our part in what promises to be one of largest industry transformations in our lifetimes.
+It is the dawn of a new age for all aspects of the software development lifecycle: cloud programs at every developer's fingertips. We look forward to playing our part in what promises to be one of the largest industry transformations in our lifetimes.

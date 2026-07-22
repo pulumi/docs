@@ -3,7 +3,6 @@ title_tag: "Agent Accounts | Pulumi Cloud"
 meta_desc: Agent accounts let AI agents provision ephemeral Pulumi Cloud accounts automatically so agents can use state and ESC without manual signup.
 title: Agent Accounts
 h1: Agent accounts
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     administration:
         name: Agent Accounts
@@ -77,5 +76,7 @@ In these cases, the CLI uses the existing credentials. If multiple agents run on
 ## See also
 
 - [Pulumi Cloud accounts](/docs/administration/organizations-teams/accounts/)
+- [Pulumi Agent Skills](/docs/ai/skills/)
+- [Pulumi MCP server](/docs/ai/mcp-server/)
 - [The agentic infrastructure era](/blog/the-agentic-infrastructure-era/) (blog post)
 - [Direct resource operations](/docs/iac/cli/direct-resource-operations/)

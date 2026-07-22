@@ -5,13 +5,13 @@ date: 2022-03-28T12:06:33-04:00
 
 meta_desc: Get to know Pulumi's UX Team! Learn more about how Pulumi's designers and engineers collaborate to deliver smooth user experiences.
 
-meta_image: "meta.png"
 
 authors:
     - anita-trimbur
 
 tags:
     - pulumi-culture
+category: company
 
 ---
 

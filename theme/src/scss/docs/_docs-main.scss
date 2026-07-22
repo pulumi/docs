@@ -37,7 +37,7 @@ body.section-registry {
             font-family: 'Inter';
             font-weight: 400;
             font-size: 16px;
-            color: var(--color-gray-950);
+            color: var(--docs-fg, var(--color-gray-950));
             padding: 0 0 12px 0;
             margin: 0;
             line-height: 1.6;
@@ -53,7 +53,7 @@ body.section-registry {
 
         p a:not(.btn),
         ul li a[href]  {
-            color: var(--color-violet-primary);
+            color: var(--docs-link, var(--color-violet-primary));
             background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,var(--color-gray-500),var(--color-gray-500));
             background-position: 100% 100%,0 100%;
             background-repeat: no-repeat;
@@ -90,12 +90,11 @@ body.section-registry {
             border: none;
             display: flex;
             flex-direction: column;
-            padding-bottom: 24px;
             flex-shrink: 0;
             margin: 0;
             width: 32px;
             flex-basis: 32px;
-            height: calc(100vh - 38px);
+            height: calc(100vh - 64px); // Fallback; JS tracks the header's visible height on scroll.
             position: sticky;
             left: 0;
             top: 0;
@@ -127,6 +126,7 @@ body.section-registry {
                 overflow-y: auto;
                 flex: 1;
                 min-height: 0;
+                padding-bottom: 24px; // Breathing room below the last item, inside the scroll area.
             }
 
             h2,
@@ -135,7 +135,7 @@ body.section-registry {
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 14px;
-                color: #5f6065;
+                color: var(--docs-fg-muted, #5f6065);
                 margin-top: 22px;
                 margin-left: 14px;
 
@@ -158,7 +158,7 @@ body.section-registry {
 
             div.featured-packages ul,
             div.az-packages ul {
-                border-left: #e5e5e9 1px solid;
+                border-left: 1px solid var(--docs-border, #e5e5e9);
                 margin-left: 8px;
             }
 
@@ -167,13 +167,13 @@ body.section-registry {
                     font-family: 'Inter';
                     font-weight: 500;
                     font-size: 16px;
-                    color: #2f3032;
+                    color: var(--docs-fg, #2f3032);
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     margin: 0 16px 24px 0;
                     padding-bottom: 14px;
-                    border-bottom: 1px solid #dcdcdc;
+                    border-bottom: 1px solid var(--docs-border, #dcdcdc);
                     gap: 8px;
                 }
             }
@@ -184,10 +184,9 @@ body.section-registry {
                 gap: 4px;
 
                 span.count-badge {
-                    font-size: 11px;
-                    padding: 0px 4px;
-                    border: 1px solid var(--color-violet-primary);
-                    border-radius: 6px;
+                    @extend .badge;
+                    @extend .badge-secondary;
+                    @extend .badge-sm;
                 }
             }
 
@@ -196,7 +195,7 @@ body.section-registry {
                 flex-basis: 240px;
                 box-shadow: none;
                 margin: 0 6px 0 16px;
-                border-right: 1px solid var(--color-gray-200);
+                border-right: 1px solid var(--docs-border, var(--color-gray-200));
                 box-shadow: none;
                 position: sticky;
 
@@ -210,10 +209,10 @@ body.section-registry {
             z-index: 100;
             width: 32px;
             height: 40px;
-            background: #fff;
+            background: var(--docs-bg, #fff);
             border-width: 1px 1px 1px 0px;
             border-style: solid;
-            border-color: var(--color-gray-200);
+            border-color: var(--docs-border, var(--color-gray-200));
             box-shadow: 4px 0px 16px rgba(0, 0, 0, 0.08);
             border-radius: 0px 4px 4px 0px;
             cursor: pointer;
@@ -231,6 +230,15 @@ body.section-registry {
             }
         }
 
+        // Once the sidebar becomes a persistent desktop sidebar (>1024px, matching
+        // the JS that strips the collapse state classes), the toggle tab is inert —
+        // hide it so it doesn't linger on narrow desktop widths.
+        @media (min-width: 1025px) {
+            .docs-nav-toggle {
+                display: none;
+            }
+        }
+
         .docs-main-nav-wrapper {
             position: relative;
             display: flex;
@@ -240,21 +248,16 @@ body.section-registry {
             display: flex;
 
             .docs-main-nav-wrapper {
-                border-right: 1px solid var(--color-gray-200);
+                border-right: 1px solid var(--docs-border, var(--color-gray-200));
             }
 
             .docs-main-nav-wrapper .docs-main-nav {
                 width: 240px;
                 flex-basis: 240px;
-                height: calc(100vh);
                 padding-left: 16px;
-                background-color: #fff;
+                background-color: var(--docs-bg, #fff);
                 box-shadow: 6px 0px 36px rgba(0, 0, 0, 0.08);
                 justify-content: space-between;
-
-                @media (min-width: 768) {
-                    height: calc(100vh - 38px);
-                }
             }
 
             nav.main-nav {
@@ -276,10 +279,6 @@ body.section-registry {
             display: flex;
             position: relative;
             top: 0;
-
-            .docs-nav-toggle {
-                display: none;
-            }
 
             + div.docs-main-content-wrapper {
                 margin-left: 0;
@@ -322,6 +321,26 @@ body.section-registry {
             margin: 1rem 1.5rem 0 1rem;
             padding-bottom: 24px;
             min-height: 100vh;
+
+            // Scroll-to-top button: sticks 1rem above the viewport bottom and,
+            // because it lives at the end of (and is bounded by) this column,
+            // right-aligns to the content's right edge. JS toggles .visible /
+            // .hidden on the inner <a> to reveal it after scrolling.
+            > pulumi-top-button {
+                position: sticky;
+                bottom: 1rem;
+                z-index: 10;
+                display: block;
+                width: fit-content;
+                margin-left: auto;
+
+                // It floats over content, so keep an opaque surface (the dark
+                // outline variant is otherwise transparent and would let text
+                // bleed through).
+                .btn {
+                    background-color: var(--docs-bg, var(--color-white));
+                }
+            }
 
             @media (min-width: 1024px) {
                 max-width: 1200px;
@@ -403,6 +422,10 @@ body.section-registry {
 
         .docs-toc-mobile {
             display: flex;
+            // Stack the markdown actions and the "On this page" accordion in their
+            // own full-width rows instead of cramming them side by side.
+            flex-direction: column;
+            align-items: stretch;
 
             div.table-of-contents {
                 display: flex;
@@ -415,6 +438,14 @@ body.section-registry {
         .docs-marketing-ad,
         .docs-toc-desktop {
             display: none;
+        }
+
+        // Markdown / LLM actions show at every breakpoint. Only the slot for the
+        // current width is visible (mobile slot < 1280px, desktop slot ≥ 1280px),
+        // so the widget never renders twice.
+        .docs-md-actions {
+            display: block;
+            margin-bottom: 16px;
         }
 
 
@@ -440,13 +471,18 @@ body.section-registry {
                 display: block;
             }
 
+            // Desktop right-rail spacing (visibility handled by the base rule).
+            .docs-md-actions {
+                margin-bottom:1.5rem;
+            }
+
             .docs-table-of-contents {
-                margin-top: 1rem;
+                margin-top: 2.5rem;
                 padding: 1rem 0;
                 overflow-y: auto;
-                height: 90vh;
+                height: 100vh;
                 position: sticky;
-                top: 3.5rem;
+                top: 0;
                 display: block;
                 margin-right: 10px;
 
@@ -641,7 +677,11 @@ body.section-registry {
                 font-family: 'Inter';
                 font-weight: 600;
                 font-size: 12px;
-                color: #8e8f97;
+                // Full-strength foreground token; flips automatically in docs
+                // dark mode (near-black in light, white in dark). Registry pages
+                // aren't body.section-docs (the token is undefined there), so the
+                // fallback keeps them at their original muted gray.
+                color: var(--docs-fg, #8e8f97);
                 margin: 0 !important;
             }
         }
@@ -707,13 +747,16 @@ body.section-registry {
         }
 
         .heading:hover {
+            // Resting heading is full-strength --docs-fg, so hover softens to the
+            // muted token (lighter in light mode, dimmer in dark) for feedback.
+            // Fallback keeps registry (non-docs) pages at their original hover.
             div.icon {
-                background-color: var(--color-gray-900);
+                background-color: var(--docs-fg-muted, var(--color-gray-900));
             }
 
             .icon-heading-wrapper {
                 h2 {
-                    color: var(--color-gray-900);
+                    color: var(--docs-fg-muted, var(--color-gray-900));
                 }
             }
         }

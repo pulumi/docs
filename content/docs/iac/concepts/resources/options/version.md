@@ -3,7 +3,6 @@ title_tag: "version | Resource Options"
 meta_desc: The version resource option specifies a provider version to use when operating on a resource.
 title: "version"
 h1: "Resource option: version"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: resource-option-version

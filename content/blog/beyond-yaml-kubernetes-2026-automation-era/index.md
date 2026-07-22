@@ -22,7 +22,6 @@ meta_desc: Discover how AI and automation are shaping Kubernetes in 2026. See Pu
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: kubernetes-2026-ai-automation-era.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -39,6 +38,7 @@ tags:
     - platform-engineering
     - devops
     - mlops
+category: general
 
 # Schema type for structured data (SEO). Options: auto, faq, article, blog, howto, product, event, none
 # Leave as 'auto' (or omit) for intelligent detection based on content type.
@@ -152,6 +152,10 @@ With the new [Pulumi Kubernetes Operator 2.3](https://www.pulumi.com/blog/pulumi
 - Performance improvements for large-scale environments and parallel stack operations
 
 Documentation: [Using the Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/)
+
+{{< blog/cta-card title="Kubernetes beyond YAML" >}}
+Define clusters, workloads, and policies in TypeScript, Python, or Go, and manage EKS, AKS, and GKE from a single code-first workflow.
+{{< /blog/cta-card >}}
 
 ## Intelligent Infrastructure Across Every Cloud
 

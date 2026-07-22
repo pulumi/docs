@@ -4,7 +4,6 @@ meta_desc: AWS integration with Pulumi — providers, packages, architecture tem
 title: AWS
 linktitle: AWS
 h1: AWS
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   integrations:
     name: AWS

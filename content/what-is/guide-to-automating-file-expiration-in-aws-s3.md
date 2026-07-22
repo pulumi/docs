@@ -3,7 +3,6 @@ title: Automating AWS S3 File Expiration with Pulumi
 meta_desc: |
      A comprehensive guide to automate file expiration in AWS S3 using Pulumi.
 
-meta_image: /images/what-is/guide-to-automating-file-expiration-in-aws-s3-meta.png
 type: what-is
 page_title: Automate AWS S3 File Expiration with Pulumi
 authors: ["james-denyer"]
@@ -95,7 +94,7 @@ After deployment, you can verify the lifecycle configuration in the AWS Manageme
 
 ## Wrapping up
 
-This simple Pulumi program will ensure that any files uploaded to the documents/ folder in your S3 bucket will be automatically transitioned to Glacier after 90 days, helping you manage storage costs and keep your bucket tidy without manual intervention.
+The point of defining lifecycle rules in Pulumi rather than clicking through the console is that expiration becomes a property of your infrastructure, not a one-time chore someone has to remember. The rule lives in version control alongside the bucket it governs, so every environment gets the same retention behavior, and a drifted or deleted policy surfaces the next time you run `pulumi refresh` and preview instead of as a surprise bill months later. Storage cleanup stops being an operational task you schedule and becomes a guarantee the code enforces.
 
 ## Additional use cases for S3 automation with Pulumi
 
@@ -117,4 +116,4 @@ Pulumi is free, [open source](https://github.com/pulumi/pulumi), and optionally 
 
 - Follow the [Getting Started](/docs/get-started/) guide to give Pulumi a try.
 
-- [Join our community on Slack](https://slack.pulumi.com/) to discuss this guide, and let us know what you think.
+- [Join the Pulumi community on Slack](https://slack.pulumi.com/) to discuss this guide, and let us know what you think.

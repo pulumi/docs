@@ -16,6 +16,7 @@ aliases:
 meta_title: "Pulumi Neo - Your AI Platform Engineer"
 meta_desc: "Meet Neo, your AI platform engineer. Automate infrastructure provisioning, governance, and optimization with enterprise controls."
 meta_image: /images/product/neo/neo-meta.png
+include_floqer: true
 
 sections:
   - type: hero
@@ -33,7 +34,7 @@ sections:
     description: |
       **Enterprise-grade AI for cloud automation.**
 
-      Neo is the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Unlike generic AI tools, Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
+      Pulumi's code-first platform already works great with the coding agents your team loves — Claude Code, Codex, Cursor, and more — and our [agent skills](/docs/ai/skills/) make them even better. Want the best infrastructure agent right out of the box? That's Neo: the industry's first AI agent built from the ground up to execute, govern, and optimize complex cloud automation at enterprise scale. Neo understands infrastructure dependencies, respects your policies, and works within your existing Pulumi governance.
     cards:
       - icon: code
         title: Faster provisioning

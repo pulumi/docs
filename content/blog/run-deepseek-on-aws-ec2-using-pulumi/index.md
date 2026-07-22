@@ -6,7 +6,6 @@ draft: false
 meta_desc: |
     Self-host DeepSeek, Llama, Qwen, or Mistral on AWS EC2 with Ollama and Pulumi. Includes instance-type recommendations, cost math, and copy-paste IaC.
 
-meta_image: meta.png
 
 authors:
 - engin-diri
@@ -22,6 +21,7 @@ tags:
 - pulumi
 - aws
 - ec2
+category: tutorials
 
 social:
   twitter: |
@@ -525,6 +525,10 @@ response = client.chat.completions.create(
 )
 print(response.choices[0].message.content)
 ```
+
+{{< blog/cta-card title="Deploy GPU infrastructure with Pulumi" >}}
+Provision the GPU EC2 instance, network, and IAM role for your self-hosted LLM in one program, then switch models with a single config change.
+{{< /blog/cta-card >}}
 
 ## How do I switch models?
 

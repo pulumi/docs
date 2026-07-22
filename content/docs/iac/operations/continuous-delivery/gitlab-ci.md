@@ -3,7 +3,6 @@ title_tag: "Using GitLab CI/CD with Pulumi | CI/CD"
 meta_desc: Run Pulumi in GitLab CI/CD pipelines and ship infrastructure through a trunk-based workflow, with static-token or OIDC authentication.
 title: GitLab CI/CD
 h1: Using GitLab CI/CD with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: GitLab CI/CD
@@ -381,7 +380,7 @@ git push origin release-2026-05-21
 
 Keeping production on its own stack and deploying it only from a tag makes each production update a single, traceable Git operation, and ensures production never deploys from an untested commit.
 
-To let reviewers exercise a change in a live environment, pair the `preview` job with a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the merge request and destroys it when the merge request closes.
+To let reviewers exercise a change in a live environment, pair the `preview` job with a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions an ephemeral stack for the merge request and destroys it when the merge request closes.
 
 {{% notes type="info" %}}
 The Pulumi CLI automatically detects when it runs inside GitLab CI/CD and records the build and commit metadata. Each update in Pulumi Cloud then links back to the pipeline and merge request that triggered it — no extra configuration required.
@@ -437,5 +436,5 @@ You can manage GitLab itself — projects, groups, branch protection rules, and 
 - [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) — register GitLab as a trusted OIDC issuer.
 - [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments created automatically for each merge request.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each merge request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

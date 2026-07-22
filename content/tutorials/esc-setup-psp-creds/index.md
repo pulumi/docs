@@ -4,7 +4,6 @@ title_tag: Setup Pulumi Service Provider using ESC
 layout: single
 description: Create an ESC Environment to store your Pulumi Service Provider credentials and easily re-use them across your IaC stacks.
 meta_desc: Create an ESC Environment to store your Pulumi Service Provider credentials and easily re-use them across your IaC stacks.
-meta_image: meta.png
 weight: 999
 summary: |
     [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings, manage them securely and flexibly, and use them in your applications. In this tutorial, you will create an ESC environment to store credentials for the Pulumi Service Provider, then use this environment to create new Pulumi Cloud resources, including more ESC Environments.
@@ -51,7 +50,7 @@ Instead of providing the PAT as an environment variable, risking losing or leaki
 
 ## Create a new ESC environment
 
-ESC [_Environments_](/docs/esc/environments/working-with-environments/) are a great way to store configuration settings and secrets. Environments can be created in the Pulumi Cloud console or with the CLI.
+ESC [_Environments_](/docs/esc/concepts/environments/) are a great way to store configuration settings and secrets. Environments can be created in the Pulumi Cloud console or with the CLI.
 
 To get started, navigate to the Environments page using Pulumi Cloud console's navigation bar on the left. Then click `Create Environment` button, fill in `creds` for project name and `psp` for environment name and click `Create`. You will now see a blank new environment with some default commented-out explanations.
 
@@ -127,4 +126,4 @@ You are now all set! Run `pulumi up`, and your Pulumi program will create a new 
 
 ### Wrapping up
 
-You have learned how to create ESC environments in the Pulumi Cloud console, import them into IaC stacks and even create Environments using the Pulumi Service Provider. The environment you created, `creds/psp` can now be easily re-used between your stacks, or used to compose more complex environments, using [Environment imports](https://www.pulumi.com/docs/esc/environments/imports/). Using what you know now, you can easily create other Environments under the `creds` project to store credentials for other providers. For example, `creds/aws` or `creds/azure`!
+You have learned how to create ESC environments in the Pulumi Cloud console, import them into IaC stacks and even create Environments using the Pulumi Service Provider. The environment you created, `creds/psp` can now be easily re-used between your stacks, or used to compose more complex environments, using [Environment imports](https://www.pulumi.com/docs/esc/concepts/imports/). Using what you know now, you can easily create other Environments under the `creds` project to store credentials for other providers. For example, `creds/aws` or `creds/azure`!

@@ -3,7 +3,6 @@ title_tag: "Performance Tracing in Pulumi"
 meta_desc: "Learn how to trace Pulumi deployments to understand performance bottlenecks and optimize your infrastructure deployments."
 title: Performance and tracing
 h1: Performance and tracing
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
   - /docs/support/debugging/performance-tracing/
   - /docs/iac/troubleshooting/debugging/performance-tracing/

@@ -2,7 +2,6 @@
 title: "Multicloud with Kubernetes and Pulumi"
 date: 2022-06-09T11:40:47-07:00
 meta_desc: "Learn how to customize the multi-cloud developer experience with Kubernetes and Pulumi, using TypeScript"
-meta_image: showcase-image.png
 authors:
     - guinevere-saenger
 tags:
@@ -10,6 +9,7 @@ tags:
     - packages
     - typescript
     - multi-cloud
+category: tutorials
 ---
 
 In this article we'll show you how to use Pulumi Components and the Pulumi Automation API to make golden path

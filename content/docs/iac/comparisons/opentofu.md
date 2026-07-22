@@ -1,9 +1,9 @@
 ---
 title_tag: "Pulumi vs. OpenTofu"
+authors: ["joe-duffy"]
 meta_desc: "Pulumi vs. OpenTofu: Pulumi is a multi-cloud IaC platform in general-purpose languages; OpenTofu is a Linux Foundation Terraform fork that uses HCL."
 title: OpenTofu
 h1: Pulumi vs. OpenTofu
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: OpenTofu
@@ -62,7 +62,7 @@ OpenTofu configurations are written in [HCL](https://opentofu.org/docs/language/
 
 OpenTofu and Pulumi target broadly the same set of clouds and SaaS platforms, but reach them through different mechanisms. OpenTofu uses providers from the [OpenTofu Registry](https://search.opentofu.org/) (and, where compatible, the Terraform Registry), installed and pinned through the `required_providers` block. Pulumi pulls from the [Pulumi Registry](/registry/), which includes [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers). Pulumi also maintains native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/), generated directly from each platform's API schema for same-day coverage of new resources.
 
-When a provider is not packaged in the Pulumi Registry, the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature generates a typed Pulumi SDK from any provider in the OpenTofu or Terraform registry by running `pulumi package add terraform-provider <name>`. The result is a strongly typed local package usable from any Pulumi language — so an OpenTofu user's existing third-party providers are first-class citizens in Pulumi without writing or maintaining a separate bridge.
+When a provider is not packaged in the Pulumi Registry, the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature generates a typed Pulumi SDK from any provider in the OpenTofu or Terraform registry by running `pulumi package add terraform-provider <name>`. The result is a strongly typed local SDK usable from any Pulumi language — so an OpenTofu user's existing third-party providers are first-class citizens in Pulumi without writing or maintaining a separate bridge.
 
 ### Execution and rollbacks
 

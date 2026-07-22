@@ -6,7 +6,10 @@ description: |
 meta_desc: Learn how Panther Labs worked with Pulumi to increase deployment speeds by 10x and reduce the size of its infrastructure codebase by over 50%.
 
 customer_name: Panther Labs
+industry: security
 customer_logo: /logos/customers/panther.svg
+logo_bg_color: "#040C36"
+logo_style: white
 customer_url: https://runpanther.io/
 
 quote_block:
@@ -70,13 +73,11 @@ To evaluate Pulumi’s performance, Austin ported more than 500 AWS resources to
 
 Here is the graph that contrasts deployment rates with Pulumi and CloudFormation. In all cases, Pulumi performed significantly better.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/panther-labs-deployment-rates.png" alt="Panther Labs Deployment Rates" />
+![Panther Labs deployment rates](/images/case-studies/panther-labs-deployment-rates.png)
 
 This graph contrasts lines of code when using Pulumi and when using the CloudFormation DSL, which is YAML-based.
 
- <img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/panther-labs-lines-of-code.png" alt="Panther Labs Lines of Code" />
+![Panther Labs lines of code](/images/case-studies/panther-labs-lines-of-code.png)
 
 With Pulumi, the codebase shrank by more than 50%.
 

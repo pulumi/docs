@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Migrating a monolith to Cloud-Native"
 meta_desc: In this talk you will learn how to migrate a large monolith codebase to Cloud-Native and learn a few gotchas along the way.
+meta_image: /events/migrating-a-monolith-to-cloud-native/meta.png
+meta_image_square: /events/migrating-a-monolith-to-cloud-native/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -37,7 +39,7 @@ duration: "24 minutes"
 description: |
     So your company has finally decided to move to the Cloud Native ecosystem. You’ve landed on containerization as your first step. You heard that all you needed to do was containerize your first app and then push it to Kubernetes/OpenShift/Nomad, and the cost savings just come. You’ve done this, and well, things have gone not as planned. Some of the tech didn’t do what you expected, and wait, what do you mean our OpEx has gone up?
 
-    Simply said: the promise of containerization or migrating to the Cloud Native ecosystem can be a lie if you don’t do your homework. Sadly most companies don’t. In this talk, I’ll explain a few gotchas that a “few” enterprises, in the guise of AsgharLabs, hit moving towards the Cloud Native world, and hopefully, you’ll learn from their mistakes, so you’re trip down this path will be more comfortable and closer to the promise.
+    Simply said: the promise of containerization or migrating to the Cloud Native ecosystem can be a lie if you don’t do your homework. Sadly most companies don’t. In this talk, I’ll explain a few gotchas that a “few” enterprises, in the guise of AsgharLabs, hit moving towards the Cloud Native world, and hopefully, you’ll learn from their mistakes, so your trip down this path will be more comfortable and closer to the promise.
 
 # The event presenters
 presenters:

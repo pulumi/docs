@@ -1,7 +1,9 @@
 ---
 # Name of the event.
 title: "Kelsey Hightower & Joe Duffy Fireside Chat"
-meta_desc: Listen in on as Kelsey Hightower and Joe Duffy discuss the past, present, and future of the cloud infrastructure landscape.
+meta_desc: Listen in as Kelsey Hightower and Joe Duffy discuss the past, present, and future of the cloud infrastructure landscape.
+meta_image: /events/kelsey-hightower-joe-duffy-fireside-chat/meta.png
+meta_image_square: /events/kelsey-hightower-joe-duffy-fireside-chat/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -35,7 +37,7 @@ sortable_date: 2021-10-20T08:30:00-07:00
 duration: "39 minutes"
 # Description of the event.
 description: |
-    Listen in on as Kelsey Hightower and Joe Duffy discuss the past, present, and future of the cloud infrastructure landscape. Hear key insights from Kelsey on everything from best development practices to how to run an engineering that lives in the customer's shoes.
+    Listen in as Kelsey Hightower and Joe Duffy discuss the past, present, and future of the cloud infrastructure landscape. Hear key insights from Kelsey on everything from best development practices to how to run an engineering that lives in the customer's shoes.
 
 # The event presenters
 presenters:

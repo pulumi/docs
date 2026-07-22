@@ -3,12 +3,12 @@ title: Run Your Own RSS Server on AWS with Pulumi
 date: 2019-09-16
 draft: false
 meta_desc: In this post, I'll demonstrate how easy it is to build and deploy a Miniflux RSS service on AWS with Pulumi.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:
     - containers
     - aws
+category: tutorials
 ---
 
 {{% notes type="warning" %}}

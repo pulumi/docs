@@ -3,12 +3,12 @@ title: "Credijusto Manages Authentication with Auth0 and Pulumi"
 date: 2020-09-22
 draft: false
 meta_desc: " Simplifying authentication to APIs with the Pulumi Auth0 provider"
-meta_image: credijusto.png
 authors:
     - fernando-carletti
 tags:
     - guest-post
     - auth0
+category: tutorials
 ---
 
 *Guest author Lead Devops Engineer Fernando Carletti, writes about using the Pulumi Auth0 provider to manage resources at Credijusto.*

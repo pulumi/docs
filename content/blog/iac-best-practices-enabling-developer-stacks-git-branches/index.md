@@ -1,9 +1,9 @@
 ---
 title: "IaC Best Practices: Enabling Developer Stacks & Git Branches"
+feature_image: feature.png
 date: 2023-03-10
 updated: 2025-03-04
 meta_desc: See how to enable team collaboration with Pulumi stacks and Git workflows. Learn best practices for managing feature branches and development environments.
-meta_image: meta.png
 authors:
     - christian-nunciato
     - scott-lowe
@@ -12,7 +12,7 @@ tags:
     - cloud-engineering
     - aws
     - eks
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-developer-stacks-git-branches/
@@ -21,16 +21,6 @@ aliases:
 In the first post about [code organization and stacks](/blog/iac-best-practices-understanding-code-organization-stacks/), we introduced Zephyr, a fictional company that uses Pulumi to manage its online retail store. Following on from that post, which discusses code organization and stacks, this post explores two more questions users frequently ask when working with Pulumi in teams --- namely, How can I best enable multiple developers to collaborate on a Pulumi project? And how can I use Git and Git branching to support this kind of collaboration? In this post, we'll provide some guidance and best practices around these topics, using Zephyr and its online store as the use case.
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these practices will emerge over the course of the series --- not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and its retail application changes to accommodate its growth.
-
-Here are links to all of the posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* **IaC Best Practices: Enabling Developer Stacks and Git Branches** (this post)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
 ## Existing IaC Workflow
 

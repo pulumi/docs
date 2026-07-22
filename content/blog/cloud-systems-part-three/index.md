@@ -1,5 +1,6 @@
 ---
 title: "Cloud Systems: Deploying to Amazon ECS"
+feature_image: feature.png
 
 date: 2021-12-28T14:52:42Z
 
@@ -11,10 +12,10 @@ authors:
     - kat-cosgrove
 
 tags:
-    - cloud-systems
     - aws
     - tutorials
     - docker
+category: tutorials
 series: cloud-systems
 ---
 
@@ -180,7 +181,7 @@ app_lifecycle_policy = aws.ecr.LifecyclePolicy("app-lifecycle-policy",
     }""")
 ```
 
-The last thing we need to do for our infrastructure before we can start deploying to it is create a repository on [Amazon ECR (Elastic Container Registry)](https://aws.amazon.com/ecr/) where our Docker image will live, then attach an application lifecycle policy to that repository. This makes sure that we expire and remove any untagged images in the repository, keeping things from geting clogged up.
+The last thing we need to do for our infrastructure before we can start deploying to it is create a repository on [Amazon ECR (Elastic Container Registry)](https://aws.amazon.com/ecr/) where our Docker image will live, then attach an application lifecycle policy to that repository. This makes sure that we expire and remove any untagged images in the repository, keeping things from getting clogged up.
 
 ## Deploying a Dockerized Flask Application to ECS
 

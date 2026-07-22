@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-03-19T10:30:00-07:00
 draft: false
 meta_desc: "Pulumi IAM introduces tag-based access control and role assignments for teams and users, enabling least-privilege access management at scale."
-meta_image: meta.png
 feature_image: feature.png
 authors:
   - devon-grove
@@ -17,6 +16,7 @@ tags:
   - security
   - features
   - pulumi-cloud
+category: product
 ---
 
 Since the launch of [Pulumi IAM](/blog/pulumi-cloud-iam-launch/) with [custom roles](/docs/administration/access-identity/rbac/roles/) and scoped [access tokens](/docs/administration/access-identity/access-tokens/), organizations have been using fine-grained permissions to secure their automation and CI/CD pipelines. As teams scale to hundreds or thousands of stacks, environments, and accounts, the next challenge is applying those permissions efficiently.

@@ -3,7 +3,6 @@ title_tag: "Operations | Pulumi IaC"
 meta_desc: Run Pulumi day-to-day — stack management, continuous delivery, troubleshooting, debugging, and least-privilege security for infrastructure after it's deployed.
 title: Operations
 h1: Operations
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Operations
@@ -28,4 +27,4 @@ These pages cover the Day 2 workflows for running Pulumi at scale.
 
 **[Docker images](/docs/iac/operations/docker-images/)** - Pulumi's officially published container images: what's in each, where to pull from, release cadence, and how to use them as a base for custom images.
 
-**[Least privilege security](/docs/iac/operations/iac-least-privileges/)** - Configure cloud provider credentials with the minimum permissions needed for safe infrastructure operations.
+**[Least privilege](/docs/administration/security-compliance/least-privilege/)** - Apply least-privilege security across your Pulumi platform: cloud provider credentials, IaC and ESC access, and CI/CD. A recommended next step once your operational workflows are in place.

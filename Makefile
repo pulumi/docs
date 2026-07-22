@@ -129,6 +129,13 @@ serve-all:
 build-assets:
 	$(MISE) yarn --cwd ./theme run build
 
+# Regenerate the branded OpenGraph cards locally (e.g. to preview them). In CI
+# they're generated at build time (scripts/build-site.sh) and cached; the cards
+# are gitignored and never committed.
+.PHONY: meta-images
+meta-images:
+	$(MISE) node scripts/generate-meta-images.mjs
+
 .PHONY: test
 test:
 	$(MAKE) test-programs

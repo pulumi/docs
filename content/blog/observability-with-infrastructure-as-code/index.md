@@ -11,8 +11,9 @@ tags:
 - automation-api
 - observability
 - honeycomb
+category: community
 
-meta_image: "reaktor.png"
+
 ---
 
 **Guest Article:** [Andy Davies](https://andydote.co.uk) is a Senior Software Developer at [Reaktor](https://reaktor.com),

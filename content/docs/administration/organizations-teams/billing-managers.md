@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Billing Managers"
 meta_desc: The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations. Learn more about this role here.
 title: "Billing managers"
 h1: "Billing managers"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     name: Billing managers
@@ -58,7 +57,7 @@ Billing Managers can be removed by any organization admin at any time. The steps
 
 ## Billing Manager Permissions
 
-A Billing Manager has the ability to access and update billing information, and to view organization metrics, such as resource count and member count (but not member names).
+A Billing Manager has the ability to access and update billing information, and to view organization metrics, such as resource count and member count (but not member names). This includes setting [Neo usage limits](/docs/ai/usage-limits/) to cap what the organization spends on Pulumi Neo.
 
 | Resource | Permissions |
 | --- | --- |

@@ -13,7 +13,7 @@ aliases:
   - /docs/esc/concepts/providers/rotators/snowflake-user/
 ---
 
-The `snowflake-user` rotator enables you to rotate RSA keypairs for a Snowflake database user in your Environment. It automatically manages the key rotation process, ensuring that two keys remain valid at any point in time, which allows for seamless credential rotation without disrupting service availability. (See [rotation concepts](/docs/esc/environments/rotation/)).
+The `snowflake-user` rotator enables you to rotate RSA keypairs for a Snowflake database user in your Environment. It automatically manages the key rotation process, ensuring that two keys remain valid at any point in time, which allows for seamless credential rotation without disrupting service availability. (See [rotation concepts](/docs/esc/concepts/rotators/)).
 
 ## How Key Rotation Works
 
@@ -81,7 +81,7 @@ CREATE SECURITY INTEGRATION pulumi_oidc
 
 Replace `<pulumi-org>` with your Pulumi organization name.
 
-## Step 5: Managing credentials
+### Step 5: Managing credentials
 
 Set up an environment with [Snowflake login credentials](/docs/esc/providers/login/snowflake-login/) for the rotation service user:
 
@@ -98,7 +98,7 @@ values:
           role: ESC_ROTATOR
 ```
 
-## Step 6: Rotated environment
+### Step 6: Rotated environment
 
 Then, create a separate environment for your rotated credentials:
 
@@ -132,6 +132,27 @@ values:
         createdAt: "2025-01-01T12:00:00Z"
 ```
 
+### Alternative: authenticating with a private key
+
+Instead of an OIDC `token` from the [snowflake-login](/docs/esc/providers/login/snowflake-login/) provider, the `login` can authenticate directly with a key-pair by supplying a `privateKey`. Provide `account`, `user`, and exactly one of `privateKey` or `token`:
+
+```yaml
+# my-org/rotators/snowflake-keyrotator
+values:
+  user:
+    fn::rotate::snowflake-user:
+      inputs:
+        login:
+          account: myorganization-account
+          user: ESC_ROTATION_SERVICE_USER
+          privateKey:
+            fn::secret: |
+              -----BEGIN PRIVATE KEY-----
+              MIIEvQIBADANBgkqhkiG9w0BAQE...
+              -----END PRIVATE KEY-----
+        targetUser: ESC_ROTATION_DEMO_USER
+```
+
 ## Validation
 
 Perform a manual rotation on the environment to provision a new private key. If successful, should see output similar to the following when opening the environment:
@@ -147,42 +168,32 @@ Perform a manual rotation on the environment to provision a new private key. If 
 }
 ```
 
-## Inputs
+## Schema reference
 
-| Property          | Type                        | Description                                                                                 |
-|-------------------|-----------------------------|--------------------------------------------------------------------------------------------|
-| `login`           | [SnowflakeLogin](#snowflakelogin) | Required. Credentials used to connect to Snowflake and perform the rotation.              |
-| `targetUser`      | string                      | Required. The Snowflake user whose keypair will be rotated.                                 |
+{{< esc-schema-updated >}}
 
-### SnowflakeLogin
+### Inputs
 
-The `login` object must contain:
+{{< esc-schema type="rotator" name="snowflake-user" section="inputs" >}}
 
-| Property   | Type   | Description                                      |
-|------------|--------|--------------------------------------------------|
-| `account`  | string | Required. Snowflake account identifier.          |
-| `user`     | string | Required. Managing user to connect as. This user must have permission to alter the target user. |
+### State
 
-And exactly one of:
+{{< esc-schema type="rotator" name="snowflake-user" section="state" >}}
 
-| Property     | Type   | Description                                                                                                             |
-|--------------|--------|-------------------------------------------------------------------------------------------------------------------------|
-| `privateKey` | string | Private key in PEM format.                                                                                              |
-| `token`      | string | OAuth token (output of [snowflake-login](/docs/esc/providers/login/snowflake-login/) provider).  |
+### Outputs
 
-## State (Optional)
+{{< esc-schema type="rotator" name="snowflake-user" section="outputs" >}}
 
-| Property    | Type   | Description                                                            |
-|-------------|--------|------------------------------------------------------------------------|
-| `account`   | string | Snowflake account identifier.                                          |
-| `privateKey`| string | The private key in PEM format.                                         |
-| `createdAt` | string | When the keypair was generated, in RFC3339 format.                     |
+## Troubleshooting
 
-## Outputs
+| Symptom | Likely cause | Resolution |
+|---------|--------------|------------|
+| Rotation fails to authenticate to Snowflake | The OIDC security integration may be misconfigured, or the rotation service user may lack access. | Verify the `EXTERNAL_OAUTH` security integration values (issuer, JWKS URL, audience, allowed roles) and confirm the service user maps to the expected `login_name`. See [snowflake-login](/docs/esc/providers/login/snowflake-login/). |
+| Rotation fails with a permissions error | The rotator role may not be able to alter the target user. | Confirm the rotator role can alter the target user, following the grants in [Configuring Snowflake for Key Rotation](#configuring-snowflake-for-key-rotation). |
+| Applications fail to authenticate after a rotation | Applications may still be using the rotated-out public key (`RSA_PUBLIC_KEY_2`). | Update applications to the `current` private key; the previous key remains valid as `RSA_PUBLIC_KEY_2` until the next rotation. |
 
-| Property    | Type   | Description                                                           |
-|-------------|--------|-----------------------------------------------------------------------|
-| `account`   | string | Snowflake account identifier.                                         |
-| `user`      | string | The rotated user.                                                     |
-| `privateKey`| string | Private key in PEM format (stored as a secret).                       |
-| `rotatedAt` | string | When the keypair was generated, in RFC3339 format.                    |
+## Related
+
+- [Rotators](/docs/esc/concepts/rotators/) - How credential rotation works in Pulumi ESC
+- [snowflake-login](/docs/esc/providers/login/snowflake-login/) - Authenticate with Snowflake via OIDC
+- [Rotators reference](/docs/esc/providers/rotators/) - Catalog of all ESC rotators

@@ -3,7 +3,6 @@ title_tag: "Automation API"
 meta_desc: The Pulumi Automation API is a programmatic interface for running Pulumi programs without the Pulumi CLI. Learn its core concepts and terminology.
 title: Automation API
 h1: Automation API
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Automation API
@@ -80,11 +79,24 @@ Unlike traditional Pulumi programs, an inline program doesn't require a separate
 
 The program's lifecycle must be fully contained within the function, callback, or closure passed as the inline program. Performing actions outside the scope of the inline program function is unsafe and can lead to unpredictable behavior.
 
+## Plugins
+
+Pulumi providers are distributed as plugins that the engine loads at runtime, separately from the language SDK you import in your program. When you run the CLI, the engine automatically downloads any missing provider plugin before an operation. Automation API drives the same engine, so this behavior is identical: for providers published to the [Pulumi Registry](/registry/), you don't need to install plugins yourself---running `up`, `preview`, or `refresh` downloads them on demand, matching the SDK version your program references.
+
+A `Workspace` still exposes an explicit `installPlugin` method (`install_plugin`, `InstallPlugin`, `InstallPluginAsync`). You need it only in specific cases:
+
+- **Local or parameterized packages** that aren't published to the Registry---such as [`terraform-provider`](/registry/packages/terraform-provider/) or a custom provider---where the engine can't resolve the plugin automatically. See [Using local packages with Automation API](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api).
+- **Pinning a specific plugin version** independently of the SDK, or **pre-fetching** plugins ahead of an operation---for example in air-gapped environments or to avoid a download during a timed deployment.
+
+For background on plugins and the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin/) CLI commands that manage them, see [Pulumi packages](/docs/iac/concepts/packages/).
+
 ## Supported languages
 
 Like the rest of Pulumi, Automation API is available in multiple languages, so you can build applications that use it in TypeScript/JavaScript, Python, Go, C#, and Java. Automation API also supports cross-language use, where it runs in a program written in a different language than the Pulumi programs it manages.
 
-|                                                        | Language                                                                | Status |
+Each language has its own Automation API reference documentation. Follow the link in the **API reference** column below to view the reference for your language.
+
+|                                                        | API reference                                                           | Status |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ------ |
 | <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |
 | <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |

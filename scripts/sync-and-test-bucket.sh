@@ -78,6 +78,11 @@ aws s3 cp "$build_dir/latest-version" "${destination_bucket_uri}/latest-version"
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/latest-dev-version" "${destination_bucket_uri}/latest-dev-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
+# Publishes static/esc/latest-version at https://www.pulumi.com/esc/latest-version.
+# Required: pulumi/esc-action v1 and v2 fetch this URL at runtime to resolve which ESC
+# version to install when a workflow doesn't pin a `version:` input. Removing it 404s
+# that URL and breaks those (unpinned) actions. Keep until v1/v2 are fully sunset.
+# (v3+ installs the Pulumi CLI and no longer reads this file.)
 aws s3 cp "$build_dir/esc/latest-version" "${destination_bucket_uri}/esc/latest-version" \
     --content-type "text/plain" --acl public-read --region "$(aws_region)" --metadata-directive REPLACE
 aws s3 cp "$build_dir/customer-managed-workflow-agent/latest-version" "${destination_bucket_uri}/customer-managed-workflow-agent/latest-version" \
@@ -118,7 +123,48 @@ aws s3api put-bucket-cors --bucket "$destination_bucket" --cors-configuration "f
 if [[ "$1" == "preview" ]]; then
     pr_comment_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request._links.comments.href")"
     repo_api_url="$(cat "$GITHUB_EVENT_PATH" | jq -r ".pull_request.base.repo.url")"
-    preview_body="<!-- preview-link -->"$'\n'"Your site preview for commit $(git_sha_short) is ready! :tada:"$'\n\n'"${s3_website_url}"
+    pr_number="$(cat "$GITHUB_EVENT_PATH" | jq -r ".number")"
+
+    # Build a list of direct links to the pages this PR changed, to make reviewing
+    # easier. The base branch isn't available locally (CI does a shallow checkout),
+    # so we ask the GitHub API which files changed rather than diffing. We then map
+    # each changed content file to its published URL and keep only those that
+    # actually rendered to a page in this build (guards against removed files,
+    # non-page content, and url:/permalinks overrides — anything that doesn't
+    # resolve to a real page is simply left out rather than linked as a dead URL).
+    max_listed_pages=50         # Cap the rendered list so huge PRs stay readable.
+    max_files_pages=10          # Cap API pagination (10 * 100 = up to 1000 files).
+    changed_pages=()
+    for page in $(seq 1 "$max_files_pages"); do
+        files_json=$(curl -s \
+            -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
+            "${repo_api_url}/pulls/${pr_number}/files?per_page=100&page=${page}")
+
+        # Collect non-removed content markdown files from this page.
+        while IFS= read -r filename; do
+            [[ -z "$filename" ]] && continue
+            url="$(content_path_to_url "$filename")"
+            if [[ -f "${build_dir}${url}index.html" ]]; then
+                changed_pages+=("- [${url}](${s3_website_url}${url})")
+            fi
+        done < <(echo "$files_json" | jq -r '.[] | select(.status != "removed") | select(.filename | startswith("content/") and endswith(".md")) | .filename')
+
+        # Stop once we hit a short (final) page, or if the response wasn't an
+        # array (e.g. a transient API error), which yields 0 and breaks cleanly.
+        page_count="$(echo "$files_json" | jq -r 'if type == "array" then length else 0 end')"
+        [[ "$page_count" -lt 100 ]] && break
+    done
+
+    changed_pages_section=""
+    if [[ "${#changed_pages[@]}" -gt 0 ]]; then
+        listed=$(printf '%s\n' "${changed_pages[@]:0:$max_listed_pages}")
+        changed_pages_section=$'\n\n'"**Changed pages:**"$'\n'"${listed}"
+        if [[ "${#changed_pages[@]}" -gt "$max_listed_pages" ]]; then
+            changed_pages_section+=$'\n'"- …and $(( ${#changed_pages[@]} - max_listed_pages )) more"
+        fi
+    fi
+
+    preview_body="<!-- preview-link -->"$'\n'"Your site preview for commit $(git_sha_short) is ready! :tada:"$'\n\n'"${s3_website_url}${changed_pages_section}"
     preview_payload=$(jq -n --arg body "$preview_body" '{"body": $body}')
 
     # Look for an existing preview comment to update (handles CI re-runs).

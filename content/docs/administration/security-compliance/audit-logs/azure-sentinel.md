@@ -3,7 +3,6 @@ title_tag: "Export Audit Logs to Microsoft Sentinel"
 meta_desc: Learn how to configure automated export of Pulumi Cloud audit logs to Microsoft Sentinel for SIEM analysis.
 title: "Export to Microsoft Sentinel"
 h1: Export audit logs to Microsoft Sentinel
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Export to Microsoft Sentinel

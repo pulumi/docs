@@ -3,7 +3,6 @@ title_tag: Pulumi API | Self-Hosting Pulumi
 meta_desc: Pulumi API is one of the components required for self-hosting the Pulumi Cloud. Self-hosting is available as part of the Pulumi Business Critical Edition.
 title: Pulumi API
 h1: Pulumi Cloud self-hosted API
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
         name: Pulumi API
@@ -468,7 +467,7 @@ scrape_configs:
 In order to enable [Pulumi Deployments](/docs/pulumi-cloud/deployments), the following must be configured:
 
 * `PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT` or `PULUMI_LOCAL_OBJECTS` [object storage](#object-storage)
-* [Customer-Managed Workflow Runners](/docs/deployments/deployments/runs/customer-managed-agents/) - You also need to update the `pulumi-workflow-agent.yaml` [configuration file](/docs/deployments/deployments/runs/customer-managed-agents/#configuration-reference) by setting `service_url` to `<PULUMI_API_DOMAIN>`. Example:
+* [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/) - You also need to update the `pulumi-workflow-agent.yaml` [configuration file](/docs/deployments/concepts/customer-managed-runners/#configuration-reference) by setting `service_url` to `<PULUMI_API_DOMAIN>`. Example:
 
     ```yaml
     token: pul-d2d2….

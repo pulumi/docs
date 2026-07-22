@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-05-26
 draft: false
 meta_desc: "In a large codebase, the model is the smaller variable. The harness around it does the work: CLAUDE.md, hooks, skills, LSP, MCP, subagents."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - claude
     - mcp
     - devops
+category: perspectives
 social:
     twitter: |
         Most teams' Claude Code results plateau in real codebases because the harness around the agent is empty, not because the model is weak.
@@ -196,6 +196,10 @@ Restricting `tools` to read-only is the load-bearing line. The model only sees t
 ## Don't let it rot
 
 The harness is not a one-time setup. Models improve, and rules written for last year's model often constrain this year's. A note like "always split refactors into single-file changes" might have saved you in 2024 and might block a beneficial cross-file edit in 2026. Anthropic suggests reviewing your CLAUDE.md files every three to six months, or whenever performance feels like it has plateaued after a major model release. The stop-hook reflection gives you a head start. The rest is on you.
+
+{{< blog/cta-card title="Extend the harness to your stack" href="/docs/ai/skills/" >}}
+Package your infrastructure workflows as Agent Skills and expose your Pulumi state through the Pulumi MCP server, so your coding agent works your stack the way your team does.
+{{< /blog/cta-card >}}
 
 ## Assign an owner
 

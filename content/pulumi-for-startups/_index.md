@@ -1,7 +1,11 @@
 ---
-title: Pulumi Startup Discount Offer
-meta_desc: Pulumi is here to help your startup scale. Leverage familiar languages to spin up and scale out your cloud infrastructure quickly and efficiently.
+title: Pulumi for Startups
+meta_desc: Pulumi for Startups gives early-stage teams up to $10,000 in credits, office hours, and 12 months of runway to build cloud infrastructure as code.
+meta_image: /images/pulumi-for-startups/meta.png
 
 type: page
 layout: pulumi-for-startups
+
+aliases:
+    - /microsoft-for-startups/
 ---

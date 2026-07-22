@@ -1,8 +1,7 @@
 ---
 title: Infrastructure as Code for DevOps
-meta_desc: "How infrastructure as code enables a modern DevOps program: CI/CD for the platform, shift-left testing, policy as code, and platform engineering."
+meta_desc: "Infrastructure as code is what makes DevOps work past the app boundary: CI/CD, shift-left testing, policy as code, and AI agents for the platform itself."
 
-meta_image: /images/what-is/infrastructure-as-code-for-devops-meta.png
 type: what-is
 page_title: "Infrastructure as Code for DevOps"
 
@@ -42,6 +41,7 @@ In this article, we'll cover the key questions about infrastructure as code for 
 * How does IaC enable CI/CD for infrastructure?
 * How does IaC enable shift-left testing and policy as code?
 * How does IaC enable platform engineering and self-service?
+* How do AI agents change IaC for DevOps?
 * What is the maturity progression from manual ops to IaC-enabled DevOps?
 * What tools support IaC for DevOps?
 * How does Pulumi fit into a DevOps program?
@@ -52,7 +52,7 @@ In this article, we'll cover the key questions about infrastructure as code for 
 DevOps grew up in the era when servers were long-lived and small in number. The cloud changed both: a modern stack has hundreds or thousands of resources, changing daily, across many accounts and providers. Three forces make IaC mandatory rather than optional for any serious DevOps program:
 
 * **Scale.** No team can manage thousands of cloud resources by hand. The only way to keep environments consistent, auditable, and reproducible past a small footprint is to define them as code.
-* **Speed.** DevOps measures itself on deployment frequency and lead time. Manual infrastructure provisioning adds days; codified infrastructure adds minutes. The performance gap between elite and low-performing teams in DORA's State of DevOps reports tracks closely with how automated the infrastructure pipeline is.
+* **Speed.** DevOps measures itself on deployment frequency and lead time. Manual infrastructure provisioning adds days; codified infrastructure adds minutes. In DORA's [2024 Accelerate State of DevOps report](https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report), elite teams deploy on demand, keep change lead time under a day, and hold change failure rates under 5%, while low performers measure lead time in weeks or months. The ability to provision and change environments on demand is exactly what codified infrastructure gives you.
 * **Risk.** Most cloud incidents are misconfigurations: open security groups, public buckets, wildcard IAM. Catching those in a code review and a CI policy check is much cheaper than catching them in production.
 
 ## How does IaC map onto the DevOps lifecycle?
@@ -77,7 +77,7 @@ CALMS (Culture, Automation, Lean, Measurement, Sharing) is one of the most widel
 | Pillar | What IaC contributes |
 |---|---|
 | **Culture** | Application and platform changes flow through the same review process. Operations stops being an out-of-band ticket queue and becomes a peer to development. |
-| **Automation** | Every cloud resource is provisioned by code. Manual console clicks are exceptions that get noticed by drift detection. |
+| **Automation** | Every cloud resource is provisioned by code. Manual console clicks are exceptions that get noticed by [drift detection](/what-is/what-is-infrastructure-drift/). |
 | **Lean** | Smaller, more frequent infrastructure changes replace big-bang quarterly migrations. Failed changes are reverted in minutes. |
 | **Measurement** | Deployment frequency, lead time, change-failure rate, and MTTR can be measured for the platform the same way they're measured for the product. |
 | **Sharing** | Reusable infrastructure components and policy packs ship between teams. Platform teams package vetted patterns; product teams consume them. |
@@ -106,7 +106,7 @@ The principle is the same as application CI: fast feedback for in-progress chang
 * **Policy as code** enforces organizational rules across every change. [Pulumi Policies](/docs/insights/policy/) lets you write policies in TypeScript, Python, or OPA's Rego and run them against `pulumi preview` so non-compliant changes never merge. Those policies apply to Pulumi stacks written in any supported language.
 * **Security scans** (Checkov, tfsec, Snyk IaC) run on every commit and surface known-bad configurations.
 
-For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/).
+For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/).
 
 ## How does IaC enable platform engineering and self-service?
 
@@ -120,6 +120,17 @@ IaC is the substrate for that platform:
 * **Golden paths.** Pre-built stacks for the most common patterns (a stateless service, a queue-driven worker, a customer-facing API) become one-command operations.
 
 Without IaC, every team reinvents the same VPC, the same IAM, the same logging setup, and the platform team is reduced to writing wiki pages. With IaC, the same patterns become version-controlled, testable, reusable software.
+
+## How do AI agents change IaC for DevOps?
+
+Coding agents now write and modify infrastructure code, which raises the volume of infrastructure changes without raising anyone's review capacity. IaC is what makes that workable, because it gives agent-generated changes the same governance path as human ones:
+
+* **Agent output is a pull request, not a console session.** An agent that proposes infrastructure changes produces a reviewable diff. There's no equivalent control for an agent (or a human) clicking through a cloud console.
+* **Typed languages give agents fast, machine-readable feedback.** A compile error or a failed unit test is a signal an agent can act on immediately, before any human looks at the change.
+* **Policy as code becomes the non-negotiable guardrail.** When the author of a change might be a model, "we trust the author to know the rules" stops being a strategy. CI policy checks apply the organization's rules to every change regardless of who (or what) wrote it.
+* **Drift detection catches out-of-band actions.** Anything applied outside the pipeline shows up as a diff against the declared state, which bounds the blast radius of a misbehaving automation.
+
+This is also the design behind [Pulumi Neo](/product/neo/), an AI agent purpose-built for infrastructure work: it executes provisioning, governance, and optimization tasks against your Pulumi stacks while keeping humans in the approval loop and organizational policies in force. See [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) for concrete workflows.
 
 ## What is the maturity progression from manual ops to IaC-enabled DevOps?
 
@@ -203,6 +214,14 @@ Kubernetes manifests are themselves a form of declarative infrastructure code; t
 
 DORA's four key metrics: deployment frequency, lead time for changes, change-failure rate, and mean time to recover. Track a single value stream for at least a quarter before and after the IaC adoption to see the trend. Most teams see lead time drop first, then deployment frequency, then change-failure rate.
 
+### Can AI agents write infrastructure as code?
+
+Yes, and increasingly they do: coding assistants generate Terraform and Pulumi programs, and purpose-built agents like [Pulumi Neo](/product/neo/) execute whole infrastructure tasks. The quality control isn't the agent; it's the pipeline around it. Typed languages surface invalid configurations at compile time, unit tests and previews show what a change will actually do, and policy as code blocks unsafe changes from merging.
+
+### How do you keep AI-generated infrastructure changes safe?
+
+Treat the agent like any other contributor: every change lands as a pull request with a preview diff, CI runs the same tests and policy checks it runs on human changes, and the agent gets no standing cloud credentials outside the pipeline. The mechanisms DevOps teams already built for IaC (review, policy as code, drift detection) are exactly the controls AI-generated changes need.
+
 ### How do I introduce IaC to a team that's been running manual ops?
 
 Start with one new service or one well-defined existing piece of infrastructure. Get it into Pulumi, set up CI/CD around it, write a few unit tests and a policy. Use that as the template for the next service. Avoid the "big-bang migration of everything" approach: it usually stalls, and the team learns more from shipping one thing well.
@@ -217,5 +236,5 @@ Related reading:
 * [What is DevOps?](/what-is/what-is-devops/)
 * [What is CI/CD?](/what-is/what-is-ci-cd/)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [What is Configuration Management?](/what-is/what-is-configuration-management/)

@@ -4,7 +4,6 @@ meta_desc: Azure integration with Pulumi — providers, packages, templates, ARM
 title: Azure
 linktitle: Azure
 h1: Azure
-meta_image: /images/docs/meta-images/docs-clouds-azure-meta-image.png
 menu:
   integrations:
     name: Azure

@@ -498,6 +498,97 @@
     });
   }
 
+  // ---------- Header: Pulumi-logo brand context menu (right-click) ----------
+  // Markup lives in layouts/partials/header/logo-brand-menu.html; this only
+  // positions it at the cursor, toggles visibility, and handles the clipboard copy.
+  (function initBrandLogoMenu(): void {
+    const menu = document.querySelector<HTMLElement>('[data-brand-menu]');
+    const logos = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-logo-brand-menu]'),
+    );
+    if (!menu || !logos.length) return;
+
+    const copyLabel = menu.querySelector<HTMLElement>('[data-brand-menu-copy-label]');
+    const COPY_DEFAULT = copyLabel?.textContent?.trim() ?? 'Copy logo SVG';
+    let activeLogo: HTMLElement | null = null;
+
+    function close(): void {
+      if (menu.hasAttribute('hidden')) return;
+      menu.setAttribute('hidden', '');
+      activeLogo = null;
+      if (copyLabel) copyLabel.textContent = COPY_DEFAULT;
+      document.removeEventListener('click', onDocClick, true);
+      document.removeEventListener('keydown', onKeydown, true);
+      window.removeEventListener('resize', close);
+      window.removeEventListener('scroll', close, true);
+    }
+
+    function onDocClick(e: MouseEvent): void {
+      if (!menu.contains(e.target as Node)) close();
+    }
+
+    function onKeydown(e: KeyboardEvent): void {
+      if (e.key === 'Escape') {
+        const logo = activeLogo;
+        close();
+        logo?.focus();
+      }
+    }
+
+    function open(x: number, y: number, logo: HTMLElement): void {
+      activeLogo = logo;
+      // Reveal off-screen-safe to measure, then clamp to the viewport.
+      menu.style.visibility = 'hidden';
+      menu.removeAttribute('hidden');
+      const rect = menu.getBoundingClientRect();
+      const pad = 8;
+      const left = Math.min(x, window.innerWidth - rect.width - pad);
+      const top = Math.min(y, window.innerHeight - rect.height - pad);
+      menu.style.left = `${Math.max(pad, left)}px`;
+      menu.style.top = `${Math.max(pad, top)}px`;
+      menu.style.visibility = '';
+
+      // Defer so the originating right-click doesn't immediately dismiss the menu.
+      requestAnimationFrame(() => {
+        document.addEventListener('click', onDocClick, true);
+        document.addEventListener('keydown', onKeydown, true);
+        window.addEventListener('resize', close);
+        window.addEventListener('scroll', close, true);
+      });
+
+      menu.querySelector<HTMLElement>('[role="menuitem"]')?.focus();
+    }
+
+    async function copyLogoSvg(): Promise<void> {
+      const img = activeLogo?.querySelector('img');
+      const url = img?.currentSrc || img?.src;
+      if (!url) {
+        close();
+        return;
+      }
+      try {
+        const res = await fetch(url);
+        await navigator.clipboard.writeText(await res.text());
+        if (copyLabel) copyLabel.textContent = 'Copied!';
+      } catch {
+        if (copyLabel) copyLabel.textContent = 'Copy failed';
+      }
+      window.setTimeout(close, 900);
+    }
+
+    menu.querySelector<HTMLElement>('[data-brand-menu-copy]')?.addEventListener('click', copyLogoSvg);
+    menu.querySelectorAll<HTMLElement>('[data-brand-menu-close]').forEach(el =>
+      el.addEventListener('click', () => close()),
+    );
+
+    logos.forEach(logo =>
+      logo.addEventListener('contextmenu', e => {
+        e.preventDefault();
+        open(e.clientX, e.clientY, logo);
+      }),
+    );
+  })();
+
   // The .is-signed-in class on <html> is set pre-paint by the inline script in
   // head.html — see CSS rules in main.scss. Nothing to do here at hydration.
 })();

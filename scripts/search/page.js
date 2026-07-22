@@ -122,6 +122,7 @@ module.exports = {
                     description: item.params.meta_desc,
                     href: item.href,
                     authors: item.params.authors,
+                    date: item.date || undefined,
                     tags: item.params.tags,
                     rank: this.getRank(item),
                     boosted: this.isBoosted(item),

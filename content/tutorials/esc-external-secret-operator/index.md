@@ -7,7 +7,6 @@ description: |
   Pulumi ESC integrates with the External Secrets Operator (ESO) to manage and deliver secrets in Kubernetes clusters.
 meta_desc: Pulumi ESC integrates with the External Secrets Operator (ESO) to manage and deliver secrets in Kubernetes clusters.
 weight: 999
-meta_image: meta.png
 summary: |
   [External Secrets Operator](https://external-secrets.io/latest/) is a Kubernetes operator that integrates external secret management systems with Kubernetes. By using External Secrets Operator, you have several advantages over Kubernetes native secrets:
 
@@ -26,7 +25,7 @@ collections:
 - kubernetes
 collections_weight: 2
 prereqs:
-- "The [Pulumi ESC CLI](/docs/esc-cli/)"
+- "The [Pulumi CLI](/docs/iac/download-install/)"
 - "A Kubernetes cluster (for example, [kind](https://kind.sigs.k8s.io/))"
 - "[kubectl](https://kubernetes.io/releases/download/#kubectl)"
 - "[helm](https://helm.sh/docs/intro/install/)"
@@ -533,6 +532,6 @@ As we continue to improve the integration between Pulumi ESC and External Secret
 
 To dive deeper into using Pulumi ESC for advanced scenarios, check out the following resources:
 
-- **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/environments/imports/).
+- **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/concepts/imports/).
 
 - **Managing Secrets**: Learn how to securely manage and adopt dynamic, short-lived secrets on demand using Pulumi ESC, ensuring sensitive information is protected across different environments. Read more in the [Pulumi ESC documentation](/docs/esc/).

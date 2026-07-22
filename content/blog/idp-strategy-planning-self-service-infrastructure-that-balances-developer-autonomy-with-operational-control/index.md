@@ -1,5 +1,6 @@
 ---
 title: "How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure"
+feature_image: feature.png
 allow_long_title: true
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -25,7 +26,6 @@ meta_desc: Learn how to design and implement an effective Internal Developer Pla
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -43,7 +43,7 @@ tags:
     - governance
     - components
     - templates
-    - idp-best-practices
+category: best-practices
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -76,15 +76,6 @@ The good news? You can do both, with a clear strategy and the right approach. Th
 <!--more-->
 
 These lessons come from real-world implementations across industries and company sizes—and are built to grow with you.
-
-This post is part of our IDP Best Practices series. You can explore the full series below:
-
-- **How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure** (you are here)
-- [Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates](/blog/golden-paths-infrastructure-components-and-templates/)
-- [Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails](/blog/deployment-guardrails-with-policy-as-code)
-- [Day 2 Operations: Drift Detection and Remediation](/blog/day-2-operations-drift-detection-and-remediation)
-- Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-- Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 
 ## Understanding the Platform Engineering Layers in Your Internal Developer Platform
 
@@ -234,6 +225,10 @@ But self-service isn't just about providing a UI. It's about carefully orchestra
 When we walked through the demo in our workshop, what you saw was the culmination of thoughtful platform design.
 Developers can discover available services, deploy infrastructure through whatever interface makes sense for them, and manage their resources over time, all without requiring tickets or manual intervention from platform teams.
 That's the promise of a well-designed IDP: developer autonomy without operational chaos.
+
+{{< blog/cta-card title="Put your IDP strategy into practice" >}}
+Build reusable components, golden paths, and self-service workflows on Pulumi, and give developers autonomy while you keep governance and costs in check.
+{{< /blog/cta-card >}}
 
 ## How to Implement Your IDP Strategy
 

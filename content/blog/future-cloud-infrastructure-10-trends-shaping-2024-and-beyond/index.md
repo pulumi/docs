@@ -23,7 +23,6 @@ meta_desc: Explore 2026’s top cloud trends, including AI infrastructure, Kuber
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: "2026-cloud-trends-ai-idp-security.png"
 
 aliases:
     - /future-cloud-infrastructure-10-trends-shaping-2026-and-beyond/
@@ -46,6 +45,7 @@ tags:
     - devsecops
     - security
     - kubernetes
+category: general
 
 ---
 
@@ -171,6 +171,10 @@ As organizations increase their use of AI across cloud-native systems, the need 
 *"[AI]... it doesn’t deliver value on its own – AI needs to be tightly aligned with data, analytics, and governance to enable intelligent, adaptive decisions and actions across the organization."*
 
 This perspective mirrors what we’re seeing across modern DevSecOps practices: AI can amplify security, but only when paired with strong foundations in secrets management, governance, and cross-team collaboration.
+
+{{< blog/cta-card title="Build for an AI-first cloud" >}}
+Pulumi gives teams infrastructure as code, reusable components, and policy guardrails to deliver consistently across every cloud and AI workload.
+{{< /blog/cta-card >}}
 
 ## 7. Platform Engineering & Internal Developer Platforms (IDPs)
 

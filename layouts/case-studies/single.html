@@ -1,26 +1,38 @@
 {{ define "hero" }}
+    {{- /* Hero lives outside <main> (like the /what-is/ pages) so the content-area
+        list/link styles in main.scss don't reach the breadcrumb — no overrides
+        needed. */ -}}
+    {{ $industry := .Params.industry }}
+    {{ $industryName := "" }}
+    {{ range site.Data.case_study_industries.industries }}
+        {{ if eq .id $industry }}{{ $industryName = .name }}{{ end }}
+    {{ end }}
+    <div class="font-body container mx-auto px-6 md:px-8 mt-16">
+        <section id="hero" class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+            <nav aria-label="Breadcrumb" class="mb-6">
+                <ol class="flex flex-wrap items-center justify-center gap-2 font-overline text-gray-600">
+                    <li><a class="hover:text-violet-700" href="/case-studies/">Case Studies</a></li>
+                    {{ with $industryName }}
+                    <li aria-hidden="true" class="text-gray-400">/</li>
+                    <li class="text-gray-900 font-medium"><a class="hover:text-violet-700" href="/case-studies/industry/{{ $industry }}/" data-track="case-study-industry-{{ $industry }}">{{ . }}</a></li>
+                    {{ end }}
+                </ol>
+            </nav>
+            <h1 class="heading-1 text-black mb-6">{{ .Title }}</h1>
+            {{ with .Description }}
+            <p class="body-lg text-gray-primary mb-0 max-w-2xl">{{ . | markdownify }}</p>
+            {{ end }}
+        </section>
+    </div>
 {{ end }}
 
 {{ define "main" }}
-<div class="font-body container mx-auto mb-16 mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24">
+<div class="font-body container mx-auto mb-16 mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-16">
 
-    {{/* Hero */}}
-    <section class="template-hero template-hero--centered" id="hero">
-        <div class="flex flex-col items-center gap-12">
-            <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-                <a href="/case-studies/" class="hero-tag-line no-underline hover:no-underline">Case Study</a>
-                <h1 class="title mb-6">{{ .Title }}</h1>
-                {{ with .Description }}
-                <p class="description mb-10 max-w-2xl">{{ . | markdownify }}</p>
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
-    {{/* Quote block */}}
+    {{/* Quote block (or a plain rule when the page has none) */}}
     {{ with .Params.quote_block }}
     <div class="max-w-6xl mx-auto w-full">
-        {{ partial "template-partials/template-case-study-hero.html" (dict
+        {{ partial "case-studies/quote-panel.html" (dict
             "customer_logo" $.Params.customer_logo
             "customer_name" $.Params.customer_name
             "quote" .quote
@@ -29,12 +41,14 @@
             "headline" .headline
         ) }}
     </div>
+    {{ else }}
+    <hr class="max-w-6xl mx-auto w-full border-gray-300 m-0" />
     {{ end }}
 
-    {{/* Mobile sidebar nav (visible below lg) */}}
+    {{/* Mobile "On this page" (collapsible, visible below lg) */}}
     {{ with .Params.sections }}
     <div class="lg:hidden">
-        {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+        {{ partial "case-studies/toc.html" (dict "sections" . "collapsible" true) }}
     </div>
     {{ end }}
 
@@ -42,11 +56,11 @@
     <div class="flex flex-row gap-12 max-w-6xl mx-auto w-full">
         {{/* Main content column */}}
         <div class="flex-1 min-w-0">
-            <div class="max-w-4xl template-sidebar-content">
+            <div class="max-w-4xl case-study-content">
                 {{ if .Params.exec_summary }}
-                <section id="executive-summary" class="pb-8 mb-8 border-b border-gray-300">
-                    <h2>Executive summary</h2>
-                    <p class="description">
+                <section class="pb-8 mb-8 border-b border-gray-300">
+                    <h2 id="executive-summary">Executive summary</h2>
+                    <p class="body-lg">
                         {{ .Params.exec_summary | markdownify }}
                     </p>
                 </section>
@@ -56,10 +70,10 @@
             </div>
         </div>
 
-        {{/* Sidebar nav (visible at lg+) */}}
+        {{/* Sidebar "On this page" (visible at lg+) */}}
         {{ with .Params.sections }}
         <div class="hidden lg:block w-64 flex-shrink-0 self-start sticky top-36">
-            {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+            {{ partial "case-studies/toc.html" (dict "sections" .) }}
         </div>
         {{ end }}
     </div>

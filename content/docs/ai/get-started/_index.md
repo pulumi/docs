@@ -3,14 +3,13 @@ title: Getting started with Neo
 title_tag: Getting started with Pulumi Neo
 h1: Getting started with Pulumi Neo
 meta_desc: Learn how to set up Pulumi Neo for your organization and run your first infrastructure task through conversational AI.
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
 - /docs/pulumi-cloud/neo/get-started/
 - /docs/iac/neo/get-started/
 - /docs/ai/neo/get-started/
 menu:
     ai:
-        name: Get Started
+        name: Get started with Neo
         parent: ai-home
         weight: 10
         identifier: ai-get-started

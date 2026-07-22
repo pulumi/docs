@@ -29,6 +29,7 @@ customer_logos:
       - webflow
       - supabase
       - ro
+authors: ["zack-chase"]
 ---
 
 Even those who are unfamiliar with coding have likely heard of Python. What began as a hobby project named after a British surreal comedy troupe, Python has grown across three decades to become one of the world’s foremost coding languages. According to a [Stack Overflow Developer Survey](https://insights.stackoverflow.com/survey/2021#most-loved-dreaded-and-wanted-language-love-dread), approximately 68% of software developers who have worked extensively with Python have expressed interest in continuing to develop with Python. The same survey also identified Python as the number-one most-wanted coding language among developers who are not currently using it.
@@ -64,7 +65,7 @@ And while other languages, such as Java or .NET, might offer increased performan
 
 ### 5. Python is well suited to data science and analytics
 
-Many of the factors that make python an attractive choice for beginners also set it apart as a reliable option for data-science and data-analysis. Python’s ease of use, support, and flexibility have made it an essential tool for those who work with machine learning, cloud computing, and big data.
+Many of the factors that make Python an attractive choice for beginners also set it apart as a reliable option for data-science and data-analysis. Python’s ease of use, support, and flexibility have made it an essential tool for those who work with machine learning, cloud computing, and big data.
 
 Python is particularly effective for analyzing and organizing data sets. In fact, for data science and analytics projects, Python is second only to R language in terms of popularity. Its out-of-the-box data analysis capabilities, combined with its growing ecosystem of data-focused frameworks, help ensure that Python remains a popular data-science programming solution.
 

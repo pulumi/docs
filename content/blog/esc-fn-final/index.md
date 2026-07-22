@@ -3,7 +3,6 @@ title: "Lock Down Values in Pulumi ESC with fn::final"
 date: 2026-03-17T11:00:00-07:00
 draft: false
 meta_desc: "Mark configuration values as final in Pulumi ESC to prevent child environments from overriding them with fn::final."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - pablo-terradillos
@@ -11,6 +10,7 @@ authors:
 tags:
     - esc
     - features
+category: product
 schema_type: auto
 ---
 

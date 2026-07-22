@@ -2,7 +2,6 @@
 title: Python for DevOps
 meta_desc: "Python is the lingua franca of DevOps and MLOps automation. Learn where Python fits in IaC, CI/CD, observability, and machine-learning operations."
 
-meta_image: /images/what-is/python-for-devops-meta.png
 type: what-is
 page_title: "Python for DevOps"
 
@@ -200,4 +199,4 @@ Related reading:
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
 * [JavaScript and Infrastructure as Code](/what-is/javascript-and-infrastructure-as-code/)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)

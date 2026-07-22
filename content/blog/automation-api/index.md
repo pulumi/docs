@@ -2,11 +2,11 @@
 title: "The Pulumi Automation API - The Next Quantum Leap in IaC"
 date: 2020-10-19
 meta_desc: "Introducing the Pulumi Automation API - Scaling Cloud Projects with Software, Not Humans"
-meta_image: automation_api.png
 authors:
     - evan-boyle
 tags:
-    - automation api
+    - automation-api
+category: product
 canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/automation-api/"
 ---
 
@@ -540,7 +540,7 @@ Check out the full `halloumi` source in [TypeScript](https://github.com/pulumi/h
 
 Like any other framework, you can even set a breakpoint to debug orchestration logic or the pulumi program itself, including `Apply` callbacks.
 
-![Debuggin demo](https://www.pulumi.com/uploads/content/blog/automation-api/debugging.gif)
+![Debugging demo](https://www.pulumi.com/uploads/content/blog/automation-api/debugging.gif)
 
 ## Supercharged Ops Tooling
 

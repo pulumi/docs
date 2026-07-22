@@ -3,7 +3,6 @@ title_tag: "Choosing a Pulumi AWS Provider"
 title: Choosing a Provider
 h1: Choosing a Pulumi AWS Provider
 meta_desc: Learn when to use the AWS, AWS Cloud Control, and component library packages for managing AWS infrastructure with Pulumi.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds-aws

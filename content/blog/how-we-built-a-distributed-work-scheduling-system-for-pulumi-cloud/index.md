@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-02-26
 draft: false
 meta_desc: "A look inside the distributed scheduling system that powers Pulumi Cloud's workflow runners across hosted and self-managed infrastructure."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - levi-blackstone
@@ -14,6 +13,7 @@ tags:
     - features
     - engineering
     - insights
+category: engineering
 schema_type: auto
 
 ---

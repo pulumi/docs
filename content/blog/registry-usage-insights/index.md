@@ -4,15 +4,15 @@ allow_long_title: true
 date: 2026-02-12
 draft: false
 meta_desc: "See which stacks use which package versions at a glance. Filter by adoption status and track version sprawl across your organization."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - idp-team
 tags:
-    - idp
+    - internal-developer-platform
     - features
     - platform-engineering
     - pulumi-cloud
+category: product
 ---
 
 Platform teams need visibility into package adoption at scale. Responding to security advisories, planning deprecations, and tracking version sprawl all require knowing which stacks run which package versions across your organization.

@@ -1,16 +1,16 @@
 ---
 title: "IaC Best Practices: Implementing RBAC and Security"
+feature_image: feature.png
 date: 2023-05-23
 updated: 2025-03-04
 meta_desc: Discover best practices for securing Pulumi stacks with role-based access control (RBAC). Learn how to manage permissions and enforce least privilege.
-meta_image: meta.png
 authors:
     - scott-lowe
 tags:
     - best-practices
     - rbac
     - security
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-rbac-and-security/
@@ -19,16 +19,6 @@ aliases:
 This post continues our series of blog posts focused on IaC best practices. In earlier posts, we introduced Zephyr Archaeotech Emporium, the fictional company that sits at the center of this series, and discussed Zephyr's primary use case for Pulumi: managing their online retail store. You read how Zephyr's initial use of Pulumi changed to incorporate the use of short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, and incorporated the use of Stack References. This post is a complement to the post on structuring Pulumi projects, concentrating on the use of role-based access control (RBAC) and security in Zephyr's multi-project configuration.<!--more-->
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. You've seen these practices emerge over the course of the series---not all immediately, and not all right away. Structuring the blog series in this way is a deliberate decision; many best practices are "point in time" recommendations: they are context-dependent and the recommendations for any given company, like Zephyr, may change as the company and its needs change.
-
-For ease of navigation, here are links to all the blog posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* **IaC Best Practices: Implementing RBAC and Security (the post you're reading)**
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
 ## Evolving Project Structure to Enhance Security and Scalability
 
@@ -122,7 +112,7 @@ The post covered the following guidelines for securing your stacks in Pulumi Clo
 * **Use Pulumi Cloud's RBAC functionality by setting your organization's default stack permissions to Read or None.** This is generally the safest way to implement the principle of least privilege, unless you have a good use case for allowing all organization members full write access to all stacks.
 * When assigning team permissions, **grant the minimum level of access necessary.** If a user isn't responsible for making updates to a stack, then give that user stack reader permission through a team membership (remember that you can't assign stack permissions directly to organization members, you have to use a team). Keep in mind, though: if the organization level stack permission has been set to Read, then members already have the equivalent of stack reader permissions on all stacks, so creating a team to grant stack reader permission is unnecessary and superfluous.
 * **Declaratively manage your Pulumi Cloud RBAC configuration** where possible using the Pulumi Cloud provider from within a Pulumi program.
-* **Use the `--teams` flag with `pulumi stack init` to ensure that teams have stack permissions upon stack creation.** You can also use a team acess token to accomplish the same result.
+* **Use the `--teams` flag with `pulumi stack init` to ensure that teams have stack permissions upon stack creation.** You can also use a team access token to accomplish the same result.
 * **Allow users to create their own stacks.** Generally, turning this functionality off (found in the Settings &gt; Access Management screen of Pulumi Cloud) will end up creating a bottleneck, as only organization admins would be allowed to create new stacks.
 
 In the next IaC Best Practices post, the focus is on [Automation API](/automation/). Stay tuned to see how Zephyr uses Automation API to further streamline and automate the deployment of their cloud resources!

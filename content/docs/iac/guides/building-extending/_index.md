@@ -3,7 +3,6 @@ title_tag: "Building & Extending Pulumi | Guides"
 meta_desc: Learn how to build custom components, providers, and packages to extend Pulumi's capabilities.
 title: Building & Extending
 h1: Building & Extending Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Building & Extending
@@ -36,7 +35,7 @@ Package and distribute your components and providers for use across teams and pr
 
 **[Pulumi Packages](/docs/iac/concepts/packages/)** - Overview of Pulumi packages and how they enable sharing infrastructure code across all Pulumi languages.
 
-**[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
+**[Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/)** - Develop and test packages locally before publishing them to registries.
 
 **[Publishing to the Pulumi Registry](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Publish packages to the public Pulumi Registry. For publishing to the Pulumi IDP Private Registry, see [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).
 
@@ -48,7 +47,7 @@ Create custom providers to integrate new cloud platforms and services with Pulum
 
 **[Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/)** - Step-by-step guide to building a Pulumi provider that enables infrastructure management for any API or service.
 
-**[Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
+**[Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
 
 **[Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/)** - Techniques and tools for troubleshooting provider development and diagnosing issues.
 

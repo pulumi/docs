@@ -3,7 +3,6 @@ title_tag: "Using CDK Constructs with Pulumi"
 title: Pulumi CDK Adapter
 h1: Pulumi CDK Adapter
 meta_desc: Using CDK Constructs with Pulumi provides a significantly easier way of creating infrastructure for AWS. Here is how.
-meta_image: /images/docs/meta-images/docs-clouds-aws-meta-image.png
 menu:
   iac:
     parent: iac-guides-clouds-aws

@@ -2,12 +2,12 @@
 title: "Keeping Your Secrets Secret"
 date: 2021-03-23
 meta_desc: "Passwords, tokens, and environmental variables are secrets needed to for infrastructure to run. Learn how to protect them and your infrastructure."
-meta_image: secrets.png
 authors:
     - sophia-parafina
 tags:
     - security
     - secrets
+category: best-practices
 
 ---
 

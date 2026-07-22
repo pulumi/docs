@@ -3,7 +3,6 @@ title_tag: "envVarMappings | Resource Options"
 meta_desc: The envVarMappings resource option remaps environment variables to custom keys for provider authentication.
 title: "envVarMappings"
 h1: "Resource option: envVarMappings"
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     identifier: envVarMappings

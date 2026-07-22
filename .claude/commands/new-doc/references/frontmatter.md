@@ -16,7 +16,8 @@ title_tag: "{title_tag}"
 meta_desc: "{meta_desc}"
 title: {title}
 h1: {title}
-meta_image: {meta_image}
+# meta_image is optional — omit it and an on-brand social card is generated at
+# build time. Only set it to override with a custom image.
 menu:
   {section}:
     name: {title}
@@ -52,7 +53,7 @@ menu:
     weight: {weight}
     parent: {parent}  # Only if subsection
 meta_desc: "{meta_desc}"
-meta_image: {meta_image}
+# meta_image is optional — omit it for an auto-generated on-brand social card.
 h1: {h1}
 description: {description_html}
 link_buttons:
@@ -76,6 +77,7 @@ sections:
 ## Usage Notes
 
 - Replace all `{variable}` placeholders with actual values gathered during workflow
+- Leave `meta_image` out unless a custom override is needed — the build generates an on-brand social card automatically
 - For index pages, ensure these flags are set: `docs_home: true`, `notitle: true`, `norightnav: true`
 - Menu section = first directory under `/docs/` (e.g., `/docs/iac/...` → section: `iac`)
 - Aliases array should be empty `[]` for new pages (only populated for moved files)

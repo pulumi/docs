@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Reuse Don't Repeat, Creating an IaC Library"
 meta_desc: In this session you'll gain an understanding on the benefits of creating reusable modules, what sort of modules you can create, how to go about creating them.
+meta_image: /events/reuse-dont-repeat-creating-an-infrastructure-as-code-module-library/meta.png
+meta_image_square: /events/reuse-dont-repeat-creating-an-infrastructure-as-code-module-library/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -35,7 +37,7 @@ sortable_date: 2021-10-20T09:30:00-07:00
 duration: "20 minutes"
 # Description of the event.
 description: |
-    With each new Infrastructure as Code project it can often feel like your re-writing the same code you used for the last project, creating a virtual machine that complies with all your corporate security standards, or deploying all the required WAF rules. There is a better way.
+    With each new Infrastructure as Code project it can often feel like you're re-writing the same code you used for the last project, creating a virtual machine that complies with all your corporate security standards, or deploying all the required WAF rules. There is a better way.
 
     In this session we will look at how you can build a library of reusable modules that you can reuse over and over in your IaC projects. This is not just about boilerplate code, but real, usable modules that provide value to your whole team, help you comply with standards and build infrastructure faster.
 

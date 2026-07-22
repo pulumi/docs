@@ -2,7 +2,6 @@
 title: "What is Infrastructure as Code (IaC)?"
 meta_desc: |
     Infrastructure as code (IaC) provisions cloud infrastructure with code instead of consoles. Learn how IaC works, declarative vs. imperative, and top tools.
-meta_image: /images/what-is/what-is-infrastructure-as-code-meta.png
 type: what-is
 page_title: "What is Infrastructure as Code (IaC)?"
 aliases:
@@ -59,13 +58,13 @@ For teams managing tens or hundreds of cloud resources that change once every fe
 
 ## How does infrastructure as code work?
 
-At its core, infrastructure as code follows a simple loop: you describe the infrastructure you want, and an engine makes the real world match that description. You don't write the step-by-step instructions to get there---you declare the end state, and the tool figures out the rest.
+At its core, infrastructure as code follows a single loop: you describe the infrastructure you want, and an engine makes the real world match that description. You don't write the step-by-step instructions to get there. You declare the end state, and the tool figures out the rest.
 
 A typical workflow looks like this:
 
-1. **Write the desired state as code.** Describe the resources you want---a network, a Kubernetes cluster, a database, an IAM policy---in a configuration file or program.
+1. **Write the desired state as code.** Describe the resources you want (a network, a Kubernetes cluster, a database, an IAM policy) in a configuration file or program.
 1. **Build a plan.** The IaC tool reads your code and constructs a model of the desired state.
-1. **Compare against reality.** The tool compares that desired state against a record of what already exists, usually kept in a *state file* that tracks the resources it manages.
+1. **Compare against reality.** The tool compares that desired state against a record of what already exists, usually kept in a [*state file*](/what-is/what-is-terraform-state/) that tracks the resources it manages.
 1. **Preview the changes.** Before anything happens, you get a diff showing exactly what will be created, updated, replaced, or deleted.
 1. **Reconcile.** Once approved, the engine calls the cloud provider APIs to make the real infrastructure match your code, handling ordering and dependencies along the way.
 
@@ -109,7 +108,7 @@ pulumi.export("bucket_name", bucket.bucket)
 
 {{% /choosable %}}
 
-Two properties make this model reliable. Because the engine works from desired state rather than a fixed list of steps, IaC is *idempotent*: applying the same code repeatedly always produces the same result, whether you're deploying into an empty account or reconciling one that already has resources. And because the tool keeps a model of what it manages, it can detect *drift*---changes someone made out of band, such as editing a setting directly in the cloud console---and bring the real world back in line with the code. Without IaC, environments tend to become "snowflakes," each one configured slightly differently by hand and impossible to reproduce reliably.
+Two properties make this model reliable. Because the engine works from desired state rather than a fixed list of steps, IaC is *idempotent*: applying the same code repeatedly always produces the same result, whether you're deploying into an empty account or reconciling one that already has resources. And because the tool keeps a model of what it manages, it can detect *drift* (changes someone made out of band, such as editing a setting directly in the cloud console) and bring the real world back in line with the code. Without IaC, environments tend to become "snowflakes," each one configured slightly differently by hand and impossible to reproduce reliably.
 
 ## How did infrastructure as code evolve?
 
@@ -164,7 +163,7 @@ The key elements of infrastructure as code are the same key elements you'd find 
 1. **An infrastructure as code mechanism:** For all practical purposes, in order to do infrastructure as code you need a tool or engine that is responsible for translating the IaC instructions into something the cloud provider APIs understand and can use. Infrastructure as code tools may be provided by and limited to a single cloud provider (AWS CloudFormation is one example), or may support multiple cloud providers. Tools may be limited to supporting YAML or JSON; may require the use of a specialized and proprietary domain-specific language (DSL); or may support the use of general purpose programming languages such as TypeScript/JavaScript, C#, Go, Python, and Java.
 1. **Version control:** When infrastructure is described as code, it can be checked into source control, versioned and code-reviewed using existing software engineering practices. Version control systems, like [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/), enable you to see _what_ changes were made, _when_ the changes were made, and _who_ made the changes.
 1. **Tests:** As any critical system grows in complexity, people can start to feel nervous about making changes. With infrastructure as code, teams can write tests for their infrastructure to ensure its correctness. They can encode policies so that all provisioned infrastructure and its configurations [are compliant](/docs/iac/guides/testing/property-testing/). Once they're tested, infrastructure components can be reusable pieces of code that capture best practices and that can be shared across teams. No more reinventing the wheel.
-1. **CI/CD pipelines:** Assuming the infrastructure as code tool supports the functionality (most do), changes to infrastructure---found in changes to the code that defines the infrastructure---can be deployed using existing CI/CD tools, much in the same way CI/CD pipelines automatically build and deploy other forms of software.
+1. **CI/CD pipelines:** Assuming the infrastructure as code tool supports the functionality (most do), changes to infrastructure (found in changes to the code that defines the infrastructure) can be deployed using existing CI/CD tools, much in the same way CI/CD pipelines automatically build and deploy other forms of software.
 
 ## What benefits does infrastructure as code provide?
 
@@ -202,7 +201,7 @@ The IaC tooling landscape has grown a lot since CFEngine kicked off the category
 * **Ansible** started life as a configuration management tool and is often used procedurally to manage long-lived servers. It's owned by Red Hat.
 * **Chef and Puppet** are earlier-generation configuration management tools focused on the state of running servers.
 
-For a closer look at each of these options and how to choose between them, see our guide to the [top infrastructure as code tools](/what-is/top-iac-tools/). To see how Pulumi compares head-to-head, take a look at [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/), [Pulumi vs. CloudFormation](/docs/iac/comparisons/cloudformation/), or the full [comparisons index](/docs/iac/comparisons/).
+For a closer look at each of these options and how to choose between them, see our guide to the [top infrastructure as code tools](/blog/infrastructure-as-code-tools/). To see how Pulumi compares head-to-head, take a look at [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/), [Pulumi vs. CloudFormation](/docs/iac/comparisons/cloudformation/), or the full [comparisons index](/docs/iac/comparisons/).
 
 ## How do I get started with infrastructure as code?
 
@@ -228,7 +227,7 @@ You probably already have a lot of existing infrastructure. Make sure you can [i
 
 ### Integrate with existing engineering practices
 
-Assuming your infrastructure code is integrated with your continuous delivery pipeline, you can start instituting the same best practices you use with your application software. For example, to understand your infrastructure's correctness, [you'll need tests](/docs/iac/guides/testing/). Some tests should run before delivering the infrastructure to ensure that the program is logically correct and that it provisions the infrastructure correctly. Other tests should run when you deploy your infrastructure to ensure that the deployment was successful. For a tour of the options, see how to [step up your cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/).
+Assuming your infrastructure code is integrated with your continuous delivery pipeline, you can start instituting the same best practices you use with your application software. For example, to understand your infrastructure's correctness, [you'll need tests](/docs/iac/guides/testing/). Some tests should run before delivering the infrastructure to ensure that the program is logically correct and that it provisions the infrastructure correctly. Other tests should run when you deploy your infrastructure to ensure that the deployment was successful. For a tour of the options, see how to [step up your cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/).
 
 ### Think about policies and security
 
@@ -239,6 +238,8 @@ It's important to plan policies and security because one of the goals of infrast
 ### Start small
 
 Any time you make a significant change in technology, you want to do it incrementally. You might start with a new service so you don't disrupt existing ones. Once you've figured out what successful patterns look like, go back and figure out how to transform some existing infrastructure. Pick a project where you'll start seeing value early and then iterate.
+
+The throughline is consistent across all of these steps: once your infrastructure changes faster than people can safely manage by hand, declaring it as code and letting an engine reconcile it stops being optional. Doing that in a language and workflow your team already knows is what keeps the practice working as your footprint grows.
 
 ## Frequently asked questions about infrastructure as code
 
@@ -260,7 +261,7 @@ Most tools have their own. Terraform and OpenTofu use HCL, CloudFormation uses Y
 
 ### Which infrastructure as code tool should I use?
 
-The right answer usually comes down to three things: what languages your team is comfortable in, which clouds you're targeting, and how much you care about testing and abstraction. Pulumi tends to be the best fit when you want general-purpose languages, multi-cloud support, and the ability to unit-test your infrastructure. Terraform and OpenTofu have the largest install base and a mature module ecosystem. CloudFormation, ARM/Bicep, and Deployment Manager make the most sense when you're committed to a single cloud and want the deepest native integration.
+The right answer usually comes down to three things: what languages your team is comfortable in, which clouds you're targeting, and how much you care about testing and abstraction. Pulumi tends to be the best fit when you want general-purpose languages, multi-cloud support, and the ability to unit-test your infrastructure. Terraform and OpenTofu have the largest install base and a mature [module ecosystem](/what-is/what-is-a-terraform-module/). CloudFormation, ARM/Bicep, and Deployment Manager make the most sense when you're committed to a single cloud and want the deepest native integration.
 
 ### Can I use infrastructure as code with my existing infrastructure?
 
@@ -278,14 +279,14 @@ Pulumi's YouTube series, A Quick Bite of Cloud Engineering, tackled the topic of
 
 ## Learn more
 
-Pulumi offers a truly modern approach to infrastructure as code. With Pulumi, you can create, deploy, and manage infrastructure on any cloud using the programming languages and tools you already know. [Get started today](/docs/get-started/).
+With Pulumi, you can create, deploy, and manage infrastructure on any cloud using the programming languages and tools you already know, with a declarative engine, unit testing, and policy as code built in. [Get started today](/docs/get-started/).
 
 There are many other practices related to infrastructure as code, read more:
 
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes)
-* [Top Infrastructure as Code Tools](/what-is/top-iac-tools)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing)
+* [Top Infrastructure as Code Tools](/blog/infrastructure-as-code-tools)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code)
 * [What is Infrastructure as Software?](/what-is/what-is-infrastructure-as-software)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering)
 * [What is Secrets Management?](/what-is/what-is-secrets-management)

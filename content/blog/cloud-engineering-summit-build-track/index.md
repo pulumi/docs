@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: "Highlights and hot takes of the Cloud Engineering Summit Manage track with Kat Cosgrove."
 
-meta_image: cloud-eng-build.png
 
 authors:
     - kat-cosgrove
@@ -16,6 +15,7 @@ tags:
     - pulumi-events
     - cloud-engineering
     - infrastructure-as-code
+category: community
 
 ---
 

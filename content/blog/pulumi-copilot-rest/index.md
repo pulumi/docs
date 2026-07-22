@@ -1,9 +1,10 @@
 ---
 title: "Announcing the Pulumi Copilot REST API Preview"
+feature_image: feature.png
 date: 2024-12-12T15:15:42-05:00
+lastmod: 2026-06-30
 draft: false
 meta_desc: Explore Pulumi Copilot's new REST API preview for IaC.
-meta_image: meta.png
 authors:
     - artur-laksberg
 tags:
@@ -11,6 +12,8 @@ tags:
     - ai
     - llm
     - copilot
+category: product
+series: pulumi-copilot
 social:
     twitter: |
         The Pulumi Copilot REST API is here! Integrate Copilot’s AI-powered cloud management into your tools, apps, and workflows. Automate tasks, streamline processes, and build smarter cloud solutions. Learn more: https://www.pulumi.com/blog/pulumi-copilot-rest/

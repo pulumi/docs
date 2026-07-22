@@ -2,9 +2,9 @@
 title: "Advanced TypeScript type FTW!"
 date: "2018-09-19"
 meta_desc: "TypeScript is great for cloud apps and infrastructure because of its rich type system. In this blog, learn how the type system works for infrastructure as code."
-meta_image: "completion-list.png"
 authors: ["cyrus-najmabadi"]
-tags: ["TypeScript"]
+tags: [typescript]
+category: engineering
 ---
 
 We at Pulumi love TypeScript for cloud apps and infrastructure, because of its rich type system and great ahead-of-time
@@ -49,7 +49,7 @@ However, while easy to produce, this can sometimes be difficult to consume. For 
 work. You’d have to first deal with potentially getting a `Input<string>[]` or a `Promise<Input<string>[]>` or even an `Output<Input<string>[]>`.
 Then, once you even got to the underlying array, you’d have to deal with each potential element in it being a `string`… or a `Promise<string>`… or a… well… you get the idea. It’s not fun 😃.
 
-Up until now, we’d supplied some simple helpers to make this more managable. Our helpers would effectively ‘unwrap’ one
+Up until now, we’d supplied some simple helpers to make this more manageable. Our helpers would effectively ‘unwrap’ one
 layer of this sort of structure allowing you take the external value and deal with an internal value of a known shape.
 So it effectively worked like this:
 

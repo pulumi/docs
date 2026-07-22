@@ -3,7 +3,6 @@ title_tag: "Pulumi Cloud: Customer Managed Keys"
 meta_desc: Bring your own encryption keys to protect data within Pulumi Cloud for enhanced security and compliance.
 title: "Customer Managed Keys"
 h1: Customer Managed Keys
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     parent: administration-security-compliance

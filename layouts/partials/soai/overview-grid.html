@@ -1,0 +1,55 @@
+{{/*
+    SOAI section overview — 2x2 grid.
+
+    Cells: (1) section number + title, (2) key insights, (3) by the numbers,
+    (4) takeaway. The divider is the "star accent" motif: cell 1 draws its
+    right+bottom borders with a rounded inner corner, cell 4 draws its top+left
+    borders with a rounded inner corner (cells 2 and 3 have none), so the two
+    brackets meet at an open center. Styling: .soai-overview in SCSS.
+
+    Params (.):
+    - number:   Two-digit section number string (e.g. "01").
+    - title:    Section title (e.g. "Who we surveyed").
+    - overview: { key_insights: [..], by_the_numbers: [..], takeaway: ".." }.
+*/}}
+{{ $number := .number }}
+{{ $title := .title }}
+{{ $o := .overview }}
+
+<div class="soai-overview">
+
+    {{/* Cell 1 — number + title */}}
+    <div class="soai-overview__cell soai-overview__cell--tl flex flex-col gap-6">
+        {{ with $number }}<p class="m-0 font-mono text-3xl font-normal uppercase leading-none text-violet-primary lg:text-4xl">{{ . }}</p>{{ end }}
+        {{ with $title }}<h2 class="m-0 font-mono text-3xl font-normal uppercase leading-tight tracking-tight text-service-black lg:text-4xl">{{ . }}</h2>{{ end }}
+    </div>
+
+    {{/* Cell 2 — key insights */}}
+    <div class="soai-overview__cell soai-overview__cell--tr flex flex-col gap-5">
+        <p class="font-overline m-0 text-service-black">Key insights</p>
+        {{ with $o.key_insights }}
+        <ul class="m-0 flex list-disc flex-col gap-4 pl-5 marker:text-violet-500">
+            {{ range . }}<li class="m-0 text-xl font-semibold leading-tight tracking-tight text-service-black">{{ . | markdownify }}</li>{{ end }}
+        </ul>
+        {{ end }}
+    </div>
+
+    {{/* Cell 3 — by the numbers */}}
+    <div class="soai-overview__cell soai-overview__cell--bl flex flex-col gap-5">
+        <p class="font-overline m-0 text-service-black">By the numbers</p>
+        {{ with $o.by_the_numbers }}
+        <ul class="m-0 flex list-disc flex-col gap-4 pl-5 marker:text-violet-500">
+            {{ range . }}<li class="m-0 text-xl font-semibold leading-tight tracking-tight text-service-black">{{ . | markdownify }}</li>{{ end }}
+        </ul>
+        {{ end }}
+    </div>
+
+    {{/* Cell 4 — takeaway */}}
+    <div class="soai-overview__cell soai-overview__cell--br flex flex-col gap-5">
+        <p class="font-overline m-0 text-service-black">Takeaway</p>
+        {{ with $o.takeaway }}
+        <p class="heading-2 m-0! font-display font-semibold leading-[1.1] tracking-tighter text-service-black">{{ . | markdownify }}</p>
+        {{ end }}
+    </div>
+
+</div>

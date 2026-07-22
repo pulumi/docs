@@ -1,0 +1,14 @@
+{{- /*
+    Homepage category filter: an "All" pill plus one pill per category except
+    `general`. The pills are real links to the category term pages (the crawler /
+    no-JS fallback); blog-list.ts intercepts clicks to filter the feed in place
+    and moves `.is-active`.
+*/ -}}
+<nav data-blog-filter aria-label="Filter posts by category" class="flex flex-wrap items-center gap-3">
+    <a href="/blog/" data-category="" aria-current="page" data-track="blog-filter-all" class="btn btn-sm btn-outline text-sm is-active">All</a>
+    {{- range site.Data.blog_categories.categories -}}
+        {{- if not .default }}
+    <a href="/blog/category/{{ .id }}/" data-category="{{ .id }}" data-track="blog-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .name }}</a>
+        {{- end -}}
+    {{- end }}
+</nav>

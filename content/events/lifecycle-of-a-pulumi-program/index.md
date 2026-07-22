@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Lifecycle of a Pulumi Program"
 meta_desc: In this talk, you will learn how Apple leveraged a custom state backend with SSO, RBAC, and pipelines powered by the Pulumi Automation API to drive IaC.
+meta_image: /events/lifecycle-of-a-pulumi-program/meta.png
+meta_image_square: /events/lifecycle-of-a-pulumi-program/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

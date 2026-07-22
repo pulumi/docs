@@ -991,18 +991,6 @@ pulumi-destroy.md
 
 Updated automatically via `pulumi-cli.yml` workflow when new CLI versions are released.
 
-#### ESC CLI - Command Reference
-
-**Command:** `esc gen-docs`
-
-Generates markdown documentation for ESC CLI commands.
-
-**Output:** `content/docs/esc-cli/commands/`
-
-**Automation:**
-
-Updated automatically via `esc-cli.yml` workflow when new ESC versions are released.
-
 ---
 
 ## GitHub Actions Workflows
@@ -1181,22 +1169,6 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Why It Matters:** Keeps CLI documentation synchronized with releases automatically.
 
-#### esc-cli.yml
-
-**Purpose:** Auto-generate ESC CLI documentation
-
-**Triggers:**
-
-- Repository dispatch from pulumi/esc repository
-- Triggered on ESC CLI release
-
-**Process:** Similar to pulumi-cli.yml but for ESC commands
-
-**Output:**
-
-- ESC CLI command documentation
-- Updated `static/esc/latest-version`
-
 #### customer-managed-deployment-agent-cli.yml
 
 **Purpose:** Update CMDA CLI version
@@ -1324,6 +1296,9 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 - Run `make check_links`
 - Crawl production site (<www.pulumi.com>)
 - Check all links (internal and external)
+- Merge real-404 server-log hits from the reader-signals export into
+  `.broken-links.json` (`scripts/link-checker/merge-404-signal.py`; no-op
+  until the data-team export exists)
 - Report broken links
 
 **Output:** Slack notification with broken link report
@@ -1467,8 +1442,17 @@ The repository includes 10 additional utility workflows for automation and proje
 - **claude.yml**: AI-assisted code analysis and suggestions (triggered by @claude mentions in issues/PRs)
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
 - **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
+- **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page
+- **blog-review-index.yml**: Daily blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
 
 The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
+
+**Content-review worker privilege model (`content-review-article.yml`):** the per-article worker is split into two jobs with opposite privilege profiles, because the review model consumes artifacts derived from fetched external URLs (a prompt-injection surface):
+
+- The `review` job runs the model **unprivileged**: read-scoped default token, `persist-credentials: false` on checkout, no `environment: production`, no ESC or AWS credentials, and a preflight step that fails the job if credentials are detected in the model's environment. The model edits the working tree only and hands its changes to the next job as a patch in a run artifact.
+- The `publish` job is **deterministic only** (no model) and holds the production credentials (pulumi-bot token, AWS role for the S3 ledger). Before pushing anything it runs `scripts/content-review/publish-gate.py`, which enforces the verdict schema, the diff scope (a fix may touch only the reviewed article plus shared render-time sources; a retirement only `content/`, `scripts/redirects/`, and the docs menu data), and the `no_retire` veto from the selection queue. The branch name is derived from the queue slug, never chosen by the model.
+
+This mirrors the pre-merge review's posture (`claude-code-review.yml` runs its model with no push credentials); the accepted residual risk in the review job is the Anthropic API key the model inherently runs on.
 
 **Project Management:**
 
@@ -1495,7 +1479,7 @@ These workflows support repository maintenance, automation, and developer experi
 | pull-request | PRs to master | Testing | 10-15 min | PR validation & preview |
 | pr-closed | PR closed | Testing | <1 min | Cleanup preview resources |
 | pulumi-cli | Repository dispatch | N/A | 5-10 min | Auto-generate CLI docs |
-| esc-cli | Repository dispatch | N/A | 3-5 min | Auto-generate ESC docs |
+| esc-cli | Repository dispatch | N/A | <1 min | Update `static/esc/latest-version` pointer (read by pulumi/esc-action v1/v2) |
 | scheduled-test | Daily 8 AM UTC, PRs | Testing | 2-2.5 hrs (scheduled), 3-5 min (PR) | Test example programs |
 | scheduled-upgrade-programs | ~~Daily 6 AM UTC~~ (disabled) | N/A | N/A (fails) | Update dependencies |
 | bucket-cleanup | Daily 3 PM UTC | Production | 2-5 min | Delete old buckets |
@@ -2456,7 +2440,10 @@ ONLY_TEST="aws-s3-bucket-typescript" ./scripts/programs/test.sh
 make check_links
 ```
 
-**CI Execution:** Daily at 3 PM UTC via `check-links.yml`
+**CI Execution:** Daily at 3 PM UTC via `check-links.yml`. In CI the results
+are enriched with real-404 server-log hits from the reader-signals export
+(`scripts/link-checker/merge-404-signal.py`) before triage, so the highest
+reader-impact breakage is fixed first.
 
 **Output:** Report posted to Slack
 
@@ -3408,6 +3395,21 @@ Dependabot automatically updates GitHub Actions versions. Review and merge Depen
 # After (Dependabot PR)
 - uses: actions/setup-node@v6
 ```
+
+### Clearing Google's robots.txt cache
+
+Google generally caches `robots.txt` for up to 24 hours, after which its crawlers pick up any changes automatically (it may occasionally cache longer when refreshing isn't possible). If you need the cache refreshed sooner (for example, after a significant crawling rule change), you can request an immediate refresh through Google Search Console.
+
+> **Note:** Access to the [Pulumi Google Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Apulumi.com) property is required. If you don't have access, contact a member of the docs team who does.
+
+**Steps:**
+
+1. Open [Google Search Console](https://search.google.com/search-console?resource_id=sc-domain%3Apulumi.com) and select the **pulumi.com** property.
+1. In the left navigation, go to **Indexing** > **robots.txt**.
+1. In the robots.txt report, click **Request a recrawl**.
+1. Confirm the request. Google will refresh its cached copy within a few hours instead of waiting for the cache to expire.
+
+For reference, see [Google's documentation on submitting an updated robots.txt](https://developers.google.com/crawling/docs/robots-txt/submit-updated-robots-txt).
 
 ## Dependency management
 

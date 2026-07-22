@@ -3,15 +3,16 @@ title_tag: "Pulumi YAML Component Reference | Languages & SDKs"
 meta_desc: Specification for the Pulumi YAML component format
 title: Component Reference
 h1: Pulumi YAML Component reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
+        identifier: yaml-component-reference
         name: Component Reference
         parent: iac-languages-yaml
-        weight: 1
+        weight: 2
     languages:
+        identifier: yaml-component-reference
         parent: yaml-language
-        weight: 1
+        weight: 2
 aliases:
 ---
 

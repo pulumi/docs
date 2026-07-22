@@ -1,13 +1,13 @@
 ---
 title: "Getting Started With Kubernetes: Networking"
+feature_image: feature.png
 date: 2020-07-30
 meta_desc: "A review of networking inside and outside of Kubernetes"
-meta_image: getting-started.png
 authors:
     - sophia-parafina
 tags:
-    - Kubernetes
-    - kubernetes-getting-started
+    - kubernetes
+category: tutorials
 series: kubernetes-getting-started
 ---
 
@@ -169,9 +169,4 @@ frontendIp = frontend.status.loadBalancer.ingress[0].ip;
 
 The goal of this article is to provide an overview of the Kubernetes Networking model. The implementation of the Container Network Interface (CNI) varies from provider to provider. You can read more about [CNI implementations](https://kubernetes.io/docs/concepts/cluster-administration/networking/) on the Kubernetes documentation site.
 
-Each article in this series is intended to be independent of each other. However, we build upon concepts introduced in previous articles. If some concepts or terminology are unfamiliar, I encourage reading the earlier articles:
-
-- [Building a Kubernetes cluster on cloud providers](/blog/getting-started-with-k8s-part1/)
-- [Basic application deployment](/blog/getting-started-with-k8s-part2/)
-- [Advance application deployment and Helm charts](/blog/getting-started-with-k8s-part3/)
-- [Stateful applications](/blog/getting-started-with-k8s-part4/)
+Each article in this series is intended to be independent of each other. However, we build upon concepts introduced in previous articles.

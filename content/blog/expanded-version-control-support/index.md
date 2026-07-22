@@ -3,7 +3,6 @@ title: "Expanded Version Control Support in Pulumi Cloud"
 date: 2026-03-09
 draft: false
 meta_desc: "Deploy on every push, preview infrastructure on pull requests, and let Neo explain changes, all from Pulumi Cloud, regardless of where your code lives."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - luke-ward
@@ -16,6 +15,7 @@ tags:
     - azure
     - github
     - gitlab
+category: product
 social:
     twitter:
     linkedin:

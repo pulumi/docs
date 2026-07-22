@@ -1,9 +1,11 @@
 ---
 title_tag: "Pulumi vs. Terraform"
+authors: ["joe-duffy"]
 meta_desc: "Pulumi vs. Terraform: Pulumi uses general-purpose languages (Python, TypeScript, Go) across any cloud; Terraform uses HCL with HashiCorp's providers."
 title: Terraform
 h1: Pulumi vs. Terraform
-meta_image: /images/docs/meta-images/docs-meta.png
+faq_schema: true
+include_floqer: true
 menu:
     iac:
         name: Terraform
@@ -21,9 +23,9 @@ aliases:
 - /docs/iac/concepts/vs/terraform/
 ---
 
-Pulumi and [HashiCorp Terraform](https://developer.hashicorp.com/terraform) are both declarative infrastructure as code tools with overlapping capabilities and several meaningful differences. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, .NET, Java, or YAML) and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); Terraform uses [HashiCorp Configuration Language (HCL)](https://developer.hashicorp.com/terraform/language) with HashiCorp's provider ecosystem.
+Pulumi and Terraform are both infrastructure as code tools for provisioning and managing cloud resources declaratively. The core difference: Pulumi uses general-purpose languages (Python, TypeScript, Go, .NET, Java, or YAML) across any cloud or SaaS provider, while [HashiCorp Terraform](https://developer.hashicorp.com/terraform) uses its own domain-specific language, [HCL](https://developer.hashicorp.com/terraform/language), with HashiCorp's provider ecosystem.
 
-This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Terraform.
+This page covers what each tool is, a feature-by-feature comparison, real-world results from teams that have adopted Pulumi, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Terraform.
 
 ## What is Pulumi?
 
@@ -52,6 +54,14 @@ Terraform is an infrastructure as code tool created by HashiCorp (acquired by IB
 | Policy as code | [Pulumi Policies](/docs/insights/policy/) — open source, with rules written in Python, TypeScript, or Open Policy Agent Rego; Pulumi Cloud commercial plans add centralized policy management plus [Pulumi-maintained policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for compliance frameworks like CIS, HITRUST, NIST, and PCI DSS | [Sentinel](https://developer.hashicorp.com/sentinel) (proprietary, HCP Terraform / Enterprise only) and Open Policy Agent |
 | Open source | Yes — [Apache License 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) | No — [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE) |
 | Commercial option | [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) | HCP Terraform / Terraform Enterprise |
+
+## Real-world results
+
+These figures come from Pulumi's own published customer case studies, not independent third-party benchmarks. Terraform has a comparably large base of production users, and its longer incumbency in the IaC market means a larger catalog of community modules and provider maturity exists today than for any single alternative, Pulumi included.
+
+* **[Starburst](/case-studies/starburst/)** replaced Terraform with Pulumi for its multi-region Kubernetes deployments and cut deployment time from two weeks to about three hours — a 112x improvement — by replacing hand-maintained HCL glue scripts with [Automation API](/docs/iac/concepts/automation-api/)-driven orchestration written in Java.
+* **[Wiz](/case-studies/wiz/)** uses Pulumi's Automation API to manage over one million cloud resources across thousands of Kubernetes clusters worldwide, handling hundreds of thousands of infrastructure updates daily.
+* **[BMW](/case-studies/bmw/)**'s Software Factory manages 20,000+ cloud resources with Python-based infrastructure code integrated into its existing CI/CD workflows.
 
 ## Key differences
 
@@ -142,11 +152,11 @@ Yes. [Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform
 
 ### How does Pulumi handle drift detection?
 
-[`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/deployments/drift/) that runs on a configurable cadence and can auto-remediate.
+[`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the state file to the actual state in the cloud and reports differences, and `pulumi preview --diff` shows what would change on the next update. Pulumi Cloud commercial plans add [scheduled drift detection and remediation](/docs/deployments/concepts/drift/) that runs on a configurable cadence and can auto-remediate.
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
-- [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
-- [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
-- [OpenTofu vs. Terraform](/docs/iac/comparisons/terraform/opentofu/)
+* [Get started with Pulumi](/docs/iac/get-started/)
+* [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
+* [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
+* [OpenTofu vs. Terraform](/docs/iac/comparisons/terraform/opentofu/)

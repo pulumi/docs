@@ -3,7 +3,6 @@ title_tag: "Resource Names and Identity"
 meta_desc: A resource in Pulumi has a logical name, physical name, physical ID, and URN. Learn about these four forms of resource identity and when to use each one.
 title: Names
 h1: Resource names and identity
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Names
@@ -285,7 +284,7 @@ config:
     pattern: ${name}-${project}-${stack}
 ```
 
-And when configuring it in an [ESC environment](/docs/esc/guides/integrate-with-pulumi-iac/), you can specify the configuration as such:
+And when configuring it in an [ESC environment](/docs/esc/guides/pulumi-iac/), you can specify the configuration as such:
 
 ```yaml
 pulumiConfig:
@@ -358,7 +357,7 @@ The following expressions are supported in patterns:
 | config.key | Config value of key | ${config.region}_${name} |
 
 {{% notes type="warning" %}}
-When an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then deleting the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
+When an update requires replacing the resource, Pulumi's default behavior is to create the new resource and then delete the old resource. However, when using verbatim names or patterns without random components, resources that need to be replaced will be deleted before creating the new resource. This can lead to downtime.
 {{% /notes %}}
 
 ### Provider-Specific Configuration
@@ -465,6 +464,10 @@ Unlike the logical name (which you choose) or the URN (which Pulumi derives), th
 - Generic resources often use simple strings or numeric IDs.
 
 Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not known until the resource has been created or updated. You access it just like any other output — by passing it directly to another resource's input or by using `.apply()` when you need to transform the value in code.
+
+{{% notes type="info" %}}
+The physical ID is always stored in plain text in the state file and cannot be encrypted, even with [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/). If a resource places a sensitive value in its ID, see [The resource ID cannot be made secret](/docs/concepts/secrets/#the-resource-id-cannot-be-made-secret).
+{{% /notes %}}
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 

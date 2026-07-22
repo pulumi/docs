@@ -3,7 +3,6 @@ title: "The Pulumi 'Push to start' GitOps Experience"
 date: 2024-01-23T19:41:13Z
 draft: false
 meta_desc: "Of all the cloud tools and tricks, AI + Pulumi + Github is THE cloud developer story of 2024. It's your opportunity. Will you capture it or just let it slip?"
-meta_image: image-vscode-codespaces-blank.png
 authors:
     - kat-morgan
 tags:
@@ -11,12 +10,13 @@ tags:
     - environments
     - secrets
     - configuration
-    - iac
+    - infrastructure-as-code
     - developer
     - workflow
     - devcontainer
     - github
     - codespaces
+category: tutorials
 ---
 
 As a skeptic of "quick starts" myself, I approach most marketing promises with a measure of cautious excitement. If the great and powerful algorithm, friends, or a peer brought your attention here, then I invite you to take this one seriously.

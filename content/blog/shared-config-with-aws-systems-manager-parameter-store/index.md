@@ -2,7 +2,6 @@
 title: Shared configuration stacks with AWS Systems Manager
 date: 2022-06-30
 meta_desc: Use Pulumi with AWS Systems Manager to build shared stacks that manage configuration across your organization.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:
@@ -10,6 +9,7 @@ tags:
     - aws-systems-manager
     - yaml
     - configuration
+category: tutorials
 ---
 
 One thing I love about Pulumi is how easy it is to configure a stack. As a builder mainly of web applications, I'm always thinking about how I'll configure my apps from one environment to the next, and being able to use Pulumi's built-in support for [configuration](/docs/concepts/config/) and [secrets](/docs/concepts/secrets/) to manage the API keys and database credentials for my dev, staging, and production stacks individually is incredibly convenient.
@@ -256,7 +256,7 @@ However, it's worth mentioning that that won't happen _immediately_, as the `my-
 
 The easiest way to see this in action is with [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html). With Lambda and Pulumi's support for [function serialization](/docs/iac/concepts/miscellaneous/function-serialization/), we can capture the parameter names with stack references, pass them into the Lambda at deploy-time (as plain-text strings, which is fine, because they're just names), and fetch their values from Systems Manager at runtime --- i.e., when the Lambda is invoked sometime later --- with the [AWS SDK for Node.js](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/getting-started-nodejs.html). This way, any updates made by the `shared-config` team will be usable by our Lambda function _immediately_, no redeployment necessary.
 
-So to finish things off, change to the `my-service` folder you created earlier and generats a third and final project, this one with TypeScript, again accepting the defaults to create a `dev` stack for it:
+So to finish things off, change to the `my-service` folder you created earlier and generates a third and final project, this one with TypeScript, again accepting the defaults to create a `dev` stack for it:
 
 ```bash
 $ cd ../my-service

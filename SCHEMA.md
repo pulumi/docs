@@ -37,8 +37,10 @@ By default (or when `schema_type: auto`), the system automatically determines th
 - type: blog → BlogPosting
 - type: tutorials → HowTo
 - type: webinars → Event
-- type: docs → TechArticle
-- type: what-is → FAQPage (if questions found) or TechArticle (if no questions)
+- type: docs → TechArticle, plus a supplemental FAQPage entity in the same @graph
+  if the page has a "Frequently asked questions" section (H3s ending in `?`)
+- type: what-is → FAQPage (if questions found) or TechArticle (if no questions),
+  plus the same supplemental FAQPage behavior as type: docs
 ```
 
 ### 2. URL Pattern Detection

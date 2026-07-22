@@ -131,6 +131,12 @@ $ pulumi config set kubernetes:context my-cluster-context
 
 {{% /choosable %}}
 
+{{% notes type="info" %}}
+
+The `pulumi config set` command requires an existing stack, which you'll create later in this guide. If you haven't created a Pulumi project and stack yet, run this command after you do.
+
+{{% /notes %}}
+
 For detailed information on Pulumi's use of Kubernetes credentials, see [Kubernetes Setup](/registry/packages/kubernetes/installation-configuration/).
 
 {{< get-started-stepper >}}

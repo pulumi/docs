@@ -33,6 +33,17 @@ a silent-empty file or a file-presence heuristic) so Opus sees the failure and
 falls back to manual assembly per `ci.md` §Fallback, and emits a `::error::`
 annotation for the operator.
 
+Separately from that self-check `> [!CAUTION]` banner (which means "discard this
+draft, assemble manually"), the composer emits a distinct `> [!WARNING]`
+verifier-outage banner between the header and the Summary when it detects that
+the fact-check verifier was DOWN for this run (transport/API errors in
+`.verified-claims.json` — see the outage sentinels above). That banner means
+"this draft is usable, but fact-checking didn't actually run — findings are
+unverified"; it also pre-fills the `facts` confidence row to LOW so the posted
+review can't present unverified findings as `facts: HIGH`. The two banners are
+deliberately different alert levels so the model lane (and maintainers) don't
+conflate "discard" with "read carefully."
+
 Degrades gracefully: any uncaught exception → `safe_main()` writes a minimal
 valid fallback draft (the `> [!CAUTION]` banner shape) and returns 0; the
 workflow's `||` stub is reserved for can't-even-start failures and writes the
@@ -68,7 +79,13 @@ from pathlib import Path
 # value keeps the draft structurally valid.)
 PROMOTE_UNVERIFIABLE_TO = "warning"
 
-TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch")
+# `flagged` is the detector verdict: anything synthesized from a deterministic
+# pre-flight check (Hugo build, frontmatter collisions, readthrough coherence)
+# carries `verdict: "flagged"` + `route: "preflight"`. It is NOT a fact-check
+# outcome — `contradicted`/`mismatch` mean "a source disagrees with a claim",
+# which a build error or a coherence gap is not. The specific detector lives in
+# the record's `type`/`source`, rendered in the trail-line parenthetical.
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -76,8 +93,9 @@ EXPECTED_TRAIL_EMOJI = {
     "unverifiable": "🤷",
     "contradicted": "❌",
     "mismatch": "⚔️",
+    "flagged": "🚩",
 }
-OUTSTANDING_VERDICTS = {"contradicted", "mismatch"}
+OUTSTANDING_VERDICTS = {"contradicted", "mismatch", "flagged"}
 
 # Mirror of `validate-pinned.py` TEMPORAL_TRIGGERS — keep synchronized.
 TEMPORAL_TRIGGERS = {
@@ -92,6 +110,25 @@ TEXT_TRUNC = 160
 EVIDENCE_TRUNC = 240
 
 GH_TIMEOUT = 30
+
+# Outage sentinels written by verify-claims.py when a per-claim verifier hit a
+# transport/API failure (HTTP 5xx, overloaded, network) rather than a genuine
+# unverifiable (paywall / dead link / turn-cap). The evidence marker is THE
+# signal — verify-claims.py writes it only in process_claim()'s except handler
+# (verify-claims.py:675); the error marker is its top-level errors[] companion
+# (verify-claims.py:669). The turn-cap message ("verification did not converge
+# within N turns") is an ORDINARY unverifiable and must NOT match — keep the
+# predicate keyed on these markers, never on the `unverifiable` verdict alone.
+_VERIFIER_OUTAGE_EVIDENCE_MARKER = "verify-claims.py errored on this claim:"
+_VERIFIER_OUTAGE_ERROR_MARKER = "verifier failed:"
+_VERIFIER_OUTAGE_TOKENS = (
+    "HTTP 500", "HTTP 502", "HTTP 503", "HTTP 529",
+    "Internal server error", "api_error", "overloaded",
+    "RuntimeError: HTTP", "URLError", "TimeoutError",
+)
+# Evidence the candidate-claims floor carries when verify-claims didn't complete
+# at all (the `verdicts is None` degraded path below) — also an outage.
+_FLOOR_DEGRADED_EVIDENCE = "claim verification did not complete"
 
 FALLBACK_BANNER_DRAFT = """## Pre-merge Review — Last updated {ts}
 
@@ -200,6 +237,11 @@ def load_hugo_build(path: str | None) -> dict | None:
     return data if isinstance(data, dict) else None
 
 
+def load_readthrough(path: str | None) -> dict | None:
+    data = _load_json(path)
+    return data if isinstance(data, dict) else None
+
+
 # ---- preflight synthetic verdicts (Hugo + frontmatter pre-stubs) -----------
 
 
@@ -236,10 +278,11 @@ _FM_SOURCE = "frontmatter-validate.py pre-step"
 def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
     """Synthesize verdict-shaped dicts from `.hugo-build.json` so the composer
     pre-stubs Hugo errors and link-integrity breakages into 🚨 Outstanding.
-    These flow through render_trail (as `❌ contradicted` lines) and
+    These flow through render_trail (as `🚩 flagged` detector lines) and
     build_stubs (as `**[L<n>]**` bullets) just like real fact-check verdicts.
     Routed as `preflight` so build_stubs writes a confirm-or-REMOVE TODO
-    rather than the fact-check fix-or-spurious-or-mis-sourced TODO.
+    rather than the fact-check fix-or-spurious-or-mis-sourced TODO, and so the
+    fact-check claim metadata excludes them.
     """
     if not isinstance(hugo_artifact, dict):
         return []
@@ -257,7 +300,7 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
             "text": entry.strip()[:TEXT_TRUNC],
             "type": "hugo-build-error",
             "route": "preflight",
-            "verdict": "contradicted",
+            "verdict": "flagged",
             "confidence": "high",
             "evidence": entry.strip(),
             "source": _HUGO_SOURCE,
@@ -273,7 +316,7 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
             "text": entry.strip()[:TEXT_TRUNC],
             "type": "hugo-link-integrity",
             "route": "preflight",
-            "verdict": "contradicted",
+            "verdict": "flagged",
             "confidence": "high",
             "evidence": entry.strip(),
             "source": _HUGO_SOURCE,
@@ -284,8 +327,8 @@ def _hugo_synthetic_verdicts(hugo_artifact: dict | None) -> list[dict]:
 def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]:
     """Synthesize verdicts from `.frontmatter-validation.json`'s `files[]` array.
 
-    Three failure classes get pre-stubbed as `⚔️ mismatch` (so they surface
-    in 🚨 Outstanding via the mismatch promotion path):
+    Three failure classes get pre-stubbed as `🚩 flagged` (so they surface
+    in 🚨 Outstanding via the flagged detector-promotion path):
       - `menu_parents[].parent_exists_in_menu == false`  (broken nav parent)
       - `alias_collisions[]`                              (alias hits another file)
       - `url_collisions[]`                                (URL hits another file)
@@ -314,7 +357,7 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
                 "text": f"frontmatter `menu.{menu}.parent: {pid}` does not exist in the `{menu}` menu{also_note}"[:TEXT_TRUNC],
                 "type": "frontmatter-menu-parent",
                 "route": "preflight",
-                "verdict": "mismatch",
+                "verdict": "flagged",
                 "confidence": "high",
                 "evidence": f"menu={menu} parent={pid} parent_exists_in_menu=false",
                 "source": _FM_SOURCE,
@@ -331,7 +374,7 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
                 "text": f"frontmatter alias `{alias}` collides with `{collides}`"[:TEXT_TRUNC],
                 "type": "frontmatter-alias-collision",
                 "route": "preflight",
-                "verdict": "mismatch",
+                "verdict": "flagged",
                 "confidence": "high",
                 "evidence": f"alias={alias} collides_with={collides}",
                 "source": _FM_SOURCE,
@@ -348,11 +391,51 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
                 "text": f"frontmatter URL `{url}` collides with `{collides}`"[:TEXT_TRUNC],
                 "type": "frontmatter-url-collision",
                 "route": "preflight",
-                "verdict": "mismatch",
+                "verdict": "flagged",
                 "confidence": "high",
                 "evidence": f"url={url} collides_with={collides}",
                 "source": _FM_SOURCE,
             })
+    return out
+
+
+_RT_SOURCE = "readthrough pre-step"
+
+
+def _readthrough_synthetic_verdicts(readthrough_artifact: dict | None) -> list[dict]:
+    """Synthesize `🚩 flagged` verdict-shaped dicts from `.readthrough-findings.json`.
+
+    The readthrough lane (`readthrough.py`, a Sonnet pre-step) emits whole-page
+    coherence/structure findings. Each becomes a `route: "preflight"` detector
+    verdict so it flows through render_trail + build_stubs exactly like the Hugo
+    and frontmatter pre-steps. `fix_class` (local_repair | reconception) rides on
+    the record so build_stubs can write the right TODO and the existing-content
+    worker can decide fix-vs-flag.
+    """
+    if not isinstance(readthrough_artifact, dict):
+        return []
+    out: list[dict] = []
+    for f in readthrough_artifact.get("findings", []) or []:
+        if not isinstance(f, dict):
+            continue
+        mode = (f.get("failure_mode") or "coherence").strip()
+        fix_class = (f.get("fix_class") or "reconception").strip()
+        anchor = (f.get("anchor_quote") or "").strip()
+        rationale = (f.get("rationale") or f.get("proposed_fix") or "").strip()
+        out.append({
+            "claim_id": f"readthrough-{len(out)}",
+            "file": f.get("file") or "",
+            "line_range": f.get("line_range") or "L1",
+            "text": (anchor or mode)[:TEXT_TRUNC],
+            "type": f"readthrough-{mode}",
+            "route": "preflight",
+            "verdict": "flagged",
+            "confidence": "high",
+            "evidence": rationale,
+            "source": _RT_SOURCE,
+            "fix_class": fix_class,
+            "proposed_fix": (f.get("proposed_fix") or "").strip(),
+        })
     return out
 
 
@@ -424,11 +507,61 @@ def render_header(timestamp: str) -> str:
     return f"## Pre-merge Review — Last updated {timestamp}"
 
 
-def render_summary_block(confidence_dims: list[str]) -> str:
-    rows = "\n".join(
-        f"> | {d} | <TODO: HIGH/MEDIUM/LOW> | <TODO: short note when not HIGH; leave empty when HIGH> |"
-        for d in confidence_dims
+def count_verifier_outages(verdicts: list[dict] | None) -> tuple[int, int]:
+    """Return (n_outage, n_total) over fact-check verdicts. A verdict is an
+    OUTAGE when its evidence carries the script-error marker (a transport/API
+    failure verify-claims.py caught), OR carries an outage token AND is
+    `unverifiable`, OR is the candidate-floor degraded placeholder. Ordinary
+    unverifiables (turn-cap, dead link, paywall) do NOT count — they don't
+    carry the markers. Call BEFORE appending Hugo/frontmatter synthetic
+    verdicts so preflight verdicts don't dilute the ratio."""
+    n_total = len(verdicts or [])
+    n_outage = 0
+    for v in verdicts or []:
+        ev = str(v.get("evidence") or "")
+        if _VERIFIER_OUTAGE_EVIDENCE_MARKER in ev or ev == _FLOOR_DEGRADED_EVIDENCE:
+            n_outage += 1
+        elif v.get("verdict") == "unverifiable" and any(tok in ev for tok in _VERIFIER_OUTAGE_TOKENS):
+            n_outage += 1
+    return n_outage, n_total
+
+
+def render_verifier_outage_banner(n_outage: int, n_total: int) -> str:
+    """A `> [!WARNING]` banner (distinct from the self-check `> [!CAUTION]`
+    discard banner) telling the reader fact-checking was degraded. Empty string
+    when no outage. Author-facing wording (no internal tooling names)."""
+    if n_outage <= 0:
+        return ""
+    retry = ("Once the service is back, mention `@claude #new-review` to "
+             "regenerate a complete review from scratch.")
+    if n_outage >= n_total:
+        return (
+            "> [!WARNING]\n"
+            "> **Automated fact-checking did not run for this review.** The "
+            f"verification service returned errors for all {n_total} extracted "
+            "claim(s), so every finding below is script-generated and unverified "
+            "— treat the 🔍 Verification trail and the Summary as **unconfirmed** "
+            "and fact-check the claims manually before relying on them. "
+            "(`facts` confidence is forced to LOW for this reason.) " + retry
+        )
+    return (
+        "> [!WARNING]\n"
+        "> **Automated fact-checking was incomplete for this review.** The "
+        f"verification service errored on {n_outage} of {n_total} claim(s); those "
+        "trail entries are unconfirmed — spot-check them manually. " + retry
     )
+
+
+def render_summary_block(confidence_dims: list[str], forced_levels: dict[str, tuple[str, str]] | None = None) -> str:
+    forced_levels = forced_levels or {}
+
+    def _row(d: str) -> str:
+        if d in forced_levels:
+            level, note = forced_levels[d]
+            return f"> | {d} | {level} | {note} |"
+        return f"> | {d} | <TODO: HIGH/MEDIUM/LOW> | <TODO: short note when not HIGH; leave empty when HIGH> |"
+
+    rows = "\n".join(_row(d) for d in confidence_dims)
     return (
         "> [!TIP]\n"
         "> **Summary:** <TODO: one paragraph — (1) what this PR is (content type + subject; for a new page, which existing pages it parallels), "
@@ -469,14 +602,18 @@ def render_investigation_log(
         y = len(templated[0].get("siblings_for_dispatch") or templated[0].get("directory_peers") or [])
         bullets.append(f"- **Cross-sibling reads:** 0 of {y} siblings")
 
-    # 2. External claim verification.
-    if not verdicts:
+    # 2. External claim verification. Detector findings (route: preflight —
+    # Hugo/frontmatter/readthrough) are NOT fact-check claims; exclude them so
+    # they don't inflate the "X of Y claims verified" counts (route_counts is
+    # filtered to match, so I+P+F+S still sums to Y).
+    fact_verdicts = [v for v in verdicts if v.get("route") != "preflight"]
+    if not fact_verdicts:
         bullets.append("- **External claim verification:** not run (no claims in this diff)")
     else:
-        y = len(verdicts)
-        x = sum(1 for v in verdicts if v.get("verdict") in ("verified", "matches"))
-        n_unver = sum(1 for v in verdicts if v.get("verdict") == "unverifiable")
-        n_contra = sum(1 for v in verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+        y = len(fact_verdicts)
+        x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
+        n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
+        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in ("contradicted", "mismatch"))
         i_inline = route_counts.get("inline", 0)
         p1 = route_counts.get("pass1", 0)
         f2 = route_counts.get("pass2", 0)
@@ -592,6 +729,18 @@ def _clean_source(src: str) -> str:
 
 
 def _evidence_pointer(v: dict) -> str:
+    # Preflight detector verdicts (Hugo build, frontmatter collisions, readthrough
+    # coherence) render a `detector: subtype` token in the trail-line parenthetical
+    # — e.g. `readthrough: prerequisite-inversion`, `frontmatter: alias-collision` —
+    # not a fact-check `evidence:`/`source:` pointer. The detector is the verdict;
+    # the finding's evidence and fix live in its bucket bullet. Keeps the trail
+    # scannable by defect type (output-format.md §per-verdict table).
+    if v.get("route") == "preflight":
+        vtype = (v.get("type") or "").strip()
+        if "-" in vtype:
+            detector, _, sub = vtype.partition("-")
+            return f"{detector}: {sub}"
+        return vtype or _clean_source(str(v.get("source") or "")) or "detector finding"
     ev = redact(trunc(v.get("evidence") or "", EVIDENCE_TRUNC))
     src = _clean_source(str(v.get("source") or ""))
     parts = []
@@ -850,7 +999,18 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
         # not "triage against verifier source choices."
         if route == "preflight" and verdict in OUTSTANDING_VERDICTS:
             vtype = v.get("type") or ""
-            if vtype.startswith("hugo-"):
+            if vtype.startswith("readthrough-"):
+                if (v.get("fix_class") or "") == "local_repair":
+                    todo = ("apply the structural fix per the readthrough finding (quote-and-rewrite the anchored "
+                            "span / reorder / add the missing step). Bucket by reader impact: 🚨 if a reader cannot "
+                            "reach the page's stated outcome without it, otherwise move to ⚠️ Low-confidence. "
+                            "REMOVE only if you judge the page actually reads fine.")
+                else:
+                    todo = ("this is a `reconception` flag — a whole-page restructure the lane will NOT auto-rewrite. "
+                            "State the structural problem concretely (name the anchor); do NOT write an inline rewrite. "
+                            "Bucket by reader impact (🚨 if it blocks the reader, else ⚠️); route the fix to a follow-up "
+                            "issue. REMOVE if the page actually reads fine.")
+            elif vtype.startswith("hugo-"):
                 todo = ("confirm the fix needed (or REMOVE the bullet if this is a CI-environment near-miss — "
                         "e.g., a transient render-time warning that doesn't reproduce on a clean Hugo build). "
                         "If pre-existing on a line this PR didn't touch, replace the body with `**Pre-existing:** <reason>` "
@@ -860,6 +1020,12 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
                         "or a PR-internal rename (an old alias for a file this PR is restructuring)? "
                         "Confirm the fix needed, or REMOVE the bullet if the collision is intentional and announced. "
                         "If pre-existing, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`.")
+            # Frame as a detector finding, not a fact-check claim — keeps Opus from
+            # re-applying `verdict: contradicted` / `framing: shifted` fact-check
+            # vocabulary to a `🚩 flagged` finding (the trail line is the verdict).
+            todo = ("this is a `🚩 flagged` detector finding (from a deterministic pre-step), NOT a fact-check "
+                    "claim — write the bullet as a plain statement of what's broken and the fix; do NOT attach "
+                    "fact-check verdict vocabulary (`verdict: contradicted`, `framing: shifted`, etc.). " + todo)
             outstanding.append(_stub_bullet(v, todo))
             continue
         if verdict in OUTSTANDING_VERDICTS:
@@ -910,7 +1076,10 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
     # `inline` = pass0 (deterministic, no model verifier dispatched); P/F/S come
     # from each verdict's recorded `route` (not meta.n_pass*, which is the
     # pre-reroute count — verify-claims.py re-routes pass2→pass3 when the URL
-    # isn't actually in .fetched-urls.json).
+    # isn't actually in .fetched-urls.json). Detector findings (route: preflight)
+    # are not fact-check claims and are excluded, so I+P+F+S equals the fact-check
+    # claim total Y in the investigation log.
+    verdicts = [v for v in verdicts if v.get("route") != "preflight"]
     by_route = {"pass0": 0, "pass1": 0, "pass2": 0, "pass3": 0}
     for v in verdicts:
         r = v.get("route") or "pass1"
@@ -958,6 +1127,7 @@ def compose(args: argparse.Namespace) -> str:
     cross_sibling = load_cross_sibling(args.cross_sibling)
     frontmatter = load_frontmatter(args.frontmatter)
     hugo_build = load_hugo_build(args.hugo_build)
+    readthrough = load_readthrough(args.readthrough)
 
     head_sha = (args.head_sha or "").strip()
     head_sha_short = (args.head_sha_short or "").strip() or (head_sha[:8] if head_sha else "unknown")
@@ -1008,13 +1178,27 @@ def compose(args: argparse.Namespace) -> str:
         degraded_note = ("Claim verification reported errors — some verdicts may be incomplete; "
                          "spot-check the affected claims in-review.")
 
+    # Detect a fact-check verifier OUTAGE (transport/API errors) on the
+    # fact-check verdicts ONLY — measure before appending Hugo/frontmatter
+    # synthetics so preflight verdicts don't dilute the ratio. When detected,
+    # the composer emits a prominent `> [!WARNING]` banner and pre-fills the
+    # `facts` confidence row to LOW (so the posted review can't present
+    # unverified findings as `facts: HIGH`).
+    n_outage, n_outage_total = count_verifier_outages(verdicts)
+    outage_banner = render_verifier_outage_banner(n_outage, n_outage_total)
+
     # Append synthetic verdicts from the Hugo + frontmatter pre-steps so the
     # composer pre-stubs those findings into 🚨 Outstanding rather than
     # leaving them for Opus to discover and triage from `.hugo-build.json`
     # / `.frontmatter-validation.json` artifacts. Routed as `preflight` —
     # build_stubs branches on the route to emit a confirm-or-REMOVE TODO
     # instead of the fact-check spurious-or-mis-sourced TODO.
-    verdicts = list(verdicts) + _hugo_synthetic_verdicts(hugo_build) + _frontmatter_synthetic_verdicts(frontmatter)
+    verdicts = (
+        list(verdicts)
+        + _hugo_synthetic_verdicts(hugo_build)
+        + _frontmatter_synthetic_verdicts(frontmatter)
+        + _readthrough_synthetic_verdicts(readthrough)
+    )
 
     route_counts = compute_route_counts(verdicts, candidate_claims)
 
@@ -1026,6 +1210,8 @@ def compose(args: argparse.Namespace) -> str:
     d_resolved = 0
 
     confidence_dims = ["mechanics", "facts"]
+    if readthrough and (readthrough.get("findings") or readthrough.get("ran")):
+        confidence_dims.append("coherence")
     if any(f.get("in_templated_section") for f in cross_sibling):
         confidence_dims.append("cross-sibling consistency")
     if is_blog and editorial_balance and editorial_balance.get("trigger") is not None:
@@ -1037,10 +1223,17 @@ def compose(args: argparse.Namespace) -> str:
 
     trail_block, _n, _x, _y, _z = render_trail(verdicts, degraded_note)
 
-    sections: list[str] = [
-        render_header(timestamp),
-        "",
-        render_summary_block(confidence_dims),
+    # On a verifier outage, pre-fill the `facts` row to LOW deterministically so
+    # the posted review can't read `facts: HIGH` even if Opus doesn't cooperate.
+    forced_levels: dict[str, tuple[str, str]] = {}
+    if outage_banner:
+        forced_levels["facts"] = ("LOW", "automated fact-checking errored — claims unverified")
+
+    sections: list[str] = [render_header(timestamp), ""]
+    if outage_banner:
+        sections += [outage_banner, ""]
+    sections += [
+        render_summary_block(confidence_dims, forced_levels),
         "",
         render_investigation_log(
             cross_sibling=cross_sibling,
@@ -1183,6 +1376,7 @@ def main() -> int:
     p.add_argument("--cross-sibling", default=".cross-sibling-discovery.json")
     p.add_argument("--frontmatter", default=".frontmatter-validation.json")
     p.add_argument("--hugo-build", default=".hugo-build.json")
+    p.add_argument("--readthrough", default=".readthrough-findings.json")
     p.add_argument("--fetched-urls", default=".fetched-urls.json")
     p.add_argument("--diff-files", help="Comma-separated changed-file list (overrides `gh pr diff --name-only`; for testing).")
     p.add_argument("--no-validate", action="store_true", help="Skip the self-check (local debugging).")

@@ -18,8 +18,7 @@
                     {{ if $presenter.photo }}
                         <img class="event-speaker-photo" src="{{ $presenter.photo }}" alt="{{ $presenter.name }}" />
                     {{ else }}
-                        {{ $photo := index (shuffle (slice "/images/avatars/avatar-yellow.png" "/images/avatars/avatar-purple.png" "/images/avatars/avatar-salmon.png")) 0 }}
-                        <img class="event-speaker-photo" src="{{ $photo }}" alt="{{ $presenter.name }}" />
+                        <img class="event-speaker-photo" src="/images/avatars/avatar-generic.svg" alt="{{ $presenter.name }}" />
                     {{ end }}
                     <div>
                         <div class="event-speaker-name">{{ $presenter.name }}</div>

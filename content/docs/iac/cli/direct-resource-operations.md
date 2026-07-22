@@ -3,7 +3,6 @@ title_tag: "Direct Resource Operations (pulumi do) | Pulumi CLI"
 meta_desc: "pulumi do provides direct cloud resource operations through the Pulumi CLI. Create, read, update, delete, and query resources without a project or program."
 title: Direct Resource Operations
 h1: Direct resource operations
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Direct Resource Operations
@@ -68,15 +67,14 @@ The input file contains the function's arguments. The output is JSON written to 
 ### Example: look up a VPC
 
 ```bash
-$ pulumi do aws:ec2:getVpc --input-file query.pcl
+$ pulumi do aws:ec2:getVpc --input-file query.yaml
 ```
 
-Where `query.pcl` contains:
+Where `query.yaml` contains:
 
-```hcl
-tags = {
-    "Name" = "production"
-}
+```yaml
+tags:
+    Name: production
 ```
 
 Output:
@@ -94,16 +92,15 @@ Output:
 
 ### Input file formats
 
-**PCL (default):** Top-level assignments map to function parameters:
+Top-level keys map to function parameters:
 
-```hcl
-parameterName = "value"
-nestedParameter = {
-    key = "value"
-}
+```yaml
+parameterName: value
+nestedParameter:
+    key: value
 ```
 
-The PCL input is bound against the function's schema for full type checking before execution.
+The input is bound against the function's schema for full type checking before execution.
 
 ## Resource operations
 
@@ -148,9 +145,9 @@ $ pulumi do <package:module:type> delete <provider-resource-id>
 | Flag | Type | Default | Description |
 |------|------|---------|-------------|
 | `--input-file` | string | | Path to a file containing function or resource inputs |
-| `--input` | string | `pcl` | Input file format |
+| `--input` | string | `yaml` | Input file format |
 | `--provider-file` | string | | Path to a file containing provider configuration |
-| `--provider-format` | string | `pcl` | Format of the provider configuration file |
+| `--provider-format` | string | `yaml` | Format of the provider configuration file |
 | `--dry-run` | bool | `false` | Run in preview mode (provider returns placeholder values) |
 | `--show-secrets` | bool | `false` | Show secret values in output |
 | `--yes` | bool | `false` | Auto-approve confirmation prompts |
@@ -161,7 +158,7 @@ All `pulumi do` operations write structured JSON to stdout. Progress messages an
 
 ```bash
 # Pipe function output to jq
-$ pulumi do aws:ec2:getVpc --input-file query.pcl | jq '.cidrBlock'
+$ pulumi do aws:ec2:getVpc --input-file query.yaml | jq '.cidrBlock'
 
 # Redirect resource output to a file while seeing progress
 $ pulumi do aws:s3:Bucket read my-bucket > result.json
@@ -176,11 +173,11 @@ Provider functions return the raw function result as JSON. Resource operations r
 Providers need credentials and configuration to operate. `pulumi do` resolves provider configuration through:
 
 1. **Ambient credentials**: Environment variables and credential files already present in the shell (e.g., `AWS_ACCESS_KEY_ID`, `~/.aws/credentials`).
-1. **Provider configuration file**: Supply provider config via a PCL file using the `--provider-file` flag.
+1. **Provider configuration file**: Supply provider config via a YAML file using the `--provider-file` flag.
 
     ```bash
-    $ pulumi do aws:ec2:getVpc --input-file query.pcl \
-        --provider-file aws-config.pcl
+    $ pulumi do aws:ec2:getVpc --input-file query.yaml \
+        --provider-file aws-config.yaml
     ```
 
 ## See also

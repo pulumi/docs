@@ -1,9 +1,7 @@
 ---
 title: "Announcing the 1.0 release of AWS CDK on Pulumi"
 date: 2024-12-02T08:00:00-07:00
-meta_desc: "Enhanced support of AWS CDK constructs from within Pulumi. Combine Pulumi and AWS CDK
-resources amd use Pulumi Cloud Platform to manage CDK"
-meta_image: meta.png
+meta_desc: "Enhanced support of AWS CDK constructs from within Pulumi. Combine Pulumi and AWS CDK resources and use Pulumi Cloud Platform to manage CDK"
 authors:
     - matt-jeffryes
     - cory-hall
@@ -11,6 +9,7 @@ authors:
     - anton-tayanovskyy
 tags:
     - aws-cdk
+category: product
 ---
 
 At Pulumi, we're committed to delivering the widest range of cloud infrastructure building blocks for use in your cloud engineering projects.
@@ -113,7 +112,7 @@ Read the docs at https://docs.aws.amazon.com/apprunner
 
 Combine CDK constructs with any of the features of Pulumi programs to deploy faster, easier and to any cloud. Use Pulumi functions and stack references to connect to pre-existing infrastructure and mix in resources from any provider to bring *all* of your infrastructure under management.
 
-For example, we can use CDK's `ecs_patterns` to quickly create a loadbalanced Fargate service, but route traffic to it with a record in an exisiting CloudFlare DNS zone.
+For example, we can use CDK's `ecs_patterns` to quickly create a loadbalanced Fargate service, but route traffic to it with a record in an existing CloudFlare DNS zone.
 
 ```typescript
 import * as path from 'path';

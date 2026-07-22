@@ -2358,11 +2358,11 @@
       "type": "Toc",
       "source_relative_path": "metadata/Pulumi.Esc.Sdk/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "pulumi.esc.sdk/toc.json"
-        },
         ".html": {
           "relative_path": "pulumi.esc.sdk/toc.html"
+        },
+        ".json": {
+          "relative_path": "pulumi.esc.sdk/toc.json"
         }
       },
       "version": ""

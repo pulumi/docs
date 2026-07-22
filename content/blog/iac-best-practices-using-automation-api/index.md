@@ -1,16 +1,16 @@
 ---
 title: "IaC Best Practices: Using Automation API"
+feature_image: feature.png
 date: 2023-07-26
 updated: 2025-03-04
 meta_desc: Review key learnings from the IaC best practices series. Recap insights on structuring Pulumi projects, security, automation, and scaling infrastructure.
-meta_image: meta.png
 authors:
     - scott-lowe
 tags:
     - best-practices
     - automation-api
     - go
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-using-automation-api/
@@ -19,16 +19,6 @@ aliases:
 Welcome to the sixth post in our series of blog posts focused on Infrastructure as Code (IaC) best practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/using-pulumi/automation-api/concepts-terminology) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. These practices have unfolded organically, as a direct response to Zephyr's evolving needs. The aim is to demonstrate that best practices are not set in stone, but are rather "point in time" recommendations that adapt as your company grows.
-
-For ease of navigation, here are links to all the posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* **IaC Best Practices: Using Automation API** (you are here)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
 ## Managing Complexity in a Multi-Project Pulumi Setup
 

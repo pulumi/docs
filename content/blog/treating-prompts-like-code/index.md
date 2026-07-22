@@ -3,7 +3,6 @@ title: "Treating Prompts Like Code: A Content Engineer's AI Workflow"
 date: 2026-03-09
 draft: false
 meta_desc: "How I built a modular AI workflow system to scale a solo docs practice — treating prompts like code, with reusable skills, shared context, and CI/CD."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - cam-soper
@@ -11,6 +10,7 @@ tags:
     - ai
     - automation
     - developer-experience
+category: best-practices
 schema_type: auto
 ---
 
@@ -87,6 +87,10 @@ It's not a replacement for human judgment. These are probabilistic tools — the
 The system isn't finished, either. It's probably never finished. I'm still tweaking review criteria, still finding edge cases where a skill produces something weird, still adding new tools as new pain points emerge. Treating prompts like code means treating them like software: you ship, you iterate, you maintain. There's no version 1.0 and done.
 
 And the ADHD angle is real but it's not magic. There are still days where the paralysis wins. AI lowers the activation energy for starting; it doesn't eliminate it. I'm still the one who has to show up. I suppose I could automate that too, but then we'd be in a whole different kind of dystopia.
+
+{{< blog/cta-card title="Turn your workflows into skills" href="/docs/ai/skills/" >}}
+Pulumi's Agent Skills bring the same modular approach to infrastructure, teaching your coding agent the conventions your team relies on.
+{{< /blog/cta-card >}}
 
 ## Lessons to share
 

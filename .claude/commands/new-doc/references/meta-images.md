@@ -4,18 +4,21 @@ user-invocable: false
 
 # Meta Image Selection
 
-Select the appropriate meta_image path based on the documentation path.
+`meta_image` is **optional**. Leave it blank/omit it and the build generates an
+on-brand social-media card for the page automatically — see
+`scripts/generate-meta-images.mjs` and `layouts/partials/meta-image-url.html`.
+Generated cards cover `docs`, `tutorials`, `case-studies`, `what-is`, `migrate`,
+`partner`, and `topics`. Prefer the generated card for new pages.
 
-## Path-Based Image Mapping
+Only set `meta_image` when you need a **custom** image that overrides the
+generated card (a page-level `meta_image` always wins).
 
-Use these rules to select the correct meta image for SEO:
+## Path-Based Image Mapping (override only)
+
+When you do need a custom docs image, use these legacy paths:
 
 - `iac/clouds/aws` → `/images/docs/meta-images/docs-clouds-aws-meta-image.png`
 - `iac/clouds/azure` → `/images/docs/meta-images/docs-clouds-azure-meta-image.png`
 - `iac/clouds/gcp` → `/images/docs/meta-images/docs-clouds-google-cloud-meta-image.png`
 - `iac/clouds/kubernetes` → `/images/docs/meta-images/docs-clouds-kubernetes-meta-image.png`
 - **All others** → `/images/docs/meta-images/docs-meta.png`
-
-## Usage
-
-Match the documentation path against the cloud provider paths above. If the path contains `iac/clouds/{provider}`, use the provider-specific image. Otherwise, use the default `docs-meta.png` image.

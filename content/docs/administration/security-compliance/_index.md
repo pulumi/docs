@@ -18,6 +18,11 @@ sections:
 - type: button-cards
   heading: Getting started
   cards:
+  - icon: shield
+    heading: Least Privilege
+    link: /docs/administration/security-compliance/least-privilege/
+    description: Apply least-privilege security across IaC, ESC, and CI/CD.
+
   - icon: clipboard
     heading: Audit Logs
     link: /docs/administration/security-compliance/audit-logs/

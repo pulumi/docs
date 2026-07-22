@@ -11,8 +11,9 @@ tags:
 - nodejs
 - publishing
 - providers
+category: engineering
 
-meta_image: "meta.png"
+
 ---
 
 In Pulumi's engineering department, we often build and distribute tools as native binaries to avoid the need for additional dependencies on user machines. Most of these tools are written in Go, which has good support for building self-contained binaries that target modern operating systems.
@@ -99,6 +100,10 @@ This led me down quite a bit of a rabbit hole investigating signing of binaries,
 One adjustment to our configuration came from a [community contribution by @afreakk](https://github.com/pulumi/pulumi-awsx/pull/862) where the provider was being used in a nixos environment. Nixos adds the requirement for all binaries to be static rather than dynamic - so there’s no requirement for the operating system to dynamically map link functions from system libraries at runtime. Statically compiled programs sometimes result in a larger size, but avoid any possible issues with different versions of the libraries it depends on.
 
 To resolve this issue, it’s as simple as changing the ‘linux’ targets to ‘linuxstatic’. E.g. `node18-linux-amd64` becomes `node18-linuxstatic-amd64`.
+
+{{< blog/cta-card title="Build infrastructure with Node.js" >}}
+Pulumi lets you define, deploy, and manage cloud infrastructure using TypeScript and JavaScript, with the same npm packages and tooling you already rely on. Start building your first stack in Pulumi Cloud.
+{{< /blog/cta-card >}}
 
 ## Multi-platform builds with a makefile
 

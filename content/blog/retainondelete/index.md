@@ -2,11 +2,11 @@
 title: "Retain on Delete"
 date: 2022-02-23
 meta_desc: Introducing the new resource option RetainOnDelete.
-meta_image: meta.png
 authors:
     - fraser-waters
 tags:
     - features
+category: product
 
 ---
 

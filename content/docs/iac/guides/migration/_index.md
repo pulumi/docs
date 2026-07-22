@@ -3,7 +3,6 @@ title_tag: "Migrating to Pulumi"
 meta_desc: Learn how Pulumi compares to other solutions, how to migrate to Pulumi, use converters to convert your code to Pulumi, and import resources to Pulumi.
 title: Migration
 h1: Migrating to Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Migration
@@ -11,6 +10,7 @@ menu:
         weight: 50
         identifier: iac-guides-migration
 aliases:
+    - /docs/guides/adopting/
     - /docs/iac/adopting-pulumi/
     - /docs/iac/adopting-pulumi/migrating-to-pulumi/
     - /docs/using-pulumi/adopting-pulumi/
@@ -19,7 +19,7 @@ aliases:
 
 If you've fallen in love with Pulumi, it might not be obvious how to adopt it. For brand new projects, it's easy: start writing your infrastructure as code using Pulumi from the start. But what if you already have infrastructure stood up? And perhaps even actively serving a critical business need? In these cases, you may wonder, is it even possible to adopt Pulumi, without downtime or a major disturbance to your existing infrastructure? The answer is **yes**!
 
-This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned in the [cloud tooling ecosystem](/docs/concepts/vs/). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; as well as adopting infrastructure and/or converting existing infrastructure as code projects.
+This user guide offers a tour of tried-and-true tools and techniques that can be used to migrate any infrastructure to Pulumi, regardless of how that infrastructure was originally provisioned in the [cloud tooling ecosystem](/docs/iac/comparisons/). These techniques range from coexisting with this infrastructure &mdash; either temporarily or permanently &mdash; as well as adopting infrastructure and/or converting existing infrastructure as code projects.
 
 Below we will review some basic concepts, but feel free to jump straight to a specific guide:
 

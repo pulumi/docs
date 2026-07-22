@@ -3,9 +3,9 @@ title: "Secure APIs with Auth0 Lambda Authorizers Using Pulumi & AWS"
 date: "2019-04-24"
 updated: 2025-03-24
 meta_desc: "Learn how to secure AWS API Gateway endpoints using Lambda authorizers and Auth0 with Pulumi. Build OAuth-protected serverless APIs in 3 steps."
-meta_image: "lambda-authorizer.png"
 authors: ["erin-krengel"]
-tags: ["Serverless","AWS", "lambda", "api-gateway"]
+tags: [serverless, aws, lambda, api-gateway]
+category: tutorials
 ---
 
 Creating serverless applications just got even easier! You can now

@@ -2,14 +2,14 @@
 title: All Pulumi CLI flags are now supported as environment variables
 date: 2025-11-21
 meta_desc: "You can now configure all Pulumi CLI flags via environment variables, and use tools like direnv to define project-wide settings"
-meta_image: meta.png
 authors:
     - tom-harding
 tags:
     - features
-    - iac
-    - release
+    - infrastructure-as-code
+    - releases
     - cli
+category: product
 
 social:
     twitter: |

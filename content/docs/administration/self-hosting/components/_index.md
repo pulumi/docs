@@ -3,7 +3,6 @@ title_tag: Components | Self-Hosting Pulumi
 meta_desc: The Pulumi Cloud container images page links and docker hub links.
 title: Components
 h1: Pulumi Cloud self-hosted components
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   administration:
     parent: administration-self-hosting

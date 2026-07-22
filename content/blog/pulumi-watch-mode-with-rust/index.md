@@ -5,13 +5,13 @@ updated: 2025-03-07
 
 meta_desc: >
     Speed up Pulumi deployments with watch mode. Learn how Pulumi Watch enables real-time infrastructure updates and faster iterations.
-meta_image: meta.png
 authors:
     - aaron-friel
 tags:
     - features
     - watch
     - rust
+category: engineering
 ---
 
 Pulumi enables engineers to employ the best practices of their field to [infrastructure as code](/what-is/what-is-infrastructure-as-code/). The
@@ -117,6 +117,10 @@ The Go language ecosystem lacks libraries that meet our needs. It was possible t
 directory, or only support one operating system, or to be insensitive to performance concerns. I
 needed an option that didn't make any of these sacrifices and, ideally, was also actively
 maintained.
+
+{{< blog/cta-card title="Prototype infrastructure with watch mode" >}}
+Run `pulumi watch` to get a hot-reload inner loop that applies changes to your stack as you save files.
+{{< /blog/cta-card >}}
 
 ## From library to binary and the carcinization of Pulumi
 

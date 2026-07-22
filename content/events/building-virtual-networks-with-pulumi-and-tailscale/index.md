@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Building Virtual Networks with Pulumi and Tailscale
 meta_desc: This workshop will demonstrate how to securely connect end-user devices and cloud resources using infrastructure as code written in real programming languages.
-meta_image:
+meta_image: /events/building-virtual-networks-with-pulumi-and-tailscale/meta.png
+meta_image_square: /events/building-virtual-networks-with-pulumi-and-tailscale/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

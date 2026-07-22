@@ -42,7 +42,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    Standing up production-ready infrastructure to store and analyze your real-time data feeds used to be a major undertaking. Now, with a few lines of code you can spin up all the resources you need in the cloud. In this session, we’ll introduce you to Apache Kafka—a community distributed event streaming platform capable of handling trillions of events a day. We’ll show you how to quickly provision and connect Kafka clusters using Confluent Cloud - a fully-managed cloud-native platform built by the original creators of Kafka. With the Pulumi Conflent Provider, you’ll learn how to easily provision Kafka and a complete data streaming platform using your favorite programming languages.
+    Standing up production-ready infrastructure to store and analyze your real-time data feeds used to be a major undertaking. Now, with a few lines of code you can spin up all the resources you need in the cloud. In this session, we’ll introduce you to Apache Kafka—a community distributed event streaming platform capable of handling trillions of events a day. We’ll show you how to quickly provision and connect Kafka clusters using Confluent Cloud - a fully-managed cloud-native platform built by the original creators of Kafka. With the Pulumi Confluent Provider, you’ll learn how to easily provision Kafka and a complete data streaming platform using your favorite programming languages.
 
 learn:
     - How to provision a data streaming platform using modern programming languages

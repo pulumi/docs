@@ -9,9 +9,6 @@ description: Learn how to inspect your Pulumi resources in this tutorial.
 # A similar description used for search results and social-media previews.
 meta_desc: Learn how to inspect your Pulumi resources in this tutorial.
 
-# An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: inspect-infra-meta.png
-
 # The order in which the tutorial appears in most lists. Order is ascending, so higher numbers
 # mean the tutorial will appear further down the list. Positive integers only.
 weight: 999

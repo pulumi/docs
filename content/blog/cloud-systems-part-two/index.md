@@ -1,5 +1,6 @@
 ---
 title: "Cloud Systems: Containerizing a Website"
+feature_image: feature.png
 
 date: 2021-12-27T12:26:10-08:00
 
@@ -7,15 +8,14 @@ draft: false
 
 meta_desc: In this series, learn modern cloud engineering practices and tooling, continuing with expanding our personal website and containerizing it!
 
-meta_image: meta.png
 
 authors:
     - kat-cosgrove
 
 tags:
-    - cloud-systems
     - tutorials
     - docker
+category: tutorials
 series: cloud-systems
 ---
 

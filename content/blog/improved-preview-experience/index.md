@@ -3,11 +3,11 @@ title: "Improved Pulumi Previews"
 date: 2020-10-29
 draft: false
 meta_desc: "Announcing a significant improvement to the pulumi preview experience."
-meta_image: preview_update.png
 authors:
     - paul-stack
 tags:
     - features
+category: product
 ---
 
 Today we are announcing a minor but significant improvement to the Pulumi [preview](/docs/iac/cli/commands/pulumi_preview/)

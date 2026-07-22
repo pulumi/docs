@@ -7,7 +7,10 @@ description: |
 meta_desc: Learn how Atlassian Bitbucket worked with Pulumi to improve developer productivity and reduce developers' time spent on maintenance by 50%.
 
 customer_name: Atlassian
+industry: developer-tools
 customer_logo: /logos/customers/atlassian-wordmark.svg
+logo_bg_color: "#0052CC"
+logo_style: white
 customer_url: https://www.atlassian.com/
 
 quote_block:
@@ -74,7 +77,7 @@ Pulumi allows developers to build, deploy, and manage cloud infrastructure and a
 
 Mike chose Python to build cloud infrastructure since Bitbucket developers already used Python. He said, “Because all the developers on Bitbucket write Python, they can use all the skills they already have from their day-to-day job to write infrastructure code. There are also safety features you’d expect from a standard programming language. For example, you know if you're referencing something that isn't declared or if you're trying to use a property that doesn't exist.”
 
-Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool](/tf2pulumi) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
+Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
@@ -98,12 +101,11 @@ Again, part of the problem rested with the old tool, whose DSL was unfamiliar to
 
 To make things simple and turnkey for developers, the DevSpeed team built a self-service dashboard that created and configured new Bitbucket instances. Developers enter a few pieces of information, such as what they want to call the instance, what region to use, and an SSH key. Then, a CI/CD pipeline using Bitbucket Pipelines and Bamboo calls Pulumi to deploy a complete developer environment.
 
-Once the instance is ready, the developer simply SSH’s into it, and the instance it will look exactly like Bitbucket. The developer can make the changes they want and then create a pull request to merge their work into a main branch. The developer can also share the URL of the instance with teammates so that they can see the changes when they review the code.
+Once the instance is ready, the developer simply SSH’s into it, and the instance will look exactly like Bitbucket. The developer can make the changes they want and then create a pull request to merge their work into a main branch. The developer can also share the URL of the instance with teammates so that they can see the changes when they review the code.
 
 Below is a diagram showing how a Bitbucket cloud instance is architected:
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/bitbucket-cloud-diagram.png" alt="Bitbucket Cloud and Pulumi">
+![Bitbucket Cloud and Pulumi](/images/case-studies/bitbucket-cloud-diagram.png)
 
 ### Using the Automation API
 

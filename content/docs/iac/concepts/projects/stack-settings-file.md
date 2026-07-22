@@ -3,7 +3,6 @@ title_tag: Stack Settings File Reference
 meta_desc: Documentation of the settings that are valid for Pulumi stack configuration files (Pulumi.<stack-name>.yaml).
 title: Stack settings file reference
 h1: Pulumi stack settings file reference
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Stack settings file reference
@@ -64,7 +63,7 @@ The `config` section contains all configuration key-value pairs for the stack. C
 
 Configuration values can be:
 
-- **Plain text**: Simple string, number, or boolean values
+- **Plain text**: String, number, or boolean values
 - **Encrypted secrets**: Values that are encrypted using the stack's secrets provider (marked with `secure:` prefix in the YAML)
 - **Structured data**: Complex objects or arrays
 

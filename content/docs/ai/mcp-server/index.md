@@ -3,12 +3,11 @@ title_tag: "Pulumi MCP Server | AI-Assisted Infrastructure as Code"
 meta_desc: "Learn how to use Pulumi's Model Context Protocol (MCP) server to integrate AI assistants like Cursor, Claude Code, and Windsurf with your Pulumi Cloud workflow."
 title: MCP server
 h1: Pulumi Model Context Protocol server
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: MCP server
         parent: ai-home
-        weight: 70
+        weight: 8
 aliases:
 - /docs/iac/using-pulumi/mcp-server/
 - /docs/iac/guides/mcp-server.md
@@ -16,7 +15,10 @@ aliases:
 - /docs/iac/guides/ai-integration/mcp-server/
 ---
 
-The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to access your Pulumi Cloud resources and delegate infrastructure tasks to [Pulumi Neo](/docs/pulumi-cloud/neo/). This integration allows you to query your cloud infrastructure, search for resources, and launch automated infrastructure workflows - all from within the AI assistant of your choice.
+The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to access your Pulumi Cloud resources, generate infrastructure code, and optionally delegate tasks to [Pulumi Neo](/docs/pulumi-cloud/neo/). This integration allows you to query your cloud infrastructure, search for resources, and launch automated infrastructure workflows - all from within the AI assistant of your choice.
+
+> [!INFO]
+> This page is about connecting your own AI agent to Pulumi. For the opposite direction, connecting Neo to other services' MCP servers (Jira, Datadog, and others), see [External MCP servers](/docs/ai/integrations/mcp/).
 
 ## What is the Pulumi MCP server?
 
@@ -419,11 +421,14 @@ If `neo-bridge` fails to launch tasks:
 
 1. **Check Neo access**: Verify you have access to Pulumi Neo in your organization
 2. **Verify task description**: Ensure your task instructions are clear and actionable
-3. **Check organization limits**: Some organizations may have task limits
+3. **Check organization limits**: Some organizations may have task limits, and Neo pauses if the organization reaches its [usage limit](/docs/ai/usage-limits/)
 4. **Review error message**: Check the error details for specific issues
 
 ## Learn more
 
+- [Pulumi Agent Skills](/docs/ai/skills/) - teach your agent proven Pulumi workflows
+- [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
+- [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
 - [Pulumi Neo documentation](/docs/pulumi-cloud/neo/)
 - [Model Context Protocol specification](https://modelcontextprotocol.io)
 - [Pulumi Registry](/registry/)

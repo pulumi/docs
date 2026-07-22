@@ -4,7 +4,6 @@ date: 2022-01-20T08:36:11-06:00
 draft: false
 canonical_url: https://dev.to/fllstck/observable-infrastructure-as-code-52ha
 meta_desc: A review of using Honeycomb to add observability to your Pulumi projects
-meta_image: meta.png
 authors:
     - kay-ploesser
 tags:
@@ -12,6 +11,7 @@ tags:
     - javascript
     - observability
     - automation-api
+category: tutorials
 ---
 
 Pulumi community member [Kay Plößer](https://kay.is/) spent some time digging into setting up observability of a Pulumi deployment using [Honeycomb](https://www.honeycomb.io/). Read more to find out all the details on configuring Honeycomb and Pulumi together, with a side dish of [Automation API](/docs/using-pulumi/automation-api/)!

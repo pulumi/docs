@@ -2,9 +2,9 @@
 title: "Auditing Your Organization's Infrastructure as Code Activity"
 date: "2020-02-20"
 meta_desc: "Pulumi now supports Audit Logs. Learn how to audit your organization's infrastructure as code activity"
-meta_image: "auditlogs.png"
 authors: ["sean-holung"]
 tags: ["features", "pulumi-enterprise", "audit-logs"]
+category: product
 ---
 
 We are excited to announce the release of Audit Logs on
@@ -33,7 +33,7 @@ the most recent audit logs for your organization.
 
 ![auditlogs](/blog/auditing-your-organizations-infrastructure-as-code-activity/auditlogs.png)
 
-This will show the most recent events in decending order. You can
+This will show the most recent events in descending order. You can
 also filter logs by a particular user by clicking on the user's avatar. Doing so will
 filter out the events performed by the user you selected.
 

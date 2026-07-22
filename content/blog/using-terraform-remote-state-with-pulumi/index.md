@@ -2,6 +2,7 @@
 title: "Using Terraform Remote State with Pulumi"
 authors: ["paul-stack"]
 tags: ["features"]
+category: tutorials
 date: "2019-06-07"
 meta_desc: "Pulumi allows resources which were provisioned by CloudFormation, ARM, or Terraform to remain, while allowing those resources to be consumed by Pulumi."
 
@@ -178,6 +179,6 @@ Pulumi is free and open-source, and you can [get started today](/docs/get-starte
 To learn more about migrating
 from Terraform to Pulumi, check out
 [Converting Full Terraform Programs to Pulumi](/blog/converting-full-terraform-programs-to-pulumi/)
-and the [Terraform comparison documentation](/docs/concepts/vs/terraform/), or join us in
+and the [Terraform comparison documentation](/docs/iac/comparisons/terraform/), or join us in
 the [Pulumi Community Slack](https://slack.pulumi.com/) to discuss with
 the Pulumi community.

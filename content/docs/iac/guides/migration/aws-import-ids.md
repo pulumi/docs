@@ -3,7 +3,6 @@ title_tag: "Finding AWS import IDs and special cases"
 meta_desc: Learn how to find AWS resource IDs and handle CloudFormation-specific edge cases when importing resources into Pulumi.
 title: AWS import IDs and special cases
 h1: "Finding AWS import IDs and special cases"
-meta_image: /images/docs/meta-images/docs-meta.png
 aliases:
     - /docs/iac/guides/migration/migrating-to-pulumi/aws-import-ids/
 menu:

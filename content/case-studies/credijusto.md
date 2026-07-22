@@ -7,7 +7,10 @@ description: |
 meta_desc: Learn how Credijusto worked with Pulumi to help its development team scale to support rapid growth, while enforcing best practices for their infrastructure.
 
 customer_name: Credijusto
+industry: financial-services
 customer_logo: /logos/customers/credijusto_logo.svg
+logo_bg_color: "#FE9E2C"
+logo_style: dark
 
 quote_block:
   quote: |
@@ -124,7 +127,7 @@ each application to scale with demand.
 >
 > &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/credijusto-architecture.png" alt="Credijusto architecture">
+![Credijusto architecture](/images/case-studies/credijusto-architecture.png)
 
 ## Results
 

@@ -3,7 +3,6 @@ title: What is a GitHub Actions Secret?
 meta_desc: |
     Learn more about GitHub Actions secrets and how to use them.
 
-meta_image: /images/what-is/what-is-a-github-action-secret-meta.png
 type: what-is
 page_title: "What is a GitHub Actions Secret?"
 authors: ["diana-esteves"]
@@ -21,7 +20,7 @@ Using GitHub Actions secrets provides several key features that enhance the secu
 
 - **Automatic encryption** - Secrets are always encrypted in transit and at rest.
 - **Limited access** - A workflow will access a referenced secret during execution only. The GitHub UI does not expose secrets, nor are they available to users viewing the repository.
-- **Log redaction** - GitHub Actions automatically redact secrets from most logs and prevent them from being exposed in the workflow run logs.
+- **Log redaction** - GitHub Actions automatically redacts secrets from most logs and prevents them from being exposed in the workflow run logs.
 - **Dynamic configurations** - By referencing secrets in workflow files, you can easily update sensitive information without modifying the code. This flexibility is beneficial when collaborating with others or managing multiple environments (e.g., development, staging, production).
 
 ## Using GitHub Actions secrets
@@ -80,13 +79,6 @@ Refer to the official [secrets documentation](https://docs.github.com/en/actions
 
 ## Conclusion
 
-GitHub Actions secrets are encrypted and only exposed to workflow runs. They are not visible in the GitHub UI, and users or other GitHub Actions cannot directly access their values. User precaution is still required to avoid unintentionally exposing secrets in logs. GitHub automatically redacts secrets in most places, but avoid using secrets in unsecured ways in your workflow scripts.
+The encryption GitHub provides protects a secret at rest and in transit, but it stops at the boundary of your workflow run. Once a value is decrypted into a step, what happens to it is your responsibility: a secret echoed into a log, passed to an untrusted action, or exposed through a fork-triggered pull request is no longer protected, no matter how it was stored. Treat GitHub Actions secrets as a safe delivery mechanism, not a guarantee, and write your workflows so that decrypted values never leave the steps that genuinely need them.
 
-Now that you know about GitHub Actions secrets, take your cloud infrastructure management to the next level with Pulumi:
-
-- **Integrate your [continuous delivery with Pulumi](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-actions/)**: Ship software faster and more safely by combining Pulumi with the other components of your automated infrastructure.
-- **Install the [Pulumi GitHub App](https://www.pulumi.com/docs/iac/packages-and-automation/continuous-delivery/github-app/)**:  Once installed, the Pulumi GitHub app will submit rich, inline comments on any pull request or commit that introduces a change to your Pulumi-managed infrastructure.
-- **Manage sensitive data and secrets with Pulumi**: Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-- **Use the [GitHub provider for Pulumi](https://www.pulumi.com/registry/packages/github/#github)**: Provision any of the cloud resources available in GitHub.
-
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+For a deeper look at encrypting values end to end, see Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/).

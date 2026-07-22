@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "Best Practices: Code Placement and Stacks"
 meta_desc: The first in a series of videos, we'll use a fictional company named Zephyr to explore common questions that users ask when working with Pulumi.
-meta_image:
+meta_image: /events/best-practices-code-placement-stacks/meta.png
+meta_image_square: /events/best-practices-code-placement-stacks/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

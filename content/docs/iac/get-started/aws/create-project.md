@@ -11,6 +11,7 @@ menu:
         weight: 4
 
 aliases:
+    - /docs/get-started/aws/review-project/
     - /docs/iac/get-started/aws/b/create-project/
     - /docs/quickstart/aws/create-project/
     - /docs/clouds/aws/get-started/create-project/

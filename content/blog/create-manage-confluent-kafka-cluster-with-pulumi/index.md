@@ -3,9 +3,9 @@ title: "How to Manage Kafka Clusters in Confluent Cloud with Pulumi"
 date: 2023-02-15
 updated: 2025-03-26
 meta_desc: Learn how to manage Confluent Kafka clusters with Pulumi—create topics, service accounts, and secure infrastructure using real code with IaC best practices.
-meta_image: "managing-confluent-clusters.png"
 authors: ["josh-kodroff"]
 tags: ["confluent", "kafka"]
+category: tutorials
 ---
 
 Event streaming is used across diverse industries that demand real-time data processing. Apache Kafka is the most popular open-source streaming platform. Confluent Cloud lets you run Kafka on the cloud provider of your choice.

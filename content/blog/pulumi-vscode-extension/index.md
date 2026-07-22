@@ -1,8 +1,8 @@
 ---
 title: "Announcing the Pulumi Visual Studio Code Extension"
 date: 2024-09-18T8:56:00-00:00
+updated: 2026-06-16
 meta_desc: "Enhance your Pulumi development experience with the new VS Code extension. Manage Pulumi IaC and Pulumi ESC directly in your editor."
-meta_image: meta.png
 authors:
     - meagan-cojocar
     - eron-wright
@@ -11,6 +11,7 @@ authors:
 tags:
     - releases
     - features
+category: product
 ---
 
 At the heart of Pulumi's approach to cloud infrastructure and secrets management is a belief in empowering engineers to use the best software engineering tools to manage complexity at scale and to be maximally productive building cloud infrastructure and applications for their businesses.  
@@ -68,7 +69,7 @@ You can run without debugging by selecting "Run Without Debugging" from the Run 
 
 ## Using Pulumi ESC
 
-Pulumi ESC manages secrets and configuration for your applications and infrastructure within a centralized and composable secrets store. The environments are stored securely within Pulumi Cloud, and can be edited and opened from the Pulumi Cloud console or from the `esc` CLI or [REST API](/docs/pulumi-cloud/reference/cloud-rest-api).
+Pulumi ESC manages secrets and configuration for your applications and infrastructure within a centralized and composable secrets store. The environments are stored securely within Pulumi Cloud, and can be edited and opened from the Pulumi Cloud console or from the `pulumi` CLI or [REST API](/docs/pulumi-cloud/reference/cloud-rest-api).
 
 For developers working with both their application infrastructure code as well as their Pulumi ESC environments, it is convenient to be able to edit ESC environments and the secrets they contain directly within the IDE without switching contexts.
 
@@ -98,6 +99,10 @@ You can also:
 - Tag specific environment revisions for easy reference.
 
 <img width="300" src="tag-revision.png" alt="Revisions and tags" />
+
+{{< blog/cta-card title="Manage infrastructure from your editor" >}}
+Pulumi brings infrastructure as code and Pulumi ESC into the tools you already work in. Build, deploy, and debug your stacks, then manage secrets and configuration in Pulumi Cloud.
+{{< /blog/cta-card >}}
 
 ## Pulumi YAML Support
 

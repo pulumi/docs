@@ -1,12 +1,13 @@
 ---
 title: "Migrate EKS Node Groups with Zero Downtime Using Pulumi"
 authors: ["mike-metral"]
-tags: ["Kubernetes", "eks"]
+tags: [kubernetes, eks]
+category: tutorials
 meta_desc: "Learn how to migrate EKS node groups with zero downtime using Pulumi. Create, shift, and decommission worker nodes safely with code and kubectl."
 date: "2019-07-23"
 updated: 2025-03-26
 canonical_url: https://www.pulumi.com/registry/packages/kubernetes/how-to-guides/eks-migrate-nodegroups/
-meta_image: "eks-migrate-nodegroups.png"
+
 ---
 
 Managed Kubernetes offerings greatly reduce the overhead required in
@@ -86,7 +87,7 @@ NGINX is able to successfully migrate across node groups because it is
 configured with HA settings, [spread-type scheduling predicates][tutorial-ha-refs],
 and can gracefully terminate within the Kubernetes [Pod lifecycle][pod-lifecycle].
 
-![Migrate Ngnix 4xlarge](migrate-nginx-4xlarge.png)
+![Migrate Nginx 4xlarge](migrate-nginx-4xlarge.png)
 
 ### Step 3: Decommission the `2xlarge` node group.
 

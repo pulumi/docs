@@ -3,7 +3,6 @@ title: "CDKTF is deprecated: What's next for your team?"
 date: 2025-12-18T10:00:00-08:00
 draft: false
 meta_desc: "The deprecation of CDKTF has left many without a clear path forward. This post presents the alternatives and shows what it's like to move from CDKTF to Pulumi."
-meta_image: meta.png
 authors:
   - adam-gordon-bell
   - christian-nunciato
@@ -11,6 +10,7 @@ tags:
   - migration
   - terraform
   - cdktf
+category: best-practices
 ---
 
 In July, 2020, CDK for Terraform (CDKTF) was introduced, and last week, on December 10, it was officially deprecated. Support for CDKTF has stopped, the [organization](https://github.com/cdktf) and [repository](https://github.com/hashicorp/terraform-cdk) have been archived, and HashiCorp/IBM will no longer be updating or maintaining it, leaving a lot of teams out there without a clear path forward.
@@ -92,6 +92,10 @@ You can also use [any Terraform provider](/docs/iac/get-started/terraform/terraf
 Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly, which is much faster and more flexible. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/concepts/how-pulumi-works/).
 
 Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best alternative for most teams looking to migrate.
+
+{{< blog/cta-card title="Migrate from CDKTF to Pulumi" href="/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/" >}}
+Keep writing infrastructure in TypeScript, Python, Go, C#, or Java, and use Pulumi's built-in convert and import commands to bring your CDKTF projects and state across.
+{{< /blog/cta-card >}}
 
 ## What migrating to Pulumi looks like
 

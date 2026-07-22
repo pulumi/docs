@@ -2,13 +2,13 @@
 title: "Infrastructure CI/CD With Github Actions and Pulumi"
 date: 2020-12-14
 meta_desc: "See how GitHub Actions and the new Pulumi CI/CD Assistant help you achieve continuous delivery for your cloud applications and infrastructure."
-meta_image: GH Partners - Social 2_ 1200x630.png
 authors:
     - paul-stack
     - praneet-loke
     - isaac-harris
 tags:
-    - "github actions"
+    - github-actions
+category: product
 
 ---
 

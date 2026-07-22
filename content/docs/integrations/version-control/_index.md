@@ -4,7 +4,6 @@ meta_desc: Connect Pulumi with your version control system using integrations fo
 title: Version Control
 linktitle: Version Control
 h1: Version Control
-meta_image: /images/docs/meta-images/docs-meta.png
 docs_home: true
 notitle: true
 norightnav: true

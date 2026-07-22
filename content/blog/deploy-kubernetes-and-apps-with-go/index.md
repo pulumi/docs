@@ -2,13 +2,13 @@
 title: "Deploy Kubernetes and Applications with Go"
 date: 2020-04-14
 meta_desc: "Manage Kubernetes clusters and apps with Go using Pulumi's reusable components."
-meta_image: gopher.png
 authors:
     - levi-blackstone
 tags:
-    - Kubernetes
-    - Go
+    - kubernetes
+    - go
     - containers
+category: tutorials
 ---
 
 We're excited that Go is now a first-class language in Pulumi and that you can build your infrastructure with Go on AWS, Azure, GCP, and many other clouds. Users often ask, "Can I use Pulumi to manage Kubernetes infrastructure in Go today?" With the release of Pulumi 2.0., the answer is "Yes!"

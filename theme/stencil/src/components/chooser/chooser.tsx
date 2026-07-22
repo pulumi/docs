@@ -3,7 +3,7 @@ import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
 import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain } from "../../store/actions/preferences";
 
-export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml" | "opa";
+export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml" | "hcl" | "opa";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
 export type OSKey = "macos" | "linux" | "windows";
 export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" | "oci" | "docker";
@@ -21,6 +21,14 @@ export interface SupportedLanguage {
     key: LanguageKey;
     name: string;
     extension: string;
+    logo: string;
+    // Optional dark-mode logo variant, for languages whose light logo doesn't read
+    // on a dark background (e.g. YAML's black wordmark). Swapped via the docs
+    // theme's .docs-logo-light/.docs-logo-dark CSS.
+    logoOnDark?: string;
+    // Optional tab label, for languages whose uppercased extension isn't the
+    // natural short name (e.g. C# rather than CS).
+    tabLabel?: string;
     preview: boolean;
 }
 
@@ -190,32 +198,36 @@ export class Chooser {
             } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
-            // may not be available as an option. When that happens, we switch into local
-            // mode and choose the first available option, to make sure at least one
-            // choosable item is always visible.
+            // may not be available as an option. When that happens, we display the
+            // first available option instead -- without writing anything back to the
+            // global store: a chooser that's merely missing an option must not clobber
+            // the page-wide selection. (It used to dispatch a reset here, which made
+            // every chooser on the page snap back to this one's default whenever you
+            // picked a language it didn't offer.) The fallback is display-only and we
+            // stay subscribed, so the moment a supported option is chosen anywhere on
+            // the page, this chooser follows it again. The choosables this chooser
+            // controls are flipped to local mode so they render the fallback too (left
+            // global, they'd all hide, since none matches the unavailable preference);
+            // from then on they mirror this chooser's selection via applyChoice.
             const preferredOrDefault = (key: ChooserKey) => {
+                // Guard against an empty option set. A store update can arrive before
+                // this component finished parsing its options -- its "rendered" listener
+                // is attached in connectedCallback, which runs before componentWillLoad
+                // populates currentOptions -- so currentOptions may still be []. With
+                // nothing to fall back to, keep the preferred key and let render() cope
+                // (it renders no active tab until the real options land). Dereferencing
+                // currentOptions[0] here is what threw "can't access property 'key',
+                // this.currentOptions[0] is undefined".
+                if (this.currentOptions.length === 0) {
+                    return { selection: key };
+                }
+
                 if (!this.currentOptions.find(o => o.key === key)) {
-                    const defaultChoice = this.currentOptions[0];
-                    key = defaultChoice.key;
+                    key = this.currentOptions[0].key;
 
-                    if (this.choosables.length > 0) {
-                        this.mode = "local";
-
-                        // Tell the children of this chooser they're local now, too.
-                        this.choosables.forEach(choosable => {
-                            choosable.setAttribute("mode", "local");
-                        });
-
-                        // In local mode, there's no need to listen for store updates anymore,
-                        // so we unsubscribe.
-                        if (this.storeUnsubscribe) {
-                            this.storeUnsubscribe();
-                        }
-                    } else {
-                        // This is a global chooser with (presumably) on-page choosables,
-                        // so we need to dispatch an event to reset the selected language.
-                        this.setChoice(this.type, defaultChoice);
-                    }
+                    this.choosables.forEach(choosable => {
+                        choosable.setAttribute("mode", "local");
+                    });
                 }
                 return { selection: key };
             };
@@ -242,29 +254,105 @@ export class Chooser {
     }
 
     render() {
+        // Render the current set of options, marking the selected one active. For
+        // language choosers the button text is the uppercased file extension (e.g. TS,
+        // PY) and the PREVIEW badge lives on the toolbar label, not the tab; every other
+        // type keeps rendering the full name and the tab PREVIEW badge.
+        const list = (
+            <ul>
+                {this.currentOptions.map(opt => (
+                    <li class={this.selection === opt.key ? "active" : ""}>
+                        <a onClick={event => this.makeChoice(event, this.type, opt)}>
+                            {this.optionLabel(opt)} {opt.preview && this.type !== "language" ? <span>PREVIEW</span> : ""}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        );
+
+        if (this.type === "language") {
+            const selected = this.currentOptions.find(o => o.key === this.selection) as SupportedLanguage;
+            return (
+                <Host selection={this.selection}>
+                    <div class="chooser-toolbar">
+                        <span class="chooser-toolbar-label">
+                            {selected ? this.renderToolbarLogo(selected) : ""}
+                            {selected ? selected.name : ""}
+                            {selected && selected.preview ? <span class="badge badge-preview">Preview</span> : ""}
+                        </span>
+                        {list}
+                    </div>
+                    <slot></slot>
+                </Host>
+            );
+        }
+
         return (
             <Host selection={this.selection}>
-                <ul>
-                    {
-                        // Render the current set of options, marking the selected one active.
-                        this.currentOptions.map(opt => (
-                            <li class={this.selection === opt.key ? "active" : ""}>
-                                <a onClick={event => this.makeChoice(event, this.type, opt)}>
-                                    {opt.name} {opt.preview ? <span>PREVIEW</span> : ""}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
+                {list}
                 <slot></slot>
             </Host>
         );
     }
 
-    // The choosable elements of this chooser, if any.
+    // The toolbar language logo. With a dark variant, emit both images tagged
+    // .docs-logo-light/.docs-logo-dark for the docs theme to swap (the dark one is
+    // hidden except on dark docs pages); otherwise a single logo.
+    private renderToolbarLogo(lang: SupportedLanguage) {
+        if (lang.logoOnDark) {
+            return [
+                <img class="chooser-toolbar-logo docs-logo-light" src={lang.logo} alt="" aria-hidden="true" />,
+                <img class="chooser-toolbar-logo docs-logo-dark" src={lang.logoOnDark} alt="" aria-hidden="true" />,
+            ];
+        }
+        return <img class="chooser-toolbar-logo" src={lang.logo} alt="" aria-hidden="true" />;
+    }
+
+    // The text shown on a chooser tab. For languages we use the tabLabel override if
+    // set, otherwise the uppercased file extension (TS, PY, GO, …) so 7+ options fit
+    // on one row; everything else uses the full option name.
+    private optionLabel(opt: ChooserOption): string {
+        const lang = opt as SupportedLanguage;
+        if (lang.tabLabel) {
+            return lang.tabLabel;
+        }
+        return lang.extension ? lang.extension.toUpperCase() : opt.name;
+    }
+
+    // The choosable elements this chooser controls: its choosable children if it has
+    // any, otherwise the on-page choosables that follow it (see adoptedChoosables).
     // Only returns choosables that match this chooser's type.
-    private get choosables() {
-        return this.el.querySelectorAll(`pulumi-choosable[type="${this.type}"]`);
+    private get choosables(): Element[] {
+        const children = Array.from(this.el.querySelectorAll(`pulumi-choosable[type="${this.type}"]`));
+        return children.length > 0 ? children : this.adoptedChoosables;
+    }
+
+    // Standalone choosers (the self-closing shortcode form) render no choosable
+    // children -- their content follows them on the page, driven by the global store.
+    // Adopt that content: every top-level choosable of this type after this chooser
+    // in document order, up to the next visible top-level chooser of this type.
+    // Headless (option-style="none") choosers are inline helper widgets, not section
+    // boundaries, so they don't end the walk. Adoption is what lets a standalone
+    // chooser fall back locally when the preferred option is missing, instead of
+    // resetting the global preference.
+    private get adoptedChoosables(): Element[] {
+        const scan = Array.from(
+            document.querySelectorAll(`pulumi-chooser[type="${this.type}"]:not([option-style="none"]), pulumi-choosable[type="${this.type}"]`),
+        ).filter(el => el === this.el || !(el.parentElement && el.parentElement.closest("pulumi-chooser")));
+
+        const start = scan.indexOf(this.el);
+        if (start === -1) {
+            return [];
+        }
+
+        const adopted: Element[] = [];
+        for (let i = start + 1; i < scan.length; i++) {
+            if (scan[i].tagName === "PULUMI-CHOOSER") {
+                break;
+            }
+            adopted.push(scan[i]);
+        }
+        return adopted;
     }
 
     // Convert inbound options lists into ChooserKeys, so they can be converted into
@@ -435,60 +523,83 @@ export class Chooser {
             key: "typescript",
             name: "TypeScript",
             extension: "ts",
+            logo: "/images/docs/icons/languages/typescript-color-32-32.svg",
             preview: false,
         },
         {
             key: "javascript",
             name: "JavaScript",
             extension: "js",
+            logo: "/images/docs/icons/languages/javascript-color-32-32.svg",
             preview: false,
         },
         {
             key: "python",
             name: "Python",
             extension: "py",
+            logo: "/images/docs/icons/languages/python-color-32-32.svg",
             preview: false,
         },
         {
             key: "go",
             name: "Go",
             extension: "go",
+            logo: "/images/docs/icons/languages/go-color-32-32.svg",
             preview: false,
         },
         {
             key: "csharp",
             name: "C#",
             extension: "cs",
+            tabLabel: "C#",
+            logo: "/images/docs/icons/languages/csharp-color-32-32.svg",
             preview: false,
         },
         {
             key: "fsharp",
             name: "F#",
             extension: "fs",
+            tabLabel: "F#",
+            logo: "/images/docs/icons/languages/fsharp-color-32-32.svg",
             preview: false,
         },
         {
             key: "visualbasic",
             name: "VB",
             extension: "vb",
+            logo: "/images/docs/icons/languages/visualbasic-color-32-32.svg",
             preview: false,
         },
         {
             key: "java",
             name: "Java",
             extension: "java",
+            // Mark-only Java cup (no "Java" wordmark), already used elsewhere in docs.
+            logo: "/images/docs/icons/languages/java-color-32-32.svg",
             preview: false,
         },
         {
             key: "yaml",
             name: "YAML",
             extension: "yaml",
+            // Matched light/dark pair (the -on-dark recolor keeps the black wordmark
+            // legible on dark).
+            logo: "/images/docs/icons/languages/yaml-color-32-32.svg",
+            logoOnDark: "/images/docs/icons/languages/yaml-color-32-32-on-dark.svg",
             preview: false,
+        },
+        {
+            key: "hcl",
+            name: "HCL",
+            extension: "hcl",
+            logo: "/images/docs/icons/languages/hcl-color-32-32.svg",
+            preview: true,
         },
         {
             key: "opa",
             name: "OPA",
             extension: "rego",
+            logo: "/images/docs/icons/languages/opa-color-32-32.png",
             preview: false,
         },
     ];

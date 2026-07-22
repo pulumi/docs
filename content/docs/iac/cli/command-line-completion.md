@@ -3,7 +3,6 @@ title_tag: "Command-line completion | Pulumi CLI"
 meta_desc: Information about command-line completion while using the Pulumi CLI.
 title: Command-line completion
 h1: Pulumi CLI command-line completion
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   iac:
     weight: 3
@@ -62,6 +61,12 @@ You can also use an arbitrary directory like `~/.zsh/completion/` and then add i
 
 ```shell
 fpath=(~/.zsh/completion $fpath)
+```
+
+Then save the completion script to a file in that directory:
+
+```shell
+pulumi gen-completion zsh > ~/.zsh/completion/_pulumi
 ```
 
 Make sure `compinit` is loaded or do it by adding in `~/.zshrc`:

@@ -8,7 +8,6 @@ draft: false
 meta_desc: >-
     The 1.0 release of the Pulumi Command provider marks its general availability (GA) and expands support for copying assets to remote hosts.
 
-meta_image: meta.png
 
 authors:
     - thomas-kappler
@@ -16,6 +15,7 @@ authors:
 # None of the tags in BLOGGING.md seem to match, but `providers` exists already
 tags:
     - providers
+category: product
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the

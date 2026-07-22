@@ -3,7 +3,6 @@ title: CLI Integrations
 title_tag: Neo CLI Integrations
 h1: CLI Integrations
 meta_desc: Give Neo scoped access to cloud CLIs (aws, gcloud, az, kubectl) using credentials managed by Pulumi ESC.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     ai:
         name: CLI Integrations
@@ -63,9 +62,9 @@ If you can't use OIDC (for example, while you're getting started), the same `*-l
 
 #### Kubernetes
 
-The [Kubernetes Cluster Access](/docs/esc/guides/kubernetes-cluster-access/) guide walks through both options:
+The [Kubernetes Cluster Access](/docs/esc/guides/integrate-with/kubernetes-cluster-access/) guide walks through both options:
 
-- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/providers/secrets/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then materialize it through `files.KUBECONFIG`. This way the cluster Neo connects to is always the cluster Pulumi just deployed, with no manual config drift.
+- **Stack-output kubeconfig (recommended for Pulumi-managed clusters).** Use the [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) ESC provider to read the kubeconfig from an EKS, AKS, or GKE stack output, then materialize it through `files.KUBECONFIG`. This way the cluster Neo connects to is always the cluster Pulumi just deployed, with no manual config drift.
 - **Static kubeconfig.** Drop a kubeconfig directly into `files.KUBECONFIG` for clusters not managed by a Pulumi program.
 
 ## Setting up a CLI integration

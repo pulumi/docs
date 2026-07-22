@@ -4,7 +4,6 @@ meta_desc: Google Cloud integration with Pulumi — providers, packages, archite
 title: Google Cloud
 linktitle: Google Cloud
 h1: Google Cloud
-meta_image: /images/docs/meta-images/docs-clouds-google-cloud-meta-image.png
 menu:
   integrations:
     name: Google Cloud

@@ -5,7 +5,6 @@ date: 2025-12-10
 updated: 2026-01-27
 draft: false
 meta_desc: "At re:Invent 2025, AWS revealed a vertically integrated AI training pipeline. Here's who it's actually for."
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
@@ -13,6 +12,7 @@ tags:
     - nova-forge
     - bedrock-agentcore
     - reinvent
+category: perspectives
 ---
 AWS re:Invent 2025 delivered a myriad of announcements across AI, silicon, and cloud infrastructure. AWS unveiled the expanded Nova model family, introduced Nova Forge for custom model training, launched Trainium3 UltraServers, and added major production features to AgentCore. It was a lot, and taken at face value, it looks like another scattershot year of big releases.
 

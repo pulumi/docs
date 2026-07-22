@@ -3,7 +3,6 @@ title_tag: "Blocking and Async Python with Pulumi | Languages & SDKs"
 meta_desc: An overview of how to use Python with Pulumi for infrastructure as code on any cloud (AWS, Azure, Google Cloud, Kubernetes, etc.).
 title: Blocking and Async
 h1: Blocking and Async Python with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Blocking & async

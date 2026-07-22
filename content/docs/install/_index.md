@@ -3,7 +3,6 @@ title_tag: "Download & Install Pulumi"
 meta_desc: This page contains detailed instructions for downloading and installing Pulumi.
 title: "Download & Install Pulumi"
 h1: Download & Install Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     install:
         name: "Download & Install Pulumi"
@@ -316,7 +315,7 @@ You can install Pulumi using elevated permissions through the [Chocolatey packag
    <pre class="chroma"><code class="language-bash" data-lang="powershell" data-track="install-pulumi-windows-choco">&gt; choco install pulumi</code></pre>
 </div>
 
-This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi your path.
+This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi to your path.
 
 Subsequent updates can be installed in the usual way:
 
@@ -528,6 +527,8 @@ For Cursor, GitHub Copilot, VS Code, Codex, Gemini and other platforms, use the 
 npx skills add pulumi/agent-skills --skill '*'
 ```
 
+You can also connect your assistant to the [Pulumi MCP server](/docs/ai/mcp-server/) for live access to your Pulumi Cloud stacks, resources, and the Pulumi Registry.
+
 ## Installing betas and previous versions
 
 Most installation methods choose the latest version by default. To install a specific version, use the following commands. You can find the list of versions on the [Available versions](/docs/install/versions/) page.
@@ -634,7 +635,7 @@ Please see https://github.com/pulumi/pulumi-benchmarking where we have a benchma
 The results from this benchmark were 10% CPU utilization on a Apple M1 Pro for the apply and 20% CPU utilization for the destroy.
 The memory usage for both was 1.5GB.
 
-So the following recommendations were made to add some headroom for the typical pulumi actions, espciailly for larger projects.
+So the following recommendations were made to add some headroom for the typical pulumi actions, especially for larger projects.
 -->
 
 The following are general recommendations for minimum system requirements when using Pulumi. Actual performance may vary based on the SDK runtime, providers used, operating system and the size and complexity of your infrastructure deployments. However, the following requirements should be considered a minimum to account for typical usage.

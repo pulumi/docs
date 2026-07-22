@@ -3,12 +3,12 @@ title: "Pulumi Google Cloud Classic 7.0"
 date: 2023-11-10T09:00:00-04:00
 draft: false
 meta_desc: "The Latest for Your Modern Cloud Infrastructure: Pulumi Google Cloud Provider 7.0."
-meta_image: meta.png
 authors:
   - monica-rodriguez
 tags:
   - google-cloud
   - releases
+category: product
 
 ---
 

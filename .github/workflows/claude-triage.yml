@@ -21,10 +21,18 @@ jobs:
     # their own labeling pipelines (label-dependabot.yml) and don't
     # carry secrets. `ready_for_review` always has `draft: false`, so
     # the draft guard is a no-op for that event.
+    #
+    # Exception: content-review/* PRs are bot-authored but are first-class
+    # automated docs fixes we DO want triaged and reviewed like any human PR
+    # (the worker opens them ready when the re-lint passes — falling back to
+    # draft only on lint failure — so triage fires on the non-draft `opened`
+    # event). They flow through the normal triage → review chain instead of
+    # being force-dispatched.
     if: >-
       !github.event.pull_request.draft
-      && github.event.pull_request.user.login != 'pulumi-bot'
       && github.event.pull_request.user.login != 'dependabot[bot]'
+      && (github.event.pull_request.user.login != 'pulumi-bot'
+          || startsWith(github.event.pull_request.head.ref, 'content-review/'))
 
     concurrency:
       group: claude-triage-${{ github.event.pull_request.number }}
@@ -80,7 +88,7 @@ jobs:
             }
 
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
@@ -101,9 +109,19 @@ jobs:
           REPO_FULL="${{ github.repository }}"
           AUTHOR="${{ github.event.pull_request.user.login }}"
 
-          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+          # GitHub App bots are not collaborators, so the permission API
+          # below returns "none" for them. Trusted bots that open PRs on this
+          # repo are whitelisted by name instead. `workprentice` is Joe Duffy's
+          # docs-automation identity (the Docs Groundskeeper agent) and is
+          # trusted like an internal author. The author string differs by source:
+          # this workflow reads the REST webhook `user.login` (`workprentice[bot]`)
+          # while claude-code-review.yml reads `gh pr view` (`app/workprentice`),
+          # so both forms are listed in both files. Keep this list in sync with
+          # the matching check in claude-code-review.yml.
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+             || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ Copilot bot $AUTHOR is whitelisted for triage"
+            echo "✓ Bot $AUTHOR is whitelisted for triage"
             exit 0
           fi
 
@@ -176,6 +194,7 @@ jobs:
           MIXED=$(echo "$CLASS" | jq -r '.mixed // false')
           TRIVIAL=$(echo "$CLASS" | jq -r '.trivial // false')
           FRONTMATTER_ONLY=$(echo "$CLASS" | jq -r '.frontmatter_only // false')
+          OVERSIZED=$(echo "$CLASS" | jq -r '.oversized // false')
           PROSE_CHECK_NEEDED=$(echo "$CLASS" | jq -r '.prose_check_needed // false')
 
           # 3. Conditional prose check (model call only for trivial /
@@ -244,6 +263,7 @@ jobs:
           elif [[ "$FRONTMATTER_ONLY" == "true" ]]; then
             TARGET["review:frontmatter-only"]=1
           fi
+          [[ "$OVERSIZED" == "true" ]] && TARGET["review:oversized"]=1
           # Prose concerns flag — applies to either trivial or
           # frontmatter-only when EITHER the Haiku spelling/grammar check
           # OR the Vale style check turned up issues.
@@ -260,7 +280,7 @@ jobs:
             case "$lbl" in
               review:triaging|review:in-progress|review:outstanding-issues|review:no-blockers|review:stale|review:error|needs-author-response)
                 continue ;;
-              domain:*|review:trivial|review:frontmatter-only|review:prose-flagged)
+              domain:*|review:trivial|review:frontmatter-only|review:oversized|review:prose-flagged)
                 EXISTING["$lbl"]=1 ;;
             esac
           done < <(echo "$PR_DATA" | jq -r '.labels[].name')
@@ -324,13 +344,42 @@ jobs:
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
           fi
 
+          # 8b. Oversized advisory comment. Same delete-and-repost semantics
+          # as TRIAGE_PROSE: always clear any prior copy first (so a PR that
+          # shrinks below the threshold on re-push loses the stale notice),
+          # then post fresh while the PR classifies as oversized.
+          gh api "repos/$REPO/issues/$PR/comments" \
+              --jq '.[] | select(.body | startswith("<!-- TRIAGE_OVERSIZED -->")) | .id' \
+              | while read -r cid; do
+                  [[ -n "$cid" ]] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
+                done
+
+          if [[ "$OVERSIZED" == "true" ]]; then
+              PR_ADDITIONS=$(echo "$PR_DATA" | jq -r '.additions')
+              PR_DELETIONS=$(echo "$PR_DATA" | jq -r '.deletions')
+              PR_FILES=$(echo "$PR_DATA" | jq -r '.files | length')
+              BODY=$(cat <<EOF
+          <!-- TRIAGE_OVERSIZED -->
+          📦 **Oversized PR** — this diff (+$PR_ADDITIONS/−$PR_DELETIONS across $PR_FILES files) exceeds the automated review budget, so the Claude review is skipped (\`review:oversized\`).
+
+          A diff this size is usually mostly generated output, which an automated line-review can't finish (and wouldn't add value to). What works better:
+
+          - Split the hand-written source (scripts, workflows, layouts, templates) into its own PR — that PR gets a normal full review.
+          - Have a human spot-check a sample of the generated output here.
+
+          \`@claude #new-review\` still force-runs a full review, but on a diff this size it will likely hit the job timeout.
+          EOF
+          )
+              gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
+          fi
+
           # 9. Summary line for the workflow log.
           DOMAINS_CSV=$(echo "$DOMAINS_JSON" | paste -sd, -)
           ADDED_CSV="${ADD_LIST[*]:-}"; ADDED_CSV="${ADDED_CSV// /,}"
           REMOVED_CSV="${REMOVE_LIST[*]:-}"; REMOVED_CSV="${REMOVED_CSV// /,}"
           PROSE_COUNT=$(echo "$PROSE_CONCERNS" | grep -c . || true)
           VALE_COUNT=$(echo "$VALE_CONCERNS" | grep -c . || true)
-          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
+          echo "triage: pr=$PR domains=${DOMAINS_CSV:-none} trivial=$TRIVIAL frontmatter-only=$FRONTMATTER_ONLY oversized=$OVERSIZED prose-checked=$PROSE_CHECK_NEEDED prose-concerns=$PROSE_COUNT vale-concerns=$VALE_COUNT added=${ADDED_CSV:-none} removed=${REMOVED_CSV:-none}"
 
       # Clear the triaging label whether classification succeeded or not
       # — the early-set step ran unconditionally (no access gate), so the

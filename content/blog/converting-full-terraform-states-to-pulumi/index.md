@@ -2,11 +2,11 @@
 title: "Converting Full Terraform States to Pulumi"
 date: 2023-10-25
 meta_desc: Learn how to convert whole Terraform states to Pulumi using the new Terraform converter
-meta_image: meta.png
 authors:
     - fraser-waters
 tags:
     - migration
+category: tutorials
 ---
 
 Building on our work of [converting Terraform projects](/blog/converting-full-terraform-programs-to-pulumi/), we now have support for adopting resources from Terraform state.

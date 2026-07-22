@@ -3,7 +3,6 @@ title_tag: "Using Octopus Deploy with Pulumi | CI/CD"
 meta_desc: Run Pulumi in an Octopus Deploy deployment process to deploy infrastructure changes and promote them to production through Octopus environments.
 title: Octopus Deploy
 h1: Using Octopus Deploy with Pulumi
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Octopus Deploy
@@ -107,7 +106,7 @@ A [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) reports the propose
 
 Within Octopus, you can also preview before applying: run `pulumi preview` as an early step in the deployment process, then add a [manual intervention and approval step](https://octopus.com/docs/projects/built-in-step-templates/manual-intervention-and-approvals) that pauses the deployment until someone signs off on the preview. The `pulumi up` step runs only after approval.
 
-To let reviewers exercise a change in a live environment before it merges, use a [Review Stack](/docs/deployments/deployments/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
+To let reviewers exercise a change in a live environment before it merges, use a [Review Stack](/docs/deployments/concepts/review-stacks/), which provisions an ephemeral stack for the pull request and destroys it when the pull request closes.
 
 ### Deploy to staging on merge
 
@@ -137,5 +136,5 @@ Octopus Deploy is not aware of pull requests, but Pulumi Cloud's [version contro
 - [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to deployments and developers consistently.
 - [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
-- [Review Stacks](/docs/deployments/deployments/review-stacks/) — ephemeral environments for pull requests.
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments for pull requests.
 - [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your version control system.

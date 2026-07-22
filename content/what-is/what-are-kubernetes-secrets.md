@@ -3,7 +3,6 @@ title: What are Kubernetes Secrets?
 meta_desc: |
      Learn about Kubernetes Secrets and how to manage sensitive information securely in your Kubernetes clusters.
 
-meta_image: /images/what-is/what-are-kubernetes-secrets-meta.png
 type: what-is
 page_title: "What are Kubernetes Secrets?"
 
@@ -18,7 +17,7 @@ Kubernetes Secrets, or [Secrets](https://kubernetes.io/docs/concepts/configurati
 
 ## Why use Kubernetes Secrets?
 
-Manual secrets management is prone to introducing errors and poses high-lift operational challenges. At the same time,  the absence of a dedicated secret management solution means carrying a higher risk of accidental data leaks or unauthorized access to private information. One should never use ConfigMaps to hold secrets. Kubernetes Secrets come into play by providing an integrated mechanism for the secure storage and distribution of sensitive data to pods.
+Manual secrets management is prone to introducing errors and poses high-lift operational challenges. At the same time, the absence of a dedicated secret management solution means carrying a higher risk of accidental data leaks or unauthorized access to private information. One should never use ConfigMaps to hold secrets. Kubernetes Secrets come into play by providing an integrated mechanism for the secure storage and distribution of sensitive data to pods.
 
 Kubernetes Secrets are fundamental to the cloud-native stack. It provides a secure and standardized means to manage sensitive information like credentials, tokens, or API keys within our cloud apps so these don't have to be passed around in plain text.
 
@@ -265,8 +264,6 @@ To address these challenges, you may consider using external secret management t
 
 ### Conclusion
 
-Kubernetes secrets are crucial to many applications and we must have a solution to the lifecycle of these. Kubernetes Secrets is the native way to manage secrets. By following best practices and using Kubernetes secrets, you can ensure the security of your applications and sensitive data.
+The thing to internalize is that a Kubernetes Secret is a storage and distribution primitive, not an encryption boundary. Base64 is encoding, namespace-scoped RBAC is the only built-in access control, and there is no versioning, rotation, or audit trail in the box. Treating the native Secret as "secure by default" is where most real exposures start. The practical decision is not whether to use Kubernetes Secrets, but what you layer on top: encryption at rest in etcd, tight RBAC, and an external system when you need rotation, cross-namespace sharing, or an audit history.
 
-Now that you're equipped with the knowledge of Kubernetes Secrets, take your cloud infrastructure management to the next level with Pulumi Advanced Secrets Management. Discover how to efficiently manage sensitive data and secrets in your cloud applications. Dive into Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/) for in-depth information on encrypting specific values for added security and ensuring that these values never appear in plain text in your state file​.
-
-Our [community on Slack](https://slack.pulumi.com/) is always open for discussions, questions, and sharing experiences. Join us there and become part of our growing community of cloud professionals!
+For encrypting values so they never appear in plain text in your state file, see Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/). The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

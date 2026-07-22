@@ -2,14 +2,14 @@
 title: "Resource hooks"
 date: 2025-06-30
 meta_desc: "Pulumi now allows you to run custom code at any point in the resource lifecycle"
-meta_image: meta.png
 authors:
     - will-jones
     - julien-poissonnier
 tags:
     - features
     - releases
-    - iac
+    - infrastructure-as-code
+category: product
 ---
 
 Pulumi programs are _declarative_, allowing you to specify the desired state of your infrastructure while Pulumi figures out the rest. But what about the times where you want to be more involved in what Pulumi is doing? **Resource hooks** are [one of our most requested features](https://github.com/pulumi/pulumi/issues/1691), and from Pulumi 3.182.0 we're excited to announce that you'll be able to use them to run arbitrary code at any point in Pulumi's resource lifecycle!

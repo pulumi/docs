@@ -4,12 +4,12 @@ date: 2024-10-02T14:35:35-07:00
 draft: false
 meta_desc: The updated Resources page provides a new user experience for creating custom views that help you gain an understanding and insights into your infrastructure.
 
-meta_image: meta.png
 authors:
     - craig-symonds
 tags:
     - insights
     - resources
+category: product
 ---
 
 Pulumi Insights gives you the tools to stay informed about your cloud infrastructure. Our Resource explorer provides advanced search and filtering too [find what you need](/blog/resource-search). Today, we are excited to release an update that adds new ways to factor your resource data, and share those views with other users in your organization!
@@ -34,7 +34,7 @@ The updated Resources page enables you to customize the view of your resources b
 
 ### Pinning Favorite Views
 
-Once you have configured the resources view to provide the insights needed, you can now save that view as a pinned view under the Resource tab in the left navigation panel. These pinned views enable the Resources page to act as a dashboard to the most important views and insights into your infrastructure. The views are also defined in the url for the page which means you can freely copy the url and send it to a collegue, or add the URL to a work tracking system to provide context in the task definition.
+Once you have configured the resources view to provide the insights needed, you can now save that view as a pinned view under the Resource tab in the left navigation panel. These pinned views enable the Resources page to act as a dashboard to the most important views and insights into your infrastructure. The views are also defined in the url for the page which means you can freely copy the url and send it to a colleague, or add the URL to a work tracking system to provide context in the task definition.
 
 {{< video title="Favorites" src="favorites.mp4" autoplay="true" loop="true" >}}
 

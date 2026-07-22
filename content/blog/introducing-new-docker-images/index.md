@@ -2,13 +2,13 @@
 title: "Introducing New Slimmer Docker Images"
 date: 2020-06-25
 draft: false
-meta_image: docker.png
 meta_desc: "Introducing new language specific Docker images which are smaller and more flexible than before"
 authors:
     - lee-briggs
 tags:
     - features
     - docker
+category: product
 
 ---
 

@@ -3,7 +3,6 @@ title_tag: "Resolving macOS Architecture Mismatch Issues"
 meta_desc: "Learn how to diagnose and fix Pulumi crashes or hangs on Apple Silicon Macs caused by x86_64 binaries running under Rosetta 2."
 title: macOS Architecture Mismatch
 h1: macOS Architecture Mismatch
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: macOS Architecture Mismatch

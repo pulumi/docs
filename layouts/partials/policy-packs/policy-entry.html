@@ -1,0 +1,42 @@
+{{/*
+    Renders one policy as a Markdown block for a generated policy pack page.
+
+    Takes a dict:
+      policy     - the policy object from data/policy_pack_policies/<pack>.json
+      controlled - the pack's (policy, control) pairs, used to list every control
+                   this policy satisfies alongside that control's own specification.
+                   Pass an empty slice for packs with no framework metadata.
+
+    Returns the Markdown string.
+*/}}
+{{ $policy := .policy }}
+{{ $controlled := .controlled }}
+
+{{ $md := slice (printf "### %s\n" $policy.name) }}
+
+{{/* The control reference is deliberately not repeated on this line — the bullets
+     below list each control with its own specification, whereas this line would show
+     the raw semicolon-joined form for a policy that maps to several controls. */}}
+{{ $facts := slice }}
+{{ with $policy.severity }}{{ $facts = $facts | append (printf "**Severity:** %s" .) }}{{ end }}
+{{ with $policy.enforcementLevel }}{{ $facts = $facts | append (printf "**Enforcement:** %s" .) }}{{ end }}
+{{ with $facts }}{{ $md = $md | append (printf "%s\n" (delimit . " · ")) }}{{ end }}
+
+{{ with $policy.description }}{{ $md = $md | append (printf "%s\n" .) }}{{ end }}
+
+{{ with where $controlled "policy.name" $policy.name }}
+    {{ $specLines := slice }}
+    {{ range $pair := . }}
+        {{ $specLines = $specLines | append (printf "- **%s** — %s" $pair.ref $pair.spec) }}
+    {{ end }}
+    {{ $md = $md | append (printf "%s\n" (delimit $specLines "\n")) }}
+{{ end }}
+
+{{/* The blank line after <details> is what lets Goldmark parse the body as Markdown
+     rather than as raw HTML. */}}
+{{ with $policy.remediationSteps }}
+    {{ $steps := partial "policy-packs/remediation.html" . }}
+    {{ $md = $md | append (printf "<details>\n<summary>Remediation</summary>\n\n%s\n\n</details>\n" $steps) }}
+{{ end }}
+
+{{ return (delimit $md "\n") }}

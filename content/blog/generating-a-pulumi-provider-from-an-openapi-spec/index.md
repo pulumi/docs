@@ -3,13 +3,12 @@ title: "Generating a Pulumi Provider from an OpenAPI Spec"
 date: 2026-05-28
 draft: false
 meta_desc: "Pulumi Service Provider v1.0 generates its pulumiservice:api/* surface from Pulumi Cloud's OpenAPI spec at runtime, so new features land without provider PRs."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - luke-ward
 tags:
-    - pulumi-service
     - pulumi-cloud
+category: product
 schema_type: auto
 
 # Social media copy is auto-posted to X, LinkedIn, and Bluesky when merged to master.

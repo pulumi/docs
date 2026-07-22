@@ -2,13 +2,13 @@
 title: "Organizing AWS Accounts With Pulumi"
 date: 2023-02-06
 meta_desc: Learn how you can use Pulumi to manage your AWS Organizations hierarchy and automatically create member accounts.
-meta_image: meta.png
 authors:
     - praneet-loke
 tags:
     - aws
     - enterprise
     - components
+category: tutorials
 ---
 
 In an enterprise organization, an IT self-service "vending machine" allows employees to quickly and easily request and receive access to pre-approved cloud resources. Behind the scenes, Pulumi programs may orchestrate any of the requisite resources. We will look at an example of using Pulumi to create an AWS child account, within an AWS Organization.
@@ -361,6 +361,10 @@ And with those additions, we get this preview:
 ![Add Shared Test Account](add-test-account.gif)
 
 This post demonstrates how you could use the Pulumi programming model to encapsulate and account for the hierarchical organization structure that your team desires or is required to have for any number of reasons. While an enterprise organization might be interested in this sort of a setup to ensure multiple teams in the organization operate in a similar way, smaller teams should also strongly consider organizing their AWS accounts in a way that enforces the principle of least privileged access. Especially, if you are looking to get SOC2 certified and need to ensure strict isolation of resources that hold any kind of real-world customer data.
+
+{{< blog/cta-card title="Manage AWS accounts as code" label="Learn more" href="/docs/iac/concepts/components/" >}}
+Use Pulumi component resources to provision AWS Organizations units, member accounts, and least-privilege roles in a repeatable way. Build a self-service account structure your team can request and review in a pull request.
+{{< /blog/cta-card >}}
 
 ## Next Steps
 

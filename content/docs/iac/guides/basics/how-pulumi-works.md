@@ -3,7 +3,6 @@ title_tag: "How Pulumi IaC Works | Pulumi Guides"
 meta_desc: "How Pulumi IaC works internally: the language host, deployment engine, and resource providers, and how they interact when you run pulumi up."
 title: How Pulumi IaC Works
 h1: How Pulumi IaC Works
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: How Pulumi IaC Works

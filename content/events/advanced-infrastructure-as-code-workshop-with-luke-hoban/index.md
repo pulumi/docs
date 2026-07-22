@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Advanced Infrastructure as Code - Workshop with Luke Hoban
 meta_desc: In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing
-meta_image:
+meta_image: /events/advanced-infrastructure-as-code-workshop-with-luke-hoban/meta.png
+meta_image_square: /events/advanced-infrastructure-as-code-workshop-with-luke-hoban/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -42,7 +43,7 @@ location: virtual
 
 # Description of the event.
 description: |
-    In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing. You'll also learn how to apply infrastructure as code to Kubernetes - both for provisioning managed Kubernetes clusters and deploying Kubernetes applications and services on top of existing clusters.  [Get started](https://pulumi.com/start)
+    In this workshop, Pulumi experts cover advanced infrastructure as code topics including authoring components, multi-stack architectures, and testing. You'll also learn how to apply infrastructure as code to Kubernetes - both for provisioning managed Kubernetes clusters and deploying Kubernetes applications and services on top of existing clusters. [Get started](https://pulumi.com/start)
 
 learn:
     - The basics of infrastructure as code and the Pulumi programming model

@@ -2,13 +2,13 @@
 title: "New in Pulumi IaC: `replacementTrigger` Resource Option"
 date: 2026-01-22
 meta_desc: "You can now use the `replacementTrigger` resource option to control when resources are recreated"
-meta_image: meta.png
 authors:
     - tom-harding
 tags:
     - features
-    - iac
+    - infrastructure-as-code
     - releases
+category: product
 social:
     twitter: "New in Pulumi IaC: Use the replacementTrigger resource option to control when your infrastructure resources are replaced."
     linkedin: "Pulumi introduces a powerful new feature for fine-grained control over infrastructure deployment: the replacementTrigger resource option. Now you can override the replacement mechanism in the Pulumi engine to enable finer control over features like key cycling and versioning."
@@ -53,6 +53,7 @@ const keyManager = new KeyManagerResource("key-manager", {}, {
 
 ```py
 ...
+from datetime import datetime
 
 today = datetime.now()
 trigger = f"{today.month}-{today.year}"

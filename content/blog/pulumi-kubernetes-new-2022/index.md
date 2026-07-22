@@ -2,9 +2,10 @@
 date: "2022-10-23"
 title: "Pulumi+Kubernetes: New Flux Integration and Inline Programs"
 authors: ["luke-hoban", "michael-bridgen"]
-tags: ["Kubernetes", "Continuous-Delivery", "operators"]
+tags: [kubernetes, continuous-delivery, operators]
+category: product
 meta_desc: "Pulumi Kubernetes Operator v1.10, New Pulumi Provider for Flux, Pulumi Kubernetes Provider v3.22"
-meta_image: meta.png
+
 ---
 
 Pulumi’s Universal Infrastructure as Code platform works with all major clouds and over 100 cloud and SaaS providers, but among all its uses one of the most important is the ability to bring rich Infrastructure as Code tools and practices to Kubernetes projects and teams.

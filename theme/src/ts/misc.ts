@@ -108,7 +108,11 @@ export function generateOnThisPage() {
     let found = false;
     const headingItems: { element: HTMLElement, listItems: HTMLElement[] }[] = [];
 
-    document.querySelectorAll("h2, h3").forEach((el: HTMLElement) => {
+    // Scope to the main content region so headings in page chrome (e.g. the
+    // screen-reader-only "Navigation" heading in the mobile nav sheet, which
+    // renders in the header, outside #main) don't leak into the TOC.
+    const content = document.querySelector("#main") || document;
+    content.querySelectorAll("h2, h3").forEach((el: HTMLElement) => {
         if (el.closest('.hidden')) {
             return;
         }
@@ -140,11 +144,17 @@ export function generateOnThisPage() {
 
         let tocRafPending = false;
         const setActiveItem = () => {
-            let active = null;
+            // Active = the last heading scrolled above a line 80px below the
+            // viewport top (just past the headings' 60px scroll-margin-top, so the
+            // heading you click registers instead of the next). Uses viewport-
+            // relative coords; offsetTop would be wrong here (positioned ancestor).
+            let active = headingItems[0];
             for (const heading of headingItems) {
-                if (!active && heading.element.offsetTop >= window.scrollY) {
+                if (heading.element.getBoundingClientRect().top <= 80) {
                     active = heading;
                 }
+            }
+            for (const heading of headingItems) {
                 heading.listItems.forEach(li => li.classList.toggle("active", heading === active));
             }
         };

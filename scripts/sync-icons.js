@@ -30,6 +30,7 @@ const PHOSPHOR_WEIGHTS = ['regular', 'bold', 'fill', 'duotone'];
  * svglogosUrl     — svglogos.dev URL used when simpleIconsSlug is null or not found
  */
 const BRAND_ICONS = [
+    { name: 'pulumi',   simpleIconsSlug: 'pulumi',   svglogosUrl: null },
     { name: 'github',   simpleIconsSlug: 'github',   svglogosUrl: null },
     { name: 'youtube',  simpleIconsSlug: 'youtube',  svglogosUrl: null },
     { name: 'x',        simpleIconsSlug: 'x',        svglogosUrl: null },
@@ -37,6 +38,9 @@ const BRAND_ICONS = [
     { name: 'slack',    simpleIconsSlug: null,        svglogosUrl: 'https://cdn.svglogos.dev/logos/slack-icon.svg' },
     { name: 'linkedin', simpleIconsSlug: null,        svglogosUrl: 'https://cdn.svglogos.dev/logos/linkedin-icon.svg' },
     { name: 'bluesky',  simpleIconsSlug: 'bluesky',  svglogosUrl: null },
+    { name: 'reddit',   simpleIconsSlug: 'reddit',   svglogosUrl: null },
+    // Hacker News shares Y Combinator's mark (simple-icons has no `hackernews`).
+    { name: 'hackernews', simpleIconsSlug: 'ycombinator', svglogosUrl: null },
 ];
 
 // ─── Utilities ───────────────────────────────────────────────────────────────

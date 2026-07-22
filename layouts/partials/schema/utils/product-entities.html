@@ -111,7 +111,7 @@
   {{ if or (in $content "pulumi cloud") (in $title "pulumi cloud") }}
     {{ $mainProduct = $pulumiCloud }}
     {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
-  {{ else if or (in $content "pulumi esc") (in $content "environments secrets configuration") (in $title "esc") }}
+  {{ else if or (in $content "pulumi env") (in $content "environments secrets configuration") (in $title "esc") }}
     {{ $mainProduct = $pulumiESC }}
     {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
   {{ else if or (in $content "pulumi insights") (in $title "insights") }}

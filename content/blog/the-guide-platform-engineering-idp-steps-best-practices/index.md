@@ -23,7 +23,6 @@ meta_desc: "7-step guide to platform engineering success: security, internal dev
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: platform-engineering-guide.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -39,6 +38,7 @@ tags:
     - policy-as-code
     - finops
     - cost-efficiency
+category: best-practices
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -152,6 +152,10 @@ Policy as code can be applied in two key ways:
 - **Detective controls**: Establish policies that continuously monitor the deployed infrastructure, triggering alerts or remediation actions when deviations from the desired state are detected.
 
 By combining [IaC and policy as code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
+
+{{< blog/cta-card title="Build your internal developer platform" label="Explore Pulumi IDP" href="/product/internal-developer-platforms/" >}}
+Give developers self-service infrastructure with reusable components, golden paths, and governance built in using Pulumi IDP.
+{{< /blog/cta-card >}}
 
 ## Step 7: Evolving Towards Self-Service
 

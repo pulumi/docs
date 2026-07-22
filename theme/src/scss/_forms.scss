@@ -1,0 +1,193 @@
+// Form system — inputs, textareas, selects, checkboxes, radios, and labels.
+//
+// Compose with:  class="form-input form-input-lg"  (default size baked into the
+// base class; add a size modifier only to override — same convention as .btn/.badge).
+//
+// Controls:  form-input | form-textarea | form-select | form-checkbox | form-radio
+// Sizes:     (default) | -sm | -lg | -xl
+// Meta:      form-label | form-help | form-error
+//
+// HEIGHT CONTRACT: control heights mirror the .btn size scale (_button.scss) so a
+// form control and a same-size button line up:
+//     -sm = h-8   (default) = h-9   -lg = h-10   -xl = h-12
+//
+// Colors come from the Pulumi brand tokens: bg white, text gray-950, border
+// gray-300, placeholder gray-500, focus border+ring violet-800, disabled opacity-50.
+//
+// This partial is imported FIRST inside main.scss's @layer components block so the
+// later form-consuming partials (_hubspot.scss, _blog.scss, _footer.scss) can
+// @include its mixins — Sass resolves imports sequentially.
+
+// Single radius knob — retune every control at once. Buttons don't vary radius by
+// size, so neither do inputs. Plain border-radius (not @apply) so the CSS var flows.
+$form-radius: var(--radius-md);
+
+// Inset depth shadows layered on top of the border (brand tokens shadow.input /
+// shadow.select). Inputs get a top inner shadow; selects a bottom inner shadow.
+// The resting shadow is exposed as the --form-resting-shadow custom property so a
+// dark context can suppress it without restating the focus stack below. To
+// suppress, set it to the no-op shadow `0 0 #0000` — NOT `none`: `none` is
+// invalid inside a shadow list, so `box-shadow: $form-focus-ring, none` gets
+// discarded at computed-value time and the focus ring vanishes with it.
+$form-input-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.12);
+$form-select-shadow: inset 0 -2px 4px 0 rgb(0 0 0 / 0.08);
+
+// Focus adds a 2px violet-800 inset ring ON TOP of the resting shadow, and the
+// border also goes violet-800 — the two merge into one clean ~3px edge.
+$form-focus-ring: inset 0 0 0 2px var(--color-violet-800);
+$form-invalid-ring: inset 0 0 0 2px var(--color-red-800);
+
+// Caret chevron drawn as a background SVG (class-wide fix for flush carets). The
+// gray-500 (#9997a0) stroke matches placeholder text; the light variant (gray-300
+// #cbcace) is for dark surfaces. NOTE: this same SVG is duplicated verbatim in the
+// filter-select Stencil component (shadow DOM can't read this Sass var) —
+// theme/stencil/src/components/filter-select/filter-select-option-group.tsx. Keep
+// them in sync.
+$form-caret-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%239997a0' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3E%3C/svg%3E";
+$form-caret-svg-light: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23cbcace' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3E%3C/svg%3E";
+
+// Custom check/dot marks for the shadcn-style checkbox/radio (white on violet).
+$form-check-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m3.5 8 3 3 6-6.5'/%3E%3C/svg%3E";
+$form-radio-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='3' fill='%23fff'/%3E%3C/svg%3E";
+
+// ---------------------------------------------------------------------------
+// Mixins — consumed here and by _hubspot.scss / _blog.scss / _footer.scss.
+// ---------------------------------------------------------------------------
+
+// Base chrome shared by inputs, textareas, and selects. 16px text on mobile
+// (text-base) prevents iOS zoom-on-focus; md:text-sm matches .btn on desktop.
+@mixin form-control-base {
+    @apply block w-full min-w-0 appearance-none border border-gray-300 bg-white text-gray-950
+           transition-all outline-none placeholder:text-gray-500
+           disabled:pointer-events-none disabled:opacity-50 disabled:bg-gray-100
+           h-9 px-2.5 py-1.75 text-base md:text-sm;
+
+    border-radius: $form-radius;
+    --form-resting-shadow: #{$form-input-shadow};
+    box-shadow: var(--form-resting-shadow, none);
+
+    &:focus,
+    &:focus-visible {
+        @apply border-violet-800;
+        box-shadow: $form-focus-ring, var(--form-resting-shadow, none);
+    }
+
+    // Invalid state — aria-invalid (hand-authored) and HubSpot's .error class.
+    &[aria-invalid="true"],
+    &.error {
+        @apply border-red-800;
+
+        &:focus,
+        &:focus-visible {
+            @apply border-red-800;
+            box-shadow: $form-invalid-ring, var(--form-resting-shadow, none);
+        }
+    }
+}
+
+// Size mixins — heights mirror the .btn scale (see contract above).
+@mixin form-control-sm { @apply h-8 px-2 py-1.5 text-sm; }
+@mixin form-control-lg { @apply h-10 px-3 py-2; }
+@mixin form-control-xl { @apply h-12 px-3 py-2.5; }
+
+// Textarea additions — grow vertically instead of a fixed height.
+@mixin form-textarea-chrome { @apply h-auto min-h-16 py-2; }
+
+// Select-specific chrome: bottom inner shadow, pointer cursor, room for the caret,
+// and the chevron background. Include AFTER a size mixin so the pr-8 wins over the
+// size's horizontal padding.
+@mixin form-select-chrome {
+    @apply cursor-pointer pr-8;
+
+    --form-resting-shadow: #{$form-select-shadow};
+    background-image: url("#{$form-caret-svg}");
+    background-repeat: no-repeat;
+    background-position: right 0.625rem center;
+    background-size: 1rem;
+
+    // Native multi-selects and sized listboxes have no single caret and grow.
+    &[multiple],
+    &[size]:not([size="1"]) {
+        @apply h-auto pr-2.5;
+        background-image: none;
+    }
+}
+
+// Shadcn-style checkbox/radio base. No inner depth shadow on check controls.
+@mixin form-check-base {
+    // p-0 + box-border keep it a 1rem SQUARE even when a wider control padding
+    // (e.g. HubSpot's fieldset input chrome) would otherwise inflate the box.
+    @apply appearance-none size-4 shrink-0 p-0 box-border border border-gray-300 bg-white align-middle
+           cursor-pointer transition-all outline-none bg-center bg-no-repeat
+           checked:bg-violet-primary checked:border-violet-primary
+           focus-visible:border-violet-primary focus-visible:ring-3 focus-visible:ring-violet-primary/50
+           disabled:pointer-events-none disabled:opacity-50;
+
+    background-size: 0.75rem;
+    // No inner depth shadow on check controls. Also resets the input inset shadow
+    // when this mixin is layered onto a HubSpot `.hs-form fieldset input`.
+    box-shadow: none;
+}
+
+// ---------------------------------------------------------------------------
+// Classes.
+// ---------------------------------------------------------------------------
+
+.form-input { @include form-control-base; }
+
+.form-textarea {
+    @include form-control-base;
+    @include form-textarea-chrome;
+}
+
+.form-select {
+    @include form-control-base;
+    @include form-select-chrome;
+
+    // Light caret + no inner shadow, for dark surfaces (footer, dark panels).
+    &.form-select-inverse {
+        --form-resting-shadow: 0 0 #0000;
+        background-image: url("#{$form-caret-svg-light}");
+    }
+}
+
+// Size modifiers. Selects re-assert their caret gutter after the size padding.
+.form-input-sm,
+.form-textarea-sm { @include form-control-sm; }
+.form-input-lg,
+.form-textarea-lg { @include form-control-lg; }
+.form-input-xl,
+.form-textarea-xl { @include form-control-xl; }
+
+.form-select-sm {
+    @include form-control-sm;
+    @apply pr-7;
+    background-position: right 0.5rem center;
+}
+.form-select-lg {
+    @include form-control-lg;
+    @apply pr-8;
+}
+.form-select-xl {
+    @include form-control-xl;
+    @apply pr-8;
+}
+
+.form-checkbox {
+    @include form-check-base;
+
+    border-radius: 4px;
+
+    &:checked { background-image: url("#{$form-check-svg}"); }
+}
+
+.form-radio {
+    @include form-check-base;
+    @apply rounded-full;
+
+    &:checked { background-image: url("#{$form-radio-svg}"); }
+}
+
+.form-label { @apply block text-sm mb-1 text-gray-950; }
+.form-help  { @apply block text-xs text-gray-500 mt-1; }
+.form-error { @apply block text-xs text-red-800 mt-1; }

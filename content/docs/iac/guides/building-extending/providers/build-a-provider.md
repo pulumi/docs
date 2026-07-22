@@ -3,7 +3,6 @@ title_tag: "Build a Provider"
 meta_desc: "Learn the process for building a Pulumi Provider that can be packaged and published in the Pulumi Registry."
 title: Build a Provider
 h1: Build a Provider
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
     iac:
         name: Build a Provider
@@ -46,7 +45,7 @@ Pulumi providers are [gRPC](https://grpc.io/) servers that respond to commands f
 
 Beyond the core functions involved with managing resources, there are a number of other aspects to a Pulumi provider. It is necessary to configure the provider, pass secrets, return output values, and store the state of resources. The Pulumi provider interface has built-in facilities for all of those concerns:
 
-- **Configuration and Secrets**: Set via [Pulumi ESC](/docs/esc/) [environments](/docs/esc/environments/) and/or `pulumi config`. Encrypted secrets and configuration values are passed to the provider at runtime. See [Provider configuration](/docs/iac/guides/building-extending/providers/provider-configuration/) for a detailed guide on declaring config keys, secrets, and environment variable defaults.
+- **Configuration and Secrets**: Set via [Pulumi ESC](/docs/esc/) [environments](/docs/esc/concepts/environments/) and/or `pulumi config`. Encrypted secrets and configuration values are passed to the provider at runtime. See [Provider configuration](/docs/iac/guides/building-extending/providers/provider-configuration/) for a detailed guide on declaring config keys, secrets, and environment variable defaults.
 - **Outputs**: Providers return outputs from resources, which can be referenced by other resources.
 - **State**: Pulumi maintains resource state to track dependencies and detect changes.
 
@@ -70,11 +69,7 @@ Pulumi providers can be written in any language that supports gRPC, and used in 
 
 We recommend using the Pulumi Go Provider SDK for Go providers, as it handles protocol complexity and generates schemas automatically. For other languages, or when you need full control over your schema and data structure mappings, use the [direct implementation](/docs/iac/guides/building-extending/providers/implementers/) approach.
 
-Some advantages of using the Pulumi Provider SDK:
-
-- **Minimal Code Required**: You define your resource types and implementation using Go structs and methods, and the SDK handles the rest (RPC, auto-generated schema for multi-language support, etc).
-- **Includes a Testing Framework**: Testing custom providers is made much easier with the SDK's built-in testing framework.
-- **Middleware Support**: Enhances providers with layers like dispatch logic, schema generation, and cancellation propagation.
+This guide focuses on building a custom resource. For the library's full capabilities—including [functions](/docs/iac/concepts/functions/) and [components](/docs/iac/concepts/components/), the built-in testing framework, and its internal architecture—see the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/) overview.
 
 ## Example: Build a custom `file` provider
 
@@ -359,7 +354,7 @@ $ cd use-file-provider
 $ pulumi new yaml
 ```
 
-This will initiatize a minimal YAML program. Let's modify the default YAML file:
+This will initialize a minimal YAML program. Let's modify the default YAML file:
 
 ***Example:** The `Pulumi.yaml` file*
 
@@ -519,7 +514,7 @@ Here's where the business logic of the resource operations happens. In this exam
 
 The `Create` operation handles the logic of determining if the resource exists or not, and if not, it creates it using the provided argument context. In many providers this is where you would interact with external cloud APIs, databases, and other systems. In this example, we're going to interact with our local filesystem using calls to Go's `os` library.
 
-First, we check to see if the user configured the `force` option. We can access that through the `req.Inputs` collection, which is will be an instance of `FileArgs`. If `force` is true, we don't need to check to see if the file exists, otherwise, use `os.Stat` and `os.IsNotExist` to see if the specified directory and filename already exist. If it does, we exit early with an error. This will let Pulumi know that the create operation failed, and it will be propagated up to the end user via the console/log output.
+First, we check to see if the user configured the `force` option. We can access that through the `req.Inputs` collection, which will be an instance of `FileArgs`. If `force` is true, we don't need to check to see if the file exists, otherwise, use `os.Stat` and `os.IsNotExist` to see if the specified directory and filename already exist. If it does, we exit early with an error. This will let Pulumi know that the create operation failed, and it will be propagated up to the end user via the console/log output.
 
 To return an error, we return a null `CreateResponse` instance with an error string. The Provider SDK functions use a request and response pattern for each operation, parameterized by the argument and state types. The next piece of logic checks `req.DryRun` to see if we are in a *preview* mode or an *update* mode. If we are in preview mode, don't take any actions that would mutate the state and just return early.
 
@@ -567,7 +562,7 @@ func (File) Create(ctx context.Context, req infer.CreateRequest[FileArgs]) (resp
 
 The `Delete` operation removes a resource safely. This operation follows a similar pattern to `Create`, but instead of a `CreateRequest`/`CreateResponse` we have `DeleteRequest`/`DeleteResponse`.
 
-One new concept inroduced in this example function is the use of the Pulumi logger. Calling `p.GetLogger(ctx)` gets you a logger with a familiar interface. This is how you might pass informational messages and warnings to the user without throwing an error.
+One new concept introduced in this example function is the use of the Pulumi logger. Calling `p.GetLogger(ctx)` gets you a logger with a familiar interface. This is how you might pass informational messages and warnings to the user without throwing an error.
 
 ```go
 func (File) Delete(ctx context.Context, req infer.DeleteRequest[FileState]) (infer.DeleteResponse, error) {
@@ -600,7 +595,7 @@ func (File) Check(ctx context.Context, req infer.CheckRequest) (infer.CheckRespo
 
 ##### The `Update` operation
 
-The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode of not, we overwrite the file with the new contents. Note that it's not necessary to check if the input contents are different than current state of the content, as this logic is handled by the `Diff` operation.
+The `Update` operation modifies the resource with new values. After checking to see if we are in a preview mode or not, we overwrite the file with the new contents. Note that it's not necessary to check if the input contents are different than current state of the content, as this logic is handled by the `Diff` operation.
 
 ```go
 func (File) Update(ctx context.Context, req infer.UpdateRequest[FileArgs, FileState]) (infer.UpdateResponse[FileState], error) {

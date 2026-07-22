@@ -1,8 +1,8 @@
 ---
 title: Test-Driven Infrastructure Development with Pulumi and Jest
 date: 2022-06-13
+lastmod: 2026-06-18
 meta_desc: Add unit testing with Jest to your Pulumi toolbox to write better, safer infrastructure code.
-meta_image: meta.png
 authors:
     - christian-nunciato
 tags:
@@ -13,6 +13,7 @@ tags:
     - lambda
     - serverless
     - fullstack
+category: tutorials
 ---
 
 When I was a kid growing up in Southern California, there was a phone number you could call to find out what time it was. It was a local number, 853-1212 (easy to remember as the arrangement of the numbers on the keypad made a capital T), and I used it all the time, to set my watch, adjust the alarm clock, fix the display on the VCR. I don't recall the last time I used it, probably sometime in the mid '90s, but I do remember clearly the sound of [the voice at the other end of the line](https://telephoneworld.org/telephone-sounds/modern-north-american-telephone-sounds/time-temperature-weather-forecast-recordings/).
@@ -255,7 +256,7 @@ Excellent: you're now well on your way to writing more tests with Jest --- and w
 
 ## Tidy up the specs
 
-If you've written JavaScript tests before, particularly with tools like Jest, [Jasmine](https://jasmine.github.io/), and [Mocha](https://mochajs.org/), there's a good chance you've gotten used to writing those tests in a particular way. And if you're like me, you might've raised a bit of an eyebrow when you saw how that first test was written. Here it is again, this time with comments that capture the questions I might've had myself if I were seeing this code for the first time:
+If you've written JavaScript tests before, particularly with tools like Jest, [Jasmine](https://jasmine.github.io/), and [Mocha](https://legacy.mochajs.org/), there's a good chance you've gotten used to writing those tests in a particular way. And if you're like me, you might've raised a bit of an eyebrow when you saw how that first test was written. Here it is again, this time with comments that capture the questions I might've had myself if I were seeing this code for the first time:
 
 ```typescript
 it("is publicly accessible", (done) => {

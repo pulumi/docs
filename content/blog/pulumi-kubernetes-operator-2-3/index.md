@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-11-25
 draft: false
 meta_desc: "Pulumi Kubernetes Operator v2.3.0 adds preview mode for safe infrastructure changes and structured config support for GitOps workflows."
-meta_image: meta.png
 authors:
     - eron-wright
 tags:
@@ -14,6 +13,7 @@ tags:
     - gitops
     - operators
     - infrastructure-as-code
+category: product
 ---
 
 We're excited to announce the release of Pulumi Kubernetes Operator v2.3.0, introducing two powerful capabilities that enhance GitOps workflows: preview mode for validating infrastructure changes before deployment, and structured configuration support for managing complex data types. Building on the success of the v2.0 GA release, this update addresses long-standing community requests while maintaining full backwards compatibility. These features enable safer, more sophisticated infrastructure management patterns for platform engineering teams.

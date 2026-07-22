@@ -7,13 +7,12 @@ draft: false
 
 meta_desc: Neo automates migrations from CDK, Terraform, CloudFormation, and ARM to Pulumi with zero downtime and verified safety.
 
-meta_image: meta.png
 
 authors:
     - neo-team
 
 tags:
-    - neo
+    - pulumi-neo
     - aws
     - cdk
     - cloudformation
@@ -23,6 +22,7 @@ tags:
     - migration
     - ai
     - features
+category: product
 
 schema_type: auto
 

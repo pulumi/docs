@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Azure
 meta_desc: Learn how Kubernetes runs on Azure using AKS. Create clusters, deploy containerized apps, and manage infrastructure with Pulumi.
-meta_image: /events/getting-started-with-kubernetes-azure/intro-azure-aks-adam.png
+meta_image: /events/getting-started-with-kubernetes-azure/meta.png
+meta_image_square: /events/getting-started-with-kubernetes-azure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -48,7 +49,7 @@ description: |
 learn:
     - Create an Azure Kubernetes Service (AKS) cluster using Pulumi
     - How Pulumi manages Azure and Kubernetes resources together
-    - Deploy and update containerized application to AKS using safe, repeatable workflows
+    - Deploy and update containerized applications to AKS using safe, repeatable workflows
     - How to preview, update, and tear down Kubernetes infrastructure safely
 
 # The event presenters

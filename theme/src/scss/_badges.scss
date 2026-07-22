@@ -1,10 +1,103 @@
-.badge {
-    @apply align-middle rounded rounded-lg uppercase px-2 py-1 text-xs font-bold;
+// Shared badge system — a small, fully-rounded pill with mono all-caps overline
+// text, modeled on the design-system `cva` badge (variant + size axes) and mapped
+// onto this repo's @pulumi/design-tokens palette (`{color}-muted` bg + `{color}-primary`
+// text for the soft variants). Render as `class="badge badge-<variant> [badge-<size>]"`
+// (or via `layouts/partials/badge.html`), or compose in SCSS with
+// `@extend .badge; @extend .badge-<variant>;`.
+//
+// Variants live as top-level classes (not nested `&.badge-*`) so `@extend` consumers
+// (chooser preview pill, docs nav count, Algolia count, event-card tag) can pull in a
+// single variant. `ghost`/`link` from the cva source are omitted — no consumers yet.
 
-    &.badge-preview {
-        @apply bg-orange-200 text-orange-600;
+.badge {
+    @apply inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1
+        overflow-hidden rounded-full border border-transparent px-2 py-0.5
+        align-middle font-mono text-xs uppercase tracking-wide whitespace-nowrap
+        transition-colors;
+
+    // Optional leading/trailing icon (parity with cva `[&>svg]:size-3`).
+    & > svg {
+        @apply size-3 pointer-events-none;
     }
-    &.badge-required {
-        @apply border border-red-200 text-red-600;
+}
+
+// --- Variants -----------------------------------------------------------------
+.badge-default {
+    @apply bg-violet-primary text-white;
+}
+.badge-brand {
+    @apply bg-violet-muted text-violet-primary;
+}
+.badge-secondary {
+    @apply bg-gray-100 text-gray-primary;
+}
+.badge-outline {
+    @apply bg-white border-gray-200 text-service-black;
+}
+.badge-success {
+    @apply bg-green-muted text-green-primary;
+}
+.badge-warning {
+    @apply bg-yellow-muted text-yellow-primary;
+}
+.badge-destructive {
+    @apply bg-red-muted text-red-primary;
+}
+.badge-info {
+    @apply bg-blue-muted text-blue-primary;
+}
+.badge-dark {
+    @apply bg-service-black border-gray-800 text-white;
+}
+.badge-ghost {
+    // Chromeless soft pill — no fill or border, just muted text. Used for the
+    // count on the case-study industry filter pills.
+    @apply bg-transparent text-gray-primary;
+}
+
+// Back-compat aliases — the chooser (`_chooser.scss` @extend) and hand-authored
+// content (`saml/sso.md`) reference these names directly, so they must persist.
+// "PREVIEW" / "BETA" status. Split off its own orange rule (rather than
+// @extend .badge-warning) so warning can follow the token's yellow semantic
+// while preview/beta keeps its established amber identity.
+.badge-preview {
+    @apply bg-orange-muted text-orange-primary;
+}
+.badge-required {
+    @extend .badge-destructive; // "REQUIRED"
+}
+
+// --- Sizes (base = default: h-5 / text-xs) ------------------------------------
+.badge-sm {
+    @apply h-4 px-1.5 text-xxs;
+}
+.badge-lg {
+    @apply h-6 px-3 text-sm;
+}
+
+// --- Link affordances ---------------------------------------------------------
+a.badge {
+    @apply cursor-pointer;
+
+    &:focus-visible {
+        @apply outline-none ring-2 ring-violet-300;
     }
+}
+a.badge-default:hover {
+    @apply bg-violet-600;
+}
+a.badge-brand:hover {
+    @apply bg-violet-200;
+}
+a.badge-secondary:hover {
+    @apply bg-violet-100 text-violet-primary;
+}
+a.badge-outline:hover {
+    @apply border-violet-primary text-violet-primary;
+}
+a.badge-dark:hover {
+    @apply border-violet-300;
+}
+a.badge-ghost:hover {
+    @apply bg-gray-100 text-violet-primary;
 }

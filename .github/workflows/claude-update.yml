@@ -6,6 +6,14 @@ name: Pre-merge Review (update-review)
 # refresh -- bare `@claude` mentions go to claude.yml (off-the-shelf tag
 # mode) and `@claude #new-review` goes to claude-new.yml (regenerate).
 # The compound-mention contract is documented inline in the prompt.
+#
+# A second entry point exists for the stale-review auto-refresh: the
+# auto-refresh job in claude-code-review.yml dispatches this workflow
+# (workflow_dispatch, auto=true) when a synchronize push passes the
+# deterministic auto-refresh-gate.py check — every hunk lands on a line
+# range carried by a 🚨 Outstanding finding and the push is small. The run
+# then follows update.md Case 1 (fix-response) with a synthesized mention
+# body; there is no human mention author.
 
 on:
   issue_comment:
@@ -16,6 +24,25 @@ on:
     types: [opened, assigned]
   pull_request_review:
     types: [submitted]
+  # Dispatched by claude-code-review.yml's auto-refresh job (auto=true).
+  # Humans with write access can also dispatch manually from the Actions
+  # UI as an alternative to commenting `@claude #update-review`.
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number whose pinned review to refresh'
+        required: true
+        type: string
+      head_sha:
+        description: 'PR head SHA the dispatcher evaluated; the run no-ops if the PR head has moved past it (superseded by a newer push)'
+        required: false
+        type: string
+        default: ''
+      auto:
+        description: 'true when dispatched by the auto-refresh gate (attributes the run to auto-refresh instead of a human mention author)'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   claude-update:
@@ -29,10 +56,18 @@ jobs:
     #      contains literal "@claude" instructions which would otherwise
     #      re-trigger on every review post.
     if: |
-      ((github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
+      ((github.event_name == 'workflow_dispatch') ||
+       (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
        (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@claude') && contains(github.event.comment.body, '#update-review') && !contains(github.event.comment.body, '#new-review') && github.event.comment.user.login != 'claude[bot]') ||
        (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude') && contains(github.event.review.body, '#update-review') && !contains(github.event.review.body, '#new-review') && github.event.review.user.login != 'claude[bot]') ||
        (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')) && (contains(github.event.issue.body, '#update-review') || contains(github.event.issue.title, '#update-review')) && !contains(github.event.issue.body, '#new-review') && !contains(github.event.issue.title, '#new-review') && github.event.issue.user.login != 'claude[bot]'))
+    # One update per PR at a time; a newer trigger (another push through the
+    # auto-refresh gate, or a fresh #update-review mention) cancels the
+    # in-flight run — the newest head wins. Also the once-per-push dedup for
+    # the auto path: stacked synchronize events collapse here.
+    concurrency:
+      group: claude-update-${{ github.event.inputs.pr_number || github.event.pull_request.number || github.event.issue.number }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     environment: production
     permissions:
@@ -62,6 +97,10 @@ jobs:
               PR="${{ github.event.pull_request.number }}"
               IS_PR="true"
               ;;
+            workflow_dispatch)
+              PR="${{ github.event.inputs.pr_number }}"
+              IS_PR="true"
+              ;;
             *)
               PR=""; IS_PR="false"
               ;;
@@ -70,18 +109,36 @@ jobs:
             SHA=$(gh pr view "$PR" --repo "${{ github.repository }}" --json headRefOid --jq .headRefOid)
             echo "sha=$SHA" >> "$GITHUB_OUTPUT"
           fi
+          # Staleness guard for dispatched runs: the dispatcher pins the head
+          # SHA it evaluated. If the PR has moved on since (another push beat
+          # this run out of the queue), the whole run no-ops — the newer
+          # push's own gate evaluation owns the refresh. The concurrency
+          # group handles overlapping runs; this handles the
+          # already-finished-dispatching race.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] \
+             && [ -n "${{ github.event.inputs.head_sha }}" ] \
+             && [ "$SHA" != "${{ github.event.inputs.head_sha }}" ]; then
+            echo "superseded=true" >> "$GITHUB_OUTPUT"
+            echo "PR #$PR head moved from ${{ github.event.inputs.head_sha }} to $SHA — superseded; no-op"
+          fi
 
       # ESC runs before checkout so the bot token can authenticate the
       # checkout — pushes made by claude-code-action later in the workflow
       # then go out as pulumi-bot rather than github-actions[bot],
       # which is what lets downstream workflows (build-and-deploy, social
       # review, etc.) fire on those commits.
+      # The three setup steps below skip on superseded dispatched runs
+      # (steps.head sets superseded=true when the PR head moved past the
+      # dispatcher's pinned SHA) — the run is a no-op, so don't pay for
+      # secrets, checkout, or toolchain install.
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        if: steps.head.outputs.superseded != 'true'
+        uses: pulumi/esc-action@v3
 
       - name: Checkout repository
-        uses: actions/checkout@v6
+        if: steps.head.outputs.superseded != 'true'
+        uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           ref: ${{ steps.head.outputs.sha }}
@@ -90,13 +147,34 @@ jobs:
       # Install mise-managed tools (Vale, Node, etc.) so the prose-lint
       # step below has the pinned vale binary on PATH.
       - name: Install mise-managed tools
+        if: steps.head.outputs.superseded != 'true'
         uses: jdx/mise-action@v4
         with:
           cache: true
 
       - name: Check repository write access
         id: check-access
+        if: steps.head.outputs.superseded != 'true'
         run: |
+          # workflow_dispatch runs skip the collaborator-permission lookup:
+          # triggering a dispatch already requires write access (humans via
+          # the Actions UI) or comes from the auto-refresh gate in
+          # claude-code-review.yml, which only fires for same-repo branches
+          # (pushable only with write access). There is no mention author;
+          # auto-gated runs attribute to "auto-refresh", manual dispatches
+          # to the dispatching actor.
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.auto }}" = "true" ]; then
+              AUTHOR="auto-refresh"
+            else
+              AUTHOR="${{ github.actor }}"
+            fi
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+            echo "✓ workflow_dispatch by $AUTHOR — write access implied by dispatch permissions"
+            exit 0
+          fi
+
           # Use the actual repository the workflow is running in, not a hardcoded
           # upstream name. The GITHUB_TOKEN is only scoped to this repo, so a
           # hardcoded owner/repo would always return "none" in fork-based testing
@@ -161,6 +239,10 @@ jobs:
               PR_NUMBER="${{ github.event.issue.number }}"
               IS_PR="false"
               ;;
+            workflow_dispatch)
+              PR_NUMBER="${{ github.event.inputs.pr_number }}"
+              IS_PR="true"
+              ;;
           esac
 
           HAS_PINNED="false"
@@ -204,6 +286,9 @@ jobs:
       # scraping the event payload at runtime. Env vars carry the body
       # safely (no direct interpolation into shell -- bodies can contain
       # arbitrary text including shell metacharacters).
+      # workflow_dispatch has no triggering comment; the body is a fixed
+      # synthesized instruction scoping the run to update.md Case 1
+      # (fix-response) over the existing outstanding findings.
       - name: Save mention body
         id: mention
         if: steps.check-access.outputs.has_write_access == 'true'
@@ -222,6 +307,9 @@ jobs:
               ;;
             issues)
               BODY="$ISSUE_BODY"
+              ;;
+            workflow_dispatch)
+              BODY="Automated refresh (no human mention): the latest push was gated as touching only lines carried by outstanding findings. Treat this as update.md Case 1 (fix-response): re-verify each 🚨 Outstanding finding against the new diff, move resolved ones to ✅ Resolved with the commit SHA, and check the pushed lines for new problems. Do not re-extract claims or raise findings on content the push did not touch. There is no dispute to adjudicate."
               ;;
             *)
               BODY=""
@@ -292,6 +380,13 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           # Use bot token so pushes trigger downstream workflows (e.g., social review)
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          # The auto-refresh gate in claude-code-review.yml dispatches this
+          # workflow with GITHUB_TOKEN, which makes the run's actor
+          # github-actions[bot] (type=Bot) — rejected by
+          # claude-code-action@v1 by default. Same allowance
+          # claude-code-review.yml makes for its bot-dispatched #new-review
+          # path.
+          allowed_bots: 'github-actions[bot]'
 
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
@@ -333,7 +428,7 @@ jobs:
 
             Style nits are **not** tracked across reviews. Each `#update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved style nits into ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches only, not `[style]` bullets.
 
-          claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
+          claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS
       # comment always reaches a terminal state.
@@ -364,15 +459,26 @@ jobs:
           COMMENT_ID="${{ steps.progress.outputs.comment_id }}"
           OUTCOME="${{ steps.claude.outcome }}"
           AUTHOR="${{ steps.check-access.outputs.author }}"
+          # Auto-gated runs have no human requester: "auto-refresh" is not a
+          # GitHub user, so never render it as an @-mention (it would ping an
+          # unrelated account of that name). Plain wording instead.
           if [ "$OUTCOME" = "success" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review updated on @${AUTHOR}'s request.")
+            if [ "$AUTHOR" = "auto-refresh" ]; then
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review auto-refreshed — the latest push only touched lines with outstanding findings.")
+            else
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review updated on @${AUTHOR}'s request.")
+            fi
             gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           elif [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
           else
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
-            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — review errored. Mention @claude #update-review again to retry.")
+            if [ "$AUTHOR" = "auto-refresh" ]; then
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Automatic review refresh errored; the review is still marked stale. Mention @claude #update-review to refresh it.")
+            else
+              BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 @${AUTHOR} — review errored. Mention @claude #update-review again to retry.")
+            fi
             gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
           fi
           if [ "$OUTCOME" = "success" ]; then

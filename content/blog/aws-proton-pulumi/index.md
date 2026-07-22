@@ -4,13 +4,13 @@ allow_long_title: true
 date: 2022-11-16T08:36:28-08:00
 updated: 2025-03-26
 meta_desc: Learn how to build a self-service DevOps platform using AWS Proton, Pulumi, and CodeBuild. Create reusable IaC templates for fast, secure infra delivery.
-meta_image: meta.png
 authors:
     - isaac-harris
     - josh-kodroff
 tags:
     - aws
     - devops
+category: tutorials
 ---
 
 Self-service infrastructure is the holy grail of DevOps. When platform engineering teams can empower application teams to provision their own infrastructure without needing to understand the details of configuring networking, storage, and compute resources, IT organizations can drastically increase their ability to deliver on organizational goals.  The first step in this process is to codify infrastructure best practices using platforms like Pulumi and the next step is to make these best practices available in a workflow that fits into the application team’s software development tools and process.

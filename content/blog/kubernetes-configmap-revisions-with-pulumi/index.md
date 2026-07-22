@@ -4,9 +4,9 @@ h1: "How we implemented ConfigMap revisions in Kubernetes using Pulumi and Argo 
 date: "2026-01-13"
 updated: 2026-02-04
 meta_desc: "Learn how to implement ConfigMap revisions in Kubernetes using Pulumi, Argo Rollouts, owner references, and garbage collection."
-meta_image: meta.png
 authors: ["matan-baruch"]
 tags: ["kubernetes", "pulumi", "configmap", "argo-rollouts", "canary-deployment"]
+category: tutorials
 ---
 
 ConfigMaps in Kubernetes don't have built-in revision support, which can create challenges when deploying applications with canary strategies.
@@ -306,6 +306,10 @@ The solution uses several key packages:
 - `@pulumi/kubernetes`: For Kubernetes resources and ConfigMapPatch
 - `@kubernetes/client-node`: For direct Kubernetes API access
 - Argo Rollouts CRDs installed in your cluster
+
+{{< blog/cta-card title="Manage Kubernetes config as code" >}}
+You can express patching logic, owner references, and rollout coordination in TypeScript instead of static YAML, and version every change to your cluster. Start a project to build your own revision workflow.
+{{< /blog/cta-card >}}
 
 ## When should you use this approach?
 

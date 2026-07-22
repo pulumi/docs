@@ -18,7 +18,7 @@ No-code workflows are currently available for projects created through the [New 
 {{% /notes %}}
 
 {{% notes type="info" %}}
-No-code workflows require [Pulumi Deployments](/docs/deployments/deployments/)
+No-code workflows require [Pulumi Deployments](/docs/deployments/concepts/)
 {{% /notes %}}
 
 ## Creating a no-code project

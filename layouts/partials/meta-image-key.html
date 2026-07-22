@@ -1,0 +1,33 @@
+{{- /*
+    The content-path key for a page's build-time generated card: the page's
+    File.Path with the .md extension and a trailing /_index stripped. Mirrors the
+    id that scripts/generate-meta-images.mjs writes under
+    assets/images/generated/<key>.png (and <key>.square.png). Returns "" for
+    pages with no backing file. Shared by meta-image-url.html and
+    meta-image-square-url.html so the landscape and square lookups stay in sync.
+
+    Blog taxonomy term pages (category/tag/series) and case-study industry term
+    pages have no backing file, so they key off the term instead: category →
+    "category/<term>", tag → "tags/<urlize term>", series → "series/<term>",
+    industry → "industry/<term>". These mirror the virtual pages in
+    scripts/meta-images/terms.mjs and industries.mjs (category/series/industry
+    ids are already url-safe; tag slugs use urlize, matching that module's port).
+*/ -}}
+{{- $key := "" -}}
+{{- if and (eq .Kind "term") (in (slice "category" "tag" "series" "industry") .Data.Singular) -}}
+    {{- $slug := .Data.Term | urlize -}}
+    {{- if eq .Data.Singular "category" -}}
+        {{- $key = printf "category/%s" $slug -}}
+    {{- else if eq .Data.Singular "series" -}}
+        {{- $key = printf "series/%s" $slug -}}
+    {{- else if eq .Data.Singular "industry" -}}
+        {{- $key = printf "industry/%s" $slug -}}
+    {{- else -}}
+        {{- $key = printf "tags/%s" $slug -}}
+    {{- end -}}
+{{- else -}}
+    {{- with .File -}}
+        {{- $key = .Path | replaceRE "\\.md$" "" | replaceRE "/_index$" "" -}}
+    {{- end -}}
+{{- end -}}
+{{- return $key -}}

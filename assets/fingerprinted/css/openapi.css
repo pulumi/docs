@@ -12,11 +12,18 @@
     overflow-wrap: anywhere;
 }
 
+/* All colors are Pulumi brand tokens. Structural grays use the semantic
+   --docs-* tokens from _docs-theme.scss, which flip automatically in dark
+   mode. Scale colors use the --color-* variables from _theme.scss — that
+   block is declared `@theme static` so every variable is emitted even though
+   this file is plain CSS that Tailwind never scans. Hues that need a distinct
+   dark value are overridden in the dark section at the end. */
+
 /* OpenAPI endpoint page styles */
 
 .endpoint-component {
     margin-bottom: 1rem;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--docs-border);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -26,13 +33,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1rem;
-    background-color: #f8f9fa;
+    background-color: var(--docs-surface);
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .endpoint-header:hover {
-    background-color: #e9ecef;
+    background-color: var(--color-gray-200);
 }
 
 .endpoint-header h3 {
@@ -44,7 +51,7 @@
 
 .endpoint-content {
     padding: 1rem;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--docs-border);
 }
 
 .collapsed .endpoint-content {
@@ -59,7 +66,7 @@
 
 .schema-component {
     margin-bottom: 1rem;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--docs-border);
     border-radius: 4px;
     overflow: hidden;
 }
@@ -69,13 +76,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 1rem;
-    background-color: #f8f9fa;
+    background-color: var(--docs-surface);
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .schema-header:hover {
-    background-color: #e9ecef;
+    background-color: var(--color-gray-200);
 }
 
 .schema-header h2 {
@@ -87,7 +94,7 @@
 
 .schema-content {
     padding: 1rem;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--docs-border);
 }
 
 .schema-component table {
@@ -99,16 +106,16 @@
 .schema-component th,
 .schema-component td {
     padding: 0.5rem;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--docs-border);
     text-align: left;
 }
 
 .schema-component th {
-    background-color: #f8f9fa;
+    background-color: var(--docs-surface);
 }
 
 .schema-component pre {
-    background-color: #f8f9fa;
+    background-color: var(--docs-surface);
     padding: 1rem;
     border-radius: 4px;
     overflow-x: auto;
@@ -126,15 +133,16 @@
 
 .schema-controls button {
     padding: 0.375rem 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--docs-border);
     border-radius: 4px;
-    background: #f8f9fa;
+    background: var(--docs-surface);
+    color: var(--docs-fg);
     cursor: pointer;
     font-size: 0.85rem;
 }
 
 .schema-controls button:hover {
-    background: #e9ecef;
+    background: var(--color-gray-200);
 }
 
 /* Shared styles (endpoints + schemas) */
@@ -168,7 +176,7 @@
 .openapi-tag-intro {
     margin: 0 0 2rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--docs-border);
 }
 
 .openapi-tag-intro > :last-child {
@@ -194,19 +202,21 @@
     letter-spacing: 0.03em;
     padding: 0.2rem 0.5rem;
     border-radius: 3px;
-    color: #fff;
+    color: var(--color-white);
     text-transform: uppercase;
     min-width: 3.25rem;
     text-align: center;
 }
 
-.endpoint-method-get     { background: #1864ab; }
-.endpoint-method-post    { background: #2f9e44; }
-.endpoint-method-put     { background: #e67700; }
-.endpoint-method-patch   { background: #ae3ec9; }
-.endpoint-method-delete  { background: #c92a2a; }
-.endpoint-method-head    { background: #495057; }
-.endpoint-method-options { background: #495057; }
+/* Solid 700-step brand hues with white text; these hold up on both light and
+   dark backgrounds, so they are not re-pointed in the dark section. */
+.endpoint-method-get     { background: var(--color-blue-700); }
+.endpoint-method-post    { background: var(--color-green-700); }
+.endpoint-method-put     { background: var(--color-orange-700); }
+.endpoint-method-patch   { background: var(--color-violet-700); }
+.endpoint-method-delete  { background: var(--color-red-700); }
+.endpoint-method-head    { background: var(--color-gray-700); }
+.endpoint-method-options { background: var(--color-gray-700); }
 
 .endpoint-path {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -226,12 +236,12 @@
     list-style: none;
     margin: 1rem 0;
     padding: 0;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid var(--docs-border);
 }
 
 .api-param {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid var(--docs-border);
 }
 
 .api-param-header {
@@ -256,8 +266,8 @@
     line-height: 1;
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
-    background: #f1f3f5;
-    color: #495057;
+    background: var(--docs-surface);
+    color: var(--docs-fg-muted);
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     white-space: nowrap;
 }
@@ -268,28 +278,27 @@
 }
 
 .api-param-type {
-    background: #e7f5ff;
-    color: #1864ab;
+    background: var(--color-blue-100);
+    color: var(--color-blue-700);
 }
 
 .api-param-in {
-    background: #f3f0ff;
-    color: #5f3dc4;
-    text-transform: lowercase;
+    background: var(--color-violet-100);
+    color: var(--color-violet-700);
 }
 
 .api-param-required {
-    background: #f1f3f5;
-    color: #868e96;
+    background: var(--docs-surface);
+    color: var(--color-gray-500);
 }
 
 .api-param-required.is-required {
-    background: #fff0f0;
-    color: #c92a2a;
+    background: var(--color-red-100);
+    color: var(--color-red-700);
 }
 
 .api-param-description {
-    color: #495057;
+    color: var(--docs-fg-muted);
     font-size: 0.925rem;
     line-height: 1.5;
     max-width: 100%;
@@ -300,7 +309,7 @@
 }
 
 .api-param-nested-indicator {
-    color: #adb5bd;
+    color: var(--color-gray-400);
     font-size: 0.9em;
     margin-right: 0.1rem;
 }
@@ -345,9 +354,9 @@
 .api-response {
     margin: 1rem 0 1.25rem;
     padding: 0.75rem 1rem;
-    border: 1px solid #eaeaea;
+    border: 1px solid var(--docs-border);
     border-radius: 4px;
-    background: #fff;
+    background: var(--docs-card);
 }
 
 .api-request-body .api-params,
@@ -375,7 +384,7 @@
 }
 
 .api-response-summary {
-    color: #495057;
+    color: var(--docs-fg-muted);
     font-size: 0.925rem;
 }
 
@@ -386,17 +395,17 @@
 
 .api-schema-label {
     font-size: 0.875rem;
-    color: #495057;
+    color: var(--docs-fg-muted);
     margin: 0.25rem 0 0.75rem;
 }
 
 .api-schema-label a {
-    color: #7d5bbe;
+    color: var(--docs-link);
     text-decoration: underline;
 }
 
 .api-schema-label a:hover {
-    color: #5b3fa3;
+    color: var(--color-violet-800);
 }
 
 .api-request-body .api-schema-label {
@@ -425,10 +434,10 @@
     opacity: 0.75;
 }
 
-.api-status-2xx { background: #d3f9d8; color: #2b8a3e; }
-.api-status-3xx { background: #e9ecef; color: #495057; }
-.api-status-4xx { background: #fff3bf; color: #8a6d00; }
-.api-status-5xx { background: #ffe3e3; color: #c92a2a; }
+.api-status-2xx { background: var(--color-green-100); color: var(--color-green-700); }
+.api-status-3xx { background: var(--docs-surface); color: var(--docs-fg-muted); }
+.api-status-4xx { background: var(--color-yellow-100); color: var(--color-yellow-700); }
+.api-status-5xx { background: var(--color-red-100); color: var(--color-red-700); }
 
 /* Compact row listing stock (no-schema) errors at the end of the Responses
    section. Avoids a second layer of click-to-reveal inside the already-
@@ -442,11 +451,11 @@
     padding: 0.75rem 0;
     margin: 0.5rem 0 0.25rem;
     font-size: 0.875rem;
-    border-top: 1px dashed #eaeaea;
+    border-top: 1px dashed var(--docs-border);
 }
 
 .api-response-errors-label {
-    color: #868e96;
+    color: var(--docs-fg-muted);
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -458,20 +467,20 @@
 .deprecated-warning {
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
-    border: 1px solid #f5c6cb;
+    border: 1px solid var(--color-yellow-200);
     border-radius: 4px;
-    background-color: #fff3cd;
-    color: #856404;
+    background-color: var(--color-yellow-100);
+    color: var(--color-yellow-800);
     font-size: 0.9rem;
 }
 
 .preview-notice {
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
-    border: 1px solid #b8daff;
+    border: 1px solid var(--color-blue-200);
     border-radius: 4px;
-    background-color: #e7f1ff;
-    color: #004085;
+    background-color: var(--color-blue-100);
+    color: var(--color-blue-800);
     font-size: 0.9rem;
 }
 
@@ -483,7 +492,7 @@
 }
 
 .nested-indicator {
-    color: #999;
+    color: var(--color-gray-500);
     margin-right: 4px;
     font-size: 0.85em;
 }
@@ -494,4 +503,97 @@ tr[class^="property-depth-"] td {
 
 tr.property-depth-2 td {
     background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* ===========================================================================
+   Dark mode — pure overrides; the light rules above are the baseline.
+   Structural grays flip automatically via the --docs-* semantic tokens, so
+   only hue-specific surfaces live here: hover states, colored badges/chips,
+   and the notices. Gated on html[data-theme="dark"] body.section-docs to
+   match _docs-theme.scss (and to out-rank the generic docs table/pre dark
+   overrides there). Chips follow the dark callout idiom: translucent
+   300-step background with the 300-step accent as text; notices use the
+   950-step background / 300-step accent.
+   =========================================================================== */
+
+html[data-theme="dark"] body.section-docs .endpoint-header:hover,
+html[data-theme="dark"] body.section-docs .schema-header:hover {
+    background-color: var(--color-gray-800);
+}
+
+html[data-theme="dark"] body.section-docs .schema-controls button:hover {
+    background: var(--color-gray-800);
+}
+
+html[data-theme="dark"] body.section-docs .api-param-type {
+    background: color-mix(in oklch, var(--color-blue-300) 18%, transparent);
+    color: var(--color-blue-300);
+}
+
+html[data-theme="dark"] body.section-docs .api-param-in {
+    background: color-mix(in oklch, var(--color-violet-300) 18%, transparent);
+    color: var(--color-violet-300);
+}
+
+html[data-theme="dark"] body.section-docs .api-param-required {
+    color: var(--color-gray-400);
+}
+
+html[data-theme="dark"] body.section-docs .api-param-required.is-required {
+    background: color-mix(in oklch, var(--color-red-300) 18%, transparent);
+    color: var(--color-red-300);
+}
+
+html[data-theme="dark"] body.section-docs .api-schema-label a:hover {
+    color: var(--color-violet-200);
+}
+
+html[data-theme="dark"] body.section-docs .api-status-2xx {
+    background: color-mix(in oklch, var(--color-green-300) 18%, transparent);
+    color: var(--color-green-300);
+}
+
+html[data-theme="dark"] body.section-docs .api-status-4xx {
+    background: color-mix(in oklch, var(--color-yellow-300) 18%, transparent);
+    color: var(--color-yellow-300);
+}
+
+html[data-theme="dark"] body.section-docs .api-status-5xx {
+    background: color-mix(in oklch, var(--color-red-300) 18%, transparent);
+    color: var(--color-red-300);
+}
+
+html[data-theme="dark"] body.section-docs .deprecated-warning {
+    background-color: var(--color-yellow-950);
+    border-color: color-mix(in oklch, var(--color-yellow-300) 35%, transparent);
+    color: var(--color-yellow-300);
+}
+
+html[data-theme="dark"] body.section-docs .preview-notice {
+    background-color: var(--color-blue-950);
+    border-color: color-mix(in oklch, var(--color-blue-300) 35%, transparent);
+    color: var(--color-blue-300);
+}
+
+html[data-theme="dark"] body.section-docs tr[class^="property-depth-"] td {
+    background-color: color-mix(in oklch, var(--color-white) 4%, transparent);
+}
+
+html[data-theme="dark"] body.section-docs tr.property-depth-2 td {
+    background-color: color-mix(in oklch, var(--color-white) 8%, transparent);
+}
+
+/* ESC schema shortcode: label for oneOf/anyOf variant groups. Uses --docs-*
+   tokens so it flips in dark mode automatically. Inert on non-ESC pages. */
+.api-param-variant {
+    padding: 0.25rem 0;
+    border-bottom: none;
+}
+
+.api-param-variant-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--docs-fg-muted);
 }

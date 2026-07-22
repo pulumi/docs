@@ -9,7 +9,6 @@ menu:
     identifier: integrations-home
     weight: 1
 meta_desc: Integrations connect Pulumi with the clouds, version control systems, and tools you already use.
-meta_image: /images/docs/meta-images/docs-meta.png
 h1: Integrations
 description: <p>Integrations connect Pulumi with the clouds, version control systems, and tools you already use.</p>
 
@@ -49,6 +48,14 @@ sections:
     heading: Azure DevOps
     description: Connect Azure DevOps repositories to Pulumi Cloud Deployments to deploy on push, preview pull requests, and post PR summaries.
     link: /docs/integrations/version-control/azure-devops-integration/
+
+- type: button-cards
+  heading: Developer tools
+  cards:
+  - icon: code-window
+    heading: VS Code
+    description: Debug Pulumi programs, get Pulumi YAML language support, and manage ESC environments without leaving your editor.
+    link: /docs/integrations/vs-code/
 
 - type: flat
   heading: Have questions?

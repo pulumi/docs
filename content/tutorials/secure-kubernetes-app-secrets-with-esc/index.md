@@ -5,7 +5,6 @@ layout: single
 description: |
     Securely manage secrets and configurations in a Kubernetes app with Pulumi ESC.
 meta_desc: Learn how to securely manage application secrets and configurations in a Kubernetes environment using Pulumi ESC.
-meta_image: meta.png
 weight: 999
 summary: |
     In this tutorial, you’ll use Pulumi Environments, Secrets, and Configuration (ESC) to manage secrets and configurations for a Kubernetes application. You’ll set up two environments, securely store sensitive information like database credentials, and deploy a sample web application (a voting app) to a local Kubernetes cluster using Minikube. Using ESC ensures sensitive data like database passwords are safeguarded throughout the deployment process while simplifying modular environment management.
@@ -36,16 +35,16 @@ pulumi new kubernetes-typescript
 
 Follow the prompts, and use `esc-k8-tutorial` as the project name.
 
-## Install the Pulumi ESC CLI
+## Install the Pulumi CLI
 
-Now, you will install the Pulumi ESC CLI. Use an option below to install based on your operating system.
+Now, you will install the Pulumi CLI. Use an option below to install based on your operating system.
 
 {{< chooser os "macos,windows,linux" >}}
 
 {{% choosable os macos %}}
 
 ```bash
-$ brew update && brew install pulumi/tap/esc
+$ brew update && brew install pulumi/tap/pulumi
 ```
 
 {{% /choosable %}}
@@ -53,7 +52,7 @@ $ brew update && brew install pulumi/tap/esc
 {{% choosable os linux %}}
 
 ```bash
-$ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
+$ curl -fsSL https://get.pulumi.com/ | sh
 ```
 
 {{% /choosable %}}
@@ -64,7 +63,7 @@ $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 <div class="w-full">
 <h3 class="no-anchor pt-4">{{< icon name="download-simple" class="pr-2" >}}Windows Binary Download</h3>
 <p>
-<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/esc/releases/esc-v{{< latest-version-esc >}}-windows-x64.zip">amd64</a>
+<a class="btn btn-secondary mx-2" href="https://get.pulumi.com/releases/sdk/pulumi-v{{< latest-version >}}-windows-x64.zip">amd64</a>
 </p>
 </div>
 </div>
@@ -73,15 +72,15 @@ $ curl -fsSL https://get.pulumi.com/esc/install.sh | sh
 
 {{% /chooser %}}
 
-For more installation options, visit the [ESC installation docs](/docs/esc/download-install/).
+For more installation options, visit the [Pulumi CLI installation docs](/docs/iac/download-install/).
 
 ## Create your first environment
 
-Next, use the Pulumi ESC CLI to [create the first environment](/docs/esc/environments/working-with-environments/), which will manage the Kubernetes infrastructure. To create an environment named base, run the following command, adding [<org-name>/] with your organization name if applicable:
+Next, use the Pulumi CLI to [create the first environment](/docs/esc/concepts/environments/), which will manage the Kubernetes infrastructure. To create an environment named base, run the following command, adding [<org-name>/] with your organization name if applicable:
 
 ```bash
-esc env init esc-k8-tutorial/base
-esc env init esc-k8-tutorial/db
+pulumi env init esc-k8-tutorial/base
+pulumi env init esc-k8-tutorial/db
 ```
 
 These environments will handle Kubernetes cluster configuration and database specific secrets and configuration.
@@ -134,7 +133,7 @@ Your password is now stored securely in Pulumi Cloud as a secret.
 
 ## Composing and importing environments
 
-Pulumi ESC enables you to compose different environments for modularity and reusability via [importing](/docs/esc/environments/imports/). In this scenario, your `base` environment might define Kubernetes cluster details across multiple environments. For example in a real-world application, environments can be set by a central DevOps team to maintain constancy, security and cost-control.
+Pulumi ESC enables you to compose different environments for modularity and reusability via [importing](/docs/esc/concepts/imports/). In this scenario, your `base` environment might define Kubernetes cluster details across multiple environments. For example in a real-world application, environments can be set by a central DevOps team to maintain constancy, security and cost-control.
 
 To import settings from the `base` environment into the `app` environment select the `base` environment and using the **Document view**, remove the example environment definition and copy in the following:
 
@@ -281,6 +280,6 @@ In this tutorial, you secured Kubernetes application secrets using Pulumi Enviro
 
 To dive deeper into using Pulumi ESC for advanced scenarios, check out the following resources:
 
-- **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/environments/imports/).
+- **Environment Composition**: Learn more about to effectively compose multiple environments to manage configurations across your infrastructure. Explore the [Pulumi documentation on environment imports](/docs/esc/concepts/imports/).
 
 - **Managing Secrets**: Learn how to securely manage and adopt dynamic, short-lived secrets on demand using Pulumi ESC, ensuring sensitive information is protected across different environments. Read more in the [Pulumi ESC documentation](/docs/esc/).

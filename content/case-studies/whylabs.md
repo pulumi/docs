@@ -6,7 +6,10 @@ description: |
 meta_desc: Learn how WhyLabs worked with Pulumi to enable engineers to continuously and reliably ship new features faster than before for improved time-to-market.
 
 customer_name: WhyLabs
+industry: ai-ml
 customer_logo: /logos/customers/whylabs-wordmark.svg
+logo_bg_color: "#228798"
+logo_style: white
 customer_url: https://whylabs.ai/
 
 quote_block:
@@ -68,7 +71,7 @@ Moving to Pulumi allowed WhyLabs to adopt cloud engineering best practices out-o
 
 With Pulumi, WhyLabs was able to build infrastructure as code in standard programming languages like TypeScript, JavaScript, Python, Go, and C#. They decided on TypeScript based on the preferences and existing expertise of their developers.
 
-Using a general-purpose, strongly-typed language simplified how to author and configure infrastructure code.  Andy says, “With a strongly-typed language, it’s much easier to reason about the parameters of the cloud. Each component can have hundreds of configuration parameters. Types allow you to better understand whether your configuration is correct. That makes it much easier for our devs to be confident when they work on infrastructure.”
+Using a general-purpose, strongly-typed language simplified how to author and configure infrastructure code. Andy says, “With a strongly-typed language, it’s much easier to reason about the parameters of the cloud. Each component can have hundreds of configuration parameters. Types allow you to better understand whether your configuration is correct. That makes it much easier for our devs to be confident when they work on infrastructure.”
 
 Andy also found that using a standard programming language meant developers could start being productive much faster than if they had to learn a more limited, specialized DSL such as CloudFormation, which he believes has a high barrier to entry. With TypeScript, people could begin writing infrastructure code and contributing soon after joining the team. He says, “I wanted a lot of the ownership of the infrastructure to be shared. As you work on a service, you learn how to manage that service’s infrastructure. Each person can own some piece of it. Even if you’re not an expert, you can at least add or modify resources. For that kind of distributed responsibility, you need a general-purpose language.”
 

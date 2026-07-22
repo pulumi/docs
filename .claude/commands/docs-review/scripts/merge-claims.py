@@ -40,6 +40,8 @@ Output schema:
          "text": "...", "type": "...", "source_hint": "...",  # source_hint optional
          "confidence": "high"|"medium"|"low",
          "found_by": ["regex", "llm-atomic", "llm-holistic"],   # 1+ of these
+         "entity_key": "version/pulumi-gcp" | null,             # see entity_key.py
+         "volatile": true|false,                                # see entity_key.py
          "line_range_unverified": true},                        # present only when flagged
         ...
       ],
@@ -58,6 +60,14 @@ import re
 import sys
 import traceback
 from pathlib import Path
+
+# Entity keying (entity_key + volatile on each merged claim) feeds the
+# persistent claims index; a missing/broken module degrades to unkeyed claims
+# rather than failing the merge.
+try:
+    import entity_key as _entity_key
+except ImportError:
+    _entity_key = None
 
 SCHEMA_VERSION = 1
 TOKEN_OVERLAP_THRESHOLD = 0.34
@@ -354,6 +364,12 @@ def main() -> int:
             llm_count += 1
 
     merged = merge_claims(all_records)
+
+    if _entity_key is not None:
+        for c in merged:
+            _entity_key.stamp(c)
+    else:
+        errors.append("entity_key module unavailable; claims are unkeyed")
 
     meta = {"regex_claims": regex_count, "llm_claims": llm_count, "merged_claims": len(merged), **token_meta}
     out_path.parent.mkdir(parents=True, exist_ok=True)

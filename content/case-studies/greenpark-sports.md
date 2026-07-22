@@ -6,7 +6,9 @@ description: |
 meta_desc: Learn how GreenPark Sports worked with Pulumi to empower its developers with self-service cloud infrastructure through a “developer-first” approach.
 
 customer_name: GreenPark Sports
+industry: gaming-entertainment
 customer_logo: /logos/customers/greenpark-sports-wordmark.png
+logo_bg_color: "#000000"
 customer_url: https://greenparksports.com/
 
 quote_block:
@@ -52,7 +54,7 @@ Initially, Jacob’s team used Terraform to manage its infrastructure as code. T
 
 Jacob needed a platform that would make building, deploying, and managing cloud infrastructure easy for developers, and it also needed to support Kubernetes, the cloud native ecosystem, and SaaS vendors. GreenPark runs on Google Cloud Platform (GCP) and uses Kubernetes and fully managed services to run the backend for its game platform. It also uses best-of-breed SaaS providers such as DataDog, CloudFlare, and Confluent.
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/greenpark-sports-deploy-diagram.png">
+![Diagram of a GreenPark deployment including a Kubernetes cluster, Confluent Kafka cluster, MongoDB Atlas database, and Cloudflare](/images/case-studies/greenpark-sports-deploy-diagram.png)
 <p class="text-sm italic text-center">GreenPark developers deploy environments that typically include a Kubernetes cluster, Confluent Kafka cluster, a MongoDB Atlas database, and Cloudflare.</p>
 
 Jacob had already heard about Pulumi, but a strong recommendation from a former coworker convinced him to take a closer look. He learned that one significant advantage of Pulumi is that it supports general-purpose languages like Go, Python, TypeScript/JavaScript, and C# (.NET). This would enable GreenPark developers to use infrastructure as code with languages and tools they already use on a daily basis, such as Go, Visual Studio, and test frameworks.
@@ -67,13 +69,13 @@ After deciding on Pulumi, Jacob and his team built a system based on a “develo
 
 #### Migrating Infrastructure to Pulumi
 
-First, the platform team [migrated](/tf2pulumi/) its infrastructure from Terraform to Pulumi. This included Kubernetes resources, Google Cloud resources, GitHub repos, DataDog, CloudFlare, Confluent for Kafka, Consul, and Vault. This enabled them to build, deploy, and manage all of their cloud and SaaS resources from a single platform, using Go as their language of choice.
+First, the platform team [migrated](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) its infrastructure from Terraform to Pulumi. This included Kubernetes resources, Google Cloud resources, GitHub repos, DataDog, CloudFlare, Confluent for Kafka, Consul, and Vault. This enabled them to build, deploy, and manage all of their cloud and SaaS resources from a single platform, using Go as their language of choice.
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
 {{% /notes %}}
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/greenpark-sports-monorepo-diagram.png">
+![Diagram of GreenPark Sports' monorepo for managing infrastructure code](/images/case-studies/greenpark-sports-monorepo-diagram.png)
 <p class="text-sm italic text-center">GreenPark Sports uses a monorepo to manage its infrastructure code.</p>
 
 #### Simplifying Kubernetes Deployments

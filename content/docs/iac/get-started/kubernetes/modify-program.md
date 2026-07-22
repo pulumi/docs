@@ -12,6 +12,7 @@ menu:
         weight: 6
 
 aliases:
+    - /docs/get-started/kubernetes/modify-program/
     - /docs/quickstart/kubernetes/modify-program/
     - /docs/quickstart/kubernetes/deploy-changes/
 ---
@@ -438,6 +439,10 @@ resources:
 outputs:
   ip: ${service.spec.clusterIP}
 ```
+
+{{% notes type="info" %}}
+The YAML program always uses a `ClusterIP` service and does not read the `isMinikube` configuration value. If you are using YAML, you can skip the `pulumi config set isMinikube` step described below.
+{{% /notes %}}
 
 {{% /choosable %}}
 
