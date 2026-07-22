@@ -32,17 +32,23 @@ Comprehensive means that your corpus covers your desired properties. When you ch
 
 ### Targeted
 
-Targeted means that each test scenario is pointing towards a specific feature. A clear mapping between test cases and what broke is what allows you to see a broken test case and narrow that down to a bug. Building the [Linux kernel is a very broad test of a C compiler](https://www.anthropic.com/engineering/building-c-compiler), but if [it fails](https://github.com/anthropics/claudes-c-compiler/issues/1), that doesn't tell you what's broken in the compiler.
+Targeted means that each test scenario is pointing towards a specific feature. A clear mapping between test cases and what broke is what allows you to see a broken test case and narrow that down to a bug. Consider this counter-example: building the [Linux kernel is a very broad test of a C compiler](https://www.anthropic.com/engineering/building-c-compiler), but if [it fails](https://github.com/anthropics/claudes-c-compiler/issues/1), that doesn't tell you what's broken in the compiler.
 
 ### Correct
 
-Correct means that the test asserts the correct behavior. Incidental behavior should not be asserted on, since we don't want to update tests when something changes unless the desired behavior changes. Snapshot testing has its place, but it's very easy to miss a regression in a 6,000-line snapshot diff. Naturally, the most important thing is that the test doesn't accidentally assert the wrong behavior.
+Correct means that the test asserts the correct behavior. Incidental behavior should not be asserted on, since we don't want to update tests when something changes unless the desired behavior changes. Snapshot testing (TODO:link) has its place, but it's very easy to miss a regression in a 6,000-line snapshot diff. Naturally, the most important thing is that the test doesn't accidentally assert the wrong behavior.
 
 ## Pulumi language: Conformance testing
 
-Pulumi supports 6 languages (7 with HCL), and each language needs to do the same thing. Our solution to this problem is **conformance tests**: a language-agnostic test suite that can validate a Pulumi language is compliant. Each test is a PCL (Pulumi's internal codegen language) program, a list of Pulumi providers, and an assertion on the result of applying Pulumi to that program against those providers. The set of tests is [centrally maintained in pulumi/pulumi](https://github.com/pulumi/pulumi/tree/94536e530d770753b42087931c3e5c0b3c5a51b7/pkg/testing/pulumi-test-language), and then [each](https://github.com/pulumi/pulumi/blob/94536e530d770753b42087931c3e5c0b3c5a51b7/sdk/go/pulumi-language-go/language_test.go) [language](https://github.com/pulumi/pulumi-dotnet/blob/534fc3f5d74051bf644a9abbc1eb4bb3d0659073/pulumi-language-dotnet/language_test.go) [runs](https://github.com/pulumi/pulumi/blob/94536e530d770753b42087931c3e5c0b3c5a51b7/sdk/pcl/cmd/pulumi-language-pcl/language_test.go) [them](https://github.com/pulumi-labs/pulumi-hcl/blob/571fedb720fe7cd7d8f37ce01990c7c2df384658/cmd/pulumi-language-hcl/language_test.go). Because the test suite is language-agnostic, the cost of maintaining the test suite is shared across all languages, and a new Pulumi language can immediately take advantage of conformance tests to bootstrap.
+Pulumi supports 6 languages (7 with HCL), and each language needs to do the same thing. Our solution to this problem is **conformance tests**: a language-agnostic test suite that can validate a Pulumi language is compliant. Each test has 3 components:
 
-Let's walk through an example of a conformance test case to make understanding easier. This case tests that we can define a resource with input properties:
+- a PCL (Pulumi's internal codegen language) program
+- a list of Pulumi providers
+- an assertion on the result of applying Pulumi to that program against those providers
+
+The set of tests is [centrally maintained in pulumi/pulumi](https://github.com/pulumi/pulumi/tree/94536e530d770753b42087931c3e5c0b3c5a51b7/pkg/testing/pulumi-test-language), and then [each](https://github.com/pulumi/pulumi/blob/94536e530d770753b42087931c3e5c0b3c5a51b7/sdk/go/pulumi-language-go/language_test.go) [language](https://github.com/pulumi/pulumi-dotnet/blob/534fc3f5d74051bf644a9abbc1eb4bb3d0659073/pulumi-language-dotnet/language_test.go) [runs](https://github.com/pulumi/pulumi/blob/94536e530d770753b42087931c3e5c0b3c5a51b7/sdk/pcl/cmd/pulumi-language-pcl/language_test.go) [them](https://github.com/pulumi-labs/pulumi-hcl/blob/571fedb720fe7cd7d8f37ce01990c7c2df384658/cmd/pulumi-language-hcl/language_test.go). Because the test suite is language-agnostic, the cost of maintaining the test suite is shared across all languages, and a new Pulumi language can immediately take advantage of conformance tests to bootstrap.
+
+Let's walk through an example of a conformance test case to clarify what we mean. This is the `l2-resource-simple` test case, that verifies a language can define a resource with input properties:
 
 ```hcl
 // PCL
@@ -146,7 +152,7 @@ Each test locks what it observes against OpenTofu's behavior, effectively making
 
 #### Building out the tfcompat test corpus
 
-Because tests are correct by construction, we can ask our tireless LLM assistants to find failing tests. Without the need to filter out false positives or negatives, you can just ask the LLMs to find failing tests. Here is my Claude prompt verbatim:
+Because tests are correct by construction, we can ask our tireless LLM assistants to find failing tests. This is productive because we don't need to filter out false positives or negatives, the LLM  can see if the test is correct or not. Here is my Claude prompt verbatim:
 
 > I'd like you to do a pass trying to find bugs. You will prove each bug with a genuine failing tfcompat test. Start with 10 sub-agents. Bugs should not be duplicates and bugs should not reflect existing issues. Each failure should be stood up as a draft PR with just the failing test added. These PRs will fail CI. That is intentional. Don't try to fix the bugs you solved. Keep the sub-agents running until you have found 10 failures. You are responsible for validating that the bugs are real and ensuring that the sub-agents do not create duplicate bugs, so you should create the PRs directly.
 
