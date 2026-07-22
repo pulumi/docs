@@ -27,11 +27,11 @@ social:
 
 ## Example scenario
 
-Let's say your team uses ESC for storing configuration for your production app, and your team decides to use Approvals for ESC for more safety and control. Every config change requires signoff by a teammate before going live, ensuring a bad value doesn't make it into your critical infrastructure. This is working great, but one part of the puzzle is missing: how can the reviewer adequately validate the config change before approving?
+Your team stores production app configuration in ESC and has enabled [Approvals](/docs/esc/concepts/approvals/) to keep bad values out of critical infrastructure. But one important question remains: how can reviewers properly validate a configuration change before approving it?
 
 ## Introducing: draft references and the --override-env flag
 
-We are introducing a new `--override-env` flag to the Pulumi CLI that works for all Pulumi operations that can consume ESC environments: `preview`, `up`, `refresh`, and `destroy`. This makes it super easy to test config changes on the fly.
+We are introducing a new `--override-env` flag to the Pulumi CLI that works with every Pulumi operation that can consume ESC environments: `preview`, `up`, `refresh`, and `destroy`. This makes it easy to test configuration changes on the fly, giving your team the confidence to validate them as part of the review process.
 
 ### Example usages
 
