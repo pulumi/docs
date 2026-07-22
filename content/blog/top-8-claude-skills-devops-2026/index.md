@@ -280,7 +280,7 @@ Three cover most of the ground. `kubernetes-specialist` produces production-read
 
 ### Is there a Claude skill for Ansible or Azure DevOps?
 
-I don't recommend a dedicated Ansible skill here, but the general-purpose `devops-engineer` skill covers CI/CD pipelines and infrastructure as code across AWS, GCP, and Azure, so it handles most Azure work. Since skills follow an open standard, the better move is often to write your own that encodes your team's exact playbook.
+I don't recommend a dedicated Ansible skill here, but the general-purpose `devops-engineer` skill covers CI/CD pipelines and infrastructure as code across AWS, GCP, and Azure, which overlaps a lot of that ground. For Ansible or an Azure DevOps pipeline specifically, the better move is to write your own skill — they follow an open standard — that encodes your team's exact playbook.
 
 ### Do Claude skills work outside Claude Code?
 
