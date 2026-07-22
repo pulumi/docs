@@ -10,7 +10,7 @@ menu:
         weight: 5
 ---
 
-A [component](/docs/iac/concepts/components/) groups related resources behind a single, well-defined interface. But in every language Pulumi supports for authoring, which is TypeScript, Python, Go, .NET, and Java, you can also create a group of resources by writing a plain function. So why write a component instead of just a function?
+A [component](/docs/iac/concepts/components/) groups related resources behind a single, well-defined interface. But in every language Pulumi supports for authoring, which is TypeScript, Python, Go, .NET, and Java, you can also create a group of resources by writing a plain function, so why write a component instead?
 
 Both take about the same effort. In TypeScript, Python, .NET, and Java, a component is a class that subclasses a base `ComponentResource` type and creates its resources in the constructor. Go has no inheritance, so a component there is a struct that embeds `pulumi.ResourceState`, paired with a `NewX` constructor function that does the same work. In each case the base call, whether `super`, `base`, or `ctx.RegisterComponentResource`, **registers the grouping with Pulumi**. The engine records that these resources belong together and that the component owns them. A function creates the same resources without registering anything, so Pulumi holds no record of the grouping. The sections below cover what that record makes possible.
 
