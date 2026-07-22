@@ -255,6 +255,13 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # workprentice (Joe Duffy's bot) opens blog PRs, which surfaces the
+          # run's actor as a Bot; claude-code-action@v1 rejects Bot actors by
+          # default. Same allowance claude-code-review.yml makes. Both the bare
+          # and `[bot]`-suffixed forms are listed because the action reports the
+          # actor as bare `workprentice` while github.actor renders it as
+          # `workprentice[bot]`.
+          allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
           prompt: |
             You are running in a CI environment.
 
