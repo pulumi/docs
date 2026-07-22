@@ -12,11 +12,13 @@ aliases:
 - /docs/iac/guides/building-extending/components/packaging-a-component/
 ---
 
-Once you've authored a Pulumi component, you will probably want to package and distribute it so others can use it. This guide covers three ways of packaging a component, each with different trade-offs for distribution, versioning, and discoverability.
+Once you've authored a Pulumi component, you may want to package and distribute it so others can use it. This guide covers three ways of packaging a component, each with different trade-offs for distribution, versioning, and discoverability.
 
 ## Choosing a packaging approach
 
-The three options differ in whether the component ships as a [Pulumi package](/docs/iac/concepts/packages/) and, if so, which kind of [plugin](/docs/iac/concepts/plugins/) carries it:
+Start by deciding whether you need to package the component at all. A component defined in the same project as the program that uses it needs no packaging: consumers reference the class with your language's normal import mechanism, and there is nothing to version or publish. While a component has exactly one consumer, this is the right answer, and it costs nothing to package it later — consumers keep constructing it the same way.
+
+Once a component has a second consumer — another project, another team, or another language — package it. The three options differ in whether the component ships as a [Pulumi package](/docs/iac/concepts/packages/) and, if so, which kind of [plugin](/docs/iac/concepts/plugins/) carries it:
 
 1. **Native language package** — a plain language-ecosystem package (npm, PyPI, Go module, etc.) containing a component class. Not a Pulumi package; no Pulumi plugin involved. A good fit for smaller organizations where all Pulumi code is written in the same language.
 1. **Source-based plugin package** — a Pulumi package distributed as source. Pulumi generates per-language SDKs on-the-fly when a consumer adds the package, so the components can be consumed from any Pulumi language. A good fit for platform teams providing reusable abstractions and self-service. For more information, see [Authoring a source-based plugin package](/docs/iac/guides/building-extending/packages/source-based-plugin/).
@@ -101,6 +103,8 @@ Consuming an executable-based plugin package whose plugin is written in a non-Go
 {{% /notes %}}
 
 ## Packaging summary
+
+This table compares the three packaging approaches. A component that stays local to a single project uses none of them — see [Choosing a packaging approach](#choosing-a-packaging-approach) above.
 
 | Feature | Native language package | Source-based plugin package | Executable-based plugin package |
 |---------|--------------------------|-------------------------------------------|--------------------------|

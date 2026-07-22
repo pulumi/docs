@@ -12,7 +12,7 @@ menu:
     weight: 10
 ---
 
-Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/concepts/organization-templates/). Platform engineers publish components to the private registry so that developers can discover them, browse auto-generated API documentation, and use them in their Pulumi programs.
+Pulumi Private Registry is the source of truth for an organization's infrastructure building blocks like [components](/docs/iac/concepts/components/) and [templates](/docs/idp/concepts/organization-templates/). Platform engineers publish components to the private registry so that developers can discover them, browse auto-generated API documentation, and use them in their Pulumi programs.
 
 For detailed information about different component packaging approaches, see [Packaging Components](/docs/iac/guides/building-extending/components/packaging-components/).
 
