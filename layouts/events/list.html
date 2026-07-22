@@ -15,6 +15,11 @@
                 {{ end }}
                 {{ end }}
             </div>
+            {{ with .OutputFormats.Get "rss" }}
+            <a href="{{ .RelPermalink }}" target="_blank" rel="noopener" aria-label="Pulumi Events & Workshops RSS feed" data-track="events-rss" class="btn btn-icon btn-ghost">
+                {{ partial "icon.html" (dict "name" "rss" "class" "size-6") }}
+            </a>
+            {{ end }}
         </div>
     </section>
 
