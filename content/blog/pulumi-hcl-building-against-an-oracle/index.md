@@ -77,6 +77,17 @@ resource "simple_resource" "res" {
 }
 ```
 
+Pulumi's Python language plugin, by contract translates the same PCL into this program:
+
+```python
+import pulumi
+import pulumi_simple as simple
+
+res = simple.Resource("res", value=True)
+```
+
+Each language plugin knows how to generate code from PCL and can run the code they generate. This is the key to language agnostic testing.
+
 The [assertion on this test](https://github.com/pulumi/pulumi/blob/94536e530d770753b42087931c3e5c0b3c5a51b7/pkg/testing/pulumi-test-language/tests/l2_resource_simple.go) is:
 
 ```go
