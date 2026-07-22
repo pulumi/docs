@@ -184,7 +184,7 @@ Pulumi's MCP server also exposes Neo, Pulumi's infrastructure engineering agent,
 
 For example, asking your agent "Ask Neo to analyze all my S3 buckets for security issues and create a pull request with fixes" triggers Neo to run the analysis and open a PR, returning a tracking link on [app.pulumi.com](https://app.pulumi.com) so you can follow the task to completion.
 
-MCP works in the other direction for Neo as well: Neo is itself an MCP client that can connect out to a fixed set of third-party MCP servers as tools during a task, including Atlassian (Jira and Confluence), Datadog, Honeycomb, Linear, PagerDuty, and Supabase. An organization admin configures which of these are available under Neo's integration settings, and connections can be toggled per task. Credentials for these integrations are encrypted at rest per organization and decrypted only at task execution time; they are never exposed to the underlying language model. See the [Neo MCP integrations documentation](https://www.pulumi.com/docs/ai/integrations/mcp/) for the current list and setup details.
+MCP works in the other direction for Neo as well: Neo is itself an MCP client that can connect out to a fixed set of third-party MCP servers as tools during a task, including Atlassian (Jira and Confluence), Datadog, Honeycomb, Linear, PagerDuty, and Supabase. An organization admin configures which of these are available under Neo's integration settings, and connections can be toggled per task. Credentials for these integrations are encrypted at rest per organization and decrypted only at task execution time; they are never exposed to the underlying language model. See the [Neo MCP integrations documentation](https://www.pulumi.com/docs/ai/neo/integrations/mcp/) for the current list and setup details.
 
 ## Frequently asked questions
 
@@ -219,6 +219,6 @@ Yes, through tools like `pulumi-cli-up` on the local server or the `deploy-to-aw
 ## Learn more
 
 - [Pulumi MCP server documentation](https://www.pulumi.com/docs/ai/mcp-server/)
-- [Neo MCP integrations](https://www.pulumi.com/docs/ai/integrations/mcp/)
+- [Neo MCP integrations](https://www.pulumi.com/docs/ai/neo/integrations/mcp/)
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest)
 - [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)

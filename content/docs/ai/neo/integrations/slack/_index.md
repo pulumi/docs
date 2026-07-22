@@ -3,6 +3,8 @@ title: Slack
 title_tag: Neo Slack Integration
 h1: Slack Integration
 meta_desc: Mention @Neo in Slack channels to bring Neo into your team conversations.
+aliases:
+- /docs/ai/integrations/slack/
 menu:
     ai:
         name: Slack
@@ -11,7 +13,7 @@ menu:
         identifier: ai-integrations-slack
 ---
 
-Mention `@Neo` in any channel where Neo has been added to start a Neo [task](/docs/ai/tasks/) without leaving Slack. The response lands in the same thread, and follow-up messages continue the conversation, so the full exchange stays where the discussion is already happening.
+Mention `@Neo` in any channel where Neo has been added to start a Neo [task](/docs/ai/neo/tasks/) without leaving Slack. The response lands in the same thread, and follow-up messages continue the conversation, so the full exchange stays where the discussion is already happening.
 
 ## What you can do with `@Neo`
 

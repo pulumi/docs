@@ -3,10 +3,12 @@ title: Usage limits
 title_tag: Neo usage limits
 h1: Neo usage limits
 meta_desc: "Set dollar spend limits on Pulumi Neo for your organization and members, with email alerts as usage approaches the limit."
+aliases:
+- /docs/ai/usage-limits/
 menu:
     ai:
         name: Usage limits
-        parent: ai-home
+        parent: ai-neo
         weight: 55
         identifier: ai-usage-limits
 ---
@@ -67,5 +69,5 @@ Neo usage limits are available to organizations on a paid plan. The **Manage tok
 
 ## Next steps
 
-- [Neo settings](/docs/ai/settings/) — configure Neo for your organization
+- [Neo settings](/docs/ai/neo/settings/) — configure Neo for your organization
 - [Billing managers](/docs/administration/organizations-teams/billing-managers/) — grant billing access without full admin rights

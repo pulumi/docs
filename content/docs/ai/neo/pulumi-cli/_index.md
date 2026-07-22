@@ -3,11 +3,13 @@ title: Neo in the Pulumi CLI
 title_tag: Neo in the Pulumi CLI
 h1: Neo in the Pulumi CLI
 meta_desc: Run pulumi neo to start an interactive Neo session in your terminal with access to your local project, credentials, and stacks.
+aliases:
+- /docs/ai/pulumi-cli/
 menu:
     ai:
         name: Neo in the CLI
         identifier: ai-pulumi-cli
-        parent: ai-home
+        parent: ai-neo
         weight: 15
 ---
 
@@ -23,13 +25,13 @@ You can ask Neo to investigate a failed preview, make changes to your program an
 
 The controls you have in Pulumi Cloud apply in the terminal:
 
-- **[Approval modes](/docs/ai/tasks/#task-modes)** (manual, balanced, auto) govern whether Neo asks before using tools
-- **[Permission modes](/docs/ai/tasks/#task-modes)** (default, read-only) govern what Neo can change
-- **[Plan mode](/docs/ai/tasks/#plan-mode)** lets Neo research and plan before executing (toggle with **Shift+Tab** before sending your first message)
+- **[Approval modes](/docs/ai/neo/tasks/#task-modes)** (manual, balanced, auto) govern whether Neo asks before using tools
+- **[Permission modes](/docs/ai/neo/tasks/#task-modes)** (default, read-only) govern what Neo can change
+- **[Plan mode](/docs/ai/neo/tasks/#plan-mode)** lets Neo research and plan before executing (toggle with **Shift+Tab** before sending your first message)
 
 ## Integrations
 
-[Integrations](/docs/ai/integrations/) carry over from Pulumi Cloud. GitHub, Slack, and the rest of the [integration catalog](/docs/ai/integrations/mcp/) work the same way from the terminal.
+[Integrations](/docs/ai/neo/integrations/) carry over from Pulumi Cloud. GitHub, Slack, and the rest of the [integration catalog](/docs/ai/neo/integrations/mcp/) work the same way from the terminal.
 
 ## Agent handoff
 

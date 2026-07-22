@@ -6,11 +6,11 @@ meta_desc: Learn about tasks, the primary entity for interacting with Neo to per
 aliases:
 - /docs/pulumi-cloud/neo/tasks/
 - /docs/iac/neo/tasks/
-- /docs/ai/neo/tasks/
+- /docs/ai/tasks/
 menu:
     ai:
         name: Tasks
-        parent: ai-home
+        parent: ai-neo
         weight: 20
         identifier: ai-tasks
 ---
@@ -64,15 +64,15 @@ Task modes are independent of Plan Mode. Task modes control what approvals Neo r
 
 Depending on the task mode, Neo seeks approval before taking certain actions like running `pulumi up` or opening a PR.
 
-At any time, you can ask Neo to run a [pulumi preview](/docs/iac/cli/commands/pulumi_preview/). If Neo proposes code changes as part of a task, it will also request to run a preview to validate the changes. [Learn more](/docs/ai/running-previews/) about Neo and previews.
+At any time, you can ask Neo to run a [pulumi preview](/docs/iac/cli/commands/pulumi_preview/). If Neo proposes code changes as part of a task, it will also request to run a preview to validate the changes. [Learn more](/docs/ai/neo/running-previews/) about Neo and previews.
 
 ## Pull requests
 
-If a task results in code modifications, Neo will offer to open a [pull request](/docs/ai/pull-requests/) once you are satisfied with the implementation. PRs can also be modified after they have been opened.
+If a task results in code modifications, Neo will offer to open a [pull request](/docs/ai/neo/pull-requests/) once you are satisfied with the implementation. PRs can also be modified after they have been opened.
 
 ## Integrations
 
-If your organization has [integrations](/docs/ai/integrations/) enabled, Neo can read from external services like issue trackers, observability platforms, and runbooks during tasks.
+If your organization has [integrations](/docs/ai/neo/integrations/) enabled, Neo can read from external services like issue trackers, observability platforms, and runbooks during tasks.
 
 ## Context, sharing, and history
 
