@@ -3,7 +3,8 @@
 title: "Neo in a Docker Sandbox: Using Pulumi’s Coding Agent for All Things Infra Safely and Securely"
 allow_long_title: true
 meta_desc: Join Docker and Pulumi to run Neo, Pulumi’s infrastructure coding agent, inside a Docker Sandbox and turn plain-English requests into real cloud infrastructure.
-meta_image: /images/resources/neo-in-a-docker-sandbox.png
+meta_image: /events/neo-in-a-docker-sandbox/meta.png
+meta_image_square: /events/neo-in-a-docker-sandbox/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
