@@ -33,7 +33,7 @@ social:
         The one that fits your team increasingly depends on something most comparisons skip: how well it works with an AI coding agent in the loop.
 ---
 
-The strongest Terraform alternatives in 2026 split into three groups: general-purpose-language platforms like Pulumi and AWS CDK, HCL-compatible forks like OpenTofu, and cloud- or platform-specific tools like AWS CloudFormation, Azure Bicep, and Crossplane. Which one fits depends less on syntax preference than on how well it lets your team, and increasingly your AI coding agents, read, test, and safely change infrastructure code.
+The strongest Terraform alternatives in 2026 split into three groups: general-purpose-language platforms like Pulumi and AWS CDK, HCL-compatible forks like OpenTofu, and cloud- or platform-specific tools like AWS CloudFormation, Azure Bicep, and Crossplane. (Pulumi also supports HCL directly and can serve as a Terraform-compatible state backend, so teams don't have to choose between staying in HCL and gaining Pulumi Cloud's platform capabilities.) Which one fits depends less on syntax preference than on how well it lets your team, and increasingly your AI coding agents, read, test, and safely change infrastructure code.
 
 <!--more-->
 
@@ -52,6 +52,8 @@ None of this is an argument that Terraform is going away. It remains a capable, 
 ## Pulumi
 
 Pulumi is an infrastructure-as-code platform that lets you define cloud infrastructure in general-purpose languages, including Python, TypeScript, Go, C#, and Java, plus a YAML option for teams that prefer a declarative format. Rather than compiling down to another tool's templates, Pulumi programs run directly against a deployment engine that supports more than 180 providers in total, covering AWS, Azure, Google Cloud, Kubernetes, and a long tail of SaaS and on-prem targets.
+
+Pulumi also supports HCL as a first-class language, and Pulumi Cloud can serve as a drop-in [state backend for existing Terraform code](/docs/iac/get-started/terraform/terraform-state-backend/). That means teams with a large, working Terraform estate aren't required to rewrite anything to get Pulumi Cloud's state management, access controls, and policy enforcement — they can point existing HCL at Pulumi with minimal changes, then migrate configuration into a general-purpose language on their own timeline rather than all at once.
 
 Writing infrastructure in a real language means you get the tooling that comes with it for free: IDE autocomplete and type checking, unit and integration test frameworks, package managers for sharing reusable components, and the same code review and CI/CD conventions your application teams already use. It also means Pulumi programs run directly through Pulumi's own deployment engine against any cloud or SaaS platform, with no separate compile-to-template step in between, unlike CDK-style tools that transpile into another system's format before anything deploys. For an AI agent iterating on infrastructure, fewer steps between "write code" and "see the result" means a tighter feedback loop. [Pulumi Neo](/product/neo/), the platform's infrastructure agent, builds on this directly: it can propose Terraform-to-Pulumi migrations, run policy-checked previews, respond to failures, and open pull requests inside a team's existing review workflow.
 
@@ -109,7 +111,7 @@ It's worth being precise about what Terragrunt is not: it doesn't introduce a ne
 
 | Tool | Language | Cloud coverage | AI-agent readiness | Governance & policy | Best for |
 |---|---|---|---|---|---|
-| Pulumi | Python, TypeScript, Go, C#, Java, YAML | 180+ providers, any cloud | High — real languages agents are trained on; Neo agent built in | Policy as code, ESC secrets, human-in-the-loop approvals | Teams standardizing on AI-native, multi-cloud engineering workflows |
+| Pulumi | Python, TypeScript, Go, C#, Java, YAML, HCL | 180+ providers, any cloud | High — real languages agents are trained on; Neo agent built in | Policy as code, ESC secrets, human-in-the-loop approvals | Teams standardizing on AI-native, multi-cloud engineering workflows |
 | OpenTofu | HCL | Same provider ecosystem as Terraform | Same as Terraform — DSL limits agent reasoning | Community-governed; adding features like state encryption | Terraform users prioritizing open governance with minimal migration |
 | AWS CloudFormation | YAML/JSON | AWS only | Low — templated config, no native testing | AWS-managed state and rollback | Teams fully committed to AWS wanting a fully managed native service |
 | AWS CDK | TypeScript, Python, Java, C#, Go | AWS only (compiles to CloudFormation) | Medium — real languages, but a compile step slows feedback | Inherits CloudFormation governance | AWS-only teams wanting general-purpose languages |
@@ -144,11 +146,13 @@ Tools built on general-purpose languages give AI coding agents the strongest fou
 
 ### Can I migrate from Terraform without rewriting everything?
 
-It depends on which alternative you choose. Moving to OpenTofu requires essentially no rewriting, since it's HCL-compatible by design. Moving to Pulumi, AWS CDK, or another general-purpose-language platform does require translating configuration into program code, though tools like Pulumi's import and conversion tooling, and increasingly AI coding agents themselves, can automate a meaningful share of that translation rather than requiring a manual line-by-line rewrite.
+It depends on which alternative you choose. Moving to OpenTofu requires essentially no rewriting, since it's HCL-compatible by design. Moving to Pulumi can be just as light-touch, since Pulumi Cloud works as a Terraform state backend and Pulumi IaC speaks HCL natively; teams that do want to move into a general-purpose language, or that are adopting AWS CDK or a similar platform, will need to translate configuration into program code, though tools like Pulumi's import and conversion tooling, and increasingly AI coding agents themselves, can automate a meaningful share of that translation rather than requiring a manual line-by-line rewrite.
 
 ### Is Pulumi a drop-in Terraform replacement?
 
-Not syntactically. Pulumi uses general-purpose programming languages rather than HCL, so moving from Terraform to Pulumi means translating configuration into code rather than reusing files unchanged. What carries over is the underlying model: state, providers, and resources map conceptually in similar ways, and Pulumi provides tooling to import existing Terraform-managed infrastructure and convert Terraform configuration into a starting Pulumi program, which teams typically use as a first draft rather than a finished migration.
+It can be, if you want it to be. Pulumi Cloud now works as a [Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/), so a team can point its existing Terraform or OpenTofu CLI at Pulumi Cloud and keep every `.tf` file exactly as written — no rewrite required. Pulumi also [supports HCL as a first-class language](/docs/iac/languages-sdks/hcl/) alongside Python, TypeScript, Go, C#, Java, and YAML, so HCL modules can be authored and consumed natively inside Pulumi IaC.
+
+For teams that do want to move off HCL entirely, that's also an option: Pulumi's general-purpose languages let infrastructure code get loops, functions, tests, and packages that HCL doesn't offer. Moving to that model means translating configuration into code rather than reusing files unchanged, though the underlying model carries over — state, providers, and resources map conceptually in similar ways — and Pulumi provides tooling to import existing Terraform-managed infrastructure and convert Terraform configuration into a starting Pulumi program, which teams typically use as a first draft rather than a finished migration.
 
 ### Does OpenTofu support everything Terraform does?
 
