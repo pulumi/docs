@@ -10,17 +10,17 @@ menu:
         weight: 5
 ---
 
-A [component](/docs/iac/concepts/components/) groups related resources behind a single, well-defined interface. But a function can do that too: take some arguments, create five resources, return the useful outputs. Why write a component?
+A [component](/docs/iac/concepts/components/) groups related resources behind a single, well-defined interface. But in every language Pulumi supports for authoring, which is TypeScript, Python, Go, .NET, and Java, you can also create a group of resources by writing a plain function. So why write a component instead of just a function?
 
-The call site isn't the answer. A constructor is a function, and `new Vpc("main", args)` and `createVpc("main", args)` cost about the same to write. The difference is that a component **registers the grouping with Pulumi**. The engine learns that these resources belong together and that this one owns them, and that registration buys you concrete things a function cannot offer.
+Both take about the same effort. In TypeScript, Python, .NET, and Java, a component is a class that subclasses a base `ComponentResource` type and creates its resources in the constructor. Go has no inheritance, so a component there is a struct that embeds `pulumi.ResourceState`, paired with a `NewX` constructor function that does the same work. In each case the base call, whether `super`, `base`, or `ctx.RegisterComponentResource`, **registers the grouping with Pulumi**. The engine records that these resources belong together and that the component owns them. A function creates the same resources without registering anything, so Pulumi holds no record of the grouping. The sections below cover what that record makes possible.
 
-## You keep the option to consume it from another language
+## A component can be packaged for other languages later
 
-A component authored in one language can be [packaged as a plugin package](/docs/iac/guides/building-extending/components/packaging-components/#source-based-plugin-packages) and consumed from any Pulumi language, including YAML, or published to the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) for other teams to discover. Consumers keep constructing it the same way they always did.
+A component authored in one language can be [packaged as a plugin package](/docs/iac/guides/building-extending/components/packaging-components/#source-based-plugin-packages) and consumed from any Pulumi language, including YAML, or published to the [Pulumi IDP Private Registry](/docs/idp/concepts/private-registry/) for other teams to discover. Consumers construct it the same way regardless of its authoring language.
 
-This matters most when you can't yet predict who needs the abstraction. A TypeScript component that turns out to be useful to a Python team is a packaging task. The same logic in a TypeScript function is a rewrite. Writing it as a component costs nothing extra up front and keeps the option open.
+If a TypeScript component later turns out to be useful to a team writing Python, packaging becomes a build-and-publish task and the component source does not change. The same logic in a TypeScript function has to be rewritten in Python, or converted to a component first. Authoring it as a component leaves that path open without requiring you to decide up front.
 
-## Resource options apply consistently to everything inside
+## Resource options are inherited by child resources
 
 Set a [resource option](/docs/iac/concepts/resources/options/) on a component and it applies to every resource the component creates:
 
@@ -34,15 +34,15 @@ const network = new AcmeVpc("prod", {
 
 Every subnet, route table, and gateway inside `AcmeVpc` is now protected. The same inheritance applies to [`providers`](/docs/iac/concepts/resources/options/providers/), [`transforms`](/docs/iac/concepts/resources/options/transforms/), [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/), and [`deletedWith`](/docs/iac/concepts/resources/options/deletedwith/). Not every option is inherited, so check [Options inherited from a component to its children](/docs/iac/concepts/resources/options/#options-inherited-from-a-component-to-its-children) for the full list.
 
-A function has to thread each option through to each resource by hand. That works until someone adds a new resource and forgets to pass the option along, which produces no error, only an unprotected resource. With a component, the guarantee holds for resources that didn't exist when you wrote the option.
+With a function, each option has to be passed to each resource explicitly. If someone later adds a resource and does not pass the option along, Pulumi reports no error and the resource is created without it. Inheritance from a component also covers resources added after the option was set.
 
-The same consistency applies to dependencies. Because a component is a resource, `dependsOn: [myComponent]` expands to the resources the component transitively reaches, including those inside nested components, so a consumer can wait on the whole group without knowing what's in it.
+Dependencies behave the same way. Because a component is a resource, `dependsOn: [myComponent]` expands to the resources the component transitively reaches, including those inside nested components, so a consumer can wait on the whole group without knowing its contents.
 
-## Refactoring stays cheap as the component evolves
+## Aliases are inherited when a component is refactored
 
-A [URN](/docs/iac/concepts/resources/names/#urns) encodes the chain of parent types above a resource, so a component's children are named relative to the component rather than sitting flat under the stack. Two instances of the same component don't collide, and the child names stay predictable as the program grows.
+A [URN](/docs/iac/concepts/resources/names/#urns) encodes the chain of parent types above a resource, so a component's children are named relative to the component rather than sitting directly under the stack. This keeps names from colliding when a program creates more than one instance of the same component.
 
-That parentage doesn't make a URN harder to change, but it does make the change cheap to absorb. [Aliases are inherited from a parent](/docs/iac/concepts/resources/options/aliases/), so renaming or re-typing a component carries its children along automatically, through any number of levels:
+Because the URN depends on that chain, renaming or re-typing a component changes the URNs of its children, and a changed URN means the resource is deleted and recreated rather than updated in place. [Aliases are inherited from a parent](/docs/iac/concepts/resources/options/aliases/), so a single alias on the component covers its children, through any number of levels:
 
 ```typescript
 const site = new StaticWebsite("site", args, {
@@ -50,9 +50,9 @@ const site = new StaticWebsite("site", args, {
 });
 ```
 
-One alias on the component preserves the identity of every resource beneath it. Refactoring the equivalent function means writing an alias for each resource it created, and missing one replaces that resource. See [Refactoring with aliases](/docs/iac/operations/stack-management/refactoring-with-aliases/) for the common workflows.
+Refactoring the equivalent function requires an alias on each resource it created, and any resource missed is deleted and recreated. See [Refactoring with aliases](/docs/iac/operations/stack-management/refactoring-with-aliases/) for the common workflows.
 
-## Operations treat it as one unit
+## The CLI treats the component as one resource
 
 A component appears as a single node in `pulumi preview` and `pulumi up`, with its children nested underneath:
 
@@ -66,17 +66,17 @@ Updating (dev):
  +      └─ aws:cloudfront:Distribution   site-cdn      created
 ```
 
-The grouping is operational, not cosmetic. The component's URN is addressable, so you can target the whole group with [`pulumi up --target`](/docs/iac/cli/commands/pulumi_up/). Resources created by a function have no shared parent to address.
+Because the component has its own URN, commands that accept a URN can refer to it directly, and the wildcard forms that [`pulumi up --target`](/docs/iac/cli/commands/pulumi_up/) accepts can select its children by URN prefix. Resources created by a function share no parent, so each one has to be named individually.
 
-## When a function is the right call
+## When a function is the better choice
 
-Components are for creating infrastructure. If your helper doesn't create resources, it should stay a function:
+Components are for creating infrastructure. If your helper does not create resources, it should stay a function:
 
 - **Computing values**: deriving a CIDR block, building a connection string, calculating a size from an environment name.
 - **Naming and tagging**: assembling the standard tag map your organization stamps on every resource.
 - **Assembling arguments**: building the argument object you then pass to a resource or component constructor.
 
-A function is also reasonable for a small group of resources used exactly once, in one program, that will never need shared resource options, a dependency edge, or reuse elsewhere. Converting it to a component later means writing per-resource aliases to avoid replacement, so the cost of guessing wrong grows as the stack ages.
+A function is also reasonable for a small group of resources used exactly once, in one program, that will never need shared resource options, a dependency edge, or reuse elsewhere. Converting it to a component later requires a per-resource alias to avoid deleting and recreating each resource, so the cost of that conversion grows as the stack does.
 
 ## Next steps
 
