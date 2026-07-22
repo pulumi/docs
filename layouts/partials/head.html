@@ -476,11 +476,19 @@
             });
         </script>
 
-        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) -->
+        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Marketing & Analytics
+             consent-gated: loads only after the consent-managed Segment analytics is ready
+             (window.analytics.ready), same as the Floqer integration below. Fail-closed: if
+             consent-managed analytics never loads, the pixel never loads. -->
         <script>
             window.addEventListener('load', function() {
-                !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
-                oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
+                function loadOaiq() {
+                    !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
+                    oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
+                }
+                if (window.analytics && typeof window.analytics.ready === "function") {
+                    window.analytics.ready(loadOaiq);
+                }
             });
         </script>
 
