@@ -32,7 +32,7 @@ The classic `docker.Image` resource has an equivalent pair: `imageName` (a plain
 
 The reason this distinction matters is `latest` — or any other mutable tag. A tag is just a pointer; pushing a new image with the same tag doesn't change the tag string itself, so nothing about the reference tells a downstream resource that the image changed. If an ECS task definition or a Kubernetes Deployment hard-codes `myapp:latest`, Pulumi sees no diff on that field between updates, and won't trigger a new deployment — you're relying on the orchestrator's own pull policy and restart behavior to eventually surface the new image, which is neither immediate nor guaranteed. Reference the image by digest instead, and every new build produces a genuinely different string. Pulumi's diff engine sees the change, and the task definition or Deployment update as part of the same `pulumi up`.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -125,6 +125,220 @@ pulumi.export("image_digest", image.digest)
 ```
 
 {{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ecr"
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ecs"
+    "github.com/pulumi/pulumi-docker-build/sdk/go/dockerbuild"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        repository, err := ecr.NewRepository(ctx, "app-repository", nil)
+        if err != nil {
+            return err
+        }
+        authToken := ecr.GetAuthorizationTokenOutput(ctx, ecr.GetAuthorizationTokenOutputArgs{
+            RegistryId: repository.RegistryId,
+        }, nil)
+
+        image, err := dockerbuild.NewImage(ctx, "app-image", &dockerbuild.ImageArgs{
+            Context: &dockerbuild.BuildContextArgs{
+                Location: pulumi.String("./app"),
+            },
+            Dockerfile: &dockerbuild.DockerfileArgs{
+                Location: pulumi.String("./app/Dockerfile"),
+            },
+            Push: pulumi.Bool(true),
+            Registries: dockerbuild.RegistryArray{
+                &dockerbuild.RegistryArgs{
+                    Address:  repository.RepositoryUrl,
+                    Username: authToken.UserName(),
+                    Password: authToken.Password(),
+                },
+            },
+            Tags: pulumi.StringArray{
+                pulumi.Sprintf("%s:latest", repository.RepositoryUrl),
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        // image.Digest is a stable sha256 digest, unlike the mutable "latest" tag above.
+        _, err = ecs.NewTaskDefinition(ctx, "app-task", &ecs.TaskDefinitionArgs{
+            Family:                  pulumi.String("app"),
+            RequiresCompatibilities: pulumi.StringArray{pulumi.String("FARGATE")},
+            NetworkMode:             pulumi.String("awsvpc"),
+            Cpu:                     pulumi.String("256"),
+            Memory:                  pulumi.String("512"),
+            ContainerDefinitions: pulumi.JSONMarshal([]interface{}{
+                map[string]interface{}{
+                    "name":      "app",
+                    "image":     pulumi.Sprintf("%s@%s", repository.RepositoryUrl, image.Digest),
+                    "essential": true,
+                    "portMappings": []interface{}{
+                        map[string]interface{}{"containerPort": 8080},
+                    },
+                },
+            }),
+        })
+        if err != nil {
+            return err
+        }
+
+        ctx.Export("imageDigest", image.Digest)
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using DockerBuild = Pulumi.DockerBuild;
+
+return await Deployment.RunAsync(() =>
+{
+    var repository = new Aws.Ecr.Repository("app-repository");
+
+    var authToken = Aws.Ecr.GetAuthorizationToken.Invoke(new()
+    {
+        RegistryId = repository.RegistryId,
+    });
+
+    var image = new DockerBuild.Image("app-image", new()
+    {
+        Context = new DockerBuild.Inputs.BuildContextArgs
+        {
+            Location = "./app",
+        },
+        Dockerfile = new DockerBuild.Inputs.DockerfileArgs
+        {
+            Location = "./app/Dockerfile",
+        },
+        Push = true,
+        Registries = new[]
+        {
+            new DockerBuild.Inputs.RegistryArgs
+            {
+                Address = repository.RepositoryUrl,
+                Username = authToken.Apply(token => token.UserName),
+                Password = authToken.Apply(token => token.Password),
+            },
+        },
+        Tags = new[]
+        {
+            repository.RepositoryUrl.Apply(url => $"{url}:latest"),
+        },
+    });
+
+    // image.Digest is a stable sha256 digest, unlike the mutable "latest" tag above.
+    var taskDefinition = new Aws.Ecs.TaskDefinition("app-task", new()
+    {
+        Family = "app",
+        RequiresCompatibilities = new[] { "FARGATE" },
+        NetworkMode = "awsvpc",
+        Cpu = "256",
+        Memory = "512",
+        ContainerDefinitions = Output.Tuple(repository.RepositoryUrl, image.Digest)
+            .Apply(t => JsonSerializer.Serialize(new[]
+            {
+                new
+                {
+                    name = "app",
+                    image = $"{t.Item1}@{t.Item2}",
+                    essential = true,
+                    portMappings = new[] { new { containerPort = 8080 } },
+                },
+            })),
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["imageDigest"] = image.Digest,
+    };
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myapp;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.ecr.Repository;
+import com.pulumi.aws.ecr.EcrFunctions;
+import com.pulumi.aws.ecr.inputs.GetAuthorizationTokenArgs;
+import com.pulumi.aws.ecs.TaskDefinition;
+import com.pulumi.aws.ecs.TaskDefinitionArgs;
+import com.pulumi.dockerbuild.Image;
+import com.pulumi.dockerbuild.ImageArgs;
+import com.pulumi.dockerbuild.inputs.BuildContextArgs;
+import com.pulumi.dockerbuild.inputs.DockerfileArgs;
+import com.pulumi.dockerbuild.inputs.RegistryArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var repository = new Repository("app-repository");
+
+        final var authToken = EcrFunctions.getAuthorizationToken(GetAuthorizationTokenArgs.builder()
+            .registryId(repository.registryId())
+            .build());
+
+        var image = new Image("app-image", ImageArgs.builder()
+            .context(BuildContextArgs.builder()
+                .location("./app")
+                .build())
+            .dockerfile(DockerfileArgs.builder()
+                .location("./app/Dockerfile")
+                .build())
+            .push(true)
+            .registries(RegistryArgs.builder()
+                .address(repository.repositoryUrl())
+                .username(authToken.applyValue(token -> token.userName()))
+                .password(authToken.applyValue(token -> token.password()))
+                .build())
+            .tags(repository.repositoryUrl().applyValue(url -> url + ":latest"))
+            .build());
+
+        // image.digest() is a stable sha256 digest, unlike the mutable "latest" tag above.
+        var taskDefinition = new TaskDefinition("app-task", TaskDefinitionArgs.builder()
+            .family("app")
+            .requiresCompatibilities("FARGATE")
+            .networkMode("awsvpc")
+            .cpu("256")
+            .memory("512")
+            .containerDefinitions(Output.tuple(repository.repositoryUrl(), image.digest())
+                .applyValue(t -> String.format(
+                    "[{\"name\":\"app\",\"image\":\"%s@%s\",\"essential\":true,"
+                        + "\"portMappings\":[{\"containerPort\":8080}]}]",
+                    t.t1, t.t2)))
+            .build());
+
+        ctx.export("imageDigest", image.digest());
+    }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -136,7 +350,7 @@ The same principle applies to a Kubernetes `Deployment`: reference `image.digest
 
 Push the cache to a dedicated tag in the same repository you're already pushing images to. Most registries — including Google Artifact Registry and Docker Hub — accept this as just another manifest push; Amazon ECR needs the OCI-manifest options shown below (`imageManifest` and `ociMediaTypes`) because it doesn't accept BuildKit's default image-index cache manifest.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -214,6 +428,201 @@ image = docker_build.Image("app-image",
     }])
 
 pulumi.export("image_ref", image.ref)
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ecr"
+    "github.com/pulumi/pulumi-docker-build/sdk/go/dockerbuild"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        repository, err := ecr.NewRepository(ctx, "app-repository", nil)
+        if err != nil {
+            return err
+        }
+        authToken := ecr.GetAuthorizationTokenOutput(ctx, ecr.GetAuthorizationTokenOutputArgs{
+            RegistryId: repository.RegistryId,
+        }, nil)
+
+        image, err := dockerbuild.NewImage(ctx, "app-image", &dockerbuild.ImageArgs{
+            Context: &dockerbuild.BuildContextArgs{
+                Location: pulumi.String("./app"),
+            },
+            Push: pulumi.Bool(true),
+            Registries: dockerbuild.RegistryArray{
+                &dockerbuild.RegistryArgs{
+                    Address:  repository.RepositoryUrl,
+                    Username: authToken.UserName(),
+                    Password: authToken.Password(),
+                },
+            },
+            Tags: pulumi.StringArray{
+                pulumi.Sprintf("%s:latest", repository.RepositoryUrl),
+            },
+            CacheFrom: dockerbuild.CacheFromArray{
+                &dockerbuild.CacheFromArgs{
+                    Registry: &dockerbuild.CacheFromRegistryArgs{
+                        Ref: pulumi.Sprintf("%s:cache", repository.RepositoryUrl),
+                    },
+                },
+            },
+            CacheTo: dockerbuild.CacheToArray{
+                &dockerbuild.CacheToArgs{
+                    Registry: &dockerbuild.CacheToRegistryArgs{
+                        Ref:           pulumi.Sprintf("%s:cache", repository.RepositoryUrl),
+                        ImageManifest: pulumi.Bool(true),
+                        OciMediaTypes: pulumi.Bool(true),
+                    },
+                },
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        ctx.Export("imageRef", image.Ref)
+        return nil
+    })
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using DockerBuild = Pulumi.DockerBuild;
+
+return await Deployment.RunAsync(() =>
+{
+    var repository = new Aws.Ecr.Repository("app-repository");
+
+    var authToken = Aws.Ecr.GetAuthorizationToken.Invoke(new()
+    {
+        RegistryId = repository.RegistryId,
+    });
+
+    var image = new DockerBuild.Image("app-image", new()
+    {
+        Context = new DockerBuild.Inputs.BuildContextArgs
+        {
+            Location = "./app",
+        },
+        Push = true,
+        Registries = new[]
+        {
+            new DockerBuild.Inputs.RegistryArgs
+            {
+                Address = repository.RepositoryUrl,
+                Username = authToken.Apply(token => token.UserName),
+                Password = authToken.Apply(token => token.Password),
+            },
+        },
+        Tags = new[]
+        {
+            repository.RepositoryUrl.Apply(url => $"{url}:latest"),
+        },
+        CacheFrom = new[]
+        {
+            new DockerBuild.Inputs.CacheFromArgs
+            {
+                Registry = new DockerBuild.Inputs.CacheFromRegistryArgs
+                {
+                    Ref = repository.RepositoryUrl.Apply(url => $"{url}:cache"),
+                },
+            },
+        },
+        CacheTo = new[]
+        {
+            new DockerBuild.Inputs.CacheToArgs
+            {
+                Registry = new DockerBuild.Inputs.CacheToRegistryArgs
+                {
+                    Ref = repository.RepositoryUrl.Apply(url => $"{url}:cache"),
+                    ImageManifest = true,
+                    OciMediaTypes = true,
+                },
+            },
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["imageRef"] = image.Ref,
+    };
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+package myapp;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ecr.Repository;
+import com.pulumi.aws.ecr.EcrFunctions;
+import com.pulumi.aws.ecr.inputs.GetAuthorizationTokenArgs;
+import com.pulumi.dockerbuild.Image;
+import com.pulumi.dockerbuild.ImageArgs;
+import com.pulumi.dockerbuild.inputs.BuildContextArgs;
+import com.pulumi.dockerbuild.inputs.CacheFromArgs;
+import com.pulumi.dockerbuild.inputs.CacheFromRegistryArgs;
+import com.pulumi.dockerbuild.inputs.CacheToArgs;
+import com.pulumi.dockerbuild.inputs.CacheToRegistryArgs;
+import com.pulumi.dockerbuild.inputs.RegistryArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var repository = new Repository("app-repository");
+
+        final var authToken = EcrFunctions.getAuthorizationToken(GetAuthorizationTokenArgs.builder()
+            .registryId(repository.registryId())
+            .build());
+
+        var image = new Image("app-image", ImageArgs.builder()
+            .context(BuildContextArgs.builder()
+                .location("./app")
+                .build())
+            .push(true)
+            .registries(RegistryArgs.builder()
+                .address(repository.repositoryUrl())
+                .username(authToken.applyValue(token -> token.userName()))
+                .password(authToken.applyValue(token -> token.password()))
+                .build())
+            .tags(repository.repositoryUrl().applyValue(url -> url + ":latest"))
+            .cacheFrom(CacheFromArgs.builder()
+                .registry(CacheFromRegistryArgs.builder()
+                    .ref(repository.repositoryUrl().applyValue(url -> url + ":cache"))
+                    .build())
+                .build())
+            .cacheTo(CacheToArgs.builder()
+                .registry(CacheToRegistryArgs.builder()
+                    .ref(repository.repositoryUrl().applyValue(url -> url + ":cache"))
+                    .imageManifest(true)
+                    .ociMediaTypes(true)
+                    .build())
+                .build())
+            .build());
+
+        ctx.export("imageRef", image.ref());
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -308,7 +717,7 @@ Use `--mount=type=cache` to speed up repeated local or single-runner builds by s
 
 A build that also deploys couples two concerns that scale differently: builds happen on every commit, deploys happen on a release cadence, and a team often wants different approval gates for each. Splitting them into two Pulumi stacks — a build stack that owns the `docker-build.Image` resource and exports its digest, and a deploy stack that consumes that digest through a `StackReference` — keeps both concerns independently testable and independently promotable across environments.
 
-{{< chooser language "typescript,python" >}}
+{{< chooser language "typescript,python,go,csharp,java" >}}
 
 {{% choosable language typescript %}}
 
@@ -412,6 +821,265 @@ task_definition = aws.ecs.TaskDefinition("app-task",
         "essential": True,
         "portMappings": [{"containerPort": 8080}],
     }]))
+```
+
+{{% /choosable %}}
+{{% choosable language go %}}
+
+```go
+// Build stack (acme/app-image/production)
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ecr"
+    "github.com/pulumi/pulumi-docker-build/sdk/go/dockerbuild"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        repository, err := ecr.NewRepository(ctx, "app-repository", nil)
+        if err != nil {
+            return err
+        }
+        authToken := ecr.GetAuthorizationTokenOutput(ctx, ecr.GetAuthorizationTokenOutputArgs{
+            RegistryId: repository.RegistryId,
+        }, nil)
+
+        image, err := dockerbuild.NewImage(ctx, "app-image", &dockerbuild.ImageArgs{
+            Context: &dockerbuild.BuildContextArgs{
+                Location: pulumi.String("./app"),
+            },
+            Push: pulumi.Bool(true),
+            Registries: dockerbuild.RegistryArray{
+                &dockerbuild.RegistryArgs{
+                    Address:  repository.RepositoryUrl,
+                    Username: authToken.UserName(),
+                    Password: authToken.Password(),
+                },
+            },
+            Tags: pulumi.StringArray{
+                pulumi.Sprintf("%s:latest", repository.RepositoryUrl),
+            },
+        })
+        if err != nil {
+            return err
+        }
+
+        ctx.Export("repositoryUrl", repository.RepositoryUrl)
+        ctx.Export("digest", image.Digest)
+        return nil
+    })
+}
+```
+
+```go
+// Deploy stack (acme/app-deploy/production)
+package main
+
+import (
+    "github.com/pulumi/pulumi-aws/sdk/v7/go/aws/ecs"
+    "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+    pulumi.Run(func(ctx *pulumi.Context) error {
+        build, err := pulumi.NewStackReference(ctx, "acme/app-image/production", nil)
+        if err != nil {
+            return err
+        }
+        repositoryUrl := build.GetStringOutput(pulumi.String("repositoryUrl"))
+        digest := build.GetStringOutput(pulumi.String("digest"))
+        pinnedImage := pulumi.Sprintf("%s@%s", repositoryUrl, digest)
+
+        _, err = ecs.NewTaskDefinition(ctx, "app-task", &ecs.TaskDefinitionArgs{
+            Family:                  pulumi.String("app"),
+            RequiresCompatibilities: pulumi.StringArray{pulumi.String("FARGATE")},
+            NetworkMode:             pulumi.String("awsvpc"),
+            Cpu:                     pulumi.String("256"),
+            Memory:                  pulumi.String("512"),
+            ContainerDefinitions: pulumi.JSONMarshal([]interface{}{
+                map[string]interface{}{
+                    "name":      "app",
+                    "image":     pinnedImage,
+                    "essential": true,
+                    "portMappings": []interface{}{
+                        map[string]interface{}{"containerPort": 8080},
+                    },
+                },
+            }),
+        })
+        return err
+    })
+}
+```
+
+{{% /choosable %}}
+{{% choosable language csharp %}}
+
+```csharp
+// Build stack (acme/app-image/production)
+using System.Collections.Generic;
+using Pulumi;
+using Aws = Pulumi.Aws;
+using DockerBuild = Pulumi.DockerBuild;
+
+return await Deployment.RunAsync(() =>
+{
+    var repository = new Aws.Ecr.Repository("app-repository");
+
+    var authToken = Aws.Ecr.GetAuthorizationToken.Invoke(new()
+    {
+        RegistryId = repository.RegistryId,
+    });
+
+    var image = new DockerBuild.Image("app-image", new()
+    {
+        Context = new DockerBuild.Inputs.BuildContextArgs
+        {
+            Location = "./app",
+        },
+        Push = true,
+        Registries = new[]
+        {
+            new DockerBuild.Inputs.RegistryArgs
+            {
+                Address = repository.RepositoryUrl,
+                Username = authToken.Apply(token => token.UserName),
+                Password = authToken.Apply(token => token.Password),
+            },
+        },
+        Tags = new[]
+        {
+            repository.RepositoryUrl.Apply(url => $"{url}:latest"),
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["repositoryUrl"] = repository.RepositoryUrl,
+        ["digest"] = image.Digest,
+    };
+});
+```
+
+```csharp
+// Deploy stack (acme/app-deploy/production)
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+return await Deployment.RunAsync(() =>
+{
+    var build = new StackReference("acme/app-image/production");
+    var repositoryUrl = build.RequireOutput("repositoryUrl").Apply(v => (string)v);
+    var digest = build.RequireOutput("digest").Apply(v => (string)v);
+
+    var taskDefinition = new Aws.Ecs.TaskDefinition("app-task", new()
+    {
+        Family = "app",
+        RequiresCompatibilities = new[] { "FARGATE" },
+        NetworkMode = "awsvpc",
+        Cpu = "256",
+        Memory = "512",
+        ContainerDefinitions = Output.Tuple(repositoryUrl, digest)
+            .Apply(t => JsonSerializer.Serialize(new[]
+            {
+                new
+                {
+                    name = "app",
+                    image = $"{t.Item1}@{t.Item2}",
+                    essential = true,
+                    portMappings = new[] { new { containerPort = 8080 } },
+                },
+            })),
+    });
+});
+```
+
+{{% /choosable %}}
+{{% choosable language java %}}
+
+```java
+// Build stack (acme/app-image/production)
+package myapp;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.aws.ecr.Repository;
+import com.pulumi.aws.ecr.EcrFunctions;
+import com.pulumi.aws.ecr.inputs.GetAuthorizationTokenArgs;
+import com.pulumi.dockerbuild.Image;
+import com.pulumi.dockerbuild.ImageArgs;
+import com.pulumi.dockerbuild.inputs.BuildContextArgs;
+import com.pulumi.dockerbuild.inputs.RegistryArgs;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var repository = new Repository("app-repository");
+
+        final var authToken = EcrFunctions.getAuthorizationToken(GetAuthorizationTokenArgs.builder()
+            .registryId(repository.registryId())
+            .build());
+
+        var image = new Image("app-image", ImageArgs.builder()
+            .context(BuildContextArgs.builder()
+                .location("./app")
+                .build())
+            .push(true)
+            .registries(RegistryArgs.builder()
+                .address(repository.repositoryUrl())
+                .username(authToken.applyValue(token -> token.userName()))
+                .password(authToken.applyValue(token -> token.password()))
+                .build())
+            .tags(repository.repositoryUrl().applyValue(url -> url + ":latest"))
+            .build());
+
+        ctx.export("repositoryUrl", repository.repositoryUrl());
+        ctx.export("digest", image.digest());
+    }
+}
+```
+
+```java
+// Deploy stack (acme/app-deploy/production)
+package myapp;
+
+import com.pulumi.Context;
+import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
+import com.pulumi.aws.ecs.TaskDefinition;
+import com.pulumi.aws.ecs.TaskDefinitionArgs;
+import com.pulumi.resources.StackReference;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(App::stack);
+    }
+
+    public static void stack(Context ctx) {
+        var build = new StackReference("acme/app-image/production");
+        var repositoryUrl = build.requireOutput(Output.of("repositoryUrl")).applyValue(String::valueOf);
+        var digest = build.requireOutput(Output.of("digest")).applyValue(String::valueOf);
+
+        var taskDefinition = new TaskDefinition("app-task", TaskDefinitionArgs.builder()
+            .family("app")
+            .requiresCompatibilities("FARGATE")
+            .networkMode("awsvpc")
+            .cpu("256")
+            .memory("512")
+            .containerDefinitions(Output.tuple(repositoryUrl, digest)
+                .applyValue(t -> String.format(
+                    "[{\"name\":\"app\",\"image\":\"%s@%s\",\"essential\":true,"
+                        + "\"portMappings\":[{\"containerPort\":8080}]}]",
+                    t.t1, t.t2)))
+            .build());
+    }
+}
 ```
 
 {{% /choosable %}}
