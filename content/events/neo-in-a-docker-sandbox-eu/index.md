@@ -56,7 +56,7 @@ learn:
 # The event presenters
 presenters:
     - name: Engin Diri
-      role: Senior Solutions Architect, Pulumi
+      role: Principal Solutions Architect, Pulumi
       photo: /images/team/engin-diri.jpg
     - name: Adam Gordon Bell
       role: Community Engineer, Pulumi

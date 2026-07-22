@@ -59,7 +59,7 @@ presenters:
       role: Community Engineer, Pulumi
       photo: /images/team/adam-gordon-bell.jpg
     - name: Engin Diri
-      role: Senior Solutions Architect, Pulumi
+      role: Principal Solutions Architect, Pulumi
       photo: /images/team/engin-diri.jpg
     - name: Mike Coleman
       role: Staff Solutions Architect, Docker
