@@ -32,10 +32,10 @@
     </div>
 
     {{/* Card view (toggled on). */}}
-    <div data-row-card class="hidden gap-4 py-6 md:gap-8">
+    <div data-row-card class="hidden items-center gap-4 py-6 md:gap-8">
         <div class="flex min-w-0 flex-1 flex-col items-start gap-2">
             {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}
-            <h3 class="mt-1 mb-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-card-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
+            <h3 class="heading-4 mt-1 mb-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-card-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
             {{- with $excerpt }}<p class="m-0! body-sm text-service-black line-clamp-2">{{ . }}</p>{{ end -}}
             <div class="mt-1">{{ partial "blog/post-meta.html" (dict "page" $page) }}</div>
         </div>
