@@ -23,6 +23,8 @@ These guides show you how to create custom components that encapsulate best prac
 
 Build reusable infrastructure components to encapsulate and share infrastructure patterns.
 
+**[When to Build a Component](/docs/iac/guides/building-extending/components/when-to-build-a-component/)** - Understand what a component gives you that a plain function cannot, and when a function is the better choice.
+
 **[Build a Component](/docs/iac/guides/building-extending/components/build-a-component/)** - Learn the process for creating custom Pulumi components that bundle multiple resources into reusable abstractions with built-in best practices.
 
 **[Testing Components](/docs/iac/guides/building-extending/components/testing-components/)** - Write automated tests for your components to ensure they work correctly and maintain quality as they evolve.
