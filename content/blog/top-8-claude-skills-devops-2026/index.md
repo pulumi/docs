@@ -1,9 +1,11 @@
 ---
 title: "The Claude Skills I Actually Use for DevOps"
 date: 2026-02-09
+updated: 2026-07-22
 draft: false
-meta_desc: "Skills teach AI agents how to work like experienced practitioners. In this post, we share several skills that can improve how you build cloud infrastructure."
+meta_desc: "The Claude Code skills a DevOps engineer actually uses — for Pulumi, Kubernetes, monitoring, security, and incident response — plus how to vet them safely."
 feature_image: feature.png
+faq_schema: true
 authors:
     - engin-diri
 tags:
@@ -257,6 +259,32 @@ The first prompt triggers the Pulumi TypeScript, monitoring, and security review
 Fair warning: not every skill works perfectly on the first try. Some need iteration. Some produce output that you have to review and tweak before it matches your standards. Skills do not replace your judgment.
 
 That said, after a few weeks with these skills installed, I stopped correcting the same mistakes. The code Claude writes now looks like code I would write, not code I would have to fix. That is the whole point. Skills just stop you from repeating the same corrections across every conversation.
+
+## Frequently asked questions
+
+### What are the best Claude skills for DevOps?
+
+The stack I reach for: `pulumi-typescript`, `pulumi-esc`, and `pulumi-best-practices` for infrastructure code, `monitoring-expert` and `kubernetes-specialist` for observability and clusters, `k8s-security-policies` and `security-review` for hardening, `systematic-debugging` for triage, and `incident-runbook-templates` for on-call. Start with the Pulumi and monitoring skills, then add the rest as you hit each pain point.
+
+### What is the difference between Claude skills and MCP servers?
+
+MCP servers give Claude tools: access to external systems like your registry, cloud APIs, or a database. Skills give Claude process: the workflows and judgment for using those tools well. Think of a mechanic. MCPs are the wrenches and diagnostic gear, skills are the repair manual. You want both, and they compound when you combine them.
+
+### Are Claude skills safe to install?
+
+Treat them like any third-party dependency, because they run with your agent's permissions. Snyk's ToxicSkills research scanned 3,984 public skills and found 13.4% with critical vulnerabilities and 76 malicious payloads. Read the source before installing, check the repository's maintainers and history, run `uvx mcp-scan@latest --skills`, and be wary of skills that fetch external content at runtime.
+
+### Which Claude skills help with Kubernetes?
+
+Three cover most of the ground. `kubernetes-specialist` produces production-ready manifests with security contexts, resource limits, probes, and pod disruption budgets. `k8s-security-policies` adds NetworkPolicies, Pod Security Standards, RBAC, and admission control. `gitops-workflow` handles ArgoCD and Flux CD deployments. Stack them and a single cluster request comes back hardened and GitOps-ready instead of just running.
+
+### Is there a Claude skill for Ansible or Azure DevOps?
+
+I don't recommend a dedicated Ansible skill here, but the general-purpose `devops-engineer` skill covers CI/CD pipelines and infrastructure as code across AWS, GCP, and Azure, so it handles most Azure work. Since skills follow an open standard, the better move is often to write your own that encodes your team's exact playbook.
+
+### Do Claude skills work outside Claude Code?
+
+Yes. Skills follow the open [Agent Skills standard](https://agentskills.io), so a skill written for Claude Code also works in Cursor, GitHub Copilot, and other agents that support it. You can even paste the skill content into ChatGPT as a starting prompt. There is no vendor lock-in, which is why writing your own is worth the effort.
 
 ## Get started
 
