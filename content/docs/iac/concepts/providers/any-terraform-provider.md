@@ -316,6 +316,33 @@ You'll see your IDE provide autocomplete, type checking, and inline documentatio
 pulumi up
 ```
 
+{{% notes type="info" %}}
+Provider config keys are always `camelCase`, regardless of your program's language. `pulumi config set` and the Automation API `setConfig` use the `camelCase` rendering of the Terraform provider's `snake_case` config field.
+
+For example, set a Terraform `oauth_client_id` config field with the Pulumi key `oauthClientId`:
+
+```bash
+pulumi config set tailscale:oauthClientId <value>
+```
+
+Because a locally generated SDK has no published reference documentation, list the exact config keys with [`pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/):
+
+```bash
+pulumi package get-schema terraform-provider tailscale/tailscale | jq '.config.variables | keys'
+```
+
+```json
+[
+  "apiKey",
+  "audience",
+  "baseUrl",
+  "oauthClientId",
+  "oauthClientSecret",
+  "tailnet"
+]
+```
+{{% /notes %}}
+
 ## Version control considerations
 
 You can choose whether to commit the generated SDK directory to version control:
