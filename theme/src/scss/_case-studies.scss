@@ -4,7 +4,7 @@
 // `section-description` mixins defined there are in scope here.
 
 // Case-study article body. Appearance comes from the default heading / link /
-// paragraph styles (main.scss + _base-shared.scss); this only offsets the
+// paragraph styles (main.scss + shared/_base.scss); this only offsets the
 // anchored headings so "On this page" jumps clear the sticky site nav
 // (mirrors .blog-post-content in _blog.scss).
 .case-study-content :is(h2, h3, h4, h5, h6) {
