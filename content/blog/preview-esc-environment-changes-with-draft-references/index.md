@@ -1,6 +1,6 @@
 ---
 title: "Preview ESC Changes with Environment Overrides"
-date: 2026-07-17
+date: 2026-07-23
 draft: false
 meta_desc: "Preview a proposed ESC environment change against your stack before you promote it, using draft references and the new --override-env flag."
 feature_image: feature.png
