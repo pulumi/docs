@@ -111,7 +111,7 @@ enablement:
   closing: |
     **The code-native advantage:** LLMs are trained on real code, not proprietary configuration languages. Pulumi IS code. This enables fundamentally deeper AI integration than tools that require translation layers.
   cta: "Get started with Neo"
-  link: /docs/pulumi-cloud/neo/get-started/
+  link: /docs/ai/neo/get-started/
   image: /images/product/hcl-to-pulumi.png
 
 

@@ -451,10 +451,16 @@ jobs:
           AUTHOR="${{ steps.pr-context.outputs.author }}"
 
           # GitHub App bots are not collaborators, so the permission API
-          # below returns "none" for them. Trusted agent bots that open
-          # PRs on this repo are whitelisted by name instead. Keep this
-          # list in sync with the matching check in claude-triage.yml.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" ]]; then
+          # below returns "none" for them. Trusted bots that open PRs on this
+          # repo are whitelisted by name instead. `workprentice` is Joe Duffy's
+          # docs-automation identity (the Docs Groundskeeper agent) and is
+          # trusted like an internal author. The author string differs by source:
+          # this workflow reads `gh pr view --json author` (`app/workprentice`)
+          # while claude-triage.yml reads the REST webhook `user.login`
+          # (`workprentice[bot]`), so both forms are listed in both files. Keep
+          # this list in sync with the matching check in claude-triage.yml.
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+             || "$AUTHOR" == "app/workprentice" || "$AUTHOR" == "workprentice[bot]" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Bot $AUTHOR is whitelisted for Claude reviews"
             exit 0
@@ -949,7 +955,15 @@ jobs:
           # (workflow_run after triage) is gated by claude-triage.yml's
           # own access checks, so opening this door doesn't widen the
           # trust surface.
-          allowed_bots: 'github-actions[bot]'
+          #
+          # workprentice is also listed: it's a whitelisted PR author (see
+          # the has_write_access step above), and on the auto-fire path a
+          # push by the bot makes it the workflow_run's triggering actor,
+          # which claude-code-action@v1 checks independently of our own
+          # gate. Both the bare and `[bot]`-suffixed forms are listed
+          # because the action reports the actor as bare `workprentice`
+          # while github.actor renders it as `workprentice[bot]`.
+          allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
           # The CI prompt lives at .claude/commands/docs-review/ci.md and is

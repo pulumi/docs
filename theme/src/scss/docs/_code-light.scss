@@ -8,13 +8,21 @@
 html:not([data-theme="dark"]) body.section-docs {
     // Flip the dark code surface + text (set in _chroma.scss / _code.scss).
     pre {
-        background: var(--color-violet-50);
+        background: color-mix(in srgb, var(--color-violet-50) 50%, transparent);
         color: #212121;
+    }
+
+    // Standalone fenced code blocks (a `.highlight` not inside a chooser,
+    // example-program, terminal chrome, or code-tabbed demo) get the chooser's
+    // chrome border, so the faint-violet panel reads as a bordered card matching
+    // the chooser card treatment.
+    .highlight:not(pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) pre:not(.mermaid) {
+        border: 1px solid var(--chrome-border);
     }
 
     .chroma,
     .bg {
-        background-color: var(--color-violet-50);
+        background-color: color-mix(in srgb, var(--color-violet-50) 50%, transparent);
         color: #212121;
     }
 
@@ -127,7 +135,7 @@ html:not([data-theme="dark"]) body.section-docs {
 
     // example-program footer (the code panel's bottom lip).
     .example-program .example-program-footer {
-        background: var(--color-violet-50);
+        background: color-mix(in srgb, var(--color-violet-50) 50%, transparent);
 
         a {
             color: var(--color-gray-700);
@@ -143,7 +151,7 @@ html:not([data-theme="dark"]) body.section-docs {
         .code-tabbed-tabs,
         .code-tabbed-content,
         .code-tabbed-status {
-            background: var(--color-violet-50);
+            background: color-mix(in srgb, var(--color-violet-50) 50%, transparent);
         }
 
         .code-tabbed-tab {

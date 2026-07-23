@@ -189,7 +189,7 @@ link = "/docs/ai/"
 [[entries]]
 term = "Pulumi Neo Task"
 description = "A single agent invocation in [Pulumi Neo](#pulumi-neo). A task captures the request, the agent's plan and tool calls, and the resulting changes, and can be reviewed and replayed from [Pulumi Cloud](#pulumi-cloud)."
-link = "/docs/ai/tasks/"
+link = "/docs/ai/neo/tasks/"
 
 [[entries]]
 term = "Pulumi Registry"

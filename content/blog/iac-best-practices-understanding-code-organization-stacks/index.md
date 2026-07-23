@@ -24,16 +24,6 @@ This is the first in a series of blog posts that explores how a fictional compan
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these practices will emerge over the course of the series---not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth.
 
-Here are links to all the blog posts in the series:
-
-* **IaC Best Practices: Understanding Code Organization and Stacks** (this post)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
-
 ## Setting Up the Scenario
 
 Zephyr is short for Zephyr Archaeotech Emporium, the fictional company in our scenario. Zephyr is an online retailer that specializes in the sale of "rare arcane artifacts and replicas." Over the past few years, the company has experienced a significant increase in its online presence, making it easier for customers to purchase unique and mysterious items. Zephyr's collection includes a variety of rare and unusual objects that are difficult to find elsewhere, making it a popular destination for collectors, enthusiasts, and adventurers.

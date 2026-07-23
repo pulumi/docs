@@ -599,6 +599,16 @@ variables:
         function: my:pkg:GetSecretValue
 ```
 
+### `fn::unsecret`
+
+Unwraps a [Secret](/docs/concepts/secrets/), returning the underlying value with the secret marking removed.
+
+``` yaml
+variables:
+  plaintext:
+    fn::unsecret: ${someSecretValue}
+```
+
 ### `fn::readFile`
 
 Reads a file from disk and returns the contents as a string, must be utf-8. This function has
@@ -629,6 +639,113 @@ forbidden to prevent path traversals.
 * `fn::readFile: ../../etc/shadow`, a relative path that escapes the project
 * `fn::readFile: ${pulumi.cwd}/../../.ssh/id_rsa.pub`, an expression that returns an absolute path
    that escapes the project
+
+### `fn::filebase64`
+
+Reads a file from disk and returns the contents as a Base64 encoded string using the [standard encoding](https://pkg.go.dev/encoding/base64#pkg-variables).
+
+``` yaml
+variables:
+  encoded:
+    fn::filebase64: ./file.txt
+```
+
+### `fn::filebase64sha256`
+
+Reads a file from disk and returns the SHA-256 hash of its contents as a Base64 encoded string.
+
+``` yaml
+variables:
+  fileHash:
+    fn::filebase64sha256: ./file.txt
+```
+
+### `fn::sha1`
+
+Computes the SHA-1 hash of a string and returns it as a hexadecimal string.
+
+```yaml
+variables:
+  hashed:
+    fn::sha1: "Hello, world!"
+```
+
+The expression `${hashed}` will return `943a702d06f34599aee1f8da8ef9f7296031d699`.
+
+### `fn::length`
+
+Returns the length of a list, map, or string as a number. For a list or map, this is the number of elements. For a string, this is the number of characters.
+
+```yaml
+variables:
+  fruits:
+    - apple
+    - orange
+    - banana
+  fruitCount:
+    fn::length: ${fruits}
+```
+
+The expression `${fruitCount}` will return `3`.
+
+### `fn::singleOrNone`
+
+Takes a list and returns its single element, or `null` if the list is empty. It is an error if the list contains more than one element.
+
+```yaml
+variables:
+  single:
+    fn::singleOrNone:
+      - v1
+```
+
+The expression `${single}` will return `v1`.
+
+### `fn::pulumiResourceName`
+
+Returns the name a resource was registered with. This is the resource's logical name unless it was overridden with the `name` resource option.
+
+```yaml
+resources:
+  bucket:
+    type: aws:s3:BucketV2
+variables:
+  bucketName:
+    fn::pulumiResourceName: ${bucket}
+```
+
+The expression `${bucketName}` will return `bucket`.
+
+### `fn::pulumiResourceType`
+
+Returns the type token of a resource declared in the program.
+
+```yaml
+resources:
+  bucket:
+    type: aws:s3:BucketV2
+variables:
+  bucketType:
+    fn::pulumiResourceType: ${bucket}
+```
+
+The expression `${bucketType}` will return `aws:s3/bucketV2:BucketV2`.
+
+### `fn::stackReference`
+
+{{% notes type="warning" %}}
+`fn::stackReference` is deprecated. Declare a resource of type [`pulumi:pulumi:StackReference`](/docs/concepts/stack/#stackreferences) instead.
+{{% /notes %}}
+
+Reads an output from another Pulumi stack. Arguments are passed as a list, with the first item being the fully qualified stack name and the second item the name of the output to read.
+
+```yaml
+variables:
+  otherOutput:
+    fn::stackReference:
+      - org/project/stack
+      - someOutput
+```
 
 ## Built-in variables
 

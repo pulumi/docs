@@ -276,6 +276,15 @@ Once you find the supporting passage: does the source say *exactly* what the PR 
 
 Put a verbatim quote from the source in `evidence`. A verdict with no verbatim quote from a cited source is a verdict without evidence — downgrade to `unverifiable` if you can't quote the supporting passage. The `strengthened` → `verified` mapping is the load-bearing distinction: when the source confirms the claim as a special case of a more general statement, the verdict is `verified` (not `contradicted`), and the `framing_note` records the relationship so the reviewer can decide whether to surface a stylistic suggestion about citing a more precise source.
 
+# Source discipline
+
+Four hard rules. Each one exists because violating it produced false `contradicted` verdicts in a full ledger re-adjudication (2026-07): 17 of 22 contradicted verdicts were false, and most traced to these.
+
+- **Target alignment.** Verdict a claim only against the source the claim itself names. If the pre-fetched page's URL is not the URL in the claim text, that page is the wrong target — do not run the framing check against it; return `unverifiable` with evidence noting the target mismatch. When one doc line carries several links, each claim binds to its own link's target; never judge a claim against the neighboring anchor's page, and never let an accurate description of the *wrong* page become a `contradicted` verdict on the claim.
+- **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but it can never by itself contradict other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency, not proof of which one is wrong. Resolve against product source (`gh_query`/`read_file`, release notes); for sibling-consistency claims the verdict is `mismatch`. If code can't settle it, return `unverifiable` — never `contradicted` on the strength of another docs page alone. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence.
+- **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables) make transcription claims: verify the doc text against the data file with `read_file`. If the product metadata itself looks wrong against the external framework it cites, the transcription is still `verified` — record the upstream concern in `evidence` as product feedback, not as a doc contradiction.
+- **Quote only what you fetched.** Any `contradicted` resting on a quoted source passage must quote content observed in THIS session's tool output. Never quote from memory of what a page or "official docs" say — pages change, and a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
+
 # Intuition check
 
 If the claim's shape itself smells off — a suspiciously round number, a model-parameter size that doesn't exist, a price an order of magnitude away from what you'd expect — set `intuition_flag` to a one-line note even when your evidence is inconclusive, so the reviewer can promote it.
@@ -302,13 +311,25 @@ def _normalize_url(u: str) -> str:
 
 
 def _claim_urls(claim: dict) -> list[str]:
-    """Candidate URLs for a claim: source_hint (if a URL) plus any URL in the text."""
-    urls: list[str] = []
+    """Candidate URLs for a claim: claim-text URLs, else source_hint (if a URL).
+
+    A URL written in the claim text is the source the claim is *about*;
+    source_hint is extraction-layer routing metadata. When both exist and
+    disagree, honoring the hint packs the wrong page into the pass-2 prompt
+    and the verifier "contradicts" the claim against a page it never cited —
+    the dominant false-positive mode in the 2026-07 ledger re-adjudication
+    (12 of 17 false contradicted verdicts). Text URLs therefore take absolute
+    precedence; a hint URL is used only when the text names no URL. A claim
+    whose text URL was not pre-fetched routes to pass3 (fetch the right page)
+    rather than pass2 against the wrong one.
+    """
+    text_urls = URL_IN_TEXT_RE.findall(claim.get("text") or "")
+    if text_urls:
+        return text_urls
     src = (claim.get("source_hint") or "").strip()
     if src.lower().startswith(("http://", "https://")):
-        urls.append(src)
-    urls.extend(URL_IN_TEXT_RE.findall(claim.get("text") or ""))
-    return urls
+        return [src]
+    return []
 
 
 def route_claim(claim: dict, fetched_by_url: dict[str, dict]) -> str:

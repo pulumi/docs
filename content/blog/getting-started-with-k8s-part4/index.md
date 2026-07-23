@@ -11,14 +11,7 @@ category: tutorials
 series: kubernetes-getting-started
 ---
 
-This article is the fourth in a series using infrastructure as code to deploy applications with Kubernetes. This series walks you through:
-
-- [Building a Kubernetes cluster on cloud providers](/blog/getting-started-with-k8s-part1/)
-- [Basic application deployment](/blog/getting-started-with-k8s-part2/)
-- [Advance application deployment and Helm charts](/blog/getting-started-with-k8s-part3/)
-- Stateful applications
-- Networking
-- “Day 2” activities such as migrating node groups.
+This article is the fourth in a series using infrastructure as code to deploy applications with Kubernetes.
 
 In the previous post, we examined different methods for deploying applications. We worked through examples of a boilerplate deployment, to one using `ComponentResources` to automate deployment further, and deploying with Helm charts. In this installment, we’ll look at how to deploy stateful applications, such as databases, in Kubernetes. Unlike stateless applications, stateful apps require persistent storage, which presents scaling and availability challenges.
 

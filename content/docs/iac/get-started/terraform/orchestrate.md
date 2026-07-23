@@ -284,8 +284,6 @@ resource "aws_cloudwatch_log_stream" "terraform_stream" {
 }
 ```
 
-{{% choosable language "typescript" %}}
-
 ```typescript
 // pulumi/monitoring.ts
 import * as aws from "@pulumi/aws";
@@ -302,8 +300,6 @@ const pulumiLogStream = new aws.cloudwatch.LogStream("pulumi-stream", {
     logGroupName: pulumiLogGroup.name,
 });
 ```
-
-{{% /choosable %}}
 
 ### Shared metrics
 
@@ -330,8 +326,6 @@ resource "aws_cloudwatch_metric_alarm" "terraform_errors" {
 }
 ```
 
-{{% choosable language "typescript" %}}
-
 ```typescript
 // pulumi/metrics.ts
 const pulumiErrorAlarm = new aws.cloudwatch.MetricAlarm("pulumi-errors", {
@@ -351,8 +345,6 @@ const pulumiErrorAlarm = new aws.cloudwatch.MetricAlarm("pulumi-errors", {
     },
 });
 ```
-
-{{% /choosable %}}
 
 ## Best practices
 

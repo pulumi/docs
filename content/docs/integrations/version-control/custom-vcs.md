@@ -177,7 +177,7 @@ Configure deployment behavior for Custom VCS-backed stacks under **Stack** > **S
 |---|---|
 | Push to deploy | Automatically deploy when commits are pushed to the configured branch |
 | Path filters | Only trigger deployments when changed files match specified glob patterns (e.g., `infrastructure/**`). Requires the webhook payload to include the `changedFiles` field. |
-| Tag triggers | Deploy when a tag matching the configured [tag filters](/docs/deployments/concepts/settings/#tag-filtering) is pushed (e.g., `v*`). Requires the webhook to send a `tag_push` event with the `tag` field. |
+| Tag triggers | Deploy when a tag matching the configured [tag filters](/docs/deployments/concepts/settings/tag-filtering/) is pushed (e.g., `v*`). Requires the webhook to send a `tag_push` event with the `tag` field. |
 
 ### Selecting a repository and branch
 

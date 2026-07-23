@@ -250,15 +250,21 @@ def run(args) -> int:
         "schema_version": SCHEMA_VERSION,
         "checked_at": today.isoformat(),
         "entities": [],
-        "meta": {"n_snapshots": 0, "n_entities": 0, "n_checked": 0,
+        "meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0, "n_checked": 0,
                  "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0},
     }
     out_path = Path(args.out)
 
+    # The meta block doubles as the health observation consumed by
+    # signal-health.py's reverify signal: `skipped` distinguishes "couldn't
+    # run" (degraded) from the quiet-night n_due=0 (healthy), and an
+    # all-inconclusive n_checked is the broken-verifier tell. Keep those
+    # semantics intact when touching the early-exit paths below.
     snapshots = load_snapshots(Path(args.claims_dir))
     report["meta"]["n_snapshots"] = len(snapshots)
     if not snapshots:
         log("no claims snapshots; nothing to re-verify")
+        report["meta"]["skipped"] = "no_snapshots"
         return finish(report, out_path)
 
     ledger = load_ledger(Path(args.ledger_dir))
@@ -267,6 +273,7 @@ def run(args) -> int:
 
     unmarked = sorted(k for k, v in entities.items() if not already_marked(k, v, ledger))
     keys = tonight_chunk(unmarked, args.count, today)
+    report["meta"]["n_due"] = len(keys)
     if not keys:
         log("no volatile entities due tonight")
         return finish(report, out_path)
@@ -274,6 +281,7 @@ def run(args) -> int:
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key and not args.dry_run:
         warn("ANTHROPIC_API_KEY not set; re-verification skipped")
+        report["meta"]["skipped"] = "no_api_key"
         return finish(report, out_path)
 
     vc = _load_verify_claims()
@@ -399,6 +407,34 @@ def self_test() -> int:
           not already_marked("numerical/team-plan-price",
                              ents["numerical/team-plan-price"], ledger))
 
+    # Health-observation meta: the early-exit paths must say why they stopped
+    # (signal-health.py's reverify signal reads these fields).
+    import tempfile
+
+    def run_report(d: Path, extra_env_unset: list[str]) -> dict:
+        saved = {k: os.environ.pop(k) for k in extra_env_unset if k in os.environ}
+        try:
+            argv = ["--claims-dir", str(d / "claims"), "--ledger-dir", str(d / "ledger"),
+                    "--out", str(d / "report.json"), "--today", "2026-07-06"]
+            args = build_parser().parse_args(argv)
+            run(args)
+            return json.loads((d / "report.json").read_text())
+        finally:
+            os.environ.update(saved)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        (d / "claims").mkdir()
+        (d / "ledger").mkdir()
+        rep = run_report(d, [])
+        check("empty claims dir -> skipped=no_snapshots",
+              rep["meta"]["skipped"] == "no_snapshots" and rep["meta"]["n_due"] == 0)
+
+        (d / "claims" / "docs-a.json").write_text(json.dumps(snap("a", "2026-07-01", ver)))
+        rep = run_report(d, ["ANTHROPIC_API_KEY"])
+        check("due entities without API key -> skipped=no_api_key",
+              rep["meta"]["skipped"] == "no_api_key" and rep["meta"]["n_due"] == 1)
+
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)
         return 1
@@ -406,7 +442,7 @@ def self_test() -> int:
     return 0
 
 
-def main() -> int:
+def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("--claims-dir", default=".claims-cache",
                    help="local sync of the claims/ prefix")
@@ -421,7 +457,11 @@ def main() -> int:
     p.add_argument("--dry-run", action="store_true",
                    help="no API calls, no uploads; placeholder verdicts (testing)")
     p.add_argument("--self-test", action="store_true", help="run built-in smoke checks")
-    args = p.parse_args()
+    return p
+
+
+def main() -> int:
+    args = build_parser().parse_args()
 
     if args.self_test:
         return self_test()

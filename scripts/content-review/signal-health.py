@@ -2,16 +2,24 @@
 """Track and alert on silent degradation of the content-review pipeline's inputs.
 
 Observability for §3.4 of the docs-review automation evaluation (pulumi/docs
-issue #20078): three inputs to the review-existing-content dispatcher degrade
-gracefully — and, before this script, silently:
+issue #20078): inputs to the content-review automation degrade gracefully —
+and, before this script, silently. Three signals are observed by the
+review-existing-content dispatcher, a fourth by the nightly claims-reverify
+workflow; all share one state object:
 
   traffic         a missing docs-traffic snapshot flattens article selection to
                   tier-only scoring, quietly erasing intra-tier prioritization
   console-access  the per-article worker's screenshot lane 2 verifies UI strings
-                  against the private pulumi/console repo; without token access
-                  every UI claim silently becomes "unverifiable"
+                  against the console source (cmd/console2) in the private
+                  pulumi/pulumi-service repo; without token access every UI
+                  claim silently becomes "unverifiable"
   holiday-feed    the BambooHR ICS holiday gate fails open by design, so a feed
                   that has been 404ing (or serving garbage) for weeks is invisible
+  reverify        the nightly volatile-claims re-verification only Slacks when
+                  it finds STALE entities, so a dead lane (claims index gone,
+                  API key missing, every check inconclusive because the
+                  verifier's gh/API plumbing broke) looks identical to a
+                  healthy quiet one
 
 Graceful degradation is the right behavior; this script adds the missing
 observability. The dispatcher runs it once per scheduled run with that run's
@@ -54,6 +62,7 @@ Usage:
         [--queue .content-review-queue.json] \
         [--console-status ok|degraded] \
         [--holiday-status ok|empty|fetch_failed|unconfigured] \
+        [--reverify-report .claims-reverify-report.json] \
         --alert-out .health-alert.txt \
         [--today YYYY-MM-DD] [--threshold-days N] [--realert-days N] \
         [--run-url URL]
@@ -87,14 +96,21 @@ CONSEQUENCES = {
         "it points at."
     ),
     "console-access": (
-        "pulumi/console access: pulumi-bot has had no access for {days} day(s) — "
-        "screenshot lane 2 is marking every UI-string check \"unverifiable\". "
-        "Check the bot token's access to the pulumi/console repo."
+        "pulumi/pulumi-service access: pulumi-bot has had no access for {days} "
+        "day(s) — screenshot lane 2 is marking every UI-string check "
+        "\"unverifiable\". Check the bot token's access to the "
+        "pulumi/pulumi-service repo (console source: cmd/console2)."
     ),
     "holiday-feed": (
         "holiday feed: degraded for {days} day(s) ({detail}) — the holiday gate "
         "is running blind (fails open: reviews will run on company holidays). "
         "Regenerate the BAMBOOHR_HOLIDAY_ICS_URL feed."
+    ),
+    "reverify": (
+        "nightly claims re-verify: no conclusive results for {days} day(s) "
+        "({detail}) — volatile-claim drift (version pins, prices, limits) is "
+        "going undetected. Check the claims-index S3 sync, ANTHROPIC_API_KEY, "
+        "and the verifier's gh lane on claims-reverify.yml."
     ),
 }
 
@@ -167,6 +183,36 @@ def observe_traffic(queue_path: Path | None) -> tuple[str, str] | None:
         detail = f"period={traffic.get('period')} pages_matched={traffic.get('pages_matched')}"
         return "ok", detail
     return "degraded", "snapshot missing, empty, or matched zero pages"
+
+
+def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
+    """(status, detail) from the nightly re-verify report's meta block, or None.
+
+    reverify-claims.py stamps `meta.skipped` on its couldn't-run exits and
+    `meta.n_due` on every run, so a quiet night (nothing due) is distinguishable
+    from a dead lane. A missing/unreadable report is NOT evidence of
+    degradation (the job may not have run at all) — return None.
+    """
+    if report_path is None or not report_path.is_file():
+        return None
+    try:
+        meta = json.loads(report_path.read_text()).get("meta") or {}
+    except (OSError, json.JSONDecodeError) as e:
+        log(f"reverify report unreadable ({e}); no reverify observation")
+        return None
+    skipped = meta.get("skipped")
+    n_due = int(meta.get("n_due") or 0)
+    n_checked = int(meta.get("n_checked") or 0)
+    n_inconclusive = int(meta.get("n_inconclusive") or 0)
+    if skipped == "no_snapshots":
+        return "degraded", "claims index empty or unfetchable"
+    if skipped:
+        return "degraded", f"{n_due} entities due but run skipped ({skipped})"
+    if n_checked and n_inconclusive == n_checked:
+        return "degraded", f"all {n_checked} checks inconclusive"
+    if n_checked:
+        return "ok", f"checked={n_checked} inconclusive={n_inconclusive}"
+    return "ok", "nothing due tonight"
 
 
 def observe_flag(value: str | None, mapping: dict[str, str]) -> tuple[str, str] | None:
@@ -264,6 +310,9 @@ def run(args) -> int:
     })
     if obs:
         observations["holiday-feed"] = obs
+    obs = observe_reverify(Path(args.reverify_report) if args.reverify_report else None)
+    if obs:
+        observations["reverify"] = obs
 
     state, alert = apply(state, observations, today,
                          args.threshold_days, args.realert_days, args.run_url)
@@ -282,9 +331,12 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("--state", help="health state JSON (read+written in place)")
     p.add_argument("--queue", help="selection queue JSON (source of the traffic signal)")
-    p.add_argument("--console-status", help="pulumi/console probe result: ok|degraded")
+    p.add_argument("--console-status",
+                   help="pulumi/pulumi-service probe result: ok|degraded")
     p.add_argument("--holiday-status",
                    help="holiday feed status: ok|empty|fetch_failed|unconfigured")
+    p.add_argument("--reverify-report",
+                   help="nightly re-verify report JSON (source of the reverify signal)")
     p.add_argument("--alert-out", default=".health-alert.txt",
                    help="alert message path; only written when an alert is due")
     p.add_argument("--today", help="override today's date YYYY-MM-DD (testing)")
@@ -326,7 +378,8 @@ def self_test() -> int:
             print(f"ok: {name}")
 
     def run_once(d: Path, day: str, queue: dict | None = None, console: str | None = None,
-                 holiday: str | None = None) -> tuple[dict, str | None]:
+                 holiday: str | None = None, reverify: dict | None = None,
+                 ) -> tuple[dict, str | None]:
         """Drive run() through argparse the way the workflow would."""
         state = d / "state.json"
         alert = d / "alert.txt"
@@ -341,6 +394,10 @@ def self_test() -> int:
             argv += ["--console-status", console]
         if holiday:
             argv += ["--holiday-status", holiday]
+        if reverify is not None:
+            rp = d / "reverify-report.json"
+            rp.write_text(json.dumps(reverify))
+            argv += ["--reverify-report", str(rp)]
         args = build_parser().parse_args(argv)
         run(args)
         text = alert.read_text() if alert.exists() else None
@@ -443,6 +500,57 @@ def self_test() -> int:
         st, alert = run_once(d, "2026-08-11", queue=q_halted, console="ok", holiday="ok")
         check("halted queue still observes traffic",
               st["signals"]["traffic"]["status"] == "degraded")
+
+    rv_ok = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
+                      "n_checked": 25, "n_stale": 1, "n_fresh": 22, "n_inconclusive": 2}}
+    rv_quiet = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 0,
+                         "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0}}
+    rv_dead = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
+                        "n_checked": 25, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 25}}
+    rv_nokey = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
+                         "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0,
+                         "skipped": "no_api_key"}}
+    rv_nosnaps = {"meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0,
+                           "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0,
+                           "skipped": "no_snapshots"}}
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+
+        # 12. Reverify observations: conclusive results and quiet nights are ok.
+        st, alert = run_once(d, "2026-09-01", reverify=rv_ok)
+        check("reverify with conclusive results is ok",
+              st["signals"]["reverify"]["status"] == "ok")
+        st, alert = run_once(d, "2026-09-02", reverify=rv_quiet)
+        check("reverify quiet night (nothing due) is ok",
+              st["signals"]["reverify"]["status"] == "ok")
+
+        # 13. All-inconclusive and couldn't-run reports degrade; alert names
+        # the consequence once due.
+        st, alert = run_once(d, "2026-09-03", reverify=rv_dead)
+        check("all-inconclusive reverify degrades",
+              st["signals"]["reverify"]["status"] == "degraded"
+              and st["signals"]["reverify"]["degraded_since"] == "2026-09-03")
+        st, alert = run_once(d, "2026-09-06", reverify=rv_nokey)
+        check("skipped run stays degraded with skip detail",
+              st["signals"]["reverify"]["status"] == "degraded"
+              and "no_api_key" in st["signals"]["reverify"]["detail"])
+        st, alert = run_once(d, "2026-09-10", reverify=rv_dead)
+        check("reverify alert fires at threshold and names the consequence",
+              alert is not None and "volatile-claim drift" in alert)
+
+        # 14. Missing report leaves prior state untouched; empty claims index
+        # counts as degraded (mirrors the traffic snapshot semantics).
+        st, alert = run_once(d, "2026-09-11")
+        check("missing reverify report leaves prior state untouched",
+              st["signals"]["reverify"]["status"] == "degraded")
+        st, alert = run_once(d, "2026-09-12", reverify=rv_nosnaps)
+        check("empty claims index degrades with its own detail",
+              "claims index" in st["signals"]["reverify"]["detail"])
+        st, alert = run_once(d, "2026-09-13", reverify=rv_ok)
+        check("reverify recovery clears the clocks",
+              st["signals"]["reverify"]["status"] == "ok"
+              and st["signals"]["reverify"]["degraded_since"] is None)
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)
