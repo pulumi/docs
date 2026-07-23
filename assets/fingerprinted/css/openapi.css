@@ -170,6 +170,36 @@
     margin: 0.125rem 0;
 }
 
+/* Named integer enums (e.g. StackPermission): each opaque wire value is paired
+   with its name and description, rendered from the x-pulumi-model-property
+   vendor extension. Used in both the schema-component and property contexts. */
+
+.enum-value-list {
+    margin: 0.375rem 0 0;
+}
+
+.enum-value-list dt {
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.enum-value-list dt:first-child {
+    margin-top: 0.25rem;
+}
+
+.enum-value-list dt code {
+    font-weight: 700;
+}
+
+.enum-value-list dd {
+    margin: 0.125rem 0 0;
+    color: var(--docs-fg-muted);
+}
+
+.enum-value-list dd p:last-child {
+    margin-bottom: 0;
+}
+
 /* Editorial intro prose rendered above the generated endpoint list.
    Sourced from assets/openapi/tag-intros/{slug}.md. */
 
