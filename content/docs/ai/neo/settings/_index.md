@@ -3,10 +3,12 @@ title: Settings
 title_tag: Neo Settings
 h1: Neo Settings
 meta_desc: Configure Neo with Custom Instructions, Repository Instructions, Slash Commands, Integrations, access controls, task modes, and notification preferences.
+aliases:
+- /docs/ai/settings/
 menu:
     ai:
         name: Settings
-        parent: ai-home
+        parent: ai-neo
         weight: 50
         identifier: ai-settings
 ---
@@ -33,7 +35,7 @@ If you'd rather keep Neo on but disable specific capabilities, use the per-featu
 - **Enable Neo CLI explanations**: AI explanations served to the Pulumi CLI
 - **Enable natural-language resource search**: Searching your resources with natural-language queries
 
-To disable [Neo code reviews](/docs/ai/code-reviews/), navigate to your [VCS integration settings](/docs/integrations/version-control/) under **Management** > **Version control**.
+To disable [Neo code reviews](/docs/ai/neo/code-reviews/), navigate to your [VCS integration settings](/docs/integrations/version-control/) under **Management** > **Version control**.
 
 ![Neo access settings](toggle-neo-access.png)
 
@@ -41,7 +43,7 @@ To disable [Neo code reviews](/docs/ai/code-reviews/), navigate to your [VCS int
 If Neo was previously disabled, it will need to be enabled as outlined above.
 {{% /notes %}}
 
-To cap what your organization spends on Neo, see [Usage limits](/docs/ai/usage-limits/).
+To cap what your organization spends on Neo, see [Usage limits](/docs/ai/neo/usage-limits/).
 
 ## Custom instructions
 
@@ -163,7 +165,7 @@ You can place `AGENTS.md` files in subdirectories for more specific instructions
 
 Neo can connect to third-party services like issue trackers, observability platforms, and incident response tools, giving tasks the ability to query external tools alongside your infrastructure. Integrations are configured in the **Integrations** tab of Neo Settings, where administrators can enable services and provide credentials.
 
-See [Integrations](/docs/ai/integrations/) for the full list of available integrations, setup instructions, and credential storage details.
+See [Integrations](/docs/ai/neo/integrations/) for the full list of available integrations, setup instructions, and credential storage details.
 
 ## Slash commands
 
@@ -233,7 +235,7 @@ Organization administrators can set the default task mode. The available modes d
 - Remember, users can override the default for individual tasks when needed
 
 {{% notes type="info" %}}
-Task modes control approvals during execution. [Plan Mode](/docs/ai/tasks/#plan-mode) is a separate, opt-in feature that controls what happens before execution. You can use Plan Mode with any task mode.
+Task modes control approvals during execution. [Plan Mode](/docs/ai/neo/tasks/#plan-mode) is a separate, opt-in feature that controls what happens before execution. You can use Plan Mode with any task mode.
 {{% /notes %}}
 
 ## Notifications

@@ -101,7 +101,7 @@ The third step is the one most often skipped. Without it, the next refresh will 
 
 The code-edit step is the slowest part of adoption: it's tedious to translate a diff full of provider properties back into your program, and it's where most "I'll do it later" abandonments happen. [Pulumi Neo](/docs/ai/) is built for this: hand it the stack and the drift, and it will run the refresh, read the resulting diff, edit the program so it matches, run a clean preview, and open a pull request for you to review.
 
-A task description as direct as *"Adopt the drift on the `production` stack into the program"* is enough to get Neo started. By default Neo runs in [Review mode](/docs/ai/tasks/#task-modes), so the `pulumi up` and the PR both require your approval before they happen: you stay the decision-maker on what gets merged. For large or unfamiliar codebases, enable [Plan Mode](/docs/ai/tasks/#plan-mode) so Neo investigates the program and proposes its approach before making any changes.
+A task description as direct as *"Adopt the drift on the `production` stack into the program"* is enough to get Neo started. By default Neo runs in [Review mode](/docs/ai/neo/tasks/#task-modes), so the `pulumi up` and the PR both require your approval before they happen: you stay the decision-maker on what gets merged. For large or unfamiliar codebases, enable [Plan Mode](/docs/ai/neo/tasks/#plan-mode) so Neo investigates the program and proposes its approach before making any changes.
 
 Neo doesn't change the mechanics of adoption: the program still has to be updated to match reality, and the PR still has to be reviewed. What changes is the cost of getting there: Neo absorbs the tedium that makes adoption the slower of the two reconciliation paths.
 
@@ -170,7 +170,7 @@ For most teams, scheduled detection plus human-driven remediation is the safer d
 
 - [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) and [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) CLI references.
 - [Pulumi Cloud drift detection](/docs/deployments/concepts/drift/) — managed scheduling, the Drift tab, and auto-remediation.
-- [Pulumi Neo tasks](/docs/ai/tasks/) — let Neo handle the code-edit step of adoption.
+- [Pulumi Neo tasks](/docs/ai/neo/tasks/) — let Neo handle the code-edit step of adoption.
 - [Pulumi Kubernetes Operator](https://github.com/pulumi/pulumi-kubernetes-operator) — continuous reconciliation for Kubernetes-hosted stacks.
 - [Targeted updates](/docs/iac/operations/stack-management/targeted-updates/) — partial updates are a common source of drift between code and infrastructure.
 - [Update plans](/docs/iac/operations/stack-management/update-plans/) — preview-and-approve workflow that pairs well with adoption.

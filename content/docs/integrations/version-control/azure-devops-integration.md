@@ -71,7 +71,7 @@ After creating an integration, you can configure PR behavior. Toggle these setti
 | Setting | Default | Description |
 |---|---|---|
 | PR Comments | Enabled | Post deployment status and resource changes as comments on ADO pull requests |
-| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in PR comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in PR comments (requires [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Detailed Diff | Enabled | Show property-level before/after diffs for changed resources in PR comments |
 
 To update, toggle the setting directly. Changes save automatically.

@@ -3,11 +3,13 @@ title: CLI Integrations
 title_tag: Neo CLI Integrations
 h1: CLI Integrations
 meta_desc: Give Neo scoped access to cloud CLIs (aws, gcloud, az, kubectl) using credentials managed by Pulumi ESC.
+aliases:
+- /docs/ai/integrations/cli/
 menu:
     ai:
         name: CLI Integrations
         parent: ai-integrations
-        weight: 1
+        weight: 2
         identifier: ai-integrations-cli
 ---
 

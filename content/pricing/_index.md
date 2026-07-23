@@ -571,35 +571,35 @@ comparison_table:
                   - content: $3/M tokens
                   - content: $3/M tokens
               - title: Neo in the CLI
-                link: /docs/ai/pulumi-cli/
+                link: /docs/ai/neo/pulumi-cli/
                 items:
                   - content: _check
                   - content: _check
                   - content: _check
                   - content: _check
               - title: MCP & CLI Integrations
-                link: /docs/ai/integrations/
+                link: /docs/ai/neo/integrations/
                 items:
                   - content: _check
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Neo code reviews
-                link: /docs/ai/pull-requests/
+                link: /docs/ai/neo/pull-requests/
                 items:
                   - content: _blank
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Slack integration
-                link: /docs/ai/integrations/slack/
+                link: /docs/ai/neo/integrations/slack/
                 items:
                   - content: _blank
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Scheduled tasks
-                link: /docs/ai/automations/
+                link: /docs/ai/neo/automations/
                 items:
                   - content: _blank
                   - content: _blank

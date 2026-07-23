@@ -6,11 +6,11 @@ meta_desc: Learn how to set up Pulumi Neo for your organization and run your fir
 aliases:
 - /docs/pulumi-cloud/neo/get-started/
 - /docs/iac/neo/get-started/
-- /docs/ai/neo/get-started/
+- /docs/ai/get-started/
 menu:
     ai:
         name: Get started with Neo
-        parent: ai-home
+        parent: ai-neo
         weight: 10
         identifier: ai-get-started
 ---
@@ -66,7 +66,7 @@ Neo is automatically enabled for eligible organizations. To access Neo:
 
 Each conversation with Neo is called a "task" - a contained unit of work where Neo helps you accomplish a specific infrastructure goal.
 
-Let's run a simple infrastructure [task](/docs/ai/tasks/) to see Neo in action
+Let's run a simple infrastructure [task](/docs/ai/neo/tasks/) to see Neo in action
 
 1. Start with a read-only analysis task by prompting Neo:
 
@@ -89,8 +89,8 @@ Let's run a simple infrastructure [task](/docs/ai/tasks/) to see Neo in action
 
    - Ask for confirmation before making changes
    - Generate the necessary code modifications
-   - Request approval before opening a [pull request](/docs/ai/pull-requests/)
-   - Create a [PR](/docs/ai/pull-requests/) with clear documentation of the changes
+   - Request approval before opening a [pull request](/docs/ai/neo/pull-requests/)
+   - Create a [PR](/docs/ai/neo/pull-requests/) with clear documentation of the changes
 
 ## Considerations and Limitations
 
