@@ -67,7 +67,7 @@ Alternatively, you can connect using:
 
 Consent doesn't grant any roles on your subscriptions. The wizard assigns the **Reader** or **Contributor** role on each subscription later, after you select subscriptions and choose an access level.
 
-After you grant consent, the wizard lists the subscriptions in your tenant.
+After you grant consent, the wizard lists the subscriptions in your tenant, including subscriptions you can reach through a role assignment on a management group. If your subscriptions are organized under management groups, see [Azure management groups](#azure-management-groups).
 
 Alternatively, you can connect using:
 
@@ -166,6 +166,24 @@ The recommended flows authenticate with OIDC and workload identity federation, s
 - ESC environments in a project named `discover`. AWS and Google Cloud get one environment per account or project, named `discover/<name>-<accountId>-env`. Azure gets one shared environment per tenant, named `discover/azure-<tenantId>-env`, which every subscription's Insights account references.
 - An Insights account for each selected cloud account, subscription, or project, named after the cloud account it represents.
 - The scan schedule and, if enabled, the policy pack you chose.
+
+## Azure management groups
+
+Pulumi Insights models each Azure subscription as its own Insights account. Insights has no management-group-level account, and a single Insights account can't scan more than one subscription. What is shared across your tenant is the *identity*: the wizard creates one app registration, one federated identity credential, and one service principal for the whole tenant, plus one ESC environment (`discover/azure-<tenantId>-env`) that every subscription's Insights account references. Connecting 40 subscriptions produces 40 Insights accounts, but still only one app registration and one set of credentials.
+
+If your subscriptions are organized under management groups, you have two options.
+
+### Let the wizard assign roles per subscription
+
+This is the default flow. The wizard assigns the **Reader** or **Contributor** role at the scope of each subscription you select, so you need permission to create role assignments on those subscriptions — the **Owner** or **User Access Administrator** role, either assigned directly or inherited from a management group.
+
+The wizard doesn't detect access that the service principal already inherits from a management group. If you have already granted the service principal Pulumi uses a role at management-group scope, the wizard adds a subscription-scoped assignment anyway, which is redundant but harmless.
+
+### Grant the role yourself at management-group scope
+
+If your organization prefers to manage RBAC centrally, assign **Reader** or **Contributor** to a service principal once at management-group scope, then connect subscriptions with **Connect using existing ESC credentials** so that Pulumi doesn't create role assignments. Set up the app registration and ESC environment as described in [Create and manage Insights accounts](/docs/insights/discovery/accounts/#azure) and [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/).
+
+Because the environment carries the subscription ID, this path takes one ESC environment and one wizard run per subscription. Reuse a single app registration across those environments rather than creating one per subscription. Each environment needs its own federated identity credential, because the subject identifier includes the environment path, and Azure limits an app registration to 20 federated identity credentials. If you are onboarding more subscriptions than that, use the wizard's OIDC flow, which shares a single environment and credential across the tenant.
 
 ## Troubleshooting
 
