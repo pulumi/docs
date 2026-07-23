@@ -10,9 +10,7 @@
     - text: The desired button text.
 -->
 
-<div class="card-cta-contained-btn text-center">
-    <a class="btn-download" href={{ .ref }}>
-        {{ partial "icon.html" (dict "name" "download-simple") }}
-        {{ .text }}
-    </a>
-</div>
+<a class="btn btn-ghost-primary w-full" href={{ .ref }}>
+    {{ partial "icon.html" (dict "name" "download-simple") }}
+    {{ .text }}
+</a>

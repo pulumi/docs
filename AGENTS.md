@@ -154,6 +154,32 @@ Individual changelog items live in `content/releases/changelog/` — one markdow
 
 ---
 
+## Styling (CSS / SCSS / Tailwind)
+
+The theme uses Tailwind v4 (configured in CSS, no `tailwind.config.js`) across two SCSS bundles: `theme/src/scss/main.scss` (docs/app) and `theme/src/scss/_marketing.scss` (marketing).
+
+### Reuse the shared system first
+
+Before writing new component CSS, use the shared design-system primitives in **`theme/src/scss/shared/`** (see `shared/README.md`). Don't reinvent a button, card, badge, or heading:
+
+- **`.btn` button system** (`shared/_button.scss`) — `class="btn btn-primary"`, plus variants (`outline`, `secondary`, `ghost`, `ghost-primary`, `destructive`, `link`), sizes (`btn-sm`/`btn-lg`/`btn-icon`…), and `.btn-split`/`.btn-group`. The file header documents the full compose API.
+- **`.card` / `.card-hover`** (`shared/_card.scss`).
+- **Form system** (`shared/_forms.scss`) — `class="form-input form-input-lg"`, plus `form-textarea`/`form-select`/`form-checkbox`/`form-radio` and `form-label`/`form-help`/`form-error`. Control heights mirror the `.btn` size scale. Also exposes `@mixin`s (`form-control-base`, …) for form-consuming partials.
+- **`.badge` system** (`shared/_badge.scss`) — `class="badge badge-success"`, `layouts/partials/badge.html`, or `@extend .badge; @extend .badge-<variant>;`.
+- **Shared type scale** (`shared/_utilities.scss`) — the `heading-xl`/`heading-1`…`heading-6`, `body-sm`…`body-2xl`, and `font-overline` `@utility` classes. Use these instead of hand-rolling font-size/weight/tracking.
+
+Compose them in markup, or in SCSS via `@apply`/`@extend` (prefer `@extend`ing a primitive over re-`@apply`ing its utilities).
+
+### Order of preference for authoring styles
+
+1. **Inline Tailwind utility classes** — including arbitrary values (`bg-[#abc123]`, `w-[42ch]`, `grid-cols-[1fr_auto]`). This is the default for one-off styling.
+2. **SCSS with Tailwind `@apply` / `@extend`** — only when inline classes can't stay DRY (the same cluster of utilities repeated across many elements or templates). Reach for `@extend` on a shared primitive first.
+3. **Raw CSS / SCSS** — last resort, for what Tailwind genuinely can't express.
+
+The Dark mode section below applies these same rules to `/docs` theming (`dark:` variants and `--docs-*` tokens).
+
+---
+
 ## Dark mode (/docs)
 
 The `/docs` section supports a light/dark/system theme toggle. Dark is **light-first**: light is the baseline (unchanged from before) and dark is a pure override. The whole system lives in `theme/src/scss/docs/_docs-theme.scss` (read its header comment first) and is driven by semantic `--docs-*` tokens defined on `body.section-docs` and re-pointed under `html[data-theme="dark"]`. It is scoped entirely to docs pages; nothing here can affect a non-docs page.

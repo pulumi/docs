@@ -35,7 +35,7 @@ pulumi-hubspot-form {
 
 // Heading + paragraph element defaults. The `.heading-1`–`.heading-6`,
 // `.heading-xl`, `.body-*`, and `.font-overline` class versions live in
-// `_utilities-shared.scss` as @utility blocks so they can be composed via @apply.
+// `shared/_utilities.scss` as @utility blocks so they can be composed via @apply.
 h1,
 h2,
 h3,
