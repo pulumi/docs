@@ -10,20 +10,35 @@
 
   Input: dict with "schema" — the schema or property object holding `.enum`.
 */}}
+{{/*
+  Descriptions to suppress: a few upstream enum comments are engineer-facing
+  implementation notes, not public API docs (e.g. "…is an implementation quirk…",
+  "Do not remove this type - it is used by Pulumi Cloud code"). Keyed by
+  "<enumTypeName>.<fieldName>". The value's name still renders; only its comment
+  is withheld. Remove an entry once the comment is reworded at the source (the
+  pulumi-service Java IDL, which generates the OpenAPI spec).
+*/}}
+{{ $suppressComments := slice "StackPermission.Creator" "AppUpdateKind.Rename" }}
 {{ $schema := .schema }}
 {{ $enum := $schema.enum }}
 {{ $ext := index $schema "x-pulumi-model-property" }}
+{{ $typeName := "" }}
 {{ $names := slice }}
 {{ $comments := slice }}
 {{ with $ext }}
+  {{ $typeName = .enumTypeName | default "" }}
   {{ with .enumFieldNames }}{{ $names = . }}{{ end }}
   {{ with .enumFieldComments }}{{ $comments = . }}{{ end }}
 {{ end }}
 {{ if and (gt (len $names) 0) (eq (len $names) (len $enum)) }}
   <dl class="enum-value-list">
     {{ range $i, $v := $enum }}
-      <dt><code>{{ $v }}</code> &mdash; {{ index $names $i }}</dt>
-      {{ if lt $i (len $comments) }}{{ $c := index $comments $i }}{{ if $c }}<dd>{{ $c | markdownify }}</dd>{{ end }}{{ end }}
+      {{ $fieldName := index $names $i }}
+      <dt><code>{{ $v }}</code> &mdash; {{ $fieldName }}</dt>
+      {{ if lt $i (len $comments) }}
+        {{ $c := index $comments $i }}
+        {{ if and $c (not (in $suppressComments (printf "%s.%s" $typeName $fieldName))) }}<dd>{{ $c | markdownify }}</dd>{{ end }}
+      {{ end }}
     {{ end }}
   </dl>
 {{ else }}
