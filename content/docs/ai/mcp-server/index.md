@@ -15,10 +15,10 @@ aliases:
 - /docs/iac/guides/ai-integration/mcp-server/
 ---
 
-The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to access your Pulumi Cloud resources, generate infrastructure code, and optionally delegate tasks to [Pulumi Neo](/docs/pulumi-cloud/neo/). This integration allows you to query your cloud infrastructure, search for resources, and launch automated infrastructure workflows - all from within the AI assistant of your choice.
+The Pulumi Model Context Protocol (MCP) server enables AI-powered coding assistants to access your Pulumi Cloud resources, generate infrastructure code, and optionally delegate tasks to [Pulumi Neo](/docs/ai/neo/). This integration allows you to query your cloud infrastructure, search for resources, and launch automated infrastructure workflows - all from within the AI assistant of your choice.
 
 > [!INFO]
-> This page is about connecting your own AI agent to Pulumi. For the opposite direction, connecting Neo to other services' MCP servers (Jira, Datadog, and others), see [External MCP servers](/docs/ai/integrations/mcp/).
+> This page is about connecting your own AI agent to Pulumi. For the opposite direction, connecting Neo to other services' MCP servers (Jira, Datadog, and others), see [External MCP servers](/docs/ai/neo/integrations/mcp/).
 
 ## What is the Pulumi MCP server?
 
@@ -29,7 +29,7 @@ The [Model Context Protocol (MCP)](https://modelcontextprotocol.io) is a specifi
 - **Access the Pulumi Registry** for resource information, properties, and documentation
 - **Get policy violation reports** for your infrastructure
 - **Manage organization members** and their access
-- **Delegate complex infrastructure tasks to [Pulumi Neo](/docs/pulumi-cloud/neo)** for automated execution
+- **Delegate complex infrastructure tasks to [Pulumi Neo](/docs/ai/neo/)** for automated execution
 - **Generate infrastructure code** using Registry tools and best practices
 
 This enables a more intuitive, conversational approach to infrastructure development where you can describe what you want to build in natural language, and the AI assistant can discover resources, generate code, and launch automated workflows—all without leaving your editor.
@@ -421,7 +421,7 @@ If `neo-bridge` fails to launch tasks:
 
 1. **Check Neo access**: Verify you have access to Pulumi Neo in your organization
 2. **Verify task description**: Ensure your task instructions are clear and actionable
-3. **Check organization limits**: Some organizations may have task limits, and Neo pauses if the organization reaches its [usage limit](/docs/ai/usage-limits/)
+3. **Check organization limits**: Some organizations may have task limits, and Neo pauses if the organization reaches its [usage limit](/docs/ai/neo/usage-limits/)
 4. **Review error message**: Check the error details for specific issues
 
 ## Learn more
@@ -429,7 +429,7 @@ If `neo-bridge` fails to launch tasks:
 - [Pulumi Agent Skills](/docs/ai/skills/) - teach your agent proven Pulumi workflows
 - [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
 - [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
-- [Pulumi Neo documentation](/docs/pulumi-cloud/neo/)
+- [Pulumi Neo documentation](/docs/ai/neo/)
 - [Model Context Protocol specification](https://modelcontextprotocol.io)
 - [Pulumi Registry](/registry/)
 - [Pulumi Cloud API](https://www.pulumi.com/docs/pulumi-cloud/cloud-rest-api/)
@@ -438,7 +438,7 @@ If `neo-bridge` fails to launch tasks:
 
 Now that you have the Pulumi MCP server set up, explore these related topics:
 
-- [Pulumi Neo](/docs/pulumi-cloud/neo/) for autonomous infrastructure automation
+- [Pulumi Neo](/docs/ai/neo/) for autonomous infrastructure automation
 - [Pulumi concepts](/docs/iac/concepts/) to understand core IaC principles
 - [Getting started guides](/docs/iac/get-started/) for your preferred cloud provider
 - [Policy as Code](/docs/insights/policy/) for infrastructure compliance

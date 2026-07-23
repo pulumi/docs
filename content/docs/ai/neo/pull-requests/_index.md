@@ -6,11 +6,11 @@ meta_desc: Learn how Neo creates and manages pull requests to implement infrastr
 aliases:
 - /docs/pulumi-cloud/neo/pull-requests/
 - /docs/iac/neo/pull-requests/
-- /docs/ai/neo/pull-requests/
+- /docs/ai/pull-requests/
 menu:
     ai:
         name: Pull Requests
-        parent: ai-home
+        parent: ai-neo
         weight: 30
         identifier: ai-pull-requests
 ---
@@ -22,7 +22,7 @@ Pull requests are the bridge between Neo's AI capabilities and your production i
 - Team collaboration and knowledge sharing
 - Audit trail and rollback capability
 
-Neo also analyzes pull requests that your team opens and leaves its feedback right in the PR. See [Neo code reviews](/docs/ai/code-reviews/).
+Neo also analyzes pull requests that your team opens and leaves its feedback right in the PR. See [Neo code reviews](/docs/ai/neo/code-reviews/).
 
 ## Prerequisites
 

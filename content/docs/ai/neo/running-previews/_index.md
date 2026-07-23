@@ -6,11 +6,11 @@ meta_desc: Learn how Neo uses Pulumi preview to validate infrastructure changes 
 aliases:
 - /docs/pulumi-cloud/neo/running-previews/
 - /docs/iac/neo/running-previews/
-- /docs/ai/neo/running-previews/
+- /docs/ai/running-previews/
 menu:
     ai:
         name: Previews
-        parent: ai-home
+        parent: ai-neo
         weight: 40
         identifier: ai-running-previews
 ---

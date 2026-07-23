@@ -3,15 +3,17 @@ title: Automations
 title_tag: Neo Automations
 h1: Automations
 meta_desc: Schedule Neo tasks to run on a recurring basis with auto-approval and read-only defaults; results delivered as pull requests for review.
+aliases:
+- /docs/ai/automations/
 menu:
     ai:
         name: Automations
         identifier: ai-automations
-        parent: ai-home
+        parent: ai-neo
         weight: 25
 ---
 
-Automations turn any Neo task into recurring work. Define a prompt, set a cadence, and Neo runs the task at that interval. When a run produces changes, Neo opens a [pull request](/docs/ai/pull-requests/) that goes through your normal review process.
+Automations turn any Neo task into recurring work. Define a prompt, set a cadence, and Neo runs the task at that interval. When a run produces changes, Neo opens a [pull request](/docs/ai/neo/pull-requests/) that goes through your normal review process.
 
 ## What you can do with an automation
 
@@ -19,7 +21,7 @@ Provider freshness checks, encryption audits, backup audits, and activity digest
 
 ## Defaults that fit recurring work
 
-Scheduled tasks default to two settings. Approval mode is [**auto**](/docs/ai/tasks/#task-modes), so the task proceeds without waiting for human confirmation at each step. Permission mode is [**read-only**](/docs/ai/tasks/#task-modes), so the task can read state and propose changes through pull requests, but it can't write directly to your infrastructure. Settings apply in this order:
+Scheduled tasks default to two settings. Approval mode is [**auto**](/docs/ai/neo/tasks/#task-modes), so the task proceeds without waiting for human confirmation at each step. Permission mode is [**read-only**](/docs/ai/neo/tasks/#task-modes), so the task can read state and propose changes through pull requests, but it can't write directly to your infrastructure. Settings apply in this order:
 
 1. The per-automation setting, if set
 1. The org-level default
@@ -33,7 +35,7 @@ You can edit or delete an automation from the **Automations** tab. Deleting an a
 
 ## How automations interact with the rest of Neo
 
-Automations inherit the rest of Neo's context model. [Custom Instructions](/docs/ai/settings/#custom-instructions) at the organization and project level apply to scheduled tasks just as they do to ad-hoc ones. [MCP integrations](/docs/ai/integrations/mcp/) use the credentials of whoever configured the integration (the OAuth identity for OAuth-based integrations, the API token or key for token-based ones). [CLI integrations](/docs/ai/integrations/cli/) use the credentials configured during setup.
+Automations inherit the rest of Neo's context model. [Custom Instructions](/docs/ai/neo/settings/#custom-instructions) at the organization and project level apply to scheduled tasks just as they do to ad-hoc ones. [MCP integrations](/docs/ai/neo/integrations/mcp/) use the credentials of whoever configured the integration (the OAuth identity for OAuth-based integrations, the API token or key for token-based ones). [CLI integrations](/docs/ai/neo/integrations/cli/) use the credentials configured during setup.
 
 ## How permissions work
 
