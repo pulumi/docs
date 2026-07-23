@@ -38,6 +38,22 @@
   {{ end }}
 {{ end }}
 
+{{/* Collect ItemList schema for a page's ranked/ordered list before finalizing
+     WebPage so hasPart can be wired. Driven entirely by an `itemlist` array in
+     frontmatter (see itemlist-entity.html) so it is an explicit per-page opt-in,
+     not a heuristic parse of markdown headings — the same low-false-positive
+     approach as the faq_schema flag below. itemlist-entity.html returns an
+     empty dict when `.Params.itemlist` is absent, so this is a no-op for every
+     page that hasn't opted in. */}}
+{{ $itemList := dict }}
+{{ if .Params.itemlist }}
+  {{ $itemList = partial "schema/collectors/itemlist-entity.html" . }}
+  {{ if and $itemList (ne $itemList (dict)) }}
+    {{ $itemList = merge $itemList (dict "@id" "#itemlist") }}
+    {{ $webpage = merge $webpage (dict "hasPart" (dict "@id" "#itemlist")) }}
+  {{ end }}
+{{ end }}
+
 {{/* What-is and docs pages get Article/TechArticle as their main entity; if the page
      also has a "Frequently asked questions"-style Q&A section, expose it as a
      FAQPage entity in the same graph under its own @id. Pages that are themselves
@@ -230,6 +246,11 @@
 {{/* Add comparison table to graph (collected earlier to wire hasPart into WebPage) */}}
 {{ if and $comparisonTable (ne $comparisonTable (dict)) }}
   {{ $graph = $graph | append $comparisonTable }}
+{{ end }}
+
+{{/* Add ItemList to graph (collected earlier to wire hasPart into WebPage) */}}
+{{ if and $itemList (ne $itemList (dict)) }}
+  {{ $graph = $graph | append $itemList }}
 {{ end }}
 
 {{/* Add video schema if page contains YouTube videos */}}
