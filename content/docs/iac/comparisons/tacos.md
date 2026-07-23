@@ -73,7 +73,7 @@ Teams reach for a TACOS because they already have Terraform and need to operate 
 
 ### AI and agents
 
-AI is arriving across the category. Spacelift has added [Intelligence and Intent](https://spacelift.io/platform/intelligence) for natural-language provisioning and a hosted MCP server, and other vendors are moving the same way. Pulumi approaches it from the authoring side: because infrastructure is code in general-purpose languages, the coding agents your team already uses — Claude Code, Cursor, Codex — can work with it through [Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/product/neo/) is a purpose-built infrastructure agent for deeper, governed automation. Use your own agent, use Neo, or use both.
+AI is arriving across the category. Spacelift has added [Intelligence and Intent](https://spacelift.io/platform/intelligence) for natural-language provisioning and a hosted [MCP server](https://docs.spacelift.io/integrations/api-development-with-mcp), and other vendors are moving the same way. Pulumi approaches it from the authoring side: because infrastructure is code in general-purpose languages, the coding agents your team already uses — Claude Code, Cursor, Codex — can work with it through [Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/product/neo/) is a purpose-built infrastructure agent for deeper, governed automation. Use your own agent, use Neo, or use both.
 
 ## When to use Pulumi or a TACOS
 
