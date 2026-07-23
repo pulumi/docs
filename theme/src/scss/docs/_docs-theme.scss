@@ -810,7 +810,7 @@ html[data-theme="dark"] body.section-docs {
 // ---------------------------------------------------------------------------
 html[data-theme="dark"] body.section-docs {
     // Headings and paragraphs set `color: service-black` DIRECTLY on the element
-    // (_base-shared.scss, @layer base) — a direct declaration beats the color
+    // (shared/_base.scss, @layer base) — a direct declaration beats the color
     // they'd inherit from `main`, so they must be flipped on the element itself.
     h1,
     h2,
@@ -822,7 +822,7 @@ html[data-theme="dark"] body.section-docs {
         color: var(--docs-fg);
     }
 
-    // _base-shared.scss preflight sets the default border-color to gray-200 so
+    // shared/_base.scss preflight sets the default border-color to gray-200 so
     // bare `border` / `border-t` utilities render. Flip that default to the dark
     // hairline; elements with an explicit (higher-specificity) border color keep
     // it, and buttons keep their intentional transparent border (re-pinned below).
