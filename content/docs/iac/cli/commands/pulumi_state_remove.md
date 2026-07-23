@@ -1,34 +1,53 @@
 ---
 # This file is auto-generated from github.com/pulumi/pulumi/v3/pkg/cmd/pulumi/markdown
-title: "pulumi state unprotect | CLI commands"
+title: "pulumi state remove | CLI commands"
 aliases:
-  - /docs/reference/cli/pulumi_state_unprotect/
-meta_desc: "Learn about the pulumi state unprotect command."
+  - /docs/reference/cli/pulumi_state_remove/
+  - /docs/iac/cli/commands/pulumi_state_rm/
+  - /docs/reference/cli/pulumi_state_rm/
+  - /docs/iac/cli/commands/pulumi_state_delete/
+  - /docs/reference/cli/pulumi_state_delete/
+meta_desc: "Learn about the pulumi state remove command."
 ---
 
 
 
-Unprotect resources in a stack's state
+Deletes one or more resources from a stack's state
 
 ## Synopsis
 
-Unprotect resources in a stack's state
+Deletes one or more resources from a stack's state
 
-This command clears the 'protect' bit on one or more resources, allowing those resources to be deleted.
+This command deletes resources from a stack's state, as long as it is safe to do so. Each resource is specified
+by its Pulumi URN. If no resource is specified, this command will prompt for one.
+
+Resources can't be deleted if other resources depend on it or are parented to it. Protected resources
+will not be deleted unless specifically requested using the --force flag.
+
+Make sure that URNs are single-quoted to avoid having characters unexpectedly interpreted by the shell.
 
 To see the list of URNs in a stack, use `pulumi stack --show-urns`.
 
+
 ```
-pulumi state unprotect [resource-urn]... [flags]
+pulumi state remove [resource-urn]... [flags]
+```
+
+## Examples
+
+```
+pulumi state remove 'urn:pulumi:stage::demo::pkg:index:Type::res-a' 'urn:pulumi:stage::demo::pkg:index:Type::res-b'
 ```
 
 ## Options
 
 ```
-      --all            Unprotect all resources in the checkpoint
-  -h, --help           help for unprotect
-  -s, --stack string   The name of the stack to operate on. Defaults to the current stack
-  -y, --yes            Skip confirmation prompts
+      --all                 Delete all resources in the stack
+      --force               Force deletion of protected resources
+  -h, --help                help for remove
+  -s, --stack string        The name of the stack to operate on. Defaults to the current stack
+      --target-dependents   Delete the URN and all its dependents
+  -y, --yes                 Skip confirmation prompts
 ```
 
 ## Options inherited from parent commands
