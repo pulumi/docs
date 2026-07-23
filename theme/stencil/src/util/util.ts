@@ -1,4 +1,42 @@
 import * as uuid from "uuid";
+import { GrowthBook } from "@growthbook/growthbook";
+
+// Initialize GrowthBook
+export const gb = new GrowthBook({
+    apiHost: "https://cdn.growthbook.io",
+    clientKey: (window as any).growthbook_sdk_key,
+    decryptionKey: (window as any).growthbook_decrypt_key,
+    enableDevMode: (window as any).growthbook_dev_mode,
+});
+
+gb.init({ streaming: true });
+
+// Hook up GrowthBook to analytics when ready
+(window as any).analytics.ready(function() {
+    gb.setTrackingCallback((experiment, result) => {
+        (window as any).analytics.track("Experiment Viewed", {
+            experimentId: experiment.key,
+            variationId: result.key,
+        });
+    });
+
+    gb.setAttributes({
+    // Set Anon/UserId for GB
+    ...gb.getAttributes(),
+        id: (window as any).analytics.user().anonymousId(),
+        userId: (window as any).analytics.user().id(),
+        url: (window as any).location.href,
+        path: (window as any).location.pathname,
+        query: (window as any).location.search,
+        referrer: document.referrer,
+        utmCampaign: getQueryVariable("utm_campaign"),
+        utmSource: getQueryVariable("utm_source"),
+        utmMedium: getQueryVariable("utm_medium"),
+        utmTerm: getQueryVariable("utm_term"),
+        utmContent: getQueryVariable("utm_content"),
+    })
+})
+    
 
 // Extracts a query string variable from the browser's location.
 export function getQueryVariable(paramKey: string): string | null {
