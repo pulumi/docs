@@ -449,6 +449,13 @@ function getDefaultExcludedKeywords() {
         "https://status.pulumi.com",                                                // docs/iac/operations/troubleshooting/server-errors
         "https://www.githubstatus.com/",                                            // referenced from github.com/pulumi/pulumi crawl; bot-protected
         "https://github.com/pulumi/pulumi/stargazers",                              // blog/pulumi-up-2024: GitHub 404s the anonymous /stargazers view for every repo; valid in a browser
+        // Recurring false positives flagged on 2026-07-23 — S3 redirects committed, but registry/build overwrites or CloudFront cache-miss re-flags them
+        "https://www.pulumi.com/registry/packages/azure/api-docs/voice/",           // blog/azure-v6-release: S3 redirect in scripts/redirects/general-broken-links-redirects.txt (added in #20366) keeps getting overwritten by the registry build
+        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/control-plane",   // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/ (same family as excluded cluster-services/, playbooks/)
+        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/configure-defaults", // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
+        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/app-services",    // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
+        "https://www.pulumi.com/docs/iac/clouds/kubernetes/guides/apps",            // blog/inside-crosswalk-for-kubernetes: S3 → /docs/integrations/clouds/kubernetes/
+        "https://ieeexplore.ieee.org/",                                             // blog/aws-iam-access-analyzer-and-crossguard: IEEE returns HTTP 418 (I'm a teapot) to automated clients; loads in browsers
     ];
 }
 

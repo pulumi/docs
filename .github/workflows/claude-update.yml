@@ -194,6 +194,28 @@ jobs:
             AUTHOR="unknown"
           fi
 
+          # GitHub App bots are not collaborators, so the permission API
+          # below returns "none" for them. Trusted bots that drive review
+          # refreshes on this repo are whitelisted by name instead.
+          # `workprentice` is Joe Duffy's docs-automation identity (the Docs
+          # Groundskeeper agent) and is trusted like an internal author: it
+          # opens PRs, addresses the pinned-review findings, and then mentions
+          # `@claude #update-review` to re-verify them — which is exactly what
+          # this workflow does. Without this, that mention hits the
+          # collaborator lookup, resolves to "none", and the refresh silently
+          # no-ops. The author string differs by source: this workflow reads
+          # the comment/review/issue `user.login` (`workprentice[bot]`) while
+          # claude-code-review.yml reads `gh pr view` (`app/workprentice`), so
+          # both forms are listed. Keep this list in sync with the matching
+          # checks in claude-code-review.yml and claude-triage.yml.
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+             || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
+            echo "has_write_access=true" >> $GITHUB_OUTPUT
+            echo "author=$AUTHOR" >> $GITHUB_OUTPUT
+            echo "✓ Bot $AUTHOR is whitelisted for review refreshes"
+            exit 0
+          fi
+
           # Get user's permission level (admin, write, read, or none)
           PERMISSION=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
