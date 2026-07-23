@@ -1,0 +1,31 @@
+{{/*
+  Renders the enum "Values" block for a schema or property.
+
+  Integer enums (e.g. StackPermission) arrive as bare wire numbers like
+  0, 101, 102, 103, 104 whose meaning is opaque without the names. The Pulumi
+  vendor extension `x-pulumi-model-property` carries `enumFieldNames` and
+  `enumFieldComments` positionally aligned with `enum`, so when it is present we
+  render each value as "<value> — Name" plus its description. When it is absent
+  (string enums, etc.) we fall back to the original bare comma-separated list.
+
+  Input: dict with "schema" — the schema or property object holding `.enum`.
+*/}}
+{{ $schema := .schema }}
+{{ $enum := $schema.enum }}
+{{ $ext := index $schema "x-pulumi-model-property" }}
+{{ $names := slice }}
+{{ $comments := slice }}
+{{ with $ext }}
+  {{ with .enumFieldNames }}{{ $names = . }}{{ end }}
+  {{ with .enumFieldComments }}{{ $comments = . }}{{ end }}
+{{ end }}
+{{ if and (gt (len $names) 0) (eq (len $names) (len $enum)) }}
+  <dl class="enum-value-list">
+    {{ range $i, $v := $enum }}
+      <dt><code>{{ $v }}</code> &mdash; {{ index $names $i }}</dt>
+      {{ if lt $i (len $comments) }}{{ $c := index $comments $i }}{{ if $c }}<dd>{{ $c | markdownify }}</dd>{{ end }}{{ end }}
+    {{ end }}
+  </dl>
+{{ else }}
+  {{ range $i, $v := $enum }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
+{{ end }}

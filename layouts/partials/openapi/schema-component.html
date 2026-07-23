@@ -24,7 +24,7 @@
         {{ if isset $schema "enum" }}
             <div class="enum-values">
                 <strong>Values:</strong>
-                {{ range $i, $v := $schema.enum }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
+                {{ partial "openapi/enum-values.html" (dict "schema" $schema) }}
             </div>
         {{ end }}
 
