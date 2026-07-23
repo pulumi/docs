@@ -20,10 +20,10 @@ aliases:
 faq_schema: true
 itemlist_name: "Core Infrastructure as Code Tools"
 itemlist:
-    - name: "Pulumi"
+    - name: "Pulumi IaC"
       url: "https://www.pulumi.com/"
     - name: "Terraform"
-    - name: "AWS Cloud Development Kit (CDK)"
+    - name: "AWS CDK"
     - name: "AWS CloudFormation"
     - name: "Azure Resource Manager (ARM)"
     - name: "Azure Bicep"
