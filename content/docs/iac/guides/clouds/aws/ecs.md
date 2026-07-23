@@ -123,3 +123,4 @@ For more information about using ECR, refer to Pulumi's [AWS Guide for ECR](/doc
 ## Additional ECS Resources
 
 * [Amazon Elastic Container Service](https://aws.amazon.com/ecs/)
+* [Container image build caching and deployment reproducibility](/docs/iac/operations/container-image-reproducibility/) — pin task definitions to a build's image digest instead of a mutable tag, and cache image builds across CI runs.

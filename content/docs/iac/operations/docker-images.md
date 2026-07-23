@@ -121,3 +121,4 @@ Images are scanned for vulnerabilities nightly. Pulumi remediates issues where i
 - [Continuous Delivery](/docs/iac/operations/continuous-delivery/) — CI/CD guides for the systems where these images are commonly used.
 - [Docker provider](/registry/packages/docker/) — manage Docker resources (containers, networks, volumes) with Pulumi.
 - [Docker Build provider](/registry/packages/docker-build/) — build and push Docker images to any registry with Pulumi.
+- [Container image build caching and deployment reproducibility](/docs/iac/operations/container-image-reproducibility/) — digest-based tagging, registry-backed layer caching, and a build/deploy stack split for images built with either provider.
