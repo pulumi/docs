@@ -6,7 +6,7 @@ description: Convert a Figma design into a templatized product page — maps Fig
 
 Convert a Figma design into a templatized Hugo product page.
 
-**Use this when:** You have a Figma URL for a product page and a corresponding markdown file open in the editor that you want to convert to use the `product-page` layout.
+**Use this when:** You have a Figma URL for a product page and a corresponding markdown file open in the editor that you want to convert to use the `template-page` layout.
 
 ---
 
@@ -48,7 +48,7 @@ From the metadata, identify:
 
 ## Step 2 — Map sections to partials
 
-Use **only** the partials in `layouts/partials/template-partials/` and the layout `layouts/page/product-page.html`.
+Use **only** the partials in `layouts/partials/template-partials/` and the layout `layouts/page/template-page.html`.
 
 The orchestrator partial is `layouts/partials/template-page-content.html`. It loops through the `sections` array and resolves each partial by converting the `type` value: underscores become hyphens, then the result is used as `template-{type}.html`. **No changes to the orchestrator are needed** when adding new section types — just create the partial and use the correct `type` name.
 
@@ -77,9 +77,9 @@ The orchestrator partial is `layouts/partials/template-page-content.html`. It lo
 
 ## Step 3 — Implement the frontmatter
 
-Rewrite the target markdown file's frontmatter to use `layout: product-page` and add a `sections:` array where each item has a `type:` field plus the fields required by that partial.
+Rewrite the target markdown file's frontmatter to use `layout: template-page` and add a `sections:` array where each item has a `type:` field plus the fields required by that partial.
 
-> **Required:** The frontmatter must include `type: page` or Hugo will not render the page with the product-page layout. Always include it alongside `layout: product-page`.
+> **Required:** The frontmatter must include `type: page` or Hugo will not render the page with the template-page layout. Always include it alongside `layout: template-page`.
 
 The `sections:` array controls render order — items appear on the page in the order they are listed.
 

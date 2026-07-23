@@ -25,7 +25,7 @@ customer_name: "{{ replace .Name "-" " " | title }}"
 industry: ""
 
 # Logo assets live in assets/fingerprinted/logos/customers/. customer_logo is
-# rendered on LIGHT backgrounds (case-study page quote panel, product-page
+# rendered on LIGHT backgrounds (case-study page quote panel, template-page
 # partials) — never point it at a white/light asset.
 customer_logo: /logos/customers/<slug>.svg
 

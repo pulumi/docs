@@ -138,7 +138,7 @@ Case studies live at `content/case-studies/<slug>.md` — scaffold a new one wit
 
 - **`industry`** — required, singular, closed set defined in `data/case_study_industries.yaml` (`make lint` enforces it). That file's header comment is the authoritative reference.
 - **Logo tile** — the cards on `/case-studies/` and the industry term pages render each logo centered on a brand-color tile, driven by optional front matter (`logo_bg_color`, `logo_style: white|dark`, `logo_size: lg`, `card_logo`), all documented in `layouts/partials/case-studies/card.html` and format-checked by `make lint`.
-- **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the product-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
+- **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the template-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
 
 ---
 
