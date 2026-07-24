@@ -308,21 +308,39 @@ if (config.enableDataWarehouseAccess) {
         bucket: contentReviewLedgerBucket.bucket,
         policy: pulumi.all([contentReviewLedgerBucket.arn, dwhBucketReaderRole])
             .apply(([bucketArn, roleArn]) => JSON.stringify({
-                "Version": "2012-10-17",
-                "Statement": [
+                Version: "2012-10-17",
+                Statement: [
+                    // Data warehouse (Snowpipe) read access. GetObjectVersion is
+                    // included because the ledger bucket is versioned and the
+                    // per-review history lives in S3 object versions.
                     {
-                        "Effect": "Allow",
-                        "Principal": { "AWS": roleArn },
-                        "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
-                        "Resource": bucketArn,
+                        Sid: "DataWarehouseReadObjects",
+                        Effect: "Allow",
+                        Principal: { AWS: roleArn },
+                        Action: ["s3:GetObject", "s3:GetObjectVersion"],
+                        Resource: `${bucketArn}/*`
                     },
                     {
-                        "Effect": "Allow",
-                        "Principal": { "AWS": roleArn },
-                        "Action": ["s3:GetObject"],
-                        "Resource": `${bucketArn}/*`,
+                        Sid: "DataWarehouseListBucket",
+                        Effect: "Allow",
+                        Principal: { AWS: roleArn },
+                        Action: ["s3:ListBucket", "s3:GetBucketLocation"],
+                        Resource: bucketArn
                     },
-                ],
+                    // Enforce TLS
+                    {
+                        Sid: "RestrictToTLSRequestsOnly",
+                        Effect: "Deny",
+                        Principal: "*",
+                        Action: "s3:*",
+                        Resource: [bucketArn, `${bucketArn}/*`],
+                        Condition: {
+                            Bool: {
+                                "aws:SecureTransport": "false"
+                            }
+                        }
+                    }
+                ]
             })),
     });
 }
