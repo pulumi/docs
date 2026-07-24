@@ -113,6 +113,8 @@ _vendor/
 /.ledger-cache/
 /.traffic-snapshot
 /.synthetic.patch
+# Local cache for scripts/review-admin (synced S3 ledgers, exports, dashboard).
+/.review-admin-cache/
 # Lint re-gate scratch (worker re-lints the fix branch and captures output).
 /.lint.log
 /.lint-comment.md

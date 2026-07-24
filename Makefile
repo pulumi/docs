@@ -62,6 +62,16 @@ generate-related-tags:
 	cd scripts/python && pipenv install && pipenv run python generate_tag_related.py
 	@echo -e "\033[0;32mDone! Updated data/related.yaml\033[0m"
 
+.PHONY: review-admin-sync
+review-admin-sync:
+	@echo -e "\033[0;32mSyncing review ledgers from S3...\033[0m"
+	python3 scripts/review-admin/review-admin.py sync
+
+.PHONY: review-admin-dashboard
+review-admin-dashboard:
+	@echo -e "\033[0;32mGenerating review-ledger dashboard...\033[0m"
+	python3 scripts/review-admin/review-admin.py html --open
+
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD:\033[0m"
