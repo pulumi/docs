@@ -21,7 +21,7 @@ Neo is enabled by default. To disable Neo for your organization, navigate to **S
 
 ## VCS integration
 
-Connecting a [version control integration](/docs/integrations/version-control/) significantly enhances Neo's capabilities, though it is not required. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/). A VCS integration:
+Connecting a [version control integration](/docs/integrations/version-control/) significantly enhances Neo's capabilities, though it is not required. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), [Bitbucket](/docs/integrations/version-control/bitbucket/), and [Custom VCS](/docs/integrations/version-control/custom-vcs/). A VCS integration:
 
 - Allows Neo to read repository content for better context
 - Enables pull request creation
@@ -33,23 +33,13 @@ To set up a VCS integration, see the [version control docs](/docs/integrations/v
 
 ## Neo's permission model
 
-Neo operates within the conversing user's [RBAC entitlements](/docs/pulumi-cloud/access-management/rbac/) and cannot perform actions that the user couldn't perform themselves. This means:
-
-- There's no privilege escalation risk or special administrative access required
-- Each user's Neo conversations are isolated from other users
+Neo operates within the conversing user's [RBAC entitlements](/docs/administration/access-identity/rbac/) and cannot perform actions that the user couldn't perform themselves — there's no privilege escalation, and each user's Neo conversations are isolated from other users. For the full picture of which identity Neo acts as on each surface, how permission and approval modes constrain it, and how to scope its access, see [Neo's permissions model](/docs/ai/neo/permissions/).
 
 ### Read-only mode
 
-When you create a Neo task, you can choose between two permission levels:
+When you create a task, you can run Neo with your full permissions ("Use my permissions", the default) or in read-only mode. Read-only mode takes your existing permissions and removes the ability to trigger writes in Pulumi Cloud: Neo can still read state, run previews, write and refactor code, and open pull requests, but it can't trigger deployments or other Pulumi Cloud write operations directly. Neo never gets more access than you have, only less.
 
-| Option | What Neo can do |
-| :--- | :--- |
-| **Use my permissions** | Full access (default behavior) |
-| **Read-only** | Read, preview, and create PRs. No infrastructure mutations. |
-
-Read-only mode takes your existing permissions and removes the ability to make changes. Neo never gets more access than you have, only less. If you can view a stack but not a particular environment, Neo in read-only mode also cannot see that environment.
-
-In read-only mode, Neo can still read your infrastructure state, run previews, write and refactor code, create branches, and open pull requests. The only difference is that Neo cannot trigger deployments or other write operations in Pulumi Cloud directly.
+Read-only is scoped to Pulumi Cloud. It does not, on its own, prevent Neo from opening [ESC](/docs/esc/) environments you can open or reaching the cloud accounts those environments unlock — see [ESC, secrets, and downstream cloud access](/docs/ai/neo/permissions/#esc-secrets-and-downstream-cloud-access).
 
 ## Quick Start Guide
 
@@ -94,6 +84,6 @@ Let's run a simple infrastructure [task](/docs/ai/neo/tasks/) to see Neo in acti
 
 ## Considerations and Limitations
 
-- Code Changes Only - Neo can only modify infrastructure through code. It cannot perform API or UI actions like configure deployments, updating stack configurations, or managing environments in Pulumi Cloud.
-- Cannot Create Repos - Neo cannot create new repositories or initialize new Git repos. It only works within existing repositories.
+- Changes go through code, deployments, and APIs - Where your Pulumi Cloud configuration (deployment settings, stack configuration, environment definitions) is managed in IaC, Neo changes it through code and pull requests. Where it isn't, Neo can edit it directly through the Pulumi Cloud APIs. Neo can also run deployments (`pulumi up`) and, where it has access, cloud CLI operations, so its effects reach beyond code. See [Neo's permissions model](/docs/ai/neo/permissions/) for the full picture.
+- Creating repositories requires individual access - Neo creates repositories as your own connected version control account, not as the shared Pulumi app, so you must [grant individual access](/docs/integrations/version-control/github-app/#individual-user-setup) to your provider first. Custom VCS servers do not support repository creation at all.
 - Cannot Create New Projects - Neo cannot initialize new Pulumi projects. It can only work within existing projects that are already set up.

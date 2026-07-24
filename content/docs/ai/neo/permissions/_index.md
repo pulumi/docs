@@ -1,0 +1,141 @@
+---
+title: Neo's permissions model
+title_tag: Neo's permissions model | Pulumi Neo
+h1: Neo's permissions model
+meta_desc: What Pulumi Neo can do, which identity it acts as on each surface, how permission and approval modes constrain it, and how to scope its access.
+menu:
+    ai:
+        name: Permissions model
+        parent: ai-neo
+        identifier: ai-permissions
+        weight: 12
+---
+
+This page is the canonical reference for Neo's permissions model: what Neo can do, which identity it acts as on each surface, what constrains it, and how to scope it down. If you are a security reviewer or platform admin answering "what can Neo do, as whom, and how do I constrain it?", start here.
+
+## The core invariant
+
+Neo acts on behalf of the user invoking it, and Neo can only do what that user could do themselves.
+
+- Neo operates within the acting user's [role-based access control (RBAC)](/docs/administration/access-identity/rbac/) entitlements and cannot perform actions that user couldn't perform.
+- There is no privilege escalation: Neo never gets more access than the user has, only the same or less.
+- Tasks are private to the user who created them. That user can [share a task](/docs/ai/neo/tasks/#ownership-and-sharing) with the rest of the organization as a read-only link: viewers see the conversation but cannot act through it, and any stack or resource it links to still enforces the viewer's own RBAC.
+
+The rest of this page describes which user Neo acts as on each surface, the ceiling that user's RBAC sets, and the controls that narrow it further.
+
+{{% notes type="info" %}}
+Today, Neo has no role of its own — it inherits the acting user's role. Fine-grained access control to scope Neo's access independently of the user is in development and will be an Enterprise and Business Critical capability. Until then, the lever for constraining Neo is the acting user's RBAC and the ESC environments they can open.
+{{% /notes %}}
+
+## Execution identity per surface
+
+Neo is one agent reachable from several places. Whichever surface starts a task, the task runs as a specific Pulumi identity:
+
+| Surface | Runs as | Notes |
+| :--- | :--- | :--- |
+| Pulumi Cloud console | The signed-in user | The main home for tasks, automations, and settings. |
+| [`pulumi neo`](/docs/ai/neo/pulumi-cli/) (CLI) | Your Pulumi user, via `pulumi login` | Also inherits your local setup: authenticated CLIs, environment variables, and kubeconfigs. |
+| [Slack](/docs/ai/neo/integrations/slack/) | The Pulumi user linked to your Slack identity | Requires connecting your Slack identity in Neo settings first. |
+| PR mentions / [code reviews](/docs/ai/neo/code-reviews/) | The Pulumi user matched to your VCS identity | Neo matches your GitHub identity to your Pulumi user. |
+| [Scheduled automations](/docs/ai/neo/automations/) | The user who scheduled the automation | RBAC is evaluated at execution time — if that user's permissions change, the new permissions apply. |
+| API / [MCP](/docs/ai/neo/integrations/mcp/)-created tasks | The Pulumi user whose token created the task | The task runs with that user's RBAC, exactly as if they had started it in the console. |
+
+These identities govern what Neo does in Pulumi Cloud. Writes to your version control provider are a separate matter: Neo authenticates as the shared app installation for its VCS interactions no matter which surface started the task (see [VCS identity per provider](#vcs-identity-per-provider)).
+
+Because a task's Pulumi RBAC is evaluated at execution time, it never runs with stale permissions: if the acting user is deactivated or loses access, the task loses that access immediately, including in the middle of a running task.
+
+## What Neo can access, per Pulumi Cloud area
+
+Neo's access ceiling is the acting user's RBAC. Within that ceiling, Neo reads broadly — it leans on the Pulumi Cloud APIs heavily to retrieve and search your infrastructure — and it makes changes two ways: through code and pull requests for anything you manage in IaC, and directly through the Pulumi Cloud APIs for anything you don't. Managing your Pulumi estate in IaC is therefore what routes Neo's changes through code review.
+
+| Area | What Neo can read | How Neo changes it |
+| :--- | :--- | :--- |
+| IaC stacks and state | Stack state, resources, and outputs for stacks the user can read | Proposes IaC code changes via [pull requests](/docs/ai/neo/pull-requests/) and runs `pulumi preview` / `pulumi up` (gated by [approval mode](#permission-mode-and-approval-mode)). It does not edit state directly. |
+| Environments and secrets ([ESC](/docs/esc/)) | Any environment the user can open — including decrypting secrets and minting dynamic cloud credentials | Through ESC code changes where the environment is managed in IaC; otherwise Neo edits the environment definition directly. |
+| Deployment settings | Settings the user can read | Through code and pull requests where the settings are managed in IaC; otherwise Neo edits them directly through the API. |
+| Policy packs | Packs and results the user can read | No direct management of policy packs. |
+| Insights / discovery (cloud) accounts | Accounts and scan results the user can read | No direct management of accounts. |
+| Audit logs | Logs, if the user holds an audit-log read permission (typically Admin) | Read-only resource. |
+
+### ESC, secrets, and downstream cloud access
+
+Neo inherits the acting user's ESC access. If the user can [open](/docs/administration/access-identity/rbac/) an environment (the `environment:open` permission), so can Neo — which means Neo can decrypt that environment's secrets and use any dynamic cloud credentials it mints. If an environment brokers OIDC credentials to an AWS, Azure, or Google Cloud account, Neo can assume those roles and operate in that cloud account, exactly as the user could.
+
+This has two consequences worth stating plainly:
+
+- **"Read-only" is scoped to Pulumi Cloud, not to your cloud accounts.** Read-only mode blocks writes in Pulumi Cloud and instructs Neo not to make modifications, but it does not technically prevent Neo from opening ESC environments or reaching the cloud accounts those environments unlock. Treat read-only as "no Pulumi Cloud mutations," not "no side effects anywhere."
+- **Handling of secret values.** Pulumi redacts secret values on the service side, so they are not stored in task history and are not visible to task viewers or Pulumi operators. This is a weaker guarantee than [MCP integration credentials](/docs/ai/neo/integrations/mcp/), which are never exposed to the language model at all: an ESC-sourced secret value *can* reach the model if a task reads it directly. The model is instructed to handle secrets with care, the model provider performs no retention of these values, and the value leaves the task context after the task idles. Where possible, Neo moves secret values without reading them into context — for example, redirecting a cloud CLI's output straight to a file.
+
+To constrain what Neo can reach, scope the acting user's RBAC and the ESC environments they can open. Prefer read-only cloud roles in ESC environments and broaden them deliberately.
+
+## Permission mode and approval mode
+
+Neo has two independent axes of control. Do not conflate them:
+
+| Axis | Values | Governs |
+| :--- | :--- | :--- |
+| **Permission mode** | `default` ("Use my permissions") / `read-only` | *What Neo can change.* Read-only removes the ability to trigger Pulumi Cloud writes while keeping read, preview, code, and PR abilities. |
+| **Approval mode** (also called task mode) | Review / Balanced / Auto | *When Neo pauses for your approval.* See the gates below. |
+
+Approval-mode gates:
+
+- **Review mode**: Neo requires approval before running `pulumi preview`, running `pulumi up`, and opening a pull request.
+- **Balanced mode**: Neo requires approval only before running `pulumi up`.
+- **Auto mode**: Neo does not require any approvals.
+
+{{% notes type="info" %}}
+In the `pulumi neo` CLI and the API, the strictest approval mode is named **`manual`**, which is the same mode the console calls **Review**. The permission-mode values (`default`, `read-only`) are the same in both places.
+{{% /notes %}}
+
+[Plan Mode](/docs/ai/neo/tasks/#plan-mode) is a separate, pre-execution control: it makes Neo research and agree on a plan with you before it acts, and it composes with any permission or approval mode.
+
+## What triggers an approval prompt
+
+Approval mode gates the Pulumi actions above — `pulumi preview`, `pulumi up`, and opening a pull request. It's important to understand what it does *not* gate.
+
+By design, Neo investigates autonomously. During the investigation phase it reads state, opens ESC environments, and reaches the cloud accounts, clusters, and integrations it has access to **without prompting for each action** — an explicit tradeoff to avoid approval fatigue on the many small reads a real investigation requires. Approval prompts apply to the Pulumi write actions listed above (and to sensitive writes Neo surfaces for confirmation), not to bare read access.
+
+The practical implication: if you need Neo to stay within a boundary, set that boundary with permissions (the user's RBAC and the ESC environments they can open), not by relying on approval prompts to catch every access.
+
+## The control inventory
+
+Every lever that shapes what a Neo task can do, and who sets it:
+
+| Control | Values | Configured by | Where |
+| :--- | :--- | :--- | :--- |
+| Permission mode | `default` / `read-only` | User, per task | Task creation; `--permission-mode` in the CLI |
+| Approval (task) mode | Review-`manual` / Balanced / Auto | User per task; org admin sets the default | Task UI; `--approval-mode` in the CLI; org default in [Settings](/docs/ai/neo/settings/#task-modes) |
+| Plan Mode | On / off | User, per task | Task UI; **Shift+Tab** in the CLI |
+| Per-automation overrides | Permission and approval mode | User who owns the automation | [Automations](/docs/ai/neo/automations/) |
+| Disable integrations for a task | On / off | User, per task | `--disable-integrations` in the CLI |
+| Neo master switch and per-feature toggles | On / off | Org admin | [Settings > Neo access](/docs/ai/neo/settings/#neo-access) |
+| Integration enablement and credentials | Per integration | Org admin | [Integrations](/docs/ai/neo/integrations/) |
+
+For scheduled automations, settings resolve in this order: the per-automation setting, then the org-level default, then the built-in fallback (auto approval and read-only permissions).
+
+Org-level defaults for permission and approval mode set the starting point for new tasks; a user can override them per task.
+
+[CLI integrations](/docs/ai/neo/integrations/cli/) are a distinct, admin-controlled capability: an organization admin configures them, and they are available to tasks run by users who can open the backing ESC environment, with whatever permissions that environment grants. Scope each integration's ESC environment to what Neo needs — prefer a read-only cloud role and broaden it deliberately.
+
+## VCS identity per provider
+
+Neo's version control writes do not run as you. Neo authenticates as the shared app installation for its VCS interactions — opening pull requests, pushing commits, commenting, posting checks. Creating a repository is the exception: that runs as your connected individual account, which is why it needs individual access.
+
+| Provider | Neo writes as | Individual access | Notes |
+| :--- | :--- | :--- | :--- |
+| GitHub.com | The shared Pulumi GitHub App for all VCS interactions (opening PRs, pushing commits, PR comments, checks); your connected GitHub account for creating repositories | **Required** to create repositories and to trigger [Neo code reviews](/docs/ai/neo/code-reviews/); optional otherwise | When a task needs individual access you don't have connected, Neo posts a nudge prompting you to grant it. |
+| GitHub Enterprise Server | The shared app installation by default; your connected account when individual user authentication is enabled | Enabled per integration by an admin, then connected per user | Business Critical edition. Scheduled Neo tasks and API-created operations always use the shared installation. |
+| Azure DevOps | The org integration handles PR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts PR reviews when enabled (the default). |
+| GitLab | The org integration handles MR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts MR reviews when enabled (the default). |
+| Bitbucket | The org integration handles PR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts PR reviews when enabled (the default). |
+| [Custom VCS](/docs/integrations/version-control/custom-vcs/) | The credentials from the integration's ESC environment — a shared identity belonging to whoever configured the integration | N/A | Neo can clone and push (Git and Mercurial) but cannot open pull requests or create repositories on Custom VCS servers. |
+
+## Related resources
+
+- [Role-based access control](/docs/administration/access-identity/rbac/) — the permission model Neo inherits
+- [Least-privilege access](/docs/administration/security-compliance/least-privilege/) — scoping down what a user (and therefore Neo) can do
+- [Pulumi ESC](/docs/esc/) — environments, secrets, and dynamic credentials
+- [Tasks](/docs/ai/neo/tasks/) — Plan Mode and approval modes in depth
+- [Automations](/docs/ai/neo/automations/) — scheduled tasks and their defaults
+- [Integrations](/docs/ai/neo/integrations/) — MCP and CLI integration credentials
+- [Version control](/docs/integrations/version-control/) — per-provider VCS setup
