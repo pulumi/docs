@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. AWS CloudFormation"
+faq_schema: true
 authors: ["joe-duffy"]
 meta_desc: "Pulumi vs. AWS CloudFormation: Pulumi is a multi-cloud IaC tool in general-purpose languages; CloudFormation is AWS-only with JSON/YAML templates."
 title: AWS CloudFormation

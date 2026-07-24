@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. AWS CDK"
+faq_schema: true
 authors: ["joe-duffy"]
 meta_desc: "Compare Pulumi and AWS CDK: language support, multi-cloud coverage, state, secrets, policy, and migration paths. Neutral, side-by-side, with adoption guidance."
 title: AWS CDK
