@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class PulumiNewOptions </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class PulumiNewOptions ">
+    
+    <meta name="description" content="Options for the pulumi new command.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Automation.Commands.PulumiNewOptions">
+
+
+  <h1 id="Pulumi_Automation_Commands_PulumiNewOptions" data-uid="Pulumi.Automation.Commands.PulumiNewOptions" class="text-break">Class PulumiNewOptions</h1>
+  <div class="markdown level0 summary"><p>Options for the <code>pulumi new</code> command.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="pulumi.automation.commands.baseoptions.html">BaseOptions</a></div>
+    <div class="level2"><span class="xref">PulumiNewOptions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_WorkDir">BaseOptions.WorkDir</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_EnvironmentVariables">BaseOptions.EnvironmentVariables</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_OnStandardOutput">BaseOptions.OnStandardOutput</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_OnStandardError">BaseOptions.OnStandardError</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.automation.html">Automation</a>.<a class="xref" href="pulumi.automation.commands.html">Commands</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
+  <h5 id="Pulumi_Automation_Commands_PulumiNewOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PulumiNewOptions : BaseOptions</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L267">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_AI_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.AI*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_AI" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.AI">AI</h4>
+  <div class="markdown level1 summary"><p>Prompt to use for Pulumi AI</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? AI { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L272">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Color_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Color*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Color" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Color">Color</h4>
+  <div class="markdown level1 summary"><p>Colorize output. Choices are: always, never, raw, auto</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Color { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L277">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Config_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Config*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Config" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Config">Config</h4>
+  <div class="markdown level1 summary"><p>Config to save</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;string&gt;? Config { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L282">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_ConfigPath_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.ConfigPath*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_ConfigPath" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.ConfigPath">ConfigPath</h4>
+  <div class="markdown level1 summary"><p>Config keys contain a path to a property in a map or list to set</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? ConfigPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L287">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Description_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Description*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Description" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The project description; if not specified, a prompt will request it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L292">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Dir_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Dir*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Dir" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Dir">Dir</h4>
+  <div class="markdown level1 summary"><p>The location to place the generated project; if not specified, the current directory is used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Dir { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L297">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_DisableIntegrityChecking_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.DisableIntegrityChecking*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_DisableIntegrityChecking" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.DisableIntegrityChecking">DisableIntegrityChecking</h4>
+  <div class="markdown level1 summary"><p>Disable integrity checking of checkpoint files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? DisableIntegrityChecking { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L302">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Force_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Force*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Force" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Force">Force</h4>
+  <div class="markdown level1 summary"><p>Forces content to be generated even if it would change existing files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Force { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L307">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_FullyQualifyStackNames_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.FullyQualifyStackNames*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_FullyQualifyStackNames" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.FullyQualifyStackNames">FullyQualifyStackNames</h4>
+  <div class="markdown level1 summary"><p>Show fully-qualified stack names</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? FullyQualifyStackNames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L312">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_GenerateOnly_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.GenerateOnly*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_GenerateOnly" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.GenerateOnly">GenerateOnly</h4>
+  <div class="markdown level1 summary"><p>Generate the project only; do not create a stack, save config, or install dependencies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? GenerateOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L317">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Language_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Language*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Language" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Language">Language</h4>
+  <div class="markdown level1 summary"><p>Language to use for Pulumi AI (must be one of TypeScript, JavaScript, Python, Go, C#, Java, or YAML)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Language { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L322">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_ListTemplates_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.ListTemplates*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_ListTemplates" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.ListTemplates">ListTemplates</h4>
+  <div class="markdown level1 summary"><p>List locally installed templates and exit</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? ListTemplates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L327">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Logflow_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Logflow*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Logflow" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Logflow">Logflow</h4>
+  <div class="markdown level1 summary"><p>Flow log settings to child processes (like plugins)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Logflow { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L332">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Logtostderr_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Logtostderr*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Logtostderr" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Logtostderr">Logtostderr</h4>
+  <div class="markdown level1 summary"><p>Log to stderr instead of to files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Logtostderr { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L337">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Memprofilerate_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Memprofilerate*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Memprofilerate" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Memprofilerate">Memprofilerate</h4>
+  <div class="markdown level1 summary"><p>Enable more precise (and expensive) memory allocation profiles by setting runtime.MemProfileRate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public int? Memprofilerate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L342">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Name_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Name*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Name" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The project name; if not specified, a prompt will request it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L347">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Offline_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Offline*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Offline" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Offline">Offline</h4>
+  <div class="markdown level1 summary"><p>Use locally cached templates without making any network requests</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Offline { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L352">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_OtelTraces_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.OtelTraces*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_OtelTraces" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.OtelTraces">OtelTraces</h4>
+  <div class="markdown level1 summary"><p>Export OpenTelemetry traces to the specified endpoint. Use file:// for local JSON files, grpc:// for remote collectors</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? OtelTraces { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L357">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Profiling_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Profiling*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Profiling" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Profiling">Profiling</h4>
+  <div class="markdown level1 summary"><p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Profiling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L362">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_RemoteStackConfig_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.RemoteStackConfig*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_RemoteStackConfig" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.RemoteStackConfig">RemoteStackConfig</h4>
+  <div class="markdown level1 summary"><p>Store stack configuration remotely</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? RemoteStackConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L367">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_RuntimeOptions_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.RuntimeOptions*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_RuntimeOptions" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.RuntimeOptions">RuntimeOptions</h4>
+  <div class="markdown level1 summary"><p>Additional options for the language runtime (format: key1=value1,key2=value2)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;string&gt;? RuntimeOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L372">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_SecretsProvider_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.SecretsProvider*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_SecretsProvider" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.SecretsProvider">SecretsProvider</h4>
+  <div class="markdown level1 summary"><p>The type of the provider that should be used to encrypt and decrypt secrets (possible choices: default, passphrase, awskms, azurekeyvault, gcpkms, hashivault)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? SecretsProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L377">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Stack_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Stack*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Stack" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Stack">Stack</h4>
+  <div class="markdown level1 summary"><p>The stack name; either an existing stack or stack to create; if not specified, a prompt will request it</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Stack { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L382">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_TemplateMode_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.TemplateMode*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_TemplateMode" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.TemplateMode">TemplateMode</h4>
+  <div class="markdown level1 summary"><p>Run in template mode, which will skip prompting for AI or Template functionality</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? TemplateMode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L387">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Tracing_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Tracing*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Tracing" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Tracing">Tracing</h4>
+  <div class="markdown level1 summary"><p>Emit tracing to the specified endpoint. Use the <code>file:</code> scheme to write tracing data to a local file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Tracing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L392">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_TracingHeader_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.TracingHeader*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_TracingHeader" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.TracingHeader">TracingHeader</h4>
+  <div class="markdown level1 summary"><p>Include the tracing header with the given contents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? TracingHeader { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L397">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiNewOptions_Verbose_" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Verbose*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiNewOptions_Verbose" data-uid="Pulumi.Automation.Commands.PulumiNewOptions.Verbose">Verbose</h4>
+  <div class="markdown level1 summary"><p>Enable verbose logging (e.g., v=3); anything &gt;3 is very verbose</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public int? Verbose { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 3.108.0</p>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L262" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
