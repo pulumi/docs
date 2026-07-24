@@ -51,22 +51,7 @@ To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or b
 
 ### How can I go back to using the Pulumi Cloud?
 
-Run `pulumi login`, and you’ll be back to using the Pulumi Cloud. You will need to migrate any existing stacks to the Pulumi Cloud.
-
-### How to migrate from a DIY backend to the Pulumi Cloud?
-
-The Pulumi CLI allows you to export and import checkpoints so you can do the following. Suppose the stack “my-app-production” has been managed with a local checkpoint file, and you want to migrate it to pulumi.com. If you are currently logged in to the local endpoint, run the following commands:
-
-```sh
-$ pulumi stack select my-app-production # switch to the stack we want to export
-$ pulumi stack export --file my-app-production.checkpoint.json # export the stack's checkpoint to a local file
-$ pulumi logout
-$ pulumi login
-$ pulumi stack init my-app-production # create a new stack with the same name on pulumi.com
-$ pulumi stack import --file my-app-production.checkpoint.json # import the new existing checkpoint into pulumi.com
-```
-
-In addition, if you have any encrypted configuration in your stack, you'll need to re-run `pulumi config set --secret <key> <value>` because pulumi.com uses a different key to encrypt your secrets than the local endpoint does.
+Log in to Pulumi Cloud with `pulumi login`, then follow [Migrating between state backends](/docs/iac/concepts/state-and-backends/#migrating-between-state-backends).
 
 ### Which domains and IPs should I allowlist?
 
@@ -236,11 +221,13 @@ to sign-in.
 
 Yes. Signing-in with a GitLab account will create a new account. That
 means, your stacks and activity will stay with the other account. You
-can migrate them by performing a
+can copy stack state, but not Pulumi Cloud activity history, by performing a
 [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export)
-from your source stack and then importing it using
-[`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import)
-in a new stack in your GitLab-based account.
+from your source stack, creating a new empty target stack in your GitLab-based account, and importing it using
+[`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import).
+Importing state overwrites the selected target stack state.
+
+If your source stack uses service-managed secrets, contact Pulumi Support before copying it. The destination account might not decrypt imported secrets.
 
 If you would like to add your GitLab identity to your _existing_ Pulumi account, you can
 do so by connecting your GitLab identity from your Pulumi account's profile page.

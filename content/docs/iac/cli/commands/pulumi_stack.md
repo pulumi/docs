@@ -41,7 +41,7 @@ pulumi stack [flags]
       --color string                 Colorize output. Choices are: always, never, raw, auto (default "auto")
   -C, --cwd string                   Run pulumi as if it had been started in another directory
       --disable-integrity-checking   Disable integrity checking of checkpoint files
-  -e, --emoji                        Enable emojis in the output
+  -e, --emoji                        Enable emojis in the output (default true)
   -Q, --fully-qualify-stack-names    Show fully-qualified stack names
       --logflow                      Flow log settings to child processes (like plugins)
       --logtostderr                  Log to stderr instead of to files
