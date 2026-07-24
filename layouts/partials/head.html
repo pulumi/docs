@@ -3,19 +3,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
-    <!-- Segment keys -->
+    <!-- GrowthBook / Segment keys -->
     <script>
         {{- if eq hugo.Environment "production" }}
             var segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
             var snippetName = "C8Y429BDEy/06ujkUhzfL.min.js";
+            window.growthbook_sdk_key="sdk-psPofGr6jFV2ja9O";
+            window.growthbook_decrypt_key="9NsAVMNWaDS+Oky3rhLQ+A==";
+            window.growthbook_dev_mode=false;
         {{- else }}
             var segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
             var snippetName = "C8Y429BDEy/hpBKpR8Nx1yVCjKPB2nJWg.min.js";
+            window.growthbook_sdk_key="sdk-BwIkZCqXQ9pZyp0P";
+            window.growthbook_decrypt_key=undefined;
+            window.growthbook_dev_mode=true;
         {{- end }}
     </script>
 
+    {{- /* A/B test 20260723-mktg-ctas anti-flicker (homepage only): hold the
+           hero secondary CTA hidden (space reserved) before first paint so its
+           label doesn't visibly flip while GrowthBook resolves the variant.
+           mktg-ctas-experiment.ts reveals it on resolve; the timeout is a
+           safety net so a slow/blocked GrowthBook can never leave it hidden. */ -}}
+    {{ if .IsHome }}
+    <style>html.mktg-ctas-pending a[data-role="cta-secondary"]{visibility:hidden}</style>
+    <script>
+        document.documentElement.classList.add("mktg-ctas-pending");
+        window.setTimeout(function () {
+            document.documentElement.classList.remove("mktg-ctas-pending");
+        }, 400);
+    </script>
+    {{ end }}
+
     <!-- Preconnect to Segment (used on every page). -->
     <link rel="preconnect" href="https://cdn.segment.com" crossorigin />
+    <!-- Preconnect to GrowthBook (A/B testing, used on every page). -->
+    <link rel="preconnect" href="https://cdn.growthbook.io" crossorigin />
     {{- if eq hugo.Environment "production" }}
     <!-- Preconnect to Common Room (production only). -->
     <link rel="preconnect" href="https://cdn.cr-relay.com" crossorigin />

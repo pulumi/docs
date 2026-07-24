@@ -116,8 +116,8 @@ jobs:
           # trusted like an internal author. The author string differs by source:
           # this workflow reads the REST webhook `user.login` (`workprentice[bot]`)
           # while claude-code-review.yml reads `gh pr view` (`app/workprentice`),
-          # so both forms are listed in both files. Keep this list in sync with
-          # the matching check in claude-code-review.yml.
+          # so both forms are listed in every file. Keep this list in sync with
+          # the matching checks in claude-code-review.yml and claude-update.yml.
           if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
              || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT

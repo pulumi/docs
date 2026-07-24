@@ -80,6 +80,27 @@ runtime: python
 main: app.py
 ```
 
+#### Async entrypoint
+
+If your program needs to await asynchronous operations, register an async entrypoint with `pulumi.run` (requires version 3.254.0 or later of the Pulumi Python SDK). Pass a zero-argument async function, and the runtime awaits it on the program's event loop after your top-level module code has finished running:
+
+```python
+import pulumi
+
+async def main() -> pulumi.Inputs:
+    value_a = await some_async_operation()
+    value_b = await some_other_async_operation()
+    return {"value_a": value_a, "value_b": value_b}
+
+pulumi.run(main)
+```
+
+If the entrypoint returns a mapping, each entry is exported as a [stack output](/docs/iac/concepts/stacks/#outputs), exactly as if `pulumi.export` had been called with its key and value — returned entries merge with explicit exports and overwrite an earlier export with the same name. The entrypoint can instead return `None` and call `pulumi.export` directly.
+
+`pulumi.run` may be called only once per program. Programs without asynchronous code don't need it: existing synchronous programs work unchanged.
+
+For other patterns for mixing blocking and asynchronous code in Pulumi programs, see [Blocking and Async Python with Pulumi](/docs/iac/languages-sdks/python/python-blocking-async/).
+
 ## Defining resources
 
 Writing a Pulumi program in Python involves declaring infrastructure resources using resource constructors. Here are the key concepts:
@@ -87,7 +108,7 @@ Writing a Pulumi program in Python involves declaring infrastructure resources u
 - **Declare resources**: Create infrastructure resources by instantiating resource classes from provider packages. For example, `aws.s3.Bucket("my-bucket")` creates an S3 bucket.
 - **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation for details.
 - **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
-- **Stack outputs**: Export values from your program with `pulumi.export(...)` to make them accessible from the CLI or to other Pulumi programs.
+- **Stack outputs**: Export values from your program with `pulumi.export(...)`, or by returning a mapping from an [async entrypoint](/docs/iac/languages-sdks/python/#async-entrypoint) registered with `pulumi.run`, to make them accessible from the CLI or to other Pulumi programs.
 
 The Pulumi SDK provides constructs for working with key Pulumi concepts. For more information, see:
 
@@ -116,7 +137,7 @@ With Automation API, your Python code controls Pulumi, rather than Pulumi contro
 
 ### Asynchronous code
 
-A Python Pulumi program is single threaded, and the Pulumi runtime creates an event loop to enable the runtime to be asynchronous. Given these constraints, [Blocking and Async Python with Pulumi](/docs/iac/languages-sdks/python/python-blocking-async/) gives some recommendations on using blocking and asynchronous code within Python Pulumi programs.
+A Python Pulumi program is single threaded, and the Pulumi runtime creates an event loop to enable the runtime to be asynchronous. Given these constraints, [Blocking and Async Python with Pulumi](/docs/iac/languages-sdks/python/python-blocking-async/) gives some recommendations on using blocking and asynchronous code within Python Pulumi programs. To await asynchronous code at the top level of your program, register an [async entrypoint](/docs/iac/languages-sdks/python/#async-entrypoint) with `pulumi.run`.
 
 ## Managing Python dependencies {#pypi-packages}
 

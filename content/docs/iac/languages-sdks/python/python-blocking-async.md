@@ -87,7 +87,7 @@ This can cause problems both with blocking code and with explicitly asynchronous
 - Blocking code will prevent the event loop on the Pulumi program’s thread from
   pumping while the blocking code is executing
 - Asynchronous code may not be executed unless it is explicitly scheduled. For example, it is
-  not possible to call `asyncio.run` from within a Pulumi program because there is already an event loop running.
+  not possible to call `asyncio.run` from within a Pulumi program because there is already an event loop running. Instead, register an async entrypoint with `pulumi.run`, described in [Async program entrypoint](#async-program-entrypoint) below.
 
 ### Blocking Code
 
@@ -162,6 +162,22 @@ mycli_coro = async_operation('bar')
 # The coroutine is awaitable and can be converted into a pulumi.Output
 mycli_output = pulumi.Output.from_input(mycli_coro)
 ```
+
+## Async program entrypoint
+
+Starting with version 3.254.0 of the Pulumi Python SDK, you can also `await` asynchronous code directly by registering an async entrypoint with `pulumi.run`. Reusing the `async_operation` function from the previous example:
+
+```python
+import pulumi
+
+async def main() -> pulumi.Inputs:
+    mycli_stdout = await async_operation('bar')
+    return {"mycli": mycli_stdout}
+
+pulumi.run(main)
+```
+
+Prefer `pulumi.Output.from_input` when an async value only feeds a resource input, and the async entrypoint when your program logic itself needs the resolved value before proceeding. For the full semantics of `pulumi.run`, see [Async entrypoint](/docs/iac/languages-sdks/python/#async-entrypoint).
 
 ## Alternatives
 
