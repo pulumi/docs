@@ -644,18 +644,6 @@
 }
 
 // Single event page styles
-.event-breadcrumb {
-    @apply font-overline;
-
-    a {
-        @apply no-underline text-violet-primary;
-    }
-
-    .event-breadcrumb-separator {
-        @apply mx-2 text-gray-400;
-    }
-}
-
 .template-event-single-header {
     .event-single-title {
         @include page-header();

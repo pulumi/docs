@@ -15,15 +15,10 @@
 
         {{/* Breadcrumb + header */}}
         <div class="flex flex-col gap-4">
-            <nav class="event-breadcrumb">
-                <a href="/events/">Events and Workshops</a>
-                <span class="event-breadcrumb-separator">/</span>
-                {{ if .Params.youtube_url }}
-                    <a href="/events/#on-demand">On-demand</a>
-                {{ else }}
-                    <a href="/events/#upcoming">Upcoming</a>
-                {{ end }}
-            </nav>
+            {{ $second := dict "name" "Upcoming" "url" "/events/#upcoming" }}
+            {{ if .Params.youtube_url }}{{ $second = dict "name" "On-demand" "url" "/events/#on-demand" }}{{ end }}
+            {{ partial "breadcrumb.html" (dict "crumbs" (slice
+                (dict "name" "Events and Workshops" "url" "/events/") $second)) }}
 
             <section class="template-event-single-header">
                 <h1 class="event-single-title">{{ .Params.title }}</h1>
