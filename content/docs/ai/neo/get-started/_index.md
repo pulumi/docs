@@ -21,7 +21,7 @@ Neo is enabled by default. To disable Neo for your organization, navigate to **S
 
 ## VCS integration
 
-Connecting a [version control integration](/docs/integrations/version-control/) significantly enhances Neo's capabilities, though it is not required. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), [Bitbucket](/docs/integrations/version-control/bitbucket/), and [Custom VCS](/docs/integrations/version-control/custom-vcs/). A VCS integration:
+A [version control integration](/docs/integrations/version-control/) is optional. With one connected, Neo can read your code and open pull requests. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), [Bitbucket](/docs/integrations/version-control/bitbucket/), and [Custom VCS](/docs/integrations/version-control/custom-vcs/). A VCS integration:
 
 - Allows Neo to read repository content for better context
 - Enables pull request creation
@@ -33,7 +33,7 @@ To set up a VCS integration, see the [version control docs](/docs/integrations/v
 
 ## Neo's permission model
 
-Neo operates within the conversing user's [RBAC entitlements](/docs/administration/access-identity/rbac/) and cannot perform actions that the user couldn't perform themselves — there's no privilege escalation, and each user's Neo conversations are isolated from other users. For the full picture of which identity Neo acts as on each surface, how permission and approval modes constrain it, and how to scope its access, see [Neo's permissions model](/docs/ai/neo/permissions/).
+Neo operates within the conversing user's [RBAC entitlements](/docs/administration/access-identity/rbac/) and cannot perform actions that the user couldn't perform themselves — there's no privilege escalation, and tasks are private to the user who created them unless they [share one](/docs/ai/neo/tasks/#ownership-and-sharing). For the full picture of which identity Neo acts as on each surface, how permission and approval modes constrain it, and how to scope its access, see [Neo's permissions model](/docs/ai/neo/permissions/).
 
 ### Read-only mode
 
@@ -45,7 +45,7 @@ Read-only is scoped to Pulumi Cloud. It does not, on its own, prevent Neo from o
 
 ### Enable Neo for Your Organization
 
-Neo is automatically enabled for eligible organizations. To access Neo:
+Neo is included on every current Pulumi plan and is on by default, so there is nothing to turn on. (Organizations still on the legacy Starter, Pro, or per-stack plans need to move to a current plan first — see [pricing](/pricing/).) To access Neo:
 
 1. Navigate to [Pulumi Cloud](https://app.pulumi.com/signin)
 2. Click on **Agent Tasks** within the **Neo** section in the left navigation menu

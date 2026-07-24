@@ -28,7 +28,7 @@ Neo also analyzes pull requests that your team opens and leaves its feedback rig
 
 ### VCS integration
 
-Neo requires a [version control integration](/docs/integrations/version-control/) to read code from and create pull requests. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), and [Bitbucket](/docs/integrations/version-control/bitbucket/). [Custom VCS](/docs/integrations/version-control/custom-vcs/) integrations let Neo clone and push, but not open pull requests. Without a VCS integration, Neo will not be able to view the IaC code backing a stack. Neo can still propose code changes, but they will not be fully contextualized to your IaC code.
+Neo requires a [version control integration](/docs/integrations/version-control/) to read code from and create pull requests. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), and [Bitbucket](/docs/integrations/version-control/bitbucket/). [Custom VCS](/docs/integrations/version-control/custom-vcs/) integrations let Neo clone and push, but not open pull requests. Without a VCS integration, Neo cannot view the IaC code backing a stack. Neo can still propose code changes, but they are not fully contextualized to your IaC code.
 
 ### Code Access
 
