@@ -34,6 +34,7 @@ import "./neo-mode";
 import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
+import "./mktg-ctas-experiment";
 
 // Register all Stencil components.
 defineCustomElements();
