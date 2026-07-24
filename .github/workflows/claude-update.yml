@@ -408,7 +408,19 @@ jobs:
           # claude-code-action@v1 by default. Same allowance
           # claude-code-review.yml makes for its bot-dispatched #new-review
           # path.
-          allowed_bots: 'github-actions[bot]'
+          #
+          # workprentice is also listed so that its own `@claude
+          # #update-review` mentions (issue_comment events whose actor is the
+          # bot) reach the action. Without it, those mentions clear this
+          # workflow's own check-access whitelist (the workprentice[bot]
+          # branch above) and then get bounced by claude-code-action's
+          # independent bot guard. The trust decision is already made for the
+          # sibling review workflows — see the matching allowed_bots in
+          # claude-code-review.yml and claude-social-review.yml. Both the bare
+          # and `[bot]`-suffixed forms are listed because the action reports
+          # the actor as bare `workprentice` while github.actor renders it as
+          # `workprentice[bot]`.
+          allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
 
           # This is an optional setting that allows Claude to read CI results on PRs
           additional_permissions: |
