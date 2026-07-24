@@ -9,15 +9,11 @@
     {{ end }}
     <div class="font-body container mx-auto px-6 md:px-8 mt-16">
         <section id="hero" class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-            <nav aria-label="Breadcrumb" class="mb-6">
-                <ol class="flex flex-wrap items-center justify-center gap-2 font-overline text-gray-600">
-                    <li><a class="hover:text-violet-700" href="/case-studies/">Case Studies</a></li>
-                    {{ with $industryName }}
-                    <li aria-hidden="true" class="text-gray-400">/</li>
-                    <li class="text-gray-900 font-medium"><a class="hover:text-violet-700" href="/case-studies/industry/{{ $industry }}/" data-track="case-study-industry-{{ $industry }}">{{ . }}</a></li>
-                    {{ end }}
-                </ol>
-            </nav>
+            {{ $crumbs := slice (dict "name" "Case Studies" "url" "/case-studies/") }}
+            {{ with $industryName }}
+                {{ $crumbs = $crumbs | append (dict "name" . "url" (printf "/case-studies/industry/%s/" $industry) "data_track" (printf "case-study-industry-%s" $industry)) }}
+            {{ end }}
+            {{ partial "breadcrumb.html" (dict "align" "center" "class" "mb-6" "crumbs" $crumbs) }}
             <h1 class="heading-1 text-black mb-6">{{ .Title }}</h1>
             {{ with .Description }}
             <p class="body-lg text-gray-primary mb-0 max-w-2xl">{{ . | markdownify }}</p>

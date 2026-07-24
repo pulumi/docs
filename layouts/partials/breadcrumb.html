@@ -1,0 +1,24 @@
+{{/*
+    Shared overline breadcrumb (non-docs template pages).
+
+    The /docs section uses its own `.docs-breadcrumb` family
+    (layouts/partials/docs/breadcrumb.html) — do not use this partial there.
+
+    Params (dict):
+      crumbs — ordered slice of dicts, each { "name", "url" }, with an optional
+               "data_track" analytics attribute. Every entry is a PARENT page;
+               never include the current page.
+      align  — optional; "center" adds justify-center (default left).
+      class  — optional extra classes on <nav> (callers supply their own margin).
+*/}}
+<nav aria-label="Breadcrumb"{{ with .class }} class="{{ . }}"{{ end }}>
+    {{/* list-none/pl-0/m-0 and per-item my-0 keep content-area list styles
+         (main.scss `main ol`/`main li`) from leaking in when a caller renders
+         this inside <main>; the color lives on the <a> to beat `main li a`. */}}
+    <ol class="flex flex-wrap items-center gap-2 list-none pl-0 m-0 font-overline-sm{{ if eq .align "center" }} justify-center{{ end }}">
+        {{ range $i, $c := .crumbs }}
+            {{ if $i }}<li aria-hidden="true" class="my-0 text-gray-400">/</li>{{ end }}
+            <li class="my-0"><a class="text-gray-800 hover:text-gray-900" href="{{ $c.url }}"{{ with $c.data_track }} data-track="{{ . }}"{{ end }}>{{ $c.name }}</a></li>
+        {{ end }}
+    </ol>
+</nav>
