@@ -20,6 +20,21 @@
         {{- end }}
     </script>
 
+    {{- /* A/B test 20260723-mktg-ctas anti-flicker (homepage only): hold the
+           hero secondary CTA hidden (space reserved) before first paint so its
+           label doesn't visibly flip while GrowthBook resolves the variant.
+           mktg-ctas-experiment.ts reveals it on resolve; the timeout is a
+           safety net so a slow/blocked GrowthBook can never leave it hidden. */ -}}
+    {{ if .IsHome }}
+    <style>html.mktg-ctas-pending a[data-role="cta-secondary"]{visibility:hidden}</style>
+    <script>
+        document.documentElement.classList.add("mktg-ctas-pending");
+        window.setTimeout(function () {
+            document.documentElement.classList.remove("mktg-ctas-pending");
+        }, 400);
+    </script>
+    {{ end }}
+
     <!-- Preconnect to Segment (used on every page). -->
     <link rel="preconnect" href="https://cdn.segment.com" crossorigin />
     <!-- Preconnect to GrowthBook (A/B testing, used on every page). -->

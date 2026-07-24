@@ -155,7 +155,7 @@
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaSecondaryText }}</a>
+                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto" data-role="cta-secondary">{{ $ctaSecondaryText }}</a>
                 {{ end }}
                 {{ if $ctaTertiaryText }}
                 <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaTertiaryText }}</a>
@@ -230,7 +230,7 @@
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaSecondaryText }}</a>
+                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto" data-role="cta-secondary">{{ $ctaSecondaryText }}</a>
                 {{ end }}
                 {{ if $ctaTertiaryText }}
                 <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaTertiaryText }}</a>
