@@ -54,9 +54,9 @@ Before touching anything, open the stack and check the math. CloudFormation repo
 Every row also carries a migration status. For `payments-api`, the breakdown looks like this:
 
 - **26 Ready**: mapped to a Pulumi type and confirmed to exist. These are importable right now.
-- **2 Pending**: mapped, but Discovery couldn't confirm their current state. Something to look into.
-- **3 Unmapped**: no direct Pulumi type. We'll see why in step 5.
-- **1 NotApplicable**: the CloudFormation stack construct itself, which has no cloud resource of its own.
+- **2 Not found**: mapped, but Discovery couldn't confirm their current state. Something to look into.
+- **3 No exact match**: no direct Pulumi type. We'll see why in step 5.
+- **1 Not applicable**: the CloudFormation stack construct itself, which has no cloud resource of its own.
 
 Notice what you've done so far: zero migration work. You've confirmed that Pulumi sees exactly what CloudFormation sees, with a reconciled count and a named status for every resource. If you stopped here, that visibility alone would be worth the visit.
 
@@ -92,16 +92,16 @@ The PR's migration report summarizes the rest: status counts before and after, t
 
 ## Step 5: Resolve the stragglers
 
-Five resources didn't import: 2 Pending and 3 Unmapped. This is where most migrations historically lose the plot — those rows end up in a spreadsheet, the spreadsheet goes stale, and nobody remembers why resource 31 was skipped. Discovered Stacks replaces that with a single, visible decision: **ignore**. An ignored resource stays in the list, deliberately excluded from the migration rather than quietly forgotten.
+Five resources didn't import: 2 Not found and 3 No exact match. This is where most migrations historically lose the plot — those rows end up in a spreadsheet, the spreadsheet goes stale, and nobody remembers why resource 31 was skipped. Discovered Stacks replaces that with a single, visible decision: **ignore**. An ignored resource stays in the list, deliberately excluded from the migration rather than quietly forgotten.
 
 Working through ours:
 
-- **Pending #1** turns out to be deleted — the import fails with "resource does not exist." It gets ignored; there's nothing left to migrate.
-- **Pending #2** had an imperfect type mapping. Importing with the corrected type works; the origin row is ignored in favor of the imported resource.
-- **Two Unmapped rows** are inline IAM policies, which Pulumi models as part of their parent role. The roles are already migrated, so each policy is ignored — its contents already live on the role.
-- **The last Unmapped row** is a CDK-generated custom resource whose Lambda handler just empties buckets on stack deletion. Pulumi doesn't need it, so it's ignored too.
+- **Not found #1** turns out to be deleted — the import fails with "resource does not exist." It gets ignored; there's nothing left to migrate.
+- **Not found #2** had an imperfect type mapping. Importing with the corrected type works; the origin row is ignored in favor of the imported resource.
+- **Two No exact match rows** are inline IAM policies, which Pulumi models as part of their parent role. The roles are already migrated, so each policy is ignored — its contents already live on the role.
+- **The last No exact match row** is a CDK-generated custom resource whose Lambda handler just empties buckets on stack deletion. Pulumi doesn't need it, so it's ignored too.
 
-Final accounting: 32 discovered resources — 26 `Migrated`, 5 ignored, 1 `NotApplicable`. Every row resolved, and every skip a deliberate decision the whole team can see instead of a forgotten spreadsheet row.
+Final accounting: 32 discovered resources — 26 **Migrated**, 5 ignored, 1 **Not applicable**. Every row resolved, and every skip a deliberate decision the whole team can see instead of a forgotten spreadsheet row.
 
 <!-- TODO: screenshot — resource list after migration: Migrated statuses plus ignored rows visible. -->
 

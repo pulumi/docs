@@ -56,12 +56,12 @@ Every resource in a discovered stack has a migration status computed by Pulumi C
 
 | Status | Meaning | Recommended next step |
 | --- | --- | --- |
-| `Ready` | The resource maps to a Pulumi type, and Discovery confirmed it exists in the cloud. | Import it. This is the bulk of a typical migration. |
-| `Pending` | The resource maps to a Pulumi type, but Discovery could not confirm its current state. It may have been deleted, or the mapping may be imperfect. | Verify the resource still exists, then import it or ignore it. |
-| `Unmapped` | No Pulumi type mapping was found. Common examples are CloudFormation custom resources and inline IAM policies that Pulumi models as part of their parent resource. | Review it. Many unmapped resources are covered by the migration of a parent resource; ignore them once the parent is migrated. |
-| `NotApplicable` | The resource is a container or wrapper construct, such as `AWS::CloudFormation::Stack` or `Microsoft.Resources/deployments`, with no cloud resource of its own to migrate. | None. |
-| `Migrated` | The resource was found in the target Pulumi stack. It is under Pulumi management. | None. |
-| `PulumiOnly` | The resource exists in the target Pulumi stack but has no discovered counterpart — typically a pre-existing resource, or one created with a corrected type mapping. | Review it; usually no action is needed. |
+| **Ready** | The resource maps to a Pulumi type, and Discovery confirmed it exists in the cloud. | Import it. This is the bulk of a typical migration. |
+| **Not found** | The resource maps to a Pulumi type, but Discovery could not confirm its current state. It may have been deleted, or it may be a type Discovery doesn't verify — many **Not found** resources are actually live and import cleanly. | Verify the resource still exists, then import it or ignore it. |
+| **No exact match** | No Pulumi type mapping was found. Common examples are CloudFormation custom resources and inline IAM policies that Pulumi models as part of their parent resource. | Review it. Many are covered by the migration of a parent resource; ignore them once the parent is migrated. |
+| **Not applicable** | The resource is a container or wrapper construct, such as `AWS::CloudFormation::Stack` or `Microsoft.Resources/deployments`, with no cloud resource of its own to migrate. | None. |
+| **Migrated** | The resource was found in the target Pulumi stack. It is under Pulumi management. | None. |
+| **Existing** | The resource is in the target Pulumi stack but has no discovered counterpart — a resource added to Pulumi separately, or the imported form of a **Not found** or **No exact match** resource. | Review it; usually no action is needed. |
 
 The status breakdown is visible at the stack level, and every source resource appears as a row with an explicit status — the count of discovered resources always reconciles against the statuses, so nothing silently disappears during a migration.
 

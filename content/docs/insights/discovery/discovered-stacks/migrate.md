@@ -63,7 +63,7 @@ pulumi config set aws:region us-west-2
 
 Whether Neo runs it or you do, a migration follows the same arc:
 
-1. **Triage.** Fetch the discovered resources and review the status breakdown. Resources marked `Ready` are importable now; `Pending` and `Unmapped` resources get resolved along the way (see [below](#resolve-pending-and-unmapped-resources)).
+1. **Triage.** Fetch the discovered resources and review the status breakdown. Resources marked **Ready** are importable now; **Not found** and **No exact match** resources get resolved along the way (see [below](#resolve-not-found-and-no-exact-match-resources)).
 1. **Import.** Bring resources into the target stack with `pulumi import --generate-code`, appending the generated code to your program. `pulumi import` writes state as it goes, so migration statuses in the console update live as resources land in the target stack.
 1. **Reconcile.** Run `pulumi preview` and fix the code until it reports no changes. A clean preview is the quality gate: it proves the program matches the actual cloud state. Never run `pulumi up` to make a diff go away — that changes the cloud to match the code, when the goal is the opposite. Freshly imported code often shows a diff on the first preview even when nothing in the cloud changed; see [Tips for a clean migration](#tips-for-a-clean-migration) for the common ones and how to clear them.
 1. **Review.** Open a pull request with the program and a migration report: status counts, the resource mapping table, and any resources that were ignored and why.
@@ -72,17 +72,17 @@ Whether Neo runs it or you do, a migration follows the same arc:
 No `pulumi up` is required to complete a migration. `pulumi import` already syncs the imported state to Pulumi Cloud; from then on, you use `pulumi up` for ordinary changes to the now-managed resources.
 {{% /notes %}}
 
-## Resolve Pending and Unmapped resources
+## Resolve Not found and No exact match resources
 
 Some resources need a decision before the accounting is complete. Resolve each one by importing it or by [ignoring it](/docs/insights/discovery/discovered-stacks/#ignoring-resources) — either way, the outcome shows up in the console and persists across sessions.
 
-**`Pending` resources** are mapped but unconfirmed. Attempting the import is usually the fastest way to find out why:
+**Not found** resources are mapped but unconfirmed — sometimes deleted, sometimes simply a type whose live state Discovery doesn't verify (a log group, for example), in which case the resource is really there. Attempting the import is usually the fastest way to find out which:
 
 - **The resource was deleted.** The import fails because the resource does not exist. Ignore it — there is nothing left to migrate.
-- **The type mapping is imperfect.** Some source types have more than one valid Pulumi mapping. Import with the corrected type; the imported resource then appears as `PulumiOnly`, and you ignore the origin resource in its favor.
-- **The resource is fine.** The import succeeds and the status flips to `Migrated` on its own.
+- **The type mapping is imperfect.** Some source types have more than one valid Pulumi mapping. Import with the corrected type; the imported resource then appears as **Existing**, and you ignore the origin resource in its favor.
+- **The resource is fine.** The import succeeds and the status flips to **Migrated** on its own.
 
-**`Unmapped` resources** have no direct Pulumi type. Most fall into known patterns:
+**No exact match** resources have no direct Pulumi type. Most fall into a handful of familiar patterns:
 
 - **Inline definitions**, such as an IAM policy that Pulumi models as a property of its parent role. Once the parent is migrated, ignore the child.
 - **Implicit links**, such as a secret-to-target attachment that Pulumi expresses through the target's configuration. Ignore it once the target resource is migrated.
@@ -96,7 +96,7 @@ These apply whether Neo drives the migration or you do. They're the difference b
 
 Import a coherent group of resources, get its preview clean, then move to the next — rather than importing everything at once. Grouping by the source construct works well: for CDK stacks, the construct path; for CloudFormation, the logical stack or a resource-type prefix. Keeping batches to roughly 20 resources keeps each preview easy to read.
 
-Import the `Ready` resources first. A single resource that can't be imported — a deleted resource, or one whose import ID is wrong — aborts an entire `pulumi import --file` batch, so keep unconfirmed `Pending` resources out of the bulk import and handle them one at a time.
+Import the **Ready** resources first. A single resource that can't be imported — a deleted resource, or one whose import ID is wrong — aborts an entire `pulumi import --file` batch, so keep unconfirmed **Not found** resources out of the bulk import and handle them one at a time.
 
 ### Clear a noisy preview
 
@@ -117,7 +117,7 @@ Generated code is occasionally invalid — for instance an empty nested block th
 
 ### Link an imported resource to its origin
 
-Importing a `Pending` resource — or importing with a corrected type — can produce a new `PulumiOnly` entry while the original stays `Pending`. That's expected: the imported resource is real, but because the origin's state was never confirmed, the console can't automatically match the two. Resolve it by [ignoring](/docs/insights/discovery/discovered-stacks/#ignoring-resources) the origin in favor of the imported resource, which links the two and keeps the accounting clean.
+Importing a **Not found** resource can produce a new **Existing** entry while the original stays **Not found** — and this is the common case, not an edge one. Because the origin's state was never confirmed, the console can't automatically match the imported resource back to it (importing with a corrected type does the same thing). Resolve it by [ignoring](/docs/insights/discovery/discovered-stacks/#ignoring-resources) the origin in favor of the imported resource, which links the two and keeps the accounting clean.
 
 ### Reorganize the generated code safely
 
@@ -158,6 +158,8 @@ List a discovered stack's resources, including migration statuses. Pass `compare
 ```bash
 GET /api/preview/insights/{org}/discovered-stacks/{project}/{stack}/resources?compareTo={targetProject}/{targetStack}
 ```
+
+Each resource's `migrationStatus` field carries the raw status token — `Ready`, `NotFound`, `NoMatch`, `Migrated`, `PulumiOnly`, or `NotApplicable` — corresponding to the **Ready**, **Not found**, **No exact match**, **Migrated**, **Existing**, and **Not applicable** labels shown in the console.
 
 ## Next steps
 

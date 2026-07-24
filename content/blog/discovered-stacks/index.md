@@ -37,7 +37,7 @@ That fragmentation is also why migrations stall. Moving a stack to Pulumi has ne
 
 ## Nothing gets lost
 
-Discovered Stacks starts from the failure mode that matters most: a resource silently falling through the cracks. When [Pulumi Insights](/docs/insights/) scans your accounts, every CloudFormation stack and ARM deployment becomes a discovered stack, and every resource in it appears as a row with an explicit migration status — ready to import, pending verification, unmapped, migrated. The source count always reconciles against the statuses.
+Discovered Stacks starts from the failure mode that matters most: a resource silently falling through the cracks. When [Pulumi Insights](/docs/insights/) scans your accounts, every CloudFormation stack and ARM deployment becomes a discovered stack, and every resource in it appears as a row with an explicit migration status — ready to import, not found, no exact match, or already migrated. The source count always reconciles against the statuses.
 
 Each resource shows its **origin type** (`AWS::S3::Bucket`) next to its **Pulumi type** (`aws:s3/bucket:Bucket`), with the origin properties side by side with Pulumi's view — so you can verify that Pulumi sees exactly what your source tool sees before you change anything. Decisions you make along the way — *this resource was deleted, that policy is covered by its parent role* — are recorded by ignoring the resource: it stays visible to your whole team, deliberately excluded rather than quietly forgotten. The spreadsheet is retired.
 
