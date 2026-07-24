@@ -28,7 +28,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for Azure involves two sides:
 
 1. **Azure** — register a Microsoft Entra application with federated credentials that trust Pulumi Cloud, and grant its service principal access to your resources. You can do this in the [Azure portal](#using-the-azure-portal) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the Azure OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that application. You can do this in the [Pulumi Cloud console](#using-the-pulumi-cloud-console) or [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1).
+1. **Pulumi Deployments** — enable the Azure OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that application. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
 
 ## Prerequisites
 
@@ -151,15 +151,7 @@ export const subscriptionId = current.subscriptionId;
 
 ## Configure Pulumi Deployments
 
-### Using the Pulumi Cloud console
-
-1. Navigate to your stack in the [Pulumi Console](https://app.pulumi.com/signin).
-1. Open the stack's **Settings** tab.
-1. Choose the **Deploy** panel.
-1. Under the **OpenID Connect** header, toggle **Enable Azure Integration**.
-1. Enter the client and tenant IDs for the app registration created above in the **Client ID** and **Tenant ID** fields, respectively.
-1. Enter the ID of the subscription you want to use in the **Subscription ID** field.
-1. Click the **Save deployment configuration** button.
+Azure OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/deployments/deployments/api/#patchsettings) rather than as a standalone toggle. See the [deployment settings](/docs/deployments/concepts/settings/) page for how the Pulumi Cloud console surfaces these settings for a stack.
 
 ### Using infrastructure as code
 

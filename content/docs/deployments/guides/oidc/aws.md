@@ -28,7 +28,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for AWS involves two sides:
 
 1. **AWS** — register Pulumi Cloud as an OIDC identity provider and create an IAM role that trusts it. You can do this in the [AWS console](#using-the-aws-console) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the AWS OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that role. You can do this in the [Pulumi Cloud console](#using-the-pulumi-cloud-console) or [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1).
+1. **Pulumi Deployments** — enable the AWS OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that role. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
 
 ## Configure AWS
 
@@ -159,17 +159,7 @@ aws iam add-client-id-to-open-id-connect-provider \
 
 ## Configure Pulumi Deployments
 
-### Using the Pulumi Cloud console
-
-1. Navigate to your stack in the Pulumi Console.
-1. Open the stack's "Settings" tab.
-1. Choose the "Deploy" panel.
-1. Under the "OpenID Connect" header, toggle "Enable AWS Integration".
-1. Enter the ARN of the IAM role created above in the "Role ARN" field.
-1. Enter a name for the assumed role session in the "Session Name" field. See [Session name](#session-name) for the supported template variables.
-1. If you would like to use additional policies to further constrain the session's capabilities, enter the policies' ARNs separated by commas in the "Policy ARNs" field.
-1. If you would like to constrain the duration of the assumed role session, enter a duration in the form "XhYmZs" in the "Session Duration" field.
-1. Select the "Save deployment configuration" button.
+AWS OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/deployments/deployments/api/#patchsettings) rather than as a standalone toggle. See the [deployment settings](/docs/deployments/concepts/settings/) page for how the Pulumi Cloud console surfaces these settings for a stack.
 
 ### Using infrastructure as code
 
