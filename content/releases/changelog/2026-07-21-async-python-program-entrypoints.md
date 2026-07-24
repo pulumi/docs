@@ -1,6 +1,6 @@
 ---
 title: "Async Python program entrypoints with pulumi.run"
-date: 2026-07-21
+date: 2026-07-24
 meta_desc: Pulumi Python programs can now use an async entrypoint. Pass an async function to pulumi.run to await operations and return stack outputs directly.
 authors:
     - julien-poissonnier
