@@ -298,6 +298,35 @@ new aws.s3.BucketPublicAccessBlock("content-review-ledger-public-access-block", 
     restrictPublicBuckets: true,
 });
 
+// Grant the data warehouse's Snowpipe reader role read access so the ledger can
+// be synced into Snowflake (pulumi/data#873). Only when DWH access is enabled.
+if (config.enableDataWarehouseAccess) {
+    const prodBucketsStack = new pulumi.StackReference("pulumi/dwh-workflows-loader-prodbuckets/production");
+    const dwhBucketReaderRole = prodBucketsStack.getOutput("dwhBucketReaderRole");
+
+    new aws.s3.BucketPolicy("content-review-ledger-dwh-read-policy", {
+        bucket: contentReviewLedgerBucket.bucket,
+        policy: pulumi.all([contentReviewLedgerBucket.arn, dwhBucketReaderRole])
+            .apply(([bucketArn, roleArn]) => JSON.stringify({
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": { "AWS": roleArn },
+                        "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
+                        "Resource": bucketArn,
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Principal": { "AWS": roleArn },
+                        "Action": ["s3:GetObject"],
+                        "Resource": `${bucketArn}/*`,
+                    },
+                ],
+            })),
+    });
+}
+
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     forceDestroy: true,
 });
