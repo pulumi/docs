@@ -130,38 +130,26 @@ To learn how the Pulumi Cloud backend is designed—including why it never needs
 
 You can manage state yourself with a DIY backend that stores state in AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server, a PostgreSQL database, or your local filesystem. For setup instructions and per-backend configuration details, see [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
-## Migrating Between State Backends
+## Migrating between state backends
 
-It is possible to start with one backend and then later migrate to another. This is common if you have began your project with Pulumi using a DIY backend but later decided to adopt Pulumi Cloud for easier use within your team. This section describes how to perform this operation, however, if you would like our assistance with a migration, [please get in touch](/contact/).
+`pulumi stack migrate` requires Pulumi CLI v3.254.0 or later. [Update the Pulumi CLI](/docs/iac/download-install/) before migrating if you use an earlier version.
 
-The state for a stack includes information about its backend as well as other unique information such as its encryption provider. As such, moving a stack between backends isn't as simple as merely copying its state file. The [`pulumi stack rename` command](/docs/iac/cli/commands/pulumi_stack_rename) can be used for simple renames within the same backend; however, Pulumi also supports migrating stacks between backends using the `pulumi stack export` and `pulumi stack import` commands, which understand how to perform the necessary translations.
+Use [`pulumi stack migrate`](/docs/iac/cli/commands/pulumi_stack_migrate/) to migrate a stack between different backends. The command migrates the stack to the backend where you are currently logged in and opens the source backend URL directly, so you do not need to log out of the target backend.
 
-As an example, imagine you'd like to migrate a stack named `my-app-production` from a DIY backend to the Pulumi Cloud backend. To perform the migration, run the following sequence commands:
+Migration updates the target stack's local configuration. When source and target stack names match, the command updates `Pulumi.<stack>.yaml` and creates a `.bak.*` backup. When the target stack has a different name, the command replaces any existing `Pulumi.<target>.yaml`, including its ESC environment imports. Save a copy of that file before migrating if you need its current contents.
+
+For example, log in to Pulumi Cloud, then migrate `my-app-production` from a local backend:
 
 ```sh
-# switch to the backend/stack we want to export
-$ pulumi login --local
-$ pulumi stack select my-app-production
-
-# export the stack's state to a local file
-$ pulumi stack export --show-secrets --file my-app-production.stack.json
-
-# logout and login to the desired new backend
-$ pulumi logout
-$ pulumi login # default to Pulumi Cloud
-
-# create a new stack with the same name on pulumi.com
-$ pulumi stack init my-app-production
-
-# import the new existing state into pulumi.com
-$ pulumi stack import --file my-app-production.stack.json
+pulumi login
+pulumi stack migrate file://~ my-app-production
 ```
 
-After performing these steps, your stack will now be under the management of Pulumi Cloud. All subsequent operations should be performed using this new backend.
+The command migrates the latest checkpoint and configuration. It re-encrypts secrets in the configuration and state with the target stack's secrets provider. The source backend state remains unchanged.
 
-{{% notes type="info" %}}
-After migration, your stack's state will be managed by the Pulumi Cloud backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider](/docs/concepts/secrets#changing-the-secrets-provider-for-a-stack) for your stack if needed.
-{{% /notes %}}
+Use `--target <org>/<project>/<stack>` to choose a different target stack name or location.
+
+`pulumi stack migrate` does not migrate stacks between accounts in the same backend. For copying stack state between Pulumi Cloud accounts, including GitLab-backed accounts, see [GitLab support](/docs/support/pulumi-cloud-faq/#gitlab-support).
 
 ## Refreshing state
 
