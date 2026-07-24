@@ -1,5 +1,6 @@
 ---
 title_tag: "Best Terraform Cloud Alternative for Multi-Cloud Teams"
+faq_schema: true
 authors: ["content-team"]
 meta_desc: "The best Terraform Cloud alternative for large multi-cloud teams: Pulumi pairs real languages with one platform for policy, secrets, and AI."
 title: Terraform Cloud
