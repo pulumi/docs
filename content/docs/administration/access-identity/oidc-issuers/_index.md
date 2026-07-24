@@ -95,7 +95,7 @@ Each policy must state the **Token type** the policy issues (Organization, Team,
 
 We recommend verifying the token's audience and subject claims against the provider's security guidance. For example, a GitHub Actions policy commonly checks `aud` against `urn:pulumi:org:<org-name>` and `sub` against `repo:<organization>/<repo>:*`.
 
-When a token's claims match more than one policy, **deny always takes precedence over allow**, regardless of how the policies are ordered or how specific each policy's claim match is. If you need to carve out an exception to a broad deny policy, narrow the deny policy's own claim match instead of adding a more specific allow policy — a narrower allow will not override a matching deny.
+When a token's claims match more than one policy, **deny always takes precedence over allow**, regardless of how the policies are ordered or how specific each policy's claim match is.
 
 To target nested claims, define the claim path. Given this token payload:
 
