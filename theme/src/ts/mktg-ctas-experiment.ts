@@ -9,6 +9,13 @@ import { getQueryVariable } from "./util";
 // bucket, this reapplies the #20347 changes on the client. Gated on the
 // GrowthBook boolean feature `20260723-mktg-ctas`; preview the variant directly
 // with `?variant-mktg-ctas=1`.
+//
+// Anti-flicker: on the homepage, an inline snippet in head.html hides the hero
+// secondary CTA (via `mktg-ctas-pending` on <html>) before first paint so its
+// label doesn't visibly flip. We reveal it here once the decision is final
+// (GrowthBook features loaded, or a URL override). head.html also reveals after
+// a 400ms timeout as a safety net, so a slow/blocked GrowthBook can never leave
+// the button hidden.
 const EXPERIMENT_KEY = "20260723-mktg-ctas";
 
 const VARIANT = {
@@ -17,51 +24,57 @@ const VARIANT = {
     heroSecondaryHref: "/docs/install/",
 };
 
-function applyMktgCtasVariant() {
+function isVariant(): boolean {
     const urlVariant = getQueryVariable("variant-mktg-ctas");
-    const showVariant = urlVariant ? urlVariant === "1" : gb.isOn(EXPERIMENT_KEY);
-    if (!showVariant) {
-        return;
+    return urlVariant ? urlVariant === "1" : gb.isOn(EXPERIMENT_KEY);
+}
+
+// Apply the treatment (if bucketed) and reveal the held hero CTA. Runs only once
+// the decision is final, so control and variant both reveal from here.
+function applyAndReveal() {
+    if (isVariant()) {
+        // Top-nav "Get started" CTA (desktop + mobile sheet): repoint to the docs guide.
+        document
+            .querySelectorAll<HTMLAnchorElement>(
+                'a[data-track="header-signup"], a[data-track="header-signup-mobile"]',
+            )
+            .forEach(cta => {
+                cta.href = VARIANT.navHref;
+            });
+
+        // Homepage hero secondary: swap "Contact us" for "Download open source".
+        if (window.location.pathname === "/") {
+            document
+                .querySelectorAll<HTMLAnchorElement>('a[data-role="cta-secondary"]')
+                .forEach(secondary => {
+                    if (/contact us/i.test(secondary.textContent || "")) {
+                        secondary.textContent = VARIANT.heroSecondaryText;
+                        secondary.href = VARIANT.heroSecondaryHref;
+                    }
+                });
+        }
     }
 
-    // Top-nav "Get started" CTA (desktop + mobile sheet): repoint to the docs guide.
-    document
-        .querySelectorAll<HTMLAnchorElement>(
-            'a[data-track="header-signup"], a[data-track="header-signup-mobile"]',
-        )
-        .forEach(cta => {
-            cta.href = VARIANT.navHref;
-        });
+    // Reveal the held hero secondary (both arms) now that the decision is applied.
+    document.documentElement.classList.remove("mktg-ctas-pending");
+}
 
-    // Homepage hero secondary button: swap "Contact us" for "Download open source".
-    if (window.location.pathname === "/") {
-        document
-            .querySelectorAll<HTMLAnchorElement>('a[data-role="cta-get-started"]')
-            .forEach(primary => {
-                // The nav CTAs also carry data-role="cta-get-started"; we only want
-                // the hero's primary button, so skip anything inside the header.
-                if (primary.closest("header") || primary.closest("[data-nav-sheet]")) {
-                    return;
-                }
-                const secondary =
-                    primary.parentElement?.querySelector<HTMLAnchorElement>("a.btn-outline");
-                if (secondary && /contact us/i.test(secondary.textContent || "")) {
-                    secondary.textContent = VARIANT.heroSecondaryText;
-                    secondary.href = VARIANT.heroSecondaryHref;
-                }
-            });
+function whenDomReady(fn: () => void) {
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", fn, { once: true });
+    } else {
+        fn();
     }
 }
 
-// Re-run whenever GrowthBook (re)renders, e.g. once feature values have loaded.
+// Flag path: GrowthBook calls the renderer once feature values have loaded, so
+// the decision is final here for both control and variant.
 gb.setRenderer(() => {
-    applyMktgCtasVariant();
+    whenDomReady(applyAndReveal);
 });
 
-// Also run once directly: covers the `?variant-mktg-ctas=1` preview and the case
-// where the renderer fires before the DOM is ready.
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", applyMktgCtasVariant);
-} else {
-    applyMktgCtasVariant();
+// URL-override preview (`?variant-mktg-ctas=1`): apply immediately without
+// waiting for GrowthBook.
+if (getQueryVariable("variant-mktg-ctas")) {
+    whenDomReady(applyAndReveal);
 }
