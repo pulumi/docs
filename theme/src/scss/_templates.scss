@@ -570,76 +570,12 @@
     }
 }
 
-// Event list and card styles
+// Event list styles. The event card itself is composed from shared primitives
+// (.card / .card-hover / .badge / .btn) plus inline Tailwind in
+// layouts/partials/template-partials/template-event-card.html.
 .template-event-list {
     .event-list-month-header {
-        @apply heading-3 m-0 text-gray-800;
-    }
-
-    .event-card-grid {
-        @apply grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6;
-    }
-}
-
-.template-event-card {
-    @apply border border-gray-300 transition;
-
-    &:hover {
-        @apply border-gray-accent;
-    }
-
-    a {
-        @apply text-current no-underline;
-    }
-
-    .event-card-type {
-        @apply font-semibold font-body uppercase text-violet-primary text-[0.7rem];
-        letter-spacing: 0.5px;
-    }
-
-    .event-card-location {
-        @apply font-body text-gray-primary text-[0.8rem];
-    }
-
-    .event-card-title {
-        @apply heading-4 m-0 leading-snug transition-colors;
-    }
-
-    &:hover .event-card-title {
-        @apply text-violet-primary;
-    }
-
-    .event-card-date {
-        @apply flex flex-col items-center justify-center rounded-lg overflow-hidden flex-shrink-0 w-14 h-14 border border-gray-300;
-    }
-
-    .event-card-date-day {
-        @apply text-center font-semibold text-gray-900 font-body text-xl;
-    }
-
-    .event-card-date-month {
-        @apply text-center font-body font-semibold text-gray-primary text-[0.65rem];
-    }
-
-    .event-card-description {
-        @apply m-0 body-base line-clamp-3;
-    }
-
-    .event-card-tag {
-        @extend .badge;
-        @extend .badge-secondary;
-    }
-
-    .event-card-cta {
-        @apply font-semibold font-body whitespace-nowrap flex-shrink-0 text-violet-primary text-sm;
-
-        i {
-            @apply transition-transform;
-        }
-    }
-
-    &:hover .event-card-cta i {
-        @apply translate-x-[3px];
+        @apply font-overline m-0 text-gray-950;
     }
 }
 
@@ -658,39 +594,13 @@
 
 .template-event-single-header {
     .event-single-title {
-        @include page-header();
-        @apply mb-4;
-    }
-
-    .event-single-type {
-        @apply font-overline text-violet-primary;
-    }
-
-    .event-single-date-separator {
-        @apply text-gray-300;
-    }
-
-    .event-single-date {
-        @apply font-overline text-gray-primary;
+        @apply text-black heading-xl max-w-prose mb-4;
     }
 }
 
-.template-timing-info {
-    .timing-info-item {
-        @apply rounded-lg p-4 border border-gray-300;
-    }
-
-    .timing-info-label {
-        @apply font-overline-sm pb-2 mb-2 border-b text-gray-primary border-gray-200;
-    }
-
-    .timing-info-value {
-        @apply font-semibold body-base text-gray-primary;
-    }
-}
-
+// Violet-50 highlight card (matches the "what you'll learn" panel).
 .event-summary-cloud-notice {
-    @apply body-base rounded-xl p-4 mb-6 text-gray-700 bg-violet-50 border border-violet-primary;
+    @apply body-base rounded-lg p-6 mb-6 text-gray-950 bg-violet-50;
 
     a {
         @apply font-semibold text-violet-primary;
@@ -699,7 +609,7 @@
 
 .template-event-summary {
     .event-summary-description {
-        @apply body-base;
+        @apply body-base text-gray-950;
 
         p:first-child {
             @apply mt-0;
@@ -713,14 +623,14 @@
 
 .event-summary-learn {
     .event-summary-learn-title {
-        @apply font-semibold body-lg mb-4;
+        @apply font-overline text-gray-950 mb-4;
     }
 
     .event-summary-learn-list {
         @apply list-none p-0 m-0 flex flex-col gap-3;
 
         li {
-            @apply flex items-start body-base m-0;
+            @apply flex items-start body-base m-0 text-gray-950;
 
             svg {
                 @apply mt-0.5 flex-shrink-0 text-violet-primary;
@@ -729,31 +639,17 @@
     }
 }
 
-.event-single-registration {
-    @apply border border-gray-300;
-
-    .event-single-registration-title {
-        @apply heading-3 mb-4;
-    }
-}
-
 .template-event-speakers {
-    @apply bg-white border border-gray-300;
-
-    .event-speakers-label {
-        @apply font-semibold body-lg text-gray-primary;
-    }
-
     .event-speaker-photo {
         @apply rounded-full object-cover w-12 h-12;
     }
 
     .event-speaker-name {
-        @apply font-semibold body-base text-gray-primary;
+        @apply font-semibold body-base text-gray-950;
     }
 
     .event-speaker-role {
-        @apply font-normal body-base text-gray-primary;
+        @apply font-normal body-sm text-gray-700;
     }
 }
 

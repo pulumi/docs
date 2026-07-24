@@ -1,38 +1,12 @@
 .pulumi-event-list-container {
 
+    // Tab nav rendered as blog-style filter pills (.btn.btn-sm.btn-outline in the
+    // markup). Active state is hash-driven (:target, see below); the "All" pill is
+    // active by default when no hash is set. Visibility of event groups is handled
+    // by resources.ts.
     #event-list-filter-nav {
-        @apply flex font-body text-base py-0;
-
-        list-style: none !important;
-
-        li {
-            @apply border-solid border-b-2 border-transparent;
-            margin-bottom: -1px;
-
-            > a {
-                @apply block py-3 px-4 font-normal text-base text-center text-gray-700 no-underline whitespace-nowrap;
-
-                @include screen-lg {
-                    @apply py-4 text-lg;
-                }
-            }
-
-            &:hover {
-                @apply border-gray-600;
-
-                > a {
-                    @apply text-black;
-                }
-            }
-        }
-
-        // On initial load without a hash, the "All" tab should be active.
-        li[data-filter-name="all"] {
-            border-bottom: 2px solid var(--color-violet-primary);
-
-            > a {
-                @apply font-semibold text-black;
-            }
+        li[data-filter-name="all"] > a {
+            @apply border-gray-500 bg-gray-100;
         }
     }
 
@@ -40,7 +14,6 @@
         width: fit-content;
 
         @include screen-lg {
-            @apply pb-3;
             width: auto;
         }
 
@@ -48,16 +21,13 @@
             @apply font-body text-sm relative flex-none;
             width: max-content;
 
-            @include screen-lg {
-                @apply text-base;
-            }
-
-            // Small-select chrome (mirrors form-select-sm in _forms.scss). The caret
-            // lives in the component's shadow DOM (filter-select-option-group.tsx);
-            // the pr-7 gutter leaves room for it. This block out-specifies the shared
+            // Select chrome sized to match the filter pills / form-select-sm (h-8,
+            // text-sm; see @mixin form-control-sm in _forms.scss). The caret lives in
+            // the component's shadow DOM (filter-select-option-group.tsx); the pr gutter
+            // leaves room for it. This block out-specifies the shared
             // components/_filter-select.scss rule, so keep the two visually in sync.
             .toggle {
-                @apply flex items-center h-8 pl-2 pr-7 bg-white border border-gray-300 transition-all whitespace-nowrap cursor-pointer;
+                @apply flex items-center h-8 pl-2 pr-7 text-sm bg-white border border-gray-300 transition-all whitespace-nowrap cursor-pointer;
                 width: auto;
                 border-radius: $form-radius;
                 box-shadow: $form-select-shadow;
@@ -72,14 +42,16 @@
             }
 
             // Panel matches the main-nav dropdown (.card + shadow): gray-200 border,
-            // rounded-lg, Tailwind `shadow`.
+            // rounded-lg, Tailwind `shadow`. Roomier padding; per-item vertical spacing
+            // comes from the option component's shadow styles. Long facet lists scroll.
             .options {
-                @apply absolute bg-white py-2 pl-1 pr-4 shadow mt-1 border border-gray-200 leading-loose z-50;
+                @apply absolute bg-white py-2.5 pl-2.5 pr-6 shadow mt-1 border border-gray-200 z-50 overflow-y-auto overflow-x-hidden;
                 max-width: calc(100vw - 2rem);
+                max-height: 20rem;
                 border-radius: $form-radius;
 
                 @include screen-lg {
-                    @apply pr-8;
+                    @apply pr-10;
                     max-width: none;
                 }
             }
@@ -94,40 +66,17 @@
 
 }
 
-// Tab styling via :target — only controls the active tab underline.
-// Visibility of event groups is handled by resources.ts.
+// Active filter pill via :target. When a hash is set, reset the default "All" pill
+// and highlight the targeted one. Mirrors the blog filter .is-active look
+// (border-gray-500 bg-gray-100).
 @each $filter-name in "all" "upcoming" "on-demand" {
     ##{$filter-name}:target {
-        // Reset the default "all" tab styling when any hash is set.
-        ~ .event-list-filter li[data-filter-name="all"] {
-            @apply border-solid border-b-2 border-transparent;
-
-            > a {
-                @apply font-normal text-gray-600;
-            }
-
-            &:hover {
-                @apply border-gray-600;
-
-                > a {
-                    @apply text-black;
-                }
-            }
+        ~ .event-list-filter #event-list-filter-nav li[data-filter-name="all"] > a {
+            @apply border-gray-300 bg-white;
         }
 
-        // Highlight the active tab.
-        ~ .event-list-filter li[data-filter-name="#{$filter-name}"] {
-            border-bottom: 2px solid var(--color-violet-primary);
-
-            > a {
-                @apply font-semibold text-black;
-            }
+        ~ .event-list-filter #event-list-filter-nav li[data-filter-name="#{$filter-name}"] > a {
+            @apply border-gray-500 bg-gray-100;
         }
-    }
-}
-
-.event-list-item {
-    article {
-        height: 380px;
     }
 }
