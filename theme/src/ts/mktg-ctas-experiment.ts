@@ -1,21 +1,12 @@
 import { gb } from "../../stencil/src/util/util";
 import { getQueryVariable } from "./util";
 
-// A/B test for the marketing CTA changes originally shipped in #20347:
-//   - Top-nav "Get started" button destination
-//   - Homepage hero secondary button
-//
-// Control (rendered server-side) is the pre-#20347 behavior. For the treatment
-// bucket, this reapplies the #20347 changes on the client. Gated on the
-// GrowthBook boolean feature `20260723-mktg-ctas`; preview the variant directly
-// with `?variant-mktg-ctas=1`.
-//
-// Anti-flicker: on the homepage, an inline snippet in head.html hides the hero
-// secondary CTA (via `mktg-ctas-pending` on <html>) before first paint so its
-// label doesn't visibly flip. We reveal it here once the decision is final
-// (GrowthBook features loaded, or a URL override). head.html also reveals after
-// a 400ms timeout as a safety net, so a slow/blocked GrowthBook can never leave
-// the button hidden.
+// A/B test for the #20347 marketing CTA changes (nav destination + homepage
+// hero secondary), gated on the GrowthBook flag `20260723-mktg-ctas`; preview
+// with `?variant-mktg-ctas=1`. Control renders server-side; this reapplies the
+// treatment client-side for bucketed visitors. The hero secondary is held
+// hidden pre-paint (see head.html) to avoid a label flip, and revealed here
+// once the decision is final.
 const EXPERIMENT_KEY = "20260723-mktg-ctas";
 
 const VARIANT = {
