@@ -76,7 +76,7 @@ tags:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id:
-    salesforce_campaign_id:
+    hubspot_form_id: ef67fdd1-fe12-427d-84c3-f3b99476d792
+    salesforce_campaign_id: 701PQ00000yEZhiYAG
 
 ---
