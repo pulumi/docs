@@ -29,21 +29,25 @@ social:
         Pulumi Cloud now enforces them for you: org admins can cap the max expiry of every access token used against their organization, checked on every request.
 ---
 
-Pulumi Cloud organizations can now enforce a maximum expiry on the access tokens used against them. Organization admins set a cap in days, and from that point on, personal, organization, and team tokens must carry an expiration within the cap for requests against the organization to succeed. Tokens that never expire, or that have too much lifetime remaining, are rejected with an error that tells the user exactly how to regain access.
+Pulumi Cloud organizations can now enforce a maximum expiry on the access tokens used against them. Organization admins can set a cap in days, and from that point on, all tokens operating on resources in the org must carry an expiration within the cap for requests to succeed. Tokens that never expire, or that have too much lifetime remaining, get rejected with an error that tells the user exactly how to regain access.
 
 <!--more-->
 
 ## Why cap token lifetimes
 
-Access tokens are the keys to your infrastructure: they authorize deployments, state access, and API automation. Most organizations already have a credential rotation policy that says tokens must expire — but until now, Pulumi Cloud could only *recommend* an expiry at creation time. Nothing stopped a member from creating a never-expiring personal token, and nothing aged out the long-lived tokens created before your policy existed.
+Many organizations already have a credential rotation policy that says tokens must expire, but until now, Pulumi Cloud could only *recommend* an expiry at creation time. Nothing stopped a member from creating a never-expiring personal token, and nothing aged out the long-lived tokens created before your policy existed.
 
-That gap matters because a leaked token is only as dangerous as its remaining lifetime. A token that expires next week is a contained incident; a token that never expires is a standing liability that survives laptop refreshes, offboarding checklists, and secret-scanning sweeps.
+That gap matters because a leaked token is only as dangerous as its remaining lifetime. A token that never expires is a standing liability.
 
-The new **access token expiry policy** closes the gap at the platform level. You set the cap once, and Pulumi Cloud enforces it on every request against your organization — including for tokens that already exist.
+By adding support for access token expiry policies, Pulumi Cloud now closes the gap at the platform level. Once you've set the cap, Pulumi Cloud enforces it immediately for your organization,including for tokens that already exist.
 
 ## How it works
 
-In your organization's settings, navigate to **Settings** > **Access Management**, open the **Access Tokens** tab, and set the policy under **Access token expiry policy**:
+In your organization's settings, navigate to **Settings** > **Access Management** > **Other** and scroll to **Access token expiry policy**.
+
+<TODO: screenshot>
+
+You can also navigate via **Settings** > **Access Management** > **Access Tokens** tab, and click "set a policy":
 
 ![The access token expiry policy card in Pulumi Cloud organization settings, showing a 1000-day cap and a preview listing one affected machine token.](/blog/access-token-expiry-policy/expiry-policy-settings.png)
 
@@ -70,7 +74,7 @@ Second, rejections are designed to be self-explanatory. A blocked request fails 
 
 A reasonable rollout looks like:
 
-1. Decide on a cap that matches your rotation policy — 90 days is a common choice for CI credentials.
+1. Decide on a cap that matches your rotation policy. 90 days is a common choice for CI credentials.
 1. Use **Preview affected tokens** and recreate any non-compliant machine tokens.
 1. Tell your members: personal tokens without a compliant expiry will stop working against the organization.
 1. Save the policy. From here on, the platform enforces it for you.
