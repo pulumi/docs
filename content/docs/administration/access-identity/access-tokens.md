@@ -118,15 +118,15 @@ Organization administrators can enforce a maximum expiry on the access tokens us
 To set an access token expiry policy:
 
 1. Navigate to **Settings** > **Access Management** and select the **Other** tab.
-1. Under **Access token expiry policy**, enter the maximum expiry in days (between 1 and 3650).
-1. Optionally, select **Preview affected tokens** to see which of the organization's machine tokens would stop authenticating before you save.
+
+    ![The Other tab of the Access Management settings page, with the access token expiry policy section at the bottom.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-other-tab.png)
+
+1. Under **Access token expiry policy**, enter the maximum expiry in days (between 1 and 3650, or up to 10 years).
+1. Optionally, select **Preview affected tokens**. The preview lists the organization and team tokens that would fail to authenticate under the proposed cap, by name and creator (the first five, plus a count of any others):
+
+    ![The access token expiry policy section showing a preview that lists one machine token that would fail to authenticate under a 14-day policy.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-preview.png)
+
 1. Select **Save access token expiry policy**.
-
-![The Other tab of the Access Management settings page, with the access token expiry policy section at the bottom.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-other-tab.png)
-
-**Preview affected tokens** lists the organization and team tokens that would fail to authenticate under the proposed cap, by name and creator (the first five, plus a count of any others):
-
-![The access token expiry policy section showing a preview that lists one machine token that would fail to authenticate under a 14-day policy.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-preview.png)
 
 To remove the policy, set the value to 0 (or clear the field) and save. Policy changes are recorded in the organization's [audit logs](/docs/administration/security-compliance/audit-logs/). While a policy is active, the **Access Tokens** tab shows a banner with the current cap and an **Edit policy** shortcut to this setting.
 
