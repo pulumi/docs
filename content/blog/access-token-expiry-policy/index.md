@@ -43,13 +43,13 @@ By adding support for access token expiry policies, Pulumi Cloud now closes the 
 
 ## How it works
 
-In your organization's settings, navigate to **Settings** > **Access Management** > **Other** and scroll to **Access token expiry policy**.
+In your organization's settings, navigate to **Settings** > **Access Management** > **Other** and scroll to **Access token expiry policy**:
 
-<TODO: screenshot>
+![The access token expiry policy card in Pulumi Cloud organization settings, with a 14-day maximum entered and buttons to preview affected tokens and save the policy.](/blog/access-token-expiry-policy/expiry-policy-card.png)
 
-You can also navigate via **Settings** > **Access Management** > **Access Tokens** tab, and click "set a policy":
+You can also get there from the **Access Tokens** tab, where a banner shows whether a policy is in effect — select **Edit policy**:
 
-![The access token expiry policy card in Pulumi Cloud organization settings, showing a 1000-day cap and a preview listing one affected machine token.](/blog/access-token-expiry-policy/expiry-policy-settings.png)
+![The banner on the Access Tokens tab stating that the organization caps access token expiry at 14 days, with an Edit policy link.](/blog/access-token-expiry-policy/expiry-policy-banner.png)
 
 The policy is a single number: the maximum expiry, in days, for tokens used against your organization. Compliance is checked on every request, and a token complies when both of these are true:
 
@@ -64,11 +64,17 @@ Enforcement is tailored to each token type:
 - **Personal tokens** span all of a user's organizations, so they can't be blocked at creation. Instead, a non-compliant personal token is rejected when it's used against your organization, and the member sees an error explaining the policy and how to fix it. The personal token creation dialog also warns members when a chosen expiry doesn't meet a policy in one of their organizations, steering them toward a compliant choice up front.
 - **Web console sessions are unaffected**, as are the short-lived tokens issued through [OIDC token exchange](/docs/administration/access-identity/oidc-issuers/) — those are already bounded by their issuer.
 
+Once a policy is active, the creation dialog does the steering for you — the expiry picker tops out at the policy maximum:
+
+![The New Access Token dialog with the expiration picker set to "14 Days (org policy max)" and helper text noting the 14-day policy maximum.](/blog/access-token-expiry-policy/new-token-dialog-capped.png)
+
 ## Rolling it out without breaking CI
 
 The riskiest moment for any new enforcement policy is the moment you turn it on. Two things make that safe here.
 
 First, **Preview affected tokens** shows you the blast radius before you save: every organization and team token that would stop authenticating under the proposed cap, by name and creator. Recreate those credentials with compliant expiries first, then save the policy.
+
+![The preview listing one machine token that would fail to authenticate under a 14-day policy, with a note that non-compliant personal tokens are rejected at request time.](/blog/access-token-expiry-policy/preview-affected-tokens.png)
 
 Second, rejections are designed to be self-explanatory. A blocked request fails with a `403 Forbidden` that names your organization and its policy maximum, so a member whose personal token no longer complies knows immediately what happened and what to do: generate a new token that meets the policy. Policy changes are also recorded in your organization's [audit logs](/docs/administration/security-compliance/audit-logs/).
 

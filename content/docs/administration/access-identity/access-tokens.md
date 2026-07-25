@@ -117,12 +117,18 @@ Organization administrators can enforce a maximum expiry on the access tokens us
 
 To set an access token expiry policy:
 
-1. Navigate to **Settings** > **Access Management** and select the **Access Tokens** tab.
+1. Navigate to **Settings** > **Access Management** and select the **Other** tab.
 1. Under **Access token expiry policy**, enter the maximum expiry in days (between 1 and 3650).
 1. Optionally, select **Preview affected tokens** to see which of the organization's machine tokens would stop authenticating before you save.
 1. Select **Save access token expiry policy**.
 
-To remove the policy, set the value to 0 (or clear the field) and save. Policy changes are recorded in the organization's [audit logs](/docs/administration/security-compliance/audit-logs/).
+![The Other tab of the Access Management settings page, with the access token expiry policy section at the bottom.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-other-tab.png)
+
+**Preview affected tokens** lists, by name and creator, each organization and team token that would fail to authenticate under the proposed cap:
+
+![The access token expiry policy section showing a preview that lists one machine token that would fail to authenticate under a 14-day policy.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-preview.png)
+
+To remove the policy, set the value to 0 (or clear the field) and save. Policy changes are recorded in the organization's [audit logs](/docs/administration/security-compliance/audit-logs/). While a policy is active, the **Access Tokens** tab shows a banner with the current cap and an **Edit policy** shortcut to this setting.
 
 ### How compliance is evaluated
 
@@ -134,7 +140,15 @@ A token complies with the policy if it has an expiration date and its remaining 
 ### What the policy affects
 
 * **Organization and team tokens** must be created with a compliant expiry once a policy is in place. The token creation dialog caps the expiry picker at the policy maximum, and the API rejects creation requests that exceed it or omit an expiry. Existing tokens that don't meet the policy stop authenticating against the organization and must be recreated with a compliant expiry.
-* **Personal tokens** are user-scoped and span all of a user's organizations, so they can't be blocked at creation. Instead, requests made with a non-compliant personal token against an organization that enforces a policy are rejected, and the member must create a new token with a compliant expiry to regain access to that organization. When a member creates a personal token, the dialog warns them if the chosen expiry doesn't meet the policy of an organization they belong to.
+
+  ![The New Access Token dialog with the expiration picker set to "14 Days (org policy max)" and helper text noting the 14-day policy maximum.](/images/docs/pulumi-cloud/access-tokens/new-token-dialog-capped.png)
+
+* **Personal tokens** are user-scoped and span all of a user's organizations, so they can't be blocked at creation. Instead, requests made with a non-compliant personal token against an organization that enforces a policy are rejected, and the member must create a new token with a compliant expiry to regain access to that organization. When a member creates a personal token, the dialog warns them if the chosen expiry doesn't meet the policy of an organization they belong to, and the member's **Personal access tokens** page summarizes the strictest policies across their organizations.
+
+  ![The new personal access token dialog warning that the chosen 30-day expiration exceeds an organization's 14-day token expiry policy.](/images/docs/pulumi-cloud/access-tokens/personal-token-dialog-policy-warning.png)
+
+  ![The personal access tokens page showing a banner that one organization enforces a maximum access token expiry of 14 days.](/images/docs/pulumi-cloud/access-tokens/personal-tokens-policy-warning.png)
+
 * **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/access-identity/oidc-issuers/) and internally issued credentials such as deployment agent pool tokens.
 
 Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy.
