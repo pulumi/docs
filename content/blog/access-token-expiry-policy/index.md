@@ -29,7 +29,7 @@ social:
         Pulumi Cloud now enforces them for you: org admins can cap the max expiry of every access token used against their organization, checked on every request.
 ---
 
-Pulumi Cloud organizations can now enforce a maximum expiry on the access tokens used against them. Organization admins can set a cap in days, and from that point on, all tokens operating on resources in the org must carry an expiration within the cap for requests to succeed. Tokens that never expire, or that have too much lifetime remaining, get rejected with an error that tells the user exactly how to regain access.
+Pulumi Cloud organizations can now enforce a maximum expiry on the access tokens used against them. Organization admins can set a cap in days, and from that point on, personal, organization, and team tokens operating on resources in the org must carry an expiration within the cap for requests to succeed. Tokens that never expire, or that have too much lifetime remaining, get rejected with an error that tells the user exactly how to regain access.
 
 <!--more-->
 
@@ -39,7 +39,7 @@ Many organizations already have a credential rotation policy that says tokens mu
 
 That gap matters because a leaked token is only as dangerous as its remaining lifetime. A token that never expires is a standing liability.
 
-By adding support for access token expiry policies, Pulumi Cloud now closes the gap at the platform level. Once you've set the cap, Pulumi Cloud enforces it immediately for your organization,including for tokens that already exist.
+By adding support for access token expiry policies, Pulumi Cloud now closes the gap at the platform level. Once you've set the cap, Pulumi Cloud enforces it immediately for your organization, including for tokens that already exist.
 
 ## How it works
 
@@ -72,7 +72,7 @@ Once a policy is active, the creation dialog does the steering for you — the e
 
 The riskiest moment for any new enforcement policy is the moment you turn it on. Two things make that safe here.
 
-First, **Preview affected tokens** shows you the blast radius before you save: every organization and team token that would stop authenticating under the proposed cap, by name and creator. Recreate those credentials with compliant expiries first, then save the policy.
+First, **Preview affected tokens** shows you the blast radius before you save: the organization and team tokens that would stop authenticating under the proposed cap, by name and creator. Recreate those credentials with compliant expiries first, then save the policy.
 
 ![The preview listing one machine token that would fail to authenticate under a 14-day policy, with a note that non-compliant personal tokens are rejected at request time.](/blog/access-token-expiry-policy/preview-affected-tokens.png)
 

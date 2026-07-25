@@ -98,7 +98,7 @@ Team tokens are machine tokens scoped to the resources and permissions of a spec
 A team token's effective permissions are the union of all [roles assigned to that team](/docs/administration/access-identity/rbac/teams/), evaluated at the time of each request. If the team's role assignments change — for example, the team is granted access to a new set of stacks — the token's capabilities update automatically without any token recreation. This makes team tokens a good fit for long-lived automation where access needs may evolve over time.
 
 {{% notes type="info" %}}
-In addition to the team's role assignments, a team token also receives your organization's **default Member permissions** — the baseline access configured in [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings). For example, if your organization's default stack access is set to **Read**, a team token can read every stack in the organization, not just the stacks the team has been granted. Keep this in mind when relying on a team token to scope automation to a single team's resources.
+In addition to the team's role assignments, a team token also receives your organization's **default Member permissions** — the baseline access configured in [Organization-wide role settings](/docs/administration/access-identity/rbac/roles/#organization-wide-role-settings). For example, if your organization's default stack access is set to **Read**, a team token can read every stack in the organization, not just the stacks the team has been granted. Keep this in mind when relying on a team token to scope automation to a single team's resources.
 {{% /notes %}}
 
 As with organization tokens, team token activity is recorded in audit logs with the token's name, keeping actions traceable without exposing individual users.
@@ -124,7 +124,7 @@ To set an access token expiry policy:
 
 ![The Other tab of the Access Management settings page, with the access token expiry policy section at the bottom.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-other-tab.png)
 
-**Preview affected tokens** lists, by name and creator, each organization and team token that would fail to authenticate under the proposed cap:
+**Preview affected tokens** lists the organization and team tokens that would fail to authenticate under the proposed cap, by name and creator (the first five, plus a count of any others):
 
 ![The access token expiry policy section showing a preview that lists one machine token that would fail to authenticate under a 14-day policy.](/images/docs/pulumi-cloud/access-tokens/expiry-policy-preview.png)
 
