@@ -71,7 +71,7 @@ The [Kubernetes Cluster Access](/docs/esc/guides/integrate-with/kubernetes-clust
 
 ## Setting up a CLI integration
 
-CLI integrations are configured by an organization administrator and are available to every Neo task in the organization once enabled.
+CLI integrations are configured by an organization administrator and are offered to every Neo task in the organization once enabled. Using one still takes the acting user's own access: Neo invokes the CLI with `pulumi env run`, as that user, so an integration works only for users who can open the backing ESC environment. Connecting an integration doesn't grant anyone access they didn't already have — see [Neo's permissions model](/docs/ai/neo/permissions/).
 
 ### 1. Create the ESC environment
 
@@ -123,7 +123,7 @@ Individual CLI invocations made by Neo during a task are visible in the task tra
 
 ## Troubleshooting
 
-**Neo says it can't run the CLI.** Most often the linked ESC environment is missing a required environment variable, or the credentials it produces aren't authorized for the action Neo attempted. Open the ESC environment in Pulumi Cloud and use **Open environment** to check what variables are emitted, then re-run the failing command locally with `pulumi env run <ref> -- <cli> <args>` to reproduce the error.
+**Neo says it can't run the CLI.** Most often the linked ESC environment is missing a required environment variable, or the credentials it produces aren't authorized for the action Neo attempted. If the failure is a Pulumi permission error rather than a cloud one, check that the user running the task can open the environment themselves — Neo opens it as them. Open the ESC environment in Pulumi Cloud and use **Open environment** to check what variables are emitted, then re-run the failing command locally with `pulumi env run <ref> -- <cli> <args>` to reproduce the error.
 
 **Neo picked the wrong account.** If you have several connected instances of the same CLI (for example, both `production-aws` and `staging-aws`), give them clearly distinguishable names and mention the name in your task prompt. You can also use [per-task selection](#per-task-selection) to limit the task to a single instance.
 
