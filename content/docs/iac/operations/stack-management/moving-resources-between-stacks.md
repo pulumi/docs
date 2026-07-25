@@ -10,7 +10,7 @@ menu:
         weight: 45
 ---
 
-As a project grows, you may decide to split a monolithic stack into several smaller ones, merge stacks together, or otherwise reorganize which stack owns which resources. The [`pulumi state move`](/docs/iac/cli/commands/pulumi_state_move/) command lets you transfer resources from a source stack to a destination stack by rewriting state directly, so Pulumi treats the resources as unchanged rather than deleting them from one stack and recreating them in another.
+As a project grows, you may decide to split a monolithic stack into smaller ones, merge stacks together, or otherwise reorganize which stack owns which resources. The [`pulumi state move`](/docs/iac/cli/commands/pulumi_state_move/) command lets you transfer resources from a source stack to a destination stack by rewriting state directly, so Pulumi treats the resources as unchanged rather than deleting them from one stack and recreating them in another.
 
 {{% notes type="info" %}}
 `pulumi state move` only modifies the state files of the source and destination stacks. It does not change your program code. After moving resources you still need to add the corresponding resource declarations to the destination stack's program, as described in [Update the destination program](#update-the-destination-program) below.
@@ -75,7 +75,7 @@ Review any dependency warnings carefully. If a moved resource depends on one tha
 
 Once the program changes are in place, run `pulumi preview` on both stacks. A clean preview with no unexpected changes confirms the move succeeded and the program matches the new state.
 
-## Related pages
+## Learn more
 
 * [Move Resources Between Stacks](/tutorials/move-resources-between-stacks/) — a full tutorial covering this workflow end to end, including cross-project moves and resolving dependencies with stack references.
 * [Refactoring with aliases](/docs/iac/operations/stack-management/refactoring-with-aliases/) — use the `aliases` resource option when a moved resource's identity changes in the destination program.
