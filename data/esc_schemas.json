@@ -2201,8 +2201,8 @@
                       "username"
                     ],
                     "rotateOnly": [
-                      "password",
-                      "username"
+                      "username",
+                      "password"
                     ],
                     "type": "object"
                   },
