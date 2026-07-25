@@ -12,7 +12,7 @@ tags:
     - security
 social:
     twitter: |
-        A never-expiring access token is a breach waiting for a timeline. Pulumi Cloud organizations can now enforce a maximum expiry on personal, organization, and team access tokens used against them.
+        A never-expiring access token is a breach waiting for a timeline. Pulumi Cloud organizations can now enforce a maximum expiry on personal, organization, and team access tokens.
 
         Set the cap once; the platform enforces it on every request.
     linkedin: |
