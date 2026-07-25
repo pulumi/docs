@@ -238,3 +238,4 @@ Related reading:
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
 * [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [What is Configuration Management?](/what-is/what-is-configuration-management/)
+* [Most Effective Infrastructure as Code (IaC) Tools](/blog/infrastructure-as-code-tools/)

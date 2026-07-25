@@ -242,3 +242,4 @@ Related reading:
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
 * [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [Python for DevOps](/what-is/python-for-devops/)
+* [Most Effective Infrastructure as Code (IaC) Tools](/blog/infrastructure-as-code-tools/)
