@@ -25,8 +25,8 @@ You can ask Neo to investigate a failed preview, make changes to your program an
 
 The controls you have in Pulumi Cloud apply in the terminal:
 
-- **[Approval modes](/docs/ai/neo/tasks/#task-modes)** (manual, balanced, auto) govern whether Neo asks before using tools
-- **[Permission modes](/docs/ai/neo/tasks/#task-modes)** (default, read-only) govern what Neo can change
+- **[Approval modes](/docs/ai/neo/tasks/#task-modes)** (manual, balanced, auto) govern whether Neo asks before using tools. `manual` is the same mode the console calls **Review**.
+- **[Permission modes](/docs/ai/neo/permissions/#permission-mode-and-approval-mode)** (default, read-only) govern what Neo can change
 - **[Plan mode](/docs/ai/neo/tasks/#plan-mode)** lets Neo research and plan before executing (toggle with **Shift+Tab** before sending your first message)
 
 ## Integrations
