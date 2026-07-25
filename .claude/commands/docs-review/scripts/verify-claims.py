@@ -96,6 +96,7 @@ The workflow's `||` stub is reserved for can't-even-start failures.
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import os
 import re
@@ -282,7 +283,7 @@ Four hard rules. Each one exists because violating it produced false `contradict
 
 - **Target alignment.** Verdict a claim only against the source the claim itself names. If the pre-fetched page's URL is not the URL in the claim text, that page is the wrong target — do not run the framing check against it; return `unverifiable` with evidence noting the target mismatch. When one doc line carries several links, each claim binds to its own link's target; never judge a claim against the neighboring anchor's page, and never let an accurate description of the *wrong* page become a `contradicted` verdict on the claim.
 - **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but it can never by itself contradict other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency, not proof of which one is wrong. Resolve against product source (`gh_query`/`read_file`, release notes); for sibling-consistency claims the verdict is `mismatch`. If code can't settle it, return `unverifiable` — never `contradicted` on the strength of another docs page alone. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence.
-- **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables) make transcription claims: verify the doc text against the data file with `read_file`. If the product metadata itself looks wrong against the external framework it cites, the transcription is still `verified` — record the upstream concern in `evidence` as product feedback, not as a doc contradiction.
+- **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables) make transcription claims: verify the doc text against the data file with `read_file`. If the product metadata itself looks wrong against the external framework it cites, the transcription is still `verified` — record the upstream concern in `evidence` as product feedback, not as a doc contradiction. **`contradicted` is not available for these pages.** The harness enforces this deterministically: a `contradicted` verdict on a generated page is downgraded to `unverifiable` after you return, so emitting one only discards your confidence rating. If the transcription genuinely disagrees with its own data file, that IS a doc bug — say so in `evidence` and return `mismatch`.
 - **Quote only what you fetched.** Any `contradicted` resting on a quoted source passage must quote content observed in THIS session's tool output. Never quote from memory of what a page or "official docs" say — pages change, and a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
 
 # Intuition check
@@ -667,10 +668,52 @@ def _accumulate_usage(agg: dict, usage: dict) -> None:
         agg[k] += int((usage or {}).get(k, 0) or 0)
 
 
-def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns: int) -> dict:
+@functools.lru_cache(maxsize=4)
+def _generated_content_roots(repo_root: Path) -> tuple[str, ...]:
+    """Content subtrees Hugo builds from `data/` via a content adapter.
+
+    A `_content.gotmpl` beside the section IS the marker — it is what makes the
+    section generated rather than authored (e.g.
+    `content/docs/reference/pre-built-policy-packs/_content.gotmpl` renders the
+    policy tables from `data/policy_pack_policies/*.json`). Discovering the
+    roots from the marker keeps this in step with the content tree instead of
+    pinning a hand-maintained path list that goes stale."""
+    try:
+        return tuple(sorted(
+            p.parent.relative_to(repo_root).as_posix()
+            for p in (repo_root / "content").rglob("_content.gotmpl")))
+    except OSError:
+        return ()
+
+
+def _is_generated_from_data(file_path: str, repo_root: Path | None) -> bool:
+    if not file_path or repo_root is None:
+        return False
+    rel = file_path.strip().lstrip("./")
+    return any(rel == root or rel.startswith(root + "/")
+               for root in _generated_content_roots(repo_root))
+
+
+def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns: int,
+                      repo_root: Path | None = None) -> dict:
     verdict = inp.get("verdict")
     if verdict not in VERDICT_VALUES:
         verdict = "unverifiable"
+    # Source-discipline rule 3, enforced rather than merely prompted. A
+    # generated-from-data page transcribes product metadata; a disagreement with
+    # the external framework it cites is upstream product feedback, never a doc
+    # `contradicted`. The prompt has said so since #20349 and Sonnet mostly
+    # honours it, but a 2026-07-24 model sweep found the rule is *advisory in
+    # practice*: every Opus configuration flagged 5-6 of 12 policy-pack claims
+    # `contradicted` against Sonnet's 1 of 12, and the rate did not move with
+    # reasoning effort (6 / 6 / 5 across low / medium / high). A rule that a
+    # stronger model overrides is not a rule, so the downgrade is deterministic
+    # here. The model's reasoning is preserved verbatim in `evidence` so the
+    # upstream concern still reaches the reviewer.
+    gated = False
+    if verdict == "contradicted" and _is_generated_from_data(claim.get("file", ""), repo_root):
+        verdict = "unverifiable"
+        gated = True
     conf = inp.get("confidence")
     if conf not in CONFIDENCE_VALUES:
         conf = "low"
@@ -687,6 +730,15 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
         "source": (inp.get("source") or "").strip() or "(no source pointer returned)",
         "model_usage": {**agg_usage, "turns": turns},
     }
+    if gated:
+        rec["confidence"] = "low"
+        rec["source_discipline_gate"] = "generated-from-data"
+        rec["evidence"] = (
+            "[source-discipline gate: this page is generated from `data/`, so a "
+            "disagreement with the cited external framework is upstream product "
+            "feedback, not a doc contradiction — `contradicted` downgraded to "
+            "`unverifiable`. Surface as an author question / upstream issue, not "
+            "as a 🚨 finding.] " + rec["evidence"])
     if isinstance(inp.get("framing_note"), str) and inp["framing_note"].strip():
         rec["framing_note"] = inp["framing_note"].strip()
     if isinstance(inp.get("intuition_flag"), str) and inp["intuition_flag"].strip():
@@ -741,7 +793,7 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         verify_block = next((b for b in tool_uses if b.get("name") == "verify_claim"), None)
         if verify_block is not None:
             inp = verify_block.get("input") or {}
-            rec = _finalize_verdict(claim, route, inp, agg_usage, turn)
+            rec = _finalize_verdict(claim, route, inp, agg_usage, turn, repo_root)
             esc = inp.get("route_escalation")
             if esc == "pass3" and route == "pass1" and allow_escalate:
                 rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run,
