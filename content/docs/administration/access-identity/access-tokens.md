@@ -151,7 +151,11 @@ A token complies with the policy if it has an expiration date and its remaining 
 
 * **Web console sessions are unaffected**, as are short-lived tokens issued through [OIDC token exchange](/docs/administration/access-identity/oidc-issuers/) and internally issued credentials such as deployment agent pool tokens.
 
-Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy.
+Requests rejected by the policy receive a `403 Forbidden` response whose message names the organization and its policy maximum, so it's clear why the request was refused and how to fix it: generate a new token whose expiry meets the policy. For example, a CLI operation using a non-compliant token fails with:
+
+```
+error: could not create stack: [403] The `acme-corp` organization enforces a max access token expiry of `14` days that your current token does not meet. Please generate a new token with a TTL meeting your org's threshold to perform this request.
+```
 
 ## Legacy organization token types
 

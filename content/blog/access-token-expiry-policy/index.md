@@ -78,6 +78,8 @@ First, **Preview affected tokens** shows you the blast radius before you save: e
 
 Second, rejections are designed to be self-explanatory. A blocked request fails with a `403 Forbidden` that names your organization and its policy maximum, so a member whose personal token no longer complies knows immediately what happened and what to do: generate a new token that meets the policy. Policy changes are also recorded in your organization's [audit logs](/docs/administration/security-compliance/audit-logs/).
 
+![A pulumi up run rejected with a 403 error stating that the acme-corp organization enforces a max access token expiry of 14 days that the current token does not meet.](/blog/access-token-expiry-policy/policy-rejection-cli.png)
+
 A reasonable rollout looks like:
 
 1. Decide on a cap that matches your rotation policy. 90 days is a common choice for CI credentials.
