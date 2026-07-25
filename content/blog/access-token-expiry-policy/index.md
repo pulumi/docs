@@ -84,7 +84,7 @@ A reasonable rollout looks like:
 
 1. Decide on a cap that matches your rotation policy. 90 days is a common choice for CI credentials.
 1. Use **Preview affected tokens** and recreate any non-compliant machine tokens.
-1. Tell your members: personal tokens without a compliant expiry will stop working against the organization.
+1. Socialize the change in your organization: personal tokens without a compliant expiry will stop working against the organization.
 1. Save the policy. From here on, the platform enforces it for you.
 
 ## Get started
