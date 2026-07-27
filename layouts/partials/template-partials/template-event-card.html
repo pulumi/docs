@@ -60,20 +60,22 @@
 
             {{ with $data.Params.meta_desc }}<p class="mt-1.5 mb-0 max-w-prose body-base line-clamp-3 text-service-black">{{ . }}</p>{{ end }}
 
-            {{ with $data.Params.presenters }}
-            <div class="mt-4 flex items-center gap-3">
-                <div class="flex -space-x-2 shrink-0">
-                    {{ range . }}
-                        <img class="size-8 rounded-full object-cover ring-2 ring-white" src="{{ .photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ .name }}" loading="lazy" />
-                    {{ end }}
+            <div class="mt-auto flex flex-col gap-4 pt-6">
+                {{ with $data.Params.presenters }}
+                <div class="flex items-center gap-3">
+                    <div class="flex -space-x-2 shrink-0">
+                        {{ range . }}
+                            <img class="size-14 rounded-full object-cover ring-2 ring-white" src="{{ .photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ .name }}" loading="lazy" />
+                        {{ end }}
+                    </div>
+                    <span class="body-sm text-gray-600 line-clamp-1">with {{ range $i, $p := . }}{{ if $i }}, {{ end }}{{ $p.name }}{{ end }}</span>
                 </div>
-                <span class="body-sm text-gray-600 line-clamp-1">with {{ range $i, $p := . }}{{ if $i }}, {{ end }}{{ $p.name }}{{ end }}</span>
-            </div>
-            {{ end }}
+                {{ end }}
 
-            <div class="mt-auto flex items-end justify-between gap-3 pt-6">
-                {{ partial "template-partials/event-card-tags.html" $data }}
-                {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand) }}
+                <div class="flex items-end justify-between gap-3">
+                    {{ partial "template-partials/event-card-tags.html" $data }}
+                    {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand) }}
+                </div>
             </div>
         </a>
     </article>
