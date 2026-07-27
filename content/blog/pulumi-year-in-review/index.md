@@ -121,7 +121,7 @@ Pulumi's growth and impact this year have been amazing:
 
 Pulumi's vibrant community has been at the heart of everything we've accomplished:
 
-- **Global [Pulumi User Groups](https://www.meetup.com/pro/pugs/) (PUGs)**: With 20 groups across 9 countries, including new meetups in [Chicago](https://www.meetup.com/chicago-pulumi-user-group/), [Columbus](https://www.meetup.com/columbus-pulumi-user-group), [São Paulo](https://www.meetup.com/sao-paulo-pulumi-user-group), and [Tel Aviv](https://www.meetup.com/tel-aviv-pulumi-user-group), our community continues to grow. These meetups collectively hosted over 6,396 members.
+- **Global [Pulumi User Groups](https://luma.com/pulumi) (PUGs)**: With 20 groups across 9 countries, including new meetups in [Chicago](https://luma.com/pulumi), [Columbus](https://luma.com/pulumi), [São Paulo](https://luma.com/pulumi), and [Tel Aviv](https://luma.com/pulumi), our community continues to grow. These meetups collectively hosted over 6,396 members.
 - **PulumiUP 2024**: Over 8,000 registrants globally, with nearly 1,000 for the first-ever PulumiUP Europe.
 - **[Workshops](https://www.pulumi.com/resources/#upcoming)**: 72 workshops with 14,500+ registrations from engineers wanting to learn Pulumi.
 - **22,000 GitHub Stars**: A testament to our community's passion and dedication.

@@ -91,7 +91,7 @@ talks:
   date: 2025-10-30T17:30:00.000+02:00
 - event: "Tel Aviv Pulumi User Group Meetup Nº 2"
   title: "Agentic AI in Action: How Pulumi Neo Transforms Infrastructure Management"
-  url: "https://www.meetup.com/tel-aviv-pulumi-user-group/events/310498800/"
+  url: "https://luma.com/pulumi"
   date: 2025-10-29T18:00:00.000+02:00
 - event: "Cloud Native Denmark 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
@@ -143,7 +143,7 @@ talks:
   date: 2025-03-31T15:00:00.000-07:00
 - event: "Oslo PUG 2025 Workshop"
   title: "Discover Pulumi Through Hands-On Practice"
-  url: "https://www.meetup.com/oslo-pulumi-user-group/events/306321063"
+  url: "https://luma.com/pulumi"
   date: 2025-03-05T15:00:00.000-07:00
 - event: Kargo Community Meeting
   title: Pulumi + Kargo
