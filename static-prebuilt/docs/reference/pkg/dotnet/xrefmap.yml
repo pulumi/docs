@@ -16832,15 +16832,15 @@ references:
   commentId: T:Pulumi.RegisterPackageRequest
   fullName: Pulumi.RegisterPackageRequest
   nameWithType: RegisterPackageRequest
-- uid: Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization)
-  name: RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, PackageParameterization?)
-  href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest__ctor_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Byte____Pulumi_RegisterPackageRequest_PackageParameterization_
-  commentId: M:Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization)
-  name.vb: New(String, String, String, Dictionary(Of String, Byte()), PackageParameterization)
-  fullName: Pulumi.RegisterPackageRequest.RegisterPackageRequest(string, string, string?, System.Collections.Generic.Dictionary<string, byte[]>?, Pulumi.RegisterPackageRequest.PackageParameterization?)
-  fullName.vb: Pulumi.RegisterPackageRequest.New(String, String, String, System.Collections.Generic.Dictionary(Of String, Byte()), Pulumi.RegisterPackageRequest.PackageParameterization)
-  nameWithType: RegisterPackageRequest.RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, RegisterPackageRequest.PackageParameterization?)
-  nameWithType.vb: RegisterPackageRequest.New(String, String, String, Dictionary(Of String, Byte()), RegisterPackageRequest.PackageParameterization)
+- uid: Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization,Pulumi.RegisterPackageRequest.PackageParameterization)
+  name: RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, PackageParameterization?, PackageParameterization?)
+  href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest__ctor_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Byte____Pulumi_RegisterPackageRequest_PackageParameterization_Pulumi_RegisterPackageRequest_PackageParameterization_
+  commentId: M:Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization,Pulumi.RegisterPackageRequest.PackageParameterization)
+  name.vb: New(String, String, String, Dictionary(Of String, Byte()), PackageParameterization, PackageParameterization)
+  fullName: Pulumi.RegisterPackageRequest.RegisterPackageRequest(string, string, string?, System.Collections.Generic.Dictionary<string, byte[]>?, Pulumi.RegisterPackageRequest.PackageParameterization?, Pulumi.RegisterPackageRequest.PackageParameterization?)
+  fullName.vb: Pulumi.RegisterPackageRequest.New(String, String, String, System.Collections.Generic.Dictionary(Of String, Byte()), Pulumi.RegisterPackageRequest.PackageParameterization, Pulumi.RegisterPackageRequest.PackageParameterization)
+  nameWithType: RegisterPackageRequest.RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, RegisterPackageRequest.PackageParameterization?, RegisterPackageRequest.PackageParameterization?)
+  nameWithType.vb: RegisterPackageRequest.New(String, String, String, Dictionary(Of String, Byte()), RegisterPackageRequest.PackageParameterization, RegisterPackageRequest.PackageParameterization)
 - uid: Pulumi.RegisterPackageRequest.#ctor*
   name: RegisterPackageRequest
   href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest__ctor_
@@ -16877,6 +16877,19 @@ references:
   isSpec: "True"
   fullName: Pulumi.RegisterPackageRequest.DownloadUrl
   nameWithType: RegisterPackageRequest.DownloadUrl
+- uid: Pulumi.RegisterPackageRequest.Extension
+  name: Extension
+  href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest_Extension
+  commentId: P:Pulumi.RegisterPackageRequest.Extension
+  fullName: Pulumi.RegisterPackageRequest.Extension
+  nameWithType: RegisterPackageRequest.Extension
+- uid: Pulumi.RegisterPackageRequest.Extension*
+  name: Extension
+  href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest_Extension_
+  commentId: Overload:Pulumi.RegisterPackageRequest.Extension
+  isSpec: "True"
+  fullName: Pulumi.RegisterPackageRequest.Extension
+  nameWithType: RegisterPackageRequest.Extension
 - uid: Pulumi.RegisterPackageRequest.Name
   name: Name
   href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest_Name
