@@ -44,6 +44,23 @@
     @apply border-gray-500 bg-gray-100;
 }
 
+// Homepage feed list/card view toggle (partials/blog/view-toggle.html +
+// theme/src/ts/blog-list.ts). Each row (partials/blog/card/list-row.html)
+// carries both a compact and a card representation; `.is-cards` on the
+// container swaps which one shows. `!important` beats the utilities-layer
+// display classes (`flex`/`hidden`) on the two row wrappers.
+[data-post-list].is-cards [data-row-compact] {
+    display: none !important;
+}
+[data-post-list].is-cards [data-row-card] {
+    display: flex !important;
+}
+
+// Selected pill in the view toggle — matches the category filter's active state.
+[data-blog-view-toggle] [aria-current="page"] {
+    @apply border-gray-500 bg-gray-100;
+}
+
 // Offset anchor / TOC jumps so the target heading clears the sticky site nav
 // instead of hiding under it.
 .blog-post-content :is(h1, h2, h3, h4, h5, h6) {
