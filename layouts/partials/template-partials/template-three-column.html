@@ -9,7 +9,6 @@ Parameters:
 Example: [{"icon": "shield", "title": "Title", "description": "Description", "cta_text": "Learn more", "cta_link":
 "/link"}]
 Note: icon should be a Phosphor icon name (e.g., "shield", "rocket")
-- icon_style: Optional "black" for black icons
 - icon_layout: Optional "above" to place icon on its own line above the title (matches product card style)
 - anchor: Optional anchor for section id
 */}}
@@ -19,11 +18,9 @@ Note: icon should be a Phosphor icon name (e.g., "shield", "rocket")
 {{ $subtitle := .subtitle }}
 {{ $columns := .columns }}
 {{ $anchor := .anchor }}
-{{ $iconStyle := .icon_style }}
 {{ $iconLayout := .icon_layout }}
 
-<section class="template-three-column {{ if eq $iconStyle "black" }}icons-black{{ end }} {{ if eq $iconLayout "above"
-    }}icon-layout-above{{ end }}"{{ if $anchor }} id="{{ $anchor }}" {{ end }}>
+<section class="template-three-column {{ if eq $iconLayout "above" }}icon-layout-above{{ end }}"{{ if $anchor }} id="{{ $anchor }}" {{ end }}>
     {{ if or $tagLine $title $subtitle }}
     <div class="text-left sm:text-center">
         {{ if $tagLine }}
