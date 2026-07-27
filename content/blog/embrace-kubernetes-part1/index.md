@@ -9,6 +9,7 @@ tags:
     - kubernetes
 category: best-practices
 series: embrace-kubernetes
+faq_schema: true
 ---
 
 When you’re considering whether or not to implement Kubernetes, perhaps the first question to ask yourself is do you need it at all?
