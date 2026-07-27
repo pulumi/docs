@@ -42,14 +42,17 @@ card_group:
     {{ range $index, $item := .items }}
     {{ $colorIndex := mod $index (len $colorNames) }}
     {{ $iconColor := index $colorNames $colorIndex }}
-        {{ partial "card.html" (dict
-                "title" $item.title
-                "description" $item.description
-                "icon_name" $item.icon.name
-                "icon_color" $iconColor
-                "width" "lg:w-1/3"
-            )
-        }}
+        <div class="w-full lg:w-1/3 p-3">
+            <div class="h-full card bg-white p-4">
+                {{ with $item.icon.name }}
+                <div class="icon-div mb-8">
+                    {{ partial "color-icon.html" (dict "icon" . "icon_color" $iconColor) }}
+                </div>
+                {{ end }}
+                {{ with $item.title }}<h5>{{ . }}</h5>{{ end }}
+                {{ with $item.description }}<p class="mt-6">{{ . }}</p>{{ end }}
+            </div>
+        </div>
     {{ end }}
     </div>
 {{ end }}

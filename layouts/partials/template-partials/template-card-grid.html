@@ -56,7 +56,7 @@
 
               {{ if .cta_text }}
                 <div class="mt-auto">
-                    <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
+                    <a href="{{ .cta_link }}"{{ partial "external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
                         {{ .cta_text }}
                         {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                     </a>
@@ -87,7 +87,7 @@
                 </div>
                 {{ if .cta_text }}
                 <div class="mt-auto">
-                    <a href="{{ .cta_link }}"{{ partial "template-partials/external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
+                    <a href="{{ .cta_link }}"{{ partial "external-link-attrs.html" .cta_link | safeHTMLAttr }} class="btn btn-link btn-xl">
                         {{ .cta_text }}
                         {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                     </a>

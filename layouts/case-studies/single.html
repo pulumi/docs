@@ -44,7 +44,7 @@
     {{/* Mobile "On this page" (collapsible, visible below lg) */}}
     {{ with .Params.sections }}
     <div class="lg:hidden">
-        {{ partial "case-studies/toc.html" (dict "sections" . "collapsible" true) }}
+        {{ partial "section-toc.html" (dict "sections" . "collapsible" true "track" "case-study-toc") }}
     </div>
     {{ end }}
 
@@ -69,7 +69,7 @@
         {{/* Sidebar "On this page" (visible at lg+) */}}
         {{ with .Params.sections }}
         <div class="hidden lg:block w-64 flex-shrink-0 self-start sticky top-36">
-            {{ partial "case-studies/toc.html" (dict "sections" .) }}
+            {{ partial "section-toc.html" (dict "sections" . "track" "case-study-toc") }}
         </div>
         {{ end }}
     </div>

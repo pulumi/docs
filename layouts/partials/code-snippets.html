@@ -6,7 +6,7 @@ left, language dropdown right). Uses Hugo's built-in Chroma highlighting with
 the site-wide min-dark color theme.
 
 Can be called standalone:
-  {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" .code_snippets "title" .code_title) }}
+  {{ partial "code-snippets.html" (dict "code_snippets" .code_snippets "title" .code_title) }}
 
 Or embedded in another partial by passing the relevant dict.
 

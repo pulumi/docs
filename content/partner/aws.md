@@ -1,6 +1,6 @@
 ---
 title: AWS with Pulumi
-layout: product-page
+layout: template-page
 type: page
 url: /aws
 

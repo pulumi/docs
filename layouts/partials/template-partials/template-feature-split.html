@@ -59,6 +59,6 @@ Example: [{"icon": "code", "title": "Use real code", "description": "..."}, ...]
     {{ if $cards }}
     {{- /* In compact mode use a tight top margin; otherwise lg:mt-36 provides extra
          breathing room to balance the side-by-side heading+description layout. */ -}}
-    {{ partial "template-partials/template-mini-cards.html" (dict "cards" $cards "lg_top_class" (cond $compact "lg:mt-0" "lg:mt-36")) }}
+    {{ partial "mini-cards.html" (dict "cards" $cards "lg_top_class" (cond $compact "lg:mt-0" "lg:mt-36")) }}
     {{ end }}
 </section>

@@ -1,6 +1,6 @@
 ---
 title: Cloud Infrastructure as Code for Google Cloud
-layout: product-page
+layout: template-page
 type: page
 url: /gcp
 

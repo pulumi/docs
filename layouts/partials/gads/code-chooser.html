@@ -19,5 +19,5 @@
 {{ $codeTitle := .code_title | default (index $heroDefaults "code_title") }}
 
 {{ with $snippets }}
-    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" . "title" $codeTitle) }}
+    {{ partial "code-snippets.html" (dict "code_snippets" . "title" $codeTitle) }}
 {{ end }}

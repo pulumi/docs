@@ -36,7 +36,7 @@
     {{ end }}
 {{ end }}
 
-<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 {{ if not $bgImageURL }}bg-violet-primary{{ end }} text-white" {{ if $bgImageURL }}style="background-image: url('{{ $bgImageURL }}'); background-size: cover; background-position: center;"{{ end }}>
+<section id="{{ $anchor }}" class="rounded-2xl template-promo-banner px-12 py-24 text-white {{ if $bgImageURL }}bg-cover bg-center{{ else }}bg-violet-primary{{ end }}" {{ if $bgImageURL }}style="background-image: url('{{ $bgImageURL }}');"{{ end }}>
     {{ if $title }}
     <h2 class="promo-banner-title">{{ $title }}</h2>
     {{ end }}

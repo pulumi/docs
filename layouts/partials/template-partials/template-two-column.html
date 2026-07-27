@@ -15,7 +15,31 @@
 <section class="template-two-column"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col lg:flex-row gap-8 items-stretch">
         {{ range $i, $col := $columns }}
-        {{ partial "template-partials/template-card.html" (merge $col (dict "highlight" (and $highlightFirstCard (eq $i 0)))) }}
+        {{ $highlight := and $highlightFirstCard (eq $i 0) }}
+        <div class="template-card{{ if $highlight }} template-card--highlight{{ end }}"{{ with $col.anchor }} id="{{ . }}"{{ end }}>
+            <div class="flex flex-col h-full w-full">
+                <div class="flex flex-col gap-4 mb-8">
+                    {{ with $col.label }}<p class="card-label m-0">{{ . }}</p>{{ end }}
+                    {{ with $col.title }}<h3 class="card-title m-0">{{ . }}</h3>{{ end }}
+                    {{ with $col.subheader }}<p class="card-subheader m-0">{{ . }}</p>{{ end }}
+                </div>
+
+                {{ with $col.description }}
+                <div class="card-description mb-6">{{ . | markdownify }}</div>
+                {{ end }}
+
+                {{ if or $col.cta_primary_text $col.cta_text }}
+                <div class="flex flex-col md:flex-row gap-4 mt-auto flex-wrap">
+                    {{ with $col.cta_primary_text }}
+                    <a href="{{ $col.cta_primary_link }}" class="btn btn-primary btn-xl" data-role="cta-get-started">{{ . }}</a>
+                    {{ end }}
+                    {{ with $col.cta_text }}
+                    <a href="{{ $col.cta_link }}" class="btn btn-outline btn-xl">{{ . }}</a>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
         {{ end }}
     </div>
 </section>

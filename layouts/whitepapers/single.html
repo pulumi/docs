@@ -20,7 +20,7 @@
     {{/* Mobile sidebar nav (visible below lg) */}}
     {{ with .Params.sections }}
     <div class="lg:hidden">
-        {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+        {{ partial "section-toc.html" (dict "sections" . "collapsible" true "track" "whitepaper-toc") }}
     </div>
     {{ end }}
 
@@ -36,7 +36,7 @@
         {{/* Sidebar nav (visible at lg+) */}}
         {{ with .Params.sections }}
         <div class="hidden lg:block w-64 flex-shrink-0 self-start sticky top-36">
-                {{ partial "template-partials/template-sidebar-nav.html" (dict "sections" .) }}
+                {{ partial "section-toc.html" (dict "sections" . "track" "whitepaper-toc") }}
         </div>
         {{ end }}
     </div>

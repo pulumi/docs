@@ -28,8 +28,43 @@
     {{ end }}
     </section>
 
+    {{/* Alternating card groups: the parent header toggles left/right per row on
+         desktop and stacks above its cards on mobile. */}}
     <section id="solutions">
-        {{ partial "card-group-toggled.html" (dict "card_group" .Params.solutions) }}
+        <div class="mb-8 px-6 lg:px-0 relative">
+        {{ with .Params.solutions }}
+        {{ $colorNames := site.Data.colors.icon_colors }}
+        {{ range $parentIndex, $parent := .parents }}
+        {{ $colorIndex := mod $parentIndex (len $colorNames) }}
+        {{ $iconColor := index $colorNames $colorIndex }}
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="w-full my-auto lg:w-1/2 lg:mr-32 z-10 p-8 order-first {{ if modBool $parentIndex 2 }}lg:order-none{{ else }}lg:order-last{{ end }}">
+                        {{ partial "color-icon.html" (dict "icon" $parent.icon.name "icon_color" $iconColor) }}
+                        <h3>{{ $parent.title }}</h3>
+                        <p>{{ $parent.description }}</p>
+                    </div>
+                    <div class="w-full lg:w-1/2 block lg:flex flex-col lg:justify-center p-6 md:pl-24 xl:pl-0">
+                        {{ range $parent.children }}
+                        <div class="w-full p-4">
+                            <div class="h-full card bg-white p-4">
+                                {{ with .title }}<h5>{{ . }}</h5>{{ end }}
+                                {{ with .description }}<p class="mt-6">{{ . }}</p>{{ end }}
+                                {{ with .button }}
+                                <a class="btn btn-ghost-primary w-full" href="{{ .ref }}">
+                                    {{ partial "icon.html" (dict "name" "download-simple") }}
+                                    {{ .text }}
+                                </a>
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        {{ end }}
+        {{ end }}
+        </div>
     </section>
 
     <section id="form" class="container mx-auto justify-center text-center my-16 p-4">
@@ -41,6 +76,4 @@
             {{ end }}
         </div>
     </section>
-
-
 {{ end }}

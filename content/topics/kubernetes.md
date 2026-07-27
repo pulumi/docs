@@ -1,6 +1,6 @@
 ---
 title: Kubernetes with Pulumi
-layout: product-page
+layout: template-page
 type: page
 url: /kubernetes
 

@@ -1,7 +1,7 @@
 // Blog post page enhancements, all opt-in via data attributes rendered by the
 // post templates (no-ops elsewhere):
 //   [data-blog-toc]        sidebar TOC → scrollspy (highlights the current h2)
-//   [data-case-study-toc]  case-study sidebar TOC → same scrollspy
+//   [data-section-toc]     section-based sidebar TOC (case studies, whitepapers) → same scrollspy
 //   [data-copy-link]       share-row button → copies data-url to the clipboard
 //   [data-post-progress]   fixed bar under the nav → reading progress (scaleX)
 
@@ -94,7 +94,7 @@ function initProgressBar() {
 
 document.addEventListener("DOMContentLoaded", () => {
     initTocScrollspy(document.querySelector<HTMLElement>("[data-blog-toc]"));
-    initTocScrollspy(document.querySelector<HTMLElement>("[data-case-study-toc]"));
+    initTocScrollspy(document.querySelector<HTMLElement>("[data-section-toc]"));
     initCopyLink();
     initProgressBar();
 });

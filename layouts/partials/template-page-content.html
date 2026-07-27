@@ -24,12 +24,21 @@
       case_study_grid         — template-case-study-grid.html (fields: title, description, cards[{slug, title, description, use_quote, cta_text, cta_link}], anchor)
       video_embed             — template-video-embed.html (fields: youtube_id, title, poster_image, poster_alt, anchor)
       feature_callout         — template-feature-callout.html (fields: tag_line, title, lead, description, cta_primary_text/link, cta_secondary_text/link, background, anchor)
+      promo_banner            — template-promo-banner.html (fields: title, description, cta_text, bg_image, anchor)
+      location                — template-location.html (fields: tag_line, title, location, description, map_embed, cta_text, cta_link, anchor)
+
+    Naming convention:
+      - template-partials/ holds ONLY the section blocks dispatched here: each
+        carries the `template-` prefix and its stem (with `_`→`-`) is a valid `type`.
+      - Generic, reusable components those sections lean on are prefix-less and live
+        at the partials root (e.g. code-snippets.html, mini-cards.html,
+        external-link-attrs.html) or in a domain folder (e.g. events/event-card.html).
 
     Usage in layouts:
     {{ partial "template-page-content.html" . }}
 */}}
 
-<div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
+<div class="template-page-content font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24 overflow-hidden">
 {{ range .Params.sections }}
   {{ partial (printf "template-partials/template-%s.html" (replace .type "_" "-")) . }}
 {{ end }}

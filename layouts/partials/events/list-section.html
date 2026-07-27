@@ -211,7 +211,7 @@
                         {{ end }}
 
                         {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "upcoming" $upcoming "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
-                        {{ partial "template-partials/template-event-card.html" $tileOptions }}
+                        {{ partial "events/event-card.html" $tileOptions }}
                     {{ end }}
                 </ul>
             </div>
