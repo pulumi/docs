@@ -29,7 +29,7 @@ Pulumi Policies enforces compliance, security, and best practices across your cl
 Policy enforcement is applied in two ways:
 
 - **Preventative**: Blocking non-compliant resources before deployment during Pulumi stack updates
-- **Audit**: Continuously scan existing resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations
+- **Audit**: Continuously scan existing resources discovered through [Discovery](/docs/insights/discovery/) to identify violations
 
 This guide walks you through getting started with Pulumi Policies using both preventative and audit policies.
 
@@ -39,7 +39,7 @@ To follow this guide, ensure you have:
 
 - Access to Pulumi Cloud with Policy enabled for your organization.
 - **For preventative policies**: One or more Pulumi stacks.
-- **For audit policies**: Cloud accounts connected via [Insights Discovery](/docs/insights/discovery/).
+- **For audit policies**: Cloud accounts connected via [Discovery](/docs/insights/discovery/).
 - Organization admin permissions to configure policies.
 
 ## Understanding the Policies page

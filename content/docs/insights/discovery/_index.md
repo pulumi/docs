@@ -1,7 +1,7 @@
 ---
 title: Discovery
-title_tag: "Pulumi Insights Discovery Overview"
-meta_desc: Discover and manage all your cloud infrastructure with Pulumi Insights Discovery—scan accounts, explore resources, and gain complete visibility.
+title_tag: "Discovery Overview | Discovery & Governance"
+meta_desc: Discover and manage all your cloud infrastructure with Pulumi's Discovery feature—scan cloud accounts, explore resources, and gain complete visibility.
 h1: Discovery
 menu:
   insights:
@@ -16,13 +16,13 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-Pulumi Insights Discovery enables organizations to gain complete visibility into their cloud infrastructure by scanning cloud provider accounts and building a comprehensive inventory of all resources—regardless of how those resources were created or are currently managed.
+Pulumi's Discovery feature enables organizations to gain complete visibility into their cloud infrastructure by scanning cloud provider accounts and building a comprehensive inventory of all resources—regardless of how those resources were created or are currently managed.
 
 ## How discovery works
 
 Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) to securely manage credentials and scan your cloud infrastructure. The process involves:
 
-1. **Account management**: Create and configure accounts through the [Accounts page](/docs/insights/discovery/accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
+1. **Account management**: Create and configure cloud accounts through the [Cloud Accounts page](/docs/insights/discovery/accounts/) in Pulumi Cloud, where you can view scan status, monitor progress, and manage settings.
 
 2. **Resource scanning**: Discovery authenticates to your cloud provider using credentials from ESC, then identifies resources, collects metadata, records relationships, and updates the Insights supergraph with the latest state.
 
@@ -77,12 +77,12 @@ Resource search is available to all organization members, but users can only see
 
 ## Next steps
 
-- [Get started with Insights Discovery](/docs/insights/discovery/get-started/)
+- [Get started with Discovery](/docs/insights/discovery/get-started/)
 
 ## Learn more
 
 - [Connect cloud accounts in bulk](/docs/insights/discovery/connect-cloud-accounts/)
-- [Create and manage accounts](/docs/insights/discovery/accounts/)
+- [Create and manage cloud accounts](/docs/insights/discovery/accounts/)
 - [Learn Resource Search syntax](/docs/insights/discovery/search/)
 - [Explore Discovered Stacks](/docs/insights/discovery/discovered-stacks/)
 - [Import resources into Pulumi IaC](/docs/insights/discovery/visual-import/)

@@ -178,7 +178,7 @@ link = "/docs/esc/"
 
 [[entries]]
 term = "Pulumi Insights"
-description = "The Insights & Governance product in [Pulumi Cloud](#pulumi-cloud). It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable graph, and enforces [policy as code](#policy-as-code) on top of them."
+description = "The Discovery & Governance product in [Pulumi Cloud](#pulumi-cloud). It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable graph, and enforces [policy as code](#policy-as-code) on top of them."
 link = "/docs/insights/"
 
 [[entries]]

@@ -1,5 +1,5 @@
 ---
-title: Insights & Governance - Continuous Compliance, By Construction
+title: Discovery & Governance - Continuous Compliance, By Construction
 type: page
 layout: template-page
 meta_desc: Automated compliance made simple — continuously audit, remediate, and enforce policies to keep your cloud secure and reliable.
@@ -19,7 +19,7 @@ sections:
     title_secondary: "by construction."
     description: Audit, remediate, and enforce compliance policies across all your cloud infrastructure automatically.
     image: /images/product/insights-governance/ig-hero.svg
-    image_alt: Pulumi Insights & Governance dashboard showing cloud resource compliance
+    image_alt: Pulumi Discovery & Governance dashboard showing cloud resource compliance
     anchor: hero
 
   - type: feature_split
@@ -27,7 +27,7 @@ sections:
     description: |
       Govern your cloud automatically.
 
-      Pulumi Insights & Governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix violations with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
+      Pulumi Discovery & Governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix violations with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
 
     cards:
       - icon: arrows-clockwise

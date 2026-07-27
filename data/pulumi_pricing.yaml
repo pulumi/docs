@@ -458,7 +458,7 @@ categories:
         available_from: individual
 
   - id: insights
-    name: Insights & Governance
+    name: Discovery & Governance
     group: product
     icon: custom/pulumi-insights
     features:
