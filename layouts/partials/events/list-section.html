@@ -59,7 +59,7 @@
     <span id="upcoming" class="hidden"></span>
     <span id="on-demand" class="hidden"></span>
 
-    <div class="pulumi-event-list-container event-list-filter flex flex-col-reverse lg:flex-row lg:items-center justify-between lg:gap-4 mb-8 overflow-x-clip lg:overflow-x-visible">
+    <div class="pulumi-event-list-container event-list-filter flex flex-col lg:flex-row lg:items-center justify-between lg:gap-4 mb-8 overflow-x-clip lg:overflow-x-visible">
         <ul id="event-list-filter-nav" class="flex flex-wrap items-center gap-3 p-0 m-0 list-none">
             {{ range $item := .Params.sections }}
                 <li data-filter-name="{{ $item.anchor }}" class="mb-0">
@@ -67,8 +67,8 @@
                 </li>
             {{ end }}
         </ul>
-        <div class="event-list-tools flex items-center gap-2 self-start lg:self-auto mb-3">
-        <pulumi-filter-select class="flex gap-1 lg:gap-2">
+        <div class="event-list-tools flex items-center gap-2 self-start lg:self-auto mt-3 lg:mt-0">
+        <pulumi-filter-select class="flex">
             <pulumi-filter-select-option-group name="level" class="items-center">
                 <div class="toggle" slot="toggle">Level</div>
                 <div class="options">

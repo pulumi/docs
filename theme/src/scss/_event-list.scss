@@ -10,60 +10,8 @@
         }
     }
 
-    pulumi-filter-select {
-        width: fit-content;
-
-        @include screen-lg {
-            width: auto;
-        }
-
-        pulumi-filter-select-option-group {
-            @apply font-body text-sm relative flex-none;
-            width: max-content;
-
-            // Select chrome sized to match the filter pills / form-select-sm (h-8,
-            // text-sm; see @mixin form-control-sm in _forms.scss). The caret lives in
-            // the component's shadow DOM (filter-select-option-group.tsx); the pr gutter
-            // leaves room for it. This block out-specifies the shared
-            // components/_filter-select.scss rule, so keep the two visually in sync.
-            .toggle {
-                @apply flex items-center h-8 pl-2 pr-7 text-sm bg-white border border-gray-300 transition-all whitespace-nowrap cursor-pointer;
-                width: auto;
-                border-radius: $form-radius;
-                box-shadow: $form-select-shadow;
-
-                @include screen-lg {
-                    @apply pr-8;
-                }
-
-                &:hover {
-                    @apply border-gray-500 bg-gray-100;
-                }
-            }
-
-            // Panel matches the main-nav dropdown (.card + shadow): gray-200 border,
-            // rounded-lg, Tailwind `shadow`. Roomier padding; per-item vertical spacing
-            // comes from the option component's shadow styles. Long facet lists scroll.
-            .options {
-                @apply absolute bg-white py-2.5 pl-2.5 pr-6 shadow mt-1 border border-gray-200 z-50 overflow-y-auto overflow-x-hidden;
-                max-width: calc(100vw - 2rem);
-                max-height: 20rem;
-                border-radius: $form-radius;
-
-                @include screen-lg {
-                    @apply pr-10;
-                    max-width: none;
-                }
-            }
-
-            // Open state — violet-800 focus-ring treatment shared with form controls.
-            &[expanded] .toggle {
-                @apply border-violet-800;
-                box-shadow: $form-focus-ring, $form-select-shadow;
-            }
-        }
-    }
-
+    // Filter-select dropdown styling lives in components/_filter-select.scss —
+    // the component is only used here, so it needs no page-scoped override.
 }
 
 // Active filter pill via :target. When a hash is set, reset the default "All" pill
