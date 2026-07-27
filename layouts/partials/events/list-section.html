@@ -59,17 +59,16 @@
     <span id="upcoming" class="hidden"></span>
     <span id="on-demand" class="hidden"></span>
 
-    <div class="pulumi-event-list-container event-list-filter flex flex-col-reverse lg:flex-row lg:items-end justify-between border-b border-gray-200 pb-0 lg:gap-4 mb-8 overflow-x-clip lg:overflow-x-visible">
-        <ul id="event-list-filter-nav" class="flex p-0 m-0">
+    <div class="pulumi-event-list-container event-list-filter flex flex-col lg:flex-row lg:items-center justify-between lg:gap-4 mb-8 overflow-x-clip lg:overflow-x-visible">
+        <ul id="event-list-filter-nav" class="flex flex-wrap items-center gap-3 p-0 m-0 list-none">
             {{ range $item := .Params.sections }}
                 <li data-filter-name="{{ $item.anchor }}" class="mb-0">
-                    <a class="whitespace-nowrap" href="#{{ $item.anchor }}">
-                        <span>{{ $item.label }}</span>
-                    </a>
+                    <a class="btn btn-sm btn-outline text-sm whitespace-nowrap" href="#{{ $item.anchor }}">{{ $item.label }}</a>
                 </li>
             {{ end }}
         </ul>
-        <pulumi-filter-select class="flex gap-1 lg:gap-2 self-start lg:self-auto lg:pb-0 mb-3">
+        <div class="event-list-tools flex items-center gap-2 self-start lg:self-auto mt-3 lg:mt-0">
+        <pulumi-filter-select class="flex">
             <pulumi-filter-select-option-group name="level" class="items-center">
                 <div class="toggle" slot="toggle">Level</div>
                 <div class="options">
@@ -109,6 +108,12 @@
                 </div>
             </pulumi-filter-select-option-group>
         </pulumi-filter-select>
+            {{ with $pageContext.OutputFormats.Get "rss" }}
+            <a href="{{ .RelPermalink }}" target="_blank" rel="noopener" aria-label="Pulumi Events & Workshops RSS feed" data-track="events-rss" class="btn btn-icon-sm btn-ghost">
+                {{ partial "icon.html" (dict "name" "rss" "class" "size-5") }}
+            </a>
+            {{ end }}
+        </div>
     </div>
 
     {{/* Group upcoming events by month */}}
@@ -131,24 +136,11 @@
         {{ $upcomingGroups = $upcomingGroups | append $currentGroup }}
     {{ end }}
 
-    {{/* Group on-demand events by month */}}
-    {{ $ondemandMonthHeader := "" }}
+    {{/* On-demand recordings render as a single ungrouped list (no month headers). */}}
     {{ $ondemandGroups := slice }}
-    {{ $currentGroup = dict "month" "" "monthKey" "" "icon" "video" "tab" "on-demand" "events" slice }}
-    {{ range sort $onDemandRecordings "date" "desc" }}
-        {{ $monthLabel := (.date | time.Format "January 2006") }}
-        {{ if ne $ondemandMonthHeader $monthLabel }}
-            {{ if $currentGroup.month }}
-                {{ $ondemandGroups = $ondemandGroups | append $currentGroup }}
-            {{ end }}
-            {{ $ondemandMonthHeader = $monthLabel }}
-            {{ $filterMonth := (.date | time.Format "Jan-06") }}
-            {{ $currentGroup = dict "month" $monthLabel "monthKey" (lower $filterMonth) "icon" "video" "tab" "on-demand" "events" slice }}
-        {{ end }}
-        {{ $currentGroup = merge $currentGroup (dict "events" ($currentGroup.events | append .)) }}
-    {{ end }}
-    {{ if $currentGroup.month }}
-        {{ $ondemandGroups = $ondemandGroups | append $currentGroup }}
+    {{ $ondemandEvents := sort $onDemandRecordings "date" "desc" }}
+    {{ if $ondemandEvents }}
+        {{ $ondemandGroups = $ondemandGroups | append (dict "month" "" "monthKey" "" "icon" "video" "tab" "on-demand" "noHeader" true "events" $ondemandEvents) }}
     {{ end }}
 
     {{/* Render all month groups */}}
@@ -167,9 +159,9 @@
                 <div class="event-list-separator border-t border-gray-300 mt-12 mb-8" data-filters="all"></div>
             {{ else }}
             <div class="month-label {{ $group.monthKey }} mb-6" data-filters="{{ $group.tab }}">
-                <h3 class="event-list-month-header py-4 m-0">
-                    {{ partial "icon.html" (dict "name" $group.icon "class" "mr-3") }}{{ $group.month }}
-                </h3>
+                {{ if not $group.noHeader }}
+                <h3 class="event-list-month-header py-4 m-0">{{ $group.month }}</h3>
+                {{ end }}
                 <ul class="list-none p-0 grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {{ range $group.events }}
                         {{ $data := .data }}
@@ -205,12 +197,11 @@
 
                         {{ $filters = $filters | append $group.tab }}
 
-                        {{ $upcoming := "false" }}
-                        {{ if eq $group.tab "upcoming" }}
-                            {{ $upcoming = "true" }}
-                        {{ end }}
-
-                        {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "upcoming" $upcoming "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
+                        {{/* The card derives its CTA from the event's youtube_url, so it
+                             needs no "upcoming" flag: this list only renders events that
+                             are upcoming or have a recording (see above), making
+                             "not on-demand" equivalent to "upcoming". */}}
+                        {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
                         {{ partial "events/event-card.html" $tileOptions }}
                     {{ end }}
                 </ul>

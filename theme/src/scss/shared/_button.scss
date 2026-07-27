@@ -62,9 +62,9 @@
 
 // Sizes — override the base h-9 / px-2.5
 .btn-xs      { @apply h-6 py-0.75 px-2 text-xs gap-1; }
-.btn-sm      { @apply h-8 py-2 px-3 text-xs gap-1; }
-.btn-lg      { @apply h-10 py-2.25 px-6 gap-1.5; }
-.btn-xl      { @apply h-12 py-2.5 px-7 text-base; }
+.btn-sm      { @apply h-8 py-2 px-2.5 text-xs gap-1; }
+.btn-lg      { @apply h-10 py-2.25 px-4 gap-1.5; }
+.btn-xl      { @apply h-12 py-2.5 px-5 text-base; }
 .btn-icon    { @apply size-9 p-0; }
 .btn-icon-xs { @apply size-6 p-0; }
 .btn-icon-sm { @apply size-8 p-0; }
