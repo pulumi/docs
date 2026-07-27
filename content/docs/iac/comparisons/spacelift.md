@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. Spacelift"
+faq_schema: true
 authors: ["cam-soper"]
 meta_desc: "Pulumi vs. Spacelift: Pulumi is an infrastructure as code platform; Spacelift is a CI/CD orchestration platform that runs IaC tools, including Pulumi."
 title: Spacelift

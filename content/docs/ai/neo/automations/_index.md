@@ -21,7 +21,7 @@ Provider freshness checks, encryption audits, backup audits, and activity digest
 
 ## Defaults that fit recurring work
 
-Scheduled tasks default to two settings. Approval mode is [**auto**](/docs/ai/neo/tasks/#task-modes), so the task proceeds without waiting for human confirmation at each step. Permission mode is [**read-only**](/docs/ai/neo/tasks/#task-modes), so the task can read state and propose changes through pull requests, but it can't write directly to your infrastructure. Settings apply in this order:
+Scheduled tasks default to two settings. Approval mode is [**auto**](/docs/ai/neo/tasks/#task-modes), so the task proceeds without waiting for human confirmation at each step. Permission mode is [**read-only**](/docs/ai/neo/permissions/#permission-mode-and-approval-mode), so the task can read state and propose changes through pull requests, but it can't write directly to your infrastructure. Settings apply in this order:
 
 1. The per-automation setting, if set
 1. The org-level default

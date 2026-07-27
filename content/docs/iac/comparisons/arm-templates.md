@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. ARM Templates"
+faq_schema: true
 authors: ["joe-duffy"]
 meta_desc: "Pulumi vs. ARM Templates: Pulumi is a multi-cloud IaC platform in general-purpose languages; ARM Templates and Bicep are Azure-only declarative templates."
 title: ARM Templates

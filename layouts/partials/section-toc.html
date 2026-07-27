@@ -1,16 +1,23 @@
 {{- /*
-    Case-study "On this page" nav, styled to match the blog post TOC
+    Shared "On this page" section nav, styled to match the blog post TOC
     (layouts/partials/blog/toc.html): a borderless overline heading over
-    semibold links that go violet on hover. Built from the page's `sections`
+    semibold links that go violet on hover. Built from a page's `sections`
     front matter (label + anchor), not auto-generated headings.
+
+    Used by case studies and whitepapers. The sticky-sidebar variant carries
+    `data-section-toc` for the scrollspy in theme/src/ts/blog-post.ts (which
+    highlights the current section); the collapsible mobile variant does not.
 
     Params:
       sections    (required) array of { label, anchor }
       collapsible true → <details> disclosure (mobile, above the content);
                   default false → the sticky-sidebar nav.
+      track       (optional) data-track value for link analytics.
+                  Default "section-toc".
 */ -}}
 {{- $sections := .sections -}}
 {{- $collapsible := .collapsible -}}
+{{- $track := .track | default "section-toc" -}}
 {{- with $sections -}}
     {{- if $collapsible -}}
         <details class="group border-y py-3">
@@ -20,16 +27,16 @@
             </summary>
             <ul class="m-0 mt-4 flex list-none flex-col gap-3 p-0">
                 {{ range . }}
-                <li class="m-0 leading-snug"><a href="#{{ .anchor }}" data-track="case-study-toc" class="block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .label }}</a></li>
+                <li class="m-0 leading-snug"><a href="#{{ .anchor }}" data-track="{{ $track }}" class="block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .label }}</a></li>
                 {{ end }}
             </ul>
         </details>
     {{- else -}}
-        <nav data-case-study-toc aria-label="Table of contents">
+        <nav data-section-toc aria-label="Table of contents">
             <p class="font-overline-sm mb-4 text-service-black">On this page</p>
             <ul class="m-0 flex list-none flex-col gap-2 p-0">
                 {{ range . }}
-                <li class="m-0 leading-snug"><a href="#{{ .anchor }}" data-track="case-study-toc" class="body-sm block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .label }}</a></li>
+                <li class="m-0 leading-snug"><a href="#{{ .anchor }}" data-track="{{ $track }}" class="body-sm block font-semibold text-service-black transition-colors hover:text-violet-primary">{{ .label }}</a></li>
                 {{ end }}
             </ul>
         </nav>

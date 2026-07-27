@@ -1,6 +1,6 @@
 ---
 title: "Pulumi Neo - Your AI Infrastructure Agent"
-layout: product-page
+layout: template-page
 type: page
 aliases:
   - /neo
@@ -72,7 +72,6 @@ sections:
     anchor: capabilities
 
   - type: three_column
-    icon_style: black
     icon_layout: above
     columns:
       - icon: chat-circle-dots

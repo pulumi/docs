@@ -57,8 +57,8 @@
 }
 
 
-// Offset anchored sections within event pages to account for the fixed nav.
-.event-page-content section[id] {
+// Offset anchored sections within template pages to account for the fixed nav.
+.template-page-content section[id] {
     @apply scroll-mt-22;
 
     @include screen-lg {
@@ -187,8 +187,8 @@
         @apply heading-4;
         @apply flex flex-row items-center;
 
-        i {
-            @apply flex-shrink-0;
+        .ph-icon {
+            @apply flex-shrink-0 text-violet-primary;
         }
     }
 
@@ -264,13 +264,9 @@
     .three-column-item-title {
         @apply text-black font-semibold heading-3;
 
-        i {
-            @apply flex-shrink-0;
+        .ph-icon {
+            @apply flex-shrink-0 text-violet-primary;
         }
-    }
-
-    &.icons-black .three-column-item-title i {
-        @apply text-black;
     }
 
     .three-column-item-description {
@@ -374,31 +370,6 @@
 
     iframe {
         @apply rounded-2xl;
-    }
-}
-
-.template-sidebar-nav {
-    @extend .card;
-    @apply p-5 pb-3;
-
-    .sidebar-nav-heading {
-        @apply font-semibold text-sm text-black mb-2;
-    }
-
-    ul {
-        @apply flex flex-col gap-0 list-none p-0 m-0;
-    }
-
-    .sidebar-nav-link {
-        @apply block py-0.5 text-sm text-gray-600 transition-colors;
-
-        &:hover {
-            @apply text-violet-primary;
-        }
-    }
-
-    li:last-child .sidebar-nav-link {
-        @apply pb-0;
     }
 }
 
@@ -572,7 +543,7 @@
 
 // Event list styles. The event card itself is composed from shared primitives
 // (.card / .card-hover / .badge / .btn) plus inline Tailwind in
-// layouts/partials/template-partials/template-event-card.html.
+// layouts/partials/events/event-card.html.
 .template-event-list {
     .event-list-month-header {
         @apply font-overline m-0 text-gray-950;

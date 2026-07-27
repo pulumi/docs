@@ -93,6 +93,6 @@
     </div>
     {{ end }}
     {{ if $cards }}
-    {{ partial "template-partials/template-mini-cards.html" (dict "cards" $cards "cols" $cardsCols) }}
+    {{ partial "mini-cards.html" (dict "cards" $cards "cols" $cardsCols) }}
     {{ end }}
 </section>

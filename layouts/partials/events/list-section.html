@@ -197,8 +197,12 @@
 
                         {{ $filters = $filters | append $group.tab }}
 
+                        {{/* The card derives its CTA from the event's youtube_url, so it
+                             needs no "upcoming" flag: this list only renders events that
+                             are upcoming or have a recording (see above), making
+                             "not on-demand" equivalent to "upcoming". */}}
                         {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
-                        {{ partial "template-partials/template-event-card.html" $tileOptions }}
+                        {{ partial "events/event-card.html" $tileOptions }}
                     {{ end }}
                 </ul>
             </div>

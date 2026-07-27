@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. Terraform Automation and Collaboration Software (TACOS)"
+faq_schema: true
 authors: ["cam-soper"]
 meta_desc: "Pulumi is a full infrastructure as code platform; TACOS tools like Spacelift, HCP Terraform, env0, and Scalr add a management layer to Terraform."
 title: TACOS
