@@ -241,6 +241,34 @@
     "keywords" "infrastructure as code, IaC, cloud, DevOps, automation, platform engineering"
   }}
   {{ $graph = $graph | append $software }}
+{{ else }}
+  {{/* Add a minimal, resolvable Organization node on every non-home page.
+       article-entity.html (and other collectors) emit publisher/author/citation
+       fields as a bare {"@id": "https://www.pulumi.com/#organization"} reference,
+       which only resolves to concrete data (name, logo) if the *same page's*
+       @graph also defines that @id. Google's structured-data parsers evaluate
+       each URL's JSON-LD independently and do not dereference @id links across
+       pages, so without this, publisher.name (required by schema.org/Article)
+       and publisher.logo (recommended for rich results) are undefined on every
+       blog post and docs page. Kept intentionally minimal (name/url/logo only,
+       vs. the full corporate entity above) to avoid duplicating detailed
+       metadata like founders/address/sameAs across thousands of pages; values
+       are copied verbatim from the homepage's Organization node above so the
+       entity stays consistent site-wide. */}}
+  {{ $orgMinimal := dict
+    "@type" (slice "Organization" "Corporation")
+    "@id" "https://www.pulumi.com/#organization"
+    "name" "Pulumi Corporation"
+    "alternateName" "Pulumi"
+    "url" "https://www.pulumi.com"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" "https://www.pulumi.com/logos/brand/logo.png"
+      "width" 600
+      "height" 60
+    )
+  }}
+  {{ $graph = $graph | append $orgMinimal }}
 {{ end }}
 
 {{/* Add comparison table to graph (collected earlier to wire hasPart into WebPage) */}}
