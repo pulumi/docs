@@ -1,30 +1,30 @@
 {{/*
     Timing Info Template Partial
 
-    Displays event date, time, and duration in the template design system.
+    Displays event date, time, and duration as a clean, borderless row.
 
     Parameters:
     - datetime: Event datetime string
     - duration: Duration string (e.g., "60 minutes")
 */}}
 
-<div class="template-timing-info grid grid-cols-1 sm:grid-cols-3 gap-3">
-    <div class="timing-info-item">
-        <div class="timing-info-label">
-            {{ partial "icon.html" (dict "name" "calendar" "class" "mr-2") }}Date
-        </div>
-        <div class="timing-info-value">{{ .datetime | time.Format ":date_medium" }}</div>
+{{ $dur := .duration }}
+{{ $dur = replace $dur "minutes" "min" }}
+{{ $dur = replace $dur "minute" "min" }}
+{{ $dur = replace $dur "hours" "hrs" }}
+{{ $dur = replace $dur "hour" "hr" }}
+
+<div class="flex flex-wrap gap-x-10 gap-y-5">
+    <div>
+        <div class="font-overline-sm text-gray-600 mb-1">Date</div>
+        <div class="body-base font-semibold text-gray-950">{{ .datetime | time.Format ":date_medium" }}</div>
     </div>
-    <div class="timing-info-item">
-        <div class="timing-info-label">
-            {{ partial "icon.html" (dict "name" "clock" "class" "mr-2") }}Time
-        </div>
-        <div class="timing-info-value"><pulumi-datetime date="{{ .datetime }}" timeonly></pulumi-datetime></div>
+    <div>
+        <div class="font-overline-sm text-gray-600 mb-1">Time</div>
+        <div class="body-base font-semibold text-gray-950"><pulumi-datetime date="{{ .datetime }}" timeonly></pulumi-datetime></div>
     </div>
-    <div class="timing-info-item">
-        <div class="timing-info-label">
-            {{ partial "icon.html" (dict "name" "hourglass" "class" "mr-2") }}Duration
-        </div>
-        <div class="timing-info-value">{{ .duration }}</div>
+    <div>
+        <div class="font-overline-sm text-gray-600 mb-1">Duration</div>
+        <div class="body-base font-semibold text-gray-950">{{ $dur }}</div>
     </div>
 </div>

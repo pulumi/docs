@@ -1,18 +1,49 @@
 {{- /*
-    Hairline list row: title (h4) left; category badge + avatar stack + date
-    right. `data-post-row` marks it for the client-side infinite-scroll /
-    category-filter JS to extract and append. Whole row is a stretched link.
+    Homepage feed row, rendered in two interchangeable forms inside one
+    `[data-post-row]` element; the homepage view toggle swaps which one shows by
+    putting `.is-cards` on the `[data-post-list]` container (see _blog.scss and
+    theme/src/ts/blog-list.ts). Carrying both forms in the markup means the
+    infinite-scroll / category-filter JS — which clones `[data-post-row]` nodes —
+    gets the toggle for free.
+
+      compact (default): title (h4) left; category badge + avatar stack + date
+                         right. Whole row is a stretched link.
+      cards:             category, title (h3), excerpt, byline stacked left, with
+                         an optional square feature image on the right — arranged
+                         like the other blog cards.
 
     Params: page (required) the post page.
 */ -}}
 {{- $page := .page -}}
-<article data-post-row data-category="{{ $page.Params.category }}" class="group relative flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 border-b border-gray-200 py-6 last:border-0">
-    <h4 class="m-0! min-w-0 flex-1 md:truncate"><a href="{{ $page.RelPermalink }}" data-track="blog-row-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h4>
-    <div class="flex shrink-0 items-center gap-2">
-        <span class="hidden md:inline-flex">{{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}</span>
-        <span class="w-32 mx-auto hidden md:inline-flex justify-center">
-        {{ partial "blog/avatars.html" (dict "authors" $page.Params.authors "label" false) }}
-        </span>
-        <time class="body-sm whitespace-nowrap text-service-black md:w-28 md:text-right" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
+{{- $excerpt := $page.Params.meta_desc -}}
+{{- if not $excerpt }}{{ $excerpt = $page.Summary | plainify | truncate 160 }}{{ end -}}
+<article data-post-row data-category="{{ $page.Params.category }}" class="group relative border-b border-gray-200 last:border-0">
+
+    {{/* Compact list view (default). */}}
+    <div data-row-compact class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 py-6">
+        <h4 class="m-0! min-w-0 flex-1 md:truncate"><a href="{{ $page.RelPermalink }}" data-track="blog-row-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h4>
+        <div class="flex shrink-0 items-center gap-2">
+            <span class="hidden md:inline-flex">{{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}</span>
+            <span class="w-32 mx-auto hidden md:inline-flex justify-center">
+            {{ partial "blog/avatars.html" (dict "authors" $page.Params.authors "label" false) }}
+            </span>
+            <time class="body-sm whitespace-nowrap text-service-black md:w-28 md:text-right" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
+        </div>
     </div>
+
+    {{/* Card view (toggled on). */}}
+    <div data-row-card class="hidden items-center gap-4 py-6 md:gap-8">
+        <div class="flex min-w-0 flex-1 flex-col items-start gap-2">
+            {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}
+            <h3 class="heading-4 mt-1 mb-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-card-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
+            {{- with $excerpt }}<p class="m-0! body-sm text-service-black line-clamp-2">{{ . }}</p>{{ end -}}
+            <div class="mt-1">{{ partial "blog/post-meta.html" (dict "page" $page) }}</div>
+        </div>
+        {{ if partial "blog/has-feature-image.html" $page }}
+        <div class="flex size-20 sm:size-28 lg:size-36 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
+            {{ partial "blog/feature-image.html" (dict "page" $page "w" 288 "h" 288 "mode" "fit" "class" "h-full w-auto max-w-none") }}
+        </div>
+        {{ end }}
+    </div>
+
 </article>

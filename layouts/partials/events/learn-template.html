@@ -8,12 +8,12 @@
 */}}
 
 {{ if .learn }}
-    <div class="event-summary-learn">
+    <div class="event-summary-learn rounded-lg bg-violet-50 p-6">
         <h4 class="event-summary-learn-title">What you'll learn</h4>
         <ul class="event-summary-learn-list">
             {{ range $item := .learn }}
                 <li>
-                    {{ partial "icon.html" (dict "name" "check-circle" "class" "mr-2") }}
+                    {{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "mr-2") }}
                     <span>{{ $item }}</span>
                 </li>
             {{ end }}

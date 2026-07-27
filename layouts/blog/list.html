@@ -21,8 +21,9 @@
                     {{ range . }}{{ partial "blog/card/small.html" (dict "page" .) }}{{ end }}
                 </div>
             {{ end }}
-            <div class="mb-6">
+            <div class="mb-6 flex items-start justify-between gap-4">
                 {{ partial "blog/filter-bar.html" . }}
+                {{ partial "blog/view-toggle.html" . }}
             </div>
         {{ end }}
 
