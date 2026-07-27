@@ -217,11 +217,6 @@ VCS-backed templates require that your Pulumi account has an integration configu
 This can be set up by navigating to your organization's "Settings → Integrations" tab, under the "Organization Template Sources" section.
 If you have not already authorized you will see an "Authorize GitHub" or "Authorize GitLab" button. Click the button and accept the required permissions.
 
-#### Template destinations
-
-VCS-backed template destinations only support GitHub as they leverage Deployments for Pulumi operations.
-If you plan on using no-code or CLI deployment methods these prerequisites are not necessary.
-
 ##### GitHub OAuth
 
 This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
