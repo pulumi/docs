@@ -33,7 +33,7 @@ prereqs:
     - The [Pulumi CLI](/docs/install/)
     - A [Pulumi Cloud Team, Enterprise, or Business Critical account](https://app.pulumi.com/signup)
     - An [ESC environment and AWS credentials created and configured](/docs/insights/discovery/accounts/#configure-esc-credentials)
-    - A [Pulumi Insights account](/docs/insights/discovery/accounts/)
+    - A [cloud account connected to Pulumi](/docs/insights/discovery/accounts/)
     - An [Amazon Web Services](https://aws.amazon.com/) account
     - The [AWS CLI](https://aws.amazon.com/cli/) configured for use with your AWS account
     - The [Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
@@ -121,15 +121,15 @@ Then run the `terraform apply` command to have the following resources deployed 
 
 ## Scan Terraform resources
 
-Now that you have deployed your resources, you will run a Pulumi Insights scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Console](https://app.pulumi.com/signin) and click on your Pulumi Insights account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
+Now that you have deployed your resources, you will run a Discovery scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Console](https://app.pulumi.com/signin) and click on your cloud account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
 
-{{< video title="Navigating to Pulumi Insights accounts page" src="/tutorials/eval-compliance-terraform/assets/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
+{{< video title="Navigating to the cloud accounts page" src="/tutorials/eval-compliance-terraform/assets/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
 
 Once there, click on the **Actions** dropdown and select the `Scan` radio button, then click **Scan**. You will see a status message that says "Scan started a few seconds ago" once the scan has started.
 
 {{< video title="Initializing account scan" src="/tutorials/eval-compliance-terraform/assets/insights-start-account-scan.mp4" autoplay="true" loop="true" >}}
 
-To check on the status of the scan, you will need to navigate to the individual sub-accounts of your Pulumi insights account and click the **Scans** tab.
+To check on the status of the scan, you will need to navigate to the individual sub-accounts of your cloud account and click the **Scans** tab.
 
 {{< video title="View sub-account scans" src="/tutorials/eval-compliance-terraform/assets/insights-view-sub-acct-scan.mp4" autoplay="true" loop="true" >}}
 
@@ -141,7 +141,7 @@ Now you can view a list of your account resources by navigating to the **Resourc
 
 !["List of account resources in Insights"](/tutorials/eval-compliance-terraform/assets/insights-resources-list.png)
 
-> If you have multiple Insights accounts, you can filter by your account name using the **Project** column filter. You can learn more about querying and filtering your resources by reviewing the [Pulumi Insights: Using Resources Explorer](/docs/insights/get-started/using-resource-explorer/) documentation.
+> If you have multiple cloud accounts, you can filter by your account name using the **Project** column filter. You can learn more about querying and filtering your resources by reviewing the [Using Resource Explorer](/docs/insights/discovery/get-started/using-resource-explorer/) documentation.
 
 ## Configure compliance policies
 
@@ -198,9 +198,9 @@ This template sets up an example resource policy that prevents Security Groups f
 pulumi policy publish
 ```
 
-### Add policy pack to an Insights Account
+### Add policy pack to a cloud account
 
-With your policy pack published, you’ll need to create a Policy Group that associates your Insights account with a policy pack. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
+With your policy pack published, you’ll need to create a Policy Group that associates your cloud account with a policy pack. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
 
 ![Insights Policies - New Policy Pack](/docs/insights/assets/create-policy-group.png)
 
@@ -212,7 +212,7 @@ Select your newly published policy pack from the dropdown and choose the version
 
 !["Configuring the policy pack"](/tutorials/eval-compliance-terraform/assets/insights-configure-policy-pack.png)
 
-The last thing you need to do in this section is add your insights account to the policy group. On your Policy Group configuration page, click **Add accounts**, and type the name of the account you want to include for Insights policies (e.g. pulumi-tutorials-insights/us-west-2). Then click **Add account to policy group**.
+The last thing you need to do in this section is add your cloud account to the policy group. On your Policy Group configuration page, click **Add accounts**, and type the name of the account you want to include for policy evaluation (e.g. pulumi-tutorials-insights/us-west-2). Then click **Add account to policy group**.
 
 !["Adding an account to the policy group"](/tutorials/eval-compliance-terraform/assets/insights-add-policy-group-acct.png)
 

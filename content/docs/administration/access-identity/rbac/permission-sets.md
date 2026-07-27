@@ -16,7 +16,7 @@ aliases:
 
 Permission sets in Pulumi Cloud are predefined bundles of [scopes](/docs/administration/access-identity/rbac/scopes) that are commonly used together. They provide a convenient way to grant related access rights to an [entity](/docs/administration/access-identity/rbac/entities) (resource) or set of entities (resources).
 
-Every permission set belongs to a specific [entity type](/docs/administration/access-identity/rbac/entities#entity-types) (stacks, environments, or insights accounts) and can only include scopes of that same type.
+Every permission set belongs to a specific [entity type](/docs/administration/access-identity/rbac/entities#entity-types) (stacks, environments, or cloud accounts) and can only include scopes of that same type.
 
 {{% notes "info" %}}
 Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
@@ -43,13 +43,13 @@ Pulumi Cloud provides several default permission sets that you can use to quickl
 | `Environment Write` | Ability to modify environment settings. | Environment Open, + `environment:write`, `environment:rotate`, `environment_version:create`, `environment_version:update`, `environment_version:delete`, `environment_version:retract`, `environment_tag:create`, `environment_tag:update`, `environment_tag:delete`, `environment_schedule:create`, `environment_schedule:update`, `environment_schedule:pause`, `environment_schedule:resume`, `environment_schedule:delete`, `environment_webhook:read`, `environment_webhook:create`, `environment_webhook:update`, `environment_webhook:delete` |
 | `Environment Admin` | Full control over environment operations. | Environment Write, + `environment:delete` |
 
-### Insights account permission sets
+### Cloud account permission sets
 
 | Permission set | Description | Included Scopes |
 |------------|-------------|----------------|
-| `Account Read` | Basic read-only access to insights accounts. | `insights_account:read`, `insights_account_scan:read`, `insights_account_access:read` |
-| `Account Write` | Ability to modify insights accounts. | Account Read, + `insights_account:update`, `insights_account:scan`, `insights_account_scan:update`, `insights_account_scan:cancel`, `insights_account_scan:pause`, `insights_account_scan:resume` |
-| `Account Admin` | Full control over insights accounts. | Account Write, + `insights_account:delete`, `insights_account_access:update` |
+| `Account Read` | Basic read-only access to cloud accounts. | `insights_account:read`, `insights_account_scan:read`, `insights_account_access:read` |
+| `Account Write` | Ability to modify cloud accounts. | Account Read, + `insights_account:update`, `insights_account:scan`, `insights_account_scan:update`, `insights_account_scan:cancel`, `insights_account_scan:pause`, `insights_account_scan:resume` |
+| `Account Admin` | Full control over cloud accounts. | Account Write, + `insights_account:delete`, `insights_account_access:update` |
 
 ### Organization settings permission sets
 
@@ -57,8 +57,8 @@ These permission sets bundle organization-level (global) scopes. Rather than gra
 
 | Permission set | Description | Included Scopes |
 |------------|-------------|----------------|
-| `Read Only` | View-only organization access: usage, members, stacks, environments, teams, and Insights accounts; read deployments, integrations, services, templates, and resources. No create, update, or delete. | `ai_conversations:read`, `deployments:read`, `deployments:read_usage`, `environment:list_deleted`, `environment_tags:list`, `policy_groups:read`, `policy_pack:read`, `policy_results:read`, `integrations:read`, `org_member:read`, `organization_annotations:read`, `organization:read_usage`, `project_annotations:read`, `resources:dashboard`, `resources:search`, `saml:read`, `tags:read`, `team:read`, `templates:read`, `services:read` |
-| `Standard` | Member-level organization access: everything `Read Only` allows, plus creating environments and using deployments, integrations, services, and resources. Excludes billing and member or organization admin settings. (Creating stacks, teams, and Insights accounts is governed separately by the org-wide capability toggles, not this permission set.) | Read Only, + `ai_conversations:create`, `ai_conversations:update`, `environment:create`, `integrations:update`, `project_annotations:update`, `project:decrypt`, `project:encrypt`, `services:create`, `services:write`, `services:admin`, `insights_policy_evaluator:read`, `insights_policy_evaluator:delete`, `insights_policy_evaluator:ensure`, `insights_policy_evaluator:update`, `insights_policy_queue:read` |
+| `Read Only` | View-only organization access: usage, members, stacks, environments, teams, and cloud accounts; read deployments, integrations, services, templates, and resources. No create, update, or delete. | `ai_conversations:read`, `deployments:read`, `deployments:read_usage`, `environment:list_deleted`, `environment_tags:list`, `policy_groups:read`, `policy_pack:read`, `policy_results:read`, `integrations:read`, `org_member:read`, `organization_annotations:read`, `organization:read_usage`, `project_annotations:read`, `resources:dashboard`, `resources:search`, `saml:read`, `tags:read`, `team:read`, `templates:read`, `services:read` |
+| `Standard` | Member-level organization access: everything `Read Only` allows, plus creating environments and using deployments, integrations, services, and resources. Excludes billing and member or organization admin settings. (Creating stacks, teams, and cloud accounts is governed separately by the org-wide capability toggles, not this permission set.) | Read Only, + `ai_conversations:create`, `ai_conversations:update`, `environment:create`, `integrations:update`, `project_annotations:update`, `project:decrypt`, `project:encrypt`, `services:create`, `services:write`, `services:admin`, `insights_policy_evaluator:read`, `insights_policy_evaluator:delete`, `insights_policy_evaluator:ensure`, `insights_policy_evaluator:update`, `insights_policy_queue:read` |
 | `Organization Settings Billing` | Billing access. | `deployments:read_usage`, `org_member:read`, `organization:billing`, `organization:read_usage`, `resources:dashboard`, `saml:read`, `team:read` |
 
 ## Custom permission sets
@@ -82,6 +82,6 @@ A custom permission set cannot be deleted while it is in use by one or more role
 ## Related resources
 
 * [Scopes](/docs/administration/access-identity/rbac/scopes): The most granular access rights in Pulumi Cloud, written as `object:action`. Each scope belongs to one entity type and is the building block of permission sets.
-* [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and Insights accounts), plus the organization-level access that governs org-wide operations.
+* [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and cloud accounts), plus the organization-level access that governs org-wide operations.
 * [Roles](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to entities and combined with an organization access level. You assign a role to users, teams, and machine tokens.
 * [Teams](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles and entity access. Each member inherits the union of the team's roles on top of their own role.
