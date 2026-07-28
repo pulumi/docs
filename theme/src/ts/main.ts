@@ -35,6 +35,7 @@ import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
 import "./mktg-ctas-experiment";
+import "./intercom-identity";
 
 // Register all Stencil components.
 defineCustomElements();
