@@ -137,6 +137,7 @@ If you want to see how the programming-language approach feels in practice, [try
 
 ## Learn more
 
+- [Best Infrastructure as Code (IaC) Tools for 2026](/blog/infrastructure-as-code-tools/) - a fuller comparison with license details, key features, and a side-by-side tool table
 - [What is Infrastructure as Code?](/what-is/what-is-infrastructure-as-code)
 - [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops)
 - [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes)
