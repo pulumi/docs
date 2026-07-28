@@ -23,7 +23,7 @@ social:
     bluesky:
 ---
 
-With [Discovered Stacks](/docs/insights/discovery/discovered-stacks/), Pulumi Cloud does the bookkeeping for a CloudFormation migration: every resource in the stack gets an explicit migration status, and the migration is done when the code provably matches the cloud. In this tutorial, we take one real CloudFormation stack from discovered to migrated, end to end.
+With [Discovered Stacks](/docs/insights/discovery/discovered-stacks/), Pulumi Cloud does the bookkeeping for a CloudFormation migration: every resource in the stack gets an explicit migration status, and the migration is done when the code provably matches the cloud. Once those resources are under Pulumi, you can manage them in your preferred programming language, govern them with [Policy as Code](/docs/insights/policy/), and update them with the [Neo](/docs/ai/) agent. In this tutorial, we take one real CloudFormation stack from discovered to migrated, end to end.
 
 <!--more-->
 

@@ -2,7 +2,7 @@
 title: Discovered Stacks
 title_tag: "Discovered Stacks | Pulumi Insights"
 h1: Discovered Stacks
-meta_desc: Discovered Stacks model your CloudFormation stacks and ARM deployments as Pulumi stacks, with a seamless path to Pulumi IaC.
+meta_desc: Discovered Stacks model your AWS CloudFormation, AWS CDK, and Azure ARM resources as Pulumi stacks, with a seamless path to Pulumi IaC.
 meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
@@ -13,18 +13,18 @@ menu:
 aliases: []
 ---
 
-Discovered Stacks bring the infrastructure you manage outside of Pulumi into the same stack model that Pulumi IaC uses. When [Pulumi Insights Discovery](/docs/insights/discovery/) scans your cloud accounts, it recognizes AWS CloudFormation stacks and Azure Resource Manager (ARM) deployments and represents each one as a discovered stack in Pulumi Cloud, preserving the grouping the source tool already gave them.
+Discovered Stacks bring the infrastructure you manage outside of Pulumi IaC into the same stack model it uses. When [Pulumi Insights Discovery](/docs/insights/discovery/) scans your cloud accounts, it recognizes AWS CloudFormation stacks and Azure Resource Manager (ARM) deployments and represents each one as a discovered stack in Pulumi Cloud, preserving the grouping the source tool already gave them.
 
-A discovered stack looks and navigates like any other Pulumi stack: it appears on the Stacks page, lists its resources, and shows per-resource detail. Every resource also carries a [migration status](#migration-statuses), so a discovered stack doubles as a live, auditable record of how far along you are in [migrating it to Pulumi](/docs/insights/discovery/discovered-stacks/migrate/).
+A discovered stack looks and navigates like any other Pulumi stack: it appears on the Stacks page, lists its resources, and shows per-resource detail. Every resource also carries a [migration status](#migration-statuses), so a discovered stack doubles as a live, auditable record of how far along you are in [migrating it to Pulumi IaC](/docs/insights/discovery/discovered-stacks/migrate/).
 
 ## Sources
 
-Discovered stacks are created automatically. Whenever a scanned account contains resources managed by a supported external IaC provider, Discovery groups those resources into discovered stacks with no additional setup:
+Discovered stacks are created automatically. Whenever a scanned account contains resources managed by a supported external IaC provider, Discovery groups those resources into discovered stacks with no additional setup. To build them, Discovery reads the source provider's own API — the AWS CloudFormation API, or the Azure Resource Manager API — to list the stacks or deployments and their resources, then maps each resource to its matching Pulumi IaC provider type:
 
 - **AWS CloudFormation**: each CloudFormation stack becomes a discovered stack. For CDK applications, the synthesized CloudFormation stacks are discovered.
 - **Azure Resource Manager**: each ARM or Bicep deployment becomes a discovered stack, preserving deployment-level grouping.
 
-Pulumi-hosted Terraform stacks are not represented as discovered stacks — their state is already authoritative in Pulumi Cloud — but they share the same migration experience through the **Migration** tab. See [Migrate from a Discovered Stack](/docs/insights/discovery/discovered-stacks/migrate/#terraform-stacks).
+[Pulumi-hosted Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/) are not represented as discovered stacks — their state is already authoritative in Pulumi Cloud — but they share the same migration experience through the **Migration** tab. See [Migrate from a Discovered Stack](/docs/insights/discovery/discovered-stacks/migrate/#terraform-stacks).
 
 To set up scanning, see [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
 
@@ -58,8 +58,8 @@ On a discovered stack's **Migration** tab, you select a target Pulumi stack to c
 | **Not found** | The resource maps to a Pulumi type, but Discovery could not confirm its current state. It may have been deleted, or it may be a type Discovery doesn't verify or doesn't have access to — many **Not found** resources are actually live and import cleanly. | Verify the resource still exists, then import it or mark it resolved. |
 | **No exact match** | No Pulumi type mapping was found. Common examples are CloudFormation custom resources and inline IAM policies that Pulumi models as part of their parent resource. | Review it. |
 | **Not applicable** | The resource is a container or wrapper construct, such as `AWS::CloudFormation::Stack` or `Microsoft.Resources/deployments`, with no cloud resource of its own to migrate. | None. |
-| **Migrated** | The resource was found in the target Pulumi stack. It is under Pulumi management. | None. |
-| **Existing** | The resource is in the target Pulumi stack but has no discovered counterpart — a resource added to Pulumi separately, or the imported form of a **Not found** or **No exact match** resource. | None. |
+| **Migrated** | The resource was found in the target Pulumi stack. It is under Pulumi IaC management. | None. |
+| **Existing** | The resource is in the target Pulumi stack but has no discovered counterpart — a resource added to Pulumi IaC separately, or the imported form of a **Not found** or **No exact match** resource. | None. |
 
 ## Resolving resources
 

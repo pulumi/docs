@@ -1,5 +1,5 @@
 ---
-title: "Discovered Stacks: One Model for All Your Infrastructure"
+title: "Discovered Stacks: One Place for All Your Infrastructure"
 # TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
 date: 2099-01-01
 draft: false
@@ -35,7 +35,7 @@ That fragmentation is also why migrations stall. Moving a stack to Pulumi has ne
 
 ## Nothing gets lost
 
-Discovered Stacks starts from the failure mode that matters most: a resource silently falling through the cracks. When [Pulumi Insights](/docs/insights/) scans your accounts, every CloudFormation stack and ARM deployment becomes a discovered stack, and every resource in it appears as a row with an explicit migration status: ready to migrate, requiring review before migration, or already migrated. Every status is computed from live state on both ends — what Pulumi manages and what the source tool reports — so it's never a stale annotation someone forgot to update.
+Discovered Stacks gives you confidence that your migration plan or governance efforts will include all resources. This catches a common failure mode where resources are missed by your existing migration scripts or automations. When [Pulumi Insights](/docs/insights/) scans your accounts, every CloudFormation stack and ARM deployment becomes a discovered stack, and every resource in it appears as a row with an explicit migration status: ready to migrate, requiring review before migration, or already migrated. Every status is computed from live state on both ends — what Pulumi manages and what the source tool reports — so it's never a stale annotation someone forgot to update.
 
 Each resource shows its **origin type** (`AWS::S3::Bucket`) next to its **Pulumi type** (`aws:s3/bucket:Bucket`), with the origin properties side by side with Pulumi's view — so you can verify that Pulumi sees exactly what your source tool sees before you change anything. Decisions you make along the way — *this resource was deleted, that policy is covered by its parent role* — are recorded by marking the resource resolved: it stays visible to your whole team, deliberately handled rather than quietly forgotten. The spreadsheet is retired.
 
@@ -47,7 +47,7 @@ When you're ready to migrate, the console is where you plan and build confidence
 
 Two things hold regardless of the path. Progress is *derived, never declared*: a resource shows as migrated when it actually exists in the target Pulumi stack, not when someone checks a box. And the quality gate is a **zero-diff `pulumi preview`** — the migration is done when the code demonstrably matches your cloud.
 
-Hosted Terraform stacks get the same treatment through a new **Migration** tab, with statuses derived from the Terraform state file.
+Terraform stacks whose state you [store in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) get the same treatment through a new **Migration** tab, with statuses derived from the Terraform state.
 
 ## Try it
 

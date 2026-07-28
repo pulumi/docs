@@ -18,7 +18,7 @@ A migration is done when three things are true:
 
 1. Every discovered resource is either imported or deliberately resolved.
 1. `pulumi preview` on the target stack reports no changes, proving the code matches the cloud state.
-1. The program lands in your repository as the new source of record — from here on, changes to those resources happen through Pulumi.
+1. The program lands in your repository as the new source of record — from here on, changes to those resources happen through Pulumi IaC.
 
 ## Before you begin
 
@@ -33,7 +33,7 @@ From a discovered stack, the **Actions** menu offers two ways to bring the resou
 - **Migrate with Neo** (recommended): [Pulumi Neo](/docs/ai/) runs the whole workflow — it fetches the discovered resources, imports them, reconciles the preview, and opens a pull request with a migration report.
 - **Generate Import Commands**: produce the corresponding [`pulumi import`](/docs/iac/guides/migration/import/) commands to run in your own terminal.
 
-Both paths work against the same resource data and statuses — and all of it is exposed through a [REST API](#use-the-api). So you can run the whole flow locally — reading resources and their statuses, driving the imports, and recording decisions — and the console reflects the progress. A reusable Pulumi agent skill that packages this workflow will be published.
+Both paths work against the same resource data and statuses, all of it exposed through a REST API: you can [list a stack's resources and their statuses](#list-resources-and-statuses), drive the imports, and [write back your resolutions](#write-back-resolutions) — so the whole flow can run locally or be driven by your own agent, with the console reflecting progress throughout. A reusable Pulumi agent skill that packages this workflow will be published.
 
 ## Set up your local project
 
@@ -51,11 +51,11 @@ Set cloud credentials the way you would for any Pulumi program — a [Pulumi ESC
 Whether Neo performs the migration or you do, a migration follows the same steps:
 
 1. **Triage.** Fetch the discovered resources and review the status breakdown. Resources marked **Ready** are importable now; **Not found** and **No exact match** resources get resolved along the way (see [below](#resolve-not-found-and-no-exact-match-resources)).
-1. **Import.** Bring resources into the target stack with `pulumi import --generate-code`, appending the generated code to your program. `pulumi import` writes state as it goes, so migration statuses in the console update live as resources land in the target stack.
-1. **Reconcile.** Run `pulumi preview` and fix the code until it reports no changes. A clean preview is the quality gate: it proves the program matches the actual cloud state. When attempting to import resources managed from outside of Pulumi IaC, never run `pulumi up` to make a diff go away — doing so will change the state of your resource in the cloud to match the (in this case, incomplete) code. (In this scenario, your resource, as it exists in the cloud, is the source of truth. Freshly imported code often shows a diff on the first preview even when nothing in the cloud changed; see [Tips for a clean migration](#tips-for-a-clean-migration) for the common ones and how to clear them.
+1. **Import.** Bring resources into the target stack with `pulumi import`, which generates resource code you append to your program. `pulumi import` writes state as it goes, so migration statuses in the console update live as resources land in the target stack.
+1. **Reconcile.** Run `pulumi preview` and fix the code until it reports no changes. A clean preview is the quality gate: it proves the program matches the actual cloud state. When attempting to import resources managed from outside of Pulumi IaC, never run `pulumi up` to make a diff go away — doing so will change the state of your resource in the cloud to match the (in this case, incomplete) code. In this scenario, your resource, as it exists in the cloud, is the source of truth. Freshly imported code often shows a diff on the first preview even when nothing in the cloud changed; see [Tips for a clean migration](#tips-for-a-clean-migration) for the common ones and how to clear them.
 
 {{% notes "info" %}}
-No `pulumi up` is required to complete a migration. `pulumi import` already syncs the imported state to your state file Pulumi Cloud. Once all of your resources have been imported with a clean diff, you use `pulumi up` for future changes to the resources which are now managed by Pulumi IaC.
+No `pulumi up` is required to complete a migration. `pulumi import` already syncs the imported state to your state file in Pulumi Cloud. Once all of your resources have been imported with a clean diff, you use `pulumi up` for future changes to the resources which are now managed by Pulumi IaC.
 {{% /notes %}}
 
 ## Resolve Not found and No exact match resources
@@ -133,11 +133,13 @@ You do not have to migrate a discovered stack in one sitting. Select a subset of
 
 ## Terraform stacks
 
-Pulumi-hosted Terraform stacks are not discovered stacks — Pulumi Cloud already holds their state — but they get the same migration experience through a **Migration** tab on the stack. Origin types show the Terraform types, such as `aws_s3_bucket`, and statuses are derived from the state conversion. The workflow from there is identical: triage, import, zero-diff preview, pull request.
+[Pulumi-hosted Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/) are not discovered stacks — Pulumi Cloud already holds their state — but they get the same migration experience through a **Migration** tab on the stack. Origin types show the Terraform types, such as `aws_s3_bucket`, and statuses are derived from the state conversion. The workflow from there is identical: triage, import, zero-diff preview, pull request.
 
 ## Use the API
 
 The migration data is available through the Pulumi Cloud REST API, which is what Neo and other agents use. The API is in preview and may change.
+
+### List resources and statuses
 
 List a discovered stack's resources, including migration statuses. Pass `compareTo` to compute statuses against a target Pulumi stack:
 
@@ -147,11 +149,15 @@ GET /api/preview/insights/{org}/discovered-stacks/{project}/{stack}/resources?co
 
 Each resource's `migrationStatus` field carries the raw status token — `Ready`, `NotFound`, `NoMatch`, `Migrated`, `PulumiOnly`, or `NotApplicable` — corresponding to the **Ready**, **Not found**, **No exact match**, **Migrated**, **Existing**, and **Not applicable** labels shown in the console.
 
+### List Terraform stack resources
+
 For a Pulumi-hosted **Terraform** stack, the equivalent endpoint returns the converted resources and their statuses:
 
 ```bash
 GET /api/preview/insights/{org}/stacks/{project}/{stack}/migration?compareTo={targetProject}/{targetStack}
 ```
+
+### Write back resolutions
 
 Decisions are written back through the same API — [marking a resource resolved](/docs/insights/discovery/discovered-stacks/#resolving-resources), with an optional comment and a link to the target-stack resource — so an agent can drive an entire migration end to end without the console:
 
