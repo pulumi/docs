@@ -12,7 +12,7 @@ menu:
 aliases: []
 ---
 
-Migrating from a [discovered stack](/docs/insights/discovery/discovered-stacks/) means bringing its resources under Pulumi management: a Pulumi program in your repository whose state matches the cloud exactly. The console is where you plan the migration, decide what to include, and track progress — the migration itself completes as code and CLI operations in your own repository.
+Migrating from a [discovered stack](/docs/insights/discovery/discovered-stacks/) means bringing its resources under Pulumi IaC management: a Pulumi program in your repository whose state matches the cloud exactly. The console is where you plan the migration, decide what to include, and track progress — the migration itself completes as code and CLI operations in your own repository.
 
 A migration is done when three things are true:
 
@@ -28,7 +28,7 @@ A migration is done when three things are true:
 
 ## Start a migration
 
-From a discovered stack, the **Actions** menu offers two ways in:
+From a discovered stack, the **Actions** menu offers two ways to bring the resources under Pulumi IaC management:
 
 - **Migrate with Neo** (recommended): [Pulumi Neo](/docs/ai/) runs the whole workflow — it fetches the discovered resources, imports them, reconciles the preview, and opens a pull request with a migration report.
 - **Generate Import Commands**: produce the corresponding [`pulumi import`](/docs/iac/guides/migration/import/) commands to run in your own terminal.
@@ -48,14 +48,14 @@ Set cloud credentials the way you would for any Pulumi program — a [Pulumi ESC
 
 ## How a migration works
 
-Whether Neo runs it or you do, a migration follows the same arc:
+Whether Neo performs the migration or you do, a migration follows the same steps:
 
 1. **Triage.** Fetch the discovered resources and review the status breakdown. Resources marked **Ready** are importable now; **Not found** and **No exact match** resources get resolved along the way (see [below](#resolve-not-found-and-no-exact-match-resources)).
 1. **Import.** Bring resources into the target stack with `pulumi import --generate-code`, appending the generated code to your program. `pulumi import` writes state as it goes, so migration statuses in the console update live as resources land in the target stack.
 1. **Reconcile.** Run `pulumi preview` and fix the code until it reports no changes. A clean preview is the quality gate: it proves the program matches the actual cloud state. When attempting to import resources managed from outside of Pulumi IaC, never run `pulumi up` to make a diff go away — doing so will change the state of your resource in the cloud to match the (in this case, incomplete) code. (In this scenario, your resource, as it exists in the cloud, is the source of truth. Freshly imported code often shows a diff on the first preview even when nothing in the cloud changed; see [Tips for a clean migration](#tips-for-a-clean-migration) for the common ones and how to clear them.
 
 {{% notes "info" %}}
-No `pulumi up` is required to complete a migration. `pulumi import` already syncs the imported state to Pulumi Cloud; from then on, you use `pulumi up` for ordinary changes to the now-managed resources.
+No `pulumi up` is required to complete a migration. `pulumi import` already syncs the imported state to your state file Pulumi Cloud. Once all of your resources have been imported with a clean diff, you use `pulumi up` for future changes to the resources which are now managed by Pulumi IaC.
 {{% /notes %}}
 
 ## Resolve Not found and No exact match resources

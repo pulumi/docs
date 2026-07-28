@@ -48,7 +48,7 @@ The resource list shows both columns, and the resource detail page shows **Origi
 
 ## Migration statuses
 
-Every resource in a discovered stack carries a migration status that shows where it stands on the path to Pulumi. Statuses are computed by Pulumi Cloud.
+Every resource in a discovered stack carries a migration status that shows where it stands on the path to being managed by Pulumi IaC. Statuses are computed automatically by Pulumi Cloud.
 
 On a discovered stack's **Migration** tab, you select a target Pulumi stack to compare against — the stack you're migrating the resources into. The console lines the discovered resources up against that target stack side by side and computes each resource's status from the comparison, so you can see at a glance what is already **Migrated**, what is still **Ready** to import, and what exists on only one side. Until you select a target, the statuses describe the discovered resources on their own (**Ready**, **Not found**, **No exact match**, **Not applicable**); selecting one turns on the comparison statuses (**Migrated** and **Existing**).
 
