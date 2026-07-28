@@ -31,4 +31,6 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 
 **[Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/)** - Configure a self-managed state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.
 
+**[Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/)** - Use `pulumi state move` to transfer resources from one stack to another, then update program code on both sides to match.
+
 **[Refactoring with aliases](/docs/iac/operations/stack-management/refactoring-with-aliases/)** - Use the `aliases` resource option to rename, re-parent, change the type, or move resources across stacks without destroying and recreating them.

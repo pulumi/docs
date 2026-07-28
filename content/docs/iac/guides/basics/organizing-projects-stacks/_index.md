@@ -510,6 +510,8 @@ updates are fast and the blast radius is small. The **downside** is maintenance 
 stack to configure, another set of stack references to wire up, and another pipeline to operate. For most teams that
 cost outweighs the benefit, so stop at layered stacks unless independent per-service lifecycles justify going further.
 
+Moving to a finer-grained structure doesn't mean destroying and recreating your existing resources. See [Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/) for how to transfer resources into their new stacks in place.
+
 ## Stacks beyond environments
 
 `dev` / `staging` / `prod` is the most common way to slice a project into stacks, but it's not the only one. A stack is
