@@ -40,7 +40,7 @@ Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enter
 ## AI
 
 {{% notes "info" %}}
-These scopes control access to the legacy Pulumi Copilot conversation API, used only by the deprecated Pulumi Copilot VS Code extension. For Pulumi's current AI capabilities, see [Pulumi Neo](/docs/ai/) — including [Neo in your editor](/docs/ai/neo/editors/).
+These scopes control access to the legacy Pulumi Copilot conversation API, currently used only by the Pulumi Copilot VS Code extension. For Pulumi's current AI capabilities, see [Pulumi Neo](/docs/ai/).
 {{% /notes %}}
 
 | Value | Description |
