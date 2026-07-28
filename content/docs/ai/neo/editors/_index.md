@@ -24,7 +24,7 @@ Like [Neo in the CLI](/docs/ai/neo/pulumi-cli/), an editor session runs locally 
 
 ## Zed
 
-Zed supports ACP agents natively. Go to **Settings** > **AI** > **External Agents** > **Configure**, then select **Add Agent** > **Add Custom Agent** and fill in:
+Zed supports ACP agents natively. Navigate to **Settings** > **AI** > **External Agents** > **Configure**, then select **Add Agent** > **Add Custom Agent** and fill in:
 
 - **Name**: `Pulumi Neo`
 - **Command**: `pulumi`
