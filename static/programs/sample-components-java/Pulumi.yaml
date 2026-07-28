@@ -1,5 +1,5 @@
 name: sample-components-java
-description: A Pulumi Java program that builds and uses a static page component
+description: A Pulumi Java program that builds and uses a static website component
 runtime:
   name: java
 config:

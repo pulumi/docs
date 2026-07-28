@@ -1,5 +1,5 @@
 name: sample-components-typescript
-description: A Pulumi TypeScript program that builds and uses a static page component
+description: A Pulumi TypeScript program that builds and uses a static website component
 runtime: nodejs
 config:
   pulumi:tags:

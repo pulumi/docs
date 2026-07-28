@@ -1,53 +1,50 @@
 ---
 title_tag: Next Steps | Azure
 title: Next steps
-h1: Next Steps with Pulumi & Azure
-stepper_link: "Congratulations!"
+h1: Next steps
+stepper_link: "Next: Wrap up"
 meta_desc: This page provides a list of tutorials that take a deeper dive into
             Azure cloud resources.
-weight: 9
+weight: 10
 menu:
     iac:
         name: Next steps
         identifier: azure-get-started.next-steps
         parent: azure-get-started
-        weight: 9
+        weight: 10
 aliases:
     - /docs/quickstart/azure/next-steps/
     - /docs/clouds/azure/get-started/next-steps/
+    - /docs/iac/get-started/azure/create-component/
+    - /docs/quickstart/azure/create-component/
+    - /docs/clouds/azure/get-started/create-component/
 ---
 
-Congratulations! You've successfully provisioned some cloud resources using Pulumi. By completing this guide you have successfully:
+Congratulations! You now know how to provision and manage cloud infrastructure with Pulumi. In this guide, you learned how to:
 
-- Created a Pulumi new project.
-- Provisioned a new Azure Storage account.
-- Enabled the static website feature on the storage account.
-- Created a website component for reuse.
-- Destroyed all of the resources you've provisioned.
+- Create and configure a Pulumi project and stack
+- Provision new cloud resources
+- Update existing cloud resources
+- Use the Pulumi CLI to perform common operations
+- Cleanly destroy cloud resources and stacks
 
-Below are some recommended next steps, including examples and tutorials that you can explore or use them as a foundation for your own applications and infrastructure projects. Also be sure to [join the Community Slack](https://slack.pulumi.com/) to meet fellow IaC practitioners.
+Below are a few good next steps to build on this foundation and keep the learning going.
+
+## Create reusable components
+
+[Components](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate complexity and enable sharing and reuse. Rather than copy and paste common patterns, you can encode them as components and share them with your team with just a few lines of code. [Learn more about components](/docs/iac/concepts/resources/components/) or [follow the guide](/docs/iac/guides/building-extending/components/build-a-component/) to build your own.
+
+{{< get-started-next-step path="/docs/iac/guides/building-extending/components/build-a-component/" label="Build a component" ref="gs-azure-components" >}}
 
 ## Try Pulumi ESC (Environments, Secrets, and Configuration)
 
-[Pulumi ESC](/docs/esc/) is a centralized secrets management and orchestration service. It introduces the concepts of _environments_ --- managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
-
-With Pulumi ESC you can:
-
-- **Stop secret sprawl.** Pull and sync configuration and secrets with any secrets store – including HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, 1Password, and more – and consume in any application, tool, or CI/CD platform.
-- **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
-- **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
+[Pulumi ESC](/docs/esc/) is a centralized secrets and configuration service that introduces the concept of _environments_ — managed collections of static and dynamic settings that you can use to configure any project, stack, application, or service, including with short-lived cloud credentials through OpenID Connect.
 
 {{< get-started-next-step path="/docs/esc/get-started/" label="Learn more about Pulumi ESC" ref="gs-azure-esc" >}}
 
-## Learn Pulumi
-
-Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
-
-{{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-azure-learn" >}}
-
 ## Launch a new project with a template
 
-Deploy the most common cloud architectures, from [static websites](/templates/static-website/azure/) to [serverless applications](/templates/serverless-application/azure/), [virtual machines](/templates/virtual-machine/azure/), [container services](/templates/container-service/azure/), and [Kubernetes clusters](/templates/kubernetes/azure/).
+Easily deploy the most common cloud architectures, from [static websites](/templates/static-website/azure/) to [serverless applications](/templates/serverless-application/azure/), [virtual machines](/templates/virtual-machine/azure/), [container services](/templates/container-service/azure/), and [Kubernetes clusters](/templates/kubernetes/azure/).
 
 {{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-azure-guides" >}}
 

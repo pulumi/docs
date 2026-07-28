@@ -1,10 +1,10 @@
 import pulumi
-from static_page import StaticPage, StaticPageArgs
+from static_website import StaticWebsite, StaticWebsiteArgs
 
 page_html = "<h1>I love Pulumi!</h1>"
-page = StaticPage(
-    "my-static-page",
-    StaticPageArgs(index_content=page_html)
+page = StaticWebsite(
+    "my-static-website",
+    StaticWebsiteArgs(index_content=page_html)
 )
 
 website_url = page.endpoint.apply(lambda v: f"http://{v}")

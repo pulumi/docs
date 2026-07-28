@@ -1,27 +1,23 @@
 ---
-title_tag: Make an Update | Kubernetes
+title_tag: Modify the Program | Kubernetes
+title: Modify the program
+h1: "Modify the program"
 meta_desc: This page provides an overview on how to update a Kubernetes project from a Pulumi program.
-title: Make an update
-h1: "Get started with Pulumi and Kubernetes"
-weight: 6
+weight: 7
 menu:
     iac:
-        name: Make an update
+        name: Modify the program
         identifier: kubernetes-get-started.modify-program
         parent: kubernetes-get-started
-        weight: 6
-
+        weight: 7
 aliases:
     - /docs/get-started/kubernetes/modify-program/
     - /docs/quickstart/kubernetes/modify-program/
-    - /docs/quickstart/kubernetes/deploy-changes/
 ---
 
-Now that you have an instance of your Pulumi program deployed, update it to do something a little more interesting.
+Now you'll expose the NGINX deployment to the network with a Kubernetes Service.
 
-Replace the entire contents of {{< langfile >}} with the following:
-
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+Open {{< langfile >}} and replace it with the following code:
 
 {{% choosable language typescript %}}
 
@@ -67,6 +63,7 @@ export const ip = isMinikube
 ```
 
 {{% /choosable %}}
+
 {{% choosable language python %}}
 
 ```python
@@ -121,6 +118,7 @@ pulumi.export("ip", result)
 ```
 
 {{% /choosable %}}
+
 {{% choosable language go %}}
 
 ```go
@@ -201,18 +199,18 @@ func main() {
 				return ""
 			}).(pulumi.StringOutput)
 		} else {
-      ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
-          if val.LoadBalancer.Ingress != nil && len(val.LoadBalancer.Ingress) > 0 {
-              ingress := val.LoadBalancer.Ingress[0]
-              if ingress.Ip != nil {
-                  return *ingress.Ip
-              }
-              if ingress.Hostname != nil {
-                  return *ingress.Hostname
-              }
-          }
-          return ""
-      }).(pulumi.StringOutput)
+			ip = frontend.Status.ApplyT(func(val *corev1.ServiceStatus) string {
+				if val.LoadBalancer.Ingress != nil && len(val.LoadBalancer.Ingress) > 0 {
+					ingress := val.LoadBalancer.Ingress[0]
+					if ingress.Ip != nil {
+						return *ingress.Ip
+					}
+					if ingress.Hostname != nil {
+						return *ingress.Hostname
+					}
+				}
+				return ""
+			}).(pulumi.StringOutput)
 		}
 
 		ctx.Export("ip", ip)
@@ -228,6 +226,7 @@ $ go mod tidy
 ```
 
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 
 ```csharp
@@ -325,6 +324,7 @@ return await Deployment.RunAsync(() =>
 ```
 
 {{% /choosable %}}
+
 {{% choosable language java %}}
 
 ```java
@@ -441,180 +441,17 @@ outputs:
 ```
 
 {{% notes type="info" %}}
-The YAML program always uses a `ClusterIP` service and does not read the `isMinikube` configuration value. If you are using YAML, you can skip the `pulumi config set isMinikube` step described below.
+The YAML program always uses a `ClusterIP` service and does not read the `isMinikube` configuration value, so if you're using YAML you can skip the `pulumi config set` step below.
 {{% /notes %}}
 
 {{% /choosable %}}
 
-Our program now creates a service to access the NGINX deployment, and requires a new [config](/docs/concepts/config/) value to indicate whether the program is being deployed to Minikube or not.
-
-The configuration value can be set for the stack using `pulumi config set isMinikube <true|false>` command.
-
-If you are currently using Minikube, set `isMinikube` to `true`, otherwise, set `isMinikube` to `false` as shown in the following command.
+The program now creates a Service to expose the deployment, and reads a new [config](/docs/iac/concepts/config/) value, `isMinikube`, to decide between a `ClusterIP` (for local clusters) and a `LoadBalancer` (for cloud clusters). Set it for your stack — use `true` for Minikube, `false` otherwise:
 
 ```bash
 $ pulumi config set isMinikube false
 ```
 
-### Deploy the changes
-
-To deploy the changes, run `pulumi up` again:
-
-{{% choosable "os" "macos,linux" %}}
-
-```bash
-$ pulumi up
-```
-
-{{% /choosable %}}
-{{% choosable "os" "windows" %}}
-
-```powershell
-> pulumi up
-```
-
-{{% /choosable %}}
-
-Pulumi computes the minimally disruptive change to achieve the desired state described by the program.
-
-```
-Previewing update (dev):
-     Type                           Name            Plan
-     pulumi:pulumi:Stack            quickstart-dev
- +   └─ kubernetes:core/v1:Service  nginx           create
-
-Outputs:
-  + ip  : "10.96.0.0"
-  - name: "nginx-bec13562"
-
-Resources:
-    + 1 to create
-    2 unchanged
-
-Do you want to perform this update?
-> yes
-  no
-  details
-```
-
-Select `yes` to proceed. Pulumi will create the new service resource:
-
-```
-Do you want to perform this update? yes
-Updating (dev):
-     Type                           Name            Status
-     pulumi:pulumi:Stack            quickstart-dev
- +   └─ kubernetes:core/v1:Service  nginx           created (10s)
-
-Outputs:
-  + ip  : "10.110.183.208"
-  - name: "nginx-bec13562"
-
-Resources:
-    + 1 created
-    2 unchanged
-
-Duration: 12s
-```
-
-### Verify the deployment
-
-View the `ip` [stack output](/docs/concepts/stack#outputs) from the NGINX service:
-
-{{% choosable "os" "macos,linux" %}}
-
-```bash
-$ pulumi stack output ip
-```
-
-{{% /choosable %}}
-{{% choosable "os" "windows" %}}
-
-```powershell
-> pulumi stack output ip
-```
-
-{{% /choosable %}}
-
-{{% notes type="info" %}}
-**If using Minikube:** You have two options to access your service:
-
-### Option 1: Use `minikube tunnel` (recommended)
-
-Minikube can provide LoadBalancer support via the `minikube tunnel` command. In a separate terminal, run:
-
-```bash
-$ minikube tunnel
-```
-
-This assigns an external IP to LoadBalancer services. With the tunnel running, you can set `isMinikube` to `false` and access your service via the external IP. Note that `minikube tunnel` may require administrator/sudo privileges.
-
-### Option 2: Use port forwarding
-
-Alternatively, set `isMinikube` to `true` and use port forwarding:
-
-```bash
-$ kubectl get service
-NAME             TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
-kubernetes       ClusterIP   10.96.0.1        <none>        443/TCP   44h
-nginx-9e5d5cd4   ClusterIP   10.103.199.118   <none>        80/TCP    6m47s
-```
-
-The assigned name for this particular nginx service is `nginx-9e5d5cd4`; yours will be different. In a new terminal window, run:
-
-```bash
-$ kubectl port-forward service/nginx-9e5d5cd4 8080:80
-Forwarding from 127.0.0.1:8080 -> 80
-Forwarding from [::1]:8080 -> 80
-```
-
-{{% /notes %}}
-
-You can curl NGINX to verify it is running:
-
-{{% choosable "os" "macos,linux" %}}
-
-```bash
-$ $(pulumi config get isMinikube) && curl "http://localhost:8080" || curl $(pulumi stack output ip)
-```
-
-{{% /choosable %}}
-{{% choosable "os" "windows" %}}
-
-```powershell
-> if (pulumi config get isMinikube) { curl "http://localhost:8080" } else { curl $(pulumi stack output ip) }
-```
-
-{{% /choosable %}}
-
-Expected output:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Welcome to nginx!</title>
-<style>
-html { color-scheme: light dark; }
-body { width: 35em; margin: 0 auto;
-font-family: Tahoma, Verdana, Arial, sans-serif; }
-</style>
-</head>
-<body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
-</body>
-</html>
-```
-
-Now that you have successfully updated your stack, you'll destroy the resources.
+Next, you'll deploy your changes.
 
 {{< get-started-stepper >}}

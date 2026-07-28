@@ -17,14 +17,10 @@ aliases:
     - /docs/get-started/azure/
     - /docs/quickstart/azure/
     - /docs/clouds/azure/get-started/
-    - /docs/iac/get-started/azure/deploy-changes/
-    - /docs/iac/get-started/azure/review-project/
 ---
 
-**Infrastructure as code (IaC)** lets you deploy, change, and manage infrastructure safely, consistently,
-and repeatably using code rather than a graphical user interface.
-
-Complete this step-by-step tutorial to deploy an Azure Blob Storage-based website using IaC.
+Infrastructure as code (IaC) lets you deploy, change, and manage infrastructure safely, consistently,
+and repeatably using code rather than a graphical user interface. In this tutorial, you'll use Pulumi to deploy an Azure Blob Storage-based website using IaC.
 
 ## Before you begin
 

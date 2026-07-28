@@ -7,17 +7,17 @@ using Pulumi.Aws.S3.Inputs;
 
 using Newtonsoft.Json;
 
-public sealed class StaticPageArgs : ResourceArgs {
+public sealed class StaticWebsiteArgs : ResourceArgs {
     [Input("indexContent")]
     public Input<string> IndexContent { get; set; } = null!;
 }
 
-class StaticPage : ComponentResource {
+class StaticWebsite : ComponentResource {
     [Output("endpoint")]
     public Output<string> Endpoint { get; set; }
 
-    public StaticPage(string name, StaticPageArgs args, ComponentResourceOptions? opts = null)
-        : base("sample-components:index:StaticPage", name, args, opts)
+    public StaticWebsite(string name, StaticWebsiteArgs args, ComponentResourceOptions? opts = null)
+        : base("sample-components:index:StaticWebsite", name, args, opts)
     {
         var bucket = new Bucket($"{name}-bucket", new() { }, new() { Parent = this });
 

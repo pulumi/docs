@@ -1,15 +1,15 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-export interface StaticPageArgs {
+export interface StaticWebsiteArgs {
     indexContent: pulumi.Input<string>;
 }
 
-export class StaticPage extends pulumi.ComponentResource {
+export class StaticWebsite extends pulumi.ComponentResource {
     public readonly endpoint: pulumi.Output<string>;
 
-    constructor(name: string, args: StaticPageArgs, opts?: pulumi.ComponentResourceOptions) {
-        super("sample-components:index:StaticPage", name, args, opts);
+    constructor(name: string, args: StaticWebsiteArgs, opts?: pulumi.ComponentResourceOptions) {
+        super("sample-components:index:StaticWebsite", name, args, opts);
 
         const bucket = new aws.s3.Bucket(`${name}-bucket`, {}, { parent: this });
 

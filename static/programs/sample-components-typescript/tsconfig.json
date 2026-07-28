@@ -14,6 +14,6 @@
     },
     "files": [
         "index.ts",
-        "StaticPage.ts"
+        "StaticWebsite.ts"
     ]
 }

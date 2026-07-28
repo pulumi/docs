@@ -1,7 +1,7 @@
 ---
 title_tag: Install Pulumi | Google Cloud
 title: Install Pulumi
-h1: "Get started with Pulumi and Google Cloud"
+h1: "Install Pulumi"
 stepper_link: "I'm ready to begin"
 meta_desc: This page provides an overview on how to get started with Pulumi when starting a Google Cloud project.
 weight: 2

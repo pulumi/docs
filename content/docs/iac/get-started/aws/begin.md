@@ -1,7 +1,7 @@
 ---
 title_tag: Install Pulumi | AWS
 title: Install Pulumi
-h1: "Get started with Pulumi and AWS"
+h1: "Install Pulumi"
 stepper_link: "I'm ready to begin"
 meta_desc: This page provides an overview on how to get started with Pulumi when starting an AWS project.
 weight: 2

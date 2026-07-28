@@ -18,10 +18,8 @@ aliases:
     - /docs/clouds/aws/get-started/
 ---
 
-**Infrastructure as code (IaC)** lets you deploy, change, and manage infrastructure safely, consistently,
-and repeatably using code rather than a graphical user interface.
-
-Complete this step-by-step tutorial to deploy an AWS S3 bucket-based website using IaC.
+Infrastructure as code (IaC) lets you deploy, change, and manage infrastructure safely, consistently,
+and repeatably using code rather than a graphical user interface. In this tutorial, you'll use Pulumi to deploy an AWS S3 bucket-based website using IaC.
 
 ## Before you begin
 

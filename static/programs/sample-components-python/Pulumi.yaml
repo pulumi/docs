@@ -1,5 +1,5 @@
 name: sample-components-python
-description: A Pulumi Python program that builds and uses a static page component
+description: A Pulumi Python program that builds and uses a static website component
 runtime:
   name: python
   options:
