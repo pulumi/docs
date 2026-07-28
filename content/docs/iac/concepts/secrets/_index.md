@@ -26,6 +26,15 @@ Pulumi Cloud transmits and stores entire state files securely, but Pulumi also s
 The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
 {{% /notes %}}
 
+{{< cloud-feature-callout product="esc" title="Manage secrets once, share them across every stack" href="/docs/esc/" >}}
+The secrets on this page live inside a single stack's encrypted state. If the same
+database password or API token needs to reach multiple stacks, projects, or teams,
+[Pulumi ESC](/docs/esc/) centralizes it in one environment with access control and an
+audit trail, instead of copying it into each stack's config. See
+[managing secrets with Pulumi ESC environments](#managing-secrets-with-pulumi-esc-environments)
+below for how the two work together.
+{{< /cloud-feature-callout >}}
+
 ## Creating secrets programmatically
 
 There are two ways to programmatically create secret values:

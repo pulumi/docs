@@ -147,6 +147,13 @@ The choice (or necessity) to use explicit providers is on a per-cloud basis. For
 
 A default provider's global configuration settings (like credentials, region, or tenancy configuration) can be set explicitly in your stack configuration (so its configuration will be the same no matter where your Pulumi program is run), or implicitly through methods like environment variables or well-known file locations (so its configuration will be dependent on the environment). The precise way a provider reads its implicit global settings depends on the particular provider. The provider's Installation and Configuration page ([example](/registry/packages/aws/installation-configuration/)) in the Pulumi Registry contains the details of how a provider will attempt to read configuration values if not explicitly specified in the stack configuration.
 
+{{< cloud-feature-callout product="esc" title="Issue short-lived credentials per environment instead of storing long-lived ones" href="/docs/esc/" >}}
+Static credentials in stack config or provider environment variables are long-lived
+and have to be rotated and distributed by hand. [Pulumi ESC](/docs/esc/) can issue
+short-lived credentials to your default or explicit providers via OIDC, scoped to
+each environment, so nothing long-lived ever needs to be stored at all.
+{{< /cloud-feature-callout >}}
+
 You may also specify default provider configuration in your [stack config](/docs/iac/concepts/config/). The configuration keys for default provider configuration follow the pattern `<provider name>:<config setting name>`. For example, to configure the `region` on the default AWS provider, you would run the following command:
 
 ```bash
