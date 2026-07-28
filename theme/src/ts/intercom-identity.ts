@@ -1,63 +1,44 @@
 // Identifies signed-in Pulumi Cloud users to the Intercom Messenger with a
-// backend-signed Messenger Security JWT fetched from app.pulumi.com. Runs at
-// browser idle on every page load; anonymous visitors are untouched. Segment
-// boots the widget as usual — this only attaches (or clears) verified identity.
+// backend-signed Messenger Security JWT fetched from app.pulumi.com. Rides the
+// consent-managed Segment lifecycle (analytics.ready, same as the head
+// partial's ad pixel): anonymous or non-consented visitors cost zero requests.
+// Segment boots the widget as usual — this only attaches (or clears) verified
+// identity.
 
 // Local docs dev (make serve) pairs with a local console (devtool.py start);
 // everywhere else the console lives at app.pulumi.com.
 const APP_HOST = location.hostname === "localhost" ? "http://localhost:3000" : "https://app.pulumi.com";
 const SETTINGS_PATH = "/intercom/web-settings";
+// Also parsed by layouts/partials/head.html (is-signed-in class) and
+// theme/stencil/src/store/reducers/user.ts — keep the three in sync.
 const HINT_COOKIE = "pulumi_web_user_info";
 const JWT_CACHE_KEY = "pulumi_intercom_jwt";
 const IDENTIFIED_KEY = "pulumi_intercom_identified";
-const EXP_HEADROOM_MS = 5 * 60 * 1000;
-const INTERCOM_WAIT_MS = 250;
-const INTERCOM_WAIT_TRIES = 80; // ~20s total
+const REFRESH_HEADROOM_MS = 5 * 60 * 1000;
 
 type IntercomFn = (command: string, arg?: unknown) => void;
 
-function getIntercom(): IntercomFn | undefined {
-    const intercom = (window as { Intercom?: unknown }).Intercom;
-    return typeof intercom === "function" ? (intercom as IntercomFn) : undefined;
+// The JWT is opaque to this module; freshness comes from the endpoint's
+// expiresAt (unix seconds), stored alongside the token.
+interface CachedJwt {
+    jwt: string;
+    expiresAtMs: number;
 }
 
 function hasHintCookie(): boolean {
     return document.cookie.split(";").some(c => c.trim().indexOf(`${HINT_COOKIE}=`) === 0);
 }
 
-function jwtExpMs(jwt: string): number {
+function identify(intercom: IntercomFn, jwt: string): void {
+    intercom("update", { intercom_user_jwt: jwt });
     try {
-        const payload = jwt.split(".")[1].replace(/-/g, "+").replace(/_/g, "/");
-        return (JSON.parse(atob(payload)) as { exp: number }).exp * 1000;
+        localStorage.setItem(IDENTIFIED_KEY, "1");
     } catch (e) {
-        return 0;
+        // Storage unavailable: identity still attaches for this page view.
     }
 }
 
-function withIntercom(fn: (intercom: IntercomFn) => void, tries: number): void {
-    const intercom = getIntercom();
-    if (intercom) {
-        fn(intercom);
-        return;
-    }
-    if (tries <= 0) {
-        return;
-    }
-    setTimeout(() => withIntercom(fn, tries - 1), INTERCOM_WAIT_MS);
-}
-
-function identify(jwt: string): void {
-    withIntercom(intercom => {
-        intercom("update", { intercom_user_jwt: jwt });
-        try {
-            localStorage.setItem(IDENTIFIED_KEY, "1");
-        } catch (e) {
-            // Storage unavailable: identity still attaches for this page view.
-        }
-    }, INTERCOM_WAIT_TRIES);
-}
-
-function signedOutCleanup(): void {
+function signedOutCleanup(intercom: IntercomFn): void {
     let wasIdentified = false;
     try {
         wasIdentified = localStorage.getItem(IDENTIFIED_KEY) === "1";
@@ -67,55 +48,65 @@ function signedOutCleanup(): void {
         // Storage unavailable: nothing to clean up.
     }
     if (wasIdentified) {
-        withIntercom(intercom => intercom("shutdown"), INTERCOM_WAIT_TRIES);
+        intercom("shutdown");
     }
 }
 
 function cachedJwt(): string | null {
     try {
-        const jwt = sessionStorage.getItem(JWT_CACHE_KEY);
-        if (jwt && jwtExpMs(jwt) - Date.now() > EXP_HEADROOM_MS) {
-            return jwt;
+        const raw = sessionStorage.getItem(JWT_CACHE_KEY);
+        if (raw) {
+            const cached = JSON.parse(raw) as CachedJwt;
+            if (cached.jwt && cached.expiresAtMs - Date.now() > REFRESH_HEADROOM_MS) {
+                return cached.jwt;
+            }
         }
     } catch (e) {
-        // Storage unavailable: fall through to a fresh fetch.
+        // Storage unavailable or stale cache shape: fall through to a fresh fetch.
     }
     return null;
 }
 
-function run(): void {
+function cacheJwt(jwt: string, expiresAtSec: number): void {
+    try {
+        const cached: CachedJwt = { jwt, expiresAtMs: expiresAtSec * 1000 };
+        sessionStorage.setItem(JWT_CACHE_KEY, JSON.stringify(cached));
+    } catch (e) {
+        // Storage unavailable: skip caching, identify anyway.
+    }
+}
+
+function run(intercom: IntercomFn): void {
     // The hint cookie only decides whether to attempt the fetch; the 401
     // below is the authoritative signed-out signal.
     if (!hasHintCookie()) {
-        signedOutCleanup();
+        signedOutCleanup(intercom);
         return;
     }
 
     const jwt = cachedJwt();
     if (jwt) {
-        identify(jwt);
+        identify(intercom, jwt);
         return;
     }
 
     fetch(APP_HOST + SETTINGS_PATH, { credentials: "include" })
         .then(resp => {
             if (resp.status === 401) {
-                signedOutCleanup();
+                signedOutCleanup(intercom);
                 return null;
             }
             if (!resp.ok) {
                 return null; // Not configured / upstream issue: stay anonymous.
             }
-            return resp.json() as Promise<{ userJwt?: string }>;
+            return resp.json() as Promise<{ userJwt?: string; expiresAt?: number }>;
         })
         .then(body => {
             if (body && body.userJwt) {
-                try {
-                    sessionStorage.setItem(JWT_CACHE_KEY, body.userJwt);
-                } catch (e) {
-                    // Storage unavailable: skip caching, identify anyway.
+                if (body.expiresAt) {
+                    cacheJwt(body.userJwt, body.expiresAt);
                 }
-                identify(body.userJwt);
+                identify(intercom, body.userJwt);
             }
         })
         .catch(() => {
@@ -123,8 +114,17 @@ function run(): void {
         });
 }
 
-if ("requestIdleCallback" in window) {
-    requestIdleCallback(run, { timeout: 5000 });
-} else {
-    setTimeout(run, 1500);
+// analytics.ready fires only after the consent-managed Segment load completes
+// (see conditionallyLoadAnalytics), which is already deferred to browser idle —
+// same fail-closed rendezvous the head partial's ad pixel uses. Intercom can
+// still be absent (destination disabled or not consented): one direct check,
+// no polling.
+const analytics = window.analytics;
+if (analytics && typeof analytics.ready === "function") {
+    analytics.ready(() => {
+        const intercom = (window as { Intercom?: unknown }).Intercom;
+        if (typeof intercom === "function") {
+            run(intercom as IntercomFn);
+        }
+    });
 }
