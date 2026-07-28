@@ -224,7 +224,7 @@ If you plan on using no-code or CLI deployment methods these prerequisites are n
 
 ##### GitHub OAuth
 
-This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
+This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when creating private repositories; fetching may use the Pulumi GitHub app instead, if installed.
 More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
 
 Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#github-oauth-application).
