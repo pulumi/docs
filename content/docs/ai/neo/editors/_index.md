@@ -1,11 +1,11 @@
 ---
-title: Neo in Your Editor
-title_tag: Neo in Your Editor
-h1: Neo in Your Editor
+title: Neo in Your Editor (ACP)
+title_tag: Neo in Your Editor (ACP)
+h1: Neo in Your Editor (ACP)
 meta_desc: Use Pulumi Neo directly inside Zed, JetBrains IDEs, VS Code, and Cursor through the Agent Client Protocol (ACP).
 menu:
     ai:
-        name: Neo in your editor
+        name: Neo in your editor (ACP)
         identifier: ai-editors
         parent: ai-neo
         weight: 16
