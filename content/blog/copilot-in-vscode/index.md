@@ -9,7 +9,6 @@ feature_image: feature.png
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2025-02-03
-lastmod: 2026-06-30
 updated: 2026-07-28
 
 # The draft setting determines whether a post is published. Set it to true if
