@@ -235,7 +235,7 @@ in the "OAuth App Policy" settings.
 
 ##### GitHub App
 
-You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/concepts/settings/) on new projects, and to fetch content from configured template sources.
+You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/concepts/settings/) on new projects. It will also be used to fetch content from configured template sources if available.
 See the GitHub app [installation instructions](/docs/integrations/version-control/github-app/) for more details.
 
 Because the app is installed and granted repository access at the organization level, any repository it can reach becomes usable as a template source by every member of your Pulumi organization -- regardless of whether an individual member's own GitHub user has access to that repository. An organization admin who adds a source is assumed to be making it available to the whole organization.
