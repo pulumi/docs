@@ -10,6 +10,7 @@ feature_image: feature.png
 # date/time.
 date: 2025-02-03
 lastmod: 2026-06-30
+updated: 2026-07-28
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -52,7 +53,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. The Pulumi Copilot Chat extension for VS Code is deprecated — instead, run [Neo directly in your editor](/docs/ai/neo/editors/) via the Agent Client Protocol.
 {{< /notes >}}
 
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.

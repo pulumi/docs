@@ -64,6 +64,9 @@ controls, and integrations carry over whichever surface you start from.
   interactive session that inherits your local setup: the CLIs you've
   authenticated, your environment variables and kubeconfigs, and the project
   you're editing.
+- **Your editor.** Use [Neo in your editor's agent panel](/docs/ai/neo/editors/)
+  in Zed, JetBrains IDEs, VS Code, and Cursor through the Agent Client
+  Protocol, working on the project you have open.
 - **Slack.** Mention [`@Neo`](/docs/ai/neo/integrations/slack/) in any channel
   and it replies in the thread, so you can check stack state or investigate a
   failure without leaving the conversation.
