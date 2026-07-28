@@ -15,7 +15,7 @@ Neo can run directly inside your editor's agent panel. You chat with Neo, review
 
 Editors connect to Neo through the [Agent Client Protocol (ACP)](https://agentclientprotocol.com), the same open standard they use to host agents like Claude Code and Gemini CLI. Zed and JetBrains IDEs support ACP natively; VS Code and Cursor support it through an extension.
 
-Like [Neo in the CLI](/docs/ai/neo/pulumi-cli/), an editor session runs locally and inherits your setup: your `pulumi login`, the CLIs you've authenticated, your environment variables and kubeconfigs, and the project you have open.
+Like [Neo in the CLI](/docs/ai/neo/pulumi-cli/), an editor session runs locally and inherits your setup: your `pulumi login`, the CLIs you've authenticated, your environment variables and kubeconfigs, and the project you have open. Neo edits your local files directly, so its changes show up in your working tree as it makes them.
 
 ## Prerequisites
 
