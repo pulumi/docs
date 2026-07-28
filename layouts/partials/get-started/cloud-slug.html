@@ -1,0 +1,16 @@
+{{- /*
+    Derives the get-started cloud slug (aws | azure | gcp | kubernetes) from a
+    page's file path. Context: a Page. Used by the get-started shared-content
+    shortcodes (gs-include) to resolve per-cloud fragment variants without
+    call-site parameters. Fails the build for pages outside the per-cloud
+    get-started directories so a mistaken include is caught immediately.
+*/ -}}
+{{- $path := replace .File.Path "\\" "/" -}}
+{{- $slug := "" -}}
+{{- range slice "aws" "azure" "gcp" "kubernetes" -}}
+    {{- if in $path (printf "get-started/%s/" .) -}}{{- $slug = . -}}{{- end -}}
+{{- end -}}
+{{- if not $slug -}}
+    {{- errorf "get-started/cloud-slug: page %q is not part of a per-cloud get-started flow (expected a path under get-started/aws/, azure/, gcp/, or kubernetes/)" $path -}}
+{{- end -}}
+{{- return $slug -}}

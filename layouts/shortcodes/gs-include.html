@@ -1,0 +1,29 @@
+{{- /*
+    Renders a shared getting-started markdown fragment from fragments/get-started/.
+
+    Usage: {{< gs-include "destroy-stack" >}}
+
+    Resolution order (cloud is derived from the calling page's path, so the same
+    call works verbatim on every cloud's copy of a page):
+
+      1. fragments/get-started/<name>/<cloud>.md   (per-cloud variant)
+      2. fragments/get-started/<name>.md           (shared)
+
+    A missing fragment fails the build. Fragments are plain markdown and may use
+    shortcodes, including os-command and nested gs-include.
+*/ -}}
+{{- $name := .Get 0 -}}
+{{- if not $name -}}
+    {{- errorf "gs-include: a fragment name is required (in %s)" .Page.File.Path -}}
+{{- end -}}
+{{- $cloud := partial "get-started/cloud-slug.html" .Page -}}
+{{- $cloudPath := printf "fragments/get-started/%s/%s.md" $name $cloud -}}
+{{- $sharedPath := printf "fragments/get-started/%s.md" $name -}}
+{{- $path := $sharedPath -}}
+{{- if fileExists $cloudPath -}}
+    {{- $path = $cloudPath -}}
+{{- end -}}
+{{- if not (fileExists $path) -}}
+    {{- errorf "gs-include: fragment %q not found (looked for %s, then %s; called from %s)" $name $cloudPath $sharedPath .Page.File.Path -}}
+{{- end -}}
+{{ .Page.RenderString (dict "display" "block") (readFile $path) }}
