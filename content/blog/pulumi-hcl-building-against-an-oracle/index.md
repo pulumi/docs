@@ -15,9 +15,22 @@ schema_type: auto
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter:
-    linkedin:
-    bluesky:
+    twitter: |
+        Pulumi's HCL support requires that it is both a valid Pulumi language, and OpenTofu compatible.
+
+        We've written up how we make sure it's both, and what properties we need to let LLMs hunt bugs unsupervised.
+    linkedin: |
+        Pulumi HCL (now in preview) has to satisfy two masters. A Terraform module used from Pulumi must behave exactly as it does under OpenTofu, and HCL must be a first-class Pulumi language alongside the other six.
+
+        Those two goals get two very different test suites with very different properties. Our conformance tests are a hand-curated test suite built up over years of effort and shared across every Pulumi language. OpenTofu compatibility testing relies on our guarantee that for any valid program, tofu apply and pulumi up should do the same thing.
+
+        That second property turns out to matter for AI. When tests are correct by construction, you can turn LLMs loose on finding failing tests without filtering false positives.
+
+        Here's how both suites work & why the distinction matters.
+    bluesky: |
+        Pulumi's HCL support has to be two things at once: a valid Pulumi language, and OpenTofu compatible. Each half gets its own test suite, with very different properties.
+
+        We've written up how both work, and which one lets us turn LLMs loose on bug hunting.
 ---
 
 Typing out code has never been the hard part of programming, any more than my penmanship is what's stopping me from writing the next great American novel. The hard part is making sure what you wrote is correct. This is especially true for a project like adding HCL support to Pulumi (in preview now, try it at [pulumi-labs/pulumi-hcl](https://github.com/pulumi-labs/pulumi-hcl)). Users already know exactly what they want their [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) to do, and when they start using those modules in their Pulumi programs the semantics are clear. Terraform modules consumed from Pulumi should do exactly the same thing as Terraform modules consumed from Terraform. At the same time, if Pulumi supports HCL then HCL needs to be fully incorporated into the Pulumi ecosystem, and we need to ensure we can correctly express [Pulumi concepts](https://www.pulumi.com/docs/iac/concepts/) in HCL. The way we do both is exhaustive testing, but the test strategy for *ensuring Pulumi HCL is OpenTofu compatible* is different from the one for *ensuring HCL is Pulumi native*, and I want to talk through each. Since this is a blog post in 2026, this will touch on AI. You have been warned.
