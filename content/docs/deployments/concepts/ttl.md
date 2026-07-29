@@ -13,7 +13,7 @@ menu:
     parent: deployments-concepts
     weight: 50
     identifier: deployments-concepts-ttl
-pulumi_cloud: ttl-stacks
+pulumi_cloud_feature: ttl-stacks
 ---
 
 Time-to-live (TTL) Stacks enable the automated management of a stack's lifecycle by specifying a date and time after which the stack is automatically torn down. TTL stacks allow platform teams to control costs, improve security posture, and reduce operational overhead by ensuring temporary or ephemeral cloud resources (like development environments) are automatically de-provisioned.

@@ -28,7 +28,7 @@
                     {{ partial "docs/cli-command-banner.html" . }}
                 {{ end }}
 
-                {{ with .Params.pulumi_cloud }}
+                {{ with .Params.pulumi_cloud_feature }}
                     {{ partial "notes.html" (dict "type" "cloud" "text" (partial "cloud-availability-body.html" (dict "feature" . "where" $.RelPermalink) | markdownify)) }}
                 {{ end }}
 

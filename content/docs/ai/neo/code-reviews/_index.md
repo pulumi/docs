@@ -14,7 +14,7 @@ menu:
         parent: ai-neo
         weight: 35
         identifier: ai-code-reviews
-pulumi_cloud: neo-code-reviews
+pulumi_cloud_feature: neo-code-reviews
 ---
 
 {{% notes type="info" %}}

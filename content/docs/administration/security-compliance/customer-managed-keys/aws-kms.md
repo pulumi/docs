@@ -12,7 +12,7 @@ menu:
 aliases:
   - /docs/pulumi-cloud/customer-managed-keys/aws-kms/
   - /docs/pulumi-cloud/admin/customer-managed-keys/aws-kms/
-pulumi_cloud: customer-managed-keys
+pulumi_cloud_feature: customer-managed-keys
 ---
 
 This guide provides step-by-step instructions for configuring AWS Key Management Service (KMS) to use [Customer Managed

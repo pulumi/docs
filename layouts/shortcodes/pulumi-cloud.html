@@ -16,7 +16,7 @@
   is derived from that feature's availability, so it can't drift from
   /pricing/.
 
-  Unlike the whole-page `pulumi_cloud:` key, the no-argument form is allowed and
+  Unlike the whole-page `pulumi_cloud_feature:` key, the no-argument form is allowed and
   useful here: on a page that documents several ways of doing something, the
   reader can't otherwise tell whether a given section needs Pulumi Cloud at all.
   Note the self-closing `/>}}` — Hugo requires it because this template reads
@@ -29,7 +29,7 @@
   That renders prose in the same violet box, for orientation rather than a
   statement of availability. Pass a feature and inner content to get both.
 
-  Whole Cloud pages use the `pulumi_cloud:` frontmatter key instead. Markers are
+  Whole Cloud pages use the `pulumi_cloud_feature:` frontmatter key instead. Markers are
   set per page — there is no inheritance.
 */ -}}
 {{- $feature := .Get 0 -}}
@@ -40,6 +40,13 @@
 {{- $body := "" -}}
 {{- if or $feature (not $inner) -}}
   {{- $body = partial "cloud-availability-body.html" (dict "feature" $feature "where" .Page.File.Path) | markdownify -}}
+{{- end -}}
+{{- /* With both parts, `markdownify` has already unwrapped each single
+       paragraph, so concatenating them raw would run the availability sentence
+       straight into the prose. Make both blocks instead. */ -}}
+{{- if and $body $inner -}}
+  {{- $body = printf "<p>%s</p>" $body -}}
+  {{- $inner = .Page.RenderString (dict "display" "block") .Inner -}}
 {{- end -}}
 {{- /* `cloud-marker` is what scripts/search/page.js looks for so a heading's
        search snippet skips past this box to the real paragraph below it. */ -}}

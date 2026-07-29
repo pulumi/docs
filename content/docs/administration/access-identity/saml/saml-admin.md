@@ -9,7 +9,7 @@ menu:
     parent: administration-access-identity-saml
     weight: 70
     identifier: pulumi-cloud-access-management-saml-admin
-pulumi_cloud: saml-sso
+pulumi_cloud_feature: saml-sso
 ---
 
 A SAML admin can log in to your Pulumi organization using an alternative login method. This ensures someone can always log in to your organization to help resolve errors with the SAML configuration.

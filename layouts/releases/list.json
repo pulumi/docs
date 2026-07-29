@@ -23,6 +23,9 @@
 {{- $entries := slice -}}
 {{- $base := strings.TrimSuffix "/" site.BaseURL -}}
 {{- range .RegularPagesRecursive.ByDate.Reverse -}}
+    {{- /* `$` is the /releases/ list page, so hold on to the entry for the
+         partials below that report their location in a build error. */ -}}
+    {{- $page := . -}}
     {{- $type := cond (eq .Type "changelog") "changelog" "release" -}}
     {{- $entry := dict
         "type" $type
@@ -34,7 +37,7 @@
     {{- end -}}
     {{- with .Params.editions -}}
         {{- $entry = merge $entry (dict "editions" .) -}}
-        {{- $entry = merge $entry (dict "tiers" (partial "releases/edition-names.html" (dict "editions" . "where" $.RelPermalink))) -}}
+        {{- $entry = merge $entry (dict "tiers" (partial "releases/edition-names.html" (dict "editions" . "where" $page.RelPermalink))) -}}
     {{- end -}}
     {{- with .Content -}}
         {{- /* Absolutize root-relative links/assets ("/..."), skipping

@@ -35,22 +35,22 @@
     {{- $editionIds := slice -}}
     {{- range $px.editions -}}{{- $editionIds = $editionIds | append .id -}}{{- end -}}
     {{- if in $editionIds $id -}}
-      {{- errorf "pulumi_cloud: %q is an edition id, not a feature id (in %s). Markers name the feature (for example `rbac` or `audit-logs`) and the edition is derived from data/pulumi_pricing.yaml, so a feature that moves editions is a one-line edit." $id .where -}}
+      {{- errorf "pulumi_cloud_feature: %q is an edition id, not a feature id (in %s). Markers name the feature (for example `rbac` or `audit-logs`) and the edition is derived from data/pulumi_pricing.yaml, so a feature that moves editions is a one-line edit." $id .where -}}
     {{- else -}}
       {{- $near := slice -}}
       {{- range $px.ids -}}
         {{- if or (in . $id) (in $id .) -}}{{- $near = $near | append . -}}{{- end -}}
       {{- end -}}
       {{- if $near -}}
-        {{- errorf "pulumi_cloud: %q is not a feature in data/pulumi_pricing.yaml (in %s). Did you mean: %s?" $id .where (delimit $near ", ") -}}
+        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_pricing.yaml (in %s). Did you mean: %s?" $id .where (delimit $near ", ") -}}
       {{- else -}}
-        {{- errorf "pulumi_cloud: %q is not a feature in data/pulumi_pricing.yaml (in %s). Add it there — with `hidden: true` if it isn't a marketed line item on /pricing/. Known ids: %s" $id .where (delimit $px.ids ", ") -}}
+        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_pricing.yaml (in %s). Add it there — with `hidden: true` if it isn't a marketed line item on /pricing/. Known ids: %s" $id .where (delimit $px.ids ", ") -}}
       {{- end -}}
     {{- end -}}
   {{- else -}}
     {{- $min := $f.min_edition -}}
     {{- if or (not $min) (eq $min $px.first) -}}
-      {{- errorf "pulumi_cloud: %q resolves to the %s edition (in %s), which gates nothing — drop the marker, or set `requires:` on that feature in data/pulumi_pricing.yaml if its lowest column is really a limited variant." $id $px.first .where -}}
+      {{- errorf "pulumi_cloud_feature: %q resolves to the %s edition (in %s), which gates nothing — drop the marker, or set `requires:` on that feature in data/pulumi_pricing.yaml if its lowest column is really a limited variant." $id $px.first .where -}}
     {{- end -}}
     {{- $names := slice -}}
     {{- $seen := false -}}

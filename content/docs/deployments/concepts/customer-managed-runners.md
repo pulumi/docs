@@ -15,7 +15,7 @@ aliases:
 - /docs/deployments/deployments/customer-managed-agents/
 - /docs/deployments/deployments/runs/customer-managed-agents/
 - /docs/deployments/deployments/runs/
-pulumi_cloud: customer-managed-runners
+pulumi_cloud_feature: customer-managed-runners
 ---
 
 By default, deployments run on [Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/). Customer-managed workflow runners let you self-host that compute on your own infrastructure instead — for example, to run within a private network — while supporting the same deployment triggers and workflow types.

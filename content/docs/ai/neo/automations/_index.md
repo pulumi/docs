@@ -11,7 +11,7 @@ menu:
         identifier: ai-automations
         parent: ai-neo
         weight: 25
-pulumi_cloud: neo-scheduled-tasks
+pulumi_cloud_feature: neo-scheduled-tasks
 ---
 
 Automations turn any Neo task into recurring work. Define a prompt, set a cadence, and Neo runs the task at that interval. When a run produces changes, Neo opens a [pull request](/docs/ai/neo/pull-requests/) that goes through your normal review process.

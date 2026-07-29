@@ -13,7 +13,7 @@ aliases:
   - /docs/guides/self-hosted/components/deployments/
   - /docs/pulumi-cloud/self-hosted/components/deployments/
   - /docs/pulumi-cloud/admin/self-hosted/components/deployments/
-pulumi_cloud: self-hosting
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}

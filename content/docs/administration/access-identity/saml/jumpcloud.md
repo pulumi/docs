@@ -12,7 +12,7 @@ menu:
     identifier: pulumi-cloud-access-management-saml-jumpcloud
 aliases:
 - /docs/pulumi-cloud/access-management/saml/jumpcloud/
-pulumi_cloud: saml-sso
+pulumi_cloud_feature: saml-sso
 ---
 
 This guide walks you through configuring JumpCloud as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider (IdP) for Pulumi Cloud.

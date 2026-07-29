@@ -30,9 +30,9 @@
 
   Every structural invariant in the data file is enforced here, because this is
   the one place both the pricing page and the docs markers pass through. The
-  frontmatter-facing invariants (is `pulumi_cloud: foo` a real feature id?) live
-  in scripts/lint/lint-markdown.js instead, so authors fail in `make lint`
-  rather than in a full build.
+  frontmatter-facing invariants (is `pulumi_cloud_feature: foo` a real feature
+  id?) live in scripts/lint/lint-markdown.js instead, so authors fail in
+  `make lint` rather than in a full build.
 */ -}}
 {{- $where := "data/pulumi_pricing.yaml" -}}
 {{- $px := site.Data.pulumi_pricing -}}

@@ -19,7 +19,7 @@ aliases:
 - /docs/intro/console/webhooks/
 - /docs/intro/pulumi-service/webhooks/
 - /docs/intro/pulumi-cloud/webhooks/
-pulumi_cloud: webhooks
+pulumi_cloud_feature: webhooks
 ---
 
 Pulumi Webhooks allow you to notify external services of events

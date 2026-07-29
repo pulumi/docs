@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/administration/self-hosting/airgapped/
 - /docs/pulumi-cloud/admin/self-hosted/airgapped/
-pulumi_cloud: self-hosting
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}

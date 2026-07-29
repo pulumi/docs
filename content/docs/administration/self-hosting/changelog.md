@@ -13,7 +13,7 @@ aliases:
   - /docs/pulumi-cloud/self-hosted/changelog/
   - /docs/administration/self-hosting/pulumi-cloud/changelog/
   - /docs/pulumi-cloud/admin/self-hosted/changelog/
-pulumi_cloud: self-hosting
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}

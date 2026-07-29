@@ -8,7 +8,7 @@ menu:
         name: Restoring deleted stacks
         parent: iac-operations-stack-management
         weight: 35
-pulumi_cloud: restore-deleted-stacks
+pulumi_cloud_feature: restore-deleted-stacks
 ---
 
 Pulumi Cloud retains the state file versions of recently deleted stacks so that organization administrators can recover them through the Pulumi Cloud console. This is useful when a stack is deleted accidentally — most often by `pulumi stack rm --force`, which removes the state file even when the stack still has resources associated with it — or when a stack was intentionally deleted but its activity history is later needed.

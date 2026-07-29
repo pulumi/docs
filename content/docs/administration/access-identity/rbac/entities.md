@@ -9,7 +9,7 @@ menu:
     parent: administration-access-identity-rbac
     weight: 3
     identifier: administration-access-identity-rbac-entities
-pulumi_cloud: rbac
+pulumi_cloud_feature: rbac
 ---
 
 An entity is a Pulumi object that can have [permission sets](/docs/administration/access-identity/rbac/permission-sets) granted on it.

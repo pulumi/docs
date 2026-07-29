@@ -1,6 +1,6 @@
 # What Pulumi sells: the Pulumi Cloud editions, and which edition each feature
 # needs. Single source of truth for the /pricing/ comparison table, the
-# `pulumi_cloud:` docs marker, the {{< pulumi-cloud >}} shortcode, and the
+# `pulumi_cloud_feature:` docs marker, the {{< pulumi-cloud >}} shortcode, and the
 # changelog `editions:` badges.
 #
 # This file describes the product, not any page. Nothing in it names a page, a
@@ -84,7 +84,7 @@
 # Edit this file only. layouts/partials/pricing/data.html expands it and raises
 # every structural error; scripts/lint/lint-markdown.js validates the
 # frontmatter and shortcode values that point at it. Renaming a feature id is a
-# breaking change — grep for `pulumi_cloud:` and `pulumi-cloud "` first.
+# breaking change — grep for `pulumi_cloud_feature:` and `pulumi-cloud "` first.
 
 editions:
   - id: individual

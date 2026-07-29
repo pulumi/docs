@@ -14,7 +14,7 @@ aliases:
 - /docs/pulumi-cloud/self-hosted/components/
 - /docs/administration/self-hosting/components/
 - /docs/pulumi-cloud/admin/self-hosted/components/
-pulumi_cloud: self-hosting
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}

@@ -10,7 +10,7 @@ menu:
     weight: 2
 aliases:
   - /docs/esc/environments/rotation/aws-lambda/
-pulumi_cloud: esc-db-secrets-rotation-private
+pulumi_cloud_feature: esc-db-secrets-rotation-private
 ---
 
 The `aws-lambda` rotation connector enables you to rotate credentials inside of a private AWS VPC. Check out the [Rotated Secrets page](/docs/esc/providers/rotators/) to learn which kinds of credentials can be rotated using Pulumi ESC. See [rotation connectors](/docs/esc/concepts/rotators#rotation-connectors) section for more info on why rotation connectors are needed in the first place.

@@ -18,7 +18,7 @@ aliases:
 - /docs/intro/pulumi-cloud/audit-logs/
 - /docs/pulumi-cloud/audit-logs/
 - /docs/pulumi-cloud/admin/audit-logs/
-pulumi_cloud: audit-logs
+pulumi_cloud_feature: audit-logs
 ---
 
 ## Overview
@@ -37,7 +37,7 @@ of the call the user made.
 
 ## View audit logs
 
-Audit logs are an Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
+Only organization admins can view audit logs.
 
 To view audit logs:
 
@@ -51,9 +51,7 @@ also filter logs by a particular user by selecting their profile picture.
 
 ## Automated export
 
-{{% notes type="info" %}}
-Automated export is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
-{{% /notes %}}
+{{< pulumi-cloud "audit-log-export" />}}
 
 Pulumi Cloud supports continuously exporting audit log events to external destinations.
 

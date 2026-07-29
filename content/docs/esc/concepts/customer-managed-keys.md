@@ -13,7 +13,7 @@ menu:
     weight: 12
 aliases:
   - /docs/esc/administration/customer-managed-keys/
-pulumi_cloud: customer-managed-keys
+pulumi_cloud_feature: customer-managed-keys
 ---
 
 ## Overview

@@ -14,7 +14,7 @@ aliases:
   - /docs/pulumi-cloud/insights/search/
   - /docs/insights/search/
   - /docs/insights/visibility/search/
-pulumi_cloud: resource-search
+pulumi_cloud_feature: resource-search
 ---
 
 Resource Search allows you to explore your resources, stacks and projects in detail.

@@ -860,7 +860,7 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
  *
  * A marker names a FEATURE, not an edition:
  *
- *   pulumi_cloud: rbac
+ *   pulumi_cloud_feature: rbac
  *   {{< pulumi-cloud "rbac" />}}
  *
  * The edition the callout states is derived from that feature's row in
@@ -879,41 +879,58 @@ function pulumiCloudValueError(value, label) {
     if (typeof value === "boolean") {
         return `Invalid ${label} value: ${value}. Name the feature (for example 'rbac' or 'audit-logs'), or drop the key — an ungated page carries no marker. See data/pulumi_pricing.yaml.`;
     }
-    if (PRICING.editions.includes(value)) {
-        return `Invalid ${label} value: '${value}'. That's an edition id, not a feature id — markers name the feature and the edition is derived from data/pulumi_pricing.yaml. Features on the ${PRICING.names[value] || value} edition include: ${MARKABLE_FEATURES.filter(id => PRICING.features[id] === value)
+    // A bare `pulumi_cloud_feature:` parses as null, and nothing stops an author
+    // writing a number. Normalize before the string comparisons below, which would
+    // otherwise throw a TypeError that the caller's try/catch turns into an
+    // unhelpful message.
+    const id = value === null || value === undefined ? "" : String(value);
+    if (!id) {
+        return `Empty ${label} value. Name the feature (for example 'rbac' or 'audit-logs'), or drop the key — an ungated page carries no marker. See data/pulumi_pricing.yaml.`;
+    }
+    if (PRICING.editions.includes(id)) {
+        return `Invalid ${label} value: '${id}'. That's an edition id, not a feature id — markers name the feature and the edition is derived from data/pulumi_pricing.yaml. Features on the ${PRICING.names[id] || id} edition include: ${MARKABLE_FEATURES.filter(f => PRICING.features[f] === id)
             .slice(0, 5)
             .join(", ")}.`;
     }
-    if (PRICING.features[value] !== undefined && !MARKABLE_FEATURES.includes(value)) {
-        return `Invalid ${label} value: '${value}'. That feature is available on the ${PRICING.names[PRICING.editions[0]]} edition, which gates nothing — drop the marker, or set 'requires:' on it in data/pulumi_pricing.yaml if its lowest column is really a limited variant.`;
+    if (PRICING.features[id] !== undefined && !MARKABLE_FEATURES.includes(id)) {
+        return `Invalid ${label} value: '${id}'. That feature is available on the ${PRICING.names[PRICING.editions[0]]} edition, which gates nothing — drop the marker, or set 'requires:' on it in data/pulumi_pricing.yaml if its lowest column is really a limited variant.`;
     }
-    if (!MARKABLE_FEATURES.includes(value)) {
-        const near = MARKABLE_FEATURES.filter(id => id.includes(value) || value.includes(id));
+    if (!MARKABLE_FEATURES.includes(id)) {
+        const near = MARKABLE_FEATURES.filter(f => f.includes(id) || id.includes(f));
         const hint = near.length > 0 ? ` Did you mean: ${near.join(", ")}?` : ` Add it to data/pulumi_pricing.yaml — with 'hidden: true' if it isn't a marketed line item on /pricing/.`;
-        return `Invalid ${label} value: '${value}'. Not a feature id in data/pulumi_pricing.yaml.${hint}`;
+        return `Invalid ${label} value: '${id}'. Not a feature id in data/pulumi_pricing.yaml.${hint}`;
     }
     return null;
 }
 
 /**
- * checkPulumiCloudValue validates the optional `pulumi_cloud:` front matter,
- * which marks a whole page as a Pulumi Cloud feature that needs a paid edition.
- * Markers are set per page; there is no inheritance. Where only part of a page
- * is a Cloud feature, use the {{< pulumi-cloud >}} shortcode instead
- * (checkPulumiCloudShortcode below).
+ * checkPulumiCloudFeature validates the optional `pulumi_cloud_feature:` front
+ * matter, which marks a whole page as documenting a Pulumi Cloud feature that
+ * needs a paid edition. Markers are set per page; there is no inheritance. Where
+ * only part of a page is a Cloud feature, use the {{< pulumi-cloud >}} shortcode
+ * instead (checkPulumiCloudShortcode below).
  *
- * The key is `pulumi_cloud`, not `cloud`: content/templates/ already uses a
+ * The key names the feature because the value does: `pulumi_cloud: rbac` reads
+ * as an assertion about Pulumi Cloud, when what it says is which feature the
+ * page documents. It is not `cloud_feature` either — content/templates/ uses a
  * `cloud:` mapping for the cloud PROVIDER a template targets, and on a site that
- * documents AWS, Azure, and GCP a bare `cloud` reads as the provider anyway.
+ * documents AWS, Azure, and GCP "cloud feature" reads as a provider feature.
  *
- * @param {*} cloud The front matter `pulumi_cloud` value.
+ * @param {*} feature The front matter `pulumi_cloud_feature` value.
+ * @param {*} legacy The front matter `pulumi_cloud` value (renamed; rejected).
  * @returns {string|null} An error message, or null when valid/not applicable.
  */
-function checkPulumiCloudValue(cloud) {
-    if (cloud === undefined) {
+function checkPulumiCloudFeature(feature, legacy) {
+    // `pulumi_cloud:` was this key's name while the value was an edition id.
+    // Hugo ignores an unknown front matter key, so without this the page would
+    // just quietly render no marker. Droppable once the rename has settled.
+    if (legacy !== undefined) {
+        return "`pulumi_cloud:` is now `pulumi_cloud_feature:`, and its value is a feature id rather than an edition (e.g. `pulumi_cloud_feature: rbac`). The edition the callout states is derived from that feature in data/pulumi_pricing.yaml.";
+    }
+    if (feature === undefined) {
         return null;
     }
-    return pulumiCloudValueError(cloud, "'pulumi_cloud'");
+    return pulumiCloudValueError(feature, "'pulumi_cloud_feature'");
 }
 
 /**
@@ -1094,7 +1111,7 @@ function searchForMarkdown(paths) {
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                     changelogEditions: checkChangelogEditions(obj.editions, obj.tiers, obj.tier, fullPath),
-                    pulumiCloudValue: checkPulumiCloudValue(obj.pulumi_cloud),
+                    pulumiCloudFeature: checkPulumiCloudFeature(obj.pulumi_cloud_feature, obj.pulumi_cloud),
                     pulumiCloudShortcode: checkPulumiCloudShortcode(content),
                 };
                 result.files.push(fullPath);
@@ -1272,10 +1289,10 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.changelogEditions,
                 });
             }
-            if (frontMatterErrors.pulumiCloudValue) {
+            if (frontMatterErrors.pulumiCloudFeature) {
                 lintErrors.push({
                     lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.pulumiCloudValue,
+                    ruleDescription: frontMatterErrors.pulumiCloudFeature,
                 });
             }
             if (frontMatterErrors.pulumiCloudShortcode) {

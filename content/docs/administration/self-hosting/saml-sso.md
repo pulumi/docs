@@ -14,7 +14,7 @@ aliases:
   - /docs/pulumi-cloud/self-hosted/saml-sso/
   - /docs/administration/self-hosting/pulumi-cloud/saml-sso/
   - /docs/pulumi-cloud/admin/self-hosted/saml-sso/
-pulumi_cloud: self-hosting
+pulumi_cloud_feature: self-hosting
 ---
 
 The self-hosted option allows you to control various aspects of Pulumi Cloud including how users will sign in to the [Pulumi Cloud console](/docs/administration/self-hosting/components/console/).

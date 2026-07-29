@@ -9,7 +9,7 @@ menu:
     parent: administration-security-compliance-self-hosted-operations
     weight: 8
     identifier: administration-security-compliance-self-hosted-operations-upgrades
-pulumi_cloud: self-hosting
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}

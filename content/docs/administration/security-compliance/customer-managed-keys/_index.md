@@ -11,7 +11,7 @@ menu:
 aliases:
   - /docs/pulumi-cloud/customer-managed-keys/
   - /docs/pulumi-cloud/admin/customer-managed-keys/
-pulumi_cloud: customer-managed-keys
+pulumi_cloud_feature: customer-managed-keys
 ---
 
 ## Overview

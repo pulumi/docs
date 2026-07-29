@@ -12,7 +12,7 @@ menu:
         name: ESC Audit Logs
         parent: administration-security-compliance
         weight: 11
-pulumi_cloud: audit-logs
+pulumi_cloud_feature: audit-logs
 ---
 
 {{% notes type="warning" %}}
