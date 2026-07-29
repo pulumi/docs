@@ -103,7 +103,7 @@ Before enabling any policy pack, also confirm that every environment where `pulu
 
 ## Managing policy groups programmatically
 
-In addition to the console, you can add and remove stacks, cloud accounts, and policy packs from a policy group using the [Pulumi Cloud REST API](/docs/insights/policy/api-reference/) or the `pulumiservice` Pulumi provider, including the default policy groups described above.
+Beyond the console, you can add and remove stacks, cloud accounts, and policy packs from a policy group using the [Pulumi Cloud REST API](/docs/insights/policy/api-reference/) or the `pulumiservice` Pulumi provider, including the default policy groups described above.
 
 ### Using the REST API
 
@@ -119,7 +119,7 @@ These fields are additive: sending `addStack` doesn't touch the group's existing
 The `stacks`, `policyPacks`, and `insightsAccounts` fields, as opposed to their `add`/`remove` counterparts, replace the group's *entire* membership list whenever you include them in a request. Omit a field you don't want to change; an empty array clears it.
 {{% /notes %}}
 
-To apply several changes to a group in one round trip, send them to the group's `/batch` endpoint instead, as an array of the same request bodies described above.
+To apply multiple changes to a group in one round trip, send them to the group's `/batch` endpoint instead, as an array of the same request bodies described above.
 
 ### Using the Pulumi provider
 
