@@ -33,6 +33,7 @@ describe("normalizeState", () => {
                         k8sLanguage: "typescript",
                         persona: "developer",
                         pythontoolchain: "pip",
+                        tfTool: "terraform",
                     },
                 });
             });
