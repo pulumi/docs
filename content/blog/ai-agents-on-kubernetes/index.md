@@ -20,9 +20,9 @@ howto_schema: true
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        66% of organizations plan to run generative AI workloads on Kubernetes (CNCF, 2026). But an agent isn't a stateless web service, and treating it like one gets expensive and unsafe fast.
+        66% of organizations plan to run generative AI workloads on Kubernetes (CNCF, 2026). But an agent isn't a stateless web service, and treating it like one gets expensive fast.
 
-        Here's how to provision and govern Kubernetes infrastructure for AI agents with Pulumi.
+        Here's how to provision and govern that infrastructure with Pulumi.
     linkedin: |
         Kubernetes has quietly become the default substrate for agentic AI. CNCF's 2026 annual survey puts it at 66% of organizations betting on Kubernetes for generative AI workloads, and a fast-moving ecosystem — kagent, KServe, Kueue, vLLM/llm-d, the Gateway API Inference Extension — has grown up around running agents and models on the cluster.
 
