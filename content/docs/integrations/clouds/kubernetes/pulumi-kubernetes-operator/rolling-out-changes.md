@@ -10,7 +10,7 @@ menu:
         weight: 4
 ---
 
-The Pulumi Kubernetes Operator (PKO) keeps your infrastructure continuously reconciled with a specific version of a Pulumi program, declared in a `Stack` resource. By default it applies changes immediately: when the version a `Stack` tracks changes, the operator runs `pulumi up` and reconciles your infrastructure to it, with no built-in pause for review. The safety of a rollout therefore depends on approving a change *before* its version reaches the operator, and previewing it upstream where you need one.
+The Pulumi Kubernetes Operator keeps your infrastructure continuously reconciled with a specific version of a Pulumi program, declared in a `Stack` resource. By default it applies changes immediately: when the version a `Stack` tracks changes, the operator runs `pulumi up` and reconciles your infrastructure to it, with no built-in pause for review. The safety of a rollout therefore depends on approving a change *before* its version reaches the operator, and previewing it upstream where you need one.
 
 (The operator reconciles when the tracked version changes. It can also re-run periodically to detect and remediate drift, but that is opt-in — you enable it with [drift detection](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#drift-detection).)
 
@@ -52,7 +52,9 @@ Don't let an unreviewed version reach the operator and rely on staging afterward
 
 ## Preview a change before it reaches the operator
 
-PKO does not hold a change for approval; it applies on reconcile. A preview (or a required approval) before a change goes live therefore has to run **upstream of the operator, in your CI**.
+The Pulumi Kubernetes Operator does not hold a change for approval; it applies on reconcile. A preview (or a required approval) before a change goes live therefore has to run **upstream of the operator, in your CI**.
+
+A `Stack` can be put in [preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) with `spec.preview: true`, and it then only ever previews — it never applies. That is a mode on the `Stack` rather than a per-change gate, though: setting it back to `false` deploys whatever version the `Stack` currently points at.
 
 When your program is in a Git repository, preview it in that repository's CI on every pull request. This is an ordinary `pulumi preview` and doesn't involve the operator. With GitHub Actions, previewing against your dev stack:
 
