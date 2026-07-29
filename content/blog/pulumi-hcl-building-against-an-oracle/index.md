@@ -1,8 +1,8 @@
 ---
-title: "Building Pulumi HCL: Pair Programming With an Oracle"
+title: "Building Pulumi HCL With Two Sources of Truth"
 date: 2026-07-30
 draft: false
-meta_desc: "How we built Pulumi HCL by testing against OpenTofu itself as an oracle, using an existing implementation to define correct behavior."
+meta_desc: "How we test that Pulumi HCL is both a valid Pulumi language and OpenTofu runtime."
 feature_image: feature.png
 authors:
     - ian-wahbe
