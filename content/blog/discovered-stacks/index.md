@@ -3,7 +3,7 @@ title: "Discovered Stacks: One Place for All Your Infrastructure"
 # TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
 date: 2099-01-01
 draft: false
-meta_desc: "Pulumi Cloud now models your CloudFormation stacks and ARM deployments as stacks — with a seamless path to Pulumi IaC."
+meta_desc: "Pulumi Cloud now models your CloudFormation stacks and ARM deployments as Pulumi IaC stacks, with a seamless migration path."
 feature_image: feature.png
 category: product
 authors:
@@ -23,13 +23,13 @@ social:
     bluesky:
 ---
 
-Today we're launching **Discovered Stacks**: Pulumi Cloud now models your AWS CloudFormation stacks and Azure Resource Manager deployments as stacks, right alongside your Pulumi IaC stacks — same pages, same navigation, same model. And when you're ready to bring them under Pulumi management, migration is built in, with every resource tracked until the code provably matches the cloud.
+Today we're launching **Discovered Stacks**: Pulumi Cloud now models your AWS CloudFormation stacks and Azure Resource Manager deployments as stacks, right alongside your Pulumi IaC stacks. And when you're ready to bring them under Pulumi management, migration is built in, with every resource tracked until the code provably matches the cloud.
 
 <!--more-->
 
 ## Why: your infrastructure doesn't live in one tool
 
-Almost nobody's cloud estate is a single technology. There's the CloudFormation that came with the AWS account, the ARM templates from the Azure team, the Terraform from an acquisition, and the Pulumi you're standardizing on. Each tool has its own console, its own grouping, its own idea of state — and no single place shows you everything you run.
+Almost nobody's cloud estate is a single technology. There's the CloudFormation that came with the AWS account, the ARM templates from the Azure team, the Terraform from an acquisition, and the Pulumi you're standardizing on. Each tool has its own console, its own grouping, its own idea of state and no single place shows you everything you run.
 
 That fragmentation is also why migrations stall. Moving a stack to Pulumi has never been the hard part; *knowing where you stand* is. The tracking lives in a spreadsheet, the spreadsheet goes stale the day it's written, and six months later nobody can say which of the 800 resources made it across and which were quietly forgotten.
 
@@ -45,7 +45,7 @@ Each resource shows its **origin type** (`AWS::S3::Bucket`) next to its **Pulumi
 
 When you're ready to migrate, the console is where you plan and build confidence. **Migrate with Neo** hands the job to [Pulumi Neo](/docs/ai/), which imports the resources, reconciles the generated program, and opens a pull request for review. If you prefer local development, **Generate Import Commands** gives you the raw materials, and the same API lets your own agents drive the flow.
 
-Two things hold regardless of the path. Progress is *derived, never declared*: a resource shows as migrated when it actually exists in the target Pulumi stack, not when someone checks a box. And the quality gate is a **zero-diff `pulumi preview`** — the migration is done when the code demonstrably matches your cloud.
+Two things hold regardless of the path. Progress is *derived*: a resource shows as migrated when it actually exists in the target Pulumi stack, not when someone checks a box. And the quality gate is a **zero-diff `pulumi preview`** — the migration is done when the code demonstrably matches your cloud.
 
 Terraform stacks whose state you [store in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) get the same treatment through a new **Migration** tab, with statuses derived from the Terraform state.
 

@@ -22,22 +22,24 @@ A migration is done when three things are true:
 
 ## Before you begin
 
-- A discovered stack, created by an [Insights account scan](/docs/insights/discovery/accounts/) of the cloud account that holds your CloudFormation or ARM resources.
+- A discovered stack, created by a [Discovery scan](/docs/insights/discovery/accounts/) of the cloud account that holds your CloudFormation or ARM resources.
 - A git repository where the generated Pulumi program will live.
 - Cloud credentials that match the source account, ideally through a [Pulumi ESC environment](/docs/esc/).
 
 ## Start a migration
 
-From a discovered stack, the **Actions** menu offers two ways to bring the resources under Pulumi IaC management:
+Every migration is different, and some get complex — it's worth knowing [all the migration tooling Pulumi already offers](/docs/iac/guides/migration/), since importing, coexistence, and conversion each have their place. The Migration tab is where you visualize and plan the work at a glance: start from scratch against an empty target, or select an existing stack that already holds migrated state to pick up where you left off.
+
+From a discovered stack, the **Actions** menu offers two simple ways to bring the resources under Pulumi IaC management:
 
 - **Migrate with Neo** (recommended): [Pulumi Neo](/docs/ai/) runs the whole workflow — it fetches the discovered resources, imports them, reconciles the preview, and opens a pull request with a migration report.
 - **Generate Import Commands**: produce the corresponding [`pulumi import`](/docs/iac/guides/migration/import/) commands to run in your own terminal.
 
-Both paths work against the same resource data and statuses, all of it exposed through a REST API: you can [list a stack's resources and their statuses](#list-resources-and-statuses), drive the imports, and [write back your resolutions](#write-back-resolutions) — so the whole flow can run locally or be driven by your own agent, with the console reflecting progress throughout. A reusable Pulumi agent skill that packages this workflow will be published.
+Both paths work against the same resource data and statuses, all of it exposed through a REST API: you can [list a stack's resources and their statuses](#list-resources-and-statuses), drive the imports, and [write back your resolutions](#write-back-resolutions) — so the whole flow can run locally or be driven by your own agent, with the console reflecting progress throughout.
 
 ## Set up your local project
 
-**Migrate with Neo** scaffolds and wires up the project for you, so you can skip this section. If you chose **Generate Import Commands**, or you're driving the migration with your own agent, you first connect a local Pulumi project to the stack you created in the console — the import commands assume that project already exists.
+**Migrate with Neo** scaffolds and wires up the project for you, so you can skip this section. If you're driving the migration with your own agent, create a new stack to hold the program that will control the imported resources.
 
 ```bash
 # Create a stack
@@ -50,9 +52,9 @@ Set cloud credentials the way you would for any Pulumi program — a [Pulumi ESC
 
 Whether Neo performs the migration or you do, a migration follows the same steps:
 
-1. **Triage.** Fetch the discovered resources and review the status breakdown. Resources marked **Ready** are importable now; **Not found** and **No exact match** resources get resolved along the way (see [below](#resolve-not-found-and-no-exact-match-resources)).
-1. **Import.** Bring resources into the target stack with `pulumi import`, which generates resource code you append to your program. `pulumi import` writes state as it goes, so migration statuses in the console update live as resources land in the target stack.
-1. **Reconcile.** Run `pulumi preview` and fix the code until it reports no changes. A clean preview is the quality gate: it proves the program matches the actual cloud state. When attempting to import resources managed from outside of Pulumi IaC, never run `pulumi up` to make a diff go away — doing so will change the state of your resource in the cloud to match the (in this case, incomplete) code. In this scenario, your resource, as it exists in the cloud, is the source of truth. Freshly imported code often shows a diff on the first preview even when nothing in the cloud changed; see [Tips for a clean migration](#tips-for-a-clean-migration) for the common ones and how to clear them.
+1. **Triage.** Review the status breakdown. Resources marked **Ready** are importable now; **Not found** and **No exact match** resources get resolved along the way (see [below](#resolve-not-found-and-no-exact-match-resources)).
+1. **Import.** Bring resources into the target stack with `pulumi import`, which generates resource code you append to your program.
+1. **Reconcile.** Run `pulumi preview` and fix the code until it reports no changes. A clean preview is the quality gate: it proves the program matches the actual cloud state. Freshly imported code often shows a diff on the first preview even when nothing in the cloud changed; see [Tips for a clean migration](#tips-for-a-clean-migration) for the common ones and how to clear them.
 
 {{% notes "info" %}}
 No `pulumi up` is required to complete a migration. `pulumi import` already syncs the imported state to your state file in Pulumi Cloud. Once all of your resources have been imported with a clean diff, you use `pulumi up` for future changes to the resources which are now managed by Pulumi IaC.
@@ -76,13 +78,11 @@ Some resources need a decision before the accounting is complete. Resolve each o
 
 ## Tips for a clean migration
 
-These apply whether Neo drives the migration or you do. They're the difference between a preview that goes clean in one pass and one that fights you.
-
 ### Import in small, verifiable batches
 
-Import a coherent group of resources, get its preview clean, then move to the next — rather than importing everything at once. Grouping by the source construct works well: for CDK stacks, the construct path; for CloudFormation, the logical stack or a resource-type prefix. Keeping batches to roughly 20 resources keeps each preview easy to read.
+Import a coherent group of resources, get its preview clean, then move to the next — rather than importing everything at once. Grouping by the source construct works well: for CloudFormation, the logical stack or a resource-type prefix. Keeping batches to roughly 20 resources keeps each preview easy to read.
 
-Import the **Ready** resources first. A single resource that can't be imported — a deleted resource, or one whose import ID is wrong — aborts an entire `pulumi import --file` batch, so keep unconfirmed **Not found** resources out of the bulk import and handle them one at a time.
+Import the **Ready** resources first. A single resource that can't be imported — a deleted resource, or one whose import ID is wrong — aborts an entire batch, so keep unconfirmed **Not found** resources out of the bulk import and handle them one at a time.
 
 ### Clear a noisy preview
 
@@ -103,11 +103,11 @@ Generated code is occasionally invalid — for instance an empty nested block th
 
 ### Link an imported resource to its origin
 
-Importing a **Not found** resource can produce a new **Existing** entry while the original stays **Not found** — and this is the common case, not an edge one. Because the origin's state was never confirmed, the console can't automatically match the imported resource back to it (importing with a corrected type does the same thing). [Mark the origin resolved](/docs/insights/discovery/discovered-stacks/#resolving-resources) and link it to the **Existing** entry: that pairs the source with the resource you migrated it into — with a comment, if you want to record why — and keeps the accounting clean.
+When a resource can't be matched automatically to the counterpart you migrated it into, [annotate and link them](/docs/insights/discovery/discovered-stacks/#resolving-resources) — a comment plus a link to the migrated resource keeps a record of the decisions you made.
 
 ### Reorganize the generated code safely
 
-Generated code is flat — every resource at the top level, with hardcoded IDs and no cross-references. Restructuring it (grouping resources into a [component](/docs/iac/concepts/components/), splitting files, replacing literal IDs with references) is worthwhile, but do it *after* the preview is clean, and re-run `pulumi preview` after each change so the zero-diff never breaks.
+Generated code is flat — every resource at the top level, with hardcoded IDs and no cross-references. Restructuring it (grouping resources into a [component](/docs/iac/concepts/components/), splitting files, replacing literal IDs with references) is worthwhile Do it *after* the preview is clean, and re-run `pulumi preview` after each change so the zero-diff never breaks.
 
 Moving a resource under a component changes its [URN](/docs/iac/concepts/resources/names/), which Pulumi reads as delete-and-recreate — destructive for a real resource. Preserve identity with an [alias](/docs/iac/concepts/resources/options/aliases/) to the resource's previous URN:
 
@@ -125,19 +125,13 @@ class Messaging extends pulumi.ComponentResource {
 }
 ```
 
-A clean preview after the move — no replacements or deletions — confirms the alias worked.
-
-## Migrate incrementally
-
-You do not have to migrate a discovered stack in one sitting. Select a subset of resources, land it, and come back later — statuses are computed from the actual target stack state and your resolutions persist, so the picture is current whenever you return, for you and for anyone else looking at the same stack. A large migration becomes a sequence of small, reviewable pull requests instead of one risky cutover.
-
 ## Terraform stacks
 
-[Pulumi-hosted Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/) are not discovered stacks — Pulumi Cloud already holds their state — but they get the same migration experience through a **Migration** tab on the stack. Origin types show the Terraform types, such as `aws_s3_bucket`, and statuses are derived from the state conversion. The workflow from there is identical: triage, import, zero-diff preview, pull request.
+[Pulumi-hosted Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/) are not discovered stacks but they get the same migration experience through a **Migration** tab on the stack. Origin types show the Terraform types, such as `aws_s3_bucket`, and statuses are derived from the state conversion.
 
 ## Use the API
 
-The migration data is available through the Pulumi Cloud REST API, which is what Neo and other agents use. The API is in preview and may change.
+The migration data is available through the Pulumi Cloud REST API, which is what Neo and other agents use.
 
 ### List resources and statuses
 
