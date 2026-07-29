@@ -66,6 +66,10 @@
     {{- else -}}
       {{- $list = printf "the %s editions" (delimit $names ", " ", and ") -}}
     {{- end -}}
-    {{- printf "%s, available on %s. [Compare editions](/pricing/)." $lead $list -}}
+    {{- /* Deep-link to the row this sentence was derived from, unless the
+           feature is hidden and has no row. */ -}}
+    {{- $href := "/pricing/" -}}
+    {{- if not $f.hidden -}}{{- $href = printf "/pricing/#%s" $id -}}{{- end -}}
+    {{- printf "%s, available on %s. [Compare editions](%s)." $lead $list $href -}}
   {{- end -}}
 {{- end -}}

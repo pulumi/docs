@@ -50,15 +50,36 @@
 
 {{/* Add offer/pricing information - only for free products or if pricing is explicitly defined */}}
 {{ if in .RelPermalink "/neo/" }}
-  {{/* Neo is part of paid tiers, starting with Team tier */}}
+  {{/* Neo needs a paid edition, so the aggregate spans every edition that costs
+       something: the numeric prices bound the range, and "Custom" counts toward
+       offerCount without contributing a figure. Derived from
+       data/pulumi_pricing.yaml rather than hardcoded, so live structured data
+       can't drift from the prices on /pricing/. */}}
+  {{ $px := partialCached "pricing/data.html" . "pricing-data" }}
+  {{ $paid := 0 }}
+  {{ $amounts := slice }}
+  {{ range $px.editions }}
+    {{ $price := printf "%v" (.card.price | default "") }}
+    {{ $m := findRESubmatch `^\$([0-9,]+)$` $price }}
+    {{ if $m }}
+      {{ $n := int (replace (index (index $m 0) 1) "," "") }}
+      {{ if gt $n 0 }}{{ $paid = add $paid 1 }}{{ $amounts = $amounts | append $n }}{{ end }}
+    {{ else if $price }}
+      {{ $paid = add $paid 1 }}
+    {{ end }}
+  {{ end }}
+  {{ if not $amounts }}
+    {{ errorf "product-entity.html: no numeric edition prices in data/pulumi_pricing.yaml, so the Neo AggregateOffer has no price range." }}
+  {{ end }}
+  {{ $sorted := sort $amounts }}
   {{ $schema = merge $schema (dict "offers" (dict
     "@type" "AggregateOffer"
     "priceCurrency" "USD"
-    "lowPrice" "40"
-    "highPrice" "400"
+    "lowPrice" (printf "%d" (index $sorted 0))
+    "highPrice" (printf "%d" (index $sorted (sub (len $sorted) 1)))
     "availability" "https://schema.org/InStock"
     "url" "https://www.pulumi.com/pricing/"
-    "offerCount" 3
+    "offerCount" $paid
   )) }}
 {{ else }}
   {{/* Generic product offer - avoid hardcoding prices */}}

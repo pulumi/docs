@@ -175,7 +175,9 @@
 
             {{ range $feature := .features }}
             {{ if not $feature.hidden }}
-            <div class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 grid {{ $cols }} gap-x-4 {{ $colsMd }} md:items-center">
+            {{/* The feature id doubles as the row's anchor, so an availability
+                 marker in the docs can deep-link to the row it derives from. */}}
+            <div id="{{ $feature.id }}" class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 scroll-mt-32 grid {{ $cols }} gap-x-4 {{ $colsMd }} md:items-center">
                 <div class="{{ $labelSpan }} md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
                     {{ if $feature.link }}<a class=" underline-offset-5 underline decoration-dashed decoration-violet-300 hover:text-violet-primary hover:decoration-solid" href="{{ $feature.link }}">{{ $feature.name }}</a
                     >{{ else }}{{ $feature.name }}{{ end }}
