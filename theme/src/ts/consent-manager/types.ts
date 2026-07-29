@@ -33,7 +33,7 @@ declare global {
 export interface SegmentAnalytics {
     load: (writeKey: string, options?: { integrations?: Record<string, boolean> }) => void;
     addSourceMiddleware: (middleware: (args: MiddlewareArgs) => void) => void;
-    identify: (traits: Record<string, unknown>) => void;
+    identify: (userIdOrTraits: string | Record<string, unknown>, traits?: Record<string, unknown>) => void;
     initialized?: boolean;
 }
 

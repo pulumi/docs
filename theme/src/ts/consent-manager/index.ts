@@ -3,6 +3,7 @@ import { inEU } from "./eu-detection";
 import { getPreferences, savePreferences } from "./cookies";
 import { fetchDestinations, conditionallyLoadAnalytics } from "./analytics";
 import { renderBanner, renderPreferencesDialog } from "./banner";
+import { getUserInfo } from "./user";
 
 let container: HTMLElement | null = null;
 let destinations: Destination[] = [];
@@ -11,6 +12,22 @@ let config: ConsentManagerConfig;
 
 function clearContainer() {
     if (container) container.innerHTML = "";
+}
+
+// Identifies the signed-in user to Segment, sending every field from the auth
+// cookie as traits. Calls queued on the analytics stub are replayed once
+// analytics loads, so this stays gated behind the consent flow: nothing is
+// sent unless conditionallyLoadAnalytics() has (or later does) call load().
+// extraTraits lets callers attach context (e.g. tracking preferences).
+function identifyUser(extraTraits: Record<string, unknown> = {}) {
+    if (!window.analytics) return;
+    const user = getUserInfo();
+    const traits = { ...(user ? user.traits : {}), ...extraTraits };
+    if (user) {
+        window.analytics.identify(user.userId, traits);
+    } else if (Object.keys(traits).length > 0) {
+        window.analytics.identify(traits);
+    }
 }
 
 function showBanner() {
@@ -36,7 +53,7 @@ function showPreferences() {
         config,
         destinations,
         current,
-        (prefs) => {
+        prefs => {
             saveAndLoad(prefs);
             if (dialog.parentNode) dialog.parentNode.removeChild(dialog);
         },
@@ -59,18 +76,9 @@ function saveAndLoad(destinationPreferences: Record<string, boolean>) {
     savePreferences(destinationPreferences);
     clearContainer();
 
-    conditionallyLoadAnalytics(
-        config.writeKey,
-        destinations,
-        destinationPreferences,
-        isConsentRequired,
-    );
+    conditionallyLoadAnalytics(config.writeKey, destinations, destinationPreferences, isConsentRequired);
 
-    if (window.analytics) {
-        window.analytics.identify({
-            destinationTrackingPreferences: destinationPreferences,
-        });
-    }
+    identifyUser({ destinationTrackingPreferences: destinationPreferences });
 }
 
 function openConsentManager() {
@@ -98,12 +106,9 @@ async function init() {
 
     const { destinationPreferences } = getPreferences();
 
-    conditionallyLoadAnalytics(
-        config.writeKey,
-        destinations,
-        destinationPreferences,
-        isConsentRequired,
-    );
+    conditionallyLoadAnalytics(config.writeKey, destinations, destinationPreferences, isConsentRequired);
+
+    identifyUser();
 
     if (isConsentRequired && !destinationPreferences) {
         showBanner();
