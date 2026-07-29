@@ -33,7 +33,7 @@ If you're a member of a SAML-based Pulumi organization, you can sign in to [your
 
 ## Connect SAML SSO to an existing account
 
-If you already have a Pulumi account and need to access a SAML-based organization, connect that organization's SAML SSO identity to your existing account rather than signing in to the organization directly. Signing in directly can return an "Email already in use" screen when your email already belongs to an account, and that screen cannot resolve the conflict on its own.
+If you already have a Pulumi account and need to access a SAML-based organization, connect that organization's SAML SSO identity to your existing account rather than signing in to the organization directly. Signing in directly can produce an "Email already in use" error when your email already belongs to an account, and that screen cannot resolve the conflict on its own.
 
 To connect a SAML SSO identity to your existing account:
 
