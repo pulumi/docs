@@ -75,7 +75,7 @@ With the REST API, a single [`PATCH`](/docs/reference/cloud-rest-api/policy-grou
 
 With Pulumi IaC, each attachment resource manages a single membership, so you can declare one against a default group without taking ownership of the group itself. The provider has no resource for attaching a policy pack to an existing policy group, so policy pack membership on a default group has to be managed from the console, the CLI, or the REST API. The provider also cannot rename a default group or change its type: both properties force a replacement on the `PolicyGroup` resource, and replacing a group means deleting it first, which Pulumi Cloud rejects for a default group.
 
-Because `default-policy-group` cannot be deleted, renamed, or converted to an audit group, removing its policy packs is the only way to stop it from enforcing anything.
+Because `default-policy-group` cannot be deleted, renamed, or converted to an audit group, what you change to stop it from blocking deployments is its policy packs: remove them, disable them with [`pulumi policy disable`](/docs/iac/cli/commands/pulumi_policy_disable/), or set their policies to advisory.
 
 {{% notes type="warning" %}}
 Do not manage a default policy group with the [`PolicyGroup`](/registry/packages/pulumiservice/api-docs/policygroup/) resource. That resource owns the group's lifecycle, so `pulumi destroy` attempts to delete it, and its `policyPacks` property replaces the group's entire list of policy packs. Use the attachment resources to manage membership instead.
