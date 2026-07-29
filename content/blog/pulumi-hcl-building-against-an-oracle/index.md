@@ -1,8 +1,8 @@
 ---
-title: "Building Pulumi HCL: Pair programming with an Oracle"
+title: "Building Pulumi HCL: Pair Programming With an Oracle"
 date: 2026-07-30
 draft: false
-meta_desc: "How we built Pulumi HCL by testing against Terraform itself as an oracle, using an existing implementation to define correct behavior."
+meta_desc: "How we built Pulumi HCL by testing against OpenTofu itself as an oracle, using an existing implementation to define correct behavior."
 feature_image: feature.png
 authors:
     - ian-wahbe
@@ -20,11 +20,11 @@ social:
     bluesky:
 ---
 
-Typing out code has never been the hard part of programming, any more than my penmanship is what's stopping me from writing the next great American novel. The hard part is making sure what you wrote is correct. This is especially true for a project like adding HCL support to Pulumi (in preview now, try it at [pulumi-labs/pulumi-hcl](https://github.com/pulumi-labs/pulumi-hcl)). Users already know exactly what they want their [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) to do, and when they start using those modules in their Pulumi programs the semantics are clear. Terraform modules consumed from Pulumi should do exactly the same thing as Terraform modules consumed from Terraform. At the same time, if Pulumi supports HCL then HCL needs to be fully incorporated into the Pulumi ecosystem, and we need to ensure we can correctly express [Pulumi concepts](https://www.pulumi.com/docs/iac/concepts/) in HCL. The way we do both is exhaustive testing, but the test strategy for *ensuring Pulumi HCL is Terraform compatible* is different from the one for *ensuring HCL is Pulumi native*, and I want to talk through each. Since this is a blog post in 2026, this will touch on AI. You have been warned.
+Typing out code has never been the hard part of programming, any more than my penmanship is what's stopping me from writing the next great American novel. The hard part is making sure what you wrote is correct. This is especially true for a project like adding HCL support to Pulumi (in preview now, try it at [pulumi-labs/pulumi-hcl](https://github.com/pulumi-labs/pulumi-hcl)). Users already know exactly what they want their [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) to do, and when they start using those modules in their Pulumi programs the semantics are clear. Terraform modules consumed from Pulumi should do exactly the same thing as Terraform modules consumed from Terraform. At the same time, if Pulumi supports HCL then HCL needs to be fully incorporated into the Pulumi ecosystem, and we need to ensure we can correctly express [Pulumi concepts](https://www.pulumi.com/docs/iac/concepts/) in HCL. The way we do both is exhaustive testing, but the test strategy for *ensuring Pulumi HCL is OpenTofu compatible* is different from the one for *ensuring HCL is Pulumi native*, and I want to talk through each. Since this is a blog post in 2026, this will touch on AI. You have been warned.
 
 <!--more-->
 
-The key question with putting together any test suite over a complex program is where to source the test corpus from. Writing tests, much like writing code, is easy. Assembling an effective test corpus is much harder. I'd argue that a good test corpus has 3 properties: it's comprehensive, targeted, and correct:
+The key question with putting together any test suite over a complex program is where to source the test corpus from. Writing tests, much like writing code, is easy. Assembling an effective test corpus is much harder. I'd argue that a good test corpus has three properties: it's comprehensive, targeted, and correct:
 
 ### Comprehensive
 
@@ -40,7 +40,7 @@ Correct means that the test asserts the correct behavior. Incidental behavior sh
 
 ## Pulumi language: Conformance testing
 
-Pulumi supports 6 languages (7 with HCL), and each language needs to do the same thing. Our solution to this problem is **conformance tests**: a language-agnostic test suite that can validate a Pulumi language is compliant. Each test has 3 components:
+Pulumi supports six languages (seven with HCL), and each language needs to do the same thing. Our solution to this problem is **conformance tests**: a language-agnostic test suite that can validate a Pulumi language is compliant. Each test has three components:
 
 - a PCL (Pulumi's internal codegen language) program
 - a list of Pulumi providers
@@ -159,11 +159,11 @@ output "mixed" {
 }
 ```
 
-Each test locks what it observes against OpenTofu's behavior, effectively making *correctness* a built-in property of the test framework. The challenge for tfcompat tests is *comprehensiveness* & *targetedness*. During development, we handle this by pairing each tfcompat bug fix & new feature with at least one tfcompat test. The test suite is not yet comprehensive, but we are getting there. Targetedness is alas left purely to human judgment, as its a form of taste.
+Each test locks what it observes against OpenTofu's behavior, effectively making *correctness* a built-in property of the test framework. The challenge for tfcompat tests is *comprehensiveness* & *targetedness*. During development, we handle this by pairing each tfcompat bug fix & new feature with at least one tfcompat test. The test suite is not yet comprehensive, but we are getting there. Targetedness is, alas, left purely to human judgment, as it's a form of taste.
 
 #### Building out the tfcompat test corpus
 
-Because tests are correct by construction, we can ask our tireless LLM assistants to find failing tests. This is productive because we don't need to filter out false positives or negatives, the LLM can see if the test is correct or not. Here is my Claude prompt verbatim:
+Because tests are correct by construction, we can ask our tireless LLM assistants to find failing tests. This is productive because we don't need to filter out false positives or negatives; the LLM can see if the test is correct or not. Here is my Claude prompt verbatim:
 
 > I'd like you to do a pass trying to find bugs. You will prove each bug with a genuine failing tfcompat test. Start with 10 sub-agents. Bugs should not be duplicates and bugs should not reflect existing issues. Each failure should be stood up as a draft PR with just the failing test added. These PRs will fail CI. That is intentional. Don't try to fix the bugs you solved. Keep the sub-agents running until you have found 10 failures. You are responsible for validating that the bugs are real and ensuring that the sub-agents do not create duplicate bugs, so you should create the PRs directly.
 
