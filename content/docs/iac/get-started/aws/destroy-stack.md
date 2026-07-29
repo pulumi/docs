@@ -7,6 +7,7 @@ weight: 8
 menu:
     iac:
         name: Cleanup & destroy
+        identifier: aws-get-started.destroy-stack
         parent: aws-get-started
         weight: 8
 
