@@ -786,27 +786,26 @@ function checkChangelogFilename(date, fullPath) {
 }
 
 /**
- * The four pricing tiers (see content/pricing/_index.md). A changelog entry's
- * optional `tiers:` front matter may only draw from this closed set. Kept in
- * sync by hand — the pricing tiers change rarely.
- */
-const CHANGELOG_TIERS = ["Free", "Team", "Enterprise", "Business Critical"];
-
-/**
- * checkChangelogTiers validates the optional `tiers:` front matter on individual
- * changelog entries: it must be a YAML array whose values are all drawn from the
- * four pricing tiers (CHANGELOG_TIERS). Authors list every tier the feature is
- * available in; since a lower tier implies the tiers above it, that means the
- * lowest applicable tier and all tiers above it. The legacy singular `tier:`
- * scalar is rejected in favor of `tiers:`. Applies only to entry pages, not the
+ * checkChangelogEditions validates the optional `editions:` front matter on
+ * individual changelog entries: it must be a YAML array of edition ids from
+ * data/pulumi_pricing.yaml. Templates look the ids up to render the display
+ * name, so an entry writes `business-critical` and the badge reads "Business
+ * Critical". Authors list every edition the feature is available in; since a
+ * lower edition implies the ones above it, that means the lowest applicable
+ * edition and all editions above it. Applies only to entry pages, not the
  * section `_index.md`.
  *
- * @param {*} tiers The front matter `tiers` value.
+ * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
+ * "tier" is not a word the product uses, and the old list carried a `Free`
+ * value for an edition that doesn't exist (the free edition is Individual).
+ *
+ * @param {*} editions The front matter `editions` value.
+ * @param {*} tiers The front matter `tiers` value (legacy; rejected if present).
  * @param {*} tier The front matter `tier` value (legacy; rejected if present).
  * @param {string} fullPath The absolute path of the file being linted.
  * @returns {string|null} An error message, or null when valid/not applicable.
  */
-function checkChangelogTiers(tiers, tier, fullPath) {
+function checkChangelogEditions(editions, tiers, tier, fullPath) {
     const normalized = fullPath.replace(/\\/g, "/");
     const isChangelogEntry =
         normalized.includes("/content/releases/changelog/") &&
@@ -815,25 +814,26 @@ function checkChangelogTiers(tiers, tier, fullPath) {
         return null;
     }
 
-    if (tier !== undefined) {
-        return "Changelog `tier:` has been replaced by `tiers:`, a YAML array (e.g. `tiers:` then `    - Enterprise`). List every tier the feature is available in — the lowest applicable tier and all tiers above it.";
+    if (tier !== undefined || tiers !== undefined) {
+        const old = tier !== undefined ? "tier:" : "tiers:";
+        return `Changelog \`${old}\` has been replaced by \`editions:\`, a YAML array of edition ids (e.g. \`editions:\` then \`    - enterprise\`). List every edition the feature is available in — the lowest applicable edition and all editions above it. Ids come from data/pulumi_pricing.yaml: ${PRICING.editions.join(", ")}.`;
     }
-    if (tiers === undefined) {
+    if (editions === undefined) {
         return null;
     }
-    if (!Array.isArray(tiers)) {
-        return "Changelog `tiers:` must be a YAML array (e.g. `tiers:` then `    - Enterprise`), not a single value.";
+    if (!Array.isArray(editions)) {
+        return "Changelog `editions:` must be a YAML array (e.g. `editions:` then `    - enterprise`), not a single value.";
     }
-    const invalid = tiers.filter(function (t) {
-        return !CHANGELOG_TIERS.includes(t);
+    const invalid = editions.filter(function (e) {
+        return !PRICING.editions.includes(e);
     });
     if (invalid.length > 0) {
         const quoted = invalid
-            .map(function (t) {
-                return "'" + t + "'";
+            .map(function (e) {
+                return "'" + e + "'";
             })
             .join(", ");
-        return "Changelog `tiers:` value(s) " + quoted + " not allowed. Use only the pricing tiers: " + CHANGELOG_TIERS.join(", ") + ".";
+        return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'business-critical', not 'Business Critical'.";
     }
     return null;
 }
@@ -1077,7 +1077,7 @@ function searchForMarkdown(paths) {
                     caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
-                    changelogTiers: checkChangelogTiers(obj.tiers, obj.tier, fullPath),
+                    changelogEditions: checkChangelogEditions(obj.editions, obj.tiers, obj.tier, fullPath),
                     pulumiCloudValue: checkPulumiCloudValue(obj.pulumi_cloud),
                     pulumiCloudShortcode: checkPulumiCloudShortcode(content),
                 };
@@ -1250,10 +1250,10 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.changelogFilename,
                 });
             }
-            if (frontMatterErrors.changelogTiers) {
+            if (frontMatterErrors.changelogEditions) {
                 lintErrors.push({
                     lineNumber: "File Header",
-                    ruleDescription: frontMatterErrors.changelogTiers,
+                    ruleDescription: frontMatterErrors.changelogEditions,
                 });
             }
             if (frontMatterErrors.pulumiCloudValue) {

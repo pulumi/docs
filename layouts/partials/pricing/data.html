@@ -10,6 +10,7 @@
 
     editions    the editions list, verbatim and in file order
     order       edition id -> ordinal (0-based)
+    names       edition id -> display name ("business-critical" -> "Business Critical")
     first       id of the lowest edition (the one that gates nothing)
     groups      the groups list, each with a `categories` slice attached
     categories  the categories list, each with `features` replaced by the
@@ -41,10 +42,12 @@
 
 {{- $editions := $px.editions -}}
 {{- $order := dict -}}
+{{- $names := dict -}}
 {{- $editionIds := slice -}}
 {{- range $i, $e := $editions -}}
   {{- if not $e.id -}}{{- errorf "%s: editions[%d] has no id." $where $i -}}{{- end -}}
   {{- $order = merge $order (dict $e.id $i) -}}
+  {{- $names = merge $names (dict $e.id $e.name) -}}
   {{- $editionIds = $editionIds | append $e.id -}}
 {{- end -}}
 {{- $editionList := delimit $editionIds ", " -}}
@@ -143,6 +146,7 @@
 {{- return (dict
     "editions" $editions
     "order" $order
+    "names" $names
     "first" (index $editionIds 0)
     "groups" $groups
     "categories" $categories
