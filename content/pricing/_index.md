@@ -119,236 +119,129 @@ customers:
 comparison_table:
     sections:
         ####
-        # Products
+        # Feature comparison, grouped to match the technical docs product areas
+        # (https://www.pulumi.com/docs/): IaC, Deployments & Workflows,
+        # Secrets & Configuration, Insights & Governance,
+        # Internal Developer Platform, Infrastructure AI, Administration.
         ####
         - header: Product
           tables:
-            # Pulumi IaC table
-            - header: Infrastructure as Code
-              icon: custom/pulumi-iac
-              rows:
-                - title: On-demand resource price
-                  items:
-                    - content: Free
-                    - content: $0.00025/hour
-                      subtext: $0.1825/month
-                    - content: Starting at $0.0005/hour
-                      subtext: $0.365/month
-                    - content: Custom
-                - title: Commitment pricing
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Self-hosting
-                  link: /product/self-hosted/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                - title: Updates
-                  items:
-                    - content: Unlimited
-                    - content: Unlimited
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Concurrent stack updates
-                  items:
-                    - content: 1
-                    - content: 5
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Restore deleted stacks
-                  link: /blog/restore-stacks
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Update history
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: CI/CD integrations
-                  link: /docs/iac/packages-and-automation/continuous-delivery/
-                  items:
-                    - content: Many
-                      tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
-                    - content: Many
-                      tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
-                    - content: Customized for you
-                    - content: Customized for you
-                - title: Drift detection
-                  link: /docs/platform/deployments/drift/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Time-to-live stacks
-                  link: /docs/platform/deployments/ttl/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Scheduled deployments
-                  link: /docs/platform/deployments/schedules/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: GitHub Enterprise Server support
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                - title: Webhooks
-                  link: /docs/platform/webhooks/
-                  items:
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: REST API
-                  link: /docs/pulumi-cloud/cloud-rest-api/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Automation API
-                  link: /automation/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Pulumi-service provider
-                  link: /registry/packages/pulumiservice/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Members
-                  items:
-                    - content: 1
-                    - content: Up to 10
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Admins
-                  items:
-                    - content: _blank
-                    - content: 1
-                    - content: Unlimited
-                    - content: Unlimited
-                - title: Organizations
-                  link: /docs/pulumi-cloud/admin/organizations/
-                  items:
-                    - content: _blank
-                    - content: 1
-                    - content: Multiple supported
-                    - content: Multiple supported
-                - title: Identity providers
-                  link: /docs/pulumi-cloud/accounts
-                  items:
-                    - content: GitHub, GitLab, Atlassian
-                    - content: GitHub, GitLab, Atlassian
-                    - content: GitHub, GitLab, Atlassian, SAML/SSO
-                    - content: GitHub, GitLab, Atlassian, SAML/SSO
-                - title: SAML/SSO
-                  link: /docs/pulumi-cloud/access-management/saml/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Many
-                      tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
-                    - content: Many
-                      tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
-                - title: SCIM integration
-                  link: /docs/pulumi-cloud/access-management/scim/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                - title: OIDC support
-                  link: /docs/pulumi-cloud/oidc/
-                  items:
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                    - content: _check
-                - title: Create and manage teams
-                  link: /docs/pulumi-cloud/access-management/teams/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Role-based access control (RBAC)
-                  link: /docs/pulumi-cloud/admin/organizations/#organization-roles
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Custom roles
-                  link: /docs/administration/access-identity/rbac/roles
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: Up to 25
-                    - content: Unlimited
-                - title: Tag-based access control
-                  link: /blog/expanding-pulumi-iam-custom-permissions/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Assign custom roles to users and teams
-                  link: /blog/expanding-pulumi-iam-custom-permissions/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Organization and team access tokens
-                  link: /docs/pulumi-cloud/access-management/organization-access-tokens/
-                  tooltip: These are machine access tokens that are scoped to the organization or team level
-                  items:
-                    - content: _blank
-                    - content: _check
-                      tooltip: Organization access token only
-                    - content: _check
-                    - content: _check
-                - title: Audit logs
-                  link: /docs/pulumi-cloud/audit-logs/
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-                    - content: _check
-                - title: Automated log export to S3
-                  link: /docs/pulumi-cloud/audit-logs#automated-export
-                  items:
-                    - content: _blank
-                    - content: _blank
-                    - content: _blank
-                    - content: _check
-
-        ## Key Capabilities section
-        - header: Key Capabilities
-          tables:
-            ## Pulumi ESC table
+          - header: Infrastructure as Code
+            icon: custom/pulumi-iac
+            rows:
+              - title: On-demand resource price
+                items:
+                  - content: Free
+                  - content: $0.00025/hour
+                    subtext: $0.1825/month
+                  - content: Starting at $0.0005/hour
+                    subtext: $0.365/month
+                  - content: Custom
+              - title: Commitment pricing
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Self-hosting
+                link: /product/self-hosted/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+              - title: Updates
+                items:
+                  - content: Unlimited
+                  - content: Unlimited
+                  - content: Unlimited
+                  - content: Unlimited
+              - title: Concurrent stack updates
+                items:
+                  - content: 1
+                  - content: 5
+                  - content: Unlimited
+                  - content: Unlimited
+              - title: Restore deleted stacks
+                link: /blog/restore-stacks
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Update history
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: REST API
+                link: /docs/pulumi-cloud/cloud-rest-api/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Automation API
+                link: /automation/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Pulumi-service provider
+                link: /registry/packages/pulumiservice/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+          - header: Deployments & Workflows
+            icon: phosphor/git-pull-request
+            rows:
+              - title: CI/CD integrations
+                link: /docs/iac/packages-and-automation/continuous-delivery/
+                items:
+                  - content: Many
+                    tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+                  - content: Many
+                    tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+                  - content: Customized for you
+                  - content: Customized for you
+              - title: Drift detection
+                link: /docs/platform/deployments/drift/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Time-to-live stacks
+                link: /docs/platform/deployments/ttl/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Scheduled deployments
+                link: /docs/platform/deployments/schedules/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: GitHub Enterprise Server support
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+              - title: Webhooks
+                link: /docs/platform/webhooks/
+                items:
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+                  - content: _check
           - header: Secrets & Configuration
             icon: custom/pulumi-secrets
             rows:
@@ -466,8 +359,6 @@ comparison_table:
                   - content: _check
                   - content: _check
                   - content: _check
-
-          ## Pulumi Insights Table
           - header: Insights & Governance
             icon: custom/pulumi-insights
             rows:
@@ -557,10 +448,17 @@ comparison_table:
                   - content: Advisory & Mandatory
                   - content: Advisory & Mandatory
                   - content: Advisory, Mandatory & Remediation
-          ## Pulumi Neo Table
+          - header: Internal Developer Platform
+            icon: custom/pulumi-idp
+            rows:
+              - title: Developer portal
+                items:
+                  - content: Host public templates
+                  - content: Host public templates
+                  - content: Host private templates
+                  - content: Host private templates
           - header: Infrastructure AI
             icon: custom/pulumi-neo
-            icon_weight: fill
             rows:
               - title: Pulumi Neo
                 link: /docs/ai/neo/
@@ -605,16 +503,116 @@ comparison_table:
                   - content: _blank
                   - content: _check
                   - content: _check
-          ## Pulumi Workflow table
-          - header: Internal Developer Platform
-            icon: custom/pulumi-idp
+          - header: Administration
+            icon: phosphor/shield-check
             rows:
-              - title: Developer portal
+              - title: Members
                 items:
-                  - content: Host public templates
-                  - content: Host public templates
-                  - content: Host private templates
-                  - content: Host private templates
+                  - content: 1
+                  - content: Up to 10
+                  - content: Unlimited
+                  - content: Unlimited
+              - title: Admins
+                items:
+                  - content: _blank
+                  - content: 1
+                  - content: Unlimited
+                  - content: Unlimited
+              - title: Organizations
+                link: /docs/pulumi-cloud/admin/organizations/
+                items:
+                  - content: _blank
+                  - content: 1
+                  - content: Multiple supported
+                  - content: Multiple supported
+              - title: Identity providers
+                link: /docs/pulumi-cloud/accounts
+                items:
+                  - content: GitHub, GitLab, Atlassian
+                  - content: GitHub, GitLab, Atlassian
+                  - content: GitHub, GitLab, Atlassian, SAML/SSO
+                  - content: GitHub, GitLab, Atlassian, SAML/SSO
+              - title: SAML/SSO
+                link: /docs/pulumi-cloud/access-management/saml/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Many
+                    tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+                  - content: Many
+                    tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+              - title: SCIM integration
+                link: /docs/pulumi-cloud/access-management/scim/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+              - title: OIDC support
+                link: /docs/pulumi-cloud/oidc/
+                items:
+                  - content: _check
+                  - content: _check
+                  - content: _check
+                  - content: _check
+              - title: Create and manage teams
+                link: /docs/pulumi-cloud/access-management/teams/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Role-based access control (RBAC)
+                link: /docs/pulumi-cloud/admin/organizations/#organization-roles
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Custom roles
+                link: /docs/administration/access-identity/rbac/roles
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: Up to 25
+                  - content: Unlimited
+              - title: Tag-based access control
+                link: /blog/expanding-pulumi-iam-custom-permissions/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Assign custom roles to users and teams
+                link: /blog/expanding-pulumi-iam-custom-permissions/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Organization and team access tokens
+                link: /docs/pulumi-cloud/access-management/organization-access-tokens/
+                tooltip: These are machine access tokens that are scoped to the organization or team level
+                items:
+                  - content: _blank
+                  - content: _check
+                    tooltip: Organization access token only
+                  - content: _check
+                  - content: _check
+              - title: Audit logs
+                link: /docs/pulumi-cloud/audit-logs/
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
+                  - content: _check
+              - title: Automated log export to S3
+                link: /docs/pulumi-cloud/audit-logs#automated-export
+                items:
+                  - content: _blank
+                  - content: _blank
+                  - content: _blank
+                  - content: _check
           - header: Support
             icon: phosphor/lifebuoy
             rows:
