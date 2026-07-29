@@ -17,9 +17,22 @@ schema_type: auto
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter:
-    linkedin:
-    bluesky:
+    twitter: |
+        Pulumi Cloud is now a GA backend for Terraform state, HCL just went GA as a native Pulumi language, and Terraform modules import without a rewrite.
+
+        You don't have to rip out Terraform to build for the agentic era. Here's what shipped.
+    linkedin: |
+        Last December, Joe Duffy laid out Pulumi's vision to support all of your infrastructure as code, including Terraform and HCL. Today that vision ships.
+
+        Pulumi Cloud is now a GA backend for Terraform state — remote plans and applies, manual approvals, RBAC, and Neo code reviews all work against your existing Terraform stacks. HCL is GA as a first-class Pulumi language, and Terraform modules now import natively into Pulumi programs.
+
+        None of this requires rewriting what you already have. And if you're mid-transition, there's still a credit escape hatch, a free IaC modernization workshop, and an ROI calculation walkthrough with our team.
+
+        Here's the full breakdown of what shipped today.
+    bluesky: |
+        Teams running Terraform don't have to rip it out to move into the agentic infrastructure era. Pulumi Cloud is now GA as a Terraform state backend, HCL is GA as a native Pulumi language, and Terraform modules import without changes.
+
+        Here's what shipped today.
 ---
 
 At Pulumi, we are building the platform for agentic infrastructure. Pulumi Cloud provides the guardrails and enterprise readiness needed to safely move fast in this new era. While we are seeing extraordinary adoption — over 40% of our users now manage infrastructure using AI agents — we know many organizations are at different phases in their AI journey and have to balance building for the future with maintaining their existing infrastructure as code (IaC) solutions like Terraform. Today, we are launching three ways that Pulumi lets you avoid trading off building for the future against building for today. You don't have to rip out Terraform to enter the agentic era — Pulumi Cloud brings agentic infrastructure to the IaC estate you already have.
