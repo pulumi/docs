@@ -40,11 +40,11 @@ const CASE_STUDY_INDUSTRIES = (function () {
 
 /**
  * Allowed Pulumi Cloud edition ids, loaded once from the single source of truth
- * at data/pulumi_editions.yaml. See that file's header for the rules.
+ * at data/pulumi_pricing.yaml. See that file's header for the rules.
  */
 const PULUMI_EDITIONS = (function () {
     try {
-        const p = path.resolve(__dirname, "../../data/pulumi_editions.yaml");
+        const p = path.resolve(__dirname, "../../data/pulumi_pricing.yaml");
         const doc = yaml.load(fs.readFileSync(p, "utf8"));
         return (doc.editions || []).map(e => e.id);
     } catch (e) {
@@ -796,7 +796,7 @@ function checkChangelogTiers(tiers, tier, fullPath) {
 /**
  * checkPulumiCloudValue validates the optional `pulumi_cloud:` front matter, which
  * marks a page as a Pulumi Cloud feature that needs a paid edition. The only
- * allowed values are edition ids from data/pulumi_editions.yaml, Team or above:
+ * allowed values are edition ids from data/pulumi_pricing.yaml, Team or above:
  *
  *   pulumi_cloud: team | enterprise | business-critical
  *
@@ -822,11 +822,11 @@ function checkPulumiCloudValue(cloud) {
         return null;
     }
     if (typeof cloud === "boolean") {
-        return `Invalid 'pulumi_cloud' value: ${cloud}. Name the edition a reader has to buy (${PULUMI_EDITIONS.slice(1).join(", ")}), or drop the key — an ungated page carries no marker. See data/pulumi_editions.yaml.`;
+        return `Invalid 'pulumi_cloud' value: ${cloud}. Name the edition a reader has to buy (${PULUMI_EDITIONS.slice(1).join(", ")}), or drop the key — an ungated page carries no marker. See data/pulumi_pricing.yaml.`;
     }
     // Slice off the lowest edition: it gates nothing, so it is never a marker.
     if (!PULUMI_EDITIONS.slice(1).includes(cloud)) {
-        return `Invalid 'pulumi_cloud' value: '${cloud}'. Use an edition id from data/pulumi_editions.yaml (${PULUMI_EDITIONS.slice(1).join(", ")}).`;
+        return `Invalid 'pulumi_cloud' value: '${cloud}'. Use an edition id from data/pulumi_pricing.yaml (${PULUMI_EDITIONS.slice(1).join(", ")}).`;
     }
     return null;
 }

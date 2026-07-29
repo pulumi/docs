@@ -4,7 +4,7 @@
   (llms.txt, the .md page renditions) can't drift.
 
   Expects a dict:
-    edition  optional; an id from data/pulumi_editions.yaml, Team or higher.
+    edition  optional; an id from data/pulumi_pricing.yaml, Team or higher.
              Empty means the feature is on every edition — only the section-level
              shortcode uses that, since on a mixed page the reader can't tell
              whether a section needs Pulumi Cloud at all.
@@ -18,7 +18,7 @@
   {{- printf "%s, available on all editions." $lead -}}
 {{- else -}}
   {{- $id := printf "%v" .edition -}}
-  {{- $all := site.Data.pulumi_editions.editions -}}
+  {{- $all := site.Data.pulumi_pricing.editions -}}
   {{- $index := -1 -}}
   {{- $ids := slice -}}
   {{- range $i, $e := $all -}}
