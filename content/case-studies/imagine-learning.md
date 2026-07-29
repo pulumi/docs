@@ -41,7 +41,7 @@ sections:
 
 Imagine Learning is a leading K-12 education technology company serving millions of students nationwide. Their applications support diverse learning activities across multiple subjects and grade levels, requiring numerous environments for development, testing, staging, and production. As the company has grown, so has the need for a scalable, reliable infrastructure to support their educational technology solutions.
 
-## Scaling Education Infrastructure for the Next Generation
+## Scaling education infrastructure for the next generation
 
 As a technology company focused on K-12 education, Imagine Learning's infrastructure needs are both complex and critical. Their existing Internal Developer Platform struggled to keep pace with evolving demands, creating several challenges:
 
@@ -57,13 +57,13 @@ As a technology company focused on K-12 education, Imagine Learning's infrastruc
 
 These challenges were particularly acute because of Imagine Learning's commitment to educational excellence. Any downtime or inconsistency could directly impact teachers and students who rely on their platforms daily.
 
-## Building a GitOps Bridge with Pulumi
+## Building a GitOps bridge with Pulumi
 
 After evaluating various options, Imagine Learning implemented what Romano calls the "GitOps bridge pattern" using Pulumi, ArgoCD, and GitHub to create a modern, scalable platform.
 
 {{< youtube "1Q3XPmenthg" >}}
 
-### Implementation Details
+### Implementation details
 
 Imagine Learning's solution comprises several integrated components that work together to create a seamless workflow from infrastructure provisioning to application deployment:
 
@@ -84,17 +84,17 @@ The team chose Pulumi for several compelling reasons:
 - **Comprehensive visibility:** The Pulumi UI provided auditing capabilities and state management, making it easy to track changes and troubleshoot issues.
 - **Multi-region support:** They could easily deploy to multiple AWS regions from a single stack, supporting their geographic distribution needs.
 
-## Accelerated Delivery and Enhanced Operational Excellence
+## Accelerated delivery and enhanced operational excellence
 
 By implementing the GitOps bridge pattern with Pulumi and ArgoCD, Imagine Learning achieved transformative improvements in their infrastructure management capabilities:
 
-### Dramatically Accelerated Deployments
+### Dramatically accelerated deployments
 
 The most immediate and striking benefit was the dramatic reduction in deployment times, directly addressing their previous challenge of complex, fragmented deployment processes. "We have super fast deployments now to all of our environments at once," says Romano. "If I need to make a change, for example to an IAM role that needs to be used in Kubernetes, I can get that deployed out within probably 5-10 minutes."
 
 This represents a dramatic improvement over their previous workflow, where similar changes could take days or weeks to propagate across all environments. Creating entirely new environments has also been transformed. "Building new environments takes hours now; it doesn't take weeks or even months," explains Romano.
 
-### Enhanced Visibility and Confidence
+### Enhanced visibility and confidence
 
 The combination of Pulumi and GitOps methodologies has provided unprecedented visibility into their infrastructure, solving their previous challenge of limited infrastructure visibility:
 
@@ -102,7 +102,7 @@ The combination of Pulumi and GitOps methodologies has provided unprecedented vi
 - **Built-in auditing:** "I get built-in auditing in the Pulumi UI of changes going on. I now have an easy way to check what were the changes that went out and what actually changed according to Pulumi."
 - **State management:** "Pulumi manages state; it has all the information about what is currently deployed and what is the state of that resource."
 
-### Reduced Cognitive Load and Context Switching
+### Reduced cognitive load and context switching
 
 The platform team has experienced a significant reduction in cognitive overhead, addressing their challenge of specialized language requirements:
 
@@ -112,7 +112,7 @@ The platform team has experienced a significant reduction in cognitive overhead,
 
 This automated propagation directly solves their previous challenge of manual synchronization between infrastructure and Kubernetes.
 
-### Enterprise-Grade Scalability
+### Enterprise-grade scalability
 
 The solution has positioned Imagine Learning for continued growth and success, addressing their challenge of limited scalability:
 
@@ -120,7 +120,7 @@ The solution has positioned Imagine Learning for continued growth and success, a
 - **Consistent patterns across regions:** The solution works seamlessly across multiple AWS regions, supporting geographic distribution of services.
 - **Reduced platform team burden:** The new approach reduces the burden on the platform team by streamlining infrastructure management and Kubernetes integration.
 
-## Looking Forward: A Foundation for Educational Innovation
+## Looking forward: a foundation for educational innovation
 
 With their new platform in place, Imagine Learning's technology team can now focus on innovation rather than maintenance. The GitOps bridge pattern with Pulumi has given them a scalable, reliable foundation that can grow with their business needs while maintaining security and consistency.
 

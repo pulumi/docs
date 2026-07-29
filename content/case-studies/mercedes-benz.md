@@ -58,7 +58,7 @@ Division in Ann Arbor and an Advanced Vehicle Design center in Carlsbad.
 
 {{< youtube "MGA_Bba2GqQ?rel=0" >}}
 
-## Innovating in the Era of the Connected Car
+## Innovating in the era of the connected car
 
 Scaling operations to this level requires ongoing creativity and agility, with every
 product and process subject to modification at any time, and efficiency and ongoing
@@ -78,7 +78,7 @@ Sunnyvale. As a result, he wears a lot of hats, and has a lot of people and proc
 is striving to optimize. Ramamurthy is constantly on the lookout for new solutions to the
 multitude of challenges that present themselves in all-cloud environments.
 
-## Developers in the Driver’s Seat: Programming the Cloud with Pulumi
+## Developers in the driver’s seat: programming the cloud with Pulumi
 
 "When I read about Pulumi coming out of stealth mode, and saw what they were doing, I
 realized that the way they were trying to solve the multi-cloud problem was exactly what I
@@ -100,7 +100,7 @@ achieved by using TypeScript for our Pulumi implementation. So far, it’s provi
 much easier to develop and I like the ability for different teams to collaborate on
 infrastructure code."
 
-## The Road Ahead
+## The road ahead
 
 MBRDNA Seattle sees a number of critical uses for Pulumi moving forward.
 
