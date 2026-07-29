@@ -14,11 +14,8 @@ function clearContainer() {
     if (container) container.innerHTML = "";
 }
 
-// Identifies the signed-in user to Segment, sending every field from the auth
-// cookie as traits. Calls queued on the analytics stub are replayed once
-// analytics loads, so this stays gated behind the consent flow: nothing is
-// sent unless conditionallyLoadAnalytics() has (or later does) call load().
-// extraTraits lets callers attach context (e.g. tracking preferences).
+// Identifies the signed-in user to Segment. Queued on the analytics stub, so
+// it stays consent-gated: only flushed once analytics actually loads.
 function identifyUser(extraTraits: Record<string, unknown> = {}) {
     if (!window.analytics) return;
     const user = getUserInfo();

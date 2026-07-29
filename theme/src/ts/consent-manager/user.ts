@@ -5,11 +5,8 @@ export interface UserInfo {
     traits: Record<string, unknown>;
 }
 
-// Reads the auth cookie the app sets for a signed-in user. The value is a
-// URL-encoded JSON string prefixed with Express's "j:" marker. Returns the
-// userId plus every other field in the cookie as identify traits, so any
-// user info the app adds later (email, name, orgs, ...) flows through
-// automatically. Returns null when no identifiable user is present.
+// Reads the signed-in user from the auth cookie: a URL-encoded JSON string
+// with Express's "j:" prefix. Returns userId plus any other fields as traits.
 export function getUserInfo(): UserInfo | null {
     try {
         const cookie = document.cookie.split("; ").find(s => s.indexOf(`${USER_INFO_COOKIE}=`) === 0);
