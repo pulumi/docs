@@ -18,9 +18,24 @@ schema_type: auto
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter:
-    linkedin:
-    bluesky:
+    twitter: |
+        We migrated a 61-resource CloudFormation stack to Pulumi — a payments API, database and all — and never ran pulumi up once. Every resource proved in sync by a zero-diff preview.
+
+        Here's how, step by step.
+    linkedin: |
+        Migrating infrastructure to Pulumi has a quiet fear built into it: did every resource actually make it across, or did one slip through?
+
+        We took a real CloudFormation stack — payments-api, 61 resources: a VPC, an Aurora database behind an RDS Proxy, a DynamoDB table, a Kinesis pipeline, and the IAM roles, KMS keys, and secrets wiring them together — and migrated it end to end.
+
+        54 resources had a direct path. Seven needed a decision. None of them got lost, because the console tracks every resource by a status computed from live state, and the migration only counts as done when pulumi preview reports zero diff against the cloud.
+
+        The part that surprises people: there's no pulumi up anywhere in the process.
+
+        We wrote up the whole walkthrough.
+    bluesky: |
+        We migrated a 61-resource CloudFormation stack to Pulumi — payments API, database, the works — and never ran pulumi up once. A zero-diff preview proved every resource was in sync.
+
+        The full step-by-step is up.
 ---
 
 With [Discovered Stacks](/docs/insights/discovery/discovered-stacks/), Pulumi Cloud does the bookkeeping for a CloudFormation migration: every resource in the stack gets an explicit migration status, and the migration is done when the code provably matches the cloud. In this tutorial, we take one real CloudFormation stack from discovered to migrated and managed by Pulumi IaC, end to end.

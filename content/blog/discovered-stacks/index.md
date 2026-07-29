@@ -3,7 +3,7 @@ title: "Discovered Stacks: One Place for All Your Infrastructure"
 # TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
 date: 2099-01-01
 draft: false
-meta_desc: "Pulumi Cloud now models your CloudFormation stacks and ARM deployments as Pulumi IaC stacks, with a seamless migration path."
+meta_desc: "Discovered Stacks: Pulumi Cloud now models your CloudFormation and ARM deployments as Pulumi IaC stacks, with a built-in migration path."
 feature_image: feature.png
 category: product
 authors:
@@ -18,9 +18,22 @@ schema_type: auto
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter:
-    linkedin:
-    bluesky:
+    twitter: |
+        Every migration to IaC starts with a spreadsheet tracking which resources made it across. It's stale the day it's written — six months later nobody can say which of 800 actually migrated, and which were quietly forgotten.
+
+        Here's what replaces it.
+    linkedin: |
+        Almost nobody's cloud estate is one tool. There's the CloudFormation that came with the AWS account, the ARM templates from the Azure team, the Terraform from an acquisition, and the Pulumi you're standardizing on.
+
+        That fragmentation is why migrations stall. Moving a stack to Pulumi was never the hard part — knowing where you stand is. The tracking lives in a spreadsheet, the spreadsheet goes stale the day it's written, and six months later nobody can say which of 800 resources made it across and which were quietly forgotten.
+
+        Today we're launching Discovered Stacks: Pulumi Cloud now models your CloudFormation stacks and ARM deployments as stacks, right alongside your Pulumi IaC. Every resource carries a migration status computed from live state on both ends — never a stale line someone forgot to update.
+
+        We wrote up how it works.
+    bluesky: |
+        Six months into a migration, can you say which of 800 resources actually made it to IaC — and which were quietly forgotten? The spreadsheet tracking it went stale the day it was written.
+
+        The spreadsheet is retired for good.
 ---
 
 Today we're launching **Discovered Stacks**: Pulumi Cloud now models your AWS CloudFormation stacks and Azure Resource Manager deployments as stacks, right alongside your Pulumi IaC stacks. And when you're ready to bring them under Pulumi management, migration is built in, with every resource tracked until the code provably matches the cloud.
