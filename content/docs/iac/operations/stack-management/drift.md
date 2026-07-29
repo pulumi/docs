@@ -99,6 +99,8 @@ The third step is the one most often skipped. Without it, the next refresh will 
 
 ### Adoption with Pulumi Neo
 
+{{< pulumi-cloud />}}
+
 The code-edit step is the slowest part of adoption: it's tedious to translate a diff full of provider properties back into your program, and it's where most "I'll do it later" abandonments happen. [Pulumi Neo](/docs/ai/) is built for this: hand it the stack and the drift, and it will run the refresh, read the resulting diff, edit the program so it matches, run a clean preview, and open a pull request for you to review.
 
 A task description as direct as *"Adopt the drift on the `production` stack into the program"* is enough to get Neo started. By default Neo runs in [Review mode](/docs/ai/neo/tasks/#task-modes), so the `pulumi up` and the PR both require your approval before they happen: you stay the decision-maker on what gets merged. For large or unfamiliar codebases, enable [Plan Mode](/docs/ai/neo/tasks/#plan-mode) so Neo investigates the program and proposes its approach before making any changes.

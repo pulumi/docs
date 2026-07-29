@@ -56,7 +56,7 @@ In this step, review the resources for which you want to generate IaC code. You 
 * Each group represents a top-level selected resource and its related resources
 * You can filter the Reference and Relationship columns to fine-tune what to include
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The referenced resources will show a direction: 'from' or 'to'. 'from' refers to a dependent child resource. 'to' refers to the parent resource (depends on).
 {{% /notes %}}
 
@@ -84,7 +84,7 @@ Once the code is in the format you are happy with, you can:
 
 When finished, click **Done** to return to the Visual Import start page.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Ensure that you run the pulumi CLI commands using credentials that match the cloud accounts for the imported resources, or the import will fail.
 {{% /notes %}}
 

@@ -15,6 +15,7 @@ aliases:
 - /docs/console/accounts/saml/onelogin/
 - /docs/guides/saml/onelogin/
 - /docs/pulumi-cloud/access-management/saml/onelogin/
+pulumi_cloud: enterprise
 ---
 
 This guide walks you through configuring OneLogin as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider (IdP) for Pulumi Cloud.

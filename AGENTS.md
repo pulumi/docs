@@ -108,6 +108,19 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 ---
 
+## Pulumi Cloud availability markers
+
+Docs pages state which Pulumi Cloud edition a feature needs through a generated violet callout, not hand-written prose. The editions are a **closed**, ordered set defined in `data/pulumi_editions.yaml` (Individual, Team, Enterprise, Business Critical) — that file's header comment is the authoritative reference for the vocabulary ("edition", never "plan"/"tier"/"subscription") and for adding or renaming one.
+
+- **Whole page**: add `pulumi_cloud: <id>` to the front matter. `layouts/docs/{single,list}.{html,md}` renders the callout above the content. Valid ids are `team`, `enterprise`, and `business-critical` — we only mark what a reader has to buy, so `individual`, `true`, and `false` are all hard lint failures (`checkPulumiCloudValue` in `scripts/lint/lint-markdown.js`). An ungated page carries no key.
+- **One section**: put `{{< pulumi-cloud "<id>" />}}` on the line **directly after** the heading it applies to. `scripts/search/page.js` relies on that adjacency to skip the callout when it builds a heading's search snippet. The no-argument form `{{< pulumi-cloud />}}` means "Pulumi Cloud, all editions" and is only for mixed pages where the reader can't otherwise tell a section needs Cloud at all; a block form with inner content renders orientation prose in the same box.
+- **Don't say it twice.** When you add a marker, delete the hand-written "only available in the Enterprise and Business Critical editions" sentence or note it replaces. The callout already links to `/pricing/`. Keep only prose that says something the callout doesn't (for example, a per-edition limit like "Enterprise allows up to 25 custom roles").
+- Edition names are lowercase-noun in prose ("the Enterprise edition"). Never "Free", "Starter", or "Pro".
+
+Callout markup for all callout types (`info`, `tip`, `warning`, `cloud`, and the GitHub-alert types) comes from the shared `layouts/partials/notes.html`. The `{{% notes %}}` shortcode takes a **named** `type` argument only — `{{% notes "warning" %}}` is silently ignored and renders an info box, so always write `{{% notes type="warning" %}}`. Adding a new callout type means adding it to the `$icons` dict in that partial **and** adding a `&.note-<type>` block to both `theme/src/scss/_notes.scss` and `theme/src/scss/docs/_docs-theme.scss` — dark mode is not automatic.
+
+---
+
 ## Blog categories and tags
 
 Blog posts carry three taxonomy axes (`category` and `tags` are always present; `series` is optional):

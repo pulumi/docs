@@ -1,16 +1,41 @@
-{{ $type := default "info" .type }}
-{{ $icon := "info" }}
+{{- /*
+  The shared callout box — the single source of the `.note` DOM. Styles live in
+  theme/src/scss/_notes.scss (light) and docs/_docs-theme.scss (dark).
 
-{{ if eq $type "warning" }}
-    {{ $icon = "warning" }}
-{{ end }}
+  Callers:
+    layouts/shortcodes/notes.html                           {{% notes type="warning" %}}
+    layouts/_default/_markup/render-blockquote-alert.html   > [!NOTE]
+    layouts/shortcodes/pulumi-cloud.html                    Cloud availability, one section
+    layouts/docs/{single,list}.html                         Cloud availability, whole page
 
-<div class="note note-{{ $type }}">
+  Expects a dict:
+    type   info | tip | warning | cloud | note | caution | important (default info)
+    text   rendered HTML for the body
+    size   optional; "large"
+    class  optional; extra classes on the wrapper
+
+  Adding a type means adding it to $icons below AND adding a `&.note-<type>` block
+  to both SCSS files — dark mode is not automatic. Note that `note`, `caution`,
+  and `important` are reachable through the alert render hook but have no SCSS
+  yet, so they currently render as an unstyled box.
+*/ -}}
+{{- $icons := dict
+    "info" "info"
+    "tip" "lightbulb"
+    "warning" "warning"
+    "cloud" "cloud"
+    "note" "pencil-simple"
+    "caution" "warning"
+    "important" "star"
+-}}
+{{- $type := default "info" .type -}}
+{{- $icon := index $icons $type | default "info" -}}
+<div class="note note-{{ $type }}{{ with .size }} note-{{ . }}{{ end }}{{ with .class }} {{ . }}{{ end }}">
     <div class="icon-and-line">
         {{ partial "icon.html" (dict "name" $icon "weight" "fill") }}
         <div class="line"></div>
     </div>
     <div class="content">
-        {{ .text }}
+        {{- .text -}}
     </div>
 </div>

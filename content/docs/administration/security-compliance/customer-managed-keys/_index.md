@@ -11,12 +11,8 @@ menu:
 aliases:
   - /docs/pulumi-cloud/customer-managed-keys/
   - /docs/pulumi-cloud/admin/customer-managed-keys/
+pulumi_cloud: enterprise
 ---
-
-{{% notes "info" %}}
-Customer Managed Keys are available for organizations using the Enterprise and Business Critical editions.
-Learn more about editions on the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Overview
 
@@ -30,7 +26,7 @@ encrypted data itself does not change.
 
 Only organization admins can manage CMKs.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Currently, Customer Managed Keys are only used to encrypt data in Pulumi ESC, and only AWS KMS is
 supported.
 We are working on adding support for more KMS providers and expanding encryption to additional Pulumi products. If you
@@ -60,7 +56,7 @@ The Customer Managed Keys page displays the following details for each key:
 
 Adding a Customer Managed Key enables you to use your own encryption key to protect sensitive data in Pulumi Cloud.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 When the first Customer Managed Key is added, all data keys encrypted with the Pulumi-managed key will be automatically
 re-encrypted with the new Customer Managed Key. The encrypted data itself does not change.
 {{% /notes %}}

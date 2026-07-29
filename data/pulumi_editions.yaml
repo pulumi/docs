@@ -1,0 +1,50 @@
+# The Pulumi Cloud editions, ordered lowest to highest.
+#
+# Single source of truth for the `pulumi_cloud:` frontmatter key and the
+# {{< pulumi-cloud >}} shortcode. Names match the product UI (pulumi-service
+# cmd/console2/src/app/settings/billing/edition-cards/) and
+# content/pricing/_index.md.
+#
+# -----------------------------------------------------------------------------
+# VOCABULARY
+# -----------------------------------------------------------------------------
+# The collective noun is "edition" — not "plan", "tier", or "subscription":
+#
+#   - "plan" collides with Neo's Plan mode and `pulumi preview --save-plan`.
+#   - "tier" is absent from the product UI (it means usage tier, not edition).
+#   - "subscription" is the billing record, not the edition itself.
+#
+# Never "Free" — the product calls the free edition Individual, and uses "free"
+# only as an adjective. Never "Starter" or "Pro"; those are legacy grandfathered
+# SKUs, not editions a reader can buy today.
+#
+# Edition names are lowercase-noun in prose ("the Enterprise edition"), per the
+# brand rule against overcapitalizing concepts.
+#
+# -----------------------------------------------------------------------------
+# ORDER MATTERS
+# -----------------------------------------------------------------------------
+# The order is what expands `pulumi_cloud: team` into "the Team, Enterprise, and
+# Business Critical editions". The product never says "and above" — it
+# enumerates — so that sentence is generated from this one list rather than
+# written out by hand on each page.
+#
+# -----------------------------------------------------------------------------
+# ADDING OR RENAMING AN EDITION
+# -----------------------------------------------------------------------------
+# Edit this file only. The callout prose
+# (layouts/partials/cloud-availability-body.html) and the frontmatter lint check
+# (checkPulumiCloudValue in scripts/lint/lint-markdown.js) both read it. Only the
+# ids listed below, from `team` onward, count as markers: we mark what a reader has
+# to buy, so `individual` (which gates nothing), `true`, `false`, and any
+# unknown id all fail the build. An ungated page carries no `pulumi_cloud:` key
+# at all.
+editions:
+  - id: individual
+    name: Individual
+  - id: team
+    name: Team
+  - id: enterprise
+    name: Enterprise
+  - id: business-critical
+    name: Business Critical

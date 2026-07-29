@@ -15,9 +15,10 @@ aliases:
 - /docs/console/accounts/saml/
 - /docs/guides/saml/
 - /docs/pulumi-cloud/access-management/saml/
+pulumi_cloud: enterprise
 ---
 
-The [Pulumi Cloud](https://app.pulumi.com/signin) can be configured to work with any SAML 2.0 identity provider. SAML support requires Pulumi Enterprise or Pulumi Business Critical. To learn more about the capabilities of Pulumi Enterprise or Pulumi Business Critical, refer to the [pricing page](/pricing/).
+The [Pulumi Cloud](https://app.pulumi.com/signin) can be configured to work with any SAML 2.0 identity provider.
 
 {{% notes type="info" %}}
 Running self-hosted Pulumi Cloud? You'll first need to [configure your self-hosted infrastructure for SAML SSO](/docs/administration/self-hosting/saml-sso/) (API service keys and environment variables), then return here to complete IdP configuration.
@@ -27,7 +28,7 @@ Running self-hosted Pulumi Cloud? You'll first need to [configure your self-host
 
 If you're a member of a SAML-based Pulumi organization, you can sign in to [your account](/docs/pulumi-cloud/accounts/) via Single Sign-On. To learn about the important aspects of configuring SSO for your IdP, refer to the [SSO page](sso/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 {{< sso-scim-limits-info >}}
 {{% /notes %}}
 

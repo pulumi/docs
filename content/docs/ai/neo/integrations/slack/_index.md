@@ -11,6 +11,7 @@ menu:
         parent: ai-integrations
         weight: 3
         identifier: ai-integrations-slack
+pulumi_cloud: team
 ---
 
 Mention `@Neo` in any channel where Neo has been added to start a Neo [task](/docs/ai/neo/tasks/) without leaving Slack. The response lands in the same thread, and follow-up messages continue the conversation, so the full exchange stays where the discussion is already happening.

@@ -1,0 +1,45 @@
+{{- /*
+  Marks one section of a page as Pulumi Cloud, for pages that document more than
+  one way of doing something (for example content/docs/iac/concepts/secrets/,
+  where most of the page is open source and one section is ESC).
+
+  Two forms, both placed on the line directly after the heading they apply to:
+
+      ## Managing secrets with Pulumi ESC environments
+      {{< pulumi-cloud />}}                    → available on all editions
+
+      ## Organization templates
+      {{< pulumi-cloud "enterprise" />}}       → available on the Enterprise and
+                                                 Business Critical editions
+
+  Unlike the whole-page `pulumi_cloud:` key, the no-argument form is allowed and
+  useful here: on a page that documents several ways of doing something, the
+  reader can't otherwise tell whether a given section needs Pulumi Cloud at all.
+  Note the self-closing `/>}}` — Hugo requires it because this template reads
+  `.Inner`, which powers the third form:
+
+      {{< pulumi-cloud >}}
+      Prose pointing the reader at a Cloud alternative.
+      {{< /pulumi-cloud >}}
+
+  That renders prose in the same violet box, for orientation rather than a
+  statement of availability. Pass an edition and inner content to get both.
+
+  Whole Cloud pages use the `pulumi_cloud:` frontmatter key instead. Markers are
+  set per page — there is no inheritance.
+*/ -}}
+{{- $edition := .Get 0 -}}
+{{- $inner := "" -}}
+{{- with .Inner }}{{ $inner = . | markdownify }}{{ end -}}
+{{- /* Inner-only means the author is writing orientation prose, so skip the
+       generated availability sentence; anything else states availability. */ -}}
+{{- $body := "" -}}
+{{- if or $edition (not $inner) -}}
+  {{- $body = partial "cloud-availability-body.html" (dict "edition" $edition "where" .Page.File.Path) | markdownify -}}
+{{- end -}}
+{{- /* `cloud-marker` is what scripts/search/page.js looks for so a heading's
+       search snippet skips past this box to the real paragraph below it. */ -}}
+{{- partial "notes.html" (dict
+    "type" "cloud"
+    "class" "cloud-marker"
+    "text" (printf "%s%s" $body $inner | safeHTML)) -}}

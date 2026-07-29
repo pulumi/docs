@@ -174,7 +174,7 @@ comparison_table:
                     - content: _check
                     - content: _check
                 - title: CI/CD integrations
-                  link: /docs/iac/packages-and-automation/continuous-delivery/
+                  link: /docs/iac/operations/continuous-delivery/
                   items:
                     - content: Many
                       tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
@@ -183,21 +183,21 @@ comparison_table:
                     - content: Customized for you
                     - content: Customized for you
                 - title: Drift detection
-                  link: /docs/platform/deployments/drift/
+                  link: /docs/deployments/concepts/drift/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _check
                     - content: _check
                 - title: Time-to-live stacks
-                  link: /docs/platform/deployments/ttl/
+                  link: /docs/deployments/concepts/ttl/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _check
                     - content: _check
                 - title: Scheduled deployments
-                  link: /docs/platform/deployments/schedules/
+                  link: /docs/deployments/concepts/schedules/
                   items:
                     - content: _blank
                     - content: _blank
@@ -210,14 +210,14 @@ comparison_table:
                     - content: _blank
                     - content: _check
                 - title: Webhooks
-                  link: /docs/platform/webhooks/
+                  link: /docs/deployments/concepts/webhooks/
                   items:
                     - content: _blank
                     - content: _check
                     - content: _check
                     - content: _check
                 - title: REST API
-                  link: /docs/pulumi-cloud/cloud-rest-api/
+                  link: /docs/reference/cloud-rest-api/
                   items:
                     - content: _check
                     - content: _check
@@ -250,21 +250,21 @@ comparison_table:
                     - content: Unlimited
                     - content: Unlimited
                 - title: Organizations
-                  link: /docs/pulumi-cloud/admin/organizations/
+                  link: /docs/administration/organizations-teams/organizations/
                   items:
                     - content: _blank
                     - content: 1
                     - content: Multiple supported
                     - content: Multiple supported
                 - title: Identity providers
-                  link: /docs/pulumi-cloud/accounts
+                  link: /docs/administration/organizations-teams/accounts/
                   items:
                     - content: GitHub, GitLab, Atlassian
                     - content: GitHub, GitLab, Atlassian
                     - content: GitHub, GitLab, Atlassian, SAML/SSO
                     - content: GitHub, GitLab, Atlassian, SAML/SSO
                 - title: SAML/SSO
-                  link: /docs/pulumi-cloud/access-management/saml/
+                  link: /docs/administration/access-identity/saml/
                   items:
                     - content: _blank
                     - content: _blank
@@ -273,28 +273,28 @@ comparison_table:
                     - content: Many
                       tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
                 - title: SCIM integration
-                  link: /docs/pulumi-cloud/access-management/scim/
+                  link: /docs/administration/access-identity/scim/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _blank
                     - content: _check
                 - title: OIDC support
-                  link: /docs/pulumi-cloud/oidc/
+                  link: /docs/deployments/guides/oidc/
                   items:
                     - content: _check
                     - content: _check
                     - content: _check
                     - content: _check
                 - title: Create and manage teams
-                  link: /docs/pulumi-cloud/access-management/teams/
+                  link: /docs/administration/access-identity/rbac/teams/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _check
                     - content: _check
                 - title: Role-based access control (RBAC)
-                  link: /docs/pulumi-cloud/admin/organizations/#organization-roles
+                  link: /docs/administration/organizations-teams/organizations/#organization-roles
                   items:
                     - content: _blank
                     - content: _blank
@@ -322,7 +322,7 @@ comparison_table:
                     - content: _check
                     - content: _check
                 - title: Organization and team access tokens
-                  link: /docs/pulumi-cloud/access-management/organization-access-tokens/
+                  link: /docs/administration/access-identity/access-tokens/
                   tooltip: These are machine access tokens that are scoped to the organization or team level
                   items:
                     - content: _blank
@@ -331,14 +331,14 @@ comparison_table:
                     - content: _check
                     - content: _check
                 - title: Audit logs
-                  link: /docs/pulumi-cloud/audit-logs/
+                  link: /docs/administration/security-compliance/audit-logs/
                   items:
                     - content: _blank
                     - content: _blank
                     - content: _check
                     - content: _check
                 - title: Automated log export to S3
-                  link: /docs/pulumi-cloud/audit-logs#automated-export
+                  link: /docs/administration/security-compliance/audit-logs/aws-s3/
                   items:
                     - content: _blank
                     - content: _blank
@@ -398,35 +398,35 @@ comparison_table:
                   - content: Unlimited
                   - content: Unlimited
               - title: Version history
-                link: /docs/esc/environments/versioning/
+                link: /docs/esc/concepts/versioning/
                 items:
                   - content: _blank
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Version tags and import by tags
-                link:  /docs/esc/environments/versioning/#tagging-versions
+                link:  /docs/esc/concepts/versioning/#tagging-versions
                 items:
                   - content: _blank
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Dynamic credentials
-                link: /docs/esc/integrations/dynamic-login-credentials/
+                link: /docs/esc/providers/login/
                 items:
                   - content: _check
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Dynamic secrets
-                link: /docs/esc/integrations/dynamic-secrets/
+                link: /docs/esc/providers/secrets/
                 items:
                   - content: _check
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Rotated secrets
-                link: /docs/esc/integrations/rotated-secrets/
+                link: /docs/esc/providers/rotators/
                 items:
                   - content: _check
                   - content: _check
@@ -447,7 +447,7 @@ comparison_table:
                   - content: _check
                   - content: _check
               - title: Customer-managed keys
-                link: /docs/esc/administration/customer-managed-keys/
+                link: /docs/esc/concepts/customer-managed-keys/
                 items:
                   - content: _blank
                   - content: _blank
@@ -460,7 +460,7 @@ comparison_table:
                   - content: _check
                   - content: _check
               - title: Multi-language SDKs
-                link: /docs/esc/sdk/
+                link: /docs/esc/languages-sdks/
                 items:
                   - content: _check
                   - content: _check
@@ -487,7 +487,7 @@ comparison_table:
                   - content: $0.01 / Custom
                   - content: $0.01 / Custom
               - title: Resource search
-                link: /docs/insights/search/
+                link: /docs/insights/discovery/search/
                 items:
                   - content: _blank
                   - content: _check
@@ -500,49 +500,49 @@ comparison_table:
                   - content: 10 / Custom
                   - content: Custom
               - title: Data export
-                link: /docs/insights/export/
+                link: /docs/insights/discovery/data-export/
                 items:
                   - content: _blank
                   - content: _blank
                   - content: _check
                   - content: _check
               - title: Property search
-                link: /docs/insights/search/#property-queries
+                link: /docs/insights/discovery/search/#property-queries
                 items:
                   - content: _blank
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Policy enforcement
-                link: /docs/insights/policy-as-code
+                link: /docs/insights/policy/
                 items:
                   - content: "Manual"
                   - content: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration)"
-                  - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
-                  - content: "[Organization-managed](/docs/insights/policy/get-started/#enforcing-a-policy-pack)"
+                  - content: "[Organization-managed](/docs/insights/policy/get-started/)"
+                  - content: "[Organization-managed](/docs/insights/policy/get-started/)"
               - title: Preventative policies
-                link: /docs/insights/preventative-vs-audit-policies/
+                link: /docs/insights/policy/policy-groups/
                 items:
                   - content: Manual
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Audit policies
-                link: /docs/insights/preventative-vs-audit-policies/
+                link: /docs/insights/policy/policy-groups/
                 items:
                   - content: _blank
                   - content: _check
                   - content: _check
                   - content: _check
               - title: Pre-built policy packs
-                link: /docs/insights/pre-built-packs
+                link: /docs/insights/policy/policy-packs/pre-built-packs/
                 items:
                   - content: _blank
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices
                   - content: Pulumi Best Practices, CIS, NIST, HITRUST, PCI DSS
               - title: Custom policy packs
-                link: /docs/insights/policy/policy-as-code/get-started/#creating-a-policy-pack
+                link: /docs/insights/policy/policy-packs/authoring/#creating-a-policy-pack
                 items:
                   - content: _blank
                   - content: Up to 25 policies
@@ -585,7 +585,7 @@ comparison_table:
                   - content: _check
                   - content: _check
               - title: Neo code reviews
-                link: /docs/ai/neo/pull-requests/
+                link: /docs/ai/neo/code-reviews/
                 items:
                   - content: _blank
                   - content: _check
@@ -694,7 +694,7 @@ faq:
 
             Enterprise plans receive volume discounts, so that the more resources you consume, the lower the incremental rate. This is true of self-serve pay-as-you-go plans, although prepaid plans offer more considerable discounts.
 
-            For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
+            For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/iac/concepts/resources/) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
         - question: What can I do with 500 IaC resources per month?
           answer: |
             The Team edition includes up to 500 IaC resources to get started with.
@@ -736,9 +736,9 @@ faq:
             Secrets include both static secrets and dynamic secrets/credentials. When using the Pulumi ESC Document Editor, each definition of fn::secret:* and fn::open::* (except Pulumi-stacks provider) is counted as a secret. The number of secrets only from the latest environment revision is counted towards your billing.
         - question: How are ESC secrets API calls metered?
           answer: |
-            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/pulumi-cloud/reference/environments/#read-open-environment) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will be billed $0.05.
+            You pay $0 for the first free 10K API calls / month to the [ReadOpen API](/docs/reference/cloud-rest-api/environments/) endpoint. Once you hit 10,000 API calls, you are metered at $0.1 for 10K API calls. If you use 5K API calls you will be billed $0.05.
 
-            API usage includes any calls from the [CLI](/docs/iac/cli/commands/pulumi_env/), [SDK](/docs/esc/development/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/pulumi-cloud/reference/environments/) call that hits the ReadOpen API endpoint
+            API usage includes any calls from the [CLI](/docs/iac/cli/commands/pulumi_env/), [SDK](/docs/esc/languages-sdks/), [Pulumi-service provider](/registry/packages/pulumiservice/api-docs/environment/), direct [REST API](/docs/reference/cloud-rest-api/environments/) call that hits the ReadOpen API endpoint
         - question: What are workflow minutes?
           answer: |
             Workflow Minutes represent the total time used across both Pulumi Insights and Deployments. All usage draws from a single, shared pool of minutes. For Insights, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
@@ -774,9 +774,9 @@ faq:
           answer: |
             The Individual Edition is great for single users with private projects. However, if you are working within a team, you'll typically want to share your projects, for which you need to create an organization. The Team Edition is designed for teams to collaborate on shared infrastructure projects. The Enterprise Edition offers more sophisticated organization management facilities, including RBAC for advanced policy controls.
 
-            Pulumi [projects](/docs/concepts/projects/) and [stacks](/docs/concepts/stack/) are a way to organize Pulumi code. You can consider a Pulumi project to be analogous to a GitHub repo: a single place for code — and a stack to be an instance of that code which has a separate configuration. For instance, a single project may have multiple stacks for dev, test, prod, or perhaps for different cloud configurations (e.g., geographic region) or developer environments.
+            Pulumi [projects](/docs/iac/concepts/projects/) and [stacks](/docs/iac/concepts/stacks/) are a way to organize Pulumi code. You can consider a Pulumi project to be analogous to a GitHub repo: a single place for code — and a stack to be an instance of that code which has a separate configuration. For instance, a single project may have multiple stacks for dev, test, prod, or perhaps for different cloud configurations (e.g., geographic region) or developer environments.
         - question: How do I get started?
-          answer: Follow the [Getting Started guide](/docs/quickstart/), which walks you through creating and deploying your first Pulumi project.
+          answer: Follow the [Getting Started guide](/docs/get-started/), which walks you through creating and deploying your first Pulumi project.
         - question: How do I move from Starter or Pro to the new Team Edition?
           answer: We recommend moving from the old SKUs to get access to our latest capabilities like Pulumi Deployments, Insights and Neo. [Contact us](/contact/?form=sales) to move to the new Team Edition.
         - question: Is Pulumi SOC 2 compliant?

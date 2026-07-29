@@ -133,6 +133,29 @@
         }
     }
 
+    // Pulumi Cloud availability. Named for the semantic, like the variants above
+    // — not `.note-violet` — even though violet is the only hue it will ever use.
+    &.note-cloud {
+        background: var(--color-violet-background);
+
+        a,
+        i {
+            color: var(--color-violet-primary);
+        }
+
+        div.icon-and-line svg.ph-icon {
+            color: var(--color-violet-primary);
+        }
+
+        div.line {
+            background-color: var(--color-violet-muted);
+        }
+
+        :not(pre) > code {
+            background: var(--color-violet-muted);
+        }
+    }
+
 }
 
 section.docs-content div.note {

@@ -31,6 +31,8 @@ For the full CLI workflow — detection, remediation, adoption, and `--expect-no
 
 ## Pulumi Cloud UI
 
+{{< pulumi-cloud "enterprise" />}}
+
 ### Running via Click to Deploy
 
 You can run a drift or remediate-drift run ad hoc from your stack using the **Click to Deploy** menu, which lists the operations available for the stack. Select **Detect drift** to run a preview-only refresh, or **Remediate drift** to reconcile any detected drift. Both runs appear in the Drift tab when they complete.

@@ -19,12 +19,8 @@ aliases:
 - /docs/intro/console/webhooks/
 - /docs/intro/pulumi-service/webhooks/
 - /docs/intro/pulumi-cloud/webhooks/
+pulumi_cloud: team
 ---
-
-{{% notes "info" %}}
-Pulumi Webhooks is a feature available on the Pulumi Team, Enterprise and Business Critical editions.
-To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
-{{% /notes %}}
 
 Pulumi Webhooks allow you to notify external services of events
 happening within your Pulumi organization. For example,
@@ -47,7 +43,7 @@ The Webhooks page is located at **Settings** > **Integrations** > **Webhooks**.
 
 If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
 {{% /notes %}}
 
@@ -225,7 +221,7 @@ When using generic JSON webhooks, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook can then be used to emit a
 notification, start running integration tests, or even update additional stacks.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If a secret is provided, webhook deliveries will contain a signature in the HTTP request header that can be used
 to authenticate messages as coming from the Pulumi Cloud.
 {{% /notes %}}
@@ -517,7 +513,7 @@ See the CLI reference for
 and
 [`pulumi stack webhook delivery redeliver`](/docs/iac/cli/commands/pulumi_stack_webhook_delivery_redeliver/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The `pulumi stack webhook delivery` commands are experimental and available in recent
 releases of the Pulumi CLI. Listing recent deliveries is also available for organization
 webhooks (`pulumi org webhook delivery list`) and environment webhooks

@@ -18,7 +18,7 @@ Setting up your Pulumi Cloud account will lay the foundation for onboarding your
 
 Your subscription tier determines the level of support, training, and features available to your team.
 
-{{%notes type="info"%}}
+{{% notes type="info" %}}
 Pulumi’s community has grown to hundreds of thousands of practitioners worldwide. Check out the [Pulumi Community](/community/) to connect!
 {{%/notes%}}
 

@@ -9,6 +9,7 @@ menu:
     parent: administration-security-compliance-self-hosted-operations
     weight: 9
     identifier: administration-security-compliance-self-hosted-operations-security-hardening
+pulumi_cloud: business-critical
 ---
 
 {{< self-hosting-trial-note />}}

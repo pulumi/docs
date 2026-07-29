@@ -21,6 +21,7 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/get-started/
   - /docs/iac/using-pulumi/crossguard/get-started/
   - /docs/iac/packages-and-automation/crossguard/get-started/
+pulumi_cloud: team
 ---
 
 Pulumi Policies enforces compliance, security, and best practices across your cloud infrastructure, whether managed by Pulumi, provisioned by other tools, or created manually.

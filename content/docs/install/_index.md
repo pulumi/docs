@@ -38,7 +38,7 @@ The latest version of Pulumi is **{{< latest-version >}}**. For previous version
 
 By default, the Pulumi CLI stores state in [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/), our free, hosted state-management backend. Pulumi Cloud is free for individuals and is the recommended backend when you're learning Pulumi — no credit card required. If you'd rather host state yourself (S3, Azure Blob, GCS, or local), see [self-managed state backends](/docs/iac/concepts/state-and-backends/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 You don't need a Pulumi Cloud account to install the CLI. You'll be prompted to sign in (or to pick a self-managed backend) the first time you run `pulumi login`.
 {{% /notes %}}
 
@@ -646,7 +646,7 @@ The following are general recommendations for minimum system requirements when u
 | **RAM**        | 4 GB or more                                                                                                                |
 | **Disk Space** | 1 GB or more free disk space (additional space may be required when using multiple runtimes, providers, or large codebases) |
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 System requirements can vary significantly depending on the providers used and how packages/plugins are managed. Using multiple providers or large plugins may require additional disk space. Performance may also be impacted by the runtime for the SDK you are using (e.g., Node.js, Python, Go), the operating system, and how packages are managed in your development environment. Additionally, CPU and RAM requirements can be influenced by the complexity of your infrastructure, the runtimes, and the packages/plugins used, as well as the ability to take advantage of parallel processing during `pulumi plan` and `pulumi apply` operations.
 {{% /notes %}}
 

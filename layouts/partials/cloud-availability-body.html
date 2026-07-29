@@ -1,0 +1,44 @@
+{{- /*
+  Builds the Markdown sentence for a Pulumi Cloud availability marker. Returns a
+  Markdown string so the rendered callout and the markdown output format
+  (llms.txt, the .md page renditions) can't drift.
+
+  Expects a dict:
+    edition  optional; an id from data/pulumi_editions.yaml, Team or higher.
+             Empty means the feature is on every edition — only the section-level
+             shortcode uses that, since on a mixed page the reader can't tell
+             whether a section needs Pulumi Cloud at all.
+    where    a human-readable location used in build errors (page path)
+
+  `individual` (which gates nothing — say nothing instead) and any unknown id are
+  hard build failures, the same contract resource-option-scope.html uses.
+*/ -}}
+{{- $lead := "This is a [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature" -}}
+{{- if not .edition -}}
+  {{- printf "%s, available on all editions." $lead -}}
+{{- else -}}
+  {{- $id := printf "%v" .edition -}}
+  {{- $all := site.Data.pulumi_editions.editions -}}
+  {{- $index := -1 -}}
+  {{- $ids := slice -}}
+  {{- range $i, $e := $all -}}
+    {{- if gt $i 0 -}}{{- $ids = $ids | append $e.id -}}{{- end -}}
+    {{- if eq $e.id $id -}}{{- $index = $i -}}{{- end -}}
+  {{- end -}}
+  {{- if lt $index 1 -}}
+    {{- errorf "pulumi_cloud: %q is not a markable edition (in %s). We only mark features that need the Team edition or above: %s" $id .where (delimit $ids ", ") -}}
+  {{- end -}}
+  {{- $names := slice -}}
+  {{- range $i, $e := $all -}}
+    {{- if ge $i $index -}}{{- $names = $names | append $e.name -}}{{- end -}}
+  {{- end -}}
+  {{- $list := "" -}}
+  {{- if eq (len $names) 1 -}}
+    {{- $list = printf "the %s edition" (index $names 0) -}}
+  {{- else if eq (len $names) 2 -}}
+    {{- $list = printf "the %s and %s editions" (index $names 0) (index $names 1) -}}
+  {{- else -}}
+    {{- $list = printf "the %s editions" (delimit $names ", " ", and ") -}}
+  {{- end -}}
+  {{- printf "%s, available on %s. [Compare editions](/pricing/)." $lead $list -}}
+{{- end -}}

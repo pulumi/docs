@@ -8,11 +8,8 @@ menu:
         name: Export to AWS S3
         parent: administration-security-compliance-audit-logs
         weight: 1
+pulumi_cloud: business-critical
 ---
-
-{{% notes "info" %}}
-Automated export is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
-{{% /notes %}}
 
 Pulumi Cloud can continuously export audit log events to an Amazon S3 bucket. Once configured, new events are delivered automatically — no manual downloads or API polling required.
 

@@ -22,6 +22,10 @@ All resource input and output values are recorded as stack [_state_](/docs/conce
 
 Pulumi Cloud transmits and stores entire state files securely, but Pulumi also supports encrypting individual values as _secrets_ for additional protection. Encryption ensures that these values never appear as plain text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
+{{< pulumi-cloud >}}
+Secrets encrypted this way belong to a single stack. If you need the same secret in more than one stack, or it already lives in an external store like AWS Secrets Manager or HashiCorp Vault, [Pulumi ESC](/docs/esc/) can manage it in one place instead. See [managing secrets with ESC environments](#managing-secrets-with-pulumi-esc-environments) for examples.
+{{< /pulumi-cloud >}}
+
 {{% notes %}}
 The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
 {{% /notes %}}
@@ -185,7 +189,7 @@ An output can be marked secret in a number of ways:
 
 As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 Be careful that you do not pass this plain-text value to code that might expose it. Note that when using `apply` or `Output.all`, secrets are decrypted into plain text for use within the callback handler. It is up to your program to treat this value sensitively and only pass the plain-text value to code that you trust.
 {{% /notes %}}
 
@@ -197,7 +201,7 @@ It is possible to mark resource outputs as containing secrets. In this case, Pul
 
 A resource's [physical ID](/docs/iac/concepts/resources/names/#physicalid) — the `id` output property assigned by the provider — is always stored in plain text in the state file and cannot be encrypted. Adding `id` to [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/) has no effect, because `id` is a special property rather than a regular output.
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 This matters when a resource places a sensitive, generated value in its ID. For example, the `result` of `random.RandomString` is also exposed as the resource's `id`, so the generated string ends up unencrypted in state even if you mark `result` as secret.
 
 To keep a generated secret out of plain-text state, use a resource that exposes the sensitive value only as a normal output. For instance, `random.RandomPassword` returns the generated value in its `result` output (its `id` is not the secret), so marking `result` secret encrypts it everywhere it is stored:
@@ -214,7 +218,7 @@ const password = new random.RandomPassword("password", {
 
 Some configuration data is sensitive, such as database passwords or service tokens. For such cases, passing the `--secret` flag to the `config set` command encrypts the data and stores the resulting ciphertext instead of plain text.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 By default, the Pulumi CLI uses a per-stack encryption key managed by Pulumi Cloud, and a per-value nonce, to encrypt values. To use an alternative encryption provider, refer to [Configuring Secrets Encryption](#configuring-secrets-encryption).
 {{% /notes %}}
 
@@ -224,7 +228,7 @@ For example, this command sets a configuration variable named `dbPassword` to th
 $ pulumi config set --secret dbPassword S3cr37
 ```
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 When storing secret values containing special characters (such as `$`, `!`, `@`, `#`, etc.), be aware that shell interpretation may modify the value before it reaches Pulumi. Consider using quotes around the value or escaping special characters according to your shell's requirements. For complex values, you may want to use input redirection or pipe the value from a file to avoid shell interpretation entirely.
 {{% /notes %}}
 
@@ -463,151 +467,9 @@ config:
 Secret values are decrypted and made available in plain text to the program at runtime. These values may be read using any of the standard `pulumi.Config` getters shown above. While it is possible to read a secret using the ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead, as this ensures that all transitive uses of that secret are themselves also marked as secrets.
 {{% /notes %}}
 
-## Configuring secrets encryption
-
-Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/concepts/state/).
-
-The default encryption mechanism may be insufficient in the following scenarios:
-
-1. If you are using the Pulumi CLI independent of Pulumi Cloud --- either in local mode, or by using one of the
-   available backend plugins (such as those that store state in AWS S3, Azure Blob Store, or Google Object Storage).
-
-2. If your team already has a preferred cloud encryption provider that you would like to use.
-
-In both cases, you can continue using secrets management as described above, but instruct Pulumi to use an alternative encryption provider.
-
-### Initializing a stack with alternative encryption
-
-To specify an alternative encryption provider, specify it at stack initialization time:
-
-```
-$ pulumi stack init <name> --secrets-provider="<provider>://<provider-settings>"
-```
-
-After doing so, all encryption operations for your stack will use the custom provider settings. The `<provider>` and `<provider-settings>` are specific to your chosen encryption provider. See below for the available providers and their options.
-
-Pulumi uses the Go Cloud Development Kit to implement pluggable secrets providers. In the event configuration or authentication options below do not work, the [Go CDK documentation](https://gocloud.dev/howto/secrets/) can be consulted for debugging information.
-
-### Available encryption providers
-
-Pulumi supports the following encryption providers:
-
-- `awskms`: [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
-- `azurekeyvault`: [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
-- `gcpkms`: [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/)
-- `hashivault`: [HashiCorp Vault Transit Secrets Engine](https://www.vaultproject.io/docs/secrets/transit)
-
-Each provider has its own unique `<provider-settings>` and authentication mechanisms.
-
-#### AWS Key Management Service (KMS)
-
-The `awskms` provider uses an existing KMS key in your AWS account for encryption. This key can be specified using one of three approaches:
-
-1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1`.
-1. By alias: `awskms://alias/ExampleAlias?region=us-east-1`.
-1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1`.
-
-For example, this configures a stack to use an AWS KMS key with ID `1234abcd-12ab-34cd-56ef-1234567890ab`:
-
-```bash
-$ pulumi stack init my-stack \
-    --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"
-```
-
-If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. If needed, your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
-
-As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string.
-
-1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev`.
-1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&awssdk=v2&profile=qa`.
-1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=prod`.
-
-{{% notes "info" %}}
-
-As of Pulumi CLI v3.41.1, this secrets backend supports [encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) by setting `context_{key}={value}` in the query string.
-
-Encryption context can be used in [IAM policies conditions](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-encryption-context) and it appears in Cloudtrail logs.
-
-For example, take a look at `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev&context_project=myproject&context_environment=staging`.
-
-The encryption context here is `{"project": "myproject", "environment": "staging"}`. Together with an appropriate IAM policy with conditions, one can grant some user permissions only to
-encrypt/decrypt secrets for `staging` environment of the `myproject` project.
-{{% /notes %}}
-
-#### Azure Key Vault
-
-The `azurekeyvault` provider uses an Azure Key Vault key for encryption. This key is specified using an [Azure Key object identifier](https://docs.microsoft.com/en-us/azure/key-vault/keys/about-keys), which includes both your key vault's name and the key to use: `azurekeyvault://mykeyvaultname.vault.azure.net/keys/mykeyname`.
-
-For example, this configures a stack to use an Azure Key Vault key named `payroll` in vault `acmecorpsec`:
-
-```bash
-$ pulumi stack init my-stack \
-    --secrets-provider="azurekeyvault://acmecorpsec.vault.azure.net/keys/payroll"
-```
-
-This provider will attempt to use [a series of authentication methods](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity#readme-defaultazurecredential).
-
-#### Google Cloud Key Management Service (KMS)
-
-The `gcpkms` provider uses an existing Google Cloud KMS key for encryption. Specify the [key resource ID](https://cloud.google.com/kms/docs/object-hierarchy#key) for the key to use, which is a URL including your project, location, keyring, and key name: `gcpkms://projects/MYPROJECT/locations/MYLOCATION/keyRings/MYKEYRING/cryptoKeys/MYKEY`. The key's [purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes) needs to be `ENCRYPT_DECRYPT`.
-
-For example, this configures a stack to use a Google Cloud KMS key `payroll` in project `acmecorpsec`, location `us-west1`, and key ring named `prod`:
-
-```bash
-$ pulumi stack init my-stack \
-    --secrets-provider="gcpkms://projects/acmecorpsec/locations/us-west1/keyRings/prod/cryptoKeys/payroll"
-```
-
-This provider will use your Google Cloud Application Default Credentials. If you've previously configured the `gcloud` CLI, the same credentials will be used for authentication. For alternative configuration mechanisms, refer to [Authenticating as a service account](https://cloud.google.com/docs/authentication/production).
-
-#### HashiCorp Vault Transit Secrets Engine
-
-The `hashivault` provider uses Vault's Transit Secrets Engine to encrypt and decrypt information. You only need to pass a key name for the provider setting: `hashivault://mykey`. The Vault server endpoint and authentication token to use are provided with the `VAULT_SERVER_URL` and `VAULT_SERVER_TOKEN`, respectively.
-
-For example, this configures a stack to use a HashiCorp Vault transit key named `payroll`:
-
-```bash
-$ pulumi stack init my-stack \
-    --secrets-provider="hashivault://payroll"
-```
-
-### Changing the secrets provider for a stack
-
-To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/iac/cli/commands/pulumi_stack_change-secrets-provider) command.
-
-```bash
-$ pulumi stack change-secrets-provider "<secrets-provider>"
-```
-
-This will change the encrypted secrets in the provider configuration and the stack's state file to use the new secrets provider.
-The [supported secrets providers](/docs/iac/cli/commands/pulumi_stack_new/) are:
-
-- `default`
-- `passphrase`
-- `awskms`
-- `azurekeyvault`
-- `gcpkms`
-- `hashivault`
-
-After the provider has been changed, you should be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets
-and state files are now encrypted using the new secrets provider.
-
-## Committing configuration to source control { search.keywords="checking version control"}
-
-When you run `pulumi config set --secret` to generate a new Pulumi secret, the Pulumi CLI uses the stack's unique encryption key to encrypt the raw value and store the resulting ciphertext in the stack configuration file (`Pulumi.dev.yaml`, for example). If you opened this file in a text editor, you'd see that the contents would look something like this:
-
-```yaml
-config:
-  myStack:somePlainTextItem: somePlainText
-  myStack:someSecretItem:
-    secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
-```
-
-Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/access-identity/stack-permissions/) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
-
-It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).
-
 ## Managing secrets with Pulumi ESC environments
+
+{{< pulumi-cloud />}}
 
 With [Pulumi ESC](/docs/esc/), you can manage secrets wherever they live. Pulumi ESC provides a centralized abstraction in front of the most common secrets manager/vaults while providing security through RBAC and audit controls.
 
@@ -752,3 +614,147 @@ Which should look like this:
   }
 }
 ```
+
+## Configuring secrets encryption
+
+Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/concepts/state/).
+
+The default encryption mechanism may be insufficient in the following scenarios:
+
+1. If you are using the Pulumi CLI independent of Pulumi Cloud --- either in local mode, or by using one of the
+   available backend plugins (such as those that store state in AWS S3, Azure Blob Store, or Google Object Storage).
+
+2. If your team already has a preferred cloud encryption provider that you would like to use.
+
+In both cases, you can continue using secrets management as described above, but instruct Pulumi to use an alternative encryption provider.
+
+### Initializing a stack with alternative encryption
+
+To specify an alternative encryption provider, specify it at stack initialization time:
+
+```
+$ pulumi stack init <name> --secrets-provider="<provider>://<provider-settings>"
+```
+
+After doing so, all encryption operations for your stack will use the custom provider settings. The `<provider>` and `<provider-settings>` are specific to your chosen encryption provider. See below for the available providers and their options.
+
+Pulumi uses the Go Cloud Development Kit to implement pluggable secrets providers. In the event configuration or authentication options below do not work, the [Go CDK documentation](https://gocloud.dev/howto/secrets/) can be consulted for debugging information.
+
+### Available encryption providers
+
+Pulumi supports the following encryption providers:
+
+- `awskms`: [AWS Key Management Service (KMS)](https://aws.amazon.com/kms/)
+- `azurekeyvault`: [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
+- `gcpkms`: [Google Cloud Key Management Service (KMS)](https://cloud.google.com/kms/)
+- `hashivault`: [HashiCorp Vault Transit Secrets Engine](https://www.vaultproject.io/docs/secrets/transit)
+
+Each provider has its own unique `<provider-settings>` and authentication mechanisms.
+
+#### AWS Key Management Service (KMS)
+
+The `awskms` provider uses an existing KMS key in your AWS account for encryption. This key can be specified using one of three approaches:
+
+1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1`.
+1. By alias: `awskms://alias/ExampleAlias?region=us-east-1`.
+1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1`.
+
+For example, this configures a stack to use an AWS KMS key with ID `1234abcd-12ab-34cd-56ef-1234567890ab`:
+
+```bash
+$ pulumi stack init my-stack \
+    --secrets-provider="awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1"
+```
+
+If you have previously configured the AWS CLI, the same credentials will be used to encrypt/decrypt secrets using the specified KMS key. For this reason, it is important to ensure that the credentials have the appropriate permissions to interact with the key accordingly. If needed, your AWS CLI credentials can be overridden using the standard `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables. For more options, refer to the [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/api/aws/session/).
+
+As of Pulumi CLI v3.33.1, instead of specifying the AWS Profile using the `AWS_PROFILE` environment variable, add `awssdk=v2` and `profile=` followed by the profile name to the query string.
+
+1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev`.
+1. By alias: `awskms://alias/ExampleAlias?region=us-east-1&awssdk=v2&profile=qa`.
+1. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=prod`.
+
+{{% notes type="info" %}}
+
+As of Pulumi CLI v3.41.1, this secrets backend supports [encryption context](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context) by setting `context_{key}={value}` in the query string.
+
+Encryption context can be used in [IAM policies conditions](https://docs.aws.amazon.com/kms/latest/developerguide/policy-conditions.html#conditions-kms-encryption-context) and it appears in Cloudtrail logs.
+
+For example, take a look at `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1&awssdk=v2&profile=dev&context_project=myproject&context_environment=staging`.
+
+The encryption context here is `{"project": "myproject", "environment": "staging"}`. Together with an appropriate IAM policy with conditions, one can grant some user permissions only to
+encrypt/decrypt secrets for `staging` environment of the `myproject` project.
+{{% /notes %}}
+
+#### Azure Key Vault
+
+The `azurekeyvault` provider uses an Azure Key Vault key for encryption. This key is specified using an [Azure Key object identifier](https://docs.microsoft.com/en-us/azure/key-vault/keys/about-keys), which includes both your key vault's name and the key to use: `azurekeyvault://mykeyvaultname.vault.azure.net/keys/mykeyname`.
+
+For example, this configures a stack to use an Azure Key Vault key named `payroll` in vault `acmecorpsec`:
+
+```bash
+$ pulumi stack init my-stack \
+    --secrets-provider="azurekeyvault://acmecorpsec.vault.azure.net/keys/payroll"
+```
+
+This provider will attempt to use [a series of authentication methods](https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/azidentity#readme-defaultazurecredential).
+
+#### Google Cloud Key Management Service (KMS)
+
+The `gcpkms` provider uses an existing Google Cloud KMS key for encryption. Specify the [key resource ID](https://cloud.google.com/kms/docs/object-hierarchy#key) for the key to use, which is a URL including your project, location, keyring, and key name: `gcpkms://projects/MYPROJECT/locations/MYLOCATION/keyRings/MYKEYRING/cryptoKeys/MYKEY`. The key's [purpose](https://cloud.google.com/kms/docs/algorithms#key_purposes) needs to be `ENCRYPT_DECRYPT`.
+
+For example, this configures a stack to use a Google Cloud KMS key `payroll` in project `acmecorpsec`, location `us-west1`, and key ring named `prod`:
+
+```bash
+$ pulumi stack init my-stack \
+    --secrets-provider="gcpkms://projects/acmecorpsec/locations/us-west1/keyRings/prod/cryptoKeys/payroll"
+```
+
+This provider will use your Google Cloud Application Default Credentials. If you've previously configured the `gcloud` CLI, the same credentials will be used for authentication. For alternative configuration mechanisms, refer to [Authenticating as a service account](https://cloud.google.com/docs/authentication/production).
+
+#### HashiCorp Vault Transit Secrets Engine
+
+The `hashivault` provider uses Vault's Transit Secrets Engine to encrypt and decrypt information. You only need to pass a key name for the provider setting: `hashivault://mykey`. The Vault server endpoint and authentication token to use are provided with the `VAULT_SERVER_URL` and `VAULT_SERVER_TOKEN`, respectively.
+
+For example, this configures a stack to use a HashiCorp Vault transit key named `payroll`:
+
+```bash
+$ pulumi stack init my-stack \
+    --secrets-provider="hashivault://payroll"
+```
+
+### Changing the secrets provider for a stack
+
+To change the secrets provider for an existing stack use the [`pulumi stack change-secrets-provider`](/docs/iac/cli/commands/pulumi_stack_change-secrets-provider) command.
+
+```bash
+$ pulumi stack change-secrets-provider "<secrets-provider>"
+```
+
+This will change the encrypted secrets in the provider configuration and the stack's state file to use the new secrets provider.
+The [supported secrets providers](/docs/iac/cli/commands/pulumi_stack_new/) are:
+
+- `default`
+- `passphrase`
+- `awskms`
+- `azurekeyvault`
+- `gcpkms`
+- `hashivault`
+
+After the provider has been changed, you should be able to run `pulumi preview` and see no proposed changes.  Your configuration secrets
+and state files are now encrypted using the new secrets provider.
+
+## Committing configuration to source control { search.keywords="checking version control"}
+
+When you run `pulumi config set --secret` to generate a new Pulumi secret, the Pulumi CLI uses the stack's unique encryption key to encrypt the raw value and store the resulting ciphertext in the stack configuration file (`Pulumi.dev.yaml`, for example). If you opened this file in a text editor, you'd see that the contents would look something like this:
+
+```yaml
+config:
+  myStack:somePlainTextItem: somePlainText
+  myStack:someSecretItem:
+    secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
+```
+
+Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/access-identity/stack-permissions/) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
+
+It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).

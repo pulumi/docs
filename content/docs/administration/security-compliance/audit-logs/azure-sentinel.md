@@ -8,11 +8,8 @@ menu:
         name: Export to Microsoft Sentinel
         parent: administration-security-compliance-audit-logs
         weight: 2
+pulumi_cloud: business-critical
 ---
-
-{{% notes "info" %}}
-Automated export is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
-{{% /notes %}}
 
 Pulumi Cloud can continuously export audit log events into [Microsoft Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/overview) using a [Codeless Connector (CCF)](https://learn.microsoft.com/en-us/azure/sentinel/create-codeless-connector). The connector deploys as a Pulumi program and uses Sentinel's managed RestApiPoller to poll the Pulumi Cloud REST API every 5 minutes — no Azure Functions, Logic Apps, or other compute resources needed.
 
@@ -20,7 +17,6 @@ Events are transformed via a KQL Data Collection Rule and written to a custom `P
 
 ## Prerequisites
 
-- A Pulumi Cloud organization with a **Business Critical** subscription
 - A [Pulumi access token](https://app.pulumi.com/account/tokens) with audit log read permissions — an **org-scoped service token** is recommended
 - An Azure resource group with a Log Analytics workspace and Microsoft Sentinel enabled
 

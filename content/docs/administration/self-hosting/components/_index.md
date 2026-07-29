@@ -14,6 +14,7 @@ aliases:
 - /docs/pulumi-cloud/self-hosted/components/
 - /docs/administration/self-hosting/components/
 - /docs/pulumi-cloud/admin/self-hosted/components/
+pulumi_cloud: business-critical
 ---
 
 {{< self-hosting-trial-note />}}

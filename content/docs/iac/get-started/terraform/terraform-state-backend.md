@@ -106,7 +106,7 @@ Replace the placeholders:
 | `<project>` | The Pulumi project name for this stack | `networking` |
 | `<stack>` | The Pulumi stack name | `prod` |
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If you are using a [self-hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) instance, replace `api.pulumi.com` with your instance's API URL in:
 
 - The backend configuration above
@@ -340,7 +340,7 @@ tofu state push -force hcp_state_backup.tfstate
 
 {{< /chooser >}}
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 Only use `-force` if you are certain the state file is correct and no concurrent operations are running.
 {{% /notes %}}
 
@@ -432,7 +432,7 @@ You can run [audit (detective) policy packs](/docs/insights/policy/policy-groups
 
 To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights. Policy packs are then evaluated continuously against the stack's resources.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Only audit (detective) policies are supported for Terraform-managed stacks. Preventative policies require a Pulumi program and are not applicable to stacks updated via the Terraform CLI. The schema mapping works automatically for [bridged providers](/docs/iac/concepts/resources/providers/) but does not currently cover native Pulumi providers like Kubernetes.
 {{% /notes %}}
 

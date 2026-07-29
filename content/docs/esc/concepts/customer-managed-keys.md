@@ -13,12 +13,8 @@ menu:
     weight: 12
 aliases:
   - /docs/esc/administration/customer-managed-keys/
+pulumi_cloud: enterprise
 ---
-
-{{% notes "info" %}}
-Customer Managed Keys are available for organizations using the Enterprise and Business Critical editions.
-Learn more about editions on the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Overview
 
@@ -32,7 +28,7 @@ encrypted secrets do not change.
 
 Only organization admins can manage CMKs.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Currently, Customer Managed Keys support keys from AWS KMS and are only used to encrypt data stored in Pulumi ESC.
 We are working on adding support for more KMS providers and expanding encryption to additional Pulumi products. If you
 have specific requirements, please [contact us](/contact/).

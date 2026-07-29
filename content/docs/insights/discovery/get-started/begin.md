@@ -28,7 +28,7 @@ If you're new to Pulumi you can click here to [start a free trial](https://app.p
 
 You don't need to create credentials or ESC environments ahead of time. The **Connect cloud accounts** wizard authenticates to AWS, Azure, and Google Cloud with a browser-based sign-in using OpenID Connect (OIDC), then creates the trust roles and ESC environments each account needs. With these recommended flows, no long-lived cloud secrets are stored in Pulumi Cloud.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Discovery uses Pulumi ESC to securely manage the credentials required to scan your infrastructure. The wizard generates these environments for you, following the same best practices as the manual OIDC guides for [AWS](/docs/esc/guides/configuring-oidc/aws/), [Azure](/docs/esc/guides/configuring-oidc/azure/), and [Google Cloud](/docs/esc/guides/configuring-oidc/gcp/).
 {{% /notes %}}
 

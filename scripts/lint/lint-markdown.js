@@ -39,6 +39,21 @@ const CASE_STUDY_INDUSTRIES = (function () {
 })();
 
 /**
+ * Allowed Pulumi Cloud edition ids, loaded once from the single source of truth
+ * at data/pulumi_editions.yaml. See that file's header for the rules.
+ */
+const PULUMI_EDITIONS = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/pulumi_editions.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.editions || []).map(e => e.id);
+    } catch (e) {
+        console.warn(`Warning: could not load Pulumi editions: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
  * Defined blog series slugs, loaded once from data/blog_series.yml. Used to
  * enforce that every series member is wired up consistently (see
  * checkSeriesConsistency).
@@ -779,6 +794,44 @@ function checkChangelogTiers(tiers, tier, fullPath) {
 }
 
 /**
+ * checkPulumiCloudValue validates the optional `pulumi_cloud:` front matter, which
+ * marks a page as a Pulumi Cloud feature that needs a paid edition. The only
+ * allowed values are edition ids from data/pulumi_editions.yaml, Team or above:
+ *
+ *   pulumi_cloud: team | enterprise | business-critical
+ *
+ * We only mark what a reader has to buy, so there is no value meaning "Cloud but
+ * ungated" — such a page carries no marker at all. `true`, `false`, and
+ * `individual` are therefore all rejected. Markers are set per page; there is no
+ * inheritance. Where only part of a page is a Cloud feature, use the
+ * {{< pulumi-cloud >}} shortcode, which Hugo validates at build time via
+ * cloud-availability-body.html's errorf.
+ *
+ * The key is `pulumi_cloud`, not `cloud`: content/templates/ already uses a
+ * `cloud:` mapping for the cloud PROVIDER a template targets, and on a site that
+ * documents AWS, Azure, and GCP a bare `cloud` reads as the provider anyway.
+ *
+ * Edition ids are read from the data file, not hardcoded, so renaming an edition
+ * is a one-file change.
+ *
+ * @param {*} cloud The front matter `pulumi_cloud` value.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkPulumiCloudValue(cloud) {
+    if (cloud === undefined) {
+        return null;
+    }
+    if (typeof cloud === "boolean") {
+        return `Invalid 'pulumi_cloud' value: ${cloud}. Name the edition a reader has to buy (${PULUMI_EDITIONS.slice(1).join(", ")}), or drop the key — an ungated page carries no marker. See data/pulumi_editions.yaml.`;
+    }
+    // Slice off the lowest edition: it gates nothing, so it is never a marker.
+    if (!PULUMI_EDITIONS.slice(1).includes(cloud)) {
+        return `Invalid 'pulumi_cloud' value: '${cloud}'. Use an edition id from data/pulumi_editions.yaml (${PULUMI_EDITIONS.slice(1).join(", ")}).`;
+    }
+    return null;
+}
+
+/**
  * Asset directories under content/releases/changelog/ whose files must be
  * date-prefixed, mirroring the entry-filename convention (checkChangelogFilename)
  * so the shared folders don't turn into an undated jumble.
@@ -927,6 +980,7 @@ function searchForMarkdown(paths) {
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                     changelogTiers: checkChangelogTiers(obj.tiers, obj.tier, fullPath),
+                    pulumiCloudValue: checkPulumiCloudValue(obj.pulumi_cloud),
                 };
                 result.files.push(fullPath);
             }
@@ -1101,6 +1155,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.changelogTiers,
+                });
+            }
+            if (frontMatterErrors.pulumiCloudValue) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.pulumiCloudValue,
                 });
             }
         }

@@ -329,6 +329,8 @@ interface — renaming or removing one breaks every stack that depends on it.
 
 ### Sharing data with Pulumi ESC
 
+{{< pulumi-cloud />}}
+
 [Pulumi ESC](/docs/esc/) offers a more loosely coupled way to share data between stacks, and it's what we recommend over
 stack references for most layered setups. Instead of one stack reaching into another in code, you pull a producing
 stack's outputs into an [environment](/docs/esc/concepts/environments/) with the

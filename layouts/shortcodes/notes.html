@@ -1,22 +1,6 @@
-{{ $type := default "info" (.Get "type") }}
-{{ $size := .Get "size" }}
-{{ $icon := "info" }}
-
-{{ if eq $type "tip" }}
-    {{ $icon = "lightbulb" }}
-{{ end }}
-
-{{ if eq $type "warning" }}
-    {{ $icon = "warning" }}
-{{ end }}
-
-
-<div class="note note-{{ $type }}{{ if $size }} note-{{ $size }}{{ end }}">
-    <div class="icon-and-line">
-        {{ partial "icon.html" (dict "name" $icon "weight" "fill") }}
-        <div class="line"></div>
-    </div>
-    <div class="content">
-        {{- .Inner | markdownify -}}
-    </div>
-</div>
+{{- /* Named `type` only, matching the long-standing behavior. A positional
+       argument — {{% notes "warning" %}} — is IGNORED and silently yields an info
+       box; see "Pulumi Cloud availability markers" in AGENTS.md before changing
+       this, because switching it on reclassifies existing content. */ -}}
+{{- $type := default "info" (.Get "type") -}}
+{{- partial "notes.html" (dict "type" $type "size" (.Get "size") "text" (.Inner | markdownify)) -}}

@@ -9,15 +9,12 @@ menu:
     parent: administration-access-identity-rbac
     weight: 3
     identifier: administration-access-identity-rbac-entities
+pulumi_cloud: enterprise
 ---
 
 An entity is a Pulumi object that can have [permission sets](/docs/administration/access-identity/rbac/permission-sets) granted on it.
 
 In Pulumi Cloud's authorization model, we use the term "entity" instead of "resource" to refer to such objects. This is because "resource" already has a specific meaning within Pulumi (referring to cloud infrastructure resources). We use the term "entity" to avoid confusion when discussing authorization.
-
-{{% notes "info" %}}
-Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Entity types
 
@@ -37,7 +34,7 @@ Organization-level operations — billing, member management, audit logs, integr
 
 Organization-level access also covers **meta-permissions**: actions that can't be attached to an existing entity because the entity doesn't exist yet. Creating a stack (`stack:create`), a team (`team:create`), or an insights account (`insights_account:create`) is governed at the organization level rather than per-entity — there's no specific stack, team, or account to grant access on until it's created.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 **Organization-level scopes vs. org-wide capability toggles**: Organization-level scopes (e.g. `stack:create`, `team:create`) are granted through a role's organization access level. These are separate from the capability toggles in [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings) (e.g. "Allow organization members to create stacks"), which apply to members on the Member role.
 {{% /notes %}}
 

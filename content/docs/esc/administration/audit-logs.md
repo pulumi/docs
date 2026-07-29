@@ -12,12 +12,8 @@ menu:
         name: ESC Audit Logs
         parent: administration-security-compliance
         weight: 11
+pulumi_cloud: enterprise
 ---
-
-{{% notes "info" %}}
-Audit Logs are available to organizations using the Enterprise and Business Critical editions.
-To learn more about editions, visit the [pricing page](/pricing/).
-{{% /notes %}}
 
 {{% notes type="warning" %}}
 For comprehensive audit log documentation including how to view, filter, and export logs, see [Audit Logs](/docs/administration/security-compliance/audit-logs/) in the Administration section.

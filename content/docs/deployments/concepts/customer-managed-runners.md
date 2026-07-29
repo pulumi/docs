@@ -15,6 +15,7 @@ aliases:
 - /docs/deployments/deployments/customer-managed-agents/
 - /docs/deployments/deployments/runs/customer-managed-agents/
 - /docs/deployments/deployments/runs/
+pulumi_cloud: business-critical
 ---
 
 By default, deployments run on [Pulumi-managed runners](/docs/deployments/concepts/pulumi-managed-runners/). Customer-managed workflow runners let you self-host that compute on your own infrastructure instead — for example, to run within a private network — while supporting the same deployment triggers and workflow types.
@@ -32,10 +33,6 @@ Customer-Managed Workflow Runners allow you to self-host workflow runners, bring
 <sup>1</sup> *Currently Linux and macOS are supported*
 
 Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/concepts/triggers/) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Insights discovery scans and policy evaluations.
-
-{{% notes "info" %}}
-Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
-{{% /notes %}}
 
 To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how to supply cloud credentials to runners and the full configuration reference.
 

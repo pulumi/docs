@@ -12,6 +12,7 @@ aliases:
   - /docs/insights/preventative-vs-audit-policies/
   - /docs/insights/policy/policy-packs/preventative-vs-audit-policies/
   - /docs/using-pulumi/crossguard/core-concepts/
+pulumi_cloud: team
 ---
 
 Policy groups organize one or more policy packs and apply them to specific stacks or cloud accounts. They determine when and where policies are enforced across your organization.
@@ -42,7 +43,7 @@ Audit policy groups provide continuous compliance monitoring for both Pulumi sta
 - See all resources in cloud accounts, not just Pulumi-managed
 - Provide compliance visibility and reporting
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 When you enable Pulumi Policies for your organization, default policy groups are created automatically: `default-preventative-policy-group` for stacks and `default-audit-policy-group` for stacks and cloud accounts.
 {{% /notes %}}
 
