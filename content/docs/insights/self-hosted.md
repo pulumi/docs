@@ -1,8 +1,8 @@
 ---
 title: Self-hosted Insights
-title_tag: Self-hosted Insights | Pulumi Insights
+title_tag: Self-hosted Insights | Discovery & Governance
 h1: Self-hosted Insights
-meta_desc: Run Pulumi Insights discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
+meta_desc: Run Discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
 menu:
   insights:
     parent: insights-home
@@ -26,11 +26,11 @@ Running Insights in your own environment with customer-managed workflow runners 
 
 ## How it works
 
-Customer-managed workflow runners support multiple workflow types beyond deployments, including Insights discovery scans and policy evaluations. Workflow runners poll Pulumi Cloud for pending workflows and execute them in your self-hosted environment.
+Customer-managed workflow runners support multiple workflow types beyond deployments, including Discovery scans and policy evaluations. Workflow runners poll Pulumi Cloud for pending workflows and execute them in your self-hosted environment.
 
 For full setup and configuration details, see the [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) documentation.
 
-### Setting up Insights scans
+### Setting up Discovery scans
 
 1. [Set up a customer-managed workflow runner pool](/docs/deployments/guides/customer-managed-workflow-runners/#using-customer-managed-workflow-runners)
 1. Navigate to **Management** > **Accounts** in Pulumi Cloud
@@ -50,7 +50,7 @@ If you want every account scan and policy evaluation to use a customer-managed p
 
 ### Restricting workflow types
 
-By default, workflow runners handle all workflow types (deployments, Insights scans, and policy evaluations). You can restrict which workflow types a runner handles using the `enabled_workflow_types` configuration option in `pulumi-workflow-agent.yaml`:
+By default, workflow runners handle all workflow types (deployments, Discovery scans, and policy evaluations). You can restrict which workflow types a runner handles using the `enabled_workflow_types` configuration option in `pulumi-workflow-agent.yaml`:
 
 ```yaml
 enabled_workflow_types:

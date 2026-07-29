@@ -468,7 +468,7 @@ comparison_table:
                   - content: _check
 
           ## Pulumi Insights Table
-          - header: Insights & Governance
+          - header: Discovery & Governance
             icon: custom/pulumi-insights
             rows:
               - title: On-demand resource price

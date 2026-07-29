@@ -30,7 +30,7 @@ This model lets you:
 Roles apply to these kinds of principals in Pulumi Cloud:
 
 - **Users**: Each organization member has exactly one organization role (Admin, Member, Billing Manager, or a custom role).
-- **[Teams](/docs/administration/access-identity/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and Insights accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
+- **[Teams](/docs/administration/access-identity/rbac/teams/)**: A team can be granted access two ways — through **roles** and through **entity access** granted directly on specific stacks, environments, and cloud accounts (outside of any role). Members of a team receive the union of the team's roles, its direct entity access grants, and their own user role.
 - **[Team tokens](/docs/administration/access-identity/access-tokens/#team-access-tokens)**: Machine tokens that act on behalf of a team. A team token's permissions are the union of the roles assigned to its team — they are not assigned a role directly — and they also inherit the organization's default Member permissions configured in [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings).
 - **[Organization access tokens](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token)**: Machine tokens that are assigned exactly one role defining the token's permissions across the organization.
 
@@ -58,7 +58,7 @@ Every member of a Pulumi organization has a user role — a built-in role (Admin
 
 ### Team roles and entity access grants
 
-Members who belong to teams inherit all roles assigned to those teams, in addition to their user role. Teams can also be granted [entity access](/docs/administration/access-identity/rbac/teams#team-entity-access-grants) directly on specific stacks, environments, and Insights accounts, outside of any role; team members receive that access too. Users in multiple teams accumulate permissions from all of the teams of which they are a member.
+Members who belong to teams inherit all roles assigned to those teams, in addition to their user role. Teams can also be granted [entity access](/docs/administration/access-identity/rbac/teams#team-entity-access-grants) directly on specific stacks, environments, and cloud accounts, outside of any role; team members receive that access too. Users in multiple teams accumulate permissions from all of the teams of which they are a member.
 
 ### Creator grants
 
@@ -70,7 +70,7 @@ Pulumi Cloud's RBAC system is built on these core concepts:
 
 - [**Scopes**](/docs/administration/access-identity/rbac/scopes): Granular access rights that define specific actions on resources
 - [**Permission sets**](/docs/administration/access-identity/rbac/permission-sets): Predefined bundles of scopes that are commonly used together
-- [**Entities and organization-level access**](/docs/administration/access-identity/rbac/entities): The Pulumi Cloud objects that permission sets are granted on — stacks, environments, and insights accounts — plus the organization-level access that governs org-wide operations. (Pulumi uses "entity" rather than "resource" here to avoid confusion with cloud infrastructure resources.)
+- [**Entities and organization-level access**](/docs/administration/access-identity/rbac/entities): The Pulumi Cloud objects that permission sets are granted on — stacks, environments, and cloud accounts — plus the organization-level access that governs org-wide operations. (Pulumi uses "entity" rather than "resource" here to avoid confusion with cloud infrastructure resources.)
 - [**Roles**](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to entities and assigned to principals. The access rules in a role that apply to entities may be applied to all entities of that type, explicitly selected entities, or they can be [tag-based (ABAC) rules](/docs/administration/access-identity/rbac/roles#tag-based-abac-rules).
 - [**Teams**](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles
 

@@ -1,6 +1,6 @@
 ---
 title_tag: "Pulumi Cloud: Entities and organization level access"
-meta_desc: Learn about entities in Pulumi Cloud RBAC — the stacks, environments, and Insights accounts that permission sets are granted on — and organization-level access.
+meta_desc: Learn about entities in Pulumi Cloud RBAC — the stacks, environments, and cloud accounts that permission sets are granted on — and organization-level access.
 title: "Entities and Organization Level Access"
 h1: "Entities and Organization Level Access"
 menu:
@@ -29,13 +29,13 @@ Pulumi Cloud has three entity types:
 
 * **[Stacks](/docs/iac/concepts/stacks/)**: All operations that affect stacks — updates, configuration, deployment settings, tags and annotations, webhooks, and schedules. See [stack scopes](/docs/administration/access-identity/rbac/scopes/stacks) for the full list.
 * **[Environments](/docs/esc/concepts/environments/)** (Pulumi ESC): All operations that affect environments — configuration, secrets, schedules, webhooks, and versions. See [environment scopes](/docs/administration/access-identity/rbac/scopes/environments) for the full list.
-* **[Insights accounts](/docs/insights/)**: All operations that affect insights accounts — accounts, policy evaluations, scan configurations, and results and reports. See [insights account scopes](/docs/administration/access-identity/rbac/scopes/insights-accounts) for the full list.
+* **[Cloud accounts](/docs/insights/)**: All operations that affect cloud accounts — accounts, policy evaluations, scan configurations, and results and reports. See [cloud account scopes](/docs/administration/access-identity/rbac/scopes/insights-accounts) for the full list.
 
 ## Organization-level access
 
 Organization-level operations — billing, member management, audit logs, integrations, and other organization settings — are **not** an entity type. They aren't tied to individual objects, so you don't grant them through entity access rules. Instead, a role's **organization access level** governs them. See [Roles](/docs/administration/access-identity/rbac/roles#custom-roles) for how organization access is configured.
 
-Organization-level access also covers **meta-permissions**: actions that can't be attached to an existing entity because the entity doesn't exist yet. Creating a stack (`stack:create`), a team (`team:create`), or an insights account (`insights_account:create`) is governed at the organization level rather than per-entity — there's no specific stack, team, or account to grant access on until it's created.
+Organization-level access also covers **meta-permissions**: actions that can't be attached to an existing entity because the entity doesn't exist yet. Creating a stack (`stack:create`), a team (`team:create`), or a cloud account (`insights_account:create`) is governed at the organization level rather than per-entity — there's no specific stack, team, or account to grant access on until it's created.
 
 {{% notes "info" %}}
 **Organization-level scopes vs. org-wide capability toggles**: Organization-level scopes (e.g. `stack:create`, `team:create`) are granted through a role's organization access level. These are separate from the capability toggles in [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings) (e.g. "Allow organization members to create stacks"), which apply to members on the Member role.

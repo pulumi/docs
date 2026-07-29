@@ -1,8 +1,8 @@
 ---
 title: Get Started
-title_tag: Get Started with Pulumi Insights Account Discovery
-h1: Get Started with Pulumi Insights Account Discovery
-meta_desc: Learn how to set up and manage Pulumi Insights accounts to gain visibility into your cloud infrastructure.
+title_tag: Get Started with Discovery | Discovery & Governance
+h1: Get Started with Discovery
+meta_desc: Learn how to set up and manage cloud accounts to gain visibility into your cloud infrastructure.
 weight: 1
 menu:
   insights:
@@ -37,7 +37,7 @@ For an overview of how Pulumi Insights works, check out the following 5-min vide
     </iframe>
 </div>
 
-This guide will take you through the following steps to get started with Pulumi Insights Account Discovery and Resource Explorer:
+This guide will take you through the following steps to get started with Discovery and Resource Explorer:
 
 1. Confirm the prerequisites for connecting your cloud accounts.
 1. Connect a cloud account and run your first discovery scan.

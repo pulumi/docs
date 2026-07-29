@@ -33,7 +33,7 @@ Preventative policy groups apply to Pulumi stacks and run *before* resources are
 
 ### Audit policy groups
 
-Audit policy groups provide continuous compliance monitoring for both Pulumi stacks and [cloud accounts](/docs/insights/accounts/). For stacks, they evaluate the latest state whenever the stack updates. For cloud accounts, they scan all resources on a schedule, including resources not managed by Pulumi.
+Audit policy groups provide continuous compliance monitoring for both Pulumi stacks and [cloud accounts](/docs/insights/discovery/accounts/). For stacks, they evaluate the latest state whenever the stack updates. For cloud accounts, they scan all resources on a schedule, including resources not managed by Pulumi.
 
 **Key characteristics:**
 

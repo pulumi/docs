@@ -64,9 +64,9 @@ permissions and role assignments granted to team members is managed in the Pulum
 
 ## Team Entity Access Grants
 
-Team entity access grants allow team admins to manage their team's access to specific stacks, environments, and insights accounts directly, without requiring org-level role management permissions. This makes it possible for teams to self-manage their own entity access while keeping broader role administration centralized.
+Team entity access grants allow team admins to manage their team's access to specific stacks, environments, and cloud accounts directly, without requiring org-level role management permissions. This makes it possible for teams to self-manage their own entity access while keeping broader role administration centralized.
 
-Teams can be granted direct access to stacks, environments, and insights accounts. All team members receive access to those entities at the selected permission level.
+Teams can be granted direct access to stacks, environments, and cloud accounts. All team members receive access to those entities at the selected permission level.
 
 ### Managing environment access via the REST API
 
@@ -150,5 +150,5 @@ The endpoint returns `204 No Content` on success. These operations require a Pul
 
 - [Roles](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to entities and combined with an organization access level. You can assign roles to a team so its members inherit them.
 - [Permission sets](/docs/administration/access-identity/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.
-- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and Insights accounts), plus the organization-level access that governs org-wide operations.
+- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and cloud accounts), plus the organization-level access that governs org-wide operations.
 - [Scopes](/docs/administration/access-identity/rbac/scopes): The most granular access rights in Pulumi Cloud, written as `object:action`. Each scope belongs to one entity type and is the building block of permission sets.

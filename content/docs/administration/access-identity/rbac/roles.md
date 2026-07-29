@@ -85,7 +85,7 @@ The **Environment permissions** dropdown sets the access level that members on t
 
 #### Account permissions
 
-The **Account permissions** dropdown sets the access level that members on the Member role have to all [Pulumi Insights accounts](/docs/insights/):
+The **Account permissions** dropdown sets the access level that members on the Member role have to all [cloud accounts](/docs/insights/):
 
 - **None** — Members have no default access to accounts.
 - **Read** — Members can view accounts, their scan configurations, and scan results.
@@ -94,7 +94,7 @@ The **Account permissions** dropdown sets the access level that members on the M
 
 This group also includes a capability toggle:
 
-- **Allow organization members to create accounts** — When enabled, members on the Member role can create new Insights accounts. When disabled, only members whose role includes the `insights_account:create` scope can do so.
+- **Allow organization members to create accounts** — When enabled, members on the Member role can create new cloud accounts. When disabled, only members whose role includes the `insights_account:create` scope can do so.
 
 #### Team permissions
 
@@ -126,7 +126,7 @@ A custom role can include any combination of the following entity access rule ty
 
 ##### Direct entity access
 
-Direct rules grant a permission set to individually selected entities. Choose the entity type (stack, environment, or insights account), select **Select specific [type]**, then select **Choose [type]** to open a searchable list.
+Direct rules grant a permission set to individually selected entities. Choose the entity type (stack, environment, or cloud account), select **Select specific [type]**, then select **Choose [type]** to open a searchable list.
 
 A dialog lists the entities in your organization. You can search by name to filter the list.
 
@@ -142,7 +142,7 @@ Global rules apply a permission set to all entities of a given type within the o
 
 Tag-based rules (also called ABAC — attribute-based access control) grant a permission set when a resource's tags match defined conditions. Each rule has:
 
-- **Entity type** — Stack, environment, or insights account.
+- **Entity type** — Stack, environment, or cloud account.
 - **Tag conditions** — One or more conditions on resource tags (e.g. tag `env` equals `production`, or tag `team` exists).
 - **Permission set** — The permission set to grant when the conditions match a resource.
 
@@ -192,5 +192,5 @@ When working with roles in Pulumi Cloud, consider these best practices:
 
 - [Scopes](/docs/administration/access-identity/rbac/scopes): The most granular access rights in Pulumi Cloud, written as `object:action`. Each scope belongs to one entity type and is the building block of permission sets.
 - [Permission sets](/docs/administration/access-identity/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.
-- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and Insights accounts), plus the organization-level access that governs org-wide operations.
+- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and cloud accounts), plus the organization-level access that governs org-wide operations.
 - [Teams](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles and entity access. Each member inherits the union of the team's roles on top of their own role.
