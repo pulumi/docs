@@ -84,7 +84,7 @@ The policy groups table shows:
 - **Entities Applied**: Number of stacks or accounts governed by this group
 - **Policy Packs**: Number of policy packs included in this group
 
-Your organization includes a default policy group for each type: one for preventative policies (applies to all stacks) and one for audit policies (applies to all accounts). These default groups automatically include new stacks and accounts as they're created.
+Your organization includes a default policy group for each type: `default-policy-group` for preventative policies, which applies to all stacks, and `default-accounts-policy-group` for audit policies, which applies to all cloud accounts. These default groups automatically include new stacks and accounts as they're created, and there are limits on how you can change them. See [default policy groups](/docs/insights/policy/policy-groups/#default-policy-groups).
 
 #### Creating a preventative policy group
 

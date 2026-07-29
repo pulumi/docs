@@ -45,6 +45,8 @@ Before authoring your first policy pack, ensure you have:
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/insights/policy/).
 
+The runtime you choose here also becomes a requirement for everyone who runs Pulumi against a stack your pack governs. See [runtime requirements](/docs/insights/policy/policy-packs/#runtime-requirements).
+
 ## Creating a policy pack
 
 Create your first policy pack:
