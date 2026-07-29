@@ -51,14 +51,30 @@ const CASE_STUDY_INDUSTRIES = (function () {
  * in `make lint` (~2s, and it gates the build) instead of in a full Hugo build.
  *
  * Shape: { editions: [id], names: {id: name}, features: {id: minEdition},
- *          duplicates: [id] }. A feature's minimum edition is the first edition
- * with a truthy cell, or its `requires:` when set.
+ *          duplicates: [id], yamlBooleans: [{line, value, text}] }. A feature's
+ * minimum edition is the first edition with a truthy cell, or its `requires:`
+ * when set.
  */
 const PRICING = (function () {
-    const empty = { editions: [], names: {}, features: {}, duplicates: [] };
+    const empty = { editions: [], names: {}, features: {}, duplicates: [], yamlBooleans: [] };
     try {
         const p = path.resolve(__dirname, "../../data/pulumi_pricing.yaml");
-        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        const raw = fs.readFileSync(p, "utf8");
+
+        // YAML 1.1 parses `no`, `yes`, `on`, `off`, `y`, and `n` as booleans, so
+        // an author writing `enterprise: No` to mean the *word* "No" silently
+        // gets `false` and the cell renders as a dash. By parse time the two are
+        // indistinguishable from a deliberate `false`, so catch it in the source
+        // text: quote the string, or write `true`/`false` if you meant the bool.
+        const yamlBooleans = [];
+        raw.split("\n").forEach(function (line, i) {
+            const m = line.match(/^\s+[a-z0-9-]+:\s*(y|n|yes|no|on|off)\s*$/i);
+            if (m) {
+                yamlBooleans.push({ line: i + 1, value: m[1], text: line.trim() });
+            }
+        });
+
+        const doc = yaml.load(raw);
         const editions = (doc.editions || []).map(e => e.id);
         const names = {};
         (doc.editions || []).forEach(e => (names[e.id] = e.name));
@@ -83,7 +99,7 @@ const PRICING = (function () {
                 features[f.id] = f.requires || min;
             }
         }
-        return { editions, names, features, duplicates };
+        return { editions, names, features, duplicates, yamlBooleans };
     } catch (e) {
         console.warn(`Warning: could not load Pulumi pricing data: ${e.message}`);
         return empty;
@@ -1372,16 +1388,23 @@ if (filesFromArgs.length === 0) {
 // finding about the data file, not a finding about every page that happens to
 // reference it. Report it once per run. (Hugo raises the same error at build
 // time; this just surfaces it seconds earlier.)
-if (PRICING.duplicates.length > 0) {
-    errors.push({
-        path: "data/pulumi_pricing.yaml",
-        errors: PRICING.duplicates.map(function (id) {
+const pricingDataErrors = PRICING.duplicates
+    .map(function (id) {
+        return {
+            lineNumber: "Data",
+            ruleDescription: `Duplicate feature id '${id}'. Ids are unique across every category — prefix the newer one with its product (for example 'esc-${id}').`,
+        };
+    })
+    .concat(
+        PRICING.yamlBooleans.map(function (b) {
             return {
-                lineNumber: "Data",
-                ruleDescription: `Duplicate feature id '${id}'. Ids are unique across every category — prefix the newer one with its product (for example 'esc-${id}').`,
+                lineNumber: b.line,
+                ruleDescription: `'${b.text}' — YAML 1.1 parses '${b.value}' as a boolean, so this cell becomes ${/^(y|yes|on)$/i.test(b.value) ? "true" : "false"} and renders as a ${/^(y|yes|on)$/i.test(b.value) ? "check mark" : "dash"}, not the word. Quote it ("${b.value}") if you meant the text, or write true/false if you meant the boolean.`,
             };
-        }),
-    });
+        })
+    );
+if (pricingDataErrors.length > 0) {
+    errors.push({ path: "data/pulumi_pricing.yaml", errors: pricingDataErrors });
 }
 
 // Get the total number of errors.
