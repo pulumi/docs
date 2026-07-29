@@ -30,7 +30,9 @@ social:
 
         We wrote up how we think about provisioning and governing that infrastructure with Pulumi — real TypeScript and Python, not just YAML, plus where policy-as-code, secrets management, and Pulumi Neo fit in when the infrastructure itself has to answer to an agent.
     bluesky: |
-        An AI agent on Kubernetes isn't just another Deployment: GPUs, long-lived sessions, and a much bigger credential blast radius. Here's how to provision and govern that infrastructure with Pulumi, in TypeScript and Python.
+        An AI agent on Kubernetes isn't just another Deployment: GPUs, long-lived sessions, and a much bigger credential blast radius.
+
+        Here's how to provision and govern that infrastructure with Pulumi, in TypeScript and Python.
 ---
 
 Kubernetes has become the default place teams run agentic AI workloads: CNCF's 2026 annual survey found that 66% of organizations are betting on Kubernetes to run their generative AI workloads.[^cncf-survey] An entire ecosystem has grown up around that fact — agent runtimes, model servers, GPU schedulers — and most of it assumes the infrastructure underneath is already handled. It usually isn't. An AI agent is not a stateless web service, and provisioning for one takes more than copying a Deployment YAML and swapping the image.
@@ -230,7 +232,7 @@ The relevant framing for this post: Neo doesn't replace kagent, KServe, or any o
 
 ### How do you deploy AI agents on Kubernetes?
 
-Provision a cluster (with GPU node pools if your agent needs them), install an agent runtime — [kagent](https://kagent.dev/) is the most Kubernetes-native option as of 2026 — and declare the agent as a custom resource alongside its model configuration and any MCP tool servers it needs. Doing this with Pulumi means the cluster, the runtime install, the secrets, and the agent definition are all one reviewable, testable stack rather than a mix of `kubectl apply` commands run by hand.
+Provision a cluster (with GPU node pools if your agent needs them), install an agent runtime — [kagent](https://kagent.dev/) is one of the more Kubernetes-native options as of 2026 — and declare the agent as a custom resource alongside its model configuration and any MCP tool servers it needs. Doing this with Pulumi means the cluster, the runtime install, the secrets, and the agent definition are all one reviewable, testable stack rather than a mix of `kubectl apply` commands run by hand.
 
 ### Do you need GPUs to run AI agents on Kubernetes?
 
@@ -259,7 +261,7 @@ If you're starting from zero, the [Kubernetes get-started guide](/docs/iac/get-s
 [^cncf-survey]: CNCF Annual Survey Report, January 2026: [cncf.io/wp-content/uploads/2026/01/CNCF_Annual_Survey_Report_final.pdf](https://www.cncf.io/wp-content/uploads/2026/01/CNCF_Annual_Survey_Report_final.pdf).
 [^kagent-cncf]: "kagent was accepted to CNCF on May 22, 2025 at the Sandbox maturity level." CNCF Projects: [cncf.io/projects/kagent/](https://www.cncf.io/projects/kagent/).
 [^kserve-cncf]: KServe accepted as a CNCF Incubating project, September 29, 2025: [cncf.io/blog/2025/11/11/kserve-becomes-a-cncf-incubating-project/](https://www.cncf.io/blog/2025/11/11/kserve-becomes-a-cncf-incubating-project/).
-[^dra-ga]: Dynamic Resource Allocation reached general availability in Kubernetes v1.34 (released September 2025). Kubernetes blog: [kubernetes.io/blog](https://kubernetes.io/blog/).
+[^dra-ga]: Dynamic Resource Allocation reached general availability in Kubernetes v1.34 (released August 27, 2025). Kubernetes blog: [kubernetes.io/blog](https://kubernetes.io/blog/).
 [^kagent-crds]: kagent CRD kinds (`Agent`, `ModelConfig`, `ModelProviderConfig`, `RemoteMCPServer`, `SandboxAgent`) per the `kagent-dev/kagent` `v1alpha2` API types, and MCP server tooling per the project README: [github.com/kagent-dev/kagent](https://github.com/kagent-dev/kagent).
 [^neo-docs]: Pulumi Infrastructure AI / Neo documentation: [pulumi.com/docs/ai/](/docs/ai/).
 [^neo-things]: "10 Things You Can Do with Neo" and "10 More Things You Can Do with Neo," Pulumi blog: [pulumi.com/blogs/10-things-you-can-do-with-neo/](https://www.pulumi.com/blogs/10-things-you-can-do-with-neo/), [pulumi.com/blogs/10-more-things-you-can-do-with-neo/](https://www.pulumi.com/blogs/10-more-things-you-can-do-with-neo/).
