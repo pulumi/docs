@@ -39,19 +39,64 @@ const CASE_STUDY_INDUSTRIES = (function () {
 })();
 
 /**
- * Allowed Pulumi Cloud edition ids, loaded once from the single source of truth
- * at data/pulumi_pricing.yaml. See that file's header for the rules.
+ * The Pulumi Cloud editions and the feature availability matrix, loaded once
+ * from the single source of truth at data/pulumi_pricing.yaml. See that file's
+ * header for the rules.
+ *
+ * The `available_from` + `availability` expansion below mirrors the one in
+ * layouts/partials/pricing/data.html. It is duplicated rather than shared
+ * because the two run in different languages, and the repo splits data
+ * validation by consumer: structural invariants belong to the template that
+ * renders the file, frontmatter-facing invariants belong here so authors fail
+ * in `make lint` (~2s, and it gates the build) instead of in a full Hugo build.
+ *
+ * Shape: { editions: [id], names: {id: name}, features: {id: minEdition},
+ *          duplicates: [id] }. A feature's minimum edition is the first edition
+ * with a truthy cell, or its `requires:` when set.
  */
-const PULUMI_EDITIONS = (function () {
+const PRICING = (function () {
+    const empty = { editions: [], names: {}, features: {}, duplicates: [] };
     try {
         const p = path.resolve(__dirname, "../../data/pulumi_pricing.yaml");
         const doc = yaml.load(fs.readFileSync(p, "utf8"));
-        return (doc.editions || []).map(e => e.id);
+        const editions = (doc.editions || []).map(e => e.id);
+        const names = {};
+        (doc.editions || []).forEach(e => (names[e.id] = e.name));
+        const features = {};
+        const duplicates = [];
+        for (const cat of doc.categories || []) {
+            for (const f of cat.features || []) {
+                if (Object.prototype.hasOwnProperty.call(features, f.id)) {
+                    duplicates.push(f.id);
+                }
+                const from = f.available_from ? editions.indexOf(f.available_from) : -1;
+                let min = null;
+                editions.forEach(function (id, i) {
+                    let v = from >= 0 && i >= from;
+                    if (f.availability && f.availability[id] !== undefined) {
+                        v = f.availability[id];
+                    }
+                    if (v && min === null) {
+                        min = id;
+                    }
+                });
+                features[f.id] = f.requires || min;
+            }
+        }
+        return { editions, names, features, duplicates };
     } catch (e) {
-        console.warn(`Warning: could not load Pulumi editions: ${e.message}`);
-        return [];
+        console.warn(`Warning: could not load Pulumi pricing data: ${e.message}`);
+        return empty;
     }
 })();
+
+/**
+ * Feature ids a marker may name: everything except the ones that resolve to the
+ * lowest edition, which gates nothing.
+ */
+const MARKABLE_FEATURES = Object.keys(PRICING.features)
+    .filter(id => PRICING.features[id] && PRICING.features[id] !== PRICING.editions[0])
+    .sort();
 
 /**
  * Defined blog series slugs, loaded once from data/blog_series.yml. Used to
@@ -794,25 +839,56 @@ function checkChangelogTiers(tiers, tier, fullPath) {
 }
 
 /**
- * checkPulumiCloudValue validates the optional `pulumi_cloud:` front matter, which
- * marks a page as a Pulumi Cloud feature that needs a paid edition. The only
- * allowed values are edition ids from data/pulumi_pricing.yaml, Team or above:
+ * Explains why one marker value is wrong, shared by the front matter key and the
+ * shortcode argument since they name the same vocabulary.
  *
- *   pulumi_cloud: team | enterprise | business-critical
+ * A marker names a FEATURE, not an edition:
+ *
+ *   pulumi_cloud: rbac
+ *   {{< pulumi-cloud "rbac" />}}
+ *
+ * The edition the callout states is derived from that feature's row in
+ * data/pulumi_pricing.yaml, so a feature that moves editions updates /pricing/
+ * and every page marked with it in one edit.
  *
  * We only mark what a reader has to buy, so there is no value meaning "Cloud but
- * ungated" — such a page carries no marker at all. `true`, `false`, and
- * `individual` are therefore all rejected. Markers are set per page; there is no
- * inheritance. Where only part of a page is a Cloud feature, use the
- * {{< pulumi-cloud >}} shortcode, which Hugo validates at build time via
- * cloud-availability-body.html's errorf.
+ * ungated" — such a page carries no marker at all. `true`, `false`, and any
+ * feature available on the lowest edition are therefore all rejected.
+ *
+ * @param {*} value The authored marker value.
+ * @param {string} label How to refer to it in the message.
+ * @returns {string|null} An error message, or null when valid.
+ */
+function pulumiCloudValueError(value, label) {
+    if (typeof value === "boolean") {
+        return `Invalid ${label} value: ${value}. Name the feature (for example 'rbac' or 'audit-logs'), or drop the key — an ungated page carries no marker. See data/pulumi_pricing.yaml.`;
+    }
+    if (PRICING.editions.includes(value)) {
+        return `Invalid ${label} value: '${value}'. That's an edition id, not a feature id — markers name the feature and the edition is derived from data/pulumi_pricing.yaml. Features on the ${PRICING.names[value] || value} edition include: ${MARKABLE_FEATURES.filter(id => PRICING.features[id] === value)
+            .slice(0, 5)
+            .join(", ")}.`;
+    }
+    if (PRICING.features[value] !== undefined && !MARKABLE_FEATURES.includes(value)) {
+        return `Invalid ${label} value: '${value}'. That feature is available on the ${PRICING.names[PRICING.editions[0]]} edition, which gates nothing — drop the marker, or set 'requires:' on it in data/pulumi_pricing.yaml if its lowest column is really a limited variant.`;
+    }
+    if (!MARKABLE_FEATURES.includes(value)) {
+        const near = MARKABLE_FEATURES.filter(id => id.includes(value) || value.includes(id));
+        const hint = near.length > 0 ? ` Did you mean: ${near.join(", ")}?` : ` Add it to data/pulumi_pricing.yaml — with 'hidden: true' if it isn't a marketed line item on /pricing/.`;
+        return `Invalid ${label} value: '${value}'. Not a feature id in data/pulumi_pricing.yaml.${hint}`;
+    }
+    return null;
+}
+
+/**
+ * checkPulumiCloudValue validates the optional `pulumi_cloud:` front matter,
+ * which marks a whole page as a Pulumi Cloud feature that needs a paid edition.
+ * Markers are set per page; there is no inheritance. Where only part of a page
+ * is a Cloud feature, use the {{< pulumi-cloud >}} shortcode instead
+ * (checkPulumiCloudShortcode below).
  *
  * The key is `pulumi_cloud`, not `cloud`: content/templates/ already uses a
  * `cloud:` mapping for the cloud PROVIDER a template targets, and on a site that
  * documents AWS, Azure, and GCP a bare `cloud` reads as the provider anyway.
- *
- * Edition ids are read from the data file, not hardcoded, so renaming an edition
- * is a one-file change.
  *
  * @param {*} cloud The front matter `pulumi_cloud` value.
  * @returns {string|null} An error message, or null when valid/not applicable.
@@ -821,14 +897,36 @@ function checkPulumiCloudValue(cloud) {
     if (cloud === undefined) {
         return null;
     }
-    if (typeof cloud === "boolean") {
-        return `Invalid 'pulumi_cloud' value: ${cloud}. Name the edition a reader has to buy (${PULUMI_EDITIONS.slice(1).join(", ")}), or drop the key — an ungated page carries no marker. See data/pulumi_pricing.yaml.`;
+    return pulumiCloudValueError(cloud, "'pulumi_cloud'");
+}
+
+/**
+ * Matches an edition-bearing {{< pulumi-cloud "..." />}} call. The no-argument
+ * form means "Pulumi Cloud, all editions" and is deliberately allowed, as is the
+ * block form with inner prose.
+ */
+const PULUMI_CLOUD_SHORTCODE_REGEX = /\{\{<\s*pulumi-cloud\s+"([^"]*)"/g;
+
+/**
+ * checkPulumiCloudShortcode validates the argument of every
+ * {{< pulumi-cloud "<feature>" />}} in a page body against the same vocabulary
+ * as the front matter key. Hugo already fails the build on a bad value, but a
+ * full build is minutes and `make lint` is seconds — and lint runs first.
+ *
+ * @param {string} content The full file contents, front matter included.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkPulumiCloudShortcode(content) {
+    const messages = [];
+    let match;
+    PULUMI_CLOUD_SHORTCODE_REGEX.lastIndex = 0;
+    while ((match = PULUMI_CLOUD_SHORTCODE_REGEX.exec(content)) !== null) {
+        const err = pulumiCloudValueError(match[1], "{{< pulumi-cloud >}}");
+        if (err && !messages.includes(err)) {
+            messages.push(err);
+        }
     }
-    // Slice off the lowest edition: it gates nothing, so it is never a marker.
-    if (!PULUMI_EDITIONS.slice(1).includes(cloud)) {
-        return `Invalid 'pulumi_cloud' value: '${cloud}'. Use an edition id from data/pulumi_pricing.yaml (${PULUMI_EDITIONS.slice(1).join(", ")}).`;
-    }
-    return null;
+    return messages.length > 0 ? messages.join(" ") : null;
 }
 
 /**
@@ -981,6 +1079,7 @@ function searchForMarkdown(paths) {
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                     changelogTiers: checkChangelogTiers(obj.tiers, obj.tier, fullPath),
                     pulumiCloudValue: checkPulumiCloudValue(obj.pulumi_cloud),
+                    pulumiCloudShortcode: checkPulumiCloudShortcode(content),
                 };
                 result.files.push(fullPath);
             }
@@ -1163,6 +1262,12 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.pulumiCloudValue,
                 });
             }
+            if (frontMatterErrors.pulumiCloudShortcode) {
+                lintErrors.push({
+                    lineNumber: "Body",
+                    ruleDescription: frontMatterErrors.pulumiCloudShortcode,
+                });
+            }
         }
 
         if (lintErrors.length > 0) {
@@ -1260,6 +1365,22 @@ const errors = groupLintErrorOutput(result);
 if (filesFromArgs.length === 0) {
     checkChangelogAssets().forEach(function (assetError) {
         errors.push(assetError);
+    });
+}
+
+// Feature ids in data/pulumi_pricing.yaml are global, so a duplicate is one
+// finding about the data file, not a finding about every page that happens to
+// reference it. Report it once per run. (Hugo raises the same error at build
+// time; this just surfaces it seconds earlier.)
+if (PRICING.duplicates.length > 0) {
+    errors.push({
+        path: "data/pulumi_pricing.yaml",
+        errors: PRICING.duplicates.map(function (id) {
+            return {
+                lineNumber: "Data",
+                ruleDescription: `Duplicate feature id '${id}'. Ids are unique across every category — prefix the newer one with its product (for example 'esc-${id}').`,
+            };
+        }),
     });
 }
 

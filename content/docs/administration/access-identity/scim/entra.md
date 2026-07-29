@@ -14,7 +14,7 @@ aliases:
   - /docs/administration/access-identity/scim/azuread
   - /docs/pulumi-cloud/access-management/scim/entra/
   - /docs/pulumi-cloud/access-management/scim/azuread/
-pulumi_cloud: business-critical
+pulumi_cloud: scim
 ---
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.

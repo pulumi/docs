@@ -15,7 +15,7 @@ menu:
 aliases:
   - /docs/esc/administration/approvals/
   - /docs/esc/operations/approvals/
-pulumi_cloud: enterprise
+pulumi_cloud: esc-change-requests
 ---
 
 ## Overview

@@ -10,7 +10,7 @@ menu:
     weight: 15
     identifier: deployments-guides-gated-deployments
 aliases: []
-pulumi_cloud: enterprise
+pulumi_cloud: gated-deployments
 ---
 
 Pulumi Deployments does not currently support gated deployments: there is no built-in, deployment-level approval step that requires a reviewer to sign off before a deployment runs. This guide describes a **workaround** that achieves a similar outcome by gating the *credentials* a deployment needs rather than the deployment itself.

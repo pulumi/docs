@@ -9,7 +9,7 @@ menu:
     parent: administration-access-identity-saml
     weight: 80
     identifier: pulumi-cloud-access-management-saml-troubleshooting
-pulumi_cloud: enterprise
+pulumi_cloud: saml-sso
 ---
 
 ## Locked out of your organization

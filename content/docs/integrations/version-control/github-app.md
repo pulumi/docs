@@ -59,7 +59,7 @@ Mapping a single GitHub organization to multiple Pulumi organizations requires c
 
 ### GitHub Enterprise Server support
 
-{{< pulumi-cloud "business-critical" />}}
+{{< pulumi-cloud "github-enterprise-server" />}}
 
 Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 

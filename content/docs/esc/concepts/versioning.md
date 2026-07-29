@@ -11,7 +11,7 @@ menu:
     weight: 9
 aliases:
 - /docs/esc/environments/versioning/
-pulumi_cloud: team
+pulumi_cloud: esc-versioning
 ---
 
 Each time a change is made to an environment, a new immutable revision is created. You can manage and track changes to your secrets and configuration over time with a clear history you can audit, compare, and roll back.  You can assign tags to revisions, such as `production`, `v1.2.1`, or `stable`, to help organize and identify them.

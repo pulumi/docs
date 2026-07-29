@@ -12,7 +12,7 @@ aliases:
   - /docs/pulumi-cloud/self-hosted/deployment-options/
   - /docs/administration/self-hosting/pulumi-cloud/deployment-options/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/
-pulumi_cloud: business-critical
+pulumi_cloud: self-hosting
 ---
 Pulumi offers a number of deployment options for self-hosting the Pulumi Cloud.
 

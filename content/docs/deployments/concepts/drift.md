@@ -31,7 +31,7 @@ For the full CLI workflow — detection, remediation, adoption, and `--expect-no
 
 ## Pulumi Cloud UI
 
-{{< pulumi-cloud "enterprise" />}}
+{{< pulumi-cloud "drift-detection" />}}
 
 ### Running via Click to Deploy
 

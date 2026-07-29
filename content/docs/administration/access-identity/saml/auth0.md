@@ -14,7 +14,7 @@ aliases:
 - /docs/console/accounts/saml/auth0/
 - /docs/guides/saml/auth0/
 - /docs/pulumi-cloud/access-management/saml/auth0/
-pulumi_cloud: enterprise
+pulumi_cloud: saml-sso
 ---
 
 This guide walks you through configuring your Auth0 Authentication Platform as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider

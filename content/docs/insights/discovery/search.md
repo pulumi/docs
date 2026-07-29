@@ -14,7 +14,7 @@ aliases:
   - /docs/pulumi-cloud/insights/search/
   - /docs/insights/search/
   - /docs/insights/visibility/search/
-pulumi_cloud: team
+pulumi_cloud: resource-search
 ---
 
 Resource Search allows you to explore your resources, stacks and projects in detail.
@@ -392,7 +392,7 @@ Clicking the "X" within the search bar will remove all previously selected filte
 
 ## Download a CSV
 
-{{< pulumi-cloud "enterprise" />}}
+{{< pulumi-cloud "insights-data-export" />}}
 
 You can download a CSV with all resources matching your query by clicking the "Export CSV" button within dropdown opened by clicking the gear icon.
 

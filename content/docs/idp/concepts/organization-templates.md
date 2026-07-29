@@ -14,7 +14,7 @@ aliases:
   - /docs/pulumi-cloud/developer-platforms/templates/
   - /docs/pulumi-cloud/developer-portals/templates/
   - /docs/idp/concepts/templates
-pulumi_cloud: enterprise
+pulumi_cloud: organization-templates
 ---
 
 A large number of public project templates are provided by Pulumi in our [examples](https://github.com/pulumi/examples) and [templates](https://github.com/pulumi/templates) repos. These can be useful for teams starting from scratch; however, as your business and infrastructure grow in complexity, it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.

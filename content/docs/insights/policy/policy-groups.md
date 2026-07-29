@@ -12,7 +12,7 @@ aliases:
   - /docs/insights/preventative-vs-audit-policies/
   - /docs/insights/policy/policy-packs/preventative-vs-audit-policies/
   - /docs/using-pulumi/crossguard/core-concepts/
-pulumi_cloud: team
+pulumi_cloud: preventative-policies
 ---
 
 Policy groups organize one or more policy packs and apply them to specific stacks or cloud accounts. They determine when and where policies are enforced across your organization.

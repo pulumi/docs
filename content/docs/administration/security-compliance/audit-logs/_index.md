@@ -18,7 +18,7 @@ aliases:
 - /docs/intro/pulumi-cloud/audit-logs/
 - /docs/pulumi-cloud/audit-logs/
 - /docs/pulumi-cloud/admin/audit-logs/
-pulumi_cloud: enterprise
+pulumi_cloud: audit-logs
 ---
 
 ## Overview

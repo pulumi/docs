@@ -15,7 +15,7 @@ aliases:
 - /docs/console/accounts/saml/gsuite/
 - /docs/guides/saml/gsuite/
 - /docs/pulumi-cloud/access-management/saml/gsuite/
-pulumi_cloud: enterprise
+pulumi_cloud: saml-sso
 ---
 
 This guide walks you through configuring your Google Workspace (formerly known as G Suite) service as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider

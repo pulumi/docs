@@ -78,7 +78,7 @@ The open source Pulumi CLI enables local policy execution:
 
 ### Pulumi Cloud integration
 
-{{< pulumi-cloud "team" />}}
+{{< pulumi-cloud "policy-enforcement" />}}
 
 Pulumi Cloud extends policy capabilities with centralized management and additional enforcement modes:
 

@@ -13,7 +13,7 @@ aliases:
   - /docs/guides/self-hosted/components/console/
   - /docs/pulumi-cloud/self-hosted/components/console/
   - /docs/pulumi-cloud/admin/self-hosted/components/console/
-pulumi_cloud: business-critical
+pulumi_cloud: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}

@@ -225,7 +225,7 @@ pulumi new https://github.com/myorg/my-template
 
 ### Organization templates
 
-{{< pulumi-cloud "enterprise" />}}
+{{< pulumi-cloud "organization-templates" />}}
 
 You can publish templates to your organization's [Private Registry](/docs/idp/concepts/organization-templates/). This provides:
 

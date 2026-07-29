@@ -8,7 +8,7 @@ menu:
     parent: deployments-guides
     weight: 20
     identifier: deployments-guides-customer-managed-runners
-pulumi_cloud: business-critical
+pulumi_cloud: customer-managed-runners
 ---
 
 Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).

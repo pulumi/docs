@@ -12,7 +12,7 @@ menu:
 aliases:
 - /docs/administration/access-identity/rbac/permissions/
 - /docs/pulumi-cloud/access-management/rbac/permissions/
-pulumi_cloud: enterprise
+pulumi_cloud: rbac
 ---
 
 Permission sets in Pulumi Cloud are predefined bundles of [scopes](/docs/administration/access-identity/rbac/scopes) that are commonly used together. They provide a convenient way to grant related access rights to an [entity](/docs/administration/access-identity/rbac/entities) (resource) or set of entities (resources).

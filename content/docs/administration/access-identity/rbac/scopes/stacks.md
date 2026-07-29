@@ -13,7 +13,7 @@ aliases:
 - /docs/intro/pulumi-service/scopes/stacks
 - /docs/intro/pulumi-cloud/scopes/stacks
 - /docs/pulumi-cloud/access-management/rbac/scopes/stacks/
-pulumi_cloud: enterprise
+pulumi_cloud: rbac
 ---
 
 This document defines all the available [scopes](/docs/administration/access-identity/rbac/scopes/) in Pulumi Cloud assignable to specific stacks or sets of stacks.

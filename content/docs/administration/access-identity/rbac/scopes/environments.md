@@ -13,7 +13,7 @@ aliases:
 - /docs/intro/pulumi-service/scopes/environments
 - /docs/intro/pulumi-cloud/scopes/environments
 - /docs/pulumi-cloud/access-management/rbac/scopes/environments/
-pulumi_cloud: enterprise
+pulumi_cloud: rbac
 ---
 
 This document defines all the available [scopes](/docs/administration/access-identity/rbac/scopes/) in Pulumi Cloud assignable to specific environments or sets of environments.

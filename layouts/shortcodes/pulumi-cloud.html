@@ -9,8 +9,12 @@
       {{< pulumi-cloud />}}                    → available on all editions
 
       ## Organization templates
-      {{< pulumi-cloud "enterprise" />}}       → available on the Enterprise and
-                                                 Business Critical editions
+      {{< pulumi-cloud "organization-templates" />}}
+
+  The argument is a feature id from data/pulumi_pricing.yaml — the edition the
+  sentence names ("available on the Enterprise and Business Critical editions")
+  is derived from that feature's availability, so it can't drift from
+  /pricing/.
 
   Unlike the whole-page `pulumi_cloud:` key, the no-argument form is allowed and
   useful here: on a page that documents several ways of doing something, the
@@ -23,19 +27,19 @@
       {{< /pulumi-cloud >}}
 
   That renders prose in the same violet box, for orientation rather than a
-  statement of availability. Pass an edition and inner content to get both.
+  statement of availability. Pass a feature and inner content to get both.
 
   Whole Cloud pages use the `pulumi_cloud:` frontmatter key instead. Markers are
   set per page — there is no inheritance.
 */ -}}
-{{- $edition := .Get 0 -}}
+{{- $feature := .Get 0 -}}
 {{- $inner := "" -}}
 {{- with .Inner }}{{ $inner = . | markdownify }}{{ end -}}
 {{- /* Inner-only means the author is writing orientation prose, so skip the
        generated availability sentence; anything else states availability. */ -}}
 {{- $body := "" -}}
-{{- if or $edition (not $inner) -}}
-  {{- $body = partial "cloud-availability-body.html" (dict "edition" $edition "where" .Page.File.Path) | markdownify -}}
+{{- if or $feature (not $inner) -}}
+  {{- $body = partial "cloud-availability-body.html" (dict "feature" $feature "where" .Page.File.Path) | markdownify -}}
 {{- end -}}
 {{- /* `cloud-marker` is what scripts/search/page.js looks for so a heading's
        search snippet skips past this box to the real paragraph below it. */ -}}

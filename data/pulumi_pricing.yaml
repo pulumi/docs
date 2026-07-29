@@ -270,6 +270,16 @@ categories:
         name: GitHub Enterprise Server support
         available_from: business-critical
 
+      - id: customer-managed-runners
+        name: Customer-managed deployment runners
+        available_from: business-critical
+        hidden: true
+
+      - id: gated-deployments
+        name: Gated deployments
+        available_from: enterprise
+        hidden: true
+
       - id: webhooks
         name: Webhooks
         link: /docs/deployments/concepts/webhooks/
@@ -462,6 +472,11 @@ categories:
         link: /docs/esc/concepts/versioning/#tagging-versions
         available_from: team
 
+      - id: esc-change-requests
+        name: Change requests and approvals
+        available_from: enterprise
+        hidden: true
+
       - id: esc-dynamic-credentials
         name: Dynamic credentials
         link: /docs/esc/providers/login/
@@ -601,6 +616,11 @@ categories:
           enterprise: Advisory & Mandatory
           business-critical: Advisory, Mandatory & Remediation
 
+      - id: insights-self-hosted
+        name: Insights on self-hosted Pulumi Cloud
+        available_from: business-critical
+        hidden: true
+
   - id: neo
     name: Infrastructure AI
     group: capabilities
@@ -655,6 +675,11 @@ categories:
           team: Host public templates
           enterprise: Host private templates
           business-critical: Host private templates
+
+      - id: organization-templates
+        name: Organization templates in the Private Registry
+        available_from: enterprise
+        hidden: true
 
   - id: support
     name: Support

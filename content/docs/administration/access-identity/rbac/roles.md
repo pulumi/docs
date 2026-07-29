@@ -104,7 +104,7 @@ This group includes a single capability toggle:
 
 ## Custom roles
 
-{{< pulumi-cloud "enterprise" />}}
+{{< pulumi-cloud "custom-roles" />}}
 
 {{% notes type="info" %}}
 Pulumi Enterprise allows up to 25 custom roles; Pulumi Business Critical allows unlimited custom roles.

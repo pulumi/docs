@@ -12,7 +12,7 @@ menu:
 aliases:
   - /docs/guides/scim/onelogin/
   - /docs/pulumi-cloud/access-management/scim/onelogin/
-pulumi_cloud: business-critical
+pulumi_cloud: scim
 ---
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.

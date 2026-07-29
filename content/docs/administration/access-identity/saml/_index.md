@@ -15,7 +15,7 @@ aliases:
 - /docs/console/accounts/saml/
 - /docs/guides/saml/
 - /docs/pulumi-cloud/access-management/saml/
-pulumi_cloud: enterprise
+pulumi_cloud: saml-sso
 ---
 
 The [Pulumi Cloud](https://app.pulumi.com/signin) can be configured to work with any SAML 2.0 identity provider.

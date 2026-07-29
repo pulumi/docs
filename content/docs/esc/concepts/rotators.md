@@ -86,7 +86,7 @@ The rotation schedule can be defined as a [cron expression](https://crontab.cron
 
 ### Rotation connectors
 
-{{< pulumi-cloud "enterprise" />}}
+{{< pulumi-cloud "esc-db-secrets-rotation-private" />}}
 
 Many organizations keep their databases in private networks, making it impossible for external credential managers (like ESC) to rotate the credentials.
 
