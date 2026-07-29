@@ -10,7 +10,7 @@ menu:
         weight: 1
 ---
 
-This page covers installing the Pulumi Kubernetes Operator (PKO), creating a service account for stack operations, and configuring access to Pulumi Cloud and Pulumi ESC.
+This page covers installing the Pulumi Kubernetes Operator, creating a service account for stack operations, and configuring access to Pulumi Cloud and Pulumi ESC.
 
 ## Install the operator
 
