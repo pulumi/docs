@@ -45,7 +45,7 @@ Write your own policies in TypeScript, Python, or [OPA (Rego)](/docs/insights/po
 
 ## Runtime requirements
 
-A policy pack's [`PulumiPolicy.yaml`](/docs/insights/policy/policy-packs/project-file/) declares a `runtime` — `nodejs`, `python`, or `opa` — and that runtime must be installed wherever `pulumi preview` or `pulumi up` runs against a stack the pack applies to, including every developer machine and CI/CD worker, not just where you authored or published the pack. This matters most for packs enabled with `mandatory` enforcement on a [preventative policy group](/docs/insights/policy/policy-groups/#preventative-policy-groups), since a missing runtime blocks the deployment rather than failing a report. See [adding policy packs to a default policy group](/docs/insights/policy/policy-groups/#adding-policy-packs-to-a-default-policy-group) for the risk of doing this organization-wide.
+A policy pack's [`PulumiPolicy.yaml`](/docs/insights/policy/policy-packs/project-file/) declares a `runtime` — `nodejs`, `python`, or `opa` — and that runtime must be installed wherever `pulumi preview` or `pulumi up` runs against a stack the pack applies to, including every developer machine and CI/CD worker, not only where you authored or published the pack. This matters most for packs enabled with `mandatory` enforcement on a [preventative policy group](/docs/insights/policy/policy-groups/#preventative-policy-groups), since a missing runtime blocks the deployment rather than failing a report. See [adding policy packs to a default policy group](/docs/insights/policy/policy-groups/#adding-policy-packs-to-a-default-policy-group) for the risk of doing this organization-wide.
 
 ## Next steps
 
