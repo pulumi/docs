@@ -1,4 +1,27 @@
 {{ define "main" }}
+{{/* Everything below the hero is a rendering of data/pulumi_pricing.yaml: the
+     cards are the editions, the comparison accordion is groups -> categories ->
+     features. Column order comes from the editions list, so a feature that
+     doesn't name an edition renders blank instead of shifting the row. */}}
+{{ $px := partialCached "pricing/data.html" . "pricing-data" }}
+{{ $editions := $px.editions }}
+{{/* Grid classes must be literal strings — Tailwind v4 content-scans these
+     templates as raw text, so a class assembled with printf is never emitted
+     and the grid silently collapses to one column. */}}
+{{ $n := printf "%d" (len $editions) }}
+{{ $cardGrid := index (dict
+        "3" "grid grid-cols-1 card md:grid-cols-3 xl:grid-cols-3 divide-y md:divide-y-0 md:divide-x"
+        "4" "grid grid-cols-1 card md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x"
+        "5" "grid grid-cols-1 card md:grid-cols-3 xl:grid-cols-5 divide-y md:divide-y-0 md:divide-x") $n }}
+{{ $cols := index (dict "3" "grid-cols-3" "4" "grid-cols-4" "5" "grid-cols-5") $n }}
+{{ $colsMd := index (dict
+        "3" "md:grid-cols-[2fr_1fr_1fr_1fr]"
+        "4" "md:grid-cols-[2fr_1fr_1fr_1fr_1fr]"
+        "5" "md:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr]") $n }}
+{{ $labelSpan := index (dict "3" "col-span-3" "4" "col-span-4" "5" "col-span-5") $n }}
+{{ if or (not $cardGrid) (not $cols) (not $colsMd) (not $labelSpan) }}
+{{ errorf "layouts/page/pricing.html: no grid classes for %s editions. Tailwind needs literal class strings, so add a case to the dicts at the top of this file when data/pulumi_pricing.yaml gains or loses an edition." $n }}
+{{ end }}
 
 <section class="relative overflow-hidden">
     <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-10 md:top-0 lg:right-0 -z-10 select-none">
@@ -16,45 +39,46 @@
 </section>
 
 <section id="plans" class="container mx-auto relative z-10 px-6">
-    <div class="grid grid-cols-1 card md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
-        {{ range $tier := .Params.tiers.trialed.items }}
+    <div class="{{ $cardGrid }}">
+        {{ range $edition := $editions }}
+        {{ $card := $edition.card }}
         {{ $borderClass := "" }}
-        {{ if $tier.badge }}{{ $borderClass = "rounded-lg border-0 ring ring-[1.5px] relative z-10 ring-offset-4 ring-violet-accent" }}{{ end }}
+        {{ if $card.badge }}{{ $borderClass = "rounded-lg border-0 ring ring-[1.5px] relative z-10 ring-offset-4 ring-violet-accent" }}{{ end }}
         <div>
             <div class=" p-8 flex flex-col gap-6 bg-white h-full overflow-hidden rounded-lg {{ $borderClass }}">
                 <div>
                     <div class="flex items-center gap-3">
-                        <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h2>
-                        {{ with $tier.badge }}
+                        <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $edition.name }}</h2>
+                        {{ with $card.badge }}
                         <span class="badge badge-brand">{{ . }}</span>
                         {{ end }}
                     </div>
-                    <p class="mt-2 text-base text-gray-700 m-0 md:min-h-[3rem] block">{{ $tier.subtitle }}</p>
+                    <p class="mt-2 text-base text-gray-700 m-0 md:min-h-[3rem] block">{{ $card.subtitle }}</p>
                 </div>
 
                 <div>
-                    {{ if $tier.price_label }}
+                    {{ if $card.price_label }}
                     <div class="flex items-baseline gap-2">
-                        <span class="text-5xl font-semibold tracking-tight">{{ $tier.price }}</span>
-                        <span class="text-xl text-gray-500">{{ $tier.price_label }}</span>
+                        <span class="text-5xl font-semibold tracking-tight">{{ $card.price }}</span>
+                        <span class="text-xl text-gray-500">{{ $card.price_label }}</span>
                     </div>
                     {{ else }}
-                    <p class="text-3xl font-semibold tracking-tight m-0">{{ $tier.price }}</p>
+                    <p class="text-3xl font-semibold tracking-tight m-0">{{ $card.price }}</p>
                     {{ end }}
                     <div class="mt-4 md:min-h-[3rem] text-sm">
-                        {{ with $tier.unit }}
+                        {{ with $card.unit }}
                         <p class="m-0">{{ . | markdownify }}</p>
-                        {{ end }} {{ with $tier.note }}
+                        {{ end }} {{ with $card.note }}
                         <p class="text-gray-700 m-0">{{ . | markdownify }}</p>
                         {{ end }}
                     </div>
                 </div>
 
                 <div class="flex flex-col items-stretch gap-2 md:min-h-[6rem]">
-                    {{ with $tier.cta }}
+                    {{ with $card.cta }}
                     <a href="{{ .href }}" class="btn btn-{{ .style }} btn-lg w-full"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
                     {{ end }}
-                    {{ with $tier.cta_secondary }}
+                    {{ with $card.cta_secondary }}
                     <a href="{{ .href }}" class="btn btn-secondary">
                         {{ .label }}
                         {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
@@ -63,11 +87,11 @@
                 </div>
 
                 <div class="flex flex-col gap-3">
-                    {{ with $tier.features_intro }}
+                    {{ with $card.features_intro }}
                     <p class="font-mono uppercase text-xs tracking-wider m-0">{{ . | markdownify }}</p>
                     {{ end }}
                     <ul class="list-none p-0 m-0 flex flex-col gap-2">
-                        {{ range $tier.features }}
+                        {{ range $card.features }}
                         <li class="flex items-start gap-2 text-sm m-0">
                             {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-5 mt-0.5 flex-shrink-0" "weight" "bold") }}
                             <span>{{ . | markdownify }}</span>
@@ -112,19 +136,20 @@
 <section id="compare" class="container mx-auto px-6">
 
     <div class="sticky top-16 z-30 bg-white py-4">
-        <div class="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-4 items-end">
+        <div class="grid {{ $cols }} {{ $colsMd }} gap-x-4 items-end">
             <div class="hidden md:block"></div>
-            {{ range $tier := .Params.tiers.trialed.items }}
+            {{ range $edition := $editions }}
+            {{ $card := $edition.card }}
             <div class="flex flex-col gap-2 text-center">
                 <div class="flex items-baseline justify-center xl:justify-between gap-1.5">
-                    <span class="text-sm sm:text-base font-semibold leading-tight">{{ $tier.title }}</span>
+                    <span class="text-sm sm:text-base font-semibold leading-tight">{{ $edition.name }}</span>
                     <span class="text-sm whitespace-nowrap hidden xl:block">
-                        <span class="font-semibold">{{ $tier.price }}</span
-                        >{{ with $tier.price_label }} <span class="text-xs">{{ . }}</span
+                        <span class="font-semibold">{{ $card.price }}</span
+                        >{{ with $card.price_label }} <span class="text-xs">{{ . }}</span
                         >{{ end }}
                     </span>
                 </div>
-                {{ with $tier.cta }}
+                {{ with $card.cta }}
                 <a href="{{ .href }}" class="btn btn-{{ .style }} w-full hidden lg:inline-flex"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
                 {{ end }}
             </div>
@@ -132,9 +157,9 @@
         </div>
     </div>
 
-    {{ range .Params.comparison_table.sections }}
+    {{ range $px.groups }}
     <div>
-        {{ range .tables }}
+        {{ range .categories }}
         <details class="group border-b border-gray-200 overflow-x-hidden" data-pricing-table open>
             <summary class="flex items-center justify-between cursor-pointer py-4 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-3">
@@ -143,37 +168,39 @@
                         {{ partial "icon.html" (dict "name" .icon "class" "size-6" "weight" (.icon_weight | default "regular")) }}
                     </span>
                     {{ end }}
-                    <h3 class="font-mono uppercase tracking-wider text-sm m-0">{{ .header }}</h3>
+                    <h3 class="font-mono uppercase tracking-wider text-sm m-0">{{ .name }}</h3>
                 </div>
                 {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-4 text-gray-600 transition-transform group-open:rotate-180" "weight" "bold") }}
             </summary>
 
-            {{ range $row := .rows }}
-            <div class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 grid grid-cols-4 gap-x-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:items-center">
-                <div class="col-span-4 md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
-                    {{ if $row.link }}<a class=" underline-offset-5 underline decoration-dashed decoration-violet-300 hover:text-violet-primary hover:decoration-solid" href="{{ $row.link }}">{{ $row.title }}</a
-                    >{{ else }}{{ $row.title }}{{ end }}
-                    {{ with $row.tooltip }}
+            {{ range $feature := .features }}
+            {{ if not $feature.hidden }}
+            <div class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 grid {{ $cols }} gap-x-4 {{ $colsMd }} md:items-center">
+                <div class="{{ $labelSpan }} md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
+                    {{ if $feature.link }}<a class=" underline-offset-5 underline decoration-dashed decoration-violet-300 hover:text-violet-primary hover:decoration-solid" href="{{ $feature.link }}">{{ $feature.name }}</a
+                    >{{ else }}{{ $feature.name }}{{ end }}
+                    {{ with $feature.tooltip }}
                     <pulumi-tooltip class="inline-block">
                         {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-gray-700") }}
                         <span slot="content">{{ . }}</span>
                     </pulumi-tooltip>
                     {{ end }}
                 </div>
-                {{ range $i, $item := $row.items }}
+                {{ range $edition := $editions }}
+                {{ $cell := partial "pricing/value.html" (index $feature.cells $edition.id) }}
                 <div class="flex flex-col items-center text-xs sm:text-sm md:contents">
                     <div class="text-center">
-                        {{ if eq $item.content "_check" }}
+                        {{ if eq $cell.kind "check" }}
                         {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block") }}
-                        {{ else if eq $item.content "_blank" }}
+                        {{ else if eq $cell.kind "blank" }}
                         <span class="text-gray-300"> {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-primary size-6 inline-block") }} </span>
                         {{ else }}
-                        <span>{{ $item.content | markdownify }}</span>
-                        {{ with $item.subtext }}
+                        <span>{{ $cell.content | markdownify }}</span>
+                        {{ with $cell.subtext }}
                         <div class="text-xs text-gray-600 mt-0.5">{{ . | markdownify }}</div>
                         {{ end }}
                         {{ end }}
-                        {{ with $item.tooltip }}
+                        {{ with $cell.tooltip }}
                         <pulumi-tooltip class="inline-block">
                             {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-gray-700") }}
                             <span slot="content">{{ . }}</span>
@@ -183,6 +210,7 @@
                 </div>
                 {{ end }}
             </div>
+            {{ end }}
             {{ end }}
         </details>
         {{ end }}

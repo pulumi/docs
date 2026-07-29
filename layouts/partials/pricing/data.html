@@ -1,0 +1,150 @@
+{{- /*
+  Expands data/pulumi_pricing.yaml once per build and returns the shape every
+  consumer wants. Call it through partialCached with the constant key
+  "pricing-data" — it is page-independent, and keying it by anything else would
+  rebuild the whole index per page:
+
+      {{ $px := partialCached "pricing/data.html" . "pricing-data" }}
+
+  Returns a dict:
+
+    editions    the editions list, verbatim and in file order
+    order       edition id -> ordinal (0-based)
+    first       id of the lowest edition (the one that gates nothing)
+    groups      the groups list, each with a `categories` slice attached
+    categories  the categories list, each with `features` replaced by the
+                expanded features below
+    features    feature id -> expanded feature
+    ids         every feature id, sorted, for error messages
+
+  An expanded feature is the authored feature plus:
+
+    cells        edition id -> availability value, normalized so every edition
+                 is present. Consumers never have to guard a missing key, and
+                 `index` on a nil map is a hard error in Hugo, so this matters.
+    min_edition  the edition a reader has to buy: the first edition with a
+                 truthy cell, or `requires` when the author set it.
+    category     the owning category's id
+    group        the owning group's id
+
+  Every structural invariant in the data file is enforced here, because this is
+  the one place both the pricing page and the docs markers pass through. The
+  frontmatter-facing invariants (is `pulumi_cloud: foo` a real feature id?) live
+  in scripts/lint/lint-markdown.js instead, so authors fail in `make lint`
+  rather than in a full build.
+*/ -}}
+{{- $where := "data/pulumi_pricing.yaml" -}}
+{{- $px := site.Data.pulumi_pricing -}}
+{{- if not $px -}}
+  {{- errorf "%s is missing or empty." $where -}}
+{{- end -}}
+
+{{- $editions := $px.editions -}}
+{{- $order := dict -}}
+{{- $editionIds := slice -}}
+{{- range $i, $e := $editions -}}
+  {{- if not $e.id -}}{{- errorf "%s: editions[%d] has no id." $where $i -}}{{- end -}}
+  {{- $order = merge $order (dict $e.id $i) -}}
+  {{- $editionIds = $editionIds | append $e.id -}}
+{{- end -}}
+{{- $editionList := delimit $editionIds ", " -}}
+
+{{- $groupIds := slice -}}
+{{- range $px.groups -}}{{- $groupIds = $groupIds | append .id -}}{{- end -}}
+
+{{- $sc := newScratch -}}
+{{- $ids := slice -}}
+{{- $categories := slice -}}
+
+{{- range $cat := $px.categories -}}
+  {{- if not (in $groupIds $cat.group) -}}
+    {{- errorf "%s: category %q has group %q, which is not one of: %s." $where $cat.id $cat.group (delimit $groupIds ", ") -}}
+  {{- end -}}
+
+  {{- $expanded := slice -}}
+  {{- range $f := $cat.features -}}
+    {{- $id := $f.id | default "" -}}
+    {{- if not $id -}}
+      {{- errorf "%s: feature %q in category %q has no id." $where $f.name $cat.id -}}
+    {{- end -}}
+    {{- if not (findRE "^[a-z0-9][a-z0-9-]*$" $id) -}}
+      {{- errorf "%s: feature id %q is not lowercase-kebab (^[a-z0-9][a-z0-9-]*$). Hugo map lookups are case-insensitive, so mixed case silently collides." $where $id -}}
+    {{- end -}}
+    {{- if $sc.Get (printf "seen-%s" $id) -}}
+      {{- errorf "%s: duplicate feature id %q. Ids are unique across every category — prefix the newer one with its product (for example %s-%s)." $where $id $cat.id $id -}}
+    {{- end -}}
+    {{- $sc.Set (printf "seen-%s" $id) true -}}
+    {{- $ids = $ids | append $id -}}
+
+    {{- /* available_from seeds false-below / true-from; availability overlays it. */ -}}
+    {{- $from := -1 -}}
+    {{- with $f.available_from -}}
+      {{- if not (in $editionIds .) -}}
+        {{- errorf "%s: feature %q has available_from: %q, which is not an edition id (%s)." $where $id . $editionList -}}
+      {{- end -}}
+      {{- $from = index $order . -}}
+    {{- end -}}
+    {{- with $f.availability -}}
+      {{- range $k, $v := . -}}
+        {{- if not (in $editionIds $k) -}}
+          {{- errorf "%s: feature %q lists availability for %q, which is not an edition id (%s)." $where $id $k $editionList -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $cs := newScratch -}}
+    {{- $min := "" -}}
+    {{- $seen := false -}}
+    {{- range $i, $e := $editions -}}
+      {{- $v := false -}}
+      {{- if and (ge $from 0) (ge $i $from) -}}{{- $v = true -}}{{- end -}}
+      {{- with $f.availability -}}
+        {{- $o := index . $e.id -}}
+        {{- if ne $o nil -}}{{- $v = $o -}}{{- end -}}
+      {{- end -}}
+      {{- $cs.SetInMap "cells" $e.id $v -}}
+      {{- if $v -}}
+        {{- if not $seen -}}{{- $seen = true -}}{{- $min = $e.id -}}{{- end -}}
+      {{- else if $seen -}}
+        {{- errorf "%s: feature %q is available on %s but not on %s. Availability has to be monotone — a marker sentence enumerates one edition and everything above it." $where $id $min $e.id -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- with $f.requires -}}
+      {{- if not (in $editionIds .) -}}
+        {{- errorf "%s: feature %q has requires: %q, which is not an edition id (%s)." $where $id . $editionList -}}
+      {{- end -}}
+      {{- $min = . -}}
+    {{- end -}}
+
+    {{- $expanded = $expanded | append (merge $f (dict
+        "cells" ($cs.Get "cells")
+        "min_edition" $min
+        "category" $cat.id
+        "group" $cat.group)) -}}
+  {{- end -}}
+
+  {{- $cat = merge $cat (dict "features" $expanded) -}}
+  {{- $categories = $categories | append $cat -}}
+  {{- range $f := $expanded -}}
+    {{- $sc.SetInMap "features" $f.id $f -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $groups := slice -}}
+{{- range $g := $px.groups -}}
+  {{- $own := slice -}}
+  {{- range $c := $categories -}}
+    {{- if eq $c.group $g.id -}}{{- $own = $own | append $c -}}{{- end -}}
+  {{- end -}}
+  {{- $groups = $groups | append (merge $g (dict "categories" $own)) -}}
+{{- end -}}
+
+{{- return (dict
+    "editions" $editions
+    "order" $order
+    "first" (index $editionIds 0)
+    "groups" $groups
+    "categories" $categories
+    "features" ($sc.Get "features")
+    "ids" (sort $ids)) -}}
