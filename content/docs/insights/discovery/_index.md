@@ -29,6 +29,8 @@ Discovery integrates with [Pulumi ESC (Environments, Secrets, and Configuration)
 
 4. **Import**: Use [Visual Import](/docs/insights/discovery/visual-import/) to convert discovered resources into Pulumi IaC code, bringing unmanaged infrastructure under automated management.
 
+5. **Migration**: [Discovered Stacks](/docs/insights/discovery/discovered-stacks/) automatically group resources managed by CloudFormation and ARM into stacks in Pulumi Cloud, with a per-resource [migration path to Pulumi](/docs/insights/discovery/discovered-stacks/migrate/).
+
 ### Account hierarchies
 
 Discovery automatically creates child accounts when applicable. For AWS, each selected region becomes a child account under the main parent account, making it easy to manage resources across regions. Actions performed on parent accounts (like scanning or deletion) cascade to all children, while individual child accounts can be managed independently.
@@ -81,5 +83,6 @@ Resource search is available to all organization members, but users can only see
 - [Connect cloud accounts in bulk](/docs/insights/discovery/connect-cloud-accounts/)
 - [Create and manage accounts](/docs/insights/discovery/accounts/)
 - [Learn Resource Search syntax](/docs/insights/discovery/search/)
+- [Explore Discovered Stacks](/docs/insights/discovery/discovered-stacks/)
 - [Import resources into Pulumi IaC](/docs/insights/discovery/visual-import/)
 - [Export resource data](/docs/insights/discovery/data-export/)
