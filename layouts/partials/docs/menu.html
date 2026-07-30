@@ -124,7 +124,10 @@
             if (path.slice(-1) !== "/") {
                 path += "/";
             }
-            var links = menu.querySelectorAll("a[href]");
+
+            var section = path.split("/")[2] || "";
+            var sectionRoot = section ? menu.querySelector('li[data-menu-id="' + section + '-top"]') : null;
+            var links = (sectionRoot || menu).querySelectorAll("a[href]");
             for (var i = 0; i < links.length; i++) {
                 var href = links[i].getAttribute("href");
                 if (!href || href.charAt(0) !== "/" || links[i].getAttribute("target")) {
