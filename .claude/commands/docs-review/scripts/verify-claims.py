@@ -45,8 +45,15 @@ Routing (first match wins):
   3. an unfetched URL, OR a named external source with no URL, OR shape is
      `numerical` / `entity-spec` / `attribution` / `positioning` / `comparison`
      with no pulumi signal → **pass3** (server-side `web_search`)
-  4. else (ambiguous / weak shape) → **pass1**; the verifier may emit
-     `route_escalation: "pass3"` and the harness retries once under pass3.
+  4. else (ambiguous / weak shape) → **pass1**.
+  Escalation (one hop, both directions): a pass1 verifier may emit
+  `route_escalation: "pass3"` (a public web source could close it) and a pass3
+  verifier may emit `route_escalation: "pass1"` (the claim is about Pulumi's
+  own product behavior — web search can't read product source); the harness
+  retries once under the other lane. A pass1 claim that exhausts its turn cap
+  auto-escalates to pass3; a claim that still can't converge carries
+  `turn_cap_exhausted: true` so consumers can distinguish a retryable budget
+  failure from a genuinely unverifiable claim.
 
 Usage:
     verify-claims.py --in .candidate-claims.json \
@@ -63,12 +70,14 @@ Output schema:
          "entity_key": "version/pulumi-gcp",   # carried from the claim when keyed (see entity_key.py)
          "volatile": true,                     # carried alongside entity_key
          "route": "pass0" | "pass1" | "pass2" | "pass3",
-         "verdict": "verified" | "matches" | "not-a-claim" | "unverifiable" | "contradicted" | "mismatch",
+         "verdict": "verified" | "matches" | "not-a-claim" | "unverifiable" | "contradicted" | "mismatch" | "framing-drift",
          "confidence": "high" | "medium" | "low",
          "evidence": "...",            # 1-2 sentence summary, verbatim source quote when a source was cited
          "source": "...",              # citation pointer: URL, repo:path, `gh ...`, or `WebSearch ran query "..."`
+         "framing": "exact-match" | "entailed-narrower" | "overclaim-broader" | "shifted" | "none",  # optional; drift shapes coerce verified → framing-drift
          "framing_note": "...",        # optional
          "intuition_flag": "...",      # optional
+         "turn_cap_exhausted": true,   # optional; only on a terminal turn-cap unverifiable (retryable budget failure)
          "model_usage": {"input_tokens": T, "output_tokens": T,
                          "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
                          "turns": N}},
@@ -118,15 +127,33 @@ MAX_TOKENS_VERIFY = 2048
 HTTP_TIMEOUT = 120          # seconds per API call
 MAX_RETRIES = 3             # API-level retries on 429 / 5xx / transient network
 MAX_CONCURRENCY = 16        # parallel per-claim verifiers (short HTTPS round-trips — more parallelism trims wall-clock, same $)
-MAX_TURNS = {"pass1": 8, "pass2": 2, "pass3": 4}  # agent-loop turn cap per lane (pass1 = the gh+read_file budget; 8 is the floor — at 5, pulumi-internal claims that need a few gh round-trips hit the cap and fall back to `unverifiable`, inflating the review's ⚠️/author-question noise)
+# Agent-loop turn cap per lane (pass1 = the gh+read_file budget). History: 8 was
+# documented as the floor ("at 5, pulumi-internal claims that need a few gh
+# round-trips hit the cap"), and then PR #20556 hit the documented failure mode
+# AT 8 — six REST-API-shape claims returned "did not converge within 8 turns".
+# 12 gives REST-API/provider-schema claims the extra gh round-trips they
+# actually need; a claim that exhausts the cap now auto-escalates to pass3
+# (see run_verifier) instead of dying as `unverifiable`, and the terminal
+# record carries `turn_cap_exhausted: true` so downstream consumers can tell
+# "budget ran out (retryable)" from "no source exists".
+MAX_TURNS = {"pass1": 12, "pass2": 2, "pass3": 4}
 
 GH_TIMEOUT = 30             # seconds per `gh` subprocess
 GH_OUTPUT_CAP = 12_000      # chars of `gh` output fed back to the model
 READ_FILE_CAP = 8_000       # chars of a read_file fed back to the model
 PASS2_BODY_CAP = 4_000      # chars of fetched URL content packed into the pass-2 prompt
 
-VERDICT_VALUES = {"verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch"}
+VERDICT_VALUES = {"verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "framing-drift"}
 CONFIDENCE_VALUES = {"high", "medium", "low"}
+# Structured framing-relationship values (the `framing` field on verify_claim).
+# `overclaim-broader` / `shifted` are the drift shapes: if the model reports one
+# of those alongside a `verified`/`matches` verdict, _finalize_verdict coerces
+# the verdict to `framing-drift` — the verifier demonstrably performs the
+# framing check but historically had nowhere to put "value right, meaning
+# drifted" and soft-pedaled it into `verified` prose (PR #20550: three stacked
+# framing distortions on an accurate 66% figure rendered as ✅ verified).
+FRAMING_VALUES = {"exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none"}
+FRAMING_DRIFT_SHAPES = {"overclaim-broader", "shifted"}
 EXTERNAL_SHAPE_TYPES = {"numerical", "entity-spec", "attribution", "positioning", "comparison"}
 
 # Signals that route a claim to the pulumi-internal lane (Pass 1). Kept in the
@@ -181,12 +208,20 @@ VERIFY_CLAIM_TOOL = {
                          "description": "1-2 sentences: what you found. Include a verbatim source quote when the claim cited a source."},
             "source": {"type": "string",
                        "description": "A citation pointer: a URL, `repo:path`, a `gh ...` command you ran, or `WebSearch ran query \"...\"`."},
+            "framing": {"type": "string", "enum": sorted(FRAMING_VALUES),
+                        "description": ("REQUIRED for any claim that cited or named a source; use \"none\" otherwise. "
+                                        "The entailment relationship between the source passage and the claim as written: "
+                                        "`exact-match` (same assertion), `entailed-narrower` (the source proves the claim as a special case), "
+                                        "`overclaim-broader` (the claim asserts more than the source supports — wider denominator, stronger predicate), "
+                                        "`shifted` (same anchor value, different subject or speech act).")},
             "framing_note": {"type": "string",
-                             "description": "Optional. For cited claims whose framing differs from the source: `strengthened`/`narrowed`/`shifted` plus a one-line note."},
+                             "description": "Optional. One-line note explaining the framing relationship: quote the source form vs the claim form."},
             "intuition_flag": {"type": "string",
                                "description": "Optional. A one-line note when the claim's shape itself smells off, even if your evidence is inconclusive."},
-            "route_escalation": {"type": "string", "enum": ["pass3"],
-                                 "description": "Optional. From a pass1 lane only: set to \"pass3\" if you could not close the claim and a public web source plausibly could."},
+            "route_escalation": {"type": "string", "enum": ["pass3", "pass1"],
+                                 "description": ("Optional. From a pass1 lane: set to \"pass3\" if you could not close the claim and a public "
+                                                 "web source plausibly could. From a pass3 lane: set to \"pass1\" if the claim describes Pulumi's "
+                                                 "own product/CLI behavior that reading pulumi/* source or release notes could resolve.")},
         },
         "required": ["verdict", "confidence", "evidence", "source"],
     },
@@ -240,7 +275,8 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 - `matches` — (cross-reference / sibling-consistency claims only) the claim is consistent with its sibling pages.
 - `not-a-claim` — the "claim" is not a falsifiable assertion: git/diff metadata, a code-comment tag (`:latest` in a Dockerfile comment is a tag name, not a recency claim), a faithful description of the PR author's OWN design/pipeline (only third-party-attributed assertions are claims), a path segment that merely looks temporal (`/latest/` in a URL path), or a body line in a pure-rename (unchanged) file. Demote it; don't fail it.
 - `unverifiable` — genuinely not checkable: paywalled, internal-only, future-dated, or a dead/404 source with no live alternative. NOT the default for vendor pricing/licensing/capability claims a public page could resolve — try the page first.
-- `contradicted` — a source positively disagrees with the claim, OR the claim *overclaims* what the source supports (the PR broadened the framing — see `narrowed`/`shifted` in the framing-check section below). NOTE: a claim that is a *narrower* subset of a broader source statement is NOT contradicted — it's `verified` with a `framing_note: "strengthened"` because the source's broader form proves the claim as a subset.
+- `contradicted` — a source positively disagrees with the claim: the anchor fact itself (the number, the name, the date, the capability) is wrong, or the cited page says the opposite.
+- `framing-drift` — **the anchor value/fact is accurate, but the claim's published meaning differs from what the source supports.** The number is right and the citation is real, yet the sentence asserts something the source does not: a widened denominator ("of organizations" when the source measured "of organizations already hosting X"), present usage recast as future intent ("use" → "betting on / plan to run"), a qualified scope dropped ("some or all of their inference workloads" → "their workloads"), or a value published under semantics the source doesn't carry (a bare schema.org `Offer.price: 40` for a "$40/month" plan asserts an unqualified flat price of $40). This is the verdict for "I confirmed the figure but the framing moved" — do NOT fold that observation into the evidence text of a `verified`, and do NOT withhold it because `contradicted` feels too strong; `framing-drift` exists precisely so you don't have to choose between those.
 - `mismatch` — (cross-reference / sibling-consistency claims only) this PR diverges from its sibling pages' established pattern.
 
 # Confidence
@@ -267,15 +303,14 @@ Cheapest first. Stop as soon as a source closes the claim.
 
 # Cited-claim framing check (pass2 and pass3, any claim that cited a source)
 
-Once you find the supporting passage: does the source say *exactly* what the PR claims? Classify the framing relationship, then map to a verdict — the key distinction is which side is broader.
+Once you find the supporting passage, ask ONE question: **does the source, as quoted, prove the claim as written?** Surface breadth ("the claim is narrower/wider than the source") is NOT the test — entailment is. "Needn't be hardcoded in `PulumiPlugin.yaml`" is narrower than "needn't be hardcoded elsewhere" AND entailed by it (fine); "96% run agents *in production*" is narrower than "96% *use* agents" but NOT entailed by it (the percentage doesn't transfer to the subset — overclaim). Classify the relationship into the `framing` field, then map to a verdict:
 
-- `exact-match` — source phrasing is the claim's phrasing (or a literal paraphrase of equal scope) → `verified`.
-- `strengthened` — **the source is broader; the claim is a narrower subset of it** (source: "do not need to be hardcoded elsewhere"; claim: "do not need to be hardcoded in `PulumiPlugin.yaml`"). The source's broader form proves the claim as a subset — the author has correctly stated a specific case of a more general truth → `verified`, `framing_note: "strengthened — claim narrows '<src>' to '<claim>'; source's broader form proves the claim as a subset"`.
-- `narrowed` — **the claim is broader than the source; the claim overclaims** (source: "U.S. enterprise customers prefer X"; claim: "enterprise customers prefer X"). The source supports only the narrower truth and the claim asserts more → `contradicted`, `framing_note: "narrowed — claim broadens '<src>' to '<claim>'; source supports the narrower form, not the broader claim"`.
-- `shifted` — same anchor, different subject (source: "evaluate AI agents"; claim: "deploy AI agents") → `contradicted`, `framing_note: "shifted — '<src>' vs '<claim>' refer to different subjects"`.
-- `contradicted` — source positively disagrees with the claim → `contradicted`.
+- `exact-match` — the source asserts what the claim asserts (same scope, same subject, same speech act) → `verified`.
+- `entailed-narrower` — the source is broader and its broader form PROVES the claim as a special case (source: "do not need to be hardcoded elsewhere"; claim: "do not need to be hardcoded in `PulumiPlugin.yaml`") → `verified`, with a `framing_note` recording the relationship.
+- `overclaim-broader` — the claim asserts more than the source supports: a wider denominator (source: "of organizations hosting generative AI models"; claim: "of organizations"), a dropped qualifier (source: "some or all of their inference workloads"; claim: "their generative AI workloads"), a stronger predicate the source's figure doesn't transfer to (source: "use"; claim: "use in production") → `framing-drift` when the anchor value itself is accurate, `contradicted` when even the anchor is unsupported. `framing_note: "overclaim — claim broadens '<src>' to '<claim>'"`.
+- `shifted` — same anchor value, different subject or speech act (source: "66% currently use K8s for inference" — measured present usage; claim: "66% are betting on K8s for genAI" — future intent; or source frames a figure as an aspirational bar, claim states it as a measurement) → `framing-drift` when the anchor value is accurate, `contradicted` otherwise. `framing_note: "shifted — '<src>' vs '<claim>'"`.
 
-Put a verbatim quote from the source in `evidence`. A verdict with no verbatim quote from a cited source is a verdict without evidence — downgrade to `unverifiable` if you can't quote the supporting passage. The `strengthened` → `verified` mapping is the load-bearing distinction: when the source confirms the claim as a special case of a more general statement, the verdict is `verified` (not `contradicted`), and the `framing_note` records the relationship so the reviewer can decide whether to surface a stylistic suggestion about citing a more precise source.
+Set `framing` on EVERY cited-claim verdict (use `exact-match` or `entailed-narrower` for the clean cases; `none` only for claims with no cited/named source). Distortions stack — a single sentence can widen the denominator AND shift usage to intent AND drop a qualifier; note each in `framing_note`. Put a verbatim quote from the source in `evidence`. A verdict with no verbatim quote from a cited source is a verdict without evidence — downgrade to `unverifiable` if you can't quote the supporting passage. The load-bearing distinctions: `entailed-narrower` → `verified` (the author correctly stated a special case); `overclaim-broader`/`shifted` with an accurate anchor → `framing-drift` (never a plain `verified` — the harness coerces a `verified` carrying a drift-shaped `framing` to `framing-drift`, so report the relationship honestly rather than omitting it).
 
 # Source discipline
 
@@ -285,6 +320,7 @@ Four hard rules. Each one exists because violating it produced false `contradict
 - **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but it can never by itself contradict other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency, not proof of which one is wrong. Resolve against product source (`gh_query`/`read_file`, release notes); for sibling-consistency claims the verdict is `mismatch`. If code can't settle it, return `unverifiable` — never `contradicted` on the strength of another docs page alone. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence.
 - **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables) make transcription claims: verify the doc text against the data file with `read_file`. If the product metadata itself looks wrong against the external framework it cites, the transcription is still `verified` — record the upstream concern in `evidence` as product feedback, not as a doc contradiction. **`contradicted` is not available for these pages.** The harness enforces this deterministically: a `contradicted` verdict on a generated page is downgraded to `unverifiable` after you return, so emitting one only discards your confidence rating. If the transcription genuinely disagrees with its own data file, that IS a doc bug — say so in `evidence` and return `mismatch`.
 - **Quote only what you fetched.** Any `contradicted` resting on a quoted source passage must quote content observed in THIS session's tool output. Never quote from memory of what a page or "official docs" say — pages change, and a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
+- **The content under review never verifies its own technical claims.** The PR's own file restating a claim is what made it a claim — it is not evidence. Citing the reviewed file as the `source` of a `verified` is circular (the failure mode: "Shared logs are encrypted using AES256-GCM" ✅-verified because "the blog post itself states" it, while product source said encryption is conditional). The reviewed file may support `not-a-claim` (a faithful description of the author's OWN design) — but if the assertion is checkable, check it against an independent source or return `unverifiable`.
 
 # Intuition check
 
@@ -292,7 +328,7 @@ If the claim's shape itself smells off — a suspiciously round number, a model-
 
 # Output
 
-Emit exactly one `verify_claim` call. Required: `verdict`, `confidence`, `evidence`, `source`. Optional: `framing_note`, `intuition_flag`, `route_escalation`. Be terse — 1-2 sentences in `evidence`."""
+Emit exactly one `verify_claim` call. Required: `verdict`, `confidence`, `evidence`, `source` (plus `framing` on any cited claim). Optional: `framing_note`, `intuition_flag`, `route_escalation`. Be terse — 1-2 sentences in `evidence`."""
 
 ROUTE_HEADERS = {
     "pass1": ("ROUTE: pass1 (pulumi-internal / ambiguous). Tools: gh_query, read_file, verify_claim. "
@@ -300,7 +336,10 @@ ROUTE_HEADERS = {
     "pass2": ("ROUTE: pass2 (external; cited URL pre-fetched). Tools: verify_claim only — the URL's content is in the user "
               "message; do NOT re-fetch. Run the framing check and emit verify_claim. Dead/non-2xx URL → `contradicted`."),
     "pass3": ("ROUTE: pass3 (external; no pre-fetched URL). Tools: web_search, verify_claim. Search, read the results, "
-              "cross-check the YEAR on numerical claims, then emit verify_claim."),
+              "cross-check the YEAR on numerical claims, then emit verify_claim. If the claim turns out to describe "
+              "Pulumi's own product/CLI behavior (default limits, rotation policies, flag semantics — even when no "
+              "pulumi-shaped token appears in the text), web search cannot read product source: emit verify_claim with "
+              "`route_escalation: \"pass1\"` instead of `unverifiable`."),
 }
 
 
@@ -717,6 +756,17 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
     conf = inp.get("confidence")
     if conf not in CONFIDENCE_VALUES:
         conf = "low"
+    framing = inp.get("framing")
+    if framing not in FRAMING_VALUES:
+        framing = None
+    # Deterministic coercion: the model performs the framing check reliably but
+    # historically soft-pedaled the verdict when the anchor value was accurate
+    # ("contradicted" felt too strong, so drift landed in `verified` prose where
+    # nothing consumes it — PR #20550). If the structured framing field reports
+    # a drift shape, a passing verdict is not available: the harness, not the
+    # model, decides where the observation lands.
+    if framing in FRAMING_DRIFT_SHAPES and verdict in ("verified", "matches"):
+        verdict = "framing-drift"
     rec = {
         "claim_id": claim.get("__id", "?"),
         "file": claim.get("file", ""),
@@ -739,8 +789,12 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
             "feedback, not a doc contradiction — `contradicted` downgraded to "
             "`unverifiable`. Surface as an author question / upstream issue, not "
             "as a 🚨 finding.] " + rec["evidence"])
+    if framing:
+        rec["framing"] = framing
     if isinstance(inp.get("framing_note"), str) and inp["framing_note"].strip():
         rec["framing_note"] = inp["framing_note"].strip()
+    elif framing and framing not in ("none", "exact-match"):
+        rec["framing_note"] = framing  # never let a non-clean framing render without a note
     if isinstance(inp.get("intuition_flag"), str) and inp["intuition_flag"].strip():
         rec["intuition_flag"] = inp["intuition_flag"].strip()
     return rec
@@ -794,14 +848,21 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         if verify_block is not None:
             inp = verify_block.get("input") or {}
             rec = _finalize_verdict(claim, route, inp, agg_usage, turn, repo_root)
+            # Symmetric one-hop escalation: pass1 → pass3 (a public web source
+            # could close it) and pass3 → pass1 (the claim is about Pulumi's own
+            # product behavior — e.g. "logs rotate after 7 days / 500 MB", pure
+            # CLI behavior with no pulumi-shaped token, which route rule 3 sends
+            # to web search that structurally cannot read Go source; PR #20371).
+            # allow_escalate=False on the hop guards against ping-ponging.
             esc = inp.get("route_escalation")
-            if esc == "pass3" and route == "pass1" and allow_escalate:
-                rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run,
+            if (allow_escalate and esc in ("pass1", "pass3") and esc != route
+                    and {route, esc} == {"pass1", "pass3"}):
+                rec2 = run_verifier(api_key, claim, esc, None, model, repo_root, dry_run,
                                     allow_escalate=False, impl_refs=impl_refs)
                 for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
                     rec2["model_usage"][k] += rec["model_usage"][k]
                 rec2["model_usage"]["turns"] += rec["model_usage"]["turns"]
-                rec2["evidence"] = f"(escalated from pass1) {rec2['evidence']}"
+                rec2["evidence"] = f"(escalated from {route}) {rec2['evidence']}"
                 return rec2
             return rec
 
@@ -826,14 +887,33 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
             tool_results.append({"type": "tool_result", "tool_use_id": tuid, "content": out})
         messages.append({"role": "user", "content": tool_results})
 
-    # Turn cap exhausted without a verdict.
+    # Turn cap exhausted without a verdict. A pass1 claim gets one automatic
+    # pass3 hop before giving up — the escalation valve used to exist only on
+    # an explicit route_escalation the model could no longer emit once capped
+    # (PR #20556: six claims died here as bare `unverifiable`).
+    if route == "pass1" and allow_escalate:
+        rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run,
+                            allow_escalate=False, impl_refs=impl_refs)
+        for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
+            rec2["model_usage"][k] += agg_usage[k]
+        rec2["model_usage"]["turns"] += max_turns
+        rec2["evidence"] = f"(escalated from pass1 after exhausting its {max_turns}-turn cap) {rec2['evidence']}"
+        return rec2
+    # `turn_cap_exhausted` is the machine-readable marker separating "the
+    # verification budget ran out (retryable)" from "no authoritative source
+    # exists" — downstream consumers (compose-review.py, the pr-review-sweep
+    # punt templates) must never render the two identically.
     return {
         "claim_id": claim.get("__id", "?"), "file": claim.get("file", ""),
         "line_range": claim.get("line_range", ""), "text": claim.get("text", ""),
         "type": claim.get("type", ""), "route": route, "verdict": "unverifiable",
         "confidence": "low",
-        "evidence": f"verification did not converge within {max_turns} turns",
-        "source": "verify-claims.py", "model_usage": {**agg_usage, "turns": max_turns},
+        "evidence": (f"verification did not converge within {max_turns} turns "
+                     f"(turn-cap exhausted — a verification budget failure, retryable; "
+                     f"not evidence that the claim is wrong or that no source exists)"),
+        "source": "verify-claims.py",
+        "turn_cap_exhausted": True,
+        "model_usage": {**agg_usage, "turns": max_turns},
     }
 
 
@@ -1001,7 +1081,7 @@ def main() -> int:
             meta[k] += int(mu.get(k, 0) or 0)
 
     write_payload(out_path, args.model, verdicts, errors, meta)
-    n_contra = sum(1 for v in verdicts if v["verdict"] in ("contradicted", "mismatch"))
+    n_contra = sum(1 for v in verdicts if v["verdict"] in ("contradicted", "mismatch", "framing-drift"))
     n_unver = sum(1 for v in verdicts if v["verdict"] == "unverifiable")
     print(
         f"verify-claims: {len(verdicts)} verdict(s) "

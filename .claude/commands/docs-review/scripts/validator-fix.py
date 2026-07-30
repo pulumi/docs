@@ -169,7 +169,7 @@ def build_instruction(rule_id: str, violation: dict) -> str:
             f"Replace ONLY its emoji (the glyph immediately after the `→`) with the "
             f"glyph named in `Expected`. The per-verdict map is: ✅ `verified`, "
             f"🤝 `matches`, ➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, "
-            f"⚔️ `mismatch`. Do not change the verdict word, the line text, the "
+            f"⚔️ `mismatch`, 🌀 `framing-drift`. Do not change the verdict word, the line text, the "
             f"evidence pointer, or any other line."
         )
     elif rule_id == "trail-canonical-verdict-word":
@@ -179,7 +179,7 @@ def build_instruction(rule_id: str, violation: dict) -> str:
         line_ref = violation.get("line_ref", "")
         instr = (
             f"VIOLATION (`trail-canonical-verdict-word`): A line in the 🔍 Verification "
-            f"trail uses a freelanced verdict token instead of one of the six canonical "
+            f"trail uses a freelanced verdict token instead of one of the canonical "
             f"verdict words.\n\n"
             f"Trail line anchor: `{line_ref}`\n"
             f"Actual: {actual}\n"
@@ -190,9 +190,9 @@ def build_instruction(rule_id: str, violation: dict) -> str:
             f"immediately after the `→ <emoji>`, before any parenthetical) with the "
             f"canonical verdict word the validator hint names. If the hint does not name "
             f"a specific word, pick the one of `verified` / `matches` / `not-a-claim` / "
-            f"`unverifiable` / `contradicted` / `mismatch` that best matches the line's "
+            f"`unverifiable` / `contradicted` / `mismatch` / `framing-drift` that best matches the line's "
             f"evidence text, and set the emoji to its glyph (✅ `verified`, 🤝 `matches`, "
-            f"➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, ⚔️ `mismatch`). Keep "
+            f"➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, ⚔️ `mismatch`, 🌀 `framing-drift`). Keep "
             f"the claim quote, the parenthetical evidence pointer, and every other line "
             f"unchanged."
         )

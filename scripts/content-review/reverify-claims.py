@@ -62,7 +62,7 @@ VERIFY_CLAIMS = HERE / ".claude/commands/docs-review/scripts/verify-claims.py"
 SCHEMA_VERSION = 1
 DEFAULT_COUNT = 25
 MAX_CONCURRENCY = 8
-STALE_VERDICTS = {"contradicted", "mismatch"}
+STALE_VERDICTS = {"contradicted", "mismatch", "framing-drift"}
 FRESH_VERDICTS = {"verified", "matches"}
 
 

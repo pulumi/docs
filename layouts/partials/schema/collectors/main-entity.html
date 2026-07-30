@@ -15,7 +15,16 @@
     {{ else if eq $explicitSchema "blog" }}
       {{ $entity = partial "schema/collectors/blog-entity.html" . }}
     {{ else if eq $explicitSchema "howto" }}
-      {{ $entity = partial "schema/collectors/howto-entity.html" . }}
+      {{ $howToEntity := partial "schema/collectors/howto-entity.html" . }}
+      {{ if $howToEntity }}
+        {{ $entity = $howToEntity }}
+      {{ else }}
+        {{/* HowTo page with no extractable steps (numbered list or, for
+             layout=template pages, H2 sections) - fall back to article so
+             the page still gets a valid main entity instead of none at
+             all. */}}
+        {{ $entity = partial "schema/collectors/article-entity.html" . }}
+      {{ end }}
     {{ else if eq $explicitSchema "product" }}
       {{ $entity = partial "schema/collectors/product-entity.html" . }}
     {{ else if eq $explicitSchema "event" }}
@@ -43,7 +52,14 @@
       {{ else }}
         {{/* Leaf tutorial pages (including single-page _index.md bundles
              with no children) get HowTo schema */}}
-        {{ $entity = partial "schema/collectors/howto-entity.html" . }}
+        {{ $howToEntity := partial "schema/collectors/howto-entity.html" . }}
+        {{ if $howToEntity }}
+          {{ $entity = $howToEntity }}
+        {{ else }}
+          {{/* Leaf tutorial with no extractable numbered-list steps - fall
+               back to article rather than emit a stepless HowTo. */}}
+          {{ $entity = partial "schema/collectors/article-entity.html" . }}
+        {{ end }}
       {{ end }}
 
     {{ else if and (eq .Type "events") .IsPage }}

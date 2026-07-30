@@ -70,11 +70,22 @@ gh pr diff "$PR_NUMBER"
 bash .claude/commands/docs-review/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER"
 ```
 
-Determine the pinned-review state from labels and fetch output:
+Determine the pinned-review state from labels and fetch output. **Labels alone are not a sufficient freshness signal**: pushes made by the Copilot coding agent or with `GITHUB_TOKEN` never fire the `pull_request: synchronize` event, so the `mark-stale` job never runs for them and a PR can sit at `review:no-blockers` while the pinned review describes content a later commit replaced (PR #20556). Before accepting `CURRENT`, run the SHA freshness check:
+
+```bash
+HEAD_SHA=$(gh pr view "$PR_NUMBER" --json headRefOid --jq .headRefOid)
+# Preferred: the machine-readable sentinel compose-review.py stamps under the header.
+REVIEWED_SHA=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER" \
+  | grep -oE '<!-- CLAUDE_REVIEW_HEAD [0-9a-f]+ -->' | tail -1 | grep -oE '[0-9a-f]{7,40}')
+# Fallback for reviews composed before the sentinel existed:
+[ -z "$REVIEWED_SHA" ] && REVIEWED_SHA=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
+```
+
+If `REVIEWED_SHA` is non-empty and is not a prefix-match of `HEAD_SHA`, treat the state as `STALE` regardless of labels (and mention in your output that the label missed a push — likely a suppressed `synchronize` event). If no reviewed SHA is recoverable at all, fall back to comparing the header's `Last updated` timestamp against the head commit's committer date; when the head commit is newer, treat as `STALE`.
 
 | State | Detection | What Step 3 does |
 |---|---|---|
-| `CURRENT` | `review:outstanding-issues` or `review:no-blockers` set; `review:stale` / `review:in-progress` / `review:error` absent; fetch returns body | Nothing — proceed to Step 4 |
+| `CURRENT` | `review:outstanding-issues` or `review:no-blockers` set; `review:stale` / `review:in-progress` / `review:error` absent; fetch returns body; **SHA freshness check passes** | Nothing — proceed to Step 4 |
 | `STALE` | `review:stale` set | Refresh in place by invoking `docs-review:references:update` locally (re-runs claim verification against new commits, then writes via `pinned-comment.sh upsert`) |
 | `IN_PROGRESS` | `review:in-progress` set | Wait briefly for the workflow to finish; re-check labels. If it stays >15 min, treat as `ERROR`. |
 | `ERROR` | `review:error` set (or `review:in-progress` stuck) | Investigate the Actions logs before proceeding |

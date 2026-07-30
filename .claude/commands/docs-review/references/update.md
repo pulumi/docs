@@ -74,6 +74,7 @@ The author pushed commits that look like fixes for the previous 🚨 Outstanding
 2. **Sweep for unflagged duplicates of any phrase the previous finding quoted.** When a previous finding cited a specific quoted phrase or claim, search the current file for every occurrence of that phrase (or a near-paraphrase) — not just the locations the original finding called out. On Hugo posts, that means body + `meta_desc` + every `social:` sub-key. If an occurrence the original finding missed still matches the verified-false claim, raise it as a new 🚨 finding citing the missed location. Initial reviews can miss frontmatter duplicates; re-entrant is the safety net before merge.
 3. Extract any *new* findings introduced by the new commits. Apply the domain rules.
 4. Append a 📜 Review history line: `<timestamp> — re-reviewed after fix push (<commit count> new commits, <SHA>)`.
+5. Refresh the freshness header of the 1/M comment: the `Last updated <timestamp>` line AND the `<!-- CLAUDE_REVIEW_HEAD <sha> -->` sentinel on the next line, setting the sentinel to the PR head SHA this update reviewed. Label-independent consumers (`/pr-review` Step 2, the review-label-reconcile workflow) compare that sentinel against the live PR head to detect a stale review when a push never fired a `synchronize` event (Copilot-agent and `GITHUB_TOKEN` pushes don't) — a stale sentinel makes a fresh review look outdated, and a missing one downgrades those consumers to timestamp heuristics.
 
 **Failure-mode example:**
 
@@ -145,7 +146,7 @@ A `@claude` mention with no specific request, or a generic "please re-review." S
 > Previous review had 3 outstanding findings (A, B, C). Author pushed no commits, no new mention beyond "@claude refresh."
 >
 > ❌ *Do not:* list A, B, C again as a new narrative ("I re-reviewed the PR. The following findings remain: A, B, C."). They are already visible in the pinned comment. Repeating them is the noisiest possible output.
-> ✅ *Do:* append one 📜 Review history line ("<timestamp> — re-verified; 3 outstanding unchanged") and update the timestamp at the top of the 1/M comment. That is the full output. The bucket contents do not change.
+> ✅ *Do:* append one 📜 Review history line ("<timestamp> — re-verified; 3 outstanding unchanged") and update the timestamp at the top of the 1/M comment (plus the `<!-- CLAUDE_REVIEW_HEAD -->` sentinel when the head moved). That is the full output. The bucket contents do not change.
 
 Alternative ✅ path: if the re-verify surfaces something the previous review missed, add the new finding to 🚨 Outstanding. Do not also repeat A, B, C.
 

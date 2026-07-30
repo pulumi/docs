@@ -88,15 +88,15 @@ The `text` of the attribution record must include the attribution ("AWS Lambda's
 
 ## Framing / speech-act — record the exact framing
 
-A claim and its source can share a number but make *different* assertions. The verifier compares framings using this taxonomy (from `docs-review:references:fact-check` §Cited-claim spot-check) — extract the claim with enough fidelity that the comparison is possible:
+A claim and its source can share a number but make *different* assertions. The verifier compares framings by **entailment** — does the source, as quoted, prove the claim as written? Surface breadth is not the test: "needn't be hardcoded in `PulumiPlugin.yaml`" is narrower than "needn't be hardcoded elsewhere" AND entailed by it (fine); "96% run agents *in production*" is narrower than "96% *use* agents" but NOT entailed by it (the percentage doesn't transfer to the subset — overclaim). The taxonomy (shared with `docs-review:references:fact-check` §Cited-claim spot-check and `verify-claims.py`'s structured `framing` field) — extract the claim with enough fidelity that the comparison is possible:
 
 - `exact-match` — the PR says what the source says, at equal scope. → `verified` (✅)
-- `strengthened` — **the source is broader; the PR's claim is a narrower subset of it.** Source: "do not need to be hardcoded elsewhere"; PR: "do not need to be hardcoded in `PulumiPlugin.yaml`." The source's broader form proves the PR's claim as a subset. → `verified` (✅) with `framing_note: "strengthened"`.
-- `narrowed` — **the PR's claim is broader than the source; the PR overclaims.** Source: "U.S. enterprises"; PR: "enterprises." The source supports only the narrower form. → `contradicted` (❌) with `framing_note: "narrowed"`.
-- `shifted` — same anchor, different subject/speech-act. Source: "Kubernetes supports the three most recent minor releases" (a support-window commitment); PR: "Kubernetes deprecates minor releases after two versions" (a deprecation-cadence claim). Same release-window topic, different framing. → `contradicted` (❌) with `framing_note: "shifted"`.
+- `entailed-narrower` — **the source is broader and its broader form PROVES the PR's claim as a special case.** Source: "do not need to be hardcoded elsewhere"; PR: "do not need to be hardcoded in `PulumiPlugin.yaml`." → `verified` (✅) with a `framing_note` recording the relationship. *(Previously labeled `strengthened`.)*
+- `overclaim-broader` — **the PR's claim asserts more than the source supports**: a wider denominator (source: "of organizations hosting generative AI models"; PR: "of organizations"), a dropped qualifier (source: "some or all of their inference workloads"; PR: "their generative AI workloads"), or a stronger predicate the figure doesn't transfer to (source: "use"; PR: "run in production"). → `framing-drift` (🌀) when the anchor value itself is accurate; `contradicted` (❌) when even the anchor is unsupported. *(Previously labeled `narrowed`.)*
+- `shifted` — same anchor, different subject/speech-act. Source: "66% currently use Kubernetes for inference" (measured present usage); PR: "66% are betting on Kubernetes" (future intent). Or: the source frames a figure as an aspirational bar; the PR states it as a measurement. → `framing-drift` (🌀) when the anchor value is accurate; `contradicted` (❌) otherwise.
 - `contradicted` — the source positively disagrees. → `contradicted` (❌)
 
-So: when extracting an attributed/cited claim, capture *how the PR frames it* ("X reported Y", "X recommends Y", "according to X, Y") — not just the bare fact Y. The verifier needs the framing to distinguish `strengthened` (subset → verified) from `narrowed`/`shifted`/`contradicted` (the three contradiction shapes).
+So: when extracting an attributed/cited claim, capture *how the PR frames it* ("X reported Y", "X recommends Y", "according to X, Y") — not just the bare fact Y. The verifier needs the framing to distinguish `entailed-narrower` (source proves the claim → verified) from `overclaim-broader`/`shifted` (drift shapes → `framing-drift` when the value is right, `contradicted` when it isn't) and plain `contradicted`. Distortions stack: one sentence can widen the denominator AND shift usage to intent AND drop a qualifier — record each.
 
 ---
 
@@ -190,14 +190,14 @@ Real patterns from the corpus, with the extracted record(s) and the reasoning. T
 > "Pulumi's SDK Docker images are 200–400 MB."
 
 - Record (type `numerical`): `text` = "The Pulumi language SDK Docker images are 200–400 MB." `confidence` = high.
-- Reasoning: a size range with an authoritative source (the SDK images' README). Framing-compare: the README says "200 to 300 MB" → the PR's "200–400 MB" is `narrowed`/wrong → ⚠️ (a real precision finding, not a 🚨 — the order of magnitude is right).
+- Reasoning: a size range with an authoritative source (the SDK images' README). Framing-compare: the README says "200 to 300 MB" → the PR's "200–400 MB" is `overclaim-broader` (the source doesn't support the wider range) → `framing-drift` → ⚠️ (a real precision finding, not a 🚨 — the order of magnitude is right).
 
 **6 — "$1,000/day" attribution + framing shift (the canonical run-to-run-disagreement case: easy to wrongly accept as exact-match).**
 
 > "StrongDM reported roughly $1,000 per day per engineer-equivalent in token spend."
 
 - Record (type `attribution`): `text` = "StrongDM reported roughly $1,000/day per engineer-equivalent in AI token spend." `source_hint` = "StrongDM (via Willison)" `confidence` = high. Framing to capture: the PR frames it as a *reported measurement*.
-- Reasoning: the cited source (Willison quoting StrongDM) frames the figure as an *aspirational bar* — "if you haven't spent at least $1,000 on tokens today per human engineer, your software factory has room for improvement." Same number, different speech act → `shifted` → ⚠️ (the post should match the source's framing or cite a real measurement).
+- Reasoning: the cited source (Willison quoting StrongDM) frames the figure as an *aspirational bar* — "if you haven't spent at least $1,000 on tokens today per human engineer, your software factory has room for improvement." Same number, different speech act → `shifted` → `framing-drift` → ⚠️ (the post should match the source's framing or cite a real measurement).
 
 **7 — Kubernetes "two minor versions".**
 
