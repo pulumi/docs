@@ -113,9 +113,22 @@
       {{- end -}}
     {{- end -}}
 
+    {{- /* `requires` only ever *raises* the edition a marker names, for a
+           feature whose lowest truthy cell is a limited variant ("Manual"
+           policy enforcement on Individual). Pointing it at or below that cell
+           would make every marker contradict the row it deep-links to, and
+           pointing it at the lowest edition would make the feature unmarkable.
+
+           One if/else chain rather than three ifs: `errorf` logs and carries on,
+           so an unknown edition id would otherwise fall into the comparisons
+           below and blow up on a nil ordinal instead of reporting itself. */ -}}
     {{- with $f.requires -}}
       {{- if not (in $editionIds .) -}}
         {{- errorf "%s: feature %q has requires: %q, which is not an edition id (%s)." $where $id . $editionList -}}
+      {{- else if not $seen -}}
+        {{- errorf "%s: feature %q has requires: %q but is not available on any edition. Give it an availability cell first — requires only raises the edition a marker names." $where $id . -}}
+      {{- else if le (index $order .) (index $order $min) -}}
+        {{- errorf "%s: feature %q has requires: %q, but its first available edition is already %s. requires only raises the edition a marker names — it has to be above %s, or be dropped." $where $id . $min $min -}}
       {{- end -}}
       {{- $min = . -}}
     {{- end -}}

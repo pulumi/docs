@@ -32,6 +32,13 @@
   Whole Cloud pages use the `pulumi_cloud_feature:` frontmatter key instead. Markers are
   set per page — there is no inheritance.
 */ -}}
+{{- /* Named params make `.Get 0` nil, which would fall through to the
+       "available on all editions" sentence and quietly under-state a gated
+       feature. The `{{% notes type="…" %}}` convention makes `feature="rbac"`
+       an easy mistake, so fail the build on it. */ -}}
+{{- if reflect.IsMap .Params -}}
+  {{- errorf `pulumi-cloud takes a positional feature id, not named parameters (in %s). Write {{< pulumi-cloud "rbac" />}}.` .Page.File.Path -}}
+{{- end -}}
 {{- $feature := .Get 0 -}}
 {{- $inner := "" -}}
 {{- with .Inner }}{{ $inner = . | markdownify }}{{ end -}}

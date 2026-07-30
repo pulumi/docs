@@ -934,11 +934,18 @@ function checkPulumiCloudFeature(feature, legacy) {
 }
 
 /**
- * Matches an edition-bearing {{< pulumi-cloud "..." />}} call. The no-argument
- * form means "Pulumi Cloud, all editions" and is deliberately allowed, as is the
- * block form with inner prose.
+ * Matches any {{< pulumi-cloud ... >}} opening tag and captures whatever stands
+ * between the shortcode name and the closing delimiter, quotes and all. The
+ * argument isn't captured directly because the forms that need catching are the
+ * ones that *aren't* a quoted positional: a named param (`feature="rbac"`) makes
+ * Hugo's `.Get 0` nil, and an unquoted id works in Hugo but used to slip past a
+ * regex that required the quote.
+ *
+ * The no-argument form means "Pulumi Cloud, all editions" and is deliberately
+ * allowed, as is the block form with inner prose. The closing `{{< /pulumi-cloud >}}`
+ * doesn't match, because the slash isn't whitespace.
  */
-const PULUMI_CLOUD_SHORTCODE_REGEX = /\{\{<\s*pulumi-cloud\s+"([^"]*)"/g;
+const PULUMI_CLOUD_SHORTCODE_REGEX = /\{\{[<%]\s*pulumi-cloud(\s[^}]*?)?\s*\/?\s*[>%]\}\}/g;
 
 /**
  * checkPulumiCloudShortcode validates the argument of every
@@ -954,7 +961,19 @@ function checkPulumiCloudShortcode(content) {
     let match;
     PULUMI_CLOUD_SHORTCODE_REGEX.lastIndex = 0;
     while ((match = PULUMI_CLOUD_SHORTCODE_REGEX.exec(content)) !== null) {
-        const err = pulumiCloudValueError(match[1], "{{< pulumi-cloud >}}");
+        const args = (match[1] || "").trim();
+        if (args === "") {
+            continue;
+        }
+        let err;
+        if (args.includes("=")) {
+            // The {{% notes type="warning" %}} convention makes this an easy
+            // mistake, and a named param leaves `.Get 0` nil — the callout then
+            // claims the feature is available on every edition.
+            err = `Invalid {{< pulumi-cloud >}} argument: '${args}'. Named parameters aren't supported — write the feature id positionally, as {{< pulumi-cloud "rbac" />}}.`;
+        } else {
+            err = pulumiCloudValueError(args.replace(/^"(.*)"$/, "$1"), "{{< pulumi-cloud >}}");
+        }
         if (err && !messages.includes(err)) {
             messages.push(err);
         }
