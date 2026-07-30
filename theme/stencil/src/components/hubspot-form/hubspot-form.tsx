@@ -1,4 +1,4 @@
-import { Component, Element, h, Prop, State } from "@stencil/core";
+import { Component, Element, Event, EventEmitter, h, Prop, State } from "@stencil/core";
 import { parseCookie, parseUTMCookieString, getQueryVariable } from "../../util/util";
 
 interface UTMData {
@@ -15,7 +15,7 @@ let hubspotInstanceCount = 0;
 
 // The types of form events we expect to receive from HubSpot.
 // https://legacydocs.hubspot.com/docs/methods/forms/advanced_form_options
-type HubSpotFormEvent = "onBeforeFormInit" | "onBeforeValidationInit" | "onFormReady" | "onFormSubmit" | "onFormDefinitionFetchError";
+type HubSpotFormEvent = "onBeforeFormInit" | "onBeforeValidationInit" | "onFormReady" | "onFormSubmit" | "onFormSubmitted" | "onFormDefinitionFetchError";
 
 @Component({
     tag: "pulumi-hubspot-form",
@@ -44,6 +44,19 @@ export class HubspotForm {
     @Prop()
     linkedinConversionId?: number;
 
+    // Prefills form fields from URL query parameters, as a JSON string mapping
+    // HubSpot field internal name -> query param name:
+    //   prefill='{"email": "email", "pulumi_organization_name_s_": "org"}'
+    // Applied on onFormReady. A missing param, missing field, or malformed JSON
+    // leaves the form untouched.
+    @Prop()
+    prefill?: string;
+
+    // Emitted once HubSpot confirms the submission, so a page can render its own
+    // confirmation UI. `values` holds the submitted values in display form.
+    @Event({ composed: true, bubbles: true })
+    hubspotFormSubmitted: EventEmitter<{ formId: string; values: Record<string, string> }>;
+
     // Whether the HubSpot form is loading.
     @State()
     isLoading: boolean = true;
@@ -62,6 +75,9 @@ export class HubspotForm {
     messageHandler: (event: MessageEvent) => void;
 
     private observer: IntersectionObserver;
+
+    // The field values as of onFormSubmit, held for the onFormSubmitted event.
+    private submittedValues: Record<string, string> = {};
 
     componentWillLoad() {
         if (!this.formId) {
@@ -102,6 +118,13 @@ export class HubspotForm {
             return;
         }
 
+        // HubSpot broadcasts form callbacks on `window`, so filter to this
+        // instance — but only when an id is present, or lifecycle events that
+        // omit one would be dropped.
+        if (event.data.id && event.data.id !== this.formId) {
+            return;
+        }
+
         const eventName: HubSpotFormEvent = event.data.eventName;
         const utmData = this.getUTMCookieData();
 
@@ -137,6 +160,8 @@ export class HubspotForm {
 
             // Set the internal ad id.
             this.setInternalAdId();
+
+            this.applyPrefill();
         }
 
         // When the form is submitted, notify Segment and fire any conversion tracking.
@@ -146,10 +171,18 @@ export class HubspotForm {
                 this.notifySegment(emailAddress.value, utmData);
             }
 
+            // Capture the values now: by the time onFormSubmitted fires, HubSpot
+            // has replaced the form with its inline thank-you message.
+            this.submittedValues = this.collectFieldValues();
+
             // Fire LinkedIn conversion tracking if a conversion ID is set.
             if (this.linkedinConversionId && typeof (window as any).lintrk === "function") {
                 (window as any).lintrk("track", { conversion_id: this.linkedinConversionId });
             }
+        }
+
+        if (eventName === "onFormSubmitted") {
+            this.hubspotFormSubmitted.emit({ formId: this.formId, values: this.submittedValues });
         }
 
         // When there are problems loading the form, show a failure message.
@@ -185,6 +218,67 @@ export class HubspotForm {
                 internalAdIdInput.value = internalAdId;
             }
         }
+    }
+
+    // Prefill fields from the query string, per the `prefill` map.
+    private applyPrefill() {
+        if (!this.prefill) {
+            return;
+        }
+
+        try {
+            const fieldsToParams: Record<string, string> = JSON.parse(this.prefill);
+
+            Object.keys(fieldsToParams).forEach(fieldName => {
+                const value = getQueryVariable(fieldsToParams[fieldName]);
+                if (!value) {
+                    return;
+                }
+
+                const field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement = this.el.querySelector(`[name="${fieldName}"]`);
+                if (!field) {
+                    return;
+                }
+
+                // HubSpot validates off its own state, so it needs both events to
+                // register the value. `window.Event` because Stencil's `Event`
+                // decorator shadows the global constructor here.
+                field.value = value;
+                field.dispatchEvent(new window.Event("input", { bubbles: true }));
+                field.dispatchEvent(new window.Event("change", { bubbles: true }));
+            });
+        } catch (e) {
+            // Malformed prefill map, or a query string getQueryVariable can't parse.
+        }
+    }
+
+    // The form's current values, keyed by field name, in display form.
+    private collectFieldValues(): Record<string, string> {
+        const values: Record<string, string> = {};
+
+        this.el.querySelectorAll("input, select, textarea").forEach((field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement) => {
+            if (!field.name || (field as HTMLInputElement).type === "hidden") {
+                return;
+            }
+
+            if (field instanceof HTMLSelectElement) {
+                // The option's text, not its raw value.
+                values[field.name] = field.selectedOptions.length ? field.selectedOptions[0].text : "";
+                return;
+            }
+
+            const inputType = (field as HTMLInputElement).type;
+            if (inputType === "checkbox" || inputType === "radio") {
+                if ((field as HTMLInputElement).checked) {
+                    values[field.name] = field.value;
+                }
+                return;
+            }
+
+            values[field.name] = field.value;
+        });
+
+        return values;
     }
 
     // Parse the current cookie and return any UTM fields.
