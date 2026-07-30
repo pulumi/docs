@@ -85,7 +85,8 @@ User authentication supports multiple mechanisms, including federation with orga
 single sign-on and phishing-resistant passkey authentication. Passkeys are built on public-key cryptography: the
 platform stores only public keys, while the corresponding private keys remain on user devices and are never
 transmitted. Each authentication challenge is single-use and time-limited, preventing replay of captured login
-ceremonies.
+ceremonies. For accounts authenticated with a password, the platform additionally supports multi-factor
+authentication using time-based one-time passcodes as a second factor.
 
 Deployment orchestration represents a critical functional domain within the platform. When users initiate infrastructure
 operations, manually or by source control system triggers, requests are queued and subsequently processed by specialized
