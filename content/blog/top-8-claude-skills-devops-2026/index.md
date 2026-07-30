@@ -202,7 +202,7 @@ Treat skills like you treat any third-party dependency:
 
 1. Read the source before installing. Skills are markdown and YAML files. If you cannot read the full skill in a few minutes, that is a red flag.
 1. Check the repository. Look at stars, contributors, and commit history. A single-commit repository from an unknown account deserves scrutiny.
-1. Run `uvx mcp-scan@latest --skills` to scan installed skills for known malicious patterns, prompt injection, and credential exposure.
+1. Run `uvx snyk-agent-scan@latest --skills` to scan installed skills for known malicious patterns, prompt injection, and credential exposure. (This tool was previously published as `mcp-scan`.)
 1. Be cautious with skills that fetch external content at runtime. The Snyk research found 17.7% of skills on ClawHub pull from third-party URLs, which means the skill's behavior can change after you install it.
 1. Stick to known repositories. Every skill recommended in this post comes from a repository with visible maintainers and community activity.
 
@@ -272,7 +272,7 @@ MCP servers give Claude tools: access to external systems like your registry, cl
 
 ### Are Claude skills safe to install?
 
-Treat them like any third-party dependency, because they run with your agent's permissions. Snyk's ToxicSkills research scanned 3,984 public skills and found 13.4% with critical vulnerabilities and 76 malicious payloads. Read the source before installing, check the repository's maintainers and history, run `uvx mcp-scan@latest --skills`, and be wary of skills that fetch external content at runtime.
+Treat them like any third-party dependency, because they run with your agent's permissions. Snyk's ToxicSkills research scanned 3,984 public skills and found 13.4% with critical vulnerabilities and 76 malicious payloads. Read the source before installing, check the repository's maintainers and history, run `uvx snyk-agent-scan@latest --skills`, and be wary of skills that fetch external content at runtime.
 
 ### Which Claude skills help with Kubernetes?
 
