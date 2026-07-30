@@ -35,54 +35,12 @@
   .et-form-card{box-shadow:0 1px 2px rgba(20,20,40,.04),0 10px 32px rgba(20,20,40,.055);}
   .et-footnote{font-size:13px;color:var(--et-muted);margin:16px 0 0;}
 
-  /* ---- HubSpot form, styled at page level (set the form to "Unstyled" in HubSpot) ---- */
-  .et-form-card .hs-form{font-size:15px;}
-  .et-form-card .hs-form-field{margin-bottom:22px;}
-  .et-form-card .hs-form-field > label{display:block;font-size:14.5px;font-weight:600;margin-bottom:6px;color:var(--et-ink);}
-  .et-form-card .hs-form-field > label .hs-form-required{color:var(--et-salmon);margin-left:2px;}
-  .et-form-card .hs-field-desc{font-size:13px;color:var(--et-muted);margin:-2px 0 8px;font-weight:400;}
-  .et-form-card .hs-input:not([type=checkbox]):not([type=radio]){width:100%;font-family:inherit;font-size:15px;color:var(--et-ink);border:1px solid var(--et-line);border-radius:8px;padding:11px 13px;background:#fff;outline:none;transition:.15s;box-sizing:border-box;}
-  .et-form-card textarea.hs-input{min-height:96px;resize:vertical;}
-  .et-form-card select.hs-input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B7B' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;}
-  .et-form-card .hs-input:focus{border-color:var(--et-violet);box-shadow:0 0 0 3px rgba(95,44,201,.12);}
-  .et-form-card .hs-form-booleancheckbox-display{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--et-ink2);font-weight:400;cursor:pointer;}
-  .et-form-card .hs-form-booleancheckbox-display > input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:var(--et-violet);}
-  .et-form-card .hs-error-msg,.et-form-card .hs-error-msgs label{color:var(--et-salmon);font-size:13px;margin-top:5px;display:block;}
-  .et-form-card .hs-button.primary{display:inline-flex;align-items:center;justify-content:center;font-size:15.5px;font-weight:600;border-radius:8px;padding:13px 26px;border:1px solid transparent;cursor:pointer;font-family:inherit;color:#fff;background:linear-gradient(100deg,var(--et-violet),var(--et-purple));transition:filter .15s;margin-top:4px;}
-  .et-form-card .hs-button.primary:hover{filter:brightness(1.08);}
-
-  /* ---- Harden against the form's inherited "round" theme ----
-     The cloned form ships a theme + style object (arial font, submitColor
-     #5A30C5, label/help colors), some applied as inline styles. These rules
-     win regardless, so the page renders correctly even if the form is NOT set
-     to "Unstyled" in HubSpot. Scoped to .et-page .et-form-card so nothing
-     else on the site is affected. */
-  .et-page .et-form-card .hs-form,
-  .et-page .et-form-card .hs-form input,
-  .et-page .et-form-card .hs-form select,
-  .et-page .et-form-card .hs-form textarea,
-  .et-page .et-form-card .hs-form label,
-  .et-page .et-form-card .hs-button{font-family:inherit !important;}
-  /* Labels: HubSpot nests the text in an inner <span> its theme colors/sizes,
-     so target the span too. Bumped up + bold to match the mockup and read
-     more prominently. */
-  .et-page .et-form-card .hs-form-field > label,
-  .et-page .et-form-card .hs-form-field > label span:not(.hs-form-required){color:var(--et-ink) !important;font-size:16px !important;font-weight:600 !important;line-height:1.4 !important;}
-  .et-page .et-form-card .hs-form-field > label{display:block !important;margin-bottom:8px !important;}
-  .et-page .et-form-card .hs-form-field > label .hs-form-required{color:var(--et-salmon) !important;font-weight:600 !important;}
-  .et-page .et-form-card .hs-field-desc{color:var(--et-muted) !important;font-size:13px !important;font-weight:400 !important;}
-  .et-page .et-form-card input.hs-input:not([type=checkbox]):not([type=radio]),
-  .et-page .et-form-card textarea.hs-input{border:1px solid var(--et-line) !important;border-radius:8px !important;background:#fff !important;color:var(--et-ink) !important;font-size:15px !important;padding:11px 13px !important;}
-  .et-page .et-form-card select.hs-input{border:1px solid var(--et-line) !important;border-radius:8px !important;color:var(--et-ink) !important;font-size:15px !important;padding:11px 38px 11px 13px !important;background-color:#fff !important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B7B' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;background-repeat:no-repeat !important;background-position:right 14px center !important;}
-  /* Uniform control height so Email, the org field, and the reason dropdown
-     all match. The org field reuses a multi-line property (renders as a
-     textarea) — pin it to a single-line box so it matches the Email input. */
-  .et-page .et-form-card input.hs-input:not([type=checkbox]):not([type=radio]),
-  .et-page .et-form-card select.hs-input,
-  .et-page .et-form-card textarea[name="pulumi_organization_name_s_"]{height:46px !important;min-height:46px !important;}
-  .et-page .et-form-card textarea[name="pulumi_organization_name_s_"]{resize:none !important;overflow:hidden !important;white-space:nowrap !important;line-height:1.4 !important;}
-  .et-page .et-form-card .hs-input:focus{border-color:var(--et-violet) !important;box-shadow:0 0 0 3px rgba(95,44,201,.12) !important;}
-  .et-page .et-form-card .hs-button.primary{background:linear-gradient(100deg,var(--et-violet),var(--et-purple)) !important;background-color:var(--et-violet) !important;color:#fff !important;border:1px solid transparent !important;border-radius:8px !important;padding:13px 26px !important;font-size:15.5px !important;font-weight:600 !important;width:auto !important;}
+  /* ---- Form fields are styled INSIDE the iframe, not here ----
+     HubSpot renders this form inside a same-origin <iframe> (srcdoc), so
+     page-level CSS cannot reach the fields. All form-field styling (labels,
+     inputs, the single-line org box, the submit button) is injected into the
+     iframe's document in onFormReady below. The rules in this <style> block
+     only cover the surrounding page (hero, cards, rail, confirmation). */
 
   /* sidebar */
   .et-side{display:flex;flex-direction:column;gap:18px;position:sticky;top:92px;}
@@ -243,6 +201,33 @@
         // Prefill visible, editable account fields from the console link.
         set('email', params.get('email'));
         set('pulumi_organization_name_s_', params.get('org'));
+
+        // The form renders in a same-origin iframe, so page CSS can't reach it.
+        // Inject the field styling into the iframe's own document. Selectors
+        // target the form's classes directly (no page wrapper inside the iframe).
+        try {
+          var fdoc = $form.ownerDocument;
+          if (fdoc && !fdoc.getElementById('et-hs-styles')) {
+            var st = fdoc.createElement('style');
+            st.id = 'et-hs-styles';
+            st.textContent = [
+              '.hs-form-field{margin-bottom:20px;}',
+              '.hs-form-field>label,.hs-form-field>label span:not(.hs-form-required){font-size:16px !important;font-weight:600 !important;color:#1A1A21 !important;line-height:1.4 !important;}',
+              '.hs-form-field>label{display:block !important;margin-bottom:8px !important;}',
+              '.hs-form-required{color:#F26B7E !important;margin-left:2px;}',
+              '.hs-field-desc{font-size:13px !important;color:#6B6B7B !important;font-weight:400 !important;margin:-2px 0 8px !important;}',
+              '.hs-input:not([type=checkbox]):not([type=radio]){width:100% !important;box-sizing:border-box !important;font-size:15px !important;color:#1A1A21 !important;border:1px solid #E5E5EC !important;border-radius:8px !important;padding:11px 13px !important;background:#fff !important;}',
+              // Match Email, the org field, and the reason dropdown to one height.
+              'input.hs-input:not([type=checkbox]):not([type=radio]),select.hs-input,textarea[name="pulumi_organization_name_s_"]{height:46px !important;min-height:46px !important;}',
+              // Reused org field is a multi-line property; render it single-line.
+              'textarea[name="pulumi_organization_name_s_"]{resize:none !important;overflow:hidden !important;white-space:nowrap !important;line-height:1.4 !important;}',
+              '.hs-input:focus{border-color:#5F2CC9 !important;box-shadow:0 0 0 3px rgba(95,44,201,.12) !important;outline:none !important;}',
+              '.hs-button.primary{background:linear-gradient(100deg,#5F2CC9,#8A3391) !important;background-color:#5F2CC9 !important;color:#fff !important;border:1px solid transparent !important;border-radius:8px !important;padding:13px 26px !important;font-size:15.5px !important;font-weight:600 !important;width:auto !important;cursor:pointer !important;}',
+              '.hs-form-booleancheckbox-display{display:flex !important;gap:10px !important;align-items:flex-start !important;font-size:14.5px !important;color:#3D3D4A !important;font-weight:400 !important;}'
+            ].join('');
+            (fdoc.head || fdoc.documentElement).appendChild(st);
+          }
+        } catch (e) { /* cross-origin or unavailable: form keeps its default styling */ }
       },
       onFormSubmitted: function ($form) {
         var emailEl = document.querySelector('#extend-trial-form [name="email"]');
