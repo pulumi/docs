@@ -18,9 +18,9 @@ schema_type: auto
 
 social:
     twitter: |
-        "Why can't Claude and my engineers just do this?" A VP of engineering asked me that while we were talking about coding agents building infrastructure.
+        "Why can't Claude and my engineers just do this?" A VP of engineering asked Engin Diri that during a conversation about coding agents building infrastructure.
 
-        The honest answer: they can. And if that's where your thinking stops, you're about to learn what happens to review, policy, and audit when change velocity multiplies.
+        The honest answer: they can, but don't stop there.
     linkedin: |
         A VP of engineering at an AI startup asked Engin Diri the question every infrastructure vendor dreads: "Why can't Claude and my engineers just do this?"
 
