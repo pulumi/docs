@@ -19,45 +19,91 @@ const REFRESH_HEADROOM_MS = 5 * 60 * 1000;
 type IntercomFn = (command: string, arg?: unknown) => void;
 
 // The JWT is opaque to this module; freshness comes from the endpoint's
-// expiresAt (unix seconds), stored alongside the token.
+// expiresAt (unix seconds). Both the cache and the "already identified"
+// marker also carry the userId encoded in the hint cookie at the time they
+// were written, so a cache/identification left behind by a previous Pulumi
+// Cloud user (shared machine, account switch) is never reused for a
+// different signed-in user.
 interface CachedJwt {
     jwt: string;
     expiresAtMs: number;
+    userId: string;
 }
 
-function hasHintCookie(): boolean {
-    return document.cookie.split(";").some(c => c.trim().indexOf(`${HINT_COOKIE}=`) === 0);
+interface IdentifiedUser {
+    userId: string;
 }
 
-function identify(intercom: IntercomFn, jwt: string): void {
+// Mirrors theme/stencil/src/store/reducers/user.ts's getUserInfoCookie —
+// keep the parsing logic in sync.
+function hintUserId(): string | null {
+    for (const entry of document.cookie.split(";")) {
+        const idx = entry.indexOf("=");
+        if (idx === -1) {
+            continue;
+        }
+        if (entry.slice(0, idx).trim() !== HINT_COOKIE) {
+            continue;
+        }
+        try {
+            const parsed = JSON.parse(decodeURIComponent(entry.slice(idx + 1).trim()).replace(/^j:/, "")) as {
+                userId?: string;
+            };
+            return typeof parsed.userId === "string" && parsed.userId ? parsed.userId : null;
+        } catch (e) {
+            return null;
+        }
+    }
+    return null;
+}
+
+function identifiedUser(): IdentifiedUser | null {
+    try {
+        const raw = localStorage.getItem(IDENTIFIED_KEY);
+        if (raw) {
+            const parsed = JSON.parse(raw) as IdentifiedUser;
+            if (parsed.userId) {
+                return parsed;
+            }
+        }
+    } catch (e) {
+        // Storage unavailable or stale shape: treat as not identified.
+    }
+    return null;
+}
+
+function identify(intercom: IntercomFn, jwt: string, userId: string): void {
     intercom("update", { intercom_user_jwt: jwt });
     try {
-        localStorage.setItem(IDENTIFIED_KEY, "1");
+        localStorage.setItem(IDENTIFIED_KEY, JSON.stringify({ userId }));
     } catch (e) {
         // Storage unavailable: identity still attaches for this page view.
     }
 }
 
-function signedOutCleanup(intercom: IntercomFn): void {
-    let wasIdentified = false;
+function clearCaches(): void {
     try {
-        wasIdentified = localStorage.getItem(IDENTIFIED_KEY) === "1";
         localStorage.removeItem(IDENTIFIED_KEY);
         sessionStorage.removeItem(JWT_CACHE_KEY);
     } catch (e) {
         // Storage unavailable: nothing to clean up.
     }
+}
+
+function signedOutCleanup(intercom: IntercomFn): void {
+    const wasIdentified = identifiedUser() !== null;
+    clearCaches();
     if (wasIdentified) {
         intercom("shutdown");
     }
 }
 
-function cachedJwt(): string | null {
+function cachedJwt(userId: string): string | null {
     try {
         const raw = sessionStorage.getItem(JWT_CACHE_KEY);
         if (raw) {
             const cached = JSON.parse(raw) as CachedJwt;
-            if (cached.jwt && cached.expiresAtMs - Date.now() > REFRESH_HEADROOM_MS) {
+            if (cached.jwt && cached.userId === userId && cached.expiresAtMs - Date.now() > REFRESH_HEADROOM_MS) {
                 return cached.jwt;
             }
         }
@@ -67,9 +113,9 @@ function cachedJwt(): string | null {
     return null;
 }
 
-function cacheJwt(jwt: string, expiresAtSec: number): void {
+function cacheJwt(jwt: string, expiresAtSec: number, userId: string): void {
     try {
-        const cached: CachedJwt = { jwt, expiresAtMs: expiresAtSec * 1000 };
+        const cached: CachedJwt = { jwt, expiresAtMs: expiresAtSec * 1000, userId };
         sessionStorage.setItem(JWT_CACHE_KEY, JSON.stringify(cached));
     } catch (e) {
         // Storage unavailable: skip caching, identify anyway.
@@ -79,14 +125,27 @@ function cacheJwt(jwt: string, expiresAtSec: number): void {
 function run(intercom: IntercomFn): void {
     // The hint cookie only decides whether to attempt the fetch; the 401
     // below is the authoritative signed-out signal.
-    if (!hasHintCookie()) {
+    const userId = hintUserId();
+    if (!userId) {
         signedOutCleanup(intercom);
         return;
     }
 
-    const jwt = cachedJwt();
+    const previouslyIdentified = identifiedUser();
+    if (previouslyIdentified && previouslyIdentified.userId !== userId) {
+        // A different Pulumi Cloud user is now encoded in the hint cookie
+        // (shared/kiosk machine, or an account switch that never left the
+        // hint cookie absent during a page load here). Shut down the stale
+        // identity — and drop any cached JWT for the old user — before
+        // attaching the new one, so the Messenger never mixes conversation
+        // histories across accounts.
+        clearCaches();
+        intercom("shutdown");
+    }
+
+    const jwt = cachedJwt(userId);
     if (jwt) {
-        identify(intercom, jwt);
+        identify(intercom, jwt, userId);
         return;
     }
 
@@ -104,9 +163,9 @@ function run(intercom: IntercomFn): void {
         .then(body => {
             if (body && body.userJwt) {
                 if (body.expiresAt) {
-                    cacheJwt(body.userJwt, body.expiresAt);
+                    cacheJwt(body.userJwt, body.expiresAt, userId);
                 }
-                identify(intercom, body.userJwt);
+                identify(intercom, body.userJwt, userId);
             }
         })
         .catch(() => {
