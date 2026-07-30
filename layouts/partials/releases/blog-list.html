@@ -21,7 +21,7 @@
     <div class="flex flex-col">
         {{ range $posts }}
             {{ with site.GetPage . }}
-                {{ partial "blog/card/list-row.html" (dict "page" .) }}
+                {{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}
             {{ end }}
         {{ end }}
     </div>

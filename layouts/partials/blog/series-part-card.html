@@ -17,7 +17,7 @@
 <article class="group relative flex items-center gap-4">
     {{ if partial "blog/has-feature-image.html" $page }}
     <div class="flex size-[140px] shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
-        {{ partial "blog/feature-image.html" (dict "page" $page "w" 240 "h" 160 "mode" "fit" "class" "h-full w-auto max-w-none") }}
+        {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 240 "h" 160 "mode" "fit" "class" "h-full w-auto max-w-none") $page.RelPermalink "fit-240x160" }}
     </div>
     {{ end }}
     <div class="flex min-w-0 flex-col items-start gap-2.5">

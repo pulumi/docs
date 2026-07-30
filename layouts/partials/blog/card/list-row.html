@@ -41,7 +41,7 @@
         </div>
         {{ if partial "blog/has-feature-image.html" $page }}
         <div class="flex size-20 sm:size-28 lg:size-36 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
-            {{ partial "blog/feature-image.html" (dict "page" $page "w" 288 "h" 288 "mode" "fit" "class" "h-full w-auto max-w-none") }}
+            {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 288 "h" 288 "mode" "fit" "class" "h-full w-auto max-w-none") $page.RelPermalink "fit-288x288" }}
         </div>
         {{ end }}
     </div>

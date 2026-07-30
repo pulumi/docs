@@ -12,5 +12,5 @@
 */ -}}
 <meta name="robots" content="noindex">
 {{- range (where .Data.Pages "Section" "blog").ByDate.Reverse -}}
-{{ partial "blog/card/list-row.html" (dict "page" .) }}
+{{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}
 {{- end -}}

@@ -1,0 +1,38 @@
+{{- /*
+    Recursive breadcrumb finder: locates the entry whose URL matches targetURL
+    in a menu-entry tree and returns the chain of its ancestors, outermost
+    first. This replaces the breadcrumb collection that used to happen as a
+    side effect of rendering the menu walker — the rendered menu is now cached
+    per section (see docs/menu.html), so a per-page side effect there would
+    only run on cache misses and produce stale breadcrumbs everywhere else.
+
+    Mirrors the old walker's semantics: entries named "Overview" and the menu's
+    own root entry (Identifier == rootMenuID) are skipped, ancestors are the
+    items *above* the match (never the match itself), and a page not found in
+    the tree yields an empty chain.
+
+    Params:
+      entries     (required) the menu entries to search
+      targetURL   (required) the current page's RelPermalink
+      rootMenuID  (required) the menu's root identifier, skipped like the walker does
+
+    Returns: dict with "found" (bool) and "chain" (slice of {name, url} dicts).
+*/ -}}
+{{- $targetURL := .targetURL -}}
+{{- $rootMenuID := .rootMenuID -}}
+{{- $result := dict "found" false "chain" (slice) -}}
+{{- range .entries -}}
+    {{- if and (not $result.found) (ne .Name "Overview") (ne .Identifier $rootMenuID) -}}
+        {{- if and .URL (eq .URL $targetURL) -}}
+            {{- $result = dict "found" true "chain" (slice) -}}
+        {{- else if .Children -}}
+            {{- $sub := partial "docs/breadcrumb-path.html" (dict "entries" .Children "targetURL" $targetURL "rootMenuID" $rootMenuID) -}}
+            {{- if $sub.found -}}
+                {{- $chain := slice (dict "name" .Name "url" .URL) -}}
+                {{- range $sub.chain -}}{{- $chain = $chain | append . -}}{{- end -}}
+                {{- $result = dict "found" true "chain" $chain -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- return $result -}}

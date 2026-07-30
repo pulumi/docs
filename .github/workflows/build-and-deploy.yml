@@ -103,6 +103,21 @@ jobs:
           restore-keys: |
             meta-images-
 
+      # Persist Hugo's processed-image cache (resources/_gen). Blog templates
+      # process feature images to WebP at several sizes via .Process; without
+      # this cache every CI run re-encodes ~2,400 images from scratch (~4-5
+      # minutes of the build). With a warm cache, .Process is a lookup.
+      - name: Cache Hugo processed images
+        uses: actions/cache@v6
+        with:
+          path: resources
+          key: hugo-resources-${{ github.sha }}
+          restore-keys: |
+            hugo-resources-
+
+      - name: Record build start time
+        run: echo "CI_BUILD_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Build and deploy
         run: make ci_push
         env:
@@ -115,6 +130,16 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+
+      # Duration guardrail: the July 2026 regression sat unnoticed for three
+      # weeks because nothing watched build time. Warn in Slack when a
+      # successful build runs long so the next regression is caught in days.
+      - name: Alert on slow build
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          BUILD_DURATION_THRESHOLD_MINUTES: '15'
+        run: ./scripts/ci-build-duration-alert.sh
 
       - name: Archive test results
         uses: actions/upload-artifact@v7

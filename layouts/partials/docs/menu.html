@@ -1,24 +1,19 @@
 {{- $page := .page }}
 
 {{/*
-    BREADCRUMB BUILDING
+    This partial is the per-page wrapper around the docs left nav. The
+    expensive part — the recursive menu tree — lives in docs/menu-tree.html
+    and is rendered via partialCached keyed on (currentSection, expandedIDs),
+    so Hugo renders it once per section instead of once per page. Everything
+    page-specific happens out here:
 
-    Breadcrumbs are built as a side effect of rendering the menu. As the menu walker
-    (inline/menu/walk.html) iterates through menu items, it identifies ancestors of the
-    current page using Hugo's .HasMenuCurrent function and adds them to .Scratch.
-
-    After all menus are rendered, we prepend "Docs" root and append the current page.
-    The breadcrumb.html partial retrieves this data from .Scratch and renders it.
+    - Breadcrumbs are computed directly from the menu data by the
+      docs/breadcrumb-path.html finder (they used to be a side effect of
+      rendering the menu walker, which a cached tree can no longer provide).
+    - The active link, its ancestor chain, and their expansion are stamped on
+      the cached tree by the inline script below, which runs before first
+      paint so the menu never flashes or jumps.
 */}}
-
-{{/* Initialize empty breadcrumb list - will be populated as menu renders */}}
-{{ $page.Scratch.Set "breadcrumbs" slice }}
-
-{{/* Build URL lookup maps per menu for performance */}}
-{{ range $menuName, $menuEntries := site.Menus }}
-    {{ $page.Scratch.Set (printf "menuURLs-%s" $menuName) dict }}
-    {{ partial "inline/menu/collecturls" (dict "menuName" $menuName "menuEntries" $menuEntries "page" $page) }}
-{{ end }}
 
 {{/* Detect current section for auto-expansion (driven by data/docs_menu_sections.yml) */}}
 {{ $currentSection := "home" }}
@@ -31,6 +26,41 @@
         {{ end }}
     {{ end }}
 {{ end }}
+
+{{/*
+    BREADCRUMB BUILDING
+
+    Find the current page (by URL) in its section's menu and collect the
+    ancestor chain, outermost first. Only the current section's menu is
+    searched — parent pages can appear in multiple menus (e.g. /docs/iac/cli/
+    is in both iac and reference), and the section menu is the one the reader
+    is navigating. Then complete the chain:
+    1. Prepend "Docs" root at the beginning
+    2. Append the current page at the end
+    Result: Docs → [ancestor1] → [ancestor2] → Current Page
+*/}}
+{{ $ancestors := slice }}
+{{ with index site.Menus $currentSection }}
+    {{ $path := partial "docs/breadcrumb-path.html" (dict "entries" . "targetURL" $page.RelPermalink "rootMenuID" $currentSection) }}
+    {{ if $path.found }}
+        {{ $ancestors = $path.chain }}
+    {{ end }}
+{{ end }}
+{{ $finalBreadcrumbs := slice (dict "name" "Docs" "url" "/docs/") }}
+{{ range $ancestors }}
+    {{ $finalBreadcrumbs = $finalBreadcrumbs | append . }}
+{{ end }}
+
+{{/* Generated OpenAPI schema sub-pages are not in any menu, so inject their
+     ancestor chain manually: Reference → REST API Docs → Schema. */}}
+{{ if and $page.Params.openapi_schema (not $ancestors) }}
+    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "Reference" "url" "/docs/reference/") }}
+    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "REST API Docs" "url" "/docs/reference/cloud-rest-api/") }}
+    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "Schema" "url" "/docs/reference/cloud-rest-api/schema/") }}
+{{ end }}
+
+{{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" $page.LinkTitle "url" $page.RelPermalink) }}
+{{ $page.Scratch.Set "breadcrumbs" $finalBreadcrumbs }}
 
 <nav class="text-sm mt-5 mr-2">
     {{/* Search box moved from top nav */}}
@@ -60,53 +90,9 @@
         {{ $expandedIDs = $expandedIDs | append "iac-cli" | append "iac-cli-commands" }}
     {{ end }}
 
-    <pulumi-docs-nav expanded-menu-ids="{{ delimit $expandedIDs "," }}">
-        <ul class="list-none pl-0">
-
-            <li class="" data-menu-id="docs-home">
-                <ul class="list-none">
-                    <li><a href="/docs/"{{ if eq $page.RelPermalink "/docs/" }} class="active" aria-current="page"{{ end }}>
-                        <button>{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}</button>
-                        <span>Docs Home</span>
-                    </a></li>
-                </ul>
-            </li>
-
-            {{/* Menu sections driven by data/docs_menu_sections.yml */}}
-            {{- range site.Data.docs_menu_sections }}
-            {{- $menuName := .menu }}
-            {{- $label := .label }}
-            {{- with index site.Menus $menuName }}
-            <li class="expandable expanded{{ if eq $currentSection $menuName }} expanded{{ end }}" data-menu-id="{{ $menuName }}-top">
-                <ul class="list-none">
-                    {{- partial "inline/menu/walk.html" (dict "page" $page "rootMenuID" $menuName "currentSection" $currentSection "menuEntries" . "allMenuEntries" . "forceTopLevelLabel" $label "expandedIDs" $expandedIDs) }}
-                </ul>
-            </li>
-            {{- end }}
-            {{- end }}
-
-            {{/* Tutorials External Link */}}
-            <li class="" data-menu-id="tutorials-external">
-                <ul class="list-none">
-                    <li><a href="/tutorials/" target="_blank" rel="noopener noreferrer">
-                        <button>{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}</button>
-                        <span>Tutorials ↗</span>
-                    </a></li>
-                </ul>
-            </li>
-
-            {{/* Registry External Link */}}
-            <li class="" data-menu-id="registry-external">
-                <ul class="list-none">
-                    <li><a href="/registry/" target="_blank" rel="noopener noreferrer">
-                        <button>{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}</button>
-                        <span>Registry ↗</span>
-                    </a></li>
-                </ul>
-            </li>
-
-        </ul>
-    </pulumi-docs-nav>
+    {{/* The nav tree, rendered once per (section, expandedIDs) and reused
+         across every page in that section. */}}
+    {{ partialCached "docs/menu-tree.html" (dict "currentSection" $currentSection "expandedIDs" $expandedIDs) $currentSection (delimit $expandedIDs ",") }}
 
     {{/* Color-theme toggle, pinned to the bottom of the sidebar nav (third flex
          child after pulumi-docs-nav, which is flex:1 and scrolls). Gated to docs
@@ -116,18 +102,63 @@
         {{ partial "docs/theme-toggle.html" . }}
     {{ end }}
 
-    {{/* Scroll the active item into view. Runs inline — before first paint — so the
-         menu never visibly jumps. The expanded classes are rendered server-side above,
-         so the geometry is already final.
+    {{/* Stamp per-page state on the cached tree, then scroll the active item
+         into view. Runs inline — before first paint — so the classes are final
+         before the menu is ever rendered: no flash of collapsed items, no jump.
 
-         The menu's scroll position is carried across page loads via sessionStorage,
-         so navigating between pages whose nav items are already in view (e.g.,
-         siblings) doesn't move the nav at all. Only when the active item falls
-         outside the restored view is it scrolled (centered) into view. */}}
+         The cached tree cannot know the current page, so this script does what
+         the walker used to do server-side: mark the current page's link active,
+         mark and expand its ancestors.
+
+         The menu's scroll position is carried across page loads via
+         sessionStorage, so navigating between pages whose nav items are already
+         in view (e.g., siblings) doesn't move the nav at all. Only when the
+         active item falls outside the restored view is it scrolled (centered)
+         into view. */}}
     <script>
         (function () {
             var menu = document.currentScript.closest("nav").querySelector("pulumi-docs-nav");
             var KEY = "docs-nav-scroll-position";
+
+            var path = window.location.pathname;
+            if (path.slice(-1) !== "/") {
+                path += "/";
+            }
+
+            var section = path.split("/")[2] || "";
+            var sectionRoot = section ? menu.querySelector('li[data-menu-id="' + section + '-top"]') : null;
+            var links = (sectionRoot || menu).querySelectorAll("a[href]");
+            for (var i = 0; i < links.length; i++) {
+                var href = links[i].getAttribute("href");
+                if (!href || href.charAt(0) !== "/" || links[i].getAttribute("target")) {
+                    continue;
+                }
+                if (href.slice(-1) !== "/") {
+                    href += "/";
+                }
+                if (href !== path) {
+                    continue;
+                }
+                var active = links[i];
+                active.classList.add("active");
+                active.setAttribute("aria-current", "page");
+                // Walk up the tree: expand every collapsible ancestor and mark
+                // its toggle link, mirroring the classes the server used to set.
+                var li = active.closest("li");
+                while (li && menu.contains(li)) {
+                    if (li.classList.contains("expandable")) {
+                        li.classList.add("expanded");
+                    }
+                    var toggle = li.querySelector(":scope > a");
+                    if (toggle && toggle !== active && !toggle.classList.contains("active")) {
+                        toggle.classList.add("ancestor");
+                        if (toggle.getAttribute("href") !== "javascript:void(0)") {
+                            toggle.setAttribute("aria-current", "true");
+                        }
+                    }
+                    li = li.parentElement && li.parentElement.closest("li");
+                }
+            }
 
             try {
                 var saved = sessionStorage.getItem(KEY);
@@ -141,15 +172,15 @@
                 // Storage unavailable; fall through to centering below.
             }
 
-            var active = menu.querySelector("a.active");
-            if (!active) {
+            var activeLink = menu.querySelector("a.active");
+            if (!activeLink) {
                 return;
             }
             var menuRect = menu.getBoundingClientRect();
             if (menuRect.height === 0) {
                 return;
             }
-            var itemRect = active.getBoundingClientRect();
+            var itemRect = activeLink.getBoundingClientRect();
             if (itemRect.top < menuRect.top || itemRect.bottom > menuRect.bottom) {
                 // Center the active item vertically within the menu.
                 menu.scrollTop += itemRect.top - menuRect.top - (menuRect.height - itemRect.height) / 2;
@@ -157,152 +188,3 @@
         })();
     </script>
 </nav>
-
-{{/*
-    BREADCRUMB FINALIZATION
-
-    After all menus have been rendered and ancestors collected, complete the breadcrumb chain:
-    1. Prepend "Docs" root at the beginning
-    2. Append the current page at the end
-    Result: Docs → [ancestor1] → [ancestor2] → Current Page
-*/}}
-{{ $existingCrumbs := $page.Scratch.Get "breadcrumbs" }}
-{{ $finalBreadcrumbs := slice (dict "name" "Docs" "url" "/docs/") }}
-{{ range $existingCrumbs }}
-    {{ $finalBreadcrumbs = $finalBreadcrumbs | append . }}
-{{ end }}
-
-{{/* Generated OpenAPI schema sub-pages are not in any menu, so inject their
-     ancestor chain manually: Reference → REST API Docs → Schema. */}}
-{{ if and $page.Params.openapi_schema (not $existingCrumbs) }}
-    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "Reference" "url" "/docs/reference/") }}
-    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "REST API Docs" "url" "/docs/reference/cloud-rest-api/") }}
-    {{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" "Schema" "url" "/docs/reference/cloud-rest-api/schema/") }}
-{{ end }}
-
-{{ $finalBreadcrumbs = $finalBreadcrumbs | append (dict "name" $page.LinkTitle "url" $page.RelPermalink) }}
-{{ $page.Scratch.Set "breadcrumbs" $finalBreadcrumbs }}
-
-{{- define "partials/inline/menu/collecturls" }}
-    {{- $menuName := .menuName }}
-    {{- $page := .page }}
-    {{- range .menuEntries }}
-        {{- if .URL }}
-            {{- $page.Scratch.SetInMap (printf "menuURLs-%s" $menuName) .URL true }}
-        {{- end }}
-        {{- with .Children }}
-            {{- partial "inline/menu/collecturls" (dict "menuName" $menuName "menuEntries" . "page" $page) }}
-        {{- end }}
-    {{- end }}
-{{- end }}
-
-{{- define "partials/inline/menu/walk.html" }}
-    {{- $page := .page }}
-    {{- $rootMenuID := .rootMenuID }}
-    {{- $allMenuEntries := .allMenuEntries }}
-    {{- $expandedIDs := default slice .expandedIDs }}
-
-    {{- range .menuEntries }}
-        {{/* Skip Overview pages since we add them manually */}}
-        {{/* Skip root home items that we've already created manually */}}
-        {{- if and (ne .Name "Overview") (ne .Identifier $rootMenuID) }}
-            {{- $attrs := dict "href" .URL }}
-            {{- if $page.IsMenuCurrent .Menu . }}
-                {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-            {{- else if $page.HasMenuCurrent .Menu .}}
-                {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
-            {{- else if eq $page.RelPermalink .URL }}
-                {{/* Fallback for pages without frontmatter menu (e.g., CLI commands) */}}
-                {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
-            {{- end }}
-            {{- $name := .Name }}
-            {{- with .Identifier }}
-                {{- with T . }}
-                    {{- $name = . }}
-                {{- end }}
-            {{- end }}
-
-            {{/* Store the current menu item before entering Children context */}}
-            {{- $currentMenuItem := . }}
-
-            {{/*
-                BREADCRUMB COLLECTION
-
-                Only collect breadcrumbs if:
-                1. This menu item is an ancestor of the current page (HasMenuCurrent returns true)
-                2. AND the page is actually in this menu (either in frontmatter OR in menus.yml)
-                3. AND the menu being walked matches the current section
-
-                This prevents collecting breadcrumbs from multiple menus when parent pages
-                are in multiple menus (e.g., /docs/iac/cli/ is in both iac and reference menus).
-            */}}
-            {{- $menuName := .Menu }}
-            {{- $isAncestor := $page.HasMenuCurrent $menuName $currentMenuItem }}
-            {{- $pageHasThisMenu := and $page.Params.menu (index $page.Params.menu $menuName) }}
-            {{- $pageInMenuYML := index ($page.Scratch.Get (printf "menuURLs-%s" $menuName)) $page.RelPermalink }}
-            {{- $menuMatchesSection := eq $rootMenuID $.currentSection }}
-            {{- if and $isAncestor (or $pageHasThisMenu $pageInMenuYML) $menuMatchesSection }}
-                {{- $page.Scratch.Add "breadcrumbs" (dict "name" $currentMenuItem.Name "url" $currentMenuItem.URL) }}
-            {{- end }}
-
-            {{/* Render the expanded state server-side (ancestors of the current page, plus
-                 auto-expanded menu IDs) so the nav paints fully expanded — no flash of
-                 collapsed items while waiting for the pulumi-docs-nav component to load. */}}
-            {{- $isExpanded := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) (and .Identifier (in $expandedIDs .Identifier)) }}
-            <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable{{ if $isExpanded }} expanded{{ end }}" {{ end }}
-                {{ if .Identifier }} data-menu-id="{{ .Identifier }}" {{ end }}
-                >
-                {{- if and .Children (ne .Identifier $rootMenuID) }}
-                    {{/* Parent with children - make it clickable for expand/collapse but not navigation */}}
-                    <a href="javascript:void(0)"{{- if $page.HasMenuCurrent .Menu . }} class="ancestor"{{ end }} onclick="this.closest('li').classList.toggle('expanded'); return false;">
-                    <button style="pointer-events: none;">
-                        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}
-                    </button>
-                    <span>{{ $name }}</span>
-                    </a>
-                {{- else }}
-                    {{/* Regular link or root menu item */}}
-                    <a
-                        {{- range $k, $v := $attrs }}
-                            {{- with $v }}
-                                {{- printf " %s=%q" $k $v | safeHTMLAttr }}
-                            {{- end }}
-                        {{- end -}}
-                    >
-                    <button>
-                        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}
-                    </button>
-                    <span>{{ $name }}</span>
-                    </a>
-                {{- end }}
-                {{- with .Children }}
-                    <ul class="list-none">
-                        {{/* Add Overview link for parent pages that have a URL */}}
-                        {{- if $currentMenuItem.URL }}
-                            {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
-                            {{- if $overviewPage }}
-                                {{- $overviewLabel := "Introduction" }}
-                                {{- if $overviewPage.Params.docs_home }}
-                                    {{- $overviewLabel = "Overview" }}
-                                {{- end }}
-                                <li data-menu-id="overview">
-                                    <a href="{{ $overviewPage.RelPermalink }}"
-                                        {{- if eq $page.RelPermalink $overviewPage.RelPermalink }}
-                                            class="active" aria-current="page"
-                                        {{- end }}
-                                    >
-                                    <button>
-                                        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}
-                                    </button>
-                                    <span>{{ $overviewLabel }}</span>
-                                    </a>
-                                </li>
-                            {{- end }}
-                        {{- end }}
-                        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" . "rootMenuID" $rootMenuID "currentSection" $.currentSection "allMenuEntries" $allMenuEntries "expandedIDs" $expandedIDs) }}
-                    </ul>
-                {{- end }}
-            </li>
-        {{- end }}
-    {{- end }}
-{{- end }}

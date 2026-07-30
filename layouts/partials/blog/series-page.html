@@ -24,7 +24,7 @@
 
     <div class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
         {{ range $i, $p := $parts }}
-            {{ partial "blog/series-part-card.html" (dict "page" $p "num" (add $i 1) "series" $series) }}
+            {{ partialCached "blog/series-part-card.html" (dict "page" $p "num" (add $i 1) "series" $series) $p.RelPermalink (add $i 1) }}
         {{ end }}
     </div>
 

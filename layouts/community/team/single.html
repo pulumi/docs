@@ -64,7 +64,7 @@
             <h2 class="heading-2 mb-2">Recent blog posts</h2>
             <div data-post-list class="flex flex-col">
                 {{ range first 10 (sort $authorPosts "Date" "desc") }}
-                    {{ partial "blog/card/list-row.html" (dict "page" .) }}
+                    {{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}
                 {{ end }}
             </div>
         </section>
