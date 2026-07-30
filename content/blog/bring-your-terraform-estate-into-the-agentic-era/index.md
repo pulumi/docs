@@ -41,29 +41,33 @@ At Pulumi, we are building the platform for agentic infrastructure. Pulumi Cloud
 
 ## What we're shipping today
 
-Last December, our CEO [Joe Duffy laid out his vision](/blog/all-iac-including-terraform-and-hcl/) to make Pulumi the platform for all of your infrastructure as code. The capabilities we are launching today make that promise a reality. Pulumi Cloud is now fully interoperable between IaC tools and enables organizations to build upon their existing IaC estate rather than starting from scratch as they work toward the agentic infrastructure future.
+Last December, our CEO [Joe Duffy laid out his vision](/blog/all-iac-including-terraform-and-hcl/) to make Pulumi the platform for all of your infrastructure as code. The capabilities we are launching today make that promise a reality. Pulumi is now fully interoperable with Terraform and OpenTofu and enables organizations to build upon their existing IaC estate rather than starting from scratch as they work toward the agentic infrastructure future.
 
 ### Pulumi Cloud as a Terraform backend
 
 We are excited to announce the general availability of [Pulumi Cloud as the backend to your Terraform state](/docs/iac/get-started/terraform/terraform-state-backend/), enabling organizations to seamlessly lift and shift their existing Terraform estates.
 
-We recognize there is lots of infrastructure that works as is, and switching over to a new management paradigm is just not worth the squeeze. Pulumi Cloud support for the Terraform state backend lets organizations maintain their existing Terraform deployment patterns while also unlocking the power of Pulumi Cloud. The following common patterns for running Terraform are now supported:
+We recognize there is lots of infrastructure that works as is, and switching over to a new management paradigm may not always be possible. Pulumi Cloud support for the Terraform state backend lets organizations maintain their existing Terraform deployment patterns while also unlocking the power of Pulumi Cloud. The following common patterns for running Terraform are now supported:
 
-- **Plans and applies run remotely by default** for Terraform runs. When you run a Terraform operation, it executes on a Pulumi-hosted runner rather than your local machine. You get full visibility into these operations both on your local CLI and in the Pulumi Cloud console.
-- Gate your production deployments with **manual approvals** before applying a Terraform plan.
+- **Plans and applies run remotely by default** for Terraform runs, following the behavior of HCP Terraform and Terraform Enterprise. When you run a Terraform operation, it executes on a Pulumi-hosted runner rather than your local machine. You get full visibility into these operations both on your local CLI and in the Pulumi Cloud console.
+- **Production deployments may be gated with manual approvals** before applying a Terraform plan.
 
 With this release, stacks with Terraform state are first-class entities in Pulumi Cloud. They get access to all of the capabilities that organizations need to scale in this new AI-first era.
 
-- [Manage access to your Terraform stacks at scale](/docs/administration/access-identity/rbac/) using **tag-based access control**, **team role assignments**, and **user role assignments**.
-- [**Neo code reviews**](/docs/ai/neo/code-reviews/) are fully compatible with Terraform and OpenTofu programs hosted in Pulumi Cloud. On every pull request, leverage what Pulumi Cloud knows about your running infrastructure and get clear feedback on whether it's safe to merge.
+- **[Manage access to your Terraform stacks at scale](/docs/administration/access-identity/rbac/)** using tag-based access control, team role assignments, and user role assignments.
+- [**Take advantage of Neo code reviews**](/docs/ai/neo/code-reviews/). On every pull request, leverage what Pulumi Cloud knows about your running infrastructure and get clear feedback on whether it's safe to merge changes to your Terraform and OpenTofu projects.
 - [**Run preventive policies**](/docs/insights/policy/) after a Terraform plan to block non-compliant resources before deployment.
-- Terraform state configuration is [hosted natively in ESC](/docs/esc/), which lets you securely inject OIDC credentials at apply time and expose outputs to downstream stacks and services.
+- **[Configure your Terraform deployments with Pulumi ESC](/docs/esc/)**, which is natively available to Pulumi Cloud-backed Terraform projects, to securely inject OIDC credentials at apply time and expose outputs to downstream stacks and services.
+
+Learn more in [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/).
 
 ### Build in HCL natively
 
-[HashiCorp Configuration Language (HCL)](/docs/iac/get-started/terraform/convert-hcl/) is now generally available as a first-class language in Pulumi IaC. Just like any of the other Pulumi languages, you have full access to the entirety of the Pulumi ecosystem, including thousands of providers. Thanks to our Terraform bridge, if there's a Terraform provider out there, it just works. Best of all, HCL in Pulumi is 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible with no syntactical differences.
+[HashiCorp Configuration Language (HCL)](/docs/iac/languages-sdks/hcl/) is now generally available as a first-class language in Pulumi IaC. Just like any of the other Pulumi languages, you have full access to the entirety of the Pulumi ecosystem, including thousands of providers. Thanks to our Terraform bridge, if there's a Terraform provider out there, it just works. Best of all, HCL in Pulumi is 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible with no syntactical differences.
 
 We recognize there are many teams out there that prefer to work in HCL over general-purpose languages but want to leverage the modern Pulumi IaC engine, or want to be able to easily use all of the reusable components their partner teams rely on — regardless of whether those teams work in Terraform or Pulumi.
+
+Learn more in the [HCL language reference](/docs/iac/languages-sdks/hcl/).
 
 ### Reuse your Terraform modules
 
@@ -71,9 +75,11 @@ Pulumi programs, regardless of language, now support [importing Terraform module
 
 In addition, Pulumi Cloud's private registry can now host Terraform modules alongside Pulumi packages. This enables you to consolidate all of your IaC building blocks in a single source of truth rather than managing disparate solutions and making sure your teams know where to look. Terraform modules hosted in Pulumi Cloud provide maximum interoperability and can be used in both Pulumi and Terraform programs.
 
+Learn more in [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/).
+
 ## You are still covered until your HashiCorp renewal
 
-We stand by the promise we made last December, and the last thing we want is to force you to pay for two IaC solutions. To set your team up for long-term success and ensure your transition to Pulumi is as smooth as possible, we are continuing to offer three things:
+We stand by the promise we made last December, and the last thing we want is for you to pay for two IaC solutions. To set your team up for long-term success and ensure your transition to Pulumi is as smooth as possible, we are continuing to offer three things:
 
 - **An escape hatch for your current contract.** We know paying for two IaC solutions at once is a non-starter, so we're letting you apply credits purchased from HashiCorp toward your Pulumi usage until your next renewal, avoiding double pay.
 - **A free IaC modernization workshop.** Our professional services cloud architects host a free IaC modernization workshop to review where you're at with your IaC already and share best practices for adopting the Pulumi platform at scale, learned from working with world-class organizations like BMW, Modular, and Supabase. You will leave this session trained up and equipped to succeed with the next phase of your IaC journey.
@@ -83,6 +89,6 @@ These ensure there's no financial penalty for switching, a very clear ROI, and n
 
 ## Get started today
 
-The agentic infrastructure era is already here, and we want you to bring your IaC to it. [Get started with Pulumi free](/docs/install/) and provision your first stack in minutes.
+The agentic infrastructure era is already here, and we want you to bring your IaC to it. [Get started with Pulumi free](https://app.pulumi.com/signup) and provision your first stack in minutes.
 
 If you'd like to get started with the new Terraform/OpenTofu and HCL capabilities, or take advantage of the financial flexibility options, please [get in touch](/contact/?form=sales).
