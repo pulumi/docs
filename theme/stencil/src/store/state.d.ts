@@ -1,4 +1,4 @@
-import { LanguageKey, K8sLanguageKey, OSKey, CloudKey, PersonaKey, BackEndKey, PythonToolchainKey } from "../components/chooser/chooser";
+import { LanguageKey, K8sLanguageKey, OSKey, CloudKey, PersonaKey, BackEndKey, PythonToolchainKey, TfToolKey } from "../components/chooser/chooser";
 
 // PreferencesState tracks settings like preferred language, cloud and operating system.
 // Values tracked in this state slice persist between pages and reloads.
@@ -9,7 +9,8 @@ export interface PreferencesState {
     cloud: CloudKey;
     persona: PersonaKey;
     backend: BackEndKey;
-    pythontoolchain: PythonToolchainKey
+    pythontoolchain: PythonToolchainKey;
+    tfTool: TfToolKey;
 }
 
 export interface Banner {

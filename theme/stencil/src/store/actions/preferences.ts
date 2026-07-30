@@ -1,5 +1,5 @@
 import { TypeKeys } from "./index";
-import { LanguageKey, K8sLanguageKey, OSKey, CloudKey, PersonaKey, BackEndKey, PythonToolchainKey } from "../../components/chooser/chooser";
+import { LanguageKey, K8sLanguageKey, OSKey, CloudKey, PersonaKey, BackEndKey, PythonToolchainKey, TfToolKey } from "../../components/chooser/chooser";
 
 export interface SetLanguage {
     type: TypeKeys.SET_LANGUAGE;
@@ -34,6 +34,11 @@ export interface SetBackEnd {
 export interface SetPythonToolchain {
     type: TypeKeys.SET_PYTHONTOOLCHAIN;
     key: PythonToolchainKey;
+}
+
+export interface SetTfTool {
+    type: TypeKeys.SET_TFTOOL;
+    key: TfToolKey;
 }
 
 const dispatchAction = <T>(action: T) => (dispatch, _getState) => dispatch(action);
@@ -78,4 +83,10 @@ export const setBackEnd = (key: BackEndKey) => dispatchAction<SetBackEnd>({
 export const setPythonToolchain = (key: PythonToolchainKey) => dispatchAction<SetPythonToolchain>({
     key,
     type: TypeKeys.SET_PYTHONTOOLCHAIN,
+});
+
+// Set the currently selected Terraform-compatible CLI.
+export const setTfTool = (key: TfToolKey) => dispatchAction<SetTfTool>({
+    key,
+    type: TypeKeys.SET_TFTOOL,
 });

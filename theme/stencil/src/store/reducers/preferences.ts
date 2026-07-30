@@ -12,6 +12,7 @@ const getInitialState = (): PreferencesState => {
         cloud: "aws",
         backend: "service",
         pythontoolchain: "pip",
+        tfTool: "terraform",
     };
 };
 
@@ -48,6 +49,8 @@ export const preferences = (currentState = getInitialState(), action: Preference
             return { ...currentState, backend: action.key };
         case TypeKeys.SET_PYTHONTOOLCHAIN:
             return { ...currentState, pythontoolchain: action.key };
+        case TypeKeys.SET_TFTOOL:
+            return { ...currentState, tfTool: action.key };
         default:
             return currentState;
     }
