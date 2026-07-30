@@ -906,6 +906,22 @@ const parseChooserRegistry = (function () {
             }
         });
 
+        // Fail loudly here for the same reason the union parse does above: an
+        // unresolved type leaves the option-key check with nothing to compare
+        // against, so it quietly passes everything. A regex that stops matching
+        // (a reformat moving the closing `];`, a renamed supported* list, a
+        // restructured mapOptions switch) would otherwise disable half the guard.
+        types.forEach(function (type) {
+            if (!optionsByType[type]) {
+                const listName = typeToList[type];
+                const where = listName ? `(list: ${listName})` : "(no matching case in mapOptions)";
+                throw new Error(
+                    `Could not parse option keys for chooser type '${type}' ${where} from ${CHOOSER_COMPONENT_PATH}. ` +
+                        `If the component was refactored, update parseChooserRegistry in this file to match.`,
+                );
+            }
+        });
+
         cached = { types, optionsByType };
         return cached;
     };
