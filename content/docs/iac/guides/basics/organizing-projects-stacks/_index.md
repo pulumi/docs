@@ -342,8 +342,7 @@ specific stack's output API — and the same environment can also carry secrets 
 [dynamic cloud credentials](/docs/esc/providers/login/) alongside the shared outputs.
 
 {{< notes type="info" >}}
-Pulumi ESC is available only with [Pulumi Cloud](/docs/pulumi-cloud/) (including a self-hosted Pulumi Cloud). If you use
-a different [state backend](/docs/iac/concepts/state-and-backends/), share data with
+If you use a different [state backend](/docs/iac/concepts/state-and-backends/), share data with
 [stack references](#sharing-data-with-stack-references) instead.
 {{< /notes >}}
 

@@ -20,6 +20,10 @@ There are 2 methods to use this rotator:
 - **Direct Connect rotation** - when your database is publicly accessible
 - **Connector rotation** - when your database is in a private network. This method requires you setup a [rotation connector](/docs/esc/concepts/rotators#rotation-connectors) in your network.
 
+{{< pulumi-cloud "esc-db-secrets-rotation-private" >}}
+That applies to **Connector rotation** only — **Direct Connect rotation** works on every edition.
+{{< /pulumi-cloud >}}
+
 ## Prerequisites
 
 - A running database instance in AWS
