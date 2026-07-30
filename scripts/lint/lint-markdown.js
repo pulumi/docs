@@ -51,12 +51,14 @@ const CASE_STUDY_INDUSTRIES = (function () {
  * in `make lint` (~2s, and it gates the build) instead of in a full Hugo build.
  *
  * Shape: { editions: [id], names: {id: name}, features: {id: minEdition},
- *          duplicates: [id], yamlBooleans: [{line, value, text}] }. A feature's
- * minimum edition is the first edition with a truthy cell, or its `requires:`
- * when set.
+ *          duplicates: [id], yamlBooleans: [{line, value, text}],
+ *          loadError: string|null }. A feature's minimum edition is the first
+ * edition with a truthy cell, or its `requires:` when set. `loadError` is set
+ * when the file didn't parse: the checks that read this vocabulary stand down,
+ * and the run reports the data file itself instead (see pricingDataErrors).
  */
 const PRICING = (function () {
-    const empty = { editions: [], names: {}, features: {}, duplicates: [], yamlBooleans: [] };
+    const empty = { editions: [], names: {}, features: {}, duplicates: [], yamlBooleans: [], loadError: null };
     try {
         const p = path.resolve(__dirname, "../../data/pulumi_pricing.yaml");
         const raw = fs.readFileSync(p, "utf8");
@@ -89,7 +91,12 @@ const PRICING = (function () {
                 let min = null;
                 editions.forEach(function (id, i) {
                     let v = from >= 0 && i >= from;
-                    if (f.availability && f.availability[id] !== undefined) {
+                    // A stranded key (`enterprise:` with nothing after it) parses
+                    // as null, which Hugo's `ne $o nil` treats as no override at
+                    // all. Match that, or lint and the build disagree about the
+                    // feature's minimum edition and the "fail in lint first"
+                    // contract inverts.
+                    if (f.availability && f.availability[id] !== undefined && f.availability[id] !== null) {
                         v = f.availability[id];
                     }
                     if (v && min === null) {
@@ -99,10 +106,13 @@ const PRICING = (function () {
                 features[f.id] = f.requires || min;
             }
         }
-        return { editions, names, features, duplicates, yamlBooleans };
+        return { editions, names, features, duplicates, yamlBooleans, loadError: null };
     } catch (e) {
-        console.warn(`Warning: could not load Pulumi pricing data: ${e.message}`);
-        return empty;
+        // Don't warn and carry on with empty vocabularies: that makes every
+        // marked page and changelog entry fail with "not an edition id... Use
+        // one of: " and an empty list, burying the one real problem. Report the
+        // data file itself instead, and skip the checks that read it.
+        return Object.assign({}, empty, { loadError: e.message });
     }
 })();
 
@@ -808,8 +818,9 @@ function checkChangelogFilename(date, fullPath) {
  * name, so an entry writes `business-critical` and the badge reads "Business
  * Critical". Authors list every edition the feature is available in; since a
  * lower edition implies the ones above it, that means the lowest applicable
- * edition and all editions above it. Applies only to entry pages, not the
- * section `_index.md`.
+ * edition and all editions above it — checked here as a contiguous suffix of
+ * the edition list, not just set membership. Applies only to entry pages, not
+ * the section `_index.md`.
  *
  * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
  * "tier" is not a word the product uses, and the old list carried a `Free`
@@ -826,7 +837,10 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
     const isChangelogEntry =
         normalized.includes("/content/releases/changelog/") &&
         path.basename(normalized) !== "_index.md";
-    if (!isChangelogEntry) {
+    // Without the pricing data there is no vocabulary to check against, and
+    // guessing produces "use one of: " with an empty list on every entry. The
+    // run already carries one finding about the data file (pricingDataErrors).
+    if (!isChangelogEntry || PRICING.loadError) {
         return null;
     }
 
@@ -850,6 +864,31 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
             })
             .join(", ");
         return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'business-critical', not 'Business Critical'.";
+    }
+    if (editions.length === 0) {
+        return "Changelog `editions:` is empty. List every edition the feature is available in — the lowest applicable edition and all editions above it — or drop the key.";
+    }
+    // A lower edition implies the ones above it, so a valid list is a contiguous
+    // suffix of PRICING.editions. `editions: [enterprise]` on its own lints as
+    // three valid ids but renders a badge that tells Business Critical readers
+    // the feature isn't theirs.
+    const listed = PRICING.editions.filter(function (e) {
+        return editions.includes(e);
+    });
+    const expected = PRICING.editions.slice(PRICING.editions.indexOf(listed[0]));
+    if (listed.length !== expected.length) {
+        const missing = expected.filter(function (e) {
+            return !listed.includes(e);
+        });
+        return (
+            "Changelog `editions:` lists " +
+            listed.join(", ") +
+            " but not " +
+            missing.join(", ") +
+            ". A lower edition implies the ones above it, so list the lowest applicable edition and every edition above it: " +
+            expected.join(", ") +
+            "."
+        );
     }
     return null;
 }
@@ -927,7 +966,7 @@ function checkPulumiCloudFeature(feature, legacy) {
     if (legacy !== undefined) {
         return "`pulumi_cloud:` is now `pulumi_cloud_feature:`, and its value is a feature id rather than an edition (e.g. `pulumi_cloud_feature: rbac`). The edition the callout states is derived from that feature in data/pulumi_pricing.yaml.";
     }
-    if (feature === undefined) {
+    if (feature === undefined || PRICING.loadError) {
         return null;
     }
     return pulumiCloudValueError(feature, "'pulumi_cloud_feature'");
@@ -957,6 +996,9 @@ const PULUMI_CLOUD_SHORTCODE_REGEX = /\{\{[<%]\s*pulumi-cloud(\s[^}]*?)?\s*\/?\s
  * @returns {string|null} An error message, or null when valid/not applicable.
  */
 function checkPulumiCloudShortcode(content) {
+    if (PRICING.loadError) {
+        return null;
+    }
     const messages = [];
     let match;
     PULUMI_CLOUD_SHORTCODE_REGEX.lastIndex = 0;
@@ -1424,21 +1466,33 @@ if (filesFromArgs.length === 0) {
 // finding about the data file, not a finding about every page that happens to
 // reference it. Report it once per run. (Hugo raises the same error at build
 // time; this just surfaces it seconds earlier.)
-const pricingDataErrors = PRICING.duplicates
-    .map(function (id) {
-        return {
+//
+// A file that doesn't parse at all is the same kind of finding, and it comes
+// first: the marker and changelog-edition checks read this file, so they stand
+// down (returning null) until it loads. Reporting it here is what keeps a merge
+// conflict marker from blaming every page in the repo.
+const pricingDataErrors = PRICING.loadError
+    ? [
+        {
             lineNumber: "Data",
-            ruleDescription: `Duplicate feature id '${id}'. Ids are unique across every category — prefix the newer one with its product (for example 'esc-${id}').`,
-        };
-    })
-    .concat(
-        PRICING.yamlBooleans.map(function (b) {
+            ruleDescription: `Could not load data/pulumi_pricing.yaml: ${PRICING.loadError}. Every Pulumi Cloud marker and changelog \`editions:\` check reads this file, so they were skipped for this run — fix the file and lint again.`,
+        },
+    ]
+    : PRICING.duplicates
+        .map(function (id) {
             return {
-                lineNumber: b.line,
-                ruleDescription: `'${b.text}' — YAML 1.1 parses '${b.value}' as a boolean, so this cell becomes ${/^(y|yes|on)$/i.test(b.value) ? "true" : "false"} and renders as a ${/^(y|yes|on)$/i.test(b.value) ? "check mark" : "dash"}, not the word. Quote it ("${b.value}") if you meant the text, or write true/false if you meant the boolean.`,
+                lineNumber: "Data",
+                ruleDescription: `Duplicate feature id '${id}'. Ids are unique across every category — prefix the newer one with its product (for example 'esc-${id}').`,
             };
         })
-    );
+        .concat(
+            PRICING.yamlBooleans.map(function (b) {
+                return {
+                    lineNumber: b.line,
+                    ruleDescription: `'${b.text}' — YAML 1.1 parses '${b.value}' as a boolean, so this cell becomes ${/^(y|yes|on)$/i.test(b.value) ? "true" : "false"} and renders as a ${/^(y|yes|on)$/i.test(b.value) ? "check mark" : "dash"}, not the word. Quote it ("${b.value}") if you meant the text, or write true/false if you meant the boolean.`,
+                };
+            })
+        );
 if (pricingDataErrors.length > 0) {
     errors.push({ path: "data/pulumi_pricing.yaml", errors: pricingDataErrors });
 }
