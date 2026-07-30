@@ -77,6 +77,10 @@
 #                    the first edition with a truthy cell. Needed wherever the
 #                    free column is a *limited variant* of the feature rather
 #                    than the feature itself ("Manual" policy enforcement).
+#                    It only ever *raises* that edition, so it has to name one
+#                    above the first truthy cell — the build fails otherwise,
+#                    since a lower value would make every marker contradict the
+#                    row it deep-links to.
 #
 # -----------------------------------------------------------------------------
 # ADDING OR RENAMING
@@ -238,6 +242,26 @@ categories:
         name: Update history
         available_from: individual
 
+      - id: rest-api
+        name: REST API
+        link: /docs/reference/cloud-rest-api/
+        available_from: individual
+
+      - id: automation-api
+        name: Automation API
+        link: /automation/
+        available_from: individual
+
+      - id: pulumi-service-provider
+        name: Pulumi-service provider
+        link: /registry/packages/pulumiservice/
+        available_from: individual
+
+  - id: deployments
+    name: Deployments & Workflows
+    group: product
+    icon: phosphor/git-pull-request
+    features:
       - id: cicd-integrations
         name: CI/CD integrations
         link: /docs/iac/operations/continuous-delivery/
@@ -272,8 +296,8 @@ categories:
 
       - id: customer-managed-runners
         name: Customer-managed deployment runners
+        link: /docs/deployments/concepts/customer-managed-runners/
         available_from: business-critical
-        hidden: true
 
       - id: gated-deployments
         name: Gated deployments
@@ -284,123 +308,6 @@ categories:
         name: Webhooks
         link: /docs/deployments/concepts/webhooks/
         available_from: team
-
-      - id: rest-api
-        name: REST API
-        link: /docs/reference/cloud-rest-api/
-        available_from: individual
-
-      - id: automation-api
-        name: Automation API
-        link: /automation/
-        available_from: individual
-
-      - id: pulumi-service-provider
-        name: Pulumi-service provider
-        link: /registry/packages/pulumiservice/
-        available_from: individual
-
-      - id: members
-        name: Members
-        availability:
-          individual: 1
-          team: Up to 10
-          enterprise: Unlimited
-          business-critical: Unlimited
-
-      - id: admins
-        name: Admins
-        availability:
-          team: 1
-          enterprise: Unlimited
-          business-critical: Unlimited
-
-      - id: organizations
-        name: Organizations
-        link: /docs/administration/organizations-teams/organizations/
-        availability:
-          team: 1
-          enterprise: Multiple supported
-          business-critical: Multiple supported
-
-      - id: identity-providers
-        name: Identity providers
-        link: /docs/administration/organizations-teams/accounts/
-        availability:
-          individual: GitHub, GitLab, Atlassian
-          team: GitHub, GitLab, Atlassian
-          enterprise: GitHub, GitLab, Atlassian, SAML/SSO
-          business-critical: GitHub, GitLab, Atlassian, SAML/SSO
-
-      - id: saml-sso
-        name: SAML/SSO
-        link: /docs/administration/access-identity/saml/
-        available_from: enterprise
-        availability:
-          enterprise:
-            content: Many
-            tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
-          business-critical:
-            content: Many
-            tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
-
-      - id: scim
-        name: SCIM integration
-        link: /docs/administration/access-identity/scim/
-        available_from: business-critical
-
-      - id: oidc
-        name: OIDC support
-        link: /docs/deployments/guides/oidc/
-        available_from: individual
-
-      - id: teams
-        name: Create and manage teams
-        link: /docs/administration/access-identity/rbac/teams/
-        available_from: enterprise
-
-      - id: rbac
-        name: Role-based access control (RBAC)
-        link: /docs/administration/organizations-teams/organizations/#organization-roles
-        available_from: enterprise
-
-      - id: custom-roles
-        name: Custom roles
-        link: /docs/administration/access-identity/rbac/roles
-        available_from: enterprise
-        availability:
-          enterprise: Up to 25
-          business-critical: Unlimited
-
-      - id: tag-based-access-control
-        name: Tag-based access control
-        link: /blog/expanding-pulumi-iam-custom-permissions/
-        available_from: enterprise
-
-      - id: assign-custom-roles
-        name: Assign custom roles to users and teams
-        link: /blog/expanding-pulumi-iam-custom-permissions/
-        available_from: enterprise
-
-      - id: org-team-access-tokens
-        name: Organization and team access tokens
-        link: /docs/administration/access-identity/access-tokens/
-        tooltip: These are machine access tokens that are scoped to the organization or team level
-        available_from: team
-        availability:
-          team:
-            content: true
-            tooltip: Organization access token only
-
-      - id: audit-logs
-        name: Audit logs
-        link: /docs/administration/security-compliance/audit-logs/
-        available_from: enterprise
-
-      - id: audit-log-export
-        name: Automated log export to S3
-        link: /docs/administration/security-compliance/audit-logs/aws-s3/
-        available_from: business-critical
 
   - id: esc
     name: Secrets & Configuration
@@ -618,8 +525,8 @@ categories:
 
       - id: insights-self-hosted
         name: Insights on self-hosted Pulumi Cloud
+        link: /docs/insights/self-hosted/
         available_from: business-critical
-        hidden: true
 
   - id: neo
     name: Infrastructure AI
@@ -680,6 +587,113 @@ categories:
         name: Organization templates in the Private Registry
         available_from: enterprise
         hidden: true
+
+  - id: administration
+    name: Administration
+    group: capabilities
+    icon: phosphor/shield-check
+    features:
+      - id: members
+        name: Members
+        availability:
+          individual: 1
+          team: Up to 10
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: admins
+        name: Admins
+        availability:
+          team: 1
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: organizations
+        name: Organizations
+        link: /docs/administration/organizations-teams/organizations/
+        availability:
+          team: 1
+          enterprise: Multiple supported
+          business-critical: Multiple supported
+
+      - id: identity-providers
+        name: Identity providers
+        link: /docs/administration/organizations-teams/accounts/
+        availability:
+          individual: GitHub, GitLab, Atlassian
+          team: GitHub, GitLab, Atlassian
+          enterprise: GitHub, GitLab, Atlassian, SAML/SSO
+          business-critical: GitHub, GitLab, Atlassian, SAML/SSO
+
+      - id: saml-sso
+        name: SAML/SSO
+        link: /docs/administration/access-identity/saml/
+        available_from: enterprise
+        availability:
+          enterprise:
+            content: Many
+            tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+          business-critical:
+            content: Many
+            tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+
+      - id: scim
+        name: SCIM integration
+        link: /docs/administration/access-identity/scim/
+        available_from: business-critical
+
+      - id: oidc
+        name: OIDC support
+        link: /docs/deployments/guides/oidc/
+        available_from: individual
+
+      - id: teams
+        name: Create and manage teams
+        link: /docs/administration/access-identity/rbac/teams/
+        available_from: enterprise
+
+      - id: rbac
+        name: Role-based access control (RBAC)
+        link: /docs/administration/organizations-teams/organizations/#organization-roles
+        available_from: enterprise
+
+      - id: custom-roles
+        name: Custom roles
+        link: /docs/administration/access-identity/rbac/roles
+        available_from: enterprise
+        availability:
+          enterprise: Up to 25
+          business-critical: Unlimited
+
+      - id: tag-based-access-control
+        name: Tag-based access control
+        link: /blog/expanding-pulumi-iam-custom-permissions/
+        available_from: enterprise
+
+      - id: assign-custom-roles
+        name: Assign custom roles to users and teams
+        link: /blog/expanding-pulumi-iam-custom-permissions/
+        available_from: enterprise
+
+      - id: org-team-access-tokens
+        name: Organization and team access tokens
+        link: /docs/administration/access-identity/access-tokens/
+        tooltip: These are machine access tokens that are scoped to the organization or team level
+        available_from: team
+        availability:
+          team:
+            content: true
+            tooltip: Organization access token only
+
+      - id: audit-logs
+        name: Audit logs
+        link: /docs/administration/security-compliance/audit-logs/
+        available_from: enterprise
+
+      - id: audit-log-export
+        name: Automated log export to S3
+        link: /docs/administration/security-compliance/audit-logs/aws-s3/
+        available_from: business-critical
 
   - id: support
     name: Support
