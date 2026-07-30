@@ -36,7 +36,11 @@
     {{- $seg = replaceRE `(?m)^[ \t]{4,}` "" $seg -}}
     {{- /* Phase 4: Normalize blank runs so inline conversions can match cleanly */ -}}
     {{- $seg = replaceRE `\n{3,}` "\n\n" $seg -}}
-    {{- /* Phase 5: Convert inline HTML to markdown */ -}}
+    {{- /* Phase 5: Convert inline HTML to markdown. The <a><code> form must run
+           before the generic anchor rule: [^<]* can't cross the nested <code> tag,
+           so without it these links fall through to the bare-anchor strip below and
+           lose their href. */ -}}
+    {{- $seg = replaceRE `<a[^>]*href="([^"]*)"[^>]*><code[^>]*>([^<]*)</code></a>` "[`$2`]($1)" $seg -}}
     {{- $seg = replaceRE `<a[^>]*href="([^"]*)"[^>]*>([^<]*)</a>` "[$2]($1)" $seg -}}
     {{- /* Collapse whitespace inside markdown link brackets (from multi-line <a> tags) */ -}}
     {{- $seg = replaceRE `\[\s+` "[" $seg -}}

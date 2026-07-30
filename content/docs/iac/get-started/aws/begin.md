@@ -8,6 +8,7 @@ weight: 2
 menu:
     iac:
         name: Install Pulumi
+        identifier: aws-get-started.begin
         parent: aws-get-started
         weight: 2
 

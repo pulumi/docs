@@ -7,6 +7,7 @@ weight: 6
 menu:
     iac:
         name: Make an update
+        identifier: aws-get-started.modify-program
         parent: aws-get-started
         weight: 6
 

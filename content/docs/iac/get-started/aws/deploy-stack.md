@@ -7,6 +7,7 @@ weight: 5
 menu:
     iac:
         name: Deploy
+        identifier: aws-get-started.deploy-stack
         parent: aws-get-started
         weight: 5
 
