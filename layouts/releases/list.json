@@ -7,10 +7,12 @@
       { type: "release" | "changelog", title, date, url, description?,
         editions?, tiers?, body? }
     editions is the entry's `editions:` front matter: edition ids from
-    data/pulumi_pricing.yaml ("business-critical"). tiers is the same list as
-    display names ("Business Critical") -- the key this feed published before
-    the rename, kept for one release cycle so external consumers can migrate.
-    Drop `tiers` (and this note) once they have.
+    data/pulumi_pricing.yaml ("business-critical"). tiers is DEPRECATED but not
+    going away: the same list as display names ("Business Critical"), the key
+    and the vocabulary this feed published before the rename. The document is
+    public and we don't know who parses it, so both ship — read `editions` in
+    anything new. Dropping `tiers` would be a breaking change to announce, not
+    a cleanup to do quietly.
     description comes from the page's short_description (releases) or
     meta_desc (changelog items). body is the entry's rendered HTML content —
     the minimal fragment (no page chrome), with root-relative links and assets

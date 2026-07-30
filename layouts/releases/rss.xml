@@ -10,6 +10,14 @@
     layouts/blog/rss.xml) — falling back to the short summary
     (short_description for releases, meta_desc for changelog items) when a page
     has no body. Modeled on layouts/blog/rss.xml and layouts/events/rss.xml.
+
+    A changelog item's editions ride along as <category> elements: the slot
+    RSS 2.0 already defines for this, so there is no custom namespace and no
+    consumer has to be taught anything. They carry display names ("Business
+    Critical") — what a feed reader shows, and what this data was published as
+    under the old `tiers:` key, so a consumer keying off those strings is
+    unaffected by the rename. The ids stay in the JSON feed, which is the
+    machine-readable surface and emits `editions` plus the deprecated `tiers`.
 */ -}}
 <rss version="2.0">
     <channel>
@@ -23,7 +31,9 @@
                 <link>{{ .Permalink }}</link>
                 <guid>{{ .Permalink }}</guid>
                 <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-                {{ with .Content }}
+                {{ range partial "releases/edition-names.html" (dict "editions" .Params.editions "where" .RelPermalink) }}
+                <category domain="{{ absURL "/pricing/" }}">{{ . }}</category>
+                {{ end }}{{ with .Content }}
                 <description>{{ . | html }}</description>
                 {{ else }}{{ with or .Params.short_description .Params.meta_desc }}
                 <description>{{ . | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " " }}</description>
