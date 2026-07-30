@@ -57,7 +57,7 @@ unclaimed premiums and company revenue to nonprofit charities in its annual Give
 startup takes its social good seriously and is registered as both a Public Benefit
 Corporation and a Certified B-Corp.
 
-## Challenges Faced {#challenges}
+## Challenges faced {#challenges}
 
 Originally a HashiCorp Terraform customer, Lemonade's infrastructure demands changed
 rapidly --- placing the infrastructure team in the critical path for new features. Their
@@ -68,7 +68,7 @@ original infrastructure due to a lack of programming language support. Lemonade 
 struggled to create more sophisticated infrastructure-as-code deployments and needed a
 more complete solution to support both existing and new services.
 
-## Solution: Infrastructure from Repeatable Building Blocks {#solution}
+## Solution: infrastructure from repeatable building blocks {#solution}
 
 Lemonade chose Pulumi for its ability to deploy infrastructure with reusable libraries
 that could be shared between developers, using their preferred language and cloud. Pulumi
@@ -144,7 +144,7 @@ to rest easy about the efficiency and security of its infrastructure and ensure 
 automated processes are in place for disaster recovery. More than that, Pulumi gave
 Lemonade an automatic way to track changes and deploy new features and services at scale.
 
-## Next Steps {#conclusion}
+## Next steps {#conclusion}
 
 Lemonade is continuing to use Pulumi to uplevel existing infrastructure and provide new
 building blocks for its developers and service teams. Its next target is infrastructure

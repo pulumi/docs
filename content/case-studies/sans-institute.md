@@ -41,7 +41,7 @@ sections:
 
 Founded in 1989, SANS Institute is the global leader in cybersecurity training. Its mission is to empower cybersecurity professionals with the practical skills and knowledge they need to make the world a safer place. To that end, SANS offers foundational training, degree programs, GIAC (Global Information Assurance Certification) certifications, and cyber ranges—platforms that provide hands-on cybersecurity practice.
 
-## Bringing Cloud Engineering to SANS
+## Bringing cloud engineering to SANS
 
 Tyler Mulligan and Chris Klewin are Senior DevOps Engineers at SANS. With an “automate everything” attitude, they specialize in building infrastructure as code, CI/CD pipelines that use GitFlow, and pre-production environments such as developer sandboxes. Their goal is to ensure that SANS developers use consistent processes from development to production.
 
@@ -53,7 +53,7 @@ This goal would be difficult to achieve using SANS’ existing tools and practic
 
 Using the lessons learned from this application, they looked around SANS for new challenges where they and Pulumi could help.
 
-## Streamlining Cloud Application Delivery
+## Streamlining cloud application delivery
 
 Tyler and Chris began to work with the SANS Labs business unit, which is responsible for delivering in-depth labs where students can apply their training in a cyber-range environment. For example, SANS Labs’ NetWars game servers work in tandem with local virtual machines that students run to solve various security problems.
 
@@ -97,7 +97,7 @@ Because students are taught to hack systems, it’s important that they don’t 
 
 They’ve also begun developing their own SANS policy pack to verify that resources are spun up according to SANS standards, such as ensuring that Amazon S3 buckets are always encrypted and closed to public access. In addition, Tyler and Chris are currently working on improving the monitoring service. That service will monitor the resources being spun up and send some default CloudWatch alarms, metrics, dashboards and log metric filters, again using Pulumi AWSx.
 
-## The Result
+## The result
 
 Using Pulumi, Chris and Tyler greatly simplified the SANS Labs architecture and created a better user experience for SANS Labs instructors and students. Now, instructors can more easily and quickly provision virtual environments because they reduced deployment times from around 10 minutes down to 3 to 5 minutes. In the future, Chris and Tyler plan to use Pulumi and [cloud engineering best practices](/cloud-engineering/) to help other business units modernize their practices and tools, such as the GIAC certification unit.
 
