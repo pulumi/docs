@@ -219,9 +219,17 @@ jobs:
     runs-on: ubuntu-latest
     # A review that genuinely hangs (one observed stall ran ~18 min with no
     # output before being cancelled) would otherwise sit on the runner for
-    # GitHub's 6-hour default. 25 min is comfortably above the slowest real
-    # reviews (blog reviews run 9-12+ min).
-    timeout-minutes: 25
+    # GitHub's 6-hour default. The hang guard is the step-level
+    # timeout-minutes on the Opus step (18 min, comfortably above the
+    # slowest real reviews — blog reviews run 9-12+ min); this job-level
+    # value only backstops the deterministic pre/post steps. It's sized so
+    # the Opus step's budget survives pre-step variance (one observed
+    # checkout took 10 minutes on its own — PR #20560, run 30557604289;
+    # under the old job-level-only 25-min timeout that run gave Opus just
+    # 12 minutes before the axe fell, and the axe landed on the whole job,
+    # skipping every finalize step gated on step outcomes). Keep the two
+    # values in sync with the *_BUDGET_S env of the classify-outcome step.
+    timeout-minutes: 40
     # No `environment: production` — this job never pushes commits
     # (allowed_tools below excludes git push / commit / add and gh pr
     # edit), so it doesn't need a PULUMI_BOT_TOKEN-authenticated
@@ -244,6 +252,14 @@ jobs:
       checks: write
 
     steps:
+      # Wall-clock anchor for the classify-outcome step at job end: a job
+      # cancelled ~timeout-minutes after this instant was killed by its own
+      # timeout, not superseded by a newer run. Must be the first step —
+      # checkout time (observed up to 10 min) counts against the job budget.
+      - name: Record job start
+        id: job-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       # Check out the PR head, not the base. workflow_run carries the
       # originating commit on the event payload; workflow_dispatch
       # doesn't, so claude-new.yml passes it through as an input.
@@ -933,9 +949,28 @@ jobs:
             '_(composer stub — see ci.md §Fallback)_' \
             > .review-draft.md
 
+      # Wall-clock anchor for distinguishing "the Opus step burned its whole
+      # budget" (deterministic timeout — retrying the same PR fails the same
+      # way) from "the Opus step died early" (transient error — retry advice
+      # is legitimate) in the classify-outcome step below.
+      - name: Record review start
+        if: steps.check-access.outputs.has_write_access == 'true'
+        id: review-start
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
+        # Step-level timeout so a review that can't finish fails THIS step
+        # (outcome=failure) instead of tripping the job-level timeout, which
+        # cancels the whole job and takes the finalize/labeling steps down
+        # with it. Observed on PR #20560 (155 files): two consecutive runs
+        # hit the old job-level 25-min timeout mid-Opus; the cancellation
+        # deleted the progress comment without a trace and the author was
+        # left with a bare review:error label and retry advice that
+        # deterministically re-failed. Keep in sync with STEP_BUDGET_S in
+        # the classify-outcome step.
+        timeout-minutes: 18
         uses: anthropics/claude-code-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -1026,6 +1061,52 @@ jobs:
 
             Post-run review-state labels (`review:outstanding-issues` / `review:no-blockers` / `review:stale` / `review:error`) are applied by separate workflow steps based on the published body's 🚨 Outstanding count. Do not apply them yourself.
           claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
+
+      # The Opus step can end short of success three different ways, and the
+      # right user-facing behavior differs for each:
+      #   timed_out=true  — the step (or the whole job) burned its full
+      #                     timeout budget. Deterministic for a given PR
+      #                     size: a bare retry hits the same wall, so the
+      #                     messaging must say "shrink the PR or get a human
+      #                     review", never "retry".
+      #   superseded=true — outcome=cancelled with the job nowhere near its
+      #                     own timeout: concurrency cancel-in-progress
+      #                     killed this run because a newer one started. The
+      #                     newer run owns all user-visible state; this run
+      #                     must not touch labels (a superseded run's error
+      #                     trap setting review:error races the newer run's
+      #                     label read and makes it skip as already-reviewed).
+      #   neither         — a genuine mid-flight failure (API error etc.).
+      #                     Transient; the existing retry advice is correct.
+      # Budgets are (timeout-minutes - 1) * 60, the slack covering runner
+      # clock skew between step scheduling and process start. Keep in sync
+      # with the job-level timeout-minutes and the Opus step's.
+      - name: Classify review outcome
+        if: always() && steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == ''
+        id: outcome
+        env:
+          STEP_BUDGET_S: 1020 # Opus step timeout-minutes 18, minus 1 min slack
+          JOB_BUDGET_S: 2340 # job timeout-minutes 40, minus 1 min slack
+        run: |
+          NOW=$(date +%s)
+          OUTCOME="${{ steps.claude-review.outcome }}"
+          REVIEW_START="${{ steps.review-start.outputs.epoch }}"
+          JOB_START="${{ steps.job-start.outputs.epoch }}"
+          TIMED_OUT=false
+          SUPERSEDED=false
+          if [ "$OUTCOME" = "failure" ] && [ -n "$REVIEW_START" ] \
+             && [ $(( NOW - REVIEW_START )) -ge "$STEP_BUDGET_S" ]; then
+            TIMED_OUT=true
+          elif [ "$OUTCOME" = "cancelled" ]; then
+            if [ -n "$JOB_START" ] && [ $(( NOW - JOB_START )) -ge "$JOB_BUDGET_S" ]; then
+              TIMED_OUT=true
+            else
+              SUPERSEDED=true
+            fi
+          fi
+          echo "timed_out=$TIMED_OUT" >> "$GITHUB_OUTPUT"
+          echo "superseded=$SUPERSEDED" >> "$GITHUB_OUTPUT"
+          echo "review outcome: $OUTCOME (timed_out=$TIMED_OUT superseded=$SUPERSEDED)"
 
       # ---- post-edit validate / splice / re-validate / upsert chain ----
       # The editorial pass step (above) exits after editing .review-draft.md.
@@ -1166,8 +1247,13 @@ jobs:
       # PR head, which (for fixture branches and most synchronize events)
       # doesn't carry the parser script path. Keeping the parser as an
       # operator-side ad-hoc tool sidesteps that working-tree dependency.
+      # Gate on "the Opus step at least started" rather than succeeded: the
+      # execution log and the partially-edited draft are exactly the
+      # artifacts a timeout/failure post-mortem needs, and they were being
+      # discarded on the runs that most needed them. if-no-files-found:
+      # ignore keeps the step harmless when the action died before writing.
       - name: Upload Claude execution log
-        if: always() && steps.claude-review.outcome == 'success'
+        if: always() && steps.review-start.outputs.epoch != ''
         uses: actions/upload-artifact@v7
         with:
           name: claude-execution-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
@@ -1180,7 +1266,7 @@ jobs:
       # post-mortem on splicer behavior / validator pairing doesn't require
       # reproducing the run.
       - name: Upload post-edit chain debug artifacts
-        if: always() && steps.claude-review.outcome == 'success'
+        if: always() && steps.review-start.outputs.epoch != ''
         uses: actions/upload-artifact@v7
         with:
           name: post-edit-debug-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
@@ -1199,10 +1285,16 @@ jobs:
       # - success: delete the spinner. The pinned review is the durable
       #   artifact; "Review updated." would read strangely as the bot's
       #   first comment on a fresh PR.
-      # - cancelled / skipped: delete the orphan spinner. A cancellation
-      #   means a newer run preempted this one (concurrency cancel-in-
-      #   progress); the new run owns the user-visible state and this
-      #   one's progress comment is just noise.
+      # - superseded / skipped: delete the orphan spinner. A superseding
+      #   run owns the user-visible state and this one's progress comment
+      #   is just noise.
+      # - timed out (step or job): edit to a "Review timed out" message
+      #   that says the PR exceeds the automated budget and that a bare
+      #   retry will hit the same wall — the one case where the generic
+      #   retry advice below is actively wrong. Before outcome
+      #   classification existed, a job-level timeout took the cancelled
+      #   branch here and silently DELETED the spinner: the author's only
+      #   signal was a bare review:error label (observed on PR #20560).
       # - any other (failure, etc.): edit to "Review errored." The
       #   message stays unattributed; the synchronize path has no
       #   requester, and on the dispatch path the requester's mention
@@ -1236,12 +1328,20 @@ jobs:
             gh api -X DELETE "repos/$REPO/issues/comments/$DISPATCHER_COMMENT_ID" >/dev/null 2>&1 || true
           fi
 
-          if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "cancelled" ] || [ "$OUTCOME" = "skipped" ]; then
+          TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
+          SUPERSEDED="${{ steps.outcome.outputs.superseded }}"
+
+          if [ "$OUTCOME" = "success" ] || [ "$OUTCOME" = "skipped" ] || [ "$SUPERSEDED" = "true" ]; then
             gh api -X DELETE "repos/$REPO/issues/comments/$COMMENT_ID" >/dev/null 2>&1 || true
             if [ "$OUTCOME" = "success" ] && [ -n "$MENTION_AUTHOR" ]; then
               BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' "🤖 Review regenerated on @${MENTION_AUTHOR}'s request.")
               gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
             fi
+          elif [ "$TIMED_OUT" = "true" ]; then
+            BODY='<!-- CLAUDE_PROGRESS -->
+          🤖 Review timed out — this PR is larger than the automated review can finish inside its time budget, so no review was posted. Retrying without shrinking the PR will almost certainly time out again. Options: split the PR into smaller pieces, or ask a maintainer to review it by hand (adding the `review:oversized` label stops the pipeline from re-attempting it).'
+            gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
+              -f body="$BODY" >/dev/null || true
           else
             BODY='<!-- CLAUDE_PROGRESS -->
           🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
@@ -1300,6 +1400,15 @@ jobs:
           set +e
           PR="${{ steps.pr-context.outputs.pr_number }}"
           REPO="${{ github.repository }}"
+          # A superseded run must not touch labels: the newer run that
+          # cancelled this one reads the PR's labels in its pr-context step,
+          # and review:error set here makes it skip as "already-reviewed" —
+          # the error label then blocks the very run that was supposed to
+          # replace this one.
+          if [ "${{ steps.outcome.outputs.superseded }}" = "true" ]; then
+            echo "review-state error trap: superseded by a newer run, which owns the label state"
+            exit 0
+          fi
           # Check whether a pinned <!-- CLAUDE_REVIEW --> comment exists.
           # If it does, the success-path step above already set the label;
           # don't overwrite to error.
@@ -1308,6 +1417,9 @@ jobs:
           if [ "${PUBLISHED:-0}" -gt 0 ]; then
             echo "review-state error trap: pinned review present; success-path already labeled"
             exit 0
+          fi
+          if [ "${{ steps.outcome.outputs.timed_out }}" = "true" ]; then
+            echo "review-state error trap: review timed out (PR over the automated budget)"
           fi
           .claude/commands/docs-review/scripts/set-review-label.sh \
             --pr "$PR" --repo "$REPO" --label review:error
@@ -1326,12 +1438,16 @@ jobs:
           REPO="${{ github.repository }}"
           OUTCOME="${{ steps.claude-review.outcome }}"
           SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
+          TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
           if [ "$OUTCOME" = "success" ]; then
             CONCLUSION="success"
             SUMMARY="Pinned review updated. See the PR's pinned comment for findings."
           elif [ -n "$SKIP_REASON" ]; then
             CONCLUSION="skipped"
             SUMMARY="Review skipped: $SKIP_REASON"
+          elif [ "$TIMED_OUT" = "true" ]; then
+            CONCLUSION="failure"
+            SUMMARY="Review timed out — this PR exceeds the automated review budget. Split it or request a manual review; a bare retry will time out again."
           elif [ "$OUTCOME" = "cancelled" ]; then
             CONCLUSION="neutral"
             SUMMARY="Cancelled — superseded by a newer run."
