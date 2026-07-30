@@ -136,7 +136,7 @@ def fetch_pr_patch(pr: str) -> str:
 
 
 def added_lines_in_content(patch: str) -> list[str]:
-    """Return `+`-prefixed body lines from content/(docs|blog|what-is|tutorials)/**/*.md only.
+    """Return `+`-prefixed body lines from content/(docs|blog|learn|tutorials)/**/*.md only.
 
     Skips file headers, hunk markers, and removed/context lines. The PR can
     add URLs in any file but we only care about prose files -- code-fence
@@ -149,7 +149,7 @@ def added_lines_in_content(patch: str) -> list[str]:
         m = DIFF_FILE_RE.match(raw)
         if m:
             current_file = m.group(1)
-            in_content = bool(re.match(r"^content/(docs|blog|what-is|tutorials)/.*\.md$", current_file))
+            in_content = bool(re.match(r"^content/(docs|blog|learn|tutorials)/.*\.md$", current_file))
             continue
         if not in_content or current_file is None:
             continue
