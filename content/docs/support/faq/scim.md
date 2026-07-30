@@ -45,6 +45,10 @@ Suggested Resolution: There are three possible solutions. The user can either:
 1. Change the email associated with their existing Pulumi account
 1. Connect their SAML credentials to their existing Pulumi account by navigating to Account Settings > Connect SAML SSO.
 
+{{% notes type="info" %}}
+If the existing account is already managed by SAML SSO in another Pulumi organization, use option 3. Signing in to the new organization directly returns an "Email already in use" screen, and an SSO-managed account cannot clear that screen on its own. Connect the new organization's SAML SSO identity from your account settings instead. See [Connect SAML SSO to an existing account](/docs/administration/access-identity/saml/#connect-saml-sso-to-an-existing-account).
+{{% /notes %}}
+
 #### UserName already exists
 
 ```json

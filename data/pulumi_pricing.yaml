@@ -35,7 +35,10 @@
 #                expansion in availability markers. The product never says
 #                "and above" — it enumerates — so that sentence is generated
 #                from this one list rather than written by hand on each page.
-#   groups[]     order of the coarse bands on /pricing/.
+#   groups[]     order of the coarse bands on /pricing/. There is one band
+#                today — the tables are a flat list of product areas, mirroring
+#                the sections of /docs/ — but the level stays so splitting them
+#                again is an edit here rather than a template change.
 #   categories[] order of the product tables within a band.
 #   features[]   row order within a table.
 #
@@ -187,8 +190,6 @@ editions:
 groups:
   - id: product
     name: Product
-  - id: capabilities
-    name: Key Capabilities
 
 categories:
   - id: iac
@@ -311,7 +312,7 @@ categories:
 
   - id: esc
     name: Secrets & Configuration
-    group: capabilities
+    group: product
     icon: custom/pulumi-secrets
     features:
       - id: esc-on-demand-price
@@ -425,7 +426,7 @@ categories:
 
   - id: insights
     name: Insights & Governance
-    group: capabilities
+    group: product
     icon: custom/pulumi-insights
     features:
       - id: insights-on-demand-price
@@ -528,9 +529,27 @@ categories:
         link: /docs/insights/self-hosted/
         available_from: business-critical
 
+  - id: idp
+    name: Internal Developer Platform
+    group: product
+    icon: custom/pulumi-idp
+    features:
+      - id: developer-portal
+        name: Developer portal
+        availability:
+          individual: Host public templates
+          team: Host public templates
+          enterprise: Host private templates
+          business-critical: Host private templates
+
+      - id: organization-templates
+        name: Organization templates in the Private Registry
+        available_from: enterprise
+        hidden: true
+
   - id: neo
     name: Infrastructure AI
-    group: capabilities
+    group: product
     icon: custom/pulumi-neo
     icon_weight: fill
     features:
@@ -570,27 +589,9 @@ categories:
         link: /docs/ai/neo/automations/
         available_from: enterprise
 
-  - id: idp
-    name: Internal Developer Platform
-    group: capabilities
-    icon: custom/pulumi-idp
-    features:
-      - id: developer-portal
-        name: Developer portal
-        availability:
-          individual: Host public templates
-          team: Host public templates
-          enterprise: Host private templates
-          business-critical: Host private templates
-
-      - id: organization-templates
-        name: Organization templates in the Private Registry
-        available_from: enterprise
-        hidden: true
-
   - id: administration
     name: Administration
-    group: capabilities
+    group: product
     icon: phosphor/shield-check
     features:
       - id: members
@@ -697,7 +698,7 @@ categories:
 
   - id: support
     name: Support
-    group: capabilities
+    group: product
     icon: phosphor/lifebuoy
     features:
       - id: support

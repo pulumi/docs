@@ -22,13 +22,18 @@ All resource input and output values are recorded as stack [_state_](/docs/conce
 
 Pulumi Cloud transmits and stores entire state files securely, but Pulumi also supports encrypting individual values as _secrets_ for additional protection. Encryption ensures that these values never appear as plain text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
-{{< pulumi-cloud >}}
-Secrets encrypted this way belong to a single stack. If you need the same secret in more than one stack, or it already lives in an external store like AWS Secrets Manager or HashiCorp Vault, [Pulumi ESC](/docs/esc/) can manage it in one place instead. See [managing secrets with ESC environments](#managing-secrets-with-pulumi-esc-environments) for examples.
-{{< /pulumi-cloud >}}
-
 {{% notes %}}
 The Pulumi CLI **never** transmits your cloud credentials to Pulumi Cloud.
 {{% /notes %}}
+
+{{< cloud-feature-callout product="esc" title="Manage secrets once, share them across every stack" href="/docs/esc/" >}}
+The secrets on this page live inside a single stack's encrypted state. If the same
+database password or API token needs to reach multiple stacks, projects, or teams,
+[Pulumi ESC](/docs/esc/) centralizes it in one environment with access control and an
+audit trail, instead of copying it into each stack's config. See
+[managing secrets with Pulumi ESC environments](#managing-secrets-with-pulumi-esc-environments)
+below for how the two work together.
+{{< /cloud-feature-callout >}}
 
 ## Creating secrets programmatically
 

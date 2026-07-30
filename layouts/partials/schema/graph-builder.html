@@ -98,8 +98,66 @@
   {{ end }}
 {{ end }}
 
+{{/* Blog posts can additionally opt in to HowTo schema via `howto_schema: true` in
+     frontmatter, alongside their normal BlogPosting main entity. Unlike
+     `schema_type: howto` (which fully replaces the main entity — see
+     main-entity.html — and is meant for dedicated /tutorials-type pages), this
+     flag is additive: it keeps the post's BlogPosting entity (author, date,
+     publisher) intact while also emitting a HowTo entity built from the post's
+     own numbered walkthrough steps, so a how-to-style blog post can carry both.
+     Guarded on `schema_type` not already being "howto" so the two mechanisms
+     never both try to emit a HowTo entity for the same page. */}}
+{{ $howToPage := dict }}
+{{ if and .IsPage (eq .Type "blog") .Params.howto_schema (ne .Params.schema_type "howto") }}
+  {{ $howToPage = partial "schema/collectors/howto-entity.html" . }}
+  {{ if and $howToPage (ne $howToPage (dict)) }}
+    {{ $howToPage = merge $howToPage (dict "@id" "#howto") }}
+    {{ $graph = $graph | append $howToPage }}
+  {{ end }}
+{{ end }}
+
+{{/* Wire technology/competitor entities (Terraform, Kubernetes, TypeScript, etc.)
+     into WebPage.mentions for entity disambiguation. technology-entities.html
+     already matches page content against a curated list of Wikipedia/Wikidata
+     "sameAs" entities but was never called from graph-builder.html or any
+     collector, so it has been dead code since it was written; every comparison
+     and docs page describing Terraform, Kubernetes, or another named technology
+     rendered no entity markup for the technologies being discussed at all. This
+     is the natural complement to the Organization sameAs fix above: that fix
+     disambiguates who Pulumi is on every page; this disambiguates what the page
+     is about, which is exactly the "Pulumi -> IaC platform -> competes with
+     Terraform, CDK" entity graph the SEO/GEO strategy calls for. */}}
+{{ if not .IsHome }}
+  {{ $techEntities := partial "schema/utils/technology-entities.html" . }}
+  {{ if and $techEntities (gt (len $techEntities) 0) }}
+    {{ $webpage = merge $webpage (dict "mentions" $techEntities) }}
+  {{ end }}
+{{ end }}
+
 {{/* Add WebPage to graph */}}
 {{ $graph = $graph | append $webpage }}
+
+{{/* Shared identity fields for the Organization entity, defined once and reused
+     by both the homepage's full Organization node and every non-home page's
+     minimal node below, so the two never drift out of sync. sameAs links the
+     entity to Wikipedia, Wikidata, GitHub, LinkedIn, and Crunchbase — the
+     disambiguation signals AI systems and Google use to correctly identify
+     Pulumi as a company. Previously these fields existed only on the
+     homepage, so ~2,900 other indexed URLs (including the comparison pages
+     that drive the largest share of Pulumi's AI citations) emitted an
+     Organization node with no sameAs and no description at all. */}}
+{{ $orgDescription := "Pulumi enables cloud infrastructure teams to define, deploy, and manage cloud resources using familiar programming languages." }}
+{{ $orgFoundingDate := "2017" }}
+{{ $orgSameAs := slice
+  "https://github.com/pulumi"
+  "https://twitter.com/PulumiCorp"
+  "https://x.com/PulumiCorp"
+  "https://www.linkedin.com/company/pulumi"
+  "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"
+  "https://www.wikidata.org/wiki/Q122864080"
+  "https://en.wikipedia.org/wiki/Pulumi"
+  "https://www.crunchbase.com/organization/pulumi-corporation"
+}}
 
 {{/* For homepage, add Organization, Website and SoftwareApplication schemas */}}
 {{ if .IsHome }}
@@ -117,8 +175,8 @@
       "width" 600
       "height" 60
     )
-    "description" "Pulumi enables cloud infrastructure teams to define, deploy, and manage cloud resources using familiar programming languages."
-    "foundingDate" "2017"
+    "description" $orgDescription
+    "foundingDate" $orgFoundingDate
     "founders" (slice
       (dict "@type" "Person" "name" "Joe Duffy")
       (dict "@type" "Person" "name" "Eric Rudder")
@@ -147,16 +205,7 @@
       "minValue" 100
       "maxValue" 200
     )
-    "sameAs" (slice
-      "https://github.com/pulumi"
-      "https://twitter.com/PulumiCorp"
-      "https://x.com/PulumiCorp"
-      "https://www.linkedin.com/company/pulumi"
-      "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"
-      "https://www.wikidata.org/wiki/Q122864080"
-      "https://en.wikipedia.org/wiki/Pulumi"
-      "https://www.crunchbase.com/organization/pulumi-corporation"
-    )
+    "sameAs" $orgSameAs
     "knowsAbout" (slice
       "Infrastructure as Code"
       "Cloud Computing"
@@ -242,19 +291,26 @@
   }}
   {{ $graph = $graph | append $software }}
 {{ else }}
-  {{/* Add a minimal, resolvable Organization node on every non-home page.
-       article-entity.html (and other collectors) emit publisher/author/citation
-       fields as a bare {"@id": "https://www.pulumi.com/#organization"} reference,
-       which only resolves to concrete data (name, logo) if the *same page's*
-       @graph also defines that @id. Google's structured-data parsers evaluate
-       each URL's JSON-LD independently and do not dereference @id links across
+  {{/* Add a resolvable Organization node, with identity-defining fields, on
+       every non-home page. article-entity.html (and other collectors) emit
+       publisher/author/citation fields as a bare
+       {"@id": "https://www.pulumi.com/#organization"} reference, which only
+       resolves to concrete data if the *same page's* @graph also defines that
+       @id. Google's structured-data parsers and AI crawlers evaluate each
+       URL's JSON-LD independently and do not dereference @id links across
        pages, so without this, publisher.name (required by schema.org/Article)
-       and publisher.logo (recommended for rich results) are undefined on every
-       blog post and docs page. Kept intentionally minimal (name/url/logo only,
-       vs. the full corporate entity above) to avoid duplicating detailed
-       metadata like founders/address/sameAs across thousands of pages; values
-       are copied verbatim from the homepage's Organization node above so the
-       entity stays consistent site-wide. */}}
+       and publisher.logo (recommended for rich results) were undefined on
+       every blog post and docs page. This node additionally carries sameAs,
+       description, and foundingDate so AI systems can disambiguate "Pulumi"
+       against unrelated entities of the same name on every indexed URL, not
+       just the homepage — this matters most on the comparison pages
+       (/docs/iac/comparisons/*, /blog/infrastructure-as-code-tools/) that
+       drive the largest share of Pulumi's AI-generated citations. Kept
+       lighter than the full corporate entity above (no founders/address/
+       contactPoint/numberOfEmployees/award, which are not needed for entity
+       identification and would bloat every page); the fields that ARE shared
+       (description, foundingDate, sameAs) are pulled from the same variables
+       the homepage uses, above, so the two nodes cannot drift out of sync. */}}
   {{ $orgMinimal := dict
     "@type" (slice "Organization" "Corporation")
     "@id" "https://www.pulumi.com/#organization"
@@ -267,6 +323,9 @@
       "width" 600
       "height" 60
     )
+    "description" $orgDescription
+    "foundingDate" $orgFoundingDate
+    "sameAs" $orgSameAs
   }}
   {{ $graph = $graph | append $orgMinimal }}
 {{ end }}

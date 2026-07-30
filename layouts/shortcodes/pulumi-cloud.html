@@ -22,12 +22,15 @@
   Note the self-closing `/>}}` — Hugo requires it because this template reads
   `.Inner`, which powers the third form:
 
-      {{< pulumi-cloud >}}
-      Prose pointing the reader at a Cloud alternative.
+      {{< pulumi-cloud "esc-db-secrets-rotation-private" >}}
+      Which of the methods above the edition sentence applies to.
       {{< /pulumi-cloud >}}
 
-  That renders prose in the same violet box, for orientation rather than a
-  statement of availability. Pass a feature and inner content to get both.
+  That renders the availability sentence and then the prose, in one violet box,
+  for a marker that needs a qualifier. Inner content with no feature renders the
+  prose alone, without an availability sentence — but for "here is the Cloud
+  product that solves this problem", reach for `cloud-feature-callout` instead,
+  which is designed for that job and carries a CTA.
 
   Whole Cloud pages use the `pulumi_cloud_feature:` frontmatter key instead. Markers are
   set per page — there is no inheritance.
