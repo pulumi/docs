@@ -27,10 +27,15 @@
       {{< /pulumi-cloud >}}
 
   That renders the availability sentence and then the prose, in one violet box,
-  for a marker that needs a qualifier. Inner content with no feature renders the
-  prose alone, without an availability sentence — but for "here is the Cloud
-  product that solves this problem", reach for `cloud-feature-callout` instead,
-  which is designed for that job and carries a CTA.
+  for a marker that needs a qualifier.
+
+  Inner content with no feature renders the prose alone, no availability
+  sentence — which is the form for a cross-product pointer: "the page teaches
+  the open-source way, and there is a Pulumi Cloud product that solves the same
+  problem" (pulumi/docs#20529). Lead with a bold benefit line and link the
+  product inline; the violet box already says Pulumi Cloud, so the prose
+  shouldn't. This is the one Cloud callout on the site — don't add a parallel
+  shortcode for the promotional variant.
 
   Whole Cloud pages use the `pulumi_cloud_feature:` frontmatter key instead. Markers are
   set per page — there is no inheritance.
