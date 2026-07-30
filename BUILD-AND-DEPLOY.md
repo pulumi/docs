@@ -860,13 +860,13 @@ Hugo generates:
 - Sitemap.xml
 - robots.txt
 - Meta-refresh redirect pages (from aliases)
-- Markdown output (`.md`) for `/docs/` pages, the homepage, `/what-is/`, `/product/`, and `/pricing/` (for content negotiation)
+- Markdown output (`.md`) for `/docs/` pages, the homepage, `/learn/` (including pinned `/what-is/` article URLs), `/product/`, and `/pricing/` (for content negotiation)
 - LLM sitemap JSON (`llmsitemap`) — hierarchical JSON index of docs navigation, served at `/docs/llm-sitemap.json`
 - LLM index (`llms`) — curated text overview at `/llms.txt` for AI agents
 
 **Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by an 8-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
 
-The same negotiation covers the marketing front door: the homepage, `/what-is/`, `/product/`, and `/pricing/` emit `index.md` artifacts (enabled via `outputs`/`cascade` front matter), served by a second viewer-request CloudFront Function on the default cache behavior (`marketing-markdown-negotiation` in `infrastructure/cloudfrontFunctions.ts`). That function rewrites only an allowlist of prefixes — a rewrite on a path with no `.md` artifact would 404, so extending coverage to a new section means BOTH enabling the `markdown` output for that section AND adding its prefix to the function. Template-driven pages (frontmatter `sections:` arrays) render markdown via `layouts/partials/markdown/sections.md`, a type-agnostic walker over the sections' textual fields.
+The same negotiation covers the marketing front door: the homepage, `/learn/` (including pinned `/what-is/` article URLs), `/product/`, and `/pricing/` emit `index.md` artifacts (enabled via `outputs`/`cascade` front matter), served by a second viewer-request CloudFront Function on the default cache behavior (`marketing-markdown-negotiation` in `infrastructure/cloudfrontFunctions.ts`). That function rewrites only an allowlist of prefixes — a rewrite on a path with no `.md` artifact would 404, so extending coverage to a new section means BOTH enabling the `markdown` output for that section AND adding its prefix to the function. Template-driven pages (frontmatter `sections:` arrays) render markdown via `layouts/partials/markdown/sections.md`, a type-agnostic walker over the sections' textual fields.
 
 **Layout files:**
 
