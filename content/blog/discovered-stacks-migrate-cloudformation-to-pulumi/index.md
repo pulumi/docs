@@ -58,7 +58,7 @@ We'll use [Pulumi Neo](/docs/ai/) to do the heavy lifting, but nothing here depe
 
 Discovered Stacks builds on [Discovery](/docs/insights/discovery/), so the only prerequisite is a scanned [cloud account](/docs/insights/discovery/accounts/) — the AWS account holding your CloudFormation stacks.
 
-Once a scan has run, open the **Stacks** page and turn on **Show Discovered Stacks**. Your CloudFormation stacks appear alongside your Pulumi stacks. The project name comes from the CloudFormation stack (`payments-api`), and the stack name encodes the account and region it was found in, so the same template deployed to two regions shows up as two distinct discovered stacks.
+Once a scan has run, open the **Stacks** page and turn on **Show Discovered Stacks**. Your CloudFormation stacks appear alongside your Pulumi stacks. The project name comes from the CloudFormation stack (`payments-api`), and the stack name encodes the account and region it came from, so the same template deployed to two regions shows up as two distinct discovered stacks.
 
 ## Step 2: Plan the migration at a glance
 
@@ -87,7 +87,7 @@ Because `pulumi import` writes state as it runs, the console updates live: statu
 
 ## Step 4: Resolve the stragglers
 
-That leaves seven rows that need review — Neo handles that automatically, leaving an annotation on each that records the decision it made:
+That leaves seven rows that need review. In this case, Neo handled them automatically, leaving an annotation on each that records the decision it made:
 
 - **The 2 Not found rows** are CloudWatch log groups. Discovery couldn't confirm their state, but they're live, so the import succeeded and the resources were resolved without further inspection.
 - **Three No exact match rows** are inline IAM policies, which our Pulumi AWS Provider imported as part of their parent role. The roles are already migrated, so each policy is marked resolved.
@@ -107,7 +107,7 @@ Resources:
 
 A clean preview means the code matches reality. If it shows a diff, the code gets fixed until it doesn't; the cloud is never modified to make the code look right. And notably, there's no `pulumi up` in this story: importing already synced the state to Pulumi Cloud, so the first `up` you run is for the first real change you make after the migration.
 
-That zero-diff preview isn't the finish line, it's a checkpoint you can build on. Imported code is faithful but rarely the code you'd write by hand: generated names, repeated blocks, inline configuration. Now that it provably matches the cloud, refactor freely — pull settings into stack config, split the program into modules, collapse repetition into loops, group related resources into components. Rerun `pulumi preview` after each change: a clean zero-diff means you reshaped the code without touching the infrastructure. If you need to create components, where a refactor shifts a resource's identity, an [alias](/docs/iac/concepts/resources/options/aliases/) keeps it a no-op.
+That zero-diff preview isn't the finish line, it's a checkpoint you can build on. Imported code is faithful but rarely the code you'd write by hand: generated names, repeated blocks, inline configuration. Now that it provably matches the cloud, refactor freely — pull settings into stack config, split the program into modules, collapse repetition into loops, group related resources into components. Rerun `pulumi preview` after each change: a clean zero-diff means you reshaped the code without touching the infrastructure. When a refactor shifts a resource's identity (for example, moving it into a new component), an [alias](/docs/iac/concepts/resources/options/aliases/) keeps it a no-op.
 
 ## Where you end up
 

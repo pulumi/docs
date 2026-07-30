@@ -42,7 +42,7 @@ Today we're launching **Discovered Stacks**: Pulumi Cloud now models your AWS Cl
 
 ## Why: your infrastructure doesn't live in one tool
 
-Almost nobody's cloud estate is a single technology. There's the CloudFormation that came with the AWS account, the ARM templates from the Azure team, the Terraform from an acquisition, and the Pulumi you're standardizing on. Each tool has its own console, its own grouping, its own idea of state and no single place shows you everything you run.
+Almost nobody's cloud estate is a single technology. There's the CloudFormation that came with the AWS account, the ARM templates from the Azure team, the Terraform from an acquisition, and the Pulumi you're standardizing on. Each tool has its own console, its own grouping, its own idea of state, and no single place shows you everything you run.
 
 That fragmentation is also why migrations stall. Moving a stack to Pulumi has never been the hard part; *knowing where you stand* is. The tracking lives in a spreadsheet, the spreadsheet goes stale the day it's written, and six months later nobody can say which of the 800 resources made it across and which were quietly forgotten.
 
@@ -50,7 +50,7 @@ That fragmentation is also why migrations stall. Moving a stack to Pulumi has ne
 
 Discovered Stacks gives you confidence that your migration plan or governance efforts will include all resources. This catches a common failure mode where resources are missed by your existing migration scripts or automations. When [Pulumi Insights](/docs/insights/) scans your accounts, every CloudFormation stack and ARM deployment becomes a discovered stack, and every resource in it appears as a row with an explicit migration status: ready to migrate, requiring review before migration, or already migrated. Every status is computed from live state on both ends — what Pulumi manages and what the source tool reports — so it's never a stale annotation someone forgot to update.
 
-Each resource shows its **origin type** (`AWS::S3::Bucket`) next to its **Pulumi type** (`aws:s3/bucket:Bucket`), with the origin properties side by side with Pulumi's view — so you can verify that Pulumi sees exactly what your source tool sees before you change anything. Decisions you make along the way — *this resource was deleted, that policy is covered by its parent role* — are recorded by marking the resource resolved: it stays visible to your whole team, deliberately handled rather than quietly forgotten. The spreadsheet is retired.
+Each resource shows its **origin type** (`AWS::S3::Bucket`) next to its **Pulumi type** (`aws:s3/bucket:Bucket`), with the origin properties side by side with Pulumi's view, so you can verify that Pulumi sees exactly what your source tool sees before you change anything. Decisions you make along the way (*this resource was deleted, that policy is covered by its parent role*) are recorded by marking the resource resolved: it stays visible to your whole team, deliberately handled rather than quietly forgotten. The spreadsheet is retired.
 
 ![The Resources grid of a discovered CloudFormation stack in Pulumi Cloud: each row pairs the Pulumi type (aws:sns:Topic) with its origin type (AWS::SNS::Topic), a Managed By column reading CloudFormation, and a provider link out to the resource in the AWS console.](resources-list.png)
 
