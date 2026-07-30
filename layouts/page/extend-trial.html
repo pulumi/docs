@@ -212,7 +212,7 @@
             st.id = 'et-hs-styles';
             st.textContent = [
               '.hs-form-field{margin-bottom:20px;}',
-              '.hs-form-field>label,.hs-form-field>label span:not(.hs-form-required){font-size:16px !important;font-weight:600 !important;color:#1A1A21 !important;line-height:1.4 !important;}',
+              '.hs-form-field>label,.hs-form-field>label span:not(.hs-form-required){font-size:14px !important;font-weight:600 !important;color:#1A1A21 !important;line-height:1.4 !important;}',
               '.hs-form-field>label{display:block !important;margin-bottom:8px !important;}',
               '.hs-form-required{color:#F26B7E !important;margin-left:2px;}',
               '.hs-field-desc{font-size:13px !important;color:#6B6B7B !important;font-weight:400 !important;margin:-2px 0 8px !important;}',
@@ -223,7 +223,11 @@
               'textarea[name="pulumi_organization_name_s_"]{resize:none !important;overflow:hidden !important;white-space:nowrap !important;line-height:1.4 !important;}',
               '.hs-input:focus{border-color:#5F2CC9 !important;box-shadow:0 0 0 3px rgba(95,44,201,.12) !important;outline:none !important;}',
               '.hs-button.primary{background:linear-gradient(100deg,#5F2CC9,#8A3391) !important;background-color:#5F2CC9 !important;color:#fff !important;border:1px solid transparent !important;border-radius:8px !important;padding:13px 26px !important;font-size:15.5px !important;font-weight:600 !important;width:auto !important;cursor:pointer !important;}',
-              '.hs-form-booleancheckbox-display{display:flex !important;gap:10px !important;align-items:flex-start !important;font-size:14.5px !important;color:#3D3D4A !important;font-weight:400 !important;}'
+              // Checkbox: align the box with its label. The label text is
+              // wrapped in <p> whose default margin pushed it out of alignment.
+              '.hs-form-booleancheckbox-display{display:flex !important;gap:10px !important;align-items:center !important;font-size:14.5px !important;color:#3D3D4A !important;font-weight:400 !important;}',
+              '.hs-form-booleancheckbox-display span{display:block !important;}',
+              '.hs-form-booleancheckbox-display p{margin:0 !important;}'
             ].join('');
             (fdoc.head || fdoc.documentElement).appendChild(st);
           }
