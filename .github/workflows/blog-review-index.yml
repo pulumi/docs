@@ -437,7 +437,7 @@ jobs:
           # Broad Bash is deliberate — this job holds no push token, no AWS
           # creds, and no production environment (same rationale as the docs
           # worker's review job).
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
+          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
 
       # Flag-only contract check + run facts for the record job. Tracked-file
       # changes (staged or unstaged) mark the run dirty; untracked scratch

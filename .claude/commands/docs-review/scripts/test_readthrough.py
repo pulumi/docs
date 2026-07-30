@@ -147,6 +147,43 @@ def main() -> int:
     check([v["fix_class"] for v in sv] == ["local_repair", "reconception"],
           "fix_class carried through to the composer")
 
+    # --- line_range normalization (the degenerate `L0` anchor) ---
+    # The model is asked for `L42`/`L42-58` but sometimes answers with a bare or
+    # prose-wrapped range; unnormalized, those render as `L0` in BOTH the trail
+    # line and the bucket bullet, pointing at a line that doesn't exist.
+    page = ("---\ntitle: T\n---\n\nIntro paragraph.\n\n"
+            "You might have been in a situation where pulumi failed.\n")
+    check(rt.normalize_line_range("L41") == "L41", "canonical single ref passes through")
+    check(rt.normalize_line_range("L41-43") == "L41-43", "canonical span passes through")
+    check(rt.normalize_line_range("L41–43") == "L41-43", "en-dash span normalized")
+    check(rt.normalize_line_range("41-43") == "L41-43", "bare span normalized")
+    check(rt.normalize_line_range("lines 41-43") == "L41-43", "prose-wrapped span normalized")
+    check(rt.normalize_line_range("line 41") == "L41", "prose-wrapped single line normalized")
+    check(rt.normalize_line_range("L41-41") == "L41", "degenerate span collapses to one ref")
+    check(rt.normalize_line_range("L0") == "", "L0 is not a line — nothing recovered")
+    check(rt.normalize_line_range("") == "", "empty range recovers nothing without a quote")
+    check(rt.normalize_line_range("somewhere", page, "You might have been in a situation") == "L7",
+          "unparseable range falls back to the anchor quote's line")
+    check(rt.locate_anchor(page, "no such text anywhere in this page") == 0,
+          "a quote absent from the page locates nothing")
+    check(rt.normalize_line_range("nope", page, "short") == "",
+          "an anchor probe below the distinctiveness floor is not used")
+
+    # --- the composer backstop never renders L0 for a readthrough finding ---
+    bad = cr._readthrough_synthetic_verdicts({"ran": True, "findings": [
+        {"file": "content/docs/x.md", "line_range": "41-43", "anchor_quote": "q",
+         "failure_mode": "self-redundancy", "fix_class": "local_repair"},
+        {"file": "content/docs/x.md", "line_range": "unparseable", "anchor_quote": "q",
+         "failure_mode": "self-redundancy", "fix_class": "local_repair"},
+    ]})
+    check([v["line_range"] for v in bad] == ["L41-43", "L1"],
+          "composer backstop normalizes, falling back to L1 (never L0)")
+    trail_bad, *_ = cr.render_trail(bad, None)
+    check("L0" not in trail_bad, "no degenerate L0 anchor reaches the trail")
+    out_bad, _low_bad = cr.build_stubs(bad)
+    check(all("**[L0]**" not in s["bullet"] for s in out_bad),
+          "no degenerate L0 anchor reaches the bucket bullets")
+
     print(f"\n{len(_fails)} failure(s)")
     return 1 if _fails else 0
 
