@@ -1,6 +1,6 @@
 ---
 title: "Best Secrets Management Tools in 2026"
-date: 2026-07-22
+date: 2026-07-30
 draft: false
 meta_desc: "Compare the best secrets management tools of 2026: Vault, cloud-native managers, Pulumi ESC, Doppler, and Infisical, on scope, operations, and cost."
 feature_image: feature.png
