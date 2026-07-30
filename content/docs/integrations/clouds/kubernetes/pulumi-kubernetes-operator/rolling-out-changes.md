@@ -16,7 +16,7 @@ The `Stack` object supports safe rollouts with prerequisites and preview mode.
 
 To roll a change through deployment stages, use `spec.prerequisites`. A `Stack` with a prerequisite waits for the referenced stack to reach a successful state before it runs. This enforces stage order declaratively, without manual sequencing.
 
-In the example below, `dev` tracks the `main` branch and deploys every merge, while `test` and `prod` pin an immutable commit so they change only when that commit is promoted through a reviewed pull request.
+In the following example, `dev` tracks the `main` branch and deploys every merge, while `test` and `prod` pin an immutable commit so they change only when that commit is promoted through a reviewed pull request.
 
 ```yaml
 apiVersion: pulumi.com/v1
@@ -52,7 +52,7 @@ spec:
       succeededWithinDuration: "1h"
 ```
 
-The optional `requirement.succeededWithinDuration` sets a freshness window on the prerequisite: with `"1h"`, its last successful run must have completed within the last hour. If it is older, the operator re-syncs the prerequisite and waits for it to succeed again before the dependent stack proceeds.
+The optional `requirement.succeededWithinDuration` sets a freshness window on the prerequisite: with `"1h"`, its last successful run must have completed within the last hour. If it's older, the operator re-syncs the prerequisite and waits for it to succeed again before the dependent stack proceeds.
 
 Advancing the pinned commit on `app-test` and `app-prod` in a reviewed pull request then rolls the change out in order: `test` deploys first, and `prod` follows only once `test` is green.
 
