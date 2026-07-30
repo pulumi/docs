@@ -5,9 +5,6 @@ type: page
 layout: pricing
 schema_type: product
 include_floqer: true
-outputs:
-    - HTML
-    - markdown
 menu:
     header:
         weight: 2

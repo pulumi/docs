@@ -5,13 +5,6 @@ meta_image: /images/product/overview/overview-meta.png
 type: page
 layout: template-page
 include_floqer: true
-outputs:
-  - HTML
-  - markdown
-cascade:
-  outputs:
-    - HTML
-    - markdown
 
 aliases:
   - /product/pulumi-cloud/

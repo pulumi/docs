@@ -82,7 +82,6 @@ outputs:
     - HTML
     - JSON
     - llms
-    - markdown
   section:
     - HTML
   page:
