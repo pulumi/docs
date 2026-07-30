@@ -41,6 +41,7 @@ social:
         Read my full analysis of why infrastructure-first platform engineering delivers better outcomes.
 
         #PlatformEngineering #Backstage #Pulumi #InfrastructureAsCode #DevOps #CloudNative #InternalDeveloperPlatform
+faq_schema: true
 ---
 
 Developers are losing days every month to infrastructure bottlenecks, compliance hurdles, and inconsistent environments.

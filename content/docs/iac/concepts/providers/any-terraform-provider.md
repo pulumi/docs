@@ -316,6 +316,35 @@ You'll see your IDE provide autocomplete, type checking, and inline documentatio
 pulumi up
 ```
 
+{{% notes type="info" %}}
+Provider config keys are always `camelCase`, regardless of your program's language. `pulumi config set` and the Automation API `setConfig` use the `camelCase` rendering of the Terraform provider's `snake_case` config field.
+
+For example, set a Terraform `oauth_client_id` config field with the Pulumi key `oauthClientId`:
+
+```bash
+pulumi config set tailscale:oauthClientId <value>
+```
+
+Because a locally generated SDK has no published reference documentation, list the exact config keys with [`pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/):
+
+```bash
+pulumi package get-schema terraform-provider tailscale/tailscale | jq '.config.variables | keys'
+```
+
+```json
+[
+  "apiKey",
+  "audience",
+  "baseUrl",
+  "oauthClientId",
+  "oauthClientSecret",
+  "tailnet",
+  ...
+]
+```
+
+{{% /notes %}}
+
 ## Version control considerations
 
 You can choose whether to commit the generated SDK directory to version control:
@@ -347,6 +376,40 @@ The generated SDK includes:
 These generated SDKs are virtually identical to Pulumi's published packages, providing the same IDE integration, type safety, and developer experience you expect from providers in the Pulumi Registry.
 
 Local SDKs are versioned when you include a version in the `pulumi package add` command (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration), and the version information is stored in your `Pulumi.yaml` file. This ensures consistent builds across different environments and team members.
+
+## Finding configuration and property names
+
+Terraform and OpenTofu providers use snake_case for their configuration variables and resource properties (for example, `client_id`). When Pulumi bridges a provider through the Any Terraform Provider feature, it translates those names into Pulumi's standard camelCase convention, the same convention every bridged Pulumi provider follows for its schema. This applies to provider configuration keys, resource input and output properties, and function arguments alike.
+
+{{% notes type="warning" %}}
+Provider configuration always uses the camelCase Pulumi name, regardless of which language your program is written in. Setting a raw Terraform-style snake_case key, such as `client_id`, is not recognized and is silently ignored. Use the camelCase form instead, for example `clientId`.
+{{% /notes %}}
+
+For example, if a provider's Terraform schema defines a `client_id` configuration variable, set it with the camelCase key:
+
+```bash
+pulumi config set <provider>:clientId <value>
+```
+
+This same camelCase requirement applies wherever provider configuration is set, including [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set/), [ESC](/docs/esc/), and the Automation API's `setConfig`.
+
+Keep in mind that this is a different surface than the properties you pass to a resource constructor in your program. Those follow your program language's own idiom, just like with any other Pulumi provider: camelCase in TypeScript, Go, C#, and Java, and snake_case in Python. For instance, a Python program still calls a resource constructor with `client_id=...`, while the underlying provider configuration key set via `pulumi config set` remains `clientId`.
+
+### Discovering names with `pulumi package get-schema`
+
+Because a locally bridged provider doesn't have a browsable reference in the [Pulumi Registry](/registry/), use the [`pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/) command to inspect its generated schema and find the exact camelCase names to use:
+
+```bash
+pulumi package get-schema terraform-provider <author>/<name> [version]
+```
+
+To list a provider's configuration keys, inspect the `config.variables` object in the schema. For example, for the `tailscale/tailscale` provider:
+
+```bash
+pulumi package get-schema terraform-provider tailscale/tailscale | jq '.config.variables | keys'
+```
+
+To find a resource's input and output properties, look up the resource's token under `resources` in the schema and inspect its `inputProperties` (and `properties` for outputs).
 
 ## Relationship to the Pulumi Registry
 
@@ -384,3 +447,4 @@ While the Any Terraform Provider feature is powerful, there are some considerati
 - [Getting Started: Use Terraform Providers](/docs/iac/get-started/terraform/terraform-providers/) - Quick start guide
 - [Pulumi CLI: `pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) - Command reference
 - [Pulumi CLI: `pulumi install`](/docs/iac/cli/commands/pulumi_install/) - Command reference
+- [Pulumi CLI: `pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/) - Command reference

@@ -1,0 +1,12 @@
+{{/*
+    Event card primary CTA. Rendered as a non-interactive styled span because the
+    whole card is a single stretched link.
+
+    Parameters:
+    - onDemand: truthy when the event has a recording (Watch); otherwise Register
+*/}}
+{{ if .onDemand }}
+    <span class="btn btn-ghost-primary btn-lg group-hover:bg-violet-50 shrink-0">{{ partial "icon.html" (dict "name" "play") }}Watch</span>
+{{ else }}
+    <span class="btn btn-primary btn-lg group-hover:bg-violet-800 shrink-0">{{ partial "icon.html" (dict "name" "calendar-check") }}Register</span>
+{{ end }}

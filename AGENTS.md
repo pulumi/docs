@@ -126,6 +126,10 @@ When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `la
 
 **Do not reach for `lastmod`.** It's a Hugo built-in that only feeds the sitemap and schema.org `dateModified`, and the site already sets `enableGitInfo: true` (`config/_default/config.yml`), so Hugo derives `.Lastmod` from the commit date automatically. A hand-stamped `lastmod` is therefore invisible to readers *and* redundant with git. It's easy to default to because `lastmod` is the generic Hugo idiom for "last changed" — but on this site the reader-facing, canonical field is `updated`.
 
+### Blog known-issues index (automated daily review)
+
+A scheduled workflow (`.github/workflows/blog-review-index.yml`) reviews a few existing blog posts per day — selected deterministically by `scripts/blog-review/select-posts.py` (traffic/GSC-weighted staleness; oldest-unreviewed-first until the blog data exports ship) — and records structured findings (dead links, factual rot, deprecated products, thin content) into an S3 known-issues index. It is **flag-only state, not content**: nothing is committed to the repo, no fixes are applied, and no PRs are opened. State lives in the content-review ledger bucket under the `blog-review/` prefix (`ledger/`, `index/`, `runs/`, and `index/_summary.json`); the on/off/cadence switch is the `BLOG_REVIEW_COUNT` repo variable (unset = 5 posts/run, `'0'` = off). The review skill is `.claude/commands/blog-review-index/SKILL.md`; its closed issue taxonomy lives in that skill's `references/issue-taxonomy.md` and is enforced by `scripts/blog-review/validate-findings.py`. The index is evidence for a future, human-reviewed process that marks rotted, low-value posts `block_external_search_index: true` — do not add that frontmatter based on the index without going through that process.
+
 ---
 
 ## Case studies
@@ -134,7 +138,7 @@ Case studies live at `content/case-studies/<slug>.md` — scaffold a new one wit
 
 - **`industry`** — required, singular, closed set defined in `data/case_study_industries.yaml` (`make lint` enforces it). That file's header comment is the authoritative reference.
 - **Logo tile** — the cards on `/case-studies/` and the industry term pages render each logo centered on a brand-color tile, driven by optional front matter (`logo_bg_color`, `logo_style: white|dark`, `logo_size: lg`, `card_logo`), all documented in `layouts/partials/case-studies/card.html` and format-checked by `make lint`.
-- **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the product-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
+- **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the template-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
 
 ---
 
@@ -147,6 +151,32 @@ Individual changelog items live in `content/releases/changelog/` — one markdow
 - **Create a new entry with the `/new-changelog` skill** (or `hugo new --kind changelog content/releases/changelog/YYYY-MM-DD-<slug>.md`, which uses `archetypes/changelog.md`). The archetype derives `title` and `date` from the filename.
 - **Optional `tiers:`** is a YAML array marking pricing-tier availability, rendered as badge(s) beside the date. Values are a **closed set** — only the four pricing tiers (`Free`, `Team`, `Enterprise`, `Business Critical`; see `content/pricing/_index.md`), enforced by `checkChangelogTiers` in `scripts/lint/lint-markdown.js` (an out-of-set value or the legacy singular `tier:` is a hard build failure). List **every** tier the feature is available in — since a lower tier implies the tiers above it, that means the lowest applicable tier and all tiers above it (e.g. an Enterprise feature lists both `Enterprise` and `Business Critical`).
 - **Renaming an entry** (changing its slug) changes its URL, so add an `aliases:` entry pointing at the old `/releases/changelog/<old-slug>/` path — same SEO rule as moving any content file.
+
+---
+
+## Styling (CSS / SCSS / Tailwind)
+
+The theme uses Tailwind v4 (configured in CSS, no `tailwind.config.js`) across two SCSS bundles: `theme/src/scss/main.scss` (docs/app) and `theme/src/scss/_marketing.scss` (marketing).
+
+### Reuse the shared system first
+
+Before writing new component CSS, use the shared design-system primitives in **`theme/src/scss/shared/`** (see `shared/README.md`). Don't reinvent a button, card, badge, or heading:
+
+- **`.btn` button system** (`shared/_button.scss`) — `class="btn btn-primary"`, plus variants (`outline`, `secondary`, `ghost`, `ghost-primary`, `destructive`, `link`), sizes (`btn-sm`/`btn-lg`/`btn-icon`…), and `.btn-split`/`.btn-group`. The file header documents the full compose API.
+- **`.card` / `.card-hover`** (`shared/_card.scss`).
+- **Form system** (`shared/_forms.scss`) — `class="form-input form-input-lg"`, plus `form-textarea`/`form-select`/`form-checkbox`/`form-radio` and `form-label`/`form-help`/`form-error`. Control heights mirror the `.btn` size scale. Also exposes `@mixin`s (`form-control-base`, …) for form-consuming partials.
+- **`.badge` system** (`shared/_badge.scss`) — `class="badge badge-success"`, `layouts/partials/badge.html`, or `@extend .badge; @extend .badge-<variant>;`.
+- **Shared type scale** (`shared/_utilities.scss`) — the `heading-xl`/`heading-1`…`heading-6`, `body-sm`…`body-2xl`, and `font-overline` `@utility` classes. Use these instead of hand-rolling font-size/weight/tracking.
+
+Compose them in markup, or in SCSS via `@apply`/`@extend` (prefer `@extend`ing a primitive over re-`@apply`ing its utilities).
+
+### Order of preference for authoring styles
+
+1. **Inline Tailwind utility classes** — including arbitrary values (`bg-[#abc123]`, `w-[42ch]`, `grid-cols-[1fr_auto]`). This is the default for one-off styling.
+2. **SCSS with Tailwind `@apply` / `@extend`** — only when inline classes can't stay DRY (the same cluster of utilities repeated across many elements or templates). Reach for `@extend` on a shared primitive first.
+3. **Raw CSS / SCSS** — last resort, for what Tailwind genuinely can't express.
+
+The Dark mode section below applies these same rules to `/docs` theming (`dark:` variants and `--docs-*` tokens).
 
 ---
 

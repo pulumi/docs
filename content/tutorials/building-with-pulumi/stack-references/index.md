@@ -16,7 +16,7 @@ In this section, you'll create a new project and stack that'll use the stack out
 
 Let's start by making a new program in a new directory, alongside `my-first-app`:
 
-{{< chooser language "typescript,python" />}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" />}}
 
 {{% choosable language typescript %}}
 
@@ -38,6 +38,56 @@ $ pulumi new python -y
 
 {{% /choosable %}}
 
+{{% choosable language go %}}
+
+```bash
+$ mkdir ../my-second-app
+$ cd ../my-second-app
+$ pulumi new go -y
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```bash
+$ mkdir ../my-second-app
+$ cd ../my-second-app
+$ pulumi new csharp -y
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```bash
+$ mkdir ../my-second-app
+$ cd ../my-second-app
+$ pulumi new java -y
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```bash
+$ mkdir ../my-second-app
+$ cd ../my-second-app
+$ pulumi new yaml -y
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```bash
+$ mkdir ../my-second-app
+$ cd ../my-second-app
+$ pulumi new hcl -y
+```
+
+{{% /choosable %}}
+
 Let's go ahead and create a `staging` stack here as well:
 
 ```bash
@@ -49,7 +99,7 @@ Now comes the fun part! Let's add a little code to pull in the values from the
 
 Add this code to the {{< langfile >}} file inside of `my-second-app`:
 
-{{< chooser language "typescript,python" />}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" />}}
 
 {{% choosable language typescript %}}
 
@@ -64,14 +114,6 @@ const stackRef = new pulumi.StackReference(`${org}/my-first-app/${stack}`)
 
 export const shopUrl = stackRef.getOutput("url");
 ```
-
-The `org` configuration variable is new, as is the `stackRef` declaration. That
-declaration sets up an instance of the `StackReference` class, which needs the
-fully qualified name of the stack as an input. Here, `org` is the
-organization associated with your account, `my-first-app` is the name of the
-project you've been working in, and `stack` is the stack that you want to
-reference. If you have an individual account, the org is your account name. The
-export then grabs the `url` output from the other stack.
 
 {{% /choosable %}}
 
@@ -89,15 +131,135 @@ stack_ref = pulumi.StackReference(f"{org}/my-first-app/{stack}")
 pulumi.export("shopUrl", stack_ref.get_output("url"))
 ```
 
-The `org` configuration variable is new, as is the `stack_ref` declaration. That
-declaration sets up an instance of the `StackReference` class, which needs the
-fully qualified name of the stack as an input. Here, `org` is the
-organization associated with your account, `my-first-app` is the name of the
-project you've been working in, and `stack` is the stack that you want to
-reference. If you have an individual account, the org is your account name. The
-export then grabs the `url` output from the other stack.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		cfg := config.New(ctx, "")
+		org := cfg.Require("org")
+		stack := ctx.Stack()
+
+		stackRef, err := pulumi.NewStackReference(ctx,
+			fmt.Sprintf("%s/my-first-app/%s", org, stack), nil)
+		if err != nil {
+			return err
+		}
+
+		ctx.Export("shopUrl", stackRef.GetOutput(pulumi.String("url")))
+		return nil
+	})
+}
+```
 
 {{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+
+return await Deployment.RunAsync(() =>
+{
+    var config = new Config();
+    var org = config.Require("org");
+    var stack = Deployment.Instance.StackName;
+
+    var stackRef = new StackReference($"{org}/my-first-app/{stack}");
+
+    return new Dictionary<string, object?>
+    {
+        ["shopUrl"] = stackRef.GetOutput("url"),
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+```java
+package myproject;
+
+import com.pulumi.Pulumi;
+import com.pulumi.resources.StackReference;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var org = ctx.config().require("org");
+            var stack = ctx.stackName();
+
+            var stackRef = new StackReference(
+                String.format("%s/my-first-app/%s", org, stack));
+
+            ctx.export("shopUrl", stackRef.output("url"));
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language yaml %}}
+
+```yaml
+name: my-second-app
+runtime: yaml
+
+config:
+  org:
+    type: string
+
+resources:
+  stackRef:
+    type: pulumi:pulumi:StackReference
+    properties:
+      name: ${org}/my-first-app/${pulumi.stack}
+
+outputs:
+  shopUrl: ${stackRef.outputs["url"]}
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+variable "org" {
+  type = string
+}
+
+resource "pulumi_stack_reference" "stack_ref" {
+  name = "${var.org}/my-first-app/${pulumi.stack}"
+}
+
+output "shopUrl" {
+  value = pulumi_stack_reference.stack_ref.outputs["url"]
+}
+```
+
+{{% /choosable %}}
+
+The `org` configuration variable is new, as is the stack reference declaration.
+That declaration sets up an instance of the `StackReference` type, which needs
+the fully qualified name of the stack as an input. Here, `org` is the
+organization associated with your account, `my-first-app` is the name of the
+project you've been working in, and the current stack name selects the stack
+that you want to reference. If you have an individual account, the org is your
+account name. The export then grabs the `url` output from the other stack.
 
 Set the `org` configuration variable using `pulumi config set`:
 

@@ -180,7 +180,7 @@ sequenceDiagram
     H-->>C: results
 ```
 
-## Additional resources
+## Learn more
 
 - [Pulumi Packages Guides](/docs/iac/guides/building-extending/packages/)
 - [Authoring a Source-Based Plugin Package](/docs/iac/guides/building-extending/packages/source-based-plugin/)

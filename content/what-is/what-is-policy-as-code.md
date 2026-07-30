@@ -34,7 +34,7 @@ The core idea is simple: write a rule in code, commit it to a repository, run it
 
 ## Why does policy as code matter?
 
-Cloud misconfigurations are the leading cause of cloud security incidents. Gartner and the Cloud Security Alliance have found that [misconfigurations drive 80% of data security breaches](https://cloudsecurityalliance.org/blog/2023/08/14/managing-cloud-misconfigurations-risks), and that up to 99% of cloud failures trace back to human error. The average cost of a data breach has reached [$4.88 million globally and $10.22 million in the United States](https://www.ibm.com/reports/data-breach), according to IBM's 2024 Cost of a Data Breach report. Even as IaC adoption has grown (Datadog's State of DevSecOps 2024 found that 71% of AWS organizations use IaC), 38% of those organizations still used ClickOps in all accounts, including production, leaving a gap where misconfigurations can appear without any automated check.
+[Cloud misconfigurations](/what-is/what-is-cloud-misconfiguration/) are the leading cause of cloud security incidents. Gartner and the Cloud Security Alliance have found that [misconfigurations drive 80% of data security breaches](https://cloudsecurityalliance.org/blog/2023/08/14/managing-cloud-misconfigurations-risks), and that up to 99% of cloud failures trace back to human error. The average cost of a data breach has reached [$4.88 million globally and $10.22 million in the United States](https://www.ibm.com/reports/data-breach), according to IBM's 2024 Cost of a Data Breach report. Even as IaC adoption has grown (Datadog's State of DevSecOps 2024 found that 71% of AWS organizations use IaC), 38% of those organizations still used ClickOps in all accounts, including production, leaving a gap where misconfigurations can appear without any automated check.
 
 Manual policy review doesn't scale. A security team reviewing hundreds of pull requests for infrastructure changes will miss things. More importantly, by the time a human reviewer catches a misconfigured resource, a developer has already created it, someone else has built on top of it, and the blast radius of changing it has grown. Policy as code shifts enforcement left, to the same moment the infrastructure code is being written and previewed, so violations are caught before they become deployed resources.
 
@@ -87,7 +87,7 @@ Several mature tools now handle policy as code across different parts of the sta
 | Open Policy Agent (OPA) | Rego | General-purpose: Kubernetes, APIs, CI/CD, Terraform | Open source (Apache 2.0); CNCF graduated Feb 2021 | Created by Styra; donated to CNCF; community maintained |
 | HashiCorp Sentinel | Sentinel (proprietary DSL) | HashiCorp suite (HCP Terraform, HCP Vault Dedicated, HCP Consul, Nomad Enterprise) | Proprietary; requires paid HCP Terraform Standard+ | HashiCorp (now IBM) |
 | Kyverno | YAML + CEL | Kubernetes-native (validate, mutate, generate, cleanup) | Open source; CNCF graduated Mar 2026 | Created by Nirmata; donated to CNCF |
-| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud (170+ providers) during Pulumi deployments; also audit of discovered resources via Insights | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
+| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud (200+ providers) during Pulumi deployments; also audit of discovered resources via Insights | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
 
 ## How does Pulumi implement policy as code?
 
@@ -200,7 +200,7 @@ Local enforcement via the `--policy-pack` flag (including advisory, mandatory, a
 
 ## Learn more
 
-Pulumi Policies enforces policy as code across any cloud using TypeScript, Python, or Rego (170+ providers supported), with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
+Pulumi Policies enforces policy as code across any cloud using TypeScript, Python, or Rego (200+ providers supported), with automatic remediation and audit coverage for resources that weren't provisioned with Pulumi IaC. [Get started with Pulumi Policies](/docs/insights/policy/get-started/) to write your first policy pack in minutes.
 
 Related reading:
 
@@ -212,6 +212,7 @@ Related reading:
 * [OPA support for Pulumi Policies](/blog/opa-support-for-crossguard/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
 * [What is infrastructure drift?](/what-is/what-is-infrastructure-drift/)
+* [Most Effective Infrastructure as Code (IaC) Tools](/blog/infrastructure-as-code-tools/)
 * [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)
 * [What is platform engineering?](/what-is/what-is-platform-engineering/)

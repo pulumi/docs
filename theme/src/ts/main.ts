@@ -10,7 +10,6 @@ import "./price-toggle";
 import "./noselect";
 import "./tracking";
 import "./docs-feedback";
-import "./event-filtering";
 import "./blog-list";
 import "./blog-post";
 import "./what-is-list";
@@ -35,6 +34,7 @@ import "./neo-mode";
 import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
+import "./mktg-ctas-experiment";
 
 // Register all Stencil components.
 defineCustomElements();

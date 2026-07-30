@@ -43,6 +43,7 @@ social:
             40,000 requests/month
             Typical cost: ~$0.04/month (worst-case ~$1.12/month)
             Zero traffic = Zero cost
+faq_schema: true
 ---
 
 **TL;DR (2026 pricing):** Packaging a Flask app as a container and running it on AWS Lambda behind an HTTP API Gateway costs **~$1.12/month** worst-case, or **$0 when idle**. The breakdown: $0.04 for API Gateway requests, $0.07 for Lambda compute (fully absorbed by the always-free tier), and $1.08 for 12 GB of egress at $0.09/GB (covered by AWS's 100 GB/month free egress allowance unless other services in the account have already used it). Pulumi handles the entire infrastructure. Verified against AWS pricing as of April 2026.

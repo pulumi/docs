@@ -107,6 +107,8 @@
                   "enum": [
                     "pulumi.user.login",
                     "pulumi.organization.login",
+                    "pulumi.token.type",
+                    "pulumi.token.team",
                     "currentEnvironment.name",
                     "rootEnvironment.name"
                   ],
@@ -356,6 +358,8 @@
               "enum": [
                 "pulumi.user.login",
                 "pulumi.organization.login",
+                "pulumi.token.type",
+                "pulumi.token.team",
                 "currentEnvironment.name",
                 "rootEnvironment.name"
               ],
@@ -533,6 +537,8 @@
                   "enum": [
                     "pulumi.user.login",
                     "pulumi.organization.login",
+                    "pulumi.token.type",
+                    "pulumi.token.team",
                     "currentEnvironment.name",
                     "rootEnvironment.name"
                   ],
@@ -733,6 +739,8 @@
                   "enum": [
                     "pulumi.user.login",
                     "pulumi.organization.login",
+                    "pulumi.token.type",
+                    "pulumi.token.team",
                     "currentEnvironment.name",
                     "rootEnvironment.name"
                   ],
@@ -1127,6 +1135,8 @@
                   "enum": [
                     "pulumi.user.login",
                     "pulumi.organization.login",
+                    "pulumi.token.type",
+                    "pulumi.token.team",
                     "currentEnvironment.name",
                     "rootEnvironment.name"
                   ],
@@ -1524,6 +1534,8 @@
                   "enum": [
                     "pulumi.user.login",
                     "pulumi.organization.login",
+                    "pulumi.token.type",
+                    "pulumi.token.team",
                     "currentEnvironment.name",
                     "rootEnvironment.name"
                   ],

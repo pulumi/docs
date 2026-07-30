@@ -64,15 +64,6 @@ You've built a beautiful platform with robust guardrails, comprehensive template
 
 This post continues our journey through the IDP Best Practices series. We've covered strategy and self-service infrastructure, built golden paths with components and templates, and established deployment guardrails through policy as code. Now we're tackling what happens after deployment when the real world starts making changes to your carefully crafted infrastructure.
 
-Series roadmap:
-
-* [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control)
-* [Build Golden Paths with Infrastructure Components and Templates](/blog/golden-paths-infrastructure-components-and-templates)
-* [Deployment Guardrails with Policy as Code](/blog/deployment-guardrails-with-policy-as-code)
-* **Day 2 Operations: Drift Detection and Remediation** (you are here)
-* Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-* Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
-
 ## The Reality of Infrastructure Drift
 
 Let me paint you a picture that might feel uncomfortably familiar. It's Saturday afternoon, and you're enjoying a barbecue with friends when your phone buzzes with that dreaded alert: production is down. You rush to your laptop, but you're not on the corporate VPN. The AWS console is accessible, but you can't reach the application itself to properly diagnose the issue.

@@ -24,7 +24,7 @@
 $sitenav-height: 90px;
 $sitenav-offset: calc($sitenav-height + 16px);
 
-@import "utilities-shared";
+@import "shared/utilities";
 
 // v4 layer placement: base styles go in @layer base so Tailwind utilities can override them.
 // Component styles go in @layer components for the same reason.
@@ -33,7 +33,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // but loses to unlayered CSS. So we must layer our custom styles.
 
 @layer base {
-    @import "base-shared";
+    @import "shared/base";
 
     body {
         @apply font-body text-service-black;
@@ -132,8 +132,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
 }
 
 @layer components {
-    // Imported FIRST: later partials (_hubspot, _blog, _footer) @include its mixins.
-    @import "forms";
+    // Shared form system (theme/src/scss/shared/). Imported FIRST because later
+    // partials (_hubspot, _blog, _footer) @include its mixins, and Sass @mixin is
+    // order-dependent — so it can't join the shared/ block below.
+    @import "shared/forms";
     @import "about";
     @import "accordion";
     @import "algolia";
@@ -143,13 +145,17 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "api-symbol";
     @import "awards";
     @import "marketing/automation-api";
-    @import "badges";
     @import "benefits";
     @import "blog";
     @import "breadcrumb";
-    @import "button";
-    @import "buttons";
-    @import "card";
+
+    // Shared design-system primitives (theme/src/scss/shared/). Reuse these —
+    // the `.btn`, `.card`, and `.badge` systems — before rolling your own
+    // component styles. See shared/README.md.
+    @import "shared/badge";
+    @import "shared/button";
+    @import "shared/card";
+
     @import "marketing/cloud-engineering";
     @import "announcement-banner";
     @import "code";

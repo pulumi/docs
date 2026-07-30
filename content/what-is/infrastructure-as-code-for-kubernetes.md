@@ -226,7 +226,7 @@ Don't put secret values in IaC code. Use [Pulumi ESC](/product/esc/), HashiCorp 
 
 ### How do you test Kubernetes IaC?
 
-Unit-test the program with mocks, run static scans (Checkov, Trivy) against the rendered manifests, run policy-as-code checks in CI (Pulumi policy as code, OPA), and run integration tests that deploy to an ephemeral cluster (kind, k3d, or a sandbox managed cluster) and exercise the workload before tearing it down. See [How to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) for the broader pattern.
+Unit-test the program with mocks, run static scans (Checkov, Trivy) against the rendered manifests, run policy-as-code checks in CI (Pulumi policy as code, OPA), and run integration tests that deploy to an ephemeral cluster (kind, k3d, or a sandbox managed cluster) and exercise the workload before tearing it down. See [How to step up cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/) for the broader pattern.
 
 ### What's "naked pods" and why are they bad?
 
@@ -254,6 +254,7 @@ Related reading:
 * [What is Infrastructure as Code (IaC)?](/what-is/what-is-infrastructure-as-code/)
 * [What is DevOps?](/what-is/what-is-devops/)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [What is Configuration Management?](/what-is/what-is-configuration-management/)
 * [What are Kubernetes Secrets?](/what-is/what-are-kubernetes-secrets/)
+* [Most Effective Infrastructure as Code (IaC) Tools](/blog/infrastructure-as-code-tools/)

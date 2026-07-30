@@ -1,0 +1,82 @@
+{{/*
+    Template Event Card Partial
+
+    Text event card built on the shared design system (.card, .badge, .btn, shared
+    type scale). The whole card is a single stretched link, so the CTA and tags
+    render as styled (non-interactive) spans rather than nested anchors.
+
+    Upcoming cards show a date chip and a Register CTA; on-demand cards hide the date
+    and show a Watch CTA.
+
+    Parameters:
+    - pageContext: Page context for relref resolution
+    - external: Whether the event links to an external URL
+    - filters: Array of filter strings for CSS filtering
+    - link: Event URL
+    - datetime: Event date string
+    - displayDate: Formatted display date
+    - data: The event page data
+*/}}
+
+{{ $data := .data }}
+{{ $title := $data.Params.title }}
+{{ $onDemand := $data.Params.youtube_url }}
+
+{{ $href := .link }}
+{{ $relref := "noopener noreferrer" }}
+{{ $target := "_blank" }}
+{{ if eq .external false }}
+    {{ $href = (relref .pageContext .link) }}
+    {{ $relref = "" }}
+    {{ $target = "" }}
+{{ end }}
+
+<li data-display-date="{{ .displayDate }}" class="m-0 p-0" data-filters="{{ delimit .filters " " }}">
+    <article class="group relative h-full">
+        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="card card-hover flex h-full flex-col bg-white p-6 md:p-7 no-underline">
+            <div class="flex items-start justify-between gap-16">
+                <div class="min-w-0">
+                    <div class="mb-4 flex flex-wrap items-center gap-2">
+                        {{ partial "badge.html" (dict "text" $data.Params.event_type "variant" "outline") }}
+                        {{ partial "badge.html" (dict "text" (cond (ne $onDemand nil) "On-demand" ($data.Params.location | string)) "variant" "ghost") }}
+                        {{ if not $onDemand }}
+                            {{/* Populated client-side (see resources.ts): a build-time "in X days"
+                                 would go stale between builds and ignores the visitor's timezone. */}}
+                            <span data-event-countdown data-event-date="{{ .datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" hidden></span>
+                        {{ end }}
+                    </div>
+                    <h3 class="m-0 max-w-prose heading-3 leading-snug text-service-black transition-colors group-hover:text-violet-primary">
+                        {{ $title }}
+                        {{ if .external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}
+                    </h3>
+                </div>
+                {{ if not $onDemand }}
+                <div class="flex size-14 shrink-0 flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 text-gray-950">
+                    <div class="font-mono text-xl leading-none">{{ .datetime | time.Format "2" }}</div>
+                    <div class="font-mono text-[0.65rem] uppercase">{{ .datetime | time.Format "Jan" }}</div>
+                </div>
+                {{ end }}
+            </div>
+
+            {{ with $data.Params.meta_desc }}<p class="mt-1.5 mb-0 max-w-prose body-base line-clamp-3 text-service-black">{{ . }}</p>{{ end }}
+
+            <div class="mt-auto flex flex-col gap-4 pt-6">
+                {{ with $data.Params.presenters }}
+                <div class="flex items-center gap-3">
+                    <div class="flex -space-x-2 shrink-0">
+                        {{ range . }}
+                            <img class="size-14 rounded-full object-cover ring-2 ring-white" src="{{ .photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ .name }}" loading="lazy" />
+                        {{ end }}
+                    </div>
+                    <span class="body-sm text-gray-600 line-clamp-1">with {{ range $i, $p := . }}{{ if $i }}, {{ end }}{{ $p.name }}{{ end }}</span>
+                </div>
+                {{ end }}
+
+                <div class="flex items-end justify-between gap-3">
+                    {{ partial "template-partials/event-card-tags.html" $data }}
+                    {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand) }}
+                </div>
+            </div>
+        </a>
+    </article>
+</li>

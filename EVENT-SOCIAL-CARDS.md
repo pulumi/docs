@@ -4,7 +4,7 @@ When someone shares an event page (a workshop, webinar, or talk under `content/e
 
 You usually don't have to make one. The site generates it automatically at build time from the event's frontmatter. This guide covers when that automatic card is enough and when to make your own.
 
-> This is about the workshop and webinar event bundles under `content/events/`. It doesn't cover the widget-based marketing landing pages (`layout: event-page`, like `content/kubecon/`), which have their own [event page template guide](./EVENT-PAGE-TEMPLATE-GUIDE.md).
+> This is about the workshop and webinar event bundles under `content/events/`. It doesn't cover the widget-based marketing landing pages (`layout: template-page`, like `content/kubecon/`), which have their own [event landing page guide](./EVENT-PAGE-TEMPLATE-GUIDE.md).
 
 ## Quick decision guide
 

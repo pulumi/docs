@@ -17,6 +17,17 @@ name: "Scheduled jobs: Re-verify volatile claims"
 #   'N'   -> on, N entities/night
 # The sweep is a stateless day rotation over the volatile entity set, so all
 # of it is covered every ceil(N_entities/count) nights regardless of the knob.
+#
+# DEGRADATION HEALTH: this lane only Slacks when it finds STALE entities, so a
+# dead lane (claims index gone, API key missing, every check inconclusive)
+# would otherwise look identical to a healthy quiet one. The health steps at
+# the end feed a `reverify` signal — read from the report's meta block — into
+# the same signal-health state the review-existing-content dispatcher uses
+# (ledger bucket, health/ prefix), alerting #docs-ops after a week of
+# continuous degradation. The two workflows share that state object
+# read-modify-write; their schedules (7:00 vs ~14:00 UTC) don't overlap, and
+# each observes disjoint signals, so last-writer-wins is safe in practice —
+# an accepted, documented race, same as signal-health.py's own.
 
 on:
   schedule:
@@ -113,6 +124,9 @@ jobs:
           if [ -n "$BUCKET" ]; then
             echo "ledger_uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
             echo "claims_uri=s3://$BUCKET/claims/" >> "$GITHUB_OUTPUT"
+            # Degradation-health state lives in the same bucket, own prefix
+            # (shared with review-existing-content.yml).
+            echo "health_uri=s3://$BUCKET/health/" >> "$GITHUB_OUTPUT"
           else
             echo "ledger bucket output unavailable; nothing to re-verify"
           fi
@@ -164,6 +178,48 @@ jobs:
             -H "Content-type: application/json; charset=utf-8" \
             --data "$(jq -n --arg ch "#docs-ops" --arg txt "$TEXT" \
               '{channel: $ch, text: $txt, unfurl_links: false}')"
+
+      # --- Degradation-health lane (see header comment). Mirrors the four
+      # fail-open steps in review-existing-content.yml, contributing only the
+      # `reverify` signal — the other signals' entries are left untouched by
+      # design (signal-health.py treats absent observations as no evidence).
+      # workflow_dispatch runs are log-only: state computed and printed, never
+      # persisted, Slack never posted.
+      - name: Fetch health state from S3
+        if: always() && steps.ledger-bucket.outputs.health_uri != ''
+        continue-on-error: true
+        run: |
+          aws s3 cp "${{ steps.ledger-bucket.outputs.health_uri }}state.json" .health-state.json --quiet \
+            || echo "no prior health state (first run or S3 unavailable)"
+      - name: Record degradation signals
+        if: always()
+        continue-on-error: true
+        run: |
+          python3 scripts/content-review/signal-health.py \
+            --state .health-state.json \
+            --reverify-report .claims-reverify-report.json \
+            --alert-out .health-alert.txt \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "--- health state ---"
+          cat .health-state.json
+      # Post before persisting: a job that dies between the two steps then
+      # re-alerts next run (a harmless duplicate) instead of never alerting.
+      - name: Post degradation alert to Slack
+        if: always() && github.event_name == 'schedule' && hashFiles('.health-alert.txt') != ''
+        continue-on-error: true
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --rawfile txt .health-alert.txt \
+              '{channel: $ch, text: $txt, unfurl_links: false}')"
+      - name: Persist health state to S3
+        if: always() && github.event_name == 'schedule' && steps.ledger-bucket.outputs.health_uri != ''
+        continue-on-error: true
+        run: |
+          aws s3 cp .health-state.json "${{ steps.ledger-bucket.outputs.health_uri }}state.json" --quiet
 
 env:
   ESC_ACTION_OIDC_AUTH: true

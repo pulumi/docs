@@ -81,7 +81,7 @@
     {{ if isset $effectiveProp "enum" }}
       <div class="api-param-enum">
         <strong>Values:</strong>
-        {{ range $i, $v := $effectiveProp.enum }}{{ if $i }}, {{ end }}<code>{{ $v }}</code>{{ end }}
+        {{ partial "openapi/enum-values.html" (dict "schema" $effectiveProp) }}
       </div>
     {{ end }}
   </li>

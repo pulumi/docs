@@ -12,4 +12,4 @@ Organizations with Neo enabled can set a single dollar limit for the entire orga
 
 ![The Manage token usage panel, where an admin sets the organization's monthly Neo limit and turns on email notifications](/releases/changelog/images/2026-07-14-neo-usage-limits.png)
 
-Neo usage limits are available now for all organizations, and are configurable by organization admins and billing managers. Read the [announcement blog post](/blog/neo-usage-limits/) or the [usage limits documentation](/docs/ai/usage-limits/) to learn more.
+Neo usage limits are available now for all organizations, and are configurable by organization admins and billing managers. Read the [announcement blog post](/blog/neo-usage-limits/) or the [usage limits documentation](/docs/ai/neo/usage-limits/) to learn more.

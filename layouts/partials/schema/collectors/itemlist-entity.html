@@ -1,0 +1,50 @@
+{{/* Returns ItemList entity for a page's ranked/ordered list, driven entirely by
+     frontmatter so it never needs to parse markdown structure. Opt in per page
+     with an `itemlist` array in frontmatter, e.g.:
+
+       itemlist_name: "Core Infrastructure as Code Tools"
+       itemlist:
+         - name: "Pulumi"
+           url: "https://www.pulumi.com/"
+         - name: "Terraform"
+
+     `url` is optional per item. Returns an empty dict when `.Params.itemlist`
+     is absent or empty, so this is a safe no-op on every page that doesn't
+     opt in. */}}
+
+{{ $entity := dict }}
+
+{{ if .Params.itemlist }}
+  {{ $items := .Params.itemlist }}
+  {{ if gt (len $items) 0 }}
+
+    {{ $.Scratch.Set "listItems" slice }}
+    {{ range $i, $item := $items }}
+      {{ $position := add $i 1 }}
+      {{ $listItem := dict
+        "@type" "ListItem"
+        "position" $position
+        "name" $item.name
+      }}
+      {{ with $item.url }}
+        {{ $listItem = merge $listItem (dict "url" .) }}
+      {{ end }}
+      {{ $existing := $.Scratch.Get "listItems" }}
+      {{ $.Scratch.Set "listItems" ($existing | append $listItem) }}
+    {{ end }}
+
+    {{ $listItems := $.Scratch.Get "listItems" }}
+    {{ $.Scratch.Delete "listItems" }}
+
+    {{ $entity = dict
+      "@type" "ItemList"
+      "name" (or .Params.itemlist_name .Title)
+      "itemListOrder" "https://schema.org/ItemListOrderAscending"
+      "numberOfItems" (len $listItems)
+      "itemListElement" $listItems
+    }}
+
+  {{ end }}
+{{ end }}
+
+{{ return $entity }}

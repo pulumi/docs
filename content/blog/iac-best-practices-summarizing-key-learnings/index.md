@@ -17,16 +17,6 @@ aliases:
 
 Welcome to the final post in our series of articles focused on Infrastructure as Code best practices. In this post, we'll wrap up our recommendations for [IaC with Pulumi](/product/infrastructure-as-code/), summarizing the best practices from previous posts as well as highlighting some areas of potential future growth for the team at Zephyr Archaeotech Emporium---the fictional company at the center of the story throughout this series.<!--more-->
 
-For ease of navigation, here are links to all the blog posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* **IaC Best Practices: Summarizing Key Learnings** (this post)
-
 ## Recapping IaC Best Practices
 
 As this series has progressed, we've been showing you how Zephyr's use of Pulumi has changed in response to how the organization, the team, and the application has changed. In case you haven't been following along---or in case you need a refresher---here's a brief summary of what's happened in the series:

@@ -27,6 +27,12 @@ body.section-docs {
     --docs-card-border: var(--color-gray-200);
     --docs-ring: var(--color-violet-700);
 
+    // Code chrome (--chrome-bg/-border/-border-hover/-dots) — the light-mode violet
+    // tint now lives as a SITE-WIDE default on `body` in components/_chooser.scss, so
+    // every chooser reads violet regardless of section, not just docs. The dark block
+    // below re-points those props to the standard brand inversion; docs is the only
+    // section with a dark-mode toggle, so this file still owns the dark half.
+
     // Re-expose the semantic tokens under Tailwind's --color-* namespace so the
     // generated utilities (bg-docs-bg, text-docs-fg, border-docs-border, …) resolve
     // and flip with the theme. This MUST live here, not just in @theme: a --color-*
@@ -52,13 +58,20 @@ html[data-theme="dark"] body.section-docs {
     --docs-bg: var(--color-service-black);
     --docs-bg-alt: var(--color-violet-950);
     --docs-surface: var(--color-gray-900);
-    --docs-fg: var(--color-white);
+    --docs-fg: var(--color-gray-50);
     --docs-fg-muted: var(--color-gray-300);
-    --docs-border: #ffffff1a;
+    --docs-border: var(--color-gray-800);
     --docs-link: var(--color-violet-300);
     --docs-card: var(--color-service-black);
-    --docs-card-border: #ffffff1a;
+    --docs-card-border: var(--color-gray-800);
     --docs-ring: var(--color-violet-300);
+
+    // Code chrome — standard brand inversion of the light steps above (100↔900,
+    // 200↔800, 300↔700; dots use 300 so they stay visible on the darker chrome).
+    --chrome-bg: var(--color-violet-900);
+    --chrome-border: var(--color-violet-800);
+    --chrome-border-hover: var(--color-violet-700);
+    --chrome-dots: var(--color-violet-300);
 
     // Brand rule: the primary violet flips to lavender in dark mode everywhere
     // EXCEPT solid buttons (those pin violet-700, re-pinned below). Remapping the
@@ -521,14 +534,31 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // --- Chooser chrome: the violet card border, standard-strip bottom border,
+    //     and standalone-toolbar bottom border are all flattened to --docs-border
+    //     by the unlayered `*` border reset below; re-assert the --chrome-border
+    //     step so the dark chrome stays violet. (Backgrounds flip automatically —
+    //     --chrome-* is a per-mode custom property and `*` only resets border-color.)
+    pulumi-chooser > ul {
+        border-bottom-color: var(--chrome-border);
+    }
+
+    pulumi-chooser[type="language"]:not([option-style="none"]) {
+        border-color: var(--chrome-border);
+
+        .chooser-toolbar {
+            border-bottom-color: var(--chrome-border);
+        }
+    }
+
     // --- Chooser tabs: re-assert the underline colors (inactive = transparent,
-    //     hover = border, active = link) so the unlayered `*` border reset below
-    //     doesn't override them. ---------------------------------------------
+    //     hover = chrome-border-hover, active = link) so the unlayered `*` border
+    //     reset below doesn't override them. ----------------------------------
     pulumi-chooser > ul li {
         border-bottom-color: transparent;
 
         &:hover {
-            border-bottom-color: var(--docs-border);
+            border-bottom-color: var(--chrome-border-hover);
         }
 
         a {
@@ -549,12 +579,13 @@ html[data-theme="dark"] body.section-docs {
     }
 
     // Language toolbar tabs: re-assert the underline colors (inactive = transparent,
-    // active = link) so the unlayered `*` border reset below doesn't override them.
+    // hover = chrome-border-hover, active = link) so the unlayered `*` border reset
+    // below doesn't override them.
     .chooser-toolbar > ul li {
         border-bottom-color: transparent;
 
         &:hover {
-            border-bottom-color: var(--docs-border);
+            border-bottom-color: var(--chrome-border-hover);
         }
 
         a {
@@ -574,6 +605,30 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // --- Code panels (dark): mirror the light treatment in _code-light.scss —
+    //     wash the code surface with the darkest violet step at 50% opacity (the
+    //     page shows through the rest) and give standalone fenced code blocks the
+    //     chooser's --chrome-border, so a lone block reads as a bordered card. The
+    //     solid violet-950 surface + Min Dark syntax colors otherwise come from
+    //     _code.scss / _chroma.scss. The border shorthand also restores width/style
+    //     the unlayered `*` reset (color-only) can't touch. -------------------
+    pre:not(.mermaid),
+    .chroma,
+    .bg {
+        background-color: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
+    }
+
+    .example-program .example-program-footer,
+    .code-tabbed .code-tabbed-tabs,
+    .code-tabbed .code-tabbed-content,
+    .code-tabbed .code-tabbed-status {
+        background: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
+    }
+
+    .highlight:not(pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) pre:not(.mermaid) {
+        border: 1px solid var(--chrome-border);
+    }
+
     pulumi-tabs::part(tab) {
         border-bottom-color: var(--docs-border);
     }
@@ -585,9 +640,14 @@ html[data-theme="dark"] body.section-docs {
     // --- Badges -------------------------------------------------------------
     // Soft variants are `{color}-muted` bg + `{color}-primary` text in light mode;
     // dark flips them to a deep `{color}-950` fill + light `{color}-300` text.
+    // Warning follows the token's yellow semantic; preview/beta keeps amber.
+    .badge-warning {
+        background-color: var(--color-yellow-950);
+        color: var(--color-yellow-300);
+    }
+
     // The chooser pill is a bare `li > span` that gets its skin from
     // `@extend .badge-preview` (no literal class), so it needs naming here too.
-    .badge-warning,
     .badge-preview,
     pulumi-chooser > ul li > span {
         background-color: var(--color-orange-950);
@@ -750,7 +810,7 @@ html[data-theme="dark"] body.section-docs {
 // ---------------------------------------------------------------------------
 html[data-theme="dark"] body.section-docs {
     // Headings and paragraphs set `color: service-black` DIRECTLY on the element
-    // (_base-shared.scss, @layer base) — a direct declaration beats the color
+    // (shared/_base.scss, @layer base) — a direct declaration beats the color
     // they'd inherit from `main`, so they must be flipped on the element itself.
     h1,
     h2,
@@ -762,7 +822,7 @@ html[data-theme="dark"] body.section-docs {
         color: var(--docs-fg);
     }
 
-    // _base-shared.scss preflight sets the default border-color to gray-200 so
+    // shared/_base.scss preflight sets the default border-color to gray-200 so
     // bare `border` / `border-t` utilities render. Flip that default to the dark
     // hairline; elements with an explicit (higher-specificity) border color keep
     // it, and buttons keep their intentional transparent border (re-pinned below).

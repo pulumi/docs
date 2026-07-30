@@ -32,6 +32,50 @@ document.addEventListener("DOMContentLoaded", () => {
     const paginator = document.querySelector<HTMLElement>("[data-paginator]");
     const filterBar = document.querySelector<HTMLElement>("[data-blog-filter]");
 
+    // --- Homepage list/card view toggle ---------------------------------------
+    // Each row carries both a compact and a card representation; `.is-cards` on
+    // the list container swaps which one shows (see _blog.scss). Appended /
+    // filtered rows clone the same markup, so they inherit the current view for
+    // free. The choice is remembered across visits.
+    const viewToggle = document.querySelector<HTMLElement>("[data-blog-view-toggle]");
+    if (viewToggle) {
+        const VIEW_KEY = "pulumi-blog-view";
+        const applyView = (view: string) => {
+            const cards = view === "cards";
+            list.classList.toggle("is-cards", cards);
+            viewToggle.querySelectorAll<HTMLElement>("[data-view]").forEach(btn => {
+                const on = (btn.dataset.view || "list") === (cards ? "cards" : "list");
+                if (on) {
+                    btn.setAttribute("aria-current", "page");
+                } else {
+                    btn.removeAttribute("aria-current");
+                }
+            });
+        };
+        let stored: string | null = null;
+        try {
+            stored = localStorage.getItem(VIEW_KEY);
+        } catch {
+            // localStorage unavailable (private mode / blocked) — default view.
+        }
+        if (stored === "cards") {
+            applyView("cards");
+        }
+        viewToggle.addEventListener("click", e => {
+            const btn = (e.target as HTMLElement).closest<HTMLElement>("[data-view]");
+            if (!btn) {
+                return;
+            }
+            const view = btn.dataset.view || "list";
+            applyView(view);
+            try {
+                localStorage.setItem(VIEW_KEY, view);
+            } catch {
+                // Ignore persistence failures; the toggle still works this session.
+            }
+        });
+    }
+
     // Snapshot the server-rendered "All" state so the filter can restore it.
     const originalHTML = list.innerHTML;
     const originalNextUrl = paginator ? paginator.getAttribute("data-next-url") : null;

@@ -18,10 +18,10 @@ aliases:
 - /docs/concepts/projects/project-file/
 ---
 
-Every Pulumi program has a project file, `Pulumi.yaml`, which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/intro/concepts/project/).
+Every Pulumi program has a project file, `Pulumi.yaml`, which specifies metadata about your project, such as the project name and language runtime. The project file must begin with a capital `P` and have an extension of either `.yml` or `.yaml`. For more information about Pulumi projects, see the following [Pulumi projects overview](/docs/iac/concepts/projects/).
 
 {{< notes >}}
-For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but also contains the program's infrastructure definition itself. For instance, `resources`, `variables`, and `outputs` are [top-level properties that define your infrastructure](/docs/iac/languages-sdks/yaml/yaml-language-reference/). To learn more, see [Pulumi YAML](/docs/intro/languages/yaml/).
+For Pulumi programs specifically written in Pulumi YAML, the project file not only serves as a configuration and metadata repository but also contains the program's infrastructure definition itself. For instance, `resources`, `variables`, and `outputs` are [top-level properties that define your infrastructure](/docs/iac/languages-sdks/yaml/yaml-language-reference/). To learn more, see [Pulumi YAML](/docs/iac/languages-sdks/yaml/).
 {{< /notes >}}
 
 ## Attributes
@@ -38,7 +38,7 @@ For Pulumi programs specifically written in Pulumi YAML, the project file not on
 | `packages` | optional | Additional packages to be used in the program (Added in v3.157.0.) | [packages](#packages-options) |
 | `main` | optional | Path to the Pulumi program, relative to the location of `Pulumi.yaml`. The default is the current working directory. | None |
 | `stackConfigDir` | optional | Config directory location relative to the location of `Pulumi.yaml`. | None |
-| `backend` | optional | [Backend](/docs/concepts/state/) of the project. | [backend options](#backend-options) |
+| `backend` | optional | [Backend](/docs/iac/concepts/state-and-backends/) of the project. | [backend options](#backend-options) |
 | `options` | optional | Additional project options. | [options options](#options-options) |
 | `template` | optional | Config to be used when creating new stacks in the project. | [template options](#template-options) |
 | `plugins` | optional | Override for the plugin selection. Intended for use in developing pulumi plugins.  | [plugins options](#plugins-options) |

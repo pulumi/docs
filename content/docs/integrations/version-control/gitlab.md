@@ -60,7 +60,7 @@ After creating an integration, you can configure merge request behavior. Toggle 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitLab merge requests |
-| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in merge request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in merge request comments (requires [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in merge request comments |
 
 To delete an integration, select **Delete Integration** on the integration card. This removes the webhook from your GitLab group and disconnects all stacks using that integration.
@@ -85,7 +85,7 @@ Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a confi
 
 You can use path filters to limit deployments to commits that change files matching specific glob patterns (e.g., `infrastructure/**`).
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/tag-filtering/).
 
 {{% notes type="warning" %}}
 GitLab integrations created before tag triggers were introduced did not subscribe to GitLab's **Tag push events** webhook, so they will not receive tag pushes until that event is enabled. You don't need to re-create the integration — instead, edit the existing group webhook in GitLab under **Settings** > **Webhooks**, open the Pulumi webhook (the `https://api.pulumi.com/workflow/gitlab` endpoint), and enable **Tag push events**. Re-creating the integration also works, since new integrations subscribe to tag push events automatically.

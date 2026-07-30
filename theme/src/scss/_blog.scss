@@ -8,7 +8,7 @@
     // Algolia's autocomplete (theme/src/ts/algolia/autocomplete.ts) upgrades the
     // #search div into a detached *button*. Style it as a plain ghost icon
     // button, identical to the adjacent RSS button (.btn-icon.btn-ghost — a
-    // size-9 square, rounded-lg, text-gray-950/hover:bg-gray-100, size-6 icon).
+    // size-9 square, rounded-md, text-gray-950/hover:bg-gray-100, size-6 icon).
     // Do NOT change detachedMediaQuery — /docs shares the same autocomplete code.
     .aa-DetachedSearchButton {
         @extend .btn, .btn-icon, .btn-ghost;
@@ -44,6 +44,23 @@
     @apply border-gray-500 bg-gray-100;
 }
 
+// Homepage feed list/card view toggle (partials/blog/view-toggle.html +
+// theme/src/ts/blog-list.ts). Each row (partials/blog/card/list-row.html)
+// carries both a compact and a card representation; `.is-cards` on the
+// container swaps which one shows. `!important` beats the utilities-layer
+// display classes (`flex`/`hidden`) on the two row wrappers.
+[data-post-list].is-cards [data-row-compact] {
+    display: none !important;
+}
+[data-post-list].is-cards [data-row-card] {
+    display: flex !important;
+}
+
+// Selected pill in the view toggle — matches the category filter's active state.
+[data-blog-view-toggle] [aria-current="page"] {
+    @apply border-gray-500 bg-gray-100;
+}
+
 // Offset anchor / TOC jumps so the target heading clears the sticky site nav
 // instead of hiding under it.
 .blog-post-content :is(h1, h2, h3, h4, h5, h6) {
@@ -55,7 +72,7 @@
 // compiles into @layer components, and the link's own text-service-black lives
 // in the later utilities layer, which wins regardless of specificity.
 [data-blog-toc] a.is-active,
-[data-case-study-toc] a.is-active {
+[data-section-toc] a.is-active {
     @apply text-violet-primary!;
 }
 
@@ -69,10 +86,10 @@
     input:not(.hs-button) {
         // This single-field newsletter form has no <fieldset>, so the normalized
         // `.hs-form fieldset input` base never reaches it — set chrome in full here.
-        // h-10 + rounded-lg matches the adjacent submit (.btn-lg). Vertical padding
+        // h-10 + rounded-md matches the adjacent submit (.btn-lg). Vertical padding
         // comes from the .newsletter base py-3 in _hubspot.scss (same specificity,
         // later import — it wins the tie); h-10 pins the height regardless.
-        @apply h-10 rounded-lg border-gray-300 bg-white text-service-black;
+        @apply h-10 rounded-md border-gray-300 bg-white text-service-black;
 
         &:focus {
             @apply border-violet-primary outline-none ring-2 ring-violet-primary/30;
@@ -94,7 +111,7 @@
         // bg-white also masks the footer's global dark newsletter-inline palette).
         // z-10 on focus lifts the input above the seam so its full (focused) border
         // renders over the adjacent button.
-        @apply relative h-9 w-44 rounded-l-lg rounded-r-none! border-gray-300 bg-white py-1.75 text-sm text-service-black;
+        @apply relative h-9 w-44 rounded-l-md rounded-r-none! border-gray-300 bg-white py-1.75 text-sm text-service-black;
 
         &:focus {
             @apply z-10 border-violet-primary outline-none ring-2 ring-violet-primary/30;

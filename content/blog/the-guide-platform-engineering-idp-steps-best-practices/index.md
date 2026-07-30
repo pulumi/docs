@@ -58,6 +58,7 @@ social:
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+faq_schema: true
 ---
 
 In today’s fast-paced digital landscape, organizations are increasingly adopting platform engineering to optimize their software delivery and operations. Gartner predicts that by 2026, 80% of large software engineering organizations will have platform engineering teams to provide reusable services, components, and tools for application delivery. Additionally, by 2027, 80% of large enterprises will leverage platform engineering to scale DevOps initiatives in hybrid cloud environments effectively.

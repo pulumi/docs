@@ -102,7 +102,7 @@ their containers without having to manage servers or clusters. As part of this n
 removing additional complexity from their service architecture while making it easier to
 scale.
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/learning-machine-architecture.png" alt="Learning machine architecture">
+![Learning Machine architecture](/images/case-studies/learning-machine-architecture.png)
 
 ## Results
 

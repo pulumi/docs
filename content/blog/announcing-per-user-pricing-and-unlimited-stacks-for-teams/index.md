@@ -7,6 +7,7 @@ authors: ["joe-duffy"]
 tags:
   - features
 category: product
+faq_schema: true
 ---
 
 {{% notes type="warning" %}}

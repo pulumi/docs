@@ -1,0 +1,2797 @@
+{
+  "applied": false,
+  "displayName": "",
+  "name": "hitrust-google-cloud",
+  "policies": [
+    {
+      "configSchema": {
+        "properties": {
+          "allowedFormats": {
+            "description": "List of allowed repository formats (DOCKER, MAVEN, NPM, etc.). If not specified, all formats must use KMS keys.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "requiredKmsKeyPattern": {
+            "description": "Regular expression pattern that KMS key names must match",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Artifact Registry repositories to use customer-managed Cloud KMS keys for encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "artifactregistry-customer-kms",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key\n\n```typescript\nconst repository = new gcp.artifactregistry.Repository(\"my-repository\", {\n    repositoryId: \"my-repo\",\n    format: \"DOCKER\",\n    kmsKeyName: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Specify customer-managed KMS key\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcedFormats": {
+            "description": "List of repository formats that must enforce immutable images (default: ['DOCKER'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFormats": {
+            "description": "List of repository formats exempt from immutable image requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Artifact Registry repositories to disallow mutable images for security and compliance",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.h Control of Operational Software",
+        "specification": "There shall be restrictions on the installation of software by users. Controls shall be in place to restrict access to program source code.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "artifactregistry-immutable-images",
+      "remediationSteps": "## Fix: Enable Immutable Tags for Docker Repositories\n\n```typescript\nconst repository = new gcp.artifactregistry.Repository(\"my-repository\", {\n    repositoryId: \"my-repo\",\n    format: \"DOCKER\",\n    dockerConfig: {\n        immutableTags: true,  // Prevent tag overwrites to ensure image integrity\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require BigQuery datasets to use customer-managed Cloud KMS keys",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bigquery-dataset-kms",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key\n\n```typescript\nconst dataset = new gcp.bigquery.Dataset(\"my-dataset\", {\n    datasetId: \"example_dataset\",\n    defaultEncryptionConfiguration: {\n        kmsKeyName: cryptoKey.id,  // Set customer-managed KMS key for encryption\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt tables list",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTables": {
+            "description": "List of table names exempt from change stream requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumRetentionHours": {
+            "description": "Maximum allowed retention period in hours (default: 168/7 days)",
+            "type": "number"
+          },
+          "minimumRetentionHours": {
+            "description": "Minimum change stream retention period in hours (default: 24, max: 168)",
+            "type": "number"
+          },
+          "requiredInstances": {
+            "description": "List of Bigtable instance names that must have change streams enabled",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Bigtable tables to have change streams enabled for change tracking",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.c Control of Internal Processing",
+        "specification": "Controls shall be in place to ensure the correct processing of information in applications.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bigtable-change-streams",
+      "remediationSteps": "## Fix: Enable Change Stream Retention\n\n```typescript\nconst bigtableTable = new gcp.bigtable.Table(\"my-table\", {\n    instanceName: \"my-bigtable-instance\",\n    changeStreamRetention: \"72h0m0s\",  // Enable change streams with 3-day retention\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to have access logging enabled for audit trails",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.e Service Delivery",
+        "specification": "Automated logging procedures shall be implemented to enable monitoring and detection of security events.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-access-logging",
+      "remediationSteps": "## Fix: Enable Access Logging\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    logging: {\n        logBucket: \"my-logging-bucket\",  // Specify the bucket for access logs\n        logObjectPrefix: \"bucket-logs/\", // Optional prefix for log objects\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to use customer-managed Cloud KMS keys for encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-customer-managed-kms",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    encryption: {\n        defaultKmsKeyName: \"projects/my-project/locations/us/keyRings/my-keyring/cryptoKeys/my-key\",  // Specify customer-managed KMS key\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns in exemptBuckets list",
+            "type": "boolean"
+          },
+          "dlpServiceAccountEmail": {
+            "description": "DLP service account email (defaults to project DLP service account)",
+            "type": "string"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBuckets": {
+            "description": "List of bucket names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireDlpAccess": {
+            "default": true,
+            "description": "Require DLP service account access to buckets",
+            "type": "boolean"
+          },
+          "requiredDlpRoles": {
+            "default": [
+              "roles/storage.objectViewer"
+            ],
+            "description": "Required roles for DLP service account access",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to have appropriate access for data classification services like Cloud DLP",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-dlp-access",
+      "remediationSteps": "## Fix: Grant DLP Service Account Access\n\n```typescript\nconst bucketIamPolicy = new gcp.storage.BucketIAMPolicy(\"bucket-iam\", {\n    bucket: bucket.name,\n    policyData: JSON.stringify({\n        bindings: [\n            {\n                role: \"roles/storage.objectViewer\",\n                members: [\n                    \"serviceAccount:service-{project-number}@dlp-api.iam.gserviceaccount.com\",  // Grant DLP service account access\n                ],\n            },\n            // ... other bindings\n        ],\n    }),\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege access for Cloud Storage bucket IAM policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.v Information Access Restriction",
+        "specification": "Access to systems and applications shall be restricted in accordance with the access control policy.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-iam-least-privilege",
+      "remediationSteps": "## Fix: Use Specific Least Privilege Roles\n\n```typescript\n// Instead of overly broad roles like storage.admin or storage.objectAdmin\n// Use specific roles based on actual needs:\n\n// For read-only access\nconst viewerBinding = new gcp.storage.BucketIAMBinding(\"viewer-binding\", {\n    bucket: bucket.name,\n    role: \"roles/storage.objectViewer\",  // Read-only access to objects\n    members: [\"user:viewer@example.com\"],\n});\n\n// For write-only access\nconst creatorBinding = new gcp.storage.BucketIAMBinding(\"creator-binding\", {\n    bucket: bucket.name,\n    role: \"roles/storage.objectCreator\",  // Write-only access (no read)\n    members: [\"serviceAccount:app@project.iam.gserviceaccount.com\"],\n});\n\n// Avoid these overly broad roles:\n// - roles/storage.admin\n// - roles/storage.objectAdmin\n// - roles/owner\n// - roles/editor\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to have lifecycle management policies configured",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-lifecycle",
+      "remediationSteps": "## Fix: Configure Lifecycle Rules\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    lifecycleRules: [\n        {\n            action: {\n                type: \"Delete\",  // Delete old objects\n            },\n            condition: {\n                age: 365,  // After 365 days\n            },\n        },\n        {\n            action: {\n                type: \"SetStorageClass\",\n                storageClass: \"NEARLINE\",  // Archive to cheaper storage\n            },\n            condition: {\n                age: 90,  // After 90 days\n            },\n        },\n    ],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to have multi-region replication for business continuity",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-multi-region",
+      "remediationSteps": "## Fix: Configure Multi-Region Replication\n\n```typescript\n// Option 1: Use multi-region location\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",  // Multi-region location (US, EU, or ASIA)\n    // ... other config\n});\n\n// Option 2: Use dual-region location\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"NAM4\",  // Dual-region location\n    // ... other config\n});\n\n// Option 3: Use custom placement with multiple data locations\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    customPlacementConfig: {\n        dataLocations: [\"US-EAST1\", \"US-WEST1\"],  // Specify at least 2 regions\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to disallow public read access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-no-public-read",
+      "remediationSteps": "## Fix: Enforce Public Access Prevention\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    publicAccessPrevention: \"enforced\",  // Prevent all public access\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Storage buckets to have uniform bucket-level access enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-uniform-access",
+      "remediationSteps": "## Fix: Enable Uniform Bucket-Level Access\n\n```typescript\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    uniformBucketLevelAccess: true,  // Enable uniform bucket-level access\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Cloud Storage bucket versioning is enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "bucket-versioning",
+      "remediationSteps": "Enable versioning on Cloud Storage buckets by setting versioning.enabled to true to protect against accidental deletion or modification.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"versioned-bucket\", {\n    location: \"US\",\n    versioning: {\n        enabled: true,\n    },\n});\n```\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst bucket = new gcp.storage.Bucket(\"my-bucket\", {\n    location: \"US\",\n    versioning: {\n        enabled: true,\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require public-facing applications to have Cloud Armor protection",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloud-armor",
+      "remediationSteps": "## Fix: Configure Cloud Armor Security Policy\n\n```typescript\n// Create Cloud Armor security policy with protection rules\nconst securityPolicy = new gcp.compute.SecurityPolicy(\"web-security-policy\", {\n    rules: [\n        {\n            action: \"rate_based_ban\",\n            priority: 1000,\n            match: {\n                versionedExpr: \"SRC_IPS_V1\",\n                config: {\n                    srcIpRanges: [\"*\"],\n                },\n            },\n            rateLimitOptions: {\n                conformAction: \"allow\",\n                exceedAction: \"deny(429)\",\n                rateLimitThreshold: {\n                    count: 100,\n                    intervalSec: 60,\n                },\n            },\n            description: \"Rate limiting rule\",\n        },\n    ],\n});\n\n// Attach security policy to backend service\nconst backendService = new gcp.compute.BackendService(\"web-backend\", {\n    protocol: \"HTTPS\",\n    securityPolicy: securityPolicy.id,  // Attach Cloud Armor for DDoS and WAF protection\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "acceptableLoggingValues": {
+            "default": [
+              "CLOUD_LOGGING_ONLY",
+              "LEGACY"
+            ],
+            "description": "Acceptable values for build.options.logging",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns in exemptTriggers list",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTriggers": {
+            "description": "List of trigger names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Build triggers to have secure logging configurations",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.z Publicly Available Information",
+        "specification": "Publicly available information shall be protected against unauthorized modification or deletion.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloud-build-logging",
+      "remediationSteps": "## Fix: Configure Secure Logging\n\n```typescript\nconst trigger = new cloudbuild.Trigger(\"my-trigger\", {\n    build: {\n        logsBucket: \"gs://my-logs-bucket/build-logs\",  // Configure centralized logs bucket\n        options: {\n            logging: \"CLOUD_LOGGING_ONLY\",  // Use Cloud Logging for audit trails\n        },\n        // ... other config\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns in exemptBackends list",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptBackends": {
+            "description": "List of backend service/bucket names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud CDN to have Cloud Armor configuration for DDoS protection",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloud-cdn-armor",
+      "remediationSteps": "## Fix: Attach Cloud Armor Security Policy to CDN\n\n```typescript\n// Create a Cloud Armor security policy\nconst securityPolicy = new gcp.compute.SecurityPolicy(\"cdn-security-policy\", {\n    rules: [{\n        action: \"deny(403)\",\n        priority: 1000,\n        match: {\n            versionedExpr: \"SRC_IPS_V1\",\n            config: {\n                srcIpRanges: [\"9.9.9.0/24\"],\n            },\n        },\n        description: \"Deny access to example IP range\",\n    }],\n});\n\n// For BackendService: attach security policy\nconst backendService = new gcp.compute.BackendService(\"cdn-backend\", {\n    enableCdn: true,\n    securityPolicy: securityPolicy.id,  // Attach Cloud Armor policy for DDoS protection\n    // ... other config\n});\n\n// For BackendBucket: attach edge security policy\nconst backendBucket = new gcp.compute.BackendBucket(\"cdn-bucket-backend\", {\n    enableCdn: true,\n    edgeSecurityPolicy: securityPolicy.id,  // Attach Cloud Armor policy for DDoS protection\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud CDN to use secure TLS to origin",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloud-cdn-origin-tls",
+      "remediationSteps": "## Fix: Enable HTTPS Protocol for CDN Backend Service\n\n```typescript\nconst backendService = new gcp.compute.BackendService(\"cdn-backend\", {\n    enableCdn: true,\n    protocol: \"HTTPS\",  // Use HTTPS for secure communication to origin\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maxAttempts": {
+            "description": "Maximum allowed retry attempts (default: 100)",
+            "type": "number"
+          },
+          "minAttempts": {
+            "description": "Minimum allowed retry attempts (default: 1)",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Tasks queues to have proper retry configuration for business continuity",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloud-tasks-retry-configuration",
+      "remediationSteps": "## Fix: Configure Retry Policy with Max Attempts\n\n```typescript\nconst queue = new gcp.cloudtasks.Queue(\"my-queue\", {\n    retryConfig: {\n        maxAttempts: 10,  // Set reasonable max retry attempts\n        maxRetryDuration: \"3600s\",  // Set max retry duration (1 hour)\n        minBackoff: \"0.1s\",\n        maxBackoff: \"3600s\",\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt functions list for pattern matching",
+            "type": "boolean"
+          },
+          "descriptionPatterns": {
+            "description": "Required regex patterns that must appear in function descriptions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforceLabelsDocumentation": {
+            "default": true,
+            "description": "Require documentation-specific labels (default: true)",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from documentation requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minDescriptionLength": {
+            "description": "Minimum required description length in characters (default: 20)",
+            "type": "number"
+          },
+          "requiredLabels": {
+            "description": "List of required label keys for documentation (e.g., ['team', 'purpose', 'environment'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Functions to have adequate documentation",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.b Change Management",
+        "specification": "Changes to systems, applications and supporting infrastructure shall be controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudfunctions-documentation",
+      "remediationSteps": "## Fix: Add Function Documentation\n\n```typescript\nconst func = new gcp.cloudfunctions.Function(\"my-function\", {\n    description: \"Processes customer orders from Pub/Sub and stores results in BigQuery\",  // Add descriptive documentation\n    labels: {\n        purpose: \"order-processing\",  // Document function purpose\n        team: \"backend-team\",  // Document ownership\n        // ... other labels\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt functions list for pattern matching",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from timeout restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maxTimeoutSeconds": {
+            "description": "Maximum allowed timeout in seconds for Cloud Functions (default: 540 seconds / 9 minutes)",
+            "type": "number"
+          },
+          "warnThresholdSeconds": {
+            "description": "Threshold in seconds to issue warnings for potentially long-running functions",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Limit Cloud Functions execution time to prevent extended access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.u Limitation of Connection Time",
+        "specification": "Connection times shall be limited to minimize the opportunity for unauthorized access.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudfunctions-execution-time",
+      "remediationSteps": "## Fix: Limit Execution Timeout\n\n```typescript\nconst func = new gcp.cloudfunctions.Function(\"my-function\", {\n    timeout: 60,  // Set reasonable timeout in seconds (max 540)\n    // ... other config\n});\n\n// For Cloud Functions v2\nconst funcV2 = new gcp.cloudfunctionsv2.Function(\"my-function-v2\", {\n    serviceConfig: {\n        timeoutSeconds: 60,  // Set reasonable timeout in seconds (max 540)\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedBroadMembers": {
+            "description": "List of broad members (allUsers, allAuthenticatedUsers) allowed for specific use cases",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptRoles": {
+            "description": "List of IAM roles exempt from source restriction requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "restrictedMembers": {
+            "description": "List of specific members that are prohibited from accessing functions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Functions IAM bindings to configure source restrictions",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudfunctions-iam-source-restrictions",
+      "remediationSteps": "## Fix: Use Specific IAM Members\n\n```typescript\nconst iamMember = new gcp.cloudfunctions.FunctionIamMember(\"my-function-invoker\", {\n    cloudFunction: myFunction.name,\n    role: \"roles/cloudfunctions.invoker\",\n    member: \"serviceAccount:my-service@project.iam.gserviceaccount.com\",  // Use specific service account instead of allUsers\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt functions list",
+            "type": "boolean"
+          },
+          "allowedKeyRings": {
+            "description": "List of allowed key rings for encryption (e.g., ['security-keyring', 'app-keyring'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from KMS encryption requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumKeyPathElements": {
+            "default": 6,
+            "description": "Minimum number of path elements required in KMS key name (default: 6)",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Functions environment variables to be encrypted with Cloud KMS",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.d Message Integrity",
+        "specification": "Messages shall be protected against unauthorized modification. Integrity controls shall be applied to detect unauthorized modification of information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudfunctions-kms-env-vars",
+      "remediationSteps": "## Fix: Encrypt Environment Variables with KMS\n\n```typescript\nconst func = new gcp.cloudfunctions.Function(\"my-function\", {\n    environmentVariables: {\n        API_KEY: \"sensitive-value\",\n        DATABASE_URL: \"postgres://...\",\n    },\n    kmsKeyName: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Add KMS key for encryption\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt functions list",
+            "type": "boolean"
+          },
+          "allowedLogSinks": {
+            "description": "List of allowed log sink configurations (e.g., ['cloud-logging', 'custom-sink'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from logging requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumLogLevel": {
+            "description": "Minimum required log level (DEBUG, INFO, WARNING, ERROR)",
+            "enum": [
+              "DEBUG",
+              "INFO",
+              "WARNING",
+              "ERROR"
+            ],
+            "type": "string"
+          },
+          "requireLogSink": {
+            "default": false,
+            "description": "Require specific log sink configuration to be specified",
+            "type": "boolean"
+          },
+          "requireStructuredLogging": {
+            "default": false,
+            "description": "Require structured logging format configuration",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Functions to have logging configuration enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.e Output Data Validation",
+        "specification": "Output data shall be validated to ensure that stored data is not corrupted as a result of processing errors or deliberate acts.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudfunctions-logging",
+      "remediationSteps": "## Fix: Enable Logging Configuration\n\n```typescript\nconst func = new gcp.cloudfunctions.Function(\"my-function\", {\n    environmentVariables: {\n        LOG_FORMAT: \"json\",  // Enable structured logging\n        LOG_LEVEL: \"INFO\",  // Set appropriate log level\n    },\n    labels: {\n        \"log-sink\": \"cloud-logging\",  // Configure log sink\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt functions list",
+            "type": "boolean"
+          },
+          "approvedRuntimePatterns": {
+            "description": "Regular expression patterns for approved runtimes (e.g., ['nodejs1[8-9]', 'python3[9-1][0-9]'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "approvedRuntimes": {
+            "description": "List of explicitly approved runtime versions (e.g., ['nodejs18', 'python39', 'go119'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "blockedRuntimes": {
+            "description": "Explicitly blocked runtime versions (e.g., ['nodejs12', 'python37'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptFunctions": {
+            "description": "List of function names exempt from runtime version requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumRuntimeVersions": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "description": "Minimum required versions by runtime type (e.g., {nodejs: '18', python: '39'})",
+            "type": "object"
+          },
+          "usePatternMatching": {
+            "default": false,
+            "description": "Use pattern matching instead of explicit runtime list",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Restrict Cloud Functions to approved runtime versions only",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.h Control of Operational Software",
+        "specification": "There shall be restrictions on the installation of software by users. Controls shall be in place to restrict access to program source code.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudfunctions-runtime-versions",
+      "remediationSteps": "## Fix: Use Approved Runtime Version\n\n```typescript\nconst func = new gcp.cloudfunctions.Function(\"my-function\", {\n    runtime: \"nodejs20\",  // Use current supported runtime (e.g., nodejs20, python311, go121)\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud SQL instances to have backup retention enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudsql-backup",
+      "remediationSteps": "## Fix: Enable Backup Configuration\n\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        backupConfiguration: {\n            enabled: true,  // Enable backups\n            pointInTimeRecoveryEnabled: true,  // Enable PITR for PostgreSQL/MySQL\n        },\n        // ... other config\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Cloud SQL instances have regional high availability enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudsql-high-availability",
+      "remediationSteps": "Enable regional high availability for Cloud SQL instances by setting availabilityType to 'REGIONAL'. This provides automatic failover and data replication across zones within a region.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst instance = new gcp.sql.DatabaseInstance(\"my-db-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    settings: {\n        tier: \"db-f1-micro\",\n        availabilityType: \"REGIONAL\",\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedDays": {
+            "description": "Array of allowed maintenance days (1-7, where 1=Sunday)",
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "allowedHours": {
+            "description": "Array of allowed maintenance hours (0-23)",
+            "items": {
+              "type": "number"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "updateTrack": {
+            "description": "Required update track ('stable' or 'canary')",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud SQL instances to use managed service patching",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.k Change Control Procedures",
+        "specification": "Change control procedures shall be established to ensure adequate assessment and authorization of all changes to information processing facilities.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudsql-patching",
+      "remediationSteps": "## Fix: Configure Maintenance Window for Automatic Patching\n\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        maintenanceWindow: {\n            updateTrack: \"stable\",  // Use stable update track for patching\n            day: 7,  // Saturday (1=Sunday, 7=Saturday)\n            hour: 3,  // 3 AM\n        },\n        // ... other config\n    },\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Restrict public access for Cloud SQL instances",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudsql-private-ip",
+      "remediationSteps": "Disable public IP by setting ipv4Enabled to false and configure privateNetwork in ipConfiguration. Remove authorized networks that allow 0.0.0.0/0 access.\n\nExample Pulumi TypeScript:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst instance = new gcp.sql.DatabaseInstance(\"my-db-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    region: \"us-central1\",\n    settings: {\n        tier: \"db-f1-micro\",\n        ipConfiguration: {\n            ipv4Enabled: false,\n            privateNetwork: \"projects/my-project/global/networks/my-vpc\",\n        },\n    },\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud SQL instances to use secure master credentials management",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudsql-secure-credentials",
+      "remediationSteps": "## Fix: Use IAM Authentication and Secure Password Management\n\n```typescript\n// For Cloud SQL instance: Enable IAM authentication\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        databaseFlags: [\n            {\n                name: \"cloudsql_iam_authentication\",\n                value: \"on\",  // Enable IAM authentication\n            },\n        ],\n        passwordValidationPolicy: {\n            enablePasswordPolicy: true,  // Enable password validation\n        },\n        // ... other config\n    },\n    // Do not set rootPassword - use auto-generated or Secret Manager\n});\n\n// For Cloud SQL users: Use IAM-based authentication\nconst sqlUser = new gcp.sql.User(\"my-sql-user\", {\n    instance: sqlInstance.name,\n    name: \"user@example.com\",\n    type: \"CLOUD_IAM_USER\",  // Use IAM user type instead of built-in\n    // Do not set password field for IAM users\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud SQL connections to use SSL/TLS encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "cloudsql-ssl",
+      "remediationSteps": "## Fix: Require SSL/TLS for All Connections\n\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        ipConfiguration: {\n            sslMode: \"ENCRYPTED_ONLY\",  // Require SSL/TLS for all connections\n            // ... other config\n        },\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Compute Engine instances to have encrypted attached disks",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "compute-instance-encrypted-attached-disk",
+      "remediationSteps": "## Fix: Encrypt Attached Disks with CMEK\n\n```typescript\nconst instance = new compute.Instance(\"my-instance\", {\n    attachedDisks: [{\n        source: myDisk.selfLink,\n        kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use CMEK for attached disk encryption\n    }],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Compute Engine instances to have encrypted boot disks",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "compute-instance-encrypted-boot-disk",
+      "remediationSteps": "## Fix: Enable Boot Disk Encryption with CMEK\n\n```typescript\nconst instance = new compute.Instance(\"my-instance\", {\n    bootDisk: {\n        initializeParams: {\n            image: \"debian-cloud/debian-11\",\n        },\n        kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use customer-managed encryption key\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Compute Engine instances are not publicly accessible",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "compute-no-public-ip",
+      "remediationSteps": "Remove accessConfigs from networkInterfaces to disable external IP assignment:\n\n```typescript\nnew gcp.compute.Instance(\"my-instance\", {\n  networkInterfaces: [{\n    network: \"my-vpc\",\n    subnetwork: \"my-subnet\",\n    // accessConfigs: [], // Remove or set to empty array\n  }],\n  canIpForward: false,\n});\n```\n\nUse Cloud NAT or load balancers for controlled external access.",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "description": "Enable pattern matching for instance names. When enabled, exemptInstances supports wildcards (*).",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptInstances": {
+            "description": "List of compute instance names to exempt from OS Config requirements. Supports wildcard patterns when allowPatternMatching is enabled.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requireBothMetadataFlags": {
+            "description": "Require both enable-osconfig and enable-guest-attributes metadata. When false, only enable-osconfig is required.",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require OS Config agent for vulnerability management on compute instances",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.m Control of Technical Vulnerabilities",
+        "specification": "Vulnerabilities shall be identified and associated with risk levels. Technical vulnerabilities of information systems shall be managed in a timely fashion.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "compute-osconfig-vulnerability",
+      "remediationSteps": "## Fix: Enable OS Config Agent\n\n```typescript\nconst instance = new compute.Instance(\"my-instance\", {\n    metadata: {\n        \"enable-osconfig\": \"TRUE\",  // Enable OS Config for vulnerability scanning\n        \"enable-guest-attributes\": \"TRUE\",  // Enable guest attributes for older agent versions\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce strict network access controls for database resources",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "database-network-access",
+      "remediationSteps": "## Fix: Configure Strict Network Access Controls\n\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-sql-instance\", {\n    databaseVersion: \"POSTGRES_15\",\n    settings: {\n        ipConfiguration: {\n            ipv4Enabled: false,  // Disable public IP\n            privateNetwork: \"projects/my-project/global/networks/my-vpc\",  // Use private network\n            sslMode: \"ENCRYPTED_ONLY\",  // Require SSL/TLS\n            // Do not include overly broad authorized networks\n        },\n    },\n    deletionProtection: true,  // Enable deletion protection\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns in exempt lists",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptJobs": {
+            "description": "List of Dataflow job names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptPipelines": {
+            "description": "List of Dataflow pipeline names to exempt from this policy",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "kmsKeyPattern": {
+            "description": "Regular expression pattern that KMS keys must match",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Dataflow jobs and pipelines to use customer-managed Cloud KMS keys",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "dataflow-kms",
+      "remediationSteps": "## Fix: Configure KMS Encryption for Dataflow\n\n```typescript\nconst job = new dataflow.Job(\"my-job\", {\n    kmsKeyName: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use CMEK for data encryption\n    // ... other config\n});\n\n// For Dataflow Pipeline\nconst pipeline = new dataflow.Pipeline(\"my-pipeline\", {\n    workload: {\n        dataflowFlexTemplateRequest: {\n            launchParameter: {\n                environment: {\n                    kmsKeyName: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use CMEK for data encryption\n                },\n            },\n        },\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "environmentKey": {
+            "default": "environment",
+            "description": "Key name for environment label",
+            "type": "string"
+          },
+          "validEnvironments": {
+            "description": "List of valid environment values (default: ['development', 'staging', 'production'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require all labelable resources to have an environment label",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.d Separation of Development Test and Operational Environments",
+        "specification": "Segregation of test, development and operational environments shall be maintained to ensure that the test and development environments do not adversely impact the operational environment.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "environment-label",
+      "remediationSteps": "## Fix: Add Valid Environment Label\n\nAdd an environment label with a valid value (development, staging, or production) to your GCP resources:\n\n```typescript\nconst instance = new gcp.compute.Instance(\"my-instance\", {\n    labels: {\n        environment: \"production\",  // Required: valid environment label\n        // ... other labels\n    },\n    // ... other config\n});\n\n// For Cloud SQL instances, use userLabels within settings\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-database\", {\n    settings: {\n        userLabels: {\n            environment: \"staging\",  // Required: valid environment label\n        },\n        // ... other settings\n    },\n    // ... other config\n});\n\n// For GKE clusters, use resourceLabels\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    resourceLabels: {\n        environment: \"development\",  // Required: valid environment label\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcedTiers": {
+            "description": "List of Filestore tiers that must use customer-managed KMS keys (default: ['ENTERPRISE'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "requiredKmsKeyPattern": {
+            "description": "Regular expression pattern that KMS key names must match",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Filestore instances to use customer-managed Cloud KMS keys for encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "filestore-customer-kms",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Key\n\n```typescript\nconst filestoreKey = new gcp.kms.CryptoKey(\"filestore-key\", {\n    name: \"filestore-key\",\n    keyRing: filestoreKeyring.id,\n});\n\nconst instance = new gcp.filestore.Instance(\"instance\", {\n    tier: \"ENTERPRISE\",\n    kmsKeyName: filestoreKey.id,  // Specify customer-managed KMS key\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Firestore databases must have Point-In-Time Recovery (PITR) enabled for business continuity",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "firestore-pitr",
+      "remediationSteps": "## Fix: Enable Point-In-Time Recovery\n\n```typescript\nconst firestoreDb = new gcp.firestore.Database(\"my-firestore-db\", {\n    name: \"my-database\",\n    locationId: \"us-central\",\n    type: \"FIRESTORE_NATIVE\",\n    pointInTimeRecoveryEnablement: \"POINT_IN_TIME_RECOVERY_ENABLED\",  // Enable PITR\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedSources": {
+            "description": "List of source IP ranges (CIDR) allowed for HTTP traffic. If not specified, no HTTP traffic is allowed.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTargets": {
+            "description": "List of target tags or service accounts exempt from HTTP restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require firewall rules to disallow inbound HTTP traffic from unauthorized sources",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "firewall-no-http-ingress",
+      "remediationSteps": "## Fix: Use HTTPS Instead of HTTP\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"allow-https\", {\n    network: network.id,\n    direction: \"INGRESS\",\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"443\"],  // Use HTTPS (port 443) instead of HTTP (port 80)\n    }],\n    sourceRanges: [\"0.0.0.0/0\"],\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedPublicRanges": {
+            "description": "List of public IP ranges (CIDR) that are specifically allowed for ingress (e.g., load balancer health checks, CDN origins)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptTargets": {
+            "description": "List of target tags or service accounts exempt from public ingress restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require firewall rules to disallow public internet ingress unless specifically authorized",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "firewall-no-public-ingress",
+      "remediationSteps": "## Fix: Use Private Network Ranges or Source Tags\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"allow-private-ingress\", {\n    network: network.id,\n    direction: \"INGRESS\",\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"443\"],\n    }],\n    sourceRanges: [\"10.0.0.0/8\", \"192.168.0.0/16\"],  // Use private ranges instead of 0.0.0.0/0\n    // Or use source tags for internal traffic control:\n    // sourceTags: [\"web-tier\"],\n    // ... other config\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce firewall rule restrictions for SSH and RDP access",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "firewall-ssh-rdp",
+      "remediationSteps": "## Fix: Restrict SSH/RDP Access to Specific Sources\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"allow-ssh-restricted\", {\n    network: network.id,\n    direction: \"INGRESS\",\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"22\"],\n    }],\n    sourceRanges: [\"10.0.0.0/8\", \"192.168.1.0/24\"],  // Restrict to specific IP ranges, not 0.0.0.0/0\n    targetTags: [\"ssh-access\"],\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce strict firewall rules with explicit allow/deny configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "firewall-strict",
+      "remediationSteps": "## Fix: Configure Explicit and Restrictive Firewall Rules\n\n```typescript\nconst firewallRule = new gcp.compute.Firewall(\"strict-firewall-rule\", {\n    network: network.id,\n    direction: \"INGRESS\",  // Explicitly specify direction\n    allows: [{\n        protocol: \"tcp\",\n        ports: [\"443\"],  // Specify explicit ports, not all ports\n    }],\n    sourceRanges: [\"10.0.0.0/24\"],  // Use restrictive source ranges for sensitive ports\n    targetTags: [\"web-servers\"],  // Specify explicit targets\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require GKE cluster API endpoints to be private",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "gke-private-endpoints",
+      "remediationSteps": "## Fix: Enable Private Cluster Configuration\n\n```typescript\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    privateClusterConfig: {\n        enablePrivateEndpoint: true,  // Restrict control plane access to private networks\n        enablePrivateNodes: true,      // Assign only private IPs to cluster nodes\n        masterIpv4CidrBlock: \"172.16.0.0/28\",  // CIDR block for the master\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require GKE clusters to have Application-layer Secrets Encryption enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "gke-secrets-encryption",
+      "remediationSteps": "## Fix: Enable Application-layer Secrets Encryption\n\n```typescript\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    databaseEncryption: {\n        state: \"ENCRYPTED\",  // Enable secrets encryption\n        keyName: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Specify KMS key\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "excludeResources": {
+            "default": [],
+            "description": "List of resource names to exclude from hardcoded secrets validation",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Prohibit hardcoded secrets in code and configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "hardcoded-secrets",
+      "remediationSteps": "## Fix: Remove Hardcoded Secrets\n\nRemove hardcoded secrets from resource configuration.\n\n## Example Violations\n\n**Compute Instance with hardcoded secrets:**\n```typescript\nconst instance = new gcp.compute.Instance(\"my-instance\", {\n    machineType: \"e2-medium\",\n    bootDisk: { /* ... */ },\n    networkInterfaces: [{ /* ... */ }],\n    metadataStartupScript: `#!/bin/bash\nexport DATABASE_PASSWORD=\"mySecretPassword123\"\nexport API_KEY=\"AIzaSyAbc123def456ghi789jkl012mno345pqr678\"\nmysql -u admin -p\"hardcodedPassword\" -h db.example.com\n`,\n});\n```\n\n**Cloud Function with hardcoded environment variables:**\n```typescript\nconst cloudFunction = new gcp.cloudfunctions.Function(\"my-function\", {\n    runtime: \"nodejs20\",\n    environmentVariables: {\n        \"DATABASE_PASSWORD\": \"mySecretPassword123\",\n        \"API_KEY\": \"AIzaSyAbc123def456ghi789jkl012mno345pqr678\",\n    },\n});\n```\n\n**Cloud SQL with hardcoded root password:**\n```typescript\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-db\", {\n    databaseVersion: \"POSTGRES_15\",\n    rootPassword: \"myHardcodedPassword123\",\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "blockedRoles": {
+            "description": "List of IAM roles to block (default: ['roles/owner'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege access control by prohibiting overly broad roles",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "iam-no-broad-roles",
+      "remediationSteps": "## Fix: Use Specific Least-Privilege Roles\n\n```typescript\nconst binding = new gcp.projects.IAMBinding(\"service-binding\", {\n    project: \"my-project\",\n    role: \"roles/storage.objectViewer\",  // Use specific roles instead of broad ones\n    members: [\n        \"serviceAccount:my-app@my-project.iam.gserviceaccount.com\",\n    ],\n    // Avoid overly broad roles like:\n    // - roles/owner (full project access)\n    // - roles/editor (write access to most resources)\n    // Use specific roles: roles/storage.objectViewer, roles/pubsub.publisher, etc.\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptDisks": {
+            "description": "List of disk types to exempt from KMS key requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requiredKmsKeyPattern": {
+            "description": "Regular expression pattern that KMS key self-links must match",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require instance templates to use customer-managed Cloud KMS keys for disk encryption",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "instance-template-customer-kms",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Keys\n\n```typescript\nconst template = new gcp.compute.InstanceTemplate(\"my-template\", {\n    disks: [{\n        boot: true,\n        sourceImage: \"debian-cloud/debian-11\",\n        diskEncryptionKey: {\n            kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use CMEK for disk encryption\n        },\n    }],\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require instance templates to have encrypted boot disks",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "instance-template-encrypted-boot-disk",
+      "remediationSteps": "## Fix: Enable Boot Disk Encryption\n\n```typescript\nconst template = new compute.InstanceTemplate(\"my-template\", {\n    disks: [{\n        boot: true,\n        sourceImage: \"debian-cloud/debian-11\",\n        diskEncryptionKey: {\n            kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Enable encryption with KMS key\n        },\n    }],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require instance templates to have encrypted disks",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "instance-template-encrypted-disk",
+      "remediationSteps": "## Fix: Enable Disk Encryption\n\n```typescript\nconst template = new compute.InstanceTemplate(\"my-template\", {\n    disks: [{\n        boot: true,\n        sourceImage: \"debian-cloud/debian-11\",\n        diskEncryptionKey: {\n            kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Enable encryption for all disks\n        },\n    }],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Managed Instance Group launch templates have public IP addresses disabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.m Network Controls",
+        "specification": "Networks shall be managed and controlled in order to protect the organization from threats and to maintain security for the systems and applications using the network, including information in transit.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "instance-template-no-public-ip",
+      "remediationSteps": "Disable public IP in instance template:\n\n```typescript\nnew gcp.compute.InstanceTemplate(\"my-template\", {\n  networkInterfaces: [{\n    network: \"my-vpc\",\n    subnetwork: \"my-subnet\",\n    accessConfigs: [], // Empty array disables public IP\n  }],\n  // ... other config\n});\n```\n\nThis prevents unintended public accessibility.",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedAlgorithms": {
+            "description": "List of allowed cryptographic algorithms",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "requirePurpose": {
+            "description": "Require keys to have purpose explicitly specified (default: false)",
+            "type": "boolean"
+          },
+          "requireRotationPeriod": {
+            "description": "Require keys to have rotation period configured (default: false)",
+            "type": "boolean"
+          },
+          "requiredProtectionLevel": {
+            "description": "Required protection level (e.g., 'HSM' for hardware security modules)",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require proper Cloud KMS key creation and configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "kms-key-configuration",
+      "remediationSteps": "## Fix: Configure KMS Key with Version Template\n\n```typescript\nconst cryptoKey = new gcp.kms.CryptoKey(\"my-crypto-key\", {\n    name: \"my-key\",\n    keyRing: keyRing.id,\n    versionTemplate: {\n        algorithm: \"GOOGLE_SYMMETRIC_ENCRYPTION\",  // Specify cryptographic algorithm\n        protectionLevel: \"HSM\",  // Set protection level (SOFTWARE, HSM, EXTERNAL, EXTERNAL_VPC)\n    },\n    rotationPeriod: \"7776000s\",  // Optional: Configure 90-day rotation period\n    purpose: \"ENCRYPT_DECRYPT\",  // Optional: Explicitly set key purpose\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedRoles": {
+            "description": "List of allowed IAM roles for KMS keys",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "prohibitedMembers": {
+            "description": "Additional member patterns to prohibit (default includes allUsers, allAuthenticatedUsers)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require proper access controls for Cloud KMS key IAM policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.a Access Control Policy",
+        "specification": "A privilege management process shall be implemented and include the allocation of different levels of access privileges, the authorization process for such privileges, and the maintenance of all privileges on a system.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "kms-key-iam",
+      "remediationSteps": "## Fix: Use Least-Privilege IAM Roles\n\n```typescript\n// Use specific roles instead of overprivileged roles\nconst cryptoKeyBinding = new gcp.kms.CryptoKeyIAMBinding(\"key-access\", {\n    cryptoKeyId: cryptoKey.id,\n    role: \"roles/cloudkms.cryptoKeyEncrypterDecrypter\",  // Use specific role\n    members: [\n        \"serviceAccount:my-service@project.iam.gserviceaccount.com\",  // Use specific service accounts\n        \"group:security-team@example.com\",  // Or specific groups\n    ],\n    // Avoid: roles/owner, roles/editor, roles/cloudkms.admin\n    // Avoid: allUsers, allAuthenticatedUsers, domain-wide access\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "description": "Enable pattern matching for key names. When enabled, exemptKeys supports wildcards (*).",
+            "type": "boolean"
+          },
+          "allowSkipInitialVersion": {
+            "description": "Allow keys to skip initial version creation. When false, requires keys to have initial versions.",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptKeys": {
+            "description": "List of KMS key names to exempt from lifecycle management requirements. Supports wildcard patterns when allowPatternMatching is enabled.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "maximumDestroyDuration": {
+            "description": "Maximum destroy scheduled duration in seconds. Keys should not have destruction periods longer than this.",
+            "type": "number"
+          },
+          "minimumDestroyDuration": {
+            "description": "Minimum destroy scheduled duration in seconds. Keys must have at least this duration before destruction.",
+            "type": "number"
+          },
+          "requireExplicitDestroyDuration": {
+            "description": "Require keys to have destroy scheduled duration explicitly configured. When false, allows GCP default (30 days).",
+            "type": "boolean"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require proper Cloud KMS key deletion and lifecycle management",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "kms-key-lifecycle",
+      "remediationSteps": "## Fix: Configure Key Lifecycle Management\n\n```typescript\nconst cryptoKey = new kms.CryptoKey(\"my-crypto-key\", {\n    name: \"my-key\",\n    keyRing: keyRing.id,\n    destroyScheduledDuration: \"2592000s\",  // Set 30-day scheduled destruction period\n    skipInitialVersionCreation: false,  // Create initial key version\n    versionTemplate: {\n        algorithm: \"GOOGLE_SYMMETRIC_ENCRYPTION\",\n        protectionLevel: \"SOFTWARE\",\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud KMS keys to have key rotation enabled",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "kms-key-rotation",
+      "remediationSteps": "## Fix: Enable Automatic Key Rotation\n\n```typescript\nconst cryptoKey = new kms.CryptoKey(\"my-crypto-key\", {\n    name: \"my-key\",\n    keyRing: keyRing.id,\n    rotationPeriod: \"7776000s\",  // Enable rotation every 90 days\n    versionTemplate: {\n        algorithm: \"GOOGLE_SYMMETRIC_ENCRYPTION\",\n        protectionLevel: \"SOFTWARE\",\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLoadBalancerTypes": {
+            "description": "List of load balancer types or protocols exempt from health check requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Load Balancers to enable health checks for monitoring backend instance health",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "load-balancer-health-checks",
+      "remediationSteps": "## Fix: Configure Health Checks for Backend Service\n\n```typescript\n// Create a health check\nconst healthCheck = new gcp.compute.HealthCheck(\"backend-health-check\", {\n    httpHealthCheck: {\n        port: 80,\n        requestPath: \"/health\",\n    },\n    checkIntervalSec: 10,\n    timeoutSec: 5,\n});\n\n// Attach health check to backend service\nconst backendService = new gcp.compute.BackendService(\"my-backend\", {\n    healthChecks: [healthCheck.id],  // Configure health checks for monitoring\n    backends: [/* ... */],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enable Load Balancer logging for monitoring",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.z Publicly Available Information",
+        "specification": "Publicly available information shall be protected against unauthorized modification or deletion.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "load-balancer-logging",
+      "remediationSteps": "Enable logging on backend services by configuring `logConfig.enable: true` and set `logConfig.sampleRate` (1.0 for full logging, lower values for sampling). Ensure logs are retained in Cloud Logging for security analysis and troubleshooting.\n\n**Pulumi TypeScript Example:**\n\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\n// For global backend service\nconst backendService = new gcp.compute.BackendService(\"my-backend\", {\n    logConfig: {\n        enable: true,\n        sampleRate: 1.0  // 1.0 = 100% logging, 0.5 = 50% sampling\n    },\n    // ... other configuration\n});\n\n// For regional backend service\nconst regionBackendService = new gcp.compute.RegionBackendService(\"my-region-backend\", {\n    logConfig: {\n        enable: true,\n        sampleRate: 1.0\n    },\n    // ... other configuration\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptLoadBalancerTypes": {
+            "description": "List of load balancer types exempt from multi-zone requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "minimumZones": {
+            "description": "Minimum number of zones required for backend distribution (default: 2)",
+            "minimum": 2,
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Cloud Load Balancers to be configured across multiple zones for high availability",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "load-balancer-multi-zone",
+      "remediationSteps": "## Fix: Configure Backends Across Multiple Zones\n\n```typescript\n// Create instance groups in multiple zones\nconst instanceGroup1 = new gcp.compute.InstanceGroup(\"backend-zone-a\", {\n    zone: \"us-central1-a\",\n    instances: [/* ... */],\n});\n\nconst instanceGroup2 = new gcp.compute.InstanceGroup(\"backend-zone-b\", {\n    zone: \"us-central1-b\",\n    instances: [/* ... */],\n});\n\n// Configure backend service with multi-zone backends\nconst backendService = new gcp.compute.BackendService(\"multi-zone-backend\", {\n    backends: [\n        { group: instanceGroup1.id },  // Backend in zone A\n        { group: instanceGroup2.id },  // Backend in zone B for high availability\n    ],\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Load Balancer uses TLS/HTTPS listeners only",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "load-balancer-tls",
+      "remediationSteps": "Configure forwarding rules to use port 443 for HTTPS traffic. Use `TargetHttpsProxy` instead of `TargetHttpProxy`. For HTTP listeners, ensure they redirect to HTTPS via URL map configuration. Remove standalone HTTP listeners without HTTPS redirection.\n\n**Pulumi TypeScript Example:**\n\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\n// Create SSL certificate (or use existing)\nconst sslCert = new gcp.compute.ManagedSslCertificate(\"my-cert\", {\n    managed: {\n        domains: [\"example.com\"]\n    }\n});\n\n// Create HTTPS target proxy\nconst httpsProxy = new gcp.compute.TargetHttpsProxy(\"https-proxy\", {\n    urlMap: urlMap.id,\n    sslCertificates: [sslCert.id]\n});\n\n// Create forwarding rule on port 443\nconst httpsForwardingRule = new gcp.compute.GlobalForwardingRule(\"https-rule\", {\n    target: httpsProxy.id,\n    portRange: \"443\",\n    ipProtocol: \"TCP\",\n    loadBalancingScheme: \"EXTERNAL\"\n});\n\n// Optional: HTTP to HTTPS redirect\nconst httpProxy = new gcp.compute.TargetHttpProxy(\"http-proxy\", {\n    urlMap: redirectUrlMap.id  // URL map configured for redirect\n});\n\nconst httpForwardingRule = new gcp.compute.GlobalForwardingRule(\"http-rule\", {\n    target: httpProxy.id,\n    portRange: \"80\",\n    ipProtocol: \"TCP\",\n    loadBalancingScheme: \"EXTERNAL\"\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Persistent Disks to use customer-managed encryption keys",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "persistent-disk-customer-kms",
+      "remediationSteps": "## Fix: Enable Customer-Managed Encryption Keys\n\n```typescript\nconst disk = new compute.Disk(\"my-disk\", {\n    diskEncryptionKey: {\n        kmsKeySelfLink: \"projects/my-project/locations/us-central1/keyRings/my-keyring/cryptoKeys/my-key\",  // Use customer-managed KMS key\n    },\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowAutomaticConnections": {
+            "default": false,
+            "description": "Allow ACCEPT_AUTOMATIC connection preference for Service Attachments (default: false)",
+            "type": "boolean"
+          },
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt lists for pattern matching",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptForwardingRules": {
+            "description": "List of forwarding rule names exempt from security restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "exemptServiceAttachments": {
+            "description": "List of service attachment names exempt from security restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requiredConnectionLimit": {
+            "description": "Maximum connection limit required for consumer accept lists",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Private Service Connect endpoints to have restrictive security policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.v Information Access Restriction",
+        "specification": "Access to systems and applications shall be restricted in accordance with the access control policy.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "private-service-connect",
+      "remediationSteps": "## Fix: Configure Secure Private Service Connect\n\n```typescript\n// Create Service Attachment with manual connection approval\nconst serviceAttachment = new gcp.compute.ServiceAttachment(\"psc-service\", {\n    connectionPreference: \"ACCEPT_MANUAL\",  // Require manual approval for connections\n    consumerAcceptLists: [{\n        projectIdOrNum: \"consumer-project-123\",\n        connectionLimit: 10,  // Limit connections to minimize attack surface\n    }],\n    targetService: backendService.id,\n    // ... other config\n});\n\n// Create Forwarding Rule for PSC with internal load balancing\nconst forwardingRule = new gcp.compute.ForwardingRule(\"psc-endpoint\", {\n    network: network.id,  // Specify network for proper isolation\n    loadBalancingScheme: \"INTERNAL\",  // Use internal scheme for private connectivity\n    target: serviceAttachment.id,\n    // ... other config\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maxDeliveryAttempts": {
+            "description": "Maximum allowed delivery attempts before moving to dead letter queue (default: 100)",
+            "type": "number"
+          },
+          "minDeliveryAttempts": {
+            "description": "Minimum allowed delivery attempts before moving to dead letter queue (default: 5)",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Pub/Sub subscriptions to have dead letter queue configuration",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "12.a Including Information Security in the Business Continuity Management",
+        "specification": "Information security continuity shall be embedded in the organization's business continuity management systems.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "pubsub-dead-letter-queue",
+      "remediationSteps": "## Fix: Configure Dead Letter Queue\n\n```typescript\nconst deadLetterTopic = new gcp.pubsub.Topic(\"dead-letter-topic\", {});\n\nconst subscription = new gcp.pubsub.Subscription(\"my-subscription\", {\n    topic: topic.name,\n    deadLetterPolicy: {\n        deadLetterTopic: deadLetterTopic.id,  // Specify dead letter topic\n        maxDeliveryAttempts: 5,  // Set max delivery attempts before moving to DLQ\n    },\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure Pub/Sub is encrypted with Cloud KMS",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "pubsub-encryption",
+      "remediationSteps": "Configure kmsKeyName property when creating Pub/Sub topics to use customer-managed encryption keys (CMEK) for enhanced security and key management control.\n\nExample - Pub/Sub Topic with Customer-Managed Encryption:\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\n// Create KMS KeyRing and CryptoKey for encryption\nconst keyRing = new gcp.kms.KeyRing(\"pubsub-keyring\", {\n    name: \"pubsub-keyring\",\n    location: \"us-central1\"\n});\n\nconst cryptoKey = new gcp.kms.CryptoKey(\"pubsub-key\", {\n    name: \"pubsub-encryption-key\",\n    keyRing: keyRing.id,\n    rotationPeriod: \"7776000s\"  // 90 days\n});\n\n// Grant Pub/Sub service account access to the key\nconst binding = new gcp.kms.CryptoKeyIAMBinding(\"pubsub-key-binding\", {\n    cryptoKeyId: cryptoKey.id,\n    role: \"roles/cloudkms.cryptoKeyEncrypterDecrypter\",\n    members: [\"serviceAccount:service-PROJECT_NUMBER@gcp-sa-pubsub.iam.gserviceaccount.com\"]\n});\n\n// COMPLIANT: Topic with customer-managed encryption key\nconst topicCompliant = new gcp.pubsub.Topic(\"encrypted-topic\", {\n    name: \"secure-topic\",\n    kmsKeyName: cryptoKey.id,  // Compliant: CMEK configured\n    messageRetentionDuration: \"86400s\"\n});\n\n// NON-COMPLIANT: Topic without CMEK (uses Google-managed keys)\nconst topicNonCompliant = new gcp.pubsub.Topic(\"default-topic\", {\n    name: \"insecure-topic\"\n    // Missing kmsKeyName - uses default Google-managed encryption\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "maxRetentionSeconds": {
+            "description": "Maximum allowed message retention duration in seconds (default: 2592000 - 30 days)",
+            "type": "number"
+          },
+          "minRetentionSeconds": {
+            "description": "Minimum required message retention duration in seconds (default: 600 - 10 minutes)",
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Pub/Sub subscriptions to have appropriate message retention policies",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "06.d Data Protection and Privacy of Covered Information",
+        "specification": "Covered information shall be protected against unauthorized disclosure, modification and destruction. For the purpose of this control, covered information includes protected health information, cardholder data, and other sensitive information.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "pubsub-message-retention",
+      "remediationSteps": "## Fix: Configure Message Retention Duration\n\n```typescript\nconst subscription = new gcp.pubsub.Subscription(\"my-subscription\", {\n    topic: topic.name,\n    messageRetentionDuration: \"604800s\",  // Set retention to 7 days (in seconds)\n    // ... other config\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedRoles": {
+            "description": "List of allowed IAM roles for Pub/Sub subscriptions. If specified, only these roles are permitted.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "prohibitedMembers": {
+            "description": "List of prohibited member patterns (default: allUsers, allAuthenticatedUsers)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "prohibitedRoles": {
+            "description": "List of prohibited IAM roles (default: roles/pubsub.admin, roles/owner, roles/editor)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege IAM policies for Pub/Sub subscriptions",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "pubsub-subscription-iam-least-privilege",
+      "remediationSteps": "## Fix: Use Least Privilege IAM Roles\n\n```typescript\nconst subscriptionIamBinding = new gcp.pubsub.SubscriptionIAMBinding(\"subscription-subscriber-binding\", {\n    subscription: subscription.id,\n    role: \"roles/pubsub.subscriber\",  // Use specific role instead of admin/owner/editor\n    members: [\n        \"serviceAccount:app-service@project.iam.gserviceaccount.com\",  // Use specific service accounts instead of allUsers\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowedRoles": {
+            "description": "List of allowed IAM roles for Pub/Sub topics. If specified, only these roles are permitted.",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "prohibitedMembers": {
+            "description": "List of prohibited member patterns (default: allUsers, allAuthenticatedUsers)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "prohibitedRoles": {
+            "description": "List of prohibited IAM roles (default: roles/pubsub.admin, roles/owner, roles/editor)",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Enforce least privilege IAM policies for Pub/Sub topics",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.c Privilege Management",
+        "specification": "The allocation and use of privileges shall be restricted and controlled. The use of privileged utility programs shall be restricted and tightly controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "pubsub-topic-iam-least-privilege",
+      "remediationSteps": "## Fix: Use Least Privilege IAM Roles\n\n```typescript\nconst topicIamBinding = new gcp.pubsub.TopicIAMBinding(\"topic-publisher-binding\", {\n    topic: topic.id,\n    role: \"roles/pubsub.publisher\",  // Use specific role instead of admin/owner/editor\n    members: [\n        \"serviceAccount:app-service@project.iam.gserviceaccount.com\",  // Use specific service accounts instead of allUsers\n    ],\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt resources list",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptResources": {
+            "description": "List of resource names exempt from labeling requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "invalidValues": {
+            "description": "List of invalid placeholder values for labels",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "labelPatterns": {
+            "description": "Regex patterns for validating label values (e.g., { environment: '^(dev|staging|prod)$' })",
+            "type": "object"
+          },
+          "requiredLabels": {
+            "description": "List of required label keys (default: ['environment', 'team', 'owner'])",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require all GCP resources to have proper labeling for change tracking",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.b Change Management",
+        "specification": "Changes to systems, applications and supporting infrastructure shall be controlled.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "resource-labeling",
+      "remediationSteps": "## Fix: Add Required Labels for Change Tracking\n\nAdd the required labels (environment, team, owner) to your GCP resources:\n\n```typescript\nconst instance = new gcp.compute.Instance(\"my-instance\", {\n    labels: {\n        environment: \"production\",  // Required: environment label\n        team: \"platform\",           // Required: team label\n        owner: \"john-doe\",          // Required: owner label\n        // ... other labels\n    },\n    // ... other config\n});\n\n// For Cloud SQL instances, use userLabels within settings\nconst sqlInstance = new gcp.sql.DatabaseInstance(\"my-database\", {\n    settings: {\n        userLabels: {\n            environment: \"production\",  // Required: environment label\n            team: \"data\",               // Required: team label\n            owner: \"jane-smith\",        // Required: owner label\n        },\n        // ... other settings\n    },\n    // ... other config\n});\n\n// For GKE clusters, use resourceLabels\nconst cluster = new gcp.container.Cluster(\"my-cluster\", {\n    resourceLabels: {\n        environment: \"production\",  // Required: environment label\n        team: \"infrastructure\",     // Required: team label\n        owner: \"ops-team\",          // Required: owner label\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowPatternMatching": {
+            "default": false,
+            "description": "Allow wildcard patterns (*) in exempt secrets list for pattern matching",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptSecrets": {
+            "description": "List of secret names exempt from customer-managed KMS key requirements",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "requiredKmsKeyPattern": {
+            "description": "Regular expression pattern that KMS key names must match",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Require Secret Manager secrets to use customer-managed Cloud KMS keys",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "10.f Policy on the Use of Cryptographic Controls",
+        "specification": "Cryptographic controls shall be used in compliance with all relevant agreements, laws and regulations.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "secretmanager-customer-kms",
+      "remediationSteps": "## Fix: Configure Customer-Managed KMS Encryption\n\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\n// Create a KMS KeyRing and CryptoKey\nconst keyRing = new gcp.kms.KeyRing(\"my-keyring\", {\n    name: \"secret-keyring\",\n    location: \"us-central1\",\n});\n\nconst cryptoKey = new gcp.kms.CryptoKey(\"my-key\", {\n    name: \"secret-encryption-key\",\n    keyRing: keyRing.id,\n    rotationPeriod: \"7776000s\",  // 90 days\n});\n\n// Option 1: Auto-replication with customer-managed encryption\nconst secretAuto = new gcp.secretmanager.Secret(\"my-secret-auto\", {\n    secretId: \"my-cmek-secret\",\n    replication: {\n        auto: {\n            customerManagedEncryption: {\n                kmsKeyName: cryptoKey.id,  // Use customer-managed KMS key\n            },\n        },\n    },\n});\n\n// Option 2: User-managed replication with customer-managed encryption\nconst secretUserManaged = new gcp.secretmanager.Secret(\"my-secret-user\", {\n    secretId: \"my-cmek-secret-regional\",\n    replication: {\n        userManaged: {\n            replicas: [\n                {\n                    location: \"us-central1\",\n                    customerManagedEncryption: {\n                        kmsKeyName: cryptoKey.id,  // Use customer-managed KMS key\n                    },\n                },\n                {\n                    location: \"us-east1\",\n                    customerManagedEncryption: {\n                        kmsKeyName: cryptoKey.id,  // Specify for each replica\n                    },\n                },\n            ],\n        },\n    },\n});\n```",
+      "severity": "high"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "allowDefaultServiceAccounts": {
+            "description": "Allow creating keys for default service accounts (not recommended, default: false)",
+            "type": "boolean"
+          },
+          "blockedServiceAccountPatterns": {
+            "description": "Patterns of service account emails to block key creation for",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "requiredKeyAlgorithm": {
+            "description": "Required key algorithm (e.g., 'KEY_ALG_RSA_4096' for enhanced security)",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure proper service account key usage and prohibit insecure authentication methods",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.p Secure Log-on Procedures",
+        "specification": "Secure logon procedures shall be implemented to prevent unauthorized access. Where password authentication is used, the system shall enforce a secure password policy.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "service-account-key",
+      "remediationSteps": "## Fix: Use Strong Key Algorithm and Avoid Default Service Accounts\n\n```typescript\nconst serviceAccount = new gcp.serviceaccount.Account(\"app-service-account\", {\n    accountId: \"webapp-backend\",  // Use application-specific service account\n    displayName: \"Web App Backend Service Account\",\n});\n\nconst serviceAccountKey = new gcp.serviceaccount.Key(\"app-key\", {\n    serviceAccountId: serviceAccount.name,\n    keyAlgorithm: \"KEY_ALG_RSA_2048\",  // Use RSA_2048 or RSA_4096 for strong encryption\n    // Avoid creating keys for default service accounts like:\n    // - {project-number}-compute@developer.gserviceaccount.com\n    // - {project-id}@appspot.gserviceaccount.com\n});\n```",
+      "severity": "critical"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "caseSensitive": {
+            "default": false,
+            "description": "Whether name matching should be case sensitive (default: false)",
+            "type": "boolean"
+          },
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "exemptAccounts": {
+            "description": "List of service account names exempt from naming restrictions",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "prohibitedNames": {
+            "description": "List of exact service account names that are prohibited",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "prohibitedPatterns": {
+            "description": "List of regex patterns that service account names cannot match",
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Restrict default service account creation with prohibited names",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "01.b User Registration",
+        "specification": "There shall be a formal user registration and de-registration procedure in place governing the allocation of access rights to all information systems and services.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "service-account-restricted-names",
+      "remediationSteps": "## Fix: Use Descriptive Service Account Names\n\n```typescript\nconst serviceAccount = new gcp.serviceaccount.Account(\"backend-service-account\", {\n    accountId: \"webapp-backend\",  // Use specific, descriptive names (6-30 chars)\n    displayName: \"Web Application Backend Service Account\",\n    // Avoid generic/prohibited names like: default, admin, root, system, compute\n    // Use names that describe the service purpose: webapp-backend, data-processor, etc.\n});\n```",
+      "severity": "medium"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          },
+          "environmentKey": {
+            "default": "environment",
+            "description": "Key name for environment label",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure all resources in a stack belong to the same environment",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.d Separation of Development Test and Operational Environments",
+        "specification": "Segregation of test, development and operational environments shall be maintained to ensure that the test and development environments do not adversely impact the operational environment.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "single-environment-stack",
+      "remediationSteps": "## Fix: Separate Resources into Environment-Specific Stacks\n\nCreate separate Pulumi stacks for each environment to ensure proper separation:\n\n```typescript\n// Create separate stacks for each environment\n// Stack: dev-stack\nconst devInstance = new gcp.compute.Instance(\"dev-instance\", {\n    labels: {\n        environment: \"development\",  // All resources in this stack use \"development\"\n        // ... other labels\n    },\n    // ... other config\n});\n\n// Stack: prod-stack\nconst prodInstance = new gcp.compute.Instance(\"prod-instance\", {\n    labels: {\n        environment: \"production\",  // All resources in this stack use \"production\"\n        // ... other labels\n    },\n    // ... other config\n});\n```",
+      "severity": "low"
+    },
+    {
+      "configSchema": {
+        "properties": {
+          "enforcementLevel": {
+            "enum": [
+              "advisory",
+              "mandatory",
+              "remediate",
+              "disabled"
+            ],
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "description": "Ensure VPC subnets have Flow Logs enabled for audit and monitoring",
+      "displayName": "",
+      "enforcementLevel": "advisory",
+      "framework": {
+        "name": "HITRUST",
+        "reference": "09.z Publicly Available Information",
+        "specification": "Publicly available information shall be protected against unauthorized modification or deletion.",
+        "version": "11.5"
+      },
+      "message": "",
+      "name": "subnetwork-flow-logs",
+      "remediationSteps": "Enable VPC Flow Logs on subnets by configuring `logConfig` with `aggregationInterval` (e.g., INTERVAL_5_SEC) and `flowSampling` (0.5 for 50% or 1.0 for 100%). Ensure `flowSampling` is greater than 0 to collect traffic logs.\n\n**Pulumi TypeScript Example:**\n\n```typescript\nimport * as gcp from \"@pulumi/gcp\";\n\nconst subnet = new gcp.compute.Subnetwork(\"my-subnet\", {\n    ipCidrRange: \"10.0.0.0/24\",\n    network: network.id,\n    region: \"us-central1\",\n    logConfig: {\n        aggregationInterval: \"INTERVAL_5_SEC\",  // or INTERVAL_30_SEC, INTERVAL_1_MIN, etc.\n        flowSampling: 1.0,  // 1.0 = 100% sampling, 0.5 = 50%\n        metadata: \"INCLUDE_ALL_METADATA\"\n    },\n    privateIpGoogleAccess: true\n});\n```\n\nValid `aggregationInterval` values: INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN, INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN",
+      "severity": "low"
+    }
+  ],
+  "version": 7,
+  "versionTag": "2.1.1"
+}

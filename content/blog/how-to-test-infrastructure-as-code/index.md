@@ -11,6 +11,9 @@ tags:
     - testing
 category: best-practices
 schema_type: faq
+faq_schema: true
+aliases:
+    - /what-is/how-to-step-up-cloud-infrastructure-testing/
 ---
 
 IaC testing means validating your infrastructure code the same way you test application software—unit tests with mocked cloud providers that run in milliseconds, integration tests that deploy and inspect real resources, and policy checks that enforce compliance rules on every preview and deploy. Together, these layers catch misconfigurations before they reach production.

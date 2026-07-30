@@ -9,13 +9,18 @@ export interface Filter {
     tag: "pulumi-filter-select-option",
     shadow: true,
     styles: `
+        :host {
+            display: block;
+        }
+
         label {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.625rem;
             white-space: nowrap;
-            font-size: 0.8125rem;
+            font-size: 0.9375rem;
             line-height: 1.4;
+            padding-block: 0.3125rem;
             cursor: pointer;
         }
 

@@ -1,7 +1,7 @@
 ---
 title: Insights & Governance - Continuous Compliance, By Construction
 type: page
-layout: product-page
+layout: template-page
 meta_desc: Automated compliance made simple — continuously audit, remediate, and enforce policies to keep your cloud secure and reliable.
 meta_image: /images/product/insights-governance/ig-meta.png
 

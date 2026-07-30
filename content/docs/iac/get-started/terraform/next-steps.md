@@ -54,7 +54,7 @@ const coreInfra = new pulumi.StackReference("core-infra");
 const vpcId = coreInfra.getOutput("vpcId");
 
 // Database stack (Terraform via state reference)
-const dbState = new terraform.state.S3Reference("database", {
+const dbState = terraform.state.getS3ReferenceOutput({
     bucket: "my-terraform-state",
     key: "database/terraform.tfstate",
 });
@@ -66,26 +66,26 @@ Handle complex state structures and transformations:
 
 ```typescript
 // Reference multiple Terraform states
-const networkState = new terraform.state.S3Reference("network", {
+const networkState = terraform.state.getS3ReferenceOutput({
     bucket: "terraform-state",
     key: "network/terraform.tfstate",
 });
 
-const securityState = new terraform.state.S3Reference("security", {
+const securityState = terraform.state.getS3ReferenceOutput({
     bucket: "terraform-state",
     key: "security/terraform.tfstate",
 });
 
 // Transform and combine outputs
-const subnetIds = networkState.getOutput("private_subnet_ids");
-const securityGroupIds = securityState.getOutput("security_group_ids");
+const subnetIds = networkState.outputs["private_subnet_ids"];
+const securityGroupIds = securityState.outputs["security_group_ids"];
 
 // Create resources using combined state
 const cluster = new aws.ecs.Cluster("app-cluster", {
     // Configure using multiple state outputs
     configuration: {
         executeCommandConfiguration: {
-            kmsKeyId: securityState.getOutput("kms_key_id"),
+            kmsKeyId: securityState.outputs["kms_key_id"],
             logging: "DEFAULT",
         },
     },
@@ -119,11 +119,11 @@ Create utilities to help with migration:
 ```typescript
 // Migration helper utility
 export class TerraformMigrationHelper {
-    constructor(private terraformStateRef: terraform.state.S3Reference) {}
+    constructor(private tfState: terraform.state.GetS3ReferenceResult) {}
 
     // Import all resources of a given type
-    async importResourceType(resourceType: string, pulumiType: string) {
-        const resources = await this.terraformStateRef.getOutput("resources");
+    importResourceType(resourceType: string, pulumiType: string) {
+        const resources = this.tfState.outputs["resources"];
         const filtered = resources.filter(r => r.type === resourceType);
 
         for (const resource of filtered) {
@@ -190,6 +190,7 @@ Embed Pulumi in applications for dynamic infrastructure management:
 // automation-api-example.ts
 import * as pulumi from "@pulumi/pulumi/automation";
 import * as aws from "@pulumi/aws";
+import * as terraform from "@pulumi/terraform";
 
 async function createEnvironmentStack(environmentName: string) {
     const stackName = `${environmentName}-app`;
@@ -200,15 +201,15 @@ async function createEnvironmentStack(environmentName: string) {
         projectName: "dynamic-environments",
         program: async () => {
             // Reference shared Terraform infrastructure
-            const tfState = new pulumi.terraform.state.S3Reference("shared-infra", {
+            const tfState = terraform.state.getS3ReferenceOutput({
                 bucket: "terraform-state",
                 key: "shared/terraform.tfstate",
             });
 
             // Create environment-specific resources
             const app = new aws.ecs.Service(`${environmentName}-app`, {
-                cluster: tfState.getOutput("cluster_name"),
-                taskDefinition: tfState.getOutput("task_definition_arn"),
+                cluster: tfState.outputs["cluster_name"],
+                taskDefinition: tfState.outputs["task_definition_arn"],
                 desiredCount: environmentName === "production" ? 3 : 1,
             });
 
@@ -245,7 +246,7 @@ import * as aws from "@pulumi/aws";
 import * as terraform from "@pulumi/terraform";
 
 export interface WebApplicationArgs {
-    terraformInfrastructure: terraform.state.S3Reference;
+    terraformInfrastructure: pulumi.Output<terraform.state.GetS3ReferenceResult>;
     containerImage: string;
     environment: string;
     desiredCount?: number;
@@ -262,9 +263,9 @@ export class WebApplication extends pulumi.ComponentResource {
         const defaultParent = { parent: this };
 
         // Get infrastructure from Terraform
-        const clusterName = args.terraformInfrastructure.getOutput("cluster_name");
-        const vpcId = args.terraformInfrastructure.getOutput("vpc_id");
-        const subnetIds = args.terraformInfrastructure.getOutput("subnet_ids");
+        const clusterName = args.terraformInfrastructure.outputs["cluster_name"];
+        const vpcId = args.terraformInfrastructure.outputs["vpc_id"];
+        const subnetIds = args.terraformInfrastructure.outputs["subnet_ids"];
 
         // Create load balancer
         this.loadBalancer = new aws.lb.LoadBalancer(`${name}-alb`, {
@@ -325,7 +326,7 @@ const app = new WebApplication("my-app", {
 
 * **[Pulumi Architecture & Concepts](/docs/intro/concepts/)**: Deep dive into Pulumi's architecture
 * **[Adopting Pulumi](/docs/using-pulumi/adopting-pulumi/)**: Comprehensive migration strategies
-* **[Pulumi vs Terraform](/docs/intro/vs/terraform/)**: Detailed comparison of features
+* **[Pulumi vs Terraform](/docs/iac/comparisons/terraform/)**: Detailed comparison of features
 * **[Automation API](/docs/iac/concepts/automation-api/)**: Programmatic infrastructure management
 * **[Policy as Code](/docs/insights/policy/)**: Infrastructure governance and compliance
 
@@ -361,7 +362,7 @@ We always welcome contributions, especially from our more advanced users who hav
 ### Community engagement
 
 * **[Pulumi Blog](https://www.pulumi.com/blog/)**: Write about your experience
-* **[Community Events](https://www.pulumi.com/events/)**: Speak at meetups and conferences
+* **[Events & Workshops](https://www.pulumi.com/events/)**: Attend live workshops, technical demos, and community events
 * **[User Groups](https://www.pulumi.com/community/)**: Join or start a local user group
 
 ---

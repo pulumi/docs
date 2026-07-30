@@ -81,16 +81,18 @@ By default (when `subjectAttributes` is not set), the subject claim has the form
 
 When you set `subjectAttributes`, the subject instead begins with the fixed prefix `pulumi:environments:pulumi.organization.login:{ORGANIZATION_NAME}`, and each configured attribute is appended to it as a `:<attribute>:<value>` pair, in the order listed.
 
-The following attributes are available:
+The following attributes are available. This is a deliberately restricted subset of the `context` built-in property — see [Built-in properties](/docs/esc/concepts/interpolations-and-references/#context) for the full set of values you can interpolate anywhere in an environment.
 
 * `rootEnvironment.name`: the name of the environment that is opened first. This root environment in turn opens other imported environments
 * `currentEnvironment.name`: the full name (including the project) of the environment where the ESC login provider and `subjectAttributes` are defined
 * `pulumi.user.login`: the login identifier of the user opening the environment
 * `pulumi.organization.login`: the login identifier of the organization
+* `pulumi.token.type`: the type of the access token used to open the environment, such as `personal`, `team`, or `organization`
+* `pulumi.token.team`: the name of the team a team-scoped token belongs to, which lets a trust policy scope a role to one team
 
 {{< notes type="info" >}}
 
-The set of attributes that may be encoded into the subject claim is deliberately restricted to this fixed list. Because the subject is consumed by the cloud provider's trust policy to make authorization decisions, only values that are determined and attested by the Pulumi platform (rather than supplied by the requesting caller) are permitted. Admitting arbitrary or user-controllable values would allow a caller to forge a subject that satisfies a trust policy and thereby obtain credentials they are not entitled to. Each supported attribute therefore reflects a non-spoofable, platform-derived identity or environment value; attributes that a caller could influence are intentionally excluded.
+The set of attributes that may be encoded into the subject claim is deliberately restricted to this fixed list. Because the subject is consumed by the cloud provider's trust policy to make authorization decisions, only values that are determined and attested by the Pulumi platform (rather than supplied by the requesting caller) are permitted. Admitting arbitrary or user-controllable values would allow a caller to forge a subject that satisfies a trust policy and thereby obtain credentials they are not entitled to. Each supported attribute therefore reflects a non-spoofable, platform-derived identity or environment value; attributes that a caller could influence are intentionally excluded. `pulumi.token.name` is one such exclusion: unlike the token's type and team, which the platform determines, a token's name is chosen by whoever creates it and could be set to a value that forges a subject.
 
 {{< /notes >}}
 

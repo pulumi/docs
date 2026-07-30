@@ -207,12 +207,12 @@ aliases:
   - /events/workshop-redmond-2020-03-12
 
 sections:
-    - label: All events
+    - label: All
       anchor: all
-    - label: Upcoming
-      anchor: upcoming
     - label: On-demand
       anchor: on-demand
+    - label: Upcoming
+      anchor: upcoming
 
 outputs: ["html", "rss"]
 ---
