@@ -1,7 +1,7 @@
 ---
 title: "Your Coding Agents Can Already Build Infrastructure. That's the Problem."
 allow_long_title: true
-date: 2026-07-23
+date: 2026-07-30
 draft: false
 meta_desc: "Claude and Cursor can provision infrastructure today. The real question is control: how review, policy, and audit keep up when change velocity multiplies."
 feature_image: feature.png
