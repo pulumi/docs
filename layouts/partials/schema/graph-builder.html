@@ -66,7 +66,7 @@
      empty dict when no question-shaped headers are found, so this is a no-op for
      the many docs pages that have no FAQ section.
      Blog posts opt in explicitly via `faq_schema: true` in frontmatter: unlike
-     what-is/docs pages (curated, definitional, low false-positive risk), 168+
+     learn/docs pages (curated, definitional, low false-positive risk), 168+
      existing blog posts contain narrative headings that happen to end in "?"
      without being a real Q&A section, so gating blog FAQ schema on type alone
      would generate inaccurate structured data across the archive. The opt-in
@@ -89,7 +89,7 @@
 {{ $faqPage := dict }}
 {{ $isDedicatedFaqPage := or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq") (strings.Contains (lower .Title) "frequently asked") }}
 {{ $qualifiesForFaqSchema := or
-  (and .IsPage (or (eq .Type "what-is") (eq .Type "docs")))
+  (and .IsPage (or (eq .Type "learn") (eq .Type "docs")))
   (and (eq .Type "blog") .Params.faq_schema)
   (and (eq .Type "docs") (not .IsPage) .Params.faq_schema)
 }}

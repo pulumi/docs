@@ -1,15 +1,15 @@
-// /what-is/ overview filter: narrows the directory to a single labeled section
+// /learn/ overview filter: narrows the directory to a single labeled section
 // in place, defaulting to "All". Progressive enhancement — the pills are real
 // anchor links (jump to the section) as the no-JS / crawler fallback, and every
 // section stays server-rendered in the DOM; this only shows/hides.
 //
-// DOM contract (rendered by layouts/what-is/list.html):
-//   [data-what-is-filter]                    the filter bar
-//   [data-what-is-filter] [data-section]     a pill ("" = All), .is-active
+// DOM contract (rendered by layouts/learn/list.html):
+//   [data-learn-filter]                    the filter bar
+//   [data-learn-filter] [data-section]     a pill ("" = All), .is-active
 //   section[data-section]                    one section, matched by id
 
 document.addEventListener("DOMContentLoaded", () => {
-    const filterBar = document.querySelector<HTMLElement>("[data-what-is-filter]");
+    const filterBar = document.querySelector<HTMLElement>("[data-learn-filter]");
     if (!filterBar) {
         return;
     }

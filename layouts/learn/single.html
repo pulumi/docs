@@ -14,9 +14,9 @@
 {{ end }}
 <header class="page-hero text-left">
     <div class="container mx-auto px-6 lg:px-0 flex flex-col items-start">
-        {{ $section := partial "what-is/section-for-page.html" . }}
+{{ $section := partial "learn/section-for-page.html" . }}
         {{ partial "breadcrumb.html" (dict "class" "max-w-4xl mx-auto mb-6" "crumbs" (slice
-            (dict "name" "What Is" "url" "/what-is/")
+            (dict "name" "Learn" "url" "/learn/")
             (dict "name" $section.title "url" $section.url))) }}
         <div class="page-hero-title">
             <h1>
