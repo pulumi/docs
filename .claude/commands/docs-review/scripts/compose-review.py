@@ -93,7 +93,15 @@ PROMOTE_UNVERIFIABLE_TO = "warning"
 # outcome — `contradicted`/`mismatch` mean "a source disagrees with a claim",
 # which a build error or a coherence gap is not. The specific detector lives in
 # the record's `type`/`source`, rendered in the trail-line parenthetical.
-TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged")
+# `framing-drift` is the fact-check verdict for "the anchor value is accurate
+# but the claim's published meaning differs from what the source supports"
+# (widened denominator, usage → intent, dropped qualifier). It stubs into
+# ⚠️ Low-confidence by default — the reviewer promotes to 🚨 when the drifted
+# phrasing also rides `social.*` frontmatter (auto-posted on merge) or
+# otherwise misleads a reader. It counts with the contradiction family in
+# aggregate counts (it IS a source-vs-claim disagreement — about meaning,
+# not value).
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -102,8 +110,12 @@ EXPECTED_TRAIL_EMOJI = {
     "contradicted": "❌",
     "mismatch": "⚔️",
     "flagged": "🚩",
+    "framing-drift": "🌀",
 }
 OUTSTANDING_VERDICTS = {"contradicted", "mismatch", "flagged"}
+# Verdicts counted with `contradicted` in aggregate counts (trail summary,
+# investigation-log parentheticals, per-lane V/C/U attribution).
+CONTRADICTION_FAMILY = {"contradicted", "mismatch", "framing-drift"}
 
 # Mirror of `validate-pinned.py` TEMPORAL_TRIGGERS — keep synchronized.
 TEMPORAL_TRIGGERS = {
@@ -534,8 +546,22 @@ def touches_programs(diff_files: list[str]) -> bool:
 # ---- section renderers -----------------------------------------------------
 
 
-def render_header(timestamp: str) -> str:
-    return f"## Pre-merge Review — Last updated {timestamp}"
+def render_header(timestamp: str, head_sha: str = "") -> str:
+    """Header line plus, when the head SHA is known, a machine-readable
+    freshness sentinel. The sentinel exists because an entire class of pusher
+    (the Copilot coding agent, `GITHUB_TOKEN` pushes) never fires the
+    `pull_request: synchronize` event, so the `review:stale` label can miss a
+    push entirely (PR #20556 closed wearing `review:no-blockers` while the
+    pinned review described content a later conflict-resolution commit had
+    replaced). Label-independent consumers (`/pr-review` Step 2, the
+    review-label-reconcile workflow) compare this SHA against the PR head —
+    an exact check, immune to suppressed webhooks. The re-entrant update path
+    must refresh it alongside the `Last updated` timestamp (see
+    `docs-review:references:update`)."""
+    header = f"## Pre-merge Review — Last updated {timestamp}"
+    if head_sha:
+        header += f"\n<!-- CLAUDE_REVIEW_HEAD {head_sha} -->"
+    return header
 
 
 def count_verifier_outages(verdicts: list[dict] | None) -> tuple[int, int]:
@@ -644,7 +670,7 @@ def render_investigation_log(
         y = len(fact_verdicts)
         x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
         n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
-        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
         i_inline = route_counts.get("inline", 0)
         p1 = route_counts.get("pass1", 0)
         f2 = route_counts.get("pass2", 0)
@@ -815,7 +841,7 @@ def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, 
     n = len(verdicts) - n_detector
     x = sum(1 for v in verdicts if v.get("verdict") in ("verified", "matches"))
     y = sum(1 for v in verdicts if v.get("verdict") == "unverifiable")
-    z = sum(1 for v in verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+    z = sum(1 for v in verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
     lines: list[str] = []
     for v in verdicts:
         verdict = v.get("verdict")
@@ -1103,8 +1129,22 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
                         "If pre-existing on a line this PR didn't touch, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`. "
                         "`trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.")
             outstanding.append(_stub_bullet(v, todo))
+        elif verdict == "framing-drift":
+            lowconf.append(_stub_bullet(
+                v, "this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning "
+                   "differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite "
+                   "that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding "
+                   "if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would "
+                   "materially mislead a reader; move to 📋 Triaged with `**Spurious:**` only if the framing comparison "
+                   "itself is wrong."))
         elif verdict == "unverifiable":
-            if PROMOTE_UNVERIFIABLE_TO == "outstanding":
+            if v.get("turn_cap_exhausted"):
+                lowconf.append(_stub_bullet(
+                    v, "this `unverifiable` is a TURN-BUDGET failure (the verifier ran out of turns), NOT evidence that "
+                       "no authoritative source exists — never describe it as 'out of scope' or 'can't be verified'. "
+                       "Verify it yourself in-review if cheap (one gh read / one fetch), else file the author-question "
+                       "line saying verification ran out of budget and the claim is retryable."))
+            elif PROMOTE_UNVERIFIABLE_TO == "outstanding":
                 outstanding.append(_stub_bullet(
                     v, "if this isn't actually a checkable factual claim, it should be `not-a-claim` not `unverifiable`; "
                        "otherwise file the author-question buffer line and keep here. "
@@ -1152,7 +1192,7 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
             verd = x.get("verdict")
             if verd in ("verified", "matches"):
                 v += 1
-            elif verd in ("contradicted", "mismatch"):
+            elif verd in CONTRADICTION_FAMILY:
                 c += 1
             else:  # unverifiable / not-a-claim (rare on an external lane)
                 u += 1
@@ -1286,7 +1326,7 @@ def compose(args: argparse.Namespace) -> str:
     if outage_banner:
         forced_levels["facts"] = ("LOW", "automated fact-checking errored — claims unverified")
 
-    sections: list[str] = [render_header(timestamp), ""]
+    sections: list[str] = [render_header(timestamp, head_sha), ""]
     if outage_banner:
         sections += [outage_banner, ""]
     sections += [
