@@ -108,7 +108,7 @@ export function normalizeState(persistedState: any): Partial<AppState> {
                 cloud: persistedState.preferences.cloud || "aws",
                 k8sLanguage: persistedState.preferences.k8sLanguage || "typescript",
                 persona: persistedState.preferences.persona || "developer",
-                backend: persistedState.backend || "service",
+                backend: persistedState.preferences.backend || "service",
                 pythontoolchain: persistedState.preferences.pythontoolchain || "pip",
                 tfTool: persistedState.preferences.tfTool || "terraform",
             };
