@@ -37,7 +37,8 @@
   {{ if findRE `^\d+\.\s+` $line }}
     {{/* Save previous step if exists */}}
     {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " }}
+      {{ $stepContent = trim $stepContent " \t\n\r" }}
       {{ if $stepContent }}
         {{ $step := dict
           "@type" "HowToStep"
@@ -64,9 +65,15 @@
     {{ end }}
 
   {{ else if or (eq $line "") (strings.HasPrefix $line "#") }}
-    {{/* End current step on empty line or new section */}}
+    {{/* End current step on empty line or new section. Unconditionally clear
+         $stepText and $inNumberedList below (not just on a header line) so a
+         step is never pushed twice: without this, a step already saved on the
+         blank line that follows the last list item got saved again when the
+         next heading line was reached, since $stepText/$stepNumber were left
+         populated in between. */}}
     {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " }}
+      {{ $stepContent = trim $stepContent " \t\n\r" }}
       {{ if $stepContent }}
         {{ $step := dict
           "@type" "HowToStep"
@@ -77,18 +84,15 @@
         {{ $steps = $steps | append $step }}
       {{ end }}
     {{ end }}
-
-    {{/* Reset if we hit a header */}}
-    {{ if strings.HasPrefix $line "#" }}
-      {{ $inNumberedList = false }}
-      {{ $stepText = slice }}
-    {{ end }}
+    {{ $stepText = slice }}
+    {{ $inNumberedList = false }}
   {{ end }}
 {{ end }}
 
 {{/* Save last step if exists */}}
 {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-  {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+  {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " }}
+  {{ $stepContent = trim $stepContent " \t\n\r" }}
   {{ if $stepContent }}
     {{ $step := dict
       "@type" "HowToStep"
