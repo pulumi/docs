@@ -119,9 +119,7 @@ Inform the user if author information was auto-populated and give them a chance 
 
 1. **Generate slug**: Convert title to lowercase, replace spaces with hyphens, keep only alphanumeric characters and hyphens (remove all other special characters)
 2. **Create directory**: `content/blog/{slug}/`
-3. **Copy the placeholder feature image**: Use Bash to copy the placeholder:
-   - `.claude/commands/_common/images/blog-post-feature-placeholder.png` → `content/blog/{slug}/feature.png`
-   (No `meta.png` — the social/OpenGraph card is generated on-brand at build time from the title + feature image.)
+3. **Do not add a feature image**: Leave `feature_image` blank in the frontmatter and don't copy any placeholder file into the directory. The author adds a real one later via `/blog-feature-image` or a `needs-design` PR label. Note the rule for Step 5: a published post needs a feature image unless it's `category: general` or `draft: true`.
 4. **Create index.md** with this structure:
 
 ```markdown
@@ -132,7 +130,10 @@ title: "Title in Title Case"
 date: YYYY-MM-DD  # Use 2099-01-01 if "I don't know yet" was selected, otherwise use the chosen date
 draft: false
 meta_desc: "The one-sentence summary provided by user"
-feature_image: feature.png
+# Leave blank — add a real hero image later with /blog-feature-image or a
+# designer-supplied one (1884x1256). Never commit a placeholder. Required
+# before publishing unless the post is `category: general` or `draft: true`.
+feature_image:
 authors:
     - author-id-1
     - author-id-2  # Include all authors gathered during setup
@@ -172,7 +173,6 @@ Before finishing:
 - Verify all author files exist and are valid TOML
 - Verify all author IDs in the frontmatter match the author IDs that were created/found (prevent typos)
 - Verify the blog post directory was created
-- Verify feature.png was copied to the blog post directory
 - Verify index.md has valid YAML frontmatter
 - Verify the user is not committing to `master` directly (if so, warn them)
 - Check that all required fields are present (especially meta_desc, authors, tags)
@@ -191,7 +191,7 @@ After creating the files, tell the user:
    - If information was auto-detected, remind user to review it for accuracy
 3. **Next steps**:
    - **If date was set to 2099-01-01**: Update the publication date in frontmatter before publishing! The current placeholder date will prevent the post from appearing on the live site.
-   - Replace the placeholder `feature.png` with your own hero image (1884×1256px). To request a custom feature image from the design team, label your PR with `needs-design`. You can also run `/blog-feature-image` to generate one automatically. The social/OpenGraph card is generated on-brand at build time from the title + feature image — no `meta.png` needed.
+   - **Add a feature image** (1884×1256px): run `/blog-feature-image` to generate one automatically, or label your PR with `needs-design` to request a custom one from the design team. Then set `feature_image:` to its filename. Required before publishing — the only posts that may ship without one are `category: general` posts and drafts (`draft: true`). Say so explicitly based on the category chosen in Step 1: for a `general` post, note that it's optional; for any other category, note that it's expected before the PR is ready. Offer to run `/blog-feature-image` now.
    - Write the blog post content
    - Add any screenshots or images to the blog post directory
    - **Optional but recommended**: Run `/add-borders` on the blog post to add 1px grey borders to PNG images for better visual presentation
@@ -225,7 +225,7 @@ Claude: I'll help you create a new blog post. Let me first check your git config
 [Suggests tags based on the post title by looking at similar blog posts]
 [Asks remaining questions via AskUserQuestion, pre-populating detected values]
 [Creates all needed author profiles, using auto-detected information where possible]
-[Creates blog post structure with files: content/blog/my-new-post/index.md and content/blog/my-new-post/feature.png]
+[Creates blog post structure: content/blog/my-new-post/index.md, with feature_image left blank]
 [Includes all author IDs in the frontmatter authors array]
 [Provides next steps with summary of what was auto-populated]
 ```
