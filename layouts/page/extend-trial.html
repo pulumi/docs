@@ -1,0 +1,231 @@
+{{ define "main" }}
+{{/*
+  /extend-trial — destination for the Pulumi Cloud console trial-banner
+  "Request an extension" link. Duplicated from the contact page as a starting
+  point (per web team), then swapped to a HubSpot embed so we can prefill
+  account context from the console link. Header/footer come from baseof.html.
+
+  HubSpot form: "Trial Extension" (portal 4429525, form 4b3db916-...).
+  Prefill (visible, editable fields):
+    ?email=  -> email
+    ?org=    -> pulumi_organization_name_s_  (the "Pulumi Organization Name(s)" prop)
+  UTM capture is handled by the form's own hidden last_utm_* fields.
+
+  v1 notes for review:
+    - Right-rail events/posts are hardcoded (flagged). Later: pull from Hugo
+      data/content so they stay current on their own.
+    - Raw hbspt.forms.create is used (not <pulumi-contact-us-form>) specifically
+      to get onFormReady prefill + the in-place confirmation swap.
+*/}}
+
+<style>
+  .et-page{--et-purple:#8A3391;--et-violet:#5F2CC9;--et-violet-dk:#4A1FA6;--et-salmon:#F26B7E;
+    --et-ink:#1A1A21;--et-ink2:#3D3D4A;--et-muted:#6B6B7B;--et-line:#E5E5EC;--et-bg-alt:#F7F7FA;--et-radius:10px;
+    color:var(--et-ink);line-height:1.55;}
+  .et-wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+  .et-hero{padding:54px 0 12px;}
+  .et-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--et-purple);background:#F5EAF6;border-radius:100px;padding:5px 13px;}
+  .et-page h1{font-size:46px;line-height:1.1;letter-spacing:-.028em;margin:18px 0 14px;max-width:16ch;}
+  .et-sub{font-size:18px;color:var(--et-muted);max-width:60ch;margin:0;}
+  .et-cols{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:44px;align-items:start;padding:36px 0 76px;}
+  @media (max-width:1000px){.et-cols{grid-template-columns:1fr;}.et-page h1{font-size:34px;}}
+  .et-card{border:1px solid var(--et-line);border-radius:var(--et-radius);background:#fff;}
+  .et-card-pad{padding:28px;}
+  .et-form-card{box-shadow:0 1px 2px rgba(20,20,40,.04),0 10px 32px rgba(20,20,40,.055);}
+  .et-footnote{font-size:13px;color:var(--et-muted);margin:16px 0 0;}
+
+  /* ---- HubSpot form, styled at page level (set the form to "Unstyled" in HubSpot) ---- */
+  .et-form-card .hs-form{font-size:15px;}
+  .et-form-card .hs-form-field{margin-bottom:22px;}
+  .et-form-card .hs-form-field > label{display:block;font-size:14.5px;font-weight:600;margin-bottom:6px;color:var(--et-ink);}
+  .et-form-card .hs-form-field > label .hs-form-required{color:var(--et-salmon);margin-left:2px;}
+  .et-form-card .hs-field-desc{font-size:13px;color:var(--et-muted);margin:-2px 0 8px;font-weight:400;}
+  .et-form-card .hs-input:not([type=checkbox]):not([type=radio]){width:100%;font-family:inherit;font-size:15px;color:var(--et-ink);border:1px solid var(--et-line);border-radius:8px;padding:11px 13px;background:#fff;outline:none;transition:.15s;box-sizing:border-box;}
+  .et-form-card textarea.hs-input{min-height:96px;resize:vertical;}
+  .et-form-card select.hs-input{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B7B' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;}
+  .et-form-card .hs-input:focus{border-color:var(--et-violet);box-shadow:0 0 0 3px rgba(95,44,201,.12);}
+  .et-form-card .hs-form-booleancheckbox-display{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--et-ink2);font-weight:400;cursor:pointer;}
+  .et-form-card .hs-form-booleancheckbox-display > input{margin-top:3px;flex:none;width:16px;height:16px;accent-color:var(--et-violet);}
+  .et-form-card .hs-error-msg,.et-form-card .hs-error-msgs label{color:var(--et-salmon);font-size:13px;margin-top:5px;display:block;}
+  .et-form-card .hs-button.primary{display:inline-flex;align-items:center;justify-content:center;font-size:15.5px;font-weight:600;border-radius:8px;padding:13px 26px;border:1px solid transparent;cursor:pointer;font-family:inherit;color:#fff;background:linear-gradient(100deg,var(--et-violet),var(--et-purple));transition:filter .15s;margin-top:4px;}
+  .et-form-card .hs-button.primary:hover{filter:brightness(1.08);}
+
+  /* sidebar */
+  .et-side{display:flex;flex-direction:column;gap:18px;position:sticky;top:92px;}
+  .et-side h3{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--et-muted);margin:0 0 14px;font-weight:700;}
+  .et-res{display:block;padding:13px 0;border-bottom:1px solid var(--et-line);}
+  .et-res:first-of-type{padding-top:0;}
+  .et-res:last-of-type{border-bottom:none;padding-bottom:0;}
+  .et-res:hover{text-decoration:none;}
+  .et-res .et-t{font-size:14px;font-weight:600;color:var(--et-ink);line-height:1.35;}
+  .et-res:hover .et-t{color:var(--et-purple);}
+  .et-res .et-m{font-size:12.5px;color:var(--et-muted);margin-top:3px;}
+  .et-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px;margin-right:7px;vertical-align:1px;background:#F5EAF6;color:var(--et-purple);}
+  .et-datechip{flex:none;width:44px;text-align:center;border:1px solid var(--et-line);border-radius:7px;padding:5px 0;}
+  .et-datechip .et-d{font-size:16px;font-weight:700;line-height:1;}
+  .et-datechip .et-mo{font-size:10.5px;text-transform:uppercase;color:var(--et-muted);font-weight:700;letter-spacing:.04em;}
+  .et-evrow{display:flex;gap:12px;align-items:flex-start;}
+  .et-more{font-size:13.5px;font-weight:600;display:inline-block;margin-top:15px;}
+  .et-side a.et-link{color:var(--et-purple);}
+  /* confirmation */
+  .et-hide{display:none !important;}
+  .et-conf .et-tick{width:46px;height:46px;border-radius:50%;background:#E6F6EF;color:#1F9D6B;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;}
+  .et-conf h2{margin:0 0 8px;font-size:27px;letter-spacing:-.02em;}
+  .et-conf p{margin:0 0 22px;color:var(--et-muted);font-size:16px;}
+  .et-recap{background:var(--et-bg-alt);border:1px solid var(--et-line);border-radius:8px;padding:16px 18px;font-size:14px;margin-bottom:24px;}
+  .et-recap .et-row{display:flex;justify-content:space-between;gap:14px;padding:5px 0;}
+  .et-recap .et-k{color:var(--et-muted);}
+  .et-steps{list-style:none;margin:0 0 26px;padding:0;counter-reset:s;}
+  .et-steps li{counter-increment:s;position:relative;padding:0 0 16px 34px;font-size:14.5px;color:var(--et-ink2);}
+  .et-steps li:last-child{padding-bottom:0;}
+  .et-steps li:before{content:counter(s);position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:#F3EEFE;color:var(--et-violet-dk);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .et-steps li:after{content:"";position:absolute;left:10.5px;top:24px;bottom:6px;width:1px;background:var(--et-line);}
+  .et-steps li:last-child:after{display:none;}
+  .et-steps b{color:var(--et-ink);}
+  .et-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:15.5px;font-weight:600;border-radius:8px;padding:13px 26px;border:1px solid transparent;cursor:pointer;font-family:inherit;text-decoration:none;}
+  .et-btn-primary{background:linear-gradient(100deg,var(--et-violet),var(--et-purple));color:#fff;}
+  .et-btn-primary:hover{filter:brightness(1.08);text-decoration:none;color:#fff;}
+</style>
+
+<div class="et-page">
+  <div class="et-wrap et-hero">
+    <span class="et-eyebrow">Trial</span>
+    <h1>Need more time with Pulumi?</h1>
+    <p class="et-sub">Tell us what you're still evaluating and we'll extend your trial. Most requests are approved within one business day, and you won't lose your stacks, state, or history.</p>
+  </div>
+
+  <div class="et-wrap et-cols">
+
+    <!-- ============ FORM ============ -->
+    <div>
+      <div id="et-formState" class="et-card et-form-card">
+        <div class="et-card-pad">
+          <!-- HubSpot renders here: email + org (prefilled), reason, comments, SE checkbox, submit -->
+          <div id="extend-trial-form"></div>
+          <p class="et-footnote">Goes straight to the Pulumi team. Typical response: under 1 business day.</p>
+        </div>
+      </div>
+
+      <!-- CONFIRMATION (swapped in after submit) -->
+      <div id="et-confState" class="et-card et-form-card et-hide">
+        <div class="et-card-pad et-conf">
+          <div class="et-tick">&#10003;</div>
+          <h2>Request received. We're on it.</h2>
+          <p>We've notified the Pulumi team and sent a copy to <span class="js-email-conf">your email</span>. Your trial stays active while we review.</p>
+          <div class="et-recap">
+            <div class="et-row"><span class="et-k">Organization</span><span><strong class="js-org-conf">&mdash;</strong></span></div>
+            <div class="et-row"><span class="et-k">Reason</span><span><strong class="js-reason-conf">&mdash;</strong></span></div>
+          </div>
+          <ol class="et-steps">
+            <li><b>Now.</b> Your request is with the Pulumi team, along with your account details.</li>
+            <li><b>Within 1 business day.</b> Someone reviews it and either extends your trial or replies with a question.</li>
+            <li><b>Confirmation.</b> You'll get an email with your new trial end date. Nothing in your account changes in the meantime.</li>
+          </ol>
+          <a class="et-btn et-btn-primary" href="https://app.pulumi.com">Back to dashboard</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SIDEBAR (v1: hardcoded, see note in template head) ============ -->
+    <aside class="et-side">
+      <div class="et-card et-card-pad">
+        <h3>Live workshops</h3>
+        <a class="et-res" href="https://www.pulumi.com/events/intro-to-pulumi-esc-managing-secrets/">
+          <div class="et-evrow">
+            <div class="et-datechip"><div class="et-d">5</div><div class="et-mo">Aug</div></div>
+            <div><div class="et-t">Best Practices for Managing Secrets: An Introduction to ESC</div><div class="et-m">Virtual workshop &middot; Beginner</div></div>
+          </div>
+        </a>
+        <a class="et-res" href="https://www.pulumi.com/events/getting-started-with-devops-ai-skills-2/">
+          <div class="et-evrow">
+            <div class="et-datechip"><div class="et-d">12</div><div class="et-mo">Aug</div></div>
+            <div><div class="et-t">Getting Started with DevOps AI Skills</div><div class="et-m">Virtual workshop &middot; Beginner</div></div>
+          </div>
+        </a>
+        <a class="et-res" href="https://www.pulumi.com/events/neo-in-a-docker-sandbox/">
+          <div class="et-evrow">
+            <div class="et-datechip"><div class="et-d">16</div><div class="et-mo">Sep</div></div>
+            <div><div class="et-t">Neo in a Docker Sandbox: Pulumi's coding agent, safely</div><div class="et-m">With Docker &middot; Virtual workshop</div></div>
+          </div>
+        </a>
+        <a class="et-more et-link" href="https://www.pulumi.com/events/">All events and workshops &rarr;</a>
+      </div>
+
+      <div class="et-card et-card-pad">
+        <h3>While you're evaluating</h3>
+        <a class="et-res" href="https://www.pulumi.com/blog/best-terraform-alternatives/">
+          <div class="et-t"><span class="et-tag">Guide</span>Best Terraform Alternatives in 2026</div><div class="et-m">Jul 18, 2026</div>
+        </a>
+        <a class="et-res" href="https://www.pulumi.com/blog/preview-esc-environment-changes-with-draft-references/">
+          <div class="et-t"><span class="et-tag">Product</span>Preview ESC Changes with Environment Overrides</div><div class="et-m">Jul 23, 2026</div>
+        </a>
+        <a class="et-res" href="https://www.pulumi.com/blog/kubernetes-agent-sandbox/">
+          <div class="et-t"><span class="et-tag">Tutorial</span>Kubernetes Agent Sandbox: What It Is and How to Deploy It</div><div class="et-m">Jul 21, 2026</div>
+        </a>
+        <a class="et-res" href="https://www.pulumi.com/blog/how-to-test-infrastructure-as-code/">
+          <div class="et-t"><span class="et-tag">Best practices</span>How to Test Infrastructure as Code</div><div class="et-m">Jun 30, 2026</div>
+        </a>
+        <a class="et-more et-link" href="https://www.pulumi.com/blog/">More from the blog &rarr;</a>
+      </div>
+
+      <div class="et-card et-card-pad" style="background:var(--et-bg-alt)">
+        <h3>Need something else?</h3>
+        <p style="font-size:14px;color:var(--et-ink2);margin:0 0 12px">If this isn't about your trial length, these get you there faster:</p>
+        <div style="font-size:14px;display:flex;flex-direction:column;gap:8px">
+          <a class="et-link" href="https://www.pulumi.com/contact/">&rarr; Talk to sales about pricing</a>
+          <a class="et-link" href="https://support.pulumi.com/">&rarr; Open a support ticket</a>
+          <a class="et-link" href="https://slack.pulumi.com/">&rarr; Ask the community on Slack</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- HubSpot forms embed -->
+<script src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  function q(sel){ return document.querySelector(sel); }
+
+  function createForm(hbspt) {
+    hbspt.forms.create({
+      region: "na1",
+      portalId: "4429525",
+      formId: "4b3db916-7d44-4178-9f86-1cdf94567bfa",
+      target: "#extend-trial-form",
+      cssClass: "et-hsform",
+      onFormReady: function ($form) {
+        var set = function (name, val) {
+          var el = $form.querySelector('[name="' + name + '"]');
+          if (el && val) { el.value = val; el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true })); }
+        };
+        // Prefill visible, editable account fields from the console link.
+        set('email', params.get('email'));
+        set('pulumi_organization_name_s_', params.get('org'));
+      },
+      onFormSubmitted: function ($form) {
+        var emailEl = document.querySelector('#extend-trial-form [name="email"]');
+        var orgEl = document.querySelector('#extend-trial-form [name="pulumi_organization_name_s_"]');
+        var reasonEl = document.querySelector('#extend-trial-form select[name="trial_extension_reason"]');
+        q('.js-email-conf').textContent = (emailEl && emailEl.value) || params.get('email') || 'your email';
+        q('.js-org-conf').textContent = (orgEl && orgEl.value) || params.get('org') || '—';
+        q('.js-reason-conf').textContent = (reasonEl && reasonEl.selectedOptions.length && reasonEl.value) ? reasonEl.selectedOptions[0].text : '—';
+        q('#et-formState').classList.add('et-hide');
+        q('#et-confState').classList.remove('et-hide');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+  if (window.hbspt) { createForm(window.hbspt); }
+  else {
+    var t = setInterval(function () {
+      if (window.hbspt) { clearInterval(t); createForm(window.hbspt); }
+    }, 50);
+    setTimeout(function () { clearInterval(t); }, 10000);
+  }
+})();
+</script>
+{{ end }}
