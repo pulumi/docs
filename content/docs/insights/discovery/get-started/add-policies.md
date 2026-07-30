@@ -87,7 +87,11 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 1. Now add your insights account to the policy group. Select **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. production/us-west-2) Finally, select **Add account to policy group**
 
 {{% notes type="info" %}}
+<<<<<<< HEAD
 By default, every stack is automatically added to `default-preventative-policy-group`, and every stack and cloud account is automatically added to `default-audit-policy-group`. See [default policy groups](/docs/insights/policy/policy-groups/#default-policy-groups) for details.
+=======
+Cloud accounts are automatically added to `default-accounts-policy-group`, and stacks to `default-policy-group`, as they are created. See [default policy groups](/docs/insights/policy/policy-groups/#default-policy-groups).
+>>>>>>> origin/master
 {{% /notes %}}
 
 ![Insights Policies - New Policy Pack](/docs/insights/assets/new-policy-pack.png)

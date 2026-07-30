@@ -1,0 +1,21 @@
+{
+    "serverInfo": {
+        "name": "pulumi",
+        "title": "Pulumi MCP Server",
+        "version": "1.0.0",
+        "description": "Query Pulumi Cloud stacks and resources, search the Pulumi Registry, review policy violations, generate infrastructure code, and delegate tasks to Pulumi Neo from any MCP-capable AI assistant.",
+        "websiteUrl": "https://www.pulumi.com/docs/ai/mcp-server/",
+        "documentationUrl": "https://www.pulumi.com/docs/ai/mcp-server/"
+    },
+    "transport": {
+        "type": "streamable-http",
+        "endpoint": "https://mcp.ai.pulumi.com/mcp"
+    },
+    "authentication": {
+        "type": "oauth2",
+        "description": "OAuth 2.0. On first connect you authenticate with a Pulumi Access Token and select an organization."
+    },
+    "capabilities": {
+        "tools": {}
+    }
+}
