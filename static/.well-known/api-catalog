@@ -1,0 +1,28 @@
+{
+    "linkset": [
+        {
+            "anchor": "https://api.pulumi.com",
+            "service-desc": [
+                {
+                    "href": "https://api.pulumi.com/api/openapi/pulumi-spec.json",
+                    "type": "application/json",
+                    "title": "Pulumi Cloud REST API (OpenAPI specification)"
+                }
+            ],
+            "service-doc": [
+                {
+                    "href": "https://www.pulumi.com/docs/reference/cloud-rest-api/",
+                    "type": "text/html",
+                    "title": "Pulumi Cloud REST API documentation"
+                }
+            ],
+            "status": [
+                {
+                    "href": "https://status.pulumi.com/",
+                    "type": "text/html",
+                    "title": "Pulumi status"
+                }
+            ]
+        }
+    ]
+}

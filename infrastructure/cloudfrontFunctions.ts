@@ -48,3 +48,31 @@ export function getMarkdownNegotiationFunctionAssociation(): aws.types.input.clo
         functionArn: markdownNegotiationFunction.arn,
     };
 }
+
+// CloudFront Function that stamps the correct Content-Type on the RFC 9727 API
+// catalog. The catalog is served from S3 as the extensionless object
+// /.well-known/api-catalog, so S3 hands it back as binary/octet-stream; agents
+// expect application/linkset+json. Runs at viewer-response and only rewrites
+// that single path, so every other response on the behavior is untouched.
+const apiCatalogContentTypeFunctionCode = `
+function handler(event) {
+    var response = event.response;
+    if (event.request.uri === '/.well-known/api-catalog') {
+        response.headers['content-type'] = { value: 'application/linkset+json' };
+    }
+    return response;
+}
+`;
+
+const apiCatalogContentTypeFunction = new aws.cloudfront.Function("api-catalog-content-type", {
+    runtime: "cloudfront-js-2.0",
+    code: apiCatalogContentTypeFunctionCode,
+    comment: "Sets Content-Type: application/linkset+json on /.well-known/api-catalog.",
+});
+
+export function getApiCatalogContentTypeFunctionAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorFunctionAssociation {
+    return {
+        eventType: "viewer-response",
+        functionArn: apiCatalogContentTypeFunction.arn,
+    };
+}
