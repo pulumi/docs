@@ -51,6 +51,26 @@
   .et-form-card .hs-button.primary{display:inline-flex;align-items:center;justify-content:center;font-size:15.5px;font-weight:600;border-radius:8px;padding:13px 26px;border:1px solid transparent;cursor:pointer;font-family:inherit;color:#fff;background:linear-gradient(100deg,var(--et-violet),var(--et-purple));transition:filter .15s;margin-top:4px;}
   .et-form-card .hs-button.primary:hover{filter:brightness(1.08);}
 
+  /* ---- Harden against the form's inherited "round" theme ----
+     The cloned form ships a theme + style object (arial font, submitColor
+     #5A30C5, label/help colors), some applied as inline styles. These rules
+     win regardless, so the page renders correctly even if the form is NOT set
+     to "Unstyled" in HubSpot. Scoped to .et-page .et-form-card so nothing
+     else on the site is affected. */
+  .et-page .et-form-card .hs-form,
+  .et-page .et-form-card .hs-form input,
+  .et-page .et-form-card .hs-form select,
+  .et-page .et-form-card .hs-form textarea,
+  .et-page .et-form-card .hs-form label,
+  .et-page .et-form-card .hs-button{font-family:inherit !important;}
+  .et-page .et-form-card .hs-form-field > label{color:var(--et-ink) !important;font-size:14.5px !important;}
+  .et-page .et-form-card .hs-field-desc{color:var(--et-muted) !important;font-size:13px !important;}
+  .et-page .et-form-card input.hs-input:not([type=checkbox]):not([type=radio]),
+  .et-page .et-form-card textarea.hs-input{border:1px solid var(--et-line) !important;border-radius:8px !important;background:#fff !important;color:var(--et-ink) !important;font-size:15px !important;padding:11px 13px !important;}
+  .et-page .et-form-card select.hs-input{border:1px solid var(--et-line) !important;border-radius:8px !important;color:var(--et-ink) !important;font-size:15px !important;padding:11px 38px 11px 13px !important;background-color:#fff !important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B7B' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;background-repeat:no-repeat !important;background-position:right 14px center !important;}
+  .et-page .et-form-card .hs-input:focus{border-color:var(--et-violet) !important;box-shadow:0 0 0 3px rgba(95,44,201,.12) !important;}
+  .et-page .et-form-card .hs-button.primary{background:linear-gradient(100deg,var(--et-violet),var(--et-purple)) !important;background-color:var(--et-violet) !important;color:#fff !important;border:1px solid transparent !important;border-radius:8px !important;padding:13px 26px !important;font-size:15.5px !important;font-weight:600 !important;width:auto !important;}
+
   /* sidebar */
   .et-side{display:flex;flex-direction:column;gap:18px;position:sticky;top:92px;}
   .et-side h3{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--et-muted);margin:0 0 14px;font-weight:700;}
