@@ -72,6 +72,14 @@ from pathlib import Path
 
 # ---- constants -------------------------------------------------------------
 
+# Single source of truth for the review footer. `pinned-comment.sh` reads the
+# same file and is the authoritative writer on publish (it stamps the footer
+# onto every page of a split review); the sentinel is how both sides find and
+# strip an existing copy. Keep the sentinel in sync with the shell's
+# FOOTER_SENTINEL.
+FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
+FOOTER_PATH = Path(__file__).resolve().parent.parent / "footer.md"
+
 # Quick-win: an `unverifiable` *factual* claim renders in ⚠️ Low-confidence
 # (with an author-question line), not 🚨. Flip to "outstanding" if that spec
 # change reverts. (The validator never enforced always-🚨 for unverifiable —
@@ -955,11 +963,21 @@ def render_review_history(timestamp: str, head_sha_short: str) -> str:
 
 
 def render_footer() -> str:
-    return (
-        "---\n"
-        "Need a re-review? Want to dispute a finding? Mention `@claude` and include `#update-review`.  \n"
-        "(For ad-hoc questions or fixes, just `@claude` — no hashtag.)"
-    )
+    """Return the canonical footer, read from `docs-review/footer.md`.
+
+    `pinned-comment.sh` is the authoritative writer: on upsert it strips this
+    block from the inbound body and re-stamps it onto EVERY page of a split
+    review. Rendering it here anyway keeps the composed draft (and the local
+    `/docs-review` output, which never reaches the shell) a complete document,
+    and keeps exactly one copy of the text in the repo.
+
+    If the file is unreadable, emit the bare sentinel: it renders to nothing in
+    a GitHub comment, and the shell still supplies the real text on publish.
+    """
+    try:
+        return FOOTER_PATH.read_text(encoding="utf-8").rstrip("\n")
+    except OSError:
+        return FOOTER_SENTINEL
 
 
 # ---- stub bucket bullets ---------------------------------------------------

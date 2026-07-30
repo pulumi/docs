@@ -105,7 +105,99 @@
       "item" "https://www.pulumi.com/docs/pulumi-cloud/"
     ) }}
 
-  {{/* End of main docs sections (IaC, Insights, ESC, Pulumi Cloud) */}}
+  {{/* Add Administration if in the docs/administration section */}}
+  {{ else if in .RelPermalink "/docs/administration/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Administration"
+      "item" "https://www.pulumi.com/docs/administration/"
+    ) }}
+
+  {{/* Add Deployments & Workflows if in the docs/deployments section */}}
+  {{ else if in .RelPermalink "/docs/deployments/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Deployments & Workflows"
+      "item" "https://www.pulumi.com/docs/deployments/"
+    ) }}
+
+  {{/* Add Internal Developer Platform if in the docs/idp section */}}
+  {{ else if in .RelPermalink "/docs/idp/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Internal Developer Platform"
+      "item" "https://www.pulumi.com/docs/idp/"
+    ) }}
+
+  {{/* Add Integrations if in the docs/integrations section */}}
+  {{ else if in .RelPermalink "/docs/integrations/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Integrations"
+      "item" "https://www.pulumi.com/docs/integrations/"
+    ) }}
+
+  {{/* Add Infrastructure AI if in the docs/ai section */}}
+  {{ else if in .RelPermalink "/docs/ai/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Infrastructure AI"
+      "item" "https://www.pulumi.com/docs/ai/"
+    ) }}
+
+  {{/* Add Reference if in the docs/reference section */}}
+  {{ else if in .RelPermalink "/docs/reference/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Reference"
+      "item" "https://www.pulumi.com/docs/reference/"
+    ) }}
+
+  {{/* Add Support & Troubleshooting if in the docs/support section */}}
+  {{ else if in .RelPermalink "/docs/support/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Support & Troubleshooting"
+      "item" "https://www.pulumi.com/docs/support/"
+    ) }}
+
+  {{/* Add Download & Install if in the docs/install section */}}
+  {{ else if in .RelPermalink "/docs/install/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Download & Install Pulumi"
+      "item" "https://www.pulumi.com/docs/install/"
+    ) }}
+
+  {{/* Add Get Started if in the docs/get-started section */}}
+  {{ else if in .RelPermalink "/docs/get-started/" }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" "Get Started"
+      "item" "https://www.pulumi.com/docs/get-started/"
+    ) }}
+
+  {{/* End of main docs sections (IaC, Insights, ESC, Pulumi Cloud, Administration,
+       Deployments & Workflows, IDP, Integrations, Infrastructure AI, Reference,
+       Support & Troubleshooting, Install, Get Started) */}}
   {{ end }}
 
   {{/* Additional nesting for IaC Clouds section only - this is separate from the main section logic above */}}

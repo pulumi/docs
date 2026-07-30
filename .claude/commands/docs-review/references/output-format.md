@@ -80,14 +80,24 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 
 - <ISO 8601 timestamp> — <one-line summary> (<commit SHA prefix>)
 
+<!-- CLAUDE_REVIEW_FOOTER -->
+
 ---
-Need a re-review? Want to dispute a finding? Mention `@claude` and include `#update-review`.  
-(For ad-hoc questions or fixes, just `@claude` — no hashtag.)
+
+- **Refresh this review** — comment `@claude #update-review`. …
+- **Ask for anything else** — comment `@claude` with no hashtag …
+
+> [!IMPORTANT]
+> Please don't hide, resolve, or delete this comment! It breaks things!
+
+📖 [How pre-merge review works](…) — the full lifecycle, short-circuits, and escape hatches.
 ```
 
 **Mandatory sections render on every review** — Investigation log, bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
 
-The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
+The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero.
+
+**You do not write the footer.** Its canonical text lives in `.claude/commands/docs-review/footer.md`, and `pinned-comment.sh` is its sole writer on publish: it strips whatever footer the inbound body carries and stamps a fresh copy onto *every* comment of a split review, so the refresh instructions ride on the 1/M comment people actually read rather than only on the tail. `compose-review.py` renders the same file into the draft (abridged above — read `footer.md` for the exact text) so drafts stay complete documents. Leave it in place when you edit the draft; if you drop it, publish restores it. To change the wording, edit `footer.md` — that one file feeds the composer, the shell, and this reference.
 
 The ⚠️ Low-confidence count includes style findings. The maintainer's review burden equals the count rendered in the table; understating it is a false signal.
 
