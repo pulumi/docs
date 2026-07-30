@@ -15,7 +15,22 @@ tags:
     - kubernetes
     - devops
 category: general
+aliases:
+    - /what-is/top-iac-tools/
 faq_schema: true
+itemlist_name: "Core Infrastructure as Code Tools"
+itemlist:
+    - name: "Pulumi IaC"
+      url: "https://www.pulumi.com/"
+    - name: "Terraform"
+    - name: "AWS CDK"
+    - name: "AWS CloudFormation"
+    - name: "Azure Resource Manager (ARM)"
+    - name: "Azure Bicep"
+    - name: "Google Cloud Infrastructure Manager"
+    - name: "Kubernetes YAML"
+    - name: "Crossplane"
+    - name: "OpenTofu"
 ---
 
 Infrastructure as Code (IaC) has evolved beyond simple automation into a fundamental shift toward applying software engineering practices to infrastructure management. In 2026, leading organizations aren't just provisioning infrastructure—they're treating it as software, complete with testing, version control, code reviews, and continuous integration.
@@ -112,8 +127,8 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 
 | Tool | Language / approach | Clouds supported | State management | Best for |
 |---|---|---|---|---|
-| [Pulumi](#1-pulumi) | Python, TypeScript, Go, C#, Java, or YAML | AWS, Azure, Google Cloud, Kubernetes, and 100+ other providers | Pulumi Cloud (managed, free tier available) or self-managed backend | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
-| [Terraform](#2-terraform) | HCL (proprietary DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | State file, self-managed or via HCP Terraform | Teams with existing Terraform expertise and established workflows |
+| [Pulumi](#1-pulumi) | Python, TypeScript, Go, C#, Java, or YAML | AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers | Pulumi Cloud (managed, free tier available) or self-managed backend | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
+| [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | State file, self-managed or via HCP Terraform | Teams with existing Terraform expertise and established workflows |
 | [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Delegated to the underlying CloudFormation stack | AWS-focused teams who prefer programming languages over templates |
 | [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Managed entirely by AWS | AWS-only deployments requiring deep service integration |
 | [Azure ARM](#5-azure-resource-manager-arm) | JSON templates | Azure only | Managed entirely by Azure | Azure-native deployments requiring comprehensive platform integration |
@@ -121,9 +136,9 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 | [Google Cloud Infrastructure Manager](#7-google-cloud-infrastructure-manager) | HCL (Terraform-based) | Google Cloud | Terraform state, managed by Google | Google Cloud Platform deployments using Terraform |
 | [Kubernetes YAML](#8-kubernetes-yaml) | YAML manifests | Any Kubernetes cluster | Kubernetes cluster state (etcd) | Teams managing container-native applications and cloud-native infrastructure |
 | [Crossplane](#9-crossplane) | YAML / Kubernetes CRDs | Multi-cloud, orchestrated through Kubernetes | Kubernetes cluster state (etcd) | Kubernetes-first organizations managing multi-cloud infrastructure |
-| [OpenTofu](#10-opentofu) | HCL (open-source Terraform fork) | AWS, Azure, Google Cloud, and the Terraform provider ecosystem | State file, self-managed or via compatible remote backends | Teams seeking an open-source Terraform alternative with community governance |
+| [OpenTofu](#10-opentofu) | HCL (community-governed Terraform fork) | AWS, Azure, Google Cloud, and the Terraform provider ecosystem | State file, self-managed or via compatible remote backends | Teams seeking an open-source Terraform alternative with community governance |
 
-Every "best for" and license claim in this table is drawn directly from the detailed breakdown of each tool below, so use it as a map to jump to the sections most relevant to your evaluation. If you'd rather work from a criteria-based scorecard (flexibility, multi-cloud reach, state handling, integration, ecosystem), see our [assessment of the top IaC tools](/what-is/top-iac-tools/).
+Use the table as a map: each tool links to its full breakdown below, where you'll find licensing, key features, and the tradeoffs behind each "best for."
 
 ### 1. Pulumi
 
@@ -137,7 +152,7 @@ Pulumi's approach combines the best of both imperative and declarative paradigms
 ### Key Features:
 
 - **Universal language support**: Use Python, TypeScript, Go, C#, Java, or YAML configurations—no new DSL to learn
-- **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 100+ other providers
+- **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
 - **Built-in testing**: [Unit and integration testing](/docs/using-pulumi/testing/) for infrastructure code
@@ -801,12 +816,12 @@ spec:
 License: Mozilla Public License 2.0  
 Best For: Teams seeking an open-source Terraform alternative with community governance
 
-OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [full compatibility with Terraform](/docs/iac/comparisons/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
+OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [high, but not full, compatibility with Terraform](/docs/iac/comparisons/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
 
 Key Features:
 
 - **True open source**: MPL 2.0 license with community governance via Linux Foundation ensuring long-term accessibility
-- **Terraform compatibility**: Drop-in replacement maintaining existing workflows, modules, and provider ecosystem
+- **Terraform compatibility**: Largely maintains existing workflows, modules, and provider ecosystem, with some divergence emerging as the projects evolve independently
 - **Community-driven development**: Transparent roadmap, open contribution process, and vendor-neutral governance
 - **License certainty**: Removes concerns about future licensing restrictions for commercial use
 
@@ -927,7 +942,7 @@ License: Apache 2.0
 Best For: Enterprise environments requiring strong governance and compliance
 
 > [!INFO]
-> Puppet is a configuration management tool, not an Infrastructure as Code tool. Puppet specializes in maintaining desired configuration state on existing systems and ensuring compliance, rather than provisioning cloud infrastructure.
+> Puppet is primarily a configuration management tool, not a pure Infrastructure as Code tool. Puppet specializes in maintaining desired configuration state on existing systems and ensuring compliance, rather than provisioning cloud infrastructure.
 
 Puppet offers enterprise-grade configuration management with a focus on compliance, governance, and declarative system state management.
 

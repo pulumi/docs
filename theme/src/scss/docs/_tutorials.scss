@@ -8,6 +8,16 @@
     nav.main-nav {
         padding-top: 1.5rem !important;
 
+        // The sticky sidebar container (.docs-main-nav) is capped at the visible
+        // viewport height, but the tutorials menu renders its items directly in
+        // this nav — there's no inner scroll element like the docs section's
+        // <pulumi-docs-nav>. Make the nav itself the scroll container so a long
+        // menu scrolls internally instead of overflowing the sidebar and running
+        // down into the footer.
+        height: 100%;
+        min-height: 0;
+        overflow-y: auto;
+
         div.toc-header {
             @apply ml-0;
 

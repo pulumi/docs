@@ -43,7 +43,7 @@ sections:
 
 Panther Labs is a security data firm based in San Francisco. It was founded in 2018 by a team of seasoned security practitioners whose goal was to build a single, modern platform that would enable small security teams to operate at a high scale. The result, called Panther, is a security analytics platform that helps teams detect and respond to breaches at cloud scale.
 
-## The Problem
+## The problem
 
 Austin Byers is a Principal Platform Engineer at Panther Labs. His team builds, deploys and manages a complex infrastructure that is on AWS and completely serverless. The developers on his team were using AWS CloudFormation and its YAML-based domain-specific language (DSL) to deploy and manage cloud infrastructure. However, the team found that CloudFormation was hitting a wall as they tried to scale their infrastructure, ultimately slowing down their velocity and ability to innovate when they needed to move faster.
 
@@ -63,7 +63,7 @@ Austin learned about Pulumi from a Panther customer. By using Pulumi, his team w
 
 As part of his evaluation, Austin performed benchmarking tests on Pulumi which would help build his case for adopting it with the company.
 
-## Proving Pulumi’s Advantages
+## Proving Pulumi’s advantages
 
 To evaluate Pulumi’s performance, Austin ported more than 500 AWS resources to Pulumi. The results proved that Pulumi could do everything he’d hoped. His tests showed that:
 
@@ -73,17 +73,15 @@ To evaluate Pulumi’s performance, Austin ported more than 500 AWS resources to
 
 Here is the graph that contrasts deployment rates with Pulumi and CloudFormation. In all cases, Pulumi performed significantly better.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/panther-labs-deployment-rates.png" alt="Panther Labs Deployment Rates" />
+![Panther Labs deployment rates](/images/case-studies/panther-labs-deployment-rates.png)
 
 This graph contrasts lines of code when using Pulumi and when using the CloudFormation DSL, which is YAML-based.
 
- <img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/panther-labs-lines-of-code.png" alt="Panther Labs Lines of Code" />
+![Panther Labs lines of code](/images/case-studies/panther-labs-lines-of-code.png)
 
 With Pulumi, the codebase shrank by more than 50%.
 
-## Adopting Modern Cloud Engineering Practices
+## Adopting modern cloud engineering practices
 
 After adopting the Pulumi platform, Panther Labs can now build, deploy, and manage its cloud infrastructure and applications faster and with more confidence, using any language and any cloud. The result was faster innovation and improved time to market. This was possible because Pulumi enabled the Panther Labs team to adopt cloud engineering practices out-of-the-box.
 
@@ -95,7 +93,7 @@ Pulumi also enabled the team to apply software reusability principles to its inf
 
 Austin summed it up by saying, “Our developers needed a robust platform for managing our complex infrastructure, and it needed to be fast, modular, and testable. CloudFormation was none of these things. Although migrating from CloudFormation felt like a radical proposal, we now have more reliable releases and a significantly better developer experience as a result of adopting Pulumi. Nothing is better than having standard programming languages for building and managing infrastructure.”
 
-## The Conclusion
+## The conclusion
 
 Austin found that Pulumi was the way for Panther Labs to truly become a company driven by the principles of cloud engineering. With Pulumi, Panther Labs was able to provide innovative solutions to their customers quickly, which is a clear advantage for a startup. Panther Labs saw:
 

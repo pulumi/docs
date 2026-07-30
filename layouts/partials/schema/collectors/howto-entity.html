@@ -37,7 +37,8 @@
   {{ if findRE `^\d+\.\s+` $line }}
     {{/* Save previous step if exists */}}
     {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " }}
+      {{ $stepContent = trim $stepContent " \t\n\r" }}
       {{ if $stepContent }}
         {{ $step := dict
           "@type" "HowToStep"
@@ -64,9 +65,15 @@
     {{ end }}
 
   {{ else if or (eq $line "") (strings.HasPrefix $line "#") }}
-    {{/* End current step on empty line or new section */}}
+    {{/* End current step on empty line or new section. Unconditionally clear
+         $stepText and $inNumberedList below (not just on a header line) so a
+         step is never pushed twice: without this, a step already saved on the
+         blank line that follows the last list item got saved again when the
+         next heading line was reached, since $stepText/$stepNumber were left
+         populated in between. */}}
     {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+      {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " }}
+      {{ $stepContent = trim $stepContent " \t\n\r" }}
       {{ if $stepContent }}
         {{ $step := dict
           "@type" "HowToStep"
@@ -77,18 +84,15 @@
         {{ $steps = $steps | append $step }}
       {{ end }}
     {{ end }}
-
-    {{/* Reset if we hit a header */}}
-    {{ if strings.HasPrefix $line "#" }}
-      {{ $inNumberedList = false }}
-      {{ $stepText = slice }}
-    {{ end }}
+    {{ $stepText = slice }}
+    {{ $inNumberedList = false }}
   {{ end }}
 {{ end }}
 
 {{/* Save last step if exists */}}
 {{ if and (gt $stepNumber 0) (gt (len $stepText) 0) }}
-  {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " | trim " \t\n\r" }}
+  {{ $stepContent := delimit $stepText " " | replaceRE "\\s+" " " }}
+  {{ $stepContent = trim $stepContent " \t\n\r" }}
   {{ if $stepContent }}
     {{ $step := dict
       "@type" "HowToStep"
@@ -97,6 +101,114 @@
       "text" $stepContent
     }}
     {{ $steps = $steps | append $step }}
+  {{ end }}
+{{ end }}
+
+{{/* Template pages (the product template gallery under /templates/) follow a
+     uniform, hand-verified H2 section structure ("Using this template",
+     "Deploying the project", "Customizing the project", "Cleaning up", plus a
+     handful of page-specific sections such as "Verifying cluster access" or
+     "Next steps") but contain no numbered lists, so the pass above finds no
+     steps for them. When that happens and this is a template page, derive
+     HowToStep entries from H2 sections instead: each section becomes one
+     step, named after its heading, with a short prose excerpt as the text.
+     This is scoped to layout=template on purpose — applying the same
+     heading-derived heuristic to blog posts or tutorials would invent steps
+     out of narrative headings ("Why this matters", "Conclusion") that are
+     not actions for the reader. Template pages are structurally uniform
+     enough that their headings really are the how-to steps. */}}
+{{ if and (not $steps) (eq .Layout "template") }}
+  {{ $pagePermalink := .Permalink }}
+  {{ $navHeadings := slice "learn more" "related" "see also" "further reading" }}
+  {{ $sectionName := "" }}
+  {{ $sectionLines := slice }}
+  {{ $sectionNumber := 0 }}
+  {{ $inFence := false }}
+
+  {{ range $index, $line := $lines }}
+    {{ if findRE `^##\s+` $line }}
+      {{/* Flush the previous section as a step before starting the new one */}}
+      {{ if and $sectionName (gt (len $sectionLines) 0) }}
+        {{ if not (in $navHeadings (lower $sectionName)) }}
+          {{ $text := delimit $sectionLines " " | replaceRE "\\s+" " " }}
+          {{ $text = trim $text " \t\n\r" }}
+          {{ if gt (len $text) 300 }}
+            {{ $text = printf "%s…" (substr $text 0 300) }}
+          {{ end }}
+          {{ if $text }}
+            {{ $sectionNumber = add $sectionNumber 1 }}
+            {{ $step := dict
+              "@type" "HowToStep"
+              "position" $sectionNumber
+              "name" $sectionName
+              "text" $text
+              "url" (printf "%s#%s" $pagePermalink (anchorize $sectionName))
+            }}
+            {{ $steps = $steps | append $step }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ $sectionName = trim (replaceRE `^##\s+` "" $line) " \t\n\r" }}
+      {{ $sectionLines = slice }}
+      {{ $inFence = false }}
+
+    {{ else if $sectionName }}
+      {{ $trimForFence := trim $line " \t" }}
+      {{ if strings.HasPrefix $trimForFence "```" }}
+        {{ $inFence = not $inFence }}
+      {{ else if not $inFence }}
+        {{ $trimmedLine := trim $line " \t\n\r" }}
+        {{ $skip := false }}
+        {{ if eq $trimmedLine "" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine "#" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine "{{" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine "![" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine "|" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine ">" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine "-" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine "*" }}
+          {{ $skip = true }}
+        {{ else if strings.HasPrefix $trimmedLine ":" }}
+          {{ $skip = true }}
+        {{ end }}
+        {{ if not $skip }}
+          {{ $clean := replaceRE `\[([^\]]+)\]\([^)]+\)` "$1" $trimmedLine }}
+          {{ $clean = replaceRE "`" "" $clean }}
+          {{ if $clean }}
+            {{ $sectionLines = $sectionLines | append $clean }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Flush the final section */}}
+  {{ if and $sectionName (gt (len $sectionLines) 0) }}
+    {{ if not (in $navHeadings (lower $sectionName)) }}
+      {{ $text := delimit $sectionLines " " | replaceRE "\\s+" " " }}
+      {{ $text = trim $text " \t\n\r" }}
+      {{ if gt (len $text) 300 }}
+        {{ $text = printf "%s…" (substr $text 0 300) }}
+      {{ end }}
+      {{ if $text }}
+        {{ $sectionNumber = add $sectionNumber 1 }}
+        {{ $step := dict
+          "@type" "HowToStep"
+          "position" $sectionNumber
+          "name" $sectionName
+          "text" $text
+          "url" (printf "%s#%s" $pagePermalink (anchorize $sectionName))
+        }}
+        {{ $steps = $steps | append $step }}
+      {{ end }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
@@ -209,4 +321,17 @@
   {{ $schema = merge $schema (dict "yield" "Infrastructure deployed using Pulumi") }}
 {{ end }}
 
-{{ return $schema }}
+{{/* A HowTo with no steps is invalid structured data — Google's own HowTo
+     documentation requires at least one step, and a stepless HowTo gives
+     LLM/agent crawlers nothing to act on either. If neither extraction pass
+     above found any steps, return an empty dict so the caller
+     (main-entity.html) can fall back to a different entity type rather than
+     emitting a broken HowTo. Hugo requires a partial to end in exactly one
+     `return` statement, so the empty-vs-populated choice is resolved into a
+     single result variable rather than two conditional `return`s. */}}
+{{ $result := $schema }}
+{{ if not $steps }}
+  {{ $result = dict }}
+{{ end }}
+
+{{ return $result }}

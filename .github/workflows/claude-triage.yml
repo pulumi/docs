@@ -24,9 +24,10 @@ jobs:
     #
     # Exception: content-review/* PRs are bot-authored but are first-class
     # automated docs fixes we DO want triaged and reviewed like any human PR
-    # (the worker opens them draft and promotes to ready on a clean re-lint, so
-    # triage fires on that ready transition). They flow through the normal
-    # triage → review chain instead of being force-dispatched.
+    # (the worker opens them ready when the re-lint passes — falling back to
+    # draft only on lint failure — so triage fires on the non-draft `opened`
+    # event). They flow through the normal triage → review chain instead of
+    # being force-dispatched.
     if: >-
       !github.event.pull_request.draft
       && github.event.pull_request.user.login != 'dependabot[bot]'
@@ -109,10 +110,16 @@ jobs:
           AUTHOR="${{ github.event.pull_request.user.login }}"
 
           # GitHub App bots are not collaborators, so the permission API
-          # below returns "none" for them. Trusted agent bots that open
-          # PRs on this repo are whitelisted by name instead. Keep this
-          # list in sync with the matching check in claude-code-review.yml.
-          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" ]]; then
+          # below returns "none" for them. Trusted bots that open PRs on this
+          # repo are whitelisted by name instead. `workprentice` is Joe Duffy's
+          # docs-automation identity (the Docs Groundskeeper agent) and is
+          # trusted like an internal author. The author string differs by source:
+          # this workflow reads the REST webhook `user.login` (`workprentice[bot]`)
+          # while claude-code-review.yml reads `gh pr view` (`app/workprentice`),
+          # so both forms are listed in every file. Keep this list in sync with
+          # the matching checks in claude-code-review.yml and claude-update.yml.
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+             || "$AUTHOR" == "workprentice[bot]" || "$AUTHOR" == "app/workprentice" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
             echo "✓ Bot $AUTHOR is whitelisted for triage"
             exit 0

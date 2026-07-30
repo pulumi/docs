@@ -1,7 +1,8 @@
 ---
 title: "Why Switch to Pulumi for Infrastructure as Code?"
 date: 2024-07-23T19:47:50-07:00
-meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and leverage AI to revolutionize infrastructure management."
+updated: 2026-07-05
+meta_desc: "Pulumi: the top choice for infrastructure as code. Boost productivity, scale infinitely, and use Pulumi Neo to automate infrastructure management with AI."
 authors:
     - aaron-kao
 tags:
@@ -13,11 +14,8 @@ category: general
 social:
     twitter: Why should you switch to Pulumi? This blog post runs through all the reasons by use case, by alternatives, and by benefits.
     linkedin:
+faq_schema: true
 ---
-
-{{< notes type="info" >}}
-Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
-{{< /notes >}}
 
 The cloud promised to revolutionize your business.
 
@@ -59,7 +57,7 @@ infrastructure, development, and security teams.
 infrastructure as code by empowering you with the familiar
 languages and tools you love for application development. While modern
 programming languages have evolved to provide powerful features like AI
-copilots, Intellisense, linting tools, testing frameworks, and CICD
+coding agents, Intellisense, linting tools, testing frameworks, and CICD
 pipelines, infrastructure management has lagged behind, relying on rigid
 scripting languages and error-prone manual processes. Pulumi bridges
 this gap by allowing you to use industry-standard programming
@@ -70,7 +68,7 @@ behind with your IaC tooling.
 
 **Powering the Next Wave.** Pulumi is at the forefront of the industry.
 It helps you embrace the latest practices (e.g., Platform Engineering, GitOps) and
-builds the latest technologies (e.g., AI Copilots) into the core user
+builds the latest technologies (e.g., AI agents like Pulumi Neo) into the core user
 experience. It also helps you build and manage new technology
 paradigms (e.g., AI workloads, LLMs, internal developer platforms).
 
@@ -87,12 +85,12 @@ software engineering to manage infrastructure of this
 modern and immense scale.
 
 **AI-Powered.** Pulumi builds AI into the core infrastructure management
-experience. Pulumi combines the power of large language models with
-semantic understanding of the cloud to unlock greater insights and
-controls over managing cloud infrastructure. Pulumi leverages the
-familiar GPT experience you know, love, and use daily, so
-you can find and take action on any resource in your cloud
-environments.
+experience through Pulumi Neo, an agentic infrastructure engineer that
+understands the real state of your cloud environments and works inside
+your existing workflows. Neo runs multi-step tasks, generates previews
+for approval, and opens pull requests for the changes it proposes, so
+you stay in the loop while it does the legwork of finding and acting on
+any resource in your infrastructure.
 
 ### Ok, but why does this matter enough for me to switch?
 
@@ -121,7 +119,7 @@ infrastructure.\
 provides stability and choice.*
 
 **Increased Productivity.** You expect your tools
-and workflows to keep up with the industry: AI copilots, Intellisense,
+and workflows to keep up with the industry: AI coding agents, Intellisense,
 linting tools, testing frameworks, and CICD pipelines. But most of these
 innovations are just for building applications and services and not for
 infrastructure, configurations, policies, and secrets. Existing
@@ -320,18 +318,20 @@ scalability, and collaboration.
 - **Increased Productivity.** As discussed at the beginning,
     Pulumi's promise is to build in all the
     latest advancements in both the developer and operations experience.
-    When you write Pulumi code, you now have AI copilots that can pair program with you,
+    When you write Pulumi code, you now have AI coding agents that can pair program with you,
     IDEs that have autocompletion and Intellisense squiggles, powerful libraries of low
     level and abstract functions, testing frameworks, code review tools, automated release controls via CICD pipelines, and great software packaging tools. When it
-    comes to managing infrastructure with Pulumi, you also have Pulumi Copilot which combines
-    the best generative AI models available in the industry today with
-    access to your data and actions within Pulumi
-    Cloud. Pulumi Copilot incorporates the context of where you are
-    in the Pulumi Cloud console to easily answer questions about "this
-    stack" or "the latest update" as well as automating cloud tasks.
-    Terraform, on the other hand, has built a proprietary
-    ecosystem that doesn't tap into the latest advancements of how code
-    is written or how infrastructure is managed.
+    comes to managing infrastructure with Pulumi, you also have Pulumi Neo, an agentic
+    infrastructure engineer that works inside your existing workflow: it proposes
+    changes, runs previews, responds to failures, and opens pull requests in tight
+    feedback loops, grounded in the real state of your infrastructure in Pulumi
+    Cloud. Because that infrastructure is defined in Python, TypeScript, Go, C#, or
+    Java rather than a bespoke configuration language, Neo can read, reason about,
+    test, and ship it the same way an AI coding agent already handles the rest of
+    your codebase. Terraform, by contrast, is defined in HCL, a domain-specific
+    configuration language that AI agents can generate and reason about less
+    reliably than a general-purpose programming language — one more reason
+    teams switch.
 
 - **Greater Scalability.** Pulumi embraces software engineering as a
     way to solve and manage the exponentially increasing complexity of

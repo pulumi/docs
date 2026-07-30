@@ -113,14 +113,20 @@ _vendor/
 /.ledger-cache/
 /.traffic-snapshot
 /.synthetic.patch
+# Local cache for scripts/review-admin (synced S3 ledgers, exports, dashboard).
+/.review-admin-cache/
 # Lint re-gate scratch (worker re-lints the fix branch and captures output).
 /.lint.log
 /.lint-comment.md
 # Review→publish handoff (the unprivileged review job exports the model's
-# working-tree changes; the publish job re-checks the applied paths).
+# working-tree changes; the publish job re-checks the applied paths). The
+# publish job also downloads the pre-compute artifacts into `.review-snapshot/`
+# and writes the fix-scope report; keep both out of git (and prettier).
 /.review-changes.patch
 /.review-changes.paths
 /.applied.paths
+/.fix-scope-report.json
+/.review-snapshot/
 # docs-review pre-computation artifacts the worker generates before the
 # review (claim extraction/verification, Vale, frontmatter, cross-sibling,
 # readthrough).

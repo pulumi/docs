@@ -28,7 +28,7 @@ This document outlines the steps required to configure Pulumi Deployments to use
 Configuring OIDC for Google Cloud involves two sides:
 
 1. **Google Cloud** — create a workload identity pool and OIDC provider that trust Pulumi Cloud, and a service account your deployments can impersonate. You can do this in the [Google Cloud console](#using-the-google-cloud-console) or [programmatically](#using-infrastructure-as-code).
-1. **Pulumi Deployments** — enable the Google Cloud OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that service account. You can do this in the [Pulumi Cloud console](#using-the-pulumi-cloud-console) or [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1).
+1. **Pulumi Deployments** — enable the Google Cloud OIDC integration for your stack so that each deployment exchanges its OIDC token for credentials from that service account. You can do this [programmatically with the Pulumi Service provider](#using-infrastructure-as-code-1) or via the [REST API](/docs/deployments/deployments/api/#patchsettings).
 
 ## Prerequisites
 
@@ -151,17 +151,9 @@ export const serviceAccountEmail = account.email;
 
 ## Configure Pulumi Deployments
 
-### Using the Pulumi Cloud console
+Google Cloud OIDC integration is part of a stack's deployment settings, so it is configured with the [`pulumiservice.DeploymentSettings`](/registry/packages/pulumiservice/api-docs/deploymentsettings/) resource or the [REST API](/docs/deployments/deployments/api/#patchsettings). The Pulumi Cloud console only shows an OpenID Connect section on a stack's deployment settings page once OIDC has already been configured for that stack, so it isn't a starting point for new configurations.
 
-1. Navigate to your stack in the Pulumi Console.
-1. Open the stack's "Settings" tab.
-1. Choose the "Deploy" panel.
-1. Under the "OpenID Connect" header, toggle "Enable Google Cloud Integration".
-1. Enter the numerical ID of your Google Cloud project in the "Project Number" field.
-1. Enter the workload pool ID, identity provider ID, and service account email address in the "Workload Pool ID", "Identity Provider ID", and "Service Account Email Address" fields.
-1. If desired, enter the stack's Google Cloud region in the "Region" field. This is typically unnecessary.
-1. If you would like to constrain the duration of the temporary Google Cloud credentials, enter a duration in the form "XhYmZs" in the "Session Duration" field.
-1. Click the "Save deployment configuration" button.
+For new stacks, Pulumi recommends using [Pulumi ESC](/docs/esc/) instead, which supports [OIDC for Google Cloud](/docs/esc/guides/configuring-oidc/gcp/) alongside broader secrets and configuration management than Deployments OIDC alone provides. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](/docs/deployments/guides/cloud-credentials/#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) for guidance.
 
 ### Using infrastructure as code
 

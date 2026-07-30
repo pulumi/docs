@@ -87,6 +87,17 @@ kubeconfig
 
 Output values like these are useful in many ways, most commonly as inputs for other stacks or related cloud resources.
 
+## Verifying cluster access
+
+To confirm your cluster is up and reachable, export the `kubeconfig` output to a file and use it with `kubectl`:
+
+```bash
+$ pulumi stack output kubeconfig --show-secrets >kubeconfig.json
+$ KUBECONFIG=./kubeconfig.json kubectl get nodes
+```
+
+This lists the worker nodes running in your new cluster.
+
 ## Customizing the project
 
 Projects created with the Kubernetes Cluster template expose the following [configuration](/docs/iac/concepts/config/) settings:

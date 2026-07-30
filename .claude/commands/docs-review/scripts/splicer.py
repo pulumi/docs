@@ -37,7 +37,12 @@ from pathlib import Path
 
 DEFAULT_FALLBACK_JSON = "/tmp/splicer-fallback.json"
 
-# Per-verdict glyphs (mirror of validate-pinned.py EXPECTED_TRAIL_EMOJI).
+# Per-verdict glyphs (mirror of validate-pinned.py EXPECTED_TRAIL_EMOJI for the
+# fact-check verdicts — `flagged` is deliberately absent: preflight detector
+# verdicts never appear in `verified-claims-trail-faithful` violations, so the
+# splicer never restores one; `framing-drift` DOES appear there — an artifact
+# `framing-drift` hidden behind a trail ✅ is exactly the drift the splicer
+# restores).
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -45,6 +50,7 @@ EXPECTED_TRAIL_EMOJI = {
     "unverifiable": "🤷",
     "contradicted": "❌",
     "mismatch": "⚔️",
+    "framing-drift": "🌀",
 }
 CANONICAL_VERDICT_FOR_EMOJI = {v: k for k, v in EXPECTED_TRAIL_EMOJI.items()}
 CANONICAL_VERDICTS = set(EXPECTED_TRAIL_EMOJI.keys())

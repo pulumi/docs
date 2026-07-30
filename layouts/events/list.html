@@ -1,25 +1,20 @@
 {{ define "hero" }}
+<header class="page-hero">
+    <div class="container mx-auto px-6 lg:px-0">
+        {{ with .Params.hero }}
+        <div class="page-hero-title">
+            <h1 class="heading-1">{{ .title }}</h1>
+        </div>
+        {{ with .description }}
+        <p class="max-w-xl mx-auto mt-6 text-center text-lg text-gray-700">{{ . | markdownify }}</p>
+        {{ end }}
+        {{ end }}
+    </div>
+</header>
 {{ end }}
 
 {{ define "main" }}
-<div class="font-body container mx-auto mb-16 mt-16 px-6 md:px-8 flex flex-col gap-16 md:gap-20 lg:gap-24">
-
-    {{/* Hero */}}
-    <section class="template-hero template-hero--centered" id="hero">
-        <div class="flex flex-col items-center gap-12">
-            <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-                {{ with .Params.hero }}
-                <h1 class="title mb-6">{{ .title }}</h1>
-                {{ with .description }}
-                <p class="description mb-10">{{ . | markdownify }}</p>
-                {{ end }}
-                {{ end }}
-            </div>
-        </div>
-    </section>
-
-    {{/* Event list */}}
+<div class="font-body container mx-auto mb-16 px-6 md:px-8">
     {{ partial "events/list-section.html" . }}
-
 </div>
 {{ end }}

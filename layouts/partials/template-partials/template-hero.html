@@ -149,16 +149,16 @@
             {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
             <div class="flex flex-col sm:flex-row flex-wrap items-start gap-4 w-full">
                 {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full sm:w-auto" data-role="cta-get-started">
+                <a href="{{ $ctaPrimaryLink }}"{{ partial "external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full sm:w-auto" data-role="cta-get-started">
                     {{ $ctaPrimaryText }}
                     {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaSecondaryText }}</a>
+                <a href="{{ $ctaSecondaryLink }}"{{ partial "external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto" data-role="cta-secondary">{{ $ctaSecondaryText }}</a>
                 {{ end }}
                 {{ if $ctaTertiaryText }}
-                <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaTertiaryText }}</a>
+                <a href="{{ $ctaTertiaryLink }}"{{ partial "external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaTertiaryText }}</a>
                 {{ end }}
             </div>
             {{ end }}
@@ -168,7 +168,7 @@
             {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
-                    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+                    {{ partial "code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
                 </div>
                 {{ if $overlayImage }}
                 {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "fetchpriority" "high" "ariaHidden" "true") }}
@@ -176,13 +176,13 @@
             </div>
             {{ else }}
             <div class="w-full">
-                {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+                {{ partial "code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
             </div>
             {{ end }}
         </div>
         {{ else if $videoYouTubeId }}
         <div class="xl:w-1/2 w-full">
-            <div class="relative rounded-xl overflow-hidden" style="padding-bottom: 56.25%;">
+            <div class="relative rounded-xl overflow-hidden aspect-video">
                 <iframe
                     src="https://www.youtube.com/embed/{{ $videoYouTubeId }}?rel=0"
                     class="absolute top-0 left-0 w-full h-full border-0"
@@ -224,16 +224,16 @@
             {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
             <div class="flex flex-col lg:flex-row flex-wrap items-center justify-center gap-4 w-full">
                 {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full lg:w-auto" data-role="cta-get-started">
+                <a href="{{ $ctaPrimaryLink }}"{{ partial "external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full lg:w-auto" data-role="cta-get-started">
                     {{ $ctaPrimaryText }}
                     {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                 </a>
                 {{ end }}
                 {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaSecondaryText }}</a>
+                <a href="{{ $ctaSecondaryLink }}"{{ partial "external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto" data-role="cta-secondary">{{ $ctaSecondaryText }}</a>
                 {{ end }}
                 {{ if $ctaTertiaryText }}
-                <a href="{{ $ctaTertiaryLink }}"{{ partial "template-partials/external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaTertiaryText }}</a>
+                <a href="{{ $ctaTertiaryLink }}"{{ partial "external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaTertiaryText }}</a>
                 {{ end }}
             </div>
             {{ end }}
@@ -242,7 +242,7 @@
         <div class="product-hero-visual flex justify-center w-full">
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
-                    {{ partial "template-partials/template-code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
+                    {{ partial "code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
                 </div>
                 {{ if $overlayImage }}
                 {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "fetchpriority" "high" "ariaHidden" "true") }}
@@ -251,7 +251,7 @@
         </div>
         {{ else if $videoYouTubeId }}
         <div class="product-hero-visual flex justify-center w-full">
-            <div class="relative rounded-xl overflow-hidden w-full max-w-4xl" style="padding-bottom: 56.25%;">
+            <div class="relative rounded-xl overflow-hidden w-full max-w-4xl aspect-video">
                 <iframe
                     src="https://www.youtube.com/embed/{{ $videoYouTubeId }}?rel=0"
                     class="absolute top-0 left-0 w-full h-full border-0"

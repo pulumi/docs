@@ -1,6 +1,6 @@
 ---
 title: Infrastructure as Code for Azure with Pulumi
-layout: product-page
+layout: template-page
 type: page
 url: /azure
 

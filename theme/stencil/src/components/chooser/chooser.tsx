@@ -1,7 +1,7 @@
 import { Component, Element, Host, h, Listen, Prop, State } from "@stencil/core";
 import { store, Unsubscribe } from "@stencil/redux";
 import { AppState } from "../../store/state";
-import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain } from "../../store/actions/preferences";
+import { setLanguage, setK8sLanguage, setOS, setCloud, setPersona, setBackEnd, setPythonToolchain, setTfTool } from "../../store/actions/preferences";
 
 export type LanguageKey = "javascript" | "typescript" | "python" | "go" | "csharp" | "fsharp" | "visualbasic" | "java" | "yaml" | "hcl" | "opa";
 export type K8sLanguageKey = "typescript" | "yaml" | "typescript-kx";
@@ -10,12 +10,21 @@ export type CloudKey = "aws" | "azure" | "gcp" | "kubernetes" | "digitalocean" |
 export type PersonaKey = "developer" | "devops" | "security" | "leader";
 export type BackEndKey = "service" | "self-managed";
 export type PythonToolchainKey = "pip" | "uv" | "poetry";
+export type TfToolKey = "terraform" | "opentofu";
 
 export type ChooserMode = "local" | "global";
 export type ChooserOptionStyle = "tabbed" | "none";
-export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend" | "pythontoolchain";
-export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey | PythonToolchainKey;
-export type ChooserOption = SupportedLanguage | SupportedK8sLanguage | SupportedOS | SupportedCloud | SupportedPersona | SupportedBackEnd | SupportedPythonToolchain;
+export type ChooserType = "language" | "k8s-language" | "os" | "cloud" | "persona" | "backend" | "pythontoolchain" | "tf-tool";
+export type ChooserKey = LanguageKey | K8sLanguageKey | OSKey | CloudKey | PersonaKey | BackEndKey | PythonToolchainKey | TfToolKey;
+export type ChooserOption =
+    | SupportedLanguage
+    | SupportedK8sLanguage
+    | SupportedOS
+    | SupportedCloud
+    | SupportedPersona
+    | SupportedBackEnd
+    | SupportedPythonToolchain
+    | SupportedTfTool;
 
 export interface SupportedLanguage {
     key: LanguageKey;
@@ -64,6 +73,12 @@ interface SupportedBackEnd {
 
 interface SupportedPythonToolchain {
     key: PythonToolchainKey;
+    name: string;
+    preview: boolean;
+}
+
+interface SupportedTfTool {
+    key: TfToolKey;
     name: string;
     preview: boolean;
 }
@@ -139,6 +154,7 @@ export class Chooser {
     setPersona: typeof setPersona;
     setBackEnd: typeof setBackEnd;
     setPythonToolchain: typeof setPythonToolchain;
+    setTfTool: typeof setTfTool;
 
     componentWillLoad() {
         // By default, choosers act globally and use a tabbed layout.
@@ -157,6 +173,7 @@ export class Chooser {
             setPersona,
             setBackEnd,
             setPythonToolchain,
+            setTfTool,
         });
 
         // Try to subscribe immediately if the store is ready.
@@ -194,7 +211,7 @@ export class Chooser {
         // Map currently selected values from the store, so we can use them in this component.
         this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
             const {
-                preferences: { language, k8sLanguage, os, cloud, persona, backend, pythontoolchain },
+                preferences: { language, k8sLanguage, os, cloud, persona, backend, pythontoolchain, tfTool },
             } = state;
 
             // In some cases, the user's preferred (i.e., most recently selected) choice
@@ -210,6 +227,18 @@ export class Chooser {
             // global, they'd all hide, since none matches the unavailable preference);
             // from then on they mirror this chooser's selection via applyChoice.
             const preferredOrDefault = (key: ChooserKey) => {
+                // Guard against an empty option set. A store update can arrive before
+                // this component finished parsing its options -- its "rendered" listener
+                // is attached in connectedCallback, which runs before componentWillLoad
+                // populates currentOptions -- so currentOptions may still be []. With
+                // nothing to fall back to, keep the preferred key and let render() cope
+                // (it renders no active tab until the real options land). Dereferencing
+                // currentOptions[0] here is what threw "can't access property 'key',
+                // this.currentOptions[0] is undefined".
+                if (this.currentOptions.length === 0) {
+                    return { selection: key };
+                }
+
                 if (!this.currentOptions.find(o => o.key === key)) {
                     key = this.currentOptions[0].key;
 
@@ -235,6 +264,8 @@ export class Chooser {
                     return preferredOrDefault(backend);
                 case "pythontoolchain":
                     return preferredOrDefault(pythontoolchain);
+                case "tf-tool":
+                    return preferredOrDefault(tfTool);
                 default:
                     return {};
             }
@@ -391,6 +422,9 @@ export class Chooser {
             case "pythontoolchain":
                 options = this.supportedPythonToolchains;
                 break;
+            case "tf-tool":
+                options = this.supportedTfTools;
+                break;
         }
 
         this.currentOptions = options.filter(opt => keys.includes(opt.key));
@@ -452,6 +486,9 @@ export class Chooser {
                     break;
                 case "pythontoolchain":
                     this.setPythonToolchain(key as PythonToolchainKey);
+                    break;
+                case "tf-tool":
+                    this.setTfTool(key as TfToolKey);
                     break;
             }
         }
@@ -665,6 +702,21 @@ export class Chooser {
         {
             key: "docker",
             name: "Docker",
+            preview: false,
+        },
+    ];
+
+    // The list of supported Terraform-compatible CLIs. Used by docs that show
+    // `terraform ...` invocations to offer the equivalent `tofu ...` command.
+    private supportedTfTools: SupportedTfTool[] = [
+        {
+            key: "terraform",
+            name: "Terraform",
+            preview: false,
+        },
+        {
+            key: "opentofu",
+            name: "OpenTofu",
             preview: false,
         },
     ];

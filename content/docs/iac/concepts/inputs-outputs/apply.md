@@ -247,7 +247,7 @@ vpc.vpc_id.apply(lambda id: print('VPC ID:', id))
 ```
 
 {{% notes %}}
-The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. Error handling may also be achieved using an `error` `chan`. For details on how errors returned from the callback surface during an update, see [Handling errors in apply](#handling-errors-in-apply).
+The function `ApplyT` spawns a Goroutine to await the availability of the implicated dependencies. This function accepts a `T` or `(T, error)` signature; the latter accommodates for error handling. Alternatively, one may use the `ApplyTWithContext` function in which the provided context can be used to reject the output as canceled. For details on how errors returned from the callback surface during an update, see [Handling errors in apply](#handling-errors-in-apply).
 {{% /notes %}}
 
 {{% /choosable %}}

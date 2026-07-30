@@ -15,6 +15,7 @@ tags:
 category: general
 aliases:
     - /blog/software-developer-experience-devex-devx-devops-culture
+faq_schema: true
 ---
 
 "Developer experience is hard to sell," said Cleve Littlefield, Engineering Manager at Pulumi, during a casual meeting. With experience as both an end-user developer and a lead in self-service platform implementation, Cleve's observation stuck with me.

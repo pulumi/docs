@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. Crossplane"
+faq_schema: true
 authors: ["joe-duffy"]
 meta_desc: "Pulumi vs. Crossplane: Pulumi is a multi-language IaC platform; Crossplane is a Kubernetes-native control plane for managing cloud infrastructure."
 title: Crossplane
@@ -74,11 +75,11 @@ Pulumi runs on demand. Changes are applied through the local CLI, programmatical
 
 ### GitOps with the Pulumi Kubernetes Operator
 
-For teams that want Crossplane's continuous-reconciliation model but prefer Pulumi's language ecosystem, the [Pulumi Kubernetes Operator (PKO)](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) bridges the gap. PKO installs into a Kubernetes cluster and manages Pulumi stacks as Kubernetes Custom Resources (`Stack` objects), reconciling infrastructure continuously — just as Crossplane controllers reconcile cloud resources toward declared state.
+For teams that want Crossplane's continuous-reconciliation model but prefer Pulumi's language ecosystem, the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) bridges the gap. The operator installs into a Kubernetes cluster and manages Pulumi stacks as Kubernetes Custom Resources (`Stack` objects), reconciling infrastructure continuously — just as Crossplane controllers reconcile cloud resources toward declared state.
 
-A `Stack` object can track a Git branch and automatically roll out changes when new commits arrive, or source programs from a [Flux](https://fluxcd.io/) source for broader GitOps compatibility. PKO also supports periodic drift detection and remediation through configurable resync intervals. Because `Stack` objects are ordinary Kubernetes resources, they integrate naturally with GitOps tools such as Argo CD: Argo CD manages the lifecycle of `Stack` objects, and PKO handles the Pulumi deployments that follow.
+A `Stack` object can track a Git branch and automatically roll out changes when new commits arrive, or source programs from a [Flux](https://fluxcd.io/) source for broader GitOps compatibility. The operator also supports periodic drift detection and remediation through configurable resync intervals. Because `Stack` objects are ordinary Kubernetes resources, they integrate naturally with GitOps tools such as Argo CD: Argo CD manages the lifecycle of `Stack` objects, and the operator handles the Pulumi deployments that follow.
 
-The key difference from Crossplane remains in the authoring layer: Crossplane infrastructure is always written as Kubernetes YAML compositions, while Pulumi programs are authored in general-purpose languages. PKO adds a continuous-reconciliation execution model on top of the full Pulumi ecosystem. For installation, configuration, and advanced patterns including Flux source integration and Argo CD, see the [Pulumi Kubernetes Operator documentation](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/).
+The key difference from Crossplane remains in the authoring layer: Crossplane infrastructure is always written as Kubernetes YAML compositions, while Pulumi programs are authored in general-purpose languages. The operator adds a continuous-reconciliation execution model on top of the full Pulumi ecosystem. For installation, configuration, and advanced patterns including Flux source integration and Argo CD, see the [Pulumi Kubernetes Operator documentation](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/).
 
 ### Secrets handling
 
@@ -121,7 +122,7 @@ There are several common paths for adopting Pulumi alongside or in place of Cros
 1. **Use Crossplane alongside Pulumi.** Because Crossplane and its resources are Kubernetes objects, a Pulumi program using the [Kubernetes provider](/registry/packages/kubernetes/) can install Crossplane, install providers, and apply Crossplane manifests — for example with [`ConfigGroup` or `ConfigFile`](/registry/packages/kubernetes/api-docs/yaml/v2/configgroup/) to apply existing YAML, or [`crd2pulumi`](/docs/integrations/clouds/kubernetes/crd2pulumi/) to generate typed SDKs from Crossplane CRDs. This lets a team manage the cluster and bootstrap Crossplane with Pulumi while keeping Crossplane-managed resources where they are.
 1. **Convert YAML with `pulumi convert`.** [`pulumi convert --from kubernetes`](/docs/iac/concepts/converters/) translates Kubernetes YAML manifests, including Crossplane resources, into a Pulumi program in the language of your choice.
 1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned cloud resources under Pulumi management and generate the corresponding code in your chosen language.
-1. **Adopt a GitOps workflow with the Pulumi Kubernetes Operator.** The [Pulumi Kubernetes Operator (PKO)](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) provides a continuously-reconciling, Kubernetes-native execution model comparable to Crossplane's: `Stack` Custom Resources track a Git branch and are automatically updated on new commits, programs can be sourced from Flux, and `Stack` objects integrate with GitOps tools like Argo CD. This path lets teams already comfortable with Kubernetes-native GitOps workflows manage Pulumi stacks through the same tools as Crossplane resources.
+1. **Adopt a GitOps workflow with the Pulumi Kubernetes Operator.** The [operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) provides a continuously-reconciling, Kubernetes-native execution model comparable to Crossplane's: `Stack` Custom Resources track a Git branch and are automatically updated on new commits, programs can be sourced from Flux, and `Stack` objects integrate with GitOps tools like Argo CD. This path lets teams already comfortable with Kubernetes-native GitOps workflows manage Pulumi stacks through the same tools as Crossplane resources.
 
 For a walkthrough of moving Kubernetes-based infrastructure to Pulumi, see [Migrating from Kubernetes to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/).
 

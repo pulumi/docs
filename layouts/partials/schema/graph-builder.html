@@ -38,6 +38,22 @@
   {{ end }}
 {{ end }}
 
+{{/* Collect ItemList schema for a page's ranked/ordered list before finalizing
+     WebPage so hasPart can be wired. Driven entirely by an `itemlist` array in
+     frontmatter (see itemlist-entity.html) so it is an explicit per-page opt-in,
+     not a heuristic parse of markdown headings — the same low-false-positive
+     approach as the faq_schema flag below. itemlist-entity.html returns an
+     empty dict when `.Params.itemlist` is absent, so this is a no-op for every
+     page that hasn't opted in. */}}
+{{ $itemList := dict }}
+{{ if .Params.itemlist }}
+  {{ $itemList = partial "schema/collectors/itemlist-entity.html" . }}
+  {{ if and $itemList (ne $itemList (dict)) }}
+    {{ $itemList = merge $itemList (dict "@id" "#itemlist") }}
+    {{ $webpage = merge $webpage (dict "hasPart" (dict "@id" "#itemlist")) }}
+  {{ end }}
+{{ end }}
+
 {{/* What-is and docs pages get Article/TechArticle as their main entity; if the page
      also has a "Frequently asked questions"-style Q&A section, expose it as a
      FAQPage entity in the same graph under its own @id. Pages that are themselves
@@ -54,10 +70,27 @@
      flag keeps this a reusable template mechanism (not a per-page hack) while
      avoiding that regression; add `faq_schema: true` to any blog post's
      frontmatter once it has a genuine FAQ section (## or ### headings ending
-     in "?") to pick up FAQPage schema automatically. */}}
+     in "?") to pick up FAQPage schema automatically.
+     Docs *section* pages (Hugo branch bundles, e.g. an `_index.md` with child
+     pages) are `.Kind "section"`, so `.IsPage` is false for them and they never
+     reach this block even when they carry a genuine multi-question FAQ (for
+     example content/docs/iac/comparisons/terraform/_index.md, which has its own
+     children terraform/opentofu.md and terraform/terminology.md). A repo-wide
+     scan of docs section pages found several with a single narrative heading
+     that happens to end in "?" (e.g. "## Why integration testing?") which is
+     not a real FAQ block, so relaxing the gate to all docs sections would
+     mirror the blog false-positive problem. Instead, docs sections opt in the
+     same way blog posts do: set `faq_schema: true` in a section's frontmatter
+     once it has a genuine Q&A block, and faq-entity.html's own "?"-heading
+     extraction still governs what actually gets emitted. */}}
 {{ $faqPage := dict }}
 {{ $isDedicatedFaqPage := or (strings.Contains (lower .RelPermalink) "/faq") (strings.Contains (lower .Title) "faq") (strings.Contains (lower .Title) "frequently asked") }}
-{{ if and .IsPage (not $isDedicatedFaqPage) (or (eq .Type "what-is") (eq .Type "docs") (and (eq .Type "blog") .Params.faq_schema)) }}
+{{ $qualifiesForFaqSchema := or
+  (and .IsPage (or (eq .Type "what-is") (eq .Type "docs")))
+  (and (eq .Type "blog") .Params.faq_schema)
+  (and (eq .Type "docs") (not .IsPage) .Params.faq_schema)
+}}
+{{ if and $qualifiesForFaqSchema (not $isDedicatedFaqPage) }}
   {{ $faqPage = partial "schema/collectors/faq-entity.html" . }}
   {{ if and $faqPage (ne $faqPage (dict)) }}
     {{ $faqPage = merge $faqPage (dict "@id" "#faq") }}
@@ -65,8 +98,66 @@
   {{ end }}
 {{ end }}
 
+{{/* Blog posts can additionally opt in to HowTo schema via `howto_schema: true` in
+     frontmatter, alongside their normal BlogPosting main entity. Unlike
+     `schema_type: howto` (which fully replaces the main entity — see
+     main-entity.html — and is meant for dedicated /tutorials-type pages), this
+     flag is additive: it keeps the post's BlogPosting entity (author, date,
+     publisher) intact while also emitting a HowTo entity built from the post's
+     own numbered walkthrough steps, so a how-to-style blog post can carry both.
+     Guarded on `schema_type` not already being "howto" so the two mechanisms
+     never both try to emit a HowTo entity for the same page. */}}
+{{ $howToPage := dict }}
+{{ if and .IsPage (eq .Type "blog") .Params.howto_schema (ne .Params.schema_type "howto") }}
+  {{ $howToPage = partial "schema/collectors/howto-entity.html" . }}
+  {{ if and $howToPage (ne $howToPage (dict)) }}
+    {{ $howToPage = merge $howToPage (dict "@id" "#howto") }}
+    {{ $graph = $graph | append $howToPage }}
+  {{ end }}
+{{ end }}
+
+{{/* Wire technology/competitor entities (Terraform, Kubernetes, TypeScript, etc.)
+     into WebPage.mentions for entity disambiguation. technology-entities.html
+     already matches page content against a curated list of Wikipedia/Wikidata
+     "sameAs" entities but was never called from graph-builder.html or any
+     collector, so it has been dead code since it was written; every comparison
+     and docs page describing Terraform, Kubernetes, or another named technology
+     rendered no entity markup for the technologies being discussed at all. This
+     is the natural complement to the Organization sameAs fix above: that fix
+     disambiguates who Pulumi is on every page; this disambiguates what the page
+     is about, which is exactly the "Pulumi -> IaC platform -> competes with
+     Terraform, CDK" entity graph the SEO/GEO strategy calls for. */}}
+{{ if not .IsHome }}
+  {{ $techEntities := partial "schema/utils/technology-entities.html" . }}
+  {{ if and $techEntities (gt (len $techEntities) 0) }}
+    {{ $webpage = merge $webpage (dict "mentions" $techEntities) }}
+  {{ end }}
+{{ end }}
+
 {{/* Add WebPage to graph */}}
 {{ $graph = $graph | append $webpage }}
+
+{{/* Shared identity fields for the Organization entity, defined once and reused
+     by both the homepage's full Organization node and every non-home page's
+     minimal node below, so the two never drift out of sync. sameAs links the
+     entity to Wikipedia, Wikidata, GitHub, LinkedIn, and Crunchbase — the
+     disambiguation signals AI systems and Google use to correctly identify
+     Pulumi as a company. Previously these fields existed only on the
+     homepage, so ~2,900 other indexed URLs (including the comparison pages
+     that drive the largest share of Pulumi's AI citations) emitted an
+     Organization node with no sameAs and no description at all. */}}
+{{ $orgDescription := "Pulumi enables cloud infrastructure teams to define, deploy, and manage cloud resources using familiar programming languages." }}
+{{ $orgFoundingDate := "2017" }}
+{{ $orgSameAs := slice
+  "https://github.com/pulumi"
+  "https://twitter.com/PulumiCorp"
+  "https://x.com/PulumiCorp"
+  "https://www.linkedin.com/company/pulumi"
+  "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"
+  "https://www.wikidata.org/wiki/Q122864080"
+  "https://en.wikipedia.org/wiki/Pulumi"
+  "https://www.crunchbase.com/organization/pulumi-corporation"
+}}
 
 {{/* For homepage, add Organization, Website and SoftwareApplication schemas */}}
 {{ if .IsHome }}
@@ -84,8 +175,8 @@
       "width" 600
       "height" 60
     )
-    "description" "Pulumi enables cloud infrastructure teams to define, deploy, and manage cloud resources using familiar programming languages."
-    "foundingDate" "2017"
+    "description" $orgDescription
+    "foundingDate" $orgFoundingDate
     "founders" (slice
       (dict "@type" "Person" "name" "Joe Duffy")
       (dict "@type" "Person" "name" "Eric Rudder")
@@ -114,16 +205,7 @@
       "minValue" 100
       "maxValue" 200
     )
-    "sameAs" (slice
-      "https://github.com/pulumi"
-      "https://twitter.com/PulumiCorp"
-      "https://x.com/PulumiCorp"
-      "https://www.linkedin.com/company/pulumi"
-      "https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"
-      "https://www.wikidata.org/wiki/Q122864080"
-      "https://en.wikipedia.org/wiki/Pulumi"
-      "https://www.crunchbase.com/organization/pulumi-corporation"
-    )
+    "sameAs" $orgSameAs
     "knowsAbout" (slice
       "Infrastructure as Code"
       "Cloud Computing"
@@ -208,11 +290,54 @@
     "keywords" "infrastructure as code, IaC, cloud, DevOps, automation, platform engineering"
   }}
   {{ $graph = $graph | append $software }}
+{{ else }}
+  {{/* Add a resolvable Organization node, with identity-defining fields, on
+       every non-home page. article-entity.html (and other collectors) emit
+       publisher/author/citation fields as a bare
+       {"@id": "https://www.pulumi.com/#organization"} reference, which only
+       resolves to concrete data if the *same page's* @graph also defines that
+       @id. Google's structured-data parsers and AI crawlers evaluate each
+       URL's JSON-LD independently and do not dereference @id links across
+       pages, so without this, publisher.name (required by schema.org/Article)
+       and publisher.logo (recommended for rich results) were undefined on
+       every blog post and docs page. This node additionally carries sameAs,
+       description, and foundingDate so AI systems can disambiguate "Pulumi"
+       against unrelated entities of the same name on every indexed URL, not
+       just the homepage — this matters most on the comparison pages
+       (/docs/iac/comparisons/*, /blog/infrastructure-as-code-tools/) that
+       drive the largest share of Pulumi's AI-generated citations. Kept
+       lighter than the full corporate entity above (no founders/address/
+       contactPoint/numberOfEmployees/award, which are not needed for entity
+       identification and would bloat every page); the fields that ARE shared
+       (description, foundingDate, sameAs) are pulled from the same variables
+       the homepage uses, above, so the two nodes cannot drift out of sync. */}}
+  {{ $orgMinimal := dict
+    "@type" (slice "Organization" "Corporation")
+    "@id" "https://www.pulumi.com/#organization"
+    "name" "Pulumi Corporation"
+    "alternateName" "Pulumi"
+    "url" "https://www.pulumi.com"
+    "logo" (dict
+      "@type" "ImageObject"
+      "url" "https://www.pulumi.com/logos/brand/logo.png"
+      "width" 600
+      "height" 60
+    )
+    "description" $orgDescription
+    "foundingDate" $orgFoundingDate
+    "sameAs" $orgSameAs
+  }}
+  {{ $graph = $graph | append $orgMinimal }}
 {{ end }}
 
 {{/* Add comparison table to graph (collected earlier to wire hasPart into WebPage) */}}
 {{ if and $comparisonTable (ne $comparisonTable (dict)) }}
   {{ $graph = $graph | append $comparisonTable }}
+{{ end }}
+
+{{/* Add ItemList to graph (collected earlier to wire hasPart into WebPage) */}}
+{{ if and $itemList (ne $itemList (dict)) }}
+  {{ $graph = $graph | append $itemList }}
 {{ end }}
 
 {{/* Add video schema if page contains YouTube videos */}}

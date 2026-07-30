@@ -39,6 +39,7 @@ social:
         OpenAI-compatible API access from your existing tooling
 
     Read the full guide: <link>
+faq_schema: true
 ---
 
 <script type="application/ld+json">

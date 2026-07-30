@@ -1,4 +1,5 @@
 const fs = require("fs");
+const zlib = require("zlib");
 const yaml = require("js-yaml");
 const { lint: markdownlint, readConfig } = require("markdownlint/sync");
 const path = require("path");
@@ -129,6 +130,373 @@ function checkMetaImage(image) {
     const extension = regex.exec(image)[1];
     if (extension !== "png") {
         return `Meta image, '${image}', must be a png file.`;
+    }
+
+    return null;
+}
+
+/** Canonical blog feature image dimensions, matching the blog-feature-image templates. */
+const FEATURE_IMAGE_WIDTH = 1884;
+const FEATURE_IMAGE_HEIGHT = 1256;
+
+/**
+ * Reads the intrinsic pixel dimensions from a PNG or JPEG file by inspecting its
+ * header bytes — no image library required. Returns { width, height } or null if
+ * the file can't be read or isn't a recognized PNG/JPEG.
+ *
+ * @param {string} file Absolute path to the image file.
+ * @returns {{width: number, height: number}|null}
+ */
+function imageDimensions(file) {
+    let buf;
+    try {
+        buf = fs.readFileSync(file);
+    } catch (e) {
+        return null;
+    }
+
+    // PNG: 8-byte signature (\x89PNG...), then the IHDR chunk whose width/height
+    // are big-endian uint32s at byte offsets 16 and 20.
+    if (buf.length >= 24 && buf.readUInt32BE(0) === 0x89504e47) {
+        return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+    }
+
+    // JPEG: starts with FFD8; scan the marker segments for a Start-Of-Frame
+    // (SOF0-SOF15, excluding the non-frame C4/C8/CC markers), which carries the
+    // image height and width as big-endian uint16s.
+    if (buf.length >= 4 && buf[0] === 0xff && buf[1] === 0xd8) {
+        let offset = 2;
+        while (offset + 9 < buf.length) {
+            if (buf[offset] !== 0xff) {
+                offset++;
+                continue;
+            }
+            const marker = buf[offset + 1];
+            if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+                return { height: buf.readUInt16BE(offset + 5), width: buf.readUInt16BE(offset + 7) };
+            }
+            offset += 2 + buf.readUInt16BE(offset + 2);
+        }
+    }
+
+    return null;
+}
+
+/**
+ * checkFeatureImageDimensions enforces that a blog post's `feature_image` is a
+ * template-sized 1884x1256 image. The blog-feature-image skill only ever renders
+ * templates at this size (and designer-supplied images are expected to match it),
+ * so an off-size image is a strong signal it's AI-generated slop rather than a
+ * template render or a real designer image. Only blog posts carry a fixed-size
+ * feature image, and only post-local (relative) paths are checked; shared/legacy
+ * absolute paths (/images/...) are out of scope.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageDimensions(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return `Feature image '${featureImage}' was not found next to the post.`;
+    }
+
+    const size = imageDimensions(imgPath);
+    if (!size) {
+        return `Feature image '${featureImage}' could not be read as a PNG/JPEG; render it with the /blog-feature-image skill.`;
+    }
+    if (size.width !== FEATURE_IMAGE_WIDTH || size.height !== FEATURE_IMAGE_HEIGHT) {
+        return `Feature image '${featureImage}' is ${size.width}x${size.height}, but blog feature images must be ${FEATURE_IMAGE_WIDTH}x${FEATURE_IMAGE_HEIGHT}. Render it with the /blog-feature-image skill or use a designer-supplied image (never AI-generated).`;
+    }
+
+    return null;
+}
+
+/** Canonical blog feature image background color (the templates' backdrop). */
+const FEATURE_IMAGE_BG = { r: 0x23, g: 0x1f, b: 0x33 };
+
+/** PNG Paeth predictor, used to reverse filter type 4. */
+function paethPredictor(a, b, c) {
+    const p = a + b - c;
+    const pa = Math.abs(p - a);
+    const pb = Math.abs(p - b);
+    const pc = Math.abs(p - c);
+    if (pa <= pb && pa <= pc) return a;
+    if (pb <= pc) return b;
+    return c;
+}
+
+/**
+ * Decodes an 8-bit, non-interlaced PNG and returns its four corner pixels as
+ * {r,g,b}, ordered [top-left, top-right, bottom-left, bottom-right]. Uses only
+ * Node's built-in zlib — no image dependency. Returns null for anything it can't
+ * safely decode (non-PNG, 16-bit, interlaced, unknown/paletteless color type),
+ * so callers skip the check rather than raising a false positive.
+ *
+ * @param {string} file Absolute path to a PNG file.
+ * @returns {{r:number,g:number,b:number}[]|null}
+ */
+function pngCornerColors(file) {
+    let buf;
+    try {
+        buf = fs.readFileSync(file);
+    } catch (e) {
+        return null;
+    }
+    if (buf.length < 33 || buf.readUInt32BE(0) !== 0x89504e47) {
+        return null; // Not a PNG.
+    }
+
+    const width = buf.readUInt32BE(16);
+    const height = buf.readUInt32BE(20);
+    const bitDepth = buf[24];
+    const colorType = buf[25];
+    const interlace = buf[28];
+    const channels = { 0: 1, 2: 3, 3: 1, 4: 2, 6: 4 }[colorType];
+    if (bitDepth !== 8 || interlace !== 0 || !channels || width < 1 || height < 1) {
+        return null;
+    }
+
+    // Walk the chunk stream: concatenate IDAT payloads and grab the palette.
+    let offset = 8;
+    const idatParts = [];
+    let palette = null;
+    while (offset + 8 <= buf.length) {
+        const length = buf.readUInt32BE(offset);
+        const type = buf.toString("ascii", offset + 4, offset + 8);
+        const dataStart = offset + 8;
+        if (type === "IDAT") {
+            idatParts.push(buf.subarray(dataStart, dataStart + length));
+        } else if (type === "PLTE") {
+            palette = buf.subarray(dataStart, dataStart + length);
+        } else if (type === "IEND") {
+            break;
+        }
+        offset = dataStart + length + 4; // Skip the chunk data and its 4-byte CRC.
+    }
+    if (idatParts.length === 0 || (colorType === 3 && !palette)) {
+        return null;
+    }
+
+    let raw;
+    try {
+        raw = zlib.inflateSync(Buffer.concat(idatParts));
+    } catch (e) {
+        return null;
+    }
+
+    const stride = width * channels;
+    if (raw.length < (stride + 1) * height) {
+        return null; // Truncated/unexpected data.
+    }
+
+    // Reverse the per-scanline filters into a contiguous raster. Every row must be
+    // un-filtered because filters can reference the pixel directly above.
+    const out = Buffer.alloc(stride * height);
+    for (let y = 0; y < height; y++) {
+        const filter = raw[y * (stride + 1)];
+        const inStart = y * (stride + 1) + 1;
+        const outStart = y * stride;
+        const prevStart = outStart - stride;
+        for (let x = 0; x < stride; x++) {
+            const rawByte = raw[inStart + x];
+            const left = x >= channels ? out[outStart + x - channels] : 0;
+            const up = y > 0 ? out[prevStart + x] : 0;
+            const upLeft = y > 0 && x >= channels ? out[prevStart + x - channels] : 0;
+            let value;
+            switch (filter) {
+                case 0:
+                    value = rawByte;
+                    break;
+                case 1:
+                    value = rawByte + left;
+                    break;
+                case 2:
+                    value = rawByte + up;
+                    break;
+                case 3:
+                    value = rawByte + ((left + up) >> 1);
+                    break;
+                case 4:
+                    value = rawByte + paethPredictor(left, up, upLeft);
+                    break;
+                default:
+                    return null; // Unknown filter type.
+            }
+            out[outStart + x] = value & 0xff;
+        }
+    }
+
+    function pixel(x, y) {
+        const i = y * stride + x * channels;
+        if (colorType === 3) {
+            const idx = out[i] * 3;
+            return { r: palette[idx], g: palette[idx + 1], b: palette[idx + 2] };
+        }
+        if (colorType === 0 || colorType === 4) {
+            return { r: out[i], g: out[i], b: out[i] };
+        }
+        return { r: out[i], g: out[i + 1], b: out[i + 2] };
+    }
+
+    return [pixel(0, 0), pixel(width - 1, 0), pixel(0, height - 1), pixel(width - 1, height - 1)];
+}
+
+/**
+ * checkFeatureImageBackground enforces that a blog post's `feature_image` uses
+ * the canonical #231F33 backdrop by sampling the four corners (every template
+ * renders a flat #231F33 background, so an off-color corner means the file was
+ * not rendered from a template). Scope matches checkFeatureImageDimensions:
+ * blog posts only, post-local paths only. Non-PNG/undecodable files are skipped
+ * (the dimension check remains the size guard).
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageBackground(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    const corners = pngCornerColors(imgPath);
+    if (!corners) {
+        return null; // Not a decodable PNG; leave sizing to the dimension check.
+    }
+
+    const { r, g, b } = FEATURE_IMAGE_BG;
+    const offColor = corners.find(c => c.r !== r || c.g !== g || c.b !== b);
+    if (offColor) {
+        const toHex = c => "#" + [c.r, c.g, c.b].map(n => n.toString(16).padStart(2, "0")).join("").toUpperCase();
+        return `Feature image '${featureImage}' has a ${toHex(offColor)} background, but blog feature images must be #231F33. Render it with the /blog-feature-image skill or use a designer-supplied image (never AI-generated).`;
+    }
+
+    return null;
+}
+
+/**
+ * PNG Software tag written by the blog-feature-image renderer
+ * (compose_meta_image.py). This string is a shared constant between the renderer
+ * and this allowlist — keep the two in sync if it ever changes.
+ */
+const FEATURE_IMAGE_SOFTWARE = "pulumi-blog-feature-image";
+
+/**
+ * Reads a PNG's `tEXt` Software value straight from the file bytes — no decode
+ * library. Returns the string, or null when there's no tEXtSoftware chunk.
+ *
+ * @param {Buffer} buf The raw PNG file contents.
+ * @returns {string|null}
+ */
+function readPngSoftware(buf) {
+    const match = /tEXtSoftware\x00([ -~]*)/.exec(buf.toString("latin1"));
+    return match ? match[1] : null;
+}
+
+/**
+ * checkFeatureImageSoftware enforces that a blog post's `feature_image` was
+ * produced by the approved pipeline, using an allowlist on the PNG Software tag
+ * rather than a denylist (so a new bad generator fails by default). Allowed:
+ * "Figma" (designer exports), our renderer's stamp, or no tag at all (legacy
+ * skill output — Pillow wrote no Software tag before the stamp was added). Any
+ * other stamp (Matplotlib, PIL, DALL·E, Midjourney, etc.) fails. Scope matches
+ * the other feature-image checks: blog posts, post-local PNG paths only.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageSoftware(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    let buf;
+    try {
+        buf = fs.readFileSync(imgPath);
+    } catch (e) {
+        return null;
+    }
+    if (buf.length < 8 || buf.readUInt32BE(0) !== 0x89504e47) {
+        return null; // Not a PNG; leave format/sizing to the other checks.
+    }
+
+    // Allowlist: Figma exports, our renderer's stamp, or no tag (legacy renders).
+    const software = readPngSoftware(buf);
+    if (software === null || software === "Figma" || software === FEATURE_IMAGE_SOFTWARE) {
+        return null;
+    }
+
+    return `Feature image '${featureImage}' was produced by '${software}', which is not an approved source. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
+}
+
+/**
+ * Every C2PA (content-credentials) manifest embeds a JUMBF superbox whose
+ * description box carries the ASCII label `jumdc2pa\0` — the same 9 bytes in a
+ * JPEG APP11 segment or a PNG chunk, so one needle covers both formats.
+ */
+const C2PA_MARKER = "jumdc2pa\x00";
+
+/**
+ * checkFeatureImageC2pa fails a blog post's `feature_image` that carries a C2PA
+ * content-credentials manifest. AI image generators (Google, OpenAI, Adobe
+ * Firefly) sign their output with C2PA precisely to mark it as AI-generated,
+ * and neither of our approved sources emits it — compose_meta_image.py writes
+ * plain Pillow PNGs and Figma exports carry no manifest — so any C2PA marker
+ * means the file did not come from an approved pipeline. This closes the gap
+ * the other checks leave: a generated image resized to 1884x1256 with a
+ * template-colored backdrop and no PNG Software tag would otherwise pass.
+ * Scope matches the other feature-image checks: blog posts, post-local paths.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageC2pa(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    let buf;
+    try {
+        buf = fs.readFileSync(imgPath);
+    } catch (e) {
+        return null;
+    }
+
+    if (buf.toString("latin1").indexOf(C2PA_MARKER) !== -1) {
+        return `Feature image '${featureImage}' carries a C2PA content-credentials manifest, which marks it as AI-generated output. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
     }
 
     return null;
@@ -472,6 +840,224 @@ function checkChangelogAssets() {
 }
 
 /**
+ * The Stencil chooser component, which is the single source of truth for which
+ * chooser types exist and which option keys each one accepts. The lint check
+ * below parses this file rather than duplicating its lists into a data file, so
+ * the guard can't drift out of sync with the component it's guarding.
+ */
+const CHOOSER_COMPONENT_PATH = path.resolve(__dirname, "../../theme/stencil/src/components/chooser/chooser.tsx");
+
+/**
+ * Option tokens that both chooser shortcodes rewrite before handing them to the
+ * component (layouts/shortcodes/{chooser,choosable}.html), and which therefore
+ * won't appear as keys in chooser.tsx.
+ */
+const CHOOSER_OPTION_ALIASES = ["nodejs"];
+
+/** Matches a chooser/choosable shortcode call, capturing its raw argument list. */
+const CHOOSER_SHORTCODE_REGEX = /\{\{[<%]\s*(chooser|choosable)\s+([^\n%>}]*?)\s*\/?\s*[%>]\}\}/g;
+
+/**
+ * Parses chooser.tsx into { types, optionsByType }: the set of valid chooser
+ * types (from the ChooserType union) and, for each type whose options we can
+ * resolve, the set of valid option keys (by following mapOptions' switch to the
+ * corresponding supported* list).
+ *
+ * Throws if the file can't be parsed into a non-empty type list. Failing loudly
+ * is deliberate: a silently-empty registry would turn this guard into a no-op,
+ * which is the exact failure mode it exists to prevent.
+ *
+ * @returns {{types: string[], optionsByType: Object<string, string[]>}}
+ */
+const parseChooserRegistry = (function () {
+    let cached;
+
+    return function () {
+        if (cached) {
+            return cached;
+        }
+
+        const src = fs.readFileSync(CHOOSER_COMPONENT_PATH, "utf8");
+
+        // export type ChooserType = "language" | "os" | ...;
+        const union = src.match(/export type ChooserType\s*=\s*([^;]+);/);
+        const types = union ? [...union[1].matchAll(/"([^"]+)"/g)].map(m => m[1]) : [];
+        if (types.length === 0) {
+            throw new Error(`Could not parse the ChooserType union from ${CHOOSER_COMPONENT_PATH}. ` + `If the component was refactored, update parseChooserRegistry in this file to match.`);
+        }
+
+        // case "language": options = this.supportedLanguages;
+        const typeToList = {};
+        for (const m of src.matchAll(/case\s+"([^"]+)":\s*options\s*=\s*this\.(\w+);/g)) {
+            typeToList[m[1]] = m[2];
+        }
+
+        // private supportedLanguages: SupportedLanguage[] = [ { key: "typescript", ... }, ... ];
+        const listKeys = {};
+        for (const m of src.matchAll(/private\s+(\w+):\s*\w+\[\]\s*=\s*\[([\s\S]*?)\n {4}\];/g)) {
+            listKeys[m[1]] = [...m[2].matchAll(/key:\s*"([^"]+)"/g)].map(k => k[1]);
+        }
+
+        const optionsByType = {};
+        types.forEach(function (type) {
+            const keys = listKeys[typeToList[type]];
+            if (keys && keys.length > 0) {
+                optionsByType[type] = keys;
+            }
+        });
+
+        // Fail loudly here for the same reason the union parse does above: an
+        // unresolved type leaves the option-key check with nothing to compare
+        // against, so it quietly passes everything. A regex that stops matching
+        // (a reformat moving the closing `];`, a renamed supported* list, a
+        // restructured mapOptions switch) would otherwise disable half the guard.
+        types.forEach(function (type) {
+            if (!optionsByType[type]) {
+                const listName = typeToList[type];
+                const where = listName ? `(list: ${listName})` : "(no matching case in mapOptions)";
+                throw new Error(
+                    `Could not parse option keys for chooser type '${type}' ${where} from ${CHOOSER_COMPONENT_PATH}. ` +
+                        `If the component was refactored, update parseChooserRegistry in this file to match.`,
+                );
+            }
+        });
+
+        cached = { types, optionsByType };
+        return cached;
+    };
+})();
+
+/**
+ * Recursively collects markdown files under a directory, applying the same
+ * exclusions as the front-matter walk (auto-generated reference and registry
+ * pages, which are produced elsewhere).
+ *
+ * The chooser check needs its own walk rather than reusing searchForMarkdown's
+ * file list, because that list omits pages the front-matter checks skip
+ * (auto-generated, noindex, redirect passthroughs) -- and a chooser renders on
+ * those pages just the same.
+ *
+ * @param {string} dir Absolute path to walk.
+ * @returns {string[]} Absolute paths of the markdown files found.
+ */
+function listMarkdownFiles(dir) {
+    const found = [];
+
+    function walk(current) {
+        let entries;
+        try {
+            entries = fs.readdirSync(current, { withFileTypes: true });
+        } catch (e) {
+            return;
+        }
+        entries.forEach(function (entry) {
+            const full = path.join(current, entry.name);
+            if (entry.isDirectory()) {
+                walk(full);
+            } else if (entry.name.endsWith(".md")) {
+                if (full.indexOf("/content/docs/reference/pkg") > -1 || full.indexOf("/content/registry") > -1) {
+                    return;
+                }
+                found.push(full);
+            }
+        });
+    }
+
+    walk(dir);
+    return found;
+}
+
+/**
+ * Validates every chooser/choosable shortcode call in the given markdown files.
+ *
+ * An unrecognized chooser type, or an option key the type doesn't define, fails
+ * silently at runtime: the component matches no options, renders zero tabs, and
+ * -- because a choosable only reveals itself when its value matches the current
+ * selection -- hides all of the content it wraps. A page can therefore lose
+ * every code block it has while still building, linting and rendering "fine".
+ * That shipped once already (tf-tool, PR #20001, invisible for four weeks), so
+ * it's a hard error here.
+ *
+ * @param {string[]} files Absolute paths of markdown files to check.
+ * @returns {{path: string, errors: Object[]}[]} One error group per bad file.
+ */
+function checkChooserShortcodes(files) {
+    const { types, optionsByType } = parseChooserRegistry();
+    const groups = [];
+
+    files.forEach(function (fullPath) {
+        let content;
+        try {
+            content = fs.readFileSync(fullPath, "utf8");
+        } catch (e) {
+            return; // Unreadable files are surfaced by the front-matter checks.
+        }
+
+        if (content.indexOf("chooser") === -1 && content.indexOf("choosable") === -1) {
+            return; // Fast path: the vast majority of files have neither.
+        }
+
+        const errors = [];
+
+        for (const match of content.matchAll(CHOOSER_SHORTCODE_REGEX)) {
+            const [full, shortcode, rawArgs] = match;
+            const args = (rawArgs.match(/"[^"]*"|\S+/g) || []).map(a => a.replace(/^"|"$/g, ""));
+            const lineNumber = content.slice(0, match.index).split("\n").length;
+
+            const type = args[0];
+            if (!type) {
+                continue; // The shortcode itself errors on missing arguments.
+            }
+
+            if (!types.includes(type)) {
+                errors.push({
+                    lineNumber: lineNumber,
+                    ruleDescription:
+                        `Unknown chooser type '${type}' in ${shortcode} shortcode. Valid types are: ` +
+                        `${types.join(", ")}. An unrecognized type renders no tabs AND hides all of the ` +
+                        `content it wraps, so the page silently loses it. Either use a valid type or add ` +
+                        `'${type}' to the chooser component (theme/stencil/src/components/chooser/chooser.tsx ` +
+                        `plus the store slice in theme/stencil/src/store/)`,
+                    errorDetail: full.trim(),
+                });
+                continue;
+            }
+
+            // The second positional argument is the option list (chooser) or the
+            // value(s) to match (choosable). A third argument, if present, is the
+            // mode, which the shortcodes validate themselves.
+            const valid = optionsByType[type];
+            if (!valid || !args[1]) {
+                continue;
+            }
+
+            const unknown = args[1]
+                .split(",")
+                .map(o => o.trim())
+                .filter(o => o.length > 0 && !valid.includes(o) && !CHOOSER_OPTION_ALIASES.includes(o));
+
+            if (unknown.length > 0) {
+                errors.push({
+                    lineNumber: lineNumber,
+                    ruleDescription:
+                        `Unknown '${type}' option${unknown.length > 1 ? "s" : ""} ${unknown.map(o => `'${o}'`).join(", ")} ` +
+                        `in ${shortcode} shortcode. Valid options for '${type}' are: ${valid.join(", ")}. ` +
+                        `An unrecognized option is silently dropped, which can leave the chooser with no ` +
+                        `tabs and its content hidden`,
+                    errorDetail: full.trim(),
+                });
+            }
+        }
+
+        if (errors.length > 0) {
+            groups.push({ path: fullPath, errors: errors });
+        }
+    });
+
+    return groups;
+}
+
+/**
  * Builds an array of markdown files to lint and checks each file's front matter
  * for formatting errors.
  *
@@ -549,6 +1135,10 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
+                    featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
+                    featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
+                    featureImageSoftware: checkFeatureImageSoftware(obj.feature_image, fullPath),
+                    featureImageC2pa: checkFeatureImageC2pa(obj.feature_image, fullPath),
                     blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
                     caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
@@ -669,6 +1259,30 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.metaImage,
+                });
+            }
+            if (frontMatterErrors.featureImageDimensions) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageDimensions,
+                });
+            }
+            if (frontMatterErrors.featureImageBackground) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageBackground,
+                });
+            }
+            if (frontMatterErrors.featureImageSoftware) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageSoftware,
+                });
+            }
+            if (frontMatterErrors.featureImageC2pa) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageC2pa,
                 });
             }
             if (frontMatterErrors.blogCategory) {
@@ -806,6 +1420,17 @@ if (filesFromArgs.length === 0) {
         errors.push(assetError);
     });
 }
+
+// Chooser/choosable shortcode calls live in the body rather than the front
+// matter, so they get their own pass over the same scope the caller asked for.
+const chooserScope =
+    filesFromArgs.length > 0
+        ? filesFromArgs.map(f => path.resolve(process.cwd(), f)).filter(f => f.endsWith(".md"))
+        : listMarkdownFiles(path.resolve(__dirname, "../../content"));
+
+checkChooserShortcodes(chooserScope).forEach(function (chooserError) {
+    errors.push(chooserError);
+});
 
 // Get the total number of errors.
 const errorsArray = errors.map(function (err) {

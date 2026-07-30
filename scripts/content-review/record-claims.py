@@ -60,7 +60,10 @@ _spec.loader.exec_module(_select)
 slugify = _select.slugify
 
 SCHEMA_VERSION = 1
-KEPT_VERDICTS = {"verified", "matches", "contradicted", "mismatch"}
+# `framing-drift` persists: it's a decided source-vs-claim outcome (value
+# accurate, published meaning drifted) the reverify lane should track, unlike
+# `unverifiable`/`not-a-claim` which carry no decided state.
+KEPT_VERDICTS = {"verified", "matches", "contradicted", "mismatch", "framing-drift"}
 
 # Verdict fields carried into the snapshot, in output order.
 CLAIM_FIELDS = [

@@ -92,7 +92,7 @@ Regardless of the deploy target, each agent process runs **one deployment at a t
 
 ## Dependency caching
 
-Pulumi's [dependency caching](/docs/deployments/concepts/settings/#dependency-caching) is not available on customer-managed runner pools. If a stack is assigned to a customer-managed pool, the setting has no effect.
+Pulumi's [dependency caching](/docs/deployments/concepts/settings/dependency-caching/) is not available on customer-managed runner pools. If a stack is assigned to a customer-managed pool, the setting has no effect.
 
 Because you control the runner environment and image, you can manage caching yourself — for example, by persisting package manager caches and the Pulumi plugin directory (`~/.pulumi/plugins`) across jobs, or by pre-baking them into your runner image.
 

@@ -39,10 +39,9 @@ Manufacturing veterans are currently experiencing an "IT-OT Convergence." Compan
 
 While this trend continues to accelerate, a large skill gap remains. [4IR Solutions](https://www.4ir.cloud/) was founded with the mission to fill this gap, by using the best tools and practices from the IT industry to operate OT infrastructure for manufacturers at scale. With its FactoryStack™ and PharmaStack™ products, 4IR offers infrastructure and "DevOps-as-a-Service" to manufacturers, taking care of provisioning and operations including backup, upgrades, security services, secrets management, and CI/CD pipelines for OT software.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-factorystack.png" alt="FactoryStack architecture diagram">
+![FactoryStack architecture diagram](/images/case-studies/4ir-factorystack.png)
 
-## Selecting Pulumi and its Business Impact
+## Selecting Pulumi and its business impact
 
 Before developing FactoryStack™, 4IR examined the existing landscape of Infrastructure as Code (IaC) tools. “We considered Terraform, but as a team of programmers, we were not excited to learn a new configuration language that relies on quirky workarounds for common constructs like loops,” said Joseph Dolivo, CTO of 4IR. “We also evaluated Ansible, which seemed better suited for configuration management, and CloudFormation, which only worked for AWS,” shared Dolivo.
 
@@ -60,35 +59,31 @@ Pulumi quickly became a fan-favorite among 4IR’s team and offered immediate bu
 
 To support these larger customers, the 4IR engineering team decided to adapt their solution to support multiple clouds and chose Kubernetes as a key enabling technology.
 
-### Going Multi-Cloud with Kubernetes
+### Going multi-cloud with Kubernetes
 
 Adopting Kubernetes was not an easy decision. Although cloud provider-managed offerings like AKS and EKS reduce required maintenance considerably, Kubernetes is still an advanced technology that requires specialized skill sets.
 
 4IR created three projects. The first project provides the Kubernetes application layer, which uses Pulumi's Kubernetes provider and is written to be cloud agnostic. The second project is an AWS-specific layer which operates resources such as VPCs, EKS, and PostgreSQL on RDS. The third project is similar to the second, except that it is specific to Azure, and runs similar services, such as VNETs, AKS, and Azure Database for PostgreSQL. In short, both the AWS and Azure projects run the core compute, database, and networking infrastructure primitives, while the Kubernetes layer deploys Kubernetes applications across either cloud.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-multicloud.png" alt="Multi-cloud architecture diagram with Apps on Azure Native and AWS">
+![Multi-cloud architecture diagram with Apps on Azure Native and AWS](/images/case-studies/4ir-multicloud.png)
 
-### Supporting Hybrid Cloud with Components
+### Supporting hybrid cloud with components
 
 Manufacturers in regulated industries such as pharmaceuticals and nuclear energy often have strict data residency requirements. While these requirements can sometimes be met by limiting deployments to specific cloud regions, many manufacturers insist that their critical workloads are run on-premise.
 
 4IR realized that in order to operate on-premise, certain cloud-native services, such as managed databases would not be available to them. They needed a way to selectively deploy parts of their infrastructure customized to their hosting environment.  Pulumi's Component Resources turned out to be the perfect solution.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-pulumi-components.png" alt="Architecture diagram using Pulumi Components">
+![Architecture diagram using Pulumi Components](/images/case-studies/4ir-pulumi-components.png)
 
 4IR created new Pulumi Components that the other projects would be able to selectively import from, depending on the environment into which they were deployed. Since 4IR’s engineering team programmed in TypeScript, they used an internal npm repository to store these packages.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-react-code-sample.png" alt="Code snippet for FactoryStack Designer React application">
+![Code snippet for FactoryStack Designer React application](/images/case-studies/4ir-react-code-sample.png)
 
 With this solution in hand, 4IR was able to make customizing their solutions even simpler.  “We created a front-end React application that we coined FactoryStack™ Designer. It provides a "drag-and-drop" interface to configure a customer's environment,” shared Dolivo. “The application, like all of our Pulumi code, is written in TypeScript. It can import interfaces from our Pulumi Components and keeps the front-end in sync with our Pulumi code. In the future, we plan for this application to integrate even more seamlessly with Pulumi via the Automation API.”
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/4ir-designer-screenshot-1.png" alt="Screenshot of FactoryStack Designer showing drag and drop interface">
+![Screenshot of FactoryStack Designer showing drag and drop interface](/images/case-studies/4ir-designer-screenshot-1.png)
 
-### Over the Edge
+### Over the edge
 
 In some cases, manufacturers may not require nor have the budget for a hybrid cloud solution.  In addition, they may be located in parts of the world where Internet access is limited. 4IR expects that some hardware needs to exist on-site to allow for control of equipment and buffering of data if connectivity is intermittent. Previously, 4IR has deferred the management of this on premise hardware and software to their end customers.
 
