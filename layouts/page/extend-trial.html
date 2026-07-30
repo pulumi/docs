@@ -12,8 +12,9 @@
   UTM capture is handled by the form's own hidden last_utm_* fields.
 
   v1 notes for review:
-    - Right-rail events/posts are hardcoded (flagged). Later: pull from Hugo
-      data/content so they stay current on their own.
+    - Right rail pulls live from the site's own content: the next 3 upcoming
+      events (same sortable_date + unlisted logic as partials/events/list-section)
+      and the 4 most recent blog posts. Self-updating, no hardcoded list.
     - Raw hbspt.forms.create is used (not <pulumi-contact-us-form>) specifically
       to get onFormReady prefill + the in-place confirmation swap.
 */}}
@@ -126,53 +127,58 @@
       </div>
     </div>
 
-    <!-- ============ SIDEBAR (v1: hardcoded, see note in template head) ============ -->
+    <!-- ============ SIDEBAR (dynamic: pulled from the site's own events + blog) ============ -->
     <aside class="et-side">
+
+      {{/* Next 3 upcoming events — mirrors partials/events/list-section.html logic */}}
+      {{ $nowUnix := now.UnixMilli }}
+      {{ $upcoming := slice }}
+      {{ range where site.Pages "Type" "events" }}
+        {{ if eq .Params.unlisted false }}
+          {{ $endUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
+          {{ if lt $nowUnix $endUnix }}
+            {{ $upcoming = $upcoming | append . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ $upcoming = first 3 (sort $upcoming "Params.sortable_date") }}
+      {{ with $upcoming }}
       <div class="et-card et-card-pad">
         <h3>Live workshops</h3>
-        <a class="et-res" href="https://www.pulumi.com/events/intro-to-pulumi-esc-managing-secrets/">
-          <div class="et-evrow">
-            <div class="et-datechip"><div class="et-d">5</div><div class="et-mo">Aug</div></div>
-            <div><div class="et-t">Best Practices for Managing Secrets: An Introduction to ESC</div><div class="et-m">Virtual workshop &middot; Beginner</div></div>
-          </div>
-        </a>
-        <a class="et-res" href="https://www.pulumi.com/events/getting-started-with-devops-ai-skills-2/">
-          <div class="et-evrow">
-            <div class="et-datechip"><div class="et-d">12</div><div class="et-mo">Aug</div></div>
-            <div><div class="et-t">Getting Started with DevOps AI Skills</div><div class="et-m">Virtual workshop &middot; Beginner</div></div>
-          </div>
-        </a>
-        <a class="et-res" href="https://www.pulumi.com/events/neo-in-a-docker-sandbox/">
-          <div class="et-evrow">
-            <div class="et-datechip"><div class="et-d">16</div><div class="et-mo">Sep</div></div>
-            <div><div class="et-t">Neo in a Docker Sandbox: Pulumi's coding agent, safely</div><div class="et-m">With Docker &middot; Virtual workshop</div></div>
-          </div>
-        </a>
-        <a class="et-more et-link" href="https://www.pulumi.com/events/">All events and workshops &rarr;</a>
+        {{ range . }}
+          {{ $href := .RelPermalink }}{{ if .Params.external }}{{ $href = .Params.url_slug }}{{ end }}
+          {{ $t := (.Params.sortable_date | time.AsTime) }}
+          <a class="et-res" href="{{ $href }}">
+            <div class="et-evrow">
+              <div class="et-datechip"><div class="et-d">{{ $t.Format "2" }}</div><div class="et-mo">{{ $t.Format "Jan" }}</div></div>
+              <div><div class="et-t">{{ .Title }}</div>{{ with .Params.event_type }}<div class="et-m">{{ . | title }}</div>{{ end }}</div>
+            </div>
+          </a>
+        {{ end }}
+        <a class="et-more et-link" href="/events/">All events and workshops &rarr;</a>
       </div>
+      {{ end }}
 
+      {{/* 4 most recent blog posts */}}
+      {{ $recent := first 4 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+      {{ with $recent }}
       <div class="et-card et-card-pad">
         <h3>While you're evaluating</h3>
-        <a class="et-res" href="https://www.pulumi.com/blog/best-terraform-alternatives/">
-          <div class="et-t"><span class="et-tag">Guide</span>Best Terraform Alternatives in 2026</div><div class="et-m">Jul 18, 2026</div>
-        </a>
-        <a class="et-res" href="https://www.pulumi.com/blog/preview-esc-environment-changes-with-draft-references/">
-          <div class="et-t"><span class="et-tag">Product</span>Preview ESC Changes with Environment Overrides</div><div class="et-m">Jul 23, 2026</div>
-        </a>
-        <a class="et-res" href="https://www.pulumi.com/blog/kubernetes-agent-sandbox/">
-          <div class="et-t"><span class="et-tag">Tutorial</span>Kubernetes Agent Sandbox: What It Is and How to Deploy It</div><div class="et-m">Jul 21, 2026</div>
-        </a>
-        <a class="et-res" href="https://www.pulumi.com/blog/how-to-test-infrastructure-as-code/">
-          <div class="et-t"><span class="et-tag">Best practices</span>How to Test Infrastructure as Code</div><div class="et-m">Jun 30, 2026</div>
-        </a>
-        <a class="et-more et-link" href="https://www.pulumi.com/blog/">More from the blog &rarr;</a>
+        {{ range . }}
+          <a class="et-res" href="{{ .RelPermalink }}">
+            <div class="et-t">{{ with .Params.category }}<span class="et-tag">{{ . | title }}</span>{{ end }}{{ .Title }}</div>
+            <div class="et-m">{{ .Date.Format "Jan 2, 2006" }}</div>
+          </a>
+        {{ end }}
+        <a class="et-more et-link" href="/blog/">More from the blog &rarr;</a>
       </div>
+      {{ end }}
 
       <div class="et-card et-card-pad" style="background:var(--et-bg-alt)">
         <h3>Need something else?</h3>
         <p style="font-size:14px;color:var(--et-ink2);margin:0 0 12px">If this isn't about your trial length, these get you there faster:</p>
         <div style="font-size:14px;display:flex;flex-direction:column;gap:8px">
-          <a class="et-link" href="https://www.pulumi.com/contact/">&rarr; Talk to sales about pricing</a>
+          <a class="et-link" href="/contact/">&rarr; Talk to sales about pricing</a>
           <a class="et-link" href="https://support.pulumi.com/">&rarr; Open a support ticket</a>
           <a class="et-link" href="https://slack.pulumi.com/">&rarr; Ask the community on Slack</a>
         </div>
