@@ -175,15 +175,36 @@ function run(intercom: IntercomFn): void {
 
 // analytics.ready fires only after the consent-managed Segment load completes
 // (see conditionallyLoadAnalytics), which is already deferred to browser idle —
-// same fail-closed rendezvous the head partial's ad pixel uses. Intercom can
-// still be absent (destination disabled or not consented): one direct check,
-// no polling.
-const analytics = window.analytics;
-if (analytics && typeof analytics.ready === "function") {
-    analytics.ready(() => {
-        const intercom = (window as { Intercom?: unknown }).Intercom;
-        if (typeof intercom === "function") {
-            run(intercom as IntercomFn);
-        }
-    });
+// same fail-closed rendezvous the head partial's ad pixel uses. But ready()
+// never fires if any device-mode destination throws during init, so a slow
+// bounded poll for the widget backstops it. The fallback is just as
+// fail-closed: window.Intercom only exists when the consented Segment load
+// booted the destination.
+const POLL_INTERVAL_MS = 5 * 1000;
+const POLL_MAX_ATTEMPTS = 12;
+
+let ran = false;
+function tryRun(): void {
+    if (ran) {
+        return;
+    }
+    const intercom = (window as { Intercom?: unknown }).Intercom;
+    if (typeof intercom === "function") {
+        ran = true;
+        run(intercom as IntercomFn);
+    }
 }
+
+const analytics = (window as any).analytics;
+if (analytics && typeof analytics.ready === "function") {
+    analytics.ready(tryRun);
+}
+
+let pollAttempts = 0;
+const poll = setInterval(() => {
+    pollAttempts++;
+    tryRun();
+    if (ran || pollAttempts >= POLL_MAX_ATTEMPTS) {
+        clearInterval(poll);
+    }
+}, POLL_INTERVAL_MS);
