@@ -38,7 +38,7 @@ With Pulumi ESC you can:
 - **Trust (and prove) your secrets are secure.** Every environment can be locked down with role-based access controls (RBAC) and versioned with all changes fully logged for auditing.
 - **Ditch `.env` files.** No more storing secrets in plaintext on dev computers. Developers can easily access secrets via CLI, API, Kubernetes operator, the Pulumi Cloud UI, and in-code with Typescript/Javascript, Python, and Go SDKs.
 
-{{< get-started-next-step path="/docs/esc/get-started" label="Learn more about Pulumi ESC" ref="gs-gcp-esc" >}}
+{{< get-started-next-step path="/docs/esc/get-started/" label="Learn more about Pulumi ESC" ref="gs-gcp-esc" >}}
 
 ## Try a tutorial
 

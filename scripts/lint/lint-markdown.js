@@ -1085,6 +1085,224 @@ function checkChangelogAssets() {
 }
 
 /**
+ * The Stencil chooser component, which is the single source of truth for which
+ * chooser types exist and which option keys each one accepts. The lint check
+ * below parses this file rather than duplicating its lists into a data file, so
+ * the guard can't drift out of sync with the component it's guarding.
+ */
+const CHOOSER_COMPONENT_PATH = path.resolve(__dirname, "../../theme/stencil/src/components/chooser/chooser.tsx");
+
+/**
+ * Option tokens that both chooser shortcodes rewrite before handing them to the
+ * component (layouts/shortcodes/{chooser,choosable}.html), and which therefore
+ * won't appear as keys in chooser.tsx.
+ */
+const CHOOSER_OPTION_ALIASES = ["nodejs"];
+
+/** Matches a chooser/choosable shortcode call, capturing its raw argument list. */
+const CHOOSER_SHORTCODE_REGEX = /\{\{[<%]\s*(chooser|choosable)\s+([^\n%>}]*?)\s*\/?\s*[%>]\}\}/g;
+
+/**
+ * Parses chooser.tsx into { types, optionsByType }: the set of valid chooser
+ * types (from the ChooserType union) and, for each type whose options we can
+ * resolve, the set of valid option keys (by following mapOptions' switch to the
+ * corresponding supported* list).
+ *
+ * Throws if the file can't be parsed into a non-empty type list. Failing loudly
+ * is deliberate: a silently-empty registry would turn this guard into a no-op,
+ * which is the exact failure mode it exists to prevent.
+ *
+ * @returns {{types: string[], optionsByType: Object<string, string[]>}}
+ */
+const parseChooserRegistry = (function () {
+    let cached;
+
+    return function () {
+        if (cached) {
+            return cached;
+        }
+
+        const src = fs.readFileSync(CHOOSER_COMPONENT_PATH, "utf8");
+
+        // export type ChooserType = "language" | "os" | ...;
+        const union = src.match(/export type ChooserType\s*=\s*([^;]+);/);
+        const types = union ? [...union[1].matchAll(/"([^"]+)"/g)].map(m => m[1]) : [];
+        if (types.length === 0) {
+            throw new Error(`Could not parse the ChooserType union from ${CHOOSER_COMPONENT_PATH}. ` + `If the component was refactored, update parseChooserRegistry in this file to match.`);
+        }
+
+        // case "language": options = this.supportedLanguages;
+        const typeToList = {};
+        for (const m of src.matchAll(/case\s+"([^"]+)":\s*options\s*=\s*this\.(\w+);/g)) {
+            typeToList[m[1]] = m[2];
+        }
+
+        // private supportedLanguages: SupportedLanguage[] = [ { key: "typescript", ... }, ... ];
+        const listKeys = {};
+        for (const m of src.matchAll(/private\s+(\w+):\s*\w+\[\]\s*=\s*\[([\s\S]*?)\n {4}\];/g)) {
+            listKeys[m[1]] = [...m[2].matchAll(/key:\s*"([^"]+)"/g)].map(k => k[1]);
+        }
+
+        const optionsByType = {};
+        types.forEach(function (type) {
+            const keys = listKeys[typeToList[type]];
+            if (keys && keys.length > 0) {
+                optionsByType[type] = keys;
+            }
+        });
+
+        // Fail loudly here for the same reason the union parse does above: an
+        // unresolved type leaves the option-key check with nothing to compare
+        // against, so it quietly passes everything. A regex that stops matching
+        // (a reformat moving the closing `];`, a renamed supported* list, a
+        // restructured mapOptions switch) would otherwise disable half the guard.
+        types.forEach(function (type) {
+            if (!optionsByType[type]) {
+                const listName = typeToList[type];
+                const where = listName ? `(list: ${listName})` : "(no matching case in mapOptions)";
+                throw new Error(
+                    `Could not parse option keys for chooser type '${type}' ${where} from ${CHOOSER_COMPONENT_PATH}. ` +
+                        `If the component was refactored, update parseChooserRegistry in this file to match.`,
+                );
+            }
+        });
+
+        cached = { types, optionsByType };
+        return cached;
+    };
+})();
+
+/**
+ * Recursively collects markdown files under a directory, applying the same
+ * exclusions as the front-matter walk (auto-generated reference and registry
+ * pages, which are produced elsewhere).
+ *
+ * The chooser check needs its own walk rather than reusing searchForMarkdown's
+ * file list, because that list omits pages the front-matter checks skip
+ * (auto-generated, noindex, redirect passthroughs) -- and a chooser renders on
+ * those pages just the same.
+ *
+ * @param {string} dir Absolute path to walk.
+ * @returns {string[]} Absolute paths of the markdown files found.
+ */
+function listMarkdownFiles(dir) {
+    const found = [];
+
+    function walk(current) {
+        let entries;
+        try {
+            entries = fs.readdirSync(current, { withFileTypes: true });
+        } catch (e) {
+            return;
+        }
+        entries.forEach(function (entry) {
+            const full = path.join(current, entry.name);
+            if (entry.isDirectory()) {
+                walk(full);
+            } else if (entry.name.endsWith(".md")) {
+                if (full.indexOf("/content/docs/reference/pkg") > -1 || full.indexOf("/content/registry") > -1) {
+                    return;
+                }
+                found.push(full);
+            }
+        });
+    }
+
+    walk(dir);
+    return found;
+}
+
+/**
+ * Validates every chooser/choosable shortcode call in the given markdown files.
+ *
+ * An unrecognized chooser type, or an option key the type doesn't define, fails
+ * silently at runtime: the component matches no options, renders zero tabs, and
+ * -- because a choosable only reveals itself when its value matches the current
+ * selection -- hides all of the content it wraps. A page can therefore lose
+ * every code block it has while still building, linting and rendering "fine".
+ * That shipped once already (tf-tool, PR #20001, invisible for four weeks), so
+ * it's a hard error here.
+ *
+ * @param {string[]} files Absolute paths of markdown files to check.
+ * @returns {{path: string, errors: Object[]}[]} One error group per bad file.
+ */
+function checkChooserShortcodes(files) {
+    const { types, optionsByType } = parseChooserRegistry();
+    const groups = [];
+
+    files.forEach(function (fullPath) {
+        let content;
+        try {
+            content = fs.readFileSync(fullPath, "utf8");
+        } catch (e) {
+            return; // Unreadable files are surfaced by the front-matter checks.
+        }
+
+        if (content.indexOf("chooser") === -1 && content.indexOf("choosable") === -1) {
+            return; // Fast path: the vast majority of files have neither.
+        }
+
+        const errors = [];
+
+        for (const match of content.matchAll(CHOOSER_SHORTCODE_REGEX)) {
+            const [full, shortcode, rawArgs] = match;
+            const args = (rawArgs.match(/"[^"]*"|\S+/g) || []).map(a => a.replace(/^"|"$/g, ""));
+            const lineNumber = content.slice(0, match.index).split("\n").length;
+
+            const type = args[0];
+            if (!type) {
+                continue; // The shortcode itself errors on missing arguments.
+            }
+
+            if (!types.includes(type)) {
+                errors.push({
+                    lineNumber: lineNumber,
+                    ruleDescription:
+                        `Unknown chooser type '${type}' in ${shortcode} shortcode. Valid types are: ` +
+                        `${types.join(", ")}. An unrecognized type renders no tabs AND hides all of the ` +
+                        `content it wraps, so the page silently loses it. Either use a valid type or add ` +
+                        `'${type}' to the chooser component (theme/stencil/src/components/chooser/chooser.tsx ` +
+                        `plus the store slice in theme/stencil/src/store/)`,
+                    errorDetail: full.trim(),
+                });
+                continue;
+            }
+
+            // The second positional argument is the option list (chooser) or the
+            // value(s) to match (choosable). A third argument, if present, is the
+            // mode, which the shortcodes validate themselves.
+            const valid = optionsByType[type];
+            if (!valid || !args[1]) {
+                continue;
+            }
+
+            const unknown = args[1]
+                .split(",")
+                .map(o => o.trim())
+                .filter(o => o.length > 0 && !valid.includes(o) && !CHOOSER_OPTION_ALIASES.includes(o));
+
+            if (unknown.length > 0) {
+                errors.push({
+                    lineNumber: lineNumber,
+                    ruleDescription:
+                        `Unknown '${type}' option${unknown.length > 1 ? "s" : ""} ${unknown.map(o => `'${o}'`).join(", ")} ` +
+                        `in ${shortcode} shortcode. Valid options for '${type}' are: ${valid.join(", ")}. ` +
+                        `An unrecognized option is silently dropped, which can leave the chooser with no ` +
+                        `tabs and its content hidden`,
+                    errorDetail: full.trim(),
+                });
+            }
+        }
+
+        if (errors.length > 0) {
+            groups.push({ path: fullPath, errors: errors });
+        }
+    });
+
+    return groups;
+}
+
+/**
  * Builds an array of markdown files to lint and checks each file's front matter
  * for formatting errors.
  *
@@ -1496,6 +1714,17 @@ const pricingDataErrors = PRICING.loadError
 if (pricingDataErrors.length > 0) {
     errors.push({ path: "data/pulumi_pricing.yaml", errors: pricingDataErrors });
 }
+
+// Chooser/choosable shortcode calls live in the body rather than the front
+// matter, so they get their own pass over the same scope the caller asked for.
+const chooserScope =
+    filesFromArgs.length > 0
+        ? filesFromArgs.map(f => path.resolve(process.cwd(), f)).filter(f => f.endsWith(".md"))
+        : listMarkdownFiles(path.resolve(__dirname, "../../content"));
+
+checkChooserShortcodes(chooserScope).forEach(function (chooserError) {
+    errors.push(chooserError);
+});
 
 // Get the total number of errors.
 const errorsArray = errors.map(function (err) {
