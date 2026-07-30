@@ -220,11 +220,25 @@
     {{ end }}
 </section>
 
-{{/* Collapse all but the first comparison table on mobile (<md). Desktop keeps them all open. */}}
+{{/* Collapse all but the first comparison table on mobile (<md). Desktop keeps
+     them all open. Docs availability markers deep-link to /pricing/#<feature-id>,
+     and on mobile that row usually sits inside a table this script just
+     collapsed — so re-open whichever table holds the anchor and scroll to it,
+     because the browser already gave up on a hidden target. */}}
 <script>
     (function () {
         var mq = window.matchMedia("(min-width: 768px)");
         var tables = document.querySelectorAll("[data-pricing-table]");
+        function revealHash() {
+            var id = window.location.hash.slice(1);
+            if (!id) return;
+            var target = document.getElementById(decodeURIComponent(id));
+            if (!target) return;
+            var table = target.closest("[data-pricing-table]");
+            if (!table || table.hasAttribute("open")) return;
+            table.setAttribute("open", "");
+            target.scrollIntoView();
+        }
         function sync() {
             if (mq.matches) {
                 tables.forEach(function (t) { t.setAttribute("open", ""); });
@@ -234,9 +248,11 @@
                     else t.removeAttribute("open");
                 });
             }
+            revealHash();
         }
         sync();
         mq.addEventListener("change", sync);
+        window.addEventListener("hashchange", revealHash);
     })();
 </script>
 
