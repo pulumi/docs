@@ -14,13 +14,13 @@
 {{ end }}
 
 {{ define "main" }}
-    {{/* Map every what-is explainer by slug (filename without extension). */}}
+    {{/* Map every learn explainer by slug (filename without extension). */}}
     {{ $bySlug := dict }}
-    {{ range (where (where $.Site.Pages "Type" "what-is") "IsPage" true) }}
+    {{ range (where (where $.Site.Pages "Type" "learn") "IsPage" true) }}
         {{ $bySlug = merge $bySlug (dict .File.ContentBaseName .) }}
     {{ end }}
 
-    {{ $data := site.Data.what_is_sections }}
+    {{ $data := site.Data.learn_sections }}
 
     {{/* Track which slugs the data file explicitly places, so anything left
          over can be surfaced in a fallback group rather than vanishing. */}}
@@ -33,7 +33,7 @@
     {{ end }}
 
     {{ $other := slice }}
-    {{ range (where (where $.Site.Pages "Type" "what-is") "IsPage" true).ByTitle }}
+    {{ range (where (where $.Site.Pages "Type" "learn") "IsPage" true).ByTitle }}
         {{ if not (in $placed .File.ContentBaseName) }}
             {{ $other = $other | append . }}
         {{ end }}
@@ -79,9 +79,9 @@
         <div class="max-w-5xl mx-auto">
             {{/* Section filter: an "All" pill plus one pill per section. The
                  pills are real anchor links (no-JS fallback = jump to the
-                 section); what-is-list.ts intercepts clicks to show only the
+                 section); learn-list.ts intercepts clicks to show only the
                  selected section in place and moves `.is-active`. */}}
-            <nav data-what-is-filter aria-label="Filter explainers" class="mb-10 flex flex-wrap items-center gap-3">
+            <nav data-learn-filter aria-label="Filter explainers" class="mb-10 flex flex-wrap items-center gap-3">
                 <button type="button" data-section="" data-track="what-is-filter-all" aria-current="page" class="btn btn-sm btn-outline text-sm is-active">All</button>
                 {{ range $groups }}
                     <a href="#{{ .id }}" data-section="{{ .id }}" data-track="what-is-filter-{{ .id }}" class="btn btn-sm btn-outline text-sm">{{ .short }}</a>
@@ -96,7 +96,7 @@
                 <section id="{{ .id }}" data-section="{{ .id }}" class="mb-12 scroll-mt-20">
                     <h2 data-section-label class="no-anchor font-overline mb-3">{{ .title }}</h2>
                     <div>
-                        {{ range .pages }}{{ partial "what-is/row.html" . }}{{ end }}
+                        {{ range .pages }}{{ partial "learn/row.html" . }}{{ end }}
                     </div>
                 </section>
             {{ end }}

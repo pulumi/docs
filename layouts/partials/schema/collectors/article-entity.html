@@ -94,7 +94,7 @@
 {{ $duration := printf "PT%dM" $readTime }}
 {{ $schema = merge $schema (dict "timeRequired" $duration) }}
 
-{{/* Add author. Prefer Person entities from frontmatter (e.g. what-is pages) so
+{{/* Add author. Prefer Person entities from frontmatter (e.g. learn pages) so
      Google can render the author byline in rich results; fall back to the
      Pulumi organization for pages with no declared authors (most docs). */}}
 {{ $authors := partial "schema/utils/author-entities.html" . }}
