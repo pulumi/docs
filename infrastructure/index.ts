@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
-import { getMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
 
 const stackConfig = new pulumi.Config();
 
@@ -983,9 +983,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     defaultCacheBehavior: {
         ...baseCacheBehavior,
         cachePolicyId: tenMinuteCacheKeyPolicy.id,
-        // Stamps Content-Type on /.well-known/api-catalog, which falls through to
-        // the default behavior. No-op for every other path.
-        functionAssociations: [getApiCatalogContentTypeFunctionAssociation()],
+        functionAssociations: [
+            // Serves index.md for the homepage, /what-is/, /product/, and /pricing/
+            // via Accept: text/markdown or the .md URL suffix. The viewer-request
+            // rewrite lands before the cache lookup, so the rewritten URI is the
+            // cache key and no cache policy changes are needed.
+            getMarketingMarkdownNegotiationFunctionAssociation(),
+            // Stamps Content-Type on /.well-known/api-catalog, which falls through to
+            // the default behavior. No-op for every other path.
+            getApiCatalogContentTypeFunctionAssociation(),
+        ],
     },
 
     orderedCacheBehaviors: [
