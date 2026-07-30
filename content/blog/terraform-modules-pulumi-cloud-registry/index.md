@@ -1,8 +1,8 @@
 ---
-title: "Host Terraform modules in the Pulumi Cloud registry"
+title: "Publish a Terraform module, get a Pulumi package"
 date: 2026-06-18
 draft: false
-meta_desc: "Publish private Terraform modules to the Pulumi Cloud registry and consume them from OpenTofu, Terraform, or Pulumi with your existing tooling."
+meta_desc: "Publish private Terraform modules to the Pulumi Cloud registry and get a typed Pulumi package for every version, with generated SDKs, API docs, and usage tracking across your stacks."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -15,16 +15,16 @@ tags:
 canonical_url: https://www.pulumi.com/docs/idp/concepts/terraform-modules/
 social:
   twitter: |
-    The Pulumi Cloud registry now hosts Terraform modules. Publish with the HCP tooling you already use, and consume from OpenTofu, Terraform, or Pulumi. Just point at tf.pulumi.com.
+    Publish a Terraform module to the Pulumi Cloud registry and every version becomes a typed Pulumi package: generated SDKs for TypeScript, Python, Go, C#, Java and YAML, API docs, and usage tracking across your stacks.
   linkedin: |
-    The Pulumi Cloud registry now hosts Terraform modules.
+    The Pulumi Cloud registry now hosts Terraform modules, and converts every version you publish into a Pulumi package.
 
     The registry is wire-compatible with HCP Terraform's private module registry, so the tools you already use to publish keep working. You just point them at tf.pulumi.com instead of app.terraform.io.
 
-    Consumers can reference modules from a .tf file with tofu init, or from a Pulumi program with pulumi package add. Reading and listing modules works on any plan.
+    What you get back is a first-class package. Its variables become typed inputs and its outputs become typed outputs, with a generated SDK for TypeScript, Python, Go, C#, Java or YAML. Pulumi Cloud gives it an API reference, tracks which stacks depend on it, and shows which of them have fallen behind the latest version.
 ---
 
-The Pulumi Cloud registry now hosts Terraform modules. You can publish your private modules to your organization and consume them from OpenTofu, Terraform, or a Pulumi program, all under the `tf.pulumi.com` host.
+The Pulumi Cloud registry now hosts Terraform modules, and turns every version you publish into a Pulumi package. The module you already maintain becomes a typed component with a generated SDK in your language, an API reference, and usage tracking across the stacks that depend on it. None of it requires rewriting the module.
 
 <!--more-->
 
@@ -58,9 +58,27 @@ client, _ := tfe.NewClient(&tfe.Config{
 
 At publish time the registry reads the [standard Terraform module layout](https://developer.hashicorp.com/terraform/language/modules/develop/structure). Root `.tf` files describe the module's inputs and outputs, `modules/<name>/` subdirectories become submodules, and `examples/<name>/` subdirectories are captured as examples. Submodules and examples are discovered automatically, so there is nothing extra to declare.
 
-## Consuming from OpenTofu or Terraform
+## Every version becomes a Pulumi package
 
-Reference the module the same way you would any private module, with the Pulumi Cloud host in the source:
+Publishing does two things. The version becomes available over the Terraform module protocol, as it would on HCP Terraform. The version is also converted into a Pulumi package, automatically, with nothing extra to configure.
+
+The package takes its name from the module: `<name>-<system>`, in the same namespace. A module published as `acme-corp/vpc/aws` becomes a package called `vpc-aws`, and a Pulumi program installs it by that name:
+
+```bash
+pulumi package add vpc-aws 1.2.3
+```
+
+Installing a converted package needs Pulumi CLI 3.248.0 or newer.
+
+The module becomes a [multi-language component](https://github.com/pulumi-labs/pulumi-hcl/blob/main/docs/mlc.md). Its `variable` blocks become typed inputs and its `output` blocks become typed outputs, and Pulumi generates an SDK for whichever language the project uses: TypeScript, Python, Go, C#, Java, or YAML. Editors complete the inputs, and a misspelled one fails at compile time rather than partway through a plan. The resources the module creates appear individually in previews and in the resource graph.
+
+Pulumi Cloud treats it as it would any other package. The package page carries an API reference generated from the module's variables and outputs, and records which stacks depend on it and which of those are behind the latest version, so you know who to tell before publishing a breaking change. That count follows the package, so it covers the stacks consuming the module through Pulumi, not the ones consuming it over the Terraform protocol.
+
+Conversion runs per version, so a module can have some versions with packages and some without. The package's page shows which versions have converted.
+
+## Your Terraform consumers keep working
+
+Nothing about the module changes for the people already consuming it. A `.tf` file references it as it would any private module, and `tofu init` (or `terraform init`) resolves it against Pulumi Cloud using the token from `TF_TOKEN_tf_pulumi_com`:
 
 ```hcl
 module "vpc" {
@@ -69,17 +87,9 @@ module "vpc" {
 }
 ```
 
-`tofu init` (or `terraform init`) resolves the module against Pulumi Cloud using the token from `TF_TOKEN_tf_pulumi_com`. Submodules use the usual `//modules/<name>` syntax.
+Submodules use the usual `//modules/<name>` syntax.
 
-## Consuming from a Pulumi program
-
-You can also bring the module into a Pulumi program in any supported language:
-
-```bash
-pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
-```
-
-`hcl` is a parameterized provider: after the `module` keyword you pass the module address and an optional version (omit it for the latest published version). After `pulumi login` the CLI resolves the module with your Pulumi credentials, so there is no separate login step. From there the module behaves like any other Pulumi package. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+While a version is still converting, or for a module that cannot convert, a Pulumi program can consume the module directly with `pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system>`. That runs the same conversion locally instead of using the published package. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 ## Get started
 

@@ -86,13 +86,21 @@ Any directory containing `.tf` files and optionally `variables.tf` and `outputs.
 
 ### Using a Module from Pulumi Cloud
 
-If your organization publishes Terraform modules to the Pulumi Cloud registry, reference them with the `tf.pulumi.com` host:
+If your organization publishes Terraform modules to the [Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/), every published version is converted into a Pulumi package for you. Install it by package name, which is the module's name and system joined with a hyphen:
+
+```bash
+pulumi package add <name>-<system> [<version>]
+```
+
+A module published as `acme-corp/vpc/aws` installs as `vpc-aws`. This is the same as any other Pulumi package: you get a generated SDK in your language, an [API reference](/docs/idp/concepts/private-registry/#api-documentation) on the package's page, and [usage tracking](/docs/idp/concepts/private-registry/#usage-tracking) showing which of your stacks depend on it and which are behind the latest version. Installing a converted package requires Pulumi CLI 3.248.0 or newer.
+
+The package's page in Pulumi Cloud shows whether a given version has converted. While a version is still converting, or for a module using Terraform features Pulumi cannot express yet, consume the module directly instead:
 
 ```bash
 pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
 ```
 
-The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). The CLI passes your Pulumi access token through to the provider automatically, so you don't need to set a registry token by hand when running through `pulumi package add`.
+That runs the same conversion locally, at the moment you run it. The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). Either way the CLI passes your Pulumi access token through to the provider, so you do not need to set a registry token by hand.
 
 See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
 
