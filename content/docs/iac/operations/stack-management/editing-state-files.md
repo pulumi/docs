@@ -82,7 +82,7 @@ The `pulumi state` command can help with the following scenarios:
 
 - Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair)
 - Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_delete)
-- [Moving resources between stacks](/docs/iac/concepts/stacks/#move-resources-between-stacks) with `pulumi state move`
+- [Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/) with `pulumi state move`
 - Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect)
 - Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint)
 
