@@ -5,7 +5,7 @@ meta_desc: |
     make Python one of the world’s leading programming languages.
 
 url: /why-is-python-so-popular
-type: what-is
+type: learn
 page_title: Why is Python So Popular?
 
 customer_logos:
