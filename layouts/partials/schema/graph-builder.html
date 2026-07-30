@@ -98,6 +98,24 @@
   {{ end }}
 {{ end }}
 
+{{/* Blog posts can additionally opt in to HowTo schema via `howto_schema: true` in
+     frontmatter, alongside their normal BlogPosting main entity. Unlike
+     `schema_type: howto` (which fully replaces the main entity — see
+     main-entity.html — and is meant for dedicated /tutorials-type pages), this
+     flag is additive: it keeps the post's BlogPosting entity (author, date,
+     publisher) intact while also emitting a HowTo entity built from the post's
+     own numbered walkthrough steps, so a how-to-style blog post can carry both.
+     Guarded on `schema_type` not already being "howto" so the two mechanisms
+     never both try to emit a HowTo entity for the same page. */}}
+{{ $howToPage := dict }}
+{{ if and .IsPage (eq .Type "blog") .Params.howto_schema (ne .Params.schema_type "howto") }}
+  {{ $howToPage = partial "schema/collectors/howto-entity.html" . }}
+  {{ if and $howToPage (ne $howToPage (dict)) }}
+    {{ $howToPage = merge $howToPage (dict "@id" "#howto") }}
+    {{ $graph = $graph | append $howToPage }}
+  {{ end }}
+{{ end }}
+
 {{/* Wire technology/competitor entities (Terraform, Kubernetes, TypeScript, etc.)
      into WebPage.mentions for entity disambiguation. technology-entities.html
      already matches page content against a curated list of Wikipedia/Wikidata
