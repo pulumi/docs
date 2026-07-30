@@ -22,6 +22,7 @@ import "./resources";
 import "./releases";
 import "./packages";
 import "./pricing-trial";
+import "./extend-trial";
 import "./developer-advocates";
 import "./toc";
 import "./docs-main";
