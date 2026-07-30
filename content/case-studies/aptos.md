@@ -40,7 +40,7 @@ aliases:
 
 Aptos Labs, co-founded by Mo Shaikh and Avery Ching, is dedicated to creating better network tooling and seamless usability to bring the benefits of decentralization to the masses. Having now raised over $400M, Aptos Labs is backed by top-flight investors, including a16z, Jump Crypto, Binance Labs, Dragonfly, PayPal Ventures, Andreessen Horowitz and Franklin Templeton Investments. Learn more at: [https://aptoslabs.com/](https://aptoslabs.com)
 
-## Migrating Away from Terraform {#migration}
+## Migrating away from Terraform {#migration}
 
 > **By making the switch from Terraform, Aptos Labs increased the pace of development by as much as 10x**
 
@@ -70,15 +70,15 @@ The developers at Aptos Labs reported higher satisfaction with the Pulumi platfo
 2. Developers are enabled in their language of choice: The move to Pulumi allows the developers to use their preferred programming languages, promoting better software engineering practices like encapsulation and DRY (don’t repeat yourself) principles.
 3. Improved development practices and collaboration: Integrating infrastructure management with standard software development techniques enhances code quality and collaboration.
 
-## Removal of Terraform Dependency
+## Removal of Terraform dependency
 
 With the successful migration from Terraform to Pulumi, Aptos Labs gained access to a more robust and flexible toolset. As a result, Aptos Labs is well-positioned to achieve a more efficient, scalable, and modern infrastructure management approach. Aptos Labs has also allowed engineers to reduce the cognitive burden of understanding a domain-specific language and work in the languages used for critical business functions. With Pulumi, Aptos Labs can now build usable and shareable software abstractions that encapsulate best practices for cloud infrastructure.
 
-## What's Next for Aptos Labs? {#next-steps}
+## What's next for Aptos Labs? {#next-steps}
 
 Aptos Labs and Pulumi plan to build on this success to advance improvements in their infrastructure management even further. These efforts will continue to optimize the structure and management of projects at Aptos Labs to achieve greater efficiency, scalability, and consistency.
 
-### Modularization of Projects
+### Modularization of projects
 
 Aptos Labs' projects are structured to combine multiple concerns within a single stack. This approach results in managing network, cluster, and application-specific resources together, leading to complexities, redundancies, and excess costs.
 

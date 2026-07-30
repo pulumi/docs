@@ -41,7 +41,7 @@ While this trend continues to accelerate, a large skill gap remains. [4IR Soluti
 
 ![FactoryStack architecture diagram](/images/case-studies/4ir-factorystack.png)
 
-## Selecting Pulumi and its Business Impact
+## Selecting Pulumi and its business impact
 
 Before developing FactoryStack™, 4IR examined the existing landscape of Infrastructure as Code (IaC) tools. “We considered Terraform, but as a team of programmers, we were not excited to learn a new configuration language that relies on quirky workarounds for common constructs like loops,” said Joseph Dolivo, CTO of 4IR. “We also evaluated Ansible, which seemed better suited for configuration management, and CloudFormation, which only worked for AWS,” shared Dolivo.
 
@@ -59,7 +59,7 @@ Pulumi quickly became a fan-favorite among 4IR’s team and offered immediate bu
 
 To support these larger customers, the 4IR engineering team decided to adapt their solution to support multiple clouds and chose Kubernetes as a key enabling technology.
 
-### Going Multi-Cloud with Kubernetes
+### Going multi-cloud with Kubernetes
 
 Adopting Kubernetes was not an easy decision. Although cloud provider-managed offerings like AKS and EKS reduce required maintenance considerably, Kubernetes is still an advanced technology that requires specialized skill sets.
 
@@ -67,7 +67,7 @@ Adopting Kubernetes was not an easy decision. Although cloud provider-managed of
 
 ![Multi-cloud architecture diagram with Apps on Azure Native and AWS](/images/case-studies/4ir-multicloud.png)
 
-### Supporting Hybrid Cloud with Components
+### Supporting hybrid cloud with components
 
 Manufacturers in regulated industries such as pharmaceuticals and nuclear energy often have strict data residency requirements. While these requirements can sometimes be met by limiting deployments to specific cloud regions, many manufacturers insist that their critical workloads are run on-premise.
 
@@ -83,7 +83,7 @@ With this solution in hand, 4IR was able to make customizing their solutions eve
 
 ![Screenshot of FactoryStack Designer showing drag and drop interface](/images/case-studies/4ir-designer-screenshot-1.png)
 
-### Over the Edge
+### Over the edge
 
 In some cases, manufacturers may not require nor have the budget for a hybrid cloud solution.  In addition, they may be located in parts of the world where Internet access is limited. 4IR expects that some hardware needs to exist on-site to allow for control of equipment and buffering of data if connectivity is intermittent. Previously, 4IR has deferred the management of this on premise hardware and software to their end customers.
 

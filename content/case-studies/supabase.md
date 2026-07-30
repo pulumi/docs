@@ -54,7 +54,7 @@ sections:
 
 The infrastructure team at Supabase faced a critical scaling challenge: how to support rapid business growth and regional expansion while enabling every engineering team to ship, run, and monitor their own infrastructure. Traditional infrastructure-as-code tools created mental context switching between application code (TypeScript) and infrastructure definitions (proprietary DSLs). At the same time, manual deployment processes couldn't keep pace with customer demand for new regions and features.
 
-## Challenge: Manual Deployments Don't Scale with Explosive Growth {#challenge}
+## Challenge: manual deployments don't scale with explosive growth {#challenge}
 
 Five years ago, Supabase operated from a single AWS region with a deployment process that couldn't scale: one engineer manually clicking through cloud consoles to provision infrastructure. If that person was unavailable, deployments stopped entirely. The setup only worked on their local machine, creating a single point of failure that threatened the company's ability to meet growing customer demand.
 
@@ -62,27 +62,27 @@ Five years ago, Supabase operated from a single AWS region with a deployment pro
 
 As customer demand grew, particularly from enterprise users who started by "tinkering in their spare time" with Supabase's generous free tier, the team faced mounting pressure to expand into new regions for performance, compliance, and regulatory requirements. GDPR in Europe, California privacy regulations, and UAE government requirements all demanded multi-region capabilities that manual processes couldn't deliver reliably.
 
-### Why Not Terraform? {#why-not-terraform}
+### Why not Terraform? {#why-not-terraform}
 
 The team evaluated existing infrastructure-as-code solutions, but found them lacking for Supabase's needs. "Terraform's HCL required us to move between TypeScript for our application services and proprietary DSLs for infrastructure," Paul explains. "This mental context switching, combined with obscure features and syntax, meant we were optimizing for learning proprietary tools instead of delivering our product."
 
 The team wanted infrastructure that felt like an extension of their application code, not a separate domain requiring specialized knowledge and constant context switching between tools and languages.
 
-## Solution: Infrastructure in the Same Language as Services {#solution}
+## Solution: infrastructure in the same language as services {#solution}
 
 Supabase adopted Pulumi early in the company's existence, making a fundamental bet that infrastructure should use the same language as application code. Since all Supabase services are written in TypeScript, the team chose Pulumi's TypeScript support to eliminate mental overhead and leverage existing language expertise.
 
 The implementation transformed their deployment process:
 
-### PR-Based Workflow with Automated Previews
+### PR-based workflow with automated previews
 
 The team transitioned from local machine deployments to automated pipelines using Pulumi's GitHub integration. When engineers propose infrastructure changes, Pulumi's GitHub App automatically generates preview comments on pull requests before merge, showing precisely what resources will be created, modified, or deleted. This gives non-infrastructure engineers visibility without requiring them to run Pulumi locally.
 
-### Single-Click Production Deployments
+### Single-click production deployments
 
 What once required manual clicking through multiple cloud consoles now happens with a single click to production. The organization gained visibility into infrastructure changes across the entire company, while maintaining confidence through staging-to-production deployment patterns.
 
-### Multi-Cloud Composition
+### Multi-cloud composition
 
 Supabase takes a pragmatic approach to cloud vendors, using the best tool for each job:
 
@@ -94,9 +94,9 @@ With Pulumi, Supabase's application teams compose multi-cloud stacks atomically 
 
 ![Supabase multi-cloud architecture diagram](/images/case-studies/supabase-architecture-diagram.png)
 
-## Results: From Single Region to Global Infrastructure {#results}
+## Results: from single region to global infrastructure {#results}
 
-### Regional Expansion: 1 Week to Infrastructure Readiness
+### Regional expansion: 1 week to infrastructure readiness
 
 The most dramatic impact is seen in Supabase's regional expansion capabilities. Most recently, Supabase expanded into three European regions (eu-west-3, eu-north-1, eu-central-2) to better meet customer proximity needs and comply with GDPR requirements.
 
@@ -106,7 +106,7 @@ Each new region requires replicating 1,000-1,500 Pulumi resources, representing 
 
 This capability has become fundamental to Supabase's business model. At today's scale (80,000 resources across 16 regions), manual regional expansion would be, as Paul describes it, "nigh-impossible."
 
-### Infrastructure Democratization: Over 40 Active Contributors
+### Infrastructure democratization: over 40 active contributors
 
 Infrastructure contribution grew from 1-2 people writing infrastructure code to over 40 active contributors across the organization. More importantly, every engineering team at Supabase now ships, runs, and monitors their own infrastructure independently.
 
@@ -114,35 +114,35 @@ Within Supabase, the Storage team, Platform API team, Auth team, and others all 
 
 This shift happened because Pulumi removed barriers to entry. "Since it's just another programming language with control structures and external packages, it makes for a good transition from application code to infrastructure as code," Paul explains.
 
-### Reusable Components: NPM Packages for Infrastructure
+### Reusable components: NPM packages for infrastructure
 
 The team created standard infrastructure components as NPM packages, leveraging TypeScript's packaging model and ecosystem. This prevented teams from "redefining the same thing in different ways" and established reproducible patterns across applications. When launching new products or components, engineering teams find that "the primitives are already there," dramatically accelerating time-to-ship.
 
-### Self-Service Example: Platform API Migration
+### Self-service example: platform API migration
 
 The Supabase Platform API team recently deployed globally available platform API services for low-latency operations. Implementation took 3 days, with coordination from decision to production spanning 2 weeks.
 
 The team's services were hosted on a secondary cloud provider, which offered limited operational visibility and deployment reliability. The team made the strategic decision to migrate to AWS to align with the organization's standard infrastructure patterns. Because Pulumi uses the same language that the Platform API team writes their application services in, engineers could immediately contribute to infrastructure without switching mental contexts.
 
-### Managing Exponential Growth: 30K to 80K Resources
+### Managing exponential growth: 30K to 80K resources
 
 Resource count has grown from approximately 30,000 to 80,000 in just one year, mirroring Supabase's explosive business expansion. The networking backbone stack alone manages roughly 20,000 resources.
 
 As stacks grew larger, Pulumi's composability allowed the team to split them into multiple components and stacks. "We drove ourselves into this corner, but we didn't have to escalate to support to figure a way out," Paul notes.
 
-### Operational Confidence Through Staging Parity
+### Operational confidence through staging parity
 
 Supabase maintains staging-to-production parity: the same Pulumi code deploys to staging, then to production a day later. This validates changes in staging before any production impact, giving teams, as Paul calls it, "psychological safety" to stay in the familiar TypeScript ecosystem.
 
-## Business Impact: Infrastructure That Scales With Growth {#business-impact}
+## Business impact: infrastructure that scales with growth {#business-impact}
 
-### AI Builder Partnerships
+### AI builder partnerships
 
 In the past year, Supabase has partnered with AI application builders like Lovable, Bolt, Figma Make, and Vercel v0. When users specify application requirements, these platforms provision Supabase databases instantly, complete with real-time data streaming and storage servers.
 
 With more than 43,000 databases launched daily across over 1 million managed databases, Supabase's infrastructure must automatically handle massive scale. The company now manages 11.2 million total databases created, processing over 100,000 API calls per second while maintaining the reliability that 4.5 million developers and 250,000 community members depend on.
 
-## Looking Forward: Infrastructure That Grows With You {#looking-forward}
+## Looking forward: infrastructure that grows with you {#looking-forward}
 
 Supabase's success with Pulumi demonstrates a fundamental principle: infrastructure tooling should accelerate product delivery, not slow it down. By choosing technology that matched their existing expertise (TypeScript) and treating infrastructure as real code, Supabase eliminated the artificial boundary between application and infrastructure engineering.
 

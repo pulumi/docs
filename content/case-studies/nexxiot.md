@@ -45,7 +45,7 @@ sections:
 
 Nexxiot is digitalizing freight asset management with technology that oversees the world's most extensive network of connected shipping containers and railcars. Based in Zurich, Switzerland, with operations across Europe and North America, their IoT platform provides real-time insights into shipping container and railcar events, from impacts and delays to security incidents and loading activities.
 
-## Legacy Infrastructure Challenges
+## Legacy infrastructure challenges
 
 In 2017, Nexxiot's infrastructure team relied on Ansible to manage their growing cloud footprint. While Ansible excelled at traditional IT operations - SSHing into servers and running package managers - it was fundamentally misaligned with Nexxiot's cloud-native aspirations.
 
@@ -53,7 +53,7 @@ In 2017, Nexxiot's infrastructure team relied on Ansible to manage their growing
 
 The team wanted to move away from traditional server maintenance where machines were updated in place. Instead, they envisioned an immutable infrastructure approach where VMs would be replaced every 30 days with fresh instances running the latest OS versions. This fundamental mismatch between their tooling and their infrastructure philosophy forced them to look for alternatives.
 
-## Journey Through Terraform
+## Journey through Terraform
 
 After realizing Ansible couldn't meet their cloud-native needs, Nexxiot evaluated the infrastructure-as-code tools available in 2017. Terraform seemed like a natural choice - it was purpose-built for cloud infrastructure and offered a clean declarative approach to resource management.
 
@@ -64,7 +64,7 @@ To work around these constraints, the team built an increasingly complex toolcha
 "We didn't like having to use Python and Jinja because there was no type safety, no compiler that tells us if something is wrong," Berger notes. "We really don't like to run stacks that after half an hour just tell you 'oh sorry there's a null pointer exception over there' after waiting 30 minutes."
 The maintenance burden of this custom tooling became unsustainable, especially for a team that didn't consider themselves a Python shop. They needed a solution that would provide both the flexibility of a programming language and the safety of strong type checking.
 
-## AWS CDK: Promise and Limitations
+## AWS CDK: promise and limitations
 
 By 2018, Nexxiot's search for a better solution led them to evaluate AWS CDK in its early release. The imperative approach seemed promising - finally, a way to programmatically define infrastructure without complex templating workarounds.
 
@@ -75,13 +75,13 @@ However, CDK's reliance on AWS CloudFormation as its underlying deployment engin
 
 The team found themselves questioning how other companies managed with these constraints. "We are quite surprised how many companies get away with using CloudFormation, given these kinds of limitations," notes Berger. "Maybe this is explaining why they sometimes have downtime."
 
-## Solution: Modern Infrastructure with Pulumi
+## Solution: modern infrastructure with Pulumi
 
 Then Nexxiot discovered Pulumi: "We immediately realized it has actually all the advantages of CDK - it's imperative, it supports TypeScript which is a strongly typed language, so we can profit from type checking of a compiler," explains Berger. Most critically, Pulumi's approach to state management solved their showstopper issues with CloudFormation. "The state is actually something that you can extract into a JSON file where you can manually edit it and fix it and then import again and work on."
 
 The team took their implementation further by leveraging Pulumi's Automation API, moving beyond basic YAML configuration to manage their infrastructure entirely through TypeScript. This allowed them to share configuration across different stacks and environments programmatically, while maintaining type safety throughout their codebase.
 
-## Results and Impact
+## Results and impact
 
 The impact was immediate and sustained. "Since we started using Pulumi, we never had any kind of outage caused by infrastructure management," reports Berger. "It works, it gets the job done, and we never had an outage."
 

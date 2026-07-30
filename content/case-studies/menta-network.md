@@ -51,7 +51,7 @@ infrastructure. They regularly need to spin up, scale, and destroy new cloud env
 as part of their managed load testing solution, which helps clients to evaluate their web
 services and applications.
 
-## Customer Challenge
+## Customer challenge
 
 In Menta Network's local market, there are multiple 'Black Friday'-style retail events
 including El Buen Fin ("The Good Weekend") in November, and "Hot Sale" in May. Together,
@@ -76,7 +76,7 @@ tailored to their specific web services.
 The combination of Pulumi and Amazon Web Services presented the ideal solution to Menta
 Network's challenge.
 
-## Solution Overview
+## Solution overview
 
 Menta Network's team had experience with a variety of legacy and modern configuration
 management tools; however, previous tools would not allow Menta Network's engineering team
