@@ -1,7 +1,6 @@
 ---
 title: "Discovered Stacks: One Place for All Your Infrastructure"
-# TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
-date: 2099-01-01
+date: 2026-07-30
 draft: false
 meta_desc: "Discovered Stacks: Pulumi Cloud now models your CloudFormation and ARM deployments as Pulumi IaC stacks, with a built-in migration path."
 feature_image: feature.png

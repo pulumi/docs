@@ -1,7 +1,6 @@
 ---
 title: "Migrate CloudFormation to Pulumi with Discovered Stacks"
-# TODO: Update this date before publishing!
-date: 2099-01-01
+date: 2026-07-30
 draft: false
 meta_desc: "Migrate a CloudFormation stack to Pulumi with Discovered Stacks: verify every resource, import with a zero-diff preview, and track it all in Pulumi Cloud."
 feature_image: feature.png
