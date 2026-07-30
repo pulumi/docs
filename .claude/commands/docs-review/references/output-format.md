@@ -42,7 +42,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ### 🔍 Verification trail
 
 <details>
-<summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted</summary>
+<summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted[ · <strong>D</strong> detector findings]</summary>
 
 - L<line> "<claim text>" → ✅ verified (evidence: <source pointer>)
 - L<line> "<claim text>" → 🤷 unverifiable (no inline citation; author question filed)
@@ -205,7 +205,7 @@ Some passes (claim extraction, cross-sibling reads) fan out into parallel specia
 
 The 🔍 Verification trail section sits between the bucket count table and the 🚨 Outstanding bucket. It renders the `evidence_trail` from `docs-review:references:fact-check` verbatim — one bullet per claim record, including cross-sibling-consistency checks framed as `claim_type: cross-reference`.
 
-**Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral.
+**Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral. `🚩 flagged` detector lines (`route: "preflight"`) are **not** claims: they are excluded from `N` — which therefore equals `Y` in the investigation log's "X of Y claims verified" — and counted in none of X/Y/Z. When any are present, a trailing `· D detector findings` segment carries them, so the trail's own lines still add up to `N + D`.
 
 **The candidate-claims floor must be fully covered.** When the workflow's claim-extraction pre-step ran, `.candidate-claims.json` is the *floor* — every entry in it must appear in this trail with a verdict (the `candidate-claims-coverage` validator rule fails the review otherwise, soft-flooring loudly). `N claims extracted` (the `<details>` summary) and `Y` in the investigation-log "X of Y claims verified" line are therefore **≥ the count of `.candidate-claims.json` entries** — you may add claims the artifact missed (`N`/`Y` go up), you may not drop one (`N`/`Y` can't go below the floor). When the workflow's verification pre-step also ran, `.verified-claims.json` is the *verdict source* — render each floor entry's trail line with the verdict + `evidence` + `source` it records there (don't re-verify); the `verified-claims-trail-faithful` validator rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction. A candidate claim you (or the verifier) triage down to "not actually a checkable claim" still gets a trail line: `- L<line> "<text>" → ➖ not-a-claim — <one-line reason>` (git metadata, a Dockerfile-comment tag, a faithful description of the author's own design — see `docs-review:references:claim-extraction` §"What is NOT a claim"). See `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json` and §Routed verification.
 
