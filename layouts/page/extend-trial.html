@@ -1,259 +1,99 @@
 {{ define "main" }}
 {{/*
   /extend-trial — destination for the Pulumi Cloud console trial-banner
-  "Request an extension" link. Duplicated from the contact page as a starting
-  point (per web team), then swapped to a HubSpot embed so we can prefill
-  account context from the console link. Header/footer come from baseof.html.
+  "Request an extension" link. All copy lives in front matter; this layout just
+  renders it.
 
-  HubSpot form: "Trial Extension" (portal 4429525, form 4b3db916-...).
-  Prefill (visible, editable fields):
-    ?email=  -> email
-    ?org=    -> pulumi_organization_name_s_  (the "Pulumi Organization Name(s)" prop)
-  UTM capture is handled by the form's own hidden last_utm_* fields.
+  The form is the shared <pulumi-hubspot-form>, so it gets the lazy load,
+  loading/failure states, UTM + iaid capture, and Segment tracking every other
+  form has. Its `prefill` prop maps HubSpot field names to query params, so the
+  console link can arrive as /extend-trial/?org=acme&email=jane%40example.com.
+  Field styling comes from theme/src/scss/_hubspot.scss — do not add CSS here.
 
-  v1 notes for review:
-    - Right rail pulls live from the site's own content: the next 3 upcoming
-      events (same sortable_date + unlisted logic as partials/events/list-section)
-      and the 4 most recent blog posts. Self-updating, no hardcoded list.
-    - Raw hbspt.forms.create is used (not <pulumi-contact-us-form>) specifically
-      to get onFormReady prefill + the in-place confirmation swap.
+  Confirmation swap and DOM contract: theme/src/ts/extend-trial.ts.
 */}}
 
-<style>
-  .et-page{--et-purple:#8A3391;--et-violet:#5F2CC9;--et-violet-dk:#4A1FA6;--et-salmon:#F26B7E;
-    --et-ink:#1A1A21;--et-ink2:#3D3D4A;--et-muted:#6B6B7B;--et-line:#E5E5EC;--et-bg-alt:#F7F7FA;--et-radius:10px;
-    color:var(--et-ink);line-height:1.55;}
-  .et-wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
-  .et-hero{padding:54px 0 12px;}
-  .et-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--et-purple);background:#F5EAF6;border-radius:100px;padding:5px 13px;}
-  .et-page h1{font-size:46px;line-height:1.1;letter-spacing:-.028em;margin:18px 0 14px;max-width:16ch;}
-  .et-sub{font-size:18px;color:var(--et-muted);max-width:60ch;margin:0;}
-  .et-cols{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:44px;align-items:start;padding:36px 0 76px;}
-  @media (max-width:1000px){.et-cols{grid-template-columns:1fr;}.et-page h1{font-size:34px;}}
-  .et-card{border:1px solid var(--et-line);border-radius:var(--et-radius);background:#fff;}
-  .et-card-pad{padding:28px;}
-  .et-form-card{box-shadow:0 1px 2px rgba(20,20,40,.04),0 10px 32px rgba(20,20,40,.055);}
-  .et-footnote{font-size:13px;color:var(--et-muted);margin:16px 0 0;}
+{{ $overview := .Params.overview }}
+{{ $form := .Params.form }}
+{{ $confirmation := .Params.confirmation }}
+{{ $helpLinks := .Params.help_links }}
 
-  /* ---- Form fields are styled INSIDE the iframe, not here ----
-     HubSpot renders this form inside a same-origin <iframe> (srcdoc), so
-     page-level CSS cannot reach the fields. All form-field styling (labels,
-     inputs, the single-line org box, the submit button) is injected into the
-     iframe's document in onFormReady below. The rules in this <style> block
-     only cover the surrounding page (hero, cards, rail, confirmation). */
+<div class="container mx-auto px-4 py-16 md:py-24" data-extend-trial>
+    <div class="max-w-2xl mx-auto">
 
-  /* sidebar */
-  .et-side{display:flex;flex-direction:column;gap:18px;position:sticky;top:92px;}
-  .et-side h3{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--et-muted);margin:0 0 14px;font-weight:700;}
-  .et-res{display:block;padding:13px 0;border-bottom:1px solid var(--et-line);}
-  .et-res:first-of-type{padding-top:0;}
-  .et-res:last-of-type{border-bottom:none;padding-bottom:0;}
-  .et-res:hover{text-decoration:none;}
-  .et-res .et-t{font-size:14px;font-weight:600;color:var(--et-ink);line-height:1.35;}
-  .et-res:hover .et-t{color:var(--et-purple);}
-  .et-res .et-m{font-size:12.5px;color:var(--et-muted);margin-top:3px;}
-  .et-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:4px;margin-right:7px;vertical-align:1px;background:#F5EAF6;color:var(--et-purple);}
-  .et-datechip{flex:none;width:44px;text-align:center;border:1px solid var(--et-line);border-radius:7px;padding:5px 0;}
-  .et-datechip .et-d{font-size:16px;font-weight:700;line-height:1;}
-  .et-datechip .et-mo{font-size:10.5px;text-transform:uppercase;color:var(--et-muted);font-weight:700;letter-spacing:.04em;}
-  .et-evrow{display:flex;gap:12px;align-items:flex-start;}
-  .et-more{font-size:13.5px;font-weight:600;display:inline-block;margin-top:15px;}
-  .et-side a.et-link{color:var(--et-purple);}
-  /* confirmation */
-  .et-hide{display:none !important;}
-  .et-conf .et-tick{width:46px;height:46px;border-radius:50%;background:#E6F6EF;color:#1F9D6B;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;}
-  .et-conf h2{margin:0 0 8px;font-size:27px;letter-spacing:-.02em;}
-  .et-conf p{margin:0 0 22px;color:var(--et-muted);font-size:16px;}
-  .et-recap{background:var(--et-bg-alt);border:1px solid var(--et-line);border-radius:8px;padding:16px 18px;font-size:14px;margin-bottom:24px;}
-  .et-recap .et-row{display:flex;justify-content:space-between;gap:14px;padding:5px 0;}
-  .et-recap .et-k{color:var(--et-muted);}
-  .et-steps{list-style:none;margin:0 0 26px;padding:0;counter-reset:s;}
-  .et-steps li{counter-increment:s;position:relative;padding:0 0 16px 34px;font-size:14.5px;color:var(--et-ink2);}
-  .et-steps li:last-child{padding-bottom:0;}
-  .et-steps li:before{content:counter(s);position:absolute;left:0;top:0;width:22px;height:22px;border-radius:50%;background:#F3EEFE;color:var(--et-violet-dk);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;}
-  .et-steps li:after{content:"";position:absolute;left:10.5px;top:24px;bottom:6px;width:1px;background:var(--et-line);}
-  .et-steps li:last-child:after{display:none;}
-  .et-steps b{color:var(--et-ink);}
-  .et-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:15.5px;font-weight:600;border-radius:8px;padding:13px 26px;border:1px solid transparent;cursor:pointer;font-family:inherit;text-decoration:none;}
-  .et-btn-primary{background:linear-gradient(100deg,var(--et-violet),var(--et-purple));color:#fff;}
-  .et-btn-primary:hover{filter:brightness(1.08);text-decoration:none;color:#fff;}
-</style>
+        <header class="mb-10">
+            {{ with $overview.eyebrow }}
+                <span class="font-overline text-violet-primary">{{ . }}</span>
+            {{ end }}
+            <h1 class="heading-xl mt-3">{{ $overview.title }}</h1>
+            <p class="body-xl text-gray-600 mt-4 mb-0">{{ $overview.description }}</p>
+        </header>
 
-<div class="et-page">
-  <div class="et-wrap et-hero">
-    <span class="et-eyebrow">Trial</span>
-    <h1>Need more time with Pulumi?</h1>
-    <p class="et-sub">Tell us what you're still evaluating and we'll extend your trial. Most requests are approved within one business day, and you won't lose your stacks, state, or history.</p>
-  </div>
-
-  <div class="et-wrap et-cols">
-
-    <!-- ============ FORM ============ -->
-    <div>
-      <div id="et-formState" class="et-card et-form-card">
-        <div class="et-card-pad">
-          <!-- HubSpot renders here: email + org (prefilled), reason, comments, SE checkbox, submit -->
-          <div id="extend-trial-form"></div>
-          <p class="et-footnote">Goes straight to the Pulumi team. Typical response: under 1 business day.</p>
-        </div>
-      </div>
-
-      <!-- CONFIRMATION (swapped in after submit) -->
-      <div id="et-confState" class="et-card et-form-card et-hide">
-        <div class="et-card-pad et-conf">
-          <div class="et-tick">&#10003;</div>
-          <h2>Request received. We're on it.</h2>
-          <p>We've notified the Pulumi team and sent a copy to <span class="js-email-conf">your email</span>. Your trial stays active while we review.</p>
-          <div class="et-recap">
-            <div class="et-row"><span class="et-k">Organization</span><span><strong class="js-org-conf">&mdash;</strong></span></div>
-            <div class="et-row"><span class="et-k">Reason</span><span><strong class="js-reason-conf">&mdash;</strong></span></div>
-          </div>
-          <ol class="et-steps">
-            <li><b>Now.</b> Your request is with the Pulumi team, along with your account details.</li>
-            <li><b>Within 1 business day.</b> Someone reviews it and either extends your trial or replies with a question.</li>
-            <li><b>Confirmation.</b> You'll get an email with your new trial end date. Nothing in your account changes in the meantime.</li>
-          </ol>
-          <a class="et-btn et-btn-primary" href="https://app.pulumi.com">Back to dashboard</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============ SIDEBAR (dynamic: pulled from the site's own events + blog) ============ -->
-    <aside class="et-side">
-
-      {{/* Next 3 upcoming events — mirrors partials/events/list-section.html logic */}}
-      {{ $nowUnix := now.UnixMilli }}
-      {{ $upcoming := slice }}
-      {{ range where site.Pages "Type" "events" }}
-        {{ if eq .Params.unlisted false }}
-          {{ $endUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
-          {{ if lt $nowUnix $endUnix }}
-            {{ $upcoming = $upcoming | append . }}
-          {{ end }}
-        {{ end }}
-      {{ end }}
-      {{ $upcoming = first 3 (sort $upcoming "Params.sortable_date") }}
-      {{ with $upcoming }}
-      <div class="et-card et-card-pad">
-        <h3>Live workshops</h3>
-        {{ range . }}
-          {{ $href := .RelPermalink }}{{ if .Params.external }}{{ $href = .Params.url_slug }}{{ end }}
-          {{ $t := (.Params.sortable_date | time.AsTime) }}
-          <a class="et-res" href="{{ $href }}">
-            <div class="et-evrow">
-              <div class="et-datechip"><div class="et-d">{{ $t.Format "2" }}</div><div class="et-mo">{{ $t.Format "Jan" }}</div></div>
-              <div><div class="et-t">{{ .Title }}</div>{{ with .Params.event_type }}<div class="et-m">{{ . | title }}</div>{{ end }}</div>
+        <div class="card bg-white p-8 md:p-10" data-extend-trial-form>
+            <div class="hs-form hs-form-fg-dark font-normal">
+                <pulumi-hubspot-form
+                    form-id="{{ $form.hubspot_form_id }}"
+                    prefill='{"email": "email", "pulumi_organization_name_s_": "org"}'>
+                </pulumi-hubspot-form>
             </div>
-          </a>
-        {{ end }}
-        <a class="et-more et-link" href="/events/">All events and workshops &rarr;</a>
-      </div>
-      {{ end }}
-
-      {{/* 4 most recent blog posts */}}
-      {{ $recent := first 4 (where site.RegularPages "Section" "blog").ByDate.Reverse }}
-      {{ with $recent }}
-      <div class="et-card et-card-pad">
-        <h3>While you're evaluating</h3>
-        {{ range . }}
-          <a class="et-res" href="{{ .RelPermalink }}">
-            <div class="et-t">{{ with .Params.category }}<span class="et-tag">{{ . | title }}</span>{{ end }}{{ .Title }}</div>
-            <div class="et-m">{{ .Date.Format "Jan 2, 2006" }}</div>
-          </a>
-        {{ end }}
-        <a class="et-more et-link" href="/blog/">More from the blog &rarr;</a>
-      </div>
-      {{ end }}
-
-      <div class="et-card et-card-pad" style="background:var(--et-bg-alt)">
-        <h3>Need something else?</h3>
-        <p style="font-size:14px;color:var(--et-ink2);margin:0 0 12px">If this isn't about your trial length, these get you there faster:</p>
-        <div style="font-size:14px;display:flex;flex-direction:column;gap:8px">
-          <a class="et-link" href="/contact/">&rarr; Talk to sales about pricing</a>
-          <a class="et-link" href="https://support.pulumi.com/">&rarr; Open a support ticket</a>
-          <a class="et-link" href="https://slack.pulumi.com/">&rarr; Ask the community on Slack</a>
+            {{ with $form.footnote }}
+                <p class="body-sm text-gray-500 mt-6 mb-0">{{ . }}</p>
+            {{ end }}
         </div>
-      </div>
-    </aside>
 
-  </div>
+        <div class="card bg-white p-8 md:p-10" data-extend-trial-confirmation hidden tabindex="-1" role="status">
+            <div class="size-14 rounded-xl bg-violet-100 text-violet-primary flex items-center justify-center mb-6">
+                {{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-8") }}
+            </div>
+
+            <h2 class="heading-3 mt-0">{{ $confirmation.title }}</h2>
+            <p class="body-lg text-gray-600 mb-8">{{ $confirmation.description }}</p>
+
+            {{ with $confirmation.recap }}
+                <dl class="rounded-lg bg-gray-50 border border-gray-200 px-5 py-4 body-sm mb-8">
+                    {{ range . }}
+                        <div class="flex justify-between gap-4 py-1">
+                            <dt class="text-gray-500">{{ .label }}</dt>
+                            <dd class="font-semibold text-right m-0" data-extend-trial-value="{{ .field }}">&mdash;</dd>
+                        </div>
+                    {{ end }}
+                </dl>
+            {{ end }}
+
+            <ol class="list-none p-0 m-0 mb-8">
+                {{ range $index, $step := $confirmation.steps }}
+                    <li class="flex gap-3 {{ if ne $index 0 }}mt-4{{ end }}">
+                        <span class="badge badge-brand mt-0.5">{{ add $index 1 }}</span>
+                        <span class="body-base text-gray-600"><strong class="text-gray-950">{{ $step.title }}</strong> {{ $step.description }}</span>
+                    </li>
+                {{ end }}
+            </ol>
+
+            {{ with $confirmation.cta }}
+                <a class="btn btn-primary btn-lg" href="{{ .url }}">
+                    {{ .label }}
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                </a>
+            {{ end }}
+        </div>
+
+        {{ with $helpLinks }}
+            <div class="card-highlight p-8 md:p-10 mt-10">
+                <h2 class="heading-3 mt-0">{{ .title }}</h2>
+                <p class="body-base text-gray-600 mt-0">{{ .description }}</p>
+                <ul class="list-none p-0 m-0 flex flex-col items-start gap-2">
+                    {{ range .links }}
+                        <li class="m-0">
+                            <a href="{{ .url }}">
+                                {{ .label }}
+                                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+
+    </div>
 </div>
-
-<!-- HubSpot forms embed -->
-<script src="//js.hsforms.net/forms/v2.js"></script>
-<script>
-(function () {
-  var params = new URLSearchParams(window.location.search);
-  function q(sel){ return document.querySelector(sel); }
-
-  function createForm(hbspt) {
-    hbspt.forms.create({
-      region: "na1",
-      portalId: "4429525",
-      formId: "4b3db916-7d44-4178-9f86-1cdf94567bfa",
-      target: "#extend-trial-form",
-      cssClass: "et-hsform",
-      onFormReady: function ($form) {
-        var set = function (name, val) {
-          var el = $form.querySelector('[name="' + name + '"]');
-          if (el && val) { el.value = val; el.dispatchEvent(new Event('input', { bubbles: true })); el.dispatchEvent(new Event('change', { bubbles: true })); }
-        };
-        // Prefill visible, editable account fields from the console link.
-        set('email', params.get('email'));
-        set('pulumi_organization_name_s_', params.get('org'));
-
-        // The form renders in a same-origin iframe, so page CSS can't reach it.
-        // Inject the field styling into the iframe's own document. Selectors
-        // target the form's classes directly (no page wrapper inside the iframe).
-        try {
-          var fdoc = $form.ownerDocument;
-          if (fdoc && !fdoc.getElementById('et-hs-styles')) {
-            var st = fdoc.createElement('style');
-            st.id = 'et-hs-styles';
-            st.textContent = [
-              '.hs-form-field{margin-bottom:20px;}',
-              '.hs-form-field>label,.hs-form-field>label span:not(.hs-form-required){font-size:14px !important;font-weight:600 !important;color:#1A1A21 !important;line-height:1.4 !important;}',
-              '.hs-form-field>label{display:block !important;margin-bottom:8px !important;}',
-              '.hs-form-required{color:#F26B7E !important;margin-left:2px;}',
-              '.hs-field-desc{font-size:13px !important;color:#6B6B7B !important;font-weight:400 !important;margin:-2px 0 8px !important;}',
-              '.hs-input:not([type=checkbox]):not([type=radio]){width:100% !important;box-sizing:border-box !important;font-size:15px !important;color:#1A1A21 !important;border:1px solid #E5E5EC !important;border-radius:8px !important;padding:11px 13px !important;background:#fff !important;}',
-              // Match Email, the org field, and the reason dropdown to one height.
-              'input.hs-input:not([type=checkbox]):not([type=radio]),select.hs-input,textarea[name="pulumi_organization_name_s_"]{height:46px !important;min-height:46px !important;}',
-              // Reused org field is a multi-line property; render it single-line.
-              'textarea[name="pulumi_organization_name_s_"]{resize:none !important;overflow:hidden !important;white-space:nowrap !important;line-height:1.4 !important;}',
-              '.hs-input:focus{border-color:#5F2CC9 !important;box-shadow:0 0 0 3px rgba(95,44,201,.12) !important;outline:none !important;}',
-              '.hs-button.primary{background:linear-gradient(100deg,#5F2CC9,#8A3391) !important;background-color:#5F2CC9 !important;color:#fff !important;border:1px solid transparent !important;border-radius:8px !important;padding:13px 26px !important;font-size:15.5px !important;font-weight:600 !important;width:auto !important;cursor:pointer !important;}',
-              // Checkbox: align the box with its label. The label text is
-              // wrapped in <p> whose default margin pushed it out of alignment.
-              '.hs-form-booleancheckbox-display{display:flex !important;gap:10px !important;align-items:center !important;font-size:14.5px !important;color:#3D3D4A !important;font-weight:400 !important;}',
-              '.hs-form-booleancheckbox-display span{display:block !important;}',
-              '.hs-form-booleancheckbox-display p{margin:0 !important;}'
-            ].join('');
-            (fdoc.head || fdoc.documentElement).appendChild(st);
-          }
-        } catch (e) { /* cross-origin or unavailable: form keeps its default styling */ }
-      },
-      onFormSubmitted: function ($form) {
-        var emailEl = document.querySelector('#extend-trial-form [name="email"]');
-        var orgEl = document.querySelector('#extend-trial-form [name="pulumi_organization_name_s_"]');
-        var reasonEl = document.querySelector('#extend-trial-form select[name="trial_extension_reason"]');
-        q('.js-email-conf').textContent = (emailEl && emailEl.value) || params.get('email') || 'your email';
-        q('.js-org-conf').textContent = (orgEl && orgEl.value) || params.get('org') || '—';
-        q('.js-reason-conf').textContent = (reasonEl && reasonEl.selectedOptions.length && reasonEl.value) ? reasonEl.selectedOptions[0].text : '—';
-        q('#et-formState').classList.add('et-hide');
-        q('#et-confState').classList.remove('et-hide');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-  }
-
-  if (window.hbspt) { createForm(window.hbspt); }
-  else {
-    var t = setInterval(function () {
-      if (window.hbspt) { clearInterval(t); createForm(window.hbspt); }
-    }, 50);
-    setTimeout(function () { clearInterval(t); }, 10000);
-  }
-})();
-</script>
 {{ end }}
