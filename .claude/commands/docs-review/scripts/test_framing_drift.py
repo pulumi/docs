@@ -173,9 +173,35 @@ def main() -> int:
     trail, n, x, y, z = cr.render_trail([fd, cap_unv], None)
     check("🌀 framing-drift" in trail, "trail renders '🌀 framing-drift'")
     check("framing: overclaim + shifted" in trail, "trail pointer leads with the framing note")
-    check((n, x, y, z) == (2, 0, 1, 1), f"summary counts framing-drift as contradiction-family (got {(n, x, y, z)})")
+    check((n, x, y, z) == (2, 0, 1, 0),
+          f"summary keeps framing-drift OUT of the contradicted count (got {(n, x, y, z)})")
+    check("<strong>1</strong> framing-drift" in trail,
+          "summary carries its own framing-drift segment")
+    check("<strong>0</strong> contradicted" in trail,
+          "summary reports 0 contradicted when the only disagreement is drift")
+    # The segment is omitted entirely when there's no drift, so ordinary reviews
+    # read exactly as they did before.
+    plain_trail, *_ = cr.render_trail([cap_unv], None)
+    check("framing-drift" not in plain_trail, "no drift -> no framing-drift segment")
     rc = cr.compute_route_counts([fd, cap_unv], None)
-    check(rc["pass3_vcu"] == (0, 1, 0), "per-lane V/C/U counts framing-drift under C")
+    check(rc["pass3_vcu"] == (0, 1, 0),
+          "per-lane V/C/U still rides framing-drift under C (validator pins that triple's shape)")
+
+    # --- investigation log: drift gets its own parenthetical term ---
+    ilog = cr.render_investigation_log(
+        cross_sibling=[], verdicts=[fd, cap_unv], route_counts=rc, frontmatter=[],
+        has_temporal_trigger=False, diff_files=["content/blog/x/index.md"],
+        has_fenced_code_in_content=False, editorial_balance=None, is_blog=True,
+        diff_unavailable=False)
+    check("(1 unverifiable, 0 contradicted, 1 framing-drift)" in ilog,
+          f"investigation log separates contradicted from framing-drift")
+    ilog_plain = cr.render_investigation_log(
+        cross_sibling=[], verdicts=[cap_unv], route_counts=cr.compute_route_counts([cap_unv], None),
+        frontmatter=[], has_temporal_trigger=False, diff_files=["content/docs/y.md"],
+        has_fenced_code_in_content=False, editorial_balance=None, is_blog=False,
+        diff_unavailable=False)
+    check("framing-drift" not in ilog_plain,
+          "no drift -> investigation-log parenthetical is unchanged")
 
     # --- validator: 🌀 in ⚠️ accepted; hidden 🌀 violates; trail-faithful guards it ---
     def _ctx(body: str, **kw) -> "vp.Context":

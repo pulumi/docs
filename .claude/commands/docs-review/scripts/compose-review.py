@@ -98,9 +98,8 @@ PROMOTE_UNVERIFIABLE_TO = "warning"
 # (widened denominator, usage → intent, dropped qualifier). It stubs into
 # ⚠️ Low-confidence by default — the reviewer promotes to 🚨 when the drifted
 # phrasing also rides `social.*` frontmatter (auto-posted on merge) or
-# otherwise misleads a reader. It counts with the contradiction family in
-# aggregate counts (it IS a source-vs-claim disagreement — about meaning,
-# not value).
+# otherwise misleads a reader. It is counted SEPARATELY from the contradiction
+# family in the headline tallies — see DRIFT_VERDICTS below.
 TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
@@ -113,9 +112,15 @@ EXPECTED_TRAIL_EMOJI = {
     "framing-drift": "🌀",
 }
 OUTSTANDING_VERDICTS = {"contradicted", "mismatch", "flagged"}
-# Verdicts counted with `contradicted` in aggregate counts (trail summary,
-# investigation-log parentheticals, per-lane V/C/U attribution).
-CONTRADICTION_FAMILY = {"contradicted", "mismatch", "framing-drift"}
+# Verdicts that say the claim is wrong as written — the ones the headline
+# tallies label `contradicted`, and the ones that must reach 🚨.
+CONTRADICTION_FAMILY = {"contradicted", "mismatch"}
+# `framing-drift` is adjacent but not one of them: the anchor value is accurate
+# and the default bucket is ⚠️. Folding it into the `contradicted` tally makes
+# the trail header and the investigation log report contradictions the body
+# doesn't contain (observed live: a header reading `2 contradicted` above a
+# trail with zero ❌ lines). It gets its own segment in both places instead.
+DRIFT_VERDICTS = {"framing-drift"}
 
 # Mirror of `validate-pinned.py` TEMPORAL_TRIGGERS — keep synchronized.
 TEMPORAL_TRIGGERS = {
@@ -671,6 +676,7 @@ def render_investigation_log(
         x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
         n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
         n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+        n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
         i_inline = route_counts.get("inline", 0)
         p1 = route_counts.get("pass1", 0)
         f2 = route_counts.get("pass2", 0)
@@ -678,7 +684,8 @@ def render_investigation_log(
         k_corr = route_counts.get("k_corr", 0)
         seg = (
             f"- **External claim verification:** {x} of {y} claims verified "
-            f"({n_unver} unverifiable, {n_contra} contradicted) · "
+            f"({n_unver} unverifiable, {n_contra} contradicted"
+            f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
             f"4 specialists (numerical, cross-reference, capability, framing); "
             f"{k_corr} cross-specialist corroborations · "
             f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
@@ -842,6 +849,7 @@ def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, 
     x = sum(1 for v in verdicts if v.get("verdict") in ("verified", "matches"))
     y = sum(1 for v in verdicts if v.get("verdict") == "unverifiable")
     z = sum(1 for v in verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+    n_drift = sum(1 for v in verdicts if v.get("verdict") in DRIFT_VERDICTS)
     lines: list[str] = []
     for v in verdicts:
         verdict = v.get("verdict")
@@ -858,6 +866,7 @@ def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, 
         file_path = (v.get("file") or "").strip()
         file_in = f" in `{file_path}`" if file_path else ""
         lines.append(f"- {first}{file_in} {text}{also} → {emoji} {verdict} ({pointer})")
+    drift_part = f" · <strong>{n_drift}</strong> framing-drift" if n_drift else ""
     detector_part = ""
     if n_detector:
         detector_part = (
@@ -867,7 +876,7 @@ def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, 
     header = (
         f"<details>\n<summary><strong>{n} claims extracted</strong> · "
         f"<strong>{x}</strong> verified · <strong>{y}</strong> unverifiable · "
-        f"<strong>{z}</strong> contradicted{detector_part}</summary>"
+        f"<strong>{z}</strong> contradicted{drift_part}{detector_part}</summary>"
     )
     block = "### 🔍 Verification trail\n\n" + header + "\n\n" + "\n".join(lines) + "\n\n</details>"
     if degraded_note:
@@ -1192,7 +1201,14 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
             verd = x.get("verdict")
             if verd in ("verified", "matches"):
                 v += 1
-            elif verd in CONTRADICTION_FAMILY:
+            elif verd in CONTRADICTION_FAMILY or verd in DRIFT_VERDICTS:
+                # `framing-drift` rides the `contradicted` column here, unlike
+                # the two headline tallies. This triple's shape is pinned by
+                # validate-pinned.py's PASS2_OUTCOME_RE / PASS3_OUTCOME_RE
+                # (`verified N, contradicted N, unverifiable N`), and it is a
+                # routing diagnostic rather than a reader-facing count — better
+                # grouped with the disagreements than silently counted as
+                # `unverifiable`, which is what the plain `else` would do.
                 c += 1
             else:  # unverifiable / not-a-claim (rare on an external lane)
                 u += 1
