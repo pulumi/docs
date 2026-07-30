@@ -74,6 +74,13 @@
   .et-page .et-form-card input.hs-input:not([type=checkbox]):not([type=radio]),
   .et-page .et-form-card textarea.hs-input{border:1px solid var(--et-line) !important;border-radius:8px !important;background:#fff !important;color:var(--et-ink) !important;font-size:15px !important;padding:11px 13px !important;}
   .et-page .et-form-card select.hs-input{border:1px solid var(--et-line) !important;border-radius:8px !important;color:var(--et-ink) !important;font-size:15px !important;padding:11px 38px 11px 13px !important;background-color:#fff !important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B7B' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") !important;background-repeat:no-repeat !important;background-position:right 14px center !important;}
+  /* Uniform control height so Email, the org field, and the reason dropdown
+     all match. The org field reuses a multi-line property (renders as a
+     textarea) — pin it to a single-line box so it matches the Email input. */
+  .et-page .et-form-card input.hs-input:not([type=checkbox]):not([type=radio]),
+  .et-page .et-form-card select.hs-input,
+  .et-page .et-form-card textarea[name="pulumi_organization_name_s_"]{height:46px !important;min-height:46px !important;}
+  .et-page .et-form-card textarea[name="pulumi_organization_name_s_"]{resize:none !important;overflow:hidden !important;white-space:nowrap !important;line-height:1.4 !important;}
   .et-page .et-form-card .hs-input:focus{border-color:var(--et-violet) !important;box-shadow:0 0 0 3px rgba(95,44,201,.12) !important;}
   .et-page .et-form-card .hs-button.primary{background:linear-gradient(100deg,var(--et-violet),var(--et-purple)) !important;background-color:var(--et-violet) !important;color:#fff !important;border:1px solid transparent !important;border-radius:8px !important;padding:13px 26px !important;font-size:15.5px !important;font-weight:600 !important;width:auto !important;}
 
