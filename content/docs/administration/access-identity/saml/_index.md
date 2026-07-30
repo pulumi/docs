@@ -31,6 +31,20 @@ If you're a member of a SAML-based Pulumi organization, you can sign in to [your
 {{< sso-scim-limits-info >}}
 {{% /notes %}}
 
+## Connect SAML SSO to an existing account
+
+If you already have a Pulumi account and need to access a SAML-based organization, connect that organization's SAML SSO identity to your existing account rather than signing in to the organization directly. Signing in directly can produce an "Email already in use" error when your email already belongs to an account, and that screen cannot resolve the conflict on its own.
+
+To connect a SAML SSO identity to your existing account:
+
+1. Sign in to [Pulumi Cloud](https://app.pulumi.com/signin) with your existing account.
+1. Navigate to **Account Settings > Connect SAML SSO**.
+1. Enter the name of the organization you want to access, then complete the single sign-on prompt with your identity provider.
+
+After your identity provider confirms your identity, Pulumi adds the organization's SAML identity to your existing account and grants you access to the organization.
+
+If the connection fails, confirm with your organization administrator that your identity provider assigns you to the Pulumi application for that organization and that the SAML `NameID` it sends is stable. An unstable `NameID` can create duplicate identities and repeat the conflict.
+
 ## Integration Guides
 
 If you're looking to integrate Pulumi with your SAML 2.0 identity provider, refer to one of our example guides:
