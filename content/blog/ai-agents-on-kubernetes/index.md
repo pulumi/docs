@@ -20,11 +20,11 @@ howto_schema: true
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        66% of organizations plan to run generative AI workloads on Kubernetes (CNCF, 2026). But an agent isn't a stateless web service, and treating it like one gets expensive fast.
+        Of organizations hosting generative AI models, 66% already use Kubernetes for inference (CNCF, 2026). But an agent isn't a stateless web service, and treating it like one gets expensive fast.
 
-        Here's how to provision and govern that infrastructure with Pulumi.
+        How to provision and govern it with Pulumi:
     linkedin: |
-        Kubernetes has quietly become the default substrate for agentic AI. CNCF's 2026 annual survey puts it at 66% of organizations betting on Kubernetes for generative AI workloads, and a fast-moving ecosystem — kagent, KServe, Kueue, vLLM/llm-d, the Gateway API Inference Extension — has grown up around running agents and models on the cluster.
+        Kubernetes has quietly become the default substrate for agentic AI. CNCF's 2026 annual survey puts it at 66% of organizations hosting generative AI models already using Kubernetes for some or all of their inference workloads, and a fast-moving ecosystem — kagent, KServe, Kueue, vLLM/llm-d, the Gateway API Inference Extension — has grown up around running agents and models on the cluster.
 
         The catch: an AI agent is not a stateless web service. It needs GPU-aware scheduling, long-lived and bursty sessions, credentials for whatever it's allowed to touch, and a blast radius that's very different from a typical Deployment.
 
@@ -35,7 +35,7 @@ social:
         Here's how to provision and govern that infrastructure with Pulumi, in TypeScript and Python.
 ---
 
-Kubernetes has become the default place teams run agentic AI workloads: CNCF's 2026 annual survey found that 66% of organizations are betting on Kubernetes to run their generative AI workloads.[^cncf-survey] An entire ecosystem has grown up around that fact — agent runtimes, model servers, GPU schedulers — and most of it assumes the infrastructure underneath is already handled. It usually isn't. An AI agent is not a stateless web service, and provisioning for one takes more than copying a Deployment YAML and swapping the image.
+Kubernetes has become the default place teams run agentic AI workloads: CNCF's 2026 annual survey found that 66% of organizations hosting generative AI models use Kubernetes to manage some or all of their inference workloads.[^cncf-survey] An entire ecosystem has grown up around that fact — agent runtimes, model servers, GPU schedulers — and most of it assumes the infrastructure underneath is already handled. It usually isn't. An AI agent is not a stateless web service, and provisioning for one takes more than copying a Deployment YAML and swapping the image.
 
 <!--more-->
 
