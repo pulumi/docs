@@ -19,7 +19,19 @@ Exit codes:
   1  violations (fix-me marker written)
   2  usage / config error
 
-Schema version: 18 (v17→v18 adds the `outcome-annotation-shape` rule: the
+Schema version: 19 (v18→v19 adds the `framing-drift` (🌀) fact-check verdict:
+  "the anchor value is accurate but the claim's published meaning differs from
+  what the source supports" (widened denominator, present usage → future
+  intent, dropped qualifier — PR #20550's 66%-CNCF shape, which previously
+  soft-pedaled into ✅ verified prose because the vocabulary forced a
+  verified/contradicted binary). Added to `TRAIL_VERDICT_WORDS` /
+  `EXPECTED_TRAIL_EMOJI` / `OUTSTANDING_VERDICT_WORDS` / the trail-line emoji
+  alternation / `_TRAIL_DRIFT_FORBIDDEN` (hiding an artifact `framing-drift`
+  behind ✅ is the dangerous direction). Promotion follows the new
+  `SOFT_PROMOTE_VERDICT_WORDS` set (`flagged` + `framing-drift`): accepted in
+  ⚠️ Low-confidence as well as 🚨/📋/💡 — ⚠️ is the default, promoted to 🚨
+  when the drifted phrasing rides `social.*` frontmatter.
+  v17→v18 adds the `outcome-annotation-shape` rule: the
   re-entrant outcome annotations — `🛡️ **Disputed by <author> on YYYY-MM-DD,
   model held.**` under a held finding and `concede: <reason>` on a ✅ Resolved
   bullet — are now machine-scraped by scrape-review-outcomes.py for the
@@ -120,7 +132,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 18
+SCHEMA_VERSION = 19
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -171,7 +183,7 @@ TEMPORAL_TRIGGERS = {
 # always paired with `route: "preflight"`. It is NOT a fact-check outcome; the
 # specific detector lives in the record's `type`/`source`. See compose-review.py
 # (same constant) — keep the two in sync.
-TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged")
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -180,13 +192,21 @@ EXPECTED_TRAIL_EMOJI = {
     "contradicted": "❌",
     "mismatch": "⚔️",
     "flagged": "🚩",
+    "framing-drift": "🌀",
 }
 # Inverse map — derive the canonical verdict word from its per-verdict glyph.
 # Used by the `trail-canonical-verdict-word` rule (and validator-fix.py) to
 # repair a freelanced verdict token (`source-mismatch`, `author-authored`, …).
 CANONICAL_VERDICT_FOR_EMOJI = {v: k for k, v in EXPECTED_TRAIL_EMOJI.items()}
-# Verdict words that promote a finding to 🚨 Outstanding.
-OUTSTANDING_VERDICT_WORDS = {"contradicted", "mismatch", "flagged"}
+# Verdict words that must surface in an actionable bucket.
+OUTSTANDING_VERDICT_WORDS = {"contradicted", "mismatch", "flagged", "framing-drift"}
+# The subset of promoting verdicts whose severity the reviewer calibrates —
+# accepted in ⚠️ Low-confidence as well as 🚨/📋/💡. `flagged` (detector
+# finding: reader-impact call) and `framing-drift` (value-accurate framing
+# drift: ⚠️ by default, promoted to 🚨 when the drifted phrasing rides
+# `social.*` frontmatter or materially misleads). `contradicted`/`mismatch`
+# remain strict-🚨.
+SOFT_PROMOTE_VERDICT_WORDS = {"flagged", "framing-drift"}
 # Legacy/fallback emojis still accepted on trail lines for one transition; the
 # trail-bucket-consistency rule flags them with a "render the per-verdict emoji"
 # nudge. Note: ✅ is *also* the canonical `verified` emoji — it only counts as
@@ -195,7 +215,7 @@ LEGACY_TRAIL_EMOJIS = {"✅", "⚠️", "🚨"}
 # Emojis that, on a trail line, mark the line as 🚨-bucket regardless of the
 # verdict word (used as a fallback when the verdict word isn't one of the
 # canonical TRAIL_VERDICT_WORDS).
-OUTSTANDING_TRAIL_EMOJIS = {"🚨", "❌", "⚔️", "🚩"}
+OUTSTANDING_TRAIL_EMOJIS = {"🚨", "❌", "⚔️", "🚩", "🌀"}
 
 # Schema v18: canonical shapes of the re-entrant outcome annotations
 # (`docs-review:references:update` Case 1/2). scrape-review-outcomes.py keys
@@ -400,7 +420,7 @@ def extract_count_table_row(body: str) -> dict[str, int] | None:
     return None
 
 
-_TRAIL_EMOJI_ALT = r"✅|🤝|➖|🤷|❌|⚔️|🚩|⚠️|🚨"
+_TRAIL_EMOJI_ALT = r"✅|🤝|➖|🤷|❌|⚔️|🚩|🌀|⚠️|🚨"
 _TRAIL_LINE_RE = re.compile(rf"L(\d+(?:-\d+)?)\b.*?→\s*({_TRAIL_EMOJI_ALT})\s+(\S[^\n]*)")
 
 
@@ -1344,16 +1364,16 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
         if canonical:
             hint = (f"Replace the verdict token `{bad_tok}` with `{canonical}` — the canonical word the `{emoji}` glyph maps to. "
                     f"Every 🔍 trail line reads `→ <emoji> <word>` where `<word>` is EXACTLY one of: "
-                    f"`verified` (✅) · `matches` (🤝) · `not-a-claim` (➖) · `unverifiable` (🤷) · `contradicted` (❌) · `mismatch` (⚔️). "
+                    f"`verified` (✅) · `matches` (🤝) · `not-a-claim` (➖) · `unverifiable` (🤷) · `contradicted` (❌) · `mismatch` (⚔️) · `framing-drift` (🌀). "
                     f"Do not invent variants.")
         else:
             hint = (f"Rewrite this trail line's verdict `→ {emoji} {bad_tok}` to a canonical glyph + word: EXACTLY one of "
-                    f"`✅ verified` · `🤝 matches` · `➖ not-a-claim` · `🤷 unverifiable` · `❌ contradicted` · `⚔️ mismatch`. "
+                    f"`✅ verified` · `🤝 matches` · `➖ not-a-claim` · `🤷 unverifiable` · `❌ contradicted` · `⚔️ mismatch` · `🌀 framing-drift`. "
                     f"Do not invent variants.")
         violations.append(Violation(
             rule_id="trail-canonical-verdict-word",
             line_ref=r["line_ref"],
-            expected="trail verdict is one of: verified / matches / not-a-claim / unverifiable / contradicted / mismatch",
+            expected="trail verdict is one of: verified / matches / not-a-claim / unverifiable / contradicted / mismatch / framing-drift",
             actual=f"renders non-canonical verdict token `{bad_tok}` (after `{emoji}`)",
             hint=hint,
         ))
@@ -1375,7 +1395,7 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
                 actual=f"renders `{r.get('verdict_emoji')}` (legacy bucket emoji)",
                 hint=(f"Use the per-verdict emoji from `docs-review:references:output-format`: "
                       f"✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · "
-                      f"❌ `contradicted` · ⚔️ `mismatch`. Render `{want} {word}` on this trail line."),
+                      f"❌ `contradicted` · ⚔️ `mismatch` · 🌀 `framing-drift`. Render `{want} {word}` on this trail line."),
             ))
 
     # Every bucket bullet must have a [L...] prefix; when the trail is non-empty
@@ -1450,20 +1470,30 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
         if ref in seen_trail_refs:
             continue  # duplicate trail records — flag once
         seen_trail_refs.add(ref)
-        is_flagged = r.get("verdict_word") == "flagged"
-        bullets, text = (flagged_bullets, flagged_text) if is_flagged else (strict_bullets, strict_text)
+        word = r.get("verdict_word")
+        is_soft = word in SOFT_PROMOTE_VERDICT_WORDS
+        bullets, text = (flagged_bullets, flagged_text) if is_soft else (strict_bullets, strict_text)
         prefix_match = any(extract_bullet_prefix(b) == ref for b in bullets)
         # Fallback: anchor mentioned anywhere in those sections' text.
         text_match = re.search(rf"\b{re.escape(ref)}\b", text) is not None
         if prefix_match or text_match:
             continue
-        if is_flagged:
+        if is_soft:
+            glyph = EXPECTED_TRAIL_EMOJI.get(word, "🚩")
+            if word == "flagged":
+                what = "detector finding"
+                place_hint = ("Place it in 🚨 Outstanding if a reader can't reach the page's stated outcome "
+                              "without it, otherwise ⚠️ Low-confidence")
+            else:
+                what = "framing-drift finding (anchor value accurate, published meaning drifted from the source)"
+                place_hint = ("Place it in ⚠️ Low-confidence by default; promote to 🚨 Outstanding when the drifted "
+                              "phrasing also rides `social.*` frontmatter (auto-posted on merge) or materially misleads")
             violations.append(Violation(
                 rule_id="trail-verdict-bucket-promotion",
                 line_ref=ref,
-                expected=f"🚩 flagged detector finding at {ref} surfaces in 🚨 Outstanding, ⚠️ Low-confidence, 📋 Triaged, or 💡 Pre-existing via a bucket bullet with `**[{ref}]**` prefix",
+                expected=f"{glyph} {word} finding at {ref} surfaces in 🚨 Outstanding, ⚠️ Low-confidence, 📋 Triaged, or 💡 Pre-existing via a bucket bullet with `**[{ref}]**` prefix",
                 actual="not in any actionable bucket (🚨 / ⚠️ / 📋 / 💡)",
-                hint=f"Render a bullet starting with `**[{ref}]**` stating what's broken and the fix. Place it in 🚨 Outstanding if a reader can't reach the page's stated outcome without it, otherwise ⚠️ Low-confidence; use 📋 Triaged / 💡 Pre-existing if it's spurious / pre-existing.",
+                hint=f"Render a bullet starting with `**[{ref}]**` for this {what}. {place_hint}; use 📋 Triaged / 💡 Pre-existing if it's spurious / pre-existing.",
             ))
             continue
         violations.append(Violation(
@@ -1552,8 +1582,8 @@ def check_candidate_claims_coverage(ctx: Context) -> list[Violation]:
             hint=(
                 f"`.candidate-claims.json` is the claim floor — add a 🔍 Verification trail line for {lr} "
                 "(`- L… \"<claim>\" → <emoji> <verdict>`). Verdict word is `verified`/`unverifiable`/`contradicted`/"
-                "`matches`/`mismatch`/`not-a-claim` with the per-verdict emoji per `docs-review:references:output-format` "
-                "(✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`); "
+                "`matches`/`mismatch`/`not-a-claim`/`framing-drift` with the per-verdict emoji per `docs-review:references:output-format` "
+                "(✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch` · 🌀 `framing-drift`); "
                 "if the candidate is a regex-layer false positive (git metadata, a Dockerfile-comment tag, a faithful "
                 "description of the author's own design — see `docs-review:references:claim-extraction` §\"What is NOT a "
                 "claim\"), record `➖ not-a-claim — <one-line reason>` so the demotion is traced. You MAY also add claims "
@@ -1570,9 +1600,10 @@ def check_candidate_claims_coverage(ctx: Context) -> list[Violation]:
 _TRAIL_DRIFT_FORBIDDEN = {
     "contradicted": {"verified", "matches", "not-a-claim"},
     "mismatch": {"verified", "matches", "not-a-claim"},
+    "framing-drift": {"verified", "matches", "not-a-claim"},
     "unverifiable": {"verified", "matches"},
-    "verified": {"contradicted", "mismatch"},
-    "matches": {"contradicted", "mismatch"},
+    "verified": {"contradicted", "mismatch", "framing-drift"},
+    "matches": {"contradicted", "mismatch", "framing-drift"},
 }
 
 
@@ -2386,7 +2417,7 @@ RULES = [
     {
         "id": "verified-claims-trail-faithful",
         "desc": "Schema v8: the 🔍 Verification trail's verdict word for a claim must not contradict `.verified-claims.json`'s verdict (matched by line-range overlap) in the dangerous direction — the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verify-claims pre-step recorded, or inventing a `contradicted`/`mismatch` the verifier didn't find.",
-        "hint": "Render each trail line with the verdict + `evidence`/`source` from `.verified-claims.json` (per-verdict emoji: ✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`). Don't overwrite the artifact's verdict; if you dispute it, render it as recorded and open a follow-up issue.",
+        "hint": "Render each trail line with the verdict + `evidence`/`source` from `.verified-claims.json` (per-verdict emoji: ✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch` · 🌀 `framing-drift`). Don't overwrite the artifact's verdict; if you dispute it, render it as recorded and open a follow-up issue.",
         "check": check_verified_claims_trail_faithful,
     },
     {
@@ -2404,7 +2435,7 @@ RULES = [
     {
         "id": "trail-bucket-consistency",
         "desc": "Every bucket bullet has [L<a>-<b>] prefix matching a trail record (relaxed: trail-match half skipped when the trail is the explicit-empty form). Every `contradicted`/`mismatch` trail verdict surfaces in 🚨 Outstanding (v8: keyed on the verdict word, not the emoji). Trail lines render the per-verdict emoji (`trail-per-verdict-emoji` nudge for legacy ✅/⚠️/🚨 forms) and a canonical verdict word (`trail-canonical-verdict-word` flags a freelanced token like `source-mismatch` / `author-authored` — v9).",
-        "hint": "Add the line-range prefix to bucket bullets; promote `contradicted`/`mismatch` trail verdicts to 🚨 Outstanding without relitigation; render `<per-verdict emoji> <canonical word>` on each trail line — the word is EXACTLY one of ✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`; never invent variants.",
+        "hint": "Add the line-range prefix to bucket bullets; promote `contradicted`/`mismatch` trail verdicts to 🚨 Outstanding without relitigation; render `<per-verdict emoji> <canonical word>` on each trail line — the word is EXACTLY one of ✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch` · 🌀 `framing-drift`; never invent variants.",
         "check": check_trail_bucket_consistency,
     },
     {
