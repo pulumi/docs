@@ -3,7 +3,6 @@ title: Discovered Stacks
 title_tag: "Discovered Stacks | Pulumi Insights"
 h1: Discovered Stacks
 meta_desc: Discovered Stacks model your AWS CloudFormation, AWS CDK, and Azure ARM resources as Pulumi IaC stacks, with a seamless migration path.
-meta_image: /images/docs/meta-images/docs-meta.png
 menu:
   insights:
     name: Discovered Stacks

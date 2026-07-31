@@ -298,7 +298,7 @@
   {{ end }}
   {{ $image = printf "%s%s" $baseURL $imagePath }}
 {{ else }}
-  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+  {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}
 {{ $schema = merge $schema (dict "image" $image) }}
 
