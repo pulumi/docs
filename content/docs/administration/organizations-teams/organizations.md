@@ -38,8 +38,8 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 ## Creating an organization
 
 Creating an organization will start a free trial that has access to all features.
-At the end of the trial, you can choose to move to the Pulumi Team Edition, the Pulumi Enterprise Edition or the Pulumi Business Critical Edition.
-Learn more about the edition features on the [Pricing Page](/pricing/).
+At the end of the trial, you can choose the Team, Enterprise, or Business Critical edition.
+Learn more about what each one includes on the [pricing page](/pricing/).
 
 To create an organization:
 
@@ -136,9 +136,7 @@ To transfer stacks in bulk:
 
 ## Restoring a deleted stack
 
-{{% notes type="info" %}}
-The ability to restore a deleted stack is limited to Enterprise and Business Critical editions.
-{{% /notes %}}
+{{< pulumi-cloud "restore-deleted-stacks" />}}
 
 Restoring a stack recovers a previously deleted stack along with its update history. The 25 most recently deleted stacks in an organization can be restored by an organization admin.
 
@@ -244,7 +242,9 @@ members that they can add or invite to the Pulumi organization.
 
 ### SAML Single Sign-on (SSO)
 
-Pulumi Enterprise and Business Critical provide support for any SAML 2.0-based identity provider.
+{{< pulumi-cloud "saml-sso" />}}
+
+Pulumi Cloud supports any SAML 2.0-based identity provider.
 
 * [SAML-based configuration guide](/docs/administration/access-identity/saml/)
 * [Microsoft Entra ID](/docs/administration/access-identity/saml/entra/)

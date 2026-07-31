@@ -56,6 +56,8 @@ For a complete guide on writing policies, see [write your own policy packs](/doc
 
 ## Pulumi Cloud REST API
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 The Pulumi Cloud REST API provides endpoints for managing policy packs, policy groups, and policy results programmatically. Use these endpoints to integrate policy management into custom tooling and workflows.
 
 ### Policy packs

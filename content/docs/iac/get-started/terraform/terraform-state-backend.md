@@ -428,6 +428,8 @@ Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/con
 
 ### Audit policies
 
+{{< pulumi-cloud "audit-policies" />}}
+
 You can run [audit (detective) policy packs](/docs/insights/policy/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) — to evaluate Terraform resources.
 
 To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights. Policy packs are then evaluated continuously against the stack's resources.

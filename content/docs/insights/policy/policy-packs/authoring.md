@@ -1200,6 +1200,8 @@ Policy packs can also receive configuration and secrets from [Pulumi ESC](/docs/
 
 ## Publishing to your organization
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 After local validation, publish your policy pack to Pulumi Cloud. Policy enforcement runs automatically during `preview` and `update` for any stack using Pulumi Cloud.
 
 Pulumi Cloud versions policy packs, enabling updates, rollbacks, and gradual rollouts.

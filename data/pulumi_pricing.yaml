@@ -669,7 +669,11 @@ categories:
 
       - id: rbac
         name: Role-based access control (RBAC)
-        link: /docs/administration/organizations-teams/organizations/#organization-roles
+        # Not organizations/#organization-roles: that section documents the
+        # built-in Admin/Member/Billing Manager roles, which are available in
+        # every edition. This row is the configurable RBAC that starts at
+        # Enterprise, which is what the rbac/ pages cover.
+        link: /docs/administration/access-identity/rbac/
         available_from: enterprise
 
       - id: custom-roles
