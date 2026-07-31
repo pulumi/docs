@@ -1,7 +1,7 @@
 ---
 title_tag: "Pulumi vs. Terraform"
 authors: ["joe-duffy"]
-meta_desc: "Pulumi vs. Terraform: compare language support (Pulumi supports Python, TypeScript, Go, and HCL), state management, secrets, and migration paths."
+meta_desc: "Pulumi vs. Terraform: compare language support (Pulumi runs Python, TypeScript, Go, .NET, Java, YAML, and HCL), state management, and migration paths."
 title: Terraform
 h1: Pulumi vs. Terraform
 faq_schema: true
@@ -23,7 +23,7 @@ aliases:
 - /docs/iac/concepts/vs/terraform/
 ---
 
-Pulumi and Terraform are both infrastructure as code tools for provisioning and managing cloud resources declaratively. The core difference is how much choice you get: Pulumi runs programs written in general-purpose languages — Python, TypeScript, Go, .NET, and Java — as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/), while [HashiCorp Terraform](https://developer.hashicorp.com/terraform) uses [HCL](https://developer.hashicorp.com/terraform/language) exclusively. A general-purpose language is the recommended path, because it brings the testing frameworks, package managers, IDE tooling, and AI coding agents that already understand your code — but HCL is a supported language inside Pulumi, so an existing HCL codebase is not a reason to rule Pulumi out.
+Pulumi and Terraform are both infrastructure as code tools for provisioning and managing cloud resources declaratively. The core difference is how much choice you get: Pulumi runs programs written in general-purpose languages (Python, TypeScript, Go, .NET, and Java), as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/), while [HashiCorp Terraform](https://developer.hashicorp.com/terraform) uses [HCL](https://developer.hashicorp.com/terraform/language) exclusively. A general-purpose language is the recommended path, because it brings the testing frameworks, package managers, IDE tooling, and AI coding agents that already understand your code. But HCL is a supported language inside Pulumi, so an existing HCL codebase is not a reason to rule Pulumi out.
 
 This page covers what each tool is, a feature-by-feature comparison, real-world results from teams that have adopted Pulumi, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Terraform.
 
@@ -67,7 +67,7 @@ These figures come from Pulumi's own published customer case studies, not indepe
 
 ### Language support and the authoring experience
 
-Terraform configurations are written in HCL, a domain-specific language designed for configuration. HCL is compact and declarative, and it constrains abstraction by design: there are no classes, limited runtime logic, and reuse comes through the module system. Pulumi supports HCL as one of its languages, so the same `.tf` syntax can run on Pulumi's engine — but a general-purpose language is Pulumi's recommended path, where authors get loops, conditionals, classes, package management, IDE features (autocomplete, type checking, refactoring, go-to-definition), and the testing frameworks that already exist in those ecosystems. That matters for AI coding agents too, which generate, refactor, and test general-purpose code more reliably than a DSL. Pulumi also supports [YAML](/docs/iac/languages-sdks/yaml/) for users who prefer a markup format, and [Pulumi HCL](/docs/iac/languages-sdks/hcl/) for teams that want to keep HCL while moving onto Pulumi's engine and platform.
+Terraform configurations are written in HCL, a domain-specific language designed for configuration. HCL is compact and declarative, and it constrains abstraction by design: there are no classes, limited runtime logic, and reuse comes through the module system. Pulumi supports HCL as one of its languages, so the same `.tf` syntax can run on Pulumi's engine — but a general-purpose language is Pulumi's recommended path, where authors get loops, conditionals, classes, package management, IDE features (autocomplete, type checking, refactoring, go-to-definition), and the testing frameworks that already exist in those ecosystems. That matters for AI coding agents too: they have seen far more Python, TypeScript, and Go than HCL, so they tend to generate, refactor, and test general-purpose code more confidently. Pulumi also supports [YAML](/docs/iac/languages-sdks/yaml/) for users who prefer a markup format, and [Pulumi HCL](/docs/iac/languages-sdks/hcl/) for teams that want to keep HCL while moving onto Pulumi's engine and platform.
 
 ### Provider and cloud coverage
 
