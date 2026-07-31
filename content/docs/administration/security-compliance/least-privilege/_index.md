@@ -71,6 +71,8 @@ Organization-wide role settings are retained from Pulumi Cloud's pre-RBAC permis
 
 ### Grant access explicitly through permission sets and teams
 
+{{< pulumi-cloud "teams" />}}
+
 Grant elevated access with [permission sets](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets), assigned through roles and teams rather than to individuals:
 
 - **Stack Read**: read-only access to stacks, including running previews.

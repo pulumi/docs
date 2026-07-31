@@ -86,6 +86,8 @@ View the policy packs and policy groups associated with a specific stack.
 
 ## Pulumi Service Provider
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 The [Pulumi Cloud (pulumiservice) provider](/registry/packages/pulumiservice/) includes resources and functions for managing policies programmatically as part of your Pulumi infrastructure code.
 
 ### Resources

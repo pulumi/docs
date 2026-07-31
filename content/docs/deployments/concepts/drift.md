@@ -73,6 +73,8 @@ You can route drift notifications to Slack, Microsoft Teams, and more using the 
 
 ### Setting it up via the REST API
 
+{{< pulumi-cloud "drift-detection" />}}
+
 For those who prefer to automate and script their infrastructure tasks, drift detection and remediation can be configured programmatically using HTTP requests. The available endpoints are:
 
 * Create a drift schedule
@@ -95,6 +97,8 @@ curl -H "Accept: application/vnd.pulumi+json" \
 ```
 
 ### Setting it up via the Pulumi Service Provider
+
+{{< pulumi-cloud "drift-detection" />}}
 
 The Pulumi Service Provider allows you to set up automated drift detection and remediation in source control.
 

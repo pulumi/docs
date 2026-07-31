@@ -65,6 +65,8 @@ Only one GitHub Enterprise Server integration is supported per Pulumi organizati
 
 ### Individual user authentication for GitHub Enterprise Server
 
+{{< pulumi-cloud "github-enterprise-server" />}}
+
 By default, Pulumi performs all GitHub Enterprise Server operations as the shared GitHub app installation. When individual user authentication is enabled, operations that a user initiates run against GitHub Enterprise as that user's own connected account instead. Pull requests, commits, and comments are attributed to the user, operations are limited to the repositories that user can access, and deployments triggered by pushes and pull requests are attributed to the user who triggered them.
 
 This setting applies only to self-hosted GitHub Enterprise Server integrations. GitHub.com integrations always use the shared app installation and ignore the setting. The setting is per integration, so if your organization connects more than one GitHub Enterprise Server, enable it on each integration separately.

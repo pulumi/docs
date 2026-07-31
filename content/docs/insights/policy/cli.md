@@ -82,6 +82,8 @@ pulumi policy enable my-org/my-policy-pack latest
 
 ### Manage policy packs
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 ```bash
 # List all policy packs in your organization
 pulumi policy ls

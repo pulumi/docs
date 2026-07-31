@@ -1164,6 +1164,8 @@ pulumi preview --policy-pack <path-to-policy-pack> --policy-pack-config config.j
 
 #### Pulumi Cloud configuration
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 After publishing, administrators configure policy packs through the Pulumi Cloud console or CLI.
 
 **Using the console:**

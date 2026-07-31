@@ -273,6 +273,8 @@ Ranges can also be one-sided. For example, to query everything modified after Ja
 
 ### Property queries
 
+{{< pulumi-cloud "property-search" />}}
+
 Property search allows you to query resources by their inputs and outputs.
 
 A property query is similar to a field query but it is triggered by a leading `.` followed by a
