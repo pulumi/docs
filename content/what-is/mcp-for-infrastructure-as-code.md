@@ -11,7 +11,7 @@ MCP for infrastructure as code is the use of the Model Context Protocol, an open
 
 ## What is the Model Context Protocol?
 
-MCP is an open-source standard, originally created and open-sourced by Anthropic in November 2024, for connecting AI applications to external systems. As of December 2025, governance of the specification was donated to the [Agentic AI Foundation](https://www.linuxfoundation.org/), a directed fund under the Linux Foundation and co-founded by OpenAI, so the protocol continues to evolve under neutral, vendor-independent stewardship rather than staying tied to any single company. The current specification, released July 28, 2026, is the third major revision since launch (following 2025-06-18 and 2025-11-25), reflecting how quickly the ecosystem is still moving.
+MCP is an open-source standard, originally created and open-sourced by Anthropic in November 2024, for connecting AI applications to external systems. As of December 2025, governance of the specification was donated to the [Agentic AI Foundation](https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation), a directed fund under the Linux Foundation and co-founded by OpenAI, so the protocol continues to evolve under neutral, vendor-independent stewardship rather than staying tied to any single company. The current specification, released July 28, 2026, is the fourth major revision since the original November 2024 launch (following 2025-03-26, 2025-06-18, and 2025-11-25), reflecting how quickly the ecosystem is still moving.
 
 The [official MCP documentation](https://modelcontextprotocol.io/introduction) describes it this way:
 
@@ -40,14 +40,14 @@ MCP for infrastructure is a genuinely multi-vendor category, and it is moving fa
 | Vendor | What they shipped | Status as of mid-2026 |
 | --- | --- | --- |
 | **Pulumi** | `@pulumi/mcp-server` (local, npm) and a hosted server at `mcp.ai.pulumi.com` | General availability; local and remote transports |
-| **AWS** | Amazon Bedrock AgentCore open-source MCP server | Launched October 2, 2025; AgentCore Gateway added support for the 2026-07-28 spec the same day it shipped |
+| **AWS** | Amazon Bedrock AgentCore open-source MCP server | Launched October 2, 2025; AgentCore Gateway has since added support for newer spec revisions |
 | **Microsoft** | Azure MCP Server, an MCP tool inside Azure AI Foundry Agent Service, and Anthropic's official C# SDK (co-created with Microsoft) | Rolling out across Azure and Windows; positioned as first-party tooling for Azure resources |
 | **Red Hat** | MCP servers for OpenShift and Ansible Automation Platform | Available for cluster operations and playbook-driven automation |
 | **Community / CNCF ecosystem** | Independent `k8s-mcp-server` projects exposing `kubectl`-equivalent operations | Multiple community implementations, varying in scope and maintenance |
 
 A few patterns hold across all of them. Every major server distinguishes read operations (list resources, inspect state, run a plan or preview) from write operations (apply, deploy, delete), and every one treats the preview-before-apply step as a first-class safety mechanism rather than an afterthought. Where vendors differ is breadth: cloud-provider servers (AWS, Azure) are naturally scoped to their own resources, Kubernetes-focused servers are scoped to cluster operations, and Pulumi's server is the one built specifically around the IaC development loop itself, spanning any of Pulumi's 180+ providers rather than one cloud.
 
-The category is young enough that survey data captures both the appetite and the friction. In a November-December 2025 survey covering 17,000-plus publicly listed MCP servers, Zuplo found 72% of adopters expect their use of MCP to increase over the next 12 months, while 50% named security and access control as their top challenge. Separately, Stacklok's "State of Model Context Protocol in Software 2026" report, published January 2026, found 41% of surveyed software organizations already report limited or broad production use of MCP servers. Adoption and unease are rising together, which is the normal shape of a fast-moving, pre-standardized security posture.
+The category is young enough that survey data captures both the appetite and the friction. Zuplo's "State of MCP" research counted over 17,000 publicly listed MCP servers, and a companion survey of technical professionals conducted November-December 2025 found 72% of adopters expect their use of MCP to increase over the next 12 months, while 50% named security and access control as their top challenge. Separately, Stacklok's "State of Model Context Protocol in Software 2026" report, published January 2026, found 41% of surveyed software organizations already report limited or broad production use of MCP servers. Adoption and unease are rising together, which is the normal shape of a fast-moving, pre-standardized security posture.
 
 ## How does Pulumi's MCP server work?
 
@@ -153,11 +153,11 @@ Only for the local server. The hosted server at `mcp.ai.pulumi.com` runs the CLI
 
 No. MCP was created by Anthropic but was donated to the Agentic AI Foundation, a Linux Foundation project co-founded by OpenAI, in December 2025. OpenAI adopted MCP in its Agents SDK and ChatGPT desktop app in March 2025, and Google added native MCP support to the Gemini SDK in May 2025.
 
-### Is MCP secure enough for production infrastructure?
+### What should I do to run MCP safely in production?
 
 MCP's security model is still maturing; researchers have documented real risks including tool poisoning and prompt injection, and the NSA has published guidance noting current mitigations are only partial. Treat an MCP-connected agent the way you would a new engineer with real access: require previews before changes, scope credentials narrowly, and enforce policy as code regardless of who or what proposed the change.
 
-### How does Neo relate to MCP?
+### Which Pulumi MCP tool hands work off to Neo?
 
 Neo is Pulumi's infrastructure engineering agent. MCP is one of the ways it connects to your toolchain; the `neo-task-launcher` tool lets any MCP host hand multi-step work, like a Terraform migration or a policy rollout, to Neo rather than orchestrating each step itself.
 
