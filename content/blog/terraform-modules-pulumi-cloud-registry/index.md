@@ -1,6 +1,6 @@
 ---
 title: "Publish a Terraform module, get a Pulumi package automatically"
-date: 2026-06-18
+date: 2026-08-04
 draft: false
 meta_desc: "Publish private Terraform modules to the Pulumi Cloud registry and get a typed Pulumi package for every version, with generated SDKs, API docs, and usage tracking across your stacks."
 meta_image: meta.png
@@ -68,7 +68,7 @@ The package takes its name from the module: `<name>-<system>`, in the same names
 pulumi package add vpc-aws 1.2.3
 ```
 
-Installing a converted package needs Pulumi CLI 3.248.0 or newer.
+Installing a converted package needs [Pulumi CLI](/docs/install/) 3.248.0 or newer.
 
 The module becomes a [multi-language component](https://github.com/pulumi-labs/pulumi-hcl/blob/main/docs/mlc.md). Its `variable` blocks become typed inputs and its `output` blocks become typed outputs, and Pulumi generates an SDK for whichever language the project uses: TypeScript, Python, Go, C#, Java, or YAML. Editors complete the inputs, and a misspelled one fails at compile time rather than partway through a plan. The resources the module creates appear individually in previews and in the resource graph.
 
@@ -89,8 +89,8 @@ module "vpc" {
 
 Submodules use the usual `//modules/<name>` syntax.
 
-While a version is still converting, or for a module that cannot convert, a Pulumi program can consume the module directly with `pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system>`. That runs the same conversion locally instead of using the published package. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+The same conversion can also be run locally, with `pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system>`, which is useful while a version is still converting. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 ## Get started
 
-See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the full publish and consume reference, including how to migrate an existing registry, the naming rules to check first, module deletion, and self-hosted hosts. If you are new to running Terraform modules through Pulumi, the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide is the place to start.
+See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the full publish and consume reference, including how to migrate an existing registry, the naming rules to check first, and self-hosted hosts. If you are new to running Terraform modules through Pulumi, the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide is the place to start.

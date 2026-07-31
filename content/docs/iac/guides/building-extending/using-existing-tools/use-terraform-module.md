@@ -92,15 +92,15 @@ If your organization publishes Terraform modules to the [Pulumi Cloud registry](
 pulumi package add <name>-<system> [<version>]
 ```
 
-A module published as `acme-corp/vpc/aws` installs as `vpc-aws`. This is the same as any other Pulumi package: you get a generated SDK in your language, an [API reference](/docs/idp/concepts/private-registry/#api-documentation) on the package's page, and [usage tracking](/docs/idp/concepts/private-registry/#usage-tracking) showing which of your stacks depend on it and which are behind the latest version. Installing a converted package requires Pulumi CLI 3.248.0 or newer.
+A module published as `acme-corp/vpc/aws` installs as `vpc-aws`. This is the same as any other Pulumi package: you get a generated SDK in your language, an [API reference](/docs/idp/concepts/private-registry/#api-documentation) on the package's page, and [usage tracking](/docs/idp/concepts/private-registry/#usage-tracking) showing which of your stacks depend on it and which are behind the latest version. Installing a converted package requires Pulumi CLI 3.248.0 or newer; see [Download & Install Pulumi](/docs/install/) to upgrade.
 
-The package's page in Pulumi Cloud shows whether a given version has converted. While a version is still converting, or for a module using Terraform features Pulumi cannot express yet, consume the module directly instead:
+The package's page in Pulumi Cloud shows whether a given version has converted. The same conversion can also be run locally, against the module address rather than the package name:
 
 ```bash
 pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
 ```
 
-That runs the same conversion locally, at the moment you run it. The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). Either way the CLI passes your Pulumi access token through to the provider, so you do not need to set a registry token by hand.
+This runs the conversion at the moment you run it, using whatever version of the `hcl` provider you have, rather than using the package the registry produced. It is useful while a version is still converting. A module the registry could not convert fails here for the same reason. The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). Either way the CLI passes your Pulumi access token through to the provider, so you do not need to set a registry token by hand.
 
 See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
 
