@@ -35,7 +35,7 @@ social:
         Here's what shipped today.
 ---
 
-At Pulumi, we are building the platform for agentic infrastructure. Pulumi Cloud provides the guardrails and enterprise readiness needed to safely move fast in this new era. While we are seeing extraordinary adoption — over 40% of our users now manage infrastructure using AI agents — we know many organizations are at different phases in their AI journey and have to balance building for the future with maintaining their existing infrastructure as code (IaC) solutions like Terraform. Today, we are launching three ways that Pulumi lets you avoid trading off building for the future against building for today. You don't have to rip out Terraform to enter the agentic era — Pulumi Cloud brings agentic infrastructure to the IaC estate you already have.
+At Pulumi, we are building the platform for agentic infrastructure. Pulumi Cloud provides the guardrails and enterprise readiness needed to safely move fast in this new era. While we are seeing extraordinary adoption — over 40% of our users now manage infrastructure using AI agents — we know many organizations are at different phases in their AI journey and have to balance building for the future with maintaining their existing infrastructure as code (IaC) solutions like Terraform. Today, we are launching three ways that Pulumi lets you avoid trading off building for the future against building for today. You don't have to rip out Terraform to enter the agentic era. Pulumi Cloud brings agentic infrastructure to the IaC estate you already have.
 
 <!--more-->
 
@@ -71,9 +71,9 @@ Learn more in [Using Terraform modules in Pulumi](/docs/iac/get-started/terrafor
 
 ### Build in HCL natively
 
-[HashiCorp Configuration Language (HCL)](/docs/iac/languages-sdks/hcl/) is now generally available as a first-class language in Pulumi IaC. Just like any of the other Pulumi languages, you have full access to the entirety of the Pulumi ecosystem, including thousands of providers. Thanks to our Terraform bridge, if there's a Terraform provider out there, it just works. Best of all, HCL in Pulumi is 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible with no syntactical differences.
+[HashiCorp Configuration Language (HCL)](/docs/iac/languages-sdks/hcl/) is now generally available as a first-class language in Pulumi IaC. Like any other Pulumi language, it has full access to the entirety of the Pulumi ecosystem, including thousands of providers. Thanks to our Terraform bridge, if there's a Terraform provider out there, it just works. Best of all, HCL in Pulumi is 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible with no syntactical differences.
 
-We recognize there are many teams out there that prefer to work in HCL over general-purpose languages but want to leverage the modern Pulumi IaC engine, or want to be able to easily use all of the reusable components their partner teams rely on — regardless of whether those teams work in Terraform or Pulumi.
+We recognize there are many teams out there that prefer to work in HCL over general-purpose languages but want to leverage the modern Pulumi IaC engine, or want to be able to use the reusable components their partner teams rely on — regardless of whether those teams work in Terraform or Pulumi.
 
 Learn more in the [HCL language reference](/docs/iac/languages-sdks/hcl/).
 
@@ -85,7 +85,7 @@ We stand by the promise we made last December, and the last thing we want is for
 - **A free IaC modernization workshop.** Our professional services cloud architects host a free IaC modernization workshop to review where you're at with your IaC already and share best practices for adopting the Pulumi platform at scale, learned from working with world-class organizations like BMW and Supabase. You will leave this session trained up and equipped to succeed with the next phase of your IaC journey.
 - **A return on investment (ROI) calculation.** We will show you how the move to Pulumi will not only be spend-neutral thanks to the escape hatch, but how much value and savings you should expect to see, given our experience helping innovators like Snowflake accelerate their time to market — going from code to cloud in weeks to hours.
 
-These ensure there's no financial penalty for switching, a very clear ROI, and no learning curve. We have always been proud to work with customers of all sizes in all industries, so these offers are available to you whether you're a Global 2000, a startup, or somewhere in between.
+These ensure there's no financial penalty for switching, a clear ROI, and no learning curve. We have always been proud to work with customers of all sizes in all industries, so these offers are available to you whether you're a Global 2000, a startup, or somewhere in between.
 
 ## Get started today
 
