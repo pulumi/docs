@@ -42,9 +42,9 @@ You might have been in a situation where pulumi failed for an unexpected reason,
 
 ## How it works
 
-From pulumi v3.254.0 onward, we automatically produce log files for every operation and store them in `$PULUMI_HOME/logs`. These log files are encrypted on disk, using the relevant stack's secret manager, as they still contain secrets at this point. The final file consists of gzip'd chunks that are encrypted using AES256-GCM.
+From pulumi v3.254.0 onward, we automatically produce log files for every operation and store them in `$PULUMI_HOME/logs`. These log files are encrypted on disk, using the relevant stack's secret manager, whenever it is available, as they still contain secrets at this point. The final file consists of gzip'd chunks that are encrypted using AES256-GCM.  Log files are gzip'd when no secrets manager is available, as no secrets from property values can be in the log at that point.
 
-Note that the logs are rotated out after 7 days, or after the log directory has reached 500 MB. This way logs will never fill up your disk, but will still be available after running pulumi commands.
+Note that the logs are rotated out after 7 days, or after the log directory has reached 500 MB, removing the oldest logs first. This way logs will never fill up your disk, but will still be available after running pulumi commands. These defaults can be overridden with the `PULUMI_LOG_ROTATION_MAX_AGE_DAYS` and `PULUMI_LOG_ROTATION_MAX_TOTAL_MB` environment variables.
 
 Locally these logs can be decrypted using [`pulumi logs decrypt`](/docs/iac/cli/commands/pulumi_logs_decrypt/). For this to work the same stack's secret manager as was used for the command needs to be available.
 
