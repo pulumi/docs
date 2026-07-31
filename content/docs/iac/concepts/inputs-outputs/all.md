@@ -16,7 +16,7 @@ aliases:
     - /docs/concepts/inputs-outputs/outputs-and-strings/
 ---
 
-If you need to access and use multiple outputs together, the `all` function acts like an [`apply`](/docs/concepts/inputs-outputs/apply/) across many resources, allowing you to retrieve and use multiple outputs at the same time. The `all` function waits for all output values to become available and then provides them as _plain values_ to the {{< pulumi-apply >}} function.
+If you need to access and use multiple outputs together, the `all` function acts like an [`apply`](/docs/iac/concepts/inputs-outputs/apply/) across many resources, allowing you to retrieve and use multiple outputs at the same time. The `all` function waits for all output values to become available and then provides them as _plain values_ to the {{< pulumi-apply >}} function.
 
 This can be used to compute an entirely new output value, such as creating a new string by adding or concatenating outputs from two different resources together, or by creating a new data structure that uses their values. Just like with `apply`, the result of `all` is itself an Output<T>.
 
@@ -28,7 +28,7 @@ If you need to create a resource that depends on output values, pass the outputs
 
 ## Creating a new string
 
-Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/concepts/inputs-outputs/apply/).
+Outputs that return to the engine as strings cannot be used directly in operations such as string concatenation until the output value has returned to Pulumi. In these scenarios, you'll need to wait for the value to return using [`apply`](/docs/iac/concepts/inputs-outputs/apply/).
 
 To demonstrate, let’s say you have created a server resource and a database resource, and their output values are as follows:
 
@@ -168,7 +168,7 @@ For the common case of constructing a string from output values, Pulumi's string
 
 {{< example-program path="aws-s3bucket-bucketobject-interpolate" >}}
 
-You can use string interpolation to do things like export a [stack output](/docs/using-pulumi/stack-outputs-and-references/) or provide a dynamically computed string as a new resource argument. For a full reference of the interpolation helpers available in each language, see [Using output helpers](/docs/concepts/inputs-outputs/helpers/).
+You can use string interpolation to do things like export a [stack output](/tutorials/stack-outputs-refs-aws/) or provide a dynamically computed string as a new resource argument. For a full reference of the interpolation helpers available in each language, see [Using output helpers](/docs/iac/concepts/inputs-outputs/helpers/).
 
 ## Creating a new data structure
 
