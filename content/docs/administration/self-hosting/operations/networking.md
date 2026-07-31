@@ -65,7 +65,8 @@ When scaling in or deploying updates, ensure containers have time to finish in-f
 
 ## DNS
 
-Configure two DNS records pointing to your load balancer:
+Configure DNS records pointing to your load balancer:
 
 - `api.{domain}` - for CLI and API access
 - `app.{domain}` - for web console access
+- `tfe.{domain}` - (optional) for the TFE-compatible state backend API, required only if [`PULUMI_TFE_DOMAIN`](/docs/administration/self-hosting/components/api/#environment-variables-for-core-infrastructure) is set
