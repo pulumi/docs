@@ -31,8 +31,8 @@
                     {{ partial "docs/cli-command-banner.html" . }}
                 {{ end }}
 
-                {{ with .Params.pulumi_cloud_feature }}
-                    {{ partial "notes.html" (dict "type" "cloud" "text" (partial "cloud-availability-body.html" (dict "feature" . "where" $.RelPermalink) | markdownify)) }}
+                {{ if not .Params.docs_home }}
+                    {{ partial "docs/cloud-availability.html" . }}
                 {{ end }}
 
                 <div class="docs-table-of-contents docs-toc-mobile">
