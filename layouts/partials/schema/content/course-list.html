@@ -30,7 +30,7 @@
       }}
       
       {{/* Add image if available */}}
-      {{ with or $course.Params.meta_image "/images/docs/meta-images/docs-meta.png" }}
+      {{ with or $course.Params.meta_image "/logos/brand/og-default.png" }}
         {{ $image := . }}
         {{ if not (hasPrefix $image "http") }}
           {{ $image = printf "https://www.pulumi.com%s" $image }}

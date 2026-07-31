@@ -17,7 +17,7 @@ aliases:
 - /docs/iac/concepts/resources/dynamic-providers/
 ---
 
-The dynamic resource provider construct can be used to build a local provider for simple APIs and use-cases. Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model. For more sophisticated APIs, one can create a [bridged or native provider](/docs/iac/packages-and-automation/pulumi-packages/).
+The dynamic resource provider construct can be used to build a local provider for simple APIs and use-cases. Dynamic resource providers are only able to be used in Pulumi programs written in the same language as the dynamic resource provider. But, they are lighter weight than custom providers and for many use-cases are sufficient to leverage the Pulumi state model. For more sophisticated APIs, one can create a [bridged or native provider](/docs/iac/concepts/packages/).
 
 {{% notes type="info" %}}
 Dynamic providers are supported only in TypeScript and Python.
@@ -125,8 +125,8 @@ Because your implementation of the resource provider interface must be used by a
 
 Dynamic providers are deliberately lightweight, and that comes with trade-offs. Before choosing one, be aware of the following limitations:
 
-- **Single language.** A dynamic provider can only be used from programs written in the same language as the provider. For multi-language support, build a [bridged or native provider](/docs/iac/packages-and-automation/pulumi-packages/).
-- **No `read` support.** The `read` method is not currently functional, so [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) and the static [`get` method](/docs/iac/concepts/resources/get/) are not supported. This is tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175).
+- **Single language.** A dynamic provider can only be used from programs written in the same language as the provider. For multi-language support, build a [bridged or native provider](/docs/iac/concepts/packages/).
+- **No `read` support.** The `read` method is not currently functional, so [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) and the static [`get` method](/docs/iac/concepts/functions/get-functions/) are not supported. This is tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175).
 - **Function serialization limits.** Provider methods are serialized to run in a separate process, which limits what code they can capture. See [function serialization](/docs/iac/concepts/functions/function-serialization/).
 - **No pnpm support (TypeScript).** Dynamic providers in TypeScript are incompatible with projects using pnpm as a package manager. Use npm or yarn instead. See [pulumi/pulumi#9085](https://github.com/pulumi/pulumi/issues/9085).
 - **No Bun runtime support (TypeScript).** Dynamic providers are not supported with the Bun runtime (`runtime: bun`), because they depend on function serialization, which requires Node.js v8/inspector APIs that Bun [does not fully implement yet](https://bun.com/docs/runtime/nodejs-compat#nodeinspector). Use `runtime: nodejs` instead.

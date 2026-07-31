@@ -80,10 +80,8 @@
     {{ end }}
     {{ $image = printf "%s%s" $baseURL $imagePath }}
   {{ end }}
-{{ else if in .RelPermalink "/docs/clouds/aws/" }}
-  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-clouds-aws-meta-image.png" }}
 {{ else }}
-  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+  {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}
 {{ $schema = merge $schema (dict "image" (slice $image)) }}
 
