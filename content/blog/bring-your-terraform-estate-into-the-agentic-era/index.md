@@ -24,7 +24,7 @@ social:
     linkedin: |
         Last December, Joe Duffy laid out Pulumi's vision to support all of your infrastructure as code, including Terraform and HCL. Today that vision ships.
 
-        Pulumi Cloud is now a GA backend for Terraform state — remote plans and applies, manual approvals, RBAC, and Neo code reviews all work against your existing Terraform stacks. HCL is GA as a first-class Pulumi language, and Terraform modules now import natively into Pulumi programs.
+        Pulumi Cloud is now a GA backend for Terraform state — remote plans and applies, manual approvals, RBAC, and Neo code reviews all work against your Terraform stacks. HCL is GA as a first-class Pulumi language, and Terraform modules now import natively into Pulumi programs.
 
         None of this requires rewriting what you already have. And if you're mid-transition, there's still a credit escape hatch, a free IaC modernization workshop, and an ROI calculation walkthrough with our team.
 
