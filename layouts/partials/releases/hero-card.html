@@ -7,7 +7,8 @@
 
     Parameters:
     - breadcrumb_label:      Right-side breadcrumb segment (e.g., "May 2026").
-    - heading:               Card heading.
+    - heading:               Card heading. Rendered as raw HTML, so inline tags
+                             like <br> can be used to control line breaks.
     - description:           Body copy (markdown).
     - hero_image:            Image path.
     - hero_image_alt:        Alt text for the hero image.
@@ -15,6 +16,11 @@
                              centered horizontally and flush with the
                              bottom of the card. Image goes full-width
                              when unset.
+    - hero_image_max_height: Optional max-height (in px). Sizes the image by
+                             height instead of width, letting the width follow
+                             the artwork's own aspect ratio. Use this for wide
+                             hero art, which reads too small when capped by
+                             width. Takes precedence over hero_image_max_width.
 */}}
 
 {{ $breadcrumbLabel := .breadcrumb_label }}
@@ -23,10 +29,22 @@
 {{ $heroImage := .hero_image }}
 {{ $heroImageAlt := .hero_image_alt | default $heading }}
 {{ $heroImageMaxWidth := .hero_image_max_width }}
+{{ $heroImageMaxHeight := .hero_image_max_height }}
 
+{{/* Two sizing modes. By default the wrapper caps the image's width and the
+     image fills it. When hero_image_max_height is set we instead cap the
+     image's height and let its width follow the artwork's aspect ratio — wide
+     art ends up much larger on the page for the same visual weight. */}}
 {{ $maxWidthAttr := "" }}
-{{ with $heroImageMaxWidth }}
-    {{ $maxWidthAttr = printf ` style="max-width: %vpx;"` . }}
+{{ $imgClass := "w-full h-auto block" }}
+{{ $imgStyle := "" }}
+{{ if $heroImageMaxHeight }}
+    {{ $imgClass = "w-auto h-auto max-w-full block mx-auto" }}
+    {{/* safeCSS: the value lands in a style attribute, which Hugo otherwise
+         sanitizes to ZgotmplZ. */}}
+    {{ $imgStyle = printf "max-height: %vpx;" $heroImageMaxHeight | safeCSS }}
+{{ else if $heroImageMaxWidth }}
+    {{ $maxWidthAttr = printf ` style="max-width: %vpx;"` $heroImageMaxWidth }}
 {{ end }}
 
 {{ $heroImageExists := false }}
@@ -48,7 +66,7 @@
                 {{ end }}
             </p>
             {{ with $heading }}
-            <h1 class="heading-xl font-display font-semibold tracking-tighter text-white m-0 leading-[1.1]">{{ . }}</h1>
+            <h1 class="heading-xl font-display font-semibold tracking-tighter text-white m-0 leading-[1.1]">{{ . | safeHTML }}</h1>
             {{ end }}
             {{ with $description }}
             <div class="body-lg text-gray-300 max-w-2xl leading-relaxed">{{ . | markdownify }}</div>
@@ -62,7 +80,8 @@
                 {{ partial "fingerprinted-img.html" (dict
                     "src" $heroImage
                     "alt" $heroImageAlt
-                    "class" "w-full h-auto block"
+                    "class" $imgClass
+                    "style" $imgStyle
                     "loading" "eager"
                     "maxWidth" (or $heroImageMaxWidth 1500)
                     "quality" 95
