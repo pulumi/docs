@@ -3,4 +3,13 @@
        box; see "Pulumi Cloud availability markers" in AGENTS.md before changing
        this, because switching it on reclassifies existing content. */ -}}
 {{- $type := default "info" (.Get "type") -}}
+{{- /* The leading newline is load-bearing. `{{%` shortcode output is spliced back
+       into the markdown source before it is rendered, so an indented call —
+       several SCIM/SAML pages open one with four spaces of indentation inside a
+       list — would put `<div class="note">` at column 4 and Goldmark would render
+       the whole callout as an indented code block. Starting the output on a fresh
+       line keeps the div at column 0, which is what this shortcode has always
+       emitted (the old template began with untrimmed `{{ $type := … }}` lines).
+       Do not "clean up" by trimming this. */ -}}
+{{- "\n" -}}
 {{- partial "notes.html" (dict "type" $type "size" (.Get "size") "text" (.Inner | markdownify)) -}}
