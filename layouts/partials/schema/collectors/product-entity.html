@@ -50,40 +50,94 @@
 
 {{/* Add offer/pricing information - only for free products or if pricing is explicitly defined */}}
 {{ if in .RelPermalink "/neo/" }}
-  {{/* Neo is part of paid tiers, starting with Team tier */}}
+  {{/* Pulumi Neo is available starting on the free Individual tier (5M tokens/month included), through paid tiers.
+       Derive the aggregate from the pricing page's own tier data so this page and /pricing/ can never disagree;
+       fall back to corrected hardcoded values only if that lookup fails. */}}
+  {{ $lowPrice := 0.0 }}
+  {{ $highPrice := 400.0 }}
+  {{ $offerCount := 3 }}
+  {{ $pricingPage := site.GetPage "/pricing" }}
+  {{ if $pricingPage }}
+    {{ $neoPrices := slice }}
+    {{ range $pricingPage.Params.tiers.trialed.items }}
+      {{ $neoCleanPrice := replace (replace (string .price) "$" "") "," "" }}
+      {{ if findRE "^[0-9]+(\\.[0-9]+)?$" $neoCleanPrice }}
+        {{ $neoPrices = $neoPrices | append (float $neoCleanPrice) }}
+      {{ end }}
+    {{ end }}
+    {{ if gt (len $neoPrices) 0 }}
+      {{ $sortedNeoPrices := sort $neoPrices }}
+      {{ $lowPrice = index $sortedNeoPrices 0 }}
+      {{ $highPrice = index $sortedNeoPrices (sub (len $sortedNeoPrices) 1) }}
+      {{ $offerCount = len $neoPrices }}
+    {{ end }}
+  {{ end }}
   {{ $schema = merge $schema (dict "offers" (dict
     "@type" "AggregateOffer"
     "priceCurrency" "USD"
-    "lowPrice" "40"
-    "highPrice" "400"
+    "lowPrice" $lowPrice
+    "highPrice" $highPrice
     "availability" "https://schema.org/InStock"
     "url" "https://www.pulumi.com/pricing/"
-    "offerCount" 3
+    "offerCount" $offerCount
   )) }}
 {{ else if .Params.tiers.trialed.items }}
-  {{/* Pricing page: build real per-tier Offers from the page's own tier data, plus an AggregateOffer */}}
+  {{/* Pricing page: build real per-tier Offers from the page's own tier data, plus an AggregateOffer.
+       Only tiers with a parseable numeric price become Offers - "Custom" (contact-sales) tiers are
+       intentionally excluded rather than assigned a fabricated price, since Offer.price is required. */}}
   {{ $offerList := slice }}
   {{ $numericPrices := slice }}
   {{ range .Params.tiers.trialed.items }}
     {{ $cleanPrice := replace (replace (string .price) "$" "") "," "" }}
-    {{ $offerURL := "https://www.pulumi.com/pricing/" }}
-    {{ if and .cta .cta.href (strings.HasPrefix .cta.href "http") }}
-      {{ $offerURL = .cta.href }}
-    {{ end }}
-    {{ $offer := dict
-      "@type" "Offer"
-      "name" .title
-      "description" .subtitle
-      "priceCurrency" "USD"
-      "availability" "https://schema.org/InStock"
-      "url" $offerURL
-    }}
     {{ if findRE "^[0-9]+(\\.[0-9]+)?$" $cleanPrice }}
       {{ $priceNum := float $cleanPrice }}
-      {{ $offer = merge $offer (dict "price" $priceNum) }}
+      {{ $offerURL := "https://www.pulumi.com/pricing/" }}
+      {{ if and .cta .cta.href (strings.HasPrefix .cta.href "http") }}
+        {{ $offerURL = .cta.href }}
+      {{ end }}
+      {{/* Build a description that explicitly states this is a base price with additional usage
+           billed on demand, so the machine-readable claim itself discloses the pricing model
+           rather than implying a flat, all-inclusive price. */}}
+      {{ $descParts := slice }}
+      {{ if .subtitle }}
+        {{ $descParts = $descParts | append .subtitle }}
+      {{ end }}
+      {{ if .note }}
+        {{ $descParts = $descParts | append .note }}
+      {{ end }}
+      {{ if .unit }}
+        {{ $descParts = $descParts | append (replace .unit "**" "") }}
+      {{ end }}
+      {{ $offer := dict
+        "@type" "Offer"
+        "name" .title
+        "description" (delimit $descParts ". ")
+        "price" $priceNum
+        "priceCurrency" "USD"
+        "availability" "https://schema.org/InStock"
+        "url" $offerURL
+      }}
+      {{/* Attach the billing period via schema.org's UnitPriceSpecification.billingDuration when this
+           tier is billed monthly, derived from the tier's own price_label rather than hardcoded per
+           tier. Note: Google's structured data guidance documents no billing-period / subscription
+           concept for Offer and states it uses offers.price and ignores offers.priceSpecification, so
+           this does not change Google rich results - it is schema.org-correct markup for AI/LLM
+           parsers reading tier pricing. */}}
+      {{ if and .price_label (strings.Contains .price_label "month") }}
+        {{ $offer = merge $offer (dict "priceSpecification" (dict
+          "@type" "UnitPriceSpecification"
+          "price" $priceNum
+          "priceCurrency" "USD"
+          "billingDuration" (dict
+            "@type" "QuantitativeValue"
+            "value" 1
+            "unitCode" "MON"
+          )
+        )) }}
+      {{ end }}
+      {{ $offerList = $offerList | append $offer }}
       {{ $numericPrices = $numericPrices | append $priceNum }}
     {{ end }}
-    {{ $offerList = $offerList | append $offer }}
   {{ end }}
   {{ if gt (len $numericPrices) 0 }}
     {{ $sortedPrices := sort $numericPrices }}
