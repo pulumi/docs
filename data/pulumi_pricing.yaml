@@ -542,6 +542,11 @@ categories:
           enterprise: Host private templates
           business-critical: Host private templates
 
+      - id: private-registry
+        name: Private Registry
+        available_from: enterprise
+        hidden: true
+
       - id: organization-templates
         name: Organization templates in the Private Registry
         available_from: enterprise
@@ -608,6 +613,15 @@ categories:
           team: 1
           enterprise: Unlimited
           business-critical: Unlimited
+
+      - id: billing-managers
+        name: Billing managers
+        available_from: team
+        availability:
+          team: "1"
+          enterprise: Unlimited
+          business-critical: Unlimited
+        hidden: true
 
       - id: organizations
         name: Organizations
