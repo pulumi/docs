@@ -49,7 +49,7 @@ We are excited to announce the general availability of [Pulumi Cloud as the back
 
 We recognize there is lots of infrastructure that works as is, and switching over to a new management paradigm may not always be possible. Pulumi Cloud support for the Terraform state backend lets organizations maintain their existing Terraform deployment patterns while also unlocking the power of Pulumi Cloud. The following common patterns for running Terraform are now supported:
 
-- **Plans and applies run remotely by default** for Terraform runs, following the behavior of HCP Terraform and Terraform Enterprise. When you run a Terraform operation, it executes on a Pulumi-hosted runner rather than your local machine. You get full visibility into these operations both on your local CLI and in the Pulumi Cloud console.
+- **Plans and applies run remotely by default** for new Terraform stacks, following the behavior of HCP Terraform and Terraform Enterprise. When you run a Terraform operation, it executes on a Pulumi-hosted runner rather than your local machine. You get full visibility into these operations both on your local CLI and in the Pulumi Cloud console.
 - **Production deployments may be gated with manual approvals** before applying a Terraform plan.
 
 With this release, stacks with Terraform state are first-class entities in Pulumi Cloud. They get access to all of the capabilities that organizations need to scale in this new AI-first era.
