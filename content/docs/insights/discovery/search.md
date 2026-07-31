@@ -395,6 +395,56 @@ In the example above, the query has been restricted to the "dev" stack.
 
 Clicking the "X" within the search bar will remove all previously selected filters.
 
+## Property columns
+
+{{% notes "info" %}}
+Property columns are only available to organizations using Team, Enterprise, and Business Critical editions.
+
+If you would like to use them, [contact us](/contact?form=sales) to upgrade.
+{{% /notes %}}
+
+Property columns let you promote any resource property into a column in the results grid. Once added, a property column behaves like any built-in column: you can sort, filter, and group by its values across all resources returned by your query.
+
+Property columns use the same [property path](/docs/reference/property-paths/) syntax as [property queries](#property-queries). For example, `tags.Environment` exposes the value of the `Environment` tag on each resource, and `instanceType` exposes the instance type of compute resources. Nested and bracketed paths (such as `tags["name containing spaces"]`) are supported.
+
+### Creating a property column
+
+To add a property column from the results grid:
+
+1. Click the settings icon above the grid to open the settings menu.
+1. Select **Create property column**.
+1. Enter a property path (for example, `tags.Environment` or `instanceType`) in the dialog that appears.
+1. Confirm to add the column.
+
+The new column is appended to the right of the existing columns. Resources that do not have a value for the given property show an empty cell for that column.
+
+### Adding a column from the detail view
+
+Click the name cell in a row to drill into the Detailed view for that resource. The Action column menu for each property has a **Create property column** action. Selecting this action adds a column for the property without having to type the path manually. This is useful when you have already located a property of interest on one resource and want to see its value across every resource in the grid.
+
+The behavior of **Create property column** depends on the type of the property value:
+
+- If the property is a single value (for example, a string or number), the column is created immediately for that property path.
+- If the property is an object with children (for example, a `tags` map), a dialog opens so you can enter the path to the specific child or grandchild property you want as the column. For example, use `tags.Environment` rather than the entire `tags` object.
+
+### Sorting, filtering, and grouping
+
+Property columns support the same interactions as built-in columns:
+
+- **Sort**: Click the property column header to sort results ascending or descending by property value.
+- **Filter**: Open the column filter to narrow results to one or more specific property values.
+- **Group by**: Drag the property column header into the Row Groups Header to group resources by property value. Expanding a group drills into the matching resources, just as it does for built-in columns.
+
+### Hiding and deleting property columns
+
+To hide a property column without removing it, open the settings menu on the main Resources grid and select **Choose columns**, then toggle the column off. The column stays in the set of available columns and can be re-enabled from the same menu. This works for both property columns and built-in columns.
+
+To delete a property column entirely, drag the column header out of the grid and drop it outside. This hides the column and removes it from the set of available columns, so it will no longer appear in **Choose columns**. Only property columns can be deleted; built-in columns cannot be removed from the available set.
+
+### Sharing views with property columns
+
+The set of property columns is persisted in the page URL. Share the URL with another member of your organization and they will open the grid with the same property columns, filters, sort order, and grouping applied. This makes property columns suitable for building and sharing repeatable views such as "all compute resources by instance type" or "all resources by environment tag".
+
 ## Download a CSV
 
 {{% notes "info" %}}
