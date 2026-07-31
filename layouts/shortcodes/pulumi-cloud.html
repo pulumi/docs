@@ -6,13 +6,13 @@
   Two forms, both placed on the line directly after the heading they apply to:
 
       ## Managing secrets with Pulumi ESC environments
-      {{< pulumi-cloud />}}                    → available on all editions
+      {{< pulumi-cloud />}}                    → available in all editions
 
       ## Organization templates
       {{< pulumi-cloud "organization-templates" />}}
 
   The argument is a feature id from data/pulumi_pricing.yaml — the edition the
-  sentence names ("available on the Enterprise and Business Critical editions")
+  sentence names ("available in the Enterprise and Business Critical editions")
   is derived from that feature's availability, so it can't drift from
   /pricing/.
 
@@ -41,7 +41,7 @@
   set per page — there is no inheritance.
 */ -}}
 {{- /* Named params make `.Get 0` nil, which would fall through to the
-       "available on all editions" sentence and quietly under-state a gated
+       "available in all editions" sentence and quietly under-state a gated
        feature. The `{{% notes type="…" %}}` convention makes `feature="rbac"`
        an easy mistake, so fail the build on it. */ -}}
 {{- if reflect.IsMap .Params -}}

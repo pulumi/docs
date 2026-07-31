@@ -17,7 +17,7 @@
   lowest edition (which gates nothing — say nothing instead), are both hard
   build failures, the same contract resource-option-scope.html uses.
 */ -}}
-{{- $lead := "This is a [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature" -}}
+{{- $lead := "This [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature is" -}}
 {{- /* Tripwire for the `edition` -> `feature` rename. The markdown output
        format passes this dict too, and a stale key there would silently fall
        through to the "all editions" branch in files nobody reads during
@@ -26,7 +26,7 @@
   {{- errorf "cloud-availability-body.html was called with edition: %q (in %s). It takes a feature id from data/pulumi_pricing.yaml now — pass `feature` instead." . $.where -}}
 {{- end -}}
 {{- if not .feature -}}
-  {{- printf "%s, available on all editions." $lead -}}
+  {{- printf "%s available in [all editions](/pricing/)." $lead -}}
 {{- else -}}
   {{- $id := printf "%v" .feature -}}
   {{- $px := partialCached "pricing/data.html" "pricing-data" "pricing-data" -}}
@@ -70,6 +70,6 @@
            feature is hidden and has no row. */ -}}
     {{- $href := "/pricing/" -}}
     {{- if not $f.hidden -}}{{- $href = printf "/pricing/#%s" $id -}}{{- end -}}
-    {{- printf "%s, available on %s. [Compare editions](%s)." $lead $list $href -}}
+    {{- printf "%s available in [%s](%s)." $lead $list $href -}}
   {{- end -}}
 {{- end -}}
