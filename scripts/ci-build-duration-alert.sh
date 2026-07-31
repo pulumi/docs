@@ -9,7 +9,7 @@
 # Expects:
 #   CI_BUILD_START_EPOCH               epoch seconds recorded just before the build step
 #   SLACK_WEBHOOK_URL                  incoming webhook for the alert channel (docs-ops)
-#   BUILD_DURATION_THRESHOLD_MINUTES   alert threshold (default 15)
+#   BUILD_DURATION_THRESHOLD_MINUTES   alert threshold (default 20)
 
 set -o nounset
 
@@ -18,7 +18,7 @@ if [ -z "${CI_BUILD_START_EPOCH:-}" ]; then
     exit 0
 fi
 
-threshold_minutes="${BUILD_DURATION_THRESHOLD_MINUTES:-15}"
+threshold_minutes="${BUILD_DURATION_THRESHOLD_MINUTES:-20}"
 elapsed_seconds=$(( $(date +%s) - CI_BUILD_START_EPOCH ))
 elapsed_minutes=$(( elapsed_seconds / 60 ))
 
@@ -34,7 +34,7 @@ if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
 fi
 
 run_url="${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY:-pulumi/docs}/actions/runs/${GITHUB_RUN_ID:-}"
-message=":hourglass_flowing_sand: Build and deploy took *${elapsed_minutes}m* (threshold: ${threshold_minutes}m). Build time may be regressing — check Hugo's --templateMetrics output in the job log. <${run_url}|View run>"
+message=":hourglass_flowing_sand: Build and deploy took *${elapsed_minutes}m*, longer than usual (threshold: ${threshold_minutes}m). Hugo's --templateMetrics output in the job log can help identify what was slow. <${run_url}|View run>"
 
 payload=$(printf '{"channel": "docs-ops", "username": "docsbot", "icon_url": "https://www.pulumi.com/logos/brand/avatar-on-white.png", "text": "%s"}' "$message")
 
