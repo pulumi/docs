@@ -11,7 +11,6 @@ menu:
     parent: idp-guides
     identifier: idp-guides-publishing-github-actions
     weight: 20
-pulumi_cloud_feature: private-registry
 ---
 
 Automating the publication of Pulumi components from GitHub Actions to your Pulumi Cloud private registry enables robust CI/CD workflows for infrastructure building blocks.

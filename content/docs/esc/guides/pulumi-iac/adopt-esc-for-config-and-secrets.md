@@ -143,8 +143,6 @@ To do the same thing by hand (for example, when you want the values in a shared 
 
 ## Pin the environment
 
-{{< pulumi-cloud "esc-versioning" />}}
-
 By default, a stack imports the latest revision of an environment. That means a change to the environment takes effect on your next `pulumi up` with no change to the stack itself. That's convenient, but it also means an unrelated edit can alter a stack you weren't touching.
 
 For anything beyond experimentation, **pin the import to a specific version** so updates are deliberate. Append a revision number or a version tag with `@`:
