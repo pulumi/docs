@@ -61,14 +61,6 @@ With this release, stacks with Terraform state are first-class entities in Pulum
 
 Learn more in [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/).
 
-### Build in HCL natively
-
-[HashiCorp Configuration Language (HCL)](/docs/iac/languages-sdks/hcl/) is now generally available as a first-class language in Pulumi IaC. Just like any of the other Pulumi languages, you have full access to the entirety of the Pulumi ecosystem, including thousands of providers. Thanks to our Terraform bridge, if there's a Terraform provider out there, it just works. Best of all, HCL in Pulumi is 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible with no syntactical differences.
-
-We recognize there are many teams out there that prefer to work in HCL over general-purpose languages but want to leverage the modern Pulumi IaC engine, or want to be able to easily use all of the reusable components their partner teams rely on — regardless of whether those teams work in Terraform or Pulumi.
-
-Learn more in the [HCL language reference](/docs/iac/languages-sdks/hcl/).
-
 ### Reuse your Terraform modules
 
 Pulumi programs, regardless of language, now support [importing Terraform modules](/docs/iac/get-started/terraform/terraform-modules/) natively. Organizations can leverage their existing reusable artifacts as is, without having to make a single change. This enables organizations to focus on new infrastructure projects and lets them build those projects in the language of their choice, regardless of what their existing IaC estate is.
@@ -76,6 +68,14 @@ Pulumi programs, regardless of language, now support [importing Terraform module
 In addition, Pulumi Cloud's private registry can now host Terraform modules alongside Pulumi packages. This enables you to consolidate all of your IaC building blocks in a single source of truth rather than managing disparate solutions and making sure your teams know where to look. Terraform modules hosted in Pulumi Cloud provide maximum interoperability and can be used in both Pulumi and Terraform programs.
 
 Learn more in [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/).
+
+### Build in HCL natively
+
+[HashiCorp Configuration Language (HCL)](/docs/iac/languages-sdks/hcl/) is now generally available as a first-class language in Pulumi IaC. Just like any of the other Pulumi languages, you have full access to the entirety of the Pulumi ecosystem, including thousands of providers. Thanks to our Terraform bridge, if there's a Terraform provider out there, it just works. Best of all, HCL in Pulumi is 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible with no syntactical differences.
+
+We recognize there are many teams out there that prefer to work in HCL over general-purpose languages but want to leverage the modern Pulumi IaC engine, or want to be able to easily use all of the reusable components their partner teams rely on — regardless of whether those teams work in Terraform or Pulumi.
+
+Learn more in the [HCL language reference](/docs/iac/languages-sdks/hcl/).
 
 ## You are still covered until your HashiCorp renewal
 
