@@ -1,12 +1,12 @@
 ---
-title: "Publish a Terraform module, get a Pulumi package"
+title: "Publish a Terraform module, get a Pulumi package automatically"
 date: 2026-06-18
 draft: false
 meta_desc: "Publish private Terraform modules to the Pulumi Cloud registry and get a typed Pulumi package for every version, with generated SDKs, API docs, and usage tracking across your stacks."
 meta_image: meta.png
 feature_image: feature.png
 authors:
-  - idp-team
+  - fausto-nunez-alberro
 tags:
   - terraform
   - features
