@@ -12,4 +12,20 @@
        emitted (the old template began with untrimmed `{{ $type := … }}` lines).
        Do not "clean up" by trimming this. */ -}}
 {{- "\n" -}}
-{{- partial "notes.html" (dict "type" $type "size" (.Get "size") "text" (.Inner | markdownify)) -}}
+{{- /* Strip the body's common indentation before markdownify, the way Python's
+       textwrap.dedent does. Authors reasonably indent a whole callout to line it
+       up inside a list item, and four spaces of it would otherwise turn the body
+       into a code block. Only the shared prefix goes, so nested lists and code
+       blocks inside the callout keep their relative indentation. */ -}}
+{{- $inner := .Inner -}}
+{{- $indent := -1 -}}
+{{- range (split $inner "\n") -}}
+  {{- if trim . " \t" -}}
+    {{- $n := sub (len .) (len (strings.TrimLeft " \t" .)) -}}
+    {{- if or (lt $indent 0) (lt $n $indent) -}}{{- $indent = $n -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if gt $indent 0 -}}
+  {{- $inner = replaceRE (printf "(?m)^[ \t]{%d}" $indent) "" $inner -}}
+{{- end -}}
+{{- partial "notes.html" (dict "type" $type "size" (.Get "size") "text" ($inner | markdownify)) -}}

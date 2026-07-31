@@ -131,6 +131,8 @@ Docs pages state which Pulumi Cloud edition a feature needs through a generated 
 
 Callout markup for all callout types (`info`, `tip`, `warning`, `cloud`, and the GitHub-alert types) comes from the shared `layouts/partials/notes.html`. The `{{% notes %}}` shortcode takes a **named** `type` argument only — `{{% notes "warning" %}}` is silently ignored and renders an info box, so always write `{{% notes type="warning" %}}`. Adding a new callout type means adding it to the `$icons` dict in that partial **and** adding a `&.note-<type>` block to both `theme/src/scss/_notes.scss` and `theme/src/scss/docs/_docs-theme.scss` — dark mode is not automatic.
 
+**Callouts inside a list item**: use the `{{< notes >}}` form, indented to the item's continuation column. `{{%` shortcode output is spliced back into the markdown source before it is rendered, so an indented `{{% notes %}}` always lands at column 0 and splits the list in two (restarting the numbering); `{{<` is substituted after the markdown pass, so the callout stays inside the `<li>`. The shortcode strips the body's common indentation either way, so indent the body to match the tags.
+
 ---
 
 ## Blog categories and tags

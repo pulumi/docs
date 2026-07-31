@@ -32,7 +32,7 @@ JumpCloud SAML SSO requires the **SSO Package** or higher, or the SSO add-on fea
 1. Optionally expand **Advanced Settings** to set a custom value for the IdP URL endpoint. JumpCloud uses this to construct your SSO IdP URL in the format `https://sso.jumpcloud.com/saml2/<custom_value>`.
 
     {{< notes type="warning" >}}
-The SSO IdP URL cannot be changed after the application is created. Choose the custom value carefully.
+    The SSO IdP URL cannot be changed after the application is created. Choose the custom value carefully.
     {{< /notes >}}
 
 1. Select **Save Application**, then **Configure Application**.
