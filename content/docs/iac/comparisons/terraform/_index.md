@@ -1,7 +1,7 @@
 ---
 title_tag: "Pulumi vs. Terraform"
 authors: ["joe-duffy"]
-meta_desc: "Pulumi vs. Terraform: compare language support (Pulumi supports Python, TypeScript, Go, and HCL), state management, policy as code, secrets, and migration paths."
+meta_desc: "Pulumi vs. Terraform: compare language support (Pulumi supports Python, TypeScript, Go, and HCL), state management, secrets, and migration paths."
 title: Terraform
 h1: Pulumi vs. Terraform
 faq_schema: true
