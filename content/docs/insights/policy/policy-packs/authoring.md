@@ -632,9 +632,9 @@ OPA/Rego policies do not support remediation. The OPA analyzer's `Remediate` met
 A few behaviors are specific to remediation:
 
 - If a resource still triggers a violation after remediation runs, the reported level is downgraded from `remediate` to `mandatory`, and the deployment is blocked rather than silently allowed through with an unresolved problem.
-- When a policy pack contains multiple remediations, they run in the order the policies are listed, and each remediation sees the resource state as modified by the ones that ran before it.
+- When more than one policy pack applies to a resource, their remediations run sequentially in the order the packs were loaded, and each remediation sees the resource state as modified by the ones that ran before it, so a later remediation can build on an earlier one.
 - A policy whose enforcement level is `remediate` but which does not implement a remediation function is reported as not implementing remediation, so a resource going through it is neither fixed nor blocked.
-- The `remediationSteps` metadata field (see [policy metadata](/docs/insights/policy/policy-packs/metadata/)) is unrelated to automatic remediation: it is manual guidance shown to a user for policies that only validate, describing how to fix a violation by hand.
+- The `remediationSteps` metadata field (see [policy metadata](/docs/insights/policy/policy-packs/metadata/)) is unrelated to automatic remediation: the field is manual guidance shown to a user for policies that only validate, describing how to fix a violation by hand.
 
 ## Writing policies for dynamic providers
 
@@ -1075,7 +1075,7 @@ As shorthand, specify enforcement levels directly:
 
 - **advisory** - Issues warnings but allows deployments to proceed
 - **mandatory** - Blocks deployments when violations are detected
-- **remediate** - Automatically fixes violations in place; see [Remediating policy violations](#remediating-policy-violations) below
+- **remediate** - Automatically fixes violations in place; see [Remediating policy violations](#remediating-policy-violations)
 - **disabled** - Skips policy evaluation entirely
 
 ### Custom configuration
