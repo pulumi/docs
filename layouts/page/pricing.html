@@ -176,8 +176,13 @@
             {{ range $feature := .features }}
             {{ if not $feature.hidden }}
             {{/* The feature id doubles as the row's anchor, so an availability
-                 marker in the docs can deep-link to the row it derives from. */}}
-            <div id="{{ $feature.id }}" class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 scroll-mt-32 grid {{ $cols }} gap-x-4 {{ $colsMd }} md:items-center">
+                 marker in the docs can deep-link to the row it derives from.
+                 The scroll offset clears both sticky headers — the site nav
+                 (64px) plus the edition header above, which grows by the height
+                 of its CTA buttons at lg — otherwise the row lands underneath
+                 them. `target:` tints the row the reader was sent to, so a
+                 deep link doesn't drop them into an anonymous grid. */}}
+            <div id="{{ $feature.id }}" class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 scroll-mt-32 lg:scroll-mt-44 target:bg-violet-background target:rounded-md grid {{ $cols }} gap-x-4 {{ $colsMd }} md:items-center">
                 <div class="{{ $labelSpan }} md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
                     {{ if $feature.link }}<a class=" underline-offset-5 underline decoration-dashed decoration-violet-300 hover:text-violet-primary hover:decoration-solid" href="{{ $feature.link }}">{{ $feature.name }}</a
                     >{{ else }}{{ $feature.name }}{{ end }}
