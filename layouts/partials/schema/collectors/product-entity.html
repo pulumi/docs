@@ -52,7 +52,10 @@
 {{ if in .RelPermalink "/neo/" }}
   {{/* Pulumi Neo is available starting on the free Individual tier (5M tokens/month included), through paid tiers.
        Derive the aggregate from the pricing page's own tier data so this page and /pricing/ can never disagree;
-       fall back to corrected hardcoded values only if that lookup fails. */}}
+       fall back to corrected hardcoded values only if that lookup fails. Fallback mirrors exactly what the
+       derivation below would compute from the live tiers: Individual ($0), Team ($40), Enterprise ($400) are
+       the 3 tiers with a parseable numeric price - Business Critical ("Custom") is excluded from the count on
+       both paths, consistent with the /pricing/ branch's own non-numeric-tier exclusion. */}}
   {{ $lowPrice := 0.0 }}
   {{ $highPrice := 400.0 }}
   {{ $offerCount := 3 }}
@@ -97,16 +100,23 @@
       {{ end }}
       {{/* Build a description that explicitly states this is a base price with additional usage
            billed on demand, so the machine-readable claim itself discloses the pricing model
-           rather than implying a flat, all-inclusive price. */}}
+           rather than implying a flat, all-inclusive price. Lead with the billing-period label
+           (e.g. "$40/month base") so the qualifier survives even for a priceSpecification-ignoring
+           parser (per review: Google reads offers.price + offers.description, not
+           offers.priceSpecification, so the description is the only field such a parser sees).
+           Trim any trailing "." from each part before joining so they don't double-punctuate. */}}
       {{ $descParts := slice }}
+      {{ if and .price_label (strings.Contains .price_label "month") }}
+        {{ $descParts = $descParts | append (printf "$%s%s" (string .price | replace "$" "") .price_label) }}
+      {{ end }}
       {{ if .subtitle }}
-        {{ $descParts = $descParts | append .subtitle }}
+        {{ $descParts = $descParts | append (strings.TrimSuffix "." .subtitle) }}
       {{ end }}
       {{ if .note }}
-        {{ $descParts = $descParts | append .note }}
+        {{ $descParts = $descParts | append (strings.TrimSuffix "." .note) }}
       {{ end }}
       {{ if .unit }}
-        {{ $descParts = $descParts | append (replace .unit "**" "") }}
+        {{ $descParts = $descParts | append (strings.TrimSuffix "." (replace .unit "**" "")) }}
       {{ end }}
       {{ $offer := dict
         "@type" "Offer"
