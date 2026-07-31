@@ -23,7 +23,7 @@ Pulumi Cloud hosts Terraform modules as a first-class registry resource alongsid
 
 ## Authenticate
 
-Every surface authenticates with a [Pulumi access token](/docs/pulumi-cloud/access-management/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
+Every surface authenticates with a [Pulumi access token](/docs/administration/access-identity/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
 
 - Publishing: the go-tfe client and the tfe provider take your Pulumi access token wherever they expect a TFE token today. See [Publish a module](#publish-a-module).
 - Consuming from a Pulumi program: run `pulumi login`. `pulumi package add terraform-module` passes the token through to the provider, so there is no separate registry login.
@@ -74,11 +74,11 @@ At publish time Pulumi Cloud reads the standard [Terraform module structure](htt
 
 ## Migrating from HCP Terraform
 
-If you publish from CI today, the move is mostly a host change. Point your existing pipelines at `tf.pulumi.com`, supply a Pulumi access token, and your publish steps run unchanged. Reading and listing modules work on any plan, so you keep access to modules you have already published regardless of your plan.
+If you publish from CI today, the move is a host change. Point your existing pipelines at `tf.pulumi.com`, supply a Pulumi access token, and your publish steps run unchanged. Reading and listing modules work on any plan, so you keep access to modules you have already published regardless of your plan.
 
 ### Module names
 
-Pulumi Cloud uses the same `<namespace>/<name>/<system>` address form as HCP Terraform, where the namespace is your Pulumi organization. One rule is stricter: the module name must be lowercase letters, digits, and hyphens (`[a-z0-9-]`), so underscores are rejected at publish. A module that HCP hosts under a name like `control_tower_account_factory` has to be renamed to `control-tower-account-factory` before you publish it. Uppercase in the name is lowercased automatically.
+Pulumi Cloud uses the same `<namespace>/<name>/<system>` address form as HCP Terraform, where the namespace is your Pulumi organization. One rule is stricter: the module name must match `[a-z0-9][a-z0-9-]*`, so it starts with a letter or digit and underscores are rejected at publish. A module that HCP hosts under a name like `control_tower_account_factory` has to be renamed to `control-tower-account-factory` before you publish it. Uppercase in the name is lowercased automatically.
 
 ## What happens when you publish
 
@@ -94,7 +94,7 @@ Once a version has converted, install it by package name:
 pulumi package add <name>-<system> [<version>]
 ```
 
-The module is a [multi-language component](https://github.com/pulumi-labs/pulumi-hcl/blob/main/docs/mlc.md): its `variable` blocks become typed inputs, its `output` blocks become typed outputs, and Pulumi generates an SDK in the language your project uses. The version you pass is persisted in `Pulumi.yaml`, so `pulumi install` regenerates the same pinned version.
+The module is a [multi-language component](https://github.com/pulumi/pulumi-hcl/blob/master/docs/mlc.md): its `variable` blocks become typed inputs, its `output` blocks become typed outputs, and Pulumi generates an SDK in the language your project uses. The version you pass is persisted in `Pulumi.yaml`, so `pulumi install` regenerates the same pinned version.
 
 The resources the module creates appear individually in previews and in the resource graph rather than as one opaque unit. In Pulumi Cloud the package gets the same treatment as any other: an [API reference](/docs/idp/concepts/private-registry/#api-documentation) generated from the module's variables and outputs, and [usage tracking](/docs/idp/concepts/private-registry/#usage-tracking) recording which stacks depend on it and which of those are behind the latest version.
 
@@ -114,9 +114,9 @@ pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<versio
 
 `hcl` is a parameterized provider. The `module` keyword selects module mode, followed by the module address and an optional version. Omit the version to resolve the latest published version; pass one to pin it.
 
-This runs the conversion at the moment you run it, using whatever version of the `hcl` provider you have, rather than using the package the registry produced. It is useful while a version is still converting. It is not a way around a failed conversion: a module the registry could not convert fails here for the same reason.
+This runs the conversion at the moment you run it, using whatever version of the `hcl` provider you have, rather than using the package the registry produced. Use it while a version is still converting. It does not work around a failed conversion: a module the registry could not convert fails here for the same reason.
 
-After `pulumi login`, both commands resolve using your Pulumi credentials, so no manual token or registry login is needed. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
+Both commands resolve using your Pulumi credentials. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
 
 ## Consume from OpenTofu or Terraform
 
@@ -139,4 +139,3 @@ module "private_subnet" {
   version = "1.2.3"
 }
 ```
-

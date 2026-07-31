@@ -1,8 +1,9 @@
 ---
 title: "Publish a Terraform module, get a Pulumi package automatically"
 date: 2026-08-04
+category: product
 draft: false
-meta_desc: "Publish private Terraform modules to the Pulumi Cloud registry and get a typed Pulumi package for every version, with generated SDKs, API docs, and usage tracking across your stacks."
+meta_desc: "Publish private Terraform modules to the Pulumi Cloud registry and get a typed Pulumi package for every version, with generated SDKs and API docs."
 meta_image: meta.png
 feature_image: feature.png
 authors:
@@ -70,7 +71,7 @@ pulumi package add vpc-aws 1.2.3
 
 Installing a converted package needs [Pulumi CLI](/docs/install/) 3.248.0 or newer.
 
-The module becomes a [multi-language component](https://github.com/pulumi-labs/pulumi-hcl/blob/main/docs/mlc.md). Its `variable` blocks become typed inputs and its `output` blocks become typed outputs, and Pulumi generates an SDK for whichever language the project uses: TypeScript, Python, Go, C#, Java, or YAML. Editors complete the inputs, and a misspelled one fails at compile time rather than partway through a plan. The resources the module creates appear individually in previews and in the resource graph.
+The module becomes a [multi-language component](https://github.com/pulumi/pulumi-hcl/blob/master/docs/mlc.md). Its `variable` blocks become typed inputs and its `output` blocks become typed outputs, and Pulumi generates an SDK for whichever language the project uses: TypeScript, Python, Go, C#, Java, or YAML. Editors complete the inputs, and a misspelled one fails at compile time rather than partway through a plan. The resources the module creates appear individually in previews and in the resource graph.
 
 Pulumi Cloud treats it as it would any other package. The package page carries an API reference generated from the module's variables and outputs, and records which stacks depend on it and which of those are behind the latest version, so you know who to tell before publishing a breaking change. That count follows the package, so it covers the stacks consuming the module through Pulumi, not the ones consuming it over the Terraform protocol.
 
