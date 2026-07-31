@@ -296,7 +296,7 @@ keys in their own key management service accounts. The platform integrates with 
 federated identity flows, exchanging short-lived, organization-scoped credentials with the customer's key management
 service for each operation. This bring-your-own-key model ensures that the platform operator cannot decrypt the
 protected data without authorization that the customer can revoke at any time through their own key management
-infrastructure.
+infrastructure. It also gives customers an independent audit trail of key activity through their cloud provider’s native logging.
 
 Each organization can maintain multiple key encryption keys simultaneously, with one designated as the default for new
 encryption operations. This multi-key capability supports key rotation workflows where new data is encrypted with
