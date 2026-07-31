@@ -138,7 +138,7 @@ jobs:
         if: success()
         env:
           SLACK_WEBHOOK_URL: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
-          BUILD_DURATION_THRESHOLD_MINUTES: '15'
+          BUILD_DURATION_THRESHOLD_MINUTES: '20'
         run: ./scripts/ci-build-duration-alert.sh
 
       - name: Archive test results
