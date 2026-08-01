@@ -2,12 +2,14 @@
 
 {{ $graph := slice }}
 
-{{/* Create WebPage entity as the main container */}}
+{{/* Create WebPage entity as the main container.
+     name mirrors the <title> tag head.html builds (title_tag when present,
+     falling back to .Title), not the short sidebar nav label. */}}
 {{ $webpage := dict
   "@type" "WebPage"
   "@id" (printf "%s#webpage" .Permalink)
   "url" .Permalink
-  "name" .Title
+  "name" (or .Params.title_tag .Title)
 }}
 
 {{/* Add description if available */}}

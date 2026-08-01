@@ -8,16 +8,17 @@
 {{ end }}
 
 {{/* Build HowTo entity */}}
+{{ $pageName := (or .Params.title_tag .Title) }}
 {{ $schema := dict
   "@type" "HowTo"
   "@id" "#main-content"
-  "name" .Title
+  "name" $pageName
   "url" .Permalink
   "inLanguage" "en-US"
 }}
 
 {{/* Add description */}}
-{{ with (or .Params.meta_desc .Summary (printf "Learn how to %s with Pulumi" .Title)) }}
+{{ with (or .Params.meta_desc .Summary (printf "Learn how to %s with Pulumi" $pageName)) }}
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 
