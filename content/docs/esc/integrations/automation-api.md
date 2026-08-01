@@ -238,7 +238,7 @@ import com.pulumi.automation.WorkspaceStack;
 import java.util.List;
 
 public class ManageEnvironments {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         var projectName = "myProject";
         var stackName = "dev";
 
