@@ -135,6 +135,7 @@
 {{ end }}
 
 {{/* Add WebPage to graph */}}
+{{ $webpage = merge $webpage (dict "isPartOf" (dict "@id" "https://www.pulumi.com/#website") "inLanguage" "en-US") }}
 {{ $graph = $graph | append $webpage }}
 
 {{/* Shared identity fields for the Organization entity, defined once and reused
@@ -328,6 +329,33 @@
     "sameAs" $orgSameAs
   }}
   {{ $graph = $graph | append $orgMinimal }}
+  {{/* Add a lean per-page WebSite node on every non-home page. Collector
+       partials (e.g. blog-entity.html) emit "isPartOf": {"@id":
+       "https://www.pulumi.com/#website"} on every content page, but until
+       now that @id was only ever defined inside the .IsHome branch above —
+       so on every one of the ~2,500+ non-home URLs (809 blog posts included)
+       isPartOf pointed at a node absent from that page's own @graph. Dangling
+       @id references break entity-graph consolidation for both Google's
+       structured-data parser and AI/LLM extractors, which evaluate each
+       page's JSON-LD independently and do not dereference @id links across
+       pages. This mirrors $orgMinimal immediately above: a lean sibling of
+       the homepage's rich WebSite node, sharing its @id/url/name/
+       alternateName/description/inLanguage/publisher so the two cannot
+       drift out of sync, but deliberately omitting "about" and "mentions"
+       (homepage entity-definition payload that would bloat every page) and
+       any "potentialAction"/SearchAction (Google retired the sitelinks
+       search box; the repo has none today and this does not add one). */}}
+  {{ $websiteMinimal := dict
+    "@type" "WebSite"
+    "@id" "https://www.pulumi.com/#website"
+    "url" "https://www.pulumi.com"
+    "name" "Pulumi"
+    "alternateName" "Pulumi IaC Platform"
+    "description" "Infrastructure as Code platform with AI. Deploy to any cloud using TypeScript, Python, Go, C#, Java, or YAML."
+    "inLanguage" "en-US"
+    "publisher" (dict "@id" "https://www.pulumi.com/#organization")
+  }}
+  {{ $graph = $graph | append $websiteMinimal }}
 {{ end }}
 
 {{/* Add comparison table to graph (collected earlier to wire hasPart into WebPage) */}}
