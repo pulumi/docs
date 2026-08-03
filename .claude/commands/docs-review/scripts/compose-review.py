@@ -1096,20 +1096,34 @@ def _stub_bullet(v: dict, todo: str) -> dict:
     ref = first_line_ref(v.get("line_range") or "")
     text = quote(redact(trunc(v.get("text") or "", TEXT_TRUNC)))
     verdict = v.get("verdict") or "?"
-    pointer = _evidence_pointer(v)
     file_path = (v.get("file") or "").strip()
-    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — <commentary>`.
-    # Three visually distinct segments separated by em-dashes:
+    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — verdict: <v>[; framing: …] <TODO>`.
     #   1. L-prefix + file path (the validator anchors here)
     #   2. italicized quoted claim (so the reader can scan claims fast)
-    #   3. verdict + evidence pointer + TODO (the actionable bit)
+    #   3. verdict + the reviewer's fix prose (the actionable bit)
     # The file path is rendered AFTER `**[L<n>]**` so the validator's
     # bucket-bullet-line-range-prefix regex (`^\s*-\s+\*\*\[(L\d+...)\]\*\*`)
     # still anchors on the L-token; the filename disambiguates which file
     # the line number refers to on multi-file PRs.
+    #
+    # The evidence/source/intuition pointer is deliberately NOT repeated here.
+    # It is already rendered verbatim on this claim's 🔍 trail line a few
+    # lines above, and measuring a published review (2026-08-03, fork PR #228)
+    # put the duplicate at 1,596 chars — 10% of the whole comment — sitting
+    # between the claim and the fix the author actually has to read. The trail
+    # is the evidence record; the bucket bullet is the instruction. Every
+    # evidence-checking validator rule (pass-3-unverifiable-evidence,
+    # pass-3-evidence-faithful, verified-claims-trail-faithful) reads the
+    # trail, not this bullet, so nothing is weakened by dropping it.
+    #
+    # `framing:` survives: the editorial pass is told to mirror it (anti-hedge
+    # on ⚔️ mismatch), so it stays where the reviewer is working.
+    fn = (v.get("framing_note") or "").strip()
+    framing_part = f"; framing: {redact(trunc(fn, 160))}" if fn else ""
     file_part = f" `{file_path}` —" if file_path else ""
     italic_text = f"*{text}*" if text else text
-    bullet = f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}; {pointer} <TODO: {todo}>"
+    bullet = (f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}{framing_part} "
+              f"<TODO: {todo}>")
     return {"ref": ref, "bullet": bullet, "verdict": verdict}
 
 
