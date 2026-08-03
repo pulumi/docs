@@ -1,10 +1,13 @@
 {{- /*
     Blog homepage feed — the single source of truth shared by
-    layouts/blog/list.html (rendering) and layouts/partials/head.html
-    (pagination init).
+    layouts/blog/list.html (rendering), layouts/partials/head.html (pagination
+    init), and template-partials/template-latest-posts.html (the site homepage
+    row).
 
-    Returns: dict "featured" <pages> "feed" <pages> "posts" <pages>
+    Returns: dict "featured" <pages> "feed" <pages> "posts" <pages> "pool" <pages>
       posts     all published blog posts, newest-first (helper pages excluded)
+      pool      posts minus the `general` category — the promotable posts the
+                featured slots draw from, and what the homepage row shows
       featured  the 4 featured slots (hero + 3 small cards), resolved from
                 blog_home.yaml `featured` (pinned slugs + auto-fill)
       feed      posts minus featured — the paginated list below the fold
@@ -50,4 +53,4 @@
     {{- end -}}
 {{- end -}}
 {{- $featured = first 4 $featured -}}
-{{- return dict "featured" $featured "feed" (complement $featured $posts) "posts" $posts -}}
+{{- return dict "featured" $featured "feed" (complement $featured $posts) "posts" $posts "pool" $pool -}}
