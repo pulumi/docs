@@ -306,7 +306,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   - Clearly-broken state that would fail CI on merge (per `docs-review:references:infra`).
   - Legal semantic change on `/legal/` content (per `docs-review:references:website`).
   - Public-source-contradicted competitor claim (per `docs-review:references:website`).
-  - Blocker-tier Vale finding (`blocker: true` in `.vale-findings.json`, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product name, banned term with a fixed replacement, misspelling, grammatical agreement). The composer renders these as `[style-blocker]` bullets in 🚨; the reviewer never demotes or deletes them.
+  - Blocker-tier Vale finding (`blocker: true` in `.vale-findings.json`, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product name, banned term with a fixed replacement, misspelling, grammatical agreement). The composer renders these as `[style-blocker]` bullets in 🚨; the reviewer never demotes or deletes them. **The reviewer also never *writes* one.** The marker is composer-only: it certifies Vale's blocker tier produced the finding, and it is what exempts the bullet from the trail-prefix match. A hand-authored `[style-blocker]` therefore smuggles an unverified finding past that check — render reviewer-found issues as ordinary `**[L…]**` bullets with a trail record instead. Enforced by `style-blocker-provenance`, which matches every such bullet against `.vale-findings.json`.
 
   **Two-question test for non-listed findings.** Promote to 🚨 only when the answer to *both* questions below is yes:
 

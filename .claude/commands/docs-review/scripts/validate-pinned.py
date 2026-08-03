@@ -335,6 +335,13 @@ class Context:
     # `verdicts` list (possibly empty). Used by `verified-claims-trail-faithful`,
     # `pass-2-fetch-faithfulness` (strengthened), and `pass-3-evidence-faithful`.
     verified_claims: list[dict] | None = None
+    # Schema v20: `.vale-findings.json` from the `vale-findings-filter.py`
+    # pre-step. None means the file wasn't present. Used by
+    # `style-blocker-provenance` to prove every `[style-blocker]` bullet in 🚨
+    # actually came from Vale's blocker tier rather than being authored by the
+    # reviewer -- that marker exempts a bullet from trail-matching, so without
+    # this check it is a forgeable bypass.
+    vale_findings: list[dict] | None = None
 
 
 # ---- Body parsing helpers --------------------------------------------------
@@ -683,6 +690,52 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
             hint="Re-render style suggestions inside per-file <details> blocks with the per-file roll-up summary — they are always collapsed, never inline.",
         )]
     return []
+
+
+def check_style_blocker_provenance(ctx: Context) -> list[Violation]:
+    """Every `[style-blocker]` bullet must trace to a blocker entry in `.vale-findings.json`.
+
+    The marker exempts a 🚨 bullet from trail-matching (Vale findings aren't
+    claims and have no trail record). That makes it a bypass the reviewer could
+    self-apply to route any finding into 🚨 without a verification trail --
+    observed on 2026-08-03, when a run authored a `[style-blocker] _misspelling_`
+    bullet for a typo Vale never reported (`misspelling` isn't even an emittable
+    category). The finding was real, but the provenance was not, so the
+    exemption fired on an unverified bullet.
+
+    Real reviewer-discovered findings belong in 🚨 as ordinary `**[L…]**`
+    bullets with a trail record. This rule keeps the marker meaning exactly
+    "the composer put this here from Vale's blocker tier."
+    """
+    if ctx.vale_findings is None:
+        return []  # pre-step didn't run — absence isn't evidence
+    allowed: set[tuple[str, int]] = {
+        (str(f.get("file") or ""), int(f.get("line") or 0))
+        for f in ctx.vale_findings
+        if f.get("blocker")
+    }
+    violations: list[Violation] = []
+    for bullet in extract_bucket_bullets(ctx.body, "🚨 Outstanding"):
+        if "[style-blocker]" not in bullet:
+            continue
+        prefix = extract_bullet_prefix(bullet)  # "L797" / "L12-L20"
+        m = re.match(r"^L(\d+)", prefix or "")
+        line_no = int(m.group(1)) if m else None
+        fm = re.search(r"`([^`]+\.\w+)`", bullet)
+        fname = fm.group(1) if fm else ""
+        if line_no is not None and (fname, line_no) in allowed:
+            continue
+        violations.append(Violation(
+            rule_id="style-blocker-provenance",
+            line_ref=f"<🚨 {prefix or '?'}>",
+            expected="every [style-blocker] bullet matches a blocker entry in .vale-findings.json",
+            actual=f"no blocker finding at {fname or '?'}:{line_no if line_no is not None else '?'}",
+            hint=("The `[style-blocker]` marker is composer-only — it means Vale's blocker tier "
+                  "produced this finding, and it exempts the bullet from trail-matching. Do not "
+                  "author one. If you found this issue yourself and it belongs in 🚨, render it "
+                  "as a normal `**[L…]**` bullet with a matching 🔍 Verification trail record."),
+        ))
+    return violations
 
 
 def check_mandatory_h3_order(ctx: Context) -> list[Violation]:
@@ -2355,6 +2408,12 @@ RULES = [
         "check": check_cross_sibling_math,
     },
     {
+        "id": "style-blocker-provenance",
+        "desc": "Every [style-blocker] bullet in 🚨 traces to a blocker entry in .vale-findings.json (the marker exempts trail-matching, so it must not be forgeable).",
+        "hint": "Do not author [style-blocker] bullets — that marker is composer-only. Render reviewer-found issues as normal **[L…]** bullets with a trail record.",
+        "check": check_style_blocker_provenance,
+    },
+    {
         "id": "style-render-mode",
         "desc": "Style suggestions are always rendered collapsed (per-file <details> roll-up), never inline.",
         "hint": "Inline-all when total ≤5 OR concentrated in one file (≤30); collapse-all when multi-file AND total >5, or total >30.",
@@ -2668,6 +2727,24 @@ def load_verified_claims(explicit_path: str | None) -> list[dict] | None:
     return [v for v in verdicts if isinstance(v, dict)]
 
 
+def load_vale_findings(explicit_path: str | None) -> list[dict] | None:
+    """Load `.vale-findings.json` (a flat list) if present, else None.
+
+    None means the pre-step didn't run, which makes `style-blocker-provenance`
+    skip rather than fire -- an absent artifact is not evidence of forgery.
+    """
+    path = Path(explicit_path) if explicit_path else Path.cwd() / ".vale-findings.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, list):
+        return None
+    return [f for f in data if isinstance(f, dict)]
+
+
 def repo_root() -> Path:
     try:
         result = subprocess.run(
@@ -2756,6 +2833,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     editorial_balance = load_editorial_balance(args.editorial_balance)
     candidate_claims = load_candidate_claims(args.candidate_claims)
     verified_claims = load_verified_claims(args.verified_claims)
+    vale_findings = load_vale_findings(args.vale_findings)
 
     ctx = Context(
         body=body,
@@ -2771,6 +2849,7 @@ def cmd_check(args: argparse.Namespace) -> int:
         editorial_balance=editorial_balance,
         candidate_claims=candidate_claims,
         verified_claims=verified_claims,
+        vale_findings=vale_findings,
     )
 
     skip_rules = set(args.skip_rule or [])
@@ -2889,6 +2968,10 @@ def main() -> int:
                               "pre-step. Defaults to ./.verified-claims.json. Pass-through to "
                               "the schema-v8 artifact rules (verified-claims-trail-faithful, "
                               "pass-2-fetch-faithfulness part (b), pass-3-evidence-faithful).")
+    p_check.add_argument("--vale-findings",
+                         help="Path to `.vale-findings.json` from the `vale-findings-filter.py` "
+                              "pre-step. Defaults to ./.vale-findings.json. Pass-through to the "
+                              "style-blocker-provenance rule.")
     p_check.set_defaults(func=cmd_check)
 
     p_rules = sub.add_parser("show-rules", help="Print the rule registry.")
