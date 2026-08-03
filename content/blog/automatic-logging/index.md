@@ -34,7 +34,7 @@ social:
         Here's what changed.
 ---
 
-Pulumi v3.254.0 introduces automatic logging: every operation is logged in an encrypted log file that can be shared with the Pulumi team for inspection. No more re-running commands just to get logs to the Pulumi team for debugging; instead you can share existing logs securely.
+Pulumi v3.254.0 introduces automatic logging: every operation is logged in an encrypted log file that can optionally be shared with the Pulumi team for inspection. No more re-running commands just to get logs to the Pulumi team for debugging; instead you can share existing logs securely.
 
 <!--more-->
 
