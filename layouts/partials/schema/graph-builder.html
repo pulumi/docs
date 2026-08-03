@@ -3,8 +3,9 @@
 {{ $graph := slice }}
 
 {{/* Create WebPage entity as the main container.
-     name mirrors the <title> tag head.html builds (title_tag when present,
-     falling back to .Title), not the short sidebar nav label. */}}
+     name uses the same title_tag-then-.Title precedence head.html uses for
+     the <title> tag (minus its " | Pulumi …" suffix), not the short sidebar
+     nav label. */}}
 {{ $webpage := dict
   "@type" "WebPage"
   "@id" (printf "%s#webpage" .Permalink)

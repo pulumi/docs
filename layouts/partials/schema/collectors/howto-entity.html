@@ -18,7 +18,7 @@
 }}
 
 {{/* Add description */}}
-{{ with (or .Params.meta_desc .Summary (printf "Learn how to %s with Pulumi" $pageName)) }}
+{{ with (or .Params.meta_desc .Summary (printf "Learn how to %s with Pulumi" .Title)) }}
   {{ $schema = merge $schema (dict "description" .) }}
 {{ end }}
 

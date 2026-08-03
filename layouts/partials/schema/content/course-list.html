@@ -17,7 +17,7 @@
         "item" (dict
           "@type" "Course"
           "name" $courseName
-          "description" (or $course.Params.meta_desc $course.Summary (printf "Learn %s with this hands-on Pulumi tutorial" $courseName))
+          "description" (or $course.Params.meta_desc $course.Summary (printf "Learn %s with this hands-on Pulumi tutorial" $course.Title))
           "url" $course.Permalink
           "provider" (dict
             "@type" "Organization"
