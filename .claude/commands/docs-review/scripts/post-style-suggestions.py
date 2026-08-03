@@ -247,29 +247,34 @@ def delete_prior_suggestions(repo: str, pr: str) -> None:
 
 
 def annotate_draft(draft_path: Path, posted: list[dict]) -> int:
-    """Mark the pinned-review style bullets that have a posted suggestion.
+    """Make the ✏️ marks on style bullets match what actually posted.
 
-    Appends SUGGESTION_MARK to `- **line N:**` bullets whose (file, line)
-    actually posted. Runs BEFORE the pinned upsert, and keys off what the API
-    accepted rather than what the model staged, so the mark never advertises a
-    button that isn't there. Returns the number of bullets marked.
+    AUTHORITATIVE, not additive: every existing mark is stripped first, then
+    re-applied only to bullets whose (file, line) the GitHub API accepted. The
+    editorial pass has been observed adding its own marks (fork PR #229, where
+    it wrote four mid-line ✏️ of its own) — harmless when its guesses happen to
+    match, but the whole point of the mark is that it promises a button exists.
+    A mark the model wrote for an entry that was later dropped (blocker line,
+    anchor mismatch, cap) would be a lie, so the workflow overwrites rather
+    than trusts.
 
-    The style block is grouped per file under an `##### <path>` heading, so we
-    track the current heading while walking to disambiguate same-numbered lines
-    across files. (The heading is an H5 rather than bold text specifically so
-    validate-pinned.py's bucket-bullet regex doesn't count it as a finding.)
+    Returns the number of bullets carrying a mark when done.
+
+    The style block groups bullets under an `##### <path>` heading, so we track
+    the current heading while walking to disambiguate same-numbered lines
+    across files. (H5 rather than bold text specifically so validate-pinned's
+    bucket-bullet regex doesn't count it as a finding.)
     """
     try:
         lines = draft_path.read_text(encoding="utf-8").splitlines()
     except (OSError, UnicodeDecodeError):
         return 0
     want = {(str(e.get("file")), int(e.get("line"))) for e in posted}
-    if not want:
-        return 0
     file_re = re.compile(r"^#{5}\s+(\S+\.\w+)")
-    bullet_re = re.compile(r"^(\s*- \*\*line (\d+):\*\*.*)$")
+    bullet_re = re.compile(r"^(\s*- \*\*line (\d+):\*\*)(.*)$")
     current: str | None = None
     marked = 0
+    changed = False
     for i, line in enumerate(lines):
         fm = file_re.match(line)
         if fm:
@@ -278,10 +283,18 @@ def annotate_draft(draft_path: Path, posted: list[dict]) -> int:
         bm = bullet_re.match(line)
         if not bm or current is None:
             continue
-        if (current, int(bm.group(2))) in want and SUGGESTION_MARK.strip() not in line:
-            lines[i] = bm.group(1) + SUGGESTION_MARK
+        head, body = bm.group(1), bm.group(3)
+        # strip any mark the editorial pass may have placed, wherever it sits
+        clean_body = body.replace(SUGGESTION_MARK.strip(), "").rstrip()
+        clean_body = re.sub(r"\s{2,}", " ", clean_body)
+        rebuilt = head + clean_body
+        if (current, int(bm.group(2))) in want:
+            rebuilt += SUGGESTION_MARK
             marked += 1
-    if marked:
+        if rebuilt != line:
+            lines[i] = rebuilt
+            changed = True
+    if changed:
         draft_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return marked
 
@@ -359,7 +372,7 @@ def main() -> int:
     print(f"post-style-suggestions: posted {len(valid)} suggestion(s).", file=sys.stderr)
     if args.annotate_draft:
         n = annotate_draft(Path(args.annotate_draft), valid)
-        print(f"post-style-suggestions: marked {n} style bullet(s) in the draft.",
+        print(f"post-style-suggestions: {n} style bullet(s) carry the ✏️ mark.",
               file=sys.stderr)
     return 0
 

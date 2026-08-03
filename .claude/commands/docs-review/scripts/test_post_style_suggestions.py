@@ -225,14 +225,39 @@ def test_annotate_disambiguates_same_line_across_files(tmp_path):
     assert "'utilize' is too wordy.\n" in out              # foo.md line 2 NOT marked
 
 
+def test_annotate_overwrites_model_authored_marks(tmp_path):
+    """The workflow owns the mark; a mark the model wrote is corrected, not kept.
+
+    Regression: fork PR #229's editorial pass wrote four mid-line ✏️ of its
+    own. They happened to match what posted, but a model-authored mark on an
+    entry that was later dropped would promise a button that doesn't exist.
+    """
+    d = tmp_path / "draft.md"
+    # model marked BOTH foo.md bullets mid-line; only line 2 actually posted
+    d.write_text(DRAFT
+                 .replace("- **line 2:** [style] _wordiness_", "- **line 2:** ✏️ [style] _wordiness_")
+                 .replace("- **line 3:** [style] _weasel word_", "- **line 3:** ✏️ [style] _weasel word_"))
+    n = pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}])
+    out = d.read_text()
+    assert n == 1
+    assert out.count("✏️") == 1
+    # the surviving mark is the workflow's, appended at end of line
+    assert "- **line 2:** [style] _wordiness_ — 'utilize' is too wordy. ✏️" in out
+    # the unposted one lost its mark entirely
+    assert "- **line 3:** [style] _weasel word_ — 'usually' is a weasel word!" in out
+
+
 def test_annotate_is_idempotent(tmp_path):
+    """Re-running must not change the body. The return is marks PRESENT, not
+    marks newly added, so it stays 1 on the second pass."""
     d = tmp_path / "draft.md"
     d.write_text(DRAFT)
     posted = [{"file": "content/docs/foo.md", "line": 2}]
-    pss.annotate_draft(d, posted)
-    second = pss.annotate_draft(d, posted)
-    assert second == 0
-    assert d.read_text().count("✏️") == 1
+    assert pss.annotate_draft(d, posted) == 1
+    once = d.read_text()
+    assert pss.annotate_draft(d, posted) == 1
+    assert d.read_text() == once
+    assert once.count("✏️") == 1
 
 
 def test_annotate_noop_on_empty_or_missing(tmp_path):
