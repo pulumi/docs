@@ -182,3 +182,61 @@ def test_missing_file_is_noop(tmp_path, monkeypatch):
         "--in", str(tmp_path / "absent.json"), "--dry-run",
     ])
     assert pss.main() == 0
+
+
+DRAFT = """### ⚠️ Low-confidence
+
+*Review each and resolve as appropriate — these don't block the PR.*
+
+#### Style suggestions
+
+*Optional polish from pattern-based linting.*
+
+##### content/docs/foo.md
+
+- **line 2:** [style] _wordiness_ — 'utilize' is too wordy.
+- **line 3:** [style] _weasel word_ — 'usually' is a weasel word!
+
+##### content/docs/bar.md
+
+- **line 2:** [style] _filler_ — 'so' is filler.
+
+### 📋 Triaged verifier findings
+"""
+
+
+def test_annotate_marks_only_posted_bullets(tmp_path):
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT)
+    n = pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}])
+    out = d.read_text()
+    assert n == 1
+    assert "- **line 2:** [style] _wordiness_ — 'utilize' is too wordy. ✏️" in out
+    assert "'usually' is a weasel word!\n" in out          # untouched
+    assert "- **line 2:** [style] _filler_ — 'so' is filler." in out  # other file untouched
+
+
+def test_annotate_disambiguates_same_line_across_files(tmp_path):
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT)
+    pss.annotate_draft(d, [{"file": "content/docs/bar.md", "line": 2}])
+    out = d.read_text()
+    assert "'so' is filler. ✏️" in out
+    assert "'utilize' is too wordy.\n" in out              # foo.md line 2 NOT marked
+
+
+def test_annotate_is_idempotent(tmp_path):
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT)
+    posted = [{"file": "content/docs/foo.md", "line": 2}]
+    pss.annotate_draft(d, posted)
+    second = pss.annotate_draft(d, posted)
+    assert second == 0
+    assert d.read_text().count("✏️") == 1
+
+
+def test_annotate_noop_on_empty_or_missing(tmp_path):
+    assert pss.annotate_draft(tmp_path / "absent.md", [{"file": "x", "line": 1}]) == 0
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT)
+    assert pss.annotate_draft(d, []) == 0

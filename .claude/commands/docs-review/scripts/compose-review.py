@@ -977,11 +977,20 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
 
 
 def _render_style_findings(findings: list[dict]) -> str:
-    # Always collapsed and excluded from the ⚠️ count: these are advisory nags
-    # kept in the review for the rule-tuning loop (recurring high-fix-rate
-    # categories get promoted into Vale rules or the blocker tier), not part
-    # of the reviewer's burden. Blocker-tier Vale findings render under 🚨
-    # instead and never reach this function.
+    # Rendered EXPANDED (no <details>) and excluded from the ⚠️ count. These
+    # are advisory nags kept for the rule-tuning loop, not reviewer burden —
+    # the count exclusion carries that signal, so hiding them behind a
+    # disclosure just costs a click. Blocker-tier Vale findings render under
+    # 🚨 instead and never reach this function.
+    #
+    # Each file gets an `##### <path>` heading rather than a <summary>.
+    # Two constraints pin that shape:
+    #   1. post-style-suggestions.py --annotate-draft walks these headings to
+    #      attribute `- **line N:**` bullets to a file before appending ✏️.
+    #   2. It must NOT start with `**` at column 0 — validate-pinned.py's
+    #      extract_bucket_bullets counts any such line as a bucket finding,
+    #      which would inflate the ⚠️ count and trip the L-prefix rule.
+    # Keep all three in sync.
     by_file: dict[str, list[dict]] = {}
     for f in findings:
         by_file.setdefault(str(f.get("file") or "?"), []).append(f)
@@ -989,27 +998,27 @@ def _render_style_findings(findings: list[dict]) -> str:
         STYLE_HEADING,
         "",
         "*Optional polish from pattern-based linting — never blocking, not counted above. "
-        "Take the ones that read better and ignore the rest.*",
+        "Take the ones that read better and ignore the rest. "
+        "✏️ marks a suggestion you can apply in one click from the Files changed tab.*",
         "",
     ]
-    out.append("<sub>Click each filename to expand.</sub>")
-    out.append("")
+    multi = len(by_file) > 1
     for fname in sorted(by_file):
         items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
         kind_counts: dict[str, int] = {}
         for it in items:
             kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
         kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
-        breakdown = ", ".join(f"<strong>{c}</strong> {k}" for k, c in kinds_sorted)
-        out.append("<details>")
-        out.append(f"<summary><strong>{fname}</strong> (<strong>{len(items)}</strong> issues: {breakdown})</summary>")
+        breakdown = ", ".join(f"{c} {k}" for k, c in kinds_sorted)
+        # The file heading is always rendered — the annotator needs it even on
+        # a single-file review to bind bullets to a path.
+        suffix = f" — {len(items)} ({breakdown})" if multi else ""
+        out.append(f"##### {fname}{suffix}")
         out.append("")
         for it in items:
             cat = str(it.get("category") or "style")
             msg = str(it.get("message") or "").strip()
             out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
-        out.append("")
-        out.append("</details>")
         out.append("")
     # drop trailing blank
     while out and out[-1] == "":

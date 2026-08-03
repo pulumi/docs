@@ -653,17 +653,18 @@ def check_cross_sibling_math(ctx: Context) -> list[Violation]:
 
 
 def check_style_render_mode(ctx: Context) -> list[Violation]:
-    """Style suggestions are always rendered collapsed (per-file <details> roll-up), never inline."""
+    """Style suggestions render EXPANDED — never hidden behind a <details>.
+
+    Inverted on 2026-08-03. They were collapsed while they still counted
+    toward ⚠️; once the count excluded them, the disclosure only cost a click
+    and hid the ✏️ marks that point at one-click suggestions.
+    """
     span = find_section(ctx.body, "⚠️ Low-confidence")
     if span is None:
         return []
     start, end = span
     section_lines = ctx.body_lines[start:end]
-    section_text = "\n".join(section_lines)
 
-    # Locate the advisory sub-heading. Both spellings are accepted: the block
-    # was renamed "Style findings" -> "Style suggestions" on 2026-08-03, and a
-    # re-entrant review can still merge a pre-rename body.
     style_idx = None
     for i, line in enumerate(section_lines):
         if line.strip() in STYLE_HEADINGS:
@@ -673,21 +674,16 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
         return []  # no style suggestions — render-mode N/A
 
     style_lines = section_lines[style_idx:]
-    # Count bullets and detect <details> blocks.
     bullet_count = sum(1 for ln in style_lines if ln.lstrip().startswith("- **line "))
-    file_count = sum(1 for ln in style_lines if ln.lstrip().startswith("<summary>"))
-    has_details = any("<details>" in ln for ln in style_lines)
-
-    # Style suggestions are always collapsed (per-file <details> roll-up),
-    # regardless of count — they're advisory, uncounted nags and must not
-    # add inline reading burden to the ⚠️ section.
-    if bullet_count and not has_details:
+    if bullet_count and any("<details>" in ln for ln in style_lines):
         return [Violation(
             rule_id="style-render-mode",
             line_ref="<#### Style suggestions>",
-            expected=f"collapse-all mode (bullets={bullet_count}, files={file_count})",
-            actual="inline-all mode rendered",
-            hint="Re-render style suggestions inside per-file <details> blocks with the per-file roll-up summary — they are always collapsed, never inline.",
+            expected=f"expanded (no <details>); bullets={bullet_count}",
+            actual="collapsed inside a <details> block",
+            hint=("Render style suggestions expanded, grouped under a bold `**<path>**` line per "
+                  "file. They are uncounted, so they cost no review burden, and collapsing them "
+                  "hides the ✏️ marks that flag one-click suggestions."),
         )]
     return []
 
@@ -2415,7 +2411,7 @@ RULES = [
     },
     {
         "id": "style-render-mode",
-        "desc": "Style suggestions are always rendered collapsed (per-file <details> roll-up), never inline.",
+        "desc": "Style suggestions render expanded, never hidden behind a <details> block.",
         "hint": "Inline-all when total ≤5 OR concentrated in one file (≤30); collapse-all when multi-file AND total >5, or total >30.",
         "check": check_style_render_mode,
     },

@@ -1004,7 +1004,7 @@ jobs:
             - the bucket-count table (a *starting point* matching the stub-bullet counts);
             - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️ · `framing-drift` 🌀), evidence pointer, source;
             - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
-            - the `#### Style suggestions` block (advisory Vale findings from `.vale-findings.json`, always collapsed, uncounted) plus any `[style-blocker]` bullets rendered into 🚨 Outstanding (blocker-tier Vale findings, counted);
+            - the `#### Style suggestions` block (advisory Vale findings from `.vale-findings.json`, expanded, uncounted) plus any `[style-blocker]` bullets rendered into 🚨 Outstanding (blocker-tier Vale findings, counted);
             - the empty 💡 / ✅ forms;
             - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
             - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
@@ -1019,7 +1019,7 @@ jobs:
 
             ## Style suggestions
 
-            The composer already split Vale findings into two tiers and rendered both. Don't rebuild either. **Blocker tier** (`[style-blocker]` bullets in 🚨 Outstanding, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product names, banned terms, misspellings, agreement errors): these are near-zero-false-positive correctness findings; never delete, demote, or reword them, and leave their 🚨 count intact. **Never author a `[style-blocker]` bullet yourself** — that marker means "the composer put this here from Vale's blocker tier" and it exempts the bullet from trail-matching, so writing one routes an unverified finding into 🚨 behind a check. If you find a real issue Vale missed and it belongs in 🚨, render it as an ordinary `**[L…]**` bullet with a matching 🔍 trail record. The `style-blocker-provenance` validator rule fails the review otherwise. **Advisory tier** (the `#### Style suggestions` block under ⚠️, always collapsed, the `category` field never the `rule` field): these are nags — they are NOT counted in the ⚠️ count-table cell, so if you remove a false-positive advisory bullet, do NOT decrement any count. **Delete false positives silently.** Do not list them, count them, name the rule that produced them, or add a sentence explaining why they were omitted — a bullet you deleted is one the author never needed to read about, and narrating it just re-adds the noise you removed (DO-NOT list item 1, "no retracted findings").
+            The composer already split Vale findings into two tiers and rendered both. Don't rebuild either. **Blocker tier** (`[style-blocker]` bullets in 🚨 Outstanding, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product names, banned terms, misspellings, agreement errors): these are near-zero-false-positive correctness findings; never delete, demote, or reword them, and leave their 🚨 count intact. **Never author a `[style-blocker]` bullet yourself** — that marker means "the composer put this here from Vale's blocker tier" and it exempts the bullet from trail-matching, so writing one routes an unverified finding into 🚨 behind a check. If you find a real issue Vale missed and it belongs in 🚨, render it as an ordinary `**[L…]**` bullet with a matching 🔍 trail record. The `style-blocker-provenance` validator rule fails the review otherwise. **Advisory tier** (the `#### Style suggestions` block under ⚠️, expanded and grouped per file, the `category` field never the `rule` field): these are nags — they are NOT counted in the ⚠️ count-table cell, so if you remove a false-positive advisory bullet, do NOT decrement any count. **Delete false positives silently.** Do not list them, count them, name the rule that produced them, or add a sentence explaining why they were omitted — a bullet you deleted is one the author never needed to read about, and narrating it just re-adds the noise you removed (DO-NOT list item 1, "no retracted findings").
 
             **Inline-suggestion sidecar.** As the last act of the editorial pass, triage the ADVISORY style bullets and Write `.style-suggestions.json` (a JSON array; write `[]` if none qualify) for the ones whose rewrite is a clear improvement. Schema per entry: `{"file": "<path>", "line": <n>, "original": "<exact text on that line>", "replacement": "<new text>", "category": "<category>", "note": "<≤10-word reason>"}`. A workflow step validates each entry against the diff and file content and posts them as one-click GitHub `suggestion` comments — you never post them yourself. Convert a finding ONLY when ALL hold: (a) the rewrite preserves meaning exactly — a hedge that is factually load-bearing ("usually completes in five minutes") is NOT a conversion candidate, deleting it would overpromise; (b) the fix is contained on the single flagged line; (c) you are confident the result reads better, not just shorter. Skip false positives entirely (delete their bullets as usual). Cap at 10 — prefer the highest-reader-impact ones. `original` must be the exact substring on that line in the checked-out file, or validation drops the entry. Do NOT remove the corresponding collapsed `[style]` bullet — the block stays the complete record; the suggestion is the actionable copy. Blocker findings are never suggestions, and neither is anything sharing a LINE with one — a suggestion replaces the whole line, so it would re-commit the blocking text. The workflow drops those deterministically; don't waste an entry on them.
 
@@ -1140,6 +1140,31 @@ jobs:
           python3 .claude/commands/docs-review/scripts/strip-empty-triaged.py \
             --body-file .review-draft.md
 
+      # Post the advisory-style inline suggestions the editorial pass staged
+      # in .style-suggestions.json (one PR review, event=COMMENT, one
+      # ```suggestion block per finding — one-click applyable). The script
+      # validates every entry against the PR diff and the checked-out file
+      # (anti-hallucination), skips lines carrying a blocker finding, deletes
+      # prior suggestion comments first (delete-and-repost, same as
+      # TRIAGE_PROSE), and always exits 0 — suggestions are best-effort
+      # polish, never a pipeline failure.
+      #
+      # This runs BEFORE the pinned upsert on purpose: --annotate-draft marks
+      # the style bullets that actually posted with ✏️, and keying that mark
+      # off the API's accepted set (rather than what the model staged) is what
+      # keeps it from advertising a button that isn't there.
+      - name: Post inline style suggestions (Step D3)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --vale-findings .vale-findings.json \
+            --annotate-draft .review-draft.md
+
       - name: Upsert pinned comment (Step E)
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
         env:
@@ -1155,23 +1180,6 @@ jobs:
               --pr "${{ steps.pr-context.outputs.pr_number }}" \
               --body-file .review-draft.md
           fi
-
-      # Post the advisory-style inline suggestions the editorial pass staged
-      # in .style-suggestions.json (one PR review, event=COMMENT, one
-      # ```suggestion block per finding — one-click applyable). The script
-      # validates every entry against the PR diff and the checked-out file
-      # (anti-hallucination), deletes prior suggestion comments first
-      # (delete-and-repost, same as TRIAGE_PROSE), and always exits 0 —
-      # suggestions are best-effort polish, never a pipeline failure.
-      - name: Post inline style suggestions
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
-            --pr "${{ steps.pr-context.outputs.pr_number }}" \
-            --repo "${{ github.repository }}"
 
       # Per-tool spend telemetry — operator-internal observability for cost
       # variance investigations. Uploads the action's stream-JSON execution log
