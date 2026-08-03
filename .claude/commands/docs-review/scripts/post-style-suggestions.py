@@ -12,7 +12,9 @@ commit).
 
 Contract:
 - Advisory tier only. Blocker findings render in the pinned review's 🚨
-  bucket and are never suggestions.
+  bucket and are never suggestions — and a suggestion is dropped when it
+  lands on a line that carries one, since a whole-line replacement would
+  re-commit the blocking text.
 - Flag-only stays true in spirit: nothing is committed here; the author
   applies or dismisses each suggestion. The meaning-preservation judgment
   the deterministic-fix gate requires (see vale-deterministic-fixes.yaml)
@@ -92,20 +94,41 @@ REVIEW_BODY = (
 )
 
 
+def blocker_lines(vale_findings: list | None) -> set[tuple[str, int]]:
+    """(file, line) pairs carrying a blocker-tier Vale finding."""
+    if not isinstance(vale_findings, list):
+        return set()
+    return {
+        (str(f.get("file") or ""), int(f.get("line") or 0))
+        for f in vale_findings
+        if isinstance(f, dict) and f.get("blocker")
+    }
+
+
 def validate_entries(
     entries: list,
     added_lines: dict[str, set[int]],
     repo_root: Path,
+    blocked: set[tuple[str, int]] | None = None,
 ) -> tuple[list[dict], list[str]]:
     """Return (valid suggestion dicts, human-readable drop reasons).
 
     Valid dicts gain a `new_line` key: the full replacement line for the
     ```suggestion block.
+
+    `blocked` holds (file, line) pairs that carry a blocker-tier finding.
+    Suggestions on those lines are dropped: a suggestion is a whole-line
+    replacement, so accepting one on a line that also contains a blocker
+    would re-commit the blocking text verbatim (observed on fork PR #227,
+    where the 'Simply' suggestion's replacement line still read "Pulumi
+    Service" and "click"). Nothing is lost -- the blocker stays flagged in
+    🚨 and the author fixes the line there.
     """
     valid: list[dict] = []
     dropped: list[str] = []
     seen: set[tuple[str, int]] = set()
     file_cache: dict[str, list[str] | None] = {}
+    blocked = blocked or set()
 
     if not isinstance(entries, list):
         return [], ["input is not a JSON array"]
@@ -132,6 +155,10 @@ def validate_entries(
             continue
         if line not in added_lines.get(fname, set()):
             dropped.append(f"{tag}: not a PR-added line (suggestion can't anchor)")
+            continue
+        if (fname, line) in blocked:
+            dropped.append(f"{tag}: line carries a blocker finding "
+                           "(a whole-line suggestion would re-commit the blocking text)")
             continue
         if fname not in file_cache:
             try:
@@ -221,6 +248,9 @@ def main() -> int:
     ap.add_argument("--repo", default=DEFAULT_REPO)
     ap.add_argument("--in", dest="infile", default=".style-suggestions.json")
     ap.add_argument("--repo-root", default=".")
+    ap.add_argument("--vale-findings", default=".vale-findings.json",
+                    help="Path to the filter's output; used to skip suggestions on lines "
+                         "that carry a blocker-tier finding.")
     ap.add_argument("--patch-file", help="Read the PR diff from a file instead of `gh pr diff` (tests).")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
@@ -248,7 +278,12 @@ def main() -> int:
         patch = proc.stdout
     added = _vff.added_lines_per_file(patch)
 
-    valid, dropped = validate_entries(entries, added, Path(args.repo_root))
+    try:
+        vale = json.loads(Path(args.vale_findings).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+        vale = None
+    valid, dropped = validate_entries(
+        entries, added, Path(args.repo_root), blocker_lines(vale))
     for reason in dropped:
         print(f"post-style-suggestions: dropped {reason}", file=sys.stderr)
     print(f"post-style-suggestions: {len(valid)} valid suggestion(s), {len(dropped)} dropped.",

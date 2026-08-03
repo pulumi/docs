@@ -130,6 +130,35 @@ def test_dry_run_end_to_end(repo, tmp_path, capsys, monkeypatch):
     assert len(payload["comments"]) == 1
 
 
+def test_suggestion_on_blocker_line_dropped(repo):
+    """A whole-line suggestion must not re-commit blocking text.
+
+    Regression: fork PR #227 posted a 'Simply' suggestion on line 797, whose
+    replacement line still contained the blocker terms 'Pulumi Service' and
+    'click'.
+    """
+    blocked = pss.blocker_lines([
+        {"file": "content/docs/foo.md", "line": 2, "blocker": True},
+        {"file": "content/docs/foo.md", "line": 3, "blocker": False},
+    ])
+    valid, dropped = pss.validate_entries([entry()], added(), repo, blocked)
+    assert not valid
+    assert "carries a blocker finding" in dropped[0]
+
+
+def test_non_blocker_finding_on_line_does_not_block(repo):
+    blocked = pss.blocker_lines([
+        {"file": "content/docs/foo.md", "line": 2, "blocker": False}])
+    valid, _ = pss.validate_entries([entry()], added(), repo, blocked)
+    assert len(valid) == 1
+
+
+def test_blocker_lines_tolerates_junk():
+    assert pss.blocker_lines(None) == set()
+    assert pss.blocker_lines("nope") == set()
+    assert pss.blocker_lines([{"no_file": 1, "blocker": True}]) == {("", 0)}
+
+
 def test_repo_defaults_to_github_repository_env(monkeypatch):
     """The repo must come from the environment, not a hardcoded upstream name.
 
