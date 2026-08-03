@@ -25,6 +25,11 @@ Contract:
   before posting — same delete-and-repost semantics as TRIAGE_PROSE.
 - Never fails the workflow: any validation or API problem logs a warning
   and exits 0. Entries that fail validation are dropped individually.
+- The batch endpoint is ATOMIC (verified 2026-08-03: one unresolvable
+  anchor returns `422 Line could not be resolved` and creates nothing), so
+  local validation is load-bearing — a single bad entry would otherwise
+  cost every suggestion in the run. On a batch failure the script retries
+  one comment at a time and marks only what landed.
 
 Per-entry validation (anti-hallucination — the model wrote the JSON):
 - `file`, `line`, `original`, `replacement` present; replacement differs.
@@ -221,6 +226,36 @@ def build_review_payload(valid: list[dict]) -> dict:
     }
 
 
+def post_individually(repo: str, pr: str, head_sha: str, valid: list[dict]) -> list[dict]:
+    """Fall back to one review comment per suggestion; return those that landed.
+
+    The batch endpoint (POST /pulls/{n}/reviews with comments[]) is ATOMIC —
+    verified 2026-08-03: a single unresolvable anchor returns
+    `422 Line could not be resolved` and creates nothing. So one bad entry
+    would otherwise cost every suggestion in the run. Posting individually
+    degrades that to losing just the bad one.
+
+    Used only after the batch attempt fails, so the happy path still produces
+    a single tidy review rather than N loose comments.
+    """
+    landed: list[dict] = []
+    for e in valid:
+        proc = gh_api([
+            "-X", "POST", f"repos/{repo}/pulls/{pr}/comments",
+            "-f", f"body={comment_body(e)}",
+            "-f", f"commit_id={head_sha}",
+            "-f", f"path={e['file']}",
+            "-F", f"line={e['line']}",
+            "-f", "side=RIGHT",
+        ])
+        if proc.returncode == 0:
+            landed.append(e)
+        else:
+            print(f"post-style-suggestions: {e['file']}:{e['line']} rejected: "
+                  f"{proc.stderr.strip()[:120]}", file=sys.stderr)
+    return landed
+
+
 def gh_api(args: list[str], input_json: dict | None = None) -> subprocess.CompletedProcess:
     cmd = ["gh", "api"] + args
     return subprocess.run(
@@ -362,17 +397,26 @@ def main() -> int:
     if not valid:
         return 0
 
+    posted = valid
     proc = gh_api(
         ["-X", "POST", f"repos/{args.repo}/pulls/{args.pr}/reviews", "--input", "-"],
         input_json=payload,
     )
     if proc.returncode != 0:
-        print(f"post-style-suggestions: review POST failed: {proc.stderr.strip()}",
-              file=sys.stderr)
-        return 0
-    print(f"post-style-suggestions: posted {len(valid)} suggestion(s).", file=sys.stderr)
+        # The batch endpoint is atomic, so this cost ALL of them. Retry one at
+        # a time so a single bad anchor doesn't sink the rest.
+        print(f"post-style-suggestions: batch review POST failed ({proc.stderr.strip()[:160]}); "
+              "retrying one comment at a time.", file=sys.stderr)
+        head = gh_api([f"repos/{args.repo}/pulls/{args.pr}", "--jq", ".head.sha"])
+        if head.returncode != 0:
+            print("post-style-suggestions: could not resolve head SHA; giving up.", file=sys.stderr)
+            return 0
+        posted = post_individually(args.repo, args.pr, head.stdout.strip(), valid)
+        if not posted:
+            return 0
+    print(f"post-style-suggestions: posted {len(posted)} suggestion(s).", file=sys.stderr)
     if args.annotate_draft:
-        n = annotate_draft(Path(args.annotate_draft), valid)
+        n = annotate_draft(Path(args.annotate_draft), posted)
         print(f"post-style-suggestions: {n} style bullet(s) carry the ✏️ mark.",
               file=sys.stderr)
     return 0

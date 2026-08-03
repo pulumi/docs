@@ -265,3 +265,26 @@ def test_annotate_noop_on_empty_or_missing(tmp_path):
     d = tmp_path / "draft.md"
     d.write_text(DRAFT)
     assert pss.annotate_draft(d, []) == 0
+
+
+def test_post_individually_returns_only_landed(monkeypatch):
+    """Batch POST is atomic (422 kills all), so the fallback must report which
+    individual comments actually landed — that set drives the ✏️ marks."""
+    calls = []
+
+    class R:
+        def __init__(self, rc): self.returncode = rc; self.stderr = "422 Line could not be resolved"
+
+    def fake(args, input_json=None):
+        calls.append(args)
+        # reject the second entry only
+        return R(1) if "line=3" in " ".join(args) else R(0)
+
+    monkeypatch.setattr(pss, "gh_api", fake)
+    entries = [
+        {"file": "content/docs/foo.md", "line": 2, "new_line": "a", "category": "wordiness"},
+        {"file": "content/docs/foo.md", "line": 3, "new_line": "b", "category": "weasel word"},
+    ]
+    landed = pss.post_individually("o/r", "1", "deadbeef", entries)
+    assert [e["line"] for e in landed] == [2]
+    assert len(calls) == 2
