@@ -305,7 +305,7 @@ That's how we map Terraform's resource options. Of course, Pulumi has its own se
 Terraform has modules, and Pulumi has [components](/docs/iac/concepts/components/). Naturally, we represent Terraform modules as components. Under the hood, Pulumi has two different kinds of components:
 
 - [In-language components](/docs/iac/concepts/components/)
-- [Multi-language components](/docs/iac/concepts/components/packaging-components/) (MLCs)
+- [Multi-language components](/docs/iac/guides/building-extending/components/packaging-components/) (MLCs)
 
 In-language components are components that are consumed directly within the language. They don't need the Pulumi engine's intervention to serve them. In Pulumi HCL, this is what you get when you write a `module` block. The same language host running the rest of your program loads that HCL and interprets it.
 
@@ -335,7 +335,7 @@ We can consume HCL modules in other Pulumi languages as well. Here is what it lo
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
-import * as hcl from "@pulumi-labs/hcl";
+import * as hcl from "@pulumi/hcl";
 
 const vpc = new hcl.Module("vpc", {
     source: "terraform-aws-modules/vpc/aws",
@@ -355,7 +355,7 @@ export const vpcId = vpc.outputs.apply(o => o["vpc_id"]);
 
 ```python
 import pulumi
-import pulumi_labs_hcl as hcl
+import pulumi_hcl as hcl
 
 vpc = hcl.Module("vpc",
     source="terraform-aws-modules/vpc/aws",
@@ -376,7 +376,7 @@ pulumi.export("vpc_id", vpc.outputs["vpc_id"])
 package main
 
 import (
-	"github.com/pulumi-labs/pulumi-hcl/sdk/go/hcl"
+	"github.com/pulumi/pulumi-hcl/sdk/go/hcl"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -406,7 +406,7 @@ func main() {
 ```csharp
 using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Labs.Hcl;
+using Pulumi.Hcl;
 
 return await Deployment.RunAsync(() =>
 {
@@ -436,8 +436,8 @@ return await Deployment.RunAsync(() =>
 package myapp;
 
 import com.pulumi.Pulumi;
-import com.pulumi.labs.hcl.Module;
-import com.pulumi.labs.hcl.ModuleArgs;
+import com.pulumi.hcl.Module;
+import com.pulumi.hcl.ModuleArgs;
 import java.util.Map;
 
 public class App {
@@ -485,6 +485,6 @@ If you want strongly typed SDKs for your Terraform modules, you can generate the
 
 ## Conclusion
 
-This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine. Providers are bridged into Pulumi, resource options are translated or handled direclty in the Pulumi HCL interpreter and modules are components... in any language.
+This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine. Providers are bridged into Pulumi, resource options are translated or handled directly in the Pulumi HCL interpreter, and modules are components... in any language.
 
 If you want to try it yourself, start with the [get-started guide](/docs/iac/get-started/terraform/). And if you find a program that works in OpenTofu but not in Pulumi, that's a bug: [file an issue](https://github.com/pulumi/pulumi-hcl/issues) and we would love to fix it.
