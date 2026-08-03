@@ -195,9 +195,11 @@ resources:
 
 {{< /chooser >}}
 
-For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct.
+For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct. Check the current value with `pulumi config get aws:region`, and set it with `pulumi config set aws:region <region>`.
 
 If the resource's arguments differ from the imported state, the import will succeed, and the resource will then be modified to reflect the inputs in your Pulumi program.
+
+The following example preview output, from a program that imports an S3 bucket, shows what that looks like:
 
 ```bash
 $ pulumi preview
