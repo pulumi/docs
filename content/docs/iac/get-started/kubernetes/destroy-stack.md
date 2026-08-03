@@ -39,7 +39,7 @@ $ pulumi destroy
 
 Just like `pulumi up`, you'll be shown a preview to ensure that you want to proceed:
 
-```bash
+```
 Previewing destroy (dev):
 
      Type                                        Name            Plan

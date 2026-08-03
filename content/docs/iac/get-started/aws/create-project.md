@@ -7,6 +7,7 @@ weight: 4
 menu:
     iac:
         name: Create project
+        identifier: aws-get-started.create-project
         parent: aws-get-started
         weight: 4
 

@@ -39,13 +39,13 @@ sections:
       anchor: future-plans
 ---
 
-## Multi-Cloud Infrastructure Management with AWS and Pulumi
+## Multi-cloud infrastructure management with AWS and Pulumi
 
 ### About XM Cyber
 
 XM Cyber is a leading cybersecurity platform based in Israel in Tel Aviv. Founded in 2016, the company specializes in vulnerability management and attack path management solutions, positioning itself as a leader in this area. Now part of Schwarz Group, a large retail company based in Germany, XM Cyber provides critical cybersecurity solutions to organizations worldwide. Their DevOps team manages the infrastructure and deployments of the entire organization, with 14 DevOps engineers working across all teams.
 
-## Challenges Faced
+## Challenges faced
 
 Before implementing Pulumi, XM Cyber's infrastructure management faced significant challenges that were affecting their ability to scale and maintain their cloud operations:
 
@@ -58,11 +58,11 @@ Before implementing Pulumi, XM Cyber's infrastructure management faced significa
 
 As a multi-cloud organization supporting AWS, GCP, and Stack IT (a European cloud provider developed by Schwarz Group), XM Cyber needed a solution that could work consistently across all their environments while providing the flexibility and power of a full programming language.
 
-## Solution: Pulumi as the Multi-Cloud Orchestrator
+## Solution: Pulumi as the multi-cloud orchestrator
 
 After evaluating their needs, XM Cyber adopted Pulumi as their comprehensive infrastructure-as-code solution:
 
-### AWS EKS Infrastructure Transformation
+### AWS EKS infrastructure transformation
 
 The core of XM Cyber's infrastructure relies heavily on AWS EKS clusters:
 
@@ -72,7 +72,7 @@ This allowed them to manage their Kubernetes infrastructure more effectively, as
 
 "We need to create EKS clusters with a lot of installations. We need to create YAML files with Pulumi."
 
-### Reusable Python Infrastructure Packages
+### Reusable Python infrastructure packages
 
 One of the most innovative aspects of XM Cyber's implementation was their approach to packaging and reusability:
 
@@ -88,23 +88,23 @@ This approach enabled them to:
 
 "Basically, all they need to do is install the package and they have entire Pulumi EKS cluster they can have with installations already inside with a networking enabled with a lot of internal features that we took Pulumi with and made it a lot, a lot larger."
 
-### Internal Developer Platform
+### Internal developer platform
 
 XM Cyber implemented a Git-based internal developer platform with Pulumi as the backend:
 
 "Our internal developer platform is managed in Git, so it's not like a platform. It's a way that we created to allow developers to create resources that are common through Pulumi. So we're using it in like a GitHub's way where they create a pull request and they add a value to some YAML file. And behind the scenes, Pulumi runs that value and creates an ECR from it or a bucket for it or whatever they need."
 
-## Technical Implementation
+## Technical implementation
 
 XM Cyber's Pulumi implementation stands out for its approach:
 
-### Language Evolution
+### Language evolution
 
 XM Cyber's journey with Pulumi started with JavaScript/TypeScript and evolved to Python:
 
 "First, we started writing in OJS in TypeScript, our Pulumi programs. And then as our team grew, we moved to Python and we're writing Pulumi ever since in Python and we're loving every minute of it."
 
-### Multi-Cloud Strategy
+### Multi-cloud strategy
 
 Using Pulumi allowed XM Cyber to implement a consistent approach across different cloud providers:
 
@@ -114,7 +114,7 @@ The team uses the platform for both customer-facing and internal infrastructure:
 
 "We are using it both for customer-facing infrastructure and both for internal infrastructure. So also when we deploy in customer environments, we use Pulumi. And also when deploying internal resources, like ECR repositories, or also when using internal developer platforms, we are using Pulumi behind the scenes to actually create those resources for us."
 
-### Infrastructure as Software
+### Infrastructure as software
 
 Pulumi enabled XM Cyber to apply software engineering principles to infrastructure:
 
@@ -131,7 +131,7 @@ Since adopting Pulumi about three years ago, XM Cyber has experienced numerous b
 - **Better resource management**: "It helps us a lot with the filtering. It helps us a lot with us being in need to control what we have and what we don't have and what is deployed and where."
 - **Consistency in deployments**: The consistent approach helps prevent creating resources manually or with inadequate tools.
 
-## Future Plans
+## Future plans
 
 XM Cyber's vision for Pulumi includes:
 

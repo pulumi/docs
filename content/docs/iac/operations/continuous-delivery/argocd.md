@@ -16,14 +16,14 @@ aliases:
 - /docs/iac/packages-and-automation/continuous-delivery/argocd/
 ---
 
-[Argo CD](https://argo-cd.readthedocs.io/) is a declarative, pull-based GitOps continuous delivery tool for Kubernetes. Pulumi integrates with Argo CD through the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) (PKO), which lets Argo CD manage Pulumi infrastructure the same way it manages any other Kubernetes manifest. This means you can use Argo CD to provision and update cloud resources beyond the Kubernetes API—including the clusters themselves.
+[Argo CD](https://argo-cd.readthedocs.io/) is a declarative, pull-based GitOps continuous delivery tool for Kubernetes. Pulumi integrates with Argo CD through the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/), which lets Argo CD manage Pulumi infrastructure the same way it manages any other Kubernetes manifest. This means you can use Argo CD to provision and update cloud resources beyond the Kubernetes API—including the clusters themselves.
 
 ## How Pulumi works with Argo CD
 
 Argo CD does not run `pulumi` commands directly. Instead, Pulumi infrastructure is represented as a [`Stack` custom resource](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/defining-stacks/)—a Kubernetes manifest that the Pulumi Kubernetes Operator knows how to reconcile.
 
 {{% notes type="info" %}}
-The `Stack` custom resource is not the same thing as a [Pulumi stack](/docs/iac/concepts/stacks/). A Pulumi stack is an isolated instance of a Pulumi program, identified as `organization/project/stack`. The `Stack` custom resource is a Kubernetes object that tells PKO which Pulumi stack to deploy and how—each one targets a single Pulumi stack through its `spec.stack` field.
+The `Stack` custom resource is not the same thing as a [Pulumi stack](/docs/iac/concepts/stacks/). A Pulumi stack is an isolated instance of a Pulumi program, identified as `organization/project/stack`. The `Stack` custom resource is a Kubernetes object that tells the operator which Pulumi stack to deploy and how—each one targets a single Pulumi stack through its `spec.stack` field.
 {{% /notes %}}
 
 The integration relies on two pieces:
@@ -35,8 +35,8 @@ A change flows through the system like this:
 
 1. You commit a change to a `Stack` manifest (or to the Pulumi program it points at).
 1. Argo CD detects the change in Git and syncs the `Stack` object to the cluster.
-1. PKO reconciles the `Stack`, running `pulumi up` in a workspace pod.
-1. PKO reports the result back through the `Stack` object's status, which Argo CD surfaces in its UI.
+1. The operator reconciles the `Stack`, running `pulumi up` in a workspace pod.
+1. The operator reports the result back through the `Stack` object's status, which Argo CD surfaces in its UI.
 
 Because the deployment runs inside the operator, there is no pipeline step that invokes the Pulumi CLI. Argo CD's role is to keep the desired `Stack` specification in sync with Git.
 
@@ -50,20 +50,20 @@ Before you begin, make sure you have:
 - A Git repository containing your Pulumi program.
 - A Git repository (or a directory within an existing repository) for the Kubernetes manifests that Argo CD will sync.
 
-This guide assumes you are using Pulumi Cloud. PKO also supports self-managed state backends through the `Stack` resource's `spec.backend` field—see [States & backends](/docs/iac/concepts/state-and-backends/) for details.
+This guide assumes you are using Pulumi Cloud. The operator also supports self-managed state backends through the `Stack` resource's `spec.backend` field—see [States & backends](/docs/iac/concepts/state-and-backends/) for details.
 
 ## Authenticate with Pulumi Cloud
 
 Your cluster needs a Pulumi Cloud identity. Give it one in one of two ways. **Choose one — you don't need both:**
 
-- **OIDC token exchange** — no stored secret; PKO workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. Recommended.
+- **OIDC token exchange** — no stored secret; the operator's workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. Recommended.
 - **A static access token** — a long-lived Pulumi access token stored in a Kubernetes Secret.
 
 Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then delivers cloud credentials, secrets, and configuration to every `Stack` consistently, so you don't have to store separate cloud provider keys in the cluster for each stack.
 
 ### Eliminate static tokens with OIDC
 
-The recommended way to give the cluster its Pulumi Cloud identity is OpenID Connect (OIDC). Register the Kubernetes cluster as a Pulumi Cloud [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/), and PKO workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. No long-lived `PULUMI_ACCESS_TOKEN` secret is stored in the cluster.
+The recommended way to give the cluster its Pulumi Cloud identity is OpenID Connect (OIDC). Register the Kubernetes cluster as a Pulumi Cloud [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/), and the operator's workspace pods exchange their projected service account tokens for short-lived Pulumi access tokens. No long-lived `PULUMI_ACCESS_TOKEN` secret is stored in the cluster.
 
 See [Configuring OpenID Connect for Amazon EKS](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/) or [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/) for setup steps. Once the issuer is configured, the `Stack` manifests in this guide need no `envRefs.PULUMI_ACCESS_TOKEN` block.
 
@@ -115,7 +115,7 @@ spec:
 
 ## Define a Stack custom resource
 
-A `Stack` custom resource tells PKO which Pulumi stack to deploy, where the program lives, and how to run it. The example below also declares a service account and the cluster role bindings the deployment needs to create resources in the cluster.
+A `Stack` custom resource tells the operator which Pulumi stack to deploy, where the program lives, and how to run it. The example below also declares a service account and the cluster role bindings the deployment needs to create resources in the cluster.
 
 ```yaml
 ---
@@ -181,7 +181,7 @@ The key `spec` fields are:
 
 - `serviceAccountName`: the service account the workspace pod runs as.
 - `stack`: the fully qualified Pulumi stack name, in `organization/project/stack` form.
-- `projectRepo` and `branch`: the Git location of the Pulumi program PKO executes. Use `commit` instead of `branch` to pin an exact revision.
+- `projectRepo` and `branch`: the Git location of the Pulumi program the operator executes. Use `commit` instead of `branch` to pin an exact revision.
 - `refresh`: refreshes Pulumi state before each update so it reflects the real state of your infrastructure.
 - `destroyOnFinalize`: runs `pulumi destroy` when the `Stack` object is deleted, so removing the manifest from Git tears the infrastructure down.
 
@@ -218,7 +218,7 @@ spec:
       selfHeal: true
 ```
 
-The `syncPolicy.automated` block keeps the cluster in sync with Git without manual intervention: `prune` removes resources deleted from Git, and `selfHeal` reverts out-of-band changes. For background on when continuous reconciliation is the right fit (and when it isn't), see [GitOps and continuous reconciliation](/docs/iac/operations/stack-management/drift/#gitops-and-continuous-reconciliation). The `resources-finalizer.argocd.argoproj.io/background` finalizer pairs with `destroyOnFinalize` on the `Stack`—when the `Application` is deleted, Argo CD removes the `Stack` object in the background, which triggers PKO to destroy the infrastructure.
+The `syncPolicy.automated` block keeps the cluster in sync with Git without manual intervention: `prune` removes resources deleted from Git, and `selfHeal` reverts out-of-band changes. For background on when continuous reconciliation is the right fit (and when it isn't), see [GitOps and continuous reconciliation](/docs/iac/operations/stack-management/drift/#gitops-and-continuous-reconciliation). The `resources-finalizer.argocd.argoproj.io/background` finalizer pairs with `destroyOnFinalize` on the `Stack`—when the `Application` is deleted, Argo CD removes the `Stack` object in the background, which triggers the operator to destroy the infrastructure.
 
 ## Build a trunk-based GitOps workflow
 
@@ -244,7 +244,7 @@ spec:
     - aws-credentials
 ```
 
-PKO runs `pulumi preview` instead of `pulumi up`. The `Stack` status surfaces the preview link and program outputs without changing any infrastructure, and Argo CD shows the preview `Stack` as healthy once the dry run succeeds. Point the preview `Stack` at a dedicated Pulumi stack (`myorg/webapp/preview` above) to avoid state contention with your real environments. See [Preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) in the PKO documentation for more detail.
+The operator runs `pulumi preview` instead of `pulumi up`. The `Stack` status surfaces the preview link and program outputs without changing any infrastructure, and Argo CD shows the preview `Stack` as healthy once the dry run succeeds. Point the preview `Stack` at a dedicated Pulumi stack (`myorg/webapp/preview` above) to avoid state contention with your real environments. See [Preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) in the Pulumi Kubernetes Operator documentation for more detail.
 
 ### Deploy to dev or staging on merge to main
 
@@ -256,11 +256,11 @@ spec:
   branch: main
 ```
 
-When a pull request merges, PKO's branch polling detects the new commit on `main` and runs `pulumi up` against the staging environment. Tune the polling interval with `spec.resyncFrequencySeconds`, or trigger an immediate Argo CD sync.
+When a pull request merges, the operator's branch polling detects the new commit on `main` and runs `pulumi up` against the staging environment. Tune the polling interval with `spec.resyncFrequencySeconds`, or trigger an immediate Argo CD sync.
 
 ### Promote to production with a release branch
 
-Production should not track `main` directly. PKO's `spec.branch` field takes a branch reference, so the Argo CD equivalent of a moving release tag is a long-lived `release` branch that you fast-forward to a vetted commit to promote:
+Production should not track `main` directly. The operator's `spec.branch` field takes a branch reference, so the Argo CD equivalent of a moving release tag is a long-lived `release` branch that you fast-forward to a vetted commit to promote:
 
 ```yaml
 spec:
@@ -268,7 +268,7 @@ spec:
   branch: release
 ```
 
-To promote, advance the `release` branch to the commit you have validated in staging and push it. PKO reconciles production to that commit on its next sync.
+To promote, advance the `release` branch to the commit you have validated in staging and push it. The operator reconciles production to that commit on its next sync.
 
 If you need fully immutable, auditable releases, pin `spec.commit` to an exact SHA and update it for each promotion instead:
 
@@ -307,7 +307,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
 ```
 
-For dependencies between Pulumi stacks—for example, creating a cluster before deploying applications into it—use the `Stack` resource's own `spec.prerequisites` field, which lets one `Stack` wait for another to succeed. See [Stack prerequisites](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#stack-prerequisites) in the PKO documentation.
+For dependencies between Pulumi stacks—for example, creating a cluster before deploying applications into it—use the `Stack` resource's own `spec.prerequisites` field, which lets one `Stack` wait for another to succeed. See [Stack prerequisites](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#stack-prerequisites) in the Pulumi Kubernetes Operator documentation.
 
 ## Monitor deployments
 
@@ -319,20 +319,20 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
       link.argocd.argoproj.io/external-link: https://app.pulumi.com/myorg/webapp/dev
   ```
 
-- **Health status**: PKO ships custom Argo CD health checks for the `Stack` resource, so Argo CD reports an accurate `Healthy`, `Progressing`, or `Degraded` status that reflects the underlying Pulumi deployment.
-- **Force a sync**: The `pulumi.com/reconciliation-request` annotation triggers PKO to reconcile the `Stack`. Setting it to a new value—`"before-first-update"` for the initial deployment, or any unique string afterward—requests a fresh update.
+- **Health status**: The operator ships custom Argo CD health checks for the `Stack` resource, so Argo CD reports an accurate `Healthy`, `Progressing`, or `Degraded` status that reflects the underlying Pulumi deployment.
+- **Force a sync**: The `pulumi.com/reconciliation-request` annotation triggers the operator to reconcile the `Stack`. Setting it to a new value—`"before-first-update"` for the initial deployment, or any unique string afterward—requests a fresh update.
 
 ## Troubleshooting
 
 **Stack deployment fails**
 
 - Check the `Stack` object's status in the Argo CD UI or with `kubectl describe stack <name> -n pulumi`.
-- PKO runs each deployment in a workspace pod. List the pods with `kubectl get pods -n pulumi` and inspect the logs of the one for the failing stack with `kubectl logs <pod-name> -n pulumi`.
+- The operator runs each deployment in a workspace pod. List the pods with `kubectl get pods -n pulumi` and inspect the logs of the one for the failing stack with `kubectl logs <pod-name> -n pulumi`.
 - Verify that the cluster can authenticate to Pulumi Cloud—confirm the OIDC issuer is configured, or that the access token secret exists and has the required permissions.
 
 **Argo CD shows the Stack as `Unknown` or `Progressing`**
 
-- PKO provides custom health checks for `Stack` resources. A `Progressing` status means the deployment is still in flight; if it persists, check the workspace pod logs.
+- The operator provides custom health checks for `Stack` resources. A `Progressing` status means the deployment is still in flight; if it persists, check the workspace pod logs.
 - Check whether the `Stack` is waiting on a prerequisite to be satisfied.
 - Verify that the referenced Git repository and path are accessible from the cluster.
 
@@ -340,7 +340,7 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 
 - Check for resource conflicts or locks in your cloud provider.
 - Review the workspace pod logs for the stack.
-- Enable `refresh: true` so PKO reconciles Pulumi state with the real state of your infrastructure before each update.
+- Enable `refresh: true` so the operator reconciles Pulumi state with the real state of your infrastructure before each update.
 
 ## Additional resources
 
