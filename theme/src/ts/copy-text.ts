@@ -26,7 +26,12 @@ async function copyText(text: string): Promise<boolean> {
     const field = document.createElement("textarea");
     field.value = text;
     field.setAttribute("readonly", "");
-    field.style.cssText = "position:fixed;top:0;left:-9999px;opacity:0";
+    field.setAttribute("aria-hidden", "true");
+    field.tabIndex = -1;
+    // Off-screen, and sized to nothing with no border or padding, so there is
+    // nothing to render even if a browser were to ignore the offset.
+    field.style.cssText =
+        "position:fixed;top:0;left:-9999px;width:1px;height:1px;padding:0;border:0;opacity:0;pointer-events:none";
     document.body.appendChild(field);
 
     // Preserve whatever the user had selected before we hijack the selection.
