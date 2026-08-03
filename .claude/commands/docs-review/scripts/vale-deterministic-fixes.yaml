@@ -43,6 +43,7 @@ blocker:
   - Pulumi.Nomenclature         # Misspelled/miscased Pulumi product name.
   - Pulumi.PoliciesSingular     # Grammatical agreement error ("policies is").
   - Google.Spelling             # Unambiguous misspelling.
+  - Pulumi.DeprecatedProductNames  # "Pulumi Service" is always wrong; the replacement (Cloud/ESC/Deployments) is the author's call, but shipping the dead name is not.
 
 # Deliberately NOT listed (no fixed replacement -> stays flag-only, the reviewer
 # must compose the fix) and why:

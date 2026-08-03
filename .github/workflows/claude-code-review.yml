@@ -1018,7 +1018,7 @@ jobs:
 
             ## Style findings
 
-            The composer already split Vale findings into two tiers and rendered both. Don't rebuild either. **Blocker tier** (`[style-blocker]` bullets in 🚨 Outstanding, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong product names, banned terms, misspellings, agreement errors): these are near-zero-false-positive correctness findings; never delete, demote, or reword them, and leave their 🚨 count intact. **Advisory tier** (the `#### Style findings` block under ⚠️, always collapsed, the `category` field never the `rule` field): these are nags — they are NOT counted in the ⚠️ count-table cell, so if you remove a false-positive advisory bullet, do NOT decrement any count.
+            The composer already split Vale findings into two tiers and rendered both. Don't rebuild either. **Blocker tier** (`[style-blocker]` bullets in 🚨 Outstanding, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product names, banned terms, misspellings, agreement errors): these are near-zero-false-positive correctness findings; never delete, demote, or reword them, and leave their 🚨 count intact. **Advisory tier** (the `#### Style findings` block under ⚠️, always collapsed, the `category` field never the `rule` field): these are nags — they are NOT counted in the ⚠️ count-table cell, so if you remove a false-positive advisory bullet, do NOT decrement any count.
 
             ## Output
 

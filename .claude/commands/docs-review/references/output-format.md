@@ -306,7 +306,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   - Clearly-broken state that would fail CI on merge (per `docs-review:references:infra`).
   - Legal semantic change on `/legal/` content (per `docs-review:references:website`).
   - Public-source-contradicted competitor claim (per `docs-review:references:website`).
-  - Blocker-tier Vale finding (`blocker: true` in `.vale-findings.json`, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong product name, banned term with a fixed replacement, misspelling, grammatical agreement). The composer renders these as `[style-blocker]` bullets in 🚨; the reviewer never demotes or deletes them.
+  - Blocker-tier Vale finding (`blocker: true` in `.vale-findings.json`, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product name, banned term with a fixed replacement, misspelling, grammatical agreement). The composer renders these as `[style-blocker]` bullets in 🚨; the reviewer never demotes or deletes them.
 
   **Two-question test for non-listed findings.** Promote to 🚨 only when the answer to *both* questions below is yes:
 

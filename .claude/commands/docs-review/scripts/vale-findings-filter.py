@@ -104,6 +104,7 @@ DETERMINISTIC_FIX_RULES, BLOCKER_RULES = load_rule_lists()
 RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.Substitutions": "substitution",
     "Pulumi.Nomenclature": "nomenclature",
+    "Pulumi.DeprecatedProductNames": "deprecated product name",
     "Pulumi.BannedWords": "inclusive language",
     "Pulumi.Difficulty": "difficulty qualifier",
     "Pulumi.PoliciesSingular": "agreement",
