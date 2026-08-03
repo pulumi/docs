@@ -20,13 +20,15 @@ social:
     bluesky:
 ---
 
-The core promise of Pulumi's HCL support is that you can bring your existing Terraform configuration and modules, and `pulumi` will run them. If it works in OpenTofu and doesn't work in Pulumi, we would like to fix that. Given that goal, our HCL interpreter needs to take HCL as input and emit instructions to the Pulumi engine that semantically match how `tofu` would interpret the same input. This is made harder by the fact that Pulumi and OpenTofu have fundamentally different engine semantics and provider ecosystems. This blog post will explore how we have implemented that mapping well enough to get TODO% of the top Terraform modules working on Pulumi. We'll briefly walk through how Pulumi's HCL interpreter handles Terraform's resource semantics, providers, and modules. It will also call out where Pulumi's HCL support lets you do things that Terraform and OpenTofu will not allow.
+The core promise of Pulumi's HCL support is that you can bring your existing Terraform configuration and modules, and `pulumi` will run them. If it works in OpenTofu and doesn't work in Pulumi, we would like to fix that. Given that goal, our HCL interpreter needs to take HCL as input and emit instructions to the Pulumi engine that semantically match how `tofu` would interpret the same input. This is made harder by the fact that Pulumi and OpenTofu have fundamentally different engine semantics and provider ecosystems. This blog post will explore how we have implemented that mapping well enough to get 96%[^1] of our top Terraform modules working on Pulumi. We'll briefly walk through how Pulumi's HCL interpreter handles Terraform's resource semantics, providers, and modules. It will also call out where Pulumi's HCL support lets you do things that Terraform and OpenTofu will not allow.
 
 <!--more-->
 
+[^1]: This is 56/58 of the top Terraform AWS Module by usage. Failures are due to ephemeral resources.
+
 ## Providers
 
-Both Pulumi and Terraform have providers, but they don't have the same providers. While there are providers that Terraform [does](/registry/packages/pulumiservice/) [not](/registry/packages/azure-native/) [have](/registry/packages/kubernetes/), Pulumi can always resolve a Terraform provider using Pulumi's confusingly named [`terraform-provider`](/registry/packages/terraform-provider/) provider.[^1] This is the same provider that lets you consume *Any Terraform Provider* in another Pulumi program with `pulumi package add terraform-provider ...`. The `terraform-provider` provider acts as a relay: it speaks Pulumi's protocol to the Pulumi engine, and speaks Terraform's provider protocol to the Terraform provider it stands up. Because Pulumi HCL needs to work with all Pulumi providers and because `terraform-provider` lets Pulumi HCL speak to Terraform providers via the Pulumi protocol, Pulumi HCL actually only speaks Pulumi protocols directly:
+Both Pulumi and Terraform have providers, but they don't have the same providers. While there are providers that Terraform [does](/registry/packages/pulumiservice/) [not](/registry/packages/azure-native/) [have](/registry/packages/kubernetes/), Pulumi can always resolve a Terraform provider using Pulumi's confusingly named [`terraform-provider`](/registry/packages/terraform-provider/) provider.[^2] This is the same provider that lets you consume *Any Terraform Provider* in another Pulumi program with `pulumi package add terraform-provider ...`. The `terraform-provider` provider acts as a relay: it speaks Pulumi's protocol to the Pulumi engine, and speaks Terraform's provider protocol to the Terraform provider it stands up. Because Pulumi HCL needs to work with all Pulumi providers and because `terraform-provider` lets Pulumi HCL speak to Terraform providers via the Pulumi protocol, Pulumi HCL actually only speaks Pulumi protocols directly:
 
 ```mermaid
 flowchart LR
@@ -62,16 +64,13 @@ resource "aws_s3_bucket" "example" {
 Pulumi's HCL interpreter sees that there is no `terraform.required_providers` block, so it cuts the resource token at the first `_` and uses the default registry and namespace. This is what the request that goes to the Pulumi engine looks like:
 
 ```go
-workspace.PackageDescriptor{
-	PluginDescriptor: workspace.PluginDescriptor{
-		Name: "terraform-provider",
-		Kind: apitype.ResourcePlugin,
-	},
-	Parameterization: ["registry.opentofu.org/hashicorp/aws"],
+pulumirpc.PackageSpec{
+	Source:     "terraform-provider",
+	Parameters: []string{"registry.opentofu.org/hashicorp/aws"},
 }
 ```
 
-Because no version was specified, we leave it to `terraform-provider` to determine the version. It will use the latest version. (link: latest version code in dynamic bridge)
+Because no version was specified, we leave it to `terraform-provider` to determine the version. It will [use the latest version](https://github.com/pulumi/pulumi-terraform-bridge/blob/v3.135.0/dynamic/internal/shim/run/loader.go#L240-L252).
 
 Just like Terraform, you can override this with a `required_providers` block:
 
@@ -89,15 +88,12 @@ resource "example_resource" "another_example" {
 }
 ```
 
-We perform the same mechanical translation. The source is fully specified, and there is a version, so we pass it along to the Pulumi engine (link: where we construct the request in pulumi-hcl), which passes it along to `terraform-provider`:
+We perform the same mechanical translation. The source is fully specified, and there is a version, so we [pass it along to the Pulumi engine](https://github.com/pulumi/pulumi-hcl/blob/3e810b1c378abc0e0134810f897a85903f4c0abf/pkg/server/server.go#L232-L239), which passes it along to `terraform-provider`:
 
 ```go
-workspace.PackageDescriptor{
-	PluginDescriptor: workspace.PluginDescriptor{
-		Name: "terraform-provider",
-		Kind: apitype.ResourcePlugin,
-	},
-	Parameterization: ["my.custom.registry/me/example", "~> 5.0"],
+pulumirpc.PackageSpec{
+	Source:     "terraform-provider",
+	Parameters: []string{"my.custom.registry/me/example", "~> 5.0"},
 }
 ```
 
@@ -121,18 +117,15 @@ resource "kubernetes_yaml_config_file" "app" {
 Our HCL interpreter routes this directly to the Pulumi Kubernetes package:
 
 ```go
-workspace.PackageDescriptor{
-	PluginDescriptor: workspace.PluginDescriptor{
-		Name:    "kubernetes",
-		Kind:    apitype.ResourcePlugin,
-		Version: "4.33.0",
-	},
+pulumirpc.PackageSpec{
+	Source:  "kubernetes",
+	Version: "4.33.0",
 }
 ```
 
-Observe that the version moved from the `Parameterization` block to the plugin block. That's because providers written with `source = "pulumi/*"` are talking about the plugin directly.
+Observe that the version moved from `Parameters` to the `Version` field. That's because providers written with `source = "pulumi/*"` are talking about the plugin directly.
 
-[^1]: I named it, naming is hard. I wanted you to be able to type `pulumi package add terraform-provider <your-provider>`.
+[^2]: I named it, naming is hard. I wanted you to be able to type `pulumi package add terraform-provider <your-provider>`.
 
 ## Resources
 
@@ -492,6 +485,6 @@ If you want strongly typed SDKs for your Terraform modules, you can generate the
 
 ## Conclusion
 
-This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine. Hopefully you have a better understanding of how Pulumi HCL is implemented, what its limitations are, and what it can do.
+This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine. Providers are bridged into Pulumi, resource options are translated or handled direclty in the Pulumi HCL interpreter and modules are components... in any language.
 
-TODO: Any advice to cinch this would be great.
+If you want to try it yourself, start with the [get-started guide](/docs/iac/get-started/terraform/). And if you find a program that works in OpenTofu but not in Pulumi, that's a bug: [file an issue](https://github.com/pulumi/pulumi-hcl/issues) and we would love to fix it.
