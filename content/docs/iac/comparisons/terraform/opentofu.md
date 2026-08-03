@@ -67,7 +67,7 @@ Pulumi open-source projects use the permissive and business-friendly [Apache Lic
 
 ### Language Support {#language}
 
-Pulumi enables you to build infrastructure using familiar programming languages such as Python, Go, JavaScript, TypeScript, C#, and Java. By using these established languages, you gain access to common constructs like loops, conditionals, functions, and classes—making it easier to reduce boilerplate and enforce best practices. These languages have been refined over decades to manage complexity at scale, which aligns perfectly with the challenges of today’s globally distributed cloud systems. Rather than introducing a new module ecosystem, Pulumi allows you to use existing package managers and development workflows you’re already comfortable with.
+Pulumi enables you to build infrastructure using familiar programming languages such as Python, Go, JavaScript, TypeScript, .NET, and Java, plus YAML and [HCL](/docs/iac/languages-sdks/hcl/) for teams already writing Terraform configurations. By using these established languages, you gain access to common constructs like loops, conditionals, functions, and classes—making it easier to reduce boilerplate and enforce best practices. These languages have been refined over decades to manage complexity at scale, which aligns perfectly with the challenges of today’s globally distributed cloud systems. Rather than introducing a new module ecosystem, Pulumi allows you to use existing package managers and development workflows you’re already comfortable with.
 
 ### IDE Support {#ide}
 
