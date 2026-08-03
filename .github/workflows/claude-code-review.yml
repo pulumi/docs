@@ -1169,7 +1169,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
-            --pr "${{ steps.pr-context.outputs.pr_number }}"
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}"
 
       # Per-tool spend telemetry — operator-internal observability for cost
       # variance investigations. Uploads the action's stream-JSON execution log
@@ -1208,6 +1209,10 @@ jobs:
             /tmp/splicer-fallback.json
             .review-draft.md
             .style-suggestions.json
+          # .style-suggestions.json is a dotfile; upload-artifact skips hidden
+          # files unless this is set, which silently emptied the sidecar from
+          # the debug bundle on the 2026-08-03 fork run.
+          include-hidden-files: true
           retention-days: 30
           if-no-files-found: ignore
 

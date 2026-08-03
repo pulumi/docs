@@ -130,6 +130,23 @@ def test_dry_run_end_to_end(repo, tmp_path, capsys, monkeypatch):
     assert len(payload["comments"]) == 1
 
 
+def test_repo_defaults_to_github_repository_env(monkeypatch):
+    """The repo must come from the environment, not a hardcoded upstream name.
+
+    Regression: the 2026-08-03 fork run POSTed to `pulumi/docs` with the
+    fork's GITHUB_TOKEN and 403'd ("Resource not accessible by integration"),
+    so no suggestion ever reached the author.
+    """
+    import importlib
+    monkeypatch.setenv("GITHUB_REPOSITORY", "CamSoper/pulumi.docs")
+    spec = importlib.util.spec_from_file_location(
+        "pss_reload", HERE / "post-style-suggestions.py")
+    mod = importlib.util.module_from_spec(spec)
+    sys.modules["pss_reload"] = mod
+    spec.loader.exec_module(mod)
+    assert mod.DEFAULT_REPO == "CamSoper/pulumi.docs"
+
+
 def test_missing_file_is_noop(tmp_path, monkeypatch):
     monkeypatch.setattr(sys, "argv", [
         "post-style-suggestions.py", "--pr", "1",

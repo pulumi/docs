@@ -56,6 +56,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -72,7 +73,13 @@ _spec.loader.exec_module(_vff)  # type: ignore[union-attr]
 
 MARKER = "<!-- CLAUDE_STYLE_SUGGESTION -->"
 MAX_SUGGESTIONS = 10
-DEFAULT_REPO = "pulumi/docs"
+# Resolve the repo from the environment, never a hardcoded upstream name: the
+# same script runs on the CamSoper/pulumi.docs test fork, where a hardcoded
+# `pulumi/docs` makes every write 403 ("Resource not accessible by
+# integration") because the fork's GITHUB_TOKEN is scoped to the fork. The
+# workflow also passes --repo explicitly; this default just keeps a bare
+# invocation honest.
+DEFAULT_REPO = os.environ.get("GITHUB_REPOSITORY") or "pulumi/docs"
 
 REVIEW_BODY = (
     f"{MARKER}\n"
@@ -231,8 +238,9 @@ def main() -> int:
     if args.patch_file:
         patch = Path(args.patch_file).read_text(encoding="utf-8")
     else:
-        proc = subprocess.run(["gh", "pr", "diff", args.pr, "--patch"],
-                              capture_output=True, text=True)
+        proc = subprocess.run(
+            ["gh", "pr", "diff", args.pr, "--repo", args.repo, "--patch"],
+            capture_output=True, text=True)
         if proc.returncode != 0:
             print(f"post-style-suggestions: gh pr diff failed: {proc.stderr.strip()}",
                   file=sys.stderr)
