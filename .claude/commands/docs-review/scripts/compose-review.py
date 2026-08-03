@@ -532,8 +532,22 @@ def first_line_ref(line_range: str) -> str:
 
 
 def trunc(s: str, n: int) -> str:
+    """Truncate to <= n chars, breaking on a word boundary.
+
+    Cutting mid-word produces the likes of `…you reuse the "same IAM policies
+    you have al…`, which reads as a rendering bug and costs the reader the one
+    clause that would have made the sentence land. Back up to the last space
+    in the final quarter of the budget when there is one; hard-cut otherwise
+    (a long unbroken token, e.g. a URL).
+    """
     s = (s or "").strip().replace("\n", " ")
-    return s if len(s) <= n else s[: n - 1].rstrip() + "…"
+    if len(s) <= n:
+        return s
+    cut = s[: n - 1].rstrip()
+    space = cut.rfind(" ")
+    if space >= int((n - 1) * 0.75):
+        cut = cut[:space].rstrip()
+    return cut.rstrip(",;:—-") + "…"
 
 
 def quote(s: str) -> str:
