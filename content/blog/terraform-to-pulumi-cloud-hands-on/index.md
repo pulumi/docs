@@ -3,7 +3,7 @@ title: "Bring Your Terraform to Pulumi Cloud: A Hands-On Walkthrough"
 date: 2026-08-04T10:00:00-07:00
 draft: true
 meta_desc: "A hands-on walkthrough of Pulumi's new Terraform support: migrate state to Pulumi Cloud, publish and consume modules, and run HCL natively."
-# feature_image: feature.png  # Generate with /blog-feature-image before publishing.
+feature_image: feature.png
 authors:
     - christian-nunciato
 tags:
