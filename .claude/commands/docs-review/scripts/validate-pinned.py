@@ -184,6 +184,12 @@ TEMPORAL_TRIGGERS = {
 # specific detector lives in the record's `type`/`source`. See compose-review.py
 # (same constant) — keep the two in sync.
 TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
+
+# The advisory Vale sub-heading, current spelling first. The block was renamed
+# "Style findings" -> "Style suggestions" on 2026-08-03; both are accepted so a
+# re-entrant review merging a pre-rename body still validates. compose-review.py
+# emits only the current spelling (its STYLE_HEADING) — keep these in sync.
+STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -516,7 +522,7 @@ def check_count_table_matches_bullets(ctx: Context) -> list[Violation]:
                 line_ref=f"<bucket count table — {label}>",
                 expected=f"{label} count = {actual_val} (number of bullets in the section)",
                 actual=f"table shows {table_val}",
-                hint=f"Recount the bullets in the {label} section (style findings under #### Style findings are NOT counted in ⚠️; [style-blocker] bullets ARE counted in 🚨) and update the table cell.",
+                hint=f"Recount the bullets in the {label} section (advisory style suggestions under #### Style suggestions are NOT counted in ⚠️; [style-blocker] bullets ARE counted in 🚨) and update the table cell.",
             ))
     return violations
 
@@ -640,7 +646,7 @@ def check_cross_sibling_math(ctx: Context) -> list[Violation]:
 
 
 def check_style_render_mode(ctx: Context) -> list[Violation]:
-    """Style findings are always rendered collapsed (per-file <details> roll-up), never inline."""
+    """Style suggestions are always rendered collapsed (per-file <details> roll-up), never inline."""
     span = find_section(ctx.body, "⚠️ Low-confidence")
     if span is None:
         return []
@@ -648,14 +654,16 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
     section_lines = ctx.body_lines[start:end]
     section_text = "\n".join(section_lines)
 
-    # Locate #### Style findings sub-section.
+    # Locate the advisory sub-heading. Both spellings are accepted: the block
+    # was renamed "Style findings" -> "Style suggestions" on 2026-08-03, and a
+    # re-entrant review can still merge a pre-rename body.
     style_idx = None
     for i, line in enumerate(section_lines):
-        if line.strip() == "#### Style findings":
+        if line.strip() in STYLE_HEADINGS:
             style_idx = i
             break
     if style_idx is None:
-        return []  # no style findings — render-mode N/A
+        return []  # no style suggestions — render-mode N/A
 
     style_lines = section_lines[style_idx:]
     # Count bullets and detect <details> blocks.
@@ -663,16 +671,16 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
     file_count = sum(1 for ln in style_lines if ln.lstrip().startswith("<summary>"))
     has_details = any("<details>" in ln for ln in style_lines)
 
-    # Style findings are always collapsed (per-file <details> roll-up),
+    # Style suggestions are always collapsed (per-file <details> roll-up),
     # regardless of count — they're advisory, uncounted nags and must not
     # add inline reading burden to the ⚠️ section.
     if bullet_count and not has_details:
         return [Violation(
             rule_id="style-render-mode",
-            line_ref="<#### Style findings>",
+            line_ref="<#### Style suggestions>",
             expected=f"collapse-all mode (bullets={bullet_count}, files={file_count})",
             actual="inline-all mode rendered",
-            hint="Re-render style findings inside per-file <details> blocks with the per-file roll-up summary — style findings are always collapsed, never inline.",
+            hint="Re-render style suggestions inside per-file <details> blocks with the per-file roll-up summary — they are always collapsed, never inline.",
         )]
     return []
 
@@ -2331,7 +2339,7 @@ RULES = [
     {
         "id": "count-table",
         "desc": "Bucket-count table numbers match actual bullet count in each section; advisory style findings are excluded from ⚠️, [style-blocker] bullets count in 🚨.",
-        "hint": "Recount bullets in each section (advisory style bullets under #### Style findings are uncounted) and update the table number row.",
+        "hint": "Recount bullets in each section (advisory style bullets under #### Style suggestions are uncounted) and update the table number row.",
         "check": check_count_table_matches_bullets,
     },
     {
@@ -2348,7 +2356,7 @@ RULES = [
     },
     {
         "id": "style-render-mode",
-        "desc": "Style findings are always rendered collapsed (per-file <details> roll-up), never inline.",
+        "desc": "Style suggestions are always rendered collapsed (per-file <details> roll-up), never inline.",
         "hint": "Inline-all when total ≤5 OR concentrated in one file (≤30); collapse-all when multi-file AND total >5, or total >30.",
         "check": check_style_render_mode,
     },

@@ -15,7 +15,7 @@ turns.
 The design frame: **the composer ASSEMBLES, Opus JUDGES.** The composer never
 decides which findings surface — it lays out the skeleton, renders the 🔍 trail
 verbatim from `.verified-claims.json`, the bucket-count table, the investigation
-log scaffold, the 📊 Editorial-balance Tier 1, the `#### Style findings` block,
+log scaffold, the 📊 Editorial-balance Tier 1, the `#### Style suggestions` block,
 the 📜 Review-history line, and *stub* 🚨/⚠️ bucket bullets (one per promoting
 verdict) carrying a `<TODO>` marker. Whether a stub is a real finding, what the
 fix prose should be, the summary paragraph, the confidence levels, the
@@ -772,9 +772,16 @@ def render_count_table(a: int, b: int, c: int, d: int) -> str:
     )
 
 
+# The advisory-tier sub-heading. Renamed from "Style findings" on 2026-08-03:
+# once the blocker tier carries the correctness errors and the known
+# false-positive rules are disabled, what's left is optional polish, and
+# "findings" oversold it. validate-pinned.py still recognizes the old spelling
+# so an in-flight review that merges a pre-rename body keeps validating.
+STYLE_HEADING = "#### Style suggestions"
+
 # Italic one-liners that open the 🚨 / ⚠️ sections when they have findings
-# (parallel to `*Found by pattern-based linting; Findings may be false
-# positives.*` under `#### Style findings`) — omitted on the explicit-empty form.
+# (parallel to the pattern-based-linting caption under STYLE_HEADING) —
+# omitted on the explicit-empty form.
 _OUTSTANDING_NOTE = "*These must be resolved or refuted before merging.*"
 _LOWCONF_NOTE = "*Review each and resolve as appropriate — these don't block the PR.*"
 
@@ -979,10 +986,10 @@ def _render_style_findings(findings: list[dict]) -> str:
     for f in findings:
         by_file.setdefault(str(f.get("file") or "?"), []).append(f)
     out = [
-        "#### Style findings",
+        STYLE_HEADING,
         "",
-        "*Found by pattern-based linting; findings may be false positives. "
-        "These never block and are not counted above — kept for style-rule tuning.*",
+        "*Optional polish from pattern-based linting — never blocking, not counted above. "
+        "Take the ones that read better and ignore the rest.*",
         "",
     ]
     out.append("<sub>Click each filename to expand.</sub>")

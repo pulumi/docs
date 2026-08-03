@@ -26,7 +26,9 @@ Orthogonal event flag: a finding is *disputed* when it carries a
 `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` line (adjudication
 "held") or was conceded via a `concede:` annotation (adjudication "conceded").
 
-Advisory style findings (`[style]` bullets under `#### Style findings`) are
+Advisory style suggestions (`[style]` bullets under `#### Style suggestions`,
+spelled `#### Style findings` before 2026-08-03 — this reader keys on the
+bullet form, not the heading, so both parse) are
 counted separately and never outcome-classified — they are regenerated fresh
 on every re-review and never move to ✅ Resolved, so per-finding tracking
 would lie. Blocker-tier style findings (`[style-blocker]` bullets in 🚨) are

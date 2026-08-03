@@ -38,7 +38,7 @@ context; docs-review ignores the flag and stays advisory.
 
 `blocker` marks findings from the near-zero-false-positive correctness rules
 (the `blocker:` list in the same YAML). compose-review.py renders those under
-🚨 Outstanding instead of the advisory Style findings roll-up.
+🚨 Outstanding instead of the advisory Style suggestions roll-up.
 
 Empty input or empty intersection produces an empty list (`[]`), never errors.
 The script does not call any APIs except `gh pr diff` to fetch the patch.

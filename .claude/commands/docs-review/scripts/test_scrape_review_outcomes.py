@@ -128,6 +128,8 @@ def test_stale_review_at_merge():
 
 
 def test_style_findings_counted_not_classified():
+    # Deliberately uses the pre-2026-08-03 "Style findings" heading: this
+    # reader parses historical merged PRs, which carry the old spelling.
     body = body_with(
         low_confidence=(
             "- **[L20]** Please cite a source.\n"

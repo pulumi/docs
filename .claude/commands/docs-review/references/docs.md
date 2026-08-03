@@ -51,7 +51,7 @@ The Hugo build pre-step (`.hugo-build.json`, see `docs-review:references:fact-ch
 
 ### Priority 4 — Terminology and product accuracy
 
-Vale catches product-name capitalization, the Pulumi Policies singular-verb rule, "public preview" vs "public beta", and preferred-terminology pairs from `STYLE-GUIDE.md` (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style findings). The reviewer's job here is **first-mention acronym expansion** that Vale doesn't cover: when a product acronym (ESC, IDP, IaC) appears in the diff for the first time in the file, propose `Pulumi ESC (Environments, Secrets, and Configuration)` on first mention. Subsequent mentions use the short form.
+Vale catches product-name capitalization, the Pulumi Policies singular-verb rule, "public preview" vs "public beta", and preferred-terminology pairs from `STYLE-GUIDE.md` (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style suggestions). The reviewer's job here is **first-mention acronym expansion** that Vale doesn't cover: when a product acronym (ESC, IDP, IaC) appears in the diff for the first time in the file, propose `Pulumi ESC (Environments, Secrets, and Configuration)` on first mention. Subsequent mentions use the short form.
 
 `data/glossary.toml` is the authoritative term list for glossary cross-references.
 
@@ -99,4 +99,4 @@ Scope of pre-existing findings for docs: broken links/anchors, orphan cross-refs
 
 - **Vague editorial feedback without quote-and-rewrite.** "Could be clearer" / "consider reorganizing this paragraph" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first; convert prose-quickstart to numbered steps) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Superseded terminology in historical context.** When a doc describes old behavior intentionally (e.g., "before v3.0, this was called X"), don't flag the old name as deprecated terminology.
-- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.
+- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style suggestions. Don't double-flag.

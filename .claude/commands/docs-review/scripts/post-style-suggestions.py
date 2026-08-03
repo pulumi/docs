@@ -3,7 +3,7 @@
 
 Reads `.style-suggestions.json` — written by the editorial pass, which
 converts the advisory (non-blocker) style findings whose rewrite is a clear
-improvement into concrete replacements (see the "Style findings" section of
+improvement into concrete replacements (see the "Style suggestions" section of
 the review prompt in claude-code-review.yml). Validates each entry against
 the checked-out PR head and the PR diff, then posts ONE pull-request review
 (event=COMMENT) whose inline comments each carry a ```suggestion block the
@@ -18,7 +18,7 @@ Contract:
   the deterministic-fix gate requires (see vale-deterministic-fixes.yaml)
   is exercised twice — once by the editorial pass authoring the rewrite,
   once by the author clicking.
-- The collapsed `#### Style findings` block in the pinned review remains
+- The collapsed `#### Style suggestions` block in the pinned review remains
   the complete record; a suggested finding is NOT removed from it.
 - Idempotent per run: prior suggestion comments (MARKER match) are deleted
   before posting — same delete-and-repost semantics as TRIAGE_PROSE.
