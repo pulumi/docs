@@ -168,14 +168,20 @@
     [data-releases-marquee] {
         // No motion: a plain scrollable strip of the entries, shown once. The
         // clones exist only to make the animation loop.
-        @apply overflow-x-auto;
+        //
+        // `!` on both overrides: this file is imported into @layer components,
+        // which loses to Tailwind's @layer utilities no matter the specificity,
+        // so the markup's `overflow-hidden` here and `flex` on each copy would
+        // otherwise win — leaving the strip clipped with no way to scroll and
+        // all three copies visible.
+        @apply overflow-x-auto!;
 
         [data-marquee-track] {
             animation: none;
         }
 
         [data-marquee-copy]:not(:first-child) {
-            @apply hidden;
+            @apply hidden!;
         }
 
         // The trailing fade is absolutely positioned inside what is now a
