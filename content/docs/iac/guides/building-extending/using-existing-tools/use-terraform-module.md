@@ -86,7 +86,7 @@ Any directory containing `.tf` files and optionally `variables.tf` and `outputs.
 
 ### Using a module from Pulumi Cloud
 
-If your organization publishes Terraform modules to the [Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/), every published version is converted into a Pulumi package for you. Install it by package name, which is the module's name and system joined with a hyphen:
+If your organization publishes Terraform modules to the [Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/), every published version is converted into a Pulumi package for you. Install it by package name, which is the module's name and system joined with a hyphen. The system is the last segment of the module's address, naming what the module provisions, such as `aws` or `azurerm`:
 
 ```bash
 pulumi package add <name>-<system> [<version>]
@@ -100,7 +100,7 @@ The package's page in Pulumi Cloud shows whether a given version has converted. 
 pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
 ```
 
-This runs the conversion at the moment you run it, using whatever version of the `hcl` provider you have, rather than using the package the registry produced. Use it while a version is still converting. A module the registry could not convert fails here for the same reason. The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`). Either way the CLI passes your Pulumi access token through to the provider, so you do not need to set a registry token by hand.
+This runs the conversion at the moment you run it, using whatever version of the `hcl` provider you have, rather than using the package the registry produced. Use it while a version is still converting. A module the registry could not convert fails here for the same reason. The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`).
 
 See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
 

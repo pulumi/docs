@@ -13,7 +13,7 @@ aliases:
   - /docs/iac/using-pulumi/pulumi-cloud/registry/terraform-modules/
 ---
 
-Pulumi Cloud hosts Terraform modules as a first-class registry resource alongside [packages](/docs/iac/concepts/packages/) and [templates](/docs/idp/concepts/organization-templates/). Teams migrating from HCP Terraform can publish their existing modules to Pulumi Cloud using the same tooling they already use (the [go-tfe](https://github.com/hashicorp/go-tfe) library or the [hashicorp/tfe Terraform provider](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs)) by pointing those tools at `tf.pulumi.com` instead of `app.terraform.io`. Every module version you publish is also converted into a Pulumi package. The module's variables become typed inputs and its outputs become typed outputs, with a generated SDK in TypeScript, Python, Go, C#, Java, or YAML, an API reference on the package's page, and a record of which stacks depend on it. Existing `.tf` consumers are unaffected and keep resolving the module over the Terraform protocol.
+Pulumi Cloud hosts Terraform modules as a first-class registry resource alongside [packages](/docs/iac/concepts/packages/) and [templates](/docs/idp/concepts/organization-templates/). Teams migrating from HCP Terraform can publish their existing modules to Pulumi Cloud using the same tooling they already use (the [go-tfe](https://github.com/hashicorp/go-tfe) library or the [hashicorp/tfe Terraform provider](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs)) by pointing those tools at `tf.pulumi.com` instead of `app.terraform.io`. Every module version you publish is also converted into a Pulumi package. The module's variables become typed inputs and its outputs become typed outputs, with a generated SDK in TypeScript, Python, Go, C#, Java, or YAML, an API reference on the package's page, and a record of which stacks depend on it. Conversion is additive: existing `.tf` consumers keep resolving the module over the Terraform protocol.
 
 ## Before you begin
 
@@ -26,7 +26,7 @@ Pulumi Cloud hosts Terraform modules as a first-class registry resource alongsid
 Every surface authenticates with a [Pulumi access token](/docs/administration/access-identity/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
 
 - Publishing: the go-tfe client and the tfe provider take your Pulumi access token wherever they expect a TFE token today. See [Publish a module](#publish-a-module).
-- Consuming from a Pulumi program: run `pulumi login`. `pulumi package add terraform-module` passes the token through to the provider, so there is no separate registry login.
+- Consuming from a Pulumi program: run `pulumi login`. `pulumi package add` passes the token through, so there is no separate registry login.
 - Consuming from plain OpenTofu or Terraform: set the host token. OpenTofu and Terraform derive the variable name from the host by replacing dots with underscores (and dashes with double underscores), so `tf.pulumi.com` becomes `TF_TOKEN_tf_pulumi_com`:
 
   ```bash
@@ -41,6 +41,8 @@ Pulumi Cloud's publish API is wire-compatible with HCP Terraform's private regis
 
 ### go-tfe
 
+Publish from Go, or from any CI pipeline that already drives HCP Terraform through this client, by pointing it at the Pulumi Cloud host:
+
 ```go
 client, _ := tfe.NewClient(&tfe.Config{
     Address: "https://tf.pulumi.com",
@@ -51,6 +53,8 @@ client, _ := tfe.NewClient(&tfe.Config{
 The `RegistryModules` surface (`client.RegistryModules.Create`, `CreateVersion`, `UploadTarGzip`, etc.) accepts the same payloads it accepts against `app.terraform.io`.
 
 ### `hashicorp/tfe` Terraform provider
+
+Publish from HCL, if you manage your registry modules declaratively with OpenTofu or Terraform:
 
 ```hcl
 provider "tfe" {
@@ -78,7 +82,7 @@ If you publish from CI today, the move is a host change. Point your existing pip
 
 ### Module names
 
-Pulumi Cloud uses the same `<namespace>/<name>/<system>` address form as HCP Terraform, where the namespace is your Pulumi organization. One rule is stricter: the module name must match `[a-z0-9][a-z0-9-]*`, so it starts with a letter or digit and underscores are rejected at publish. A module that HCP hosts under a name like `control_tower_account_factory` has to be renamed to `control-tower-account-factory` before you publish it. Uppercase in the name is lowercased automatically.
+Pulumi Cloud uses the same `<namespace>/<name>/<system>` address form as HCP Terraform. The namespace is your Pulumi organization, and the system is the segment HCP Terraform calls the provider: what the module provisions, such as `aws`, `azurerm`, or `kubernetes`. One rule is stricter: the module name must match `[a-z0-9][a-z0-9-]*`, so it starts with a letter or digit and underscores are rejected at publish. A module that HCP hosts under a name like `control_tower_account_factory` has to be renamed to `control-tower-account-factory` before you publish it. Uppercase in the name is lowercased automatically.
 
 ## What happens when you publish
 
@@ -101,7 +105,7 @@ The resources the module creates appear individually in previews and in the reso
 Usage tracking only counts consumption through the converted package. A stack or workspace that consumes the module over the Terraform protocol does not report a dependency, so it does not appear in the usage columns or on the package's "Used by" tab.
 
 {{% notes type="info" %}}
-Installing a converted package requires Pulumi CLI 3.248.0 or newer. Older versions fail with a plugin handshake error. See [Download & Install Pulumi](/docs/install/) to install or upgrade.
+Installing a converted package requires Pulumi CLI 3.248.0 or newer. See [Download & Install Pulumi](/docs/install/) to install or upgrade.
 {{% /notes %}}
 
 ### Converting a module locally
@@ -129,7 +133,7 @@ module "vpc" {
 }
 ```
 
-`tofu init` discovers the `modules.v1` endpoint on Pulumi Cloud's `.well-known/terraform.json`, lists available versions, and downloads the tarball using the token from `TF_TOKEN_tf_pulumi_com`.
+`tofu init` and `terraform init` resolve and download the module from Pulumi Cloud using the token you set above.
 
 Submodules are referenced with the standard `//modules/<name>` source syntax:
 

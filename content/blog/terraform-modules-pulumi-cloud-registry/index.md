@@ -63,7 +63,7 @@ At publish time the registry reads the [standard Terraform module layout](https:
 
 Publishing does two things. The version becomes available over the Terraform module protocol, as it would on HCP Terraform. The version is also converted into a Pulumi package, automatically, with nothing extra to configure.
 
-The package takes its name from the module: `<name>-<system>`, in the same namespace. A module published as `acme-corp/vpc/aws` becomes a package called `vpc-aws`, and a Pulumi program installs it by that name:
+The package takes its name from the module: `<name>-<system>`, in the same namespace. The system is the last segment of the module's address, the one HCP Terraform calls the provider, naming what the module provisions. A module published as `acme-corp/vpc/aws` becomes a package called `vpc-aws`, and a Pulumi program installs it by that name:
 
 ```bash
 pulumi package add vpc-aws 1.2.3
