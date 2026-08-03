@@ -72,8 +72,15 @@ function identifiedUser(): IdentifiedUser | null {
     return null;
 }
 
-function identify(intercom: IntercomFn, jwt: string, userId: string): void {
-    intercom("update", { intercom_user_jwt: jwt });
+// A shutdown earlier in this page view unloaded the messenger, so "update" has
+// nothing left to attach to — Intercom needs a fresh boot to start the next
+// session.
+function identify(intercom: IntercomFn, jwt: string, userId: string, bootAppId?: string): void {
+    if (bootAppId) {
+        intercom("boot", { app_id: bootAppId, intercom_user_jwt: jwt });
+    } else {
+        intercom("update", { intercom_user_jwt: jwt });
+    }
     try {
         localStorage.setItem(IDENTIFIED_KEY, JSON.stringify({ userId }));
     } catch (e) {
@@ -132,6 +139,7 @@ function run(intercom: IntercomFn): void {
     }
 
     const previouslyIdentified = identifiedUser();
+    let switched = false;
     if (previouslyIdentified && previouslyIdentified.userId !== userId) {
         // A different Pulumi Cloud user is now encoded in the hint cookie
         // (shared/kiosk machine, or an account switch that never left the
@@ -141,6 +149,7 @@ function run(intercom: IntercomFn): void {
         // histories across accounts.
         clearCaches();
         intercom("shutdown");
+        switched = true;
     }
 
     const jwt = cachedJwt(userId);
@@ -158,14 +167,14 @@ function run(intercom: IntercomFn): void {
             if (!resp.ok) {
                 return null; // Not configured / upstream issue: stay anonymous.
             }
-            return resp.json() as Promise<{ userJwt?: string; expiresAt?: number }>;
+            return resp.json() as Promise<{ appId?: string; userJwt?: string; expiresAt?: number }>;
         })
         .then(body => {
             if (body && body.userJwt) {
                 if (body.expiresAt) {
                     cacheJwt(body.userJwt, body.expiresAt, userId);
                 }
-                identify(intercom, body.userJwt, userId);
+                identify(intercom, body.userJwt, userId, switched ? body.appId : undefined);
             }
         })
         .catch(() => {
