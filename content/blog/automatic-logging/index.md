@@ -17,11 +17,11 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        When Pulumi fails, the fastest fix needs a log — but usually you had to reproduce the failure by hand to capture one. Pulumi v3.254.0 changes that: every operation is now logged automatically, encrypted on disk, and safe to share.
+        When Pulumi hits an error, the fastest fix needs a log. Usually you had to reproduce the error by hand to capture one. Pulumi v3.254.0 changes that: every operation is now logged automatically, encrypted on disk, and safe to share.
 
         Here's how it works.
     linkedin: |
-        You hit an unexpected Pulumi failure. To debug it, someone needs the logs, but logging wasn't on, so now you're re-running the command trying to reproduce it. Sometimes it won't reproduce. Sometimes the state Pulumi was in is already gone.
+        You hit an unexpected Pulumi error. To debug it, someone needs the logs, but logging wasn't on, so now you're re-running the command trying to reproduce it. Sometimes it won't reproduce. Sometimes the state Pulumi was in is already gone.
 
         And even when you do capture a log, there's no safe way to hand it over. These files still contain secrets.
 
@@ -29,7 +29,7 @@ social:
 
         We wrote up how it works.
     bluesky: |
-        Debugging a Pulumi failure usually meant reproducing it by hand just to capture a log, then finding a safe way to share a file full of secrets. Pulumi v3.254.0 makes logs automatic and encrypted, safe to share even on a public GitHub issue.
+        Debugging an Pulumi error usually meant reproducing it by hand just to capture a log, then finding a safe way to share a file full of secrets. Pulumi v3.254.0 makes logs automatic and encrypted, safe to share even on a public GitHub issue.
 
         Here's what changed.
 ---
@@ -38,7 +38,7 @@ Pulumi v3.254.0 introduces automatic logging: every operation is logged in an en
 
 <!--more-->
 
-You might have been in a situation where pulumi failed for an unexpected reason, or did something that was not quite right. Currently the process for trying to resolve that is to try and reproduce the failure, ideally now with logging enabled. Sometimes the failure doesn't reproduce, or the state pulumi was in at the time of the failure doesn't exist anymore. And even if the issue reproduces it's a bit of a hassle to do all this again, just to get logs to Pulumi employees who can do something with them. There's also no great mechanism to send the potentially sensitive log file.
+You might have been in a situation where pulumi hit an error for an unexpected reason, or did something that was not quite right. Currently the process for trying to resolve that is to try and reproduce the error, ideally now with logging enabled. Sometimes the error doesn't reproduce, or the state pulumi was in at the time of the error doesn't exist anymore. And even if the issue reproduces it's a bit of a hassle to do all this again, just to get logs to Pulumi employees who can do something with them. There's also no great mechanism to send the potentially sensitive log file.
 
 ## How it works
 
