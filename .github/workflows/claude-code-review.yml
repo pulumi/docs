@@ -1020,6 +1020,8 @@ jobs:
 
             The composer already split Vale findings into two tiers and rendered both. Don't rebuild either. **Blocker tier** (`[style-blocker]` bullets in 🚨 Outstanding, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product names, banned terms, misspellings, agreement errors): these are near-zero-false-positive correctness findings; never delete, demote, or reword them, and leave their 🚨 count intact. **Advisory tier** (the `#### Style findings` block under ⚠️, always collapsed, the `category` field never the `rule` field): these are nags — they are NOT counted in the ⚠️ count-table cell, so if you remove a false-positive advisory bullet, do NOT decrement any count.
 
+            **Inline-suggestion sidecar.** As the last act of the editorial pass, triage the ADVISORY style bullets and Write `.style-suggestions.json` (a JSON array; write `[]` if none qualify) for the ones whose rewrite is a clear improvement. Schema per entry: `{"file": "<path>", "line": <n>, "original": "<exact text on that line>", "replacement": "<new text>", "category": "<category>", "note": "<≤10-word reason>"}`. A workflow step validates each entry against the diff and file content and posts them as one-click GitHub `suggestion` comments — you never post them yourself. Convert a finding ONLY when ALL hold: (a) the rewrite preserves meaning exactly — a hedge that is factually load-bearing ("usually completes in five minutes") is NOT a conversion candidate, deleting it would overpromise; (b) the fix is contained on the single flagged line; (c) you are confident the result reads better, not just shorter. Skip false positives entirely (delete their bullets as usual). Cap at 10 — prefer the highest-reader-impact ones. `original` must be the exact substring on that line in the checked-out file, or validation drops the entry. Do NOT remove the corresponding collapsed `[style]` bullet — the block stays the complete record; the suggestion is the actionable copy. Blocker findings are never suggestions.
+
             ## Output
 
             When the editorial pass is done, save `.review-draft.md` and **exit**. Do not post the comment yourself; do not call `pinned-comment.sh` or `validate-pinned.py`. The workflow runs validation, deterministic surgical fixes, and the GitHub upsert as separate steps after this one. Every `<TODO:` placeholder must be replaced before you exit — `validate-pinned.py`'s `no-todo-tokens` rule fails the body otherwise.
@@ -1153,6 +1155,22 @@ jobs:
               --body-file .review-draft.md
           fi
 
+      # Post the advisory-style inline suggestions the editorial pass staged
+      # in .style-suggestions.json (one PR review, event=COMMENT, one
+      # ```suggestion block per finding — one-click applyable). The script
+      # validates every entry against the PR diff and the checked-out file
+      # (anti-hallucination), deletes prior suggestion comments first
+      # (delete-and-repost, same as TRIAGE_PROSE), and always exits 0 —
+      # suggestions are best-effort polish, never a pipeline failure.
+      - name: Post inline style suggestions
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}"
+
       # Per-tool spend telemetry — operator-internal observability for cost
       # variance investigations. Uploads the action's stream-JSON execution log
       # as a private workflow artifact; the operator runs
@@ -1189,6 +1207,7 @@ jobs:
             /tmp/validate-pinned.fix-me.md
             /tmp/splicer-fallback.json
             .review-draft.md
+            .style-suggestions.json
           retention-days: 30
           if-no-files-found: ignore
 

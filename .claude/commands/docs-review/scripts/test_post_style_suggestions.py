@@ -1,0 +1,138 @@
+"""Tests for post-style-suggestions.py validation and payload building.
+
+Pure-function tests only — no network, no gh. The posting path is exercised
+in --dry-run form via main() with --patch-file.
+"""
+
+from __future__ import annotations
+
+import importlib.util
+import json
+import sys
+from pathlib import Path
+
+import pytest
+
+HERE = Path(__file__).resolve().parent
+
+_spec = importlib.util.spec_from_file_location(
+    "post_style_suggestions", HERE / "post-style-suggestions.py")
+pss = importlib.util.module_from_spec(_spec)
+sys.modules["post_style_suggestions"] = pss
+_spec.loader.exec_module(pss)
+
+
+PATCH = """\
+diff --git a/content/docs/foo.md b/content/docs/foo.md
+index 1111111..2222222 100644
+--- a/content/docs/foo.md
++++ b/content/docs/foo.md
+@@ -1,2 +1,3 @@
+ # Title
++You can utilize the CLI to deploy.
++This is usually the fastest path.
+"""
+
+
+@pytest.fixture
+def repo(tmp_path: Path) -> Path:
+    f = tmp_path / "content" / "docs" / "foo.md"
+    f.parent.mkdir(parents=True)
+    f.write_text("# Title\nYou can utilize the CLI to deploy.\nThis is usually the fastest path.\n")
+    return tmp_path
+
+
+def added() -> dict[str, set[int]]:
+    return pss._vff.added_lines_per_file(PATCH)
+
+
+def entry(**kw) -> dict:
+    base = {"file": "content/docs/foo.md", "line": 2,
+            "original": "utilize", "replacement": "use",
+            "category": "wordiness", "note": "shorter, same meaning"}
+    base.update(kw)
+    return base
+
+
+def test_valid_entry_produces_full_replacement_line(repo):
+    valid, dropped = pss.validate_entries([entry()], added(), repo)
+    assert not dropped
+    assert len(valid) == 1
+    assert valid[0]["new_line"] == "You can use the CLI to deploy."
+
+
+def test_original_not_on_line_dropped(repo):
+    valid, dropped = pss.validate_entries(
+        [entry(original="leverage")], added(), repo)
+    assert not valid
+    assert "not found on that line" in dropped[0]
+
+
+def test_non_added_line_dropped(repo):
+    # Line 1 is context (" # Title"), not added by the PR.
+    valid, dropped = pss.validate_entries(
+        [entry(line=1, original="Title", replacement="T")], added(), repo)
+    assert not valid
+    assert "not a PR-added line" in dropped[0]
+
+
+def test_noop_and_missing_fields_dropped(repo):
+    valid, dropped = pss.validate_entries(
+        [entry(replacement="utilize"), {"file": "content/docs/foo.md"}],
+        added(), repo)
+    assert not valid
+    assert len(dropped) == 2
+
+
+def test_duplicate_anchor_dropped(repo):
+    valid, dropped = pss.validate_entries(
+        [entry(), entry(original="CLI", replacement="command line")],
+        added(), repo)
+    assert len(valid) == 1
+    assert "duplicate anchor" in dropped[0]
+
+
+def test_cap_applies(repo):
+    f = repo / "content" / "docs" / "foo.md"
+    lines = ["# Title"] + [f"filler utilize {i}" for i in range(15)]
+    f.write_text("\n".join(lines) + "\n")
+    added_lines = {"content/docs/foo.md": set(range(2, 17))}
+    entries = [entry(line=n) for n in range(2, 17)]
+    valid, dropped = pss.validate_entries(entries, added_lines, repo)
+    assert len(valid) == pss.MAX_SUGGESTIONS
+    assert any("cap" in d for d in dropped)
+
+
+def test_payload_shape(repo):
+    valid, _ = pss.validate_entries([entry()], added(), repo)
+    payload = pss.build_review_payload(valid)
+    assert payload["event"] == "COMMENT"
+    assert payload["body"].startswith(pss.MARKER)
+    c = payload["comments"][0]
+    assert c["path"] == "content/docs/foo.md"
+    assert c["line"] == 2
+    assert c["side"] == "RIGHT"
+    assert c["body"].startswith(pss.MARKER)
+    assert "```suggestion\nYou can use the CLI to deploy.\n```" in c["body"]
+
+
+def test_dry_run_end_to_end(repo, tmp_path, capsys, monkeypatch):
+    (tmp_path / "sugg.json").write_text(json.dumps([entry()]))
+    (tmp_path / "pr.patch").write_text(PATCH)
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "1",
+        "--in", str(tmp_path / "sugg.json"),
+        "--patch-file", str(tmp_path / "pr.patch"),
+        "--repo-root", str(repo), "--dry-run",
+    ])
+    assert pss.main() == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert len(payload["comments"]) == 1
+
+
+def test_missing_file_is_noop(tmp_path, monkeypatch):
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "1",
+        "--in", str(tmp_path / "absent.json"), "--dry-run",
+    ])
+    assert pss.main() == 0

@@ -121,7 +121,11 @@ See `docs-review:references:output-format`. Do NOT WebFetch / re-verify claims �
 Per `docs-review:references:update`: the draft's 📜 Review history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history lines (append-only) and populate ✅ Resolved with prior findings now absent.
 </step>
 
-<step number="10" name="Write for the author, not the pipeline">
+<step number="10" name="Stage the inline-suggestion sidecar">
+Triage the ADVISORY style bullets and Write `.style-suggestions.json` (array; `[]` if none qualify): `{"file", "line", "original", "replacement", "category", "note"}` per entry, cap 10. Convert only when the rewrite preserves meaning exactly (a factually load-bearing hedge like "usually completes in five minutes" is NOT a candidate), fits on the single flagged line, and clearly reads better. `original` must be the exact substring on that line. A workflow step (`post-style-suggestions.py`) validates and posts them as one-click `suggestion` comments — never post them yourself. Leave the collapsed `[style]` bullets in place; blocker findings are never suggestions.
+</step>
+
+<step number="11" name="Write for the author, not the pipeline">
 Bullet bodies and Summary prose must read to a PR author who knows nothing about how this review was assembled. Refer to **outcomes** (`✅ verified`, `❌ contradicted`, source URL), not the **processes**. Avoid pipeline-internal terms like *"the extraction layer"*, *"the verifier / validator / splicer"*, *"Pass 1/2/3"*, *"framing comparison"*, *"soft floor"*, *"the composer"*, or script names. Say *"the verification step"* or describe the outcome directly.
 - **Bad:** "Counted as ❌ contradicted because the extraction layer truncated the claim text..."
 - **Good:** "Flagged as ❌ contradicted in error — the source actually supports the claim. The verification step compared a shortened version of the claim against the source."

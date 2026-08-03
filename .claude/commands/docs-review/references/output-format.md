@@ -345,6 +345,8 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
     ```
 
     Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Render the breakdown even on single-finding files (the format is uniform across the review).
+
+    **Inline-suggestion sidecar (CI full-review lane only).** The editorial pass may additionally stage up to 10 advisory findings as one-click GitHub `suggestion` comments by writing `.style-suggestions.json` (see `ci.md` §3 step 10); `post-style-suggestions.py` validates each entry against the PR diff and file content and posts them as a single `event: COMMENT` review, deleting the prior run's suggestion comments first. Suggestions are a *copy* of the actionable subset — the collapsed `#### Style findings` block remains the complete record, and a suggested finding keeps its `[style]` bullet. Blocker findings never render as suggestions.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear. Annotate conceded findings with `concede: <reason>` (per `docs-review:references:update` Case 2) — the outcome telemetry (`scrape-review-outcomes.py`) distinguishes fixed from conceded by that exact token, and the `outcome-annotation-shape` validator rule flags freelanced variants. The same applies to the held-dispute annotation `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` in 🚨/⚠️.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
