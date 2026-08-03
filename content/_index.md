@@ -10,6 +10,10 @@ sections:
     layout: split
     cta_secondary_text: Download open source
     cta_secondary_link: /docs/install/
+    cta_card_label: For humans
+    cta_agent_label: For agents
+    cta_agent_prompt: Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
+    cta_agent_prompt_label: Fetch pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
     badge_highlight_text: "New Release:"
     badge_text: "Building for the Agentic Era"
     badge_link: /releases/agentic-infrastructure-era/

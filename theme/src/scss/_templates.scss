@@ -138,6 +138,68 @@
     .product-hero-visual {
         @apply w-full;
     }
+
+    // CTA row (partials/hero-ctas.html). Plain full-width wrapper by default;
+    // --split sets the "for humans" and "for agents" cards side by side above
+    // mobile. The humans card keeps its natural width so its buttons never wrap;
+    // the agents card takes whatever is left and truncates its prompt into it.
+    .hero-ctas {
+        @apply w-full;
+
+        &--split {
+            @apply flex flex-col gap-4;
+
+            @include screen-md {
+                @apply flex-row items-stretch;
+
+                > .hero-cta-group:first-child {
+                    @apply shrink-0;
+                }
+
+                > .hero-cta-group:last-child {
+                    @apply flex-1 min-w-0;
+                }
+            }
+        }
+    }
+
+    // Bordered card with its label straddling the top border. The label's own
+    // white background is what breaks the border line on either side of it, so
+    // this only reads correctly on a white section background.
+    .hero-cta-card {
+        @apply relative rounded-lg border border-violet-300 p-3;
+    }
+
+    .hero-cta-card-label {
+        @apply font-overline-sm absolute -top-2 left-4 px-2 bg-white text-violet-primary;
+    }
+
+    // The agent prompt: copy icon, then the prompt itself in mono, truncated to
+    // the right. justify-start keeps the icon pinned left as the text clips.
+    .hero-cta-copy {
+        @apply w-full min-w-0 justify-start font-mono text-left;
+    }
+
+    // pulumi-tooltip is inline by default and its bubble is a fixed w-48; here
+    // the trigger is a full-width button and the content is the whole prompt, so
+    // widen both to the card and let the bubble wrap instead of truncating.
+    .hero-cta-copy-tooltip {
+        @apply block w-full;
+
+        .tooltip-target {
+            @apply block w-full;
+        }
+
+        .tooltip-content {
+            @apply w-full text-left break-words font-mono;
+        }
+    }
+
+    // min-w-0 lets the span shrink below its max-content width so the ellipsis
+    // renders; without it the nowrap text is simply clipped by the button.
+    .hero-cta-copy-text {
+        @apply truncate min-w-0 text-xs;
+    }
 }
 
 .template-logo-banner {
