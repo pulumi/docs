@@ -229,6 +229,19 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_DISABLE_REGISTRY_RESOLVE
+        </span>
+    </dt>
+    <dd>
+        <p>
+            By default, <code class="text-xs">pulumi install</code> and related package-resolution commands use the
+            <a href="/registry/">Pulumi Registry</a> to resolve package names. Set this to <code>true</code> to disable
+            registry-based resolution and fall back to the CLI's other resolution mechanisms.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_REGISTRY_RESOLVE=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_DIY_BACKEND_DISABLE_CHECKPOINT_BACKUPS
         </span>
     </dt>
@@ -345,6 +358,19 @@ aliases:
             reported and changes against the desired state are not calculated.
         </p>
         <pre><code class="text-xs">PULUMI_ENABLE_LEGACY_REFRESH_DIFF=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_ENABLE_STREAMING_JSON_PREVIEW
+        </span>
+    </dt>
+    <dd>
+        <p>
+            By default, <code class="text-xs">pulumi preview --json</code> emits a single <code>PreviewDigest</code> JSON
+            object to stdout after the preview completes. Set this to <code>true</code> to instead stream JSON events to
+            stdout as the preview runs, matching the behavior of <code class="text-xs">pulumi up|destroy|refresh --json</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_ENABLE_STREAMING_JSON_PREVIEW=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">

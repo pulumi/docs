@@ -22,10 +22,16 @@ meta_desc:
 # The feature_image is a high-resolution hero image (1884x1256) displayed at
 # the top of the blog post page. It also drives the on-brand social/OpenGraph
 # card, which is generated automatically at build time — don't add a meta_image
-# (custom overrides drift off-brand and are almost never needed). Generate the
-# feature image with /blog-feature-image, or label your PR with `needs-design`
-# to have a designer create a custom one.
-feature_image: feature.png
+# (custom overrides drift off-brand and are almost never needed).
+#
+# It starts blank, but a published post needs one: drop the image in this
+# directory and name it here. Generate it with /blog-feature-image, or label
+# your PR with `needs-design` to have a designer create a custom one. The only
+# posts that may ship without a feature image are `category: general` ones and
+# drafts (`draft: true`) — everything else is expected to have one. Without it,
+# the post renders with no hero image and the social card falls back to a
+# generic branded plate.
+feature_image:
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -96,7 +102,7 @@ let bucket = new aws.s3.Bucket("stuff");
 
 ## Images
 
-![Placeholder Image](feature.png)
+![Descriptive alt text](my-screenshot.png)
 
 ## Videos
 
