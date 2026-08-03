@@ -23,7 +23,7 @@ aliases:
 
 Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML); OpenTofu is a Linux Foundation fork of Terraform 1.6 that uses the HashiCorp Configuration Language (HCL).
 
-The two are unusually interoperable. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is fully OpenTofu compatible and resolves providers against the OpenTofu registry by default, Pulumi Cloud can serve as a managed [state backend and remote runner](/docs/iac/get-started/terraform/terraform-state-backend/) for the `tofu` CLI, and Pulumi programs can execute your existing OpenTofu modules. Adopting Pulumi does not require leaving HCL, your modules, or the OpenTofu ecosystem behind.
+The two are unusually interoperable. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is fully OpenTofu compatible and resolves providers against the OpenTofu registry by default, Pulumi Cloud can serve as a managed [state backend](/docs/iac/get-started/terraform/terraform-state-backend/) and [remote runner](/docs/iac/get-started/terraform/terraform-remote-execution/) for the `tofu` CLI, and Pulumi programs can execute your existing OpenTofu modules. Adopting Pulumi does not require leaving HCL, your modules, or the OpenTofu ecosystem behind.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of OpenTofu.
 
@@ -33,7 +33,7 @@ This page covers what each tool is, a feature-by-feature comparison, the most im
 
 For users coming from OpenTofu, Pulumi can also consume the existing OpenTofu ecosystem directly: the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature generates a typed Pulumi SDK from any provider in the OpenTofu or Terraform registry, and Pulumi can [execute existing OpenTofu modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) as components inside a Pulumi program.
 
-Pulumi also runs HCL itself. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language: set `runtime: hcl` in `Pulumi.yaml`, keep your `.tf` files, and providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged automatically, exactly as they are in OpenTofu. There are no syntactic differences to learn.
+Pulumi also runs HCL itself. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language: set `runtime: hcl` in `Pulumi.yaml`, keep your `.tf` files, and providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged automatically, exactly as they are in OpenTofu. The syntax is identical.
 
 ## What is OpenTofu?
 
@@ -73,7 +73,7 @@ When a provider is not packaged in the Pulumi Registry, the [Any Terraform Provi
 
 ### Execution and rollbacks
 
-OpenTofu runs locally through the `tofu` CLI; remote execution requires a runner. That runner can be Pulumi Cloud: when it [holds your OpenTofu state](/docs/iac/get-started/terraform/terraform-state-backend/), stacks created through the CLI [run plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default, with VCS-triggered applies pausing for manual approval, so you get managed remote runs without adopting a third-party service (Spacelift, env0, Scalr) or building a custom CI pipeline. Pulumi itself runs through the local CLI, programmatically through the [Automation API](/docs/iac/concepts/automation-api/), or remotely through [Pulumi Deployments](/docs/deployments/). Neither tool performs automatic rollback on a failed `apply`/`up`: both leave the stack in a partially-updated state and reconcile on the next run. The difference is in surface area — Pulumi offers an embeddable SDK and a first-party managed runner; OpenTofu relies on the CLI and external automation.
+OpenTofu runs locally through the `tofu` CLI; remote execution requires a runner. That runner can be Pulumi Cloud: when it [holds your OpenTofu state](/docs/iac/get-started/terraform/terraform-state-backend/), stacks created through the CLI [run plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default, with VCS-triggered applies pausing for manual approval, so you get managed remote runs without adopting a third-party service (Spacelift, env0, Scalr) or building a custom CI pipeline. Pulumi itself runs through the local CLI, programmatically through the [Automation API](/docs/iac/concepts/automation-api/), or remotely through [Pulumi Deployments](/docs/deployments/). Neither tool performs automatic rollback on a failed `apply`/`up`: both leave the stack in a partially updated state and reconcile on the next run. The difference is in surface area — Pulumi offers an embeddable SDK and a first-party managed runner; OpenTofu relies on the CLI and external automation.
 
 ### Secrets handling
 
@@ -106,7 +106,7 @@ The [Automation API](/docs/iac/concepts/automation-api/) lets a host application
 1. Want the engine itself under MPL 2.0 and community governance, rather than depending on a vendor-operated control plane for state, runs, and policy.
 1. Prefer to assemble managed-state and collaboration features from third-party services (Spacelift, env0, Scalr) rather than buying them from a single vendor.
 
-An existing investment in HCL, modules, and team expertise is no longer a reason on its own. Pulumi runs [HCL as a first-class language](/docs/iac/languages-sdks/hcl/) with OpenTofu-compatible provider resolution, [executes your existing OpenTofu modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), and can [back your OpenTofu state](/docs/iac/get-started/terraform/terraform-state-backend/) without any change to your configurations. The two can also coexist — see [Adoption](#adoption-coexistence-conversion-and-import) below.
+An existing investment in HCL, modules, and team expertise is no longer a reason on its own. Pulumi runs [HCL as a first-class language](/docs/iac/languages-sdks/hcl/) with OpenTofu-compatible provider resolution, [executes your existing OpenTofu modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), and can [back your OpenTofu state](/docs/iac/get-started/terraform/terraform-state-backend/) without any change to your configurations. The two can also coexist — see [Adoption](#adoption-coexistence-conversion-and-import).
 
 ## Adoption: coexistence, conversion, and import
 

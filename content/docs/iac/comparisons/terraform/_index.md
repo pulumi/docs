@@ -113,7 +113,7 @@ The [Automation API](/docs/iac/concepts/automation-api/) lets a host application
 1. Have standardized on HashiCorp tooling end to end — Vault, Consul, Nomad — and value the single-vendor integration between them.
 1. Want to standardize on a single tool when your scope is limited to providers that already exist in the Terraform Registry and you don't need an embeddable SDK or cross-language module sharing.
 
-An existing investment in HCL, modules, and team expertise is no longer a reason on its own. Pulumi runs [HCL as a first-class language](/docs/iac/languages-sdks/hcl/), [consumes your existing Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), and can [back your Terraform state](/docs/iac/get-started/terraform/terraform-state-backend/) without any change to your code. The two can also coexist; see [Adoption](#adoption-coexistence-conversion-and-import) below.
+An existing investment in HCL, modules, and team expertise is no longer a reason on its own. Pulumi runs [HCL as a first-class language](/docs/iac/languages-sdks/hcl/), [consumes your existing Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), and can [back your Terraform state](/docs/iac/get-started/terraform/terraform-state-backend/) without any change to your code. The two can also coexist; see [Adoption](#adoption-coexistence-conversion-and-import).
 
 ## Adoption: coexistence, conversion, and import
 

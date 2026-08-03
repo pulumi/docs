@@ -127,7 +127,7 @@ Not necessarily. Pulumi Cloud and Pulumi Deployments provide the managed state, 
 
 ### Can Pulumi Cloud replace my TACOS if I'm staying on Terraform?
 
-For the state and run-management job, largely yes. [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/), so Terraform and OpenTofu projects use it by adding a standard `backend "remote"` block, with no change to your resource code. You get managed state with locking, [remote plans and applies](/docs/iac/get-started/terraform/terraform-remote-execution/), approval gates on VCS-triggered applies, update history, RBAC, policy enforcement, and Resource Search across your estate. Drift detection is the gap — it needs a Pulumi program — and a TACOS still makes sense if you orchestrate several different IaC tools from one control plane.
+Yes, for the state and run-management job. [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/), so Terraform and OpenTofu projects use it by adding a standard `backend "remote"` block, with no change to your resource code. You get managed state with locking, [remote plans and applies](/docs/iac/get-started/terraform/terraform-remote-execution/), approval gates on VCS-triggered applies, update history, RBAC, policy enforcement, and Resource Search across your estate. Drift detection is the gap — it needs a Pulumi program — and a TACOS still makes sense if you orchestrate more than one IaC tool from a single control plane.
 
 ### How do I move a Terraform estate onto Pulumi?
 

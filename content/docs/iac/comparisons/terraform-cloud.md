@@ -27,7 +27,7 @@ Third, HashiCorp itself changed hands: IBM completed its acquisition of HashiCor
 
 ## Adopt Pulumi Cloud without leaving Terraform
 
-Replacing HCP Terraform doesn't have to begin with a code change. Pulumi interoperates with Terraform and OpenTofu at the level of state, language, and modules, so you can move the pieces you want to move and leave the rest running exactly as it is.
+Replacing HCP Terraform doesn't have to begin with a code change. Pulumi interoperates with Terraform and OpenTofu at the level of state, language, and modules, so you can move the pieces you want to move and leave the rest running unchanged.
 
 ### Pulumi Cloud as your Terraform state backend
 
@@ -39,7 +39,7 @@ Stacks holding Terraform state are first-class entities in Pulumi Cloud, not rea
 
 * Govern them with [tag-based access control and team and user role assignments](/docs/administration/access-identity/rbac/).
 * Keep backend configuration in [Pulumi ESC](/docs/esc/), inject OIDC credentials at apply time, and expose Terraform root module outputs as stack outputs for downstream stacks and services.
-* Run [preventative policies](/docs/insights/policy/) against a Terraform plan on remotely-executed stacks, blocking an apply when a resource is non-compliant, and keep scanning with audit policies afterward.
+* Run [preventative policies](/docs/insights/policy/) against a Terraform plan on remotely executed stacks, blocking an apply when a resource is non-compliant, and keep scanning with audit policies afterward.
 * Get [Neo code reviews](/docs/ai/neo/code-reviews/) on Terraform and OpenTofu pull requests, informed by what Pulumi Cloud knows about the infrastructure you actually have running.
 * Search every Terraform-managed resource in [Pulumi Insights](/docs/insights/) next to your Pulumi-managed ones.
 
@@ -92,7 +92,7 @@ Mercedes-Benz Research & Development adopted Pulumi specifically to unify applic
 | Terraform module reuse | [`pulumi package add terraform-module`](/docs/iac/get-started/terraform/terraform-modules/) pulls existing modules into a Pulumi program in any language, and [Pulumi Cloud's registry hosts them](/docs/idp/concepts/terraform-modules/) alongside Pulumi packages via an HCP-compatible publish API | Native to Terraform and OpenTofu only |
 | Pricing model | One Pulumi Cloud plan bundles IaC, secrets, estate visibility, and AI usage under a single credit allotment, with on-demand pricing for usage beyond it; the Individual tier is free with no resource cap | Resources Under Management (RUM)---billed by the count of resources tracked in state, in addition to plan tier |
 | Free tier | Individual tier is free with no resource cap for personal use | Enhanced Free tier caps out at 500 managed resources per organization |
-| Policy as code | [Pulumi Policies](/docs/insights/policy/), written in Python, TypeScript, or OPA Rego, enforced on every `pulumi up` and — for [remotely-executed](/docs/iac/get-started/terraform/terraform-remote-execution/) Terraform stacks — against Terraform plans, as part of the same platform | Sentinel or OPA policy checks, run as a distinct step in the HCP Terraform run pipeline |
+| Policy as code | [Pulumi Policies](/docs/insights/policy/), written in Python, TypeScript, or OPA Rego, enforced on every `pulumi up` and — for [remotely executed](/docs/iac/get-started/terraform/terraform-remote-execution/) Terraform stacks — against Terraform plans, as part of the same platform | Sentinel or OPA policy checks, run as a distinct step in the HCP Terraform run pipeline |
 | Secrets and configuration | [Pulumi ESC](/docs/esc/) centralizes secrets and config across infrastructure and applications | Workspace variables plus a separate HashiCorp Vault integration for centralized secrets |
 | Estate visibility | [Pulumi Insights](/docs/insights/) inventories every resource across every provider, however it was provisioned, including resources in Terraform-backed stacks | No equivalent; visibility is scoped to what's tracked in HCP Terraform workspaces |
 | AI and agent readiness | [Pulumi Neo](/docs/ai/) and general-purpose AI coding agents operate directly on real, familiar code | Agents must generate and reason about HCL, a narrower and less common training target |
