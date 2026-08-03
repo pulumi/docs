@@ -53,7 +53,7 @@ That matters for two groups: teams who prefer HCL and shouldn't have to trade it
 
 Pulumi programs in any language can [consume Terraform modules natively](/docs/iac/get-started/terraform/terraform-modules/) with `pulumi package add terraform-module <source> <version> <name>`, resolving from the Terraform Registry, a private registry, or a local path. The module itself doesn't change.
 
-Pulumi Cloud's private registry also hosts Terraform modules alongside Pulumi packages, so your teams have one place to look for reusable building blocks rather than two. Modules hosted there work from both Pulumi and Terraform programs.
+[Pulumi Cloud's registry also hosts your Terraform modules](/docs/idp/concepts/terraform-modules/) alongside Pulumi packages, so your teams have one place to look for reusable building blocks rather than two. The publish API is wire-compatible with HCP Terraform's private registry: point your existing go-tfe or `hashicorp/tfe` provider pipelines at `tf.pulumi.com`, supply a Pulumi access token, and they run unchanged. Every version you publish is also converted into a Pulumi package with typed inputs and outputs and a generated SDK, while your existing `.tf` consumers keep resolving the module over the Terraform protocol.
 
 ## Choosing a language, not being assigned one
 
@@ -89,7 +89,7 @@ Mercedes-Benz Research & Development adopted Pulumi specifically to unify applic
 | --- | --- | --- |
 | Language | Python, TypeScript, JavaScript, Go, C#, and Java, plus YAML — general-purpose languages with native testing, IDE support, and package management — and [HCL](/docs/iac/languages-sdks/hcl/) via `runtime: hcl`, a superset of Terraform HCL that is fully OpenTofu compatible | HCL, a configuration-focused DSL; `terraform test` covers native unit testing, but reuse and abstraction are limited to the module system |
 | Terraform and OpenTofu state | [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/) as a drop-in target, with remote plans and applies and manual approval gates, alongside Pulumi's own state | Native, but state and runs are scoped to HCP Terraform workspaces |
-| Terraform module reuse | [`pulumi package add terraform-module`](/docs/iac/get-started/terraform/terraform-modules/) pulls existing modules into a Pulumi program in any language, and Pulumi Cloud's private registry hosts them alongside Pulumi packages | Native to Terraform and OpenTofu only |
+| Terraform module reuse | [`pulumi package add terraform-module`](/docs/iac/get-started/terraform/terraform-modules/) pulls existing modules into a Pulumi program in any language, and [Pulumi Cloud's registry hosts them](/docs/idp/concepts/terraform-modules/) alongside Pulumi packages via an HCP-compatible publish API | Native to Terraform and OpenTofu only |
 | Pricing model | One Pulumi Cloud plan bundles IaC, secrets, estate visibility, and AI usage under a single credit allotment, with on-demand pricing for usage beyond it; the Individual tier is free with no resource cap | Resources Under Management (RUM)---billed by the count of resources tracked in state, in addition to plan tier |
 | Free tier | Individual tier is free with no resource cap for personal use | Enhanced Free tier caps out at 500 managed resources per organization |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/), written in Python, TypeScript, or OPA Rego, enforced on every `pulumi up` and against Terraform plans, as part of the same platform | Sentinel or OPA policy checks, run as a distinct step in the HCP Terraform run pipeline |
@@ -107,7 +107,7 @@ Terraform's ecosystem maturity and community size are real advantages, and they'
 Leaving HCP Terraform is not a single decision, and none of these steps require the ones after it. In roughly ascending order of effort:
 
 1. **Swap the backend.** Point Terraform at [Pulumi Cloud as its state backend](/docs/iac/get-started/terraform/terraform-state-backend/) and change nothing else. Your code, workflow, and CLI stay the same.
-1. **Reuse what you've built.** Bring your existing [Terraform modules](/docs/iac/get-started/terraform/terraform-modules/) into new Pulumi projects instead of rewriting them.
+1. **Reuse what you've built.** Bring your existing [Terraform modules](/docs/iac/get-started/terraform/terraform-modules/) into new Pulumi projects instead of rewriting them, and [move your private module registry](/docs/idp/concepts/terraform-modules/) by repointing your publish pipelines at `tf.pulumi.com`.
 1. **Write new projects in HCL.** Use [Pulumi HCL](/docs/iac/languages-sdks/hcl/) to get the Pulumi engine and ecosystem without changing the syntax your team writes.
 1. **Convert when a team wants a general-purpose language.** [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) translates existing HCL into Pulumi programs in your language of choice as a starting point for review, and [`pulumi import`](/docs/iac/guides/migration/import/) brings already-provisioned resources under Pulumi management without recreating them.
 1. **Coexist for as long as you need.** Pulumi can reference an existing `.tfstate` file, so both tools run side by side during a gradual cutover, with Neo available to help scaffold conversions and interpret the resulting `pulumi preview` output.
@@ -124,7 +124,9 @@ Yes. [HCL is a first-class Pulumi language](/docs/iac/languages-sdks/hcl/): set 
 
 ### Can I use my existing Terraform modules in Pulumi?
 
-Yes, without modifying them. `pulumi package add terraform-module <source> <version> <name>` makes a module available to a Pulumi program in any language, resolving from the Terraform Registry, a private registry, or a local path. Pulumi Cloud's private registry can also host your Terraform modules alongside Pulumi packages, where they remain usable from both Pulumi and Terraform programs. See [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/).
+Yes, without modifying them. `pulumi package add terraform-module <source> <version> <name>` makes a module available to a Pulumi program in any language, resolving from the Terraform Registry, a private registry, or a local path. See [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/).
+
+You can also [host your own modules in the Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/). Its publish API is wire-compatible with HCP Terraform's, so existing go-tfe or `hashicorp/tfe` provider pipelines migrate by changing the host to `tf.pulumi.com`. Published modules stay usable from both Pulumi and Terraform programs.
 
 ### Is HCP Terraform (Terraform Cloud) still free?
 
@@ -155,6 +157,7 @@ No, and you don't have to rewrite anything to start. The smallest possible move 
 * [Get started with Pulumi](/docs/get-started/)
 * [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/)
 * [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/)
+* [Terraform modules in the Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/)
 * [Writing Pulumi programs in HCL](/docs/iac/languages-sdks/hcl/)
 * [Migrating from Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
 * [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
