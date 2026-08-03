@@ -15,7 +15,7 @@ tags:
 category: tutorials
 ---
 
-With today's release, Pulumi Cloud now works as a backend for your Terraform state, HCL is a first-class Pulumi language, and your Terraform modules run in Pulumi programs as is. That's a lot of new surface area, and if you're wondering how it all fits together, this post is for you. We'll start with a Terraform project you've already deployed and, one step at a time, bring it into Pulumi Cloud.
+With [today's release](/blog/bring-your-terraform-estate-into-the-agentic-era/), Pulumi Cloud now works as a backend for your Terraform state, HCL is a first-class Pulumi language, and your Terraform modules run in Pulumi programs as is. That's a lot of new surface area, and if you're wondering how it all fits together, this post is for you. We'll start with a Terraform project you've already deployed and, one step at a time, bring it into Pulumi Cloud.
 
 Here's the plan:
 
@@ -33,7 +33,11 @@ We built all of this because so many of you come to us wanting to adopt Pulumi w
 To keep the moving parts to a minimum, we'll work from a small starter project. It provisions a single Amazon S3 bucket and includes a local module we'll publish later. Create your own copy from the template:
 
 ```bash
-gh repo create my-tf-project --template cnunciato/simple-tf-template --public --clone
+gh repo create my-tf-project \
+    --template cnunciato/simple-tf-template \
+    --public \
+    --clone
+
 cd my-tf-project
 ```
 
@@ -76,7 +80,7 @@ Create a token, paste it into the prompt, and you're authenticated:
 Success! Logged in to Terraform Enterprise (tf.pulumi.com)
 ```
 
-With the backend block in place and the CLI authenticated, the migration is a single command:
+With the backend block in place and the CLI authenticated, you're ready to migrate. If you're moving production state, back it up first — `terraform state pull > backup.tfstate` — then run the migration, which is a single command:
 
 ```bash
 terraform init -migrate-state
@@ -99,6 +103,8 @@ Answer `yes`, and you're migrated:
 Successfully configured the backend "remote"! Terraform will automatically
 use this backend unless the backend configuration changes.
 ```
+
+Nothing about your infrastructure changed here — only where its state lives. Run `terraform plan` to confirm you see no changes. We used a local backend to keep things concrete, but the same move works from an S3, Azure, or GCS bucket, and from HCP Terraform or Terraform Enterprise; see [Store Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) for the backend-specific steps.
 
 In the Pulumi Cloud console, choose **Stacks**, and you'll see your new stack in the list, along with its first update and the resources now under management. Those resources are searchable, too — press <kbd>⌘K</kbd> and start typing.
 
@@ -148,11 +154,11 @@ Remote execution is powered by [Pulumi Deployments](/docs/idp/deployments/), whi
 
 <!-- SCREENSHOT: Console showing a VCS-triggered run awaiting Confirm/Discard. -->
 
-That's the lift-and-shift. Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [preventive policies](/docs/insights/policy/) all available to them. Next up: modules.
+That's the lift-and-shift. Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi policies](/docs/insights/policy/) all available to them — [audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) run on every Terraform stack, and preventative policies block non-compliant applies on remote runs. Next up: modules.
 
 ## Publish a Terraform module
 
-If you've got a pile of Terraform lying around, you've almost certainly got modules, and you need somewhere to keep them. Alongside its role as a state backend, Pulumi Cloud now includes a private registry that hosts your Terraform modules and makes them available across your organization.
+If you've got a pile of Terraform lying around, you've almost certainly got modules, and you need somewhere to keep them. Alongside its role as a state backend, Pulumi Cloud now includes a [private registry](/docs/idp/concepts/terraform-modules/) that hosts your Terraform modules and makes them available across your organization.
 
 Module publishing is an Enterprise or Business Critical capability, so you'll want an organization for this part. You can [create one](https://app.pulumi.com) and start a free trial if you don't have one already. Open the organization switcher, choose **Create organization**, and pick a name. As a fan of the short-lived sitcom *Better Off Ted*, I went with `veridian`, but choose whatever makes you smile.
 
@@ -160,8 +166,9 @@ Our starter project includes a small module at `./modules/s3-bucket` that provis
 
 ```bash
 export PULUMI_ACCESS_TOKEN=<your-access-token>
+
 go -C upload-module run . \
-    -org veridian \
+    -org <your-org> \
     -provider aws \
     -version 0.1.0 \
     -path ./modules/s3-bucket
@@ -298,6 +305,8 @@ output "bucket_arn" {
 ```
 
 Run `pulumi up` again, and there it is: an HCL program, running on the Pulumi engine, consuming a Terraform module from the Pulumi Cloud registry.
+
+And if you'd rather not stay in HCL, [`pulumi convert`](/docs/iac/get-started/terraform/convert-hcl/) translates it into TypeScript, Python, Go, C#, Java, or YAML — so you can adopt a general-purpose language when you're ready, not because a migration forced the timing.
 
 ## Where to go next
 
