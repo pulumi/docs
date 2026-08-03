@@ -9,6 +9,46 @@
 
 const CONFIRM_MS = 2000;
 
+// navigator.clipboard only exists in a secure context, so on the plain-HTTP S3
+// preview builds it is undefined and the modern path is unavailable. Fall back
+// to a selected off-screen textarea, which works there. Returns whether the text
+// actually reached the clipboard, so the caller never reports a false success.
+async function copyText(text: string): Promise<boolean> {
+    if (window.isSecureContext && navigator.clipboard) {
+        try {
+            await navigator.clipboard.writeText(text);
+            return true;
+        } catch {
+            // Permission denied or the document lost focus — try the fallback.
+        }
+    }
+
+    const field = document.createElement("textarea");
+    field.value = text;
+    field.setAttribute("readonly", "");
+    field.style.cssText = "position:fixed;top:0;left:-9999px;opacity:0";
+    document.body.appendChild(field);
+
+    // Preserve whatever the user had selected before we hijack the selection.
+    const selection = document.getSelection();
+    const previous = selection && selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
+
+    field.select();
+    let copied = false;
+    try {
+        copied = document.execCommand("copy");
+    } catch {
+        copied = false;
+    }
+
+    field.remove();
+    if (selection && previous) {
+        selection.removeAllRanges();
+        selection.addRange(previous);
+    }
+    return copied;
+}
+
 function initCopyText() {
     document.querySelectorAll<HTMLElement>("[data-copy-text]").forEach(control => {
         const idle = control.querySelectorAll<HTMLElement>("[data-copy-idle]");
@@ -16,9 +56,7 @@ function initCopyText() {
         let timer: number | undefined;
 
         control.addEventListener("click", async () => {
-            try {
-                await navigator.clipboard.writeText(control.getAttribute("data-copy-text") || "");
-            } catch {
+            if (!(await copyText(control.getAttribute("data-copy-text") || ""))) {
                 return;
             }
             idle.forEach(el => el.setAttribute("hidden", ""));

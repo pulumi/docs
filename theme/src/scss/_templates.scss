@@ -196,9 +196,10 @@
         @apply w-full min-w-[10.5rem];
     }
 
-    // pulumi-tooltip is inline by default and its bubble is a fixed w-48; here
-    // the trigger is a full-width button and the content is the whole prompt, so
-    // widen both to the card and let the bubble wrap instead of truncating.
+    // pulumi-tooltip is inline by default; the trigger here is a full-width
+    // button, so stretch both to the card. The bubble holds the whole prompt, so
+    // it gets a fixed width wider than both the button and the component's own
+    // w-48 default, and wraps rather than truncating.
     .hero-cta-copy-tooltip {
         @apply block w-full;
 
@@ -207,7 +208,7 @@
         }
 
         .tooltip-content {
-            @apply w-full text-left break-words font-mono;
+            @apply w-72 text-left break-words font-mono;
         }
     }
 
