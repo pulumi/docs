@@ -110,7 +110,7 @@ Installing a converted package requires Pulumi CLI 3.248.0 or newer. See [Downlo
 
 ### If a version has no package
 
-Installing by package name is the path to reach for. If a version you need has not produced a package, the same conversion can also be run on your own machine, against the module address rather than the package name:
+Installing by package name is the path to reach for. If a version you need has no package, you can convert the module locally instead, against the module address rather than the package name:
 
 ```bash
 pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
@@ -118,7 +118,7 @@ pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<versio
 
 `hcl` is a parameterized provider. The `module` keyword selects module mode, followed by the module address and an optional version. Omit the version to resolve the latest published version; pass one to pin it.
 
-This converts the module as you run it, using your local `hcl` provider, rather than installing the package the registry produced. It is worth trying when a version has no package, though a module the registry could not convert may well fail here for the same reason.
+This converts the module on your machine, using your local `hcl` provider, and generates an SDK for your project. Nothing is published: there is no package in the registry, and so no package page, no API reference, and no usage tracking, and a teammate who needs the module runs the same command rather than installing what you produced. A module the registry could not convert may well fail here for the same reason.
 
 Both commands resolve using your Pulumi credentials. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
 
