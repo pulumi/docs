@@ -44,7 +44,7 @@ Read the full blog post file (frontmatter + body).
 
 ### Fast-path: existing feature image
 
-If a real `feature.png` already exists in the blog post's directory (not a placeholder), skip all interactive questions — just make sure `feature_image: feature.png` is set in frontmatter (Step 4) and report.
+If a `feature.png` already exists in the blog post's directory, skip all interactive questions — just make sure `feature_image: feature.png` is set in frontmatter (Step 4) and report. (New posts scaffold with a blank `feature_image` and no image file, so any `feature.png` present is a real one.)
 
 If `$ARGUMENTS` fully specifies the feature template (e.g., `/blog-feature-image rocket`), skip the interactive question and go straight to Step 3's rendering. If partially specified, only ask about the unspecified parts.
 
