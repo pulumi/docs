@@ -39,7 +39,10 @@
         {{ end }}
         <div class="{{ $rowClass }}">
             {{ with .cta_primary_text }}
-            <a href="{{ $.cta_primary_link }}"{{ partial "external-link-attrs.html" $.cta_primary_link | safeHTMLAttr }} class="btn btn-primary btn-xl {{ $btnClass }}" data-role="cta-get-started">{{ . }}</a>
+            <a href="{{ $.cta_primary_link }}"{{ partial "external-link-attrs.html" $.cta_primary_link | safeHTMLAttr }} class="btn btn-primary btn-xl {{ $btnClass }}" data-role="cta-get-started">
+                {{ . }}
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
             {{ end }}
             {{ with .cta_secondary_text }}
             <a href="{{ $.cta_secondary_link }}"{{ partial "external-link-attrs.html" $.cta_secondary_link | safeHTMLAttr }} class="btn btn-outline btn-xl {{ $btnClass }}" data-role="cta-secondary">{{ . }}</a>
@@ -57,7 +60,7 @@
                 <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
                 <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5 text-violet-primary") }}</span>
                 <span class="hero-cta-copy-text" data-copy-idle>{{ $agentPromptLabel }}</span>
-                <span class="hero-cta-copy-text" data-copy-done hidden>Copied to clipboard</span>
+                <span class="hero-cta-copy-text" data-copy-done hidden>Copied!</span>
             </button>
             <span slot="content">{{ . }}</span>
         </pulumi-tooltip>
