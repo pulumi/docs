@@ -14,19 +14,20 @@ menu:
 aliases:
 ---
 
-Pulumi Cloud can run your Terraform and OpenTofu operations remotely. Instead of running `plan` and `apply` on your local machine, the Terraform or OpenTofu CLI uploads your configuration to Pulumi Cloud, which executes the operation in a managed container and streams the output back to your terminal in real time.
+Pulumi Cloud can run your Terraform and OpenTofu operations remotely. Instead of running `plan` and `apply` on your local machine, the Terraform or OpenTofu CLI uploads your configuration to Pulumi Cloud, which executes the operation in a managed container and streams the output back to your terminal in real time. Pulumi Cloud implements the Terraform Cloud remote execution protocol, so the CLI workflow you already know — `terraform plan`, `terraform apply`, saved plans — works unchanged.
 
 Remote execution gives you:
 
 - **Consistent environment** — every plan and apply runs in the same managed infrastructure, not on individual developer machines
 - **Centralized credentials** — use [Pulumi ESC](/docs/esc/) for cloud provider credentials instead of configuring them on every developer's laptop
 - **VCS automation** — pushes and pull requests trigger runs automatically through [deployment settings](/docs/deployments/concepts/settings/)
+- **Run approvals** — VCS-triggered applies pause for confirmation before proceeding, with confirm and discard controls in the Pulumi Cloud console
 - **Policy enforcement** — [preventative policies](/docs/insights/policy/) evaluate against the plan and block applies that violate policy
 - **Team visibility** — run history, logs, and status are visible in the Pulumi Cloud console
 
 ## How it works
 
-When you run `terraform plan` or `terraform apply` against a Pulumi Cloud workspace with remote execution enabled:
+When you run `terraform plan` or `terraform apply` against a Pulumi Cloud stack with [remote execution enabled](#enable-remote-execution):
 
 1. The CLI packages your local configuration files into a tarball and uploads them to Pulumi Cloud.
 1. Pulumi Cloud creates a run and executes the operation using [OpenTofu](https://opentofu.org/) in a managed container.
@@ -38,6 +39,8 @@ For VCS-triggered runs, Pulumi Cloud fetches your configuration from the reposit
 {{% notes "info" %}}
 Pulumi Cloud uses OpenTofu as the execution engine for remote runs. You can use either the Terraform CLI or the OpenTofu CLI on your local machine — both communicate with Pulumi Cloud using the same protocol.
 {{% /notes %}}
+
+Terraform workspaces map to Pulumi Cloud [stacks](/docs/iac/concepts/stacks/). This page uses both terms depending on context — "workspace" when describing Terraform CLI behavior and "stack" when describing Pulumi Cloud concepts.
 
 ## Enable remote execution
 
@@ -149,7 +152,7 @@ tofu apply tfplan
 
 {{< /chooser >}}
 
-The saved plan file is a bookmark — the actual plan artifact is stored securely in Pulumi Cloud. When you apply the bookmark, Pulumi Cloud uses the original saved plan, guaranteeing that the apply matches exactly what you reviewed even if infrastructure drifted in the meantime.
+The saved plan file is a bookmark containing a run ID — the actual plan artifact is stored securely in Pulumi Cloud. You can save multiple plans to different files and they are independent of each other. When you apply a bookmark, Pulumi Cloud uses the original saved plan, guaranteeing that the apply matches exactly what you reviewed even if infrastructure drifted in the meantime. Saved plans expire after approximately one week.
 
 ### Destroy, refresh, and targeted operations
 
@@ -300,7 +303,7 @@ To migrate:
 
 1. Follow the [HCP Terraform state migration steps](/docs/iac/get-started/terraform/terraform-state-backend/#migrate-from-hcp-terraform-terraform-cloud) to move your state.
 1. Update your `cloud` block to point at Pulumi Cloud (change `hostname` and `organization`).
-1. Add your cloud credentials to the stack's [automatically provisioned ESC environment](#provide-credentials-with-esc) to replace workspace variables.
+1. Add your cloud credentials to the stack's [automatically provisioned ESC environment](#provide-credentials-with-esc) to replace workspace variables. If you were using HashiCorp Vault for secrets, ESC can integrate directly via the [Vault secrets provider](/docs/esc/providers/secrets/vault-secrets/) and [Vault login provider](/docs/esc/providers/login/vault-login/).
 1. Run `terraform plan` to verify the migration — you should see **No changes**.
 
 ## FAQ
@@ -319,7 +322,7 @@ Not currently. Use environment variables through an [ESC environment](#provide-c
 
 ### Is drift detection available?
 
-Not currently for Terraform-managed stacks. You can run `terraform plan` on a schedule via CI/CD to detect drift manually.
+Not currently for Terraform-managed stacks. You can run `terraform plan` on a schedule via CI/CD to detect drift manually, or [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) (including [Pulumi HCL](/docs/iac/languages-sdks/hcl/)) and use Pulumi's built-in [drift detection](/docs/pulumi-cloud/deployments/drift/).
 
 ### How are resources priced?
 

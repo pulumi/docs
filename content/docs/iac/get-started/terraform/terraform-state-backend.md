@@ -459,7 +459,7 @@ Yes. Pulumi Cloud can execute your Terraform and OpenTofu plans and applies remo
 
 ### Can I use drift detection with Terraform-managed stacks?
 
-Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) and run updates with the Pulumi CLI.
+Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/pulumi-cloud/deployments/drift/).
 
 ### Can I use preventative policies?
 
