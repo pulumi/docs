@@ -974,7 +974,7 @@ def render_outstanding(stubs: list[dict], vale_blockers: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
+def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "") -> str:
     has_style = bool(vale_findings)
     if not stubs and not has_style:
         return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
@@ -986,11 +986,11 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
     if has_style:
         if stubs:
             lines.append("")
-        lines.append(_render_style_findings(vale_findings))
+        lines.append(_render_style_findings(vale_findings, files_url))
     return "\n".join(lines)
 
 
-def _render_style_findings(findings: list[dict]) -> str:
+def _render_style_findings(findings: list[dict], files_url: str = "") -> str:
     # Rendered EXPANDED (no <details>) and excluded from the ⚠️ count. These
     # are advisory nags kept for the rule-tuning loop, not reviewer burden —
     # the count exclusion carries that signal, so hiding them behind a
@@ -1008,12 +1008,18 @@ def _render_style_findings(findings: list[dict]) -> str:
     by_file: dict[str, list[dict]] = {}
     for f in findings:
         by_file.setdefault(str(f.get("file") or "?"), []).append(f)
+    # The caption links straight to the Files-changed tab when the composer
+    # knows the PR: that is where the ```suggestion blocks render, and where
+    # "Add suggestion to batch" lets the author stage several and commit them
+    # in one go. Without a link the reader has to work out where to look.
+    files_link = f"[Files changed]({files_url})" if files_url else "Files changed"
     out = [
         STYLE_HEADING,
         "",
         "*Optional polish from pattern-based linting — never blocking, not counted above. "
         "Take the ones that read better and ignore the rest. "
-        "✏️ marks a suggestion you can apply in one click from the Files changed tab.*",
+        f"✏️ marks one you can apply from the {files_link} tab — use **Add suggestion to batch** "
+        "on each, then **Commit suggestions** to take several in a single commit.*",
         "",
     ]
     multi = len(by_file) > 1
@@ -1364,6 +1370,11 @@ def compose(args: argparse.Namespace) -> str:
 
     route_counts = compute_route_counts(verdicts, candidate_claims)
 
+    # Deep-link target for the style caption. Both parts are optional (local
+    # /docs-review runs have neither), so fall back to unlinked prose.
+    files_url = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
+                 if args.repo and args.pr else "")
+
     outstanding_stubs, lowconf_stubs = build_stubs(verdicts)
     # Blocker-tier Vale findings (stamped by vale-findings-filter.py from the
     # `blocker:` allowlist) count toward 🚨 — they drive the
@@ -1428,7 +1439,7 @@ def compose(args: argparse.Namespace) -> str:
     sections += [
         render_outstanding(outstanding_stubs, vale_blockers),
         "",
-        render_lowconfidence(lowconf_stubs, vale_nags),
+        render_lowconfidence(lowconf_stubs, vale_nags, files_url),
         "",
         render_triaged(),
         "",

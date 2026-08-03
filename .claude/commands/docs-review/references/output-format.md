@@ -324,12 +324,12 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
     **Render expanded — never behind a `<details>`.** They were collapsed while they still counted toward ⚠️; now that the count excludes them they cost no review burden, so a disclosure only adds a click and hides the ✏️ marks. Group them under an `##### <path>` H5 heading per file, in line order. On a multi-file review the heading also carries the per-file total and kind breakdown (`##### content/docs/foo.md — 8 (4 wordiness, 2 punctuation, 1 weasel word, 1 filler)`); on a single-file review the path alone is enough. The per-file heading is **mandatory either way**, and must be an H5 rather than a bold line: `post-style-suggestions.py --annotate-draft` walks those headings to bind a `- **line N:**` bullet to a file, and a column-0 `**bold**` line would be miscounted as a bucket finding by `extract_bucket_bullets` (inflating the ⚠️ count and tripping the L-prefix rule).
 
-    **✏️ marks a one-click suggestion.** A bullet whose finding was posted as an applyable `suggestion` comment gets ` ✏️` appended. The mark is written by the workflow *after* the suggestion review posts, from the set the API accepted — never by the reviewer, and never for an entry that was staged but dropped. Do not add or remove it by hand.
+    **✏️ marks a one-click suggestion.** A bullet whose finding was posted as an applyable `suggestion` comment gets ` ✏️` appended, and the caption deep-links to the PR's Files-changed tab (where the suggestion renders and where **Add suggestion to batch** stages several for a single commit). The mark is written by the workflow *after* the suggestion review posts, from the set the API accepted — never by the reviewer, and never for an entry that was staged but dropped. Do not add or remove it by hand.
 
     ```markdown
     #### Style suggestions
 
-    *Optional polish from pattern-based linting — never blocking, not counted above. Take the ones that read better and ignore the rest. ✏️ marks a suggestion you can apply in one click from the Files changed tab.*
+    *Optional polish from pattern-based linting — never blocking, not counted above. Take the ones that read better and ignore the rest. ✏️ marks one you can apply from the [Files changed](…/files) tab — use **Add suggestion to batch** on each, then **Commit suggestions** to take several in a single commit.*
 
     ##### content/docs/foo.md
 
