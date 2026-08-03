@@ -1,6 +1,6 @@
 ---
 title_tag: Get Started with Pulumi
-meta_desc: Learn the five steps to get started with Pulumi — install the CLI, connect your cloud account, write a program, deploy, and iterate — then pick your cloud.
+meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with Pulumi on the cloud using your favorite language.
 title: Get Started #Breadcrumb
 h1: Get Started with Pulumi # Page title
 no_on_this_page: true
@@ -22,32 +22,7 @@ Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-c
 
 Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) to make managing infrastructure secure, reliable, and hassle-free.
 
-## Why Pulumi
-
-- **Use a real programming language.** Define infrastructure in TypeScript, Python, Go, C#, Java, or YAML — with loops, functions, testing, and full IDE support instead of a domain-specific language.
-- **See every change before it happens.** Pulumi previews exactly what will be created, updated, or deleted before anything touches your cloud account.
-- **Keep your existing credentials.** Pulumi has no credential system of its own — it uses the cloud access you already have, so there's nothing new to set up or secure.
-
-For the full story, see [What is Pulumi?](/what-is/what-is-pulumi/).
-
-## How getting started works
-
-Getting started follows the same five steps on every cloud; only the provider details differ.
-
-```mermaid
-flowchart LR
-    A["1. Install the CLI"] --> B["2. Connect your cloud account"] --> C["3. Write a program"] --> D["4. Deploy"] --> E["5. Iterate and evolve"]
-```
-
-1. **Install the Pulumi CLI.** [Install Pulumi](/docs/install/) with your operating system's package manager or a one-line installer script. One CLI covers every cloud and every language.
-1. **Connect your cloud account.** Pulumi authenticates to your cloud the same way your cloud provider's own CLI does — if that already works on your machine, you're done. See [Connect your cloud account](/docs/get-started/connect-cloud/) for how this works and how to set it up.
-1. **Write a program.** Run `pulumi new` to scaffold a project from a template in your language of choice, then declare cloud resources as code.
-1. **Deploy.** Run `pulumi up` to preview the planned changes and then apply them. Pulumi records what it created in a [stack](/docs/iac/concepts/stacks/), an isolated, configurable instance of your program — see [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/) for the details.
-1. **Iterate and evolve.** Change your code and run `pulumi up` again — Pulumi computes the difference and applies only what changed. When you're done experimenting, `pulumi destroy` tears everything down cleanly.
-
-## Choose your cloud
-
-Ready to begin? Choose a cloud provider and complete the full tutorial:
+Choose a cloud provider to get started:
 
 <section class="docs-home mt-4 mb-12">
     <div class="docs-home-section">
@@ -88,8 +63,6 @@ Ready to begin? Choose a cloud provider and complete the full tutorial:
     </div>
 </section>
 
-Coming from Terraform? See [Pulumi for Terraform Users](/docs/iac/get-started/terraform/) to use Pulumi alongside your existing Terraform infrastructure.
-
 ## Learn more
 
 The following sections are also useful when first learning how to use Pulumi:
@@ -104,5 +77,3 @@ The following sections are also useful when first learning how to use Pulumi:
         <p>Learn how to support, migrate, or convert existing cloud infrastructure with Pulumi.</p>
     </div>
 </div>
-
-Beyond IaC, the Pulumi platform also includes [Pulumi ESC](/docs/esc/get-started/) for centralized secrets and configuration and [Pulumi Deployments](/docs/deployments/get-started/) for git-driven deployment workflows.
