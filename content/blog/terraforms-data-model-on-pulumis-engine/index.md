@@ -26,7 +26,7 @@ The core promise of Pulumi's HCL support is that your can bring your existing Te
 
 ## Providers
 
-Both Pulumi & Terraform have providers, but they don't have the same providers. While there are providers that Terraform does (link: PSP) not (link: azure-native) have (link: kubernetes), Pulumi can always resolve a Terraform provider using Pulumi's confusingly named `terraform-provider` provider (link: to registry).[^1] This is the same provider that lets you consume *Any Terraform Provider* in another Pulumi program with `pulumi package add terraform-provider ...`. The `terraform-provider` provider acts as a relay, it speaks Pulumi's protocol to the Pulumi engine, and speaks Terraform's protocol to the terraform provider it stands up. Because Pulumi HCL needs to work with all Pulumi providers & because `terraform-provider` lets Pulumi HCL speak to Terraform providers via the Pulumi protocol, Pulumi HCL actually only speaks Pulumi protocols directly:
+Both Pulumi & Terraform have providers, but they don't have the same providers. While there are providers that Terraform does (link: PSP) not (link: azure-native) have (link: kubernetes), Pulumi can always resolve a Terraform provider using Pulumi's confusingly named `terraform-provider` provider (link: to registry).[^1] This is the same provider that lets you consume *Any Terraform Provider* in another Pulumi program with `pulumi package add terraform-provider ...`. The `terraform-provider` provider acts as a relay, it speaks Pulumi's protocol to the Pulumi engine, and speaks Terraform's provider protocol to the terraform provider it stands up. Because Pulumi HCL needs to work with all Pulumi providers & because `terraform-provider` lets Pulumi HCL speak to Terraform providers via the Pulumi protocol, Pulumi HCL actually only speaks Pulumi protocols directly:
 
 ```mermaid
 flowchart LR
@@ -136,7 +136,7 @@ Observe that the version moved from the `Parameterization` block to the plugin b
 
 ## Resources
 
-Both Pulumi programs & Terraform config exist to express a resource graph. It is their primary purpose. I don't have the time or the pixals to explain everything, so I'll restrict myself to 3 sub-topics here:
+Both Pulumi programs & Terraform config exist to express a resource graph. It is their primary purpose. I don't have the time or the pixels to explain everything, so I'll restrict myself to 3 sub-topics here:
 
 - Property name translation
 - Provisioners & validators
@@ -272,14 +272,61 @@ The full mapping between Terraform provisioners and validators and Pulumi hooks 
 
 ### Resource Options
 
-TODO
+Our final challenge for resources is Terraform's various resource options. Resource options in both Terraform & Pulumi exist to give special instructions to the engine concerning a specific resource. We can classify Terraform's resource options into two kinds:
+
+- Those that can be handled at the language level.
+- Those that need engine support.
+
+Let's start by going through those that can be handled at the language level without engine support in Pulumi:
+
+- `count`/`for_each`: The HCL interpreter unrolls `count` and `for_each` and sends a request for each underlying resource. These are equivalent to using a for-loop in any of Pulumi's programming languages.
+- `lifecycle.prevent_destroy`: Pulumi doesn't have an equivalent in-language hook (`protect` (link) is stored in state). We emulate `prevent_destroy` with a before_destroy hook, exactly like our before destroy provisioners.
+
+For most of the resource options that require real engine support, Pulumi has equivalent options:
+
+- `lifecycle.replace_triggered_by`: Terraform allows specifying either resources or values here. We map resources to `replaceWith` (link), and we map expressions to `replacementTrigger`.
+- `lifecycle.ignore_changes`: We map this directly to Pulumi's `ignoreChanges`. We translate the paths from Terraform's snake_case to Pulumi's camelCase for you.
+- `lifecycle.create_before_destroyn`: To replicate Terraform's default behavior, we register all resources with `deleteBeforeReplace` (link) set to true. When `lifecycle.create_before_destroy` is set, we go back to Pulumi's default behavior here.
+- `provider`:  Pulumi has exactly this concept (link). We pass it through to the engine  as is.
+- `depends_on`: We pass this directly to the Pulumi engine.
+
+That's how we map Terraform's resource options. Of course, Pulumi has its own set of  resource options, and we expose those on resources with a `pulumi` block. You can see  the remaining resource options in the Pulumi resource options docs page (link).
 
 ## Modules
 
-TODO
+Terraform has modules, and Pulumi has components (link). Naturally, we represent Terraform modules as components. Under the hood, Pulumi has 2  different kinds of components:
+
+- in-language components (link)
+- multi-language-components (link) (MLCs)
+
+In-language  components are components that  are consumed directly within  the language. They don't need the Pulumi engine's intervention to serve the. In Pulumi HCL, this is what you get when you write a `module` block. The same language host  running the rest of your program loads that HCL & interprets it.
+
+Pulumi HCL also supports MLCs as both a consumer &  a provider. That means it can work with the engine to let you consume MLCs written in other Pulumi  languages in  HCL, and that you  can consume  HCL modules  in other  Pulumi languages.
+
+From HCL's perspective, consuming a  MLC is just like any other resource, so it looks like any other resource construction. Here is what it looks like to consume  our AWSx VPC resource (link) (written in TypeScript) in HCL:
+
+```hcl
+terraform {
+  required_providers {
+    awsx = {
+      source = "pulumi/awsx"
+    }
+  }
+}
+
+resource "awsx_ec2_vpc" "example" {
+  availability_zone_names = ["us-east-2", "us-west-1"]
+}
+```
+
+We can consume HCL modules in other Pulumi languages as well. Here is what  it looks like   to consume the unrelated `terraform-aws-modules/vpc/aws`  (link) module in a  Pulumi language:
+
+TODO: Language chooser with every Pulumi language  but HCL using the published HCL SDK to dynamically consume  the desired language.
+
+If you want strongly typed SDKs for your Terraform modules, you can generate them with `pulumi package add`. (link: registry docs)
 
 ## Conclusion
 
-This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine.
+This has been a brief survey of how we have mapped Terraform's semantics onto Pulumi's engine. Hopefully you have a better understanding of how Pulumi HCL is implemented, what its limitations  are, and what it can do.
 
-TODO
+TODO: Any advice to cinch this would  be great.
