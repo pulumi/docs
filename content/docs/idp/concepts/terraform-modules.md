@@ -88,7 +88,7 @@ Pulumi Cloud uses the same `<namespace>/<name>/<system>` address form as HCP Ter
 
 Publishing a module version also converts it into a Pulumi package, with no extra step on your part. The package is named after the module: `<name>-<system>`, published under the same namespace and registry source, so a module published as `acme-corp/vpc/aws` produces a package called `vpc-aws`.
 
-Conversion runs per version, so a module can have some versions with packages and some without. The package's page in Pulumi Cloud shows which versions have converted and gives you the command to install one. While a version is still converting, you can [run the same conversion locally](#converting-a-module-locally) instead of waiting.
+Conversion runs per version, so a module can have some versions with packages and some without. The package's page in Pulumi Cloud shows which versions have converted and gives you the command to install one.
 
 ## Consume from a Pulumi program
 
@@ -108,9 +108,9 @@ Usage tracking only counts consumption through the converted package. A stack or
 Installing a converted package requires Pulumi CLI 3.248.0 or newer. See [Download & Install Pulumi](/docs/install/) to install or upgrade.
 {{% /notes %}}
 
-### Converting a module locally
+### If a version has no package
 
-The same conversion can be run locally, against the module address rather than the package name:
+Installing by package name is the path to reach for. If a version you need has not produced a package, the same conversion can also be run on your own machine, against the module address rather than the package name:
 
 ```bash
 pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
@@ -118,7 +118,7 @@ pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<versio
 
 `hcl` is a parameterized provider. The `module` keyword selects module mode, followed by the module address and an optional version. Omit the version to resolve the latest published version; pass one to pin it.
 
-This runs the conversion at the moment you run it, using whatever version of the `hcl` provider you have, rather than using the package the registry produced. Use it while a version is still converting. It does not work around a failed conversion: a module the registry could not convert fails here for the same reason.
+This converts the module as you run it, using your local `hcl` provider, rather than installing the package the registry produced. It is worth trying when a version has no package, though a module the registry could not convert may well fail here for the same reason.
 
 Both commands resolve using your Pulumi credentials. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
 
