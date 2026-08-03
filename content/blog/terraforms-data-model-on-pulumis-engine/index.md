@@ -261,6 +261,7 @@ new example.Resource("example", {
 }, {
   hooks: {
     beforeCreate: [precondition],
+    beforeUpdate: [precondition],
     afterCreate:  [provisioner],
   },
 });
