@@ -61,6 +61,7 @@ For all content files (docs, blogs, tutorials, etc.):
 - **Ordered Lists**: Every item begins with `1.` to minimize diff noise.
 - **Diagrams**: Prefer Mermaid diagrams over ASCII art. The site renders Mermaid natively via a Hugo code block hook (`layouts/_default/_markup/render-codeblock-mermaid.html`). Use ` ```mermaid ` fenced code blocks. See [Mermaid docs](https://mermaid.js.org/) for syntax.
 - **Images on template-driven pages**: Place new images for template-driven pages (homepage, product pages, event pages, case studies — anything rendered through `layouts/partials/template-partials/*`) under `assets/fingerprinted/`, mirroring the path you'd use under `static/`. The template partials route every `<img>` through `layouts/partials/fingerprinted-img.html`, which content-hashes filenames, converts rasters to WebP, and generates responsive `srcset`s. Frontmatter paths still look like `/images/foo.svg`; the partial resolves them. Missing assets cause a build panic, so there is no silent fallback. `meta_image` and assets used by non-template layouts can stay in `static/`.
+- **Meta images**: `meta_image` is optional for `docs`, `tutorials`, `case-studies`, `what-is`, `migrate`, `partner`, `topics`, `events`, and `blog` pages. Leave it blank and `scripts/generate-meta-images.mjs` produces an on-brand social card at build time (resolved by `layouts/partials/meta-image-url.html`). A page-level `meta_image` always wins, but custom overrides are discouraged — the generated card covers virtually every case and stays on-brand automatically. For blog posts the card is built from the post title + `feature_image` (generate the feature image with `/blog-feature-image`, or label the PR `needs-design` for a designer-made one); a post's off-brand legacy meta image, if any, was renamed to `meta-legacy.png` and shows in a collapsed "Archived feature image" panel.
 - **Spelling/Grammar**: Always correct errors. Use American English spelling.
 
 ---
@@ -78,7 +79,7 @@ Use the `/move-doc` skill for Hugo content files — it handles `git mv`, alias 
 When moving documentation, aliases handle redirects automatically. Update internal links strategically:
 
 - **DO update** links in `/content/docs/`, `/content/product/`, and `/content/tutorials/`.
-- **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement (stamp `lastmod`); otherwise route around it with an alias/redirect.
+- **`/content/blog/`** is historical — swap a broken link only for an equivalent replacement, and when the change is worth surfacing to readers stamp `updated: YYYY-MM-DD` (not `lastmod`); otherwise route around it with an alias/redirect. See "Dates: `updated` vs `lastmod`" below.
 - **Link style**: links within `/docs/` must use the full canonical path (e.g. `/docs/iac/concepts/stacks/`). Never use parent-directory references (`../stacks/`) — they break when files move.
 
 For find/sed implementation patterns, see `.claude/commands/move-doc/SKILL.md`.
@@ -91,15 +92,115 @@ The left nav is data-driven from `data/docs_menu_sections.yml`, which is consume
 
 ---
 
+## AI and agent positioning
+
+Pulumi supports the full spectrum of AI agents, and content must never present Neo as the only way to use AI with Pulumi or frame Neo as an either-or choice against other coding agents.
+
+- **Docs** (`content/docs/`, `content/what-is/`, `content/tutorials/`): community-centric and balanced. Third-party coding agents (Claude Code, Codex, Cursor, GitHub Copilot, etc.) working with Pulumi — through IaC, [Agent Skills](/docs/ai/skills/), and the [Pulumi MCP server](/docs/ai/mcp-server/) — are first-class. Neo is Pulumi's purpose-built infrastructure agent: the deepest integration and the fastest path to a great infrastructure agent out of the box, but one option on a spectrum, and most teams benefit from using both.
+- **Product/marketing pages** (`content/product/`, homepage): may lead with Neo and sell it hard, but should still acknowledge that Pulumi's code-first approach works with the agent a reader already uses. Avoid copy that disparages other agents (e.g. "unlike generic AI tools").
+- **When listing agent options** (e.g. in migration guides), follow the pattern in `content/docs/iac/guides/migration/migrating-to-pulumi/from-terraform.md`: list Neo alongside Claude Code, Cursor, and Codex as equally legitimate choices, with at most a light note on Neo's built-in advantage.
+
+---
+
 ## Resource options
 
 The reference pages under `content/docs/iac/concepts/resources/options/` show a classification callout (custom resource / component resource / both, plus per-SDK enforcement) rendered by the `resource-option-scope` shortcode. The classification data — and the summary table on that section's `_index.md` — is generated from `data/resource_options.yaml`, which is the single source of truth. **When you add a new resource option, you must add an entry to `data/resource_options.yaml` and place the `{{< resource-option-scope "<name>" >}}` shortcode on the new page.** That file's header comment is the authoritative step-by-step checklist; the build fails if a page references an option missing from the data file.
 
 ---
 
+## Blog categories and tags
+
+Blog posts carry three taxonomy axes (`category` and `tags` are always present; `series` is optional):
+
+- **`category`** — the *kind* of post. This is a **closed** set defined in `data/blog_categories.yaml` (the single source of truth read by `scripts/lint/lint-markdown.js`). Category is **required** and **singular**: every post declares exactly one `category:` scalar value. Use the best-fitting specific kind, or **`general`** (the default) for posts that don't fit cleanly (e.g. SEO comparisons or "what is X" explainers — those rely on tags instead). `make lint` fails on a missing value, a list value, or a value outside the set. **Do not invent categories** — pick an id from the data file. To add/rename one, edit `data/blog_categories.yaml` in a PR and raise it in #blogs. The blog docs-review additionally flags posts that landed in a specific kind but really belong in `general` (and vice versa).
+- **`tags`** — the *topical* axis (clouds, languages, products, scenarios). Curated-but-open, **not** build-enforced. Reuse a tag from the canonical vocabulary in `data/blog_tags.yaml` and **avoid near-duplicates** (`kubernetes` not `k8s`, `infrastructure-as-code` not `iac`, `pulumi-cloud` not `pulumi-service`, `dotnet` not `c#`/`.net`). Tags are lowercase and hyphen-delimited.
+- **`series`** — the optional *reading-path* axis. A post joins a series with a single `series: <slug>` scalar key, where the slug is defined in `data/blog_series.yml`. Series are their own taxonomy: term pages render at `/blog/series/<slug>/` and the directory at `/blog/series/`. Do **not** also add the slug to `tags` — `make lint` fails on a series slug used as a tag, and on a `series:` value that isn't defined in the data file.
+
+See `BLOGGING.md` for the author-facing version of these rules.
+
+Per-post optional front matter beyond the taxonomy axes — `resource_links` (icon links at the foot of the post), `related_posts` (pinned related slugs), `author_roles`, and `updated` — is documented in `BLOGGING.md`. The blog homepage is curated separately in `data/blog_home.yaml` (`featured` = the four hero/featured slots; `featured_series` = the "Popular series" strip); that file's header comment is the authoritative reference.
+
+### Dates: `updated` vs `lastmod`
+
+When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `lastmod`. This is the established convention (the vast majority of revised posts use it) and the one wired to the UI: `layouts/blog/single.html` renders `.Params.updated` as the visible "Updated \<date\>" line beside the publish date. Leave the original `date` unchanged; set `updated` to the revision date. It's the same field documented in `BLOGGING.md`.
+
+**Do not reach for `lastmod`.** It's a Hugo built-in that only feeds the sitemap and schema.org `dateModified`, and the site already sets `enableGitInfo: true` (`config/_default/config.yml`), so Hugo derives `.Lastmod` from the commit date automatically. A hand-stamped `lastmod` is therefore invisible to readers *and* redundant with git. It's easy to default to because `lastmod` is the generic Hugo idiom for "last changed" — but on this site the reader-facing, canonical field is `updated`.
+
+### Blog known-issues index (automated daily review)
+
+A scheduled workflow (`.github/workflows/blog-review-index.yml`) reviews a few existing blog posts per day — selected deterministically by `scripts/blog-review/select-posts.py` (traffic/GSC-weighted staleness; oldest-unreviewed-first until the blog data exports ship) — and records structured findings (dead links, factual rot, deprecated products, thin content) into an S3 known-issues index. It is **flag-only state, not content**: nothing is committed to the repo, no fixes are applied, and no PRs are opened. State lives in the content-review ledger bucket under the `blog-review/` prefix (`ledger/`, `index/`, `runs/`, and `index/_summary.json`); the on/off/cadence switch is the `BLOG_REVIEW_COUNT` repo variable (unset = 5 posts/run, `'0'` = off). The review skill is `.claude/commands/blog-review-index/SKILL.md`; its closed issue taxonomy lives in that skill's `references/issue-taxonomy.md` and is enforced by `scripts/blog-review/validate-findings.py`. The index is evidence for a future, human-reviewed process that marks rotted, low-value posts `block_external_search_index: true` — do not add that frontmatter based on the index without going through that process.
+
+---
+
+## Case studies
+
+Case studies live at `content/case-studies/<slug>.md` — scaffold a new one with `hugo new content/case-studies/<slug>.md` (uses `archetypes/case-studies.md`). Rules that trip people up:
+
+- **`industry`** — required, singular, closed set defined in `data/case_study_industries.yaml` (`make lint` enforces it). That file's header comment is the authoritative reference.
+- **Logo tile** — the cards on `/case-studies/` and the industry term pages render each logo centered on a brand-color tile, driven by optional front matter (`logo_bg_color`, `logo_style: white|dark`, `logo_size: lg`, `card_logo`), all documented in `layouts/partials/case-studies/card.html` and format-checked by `make lint`.
+- **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the template-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
+
+---
+
+## Releases changelog entries
+
+Individual changelog items live in `content/releases/changelog/` — one markdown file per entry, listed by month on `/releases/` and rendered at `/releases/changelog/<slug>/` (`layouts/changelog/single.html`). Shared images/videos live in the `images/` and `videos/` subfolders and are referenced by absolute path (e.g. `/releases/changelog/images/2026-06-18-foo.png`), so entry renames don't affect them.
+
+- **Filenames must be `YYYY-MM-DD-<slug>.md`**, and the date prefix must match the frontmatter `date:`. `make lint` enforces both (`checkChangelogFilename` in `scripts/lint/lint-markdown.js`) — a mismatch or non-prefixed name is a hard build failure.
+- **Assets in `images/` and `videos/` must also be date-prefixed** as `YYYY-MM-DD-<slug>.<ext>` (use the referencing entry's date). `make lint` enforces this too (`checkChangelogAssets`). Rename the asset and update its reference together.
+- **Create a new entry with the `/new-changelog` skill** (or `hugo new --kind changelog content/releases/changelog/YYYY-MM-DD-<slug>.md`, which uses `archetypes/changelog.md`). The archetype derives `title` and `date` from the filename.
+- **Optional `tiers:`** is a YAML array marking pricing-tier availability, rendered as badge(s) beside the date. Values are a **closed set** — only the four pricing tiers (`Free`, `Team`, `Enterprise`, `Business Critical`; see `content/pricing/_index.md`), enforced by `checkChangelogTiers` in `scripts/lint/lint-markdown.js` (an out-of-set value or the legacy singular `tier:` is a hard build failure). List **every** tier the feature is available in — since a lower tier implies the tiers above it, that means the lowest applicable tier and all tiers above it (e.g. an Enterprise feature lists both `Enterprise` and `Business Critical`).
+- **Renaming an entry** (changing its slug) changes its URL, so add an `aliases:` entry pointing at the old `/releases/changelog/<old-slug>/` path — same SEO rule as moving any content file.
+
+---
+
+## Styling (CSS / SCSS / Tailwind)
+
+The theme uses Tailwind v4 (configured in CSS, no `tailwind.config.js`) across two SCSS bundles: `theme/src/scss/main.scss` (docs/app) and `theme/src/scss/_marketing.scss` (marketing).
+
+### Reuse the shared system first
+
+Before writing new component CSS, use the shared design-system primitives in **`theme/src/scss/shared/`** (see `shared/README.md`). Don't reinvent a button, card, badge, or heading:
+
+- **`.btn` button system** (`shared/_button.scss`) — `class="btn btn-primary"`, plus variants (`outline`, `secondary`, `ghost`, `ghost-primary`, `destructive`, `link`), sizes (`btn-sm`/`btn-lg`/`btn-icon`…), and `.btn-split`/`.btn-group`. The file header documents the full compose API.
+- **`.card` / `.card-hover`** (`shared/_card.scss`).
+- **Form system** (`shared/_forms.scss`) — `class="form-input form-input-lg"`, plus `form-textarea`/`form-select`/`form-checkbox`/`form-radio` and `form-label`/`form-help`/`form-error`. Control heights mirror the `.btn` size scale. Also exposes `@mixin`s (`form-control-base`, …) for form-consuming partials.
+- **`.badge` system** (`shared/_badge.scss`) — `class="badge badge-success"`, `layouts/partials/badge.html`, or `@extend .badge; @extend .badge-<variant>;`.
+- **Shared type scale** (`shared/_utilities.scss`) — the `heading-xl`/`heading-1`…`heading-6`, `body-sm`…`body-2xl`, and `font-overline` `@utility` classes. Use these instead of hand-rolling font-size/weight/tracking.
+
+Compose them in markup, or in SCSS via `@apply`/`@extend` (prefer `@extend`ing a primitive over re-`@apply`ing its utilities).
+
+### Order of preference for authoring styles
+
+1. **Inline Tailwind utility classes** — including arbitrary values (`bg-[#abc123]`, `w-[42ch]`, `grid-cols-[1fr_auto]`). This is the default for one-off styling.
+2. **SCSS with Tailwind `@apply` / `@extend`** — only when inline classes can't stay DRY (the same cluster of utilities repeated across many elements or templates). Reach for `@extend` on a shared primitive first.
+3. **Raw CSS / SCSS** — last resort, for what Tailwind genuinely can't express.
+
+The Dark mode section below applies these same rules to `/docs` theming (`dark:` variants and `--docs-*` tokens).
+
+---
+
 ## Dark mode (/docs)
 
 The `/docs` section supports a light/dark/system theme toggle. Dark is **light-first**: light is the baseline (unchanged from before) and dark is a pure override. The whole system lives in `theme/src/scss/docs/_docs-theme.scss` (read its header comment first) and is driven by semantic `--docs-*` tokens defined on `body.section-docs` and re-pointed under `html[data-theme="dark"]`. It is scoped entirely to docs pages; nothing here can affect a non-docs page.
+
+### Design tokens (colors)
+
+Brand color hex values come from [`@pulumi/design-tokens`](https://github.com/pulumi/pulumi-design-system) (`tokens/core/primitives.json`, `palette-semantics.json`). The Hugo theme translates JSON to Tailwind v4 CSS variables — do not edit generated files by hand.
+
+| File | Role |
+|------|------|
+| `theme/scripts/build-color-theme.mjs` | Reads design-tokens JSON, writes `theme/src/generated/tailwind-v4/_theme.scss` |
+| `theme/src/scss/_theme.scss` | Imports generated palette + docs-specific tokens (breakpoints, `docs-*` colors) |
+| `theme/src/scss/docs/_docs-theme.scss` | Docs light/dark semantic overrides (`--docs-bg`, `--docs-fg`, etc.) |
+
+**Regenerate after bumping `@pulumi/design-tokens`:**
+
+```bash
+cd theme && yarn install && yarn build:color-theme
+```
+
+Typography in the generated theme block is local for now — not yet sourced from design-tokens JSON. See the design-system repo `AGENTS.md` for the full token index.
 
 **You must test both modes whenever you add or restyle a visible element on a docs page** — new partials, shortcodes, cards, callouts, buttons, icons, or any markup that introduces its own colors, backgrounds, borders, or images. Toggle dark mode (theme switcher at the bottom of the docs sidebar) and confirm the element is legible and on-brand in both. Pure content changes (prose, code samples, frontmatter, links) are safe and don't need a dark-mode pass.
 
@@ -122,6 +223,6 @@ Before starting any documentation task, check `.claude/commands/` for a relevant
 
 ## PR Lifecycle for AI-Assisted Contributions
 
-Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. To refresh a stale review, mention `@claude #update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Bare `@claude` (no hashtag) is for ad-hoc help,
+Open as draft, mark ready when done. Each ready-transition fires one full review; thrashing draft → ready → draft burns budget. Leave AI authoring trailers in commits (`Co-Authored-By: Claude ...`) — stripping them is bad form and changes nothing about which review runs. Don't delete `<!-- CLAUDE_REVIEW N/M -->` comments — the re-entrant pipeline edits them in place. A small push that only touches lines carrying outstanding findings refreshes the stale review automatically; otherwise, mention `@claude #update-review` (fix-response / dispute / re-verify) or transition through draft and back to ready. Bare `@claude` (no hashtag) is for ad-hoc help,
 
 For the full mechanics — refresh-pattern details, short-circuit thresholds, classifier internals — see `CONTRIBUTING.md` §AI-assisted contributions.

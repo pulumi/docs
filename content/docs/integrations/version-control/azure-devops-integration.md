@@ -71,7 +71,7 @@ After creating an integration, you can configure PR behavior. Toggle these setti
 | Setting | Default | Description |
 |---|---|---|
 | PR Comments | Enabled | Post deployment status and resource changes as comments on ADO pull requests |
-| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in PR comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in PR comments (requires [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Detailed Diff | Enabled | Show property-level before/after diffs for changed resources in PR comments |
 
 To update, toggle the setting directly. Changes save automatically.
@@ -94,7 +94,7 @@ ADO-backed stacks support the same deployment settings as GitHub. Configure thes
 | Preview Pull Requests | Run `pulumi preview` on pull request creation/update and post results as a PR comment |
 | PR Templates | Create a PR with the preview results when running a preview |
 | Path Filters | Only trigger deployments when files matching specified glob patterns change (e.g., `infra/**`) |
-| Tag Triggers | Deploy when a git tag matching the configured [tag filters](/docs/deployments/concepts/settings/#tag-filtering) is pushed (e.g., `v*`) |
+| Tag Triggers | Deploy when a git tag matching the configured [tag filters](/docs/deployments/concepts/settings/tag-filtering/) is pushed (e.g., `v*`) |
 
 ### Selecting a repository and branch
 

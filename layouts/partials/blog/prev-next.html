@@ -1,0 +1,26 @@
+{{- /*
+    Previous / Next post cards, shown above the bottom-of-post newsletter.
+    Chronological within the post feed: "Previous" = the older post, "Next" =
+    the newer one ($posts is newest-first, so Pages.Next walks toward newer).
+    Helper pages (Params.layout set) aren't in $posts, so both lookups return
+    nil for them and nothing renders. Call with the post page context.
+*/ -}}
+{{- $posts := (partialCached "blog/feed.html" . "blog-home").posts -}}
+{{- $newer := $posts.Next . -}}
+{{- $older := $posts.Prev . -}}
+{{- if or $newer $older -}}
+    <nav aria-label="Previous and next posts" class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {{ with $older }}
+            <a href="{{ .RelPermalink }}" data-track="blog-prev-post" class="group flex min-w-0 flex-col items-start gap-2 rounded-lg border border-gray-300 bg-white p-5 transition-colors hover:border-gray-500 hover:bg-gray-100">
+                <span class="font-overline-sm flex items-center gap-1 text-service-black">{{ partial "icon.html" (dict "name" "caret-left" "weight" "bold" "class" "size-3") }}Previous</span>
+                <span class="heading-4 m-0 w-full truncate text-service-black transition-colors group-hover:text-violet-primary">{{ .Title }}</span>
+            </a>
+        {{ end }}
+        {{ with $newer }}
+            <a href="{{ .RelPermalink }}" data-track="blog-next-post" class="group flex min-w-0 flex-col items-end gap-2 rounded-lg border border-gray-300 bg-white p-5 text-right transition-colors hover:border-gray-500 hover:bg-gray-100 sm:col-start-2">
+                <span class="font-overline-sm flex items-center gap-1 text-service-black">Next{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold" "class" "size-3") }}</span>
+                <span class="heading-4 m-0 w-full truncate text-service-black transition-colors group-hover:text-violet-primary">{{ .Title }}</span>
+            </a>
+        {{ end }}
+    </nav>
+{{- end -}}

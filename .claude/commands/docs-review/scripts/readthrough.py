@@ -16,8 +16,10 @@ applies `local_repair` findings as fixes and flags `reconception` findings
 without rewriting them.
 
 Why a direct Anthropic API call (not `claude-code-action`): same rationale as
-`extract-claims-llm.py` — one model call, `temperature: 0`, a forced tool-use
-schema (`tool_choice`, `strict`). The system prompt is `references/readthrough.md`
+`extract-claims-llm.py` — one model call against a forced tool-use schema
+(`tool_choice`, `strict`) with `thinking: {type: "disabled"}` (Sonnet 5 defaults
+adaptive thinking on and rejects non-default sampling params, so we disable
+thinking and let the strict schema constrain the output). The system prompt is `references/readthrough.md`
 (the rubric: a closed list of anchored failure modes + the `fix_class` boundary),
 verbatim, so the stable prefix stays prompt-cacheable.
 
@@ -35,10 +37,13 @@ Output schema:
     {
       "schema_version": 1,
       "ran": true,                       # false only when the lane was skipped (no API key)
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-5",
       "findings": [
         {"file": "content/docs/x.md",
-         "line_range": "L40-58",         # references the numbered file body we sent
+         "line_range": "L40-58",         # references the numbered file body we sent,
+                                         # normalized to `L<a>` / `L<a>-<b>` (see
+                                         # normalize_line_range); "" when the model's
+                                         # answer carried no recoverable anchor
          "anchor_quote": "<short verbatim span the finding is about>",
          "failure_mode": "prerequisite-inversion",   # one of FAILURE_MODES
          "fix_class": "local_repair",                 # local_repair | reconception
@@ -73,7 +78,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-4-6"
+DEFAULT_MODEL = "claude-sonnet-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 MAX_TOKENS = 8192
@@ -90,6 +95,21 @@ CHUNK_LINES = 1200
 CONTENT_MD_RE = re.compile(r"^content/.*\.md$")
 DIFF_FILE_RE = re.compile(r"^\+\+\+ b/(.+)$")
 HUNK_RE = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
+
+# The schema asks for `L42` / `L42-58`, but the model occasionally answers with a
+# bare or prose-wrapped range ("41", "lines 41-43", "L41–43" with an en dash).
+# Downstream, `compose-review.py`'s `first_line_ref()` finds no `L\d+` token in
+# those and falls back to the degenerate `L0` — which renders in the trail line
+# AND the bucket bullet, pointing the reader at a line that doesn't exist and
+# severing the only visible link between the two. Normalize here, at the
+# producer, so every consumer of the artifact (the composer and the
+# existing-content sweep both read `line_range` verbatim) gets a real anchor.
+_DASHES = str.maketrans({c: "-" for c in "‐‑‒–—―−"})
+_L_RANGE_RE = re.compile(r"L(\d+)(?:\s*-\s*L?(\d+))?", re.IGNORECASE)
+_BARE_RANGE_RE = re.compile(r"(\d+)(?:\s*-\s*(\d+))?")
+# Below this length an anchor prefix stops being distinctive enough to locate a
+# line by substring match; better no anchor than a confidently wrong one.
+MIN_ANCHOR_PROBE = 12
 
 # The closed rubric — kept in sync with references/readthrough.md. Anything a
 # finding can't be tagged with (and anchored to) is out of scope by construction.
@@ -281,6 +301,48 @@ def number_lines(text: str) -> str:
     return "\n".join(f"{i}\t{line}" for i, line in enumerate(text.splitlines(), start=1))
 
 
+# ---- line-range normalization ----------------------------------------------
+
+
+def _squash(s: str) -> str:
+    return " ".join((s or "").split())
+
+
+def locate_anchor(file_text: str, anchor_quote: str) -> int:
+    """1-based line of the first line containing `anchor_quote` (or a distinctive
+    prefix of it, since the model may quote across a wrap), else 0."""
+    needle = _squash(anchor_quote)
+    if not needle or not file_text:
+        return 0
+    lines = [_squash(ln) for ln in file_text.splitlines()]
+    for probe in (needle, needle[:60], needle[:40]):
+        if len(probe) < MIN_ANCHOR_PROBE:
+            break
+        for i, line in enumerate(lines, start=1):
+            if probe in line:
+                return i
+    return 0
+
+
+def normalize_line_range(raw: str, file_text: str = "", anchor_quote: str = "") -> str:
+    """Coerce a model-supplied line reference to the canonical `L<a>` / `L<a>-<b>`.
+
+    Accepts `L41`, `L41-43`, `L41–43`, `41`, `41-43`, `lines 41-43`. When no
+    usable number is present, falls back to locating `anchor_quote` in
+    `file_text`. Returns "" when nothing can be recovered, so the caller can
+    decide what to do rather than emit a bogus anchor.
+    """
+    s = (raw or "").translate(_DASHES)
+    m = _L_RANGE_RE.search(s) or _BARE_RANGE_RE.search(s)
+    if m:
+        a = int(m.group(1))
+        b = int(m.group(2)) if m.group(2) else a
+        if a > 0:  # `L0` is not a line; fall through to the anchor lookup
+            return f"L{a}" if b <= a else f"L{a}-{b}"
+    line = locate_anchor(file_text, anchor_quote)
+    return f"L{line}" if line else ""
+
+
 # ---- user-message construction ---------------------------------------------
 
 
@@ -387,7 +449,11 @@ def call_anthropic(api_key: str, system_body: str, user_text: str, model: str) -
     body = {
         "model": model,
         "max_tokens": MAX_TOKENS,
-        "temperature": 0,
+        # Sonnet 5 rejects non-default sampling params (temperature/top_p/top_k
+        # → 400) and defaults adaptive thinking ON when `thinking` is omitted.
+        # This is one forced-tool call, so disable thinking to preserve the
+        # prior no-thinking behavior; the strict schema does the constraining.
+        "thinking": {"type": "disabled"},
         "system": [
             {"type": "text", "text": system_body, "cache_control": {"type": "ephemeral"}},
         ],
@@ -442,11 +508,30 @@ def process_file(api_key: str, repo_root: Path, patch: str, path: str,
                 agg_usage[k] += int(usage.get(k, 0) or 0)
         except Exception as e:  # noqa: BLE001
             errors.append(f"{path}: API call failed: {type(e).__name__}: {e}")
-    # Stamp file; drop entries missing required fields.
+    # The working-tree copy backs the anchor-quote fallback in
+    # normalize_line_range(); absent (diff-reconstructed view), normalization
+    # degrades to the numeric parse alone.
+    file_path = repo_root / path
+    file_text = ""
+    if file_path.is_file():
+        try:
+            file_text = file_path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            pass
+    # Stamp file; normalize the anchor; drop entries missing required fields.
     for f in all_findings:
         if not (f.get("line_range") and f.get("anchor_quote") and f.get("failure_mode") and f.get("fix_class")):
             continue
         f["file"] = path
+        normalized = normalize_line_range(f.get("line_range"), file_text, f.get("anchor_quote"))
+        if normalized:
+            f["line_range"] = normalized
+        else:
+            # Unrecoverable — record it rather than shipping a range that renders
+            # as `L0` downstream. The finding still surfaces; only its anchor is
+            # degraded, and the composer's backstop supplies `L1`.
+            errors.append(f"{path}: unparseable line_range {f.get('line_range')!r}; anchor degraded")
+            f["line_range"] = ""
         f.setdefault("fix_class", "reconception")
         result["findings"].append(f)
     result["usage"] = agg_usage

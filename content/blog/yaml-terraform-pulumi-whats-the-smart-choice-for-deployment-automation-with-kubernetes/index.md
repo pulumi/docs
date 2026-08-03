@@ -5,7 +5,6 @@ date: 2024-11-18T08:00:00+01:00
 draft: false
 
 meta_desc: "Compare YAML, Terraform, and Pulumi for Kubernetes deployment automation. Discover which approach is best for managing your Kubernetes resources efficiently."
-meta_image: meta.png
 
 authors:
 - engin-diri
@@ -15,6 +14,7 @@ tags:
 - kubernetes
 - terraform
 - kubecon
+category: general
 
 social:
   twitter: |

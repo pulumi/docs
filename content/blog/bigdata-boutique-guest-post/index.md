@@ -2,13 +2,13 @@
 title: "Test and Optimize Elasticsearch with Pulumi"
 date: 2020-03-05
 meta_desc: "BigData Boutique uses Pulumi to determine optimal Elasticsearch configurations for their customers"
-meta_image: meta.png
 authors:
     - itamar-syn-hershko
 tags:
     - guest-post
     - testing
     - elasticsearch
+category: customers
 
 ---
 

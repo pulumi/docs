@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-05-05
 draft: false
 meta_desc: "What the dark factory pattern looks like when the factory floor is your Pulumi state graph, and where to start without burning down a prod account."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -15,6 +14,7 @@ tags:
     - infrastructure-as-code
     - pulumi-neo
     - platform-engineering
+category: best-practices
 social:
     twitter: |
         Stripe ships over a thousand AI-authored PRs a week. The pattern behind it has a name: the dark factory.
@@ -103,6 +103,10 @@ What no platform ships for you is the wall: the holdout scenarios for infrastruc
 The happy-path orchestrator is small. It pulls a spec, runs `preview`, hands the preview to an isolated evaluator (with its own credentials and its own access to the cloud, no access to the generator's prompt or output), and branches on the verdict. Auto mode runs `up` immediately. Balanced mode submits a deployment that requires approval. Review mode opens a PR for a human. Every branch records a stack version traceable in the audit log. Retries, observability, secret rotation, and the rest of the production-grade plumbing add up to real code, but the shape is small.
 
 The wall is the part that takes a week to get right. You write five plain-English scenarios for one stack ("after `pulumi up`, the bucket is private, has SSE-KMS, lives in eu-west-1, and is tagged `owner=team-x`") and a janky evaluator that runs `preview` and `up` against an ephemeral copy, queries the cloud, and asks a separate model whether the resulting state satisfies the scenario. Triple-run, 90% pass gate. Then you watch it for a few weeks before you let anything auto-apply.
+
+{{< blog/cta-card title="Ground your agent in real state" href="/product/neo/" >}}
+Pulumi Neo reasons over your actual state graph and runs in Review, Balanced, or Auto mode, so you can grant it more autonomy as your confidence grows.
+{{< /blog/cta-card >}}
 
 ## A four-phase rollout
 

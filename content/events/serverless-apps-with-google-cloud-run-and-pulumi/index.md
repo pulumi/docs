@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Serverless Apps with Google Cloud Run and Pulumi
 meta_desc: Learn how to deploy applications effortlessly on Cloud Run with Pulumi, use containerization with Docker, and manage Google Cloud resources with code.
-meta_image:
+meta_image: /events/serverless-apps-with-google-cloud-run-and-pulumi/meta.png
+meta_image_square: /events/serverless-apps-with-google-cloud-run-and-pulumi/meta-square.png
 # A featured event will display first in the list.
 featured: false
 

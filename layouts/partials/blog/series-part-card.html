@@ -1,0 +1,27 @@
+{{- /*
+    A single part in the series-page parts grid: the small blog card layout —
+    140px object-cover thumbnail + a "PART N" outline badge + title (h3), no
+    byline. Series prefix is stripped from the title. Whole card is a stretched
+    link.
+
+    Params:
+      page   (required) the post page
+      num    (required) 1-based part number
+      series (required) the data/blog_series.yml entry (for the prefix)
+*/ -}}
+{{- $page := .page -}}
+{{- $num := .num -}}
+{{- $series := .series -}}
+{{- $title := $page.Title -}}
+{{- with $series.prefix }}{{ if strings.HasPrefix $title . }}{{ $title = strings.TrimPrefix . $title }}{{ end }}{{ end -}}
+<article class="group relative flex items-center gap-4">
+    {{ if partial "blog/has-feature-image.html" $page }}
+    <div class="flex size-[140px] shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
+        {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 240 "h" 160 "mode" "fit" "class" "h-full w-auto max-w-none") $page.RelPermalink "fit-240x160" }}
+    </div>
+    {{ end }}
+    <div class="flex min-w-0 flex-col items-start gap-2.5">
+        {{ partial "blog/badge.html" (dict "text" (printf "Part %d" $num)) }}
+        <h3 class="m-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-series-part-{{ $num }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $title }}</a></h3>
+    </div>
+</article>

@@ -39,6 +39,16 @@ To install the GitHub app, you must have admin permissions in **both** the targe
 1. Navigate to **Management** > **Version control**.
 1. Select **Add account** and choose **GitHub**, then follow the prompts.
 
+### Install from the GitHub Marketplace
+
+You can also start the installation from GitHub instead of Pulumi Cloud, either by installing the app from the GitHub Marketplace or by approving an installation request from a non-admin member of your GitHub organization. After the installation completes, GitHub redirects you to Pulumi Cloud, where you choose the Pulumi organization to link the installation to. If Pulumi can't verify that you control the installation, you're prompted to connect your GitHub account first. For installations on a GitHub organization account, you must be an admin of that GitHub organization, not just a member, because linking gives the Pulumi organization access to the repositories the installation covers.
+
+### Link an existing installation
+
+If the app is already installed in GitHub but not connected to your Pulumi organization, the **Management** > **Version control** page lists installations you can link, each with a **Link** action. The **Add account** > **GitHub** wizard offers the same **Link existing install** option when Pulumi finds one. As with Marketplace installs, you may be prompted to connect your GitHub account so Pulumi can verify that you control the installation.
+
+An installation can be linked to one Pulumi organization this way. If it's already linked to a different Pulumi organization, linking fails; see [Multiple GitHub organizations](#multiple-github-organizations) for sharing a GitHub organization across Pulumi organizations.
+
 ### Multiple GitHub organizations
 
 Multiple GitHub organizations can be connected to a single Pulumi organization. You can add each one via **Management** > **Version control** > **Add account**.
@@ -115,7 +125,7 @@ If authorization fails with an error mentioning the redirect URI, the callback U
 
 Separately from the org-level GitHub app, individual users can complete an OAuth flow under **Management** > **Version control** to grant Pulumi access to their personal GitHub account. The integration card shows your status: "Individual access is authorized for this account" once you've connected, or "Individual access is recommended for this account" with an **Add Individual Account** button if you haven't.
 
-Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. Triggering a [Neo code review](/docs/ai/code-reviews/) requires individual access, because Neo runs the review on your behalf rather than as the shared app installation; for other Neo tasks it is optional. This option is not available for GitHub Enterprise Server. See [individual user authentication](#individual-user-authentication-for-github-enterprise-server) instead.
+Individual access lets Pulumi create repositories on your behalf — for example, cloning project templates into a new repository or letting [Neo](/docs/ai/) create a repository for you. It does not create webhooks. The org-level GitHub app continues to handle pull request comments, checks, and push-to-deploy regardless of whether you grant individual access. Triggering a [Neo code review](/docs/ai/neo/code-reviews/) requires individual access, because Neo runs the review on your behalf rather than as the shared app installation; for other Neo tasks it is optional. This option is not available for GitHub Enterprise Server. See [individual user authentication](#individual-user-authentication-for-github-enterprise-server) instead.
 
 {{% notes type="info" %}}
 To remove your individual identity, select your identity on the integration card and choose **Remove Identity**.
@@ -128,7 +138,7 @@ After installing the app, you can configure pull request behavior. Toggle these 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitHub pull requests |
-| Neo code reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
+| Neo code reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Code access for AI reviews | Enabled | Let Neo read pull request code diffs when generating reviews instead of relying on Pulumi engine output alone |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
@@ -158,11 +168,23 @@ All Pulumi stack updates are reported to the GitHub Checks API. You can see the 
 
 Push-to-deploy automatically runs `pulumi up` when a commit is pushed to a configured branch, most commonly the main branch. See the [push-to-deploy documentation](/docs/deployments/concepts/triggers/#push-to-deploy) for setup instructions.
 
-You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/#tag-filtering).
+You can also deploy on git tag pushes — for example, on every `v*` release tag — using [tag triggers](/docs/deployments/concepts/settings/tag-filtering/).
 
 ### Review stacks
 
 [Review stacks](/docs/deployments/concepts/review-stacks/) are dedicated cloud environments that get created automatically every time a pull request is opened, powered by Pulumi Deployments. Open a pull request, and Pulumi Deployments will stand up a stack with your changes and add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources.
+
+### GitHub token in deployments
+
+When [Pulumi Deployments](/docs/deployments/) runs a deployment whose source repository is connected through the GitHub app, Pulumi automatically injects a `GITHUB_TOKEN` environment variable into the deployment. Your Pulumi program and [pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/) can use it to authenticate to GitHub — for example, to install a private module or clone another repository — without configuring a token yourself. This is why deploying from a GitHub-connected repository "just works" for GitHub-hosted dependencies.
+
+The value is a short-lived GitHub App installation access token: it is valid for about an hour and re-minted for each deployment. If you instead configured the source with your own personal access token, that token is promoted to `GITHUB_TOKEN` as-is.
+
+{{% notes type="warning" %}}
+The token is **not** limited to the source repository. It carries the full scope of the Pulumi GitHub App installation: every repository you granted the app, with the same permissions the app holds — which include write access to repository contents. In practice a deployment can therefore read from and write to any repository the installation can reach, so treat `GITHUB_TOKEN` as a broadly privileged credential. If you need a narrower credential, set your own `GITHUB_TOKEN` (or another token) through [custom environment variables](/docs/deployments/concepts/settings/environment-variables/); an explicit value always overrides the one Pulumi provides.
+{{% /notes %}}
+
+On GitHub Enterprise Server, Pulumi additionally sets `GH_HOST`, `GITHUB_ENTERPRISE_TOKEN`, and `GH_ENTERPRISE_TOKEN` so the [`gh` CLI](https://cli.github.com/) and other tooling authenticate against your server.
 
 ## CI integration
 
@@ -187,8 +209,9 @@ Uninstalling the GitHub app will delete any push-to-deploy and review stack conf
 
 If you previously installed the GitHub app but Pulumi Cloud does not show it as connected to your desired organization, try the following:
 
-1. Ensure you're a GitHub admin of the GitHub organization where you're installing the app.
-1. Uninstall the app and re-install it following the steps above. See [Uninstallation](#uninstallation) for both methods.
+1. Navigate to **Management** > **Version control** and check whether the installation is listed as available to link, then select **Link**. See [Link an existing installation](#link-an-existing-installation).
+1. Ensure you're a GitHub admin of the GitHub organization where the app is installed.
+1. If the installation still doesn't appear, uninstall the app and re-install it following the steps above. See [Uninstallation](#uninstallation) for both methods.
 
 ### PR comments not appearing
 

@@ -5,7 +5,6 @@ date: 2026-06-02
 lastmod: 2026-06-15
 draft: false
 meta_desc: "AI coding has two shapes: 2x is mostly prompting, 10x is mostly plumbing. The parallel coding playbook, translated to Pulumi."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -16,6 +15,7 @@ tags:
     - infrastructure-as-code
     - pulumi-neo
     - platform-engineering
+category: best-practices
 social:
     twitter: |
         2x is mostly prompting. 10x is mostly plumbing.
@@ -92,6 +92,10 @@ Every parallelism story has a catch list. The application-code version lists por
 **Token blowouts become cloud spend per ephemeral stack.** The cost vector flips. For app code, the worry is LLM bills. For infrastructure, the worry is what your five agents just spun up in five review stacks. The mitigations are boring and they work. Use [TTL stacks](/docs/deployments/deployments/ttl/) to tear review stacks down on a schedule. Avoid [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) on review-stack resources so the teardown actually frees them. Cap retries per spec. Watch the bill.
 
 **PR pile-up is the same problem.** Five reviewed diffs are still five things waiting on the merge queue. The infra-flavored mitigations: stack-scoped reviewers (the human who owns the stack approves the change to it), the [Pulumi Cloud audit log](/docs/administration/security-compliance/audit-logs/) for grouping by stack and time, and auto-merge for the narrow class of changes where the preview diff is clean and every policy passes. That last one is where most of the throughput hides.
+
+{{< blog/cta-card title="Run any agent on your stacks" href="/docs/ai/" >}}
+Pulumi hands every coding agent a deterministic preview, isolated stacks, and policy as code to work against, whether that agent is Claude Code, Cursor, or Pulumi Neo.
+{{< /blog/cta-card >}}
 
 ## Where to start, this afternoon
 

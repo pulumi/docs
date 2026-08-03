@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-20
 draft: false
 meta_desc: "Vercel's agent-browser uses 82% less context than Playwright MCP. I tested both on the same six browser tests to see how they compare."
-meta_image: meta.png
 authors:
     - engin-diri
 tags:
@@ -13,6 +12,7 @@ tags:
     - testing
     - claude-code
     - serverless
+category: tutorials
 social:
     twitter: "Ran the same 6 browser tests with Playwright MCP and Vercel's agent-browser. Result: 31K characters vs 5.5K. That's 5.7x more tests in the same context budget."
     linkedin: |
@@ -320,6 +320,10 @@ Where I hit friction:
 For my URL shortener tests, agent-browser used fewer tokens per cycle, and the ref-based approach was more predictable than selector-driven automation.
 
 Playwright MCP still wins on depth. Network interception, multi-tab handling, PDF generation, better waiting logic—if you need those, you need Playwright. For complex browser automation, it's the more capable tool.
+
+{{< blog/cta-card title="Deploy what your agent builds" >}}
+Pulumi provisions the infrastructure your coding agent builds and tests, so a single `pulumi up` takes each verified change to the cloud.
+{{< /blog/cta-card >}}
 
 ## When to use each
 

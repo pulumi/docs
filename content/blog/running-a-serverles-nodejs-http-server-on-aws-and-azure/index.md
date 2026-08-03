@@ -1,7 +1,8 @@
 ---
 title: "Running a Serverless Node.js HTTP Server on AWS and Azure"
 authors: ["cyrus-najmabadi"]
-tags: ["Serverless"]
+tags: [serverless]
+category: product
 date: "2018-10-02"
 meta_desc: "Pulumi introduces the cloud.HttpServer API which makes it easy to serve a standard Node.js HTTP server as a serverless API on any cloud platform."
 

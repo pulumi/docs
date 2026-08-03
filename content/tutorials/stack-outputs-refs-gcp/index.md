@@ -9,9 +9,6 @@ description: Learn more about exporting and referencing stack outputs in Pulumi.
 # A similar description used for search results and social-media previews.
 meta_desc: Learn more about exporting and referencing stack outputs in Pulumi.
 
-# An image for the tutorial. It appears on tutorial page and in social-media previews.
-meta_image: stack-ref-gcp-meta.png
-
 # An optional video for the tutorial. When present, it appears at the top of the page, replacing
 # the meta image. YouTube and HTML5 video sources are supported.
 # video:

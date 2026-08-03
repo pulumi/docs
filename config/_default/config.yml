@@ -7,8 +7,6 @@ security:
     getenv:
       - ASSET_BUNDLE_ID
       - CSS_BUNDLE_ID
-      - PULUMI_CONVERT_URL
-      - PULUMI_AI_WS_URL
       - GITHUB_TOKEN
       - ALGOLIA_APP_ID
       - ALGOLIA_APP_SEARCH_KEY
@@ -64,6 +62,15 @@ outputFormats:
     baseName: "llm-sitemap"
     isPlainText: true
     notAlternative: true
+  # Bare list-rows HTML fragment for a taxonomy term, fetched by the homepage
+  # category filter (theme/src/ts/blog-list.ts). Rendered by
+  # layouts/_default/term.rows.html at /blog/category/<id>/rows.html. Not an
+  # alternate representation, so it stays out of <head> alternates and sitemap.
+  rows:
+    mediaType: "text/html"
+    baseName: "rows"
+    isHTML: true
+    notAlternative: true
 
 # We set the outputs explicitly to just "HTML" as otherwise they default to both
 # "HTML" and "RSS", and we only want to generate RSS for the blog section -- not
@@ -75,20 +82,108 @@ outputs:
     - HTML
     - JSON
     - llms
+    - markdown
   section:
     - HTML
   page:
     - HTML
+  # Taxonomy term pages also emit a "rows" fragment (layouts/_default/term.rows.html).
+  # Only the blog category filter consumes it; for non-blog terms the fragment is
+  # empty (the template filters to the blog section).
+  # RSS gives every blog term page (category / tag / author / series) its own feed
+  # at <term-url>rss.xml, rendered by layouts/_default/term.rss.xml.
+  term:
+    - HTML
+    - rows
+    - RSS
+
+# Collection terms (/tutorials/<slug>/) are the one non-blog taxonomy: no blog
+# post carries `collections`, so the term outputs above would give every
+# tutorials collection an empty "Pulumi Blog: <Term>" RSS feed (which head.html
+# would then advertise for autodiscovery) plus an unused rows fragment. Scope
+# them back to HTML only.
+cascade:
+  - _target:
+      kind: term
+      path: /collections/**
+    outputs:
+      - HTML
+  # The `industry` taxonomy (case-study verticals) is non-blog, like collections
+  # above: the default `term` outputs would give every industry an empty "Pulumi
+  # Blog: <Industry>" RSS feed (term.rss.xml filters to Section=blog → no items)
+  # that head.html would then advertise, plus an unused `rows` fragment. Hugo
+  # also defaults the taxonomy LIST page to HTML+RSS. Scope BOTH kinds back to
+  # HTML only so nothing leaks into our feeds. NOTE: cascade `path` matches the
+  # page's LOGICAL path (taxonomy plural `/industry/...`), NOT the permalink URL
+  # (/case-studies/industry/...) — same as the /collections/** target above.
+  - _target:
+      kind: term
+      path: /industry/**
+    outputs:
+      - HTML
+  - _target:
+      kind: taxonomy
+      path: /industry/**
+    outputs:
+      - HTML
+  - _target:
+      kind: taxonomy
+      path: /industry
+    outputs:
+      - HTML
 
 taxonomies:
   tag: tags
   author: authors
   collection: collections
+  # Plural is intentionally "category" (not "categories") so Hugo reads the
+  # existing scalar `category:` front matter on blog posts. Hugo casts the
+  # scalar value to a one-term list. See layouts/taxonomy/category.html and
+  # data/blog_categories.yaml (single source of truth for term titles/desc).
+  category: category
+  # Like category above, plural is "series" (not "serieses") so Hugo reads the
+  # existing scalar `series:` front matter and casts it to a one-term list. Term
+  # pages land at /blog/series/:slug/. See layouts/taxonomy/series.html and
+  # data/blog_series.yml (single source of truth for series titles/desc).
+  series: series
+  # Plural is intentionally "industry" (not "industries") so Hugo reads the
+  # scalar `industry:` front matter on case studies and casts it to a one-term
+  # list. Term pages land at /case-studies/industry/:slug/. See
+  # layouts/taxonomy/industry.html and data/case_study_industries.yaml (single
+  # source of truth for term titles/desc). Non-blog: no RSS (scoped above).
+  industry: industry
 
 permalinks:
-  authors: /blog/author/:slug/
-  tags: /blog/tag/:slug/
-  collections: /tutorials/:slug/
+  term:
+    authors: /blog/author/:slug/
+    tags: /blog/tag/:slug/
+    collections: /tutorials/:slug/
+    category: /blog/category/:slug/
+    series: /blog/series/:slug/
+    industry: /case-studies/industry/:slug/
+  # The category/series taxonomy LIST pages (the directories rendered by
+  # layouts/taxonomy/category.terms.html and layouts/taxonomy/series.terms.html).
+  # Without these they would sit at Hugo's default /category/ and /series/,
+  # leaving /blog/category/ and /blog/series/ 404s even though every term page
+  # lives beneath them.
+  taxonomy:
+    category: /blog/category/
+    series: /blog/series/
+    industry: /case-studies/industry/
+
+# Built-in Related Content, used by layouts/partials/blog/related-posts.html to
+# top up a post's related list. Tags dominate; category and recency break ties.
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: category
+      weight: 40
+    - name: date
+      weight: 10
 
 markup:
   goldmark:

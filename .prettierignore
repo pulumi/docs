@@ -65,7 +65,10 @@ static/js
 # Content-review / docs-review pre-compute artifacts (gitignored, generated at
 # runtime). The content-review worker re-runs `make lint` on the fix branch in a
 # workspace that still holds these scratch files; without this, `prettier
-# --check .` flags them and the re-gate false-fails.
+# --check .` flags them and the re-gate false-fails. This must cover BOTH the
+# root-level artifacts AND the `.review-snapshot/` directory (which holds copies
+# of the same JSONs, downloaded as a workflow artifact into the publish job) plus
+# the fix-scope report — otherwise lint false-fails and the PR is stuck in draft.
 /.synthetic.patch
 /.fetched-urls.json
 /.candidate-claims*.json
@@ -76,6 +79,12 @@ static/js
 /.vale-raw.json
 /.vale-findings.json
 /.content-review-*.json
+/.fix-scope-report.json
+/.review-snapshot/
 /.pr-body-draft.md
 /.lint.log
 /.lint-comment.md
+/.review-changes.patch
+/.review-changes.paths
+/.applied.paths
+/.review-admin-cache/

@@ -42,11 +42,23 @@ Three things follow from this:
 
 **Agents get richer training signal.** Public Python and TypeScript include genuinely production-scale open source: real patterns at large scale, not tutorial snippets. A model that has learned from millions of Python programs brings that experience to bear when writing infrastructure code in Python. Infrastructure DSL corpora are much thinner, and skew toward documentation examples rather than production usage.
 
-**Agents can use real software engineering primitives.** Loops, functions, classes, package imports, unit tests, type checking, IDE tooling: these apply to Pulumi programs the same way they apply to application code. An agent writing a Pulumi program can import a library, write a test, refactor a module, or inherit from a base class. It can reach for software-engineering primitives that go beyond what a configuration language is designed to express.
+**Agents can use real software engineering primitives.** Loops, functions, classes, package imports, [unit tests](/blog/how-to-test-infrastructure-as-code/), type checking, IDE tooling: these apply to Pulumi programs the same way they apply to application code. An agent writing a Pulumi program can import a library, write a test, refactor a module, or inherit from a base class. It can reach for software-engineering primitives that go beyond what a configuration language is designed to express.
 
 **Every change is verifiable.** `pulumi preview` maps code changes to a concrete, auditable list of resource operations (what will be created, updated, or deleted) before anything in the cloud changes. An agent can verify its own output. That feedback loop (write, preview, validate, adjust) is what makes autonomous infrastructure tractable at scale. As Duffy notes: "Just as we wouldn't vibe code without git showing us the source changes, we shouldn't vibe infrastructure without a tool that shows what it will do before it does it, and what it has already done in the past." It's essentially `git diff` for your cloud.
 
 Research bears this out. The CodeAct paper (Wang et al., ICML 2024) measured 17 models across a range of tasks and found that agents consistently perform better when they act by writing executable code rather than emitting JSON or config. Code gives agents a richer action space, tighter feedback loops, and a substrate they've been trained on at scale.
+
+## Which AI agents can do infrastructure work?
+
+Any capable coding agent. Because Pulumi expresses infrastructure in general-purpose languages, agents like Claude Code, OpenAI Codex, Cursor, and GitHub Copilot can write, preview, and deploy Pulumi programs the same way they work on application code. Pulumi is built to make the whole platform legible to whichever agent you already use, and there is a spectrum of ways to work:
+
+**Your coding agent and Pulumi IaC.** The agent edits Pulumi code, runs `pulumi preview` to check the plan against its intent, and deploys. The verification loop works out of the box, with no special integration. The [Pulumi CLI](/docs/iac/cli/) is designed for exactly this: agents can run any command via `npx pulumi` without installation, perform one-shot resource operations with [`pulumi do`](/docs/iac/cli/direct-resource-operations/), get [ephemeral accounts provisioned automatically](/docs/administration/organizations-teams/agent-accounts/), and parse structured `--json` output.
+
+**Your coding agent, equipped.** [Pulumi Agent Skills](/docs/ai/skills/) teach agents proven Pulumi workflows (migrations, component authoring, secrets management), and the [Pulumi MCP server](/docs/ai/mcp-server/) gives them live access to your stacks, deployed resources, and the Pulumi Registry. Same agent, meaningfully better results.
+
+**Pulumi Neo.** [Neo](/product/neo/) is Pulumi's purpose-built infrastructure agent. It ships with the Agent Skills catalog built in, and adds grounding in your organization's actual infrastructure state, policy guardrails, configurable human-in-the-loop approvals, and scheduled autonomous work.
+
+The options compose. Teams often use Neo for scheduled, longer-horizon infrastructure work and their everyday coding agent for interactive development, and work can [hand off from one agent to Neo](/docs/ai/skills/) mid-session.
 
 ## What does an AI infrastructure agent actually do?
 
@@ -66,7 +78,7 @@ Research bears this out. The CodeAct paper (Wang et al., ICML 2024) measured 17 
 
 1. **Handle CI/CD feedback.** If a pipeline check fails (a security scan, a policy violation, a test), Neo reads the output, pushes a corrective fix to the same PR, and iterates.
 
-1. **Schedule automations.** Any task can become a recurring job. Neo opens a PR whenever a scheduled run detects infrastructure drift or produces changes, so environments stay current without manual polling.
+1. **Schedule automations.** Any task can become a recurring job. Neo opens a PR whenever a scheduled run detects [infrastructure drift](/what-is/what-is-infrastructure-drift/) or produces changes, so environments stay current without manual polling.
 
 What makes this different from a generic coding assistant is that Neo is [grounded AI](/blog/grounded-ai-why-neo-knows-your-infrastructure/): it reasons over your actual state graph and deployment history rather than generating code from internet patterns. See the [Neo documentation](/docs/ai/) for a full reference.
 
@@ -94,7 +106,7 @@ Duffy frames it plainly:
 
 The layers Pulumi provides:
 
-**Policy as code.** [Pulumi Policies](/docs/iac/crossguard/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because Pulumi Policies run on the preview output, they apply whether a human or an agent proposed the change.
+**[Policy as code](/what-is/what-is-policy-as-code/).** [Pulumi Policies](/docs/iac/crossguard/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because Pulumi Policies run on the preview output, they apply whether a human or an agent proposed the change.
 
 **RBAC and entitlements.** Neo operates within the Pulumi Cloud RBAC entitlements of the user who initiated the task. It cannot escalate privilege. If a developer cannot delete a production database, Neo cannot either, regardless of what the task requests.
 
@@ -122,11 +134,11 @@ The pattern across these teams is consistent: engineering headcount has not shru
 
 ## How do you get started with agentic infrastructure?
 
-The entry point is [Pulumi Neo](/product/neo/), which is built into Pulumi Cloud.
+You have two entry points, and they compose: bring the coding agent you already use, or use [Pulumi Neo](/product/neo/), which is built into Pulumi Cloud.
 
-**Step 1: Start with Pulumi IaC.** Neo works with Pulumi programs. If your team is already using Pulumi, Neo can start operating your existing stacks immediately. If you are migrating from another tool, Pulumi provides [conversion documentation](/docs/iac/comparisons/terraform/) for common starting points.
+**Step 1: Start with Pulumi IaC.** Agents work with Pulumi programs. If your team is already using Pulumi, agents can start operating your existing stacks immediately. If you are migrating from another tool, Pulumi provides [conversion documentation](/docs/iac/comparisons/terraform/) for common starting points.
 
-**Step 2: Activate Neo.** Navigate to the [Neo documentation](/docs/ai/) for activation steps. You can start with a single project or stack before expanding.
+**Step 2: Pick your agent, or use both.** To work with the agent you already use, install [Pulumi Agent Skills](/docs/ai/skills/) and connect the [Pulumi MCP server](/docs/ai/mcp-server/). To use Neo, navigate to the [Neo documentation](/docs/ai/) for activation steps. Either way, you can start with a single project or stack before expanding.
 
 **Step 3: Start in Review mode.** Neo's default task mode requires human approval at every step. This is the right starting point: you learn how Neo reasons, build trust in its outputs, and establish your policy baseline before giving it more autonomy.
 
@@ -158,6 +170,10 @@ Yes, when the governance layer is in place first. Pulumi Neo runs `pulumi previe
 
 [Pulumi Neo](/product/neo/) is an AI infrastructure engineering agent built into Pulumi Cloud. It accepts natural-language tasks, reasons over your actual infrastructure state graph, writes and modifies infrastructure code, runs previews, enforces policies, and opens pull requests across Amazon Web Services (AWS), Azure, Google Cloud, and hundreds of other providers, with configurable human-in-the-loop controls.
 
+### Do you need Pulumi Neo to use AI agents with Pulumi?
+
+No. Any coding agent can manage Pulumi infrastructure directly, and [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/) make agents like Claude Code, Codex, and Cursor considerably better at it. Neo adds what a general-purpose agent doesn't have out of the box: grounding in your actual infrastructure state, built-in policy enforcement, and scheduled autonomous tasks. Many teams use both.
+
 ### What is the difference between infrastructure for AI agents and infrastructure managed by AI agents?
 
 Infrastructure *for* AI agents is the compute, networking, and data platform that AI workloads run on: GPU clusters, vector databases, and inference endpoints. Infrastructure *managed by* AI agents means AI is operating your cloud environment, handling provisioning and updates. Both are real needs, and the same IaC platform and governance model applies to both.
@@ -184,4 +200,4 @@ Joe Duffy's CascadiaJS 2026 keynote, "The Last Mile Is Code," covers the in-dist
 
 {{< youtube "SOMEfFNPsew?rel=0" >}}
 
-[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. For governance specifics, the [Pulumi Policies](/docs/iac/crossguard/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references.
+[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. To equip the coding agent you already use, see [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/). For governance specifics, the [Pulumi Policies](/docs/iac/crossguard/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references.

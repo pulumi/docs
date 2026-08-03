@@ -2,7 +2,6 @@
 title: "Neo Integrations: MCP Servers and Cloud CLIs"
 date: 2026-05-20
 meta_desc: "Connect Pulumi Neo to services like Datadog, Linear, and PagerDuty through MCP, and to AWS, Google Cloud, Azure, and Kubernetes through Pulumi ESC."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - neo-team
@@ -11,7 +10,8 @@ tags:
     - ai-agents
     - features
     - pulumi-neo
-    - pulumi-esc
+    - esc
+category: product
 
 aliases:
     - /blog/neo-integration-catalog/

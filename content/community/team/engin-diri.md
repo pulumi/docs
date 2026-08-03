@@ -9,6 +9,18 @@ aliases:
   - /engin
   - /community/community-engineering/engin-diri/
 talks:
+- event: "London Platform User Group (LOPUG)"
+  title: "Stop Wasting GPUs: How We Built a Golden Path for GPU Sharing on Kubernetes"
+  url: "https://www.meetup.com/london-platform-user-group-lopug/events/313277993/"
+  date: 2026-07-08T18:30:00.000+01:00
+- event: "Cloud Native Summit Munich 2026"
+  title: "The Ralph Wiggum Loop: How Autonomous AI Loops Built My Serverless SaaS While I Slept"
+  url: "https://www.cnsmunich.com/schedule/"
+  date: 2026-06-30T14:20:00.000+02:00
+- event: "ilionx DevDays 2026"
+  title: "Beyond pulumi up: A Tour of Pulumi Cloud and the Neo Agent"
+  url: "https://www.ilionxdevdays.com/"
+  date: 2026-06-26T15:20:00.000+02:00
 - event: "AICamp New York 2026"
   title: "Workshop: Deploying AI Agents on AWS With Pulumi and Amazon Bedrock AgentCore"
   url: "https://www.aicamp.ai/event/eventdetails/W2026061714"
@@ -79,7 +91,7 @@ talks:
   date: 2025-10-30T17:30:00.000+02:00
 - event: "Tel Aviv Pulumi User Group Meetup Nº 2"
   title: "Agentic AI in Action: How Pulumi Neo Transforms Infrastructure Management"
-  url: "https://www.meetup.com/tel-aviv-pulumi-user-group/events/310498800/"
+  url: "https://luma.com/pulumi"
   date: 2025-10-29T18:00:00.000+02:00
 - event: "Cloud Native Denmark 2025"
   title: "GitOps Promotion Tools: Why You Need to Add Them to Your GitOps Toolkit in 2025!"
@@ -131,7 +143,7 @@ talks:
   date: 2025-03-31T15:00:00.000-07:00
 - event: "Oslo PUG 2025 Workshop"
   title: "Discover Pulumi Through Hands-On Practice"
-  url: "https://www.meetup.com/oslo-pulumi-user-group/events/306321063"
+  url: "https://luma.com/pulumi"
   date: 2025-03-05T15:00:00.000-07:00
 - event: Kargo Community Meeting
   title: Pulumi + Kargo

@@ -2,8 +2,70 @@
     z-index: 100000000 !important;
 }
 
+// Field chrome for HubSpot forms. In a mixin because it has two callers: the
+// <fieldset> wrappers of HubSpot's legacy markup, and the bare `.hs-form-field`
+// divs its newer editor emits instead.
+@mixin hs-form-field-chrome {
+    // HubSpot injects `margin-right: 8px` on every `.input` wrapper (all
+    // form-columns-* variants), which — with our full-width input — overflows
+    // the column. Zero it everywhere (our !important beats HubSpot's
+    // non-important rule); the two-column gutter is supplied instead by padding
+    // on the first field div below.
+    .input {
+        margin-right: 0 !important;
+    }
+
+    label {
+        @apply block mt-5 mb-1 font-normal;
+    }
+
+    // Force full width to beat HubSpot's inline width, but NOT on checkboxes/
+    // radios — those are sized by the custom check control below (1rem square).
+    // This exclusion is what stops the consent checkboxes rendering stretched.
+    .hs-input:not([type="checkbox"]):not([type="radio"]) {
+        @apply block;
+        width: 100% !important;
+    }
+
+    .hs-form-required {
+        @apply ml-1 text-red-600;
+    }
+
+    .hs-richtext p {
+        @apply opacity-50 text-xs font-normal my-0;
+
+        a {
+            @apply underline;
+        }
+    }
+
+    // Normalized control chrome (see _forms.scss). HubSpot forms stay at lg.
+    // NOTE: at the fieldset call site this base rule is deliberately kept at the
+    // SAME low specificity (0,1,2) as the pre-normalization `input, textarea,
+    // select` rule so the downstream dark/compact overrides (_footer, _blog) —
+    // which were written to beat that selector — keep winning. Do NOT rewrite it
+    // with `:not()` type guards; those inflate specificity and swallow those
+    // overrides. The submit button lives OUTSIDE the fieldsets, so it isn't
+    // matched there.
+    input,
+    textarea,
+    select {
+        @include form-control-base;
+        @include form-control-lg;
+    }
+
+    textarea {
+        @include form-textarea-chrome;
+    }
+
+    select {
+        @include form-select-chrome;
+        @apply pr-8;
+    }
+}
+
 .hs-form {
-    @apply text-sm;
+    @apply text-sm relative;
 
     &.hs-demo-form {
         max-width: 500px;
@@ -14,45 +76,80 @@
         @apply block !max-w-none;
 
         &:not(.form-columns-1)>.field:first-child {
-            @apply pr-2;
+            @apply pr-4;
+        }
+
+        @include hs-form-field-chrome;
+    }
+
+    // HubSpot's newer editor emits fields as bare `.hs-form-field` divs with no
+    // <fieldset>, so nothing above reaches them — a styled submit button next to
+    // browser-default inputs is the tell. Scoped to `.hs-form-field` to keep the
+    // mixin's bare `input` rule off the submit button, which sits outside the
+    // fields. `:has(fieldset)` keeps the branches mutually exclusive; the
+    // `.newsletter` variant styles its own field below.
+    //
+    // Everything but `.hs-form` goes in `:where()` so this lands at the same
+    // (0,1,x) weight as the fieldset branch. Any higher and it outranks the
+    // `.hs-form`-level rules below — square check controls, the flex checkbox
+    // row, the submit button — and the checkbox renders as a padded rectangle.
+    &:where(:not(.newsletter):not(:has(fieldset))) :where(.hs-form-field) {
+        @include hs-form-field-chrome;
+
+        // The gap between fields rides on the wrapper, not the label: a lone
+        // checkbox keeps its label inside `.input`, so a label-borne gap
+        // collapses right before it. These overrides match the weight of the
+        // mixin rules they replace, so order decides — keep them after it.
+        @apply mt-5;
+
+        &:first-child {
+            @apply mt-0;
         }
 
         label {
-            @apply block mt-3 mb-1 font-normal;
-        }
+            @apply mt-0;
 
-        .hs-input {
-            @apply block text-gray-700;
-            width: 100% !important;
-        }
+            // This markup wraps label text in <p><strong>: the margins push the
+            // label off its control, the bold fights the mixin's `font-normal`.
+            p {
+                @apply my-0;
+            }
 
-        .legal-consent-container .hs-form-booleancheckbox-display .hs-input {
-            width: auto !important;
-            margin-top: 4px;
-        }
-
-        .hs-form-required {
-            @apply ml-1 text-red-500;
-        }
-
-        .hs-richtext p {
-            @apply opacity-50 text-xs font-normal my-0;
-
-            a {
-                @apply underline;
+            strong {
+                @apply font-normal;
             }
         }
 
-        input,
-        textarea,
-        select {
-            @apply border border-gray-300 rounded p-2 bg-white;
+        // HubSpot emits the description as a <legend> before the control, where
+        // it reads as a subtitle to the label. Order it after `.input` instead.
+        display: flex;
+        flex-direction: column;
 
-            &:focus {
-                @apply outline-none ring ring-violet-primary;
-            }
+        .hs-field-desc {
+            @apply order-1 mt-1 text-xs italic text-gray-500;
         }
+    }
 
+    // Custom shadcn-style check controls. Placed at .hs-form level (NOT inside
+    // fieldset) so it also reaches the legal-consent subscription checkboxes, which
+    // HubSpot renders in .legal-consent-container OUTSIDE the fieldsets. Comes after
+    // the fieldset `.hs-input { width:100% !important }` rule in source order, so at
+    // the same specificity the !important 1rem size wins and the box stays square.
+    input[type="checkbox"],
+    input[type="radio"] {
+        @include form-check-base;
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+
+    input[type="checkbox"] {
+        border-radius: 4px;
+        &:checked { background-image: url("#{$form-check-svg}"); }
+    }
+
+    input[type="radio"] {
+        @apply rounded-full;
+        &:checked { background-image: url("#{$form-radio-svg}"); }
     }
 
     input[type="submit"] {
@@ -61,8 +158,25 @@
         @extend .btn-lg;
     }
 
+    // HubSpot renders option groups and validation messages as `.inputs-list`,
+    // where the global `main li { my-2 }` pads the list top and bottom — enough
+    // to space a checkbox off its description, or an error off its input. Trim
+    // only the outer edges; the margin between items is wanted on radio and
+    // multi-checkbox groups.
+    .inputs-list {
+        @apply my-0;
+
+        > li:first-child {
+            @apply mt-0;
+        }
+
+        > li:last-child {
+            @apply mb-0;
+        }
+    }
+
     .hs-error-msgs {
-        @apply list-none mt-2 p-0 text-red-500 text-xs;
+        @apply list-none mt-2 p-0 text-red-600 text-xs;
 
         label {
             @apply mb-0;
@@ -83,8 +197,20 @@
 
     &-fg-dark {
         @apply text-gray-700;
+
+        // Labels stay dark (matches non-fg-dark forms, whose labels inherit the
+        // gray-950 page text); the gray-700 above is for body/legal copy only.
+        // Validation messages are labels too, and this rule ties with the
+        // `.hs-error-msgs label` rule above on specificity but comes later — so
+        // exclude them here or every error renders gray instead of red.
+        label:not(.hs-error-msg) {
+            @apply text-gray-950;
+        }
     }
 
+    // Newsletter — a single-field form with NO <fieldset>, so the normalized
+    // `.hs-form fieldset input` base never reaches its input. Control chrome is set
+    // here in full; the inline dark/compact variants (_footer, _blog) override it.
     &.newsletter {
         @apply flex items-start;
 
@@ -100,18 +226,20 @@
             }
         }
 
-        input {
-            @apply block py-3 px-4 rounded-lg border;
+        // No bg / border-color here on purpose: this base imports AFTER _footer and
+        // _blog, so at equal specificity it would win ties. Leaving palette unset lets
+        // the inline dark (_footer) and light (_blog) variants own it; the plain
+        // newsletter falls back to the browser-default white input.
+        input:not(.hs-button) {
+            @apply block py-3 px-4 rounded-md border;
+
+            // Resting inner shadow, matching the .form-input system. Set only here
+            // (no variant sets box-shadow), so every newsletter input — plain, blog
+            // header, blog-post — inherits it; on the footer's black it's invisible.
+            box-shadow: $form-input-shadow;
 
             @include screen-md {
                 @apply w-56;
-            }
-
-            &.hs-button {
-                @extend .btn;
-                @extend .btn-primary;
-                @extend .btn-lg;
-                @apply w-auto ml-2;
             }
 
             &:focus {
@@ -119,31 +247,37 @@
             }
         }
 
-        &.newsletter-dark-border input {
+        input.hs-button {
+            @extend .btn;
+            @extend .btn-primary;
+            @extend .btn-lg;
+            @apply w-auto ml-2;
+        }
+
+        &.newsletter-dark-border input:not(.hs-button) {
             @apply border-gray-800;
         }
 
-        &.newsletter-wide input {
+        &.newsletter-wide input:not(.hs-button) {
             @apply w-full;
 
             @include screen-lg {
                 width: 24rem;
             }
-
-            &[type="submit"] {
-                @apply w-auto;
-            }
         }
     }
 
     .hs-recaptcha {
-        @apply mb-5;
+        @apply  absolute right-2 bottom-1;
     }
 
     .legal-consent-container {
         @apply my-4;
         ul {
             @apply list-none pl-0;
+        }
+        .hs-form-booleancheckbox-display > span {
+            @apply ml-0!;
         }
     }
 
@@ -155,26 +289,33 @@
         cursor: pointer;
     }
 
-    .hs-form-booleancheckbox-display .hs-input {
-        @apply inline-block mr-3;
+    // Lay the checkbox beside its (possibly multi-line) consent text and align the
+    // 1rem box with the first line — replaces the old top-margin nudge that
+    // misaligned it. `gap` supplies the spacing (was mr-3 on the input).
+    .hs-form-booleancheckbox-display {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
 
-        width: auto !important;
-        margin-top: 4px;
+        .hs-input {
+            margin-top: 0.125rem;
+        }
     }
 
     .hs-form-radio {
         @apply list-none;
 
         .hs-form-radio-display {
-            @apply inline-flex;
-        }
-
-        .hs-input {
-            @apply mr-3;
-
-            width: fit-content !important;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
     }
+}
+
+.grecaptcha-badge {
+    transform: scale(0.6);
+    transform-origin: bottom right;
 }
 
 .waitlist-form {
@@ -203,15 +344,4 @@
     .input {
         @apply mt-1;
     }
-
-    input,
-    textarea,
-    select {
-        @apply border border-gray-300 rounded-lg p-2 bg-white;
-
-        &:focus {
-            @apply outline-none ring ring-violet-primary;
-        }
-    }
-
 }

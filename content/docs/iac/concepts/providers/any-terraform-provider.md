@@ -1,6 +1,6 @@
 ---
 title_tag: Using Any Terraform Provider
-meta_desc: Learn how to use any Terraform or OpenTofu provider with Pulumi by generating local packages in your preferred programming language.
+meta_desc: Learn how to use any Terraform or OpenTofu provider with Pulumi by generating local SDKs in your preferred programming language.
 title: Any Terraform Provider
 h1: Using any Terraform provider
 menu:
@@ -14,9 +14,9 @@ Pulumi enables you to use any [Terraform](https://registry.terraform.io) or [Ope
 
 ## Overview
 
-The Any Terraform Provider feature allows you to generate a Pulumi SDK locally for any Terraform or OpenTofu provider. When you run `pulumi package add terraform-provider <provider-name>`, Pulumi generates a fully-typed [local package](/docs/iac/guides/building-extending/packages/local-packages/) in your programming language (TypeScript, Python, Go, C#, Java, or YAML) that works just like any other Pulumi provider. You get the same developer experience: strong typing, IDE autocompletion, inline documentation, and the full power of general-purpose programming languages.
+The Any Terraform Provider feature allows you to generate a Pulumi SDK locally for any Terraform or OpenTofu provider. When you run `pulumi package add terraform-provider <provider-name>`, Pulumi generates a fully-typed [local SDK](/docs/iac/guides/building-extending/packages/local-sdks/) in your programming language (TypeScript, Python, Go, C#, Java, or YAML) that works just like any other Pulumi provider. You get the same developer experience: strong typing, IDE autocompletion, inline documentation, and the full power of general-purpose programming languages.
 
-Common scenarios for generating local packages include:
+Common scenarios for generating local SDKs include:
 
 - Using providers not available in the [Pulumi Registry](/registry/)
 - Working with internal or custom Terraform providers developed by your organization
@@ -316,6 +316,35 @@ You'll see your IDE provide autocomplete, type checking, and inline documentatio
 pulumi up
 ```
 
+{{% notes type="info" %}}
+Provider config keys are always `camelCase`, regardless of your program's language. `pulumi config set` and the Automation API `setConfig` use the `camelCase` rendering of the Terraform provider's `snake_case` config field.
+
+For example, set a Terraform `oauth_client_id` config field with the Pulumi key `oauthClientId`:
+
+```bash
+pulumi config set tailscale:oauthClientId <value>
+```
+
+Because a locally generated SDK has no published reference documentation, list the exact config keys with [`pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/):
+
+```bash
+pulumi package get-schema terraform-provider tailscale/tailscale | jq '.config.variables | keys'
+```
+
+```json
+[
+  "apiKey",
+  "audience",
+  "baseUrl",
+  "oauthClientId",
+  "oauthClientSecret",
+  "tailnet",
+  ...
+]
+```
+
+{{% /notes %}}
+
 ## Version control considerations
 
 You can choose whether to commit the generated SDK directory to version control:
@@ -333,9 +362,9 @@ pulumi install
 
 This command reads the `packages` configuration in your `Pulumi.yaml` file and ensures the provider binaries are present on their machine. If the SDK directory wasn't committed, it will also generate the local SDK.
 
-## How local packages work
+## How local SDKs work
 
-Local packages are generated SDKs stored in your project directory rather than pulled from package registries like npm or PyPI. The SDK files are generated in a language-specific subdirectory (typically `./sdks/<provider-name>`).
+Local SDKs are generated in your project directory rather than pulled from package registries like npm or PyPI. The SDK files are generated in a language-specific subdirectory (typically `./sdks/<provider-name>`).
 
 The generated SDK includes:
 
@@ -346,7 +375,41 @@ The generated SDK includes:
 
 These generated SDKs are virtually identical to Pulumi's published packages, providing the same IDE integration, type safety, and developer experience you expect from providers in the Pulumi Registry.
 
-Local packages are versioned when you include a version in the `pulumi package add` command (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration), and the version information is stored in your `Pulumi.yaml` file. This ensures consistent builds across different environments and team members.
+Local SDKs are versioned when you include a version in the `pulumi package add` command (except for YAML projects, where the provider is automatically available through the `Pulumi.yaml` configuration), and the version information is stored in your `Pulumi.yaml` file. This ensures consistent builds across different environments and team members.
+
+## Finding configuration and property names
+
+Terraform and OpenTofu providers use snake_case for their configuration variables and resource properties (for example, `client_id`). When Pulumi bridges a provider through the Any Terraform Provider feature, it translates those names into Pulumi's standard camelCase convention, the same convention every bridged Pulumi provider follows for its schema. This applies to provider configuration keys, resource input and output properties, and function arguments alike.
+
+{{% notes type="warning" %}}
+Provider configuration always uses the camelCase Pulumi name, regardless of which language your program is written in. Setting a raw Terraform-style snake_case key, such as `client_id`, is not recognized and is silently ignored. Use the camelCase form instead, for example `clientId`.
+{{% /notes %}}
+
+For example, if a provider's Terraform schema defines a `client_id` configuration variable, set it with the camelCase key:
+
+```bash
+pulumi config set <provider>:clientId <value>
+```
+
+This same camelCase requirement applies wherever provider configuration is set, including [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set/), [ESC](/docs/esc/), and the Automation API's `setConfig`.
+
+Keep in mind that this is a different surface than the properties you pass to a resource constructor in your program. Those follow your program language's own idiom, just like with any other Pulumi provider: camelCase in TypeScript, Go, C#, and Java, and snake_case in Python. For instance, a Python program still calls a resource constructor with `client_id=...`, while the underlying provider configuration key set via `pulumi config set` remains `clientId`.
+
+### Discovering names with `pulumi package get-schema`
+
+Because a locally bridged provider doesn't have a browsable reference in the [Pulumi Registry](/registry/), use the [`pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/) command to inspect its generated schema and find the exact camelCase names to use:
+
+```bash
+pulumi package get-schema terraform-provider <author>/<name> [version]
+```
+
+To list a provider's configuration keys, inspect the `config.variables` object in the schema. For example, for the `tailscale/tailscale` provider:
+
+```bash
+pulumi package get-schema terraform-provider tailscale/tailscale | jq '.config.variables | keys'
+```
+
+To find a resource's input and output properties, look up the resource's token under `resources` in the schema and inspect its `inputProperties` (and `properties` for outputs).
 
 ## Relationship to the Pulumi Registry
 
@@ -366,21 +429,22 @@ For providers not in the Pulumi Registry, or for custom internal providers, you 
    pulumi package add terraform-provider honeycombio/honeycombio
    ```
 
-1. **Use `pulumi install`**: Always use [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to set up projects, as it handles both standard package manager dependencies and local packages.
+1. **Use `pulumi install`**: Always use [`pulumi install`](/docs/iac/cli/commands/pulumi_install/) to set up projects, as it handles both standard package manager dependencies and local SDKs.
 
 ## Limitations
 
 While the Any Terraform Provider feature is powerful, there are some considerations:
 
-- **Documentation**: Generated SDKs for local packages include inline documentation, but you won't have dedicated web documentation in the Pulumi Registry (unless the provider has been added to the Registry).
+- **Documentation**: Local SDKs include inline documentation, but you won't have dedicated web documentation in the Pulumi Registry (unless the provider has been added to the Registry).
 - **Support**: For issues with the provider's functionality (not the bridge itself), you'll need to work with the Terraform provider's maintainers.
 
 ## Related resources
 
 - [Pulumi Registry: Terraform Provider](/registry/packages/terraform-provider/) - Installation and configuration guide
 - [Pulumi Packages](/docs/iac/concepts/packages/) - Learn about Pulumi's package system
-- [Local Packages](/docs/iac/guides/building-extending/packages/local-packages/) - Deep dive into local package generation
+- [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) - Deep dive into local SDK generation
 - [Resource Providers](/docs/iac/concepts/providers/) - Understanding Pulumi's provider system
 - [Getting Started: Use Terraform Providers](/docs/iac/get-started/terraform/terraform-providers/) - Quick start guide
 - [Pulumi CLI: `pulumi package add`](/docs/iac/cli/commands/pulumi_package_add/) - Command reference
 - [Pulumi CLI: `pulumi install`](/docs/iac/cli/commands/pulumi_install/) - Command reference
+- [Pulumi CLI: `pulumi package get-schema`](/docs/iac/cli/commands/pulumi_package_get-schema/) - Command reference

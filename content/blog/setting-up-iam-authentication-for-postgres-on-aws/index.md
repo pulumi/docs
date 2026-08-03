@@ -3,7 +3,6 @@ title: "Passwordless PostgreSQL: IAM Authentication with Pulumi"
 date: 2026-02-13
 draft: false
 meta_desc: "Secure your PostgreSQL databases with IAM authentication. Eliminate password rotation, simplify access control, and build reusable infrastructure."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - elisabeth-lichtie
@@ -13,6 +12,7 @@ tags:
     - security
     - rds
     - iam
+category: tutorials
 schema_type: auto
 ---
 
@@ -299,6 +299,10 @@ The application shows the database endpoint and IAM username it's using, and pro
 {{% notes type="info" %}}
 The full code for this example is available at [https://github.com/pulumi-demos/examples/tree/main/typescript/aws-iam-for-postgres](https://github.com/pulumi-demos/examples/tree/main/typescript/aws-iam-for-postgres). The example includes all the component code referenced in this post.
 {{% /notes %}}
+
+{{< blog/cta-card title="Make passwordless access your default" >}}
+Wrap this IAM authentication setup in a Pulumi component and apply the same passwordless pattern to every RDS cluster your team runs.
+{{< /blog/cta-card >}}
 
 ## Production considerations
 

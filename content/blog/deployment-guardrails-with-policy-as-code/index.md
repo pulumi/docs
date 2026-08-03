@@ -1,15 +1,15 @@
 ---
 title: "How to Implement Robust Security Guardrails Using Policy as Code"
+feature_image: feature.png
 allow_long_title: true
 date: 2025-09-30
 draft: false
 meta_desc: "Implement deployment guardrails with Pulumi CrossGuard to create safe self-service infrastructure balancing developer autonomy and control."
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 series: idp-best-practices
 tags:
-    - idp
+    - internal-developer-platform
     - platform-engineering
     - policy-as-code
     - crossguard
@@ -17,7 +17,7 @@ tags:
     - security
     - self-service
     - guardrails
-    - idp-best-practices
+category: best-practices
 ---
 
 Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi CrossGuard](/docs/iac/packages-and-automation/crossguard) to create deployment guardrails that make self-service infrastructure both powerful and safe.
@@ -25,15 +25,6 @@ Welcome to the third post in our **IDP Best Practices** series, where we explore
 Platform engineering presents a fundamental tension: we want to enable developer velocity while maintaining security and compliance. Every platform team faces the same question: how do you give teams the freedom to deploy infrastructure quickly without compromising on safety, security, or organizational standards? The answer isn't to choose between speed and safety, but rather to embrace **automated guardrails** powered by policy as code that make both possible simultaneously.
 
 <!--more-->
-
-This post is part of our IDP Best Practices series:
-
-* [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control)
-* [Build Golden Paths with Infrastructure Components and Templates](/blog/golden-paths-infrastructure-components-and-templates)
-* **Deployment Guardrails with Policy as Code** (you are here)
-* [Day 2 Operations: Drift Detection and Remediation](/blog/day-2-operations-drift-detection-and-remediation)
-* Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-* Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 
 {{% notes type="tip" %}}
 **Want hands-on experience?** Access the [complete demo code](https://github.com/pulumi/workshops/tree/main/idp-component-policies) and [policy examples](https://github.com/pulumi/workshops/tree/main/idp-component-policies/demo-policies) from this workshop.
@@ -289,6 +280,10 @@ new PolicyPack("aws-compliance-ready-policies-typescript", {
 ```
 
 This automatically includes policies for major compliance frameworks like [PCI DSS](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for payment card industry standards, [SOC 2](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for security and compliance controls, [ISO 27001](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for information security management, and [CIS Benchmarks](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies#frameworks) for security configuration standards.
+
+{{< blog/cta-card title="Add guardrails with policy as code" href="/docs/insights/policy/" >}}
+Write policies in Python or TypeScript, enforce them across every deployment, and give teams self-service infrastructure that stays secure and compliant.
+{{< /blog/cta-card >}}
 
 ## Best Practices for Policy Implementation
 

@@ -1,0 +1,85 @@
+{{/*
+    Mermaid renderer + Pulumi-brand theme. Included from head.html only when the
+    page has a diagram (gated on `.Store.Get "hasMermaid"`), so the Mermaid CDN
+    module loads lazily — never on pages without diagrams. The theme itself lives
+    in a portable, dependency-free module (static/js/pulumi-mermaid-theme.js) so
+    it can be dropped into other codebases, slide decks, etc.
+*/}}
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    import { pulumiMermaidLight, pulumiMermaidDark } from '{{ "js/pulumi-mermaid-theme.js" | relURL }}';
+
+    // Each diagram's theme follows the nearest ancestor with a data-theme
+    // attribute (a [data-theme="dark"] wrapper, or <html> on docs pages). No
+    // data-theme anywhere → light. This lets a dark-wrapped section render dark
+    // while the rest of the page stays light.
+    const isDark = pre => pre.closest('[data-theme]')?.dataset.theme === 'dark';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const diagrams = [...document.querySelectorAll('pre.mermaid')];
+
+        // Preserve original source before rendering replaces it.
+        diagrams.forEach(pre => {
+            if (!pre.dataset.mermaidSource) {
+                pre.setAttribute('data-mermaid-source', pre.textContent.trim());
+            }
+        });
+
+        const isHidden = el => el.offsetParent === null;
+
+        // Render in batches grouped by theme. Mermaid iterates a batch
+        // sequentially with shared internal state, so per-diagram concurrent
+        // calls race and corrupt output; and the config is global, so each theme
+        // group must initialize then finish before the next starts.
+        const render = async nodes => {
+            const todo = nodes.filter(pre => pre.dataset.processed !== 'true');
+            for (const [theme, batch] of [
+                [pulumiMermaidLight, todo.filter(p => !isDark(p))],
+                [pulumiMermaidDark, todo.filter(p => isDark(p))],
+            ]) {
+                if (!batch.length) continue;
+                mermaid.initialize({ startOnLoad: false, ...theme });
+                try { await mermaid.run({ nodes: batch }); } catch (err) { console.error('Mermaid render error:', err); }
+            }
+        };
+
+        // Render visible diagrams now; lazily render hidden (tabbed/chooser) ones
+        // once revealed — Mermaid can't measure display:none elements.
+        let observer = null;
+        const renderDiagrams = () => {
+            render(diagrams.filter(pre => !isHidden(pre)));
+            if (observer) observer.disconnect();
+            const hidden = diagrams.filter(isHidden);
+            if (hidden.length) {
+                observer = new IntersectionObserver(entries => {
+                    // Batch all newly-revealed diagrams into one render() call so
+                    // they go through the theme-grouped, sequential path rather
+                    // than racing as concurrent per-diagram runs.
+                    const revealed = entries.filter(e => e.isIntersecting).map(e => e.target);
+                    if (!revealed.length) return;
+                    revealed.forEach(pre => observer.unobserve(pre));
+                    render(revealed);
+                });
+                hidden.forEach(pre => observer.observe(pre));
+            }
+        };
+
+        renderDiagrams();
+
+        // Re-render on docs theme toggle: restore each diagram's source and
+        // re-run (render() re-resolves each diagram's theme). Diagrams inside a
+        // [data-theme] wrapper keep their own theme regardless of the page.
+        let current = document.documentElement.dataset.theme;
+        new MutationObserver(() => {
+            if (document.documentElement.dataset.theme === current) return;
+            current = document.documentElement.dataset.theme;
+            diagrams.forEach(pre => {
+                const src = pre.getAttribute('data-mermaid-source');
+                if (src === null) return;
+                pre.textContent = src;
+                pre.removeAttribute('data-processed');
+            });
+            renderDiagrams();
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    });
+</script>

@@ -4,7 +4,6 @@ allow_long_title: True
 date: 2024-04-19
 draft: false
 meta_desc: Pulumi Cloud adds new usability improvements that give more control to platform teams and streamline the New Project Wizard flow to deploy infrastructure
-meta_image: meta.png
 authors:
     - arun-loganathan
 tags:
@@ -12,6 +11,7 @@ tags:
     - new-project-wizard
     - developer-portals
     - platform-engineering
+category: product
 
 ---
 

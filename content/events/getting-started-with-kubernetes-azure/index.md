@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Getting Started with Kubernetes on Azure
 meta_desc: Learn how Kubernetes runs on Azure using AKS. Create clusters, deploy containerized apps, and manage infrastructure with Pulumi.
-meta_image: /events/getting-started-with-kubernetes-azure/intro-azure-aks-adam.png
+meta_image: /events/getting-started-with-kubernetes-azure/meta.png
+meta_image_square: /events/getting-started-with-kubernetes-azure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

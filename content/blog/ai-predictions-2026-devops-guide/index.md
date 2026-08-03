@@ -1,7 +1,6 @@
 ---
 title: "AI Predictions for 2026: A DevOps Engineer's Guide"
 date: 2025-12-11
-meta_image: meta.png
 meta_desc: "AI predictions for 2026 and what they mean for DevOps engineers. From agent orchestration to local AI breakthroughs, here's how to prepare your infrastructure."
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - nova-forge
     - bedrock-agentcore
     - pulumi-neo
+category: perspectives
 
 social:
     twitter: "AI Predictions for 2026: What DevOps Engineers Need to Know. From IDE evolution to agent orchestration, local AI breakthroughs to machine-to-machine payments. Here's how to prepare for the AI-driven future."
@@ -114,6 +114,10 @@ For each capability, you just have a bit of metadata or description that loads u
 
 For DevOps, this translates to modular infrastructure definitions, on-demand capability loading, and efficient resource utilization. Think about how you can apply this pattern to your own automation.
 
+{{< blog/cta-card title="Equip your agents with Pulumi skills" href="/docs/ai/skills/" >}}
+Give Claude Code, Cursor, or any coding agent working Pulumi patterns through Agent Skills and the Pulumi MCP server, so it generates infrastructure that deploys.
+{{< /blog/cta-card >}}
+
 ## Agent-to-agent protocols are finally happening
 
 Agent-to-agent protocols are where AI agents operate in a peer network, discover each other's capabilities in real time, and interact autonomously. When Google released their [A2A protocol](https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability/) earlier this year, there was a ton of buzz. A lot of people thought it was going to be the next big standard, like the next MCP. But then it kind of fell to the wayside.
@@ -144,7 +148,7 @@ For the last prediction, we're tying everything together. We've talked about rev
 
 We're going to get to the point very quickly where we're shipping code that we have never read before. And I'm not talking about people who vibe code. Even experienced engineers are going to trust their systems so much that they have the ability to review the code but they're not going to. We're just going to ship to production after reviewing the artifacts.
 
-I presented on this exact topic at [the Tel Aviv Pulumi User Group meetup at Qodo HQ](https://www.meetup.com/tel-aviv-pulumi-user-group/events/310498800/) back in October, where I demonstrated how Pulumi Neo's autonomous decision-making capabilities can handle infrastructure tasks that we traditionally managed manually. [Qodo](https://www.qodo.ai/) is doing fascinating work in this space with their agentic development tools, building systems that let you trust the output without necessarily reviewing every line.
+I presented on this exact topic at [the Tel Aviv Pulumi User Group meetup at Qodo HQ](https://luma.com/pulumi) back in October, where I demonstrated how Pulumi Neo's autonomous decision-making capabilities can handle infrastructure tasks that we traditionally managed manually. [Qodo](https://www.qodo.ai/) is doing fascinating work in this space with their agentic development tools, building systems that let you trust the output without necessarily reviewing every line.
 
 I'm not saying we're taking the human completely out of the loop. I'm saying we're going to have a lot of trust in our systems and a validation process that includes us, but that doesn't necessarily have to be us actually looking at the code. Tools like Pulumi Neo create pull requests with clear documentation of changes, run previews to validate infrastructure modifications, and provide the transparency needed to ship with confidence.
 

@@ -39,7 +39,7 @@ sections:
     link: /docs/esc/providers/secrets/vault-secrets/
 - type: cards-logo-label-link
   heading: Languages & SDKs
-  description: <p>Use the ESC SDKs to retrieve environment values from your application workloads at runtime and to manage environments programmatically. To consume an environment from a Pulumi IaC program, use <a href="/docs/esc/guides/integrate-with-pulumi-iac/">config</a> instead.</p>
+  description: <p>Use the ESC SDKs to retrieve environment values from your application workloads at runtime and to manage environments programmatically. To consume an environment from a Pulumi IaC program, use <a href="/docs/esc/guides/pulumi-iac/">config</a> instead.</p>
   cards:
   - label: Node.js
     icon: icon-32-32 node-color-32-32
@@ -60,7 +60,7 @@ sections:
   - icon: lock-key
     heading: Manage secrets
     description: Store, retrieve, and organize secrets in ESC environments.
-    link: /docs/esc/operations/managing-secrets/
+    link: /docs/esc/concepts/environments/
   - icon: play
     heading: Run commands with pulumi env run
     description: Inject environment values into any command or script.
@@ -68,7 +68,7 @@ sections:
   - icon: pulumi-iac
     heading: Use ESC with Pulumi IaC
     description: Consume environments from a Pulumi program.
-    link: /docs/esc/guides/integrate-with-pulumi-iac/
+    link: /docs/esc/guides/pulumi-iac/
   - icon: package
     heading: Compose environments
     description: Import environments to share configuration across teams.

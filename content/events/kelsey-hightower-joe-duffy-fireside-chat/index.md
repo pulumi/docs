@@ -2,6 +2,8 @@
 # Name of the event.
 title: "Kelsey Hightower & Joe Duffy Fireside Chat"
 meta_desc: Listen in as Kelsey Hightower and Joe Duffy discuss the past, present, and future of the cloud infrastructure landscape.
+meta_image: /events/kelsey-hightower-joe-duffy-fireside-chat/meta.png
+meta_image_square: /events/kelsey-hightower-joe-duffy-fireside-chat/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

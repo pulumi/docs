@@ -1,11 +1,11 @@
 ---
 title: "Golden Paths in IDPs: A Complete Guide to Reusable Infrastructure with Pulumi Components and Templates"
+feature_image: feature.png
 allow_long_title: true
 date: 2025-08-20T10:00:00+02:00
 draft: false
 series: idp-best-practices
 meta_desc: Build reusable infrastructure using components and templates to create golden paths that enable scalable, self-service internal developer platforms.
-meta_image: meta.png
 authors:
     - engin-diri
     - robert-smith
@@ -15,9 +15,9 @@ tags:
     - golden-paths
     - infrastructure-components
     - pulumi-templates
-    - developer-experience-devex
+    - developer-experience
     - reusable-infrastructure
-    - idp-best-practices
+category: best-practices
 social:
     twitter: "Golden paths aren't just about standardization. They're about empowering developers with pre-architected, supported infrastructure patterns. Learn how to build reusable components and templates that transform your Internal Developer Platform. #platformengineering #goldenpaths #pulumi"
     linkedin: "The fragmentation in modern cloud ecosystems is real. Between AWS's 200+ services, Azure's growing catalog, and the explosion of DevOps tools, developers face decision fatigue at every turn. Our latest post in the IDP Best Practices series shows you how to solve this with golden paths: pre-architected infrastructure patterns that provide the happy path to production. Learn how to build reusable Pulumi components that work across languages, create templates that embody your best practices, and enable true self-service infrastructure without sacrificing governance or security. #platformengineering #goldenpaths #infrastructureascode #developerexperience"
@@ -30,15 +30,6 @@ Modern cloud platforms offer endless options, over 200 AWS services, sprawling A
 In this guide, you'll learn how to build golden paths for your Internal Developer Platform using two core Pulumi constructs: **Components**, reusable infrastructure building blocks, and **Templates**, predefined, deployable patterns. You'll see how to create infrastructure abstractions that are written once, shared across teams, and consumed in any language, turning weeks of setup into minutes of developer-ready infrastructure.
 
 <!--more-->
-
-This post is part of our IDP Best Practices series:
-
-- [How to Build an Internal Developer Platform: Strategy, Best Practices, and Self-Service Infrastructure](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/)
-- **Build Golden Paths: Guide to Reusable Infrastructure with Pulumi Components and Templates** (you are here)
-- [Policy as Code for Safer IDPs: Enabling Developer Self-Service with Guardrails](/blog/deployment-guardrails-with-policy-as-code)
-- [Day 2 Operations: Drift Detection and Remediation](/blog/day-2-operations-drift-detection-and-remediation)
-- Extend Your IDP for AI Applications: GPUs, Models, and Cost Controls
-- Next-Gen IDPs: How to Modernize Legacy Infrastructure with Pulumi
 
 {{% notes type="tip" %}}
 The complete code examples from this post are available on [GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates).
@@ -604,6 +595,10 @@ Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `
 Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `Deploy with Pulumi` → Configure and launch
 
 ![img_6.png](pulumi_idp_deployment_git_view.png)
+
+{{< blog/cta-card title="Build golden paths with Pulumi" >}}
+Package your infrastructure patterns into reusable components and templates, publish them to a private registry, and let teams deploy production-ready stacks in minutes.
+{{< /blog/cta-card >}}
 
 ## Best Practices for Reusable Infrastructure Components and Templates
 

@@ -23,7 +23,6 @@ meta_desc: "7-step guide to platform engineering success: security, internal dev
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: platform-engineering-guide.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -39,6 +38,7 @@ tags:
     - policy-as-code
     - finops
     - cost-efficiency
+category: best-practices
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -58,6 +58,7 @@ social:
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
+faq_schema: true
 ---
 
 In today’s fast-paced digital landscape, organizations are increasingly adopting platform engineering to optimize their software delivery and operations. Gartner predicts that by 2026, 80% of large software engineering organizations will have platform engineering teams to provide reusable services, components, and tools for application delivery. Additionally, by 2027, 80% of large enterprises will leverage platform engineering to scale DevOps initiatives in hybrid cloud environments effectively.
@@ -152,6 +153,10 @@ Policy as code can be applied in two key ways:
 - **Detective controls**: Establish policies that continuously monitor the deployed infrastructure, triggering alerts or remediation actions when deviations from the desired state are detected.
 
 By combining [IaC and policy as code](https://www.pulumi.com/docs/iac/packages-and-automation/crossguard/) with self-service provisioning, you maintain security and compliance while giving teams autonomy.
+
+{{< blog/cta-card title="Build your internal developer platform" label="Explore Pulumi IDP" href="/product/internal-developer-platforms/" >}}
+Give developers self-service infrastructure with reusable components, golden paths, and governance built in using Pulumi IDP.
+{{< /blog/cta-card >}}
 
 ## Step 7: Evolving Towards Self-Service
 

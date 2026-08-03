@@ -3,7 +3,6 @@ title: "How We Load Data into Snowflake in Seconds with Pulumi"
 date: 2026-02-23
 draft: false
 meta_desc: "Learn how we load data into Snowflake in seconds using Firehose direct streaming and reusable Pulumi ComponentResources."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - pablo-seibelt
@@ -12,9 +11,10 @@ tags:
     - data-and-analytics
     - aws
     - python
-    - pulumi-esc
+    - esc
     - github
     - snowflake
+category: tutorials
 schema_type: auto
 social:
     twitter: "We load data into Snowflake in seconds with a single Pulumi ComponentResource. Direct Firehose to Snowflake streaming, no S3 intermediate. Here's how we built it."
@@ -661,6 +661,10 @@ Direct streaming is the fastest path, but two other patterns are available in th
 * **Batch loading.** Your orchestrator (Airflow, Prefect, cron, etc.) runs `COPY INTO` on a schedule. Best for full control over timing and deduplication.
 
 We'll walk through both patterns in detail in upcoming posts.
+
+{{< blog/cta-card title="Stamp out data pipelines with components" >}}
+Encapsulate your Snowflake loading logic in a Pulumi component, then create new pipelines with a handful of configuration values instead of copied files.
+{{< /blog/cta-card >}}
 
 ## Publishing as reusable components
 

@@ -51,7 +51,7 @@ pulumi up --policy-pack /path/to/pack-1 --policy-pack /path/to/pack-2
 ```
 
 {{% notes type="info" %}}
-When using `--policy-pack`, the policy pack must be present on disk. Pulumi Cloud users can skip this flag entirely because policy packs enabled through [policy groups](/docs/insights/policy/policy-groups/) are downloaded and applied automatically.
+When using `--policy-pack`, the policy pack must be present on disk. Pulumi Cloud users can skip this flag entirely because policy packs enabled through [policy groups](/docs/insights/policy/policy-groups/) are downloaded and applied automatically. Downloaded packs still run locally, so the machine needs the pack's [runtime](/docs/insights/policy/policy-packs/#runtime-requirements) installed.
 {{% /notes %}}
 
 ## Common workflows

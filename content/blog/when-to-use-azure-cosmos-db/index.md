@@ -4,11 +4,11 @@ date: 2024-11-11T17:39:54-05:00
 updated: 2025-03-11
 draft: false
 meta_desc: Discover when to use Cosmos DB and how it compares with PostgreSQL, MongoDB, Cassandra, and DynamoDB. Learn about scalability, performance, cost & use cases.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
     - azure
+category: general
 social:
     twitter:
     linkedin:
@@ -279,6 +279,10 @@ See also [Cosmos DB vs DynamoDB, Know The Differences](/what-is/database-compari
 Cosmos DB also has a Azure Table API and marketing material saying it's a better choice than Azure Table Storage. My take is Azure Table and Cosmos DB's Table API both provide key-value storage with distinct trade-offs. Azure Table Storage is cost-effective and ideal for simpler, predictable workloads, requiring minimal complexity. Cosmos DB's Table API adds flexibility, optional global distribution, and tunable consistency, but also brings more complexity and cost.
 
 While both offer similar functionality, Cosmos DB's advanced features will cost you. If you know you aren't going to need scale read and writes or need multi-region writes or other features, Azure Table Storage's simpler, predictable pricing is the way to go.
+
+{{< blog/cta-card title="Provision Azure databases as code" >}}
+Whether you land on Cosmos DB, Azure SQL, or PostgreSQL, Pulumi lets you define and manage your entire Azure data layer in the language you already use.
+{{< /blog/cta-card >}}
 
 ## When Cosmos DB Makes Sense
 

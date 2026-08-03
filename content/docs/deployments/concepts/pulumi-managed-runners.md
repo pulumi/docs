@@ -37,4 +37,6 @@ Deployments run on single-use virtual machines; compute and storage are never sh
 
 ## Dependency caching
 
-When using Pulumi-managed runners, you can speed up deployments with [dependency caching](/docs/deployments/concepts/settings/#dependency-caching), which stores your downloaded dependencies between runs.
+When using Pulumi-managed runners, you can speed up deployments with [dependency caching](/docs/deployments/concepts/settings/dependency-caching/), which stores your downloaded dependencies between runs.
+
+Dependency caching is specific to Pulumi-managed runners. If you run a [customer-managed runner pool](/docs/deployments/concepts/customer-managed-runners/#dependency-caching), you manage caching yourself.

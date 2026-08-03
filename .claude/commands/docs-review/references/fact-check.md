@@ -24,7 +24,7 @@ The caller must provide:
 
 - **Tiered triage object** with four buckets:
   - 🚨 Needs your eyes (contradicted)
-  - ⚠️ Low-confidence (verified with low confidence, or medium when `scrutiny=heightened`; plus unverifiable claims, each with an author-question line)
+  - ⚠️ Low-confidence (verified with low confidence, or medium when `scrutiny=heightened`; plus unverifiable claims, each with an author-question line; plus `framing-drift` claims — value accurate, published meaning drifted — promoted to 🚨 when the drifted phrasing rides `social.*` frontmatter)
   - 🤔 Intuition-check (claim *shape* is suspect even when evidence is absent -- see Intuition-check axis below)
   - ✅ Verified (collapsed under `<details>`)
 - **Author-question buffer** -- one line per unverifiable claim, file:line-anchored
@@ -81,6 +81,8 @@ Workflow pre-step: `extract-claims.py` (a deterministic regex floor — numbers,
 - Default (`scrutiny=standard`): extract claims from the diff only -- lines added or modified
 - `scrutiny=heightened`: extract claims from the **full file**, not just the diff. AI hallucinates surrounding prose, not just changed lines.
 
+The Layer-B pre-step (`extract-claims-llm.py`) resolves scrutiny **per file**: blog files and brand-new files bump to `heightened`; high-similarity renames and small edits to existing files (≤30 added lines and ≤20% of the body) pin back to `standard` -- the added lines still get extracted, the already-published unchanged body doesn't. Each pin is surfaced as a note in the artifact's `errors[]`.
+
 ### Frontmatter sweep
 
 Hugo posts duplicate the same load-bearing phrasing across the body, `meta_desc`, and `social:` sub-keys (`twitter`, `linkedin`, `bluesky`). When extracting a claim from any of these locations, scan the rest of the file -- body plus every prose-bearing frontmatter key -- for the same factual phrasing or a near-paraphrase, and treat all occurrences as one claim with multiple cited locations. A single finding then renders one suggestion-block per location, so a verified-false claim is fixed everywhere in one pass.
@@ -99,7 +101,7 @@ When a new or changed file lives in a structurally-templated directory (≥3 par
 
 **Pre-step artifact `.frontmatter-validation.json`** (workflow pre-step `frontmatter-validate.py`). Three checks bundled in one content-tree walk + redirect-table scan:
 
-- `menu_parents` — for each `menu.<name>.parent` declared in the file, did the parent identifier resolve in the same named menu? Carries `parent_exists_in_menu` (boolean) and `found_in_other_menus` (list — when the identifier exists in a different menu, the canonical "wrong-menu parent" bug).
+- `menu_parents` — for each `menu.<name>.parent` declared in the file, did the parent identifier resolve in the same named menu? Resolution covers identifiers declared in content frontmatter *and* in `config/_default/menus.yml` (Hugo accepts parents from either source; section-level parents live only in the config file). Carries `parent_exists_in_menu` (boolean) and `found_in_other_menus` (list — when the identifier exists in a different menu, the canonical "wrong-menu parent" bug).
 - `alias_collisions` — `{alias, collides_with, scope: pr-internal|repo-wide}` records. Built from a global walk of `aliases:` blocks across `content/**/*.md`; cross-references the PR file's *declared* aliases against everything else.
 - `url_collisions` — `{file, scope: hugo-alias|s3-redirect}` records keyed off the PR file's *rendered* URL. The pre-step builds a unified URL-ownership map combining Hugo aliases and `scripts/redirects/*.txt` entries (with normalization across `index.html`, `.html`, and trailing-slash conventions). When the PR's URL is already claimed by another file's alias or by an S3 redirect source, it surfaces here. Hugo's own aliases and the move-doc skill's redirect-table maintenance are the canonical signal of "this URL is already taken" — there is no hand-maintained pattern table to keep in sync.
 
@@ -249,7 +251,7 @@ The 🤔 bucket is therefore **small and specific**: claims whose shape was susp
 
 **When `.candidate-claims.json` provided the floor (the normal CI path — see §Pre-step artifact above), do NOT dispatch the four claim-finder subagents below.** The discovery they did inside the review's context — and the run-to-run variance in *which* claims they found — is exactly what the pre-step lifted out: on claims-heavy content, a single Opus run can miss a real blocking finding another run catches because the in-review discovery is model-judgment under attention pressure. Instead: take the pre-computed `claims` list, **classify** each entry — sort it into the four type-buckets below (`numerical` / `cross-reference` / `capability` / `framing`), set its `source_class` per §Source-class classification, set `cross_specialist_corroboration: true` when the `framing` heuristic also matches the entry's text — then fold in any additional claims you spot in the diff yourself, and run the §Combine step over the union. The four subagents are a **fallback**, run only when the artifact is absent or carries a non-empty `errors` array (degraded pre-step, or interactive `/docs-review`).
 
-When the four subagents *do* run (fallback path): spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`, Sonnet 4.6 each). Each specialist owns a narrow slice of §Claim extraction; the slices are non-overlapping by design except for `framing`, which is a heuristic specialist that scans across canonical types.
+When the four subagents *do* run (fallback path): spawn four parallel claim-finder subagents via the Agent tool (`general-purpose`). Each specialist owns a narrow slice of §Claim extraction; the slices are non-overlapping by design except for `framing`, which is a heuristic specialist that scans across canonical types.
 
 - **`numerical`** -- `Numerical` + `Version/availability` rows + §Temporal-claim handling trigger list.
 - **`cross-reference`** -- `Cross-reference` row + §Cross-sibling consistency *templated-section detection* and *what to extract* (the per-record list -- not the rendering / promotion / calibration tail). Identifies which siblings need reading; the reads themselves are a separate fan-out (see §Cross-sibling consistency).
@@ -303,21 +305,22 @@ Store the deduped claim list for the verification phase. No interim user output.
 
 *Fresh-review path only. Re-entrant updates use `docs-review:references:update` -- don't fan specialists across a fix-response / dispute / re-verify pass; the deltas are localized and replication beats decomposition there.*
 
-**The review reads `.verified-claims.json`; it does not produce per-claim verdicts itself.** Workflow pre-step `verify-claims.py` (`.claude/commands/docs-review/scripts/verify-claims.py`) takes every entry in `.candidate-claims.json` (the floor), tries a deterministic pass-0 resolution (no model call — a `:latest` Docker tag → `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check → `verified`), routes the rest — Pass 1 (`pulumi-internal`: `gh` + local reads), Pass 2 (`external` with a fetched URL: consults `.fetched-urls.json`), Pass 3 (`external` with no fetched URL: server-side `web_search`) — fires parallel Sonnet 4.6 verifiers via direct `/v1/messages` with a forced `verify_claim` tool, and emits `.verified-claims.json` at the repo root:
+**The review reads `.verified-claims.json`; it does not produce per-claim verdicts itself.** Workflow pre-step `verify-claims.py` (`.claude/commands/docs-review/scripts/verify-claims.py`) takes every entry in `.candidate-claims.json` (the floor), tries a deterministic pass-0 resolution (no model call — a `:latest` Docker tag → `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check → `verified`), routes the rest — Pass 1 (`pulumi-internal`: `gh` + local reads), Pass 2 (`external` with a fetched URL: consults `.fetched-urls.json`), Pass 3 (`external` with no fetched URL: server-side `web_search`) — fires parallel Sonnet 5 verifiers via direct `/v1/messages` with a forced `verify_claim` tool, and emits `.verified-claims.json` at the repo root. Lanes escalate one hop in both directions: a pass1 verifier that can't close a claim (or exhausts its turn cap) retries once under pass3, and a pass3 verifier that recognizes a Pulumi-product-behavior claim (routed to web search because no pulumi-shaped token appears in the text) retries once under pass1, where `gh` can read product source. A claim that still can't converge carries `turn_cap_exhausted: true` — a retryable budget failure, distinct from a genuine no-source `unverifiable`:
 
 ```
-{"schema_version": 1, "model": "claude-sonnet-4-6",
+{"schema_version": 1, "model": "claude-sonnet-5",
  "verdicts": [{"claim_id", "file", "line_range", "text", "type",
                "route": "pass0"|"pass1"|"pass2"|"pass3",
-               "verdict": "verified"|"matches"|"not-a-claim"|"unverifiable"|"contradicted"|"mismatch",
-               "confidence", "evidence", "source", "framing_note"?, "intuition_flag"?, "model_usage"}],
+               "verdict": "verified"|"matches"|"not-a-claim"|"unverifiable"|"contradicted"|"mismatch"|"framing-drift",
+               "confidence", "evidence", "source", "framing"?, "framing_note"?, "intuition_flag"?,
+               "turn_cap_exhausted"?, "model_usage"}],
  "errors": [...], "meta": {"n_claims", "n_pass0", "n_pass1", "n_pass2", "n_pass3", ...}}
 ```
 
-**This is the claim floor *and* the verdict source on the normal path** — `verdicts[]` carries one entry per candidate claim (it's a superset of `.candidate-claims.json`). Don't also open `.candidate-claims.json` when `.verified-claims.json` is present with a non-empty `verdicts[]` (see §Pre-step artifact `.candidate-claims.json`). **Read `.verified-claims.json` once. Do not re-verify.** For each verdict, render one line in §🔍 Verification trail using the verdict's `evidence` and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch`). The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verifier recorded, or inventing a `contradicted`/`mismatch` it didn't find). The review's irreducible work is:
+**This is the claim floor *and* the verdict source on the normal path** — `verdicts[]` carries one entry per candidate claim (it's a superset of `.candidate-claims.json`). Don't also open `.candidate-claims.json` when `.verified-claims.json` is present with a non-empty `verdicts[]` (see §Pre-step artifact `.candidate-claims.json`). **Read `.verified-claims.json` once. Do not re-verify.** For each verdict, render one line in §🔍 Verification trail using the verdict's `evidence` and `source` fields, with the per-verdict emoji from `docs-review:references:output-format` (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch` · 🌀 `framing-drift`). The validator's `verified-claims-trail-faithful` rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction (the trail hiding a `contradicted`/`mismatch`/`unverifiable` the verifier recorded, or inventing a `contradicted`/`mismatch` it didn't find). The review's irreducible work is:
 
-1. **Bucket promotion** — `contradicted`/`mismatch` → 🚨 Outstanding; an `unverifiable` *factual* claim → ⚠️ Low-confidence (file an author-question buffer line — see §Author-question buffer and `docs-review:references:output-format` §Bucket rules); a `verified` claim with low confidence (or medium under heightened scrutiny) → ⚠️ Low-confidence verified; `verified`/`matches`/`not-a-claim` otherwise → trail-only (no bucket). Trail verdict drives bucket placement; don't relitigate `contradicted`/`mismatch`/`unverifiable` via the two-question test (`unverifiable` still bypasses the two-question test — it just lands in ⚠️, not 🚨).
-2. **Framing call** — on top of each verdict's `framing_note` (`strengthened`/`narrowed`/`shifted`): mirror it into the rendered bucket bullet.
+1. **Bucket promotion** — `contradicted`/`mismatch` → 🚨 Outstanding; a `framing-drift` claim → ⚠️ Low-confidence by default, PROMOTED to 🚨 when the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would materially mislead a reader; an `unverifiable` *factual* claim → ⚠️ Low-confidence (file an author-question buffer line — see §Author-question buffer and `docs-review:references:output-format` §Bucket rules) — and when its record carries `turn_cap_exhausted: true` the bullet must say the verifier ran out of turn budget (retryable), never that the claim is out of scope or unverifiable-in-principle; a `verified` claim with low confidence (or medium under heightened scrutiny) → ⚠️ Low-confidence verified; `verified`/`matches`/`not-a-claim` otherwise → trail-only (no bucket). Trail verdict drives bucket placement; don't relitigate `contradicted`/`mismatch`/`framing-drift`/`unverifiable` via the two-question test (`unverifiable` still bypasses the two-question test — it just lands in ⚠️, not 🚨).
+2. **Framing call** — on top of each verdict's `framing`/`framing_note` (`entailed-narrower`/`overclaim-broader`/`shifted`): mirror it into the rendered bucket bullet, quoting the source form vs the claim form.
 3. **Intuition check** — on top of each verdict's `intuition_flag`: promote to 🤔 only when the verifier flagged it AND its verdict came back inconclusive (see §Intuition-check axis).
 4. **Render the trail and the bucket findings** per `docs-review:references:output-format`. The investigation-log "External claim verification" line's routed-metadata segment maps `.verified-claims.json`'s `meta` directly: `routed: <meta.n_pass0> inline, <meta.n_pass1> Pass 1, <meta.n_pass2> Pass 2, <meta.n_pass3> Pass 3` — `n_pass0` is verify-claims.py's pass-0 lane (claims resolved deterministically with no model verifier dispatched, e.g. a `:latest` Docker tag demoted to `not-a-claim`, a `static/programs/<dir>/` reference confirmed by a directory check); those map to the `inline` counter. Add your in-review additions' routes (a claim you resolved without dispatching a verifier counts as `inline`). The per-lane `(verified V, contradicted C, unverifiable U)` parentheticals count the `pass2`- and `pass3`-routed verdicts by `verdict`; the leading `(N unverifiable, M contradicted)` parenthetical aggregates all verdicts.
 
@@ -346,6 +349,8 @@ Main agent walks §Verification source order steps 1-3 sequentially during the c
 
 **Don't iterate to find prior discussion.** Specifically: don't loop `gh api repos/pulumi/docs/issues` or `gh api repos/pulumi/docs/pulls` searching for prior PRs / issues / discussions about a topic. That's exploration, not verification — read the actual code path, release notes, or `pulumi/pulumi` source instead. One targeted `gh search code` or `gh api` call resolves the typical pulumi-internal claim; if that doesn't close it, the claim isn't pulumi-internal and belongs in another lane.
 
+**But DO follow an implementing PR the docs PR explicitly links.** The "don't trawl pulls" rule is about *blind* discovery; a PR the docs body cites by number (`Documents pulumi/pulumi#NNNN`) is a canonical source — read it with `gh pr diff NNNN -R pulumi/pulumi`. For docs that ship *alongside* a feature, the new symbol isn't on `master` or in the published reference yet, so `gh search code` and a docs-site WebSearch both come up empty. A symbol confirmed only in a linked, not-yet-merged impl PR is **`verified`** (confidence `medium`, "not yet on default branch / released") — **not** 🤷; "not in the published reference yet" is a lag, not a doubt. *(On the CI path `verify-claims.py` threads these refs into the verifier prompt automatically — `fetch_impl_refs`; this is the in-review equivalent.)*
+
 If the inline check fails to resolve a claim that was classified `pulumi-internal` (e.g., a Pulumi-related claim that turns out to also depend on external confirmation), reclassify it to `ambiguous` and route to Pass 1.
 
 **Canonical sources for pulumi-internal verification.** Read the canonical source first.
@@ -356,6 +361,8 @@ If the inline check fails to resolve a claim that was classified `pulumi-interna
 | Example-program | `static/programs/<name>-<lang>/` |
 | Sibling-pattern (frontmatter, file location, alias) | Nearest sibling under `content/docs/<closest>/` |
 | Resource schema / API surface | `pulumi/pulumi-<provider>` |
+| New symbol (flag/command/API) the docs PR links an implementing PR for | The linked `pulumi/*` PR/commit — `gh pr diff <n> -R pulumi/<repo>` — authoritative for a feature not yet on `master` or in the published reference |
+| Pricing / edition / tier / limit / quota | `content/pricing/_index.md` — a large feature×tier matrix; **grep it for the feature name**, don't trust a truncated head-read (a value deep in the table reads as absent otherwise) |
 | Shortcode | `layouts/shortcodes/<name>.html` |
 | Alias / redirect | `aliases:` frontmatter + `scripts/redirects/*` |
 | Frontmatter field semantics | An existing page in the same content tree that uses the field |
@@ -371,7 +378,7 @@ Search-order rules:
 
 ### Pass 1 lane (`ambiguous`)
 
-Spawn parallel subagents (`general-purpose`, Sonnet 4.6), batched **up to 4 at a time**. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller). If more than 20 ambiguous claims are extracted, batch by file rather than per-claim.
+Spawn parallel subagents (`general-purpose`), batched **up to 4 at a time**. Each subagent receives a small group of related claims (group by file or by claim type, whichever is smaller). If more than 20 ambiguous claims are extracted, batch by file rather than per-claim.
 
 For each claim, walk §Verification source order steps **1-3** only (skip step 4 / WebFetch entirely):
 
@@ -395,11 +402,11 @@ For each `external-public` claim whose URL appears in `.fetched-urls.json`:
 - If the cited URL's `status` is 200 and `content_text` addresses the claim → render verdict (`verified` / `contradicted`) per spot-check.
 - If `status` is non-2xx (dead link / paywall / soft-404) **or** `content_text` exists but doesn't address the claim → bounce to **Pass 3** for a fresh search; do not emit ⚠️ unverifiable from Pass 2.
 
-**Dispatch unit:** Pass 2 typically runs inline (the content is already in `.fetched-urls.json`; no subagent needed). Spawn a Sonnet 4.6 subagent only when the claim requires substantial reasoning over the fetched content (multi-paragraph framing comparison, table extraction, etc.). At small N, the subagent overhead dominates -- prefer inline reads.
+**Dispatch unit:** Pass 2 typically runs inline (the content is already in `.fetched-urls.json`; no subagent needed). Spawn a subagent only when the claim requires substantial reasoning over the fetched content (multi-paragraph framing comparison, table extraction, etc.). At small N, the subagent overhead dominates -- prefer inline reads.
 
 ### Pass 3 lane (`external-public` without URL in diff)
 
-For each `external-public` claim that does NOT have a URL in the PR diff, dispatch Sonnet 4.6 subagents (`general-purpose`) **in parallel**. Pass 3 is the search-then-fetch lane: WebSearch a query derived from the claim, then WebFetch the top 1-3 results.
+For each `external-public` claim that does NOT have a URL in the PR diff, dispatch subagents (`general-purpose`) **in parallel**. Pass 3 is the search-then-fetch lane: WebSearch a query derived from the claim, then WebFetch the top 1-3 results.
 
 **Mandatory dispatch.** Pass 3 cannot be skipped for external-public claims that need it. The model cannot silently roll an external-public claim into the Inline / Pass 1 lane to avoid the search dispatch -- the validator's `pass-3-dispatch-mandate` rule trips when external-public claims exist with no URL fetched and Pass 3 count is 0.
 
@@ -413,6 +420,15 @@ Each Pass 3 subagent walks §Verification source order step **4** (WebFetch / We
 **Negative-evidence pointer for ⚠️ unverifiable verdicts.** A Pass 3 ⚠️ unverifiable verdict requires the trail entry to name the search that was attempted: `WebSearch ran query "<phrase>"; top N results didn't address the claim`. The validator's `pass-3-unverifiable-evidence` rule trips when the evidence pointer is missing. Pass 3 cannot shortcut to ⚠️ unverifiable without trying.
 
 Output: claims close as `verified` (high/medium/low confidence), `contradicted`, or `unverifiable` (genuinely unfetchable -- defensible now because Pass 3 actively searched and the trail entry names the search).
+
+### Source discipline (all lanes)
+
+Four hard rules for every verifier, in-review or pre-step. Each exists because violating it produced false `contradicted` verdicts in the 2026-07 ledger re-adjudication (17 of 22 contradicted verdicts were false; most traced to these):
+
+1. **Target alignment.** A claim is verdicted only against the source the claim itself names. A pre-fetched or hinted page whose URL differs from the URL in the claim text is the *wrong target* — the verdict from comparing against it is `unverifiable` (note the target mismatch), never `contradicted`. When one doc line carries several links, each claim binds to its own anchor's target, never the neighbor's. (`verify-claims.py` enforces the routing side: claim-text URLs take precedence over `source_hint`.)
+1. **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but never by itself contradicts other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency (both suspect), resolved against product source via `gh`/reads; sibling-consistency claims verdict as `mismatch`. If code can't settle it, `unverifiable`. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence.
+1. **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables, via `_content.gotmpl`) make *transcription* claims: verify the doc text against the data file. A disagreement between the product metadata and the external framework it cites is upstream product feedback (author-question buffer / upstream issue), not a doc `contradicted`. On the routed path this is enforced, not just prompted: `verify-claims.py` downgrades a `contradicted` verdict on any section carrying a `_content.gotmpl` to `unverifiable`, stamps `source_discipline_gate: "generated-from-data"` on the verdict, and prefixes `evidence` with the reason. **Treat a gated verdict as an author question or upstream issue — never promote it to 🚨 Outstanding.** Apply the same rule when verifying in-review.
+1. **Quote only what you fetched.** A `contradicted` resting on a quoted passage must quote content observed in the current session's fetched/read output — never memory of what a page used to say. Pages change; a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
 
 ### Verification source order (cheapest first)
 
@@ -443,6 +459,10 @@ gh api "repos/pulumi/pulumi/commits?path=<file>&since=<date>"
 # Find prior decisions, "we decided not to ship this," or "this was renamed"
 gh issue list -R pulumi/<repo> --search "<term> in:title,body"
 gh pr list -R pulumi/<repo> --search "<term>"
+
+# Read an implementing PR the docs PR explicitly links — canonical for a symbol
+# not yet on master (e.g. docs PR body says "Documents pulumi/pulumi#23691")
+gh pr diff <n> -R pulumi/<repo>
 
 # Read provider schema generation source for resource property claims
 gh api repos/pulumi/pulumi-<provider>/contents/provider/cmd/...
@@ -493,7 +513,7 @@ Spot-check procedure:
 1. Find the supporting passage in the source.
 1. Compare the source's framing to the claim's framing. Does the source say *exactly what the PR claims*, or has the PR strengthened, narrowed, or shifted the framing?
 1. If the source supports the exact framing, mark `verified, confidence: high` with the source pointer in evidence.
-1. If the source is close but not exact (e.g., "in some capacity" became "in production"), mark `contradicted: source mismatch` with the divergence quoted.
+1. If the anchor value is accurate but the framing moved (e.g., "in some capacity" became "in production", a denominator widened, present usage became future intent), mark `framing-drift` with the divergence quoted. If even the anchor value is unsupported, mark `contradicted`.
 1. If the source is unreachable or the cited URL doesn't actually contain the supporting passage, mark `unverifiable` with an author-question line.
 
 Cited claims that pass spot-check land in ✅ Verified at high confidence — the citation made verification cheap. Cited claims that fail spot-check are *more* damning than unverifiable ones, because the author asserted a source they didn't actually consult.
@@ -510,20 +530,20 @@ Cited-claim verdicts must produce a three-field evidence line:
 
 A verdict without a verbatim source quote is a verdict without evidence — `(same report)`, `(URL resolves)`, `(linked inline)` record that fetching happened, not that comparison happened. Downgrade to `unverifiable` if the verbatim quote is missing.
 
-Framing labels (only `exact-match` lands ✅ `verified`; the rest land ❌ `contradicted` — a 🚨-bucket verdict under the contradicted-factual-claim carve-out):
+Framing labels — the test is **entailment** (does the source, as quoted, prove the claim as written?), and the taxonomy is shared with `docs-review:references:claim-extraction` §Framing and `verify-claims.py`'s structured `framing` field. `exact-match` and `entailed-narrower` land ✅ `verified`; `overclaim-broader` and `shifted` land 🌀 `framing-drift` when the anchor value is accurate (⚠️-bucket by default, 🚨 when the phrasing rides `social.*` frontmatter) and ❌ `contradicted` when even the anchor is unsupported:
 
 - `exact-match` — source phrasing is the claim's phrasing, or a literal paraphrase of equal scope.
-- `strengthened` — claim is a subset of the source. Source: "use"; claim: "use in production."
-- `narrowed` — claim is broader than the source. Source: "U.S. enterprise"; claim: "enterprise."
-- `shifted` — same numeric anchor, different subject. Source: "evaluate AI agents"; claim: "deploy AI agents."
+- `entailed-narrower` — the source is broader and PROVES the claim as a special case. Source: "needn't be hardcoded elsewhere"; claim: "needn't be hardcoded in `PulumiPlugin.yaml`."
+- `overclaim-broader` — the claim asserts more than the source supports: a wider denominator (source: "of orgs hosting genAI models"; claim: "of organizations"), a dropped qualifier, or a stronger predicate the figure doesn't transfer to (source: "use"; claim: "use in production" — narrower in scope, but NOT entailed: the percentage doesn't transfer to the subset).
+- `shifted` — same numeric anchor, different subject or speech act. Source: "evaluate AI agents"; claim: "deploy AI agents." Source measures present usage; claim asserts future intent.
 - `contradicted` — source positively disagrees with the claim.
 
-Example (strengthened framing):
+Example (overclaim framing, accurate anchor):
 
 ```
-- L40 "96% of enterprises run AI agents in production today" → ❌ contradicted (source mismatch)
+- L40 "96% of enterprises run AI agents in production today" → 🌀 framing-drift
   - source quote: "96% of enterprises now use AI agents"
-  - framing: strengthened — claim narrows "use" to "in production today"
+  - framing: overclaim-broader — "use" doesn't prove "run in production today"; the 96% doesn't transfer to the narrower predicate
 ```
 
 ### Confidence calibration
@@ -554,9 +574,9 @@ Tier emoji conventions: 🚨 (Outstanding) and ⚠️ (Low-confidence) align wit
 
 | Tier | Contents |
 |---|---|
-| 🚨 Needs your eyes | All `contradicted` claims (any confidence) |
+| 🚨 Needs your eyes | All `contradicted` claims (any confidence); `framing-drift` claims whose drifted phrasing rides `social.*` frontmatter or materially misleads |
 | 🤔 Intuition-check | Claims whose `intuition_check` flag was set AND whose verification came back inconclusive (timed out, could not reach a verdict). Cross-reference the shape concern in the evidence line. |
-| ⚠️ Low-confidence | `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened) — prefix the evidence line with "verified weakly" to distinguish from generic low-confidence findings; plus all `unverifiable` claims (the verifier couldn't confirm them) — each also gets an author-question line. |
+| ⚠️ Low-confidence | `framing-drift` claims (default placement — anchor value accurate, published meaning drifted; quote source form vs claim form); `verified` claims with `confidence: low` (and `medium` when scrutiny is heightened) — prefix the evidence line with "verified weakly" to distinguish from generic low-confidence findings; plus all `unverifiable` claims (the verifier couldn't confirm them) — each also gets an author-question line, and a `turn_cap_exhausted` record must be described as a retryable budget failure, never as out-of-scope. |
 | ✅ Verified | Everything else, collapsed under `<details>` |
 
 When a claim is flagged `intuition_check: true` AND the verifier reaches a decisive verdict, it renders in the verdict's bucket (🚨 / ⚠️ / ✅), not 🤔 -- see the rendering rule table in §Intuition-check axis. 🤔 is for inconclusive verification only.

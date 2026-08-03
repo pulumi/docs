@@ -1,13 +1,13 @@
 ---
 title: "AWS Infrastructure as Code | Pulumi"
-meta_desc: "Manage AWS with Python, TypeScript, Go, or C#. Full API coverage, same-day updates, built-in best practices with Crosswalk. Free tier, no resource caps."
+meta_desc: "Manage AWS with Python, TypeScript, Go, or C#. Full API coverage, same-day updates, built-in best practices with AWSx. Free tier, no resource caps."
 layout: gads-template
 block_external_search_index: true
 
 heading: "AWS Infrastructure as Code"
 subheading: |
     Manage any AWS service with real programming languages. Pulumi's AWS provider offers
-    full API coverage with same-day updates, plus higher-level Crosswalk components
+    full API coverage with same-day updates, plus higher-level AWSx components
     for production-ready architectures out of the box.
 
 hide_platform_details: true
@@ -30,16 +30,16 @@ key_features_above:
         - title: "Author in any language, deploy to AWS"
           sub_title: "Pulumi AWS Provider"
           description:
-            Manage any AWS resource using programming languages you already know. Pulumi's AWS provider covers every service and updates the same day AWS releases new features. Use Crosswalk for AWS to adopt well-architected best practices instantly.
+            Manage any AWS resource using programming languages you already know. Pulumi's AWS provider covers every service and updates the same day AWS releases new features. Use Pulumi's AWSx component library to adopt well-architected best practices instantly.
           features:
               - title: Every AWS service, day one
                 description: |
                     Full API coverage for EC2, EKS, Lambda, S3, RDS, DynamoDB, and every other AWS service. Same-day updates when new services and features launch.
                 icon: global
                 color: yellow
-              - title: Crosswalk for AWS
+              - title: Component libraries
                 description: |
-                    Deploy production-ready VPCs, ECS Fargate services, and EKS clusters in just a few lines of code using Pulumi's Crosswalk library.
+                    Deploy production-ready VPCs, ECS Fargate services, and EKS clusters in just a few lines of code using Pulumi's component libraries, like AWSx.
                 icon: code
                 color: yellow
               - title: AI-powered infrastructure
@@ -52,9 +52,9 @@ key_features:
     title: Key features
     items:
         - title: "Production-ready AWS in minutes"
-          sub_title: "Pulumi Crosswalk for AWS"
+          sub_title: "Pulumi component libraries"
           description: |
-            Stop writing hundreds of lines of boilerplate for VPCs, subnets, and security groups. Crosswalk for AWS gives you production-ready architectures with built-in best practices for ECS, EKS, API Gateway, and more — in just a few lines of code.
+            Stop writing hundreds of lines of boilerplate for VPCs, subnets, and security groups. Pulumi's component libraries, like AWSx, give you production-ready architectures with built-in best practices for ECS, EKS, API Gateway, and more — in just a few lines of code.
           ide:
             - title: index.ts
               language: typescript
@@ -175,18 +175,18 @@ key_features:
                 outputs:
                   vpcId: ${my-vpc.vpcId}
           features:
-              - title: Native AWS provider
+              - title: Pulumi AWS provider
                 icon: cloud
                 description: |
                     Full API coverage for every AWS service with same-day updates when new features launch. No waiting for third-party support.
-              - title: Crosswalk for AWS
+              - title: Component libraries
                 icon: abstract-shapes
                 description: |
-                    Adopt well-architected best practices for VPC, ECS, EKS, API Gateway, and more with pre-built high-level components.
+                    Adopt well-architected best practices for VPC, ECS, EKS, API Gateway, and more with pre-built high-level components like AWSx.
               - title: Migrate from CloudFormation
                 icon: exchange
                 description: |
-                    Use cf2pulumi to convert existing CloudFormation templates to Pulumi in your language of choice. Import existing stacks with zero downtime.
+                    Import existing CloudFormation stacks into Pulumi in your language of choice with zero downtime.
 
         - title: "Deliver infrastructure through software delivery pipelines"
           sub_title: "CI/CD Integrations"

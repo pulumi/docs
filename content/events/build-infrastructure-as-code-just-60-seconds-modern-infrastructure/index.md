@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Build Infrastructure as Code in Just 60 Seconds
 meta_desc: Imagine the power of creating Infrastructure as Code effortlessly. With Pulumi AI, you use natural-language prompts to generate infrastructure as code
-meta_image:
+meta_image: /events/build-infrastructure-as-code-just-60-seconds-modern-infrastructure/meta.png
+meta_image_square: /events/build-infrastructure-as-code-just-60-seconds-modern-infrastructure/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

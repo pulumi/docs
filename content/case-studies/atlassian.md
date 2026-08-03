@@ -7,7 +7,10 @@ description: |
 meta_desc: Learn how Atlassian Bitbucket worked with Pulumi to improve developer productivity and reduce developers' time spent on maintenance by 50%.
 
 customer_name: Atlassian
+industry: developer-tools
 customer_logo: /logos/customers/atlassian-wordmark.svg
+logo_bg_color: "#0052CC"
+logo_style: white
 customer_url: https://www.atlassian.com/
 
 quote_block:
@@ -48,7 +51,7 @@ sections:
 
 Bitbucket Cloud is a Git-based code hosting and collaboration tool designed for teams and is built by Atlassian. Bitbucket's integrations with other Atlassian products like Jira allow the entire software team to work together on projects. With Bitbucket, teams have one place to collaborate on code from its concept, through automated testing, all the way to its deployment to the cloud.
 
-## Codifying Infrastructure for Cross-Region Deployments
+## Codifying infrastructure for cross-region deployments
 
 Mike Corsaro is a Senior Software Engineer at Bitbucket. He works on the DevSpeed team, whose mission is to improve developer productivity at Bitbucket. His team helps about 100 Bitbucket developers located all over the world.
 
@@ -56,7 +59,7 @@ Mike Corsaro is a Senior Software Engineer at Bitbucket. He works on the DevSpee
 
 Mike was the founding member of the DevSpeed team. His first task was to add cross-regional support to the pipeline that deployed instances on AWS for Bitbucket developers. Developers have private instances of Bitbucket, which they can use to develop new features. The existing pipeline deployed only to the US West (Oregon) region, but it needed to also deploy to the Asia Pacific (Sydney) region.
 
-### Evaluating the Existing Tools
+### Evaluating the existing tools
 
 Mike first examined the existing toolset to see if it would solve his problem. He found that the team used an Infrastructure-as-Code tool, Terraform, that required users to learn its domain-specific language (DSL), which was not intuitive to Mike and most developers. A developer would go to the repo containing a YAML template written in the DSL, run the Bitbucket CI/CD pipeline, and the tool would spin up a self-contained version of Bitbucket in AWS.
 
@@ -66,7 +69,7 @@ He cited an example, saying, “We have three databases. With the old tool, that
 
 Mike wanted a general and elegant solution that would let him quickly and easily manage infrastructure in AWS while using familiar languages and tools.
 
-### Pulumi to the Rescue
+### Pulumi to the rescue
 
 Mike says, “I knew about Pulumi because I followed Joe Duffy on Twitter. I come from the C# world, where he's a well-known figure. I saw that he’d started a company called Pulumi and its mission really appealed to me.”
 
@@ -74,7 +77,7 @@ Pulumi allows developers to build, deploy, and manage cloud infrastructure and a
 
 Mike chose Python to build cloud infrastructure since Bitbucket developers already used Python. He said, “Because all the developers on Bitbucket write Python, they can use all the skills they already have from their day-to-day job to write infrastructure code. There are also safety features you’d expect from a standard programming language. For example, you know if you're referencing something that isn't declared or if you're trying to use a property that doesn't exist.”
 
-Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool](/tf2pulumi) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
+Instead of discarding all the code written with the old tool, Mike used [Pulumi's conversion tool](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) to assist with the transition. Mike says, “I knew that Pulumi provided an automatic conversion tool, and that helped a lot. I spent one day using the automatic conversion tool and then just spent some time making sure everything looked right. In two days, I was all set.”
 
 {{% notes type="info" %}}
 As of Pulumi CLI v3.71.0, `tf2pulumi` has been replaced with `pulumi convert --from terraform`. [Converting Full Terraform Programs to Pulumi blog](/blog/converting-full-terraform-programs-to-pulumi/) has more details.
@@ -90,7 +93,7 @@ Mike also gave an example of how easy it was to deploy changes across all of the
 
 Using Pulumi, with its support for general-purpose languages like Python, Mike quickly and easily built a repeatable pipeline that deploys development environments for the Sydney team despite having limited knowledge of AWS. He also now understood how useful Pulumi could be in improving the developer experience at Bitbucket and how easy it was to use. He began to look for other ways to use Pulumi.
 
-## Improving Developer Productivity with Self-Service Cloud Infrastructure
+## Improving developer productivity with self-service cloud infrastructure
 
 Shortly afterward, Mike reviewed a survey which asked Bitbucket developers how they spent their time. He was surprised to learn that developers were spending 20% of their workweek maintaining their private Bitbucket development environments.
 
@@ -102,8 +105,7 @@ Once the instance is ready, the developer simply SSH’s into it, and the instan
 
 Below is a diagram showing how a Bitbucket cloud instance is architected:
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/bitbucket-cloud-diagram.png" alt="Bitbucket Cloud and Pulumi">
+![Bitbucket Cloud and Pulumi](/images/case-studies/bitbucket-cloud-diagram.png)
 
 ### Using the Automation API
 

@@ -45,6 +45,8 @@ Before authoring your first policy pack, ensure you have:
 - (Optional) Access to Pulumi Cloud if you want to publish and centrally manage policy packs. Not required for local policy pack usage with open source Pulumi.
 - An understanding of [Policy as Code core concepts](/docs/insights/policy/).
 
+The runtime you choose here also becomes a requirement for everyone who runs Pulumi against a stack your pack governs. See [runtime requirements](/docs/insights/policy/policy-packs/#runtime-requirements).
+
 ## Creating a policy pack
 
 Create your first policy pack:
@@ -69,7 +71,7 @@ Create your first policy pack:
 
     Each policy must have:
     - A unique name, description, and validation function
-    - A validation function (this example uses `validateResourceOfType` to run only for AWS S3 bucket resources)
+    - A validation function (this example uses `validateResourceOfType` to run only for AWS RDS instance resources)
     - An enforcement level set at the policy pack level (applies to all policies) or per policy (overrides the pack level)
 
     > For more information on all available fields, see [policy metadata](/docs/insights/policy/policy-as-code/policy-metadata/).
@@ -83,24 +85,28 @@ Create your first policy pack:
         // Specify the policies in the policy pack.
         policies: [{
             // The name for the policy must be unique within the pack.
-            name: "s3-bucket-prefix",
+            name: "rds-storage-encryption",
 
             // The description should document what the policy does and why it exists.
-            description: "Ensures S3 buckets use the required naming prefix.",
+            description: "Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
 
-            // The enforcement level can be "advisory", "mandatory", or "disabled". An "advisory" enforcement level
-            // simply prints a warning for users, while a "mandatory" policy will block an update from proceeding, and
-            // "disabled" disables the policy from running.
+            // The enforcement level can be "advisory", "mandatory", "remediate", or "disabled". An "advisory"
+            // enforcement level simply prints a warning for users, a "mandatory" policy will block an update
+            // from proceeding, "remediate" fixes the violation automatically, and "disabled" disables the
+            // policy from running.
             enforcementLevel: "mandatory",
 
             // The validateResourceOfType function allows you to filter resources. In this case, the rule only
-            // applies to S3 buckets and reports a violation if the bucket prefix doesn't match the required prefix.
-            validateResource: validateResourceOfType(aws.s3.Bucket, (bucket, args, reportViolation) => {
-                const requiredPrefix = "mycompany-";
-                const bucketPrefix = bucket.bucketPrefix || "";
-                if (!bucketPrefix.startsWith(requiredPrefix)) {
+            // applies to RDS instances and reports a violation when storage encryption is not enabled.
+            validateResource: validateResourceOfType(aws.rds.Instance, (instance, args, reportViolation) => {
+                // Exempt instances explicitly tagged as non-production data.
+                if (instance.tags?.["data-classification"] === "non-production") {
+                    return;
+                }
+                if (!instance.storageEncrypted) {
                     reportViolation(
-                        `S3 bucket must use '${requiredPrefix}' prefix. Current prefix: '${bucketPrefix}'`);
+                        "RDS instance must have storage encryption enabled " +
+                        "(or be tagged 'data-classification=non-production').");
                 }
             }),
         }],
@@ -158,31 +164,34 @@ Create your first policy pack:
     )
 
     # The validation function is called before each resource is created or updated.
-    # In this case, the rule only applies to S3 buckets and reports a violation if the
-    # bucket prefix doesn't match the required prefix.
-    REQUIRED_S3_PREFIX = "mycompany-"
-
-    def s3_bucket_prefix_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
-        if args.resource_type == "aws:s3/bucket:Bucket" and "bucketPrefix" in args.props:
-            actual_prefix = args.props["bucketPrefix"]
-            if not actual_prefix.startswith(REQUIRED_S3_PREFIX):
+    # In this case, the rule only applies to RDS instances and reports a violation
+    # when storage encryption is not enabled.
+    def rds_storage_encryption_validator(args: ResourceValidationArgs, report_violation: ReportViolation):
+        if args.resource_type == "aws:rds/instance:Instance":
+            # Exempt instances explicitly tagged as non-production data.
+            tags = args.props.get("tags", {}) or {}
+            if tags.get("data-classification") == "non-production":
+                return
+            if not args.props.get("storageEncrypted"):
                 report_violation(
-                    f"S3 bucket must use '{REQUIRED_S3_PREFIX}' prefix. Current prefix: '{actual_prefix}'")
+                    "RDS instance must have storage encryption enabled "
+                    "(or be tagged 'data-classification=non-production').")
 
-    s3_bucket_prefix = ResourceValidationPolicy(
+    rds_storage_encryption = ResourceValidationPolicy(
         # The name for the policy must be unique within the pack.
-        name="s3-bucket-prefix",
+        name="rds-storage-encryption",
 
         # The description should document what the policy does and why it exists.
-        description="Ensures S3 buckets use the required naming prefix.",
+        description="Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
 
-        # The enforcement level can be ADVISORY, MANDATORY, or DISABLED. An ADVISORY enforcement level
-        # simply prints a warning for users, while a MANDATORY policy will block an update from proceeding, and
-        # DISABLED disables the policy from running.
+        # The enforcement level can be ADVISORY, MANDATORY, REMEDIATE, or DISABLED. An ADVISORY
+        # enforcement level simply prints a warning for users, a MANDATORY policy will block an update
+        # from proceeding, REMEDIATE fixes the violation automatically, and DISABLED disables the
+        # policy from running.
         enforcement_level=EnforcementLevel.MANDATORY,
 
         # The validation function, defined above.
-        validate=s3_bucket_prefix_validator,
+        validate=rds_storage_encryption_validator,
     )
 
     # Create a new policy pack.
@@ -190,7 +199,7 @@ Create your first policy pack:
         name="policy-pack-python",
         # Specify the policies in the policy pack.
         policies=[
-            s3_bucket_prefix,
+            rds_storage_encryption,
         ],
     )
     ```
@@ -225,25 +234,31 @@ Create your first policy pack:
     package aws
 
     # METADATA
-    # title: No Public S3 Buckets
-    # description: S3 buckets must not use public-read ACLs.
+    # title: Require RDS Storage Encryption
+    # description: RDS instances must have storage encryption enabled, unless tagged as non-production data.
     # custom:
-    #   message: Set the ACL to 'private' or remove it entirely.
-    deny_public_buckets[msg] {
-        input.type == "aws:s3/bucket:Bucket"
-        input.acl == "public-read"
-        msg := sprintf("S3 bucket '%s' must not have public-read ACL", [input.__name])
+    #   message: Set storageEncrypted to true, or tag the instance data-classification=non-production.
+    deny_unencrypted_rds[msg] {
+        input.type == "aws:rds/instance:Instance"
+        not input.storageEncrypted
+        not non_production
+        msg := sprintf("RDS instance '%s' must have storage encryption enabled", [input.__name])
     }
 
     # METADATA
-    # title: Require S3 Encryption
-    # description: All S3 buckets must have server-side encryption configured.
+    # title: Prohibit Public RDS Instances
+    # description: RDS instances must not be publicly accessible.
     # custom:
-    #   message: Add a serverSideEncryptionConfiguration block to the bucket.
-    deny_encryption[msg] {
-        input.type == "aws:s3/bucket:Bucket"
-        not input.serverSideEncryptionConfiguration
-        msg := sprintf("S3 bucket '%s' must have encryption enabled", [input.__name])
+    #   message: Set publiclyAccessible to false.
+    deny_public_rds[msg] {
+        input.type == "aws:rds/instance:Instance"
+        input.publiclyAccessible
+        msg := sprintf("RDS instance '%s' must not be publicly accessible", [input.__name])
+    }
+
+    # An instance is exempt from the encryption rule when tagged as non-production data.
+    non_production {
+        input.tags["data-classification"] == "non-production"
     }
     ```
 
@@ -278,7 +293,7 @@ For a complete example including test helpers and setup, see the [unit test poli
 Here's a simple test example using pytest:
 
 ```python
-{{< example-program-snippet path="unit-test-policy" language="python" file="test_policy.py" from="16" to="33" >}}
+{{< example-program-snippet path="unit-test-policy" language="python" file="test_policy.py" from="18" to="34" >}}
 ```
 
 For a complete example including additional test cases, see the [unit test policy example on GitHub](https://github.com/pulumi/docs/tree/master/static/programs/unit-test-policy-python).
@@ -292,26 +307,28 @@ OPA policies can be tested using the standard `opa test` command from the [OPA C
 ```rego
 package aws
 
-test_deny_public_buckets {
-    count(deny_public_buckets) > 0 with input as {
-        "type": "aws:s3/bucket:Bucket",
-        "__name": "my-bucket",
-        "acl": "public-read"
+test_deny_unencrypted_rds {
+    count(deny_unencrypted_rds) > 0 with input as {
+        "type": "aws:rds/instance:Instance",
+        "__name": "my-db",
+        "storageEncrypted": false
     }
 }
 
-test_allow_private_bucket {
-    count(deny_public_buckets) == 0 with input as {
-        "type": "aws:s3/bucket:Bucket",
-        "__name": "my-bucket",
-        "acl": "private"
+test_allow_encrypted_rds {
+    count(deny_unencrypted_rds) == 0 with input as {
+        "type": "aws:rds/instance:Instance",
+        "__name": "my-db",
+        "storageEncrypted": true
     }
 }
 
-test_deny_missing_encryption {
-    count(deny_encryption) > 0 with input as {
-        "type": "aws:s3/bucket:Bucket",
-        "__name": "my-bucket"
+test_allow_non_production_rds {
+    count(deny_unencrypted_rds) == 0 with input as {
+        "type": "aws:rds/instance:Instance",
+        "__name": "my-db",
+        "storageEncrypted": false,
+        "tags": {"data-classification": "non-production"}
     }
 }
 ```
@@ -523,6 +540,102 @@ You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac
 Stack tags are not currently accessible in OPA policies. OPA stack-level policies can validate the full set of resources using `input.resources` (see [Creating a policy pack](#opa) for rule prefix conventions), but they cannot read stack tag metadata. Use TypeScript or Python policies if you need to enforce stack tag requirements.
 {{% /notes %}}
 
+## Remediating policy violations
+
+A `remediate` enforcement level goes a step further than `mandatory`: instead of only reporting a violation, the policy inspects the resource's properties, fixes the problem, and returns the corrected properties. The engine substitutes the remediated state for the state the Pulumi program originally produced, so the deployment proceeds with compliant resources rather than being blocked or merely flagged.
+
+Remediation is only available to resource validation policies. Stack validation policies examine relationships across the whole resource graph after registration completes, by which point there is no single resource left to substitute a fix into, so a stack policy set to `remediate` is treated as `mandatory` instead.
+
+The following example remediates, rather than validates, the RDS storage encryption policy shown earlier: instead of blocking an unencrypted instance, it turns on encryption automatically.
+
+{{< chooser language "typescript,python,opa" >}}
+
+{{% choosable language typescript %}}
+
+Use `remediateResource`, built with the `remediateResourceOfType` helper, in place of `validateResource`:
+
+```typescript
+import * as aws from "@pulumi/aws";
+import { PolicyPack, remediateResourceOfType } from "@pulumi/policy";
+
+new PolicyPack("policy-pack-typescript", {
+    policies: [{
+        name: "rds-storage-encryption",
+        description: "Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
+        enforcementLevel: "remediate",
+        remediateResource: remediateResourceOfType(aws.rds.Instance, (instance, args) => {
+            // Exempt instances explicitly tagged as non-production data.
+            if (instance.tags?.["data-classification"] === "non-production") {
+                return;
+            }
+            if (!instance.storageEncrypted) {
+                instance.storageEncrypted = true;
+                return instance;
+            }
+        }),
+    }],
+});
+```
+
+If a policy needs to both validate and remediate, `validateRemediateResourceOfType` builds a matched pair of `validateResource` and `remediateResource` callbacks from a single validation function.
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+Pass a `remediate` callback in place of `validate` when constructing the `ResourceValidationPolicy`. A policy must define one or the other (or use `validate_remediate` to derive both from a single function); it cannot omit both:
+
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ResourceValidationPolicy,
+)
+
+def rds_storage_encryption_remediation(args):
+    if args.resource_type != "aws:rds/instance:Instance":
+        return None
+
+    # Exempt instances explicitly tagged as non-production data.
+    if args.props.get("tags", {}).get("data-classification") == "non-production":
+        return None
+
+    if not args.props.get("storageEncrypted"):
+        args.props["storageEncrypted"] = True
+        return args.props
+
+    return None
+
+rds_storage_encryption = ResourceValidationPolicy(
+    name="rds-storage-encryption",
+    description="Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
+    enforcement_level=EnforcementLevel.REMEDIATE,
+    remediate=rds_storage_encryption_remediation,
+)
+
+PolicyPack(
+    name="policy-pack-python",
+    policies=[
+        rds_storage_encryption,
+    ],
+)
+```
+
+{{% /choosable %}}
+{{% choosable language opa %}}
+
+OPA/Rego policies do not support remediation. The OPA analyzer's `Remediate` method always returns an empty response, so an OPA policy pack set to `remediate` reports violations but never fixes them. Use TypeScript or Python if you need a policy to remediate rather than just validate.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+A few behaviors are specific to remediation:
+
+- If a resource still triggers a violation after remediation runs, the reported level is downgraded from `remediate` to `mandatory`, and the deployment is blocked rather than silently allowed through with an unresolved problem.
+- When more than one policy pack applies to a resource, their remediations run sequentially in the order the packs were loaded, and each remediation sees the resource state as modified by the ones that ran before it, so a later remediation can build on an earlier one.
+- A policy whose enforcement level is `remediate` but which does not implement a remediation function is reported as not implementing remediation, so a resource going through it is neither fixed nor blocked.
+- The `remediationSteps` metadata field (see [policy metadata](/docs/insights/policy/policy-packs/metadata/)) is unrelated to automatic remediation: the field is manual guidance shown to a user for policies that only validate, describing how to fix a violation by hand.
+
 ## Writing policies for dynamic providers
 
 [Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/) allow you to create custom resource types directly in your Pulumi programs. When writing policies for dynamic providers, you need to account for a key constraint: **all dynamic resources share the same resource type** (`pulumi-nodejs:dynamic:Resource` for TypeScript/JavaScript or `pulumi-python:dynamic:Resource` for Python).
@@ -640,6 +753,96 @@ When writing policies for dynamic providers:
 
 1. **Document your assumptions**: Clearly document which properties your policy uses to identify dynamic providers so that changes to the dynamic provider implementation don't inadvertently break policy enforcement.
 
+## Inspecting resource options
+
+Resource validation callbacks receive an `args.opts` object of type `PolicyResourceOptions`. It mirrors the [resource options](/docs/iac/concepts/options/) set on the resource under validation, letting policies make decisions based on how a resource is configured rather than only its properties. The available fields are:
+
+- `protect` — whether the resource is protected from deletion.
+- `ignoreChanges` (`ignore_changes` in Python) — properties whose changes the engine ignores.
+- `deleteBeforeReplace` (`delete_before_replace`) — whether the resource is deleted before its replacement is created.
+- `aliases` — additional URNs aliased to the resource.
+- `customTimeouts` (`custom_timeouts`) — custom create, update, and delete timeouts.
+- `additionalSecretOutputs` (`additional_secret_outputs`) — outputs always treated as secrets.
+- `parent` — the [URN](/docs/iac/concepts/resources/names/#urns) of the resource's [parent](/docs/iac/concepts/options/parent/). For a resource created directly at the stack root rather than as a child of another resource or component, this is the URN of the root stack resource (type `pulumi:pulumi:Stack`).
+
+### Example: Enforcing a resource's parent
+
+The `parent` option is useful for enforcing that certain resources are only created as children of the component that is supposed to manage them, rather than loose at the stack root or under the wrong parent. Because `parent` is the parent's URN, you can extract the parent's type token from it: a URN has the form `urn:pulumi:{stack}::{project}::{parentType}${resourceType}::{name}`, so the type is the third `::`-delimited segment, and the resource's own type is the token after the last `$`.
+
+The following example requires that every `aws:rds/instance:Instance` is a child of a `my:components:Database` component:
+
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+```typescript
+import * as aws from "@pulumi/aws";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+
+const requiredParentType = "my:components:Database";
+
+new PolicyPack("parent-policies", {
+    policies: [{
+        name: "rds-instance-parent",
+        description: "Requires RDS instances to be managed by a Database component.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(aws.rds.Instance, (instance, args, reportViolation) => {
+            // args.opts.parent is the parent's URN; for a resource at the stack root it is the root stack's URN (type pulumi:pulumi:Stack).
+            const parentUrn = args.opts.parent;
+            const parentType = parentUrn?.split("::")[2]?.split("$").pop();
+            if (parentType !== requiredParentType) {
+                reportViolation(
+                    `RDS instances must be a child of a '${requiredParentType}' component.`);
+            }
+        }),
+    }],
+});
+```
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ReportViolation,
+    ResourceValidationArgs,
+    ResourceValidationPolicy,
+)
+
+REQUIRED_PARENT_TYPE = "my:components:Database"
+
+def rds_instance_parent(args: ResourceValidationArgs, report_violation: ReportViolation):
+    if args.resource_type == "aws:rds/instance:Instance":
+        # args.opts.parent is the parent's URN; for a resource at the stack root it is the root stack's URN (type pulumi:pulumi:Stack).
+        parent_urn = args.opts.parent
+        parent_type = parent_urn.split("::")[2].split("$")[-1] if parent_urn else None
+        if parent_type != REQUIRED_PARENT_TYPE:
+            report_violation(
+                f"RDS instances must be a child of a '{REQUIRED_PARENT_TYPE}' component.")
+
+PolicyPack(
+    "parent-policies",
+    policies=[
+        ResourceValidationPolicy(
+            name="rds-instance-parent",
+            description="Requires RDS instances to be managed by a Database component.",
+            enforcement_level=EnforcementLevel.MANDATORY,
+            validate=rds_instance_parent,
+        ),
+    ],
+)
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+{{% notes type="info" %}}
+`args.opts` is available on `ResourceValidationArgs` (resource validation policies), not on `StackValidationArgs`. To reason about parent-child relationships across the full resource graph, use a [stack validation policy](#stack-validation-policies) and inspect `args.resources`. See [resource options](/docs/iac/concepts/options/) for what each option means on the resource side.
+{{% /notes %}}
+
 ## Running policies locally
 
 Test your policy pack locally before publishing.
@@ -650,11 +853,20 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-typescript`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
+    If you need a test program, create one with `pulumi new aws-typescript` and replace the generated code with a compliant (encrypted) RDS instance:
 
-    ```sh
-    $ mkdir test-program && cd test-program
-    $ pulumi new aws-typescript
+    ```typescript
+    import * as aws from "@pulumi/aws";
+
+    const db = new aws.rds.Instance("my-db", {
+        engine: "postgres",
+        instanceClass: "db.t3.micro",
+        allocatedStorage: 20,
+        username: "admin",
+        manageMasterUserPassword: true,
+        skipFinalSnapshot: true,
+        storageEncrypted: true,
+    });
     ```
 
     > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
@@ -669,9 +881,9 @@ Test your policy pack locally before publishing.
 
     ```output
     Previewing update (dev):
-            Type                 Name          Plan
-        +   pulumi:pulumi:Stack  test-dev      create
-        +   └─ aws:s3:Bucket     my-bucket     create
+            Type                  Name          Plan
+        +   pulumi:pulumi:Stack   test-dev      create
+        +   └─ aws:rds:Instance   my-db         create
 
     Resources:
         + 2 to create
@@ -681,30 +893,28 @@ Test your policy pack locally before publishing.
         aws-typescript (/Users/user/path/to/policy-pack)     (local)
     ```
 
-1. Edit the stack code to specify a non-matching prefix:
+1. Edit the stack code to disable storage encryption:
 
     ```typescript
-    const bucket = new aws.s3.Bucket("my-bucket", {
-        bucketPrefix: "wrongprefix-",
-    });
+    storageEncrypted: false,
     ```
 
 1. Run `pulumi preview` again. This time, the policy violation blocks the preview:
 
     ```output
     Previewing update (dev):
-            Type                 Name          Plan       Info
-        +   pulumi:pulumi:Stack  test-dev      create     1 error
-        +   └─ aws:s3:Bucket     my-bucket     create
+            Type                  Name          Plan       Info
+        +   pulumi:pulumi:Stack   test-dev      create     1 error
+        +   └─ aws:rds:Instance   my-db         create
 
     Diagnostics:
         pulumi:pulumi:Stack (test-dev):
         error: preview failed
 
     Policy Violations:
-        [mandatory]  aws-typescript v0.0.1  s3-bucket-prefix (my-bucket: aws:s3/bucket:Bucket)
-        Ensures S3 buckets use the required naming prefix.
-        S3 bucket must use 'mycompany-' prefix. Current prefix: 'wrongprefix-'
+        [mandatory]  aws-typescript v0.0.1  rds-storage-encryption (my-db: aws:rds/instance:Instance)
+        Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.
+        RDS instance must have storage encryption enabled (or be tagged 'data-classification=non-production').
     ```
 
 {{% /choosable %}}
@@ -712,11 +922,20 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-python`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
+    If you need a test program, create one with `pulumi new aws-python` and replace the generated code with a compliant (encrypted) RDS instance:
 
-    ```sh
-    $ mkdir test-program && cd test-program
-    $ pulumi new aws-python
+    ```python
+    import pulumi_aws as aws
+
+    db = aws.rds.Instance("my-db",
+        engine="postgres",
+        instance_class="db.t3.micro",
+        allocated_storage=20,
+        username="admin",
+        manage_master_user_password=True,
+        skip_final_snapshot=True,
+        storage_encrypted=True,
+    )
     ```
 
     > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
@@ -731,9 +950,9 @@ Test your policy pack locally before publishing.
 
     ```output
     Previewing update (dev):
-            Type                 Name          Plan
-        +   pulumi:pulumi:Stack  test-dev      create
-        +   └─ aws:s3:Bucket     my-bucket     create
+            Type                  Name          Plan
+        +   pulumi:pulumi:Stack   test-dev      create
+        +   └─ aws:rds:Instance   my-db         create
 
         Resources:
             + 2 to create
@@ -743,27 +962,27 @@ Test your policy pack locally before publishing.
             aws-python (/Users/user/path/to/policy-pack)     (local)
     ```
 
-1. Edit the stack code to specify a non-matching prefix:
+1. Edit the stack code to disable storage encryption:
 
     ```python
-    bucket = s3.Bucket('my-bucket', bucket_prefix="wrongprefix-")
+    storage_encrypted=False,
     ```
 
 1. Run `pulumi preview` again. This time, the policy violation blocks the preview:
 
         Previewing update (dev):
-             Type                 Name          Plan       Info
-         +   pulumi:pulumi:Stack  test-dev      create     1 error
-         +   └─ aws:s3:Bucket     my-bucket     create
+             Type                  Name          Plan       Info
+         +   pulumi:pulumi:Stack   test-dev      create     1 error
+         +   └─ aws:rds:Instance   my-db         create
 
         Diagnostics:
           pulumi:pulumi:Stack (test-dev):
             error: preview failed
 
         Policy Violations:
-            [mandatory]  aws-python v0.0.1  s3-bucket-prefix (my-bucket: aws:s3/bucket:Bucket)
-            Ensures S3 buckets use the required naming prefix.
-            S3 bucket must use 'mycompany-' prefix. Current prefix: 'wrongprefix-'
+            [mandatory]  aws-python v0.0.1  rds-storage-encryption (my-db: aws:rds/instance:Instance)
+            Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.
+            RDS instance must have storage encryption enabled (or be tagged 'data-classification=non-production').
 
 {{% /choosable %}}
 
@@ -771,11 +990,20 @@ Test your policy pack locally before publishing.
 
 1. Use the `--policy-pack` flag to specify your policy pack directory:
 
-    If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python`. This scaffolds a Pulumi program that provisions an S3 bucket you can test the policy against.
+    If you need a test program, create one with `pulumi new aws-typescript` or `pulumi new aws-python` and replace the generated code with an unencrypted RDS instance to trigger the policy:
 
-    ```sh
-    $ mkdir test-program && cd test-program
-    $ pulumi new aws-typescript
+    ```typescript
+    import * as aws from "@pulumi/aws";
+
+    const db = new aws.rds.Instance("my-db", {
+        engine: "postgres",
+        instanceClass: "db.t3.micro",
+        allocatedStorage: 20,
+        username: "admin",
+        manageMasterUserPassword: true,
+        skipFinalSnapshot: true,
+        storageEncrypted: false,
+    });
     ```
 
     > For AWS examples, ensure you have [AWS credentials configured](/registry/packages/aws/installation-configuration/) and set your region with `pulumi config set aws:region <region>`.
@@ -786,47 +1014,25 @@ Test your policy pack locally before publishing.
     $ pulumi preview --policy-pack <path-to-opa-policy-pack-directory>
     ```
 
-    If the stack is compliant, the output shows which policy packs ran.
+    Because the instance is not encrypted, the policy violation blocks the preview:
 
     ```output
     Previewing update (dev):
-            Type                 Name          Plan
-        +   pulumi:pulumi:Stack  test-dev      create
-        +   └─ aws:s3:Bucket     my-bucket     create
-
-    Resources:
-        + 2 to create
-
-    Policy Packs run:
-        Name                                                    Version
-        aws-opa-policies (/Users/user/path/to/policy-pack)      (local)
-    ```
-
-1. Edit the stack code to set the bucket ACL to `public-read`:
-
-    ```typescript
-    const bucket = new aws.s3.Bucket("my-bucket", {
-        acl: "public-read",
-    });
-    ```
-
-1. Run `pulumi preview` again. This time, the policy violation blocks the preview:
-
-    ```output
-    Previewing update (dev):
-            Type                 Name          Plan       Info
-        +   pulumi:pulumi:Stack  test-dev      create     1 error
-        +   └─ aws:s3:Bucket     my-bucket     create
+            Type                  Name          Plan       Info
+        +   pulumi:pulumi:Stack   test-dev      create     1 error
+        +   └─ aws:rds:Instance   my-db         create
 
     Diagnostics:
         pulumi:pulumi:Stack (test-dev):
         error: preview failed
 
     Policy Violations:
-        [mandatory]  No Public S3 Buckets  deny_public_buckets (my-bucket: aws:s3/bucket:Bucket)
-        S3 buckets must not use public-read ACLs.
-        S3 bucket 'my-bucket' must not have public-read ACL
+        [mandatory]  Require RDS Storage Encryption  deny_unencrypted_rds (my-db: aws:rds/instance:Instance)
+        RDS instances must have storage encryption enabled, unless tagged as non-production data.
+        RDS instance 'my-db' must have storage encryption enabled
     ```
+
+    Set `storageEncrypted: true` (or tag the instance `data-classification=non-production`) and the preview succeeds.
 
 {{% /choosable %}}
 
@@ -864,10 +1070,12 @@ As shorthand, specify enforcement levels directly:
 
 <a id="advisory"></a>
 <a id="mandatory"></a>
+<a id="remediate"></a>
 **Enforcement levels:**
 
 - **advisory** - Issues warnings but allows deployments to proceed
 - **mandatory** - Blocks deployments when violations are detected
+- **remediate** - Automatically fixes violations in place; see [Remediating policy violations](#remediating-policy-violations)
 - **disabled** - Skips policy evaluation entirely
 
 ### Custom configuration
@@ -893,7 +1101,7 @@ const examplePolicy: ResourceValidationPolicy = {
             }
         },
     },
-    validateResource: validateResourceOfType(aws.s3.Bucket, (_, args, reportViolation) => {
+    validateResource: validateResourceOfType(aws.rds.Instance, (_, args, reportViolation) => {
         const config = args.getConfig<{ message?: string }>();
         const message = config.message || "Using default message";
         reportViolation("Configured message: " + message);

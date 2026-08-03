@@ -22,7 +22,6 @@ meta_desc: Join the Platform Engineering & DevOps Series! In-person events & vir
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -32,11 +31,12 @@ authors:
 
 # At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
-    - developer-experience-devex
+    - developer-experience
     - devops
     - platform-engineering
     - community
     - pulumi-events
+category: community
 
 
 # The social copy used to promote this post on Twitter and Linkedin. These
@@ -74,13 +74,13 @@ Join [Dominik Kress](https://www.linkedin.com/in/dominik-kress-33a540174/) (Prod
 - Dominik Kress will present "What the Heck is the CNCF Platform Working Group? Answers from a Member!"
 - Guy Menahem will present "For This Backstage, You Don’t Need a Special Pass: Platform Engineering in Practice."
 
-For more details and to RSVP, visit the [Berlin Meetup page](https://www.meetup.com/berlin-pulumi-user-group/events/301456990/).
+For more details and to RSVP, visit the [Berlin Meetup page](https://luma.com/pulumi).
 
 ### Second In-Person Event: Boston, July 24
 
 Join Pulumi's founder & CEO, [Joe Duffy](https://www.linkedin.com/in/joejduffy/), and [Jamie Baldanza](https://www.linkedin.com/in/jbaldanza/), Director of DevOps at Relay Therapeutics, for the launch of our Boston meetup at The Foundry. This is a great opportunity for DevOps engineers, platform engineers, software engineers, and Cloud enthusiasts to connect and share insights.
 
-RSVP is required due to limited capacity. Secure your spot, and RSVP at the [Boston Meetup page](https://www.meetup.com/boston-pulumi-user-group/events/301985583/).
+RSVP is required due to limited capacity. Secure your spot, and RSVP at the [Boston Meetup page](https://luma.com/pulumi).
 
 ### More coming soon!
 

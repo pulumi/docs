@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
-import { getMarkdownNegotiationFunctionAssociation } from "./cloudfrontFunctions";
+import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
 
 const stackConfig = new pulumi.Config();
 
@@ -56,6 +56,10 @@ const config = {
 
     answersStack: stackConfig.get("answersStack"),
 
+    // the versioned-docs storage stack (infrastructure/versioned-docs). When set, the
+    // distribution gains a /docs/versioned/* behavior backed by the permanent archive
+    // bucket. Unset (e.g. dev stacks, PR previews) = no versioned origin/behavior added.
+    versionedDocsStack: stackConfig.get("versionedDocsStack"),
 
     // the marketing portal stack to reference to allow the marketing portal
     // to add items to the uploads bucket.
@@ -294,6 +298,53 @@ new aws.s3.BucketPublicAccessBlock("content-review-ledger-public-access-block", 
     restrictPublicBuckets: true,
 });
 
+// Grant the data warehouse's Snowpipe reader role read access so the ledger can
+// be synced into Snowflake (pulumi/data#873). Only when DWH access is enabled.
+if (config.enableDataWarehouseAccess) {
+    const prodBucketsStack = new pulumi.StackReference("pulumi/dwh-workflows-loader-prodbuckets/production");
+    const dwhBucketReaderRole = prodBucketsStack.getOutput("dwhBucketReaderRole");
+
+    new aws.s3.BucketPolicy("content-review-ledger-dwh-read-policy", {
+        bucket: contentReviewLedgerBucket.bucket,
+        policy: pulumi.all([contentReviewLedgerBucket.arn, dwhBucketReaderRole])
+            .apply(([bucketArn, roleArn]) => JSON.stringify({
+                Version: "2012-10-17",
+                Statement: [
+                    // Data warehouse (Snowpipe) read access. GetObjectVersion is
+                    // included because the ledger bucket is versioned and the
+                    // per-review history lives in S3 object versions.
+                    {
+                        Sid: "DataWarehouseReadObjects",
+                        Effect: "Allow",
+                        Principal: { AWS: roleArn },
+                        Action: ["s3:GetObject", "s3:GetObjectVersion"],
+                        Resource: `${bucketArn}/*`
+                    },
+                    {
+                        Sid: "DataWarehouseListBucket",
+                        Effect: "Allow",
+                        Principal: { AWS: roleArn },
+                        Action: ["s3:ListBucket", "s3:GetBucketLocation"],
+                        Resource: bucketArn
+                    },
+                    // Enforce TLS
+                    {
+                        Sid: "RestrictToTLSRequestsOnly",
+                        Effect: "Deny",
+                        Principal: "*",
+                        Action: "s3:*",
+                        Resource: [bucketArn, `${bucketArn}/*`],
+                        Condition: {
+                            Bool: {
+                                "aws:SecureTransport": "false"
+                            }
+                        }
+                    }
+                ]
+            })),
+    });
+}
+
 const bundlesBucket = new aws.s3.Bucket("bundles-bucket", {
     forceDestroy: true,
 });
@@ -527,6 +578,7 @@ const thirtyMinutes = fiveMinutes * 6;
 const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
+const oneDay = oneHour * 24;
 
 // AllViewerExceptHostHeader passes all cookies, querystrings, and headers except the Host header.
 // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-origin-request-policies.html
@@ -572,6 +624,23 @@ const oneWeekCacheKeyPolicy = cacheKeyPolicy("one-week-cache", oneWeek);
 const oneYearCachePolicy = cacheKeyPolicy("one-year-cache", oneYear);
 const noCacheKeyPolicy = cacheKeyPolicy("no-cache", 0);
 
+// Versioned-docs archives carry their own origin Cache-Control (immutable 1y for
+// content, 5min for the manifest). Unlike the cacheKeyPolicy helper above — which
+// pins defaultTtl == maxTtl and therefore ignores origin Cache-Control — this policy
+// spans minTtl 0 / default 1 day / max 1 year so CloudFront HONORS each object's header.
+const versionedDocsCachePolicy = new aws.cloudfront.CachePolicy("versioned-docs-cache", {
+    minTtl: 0,
+    defaultTtl: oneDay,
+    maxTtl: oneYear,
+    parametersInCacheKeyAndForwardedToOrigin: {
+        enableAcceptEncodingBrotli: true,
+        enableAcceptEncodingGzip: true,
+        cookiesConfig: { cookieBehavior: "none" },
+        headersConfig: { headerBehavior: "none" },
+        queryStringsConfig: { queryStringBehavior: "none" },
+    },
+});
+
 const baseSecurityHeadersConfig = {
     frameOptions: {
         frameOption: config.addSecurityHeaders ? 'DENY' : 'SAMEORIGIN',
@@ -595,6 +664,8 @@ const baseSecurityHeadersConfig = {
     },
     strictTransportSecurity: {
         accessControlMaxAgeSec: 31536000,
+        includeSubdomains: true,
+        preload: true,
         override: false,
     },
     xssProtection: {
@@ -604,6 +675,19 @@ const baseSecurityHeadersConfig = {
     }
 };
 
+// CloudFront's securityHeadersConfig schema has no native Permissions-Policy support, so it's
+// added as a plain custom header instead. This site's own code has no use for any of these
+// features (verified: no geolocation/camera/microphone/payment/usb API usage, and the embedded
+// YouTube/Google Maps iframes don't request any of them via their `allow` attribute), so
+// they're disabled outright rather than allowlisted.
+const permissionsPolicyHeaderItem = {
+    header: "Permissions-Policy",
+    // interest-cohort=() is the FLoC opt-out, retained for older browsers/scanners that still
+    // check for it even though FLoC itself was discontinued in favor of the Topics API.
+    value: "geolocation=(), camera=(), microphone=(), payment=(), usb=(), interest-cohort=(), browsing-topics=()",
+    override: false,
+};
+
 // Fingerprinted/hashed assets get immutable browser caching (1 year).
 // This is separate from CloudFront edge TTLs (defaultTtl/maxTtl) which only
 // control CDN-level caching. Without this policy, browsers see no Cache-Control
@@ -611,7 +695,7 @@ const baseSecurityHeadersConfig = {
 const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-logo-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=1800",
             override: true,
@@ -622,10 +706,17 @@ const BrandLogoCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('brand-log
 const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
+        }, {
+            // RFC 8288 Link header pointing agents at the RFC 9727 API catalog.
+            // Rides the default behavior, so it's present on the homepage (where
+            // agent-discovery scanners look) and other top-level pages.
+            header: "Link",
+            value: "</.well-known/api-catalog>; rel=\"api-catalog\"",
+            override: false,
         }],
     },
 });
@@ -633,7 +724,7 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
 const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=3600",
             override: true,
@@ -644,7 +735,7 @@ const OneHourCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('one-hour-ca
 const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable-cache-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Cache-Control",
             value: "public, max-age=31536000, immutable",
             override: true,
@@ -657,11 +748,22 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
-        items: [{
+        items: [permissionsPolicyHeaderItem, {
             header: "Vary",
             value: "Accept",
             override: false,
         }],
+    },
+});
+
+// Versioned-docs behavior uses security headers ONLY — deliberately NO Cache-Control
+// override. DefaultCachePolicy force-overrides Cache-Control to max-age=60, which would
+// make browsers re-fetch immutable archives every 60s. This pass-through policy lets
+// each archived object's own Cache-Control (immutable 1y / manifest 5min) reach the browser.
+const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('versioned-docs-response-headers', {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [permissionsPolicyHeaderItem],
     },
 });
 
@@ -769,6 +871,43 @@ if (config.guidesStack) {
     )
 }
 
+// Versioned SDK & CLI docs: a permanent archive bucket (its own stack) reached as an
+// S3 website endpoint, served under /docs/versioned/*. Additive and fully optional —
+// when versionedDocsStack is unset, nothing here runs and the distribution is unchanged.
+const versionedDocsOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const versionedDocsBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+if (config.versionedDocsStack) {
+    const versionedDocsStack = new pulumi.StackReference(config.versionedDocsStack);
+    const versionedDocsEndpoint = versionedDocsStack.getOutput("bucketWebsiteEndpoint");
+    const versionedDocsOriginId = "versioned-docs-origin";
+
+    versionedDocsOrigins.push({
+        originId: versionedDocsOriginId,
+        domainName: versionedDocsEndpoint,
+        customOriginConfig: {
+            // S3 website endpoints only speak HTTP (same as the main origin).
+            originProtocolPolicy: "http-only",
+            httpPort: 80,
+            httpsPort: 443,
+            originSslProtocols: ["TLSv1.2"],
+        },
+    });
+
+    versionedDocsBehaviors.push({
+        ...baseCacheBehavior,
+        targetOriginId: versionedDocsOriginId,
+        pathPattern: "/docs/versioned/*",
+        cachePolicyId: versionedDocsCachePolicy.id,
+        // Pass-through headers (no Cache-Control clobber); see policy comment above.
+        responseHeadersPolicyId: VersionedDocsResponseHeadersPolicy.id,
+        // Archives are self-contained immutable HTML: no edge redirects, no markdown
+        // negotiation, no dotnet-lowercase rewrite.
+        lambdaFunctionAssociations: [],
+        functionAssociations: [],
+    });
+}
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
@@ -834,6 +973,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...registryOrigins,
         ...guidesOrigins,
         ...answersOrigins,
+        ...versionedDocsOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -843,12 +983,26 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     defaultCacheBehavior: {
         ...baseCacheBehavior,
         cachePolicyId: tenMinuteCacheKeyPolicy.id,
+        functionAssociations: [
+            // Serves index.md for the homepage, /what-is/, /product/, and /pricing/
+            // via Accept: text/markdown or the .md URL suffix. The viewer-request
+            // rewrite lands before the cache lookup, so the rewritten URI is the
+            // cache key and no cache policy changes are needed.
+            getMarketingMarkdownNegotiationFunctionAssociation(),
+            // Stamps Content-Type on /.well-known/api-catalog, which falls through to
+            // the default behavior. No-op for every other path.
+            getApiCatalogContentTypeFunctionAssociation(),
+        ],
     },
 
     orderedCacheBehaviors: [
         ...registryBehaviors,
         ...guidesBehaviors,
         ...answersBehaviors,
+
+        // Versioned docs archives. Must come BEFORE /docs/reference/pkg/dotnet/* and
+        // /docs/* so the more specific immutable-archive prefix matches first.
+        ...versionedDocsBehaviors,
 
         // Dotnet SDK docs: lowercase URIs so case-insensitive requests resolve.
         // Must come BEFORE /docs/* so the more specific pattern matches first.
@@ -951,6 +1105,12 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         {
             ...baseCacheBehavior,
             pathPattern: "/js/consent-manager.*.js",
+            cachePolicyId: oneYearCachePolicy.id,
+            responseHeadersPolicyId: ImmutableCachePolicy.id,
+        },
+        {
+            ...baseCacheBehavior,
+            pathPattern: "/js/header-nav.*.js",
             cachePolicyId: oneYearCachePolicy.id,
             responseHeadersPolicyId: ImmutableCachePolicy.id,
         },

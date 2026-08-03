@@ -15,6 +15,8 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 
 ## Pages
 
+**[Protecting against undesired changes](/docs/iac/operations/stack-management/protecting-against-undesired-changes/)** - Production hygiene: protect critical resources from deletion, review previews before applying, and enforce guardrails with update plans, policy, and CI/CD gating.
+
 **[Targeted updates](/docs/iac/operations/stack-management/targeted-updates/)** - Limit which resources Pulumi operates on with `--target`, `--exclude`, and `--target-replace`. Learn the trade-offs of partial operations and when to use them.
 
 **[Running your program on refresh and destroy](/docs/iac/operations/stack-management/run-program/)** - Use `--run-program` to execute your Pulumi program before `refresh` or `destroy`. Required for dynamic credentials and useful for diff-clean provider upgrades.
@@ -28,5 +30,7 @@ These pages cover the day-to-day operations of running Pulumi stacks: scoping up
 **[Restoring deleted stacks](/docs/iac/operations/stack-management/restoring-deleted-stacks/)** - Recover a recently deleted stack from the Pulumi Cloud console, including after an accidental `pulumi stack rm --force`.
 
 **[Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/)** - Configure a self-managed state backend with AWS S3, Azure Blob Storage, Google Cloud Storage, PostgreSQL, or the local filesystem.
+
+**[Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/)** - Use `pulumi state move` to transfer resources from one stack to another, then update program code on both sides to match.
 
 **[Refactoring with aliases](/docs/iac/operations/stack-management/refactoring-with-aliases/)** - Use the `aliases` resource option to rename, re-parent, change the type, or move resources across stacks without destroying and recreating them.

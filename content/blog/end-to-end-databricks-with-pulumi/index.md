@@ -3,13 +3,13 @@ title: "Build a Governed Databricks Workspace with Pulumi"
 date: 2026-06-25
 meta_desc: "Provision a governed Databricks workspace baseline with Pulumi, including cluster policies, notebooks, jobs, and promotion workflows."
 feature_image: feature.png
-meta_image: meta.png
 authors:
     - pablo-seibelt
 tags:
     - databricks
     - data-engineering
     - infrastructure-as-code
+category: tutorials
 social:
     twitter: |
         Databricks workspaces drift fast when clusters, jobs, and permissions are configured by hand.
@@ -168,6 +168,10 @@ This baseline covers the resources a platform team needs to standardize first:
 1. **Cluster permissions**: assigns group-level access to the shared cluster.
 1. **Notebook**: stores the workload artifact in the workspace.
 1. **Job**: schedules the notebook on policy-constrained compute.
+
+{{< blog/cta-card title="Govern Databricks from day one" >}}
+Define your cluster policies, notebooks, jobs, and permissions in Pulumi, then promote the same governed baseline across every workspace with stacks.
+{{< /blog/cta-card >}}
 
 ## Validation
 

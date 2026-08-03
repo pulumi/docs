@@ -3,18 +3,17 @@ title: "Backstage vs Pulumi IDP: Why Infrastructure-First Wins!"
 date: 2025-08-13T00:00:00+00:00
 draft: false
 meta_desc: "Backstage vs Pulumi IDP comparison. See why infrastructure-first platform engineering beats portal-first for cost, governance, and scale."
-meta_image: meta.png
 authors:
     - engin-diri
 tags:
     - platform-engineering
     - backstage
     - pulumi-idp
-    - infrastructure
+    - infrastructure-as-code
     - devops
     - governance
     - internal-developer-platform
-    - infrastructure-as-code
+category: general
 
 social:
     twitter: "Backstage vs Pulumi IDP comparison: Backstage takes 12-18 months + 3-5 FTEs. Pulumi IDP deploys in hours. The difference? Infrastructure-first vs portal-first platform engineering. 80% of enterprises need IDPs by 2026 - choose wisely."
@@ -42,6 +41,7 @@ social:
         Read my full analysis of why infrastructure-first platform engineering delivers better outcomes.
 
         #PlatformEngineering #Backstage #Pulumi #InfrastructureAsCode #DevOps #CloudNative #InternalDeveloperPlatform
+faq_schema: true
 ---
 
 Developers are losing days every month to infrastructure bottlenecks, compliance hurdles, and inconsistent environments.
@@ -155,6 +155,10 @@ Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platf
 - Must scale efficiently across [Kubernetes](/docs/iac/clouds/kubernetes) and [multi-cloud](/docs/iac/concepts/how-pulumi-works)
 - Prefer to avoid building everything from scratch
 - Need to deploy quickly (hours vs months)
+
+{{< blog/cta-card title="Build your platform on infrastructure" href="/product/internal-developer-platforms/" >}}
+Pulumi IDP embeds governance, cost control, and security into your platform from day one, giving your teams self-service golden paths with policy enforced automatically.
+{{< /blog/cta-card >}}
 
 ## The shift to infrastructure platform engineering (IPE)
 

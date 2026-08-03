@@ -1,0 +1,18 @@
+{{- /*
+    Small card: 140px square thumbnail left, title (h3) + byline right. No badge
+    or excerpt. Used for the homepage "3 small" row beside the featured hero.
+
+    Params: page (required) the post page.
+*/ -}}
+{{- $page := .page -}}
+<article class="group relative flex sm:items-center gap-6">
+    {{ if partial "blog/has-feature-image.html" $page }}
+    <div class="flex size-[80px] sm:size-[140px] shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
+        {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 240 "h" 160 "mode" "fit" "class" "h-full w-auto max-w-none") $page.RelPermalink "fit-240x160" }}
+    </div>
+    {{ end }}
+    <div class="flex min-w-0 flex-col gap-2.5">
+        <h3 class="heading-4 m-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-small-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
+        {{ partial "blog/post-meta.html" (dict "page" $page) }}
+    </div>
+</article>

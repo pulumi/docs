@@ -71,7 +71,41 @@ window.addEventListener('hashchange', function() {
     filterResourceItems(selectedFilters);
 });
 
+// Client-side "in X days" / "Today" badges for upcoming events. Rendered here
+// rather than at build time: the site rebuilds only periodically, so a baked-in
+// relative label would go stale, and the correct day count depends on each
+// visitor's own timezone. The card emits the absolute event datetime; we compute
+// the relative label against the visitor's local midnight.
+// Show the countdown badge only when the event is less than a week out.
+const COUNTDOWN_MAX_DAYS = 6;
+
+const renderEventCountdowns = () => {
+    const startOfDay = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    const todayStart = startOfDay(new Date());
+
+    document.querySelectorAll<HTMLElement>("[data-event-countdown]").forEach(el => {
+        const iso = el.getAttribute("data-event-date");
+        if (!iso) return;
+        const event = new Date(iso);
+        if (isNaN(event.getTime())) return;
+
+        const diffDays = Math.round((startOfDay(event).getTime() - todayStart.getTime()) / 86_400_000);
+
+        if (diffDays === 0) {
+            el.textContent = "Today";
+            el.className = "badge badge-default";
+        } else if (diffDays >= 1 && diffDays <= COUNTDOWN_MAX_DAYS) {
+            el.textContent = diffDays === 1 ? "in 1 day" : `in ${diffDays} days`;
+            el.className = "badge badge-brand";
+        } else {
+            return; // more than a week out (or already past) — leave hidden
+        }
+        el.removeAttribute("hidden");
+    });
+};
+
 // Apply initial filter state on page load.
 if (document.querySelector(".template-event-list")) {
     filterResourceItems([]);
+    renderEventCountdowns();
 }

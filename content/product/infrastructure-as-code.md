@@ -3,7 +3,8 @@ title: "Infrastructure as code in Any Language – Pulumi IaC"
 meta_desc: Write infrastructure code using TypeScript, Python, Go, .NET, Java, or YAML. Deploy to any cloud with built-in previews and testing.
 meta_image: /images/product/infrastructure-as-code/iac-meta.png
 type: page
-layout: product-page
+layout: template-page
+include_floqer: true
 aliases:
   - /product/iac
   - /product/pulumi-iac
@@ -305,7 +306,6 @@ sections:
 
   - type: three_column
     anchor: packages-features
-    icon_style: black
     icon_layout: above
     columns:
       - icon: check-square
@@ -333,7 +333,6 @@ sections:
 
   - type: three_column
     anchor: cicd-features
-    icon_style: black
     icon_layout: above
     columns:
       - icon: git-branch
@@ -360,7 +359,6 @@ sections:
 
   - type: three_column
     anchor: cloud-features
-    icon_style: black
     icon_layout: above
     columns:
       - icon: lock

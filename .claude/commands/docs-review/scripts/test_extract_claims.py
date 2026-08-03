@@ -7,13 +7,15 @@ JSON they emit. Fixtures in `testdata/` are committed deterministic diffs of
 real merged pulumi/docs PRs (#18771, #18743, #18541) — corpus-drawn cases of
 the run-to-run-fragile claim shapes the regex floor must guarantee.
 
-(extract-claims-llm.py isn't tested here — it needs ANTHROPIC_API_KEY and is
-spike-tested in CI; merge-claims.py is tested against hand-crafted Layer-B
-inputs below.)
+(extract-claims-llm.py's API paths need ANTHROPIC_API_KEY and are spike-tested
+in CI; its per-file scrutiny resolution and file-cap ordering ARE tested here,
+via module import and --dry-run. merge-claims.py is tested against
+hand-crafted Layer-B inputs below.)
 """
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import subprocess
 import sys
@@ -22,6 +24,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 EXTRACT = HERE / "extract-claims.py"
+EXTRACT_LLM = HERE / "extract-claims-llm.py"
 MERGE = HERE / "merge-claims.py"
 TESTDATA = HERE / "testdata"
 
@@ -264,7 +267,7 @@ def _llm_doc(pass_name: str, claims: list[dict], errors: list[str] | None = None
         c.setdefault("confidence", "medium")
         c.setdefault("found_by", [f"llm-{pass_name}"])
         out.append(c)
-    return {"schema_version": 1, "pass": pass_name, "model": "claude-sonnet-4-6",
+    return {"schema_version": 1, "pass": pass_name, "model": "claude-sonnet-5",
             "claims": out, "errors": errors or [],
             "meta": {"input_tokens": 10, "output_tokens": 5, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}
 
@@ -367,6 +370,101 @@ def test_merge_missing_and_error_inputs() -> None:
               f"merge: llm-only should yield the 1 llm claim; got {m['claims']}")
 
 
+# ---- extract-claims-llm.py: per-file scrutiny + file-cap ordering -------------
+
+def _llm_mod():
+    spec = importlib.util.spec_from_file_location("extract_claims_llm", EXTRACT_LLM)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_llm_scrutiny_per_file() -> None:
+    print("test_llm_scrutiny_per_file (blog bump, small-edit pin, ratio bound, override, new file)")
+    m = _llm_mod()
+    blog = "content/blog/some-post/index.md"
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        f = root / blog
+        f.parent.mkdir(parents=True)
+        f.write_text("\n".join(f"body line {i}" for i in range(1, 101)) + "\n")
+
+        # A 3-line insert into a 100-line published post: bumped for being blog,
+        # then pinned back to standard by the small-edit guard.
+        small = _mk_patch(blog, ["{{< blog/cta-card >}}", "Two lines of new prose.", "{{< /blog/cta-card >}}"])
+        msg, note = m.build_user_message(root, small, blog, "standard")
+        check("scope: standard" in msg, "llm-scrutiny: small blog edit pins to standard scope")
+        check(note is not None and "small edit" in note, f"llm-scrutiny: small-edit pin surfaces a note; got {note!r}")
+
+        # 40 added lines: over the absolute bound — stays heightened.
+        big = _mk_patch(blog, [f"New prose line {i}." for i in range(40)])
+        msg, _ = m.build_user_message(root, big, blog, "standard")
+        check("WHOLE file" in msg, "llm-scrutiny: 40-line blog edit stays heightened")
+
+        # 25 added lines: under the absolute bound but >20% of a 100-line file — stays heightened.
+        mid = _mk_patch(blog, [f"New prose line {i}." for i in range(25)])
+        msg, _ = m.build_user_message(root, mid, blog, "standard")
+        check("WHOLE file" in msg, "llm-scrutiny: 25 added lines in a 100-line file (>20%) stays heightened")
+
+        # Global --scrutiny heightened is a force-override: no small-edit pin.
+        msg, _ = m.build_user_message(root, small, blog, "heightened")
+        check("WHOLE file" in msg, "llm-scrutiny: global heightened override defeats the small-edit pin")
+
+    # A docs file's small edit under standard scrutiny: no blog bump, standard scope.
+    docs = "content/docs/x/page.md"
+    with tempfile.TemporaryDirectory() as td:
+        msg, note = m.build_user_message(Path(td), _mk_patch(docs, ["One new line."]), docs, "standard")
+        check("scope: standard" in msg and note is None,
+              f"llm-scrutiny: docs small edit is standard scope with no note; got note={note!r}")
+
+    # A brand-new blog file: heightened even though tiny (small-edit pin skips new files).
+    new_blog = "content/blog/new-post/index.md"
+    new_patch = (
+        f"diff --git a/{new_blog} b/{new_blog}\n"
+        "new file mode 100644\n"
+        "--- /dev/null\n"
+        f"+++ b/{new_blog}\n"
+        "@@ -0,0 +1,3 @@\n"
+        "+---\n"
+        "+title: New post\n"
+        "+---\n"
+    )
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        nf = root / new_blog
+        nf.parent.mkdir(parents=True)
+        nf.write_text("---\ntitle: New post\n---\n")
+        msg, _ = m.build_user_message(root, new_patch, new_blog, "standard")
+        check("WHOLE file" in msg, "llm-scrutiny: brand-new blog file stays heightened despite being tiny")
+
+
+def test_llm_file_cap_prefers_biggest_edits() -> None:
+    print("test_llm_file_cap_prefers_biggest_edits")
+    files = [f"content/docs/x/f{i:02}.md" for i in range(20)] + ["content/docs/x/big.md"]
+    patch = "".join(_mk_patch(f, ["One added line."]) for f in files[:20])
+    patch += _mk_patch("content/docs/x/big.md", [f"Added line {i}." for i in range(10)])
+    with tempfile.TemporaryDirectory() as td:
+        pf = Path(td) / "p.patch"
+        pf.write_text(patch)
+        out = Path(td) / "out.json"
+        # The script loads its system prompt from the repo root before the
+        # dry-run short-circuit; give the tmp root a stub copy.
+        ref = Path(td) / ".claude/commands/docs-review/references/claim-extraction.md"
+        ref.parent.mkdir(parents=True)
+        ref.write_text("stub system prompt\n")
+        r = subprocess.run([sys.executable, str(EXTRACT_LLM), "--patch-file", str(pf),
+                            "--changed-files", ",".join(files), "--repo-root", td,
+                            "--pass", "atomic", "--dry-run", "--out", str(out)],
+                           capture_output=True, text=True)
+        check(r.returncode == 0, f"llm cap: exits 0 (stderr: {r.stderr.strip()[:200]})")
+        doc = json.loads(out.read_text())
+        kept = {c["file"] for c in doc["claims"]}
+        check("content/docs/x/big.md" in kept, "llm cap: the biggest edit survives the file cap")
+        check(len(kept) == 20, f"llm cap: exactly FILE_CAP files processed; got {len(kept)}")
+        check(any("over file cap" in e for e in doc["errors"]),
+              f"llm cap: over-cap skip is surfaced in errors[]; got {doc['errors'][:2]}")
+
+
 # ---- main ---------------------------------------------------------------------
 
 def main() -> int:
@@ -390,6 +488,8 @@ def main() -> int:
         test_merge_dedup_and_provenance,
         test_merge_line_anchor_clamps_out_of_bounds,
         test_merge_missing_and_error_inputs,
+        test_llm_scrutiny_per_file,
+        test_llm_file_cap_prefers_biggest_edits,
     ]
     for t in tests:
         try:

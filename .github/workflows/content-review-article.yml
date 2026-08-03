@@ -8,6 +8,25 @@ name: "Scheduled jobs: Review existing content (one article)"
 # (a hung article no longer burns the whole batch's budget) and lets a
 # per-path concurrency group keep two runs off the same article.
 #
+# The run is split into two jobs with opposite privilege profiles:
+#
+#   review  — the model runs here, UNPRIVILEGED. It consumes artifacts
+#             derived from fetched external URLs (a prompt-injection
+#             surface), so this job holds no push token, no AWS creds, no
+#             production environment: checkout uses the read-scoped default
+#             token with persist-credentials off, and a preflight step
+#             asserts the environment is credential-free. The model edits
+#             the working tree only; it cannot commit, push, or open a PR.
+#             Its changes leave as a patch in a run artifact.
+#
+#   publish — DETERMINISTIC only (no model). Holds the production
+#             credentials, validates the review's output against the
+#             publish gate (verdict shape, diff scope, no_retire), and owns
+#             branch/push/PR, the re-lint promotion gate, and the S3
+#             ledger. Injected instructions in reviewed content can at
+#             worst distort the patch — and the gate bounds what a patch
+#             may touch.
+#
 # This is workflow_dispatch only — the dispatcher invokes it; it is not on a
 # schedule of its own.
 
@@ -26,13 +45,6 @@ on:
         required: false
         default: ''
 
-permissions:
-  contents: write
-  pull-requests: write
-  issues: write
-  id-token: write # Required for ESC OIDC auth
-  actions: write # Required to dispatch claude-code-review.yml over the PR
-
 # One run per article: a second dispatch for the same path queues behind the
 # first rather than racing it onto the same branch.
 concurrency:
@@ -41,29 +53,46 @@ concurrency:
 
 jobs:
   review:
-    name: Review one article
+    name: Review one article (model, unprivileged)
     runs-on: ubuntu-latest
-    # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
-    # select the environment to resolve it — otherwise `Resolve ledger bucket`
-    # runs with --stack "" and the S3 ledger write is silently skipped.
-    environment: production
     # Hard cost ceiling for a single-article review; a hung run dies rather
     # than burning API budget.
-    timeout-minutes: 30
+    timeout-minutes: 25
+    # Deliberately minimal: `contents: read` to clone, `id-token: write`
+    # because anthropics/claude-code-action@v1 requests an OIDC token of its
+    # own at startup. No `environment: production`, no ESC, no AWS — the
+    # model must have nothing worth exfiltrating beyond the Anthropic API
+    # key it inherently runs on (bounded, rotatable blast radius).
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      claude_outcome: ${{ steps.claude.outcome }}
     steps:
-      # ESC runs before checkout so the bot token can authenticate the
-      # checkout — the PR opened by claude-code-action later then goes out as
-      # pulumi-bot rather than github-actions[bot].
-      - name: Fetch secrets from ESC
-        id: esc-secrets
-        uses: pulumi/esc-action@v1
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
-          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           # The skill reads git history (synthetic diffs, staleness), so a
           # shallow clone won't do.
           fetch-depth: 0
+          # Keep the (read-scoped) token out of .git/config — nothing in
+          # this job pushes, and the model's Bash can read that file.
+          persist-credentials: false
+      # Deterministic guard against a future edit re-introducing credentials
+      # ahead of the model: fail fast if AWS creds are in the environment or
+      # a git credential header survived checkout.
+      - name: Assert the model environment is credential-free
+        run: |
+          FAIL=0
+          if [ -n "${AWS_ACCESS_KEY_ID:-}${AWS_SECRET_ACCESS_KEY:-}${AWS_SESSION_TOKEN:-}" ]; then
+            echo "::error::AWS credentials are present in the review job; they belong in the publish job only"
+            FAIL=1
+          fi
+          if git config --local --get-regexp '^http\..*\.extraheader$' > /dev/null 2>&1; then
+            echo "::error::a git credential extraheader is persisted in .git/config; set persist-credentials: false"
+            FAIL=1
+          fi
+          exit "$FAIL"
       - name: Install Node
         uses: actions/setup-node@v6
         with:
@@ -82,44 +111,11 @@ jobs:
       # Vale (and other mise-pinned tools) for the skill's whole-file
       # prose-lint pre-step.
       - name: Install mise-managed tools
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v4
         with:
           cache: true
       - name: Install Python deps
         run: python3 -m pip install --quiet pyyaml
-
-      # AWS creds so the ledger-write step at the end can push this article's
-      # review record to S3. Degrades gracefully (continue-on-error): if the
-      # role can't be assumed the review still runs, the ledger write is just
-      # skipped (the page reappears next cycle rather than going into cooldown).
-      - name: Configure AWS credentials
-        id: aws-creds
-        continue-on-error: true
-        uses: aws-actions/configure-aws-credentials@v6
-        with:
-          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
-          role-session-name: content-review-article
-          aws-region: us-west-2
-
-      # Resolve the ledger bucket from our Pulumi stack output rather than a
-      # hand-maintained repo variable (same pattern as schedule-social.yml).
-      # Degrades gracefully: if the output isn't there, `uri` stays empty and
-      # the ledger-write step at the end is skipped.
-      - name: Install Pulumi CLI
-        uses: pulumi/actions@v7
-      - name: Resolve ledger bucket
-        id: ledger-bucket
-        continue-on-error: true
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
-        run: |
-          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
-            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
-          if [ -n "$BUCKET" ]; then
-            echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
-          else
-            echo "ledger bucket output unavailable; ledger write will be skipped"
-          fi
 
       # Establish the single-article queue. Preferred: use the queue the
       # dispatcher handed us verbatim — it carries the selection facts (traffic,
@@ -145,6 +141,30 @@ jobs:
           echo "--- queue ---"
           cat .content-review-queue.json
 
+      # Deterministic skip: when an open PR already owns this page (either
+      # canonical branch), a previous run is still in flight. Write the
+      # skipped verdict here and never spend the pre-compute or review
+      # tokens — this used to be a model instruction (SKILL.md step 1).
+      - name: Check for an existing open PR
+        id: precheck
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SLUG=$(jq -r '.articles[0].slug' .content-review-queue.json)
+          SKIP=false
+          for BRANCH in "content-review/$SLUG" "content-review/retire-$SLUG"; do
+            URL=$(gh pr list --head "$BRANCH" --state open --json url --jq '.[0].url // empty' 2>/dev/null || true)
+            if [ -n "$URL" ]; then
+              echo "open PR $URL already owns $BRANCH; skipping the review"
+              jq -n --arg reason "open PR already exists for $BRANCH ($URL)" \
+                '{verdict: "skipped", reason: $reason, fixes: 0, skipped_findings: 0, retirement: false}' \
+                > .content-review-verdict.json
+              SKIP=true
+              break
+            fi
+          done
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
+
       # Run the docs-review deterministic pre-computation as a REAL workflow
       # step — not a model instruction. Build the synthetic whole-file diff and
       # run the claim extraction + verification, Vale, frontmatter, and
@@ -153,6 +173,7 @@ jobs:
       # command degrades gracefully (`|| stub`) so one pre-step failure never
       # blocks the run; the model notes any missing/errored artifact in the PR.
       - name: Pre-compute review artifacts
+        if: steps.precheck.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -171,11 +192,11 @@ jobs:
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json \
-            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           python3 $S/extract-claims-llm.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json \
-            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           python3 $S/merge-claims.py \
             --regex .candidate-claims-regex.json \
             --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
@@ -184,7 +205,7 @@ jobs:
           python3 $S/verify-claims.py \
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-4-6", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
           python3 $S/frontmatter-validate.py \
             --changed-files "$ARTICLE_PATH" --out .frontmatter-validation.json \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
@@ -198,7 +219,7 @@ jobs:
           python3 $S/readthrough.py \
             --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
             --out .readthrough-findings.json \
-            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-4-6", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
 
           vale --no-exit --output=JSON "$ARTICLE_PATH" > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
@@ -218,6 +239,7 @@ jobs:
       # each finding pre-bucketed into Fixes/Findings-not-applied with a <TODO>.
       # Degrades to a minimal valid draft so a compose hiccup never blocks the run.
       - name: Compose PR body draft
+        if: steps.precheck.outputs.skip != 'true'
         run: |
           python3 scripts/content-review/compose-pr-body.py \
             --queue .content-review-queue.json --out .pr-body-draft.md \
@@ -225,13 +247,45 @@ jobs:
           echo "--- pr body draft ---"
           cat .pr-body-draft.md
 
+      # Snapshot the guardrail inputs BEFORE the model runs and upload them
+      # immediately as their own artifact. The publish job's guardrail gates
+      # judge the model's patch against these copies (plus the trusted
+      # workflow-dispatch `path` input), so a model that edits the queue or
+      # the findings artifacts in the workspace cannot widen its own
+      # allowance — the artifact is immutable once uploaded, and this upload
+      # happens before the model step. base-sha.txt is the master commit the
+      # pre-steps ran on — the old side for all patch diffs. (The dot-dir is
+      # excluded from the export step's staging, so it can never ride the
+      # patch.)
+      - name: Snapshot guardrail inputs
+        id: snapshot
+        run: |
+          SNAP=".review-snapshot"
+          mkdir -p "$SNAP"
+          for f in .content-review-queue.json .verified-claims.json \
+                   .vale-findings.json .readthrough-findings.json \
+                   .frontmatter-validation.json; do
+            [ -f "$f" ] && cp "$f" "$SNAP/" || echo "::warning::snapshot: $f missing"
+          done
+          git rev-parse HEAD > "$SNAP/base-sha.txt"
+      - name: Upload guardrail snapshot
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-snapshot
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+          path: .review-snapshot/
+
       - name: Run Claude Code
         id: claude
+        if: steps.precheck.outputs.skip != 'true'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Bot token so the PR/pushes trigger downstream workflows.
-          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          # No github_token override: the action falls back to the job's
+          # read-scoped default token. The model has nothing to push — the
+          # publish job owns every write.
           # This workflow is dispatched by the dispatcher via GITHUB_TOKEN, so
           # the run's actor is a Bot, which claude-code-action@v1 rejects by
           # default. Same allowance claude-code-review.yml makes for its
@@ -249,18 +303,31 @@ jobs:
             do NOT regenerate them.
 
             Follow `.claude/commands/review-existing-content/SKILL.md` exactly,
-            but SKIP step 2 (Pre-compute) — the workflow already did it. For the
-            article in the queue:
+            with two workflow-owned exceptions: SKIP step 1 (Branch) and step 2
+            (Pre-compute), and you have NO write access — do not run
+            `git commit`, `git push`, or `gh pr create`, and do not create
+            branches. Edit the working tree in place; a separate credentialed
+            workflow job validates your changes against the publish gate,
+            derives the branch name from the queue, and opens the draft PR
+            for you. For the article in the queue:
 
-            1. Branch off master with the EXACT name `content-review/<slug>`
-               (the queue entry's `slug`), or `content-review/retire-<slug>`
-               for a retirement proposal. The workflow derives the PR from
-               this branch name, so it must match exactly.
+            1. (Done by the workflow — the publish job derives the branch
+               `content-review/<slug>` from the queue's `slug`, and a
+               deterministic pre-check already confirmed no open PR owns this
+               page. Retirement is code-enforced there: a retirement verdict
+               for a page that is `no_retire` in strategic-tiers.yaml is
+               rejected regardless of evidence.)
             2. (Done by the workflow — read the artifacts above. If one is
                missing or carries an `errors` field, note it in the PR
                description and continue with what you have.)
-            3. Apply HIGH-CONFIDENCE fixes only; everything judgment-level
-               goes in the PR description's "Findings not applied" section.
+            3. Apply HIGH-CONFIDENCE fixes only, editing files in the current
+               checkout; everything judgment-level goes in the PR
+               description's "Findings not applied" section. For
+               `.vale-findings.json` entries stamped `deterministic_fix:
+               true`, apply Vale's exact replacement ONLY after confirming it
+               preserves meaning in context — skip and flag ones that would
+               change meaning (see SKILL.md step 3). Other Vale findings are
+               nags, not fixes.
             4. The "Screenshot check" section of `.pr-body-draft.md` is
                pre-filled when the page references no content images. Run the
                screenshot/UI pass (flag-only) and fill the section ONLY if it
@@ -274,11 +341,11 @@ jobs:
                rendered content pass over both the HTML and customer-facing
                markdown views (`public/<url>/index.html` and `index.md`) per
                the skill, and fill the section.
-            7. If you applied any fix, open a **draft** PR whose body is
-               `.pr-body-draft.md` (composed for you at the repo root — the
-               assemble-then-judge model, like the pre-merge review). Open it as
-               a DRAFT (`gh pr create --draft`): the workflow re-lints your branch
-               and promotes the PR to ready only if lint passes — that ready
+            7. If you applied any fix, EDIT `.pr-body-draft.md` in place
+               (composed for you at the repo root — the assemble-then-judge
+               model, like the pre-merge review); the publish job opens the
+               draft PR with exactly that body, then re-lints your changes and
+               promotes the PR to ready only if lint passes — that ready
                transition is what triggers triage and the docs review. Do NOT
                write the body from scratch. EDIT the draft:
                - The top `> [!IMPORTANT]` auto-merge notice is verbatim — leave
@@ -291,68 +358,271 @@ jobs:
                  "Findings not applied" with a one-line reason.
                - Fill each `<TODO>` (deferral reasons, the screenshot and rendered
                  observations). Resolve every `<TODO>` and strip the HTML comment
-                 hints before opening the PR.
+                 hints before you finish.
                - Leave the `<!-- LINT-RESULT -->` line in "Verification" exactly
                  as-is; the workflow stamps it with the authoritative result.
-               Then `gh pr create --draft --body-file .pr-body-draft.md`. A clean
-               article (zero fixes) opens no PR.
+               A clean article (zero fixes) needs no body edits and opens no PR.
             8. Write `.content-review-verdict.json` at the repo root — your ONLY
                structured output. Shape:
                `{"verdict": "fixed|clean|skipped", "reason": "<one line; required
                for clean/skipped>", "fixes": <int>, "skipped_findings": <int>,
-               "retirement": <bool>}`. The workflow derives the PR facts and
-               records the S3 ledger from this; do NOT write a ledger or results
-               file yourself.
-          # Allow general Bash. The per-command allowlist rejected ~6-21 calls
-          # per run, and every observed rejection was a benign compound command
-          # (`for` loops, `cd x && …`, `a; b` chains) or an unlisted verb like
-          # `rm` — claude-code-action matches each call against a single prefix,
-          # so a chain can never match. This runs on an ephemeral runner; the
-          # residual risk is the scoped bot/AWS/Pulumi creds it holds vs.
-          # injected instructions in reviewed content, accepted for throughput.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
+               "retirement": <bool>, "applied": [<one entry per applied fix>]}`.
+               Each `applied` entry is `{"category":
+               "claim|link|frontmatter|vale|readthrough", "file": "<path>",
+               "lines": [<start>, <end>], "source": "<finding pointer>"}` with
+               `lines` the PRE-FIX line numbers (the file as it was on master —
+               the same numbering the artifacts use). The publish job
+               deterministically verifies every hunk in your exported changes
+               falls within a recorded finding's line range; an edit outside
+               the recorded findings fails the publish gate and nothing is
+               pushed. The workflow derives the PR facts and records the S3
+               ledger from this; do NOT write a ledger or results file
+               yourself.
+          # Broad Bash is deliberate and is what the job's privilege profile
+          # buys: this job holds no push token, no AWS creds, and no
+          # production environment, so compound commands (`make ensure &&
+          # make lint`, `for` loops) run without the 6-21 benign denials/run
+          # the old per-command allowlist caused — while the blast radius of
+          # injected instructions in reviewed content is bounded to the
+          # Anthropic API key the model inherently runs on. Every write
+          # (branch, push, PR) happens in the publish job behind
+          # publish-gate.py.
+          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
 
-      # TEMPORARY DIAGNOSTIC: runs show a high permission_denials_count (the model
-      # hitting the allowlist wall, often on compound commands like
-      # `make lint && make build`), but the GitHub log streams only the init and
-      # result events — not the rejected commands. Parse the full transcript
-      # (execution_file, which only exists on the runner) and print just the
-      # denied command strings to the step summary, so the allowlist can be sized
-      # from real data. Emits no tool *results* — safe for this public repo.
-      # Remove once the allowlist is tuned.
-      - name: Summarize tool denials
-        if: always() && steps.claude.outputs.execution_file != ''
-        continue-on-error: true
+      # Hand the model's work to the publish job as data. Stage everything
+      # EXCEPT dot-paths — that excludes the runtime artifacts above AND
+      # anything under .github/ or .claude/, so a patch can never carry
+      # workflow or skill changes. .gitignore keeps build products
+      # (node_modules, public/, generated assets) out of the staging.
+      - name: Export review changes for the publish job
+        if: always() && steps.precheck.outputs.skip != 'true'
         run: |
-          python3 scripts/content-review/summarize-denials.py \
-            "${{ steps.claude.outputs.execution_file }}"
+          git add -A -- ':!.*' ':!.*/**'
+          git diff --cached --binary > .review-changes.patch
+          git diff --cached --name-only -z > .review-changes.paths
+          # Zero-context twin of the patch for the publish job's fix-scope
+          # gate (verify-fix-scope.py judges hunk line ranges, so context
+          # lines must not widen them). Same staged tree, same step ⇒ always
+          # consistent with the patch that ships.
+          git diff --cached --unified=0 > .review-changes.u0.diff
+          echo "--- changed paths ---"
+          git diff --cached --name-only
+      - name: Upload handoff artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: review-handoff
+          # All dotfiles: upload-artifact excludes hidden files unless told
+          # otherwise.
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
+          path: |
+            .content-review-queue.json
+            .content-review-verdict.json
+            .pr-body-draft.md
+            .review-changes.patch
+            .review-changes.paths
+            .review-changes.u0.diff
 
-      # Lint re-gate + ready promotion. The model opened the PR as a DRAFT and
-      # we don't trust its self-report that `make lint` passed: check out the
-      # pushed branch and re-run lint ourselves. On PASS, promote the PR to ready
-      # — that draft→ready transition is what fires triage and the docs review
+  publish:
+    name: Validate and publish (deterministic, credentialed)
+    runs-on: ubuntu-latest
+    needs: review
+    # Runs even when the review job failed — the ledger must record the
+    # incomplete outcome so the page stays due — but not when the run was
+    # cancelled outright.
+    if: always() && needs.review.result != 'cancelled'
+    timeout-minutes: 15
+    # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
+    # select the environment to resolve it — otherwise `Resolve ledger bucket`
+    # runs with --stack "" and the S3 ledger write is silently skipped.
+    environment: production
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write # Required for ESC OIDC auth
+    steps:
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout — the branch pushed and the PR opened below then go out as
+      # pulumi-bot rather than github-actions[bot], which is what lets the
+      # draft→ready transition fire the downstream triage/review workflows.
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          fetch-depth: 0
+      - name: Install Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24.x'
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            infrastructure/yarn.lock
+            theme/yarn.lock
+            theme/stencil/yarn.lock
+      # The authoritative re-lint below runs `make lint` (markdownlint +
+      # prettier), which needs node_modules; the review job's install lives
+      # in the other runner's workspace.
+      - name: Install lint dependencies
+        run: yarn install --frozen-lockfile --prefer-offline
+
+      - name: Download handoff artifact
+        continue-on-error: true
+        uses: actions/download-artifact@v7
+        with:
+          name: review-handoff
+
+      # The publish gate: deterministic checks between the model's output and
+      # anything credentialed. Emits publish/branch/retirement outputs; a
+      # violation fails this step (and the run goes red) while the ledger
+      # step below still records the page incomplete so it is retried under
+      # the attempt cap.
+      - name: Publish gate
+        id: gate
+        run: |
+          python3 scripts/content-review/publish-gate.py \
+            --queue .content-review-queue.json \
+            --verdict .content-review-verdict.json \
+            --patch .review-changes.patch
+
+      # Always downloaded (not just when publishing): the guardrail gates
+      # below need it for a publishable verdict, and later ledger-side steps
+      # may read the pre-model copies (e.g. the claims index records verified
+      # claims even for a clean page).
+      - name: Download guardrail snapshot
+        if: always()
+        continue-on-error: true
+        uses: actions/download-artifact@v7
+        with:
+          name: review-snapshot
+          path: .review-snapshot
+
+      # Code-enforced guardrails (issue #20078 §3.1), layered on the publish
+      # gate above. Both used to be instruction-only, honored by the model
+      # reading the skill:
+      #   1. retire veto — a retirement verdict for a no_retire (or tier-1/
+      #      tier-0) page is rejected outright, judged from this clean
+      #      checkout's strategic-tiers.yaml + the trusted dispatch `path`
+      #      input. The publish gate's own no_retire backstop reads the
+      #      queue, which rides the model-writable handoff artifact — this
+      #      check closes that hole.
+      #   2. fix scope — every hunk in the patch must fall inside a recorded
+      #      finding's pre-fix line range (verify-fix-scope.py), judged
+      #      against the PRE-MODEL snapshot artifacts; an out-of-range edit
+      #      means the model strayed beyond the five high-confidence
+      #      categories.
+      # NO continue-on-error: a breach fails this step, the publish step
+      # below never runs (implicit success() condition) so nothing is ever
+      # pushed, and the ledger step still records the page incomplete
+      # (if: always()) so it is retried under the attempt cap.
+      - name: Enforce guardrail gates
+        id: gates
+        if: steps.gate.outputs.publish == 'true'
+        env:
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
+        run: |
+          BASE_SHA=$(cat .review-snapshot/base-sha.txt 2>/dev/null || true)
+          if [ -z "$BASE_SHA" ]; then
+            echo "::error::guardrail snapshot is missing or carries no base-sha; refusing to publish"
+            exit 1
+          fi
+          if [ "${{ steps.gate.outputs.retirement }}" = "true" ]; then
+            python3 scripts/content-review/check-retire-veto.py \
+              --path "$ARTICLE_PATH" \
+              --tiers .claude/commands/review-existing-content/references/strategic-tiers.yaml \
+              || { echo "::error::retire veto: $ARTICLE_PATH is protected (no_retire); nothing will be pushed"; exit 1; }
+          else
+            python3 scripts/content-review/verify-fix-scope.py \
+              --diff-file .review-changes.u0.diff --base-sha "$BASE_SHA" \
+              --article "$ARTICLE_PATH" --verdict .content-review-verdict.json \
+              --artifacts-dir .review-snapshot --out .fix-scope-report.json \
+              || { echo "::error::fix-scope gate failed; report follows"; cat .fix-scope-report.json; exit 1; }
+          fi
+
+      # Branch, push, and open the PR — the write half of what used to be the
+      # model's SKILL.md steps 1 and 7. The branch name comes from the gate
+      # (queue slug + verdict retirement), never from the model, and the
+      # applied paths are re-checked against the gate's scope rules after
+      # `git apply` — the staged tree, not the patch text, is what ships.
+      #
+      # We run the authoritative `make lint` on the applied tree BEFORE opening
+      # the PR — we don't trust the model's self-report that lint passed. On
+      # PASS the PR opens READY for review, which fires triage → review
       # (content-review/* PRs flow through the normal triage → review chain; see
-      # claude-triage.yml / claude-code-review.yml). On FAIL, leave it draft (so
-      # triage never fires) and comment the output for a human. Either way, stamp
-      # the authoritative result into the PR body's `<!-- LINT-RESULT -->`
-      # placeholder — this gate is the authority on lint, not the model. The
-      # ledger still records `reviewed`. Build is left to the PR's normal CI.
-      # On a ready PR we also arm GitHub auto-merge (squash); `master` requires
-      # 1 approval + the build check, so it merges only after a human approves.
-      - name: Re-lint, promote, and arm auto-merge
+      # claude-triage.yml / claude-code-review.yml). On FAIL it opens as a DRAFT
+      # so triage never fires, and the next step comments the lint output for a
+      # human. Either way the next step stamps the authoritative result into the
+      # PR body. Deciding ready-vs-draft at creation time (rather than opening a
+      # draft and promoting it) means a passing PR is born ready and never
+      # depends on a separate promotion transition firing.
+      - name: Create branch and PR
+        id: publish
+        if: steps.gate.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
+        run: |
+          BRANCH="${{ steps.gate.outputs.branch }}"
+          git config --local user.name "pulumi-bot"
+          git config --local user.email "bot@pulumi.com"
+          git checkout -b "$BRANCH"
+          git apply --index .review-changes.patch
+          git diff --cached --name-only -z > .applied.paths
+          python3 scripts/content-review/publish-gate.py \
+            --queue .content-review-queue.json \
+            --verdict .content-review-verdict.json \
+            --patch .review-changes.patch \
+            --paths-from .applied.paths
+          TITLE="Content review: $ARTICLE_PATH"
+          if [ "${{ steps.gate.outputs.retirement }}" = "true" ]; then
+            TITLE="Content review (retirement): $ARTICLE_PATH"
+          fi
+          git commit -m "$TITLE" -m "Automated existing-content review." \
+            -m "Co-Authored-By: Claude <noreply@anthropic.com>"
+          # A stale branch from an earlier incomplete run (no open PR — the
+          # review job's pre-check guarantees that) is safe to overwrite.
+          # Fetch it first so --force-with-lease holds a fresh lease for the
+          # branch no matter which refs the checkout step happened to fetch;
+          # `|| true` covers the common case where the branch doesn't exist.
+          git fetch origin "$BRANCH" || true
+          git push --force-with-lease -u origin "$BRANCH"
+          # Authoritative lint gate: open ready on PASS, draft on FAIL. The
+          # result is recorded as a step output so the next step can stamp the
+          # body and arm auto-merge / comment without re-running lint.
+          if make lint > .lint.log 2>&1; then
+            echo "lint passed on $BRANCH; opening PR ready for review (fires triage → review)"
+            echo "lint_result=passed" >> "$GITHUB_OUTPUT"
+            gh pr create --title "$TITLE" --body-file .pr-body-draft.md \
+              --base master --head "$BRANCH"
+          else
+            echo "::warning::make lint failed on $BRANCH; opening PR as draft"
+            echo "lint_result=failed" >> "$GITHUB_OUTPUT"
+            gh pr create --draft --title "$TITLE" --body-file .pr-body-draft.md \
+              --base master --head "$BRANCH"
+          fi
+
+      # Post-publish bookkeeping. The authoritative `make lint` already ran in
+      # the publish step and decided whether the PR opened ready (PASS) or draft
+      # (FAIL); here we stamp that result into the PR body's `<!-- LINT-RESULT -->`
+      # placeholder — this gate is the authority on lint, not the model — and,
+      # on PASS, arm GitHub auto-merge (squash). On FAIL we comment the lint
+      # output for a human. The ledger still records `reviewed`. Build is left
+      # to the PR's normal CI. `master` requires 1 approval + the build check,
+      # so auto-merge never merges on its own.
+      - name: Stamp lint result and arm auto-merge
         id: lint
-        if: hashFiles('.content-review-verdict.json') != ''
+        if: steps.publish.outcome == 'success' && steps.gate.outputs.publish == 'true'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
         run: |
-          VERDICT=$(jq -r '.verdict // empty' .content-review-verdict.json)
-          [ "$VERDICT" = "fixed" ] || { echo "verdict=$VERDICT; no branch to re-lint"; exit 0; }
-          RETIRE=$(jq -r 'if .retirement then "retire-" else "" end' .content-review-verdict.json)
-          SLUG=$(jq -r '.articles[0].slug' .content-review-queue.json)
-          BRANCH="content-review/${RETIRE}${SLUG}"
-          git fetch origin "$BRANCH" || { echo "::warning::branch $BRANCH not found"; exit 0; }
-          git checkout "$BRANCH"
+          BRANCH="${{ steps.gate.outputs.branch }}"
           # Stamp the authoritative lint result into the PR body's Verification
           # section, replacing the composer's placeholder (idempotent: only acts
           # if the placeholder is still present, so a re-run can't double-stamp).
@@ -360,11 +630,9 @@ jobs:
             python3 scripts/content-review/stamp-lint-result.py \
               --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)" || true
           }
-          if make lint > .lint.log 2>&1; then
-            echo "lint passed on $BRANCH; promoting draft → ready (fires triage → review)"
+          if [ "${{ steps.publish.outputs.lint_result }}" = "passed" ]; then
             stamp_body passed
-            gh pr ready "$BRANCH" || echo "::warning::could not promote $BRANCH to ready"
-            # Arm auto-merge (squash) on the now-ready PR. `master` requires 1
+            # Arm auto-merge (squash) on the ready PR. `master` requires 1
             # approving review AND the "Install deps and build site" check, so
             # this NEVER merges on its own — the PR merges only once a human
             # approves and the build is green, which just removes the manual
@@ -373,10 +641,9 @@ jobs:
             gh pr merge "$BRANCH" --auto --squash \
               || echo "::warning::could not enable auto-merge on $BRANCH"
           else
-            echo "::warning::make lint failed on $BRANCH; leaving PR as draft"
             stamp_body failed
             {
-              echo "Automated review note: \`make lint\` failed on this branch, so the PR was left as a draft and no review was triggered. Lint output:"
+              echo "Automated review note: \`make lint\` failed on this branch, so the PR was opened as a draft and no review was triggered. Lint output:"
               echo ""
               echo '```'
               tail -c 4000 .lint.log
@@ -384,18 +651,56 @@ jobs:
             } > .lint-comment.md
             gh pr comment "$BRANCH" --body-file .lint-comment.md || true
           fi
-          git checkout - || true
+
+      # AWS creds so the ledger-write step below can push this article's
+      # review record to S3. Degrades gracefully (continue-on-error): if the
+      # role can't be assumed the review still ran, the ledger write is just
+      # skipped (the page reappears next cycle rather than going into cooldown).
+      - name: Configure AWS credentials
+        id: aws-creds
+        if: always()
+        continue-on-error: true
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::388588623842:role/ContinuousDelivery
+          role-session-name: content-review-article
+          aws-region: us-west-2
+
+      # Resolve the ledger bucket from our Pulumi stack output rather than a
+      # hand-maintained repo variable (same pattern as schedule-social.yml).
+      # Degrades gracefully: if the output isn't there, `uri` stays empty and
+      # the ledger-write step below is skipped.
+      - name: Install Pulumi CLI
+        if: always()
+        uses: pulumi/actions@v7
+      - name: Resolve ledger bucket
+        id: ledger-bucket
+        if: always()
+        continue-on-error: true
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
+        run: |
+          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
+            # The claims index shares the ledger bucket under its own prefix
+            # (one snapshot object per page; see record-claims.py).
+            echo "claims_uri=s3://$BUCKET/claims/" >> "$GITHUB_OUTPUT"
+          else
+            echo "ledger bucket output unavailable; ledger write will be skipped"
+          fi
 
       # Record the page's outcome to the S3 ledger as one object keyed by slug.
-      # Runs `if: always()` so a model that exits without output still lands a
-      # record. With no sentinel the status is derived from observable state
+      # Runs `if: always()` so a review job that died without output still lands
+      # a record. With no sentinel the status is derived from observable state
       # (`--claude-outcome` + whether a content-review/<slug> branch was pushed):
       # a successful run that changed nothing is "clean" and advances the
-      # staleness clock; a failed run or a stranded branch is "incomplete" and
-      # stays due (retried next sweep up to the attempt cap). record-review.py
-      # builds the canonical record, derives the PR facts from `gh`, stamps
-      # reviewed_at, increments attempts, uploads, and emits the dispatch signal.
-      # One article per run ⇒ one object, so writes never collide.
+      # staleness clock; a failed run, a gate violation, or a stranded branch is
+      # "incomplete" and stays due (retried next sweep up to the attempt cap).
+      # record-review.py builds the canonical record, derives the PR facts from
+      # `gh`, stamps reviewed_at, increments attempts, and uploads. One article
+      # per run ⇒ one object, so writes never collide.
       - name: Record review ledger
         id: record
         if: always() && steps.ledger-bucket.outputs.uri != ''
@@ -407,7 +712,31 @@ jobs:
           python3 scripts/content-review/record-review.py \
             --queue .content-review-queue.json \
             --verdict .content-review-verdict.json \
-            --claude-outcome "${{ steps.claude.outcome }}"
+            --claude-outcome "${{ needs.review.outputs.claude_outcome }}"
+
+      # Persist the page's verified claims to the claims index (same bucket,
+      # claims/ prefix) — the whole-page snapshot the nightly volatile
+      # re-verification (claims-reverify.yml) reads. This worker is the index's
+      # ONLY writer: its runs are whole-page, so overwriting <slug>.json is
+      # always correct; the pre-merge PR review is partial-page and must never
+      # write here. Inputs come from the pre-model guardrail snapshot (not the
+      # model-writable handoff artifact), so the index records exactly what
+      # the pre-steps verified. record-claims.py skips the upload when the
+      # verify pre-step degraded (empty verdicts + errors), preserving the
+      # previous snapshot.
+      - name: Record claims index
+        if: always() && steps.ledger-bucket.outputs.claims_uri != ''
+        continue-on-error: true
+        env:
+          CONTENT_REVIEW_CLAIMS_URI: ${{ steps.ledger-bucket.outputs.claims_uri }}
+        run: |
+          if [ ! -f .review-snapshot/.verified-claims.json ]; then
+            echo "no snapshotted verified-claims; skipping the claims index write"
+            exit 0
+          fi
+          python3 scripts/content-review/record-claims.py \
+            --queue .review-snapshot/.content-review-queue.json \
+            --verified .review-snapshot/.verified-claims.json
 
       # No explicit review dispatch: a content-review PR that passes re-lint is
       # promoted draft → ready in the step above, and that transition drives the

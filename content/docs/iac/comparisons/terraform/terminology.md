@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi vs. Terraform: Terminology and Commands"
+authors: ["joe-duffy"]
 meta_desc: Many of the terms you may know from working with Terraform have direct equivalents in Pulumi. Here is a list of common terms and how they relate to Pulumi.
 title: Pulumi equivalents
 h1: Pulumi terms & command equivalents

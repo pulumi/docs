@@ -6,7 +6,10 @@ description: |
 meta_desc: By leveraging Pulumi, the Unity Aura team successfully modernized their CI/CD & infrastructure management.
 
 customer_name: Unity
+industry: gaming-entertainment
 customer_logo: /logos/customers/unity.png
+logo_bg_color: "#000000"
+logo_style: white
 customer_url: https://unity.com/
 
 quote_block:
@@ -63,26 +66,25 @@ The Aura DevOps team leveraged Pulumi's extensive Kubernetes support to orchestr
 
 The new Kubernetes architecture improved execution time and made it easier for the team to upgrade Jenkins versions faster to take advantage of new features. The team also used Pulumi to implement AWS resource tagging – making it easier for their FinOps team to track costs at a more granular level.
 
-## Adopting GitHub Actions Self-Hosted Runners for CI/CD {#adopting-github-actions}
+## Adopting GitHub Actions self-hosted runners for CI/CD {#adopting-github-actions}
 
 Despite these improvements, Jenkins upgrades and plugin management continued to be a burden and the team decided to use a more modern system that would offer a simpler setup process and easier maintenance compared to Jenkins.
 
 To further accelerate deployment times, and to maintain security best practices, Aura adopted [GitHub Actions](https://github.com/features/actions/) with self-hosted runners on EKS. Once again, the team used Pulumi to manage the EKS and workload deployments and related AWS resources. To improve performance, the team broke up monolithic Jenkins jobs into smaller tasks in GitHub Actions.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/unity-gh-diagram.png" alt="Unity GitHub Actions diagram">
+![Unity GitHub Actions diagram](/images/case-studies/unity-gh-diagram.png)
 
-## Empowering Developers with Pulumi's Automation API {#empowering-developers}
+## Empowering developers with Pulumi's Automation API {#empowering-developers}
 
 One of Aura's core goals was to enable their developers to self-serve cloud infrastructure in a process that’s tightly coupled with their existing development process on GitHub. By leveraging Pulumi's Automation API and reusable infrastructure libraries, Aura’s DevOps team provided developers with custom CLI-based tools they needed to deploy and manage infrastructure independently. This enhanced developer productivity and reduced the dependency on DevOps team resources for creating new infrastructure. Because Pulumi enabled the DevOps team and developers to standardize on one language: TypeScript, everyone could understand and contribute to infrastructure improvements in this model.
 
 The benefit to developers is that they can independently provision new cloud resources to test their product and deliver new features faster.
 
-## Ensuring Consistency and Preventing Drift with Automation API {#preventing-drift}
+## Ensuring consistency and preventing drift with Automation API {#preventing-drift}
 
 To give all stakeholders confidence in the infrastructure provisioning process, the team uses `pulumi preview` and `pulumi refresh` from its Automation API workflow to detect and correct drift. This capability runs whenever a developer initiates a deployment and ensures that any unauthorized modifications are promptly identified and addressed, safeguarding the integrity of the development environment - bringing the infrastructure back in line with the desired state defined in the Pulumi program.
 
-## Efficiency Gains Over Other IaC Tools {#efficiency}
+## Efficiency gains over other IaC tools {#efficiency}
 
 The DevOps team estimates that Aura's infrastructure projects were completed faster using Pulumi compared to an equivalent effort using other tools in the market. “If we take Terraform for instance, it relies on HCL and lacks support for Object Oriented Programming (OOP) concepts like classes, objects, inheritance,” says Eilon Ashkenazi, DevOps Engineer on the Aura team. “An equivalent deployment would take significantly more lines of infrastructure code to implement while yielding IaC that is less reusable.”
 
@@ -90,7 +92,7 @@ In a previous approach, a typical client-facing service deployed with Ansible an
 
 The ease of use and collaboration with developers using TypeScript, coupled with Pulumi’s powerful automation features, allowed Aura to achieve their CI/CD modernization and infrastructure management goals quickly, without the need for the developers to learn an unfamiliar syntax such as HCL or YAML.
 
-## Speeding up Projects with Pulumi Copilot {#copilot}
+## Speeding up projects with Pulumi Copilot {#copilot}
 
 The team has had early success using Pulumi Copilot to augment their efforts. For example, a developer needed to set up a DocumentDB instance but an equivalent component was missing from the standard `pulumi-kit` provided by DevOps (the Aura team’s TypeScript package for Pulumi components). Using Pulumi AI, the developer was able to quickly understand the steps needed to create this new resource type and self-serve a reference implementation for their development environment. This helped remove DevOps as a bottleneck and accelerate development while the team could focus on formalizing updates to `pulumi-kit` for production.
 

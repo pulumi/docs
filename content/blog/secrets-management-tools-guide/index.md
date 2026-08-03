@@ -3,7 +3,6 @@ title: "Secrets Management Tools: The Complete 2025 Guide"
 date: 2025-07-24
 draft: false
 meta_desc: "Compare secrets management tools and find the best solution for your infrastructure with expert analysis and recommendations."
-meta_image: meta.png
 authors:
     - asaf-ashirov
     - boris-schlosser
@@ -12,7 +11,8 @@ tags:
     - security
     - devops
     - configuration-as-code
-    - pulumi-esc
+    - esc
+category: general
 ---
 
 Every modern application depends on secrets to function: database passwords, API keys, certificates, and configuration values that enable secure communication between services. But here's the challenge: as your infrastructure grows, managing these secrets becomes exponentially more complex.
@@ -313,6 +313,10 @@ Consider both current requirements and future growth when evaluating secrets man
 High availability with automatic failover and disaster recovery ensures that secret management doesn't become a single point of failure in critical applications. Horizontal scaling capabilities handle increased load without performance degradation as organizations grow. Intelligent caching strategies optimize performance while maintaining security, reducing API load while ensuring secrets remain current.
 
 Effective performance and scalability ensure that secret management enhances rather than hinders application performance, enabling organizations to scale their security practices alongside their infrastructure growth.
+
+{{< blog/cta-card title="Try secrets orchestration" href="/docs/esc/" >}}
+Pulumi ESC connects your existing secret stores behind a single interface, adding configuration as code and dynamic, short-lived credentials.
+{{< /blog/cta-card >}}
 
 ## Key Considerations for Choosing Secrets Management Tools
 

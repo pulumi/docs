@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2025-06-09
 draft: false
 meta_desc: "Introducing Pulumi IAM with granular access control, Custom Roles, and scoped Access Tokens for enhanced security and automation."
-meta_image: "meta.png"
 authors:
   - german-lena
   - devon-grove
@@ -17,6 +16,7 @@ tags:
   - pulumi-cloud
   - access-tokens
   - oidc
+category: product
 ---
 
 Cloud development is accelerating at an unprecedented pace, fueled by AI and the relentless drive for innovation. But this incredible speed demands unwavering trust in your security posture. How do you empower teams to deploy rapidly and frequently without opening doors to risk or violating compliance mandates? Today, we're thrilled to answer that critical challenge by introducing **Pulumi Identity and Access Management** (IAM) – a foundational new capability designed to embed robust, granular security directly into your cloud development lifecycle, enabling you to innovate both quickly and safely with Pulumi. Pulumi IAM provides the unified framework for fine-grained authorization needed to confidently manage modern cloud infrastructure and applications across the entire Pulumi Cloud platform.

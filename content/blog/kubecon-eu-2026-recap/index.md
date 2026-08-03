@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-04-01T00:00:00-07:00
 draft: false
 meta_desc: "Recap of KubeCon EU 2026 in Amsterdam: AI in production on Kubernetes, agentic AI identity, inference routing, and platform engineering."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - ai
     - platform-engineering
     - cloud-native
+category: community
 social:
     twitter: "66% of orgs run AI on Kubernetes. Only 7% deploy daily. That gap defined every conversation I had at KubeCon EU 2026. I wrote up what's actually changing: llm-d, agent identity with SPIFFE, inference gateways, and why platform teams can't ignore this."
     linkedin: |
@@ -74,7 +74,7 @@ If inference was this year's production story, agentic AI was the architecture s
 
 [**agentregistry**](https://github.com/agentregistry-dev/agentregistry) showed up as a centralized discovery service for MCP servers and agents. As agents and tool servers multiply, you need a registry to find and manage them, the same way container registries became necessary for images.
 
-David Soria Parra from Anthropic gave a talk on [MCP evolving beyond simple tool-calling](https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/) into richer interaction patterns ([sched](https://colocatedeventseu2026.sched.com/event/2E7Db/agentics-day-mcp-+-agents-mcp-in-2026-context-is-all-you-need-david-soria-parra-anthropic)). Google announced the [**Kubernetes Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) for running agentic AI workloads in secure, isolated environments.
+David Soria Parra from Anthropic gave a talk on [MCP evolving beyond simple tool-calling](https://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/) into richer interaction patterns ([sched](https://colocatedeventseu2026.sched.com/event/2E7Db/agentics-day-mcp-+-agents-mcp-in-2026-context-is-all-you-need-david-soria-parra-anthropic)). Google announced the [**Kubernetes Agent Sandbox**](https://github.com/kubernetes-sigs/agent-sandbox) for running agentic AI workloads in secure, isolated environments — we've since published a full [walkthrough of what it is and how to deploy it](/blog/kubernetes-agent-sandbox/).
 
 ## AI gateways and inference routing
 

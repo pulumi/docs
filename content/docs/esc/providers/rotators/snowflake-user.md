@@ -168,45 +168,21 @@ Perform a manual rotation on the environment to provision a new private key. If 
 }
 ```
 
-## Inputs
+## Schema reference
 
-| Property          | Type                        | Description                                                                                 |
-|-------------------|-----------------------------|--------------------------------------------------------------------------------------------|
-| `login`           | [SnowflakeLogin](#snowflakelogin) | Required. Credentials used to connect to Snowflake and perform the rotation.              |
-| `targetUser`      | string                      | Required. The Snowflake user whose keypair will be rotated.                                 |
+{{< esc-schema-updated >}}
 
-### SnowflakeLogin
+### Inputs
 
-The `login` object must contain:
+{{< esc-schema type="rotator" name="snowflake-user" section="inputs" >}}
 
-| Property   | Type   | Description                                      |
-|------------|--------|--------------------------------------------------|
-| `account`  | string | Required. Snowflake account identifier.          |
-| `user`     | string | Required. Managing user to connect as. This user must have permission to alter the target user. |
+### State
 
-And exactly one of:
+{{< esc-schema type="rotator" name="snowflake-user" section="state" >}}
 
-| Property     | Type   | Description                                                                                                             |
-|--------------|--------|-------------------------------------------------------------------------------------------------------------------------|
-| `privateKey` | string | Private key in PEM format.                                                                                              |
-| `token`      | string | OAuth token (output of [snowflake-login](/docs/esc/providers/login/snowflake-login/) provider).  |
+### Outputs
 
-## State (Optional)
-
-| Property    | Type   | Description                                                            |
-|-------------|--------|------------------------------------------------------------------------|
-| `account`   | string | Snowflake account identifier.                                          |
-| `privateKey`| string | The private key in PEM format.                                         |
-| `createdAt` | string | When the keypair was generated, in RFC3339 format.                     |
-
-## Outputs
-
-| Property    | Type   | Description                                                           |
-|-------------|--------|-----------------------------------------------------------------------|
-| `account`   | string | Snowflake account identifier.                                         |
-| `user`      | string | The rotated user.                                                     |
-| `privateKey`| string | Private key in PEM format (stored as a secret).                       |
-| `rotatedAt` | string | When the keypair was generated, in RFC3339 format.                    |
+{{< esc-schema type="rotator" name="snowflake-user" section="outputs" >}}
 
 ## Troubleshooting
 

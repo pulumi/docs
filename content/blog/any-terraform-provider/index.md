@@ -3,7 +3,6 @@ title: "Introducing: Support For Using Any Terraform Provider with Pulumi"
 date: 2024-08-29T10:00:00-06:00
 allow_long_title: true
 meta_desc: "Pulumi now supports using any Terraform or OpenTofu provider with Pulumi, in just a few seconds"
-meta_image: meta.png # TODO
 authors:
   - luke-hoban
   - ian-wahbe
@@ -11,6 +10,7 @@ authors:
 tags:
   - terraform
   - features
+category: product
 
 social:
   twitter: "You can now use ANY Terraform Provider from Pulumi! The entire ecosystem of Terraform/OpenTofu providers is now available to Pulumi users. And all the benefits of Pulumi are available to partners and developers building their own Terraform Providers, with no extra work!"
@@ -143,6 +143,10 @@ We’ve embraced this approach in many other areas as well:
 * And, of course, Pulumi offers features for deploying and managing [Azure Resource Manager templates](https://www.pulumi.com/registry/packages/azure-native/api-docs/resources/deploymentatscope/) and [CloudFormation templates](https://www.pulumi.com/registry/packages/aws/api-docs/cloudformation/stack/), enabling easy deployment of existing cloud provider IaC artifacts.
 
 With the new support for Any Terraform Provider, we’re bringing this same experience to the Terraform and OpenTofu provider ecosystems.
+
+{{< blog/cta-card title="Use any Terraform provider" label="Learn more" href="/docs/iac/concepts/providers/any-terraform-provider/" >}}
+Add any Terraform or OpenTofu provider to your Pulumi program with a single command, and manage it alongside the rest of your cloud infrastructure in one workflow.
+{{< /blog/cta-card >}}
 
 ## How Does This Work?
 

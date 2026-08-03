@@ -1,5 +1,6 @@
 ---
 title_tag: "Pulumi Compared to Alternatives"
+authors: ["joe-duffy"]
 meta_desc: Learn how Pulumi compares with alternative infrastructure as code solutions that may share overlapping capabilities.
 title: Comparisons
 h1: Compare Pulumi to other solutions
@@ -28,12 +29,15 @@ of these are complementary and can be used together, whereas some are "either or
 Here are several useful comparisons that will help you understand Pulumi's place in the cloud tooling ecosystem:
 
 * [HashiCorp Terraform](/docs/iac/comparisons/terraform/)
+* [HCP Terraform (Terraform Cloud)](/docs/iac/comparisons/terraform-cloud/)
 * [AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 * [AWS CDK](/docs/iac/comparisons/aws-cdk/)
 * [CDKTF](/docs/iac/comparisons/cdktf/)
 * [Azure Resource Manager (ARM) Templates](/docs/iac/comparisons/arm-templates/)
 * [Crossplane](/docs/iac/comparisons/crossplane/)
 * [OpenTofu](/docs/iac/comparisons/opentofu/)
+* [Spacelift](/docs/iac/comparisons/spacelift/)
+* [Terraform Automation and Collaboration Software (TACOS)](/docs/iac/comparisons/tacos/)
 * [Helm](/docs/iac/comparisons/helm/)
 * [Kubernetes YAML Manifests](/docs/iac/comparisons/k8s-yaml-dsls/)
 * [Serverless Framework](/docs/iac/comparisons/serverless/)

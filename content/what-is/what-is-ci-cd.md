@@ -84,3 +84,5 @@ For a detailed exploration and steps to implement CI/CD and DevOps practices, re
 ## Learn more
 
 With Pulumi, you can create, deploy, and manage infrastructure on any cloud using the programming languages and tools you already know. [Get started today](/docs/get-started/).
+
+To automate delivery by continuously reconciling infrastructure from Git, see [GitOps](/what-is/what-is-gitops/).

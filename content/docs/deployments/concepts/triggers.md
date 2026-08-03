@@ -38,7 +38,7 @@ Not every operation is available for every trigger. For background on drift, see
 
 ## Push to deploy
 
-When a stack uses a [version control integration](/docs/integrations/version-control/) as its source, pushes to your repository can trigger deployments automatically: a `pulumi preview` when a pull request is opened, a `pulumi up` when commits merge to the configured branch, and a `pulumi up` when a matching git tag is pushed. These triggers — and the toggles and filters that control them — are configured in the stack's deployment settings. See [Source settings](/docs/deployments/concepts/settings/#source-settings), [Path Filtering](/docs/deployments/concepts/settings/#path-filtering), and [Tag Filtering](/docs/deployments/concepts/settings/#tag-filtering).
+When a stack uses a [version control integration](/docs/integrations/version-control/) as its source, pushes to your repository can trigger deployments automatically: a `pulumi preview` when a pull request is opened, a `pulumi up` when commits merge to the configured branch, and a `pulumi up` when a matching git tag is pushed. These triggers — and the toggles and filters that control them — are configured in the stack's deployment settings. See [Source settings](/docs/deployments/concepts/settings/source/), [Path Filtering](/docs/deployments/concepts/settings/path-filtering/), and [Tag Filtering](/docs/deployments/concepts/settings/tag-filtering/).
 
 ## Click to Deploy
 
@@ -67,3 +67,5 @@ These triggers run operations on a time basis rather than in response to a sourc
 A [deployment webhook](/docs/deployments/concepts/webhooks/#deployment-webhooks) triggers a deployment on another stack in response to an event — for example, updating a dependent stack when an upstream stack (referenced via a [stack reference](/docs/iac/concepts/stacks/#stackreferences)) changes, or promoting a change from a lower environment to a higher one. A deployment webhook runs the target stack using that stack's existing [deployment settings](/docs/deployments/concepts/settings/); it cannot override them. To trigger a deployment with custom or one-off settings, use the [REST API](#rest-api) instead.
 
 The [Pulumi Auto Deploy package](/registry/packages/auto-deploy) (currently in Preview) lets you manage dependent stack updates declaratively.
+
+For a step-by-step walkthrough of cascading updates to downstream stacks — including how to avoid duplicate fires and re-trigger loops — see [Triggering dependent stack updates](/docs/deployments/guides/dependent-stack-updates/).

@@ -3,7 +3,8 @@ title: "Program the Cloud with 12 Pulumi Pearls"
 date: "2018-07-25"
 meta_desc: "In this post, we'll look at some fun ways you can program the cloud using Pulumi, including infrastructure, serverless, containers, and general tips and tricks."
 authors: ["joe-duffy"]
-tags: ["Serverless","AWS","containers","TypeScript"]
+tags: [serverless, aws, containers, typescript]
+category: tutorials
 ---
 
 In this post, we'll look at 12 "pearls" -- bite-sized code snippets --

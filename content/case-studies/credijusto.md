@@ -7,7 +7,10 @@ description: |
 meta_desc: Learn how Credijusto worked with Pulumi to help its development team scale to support rapid growth, while enforcing best practices for their infrastructure.
 
 customer_name: Credijusto
+industry: financial-services
 customer_logo: /logos/customers/credijusto_logo.svg
+logo_bg_color: "#FE9E2C"
+logo_style: dark
 
 quote_block:
   quote: |
@@ -55,7 +58,7 @@ can obtain access to credit in a fraction of the time and effort required with t
 banks. Its credit models are focused on the health of each business, focusing on overall
 performance, rather than considering only the owner's personal credit history.
 
-## Challenges Faced
+## Challenges faced
 
 Credijusto's high-growth model and accelerated success have led to the rapid expansion of
 its IT team over time, with many of its solution architects having developed key projects
@@ -71,7 +74,7 @@ updated, adding additional complexity to the environment. For legacy infrastruct
 for replacement, Credijusto needed a solution to standardize the creation of new
 infrastructure and simplify tracking and reporting for new cloud resources.
 
-## Streamlining Version Control, Ensuring Consistency
+## Streamlining version control, ensuring consistency
 
 One of the key benefits Credijusto found when moving from Terraform to Pulumi was the
 ability to version everything while increasing visibility into precisely what is changing
@@ -124,7 +127,7 @@ each application to scale with demand.
 >
 > &mdash; Fernando Carlietti, Lead DevOps Engineer, Credijusto.
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/credijusto-architecture.png" alt="Credijusto architecture">
+![Credijusto architecture](/images/case-studies/credijusto-architecture.png)
 
 ## Results
 
@@ -149,7 +152,7 @@ further simplifying their configuration while improving scalability. Finally, Pu
 Policies greatly improve their process of reporting and project cost allocation as new
 updates are deployed.
 
-## Next Steps
+## Next steps
 
 Credijusto plans to expand its use of Pulumi to modernize more of its infrastructure and
 will use it to create abstractions from its current applications. Its target is to have

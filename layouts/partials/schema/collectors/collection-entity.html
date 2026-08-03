@@ -11,14 +11,14 @@
     "@type" "ListItem"
     "position" $position
     "url" .Permalink
-    "name" .Title
+    "name" (or .Params.title_tag .Title)
   ) }}
 {{ end }}
 
 {{ $schema := dict
   "@type" "CollectionPage"
   "@id" "#main-content"
-  "name" .Title
+  "name" (or $.Params.title_tag $.Title)
   "url" .Permalink
   "inLanguage" "en-US"
 }}

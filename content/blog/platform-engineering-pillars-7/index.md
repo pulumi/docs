@@ -1,14 +1,15 @@
 ---
 title: "Governance as an Enabler: Scaling Safely and Confidently"
+feature_image: feature.png
 date: 2025-06-17
+updated: 2026-07-09
 draft: false
 meta_desc: Transform governance from manual bureaucracy into an automated enabler by embedding policy-as-code, RBAC, and automated controls directly into your platform.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
-    - platform-engineering-pillars
+category: best-practices
 series: platform-engineering-pillars
 social:
     twitter: >
@@ -35,7 +36,7 @@ social:
       Ready to make governance your competitive advantage? See how in our latest platform engineering pillar!
 ---
 
-In previous articles in this series, we've explored how [platform engineering](/blog/tag/platform-engineering-pillars/) transforms infrastructure chaos into consistent provisioning, empowers engineering teams through self-service infrastructure, optimizes workflows, embeds security directly into your platform, and provides observability as a superpower. Each pillar builds upon the previous ones, creating a cohesive foundation that accelerates innovation and productivity.
+In previous articles in this series, we've explored how [platform engineering](/blog/series/platform-engineering-pillars/) transforms infrastructure chaos into consistent provisioning, empowers engineering teams through self-service infrastructure, optimizes workflows, embeds security directly into your platform, and provides observability as a superpower. Each pillar builds upon the previous ones, creating a cohesive foundation that accelerates innovation and productivity.
 
 But as your platform scales, new challenges inevitably emerge. You've empowered engineering teams with self-service infrastructure, streamlined workflows, and embedded security directly into your platform. But as your platform scales, new challenges emerge: How do you ensure consistency, compliance, and cost control without slowing your teams down?
 

@@ -7,13 +7,14 @@ changelog:
     - 2025-03-11: Refreshed AWS guides links and modernized example references.
 draft: false
 meta_desc: Deploy AWS Lambda functions as container images with Pulumi. Compares Lambda ZIP, containers, Fargate, and ECS with 2026 limits, pricing, and runnable code.
-meta_image: meta.png
 authors:
     - mikhail-shilkov
 tags:
     - aws
     - containers
     - serverless
+category: tutorials
+faq_schema: true
 ---
 
 **TL;DR** &mdash; To run a container image in AWS Lambda, build an OCI image that implements the [Lambda Runtime API](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-api.html) (most teams start from an [AWS-provided base image](https://gallery.ecr.aws/lambda/)), push it to Amazon ECR, and create a Lambda function with `packageType: "Image"` pointing at the image URI. Lambda containers support images up to 10&nbsp;GB, up to 10&nbsp;GB of memory, up to 10&nbsp;GB of `/tmp` ephemeral storage, and a 15-minute execution ceiling. Pulumi automates the build, push, and function wiring in a single program. Pick Lambda containers when your workload is event-driven and bursty but your dependencies (binaries, ML models, system libraries) outgrow the 250&nbsp;MB ZIP limit; pick [AWS Fargate or ECS](/docs/iac/guides/clouds/aws/) when you need long-running tasks, persistent connections, or multi-container pods.
@@ -473,6 +474,10 @@ That is the entire program. `pulumi up` provisions everything in the right order
   ]
 }
 </script>
+
+{{< blog/cta-card title="Deploy Lambda containers with Pulumi" href="/docs/iac/guides/clouds/aws/ecr/" >}}
+Build the image, push it to Amazon ECR, wire up the IAM role, and deploy the function from one program in TypeScript, Python, Go, or the language you already use.
+{{< /blog/cta-card >}}
 
 ## When should I choose Lambda containers over ZIP packages?
 

@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-03-03
 draft: false
 meta_desc: "We benchmarked Terraform HCL and Pulumi TypeScript across two LLMs. HCL uses fewer tokens, but Pulumi's total pipeline cost is 41% lower."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -12,6 +11,7 @@ tags:
     - ai
     - infrastructure-as-code
     - llm
+category: perspectives
 social:
     twitter: "We benchmarked AI agents generating Terraform HCL and Pulumi TypeScript across two models. HCL uses fewer tokens per resource, but Opus + Pulumi had a 41% lower total pipeline cost because it deployed clean on the first pass with zero repairs. #InfrastructureAsCode #AI #Pulumi"
     linkedin: |
@@ -171,6 +171,10 @@ Tooling can close the gap further. The [Pulumi MCP server](/docs/iac/using-pulum
 
 This changes the workflow from "generate, fail, read error, retry" to "look up schema, generate correctly." Agent skills push this further by encoding working Pulumi idioms as structured prompts, so the model starts from a known-good baseline. Terraform has no equivalent to this MCP-based schema lookup. That difference matters more with every iteration.
 {{< /notes >}}
+
+{{< blog/cta-card title="Let agents generate deployable infrastructure" href="/docs/ai/mcp-server/" >}}
+Point Claude Code, Codex, or any agent at the Pulumi MCP server so it looks up real resource schemas and generates infrastructure as code that deploys.
+{{< /blog/cta-card >}}
 
 ## Where the industry is heading
 

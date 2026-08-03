@@ -4,13 +4,13 @@ allow_long_title: true
 date: 2025-04-25
 draft: false
 meta_desc: "Explore Pulumi's latest features including AI-assisted development with MCP Server, cross-language Components, ESC Rotated Secrets, and much more!"
-meta_image: meta.png
 authors:
     - arun-loganathan
     - meagan-cojocar
 tags:
     - features
     - release-notes
+category: product
 social:
     twitter: "Pulumi Releases Notes: AI-assisted IaC with our MCP Server, new cross-language components, registry expansion, ESC Rotated Secrets, and more! Check out all the new features we've shipped in the last two months!."
     linkedin: "Pulumi Release Notes are out! Take a look at the improvements we have shipped in the last two months across the Pulumi ecosystem! From AI-assisted IaC with our MCP Server to new cross-language components to powerful new capabilities in Pulumi ESC and Insights, these updates deliver on our commitment to making cloud management more powerful, accessible, and secure. Check out our latest release notes to see what's new!"

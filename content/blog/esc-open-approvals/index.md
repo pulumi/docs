@@ -3,13 +3,13 @@ title: "Pulumi ESC: Open Approvals"
 date: 2025-10-13T16:00:00-03:00
 updated: 2026-06-16
 meta_desc: Open Approvals enable strict, auditable approval workflows for environment activation, ensuring governance and safer infrastructure operations.
-meta_image: meta.png
 authors:
     - pablo-terradillos
     - claire-gaestel
     - robert-harris
 tags:
     - esc
+category: product
 ---
 
 Many teams live with the fear that a production environment **might be accidentally opened, exposing credentials or sensitive systems before anyone even notices**.

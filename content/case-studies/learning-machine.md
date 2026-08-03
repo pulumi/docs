@@ -7,7 +7,10 @@ description: |
 meta_desc: See how Learning Machine worked with Pulumi to streamline its DevOps processes and eliminate several hundred thousand lines of configuration code.
 
 customer_name: Learning Machine
+industry: education
 customer_logo: /logos/customers/learning-machine_logo.svg
+logo_bg_color: "#151828"
+logo_style: white
 customer_url: https://www.hyland.com/
 
 quote_block:
@@ -46,7 +49,7 @@ credentialing systems that leverage the blockchain as a secure anchor of trust. 
 the longevity and interoperability of these records, they are leading contributors to
 standards communities, including Blockcerts, IMS Global, and the W3C.
 
-## Challenges Faced
+## Challenges faced
 
 Like many Software as a Service companies, Learning Machine started off with a basic
 infrastructure and a simple development process. They selected Amazon Web Services as
@@ -73,7 +76,7 @@ geographies while keeping their SaaS costs under control. He huddled with his CO
 Hughes, and CTO, Kim Hamilton, to brainstorm about how to solve the dilemma they were
 facing.
 
-## Moving from Complicated to Simple
+## Moving from complicated to simple
 
 The team realized that in order to grow they needed to transition away from their
 first-generation tooling to an offering that more team members could understand and
@@ -99,7 +102,7 @@ their containers without having to manage servers or clusters. As part of this n
 removing additional complexity from their service architecture while making it easier to
 scale.
 
-<img class="block mx-auto md:max-w-4xl my-8" src="/images/case-studies/learning-machine-architecture.png" alt="Learning machine architecture">
+![Learning Machine architecture](/images/case-studies/learning-machine-architecture.png)
 
 ## Results
 
@@ -128,7 +131,7 @@ they never thought possible.
 
 <img class="block mx-auto md:max-w-2xl my-8" src="/images/case-studies/learning-machine-loc.png">
 
-## New Opportunities
+## New opportunities
 
 With the adoption of Pulumi, Learning Machine created new opportunities not just for the
 technical staff, but for the business as a whole. In addition to supporting new

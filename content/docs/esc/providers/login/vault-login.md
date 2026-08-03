@@ -52,41 +52,18 @@ values:
     VAULT_NAMESPACE: ${vault.login.namespace}
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="vault-login" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="vault-login" section="outputs" >}}
+
 ## Configuring OIDC
 
 To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/vault/) documentation.
-
-## Inputs
-
-| Property    | Type                                | Description                                                                                                               |
-|-------------|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| `address`   | string                              | The URL of the Vault server. Must contain a scheme and hostname, but no path.                                             |
-| `namespace` | string                              | [Optional] The namespace to log in to. Only available for Vault Enterprise.                                               |
-| `jwt`       | [VaultLoginJWT](#vaultloginjwt)     | [Optional] Options for JWT login. JWT login uses an OIDC token issued by the Pulumi Cloud to generate an ephemeral token. |
-| `token`     | [VaultLoginToken](#vaultlogintoken) | [Optional] Options for token login. Token login creates an ephemeral child token.                                         |
-
-### VaultLoginJWT
-
-| Property | Type   | Description                                               |
-|----------|--------|-----------------------------------------------------------|
-| `role`   | string | The name of the role to use for login.                    |
-| `mount`  | string | [Optional] - The name of the authentication engine mount. Defaults to `jwt`. |
-| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
-
-### VaultLoginToken
-
-| Property      | Type     | Description                                                                 |
-|---------------|----------|-----------------------------------------------------------------------------|
-| `token`       | string   | The parent token.                                                           |
-| `displayName` | string   | [Optional] - The display name of the ephemeral token. Defaults to 'pulumi'. |
-| `maxTtl`      | string   | [Optional] - The maximum TTL of the ephemeral token.                        |
-| `metadata`    | object   | [Optional] - Arbitrary metadata to associate with the ephemeral token.      |
-| `policies`    | string[] | [Optional] - List of policies for the token.                                |
-
-## Outputs
-
-| Property      | Type   | Description                                        |
-|---------------|--------|----------------------------------------------------|
-| `address`     | string | The URL of the vault server.                       |
-| `namespace`   | string | [Optional] - The namespace to use for the session. |
-| `token`       | string | The ephemeral token generated for the session.     |

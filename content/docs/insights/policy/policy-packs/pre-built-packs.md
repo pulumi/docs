@@ -8,6 +8,7 @@ menu:
     parent: policy-packs
     weight: 10
 aliases:
+  - /docs/insights/policy/pre-built-packs/
   - /docs/insights/policy/policy-as-code/pre-built-packs/
   - /docs/pulumi-cloud/insights/pre-built-packs/
   - /docs/iac/crossguard/pre-built-packs/
@@ -35,7 +36,8 @@ The following pre-built policy packs are available out of the box in Pulumi Clou
 | **CIS 8.1** | [AWS](/docs/reference/pre-built-policy-packs/cis/aws/), [Azure](/docs/reference/pre-built-policy-packs/cis/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/cis/google-cloud/) | Enforces CIS 8.1 controls to help organizations implement industry-recognized security best practices and benchmarks across multiple cloud providers. |
 | **CIS Kubernetes** | [AWS (EKS)](/docs/reference/pre-built-policy-packs/cis-kubernetes/aws/), [Azure (AKS)](/docs/reference/pre-built-policy-packs/cis-kubernetes/azure/), [Google Cloud (GKE)](/docs/reference/pre-built-policy-packs/cis-kubernetes/google-cloud/) | Enforces CIS Kubernetes Benchmark controls for managed Kubernetes services, helping organizations secure their container orchestration platforms with industry-recognized best practices. |
 | **HITRUST CSF 11.5** | [AWS](/docs/reference/pre-built-policy-packs/hitrust/aws/), [Azure](/docs/reference/pre-built-policy-packs/hitrust/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/hitrust/google-cloud/) | Provides predefined controls that align cloud resources with HITRUST CSF requirements, helping organizations enforce security and compliance baselines across multiple providers. |
-| **NIST SP 800-53** | [AWS](/docs/reference/pre-built-policy-packs/nist/aws/) | Enforces NIST SP 800-53 rev. 5 security and privacy controls for AWS resources, helping federal agencies and organizations meet rigorous compliance requirements. |
+| **ISO/IEC 27001:2022** | [AWS](/docs/reference/pre-built-policy-packs/iso-27001/aws/) | Enforces ISO/IEC 27001:2022 Annex A controls for AWS resources, helping organizations align their cloud infrastructure with the international standard for information security management. |
+| **NIST SP 800-53** | [AWS](/docs/reference/pre-built-policy-packs/nist/aws/), [Google Cloud](/docs/reference/pre-built-policy-packs/nist/google-cloud/) | Enforces NIST SP 800-53 rev. 5 security and privacy controls for AWS and Google Cloud resources, helping federal agencies and organizations meet rigorous compliance requirements. |
 | **PCI DSS v4.0.1** | [AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/) | Enforces PCI DSS v4.0.1 compliance controls for AWS resources, ensuring payment card data security and helping organizations meet payment card industry standards. |
 | **Pulumi Best Practices** | [AWS](/docs/reference/pre-built-policy-packs/pulumi-best-practices/aws/), [Azure](/docs/reference/pre-built-policy-packs/pulumi-best-practices/azure/), [Google Cloud](/docs/reference/pre-built-policy-packs/pulumi-best-practices/google-cloud/) | Offers a foundational set of recommended governance and security controls, serving as a strong starting point for organizations seeking comprehensive security coverage. |
 | **AWS Organizations Tag Policies** | [AWS and AWS-Native](/docs/reference/pre-built-policy-packs/aws-organizations-tag-policies/aws/) | Integrates with AWS Organizations Tag Policies to validate that infrastructure as code resources have required tags before deployment. [Learn more](/docs/insights/policy/integrations/aws-organizations-tag-policies/). |

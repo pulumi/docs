@@ -37,8 +37,10 @@ By default (or when `schema_type: auto`), the system automatically determines th
 - type: blog → BlogPosting
 - type: tutorials → HowTo
 - type: webinars → Event
-- type: docs → TechArticle
-- type: what-is → FAQPage (if questions found) or TechArticle (if no questions)
+- type: docs → TechArticle, plus a supplemental FAQPage entity in the same @graph
+  if the page has a "Frequently asked questions" section (H3s ending in `?`)
+- type: what-is → FAQPage (if questions found) or TechArticle (if no questions),
+  plus the same supplemental FAQPage behavior as type: docs
 ```
 
 ### 2. URL Pattern Detection
@@ -58,6 +60,8 @@ By default (or when `schema_type: auto`), the system automatically determines th
 ### 4. Smart Fallbacks
 
 If a page is detected as FAQ but has no Q&A content, it automatically falls back to Article schema to prevent invalid structured data.
+
+The same principle applies to HowTo: a HowTo entity with no steps is invalid structured data (schema.org and Google both require at least one `step`), so if step extraction finds nothing, the system falls back to Article/TechArticle instead of emitting a broken HowTo. See "HowTo Schema" below for how steps are extracted, including the template-page-specific fallback.
 
 ## Explicit Schema Declaration
 
@@ -219,9 +223,15 @@ main:
 - How-to content
 
 **Auto-extracts:**
-- Steps from markdown headers and content
+
+- Steps from numbered lists (`1.`, `2.`, ...) in the page body
+- On `layout: template` pages with no numbered list, steps derived from H2 sections instead (see below)
 - Duration if specified
 - Prerequisites
+
+Template pages (the product template gallery under `/templates/`) share a uniform, verified section structure ("Using this template", "Deploying the project", "Customizing the project", "Cleaning up", and similar) but rarely use numbered lists. For these pages only, each `##` heading becomes one `HowToStep`, using the heading as the step name and an excerpt of the section's prose as the step text. This heuristic is scoped to `layout: template` on purpose: the same approach applied to blog posts or tutorials would invent steps out of narrative headings ("Why this matters", "Conclusion") that describe no action. Purely navigational sections ("Learn more", "Related", "See also", "Further reading") are excluded from both extraction passes.
+
+If neither extraction pass finds any steps, the page falls back to Article/TechArticle schema rather than emitting a HowTo with no `step` array (see "Smart Fallbacks" above).
 
 [Learn more about HowTo schema](https://schema.org/HowTo)
 

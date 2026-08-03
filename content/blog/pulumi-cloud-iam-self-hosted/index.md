@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-01-14T11:18:00Z
 draft: false
 meta_desc: "Pulumi IAM with Custom Roles and scoped Access Tokens is now available for self-hosted Pulumi Cloud instances."
-meta_image: meta.png
 authors:
   - davide-massarenti
   - devon-grove
@@ -18,6 +17,7 @@ tags:
   - pulumi-cloud
   - access-tokens
   - self-hosted
+category: product
 ---
 
 We're excited to announce that **Pulumi Identity and Access Management (IAM)** is now available for self-hosted instances of Pulumi Cloud. This foundational security capability brings the same [enterprise-grade access management](/blog/pulumi-cloud-iam-launch/) we launched for Pulumi Cloud SaaS to organizations running Pulumi on their own infrastructure.

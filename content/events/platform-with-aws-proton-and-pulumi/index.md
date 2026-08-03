@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: Platform Engineering with AWS Proton and Pulumi
 meta_desc: In this workshop, you will learn how to enable self-service infrastructure for your organization using AWS Proton and Pulumi.
-meta_image: /images/resources/platform-engineering-aws-proton-marina.png
+meta_image: /events/platform-with-aws-proton-and-pulumi/meta.png
+meta_image_square: /events/platform-with-aws-proton-and-pulumi/meta-square.png
 # A featured event will display first in the list.
 featured: false
 

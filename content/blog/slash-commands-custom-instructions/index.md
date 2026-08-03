@@ -7,7 +7,6 @@ draft: false
 
 meta_desc: Custom Instructions teach Neo your organization's standards. Slash Commands turn proven prompts into shortcuts anyone can use. Both are available now.
 
-meta_image: meta.png
 
 authors:
     - neo-team
@@ -17,6 +16,7 @@ tags:
     - ai-agents
     - platform-engineering
     - pulumi-neo
+category: product
 
 schema_type: auto
 

@@ -17,6 +17,7 @@ aliases:
 - /docs/guides/continuous-delivery/
 - /docs/using-pulumi/continuous-delivery/
 - /docs/iac/packages-and-automation/continuous-delivery/
+- /docs/iac/guides/continuous-delivery/add-support-for-cicd-systems/
 - /docs/iac/operations/continuous-delivery/add-support-for-cicd-systems/
 - /docs/iac/using-pulumi/continuous-delivery/add-support-for-cicd-systems/
 - /docs/reference/cd-supporting-new-ci/

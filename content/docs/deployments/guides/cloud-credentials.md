@@ -16,7 +16,7 @@ menu:
 
 In order for a Pulumi IaC operation like `update` or `preview` work, the Pulumi CLI must be able to access credentials that will allow it to perform the necessary CRUD operations on the resources in your stack. In order for Pulumi Deployments to access the necessary cloud credentials to run your Pulumi operation there are two common approaches you can take:
 
-1. **Use [Pulumi ESC](/docs/esc/)** (recommended) to define an Environment (or Environments), and [import the environment(s) into your stack](/docs/esc/guides/integrate-with-pulumi-iac/).
+1. **Use [Pulumi ESC](/docs/esc/)** (recommended) to define an Environment (or Environments), and [import the environment(s) into your stack](/docs/esc/guides/pulumi-iac/).
 2. **Use [Pulumi Deployments' OIDC integration](/docs/deployments/guides/oidc/)** where possible (we support [AWS](/docs/deployments/guides/oidc/aws/), [Azure](/docs/deployments/guides/oidc/azure/), and [Google Cloud](/docs/deployments/guides/oidc/gcp/)), and store any remaining required secrets or configuration in [Pulumi Deployments Environment Variables](/docs/deployments/concepts/settings/).
 
 Pulumi recommends Pulumi ESC for most users. See [Choosing between Pulumi ESC Environments and Pulumi Deployments OIDC](#choosing-between-pulumi-esc-environments-and-pulumi-deployments-oidc) below for details.
@@ -32,7 +32,7 @@ Deployments OIDC predates Pulumi ESC and was originally the only way to use OIDC
 - Pulumi ESC Environments support [versioning](/docs/esc/concepts/versioning/), allowing you to roll out changes to an environment in a controlled fashion by pinning Environment imports to a specific version of an Environment.
 
 {{% notes type="info" %}}
-One important difference to be mindful of is that Pulumi Deployments OIDC is available to [pre-run commands](/docs/deployments/concepts/settings/#pre-run-commands), whereas a Pulumi ESC environment is not: an ESC environment applies only to the Pulumi IaC operation (e.g. `pulumi up`), not to the rest of the Deployments process. To use ESC-supplied credentials in a pre-run command, prefix the command with [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) so it executes in the context of the specified Pulumi ESC Environment.
+One important difference to be mindful of is that Pulumi Deployments OIDC is available to [pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/), whereas a Pulumi ESC environment is not: an ESC environment applies only to the Pulumi IaC operation (e.g. `pulumi up`), not to the rest of the Deployments process. To use ESC-supplied credentials in a pre-run command, prefix the command with [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) so it executes in the context of the specified Pulumi ESC Environment.
 
 For example, to install packages from a private repository, you might run the following pre-run command:
 
@@ -53,3 +53,5 @@ After an OIDC Identity Provider has been configured:
 
 - If you are using Pulumi ESC, ensure that your Pulumi Deployments token has permissions to open any imported Pulumi ESC Environments. For more information, see [Deployment Permissions](/docs/deployments/operations/permissions/)
 - If you are using Pulumi Deployments OIDC, set up your [Deployment Settings](/docs/deployments/concepts/settings/) for your stack to use your OIDC configuration.
+
+Deployments has no native approval gate, but if you want to require reviewer sign-off before a deployment runs, you can work around this by gating the ESC environment that supplies its credentials. See [Requiring Approval Before a Deployment Runs](/docs/deployments/guides/gated-deployments/).

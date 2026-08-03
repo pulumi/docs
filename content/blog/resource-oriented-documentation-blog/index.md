@@ -3,11 +3,11 @@ title: "Resource Oriented Documentation"
 date: 2020-04-02T11:34:07-05:00
 updated: 2025-03-07
 meta_desc: "Pulumi’s resource-oriented docs provide a single-page format for easy navigation, discovery, and multi-language support. Explore AWS, Azure, GCP, and more."
-meta_image: docs.png
 authors:
     - luke-hoban
 tags:
     - features
+category: product
 aliases:
     /blog/resource-oriented-documentation-blog/
 ---

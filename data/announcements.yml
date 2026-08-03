@@ -53,3 +53,21 @@ announcements:
       label: Read the blog
       href: "/blog/the-agentic-infrastructure-era/"
     dismissible: true
+  - id: event-openclaw-guardrails-2026-07-Rk7mQ2
+    active: false
+    display: both
+    badge: Event
+    text: "**Live webinar · July 14:** Securing personal AI agents — the guardrails and infrastructure OpenClaw needs."
+    cta:
+      label: Register
+      href: "/events/autonomous-agents-need-guardrails-openclaw/?utm_source=announcement-banner&utm_medium=website&utm_campaign=openclaw-guardrails-webinar"
+    dismissible: true
+  - id: event-intro-to-esc-secrets-2026-08-Wt3pL9
+    active: true
+    display: both
+    badge: Event
+    text: "**Live workshop · Aug 5:** Best practices for managing secrets — an introduction to Pulumi ESC."
+    cta:
+      label: Register
+      href: "/events/intro-to-pulumi-esc-managing-secrets/?utm_source=announcement-banner&utm_medium=website&utm_campaign=intro-to-esc-workshop"
+    dismissible: true

@@ -1,18 +1,30 @@
 ---
 title: Join a Pulumi User Group (PUG) Meetup!
 date: 2023-05-01
-updated: 2025-05-19
+updated: 2026-07-25
 meta_desc: The PUGs will feature in-person meetups, in-person and virtual workshops, and other events to help members stay up-to-date with the latest developments.
-meta_image: meta.png
 authors:
     - sara-huddleston
 tags:
     - announcements
     - community
     - pulumi-events
+category: community
 ---
 
-We have a global community made up of people from many different countries, but we also have many local communities. We want to enable our users to meet, share knowledge and ideas, answer questions, and learn about Pulumi and best practices. For that reason, we created the [Pulumi User Groups, aka PUGs](https://www.meetup.com/pro/pugs) on Meetup.
+{{% notes type="info" %}}
+Hi everyone,
+
+After several great years on Meetup, the Pulumi Community is moving to a new home: [Luma](https://luma.com/pulumi).
+
+This wasn't an easy decision. Together we've built 38 Pulumi User Groups across 14 countries, with nearly 10,000 members between them. Meetup is where that community took shape, and we're grateful for everything that happened there.
+
+We want to make it as easy as possible for you to show up. All upcoming events and workshops will be published on Luma going forward.
+
+Follow us at [luma.com/pulumi](https://luma.com/pulumi) so you don't miss out.
+{{% /notes %}}
+
+We have a global community made up of people from many different countries, but we also have many local communities. We want to enable our users to meet, share knowledge and ideas, answer questions, and learn about Pulumi and best practices. For that reason, we created the [Pulumi User Groups, aka PUGs](https://luma.com/pulumi) on Meetup.
 
 Members of PUGs will have access to a global network of experts who can offer help, advice, and support on using Pulumi effectively. The PUGs will also feature regular in-person meetups, webinars, in-person and virtual workshops, and other events to help members stay up-to-date with the latest cloud infrastructure and Pulumi developments.
 
@@ -22,43 +34,43 @@ PUGs are led by Pulumi employees and [Puluminaries](/community/puluminaries/), w
 
 ### United States Pulumi User Groups
 
-* [Seattle Pulumi User Group](https://www.meetup.com/pulumi-seattle/)
-* [New York Pulumi User Group](https://www.meetup.com/new-york-pulumi-user-group/)
-* [San Francisco Pulumi User Group](https://www.meetup.com/san-francisco-pulumi-user-group/)
-* [San Diego Pulumi User Group](https://www.meetup.com/san-diego-pulumi-user-group/)
-* [Austin Pulumi User Group](https://www.meetup.com/austin-pulumi-user-group/)
-* [Denver Pulumi User Group](https://www.meetup.com/denver-pulumi-user-group/)
-* [Chicago Pulumi User Group](https://www.meetup.com/chicago-pulumi-user-group/)
-* [Columbus Pulumi User Group](https://www.meetup.com/columbus-pulumi-user-group/)
-* [Philadelphia Pulumi User Group](https://www.meetup.com/philadelphia-pulumi-user-group/)
-* [Boston Pulumi User Group](https://www.meetup.com/boston-pulumi-user-group)
-* [Detroit Pulumi User Group](https://www.meetup.com/detroit-pulumi-user-group)
-* [Nashville Pulumi User Group](https://www.meetup.com/nashville-pulumi-user-group)
+* [Seattle Pulumi User Group](https://luma.com/pulumi)
+* [New York Pulumi User Group](https://luma.com/pulumi)
+* [San Francisco Pulumi User Group](https://luma.com/pulumi)
+* [San Diego Pulumi User Group](https://luma.com/pulumi)
+* [Austin Pulumi User Group](https://luma.com/pulumi)
+* [Denver Pulumi User Group](https://luma.com/pulumi)
+* [Chicago Pulumi User Group](https://luma.com/pulumi)
+* [Columbus Pulumi User Group](https://luma.com/pulumi)
+* [Philadelphia Pulumi User Group](https://luma.com/pulumi)
+* [Boston Pulumi User Group](https://luma.com/pulumi)
+* [Detroit Pulumi User Group](https://luma.com/pulumi)
+* [Nashville Pulumi User Group](https://luma.com/pulumi)
 
 ### South America Pulumi User Groups
 
-* [São Paulo Pulumi User Group](https://www.meetup.com/sao-paulo-pulumi-user-group)
+* [São Paulo Pulumi User Group](https://luma.com/pulumi)
 
 ### European Pulumi User Groups
 
-* [London Pulumi User Group](https://www.meetup.com/london-pulumi-user-group/)
-* [Oslo Pulumi User Group](https://www.meetup.com/oslo-pulumi-user-group/)
-* [Berlin Pulumi User Group](https://www.meetup.com/berlin-pulumi-user-group/)
-* [Munich Pulumi User Group](https://www.meetup.com/munich-pulumi-user-group/)
-* [Prague Pulumi User Group](https://www.meetup.com/prague-pulumi-user-group/)
+* [London Pulumi User Group](https://luma.com/pulumi)
+* [Oslo Pulumi User Group](https://luma.com/pulumi)
+* [Berlin Pulumi User Group](https://luma.com/pulumi)
+* [Munich Pulumi User Group](https://luma.com/pulumi)
+* [Prague Pulumi User Group](https://luma.com/pulumi)
 
 ### Middle East Pulumi User Groups
 
-* [Tel Aviv Pulumi User Group](https://www.meetup.com/tel-aviv-pulumi-user-group/)
+* [Tel Aviv Pulumi User Group](https://luma.com/pulumi)
 
 ### Asia Pulumi User Groups
 
-* [Singapore Pulumi User Group](https://www.meetup.com/singapore-pulumi-user-group/)
+* [Singapore Pulumi User Group](https://luma.com/pulumi)
 
 ### Oceania Pulumi User Groups
 
-* [Australia Pulumi User Group](https://www.meetup.com/australia-pulumi-user-group/)
-* [Auckland Pulumi User Group](https://www.meetup.com/auckland-pulumi-user-group/)
+* [Australia Pulumi User Group](https://luma.com/pulumi)
+* [Auckland Pulumi User Group](https://luma.com/pulumi)
 
 ## The First PUG in person
 
@@ -78,4 +90,4 @@ Overall, the first PUG meetup was a huge success, and attendees left feeling ins
 
 We are planning more in-person PUG events for the months to come. With PUGs, you'll have the opportunity to connect with like-minded professionals, share knowledge and best practices, and stay up-to-date with the latest developments in cloud infrastructure and Pulumi.
 
-Join the [Pulumi User Groups](https://www.meetup.com/pro/pugs) in your local area, or if there isn’t one yet, you are welcome to join the [Pulumi Slack community](https://slack.pulumi.com/) and meet people from all over the world.
+Join the [Pulumi User Groups](https://luma.com/pulumi) in your local area, or if there isn’t one yet, you are welcome to join the [Pulumi Slack community](https://slack.pulumi.com/) and meet people from all over the world.

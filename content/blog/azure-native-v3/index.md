@@ -4,7 +4,6 @@ date: 2025-04-03
 updated: 2025-08-13
 draft: false
 meta_desc: Pulumi Azure Native V3 delivers a 75% smaller SDK, updated API versions, and flexible versioning options for managing Microsoft Azure infrastructure as code
-meta_image: meta.png
 authors:
     - thomas-kappler
     - meagan-cojocar
@@ -14,6 +13,7 @@ tags:
     - azure
     - features
     - releases
+category: product
 
 social:
     twitter: "Announcing Azure Native V3: We've reduced SDK size by 75% while maintaining the expanded resource coverage of other IaC tools. The best solution for Azure infrastructure just got even better."

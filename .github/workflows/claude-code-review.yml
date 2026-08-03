@@ -50,7 +50,9 @@ on:
         default: ''
 
 jobs:
-  # synchronize → just mark the existing pinned review stale.
+  # synchronize → mark the existing pinned review stale, and record whether
+  # the prior state was outstanding-issues so the auto-refresh job below can
+  # decide whether the push is a candidate for a scoped automatic update.
   mark-stale:
     if: |
       github.event_name == 'pull_request' &&
@@ -61,8 +63,11 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+    outputs:
+      was_outstanding: ${{ steps.transition.outputs.was_outstanding }}
     steps:
       - name: Mark previous Claude review as stale
+        id: transition
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR: ${{ github.event.pull_request.number }}
@@ -75,14 +80,119 @@ jobs:
           # are not transitioned: in-progress means a run is mid-flight,
           # error is a workflow failure (separate triage), and stale is
           # already terminal.
+          WAS_OUTSTANDING=false
           LABELS=$(gh pr view "$PR" --repo "${{ github.repository }}" --json labels --jq '[.labels[].name] | join(",")')
           if [[ ",$LABELS," == *",review:outstanding-issues,"* ]]; then
             gh pr edit "$PR" --repo "${{ github.repository }}" \
               --add-label "review:stale" --remove-label "review:outstanding-issues"
+            WAS_OUTSTANDING=true
           elif [[ ",$LABELS," == *",review:no-blockers,"* ]]; then
             gh pr edit "$PR" --repo "${{ github.repository }}" \
               --add-label "review:stale" --remove-label "review:no-blockers"
           fi
+          echo "was_outstanding=$WAS_OUTSTANDING" >> "$GITHUB_OUTPUT"
+
+  # Auto-refresh a just-staled review when the push delta is trivial — the
+  # "I fixed what you flagged" case. A deterministic gate
+  # (auto-refresh-gate.py) checks that every hunk of the push diff lands on
+  # (or within a few lines of) a 🚨 Outstanding finding's [L...] anchor and
+  # that the push is small; only then is claude-update.yml dispatched to run
+  # the scoped Sonnet fix-response pass. Anything the gate can't prove —
+  # large pushes, new files, hunks outside flagged lines, force-pushes,
+  # unparsable pinned comments — leaves the PR in review:stale exactly as
+  # before, with the documented explicit refresh paths
+  # (`@claude #update-review` / `#new-review` / draft→ready).
+  #
+  # Scope guards:
+  # - Only fires when mark-stale transitioned OFF review:outstanding-issues.
+  #   A stale no-blockers review has nothing to re-verify.
+  # - Same-repo head branches only. Fork PRs run pull_request with a
+  #   read-only token that can't dispatch workflows; they keep the manual
+  #   refresh flow.
+  # - Once per push comes free: one synchronize event per push, and
+  #   claude-update.yml's per-PR concurrency group (cancel-in-progress)
+  #   collapses stacked pushes onto the newest head.
+  auto-refresh:
+    needs: mark-stale
+    if: |
+      needs.mark-stale.outputs.was_outstanding == 'true' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      actions: write # gh workflow run claude-update.yml
+    steps:
+      # The gate scripts come from the BASE ref, never the PR head — the
+      # decision to spend model budget must not be steerable by the PR
+      # under review. Sparse checkout: this job only needs the scripts.
+      - name: Checkout gate scripts (base ref)
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          fetch-depth: 1
+          sparse-checkout: .claude/commands/docs-review/scripts
+
+      - name: Evaluate auto-refresh gate
+        id: gate
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          HEAD_SHA: ${{ github.event.after }}
+        run: |
+          SCRIPTS=.claude/commands/docs-review/scripts
+          no_fire() {
+            echo "fire=false" >> "$GITHUB_OUTPUT"
+            echo "auto-refresh gate: no fire — $1" | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          }
+
+          bash "$SCRIPTS/pinned-comment.sh" fetch --pr "$PR" --repo "$REPO" \
+            > /tmp/pinned-body.md || true
+          [ -s /tmp/pinned-body.md ] || no_fire "no pinned review on PR #$PR"
+
+          LAST_SHA=$(bash "$SCRIPTS/pinned-comment.sh" last-reviewed-sha \
+            --pr "$PR" --repo "$REPO" 2>/dev/null || true)
+          [ -n "$LAST_SHA" ] || no_fire "no last-reviewed SHA in review history"
+
+          # Push delta via the compare API — no checkout depth games. The
+          # three-dot compare diffs merge-base..head: on a normal push the
+          # merge-base IS the last-reviewed SHA (exact push delta); after a
+          # force-push the merge-base drifts older, the diff inflates, and
+          # the gate fails closed downstream.
+          gh api -H "Accept: application/vnd.github.v3.diff" \
+            "repos/$REPO/compare/$LAST_SHA...$HEAD_SHA" > /tmp/push.diff \
+            || no_fire "compare $LAST_SHA...$HEAD_SHA failed (history rewritten?)"
+
+          gh pr view "$PR" --repo "$REPO" --json files \
+            --jq '[.files[].path]' > /tmp/pr-files.json \
+            || no_fire "could not list PR files"
+
+          RESULT=$(python3 "$SCRIPTS/auto-refresh-gate.py" \
+            --pinned-body /tmp/pinned-body.md \
+            --push-diff /tmp/push.diff \
+            --pr-files /tmp/pr-files.json) \
+            || no_fire "gate script error (fail closed)"
+
+          FIRE=$(echo "$RESULT" | jq -r '.fire')
+          REASON=$(echo "$RESULT" | jq -r '.reason')
+          echo "fire=$FIRE" >> "$GITHUB_OUTPUT"
+          echo "auto-refresh gate: fire=$FIRE — $REASON" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      # Dispatch with GITHUB_TOKEN — same pattern as claude-new.yml's
+      # dispatch of this workflow. The dispatched run's actor becomes
+      # github-actions[bot]; claude-update.yml opts in via allowed_bots.
+      - name: Dispatch scoped update review
+        if: steps.gate.outputs.fire == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run claude-update.yml \
+            --repo "${{ github.repository }}" \
+            -f pr_number="${{ github.event.pull_request.number }}" \
+            -f head_sha="${{ github.event.after }}" \
+            -f auto=true
 
   claude-review:
     # Fire only for workflow_run events from Claude Triage that were
@@ -140,7 +250,7 @@ jobs:
       # Without this, Vale below ran against base prose and produced
       # empty findings.
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.event.inputs.head_sha }}
           fetch-depth: 1
@@ -207,9 +317,9 @@ jobs:
 
           # force=true (set by claude-new.yml on #new-review dispatch)
           # bypasses the auto-skip heuristics. The user explicitly asked
-          # for a regenerate; trivial / fmonly / draft / bot-author /
-          # already-reviewed are all overridable. Empty-diff is NOT
-          # overridable — there's nothing to review.
+          # for a regenerate; trivial / fmonly / oversized / draft /
+          # bot-author / already-reviewed are all overridable. Empty-diff is
+          # NOT overridable — there's nothing to review.
           SKIP=""
           if [[ "$FORCE" != "true" ]]; then
             if [[ "$IS_DRAFT" == "true" ]]; then
@@ -218,6 +328,13 @@ jobs:
               SKIP="trivial"
             elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
               SKIP="frontmatter-only"
+            # Oversized PRs (triage-set; >15K changed lines — in practice
+            # generated corpora) can't finish inside the job timeout: every
+            # attempt burns ~25 minutes of runner + API spend, then
+            # error-cycles the labels. Triage posts a TRIAGE_OVERSIZED
+            # advisory comment explaining the skip and the alternatives.
+            elif [[ ",$LABELS_CSV," == *",review:oversized,"* ]]; then
+              SKIP="oversized"
             # Bot-authored PRs are slop-skipped — EXCEPT content-review/*, which
             # are first-class automated docs fixes we want reviewed. Those fall
             # through to the already-reviewed guard below (so they still can't
@@ -333,9 +450,20 @@ jobs:
           REPO_FULL="${{ github.repository }}"
           AUTHOR="${{ steps.pr-context.outputs.author }}"
 
-          if [[ "$AUTHOR" == "github-copilot[bot]" ]]; then
+          # GitHub App bots are not collaborators, so the permission API
+          # below returns "none" for them. Trusted bots that open PRs on this
+          # repo are whitelisted by name instead. `workprentice` is Joe Duffy's
+          # docs-automation identity (the Docs Groundskeeper agent) and is
+          # trusted like an internal author. The author string differs by source:
+          # this workflow reads `gh pr view --json author` (`app/workprentice`)
+          # while claude-triage.yml and claude-update.yml read the REST webhook
+          # `user.login` (`workprentice[bot]`), so both forms are listed in
+          # every file. Keep this list in sync with the matching checks in
+          # claude-triage.yml and claude-update.yml.
+          if [[ "$AUTHOR" == "github-copilot[bot]" || "$AUTHOR" == "eon-pulumi-agent[bot]" \
+             || "$AUTHOR" == "app/workprentice" || "$AUTHOR" == "workprentice[bot]" ]]; then
             echo "has_write_access=true" >> $GITHUB_OUTPUT
-            echo "✓ Copilot bot $AUTHOR is whitelisted for Claude reviews"
+            echo "✓ Bot $AUTHOR is whitelisted for Claude reviews"
             exit 0
           fi
 
@@ -390,6 +518,23 @@ jobs:
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
             --label review:in-progress
+
+      # An oversized skip supersedes any leftover terminal state from earlier
+      # attempts (typically review:error from a pre-label timeout run) —
+      # without this, the stale error label sits next to review:oversized and
+      # reads as "the pipeline is still broken" when the skip is deliberate.
+      # Other skip paths (trivial / fmonly / draft / bot) never had a prior
+      # state label, so they don't need this.
+      - name: Clear stale review-state label (oversized skip)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == 'oversized'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .claude/commands/docs-review/scripts/set-review-label.sh \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --clear
 
       # Run Vale on PR-changed files in content/docs and content/blog. Findings
       # are filtered to PR-introduced lines only, capped (10/file, 50 total),
@@ -482,23 +627,6 @@ jobs:
       # All steps continue-on-error with schema-matching `||` stubs; the scripts'
       # safe_main() surfaces failures *inside* the artifact (`errors: [...]`),
       # not via file-presence heuristics.
-      - name: Pre-compute claim scrutiny scope
-        if: steps.pr-context.outputs.skip_reason == ''
-        id: claim-scrutiny
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR: ${{ steps.pr-context.outputs.pr_number }}
-        run: |
-          # `heightened` (full-file extraction) when any blog file changed —
-          # AI hallucinates surrounding prose, not just changed lines. Per-file
-          # new-file bumping happens inside extract-claims-llm.py.
-          BLOG=$(gh pr diff "$PR" --name-only | grep -E '^content/blog/.*\.md$' || true)
-          if [ -n "$BLOG" ]; then
-            echo "value=heightened" >> "$GITHUB_OUTPUT"
-          else
-            echo "value=standard" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Extract candidate claims (Layer A — regex floor)
         if: steps.pr-context.outputs.skip_reason == ''
         id: extract-claims-regex
@@ -519,7 +647,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PR: ${{ steps.pr-context.outputs.pr_number }}
-          SCRUTINY: ${{ steps.claim-scrutiny.outputs.value }}
         run: |
           # Run the two Sonnet extraction passes concurrently — wall-clock
           # collapses from sum(atomic + holistic) to max(atomic, holistic).
@@ -527,22 +654,24 @@ jobs:
           # independently. Per pre-step fallback discipline, failure is
           # surfaced INSIDE the artifact (errors: [...]), not via a
           # missing-file or silent-empty heuristic.
+          # Scrutiny is resolved per file inside the script (blog/new files
+          # bump to heightened; renames and small edits pin to standard).
           set +e
           python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
-            --pr "$PR" --pass atomic --scrutiny "${SCRUTINY:-standard}" \
+            --pr "$PR" --pass atomic --scrutiny standard \
             --out .candidate-claims-llm-1.json &
           ATOMIC_PID=$!
           python3 .claude/commands/docs-review/scripts/extract-claims-llm.py \
-            --pr "$PR" --pass holistic --scrutiny "${SCRUTINY:-standard}" \
+            --pr "$PR" --pass holistic --scrutiny standard \
             --out .candidate-claims-llm-2.json &
           HOLISTIC_PID=$!
           wait "$ATOMIC_PID";   ATOMIC_RC=$?
           wait "$HOLISTIC_PID"; HOLISTIC_RC=$?
           if [ "$ATOMIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-1.json ]; then
-            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+            echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
           fi
           if [ "$HOLISTIC_RC" -ne 0 ] && [ ! -s .candidate-claims-llm-2.json ]; then
-            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-4-6", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+            echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
           fi
           exit 0
 
@@ -604,7 +733,7 @@ jobs:
         run: |
           python3 .claude/commands/docs-review/scripts/readthrough.py \
             --pr "$PR" --changed-files "$FILES" --out .readthrough-findings.json \
-            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-4-6", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
+            || echo '{"schema_version": 1, "ran": false, "model": "claude-sonnet-5", "findings": [], "errors": ["readthrough.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .readthrough-findings.json
       # ---- end readthrough coherence lane ----------------------------------
 
       # ---- Claim verification ----------------------------------------------
@@ -632,7 +761,7 @@ jobs:
             --in .candidate-claims.json --fetched-urls .fetched-urls.json \
             --pr "$PR" --repo "$GITHUB_REPOSITORY" \
             --out .verified-claims.json \
-            || echo '{"schema_version": 1, "model": "claude-sonnet-4-6", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
       # ---- end claim verification ------------------------------------------
 
       # Pre-compute editorial-balance Tier 1 (listicle / FAQ trigger detection,
@@ -827,7 +956,15 @@ jobs:
           # (workflow_run after triage) is gated by claude-triage.yml's
           # own access checks, so opening this door doesn't widen the
           # trust surface.
-          allowed_bots: 'github-actions[bot]'
+          #
+          # workprentice is also listed: it's a whitelisted PR author (see
+          # the has_write_access step above), and on the auto-fire path a
+          # push by the bot makes it the workflow_run's triggering actor,
+          # which claude-code-action@v1 checks independently of our own
+          # gate. Both the bare and `[bot]`-suffixed forms are listed
+          # because the action reports the actor as bare `workprentice`
+          # while github.actor renders it as `workprentice[bot]`.
+          allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
           # Initial review uses Opus; re-entrant updates (via @claude mentions)
           # use Sonnet — see .github/workflows/claude.yml.
           # The CI prompt lives at .claude/commands/docs-review/ci.md and is
@@ -864,14 +1001,14 @@ jobs:
             - the Summary / Review-confidence-table *skeleton* (with `<TODO>` levels and an empty summary paragraph);
             - the Investigation-log `<details>` block (all 8 bullets — every one deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder you overwrite);
             - the bucket-count table (a *starting point* matching the stub-bullet counts);
-            - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️), evidence pointer, source;
+            - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️ · `framing-drift` 🌀), evidence pointer, source;
             - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
             - the `#### Style findings` block (from `.vale-findings.json`, with the correct inline-vs-collapse render mode already chosen);
             - the empty 💡 / ✅ forms;
             - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
-            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
+            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
 
-            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished) — and if a `> [!WARNING]` automated-fact-checking banner sits between the header and the Summary (the fact-check verifier was degraded this run), preserve it verbatim, keep the pre-filled `facts` row at LOW, and write the Summary in unconfirmed terms; do NOT delete the banner or upgrade `facts` (this `> [!WARNING]` is usable-but-degraded, distinct from the discard-the-draft `> [!CAUTION]`); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
+            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote a `framing-drift` ⚠️ stub to 🚨 when the drifted phrasing also rides `social.*` frontmatter (it auto-posts on merge) or materially misleads, promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way; a `turn_cap_exhausted` stub describes a retryable verifier budget failure — never call it out-of-scope); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished) — and if a `> [!WARNING]` automated-fact-checking banner sits between the header and the Summary (the fact-check verifier was degraded this run), preserve it verbatim, keep the pre-filled `facts` row at LOW, and write the Summary in unconfirmed terms; do NOT delete the banner or upgrade `facts` (this `> [!WARNING]` is usable-but-degraded, distinct from the discard-the-draft `> [!CAUTION]`); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding and `framing-drift` in ⚠️ or 🚨; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
 
             **If `.review-draft.md` is absent, or its first lines are a `> [!CAUTION]` composer-failed banner, ignore the draft entirely** and assemble the review manually per `ci.md` §Fallback (read `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` / `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` directly and render per `docs-review:references:output-format` — `.candidate-claims.json` is the claim floor whose every entry must surface a verdict line in the trail). That is the pre-composer procedure; it's the safety net, not the normal path.
 
@@ -888,7 +1025,7 @@ jobs:
             When the editorial pass is done, save `.review-draft.md` and **exit**. Do not post the comment yourself; do not call `pinned-comment.sh` or `validate-pinned.py`. The workflow runs validation, deterministic surgical fixes, and the GitHub upsert as separate steps after this one. Every `<TODO:` placeholder must be replaced before you exit — `validate-pinned.py`'s `no-todo-tokens` rule fails the body otherwise.
 
             Post-run review-state labels (`review:outstanding-issues` / `review:no-blockers` / `review:stale` / `review:error`) are applied by separate workflow steps based on the published body's 🚨 Outstanding count. Do not apply them yourself.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
+          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr view:*),Bash(gh pr diff:*),Bash(gh pr checks:*),Bash(gh pr list:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh issue list:*),Bash(gh issue view:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(python3 -c:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*),Bash(git log:*),Bash(git diff:*),Bash(git show:*),Bash(git blame:*),Bash(git status:*),Bash(git remote:*),Bash(git ls-files:*),Bash(git rev-parse:*),Bash(git rev-list:*)"'
 
       # ---- post-edit validate / splice / re-validate / upsert chain ----
       # The editorial pass step (above) exits after editing .review-draft.md.

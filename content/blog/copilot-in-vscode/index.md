@@ -1,5 +1,6 @@
 ---
 title: "Pulumi Copilot is Now Available in VS Code"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and
@@ -8,6 +9,7 @@ title: "Pulumi Copilot is Now Available in VS Code"
 # the time portion of the date value; posts are sorted in descending order by
 # date/time.
 date: 2025-02-03
+updated: 2026-07-28
 
 # The draft setting determines whether a post is published. Set it to true if
 # you want to be able to merge the post without publishing it.
@@ -22,7 +24,6 @@ meta_desc: "Pulumi Copilot is now available in Visual Studio Code Copilot- offlo
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -35,6 +36,8 @@ authors:
 tags:
     - releases
     - features
+category: product
+series: pulumi-copilot
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -49,7 +52,7 @@ social:
 ---
 
 {{< notes type="info" >}}
-Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn about Neo →](/docs/ai/)
+Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. The Pulumi Copilot Chat extension for VS Code is deprecated — instead, run [Neo directly in your editor](/docs/ai/neo/editors/) via the Agent Client Protocol.
 {{< /notes >}}
 
 Programming languages offer dozens of advantages for writing Infrastructure as Code (IaC). One of them is that Large Language Models are  effective at using general-purpose programming languages, thanks to the vast amount of high-quality training data available. Building on this advantage, we introduced Pulumi AI and Pulumi Copilot last year to enhance Infrastructure-as-Code development with generative AI capabilities. These tools have significantly streamlined infrastructure deployment for tens of thousands of developers.

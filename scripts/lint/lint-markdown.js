@@ -1,4 +1,5 @@
 const fs = require("fs");
+const zlib = require("zlib");
 const yaml = require("js-yaml");
 const { lint: markdownlint, readConfig } = require("markdownlint/sync");
 const path = require("path");
@@ -6,6 +7,52 @@ const markdownIt = require("markdown-it");
 
 // BEHAVIOR SWITCH: Set to false to use old behavior, true for new behavior
 const USE_NEW_FRONTMATTER_VALIDATION = true;
+
+/**
+ * Allowed blog post category ids, loaded once from the single source of truth
+ * at data/blog_categories.yaml. See that file's header for the rules.
+ */
+const BLOG_CATEGORIES = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/blog_categories.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.categories || []).map(c => c.id);
+    } catch (e) {
+        console.warn(`Warning: could not load blog categories: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
+ * Allowed case-study industry ids, loaded once from the single source of truth
+ * at data/case_study_industries.yaml. See that file's header for the rules.
+ */
+const CASE_STUDY_INDUSTRIES = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/case_study_industries.yaml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return (doc.industries || []).map(i => i.id);
+    } catch (e) {
+        console.warn(`Warning: could not load case-study industries: ${e.message}`);
+        return [];
+    }
+})();
+
+/**
+ * Defined blog series slugs, loaded once from data/blog_series.yml. Used to
+ * enforce that every series member is wired up consistently (see
+ * checkSeriesConsistency).
+ */
+const BLOG_SERIES_SLUGS = (function () {
+    try {
+        const p = path.resolve(__dirname, "../../data/blog_series.yml");
+        const doc = yaml.load(fs.readFileSync(p, "utf8"));
+        return new Set((doc.series || []).map(s => s.slug).filter(Boolean));
+    } catch (e) {
+        console.warn(`Warning: could not load blog series: ${e.message}`);
+        return new Set();
+    }
+})();
 
 /**
  * REGEX for grabbing the front matter of a Hugo markdown file. Example:
@@ -88,6 +135,928 @@ function checkMetaImage(image) {
     return null;
 }
 
+/** Canonical blog feature image dimensions, matching the blog-feature-image templates. */
+const FEATURE_IMAGE_WIDTH = 1884;
+const FEATURE_IMAGE_HEIGHT = 1256;
+
+/**
+ * Reads the intrinsic pixel dimensions from a PNG or JPEG file by inspecting its
+ * header bytes — no image library required. Returns { width, height } or null if
+ * the file can't be read or isn't a recognized PNG/JPEG.
+ *
+ * @param {string} file Absolute path to the image file.
+ * @returns {{width: number, height: number}|null}
+ */
+function imageDimensions(file) {
+    let buf;
+    try {
+        buf = fs.readFileSync(file);
+    } catch (e) {
+        return null;
+    }
+
+    // PNG: 8-byte signature (\x89PNG...), then the IHDR chunk whose width/height
+    // are big-endian uint32s at byte offsets 16 and 20.
+    if (buf.length >= 24 && buf.readUInt32BE(0) === 0x89504e47) {
+        return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+    }
+
+    // JPEG: starts with FFD8; scan the marker segments for a Start-Of-Frame
+    // (SOF0-SOF15, excluding the non-frame C4/C8/CC markers), which carries the
+    // image height and width as big-endian uint16s.
+    if (buf.length >= 4 && buf[0] === 0xff && buf[1] === 0xd8) {
+        let offset = 2;
+        while (offset + 9 < buf.length) {
+            if (buf[offset] !== 0xff) {
+                offset++;
+                continue;
+            }
+            const marker = buf[offset + 1];
+            if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+                return { height: buf.readUInt16BE(offset + 5), width: buf.readUInt16BE(offset + 7) };
+            }
+            offset += 2 + buf.readUInt16BE(offset + 2);
+        }
+    }
+
+    return null;
+}
+
+/**
+ * checkFeatureImageDimensions enforces that a blog post's `feature_image` is a
+ * template-sized 1884x1256 image. The blog-feature-image skill only ever renders
+ * templates at this size (and designer-supplied images are expected to match it),
+ * so an off-size image is a strong signal it's AI-generated slop rather than a
+ * template render or a real designer image. Only blog posts carry a fixed-size
+ * feature image, and only post-local (relative) paths are checked; shared/legacy
+ * absolute paths (/images/...) are out of scope.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageDimensions(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return `Feature image '${featureImage}' was not found next to the post.`;
+    }
+
+    const size = imageDimensions(imgPath);
+    if (!size) {
+        return `Feature image '${featureImage}' could not be read as a PNG/JPEG; render it with the /blog-feature-image skill.`;
+    }
+    if (size.width !== FEATURE_IMAGE_WIDTH || size.height !== FEATURE_IMAGE_HEIGHT) {
+        return `Feature image '${featureImage}' is ${size.width}x${size.height}, but blog feature images must be ${FEATURE_IMAGE_WIDTH}x${FEATURE_IMAGE_HEIGHT}. Render it with the /blog-feature-image skill or use a designer-supplied image (never AI-generated).`;
+    }
+
+    return null;
+}
+
+/** Canonical blog feature image background color (the templates' backdrop). */
+const FEATURE_IMAGE_BG = { r: 0x23, g: 0x1f, b: 0x33 };
+
+/** PNG Paeth predictor, used to reverse filter type 4. */
+function paethPredictor(a, b, c) {
+    const p = a + b - c;
+    const pa = Math.abs(p - a);
+    const pb = Math.abs(p - b);
+    const pc = Math.abs(p - c);
+    if (pa <= pb && pa <= pc) return a;
+    if (pb <= pc) return b;
+    return c;
+}
+
+/**
+ * Decodes an 8-bit, non-interlaced PNG and returns its four corner pixels as
+ * {r,g,b}, ordered [top-left, top-right, bottom-left, bottom-right]. Uses only
+ * Node's built-in zlib — no image dependency. Returns null for anything it can't
+ * safely decode (non-PNG, 16-bit, interlaced, unknown/paletteless color type),
+ * so callers skip the check rather than raising a false positive.
+ *
+ * @param {string} file Absolute path to a PNG file.
+ * @returns {{r:number,g:number,b:number}[]|null}
+ */
+function pngCornerColors(file) {
+    let buf;
+    try {
+        buf = fs.readFileSync(file);
+    } catch (e) {
+        return null;
+    }
+    if (buf.length < 33 || buf.readUInt32BE(0) !== 0x89504e47) {
+        return null; // Not a PNG.
+    }
+
+    const width = buf.readUInt32BE(16);
+    const height = buf.readUInt32BE(20);
+    const bitDepth = buf[24];
+    const colorType = buf[25];
+    const interlace = buf[28];
+    const channels = { 0: 1, 2: 3, 3: 1, 4: 2, 6: 4 }[colorType];
+    if (bitDepth !== 8 || interlace !== 0 || !channels || width < 1 || height < 1) {
+        return null;
+    }
+
+    // Walk the chunk stream: concatenate IDAT payloads and grab the palette.
+    let offset = 8;
+    const idatParts = [];
+    let palette = null;
+    while (offset + 8 <= buf.length) {
+        const length = buf.readUInt32BE(offset);
+        const type = buf.toString("ascii", offset + 4, offset + 8);
+        const dataStart = offset + 8;
+        if (type === "IDAT") {
+            idatParts.push(buf.subarray(dataStart, dataStart + length));
+        } else if (type === "PLTE") {
+            palette = buf.subarray(dataStart, dataStart + length);
+        } else if (type === "IEND") {
+            break;
+        }
+        offset = dataStart + length + 4; // Skip the chunk data and its 4-byte CRC.
+    }
+    if (idatParts.length === 0 || (colorType === 3 && !palette)) {
+        return null;
+    }
+
+    let raw;
+    try {
+        raw = zlib.inflateSync(Buffer.concat(idatParts));
+    } catch (e) {
+        return null;
+    }
+
+    const stride = width * channels;
+    if (raw.length < (stride + 1) * height) {
+        return null; // Truncated/unexpected data.
+    }
+
+    // Reverse the per-scanline filters into a contiguous raster. Every row must be
+    // un-filtered because filters can reference the pixel directly above.
+    const out = Buffer.alloc(stride * height);
+    for (let y = 0; y < height; y++) {
+        const filter = raw[y * (stride + 1)];
+        const inStart = y * (stride + 1) + 1;
+        const outStart = y * stride;
+        const prevStart = outStart - stride;
+        for (let x = 0; x < stride; x++) {
+            const rawByte = raw[inStart + x];
+            const left = x >= channels ? out[outStart + x - channels] : 0;
+            const up = y > 0 ? out[prevStart + x] : 0;
+            const upLeft = y > 0 && x >= channels ? out[prevStart + x - channels] : 0;
+            let value;
+            switch (filter) {
+                case 0:
+                    value = rawByte;
+                    break;
+                case 1:
+                    value = rawByte + left;
+                    break;
+                case 2:
+                    value = rawByte + up;
+                    break;
+                case 3:
+                    value = rawByte + ((left + up) >> 1);
+                    break;
+                case 4:
+                    value = rawByte + paethPredictor(left, up, upLeft);
+                    break;
+                default:
+                    return null; // Unknown filter type.
+            }
+            out[outStart + x] = value & 0xff;
+        }
+    }
+
+    function pixel(x, y) {
+        const i = y * stride + x * channels;
+        if (colorType === 3) {
+            const idx = out[i] * 3;
+            return { r: palette[idx], g: palette[idx + 1], b: palette[idx + 2] };
+        }
+        if (colorType === 0 || colorType === 4) {
+            return { r: out[i], g: out[i], b: out[i] };
+        }
+        return { r: out[i], g: out[i + 1], b: out[i + 2] };
+    }
+
+    return [pixel(0, 0), pixel(width - 1, 0), pixel(0, height - 1), pixel(width - 1, height - 1)];
+}
+
+/**
+ * checkFeatureImageBackground enforces that a blog post's `feature_image` uses
+ * the canonical #231F33 backdrop by sampling the four corners (every template
+ * renders a flat #231F33 background, so an off-color corner means the file was
+ * not rendered from a template). Scope matches checkFeatureImageDimensions:
+ * blog posts only, post-local paths only. Non-PNG/undecodable files are skipped
+ * (the dimension check remains the size guard).
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageBackground(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    const corners = pngCornerColors(imgPath);
+    if (!corners) {
+        return null; // Not a decodable PNG; leave sizing to the dimension check.
+    }
+
+    const { r, g, b } = FEATURE_IMAGE_BG;
+    const offColor = corners.find(c => c.r !== r || c.g !== g || c.b !== b);
+    if (offColor) {
+        const toHex = c => "#" + [c.r, c.g, c.b].map(n => n.toString(16).padStart(2, "0")).join("").toUpperCase();
+        return `Feature image '${featureImage}' has a ${toHex(offColor)} background, but blog feature images must be #231F33. Render it with the /blog-feature-image skill or use a designer-supplied image (never AI-generated).`;
+    }
+
+    return null;
+}
+
+/**
+ * PNG Software tag written by the blog-feature-image renderer
+ * (compose_meta_image.py). This string is a shared constant between the renderer
+ * and this allowlist — keep the two in sync if it ever changes.
+ */
+const FEATURE_IMAGE_SOFTWARE = "pulumi-blog-feature-image";
+
+/**
+ * Reads a PNG's `tEXt` Software value straight from the file bytes — no decode
+ * library. Returns the string, or null when there's no tEXtSoftware chunk.
+ *
+ * @param {Buffer} buf The raw PNG file contents.
+ * @returns {string|null}
+ */
+function readPngSoftware(buf) {
+    const match = /tEXtSoftware\x00([ -~]*)/.exec(buf.toString("latin1"));
+    return match ? match[1] : null;
+}
+
+/**
+ * checkFeatureImageSoftware enforces that a blog post's `feature_image` was
+ * produced by the approved pipeline, using an allowlist on the PNG Software tag
+ * rather than a denylist (so a new bad generator fails by default). Allowed:
+ * "Figma" (designer exports), our renderer's stamp, or no tag at all (legacy
+ * skill output — Pillow wrote no Software tag before the stamp was added). Any
+ * other stamp (Matplotlib, PIL, DALL·E, Midjourney, etc.) fails. Scope matches
+ * the other feature-image checks: blog posts, post-local PNG paths only.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageSoftware(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    let buf;
+    try {
+        buf = fs.readFileSync(imgPath);
+    } catch (e) {
+        return null;
+    }
+    if (buf.length < 8 || buf.readUInt32BE(0) !== 0x89504e47) {
+        return null; // Not a PNG; leave format/sizing to the other checks.
+    }
+
+    // Allowlist: Figma exports, our renderer's stamp, or no tag (legacy renders).
+    const software = readPngSoftware(buf);
+    if (software === null || software === "Figma" || software === FEATURE_IMAGE_SOFTWARE) {
+        return null;
+    }
+
+    return `Feature image '${featureImage}' was produced by '${software}', which is not an approved source. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
+}
+
+/**
+ * Every C2PA (content-credentials) manifest embeds a JUMBF superbox whose
+ * description box carries the ASCII label `jumdc2pa\0` — the same 9 bytes in a
+ * JPEG APP11 segment or a PNG chunk, so one needle covers both formats.
+ */
+const C2PA_MARKER = "jumdc2pa\x00";
+
+/**
+ * checkFeatureImageC2pa fails a blog post's `feature_image` that carries a C2PA
+ * content-credentials manifest. AI image generators (Google, OpenAI, Adobe
+ * Firefly) sign their output with C2PA precisely to mark it as AI-generated,
+ * and neither of our approved sources emits it — compose_meta_image.py writes
+ * plain Pillow PNGs and Figma exports carry no manifest — so any C2PA marker
+ * means the file did not come from an approved pipeline. This closes the gap
+ * the other checks leave: a generated image resized to 1884x1256 with a
+ * template-colored backdrop and no PNG Software tag would otherwise pass.
+ * Scope matches the other feature-image checks: blog posts, post-local paths.
+ *
+ * @param {string} featureImage The `feature_image` front-matter value.
+ * @param {string} fullPath Absolute path to the markdown file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkFeatureImageC2pa(featureImage, fullPath) {
+    if (!featureImage || typeof featureImage !== "string" || fullPath.indexOf("/content/blog/") === -1) {
+        return null;
+    }
+    if (featureImage.startsWith("/") || /^https?:/i.test(featureImage)) {
+        return null;
+    }
+
+    const imgPath = path.join(path.dirname(fullPath), featureImage);
+    if (!fs.existsSync(imgPath)) {
+        return null; // checkFeatureImageDimensions already reports a missing file.
+    }
+
+    let buf;
+    try {
+        buf = fs.readFileSync(imgPath);
+    } catch (e) {
+        return null;
+    }
+
+    if (buf.toString("latin1").indexOf(C2PA_MARKER) !== -1) {
+        return `Feature image '${featureImage}' carries a C2PA content-credentials manifest, which marks it as AI-generated output. Render it with the /blog-feature-image skill or use a designer-supplied (Figma) image (never AI-generated).`;
+    }
+
+    return null;
+}
+
+/**
+ * checkBlogCategory validates the `category:` front matter on blog posts against
+ * the closed set in data/blog_categories.yaml. It applies ONLY to individual
+ * blog posts (content/blog/<slug>/index.md), not section pages (_index.md), tag
+ * pages, or non-blog content.
+ *
+ * Category is REQUIRED and SINGULAR: every post must declare exactly one
+ * `category:` scalar value from the allowed set. Use `general` (the default)
+ * for posts that don't clearly fit a specific kind. A list value, a missing
+ * value, or a value outside the set is an error. (The legacy plural `categories`
+ * field is no longer accepted.)
+ *
+ * @param {string} category The `category` front matter value.
+ * @param {*} legacyCategories The legacy `categories` front matter value, if any.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkBlogCategory(category, legacyCategories, fullPath) {
+    const isBlogPost =
+        fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
+    if (!isBlogPost) {
+        return null;
+    }
+
+    if (typeof legacyCategories !== "undefined") {
+        return "Blog post uses the legacy 'categories' field. Use a singular 'category:' scalar instead (e.g. 'category: general'). See data/blog_categories.yaml.";
+    }
+    if (Array.isArray(category)) {
+        return "Blog post 'category' must be a single scalar value, not a list (e.g. 'category: general'). See data/blog_categories.yaml.";
+    }
+    if (!category) {
+        return "Blog post is missing a required 'category' value. Add exactly one category from data/blog_categories.yaml (use 'general' if it doesn't fit a specific kind).";
+    }
+    if (!BLOG_CATEGORIES.includes(category)) {
+        return `Invalid blog category value: '${category}'. Allowed: ${BLOG_CATEGORIES.join(", ")}. See data/blog_categories.yaml.`;
+    }
+
+    return null;
+}
+
+/**
+ * checkCaseStudyIndustry validates the `industry:` front matter on case studies
+ * against the closed set in data/case_study_industries.yaml. It applies ONLY to
+ * individual case-study pages (content/case-studies/<slug>.md), not the section
+ * index (_index.md) or any other content.
+ *
+ * Industry is REQUIRED and SINGULAR: every case study declares exactly one
+ * `industry:` scalar value from the allowed set — a customer belongs to one
+ * vertical. A list value, a missing value, or a value outside the set is an
+ * error. `industry` is a dedicated Hugo taxonomy (see config.yml), so any value
+ * generates a public term page at /case-studies/industry/<slug>/; a typo would
+ * silently ship an orphan URL, which this guard prevents.
+ *
+ * @param {*} industry The `industry` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkCaseStudyIndustry(industry, fullPath) {
+    const isCaseStudy =
+        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+    if (!isCaseStudy) {
+        return null;
+    }
+
+    if (Array.isArray(industry)) {
+        return "Case study 'industry' must be a single scalar value, not a list (e.g. 'industry: security'). See data/case_study_industries.yaml.";
+    }
+    if (!industry) {
+        return "Case study is missing a required 'industry' value. Add exactly one industry from data/case_study_industries.yaml.";
+    }
+    if (!CASE_STUDY_INDUSTRIES.includes(industry)) {
+        return `Invalid case-study industry value: '${industry}'. Allowed: ${CASE_STUDY_INDUSTRIES.join(", ")}. See data/case_study_industries.yaml.`;
+    }
+
+    return null;
+}
+
+/**
+ * checkCaseStudyLogoTile validates the optional logo-tile front matter on case
+ * studies, rendered by layouts/partials/case-studies/card.html (see its header
+ * comment for what each field does):
+ *   - logo_bg_color: a hex color ("#RRGGBB" or "#RGB")
+ *   - logo_style: "white" or "dark", lowercase
+ *   - logo_size: "lg"
+ * All are optional; this guard rejects present-but-malformed values, which
+ * would otherwise ship silently — the template compares exactly, so e.g.
+ * `logo_style: White` just renders the logo in its original colors, and a bad
+ * hex paints no tile background at all.
+ *
+ * @param {*} obj The parsed front matter object.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkCaseStudyLogoTile(obj, fullPath) {
+    const isCaseStudy =
+        fullPath.includes("/content/case-studies/") && path.basename(fullPath) !== "_index.md";
+    if (!isCaseStudy) {
+        return null;
+    }
+
+    const errors = [];
+    if (obj.logo_bg_color !== undefined && !/^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/.test(String(obj.logo_bg_color))) {
+        errors.push(
+            `Invalid 'logo_bg_color' value: '${obj.logo_bg_color}'. Use a quoted hex color like "#0052CC".`,
+        );
+    }
+    if (obj.logo_style !== undefined && !["white", "dark"].includes(obj.logo_style)) {
+        errors.push(
+            `Invalid 'logo_style' value: '${obj.logo_style}'. Allowed: white, dark (lowercase), or omit to render the logo in its original colors.`,
+        );
+    }
+    if (obj.logo_size !== undefined && obj.logo_size !== "lg") {
+        errors.push(
+            `Invalid 'logo_size' value: '${obj.logo_size}'. Allowed: lg, or omit for the default size.`,
+        );
+    }
+
+    return errors.length > 0 ? errors.join(" ") : null;
+}
+
+/**
+ * checkSeriesConsistency enforces that a blog post's series wiring is correct.
+ *
+ * Series membership is driven solely by the `series: <slug>` key:
+ *   - single.html renders the "In This Series" sidebar, finding siblings via
+ *     `where .Params.series`.
+ *   - the dedicated `series` taxonomy generates the landing page at
+ *     /blog/series/<slug>/ (see layouts/taxonomy/series.html + config.yml).
+ * The slug must name a series defined in data/blog_series.yml (any value
+ * generates a public term page, so a typo would ship a junk URL) and must NOT
+ * also appear in `tags`: that was the old workaround for manufacturing a landing
+ * page under the `tags` taxonomy, and it now only produces a stray
+ * /blog/tag/<slug>/ page and surfaces the slug as a topical tag pill. Applies
+ * only to blog posts (content/blog/<slug>/index.md).
+ *
+ * @param {*} series The `series` front matter value.
+ * @param {*} tags The `tags` front matter value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ */
+function checkSeriesConsistency(series, tags, fullPath) {
+    const isBlogPost =
+        fullPath.includes("/content/blog/") && path.basename(fullPath) === "index.md";
+    if (!isBlogPost || BLOG_SERIES_SLUGS.size === 0) {
+        return null;
+    }
+
+    const tagList = Array.isArray(tags) ? tags : typeof tags === "string" ? [tags] : [];
+
+    if (Array.isArray(series)) {
+        return "Blog post 'series' must be a single scalar value (the series slug), not a list. See data/blog_series.yml.";
+    }
+
+    // Every `series:` value mints a public, indexable /blog/series/<value>/ term
+    // page, so it must name a defined series — a typo would silently ship a bare
+    // fallback listing at a junk URL.
+    if (series && !BLOG_SERIES_SLUGS.has(series)) {
+        return `Blog post has 'series: ${series}', which is not a defined blog series. Every series value generates a public /blog/series/ page, so it must match a slug in data/blog_series.yml — fix the typo, or add the series to the data file.`;
+    }
+
+    // A defined series slug must not be used as a tag; the `series` taxonomy owns
+    // the landing page now, keyed off the `series:` front matter.
+    for (const t of tagList) {
+        if (BLOG_SERIES_SLUGS.has(t)) {
+            const addKey = series === t ? "" : ` and add 'series: ${t}'`;
+            return `Blog post is tagged '${t}', a defined blog series. Series now live in their own taxonomy at /blog/series/${t}/ (driven by the 'series:' key), so the slug must not be a tag. Remove '${t}' from tags${addKey}. See data/blog_series.yml.`;
+        }
+    }
+
+    return null;
+}
+
+/**
+ * Normalizes a front matter `date:` value to a YYYY-MM-DD string. js-yaml parses
+ * an unquoted ISO date into a Date, while a quoted one stays a string, so handle
+ * both. Returns null if the value is missing or unparseable.
+ *
+ * @param {Date|string|undefined} date The raw front matter date value.
+ * @returns {string|null} The date as YYYY-MM-DD, or null.
+ */
+function normalizeDate(date) {
+    if (!date) {
+        return null;
+    }
+    if (date instanceof Date) {
+        return date.toISOString().slice(0, 10);
+    }
+    const match = String(date).trim().match(/^\d{4}-\d{2}-\d{2}/);
+    return match ? match[0] : null;
+}
+
+/**
+ * checkChangelogFilename enforces the naming convention for individual changelog
+ * entries under content/releases/changelog/: files must be named
+ * `YYYY-MM-DD-<slug>.md`, and the date prefix must match the front matter
+ * `date:` so the two never drift. Applies only to entry pages, not the section
+ * `_index.md`. See archetypes/changelog.md and the /new-changelog skill.
+ *
+ * @param {Date|string|undefined} date The front matter date value.
+ * @param {string} fullPath The absolute path of the file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkChangelogFilename(date, fullPath) {
+    const normalized = fullPath.replace(/\\/g, "/");
+    const isChangelogEntry =
+        normalized.includes("/content/releases/changelog/") &&
+        path.basename(normalized) !== "_index.md";
+    if (!isChangelogEntry) {
+        return null;
+    }
+
+    const filename = path.basename(normalized);
+    const match = filename.match(/^(\d{4}-\d{2}-\d{2})-[a-z0-9]+(?:-[a-z0-9]+)*\.md$/);
+    if (!match) {
+        return "Changelog entry filenames must be date-prefixed and lowercase-hyphenated, as 'YYYY-MM-DD-slug.md' (e.g. 2026-07-11-universal-search.md). See archetypes/changelog.md or run /new-changelog.";
+    }
+
+    // The filename date prefix must agree with the front matter `date:`.
+    const prefix = match[1];
+    const fmDate = normalizeDate(date);
+    if (fmDate && fmDate !== prefix) {
+        return `Changelog entry filename date prefix '${prefix}' does not match front matter 'date: ${fmDate}'. Rename the file or fix the date so they agree.`;
+    }
+
+    return null;
+}
+
+/**
+ * The four pricing tiers (see content/pricing/_index.md). A changelog entry's
+ * optional `tiers:` front matter may only draw from this closed set. Kept in
+ * sync by hand — the pricing tiers change rarely.
+ */
+const CHANGELOG_TIERS = ["Free", "Team", "Enterprise", "Business Critical"];
+
+/**
+ * checkChangelogTiers validates the optional `tiers:` front matter on individual
+ * changelog entries: it must be a YAML array whose values are all drawn from the
+ * four pricing tiers (CHANGELOG_TIERS). Authors list every tier the feature is
+ * available in; since a lower tier implies the tiers above it, that means the
+ * lowest applicable tier and all tiers above it. The legacy singular `tier:`
+ * scalar is rejected in favor of `tiers:`. Applies only to entry pages, not the
+ * section `_index.md`.
+ *
+ * @param {*} tiers The front matter `tiers` value.
+ * @param {*} tier The front matter `tier` value (legacy; rejected if present).
+ * @param {string} fullPath The absolute path of the file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkChangelogTiers(tiers, tier, fullPath) {
+    const normalized = fullPath.replace(/\\/g, "/");
+    const isChangelogEntry =
+        normalized.includes("/content/releases/changelog/") &&
+        path.basename(normalized) !== "_index.md";
+    if (!isChangelogEntry) {
+        return null;
+    }
+
+    if (tier !== undefined) {
+        return "Changelog `tier:` has been replaced by `tiers:`, a YAML array (e.g. `tiers:` then `    - Enterprise`). List every tier the feature is available in — the lowest applicable tier and all tiers above it.";
+    }
+    if (tiers === undefined) {
+        return null;
+    }
+    if (!Array.isArray(tiers)) {
+        return "Changelog `tiers:` must be a YAML array (e.g. `tiers:` then `    - Enterprise`), not a single value.";
+    }
+    const invalid = tiers.filter(function (t) {
+        return !CHANGELOG_TIERS.includes(t);
+    });
+    if (invalid.length > 0) {
+        const quoted = invalid
+            .map(function (t) {
+                return "'" + t + "'";
+            })
+            .join(", ");
+        return "Changelog `tiers:` value(s) " + quoted + " not allowed. Use only the pricing tiers: " + CHANGELOG_TIERS.join(", ") + ".";
+    }
+    return null;
+}
+
+/**
+ * Asset directories under content/releases/changelog/ whose files must be
+ * date-prefixed, mirroring the entry-filename convention (checkChangelogFilename)
+ * so the shared folders don't turn into an undated jumble.
+ */
+const CHANGELOG_ASSET_DIRS = [
+    "../../content/releases/changelog/images",
+    "../../content/releases/changelog/videos",
+];
+
+/** Date-prefixed, lowercase-hyphenated asset filename, e.g. 2026-07-11-foo.png. */
+const CHANGELOG_ASSET_NAME_REGEX = /^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*\.[a-z0-9]+$/;
+
+/**
+ * Scans the changelog asset directories and returns an error group for every
+ * file whose name isn't date-prefixed as YYYY-MM-DD-<slug>.<ext>. Hidden files
+ * (e.g. .DS_Store, .gitkeep) are ignored. Missing directories yield no errors.
+ * The shape matches groupLintErrorOutput's output so results merge cleanly.
+ *
+ * @returns {{path: string, errors: Object[]}[]} One error group per bad file.
+ */
+function checkChangelogAssets() {
+    const errors = [];
+
+    function walk(dir) {
+        let entries;
+        try {
+            entries = fs.readdirSync(dir, { withFileTypes: true });
+        } catch (e) {
+            return; // Directory doesn't exist; nothing to check.
+        }
+        entries.forEach(function (entry) {
+            const full = path.join(dir, entry.name);
+            if (entry.isDirectory()) {
+                walk(full);
+                return;
+            }
+            if (entry.name.startsWith(".")) {
+                return;
+            }
+            if (!CHANGELOG_ASSET_NAME_REGEX.test(entry.name)) {
+                errors.push({
+                    path: full,
+                    errors: [
+                        {
+                            lineNumber: "Filename",
+                            ruleDescription:
+                                "Changelog asset filenames must be date-prefixed and lowercase-hyphenated, as 'YYYY-MM-DD-slug.ext' (e.g. 2026-07-11-universal-search.png). Rename the file and update its references.",
+                        },
+                    ],
+                });
+            }
+        });
+    }
+
+    CHANGELOG_ASSET_DIRS.forEach(function (rel) {
+        walk(path.resolve(__dirname, rel));
+    });
+    return errors;
+}
+
+/**
+ * The Stencil chooser component, which is the single source of truth for which
+ * chooser types exist and which option keys each one accepts. The lint check
+ * below parses this file rather than duplicating its lists into a data file, so
+ * the guard can't drift out of sync with the component it's guarding.
+ */
+const CHOOSER_COMPONENT_PATH = path.resolve(__dirname, "../../theme/stencil/src/components/chooser/chooser.tsx");
+
+/**
+ * Option tokens that both chooser shortcodes rewrite before handing them to the
+ * component (layouts/shortcodes/{chooser,choosable}.html), and which therefore
+ * won't appear as keys in chooser.tsx.
+ */
+const CHOOSER_OPTION_ALIASES = ["nodejs"];
+
+/** Matches a chooser/choosable shortcode call, capturing its raw argument list. */
+const CHOOSER_SHORTCODE_REGEX = /\{\{[<%]\s*(chooser|choosable)\s+([^\n%>}]*?)\s*\/?\s*[%>]\}\}/g;
+
+/**
+ * Parses chooser.tsx into { types, optionsByType }: the set of valid chooser
+ * types (from the ChooserType union) and, for each type whose options we can
+ * resolve, the set of valid option keys (by following mapOptions' switch to the
+ * corresponding supported* list).
+ *
+ * Throws if the file can't be parsed into a non-empty type list. Failing loudly
+ * is deliberate: a silently-empty registry would turn this guard into a no-op,
+ * which is the exact failure mode it exists to prevent.
+ *
+ * @returns {{types: string[], optionsByType: Object<string, string[]>}}
+ */
+const parseChooserRegistry = (function () {
+    let cached;
+
+    return function () {
+        if (cached) {
+            return cached;
+        }
+
+        const src = fs.readFileSync(CHOOSER_COMPONENT_PATH, "utf8");
+
+        // export type ChooserType = "language" | "os" | ...;
+        const union = src.match(/export type ChooserType\s*=\s*([^;]+);/);
+        const types = union ? [...union[1].matchAll(/"([^"]+)"/g)].map(m => m[1]) : [];
+        if (types.length === 0) {
+            throw new Error(`Could not parse the ChooserType union from ${CHOOSER_COMPONENT_PATH}. ` + `If the component was refactored, update parseChooserRegistry in this file to match.`);
+        }
+
+        // case "language": options = this.supportedLanguages;
+        const typeToList = {};
+        for (const m of src.matchAll(/case\s+"([^"]+)":\s*options\s*=\s*this\.(\w+);/g)) {
+            typeToList[m[1]] = m[2];
+        }
+
+        // private supportedLanguages: SupportedLanguage[] = [ { key: "typescript", ... }, ... ];
+        const listKeys = {};
+        for (const m of src.matchAll(/private\s+(\w+):\s*\w+\[\]\s*=\s*\[([\s\S]*?)\n {4}\];/g)) {
+            listKeys[m[1]] = [...m[2].matchAll(/key:\s*"([^"]+)"/g)].map(k => k[1]);
+        }
+
+        const optionsByType = {};
+        types.forEach(function (type) {
+            const keys = listKeys[typeToList[type]];
+            if (keys && keys.length > 0) {
+                optionsByType[type] = keys;
+            }
+        });
+
+        // Fail loudly here for the same reason the union parse does above: an
+        // unresolved type leaves the option-key check with nothing to compare
+        // against, so it quietly passes everything. A regex that stops matching
+        // (a reformat moving the closing `];`, a renamed supported* list, a
+        // restructured mapOptions switch) would otherwise disable half the guard.
+        types.forEach(function (type) {
+            if (!optionsByType[type]) {
+                const listName = typeToList[type];
+                const where = listName ? `(list: ${listName})` : "(no matching case in mapOptions)";
+                throw new Error(
+                    `Could not parse option keys for chooser type '${type}' ${where} from ${CHOOSER_COMPONENT_PATH}. ` +
+                        `If the component was refactored, update parseChooserRegistry in this file to match.`,
+                );
+            }
+        });
+
+        cached = { types, optionsByType };
+        return cached;
+    };
+})();
+
+/**
+ * Recursively collects markdown files under a directory, applying the same
+ * exclusions as the front-matter walk (auto-generated reference and registry
+ * pages, which are produced elsewhere).
+ *
+ * The chooser check needs its own walk rather than reusing searchForMarkdown's
+ * file list, because that list omits pages the front-matter checks skip
+ * (auto-generated, noindex, redirect passthroughs) -- and a chooser renders on
+ * those pages just the same.
+ *
+ * @param {string} dir Absolute path to walk.
+ * @returns {string[]} Absolute paths of the markdown files found.
+ */
+function listMarkdownFiles(dir) {
+    const found = [];
+
+    function walk(current) {
+        let entries;
+        try {
+            entries = fs.readdirSync(current, { withFileTypes: true });
+        } catch (e) {
+            return;
+        }
+        entries.forEach(function (entry) {
+            const full = path.join(current, entry.name);
+            if (entry.isDirectory()) {
+                walk(full);
+            } else if (entry.name.endsWith(".md")) {
+                if (full.indexOf("/content/docs/reference/pkg") > -1 || full.indexOf("/content/registry") > -1) {
+                    return;
+                }
+                found.push(full);
+            }
+        });
+    }
+
+    walk(dir);
+    return found;
+}
+
+/**
+ * Validates every chooser/choosable shortcode call in the given markdown files.
+ *
+ * An unrecognized chooser type, or an option key the type doesn't define, fails
+ * silently at runtime: the component matches no options, renders zero tabs, and
+ * -- because a choosable only reveals itself when its value matches the current
+ * selection -- hides all of the content it wraps. A page can therefore lose
+ * every code block it has while still building, linting and rendering "fine".
+ * That shipped once already (tf-tool, PR #20001, invisible for four weeks), so
+ * it's a hard error here.
+ *
+ * @param {string[]} files Absolute paths of markdown files to check.
+ * @returns {{path: string, errors: Object[]}[]} One error group per bad file.
+ */
+function checkChooserShortcodes(files) {
+    const { types, optionsByType } = parseChooserRegistry();
+    const groups = [];
+
+    files.forEach(function (fullPath) {
+        let content;
+        try {
+            content = fs.readFileSync(fullPath, "utf8");
+        } catch (e) {
+            return; // Unreadable files are surfaced by the front-matter checks.
+        }
+
+        if (content.indexOf("chooser") === -1 && content.indexOf("choosable") === -1) {
+            return; // Fast path: the vast majority of files have neither.
+        }
+
+        const errors = [];
+
+        for (const match of content.matchAll(CHOOSER_SHORTCODE_REGEX)) {
+            const [full, shortcode, rawArgs] = match;
+            const args = (rawArgs.match(/"[^"]*"|\S+/g) || []).map(a => a.replace(/^"|"$/g, ""));
+            const lineNumber = content.slice(0, match.index).split("\n").length;
+
+            const type = args[0];
+            if (!type) {
+                continue; // The shortcode itself errors on missing arguments.
+            }
+
+            if (!types.includes(type)) {
+                errors.push({
+                    lineNumber: lineNumber,
+                    ruleDescription:
+                        `Unknown chooser type '${type}' in ${shortcode} shortcode. Valid types are: ` +
+                        `${types.join(", ")}. An unrecognized type renders no tabs AND hides all of the ` +
+                        `content it wraps, so the page silently loses it. Either use a valid type or add ` +
+                        `'${type}' to the chooser component (theme/stencil/src/components/chooser/chooser.tsx ` +
+                        `plus the store slice in theme/stencil/src/store/)`,
+                    errorDetail: full.trim(),
+                });
+                continue;
+            }
+
+            // The second positional argument is the option list (chooser) or the
+            // value(s) to match (choosable). A third argument, if present, is the
+            // mode, which the shortcodes validate themselves.
+            const valid = optionsByType[type];
+            if (!valid || !args[1]) {
+                continue;
+            }
+
+            const unknown = args[1]
+                .split(",")
+                .map(o => o.trim())
+                .filter(o => o.length > 0 && !valid.includes(o) && !CHOOSER_OPTION_ALIASES.includes(o));
+
+            if (unknown.length > 0) {
+                errors.push({
+                    lineNumber: lineNumber,
+                    ruleDescription:
+                        `Unknown '${type}' option${unknown.length > 1 ? "s" : ""} ${unknown.map(o => `'${o}'`).join(", ")} ` +
+                        `in ${shortcode} shortcode. Valid options for '${type}' are: ${valid.join(", ")}. ` +
+                        `An unrecognized option is silently dropped, which can leave the chooser with no ` +
+                        `tabs and its content hidden`,
+                    errorDetail: full.trim(),
+                });
+            }
+        }
+
+        if (errors.length > 0) {
+            groups.push({ path: fullPath, errors: errors });
+        }
+    });
+
+    return groups;
+}
+
 /**
  * Builds an array of markdown files to lint and checks each file's front matter
  * for formatting errors.
@@ -166,6 +1135,16 @@ function searchForMarkdown(paths) {
                     title: checkPageTitle(obj.title, allowLongTitle),
                     metaDescription: checkPageMetaDescription(obj.meta_desc),
                     metaImage: checkMetaImage(obj.meta_image),
+                    featureImageDimensions: checkFeatureImageDimensions(obj.feature_image, fullPath),
+                    featureImageBackground: checkFeatureImageBackground(obj.feature_image, fullPath),
+                    featureImageSoftware: checkFeatureImageSoftware(obj.feature_image, fullPath),
+                    featureImageC2pa: checkFeatureImageC2pa(obj.feature_image, fullPath),
+                    blogCategory: checkBlogCategory(obj.category, obj.categories, fullPath),
+                    caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
+                    caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
+                    seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
+                    changelogFilename: checkChangelogFilename(obj.date, fullPath),
+                    changelogTiers: checkChangelogTiers(obj.tiers, obj.tier, fullPath),
                 };
                 result.files.push(fullPath);
             }
@@ -282,6 +1261,66 @@ function groupLintErrorOutput(result) {
                     ruleDescription: frontMatterErrors.metaImage,
                 });
             }
+            if (frontMatterErrors.featureImageDimensions) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageDimensions,
+                });
+            }
+            if (frontMatterErrors.featureImageBackground) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageBackground,
+                });
+            }
+            if (frontMatterErrors.featureImageSoftware) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageSoftware,
+                });
+            }
+            if (frontMatterErrors.featureImageC2pa) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.featureImageC2pa,
+                });
+            }
+            if (frontMatterErrors.blogCategory) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.blogCategory,
+                });
+            }
+            if (frontMatterErrors.caseStudyIndustry) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.caseStudyIndustry,
+                });
+            }
+            if (frontMatterErrors.caseStudyLogoTile) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.caseStudyLogoTile,
+                });
+            }
+            if (frontMatterErrors.seriesConsistency) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.seriesConsistency,
+                });
+            }
+            if (frontMatterErrors.changelogFilename) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.changelogFilename,
+                });
+            }
+            if (frontMatterErrors.changelogTiers) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.changelogTiers,
+                });
+            }
         }
 
         if (lintErrors.length > 0) {
@@ -371,6 +1410,27 @@ Object.values(filesByConfig).forEach(group => {
 
 // Group the lint errors by file.
 const errors = groupLintErrorOutput(result);
+
+// Changelog assets (images/videos) aren't markdown, so the walk above never
+// sees them. Enforce their date-prefix naming during the full CI scan; skip it
+// when linting an explicit file list (lint-staged) to avoid surfacing errors
+// for files the caller didn't touch.
+if (filesFromArgs.length === 0) {
+    checkChangelogAssets().forEach(function (assetError) {
+        errors.push(assetError);
+    });
+}
+
+// Chooser/choosable shortcode calls live in the body rather than the front
+// matter, so they get their own pass over the same scope the caller asked for.
+const chooserScope =
+    filesFromArgs.length > 0
+        ? filesFromArgs.map(f => path.resolve(process.cwd(), f)).filter(f => f.endsWith(".md"))
+        : listMarkdownFiles(path.resolve(__dirname, "../../content"));
+
+checkChooserShortcodes(chooserScope).forEach(function (chooserError) {
+    errors.push(chooserError);
+});
 
 // Get the total number of errors.
 const errorsArray = errors.map(function (err) {

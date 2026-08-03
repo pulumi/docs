@@ -5,15 +5,15 @@ authors:
   - alejandro-cotroneo
 meta_desc: "Pulumi partners with AWS to bring AWS Organizations Tag Policies validation to infrastructure as code, enforcing mandatory tagging requirements."
 allow_long_title: true
-meta_image: "meta.png"
 tags:
   - aws
-  - pulumi-service
+  - pulumi-cloud
   - policy-as-code
   - crossguard
   - features
   - governance
   - compliance
+category: product
 ---
 
 Tags are the foundation of cloud governance, enabling cost allocation, ownership tracking, compliance reporting, and automation across your AWS infrastructure. Yet missing or inconsistent tags remain one of the most common governance challenges. Manual tag enforcement is error-prone, and discovering missing tags after deployment means your cost reports and compliance audits are already operating with incomplete data.

@@ -2,9 +2,10 @@
 date: "2024-10-18"
 title: "Pulumi Kubernetes Operator 2.0"
 authors: ["eron-wright"]
-tags: ["Kubernetes", "Continuous-Delivery", "operators"]
+tags: [kubernetes, continuous-delivery, operators]
+category: product
 meta_desc: "Pulumi Kubernetes Operator 2.0: Horizontal Scaling, Multi-Tenancy"
-meta_image: operator.png
+
 ---
 
 _Update: ["Pulumi Kubernetes Operator 2.0 is Now Generally Available!"](/blog/pko-2-0-ga/)_
@@ -377,6 +378,10 @@ No resources found in default namespace.
 $ kubectl get update
 No resources found in default namespace.
 ```
+
+{{< blog/cta-card title="Run Pulumi inside your cluster" >}}
+Use the Pulumi Kubernetes Operator to deploy and manage cloud infrastructure with the Stack custom resource, driven by the Git changes your cluster already watches.
+{{< /blog/cta-card >}}
 
 ## Migration
 

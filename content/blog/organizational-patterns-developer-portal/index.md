@@ -1,5 +1,6 @@
 ---
 title: "Organizational Patterns: A Developer Portal"
+feature_image: feature.png
 
 # The date represents the post's publish date, and by default corresponds with
 # the date this file was generated. Posts with future dates are visible in development,
@@ -8,13 +9,12 @@ title: "Organizational Patterns: A Developer Portal"
 date: 2021-12-30T11:00:39-06:00
 draft: false
 meta_desc: In this continuing series, we explore an organizational pattern of using Pulumi - a developer portal.
-meta_image: meta.png
 authors:
     - matt-stratton
 tags:
     - development-environment
     - automation-api
-    - organizational-patterns
+category: best-practices
 series: organizational-patterns
 ---
 

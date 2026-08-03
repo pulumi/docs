@@ -114,6 +114,13 @@ def _truncate(s: str, n: int = 160) -> str:
     return s if len(s) <= n else s[: n - 1] + "…"
 
 
+def _fmt_int(n) -> str:
+    try:
+        return f"{int(n):,}"
+    except (TypeError, ValueError):
+        return str(n)
+
+
 def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[str]]:
     findings: list[dict] = []
     errors: list[str] = []
@@ -126,18 +133,25 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
         for v in verified.get("verdicts") or []:
             verdict = (v.get("verdict") or "").lower()
             conf = (v.get("confidence") or "").lower()
-            if verdict in ("contradicted", "mismatch"):
+            if verdict in ("contradicted", "mismatch", "framing-drift"):
                 loc = v.get("line_range") or ""
+                tag = " — framing drift (value accurate, meaning drifted)" if verdict == "framing-drift" else ""
                 findings.append({
                     "label": f"Claim ({v.get('claim_id', '?')}{', ' + loc if loc else ''}): "
-                             f"{_truncate(v.get('text', ''))}",
+                             f"{_truncate(v.get('text', ''))}{tag}",
                     "source": _truncate(v.get("source", ""), 200) or "(no source pointer)",
                     "detail": _truncate(v.get("evidence", "")),
                     "fix": conf == "high",
                 })
             elif verdict == "unverifiable":
+                # Distinguish a retryable turn-budget failure from a genuine
+                # no-source unverifiable — the two must never read identically
+                # downstream (a budget failure is worth retrying; "no source
+                # exists" is not).
+                cap = bool(v.get("turn_cap_exhausted"))
+                tag = " — unverifiable (verifier turn budget exhausted; retryable)" if cap else " — unverifiable"
                 findings.append({
-                    "label": f"Claim ({v.get('claim_id', '?')}): {_truncate(v.get('text', ''))} — unverifiable",
+                    "label": f"Claim ({v.get('claim_id', '?')}): {_truncate(v.get('text', ''))}{tag}",
                     "source": _truncate(v.get("source", ""), 200) or "(verifier did not converge)",
                     "detail": _truncate(v.get("evidence", "")) or "verification did not converge",
                     "fix": False,
@@ -231,8 +245,10 @@ def render_deferrals(findings: list[dict], path: str) -> str:
         "     high-confidence fix). Add any rows you moved down from above. -->\n\n"
     )
     if deferrals:
+        # A finding may carry a pre-composed `reason` (deterministic deferrals,
+        # e.g. the flag-only Search Console row); otherwise the model fills it.
         body = "".join(
-            f"- **{f['label']}** — <TODO: why judgment-level>"
+            f"- **{f['label']}** — {f.get('reason') or '<TODO: why judgment-level>'}"
             + (f" _(context: {f['detail']})_" if f["detail"] else "")
             + "\n"
             for f in deferrals
@@ -344,9 +360,37 @@ def artifact_inventory(verified, vale, readthrough, frontmatter) -> dict:
     return inv
 
 
+def low_ctr_finding(queue: dict) -> dict | None:
+    """The flag-only Search Console deferral, when selection flagged the page.
+
+    Always `fix: False`: a low CTR is a signal for a human to look at the
+    title/meta_desc (via /seo-analyze), never something the worker rewrites —
+    meta rewrites are the canonical slop risk this pipeline is built to avoid.
+    """
+    a = (queue.get("articles") or [{}])[0]
+    g = (a.get("signals") or {}).get("gsc") or {}
+    if not g.get("low_ctr_flag"):
+        return None
+    median = ((queue.get("reader_signals") or {}).get("gsc") or {}).get("median_ctr")
+    detail = f"{_fmt_int(g.get('impressions'))} impressions at {g.get('ctr', 0) * 100:.2f}% CTR"
+    if median:
+        detail += f" vs. corpus median {median * 100:.2f}%"
+    return {
+        "label": "Search opportunity: high impressions with below-median CTR — "
+                 "the title/meta_desc may under-sell this page in search",
+        "source": "Search Console (reader-signals export)",
+        "detail": detail,
+        "reason": "flag-only by design — title/meta_desc rewrites are a human call (`/seo-analyze`)",
+        "fix": False,
+    }
+
+
 def compose(queue: dict, verified, vale, readthrough, frontmatter, gates=None) -> str:
     path = ((queue.get("articles") or [{}])[0]).get("path", "")
     findings, errors = collect(verified, vale, readthrough, frontmatter)
+    lcf = low_ctr_finding(queue)
+    if lcf:
+        findings.append(lcf)
     inv = artifact_inventory(verified, vale, readthrough, frontmatter)
 
     return "\n".join([

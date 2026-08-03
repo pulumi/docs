@@ -6,7 +6,11 @@ description: |
 meta_desc: Learn how Pulumi helps Sourcegraph supercharge their Kubernetes deployments, ensuring their team has continuous access to the latest builds.
 
 customer_name: Sourcegraph
+industry: developer-tools
 customer_logo: /logos/customers/sourcegraph-logo.svg
+logo_bg_color: "#A112FF"
+logo_style: white
+logo_size: lg
 customer_url: https://about.sourcegraph.com/
 
 quote_block:
@@ -34,7 +38,7 @@ sections:
 
 Sourcegraph’s mission is to empower everyone to be able to build software. Its Universal Code Search platform makes the entire codebase of an organization accessible to every single developer and DevOps team member. This makes it easy to dive into unfamiliar parts of the code, discover and share reusable packages, make code reviews fast and thorough, cut down incident response time, and enforce security and code-quality best practices. Sourcegraph encourages knowledge sharing and boosts engineering velocity, helping your team ship higher-quality code, faster.
 
-## Supercharged Deployments
+## Supercharged deployments
 
 Just as the Pulumi team uses its own technology to [build Pulumi](/blog/how-we-use-pulumi-to-build-pulumi/), the Sourcegraph team uses Sourcegraph as an integral part of building its product. Having team members leverage pre-release versions in their day-to-day work ensures that each new version gets put through its paces before it reaches customers. This process, often known as [self-hosting or 'dogfooding'](https://en.wikipedia.org/wiki/Eating_your_own_dog_food), is a common practice within technology companies and it requires that the development team has access to the latest pre-release software. Given this requirement, rapid deployments are critical to ensure that the latest version is in use and that deployments don’t delay development.
 
@@ -44,7 +48,7 @@ Sourcegraph selected Pulumi to deploy their latest versions to [Google Kubernete
 
 > --- Beyang Liu, Sourcegraph CTO
 
-## Best-in-class Development Tools
+## Best-in-class development tools
 
 Pulumi simplifies Sourcegraph deployments in many ways. One key benefit is that it was far easier to configure and manage Kubernetes using TypeScript and modern development environments instead of writing (and then troubleshooting!) YAML. The team’s new deployment workflow is far simpler than what they previously experienced with text-based configuration. Using Pulumi helps Sourcegraph's team frequently deploy new versions with confidence and eliminates deployment errors that previously meant spending hours debugging.
 

@@ -2,11 +2,11 @@
 title: "Pulumi YAML: A Simple Declarative Interface for Pulumi"
 date: 2022-05-04T06:58:00-07:00
 meta_desc: "Introducing Pulumi YAML, a simple declarative interface to the Pulumi Platform, designed for smaller scale cloud infrastructure use cases."
-meta_image: pulumi-yaml.png
 authors:
     - luke-hoban
 tags:
     - yaml
+category: product
 ---
 
 Since we first launched Pulumi 4 years ago, a core point of differentiation between Pulumi and other Infrastructure as Code offerings has been the ability to use popular general purpose programming languages - and their rich software engineering ecosystems - in order to scale up the complexity and richness of cloud infrastructure workloads. This approach has enabled cloud builders to adopt and embrace modern Infrastructure as Code with Pulumi using a wide variety of languages, including TypeScript, Python, Go, C# and Java.
@@ -406,6 +406,10 @@ View Live: https://app.pulumi.com/lukehoban/cuedemo/dev/previews/7ac07d0c-262e-4
 Resources:
     + 9 to create
 ```
+
+{{< blog/cta-card title="Deploy infrastructure with Pulumi YAML" >}}
+Define your cloud resources in a single Pulumi.yaml file, combine multiple providers, and reuse components built in other Pulumi languages.
+{{< /blog/cta-card >}}
 
 ## Convert to Other Pulumi Languages
 

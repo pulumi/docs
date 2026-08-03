@@ -19,9 +19,9 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-node@v6
         with:
@@ -71,12 +71,24 @@ jobs:
       # only re-renders pages that changed (manifest content-hash skip). The
       # cards are gitignored; this cache is their only persistence across runs.
       - name: Cache generated meta images
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: assets/images/generated
           key: meta-images-${{ github.sha }}
           restore-keys: |
             meta-images-
+
+      # Persist Hugo's processed-image cache (resources/_gen). Blog templates
+      # process feature images to WebP at several sizes via .Process; without
+      # this cache every CI run re-encodes ~2,400 images from scratch (~4-5
+      # minutes of the build). With a warm cache, .Process is a lookup.
+      - name: Cache Hugo processed images
+        uses: actions/cache@v6
+        with:
+          path: resources
+          key: hugo-resources-${{ github.sha }}
+          restore-keys: |
+            hugo-resources-
 
       - name: Build and deploy
         run: make ci_pull_request
@@ -111,7 +123,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

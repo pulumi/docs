@@ -4,10 +4,6 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-# URLs to Pulumi utility services.
-export PULUMI_CONVERT_URL="${PULUMI_CONVERT_URL:-$(pulumi stack output --stack pulumi/tf2pulumi-service/production-www url)}"
-export PULUMI_AI_WS_URL=${PULUMI_AI_WS_URL:-$(pulumi stack output --stack pulumi/pulumigpt-api/corp websocketUri)}
-
 printf "Compiling theme JavaScript and CSS...\n\n"
 export ASSET_BUNDLE_ID="$(build_identifier)"
 export CSS_BUNDLE_ID="${ASSET_BUNDLE_ID}"
@@ -43,11 +39,27 @@ else
     fi
 fi
 
+# Add the version selector to the live SDK reference pages (build-time, no commit churn).
+printf "Injecting live SDK version selectors...\n\n"
+./scripts/versioned-docs/inject-live-sdk-selectors.sh public || true
+
 # Generate docs JSON.
 node scripts/content/generate-docs-content.js
 
 # Purge unused CSS.
 yarn run minify-css
+
+# Derive the shared, stable archive theme bundle from the just-built (and purged) docs CSS.
+# Versioned CLI archives reference this single contract URL (/css/versioned-docs-archive.css)
+# instead of vendoring a frozen per-version copy of the fingerprinted site CSS, so the entire
+# CLI back-catalog re-themes whenever the site does. snapshot-cli-docs.sh rewrites archive
+# CSS references to this path; the name is un-fingerprinted on purpose (a permanent contract).
+printf "Deriving versioned-docs archive theme bundle...\n\n"
+if [ -f "public/css/bundle.${CSS_BUNDLE_ID}.css" ]; then
+    cp "public/css/bundle.${CSS_BUNDLE_ID}.css" "public/css/versioned-docs-archive.css"
+else
+    echo "WARNING: docs CSS bundle public/css/bundle.${CSS_BUNDLE_ID}.css not found; archive theme bundle not refreshed" >&2
+fi
 
 # Inline critical CSS for the homepage.
 node scripts/inline-critical-css.js

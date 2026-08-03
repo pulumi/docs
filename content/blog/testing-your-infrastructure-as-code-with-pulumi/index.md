@@ -1,10 +1,11 @@
 ---
 title: "Testing Your Infrastructure as Code with Pulumi"
 authors: ["joe-duffy"]
-tags: ["JavaScript","TypeScript","continuous-delivery","Python"]
+tags: [javascript, typescript, continuous-delivery, python]
+category: tutorials
 date: "2019-04-17"
 meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock new automation capabilities that improve your team's productivity and confidence."
-meta_image: "InfraTesting.png"
+
 ---
 
 {{% notes type="warning" %}}
@@ -45,7 +46,7 @@ are a few examples:
   inside of your compute infrastructure, to ensure that it is healthy
   after your infrastructure has been provisioned
 
-As we see, there's a broad spectrum of [infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+As we see, there's a broad spectrum of [infrastructure testing](/blog/how-to-test-infrastructure-as-code/)
 options available. Pulumi has mechanisms available for testing at each point
 along this spectrum. Let's dig in and see how.
 

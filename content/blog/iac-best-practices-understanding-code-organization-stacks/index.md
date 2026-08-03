@@ -1,9 +1,9 @@
 ---
 title: "IaC Best Practices: Understanding Code Organization & Stacks"
+feature_image: feature.png
 date: 2023-02-20
 updated: 2025-03-04
 meta_desc: Learn best practices for organizing Pulumi code and managing stacks. Discover how to structure projects for maintainability and scalability.
-meta_image: meta.png
 authors:
     - aaron-kao
     - christian-nunciato
@@ -13,7 +13,7 @@ tags:
     - cloud-engineering
     - aws
     - eks
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-code-organization-and-stacks/
@@ -23,16 +23,6 @@ aliases:
 This is the first in a series of blog posts that explores how a fictional company---Zephyr Archaeotech Emporium---uses Pulumi to manage their online retail store. This post explores a couple of common questions that users ask when working with Pulumi; specifically, where should I store my Pulumi code? And how do I support multiple environments with Pulumi? This post will provide some guidance and [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) best practices around these topics, using Zephyr and their online store as the use case.<!--more-->
 
 The ultimate goal of this series is to discuss recommended practices for using Pulumi to manage a fairly complex containerized application. However, it's important to note that these practices will emerge over the course of the series---not all immediately, and not all in the beginning. This is a deliberate decision to allow you to see how Zephyr's use of Pulumi evolves as the company grows and their online retail store application changes to accommodate their growth.
-
-Here are links to all the blog posts in the series:
-
-* **IaC Best Practices: Understanding Code Organization and Stacks** (this post)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* [IaC Best Practices: Implementing RBAC and Security](/blog/iac-best-practices-implementing-rbac-and-security/)
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
 ## Setting Up the Scenario
 
@@ -92,6 +82,10 @@ The second question Zephyr encountered is how to handle the need for multiple in
 This use case---needing to have multiple, separate instances of the infrastructure and applications created by a single Pulumi program---is exactly what [Pulumi stacks](https://www.pulumi.com/docs/concepts/stack/) were designed to address. Each stack is a separate instance of the resources created by a Pulumi program within a project. Further, each stack has its own independent state, and each stack has its own configuration values. Stacks can be short-lived (meaning the associated resources are also short-lived), or stacks can be long-lived. Aside from the cloud resources created by the Pulumi program, stacks are lightweight and simple to create or delete.
 
 Zephyr decided to initially start with two stacks: a production stack (named "prod") and a development stack (named "dev"). As you'll observe throughout this series, this is a decision that is easily adjusted over time as your organization's requirements change.
+
+{{< blog/cta-card title="Organize your infrastructure with stacks" >}}
+Model separate development, staging, and production environments as Pulumi stacks in a single project, each with its own state and configuration.
+{{< /blog/cta-card >}}
 
 ## Viewing the First Iteration of Code
 

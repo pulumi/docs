@@ -5,9 +5,9 @@ updated: 2025-03-07
 meta_desc: >-
   You can now read and transform outputs from stack references
   without calling Output.apply.
-meta_image: meta.png
 authors: [abhinav-gupta]
-tags: [features, stack-reference]
+tags: [features, stack-references]
+category: product
 ---
 
 You can use the new `StackReference.getOutputDetails` method

@@ -1,35 +1,42 @@
 {{ define "main" }}
-    <div class="container mx-auto px-4 pb-8 mt-8">
-        <div class="lg:flex">
-            <div class="lg:w-3/12 pr-8">
-                {{ partial "blog/sidebar.html" . }}
+    {{ partial "blog/header.html" (dict "context" .) }}
+
+    {{- /* Featured slots (hero + 3 small cards) and the feed below the fold, from
+        the shared partial. head.html paginates the SAME $feed first, so the
+        section paginator is set to the feed collection and the featured/helper
+        pages stay out of the list — see partials/blog/feed.html. */ -}}
+    {{ $bf := partialCached "blog/feed.html" . "blog-home" }}
+    {{ $featured := $bf.featured }}
+    {{ $feed := $bf.feed }}
+    {{ $paginator := .Paginate $feed }}
+    {{ $isFirst := eq $paginator.PageNumber 1 }}
+
+    <div class="container mx-auto px-4 py-8 lg:py-10">
+        {{ if $isFirst }}
+            {{ with index $featured 0 }}
+                <div class="mb-8">{{ partial "blog/card/featured.html" (dict "page" .) }}</div>
+            {{ end }}
+            {{ with after 1 $featured }}
+                <div class="mb-10 grid grid-cols-1 gap-x-8 lg:gap-x-16 gap-y-6 border-b border-gray-200 pb-10 xl:grid-cols-3">
+                    {{ range . }}{{ partialCached "blog/card/small.html" (dict "page" .) .RelPermalink }}{{ end }}
+                </div>
+            {{ end }}
+            <div class="mb-6 flex items-start justify-between gap-4">
+                {{ partial "blog/filter-bar.html" . }}
+                {{ partial "blog/view-toggle.html" . }}
             </div>
+        {{ end }}
 
-            <div class="lg:w-7/12">
-                {{ $paginator := .Paginate (where .Pages "Type" "blog").ByDate.Reverse }}
-                {{ range $paginator.Pages }}
-                    <article class="mb-8 pb-8 border-b border-gray-200">
-                        <h2 class="no-anchor"><a data-track="post-{{ .Title | urlize }}" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                        <div class="flex items-center text-sm text-gray-700">
-                            <span>
-                                {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors ) }}
-                            </span>
-                            <span class="mr-2">∙</span>
-                            <time>
-                                {{ .Date.Format "Monday, Jan 2, 2006" }}
-                            </time>
-                        </div>
-                        <section class="blog-list-description">
-                            {{ partial "blog/poster" . }}
-                            {{ partial "blog/summary" . }}
-                        </section>
-                    </article>
-                {{ end }}
+        {{ partial "blog/paginator.html" (dict "context" . "position" "top") }}
 
-                {{ partial "blog/paginator.html" . }}
-            </div>
-
-            <div class="lg:w-2/12 pl-8"></div>
+        <div data-post-list class="flex flex-col">
+            {{ range $paginator.Pages }}{{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}{{ end }}
         </div>
+
+        {{ partial "blog/paginator.html" . }}
+
+        {{ if $isFirst }}
+            {{ partial "blog/series-strip.html" (dict "featured" true) }}
+        {{ end }}
     </div>
 {{ end }}

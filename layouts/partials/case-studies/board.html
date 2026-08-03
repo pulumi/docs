@@ -1,0 +1,48 @@
+{{- /*
+    Shared case-studies "board": the hero, the industry filter bar, and the full
+    grid of every case-study card. Rendered identically by the /case-studies/
+    index (layouts/case-studies/list.html) and every industry term page
+    (layouts/taxonomy/industry.html) so navigating between them feels like a
+    single page — only the active filter pill and the visible subset of cards
+    change, never the layout.
+
+    The hero always comes from the /case-studies/ section page (not the term
+    page), so it stays constant across URLs. Every card is always in the DOM;
+    on a term page the non-matching cards are server-hidden and the matching
+    pill is pre-activated, so a direct load / no-JS / crawler visit sees the
+    correct filtered view. case-studies-list.ts takes over client-side.
+
+    Params:
+      active  the selected industry id ("" = All / the index).
+*/ -}}
+{{- $active := .active -}}
+{{- $section := site.GetPage "/case-studies" -}}
+{{- $items := where (where site.Pages "Type" "case-studies") "Kind" "eq" "page" -}}
+<div class="font-body container mx-auto mb-16 mt-8 md:mt-16 px-6 md:px-8 flex flex-col gap-8 md:gap-20 lg:gap-10 overflow-hidden">
+
+    {{/* Hero */}}
+    <section id="hero" class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
+        <h1 class="heading-1">{{ $section.Title }}</h1>
+        {{ with $section.Params.description }}
+        <p class="body-lg text-gray-primary mb-0 max-w-2xl">{{ . | markdownify }}</p>
+        {{ end }}
+    </section>
+
+    {{/* Industry filter */}}
+    {{ if site.Taxonomies.industry }}
+    <section id="browse-by-industry" aria-labelledby="browse-by-industry-heading">
+        <h2 id="browse-by-industry-heading" class="sr-only">Filter by industry</h2>
+        {{ partial "case-studies/filter-bar.html" (dict "active" $active) }}
+    </section>
+    {{ end }}
+
+    {{/* Case study cards */}}
+    <section id="customer-stories">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {{ range sort $items ".Params.customer_name" }}
+            {{ partial "case-studies/card.html" (dict "page" . "active" $active) }}
+            {{ end }}
+        </div>
+    </section>
+
+</div>

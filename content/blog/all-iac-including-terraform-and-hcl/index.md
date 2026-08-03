@@ -3,14 +3,14 @@ title: "Pulumi for All Your IaC — Including Terraform and HCL"
 date: 2025-12-18T14:00:00-08:00
 draft: false
 meta_desc: Pulumi Cloud can now manage Terraform, Pulumi IaC now speaks HCL, and we'll cover your costs until your HashiCorp contract ends.
-meta_image: meta.png
 authors:
     - joe-duffy
 tags:
-    - iac
+    - infrastructure-as-code
     - terraform
     - hcl
     - hashicorp
+category: product
 ---
 
 We work with thousands of customers who prefer Pulumi due to our modern approach to infrastructure that delivers faster time to market with built-in security and compliance. Yet we know many organizations have years of investments into tools like Terraform. At the same time, HashiCorp customers are increasingly telling us about their frustrations post-IBM acquisition: rate increases, loss of open source heritage, overnight rug-pull of CDKTF, … and the hits just keep on coming. Today, we’re excited to announce three new ways Pulumi is enabling customers of HashiCorp, an IBM Company, who want a better, open source friendly, modern solution for their IaC to choose Pulumi. First, Pulumi Cloud will support Terraform and OpenTofu, so you can continue using any Terraform or Pulumi CLI and language with the complete Pulumi Cloud product, including our infrastructure engineering AI agent, Neo. Second, Pulumi’s own open source IaC tool will support HCL natively as one of its many languages, alongside the industry’s best languages including Python, TypeScript, Go, C#, Java, and YAML. Pulumi is multi-language at its core and many organizations are diverse and polyglot—these new capabilities truly make Pulumi the most universal IaC platform with the broadest support. Third, we’re offering flexible financing to make it easy to depart HashiCorp for Pulumi.
@@ -29,7 +29,7 @@ The great thing about this is that even if you choose Terraform or OpenTofu IaC 
 
 Why would we do such a thing? As we’ve worked with larger and larger companies in our journey to thousands of customers, we’ve seen that there’s significant Terraform out there in the world. Even if a team’s long-term objective is to migrate to 100% Pulumi – reaping the many benefits of modern IaC, like faster time to market by catering better to a polyglot world of developers, infrastructure experts, security engineers, and AI/ML teams – that transition doesn’t happen overnight. Many teams legitimately want a mix of IaC tools. Ensuring all infrastructure is fully automated, secured, and managed is a more righteous outcome to focus on rather than debating one’s choice of IaC tool or language. There are many paths you can take, and now Pulumi can be your one platform to stay on top of all of it and drive towards this outcome.
 
-Support for Terraform/OpenTofu state is in private beta and we are beginning to work with customers directly as we get it ready for prime time. We anticipate general availability in Q1 2026.
+Support for Terraform/OpenTofu state is generally available today, and we're working with customers directly to bring their existing state under Pulumi Cloud's governance, visibility, and Neo integration.
 
 ## HCL Language Support in Pulumi IaC
 
@@ -43,7 +43,7 @@ The good news is that this is not a bolt on. Just like any of the other Pulumi l
 
 HCL support also integrates with Pulumi’s multi-language technology in a deep way, so that you can author modules in one language and consume them from another. This will let, for example, platform teams author complex components in, say, Go – with the rich facilities offered by the language – and then expose them to teammates who consume them in HCL (or vice versa!)
 
-Similar to Terraform support in Pulumi Cloud, HCL is currently in private beta and we will work with customers directly to ensure it meets our quality standards, with a goal of general availability in Q1 2026.
+Similar to Terraform support in Pulumi Cloud, HCL is now generally available as a first-class Pulumi language, alongside Python, TypeScript, Go, C#, Java, and YAML.
 
 ## Builds on Existing Coexist/Convert Capabilities
 
@@ -112,7 +112,7 @@ To learn more about our product capabilities, visit these pages:
 
 ## Get Started Today
 
-If you’d like to join the private beta waitlist for the new Terraform/OpenTofu and HCL capabilities, or take advantage of the financial flexibility options, please [get in touch](https://www.pulumi.com/contact/?form=sales).
+If you'd like to get started with the new Terraform/OpenTofu and HCL capabilities, or take advantage of the financial flexibility options, please [get in touch](https://www.pulumi.com/contact/?form=sales).
 
 We will work with you closely on a three-step process to adopt Pulumi: First, the modernization workshop; then a rapid proof of value; and finally an adoption plan that avoids you double paying Pulumi and HashiCorp.
 

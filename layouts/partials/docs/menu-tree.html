@@ -1,0 +1,138 @@
+{{- /*
+    The docs left-nav tree. This partial is PAGE-INDEPENDENT by design: it is
+    invoked via partialCached (see docs/menu.html) keyed on (currentSection,
+    expandedIDs), so Hugo renders it once per section (~20 times per build)
+    instead of once per docs page (~1,700 times). Before this was cached, the
+    recursive walker below ran ~225,000 times per build (~20 cumulative
+    minutes of render time).
+
+    Consequently NOTHING here may read the current page. Per-page state — the
+    active link, its ancestor chain, and their expansion — is stamped
+    client-side by the inline script in docs/menu.html, which runs before
+    first paint. Section-level expansion is still rendered server-side because
+    currentSection is part of the cache key.
+
+    Params:
+      currentSection (required) the top-level docs section of the current page
+      expandedIDs    (required) menu IDs to force-expand server-side
+*/ -}}
+{{- $currentSection := .currentSection }}
+{{- $expandedIDs := default slice .expandedIDs }}
+
+<pulumi-docs-nav expanded-menu-ids="{{ delimit $expandedIDs "," }}">
+    <ul class="list-none pl-0">
+
+        <li class="" data-menu-id="docs-home">
+            <ul class="list-none">
+                <li><a href="/docs/">
+                    <button>{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}</button>
+                    <span>Docs Home</span>
+                </a></li>
+            </ul>
+        </li>
+
+        {{/* Menu sections driven by data/docs_menu_sections.yml */}}
+        {{- range site.Data.docs_menu_sections }}
+        {{- $menuName := .menu }}
+        {{- $label := .label }}
+        {{- with index site.Menus $menuName }}
+        <li class="expandable expanded{{ if eq $currentSection $menuName }} expanded{{ end }}" data-menu-id="{{ $menuName }}-top">
+            <ul class="list-none">
+                {{- partial "inline/menu/walk.html" (dict "rootMenuID" $menuName "menuEntries" . "forceTopLevelLabel" $label "expandedIDs" $expandedIDs) }}
+            </ul>
+        </li>
+        {{- end }}
+        {{- end }}
+
+        {{/* Tutorials External Link */}}
+        <li class="" data-menu-id="tutorials-external">
+            <ul class="list-none">
+                <li><a href="/tutorials/" target="_blank" rel="noopener noreferrer">
+                    <button>{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}</button>
+                    <span>Tutorials ↗</span>
+                </a></li>
+            </ul>
+        </li>
+
+        {{/* Registry External Link */}}
+        <li class="" data-menu-id="registry-external">
+            <ul class="list-none">
+                <li><a href="/registry/" target="_blank" rel="noopener noreferrer">
+                    <button>{{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}</button>
+                    <span>Registry ↗</span>
+                </a></li>
+            </ul>
+        </li>
+
+    </ul>
+</pulumi-docs-nav>
+
+{{- define "partials/inline/menu/walk.html" }}
+    {{- $rootMenuID := .rootMenuID }}
+    {{- $expandedIDs := default slice .expandedIDs }}
+
+    {{- range .menuEntries }}
+        {{/* Skip Overview pages since we add them manually */}}
+        {{/* Skip root home items that we've already created manually */}}
+        {{- if and (ne .Name "Overview") (ne .Identifier $rootMenuID) }}
+            {{- $name := .Name }}
+            {{- with .Identifier }}
+                {{- with T . }}
+                    {{- $name = . }}
+                {{- end }}
+            {{- end }}
+
+            {{/* Store the current menu item before entering Children context */}}
+            {{- $currentMenuItem := . }}
+
+            {{/* Expansion here covers only force-expanded IDs; expansion of the
+                 current page's ancestors is applied client-side (the tree is
+                 cached and can't know the current page). */}}
+            {{- $isExpanded := and .Identifier (in $expandedIDs .Identifier) }}
+            <li {{ if (and .Children (ne .Identifier $rootMenuID)) }} class="expandable{{ if $isExpanded }} expanded{{ end }}" {{ end }}
+                {{ if .Identifier }} data-menu-id="{{ .Identifier }}" {{ end }}
+                >
+                {{- if and .Children (ne .Identifier $rootMenuID) }}
+                    {{/* Parent with children - make it clickable for expand/collapse but not navigation */}}
+                    <a href="javascript:void(0)" onclick="this.closest('li').classList.toggle('expanded'); return false;">
+                    <button style="pointer-events: none;">
+                        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}
+                    </button>
+                    <span>{{ $name }}</span>
+                    </a>
+                {{- else }}
+                    {{/* Regular link or root menu item */}}
+                    <a{{ with .URL }} href="{{ . }}"{{ end }}>
+                    <button>
+                        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}
+                    </button>
+                    <span>{{ $name }}</span>
+                    </a>
+                {{- end }}
+                {{- with .Children }}
+                    <ul class="list-none">
+                        {{/* Add Overview link for parent pages that have a URL */}}
+                        {{- if $currentMenuItem.URL }}
+                            {{- $overviewPage := site.GetPage $currentMenuItem.URL }}
+                            {{- if $overviewPage }}
+                                {{- $overviewLabel := "Introduction" }}
+                                {{- if $overviewPage.Params.docs_home }}
+                                    {{- $overviewLabel = "Overview" }}
+                                {{- end }}
+                                <li data-menu-id="overview">
+                                    <a href="{{ $overviewPage.RelPermalink }}">
+                                    <button>
+                                        {{ partial "icon.html" (dict "name" "caret-right" "weight" "bold") }}
+                                    </button>
+                                    <span>{{ $overviewLabel }}</span>
+                                    </a>
+                                </li>
+                            {{- end }}
+                        {{- end }}
+                        {{- partial "inline/menu/walk.html" (dict "menuEntries" . "rootMenuID" $rootMenuID "expandedIDs" $expandedIDs) }}
+                    </ul>
+                {{- end }}
+            </li>
+        {{- end }}
+    {{- end }}
+{{- end }}

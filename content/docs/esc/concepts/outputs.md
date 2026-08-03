@@ -65,7 +65,7 @@ Hello, user!
 
 ### Precedence
 
-When an ESC consumer such as [`esc run`](/docs/esc/cli/commands/esc_run) runs a command, the values in `environmentVariables` are layered on top of the variables already present in your local (OS) environment. If a variable is defined in both places, **the value from the environment takes precedence** over the inherited local value.
+When an ESC consumer such as [`pulumi env run`](/docs/iac/cli/commands/pulumi_env_run/) runs a command, the values in `environmentVariables` are layered on top of the variables already present in your local (OS) environment. If a variable is defined in both places, **the value from the environment takes precedence** over the inherited local value.
 
 For example, the `default/greet` environment above sets `GREETING: Hello`. Even if `GREETING` is already set in your shell, the environment's value is used:
 
@@ -119,7 +119,7 @@ Hello, user!
 
 ## pulumiConfig
 
-The `pulumiConfig` reserved property contains values that should be exported as stack configuration for Pulumi IaC. See the [Pulumi IaC integration guide](/docs/esc/guides/integrate-with-pulumi-iac/) for an overview.
+The `pulumiConfig` reserved property contains values that should be exported as stack configuration for Pulumi IaC. See the [Pulumi IaC integration guide](/docs/esc/guides/pulumi-iac/) for an overview.
 
 ### Properties
 

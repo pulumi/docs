@@ -6,7 +6,6 @@ lastmod: 2026-06-03
 
 meta_desc: The Pulumi Kubernetes Provider 4.0; Shared Resource Management with Server-Side Apply
 
-meta_image: meta.png
 
 authors:
     - levi-blackstone
@@ -16,6 +15,7 @@ authors:
 tags:
     - kubernetes
     - providers
+category: product
 
 ---
 

@@ -33,6 +33,10 @@ aliases:
   - /docs/esc/environments/syntax/sample-environment-definition/
   - /docs/reference/esc-syntax/sample-environment-definition/
   - /docs/esc/reference/sample-environment-definition/
+  - /docs/esc/operations/managing-secrets/
+  - /docs/esc/guides/managing-secrets/
+  - /docs/esc/get-started/store-and-retrieve-secrets/
+  - /docs/pulumi-cloud/esc/get-started/store-and-retrieve-secrets/
 ---
 
 An _environment_ is the fundamental unit of organization in Pulumi ESC (Environments, Secrets, and Configuration): a named, versioned YAML document that defines a collection of configuration and secrets. Environments combine static values, secrets, dynamically retrieved values from supported providers (including all major clouds through OpenID Connect), and values imported from other environments. When an environment is _opened_, ESC evaluates the document and produces a concrete set of values that any application, tool, or Pulumi IaC stack can consume.
@@ -106,6 +110,24 @@ _Opening_ an environment is the act of evaluating its definition to produce a co
 
 Because evaluation happens at open time rather than when the environment is defined, credentials are always fresh and short-lived, and secrets are never stored in plaintext outside the environment's encrypted state. An open is reproducible: opening the same environment twice in quick succession returns logically equivalent values, apart from any dynamic credentials that are intentionally rotated or re-issued.
 
+### Retrieving values
+
+Open an environment from the CLI to retrieve all of its values, with secrets decrypted:
+
+```bash
+pulumi env open <org>/<project>/<env-name>
+```
+
+To retrieve a single value, pass a property path, using dot notation to address nested keys:
+
+```bash
+pulumi env get <org>/<project>/<env-name> database.password
+```
+
+In the Pulumi Cloud console, select **Open** to evaluate the environment, then toggle **Show secrets** to reveal encrypted values.
+
+Environments can also be consumed programmatically, either from [Pulumi IaC stacks that import them](/docs/esc/guides/pulumi-iac/) or directly through the [ESC SDKs](/docs/esc/concepts/sdks/).
+
 ## Managing environments
 
 Environments can be created, edited, versioned, and consumed through several surfaces, so you can choose the right tool for interactive work, scripting, or fully automated workflows:
@@ -117,6 +139,8 @@ Environments can be created, edited, versioned, and consumed through several sur
 - **Pulumi Service Provider** — manage environments as infrastructure-as-code with the [Pulumi Service provider](/docs/esc/integrations/pulumi-service-provider/)'s [`Environment`](/registry/packages/pulumiservice/api-docs/environment/) resource, so environment definitions are themselves provisioned and versioned through Pulumi.
 
 Every change to an environment creates a new immutable revision. See [Versioning](/docs/esc/concepts/versioning/) for how to compare, tag, and pin revisions.
+
+A common layout is one environment per deployment stage — `myapp/dev`, `myapp/staging`, `myapp/prod` — with values shared across stages factored into a separate environment and [imported](/docs/esc/concepts/imports/). Because permissions can be assigned per environment, this lets production secrets stay restricted to the people and service accounts that need them while developers retain full access to the development stage.
 
 ## Using environments with Pulumi IaC
 
@@ -151,4 +175,4 @@ Stacks may only read from environments that belong to the same Pulumi organizati
 
 ## Access control
 
-Access to environments is governed by Pulumi Cloud's role-based access control. Organization-wide defaults (`none`, `read`, `open`, `write`) set the baseline permission every member has, and teams can be granted finer-grained roles (reader, opener, editor, admin) on individual environments. The `open` permission is what allows a user to decrypt secrets and retrieve dynamic credentials, so it can be granted independently of the `write` permission used to edit a definition. For the full permission model, see [Access control](/docs/esc/administration/access-control/).
+Access to environments is governed by Pulumi Cloud's role-based access control. Permissions are granted through roles and reusable permission sets — the built-in environment permission sets are `Environment Read`, `Environment Open`, `Environment Write`, and `Environment Admin` — and can be assigned to users or teams, including on individual environments. The `open` permission is what allows a user to decrypt secrets and retrieve dynamic credentials, so it can be granted independently of the `write` permission used to edit a definition. For the full permission model, see [Role-Based Access Control](/docs/administration/access-identity/rbac/).

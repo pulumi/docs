@@ -37,7 +37,7 @@ form. Message objects look like:
   {"type": "result", "total_cost_usd": ..., "num_turns": ..., "duration_ms": ...}
 
 Rate card (approximate; calibrated for relative-cost picture, not precise reconciliation):
-  Agent dispatch        $0.05 / call (avg across Sonnet 4.6 + Haiku 4.5 mix)
+  Agent dispatch        $0.05 / call (avg across Sonnet 5 + Haiku 4.5 mix)
   WebFetch              $0.02 / call
   WebSearch             $0.01 / call
   Bash (gh)             $0.002 / call

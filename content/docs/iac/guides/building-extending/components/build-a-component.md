@@ -9,6 +9,7 @@ menu:
         parent: iac-guides-components
         weight: 10
 aliases:
+- /docs/reference/component-tutorial/
 - /docs/iac/using-pulumi/build-a-component/
 - /docs/iac/using-pulumi/extending-pulumi/build-a-component/
 ---
@@ -26,11 +27,9 @@ This guide will walk you through the steps of making a [Pulumi Component](/docs/
 
 ## Why Write a Component?
 
-Pulumi Components provide a way to encapsulate best practices, ensuring that security policies and deployment patterns remain consistent across projects. They also help reduce code duplication by allowing you to define reusable infrastructure patterns. By structuring infrastructure as components, maintainability improves, and teams can work more efficiently.
+Components encapsulate best practices, propagate resource options to every resource they create, appear as a single node in your stack, and can be shared across teams and languages.
 
-- **Sharing and Reusability**: Do more with less code. Don't repeat yourself.
-- **Best Practices and Policy**: Encode company standards and policy.
-- **Multi-language Support**: When packaged as a Pulumi plugin package, a component written in one language can be consumed from any other Pulumi-supported language via a generated SDK.
+For the full case — including when a plain function is the better choice — see [When to Build a Component](/docs/iac/guides/building-extending/components/when-to-build-a-component/).
 
 ## How It Works
 

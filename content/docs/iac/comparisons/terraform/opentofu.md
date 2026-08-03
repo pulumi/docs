@@ -1,8 +1,10 @@
 ---
 title_tag: "OpenTofu vs. Terraform"
+authors: ["joe-duffy"]
 meta_desc: Compare and contrast OpenTofu and Terraform across key features. Learn how they differ and why many teams are migrating to Pulumi.
 title: OpenTofu vs. Terraform
 h1: OpenTofu vs. Terraform
+include_floqer: true
 menu:
     iac:
         name: OpenTofu vs. Terraform
@@ -51,7 +53,7 @@ Here is a summary of the key differences between OpenTofu and Terraform:
 | [Transformations](#transformations) | No | No |
 | [Import Code from other IaC Tools](#converting) | No | No |
 
-Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi so you can have greater developer productivity, ability to scale, and delivery velocity. Follow our comprehensive guides in our [Migration Hub](/blog/migration-hub/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. If you would like to deploy a simple program, follow our Get Started guide:
+Are you constrained by Terraform or OpenTofu? Let us help you migrate to Pulumi so you can have greater developer productivity, ability to scale, and delivery velocity. Follow our comprehensive [migration guides](/docs/iac/guides/migration/) or work with our [Expert Services teams](/contact?form=tf-migration) that can help you with migration and training. If you would like to deploy a simple program, follow our Get Started guide:
 
 {{< get-started >}}
 
@@ -65,7 +67,7 @@ Pulumi open-source projects use the permissive and business-friendly [Apache Lic
 
 ### Language Support {#language}
 
-Pulumi enables you to build infrastructure using familiar programming languages such as Python, Go, JavaScript, TypeScript, C#, and Java. By using these established languages, you gain access to common constructs like loops, conditionals, functions, and classes—making it easier to reduce boilerplate and enforce best practices. These languages have been refined over decades to manage complexity at scale, which aligns perfectly with the challenges of today’s globally distributed cloud systems. Rather than introducing a new module ecosystem, Pulumi allows you to use existing package managers and development workflows you’re already comfortable with.
+Pulumi enables you to build infrastructure using familiar programming languages such as Python, Go, JavaScript, TypeScript, .NET, and Java, plus YAML and [HCL](/docs/iac/languages-sdks/hcl/) for teams already writing Terraform configurations. By using these established languages, you gain access to common constructs like loops, conditionals, functions, and classes—making it easier to reduce boilerplate and enforce best practices. These languages have been refined over decades to manage complexity at scale, which aligns perfectly with the challenges of today’s globally distributed cloud systems. Rather than introducing a new module ecosystem, Pulumi allows you to use existing package managers and development workflows you’re already comfortable with.
 
 ### IDE Support {#ide}
 

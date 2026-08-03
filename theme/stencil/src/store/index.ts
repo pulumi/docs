@@ -16,6 +16,11 @@ export const rootReducer = combineReducers({
     user,
 });
 
+// Page-scoped languages that are never persisted as the global preference (see the
+// serializer in configureStore). They're only offered on a handful of pages and would
+// break every page that doesn't support them if they lingered.
+const specialPurposeLanguages: string[] = ["hcl", "opa"];
+
 // The Redux store. See https://redux.js.org/ for general information about Redux and
 // https://stenciljs.com/docs/stencil-redux for details about Stencil's implementation.
 export const configureStore = () => {
@@ -30,17 +35,33 @@ export const configureStore = () => {
     }
 
     const persistedState: any = local ? JSON.parse(local) : {};
+    const initialState = normalizeState(persistedState);
 
-    const store = createStore(rootReducer, normalizeState(persistedState), composeWithDevTools(applyMiddleware(thunk)));
+    const store = createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
+
+    // HCL and OPA are page-scoped languages: they display while you're on one of the few
+    // pages that offer them, but must never become your persisted preference, or every
+    // other page would inherit a language it can't render. So we never write them to
+    // storage -- while one is selected we keep persisting your last real language, leaving
+    // your actual preference intact across the visit.
+    let lastRealLanguage = (initialState.preferences && initialState.preferences.language) || "typescript";
 
     // Serialize to localStorage.
     store.subscribe(() => {
         const state = store.getState();
 
+        if (!specialPurposeLanguages.includes(state.preferences.language)) {
+            lastRealLanguage = state.preferences.language;
+        }
+        const toPersist =
+            state.preferences.language === lastRealLanguage
+                ? state
+                : { ...state, preferences: { ...state.preferences, language: lastRealLanguage } };
+
         // localStorage.setItem can fail when cookies are blocked or when the
         // the browser's storage limit has been exceeded.
         try {
-            localStorage.setItem("pulumi_state", JSON.stringify(state));
+            localStorage.setItem("pulumi_state", JSON.stringify(toPersist));
         } catch (e) {
             console.error("Failed to save pulumi_state:", e);
         }
@@ -77,14 +98,19 @@ export function normalizeState(persistedState: any): Partial<AppState> {
 
         // state.preferences
         if (persistedState.preferences) {
+            // Coerce a stale special-purpose language (e.g. an HCL preference left over
+            // from before we stopped persisting them) back to a real one on load, so it
+            // never re-enters the store.
+            const persistedLanguage = persistedState.preferences.language;
             state.preferences = {
-                language: persistedState.preferences.language || "typescript",
+                language: persistedLanguage && !specialPurposeLanguages.includes(persistedLanguage) ? persistedLanguage : "typescript",
                 os: persistedState.preferences.os || "macos",
                 cloud: persistedState.preferences.cloud || "aws",
                 k8sLanguage: persistedState.preferences.k8sLanguage || "typescript",
                 persona: persistedState.preferences.persona || "developer",
-                backend: persistedState.backend || "service",
+                backend: persistedState.preferences.backend || "service",
                 pythontoolchain: persistedState.preferences.pythontoolchain || "pip",
+                tfTool: persistedState.preferences.tfTool || "terraform",
             };
         }
     } catch (e) {

@@ -42,7 +42,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 ### 🔍 Verification trail
 
 <details>
-<summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted</summary>
+<summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted[ · <strong>W</strong> framing-drift][ · <strong>D</strong> detector findings]</summary>
 
 - L<line> "<claim text>" → ✅ verified (evidence: <source pointer>)
 - L<line> "<claim text>" → 🤷 unverifiable (no inline citation; author question filed)
@@ -80,14 +80,24 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 
 - <ISO 8601 timestamp> — <one-line summary> (<commit SHA prefix>)
 
+<!-- CLAUDE_REVIEW_FOOTER -->
+
 ---
-Need a re-review? Want to dispute a finding? Mention `@claude` and include `#update-review`.  
-(For ad-hoc questions or fixes, just `@claude` — no hashtag.)
+
+- **Refresh this review** — comment `@claude #update-review`. …
+- **Ask for anything else** — comment `@claude` with no hashtag …
+
+> [!IMPORTANT]
+> Please don't hide, resolve, or delete this comment! It breaks things!
+
+📖 [How pre-merge review works](…) — the full lifecycle, short-circuits, and escape hatches.
 ```
 
 **Mandatory sections render on every review** — Investigation log, bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
 
-The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
+The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero.
+
+**You do not write the footer.** Its canonical text lives in `.claude/commands/docs-review/footer.md`, and `pinned-comment.sh` is its sole writer on publish: it strips whatever footer the inbound body carries and stamps a fresh copy onto *every* comment of a split review, so the refresh instructions ride on the 1/M comment people actually read rather than only on the tail. `compose-review.py` renders the same file into the draft (abridged above — read `footer.md` for the exact text) so drafts stay complete documents. Leave it in place when you edit the draft; if you drop it, publish restores it. To change the wording, edit `footer.md` — that one file feeds the composer, the shell, and this reference.
 
 The ⚠️ Low-confidence count includes style findings. The maintainer's review burden equals the count rendered in the table; understating it is a false signal.
 
@@ -195,7 +205,9 @@ Some passes (claim extraction, cross-sibling reads) fan out into parallel specia
 
 The 🔍 Verification trail section sits between the bucket count table and the 🚨 Outstanding bucket. It renders the `evidence_trail` from `docs-review:references:fact-check` verbatim — one bullet per claim record, including cross-sibling-consistency checks framed as `claim_type: cross-reference`.
 
-**Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral.
+**Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral. `🚩 flagged` detector lines (`route: "preflight"`) are **not** claims: they are excluded from `N` — which therefore equals `Y` in the investigation log's "X of Y claims verified" — and counted in none of X/Y/Z. When any are present, a trailing `· D detector findings` segment carries them, so the trail's own lines still add up to `N + D`.
+
+`🌀 framing-drift` lines **are** claims (they count in `N`), but they are **not** part of `Z contradicted`. `Z` counts only `contradicted` + `mismatch` — the verdicts that say the claim is wrong as written and must reach 🚨. Drift defaults to ⚠️, so counting it as a contradiction makes the header report contradictions the body doesn't contain. When any are present they get their own `· W framing-drift` segment, in the summary and in the investigation log's `(N unverifiable, M contradicted, W framing-drift)` parenthetical alike. (The per-lane `Pass 2 (verified …, contradicted …, unverifiable …)` triple is the one exception: drift rides the `contradicted` column there, because that triple's shape is pinned by the validator and it's a routing diagnostic, not a headline.)
 
 **The candidate-claims floor must be fully covered.** When the workflow's claim-extraction pre-step ran, `.candidate-claims.json` is the *floor* — every entry in it must appear in this trail with a verdict (the `candidate-claims-coverage` validator rule fails the review otherwise, soft-flooring loudly). `N claims extracted` (the `<details>` summary) and `Y` in the investigation-log "X of Y claims verified" line are therefore **≥ the count of `.candidate-claims.json` entries** — you may add claims the artifact missed (`N`/`Y` go up), you may not drop one (`N`/`Y` can't go below the floor). When the workflow's verification pre-step also ran, `.verified-claims.json` is the *verdict source* — render each floor entry's trail line with the verdict + `evidence` + `source` it records there (don't re-verify); the `verified-claims-trail-faithful` validator rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction. A candidate claim you (or the verifier) triage down to "not actually a checkable claim" still gets a trail line: `- L<line> "<text>" → ➖ not-a-claim — <one-line reason>` (git metadata, a Dockerfile-comment tag, a faithful description of the author's own design — see `docs-review:references:claim-extraction` §"What is NOT a claim"). See `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json` and §Routed verification.
 
@@ -203,17 +215,18 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 
 | Verdict word | Emoji | Bucket | When |
 |---|:---:|---|---|
-| `verified` | ✅ | trail-only (or ⚠️ Low-confidence verified when `confidence: low` / medium-under-heightened) | an authoritative source confirms the claim's exact framing, OR the source's broader form proves the claim as a narrower subset (`framing_note: "strengthened"`) |
+| `verified` | ✅ | trail-only (or ⚠️ Low-confidence verified when `confidence: low` / medium-under-heightened) | an authoritative source confirms the claim's exact framing, OR the source's broader form proves the claim as a special case (`framing: entailed-narrower`) |
 | `matches` | 🤝 | trail-only | a cross-sibling-consistency check that's consistent with the sibling pages |
 | `not-a-claim` | ➖ | trail-only | a candidate that isn't a falsifiable assertion (git metadata, a comment-tag, a faithful description of the author's own design) — demoted, not failed |
 | `unverifiable` | 🤷 | ⚠️ Low-confidence (genuine author-check) OR 📋 Triaged verifier findings (mis-sourced verifier noise; see §Bucket rules) | genuinely not checkable — paywalled, internal-only, future-dated, or a dead/404 source with no live alternative |
-| `contradicted` | ❌ | 🚨 Outstanding (actionable) OR 📋 Triaged verifier findings (verifier false-positive — `**Spurious:**` label) OR 💡 Pre-existing (already there on a line this PR didn't touch — `**Pre-existing:**` label) | a source positively disagrees, OR the claim overclaims (`framing_note: "narrowed"` — claim broader than source) / shifts subject (`framing_note: "shifted"`). A claim that's a *narrower* subset of a broader source statement is `verified`, not contradicted — see the `verified` row. |
+| `contradicted` | ❌ | 🚨 Outstanding (actionable) OR 📋 Triaged verifier findings (verifier false-positive — `**Spurious:**` label) OR 💡 Pre-existing (already there on a line this PR didn't touch — `**Pre-existing:**` label) | a source positively disagrees with the claim's anchor fact (the number, name, date, or capability is wrong), or the cited page says the opposite. A claim the source proves as a special case is `verified` (see the `verified` row); a claim whose anchor is right but whose meaning drifted is `framing-drift` (next row after `flagged`). |
 | `mismatch` | ⚔️ | 🚨 Outstanding (actionable) OR 📋 Triaged verifier findings OR 💡 Pre-existing (same triage outcomes as `contradicted`) | a cross-sibling-consistency check where this PR diverges from the siblings' established pattern |
 | `flagged` | 🚩 | 🚨 Outstanding (actionable) OR ⚠️ Low-confidence OR 📋 Triaged OR 💡 Pre-existing | a **detector** finding — not a fact-check outcome. Synthesized from a deterministic pre-flight check (Hugo build, frontmatter collision, readthrough coherence) carrying `route: "preflight"`; the specific detector is named in the parenthetical (`🚩 flagged (readthrough: prerequisite-inversion)`). **The reviewer buckets by reader impact: 🚨 Outstanding when a reader can't reach the page's stated outcome without it, otherwise ⚠️ Low-confidence** (a non-blocking readthrough nit — a redundancy, a recommended restructure routed to a follow-up — belongs in ⚠️, and the `trail-verdict-bucket-promotion` rule accepts it there for `flagged` only; `contradicted`/`mismatch` must still go to 🚨). It must surface in *some* actionable bucket, not vanish. Detector findings are excluded from the "X of Y claims verified" counts. **Render its bucket bullet as a plain detector statement (what's broken + the fix); do NOT attach fact-check verdict framing (`verdict: contradicted`, `framing: shifted`) — the `🚩 flagged` trail line is the verdict.** |
+| `framing-drift` | 🌀 | ⚠️ Low-confidence (default) OR 🚨 Outstanding (promoted) OR 📋 Triaged / 💡 Pre-existing (same triage outcomes as `contradicted`) | **the anchor value/fact is accurate, but the claim's published meaning differs from what the source supports** — a widened denominator, present usage recast as intent, a dropped qualifier, or a value published under semantics the source doesn't carry (a bare schema.org `Offer.price` for a monthly plan). The bucket bullet quotes the source form vs the claim form and proposes a rewrite restoring the source's framing. **Promote to 🚨 when the drifted phrasing also rides `social.*` frontmatter (auto-posted on merge) or would materially mislead**; the `trail-verdict-bucket-promotion` rule accepts ⚠️ for `framing-drift` (like `flagged`). |
 
 `✅` is the canonical `verified` glyph — it is *not* a generic stand-in for "passed". `matches` uses `🤝`, `not-a-claim` uses `➖`. The `trail-bucket-consistency` rule emits a `trail-per-verdict-emoji` nudge when a trail line still renders a legacy bucket emoji (✅ on `matches`/`not-a-claim`, ⚠️ on `unverifiable`, 🚨 on `contradicted`/`mismatch`) instead of the per-verdict glyph.
 
-**Use the six canonical words verbatim — never a variant.** On a 🔍 trail line, the verdict immediately after the emoji is EXACTLY one of `verified` / `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch`. Do not freelance descriptive variants — `source-mismatch`, `author-authored`, `author`, `source-title-match`, `failed-to-find`, `verified weakly` and the like are not verdict words. A non-canonical token parses as "no verdict" and slips past the `verified-claims-trail-faithful` / `trail-per-verdict-emoji` checks, so the `trail-canonical-verdict-word` rule flags it (the surgical fixer derives the right word from the rendered glyph). A framing nuance (`strengthened`/`narrowed`/`shifted`) belongs in the parenthetical alongside the canonical verdict word (`→ ✅ verified (strengthened — claim narrows "elsewhere" to "in `PulumiPlugin.yaml`"; source's broader form proves the claim)` for `strengthened`; `→ ❌ contradicted (narrowed — claim broadens "U.S. enterprise" to "enterprise")` for `narrowed`; `→ ❌ contradicted (shifted — "evaluate" vs "deploy")` for `shifted`), never in place of the verdict word.
+**Use the canonical words verbatim — never a variant.** On a 🔍 trail line, the verdict immediately after the emoji is EXACTLY one of `verified` / `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch` / `framing-drift`. Do not freelance descriptive variants — `source-mismatch`, `author-authored`, `author`, `source-title-match`, `failed-to-find`, `verified weakly` and the like are not verdict words. A non-canonical token parses as "no verdict" and slips past the `verified-claims-trail-faithful` / `trail-per-verdict-emoji` checks, so the `trail-canonical-verdict-word` rule flags it (the surgical fixer derives the right word from the rendered glyph). A framing nuance (`entailed-narrower`/`overclaim-broader`/`shifted`) belongs in the parenthetical alongside the canonical verdict word (`→ ✅ verified (framing: entailed-narrower — source's broader "elsewhere" proves "in `PulumiPlugin.yaml`")`; `→ 🌀 framing-drift (framing: overclaim-broader — claim broadens "U.S. enterprise" to "enterprise")`; `→ 🌀 framing-drift (framing: shifted — "use" became "betting on")`), never in place of the verdict word.
 
 **Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <per-verdict emoji> <verdict word> (<evidence pointer>)`. Cross-sibling checks render as `→ 🤝 matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ ⚔️ mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. A trail line may carry several line refs when one verdict covers a frontmatter-sweep-collapsed claim (`- L12 "..." (also L88, L91) → 🤝 matches`). Strip credentials per `fact-check.md` §Credential redaction before rendering.
 
@@ -288,7 +301,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   - Missing internal link target (per `docs-review:references:docs`).
   - Missing aliases on a moved file (per `docs-review:references:shared-criteria`).
   - Workflow-breaking instruction — reader cannot complete the documented task as written (cross-sibling-verified where applicable; see `docs-review:references:docs`).
-  - Blog publishing-blocker (retired-logo `meta_image`, placeholder `meta_image`, `meta_image` format violation, missing/buried `<!--more-->`, missing/empty `social:` block, missing author avatar) — per `docs-review:references:blog` §Publishing blockers.
+  - Blog publishing-blocker (retired-logo custom `meta_image` override, `meta_image` format violation, missing/buried `<!--more-->`, missing/empty `social:` block, missing author avatar) — per `docs-review:references:blog` §Publishing blockers.
   - Secrets, credentials, or tokens in the diff (per `docs-review:references:infra` §Secret handling).
   - Clearly-broken state that would fail CI on merge (per `docs-review:references:infra`).
   - Legal semantic change on `/legal/` content (per `docs-review:references:website`).
@@ -337,7 +350,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
     Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Render the breakdown even on single-finding files (the format is uniform across the review).
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
-- **✅ Resolved** lists findings from the previous review that no longer appear.
+- **✅ Resolved** lists findings from the previous review that no longer appear. Annotate conceded findings with `concede: <reason>` (per `docs-review:references:update` Case 2) — the outcome telemetry (`scrape-review-outcomes.py`) distinguishes fixed from conceded by that exact token, and the `outcome-annotation-shape` validator rule flags freelanced variants. The same applies to the held-dispute annotation `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` in 🚨/⚠️.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
 
 Per-finding rendering (suggestion blocks, quote-and-rewrite mandate, fix prose) is governed by `docs-review:references:shared-criteria`.

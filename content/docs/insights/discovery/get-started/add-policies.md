@@ -14,7 +14,7 @@ aliases:
   - /docs/insights/get-started/add-policies/
 ---
 
-Now that you have scanned your cloud accounts and discovered resources, you can use Pulumi Policy policies to evaluate those resources for compliance, security, and adherence to best practices. Insights runs policy evaluations automatically whenever it discovers new or changed resources, providing continuous visibility into your infrastructure's compliance status.
+Now that you have scanned your cloud accounts and discovered resources, you can use Pulumi Policy policies to evaluate those resources for compliance, security, and adherence to best practices. Insights runs policy evaluations automatically whenever it discovers new or changed resources, providing continuous visibility into your infrastructure's compliance status. The wizard already applied a default policy pack when you connected your account; in this step you'll write and apply a custom policy pack of your own.
 
 ## Creating a policy pack
 
@@ -72,28 +72,28 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 
     ![Insights Policies - New Policy Pack](/docs/insights/assets/policy-groups.png)
 
-1. Click **Create policy group** and provide a descriptive name, such as "s3-security-policy-group". Then click **Add policy group**
+1. Select **Create policy group** and provide a descriptive name, such as "s3-security-policy-group". Then select **Add policy group**
 
-1. Click **Add Policy Pack** to configure enforcement:
+1. Select **Add Policy Pack** to configure enforcement:
 
     Select your newly published policy pack from the dropdown and choose the version you want to enforce.
 
     Here you can configure the enforcement level at either a global level for all, or a granular level for each individual policy check.
 
-    We'll start with an enforcement level of **advisory** then click **Enable** to confirm your settings.
+    We'll start with an enforcement level of **advisory** then select **Enable** to confirm your settings.
 
     ![Insights Policies - New Policy Pack](/docs/insights/assets/enable-policy-pack.png)
 
-1. Now add your insights account to the policy group. Click **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. insights-aws-account/us-west-2) Finally, click **Add account to policy group**
+1. Now add your insights account to the policy group. Select **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. production/us-west-2) Finally, select **Add account to policy group**
 
 {{% notes type="info" %}}
-By default, all accounts and stacks are automatically added to the `default-policy-group`.
+Cloud accounts are automatically added to `default-accounts-policy-group`, and stacks to `default-policy-group`, as they are created. See [default policy groups](/docs/insights/policy/policy-groups/#default-policy-groups).
 {{% /notes %}}
 
 ![Insights Policies - New Policy Pack](/docs/insights/assets/new-policy-pack.png)
 
 {{< notes type="info" >}}
-When adding accounts to a policy group, make sure to include both the parent account name and the region if you want to evaluate region-specific resources. For example: `insights-aws-account/us-west-2`
+When adding accounts to a policy group, make sure to include both the parent account name and the region if you want to evaluate region-specific resources. For example: `production/us-west-2`
 {{< /notes >}}
 
 ## Running a policy scan
@@ -102,12 +102,12 @@ With policies configured, you can now evaluate your discovered resources against
 
 1. Navigate to the **Accounts** section
 2. Select the regional account you want to evaluate (e.g., `us-west-2`)
-3. Click **Actions** then select **Scan**
-4. Confirm by clicking **Scan**
+3. Select **Actions** then select **Scan**
+4. Confirm by selecting **Scan**
 
 ## Reviewing policy issues
 
-As the scan progresses, you can monitor policy compliance in real-time through the **Policy Findings** page in the Pulumi Cloud Console. This view provides several ways to analyze your compliance status:
+As the scan progresses, you can monitor policy compliance in real-time through the **Policy Findings** page in the Pulumi Cloud console. This view provides several ways to analyze your compliance status:
 
 ![Insights Policies - Policy Findings](/docs/insights/assets/policy-findings.png)
 

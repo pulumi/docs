@@ -12,6 +12,7 @@ menu:
         weight: 6
 
 aliases:
+    - /docs/get-started/kubernetes/modify-program/
     - /docs/quickstart/kubernetes/modify-program/
     - /docs/quickstart/kubernetes/deploy-changes/
 ---
@@ -439,9 +440,13 @@ outputs:
   ip: ${service.spec.clusterIP}
 ```
 
+{{% notes type="info" %}}
+The YAML program always uses a `ClusterIP` service and does not read the `isMinikube` configuration value. If you are using YAML, you can skip the `pulumi config set isMinikube` step described below.
+{{% /notes %}}
+
 {{% /choosable %}}
 
-Our program now creates a service to access the NGINX deployment, and requires a new [config](/docs/concepts/config/) value to indicate whether the program is being deployed to Minikube or not.
+Our program now creates a service to access the NGINX deployment, and requires a new [config](/docs/iac/concepts/config/) value to indicate whether the program is being deployed to Minikube or not.
 
 The configuration value can be set for the stack using `pulumi config set isMinikube <true|false>` command.
 
@@ -514,7 +519,7 @@ Duration: 12s
 
 ### Verify the deployment
 
-View the `ip` [stack output](/docs/concepts/stack#outputs) from the NGINX service:
+View the `ip` [stack output](/docs/iac/concepts/stacks/#outputs) from the NGINX service:
 
 {{% choosable "os" "macos,linux" %}}
 

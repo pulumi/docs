@@ -111,7 +111,7 @@ enablement:
   closing: |
     **The code-native advantage:** LLMs are trained extensively on general-purpose languages like Python and TypeScript, so AI tools can read and write Pulumi programs directly, in the same languages your engineers use.
   cta: "Get started with Neo"
-  link: /docs/pulumi-cloud/neo/get-started/
+  link: /docs/ai/neo/get-started/
   image: /images/product/hcl-to-pulumi.png
 
 

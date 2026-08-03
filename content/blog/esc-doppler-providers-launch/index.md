@@ -4,7 +4,6 @@ date: 2025-06-26
 updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC adds Doppler providers for dynamic OIDC login and centralized secret fetching, enhancing security and simplifying management."
-meta_image: meta.png
 authors:
   - robert-harris
 tags:
@@ -15,6 +14,7 @@ tags:
   - configuration-management
   - dynamic-secrets
   - oidc
+category: product
 ---
 
 We are excited to announce support for [Doppler](https://doppler.com/) within [Pulumi ESC](/product/esc)! Pulumi ESC centralizes secrets and configuration management, providing a unified source of truth across your environments. With the addition of Doppler, a popular secrets management platform, ESC further extends its ecosystem, enabling seamless and secure access to secrets stored across diverse systems.

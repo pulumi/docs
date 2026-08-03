@@ -89,6 +89,18 @@ values:
             - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
 ```
 
+## Schema reference
+
+{{< esc-schema-updated >}}
+
+### Inputs
+
+{{< esc-schema type="provider" name="aws-login" section="inputs" >}}
+
+### Outputs
+
+{{< esc-schema type="provider" name="aws-login" section="outputs" >}}
+
 ## Consuming the credentials
 
 Because the `aws-secrets` and `aws-parameter-store` providers accept an `aws-login` output as their `login` input, you can log in once and chain the credentials into other providers with `login: ${aws.login}`.
@@ -178,36 +190,3 @@ Most `aws-login` failures come from the OIDC trust relationship between Pulumi C
 **Cause:** an IAM role's maximum session duration defaults to one hour, and the requested session `duration` can't exceed it.
 
 **Fix:** raise the role's **Maximum session duration** in the IAM console (up to 12 hours), or lower the `duration` input to fit within it.
-
-## Inputs
-
-| Property | Type                              | Description                                                       |
-|----------|-----------------------------------|-------------------------------------------------------------------|
-| `oidc`   | [AWSLoginOIDC](#awsloginoidc)     | [Optional] - OIDC configuration to log in to AWS.                 |
-| `static` | [AWSLoginStatic](#awsloginstatic) | [Optional] - A static set of credentials to use to log in to AWS. |
-
-### AWSLoginOIDC
-
-| Property      | Type     | Description                                                                                                                                                                                                  |
-|---------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `roleArn`     | string   | The ARN of the role to assume.                                                                                                                                                                              |
-| `sessionName` | string   | The name of the role session.                                                                                                                                                                              |
-| `duration`    | string   | [Optional] - The duration of the role session. Defaults to 2 hours. Can't exceed the role's maximum session duration (1 hour by default). See [Troubleshooting](#durationseconds-exceeds-the-maxsessionduration-set-for-this-role). |
-| `policyArns`  | string[] | [Optional] - ARNs for additional policies to apply to the role session.                                                                                                                                     |
-| `subjectAttributes`  | string[] | [Optional] - Subject attributes to be included in the OIDC token. For more information see the [OpenID subject customization](/docs/esc/guides/configuring-oidc/#custom-token-claim) documentation |
-
-### AWSLoginStatic
-
-| Property          | Type   | Description                                 |
-|-------------------|--------|---------------------------------------------|
-| `accessKeyId`     | string | The AWS access key ID                       |
-| `secretAccessKey` | string | The AWS secret access key                   |
-| `sessionToken`    | string | [Optional] - The AWS session token, if any. |
-
-## Outputs
-
-| Property          | Type   | Description                                 |
-|-------------------|--------|---------------------------------------------|
-| `accessKeyId`     | string | The AWS access key ID                       |
-| `secretAccessKey` | string | The AWS secret access key                   |
-| `sessionToken`    | string | [Optional] - The AWS session token, if any. |

@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class PulumiImportOptions </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class PulumiImportOptions ">
+    
+    <meta name="description" content="Options for the pulumi import command.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Automation.Commands.PulumiImportOptions">
+
+
+  <h1 id="Pulumi_Automation_Commands_PulumiImportOptions" data-uid="Pulumi.Automation.Commands.PulumiImportOptions" class="text-break">Class PulumiImportOptions</h1>
+  <div class="markdown level0 summary"><p>Options for the <code>pulumi import</code> command.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><a class="xref" href="pulumi.automation.commands.baseoptions.html">BaseOptions</a></div>
+    <div class="level2"><span class="xref">PulumiImportOptions</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_WorkDir">BaseOptions.WorkDir</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_EnvironmentVariables">BaseOptions.EnvironmentVariables</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_OnStandardOutput">BaseOptions.OnStandardOutput</a>
+    </div>
+    <div>
+      <a class="xref" href="pulumi.automation.commands.baseoptions.html#Pulumi_Automation_Commands_BaseOptions_OnStandardError">BaseOptions.OnStandardError</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a>.<a class="xref" href="pulumi.automation.html">Automation</a>.<a class="xref" href="pulumi.automation.commands.html">Commands</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Automation.dll</h6>
+  <h5 id="Pulumi_Automation_Commands_PulumiImportOptions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PulumiImportOptions : BaseOptions</code></pre>
+  </div>
+  <h3 id="properties">Properties
+</h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Color_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Color*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Color" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Color">Color</h4>
+  <div class="markdown level1 summary"><p>Colorize output. Choices are: always, never, raw, auto</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Color { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_ConfigFile_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.ConfigFile*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_ConfigFile" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.ConfigFile">ConfigFile</h4>
+  <div class="markdown level1 summary"><p>Use the configuration values in the specified file rather than detecting the file name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? ConfigFile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Debug_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Debug*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Debug" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Debug">Debug</h4>
+  <div class="markdown level1 summary"><p>Print detailed debugging output during resource operations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Debug { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Diff_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Diff*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Diff" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Diff">Diff</h4>
+  <div class="markdown level1 summary"><p>Display operation as a rich diff showing the overall change</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Diff { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_DisableIntegrityChecking_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.DisableIntegrityChecking*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_DisableIntegrityChecking" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.DisableIntegrityChecking">DisableIntegrityChecking</h4>
+  <div class="markdown level1 summary"><p>Disable integrity checking of checkpoint files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? DisableIntegrityChecking { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_ExecAgent_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.ExecAgent*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_ExecAgent" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.ExecAgent">ExecAgent</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? ExecAgent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_ExecKind_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.ExecKind*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_ExecKind" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.ExecKind">ExecKind</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? ExecKind { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L116">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_File_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.File*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_File" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.File">File</h4>
+  <div class="markdown level1 summary"><p>The path to a JSON-encoded file containing a list of resources to import</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? File { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_From_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.From*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_From" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.From">From</h4>
+  <div class="markdown level1 summary"><p>Invoke a converter to import the resources</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? From { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_FullyQualifyStackNames_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.FullyQualifyStackNames*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_FullyQualifyStackNames" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.FullyQualifyStackNames">FullyQualifyStackNames</h4>
+  <div class="markdown level1 summary"><p>Show fully-qualified stack names</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? FullyQualifyStackNames { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_GenerateCode_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.GenerateCode*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_GenerateCode" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.GenerateCode">GenerateCode</h4>
+  <div class="markdown level1 summary"><p>Generate resource declaration code for the imported resources</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? GenerateCode { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L136">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_GenerateResources_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.GenerateResources*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_GenerateResources" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.GenerateResources">GenerateResources</h4>
+  <div class="markdown level1 summary"><p>When used with --from, always write a JSON-encoded file containing a list of importable resources discovered by conversion to the specified path</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? GenerateResources { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L141">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Json_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Json*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Json" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Json">Json</h4>
+  <div class="markdown level1 summary"><p>Serialize the import diffs, operations, and overall output as JSON</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Json { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L146">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Logflow_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Logflow*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Logflow" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Logflow">Logflow</h4>
+  <div class="markdown level1 summary"><p>Flow log settings to child processes (like plugins)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Logflow { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Logtostderr_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Logtostderr*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Logtostderr" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Logtostderr">Logtostderr</h4>
+  <div class="markdown level1 summary"><p>Log to stderr instead of to files</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Logtostderr { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Memprofilerate_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Memprofilerate*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Memprofilerate" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Memprofilerate">Memprofilerate</h4>
+  <div class="markdown level1 summary"><p>Enable more precise (and expensive) memory allocation profiles by setting runtime.MemProfileRate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public int? Memprofilerate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Message_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Message*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Message" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Message">Message</h4>
+  <div class="markdown level1 summary"><p>Optional message to associate with the update operation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Message { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L166">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_OtelTraces_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.OtelTraces*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_OtelTraces" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.OtelTraces">OtelTraces</h4>
+  <div class="markdown level1 summary"><p>Export OpenTelemetry traces to the specified endpoint. Use file:// for local JSON files, grpc:// or https:// for remote collectors</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? OtelTraces { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L171">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Out_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Out*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Out" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Out">Out</h4>
+  <div class="markdown level1 summary"><p>The path to the file that will contain the generated resource declarations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Out { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L176">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Output_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Output*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Output" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Output">Output</h4>
+  <div class="markdown level1 summary"><p>Output format. Supported values are: default, json</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Output { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Parallel_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Parallel*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Parallel" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Parallel">Parallel</h4>
+  <div class="markdown level1 summary"><p>Allow P resource operations to run in parallel at once (1 for no parallelism).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public int? Parallel { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L186">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Parent_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Parent*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Parent" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Parent">Parent</h4>
+  <div class="markdown level1 summary"><p>The name and URN of the parent resource in the format name=urn, where name is the variable name of the parent resource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Parent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_PreviewOnly_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.PreviewOnly*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_PreviewOnly" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.PreviewOnly">PreviewOnly</h4>
+  <div class="markdown level1 summary"><p>Only show a preview of the import, but don't perform the import itself</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? PreviewOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Profiling_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Profiling*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Profiling" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Profiling">Profiling</h4>
+  <div class="markdown level1 summary"><p>Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Profiling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L201">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Properties_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Properties*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Properties" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>The property names to use for the import in the format name1,name2</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public List&lt;string&gt;? Properties { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L206">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Protect_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Protect*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Protect" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Protect">Protect</h4>
+  <div class="markdown level1 summary"><p>Allow resources to be imported with protection from deletion enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Protect { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Provider_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Provider*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Provider" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Provider">Provider</h4>
+  <div class="markdown level1 summary"><p>The name and URN of the provider to use for the import in the format name=urn, where name is the variable name for the provider resource</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Provider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L216">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_SkipPluginPreInstall_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SkipPluginPreInstall*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_SkipPluginPreInstall" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SkipPluginPreInstall">SkipPluginPreInstall</h4>
+  <div class="markdown level1 summary"><p>Skip the up-front provider plugin install step; missing plugins are installed lazily by the engine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? SkipPluginPreInstall { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L221">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Stack_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Stack*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Stack" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Stack">Stack</h4>
+  <div class="markdown level1 summary"><p>The name of the stack to operate on. Defaults to the current stack</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Stack { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_SuppressOutputs_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SuppressOutputs*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_SuppressOutputs" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SuppressOutputs">SuppressOutputs</h4>
+  <div class="markdown level1 summary"><p>Suppress display of stack outputs (in case they contain sensitive values)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? SuppressOutputs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L231">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_SuppressPermalink_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SuppressPermalink*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_SuppressPermalink" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SuppressPermalink">SuppressPermalink</h4>
+  <div class="markdown level1 summary"><p>Suppress display of the state permalink</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? SuppressPermalink { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L236">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_SuppressProgress_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SuppressProgress*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_SuppressProgress" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.SuppressProgress">SuppressProgress</h4>
+  <div class="markdown level1 summary"><p>Suppress display of periodic progress dots</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? SuppressProgress { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L241">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Tracing_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Tracing*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Tracing" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Tracing">Tracing</h4>
+  <div class="markdown level1 summary"><p>Emit tracing to the specified endpoint. Use the <code>file:</code> scheme to write tracing data to a local file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? Tracing { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L246">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_TracingHeader_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.TracingHeader*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_TracingHeader" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.TracingHeader">TracingHeader</h4>
+  <div class="markdown level1 summary"><p>Include the tracing header with the given contents.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public string? TracingHeader { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L251">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Urns_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Urns*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Urns" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Urns">Urns</h4>
+  <div class="markdown level1 summary"><p>Display full URNs instead of short resource names</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public bool? Urns { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L256">View Source</a>
+  </span>
+  <a id="Pulumi_Automation_Commands_PulumiImportOptions_Verbose_" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Verbose*"></a>
+  <h4 id="Pulumi_Automation_Commands_PulumiImportOptions_Verbose" data-uid="Pulumi.Automation.Commands.PulumiImportOptions.Verbose">Verbose</h4>
+  <div class="markdown level1 summary"><p>Enable verbose logging (e.g., v=3); anything &gt;3 is very verbose</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public int? Verbose { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+    <p class="sdk-version">Version 3.110.0</p>
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi.Automation/Commands/Options.cs/#L82" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Copyright 2016-2023, Pulumi Corporation.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

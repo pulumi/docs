@@ -10,14 +10,18 @@
 
 @import "mixins";
 
-@import "utilities-shared";
+@import "shared/utilities";
 
 @layer base {
-    @import "base-shared";
+    @import "shared/base";
 }
 
 // v4 layer placement: custom styles must be in @layer so Tailwind utilities can override them.
 @layer components {
+    // Shared badge/pill system — also used on marketing-bundle pages (blog cards,
+    // pricing, reinvent, releases). Ships in main.scss too; both bundles need it.
+    @import "shared/badge";
+
     body {
         @apply overflow-x-hidden;
 

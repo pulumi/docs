@@ -23,7 +23,6 @@ meta_desc: Learn how Starburst Data built infrastructure automation into its dat
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: meta.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -39,6 +38,7 @@ tags:
     - automation-api
     - community
     - pulumi-events
+category: customers
 
 # See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md
 # for details, and please remove these comments before submitting for review.
@@ -54,7 +54,7 @@ Watch Matt Stephenson's full presentation with demos. 8:03 demo of CI/CD. 15:33 
 
 ## Technical and Business Problems to Solve
 
-Starburst operates a managed Trino service that runs on Kubernetes clusters on multiple clouds. Their Kubernetes clusters needed frequent manual scaling based on workloads. Furthermore, upgrading Trino versions running on the clusters ran the risk of potential service disruptions for customers. The company had been using tools like [Terraform](/docs/concepts/vs/terraform/) for IaC, Argo CD for deploying Helm charts, Maven, Docker containers, and a Slack bot for infrastructure and deployments. Their CI/CD workflow was difficult to maintain because they needed to create wrappers for their previous IaC tooling, making it less approachable in CI/CD environments. The pipeline was tenuously bound together using GitHub Actions and a Slack bot, requiring specialized GHA runners, leading to a messy architecture.
+Starburst operates a managed Trino service that runs on Kubernetes clusters on multiple clouds. Their Kubernetes clusters needed frequent manual scaling based on workloads. Furthermore, upgrading Trino versions running on the clusters ran the risk of potential service disruptions for customers. The company had been using tools like [Terraform](/docs/iac/comparisons/terraform/) for IaC, Argo CD for deploying Helm charts, Maven, Docker containers, and a Slack bot for infrastructure and deployments. Their CI/CD workflow was difficult to maintain because they needed to create wrappers for their previous IaC tooling, making it less approachable in CI/CD environments. The pipeline was tenuously bound together using GitHub Actions and a Slack bot, requiring specialized GHA runners, leading to a messy architecture.
 
 ## Why Starburst Chose Pulumi
 

@@ -11,10 +11,17 @@
 {{ end }}
 
 {{/* Build TechArticle entity */}}
+{{/* headline: prefer the page's real SEO title (title_tag, the same field
+     head.html uses for the rendered <title> tag) over Hugo's .Title, which is
+     often just the short left-nav sidebar label. On the comparisons section
+     .Title is literally the competitor's bare name (e.g. "Terraform"), which
+     was leaking into this schema field and telling AI answer engines that
+     Pulumi's own comparison pages are *about* the competitor. Same fallback
+     precedent already used in schema/collectors/faq-entity.html. */}}
 {{ $schema := dict
   "@type" "TechArticle"
   "@id" "#main-content"
-  "headline" .Title
+  "headline" (or .Params.title_tag .Title)
   "url" .Permalink
   "wordCount" $wordCount
   "inLanguage" "en-US"
@@ -73,10 +80,8 @@
     {{ end }}
     {{ $image = printf "%s%s" $baseURL $imagePath }}
   {{ end }}
-{{ else if in .RelPermalink "/docs/clouds/aws/" }}
-  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-clouds-aws-meta-image.png" }}
 {{ else }}
-  {{ $image = "https://www.pulumi.com/images/docs/meta-images/docs-meta.png" }}
+  {{ $image = "https://www.pulumi.com/logos/brand/og-default.png" }}
 {{ end }}
 {{ $schema = merge $schema (dict "image" (slice $image)) }}
 

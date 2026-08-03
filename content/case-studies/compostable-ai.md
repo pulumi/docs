@@ -6,7 +6,9 @@ description: |
 meta_desc: Learn how Compostable AI built a software factory where AI agents write infrastructure code with Pulumi, deploying from contract to production in one day.
 
 customer_name: Compostable AI
+industry: ai-ml
 customer_logo: /logos/customers/compostable-ai.svg
+logo_bg_color: "#E9ECEF"
 customer_url: https://compostable.ai
 
 quote_block:
@@ -68,7 +70,7 @@ The configuration hierarchy uses multiple layers (platform base, staging/prod, p
 
 Neo provides Pulumi-specific knowledge and tight integration with Pulumi Cloud and automatic credential management. "We use [Pulumi Cloud Deployments](https://www.pulumi.com/product/pulumi-deployments/) for all deployments rather than GitHub Actions, and Neo's really good at driving that itself."
 
-## The software factory: Iteration toward correctness
+## The software factory: iteration toward correctness
 
 Compostable AI's development model operates on iterative refinement toward correct solutions. "We're just building a machine that just climbs towards that solution," Dawson says.
 

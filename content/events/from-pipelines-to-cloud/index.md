@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "From Pipelines to Cloud: Master IaC with Azure DevOps"
 meta_desc: Get hands-on experience automating Azure infrastructure directly from Azure DevOps pipelines.
-meta_image:
+meta_image: /events/from-pipelines-to-cloud/meta.png
+meta_image_square: /events/from-pipelines-to-cloud/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

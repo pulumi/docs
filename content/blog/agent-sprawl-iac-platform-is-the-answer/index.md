@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-04-22
 draft: false
 meta_desc: "Developers are shipping AI agents to production. Your Pulumi platform already supplies the seven things those agents need to be governed."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -14,6 +13,7 @@ tags:
     - platform-engineering
     - devops
     - infrastructure-as-code
+category: perspectives
 social:
     twitter: |
         Somewhere in your company, a developer just wired an AI agent into production. The platform team doesn't know it exists.
@@ -115,6 +115,10 @@ This connects back to the pattern I laid out in [*Golden Paths: Infrastructure C
 The last pillar is the one that keeps the other six honest. Some decisions shouldn't be automated, full stop. Production rollbacks outside business hours. Destructive changes above a certain blast-radius threshold. Anything that touches a regulated data boundary. For those cases, you want a forced human checkpoint that the agent can't route around.
 
 Pulumi Deployments approvals already play that role for human changes. [Pulumi Neo's review steps](/product/neo/) add the AI-aware version: a structured plan, a diff, a named approver, and a record of what they decided and why. I walked through what this looks like in practice in [*Self-Verifying AI Agents*](/blog/self-verifying-ai-agents-vercels-agent-browser-in-the-ralph-wiggum-loop/). Short version: an agent that proposes is much safer than an agent that commits.
+
+{{< blog/cta-card title="Govern agent changes through your platform" href="/docs/ai/" >}}
+Route changes from any coding agent, including Claude Code, Cursor, and Pulumi Neo, through the same infrastructure as code controls, policies, and audit trail your team already runs.
+{{< /blog/cta-card >}}
 
 ## Why IaC is the natural substrate for this
 

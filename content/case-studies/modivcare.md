@@ -5,10 +5,12 @@ allow_long_title: true
 description: |
     Modivcare used Pulumi to transform fragmented acquisition-built infrastructure into a unified platform without service disruption, achieving up to 25% cost reductions and enabling developer self-service.
 meta_desc: See how Modivcare used Pulumi to unify fragmented AWS infrastructure across acquisitions, reducing costs by up to 25%.
-meta_image: "/images/case-studies/modivcare.png"
 
 customer_name: Modivcare
+industry: healthcare
 customer_logo: /logos/customers/modivcare.png
+logo_bg_color: "#002A3A"
+logo_style: white
 customer_url: https://www.modivcare.com/
 
 quote_block:
@@ -40,7 +42,7 @@ Modivcare's value-based solutions address the social determinants of health by c
 
 Built through strategic acquisitions, Modivcare consolidated multiple healthcare service organizations, each bringing different operational practices and infrastructure approaches. This growth model enabled rapid expansion but created significant technical challenges that needed resolution to achieve operational efficiency at scale.
 
-## The Challenge: When Growth Becomes a Technical Burden
+## The challenge: when growth becomes a technical burden
 
 By 2023, Modivcare's acquisition strategy had created a perfect storm of infrastructure complexity. Each acquired company arrived with different AWS approaches: mature Terraform and Terragrunt setups, AWS CDK or CloudFormation implementations, or no infrastructure automation at all—just manually provisioned resources and PowerShell scripts.
 
@@ -50,7 +52,7 @@ The newly formed platform engineering team had to onboard legacy AWS accounts, i
 
 {{< youtube "1um_8QTVqXg" >}}
 
-## Gaining Visibility Into the Unknown
+## Gaining visibility into the unknown
 
 Rather than forcing immediate migrations, Modivcare's platform team started with visibility. They deployed Pulumi Insights across their fragmented AWS environment to understand what infrastructure they actually had.
 
@@ -60,7 +62,7 @@ Pulumi Insights revealed exactly which resources were managed through infrastruc
 
 This visibility became the foundation for everything that followed. Teams that had been operating blind could now make informed decisions about their infrastructure.
 
-## Meeting Teams Where They Are
+## Meeting teams where they are
 
 With visibility established, the platform team tackled standardization without disruption using Pulumi ESC (Environments, Secrets, and Configuration).
 
@@ -70,7 +72,7 @@ For newly acquired companies, they created targeted ESC environments addressing 
 
 This approach created a breakthrough: teams began adopting infrastructure as code organically, starting with fast time-to-value use cases rather than being forced into wholesale migrations.
 
-## Unifying Configuration Across Disconnected Systems
+## Unifying configuration across disconnected systems
 
 Pulumi ESC solved unexpected problems. Teams with mature Terragrunt implementations had been maintaining dozens of disconnected configuration variable files across repositories. Every change required manual updates across multiple files—a maintenance nightmare.
 
@@ -78,7 +80,7 @@ Pulumi ESC normalized these configurations, providing centralized management whi
 
 The result was transformative: what had been a complex web of disconnected configurations became a unified, manageable system that reduced operational overhead while improving reliability.
 
-## Building Developer Self-Service at Scale
+## Building developer self-service at scale
 
 About a year after forming their platform engineering team, Modivcare built a developer portal using Backstage, integrated with GitLab CI/CD and Pulumi.
 
@@ -100,7 +102,7 @@ Modivcare's journey delivered concrete business results:
 
 **Cross-Account Simplification**: Managing their complex, acquisition-built AWS organization became dramatically simpler through Pulumi ESC's normalized configuration.
 
-## Learning From Real Usage Patterns
+## Learning from real usage patterns
 
 Within their first year, the platform team created dozens of infrastructure modules ranging from simple utilities to comprehensive "golden path" solutions. They tracked usage through Backstage to understand how developers actually used these tools.
 
@@ -118,7 +120,7 @@ Modivcare transformed from disconnected infrastructure implementations into a un
 
 For healthcare organizations or any company growing through acquisitions, Modivcare demonstrates that infrastructure standardization doesn't require disruption. The right approach achieves operational excellence while maintaining service reliability that people depend on.
 
-### Key Lessons: What Made the Difference
+### Key lessons: what made the difference
 
 - **Start with visibility, not migration**: Understanding existing infrastructure drove informed decisions. Pulumi Insights provided the foundation for strategic planning.
 - **Meet teams where they are**: Incremental adoption through targeted use cases built trust and demonstrated value before requesting bigger commitments.

@@ -24,7 +24,7 @@
 $sitenav-height: 90px;
 $sitenav-offset: calc($sitenav-height + 16px);
 
-@import "utilities-shared";
+@import "shared/utilities";
 
 // v4 layer placement: base styles go in @layer base so Tailwind utilities can override them.
 // Component styles go in @layer components for the same reason.
@@ -33,7 +33,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // but loses to unlayered CSS. So we must layer our custom styles.
 
 @layer base {
-    @import "base-shared";
+    @import "shared/base";
 
     body {
         @apply font-body text-service-black;
@@ -121,9 +121,21 @@ $sitenav-offset: calc($sitenav-height + 16px);
     [role="button"]:not(:disabled) {
         cursor: pointer;
     }
+
+    // Round all YouTube embeds. The `youtube` shortcode and youtube.html partial
+    // render a full-bleed iframe in a bare wrapper, so putting the radius on the
+    // iframe itself clips its corners regardless of the surrounding markup.
+    iframe[src*="youtube.com/embed"],
+    iframe[src*="youtube-nocookie.com/embed"] {
+        @apply rounded-lg;
+    }
 }
 
 @layer components {
+    // Shared form system (theme/src/scss/shared/). Imported FIRST because later
+    // partials (_hubspot, _blog, _footer) @include its mixins, and Sass @mixin is
+    // order-dependent — so it can't join the shared/ block below.
+    @import "shared/forms";
     @import "about";
     @import "accordion";
     @import "algolia";
@@ -133,12 +145,17 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "api-symbol";
     @import "awards";
     @import "marketing/automation-api";
-    @import "badges";
     @import "benefits";
+    @import "blog";
     @import "breadcrumb";
-    @import "button";
-    @import "buttons";
-    @import "card";
+
+    // Shared design-system primitives (theme/src/scss/shared/). Reuse these —
+    // the `.btn`, `.card`, and `.badge` systems — before rolling your own
+    // component styles. See shared/README.md.
+    @import "shared/badge";
+    @import "shared/button";
+    @import "shared/card";
+
     @import "marketing/cloud-engineering";
     @import "announcement-banner";
     @import "code";
@@ -167,7 +184,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "github-card";
     @import "neo-card";
     @import "docs/packages";
-    @import "pagination";
     @import "marketing/product";
     @import "responsive-video";
     @import "marketing/pulumi-deployments";
@@ -191,7 +207,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "components/banner";
     @import "components/chooser";
     @import "components/choosable";
-    @import "components/convert";
     @import "components/docs-nav";
     @import "components/filter-select";
     @import "components/greenhouse-jobs-list";
@@ -206,6 +221,7 @@ $sitenav-offset: calc($sitenav-height + 16px);
     @import "components/user-toggle";
     @import "components/tabs";
     @import "templates";
+    @import "case-studies";
     @import "neo-mode";
 
     .nav-main {
@@ -356,12 +372,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
-    .blog-list-description {
-        // Make the min height of the section equal to the anchor-wrapped image
-        // and padding, so the border isn't misaligned on items with shorter descriptions.
-        min-height: 178px;
-    }
-
     pulumi-tree-item {
         &::part(expand-collapse-button) {
             @apply text-xs;
@@ -373,9 +383,6 @@ $sitenav-offset: calc($sitenav-height + 16px);
         }
     }
 
-    section.newsletter-input pulumi-hubspot-form input.hs-input {
-        @apply rounded;
-    }
 }
 
 @import "consent-banner";
@@ -386,6 +393,10 @@ $sitenav-offset: calc($sitenav-height + 16px);
 // the partial is scoped to body.section-docs + html[data-theme="dark"], so it
 // cannot affect any non-docs page.
 @import "docs/docs-theme";
+
+// Min Light code theme for /docs light mode. Unlayered (like docs-theme above) so
+// it beats the layered component rules; scoped + documented in the partial.
+@import "docs/code-light";
 
 // Auth-aware header swap. The inline script in head.html adds .is-signed-in
 // to <html> when the auth cookie is present, before first paint. These rules

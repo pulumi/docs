@@ -8,7 +8,10 @@ description: |
 meta_desc: Learn how Menta Network worked with Pulumi and GitLab to build ephemeral environments in Python and help its customers to get ready for peak traffic.
 
 customer_name: Menta Network
+industry: retail
 customer_logo: /logos/customers/menta_logo.svg
+logo_bg_color: "#6EC829"
+logo_style: dark
 customer_url:
 
 quote_block:
@@ -48,7 +51,7 @@ infrastructure. They regularly need to spin up, scale, and destroy new cloud env
 as part of their managed load testing solution, which helps clients to evaluate their web
 services and applications.
 
-## Customer Challenge
+## Customer challenge
 
 In Menta Network's local market, there are multiple 'Black Friday'-style retail events
 including El Buen Fin ("The Good Weekend") in November, and "Hot Sale" in May. Together,
@@ -73,7 +76,7 @@ tailored to their specific web services.
 The combination of Pulumi and Amazon Web Services presented the ideal solution to Menta
 Network's challenge.
 
-## Solution Overview
+## Solution overview
 
 Menta Network's team had experience with a variety of legacy and modern configuration
 management tools; however, previous tools would not allow Menta Network's engineering team
@@ -119,8 +122,7 @@ to automate delivery of mission-critical KPIs to customers' executive dashboards
 made configuring and deploying all of these resources across each customer's environment a
 snap.
 
-<img class="block mx-auto md:max-w-4xl my-8"
-src="/images/case-studies/menta-architecture.png" alt="Menta architecture">
+![A diagram of Menta's cloud architecture](/images/case-studies/menta-architecture.png)
 
 ## Results
 

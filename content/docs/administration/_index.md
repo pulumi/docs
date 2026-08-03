@@ -15,6 +15,7 @@ aliases:
   - /docs/administration/
   - /docs/pulumi-cloud/
   - /docs/pulumi-cloud/admin/
+  - /docs/intro/console/
 
 link_buttons:
   primary:

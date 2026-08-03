@@ -3,22 +3,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 
-    <!-- Segment keys -->
+    <!-- GrowthBook / Segment keys -->
     <script>
         {{- if eq hugo.Environment "production" }}
             var segmentWriteKey = "UK90Ofwacetj5VCPJ7cUgkbNcKLSHO3u";
             var snippetName = "C8Y429BDEy/06ujkUhzfL.min.js";
+            window.growthbook_sdk_key="sdk-psPofGr6jFV2ja9O";
+            window.growthbook_decrypt_key="9NsAVMNWaDS+Oky3rhLQ+A==";
+            window.growthbook_dev_mode=false;
         {{- else }}
             var segmentWriteKey = "bATvhu6XKpwi7Cs258MGsELkDpVOzvdY";
             var snippetName = "C8Y429BDEy/hpBKpR8Nx1yVCjKPB2nJWg.min.js";
+            window.growthbook_sdk_key="sdk-BwIkZCqXQ9pZyp0P";
+            window.growthbook_decrypt_key=undefined;
+            window.growthbook_dev_mode=true;
         {{- end }}
     </script>
 
     <!-- Preconnect to Segment (used on every page). -->
     <link rel="preconnect" href="https://cdn.segment.com" crossorigin />
+    <!-- Preconnect to GrowthBook (A/B testing, used on every page). -->
+    <link rel="preconnect" href="https://cdn.growthbook.io" crossorigin />
     {{- if eq hugo.Environment "production" }}
     <!-- Preconnect to Common Room (production only). -->
     <link rel="preconnect" href="https://cdn.cr-relay.com" crossorigin />
+    <!-- Preconnect to OpenAI ad pixel CDN (production only). -->
+    <link rel="preconnect" href="https://bzrcdn.openai.com" crossorigin />
     {{- end }}
 
     <!-- Preload critical fonts (skip monospace on the homepage — not used above the fold). -->
@@ -106,13 +116,13 @@
 
 
     <!--
-        We use taxonomy pages for tags and authors for our blog posts. These
-        pages end up cannibalising other pages on our site that rank for key terms.
-        To avoid this, we add the `noindex` tag to tell search engines not index taxonomy pages.
-        Tutorial collection pages (/tutorials/*) are excluded as they serve as
-        valuable landing pages.
+        Taxonomy pages (tags, authors, and the bare taxonomy lists) are
+        noindexed because they cannibalise core pages that rank for the same
+        terms; curated landing pages (tutorial collections, blog categories,
+        blog series) are carved out. The full policy and its history live in
+        partials/taxonomy-indexable.html, which the sitemap shares.
     -->
-    {{ if and .Data.Singular (ne .Data.Singular "collection") }}
+    {{ if not (partial "taxonomy-indexable.html" .) }}
         <meta name="robots" content="noindex" />
     {{ end }}
 
@@ -143,6 +153,23 @@
 
 
     <meta property="og:image" content="{{ $ogImage | absURL }}" />
+    {{- /*
+        Optional second og:image: a square (1:1) card for surfaces that prefer
+        it. Best-effort — most scrapers use the first og:image (the landscape
+        card above), which also stays the twitter:image. Resolved by
+        partials/meta-image-square-url.html (events auto-generate one; any page
+        can set meta_image_square).
+    */ -}}
+    {{ $squareImage := partial "meta-image-square-url.html" . }}
+    {{ with $squareImage }}
+        <meta property="og:image" content="{{ . | absURL }}" />
+        {{- /* Only the auto-generated card is known to be 628x628; a custom
+               meta_image_square override may be any size, so don't declare dims. */ -}}
+        {{ if not $.Params.meta_image_square }}
+            <meta property="og:image:width" content="628" />
+            <meta property="og:image:height" content="628" />
+        {{ end }}
+    {{ end }}
     <meta property="og:type" content="article" />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="pulumi" />
@@ -193,6 +220,26 @@
     {{ else if and .IsHome .Site.Params.meta_desc }}
         <meta name="description" content="{{ .Site.Params.meta_desc }}" />
         <meta property="og:description" content="{{ .Site.Params.meta_desc }}" />
+    {{ else if and (eq .Kind "term") (in (slice "category" "tag" "series") .Data.Singular) }}
+        {{/* Blog taxonomy term pages (category, tag, series) have no .Summary;
+            source their description from the data files so they don't fall
+            through to an empty meta description. */}}
+        {{ $desc := "" }}
+        {{ if eq .Data.Singular "category" }}
+            {{ range site.Data.blog_categories.categories }}
+                {{ if eq .id $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}
+        {{ else if eq .Data.Singular "series" }}
+            {{ with site.Data.blog_series }}{{ range .series }}
+                {{ if eq .slug $.Data.Term }}{{ $desc = .description }}{{ end }}
+            {{ end }}{{ end }}
+        {{ else if eq .Data.Singular "tag" }}
+            {{ $desc = printf "Pulumi blog posts about %s." ($.Data.Term | humanize | lower) }}
+        {{ end }}
+        {{ with $desc | chomp }}
+            <meta name="description" content="{{ . }}" />
+            <meta property="og:description" content="{{ . }}" />
+        {{ end }}
     {{ else if .Summary }}
         <meta name="description" content="{{ .Summary }}" />
         <meta property="og:description" content="{{ .Summary }}" />
@@ -202,24 +249,71 @@
         <title>{{ .Site.Title }}</title>
     {{ else if .Title }}
         {{ $title := .Title }}
+        {{- /* Blog taxonomy pages: use the display name (category name / series
+             title / author name / humanized tag) from the shared partial instead
+             of Hugo's slug-derived .Title, and suffix "| Pulumi Blog" below —
+             "Engineering | Pulumi" clashes with core pages; "Engineering | Pulumi
+             Blog" doesn't. $blogTerm drives the suffix branch. */ -}}
+        {{ $blogTerm := false }}
+        {{ $seriesTerm := false }}
+        {{ $industryTerm := false }}
+        {{ if and (eq .Kind "term") (in (slice "category" "tag" "author" "series") .Data.Singular) }}
+            {{ $blogTerm = true }}
+            {{ $title = partial "blog/term-name.html" . }}
+            {{ if eq .Data.Singular "series" }}{{ $seriesTerm = true }}{{ end }}
+        {{ else if and (eq .Kind "term") (eq .Data.Singular "industry") }}
+            {{- /* Case-study industry term page: use the display name from the
+                 data-file source of truth instead of Hugo's slug-derived .Title
+                 ("Developer-Tools"), and suffix "| Case Studies" below. */ -}}
+            {{ $industryTerm = true }}
+            {{ range site.Data.case_study_industries.industries }}
+                {{ if eq .id $.Data.Term }}{{ $title = .name }}{{ end }}
+            {{ end }}
+        {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "category") }}
+            {{ $blogTerm = true }}
+            {{ $title = "Categories" }}
+        {{ else if and (eq .Kind "taxonomy") (eq .Data.Singular "series") }}
+            {{ $blogTerm = true }}
+            {{ $title = "All Series" }}
+        {{ end }}
         {{ if .Params.title_tag }}
             {{ $title = .Params.title_tag }}
         {{ end }}
 
 
+        {{- /* Blog section title page number. Seed the paginator with the shared
+             feed here (head renders before list.html), never the default
+             `.Paginator` — see partials/blog/feed.html for why. Blog term pages
+             seed the same collection their templates paginate (the term's blog
+             posts, newest-first) for the same reason. */ -}}
+        {{ $pageNum := 1 }}
+        {{ if and (eq .Type "blog") .IsSection }}
+            {{ $pageNum = ($.Paginate (partialCached "blog/feed.html" . "blog-home").feed).PageNumber }}
+        {{- /* Series pages render all parts unpaginated, so don't init a
+             paginator for them — .Paginate here would make Hugo emit stray
+             /page/N/ pages their template never links. */ -}}
+        {{ else if and $blogTerm (eq .Kind "term") (not $seriesTerm) }}
+            {{ $pageNum = ($.Paginate (where .Data.Pages "Section" "blog").ByDate.Reverse).PageNumber }}
+        {{ end }}
         <!-- The blog tags, specifically the tag lists, end up clashing with other page titles on the website. We
              add "Blog" to the title so that the titles no longer clash. -->
         {{ if and (eq .Type "blog") .IsPage }}
             <title>{{ $title }} | Pulumi Blog</title>
         {{ else if and (eq .Type "blog") .IsSection }}
-            {{ if gt $.Paginator.PageNumber 1 }}
-                <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi</title>
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi</title>
             {{ else }}
                 <title>{{ $title }} | Pulumi</title>
             {{ end }}
         {{ else if eq .Type "blog" }}
-            {{ if gt $.Paginator.PageNumber 1 }}
-                <title>{{ $title }} | Page {{$.Paginator.PageNumber}} | Pulumi Blog</title>
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi Blog</title>
+            {{ else }}
+                <title>{{ $title }} | Pulumi Blog</title>
+            {{ end }}
+        {{ else if $blogTerm }}
+            {{ if gt $pageNum 1 }}
+                <title>{{ $title }} | Page {{ $pageNum }} | Pulumi Blog</title>
             {{ else }}
                 <title>{{ $title }} | Pulumi Blog</title>
             {{ end }}
@@ -227,6 +321,8 @@
             <title>{{ $title }} | Pulumi Docs</title>
         {{ else if eq .Type "registry" }}
             <title>{{ replace $title "/" "." }} | Pulumi Registry</title>
+        {{ else if $industryTerm }}
+            <title>{{ $title }} | Case Studies | Pulumi</title>
         {{ else }}
             <title>{{ $title }} | Pulumi</title>
         {{ end }}
@@ -252,17 +348,15 @@
     {{ end }}
 
 
-    <!-- RSS link for the blog. -->
+    <!-- RSS: the main blog feed everywhere, plus this page's own feed (a blog
+         category/tag/author/series term, or the events feed) for autodiscovery. -->
     <link rel="alternate" type="application/rss+xml" href="{{ "/blog/rss.xml" | absURL }}" title="Pulumi Blog" />
+    {{ with .OutputFormats.Get "rss" }}
+        {{ if ne .RelPermalink "/blog/rss.xml" }}
+    <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ if eq $.Kind "term" }}Pulumi Blog: {{ partial "blog/term-name.html" $ }}{{ else }}{{ $.Title }}{{ end }}" />
+        {{ end }}
+    {{ end }}
 
-
-    <script>
-        window.addEventListener('load', function() {
-            var s = document.createElement('script');
-            s.src = 'https://buttons.github.io/buttons.js';
-            document.body.appendChild(s);
-        });
-    </script>
 
     <!--Segment tracking-->
     <script>
@@ -390,6 +484,27 @@
             });
         </script>
 
+        <!-- OpenAI ad pixel (deferred to window.load to avoid blocking first paint) — Marketing & Analytics
+             consent-gated: loads only after the consent-managed Segment analytics is ready
+             (window.analytics.ready), same as the Floqer integration below. Fail-closed: if
+             consent-managed analytics never loads, the pixel never loads. -->
+        <script>
+            window.addEventListener('load', function() {
+                function loadOaiq() {
+                    !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");
+                    oaiq("init",{pixelId:"7KRuATZtZE3j5BSAZErZAb",debug:false});
+                }
+                if (window.analytics && typeof window.analytics.ready === "function") {
+                    window.analytics.ready(loadOaiq);
+                }
+            });
+        </script>
+
+        <!-- Floqer (RB2B) visitor identification — Marketing & Analytics consent-gated (see partials/floqer.html). Page-scoped via `include_floqer` front matter. -->
+        {{ if .Params.include_floqer }}
+        {{ partial "floqer.html" . }}
+        {{ end }}
+
     {{- end }}
 
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
@@ -399,7 +514,13 @@
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
             window.addEventListener("load", function (event) {
                 if (anchors) {
+                    {{ if in (slice "blog" "authors" "tags") .Section }}
+                    // Blog: only anchor headings inside the post body, not card
+                    // titles / the blog header (listing pages have no .blog-post-content).
+                    anchors.add(".blog-post-content :is(h1, h2, h3, h4, h5, h6):not(.no-anchor)");
+                    {{ else }}
                     anchors.add("h1:not(.no-anchor), h2:not(.no-anchor), h3:not(.no-anchor), h4:not(.no-anchor), h5:not(.no-anchor), h6:not(.no-anchor)");
+                    {{ end }}
                 }
             });
         </script>
@@ -422,80 +543,7 @@
     {{ end }}
 
     {{ if .Store.Get "hasMermaid" }}
-    <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-
-        // Drive Mermaid's theme off the docs color theme (data-theme on <html>,
-        // set pre-paint on docs pages). On non-docs pages data-theme is absent, so
-        // this resolves to the light 'default' theme.
-        const mermaidTheme = () =>
-            document.documentElement.dataset.theme === 'dark' ? 'dark' : 'default';
-
-        // Initialize with manual control so we can preserve source before render.
-        const configure = () => mermaid.initialize({ startOnLoad: false, theme: mermaidTheme() });
-        configure();
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const diagrams = [...document.querySelectorAll('pre.mermaid')];
-
-            // Preserve original mermaid source before rendering replaces it.
-            diagrams.forEach(pre => {
-                if (!pre.dataset.mermaidSource) {
-                    pre.setAttribute('data-mermaid-source', pre.textContent.trim());
-                }
-            });
-
-            const isHidden = el => el.offsetParent === null;
-
-            // Render a single diagram, skipping ones already rendered. Diagrams
-            // inside a chooser start hidden (display:none) and cannot be measured,
-            // so they are rendered lazily once they become visible.
-            const render = pre => {
-                if (pre.dataset.processed === 'true') return;
-                mermaid.run({ nodes: [pre] }).catch(err => {
-                    console.error('Mermaid render error:', err);
-                });
-            };
-
-            // Render everything visible now; lazily render hidden diagrams when a
-            // chooser reveals them. Re-runnable (used again on theme toggle).
-            let observer = null;
-            const renderDiagrams = () => {
-                diagrams.forEach(pre => { if (!isHidden(pre)) render(pre); });
-                if (observer) observer.disconnect();
-                const hidden = diagrams.filter(isHidden);
-                if (hidden.length) {
-                    observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                render(entry.target);
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    });
-                    hidden.forEach(pre => observer.observe(pre));
-                }
-            };
-
-            renderDiagrams();
-
-            // Re-theme and re-render when the docs theme toggles. Restore each
-            // diagram's source (which removes the rendered SVG) and re-run.
-            let current = mermaidTheme();
-            new MutationObserver(() => {
-                if (mermaidTheme() === current) return;
-                current = mermaidTheme();
-                configure();
-                diagrams.forEach(pre => {
-                    const src = pre.getAttribute('data-mermaid-source');
-                    if (src === null) return;
-                    pre.textContent = src;
-                    pre.removeAttribute('data-processed');
-                });
-                renderDiagrams();
-            }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-        });
-    </script>
+        {{ partial "mermaid.html" . }}
     {{ end }}
 
     {{/* Tests to enforce required frontmatter for certain content types. */}}

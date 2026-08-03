@@ -27,6 +27,28 @@ body.section-docs {
     --docs-card-border: var(--color-gray-200);
     --docs-ring: var(--color-violet-700);
 
+    // Code chrome (--chrome-bg/-border/-border-hover/-dots) — the light-mode violet
+    // tint now lives as a SITE-WIDE default on `body` in components/_chooser.scss, so
+    // every chooser reads violet regardless of section, not just docs. The dark block
+    // below re-points those props to the standard brand inversion; docs is the only
+    // section with a dark-mode toggle, so this file still owns the dark half.
+
+    // Re-expose the semantic tokens under Tailwind's --color-* namespace so the
+    // generated utilities (bg-docs-bg, text-docs-fg, border-docs-border, …) resolve
+    // and flip with the theme. This MUST live here, not just in @theme: a --color-*
+    // alias declared only at :root substitutes --docs-* against the (undefined) root
+    // value and never flips. Declared on this element it substitutes the live --docs-*
+    // above — which the dark rule below re-points — so the utilities track both modes.
+    --color-docs-bg: var(--docs-bg);
+    --color-docs-bg-alt: var(--docs-bg-alt);
+    --color-docs-surface: var(--docs-surface);
+    --color-docs-fg: var(--docs-fg);
+    --color-docs-fg-muted: var(--docs-fg-muted);
+    --color-docs-border: var(--docs-border);
+    --color-docs-card: var(--docs-card);
+    --color-docs-card-border: var(--docs-card-border);
+    --color-docs-link: var(--docs-link);
+
     background-color: var(--docs-bg);
     color: var(--docs-fg);
 }
@@ -36,13 +58,20 @@ html[data-theme="dark"] body.section-docs {
     --docs-bg: var(--color-service-black);
     --docs-bg-alt: var(--color-violet-950);
     --docs-surface: var(--color-gray-900);
-    --docs-fg: var(--color-white);
+    --docs-fg: var(--color-gray-50);
     --docs-fg-muted: var(--color-gray-300);
-    --docs-border: #ffffff1a;
+    --docs-border: var(--color-gray-800);
     --docs-link: var(--color-violet-300);
     --docs-card: var(--color-service-black);
-    --docs-card-border: #ffffff1a;
+    --docs-card-border: var(--color-gray-800);
     --docs-ring: var(--color-violet-300);
+
+    // Code chrome — standard brand inversion of the light steps above (100↔900,
+    // 200↔800, 300↔700; dots use 300 so they stay visible on the darker chrome).
+    --chrome-bg: var(--color-violet-900);
+    --chrome-border: var(--color-violet-800);
+    --chrome-border-hover: var(--color-violet-700);
+    --chrome-dots: var(--color-violet-300);
 
     // Brand rule: the primary violet flips to lavender in dark mode everywhere
     // EXCEPT solid buttons (those pin violet-700, re-pinned below). Remapping the
@@ -94,7 +123,7 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // Theme-aware logos (the docs-top-nav header and docs-home cards emit both a
+    // Theme-aware logos (the header nav and docs-home cards emit both a
     // .docs-logo-light and .docs-logo-dark image): show the dark-variant image,
     // hide the light one. .docs-logo-dark is display:none by default (below), so
     // light/non-docs pages are untouched.
@@ -106,17 +135,33 @@ html[data-theme="dark"] body.section-docs {
         display: inline-block;
     }
 
-    // Top header (docs-top-nav.html) — utilities: bg-white, border-gray-200, text-gray-950.
-    header.docs-top-nav {
+    // Marketing nav (header/nav.html), now reused on docs — dark skin. The bar
+    // lives at `body > header`; its desktop dropdown popup, mobile sheet, and the
+    // logo brand menu render as body-level siblings, so they're matched on their
+    // data-attributes rather than nested under the header. Utilities in play:
+    // bg-white, border-gray-200/100, text-gray-950/800/600/500, text-violet-700,
+    // hover:bg-violet-50 — none of which flip on their own.
+    > header {
         background-color: var(--docs-bg);
         border-bottom-color: var(--docs-border);
         color: var(--docs-fg);
+    }
 
+    // Ghost + outline buttons in the bar and the mobile sheet footer.
+    > header,
+    [data-nav-sheet] {
         .btn-ghost-nav {
             color: var(--docs-fg);
 
             &:hover {
                 background-color: var(--docs-surface);
+                color: var(--color-violet-300);
+            }
+
+            // Open/active trigger — `.btn-ghost-nav` pins `aria-expanded:bg-violet-50`
+            // (a light lavender) that doesn't flip on its own.
+            &[aria-expanded="true"] {
+                background-color: color-mix(in oklch, var(--color-violet-300) 16%, transparent);
                 color: var(--color-violet-300);
             }
         }
@@ -131,19 +176,78 @@ html[data-theme="dark"] body.section-docs {
                 border-color: var(--docs-border);
             }
         }
+    }
 
-        [data-logo-nav-menu] {
-            background-color: var(--color-gray-950);
+    // Dropdown popup (desktop), mobile sheet panel, and the logo brand menu —
+    // all `card bg-white text-gray-950` surfaces. Repaint the card + its text,
+    // borders, icon accents, and item hover states.
+    [data-nav-popup],
+    [data-nav-sheet],
+    [data-brand-menu] {
+        background-color: var(--docs-card);
+        color: var(--docs-fg);
+        border-color: var(--docs-card-border);
+
+        .text-gray-950,
+        .text-gray-800 {
+            color: var(--docs-fg);
+        }
+
+        .text-gray-600,
+        .text-gray-500,
+        .text-gray-400 {
+            color: var(--docs-fg-muted);
+        }
+
+        .border-gray-200,
+        .border-gray-100 {
+            border-color: var(--docs-border);
+        }
+
+        // Dropdown-item icon accent pins literal violet-700 (doesn't flip).
+        .text-violet-700 {
+            color: var(--color-violet-300);
+        }
+
+        // Item hover: nav-dropdown-item `.group`, sheet nav links, collapsible
+        // triggers, and brand-menu items. Violet tint + lighter text/icon.
+        .group:hover,
+        > ul a:hover,
+        > ul button:hover,
+        nav > a:hover,
+        [data-nav-collapsible-trigger]:hover {
+            background-color: color-mix(in oklch, var(--color-violet-300) 16%, transparent);
+            color: var(--color-violet-200);
+        }
+
+        .group:hover {
+            .text-gray-950,
+            .text-gray-800 {
+                color: var(--color-violet-200);
+            }
+
+            .border-gray-200 {
+                border-color: color-mix(in oklch, var(--color-violet-300) 40%, transparent);
+            }
+        }
+    }
+
+    // Footer CTA band (footer/cta.html) — a near-white lavender in light mode;
+    // darken to the docs alt surface so it reads on a dark page. Its outline
+    // button reuses the transparent dark treatment; the primary button keeps its
+    // pinned violet fill.
+    section.bg-violet-background {
+        background-color: var(--docs-bg-alt);
+        color: var(--docs-fg);
+
+        .btn-outline {
+            background-color: transparent;
             color: var(--docs-fg);
             border-color: var(--docs-border);
 
-            a {
-                color: var(--docs-fg);
-
-                &:hover {
-                    background-color: color-mix(in oklch, var(--color-violet-300) 16%, transparent);
-                    color: var(--color-violet-200);
-                }
+            &:hover {
+                background-color: var(--docs-surface);
+                border-color: var(--docs-border);
             }
         }
     }
@@ -160,7 +264,7 @@ html[data-theme="dark"] body.section-docs {
 // gated on `html[data-theme="dark"] body.section-docs`, so the light source in
 // _notes.scss, _tables.scss, _card.scss, _breadcrumb.scss, _docs-home.scss,
 // components/*, etc. is never touched and light mode is unchanged. Callout hues
-// keep their light identity in dark (info=violet, tip=green, warning=orange),
+// keep their light identity in dark (info=blue, tip=green, warning=orange),
 // each mapped to the brand's 950 background / 300 accent steps.
 // ===========================================================================
 html[data-theme="dark"] body.section-docs {
@@ -171,20 +275,23 @@ html[data-theme="dark"] body.section-docs {
         }
 
         &.note-info {
-            background: var(--color-violet-950);
+            background: var(--color-blue-950);
 
             a,
-            i,
-            svg.ph-icon {
-                color: var(--color-violet-300);
+            i {
+                color: var(--color-blue-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
+                color: var(--color-blue-300);
             }
 
             div.line {
-                background-color: var(--color-violet-300);
+                background-color: var(--color-blue-300);
             }
 
             code {
-                background-color: color-mix(in oklch, var(--color-violet-300) 22%, transparent);
+                background-color: color-mix(in oklch, var(--color-blue-300) 22%, transparent);
             }
         }
 
@@ -192,8 +299,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-green-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-green-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-green-300);
             }
 
@@ -210,8 +320,11 @@ html[data-theme="dark"] body.section-docs {
             background: var(--color-orange-950);
 
             a,
-            i,
-            svg.ph-icon {
+            i {
+                color: var(--color-orange-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
                 color: var(--color-orange-300);
             }
 
@@ -355,19 +468,41 @@ html[data-theme="dark"] body.section-docs {
         a:hover {
             color: var(--docs-fg);
         }
+    }
 
-        #feedbackLongForm {
-            color: var(--docs-fg-muted);
+    // The feedback dialog is reparented to <body> while open (so its fixed overlay
+    // escapes the sidebar), so it must be matched on its own — not nested under
+    // #docsFeedbackContainer, which it leaves once opened.
+    #feedbackLongForm {
+        color: var(--docs-fg-muted);
 
-            .popup-overlay > div {
-                background-color: var(--docs-card);
-            }
+        .popup-overlay > div {
+            background-color: var(--docs-card);
+        }
 
-            textarea,
-            input {
-                background-color: var(--docs-surface);
-                border-color: var(--docs-border);
-                color: var(--docs-fg);
+        textarea,
+        input {
+            background-color: var(--docs-surface);
+            border-color: var(--docs-border);
+            color: var(--docs-fg);
+        }
+
+        // The required-comment error state is red. Light mode gets this from the
+        // text-red-primary / border-red-primary / focus:ring-red-primary utilities, but
+        // here those lose to the unlayered `p { color }` and `* { border-color }` rules
+        // above, so the red has to be re-asserted at id specificity. Dark uses the
+        // lighter red-300 (#ff9fa4) so it stays legible on the dark card; red-700 reads
+        // as near-black. The ring is scoped to the error class so the default focus
+        // stays violet.
+        #feedbackCommentsError {
+            color: var(--color-red-300);
+        }
+
+        #feedbackAdditionalComments.border-red-primary {
+            border-color: var(--color-red-300);
+
+            &:focus {
+                --tw-ring-color: var(--color-red-300);
             }
         }
     }
@@ -399,13 +534,31 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // --- Language chooser + tabs (active indicator uses the shared
-    //     gradient-border violet-primary, too dark for the dark surface) -------
+    // --- Chooser chrome: the violet card border, standard-strip bottom border,
+    //     and standalone-toolbar bottom border are all flattened to --docs-border
+    //     by the unlayered `*` border reset below; re-assert the --chrome-border
+    //     step so the dark chrome stays violet. (Backgrounds flip automatically —
+    //     --chrome-* is a per-mode custom property and `*` only resets border-color.)
+    pulumi-chooser > ul {
+        border-bottom-color: var(--chrome-border);
+    }
+
+    pulumi-chooser[type="language"]:not([option-style="none"]) {
+        border-color: var(--chrome-border);
+
+        .chooser-toolbar {
+            border-bottom-color: var(--chrome-border);
+        }
+    }
+
+    // --- Chooser tabs: re-assert the underline colors (inactive = transparent,
+    //     hover = chrome-border-hover, active = link) so the unlayered `*` border
+    //     reset below doesn't override them. ----------------------------------
     pulumi-chooser > ul li {
-        border-color: var(--docs-border);
+        border-bottom-color: transparent;
 
         &:hover {
-            border-color: var(--color-gray-400);
+            border-bottom-color: var(--chrome-border-hover);
         }
 
         a {
@@ -425,6 +578,57 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
+    // Language toolbar tabs: re-assert the underline colors (inactive = transparent,
+    // hover = chrome-border-hover, active = link) so the unlayered `*` border reset
+    // below doesn't override them.
+    .chooser-toolbar > ul li {
+        border-bottom-color: transparent;
+
+        &:hover {
+            border-bottom-color: var(--chrome-border-hover);
+        }
+
+        a {
+            color: var(--docs-fg-muted);
+
+            &:hover {
+                color: var(--docs-fg);
+            }
+        }
+
+        &.active {
+            border-bottom-color: var(--docs-link);
+
+            a {
+                color: var(--docs-fg);
+            }
+        }
+    }
+
+    // --- Code panels (dark): mirror the light treatment in _code-light.scss —
+    //     wash the code surface with the darkest violet step at 50% opacity (the
+    //     page shows through the rest) and give standalone fenced code blocks the
+    //     chooser's --chrome-border, so a lone block reads as a bordered card. The
+    //     solid violet-950 surface + Min Dark syntax colors otherwise come from
+    //     _code.scss / _chroma.scss. The border shorthand also restores width/style
+    //     the unlayered `*` reset (color-only) can't touch. -------------------
+    pre:not(.mermaid),
+    .chroma,
+    .bg {
+        background-color: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
+    }
+
+    .example-program .example-program-footer,
+    .code-tabbed .code-tabbed-tabs,
+    .code-tabbed .code-tabbed-content,
+    .code-tabbed .code-tabbed-status {
+        background: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
+    }
+
+    .highlight:not(pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) pre:not(.mermaid) {
+        border: 1px solid var(--chrome-border);
+    }
+
     pulumi-tabs::part(tab) {
         border-bottom-color: var(--docs-border);
     }
@@ -433,7 +637,15 @@ html[data-theme="dark"] body.section-docs {
         border-bottom-color: var(--docs-link);
     }
 
-    // --- Badges (also render via chooser preview pills) ---------------------
+    // --- Badges -------------------------------------------------------------
+    // Soft variants are `{color}-muted` bg + `{color}-primary` text in light mode;
+    // dark flips them to a deep `{color}-950` fill + light `{color}-300` text.
+    // Warning follows the token's yellow semantic; preview/beta keeps amber.
+    .badge-warning {
+        background-color: var(--color-yellow-950);
+        color: var(--color-yellow-300);
+    }
+
     // The chooser pill is a bare `li > span` that gets its skin from
     // `@extend .badge-preview` (no literal class), so it needs naming here too.
     .badge-preview,
@@ -442,9 +654,36 @@ html[data-theme="dark"] body.section-docs {
         color: var(--color-orange-300);
     }
 
+    .badge-destructive,
     .badge-required {
-        border-color: var(--color-red-800);
+        background-color: var(--color-red-950);
         color: var(--color-red-300);
+    }
+
+    .badge-brand {
+        background-color: var(--color-violet-950);
+        color: var(--color-violet-300);
+    }
+
+    .badge-secondary {
+        background-color: var(--color-gray-800);
+        color: var(--color-gray-300);
+    }
+
+    .badge-success {
+        background-color: var(--color-green-950);
+        color: var(--color-green-300);
+    }
+
+    .badge-info {
+        background-color: var(--color-blue-950);
+        color: var(--color-blue-300);
+    }
+
+    .badge-outline {
+        background-color: transparent;
+        border-color: var(--docs-border);
+        color: var(--docs-fg);
     }
 
     // --- Resource-links (right-rail, docs-only) -----------------------------
@@ -509,6 +748,59 @@ html[data-theme="dark"] body.section-docs {
 }
 
 // ---------------------------------------------------------------------------
+// Cookie consent banner + preferences dialog. The banner (#segment-consent-
+// manager, injected into baseof.html) and the preferences dialog (appended to
+// <body>) are global components skinned with Tailwind @apply (bg-white,
+// text-gray-*), so their surfaces don't carry a literal utility class and never
+// flip. On a dark docs page the global `p { color: fg }` / `* { border-color }`
+// overrides below bleed in while the backgrounds stay white — light-on-light,
+// unreadable text. Give both dark surfaces here; the buttons already flip via
+// `@extend .btn-outline` / `.btn-primary` (skinned below), and the links via the
+// --color-violet-primary remap.
+html[data-theme="dark"] body.section-docs {
+    #segment-consent-manager {
+        background-color: var(--docs-card);
+        border-color: var(--docs-card-border);
+        color: var(--docs-fg);
+
+        div {
+            background-color: var(--docs-card);
+        }
+    }
+
+    .consent-dialog {
+        background-color: var(--docs-card);
+        color: var(--docs-fg);
+    }
+
+    .consent-dialog-close {
+        color: var(--docs-fg-muted);
+
+        &:hover {
+            color: var(--docs-fg);
+        }
+    }
+
+    .consent-dialog-desc,
+    .consent-table-purpose,
+    .consent-table-tools,
+    .consent-table-na {
+        color: var(--docs-fg-muted);
+    }
+
+    .consent-dialog-table {
+        th {
+            color: var(--docs-fg-muted);
+            border-bottom-color: var(--docs-border);
+        }
+
+        td {
+            border-bottom-color: var(--docs-border);
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
 // Brand button pins + base text/border defaults. Per-utility color flips were
 // removed in favor of explicit `dark:` variants at the source (keeps each
 // utility class honest). What stays here is NOT utility hijacking: the brand
@@ -518,7 +810,7 @@ html[data-theme="dark"] body.section-docs {
 // ---------------------------------------------------------------------------
 html[data-theme="dark"] body.section-docs {
     // Headings and paragraphs set `color: service-black` DIRECTLY on the element
-    // (_base-shared.scss, @layer base) — a direct declaration beats the color
+    // (shared/_base.scss, @layer base) — a direct declaration beats the color
     // they'd inherit from `main`, so they must be flipped on the element itself.
     h1,
     h2,
@@ -530,7 +822,7 @@ html[data-theme="dark"] body.section-docs {
         color: var(--docs-fg);
     }
 
-    // _base-shared.scss preflight sets the default border-color to gray-200 so
+    // shared/_base.scss preflight sets the default border-color to gray-200 so
     // bare `border` / `border-t` utilities render. Flip that default to the dark
     // hairline; elements with an explicit (higher-specificity) border color keep
     // it, and buttons keep their intentional transparent border (re-pinned below).
@@ -577,13 +869,8 @@ html[data-theme="dark"] body.section-docs {
         }
     }
 
-    // Code-block copy button stays primary violet-700 (the --color-violet-primary
-    // remap would otherwise turn it lavender).
-    .copy-button-container,
-    .copy-button-container:active,
-    .code-mode-dark .copy-button-container {
-        background: var(--color-violet-700);
-    }
+    // The copy button is a transparent ghost chip (see _copy-button.scss); it reads
+    // fine on the dark panel as-is, so dark mode needs no override here.
 
     // Masked chrome icons (nav toggles, TOC chevron + "On this page" glyph) bake
     // a fixed-color SVG behind a mask; drop the image and tint the mask so they
@@ -804,6 +1091,44 @@ body[data-theme="dark"] {
 // Light/non-docs pages keep the original logo untouched.
 .docs-logo-dark {
     display: none;
+}
+
+// ---------------------------------------------------------------------------
+// Form controls (_forms.scss). The .form-* classes are painted with @apply
+// utilities (bg-white, text-gray-950, border-gray-300, the inset shadow), which
+// the docs dark remap can't reach — so re-skin them here to the docs tokens.
+// Currently the only docs form controls are the feedback-widget textarea + email
+// input (layouts/partials/docs/feedback.html). Unlayered → wins over the layered
+// @apply base regardless of specificity.
+// ---------------------------------------------------------------------------
+html[data-theme="dark"] body.section-docs {
+    .form-input,
+    .form-textarea,
+    .form-select {
+        background-color: var(--docs-card);
+        color: var(--docs-fg);
+        border-color: var(--docs-border);
+        // Black inner shadow is invisible/wrong on the dark surface. No-op shadow,
+        // NOT `none` — `none` inside the focus shadow list below would invalidate
+        // the whole declaration and drop the ring (see _forms.scss).
+        --form-resting-shadow: 0 0 #0000;
+
+        &::placeholder {
+            color: var(--docs-fg-muted);
+        }
+
+        // Lighter (violet-300) focus ring for contrast on the dark surface.
+        &:focus,
+        &:focus-visible {
+            border-color: var(--docs-ring);
+            box-shadow: inset 0 0 0 2px var(--docs-ring), var(--form-resting-shadow, none);
+        }
+    }
+
+    // Light caret for the dark surface. Duplicated from $form-caret-svg-light.
+    .form-select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E%3Cpath stroke='%23cbcace' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    }
 }
 
 // ---------------------------------------------------------------------------

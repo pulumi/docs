@@ -75,7 +75,7 @@ Customers always own data, identity, and configuration. The lower the abstractio
 The CIA triad is the canonical framework for what security controls should achieve. It maps cleanly onto cloud workloads.
 
 * **Confidentiality.** Only authorized identities can read sensitive data. Achieved through encryption at rest and in transit, IAM, network isolation, and secrets management.
-* **Integrity.** Data and infrastructure aren't modified by unauthorized parties, and when they are, the change is detected. Achieved through signed artifacts, immutable infrastructure, audit logs, and drift detection.
+* **Integrity.** Data and infrastructure aren't modified by unauthorized parties, and when they are, the change is detected. Achieved through signed artifacts, immutable infrastructure, audit logs, and [drift detection](/what-is/what-is-infrastructure-drift/).
 * **Availability.** Services stay reachable to the people meant to reach them, even during attack or failure. Achieved through redundancy, DDoS protection, capacity planning, and incident response.
 
 A handful of additional principles round out modern cloud security practice: **defense in depth** (multiple overlapping controls), **least privilege** (only the access strictly required), **zero trust** (no implicit trust based on network location), and **secure by default** (insecure configurations require a deliberate override).
@@ -112,7 +112,7 @@ Centralized logging, SIEM, threat detection, behavior analytics, and cloud-nativ
 
 The OWASP Cloud-Native Application Security Top 10 and the Cloud Security Alliance's "Top Threats" reports converge on a fairly consistent list:
 
-1. **Misconfigurations.** Publicly accessible storage, overly permissive IAM, open security groups. The single biggest source of cloud breaches.
+1. **[Misconfigurations](/what-is/what-is-cloud-misconfiguration/).** Publicly accessible storage, overly permissive IAM, open security groups. The single biggest source of cloud breaches.
 1. **Identity and credential compromise.** Phished users, leaked access keys, long-lived service account credentials.
 1. **Insecure APIs and interfaces.** Unauthenticated endpoints, broken object-level authorization, missing rate limits.
 1. **Insider threat and account abuse.** Employees, contractors, or compromised accounts with more access than they need.

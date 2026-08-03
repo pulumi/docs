@@ -1,14 +1,15 @@
 ---
 title: "Provisioning: From Chaos to Control"
+feature_image: feature.png
 date: 2025-02-27
+updated: 2026-07-09
 draft: false
 meta_desc: Build a reliable infrastructure provisioning foundation with version control, automation, and golden-path templates for your internal developer platform.
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
     - platform-engineering
-    - platform-engineering-pillars
+category: best-practices
 series: platform-engineering-pillars
 social:
     twitter: >
@@ -36,7 +37,7 @@ social:
 
             Learn how to implement this critical platform engineering pillar in our latest article.
 ---
-Provisioning is the first [pillar of platform engineering](/blog/tag/platform-engineering-pillars/). Without consistent infrastructure provisioning – the automated creation and management of the underlying cloud resources – the rest of the platform suffers. Self-service, governance, and streamlined developer workflows all depend on it. Ultimately, a self-service layer on top of your cloud infrastructure is the goal, enabling developers to quickly and safely provision the resources they need, while adhering to organizational best practices and policies. But before self-service, the foundation of a good IDP is a robust and reliable provisioning system.
+Provisioning is the first [pillar of platform engineering](/blog/series/platform-engineering-pillars/). Without consistent infrastructure provisioning – the automated creation and management of the underlying cloud resources – the rest of the platform suffers. Self-service, governance, and streamlined developer workflows all depend on it. Ultimately, a self-service layer on top of your cloud infrastructure is the goal, enabling developers to quickly and safely provision the resources they need, while adhering to organizational best practices and policies. But before self-service, the foundation of a good IDP is a robust and reliable provisioning system.
 
 By defining cloud resources as code and automating deployments, platform engineering teams ensure every environment – development, staging, and production – stays consistent and maintainable. This cuts down on configuration drift, reduces manual work, and supports auditable, collaborative workflows for every change.
 
@@ -225,4 +226,4 @@ Reliable infrastructure provisioning is the cornerstone that supports your entir
 
 But provisioning alone isn’t enough. In upcoming articles, we’ll explore how policy-as-code and broader governance tie into this foundation, ensuring that all those newly created services meet security and compliance standards from the moment they’re deployed. But first, we’ll look at expanding the provisioning foundation covered here into a true self-service platform, so teams can quickly spin up services without risking the organizational chaos that often accompanies speed.
 
-Provisioning is the foundation – [next in this series](/blog/tag/platform-engineering-pillars/) we’ll build on it.
+Provisioning is the foundation – [next in this series](/blog/series/platform-engineering-pillars/) we’ll build on it.

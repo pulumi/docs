@@ -4,13 +4,13 @@ date: 2025-01-06T00:23:24-05:00
 updated: 2025-03-21
 draft: false
 meta_desc: From quick fixes to scalable enterprise solutions—explore 15 essential Python tools for automation, monitoring, and cloud deployment. 
-meta_image: meta.png
 authors:
     - adam-gordon-bell
 tags:
     - python
     - devops
-    - iac
+    - infrastructure-as-code
+category: general
 social:
     twitter: >
         🚀 Unlock the power of Python for DevOps! From quick fixes to enterprise solutions, discover 15 essential tools including Django for custom dashboards, Airflow for workflow automation, and Pulumi for infrastructure as code. Transform your DevOps game with the perfect mix of rapid solutions and scalable architecture.
@@ -266,6 +266,10 @@ lambda_function = aws.lambda_.Function("custom-lambda",
     <i>Start it up in a Lambda</i>
   </figcaption>
 </span>
+
+{{< blog/cta-card title="Manage your cloud in Python" >}}
+Define AWS Lambda, ECR, and the rest of your infrastructure with real Python instead of YAML, and reuse the same loops, functions, and tests you already know.
+{{< /blog/cta-card >}}
 
 ## Bringing it all together
 

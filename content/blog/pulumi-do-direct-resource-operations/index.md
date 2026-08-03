@@ -3,7 +3,6 @@ title: "Introducing pulumi do: Direct Resource Operations for Any Cloud"
 date: 2026-05-22
 draft: false
 meta_desc: "The new pulumi do command lets you create, read, update, and delete any cloud resource across the full Pulumi ecosystem with a single, agent-friendly API."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - fraser-waters
@@ -15,7 +14,16 @@ tags:
     - pulumi-cli
     - ai-agents
     - product-launches
+category: product
 schema_type: auto
+
+resource_links:
+    - type: documentation
+      url: /docs/iac/cli/direct-resource-operations/
+    - type: feature-request
+      url: https://github.com/pulumi/pulumi/issues/new
+    - type: slack
+      url: https://slack.pulumi.com/
 
 social:
     twitter:
@@ -245,7 +253,3 @@ This path works because `pulumi do` uses the same providers, resource types, and
 `pulumi do` ships as a research preview in [Pulumi CLI v3.242.0](https://github.com/pulumi/pulumi/releases/tag/v3.242.0) and later. Install or update the CLI, install a provider plugin, and start running commands. The [documentation](/docs/iac/cli/direct-resource-operations/) has the full reference.
 
 We can't wait to hear your feedback. [Give it a try today](/docs/install/), tell us what works (and what doesn't), and help shape the CLI that agents and humans both reach for first.
-
-- [Documentation](/docs/iac/cli/direct-resource-operations/)
-- [File a feature request](https://github.com/pulumi/pulumi/issues/new)
-- [Pulumi Community Slack](https://slack.pulumi.com/) for discussion

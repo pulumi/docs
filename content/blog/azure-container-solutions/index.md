@@ -4,12 +4,13 @@ date: 2021-10-12T08:00:00-07:00
 updated: 2025-03-24
 draft: false
 meta_desc: "Compare Azure container services like ACI, AKS, and App Service. Learn the pros, cons, pricing, and use cases to pick the best option for your workload."
-meta_image: "azure-top-5.png"
 authors:
     - lee-briggs
 tags:
     - azure
     - containers
+category: general
+faq_schema: true
 ---
 
 Containers have emerged as one of the de facto standards for running software. When adopted with the right mindset, they can drastically improve the development lifecycle and help to close the loop between local development and running your applications in the cloud.

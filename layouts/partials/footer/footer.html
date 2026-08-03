@@ -4,7 +4,7 @@
 <footer class="relative bg-service-black text-white overflow-clip px-6 lg:px-8 pt-12 pb-8 ">
     <div class="absolute top-0 right-0 pointer-events-none max-w-[50%] opacity-90" aria-hidden="true">
         {{ if (resources.Get "fingerprinted/images/footer/bg-lines.svg") }}
-            {{ partial "fingerprinted-img.html" (dict "src" "images/footer/bg-lines.svg" "alt" "" "ariaHidden" "true" "loading" "lazy") }}
+            {{ partial "fingerprinted-img.html" (dict "src" "images/footer/bg-lines.svg" "alt" "" "ariaHidden" "true" "loading" "lazy" "width" "421" "height" "474") }}
         {{ end }}
     </div>
 
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="flex flex-wrap gap-x-16 gap-y-10">
+        <div class="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 lg:flex lg:flex-wrap lg:gap-x-16">
             {{ range $f.columns }}
                 <nav aria-label="{{ .heading }}">
                     <h3 class="footer-heading">{{ .heading }}</h3>
@@ -36,7 +36,7 @@
             {{ end }}
         </div>
 
-        <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-8 lg:pr-20">
             <div>
                 <h3 class="footer-heading">{{ $f.connect.heading }}</h3>
                 <ul class="flex gap-4 items-center">

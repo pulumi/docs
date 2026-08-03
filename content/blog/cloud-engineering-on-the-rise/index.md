@@ -2,11 +2,11 @@
 title: "Cloud Engineering on the Rise"
 date: 2021-08-03
 meta_desc: "Infrastructure as Code case studies with Pulumi, Atlassian, SANS, and Skai"
-meta_image: pulumi.png
 authors:
     - george-huang
 tags:
-    - cloud engineering
+    - cloud-engineering
+category: customers
 
 ---
 

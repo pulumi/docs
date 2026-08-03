@@ -2,9 +2,10 @@
 date: "2020-04-06"
 title: "Automatically Enforcing AWS Resource Tagging Policies"
 authors: ["joe-duffy"]
-tags: ["AWS", "policy-as-code"]
+tags: [aws, policy-as-code]
+category: best-practices
 meta_desc: "Learn how to automate AWS resource tagging using Infrastructure and Policy as Code, enabling advanced infrastructure management policies."
-meta_image: "pac-tags-meta.png"
+
 ---
 
 AWS publishes best practices for how to tag your resources for cost tracking, automation, and organization. But how do you enforce that you're doing it correctly across all of your projects? And is it really necessary to manually track down all those places where you missed a tag and manually patch things up? In this article, we'll see how to use Policy as Code to enforce your team's tagging strategies in addition to some powerful [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) techniques to automate applying your tags in a consistent way across all of your projects and resources.
@@ -358,6 +359,10 @@ Finally, further down in the dialog, we can enter the tags we'd like to enforce:
 ![Configure Policy Pack](/blog/automatically-enforcing-aws-resource-tagging-policies/pac-configure-pack.png)
 
 Now that it is configured, all subsequent updates across the organization will run policy checks.
+
+{{< blog/cta-card title="Enforce policy as code" href="/docs/insights/policy/" >}}
+Write policy as code with Pulumi to catch missing tags, block risky configurations, and keep every deployment compliant across your team.
+{{< /blog/cta-card >}}
 
 ## Automatically Applying Tags
 

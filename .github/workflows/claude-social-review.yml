@@ -74,7 +74,7 @@ jobs:
           echo "base_ref=$BASE_REF" >> "$GITHUB_OUTPUT"
 
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ steps.pr-info.outputs.head_ref }}
           fetch-depth: 0
@@ -194,7 +194,7 @@ jobs:
       - name: Fetch secrets from ESC
         if: steps.gate.outputs.should_skip != 'true'
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
 
       - name: Configure AWS Credentials
         if: steps.gate.outputs.should_skip != 'true'
@@ -255,6 +255,13 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # workprentice opens blog PRs, which surfaces the run's actor as a
+          # Bot; claude-code-action@v1 rejects Bot actors by
+          # default. Same allowance claude-code-review.yml makes. Both the bare
+          # and `[bot]`-suffixed forms are listed because the action reports the
+          # actor as bare `workprentice` while github.actor renders it as
+          # `workprentice[bot]`.
+          allowed_bots: 'github-actions[bot],workprentice,workprentice[bot]'
           prompt: |
             You are running in a CI environment.
 
@@ -274,11 +281,27 @@ jobs:
             2. Then `## Social Media Review` and the per-platform sections.
             3. End with a footer line: `_Updated for commit \`${{ github.event.pull_request.head.sha || github.event.workflow_run.head_sha }}\` (short: \`$(echo "${{ github.event.pull_request.head.sha || github.event.workflow_run.head_sha }}" | cut -c1-7)\`) at $(date -u '+%Y-%m-%d %H:%M UTC')._`
 
-            Use the Write tool. Do not run `gh pr comment`.
-          claude_args: '--model claude-sonnet-4-6 --allowed-tools "Read,Glob,Grep,Agent,Write,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(date:*)"'
+            Use the Write tool. Do not run `gh pr comment`. Your response text is
+            discarded — the only output that counts is the `.social-review.md` file.
+            Writing it is mandatory, even if every platform passes.
+          claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Glob,Grep,Agent,Write,Bash(python3:*),Bash(gh pr view:*),Bash(gh pr diff:*),Bash(date:*)"'
+
+      # The review agent occasionally finishes without writing the file (it puts
+      # the review in its response text instead). Degrade to a warning rather
+      # than hard-failing the job on the missing file; a re-run usually fixes it.
+      - name: Check review file was written
+        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
+        id: review-file
+        run: |
+          if [ -s .social-review.md ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::Claude review completed but .social-review.md was not written; skipping the review comment. Re-run this job to retry."
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Find existing social review comment
-        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
+        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true' && steps.review-file.outputs.exists == 'true'
         id: find-social-comment
         uses: peter-evans/find-comment@v4
         with:
@@ -287,7 +310,7 @@ jobs:
           direction: last
 
       - name: Post or update social review comment
-        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true'
+        if: steps.gate.outputs.should_skip != 'true' && steps.check.outputs.needs_review == 'true' && steps.review-file.outputs.exists == 'true'
         uses: peter-evans/create-or-update-comment@v5
         with:
           issue-number: ${{ steps.pr-info.outputs.number }}

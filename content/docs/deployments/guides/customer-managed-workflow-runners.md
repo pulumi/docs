@@ -40,7 +40,7 @@ Workflow runners support multiple workflow types beyond deployments, including P
 
 ### Scaling and concurrency
 
-Each workflow runner process runs **one deployment at a time**, plus optionally **one Insights scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Insights scans or policy evaluations.
+Each workflow runner process runs **one deployment at a time**, plus optionally **one Insights scan or policy evaluation in parallel**, and has no internal worker pool to configure. To increase the number of jobs your pool can run in parallel, add more workflow runner instances to the pool — each instance contributes one deployment slot and, if the pool also handles non-deployment workflow types, one additional slot for Insights scans or policy evaluations. For how each runner launches a job (the Docker and Kubernetes execution models), see [Execution model](/docs/deployments/concepts/customer-managed-runners/#execution-model).
 
 Pulumi Cloud assigns each pending job to exactly one runner using an exclusive claim. When multiple runners poll the same pool simultaneously, the service hands each pending job to a single runner, so the same job is never processed by two runners at the same time. Recovery behavior depends on the workflow type:
 
@@ -98,4 +98,4 @@ The workflow runner will attempt to read the `oidc_token_file` for a fresh OIDC 
 
 ## Providing credentials and configuring runners
 
-For the credentials your runners need to manage infrastructure, see [Runners](/docs/deployments/concepts/customer-managed-runners/#providing-credentials-to-workflow-runners). For the full set of configuration options for the `pulumi-workflow-agent.yaml` file, see the [configuration reference](/docs/deployments/concepts/customer-managed-runners/#configuration-reference).
+For the cloud credentials your runners need to manage infrastructure, see [Runners](/docs/deployments/concepts/customer-managed-runners/#providing-cloud-credentials-to-workflow-runners). For the full set of configuration options for the `pulumi-workflow-agent.yaml` file, see the [configuration reference](/docs/deployments/concepts/customer-managed-runners/#configuration-reference).

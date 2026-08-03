@@ -4,13 +4,13 @@ allow_long_title: true
 date: 2023-10-10T04:00:00-07:00
 updated: 2026-06-16
 meta_desc: "Manage cloud secrets, configuration, and environments effortlessly with Pulumi ESC. Try the new CLI for secure, automated workflows."
-meta_image: meta.png
 authors:
     - luke-hoban
 tags:
     - esc
     - secrets
     - platform-engineering
+category: product
 ---
 
 Today, we’re excited to introduce [**Pulumi ESC**](/product/esc/), a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments.  Pulumi ESC introduces a new category of configuration-as-code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.

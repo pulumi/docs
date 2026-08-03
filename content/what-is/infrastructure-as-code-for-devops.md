@@ -77,7 +77,7 @@ CALMS (Culture, Automation, Lean, Measurement, Sharing) is one of the most widel
 | Pillar | What IaC contributes |
 |---|---|
 | **Culture** | Application and platform changes flow through the same review process. Operations stops being an out-of-band ticket queue and becomes a peer to development. |
-| **Automation** | Every cloud resource is provisioned by code. Manual console clicks are exceptions that get noticed by drift detection. |
+| **Automation** | Every cloud resource is provisioned by code. Manual console clicks are exceptions that get noticed by [drift detection](/what-is/what-is-infrastructure-drift/). |
 | **Lean** | Smaller, more frequent infrastructure changes replace big-bang quarterly migrations. Failed changes are reverted in minutes. |
 | **Measurement** | Deployment frequency, lead time, change-failure rate, and MTTR can be measured for the platform the same way they're measured for the product. |
 | **Sharing** | Reusable infrastructure components and policy packs ship between teams. Platform teams package vetted patterns; product teams consume them. |
@@ -106,7 +106,7 @@ The principle is the same as application CI: fast feedback for in-progress chang
 * **Policy as code** enforces organizational rules across every change. [Pulumi Policies](/docs/insights/policy/) lets you write policies in TypeScript, Python, or OPA's Rego and run them against `pulumi preview` so non-compliant changes never merge. Those policies apply to Pulumi stacks written in any supported language.
 * **Security scans** (Checkov, tfsec, Snyk IaC) run on every commit and surface known-bad configurations.
 
-For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/).
+For deeper coverage of each layer, see [how to step up cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/).
 
 ## How does IaC enable platform engineering and self-service?
 
@@ -236,5 +236,6 @@ Related reading:
 * [What is DevOps?](/what-is/what-is-devops/)
 * [What is CI/CD?](/what-is/what-is-ci-cd/)
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
 * [What is Configuration Management?](/what-is/what-is-configuration-management/)
+* [Most Effective Infrastructure as Code (IaC) Tools](/blog/infrastructure-as-code-tools/)

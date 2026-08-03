@@ -4,7 +4,6 @@ date: 2025-04-30
 updated: 2026-06-16
 allow_long_title: true
 meta_desc: "Pulumi ESC now automates database credential rotation for PostgreSQL and MySQL, enhancing security and reducing operational burden."
-meta_image: meta.png
 authors:
 - sean-yeh
 - iaroslav-titov
@@ -16,6 +15,7 @@ tags:
 - rotation
 - database
 - security
+category: product
 ---
 
 Securing access to critical data stores is paramount in today's cloud-native world. Yet, managing database credentials often involves static, long-lived passwords – a significant security blind spot. These static secrets, frequently embedded in application configurations or accessible to multiple team members, represent a prime target for attackers. Manually rotating these credentials is a cumbersome, error-prone task that’s often neglected, leaving databases vulnerable for extended periods. Building on our commitment to robust secrets management, we are excited to launch **Automated Database Credential Rotation** for **PostgreSQL and MySQL** in [Pulumi ESC!](/product/esc)

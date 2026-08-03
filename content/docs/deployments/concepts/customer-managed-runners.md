@@ -1,7 +1,7 @@
 ---
 title: Customer-managed runners
 title_tag: Customer-managed runners | Pulumi Deployments
-meta_desc: Self-host Pulumi workflow runners on your own infrastructure — supplying credentials and the full configuration reference for customer-managed runner pools.
+meta_desc: Self-host Pulumi workflow runners on your own infrastructure — supplying cloud credentials and the full configuration reference for customer-managed runners.
 menu:
   deployments:
     name: Customer-managed runners
@@ -37,9 +37,66 @@ Customer-Managed Workflow Runners support all the [deployment triggers](/docs/de
 Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
 {{% /notes %}}
 
-To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how to supply credentials to runners and the full configuration reference.
+To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how to supply cloud credentials to runners and the full configuration reference.
 
-## Providing credentials to workflow runners
+## Execution model
+
+A workflow runner is a long-lived agent process. It polls Pulumi Cloud for pending work, claims one job at a time through an exclusive claim, launches an isolated runner environment to execute that job, streams the results back to Pulumi Cloud, and then discards the per-job environment. The agent itself keeps running and polls for the next job.
+
+The [`deploy_target`](#configuration-reference) setting controls *how* the agent creates that per-job environment. It has two values — `docker` and `kubernetes` — and the choice determines the isolation model, the prerequisites, and how you scale.
+
+```mermaid
+flowchart LR
+    Cloud[Pulumi Cloud]
+    Agent[Workflow runner agent]
+    Env[Per-job runner container or Pod]
+
+    Agent -->|1. Poll for work| Cloud
+    Cloud -->|2. Claim one job| Agent
+    Agent -->|3. Launch| Env
+    Env -->|4. Execute and stream results| Cloud
+    Env -.->|5. Discard after job| Agent
+```
+
+### Docker
+
+With `deploy_target: docker` (the default), the agent connects to the local Docker socket and launches a **separate runner container for each job**. Because a runner container runs Pulumi operations that may themselves build images or start containers, this pattern is often referred to informally as **Docker-in-Docker (DinD)**. Mechanically, though, the agent starts a runner container through the Docker socket rather than nesting a Docker daemon.
+
+Docker-specific behavior:
+
+- **`pull_image`** — when `true` (the default), the agent pulls the workflow image from the registry for each job; when `false`, it uses a locally cached image.
+- **`env_forward_allowlist`** — host environment variables named here are forwarded into the runner container, which is how you pass cloud provider credentials or other host-defined secrets into a job. `DOCKER_HOST` is always forwarded.
+- **`shared_volume_directory`** — the host directory used to create the temporary directories that are mounted into the runner container. Leave it empty to use the operating system's default temporary location.
+
+This mode requires only a Docker daemon on the host, which makes it the simplest way to run an agent on a single VM or bare-metal host.
+
+### Kubernetes
+
+With `deploy_target: kubernetes`, the agent uses the in-cluster Kubernetes API to launch a **runner Pod for each job**, so every job gets Pod-level isolation and is scheduled by Kubernetes across your cluster. In this mode the agent runs as a Kubernetes Deployment, and its configuration is supplied as environment variables on that Deployment or through a configuration file mounted into the agent Pod. The Kubernetes-specific [`PULUMI_AGENT_IMAGE_PULL_POLICY`](#kubernetes-managed-workflow-runners) controls the runner image pull policy.
+
+This mode fits environments that already run Kubernetes and want the cluster to handle scheduling and resource limits. It also enables ephemeral, per-job runners: set [`single_run: true`](#configuration-reference) so the agent exits after one job, and drive it with a Kubernetes `Job` or `CronJob` so a fresh agent starts for each job.
+
+### One job per runner
+
+Regardless of the deploy target, each agent process runs **one deployment at a time** — plus, optionally, one Insights scan or policy evaluation in parallel — and has no internal worker pool to configure. To run more jobs concurrently, add more agents to the pool rather than trying to scale a single agent. For the full set of scaling patterns, per-organization concurrency limits, and crash-recovery behavior, see [Scaling and concurrency](/docs/deployments/guides/customer-managed-workflow-runners/#scaling-and-concurrency) in the setup guide.
+
+### Choosing between Docker and Kubernetes
+
+| | Docker (`deploy_target: docker`) | Kubernetes (`deploy_target: kubernetes`) |
+|---|---|---|
+| **Prerequisite** | A Docker daemon on the host | A Kubernetes cluster |
+| **Per-job unit** | A runner container launched via the Docker socket | A runner Pod launched via the in-cluster API |
+| **Isolation** | Container-level, sharing the host Docker daemon | Pod-level, scheduled and isolated by the cluster |
+| **Scaling** | Run more agent processes (for example, more hosts or systemd units) | Run more agent replicas, or use `single_run` with a `Job`/`CronJob` for ephemeral per-job runners |
+| **Best fit** | A single VM or host where you want the simplest setup | An existing Kubernetes environment that should schedule and bound runner resources |
+
+## Dependency caching
+
+Pulumi's [dependency caching](/docs/deployments/concepts/settings/dependency-caching/) is not available on customer-managed runner pools. If a stack is assigned to a customer-managed pool, the setting has no effect.
+
+Because you control the runner environment and image, you can manage caching yourself — for example, by persisting package manager caches and the Pulumi plugin directory (`~/.pulumi/plugins`) across jobs, or by pre-baking them into your runner image.
+
+## Providing cloud credentials to workflow runners
 
 {{% notes type="info" %}}
 For most users, Pulumi recommends [Pulumi ESC](/docs/esc/) for supplying cloud credentials to Deployments. However, if your customer-managed agents can't reach Pulumi Cloud over the network to use ESC, [Pulumi Deployments OIDC](/docs/deployments/guides/oidc/) is an appropriate solution. For a comparison, see [Supplying Cloud Credentials to Pulumi Deployments](/docs/deployments/guides/cloud-credentials/).
@@ -113,6 +170,7 @@ shared_volume_directory: ""
 # Where workflow jobs are executed. One of: docker, kubernetes.
 # - docker: the agent launches runner containers via the local Docker socket.
 # - kubernetes: the agent launches runner Pods via the in-cluster Kubernetes API.
+# See the "Execution model" section above for how each target runs a job.
 # Environment variable override: PULUMI_AGENT_DEPLOY_TARGET
 deploy_target: "docker"
 

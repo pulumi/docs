@@ -1,13 +1,13 @@
 ---
 title: "It's Time to Embrace Kubernetes: Part 2"
+feature_image: feature.png
 date: 2020-12-11
 meta_desc: "How to evaluate your choices when choosing Kubernetes as your application platform."
-meta_image: embrace-k8s.png
 authors:
     - lee-briggs
 tags:
     - kubernetes
-    - embrace-kubernetes
+category: best-practices
 series: embrace-kubernetes
 ---
 

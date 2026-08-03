@@ -1,5 +1,6 @@
 ---
 title: "Uploading documents to your AI Slackbot in real-time using S3, SQS and Pulumi on AWS"
+feature_image: feature.png
 allow_long_title: true
 authors:
 - tyler-mulligan
@@ -12,11 +13,11 @@ tags:
 - sqs
 - s3
 - ai
-- ai-slack-bot
+category: tutorials
 series: ai-slack-bot
 meta_desc: "Uploading documents to your AI Slackbot in real-time using S3, SQS and Pulumi on AWS"
 date: 2024-06-03T17:21:02+01:00
-meta_image: meta.png
+
 ---
 
 In the introductory blog post, we learned to [Create an AI Slack Bot to Chat with Your Data Using Embedchain, Pulumi on AWS](/blog/ai-slack-bot-to-chat-using-embedchain-and-pulumi-on-aws/), and continued with [Adding data to Pinecone using S3, Embedchain, and Pulumi on AWS for an AI Slack bot](/blog/ai-slack-bot-adding-data-to-pinecone-using-s3-embedchain-and-pulumi-on-aws/).

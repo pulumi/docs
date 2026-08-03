@@ -32,6 +32,10 @@ gh pr view "$PR_NUMBER" --json title,body,isDraft,labels,files,headRefOid,headRe
 
 `last-reviewed-sha` reads the most recent SHA from the 📜 Review history section in the 1/M comment.
 
+### Automated invocation
+
+When `MENTION_AUTHOR` is `auto-refresh`, there is no human mention: the run was dispatched by the auto-refresh gate in claude-code-review.yml because a push touched only lines carried by 🚨 Outstanding findings (deterministically checked by `auto-refresh-gate.py`). Treat the run strictly as **Case 1 (fix-response)** scoped to the outstanding findings and the pushed lines: re-verify each outstanding finding against the new diff, move resolved ones to ✅ Resolved, and flag regressions the push introduced on those lines. Case 2 (dispute) never applies — there is no mention text to adjudicate — and do not re-extract claims or raise findings on content the push did not touch. `auto-refresh` is not a GitHub user; never render it as an `@`-mention.
+
 **Fallback rules when `last-reviewed-sha` is unusable:**
 
 - **Empty output** (history line missing, comment corrupted): fall back to a full `gh pr diff "$PR_NUMBER"` (no range). Treat the whole PR as new content; this is equivalent to starting over.
@@ -70,6 +74,7 @@ The author pushed commits that look like fixes for the previous 🚨 Outstanding
 2. **Sweep for unflagged duplicates of any phrase the previous finding quoted.** When a previous finding cited a specific quoted phrase or claim, search the current file for every occurrence of that phrase (or a near-paraphrase) — not just the locations the original finding called out. On Hugo posts, that means body + `meta_desc` + every `social:` sub-key. If an occurrence the original finding missed still matches the verified-false claim, raise it as a new 🚨 finding citing the missed location. Initial reviews can miss frontmatter duplicates; re-entrant is the safety net before merge.
 3. Extract any *new* findings introduced by the new commits. Apply the domain rules.
 4. Append a 📜 Review history line: `<timestamp> — re-reviewed after fix push (<commit count> new commits, <SHA>)`.
+5. Refresh the freshness header of the 1/M comment: the `Last updated <timestamp>` line AND the `<!-- CLAUDE_REVIEW_HEAD <sha> -->` sentinel on the next line, setting the sentinel to the PR head SHA this update reviewed. Label-independent consumers (`/pr-review` Step 2, the review-label-reconcile workflow) compare that sentinel against the live PR head to detect a stale review when a push never fired a `synchronize` event (Copilot-agent and `GITHUB_TOKEN` pushes don't) — a stale sentinel makes a fresh review look outdated, and a missing one downgrades those consumers to timestamp heuristics.
 
 **Failure-mode example:**
 
@@ -102,6 +107,8 @@ The author or another reviewer pushed back on a previous finding *without* a fix
    - Add a reply paragraph to 📜 Review history with the full evidence (file:line, command output, gh URL) explaining why the dispute didn't change the verdict. **You must cite contrary evidence to hold on a domain-knowledge dispute** — if the only basis for holding is your own reasoning vs. the author's assertion of authority, concede instead.
    - The Outstanding count does not change.
 4. **Do not** reword the same finding hoping it lands better. The original wording is in the comment; either change your mind or explain why you didn't.
+
+**The annotation shapes are machine-scraped.** `scrape-review-outcomes.py` derives the weekly outcome telemetry (fixed / conceded / disputed counts) from the exact `concede: <reason>` and `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` forms above — a freelanced variant ("author disputed this", "conceding the point") silently drops the finding out of those counts, and the validator's `outcome-annotation-shape` rule flags it.
 
 **Failure-mode examples:**
 
@@ -139,7 +146,7 @@ A `@claude` mention with no specific request, or a generic "please re-review." S
 > Previous review had 3 outstanding findings (A, B, C). Author pushed no commits, no new mention beyond "@claude refresh."
 >
 > ❌ *Do not:* list A, B, C again as a new narrative ("I re-reviewed the PR. The following findings remain: A, B, C."). They are already visible in the pinned comment. Repeating them is the noisiest possible output.
-> ✅ *Do:* append one 📜 Review history line ("<timestamp> — re-verified; 3 outstanding unchanged") and update the timestamp at the top of the 1/M comment. That is the full output. The bucket contents do not change.
+> ✅ *Do:* append one 📜 Review history line ("<timestamp> — re-verified; 3 outstanding unchanged") and update the timestamp at the top of the 1/M comment (plus the `<!-- CLAUDE_REVIEW_HEAD -->` sentinel when the head moved). That is the full output. The bucket contents do not change.
 
 Alternative ✅ path: if the re-verify surfaces something the previous review missed, add the new finding to 🚨 Outstanding. Do not also repeat A, B, C.
 

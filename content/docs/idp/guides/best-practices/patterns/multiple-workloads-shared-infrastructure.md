@@ -32,11 +32,11 @@ This pattern involves creating Pulumi components that abstract shared infrastruc
 
 ## How to use this pattern
 
-Platform teams create reusable components that encapsulate workload deployment to centrally managed shared infrastructure, while application teams simply specify their application requirements.
+Platform teams create reusable components that encapsulate workload deployment to centrally managed shared infrastructure, while application teams specify their application requirements.
 
 The platform team first provisions shared infrastructure (often using their own templates or components for standardization), then creates application-facing components that deploy workloads to this shared infrastructure.
 
-### Example: Container workloads
+### Example: container workloads
 
 This example shows the common case of container workloads. The platform team creates a container application component that deploys to their shared ECS cluster:
 

@@ -79,7 +79,7 @@ runtime: nodejs
 
 environment:
   - database-service
-  - cache-service  
+  - cache-service
   - auth-service
 ```
 

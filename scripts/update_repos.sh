@@ -3,7 +3,14 @@
 
 set -o nounset -o errexit -o pipefail
 
+# Usage:
+#   update_repos.sh                      # update all repos, checkout latest release
+#   update_repos.sh <repo>               # update one repo, checkout latest release
+#   update_repos.sh <repo> <tag>         # update one repo, checkout a specific tag
+#                                        # (used by versioned-docs backfill to rebuild
+#                                        #  docs at a historical version)
 REPO_OVERRIDE=${1:-}
+TAG_OVERRIDE=${2:-}
 
 TOOLS_REPOS=(
     "pulumi"
@@ -13,6 +20,7 @@ TOOLS_REPOS=(
 
 update_repo() {
     repo=$1
+    requested_tag=${2:-}
     echo -e "\033[0;95m--- Updating repo pulumi/${repo} ---\033[0m"
     pushd . >/dev/null 2>&1
     mkdir -p "../${repo}" && cd "../${repo}"
@@ -22,10 +30,15 @@ update_repo() {
     git checkout ${default_branch} >/dev/null
     git pull origin ${default_branch} >/dev/null
     git fetch --tags >/dev/null
-    echo -e "\033[0;93mChecking out latest release\033[0m"
-    LATEST_RELEASE=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev'`)
-    git -c advice.detachedHead=false checkout $LATEST_RELEASE >/dev/null
-    echo -e "\033[0;96m$LATEST_RELEASE\033[0m"
+    if [ -n "${requested_tag}" ]; then
+        echo -e "\033[0;93mChecking out requested tag ${requested_tag}\033[0m"
+        CHECKOUT_REF="${requested_tag}"
+    else
+        echo -e "\033[0;93mChecking out latest release\033[0m"
+        CHECKOUT_REF=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev'`)
+    fi
+    git -c advice.detachedHead=false checkout "${CHECKOUT_REF}" >/dev/null
+    echo -e "\033[0;96m${CHECKOUT_REF}\033[0m"
     popd >/dev/null 2>&1
 }
 
@@ -35,5 +48,5 @@ if [ -z "${REPO_OVERRIDE:-}" ]; then
         update_repo ${repo}
     done
 else
-    update_repo ${REPO_OVERRIDE}
+    update_repo "${REPO_OVERRIDE}" "${TAG_OVERRIDE}"
 fi

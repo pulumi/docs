@@ -1,5 +1,6 @@
 ---
 title: "Cloud Systems: Deploying to Amazon ECS"
+feature_image: feature.png
 
 date: 2021-12-28T14:52:42Z
 
@@ -11,10 +12,10 @@ authors:
     - kat-cosgrove
 
 tags:
-    - cloud-systems
     - aws
     - tutorials
     - docker
+category: tutorials
 series: cloud-systems
 ---
 

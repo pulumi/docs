@@ -4,7 +4,8 @@ date: "2019-05-17"
 updated: 2025-03-06
 meta_desc: "Learn how to securely manage secrets in Pulumi with automatic encryption and client-side control. Protect sensitive data in your infrastructure."
 authors: ["matt-ellis"]
-tags: ["features","Security"]
+tags: [features, security]
+category: tutorials
 ---
 
 {{% notes type="info" %}}
@@ -203,6 +204,10 @@ are additional outputs you want to set as secrets, you can pass the
 of other property names you want treated as secrets including computed
 output properties of a resource which might be sensitive, like generated
 passwords or access credentials.
+
+{{< blog/cta-card title="Manage secrets with Pulumi ESC" href="/docs/esc/" >}}
+Store encrypted secrets, pull short-lived cloud credentials, and share configuration across your stacks and environments from a single source with Pulumi ESC.
+{{< /blog/cta-card >}}
 
 ## Configuring Your Secrets Provider
 

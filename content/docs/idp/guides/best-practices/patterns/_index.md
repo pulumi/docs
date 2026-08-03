@@ -37,7 +37,7 @@ This section provides proven patterns that help you implement best practices sol
 - [IDP Pattern: Components using other Components](/docs/idp/guides/best-practices/patterns/components-using-other-components)
 - [IDP Pattern: Security Updates using Components](/docs/idp/guides/best-practices/patterns/security-updates-using-components)
 
-## Additional Resources
+## Learn more
 
 - [Best Practices](/docs/idp/guides/best-practices)
 - [Pulumi IDP Concepts](/docs/idp/concepts)

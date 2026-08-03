@@ -4,12 +4,12 @@ date: 2023-11-21T03:53:33Z
 canonical_url: https://thenewstack.io/going-beyond-with-advanced-infrastructure-as-code-use-cases/
 draft: false
 meta_desc: "Explore advanced Infrastructure as Code (IaC) with Pulumi, covering cloud development, testing, policy enforcement, and the Automation API in a concise guide."
-meta_image: meta.png
 authors:
     - joe-duffy
 tags:
     - infrastructure-as-code
     - fundamentals
+category: best-practices
 
 ---
 

@@ -130,38 +130,26 @@ To learn how the Pulumi Cloud backend is designed—including why it never needs
 
 You can manage state yourself with a DIY backend that stores state in AWS S3, Azure Blob Storage, Google Cloud Storage, an S3-compatible server, a PostgreSQL database, or your local filesystem. For setup instructions and per-backend configuration details, see [Using a DIY backend](/docs/iac/operations/stack-management/using-a-diy-backend/).
 
-## Migrating Between State Backends
+## Migrating between state backends
 
-It is possible to start with one backend and then later migrate to another. This is common if you have began your project with Pulumi using a DIY backend but later decided to adopt Pulumi Cloud for easier use within your team. This section describes how to perform this operation, however, if you would like our assistance with a migration, [please get in touch](/contact/).
+`pulumi stack migrate` requires Pulumi CLI v3.254.0 or later. [Update the Pulumi CLI](/docs/iac/download-install/) before migrating if you use an earlier version.
 
-The state for a stack includes information about its backend as well as other unique information such as its encryption provider. As such, moving a stack between backends isn't as simple as merely copying its state file. The [`pulumi stack rename` command](/docs/iac/cli/commands/pulumi_stack_rename) can be used for simple renames within the same backend; however, Pulumi also supports migrating stacks between backends using the `pulumi stack export` and `pulumi stack import` commands, which understand how to perform the necessary translations.
+Use [`pulumi stack migrate`](/docs/iac/cli/commands/pulumi_stack_migrate/) to migrate a stack between different backends. The command migrates the stack to the backend where you are currently logged in and opens the source backend URL directly, so you do not need to log out of the target backend.
 
-As an example, imagine you'd like to migrate a stack named `my-app-production` from a DIY backend to the Pulumi Cloud backend. To perform the migration, run the following sequence commands:
+Migration updates the target stack's local configuration. When source and target stack names match, the command updates `Pulumi.<stack>.yaml` and creates a `.bak.*` backup. When the target stack has a different name, the command replaces any existing `Pulumi.<target>.yaml`, including its ESC environment imports. Save a copy of that file before migrating if you need its current contents.
+
+For example, log in to Pulumi Cloud, then migrate `my-app-production` from a local backend:
 
 ```sh
-# switch to the backend/stack we want to export
-$ pulumi login --local
-$ pulumi stack select my-app-production
-
-# export the stack's state to a local file
-$ pulumi stack export --show-secrets --file my-app-production.stack.json
-
-# logout and login to the desired new backend
-$ pulumi logout
-$ pulumi login # default to Pulumi Cloud
-
-# create a new stack with the same name on pulumi.com
-$ pulumi stack init my-app-production
-
-# import the new existing state into pulumi.com
-$ pulumi stack import --file my-app-production.stack.json
+pulumi login
+pulumi stack migrate file://~ my-app-production
 ```
 
-After performing these steps, your stack will now be under the management of Pulumi Cloud. All subsequent operations should be performed using this new backend.
+The command migrates the latest checkpoint and configuration. It re-encrypts secrets in the configuration and state with the target stack's secrets provider. The source backend state remains unchanged.
 
-{{% notes type="info" %}}
-After migration, your stack's state will be managed by the Pulumi Cloud backend, but the stack will continue using the same secrets provider. You can separately [change the secrets provider](/docs/concepts/secrets#changing-the-secrets-provider-for-a-stack) for your stack if needed.
-{{% /notes %}}
+Use `--target <org>/<project>/<stack>` to choose a different target stack name or location.
+
+`pulumi stack migrate` does not migrate stacks between accounts in the same backend. For copying stack state between Pulumi Cloud accounts, including GitLab-backed accounts, see [GitLab support](/docs/support/pulumi-cloud-faq/#gitlab-support).
 
 ## Refreshing state
 
@@ -211,7 +199,7 @@ $ pulumi preview --refresh
 
 ### Automated drift detection
 
-For teams that want to detect and remediate out-of-band changes on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/concepts/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
+For teams that want to detect and remediate [out-of-band changes](/what-is/what-is-infrastructure-drift/) on a schedule, Pulumi Cloud provides built-in [drift detection and remediation](/docs/deployments/concepts/drift/). With drift detection configured, Pulumi Cloud periodically runs `pulumi refresh` against your stacks and alerts you (or optionally remediates automatically) when the actual state of your infrastructure diverges from Pulumi's recorded state.
 
 To learn more, see [Drift detection](/docs/deployments/concepts/drift/) for the Pulumi Cloud feature, and [Detecting and reconciling drift](/docs/iac/operations/stack-management/drift/) for the CLI-side workflow (remediation vs. adoption, GitOps continuous reconciliation, and false-positive reduction).
 
@@ -229,7 +217,7 @@ To learn more about importing existing resources, see [Importing Infrastructure]
 
 Pulumi state is usually stored in a transactional snapshot called a _checkpoint_. Pulumi records checkpoints early and often as it executes so that Pulumi can operate reliably, similar to how database transactions work. The basic functions of state allow Pulumi to diff your program's goal state against the last known update, recover from failure, and destroy resources accurately to clean up afterwards. The checkpoint format augments this with additional failure recovery capabilities in the face of partial failure.
 
-The Pulumi Cloud backend records every checkpoint through a transactional API, making it possible to recover from unusual failure scenarios such as network interruptions during updates. DIY backends also maintain checkpoint history (in the `.pulumi/history/` directory), but blob storage backends use a less transactional protocol that may have more difficulty recovering from partial failures.
+The Pulumi Cloud backend records every checkpoint through a transactional API, making it possible to transparently recover from unusual failure scenarios such as network interruptions during updates. DIY backends also maintain checkpoint history (in the `.pulumi/history/` directory), but because they are fundamentally limited by the non-transactional protocols of blob storage, they cannot transparently recover from certain kinds of partial failures (read more about how Pulumi Cloud addresses this with [journaling](/blog/journaling/)). This same limitation is why DIY backends offer only a blunt instrument for tuning performance on large stacks: [skipping checkpoints](/docs/iac/cli/environment-variables/) altogether, trading durability for speed.
 
 ### State Encryption
 

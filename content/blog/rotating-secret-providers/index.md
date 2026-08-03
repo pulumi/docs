@@ -2,13 +2,13 @@
 title: "Rotating Secret Providers"
 date: 2020-08-05
 meta_desc: "Pulumi adds ability to rotate stack secret providers"
-meta_image: secrets_rotation.png
 authors:
     - paul-stack
 
 tags:
     - features
-    - Security
+    - security
+category: product
 ---
 
 Customers and users have asked for the ability

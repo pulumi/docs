@@ -4,7 +4,6 @@ date: 2025-06-03
 draft: false
 meta_desc: "Learn how to transform infrastructure management from configuration chaos to programming languages using effective change management strategies."
 summary: Infrastructure teams struggle with growing YAML configurations and CloudFormation templates that take hours to understand and deploy. Daniel Ward, Microsoft MVP and consultant, shares proven strategies for transitioning teams to programming languages like those supported by Pulumi, including the 10% rule for change management and viral adoption techniques.
-meta_image: meta.png
 authors:
     - daniel-ward
     - adam-gordon-bell
@@ -13,6 +12,7 @@ tags:
     - consulting
     - configuration-management
     - programming-languages
+category: best-practices
 social:
     twitter: |
         From configuration chaos to programming languages: Transform your infrastructure with the right change management approach. Learn the 10% rule, viral adoption, and why tools like @pulumiCorp beat YAML for complex systems.

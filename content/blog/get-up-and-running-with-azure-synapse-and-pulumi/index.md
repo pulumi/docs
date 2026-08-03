@@ -3,11 +3,11 @@ title: "Get Up and Running with Azure Synapse and Pulumi"
 date: 2020-12-04
 draft: false
 meta_desc: Use infrastructure as code to automate deployment of an Azure Synapse workspace
-meta_image: synapse.png
 authors:
    - mikhail-shilkov
 tags:
    - azure
+category: tutorials
 
 ---
 

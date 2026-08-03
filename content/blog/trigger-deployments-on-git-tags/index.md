@@ -3,7 +3,6 @@ title: "Trigger Deployments on Git Tags"
 date: 2026-06-05
 draft: false
 meta_desc: "Tie infrastructure deployments to your release tags. Push a version tag like v1.2.0 and let Pulumi Deployments run pulumi up automatically."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - michael-fallihee
@@ -11,6 +10,7 @@ tags:
     - features
     - pulumi-cloud
     - announcements
+category: product
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

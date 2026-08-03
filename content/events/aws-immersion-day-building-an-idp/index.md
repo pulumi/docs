@@ -2,7 +2,8 @@
 # Name of the event, <= 60 characters
 title: "AWS Immersion Day: Building an IDP with Pulumi"
 meta_desc: Learn best practices for platform engineering on AWS and how Pulumi makes it easier than ever to build an Internal Developer Platform (IDP) for your team.
-meta_image:
+meta_image: /events/aws-immersion-day-building-an-idp/meta.png
+meta_image_square: /events/aws-immersion-day-building-an-idp/meta-square.png
 
 # A featured event will display first in the list.
 featured: false

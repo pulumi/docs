@@ -3,7 +3,7 @@
 
 Reads `.candidate-claims.json` (the claim *floor* from `merge-claims.py`) and
 `.fetched-urls.json`, routes each claim deterministically to one of three
-verification lanes, and fires one Sonnet 4.6 verifier per claim via a direct
+verification lanes, and fires one Sonnet 5 verifier per claim via a direct
 `/v1/messages` call with a forced `verify_claim` terminal tool. Pass 1 and
 Pass 3 verifiers run a small self-implemented agent loop: the model issues
 `gh_query` / `read_file` tool calls (executed locally) or uses Anthropic's
@@ -21,9 +21,11 @@ per-claim dispatch), gate it with the validator, leave only irreducible
 judgment (triage / bucket-promotion / framing / rendering) in the review.
 
 Why a direct API call (not `claude-code-action`): same reasons as
-`extract-claims-llm.py` — we need `temperature: 0`, a forced tool schema, and
-a small bounded loop, none of which `claude-code-action` exposes. Precedent:
-`extract-claims-llm.py` and `claude-triage.yml` already call `/v1/messages`.
+`extract-claims-llm.py` — we need a forced tool schema, an explicit
+`thinking: {type: "disabled"}` (Sonnet 5 defaults adaptive thinking on and
+rejects non-default sampling params), and a small bounded loop, none of which
+`claude-code-action` exposes. Precedent: `extract-claims-llm.py` and
+`claude-triage.yml` already call `/v1/messages`.
 
 Routing (first match wins):
   0. **pass0** (`pass0_resolve()`, zero model calls) — a regex-floor-only entry
@@ -43,8 +45,15 @@ Routing (first match wins):
   3. an unfetched URL, OR a named external source with no URL, OR shape is
      `numerical` / `entity-spec` / `attribution` / `positioning` / `comparison`
      with no pulumi signal → **pass3** (server-side `web_search`)
-  4. else (ambiguous / weak shape) → **pass1**; the verifier may emit
-     `route_escalation: "pass3"` and the harness retries once under pass3.
+  4. else (ambiguous / weak shape) → **pass1**.
+  Escalation (one hop, both directions): a pass1 verifier may emit
+  `route_escalation: "pass3"` (a public web source could close it) and a pass3
+  verifier may emit `route_escalation: "pass1"` (the claim is about Pulumi's
+  own product behavior — web search can't read product source); the harness
+  retries once under the other lane. A pass1 claim that exhausts its turn cap
+  auto-escalates to pass3; a claim that still can't converge carries
+  `turn_cap_exhausted: true` so consumers can distinguish a retryable budget
+  failure from a genuinely unverifiable claim.
 
 Usage:
     verify-claims.py --in .candidate-claims.json \
@@ -54,17 +63,21 @@ Usage:
 Output schema:
     {
       "schema_version": 1,
-      "model": "claude-sonnet-4-6",
+      "model": "claude-sonnet-5",
       "verdicts": [
         {"claim_id": "c1", "file": "content/blog/foo.md", "line_range": "L42",
          "text": "...", "type": "...",
+         "entity_key": "version/pulumi-gcp",   # carried from the claim when keyed (see entity_key.py)
+         "volatile": true,                     # carried alongside entity_key
          "route": "pass0" | "pass1" | "pass2" | "pass3",
-         "verdict": "verified" | "matches" | "not-a-claim" | "unverifiable" | "contradicted" | "mismatch",
+         "verdict": "verified" | "matches" | "not-a-claim" | "unverifiable" | "contradicted" | "mismatch" | "framing-drift",
          "confidence": "high" | "medium" | "low",
          "evidence": "...",            # 1-2 sentence summary, verbatim source quote when a source was cited
          "source": "...",              # citation pointer: URL, repo:path, `gh ...`, or `WebSearch ran query "..."`
+         "framing": "exact-match" | "entailed-narrower" | "overclaim-broader" | "shifted" | "none",  # optional; drift shapes coerce verified → framing-drift
          "framing_note": "...",        # optional
          "intuition_flag": "...",      # optional
+         "turn_cap_exhausted": true,   # optional; only on a terminal turn-cap unverifiable (retryable budget failure)
          "model_usage": {"input_tokens": T, "output_tokens": T,
                          "cache_read_input_tokens": T, "cache_creation_input_tokens": T,
                          "turns": N}},
@@ -92,6 +105,7 @@ The workflow's `||` stub is reserved for can't-even-start failures.
 from __future__ import annotations
 
 import argparse
+import functools
 import json
 import os
 import re
@@ -105,7 +119,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 SCHEMA_VERSION = 1
-DEFAULT_MODEL = "claude-sonnet-4-6"
+DEFAULT_MODEL = "claude-sonnet-5"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
 
@@ -113,15 +127,33 @@ MAX_TOKENS_VERIFY = 2048
 HTTP_TIMEOUT = 120          # seconds per API call
 MAX_RETRIES = 3             # API-level retries on 429 / 5xx / transient network
 MAX_CONCURRENCY = 16        # parallel per-claim verifiers (short HTTPS round-trips — more parallelism trims wall-clock, same $)
-MAX_TURNS = {"pass1": 8, "pass2": 2, "pass3": 4}  # agent-loop turn cap per lane (pass1 = the gh+read_file budget; 8 is the floor — at 5, pulumi-internal claims that need a few gh round-trips hit the cap and fall back to `unverifiable`, inflating the review's ⚠️/author-question noise)
+# Agent-loop turn cap per lane (pass1 = the gh+read_file budget). History: 8 was
+# documented as the floor ("at 5, pulumi-internal claims that need a few gh
+# round-trips hit the cap"), and then PR #20556 hit the documented failure mode
+# AT 8 — six REST-API-shape claims returned "did not converge within 8 turns".
+# 12 gives REST-API/provider-schema claims the extra gh round-trips they
+# actually need; a claim that exhausts the cap now auto-escalates to pass3
+# (see run_verifier) instead of dying as `unverifiable`, and the terminal
+# record carries `turn_cap_exhausted: true` so downstream consumers can tell
+# "budget ran out (retryable)" from "no source exists".
+MAX_TURNS = {"pass1": 12, "pass2": 2, "pass3": 4}
 
 GH_TIMEOUT = 30             # seconds per `gh` subprocess
 GH_OUTPUT_CAP = 12_000      # chars of `gh` output fed back to the model
 READ_FILE_CAP = 8_000       # chars of a read_file fed back to the model
 PASS2_BODY_CAP = 4_000      # chars of fetched URL content packed into the pass-2 prompt
 
-VERDICT_VALUES = {"verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch"}
+VERDICT_VALUES = {"verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "framing-drift"}
 CONFIDENCE_VALUES = {"high", "medium", "low"}
+# Structured framing-relationship values (the `framing` field on verify_claim).
+# `overclaim-broader` / `shifted` are the drift shapes: if the model reports one
+# of those alongside a `verified`/`matches` verdict, _finalize_verdict coerces
+# the verdict to `framing-drift` — the verifier demonstrably performs the
+# framing check but historically had nowhere to put "value right, meaning
+# drifted" and soft-pedaled it into `verified` prose (PR #20550: three stacked
+# framing distortions on an accurate 66% figure rendered as ✅ verified).
+FRAMING_VALUES = {"exact-match", "entailed-narrower", "overclaim-broader", "shifted", "none"}
+FRAMING_DRIFT_SHAPES = {"overclaim-broader", "shifted"}
 EXTERNAL_SHAPE_TYPES = {"numerical", "entity-spec", "attribution", "positioning", "comparison"}
 
 # Signals that route a claim to the pulumi-internal lane (Pass 1). Kept in the
@@ -144,6 +176,19 @@ PULUMI_INTERNAL_RES = [
 URL_IN_TEXT_RE = re.compile(r"https?://[\w\-._~:/?#\[\]@!$&'*+,;=%()]+")
 PULUMI_DOMAIN_RE = re.compile(r"https?://(?:[\w.-]*\.)?pulumi\.com\b|https?://github\.com/pulumi/", re.IGNORECASE)
 
+# Implementing-change references a docs PR cites in its body — the source of
+# truth for a feature that ships *alongside* its docs and so isn't yet on a
+# default branch or in the published reference. We thread these into the pass1 /
+# pass3 verifier prompt so a brand-new symbol can be confirmed against the PR
+# that implements it instead of dead-ending at `unverifiable`. Captures the two
+# explicit forms only (`pulumi/<repo>#<n>` and a github.com pull/commit URL);
+# a bare `#<n>` in a docs PR body usually points back into pulumi/docs, so it's
+# deliberately excluded to avoid routing the verifier at the wrong repo.
+IMPL_REF_RES = [
+    re.compile(r"\bpulumi/[\w.-]+#\d+"),
+    re.compile(r"\bgithub\.com/pulumi/[\w.-]+/(?:pull|commit)/[0-9a-f]+", re.IGNORECASE),
+]
+
 
 # ---- model-facing tool schemas ---------------------------------------------
 
@@ -163,12 +208,20 @@ VERIFY_CLAIM_TOOL = {
                          "description": "1-2 sentences: what you found. Include a verbatim source quote when the claim cited a source."},
             "source": {"type": "string",
                        "description": "A citation pointer: a URL, `repo:path`, a `gh ...` command you ran, or `WebSearch ran query \"...\"`."},
+            "framing": {"type": "string", "enum": sorted(FRAMING_VALUES),
+                        "description": ("REQUIRED for any claim that cited or named a source; use \"none\" otherwise. "
+                                        "The entailment relationship between the source passage and the claim as written: "
+                                        "`exact-match` (same assertion), `entailed-narrower` (the source proves the claim as a special case), "
+                                        "`overclaim-broader` (the claim asserts more than the source supports — wider denominator, stronger predicate), "
+                                        "`shifted` (same anchor value, different subject or speech act).")},
             "framing_note": {"type": "string",
-                             "description": "Optional. For cited claims whose framing differs from the source: `strengthened`/`narrowed`/`shifted` plus a one-line note."},
+                             "description": "Optional. One-line note explaining the framing relationship: quote the source form vs the claim form."},
             "intuition_flag": {"type": "string",
                                "description": "Optional. A one-line note when the claim's shape itself smells off, even if your evidence is inconclusive."},
-            "route_escalation": {"type": "string", "enum": ["pass3"],
-                                 "description": "Optional. From a pass1 lane only: set to \"pass3\" if you could not close the claim and a public web source plausibly could."},
+            "route_escalation": {"type": "string", "enum": ["pass3", "pass1"],
+                                 "description": ("Optional. From a pass1 lane: set to \"pass3\" if you could not close the claim and a public "
+                                                 "web source plausibly could. From a pass3 lane: set to \"pass1\" if the claim describes Pulumi's "
+                                                 "own product/CLI behavior that reading pulumi/* source or release notes could resolve.")},
         },
         "required": ["verdict", "confidence", "evidence", "source"],
     },
@@ -189,11 +242,17 @@ GH_QUERY_TOOL = {
 
 READ_FILE_TOOL = {
     "name": "read_file",
-    "description": "Read a repo-relative file (must be under the repo root). Output is capped.",
+    "description": (f"Read a repo-relative file (must be under the repo root). A plain read is capped at "
+                   f"{READ_FILE_CAP} chars and a truncated read is marked as such — pass `pattern` to grep "
+                   "within a large structured file instead, or a value past the cap will read as absent."),
     "input_schema": {
         "type": "object",
         "additionalProperties": False,
-        "properties": {"path": {"type": "string", "description": "Repo-relative path, e.g. data/docs_menu_sections.yml"}},
+        "properties": {
+            "path": {"type": "string", "description": "Repo-relative path, e.g. data/docs_menu_sections.yml"},
+            "pattern": {"type": "string",
+                        "description": "Optional regex/substring. Returns only matching lines (with line numbers + 2 lines of context) instead of the file head — use it for large structured files like content/pricing/_index.md (a ~40KB feature x tier matrix)."},
+        },
         "required": ["path"],
     },
 }
@@ -216,7 +275,8 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 - `matches` — (cross-reference / sibling-consistency claims only) the claim is consistent with its sibling pages.
 - `not-a-claim` — the "claim" is not a falsifiable assertion: git/diff metadata, a code-comment tag (`:latest` in a Dockerfile comment is a tag name, not a recency claim), a faithful description of the PR author's OWN design/pipeline (only third-party-attributed assertions are claims), a path segment that merely looks temporal (`/latest/` in a URL path), or a body line in a pure-rename (unchanged) file. Demote it; don't fail it.
 - `unverifiable` — genuinely not checkable: paywalled, internal-only, future-dated, or a dead/404 source with no live alternative. NOT the default for vendor pricing/licensing/capability claims a public page could resolve — try the page first.
-- `contradicted` — a source positively disagrees with the claim, OR the claim *overclaims* what the source supports (the PR broadened the framing — see `narrowed`/`shifted` in the framing-check section below). NOTE: a claim that is a *narrower* subset of a broader source statement is NOT contradicted — it's `verified` with a `framing_note: "strengthened"` because the source's broader form proves the claim as a subset.
+- `contradicted` — a source positively disagrees with the claim: the anchor fact itself (the number, the name, the date, the capability) is wrong, or the cited page says the opposite.
+- `framing-drift` — **the anchor value/fact is accurate, but the claim's published meaning differs from what the source supports.** The number is right and the citation is real, yet the sentence asserts something the source does not: a widened denominator ("of organizations" when the source measured "of organizations already hosting X"), present usage recast as future intent ("use" → "betting on / plan to run"), a qualified scope dropped ("some or all of their inference workloads" → "their workloads"), or a value published under semantics the source doesn't carry (a bare schema.org `Offer.price: 40` for a "$40/month" plan asserts an unqualified flat price of $40). This is the verdict for "I confirmed the figure but the framing moved" — do NOT fold that observation into the evidence text of a `verified`, and do NOT withhold it because `contradicted` feels too strong; `framing-drift` exists precisely so you don't have to choose between those.
 - `mismatch` — (cross-reference / sibling-consistency claims only) this PR diverges from its sibling pages' established pattern.
 
 # Confidence
@@ -229,28 +289,38 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 
 Cheapest first. Stop as soon as a source closes the claim.
 
-1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first.
+1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first. For a **tier / edition / limit / quota** claim, `content/pricing/_index.md` (a large feature x tier matrix) is canonical — read it with a `pattern` (the feature name), and never treat a value as absent from a read marked `[TRUNCATED]`.
 2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` OR `pulumi-labs/*` ships. Pulumi HCL specifically lives under `pulumi-labs/pulumi-hcl`, and other in-progress providers / SDK experiments ship under `pulumi-labs/*` too; when a claim mentions Pulumi HCL by name (or references a `pulumi-labs/<repo>` package), query BOTH owners before considering escalation:
    - `gh search code --owner pulumi      "<term>"` — main Pulumi org (engine, providers, SDKs)
    - `gh search code --owner pulumi-labs "<term>"` — Pulumi HCL, in-progress providers, SDK experiments
    - `gh api repos/pulumi/<repo>/contents/<path>` / `gh api repos/pulumi-labs/<repo>/contents/<path>` — read source to verify API surface (resource properties, CLI flags)
    - `gh release list -R pulumi/pulumi --limit 20` / `gh release view <tag> -R pulumi/pulumi` / `gh release list -R pulumi-labs/<repo>` — version-availability claims
    - `gh issue list -R pulumi/<repo> --search "<term>"` / `gh pr list -R pulumi/<repo> --search "<term>"` — prior decisions ("we decided not to ship this", "this was renamed")
-   `gh` results count as `high` confidence when they directly match — they read source-of-truth. Don't loop `issues`/`pulls` for context discovery; read the actual code path. Keep your `gh_query` + `read_file` calls under 8 total; if you can't close the claim, return `unverifiable` (or, from a pass1 lane, set `route_escalation: "pass3"` when a public web source plausibly could resolve it).
+   - **Linked implementing change** — when the claim is about a NEW pulumi symbol you can't find on the default branch AND this PR cites an implementing change (a "This docs PR cites implementing change(s)" line in the user message, or a `pulumi/<repo>#<n>` / `github.com/pulumi/<repo>/(pull|commit)/...` reference), read it: `gh pr diff <n> -R pulumi/<repo>` or `gh api repos/pulumi/<repo>/commits/<sha>`. Confirmed there, the symbol is `verified`/`medium` ("not yet on default branch / released") — NOT `unverifiable`; "not in the published reference yet" is a lag, not a doubt. Docs shipping alongside a feature are the normal case.
+   `gh` results count as `high` confidence when they directly match — they read source-of-truth. Don't loop `issues`/`pulls` for *blind* context discovery (a PR THIS docs PR cites is not blind — see above). Keep your `gh_query` + `read_file` calls under 8 total; if you can't close the claim, return `unverifiable` (or, from a pass1 lane, set `route_escalation: "pass3"` when a public web source plausibly could resolve it).
 3. **Pre-fetched URL** (pass2 lane) — the cited URL's content (HTTP status + body) is in the user message. Do NOT try to fetch it again. Read the body, find the supporting passage, run the framing check. If the status is not 2xx (dead link / soft-404) → `contradicted` with `evidence: "cited URL returns HTTP <status>"` and `source: "<url>"`; do NOT return `unverifiable` for a dead Pass-2 URL — a broken citation is a contradiction the author must fix. If the body is 2xx but doesn't contain the supporting passage → `unverifiable` (note the page was fetched but didn't address the claim).
 4. **Web search** (pass3 lane) — use the `web_search` tool with a query derived from the claim, then read the results. For numerical claims (prices, rates, limits), cross-check the YEAR of any page you rely on — a stale cached price is a `contradicted` when the current figure differs. If no result addresses the claim, return `unverifiable` and set `source` to `WebSearch ran query "<your query>"; top results didn't address the claim`. Reserve `unverifiable` for genuinely unfetchable claims, not "I didn't try".
 
 # Cited-claim framing check (pass2 and pass3, any claim that cited a source)
 
-Once you find the supporting passage: does the source say *exactly* what the PR claims? Classify the framing relationship, then map to a verdict — the key distinction is which side is broader.
+Once you find the supporting passage, ask ONE question: **does the source, as quoted, prove the claim as written?** Surface breadth ("the claim is narrower/wider than the source") is NOT the test — entailment is. "Needn't be hardcoded in `PulumiPlugin.yaml`" is narrower than "needn't be hardcoded elsewhere" AND entailed by it (fine); "96% run agents *in production*" is narrower than "96% *use* agents" but NOT entailed by it (the percentage doesn't transfer to the subset — overclaim). Classify the relationship into the `framing` field, then map to a verdict:
 
-- `exact-match` — source phrasing is the claim's phrasing (or a literal paraphrase of equal scope) → `verified`.
-- `strengthened` — **the source is broader; the claim is a narrower subset of it** (source: "do not need to be hardcoded elsewhere"; claim: "do not need to be hardcoded in `PulumiPlugin.yaml`"). The source's broader form proves the claim as a subset — the author has correctly stated a specific case of a more general truth → `verified`, `framing_note: "strengthened — claim narrows '<src>' to '<claim>'; source's broader form proves the claim as a subset"`.
-- `narrowed` — **the claim is broader than the source; the claim overclaims** (source: "U.S. enterprise customers prefer X"; claim: "enterprise customers prefer X"). The source supports only the narrower truth and the claim asserts more → `contradicted`, `framing_note: "narrowed — claim broadens '<src>' to '<claim>'; source supports the narrower form, not the broader claim"`.
-- `shifted` — same anchor, different subject (source: "evaluate AI agents"; claim: "deploy AI agents") → `contradicted`, `framing_note: "shifted — '<src>' vs '<claim>' refer to different subjects"`.
-- `contradicted` — source positively disagrees with the claim → `contradicted`.
+- `exact-match` — the source asserts what the claim asserts (same scope, same subject, same speech act) → `verified`.
+- `entailed-narrower` — the source is broader and its broader form PROVES the claim as a special case (source: "do not need to be hardcoded elsewhere"; claim: "do not need to be hardcoded in `PulumiPlugin.yaml`") → `verified`, with a `framing_note` recording the relationship.
+- `overclaim-broader` — the claim asserts more than the source supports: a wider denominator (source: "of organizations hosting generative AI models"; claim: "of organizations"), a dropped qualifier (source: "some or all of their inference workloads"; claim: "their generative AI workloads"), a stronger predicate the source's figure doesn't transfer to (source: "use"; claim: "use in production") → `framing-drift` when the anchor value itself is accurate, `contradicted` when even the anchor is unsupported. `framing_note: "overclaim — claim broadens '<src>' to '<claim>'"`.
+- `shifted` — same anchor value, different subject or speech act (source: "66% currently use K8s for inference" — measured present usage; claim: "66% are betting on K8s for genAI" — future intent; or source frames a figure as an aspirational bar, claim states it as a measurement) → `framing-drift` when the anchor value is accurate, `contradicted` otherwise. `framing_note: "shifted — '<src>' vs '<claim>'"`.
 
-Put a verbatim quote from the source in `evidence`. A verdict with no verbatim quote from a cited source is a verdict without evidence — downgrade to `unverifiable` if you can't quote the supporting passage. The `strengthened` → `verified` mapping is the load-bearing distinction: when the source confirms the claim as a special case of a more general statement, the verdict is `verified` (not `contradicted`), and the `framing_note` records the relationship so the reviewer can decide whether to surface a stylistic suggestion about citing a more precise source.
+Set `framing` on EVERY cited-claim verdict (use `exact-match` or `entailed-narrower` for the clean cases; `none` only for claims with no cited/named source). Distortions stack — a single sentence can widen the denominator AND shift usage to intent AND drop a qualifier; note each in `framing_note`. Put a verbatim quote from the source in `evidence`. A verdict with no verbatim quote from a cited source is a verdict without evidence — downgrade to `unverifiable` if you can't quote the supporting passage. The load-bearing distinctions: `entailed-narrower` → `verified` (the author correctly stated a special case); `overclaim-broader`/`shifted` with an accurate anchor → `framing-drift` (never a plain `verified` — the harness coerces a `verified` carrying a drift-shaped `framing` to `framing-drift`, so report the relationship honestly rather than omitting it).
+
+# Source discipline
+
+Four hard rules. Each one exists because violating it produced false `contradicted` verdicts in a full ledger re-adjudication (2026-07): 17 of 22 contradicted verdicts were false, and most traced to these.
+
+- **Target alignment.** Verdict a claim only against the source the claim itself names. If the pre-fetched page's URL is not the URL in the claim text, that page is the wrong target — do not run the framing check against it; return `unverifiable` with evidence noting the target mismatch. When one doc line carries several links, each claim binds to its own link's target; never judge a claim against the neighboring anchor's page, and never let an accurate description of the *wrong* page become a `contradicted` verdict on the claim.
+- **Same-site pages are never ground truth.** A pulumi.com or registry page may corroborate, but it can never by itself contradict other Pulumi content — two Pulumi pages disagreeing is an internal inconsistency, not proof of which one is wrong. Resolve against product source (`gh_query`/`read_file`, release notes); for sibling-consistency claims the verdict is `mismatch`. If code can't settle it, return `unverifiable` — never `contradicted` on the strength of another docs page alone. Exception: *auto-generated* reference pages (CLI command pages under `content/docs/iac/cli/commands/`, API/registry reference generated from schemas) are transcriptions of product source, not editorial content — they carry product-source authority, though quoting the underlying source directly is still stronger evidence.
+- **Generated-from-data pages document the product, not the framework.** Pages rendered from `data/` files mirroring product metadata (e.g. `data/policy_pack_policies/*.json` → the pre-built policy pack tables) make transcription claims: verify the doc text against the data file with `read_file`. If the product metadata itself looks wrong against the external framework it cites, the transcription is still `verified` — record the upstream concern in `evidence` as product feedback, not as a doc contradiction. **`contradicted` is not available for these pages.** The harness enforces this deterministically: a `contradicted` verdict on a generated page is downgraded to `unverifiable` after you return, so emitting one only discards your confidence rating. If the transcription genuinely disagrees with its own data file, that IS a doc bug — say so in `evidence` and return `mismatch`.
+- **Quote only what you fetched.** Any `contradicted` resting on a quoted source passage must quote content observed in THIS session's tool output. Never quote from memory of what a page or "official docs" say — pages change, and a remembered quote presented as fetched evidence is fabricated evidence. No fetched passage → no contradiction.
+- **The content under review never verifies its own technical claims.** The PR's own file restating a claim is what made it a claim — it is not evidence. Citing the reviewed file as the `source` of a `verified` is circular (the failure mode: "Shared logs are encrypted using AES256-GCM" ✅-verified because "the blog post itself states" it, while product source said encryption is conditional). The reviewed file may support `not-a-claim` (a faithful description of the author's OWN design) — but if the assertion is checkable, check it against an independent source or return `unverifiable`.
 
 # Intuition check
 
@@ -258,7 +328,7 @@ If the claim's shape itself smells off — a suspiciously round number, a model-
 
 # Output
 
-Emit exactly one `verify_claim` call. Required: `verdict`, `confidence`, `evidence`, `source`. Optional: `framing_note`, `intuition_flag`, `route_escalation`. Be terse — 1-2 sentences in `evidence`."""
+Emit exactly one `verify_claim` call. Required: `verdict`, `confidence`, `evidence`, `source` (plus `framing` on any cited claim). Optional: `framing_note`, `intuition_flag`, `route_escalation`. Be terse — 1-2 sentences in `evidence`."""
 
 ROUTE_HEADERS = {
     "pass1": ("ROUTE: pass1 (pulumi-internal / ambiguous). Tools: gh_query, read_file, verify_claim. "
@@ -266,7 +336,10 @@ ROUTE_HEADERS = {
     "pass2": ("ROUTE: pass2 (external; cited URL pre-fetched). Tools: verify_claim only — the URL's content is in the user "
               "message; do NOT re-fetch. Run the framing check and emit verify_claim. Dead/non-2xx URL → `contradicted`."),
     "pass3": ("ROUTE: pass3 (external; no pre-fetched URL). Tools: web_search, verify_claim. Search, read the results, "
-              "cross-check the YEAR on numerical claims, then emit verify_claim."),
+              "cross-check the YEAR on numerical claims, then emit verify_claim. If the claim turns out to describe "
+              "Pulumi's own product/CLI behavior (default limits, rotation policies, flag semantics — even when no "
+              "pulumi-shaped token appears in the text), web search cannot read product source: emit verify_claim with "
+              "`route_escalation: \"pass1\"` instead of `unverifiable`."),
 }
 
 
@@ -278,13 +351,25 @@ def _normalize_url(u: str) -> str:
 
 
 def _claim_urls(claim: dict) -> list[str]:
-    """Candidate URLs for a claim: source_hint (if a URL) plus any URL in the text."""
-    urls: list[str] = []
+    """Candidate URLs for a claim: claim-text URLs, else source_hint (if a URL).
+
+    A URL written in the claim text is the source the claim is *about*;
+    source_hint is extraction-layer routing metadata. When both exist and
+    disagree, honoring the hint packs the wrong page into the pass-2 prompt
+    and the verifier "contradicts" the claim against a page it never cited —
+    the dominant false-positive mode in the 2026-07 ledger re-adjudication
+    (12 of 17 false contradicted verdicts). Text URLs therefore take absolute
+    precedence; a hint URL is used only when the text names no URL. A claim
+    whose text URL was not pre-fetched routes to pass3 (fetch the right page)
+    rather than pass2 against the wrong one.
+    """
+    text_urls = URL_IN_TEXT_RE.findall(claim.get("text") or "")
+    if text_urls:
+        return text_urls
     src = (claim.get("source_hint") or "").strip()
     if src.lower().startswith(("http://", "https://")):
-        urls.append(src)
-    urls.extend(URL_IN_TEXT_RE.findall(claim.get("text") or ""))
-    return urls
+        return [src]
+    return []
 
 
 def route_claim(claim: dict, fetched_by_url: dict[str, dict]) -> str:
@@ -323,6 +408,35 @@ def find_fetched_url(claim: dict, fetched_by_url: dict[str, dict]) -> dict | Non
         if rec is not None:
             return rec
     return None
+
+
+def fetch_impl_refs(pr: str, repo: str) -> list[str]:
+    """Best-effort: parse implementing `pulumi/*` PR/commit refs out of the docs
+    PR's body+title, so the pass1/pass3 verifiers can confirm a brand-new symbol
+    against the change that ships it. Uses the already-passed `--pr`/`--repo`
+    (previously unused). Never raises — any failure yields `[]` and the verifier
+    simply falls back to its normal source order."""
+    if not pr or not repo:
+        return []
+    try:
+        proc = subprocess.run(
+            ["gh", "pr", "view", str(pr), "-R", repo, "--json", "body,title"],
+            capture_output=True, text=True, timeout=GH_TIMEOUT,
+        )
+        if proc.returncode != 0:
+            return []
+        data = json.loads(proc.stdout or "{}")
+    except (subprocess.TimeoutExpired, OSError, json.JSONDecodeError):
+        return []
+    blob = f"{data.get('title', '')}\n{data.get('body', '')}"
+    refs: list[str] = []
+    seen: set[str] = set()
+    for rx in IMPL_REF_RES:
+        for m in rx.findall(blob):
+            if m not in seen:
+                seen.add(m)
+                refs.append(m)
+    return refs[:5]
 
 
 # ---- pass 0: deterministic resolution (zero model calls) -------------------
@@ -455,7 +569,48 @@ def exec_read_file(inp: dict, repo_root: Path) -> str:
         text = p.read_text(encoding="utf-8", errors="replace")
     except OSError as e:
         return f"error: cannot read {path!r}: {e}"
-    return text[:READ_FILE_CAP] or "(empty file)"
+    if not text:
+        return "(empty file)"
+
+    # Grep-within-file: a fact past the head cap (e.g. a row deep in the ~40KB
+    # pricing matrix) reads as absent on a plain head-read. A `pattern` returns
+    # the matching lines with numbers + context regardless of where they sit, so
+    # a large structured file is actually searchable.
+    pattern = inp.get("pattern")
+    if isinstance(pattern, str) and pattern:
+        try:
+            rx = re.compile(pattern, re.IGNORECASE)
+        except re.error:
+            rx = re.compile(re.escape(pattern), re.IGNORECASE)
+        lines = text.splitlines()
+        hits = [i for i, ln in enumerate(lines) if rx.search(ln)]
+        if not hits:
+            return f"(no line in {path!r} matched /{pattern}/ — file has {len(lines)} lines, {len(text)} chars)"
+        # Generous context (8 lines each way): in a YAML matrix the per-tier value
+        # cells sit several lines below the feature `title:` they belong to, so a
+        # tight window would surface the feature name but not its value.
+        ctx = 8
+        out: list[str] = []
+        shown: set[int] = set()
+        for i in hits:
+            for j in range(max(0, i - ctx), min(len(lines), i + ctx + 1)):
+                if j not in shown:
+                    shown.add(j)
+                    out.append(f"{j + 1}: {lines[j]}")
+        body = "\n".join(out)
+        if len(body) > READ_FILE_CAP:
+            body = body[:READ_FILE_CAP] + f"\n... [more matches truncated; {len(hits)} lines matched /{pattern}/]"
+        return body
+
+    # No pattern: return the head, but make truncation VISIBLE so the model never
+    # treats a partial read as the whole file (the bug behind the #19945 false
+    # negative — a pricing row at byte 12k vanished under the 8k cap).
+    if len(text) > READ_FILE_CAP:
+        return (text[:READ_FILE_CAP]
+                + f"\n\n... [TRUNCATED: showed the first {READ_FILE_CAP} of {len(text)} chars. "
+                  "This is NOT the whole file — a value below this point reads as absent. "
+                  "Re-read with a `pattern` to grep the rest before concluding something isn't there.]")
+    return text
 
 
 # ---- Anthropic API ---------------------------------------------------------
@@ -505,7 +660,8 @@ def tools_for_route(route: str) -> list[dict]:
     return [VERIFY_CLAIM_TOOL]  # pass2
 
 
-def build_user_message(claim: dict, route: str, evidence_pack: dict | None) -> str:
+def build_user_message(claim: dict, route: str, evidence_pack: dict | None,
+                       impl_refs: list[str] | None = None) -> str:
     lines = [
         "Verify this claim:",
         "",
@@ -518,6 +674,14 @@ def build_user_message(claim: dict, route: str, evidence_pack: dict | None) -> s
         lines.append(f"- source_hint: {claim['source_hint']}")
     if claim.get("found_by"):
         lines.append(f"- found_by: {', '.join(str(x) for x in claim['found_by'])}")
+    if impl_refs and route in ("pass1", "pass3"):
+        lines += [
+            "",
+            "This docs PR cites implementing change(s) — read them to confirm a brand-new "
+            "symbol (flag/command/API) you can't find on the default branch, with "
+            "`gh pr diff <n> -R pulumi/<repo>` or `gh api repos/pulumi/<repo>/commits/<sha>`:",
+            *[f"- {r}" for r in impl_refs],
+        ]
     if route == "pass2" and evidence_pack:
         body = (evidence_pack.get("content_text") or "")[:PASS2_BODY_CAP] or "(empty body)"
         lines += [
@@ -543,13 +707,66 @@ def _accumulate_usage(agg: dict, usage: dict) -> None:
         agg[k] += int((usage or {}).get(k, 0) or 0)
 
 
-def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns: int) -> dict:
+@functools.lru_cache(maxsize=4)
+def _generated_content_roots(repo_root: Path) -> tuple[str, ...]:
+    """Content subtrees Hugo builds from `data/` via a content adapter.
+
+    A `_content.gotmpl` beside the section IS the marker — it is what makes the
+    section generated rather than authored (e.g.
+    `content/docs/reference/pre-built-policy-packs/_content.gotmpl` renders the
+    policy tables from `data/policy_pack_policies/*.json`). Discovering the
+    roots from the marker keeps this in step with the content tree instead of
+    pinning a hand-maintained path list that goes stale."""
+    try:
+        return tuple(sorted(
+            p.parent.relative_to(repo_root).as_posix()
+            for p in (repo_root / "content").rglob("_content.gotmpl")))
+    except OSError:
+        return ()
+
+
+def _is_generated_from_data(file_path: str, repo_root: Path | None) -> bool:
+    if not file_path or repo_root is None:
+        return False
+    rel = file_path.strip().lstrip("./")
+    return any(rel == root or rel.startswith(root + "/")
+               for root in _generated_content_roots(repo_root))
+
+
+def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns: int,
+                      repo_root: Path | None = None) -> dict:
     verdict = inp.get("verdict")
     if verdict not in VERDICT_VALUES:
         verdict = "unverifiable"
+    # Source-discipline rule 3, enforced rather than merely prompted. A
+    # generated-from-data page transcribes product metadata; a disagreement with
+    # the external framework it cites is upstream product feedback, never a doc
+    # `contradicted`. The prompt has said so since #20349 and Sonnet mostly
+    # honours it, but a 2026-07-24 model sweep found the rule is *advisory in
+    # practice*: every Opus configuration flagged 5-6 of 12 policy-pack claims
+    # `contradicted` against Sonnet's 1 of 12, and the rate did not move with
+    # reasoning effort (6 / 6 / 5 across low / medium / high). A rule that a
+    # stronger model overrides is not a rule, so the downgrade is deterministic
+    # here. The model's reasoning is preserved verbatim in `evidence` so the
+    # upstream concern still reaches the reviewer.
+    gated = False
+    if verdict == "contradicted" and _is_generated_from_data(claim.get("file", ""), repo_root):
+        verdict = "unverifiable"
+        gated = True
     conf = inp.get("confidence")
     if conf not in CONFIDENCE_VALUES:
         conf = "low"
+    framing = inp.get("framing")
+    if framing not in FRAMING_VALUES:
+        framing = None
+    # Deterministic coercion: the model performs the framing check reliably but
+    # historically soft-pedaled the verdict when the anchor value was accurate
+    # ("contradicted" felt too strong, so drift landed in `verified` prose where
+    # nothing consumes it — PR #20550). If the structured framing field reports
+    # a drift shape, a passing verdict is not available: the harness, not the
+    # model, decides where the observation lands.
+    if framing in FRAMING_DRIFT_SHAPES and verdict in ("verified", "matches"):
+        verdict = "framing-drift"
     rec = {
         "claim_id": claim.get("__id", "?"),
         "file": claim.get("file", ""),
@@ -563,15 +780,29 @@ def _finalize_verdict(claim: dict, route: str, inp: dict, agg_usage: dict, turns
         "source": (inp.get("source") or "").strip() or "(no source pointer returned)",
         "model_usage": {**agg_usage, "turns": turns},
     }
+    if gated:
+        rec["confidence"] = "low"
+        rec["source_discipline_gate"] = "generated-from-data"
+        rec["evidence"] = (
+            "[source-discipline gate: this page is generated from `data/`, so a "
+            "disagreement with the cited external framework is upstream product "
+            "feedback, not a doc contradiction — `contradicted` downgraded to "
+            "`unverifiable`. Surface as an author question / upstream issue, not "
+            "as a 🚨 finding.] " + rec["evidence"])
+    if framing:
+        rec["framing"] = framing
     if isinstance(inp.get("framing_note"), str) and inp["framing_note"].strip():
         rec["framing_note"] = inp["framing_note"].strip()
+    elif framing and framing not in ("none", "exact-match"):
+        rec["framing_note"] = framing  # never let a non-clean framing render without a note
     if isinstance(inp.get("intuition_flag"), str) and inp["intuition_flag"].strip():
         rec["intuition_flag"] = inp["intuition_flag"].strip()
     return rec
 
 
 def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | None,
-                 model: str, repo_root: Path, dry_run: bool, allow_escalate: bool = True) -> dict:
+                 model: str, repo_root: Path, dry_run: bool, allow_escalate: bool = True,
+                 impl_refs: list[str] | None = None) -> dict:
     """Run one claim through one lane (with at most one pass1→pass3 escalation hop)."""
     if dry_run:
         return {
@@ -588,7 +819,7 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
     ]
     tools = tools_for_route(route)
     tool_choice: dict = ({"type": "tool", "name": "verify_claim"} if route == "pass2" else {"type": "auto"})
-    messages: list[dict] = [{"role": "user", "content": build_user_message(claim, route, evidence_pack)}]
+    messages: list[dict] = [{"role": "user", "content": build_user_message(claim, route, evidence_pack, impl_refs)}]
     agg_usage = _zero_usage()
     max_turns = MAX_TURNS.get(route, 4)
 
@@ -596,7 +827,12 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         body = {
             "model": model,
             "max_tokens": MAX_TOKENS_VERIFY,
-            "temperature": 0,
+            # Sonnet 5 rejects non-default sampling params (temperature/top_p/
+            # top_k → 400) and defaults adaptive thinking ON when `thinking` is
+            # omitted. Disable thinking to preserve the prior behavior: it keeps
+            # the small per-turn token budget for the verdict/tool calls and
+            # avoids thinking interleaving with the forced pass-2 `verify_claim`.
+            "thinking": {"type": "disabled"},
             "system": system,
             "tools": tools,
             "tool_choice": tool_choice,
@@ -611,14 +847,22 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
         verify_block = next((b for b in tool_uses if b.get("name") == "verify_claim"), None)
         if verify_block is not None:
             inp = verify_block.get("input") or {}
-            rec = _finalize_verdict(claim, route, inp, agg_usage, turn)
+            rec = _finalize_verdict(claim, route, inp, agg_usage, turn, repo_root)
+            # Symmetric one-hop escalation: pass1 → pass3 (a public web source
+            # could close it) and pass3 → pass1 (the claim is about Pulumi's own
+            # product behavior — e.g. "logs rotate after 7 days / 500 MB", pure
+            # CLI behavior with no pulumi-shaped token, which route rule 3 sends
+            # to web search that structurally cannot read Go source; PR #20371).
+            # allow_escalate=False on the hop guards against ping-ponging.
             esc = inp.get("route_escalation")
-            if esc == "pass3" and route == "pass1" and allow_escalate:
-                rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run, allow_escalate=False)
+            if (allow_escalate and esc in ("pass1", "pass3") and esc != route
+                    and {route, esc} == {"pass1", "pass3"}):
+                rec2 = run_verifier(api_key, claim, esc, None, model, repo_root, dry_run,
+                                    allow_escalate=False, impl_refs=impl_refs)
                 for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
                     rec2["model_usage"][k] += rec["model_usage"][k]
                 rec2["model_usage"]["turns"] += rec["model_usage"]["turns"]
-                rec2["evidence"] = f"(escalated from pass1) {rec2['evidence']}"
+                rec2["evidence"] = f"(escalated from {route}) {rec2['evidence']}"
                 return rec2
             return rec
 
@@ -643,19 +887,39 @@ def run_verifier(api_key: str, claim: dict, route: str, evidence_pack: dict | No
             tool_results.append({"type": "tool_result", "tool_use_id": tuid, "content": out})
         messages.append({"role": "user", "content": tool_results})
 
-    # Turn cap exhausted without a verdict.
+    # Turn cap exhausted without a verdict. A pass1 claim gets one automatic
+    # pass3 hop before giving up — the escalation valve used to exist only on
+    # an explicit route_escalation the model could no longer emit once capped
+    # (PR #20556: six claims died here as bare `unverifiable`).
+    if route == "pass1" and allow_escalate:
+        rec2 = run_verifier(api_key, claim, "pass3", None, model, repo_root, dry_run,
+                            allow_escalate=False, impl_refs=impl_refs)
+        for k in ("input_tokens", "output_tokens", "cache_read_input_tokens", "cache_creation_input_tokens"):
+            rec2["model_usage"][k] += agg_usage[k]
+        rec2["model_usage"]["turns"] += max_turns
+        rec2["evidence"] = f"(escalated from pass1 after exhausting its {max_turns}-turn cap) {rec2['evidence']}"
+        return rec2
+    # `turn_cap_exhausted` is the machine-readable marker separating "the
+    # verification budget ran out (retryable)" from "no authoritative source
+    # exists" — downstream consumers (compose-review.py, the pr-review-sweep
+    # punt templates) must never render the two identically.
     return {
         "claim_id": claim.get("__id", "?"), "file": claim.get("file", ""),
         "line_range": claim.get("line_range", ""), "text": claim.get("text", ""),
         "type": claim.get("type", ""), "route": route, "verdict": "unverifiable",
         "confidence": "low",
-        "evidence": f"verification did not converge within {max_turns} turns",
-        "source": "verify-claims.py", "model_usage": {**agg_usage, "turns": max_turns},
+        "evidence": (f"verification did not converge within {max_turns} turns "
+                     f"(turn-cap exhausted — a verification budget failure, retryable; "
+                     f"not evidence that the claim is wrong or that no source exists)"),
+        "source": "verify-claims.py",
+        "turn_cap_exhausted": True,
+        "model_usage": {**agg_usage, "turns": max_turns},
     }
 
 
 def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
-                  model: str, repo_root: Path, dry_run: bool) -> tuple[dict, str | None]:
+                  model: str, repo_root: Path, dry_run: bool,
+                  impl_refs: list[str] | None = None) -> tuple[dict, str | None]:
     route = claim.get("__route", "pass1")
     evidence_pack = None
     if route == "pass2":
@@ -663,7 +927,8 @@ def process_claim(api_key: str, claim: dict, fetched_by_url: dict[str, dict],
         if evidence_pack is None:
             route = "pass3"  # we routed to pass2 but the URL turned out not to be in the fetched set
     try:
-        rec = run_verifier(api_key, claim, route, evidence_pack, model, repo_root, dry_run)
+        rec = run_verifier(api_key, claim, route, evidence_pack, model, repo_root, dry_run,
+                           impl_refs=impl_refs)
         return rec, None
     except Exception as e:  # noqa: BLE001
         # NOTE: the "verifier failed:" prefix (err) and "verify-claims.py errored
@@ -716,8 +981,8 @@ def main() -> int:
     p.add_argument("--in", dest="in_path", required=True, help="Input `.candidate-claims.json` from merge-claims.py")
     p.add_argument("--fetched-urls", default=".fetched-urls.json", help="`.fetched-urls.json` from extract-urls-and-fetch.py")
     p.add_argument("--out", required=True, help="Output `.verified-claims.json` path")
-    p.add_argument("--pr", help="(unused; accepted for parity with sibling pre-steps)")
-    p.add_argument("--repo", help="(unused; accepted for parity with sibling pre-steps)")
+    p.add_argument("--pr", help="Docs PR number; used to parse implementing pulumi/* PR/commit refs from the PR body")
+    p.add_argument("--repo", help="Docs repo (owner/repo) for the --pr body lookup, e.g. pulumi/docs")
     p.add_argument("--repo-root", default=".", help="Repo root for read_file (default: cwd)")
     p.add_argument("--model", default=DEFAULT_MODEL)
     p.add_argument("--dry-run", action="store_true", help="Don't call the API; emit placeholder verdicts (testing)")
@@ -771,17 +1036,38 @@ def main() -> int:
     for c in routed_claims:
         n_by_route[c["__route"]] = n_by_route.get(c["__route"], 0) + 1
 
+    # Parse implementing pulumi/* PR/commit refs from the docs PR body once, so a
+    # pass1/pass3 verifier can confirm a brand-new symbol against the change that
+    # ships it. Best-effort and only when a lane that can use it has work.
+    impl_refs: list[str] = []
+    if not args.dry_run and (n_by_route["pass1"] or n_by_route["pass3"]):
+        impl_refs = fetch_impl_refs(args.pr or "", args.repo or "")
+        if impl_refs:
+            print(f"verify-claims: linked impl refs from PR body: {', '.join(impl_refs)}", file=sys.stderr)
+
     verdicts: list[dict] = list(pass0_verdicts)
     errors: list[str] = []
     if routed_claims:
         with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(routed_claims))) as pool:
-            futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run)
+            futs = [pool.submit(process_claim, api_key, c, fetched_by_url, args.model, repo_root, args.dry_run, impl_refs)
                     for c in routed_claims]
             for fut in futs:
                 rec, err = fut.result()
                 verdicts.append(rec)
                 if err:
                     errors.append(err)
+
+    # Carry each claim's entity keying (stamped by merge-claims.py) onto its
+    # verdict, so the persisted claims index (`record-claims.py`) reads
+    # `.verified-claims.json` alone. Verdict records are built in several
+    # paths (pass0 / model / dry-run / error), so stamp once here by claim_id
+    # instead of in each constructor.
+    by_id = {c.get("__id"): c for c in claims}
+    for v in verdicts:
+        c = by_id.get(v.get("claim_id"))
+        if c is not None and c.get("entity_key") is not None:
+            v["entity_key"] = c["entity_key"]
+            v["volatile"] = bool(c.get("volatile"))
 
     meta = dict(base_meta)
     meta["n_claims"] = len(claims)
@@ -795,7 +1081,7 @@ def main() -> int:
             meta[k] += int(mu.get(k, 0) or 0)
 
     write_payload(out_path, args.model, verdicts, errors, meta)
-    n_contra = sum(1 for v in verdicts if v["verdict"] in ("contradicted", "mismatch"))
+    n_contra = sum(1 for v in verdicts if v["verdict"] in ("contradicted", "mismatch", "framing-drift"))
     n_unver = sum(1 for v in verdicts if v["verdict"] == "unverifiable")
     print(
         f"verify-claims: {len(verdicts)} verdict(s) "

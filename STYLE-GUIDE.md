@@ -179,11 +179,12 @@ Both syntaxes work for plain text content, but use percent signs for shortcodes 
 ## Grammar and punctuation
 
 - Use the Oxford (serial) comma: "build, deploy, and manage," not "build, deploy and manage."
+- Use present tense for how the product behaves: "Neo pauses when the limit is reached," not "Neo will pause." Reserve the future tense for events that genuinely happen later.
 - Contractions are fine — preferred, even — in docs. They read more naturally.
 - Put commas and periods outside closing quotation marks unless they belong to the quoted text — e.g., write `"us-west-2"`, with the comma outside.
 - Em-dashes are fine when you write them yourself, but revise away the em-dashes, three-item series, and filler phrasings that LLMs tend to emit — they read as unedited machine output.
 
-For dates, times, numbers, point of view (*you* vs. *we*), and anything else this guide doesn't specify, defer to the brand `writing-style` guidelines.
+For dates, times, numbers, and anything else this guide doesn't specify, defer to the brand [writing-style guide](https://brand.pulumi.com/voice/writing-style/). On **point of view** — the most-missed rule — it uses the second person (*you*), not the first-person plural (*we*): in docs, "we aren't doing anything — the reader is." Reserve *we* for blog and community content.
 
 ---
 
@@ -360,10 +361,27 @@ Use **"Pulumi package"** (not "cross-language package") when referring to compon
 
 ---
 
+## Cross-reference sections
+
+Many pages end with a block of links to other pages. Use one of exactly two headings, chosen by the reader's intent — do not invent variants ("Related resources," "See also," "Additional resources," "What's next," "Further reading," and the like):
+
+- **Next steps** — the reader should continue in a sequence: the next tutorial, the next step in a getting-started flow, or a recommended follow-on task. Use when there is a natural forward order.
+- **Learn more** — links to related or reference material with no implied order: concept pages, other pages on the same topic, or external references. Use for lateral cross-references.
+
+Rules:
+
+- Use `##` (H2), sentence case: **Next steps** and **Learn more**, never "Next Steps" or "Learn More."
+- Place the section at the end of the page.
+- Choose by intent, not by page type. A concept page may have **Next steps**; a tutorial may have **Learn more**.
+- If a page has both sequential and lateral links, use two sections named **Next steps** and **Learn more** — don't coin a third heading.
+
+Exempt: the generated `SEE ALSO` blocks on CLI command pages (`content/docs/iac/cli/commands/`) and the auto-rendered "Related templates" aside on template pages, which are produced by tooling.
+
+---
+
 ## Tutorials
 
-- If the tutorial is followed by another, end with a **Next steps** section.  
-- If pointing to references or further reading, end with a **Learn more** section.
+- End with a **Next steps** or **Learn more** section as appropriate — see [Cross-reference sections](#cross-reference-sections).
 
 ---
 

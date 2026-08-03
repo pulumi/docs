@@ -5,7 +5,6 @@ updated: 2025-03-10
 draft: false
 meta_desc: >-
     Speed up Docker builds with Pulumi’s new Build provider. Leverage BuildKit, buildx, and caching for faster, more efficient container workflows.
-meta_image: meta.png
 authors:
     - bryce-lampe
 tags:
@@ -13,6 +12,7 @@ tags:
     - buildx
     - buildkit
     - containers
+category: product
 ---
 
 Deploying and managing containerized workloads is one of Pulumi's fastest-growing areas. Standing up managed container services and Kubernetes clusters is a common area for automation, and many of our customers use Pulumi to automate building and publishing images to their registry of choice.
@@ -492,6 +492,10 @@ public class App {
 {{% /choosable %}}
 
 The Pulumi output, `ref`, provides a convenient way to reference the pushed image in downstream Pulumi resources like [ECS TaskDefinitions](https://www.pulumi.com/registry/packages/aws/api-docs/ecs/taskdefinition/) or [Kubernetes Deployments](https://www.pulumi.com/registry/packages/kubernetes/api-docs/apps/v1/deployment/).
+
+{{< blog/cta-card title="Build container images with Pulumi" >}}
+Use the Docker Build provider to build multi-platform images, cache layers across builds, and push to your registry of choice as part of your Pulumi program.
+{{< /blog/cta-card >}}
 
 ## Migrating from docker.Image to docker_build.Image
 

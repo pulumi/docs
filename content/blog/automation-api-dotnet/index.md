@@ -2,14 +2,14 @@
 title: "Automate Your Infrastructure with Automation API and C#"
 date: 2021-03-08
 meta_desc: "C# developers can programmatically build infrastructure (with out a CLI) using the Pulumi Automation API package. "
-meta_image: automation_api.png
 authors:
 - joshua-studt
 - sophia-parafina
 tags:
-- Automation API
-- .NET
+- automation-api
+- dotnet
 - guest-post
+category: product
 ---
 
 {{% notes type="info" %}}

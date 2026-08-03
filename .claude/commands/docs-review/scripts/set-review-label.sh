@@ -13,7 +13,8 @@
 #
 # These five labels are mutually exclusive. Setting any one removes the
 # other four. Skip-reason labels (review:trivial, review:frontmatter-only,
-# review:prose-flagged) are informational and live outside this set.
+# review:oversized, review:prose-flagged) are informational and live outside
+# this set.
 #
 # Usage:
 #   set-review-label.sh --pr 123 --label review:in-progress [--repo owner/repo]

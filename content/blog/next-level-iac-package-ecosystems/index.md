@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2024-05-13
 draft: false
 meta_desc: Pulumi unlocks access to powerful package ecosystems which provide a lot of value and flexibility to your IaC workflows.
-meta_image: meta.png
 authors:
     - troy-howard
 tags:
@@ -14,6 +13,7 @@ tags:
     - typescript
     - nodejs
     - python
+category: best-practices
 ---
 
 Every experienced tech professional I know has a programming language they love. But is it the syntax and symbols that make it so loveable? Not really. It's the community and package ecosystem surrounding the language that makes a real impact on your heart... and on your productivity!<!--more--> If we look at some of the biggest success stories in tech --- Python, Node.js, Ruby, Perl, and Go --- the common thread between all of them is an extensive ecosystem of packages, libraries, modules (or whatever you decide to call them…  ahem, Gems?!). A great language will allow you to build anything you can imagine, but a great ecosystem will have already written it for you, and made it available in a convenient to install-and-use package.

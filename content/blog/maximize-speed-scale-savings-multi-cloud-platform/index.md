@@ -3,13 +3,13 @@ title: "Maximize Business Outcomes In Your Multi-Cloud Environment"
 allow_long_title: True
 date: 2025-05-16
 meta_desc: Discover how Pulumi Cloud can accelerate speed, ensure security, scale operations, and save costs in your multi-cloud environment.
-meta_image: image.png
 authors:
     - marlowe-fenne
 
 tags:
     - cloud-native
     - cloud-engineering
+category: general
 ---
 Overcoming the cost and complexity of multi-cloud environments and managing infrastructure more effectively is a perpetual challenge. For thousands of companies growing Platform Engineering skills, the solution to these challenges may be closer than you think.
 

@@ -2,7 +2,6 @@
 title: "Local Testing With Pulumi"
 date: 2023-04-28
 meta_desc: Pulumi is great for provisioning cloud infrastructure, but it's also great for automating Docker for local testing of your application code.
-meta_image: meta.png
 authors:
     - aaron-kao
     - scott-lowe
@@ -10,6 +9,7 @@ authors:
 tags:
     - zephyr
     - docker
+category: tutorials
 ---
 
 If you've been following along with our [IaC Recommended Practices series](https://www.pulumi.com/blog/iac-recommended-practices-code-organization-and-stacks/), then you're already familiar with Zephyr Archaeotech Emporium, the fictional company at the center of the series. Today, you'll get an inside look at how Zephyr starts using Pulumi for locally testing the application code for their online store and accelerating the inner dev loop for their development team.
@@ -167,6 +167,10 @@ Bob watches as the operation completes in about 17 seconds.
 "Wow, that's really fast!"
 
 "Exactly, Bob. That's what makes using Pulumi for this use case so helpful. While it doesn't eliminate the need for our per-developer stacks, it gives developers a way to quickly see changes we're making to the source code in very little time. When we are satisfied that the changes are working as we expect, then we can deploy to our dev stack to be sure that the changes are ready to work their way to production."
+
+{{< blog/cta-card title="Speed up your inner dev loop" >}}
+Use Pulumi and the Docker provider to build and deploy your application locally, then promote the same program to your cloud stacks. Get started in Pulumi Cloud.
+{{< /blog/cta-card >}}
 
 ## Try this out yourself
 

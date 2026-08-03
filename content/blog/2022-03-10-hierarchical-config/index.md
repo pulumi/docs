@@ -4,9 +4,9 @@ date: 2022-03-15T10:00:00Z
 updated: 2025-06-20
 draft: false
 meta_desc: In this article, Rawkode takes a look at how he'd manage project and organizational configuration for Pulumi programs.
-meta_image: meta.png
 authors: ["david-flanagan"]
-tags: ["config"]
+tags: [configuration]
+category: best-practices
 ---
 
 > [!INFO]

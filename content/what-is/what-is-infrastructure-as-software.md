@@ -158,7 +158,7 @@ YAML works fine for small footprints and simple configurations. Most teams that 
 
 ### How does IaS support testing?
 
-The same way any other software does. Use the language's standard test runner (Jest, pytest, `go test`, xUnit), use Pulumi's test mocks to replace cloud calls in unit tests, and use the automation API to spin up ephemeral stacks for integration tests. See [how to step up cloud infrastructure testing](/what-is/how-to-step-up-cloud-infrastructure-testing/) for the layered testing model.
+The same way any other software does. Use the language's standard test runner (Jest, pytest, `go test`, xUnit), use Pulumi's test mocks to replace cloud calls in unit tests, and use the automation API to spin up ephemeral stacks for integration tests. See [how to step up cloud infrastructure testing](/blog/how-to-test-infrastructure-as-code/) for the layered testing model.
 
 ### Does IaS replace platform engineering tools?
 
@@ -187,4 +187,5 @@ Related reading:
 * [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
 * [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
 * [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
-* [How to Step Up Cloud Infrastructure Testing](/what-is/how-to-step-up-cloud-infrastructure-testing/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
+* [Most Effective Infrastructure as Code (IaC) Tools](/blog/infrastructure-as-code-tools/)

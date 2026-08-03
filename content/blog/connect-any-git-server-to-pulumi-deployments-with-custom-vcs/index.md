@@ -3,13 +3,13 @@ title: "Connect Any Git or Mercurial Repo to Pulumi with Custom VCS"
 date: 2026-05-04
 draft: false
 meta_desc: "Custom VCS integrations connect any Git or Mercurial version control system to Pulumi Deployments with webhook-driven push-to-deploy and ESC credentials."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - michael-fallihee
 tags:
     - features
     - pulumi-cloud
+category: product
 schema_type: auto
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.

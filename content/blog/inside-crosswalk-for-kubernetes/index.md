@@ -4,7 +4,6 @@ date: 2019-11-21
 updated: 2025-04-16
 draft: false
 meta_desc: "Crosswalk for Kubernetes is a collection of common patterns of usage for provisioning Kubernetes infrastructure and running containerized applications."
-meta_image: "meta.png"
 authors:
  - sophia-parafina
 tags:
@@ -12,6 +11,7 @@ tags:
  - azure
  - aws
  - google-cloud
+category: best-practices
 canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 

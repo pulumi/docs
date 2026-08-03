@@ -6,7 +6,6 @@ draft: false
 meta_desc: |
   Essential GitOps best practices from production experience. Avoid common pitfalls, bridge IaC with GitOps, and streamline Kubernetes deployments.
 
-meta_image: meta.png
 feature_image: feature.png
 
 authors:
@@ -18,6 +17,7 @@ tags:
 - best-practices
 - argocd
 - devops
+category: best-practices
 
 social:
   twitter: |
@@ -271,6 +271,10 @@ Reviews are great, but humans make mistakes. Policy-as-code adds an automated la
 {{% notes type="info" %}}
 Pro Tip: Start with a small set of high-impact policies (required labels, no privileged containers, resource limits) and expand over time. Trying to enforce 50 policies on Day 1 will create so much friction that teams will revolt.
 {{% /notes %}}
+
+{{< blog/cta-card title="Try infrastructure as code with Pulumi" >}}
+Define your cloud resources in TypeScript, Python, or Go, then pass stack outputs straight into your GitOps manifests so both layers stay in sync.
+{{< /blog/cta-card >}}
 
 ## 11. Bridge your IaC and GitOps (don't choose one)
 

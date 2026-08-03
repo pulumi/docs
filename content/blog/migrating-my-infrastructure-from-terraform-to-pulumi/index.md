@@ -4,12 +4,12 @@ date: 2022-02-22T12:36:23-06:00
 draft: false
 canonical_url: https://blog.ekik.org/my-experience-migrating-my-infrastructure-from-terraform-to-pulumi
 meta_desc: A description of a real-life example of migrating from Terraform to Pulumi
-meta_image: meta.png
 authors:
     - erik-naslund
 tags:
     - community
     - migration
+category: community
 ---
 
 Pulumi community member [Erik Näslund](https://blog.ekik.org/) shares his thoughts on how to migrate from Terraform to Pulumi. Read on to learn all the details of his experience!

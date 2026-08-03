@@ -6,7 +6,10 @@ description: |
 meta_desc: Learn how Snowflake worked with Pulumi to easily develop infrastructure that is repeatable, testable and scalable.
 
 customer_name: Snowflake
+industry: data-analytics
 customer_logo: /logos/customers/snowflake-logo.svg
+logo_bg_color: "#29B5E8"
+logo_style: white
 customer_url: https://www.snowflake.com/
 
 quote_block:
@@ -39,7 +42,7 @@ Snowflake, the leader in Cloud Data Warehousing, was founded in 2012. Snowflake 
 
 Snowflake is a fully-managed service that can power a near-unlimited number of concurrent workloads. Its architecture allows multiple teams to work from a single copy of data, whether structured and semi-structured. Data sharing is fully governed and secure, so users can safely discover data, share it and collaborate.
 
-## Challenges Faced
+## Challenges faced
 
 Snowflake’s success meant they needed to make some large-scale changes to their platform so they could support their ever-growing customer base. To that end, they decided to move from a VM-based platform to a Kubernetes-based architecture. That platform had to work across AWS, Azure, and Google Cloud Platform (GCP), for every Snowflake region. Customers of the Virtual Private Snowflake (VPS) service also had to be supported. Additionally, the platform had to be available to over 20 engineering and product teams within Snowflake itself.
 
@@ -53,7 +56,7 @@ The team was using an HCL-based Infrastructure as Code tool to provision most of
 
 The Snowflake team knew they needed more than a tool. They needed a platform that allows developers to use the languages and libraries they already know. They decided they needed Pulumi.
 
-## Solution: Testable, Repeatable Infrastructure with Pulumi
+## Solution: testable, repeatable infrastructure with Pulumi
 
 Snowflake chose Pulumi for many reasons but a primary one was that developers could use the programming language they liked rather than having to use a domain-specific language (DSL). In Snowflake’s case the language of choice was Go. Pulumi could act as the vendor-neutral infrastructure platform and the developers could write their infrastructure code like any other software. They no longer felt hampered by the limitations a DSL imposed and they could take advantage of the Go SDKs and the many testing frameworks for Go. With Pulumi, their infrastructure became testable, repeatable and scalable. “Ultimately, I think what really excited us about Pulumi was that we could use languages that we already know for cloud infrastructure and we knew we could solve for future use cases that we hadn’t even thought of yet - all because the languages and tools are general-purpose,” says Jonas-Taha El Sesiy, Senior Software Engineer.
 
@@ -75,6 +78,6 @@ Raman says, “There’s no question that, if we had gone down the traditional i
 
 Changing what you use to write your software is a big decision but Snowflake found that ramping up with Pulumi happens quickly. For one, developers are using a language they already know. Brian Nutt, Senior Software Engineer, says, “I had a lot of experience with other infrastructure as code solutions but I found switching over to Pulumi incredibly easy. It was a fun experience to just hop into Go and use the Pulumi SDKs to fulfill the requirements we needed for the cluster. It was very freeing to, for example, not have to depend on upstream modules to be updated to actually make progress. It was great. And I don't think I could go back to the old way of operating after that. NO.”
 
-## Next Steps
+## Next steps
 
 Snowflake has big plans for the future and Pulumi is a part of them. One initiative is to leverage Pulumi to expand their support for Google Cloud. Given the scale of their multi-cloud, multi-region environments, security and automation are two strategic investment areas. Snowflake plans to use Pulumi to help manage this complexity and streamline deployments: “We’re looking forward to using Pulumi Policies to apply security policies to protect our stacks and the new native Pulumi Azure provider is going to be a huge timesaver for us as well because it automatically supports all the latest Azure features,” says Jonas-Taha El Sesiy. “Beyond that, we’re investing a lot in testability and using the Automation API for infrastructure so we can move to more of a GitOps model, and Pulumi will play a huge role in enabling that too.”

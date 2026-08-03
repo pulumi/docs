@@ -63,7 +63,7 @@ Choose a cloud provider to get started:
     </div>
 </section>
 
-## Additional resources
+## Learn more
 
 The following sections are also useful when first learning how to use Pulumi:
 

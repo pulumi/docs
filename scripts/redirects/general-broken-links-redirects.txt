@@ -1,4 +1,5 @@
 registry/packages/azure/api-docs/mobile/index.html|/registry/packages/azure/
+registry/packages/azure/api-docs/voice/index.html|/registry/packages/azure/
 containers/index.html|/docs/iac/clouds/kubernetes/
 docs/guides/index.html|/docs/iac/guides/
 docs/iac/guides/index.html|/docs/iac/
@@ -84,3 +85,12 @@ company/pulumi/jobs/index.html|/careers/
 blog/relaunching-pulumis-public-roadmap/index.html|/blog/
 brand/virtual-backgrounds/index.html|https://brand.pulumi.com/
 pricing/open-source-free-tier/index.html|/pricing/
+cf2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/
+migrate/cf2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/
+migrate/index.html|/docs/iac/guides/migration/
+tf2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/
+migrate/tf2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/
+kube2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/
+migrate/kube2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/
+arm2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-arm/
+migrate/arm2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-arm/

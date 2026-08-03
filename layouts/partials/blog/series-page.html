@@ -1,0 +1,32 @@
+{{- /*
+    Dedicated series page (rendered by layouts/taxonomy/series.html for defined
+    series slugs).
+    "N PART SERIES" fanned label → series title (h1) → description → the parts as
+    a 3-col grid of part cards (oldest-first, published only) → a "More series"
+    strip. No pagination.
+
+    Params: series (data/blog_series.yml entry) · page (the term page).
+*/ -}}
+{{- $series := .series -}}
+{{- $page := .page -}}
+{{- $slug := $series.slug -}}
+{{- $parts := (where (where site.RegularPages "Params.series" $slug) "Date" "lt" now).ByDate -}}
+{{- $count := len $parts -}}
+
+{{ partial "blog/header.html" (dict "title" "Series" "url" "/blog/series/" "context" $page "heading" false) }}
+
+<div class="container mx-auto px-4 py-8 lg:py-12">
+    <div class="mb-10 flex flex-col gap-4">
+        {{ partial "blog/series-fan.html" (dict "count" $count) }}
+        <h1 class="heading-xl m-0!">{{ $series.title }}</h1>
+        {{- with $series.description }}<p class="body-lg m-0! max-w-3xl text-service-black">{{ . }}</p>{{ end }}
+    </div>
+
+    <div class="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+        {{ range $i, $p := $parts }}
+            {{ partialCached "blog/series-part-card.html" (dict "page" $p "num" (add $i 1) "series" $series) $p.RelPermalink (add $i 1) }}
+        {{ end }}
+    </div>
+
+    {{ partial "blog/series-strip.html" (dict "title" "More series" "exclude" $slug) }}
+</div>

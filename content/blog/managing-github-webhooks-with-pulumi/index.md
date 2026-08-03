@@ -1,7 +1,8 @@
 ---
 title: "Managing GitHub Webhooks with Pulumi"
 authors: ["matt-ellis"]
-tags: ["Serverless"]
+tags: [serverless]
+category: tutorials
 meta_desc: "Use Pulumi to write a hook that would clean up branches after a pull request got merged."
 date: "2018-07-13"
 ---

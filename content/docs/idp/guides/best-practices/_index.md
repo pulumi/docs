@@ -15,7 +15,7 @@ aliases:
 
 This section provides proven patterns and foundational frameworks that help you implement best practices with Pulumi IDP. These resources follow industry best practices and have been validated in production environments.
 
-## Core Concepts
+## Core concepts
 
 Learn the foundational approach for building with Pulumi IDP:
 
@@ -36,7 +36,7 @@ Common architectural patterns and design approaches for organizing your infrastr
 - [IDP Pattern: Cost control using Components, Policies, and constrained inputs](/docs/idp/guides/best-practices/patterns/cost-control-using-components-policies-constrained-inputs)
 - [IDP Pattern: Security Updates using Components](/docs/idp/guides/best-practices/patterns/security-updates-using-components)
 
-## Additional Resources
+## Additional resources
 
 - [Pulumi IDP Concepts](/docs/idp/concepts)
 - [Private Registry](/docs/idp/concepts/private-registry)

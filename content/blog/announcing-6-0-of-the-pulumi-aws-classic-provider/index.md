@@ -3,13 +3,13 @@ title: "Announcing 6.0 of the Pulumi AWS Provider"
 date: 2023-08-29T09:00:00-04:00
 draft: false
 meta_desc: "Announcing 6.0 of the Pulumi AWS Provider, including SDK size optimization, TF plugin framework support, new resources, and more."
-meta_image: meta.png
 authors:
     - mikhail-shilkov
     - monica-rodriguez
 tags:
     - aws
     - providers
+category: product
 
 ---
 

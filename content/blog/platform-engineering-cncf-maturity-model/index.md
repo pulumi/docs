@@ -23,7 +23,6 @@ meta_desc: Discover Cloud Native Platforms, the Platform Maturity Model, how to 
 # The meta_image appears in social-media previews and on the blog home page. A
 # placeholder image representing the recommended format, dimensions and aspect
 # ratio has been provided for you.
-meta_image: platform-engineering-dominik-tech-talk-cncf.png
 
 # At least one author is required. The values in this list correspond with the
 # `id` properties of the team member files at /data/team/team. Create a file for
@@ -36,6 +35,7 @@ tags:
     - platform-engineering
     - community
     - pulumi-events
+category: community
 
 # The social copy used to promote this post on Twitter and Linkedin. These
 # properties do not actually create the post and have no effect on the
@@ -59,7 +59,7 @@ social:
 
 The Platform Engineering & DevOps in-person series launched in Berlin with two great speakers. This blog article is an overview of Dominik Kress's talk, “What the Heck is the CNCF Platform Working Group? Answers from a Member!” in which he discussed Cloud-Native Platforms, The Platform Maturity Model, and approaching Platforms as Products.
 
-In this article, you'll learn more about [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) and how to get involved with the CNCF Platform Working Group. Make sure to check our [Pulumi User Groups (PUGs)](https://www.meetup.com/pro/pugs/) to find a meetup near you.
+In this article, you'll learn more about [platform engineering](https://www.pulumi.com/what-is/what-is-platform-engineering/) and how to get involved with the CNCF Platform Working Group. Make sure to check our [Pulumi User Groups (PUGs)](https://luma.com/pulumi) to find a meetup near you.
 
 <!--more-->
 

@@ -2,10 +2,10 @@
 title: "Feature Flagging for Your Infrastructure"
 date: "2025-12-06"
 meta_desc: Apply feature flagging to infrastructure with Pulumi. Control rollouts, reduce deployment risk, and automate updates using ESC or LaunchDarkly.
-meta_image: Feature_Flags.png
 authors: 
   - "elisabeth-lichtie"
-tags: ["launchdarkly", "feature flags", "esc", "aws"]
+tags: [launchdarkly, feature-flags, esc, aws]
+category: best-practices
 schema_type: auto
 social:
     linkedin:
@@ -108,6 +108,10 @@ const webhook = new pulumiservice.Webhook("escEnvironmentWebhook", {
 ```
 
 When you update a flag value in ESC, the webhook fires, the Lambda identifies which stacks use that environment, and triggers their redeployment. This creates a continuous delivery pipeline for infrastructure configuration changes.
+
+{{< blog/cta-card title="Flag your infrastructure with Pulumi" >}}
+Define feature flags alongside the resources they control, store values in Pulumi ESC or your existing flagging service, and roll out infrastructure changes with less risk.
+{{< /blog/cta-card >}}
 
 ## Ingesting flag values from LaunchDarkly
 

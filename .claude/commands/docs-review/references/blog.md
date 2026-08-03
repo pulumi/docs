@@ -5,7 +5,7 @@ description: Review criteria for blog posts and customer stories. Fact-check-fir
 
 # Review — Blog
 
-Applied to blog posts (`content/blog/`) and customer stories (`content/case-studies/`). These are usually drafted whole-file (often with AI assistance) rather than edited incrementally, so scrutiny is `heightened` by default and the whole file is in scope. On this whole-file path, a pre-computed `readthrough` coherence pass (`docs-review:references:readthrough`) reads the post end to end and surfaces anchored structural defects as `🚩 flagged` findings in your buckets — triage each with the standard two-question test.
+Applied to blog posts (`content/blog/`) and customer stories (`content/case-studies/`). These are usually drafted whole-file (often with AI assistance) rather than edited incrementally, so scrutiny is `heightened` by default and the whole file is in scope. (Small incremental edits to an already-published post are the exception: the claim pre-step extracts from the changed lines only -- see `docs-review:references:fact-check` §Scope.) On this whole-file path, a pre-computed `readthrough` coherence pass (`docs-review:references:readthrough`) reads the post end to end and surfaces anchored structural defects as `🚩 flagged` findings in your buckets — triage each with the standard two-question test.
 
 > **Fact-check-first treatment.** Fact-check is the headline finding bucket. Get it right before commenting on AI-writing patterns or structure.
 
@@ -75,6 +75,24 @@ When none fire, render the explicit-empty form per output-format.md (don't skip 
 
 Data renders regardless; only the threshold flags suppress.
 
+### Priority 2.6 — Category fit (agentic; advisory)
+
+Every blog post carries a required, singular `category` value — the *kind* of post, a closed set in `data/blog_categories.yaml` (the single source of truth for ids, names, and `use_when` hints). `lint-markdown.js` already enforces the **mechanical** rules (present; a single scalar, not a list; a valid id) and `make lint` fails on violations — **do not re-flag those here.** This lane owns the **semantic** check that a deterministic linter can't do: does the post's *content* actually match the kind it claims?
+
+`general` is the **default catch-all** — the correct home for posts that don't fit a specific kind (SEO comparisons, "what is X" explainers, "top N tools" listicles, trend roundups, marketing/solution pages). The job of this lane is to make sure a post landed in the right place relative to `general`.
+
+Read the post whole-file (already mandatory) and load the kind definitions (the `scope` field — not the reader-facing `description`) + `use_when` hints from `data/blog_categories.yaml`. Then make these judgments, each surfacing as a `⚠️ Low-confidence` finding (never a publishing blocker — categorization is editorial and the author may have context you don't):
+
+1. **Over-promoted into a specific kind — should be `general`.** This is the priority case. A post categorized as a specific kind (`best-practices`, `product`, `tutorials`, …) that is really SEO/marketing content with no genuine substance of that kind: a comparison ("X vs Y") filed as `product`, a "top/best N tools" listicle or "what is / why choose / when to use" explainer filed as `best-practices`, a trend/prediction roundup filed as `perspectives`, a thin solution/funnel page filed as `product`. Quote the title + the deciding structural evidence (comparison framing, listicle headings, no runnable steps, no original thesis) and propose **`category: general`**.
+
+2. **Wrong specific kind.** The declared kind doesn't match the content, but another specific kind does: a step-by-step walkthrough filed `best-practices` (it's `tutorials`); a feature-launch announcement filed `tutorials` (it's `product`); a named-customer story filed `community` (it's `customers`); an internals deep-dive filed `best-practices` (it's `engineering`). Quote the evidence; propose the better id.
+
+3. **Under-categorized — `general` that clearly fits a specific kind.** A post left in `general` that plainly matches a specific kind (a real release announcement, a genuine hands-on tutorial, a named-customer story, an original-argument essay). Quote the evidence; propose the specific id.
+
+**The subtle boundary — `perspectives` vs `general`.** Both can look essay-like. `perspectives` is an author making an **original argument or analysis in their own voice** (a thesis, a point of view); `general` is for content that exists mainly to **rank for a search query or sell**. Use intent, not title shape: *The Past, Present, and Future of Cloud Engineering* (original argument → `perspectives`) vs *Why Choose Pulumi Over Terraform?* (search-funnel comparison → `general`).
+
+**Keep the bar high.** Flag only clear mismatches, not marginal judgment calls between two defensible kinds — this is a nag, and noise erodes it. When two kinds genuinely both fit, say which is dominant and stop; don't flag. One finding per post maximum (the category is a single field). Quote-and-rewrite mandate applies: name the current value, quote the deciding evidence, and propose the specific id (or `general`). The Priority 2.5 editorial-balance triggers (comparison / listicle / FAQ) are strong corroborating signals for case 1.
+
 ### Priority 3 — Code correctness
 
 Apply `docs-review:references:code-examples`.
@@ -125,13 +143,13 @@ Concrete rules from `seo-analyze:references:aeo-checklist` applied at review tim
 
 Blog files are usually new in their entirety, so the diff/pre-existing distinction blurs. For incremental edits to existing posts, separate diff-introduced from pre-existing per the standard rules in `docs-review:references:output-format`.
 
-Scope of pre-existing findings for blog: everything from `docs-review:references:docs`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, `meta_image` that is still the placeholder, `meta_image` that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing).
+Scope of pre-existing findings for blog: everything from `docs-review:references:docs`, plus unsourced numerical claims, temporally-rotted feature claims ("a new feature in v3.X" where v3.X is years old), broken `{{< github-card >}}` references, missing author avatars, and — only when a post sets a custom `meta_image` override — one that uses outdated Pulumi logos (the brand refresh moved on; old logos hurt social sharing). Blog posts otherwise leave `meta_image` blank and get an on-brand card at build time from the title + `feature_image`, so an absent `meta_image` is correct, never a finding.
 
 ## Do not flag
 
 - **Colloquialisms as inclusive-language violations.** "Overkill," "kill the process," "kick off," "blow away" are fine in technical context.
 - **Drafting social copy, CTAs, or button text.** Marketing owns voice; do not propose replacement copy.
-- **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for retired-logo, placeholder, and animated-GIF cases.)
+- **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for the custom-override retired-logo and animated-GIF cases.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case.** markdownlint owns case-consistency; Vale owns product-name miscapitalization (e.g., "Pulumi esc"). Don't flag either here.
 - **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.
@@ -140,10 +158,10 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 
 Each item below renders as a single 🚨 Outstanding finding when violated. Quote-and-rewrite mandate: name the field or file, propose the specific fix.
 
-- **`meta_image` uses retired Pulumi logos.** Inspect the rendered meta_image (or its filename / path) for retired brand variants. Quote the path; propose the current-brand replacement.
-- **`meta_image` is the unmodified `/new-blog-post` placeholder.** Compute SHA256 of the resolved meta_image file and compare against `.claude/commands/_common/images/blog-post-meta-placeholder.png`. Match → flag with a pointer to `/blog-meta-image` for regeneration. Skip on `draft: true` or archival posts (`date` in the past).
+- **A custom `meta_image` override uses retired Pulumi logos.** Only applies when a post sets its own `meta_image` — most posts leave it blank and get the on-brand build-time card, so there is nothing to inspect. When an override is present, inspect it (its filename / path or rendered image) for retired brand variants; quote the path and propose the current-brand replacement, or suggest dropping the override to fall back to the build-time card. (A renamed `meta-legacy.png` archive image is not a `meta_image` and is never flagged.)
 - **`meta_image` animated-GIF / format constraints** — see `docs-review:references:image-review`.
 - **`<!--more-->` break missing or buried.** The break must be present and land after the first 1–3 paragraphs, not buried mid-post. Without it, the entire post body renders on the blog index. Quote the surrounding paragraphs; propose the correct placement. Skip on `draft: true` or archival posts.
+- **`feature_image` missing.** Active blog posts (not draft, not archival) must set `feature_image` to a hero image in the post's directory. New posts scaffold with the field blank — that's the starting state, not the shipping state. Two exemptions, both deliberate: `category: general` (the catch-all bucket — SEO comparisons, "what is X" explainers — which is lower-touch by design) and `draft: true` (a work in progress; the image lands before undrafting). Flag the empty field; propose running `/blog-feature-image`, labeling the PR `needs-design` for a designer-made image, or — if the post really is a catch-all — moving it to `category: general`. Posts predating the blog redesign are grandfathered; only flag posts new or changed in this PR.
 - **`social:` block missing or empty.** Active blog posts (not draft, not archival) must have a `social:` frontmatter block with at least one of `twitter`, `linkedin`, or `bluesky` populated; without it the post won't be promoted. Flag the missing/empty block; do not draft the copy (marketing owns voice).
 - **Author profile avatar missing.** `data/team/team/{author}.yaml` must reference an avatar file. Quote the missing field or the path of the file that should exist.
 

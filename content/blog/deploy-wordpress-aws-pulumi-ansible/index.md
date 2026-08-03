@@ -2,9 +2,9 @@
 title: "Deploy WordPress to AWS using Pulumi and Ansible"
 date: 2022-06-27T08:00:00-07:00
 meta_desc: "See Pulumi and Ansible in action together, combining provisioning- and configuration-based infrastructure as code to spin up WordPress in AWS."
-meta_image: pulumi-ansible.png
 authors: ["joe-duffy"]
 tags: ["aws", "ansible", "configuration", "wordpress"]
+category: tutorials
 ---
 
 There are two primary kinds of infrastructure as code tools: *configuration management*, like Ansible, Chef, and Puppet, which configure, patch, or upgrade existing servers, and *provisioning*, like Pulumi, Terraform, and CloudFormation, which create, update, and delete the underlying infrastructure itself. Provisioning has taken over from configuration management as the dominant form of IaC over the past decade as we've shifted to modern immutable infrastructure architectures that use containers, serverless, and managed services. And yet, configuration management still remains important and relevant, especially for heritage, stateful, server-centric, and on-prem or hybrid solutions. The good news is that it doesn't need to be either-or choice: the two approaches are complementary. In this post, you'll see how and why you might combine them by deploying a WordPress Server to AWS by provisioning infrastructure with Pulumi and configuring the server with Ansible.
@@ -1881,6 +1881,10 @@ var playAnsiblePlaybookCmd = new Command.Local.Command("playAnsiblePlaybookCmd",
 {{% /choosable %}}
 
 That's it! The entirety of your infrastructure --- from the underlying AWS infrastructure, to the configuration commands to upgrade your server, to running the Ansible playbook which installs WordPress -- is declared in a single Pulumi program in your language of choice. The only step left is to deploy it!
+
+{{< blog/cta-card title="Provision and configure in one workflow" >}}
+Combine Pulumi provisioning with configuration management tools like Ansible to build repeatable environments. Deploy your AWS infrastructure and configure your servers with a single `pulumi up`.
+{{< /blog/cta-card >}}
 
 ## Seeing Everything in Action
 

@@ -57,18 +57,14 @@ values:
     TF_VAR_vpc_id: ${tfStack.network.vpc_id}
 ```
 
-## Inputs
+## Schema reference
 
-| Property | Type                                   | Description                                                                                  |
-|----------|----------------------------------------|----------------------------------------------------------------------------------------------|
-| `stacks` | map[string][PulumiStack](#pulumistack) | A map of names to stacks to get outputs from. The names contains all outputs from the stack. |
+{{< esc-schema-updated >}}
 
-### PulumiStack
+### Inputs
 
-| Property | Type   | Description                                                                       |
-|----------|--------|-----------------------------------------------------------------------------------|
-| `stack`  | string | The project-qualified name of the stack to get outputs for, e.g. `myProject/dev`. |
+{{< esc-schema type="provider" name="pulumi-stacks" section="inputs" >}}
 
-## Outputs
+### Outputs
 
-The `pulumi-stacks` provider returns a map of names to raw output values for the specified stacks.
+{{< esc-schema type="provider" name="pulumi-stacks" section="outputs" >}}

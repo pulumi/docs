@@ -3,11 +3,11 @@ title: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 h1: "Change Management with the Pulumi Kubernetes Operator and Kargo"
 authors: 
   - "elisabeth-lichtie"
-tags: ["kargo", "kubernetes", "pko", "change management", "gitops", "argocd", "verification"]
+tags: [kargo, kubernetes, pko, change-management, gitops, argocd, verification]
+category: best-practices
 meta_desc: "Use Kargo with the Pulumi Kubernetes Operator to control how infrastructure changes are promoted across environments."
 date: "2025-11-25"
 updated: 2026-02-03
-meta_image: "kargo-change-mgmt.png"
 allow_long_title: true
 summary: |
     The Pulumi Kubernetes Operator (PKO) manages Pulumi stacks as Kubernetes resources, while Kargo provides controlled promotion of changes across environments. Used together, they let you manage infrastructure as code with Pulumi while systematically testing and promoting changes through dev, staging, and production environments.
@@ -210,6 +210,10 @@ The QA preview stage uses `availabilityStrategy: All`, meaning freight must pass
 ### Custom approver roles
 
 Different approval gates may require different approvers. Using the [custom roles](#setting-up-approver-roles) described earlier, you can grant specific users or groups the `promote` permission on individual approval gates. For example, security team members might have the `promote` permission on `approvalgateqasec`, while functional testers have it on `approvalgateqa`. This ensures the right people review changes at each checkpoint.
+
+{{< blog/cta-card title="Manage Kubernetes change with Pulumi" >}}
+Define your Pulumi stacks as Kubernetes resources, then promote and verify infrastructure changes across dev, staging, and production with controlled, staged rollouts.
+{{< /blog/cta-card >}}
 
 ## Verification
 

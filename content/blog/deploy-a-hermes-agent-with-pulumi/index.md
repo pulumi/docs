@@ -4,7 +4,6 @@ allow_long_title: true
 date: 2026-06-24
 draft: false
 meta_desc: "Deploy a self-hosted Hermes agent as one Pulumi program across Render, Modal, and Tailscale — a code-executing AI agent with nothing on the public internet."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - engin-diri
@@ -18,6 +17,7 @@ tags:
     - modal
     - typescript
     - python
+category: tutorials
 schema_type: auto
 
 # Social media copy, auto-posted to X, LinkedIn, and Bluesky when merged to master.
@@ -877,6 +877,10 @@ If the chat UI does not load, give the services a few minutes to finish their fi
 
 1. **Render dashboard logs** for the `hermes-agent` and `open-webui` services, to confirm both started and pulled their images.
 1. **Tailscale admin console** ([Machines](https://login.tailscale.com/admin/machines)), to confirm the `open-webui` node joined your tailnet. If it did not, the `TS_AUTHKEY` is likely expired or not reusable.
+
+{{< blog/cta-card title="Keep your AI agent private" >}}
+Deploy your Hermes agent across Render, Modal, and Tailscale as one Pulumi program, with secrets held in Pulumi ESC and nothing exposed to the public internet.
+{{< /blog/cta-card >}}
 
 ## Security considerations
 

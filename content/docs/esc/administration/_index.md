@@ -20,7 +20,7 @@ Learn how to configure organizations, monitor audit logs, bring your own encrypt
 - [Audit logs](/docs/esc/administration/audit-logs/): Access and configure audit logs to track activities and ensure compliance.
 - [Deletion protection](/docs/esc/administration/deletion-protection/): Prevent accidental deletion of critical environments.
 - [Customer Managed Keys](/docs/esc/concepts/customer-managed-keys/): Bring your own encryption keys for enhanced security and compliance.
-- [Access control](/docs/esc/administration/access-control/): Manage environment permissions with role-based access controls at the organization and team levels.
+- [Access control](/docs/administration/access-identity/rbac/scopes/environments/): Manage environment permissions with role-based access controls at the organization and team levels.
 - [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/): Integrate with trusted third-party identity providers to authenticate users.
 - [SAML single sign-on (SSO)](/docs/administration/access-identity/saml/): Configure SAML-based authentication for centralized access management.
 - [SCIM](/docs/administration/access-identity/scim/): Simplify user provisioning with the SCIM protocol.

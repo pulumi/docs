@@ -1,16 +1,16 @@
 ---
 title: "IaC Best Practices: Implementing RBAC and Security"
+feature_image: feature.png
 date: 2023-05-23
 updated: 2025-03-04
 meta_desc: Discover best practices for securing Pulumi stacks with role-based access control (RBAC). Learn how to manage permissions and enforce least privilege.
-meta_image: meta.png
 authors:
     - scott-lowe
 tags:
     - best-practices
     - rbac
     - security
-    - iac-best-practices
+category: best-practices
 series: iac-best-practices
 aliases:
     - /blog/iac-recommended-practices-rbac-and-security/
@@ -19,16 +19,6 @@ aliases:
 This post continues our series of blog posts focused on IaC best practices. In earlier posts, we introduced Zephyr Archaeotech Emporium, the fictional company that sits at the center of this series, and discussed Zephyr's primary use case for Pulumi: managing their online retail store. You read how Zephyr's initial use of Pulumi changed to incorporate the use of short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, and incorporated the use of Stack References. This post is a complement to the post on structuring Pulumi projects, concentrating on the use of role-based access control (RBAC) and security in Zephyr's multi-project configuration.<!--more-->
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. You've seen these practices emerge over the course of the series---not all immediately, and not all right away. Structuring the blog series in this way is a deliberate decision; many best practices are "point in time" recommendations: they are context-dependent and the recommendations for any given company, like Zephyr, may change as the company and its needs change.
-
-For ease of navigation, here are links to all the blog posts in the series:
-
-* [IaC Best Practices: Understanding Code Organization and Stacks](/blog/iac-best-practices-understanding-code-organization-stacks/)
-* [IaC Best Practices: Enabling Developer Stacks and Git Branches](/blog/iac-best-practices-enabling-developer-stacks-git-branches/)
-* [IaC Best Practices: Structuring Pulumi Projects](/blog/iac-best-practices-structuring-pulumi-projects/)
-* [IaC Best Practices: Applying Stack References](/blog/iac-best-practices-applying-stack-references/)
-* **IaC Best Practices: Implementing RBAC and Security (the post you're reading)**
-* [IaC Best Practices: Using Automation API](/blog/iac-best-practices-using-automation-api/)
-* [IaC Best Practices: Summarizing Key Learnings](/blog/iac-best-practices-summarizing-key-learnings)
 
 ## Evolving Project Structure to Enhance Security and Scalability
 

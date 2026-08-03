@@ -1,8 +1,8 @@
 ---
 title: "Managing AWS Credentials on CI/CD: Part 3"
+feature_image: feature.png
 date: 2020-05-14
 meta_desc: "Best practices for managing AWS credentials on CI/CD: Part 3 in the series"
-meta_image: cicd.png
 authors:
     - chris-smith
     - sophia-parafina
@@ -10,22 +10,13 @@ tags:
     - continuous-delivery
     - security
     - secrets
-    - aws-credentials-cicd
+category: best-practices
 series: aws-credentials-cicd
 ---
 
 This article is the third part of a series on best practices for securely managing AWS credentials on CI/CD. In this article, we cover the
 last leg of the continuous delivery process to update your AWS resources and how to store sensitive data using Pulumi securely.
 <!--more-->
-
-Posts in this series:
-
-- [Create a dedicated IAM User for your CI/CD](/blog/managing-aws-credentials-on-cicd-part-1#create-new-iam-user)
-- [Provide the IAM User’s credentials to your CI/CD system](/blog/managing-aws-credentials-on-cicd-part-2#providing-iam-credentials)
-- [Comparison with using hosted secret managers](/blog/managing-aws-credentials-on-cicd-part-2#using-a-secrets-service)
-- [Automate Rotating and Revoking AWS Credentials](/blog/managing-aws-credentials-on-cicd-part-2#automating-key-rotation)
-- [Assuming IAM Roles for performing updates](#assuming-iam-roles)
-- [Securing sensitive data using Pulumi](#secrets-in-pulumi)
 
 ## Recap
 

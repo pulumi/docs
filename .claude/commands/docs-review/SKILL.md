@@ -51,3 +51,14 @@ gh pr diff {{arg}}
 ```
 
 Format for terminal display. Include the scope in the summary, and offer to broaden if useful.
+
+## Outcome telemetry (quarterly review)
+
+Every closed PR's pinned review encodes what happened to its findings (✅ Resolved = fixed, `concede:` = conceded, `🛡️ Disputed … model held` = disputed, still-🚨-at-merge = ignored). `scripts/scrape-review-outcomes.py` derives per-finding outcomes from that structure; the weekly digest (`scripts/weekly-digest/digest.py`) aggregates the trailing week automatically. Quarterly, run the long-window tuning report:
+
+```bash
+uv run .claude/commands/docs-review/scripts/scrape-review-outcomes.py \
+    --closed-since <quarter-start> --stats
+```
+
+What to do with the numbers: verdict categories with high **concede** or **ignored-at-merge** rates are candidates for demoting from the always-🚨 carve-out list (or pruning entirely — edit `docs-review:references:output-format` §Bucket rules in a PR); recurring prose findings with high **fix** rates are candidates for promotion into Vale rules so they're caught pre-review. High `unconfirmed_at_merge` counts mean reviews are routinely stale at merge — evidence for auto-refreshing on trivial deltas. Telemetry informs the tuning; humans make the edits.

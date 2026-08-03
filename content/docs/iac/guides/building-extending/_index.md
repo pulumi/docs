@@ -23,6 +23,8 @@ These guides show you how to create custom components that encapsulate best prac
 
 Build reusable infrastructure components to encapsulate and share infrastructure patterns.
 
+**[When to Build a Component](/docs/iac/guides/building-extending/components/when-to-build-a-component/)** - Understand what a component gives you that a plain function cannot, and when a function is the better choice.
+
 **[Build a Component](/docs/iac/guides/building-extending/components/build-a-component/)** - Learn the process for creating custom Pulumi components that bundle multiple resources into reusable abstractions with built-in best practices.
 
 **[Testing Components](/docs/iac/guides/building-extending/components/testing-components/)** - Write automated tests for your components to ensure they work correctly and maintain quality as they evolve.
@@ -35,7 +37,7 @@ Package and distribute your components and providers for use across teams and pr
 
 **[Pulumi Packages](/docs/iac/concepts/packages/)** - Overview of Pulumi packages and how they enable sharing infrastructure code across all Pulumi languages.
 
-**[Local Packages](/docs/iac/guides/building-extending/packages/local-packages/)** - Develop and test packages locally before publishing them to registries.
+**[Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/)** - Develop and test packages locally before publishing them to registries.
 
 **[Publishing to the Pulumi Registry](/docs/iac/guides/building-extending/packages/publishing-packages/)** - Publish packages to the public Pulumi Registry. For publishing to the Pulumi IDP Private Registry, see [Publishing Components from GitHub Actions](/docs/idp/guides/publishing-from-github-actions/).
 
@@ -47,7 +49,7 @@ Create custom providers to integrate new cloud platforms and services with Pulum
 
 **[Build a Provider](/docs/iac/guides/building-extending/providers/build-a-provider/)** - Step-by-step guide to building a Pulumi provider that enables infrastructure management for any API or service.
 
-**[Pulumi Provider SDK](/docs/iac/guides/building-extending/providers/pulumi-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
+**[Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/)** - Reference documentation for the SDK used to build native Pulumi providers with full access to the resource model.
 
 **[Debugging Providers](/docs/iac/guides/building-extending/providers/debugging-providers/)** - Techniques and tools for troubleshooting provider development and diagnosing issues.
 

@@ -1,7 +1,8 @@
 ---
 title: "2018 Year at a Glance"
 authors: ["joe-duffy"]
-tags: ["pulumi-news"]
+tags: [announcements]
+category: company
 meta_desc: "As we close out 2018, here are some of the exciting things at Pulumi. We've launched our open source community, with support for many major clouds."
 date: "2018-12-31"
 ---

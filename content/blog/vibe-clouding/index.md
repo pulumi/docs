@@ -4,12 +4,13 @@ allow_long_title: True
 date: 2025-04-01T00:00:00-00:00
 draft: false
 meta_desc: Today we're excited to announce vibe clouding support in Pulumi with LLM language support and a new and improved watch mode. Also, make sure to check the date.
-meta_image: meta.png
 authors:
     - joe-duffy
 tags:
-    - pulumi-news
+    - announcements
     - april-fools
+category: product
+block_external_search_index: true
 ---
 
 {{< notes type="info" >}}

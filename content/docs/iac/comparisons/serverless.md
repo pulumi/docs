@@ -1,5 +1,7 @@
 ---
 title_tag: "Pulumi vs. Serverless Framework"
+faq_schema: true
+authors: ["joe-duffy"]
 meta_desc: "Compare Pulumi and the Serverless Framework: a multi-cloud IaC platform in general-purpose languages versus an AWS-focused tool for deploying Lambda apps."
 title: Serverless Framework
 h1: Pulumi vs. Serverless Framework
@@ -140,5 +142,5 @@ Yes — and this is a common adoption pattern. Teams keep AWS serverless service
 
 - [Get started with Pulumi](/docs/iac/get-started/)
 - [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
-- [Pulumi vs. AWS CDK](/docs/iac/comparisons/cloud-template-transpilers/aws-cdk/)
+- [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Migrating from Serverless Framework to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-serverless/)

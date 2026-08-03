@@ -4,7 +4,6 @@ title_tag: Setup Pulumi Service Provider using ESC
 layout: single
 description: Create an ESC Environment to store your Pulumi Service Provider credentials and easily re-use them across your IaC stacks.
 meta_desc: Create an ESC Environment to store your Pulumi Service Provider credentials and easily re-use them across your IaC stacks.
-meta_image: meta.png
 weight: 999
 summary: |
     [Pulumi ESC](https://pulumi.com/esc) makes it easy to store and retrieve static and dynamic configuration settings, manage them securely and flexibly, and use them in your applications. In this tutorial, you will create an ESC environment to store credentials for the Pulumi Service Provider, then use this environment to create new Pulumi Cloud resources, including more ESC Environments.

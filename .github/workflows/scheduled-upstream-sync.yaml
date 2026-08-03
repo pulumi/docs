@@ -15,9 +15,9 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Checkout target repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: master
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
@@ -50,7 +50,7 @@ jobs:
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
-        uses: pulumi/esc-action@v2
+        uses: pulumi/esc-action@v3
       - name: Slack Notification
         uses: docker://sholung/action-slack-notify:v2.3.0
         env:

@@ -3,11 +3,11 @@ title: "Automatic Diagram Generation for Always-Accurate Diagrams"
 h1: "Automatic Diagram Generation for Always-Accurate Diagrams"
 authors: 
   - "elisabeth-lichtie"
-tags: ["aws", "diagram", "architecture", "CI/CD", "anthropic", "claude", "github", "actions"]
+tags: [aws, diagram, architecture, ci/cd, anthropic, claude, github, actions]
+category: tutorials
 meta_desc: "Automate tedious diagramming work in your CI/CD pipelines to maintain always-accurate architecture diagrams."
 date: "2025-09-22"
 lastmod: "2026-06-03"
-meta_image: "Automatic_Diagramming.png"
 
 summary: |
     Architecture diagrams are tedious to create and become outdated the moment infrastructure changes. When you manage infrastructure with Pulumi's infrastructure as code, you can automatically generate accurate diagrams directly from your IaC definitions. With Pulumi's preview capabilities, you can anticipate changes before deployment. Learn how to integrate automated diagram generation into your CI/CD pipeline using AI, Pulumi's native diagramming tools, and GitHub actions.
@@ -284,6 +284,10 @@ However, this approach also has limitations:
 **Preview limitations**: Diagrams reflect planned changes from `pulumi preview` rather than actual deployed state, which may differ if deployments fail.
 
 This approach works best for teams that value diagram aesthetics and need multiple architectural views for different stakeholders, while accepting slightly more complexity and potential accuracy trade-offs in exchange for significantly better visual presentation.
+
+{{< blog/cta-card title="Generate diagrams from your code" href="/docs/ai/" >}}
+You can produce accurate architecture diagrams directly from your Pulumi state and preview, then wire the workflow into any coding agent through the Pulumi MCP server. Start a project to keep your diagrams in sync with your infrastructure.
+{{< /blog/cta-card >}}
 
 ## Pulumi Neo: Enterprise-scale intelligent diagramming
 
