@@ -127,6 +127,71 @@
     }
 }
 
+// Latest-releases ticker along the top of the blog homepage
+// (partials/blog/releases-marquee.html). The track holds three identical copies
+// of the item list side by side, so translateX(-33.3333%) advances by exactly
+// one copy and the loop is seamless. Duration comes from --marquee-duration,
+// set inline by the partial from the item count so the scroll rate stays
+// constant no matter how many entries are in the strip.
+[data-releases-marquee] {
+    [data-marquee-track] {
+        animation: blog-releases-marquee var(--marquee-duration, 60s) linear infinite;
+    }
+
+    // Pause on hover only — deliberately NOT on :focus-within. Closing the
+    // changelog modal restores focus to the ticker link that opened it, which
+    // left the strip frozen until the next click moved focus elsewhere.
+    // :focus-visible doesn't fix it either: it's sticky across programmatic
+    // focus (the modal's close button inherits it from the trigger on open and
+    // hands it back on close), so it matched on every close path. CSS can't
+    // tell "tabbed here" from "focus restored here", and a permanently stuck
+    // ticker is the worse failure. Matches the announcement banner marquee,
+    // which likewise pauses only for prefers-reduced-motion. Keyboard users can
+    // still Tab to any row and press Enter — activation doesn't depend on where
+    // the row currently sits — and the reduced-motion branch below serves the
+    // static, fully readable version.
+    &:hover [data-marquee-track] {
+        animation-play-state: paused;
+    }
+}
+
+// Also hold still while a changelog item is open, so the strip isn't drifting
+// behind the modal's translucent backdrop and the row you clicked is still
+// where you left it on close. Safe where the focus-based pause wasn't: this
+// keys off the modal's own .hidden class, which closeModal() always restores,
+// so it can't latch on the way restored focus did.
+[data-blog-releases]:has([data-changelog-modal]:not(.hidden)) [data-marquee-track] {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-releases-marquee] {
+        // No motion: a plain scrollable strip of the entries, shown once. The
+        // clones exist only to make the animation loop.
+        @apply overflow-x-auto;
+
+        [data-marquee-track] {
+            animation: none;
+        }
+
+        [data-marquee-copy]:not(:first-child) {
+            @apply hidden;
+        }
+
+        // The trailing fade is absolutely positioned inside what is now a
+        // scroll container, so it'd travel with the content instead of staying
+        // pinned to the strip's edge. It only sells the motion anyway.
+        [data-marquee-fade] {
+            @apply hidden;
+        }
+    }
+}
+
+@keyframes blog-releases-marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-33.3333%); }
+}
+
 // Outline-button option for HubSpot newsletter forms. The `!` beats the
 // .btn-primary the button @extends in _hubspot.scss (which imports after this).
 .hs-form.newsletter-btn-outline input.hs-button {
