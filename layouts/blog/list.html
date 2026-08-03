@@ -18,7 +18,7 @@
             {{ end }}
             {{ with after 1 $featured }}
                 <div class="mb-10 grid grid-cols-1 gap-x-8 lg:gap-x-16 gap-y-6 border-b border-gray-200 pb-10 xl:grid-cols-3">
-                    {{ range . }}{{ partial "blog/card/small.html" (dict "page" .) }}{{ end }}
+                    {{ range . }}{{ partialCached "blog/card/small.html" (dict "page" .) .RelPermalink }}{{ end }}
                 </div>
             {{ end }}
             <div class="mb-6 flex items-start justify-between gap-4">
@@ -30,7 +30,7 @@
         {{ partial "blog/paginator.html" (dict "context" . "position" "top") }}
 
         <div data-post-list class="flex flex-col">
-            {{ range $paginator.Pages }}{{ partial "blog/card/list-row.html" (dict "page" .) }}{{ end }}
+            {{ range $paginator.Pages }}{{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}{{ end }}
         </div>
 
         {{ partial "blog/paginator.html" . }}

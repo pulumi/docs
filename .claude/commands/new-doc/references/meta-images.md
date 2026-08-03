@@ -11,14 +11,10 @@ Generated cards cover `docs`, `tutorials`, `case-studies`, `what-is`, `migrate`,
 `partner`, and `topics`. Prefer the generated card for new pages.
 
 Only set `meta_image` when you need a **custom** image that overrides the
-generated card (a page-level `meta_image` always wins).
+generated card (a page-level `meta_image` always wins). For a docs page, that is
+almost never — omit it.
 
-## Path-Based Image Mapping (override only)
-
-When you do need a custom docs image, use these legacy paths:
-
-- `iac/clouds/aws` → `/images/docs/meta-images/docs-clouds-aws-meta-image.png`
-- `iac/clouds/azure` → `/images/docs/meta-images/docs-clouds-azure-meta-image.png`
-- `iac/clouds/gcp` → `/images/docs/meta-images/docs-clouds-google-cloud-meta-image.png`
-- `iac/clouds/kubernetes` → `/images/docs/meta-images/docs-clouds-kubernetes-meta-image.png`
-- **All others** → `/images/docs/meta-images/docs-meta.png`
+**Never point `meta_image` at a generic section placeholder** (e.g. an old
+"Pulumi Docs" card). Doing so suppresses the generated, page-specific card and
+gives every page the same social image. If a page genuinely needs a custom
+image, it must be artwork made for that page.

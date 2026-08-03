@@ -387,7 +387,7 @@ jobs:
           # Anthropic API key the model inherently runs on. Every write
           # (branch, push, PR) happens in the publish job behind
           # publish-gate.py.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
+          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
 
       # Hand the model's work to the publish job as data. Stage everything
       # EXCEPT dot-paths — that excludes the runtime artifacts above AND

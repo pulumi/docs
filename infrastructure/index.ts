@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
-import { getMarkdownNegotiationFunctionAssociation } from "./cloudfrontFunctions";
+import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
 
 const stackConfig = new pulumi.Config();
 
@@ -710,6 +710,13 @@ const DefaultCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('default-cac
             header: "Cache-Control",
             value: "max-age=60, stale-while-revalidate=300",
             override: true,
+        }, {
+            // RFC 8288 Link header pointing agents at the RFC 9727 API catalog.
+            // Rides the default behavior, so it's present on the homepage (where
+            // agent-discovery scanners look) and other top-level pages.
+            header: "Link",
+            value: "</.well-known/api-catalog>; rel=\"api-catalog\"",
+            override: false,
         }],
     },
 });
@@ -976,6 +983,16 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     defaultCacheBehavior: {
         ...baseCacheBehavior,
         cachePolicyId: tenMinuteCacheKeyPolicy.id,
+        functionAssociations: [
+            // Serves index.md for the homepage, /what-is/, /product/, and /pricing/
+            // via Accept: text/markdown or the .md URL suffix. The viewer-request
+            // rewrite lands before the cache lookup, so the rewritten URI is the
+            // cache key and no cache policy changes are needed.
+            getMarketingMarkdownNegotiationFunctionAssociation(),
+            // Stamps Content-Type on /.well-known/api-catalog, which falls through to
+            // the default behavior. No-op for every other path.
+            getApiCatalogContentTypeFunctionAssociation(),
+        ],
     },
 
     orderedCacheBehaviors: [

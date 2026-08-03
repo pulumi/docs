@@ -93,7 +93,14 @@ PROMOTE_UNVERIFIABLE_TO = "warning"
 # outcome — `contradicted`/`mismatch` mean "a source disagrees with a claim",
 # which a build error or a coherence gap is not. The specific detector lives in
 # the record's `type`/`source`, rendered in the trail-line parenthetical.
-TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged")
+# `framing-drift` is the fact-check verdict for "the anchor value is accurate
+# but the claim's published meaning differs from what the source supports"
+# (widened denominator, usage → intent, dropped qualifier). It stubs into
+# ⚠️ Low-confidence by default — the reviewer promotes to 🚨 when the drifted
+# phrasing also rides `social.*` frontmatter (auto-posted on merge) or
+# otherwise misleads a reader. It is counted SEPARATELY from the contradiction
+# family in the headline tallies — see DRIFT_VERDICTS below.
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -102,8 +109,18 @@ EXPECTED_TRAIL_EMOJI = {
     "contradicted": "❌",
     "mismatch": "⚔️",
     "flagged": "🚩",
+    "framing-drift": "🌀",
 }
 OUTSTANDING_VERDICTS = {"contradicted", "mismatch", "flagged"}
+# Verdicts that say the claim is wrong as written — the ones the headline
+# tallies label `contradicted`, and the ones that must reach 🚨.
+CONTRADICTION_FAMILY = {"contradicted", "mismatch"}
+# `framing-drift` is adjacent but not one of them: the anchor value is accurate
+# and the default bucket is ⚠️. Folding it into the `contradicted` tally makes
+# the trail header and the investigation log report contradictions the body
+# doesn't contain (observed live: a header reading `2 contradicted` above a
+# trail with zero ❌ lines). It gets its own segment in both places instead.
+DRIFT_VERDICTS = {"framing-drift"}
 
 # Mirror of `validate-pinned.py` TEMPORAL_TRIGGERS — keep synchronized.
 TEMPORAL_TRIGGERS = {
@@ -409,6 +426,29 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
 
 _RT_SOURCE = "readthrough pre-step"
 
+# Backstop mirror of `readthrough.py`'s normalize_line_range() — kept here (and
+# deliberately duplicated rather than imported; these scripts are standalone by
+# design) so an artifact from an older readthrough run, or one whose anchor
+# repair failed, still can't render the degenerate `L0` anchor in both the trail
+# line and the bucket bullet. File-less, so no anchor-quote fallback: numeric
+# parse only, then `L1`.
+_RT_DASHES = str.maketrans({c: "-" for c in "‐‑‒–—―−"})
+_RT_L_RANGE_RE = re.compile(r"L(\d+)(?:\s*-\s*L?(\d+))?", re.IGNORECASE)
+_RT_BARE_RANGE_RE = re.compile(r"(\d+)(?:\s*-\s*(\d+))?")
+
+
+def _rt_normalize_line_range(raw: str) -> str:
+    """Coerce a readthrough `line_range` to `L<a>` / `L<a>-<b>`; "" if unusable."""
+    s = (raw or "").translate(_RT_DASHES)
+    m = _RT_L_RANGE_RE.search(s) or _RT_BARE_RANGE_RE.search(s)
+    if not m:
+        return ""
+    a = int(m.group(1))
+    b = int(m.group(2)) if m.group(2) else a
+    if a <= 0:  # `L0` is not a line
+        return ""
+    return f"L{a}" if b <= a else f"L{a}-{b}"
+
 
 def _readthrough_synthetic_verdicts(readthrough_artifact: dict | None) -> list[dict]:
     """Synthesize `🚩 flagged` verdict-shaped dicts from `.readthrough-findings.json`.
@@ -433,7 +473,7 @@ def _readthrough_synthetic_verdicts(readthrough_artifact: dict | None) -> list[d
         out.append({
             "claim_id": f"readthrough-{len(out)}",
             "file": f.get("file") or "",
-            "line_range": f.get("line_range") or "L1",
+            "line_range": _rt_normalize_line_range(f.get("line_range")) or "L1",
             "text": (anchor or mode)[:TEXT_TRUNC],
             "type": f"readthrough-{mode}",
             "route": "preflight",
@@ -511,8 +551,22 @@ def touches_programs(diff_files: list[str]) -> bool:
 # ---- section renderers -----------------------------------------------------
 
 
-def render_header(timestamp: str) -> str:
-    return f"## Pre-merge Review — Last updated {timestamp}"
+def render_header(timestamp: str, head_sha: str = "") -> str:
+    """Header line plus, when the head SHA is known, a machine-readable
+    freshness sentinel. The sentinel exists because an entire class of pusher
+    (the Copilot coding agent, `GITHUB_TOKEN` pushes) never fires the
+    `pull_request: synchronize` event, so the `review:stale` label can miss a
+    push entirely (PR #20556 closed wearing `review:no-blockers` while the
+    pinned review described content a later conflict-resolution commit had
+    replaced). Label-independent consumers (`/pr-review` Step 2, the
+    review-label-reconcile workflow) compare this SHA against the PR head —
+    an exact check, immune to suppressed webhooks. The re-entrant update path
+    must refresh it alongside the `Last updated` timestamp (see
+    `docs-review:references:update`)."""
+    header = f"## Pre-merge Review — Last updated {timestamp}"
+    if head_sha:
+        header += f"\n<!-- CLAUDE_REVIEW_HEAD {head_sha} -->"
+    return header
 
 
 def count_verifier_outages(verdicts: list[dict] | None) -> tuple[int, int]:
@@ -621,7 +675,8 @@ def render_investigation_log(
         y = len(fact_verdicts)
         x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
         n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
-        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+        n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
         i_inline = route_counts.get("inline", 0)
         p1 = route_counts.get("pass1", 0)
         f2 = route_counts.get("pass2", 0)
@@ -629,7 +684,8 @@ def render_investigation_log(
         k_corr = route_counts.get("k_corr", 0)
         seg = (
             f"- **External claim verification:** {x} of {y} claims verified "
-            f"({n_unver} unverifiable, {n_contra} contradicted) · "
+            f"({n_unver} unverifiable, {n_contra} contradicted"
+            f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
             f"4 specialists (numerical, cross-reference, capability, framing); "
             f"{k_corr} cross-specialist corroborations · "
             f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
@@ -776,13 +832,24 @@ def _evidence_pointer(v: dict) -> str:
 
 
 def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, int, int, int, int]:
-    """Return (block, n, x_verified, y_unverifiable, z_contradicted)."""
+    """Return (block, n_claims, x_verified, y_unverifiable, z_contradicted).
+
+    `n_claims` excludes `route: "preflight"` detector synthetics (Hugo build,
+    frontmatter collisions, readthrough coherence). They are not claims, they
+    are counted in none of x/y/z, and the investigation log's "X of Y claims
+    verified" already excludes them (compute_route_counts) — so counting them
+    in N made the two headline numbers disagree by exactly the detector count
+    and gave the 🚩 lines a phantom presence in a claim tally. They get their
+    own trailing count instead.
+    """
     if not verdicts:
         return ("### 🔍 Verification trail\n\n_No verifiable claims extracted from this diff._", 0, 0, 0, 0)
-    n = len(verdicts)
+    n_detector = sum(1 for v in verdicts if v.get("route") == "preflight")
+    n = len(verdicts) - n_detector
     x = sum(1 for v in verdicts if v.get("verdict") in ("verified", "matches"))
     y = sum(1 for v in verdicts if v.get("verdict") == "unverifiable")
-    z = sum(1 for v in verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+    z = sum(1 for v in verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+    n_drift = sum(1 for v in verdicts if v.get("verdict") in DRIFT_VERDICTS)
     lines: list[str] = []
     for v in verdicts:
         verdict = v.get("verdict")
@@ -799,10 +866,17 @@ def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, 
         file_path = (v.get("file") or "").strip()
         file_in = f" in `{file_path}`" if file_path else ""
         lines.append(f"- {first}{file_in} {text}{also} → {emoji} {verdict} ({pointer})")
+    drift_part = f" · <strong>{n_drift}</strong> framing-drift" if n_drift else ""
+    detector_part = ""
+    if n_detector:
+        detector_part = (
+            f" · <strong>{n_detector}</strong> detector "
+            f"finding{'' if n_detector == 1 else 's'}"
+        )
     header = (
         f"<details>\n<summary><strong>{n} claims extracted</strong> · "
         f"<strong>{x}</strong> verified · <strong>{y}</strong> unverifiable · "
-        f"<strong>{z}</strong> contradicted</summary>"
+        f"<strong>{z}</strong> contradicted{drift_part}{detector_part}</summary>"
     )
     block = "### 🔍 Verification trail\n\n" + header + "\n\n" + "\n".join(lines) + "\n\n</details>"
     if degraded_note:
@@ -1064,8 +1138,22 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
                         "If pre-existing on a line this PR didn't touch, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`. "
                         "`trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.")
             outstanding.append(_stub_bullet(v, todo))
+        elif verdict == "framing-drift":
+            lowconf.append(_stub_bullet(
+                v, "this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning "
+                   "differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite "
+                   "that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding "
+                   "if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would "
+                   "materially mislead a reader; move to 📋 Triaged with `**Spurious:**` only if the framing comparison "
+                   "itself is wrong."))
         elif verdict == "unverifiable":
-            if PROMOTE_UNVERIFIABLE_TO == "outstanding":
+            if v.get("turn_cap_exhausted"):
+                lowconf.append(_stub_bullet(
+                    v, "this `unverifiable` is a TURN-BUDGET failure (the verifier ran out of turns), NOT evidence that "
+                       "no authoritative source exists — never describe it as 'out of scope' or 'can't be verified'. "
+                       "Verify it yourself in-review if cheap (one gh read / one fetch), else file the author-question "
+                       "line saying verification ran out of budget and the claim is retryable."))
+            elif PROMOTE_UNVERIFIABLE_TO == "outstanding":
                 outstanding.append(_stub_bullet(
                     v, "if this isn't actually a checkable factual claim, it should be `not-a-claim` not `unverifiable`; "
                        "otherwise file the author-question buffer line and keep here. "
@@ -1113,7 +1201,14 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
             verd = x.get("verdict")
             if verd in ("verified", "matches"):
                 v += 1
-            elif verd in ("contradicted", "mismatch"):
+            elif verd in CONTRADICTION_FAMILY or verd in DRIFT_VERDICTS:
+                # `framing-drift` rides the `contradicted` column here, unlike
+                # the two headline tallies. This triple's shape is pinned by
+                # validate-pinned.py's PASS2_OUTCOME_RE / PASS3_OUTCOME_RE
+                # (`verified N, contradicted N, unverifiable N`), and it is a
+                # routing diagnostic rather than a reader-facing count — better
+                # grouped with the disagreements than silently counted as
+                # `unverifiable`, which is what the plain `else` would do.
                 c += 1
             else:  # unverifiable / not-a-claim (rare on an external lane)
                 u += 1
@@ -1247,7 +1342,7 @@ def compose(args: argparse.Namespace) -> str:
     if outage_banner:
         forced_levels["facts"] = ("LOW", "automated fact-checking errored — claims unverified")
 
-    sections: list[str] = [render_header(timestamp), ""]
+    sections: list[str] = [render_header(timestamp, head_sha), ""]
     if outage_banner:
         sections += [outage_banner, ""]
     sections += [

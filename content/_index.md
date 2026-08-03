@@ -8,6 +8,8 @@ include_organization_schema: true
 sections:
   - type: hero
     layout: split
+    cta_secondary_text: Download open source
+    cta_secondary_link: /docs/install/
     badge_highlight_text: "New Release:"
     badge_text: "Building for the Agentic Era"
     badge_link: /releases/agentic-infrastructure-era/
