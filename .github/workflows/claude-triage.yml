@@ -239,6 +239,7 @@ jobs:
           # the Vale step in claude-code-review.yml. Findings are filtered
           # to PR-added lines so we don't surface pre-existing prose.
           VALE_CONCERNS=""
+          VALE_BLOCKERS=""
           if [[ "$PROSE_CHECK_NEEDED" == "true" ]]; then
             VALE_FILES=$(gh pr diff "$PR" --repo "$REPO" --name-only \
               | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
@@ -248,7 +249,12 @@ jobs:
               python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
                 --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
                 || echo '[]' > .vale-findings.json
-              VALE_CONCERNS=$(jq -r '.[] | "\(.file):\(.line) — \(.category): \(.message)"' .vale-findings.json)
+              # Blocker-tier findings (the blocker: allowlist in
+              # vale-deterministic-fixes.yaml) surface with a distinct
+              # [blocker] prefix so trivial-PR authors see the correctness
+              # errors first; the comment itself stays advisory on this lane.
+              VALE_BLOCKERS=$(jq -r '.[] | select(.blocker) | "\(.file):\(.line) — \(.category): \(.message)"' .vale-findings.json)
+              VALE_CONCERNS=$(jq -r '.[] | select(.blocker | not) | "\(.file):\(.line) — \(.category): \(.message)"' .vale-findings.json)
             fi
           fi
 
@@ -267,7 +273,7 @@ jobs:
           # Prose concerns flag — applies to either trivial or
           # frontmatter-only when EITHER the Haiku spelling/grammar check
           # OR the Vale style check turned up issues.
-          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" ) ]]; then
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" || -n "$VALE_BLOCKERS" ) ]]; then
             TARGET["review:prose-flagged"]=1
           fi
 
@@ -318,14 +324,18 @@ jobs:
                   [[ -n "$cid" ]] && gh api -X DELETE "repos/$REPO/issues/comments/$cid" >/dev/null 2>&1 || true
                 done
 
-          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" ) ]]; then
+          if [[ "$PROSE_CHECK_NEEDED" == "true" && ( -n "$PROSE_CONCERNS" || -n "$VALE_CONCERNS" || -n "$VALE_BLOCKERS" ) ]]; then
               if [[ "$TRIVIAL" == "true" ]]; then
                 SHORTCIRCUIT_LABEL="review:trivial"
               else
                 SHORTCIRCUIT_LABEL="review:frontmatter-only"
               fi
               BULLETS=""
+              if [[ -n "$VALE_BLOCKERS" ]]; then
+                BULLETS+=$(echo "$VALE_BLOCKERS" | sed 's/^/- [blocker] /')
+              fi
               if [[ -n "$PROSE_CONCERNS" ]]; then
+                [[ -n "$BULLETS" ]] && BULLETS+=$'\n'
                 BULLETS+=$(echo "$PROSE_CONCERNS" | sed 's/^/- [spelling] /')
               fi
               if [[ -n "$VALE_CONCERNS" ]]; then

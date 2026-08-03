@@ -59,10 +59,10 @@ The workflow ran `compose-review.py` and wrote **`.review-draft.md`** at the wor
 - the bucket-count table (a *starting point* matching the stub-bullet counts);
 - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (✅ `verified` · 🤝 `matches` · ➖ `not-a-claim` · 🤷 `unverifiable` · ❌ `contradicted` · ⚔️ `mismatch` · 🌀 `framing-drift`), evidence pointer, source. **The composed trail is the hard contract — see §3 step 7; do not re-render its lines.**
 - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
-- the `#### Style findings` block (from `.vale-findings.json`, with the inline-vs-collapse render mode already chosen);
+- the `#### Style findings` block (advisory Vale findings from `.vale-findings.json`, always collapsed, uncounted) plus any `[style-blocker]` bullets in 🚨 Outstanding (blocker-tier Vale findings, counted — never delete or demote these);
 - the empty 💡 / ✅ forms;
 - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
-- stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker. When a section has findings it opens with an italic guidance one-liner under the heading (`*These must be resolved or refuted before merging.*` for 🚨 Outstanding; `*Review each and resolve as appropriate — these don't block the PR.*` for ⚠️ Low-confidence) — same pattern as `*Found by pattern-based linting; Findings may be false positives.*` under `#### Style findings`.
+- stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker. When a section has findings it opens with an italic guidance one-liner under the heading (`*These must be resolved or refuted before merging.*` for 🚨 Outstanding; `*Review each and resolve as appropriate — these don't block the PR.*` for ⚠️ Low-confidence) — same pattern as the pattern-based-linting caption under `#### Style findings`.
 
 **Do NOT rebuild any of these from scratch. Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view.** Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents — extraction already happened.
 
@@ -110,7 +110,7 @@ Vendor / entity mention counts, FAQ steering ratios — if §📊 is in rich for
 </step>
 
 <step number="7" name="Keep the body self-consistent">
-Count-table cells == bucket-bullet counts (style findings count in ⚠️). Every 🔍 trail line corresponds to a verdict; you may add a claim the artifact missed but may NOT drop a candidate-claims-floor entry (`docs-review:references:fact-check`). Every `**[L…]**` bucket bullet matches a trail record. **Never re-render a composed 🔍 trail line except to fix a literal rendering bug — and never drop, paraphrase, or truncate the `<evidence>; source: …>` parenthetical.** In particular, the `WebSearch ran query "…"` pointer on a Pass-3 unverifiable verdict is load-bearing for `pass-3-unverifiable-evidence` — the composer rendered it verbatim from `.verified-claims.json`; leave it intact.
+Count-table cells == bucket-bullet counts (advisory `[style]` bullets are NOT counted in ⚠️; `[style-blocker]` bullets ARE counted in 🚨). Every 🔍 trail line corresponds to a verdict; you may add a claim the artifact missed but may NOT drop a candidate-claims-floor entry (`docs-review:references:fact-check`). Every `**[L…]**` bucket bullet matches a trail record. **Never re-render a composed 🔍 trail line except to fix a literal rendering bug — and never drop, paraphrase, or truncate the `<evidence>; source: …>` parenthetical.** In particular, the `WebSearch ran query "…"` pointer on a Pass-3 unverifiable verdict is load-bearing for `pass-3-unverifiable-evidence` — the composer rendered it verbatim from `.verified-claims.json`; leave it intact.
 </step>
 
 <step number="8" name="Apply output-format DO-NOT list">

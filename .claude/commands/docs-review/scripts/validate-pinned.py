@@ -366,9 +366,12 @@ def extract_bucket_bullets(body: str, heading_substring: str) -> list[str]:
     counts every top-level finding paragraph so the count-table check stays
     accurate across format variants.
 
-    Sub-bullets (indented), continuation paragraphs (no leading `**`), and
-    style-finding bullets (`- **line N:**`) are still counted as findings —
-    style findings belong in the ⚠️ count per `references/output-format.md`.
+    Sub-bullets (indented) and continuation paragraphs (no leading `**`) are
+    not counted. Style-finding bullets (`- **line N:**`) ARE returned here —
+    callers that must exclude them from a count (the ⚠️ cell excludes advisory
+    style findings per `references/output-format.md`) filter on that prefix.
+    Blocker-tier style bullets (`[style-blocker]`, rendered in 🚨 with a
+    standard `**[L<n>]**` anchor) count like any other finding.
     """
     span = find_section(body, heading_substring)
     if span is None:
@@ -489,7 +492,14 @@ def check_count_table_matches_bullets(ctx: Context) -> list[Violation]:
         )]
 
     actual_outstanding = len(extract_bucket_bullets(ctx.body, "🚨 Outstanding"))
-    actual_low = len(extract_bucket_bullets(ctx.body, "⚠️ Low-confidence"))
+    # Advisory style findings (`- **line N:**` bullets under #### Style
+    # findings) are excluded from the ⚠️ count — they're collapsed, uncounted
+    # nags kept for rule tuning. Blocker-tier style findings live in 🚨 with a
+    # `**[L<n>]**` anchor and are counted there by the line above.
+    actual_low = len([
+        b for b in extract_bucket_bullets(ctx.body, "⚠️ Low-confidence")
+        if not b.lstrip().startswith("- **line ")
+    ])
     actual_pre = len(extract_bucket_bullets(ctx.body, "💡 Pre-existing"))
     actual_resolved = len(extract_bucket_bullets(ctx.body, "✅ Resolved"))
 
@@ -506,7 +516,7 @@ def check_count_table_matches_bullets(ctx: Context) -> list[Violation]:
                 line_ref=f"<bucket count table — {label}>",
                 expected=f"{label} count = {actual_val} (number of bullets in the section)",
                 actual=f"table shows {table_val}",
-                hint=f"Recount the bullets in the {label} section (including any style findings under #### Style findings for ⚠️) and update the table cell.",
+                hint=f"Recount the bullets in the {label} section (style findings under #### Style findings are NOT counted in ⚠️; [style-blocker] bullets ARE counted in 🚨) and update the table cell.",
             ))
     return violations
 
@@ -630,7 +640,7 @@ def check_cross_sibling_math(ctx: Context) -> list[Violation]:
 
 
 def check_style_render_mode(ctx: Context) -> list[Violation]:
-    """Style-findings render mode matches the relaxed rule from output-format.md L252-258."""
+    """Style findings are always rendered collapsed (per-file <details> roll-up), never inline."""
     span = find_section(ctx.body, "⚠️ Low-confidence")
     if span is None:
         return []
@@ -653,34 +663,16 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
     file_count = sum(1 for ln in style_lines if ln.lstrip().startswith("<summary>"))
     has_details = any("<details>" in ln for ln in style_lines)
 
-    # Determine actual mode.
-    actual_mode = "collapse-all" if has_details else "inline-all"
-
-    # Determine expected mode per the relaxed rule:
-    # inline-all when (a) total ≤5 OR (b) concentrate in one file AND total ≤30
-    # collapse-all when files >1 AND total >5, OR total >30
-    if bullet_count <= 5:
-        expected_mode = "inline-all"
-    elif file_count <= 1 and bullet_count <= 30:
-        expected_mode = "inline-all"
-    elif file_count > 1 and bullet_count > 5:
-        expected_mode = "collapse-all"
-    elif bullet_count > 30:
-        expected_mode = "collapse-all"
-    else:
-        expected_mode = actual_mode  # ambiguous — don't flag
-
-    if actual_mode != expected_mode:
+    # Style findings are always collapsed (per-file <details> roll-up),
+    # regardless of count — they're advisory, uncounted nags and must not
+    # add inline reading burden to the ⚠️ section.
+    if bullet_count and not has_details:
         return [Violation(
             rule_id="style-render-mode",
             line_ref="<#### Style findings>",
-            expected=f"{expected_mode} mode (bullets={bullet_count}, files={file_count})",
-            actual=f"{actual_mode} mode rendered",
-            hint=(
-                "Re-render style findings inline (no <details>) — total ≤5 or concentrated in one file."
-                if expected_mode == "inline-all"
-                else "Re-render style findings inside per-file <details> blocks with the per-file roll-up summary."
-            ),
+            expected=f"collapse-all mode (bullets={bullet_count}, files={file_count})",
+            actual="inline-all mode rendered",
+            hint="Re-render style findings inside per-file <details> blocks with the per-file roll-up summary — style findings are always collapsed, never inline.",
         )]
     return []
 
@@ -1408,6 +1400,12 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
             if bullet.lstrip().startswith("- **line "):
                 continue
             prefix = extract_bullet_prefix(bullet)
+            # Blocker-tier style findings carry the standard [L<n>] anchor
+            # (auto-refresh-gate.py needs it) but have no verification-trail
+            # record — Vale findings aren't claims. Exempt them from
+            # trail-matching; the prefix mandate above still applies.
+            if prefix is not None and "[style-blocker]" in bullet:
+                continue
             if prefix is None:
                 violations.append(Violation(
                     rule_id="bucket-bullet-line-range-prefix",
@@ -2332,8 +2330,8 @@ def check_outcome_annotation_shapes(ctx: Context) -> list[Violation]:
 RULES = [
     {
         "id": "count-table",
-        "desc": "Bucket-count table numbers match actual bullet count in each section, including style findings in ⚠️ count.",
-        "hint": "Recount bullets in each section (regular + style under #### Style findings) and update the table number row.",
+        "desc": "Bucket-count table numbers match actual bullet count in each section; advisory style findings are excluded from ⚠️, [style-blocker] bullets count in 🚨.",
+        "hint": "Recount bullets in each section (advisory style bullets under #### Style findings are uncounted) and update the table number row.",
         "check": check_count_table_matches_bullets,
     },
     {
@@ -2350,7 +2348,7 @@ RULES = [
     },
     {
         "id": "style-render-mode",
-        "desc": "Style-findings render mode matches the relaxed inline-vs-collapse rule (output-format.md L252-258).",
+        "desc": "Style findings are always rendered collapsed (per-file <details> roll-up), never inline.",
         "hint": "Inline-all when total ≤5 OR concentrated in one file (≤30); collapse-all when multi-file AND total >5, or total >30.",
         "check": check_style_render_mode,
     },

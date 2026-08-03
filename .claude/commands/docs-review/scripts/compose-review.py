@@ -921,10 +921,10 @@ def render_editorial_balance(eb: dict | None, is_blog: bool) -> str:
     )
 
 
-def render_outstanding(stubs: list[dict]) -> str:
+def render_outstanding(stubs: list[dict], vale_blockers: list[dict]) -> str:
     # Empty form is reader-facing — the "what the reviewer should add here"
     # guidance lives in ci.md §3, never in the published body.
-    if not stubs:
+    if not stubs and not vale_blockers:
         return "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._"
     lines = ["### 🚨 Outstanding in this PR", "", _OUTSTANDING_NOTE, ""]
     # Blank line between bullets renders as a "loose list" — each bullet gets
@@ -935,6 +935,21 @@ def render_outstanding(stubs: list[dict]) -> str:
         if i > 0:
             lines.append("")
         lines.append(s["bullet"])
+    # Blocker-tier Vale findings (the `blocker:` allowlist in
+    # vale-deterministic-fixes.yaml): correctness errors with near-zero
+    # false-positive rates. Rendered with the standard `**[L<n>]**` anchor so
+    # auto-refresh-gate.py can match a fix-push against them, plus a
+    # `[style-blocker]` marker that exempts them from trail-matching in
+    # validate-pinned.py (they have no verification-trail record) and tells
+    # the reviewer these are composer-rendered, not model findings.
+    for i, f in enumerate(vale_blockers):
+        if stubs or i > 0:
+            lines.append("")
+        fname = str(f.get("file") or "").strip()
+        file_part = f" `{fname}` —" if fname else ""
+        cat = str(f.get("category") or "style")
+        msg = str(f.get("message") or "").strip()
+        lines.append(f"- **[L{f.get('line', '?')}]**{file_part} [style-blocker] _{cat}_ — {msg}")
     return "\n".join(lines)
 
 
@@ -954,54 +969,44 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def _style_mode(total: int, n_files: int) -> str:
-    if total <= 5:
-        return "inline"
-    if n_files <= 1 and total <= 30:
-        return "inline"
-    if total > 30:
-        return "collapse"
-    if n_files > 1 and total > 5:
-        return "collapse"
-    return "inline"
-
-
 def _render_style_findings(findings: list[dict]) -> str:
-    total = len(findings)
+    # Always collapsed and excluded from the ⚠️ count: these are advisory nags
+    # kept in the review for the rule-tuning loop (recurring high-fix-rate
+    # categories get promoted into Vale rules or the blocker tier), not part
+    # of the reviewer's burden. Blocker-tier Vale findings render under 🚨
+    # instead and never reach this function.
     by_file: dict[str, list[dict]] = {}
     for f in findings:
         by_file.setdefault(str(f.get("file") or "?"), []).append(f)
-    n_files = len(by_file)
-    mode = _style_mode(total, n_files)
-    out = ["#### Style findings", "", "*Found by pattern-based linting; Findings may be false positives.*", ""]
-    if mode == "inline":
-        for f in sorted(findings, key=lambda x: (str(x.get("file") or ""), int(x.get("line") or 0))):
-            cat = str(f.get("category") or "style")
-            msg = str(f.get("message") or "").strip()
-            out.append(f"- **line {f.get('line', '?')}:** [style] _{cat}_ — {msg}")
-    else:
-        out.append("<sub>Click each filename to expand.</sub>")
+    out = [
+        "#### Style findings",
+        "",
+        "*Found by pattern-based linting; findings may be false positives. "
+        "These never block and are not counted above — kept for style-rule tuning.*",
+        "",
+    ]
+    out.append("<sub>Click each filename to expand.</sub>")
+    out.append("")
+    for fname in sorted(by_file):
+        items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
+        kind_counts: dict[str, int] = {}
+        for it in items:
+            kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
+        kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        breakdown = ", ".join(f"<strong>{c}</strong> {k}" for k, c in kinds_sorted)
+        out.append("<details>")
+        out.append(f"<summary><strong>{fname}</strong> (<strong>{len(items)}</strong> issues: {breakdown})</summary>")
         out.append("")
-        for fname in sorted(by_file):
-            items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
-            kind_counts: dict[str, int] = {}
-            for it in items:
-                kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
-            kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
-            breakdown = ", ".join(f"<strong>{c}</strong> {k}" for k, c in kinds_sorted)
-            out.append(f"<details>")
-            out.append(f"<summary><strong>{fname}</strong> (<strong>{len(items)}</strong> issues: {breakdown})</summary>")
-            out.append("")
-            for it in items:
-                cat = str(it.get("category") or "style")
-                msg = str(it.get("message") or "").strip()
-                out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
-            out.append("")
-            out.append("</details>")
-            out.append("")
-        # drop trailing blank
-        while out and out[-1] == "":
-            out.pop()
+        for it in items:
+            cat = str(it.get("category") or "style")
+            msg = str(it.get("message") or "").strip()
+            out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
+        out.append("")
+        out.append("</details>")
+        out.append("")
+    # drop trailing blank
+    while out and out[-1] == "":
+        out.pop()
     return "\n".join(out)
 
 
@@ -1316,9 +1321,15 @@ def compose(args: argparse.Namespace) -> str:
     route_counts = compute_route_counts(verdicts, candidate_claims)
 
     outstanding_stubs, lowconf_stubs = build_stubs(verdicts)
-    style_count = len(vale_findings)
-    a = len(outstanding_stubs)
-    b = len(lowconf_stubs) + style_count
+    # Blocker-tier Vale findings (stamped by vale-findings-filter.py from the
+    # `blocker:` allowlist) count toward 🚨 — they drive the
+    # review:outstanding-issues label like any other outstanding finding.
+    # Advisory style findings render collapsed under ⚠️ and are NOT counted:
+    # they're kept for the rule-tuning loop, not the reviewer's burden.
+    vale_blockers = [f for f in vale_findings if f.get("blocker")]
+    vale_nags = [f for f in vale_findings if not f.get("blocker")]
+    a = len(outstanding_stubs) + len(vale_blockers)
+    b = len(lowconf_stubs)
     c_pre = 0
     d_resolved = 0
 
@@ -1371,9 +1382,9 @@ def compose(args: argparse.Namespace) -> str:
         sections.append(eb_block)
         sections.append("")
     sections += [
-        render_outstanding(outstanding_stubs),
+        render_outstanding(outstanding_stubs, vale_blockers),
         "",
-        render_lowconfidence(lowconf_stubs, vale_findings),
+        render_lowconfidence(lowconf_stubs, vale_nags),
         "",
         render_triaged(),
         "",

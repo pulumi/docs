@@ -26,9 +26,13 @@ Orthogonal event flag: a finding is *disputed* when it carries a
 `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` line (adjudication
 "held") or was conceded via a `concede:` annotation (adjudication "conceded").
 
-Style findings (`[style]` bullets under `#### Style findings`) are counted
-separately and never outcome-classified — they are regenerated fresh on every
-re-review and never move to ✅ Resolved, so per-finding tracking would lie.
+Advisory style findings (`[style]` bullets under `#### Style findings`) are
+counted separately and never outcome-classified — they are regenerated fresh
+on every re-review and never move to ✅ Resolved, so per-finding tracking
+would lie. Blocker-tier style findings (`[style-blocker]` bullets in 🚨) are
+deliberately NOT matched by STYLE_BULLET_RE (`[style]` is not a substring of
+`[style-blocker]`): they persist across re-reviews and move to ✅ Resolved
+like any outstanding finding, so they ARE outcome-classified.
 
 This is a telemetry READER, never a gate: unparseable or legacy comment
 formats degrade to `parse_confidence: "low"` (counts-only) or

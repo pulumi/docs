@@ -27,6 +27,23 @@ deterministic_fix:
   - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
   - Google.Spelling             # Single suggested spelling for an unambiguous misspelling.
 
+# Rules elevated to blocker in the pinned PR review: the composer renders these
+# under 🚨 Outstanding (counted, label-driving, auto-refresh-anchored) instead
+# of the advisory Style findings roll-up. A rule earns a place here only when
+# its finding is a *correctness* error (wrong product name, misspelling,
+# grammatical agreement) with a near-zero false-positive rate — not a style
+# preference. Blocker is independent of deterministic_fix: PoliciesSingular is
+# a blocker whose fix needs verb conjugation; CrossReferenceHeadings has a
+# deterministic fix but stays advisory (heading naming is convention, not
+# correctness). vale-findings-filter.py stamps `blocker: true|false` and
+# exempts blockers from the per-file/total caps so one is never silently
+# dropped.
+blocker:
+  - Pulumi.Substitutions        # Banned term with a fixed correct replacement.
+  - Pulumi.Nomenclature         # Misspelled/miscased Pulumi product name.
+  - Pulumi.PoliciesSingular     # Grammatical agreement error ("policies is").
+  - Google.Spelling             # Unambiguous misspelling.
+
 # Deliberately NOT listed (no fixed replacement -> stays flag-only, the reviewer
 # must compose the fix) and why:
 #   Pulumi.DeprecatedProductNames - "Pulumi Service" -> Cloud/ESC/Deployments is context-dependent.

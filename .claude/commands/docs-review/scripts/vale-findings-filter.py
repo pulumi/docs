@@ -15,13 +15,14 @@ omits --pr; the filter then categorizes and caps without diff filtering.
 Caps:
     - 10 findings per file
     - 50 findings total
+    - blocker findings are exempt from both caps (never silently dropped)
 
 Output schema (flat list, sorted by file then line):
     [
       {"file": "content/docs/foo.md", "line": 42,
        "rule": "Pulumi.Substitutions", "category": "substitution",
        "severity": "error", "message": "Use 'select' instead of 'click' ...",
-       "deterministic_fix": true},
+       "deterministic_fix": true, "blocker": true},
       ...
     ]
 
@@ -34,6 +35,10 @@ implementation out of user-facing prose. `category` is derived from
 (allowlisted in vale-deterministic-fixes.yaml). The review-existing-content
 workflow applies those only after confirming the swap preserves meaning in
 context; docs-review ignores the flag and stays advisory.
+
+`blocker` marks findings from the near-zero-false-positive correctness rules
+(the `blocker:` list in the same YAML). compose-review.py renders those under
+🚨 Outstanding instead of the advisory Style findings roll-up.
 
 Empty input or empty intersection produces an empty list (`[]`), never errors.
 The script does not call any APIs except `gh pr diff` to fetch the patch.
@@ -64,30 +69,33 @@ DETERMINISTIC_FIX_RULES_FILE = os.path.join(
 )
 
 
-def load_deterministic_fix_rules() -> frozenset[str]:
-    """Load the deterministic-fix rule allowlist.
+def load_rule_lists() -> tuple[frozenset[str], frozenset[str]]:
+    """Load the deterministic-fix and blocker rule allowlists.
 
-    Degrades gracefully to an empty set if PyYAML or the file is unavailable
+    Degrades gracefully to empty sets if PyYAML or the file is unavailable
     (e.g. an interactive run without PyYAML) -- the only effect is that every
-    finding is stamped deterministic_fix: false. That's safe: the sole consumer
-    of the stamp (the content-review workflow) installs PyYAML before this runs.
+    finding is stamped deterministic_fix: false / blocker: false, i.e. stays
+    advisory. That's safe: CI workflows install PyYAML before this runs.
     """
     try:
         import yaml  # noqa: PLC0415 -- optional; absence must not break the filter.
 
         with open(DETERMINISTIC_FIX_RULES_FILE) as f:
             data = yaml.safe_load(f) or {}
-        return frozenset(data.get("deterministic_fix", []) or [])
+        return (
+            frozenset(data.get("deterministic_fix", []) or []),
+            frozenset(data.get("blocker", []) or []),
+        )
     except Exception as exc:  # noqa: BLE001 -- best-effort; never fail the run.
         print(
-            f"vale-findings-filter: deterministic-fix allowlist unavailable ({exc}); "
-            "stamping all findings deterministic_fix: false",
+            f"vale-findings-filter: rule allowlists unavailable ({exc}); "
+            "stamping all findings deterministic_fix: false, blocker: false",
             file=sys.stderr,
         )
-        return frozenset()
+        return frozenset(), frozenset()
 
 
-DETERMINISTIC_FIX_RULES = load_deterministic_fix_rules()
+DETERMINISTIC_FIX_RULES, BLOCKER_RULES = load_rule_lists()
 
 # Maps Vale rule names to tool-agnostic categories rendered in PR-facing
 # copy. The single source of truth — both CI (--pr) and interactive (no --pr)
@@ -221,21 +229,31 @@ def flatten_vale(raw: dict, allowed_lines: dict[str, set[int]] | None) -> list[d
                     "severity": alert.get("Severity", ""),
                     "message": alert.get("Message", ""),
                     "deterministic_fix": rule in DETERMINISTIC_FIX_RULES,
+                    "blocker": rule in BLOCKER_RULES,
                 }
             )
     return out
 
 
 def cap(findings: list[dict]) -> list[dict]:
-    """Cap to PER_FILE_CAP per file, then TOTAL_CAP overall."""
-    findings.sort(key=lambda f: (f["file"], f["line"]))
+    """Cap to PER_FILE_CAP per file, then TOTAL_CAP overall.
+
+    Blocker findings bypass both caps -- a blocker silently dropped by a cap
+    would understate the 🚨 count. They still count toward neither cap, so a
+    file with many blockers doesn't starve its advisory findings.
+    """
+    blockers = [f for f in findings if f.get("blocker")]
+    advisory = [f for f in findings if not f.get("blocker")]
+    advisory.sort(key=lambda f: (f["file"], f["line"]))
     by_file: dict[str, list[dict]] = defaultdict(list)
-    for f in findings:
+    for f in advisory:
         by_file[f["file"]].append(f)
     capped: list[dict] = []
     for filename in sorted(by_file):
         capped.extend(by_file[filename][:PER_FILE_CAP])
-    return capped[:TOTAL_CAP]
+    result = blockers + capped[:TOTAL_CAP]
+    result.sort(key=lambda f: (f["file"], f["line"]))
+    return result
 
 
 def main() -> int:

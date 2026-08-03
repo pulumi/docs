@@ -32,7 +32,7 @@ Walk these steps in order; stop at the first that yields a scope.
 
 Route each file to a domain via `docs-review:references:domain-routing`, then apply that domain's criteria plus `docs-review:references:shared-criteria`. Render the output per `docs-review:references:output-format`.
 
-For files under `content/docs/` or `content/blog/`, also run Vale and surface its findings under ⚠️ Low-confidence per the Style-findings render contract in `docs-review:references:output-format` (the `**line N:** _category_ — <message>` bullet form, grouped under a `#### Style findings` H4). Pipe through the categorize filter so the JSON has a deterministic `category` field — never surface the raw rule name:
+For files under `content/docs/` or `content/blog/`, also run Vale and surface its findings per the Style-findings render contract in `docs-review:references:output-format`: entries with `"blocker": true` (near-zero-false-positive correctness rules) go in 🚨 Outstanding as `[style-blocker]` bullets; everything else goes under ⚠️ Low-confidence (the `**line N:** [style] _category_ — <message>` bullet form, grouped under a `#### Style findings` H4, always collapsed, not counted). Pipe through the categorize filter so the JSON has a deterministic `category` field — never surface the raw rule name:
 
 ```bash
 vale --no-exit --output=JSON <files> > /tmp/vale-raw.json
