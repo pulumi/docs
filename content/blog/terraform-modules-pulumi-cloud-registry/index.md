@@ -90,7 +90,7 @@ module "vpc" {
 
 Submodules use the usual `//modules/<name>` syntax.
 
-If a version you need has no package, the same conversion can also be run on your own machine, with `pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system>`. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+If a version you need has no package, you can convert the module locally instead, with `pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system>`. That generates an SDK for your project without publishing anything, so it comes without the package page, API reference, and usage tracking. For a full walkthrough, see [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 ## Get started
 
