@@ -54,6 +54,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_API
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the URL of the Pulumi Cloud API that the CLI communicates with when using the Pulumi Cloud backend. Most users should set <span class="font-mono">PULUMI_BACKEND_URL</span> instead, which selects the backend itself; this variable is for advanced scenarios, such as pointing the CLI at a non-default Pulumi Cloud API endpoint.
+        </p>
+        <pre><code class="text-xs">PULUMI_API="https://api.pulumi.com"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_BACKEND_URL
         </span>
     </dt>
@@ -125,17 +136,6 @@ aliases:
             Continues to perform the update/destroy operation despite the occurrence of errors.
         </p>
         <pre><code class="text-xs">PULUMI_CONTINUE_ON_ERROR=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
-            PULUMI_COPILOT
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization.
-        </p>
-        <pre><code class="text-xs">PULUMI_COPILOT=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -452,6 +452,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_NEO
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_COPILOT</span> is still accepted as an alias.
+        </p>
+        <pre><code class="text-xs">PULUMI_NEO=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_PARALLEL
         </span>
     </dt>
@@ -556,14 +567,14 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_SUPPRESS_COPILOT_LINK
+            PULUMI_SUPPRESS_NEO_LINK
         </span>
     </dt>
     <dd>
         <p>
-            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization.
+            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_SUPPRESS_COPILOT_LINK</span> is still accepted as an alias.
         </p>
-        <pre><code class="text-xs">PULUMI_SUPPRESS_COPILOT_LINK=true</code></pre>
+        <pre><code class="text-xs">PULUMI_SUPPRESS_NEO_LINK=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
