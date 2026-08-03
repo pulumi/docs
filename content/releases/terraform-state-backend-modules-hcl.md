@@ -7,9 +7,10 @@ short_description: Pulumi Cloud is now a backend for Terraform state, HCL is a f
 feature_image: /images/releases/august-2026/release-hero-right-light.svg
 feature_image_alt: HCL, Terraform state, and Terraform modules converging on the Pulumi mark
 
-# TODO: add a 1200x628 PNG social card at /images/releases/august-2026/meta.png
-# and set meta_image here. Release detail pages aren't covered by the build-time
-# meta-image generator (only /releases/changelog/ entries are).
+# Release detail pages aren't covered by the build-time meta-image generator
+# (only /releases/changelog/ entries are), so this card is hand-made and lives
+# under static/, which is what a non-blog meta_image path resolves against.
+meta_image: /images/releases/august-2026/meta.png
 
 hero:
   breadcrumb_label: August 2026
