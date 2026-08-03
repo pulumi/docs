@@ -123,7 +123,7 @@
     }
 
     .product-hero-title-secondary {
-        @apply block text-black;
+        @apply block text-black max-w-lg;
     }
 
     .product-hero-title {
@@ -148,6 +148,16 @@
 
         &--split {
             @apply flex flex-col gap-4;
+
+            // sm → md: the cards have stacked but the buttons are already in a
+            // row, so the humans card spans the full width while its buttons hug
+            // their text. Stretch them to fill it. Below sm they are w-full
+            // already; from md the card is shrink-0 and sized to them.
+            @media (min-width: 640px) and (max-width: 767.98px) {
+                > .hero-cta-group:first-child .btn {
+                    @apply flex-1;
+                }
+            }
 
             @include screen-md {
                 @apply flex-row items-stretch;
