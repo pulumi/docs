@@ -107,7 +107,7 @@
            Trim any trailing "." from each part before joining so they don't double-punctuate. */}}
       {{ $descParts := slice }}
       {{ if and .price_label (strings.Contains .price_label "month") }}
-        {{ $descParts = $descParts | append (printf "$%s%s" (string .price | replace "$" "") .price_label) }}
+        {{ $descParts = $descParts | append (printf "$%s%s" $cleanPrice .price_label) }}
       {{ end }}
       {{ if .subtitle }}
         {{ $descParts = $descParts | append (strings.TrimSuffix "." .subtitle) }}
