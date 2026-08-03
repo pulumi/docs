@@ -21,6 +21,7 @@ If your infrastructure was provisioned with Terraform or the CDK for Terraform (
 * **Coexist** with resources provisioned by Terraform or CDKTF by referencing a `.tfstate` file.
 * **Import** existing resources into Pulumi [in the usual way](/docs/iac/guides/migration/import/) or using `pulumi convert --from terraform` along with `pulumi import --from terraform` to adopt all resources from an existing `.tfstate` file.
 * **Convert** any Terraform HCL to Pulumi code using `pulumi convert --from terraform`.
+* **Keep your code in HCL**: run your existing Terraform files directly with Pulumi's [HCL runtime](/docs/iac/languages-sdks/hcl/).
 * **Use Terraform Modules** directly within your Pulumi programs through the [Terraform Module](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) feature.
 
 ## Pulumi Neo (recommended)
@@ -69,6 +70,18 @@ Continue reading below for manual migration approaches if Neo doesn't fit your s
 
 If Neo doesn't support your specific use case, or if you prefer manual control over the migration process, the options below provide flexibility to coexist with or migrate from Terraform at your own pace.
 
+### Keep your code in HCL
+
+If your configuration is fine as it stands and it's the platform you want to change, you don't have to convert anything. Set `runtime: hcl` in `Pulumi.yaml` and Pulumi runs your existing `.tf` files unchanged. See the [HCL language docs](/docs/iac/languages-sdks/hcl/) for details.
+
+State migration still applies. Pulumi does not reuse a Terraform state file in place — state lives in whichever backend `pulumi login` points at — so bring your existing resources across with:
+
+```bash
+$ pulumi import --from hcl terraform.tfstate
+```
+
+This reads a Terraform or OpenTofu state file and imports every managed resource in the root module into your stack. Resources nested inside modules are skipped with a warning; import those [in the usual way](/docs/iac/guides/migration/import/).
+
 ### State-first migration with pulumi-terraform-migrate
 
 The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) tool provides a state-first approach to migration by translating your Terraform state into Pulumi state. You then use an LLM agent to convert your Terraform code to Pulumi. This approach is useful when:
@@ -107,7 +120,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
    This generates:
    * `pulumi-state.json`: The translated Pulumi state file
    * `required-plugins.json`: A list of required Pulumi plugins and versions
-  
+
    Note that this step must be repeated for each Terraform stack.
 
 1. **Install required plugins and import state**:

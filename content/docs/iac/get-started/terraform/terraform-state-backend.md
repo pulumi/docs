@@ -451,7 +451,9 @@ You can find version numbers in the stack's **Activity** tab in the Pulumi Cloud
 
 ### Can I use drift detection or Pulumi Deployments with Terraform-managed stacks?
 
-Not currently. Drift detection and [Pulumi Deployments](/docs/pulumi-cloud/deployments/) require a Pulumi program to execute. If you want these features, you can [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) and then run updates with the Pulumi CLI.
+Not currently. Drift detection and [Pulumi Deployments](/docs/pulumi-cloud/deployments/) require a Pulumi program to execute. To get a Pulumi program you have two options: run your existing `.tf` files as-is with the [HCL runtime](/docs/iac/languages-sdks/hcl/), or [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/). Either way, updates then run with the Pulumi CLI.
+
+Note that this is a different arrangement from using Pulumi Cloud as a Terraform state backend. Under the HCL runtime, state is Pulumi's own — it lives wherever you have `pulumi login` pointed, and a `terraform { backend { ... } }` block in your configuration is accepted but ignored with a warning. Your existing resources are not inherited from the Terraform state file; you adopt them with `pulumi import --from hcl terraform.tfstate`.
 
 ### Can I use preventative policies?
 
