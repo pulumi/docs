@@ -267,7 +267,7 @@ jobs:
       meta: ${{ steps.emit.outputs.meta }}
     steps:
       - name: Download queue artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: blog-review-queue
       - name: Emit queue outputs
@@ -503,7 +503,7 @@ jobs:
 
       - name: Download findings artifacts
         continue-on-error: true
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           pattern: blog-review-findings-*
           path: .findings-artifacts

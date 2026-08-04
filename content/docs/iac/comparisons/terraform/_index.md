@@ -144,7 +144,7 @@ Yes. Pulumi can [use existing Terraform modules directly](/docs/iac/guides/build
 
 ### How do I migrate from Terraform to Pulumi?
 
-You have three options that can be combined: convert HCL with [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi), bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/), or run both tools side by side and reference [existing Terraform state](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#referencing-terraform-state) from Pulumi until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for a full walkthrough.
+You have four options that can be combined: run your existing `.tf` files as-is on [Pulumi HCL](/docs/iac/languages-sdks/hcl/), convert HCL to another language with [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi), bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/) (including `pulumi import --from hcl` to bulk-import from a Terraform state file), or run both tools side by side and reference [existing Terraform state](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#referencing-terraform-state) from Pulumi until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for a full walkthrough.
 
 ### Is Pulumi free and open source like Terraform used to be?
 
@@ -169,6 +169,7 @@ Yes. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a supported language: a proj
 ## Next steps
 
 * [Get started with Pulumi](/docs/iac/get-started/)
+* [Pulumi HCL: run Terraform HCL on Pulumi](/docs/iac/languages-sdks/hcl/)
 * [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
 * [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/)
 * [Writing Pulumi programs in HCL](/docs/iac/languages-sdks/hcl/)

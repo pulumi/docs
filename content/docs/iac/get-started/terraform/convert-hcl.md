@@ -9,9 +9,18 @@ menu:
         name: Convert HCL Code
         parent: terraform-get-started
         weight: 7
-
-aliases:
 ---
+
+## Do you need to convert?
+
+Converting is not the only way to run Terraform configuration with Pulumi. Pulumi's [HCL runtime](/docs/iac/languages-sdks/hcl/) runs your existing `.tf` files directly: set `runtime: hcl` in `Pulumi.yaml` and `pulumi up` deploys the configuration you already have, unchanged.
+
+Which path you take comes down to what you want out of the move:
+
+* **Run your HCL natively** when you want to keep writing HCL and are after Pulumi's engine, state management, secrets, and cloud platform.
+* **Convert** when you want the infrastructure code itself in a general-purpose language, for the testing, abstraction, and IDE support that comes with TypeScript, Python, Go, C#, or Java.
+
+The rest of this page covers converting.
 
 ## When to convert
 
@@ -27,7 +36,10 @@ Converting HCL to Pulumi code makes sense in several scenarios:
 
 ### Automated conversion with `pulumi convert`
 
-The `pulumi convert` command can automatically translate Terraform configurations to Pulumi programs.
+The `pulumi convert` command can automatically translate Terraform configurations to Pulumi programs. Two converters read HCL, selected with `--from`:
+
+* `--from terraform` is the long-standing Terraform converter. Reach for it for a one-off translation of Terraform configuration you have been running with the Terraform or OpenTofu CLI.
+* `--from hcl` is the converter that ships alongside Pulumi's [HCL runtime](/docs/iac/languages-sdks/hcl/), and reads your configuration the same way the runtime executes it. Reach for it when you have been running your `.tf` files under `runtime: hcl` and now want that same program in another language.
 
 First, ensure you have a Terraform configuration:
 
@@ -204,6 +216,9 @@ $ pulumi convert --from terraform --language java --out ./pulumi-converted
 
 # Convert to YAML
 $ pulumi convert --from terraform --language yaml --out ./pulumi-converted
+
+# Convert with the HCL runtime's converter instead of the Terraform converter
+$ pulumi convert --from hcl --language typescript --out ./pulumi-converted
 ```
 
 ### Converted TypeScript example
@@ -223,6 +238,11 @@ const config = new pulumi.Config();
 const awsRegion = config.get("awsRegion") || "us-west-2";
 const instanceType = config.get("instanceType") || "t3.micro";
 
+// Configure the AWS provider
+const awsProvider = new aws.Provider("aws", {
+    region: awsRegion,
+});
+
 // Data source for Amazon Linux AMI
 const amazonLinux = aws.ec2.getAmiOutput({
     mostRecent: true,
@@ -231,6 +251,8 @@ const amazonLinux = aws.ec2.getAmiOutput({
         name: "name",
         values: ["amzn2-ami-hvm-*-x86_64-gp2"],
     }],
+}, {
+    provider: awsProvider,
 });
 
 // Create VPC
@@ -241,6 +263,8 @@ const main = new aws.ec2.Vpc("main", {
     tags: {
         Name: "main-vpc",
     },
+}, {
+    provider: awsProvider,
 });
 
 // Create public subnet
@@ -252,6 +276,8 @@ const publicSubnet = new aws.ec2.Subnet("public", {
     tags: {
         Name: "public-subnet",
     },
+}, {
+    provider: awsProvider,
 });
 
 // Create internet gateway
@@ -260,6 +286,8 @@ const mainIgw = new aws.ec2.InternetGateway("main", {
     tags: {
         Name: "main-igw",
     },
+}, {
+    provider: awsProvider,
 });
 
 // Create route table
@@ -272,12 +300,16 @@ const publicRt = new aws.ec2.RouteTable("public", {
     tags: {
         Name: "public-rt",
     },
+}, {
+    provider: awsProvider,
 });
 
 // Associate route table with subnet
 const publicRtAssociation = new aws.ec2.RouteTableAssociation("public", {
     subnetId: publicSubnet.id,
     routeTableId: publicRt.id,
+}, {
+    provider: awsProvider,
 });
 
 // Create security group
@@ -310,6 +342,8 @@ const webSg = new aws.ec2.SecurityGroup("web", {
     tags: {
         Name: "web-sg",
     },
+}, {
+    provider: awsProvider,
 });
 
 // Create EC2 instance
@@ -328,6 +362,8 @@ echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/inde
     tags: {
         Name: "web-server",
     },
+}, {
+    provider: awsProvider,
 });
 
 // Outputs
@@ -349,6 +385,9 @@ config = pulumi.Config()
 aws_region = config.get("aws_region") or "us-west-2"
 instance_type = config.get("instance_type") or "t3.micro"
 
+# Configure the AWS provider
+aws_provider = aws.Provider("aws", region=aws_region)
+
 # Data source for Amazon Linux AMI
 amazon_linux = aws.ec2.get_ami(
     most_recent=True,
@@ -356,7 +395,8 @@ amazon_linux = aws.ec2.get_ami(
     filters=[{
         "name": "name",
         "values": ["amzn2-ami-hvm-*-x86_64-gp2"],
-    }]
+    }],
+    opts=pulumi.InvokeOptions(provider=aws_provider)
 )
 
 # Create VPC
@@ -366,7 +406,8 @@ main_vpc = aws.ec2.Vpc("main",
     enable_dns_support=True,
     tags={
         "Name": "main-vpc",
-    }
+    },
+    opts=pulumi.ResourceOptions(provider=aws_provider)
 )
 
 # Create public subnet
@@ -377,7 +418,8 @@ public_subnet = aws.ec2.Subnet("public",
     map_public_ip_on_launch=True,
     tags={
         "Name": "public-subnet",
-    }
+    },
+    opts=pulumi.ResourceOptions(provider=aws_provider)
 )
 
 # Create internet gateway
@@ -385,7 +427,8 @@ main_igw = aws.ec2.InternetGateway("main",
     vpc_id=main_vpc.id,
     tags={
         "Name": "main-igw",
-    }
+    },
+    opts=pulumi.ResourceOptions(provider=aws_provider)
 )
 
 # Create route table
@@ -397,13 +440,15 @@ public_rt = aws.ec2.RouteTable("public",
     }],
     tags={
         "Name": "public-rt",
-    }
+    },
+    opts=pulumi.ResourceOptions(provider=aws_provider)
 )
 
 # Associate route table with subnet
 public_rt_association = aws.ec2.RouteTableAssociation("public",
     subnet_id=public_subnet.id,
-    route_table_id=public_rt.id
+    route_table_id=public_rt.id,
+    opts=pulumi.ResourceOptions(provider=aws_provider)
 )
 
 # Create security group
@@ -435,7 +480,8 @@ web_sg = aws.ec2.SecurityGroup("web",
     }],
     tags={
         "Name": "web-sg",
-    }
+    },
+    opts=pulumi.ResourceOptions(provider=aws_provider)
 )
 
 # Create EC2 instance
@@ -453,7 +499,8 @@ echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/inde
 """,
     tags={
         "Name": "web-server",
-    }
+    },
+    opts=pulumi.ResourceOptions(provider=aws_provider)
 )
 
 # Outputs
@@ -470,6 +517,7 @@ pulumi.export("website_url", pulumi.Output.format("http://{0}", web_instance.pub
 package main
 
 import (
+	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
@@ -488,6 +536,14 @@ func main() {
 			instanceType = "t3.micro"
 		}
 
+		// Configure the AWS provider
+		awsProvider, err := aws.NewProvider(ctx, "aws", &aws.ProviderArgs{
+			Region: pulumi.StringPtr(awsRegion),
+		})
+		if err != nil {
+			return err
+		}
+
 		// Data source for Amazon Linux AMI
 		amazonLinux, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
 			MostRecent: pulumi.BoolRef(true),
@@ -498,7 +554,7 @@ func main() {
 					Values: []string{"amzn2-ami-hvm-*-x86_64-gp2"},
 				},
 			},
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -511,7 +567,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("main-vpc"),
 			},
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -525,7 +581,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("public-subnet"),
 			},
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -536,7 +592,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("main-igw"),
 			},
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -553,7 +609,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("public-rt"),
 			},
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -562,7 +618,7 @@ func main() {
 		_, err = ec2.NewRouteTableAssociation(ctx, "public", &ec2.RouteTableAssociationArgs{
 			SubnetId:     publicSubnet.ID(),
 			RouteTableId: publicRt.ID(),
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -599,7 +655,7 @@ func main() {
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("web-sg"),
 			},
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -620,7 +676,7 @@ echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/inde
 			Tags: pulumi.StringMap{
 				"Name": pulumi.String("web-server"),
 			},
-		})
+		}, pulumi.Provider(awsProvider))
 		if err != nil {
 			return err
 		}
@@ -650,6 +706,12 @@ return await Deployment.RunAsync(() =>
     var awsRegion = config.Get("awsRegion") ?? "us-west-2";
     var instanceType = config.Get("instanceType") ?? "t3.micro";
 
+    // Configure the AWS provider
+    var awsProvider = new Pulumi.Aws.Provider("aws", new Pulumi.Aws.ProviderArgs
+    {
+        Region = awsRegion,
+    });
+
     // Data source for Amazon Linux AMI
     var amazonLinux = GetAmi.Invoke(new GetAmiInvokeArgs
     {
@@ -663,7 +725,7 @@ return await Deployment.RunAsync(() =>
                 Values = new[] { "amzn2-ami-hvm-*-x86_64-gp2" },
             },
         },
-    });
+    }, new InvokeOptions { Provider = awsProvider });
 
     // Create VPC
     var mainVpc = new Vpc("main", new VpcArgs
@@ -675,7 +737,7 @@ return await Deployment.RunAsync(() =>
         {
             ["Name"] = "main-vpc",
         },
-    });
+    }, new CustomResourceOptions { Provider = awsProvider });
 
     // Create public subnet
     var publicSubnet = new Subnet("public", new SubnetArgs
@@ -688,7 +750,7 @@ return await Deployment.RunAsync(() =>
         {
             ["Name"] = "public-subnet",
         },
-    });
+    }, new CustomResourceOptions { Provider = awsProvider });
 
     // Create internet gateway
     var mainIgw = new InternetGateway("main", new InternetGatewayArgs
@@ -698,7 +760,7 @@ return await Deployment.RunAsync(() =>
         {
             ["Name"] = "main-igw",
         },
-    });
+    }, new CustomResourceOptions { Provider = awsProvider });
 
     // Create route table
     var publicRt = new RouteTable("public", new RouteTableArgs
@@ -716,14 +778,14 @@ return await Deployment.RunAsync(() =>
         {
             ["Name"] = "public-rt",
         },
-    });
+    }, new CustomResourceOptions { Provider = awsProvider });
 
     // Associate route table with subnet
     var publicRtAssociation = new RouteTableAssociation("public", new RouteTableAssociationArgs
     {
         SubnetId = publicSubnet.Id,
         RouteTableId = publicRt.Id,
-    });
+    }, new CustomResourceOptions { Provider = awsProvider });
 
     // Create security group
     var webSg = new SecurityGroup("web", new SecurityGroupArgs
@@ -764,7 +826,7 @@ return await Deployment.RunAsync(() =>
         {
             ["Name"] = "web-sg",
         },
-    });
+    }, new CustomResourceOptions { Provider = awsProvider });
 
     // Create EC2 instance
     var webInstance = new Instance("web", new InstanceArgs
@@ -784,7 +846,7 @@ echo ""<h1>Hello from Pulumi converted infrastructure!</h1>"" > /var/www/html/in
         {
             ["Name"] = "web-server",
         },
-    });
+    }, new CustomResourceOptions { Provider = awsProvider });
 
     return new Dictionary<string, object?>
     {
@@ -803,6 +865,8 @@ echo ""<h1>Hello from Pulumi converted infrastructure!</h1>"" > /var/www/html/in
 package myproject;
 
 import com.pulumi.Pulumi;
+import com.pulumi.aws.Provider;
+import com.pulumi.aws.ProviderArgs;
 import com.pulumi.aws.ec2.Ec2Functions;
 import com.pulumi.aws.ec2.Instance;
 import com.pulumi.aws.ec2.InstanceArgs;
@@ -824,6 +888,8 @@ import com.pulumi.aws.ec2.inputs.RouteTableRouteArgs;
 import com.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
 import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import com.pulumi.core.Output;
+import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.resources.CustomResourceOptions;
 
 import java.util.List;
 import java.util.Map;
@@ -836,6 +902,15 @@ public class App {
             var awsRegion = config.get("awsRegion").orElse("us-west-2");
             var instanceType = config.get("instanceType").orElse("t3.micro");
 
+            // Configure the AWS provider
+            var awsProvider = new Provider("aws", ProviderArgs.builder()
+                .region(awsRegion)
+                .build());
+
+            var providerOptions = CustomResourceOptions.builder()
+                .provider(awsProvider)
+                .build();
+
             // Data source for Amazon Linux AMI
             var amazonLinux = Ec2Functions.getAmi(GetAmiArgs.builder()
                 .mostRecent(true)
@@ -844,7 +919,10 @@ public class App {
                     .name("name")
                     .values("amzn2-ami-hvm-*-x86_64-gp2")
                     .build())
-                .build());
+                .build(),
+                InvokeOptions.builder()
+                    .provider(awsProvider)
+                    .build());
 
             // Create VPC
             var mainVpc = new Vpc("main", VpcArgs.builder()
@@ -852,7 +930,7 @@ public class App {
                 .enableDnsHostnames(true)
                 .enableDnsSupport(true)
                 .tags(Map.of("Name", "main-vpc"))
-                .build());
+                .build(), providerOptions);
 
             // Create public subnet
             var publicSubnet = new Subnet("public", SubnetArgs.builder()
@@ -861,13 +939,13 @@ public class App {
                 .availabilityZone("us-west-2a")
                 .mapPublicIpOnLaunch(true)
                 .tags(Map.of("Name", "public-subnet"))
-                .build());
+                .build(), providerOptions);
 
             // Create internet gateway
             var mainIgw = new InternetGateway("main", InternetGatewayArgs.builder()
                 .vpcId(mainVpc.id())
                 .tags(Map.of("Name", "main-igw"))
-                .build());
+                .build(), providerOptions);
 
             // Create route table
             var publicRt = new RouteTable("public", RouteTableArgs.builder()
@@ -877,13 +955,13 @@ public class App {
                     .gatewayId(mainIgw.id())
                     .build())
                 .tags(Map.of("Name", "public-rt"))
-                .build());
+                .build(), providerOptions);
 
             // Associate route table with subnet
             var publicRtAssociation = new RouteTableAssociation("public", RouteTableAssociationArgs.builder()
                 .subnetId(publicSubnet.id())
                 .routeTableId(publicRt.id())
-                .build());
+                .build(), providerOptions);
 
             // Create security group
             var webSg = new SecurityGroup("web", SecurityGroupArgs.builder()
@@ -913,7 +991,7 @@ public class App {
                     .cidrBlocks("0.0.0.0/0")
                     .build())
                 .tags(Map.of("Name", "web-sg"))
-                .build());
+                .build(), providerOptions);
 
             // Create EC2 instance
             var webInstance = new Instance("web", InstanceArgs.builder()
@@ -930,7 +1008,7 @@ public class App {
                     echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/index.html
                     """)
                 .tags(Map.of("Name", "web-server"))
-                .build());
+                .build(), providerOptions);
 
             // Outputs
             ctx.export("vpcId", mainVpc.id());
@@ -969,8 +1047,16 @@ variables:
         filters:
           - name: name
             values: ["amzn2-ami-hvm-*-x86_64-gp2"]
+      options:
+        provider: ${aws-provider}
 
 resources:
+  # Configure the AWS provider
+  aws-provider:
+    type: pulumi:providers:aws
+    properties:
+      region: ${awsRegion}
+
   # Create VPC
   main:
     type: aws:ec2:Vpc
@@ -980,6 +1066,8 @@ resources:
       enableDnsSupport: true
       tags:
         Name: main-vpc
+    options:
+      provider: ${aws-provider}
 
   # Create public subnet
   public:
@@ -991,6 +1079,8 @@ resources:
       mapPublicIpOnLaunch: true
       tags:
         Name: public-subnet
+    options:
+      provider: ${aws-provider}
 
   # Create internet gateway
   main-igw:
@@ -999,6 +1089,8 @@ resources:
       vpcId: ${main.id}
       tags:
         Name: main-igw
+    options:
+      provider: ${aws-provider}
 
   # Create route table
   public-rt:
@@ -1010,6 +1102,8 @@ resources:
           gatewayId: ${main-igw.id}
       tags:
         Name: public-rt
+    options:
+      provider: ${aws-provider}
 
   # Associate route table with subnet
   public-rt-association:
@@ -1017,6 +1111,8 @@ resources:
     properties:
       subnetId: ${public.id}
       routeTableId: ${public-rt.id}
+    options:
+      provider: ${aws-provider}
 
   # Create security group
   web-sg:
@@ -1043,6 +1139,8 @@ resources:
           cidrBlocks: ["0.0.0.0/0"]
       tags:
         Name: web-sg
+    options:
+      provider: ${aws-provider}
 
   # Create EC2 instance
   web:
@@ -1061,6 +1159,8 @@ resources:
         echo "<h1>Hello from Pulumi converted infrastructure!</h1>" > /var/www/html/index.html
       tags:
         Name: web-server
+    options:
+      provider: ${aws-provider}
 
 outputs:
   vpcId: ${main.id}
@@ -1077,6 +1177,7 @@ Deploy and verify that the converted code produces the same infrastructure:
 ```bash
 # Initialize the new Pulumi project
 $ cd pulumi-converted
+$ pulumi stack init dev
 $ pulumi up
 
 # Test the deployment
@@ -1097,7 +1198,7 @@ After converting existing infrastructure, verify that your Pulumi program produc
 The resource IDs below (`vpc-12345`, `subnet-67890`, `i-abcdef123`) are placeholders. Replace them with the actual IDs of your existing resources, which you can find in your Terraform state (for example, with `terraform state show <resource>`) or in your cloud provider's console. Run these commands from within your converted Pulumi project directory.
 
 ```bash
-# Import the existing Terraform state
+# Import individual resources by ID
 $ pulumi import aws:ec2/vpc:Vpc main vpc-12345
 $ pulumi import aws:ec2/subnet:Subnet public subnet-67890
 $ pulumi import aws:ec2/instance:Instance web i-abcdef123
@@ -1108,15 +1209,23 @@ $ pulumi preview
 # Expected result: "no changes required"
 ```
 
+For anything beyond a handful of resources, import in bulk from the Terraform state file instead:
+
+```bash
+$ pulumi import --from hcl terraform.tfstate
+```
+
+This reads a Terraform or OpenTofu state file and imports every managed resource in its root module in one pass. Resources nested inside modules are skipped with a warning, so import those individually with the per-resource form above. The state file itself is only read — Pulumi does not adopt or reuse it, and subsequent updates use Pulumi's own state.
+
 This verification step is crucial when converting production infrastructure, as it confirms your Pulumi program exactly matches the existing Terraform-managed resources.
 
 ## AI-assisted conversion with the Pulumi MCP server
 
-For complex Terraform configurations, you can use AI tools like [Claude](https://www.anthropic.com/claude-code) with the [Pulumi MCP (Model Context Protocol) server](/docs/iac/using-pulumi/mcp-server), which provides comprehensive Pulumi integration, including a specialized Terraform conversion prompt.
+For complex Terraform configurations, you can use AI tools like [Claude](https://www.anthropic.com/claude-code) with the [Pulumi MCP (Model Context Protocol) server](/docs/ai/mcp-server/), which provides comprehensive Pulumi integration, including a specialized Terraform conversion prompt.
 
 ### Using the Pulumi MCP server (recommended)
 
-The [Pulumi MCP server](/docs/iac/using-pulumi/mcp-server) enables AI assistants to interact with Pulumi programmatically. Beyond conversion, it provides full infrastructure management capabilities including stack operations, resource querying, and automated deployments.
+The [Pulumi MCP server](/docs/ai/mcp-server/) enables AI assistants to interact with Pulumi programmatically. Beyond conversion, it provides full infrastructure management capabilities including stack operations, resource querying, and automated deployments.
 
 The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt that ensures:
 
@@ -1131,10 +1240,10 @@ The MCP server includes a sophisticated `convert-terraform-to-typescript` prompt
 1. **Install via Claude Code** (if using Claude):
 
    ```bash
-   $ claude mcp add -s user pulumi -- npx @pulumi/mcp-server@latest stdio
+   $ claude mcp add --transport http pulumi https://mcp.ai.pulumi.com/mcp
    ```
-  
-   Follow the complete setup instructions in the [Pulumi MCP server docs](/docs/iac/using-pulumi/mcp-server).
+
+   Follow the complete setup instructions in the [Pulumi MCP server docs](/docs/ai/mcp-server/).
 
 2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)
 
@@ -1159,7 +1268,7 @@ The MCP server provides additional capabilities beyond conversion, including:
 
 If you prefer not to use the MCP server, you can access the conversion prompt directly:
 
-1. **Access the prompt**: The "convert-terraform-to-typescript" prompt is available in the [Pulumi MCP server](/docs/iac/using-pulumi/mcp-server)
+1. **Access the prompt**: The "convert-terraform-to-typescript" prompt is available in the [Pulumi MCP server](/docs/ai/mcp-server/)
 
 2. **Prepare your Terraform code**: Gather your complete Terraform configuration files (`.tf`, `terraform.tfvars`, etc.)
 

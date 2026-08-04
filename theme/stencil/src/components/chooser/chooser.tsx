@@ -618,7 +618,7 @@ export class Chooser {
             name: "HCL",
             extension: "hcl",
             logo: "/images/docs/icons/languages/hcl-color-32-32.svg",
-            preview: true,
+            preview: false,
         },
         {
             key: "opa",

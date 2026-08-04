@@ -461,6 +461,8 @@ Yes. Pulumi Cloud can execute your Terraform and OpenTofu plans and applies remo
 
 Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/pulumi-cloud/deployments/drift/).
 
+Note that running on the HCL runtime is a different arrangement from using Pulumi Cloud as a Terraform state backend. Under the HCL runtime, state is Pulumi's own — it lives wherever you have `pulumi login` pointed, and a `terraform { backend { ... } }` block in your configuration is accepted but ignored with a warning. Your existing resources are not inherited from the Terraform state file; you adopt them with `pulumi import --from hcl terraform.tfstate`.
+
 ### Can I use preventative policies?
 
 Yes, with [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/). When a plan runs remotely on Pulumi Cloud, preventative policies evaluate against the plan before an apply proceeds — violations block the apply. For stacks using local execution mode, only audit (detective) policies are supported. See [audit policies](#audit-policies) above.

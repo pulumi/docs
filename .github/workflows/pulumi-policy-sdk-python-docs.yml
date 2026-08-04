@@ -80,7 +80,7 @@ jobs:
           hugo-version: '0.157.0'
           extended: true
       - name: Install node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -90,7 +90,7 @@ jobs:
             theme/yarn.lock
             theme/stencil/yarn.lock
       - name: Install python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: "3.13"
       - name: Install Pipenv

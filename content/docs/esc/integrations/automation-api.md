@@ -25,9 +25,9 @@ These methods provide the building blocks for advanced automation scenarios such
 
 If you haven't used Automation API before, get started [here](/docs/iac/guides/building-extending/automation-api/).
 
-Full Pulumi ESC Automation API support — adding, listing, and removing environments — is available for [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments), and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments). The [.NET SDK](/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html) supports adding and removing environments (`AddEnvironmentsAsync` and `RemoveEnvironmentAsync`) but does not provide a method to list them. Here are some examples:
+Full Pulumi ESC Automation API support — adding, listing, and removing environments — is available for [TypeScript/JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/classes/automation.Stack.html#addEnvironments), [Python](/docs/reference/pkg/python/pulumi/#pulumi.automation.LocalWorkspace.add_environments), and [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3@v3.117.0/go/auto#LocalWorkspace.AddEnvironments). The [.NET SDK](/docs/reference/pkg/dotnet/Pulumi.Automation/Pulumi.Automation.WorkspaceStack.html) and the [Java SDK](/docs/reference/pkg/java/com/pulumi/automation/WorkspaceStack.html) both support adding and removing environments but do not provide a method to list them. Here are some examples:
 
-{{< chooser language "typescript,python,go,csharp" />}}
+{{< chooser language "typescript,python,go,csharp,java" />}}
 
 {{% choosable language typescript %}}
 
@@ -221,6 +221,37 @@ class ManageEnvironments
 
         // Remove an environment from the stack's import list.
         await stack.RemoveEnvironmentAsync("env1");
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language java %}}
+
+The Java SDK supports adding and removing environments, but does not provide a method to list them.
+
+```java
+import com.pulumi.automation.LocalWorkspace;
+import com.pulumi.automation.WorkspaceStack;
+
+import java.util.List;
+
+public class ManageEnvironments {
+    public static void main(String[] args) throws Exception {
+        var projectName = "myProject";
+        var stackName = "dev";
+
+        // Create or select an existing stack, using an empty inline program
+        // since we're only manipulating environments, not deploying resources.
+        try (WorkspaceStack stack = LocalWorkspace.createOrSelectStack(projectName, stackName, ctx -> { })) {
+            // Add environments to the stack's import list.
+            // This is like adding them to the `imports` section of an ESC environment.
+            stack.addEnvironments(List.of("env1", "env2"));
+
+            // Remove an environment from the stack's import list.
+            stack.removeEnvironment("env1");
+        }
     }
 }
 ```

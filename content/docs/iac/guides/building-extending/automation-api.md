@@ -531,6 +531,8 @@ var stack = LocalWorkspace.createOrSelectStack(projectName, stackName, App::pulu
 
 A `Stack` object operates within the context of a `Workspace`. A `Workspace` is the execution context containing a single Pulumi project, a program, and multiple stacks. Workspaces are used to manage the execution environment, providing various utilities such as plugin installation, environment configuration (`$PULUMI_HOME`), and creation, deletion, and listing of stacks. Because you are deploying AWS resources in this tutorial, you must install the AWS provider plugin within your `Workspace` so that your Pulumi program will have it available during execution.
 
+Once you have a stack, you can also manage which [ESC environments](/docs/esc/concepts/environments/) it imports directly from your Automation API program, without hand-editing the stack's configuration file. See [Automation API for ESC](/docs/esc/integrations/automation-api/) for the `addEnvironments`, `listEnvironments`, and `removeEnvironment` methods and examples in each supported language.
+
 ## Configure your provider plugins
 
 Automation API drives the same engine as the CLI, so it downloads any missing provider plugin automatically before an operation---the explicit `installPlugin` call below isn't required for providers published to the [Pulumi Registry](/registry/). It's shown here to pin a specific plugin version; you also need it for [local or parameterized packages](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api). See [Plugins](/docs/iac/concepts/automation-api/#plugins) for details.

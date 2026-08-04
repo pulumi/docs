@@ -65,6 +65,8 @@ A `Stack` is an isolated, independently configurable instance of a Pulumi progra
 
 A `RemoteStack` is the equivalent of a `Stack` for a `RemoteWorkspace`. It exposes the same lifecycle methods, run remotely from a remote workspace.
 
+Beyond running a stack's lifecycle, Automation API can also manage which [ESC environments](/docs/esc/concepts/environments/) a stack imports, adding, listing, and removing them programmatically instead of editing a stack's configuration file by hand. See [Automation API for ESC](/docs/esc/integrations/automation-api/) for the supported methods and examples in each language.
+
 ## Programs
 
 Automation API can drive two kinds of Pulumi programs.
