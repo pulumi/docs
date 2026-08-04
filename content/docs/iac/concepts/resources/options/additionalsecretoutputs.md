@@ -20,7 +20,7 @@ The `additionalSecretOutputs` resource option specifies a list of named output p
 
 This example ensures that the password generated for a database resource is an encrypted secret:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -75,6 +75,21 @@ resources:
       additionalSecretOutputs:
         - password
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    additional_secret_outputs = [password]
+  }
+}
+```
+
+In HCL, each entry is a bare attribute name (in the provider's `snake_case` form), not a quoted string.
 
 {{% /choosable %}}
 
