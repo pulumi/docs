@@ -41,13 +41,13 @@ output "latest_ubuntu_ami_name" {
 }
 ```
 
-If you run this Terraform config, you should see output showing the latest Ubuntu AMI information. HCL is a configuration language, similar in spirit to YAML or JSON but with more expressiveness and modularization. Pulumi lets you describe the same desired state in a general-purpose programming language (and supports HCL and YAML too), so you can choose the style that fits your team.
+If you run this Terraform config, you should see output showing the latest Ubuntu AMI information. HCL is a configuration language, similar in spirit to YAML or JSON but with more expressiveness and modularization. Pulumi lets you describe the same desired state in a general-purpose programming language, in YAML, or in [HCL](/docs/iac/languages-sdks/hcl/) itself, so you can choose the style that fits your team.
 
 ## Pulumi programs
 
-Let's try creating the same resources in a Pulumi program. The key difference between Terraform and Pulumi is that Pulumi allows you to use your preferred programming language instead of HCL. Both approaches query the same AWS API and return identical results:
+Let's try creating the same resources in a Pulumi program. Pulumi lets you keep writing HCL or move to a general-purpose programming language; the engine, state management, and secrets handling are the same either way. Both approaches query the same AWS API and return identical results:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -283,6 +283,54 @@ variables:
 outputs:
   latestUbuntuAmiId: ${ubuntu.id}
   latestUbuntuAmiName: ${ubuntu.name}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+With [Pulumi HCL](/docs/iac/languages-sdks/hcl/) there is nothing to rewrite: the Terraform config from the top of this page runs unchanged. Create a project directory:
+
+```bash
+$ mkdir pulumi-terraform-test && cd pulumi-terraform-test
+```
+
+Add a `Pulumi.yaml` that selects the HCL runtime:
+
+```yaml
+name: pulumi-terraform-test
+runtime: hcl
+description: Test Pulumi and AWS connectivity
+```
+
+Then save the same HCL, unchanged, as `main.tf`:
+
+```hcl
+data "aws_ami" "ubuntu" {
+  region      = "us-west-2"
+  most_recent = true
+  owners      = ["099720109477"] # Canonical
+
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+}
+
+output "latest_ubuntu_ami_id" {
+  value = data.aws_ami.ubuntu.id
+}
+
+output "latest_ubuntu_ami_name" {
+  value = data.aws_ami.ubuntu.name
+}
+```
+
+Create a stack and install the providers the program uses:
+
+```bash
+$ pulumi stack init dev
+$ pulumi install
 ```
 
 {{% /choosable %}}

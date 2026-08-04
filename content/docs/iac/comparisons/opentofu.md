@@ -21,7 +21,7 @@ aliases:
 - /docs/iac/concepts/vs/opentofu/
 ---
 
-Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML); OpenTofu is a Linux Foundation fork of Terraform 1.6 that uses the HashiCorp Configuration Language (HCL).
+Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML), or in [HCL](/docs/iac/languages-sdks/hcl/) itself; OpenTofu is a Linux Foundation fork of Terraform 1.6 that uses the HashiCorp Configuration Language (HCL).
 
 The two are unusually interoperable. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is fully OpenTofu compatible, and resolves providers against the OpenTofu registry by default. Pulumi Cloud can operate as a managed [OpenTofu backend](/docs/iac/get-started/terraform/terraform-state-backend/) and [remote runner](/docs/iac/get-started/terraform/terraform-remote-execution/) for the `tofu` CLI. Pulumi programs can execute your existing OpenTofu modules. Adopting Pulumi does not require leaving HCL, your modules, or the OpenTofu ecosystem behind.
 
@@ -116,7 +116,7 @@ There are several common paths for adopting Pulumi alongside or in place of Open
 1. **Use Pulumi Cloud as your OpenTofu state backend.** [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/), which the `tofu` CLI speaks, so adding a standard `backend "remote"` block and running `tofu init -migrate-state` is the only change. Plans and applies then [run on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default, with approval gates on VCS-triggered applies, and the stack gets encrypted state, update history, state locking, RBAC, policy enforcement, and Resource Search.
 1. **Write new projects in HCL on the Pulumi engine.** [Pulumi HCL](/docs/iac/languages-sdks/hcl/) takes your `.tf` files as-is with `runtime: hcl`, resolving providers from the OpenTofu registry just as OpenTofu does.
 1. **Convert HCL with `pulumi convert`.** [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) translates HCL into a Pulumi program in the language of your choice. The same flag handles both Terraform and OpenTofu HCL — there is no separate `--from opentofu` flag, because the configuration language is the same.
-1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned resources under Pulumi management and generate the corresponding code in your chosen language.
+1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned resources under Pulumi management and generate the corresponding code in your chosen language. `pulumi import --from hcl <state-file>` does this in bulk: it reads an OpenTofu or Terraform state file and adopts the resources it describes into Pulumi state.
 
 For a complete walkthrough including coexistence patterns and conversion, see [Migrating from Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) — the same guide applies to OpenTofu.
 
@@ -140,7 +140,7 @@ Yes, with no change to your configurations. [Pulumi Cloud implements the Terrafo
 
 ### How do I migrate from OpenTofu to Pulumi?
 
-You have three options that can be combined: convert HCL with [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) (which handles OpenTofu HCL — there is no separate `--from opentofu` flag), bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/), or run both tools side by side until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for a full walkthrough.
+You have four options that can be combined: run your existing `.tf` files as-is on [Pulumi HCL](/docs/iac/languages-sdks/hcl/), convert HCL to another language with [`pulumi convert --from terraform`](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi) (which handles OpenTofu HCL — there is no separate `--from opentofu` flag), bring already-provisioned resources under Pulumi management with [`pulumi import`](/docs/iac/guides/migration/import/) (including `pulumi import --from hcl` to bulk-import from an OpenTofu state file), or run both tools side by side until you're ready to cut over. See the [migration guide](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) for a full walkthrough.
 
 ### Does Pulumi support OpenTofu state files?
 
