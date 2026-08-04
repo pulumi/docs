@@ -316,16 +316,16 @@ Resources:
 
 Having a language-specific, locally managed SDK at hand comes with many benefits, including IDE support, typed inputs and outputs, and more — but there may be times when you'll prefer a simpler or more dynamic option. In these situations, you can instead choose to load the module at runtime.
 
-In TypeScript, you'd do that with the `@pulumi-labs/hcl` module. Try that now by installing it in your project:
+In TypeScript, you'd do that with the `@pulumi/hcl` module. Try that now by installing it in your project:
 
 ```bash
-$ npm install @pulumi-labs/hcl
+$ npm install @pulumi/hcl
 ```
 
 ... and using it in your program:
 
 ```typescript
-import * as hcl from "@pulumi-labs/hcl";
+import * as hcl from "@pulumi/hcl";
 
 const myModule = new hcl.Module("my-module", {
     source: "tf.pulumi.com/<your-org>/s3-bucket/aws",
