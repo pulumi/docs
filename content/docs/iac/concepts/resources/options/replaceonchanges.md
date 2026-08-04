@@ -20,7 +20,7 @@ For example, with Kubernetes `CustomResource` resources, the Kubernetes resource
 
 {{< resource-option-scope "replaceOnChanges" >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -102,6 +102,27 @@ var widget = new com.pulumi.kubernetes.apiextensions.CustomResource("widget",
 # YAML doesn't support kubernetes:apiextensions.k8s.io:CustomResource
 # See https://github.com/pulumi/pulumi-yaml/issues/161 for details.
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "kubernetes_manifest" "widget" {
+  manifest = {
+    apiVersion = "acmecorp.com/v1alpha1"
+    kind       = "Widget"
+    spec = {
+      input = "something"
+    }
+  }
+
+  pulumi {
+    replace_on_changes = [manifest]
+  }
+}
+```
+
+In HCL, each entry is a bare attribute name (in the provider's `snake_case` form), not a quoted string.
 
 {{% /choosable %}}
 

@@ -22,7 +22,7 @@ Pulumi will normally call the provider's delete action for every resource during
 
 For example, if you are deleting a Kubernetes cluster or Kubernetes namespace, you might want to speed up deletion by skipping delete on any Pulumi managed resources created in that Kubernetes cluster or namespace since they will be deleted implicitly.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -95,6 +95,23 @@ resources:
     name: res2
     options:
       deletedWith: ${ns}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "kubernetes_namespace" "ns" {
+  # ...
+}
+
+resource "kubernetes_deployment" "dep" {
+  # ...
+
+  pulumi {
+    deleted_with = kubernetes_namespace.ns
+  }
+}
 ```
 
 {{% /choosable %}}

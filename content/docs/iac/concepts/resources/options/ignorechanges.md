@@ -46,7 +46,7 @@ When you skip `pulumi refresh` (or `pulumi up --refresh`) after `ignoreChanges` 
 
 For instance, in this example, the resource’s prop property "new-value" will be set when Pulumi initially creates the resource, but from then on, any updates will ignore it:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -110,6 +110,21 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "res" {
+  prop = "new-value"
+
+  lifecycle {
+    ignore_changes = [prop]
+  }
+}
+```
+
+In HCL, ignored properties use the standard Terraform `ignore_changes` lifecycle argument rather than a `pulumi` option.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -123,7 +138,7 @@ Some common reasons to use the `ignoreChanges` option are:
 
 Consider an AWS Application Load Balancer listener whose target group weights are managed by an external traffic controller. You can let Pulumi create the listener and target groups while preventing future updates to the weights by adding the property path to `ignoreChanges`:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -415,6 +430,51 @@ resources:
       ignoreChanges:
         - defaultActions[*].forward.targetGroups[*].weight
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_lb" "front_end" {}
+
+resource "aws_lb_target_group" "front_end_blue" {}
+
+resource "aws_lb_target_group" "front_end_green" {}
+
+resource "aws_lb_listener" "front_end_listener" {
+  load_balancer_arn = aws_lb.front_end.arn
+  port              = 443
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = "arn:aws:iam::187416307283:server-certificate/test_cert_rab3wuqwgja25ct3n4jdj2tzu4"
+
+  default_action {
+    type = "forward"
+
+    forward {
+      target_group {
+        arn    = aws_lb_target_group.front_end_blue.arn
+        weight = 100
+      }
+
+      target_group {
+        arn    = aws_lb_target_group.front_end_green.arn
+        weight = 0
+      }
+    }
+  }
+
+  lifecycle {
+    ignore_changes = [
+      default_action[0].forward[0].target_group[0].weight,
+      default_action[0].forward[0].target_group[1].weight,
+    ]
+  }
+}
+```
+
+HCL `ignore_changes` entries are attribute paths with constant indices; wildcard (`[*]`) paths are not supported.
 
 {{% /choosable %}}
 

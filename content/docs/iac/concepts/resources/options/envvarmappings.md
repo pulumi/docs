@@ -29,7 +29,7 @@ Use this option when:
 
 The following example shows how to remap `CUSTOM_ARM_CLIENT_SECRET` to `ARM_CLIENT_SECRET` so the provider reads from your custom environment variable:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -121,6 +121,21 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+provider "azurerm" {
+  # ...
+
+  pulumi {
+    env_var_mappings = {
+      CUSTOM_ARM_CLIENT_SECRET = "ARM_CLIENT_SECRET"
+    }
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -128,7 +143,7 @@ resources:
 
 A common use case is running two providers targeting different cloud accounts. Here's an example with two AWS providers for production and staging environments:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -336,6 +351,44 @@ resources:
     type: aws:s3:Bucket
     options:
       provider: ${aws-staging}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+# Production provider reads from PROD_AWS_ACCESS_KEY_ID and PROD_AWS_SECRET_ACCESS_KEY
+provider "aws" {
+  alias = "prod"
+
+  pulumi {
+    env_var_mappings = {
+      PROD_AWS_ACCESS_KEY_ID     = "AWS_ACCESS_KEY_ID"
+      PROD_AWS_SECRET_ACCESS_KEY = "AWS_SECRET_ACCESS_KEY"
+    }
+  }
+}
+
+# Staging provider reads from STAGING_AWS_ACCESS_KEY_ID and STAGING_AWS_SECRET_ACCESS_KEY
+provider "aws" {
+  alias = "staging"
+
+  pulumi {
+    env_var_mappings = {
+      STAGING_AWS_ACCESS_KEY_ID     = "AWS_ACCESS_KEY_ID"
+      STAGING_AWS_SECRET_ACCESS_KEY = "AWS_SECRET_ACCESS_KEY"
+    }
+  }
+}
+
+# Use the providers explicitly
+resource "aws_s3_bucket" "prod" {
+  provider = aws.prod
+}
+
+resource "aws_s3_bucket" "staging" {
+  provider = aws.staging
+}
 ```
 
 {{% /choosable %}}

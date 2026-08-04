@@ -27,7 +27,7 @@ Once the resource is unprotected, it can be deleted as part of a following updat
 
 The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -80,6 +80,19 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    protect = true
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -89,7 +102,7 @@ Child resources inherit the `protect` option from their [parent resource](/docs/
 
 The following example creates a protected parent resource alongside a child resource with protection explicitly disabled:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -155,6 +168,24 @@ resources:
     options:
       parent: ${parent}
       protect: false
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "parent" {
+  pulumi {
+    protect = true
+  }
+}
+
+resource "my_resource" "child" {
+  pulumi {
+    parent  = my_resource.parent
+    protect = false
+  }
+}
 ```
 
 {{% /choosable %}}

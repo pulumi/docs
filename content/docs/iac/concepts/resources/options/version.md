@@ -18,7 +18,7 @@ The `version` resource option specifies a provider version to use when operating
 
 {{< resource-option-scope "version" >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -69,6 +69,21 @@ resources:
     options:
       version: "2.10.0"
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_vpc" "vpc" {
+  # ...
+
+  pulumi {
+    version = "2.10.0"
+  }
+}
+```
+
+This pins the version of the Pulumi provider plugin that operates on the resource. To pin the version of a Terraform provider itself, use the standard `required_providers` block instead.
 
 {{% /choosable %}}
 

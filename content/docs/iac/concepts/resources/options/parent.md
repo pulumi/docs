@@ -27,7 +27,7 @@ By default, resources are parented to the implicitly created `pulumi:pulumi:Stac
 
 The following example shows a simple parent/child relationship between two resources:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -84,6 +84,23 @@ resources:
     type: MyResource
     options:
       parent: ${parent}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "parent" {
+  # ...
+}
+
+resource "my_resource" "child" {
+  # ...
+
+  pulumi {
+    parent = my_resource.parent
+  }
+}
 ```
 
 {{% /choosable %}}

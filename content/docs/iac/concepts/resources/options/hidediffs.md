@@ -38,7 +38,7 @@ This is useful when working with properties that generate large or verbose diffs
 
 ## Example usage
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -102,6 +102,21 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "res" {
+  prop = "new-value"
+
+  pulumi {
+    hide_diffs = [prop]
+  }
+}
+```
+
+In HCL, each entry is a bare attribute name (in the provider's `snake_case` form), not a quoted string.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -111,7 +126,7 @@ In addition to passing simple property names, nested properties can also be supp
 
 For example, to hide diffs for all weights in an AWS load balancer listener's target groups:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -259,6 +274,40 @@ resources:
       hideDiffs:
         - defaultActions[*].forward.targetGroups[*].weight
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_lb_listener" "listener" {
+  # ... other configuration ...
+
+  default_action {
+    type = "forward"
+
+    forward {
+      target_group {
+        arn    = aws_lb_target_group.blue.arn
+        weight = 80
+      }
+
+      target_group {
+        arn    = aws_lb_target_group.green.arn
+        weight = 20
+      }
+    }
+  }
+
+  pulumi {
+    hide_diffs = [
+      default_action[0].forward[0].target_group[0].weight,
+      default_action[0].forward[0].target_group[1].weight,
+    ]
+  }
+}
+```
+
+In HCL, each entry is a bare traversal rather than a quoted string, so wildcard paths like `[*]` are not available; list each element by index instead.
 
 {{% /choosable %}}
 
