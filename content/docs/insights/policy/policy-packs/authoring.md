@@ -90,9 +90,10 @@ Create your first policy pack:
             // The description should document what the policy does and why it exists.
             description: "Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
 
-            // The enforcement level can be "advisory", "mandatory", or "disabled". An "advisory" enforcement level
-            // simply prints a warning for users, while a "mandatory" policy will block an update from proceeding, and
-            // "disabled" disables the policy from running.
+            // The enforcement level can be "advisory", "mandatory", "remediate", or "disabled". An "advisory"
+            // enforcement level simply prints a warning for users, a "mandatory" policy will block an update
+            // from proceeding, "remediate" fixes the violation automatically, and "disabled" disables the
+            // policy from running.
             enforcementLevel: "mandatory",
 
             // The validateResourceOfType function allows you to filter resources. In this case, the rule only
@@ -183,9 +184,10 @@ Create your first policy pack:
         # The description should document what the policy does and why it exists.
         description="Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
 
-        # The enforcement level can be ADVISORY, MANDATORY, or DISABLED. An ADVISORY enforcement level
-        # simply prints a warning for users, while a MANDATORY policy will block an update from proceeding, and
-        # DISABLED disables the policy from running.
+        # The enforcement level can be ADVISORY, MANDATORY, REMEDIATE, or DISABLED. An ADVISORY
+        # enforcement level simply prints a warning for users, a MANDATORY policy will block an update
+        # from proceeding, REMEDIATE fixes the violation automatically, and DISABLED disables the
+        # policy from running.
         enforcement_level=EnforcementLevel.MANDATORY,
 
         # The validation function, defined above.
@@ -537,6 +539,102 @@ You can assign tags to a stack using the CLI ([`pulumi stack tag set`](/docs/iac
 {{% notes type="info" %}}
 Stack tags are not currently accessible in OPA policies. OPA stack-level policies can validate the full set of resources using `input.resources` (see [Creating a policy pack](#opa) for rule prefix conventions), but they cannot read stack tag metadata. Use TypeScript or Python policies if you need to enforce stack tag requirements.
 {{% /notes %}}
+
+## Remediating policy violations
+
+A `remediate` enforcement level goes a step further than `mandatory`: instead of only reporting a violation, the policy inspects the resource's properties, fixes the problem, and returns the corrected properties. The engine substitutes the remediated state for the state the Pulumi program originally produced, so the deployment proceeds with compliant resources rather than being blocked or merely flagged.
+
+Remediation is only available to resource validation policies. Stack validation policies examine relationships across the whole resource graph after registration completes, by which point there is no single resource left to substitute a fix into, so a stack policy set to `remediate` is treated as `mandatory` instead.
+
+The following example remediates, rather than validates, the RDS storage encryption policy shown earlier: instead of blocking an unencrypted instance, it turns on encryption automatically.
+
+{{< chooser language "typescript,python,opa" >}}
+
+{{% choosable language typescript %}}
+
+Use `remediateResource`, built with the `remediateResourceOfType` helper, in place of `validateResource`:
+
+```typescript
+import * as aws from "@pulumi/aws";
+import { PolicyPack, remediateResourceOfType } from "@pulumi/policy";
+
+new PolicyPack("policy-pack-typescript", {
+    policies: [{
+        name: "rds-storage-encryption",
+        description: "Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
+        enforcementLevel: "remediate",
+        remediateResource: remediateResourceOfType(aws.rds.Instance, (instance, args) => {
+            // Exempt instances explicitly tagged as non-production data.
+            if (instance.tags?.["data-classification"] === "non-production") {
+                return;
+            }
+            if (!instance.storageEncrypted) {
+                instance.storageEncrypted = true;
+                return instance;
+            }
+        }),
+    }],
+});
+```
+
+If a policy needs to both validate and remediate, `validateRemediateResourceOfType` builds a matched pair of `validateResource` and `remediateResource` callbacks from a single validation function.
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+Pass a `remediate` callback in place of `validate` when constructing the `ResourceValidationPolicy`. A policy must define one or the other (or use `validate_remediate` to derive both from a single function); it cannot omit both:
+
+```python
+from pulumi_policy import (
+    EnforcementLevel,
+    PolicyPack,
+    ResourceValidationPolicy,
+)
+
+def rds_storage_encryption_remediation(args):
+    if args.resource_type != "aws:rds/instance:Instance":
+        return None
+
+    # Exempt instances explicitly tagged as non-production data.
+    if args.props.get("tags", {}).get("data-classification") == "non-production":
+        return None
+
+    if not args.props.get("storageEncrypted"):
+        args.props["storageEncrypted"] = True
+        return args.props
+
+    return None
+
+rds_storage_encryption = ResourceValidationPolicy(
+    name="rds-storage-encryption",
+    description="Requires RDS instances to have storage encryption enabled, unless tagged as non-production data.",
+    enforcement_level=EnforcementLevel.REMEDIATE,
+    remediate=rds_storage_encryption_remediation,
+)
+
+PolicyPack(
+    name="policy-pack-python",
+    policies=[
+        rds_storage_encryption,
+    ],
+)
+```
+
+{{% /choosable %}}
+{{% choosable language opa %}}
+
+OPA/Rego policies do not support remediation. The OPA analyzer's `Remediate` method always returns an empty response, so an OPA policy pack set to `remediate` reports violations but never fixes them. Use TypeScript or Python if you need a policy to remediate rather than just validate.
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
+A few behaviors are specific to remediation:
+
+- If a resource still triggers a violation after remediation runs, the reported level is downgraded from `remediate` to `mandatory`, and the deployment is blocked rather than silently allowed through with an unresolved problem.
+- When more than one policy pack applies to a resource, their remediations run sequentially in the order the packs were loaded, and each remediation sees the resource state as modified by the ones that ran before it, so a later remediation can build on an earlier one.
+- A policy whose enforcement level is `remediate` but which does not implement a remediation function is reported as not implementing remediation, so a resource going through it is neither fixed nor blocked.
+- The `remediationSteps` metadata field (see [policy metadata](/docs/insights/policy/policy-packs/metadata/)) is unrelated to automatic remediation: the field is manual guidance shown to a user for policies that only validate, describing how to fix a violation by hand.
 
 ## Writing policies for dynamic providers
 
@@ -972,10 +1070,12 @@ As shorthand, specify enforcement levels directly:
 
 <a id="advisory"></a>
 <a id="mandatory"></a>
+<a id="remediate"></a>
 **Enforcement levels:**
 
 - **advisory** - Issues warnings but allows deployments to proceed
 - **mandatory** - Blocks deployments when violations are detected
+- **remediate** - Automatically fixes violations in place; see [Remediating policy violations](#remediating-policy-violations)
 - **disabled** - Skips policy evaluation entirely
 
 ### Custom configuration

@@ -8,6 +8,8 @@ include_organization_schema: true
 sections:
   - type: hero
     layout: split
+    cta_secondary_text: Download open source
+    cta_secondary_link: /docs/install/
     badge_highlight_text: "New this week:"
     badge_text: "Terraform state, modules, and HCL"
     badge_link: /releases/terraform-state-backend-modules-hcl/

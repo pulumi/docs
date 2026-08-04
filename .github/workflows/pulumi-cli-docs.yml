@@ -114,7 +114,7 @@ jobs:
           hugo-version: '0.157.0'
           extended: true
       - name: Install node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -131,6 +131,26 @@ jobs:
           echo "${VALE_SHA256}  /tmp/vale.tar.gz" | sha256sum -c -
           sudo tar -xz -C /usr/local/bin vale -f /tmp/vale.tar.gz
           rm /tmp/vale.tar.gz
+      # Restore previously generated OpenGraph cards so the build-time generator
+      # only re-renders pages that changed (manifest content-hash skip). The
+      # cards are gitignored; this cache is their only persistence across runs.
+      - name: Cache generated meta images
+        uses: actions/cache@v6
+        with:
+          path: assets/images/generated
+          key: meta-images-${{ github.sha }}
+          restore-keys: |
+            meta-images-
+      # Persist Hugo's processed-image cache (resources/_gen) for the full
+      # `make build` below; without it every run re-encodes ~2,400 WebP images
+      # from scratch (~4-5 minutes).
+      - name: Cache Hugo processed images
+        uses: actions/cache@v6
+        with:
+          path: resources
+          key: hugo-resources-${{ github.sha }}
+          restore-keys: |
+            hugo-resources-
       - run: make ensure
       - name: clean stale generated command pages
         run: |

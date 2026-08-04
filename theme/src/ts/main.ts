@@ -22,6 +22,7 @@ import "./resources";
 import "./releases";
 import "./packages";
 import "./pricing-trial";
+import "./extend-trial";
 import "./developer-advocates";
 import "./toc";
 import "./docs-main";
@@ -34,7 +35,7 @@ import "./neo-mode";
 import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
-import "./mktg-ctas-experiment";
+import "./intercom-identity";
 
 // Register all Stencil components.
 defineCustomElements();

@@ -137,7 +137,7 @@ values:
 
 * `context.pulumi.openDuration`: how long the opened environment's values remain valid, as a [Go duration](https://pkg.go.dev/time#ParseDuration) string such as `2h0m0s`
 
-This reflects the lifetime requested for this particular open, so the same environment can evaluate it differently from one open to the next. Opening with `esc env open <environment> --lifetime 30m` resolves it to `30m0s`; opening without a lifetime resolves it to the default of `2h0m0s`. Use it to align a credential's own expiry with the lifetime of the environment that issued it.
+This reflects the lifetime requested for this particular open, so the same environment can evaluate it differently from one open to the next. Opening with `pulumi env open <environment> --lifetime 30m` resolves it to `30m0s`; opening without a lifetime resolves it to the default of `2h0m0s`. Use it to align a credential's own expiry with the lifetime of the environment that issued it.
 
 #### Differentiating callers by token
 

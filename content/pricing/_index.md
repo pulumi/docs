@@ -4,7 +4,11 @@ meta_desc: Pulumi IaC and Pulumi ESC are available in various editions and are f
 type: page
 layout: pricing
 schema_type: product
+schema_name: Pulumi
 include_floqer: true
+outputs:
+    - HTML
+    - markdown
 menu:
     header:
         weight: 2

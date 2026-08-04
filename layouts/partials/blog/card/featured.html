@@ -13,7 +13,7 @@
 <article class="group relative flex flex-col overflow-hidden rounded-lg bg-violet-950 lg:min-h-[440px] lg:flex-row">
     {{ if $hasImage }}
     <div class="flex aspect-[16/10] w-full items-center justify-center p-4 sm:aspect-[2/1] lg:aspect-auto lg:w-1/2 lg:p-6">
-        {{ partial "blog/feature-image.html" (dict "page" $page "w" 720 "h" 440 "mode" "fit" "class" "max-h-full w-auto object-contain" "sizes" "(min-width: 1024px) 45vw, 100vw" "eager" true) }}
+        {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 720 "h" 440 "mode" "fit" "class" "max-h-full w-auto object-contain" "sizes" "(min-width: 1024px) 45vw, 100vw" "eager" true) $page.RelPermalink "featured-720x440" }}
     </div>
     {{ end }}
     <div class="flex flex-col items-start justify-center gap-5 p-6 lg:p-10 lg:pr-12 {{ if $hasImage }}lg:w-1/2{{ else }}lg:w-full{{ end }}">
