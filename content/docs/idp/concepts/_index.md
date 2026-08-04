@@ -35,7 +35,7 @@ Learn more about the [Pulumi Private Registry](/docs/idp/concepts/private-regist
 
 ## Day 2 - Confidently maintain and extend infrastructure
 
-Users can easily model their infrastructure using Pulumi services, logical groupings of Pulumi entities, such as stacks and ESC environments. Users can also adjust configuration and redeploy stacks directly from the Pulumi Cloud console when using no-code workflows.
+Users can easily model their infrastructure using Pulumi Services, logical groupings of Pulumi entities, such as stacks and ESC environments. Users can also adjust configuration and redeploy stacks directly from the Pulumi Cloud console when using no-code workflows.
 
 Learn more about [no-code workflows](/docs/idp/concepts/no-code-stacks/) and [Pulumi Services](/docs/idp/concepts/services/).
 
