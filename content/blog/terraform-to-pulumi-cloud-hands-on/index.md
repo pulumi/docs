@@ -15,16 +15,15 @@ tags:
 category: tutorials
 ---
 
-With [today's release](/blog/bring-your-terraform-estate-into-the-agentic-era/), Pulumi Cloud now works as a backend for your Terraform state, HCL is a first-class Pulumi language, and your Terraform modules run in Pulumi programs as is. That's a lot of new surface area, and if you're wondering how it all fits together, this post is for you. We'll start with a Terraform project you've already deployed and, one step at a time, bring it into Pulumi Cloud.
+Today's release is a big one, and it's all [generally available](/releases/terraform-state-backend-modules-hcl/): a whole set of ways to bring the Terraform you already run into Pulumi — your state, your modules, and HCL itself — without rewriting any of it. So many of you come to us wanting to adopt Pulumi without throwing away the Terraform you've built, and you shouldn't have to. The [announcement post](/blog/bring-your-terraform-estate-into-the-agentic-era/) covers the what and the why; this one is the hands-on tour.
 
-Here's the plan:
+It all falls into three buckets:
 
-1. Migrate a Terraform project to the Pulumi Cloud state backend.
-1. Publish a Terraform module to the Pulumi Cloud registry and use it.
-1. Consume that module from a Pulumi program, in the language of your choice.
-1. Write and run a new project in HCL, natively on the Pulumi engine.
+1. **Terraform state backend support**, including remote execution on Pulumi Cloud.
+1. **Terraform module support** — publish your modules to Pulumi Cloud and consume them from any Pulumi language, as native Pulumi components.
+1. **First-class support for HCL**, running natively on the Pulumi engine.
 
-We built all of this because so many of you come to us wanting to adopt Pulumi without throwing away the Terraform you've already written. You shouldn't have to. So let's start with a concrete case: you've got a Terraform project deployed somewhere — state in a cloud storage bucket, in HCP Terraform, in Terraform Enterprise — and you want to move it to Pulumi Cloud.
+Seeing how all of that fits together end to end can be hard, so I've put together a quick, brisk walkthrough you can follow from start to finish — with nothing but a free Pulumi account and a free trial. We'll start with a Terraform project you've already deployed — state in a cloud storage bucket, in HCP Terraform, in Terraform Enterprise, wherever — and, one step at a time, bring the whole thing into Pulumi Cloud. Let's go.
 
 <!--more-->
 
@@ -150,11 +149,11 @@ With ESC, you build and share configuration and secrets across as many Terraform
 terraform apply -auto-approve
 ```
 
-Remote execution is powered by [Pulumi Deployments](/docs/idp/deployments/), which also supports VCS triggers — pull requests and pushes to GitHub, GitLab, and others — and manual approvals for your Terraform stacks. If you'd like to try it, wire up the Pulumi GitHub app under **Settings → Deploy** in the console, add the `my-tf-project` repo, then push a change. The console will wait for you to **Confirm** or **Discard** the run.
+Remote execution is powered by [Pulumi Deployments](/docs/deployments/), which also supports VCS triggers — pull requests and pushes to GitHub, GitLab, and others — and manual approvals for your Terraform stacks. If you'd like to try it, wire up the Pulumi GitHub app under **Settings → Deploy** in the console, add the `my-tf-project` repo, then push a change. The console will wait for you to **Confirm** or **Discard** the run.
 
 <!-- SCREENSHOT: Console showing a VCS-triggered run awaiting Confirm/Discard. -->
 
-That's the lift-and-shift. Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi policies](/docs/insights/policy/) all available to them — [audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) run on every Terraform stack, and preventative policies block non-compliant applies on remote runs. Next up: modules.
+That's the lift-and-shift. Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi policies](/docs/insights/policy/) all available to them — [audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) can run on any Terraform stack, and preventative policies block non-compliant applies on remote runs. Next up: modules.
 
 ## Publish a Terraform module
 
@@ -248,7 +247,7 @@ If a version is still converting, or you'd rather load a module directly by addr
 pulumi package add hcl module tf.pulumi.com/veridian/s3-bucket/aws 0.1.0
 ```
 
-There's also a dynamic loader for cases where you don't want to generate an SDK at all — handy for loading modules from external sources like the OpenTofu registry or GitHub. Install the package for your language:
+There's also a dynamic loader for when you don't want to generate an SDK at all — handy when the module lives somewhere external (the OpenTofu registry, GitHub), or when you don't know every input up front and want to assemble things with a bit of logic at runtime. Install the package for your language:
 
 ```bash
 npm install @pulumi-labs/hcl
@@ -277,7 +276,11 @@ This one uses untyped references, which trades a little safety for flexibility. 
 
 ## Write and run HCL, natively
 
-Maybe your team just prefers HCL. As of today, HCL is a first-class language in the Pulumi engine, right alongside TypeScript, Python, Go, C#, Java, and YAML — and it's 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible, with no syntactical differences. Start from a template:
+Maybe your team just prefers HCL. As of today, HCL is a first-class language in the Pulumi engine, right alongside TypeScript, Python, Go, C#, Java, and YAML — and it's 100% [OpenTofu](https://github.com/opentofu/opentofu) compatible, with no syntactical differences.
+
+So why run HCL on Pulumi rather than on Terraform or OpenTofu directly? You get the whole Pulumi ecosystem in a language your team already knows. Reach for a [native Pulumi provider](/docs/iac/languages-sdks/hcl/hcl-language-reference/) by giving its source the `pulumi/` namespace — `pulumi/kubernetes`, say — right alongside your bridged Terraform providers; consume Pulumi components and Terraform modules from the same program; and lean on Pulumi Cloud, ESC, and policies throughout. Pulumi HCL is a *superset* of Terraform HCL, too, so you can express things plain HCL can't — my colleague Ian's [deep dive on mapping Terraform onto the Pulumi engine](/blog/terraforms-data-model-on-pulumis-engine/) is a good tour of what that opens up.
+
+Start from a template:
 
 ```bash
 pulumi new aws-hcl
@@ -310,13 +313,13 @@ And if you'd rather not stay in HCL, [`pulumi convert`](/docs/iac/get-started/te
 
 ## Where to go next
 
-Put it all together and the picture is straightforward: Pulumi is now fully interoperable with Terraform and the broader Terraform ecosystem. You can back your Terraform state with Pulumi Cloud, publish and share your modules, use those modules from any Pulumi language, and write HCL that runs natively — all without rewriting what you already have.
+Put it all together and it comes to one thing: Pulumi is now fully interoperable with Terraform and the wider Terraform ecosystem. You can back your Terraform state with Pulumi Cloud, publish and share your modules, consume those modules from any Pulumi language, and write HCL that runs natively — all without rewriting what you already have.
 
-We'd love for you to try it. A few good starting points:
+To keep going, a few good starting points:
 
 - [Store Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/)
 - [Use Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/)
 - [The HCL language reference](/docs/iac/languages-sdks/hcl/)
 - [Browse the templates](/templates/) to start a new project in minutes
 
-If you get stuck or want to talk through your own estate, join us in the [Community Slack](https://slack.pulumi.com/) or [get in touch](/contact/?form=sales) — we're happy to help.
+We'd genuinely love for you to kick the tires on all of this and tell us what you think. Pulumi HCL, like the engine it runs on, is open source under the Apache 2.0 license, so if something's missing or doesn't behave the way you'd expect, [open an issue](https://github.com/pulumi/pulumi-hcl/issues) and let us know. Bring it back to your teams, tell us what you'd like to see that we haven't built yet, and come say hello in the [Community Slack](https://slack.pulumi.com/) or [get in touch](/contact/?form=sales). We're looking forward to building the rest of this with you.
