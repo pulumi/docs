@@ -109,7 +109,7 @@ The default `sbx run claude` mounts your current directory into the VM, so the a
 sbx run --clone claude
 ```
 
-Clone mode copies the codebase and mounts the copy, which puts your git history, your stash, and your uncommitted work out of reach entirely. For long unattended runs, that is the mode I use.
+Clone mode copies the codebase and mounts the copy, so nothing the agent does can touch your git history, your stash, or your uncommitted work. The original repo stays visible inside the sandbox at `/run/sandbox/source`, but read-only: the agent can look, not write. For long unattended runs, that is the mode I use.
 
 ## The four layers
 
