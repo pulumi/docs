@@ -340,8 +340,23 @@
   ) }}
 {{ end }}
 
-{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. Skipped for what-is single pages, which terminate on their section above instead of repeating the title. */}}
-{{ if not (and (eq .Type "what-is") .IsPage) }}
+{{/* A section's own index page (e.g. /docs/, /product/, /case-studies/, the new
+     /events/, /security/, etc.) already gets a crumb pointing at itself from the
+     logic above; appending a second "current page" crumb for that same page
+     produces a duplicate node (e.g. "Home > Documentation > Documentation" on
+     the live /docs/ index today). Detect that by checking whether the last
+     crumb built so far already targets this exact page, and skip the
+     otherwise-redundant terminal item when it does. */}}
+{{ $lastCrumbIsSelf := false }}
+{{ if gt (len $breadcrumbs) 0 }}
+  {{ $lastCrumb := index $breadcrumbs (sub (len $breadcrumbs) 1) }}
+  {{ if eq $lastCrumb.item .Permalink }}
+    {{ $lastCrumbIsSelf = true }}
+  {{ end }}
+{{ end }}
+
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
+{{ if and (not (and (eq .Type "what-is") .IsPage)) (not $lastCrumbIsSelf) }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
     "@type" "ListItem"
