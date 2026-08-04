@@ -1,0 +1,17 @@
+{{/*
+    Event List Item Partial
+
+    Wraps events/event-card.html in the filterable <li> the events list page needs.
+    The data-* attributes are read by the client-side tab/filter code (resources.ts);
+    consumers outside that list should call events/event-card.html directly.
+
+    Parameters:
+    - page: The event page
+    - pageContext: Page context for relref resolution
+    - filters: Array of filter strings for CSS filtering
+*/}}
+
+{{ $displayDate := dateFormat "January 2, 2006" .page.Params.sortable_date }}
+<li data-display-date="{{ $displayDate }}" class="m-0 p-0" data-filters="{{ delimit .filters " " }}">
+    {{ partial "events/event-card.html" (dict "page" .page "pageContext" .pageContext) }}
+</li>
