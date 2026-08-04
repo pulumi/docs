@@ -92,8 +92,7 @@ nohup python3 -m http.server 80 &`
     }
   })
 
-  // Set up the resources needed to run the web server, as outlined in the
-  // how-to guide linked above.
+  // Set up the resources needed to run the web server.
 
   const instanceType = "t2.micro"
   const ami = aws.ec2.getAmiOutput({
@@ -422,8 +421,7 @@ nohup python3 -m http.server 80 &";
             }
         });
 
-        // Set up the resources needed to run the web server, as outlined in the
-        // how-to guide linked above.
+        // Set up the resources needed to run the web server.
 
         var instanceType = "t2.micro";
         var ami = GetAmi.Invoke(new GetAmiArgs
