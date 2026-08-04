@@ -7,15 +7,15 @@ page_title: "What is Pulumi?"
 authors: ["asaf-ashirov"]
 ---
 
-The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning domain-specific languages. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.
+The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning a new tool-specific language. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.
 
-Pulumi is a cloud engineering platform that treats infrastructure as software, allowing teams to define, deploy, and manage cloud resources using familiar programming languages like TypeScript, Python, Go, C#, Java, and YAML. Rather than forcing teams to learn proprietary configuration languages or rely on limited templating systems, Pulumi brings the full power of modern software development practices to infrastructure management.
+Pulumi is a cloud engineering platform that treats infrastructure as software, letting teams define, deploy, and manage cloud resources using familiar programming languages like TypeScript, Python, Go, C#, Java, and YAML, plus HCL as a first-class option. Whichever language a team chooses, Pulumi brings the full power of modern software development practices to infrastructure management.
 
 ## The evolution of infrastructure management
 
 To understand Pulumi's significance, it's helpful to consider how infrastructure management has evolved. In the early days of cloud computing, infrastructure was typically managed through web consoles or command-line interfaces. While functional, this approach suffered from poor repeatability, limited collaboration capabilities, and difficulty tracking changes over time.
 
-The introduction of infrastructure as code (IaC) tools like Terraform and AWS CloudFormation represented a significant improvement, enabling teams to define infrastructure declaratively and version control their configurations. However, these tools introduced their own challenges through domain-specific languages that required additional learning curves and offered limited expressiveness compared to general-purpose programming languages.
+The introduction of infrastructure as code (IaC) tools like Terraform and AWS CloudFormation represented a significant improvement, enabling teams to define infrastructure declaratively and version control their configurations. These tools introduced domain-specific languages with their own learning curves. They favor a constrained, declarative model, while general-purpose languages trade that simplicity for richer abstraction and reuse.
 
 Pulumi represents the next evolution in this space by embracing what the company calls "infrastructure as software." This approach enables teams to leverage the full software engineering ecosystem (including testing frameworks, package managers, IDEs, and development workflows) when managing their cloud infrastructure.
 
@@ -73,9 +73,9 @@ Pulumi AWSx components represent opinionated, well-architected patterns for comm
 
 ## The power of real programming languages
 
-One of Pulumi's most significant differentiators is its support for general-purpose programming languages rather than domain-specific languages. This design choice has profound implications for how teams approach infrastructure management.
+One of Pulumi's defining features is the breadth of languages it supports: general-purpose languages like TypeScript, Python, Go, C#, and Java, alongside YAML and HCL. Teams can pick the language that best fits how they already work, which shapes how they approach infrastructure management.
 
-Using familiar programming languages means developers can apply existing skills and knowledge to infrastructure problems. They can leverage the full ecosystem of language features, including package managers, testing frameworks, and development tools. This approach eliminates the need to learn proprietary configuration languages and enables teams to create more sophisticated, maintainable infrastructure code.
+Using familiar programming languages means developers can apply existing skills and knowledge to infrastructure problems. They can use the full ecosystem of language features, including package managers, testing frameworks, and development tools, while still reaching for declarative formats like YAML or HCL when those fit better. The result is infrastructure code that's easier to maintain and build on.
 
 The ability to use standard programming constructs like loops, conditionals, and functions enables dynamic infrastructure definitions that would be difficult or impossible with templating-based approaches. For example, you might programmatically create resources based on environment variables, implement complex business logic within your infrastructure code, or generate resources based on external data sources.
 
@@ -141,7 +141,7 @@ These success stories demonstrate how Pulumi enables organizations to achieve su
 
 When compared to established infrastructure as code tools, Pulumi offers several distinct advantages that address common pain points in infrastructure management.
 
-Traditional tools like Terraform require teams to learn domain-specific languages with limited expressiveness compared to general-purpose programming languages. Pulumi's approach enables teams to leverage existing language skills while providing access to the full ecosystem of development tools and practices.
+Tools like Terraform center on a domain-specific language built for IaC. Pulumi lets teams use languages they already know, and now supports HCL as well, so adopting it builds on existing skills while providing access to the full ecosystem of development tools and practices.
 
 The testing capabilities represent another significant advantage. While some tools offer limited testing options, Pulumi's integration with language-native testing frameworks enables comprehensive testing strategies including unit tests, integration tests, and property-based testing approaches.
 

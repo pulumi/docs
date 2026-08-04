@@ -22,6 +22,8 @@ Stop by the Pulumi re:Invent booth #370 this week to chat with experts on the Pu
 
 <!--more-->
 
+{{% hcl-note %}}
+
 ## Why Pulumi for AWS?
 
 Pulumi empowers your organization to automate AWS cloud infrastructure through code, tame secrets sprawl through centralized secrets management, and manage cloud assets and compliance with the help of AI. Pulumi encourages infrastructure, platform, development, DevOps, and security teams to collaborate and accelerates time to market with greater control and minimized risk.

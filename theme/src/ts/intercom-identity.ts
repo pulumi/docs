@@ -197,11 +197,16 @@ function tryRun(): void {
     if (ran) {
         return;
     }
-    const intercom = (window as { Intercom?: unknown }).Intercom;
-    if (typeof intercom === "function") {
-        ran = true;
-        run(intercom as IntercomFn);
+    if (typeof (window as { Intercom?: unknown }).Intercom !== "function") {
+        return;
     }
+    ran = true;
+    // Intercom's loader replaces window.Intercom (pre-boot queue stub -> real
+    // widget) moments after boot, discarding the stub's queue as it goes. A
+    // reference captured before that swap is dead by the time the awaited
+    // settings fetch resolves, and calling it throws, so resolve the global on
+    // every call rather than holding one.
+    run((cmd, arg) => (window as unknown as { Intercom: IntercomFn }).Intercom(cmd, arg));
 }
 
 const analytics = (window as any).analytics;

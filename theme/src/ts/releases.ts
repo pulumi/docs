@@ -53,6 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Which row to hand focus back to when the modal closes. The blog ticker
+    // (layouts/partials/blog/releases-marquee.html) repeats the item list in
+    // aria-hidden clone copies to make its marquee loop, and those rows are
+    // still clickable — so restoring focus to a clicked clone would drop focus
+    // into a subtree assistive tech can't see, with nothing to announce.
+    // Resolve to the one canonical row with the same href. On /releases/ there
+    // are no clones, so the aria-hidden test never matches and this is a no-op.
+    function canonicalTrigger(link: HTMLAnchorElement): HTMLElement {
+        if (!link.closest('[aria-hidden="true"]')) return link;
+        const rows = Array.from(document.querySelectorAll<HTMLAnchorElement>("[data-changelog-link]"));
+        return rows.find(row => row.href === link.href && !row.closest('[aria-hidden="true"]')) ?? link;
+    }
+
     async function fetchArticle(url: string): Promise<Element | null> {
         const cached = cache.get(url);
         if (cached) return cached;
@@ -131,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!link) return;
         e.preventDefault();
         history.pushState({ changelogUrl: link.href }, "", link.href);
-        void show(link.href, link);
+        void show(link.href, canonicalTrigger(link));
     });
 
     closeButton.addEventListener("click", requestClose);
