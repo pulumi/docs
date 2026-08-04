@@ -94,13 +94,7 @@ pulumi package add <name>-<system> [<version>]
 
 A module published as `acme-corp/vpc/aws` installs as `vpc-aws`. This is the same as any other Pulumi package: you get a generated SDK in your language, an [API reference](/docs/idp/concepts/private-registry/#api-documentation) on the package's page, and [usage tracking](/docs/idp/concepts/private-registry/#usage-tracking) showing which of your stacks depend on it and which are behind the latest version. Installing a converted package requires Pulumi CLI 3.248.0 or newer; see [Download & Install Pulumi](/docs/install/) to upgrade.
 
-The package's page in Pulumi Cloud shows whether a given version has converted. If a version you need has no package, you can convert the module locally instead, against the module address rather than the package name:
-
-```bash
-pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
-```
-
-This converts the module on your machine and generates an SDK for your project. Nothing is published to the registry, so this route has no package page, API reference, or usage tracking, and a module the registry could not convert may well fail here for the same reason. The version is optional; omit it to resolve the latest published version. Self-hosted Pulumi Cloud installations use their own host (`<your-pulumi-host>/<namespace>/<name>/<system>`).
+The package's page in Pulumi Cloud shows whether a given version has converted.
 
 See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
 

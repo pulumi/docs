@@ -12,7 +12,7 @@ aliases:
     - /docs/concepts/inputs-outputs/helpers/
 ---
 
-Pulumi's SDKs include helper functions designed for the most common output manipulation tasks: constructing strings from output values and working with JSON. These helpers wrap [`apply`](/docs/concepts/inputs-outputs/apply/) and [`all`](/docs/concepts/inputs-outputs/all/) internally, but expose a more concise interface that closely mirrors each language's native string and JSON facilities.
+Pulumi's SDKs include helper functions designed for the most common output manipulation tasks: constructing strings from output values and working with JSON. These helpers wrap [`apply`](/docs/iac/concepts/inputs-outputs/apply/), which transforms the value inside a single output, and [`all`](/docs/iac/concepts/inputs-outputs/all/), which combines several outputs into one, but expose a more concise interface that closely mirrors each language's native string and JSON facilities.
 
 Use a helper when you need to build a string from one or more outputs or serialize a data structure that contains outputs to JSON. Use `apply` or `all` directly when the transformation you need is more complex than a simple string or JSON operation.
 
