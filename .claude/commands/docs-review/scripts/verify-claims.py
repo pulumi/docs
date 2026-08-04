@@ -290,9 +290,9 @@ VERIFY_SYSTEM = """You are a fact-checking verifier for Pulumi documentation and
 Cheapest first. Stop as soon as a source closes the claim.
 
 1. **Local repo / linked docs** — `read_file` to read other content files, `static/programs/<name>-<lang>/` programs, `data/docs_menu_sections.yml`, `layouts/shortcodes/<name>.html`, the nearest sibling page. Cheapest — always try first. For a **tier / edition / limit / quota** claim, `content/pricing/_index.md` (a large feature x tier matrix) is canonical — read it with a `pattern` (the feature name), and never treat a value as absent from a read marked `[TRUNCATED]`.
-2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` OR `pulumi-labs/*` ships. Pulumi HCL specifically lives under `pulumi-labs/pulumi-hcl`, and other in-progress providers / SDK experiments ship under `pulumi-labs/*` too; when a claim mentions Pulumi HCL by name (or references a `pulumi-labs/<repo>` package), query BOTH owners before considering escalation:
+2. **GitHub via `gh`** (pass1 lane) — `gh_query` for anything `pulumi/*` OR `pulumi-labs/*` ships. Pulumi HCL lives under `pulumi/pulumi-hcl`, but in-progress providers / SDK experiments still ship under `pulumi-labs/*`; when a claim references a `pulumi-labs/<repo>` package, query BOTH owners before considering escalation:
    - `gh search code --owner pulumi      "<term>"` — main Pulumi org (engine, providers, SDKs)
-   - `gh search code --owner pulumi-labs "<term>"` — Pulumi HCL, in-progress providers, SDK experiments
+   - `gh search code --owner pulumi-labs "<term>"` — in-progress providers, SDK experiments
    - `gh api repos/pulumi/<repo>/contents/<path>` / `gh api repos/pulumi-labs/<repo>/contents/<path>` — read source to verify API surface (resource properties, CLI flags)
    - `gh release list -R pulumi/pulumi --limit 20` / `gh release view <tag> -R pulumi/pulumi` / `gh release list -R pulumi-labs/<repo>` — version-availability claims
    - `gh issue list -R pulumi/<repo> --search "<term>"` / `gh pr list -R pulumi/<repo> --search "<term>"` — prior decisions ("we decided not to ship this", "this was renamed")
