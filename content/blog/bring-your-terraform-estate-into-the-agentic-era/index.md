@@ -1,6 +1,6 @@
 ---
 title: "Bring Your Terraform Estate Into the Agentic Era"
-date: 2026-08-04T09:00:00-07:00
+date: 2026-08-04
 draft: false
 meta_desc: "Pulumi Cloud as a Terraform backend and HCL in Pulumi IaC are now GA, plus native Terraform module support — bring the IaC you already have."
 feature_image: feature.png
@@ -13,6 +13,9 @@ tags:
     - pulumi-cloud
 category: product
 schema_type: auto
+related_posts:
+    - terraform-to-pulumi-cloud-hands-on
+    - terraforms-data-model-on-pulumis-engine
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
