@@ -267,6 +267,80 @@ def test_annotate_noop_on_empty_or_missing(tmp_path):
     assert pss.annotate_draft(d, []) == 0
 
 
+FILES_URL = "https://github.com/pulumi/docs/pull/7/files"
+
+# The banner keys off the count-table VALUES row, so the fixture needs the
+# table above the style block, exactly as compose-review.py renders it.
+DRAFT_TABLE = """### 🤖 Pre-merge review
+
+| 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
+| :---: | :---: | :---: | :---: |
+| **2** | **1** | **0** | **0** |
+
+<details>
+<summary>Verification trail</summary>
+</details>
+
+""" + DRAFT
+
+
+def test_banner_announces_posted_count_under_the_table(tmp_path):
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT_TABLE)
+    pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2},
+                           {"file": "content/docs/bar.md", "line": 2}], FILES_URL)
+    lines = d.read_text().splitlines()
+    i = lines.index("| **2** | **1** | **0** | **0** |")
+    assert lines[i + 1] == ""
+    assert lines[i + 2] == (
+        "✏️ **2 one-click style suggestions** are posted inline — apply them from the "
+        f"[Files changed]({FILES_URL}) tab, individually or with "
+        "**Add suggestion to batch**.")
+    assert lines[i + 3] == ""          # the table's original trailing blank survives
+
+
+def test_banner_singular(tmp_path):
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT_TABLE)
+    pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}], FILES_URL)
+    assert ("✏️ **1 one-click style suggestion** is posted inline — apply it from the "
+            f"[Files changed]({FILES_URL}) tab.") in d.read_text()
+
+
+def test_banner_is_idempotent(tmp_path):
+    """Re-running must not stack banners or grow the gap under the table."""
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT_TABLE)
+    posted = [{"file": "content/docs/foo.md", "line": 2}]
+    pss.annotate_draft(d, posted, FILES_URL)
+    once = d.read_text()
+    pss.annotate_draft(d, posted, FILES_URL)
+    assert d.read_text() == once
+    assert once.count("✏️ **") == 1
+
+
+def test_banner_removed_when_nothing_posts(tmp_path):
+    """The re-entrant case: last run's banner must not outlive its buttons.
+
+    A refresh that converts nothing deletes the prior suggestion comments, so
+    a surviving 'N suggestions are posted inline' would point at nothing.
+    """
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT_TABLE)
+    pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}], FILES_URL)
+    assert pss.annotate_draft(d, [], FILES_URL) == 0
+    assert d.read_text() == DRAFT_TABLE
+
+
+def test_banner_skipped_without_a_count_table(tmp_path):
+    """Degrade quietly: marks still land, no banner, no crash."""
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT)
+    assert pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}],
+                              FILES_URL) == 1
+    assert "one-click style suggestion" not in d.read_text()
+
+
 def test_post_individually_returns_only_landed(monkeypatch):
     """Batch POST is atomic (422 kills all), so the fallback must report which
     individual comments actually landed — that set drives the ✏️ marks."""

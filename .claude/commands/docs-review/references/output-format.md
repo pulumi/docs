@@ -39,6 +39,8 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 | :---: | :---: | :---: | :---: |
 | **N** | **N** | **N** | **N** |
 
+✏️ **N one-click style suggestions** are posted inline — apply them from the [Files changed](…/files) tab, individually or with **Add suggestion to batch**.
+
 ### 🔍 Verification trail
 
 <details>
@@ -100,6 +102,8 @@ The table header row stays fixed; only the number row changes per review. Bold t
 **You do not write the footer.** Its canonical text lives in `.claude/commands/docs-review/footer.md`, and `pinned-comment.sh` is its sole writer on publish: it strips whatever footer the inbound body carries and stamps a fresh copy onto *every* comment of a split review, so the refresh instructions ride on the 1/M comment people actually read rather than only on the tail. `compose-review.py` renders the same file into the draft (abridged above — read `footer.md` for the exact text) so drafts stay complete documents. Leave it in place when you edit the draft; if you drop it, publish restores it. To change the wording, edit `footer.md` — that one file feeds the composer, the shell, and this reference.
 
 The ⚠️ Low-confidence count does **not** include advisory style suggestions — they render expanded but uncounted (optional polish, not reviewer burden). Blocker-tier style findings (`[style-blocker]`) render in 🚨 Outstanding and **are** counted there. The maintainer's review burden equals the count rendered in the table; misstating it in either direction is a false signal.
+
+**The ✏️ banner under the table is workflow-written — never author or edit it.** When one-click suggestions posted, `post-style-suggestions.py --annotate-draft` inserts a single line directly beneath the number row announcing how many, deep-linked to the Files-changed tab. It exists because the ✏️ marks themselves sit in the *last* section of a comment that routinely runs 16 KB: an author who clears 🚨 and stops reading would never learn the buttons exist. The line is rewritten from the set the GitHub API accepted on every run and removed when nothing posts, so a hand-written or carried-over one risks advertising buttons that aren't there. Uncounted, like the suggestions it announces.
 
 ### Composed-draft contract
 

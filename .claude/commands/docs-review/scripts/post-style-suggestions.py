@@ -19,8 +19,12 @@ Contract:
   the deterministic-fix gate requires (see vale-deterministic-fixes.yaml)
   is exercised twice — once by the editorial pass authoring the rewrite,
   once by the author clicking.
-- The collapsed `#### Style suggestions` block in the pinned review remains
-  the complete record; a suggested finding is NOT removed from it.
+- The `#### Style suggestions` block in the pinned review remains the
+  complete record; a suggested finding is NOT removed from it.
+- `--annotate-draft` owns two pieces of the pinned body, both rewritten from
+  what actually posted rather than trusted: the per-bullet ✏️ marks, and the
+  ✏️ banner under the bucket-count table that says how many suggestions are
+  waiting. Both are stripped when a run posts nothing.
 - Idempotent per run: prior suggestion comments (MARKER match) are deleted
   before posting — same delete-and-repost semantics as TRIAGE_PROSE.
 - Never fails the workflow: any validation or API problem logs a warning
@@ -80,6 +84,14 @@ _spec.loader.exec_module(_vff)  # type: ignore[union-attr]
 
 MARKER = "<!-- CLAUDE_STYLE_SUGGESTION -->"
 MAX_SUGGESTIONS = 10
+# Banner announcing the posted suggestions, inserted under the bucket-count
+# table. Without it the only evidence a one-click fix exists is a ✏️ in the
+# LAST section of a ~16 KB comment, below everything the author actually has
+# to fix — an author who clears 🚨 and stops reading never learns the buttons
+# are there. Column-0 ✏️ is the strip key (bullet marks are always mid-line),
+# so the line is rewritten from the posted set on every run rather than
+# trusted, exactly like the marks themselves.
+BANNER_PREFIX = "✏️"
 # Resolve the repo from the environment, never a hardcoded upstream name: the
 # same script runs on the CamSoper/pulumi.docs test fork, where a hardcoded
 # `pulumi/docs` makes every write 403 ("Resource not accessible by
@@ -282,7 +294,49 @@ def delete_prior_suggestions(repo: str, pr: str) -> None:
                   file=sys.stderr)
 
 
-def annotate_draft(draft_path: Path, posted: list[dict]) -> int:
+def _banner_text(n: int, files_url: str) -> str:
+    link = f"[Files changed]({files_url})" if files_url else "**Files changed**"
+    if n == 1:
+        return (f"{BANNER_PREFIX} **1 one-click style suggestion** is posted inline — "
+                f"apply it from the {link} tab.")
+    return (f"{BANNER_PREFIX} **{n} one-click style suggestions** are posted inline — "
+            f"apply them from the {link} tab, individually or with "
+            f"**Add suggestion to batch**.")
+
+
+def _reconcile_banner(lines: list[str], n: int, files_url: str) -> bool:
+    """Rewrite the suggestion banner under the bucket-count table.
+
+    Authoritative like the marks: any existing banner is removed first, and a
+    fresh one is inserted only when something actually posted. That keeps the
+    re-entrant lane honest — a refresh that converts nothing must not leave
+    last run's "4 suggestions are posted inline" standing over zero buttons.
+    """
+    changed = False
+    for i in range(len(lines) - 1, -1, -1):
+        if lines[i].startswith(BANNER_PREFIX):
+            del lines[i]
+            # The banner is inserted with a blank line above it; take that
+            # back too so repeated runs don't grow a gap under the table.
+            if i > 0 and not lines[i - 1].strip():
+                del lines[i - 1]
+            changed = True
+    if n <= 0:
+        return changed
+    # The count row: four bold integers. Matching the values row rather than
+    # the header keeps this independent of the header's emoji labels.
+    row_re = re.compile(r"^\|\s*\*\*\d+\*\*\s*\|")
+    for i, line in enumerate(lines):
+        if row_re.match(line):
+            lines.insert(i + 1, "")
+            lines.insert(i + 2, _banner_text(n, files_url))
+            return True
+    print("post-style-suggestions: no bucket-count row found; banner not inserted.",
+          file=sys.stderr)
+    return changed
+
+
+def annotate_draft(draft_path: Path, posted: list[dict], files_url: str = "") -> int:
     """Make the ✏️ marks on style bullets match what actually posted.
 
     AUTHORITATIVE, not additive: every existing mark is stripped first, then
@@ -330,6 +384,8 @@ def annotate_draft(draft_path: Path, posted: list[dict]) -> int:
         if rebuilt != line:
             lines[i] = rebuilt
             changed = True
+    if _reconcile_banner(lines, len(want), files_url):
+        changed = True
     if changed:
         draft_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return marked
@@ -352,17 +408,24 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    # A missing or unreadable sidecar is treated as "no suggestions this run",
+    # NOT as "skip the run": delete-and-repost is the documented semantics, so
+    # the re-entrant lane still has to clear last run's comments and strip the
+    # marks they justified. Bailing early would leave a refreshed review
+    # advertising buttons for findings it no longer reports.
     path = Path(args.infile)
+    entries: list = []
     if not path.is_file():
-        print("post-style-suggestions: no suggestions file; nothing to post.", file=sys.stderr)
-        return 0
-    try:
-        entries = json.loads(path.read_text(encoding="utf-8") or "[]")
-    except (json.JSONDecodeError, UnicodeDecodeError) as exc:
-        print(f"post-style-suggestions: unreadable {path}: {exc}", file=sys.stderr)
-        return 0
+        print("post-style-suggestions: no suggestions file; treating as none.", file=sys.stderr)
+    else:
+        try:
+            entries = json.loads(path.read_text(encoding="utf-8") or "[]")
+        except (json.JSONDecodeError, UnicodeDecodeError) as exc:
+            print(f"post-style-suggestions: unreadable {path}: {exc}", file=sys.stderr)
 
-    if args.patch_file:
+    if not entries:
+        patch = ""
+    elif args.patch_file:
         patch = Path(args.patch_file).read_text(encoding="utf-8")
     else:
         proc = subprocess.run(
@@ -394,29 +457,35 @@ def main() -> int:
     # Even with zero valid suggestions, clear stale ones from a prior run —
     # a re-review that fixed everything should leave no orphaned comments.
     delete_prior_suggestions(args.repo, args.pr)
-    if not valid:
-        return 0
 
-    posted = valid
-    proc = gh_api(
-        ["-X", "POST", f"repos/{args.repo}/pulls/{args.pr}/reviews", "--input", "-"],
-        input_json=payload,
-    )
-    if proc.returncode != 0:
-        # The batch endpoint is atomic, so this cost ALL of them. Retry one at
-        # a time so a single bad anchor doesn't sink the rest.
-        print(f"post-style-suggestions: batch review POST failed ({proc.stderr.strip()[:160]}); "
-              "retrying one comment at a time.", file=sys.stderr)
-        head = gh_api([f"repos/{args.repo}/pulls/{args.pr}", "--jq", ".head.sha"])
-        if head.returncode != 0:
-            print("post-style-suggestions: could not resolve head SHA; giving up.", file=sys.stderr)
-            return 0
-        posted = post_individually(args.repo, args.pr, head.stdout.strip(), valid)
-        if not posted:
-            return 0
+    posted: list[dict] = []
+    if valid:
+        proc = gh_api(
+            ["-X", "POST", f"repos/{args.repo}/pulls/{args.pr}/reviews", "--input", "-"],
+            input_json=payload,
+        )
+        if proc.returncode == 0:
+            posted = valid
+        else:
+            # The batch endpoint is atomic, so this cost ALL of them. Retry one
+            # at a time so a single bad anchor doesn't sink the rest.
+            print(f"post-style-suggestions: batch review POST failed "
+                  f"({proc.stderr.strip()[:160]}); retrying one comment at a time.",
+                  file=sys.stderr)
+            head = gh_api([f"repos/{args.repo}/pulls/{args.pr}", "--jq", ".head.sha"])
+            if head.returncode != 0:
+                print("post-style-suggestions: could not resolve head SHA; giving up.",
+                      file=sys.stderr)
+            else:
+                posted = post_individually(args.repo, args.pr, head.stdout.strip(), valid)
     print(f"post-style-suggestions: posted {len(posted)} suggestion(s).", file=sys.stderr)
+    # Annotate on EVERY path, including the zero-posted one. On the re-entrant
+    # lane the draft is last run's published body, so a refresh that converts
+    # nothing has to actively strip the stale marks and banner — returning
+    # early would leave the review advertising buttons that were just deleted.
     if args.annotate_draft:
-        n = annotate_draft(Path(args.annotate_draft), posted)
+        files_url = f"https://github.com/{args.repo}/pull/{args.pr}/files"
+        n = annotate_draft(Path(args.annotate_draft), posted, files_url)
         print(f"post-style-suggestions: {n} style bullet(s) carry the ✏️ mark.",
               file=sys.stderr)
     return 0
