@@ -13,6 +13,9 @@ tags:
     - pulumi-cloud
 category: product
 schema_type: auto
+related_posts:
+    - terraform-to-pulumi-cloud-hands-on
+    - terraforms-data-model-on-pulumis-engine
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.

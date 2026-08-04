@@ -13,6 +13,9 @@ tags:
     - infrastructure-as-code
     - modules
 category: tutorials
+related_posts:
+    - bring-your-terraform-estate-into-the-agentic-era
+    - terraforms-data-model-on-pulumis-engine
 ---
 
 [Today's big release](/releases/terraform-state-backend-modules-hcl/) contains a whole new set of features designed for seamless interoperability with the Terraform and OpenTofu ecosystems, and there's a lot there — so much that it can be tough to get your head around all of it. But it generally falls into three major categories:
@@ -57,7 +60,7 @@ Now let's see how to move this project into Pulumi Cloud.
 
 ## Migrate the state to Pulumi Cloud
 
-First, [create a Pulumi Cloud account](https://app.pulumi.com/signup) if you don't already have one (it's free for individuals) and sign into the Pulumi console. Then, add a `backend` block to `main.tf`, swapping `<your-org>` for your own Pulumi Cloud account or organization name:
+First, [create a Pulumi Cloud account](https://app.pulumi.com/signup) if you don't already have one (it's free for individuals) and sign in to the Pulumi console. Then, add a `backend` block to `main.tf`, swapping `<your-org>` for your own Pulumi Cloud account or organization name:
 
 ```hcl
 terraform {
@@ -437,13 +440,13 @@ And with that, our tour is complete. Be sure to clean up both projects with a `t
 
 Now you've seen it all come together: You can back your Terraform state with Pulumi Cloud, publish and share your modules, consume those modules from any Pulumi language, and write HCL that runs natively — all without having to rewrite what you've already built.
 
-To keep going, here are a few good next steps:
+A few next steps to keep the learning going:
 
-* [Storing Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/)
-* [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/)
-* [The Pulumi HCL language reference](/docs/iac/languages-sdks/hcl/)
-* [More HCL project templates](/templates/) to get going with a new project easily
+* Explore our [architecture templates](/templates/) to bootstrap new HCL projects easily
+* Read up on [Terraform state](/docs/iac/get-started/terraform/terraform-state-backend/), [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/), and [Terraform modules](/docs/idp/concepts/terraform-modules/) in Pulumi Cloud
+* Dive into [Pulumi and HCL](/docs/iac/languages-sdks/hcl/)
+* Check out the [full set of features](/releases/terraform-state-backend-modules-hcl/) in this release
 
-We'd love for you to kick the tires on all of this and let us know what you think. Pulumi HCL, like the engine it runs on, is open source under the Apache 2.0 license, so if something's missing or doesn't behave the way you'd expect, [open an issue](https://github.com/pulumi/pulumi-hcl/issues) and let us know in the [Pulumi Community Slack](https://slack.pulumi.com/) or [reach out](/contact/?form=sales) if you'd like to learn more.
+We'd love for you to kick the tires on all of this and let us know what you think. If something seems missing or doesn't behave as you'd expect, [open an issue](https://github.com/pulumi/pulumi/issues), let us know in the [Pulumi Community Slack](https://slack.pulumi.com/), or [reach out](/contact/?form=sales) if you'd like to learn more.
 
 Happy building!
