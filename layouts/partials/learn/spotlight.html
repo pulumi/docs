@@ -1,10 +1,18 @@
 {{- /*
     The two large side-by-side cards at the top of /learn (Dev Hub, Academy).
 
-    Built on the .card-highlight primitive (a tinted violet panel, no border) so
-    the transparent violet line-art illustrations sit on the fill rather than in
-    a boxed-off image well. The whole card is one stretched link, so the CTA is a
-    styled span, not a nested anchor.
+    Dark violet-950 panels, so the two headline destinations read as the top of
+    the page against the lighter sections below. The illustrations are
+    transparent line art sitting directly on the fill (no boxed image well), and
+    their palette is inverted for the dark ground: the faint outer frames drop to
+    violet-800 and the glyph rises to violet-200. This is a permanently dark
+    card, not a dark-mode variant — /learn is outside /docs, so there is no theme
+    toggle here and no need for a second set of assets.
+
+    The whole card is one stretched link, so the CTA is a styled span, not a
+    nested anchor. Everything is centered, and `mt-auto` on the CTA pushes it to
+    the foot of the card. Grid items stretch to a common height, so the two CTAs
+    land on the same baseline however long the copy above them runs.
 
     Params:
       . (the context) a slice of {title, description, image, href, cta}
@@ -19,9 +27,8 @@
 <section aria-label="Featured learning resources">
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {{ range . }}
-        {{ $external := or (hasPrefix .href "http://") (hasPrefix .href "https://") }}
         <article class="group relative h-full">
-            <a href="{{ .href }}"{{ partial "external-link-attrs.html" .href | safeHTMLAttr }} class="card-highlight flex h-full flex-col p-8 no-underline md:p-10">
+            <a href="{{ .href }}"{{ partial "external-link-attrs.html" .href | safeHTMLAttr }} class="flex h-full flex-col items-center rounded-lg bg-violet-950 p-8 text-center no-underline md:p-10">
                 {{ with .image }}
                 {{ $asset := resources.Get (printf "fingerprinted/%s" (strings.TrimPrefix "/" .)) }}
                 {{ if $asset }}
@@ -30,15 +37,17 @@
                 </div>
                 {{ end }}
                 {{ end }}
-                <h2 class="heading-3 m-0 text-service-black transition-colors group-hover:text-violet-primary">
-                    {{ .title }}
-                    {{ if $external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}
-                </h2>
+                <h2 class="heading-2 m-0 text-white transition-colors group-hover:text-violet-300">{{ .title }}</h2>
                 {{ with .description }}
-                <p class="body-base mt-3 mb-0 max-w-prose text-service-black">{{ . }}</p>
+                <p class="body-base mt-3 mb-0 max-w-prose text-violet-200">{{ . }}</p>
                 {{ end }}
                 {{ with .cta }}
-                <span class="btn btn-link mt-6 self-start">{{ . }} &rarr;</span>
+                <div class="mt-auto pt-8">
+                    <span class="btn btn-outline btn-xl group-hover:border-gray-500 group-hover:bg-gray-100">
+                        {{ . }}
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                    </span>
+                </div>
                 {{ end }}
             </a>
         </article>

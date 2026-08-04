@@ -21,24 +21,26 @@ spotlight:
 # The "For humans" / "For agents" pair. Drop the `agents` key to render the
 # humans card on its own.
 new_to_pulumi:
-    title: New to Pulumi
-    description: Install the CLI, pick your cloud, and deploy your first stack.
+    title: New to Pulumi?
     humans:
         label: For humans
+        description: Install the CLI, pick your cloud, and deploy your first stack.
         cta: Get started
         href: /docs/get-started/
+        # Icon-only marks (the square 32x32 variants), not the wordmark SVGs, so
+        # the tiles stay compact.
         clouds:
             - label: AWS
-              logo: /logos/tech/aws.svg
+              logo: /logos/tech/aws-logo.svg
               href: /docs/iac/get-started/aws/
             - label: Azure
-              logo: /logos/tech/azure.svg
+              logo: /logos/tech/azure-logo.svg
               href: /docs/iac/get-started/azure/
             - label: Google Cloud
-              logo: /logos/tech/gcp.svg
+              logo: /logos/tech/gcp-logo.svg
               href: /docs/iac/get-started/gcp/
             - label: Kubernetes
-              logo: /logos/tech/k8s.svg
+              logo: /logos/tech/kubernetes.svg
               href: /docs/iac/get-started/kubernetes/
     agents:
         label: For agents
@@ -76,5 +78,5 @@ series:
 
 tutorials:
     title: Latest tutorials
-    count: 3
+    count: 4
 ---

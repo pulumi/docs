@@ -1,70 +1,81 @@
 {{- /*
-    "New to Pulumi?" — two balanced cards, For humans and For agents.
+    "New to Pulumi?" — two balanced cards, For humans and For agents, sitting on
+    a shared .card-highlight panel.
 
-    The human card is four cloud logo links over a Get started button; the agent
-    card is one copy-to-clipboard prompt over two doc links. Per AGENTS.md
-    §"AI and agent positioning", the agent card names third-party coding agents
-    as first-class rather than presenting Neo as the only option.
+    The human card is a one-line lead, four cloud links, and a Get started link;
+    the agent card is the onboarding prompt in a code block, a button that copies
+    it, and two doc links. Per AGENTS.md §"AI and agent positioning", the agent
+    card names third-party coding agents as first-class rather than presenting
+    Neo as the only option.
+
+    Both children pick up the panel's violet-50 fill rather than the white of the
+    .card primitive, so the group reads as one surface; they keep .card's border
+    and radius to stay legible against it. The cloud links are .btn-outline
+    rather than nested .cards — a stronger border, and white tiles that separate
+    the logos from the violet ground.
 
     The copy button is the generic [data-copy-text] control from
     theme/src/ts/copy-text.ts, registered globally in main.ts — no page-specific
     JS. It copies a prompt pointing at /onboard.md (static/onboard.md).
 
     Params:
-      title        section heading
-      description  optional lead paragraph
-      humans       {label, cta, href, clouds: [{label, logo, href}]}
-      agents       optional {label, description, prompt, prompt_label,
-                   links: [{label, href}]}. Omit the key entirely and the human
-                   card renders on its own, full width.
+      title    section heading
+      humans   {label, description, cta, href, clouds: [{label, logo, href}]}
+      agents   optional {label, description, prompt, prompt_label,
+               links: [{label, href}]}. Omit the key entirely and the human card
+               renders on its own, full width.
 */ -}}
 {{- $agents := .agents -}}
 <section aria-labelledby="new-to-pulumi-heading">
-    <div class="mb-8 flex flex-col gap-2">
-        <h2 id="new-to-pulumi-heading" class="heading-2 m-0">{{ .title }}</h2>
-        {{ with .description }}<p class="body-lg text-gray-primary m-0 max-w-2xl">{{ . }}</p>{{ end }}
-    </div>
+    <h2 id="new-to-pulumi-heading" class="font-overline mb-8 text-service-black">{{ .title }}</h2>
 
-    <div class="grid grid-cols-1 gap-6 {{ if $agents }}md:grid-cols-2{{ end }}">
-        {{ with .humans }}
-        <div class="card flex flex-col bg-white p-8">
-            <p class="font-overline text-gray-primary m-0!">{{ .label }}</p>
-            <div class="mt-6 grid grid-cols-2 gap-3">
-                {{ range .clouds }}
-                <a href="{{ .href }}" data-track="learn-get-started-{{ .label | urlize }}" class="card card-hover flex items-center justify-center bg-white px-4 py-6 no-underline hover:border-violet-300">
-                    <img class="h-9 w-auto" src="{{ .logo }}" alt="{{ .label }}" loading="lazy" decoding="async" />
-                </a>
+    <div class="card-highlight p-6 md:p-8">
+        <div class="grid grid-cols-1 gap-6 {{ if $agents }}md:grid-cols-2{{ end }}">
+            {{ with .humans }}
+            <div class="card flex flex-col bg-violet-50 p-8">
+                <h3 class="heading-4 m-0 text-service-black">{{ .label }}</h3>
+                {{ with .description }}<p class="body-base mt-3 mb-0 max-w-prose text-service-black">{{ . }}</p>{{ end }}
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                    {{ range .clouds }}
+                    <a href="{{ .href }}" data-track="learn-get-started-{{ .label | urlize }}" class="btn btn-outline h-auto py-4">
+                        <img class="size-8" src="{{ .logo }}" alt="{{ .label }}" loading="lazy" decoding="async" />
+                    </a>
+                    {{ end }}
+                </div>
+                {{ with .cta }}
+                <div class="mt-auto pt-6">
+                    <a href="{{ $.humans.href }}" data-track="learn-get-started" class="btn btn-link">{{ . }} &rarr;</a>
+                </div>
                 {{ end }}
             </div>
-            {{ with .cta }}
-            <a href="{{ $.humans.href }}" data-track="learn-get-started" class="btn btn-primary btn-lg mt-6 self-start">
-                {{ . }}
-                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
-            </a>
             {{ end }}
-        </div>
-        {{ end }}
 
-        {{ with $agents }}
-        <div class="card flex flex-col bg-white p-8">
-            <p class="font-overline text-gray-primary m-0!">{{ .label }}</p>
-            {{ with .description }}<p class="body-base mt-4 mb-0 max-w-prose text-service-black">{{ . }}</p>{{ end }}
-            {{ with .prompt }}
-            <button type="button" class="btn btn-outline btn-lg mt-6 w-full justify-start text-left" data-copy-text="{{ . }}" data-track="learn-agent-prompt" aria-label="Copy the onboarding prompt for your coding agent">
-                <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
-                <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5 text-violet-primary") }}</span>
-                <span class="truncate" data-copy-idle>{{ $.agents.prompt_label | default . }}</span>
-                <span class="truncate" data-copy-done hidden>Copied!</span>
-            </button>
-            {{ end }}
-            {{ with .links }}
-            <ul class="mt-auto flex list-none flex-wrap gap-x-6 gap-y-2 p-0 pt-6">
-                {{ range . }}
-                <li class="m-0"><a href="{{ .href }}" data-track="learn-agent-{{ .label | urlize }}" class="btn btn-link">{{ .label }} &rarr;</a></li>
+            {{ with $agents }}
+            <div class="card flex flex-col bg-violet-50 p-8">
+                <h3 class="heading-4 m-0 text-service-black">{{ .label }}</h3>
+                {{ with .description }}<p class="body-base mt-3 mb-0 max-w-prose text-service-black">{{ . }}</p>{{ end }}
+                {{ with .prompt }}
+                {{/* The prompt is shown in full rather than truncated onto the button, so
+                     the reader can see what they're about to hand their agent. Inherits
+                     the site's dark code-block treatment from _code.scss; the utilities
+                     here only wrap the long line and raise the type size. */}}
+                <pre class="mt-6 mb-0 rounded-md whitespace-pre-wrap break-words"><code class="font-mono text-base text-gray-200">{{ . }}</code></pre>
+                <button type="button" class="btn btn-outline btn-xl mt-4 self-start" data-copy-text="{{ . }}" data-track="learn-agent-prompt" aria-label="Copy the onboarding prompt for your coding agent">
+                    <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
+                    <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5 text-violet-primary") }}</span>
+                    <span data-copy-idle>{{ $.agents.prompt_label | default "Copy prompt" }}</span>
+                    <span data-copy-done hidden>Copied!</span>
+                </button>
                 {{ end }}
-            </ul>
+                {{ with .links }}
+                <ul class="mt-auto flex list-none flex-wrap gap-x-6 gap-y-2 p-0 pt-6">
+                    {{ range . }}
+                    <li class="m-0"><a href="{{ .href }}" data-track="learn-agent-{{ .label | urlize }}" class="btn btn-link">{{ .label }} &rarr;</a></li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
             {{ end }}
         </div>
-        {{ end }}
     </div>
 </section>
