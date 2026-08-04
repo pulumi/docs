@@ -21,10 +21,13 @@ Contract:
   once by the author clicking.
 - The `#### Style suggestions` block in the pinned review remains the
   complete record; a suggested finding is NOT removed from it.
-- `--annotate-draft` owns two pieces of the pinned body, both rewritten from
-  what actually posted rather than trusted: the per-bullet ✏️ marks, and the
-  ✏️ banner under the bucket-count table that says how many suggestions are
-  waiting. Both are stripped when a run posts nothing.
+- Annotation owns two pieces of the pinned body, both rewritten from what
+  actually posted rather than trusted: the per-bullet ✏️ marks, and the ✏️
+  banner under the bucket-count table that says how many suggestions are
+  waiting. Both are stripped when a run posts nothing. `--annotate-draft`
+  edits the composed draft before it publishes (initial lane);
+  `--annotate-pinned` PATCHes the already-published comment(s) (re-entrant
+  lane, which renders and upserts inside the model step).
 - Idempotent per run: prior suggestion comments (MARKER match) are deleted
   before posting — same delete-and-repost semantics as TRIAGE_PROSE.
 - Never fails the workflow: any validation or API problem logs a warning
@@ -56,6 +59,7 @@ Input schema (.style-suggestions.json):
 Usage:
     post-style-suggestions.py --pr N [--repo owner/repo]
         [--in .style-suggestions.json] [--patch-file diff.patch] [--dry-run]
+        [--annotate-draft .review-draft.md | --annotate-pinned]
 
 --patch-file reads the PR diff from a file instead of `gh pr diff` (tests).
 --dry-run validates and prints the review payload without calling gh.
@@ -336,11 +340,11 @@ def _reconcile_banner(lines: list[str], n: int, files_url: str) -> bool:
     return changed
 
 
-def annotate_draft(draft_path: Path, posted: list[dict], files_url: str = "") -> int:
-    """Make the ✏️ marks on style bullets match what actually posted.
+def annotate_text(text: str, posted: list[dict], files_url: str = "") -> tuple[str, int]:
+    """Reconcile one review body against what actually posted.
 
-    AUTHORITATIVE, not additive: every existing mark is stripped first, then
-    re-applied only to bullets whose (file, line) the GitHub API accepted. The
+    AUTHORITATIVE, not additive: every existing mark and banner is stripped
+    first, then re-applied only from the set the GitHub API accepted. The
     editorial pass has been observed adding its own marks (fork PR #229, where
     it wrote four mid-line ✏️ of its own) — harmless when its guesses happen to
     match, but the whole point of the mark is that it promises a button exists.
@@ -348,23 +352,23 @@ def annotate_draft(draft_path: Path, posted: list[dict], files_url: str = "") ->
     anchor mismatch, cap) would be a lie, so the workflow overwrites rather
     than trusts.
 
-    Returns the number of bullets carrying a mark when done.
+    Returns `(body, marks_present)`. Safe to run on ONE PART of a split review:
+    a part with no count row simply gets no banner, and a part with no style
+    bullets gets no marks. (The one degradation is a style block split across
+    the page boundary, where bullets orphaned from their `##### <path>` heading
+    go unmarked — a missing button, never a phantom one.)
 
     The style block groups bullets under an `##### <path>` heading, so we track
     the current heading while walking to disambiguate same-numbered lines
     across files. (H5 rather than bold text specifically so validate-pinned's
     bucket-bullet regex doesn't count it as a finding.)
     """
-    try:
-        lines = draft_path.read_text(encoding="utf-8").splitlines()
-    except (OSError, UnicodeDecodeError):
-        return 0
+    lines = text.splitlines()
     want = {(str(e.get("file")), int(e.get("line"))) for e in posted}
     file_re = re.compile(r"^#{5}\s+(\S+\.\w+)")
     bullet_re = re.compile(r"^(\s*- \*\*line (\d+):\*\*)(.*)$")
     current: str | None = None
     marked = 0
-    changed = False
     for i, line in enumerate(lines):
         fm = file_re.match(line)
         if fm:
@@ -383,11 +387,68 @@ def annotate_draft(draft_path: Path, posted: list[dict], files_url: str = "") ->
             marked += 1
         if rebuilt != line:
             lines[i] = rebuilt
-            changed = True
-    if _reconcile_banner(lines, len(want), files_url):
-        changed = True
-    if changed:
-        draft_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    _reconcile_banner(lines, len(want), files_url)
+    return "\n".join(lines) + "\n", marked
+
+
+def annotate_draft(draft_path: Path, posted: list[dict], files_url: str = "") -> int:
+    """annotate_text over the composed draft file, in place (initial lane)."""
+    try:
+        original = draft_path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return 0
+    body, marked = annotate_text(original, posted, files_url)
+    if body != original:
+        draft_path.write_text(body, encoding="utf-8")
+    return marked
+
+
+def annotate_pinned(repo: str, pr: str, posted: list[dict], files_url: str = "") -> int:
+    """annotate_text over the ALREADY-PUBLISHED pinned comment(s).
+
+    The re-entrant lane has no composed draft to intercept: the model renders
+    the body and upserts it itself, so the only copy of the published review is
+    on GitHub. Each `<!-- CLAUDE_REVIEW N/M -->` comment is fetched, reconciled,
+    and PATCHed back individually.
+
+    Patching parts in place rather than fetch → concatenate → re-upsert is
+    deliberate. Re-upserting would re-run the splitter over a body that already
+    carries the splitter's own artifacts (the synthetic `</details>` /
+    continuation `<details>` pairs it inserts at page boundaries), which
+    compounds on every refresh. Editing each part touches only the lines the
+    marks and banner live on.
+    """
+    proc = gh_api([f"repos/{repo}/issues/{pr}/comments", "--paginate",
+                   "--jq", '.[] | select(.body | startswith("<!-- CLAUDE_REVIEW "))'
+                           ' | {id: .id, body: .body}'])
+    if proc.returncode != 0:
+        print(f"post-style-suggestions: could not list pinned comments: "
+              f"{proc.stderr.strip()[:160]}", file=sys.stderr)
+        return 0
+    marked = 0
+    patched = 0
+    for raw in proc.stdout.splitlines():
+        if not raw.strip():
+            continue
+        try:
+            comment = json.loads(raw)
+        except json.JSONDecodeError:
+            continue
+        body, n = annotate_text(comment["body"], posted, files_url)
+        marked += n
+        # GitHub normalizes bodies to \r\n; compare on the same footing so an
+        # unchanged part isn't PATCHed (and re-notified) on every refresh.
+        if body.replace("\r\n", "\n") == comment["body"].replace("\r\n", "\n"):
+            continue
+        res = gh_api(["-X", "PATCH", f"repos/{repo}/issues/comments/{comment['id']}",
+                      "--input", "-"], input_json={"body": body})
+        if res.returncode != 0:
+            print(f"post-style-suggestions: PATCH of comment {comment['id']} failed: "
+                  f"{res.stderr.strip()[:160]}", file=sys.stderr)
+        else:
+            patched += 1
+    print(f"post-style-suggestions: annotated {patched} pinned comment part(s).",
+          file=sys.stderr)
     return marked
 
 
@@ -404,7 +465,11 @@ def main() -> int:
     ap.add_argument("--annotate-draft",
                     help="Path to .review-draft.md. After posting, marks the style bullets "
                          "that got a suggestion so the pinned comment can point at them. "
-                         "Must run BEFORE the pinned upsert.")
+                         "Must run BEFORE the pinned upsert. (Initial-review lane.)")
+    ap.add_argument("--annotate-pinned", action="store_true",
+                    help="Annotate the ALREADY-PUBLISHED pinned comment(s) in place instead "
+                         "of a draft file. For the re-entrant lane, where the model renders "
+                         "and upserts the body itself and no draft is available to intercept.")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -483,9 +548,13 @@ def main() -> int:
     # lane the draft is last run's published body, so a refresh that converts
     # nothing has to actively strip the stale marks and banner — returning
     # early would leave the review advertising buttons that were just deleted.
+    files_url = f"https://github.com/{args.repo}/pull/{args.pr}/files"
+    n = None
     if args.annotate_draft:
-        files_url = f"https://github.com/{args.repo}/pull/{args.pr}/files"
         n = annotate_draft(Path(args.annotate_draft), posted, files_url)
+    elif args.annotate_pinned:
+        n = annotate_pinned(args.repo, args.pr, posted, files_url)
+    if n is not None:
         print(f"post-style-suggestions: {n} style bullet(s) carry the ✏️ mark.",
               file=sys.stderr)
     return 0

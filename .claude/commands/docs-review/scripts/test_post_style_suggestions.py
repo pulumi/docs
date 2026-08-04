@@ -10,6 +10,7 @@ import importlib.util
 import json
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -339,6 +340,79 @@ def test_banner_skipped_without_a_count_table(tmp_path):
     assert pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}],
                               FILES_URL) == 1
     assert "one-click style suggestion" not in d.read_text()
+
+
+class _GhStub:
+    """Minimal `gh api` double for the annotate-pinned round trip."""
+
+    def __init__(self, parts):
+        self.parts = parts               # [(id, body), ...]
+        self.patched = {}
+
+    def __call__(self, args, input_json=None):
+        joined = " ".join(args)
+        out = ""
+        rc = 0
+        if "/comments" in joined and "--jq" in joined:
+            out = "\n".join(json.dumps({"id": i, "body": b}) for i, b in self.parts)
+        elif "PATCH" in joined:
+            cid = int(joined.split("issues/comments/")[1].split()[0])
+            self.patched[cid] = input_json["body"]
+        return SimpleNamespace(returncode=rc, stdout=out, stderr="")
+
+
+def test_annotate_pinned_patches_only_changed_parts(monkeypatch):
+    """Split reviews: the banner lives in part 1, the style bullets in part 2.
+
+    Each part is PATCHed independently — no fetch/concatenate/re-upsert, which
+    would re-run the splitter over its own continuation-<details> artifacts.
+    """
+    head, tail = DRAFT_TABLE.split("#### Style suggestions")
+    stub = _GhStub([(11, head), (12, "#### Style suggestions" + tail)])
+    monkeypatch.setattr(pss, "gh_api", stub)
+    n = pss.annotate_pinned("o/r", "7", [{"file": "content/docs/foo.md", "line": 2}],
+                            FILES_URL)
+    assert n == 1
+    assert "one-click style suggestion" in stub.patched[11]      # banner → part 1
+    assert "'utilize' is too wordy. ✏️" in stub.patched[12]      # mark → part 2
+    assert "one-click style suggestion" not in stub.patched[12]
+
+
+def test_annotate_pinned_skips_unchanged_part(monkeypatch):
+    """An already-correct part must not be PATCHed — every PATCH re-notifies."""
+    stub = _GhStub([(11, DRAFT_TABLE)])
+    monkeypatch.setattr(pss, "gh_api", stub)
+    posted = [{"file": "content/docs/foo.md", "line": 2}]
+    pss.annotate_pinned("o/r", "7", posted, FILES_URL)
+    settled = stub.patched[11]
+    stub2 = _GhStub([(11, settled)])
+    monkeypatch.setattr(pss, "gh_api", stub2)
+    assert pss.annotate_pinned("o/r", "7", posted, FILES_URL) == 1
+    assert stub2.patched == {}
+
+
+def test_annotate_pinned_tolerates_crlf(monkeypatch):
+    """GitHub returns bodies CRLF-normalized; that alone isn't a change."""
+    stub = _GhStub([(11, DRAFT_TABLE)])
+    monkeypatch.setattr(pss, "gh_api", stub)
+    posted = [{"file": "content/docs/foo.md", "line": 2}]
+    pss.annotate_pinned("o/r", "7", posted, FILES_URL)
+    crlf = stub.patched[11].replace("\n", "\r\n")
+    stub2 = _GhStub([(11, crlf)])
+    monkeypatch.setattr(pss, "gh_api", stub2)
+    pss.annotate_pinned("o/r", "7", posted, FILES_URL)
+    assert stub2.patched == {}
+
+
+def test_annotate_pinned_strips_when_nothing_posted(monkeypatch):
+    """A refresh that converts nothing must clear last run's marks and banner."""
+    stub = _GhStub([(11, DRAFT_TABLE)])
+    monkeypatch.setattr(pss, "gh_api", stub)
+    pss.annotate_pinned("o/r", "7", [{"file": "content/docs/foo.md", "line": 2}], FILES_URL)
+    stub2 = _GhStub([(11, stub.patched[11])])
+    monkeypatch.setattr(pss, "gh_api", stub2)
+    assert pss.annotate_pinned("o/r", "7", [], FILES_URL) == 0
+    assert stub2.patched[11] == DRAFT_TABLE
 
 
 def test_post_individually_returns_only_landed(monkeypatch):
