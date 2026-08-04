@@ -2,7 +2,7 @@
 title: "A guided tour of Terraform state, hosted modules, and HCL in Pulumi"
 date: 2026-08-04
 draft: false
-meta_desc: "A hands-on walkthrough of our new Terraform support: migrate state to Pulumi Cloud, publish and consume modules, and run HCL natively."
+meta_desc: "A hands-on walkthrough of our new support for Terraform and OpenTofu, including state, remote execution, module interop, and first-class support for HCL."
 feature_image: feature.png
 authors:
     - christian-nunciato
