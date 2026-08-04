@@ -61,6 +61,14 @@ const MANIFEST = join(OUT_ROOT, ".manifest.json")
 //     no photo halo, 2-up gap (no overlap), role/company in the 1–2 person byline.
 const OG_TEMPLATE_VERSION = "6"
 
+// Per-template revision. Bump one of these — instead of OG_TEMPLATE_VERSION —
+// when a change is confined to a single card template, so only that template's
+// cards re-render and every other section keeps its cache.
+//   events r2: byline measured/fitted rather than -webkit-line-clamp'd (it used
+//     to be sliced mid-glyph), 3-line budget on square/portrait, names-only
+//     byline on square.
+const TEMPLATE_REVISION = { events: 2 }
+
 const SAMPLE = !!process.env.OG_SAMPLE // one card per sampleGroupBy group
 const ONLY = (process.env.OG_ONLY || "").split(",").map((s) => s.trim()).filter(Boolean)
 
@@ -270,9 +278,11 @@ function pageId(file) {
   return rel.replace(/\/_index$/, "")
 }
 // The manifest/cache key is per-OUTPUT (mid = id + variant suffix), and folds in
-// the rendered size so the two variants of one page never collide.
+// the rendered size so the two variants of one page never collide. `r` is the
+// template's own revision; JSON.stringify drops it when undefined, so templates
+// without one hash exactly as they did before TEMPLATE_REVISION existed.
 function cacheKey(page) {
-  return createHash("sha1").update(JSON.stringify({ t: page.template, f: page.fields, v: OG_TEMPLATE_VERSION, w: page.w, h: page.h })).digest("hex")
+  return createHash("sha1").update(JSON.stringify({ t: page.template, f: page.fields, v: OG_TEMPLATE_VERSION, r: TEMPLATE_REVISION[page.template], w: page.w, h: page.h })).digest("hex")
 }
 function listPages() {
   const pages = []
