@@ -22,7 +22,7 @@ For the most part, Pulumi automatically waits for operations to complete and tim
 
 This example specifies that the create operation should wait up to 30 minutes to complete before timing out:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -82,6 +82,21 @@ resources:
       customTimeouts:
         create: "30m"
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "db" {
+  # ...
+
+  timeouts {
+    create = "30m"
+  }
+}
+```
+
+In HCL, custom timeouts use the standard Terraform `timeouts` block rather than a `pulumi` option.
 
 {{% /choosable %}}
 

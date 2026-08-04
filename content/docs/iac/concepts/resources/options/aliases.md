@@ -23,7 +23,7 @@ Aliases are frequently used when refactoring Pulumi programs.
 
 For example, imagine we change a database resource’s name from `old-name-for-db` to `new-name-for-db`. By default, when we run `pulumi up`, we see that the old resource is deleted and the new one created. If we annotate that resource with the aliases option, however, the resource is updated in-place. Pulumi identifies resources by their [URN](/docs/iac/concepts/resources/names/#urns), which encodes the resource name, so the alias tells Pulumi to treat the old URN as equivalent to the new one:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -84,6 +84,21 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "new_name_for_db" {
+  # ...
+
+  pulumi {
+    aliases = [{ name = "old-name-for-db" }]
+  }
+}
+```
+
+HCL also supports Terraform's standard `moved` blocks for renaming resources.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -91,7 +106,7 @@ The aliases option accepts a list of old identifiers. If a resource has been ren
 
 The above example used objects of type `Alias` with the old resource names. These values may specify any combination of the old name, type, parent, stack, and/or project values. Alternatively, you can just specify the URN directly:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -151,6 +166,21 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "new_name_for_db" {
+  # ...
+
+  pulumi {
+    aliases = ["urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db"]
+  }
+}
+```
+
+In HCL, a plain string alias must be a full URN; to alias by name alone, use the object form `{ name = "..." }`.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -158,7 +188,7 @@ resources:
 
 If a resource was moved to a different parent component resource, use the `parent` field to reference the old parent resource so that Pulumi can map the old URN to the new one:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -221,6 +251,21 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    aliases = [{ parent_urn = "urn:pulumi:stackname::projectname::my:component:Type::old-parent" }]
+  }
+}
+```
+
+In HCL, the old parent is identified by its URN (`parent_urn`) rather than by a resource reference. Use `{ no_parent = true }` to alias a resource that previously had no parent.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -228,7 +273,7 @@ resources:
 
 If a resource was moved from another stack or project, use the `stack` and/or `project` fields to refer to the old identity:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -291,6 +336,19 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    aliases = [{ stack = "old-stack", project = "old-project" }]
+  }
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -298,7 +356,7 @@ resources:
 
 If a resource's type was changed (for example, when migrating to a different provider resource type), use the `type` field to specify the old type:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -356,6 +414,19 @@ resources:
     options:
       aliases:
         - type: aws:rds/database:Database
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_db_instance" "db" {
+  # ...
+
+  pulumi {
+    aliases = [{ type = "aws:rds/database:Database" }]
+  }
+}
 ```
 
 {{% /choosable %}}
