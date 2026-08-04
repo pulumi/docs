@@ -17,7 +17,24 @@ aliases:
 - /docs/iac/troubleshooting/debugging/logging/
 ---
 
-Pulumi provides two main types of logging to help with debugging and troubleshooting: CLI logging for diagnosing Pulumi engine operations and program logging for emitting custom diagnostics from your Pulumi programs.
+Pulumi provides several ways to capture logs for debugging and troubleshooting: automatic logging, which records every operation to an encrypted file you can share securely with the Pulumi team; CLI verbose logging for diagnosing Pulumi engine operations on demand; and program logging for emitting custom diagnostics from your Pulumi programs.
+
+## Automatic logging
+
+Starting with Pulumi v3.254.0, the CLI automatically records a log file for every operation and stores it under `$PULUMI_HOME/logs`.
+
+These log files are encrypted on disk using the stack's [secret manager](/docs/iac/concepts/secrets/), if they contain property values, as those can contain secrets. The final file consists of gzip-compressed chunks encrypted with AES256-GCM. Logs are rotated out after 7 days, or once the log directory reaches 500 MB, so they won't fill up your disk.
+
+Use the following commands to work with automatic logs:
+
+* [`pulumi logs list`](/docs/iac/cli/commands/pulumi_logs_list/) lists the available log files.
+* [`pulumi logs decrypt`](/docs/iac/cli/commands/pulumi_logs_decrypt/) decrypts and displays a log locally. The same stack secret manager used for the original command must be available.
+* [`pulumi logs share`](/docs/iac/cli/commands/pulumi_logs_share/) re-encrypts a log with a key stored on the Pulumi server side and redacts secrets by default, so it can be shared securely with the Pulumi team — even by posting it on a public GitHub issue. Only Pulumi employees can decrypt a shared log.
+* [`pulumi logs remove`](/docs/iac/cli/commands/pulumi_logs_remove/) removes log files.
+
+{{% notes type="tip" %}}
+`pulumi logs share` redacts secrets automatically, so it's the safest way to send diagnostics for a failed operation to Pulumi. See [filing GitHub issues](/docs/support/filing-issues/) for more on reporting bugs.
+{{% /notes %}}
 
 ## CLI verbose logging
 
@@ -31,7 +48,7 @@ By default, logs are written to the top-level temp directory (usually `/tmp` or 
 The `--logflow` flag is particularly useful when debugging cloud provider API interactions. At high verbosity levels (such as `-v=9`), resource providers will log HTTP requests and responses to their cloud APIs. This helps diagnose issues like incorrect resource references, unexpected 404 errors, or API parameter problems.
 
 {{% notes type="warning" %}}
-Enabling verbose logging may reveal sensitive information (tokens, credentials...) that is provided from your execution environment directly to your cloud provider, and which Pulumi may not be aware of. Before sharing the logs, be careful to audit and redact any sensitive information.
+Enabling verbose logging may reveal sensitive information (tokens, credentials...) that is provided from your execution environment directly to your cloud provider, and which Pulumi may not be aware of. Before sharing these manually captured logs, be careful to audit and redact any sensitive information. To share diagnostics for a failed operation without redacting by hand, use [automatic logging](#automatic-logging) and `pulumi logs share` instead, which redacts secrets for you.
 {{% /notes %}}
 
 ```bash
