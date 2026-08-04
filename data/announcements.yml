@@ -71,3 +71,12 @@ announcements:
       label: Register
       href: "/events/intro-to-pulumi-esc-managing-secrets/?utm_source=announcement-banner&utm_medium=website&utm_campaign=intro-to-esc-workshop"
     dismissible: true
+  - id: release-terraform-state-modules-hcl-2026-08-Ts7hK4
+    active: true
+    display: both
+    icon: sparkle
+    text: "**New this week:** Pulumi Cloud is a backend for Terraform state, your Terraform modules work as is, and HCL is a first-class Pulumi language."
+    cta:
+      label: See the release
+      href: "/releases/terraform-state-backend-modules-hcl/"
+    dismissible: true
