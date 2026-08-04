@@ -1,6 +1,6 @@
 ---
 title: "Bring Your Terraform Estate Into the Agentic Era"
-date: 2026-08-04T09:00:00-07:00
+date: 2026-08-04
 draft: false
 meta_desc: "Pulumi Cloud as a Terraform backend and HCL in Pulumi IaC are now GA, plus native Terraform module support — bring the IaC you already have."
 feature_image: feature.png
