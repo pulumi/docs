@@ -1,0 +1,47 @@
+{{- /*
+    The two large side-by-side cards at the top of /learn (Dev Hub, Academy).
+
+    Built on the .card-highlight primitive (a tinted violet panel, no border) so
+    the transparent violet line-art illustrations sit on the fill rather than in
+    a boxed-off image well. The whole card is one stretched link, so the CTA is a
+    styled span, not a nested anchor.
+
+    Params:
+      . (the context) a slice of {title, description, image, href, cta}
+
+    Links are written out verbatim rather than run through relref: /dev-hub/ is
+    built in the marketing-web repo, so it isn't a page Hugo can resolve here.
+
+    The illustration is looked up defensively: a missing asset would otherwise
+    panic the build (see layouts/partials/fingerprinted-img.html), so an absent
+    image just leaves the panel empty and the card still renders.
+*/ -}}
+<section aria-label="Featured learning resources">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {{ range . }}
+        {{ $external := or (hasPrefix .href "http://") (hasPrefix .href "https://") }}
+        <article class="group relative h-full">
+            <a href="{{ .href }}"{{ partial "external-link-attrs.html" .href | safeHTMLAttr }} class="card-highlight flex h-full flex-col p-8 no-underline md:p-10">
+                {{ with .image }}
+                {{ $asset := resources.Get (printf "fingerprinted/%s" (strings.TrimPrefix "/" .)) }}
+                {{ if $asset }}
+                <div class="mb-6 flex items-center justify-center">
+                    {{ partial "fingerprinted-img.html" (dict "src" . "alt" "" "ariaHidden" "true" "class" "h-40 w-auto md:h-52") }}
+                </div>
+                {{ end }}
+                {{ end }}
+                <h2 class="heading-3 m-0 text-service-black transition-colors group-hover:text-violet-primary">
+                    {{ .title }}
+                    {{ if $external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}
+                </h2>
+                {{ with .description }}
+                <p class="body-base mt-3 mb-0 max-w-prose text-service-black">{{ . }}</p>
+                {{ end }}
+                {{ with .cta }}
+                <span class="btn btn-link mt-6 self-start">{{ . }} &rarr;</span>
+                {{ end }}
+            </a>
+        </article>
+        {{ end }}
+    </div>
+</section>

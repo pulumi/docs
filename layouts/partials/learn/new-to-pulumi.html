@@ -1,0 +1,70 @@
+{{- /*
+    "New to Pulumi?" — two balanced cards, For humans and For agents.
+
+    The human card is four cloud logo links over a Get started button; the agent
+    card is one copy-to-clipboard prompt over two doc links. Per AGENTS.md
+    §"AI and agent positioning", the agent card names third-party coding agents
+    as first-class rather than presenting Neo as the only option.
+
+    The copy button is the generic [data-copy-text] control from
+    theme/src/ts/copy-text.ts, registered globally in main.ts — no page-specific
+    JS. It copies a prompt pointing at /onboard.md (static/onboard.md).
+
+    Params:
+      title        section heading
+      description  optional lead paragraph
+      humans       {label, cta, href, clouds: [{label, logo, href}]}
+      agents       optional {label, description, prompt, prompt_label,
+                   links: [{label, href}]}. Omit the key entirely and the human
+                   card renders on its own, full width.
+*/ -}}
+{{- $agents := .agents -}}
+<section aria-labelledby="new-to-pulumi-heading">
+    <div class="mb-8 flex flex-col gap-2">
+        <h2 id="new-to-pulumi-heading" class="heading-2 m-0">{{ .title }}</h2>
+        {{ with .description }}<p class="body-lg text-gray-primary m-0 max-w-2xl">{{ . }}</p>{{ end }}
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 {{ if $agents }}md:grid-cols-2{{ end }}">
+        {{ with .humans }}
+        <div class="card flex flex-col bg-white p-8">
+            <p class="font-overline text-gray-primary m-0!">{{ .label }}</p>
+            <div class="mt-6 grid grid-cols-2 gap-3">
+                {{ range .clouds }}
+                <a href="{{ .href }}" data-track="learn-get-started-{{ .label | urlize }}" class="card card-hover flex items-center justify-center bg-white px-4 py-6 no-underline hover:border-violet-300">
+                    <img class="h-9 w-auto" src="{{ .logo }}" alt="{{ .label }}" loading="lazy" decoding="async" />
+                </a>
+                {{ end }}
+            </div>
+            {{ with .cta }}
+            <a href="{{ $.humans.href }}" data-track="learn-get-started" class="btn btn-primary btn-lg mt-6 self-start">
+                {{ . }}
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+
+        {{ with $agents }}
+        <div class="card flex flex-col bg-white p-8">
+            <p class="font-overline text-gray-primary m-0!">{{ .label }}</p>
+            {{ with .description }}<p class="body-base mt-4 mb-0 max-w-prose text-service-black">{{ . }}</p>{{ end }}
+            {{ with .prompt }}
+            <button type="button" class="btn btn-outline btn-lg mt-6 w-full justify-start text-left" data-copy-text="{{ . }}" data-track="learn-agent-prompt" aria-label="Copy the onboarding prompt for your coding agent">
+                <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
+                <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5 text-violet-primary") }}</span>
+                <span class="truncate" data-copy-idle>{{ $.agents.prompt_label | default . }}</span>
+                <span class="truncate" data-copy-done hidden>Copied!</span>
+            </button>
+            {{ end }}
+            {{ with .links }}
+            <ul class="mt-auto flex list-none flex-wrap gap-x-6 gap-y-2 p-0 pt-6">
+                {{ range . }}
+                <li class="m-0"><a href="{{ .href }}" data-track="learn-agent-{{ .label | urlize }}" class="btn btn-link">{{ .label }} &rarr;</a></li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>

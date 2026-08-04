@@ -1,0 +1,23 @@
+{{- /*
+    Latest tutorials from the blog — the posts filed under the `tutorials`
+    category, newest first.
+
+    Params:
+      title  section heading
+      count  how many posts to show (default 3)
+*/ -}}
+{{- $count := .count | default 3 -}}
+{{- $posts := where (where site.RegularPages "Section" "blog") "Params.category" "tutorials" -}}
+{{- with first $count $posts.ByDate.Reverse }}
+<section aria-labelledby="learn-tutorials-heading">
+    <div class="mb-8 flex items-center justify-between gap-4">
+        <h2 id="learn-tutorials-heading" class="heading-2 m-0">{{ $.title }}</h2>
+        <a href="/blog/category/tutorials/" data-track="learn-tutorials-see-all" class="btn btn-link shrink-0">See all &rarr;</a>
+    </div>
+    <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        {{ range . }}
+        {{ partial "blog/card/medium.html" (dict "page" .) }}
+        {{ end }}
+    </div>
+</section>
+{{- end }}

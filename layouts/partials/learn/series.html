@@ -1,0 +1,37 @@
+{{- /*
+    Curated blog series row.
+
+    Deliberately not blog/series-strip.html: that partial owns its own chrome
+    (a mono overline, a top rule, its own vertical rhythm) so the blog pages it
+    is shared by stay identical to each other. /learn needs the same cards under
+    this page's h2 section header, so it composes blog/card/series.html directly
+    and leaves the shared strip alone.
+
+    Params:
+      title  section heading
+      slugs  ordered series slugs from data/blog_series.yml; anything that
+             doesn't resolve is skipped, and the row is capped at 4 to match the
+             4-column grid.
+*/ -}}
+{{- $all := site.Data.blog_series.series -}}
+{{- $chosen := slice -}}
+{{- range .slugs -}}
+    {{- $slug := . -}}
+    {{- range $all -}}
+        {{- if and (eq .slug $slug) (lt (len $chosen) 4) -}}{{ $chosen = $chosen | append . }}{{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- with $chosen }}
+<section aria-labelledby="learn-series-heading">
+    <div class="mb-8 flex items-center justify-between gap-4">
+        <h2 id="learn-series-heading" class="heading-2 m-0">{{ $.title }}</h2>
+        <a href="/blog/series/" data-track="learn-series-see-all" class="btn btn-link shrink-0">See all &rarr;</a>
+    </div>
+    <div class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+        {{ range . }}
+        {{ $count := len (where (where site.RegularPages "Params.series" .slug) "Date" "lt" now) }}
+        {{ partial "blog/card/series.html" (dict "series" . "count" $count) }}
+        {{ end }}
+    </div>
+</section>
+{{- end }}
