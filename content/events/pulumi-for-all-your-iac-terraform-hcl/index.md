@@ -59,8 +59,8 @@ presenters:
 # case-sensitive
 tags:
     level: Beginner # Beginner, Intermediate, Advanced
-    topics: ["Terraform", "Infrastructure as Code"]
-    languages: []
+    topics: ["Pulumi Neo", "Infrastructure as Code", "DevOps"]
+    languages: [HCL]
     clouds: []
 
 # The right hand side form section.
