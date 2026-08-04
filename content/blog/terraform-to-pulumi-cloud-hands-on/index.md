@@ -29,7 +29,7 @@ We've got a bunch to cover, so let's jump right in.
 
 ## Start with a Terraform project
 
-Our tour begins with a tiny Terraform project that provisions a single Amazon S3 bucket using locally defined module that we'll publish later. The project is [available on GitHub](https://github.com/cnunciato/simple-tf-template) as a template, and the easiest way to use it is with the GitHub CLI:
+Our tour begins with a tiny Terraform project that provisions a single Amazon S3 bucket using a locally defined module that we'll publish later. The project is [available on GitHub](https://github.com/cnunciato/simple-tf-template) as a template, and the easiest way to use it is with the GitHub CLI:
 
 ```bash
 $ gh repo create my-tf-project \
@@ -39,7 +39,7 @@ $ gh repo create my-tf-project \
 
 ```
 
-We'll use the local Terraform backend to start. Set your AWS credentials (preferably with [environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)), then deploy the project with Terraform or OpenTofu. (This walkthrough uses the `terraform`, but you can swap in `tofu` if that's your preference.)
+We'll use the local Terraform backend to start. Set your AWS credentials (preferably with [environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)), then deploy the project with Terraform or OpenTofu. (This walkthrough uses the `terraform` CLI, but you can swap in `tofu` if that's your preference.)
 
 ```bash
 $ terraform init && terraform apply
@@ -74,7 +74,7 @@ terraform {
 }
 ```
 
-The `workspace` maps is an underscore-delimited string that expresses the name of the [project](/docs/iac/concepts/projects/) you'd like to use (here, `my-tf-project`) and the [stack](/docs/iac/concepts/stacks/) (`dev`). A single Pulumi project can have as many stacks as you like.
+The workspace `name` is an underscore-delimited string that expresses the name of the [project](/docs/iac/concepts/projects/) you'd like to use (here, `my-tf-project`) and the [stack](/docs/iac/concepts/stacks/) (`dev`). A single Pulumi project can have as many stacks as you like.
 
 Next, sign in to Pulumi Cloud with the Terraform CLI:
 
@@ -82,7 +82,7 @@ Next, sign in to Pulumi Cloud with the Terraform CLI:
 $ terraform login tf.pulumi.com
 ```
 
-Choose `yes` when prompted, and you'll be taken to Pulumi Cloud to create a [personal access token](/docs/administration/access-identity/access-tokens/#personal-access-tokens), which you can paste it into the prompt to authenticate:
+Choose `yes` when prompted, and you'll be taken to Pulumi Cloud to create a [personal access token](/docs/administration/access-identity/access-tokens/#personal-access-tokens), which you can paste into the prompt to authenticate:
 
 ![Creating a personal access token in the Pulumi Cloud console](./token.png)
 
@@ -96,7 +96,7 @@ With the `backend` block in place and your `terraform` CLI signed in to Pulumi C
 $ terraform init -migrate-state
 ```
 
-Terraform should detect the `backend` change and offer to copy it:
+Terraform should detect the `backend` change and offer to copy your existing state:
 
 ```
 Do you want to copy existing state to the new backend?
@@ -114,7 +114,7 @@ Successfully configured the backend "remote"! Terraform will automatically
 use this backend unless the backend configuration changes.
 ```
 
-Note that nothing about your deployed infrastructure has changed, here; all we did was migrate your local state to Pulumi Cloud, and the process is identical whether you're moving from S3, Azure, Google Cloud, or HCP Terraform or Terraform Enterprise. See [Store Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) for details.
+Note that nothing about your deployed infrastructure has changed here; all we did was migrate your local state to Pulumi Cloud, and the process is identical whether you're moving from S3, Azure, Google Cloud, or HCP Terraform or Terraform Enterprise. See [Store Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/) for details.
 
 Now hop over to the Pulumi Cloud console, choose **Stacks**, and you'll see your new stack in the list, along with its first update:
 
@@ -342,7 +342,7 @@ Because this approach uses untyped references, you'll trade a little type safety
 
 For as much flexibility as general-purpose languages offer, some teams simply prefer to use HCL. So as of today, HCL is now a first-class language in the Pulumi engine, right alongside TypeScript, Python, Go, C#, Java, and YAML.
 
-The easiest way to get a feel for it is to crate a new from a template:
+The easiest way to get a feel for it is to create a new project from a template:
 
 ```bash
 $ mkdir ../my-hcl-project && cd $_
@@ -389,7 +389,7 @@ Resources:
 Duration: 7s
 ```
 
-This template happens to use the bridged `pulumi/aws` provider, but you're free to pull in any others as well: [native Pulumi providers](/docs/iac/concepts/providers/), any community-supported `hashicorp/*` provider, local modules, those you've published to your Pulumi Cloud registry, and more. In fact, you can try that now by replacing the code in `main.tf` with the same code you used in the Terraform program you left off with earlier — only without the explicit `terraform > backend` block, as it's no longer needed:
+This template happens to use the `pulumi/aws` provider, but you're free to pull in any others as well: [native Pulumi providers](/docs/iac/concepts/providers/), official `hashicorp/*` providers, community-supported providers, and more. In fact, you can try that now by replacing the code in `main.tf` with the same code you used in the Terraform program you left off with earlier — only without the explicit `terraform > backend` block, as it's no longer needed:
 
 ```hcl
 module "s3-bucket" {
@@ -437,7 +437,7 @@ And with that, our tour is complete. Be sure to clean up both projects with a `t
 
 Now you've seen it all come together: You can back your Terraform state with Pulumi Cloud, publish and share your modules, consume those modules from any Pulumi language, and write HCL that runs natively — all without having to rewrite what you've already built.
 
-To keep going, a few next steps to keep the learning going:
+To keep going, here are a few good next steps:
 
 * [Storing Terraform state in Pulumi Cloud](/docs/iac/get-started/terraform/terraform-state-backend/)
 * [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/)
