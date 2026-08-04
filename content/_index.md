@@ -8,9 +8,9 @@ include_organization_schema: true
 sections:
   - type: hero
     layout: split
-    badge_highlight_text: "New Release:"
-    badge_text: "Building for the Agentic Era"
-    badge_link: /releases/agentic-infrastructure-era/
+    badge_highlight_text: "New this week:"
+    badge_text: "Terraform state, modules, and HCL"
+    badge_link: /releases/terraform-state-backend-modules-hcl/
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
     description: |

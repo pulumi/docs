@@ -82,32 +82,6 @@ sections:
           credentials at apply time and expose outputs to downstream stacks and services.
         link: /docs/esc/
 
-  - anchor: hcl
-    label: HCL as a Pulumi language
-    heading: HCL as a Pulumi language
-    description: |
-      HCL is now generally available in Pulumi IaC, alongside TypeScript, Python, Go, C#, Java, and YAML.
-      If your team prefers HCL, keep writing HCL, and run it on the Pulumi engine.
-    cards:
-      - variant: image-right
-        image: /images/releases/august-2026/release-hcl.svg
-        image_alt: An HCL program running on the Pulumi engine
-        icon: file-code
-        title: Write and run HCL with Pulumi
-        description: |
-          HCL programs get the whole Pulumi ecosystem: thousands of providers, Pulumi Cloud, ESC,
-          policies, and Neo. And HCL in Pulumi is 100% OpenTofu compatible, with no syntactical
-          differences.
-        link: /docs/iac/get-started/terraform/
-
-      - variant: text
-        icon: puzzle-piece
-        title: Every provider, out of the box
-        description: |
-          Thanks to Pulumi's Terraform bridge, any Terraform provider works in an HCL program, alongside
-          every native Pulumi provider. Browse what's available in the Pulumi Registry.
-        link: /registry/
-
   - anchor: terraform-modules
     label: Terraform modules in Pulumi programs
     heading: Terraform modules in Pulumi programs
@@ -115,7 +89,7 @@ sections:
       The modules your team has built and maintained for years work in Pulumi programs as is, in whatever
       language you choose to write the program.
     cards:
-      - variant: image-left
+      - variant: image-right
         image: /images/releases/august-2026/release-modules.svg
         image_alt: A Terraform module imported into a Pulumi program
         icon: package
@@ -135,6 +109,32 @@ sections:
           Pulumi and Terraform programs.
         link: /docs/idp/concepts/private-registry/
 
+  - anchor: hcl
+    label: HCL as a Pulumi language
+    heading: HCL as a Pulumi language
+    description: |
+      HCL is now generally available in Pulumi IaC, alongside TypeScript, Python, Go, C#, Java, and YAML.
+      If your team prefers HCL, keep writing HCL, and run it on the Pulumi engine.
+    cards:
+      - variant: image-left
+        image: /images/releases/august-2026/release-hcl.svg
+        image_alt: An HCL program running on the Pulumi engine
+        icon: file-code
+        title: Write and run HCL with Pulumi
+        description: |
+          HCL programs get the whole Pulumi ecosystem: thousands of providers, Pulumi Cloud, ESC,
+          policies, and Neo. And HCL in Pulumi is 100% OpenTofu compatible, with no syntactical
+          differences.
+        link: /docs/iac/get-started/terraform/
+
+      - variant: text
+        icon: puzzle-piece
+        title: Every provider, out of the box
+        description: |
+          Thanks to Pulumi's Terraform bridge, any Terraform provider works in an HCL program, alongside
+          every native Pulumi provider. Browse what's available in the Pulumi Registry.
+        link: /registry/
+
 blog_section:
   anchor: from-the-blog
   title: From the blog
@@ -145,5 +145,4 @@ blog_section:
     - /blog/bring-your-terraform-estate-into-the-agentic-era
     - /blog/getting-started-with-pulumi-hcl
     - /blog/terraforms-data-model-on-pulumis-engine
-    - /blog/pulumi-hcl-building-against-an-oracle
 ---
