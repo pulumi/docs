@@ -173,10 +173,13 @@ export const FONT_SPECS = [
 ]
 export const loadFonts = once(() => FONT_SPECS.map((s) => ({ name: s.name, data: readFileSync(s.file), weight: s.weight, style: s.style })))
 
-// Inter Semibold parsed for title measurement (lazy: parsed on first render).
-// once() caches the in-flight promise so the font is parsed exactly once.
-export const titleFont = once(async () => {
+// Inter Semibold / Regular parsed for text measurement (lazy: parsed on first
+// render). once() caches the in-flight promise so each font is parsed exactly
+// once. Measure with the weight you render: semibold runs a few percent wider.
+const parseFont = (file) => once(async () => {
   const { default: opentype } = await import("opentype.js")
-  const b = readFileSync(join(FONT_DIR, "inter-semibold.woff"))
+  const b = readFileSync(join(FONT_DIR, file))
   return opentype.parse(b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength))
 })
+export const titleFont = parseFont("inter-semibold.woff")
+export const bodyFont = parseFont("inter-regular.woff")

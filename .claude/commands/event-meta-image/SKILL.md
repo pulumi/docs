@@ -26,7 +26,7 @@ Everything below applies to both modes **except** the bundle/frontmatter writes 
 Orthogonal to event-bound/standalone, pick how much to prompt. **Default to searching, not asking:** in both modes you still auto-resolve people and logos via the ladders in Steps 3–4 (including `WebSearch`/`WebFetch`). The modes differ only in what happens when something can't be resolved or is genuinely ambiguous.
 
 - **Unattended — never ask.** Trigger when `$ARGUMENTS` contains `-y`, `--yes`, `--non-interactive`, `--no-input`, `no questions`, or "just do it" (and automatically whenever you're running non-interactively, e.g. under `claude -p` or the eval, where `AskUserQuestion` can't be answered). Skip **every** `AskUserQuestion`. Derive all inputs automatically:
-  - **overline** = `event_type`; **title** = frontmatter `title`; **speakers** = frontmatter `presenters[].photo`; **additionalText** = the derived "With …" line.
+  - **overline** = `event_type`; **title** = frontmatter `title`; **speakers** = frontmatter `presenters[].photo`; **additionalText** = the derived "With …" line, with **additionalTextShort** = its names-only form.
   - **people** = frontmatter presenters **plus** any external co-presenter named in the title/body.
   - **logos** = `["pulumi"]` **plus** any partner company named in the title/body.
   - Auto-resolve each derived photo/logo via the Step 3 / Step 4 ladders. **On a resolution miss, skip that one asset with a warning and keep going — never block.** No button, no secondary title.
@@ -48,7 +48,7 @@ Pull from frontmatter:
 - **event_type** → the default **overline** (uppercased automatically).
 - **presenters**: `presenters: [{ name, role, photo }]` — the in-frontmatter speakers. Each `photo` (e.g. `/images/people/<x>.jpg` or `/images/team/<x>.jpg`) resolves under `static/`.
 
-The build default already uses exactly these. If the user only wants the default look in all five sizes (no new people/logos), you can skip straight to Step 6 with `overline`, `title`, the presenters' `photo` paths as `speakers`, the `"With …"` line as `additionalText`, and `["pulumi"]` as `logos`.
+The build default already uses exactly these. If the user only wants the default look in all five sizes (no new people/logos), you can skip straight to Step 6 with `overline`, `title`, the presenters' `photo` paths as `speakers`, the `"With …"` line as `additionalText` (plus its names-only form as `additionalTextShort`), and `["pulumi"]` as `logos`.
 
 ## [Step 3/6] Add people not in frontmatter (external co-presenters)
 
@@ -103,6 +103,7 @@ Write **one** config JSON (e.g. `.context/event-images/<slug>/config.json`), the
   "title": "Advanced CI/CD for AWS using Pulumi and GitHub Actions",
   "secondaryTitle": "",
   "additionalText": "With Jane Doe - Staff Engineer, Acme and John Roe",
+  "additionalTextShort": "With Jane Doe and John Roe",
   "showButton": false,
   "buttonText": "Register",         // opt-in only — see below; leave showButton false unless explicitly requested
   "speakers": ["/images/people/jane.jpg", ".context/event-images/<slug>/john-roe.jpg"],
@@ -111,6 +112,7 @@ Write **one** config JSON (e.g. `.context/event-images/<slug>/config.json`), the
 ```
 
 - `additionalText` is the literal "With …" line. Compose it yourself: one presenter → `With {name} - {role}`; many → names only, Oxford comma (`With A, B, and C`). (Omit to let the CLI derive it from a `presenters: [{name, role}]` array instead.)
+- `additionalTextShort` is the names-only byline (`With A and B`) used by the two **square** sizes, whose text column is too narrow for full "Name - Role, Company" runs. Optional: supply it whenever `additionalText` carries roles, or omit it and let a `presenters` array derive both. The other three sizes always use `additionalText`.
 - `showButton` is **off unless the user explicitly asked for a button** (see Step 5). Omit it or leave `false` in every default and unattended run.
 - `speakers` / `logos` resolve as: `data:` URI → path relative to the config file → repo path (`/images/…`, `static/`, `assets/fingerprinted/`, `static/logos/**`) → absolute path. Unresolved entries are skipped with a warning.
 
