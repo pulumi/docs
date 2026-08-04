@@ -36,6 +36,8 @@ Getting started with GitOps can feel like trying to herd cats through a YAML fac
 
 <!--more-->
 
+{{% hcl-note %}}
+
 If you're not familiar with the formal definition, the [OpenGitOps](https://opengitops.dev/) project distills it into four principles:
 
 * Declarative desired state

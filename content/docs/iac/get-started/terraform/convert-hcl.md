@@ -26,7 +26,7 @@ The rest of this page covers converting.
 
 Converting HCL to Pulumi code makes sense in several scenarios:
 
-* **Complex logic**: Terraform's HCL limitations make certain operations difficult
+* **Complex logic**: Operations that need rich runtime logic can be more natural in a general-purpose language
 * **Testing requirements**: You need unit testing capabilities for infrastructure code
 * **Integration needs**: Infrastructure code needs to integrate with application code
 * **Team preferences**: Your team prefers general-purpose programming languages
