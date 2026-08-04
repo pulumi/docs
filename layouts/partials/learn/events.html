@@ -48,7 +48,7 @@
         <h2 id="learn-events-heading" class="font-overline m-0 text-service-black">{{ $p.title }}</h2>
         <a href="/events/" data-track="learn-events-see-all" class="btn btn-link shrink-0">See all &rarr;</a>
     </div>
-    <ul class="grid list-none grid-cols-1 gap-4 p-0 lg:grid-cols-2">
+    <ul class="grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-3">
         {{ range . }}
         <li class="m-0">{{ partial "events/event-card.html" (dict "page" . "pageContext" $ctx) }}</li>
         {{ end }}

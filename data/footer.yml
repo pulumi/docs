@@ -26,6 +26,12 @@ columns:
       - label: Learn
         href: /learn/
         track: footer-learn
+      - label: Dev Hub
+        href: /dev-hub/
+        track: footer-dev-hub
+      - label: Pulumi Academy
+        href: https://academy.pulumi.com
+        track: footer-academy
       - label: Events
         href: /events/
         track: footer-events
