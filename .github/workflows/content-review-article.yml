@@ -94,7 +94,7 @@ jobs:
           fi
           exit "$FAIL"
       - name: Install Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -457,7 +457,7 @@ jobs:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           fetch-depth: 0
       - name: Install Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -474,7 +474,7 @@ jobs:
 
       - name: Download handoff artifact
         continue-on-error: true
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: review-handoff
 
@@ -498,7 +498,7 @@ jobs:
       - name: Download guardrail snapshot
         if: always()
         continue-on-error: true
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: review-snapshot
           path: .review-snapshot

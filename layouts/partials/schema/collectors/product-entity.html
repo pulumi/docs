@@ -1,7 +1,7 @@
 {{/* Returns SoftwareApplication entity for product pages in @graph */}}
 
 {{/* Determine product details based on page */}}
-{{ $productName := .Title }}
+{{ $productName := or .Params.schema_name .Title }}
 {{ $productDescription := or .Params.meta_desc .Summary }}
 {{ $applicationCategory := "DeveloperApplication" }}
 {{ $applicationSubCategory := "" }}
@@ -50,22 +50,18 @@
 
 {{/* Add offer/pricing information - only for free products or if pricing is explicitly defined */}}
 {{ if in .RelPermalink "/neo/" }}
-  {{/* Neo needs a paid edition, so the aggregate spans every edition that costs
-       something: the numeric prices bound the range, and "Custom" counts toward
-       offerCount without contributing a figure. Derived from
-       data/pulumi_pricing.yaml rather than hardcoded, so live structured data
-       can't drift from the prices on /pricing/. */}}
+  {{/* Neo is available from the free Individual edition (5M tokens/month included)
+       through the paid ones, so the aggregate spans every edition that carries a
+       numeric price: Individual ($0) bounds the low end, Enterprise the high end.
+       Business Critical reads "Custom" and is excluded, since it contributes no
+       figure. Derived from data/pulumi_pricing.yaml — which is where the pricing
+       cards live now — so live structured data can't drift from /pricing/. */}}
   {{ $px := partialCached "pricing/data.html" . "pricing-data" }}
-  {{ $paid := 0 }}
   {{ $amounts := slice }}
   {{ range $px.editions }}
-    {{ $price := printf "%v" (.card.price | default "") }}
-    {{ $m := findRESubmatch `^\$([0-9,]+)$` $price }}
-    {{ if $m }}
-      {{ $n := int (replace (index (index $m 0) 1) "," "") }}
-      {{ if gt $n 0 }}{{ $paid = add $paid 1 }}{{ $amounts = $amounts | append $n }}{{ end }}
-    {{ else if $price }}
-      {{ $paid = add $paid 1 }}
+    {{ $price := replace (replace (printf "%v" (.card.price | default "")) "$" "") "," "" }}
+    {{ if findRE `^[0-9]+(\.[0-9]+)?$` $price }}
+      {{ $amounts = $amounts | append (float $price) }}
     {{ end }}
   {{ end }}
   {{ if not $amounts }}
@@ -75,12 +71,98 @@
   {{ $schema = merge $schema (dict "offers" (dict
     "@type" "AggregateOffer"
     "priceCurrency" "USD"
-    "lowPrice" (printf "%d" (index $sorted 0))
-    "highPrice" (printf "%d" (index $sorted (sub (len $sorted) 1)))
+    "lowPrice" (index $sorted 0)
+    "highPrice" (index $sorted (sub (len $sorted) 1))
     "availability" "https://schema.org/InStock"
     "url" "https://www.pulumi.com/pricing/"
-    "offerCount" $paid
+    "offerCount" (len $amounts)
   )) }}
+{{ else if eq .RelPermalink "/pricing/" }}
+  {{/* Pricing page: build real per-edition Offers from data/pulumi_pricing.yaml, plus an AggregateOffer.
+       Only editions with a parseable numeric price become Offers - "Custom" (contact-sales) editions are
+       intentionally excluded rather than assigned a fabricated price, since Offer.price is required.
+       The cards moved out of this page's frontmatter into the data file, so the loop reads the same
+       fields (price, price_label, subtitle, note, unit, cta) from each edition's card. */}}
+  {{ $px := partialCached "pricing/data.html" . "pricing-data" }}
+  {{ $offerList := slice }}
+  {{ $numericPrices := slice }}
+  {{ range $px.editions }}
+    {{ $card := .card | default dict }}
+    {{ $cleanPrice := replace (replace (printf "%v" ($card.price | default "")) "$" "") "," "" }}
+    {{ if findRE `^[0-9]+(\.[0-9]+)?$` $cleanPrice }}
+      {{ $priceNum := float $cleanPrice }}
+      {{ $offerURL := "https://www.pulumi.com/pricing/" }}
+      {{ with $card.cta }}
+        {{ if and .href (strings.HasPrefix .href "http") }}
+          {{ $offerURL = .href }}
+        {{ end }}
+      {{ end }}
+      {{/* Build a description that explicitly states this is a base price with additional usage
+           billed on demand, so the machine-readable claim itself discloses the pricing model
+           rather than implying a flat, all-inclusive price. Lead with the billing-period label
+           (e.g. "$40/month base") so the qualifier survives even for a priceSpecification-ignoring
+           parser (per review: Google reads offers.price + offers.description, not
+           offers.priceSpecification, so the description is the only field such a parser sees).
+           Trim any trailing "." from each part before joining so they don't double-punctuate. */}}
+      {{ $descParts := slice }}
+      {{ if and $card.price_label (strings.Contains $card.price_label "month") }}
+        {{ $descParts = $descParts | append (printf "$%s%s" $cleanPrice $card.price_label) }}
+      {{ end }}
+      {{ with $card.subtitle }}
+        {{ $descParts = $descParts | append (strings.TrimSuffix "." .) }}
+      {{ end }}
+      {{ with $card.note }}
+        {{ $descParts = $descParts | append (strings.TrimSuffix "." .) }}
+      {{ end }}
+      {{ with $card.unit }}
+        {{ $descParts = $descParts | append (strings.TrimSuffix "." (replace . "**" "")) }}
+      {{ end }}
+      {{ $offer := dict
+        "@type" "Offer"
+        "name" .name
+        "description" (delimit $descParts ". ")
+        "price" $priceNum
+        "priceCurrency" "USD"
+        "availability" "https://schema.org/InStock"
+        "url" $offerURL
+      }}
+      {{/* Attach the billing period via schema.org's UnitPriceSpecification.billingDuration when this
+           edition is billed monthly, derived from the card's own price_label rather than hardcoded per
+           edition. Note: Google's structured data guidance documents no billing-period / subscription
+           concept for Offer and states it uses offers.price and ignores offers.priceSpecification, so
+           this does not change Google rich results - it is schema.org-correct markup for AI/LLM
+           parsers reading edition pricing. */}}
+      {{ if and $card.price_label (strings.Contains $card.price_label "month") }}
+        {{ $offer = merge $offer (dict "priceSpecification" (dict
+          "@type" "UnitPriceSpecification"
+          "price" $priceNum
+          "priceCurrency" "USD"
+          "billingDuration" (dict
+            "@type" "QuantitativeValue"
+            "value" 1
+            "unitCode" "MON"
+          )
+        )) }}
+      {{ end }}
+      {{ $offerList = $offerList | append $offer }}
+      {{ $numericPrices = $numericPrices | append $priceNum }}
+    {{ end }}
+  {{ end }}
+  {{ if gt (len $numericPrices) 0 }}
+    {{ $sortedPrices := sort $numericPrices }}
+    {{ $schema = merge $schema (dict "offers" (dict
+      "@type" "AggregateOffer"
+      "priceCurrency" "USD"
+      "lowPrice" (index $sortedPrices 0)
+      "highPrice" (index $sortedPrices (sub (len $sortedPrices) 1))
+      "offerCount" (len $offerList)
+      "availability" "https://schema.org/InStock"
+      "url" "https://www.pulumi.com/pricing/"
+      "offers" $offerList
+    )) }}
+  {{ else }}
+    {{ errorf "product-entity.html: no numeric edition prices in data/pulumi_pricing.yaml, so /pricing/ has no Offer schema." }}
+  {{ end }}
 {{ else }}
   {{/* Generic product offer - avoid hardcoding prices */}}
   {{ $schema = merge $schema (dict "offers" (dict

@@ -70,7 +70,7 @@ When an ESC consumer such as [`pulumi env run`](/docs/iac/cli/commands/pulumi_en
 For example, the `default/greet` environment above sets `GREETING: Hello`. Even if `GREETING` is already set in your shell, the environment's value is used:
 
 ```console
-$ GREETING=from-shell esc run default/greet -- printenv GREETING
+$ GREETING=from-shell pulumi env run default/greet -- printenv GREETING
 Hello
 ```
 

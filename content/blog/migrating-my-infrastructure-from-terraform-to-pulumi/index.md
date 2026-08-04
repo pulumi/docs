@@ -16,6 +16,8 @@ Pulumi community member [Erik Näslund](https://blog.ekik.org/) shares his thoug
 
 <!--more-->
 
+{{% hcl-note %}}
+
 I've been using [Terraform](https://www.terraform.io/) for a couple of years and overall I've been quite happy with it. However there's a few things that started to bother me more and more recently.
 
 Terraform uses a language called Hashicorp HCL to define the infrastructure. It's a relatively simple declarative language, but it's something I had to learn along the way. Just like any language it has it's little quirks, and I often found myself spending more time than I wanted to figure out how to do certain things. As I'm doing all the infrastructure myself I really wanted to be able to use a language I'm familiar with, to make things simple.

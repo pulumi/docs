@@ -163,7 +163,7 @@ jobs:
             echo "status=degraded" >> "$GITHUB_OUTPUT"
           fi
       - name: Install Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'

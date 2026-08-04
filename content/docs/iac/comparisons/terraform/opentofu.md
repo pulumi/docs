@@ -34,13 +34,13 @@ Here is a summary of the key differences between OpenTofu and Terraform:
 | Feature | OpenTofu | Terraform |
 | ------- | ------ | --------- |
 | [OSS License](#license) | Yes, Mozilla Public License 2.0 | No, Business Source License 1.1 |
-| [Language Support](#language) | HashiCorp Configuration Language (HCL) | HashiCorp Configuration Language (HCL) |
+| [Language Support](#language) | HashiCorp Configuration Language (HCL) only | HashiCorp Configuration Language (HCL) only |
 | [IDE Support](#ide) | Limited | Limited |
 | [State Management](#state) | Self-managed by default, managed SaaS offering available. | Self-managed by default, managed SaaS offerings available. |
 | [Provider Support](#providers) | Support across multiple IaaS, SaaS, and PaaS providers. | Support across multiple IaaS, SaaS, and PaaS providers. |
 | [Cloud Native Support](#cloud-native) | Core API typed. Generic support for CRD. | Core API typed. Generic support for CRD. |
 | [Dynamic Provider Support](#dynamic-providers) | No | No |
-| [Infrastructure Reuse and Modularity](#reuse) | Constrained. Can only reuse OpenTofu modules. | Constrained. Can only reuse Terraform modules. |
+| [Infrastructure Reuse and Modularity](#reuse) | Constrained. Can only reuse OpenTofu modules, and only from HCL. | Constrained. Can only reuse Terraform modules, and only from HCL. |
 | [Testing and Validation](#testing) | Integration testing only. | Integration testing only. |
 | [Modes of Execution](#modes) | Run CLI commands only. | Run CLI commands or perform remote runs with SaaS offering. |
 | [Embed within Application Code](#embedding) | No | No |
@@ -68,6 +68,8 @@ Pulumi open-source projects use the permissive and business-friendly [Apache Lic
 ### Language Support {#language}
 
 Pulumi enables you to build infrastructure using familiar programming languages such as Python, Go, JavaScript, TypeScript, .NET, and Java, plus YAML and [HCL](/docs/iac/languages-sdks/hcl/) for teams already writing Terraform configurations. By using these established languages, you gain access to common constructs like loops, conditionals, functions, and classes—making it easier to reduce boilerplate and enforce best practices. These languages have been refined over decades to manage complexity at scale, which aligns perfectly with the challenges of today’s globally distributed cloud systems. Rather than introducing a new module ecosystem, Pulumi allows you to use existing package managers and development workflows you’re already comfortable with.
+
+Pulumi also runs [HCL](/docs/iac/languages-sdks/hcl/) itself, so neither OpenTofu nor Terraform users have to leave the syntax they know to move onto Pulumi's engine: pair a `Pulumi.yaml` declaring `runtime: hcl` with your existing `.tf` files and deploy with `pulumi up`. The runtime resolves providers through the OpenTofu registry — an unqualified `aws` becomes `registry.opentofu.org/hashicorp/aws` and is bridged into Pulumi automatically — and its compatibility suite runs every case against the `tofu` binary to assert the two behave the same.
 
 ### IDE Support {#ide}
 
@@ -99,6 +101,8 @@ Pulumi promotes creating reusable and modular components which allows standard a
 
 Pulumi also provides the [Pulumi Registry](/registry/) which is a searchable collection of Pulumi Packages published by Pulumi and our partners. With Pulumi Registry, you can easily find the package with the resources you need, install that package directly into your project, and start building.
 
+Existing module investments carry over. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) consumes Terraform and OpenTofu Registry modules directly — along with local paths, Git URLs, GitHub shorthand, and HTTP archives — and maps each `module` block to a Pulumi component resource. An HCL module can also be published as a Pulumi package, which makes it consumable from TypeScript, Python, Go, C#, Java, and YAML.
+
 ### Testing and Validation {#testing}
 
 With Pulumi, you can use native testing frameworks to automate infrastructure testing, thanks to its use of general-purpose programming languages for provisioning cloud resources. Pulumi supports unit tests (fast, in-memory tests that mock external calls), property tests (which run resource-level assertions during deployment), and integration tests (which deploy temporary infrastructure and run external tests against it). For more details on testing with Pulumi, see [Testing](/docs/using-pulumi/testing/).
@@ -129,7 +133,7 @@ Pulumi offers audit logs that allow you to monitor user activity within an organ
 
 ### Adopt Existing Resources {#adopting}
 
-Pulumi supports importing existing resources so that they can be managed. Pulumi also allows you to generate code in your language of choice from the existing state. To learn more, see [Importing Infrastructure](/docs/using-pulumi/adopting-pulumi/import/) in our Adopting Pulumi user guide.
+Pulumi supports importing existing resources so that they can be managed. Pulumi also allows you to generate code in your language of choice from the existing state, and `pulumi import --from hcl` reads a Terraform or OpenTofu state file to adopt the resources it describes in bulk. To learn more, see [Importing Infrastructure](/docs/using-pulumi/adopting-pulumi/import/) in our Adopting Pulumi user guide.
 
 ### Aliases
 

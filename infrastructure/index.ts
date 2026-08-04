@@ -298,21 +298,21 @@ new aws.s3.BucketPublicAccessBlock("content-review-ledger-public-access-block", 
     restrictPublicBuckets: true,
 });
 
-// Grant the data warehouse's Snowpipe reader role read access so the ledger can
-// be synced into Snowflake (pulumi/data#873). Only when DWH access is enabled.
+// Grant the data warehouse's Snowpipe reader role read access to the buckets it
+// ingests, so their contents can be synced into Snowflake (pulumi/data#873,
+// pulumi/data#921). Only when DWH access is enabled.
 if (config.enableDataWarehouseAccess) {
     const prodBucketsStack = new pulumi.StackReference("pulumi/dwh-workflows-loader-prodbuckets/production");
     const dwhBucketReaderRole = prodBucketsStack.getOutput("dwhBucketReaderRole");
 
-    new aws.s3.BucketPolicy("content-review-ledger-dwh-read-policy", {
-        bucket: contentReviewLedgerBucket.bucket,
-        policy: pulumi.all([contentReviewLedgerBucket.arn, dwhBucketReaderRole])
+    // Data warehouse (Snowpipe) read access. GetObjectVersion is included
+    // because both buckets are versioned and the per-object history — a
+    // review's or a post's — lives in S3 object versions.
+    const dwhReadPolicy = (bucket: aws.s3.Bucket) =>
+        pulumi.all([bucket.arn, dwhBucketReaderRole])
             .apply(([bucketArn, roleArn]) => JSON.stringify({
                 Version: "2012-10-17",
                 Statement: [
-                    // Data warehouse (Snowpipe) read access. GetObjectVersion is
-                    // included because the ledger bucket is versioned and the
-                    // per-review history lives in S3 object versions.
                     {
                         Sid: "DataWarehouseReadObjects",
                         Effect: "Allow",
@@ -341,7 +341,18 @@ if (config.enableDataWarehouseAccess) {
                         }
                     }
                 ]
-            })),
+            }));
+
+    new aws.s3.BucketPolicy("content-review-ledger-dwh-read-policy", {
+        bucket: contentReviewLedgerBucket.bucket,
+        policy: dwhReadPolicy(contentReviewLedgerBucket),
+    });
+
+    // The social-post state objects (posted.json, posted-social.json) are the
+    // only record of which post went out on which platform and when.
+    new aws.s3.BucketPolicy("social-post-state-dwh-read-policy", {
+        bucket: socialStateBucket.bucket,
+        policy: dwhReadPolicy(socialStateBucket),
     });
 }
 
