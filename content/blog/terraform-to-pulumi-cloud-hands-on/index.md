@@ -81,12 +81,12 @@ The workspace name maps directly onto Pulumi's model: the first part (`my-tf-pro
 Next, log in to Pulumi Cloud with the CLI:
 
 ```bash
-terraform login tf.pulumi.com
+$ terraform login tf.pulumi.com
 ```
 
-Choose yes when prompted, and you'll be taken to Pulumi Cloud. Create an [personal access token](/docs/administration/access-identity/access-tokens/#personal-access-tokens), paste it into the prompt, and you'll be authenticated:
+Choose yes when prompted, and you'll be taken to Pulumi Cloud. Create a [personal access token](/docs/administration/access-identity/access-tokens/#personal-access-tokens), paste it into the prompt, and you'll be authenticated:
 
-![](./token.png)
+![Creating a personal access token in the Pulumi Cloud console](./token.png)
 
 ```
 Success! Logged in to Terraform Enterprise (tf.pulumi.com)
@@ -95,7 +95,7 @@ Success! Logged in to Terraform Enterprise (tf.pulumi.com)
 With the `backend` block in place and your `terraform` CLI signed in to Pulumi Cloud, you're ready to complete the migration:
 
 ```bash
-terraform init -migrate-state
+$ terraform init -migrate-state
 ```
 
 Terraform notices the backend change and offers to copy your existing state:
@@ -120,7 +120,7 @@ Note that nothing about your deployed infrastructure has changed; all we did wa
 
 Now hop over to the Pulumi Cloud console, choose **Stacks**, and you'll see your new stack in the list, along with its first update:
 
-![](./new-tf-stack.png)
+![The migrated Terraform stack and its first update in the Pulumi Cloud console](./new-tf-stack.png)
 
 ### Runs happen remotely by default
 
@@ -190,20 +190,17 @@ bucket_arn = "arn:aws:s3:::my-tf-project-bucket-b64b8e37"
 bucket_name = "my-tf-project-bucket-b64b8e37"
 ```
 
-Remote execution is powered by [Pulumi Deployments](/docs/deployments/), so it also supports VCS triggers — PRs and pushes to GitHub others — as well as manual approvals for Terraform stacks.
+Remote execution is powered by [Pulumi Deployments](/docs/deployments/), so your Terraform stacks also get VCS triggers — plans and applies on PRs and pushes to GitHub, GitLab, and others — plus manual approvals. To wire it up:
 
-To try it:
+1. Under **Management → Version Control** in the Pulumi console, configure your VCS provider and add the `my-tf-project` repo.
+1. In your stack's **Settings → Deploy**, pick that repo and the base branch to build from (e.g., `main`), and save.
+1. Push a commit to that branch.
 
-1. Navigate to **Management → Version Control** in the Pulumi console and follow the steps to configure your VCS provider
-1. Add the `my-tf-project` repo to the configuration
-1. In your stack's **Settings** tab, choose **Deploy**, pick a provider, find `my-tf-project` in the repo list, specify the name of the base branch to build from (e.g., `main`), and save
-1. Push a commit to that branch
+A new plan appears in the **Deployments** tab, and once it finishes, you're prompted to confirm or discard the run:
 
-In a bit, you should see a new plan listed in the Deployments tab, and then once that finishes, you'll be prompted to confirm or discard the run:
+![A deployment run awaiting confirmation in the Pulumi Cloud console](./confirm.png)
 
-![](./confirm.png)
-
-Click Confirm, and you're off and running.
+Click **Confirm**, and you're off and running.
 
 And that's it! Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi Policies](/docs/insights/policy/) all available to them — [audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) can run on any Terraform stack, and preventative policies block non-compliant applies on remote runs.
 
@@ -213,7 +210,7 @@ Next up: modules.
 
 If you've got a pile of Terraform lying around, you've almost certainly got modules, and you need somewhere to keep them. Alongside its role as a state backend, Pulumi Cloud now includes a [private registry](/docs/idp/concepts/terraform-modules/) that hosts your Terraform modules and makes them available across your organization.
 
-Module publishing requires an Enterprise or Business Critical subscription, so you'll need an organization for this part — but you can easily [create one](https://app.pulumi.com) and start a free trial if you don't have one already. In the Pulumi console, open the organization menu, choose **Create organization**, and choose a name.
+Module publishing requires an Enterprise or Business Critical subscription, so you'll need an organization for this part — but you can easily [create one](https://app.pulumi.com) and start a free trial if you don't have one already. In the Pulumi console, open the organization menu, choose **Create organization**, and give it a name.
 
 Pulumi Cloud's Terraform registry API is wire-compatible with HCP Terraform's, which means the tools you already use for publishing — e.g., the [`go-tfe`](https://github.com/hashicorp/go-tfe) library or the [`hashicorp/tfe`](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs) Terraform provider — need only be pointed at `tf.pulumi.com`. The project we've been working with includes a small `go-tfe` program that does exactly that. Set a Pulumi access token (you may need to obtain a new one) in your terminal, then run it from the repo root, passing your organization name:
 
@@ -237,7 +234,7 @@ uploaded veridian/s3-bucket/aws@0.1.0
 
 And then in the Pulumi console, navigate to **Platform → Private components**, and you should see the new module in the list. Open it up to see its details, versions, usage instructions, and API docs:
 
-![](./module.png)
+![The published Terraform module's detail page in the Pulumi Cloud registry](./module.png)
 
 With the module now hosted in Pulumi Cloud, you can update the project to use the hosted version instead. Delete the `./modules` folder entirely, and then in `main.tf`, update the `source` and add a `version`, replacing `<your-org>` with your newly created org name:
 
@@ -267,19 +264,19 @@ Now let's have a look at how you can use this module in other ways.
 
 ## Consume the module from a Pulumi program
 
-Teams put real thought into their Terraform modules, and the point of a shared  registry is to help you get more mileage out of that investment. With Pulumi Cloud, you can a Terraform module from a *Pulumi* program — even across languages.
+Teams put real thought into their Terraform modules, and the point of a shared registry is to help you get more mileage out of that investment. With Pulumi Cloud, you can consume a Terraform module from a *Pulumi* program — even across languages.
 
 Let's see how this looks with a TypeScript project. If you haven't already, [install Pulumi](/docs/install/), then run:
 
 ```bash
-mkdir ../my-typescript-project && cd $_
-pulumi new typescript
+$ mkdir ../my-typescript-project && cd $_
+$ pulumi new typescript
 ```
 
 Follow the prompts, accepting the defaults. Then add the converted package by name:
 
 ```bash
-pulumi package add s3-bucket-aws
+$ pulumi package add s3-bucket-aws
 ```
 
 This generates a local TypeScript SDK in the project at `./sdks`. Open `index.ts`, and replace its contents with the following:
@@ -295,7 +292,7 @@ const myModule = new bucket.Module("my-module", {
 export const { bucketName, bucketArn } = myModule;
 ```
 
-Configure your AWS credentials as before — you can even [use the ESC environment you created earlier](docs/esc/concepts/environments/#using-environments-with-pulumi-iac) if you set one up — then run `pulumi up` to deploy in the usual way:
+Configure your AWS credentials as before — you can even [use the ESC environment you created earlier](/docs/esc/concepts/environments/#using-environments-with-pulumi-iac) if you set one up — then run `pulumi up` to deploy in the usual way:
 
 ```bash
 $ pulumi up
@@ -321,7 +318,7 @@ Having a language-specific, locally managed SDK at hand comes with a handful of 
 In TypeScript, you can do that with the `@pulumi-labs/hcl` module. Try that now by installing it in your project:
 
 ```bash
-npm install @pulumi-labs/hcl
+$ npm install @pulumi-labs/hcl
 ```
 
 ... and using it in your program:
@@ -345,15 +342,13 @@ Because this approach uses untyped references, you'll trade a little safety for 
 
 ## Write and run HCL, natively
 
-For as much flexibility as general-purpose languages offer, some times simply prefer HCL. So as of today, HCL is now a first-class language in the Pulumi engine, right alongside TypeScript, Python, Go, C#, Java, and YAML — and fully compatible with [OpenTofu](https://github.com/opentofu/opentofu).
+For as much flexibility as general-purpose languages offer, some teams simply prefer HCL. So as of today, HCL is now a first-class language in the Pulumi engine, right alongside TypeScript, Python, Go, C#, Java, and YAML — and fully compatible with [OpenTofu](https://github.com/opentofu/opentofu).
 
-The easiest way to get a feel for this is to bootstrap a new project with a template:
-
-Start from a template:
+The easiest way to get a feel for it is to start from a template:
 
 ```bash
-mkdir ../my-hcl-project && cd $_
-pulumi new aws-hcl
+$ mkdir ../my-hcl-project && cd $_
+$ pulumi new aws-hcl
 ```
 
 As before, step through the prompts, then open the generated Pulumi project and `main.tf`:
@@ -376,7 +371,7 @@ output "bucket_name" {
 }
 ```
 
-You can deploy this out of the box (after setting your AWS credentials again of course) if you like to see the magic happen:
+You can deploy this out of the box (after setting your AWS credentials again, of course) if you'd like to see the magic happen:
 
 ```bash
 $ pulumi up
@@ -396,19 +391,9 @@ Resources:
 Duration: 7s
 ```
 
-This template happens to use the `pulumi/aws` provider, but you can pull in other Terraform providers as well, including local modules, community-supported `hashicorp/*` providers, and modules from your Pulumi Cloud-hosted registry. In fact, you can try that now by replacing the code in `main.tf` with the same code you used in the Terraform program you left off with earlier:
+This template happens to use the `pulumi/aws` provider, but you're free to pull in others just as easily — native Pulumi providers, any `hashicorp/*` Terraform provider, local modules, and the modules you've published to your Pulumi Cloud registry. In fact, you can try that now by replacing the code in `main.tf` with the same code you used in the Terraform program you left off with earlier — only without the `terraform > backend` block, as it's no longer needed:
 
 ```hcl
-terraform {
-  backend "remote" {
-    hostname     = "tf.pulumi.com"
-    organization = "<your-org>"
-    workspaces {
-      name = "my-tf-project_dev"
-    }
-  }
-}
-
 module "s3-bucket" {
   source  = "tf.pulumi.com/<your-org>/s3-bucket/aws"
   version = "0.1.0"
@@ -452,7 +437,7 @@ Don't forget to clean up both projects with a `terraform destroy` and `pulumi de
 
 ## Where to go next
 
-And with that, you've see it all come together: You can back your Terraform state with Pulumi Cloud, publish and share your modules, consume those modules from any Pulumi language, and write HCL that runs natively — all without rewriting what you already have.
+And with that, you've seen it all come together: You can back your Terraform state with Pulumi Cloud, publish and share your modules, consume those modules from any Pulumi language, and write HCL that runs natively — all without rewriting what you already have.
 
 To keep going, a few good starting points:
 
