@@ -252,23 +252,23 @@ sections:
   - type: section_header
     title: AI-powered Kubernetes management
     description: |
-      [Pulumi Copilot](/product/copilot/), an AI-powered assistant, makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a question.
+      [Pulumi Neo](/product/neo/), your AI infrastructure agent, makes discovering cost savings, running compliance checks, and debugging deployments across your Kubernetes resources as easy as typing a request. Neo works alongside the coding agents your team already uses, and it acts on your clusters within your existing Pulumi governance.
     cta_text: Learn more
-    cta_link: /product/copilot/
+    cta_link: /product/neo/
     cards_cols: 2
     cards:
       - icon: gauge
         title: Discover cost savings
-        description: Pulumi Copilot can access infrastructure stack and resource data, so you can analyze the cost of your infrastructure and reclaim cloud waste.
+        description: Neo can access infrastructure stack and resource data, so you can analyze the cost of your infrastructure and reclaim cloud waste.
       - icon: test-tube
         title: Run compliance checks
-        description: Pulumi Copilot leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance.
+        description: Neo applies your policies and its knowledge of compliance frameworks to analyze your infrastructure and check for policy compliance.
       - icon: cloud
         title: Debug cloud failures
-        description: Pulumi Copilot can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures.
+        description: Neo can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures.
       - icon: shield-check
         title: Stay secure
-        description: Pulumi Copilot combines Pulumi's supergraph of your cloud infrastructure and knowledge about security best practices to identify security violations and detect anomalous activity.
+        description: Neo combines Pulumi's supergraph of your cloud infrastructure and knowledge about security best practices to identify security violations and detect anomalous activity.
     anchor: ai-management
 
   - type: two_column
