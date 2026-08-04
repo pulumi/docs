@@ -53,7 +53,7 @@ Pulumi's Terraform Module provider allows you to consume Terraform modules as if
 To use a Terraform module in Pulumi, first add it to your project using the `pulumi package add` command:
 
 ```bash
-pulumi package add terraform-module <module-source> [<version>] <pulumi-package-name>
+pulumi package add hcl module <module-source> [<version>] <pulumi-package-name>
 ```
 
 Where:
@@ -65,7 +65,7 @@ Where:
 For example, to add the AWS VPC module from the Terraform Registry:
 
 ```bash
-pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0 vpc
 ```
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program.
@@ -79,7 +79,7 @@ See [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) for d
 You can also use local Terraform modules:
 
 ```bash
-pulumi package add terraform-module ./path/to/module localmod
+pulumi package add hcl module ./path/to/module localmod
 ```
 
 Any directory containing `.tf` files and optionally `variables.tf` and `outputs.tf` is considered a valid module.
@@ -105,8 +105,8 @@ Here's an example of how to use the AWS RDS module to provision a MySQL database
 First, start by installing the Terraform modules:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
-$ pulumi package add terraform-module terraform-aws-modules/rds/aws 6.10.0 rdsmod
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/rds/aws 6.10.0 rdsmod
 ```
 
 After adding the packages, your `Pulumi.yaml` will be updated, and any necessary dependencies will be added to your project.

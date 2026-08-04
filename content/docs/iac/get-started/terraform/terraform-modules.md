@@ -15,8 +15,8 @@ aliases:
 
 ## Leverage the module ecosystem
 
-Pulumi can directly use existing Terraform modules from the Terraform Registry, private registries, or local sources.
-This allows you to access thousands of existing modules without rewriting them in Pulumi.
+Pulumi can directly use existing Terraform modules from the Terraform Registry, private registries, or local sources. This allows you to access thousands of existing modules without rewriting them in Pulumi.
+It's powered by the [`hcl` provider](/registry/packages/hcl/), which turns any Terraform or OpenTofu module into a Pulumi component, either as a strongly typed SDK or loaded dynamically at runtime.
 
 ## Add Terraform modules
 
@@ -24,10 +24,10 @@ Use the `pulumi package add` command to add Terraform modules to your project:
 
 ```bash
 # Add a module from the Terraform Registry
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
 
 # Add a local module
-$ pulumi package add terraform-module ./path/to/module localmod
+$ pulumi package add hcl module ./path/to/module localmod
 ```
 
 ## Example: AWS VPC module
@@ -48,7 +48,7 @@ $ pulumi new aws-typescript --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
 ```
 
 Then use it in your Pulumi program:
@@ -164,7 +164,7 @@ $ pulumi new aws-python --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
 ```
 
 Then use it in your Pulumi program:
@@ -278,7 +278,7 @@ $ pulumi new aws-go --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
 ```
 
 Then use it in your Pulumi program:
@@ -415,7 +415,7 @@ $ pulumi new aws-csharp --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
 ```
 
 {{% notes type="tip" %}}
@@ -562,7 +562,7 @@ $ pulumi new aws-java --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
 ```
 
 {{% notes type="tip" %}}
@@ -706,7 +706,7 @@ $ pulumi new aws-yaml --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add terraform-module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
 ```
 
 Then use it in your Pulumi program:
@@ -804,6 +804,162 @@ packages:
       - terraform-aws-modules/vpc/aws
       - 6.0.0
       - vpc
+```
+
+{{% /choosable %}}
+
+## Load a module at runtime
+
+Generating an SDK gives you strongly typed inputs and outputs, IDE completion, and a package you can pin and share across your team. When you'd rather trade that type safety for flexibility — for example, to load a module whose address isn't known until runtime — you can use the [`hcl` provider](/registry/packages/hcl/) instead of generating an SDK.
+
+Add the `hcl` provider to your project, then use the `Module` resource to load your desired module. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
+
+{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as hcl from "@pulumi/hcl";
+
+const vpc = new hcl.Module("vpc", {
+    source: "terraform-aws-modules/vpc/aws",
+    version: "6.0.0",
+    inputs: {
+        name: "example-vpc",
+        cidr: "10.0.0.0/16",
+    },
+});
+
+export const vpcId = vpc.outputs.apply(o => o["vpc_id"]);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python" %}}
+
+```python
+import pulumi
+import pulumi_hcl as hcl
+
+vpc = hcl.Module("vpc",
+    source="terraform-aws-modules/vpc/aws",
+    version="6.0.0",
+    inputs={
+        "name": "example-vpc",
+        "cidr": "10.0.0.0/16",
+    })
+
+pulumi.export("vpc_id", vpc.outputs["vpc_id"])
+```
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-hcl/sdk/go/hcl"
+	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		vpc, err := hcl.NewModule(ctx, "vpc", &hcl.ModuleArgs{
+			Source:  "terraform-aws-modules/vpc/aws",
+			Version: pulumi.StringRef("6.0.0"),
+			Inputs: pulumi.Map{
+				"name": pulumi.String("example-vpc"),
+				"cidr": pulumi.String("10.0.0.0/16"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("vpcId", vpc.Outputs.MapIndex(pulumi.String("vpc_id")))
+		return nil
+	})
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+```csharp
+using System.Collections.Generic;
+using Pulumi;
+using Pulumi.Hcl;
+
+return await Deployment.RunAsync(() =>
+{
+    var vpc = new Module("vpc", new ModuleArgs
+    {
+        Source = "terraform-aws-modules/vpc/aws",
+        Version = "6.0.0",
+        Inputs =
+        {
+            { "name", "example-vpc" },
+            { "cidr", "10.0.0.0/16" },
+        },
+    });
+
+    return new Dictionary<string, object?>
+    {
+        ["vpcId"] = vpc.Outputs.Apply(o => o["vpc_id"]),
+    };
+});
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+package myapp;
+
+import com.pulumi.Pulumi;
+import com.pulumi.hcl.Module;
+import com.pulumi.hcl.ModuleArgs;
+import java.util.Map;
+
+public class App {
+    public static void main(String[] args) {
+        Pulumi.run(ctx -> {
+            var vpc = new Module("vpc", ModuleArgs.builder()
+                .source("terraform-aws-modules/vpc/aws")
+                .version("6.0.0")
+                .inputs(Map.of(
+                    "name", "example-vpc",
+                    "cidr", "10.0.0.0/16"))
+                .build());
+
+            ctx.export("vpcId", vpc.outputs().applyValue(o -> o.get("vpc_id")));
+        });
+    }
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "yaml" %}}
+
+```yaml
+name: example
+runtime: yaml
+resources:
+  vpc:
+    type: hcl:index:Module
+    properties:
+      source: terraform-aws-modules/vpc/aws
+      version: "6.0.0"
+      inputs:
+        name: example-vpc
+        cidr: 10.0.0.0/16
+outputs:
+  vpcId: ${vpc.outputs["vpc_id"]}
 ```
 
 {{% /choosable %}}
