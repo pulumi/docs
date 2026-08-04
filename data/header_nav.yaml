@@ -64,7 +64,7 @@ items:
             track: header-engineers-registry
           - label: Learn
             href: /learn/
-            description: Tutorials, guides, templates, courses, and workshops
+            description: Tutorials, guides, templates, videos, and workshops
             icon: compass
             track: header-engineers-learn
           - label: Events and workshops

@@ -1,24 +1,49 @@
 {{- /*
-    The "author(s) • date" byline used on cards. Avatars + name/count, a muted
-    bullet, then the post date.
+    The "author(s) • date • N min read" byline used on cards. Avatars + name/count,
+    a muted bullet, then the post date, then the reading time.
 
     Params:
       page        (required) the post page
       dark        true → white text on a violet-950 surface
-      readingTime true → append a "N min read" segment (skipped on the tighter
-                  card variants, e.g. small)
+      readingTime true → include the "N min read" segment (skipped outright on
+                  the tighter card variants, e.g. small)
+
+    The byline never wraps, at any card width, without the caller having to know
+    how wide its grid is:
+
+      - The row is nowrap, and each bullet is grouped with the segment it
+        introduces, so a separator can never be left stranded at a line end.
+      - Reading time is the first thing to go. A container query drops it below
+        22rem, which is roughly where the full byline stops fitting on one line
+        (a 32px avatar, a typical author name, a date, and "N min read"). The
+        blog's own 3-column grid is comfortably above that and keeps it; a
+        4-column grid falls below and loses it.
+      - Below that, the author name truncates. It's the only variable-width
+        segment, so it's the one that should give — the date and reading time
+        are fixed-width and stay whole.
+
+    This is the only container-query use in the theme so far. Tailwind v4 ships
+    them in core, so it needs no plugin; `@container` here makes the byline
+    wrapper the query root, and the card's width is what the query sees.
 */ -}}
 {{- $page := .page -}}
 {{- $dark := .dark -}}
 {{- $fg := cond $dark "text-white" "text-service-black" -}}
-<div class="flex flex-wrap items-center gap-x-2 gap-y-1 body-sm">
-    {{- with $page.Params.authors -}}
-        {{ partial "blog/avatars.html" (dict "authors" . "dark" $dark) }}
-        <span class="text-gray-500" aria-hidden="true">•</span>
-    {{- end -}}
-    <time class="{{ $fg }} whitespace-nowrap" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
-    {{- if .readingTime -}}
-        <span class="text-gray-500" aria-hidden="true">•</span>
-        <span class="{{ $fg }} whitespace-nowrap">{{ $page.ReadingTime }} min read</span>
-    {{- end -}}
+{{- $authors := $page.Params.authors -}}
+<div class="@container">
+    <div class="flex min-w-0 items-center gap-x-2 body-sm">
+        {{- with $authors -}}
+            {{ partial "blog/avatars.html" (dict "authors" . "dark" $dark) }}
+        {{- end -}}
+        <span class="flex shrink-0 items-center gap-x-2 whitespace-nowrap">
+            {{- with $authors }}<span class="text-gray-500" aria-hidden="true">•</span>{{ end -}}
+            <time class="{{ $fg }}" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
+        </span>
+        {{- if .readingTime -}}
+        <span class="hidden shrink-0 items-center gap-x-2 whitespace-nowrap @min-[22rem]:flex">
+            <span class="text-gray-500" aria-hidden="true">•</span>
+            <span class="{{ $fg }}">{{ $page.ReadingTime }} min read</span>
+        </span>
+        {{- end -}}
+    </div>
 </div>

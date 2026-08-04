@@ -39,11 +39,11 @@
                 {{ end }}
                 <h2 class="heading-2 m-0 text-white transition-colors group-hover:text-violet-300">{{ .title }}</h2>
                 {{ with .description }}
-                <p class="body-base mt-3 mb-0 max-w-prose text-violet-200">{{ . }}</p>
+                <p class="body-base mt-3 mb-0 max-w-md text-violet-200">{{ . }}</p>
                 {{ end }}
                 {{ with .cta }}
                 <div class="mt-auto pt-8">
-                    <span class="btn btn-outline btn-xl group-hover:border-gray-500 group-hover:bg-gray-100">
+                    <span class="btn btn-primary btn-xl group-hover:bg-violet-800">
                         {{ . }}
                         {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
                     </span>

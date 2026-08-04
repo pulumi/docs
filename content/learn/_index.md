@@ -1,8 +1,8 @@
 ---
 title: Learn Pulumi
 linktitle: Learn
-meta_desc: Learn Pulumi with hands-on examples, guided video courses, live workshops, and tutorials, from your first stack to managing infrastructure at scale.
-description: Hands-on examples, guided video courses, live workshops, and tutorials to take you from your first stack to managing your whole infrastructure estate.
+meta_desc: Learn Pulumi with hands-on examples, video lessons, live workshops, and tutorials, from your first stack to managing infrastructure at scale.
+description: Hands-on examples, video lessons, live workshops, and tutorials to take you from your first stack to managing your whole infrastructure estate.
 
 # Two large cards at the top of the page. An absolute href is treated as
 # external; the image is optional and the card renders without it.
@@ -13,10 +13,10 @@ spotlight:
       href: /dev-hub/
       cta: Browse the Dev Hub
     - title: Pulumi Academy
-      description: Guided video courses taught by the Pulumi team, covering everything from infrastructure as code fundamentals to secrets management and platform engineering.
+      description: Learn by watching. Video lessons walk through Pulumi concepts step by step, at your own pace.
       image: /images/learn/academy.svg
       href: https://academy.pulumi.com
-      cta: Start a course
+      cta: Start watching
 
 # The "For humans" / "For agents" pair. Drop the `agents` key to render the
 # humans card on its own.
@@ -44,7 +44,7 @@ new_to_pulumi:
               href: /docs/iac/get-started/kubernetes/
     agents:
         label: For agents
-        description: Paste this into Claude Code, Cursor, Codex, or whichever coding agent you already use.
+        description: Paste this into Claude Code, Cursor, Codex, or whichever agent you already use.
         prompt: Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
         prompt_label: Copy prompt
         links:

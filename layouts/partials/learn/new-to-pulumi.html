@@ -1,18 +1,17 @@
 {{- /*
-    "New to Pulumi?" — two balanced cards, For humans and For agents, sitting on
-    a shared .card-highlight panel.
+    "New to Pulumi?" — the two ways in, For humans and For agents, split across
+    one .card panel.
 
-    The human card is a one-line lead, four cloud links, and a Get started link;
-    the agent card is the onboarding prompt in a code block, a button that copies
+    The human half is a one-line lead, four cloud links, and a Get started link;
+    the agent half is the onboarding prompt in a code block, a button that copies
     it, and two doc links. Per AGENTS.md §"AI and agent positioning", the agent
-    card names third-party coding agents as first-class rather than presenting
+    half names third-party coding agents as first-class rather than presenting
     Neo as the only option.
 
-    Both children pick up the panel's violet-50 fill rather than the white of the
-    .card primitive, so the group reads as one surface; they keep .card's border
-    and radius to stay legible against it. The cloud links are .btn-outline
-    rather than nested .cards — a stronger border, and white tiles that separate
-    the logos from the violet ground.
+    The halves share a single surface rather than sitting in nested cards, so the
+    section reads as one choice with two answers; a divide rule separates them.
+    The cloud links are .btn-outline rather than nested .cards — a stronger
+    border, and a tile that reads as something to press.
 
     The copy button is the generic [data-copy-text] control from
     theme/src/ts/copy-text.ts, registered globally in main.ts — no page-specific
@@ -27,23 +26,36 @@
 */ -}}
 {{- $agents := .agents -}}
 <section aria-labelledby="new-to-pulumi-heading">
-    <h2 id="new-to-pulumi-heading" class="font-overline mb-8 text-service-black">{{ .title }}</h2>
-
-    <div class="card-highlight p-6 md:p-8">
-        <div class="grid grid-cols-1 gap-6 {{ if $agents }}md:grid-cols-2{{ end }}">
+    <div class="card p-6 md:p-8">
+        {{/* The badge classes go straight on the h2 rather than through
+             badge.html, which emits a span — the section still needs a real
+             heading for aria-labelledby to point at. */}}
+        <h2 id="new-to-pulumi-heading" class="badge badge-brand mb-8">
+            {{ partial "icon.html" (dict "name" "sparkle" "weight" "fill") }}
+            {{ .title }}
+        </h2>
+        {{/* The rule between the halves is a divide, not a gap, so each child
+             carries its own gutter. Stacked, that rule has to run horizontally —
+             a bare divide-x would draw it down the left edge of the second card. */}}
+        <div class="grid grid-cols-1 divide-y divide-gray-200 {{ if $agents }}md:grid-cols-2 md:divide-x md:divide-y-0{{ end }}">
             {{ with .humans }}
-            <div class="card flex flex-col bg-violet-50 p-8">
+            <div class="flex flex-col pb-8 md:pr-10 md:pb-0">
                 <h3 class="heading-4 m-0 text-service-black">{{ .label }}</h3>
                 {{ with .description }}<p class="body-base mt-3 mb-0 max-w-prose text-service-black">{{ . }}</p>{{ end }}
-                <div class="mt-6 grid grid-cols-2 gap-3">
+                {{/* mt-auto sits on the block itself, not on the CTA below it, so the
+                     free space collects above it: the cloud grid and the agent half's
+                     prompt box both settle onto the same baseline even when one
+                     description wraps to a second line and the other doesn't. pt-6 is
+                     the floor, for when there's no free space left to absorb. */}}
+                <div class="mt-auto grid grid-cols-2 lg:grid-cols-4 gap-3 pt-6">
                     {{ range .clouds }}
-                    <a href="{{ .href }}" data-track="learn-get-started-{{ .label | urlize }}" class="btn btn-outline h-auto py-4">
-                        <img class="size-8" src="{{ .logo }}" alt="{{ .label }}" loading="lazy" decoding="async" />
+                    <a href="{{ .href }}" data-track="learn-get-started-{{ .label | urlize }}" class="btn btn-outline h-auto lg:h-32 py-4">
+                        <img class="size-12" src="{{ .logo }}" alt="{{ .label }}" loading="lazy" decoding="async" />
                     </a>
                     {{ end }}
                 </div>
                 {{ with .cta }}
-                <div class="mt-auto pt-6">
+                <div class="pt-6">
                     <a href="{{ $.humans.href }}" data-track="learn-get-started" class="btn btn-link">{{ . }} &rarr;</a>
                 </div>
                 {{ end }}
@@ -51,24 +63,37 @@
             {{ end }}
 
             {{ with $agents }}
-            <div class="card flex flex-col bg-violet-50 p-8">
-                <h3 class="heading-4 m-0 text-service-black">{{ .label }}</h3>
+            <div class="flex flex-col pt-8 md:pt-0 md:pl-10">
+                <h3 class="heading-4 m-0">{{ .label }}</h3>
                 {{ with .description }}<p class="body-base mt-3 mb-0 max-w-prose text-service-black">{{ . }}</p>{{ end }}
                 {{ with .prompt }}
                 {{/* The prompt is shown in full rather than truncated onto the button, so
-                     the reader can see what they're about to hand their agent. Inherits
-                     the site's dark code-block treatment from _code.scss; the utilities
-                     here only wrap the long line and raise the type size. */}}
-                <pre class="mt-6 mb-0 rounded-md whitespace-pre-wrap break-words"><code class="font-mono text-base text-gray-200">{{ . }}</code></pre>
-                <button type="button" class="btn btn-outline btn-xl mt-4 self-start" data-copy-text="{{ . }}" data-track="learn-agent-prompt" aria-label="Copy the onboarding prompt for your coding agent">
-                    <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
-                    <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5 text-violet-primary") }}</span>
-                    <span data-copy-idle>{{ $.agents.prompt_label | default "Copy prompt" }}</span>
-                    <span data-copy-done hidden>Copied!</span>
-                </button>
+                     the reader can see what they're about to hand their agent.
+
+                     The prompt and its copy control share one outlined box that borrows the
+                     .btn-outline border, so the pair reads as a single control. The <pre> is
+                     repainted light — the site's default is the dark violet-950 code block,
+                     far too heavy for one line inside a card — and squared off, since the
+                     wrapper owns the corners. Element-selector styles from _code.scss lose
+                     to these utilities on specificity, so no !important is needed.
+
+                     The mt-auto goes on an outer div rather than the box itself: it has to
+                     be a margin to absorb the free space, and a margin on the box would
+                     collapse the minimum gap that pt-6 is there to guarantee. */}}
+                <div class="mt-auto pt-6">
+                    <div class="overflow-hidden rounded-md border border-gray-300 bg-white">
+                        <pre class="m-0 p-4 rounded-none bg-gray-50 whitespace-pre-wrap break-words"><code class="font-mono text-sm text-service-black">{{ . }}</code></pre>
+                        <button type="button" class="btn btn-ghost btn-xl w-full rounded-none" data-copy-text="{{ . }}" data-track="learn-agent-prompt" aria-label="Copy the onboarding prompt for your coding agent">
+                            <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
+                            <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5 text-violet-primary") }}</span>
+                            <span data-copy-idle>{{ $.agents.prompt_label | default "Copy prompt" }}</span>
+                            <span data-copy-done hidden>Copied!</span>
+                        </button>
+                    </div>
+                </div>
                 {{ end }}
                 {{ with .links }}
-                <ul class="mt-auto flex list-none flex-wrap gap-x-6 gap-y-2 p-0 pt-6">
+                <ul class="flex list-none flex-wrap gap-x-6 gap-y-2 p-0 pt-6">
                     {{ range . }}
                     <li class="m-0"><a href="{{ .href }}" data-track="learn-agent-{{ .label | urlize }}" class="btn btn-link">{{ .label }} &rarr;</a></li>
                     {{ end }}
