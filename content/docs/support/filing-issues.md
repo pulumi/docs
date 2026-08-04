@@ -103,7 +103,7 @@ To help us resolve your issue quickly:
 1. **Search existing issues** - your issue might already be reported
 1. **Include version information** - run `pulumi version` and include the output
 1. **Provide reproduction steps** - minimal code examples are extremely helpful
-1. **Share your logs** - Pulumi automatically records an encrypted log for every operation. Run `pulumi logs share` to send the log for a failed operation to the Pulumi team — it redacts secrets by default, so the log is safe to attach even on a public issue. See the [logging guide](/docs/iac/operations/debugging/logging/#automatic-logging)
+1. **Share your logs** - Pulumi automatically records an encrypted log for every operation, including resource provider interactions. Run `pulumi logs share` to send the log for a failed operation to the Pulumi team — it redacts secrets by default, so the log is safe to attach even on a public issue. See the [logging guide](/docs/iac/operations/debugging/logging/#automatic-logging)
 
 {{% notes type="warning" %}}
 `pulumi logs share` redacts secrets before sharing, but logs you capture manually with verbose logging may still contain sensitive information like credentials or tokens. Always review and redact manually captured logs before posting them publicly.
