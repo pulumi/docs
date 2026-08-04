@@ -24,16 +24,16 @@ hero:
 
 intro:
   quote: |
-    "You don't have to rip out Terraform to enter the agentic era — Pulumi Cloud
-    brings agentic infrastructure to the IaC estate you already have."
+    "You don't have to rip out Terraform to enter the agentic era. Pulumi Cloud
+    brings agentic infrastructure to the IaC you already have."
   attribution: |
-    — Daniel Perlovsky, principal product manager, on meeting teams where their infrastructure already is
+    — Daniel Perlovsky, principal product manager, on meeting teams where they are
   link: /blog/bring-your-terraform-estate-into-the-agentic-era/
   link_label: Read the blog post
 
 sections:
   - anchor: terraform-backend
-    label: Terraform state in Pulumi Cloud
+    label: Terraform state and remote execution in Pulumi Cloud
     heading: Terraform state in Pulumi Cloud
     description: |
       Point your existing Terraform stacks at Pulumi Cloud and keep the workflow your team already knows.
@@ -51,22 +51,6 @@ sections:
         link: /docs/iac/get-started/terraform/terraform-state-backend/
 
       - variant: text
-        icon: users-three
-        title: Access control at scale
-        description: |
-          Manage who can reach your Terraform stacks with tag-based access control, along with team and
-          user role assignments.
-        link: /docs/administration/access-identity/rbac/
-
-      - variant: text
-        icon: pulumi-neo
-        title: Neo code reviews
-        description: |
-          Neo reviews every pull request against what Pulumi Cloud knows about your running infrastructure
-          and tells you whether it's safe to merge. Fully compatible with Terraform and OpenTofu programs.
-        link: /docs/ai/neo/code-reviews/
-
-      - variant: text
         icon: pulumi-insights
         title: Preventive policies
         description: |
@@ -82,8 +66,25 @@ sections:
           credentials at apply time and expose outputs to downstream stacks and services.
         link: /docs/esc/
 
+      - variant: text
+        icon: terminal-window
+        title: Remote execution
+        description: |
+          Run plans and applies in Pulumi Cloud's managed containers instead of on developer laptops. The
+          Terraform and OpenTofu CLI workflow you already know keeps working, with logs streamed back to
+          your terminal.
+        link: /docs/iac/get-started/terraform/terraform-remote-execution/
+
+      - variant: text
+        icon: pulumi-neo
+        title: Neo code reviews
+        description: |
+          Neo reviews every pull request against what Pulumi Cloud knows about your running infrastructure
+          and tells you whether it's safe to merge. Fully compatible with Terraform and OpenTofu programs.
+        link: /docs/ai/neo/code-reviews/
+
   - anchor: terraform-modules
-    label: Terraform modules in Pulumi programs
+    label: Terraform modules, across language boundaries
     heading: Terraform modules in Pulumi programs
     description: |
       The modules your team has built and maintained for years work in Pulumi programs as is, in whatever
@@ -110,8 +111,8 @@ sections:
         link: /docs/idp/concepts/private-registry/
 
   - anchor: hcl
-    label: HCL as a Pulumi language
-    heading: HCL as a Pulumi language
+    label: HCL as a first-class Pulumi language
+    heading: HCL joins the family
     description: |
       HCL is now generally available in Pulumi IaC, alongside TypeScript, Python, Go, C#, Java, and YAML.
       If your team prefers HCL, keep writing HCL, and run it on the Pulumi engine.
@@ -143,6 +144,5 @@ blog_section:
     # yet. Missing pages are skipped by the partial, so this is safe to leave in place —
     # update the slug if it lands under a different one.
     - /blog/bring-your-terraform-estate-into-the-agentic-era
-    - /blog/getting-started-with-pulumi-hcl
     - /blog/terraforms-data-model-on-pulumis-engine
 ---
