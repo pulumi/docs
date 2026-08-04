@@ -71,6 +71,13 @@ def test_oversized_threshold() -> None:
     check(normal["oversized"] is False, "a 407-line PR is not oversized")
     check("oversized" in normal, "oversized field always present")
 
+    # File count is an independent axis (the PR #20560 shape): few lines,
+    # many pages. Strict > on 150 files.
+    many = run_classify(_pr(2_215, 1_265, [f"content/docs/p{i}/_index.md" for i in range(155)]))
+    check(many["oversized"] is True, f"155-file PR classifies oversized; got {many['oversized']}")
+    at_files = run_classify(_pr(2_000, 1_000, [f"content/docs/p{i}/_index.md" for i in range(150)]))
+    check(at_files["oversized"] is False, f"exactly 150 files is NOT oversized (strict >); got {at_files['oversized']}")
+
 
 def main() -> int:
     tests = [test_oversized_threshold]

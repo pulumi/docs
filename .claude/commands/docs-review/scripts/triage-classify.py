@@ -22,13 +22,22 @@ from collections.abc import Iterable
 WEBPACK_RE = re.compile(r"^webpack\.[^/]+\.js$")
 
 # Above this many changed lines (additions + deletions), the PR is `oversized`:
-# too big for the review pipeline to finish inside its job timeout, and at this
+# too big for the review pipeline to finish inside its time budget, and at this
 # scale the bulk is invariably generated output that an LLM line-review adds no
 # value to (PR #20274: ~100K generated lines; the main review step was killed
-# at the 25-minute mark on every attempt). Triage labels it `review:oversized`
-# and the review workflow skips it with an advisory comment instead of
-# error-cycling. Hand-written PRs run one to two orders of magnitude smaller.
+# at the then-25-minute job timeout on every attempt). Triage labels it
+# `review:oversized` and the review workflow skips it with an advisory comment
+# instead of error-cycling. Hand-written PRs run one to two orders of
+# magnitude smaller.
 OVERSIZED_TOTAL_LINES = 15_000
+
+# File count is an independent budget axis: a PR can sit well under the line
+# threshold and still not be reviewable, because per-file work (claim
+# extraction, sibling reads, per-page verdicts) scales with pages touched,
+# not lines. PR #20560 (155 files, ~3.5K changed lines) timed out the Opus
+# step on every attempt and error-cycled exactly the way the line threshold
+# exists to prevent. Either axis over budget classifies the PR oversized.
+OVERSIZED_TOTAL_FILES = 150
 
 
 def classify_path(path: str) -> str | None:
@@ -304,7 +313,7 @@ def classify_pr(pr_data: dict, file_flags: list[dict]) -> dict:
         "mixed": len(domains) > 1,
         "trivial": trivial,
         "frontmatter_only": frontmatter_only,
-        "oversized": total_lines > OVERSIZED_TOTAL_LINES,
+        "oversized": total_lines > OVERSIZED_TOTAL_LINES or file_count > OVERSIZED_TOTAL_FILES,
         "prose_check_needed": trivial or frontmatter_only,
         "summary": {
             "lines": total_lines,
