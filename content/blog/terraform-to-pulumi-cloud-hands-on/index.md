@@ -15,7 +15,7 @@ tags:
 category: tutorials
 ---
 
-Today's release is a big one, and it's all [generally available](/releases/terraform-state-backend-modules-hcl/): a whole set of ways to bring the Terraform you already run into Pulumi — your state, your modules, and HCL itself — without rewriting any of it. So many of you come to us wanting to adopt Pulumi without throwing away the Terraform you've built, and you shouldn't have to. The [announcement post](/blog/bring-your-terraform-estate-into-the-agentic-era/) covers the what and the why; this one is the hands-on tour.
+Today's release is a big one, and it's all [generally available](/releases/terraform-state-backend-modules-hcl/): a whole set of ways to bring the Terraform you already run into Pulumi — your state, your modules, and HashiCorp Configuration Language (HCL) itself — without rewriting any of it. So many of you come to us wanting to adopt Pulumi without throwing away the Terraform you've built, and you shouldn't have to. The [announcement post](/blog/bring-your-terraform-estate-into-the-agentic-era/) covers the what and the why; this one is the hands-on tour.
 
 It all falls into three buckets:
 
@@ -131,7 +131,7 @@ To view this run in a browser, visit:
 https://tf.pulumi.com/app/<your-org>/my-tf-project_dev/runs/run-...
 ```
 
-Confirm the apply, and you'll notice it *fails* — the remote runner doesn't have AWS credentials yet. That's expected, and it's where [Pulumi ESC](/docs/esc/) comes in.
+Confirm the apply, and you'll notice it *fails* — the remote runner doesn't have AWS credentials yet. That's expected, and it's where [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) comes in.
 
 ### Configure credentials with ESC
 
@@ -153,13 +153,13 @@ Remote execution is powered by [Pulumi Deployments](/docs/deployments/), which a
 
 <!-- SCREENSHOT: Console showing a VCS-triggered run awaiting Confirm/Discard. -->
 
-That's the lift-and-shift. Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi policies](/docs/insights/policy/) all available to them — [audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) can run on any Terraform stack, and preventative policies block non-compliant applies on remote runs. Next up: modules.
+That's the lift-and-shift. Your Terraform stacks are now first-class citizens in Pulumi Cloud, with [access control](/docs/administration/access-identity/rbac/), [Neo code reviews](/docs/ai/neo/code-reviews/), and [Pulumi Policies](/docs/insights/policy/) all available to them — [audit policies](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) can run on any Terraform stack, and preventative policies block non-compliant applies on remote runs. Next up: modules.
 
 ## Publish a Terraform module
 
 If you've got a pile of Terraform lying around, you've almost certainly got modules, and you need somewhere to keep them. Alongside its role as a state backend, Pulumi Cloud now includes a [private registry](/docs/idp/concepts/terraform-modules/) that hosts your Terraform modules and makes them available across your organization.
 
-Module publishing is an Enterprise or Business Critical capability, so you'll want an organization for this part. You can [create one](https://app.pulumi.com) and start a free trial if you don't have one already. Open the organization switcher, choose **Create organization**, and pick a name. As a fan of the short-lived sitcom *Better Off Ted*, I went with `veridian`, but choose whatever makes you smile.
+Module publishing is an Enterprise or Business Critical capability, so you'll want an organization for this part — separate from the personal account we just migrated into, which stays right where it is. You can [create an organization](https://app.pulumi.com) and start a free trial if you don't have one already. Open the organization switcher, choose **Create organization**, and pick a name. As a fan of the short-lived sitcom *Better Off Ted*, I went with `veridian`, but choose whatever makes you smile.
 
 Our starter project includes a small module at `./modules/s3-bucket` that provisions a bucket and returns its ARN. The registry's publish API is wire-compatible with HCP Terraform's, which means the tools you already use — the [go-tfe](https://github.com/hashicorp/go-tfe) library or the [`hashicorp/tfe`](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs) Terraform provider — work unchanged when you point them at `tf.pulumi.com`. The repo ships a small go-tfe program that does exactly that. Set your Pulumi access token, then run it from the repo root, passing your organization name:
 
@@ -229,7 +229,7 @@ pulumi package add s3-bucket-aws 0.1.0
 This generates a local SDK under `./sdks`. Open `index.ts` and replace its contents with the following:
 
 ```typescript
-import * as bucket from "./sdks/s3-bucket";
+import * as bucket from "./sdks/s3-bucket-aws";
 
 const myModule = new bucket.Module("my-module", {
     bucketName: "my-new-bucket-name",
