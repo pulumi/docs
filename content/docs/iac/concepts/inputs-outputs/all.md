@@ -168,7 +168,7 @@ For the common case of constructing a string from output values, Pulumi's string
 
 {{< example-program path="aws-s3bucket-bucketobject-interpolate" >}}
 
-You can use string interpolation to do things like export a [stack output](/tutorials/stack-outputs-refs-aws/) or provide a dynamically computed string as a new resource argument. For a full reference of the interpolation helpers available in each language, see [Using output helpers](/docs/iac/concepts/inputs-outputs/helpers/).
+You can use string interpolation to do things like export a [stack output](/docs/iac/concepts/stacks/#outputs) or provide a dynamically computed string as a new resource argument. For a full reference of the interpolation helpers available in each language, see [Using output helpers](/docs/iac/concepts/inputs-outputs/helpers/).
 
 ## Creating a new data structure
 
