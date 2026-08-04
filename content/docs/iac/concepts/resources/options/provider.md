@@ -18,7 +18,7 @@ The `provider` resource option sets a provider for the resource. For more inform
 
 {{< resource-option-scope "provider" >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -82,6 +82,22 @@ resources:
     options:
       provider: ${provider}
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+provider "aws" {
+  alias  = "usw2"
+  region = "us-west-2"
+}
+
+resource "aws_vpc" "vpc" {
+  provider = aws.usw2
+}
+```
+
+In HCL, explicit providers use the standard Terraform `provider` meta-argument with an aliased `provider` block.
 
 {{% /choosable %}}
 
