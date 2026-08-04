@@ -16,7 +16,7 @@ hero:
   breadcrumb_label: August 2026
   heading: All your IaC, including<br>Terraform and HCL
   description: |
-    Manage your Terraform state with Pulumi Cloud, publish and share Terraform modules across languages, and write programs in HCL as a first-class Pulumi language.
+    Manage your Terraform state with Pulumi Cloud, publish and consume Terraform modules across multiple languages, and author your IaC in HCL as a first-class Pulumi language.
   hero_image: /images/releases/august-2026/release-hero-bottom-dark.svg
   hero_image_alt: HCL, Terraform state, and Terraform modules converging on the Pulumi mark
   hero_image_max_height: 420
