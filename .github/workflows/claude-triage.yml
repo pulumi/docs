@@ -275,12 +275,22 @@ jobs:
           # review:triaging is owned by the wrapping set/clear steps in
           # this workflow; the others are owned by claude-code-review.yml /
           # claude-update.yml).
+          #
+          # review:oversized is add-only here, never reconciled away: the
+          # review workflow's timeout message tells maintainers to apply it
+          # by hand to stop re-attempts on a PR that times out *under* the
+          # size thresholds, so a hand-applied label must survive triage
+          # re-runs (excluded from EXISTING → never lands in REMOVE_LIST;
+          # re-adding an already-present label is a no-op). The cost is
+          # that a PR split down below the thresholds keeps the label until
+          # a human removes it — the right default, since only a human
+          # knows whether the label was theirs.
           declare -A EXISTING
           while IFS= read -r lbl; do
             case "$lbl" in
-              review:triaging|review:in-progress|review:outstanding-issues|review:no-blockers|review:stale|review:error|needs-author-response)
+              review:triaging|review:in-progress|review:outstanding-issues|review:no-blockers|review:stale|review:error|review:oversized|needs-author-response)
                 continue ;;
-              domain:*|review:trivial|review:frontmatter-only|review:oversized|review:prose-flagged)
+              domain:*|review:trivial|review:frontmatter-only|review:prose-flagged)
                 EXISTING["$lbl"]=1 ;;
             esac
           done < <(echo "$PR_DATA" | jq -r '.labels[].name')

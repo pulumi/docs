@@ -344,11 +344,13 @@ jobs:
               SKIP="trivial"
             elif [[ ",$LABELS_CSV," == *",review:frontmatter-only,"* ]]; then
               SKIP="frontmatter-only"
-            # Oversized PRs (triage-set; >15K changed lines — in practice
-            # generated corpora) can't finish inside the job timeout: every
-            # attempt burns ~25 minutes of runner + API spend, then
-            # error-cycles the labels. Triage posts a TRIAGE_OVERSIZED
-            # advisory comment explaining the skip and the alternatives.
+            # Oversized PRs (>15K changed lines or >150 files — set by
+            # triage, or by hand on a PR that timed out under those
+            # thresholds) can't finish inside the review budget: every
+            # attempt burns the full Opus step timeout of runner + API
+            # spend, then error-cycles the labels. Triage posts a
+            # TRIAGE_OVERSIZED advisory comment explaining the skip and
+            # the alternatives.
             elif [[ ",$LABELS_CSV," == *",review:oversized,"* ]]; then
               SKIP="oversized"
             # Bot-authored PRs are slop-skipped — EXCEPT content-review/*, which
@@ -961,15 +963,18 @@ jobs:
       - name: Run Claude Code Review
         if: steps.check-access.outputs.has_write_access == 'true'
         id: claude-review
-        # Step-level timeout so a review that can't finish fails THIS step
-        # (outcome=failure) instead of tripping the job-level timeout, which
-        # cancels the whole job and takes the finalize/labeling steps down
-        # with it. Observed on PR #20560 (155 files): two consecutive runs
-        # hit the old job-level 25-min timeout mid-Opus; the cancellation
-        # deleted the progress comment without a trace and the author was
-        # left with a bare review:error label and retry advice that
-        # deterministically re-failed. Keep in sync with STEP_BUDGET_S in
-        # the classify-outcome step.
+        # Step-level timeout so a review that can't finish ends THIS step
+        # instead of tripping the job-level timeout, which cancels the
+        # whole job and takes the finalize/labeling steps down with it.
+        # (The runner reports the timed-out step as cancelled, not failed —
+        # the classify-outcome step below tells a timeout apart from a
+        # supersession by elapsed wall-clock, not by the outcome word.)
+        # Observed on PR #20560 (155 files): two consecutive runs hit the
+        # old job-level 25-min timeout mid-Opus; the cancellation deleted
+        # the progress comment without a trace and the author was left with
+        # a bare review:error label and retry advice that deterministically
+        # re-failed. Keep in sync with STEP_BUDGET_S in the
+        # classify-outcome step.
         timeout-minutes: 18
         uses: anthropics/claude-code-action@v1
         env:
@@ -1069,9 +1074,10 @@ jobs:
       #                     size: a bare retry hits the same wall, so the
       #                     messaging must say "shrink the PR or get a human
       #                     review", never "retry".
-      #   superseded=true — outcome=cancelled with the job nowhere near its
-      #                     own timeout: concurrency cancel-in-progress
-      #                     killed this run because a newer one started. The
+      #   superseded=true — outcome=cancelled with neither the Opus step nor
+      #                     the job near its budget: concurrency cancel-in-
+      #                     progress killed this run because a newer one
+      #                     started. The
       #                     newer run owns all user-visible state; this run
       #                     must not touch labels (a superseded run's error
       #                     trap setting review:error races the newer run's
@@ -1094,7 +1100,16 @@ jobs:
           JOB_START="${{ steps.job-start.outputs.epoch }}"
           TIMED_OUT=false
           SUPERSEDED=false
-          if [ "$OUTCOME" = "failure" ] && [ -n "$REVIEW_START" ] \
+          # The runner reports a step that hit its step-level timeout-minutes
+          # as a *cancelled* step, not a failed one — the same outcome word a
+          # concurrency supersession produces. So a timeout is detected by
+          # elapsed wall-clock, not by outcome: any non-success end after the
+          # Opus step's budget elapsed is a timeout. (The one blind spot: a
+          # supersession arriving inside the budget's final minute of slack
+          # classifies as a timeout — at that point the review was about to
+          # time out anyway.)
+          if [ "$OUTCOME" != "success" ] && [ "$OUTCOME" != "skipped" ] \
+             && [ -n "$REVIEW_START" ] \
              && [ $(( NOW - REVIEW_START )) -ge "$STEP_BUDGET_S" ]; then
             TIMED_OUT=true
           elif [ "$OUTCOME" = "cancelled" ]; then
@@ -1338,13 +1353,14 @@ jobs:
               gh api "repos/$REPO/issues/$PR/comments" -f body="$BODY" >/dev/null || true
             fi
           elif [ "$TIMED_OUT" = "true" ]; then
-            BODY='<!-- CLAUDE_PROGRESS -->
-          🤖 Review timed out — this PR is larger than the automated review can finish inside its time budget, so no review was posted. Retrying without shrinking the PR will almost certainly time out again. Options: split the PR into smaller pieces, or ask a maintainer to review it by hand (adding the `review:oversized` label stops the pipeline from re-attempting it).'
+            # printf, not a YAML literal: an indented continuation line
+            # inside the quoted string would reach GitHub with leading
+            # spaces and can render as a Markdown code block.
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Review timed out — this PR is larger than the automated review can finish inside its time budget, so no review was posted. Retrying without shrinking the PR will almost certainly time out again. Options: split the PR into smaller pieces, or ask a maintainer to review it by hand (adding the `review:oversized` label stops the pipeline from re-attempting it — triage deliberately never removes it).')
             gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
               -f body="$BODY" >/dev/null || true
           else
-            BODY='<!-- CLAUDE_PROGRESS -->
-          🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.'
+            BODY=$(printf '<!-- CLAUDE_PROGRESS -->\n%s' '🤖 Review errored. Flip to draft and back to ready, or mention `@claude #update-review`, to retry.')
             gh api --method PATCH "repos/$REPO/issues/comments/$COMMENT_ID" \
               -f body="$BODY" >/dev/null || true
           fi
