@@ -54,6 +54,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_API
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the URL of the Pulumi Cloud API that the CLI communicates with when using the Pulumi Cloud backend. Most users should set <span class="font-mono">PULUMI_BACKEND_URL</span> instead, which selects the backend itself; this variable is for advanced scenarios, such as pointing the CLI at a non-default Pulumi Cloud API endpoint.
+        </p>
+        <pre><code class="text-xs">PULUMI_API="https://api.pulumi.com"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_BACKEND_URL
         </span>
     </dt>
@@ -125,17 +136,6 @@ aliases:
             Continues to perform the update/destroy operation despite the occurrence of errors.
         </p>
         <pre><code class="text-xs">PULUMI_CONTINUE_ON_ERROR=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
-            PULUMI_COPILOT
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization.
-        </p>
-        <pre><code class="text-xs">PULUMI_COPILOT=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -452,6 +452,42 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_AGE_DAYS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides how long automatic logs in <code>$PULUMI_HOME/logs</code> are kept before being
+            rotated out. Defaults to <code>7</code> days.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_AGE_DAYS=14</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_TOTAL_MB
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the maximum total size, in megabytes, of the automatic logs directory
+            (<code>$PULUMI_HOME/logs</code>) before the oldest logs are rotated out. Defaults to
+            <code>500</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_TOTAL_MB=1000</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_NEO
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_COPILOT</span> is still accepted as an alias.
+        </p>
+        <pre><code class="text-xs">PULUMI_NEO=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_PARALLEL
         </span>
     </dt>
@@ -556,14 +592,14 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_SUPPRESS_COPILOT_LINK
+            PULUMI_SUPPRESS_NEO_LINK
         </span>
     </dt>
     <dd>
         <p>
-            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization.
+            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_SUPPRESS_COPILOT_LINK</span> is still accepted as an alias.
         </p>
-        <pre><code class="text-xs">PULUMI_SUPPRESS_COPILOT_LINK=true</code></pre>
+        <pre><code class="text-xs">PULUMI_SUPPRESS_NEO_LINK=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">

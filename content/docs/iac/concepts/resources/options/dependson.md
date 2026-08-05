@@ -22,7 +22,7 @@ Pulumi automatically tracks dependencies between resources when you supply an in
 
 This example demonstrates how to make `res2` dependent on `res1`, even if there is no property-level dependency:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -81,6 +81,23 @@ resources:
       dependsOn:
         - ${res1}
 ```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "my_resource" "res1" {
+  # ...
+}
+
+resource "my_resource" "res2" {
+  # ...
+
+  depends_on = [my_resource.res1]
+}
+```
+
+In HCL, explicit dependencies use the standard Terraform `depends_on` meta-argument rather than a `pulumi` option.
 
 {{% /choosable %}}
 

@@ -63,11 +63,20 @@ announcements:
       href: "/events/autonomous-agents-need-guardrails-openclaw/?utm_source=announcement-banner&utm_medium=website&utm_campaign=openclaw-guardrails-webinar"
     dismissible: true
   - id: event-intro-to-esc-secrets-2026-08-Wt3pL9
-    active: true
+    active: false
     display: both
     badge: Event
     text: "**Live workshop · Aug 5:** Best practices for managing secrets — an introduction to Pulumi ESC."
     cta:
       label: Register
       href: "/events/intro-to-pulumi-esc-managing-secrets/?utm_source=announcement-banner&utm_medium=website&utm_campaign=intro-to-esc-workshop"
+    dismissible: true
+  - id: release-terraform-state-modules-hcl-2026-08-Ts7hK4
+    active: true
+    display: both
+    icon: sparkle
+    text: "**New this week:** Pulumi Cloud as a Terraform state backend and module registry, and first-class support for HCL as a Pulumi language."
+    cta:
+      label: See the release
+      href: "/releases/terraform-state-backend-modules-hcl/"
     dismissible: true

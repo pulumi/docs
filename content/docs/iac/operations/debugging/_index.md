@@ -27,7 +27,7 @@ sections:
   - icon: chart-bar
     heading: Logging
     link: /docs/iac/operations/debugging/logging/
-    description: CLI verbose logging and program logging for debugging and diagnostics.
+    description: Automatic logging, CLI verbose logging, and program logging for debugging and diagnostics.
 
   - icon: bug
     heading: Attaching a Debugger
