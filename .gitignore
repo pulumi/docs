@@ -86,6 +86,9 @@ cypress/screenshots
 # Ignore the files we generate during the build and deployment process.
 origin-bucket-metadata.json
 redirects.txt
+# Seconds spent waiting for earlier runs of the deploy workflow to finish
+# (written by scripts/await-in-progress.js, read by the build-duration alert).
+/.build-queue-wait-seconds
 
 # Ignore vendored Hugo modules.
 _vendor/
