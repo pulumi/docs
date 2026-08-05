@@ -12,7 +12,7 @@ import "./tracking";
 import "./docs-feedback";
 import "./blog-list";
 import "./blog-post";
-import "./learn-list";
+import "./resources-list";
 import "./case-studies-list";
 import "./details-dropdown";
 import "./copybutton";

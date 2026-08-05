@@ -79,7 +79,7 @@ This llms.txt covers www.pulumi.com, which includes:
 - [Infrastructure AI](https://www.pulumi.com/docs/ai/): Using AI agents with Pulumi — bring your own agent via [Agent Skills](https://www.pulumi.com/docs/ai/skills/) and the [MCP server](https://www.pulumi.com/docs/ai/mcp-server/), or use [Pulumi Neo](https://www.pulumi.com/neo/), Pulumi's purpose-built infrastructure agent
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
 - [Tutorials](https://www.pulumi.com/tutorials/): Hands-on tutorials for building cloud infrastructure with Pulumi
-- [Pulumi Learn](https://www.pulumi.com/learn/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
+- [Pulumi Resources](https://www.pulumi.com/resources/): Explainer pages for cloud infrastructure concepts (e.g., infrastructure as code, Kubernetes, serverless)
 - [Case Studies](https://www.pulumi.com/case-studies/): Customer stories and use cases
 - [Templates](https://www.pulumi.com/templates/): Ready-to-use project templates across clouds and languages
 - [Automation API](https://www.pulumi.com/automation/): Program-driven Pulumi for embedding infrastructure as code into applications and platforms

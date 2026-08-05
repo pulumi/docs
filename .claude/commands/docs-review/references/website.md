@@ -5,7 +5,7 @@ description: Review criteria for marketing, pricing, legal, and competitive land
 
 # Review — Website
 
-Applied to `content/**.md` paths *not* under `blog/`, `case-studies/`, `docs/`, `learn/`, or `tutorials/` — pricing, legal, `vs/`, `why-pulumi/`, `about/`, `careers/`, etc. These pages carry claims with potential revenue, legal, and FTC consequences if wrong. Fact-check is on for every change.
+Applied to `content/**.md` paths *not* under `blog/`, `case-studies/`, `docs/`, `resources/`, or `tutorials/` — pricing, legal, `vs/`, `why-pulumi/`, `about/`, `careers/`, etc. These pages carry claims with potential revenue, legal, and FTC consequences if wrong. Fact-check is on for every change.
 
 **Stance.** Authors of these pages typically have non-public data and domain expertise the reviewer doesn't. Surface claims as **verification asks** ("worth a double-check before merge"), not assertions of error. Default tier is ⚠️. Reserve 🚨 for (a) legal semantic changes and (b) claims a public source positively contradicts. Inability to verify is itself worth surfacing — but as "please confirm," not "this is wrong."
 

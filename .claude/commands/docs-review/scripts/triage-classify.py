@@ -47,7 +47,7 @@ def classify_path(path: str) -> str | None:
         return "domain:programs"
     if path.startswith("content/blog/") or path.startswith("content/case-studies/"):
         return "domain:blog"
-    for prefix in ("content/docs/", "content/learn/", "content/tutorials/"):
+    for prefix in ("content/docs/", "content/resources/", "content/tutorials/"):
         if path.startswith(prefix):
             return "domain:docs"
     if path.startswith(".github/workflows/"):
