@@ -119,7 +119,7 @@ jobs:
         run: |
           # Clear any stale queue-wait record so it can't mask a slow build on a
           # reused workspace; await-in-progress.js rewrites it during the build.
-          rm -f .build-queue-wait-seconds
+          rm -f "${CI_BUILD_QUEUE_WAIT_FILE:-.build-queue-wait-seconds}"
           echo "CI_BUILD_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
 
       - name: Build and deploy

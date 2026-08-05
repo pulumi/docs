@@ -8,8 +8,10 @@ const pollIntervalMs = 60000;
 // Where we record the number of seconds this run spent parked in the queue. The
 // build-duration alert (scripts/ci-build-duration-alert.sh) reads this file and subtracts
 // the wait from the wall-clock time of the "Build and deploy" step, so a backed-up queue
-// doesn't get reported in Slack as a slow build. A missing file means "no wait."
-const queueWaitFile = path.join(__dirname, "..", ".build-queue-wait-seconds");
+// doesn't get reported in Slack as a slow build. A missing file means "no wait." Honors
+// CI_BUILD_QUEUE_WAIT_FILE so the writer and the alert script's reader can't drift apart.
+const queueWaitFile = process.env.CI_BUILD_QUEUE_WAIT_FILE
+    || path.join(__dirname, "..", ".build-queue-wait-seconds");
 
 // Wait for any in-progress runs of the same workflow on this branch to complete before
 // proceeding. In other words, if the current workflow is an instance of the "foo"
