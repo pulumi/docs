@@ -1,6 +1,6 @@
 ---
 title_tag: "Logging in Pulumi for Debugging"
-meta_desc: "Learn about logging in Pulumi including automatic operation logs you can share with the Pulumi team, CLI verbose logging for troubleshooting, and program logging for diagnostics."
+meta_desc: "Learn about logging in Pulumi: automatic operation logs you can share with the Pulumi team, CLI verbose logging, and program logging for diagnostics."
 title: Logging
 h1: Logging
 menu:
