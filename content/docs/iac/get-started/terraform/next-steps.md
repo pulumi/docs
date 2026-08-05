@@ -324,7 +324,7 @@ const app = new WebApplication("my-app", {
 
 ### Documentation and guides
 
-* **[Pulumi Architecture & Concepts](/docs/intro/concepts/)**: Deep dive into Pulumi's architecture
+* **[Pulumi Architecture & Concepts](/docs/iac/concepts/)**: Deep dive into Pulumi's architecture
 * **[Adopting Pulumi](/docs/using-pulumi/adopting-pulumi/)**: Comprehensive migration strategies
 * **[Pulumi vs Terraform](/docs/iac/comparisons/terraform/)**: Detailed comparison of features
 * **[Automation API](/docs/iac/concepts/automation-api/)**: Programmatic infrastructure management
