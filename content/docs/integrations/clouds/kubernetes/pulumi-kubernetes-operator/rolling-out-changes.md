@@ -1,6 +1,6 @@
 ---
 title_tag: "Rolling out changes | Pulumi Kubernetes Operator"
-meta_desc: Roll out changes safely with the Pulumi Kubernetes Operator by approving them upstream and previewing before a change reaches the operator.
+meta_desc: Roll out changes safely with the Pulumi Kubernetes Operator by approving and previewing upstream, then staging promotions across environments.
 title: Rolling out changes
 h1: "Pulumi Kubernetes Operator: Rolling out changes"
 menu:
@@ -10,7 +10,7 @@ menu:
         weight: 4
 ---
 
-The Pulumi Kubernetes Operator keeps your infrastructure continuously reconciled with a specific version of a Pulumi program, declared in a `Stack` resource. By default it applies changes immediately: when the version a `Stack` tracks changes, the operator runs `pulumi up` and reconciles your infrastructure to it, with no built-in pause for review. The safety of a rollout therefore depends on approving a change *before* its version reaches the operator, and previewing it upstream where you need one.
+The Pulumi Kubernetes Operator keeps your infrastructure continuously reconciled with a specific version of a Pulumi program, declared in a `Stack` resource. By default it applies changes immediately: when the version a `Stack` tracks changes, the operator runs `pulumi up` and reconciles your infrastructure to it, with no built-in pause for review. The safety of a rollout therefore depends on approving a change *before* its version reaches the operator, and previewing it upstream where you need one. Once a change is approved, `spec.prerequisites` stages how it lands, holding each environment until the one before it succeeds.
 
 (The operator reconciles when the tracked version changes. It can also re-run periodically to detect and remediate drift, but that is opt-in — you enable it with [drift detection](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#drift-detection).)
 
@@ -48,13 +48,13 @@ spec:
   commit: 03658b5514f08970f350618a6e6fdf1bd75f45d0   # advanced only in a reviewed pull request
 ```
 
-Don't let an unreviewed version reach the operator and rely on staging afterward to catch problems. Because reconciliation applies immediately, a broken version is live before any gate downstream of it can help. Keep approval upstream, where a change can still be stopped.
+Don't let an unreviewed version reach the operator and rely on staging afterward to catch problems. Because reconciliation applies immediately, a broken version is live in the first environment before any gate downstream of it can help. Keep approval upstream, where a change can still be stopped. [Staging](#stage-rollouts-across-environments) then limits the blast radius of what got through — it contains a bad change to `dev` or `test` rather than preventing one.
 
 ## Preview a change before it reaches the operator
 
 The Pulumi Kubernetes Operator does not hold a change for approval; it applies on reconcile. A preview (or a required approval) before a change goes live therefore has to run **upstream of the operator, in your CI**.
 
-A `Stack` can be put in [preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) with `spec.preview: true`, and it then only ever previews — it never applies. That is a mode on the `Stack` rather than a per-change gate, though: setting it back to `false` deploys whatever version the `Stack` currently points at.
+A `Stack` can be put in [preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) with `spec.preview: true`, and it then only ever previews — it never applies; the [`preview-demo` example](https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/preview-demo) shows one setup. That is a mode on the `Stack` rather than a per-change gate, though: setting it back to `false` deploys whatever version the `Stack` currently points at.
 
 When your program is in a Git repository, preview it in that repository's CI on every pull request. This is an ordinary `pulumi preview` and doesn't involve the operator. With GitHub Actions, previewing against your dev stack:
 
@@ -90,7 +90,7 @@ When the `Stack` pins `spec.commit`, previewing before promotion works cleanly. 
 1. Merge once the preview is green.
 1. Advance `spec.commit` on the `Stack` to the merged SHA in a reviewed pull request against your manifests.
 
-The operator reconciles the new commit only after the manifest change merges, and that commit was already previewed. This is the recommended pattern for production.
+The operator reconciles the new commit only after the manifest change merges, and that commit was already previewed. This is the recommended pattern for production, and it composes with [prerequisites](#stage-rollouts-across-environments) to order the environments the promoted commit lands in.
 
 ### A moving branch or tag
 
@@ -103,6 +103,57 @@ Preview the commit you're about to promote, and re-point the branch or tag only 
 When you define the program inline with a `Program` object (`spec.programRef`), there is no program repository to check out, and config comes from the `Stack` — so a standalone `pulumi preview` in CI has nothing to run against and no faithful way to reproduce the operator's inputs. **You can't run a faithful CI preview before promotion here.** Safety rests on reviewing the `Program` — and the components it composes — before you apply it. You can still get a dry-run plan in the cluster by setting [preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) (`spec.preview: true`) on the `Stack`, which runs `pulumi preview` instead of applying; set it back to `false` to deploy.
 
 One place inline `Program`s might fit is an internal developer platform, where users compose a program from a fixed set of well-vetted golden paths encoded as [components](/docs/iac/concepts/components/). There, the approval that matters has already happened upstream — in the review and testing of the components themselves — so a per-change preview is less critical: users assemble trusted building blocks rather than author arbitrary infrastructure.
+
+## Stage rollouts across environments
+
+Approval and preview decide *whether* a change goes out. `spec.prerequisites` decides *in what order* it lands once it does.
+
+A `Stack` with a prerequisite waits for the referenced stack to reach a successful state before it runs. This enforces stage order declaratively, without manual sequencing: `test` won't deploy until `dev` is green, and `prod` won't deploy until `test` is.
+
+Extending the earlier example, `dev` tracks the `main` branch and deploys every merge, while `test` and `prod` pin an immutable commit so they change only when that commit is promoted through a reviewed pull request:
+
+```yaml
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: app-dev
+spec:
+  stack: my-org/my-app/dev
+  projectRepo: https://github.com/example/app
+  branch: main            # main is already reviewed; dev deploys every merge
+---
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: app-test
+spec:
+  stack: my-org/my-app/test
+  projectRepo: https://github.com/example/app
+  commit: 03658b5514f08970f350618a6e6fdf1bd75f45d0   # the candidate commit
+  prerequisites:
+  - name: app-dev
+    requirement:
+      succeededWithinDuration: "1h"
+---
+apiVersion: pulumi.com/v1
+kind: Stack
+metadata:
+  name: app-prod
+spec:
+  stack: my-org/my-app/prod
+  projectRepo: https://github.com/example/app
+  commit: 03658b5514f08970f350618a6e6fdf1bd75f45d0   # promoted only after test is green
+  prerequisites:
+  - name: app-test
+    requirement:
+      succeededWithinDuration: "1h"
+```
+
+The optional `requirement.succeededWithinDuration` sets a freshness window on the prerequisite: with `"1h"`, its last successful run must have completed within the last hour. If it's older, the operator re-syncs the prerequisite and waits for it to succeed again before the dependent stack proceeds.
+
+Advancing the pinned commit on `app-test` and `app-prod` in a reviewed pull request then rolls the change out in order: `test` deploys first, and `prod` follows only once `test` is green.
+
+Note what prerequisites do and don't give you. They gate on whether the prior stack's `pulumi up` *succeeded*, not on whether anyone reviewed the change or whether the deployed application is healthy — so they order a rollout rather than approve one. Pair them with upstream approval for the review gate, and with a progressive-delivery tool for the health gate.
 
 ## Verify application health
 

@@ -42,7 +42,7 @@ Deploying Pulumi stacks using Kubernetes provides the capability to build out CI
 - **[Installation](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/installation/)** — install the operator, create a service account, and configure Pulumi Cloud access and Pulumi ESC.
 - **[Defining stacks](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/defining-stacks/)** — create a `Stack` resource from a Git repository, Flux source, or Program object, and set its configuration and environment variables.
 - **[Stack operations](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/)** — drift detection, state refresh, cleanup, prerequisites, external triggers, and preview mode.
-- **[Rolling out changes](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/rolling-out-changes/)** — approve changes upstream and preview before they reach the operator.
+- **[Rolling out changes](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/rolling-out-changes/)** — approve changes upstream, preview before they reach the operator, and stage a rollout across environments with prerequisites.
 
 Detailed documentation on the Stack API is available in the [operator repository][pko-stacks].
 
