@@ -6,10 +6,18 @@
 # before anyone noticed): it never fails the build, and it stays quiet when the
 # build is healthy.
 #
+# Only time spent actually building and deploying counts toward the threshold.
+# The step also parks in scripts/await-in-progress.js waiting for older runs of
+# this workflow to finish, and when pushes to master stack up that queue wait can
+# add ten-plus minutes to the step without the build itself being any slower.
+# await-in-progress.js records the wait in $CI_BUILD_QUEUE_WAIT_FILE and we
+# subtract it here, so a backed-up queue no longer reads as a slow build.
+#
 # Expects:
 #   CI_BUILD_START_EPOCH               epoch seconds recorded just before the build step
 #   SLACK_WEBHOOK_URL                  incoming webhook for the alert channel (docs-ops)
 #   BUILD_DURATION_THRESHOLD_MINUTES   alert threshold (default 20)
+#   CI_BUILD_QUEUE_WAIT_FILE           queue-wait record (default ./.build-queue-wait-seconds)
 
 set -o nounset
 
@@ -19,12 +27,30 @@ if [ -z "${CI_BUILD_START_EPOCH:-}" ]; then
 fi
 
 threshold_minutes="${BUILD_DURATION_THRESHOLD_MINUTES:-20}"
+queue_wait_file="${CI_BUILD_QUEUE_WAIT_FILE:-./.build-queue-wait-seconds}"
 elapsed_seconds=$(( $(date +%s) - CI_BUILD_START_EPOCH ))
-elapsed_minutes=$(( elapsed_seconds / 60 ))
 
-echo "Build step took ${elapsed_minutes}m ($((elapsed_seconds))s); threshold is ${threshold_minutes}m."
+# A missing or malformed record means no measured wait, which is the safe default:
+# we then compare the full elapsed time against the threshold, as before.
+queue_seconds=0
+if [ -r "$queue_wait_file" ]; then
+    read -r queue_seconds < "$queue_wait_file" || true
+fi
+case "${queue_seconds:-}" in
+    "" | *[!0-9]*) queue_seconds=0 ;;
+esac
 
-if [ "$elapsed_seconds" -le $(( threshold_minutes * 60 )) ]; then
+build_seconds=$(( elapsed_seconds - queue_seconds ))
+if [ "$build_seconds" -lt 0 ]; then
+    build_seconds=0
+fi
+
+build_minutes=$(( build_seconds / 60 ))
+queue_minutes=$(( queue_seconds / 60 ))
+
+echo "Build and deploy took ${build_minutes}m (${build_seconds}s), excluding ${queue_minutes}m (${queue_seconds}s) of queue wait; threshold is ${threshold_minutes}m."
+
+if [ "$build_seconds" -le $(( threshold_minutes * 60 )) ]; then
     exit 0
 fi
 
@@ -33,8 +59,13 @@ if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
     exit 0
 fi
 
+queue_note=""
+if [ "$queue_seconds" -gt 0 ]; then
+    queue_note=" Excludes ${queue_minutes}m spent waiting for an earlier run to finish."
+fi
+
 run_url="${GITHUB_SERVER_URL:-https://github.com}/${GITHUB_REPOSITORY:-pulumi/docs}/actions/runs/${GITHUB_RUN_ID:-}"
-message=":hourglass_flowing_sand: Build and deploy took *${elapsed_minutes}m*, longer than usual (threshold: ${threshold_minutes}m). Hugo's --templateMetrics output in the job log can help identify what was slow. <${run_url}|View run>"
+message=":hourglass_flowing_sand: Build and deploy took *${build_minutes}m*, longer than usual (threshold: ${threshold_minutes}m).${queue_note} Hugo's --templateMetrics output in the job log can help identify what was slow. <${run_url}|View run>"
 
 payload=$(printf '{"channel": "docs-ops", "username": "docsbot", "icon_url": "https://www.pulumi.com/logos/brand/avatar-on-white.png", "text": "%s"}' "$message")
 
