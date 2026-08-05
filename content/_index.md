@@ -14,9 +14,9 @@ sections:
     cta_agent_label: For agents
     cta_agent_prompt: Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
     cta_agent_prompt_label: Copy prompt
-    badge_highlight_text: "New Release:"
-    badge_text: "Building for the Agentic Era"
-    badge_link: /releases/agentic-infrastructure-era/
+    badge_highlight_text: "New this week:"
+    badge_text: "All your IaC, including Terraform and HCL"
+    badge_link: /releases/terraform-state-backend-modules-hcl/
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
     description: |

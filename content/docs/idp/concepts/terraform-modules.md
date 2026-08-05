@@ -90,6 +90,8 @@ Publishing a module version also converts it into a Pulumi package, with no extr
 
 Conversion runs per version, so a module can have some versions with packages and some without. The package's page in Pulumi Cloud shows which versions have converted and gives you the command to install one.
 
+Under the hood, the conversion job derives the package schema by reading the module through Pulumi's [`hcl`](https://github.com/pulumi/pulumi-hcl) parameterized provider (`pulumi package get-schema hcl module <address>`) and publishes that schema as a package version. SDKs and API documentation come from the schema, the same as for any other package.
+
 ## Consume from a Pulumi program
 
 Once a version has converted, install it by package name:
@@ -108,19 +110,7 @@ Usage tracking only counts consumption through the converted package. A stack or
 Installing a converted package requires Pulumi CLI 3.248.0 or newer. See [Download & Install Pulumi](/docs/install/) to install or upgrade.
 {{% /notes %}}
 
-### If a version has no package
-
-Installing by package name is the path to reach for. If a version you need has no package, you can convert the module locally instead, against the module address rather than the package name:
-
-```bash
-pulumi package add hcl module tf.pulumi.com/<namespace>/<name>/<system> [<version>]
-```
-
-`hcl` is a parameterized provider. The `module` keyword selects module mode, followed by the module address and an optional version. Omit the version to resolve the latest published version; pass one to pin it.
-
-This converts the module on your machine, using your local `hcl` provider, and generates an SDK for your project. Nothing is published: there is no package in the registry, and so no package page, no API reference, and no usage tracking, and a teammate who needs the module runs the same command rather than installing what you produced. A module the registry could not convert may well fail here for the same reason.
-
-Both commands resolve using your Pulumi credentials. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
+The install resolves using your Pulumi credentials. See [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) for examples.
 
 ## Consume from OpenTofu or Terraform
 

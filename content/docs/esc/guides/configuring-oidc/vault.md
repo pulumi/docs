@@ -54,7 +54,7 @@ Where:
 
 * `<org-name>` is your Pulumi Cloud organization name (or your username if not part of an organization)
 * `<project-name>/<environment-name>` is the Pulumi Cloud environment identifier
-* `<subject-identifier>` is the subject identifier of the Pulumi service requesting access
+* `<subject-identifier>` is the subject identifier of Pulumi Cloud requesting access
 
 ## Configure Vault JWT OIDC Auth
 
