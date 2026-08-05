@@ -1,0 +1,149 @@
+# TEMPORARY — delete this file before opening the real PR.
+#
+# Exercises the new `lighthouse` job from pull-request.yml without opening a PR.
+# Pushing this branch triggers nothing else (build-and-deploy and
+# testing-build-and-deploy are both master-only), so this runs alone: no PR, no
+# bot comment, no Slack, no review bots, no reviewers.
+#
+# Covers:      ESC secrets in a standalone job, the buildSite -> lighthouse artifact
+#              hand-off, the path filter (both outcomes), the yarn.lock version
+#              extraction, and Chrome + run-audits.mjs on ubuntu-latest.
+# Can't cover: the real preview URL (it audits production instead) and the comment
+#              post/update path, which needs a pull_request payload. Both need the
+#              draft PR in stage 2.
+name: "TEMP: Lighthouse job smoke test"
+on:
+  push:
+    branches:
+      - jeffmerrick/faster-pr-lighthouse
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: read
+jobs:
+  # Stands in for buildSite: publishes the same artifact under the same name,
+  # pointing at production, so the audit job below exercises the real hand-off
+  # without waiting on a 20-minute build.
+  stubBuild:
+    name: Publish stub bucket metadata
+    runs-on: ubuntu-latest
+    steps:
+      - name: Write metadata
+        run: |
+          jq -n --arg commit "${{ github.sha }}" \
+            '{url: "https://www.pulumi.com", commit: $commit, bucket: "stub"}' \
+            > origin-bucket-metadata.json
+          cat origin-bucket-metadata.json
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: origin-bucket-metadata
+          path: origin-bucket-metadata.json
+
+  # The path filter, asserted against three already-merged PRs with known file
+  # lists. This is how the "content-only PRs skip the audit" half gets verified
+  # without paying for a second full build.
+  filter:
+    name: Path filter fixtures
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Assert filter outcomes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          performance_paths=(
+              "^layouts/"
+              "^theme/"
+              "^assets/"
+              "^static/js/"
+              "^static/css/"
+              "^static/fonts/"
+              "^static/icons/"
+              "^static/images/"
+              "^static/logos/"
+              "^config/"
+              "^hugo\."
+          )
+          performance_pattern="$(IFS="|"; echo "${performance_paths[*]}")"
+
+          check() {
+              local pr=$1
+              local expected=$2
+              local actual="false"
+              local changed_files
+
+              changed_files="$(gh pr diff "$pr" --name-only 2>/dev/null || true)"
+              if echo "$changed_files" | grep -qE "$performance_pattern"; then
+                  actual="true"
+              fi
+
+              echo "PR #${pr}: expected perf=${expected}, got perf=${actual}"
+              [[ "$actual" == "$expected" ]]
+          }
+
+          check 20640 true   # layouts/partials/schema/graph-builder.html
+          check 20723 false  # content/events/... + data/announcements.yml
+          check 20724 false  # static/latest-dev-version — not an audited static/ subdir
+
+  # A copy of the real `lighthouse` job, minus the filter gate (covered above) and
+  # the pull_request-only `if`. Keep the steps below in sync with pull-request.yml
+  # while iterating; this file gets deleted once the draft PR proves the real one.
+  lighthouse:
+    name: Lighthouse performance audit
+    runs-on: ubuntu-latest
+    environment: testing
+    needs: [stubBuild]
+    continue-on-error: true
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      - uses: actions/checkout@v7
+
+      # The real job needs this to post the comment, so prove it resolves here.
+      - name: Assert the bot token resolved
+        env:
+          PULUMI_BOT_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+        run: |
+          if [[ -z "${PULUMI_BOT_TOKEN}" ]]; then
+              echo "PULUMI_BOT_TOKEN did not resolve from ESC in this job."
+              exit 1
+          fi
+          echo "PULUMI_BOT_TOKEN resolved."
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.x'
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: origin-bucket-metadata
+
+      - name: Install Lighthouse
+        run: |
+          LH_VERSION="$(node -e '
+            const lock = require("fs").readFileSync("yarn.lock", "utf8");
+            const match = lock.match(/^"?lighthouse@[^\n]*:\n  version "([^"]+)"/m);
+            if (!match) {
+                console.error("Could not determine the Lighthouse version from yarn.lock.");
+                process.exit(1);
+            }
+            console.log(match[1]);
+          ')"
+          echo "Installing lighthouse@${LH_VERSION}..."
+          npm install --no-save --no-audit --no-fund "lighthouse@${LH_VERSION}"
+
+      # On a push event there's no pull_request payload, so the script falls through
+      # to printing the rendered table to stdout instead of posting a comment.
+      - name: Run audits
+        run: ./scripts/run-lighthouse-pr.sh
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
