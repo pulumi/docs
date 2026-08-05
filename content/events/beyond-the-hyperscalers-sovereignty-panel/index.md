@@ -2,7 +2,7 @@
 # Name of the event, <= 60 characters
 title: "Beyond the Hyperscalers: Building Sovereign Infrastructure in the EU"
 allow_long_title: true
-meta_desc: A live panel on cloud sovereignty as an architecture decision. Who is leaving the hyperscalers, why — compliance, cost, control — and when it makes sense.
+meta_desc: A live panel on cloud sovereignty as an architecture decision. Who is leaving the hyperscalers, why, and when staying is the right call.
 meta_image: /events/beyond-the-hyperscalers-sovereignty-panel/meta.png
 meta_image_square: /events/beyond-the-hyperscalers-sovereignty-panel/meta-square.png
 
@@ -44,9 +44,9 @@ location: virtual
 
 # Description of the event.
 description: |
-    European regulations and rising cloud bills have CTOs asking a question that was unthinkable five years ago: do we need an exit plan from our cloud provider? This panel treats cloud sovereignty as an architecture decision.
+    European regulations and rising cloud bills have CTOs asking a question that was unthinkable five years ago: do we need an exit plan from our cloud provider? This panel treats cloud sovereignty as an architecture decision, including the cases where the answer is to stay put.
 
-    Waldemar Kindler (CEO, Think Ahead Technologies) helps European companies plan migrations off the hyperscalers, driven by cost, NIS2's widening scope, and the risk of losing access to a US provider outright. He also builds tooling for the EU Cyber Resilience Act, whose first reporting deadline lands eight days after this panel. Jim Dowling (CEO, Hopsworks) actually made the move, taking Hopsworks from AWS to Europe's OVHcloud and cutting his bill 62% without leaving the cloud. Sarbjeet Johal (cloud economist, theCUBE analyst) separates the real risks from the perceived ones, including why public cloud economics remain hard to beat at scale.
+    Waldemar Kindler (CEO, Think Ahead Technologies) helps European companies plan migrations off the hyperscalers, driven by cost, NIS2's widening scope, and clients asking whether they could move if they had to. He also builds tooling for the EU Cyber Resilience Act, whose first reporting deadline lands eight days after this panel. Jim Dowling (CEO, Hopsworks) actually made the move, taking Hopsworks from AWS to Europe's OVHcloud and cutting his bill 62% without leaving the cloud. Sarbjeet Johal (cloud economist, theCUBE analyst) separates the real risks from the perceived ones, including why public cloud economics remain hard to beat at scale.
 
     Whether you're facing sovereignty requirements or just want to know your options are real, this panel covers who's leaving, why, and when it makes sense to stay. Adam Gordon Bell moderates, with live audience Q&A.
 
