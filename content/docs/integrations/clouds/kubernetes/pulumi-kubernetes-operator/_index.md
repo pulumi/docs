@@ -50,7 +50,7 @@ Detailed documentation on the Stack API is available in the [operator repository
 
 ## Use with Argo CD
 
-You can combine the operator with Argo CD to manage the lifecycle of your `Stack` resources using the GitOps paradigm, driving Pulumi deployments from the Argo CD UI or CLI. For comprehensive guidance—including a trunk-based GitOps workflow, preview environments, sync waves, and multi-cluster patterns—see the dedicated [Argo CD with Pulumi Kubernetes Operator](/docs/iac/operations/continuous-delivery/argocd/) documentation.
+You can combine the operator with Argo CD to manage the lifecycle of your `Stack` resources using the GitOps paradigm, driving Pulumi deployments from the Argo CD UI or CLI. For comprehensive guidance—including a trunk-based GitOps workflow, preview environments, and sync waves—see the dedicated [Argo CD with Pulumi Kubernetes Operator](/docs/iac/operations/continuous-delivery/argocd/) documentation.
 
 ## More information
 

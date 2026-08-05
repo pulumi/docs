@@ -52,7 +52,7 @@ Don't let an unreviewed version reach the operator and rely on staging afterward
 
 ## Preview a change before it reaches the operator
 
-The Pulumi Kubernetes Operator does not hold a change for approval; it applies on reconcile. A preview (or a required approval) before a change goes live therefore has to run **upstream of the operator, in your CI**.
+The Pulumi Kubernetes Operator does not hold a change for approval; it applies on reconcile. A preview (or a required approval) before a change goes live has to run **upstream of the operator, in your CI**.
 
 A `Stack` can be put in [preview mode](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/stack-operations/#preview-mode) with `spec.preview: true`, and it then only ever previews — it never applies; the [`preview-demo` example](https://github.com/pulumi/pulumi-kubernetes-operator/tree/master/examples/preview-demo) shows one setup. That is a mode on the `Stack` rather than a per-change gate, though: setting it back to `false` deploys whatever version the `Stack` currently points at.
 
