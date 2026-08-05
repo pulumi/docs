@@ -24,29 +24,6 @@ source ./scripts/ci-login.sh
 # Temporarily disable 404 detection (too many false positives)
 # ./scripts/detect-new-404s.sh
 
-# Run Lighthouse performance audit on the preview deployment, but only when the
-# PR contains changes that could meaningfully affect performance scores (layouts,
-# CSS/JS bundles, Hugo config, etc.). Content-only changes are skipped.
-performance_paths=(
-    "^layouts/"
-    "^theme/"
-    "^assets/"
-    "^static/js/"
-    "^static/css/"
-    "^static/fonts/"
-    "^static/icons/"
-    "^static/images/"
-    "^static/logos/"
-    "^config/"
-    "^hugo\."
-)
-performance_pattern="$(IFS="|"; echo "${performance_paths[*]}")"
-pr_number="$(jq -r '.pull_request.number' "$GITHUB_EVENT_PATH")"
-changed_files="$(gh pr diff "$pr_number" --name-only 2>/dev/null || true)"
-
-if echo "$changed_files" | grep -qE "$performance_pattern"; then
-    echo "Performance-relevant files changed. Running Lighthouse audit..."
-    ./scripts/run-lighthouse-pr.sh || true
-else
-    echo "No performance-relevant file changes detected. Skipping Lighthouse audit."
-fi
+# The Lighthouse performance audit used to run here. It now runs in its own
+# `lighthouse` job in .github/workflows/pull-request.yml, so the advisory audit
+# stays off the critical path of the buildSite check people wait on.

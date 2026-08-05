@@ -7,6 +7,7 @@ on:
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
+      pull-requests: read # This is required for the Lighthouse job's changed-files check
 jobs:
   buildSite:
     # Only run this job for events that originate on this repository.
@@ -115,6 +116,96 @@ jobs:
         with:
           name: origin-bucket-metadata
           path: origin-bucket-metadata.json
+
+  # Advisory performance audit of the PR preview deployment. This runs as its own
+  # job, rather than at the tail of buildSite, so a check that blocks nothing isn't
+  # sitting on the critical path of the check that does. It deliberately skips
+  # `make ensure` and installs only Lighthouse — a full install would eat the savings.
+  lighthouse:
+    # Only run this job for events that originate on this repository.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    name: Lighthouse performance audit
+    runs-on: ubuntu-latest
+    environment: testing
+    needs: [buildSite]
+    # The audit is advisory and gates nothing, so a failure here must never turn the
+    # workflow run red. This preserves the behavior of the `|| true` that wrapped the
+    # audit back when it ran inside buildSite.
+    continue-on-error: true
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+
+      - uses: actions/checkout@v7
+
+      # Audit only when the PR contains changes that could meaningfully affect
+      # performance scores (layouts, CSS/JS bundles, Hugo config, etc.). Content-only
+      # changes skip the rest of this job.
+      - name: Check for performance-relevant changes
+        id: filter
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          performance_paths=(
+              "^layouts/"
+              "^theme/"
+              "^assets/"
+              "^static/js/"
+              "^static/css/"
+              "^static/fonts/"
+              "^static/icons/"
+              "^static/images/"
+              "^static/logos/"
+              "^config/"
+              "^hugo\."
+          )
+          performance_pattern="$(IFS="|"; echo "${performance_paths[*]}")"
+          changed_files="$(gh pr diff "${{ github.event.pull_request.number }}" --name-only 2>/dev/null || true)"
+
+          if echo "$changed_files" | grep -qE "$performance_pattern"; then
+              echo "Performance-relevant files changed. Running Lighthouse audit..."
+              echo "perf=true" >> "$GITHUB_OUTPUT"
+          else
+              echo "No performance-relevant file changes detected. Skipping Lighthouse audit."
+              echo "perf=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v7
+        if: steps.filter.outputs.perf == 'true'
+        with:
+          node-version: '24.x'
+
+      # The preview URL to audit, published by buildSite's sync-and-test-bucket.sh.
+      - uses: actions/download-artifact@v8
+        if: steps.filter.outputs.perf == 'true'
+        with:
+          name: origin-bucket-metadata
+
+      # Install Lighthouse only, at the version yarn.lock resolves for the root
+      # package.json dependency, so this job can't drift from a local `make` run.
+      - name: Install Lighthouse
+        if: steps.filter.outputs.perf == 'true'
+        run: |
+          LH_VERSION="$(node -e '
+            const lock = require("fs").readFileSync("yarn.lock", "utf8");
+            const match = lock.match(/^"?lighthouse@[^\n]*:\n  version "([^"]+)"/m);
+            if (!match) {
+                console.error("Could not determine the Lighthouse version from yarn.lock.");
+                process.exit(1);
+            }
+            console.log(match[1]);
+          ')"
+          echo "Installing lighthouse@${LH_VERSION}..."
+          npm install --no-save --no-audit --no-fund "lighthouse@${LH_VERSION}"
+
+      - name: Run audits and post report
+        if: steps.filter.outputs.perf == 'true'
+        run: ./scripts/run-lighthouse-pr.sh
+        env:
+          PULUMI_BOT_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+
   notify:
     if: (startsWith(github.ref, 'refs/heads/release/') || github.ref == 'refs/heads/master' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'pulumi-bot')) && failure()
     name: Send slack notification
