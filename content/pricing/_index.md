@@ -42,7 +42,7 @@ tiers:
               price: $40
               price_label: /month base
               unit: "**Includes 40 Credits**"
-              note: Up to 500 resources, additional usage billed on demand
+              note: "Up to 500 resources included; additional usage billed at [$0.1825 per resource/month](/pricing/#faq-pricing)"
               cta:
                   label: Start a free trial
                   href: https://app.pulumi.com/signup?create-organization=1
@@ -63,7 +63,7 @@ tiers:
               price: $400
               price_label: /month base
               unit: "**Includes 400 Credits**"
-              note: Up to 2,000 resources, additional usage billed on demand
+              note: "Up to 2,000 resources included; additional usage billed at [$0.365 per resource/month](/pricing/#faq-pricing)"
               cta:
                   label: Start a free trial
                   href: https://app.pulumi.com/signup?create-organization=1
@@ -689,7 +689,9 @@ faq:
             If you prefer to pay annually, you can [contact sales](/contact/?form=sales) to receive a discount for a committed amount of usage paid up-front. If you subsequently consume all up-front purchased usage, you will be billed in arrears as you go beyond that amount of usage. The details are specified in your contract.
         - question: What are Pulumi Credits?
           answer: |
-            Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
+            Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement.
+
+            Every Pulumi product meters usage in its own unit: IaC resources by the hour, ESC secrets and secrets API calls, workflow minutes, and Neo tokens. Whatever mix of products your organization uses, all of that usage draws from the same pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
         - question: How are IaC resources billed?
           answer: |
             IaC resources are billed hourly at the rate of $0.00025 for Team ($0.1825 per resource per month) and starting at $0.0005 for Enterprise ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
@@ -697,6 +699,11 @@ faq:
             Enterprise plans receive volume discounts, so that the more resources you consume, the lower the incremental rate. This is true of self-serve pay-as-you-go plans, although prepaid plans offer more considerable discounts.
 
             For billing purposes, a partial resource hour used is billed as a full hour and we count any resource that's declared in a Pulumi program. This includes [provider resources](/docs/concepts/resources) (e.g., an Amazon S3 bucket), [component resources](/docs/iac/concepts/components) which are groupings of resources (e.g., an Amazon EKS cluster), and [stacks](/docs/iac/concepts/stacks) which contain resources (e.g., dev, test, prod stacks).
+        - question: What would my monthly bill look like for a given number of IaC resources?
+          answer: |
+            As an example, a Team plan (which includes up to 500 resources for the $40 monthly base fee) managing 1,200 IaC resources for the full month would pay the $40 base plus 700 additional resources at $0.1825 per resource per month: $40 + (700 × $0.1825) = $167.75 for the month.
+
+            The same shared-pool model applies across products. If that same Team plan also uses Pulumi ESC to manage secrets, workflow minutes for Deployments, and Neo for AI-assisted pull request reviews, each of those usages is metered in its own unit and converts to dollars against the same pool, since one Pulumi Credit is worth $1 USD.
         - question: What can I do with 500 IaC resources per month?
           answer: |
             The Team edition includes up to 500 IaC resources to get started with.
