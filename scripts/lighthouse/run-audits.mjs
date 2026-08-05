@@ -12,9 +12,11 @@
 //   1. All audits share a single Chrome process instead of paying a cold boot each
 //      time. (Lighthouse still resets storage and uses a fresh tab per run, so the
 //      audits stay independent.)
-//   2. The screenshot audits are skipped. They're the most expensive part of a
-//      performance run and the report only reads the score plus the five metrics
-//      below, so the screenshots were captured, encoded, and thrown away.
+//   2. Screenshots are skipped. The full-page screenshot is the most expensive part
+//      of a performance run, and it's filter-resistant, so `disableFullPageScreenshot`
+//      is the only way to turn it off; the two screenshot audits are skipped for good
+//      measure. The report only reads the score plus five metrics, so every screenshot
+//      was being captured, encoded, and thrown away.
 
 import fs from "node:fs";
 import path from "node:path";
@@ -37,7 +39,8 @@ const pages = JSON.parse(fs.readFileSync(path.join(scriptDir, "pages.json"), "ut
 
 const settings = {
     onlyCategories: ["performance"],
-    skipAudits: ["screenshot-thumbnails", "final-screenshot", "full-page-screenshot"],
+    disableFullPageScreenshot: true,
+    skipAudits: ["screenshot-thumbnails", "final-screenshot"],
 };
 
 const configs = {
