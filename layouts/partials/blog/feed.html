@@ -4,13 +4,15 @@
     init), and template-partials/template-latest-posts.html (the site homepage
     row).
 
-    Returns: dict "featured" <pages> "feed" <pages> "posts" <pages> "pool" <pages>
+    Returns: dict "featured" <pages> "feed" <pages> "posts" <pages>
       posts     all published blog posts, newest-first (helper pages excluded)
-      pool      posts minus the `general` category — the promotable posts the
-                featured slots draw from, and what the homepage row shows
       featured  the 4 featured slots (hero + 3 small cards), resolved from
                 blog_home.yaml `featured` (pinned slugs + auto-fill)
       feed      posts minus featured — the paginated list below the fold
+
+    `featured` followed by `feed` is the blog homepage's reading order, so a
+    consumer that wants "the top N posts as the blog homepage would rank them"
+    takes `first N (featured | append feed)`.
 
     Both callers MUST paginate `feed` (not the default .Pages): `.Paginate` /
     `.Paginator` is a per-page singleton whose FIRST caller fixes the collection,
@@ -53,4 +55,4 @@
     {{- end -}}
 {{- end -}}
 {{- $featured = first 4 $featured -}}
-{{- return dict "featured" $featured "feed" (complement $featured $posts) "posts" $posts "pool" $pool -}}
+{{- return dict "featured" $featured "feed" (complement $featured $posts) "posts" $posts -}}

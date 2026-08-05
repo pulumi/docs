@@ -11,10 +11,13 @@
     (the boxed variant of the medium card, so it matches the event tile) and
     events/event-card.html — so they stay in sync with those designs for free.
 
-    Posts come from blog/feed.html's `pool` — all published posts minus the
-    `general` category, newest-first — the same set the blog homepage promotes
-    from. Because these are always recent posts, the image-forward medium card is
-    a safe choice: every post from the last year or so has a feature image.
+    Posts are ranked exactly as the blog homepage ranks them (blog/feed.html):
+    the curated `featured` slots first — so a post pinned in blog_home.yaml leads
+    here too — then the rest of the feed, newest-first. Editing blog_home.yaml
+    therefore changes both pages at once, and the row is never merely "the newest
+    thing we published". Because these stay recent posts, the image-forward
+    medium card is a safe choice: every post from the last year or so has a
+    feature image.
 
     Schema:
     - title: Optional section heading
@@ -45,7 +48,8 @@
 {{ end }}
 
 {{ $postCount := cond (ne $nextEvent "") (sub $count 1) $count }}
-{{ $posts := first $postCount (partialCached "blog/feed.html" $ctx "blog-home").pool }}
+{{ $bf := partialCached "blog/feed.html" $ctx "blog-home" }}
+{{ $posts := first $postCount ($bf.featured | append $bf.feed) }}
 
 {{ if $posts }}
 {{/* mb-* on top of the container's section gap: this row sits between two
