@@ -262,7 +262,7 @@ sections:
         description: Neo can access infrastructure stack and resource data, so you can analyze the cost of your infrastructure and reclaim cloud waste.
       - icon: test-tube
         title: Run compliance checks
-        description: Neo applies your policies and its knowledge of compliance frameworks to analyze your infrastructure and check for policy compliance.
+        description: Neo leverages knowledge about compliance frameworks to analyze your infrastructure and check for policy compliance.
       - icon: cloud
         title: Debug cloud failures
         description: Neo can access update and deployment logs of your stacks as well as access history, logs, and runtime metrics, so you can easily debug deployment and infrastructure failures.
