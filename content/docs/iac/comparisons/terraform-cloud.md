@@ -51,7 +51,7 @@ That matters for two groups: teams who prefer HCL and shouldn't have to trade it
 
 ### Reuse your Terraform modules
 
-Pulumi programs in any language can [consume Terraform modules natively](/docs/iac/get-started/terraform/terraform-modules/) with `pulumi package add hcl module <source> <version> <name>`, resolving from the Terraform Registry, a private registry, or a local path. The module itself doesn't change.
+Pulumi programs in any language can [consume Terraform modules natively](/docs/iac/get-started/terraform/terraform-modules/) with `pulumi package add hcl module <source> [version]`, resolving from the Terraform Registry, a private registry, or a local path. The module itself doesn't change.
 
 [Pulumi Cloud's registry also hosts your Terraform modules](/docs/idp/concepts/terraform-modules/) alongside Pulumi packages, so your teams have one place to look for reusable building blocks rather than two. The publish API is wire-compatible with HCP Terraform's private registry: point your existing go-tfe or `hashicorp/tfe` provider pipelines at `tf.pulumi.com`, supply a Pulumi access token, and they run unchanged. Every version you publish is also converted into a Pulumi package with typed inputs and outputs and a generated SDK, while your existing `.tf` consumers keep resolving the module over the Terraform protocol.
 
@@ -124,7 +124,7 @@ Yes. [HCL is a first-class Pulumi language](/docs/iac/languages-sdks/hcl/): set 
 
 ### Can I use my existing Terraform modules in Pulumi?
 
-Yes, without modifying them. `pulumi package add hcl module <source> <version> <name>` makes a module available to a Pulumi program in any language, resolving from the Terraform Registry, a private registry, or a local path. See [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/).
+Yes, without modifying them. `pulumi package add hcl module <source> [version]` makes a module available to a Pulumi program in any language, resolving from the Terraform Registry, a private registry, or a local path. See [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/).
 
 You can also [host your own modules in the Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/). Its publish API is wire-compatible with HCP Terraform's, so existing go-tfe or `hashicorp/tfe` provider pipelines migrate by changing the host to `tf.pulumi.com`. Published modules stay usable from both Pulumi and Terraform programs.
 

@@ -16,7 +16,7 @@ aliases:
 ## Leverage the module ecosystem
 
 Pulumi can directly use existing Terraform modules from the Terraform Registry, private registries, or local sources. This allows you to access thousands of existing modules without rewriting them in Pulumi.
-It's powered by the [`hcl` provider](/registry/packages/hcl/), which turns any Terraform or OpenTofu module into a Pulumi component, either as a strongly typed SDK or loaded dynamically at runtime.
+It's powered by the [Any HCL Module](/registry/packages/hcl/) package, which turns any Terraform or OpenTofu module into a Pulumi component, either as a strongly typed SDK or loaded dynamically at runtime.
 
 ## Add Terraform modules
 
@@ -24,10 +24,10 @@ Use the `pulumi package add` command to add Terraform modules to your project:
 
 ```bash
 # Add a module from the Terraform Registry
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
 
 # Add a local module
-$ pulumi package add hcl module ./path/to/module localmod
+$ pulumi package add hcl module ./path/to/module
 ```
 
 ## Example: AWS VPC module
@@ -48,7 +48,7 @@ $ pulumi new aws-typescript --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
 ```
 
 Then use it in your Pulumi program:
@@ -164,7 +164,7 @@ $ pulumi new aws-python --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
 ```
 
 Then use it in your Pulumi program:
@@ -278,7 +278,7 @@ $ pulumi new aws-go --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
 ```
 
 Then use it in your Pulumi program:
@@ -288,7 +288,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-	vpc "github.com/pulumi/pulumi-terraform-module/sdks/go/vpc/v6/vpc"
+	vpc "example.com/pulumi-vpc/sdk/go/vpc"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -415,7 +415,7 @@ $ pulumi new aws-csharp --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
 ```
 
 {{% notes type="tip" %}}
@@ -562,7 +562,7 @@ $ pulumi new aws-java --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
 ```
 
 {{% notes type="tip" %}}
@@ -706,7 +706,7 @@ $ pulumi new aws-yaml --yes
 Next, add the VPC module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0 vpc
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
 ```
 
 Then use it in your Pulumi program:
@@ -798,21 +798,21 @@ outputs:
 # The vpc Terraform module package definition
 packages:
   vpc:
-    source: terraform-module
-    version: 0.1.4
+    source: hcl
+    version: 0.12.0
     parameters:
+      - module
       - terraform-aws-modules/vpc/aws
       - 6.0.0
-      - vpc
 ```
 
 {{% /choosable %}}
 
 ## Load a module at runtime
 
-Generating an SDK gives you strongly typed inputs and outputs, IDE completion, and a package you can pin and share across your team. When you'd rather trade that type safety for flexibility — for example, to load a module whose address isn't known until runtime — you can use the [`hcl` provider](/registry/packages/hcl/) instead of generating an SDK.
+Generating an SDK gives you strongly typed inputs and outputs, IDE completion, and a package you can pin and share across your team. When you'd rather trade that type safety for flexibility — for example, to load a module whose address isn't known until runtime — you can use the [Any HCL Module](/registry/packages/hcl/) package directly.
 
-Add the `hcl` provider to your project, then use the `Module` resource to load your desired module. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
+Add the Any HCL Module package to your project, then use its `Module` resource to load your desired module. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 

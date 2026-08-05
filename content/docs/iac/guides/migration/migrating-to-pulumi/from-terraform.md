@@ -303,13 +303,13 @@ Pulumi allows you to use existing Terraform modules directly in your Pulumi prog
 To use a Terraform module in Pulumi, you can add it to your project using the `pulumi package add` command:
 
 ```bash
-pulumi package add hcl module <module-source> [<version>] <pulumi-package-name>
+pulumi package add hcl module <module-source> [<version>]
 ```
 
 For example, to add the AWS VPC module from the Terraform Registry:
 
 ```bash
-pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0 vpc
+pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0
 ```
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program. You can then use this module like any other Pulumi package:
@@ -439,7 +439,7 @@ class MyStack : Stack
 This feature also works seamlessly with local Terraform modules:
 
 ```bash
-pulumi package add hcl module ./path/to/module mylocalmod
+pulumi package add hcl module ./path/to/module
 ```
 
 For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide.

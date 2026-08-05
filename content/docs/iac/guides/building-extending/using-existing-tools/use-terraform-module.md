@@ -39,7 +39,7 @@ Also, many Terraform users have created their own custom modules and would like 
 
 ## How It Works
 
-Pulumi's Terraform Module provider allows you to consume Terraform modules as if they were native Pulumi packages. It works by:
+The [Any HCL Module](/registry/packages/hcl/) package allows you to consume Terraform modules as if they were native Pulumi packages. It works by:
 
 1. Automatically installing and managing [OpenTofu](https://opentofu.org/) (an open-source Terraform-compatible implementation) to execute the module.
 2. Translating Pulumi resource declarations to Terraform configurations.
@@ -53,19 +53,20 @@ Pulumi's Terraform Module provider allows you to consume Terraform modules as if
 To use a Terraform module in Pulumi, first add it to your project using the `pulumi package add` command:
 
 ```bash
-pulumi package add hcl module <module-source> [<version>] <pulumi-package-name>
+pulumi package add hcl module <module-source> [<version>]
 ```
 
 Where:
 
 - `<module-source>` is either a registry module identifier (e.g. `terraform-aws-modules/rds/aws`) or a local path
 - `<version>` is an optional version constraint (e.g. `3.5.0`)
-- `<pulumi-package-name>` is the name you want to use for the Pulumi package
+
+Pulumi derives the package name from the module source, so there's no name to pass — a module at `terraform-aws-modules/vpc/aws` becomes the `vpc` package.
 
 For example, to add the AWS VPC module from the Terraform Registry:
 
 ```bash
-pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0 vpc
+pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0
 ```
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program.
@@ -79,7 +80,7 @@ See [Local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) for d
 You can also use local Terraform modules:
 
 ```bash
-pulumi package add hcl module ./path/to/module localmod
+pulumi package add hcl module ./path/to/module
 ```
 
 Any directory containing `.tf` files and optionally `variables.tf` and `outputs.tf` is considered a valid module.
@@ -89,7 +90,7 @@ Any directory containing `.tf` files and optionally `variables.tf` and `outputs.
 If your organization publishes Terraform modules to the [Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/), every published version is converted into a Pulumi package for you. Install it by package name, which is the module's name and system joined with a hyphen. The system is the last segment of the module's address, naming what the module provisions, such as `aws` or `azurerm`:
 
 ```bash
-pulumi package add <name>-<system> [<version>]
+pulumi package add <name>-<system>[@<version>]
 ```
 
 A module published as `acme-corp/vpc/aws` installs as `vpc-aws`. This is the same as any other Pulumi package: you get a generated SDK in your language, an [API reference](/docs/idp/concepts/private-registry/#api-documentation) on the package's page, and [usage tracking](/docs/idp/concepts/private-registry/#usage-tracking) showing which of your stacks depend on it and which are behind the latest version. Installing a converted package requires Pulumi CLI 3.248.0 or newer; see [Download & Install Pulumi](/docs/install/) to upgrade.
@@ -105,8 +106,8 @@ Here's an example of how to use the AWS RDS module to provision a MySQL database
 First, start by installing the Terraform modules:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0 vpc
-$ pulumi package add hcl module terraform-aws-modules/rds/aws 6.10.0 rdsmod
+$ pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0
+$ pulumi package add hcl module terraform-aws-modules/rds/aws 6.10.0
 ```
 
 After adding the packages, your `Pulumi.yaml` will be updated, and any necessary dependencies will be added to your project.
@@ -121,33 +122,33 @@ runtime:
     packagemanager: npm
 packages:
   vpc:
-    source: terraform-module
-    version: 0.1.4
+    source: hcl
+    version: 0.12.0
     parameters:
+      - module
       - terraform-aws-modules/vpc/aws
       - 5.19.0
-      - vpc
-  rdsmod:
-    source: terraform-module
-    version: 0.1.4
+  rds:
+    source: hcl
+    version: 0.12.0
     parameters:
+      - module
       - terraform-aws-modules/rds/aws
       - 6.10.0
-      - rdsmod
 ```
 
 {{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
-Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the modules, making those available to use as `@pulumi/vpcmod` and `@pulumi/rdsmod` respectively. We can now use the Terraform modules directly in our TypeScript code.
+Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the modules, making those available to use as `@pulumi/vpc` and `@pulumi/rds` respectively. We can now use the Terraform modules directly in our TypeScript code.
 
 **Example:** index.ts - Using the Terraform VPC and RDS module in a Pulumi program*
 
 ```typescript
-import * as vpcmod from '@pulumi/vpcmod';
+import * as vpcmod from '@pulumi/vpc';
 import * as pulumi from '@pulumi/pulumi';
-import * as rdsmod from '@pulumi/rdsmod';
+import * as rdsmod from '@pulumi/rds';
 import * as aws from '@pulumi/aws';
 import * as std from '@pulumi/std';
 
@@ -231,15 +232,15 @@ function getCidrSubnet(cidr: string, netnum: number): pulumi.Output<string> {
 
 {{% choosable language python %}}
 
-Since this was a Python project, Pulumi generated a Python SDK for the modules, making those available to use as `pulumi_vpcmod` and `pulumi_rdsmod` respectively. We can now use the Terraform modules directly in our code:
+Since this was a Python project, Pulumi generated a Python SDK for the modules, making those available to use as `pulumi_vpc` and `pulumi_rds` respectively. We can now use the Terraform modules directly in our code:
 
 **Example:** `__main__.py` - Using the Terraform VPC and RDS module in a Pulumi program
 
 ```python
 import pulumi
 import pulumi_aws as aws
-import pulumi_vpcmod as vpcmod
-import pulumi_rdsmod as rdsmod
+import pulumi_vpc as vpcmod
+import pulumi_rds as rdsmod
 import pulumi_std as std
 
 # Get available availability zones
@@ -317,7 +318,7 @@ rdsmod.Module("test-rds",
 
 **Example:** `main.go` - Using the Terraform VPC and RDS module in a Pulumi program
 
-Since this was a Go project, Pulumi generated a Go SDK for the modules, making those available to use as `github.com/pulumi/pulumi-terraform-module/sdks/go/rdsmod/v6/rdsmod` and `github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v5/vpcmod`. We can now use the Terraform modules directly in our code:
+Since this was a Go project, Pulumi generated a Go SDK for the modules, making those available to use as `example.com/pulumi-rds/sdk/go/rds` and `example.com/pulumi-vpc/sdk/go/vpc`. We can now use the Terraform modules directly in our code:
 
 ```go
 package main
@@ -327,8 +328,8 @@ import (
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
 	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/vpc"
 	"github.com/pulumi/pulumi-std/sdk/go/std"
-	rdsmod "github.com/pulumi/pulumi-terraform-module/sdks/go/rdsmod/v6/rdsmod"
-	vpcmod "github.com/pulumi/pulumi-terraform-module/sdks/go/vpcmod/v5/vpcmod"
+	rdsmod "example.com/pulumi-rds/sdk/go/rds"
+	vpcmod "example.com/pulumi-vpc/sdk/go/vpc"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
@@ -448,7 +449,7 @@ func main() {
 
 {{% choosable language csharp %}}
 
-Since this was a C# project, Pulumi generated a C# SDK for the modules, making those available to use as `Pulumi.Rdsmod` and `Pulumi.Vpcmod`. We can now use the Terraform modules directly in our code:
+Since this was a C# project, Pulumi generated a C# SDK for the modules, making those available to use as `Pulumi.Rds` and `Pulumi.Vpc`. We can now use the Terraform modules directly in our code:
 
 **Example:** `Program.cs` - Using the Terraform VPC and RDS module in a Pulumi program
 
@@ -460,9 +461,9 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using Pulumi;
 using Aws = Pulumi.Aws;
-using Rdsmod = Pulumi.Rdsmod;
+using Rdsmod = Pulumi.Rds;
 using Std = Pulumi.Std;
-using Vpcmod = Pulumi.Vpcmod;
+using Vpcmod = Pulumi.Vpc;
 
 return await Deployment.RunAsync(() =>
 {
@@ -558,7 +559,7 @@ internal class Utils {
 
 {{% choosable language java %}}
 
-Since this was a Java project, Pulumi generated a Java SDK for the modules, making those available to use as `com.pulumi.rdsmod` and `com.pulumi.vpcmod`. We can now use the Terraform modules directly in our code:
+Since this was a Java project, Pulumi generated a Java SDK for the modules, making those available to use as `com.pulumi.rds` and `com.pulumi.vpc`. We can now use the Terraform modules directly in our code:
 
 **Example:** `App.java` - Using the Terraform VPC and RDS module in a Pulumi program
 
@@ -598,7 +599,7 @@ public class App {
         final var prefix = ctx.config().get("prefix").orElse(ctx.stackName());
 
         // Create a VPC using the terraform-aws-modules/vpc module
-        final var vpc = new com.pulumi.vpcmod.Module("test-vpc", com.pulumi.vpcmod.ModuleArgs.builder()
+        final var vpc = new com.pulumi.vpc.Module("test-vpc", com.pulumi.vpc.ModuleArgs.builder()
             .azs(azNames)
             .name("test-vpc-" + prefix)
             .cidr(cidr)
@@ -620,7 +621,7 @@ public class App {
             .toPort(3306)
             .build());
 
-        new com.pulumi.rdsmod.Module("test-rds", com.pulumi.rdsmod.ModuleArgs.builder()
+        new com.pulumi.rds.Module("test-rds", com.pulumi.rds.ModuleArgs.builder()
             .engine("mysql")
             .identifier("test-rds-" + prefix)
             .manage_master_user_password(true)
@@ -670,8 +671,8 @@ public class App {
 When authoring in YAML, there is no need for Pulumi to generate a SDK. Pulumi generates some metadata instead:
 
 ```bash
-$ ls sdks/vpcmod/
-sdks/vpcmod/vpcmod-5.19.0.yaml
+$ ls sdks/vpc/
+sdks/vpc/vpc-5.19.0.yaml
 ```
 
 In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
@@ -684,7 +685,7 @@ description: testproj-yaml
 runtime: yaml
 resources:
   testVpc:
-    type: vpcmod:index:Module
+    type: vpc:index:Module
     properties:
       name: test-vpc-${pulumi.stack}
       azs:
@@ -718,7 +719,7 @@ resources:
       fromPort: 3306
       toPort: 3306
   testRds:
-    type: rdsmod:index:Module
+    type: rds:index:Module
     properties:
       engine: mysql
       identifier: test-rds-${pulumi.stack}
@@ -741,20 +742,20 @@ resources:
       create_db_option_group: false
       create_db_parameter_group: false
 packages:
-  rdsmod:
-    source: terraform-module
-    version: 0.1.7
+  rds:
+    source: hcl
+    version: 0.12.0
     parameters:
+      - module
       - terraform-aws-modules/rds/aws
       - 6.10.0
-      - rdsmod
-  vpcmod:
-    source: terraform-module
-    version: 0.1.7
+  vpc:
+    source: hcl
+    version: 0.12.0
     parameters:
+      - module
       - terraform-aws-modules/vpc/aws
       - 5.19.0
-      - vpcmod
 ```
 
 {{% /choosable %}}
@@ -821,7 +822,7 @@ test_bucket = bucket.Module("test-bucket",
 package main
 
 import (
-	bucket "github.com/pulumi/pulumi-terraform-module/sdks/go/bucket/v3/bucket"
+	bucket "example.com/pulumi-bucket/sdk/go/bucket"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
