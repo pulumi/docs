@@ -61,8 +61,6 @@ Where:
 - `<module-source>` is either a registry module identifier (e.g. `terraform-aws-modules/rds/aws`) or a local path
 - `<version>` is an optional version constraint (e.g. `3.5.0`)
 
-Pulumi derives the package name from the module source, so there's no name to pass — a module at `terraform-aws-modules/vpc/aws` becomes the `vpc` package.
-
 For example, to add the AWS VPC module from the Terraform Registry:
 
 ```bash
@@ -170,27 +168,27 @@ const vpc = new vpcmod.Module("test-vpc", {
   azs: azs,
   name: `test-vpc-${prefix}`,
   cidr,
-  public_subnets: azs.apply(azs => azs.map((_, i) => {
+  publicSubnets: azs.apply(azs => azs.map((_, i) => {
     return getCidrSubnet(cidr, i+1);
   })),
-  private_subnets: azs.apply(azs => azs.map((_, i) => {
+  privateSubnets: azs.apply(azs => azs.map((_, i) => {
     return getCidrSubnet(cidr, i+1+4);
   })),
-  database_subnets: azs.apply(azs => azs.map((_, i) => {
+  databaseSubnets: azs.apply(azs => azs.map((_, i) => {
     return getCidrSubnet(cidr, i+1 + 8);
   })),
-  create_database_subnet_group: true,
+  createDatabaseSubnetGroup: true,
 });
 
 // Create a security group for the RDS instance
 const rdsSecurityGroup = new aws.ec2.SecurityGroup('test-rds-sg', {
-  vpcId: vpc.vpc_id.apply(id => id!),
+  vpcId: vpc.vpcId.apply(id => id!),
 });
 
 new aws.vpc.SecurityGroupIngressRule('test-rds-sg-ingress', {
   ipProtocol: 'tcp',
   securityGroupId: rdsSecurityGroup.id,
-  cidrIpv4: vpc.vpc_cidr_block.apply(cidr => cidr!),
+  cidrIpv4: vpc.vpcCidrBlock.apply(cidr => cidr!),
   fromPort: 3306,
   toPort: 3306,
 });
@@ -199,23 +197,23 @@ new aws.vpc.SecurityGroupIngressRule('test-rds-sg-ingress', {
 new rdsmod.Module("test-rds", {
   engine: "mysql",
   identifier: `test-rds-${prefix}`,
-  manage_master_user_password: true,
-  publicly_accessible: false,
-  allocated_storage: 20,
-  max_allocated_storage: 100,
-  instance_class: "db.t4g.large",
-  engine_version: "8.0",
+  manageMasterUserPassword: true,
+  publiclyAccessible: false,
+  allocatedStorage: 20,
+  maxAllocatedStorage: 100,
+  instanceClass: "db.t4g.large",
+  engineVersion: "8.0",
   family: "mysql8.0",
-  db_name: "completeMysql",
+  dbName: "completeMysql",
   username: "complete_mysql",
   port: '3306',
-  multi_az: true,
-  db_subnet_group_name: vpc.database_subnet_group_name.apply(name => name!),
-  vpc_security_group_ids: [rdsSecurityGroup.id],
-  skip_final_snapshot: true,
-  deletion_protection: false,
-  create_db_option_group: false,
-  create_db_parameter_group: false,
+  multiAz: true,
+  dbSubnetGroupName: vpc.databaseSubnetGroupName.apply(name => name!),
+  vpcSecurityGroupIds: [rdsSecurityGroup.id],
+  skipFinalSnapshot: true,
+  deletionProtection: false,
+  createDbOptionGroup: false,
+  createDbParameterGroup: false,
 });
 
 // Utility function to calculate subnet CIDRs
@@ -364,10 +362,10 @@ func run(ctx *pulumi.Context) error {
 		Azs:                          azNames,
 		Name:                         pulumi.Sprintf("test-vpc-%s", prefix),
 		Cidr:                         pulumi.String(cidr),
-		Public_subnets:               applyAznamesForSubnet(ctx, azNames, cidr, 1),
-		Private_subnets:              applyAznamesForSubnet(ctx, azNames, cidr, 5),
-		Database_subnets:             applyAznamesForSubnet(ctx, azNames, cidr, 9),
-		Create_database_subnet_group: pulumi.Bool(true),
+		PublicSubnets:               applyAznamesForSubnet(ctx, azNames, cidr, 1),
+		PrivateSubnets:              applyAznamesForSubnet(ctx, azNames, cidr, 5),
+		DatabaseSubnets:             applyAznamesForSubnet(ctx, azNames, cidr, 9),
+		CreateDatabaseSubnetGroup: pulumi.Bool(true),
 	})
 	if err != nil {
 		return err
@@ -375,7 +373,7 @@ func run(ctx *pulumi.Context) error {
 
 	// Create a security group for the RDS instance
 	rdsSecurityGroup, err := ec2.NewSecurityGroup(ctx, "test-rds-sg", &ec2.SecurityGroupArgs{
-		VpcId: vpcInstance.Vpc_id,
+		VpcId: vpcInstance.VpcId,
 	})
 	if err != nil {
 		return err
@@ -383,7 +381,7 @@ func run(ctx *pulumi.Context) error {
 	_, err = vpc.NewSecurityGroupIngressRule(ctx, "test-rds-sg-ingress", &vpc.SecurityGroupIngressRuleArgs{
 		IpProtocol:      pulumi.String("tcp"),
 		SecurityGroupId: rdsSecurityGroup.ID(),
-		CidrIpv4:        vpcInstance.Vpc_cidr_block,
+		CidrIpv4:        vpcInstance.VpcCidrBlock,
 		FromPort:        pulumi.Int(3306),
 		ToPort:          pulumi.Int(3306),
 	})
@@ -395,23 +393,23 @@ func run(ctx *pulumi.Context) error {
 	_, err = rdsmod.NewModule(ctx, "test-rds", &rdsmod.ModuleArgs{
 		Engine:                      pulumi.String("mysql"),
 		Identifier:                  pulumi.Sprintf("test-rds-%s", prefix),
-		Manage_master_user_password: pulumi.Bool(true),
-		Publicly_accessible:         pulumi.Bool(false),
-		Allocated_storage:           pulumi.Float64(20),
-		Max_allocated_storage:       pulumi.Float64(100),
-		Instance_class:              pulumi.String("db.t4g.large"),
-		Engine_version:              pulumi.String("8.0"),
+		ManageMasterUserPassword: pulumi.Bool(true),
+		PubliclyAccessible:         pulumi.Bool(false),
+		AllocatedStorage:           pulumi.Float64(20),
+		MaxAllocatedStorage:       pulumi.Float64(100),
+		InstanceClass:              pulumi.String("db.t4g.large"),
+		EngineVersion:              pulumi.String("8.0"),
 		Family:                      pulumi.String("mysql8.0"),
-		Db_name:                     pulumi.String("completeMysql"),
+		DbName:                     pulumi.String("completeMysql"),
 		Username:                    pulumi.String("complete_mysql"),
 		Port:                        pulumi.String("3306"),
-		Multi_az:                    pulumi.Bool(true),
-		Db_subnet_group_name:        vpcInstance.Database_subnet_group_name,
-		Vpc_security_group_ids:      pulumi.StringArray{rdsSecurityGroup.ID()},
-		Skip_final_snapshot:         pulumi.Bool(true),
-		Deletion_protection:         pulumi.Bool(false),
-		Create_db_option_group:      pulumi.Bool(false),
-		Create_db_parameter_group:   pulumi.Bool(false),
+		MultiAz:                    pulumi.Bool(true),
+		DbSubnetGroupName:        vpcInstance.DatabaseSubnetGroupName,
+		VpcSecurityGroupIds:      pulumi.StringArray{rdsSecurityGroup.ID()},
+		SkipFinalSnapshot:         pulumi.Bool(true),
+		DeletionProtection:         pulumi.Bool(false),
+		CreateDbOptionGroup:      pulumi.Bool(false),
+		CreateDbParameterGroup:   pulumi.Bool(false),
 	})
 	return err
 }
@@ -491,23 +489,23 @@ return await Deployment.RunAsync(() =>
         Azs = azs,
         Name = Output.Format($"test-vpc-{prefix}"),
         Cidr = cidr,
-        Public_subnets = Utils.Subnets(cidr, azs, 1),
-        Private_subnets = Utils.Subnets(cidr, azs, 5),
-        Database_subnets = Utils.Subnets(cidr, azs, 9),
-        Create_database_subnet_group = true,
+        PublicSubnets = Utils.Subnets(cidr, azs, 1),
+        PrivateSubnets = Utils.Subnets(cidr, azs, 5),
+        DatabaseSubnets = Utils.Subnets(cidr, azs, 9),
+        CreateDatabaseSubnetGroup = true,
     });
 
     // Create a security group for the RDS instance
     var rdsSecurityGroup = new Aws.Ec2.SecurityGroup("test-rds-sg", new Aws.Ec2.SecurityGroupArgs
     {
-        VpcId = vpc.Vpc_id.Apply(id => id ?? string.Empty),
+        VpcId = vpc.VpcId.Apply(id => id ?? string.Empty),
     });
 
     _ = new Aws.Vpc.SecurityGroupIngressRule("test-rds-sg-ingress", new Aws.Vpc.SecurityGroupIngressRuleArgs
     {
         IpProtocol = "tcp",
         SecurityGroupId = rdsSecurityGroup.Id,
-        CidrIpv4 = vpc.Vpc_cidr_block.Apply(x => x!),
+        CidrIpv4 = vpc.VpcCidrBlock.Apply(x => x!),
         FromPort = 3306,
         ToPort = 3306,
     });
@@ -517,23 +515,23 @@ return await Deployment.RunAsync(() =>
     {
         Engine = "mysql",
         Identifier = Output.Format($"test-rds-{prefix}"),
-        Manage_master_user_password = true,
-        Publicly_accessible = false,
-        Allocated_storage = 20,
-        Max_allocated_storage = 100,
-        Instance_class = "db.t4g.large",
-        Engine_version = "8.0",
+        ManageMasterUserPassword = true,
+        PubliclyAccessible = false,
+        AllocatedStorage = 20,
+        MaxAllocatedStorage = 100,
+        InstanceClass = "db.t4g.large",
+        EngineVersion = "8.0",
         Family = "mysql8.0",
-        Db_name = "completeMysql",
+        DbName = "completeMysql",
         Username = "complete_mysql",
         Port = "3306",
-        Multi_az = true,
-        Db_subnet_group_name = vpc.Database_subnet_group_name,
-        Vpc_security_group_ids = { rdsSecurityGroup.Id },
-        Skip_final_snapshot = true,
-        Deletion_protection = false,
-        Create_db_option_group = false,
-        Create_db_parameter_group = false,
+        MultiAz = true,
+        DbSubnetGroupName = vpc.DatabaseSubnetGroupName,
+        VpcSecurityGroupIds = { rdsSecurityGroup.Id },
+        SkipFinalSnapshot = true,
+        DeletionProtection = false,
+        CreateDbOptionGroup = false,
+        CreateDbParameterGroup = false,
     });
 });
 
@@ -603,20 +601,20 @@ public class App {
             .azs(azNames)
             .name("test-vpc-" + prefix)
             .cidr(cidr)
-            .public_subnets(subnets(cidr, azNames, 1))
-            .private_subnets(subnets(cidr, azNames, 5))
-            .database_subnets(subnets(cidr, azNames, 9))
-            .create_database_subnet_group(true)
+            .publicSubnets(subnets(cidr, azNames, 1))
+            .privateSubnets(subnets(cidr, azNames, 5))
+            .databaseSubnets(subnets(cidr, azNames, 9))
+            .createDatabaseSubnetGroup(true)
             .build());
 
         final var rdsSecurityGroup = new SecurityGroup("test-rds-sg", SecurityGroupArgs.builder()
-            .vpcId(vpc.vpc_id().applyValue(x -> x.get()))
+            .vpcId(vpc.vpcId().applyValue(x -> x.get()))
             .build());
 
         new SecurityGroupIngressRule("test-rds-sg-ingress", SecurityGroupIngressRuleArgs.builder()
             .ipProtocol("tcp")
             .securityGroupId(rdsSecurityGroup.id())
-            .cidrIpv4(vpc.vpc_cidr_block().applyValue(x -> x.get()))
+            .cidrIpv4(vpc.vpcCidrBlock().applyValue(x -> x.get()))
             .fromPort(3306)
             .toPort(3306)
             .build());
@@ -624,23 +622,23 @@ public class App {
         new com.pulumi.rds.Module("test-rds", com.pulumi.rds.ModuleArgs.builder()
             .engine("mysql")
             .identifier("test-rds-" + prefix)
-            .manage_master_user_password(true)
-            .publicly_accessible(false)
-            .allocated_storage(20.0)
-            .max_allocated_storage(100.0)
-            .instance_class("db.t4g.large")
-            .engine_version("8.0")
+            .manageMasterUserPassword(true)
+            .publiclyAccessible(false)
+            .allocatedStorage(20.0)
+            .maxAllocatedStorage(100.0)
+            .instanceClass("db.t4g.large")
+            .engineVersion("8.0")
             .family("mysql8.0")
-            .db_name("completeMysql")
+            .dbName("completeMysql")
             .username("complete_mysql")
             .port("3306")
-            .multi_az(true)
-            .db_subnet_group_name(vpc.database_subnet_group_name().applyValue(x -> x.get()))
-            .vpc_security_group_ids(rdsSecurityGroup.id().applyValue(x -> Collections.singletonList(x)))
-            .skip_final_snapshot(true)
-            .deletion_protection(false)
-            .create_db_option_group(false)
-            .create_db_parameter_group(false)
+            .multiAz(true)
+            .dbSubnetGroupName(vpc.databaseSubnetGroupName().applyValue(x -> x.get()))
+            .vpcSecurityGroupIds(rdsSecurityGroup.id().applyValue(x -> Collections.singletonList(x)))
+            .skipFinalSnapshot(true)
+            .deletionProtection(false)
+            .createDbOptionGroup(false)
+            .createDbParameterGroup(false)
             .build());
     }
 
@@ -693,29 +691,29 @@ resources:
         - us-west-2b
         - us-west-2c
       cidr: 10.0.0.0/16
-      public_subnets:
+      publicSubnets:
         - 10.0.1.0/24
         - 10.0.2.0/24
         - 10.0.3.0/24
-      private_subnets:
+      privateSubnets:
         - 10.0.5.0/24
         - 10.0.6.0/24
         - 10.0.7.0/24
-      database_subnets:
+      databaseSubnets:
         - 10.0.9.0/24
         - 10.0.10.0/24
         - 10.0.11.0/24
-      create_database_subnet_group: true
+      createDatabaseSubnetGroup: true
   testRdsSg:
     type: aws:ec2:SecurityGroup
     properties:
-      vpcId: ${testVpc.vpc_id}
+      vpcId: ${testVpc.vpcId}
   testRdsSgIngress:
     type: aws:vpc:SecurityGroupIngressRule
     properties:
       ipProtocol: tcp
       securityGroupId: ${testRdsSg.id}
-      cidrIpv4: ${testVpc.vpc_cidr_block}
+      cidrIpv4: ${testVpc.vpcCidrBlock}
       fromPort: 3306
       toPort: 3306
   testRds:
@@ -723,24 +721,24 @@ resources:
     properties:
       engine: mysql
       identifier: test-rds-${pulumi.stack}
-      manage_master_user_password: true
-      publicly_accessible: false
-      allocated_storage: 20
-      max_allocated_storage: 100
-      instance_class: db.t4g.large
-      engine_version: 8
+      manageMasterUserPassword: true
+      publiclyAccessible: false
+      allocatedStorage: 20
+      maxAllocatedStorage: 100
+      instanceClass: db.t4g.large
+      engineVersion: 8
       family: mysql8.0
-      db_name: completeMysql
+      dbName: completeMysql
       username: complete_mysql
       port: '3306'
-      multi_az: true
-      db_subnet_group_name: ${testVpc.database_subnet_group_name}
-      vpc_security_group_ids:
+      multiAz: true
+      dbSubnetGroupName: ${testVpc.databaseSubnetGroupName}
+      vpcSecurityGroupIds:
         - ${testRdsSg.id}
-      skip_final_snapshot: true
-      deletion_protection: false
-      create_db_option_group: false
-      create_db_parameter_group: false
+      skipFinalSnapshot: true
+      deletionProtection: false
+      createDbOptionGroup: false
+      createDbParameterGroup: false
 packages:
   rds:
     source: hcl

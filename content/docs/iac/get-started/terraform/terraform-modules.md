@@ -64,11 +64,11 @@ const myVpc = new vpc.Module("my-vpc", {
     cidr: "10.0.0.0/16",
 
     azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
-    public_subnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
-    private_subnets: ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"],
+    publicSubnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
+    privateSubnets: ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"],
 
-    enable_nat_gateway: true,
-    enable_vpn_gateway: true,
+    enableNatGateway: true,
+    enableVpnGateway: true,
 
     tags: {
         Terraform: "true",
@@ -81,7 +81,7 @@ const myVpc = new vpc.Module("my-vpc", {
 const webSg = new aws.ec2.SecurityGroup("web-sg", {
     name: "web-sg",
     description: "Security group for web servers",
-    vpcId: myVpc.vpc_id.apply(id => id!),
+    vpcId: myVpc.vpcId.apply(id => id!),
     ingress: [
         {
             description: "HTTP",
@@ -124,7 +124,7 @@ const amazonLinux = aws.ec2.getAmiOutput({
 const webServer = new aws.ec2.Instance("web-server", {
     ami: amazonLinux.id,
     instanceType: "t3.micro",
-    subnetId: myVpc.public_subnets.apply(subnets => subnets![0]),
+    subnetId: myVpc.publicSubnets.apply(subnets => subnets![0]),
     vpcSecurityGroupIds: [webSg.id],
     associatePublicIpAddress: true,
 
@@ -144,7 +144,7 @@ echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.h
 
 
 // Output important information
-export const vpcId = myVpc.vpc_id;
+export const vpcId = myVpc.vpcId;
 export const instanceId = webServer.id;
 export const publicIp = webServer.publicIp;
 export const websiteUrl = pulumi.interpolate`http://${webServer.publicIp}`;
@@ -300,11 +300,11 @@ func main() {
 			Cidr: pulumi.String("10.0.0.0/16"),
 
 			Azs:             pulumi.StringArray{pulumi.String("us-west-2a"), pulumi.String("us-west-2b"), pulumi.String("us-west-2c")},
-			Private_subnets: pulumi.StringArray{pulumi.String("10.0.1.0/24"), pulumi.String("10.0.2.0/24"), pulumi.String("10.0.3.0/24")},
-			Public_subnets:  pulumi.StringArray{pulumi.String("10.0.10.0/24"), pulumi.String("10.0.11.0/24"), pulumi.String("10.0.12.0/24")},
+			PrivateSubnets: pulumi.StringArray{pulumi.String("10.0.1.0/24"), pulumi.String("10.0.2.0/24"), pulumi.String("10.0.3.0/24")},
+			PublicSubnets:  pulumi.StringArray{pulumi.String("10.0.10.0/24"), pulumi.String("10.0.11.0/24"), pulumi.String("10.0.12.0/24")},
 
-			Enable_nat_gateway: pulumi.Bool(true),
-			Enable_vpn_gateway: pulumi.Bool(true),
+			EnableNatGateway: pulumi.Bool(true),
+			EnableVpnGateway: pulumi.Bool(true),
 
 			Tags: pulumi.StringMap{
 				"Terraform":   pulumi.String("true"),
@@ -334,7 +334,7 @@ func main() {
 		webSg, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
 			Name:        pulumi.String("web-sg"),
 			Description: pulumi.String("Security group for web servers"),
-			VpcId:       myVpc.Vpc_id,
+			VpcId:       myVpc.VpcId,
 			Ingress: ec2.SecurityGroupIngressArray{
 				&ec2.SecurityGroupIngressArgs{
 					Description: pulumi.String("HTTP"),
@@ -368,7 +368,7 @@ func main() {
 		webServer, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
 			Ami:          pulumi.String(amazonLinux.Id),
 			InstanceType: pulumi.String("t3.micro"),
-			SubnetId: myVpc.Public_subnets.ApplyT(func(subnets []string) string {
+			SubnetId: myVpc.PublicSubnets.ApplyT(func(subnets []string) string {
 				return subnets[0]
 			}).(pulumi.StringOutput),
 			VpcSecurityGroupIds:      pulumi.StringArray{webSg.ID()},
@@ -392,7 +392,7 @@ echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.h
 		}
 
 		// Output important information
-		ctx.Export("vpcId", myVpc.Vpc_id)
+		ctx.Export("vpcId", myVpc.VpcId)
 		ctx.Export("instanceId", webServer.ID())
 		ctx.Export("publicIp", webServer.PublicIp)
 		ctx.Export("websiteUrl", pulumi.Sprintf("http://%s", webServer.PublicIp))
@@ -436,12 +436,13 @@ Then use it in your Pulumi program:
 using System.Collections.Generic;
 using Pulumi;
 using Pulumi.Aws.Ec2;
+using Pulumi.Aws.Ec2.Inputs;
 using Pulumi.Vpc;
 
 return await Deployment.RunAsync(() =>
 {
     // Use the Terraform VPC module
-    var myVpc = new Vpc("my-vpc", new VpcArgs
+    var myVpc = new Module("my-vpc", new ModuleArgs
     {
         Name = "my-vpc",
         Cidr = "10.0.0.0/16",
@@ -612,10 +613,10 @@ public class App {
                 .name("my-vpc")
                 .cidr("10.0.0.0/16")
                 .azs("us-west-2a", "us-west-2b", "us-west-2c")
-                .private_subnets("10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24")
-                .public_subnets("10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24")
-                .enable_nat_gateway(true)
-                .enable_vpn_gateway(true)
+                .privateSubnets("10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24")
+                .publicSubnets("10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24")
+                .enableNatGateway(true)
+                .enableVpnGateway(true)
                 .tags(Map.of(
                     "Terraform", "true",
                     "Environment", "dev"
@@ -636,7 +637,7 @@ public class App {
             var webSg = new SecurityGroup("web-sg", SecurityGroupArgs.builder()
                 .name("web-sg")
                 .description("Security group for web servers")
-                .vpcId(myVpc.vpc_id().applyValue(id->id.get()).applyValue(String::valueOf))
+                .vpcId(myVpc.vpcId().applyValue(id->id.get()).applyValue(String::valueOf))
                 .ingress(
                     SecurityGroupIngressArgs.builder()
                         .description("HTTP")
@@ -665,7 +666,7 @@ public class App {
             var webServer = new Instance("web-server", InstanceArgs.builder()
                 .ami(amazonLinux.applyValue(ami -> ami.id()))
                 .instanceType("t3.micro")
-                .subnetId(myVpc.public_subnets().applyValue(subnets -> subnets.get().get(0)))
+                .subnetId(myVpc.publicSubnets().applyValue(subnets -> subnets.get().get(0)))
                 .vpcSecurityGroupIds(webSg.id().applyValue(s -> Collections.singletonList(s)))
                 .associatePublicIpAddress(true)
                 .userData(String.join("\n",
@@ -683,7 +684,7 @@ public class App {
                 .build());
 
             // Output important information
-            ctx.export("vpcId", myVpc.vpc_id());
+            ctx.export("vpcId", myVpc.vpcId());
             ctx.export("instanceId", webServer.id());
             ctx.export("publicIp", webServer.publicIp());
             ctx.export("websiteUrl", webServer.publicIp().applyValue(ip -> String.format("http://%s", ip)));
@@ -736,10 +737,10 @@ resources:
       name: my-vpc
       cidr: 10.0.0.0/16
       azs: ["us-west-2a", "us-west-2b", "us-west-2c"]
-      private_subnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-      public_subnets: ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
-      enable_nat_gateway: true
-      enable_vpn_gateway: true
+      privateSubnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+      publicSubnets: ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
+      enableNatGateway: true
+      enableVpnGateway: true
       tags:
         Terraform: "true"
         Environment: "dev"
@@ -750,7 +751,7 @@ resources:
     properties:
       name: web-sg
       description: Security group for web servers
-      vpcId: ${my-vpc.vpc_id}
+      vpcId: ${my-vpc.vpcId}
       ingress:
         - description: HTTP
           fromPort: 80
@@ -774,7 +775,7 @@ resources:
     properties:
       ami: ${amazonLinux.id}
       instanceType: t3.micro
-      subnetId: ${my-vpc.public_subnets[0]}
+      subnetId: ${my-vpc.publicSubnets[0]}
       vpcSecurityGroupIds:
         - ${web-sg.id}
       associatePublicIpAddress: true
@@ -790,7 +791,7 @@ resources:
         Environment: dev
 
 outputs:
-  vpcId: ${my-vpc.vpc_id}
+  vpcId: ${my-vpc.vpcId}
   instanceId: ${web-server.id}
   publicIp: ${web-server.publicIp}
   websiteUrl: http://${web-server.publicIp}
@@ -831,7 +832,7 @@ const vpc = new hcl.Module("vpc", {
     },
 });
 
-export const vpcId = vpc.outputs.apply(o => o["vpc_id"]);
+export const vpcId = vpc.outputs.apply(o => o["vpcId"]);
 ```
 
 {{% /choosable %}}
@@ -936,7 +937,7 @@ public class App {
                     "cidr", "10.0.0.0/16"))
                 .build());
 
-            ctx.export("vpcId", vpc.outputs().applyValue(o -> o.get("vpc_id")));
+            ctx.export("vpcId", vpc.outputs().applyValue(o -> o.get("vpcId")));
         });
     }
 }
@@ -959,7 +960,7 @@ resources:
         name: example-vpc
         cidr: 10.0.0.0/16
 outputs:
-  vpcId: ${vpc.outputs["vpc_id"]}
+  vpcId: ${vpc.outputs["vpcId"]}
 ```
 
 {{% /choosable %}}
