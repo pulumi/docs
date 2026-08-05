@@ -455,10 +455,14 @@ categories:
         link: /docs/insights/discovery/search/
         available_from: team
 
+      - id: insights-discovery
+        name: Cloud account discovery
+        link: /docs/insights/discovery/
+        available_from: team
+
       - id: insights-primary-accounts
         name: Primary accounts
         availability:
-          individual: 1
           team: 1
           enterprise: 10 / Custom
           business-critical: Custom

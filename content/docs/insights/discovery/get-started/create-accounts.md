@@ -12,6 +12,7 @@ menu:
     weight: 3
 aliases:
   - /docs/insights/get-started/create-accounts/
+pulumi_cloud_feature: insights-discovery
 ---
 
 With the prerequisites in place, let’s connect your first cloud account and kick off a discovery scan. In this example you will see the steps for AWS; Azure and Google Cloud follow the same flow with their own browser-based sign-in. For Oracle Cloud and Kubernetes, choose **Connect using existing ESC credentials** on the Authentication step instead, using the [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configured earlier.

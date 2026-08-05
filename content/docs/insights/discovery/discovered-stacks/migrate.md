@@ -9,6 +9,7 @@ menu:
     parent: insights-discovery-discovered-stacks
     weight: 10
 aliases: []
+pulumi_cloud_feature: insights-discovery
 ---
 
 Migrating from a [discovered stack](/docs/insights/discovery/discovered-stacks/) means bringing its resources under Pulumi IaC management: a Pulumi program in your repository whose state matches the cloud exactly. The console is where you plan the migration, decide what to include, and track progress — the migration itself completes as code and CLI operations in your own repository.

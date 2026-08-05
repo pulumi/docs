@@ -8,6 +8,7 @@ menu:
     name: Connect Cloud Accounts
     parent: insights-discovery
     weight: 15
+pulumi_cloud_feature: insights-discovery
 ---
 
 The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. With the recommended authentication options, no long-lived cloud secrets are stored in Pulumi Cloud.

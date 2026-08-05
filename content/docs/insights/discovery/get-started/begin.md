@@ -12,6 +12,7 @@ menu:
     weight: 2
 aliases:
   - /docs/insights/get-started/begin/
+pulumi_cloud_feature: insights-discovery
 ---
 
 ## Before you begin
@@ -19,7 +20,6 @@ aliases:
 Before connecting your first cloud account, confirm the following prerequisites are in place.
 
 - Ensure you’re an admin of your Pulumi organization, or have permission to connect cloud accounts and create [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environments.
-- You're using Pulumi's **Team**, **Enterprise**, or **Business Critical** edition.
 - You have administrative access to the cloud account or organization you want to connect: the ability to authorize applications and create IAM resources in AWS, grant admin consent in Microsoft Entra ID, or grant organization-level roles in Google Cloud.
 
 If you're new to Pulumi you can click here to [start a free trial](https://app.pulumi.com/signup?create-organization).
