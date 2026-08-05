@@ -1,6 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Pulumi for All Your IaC: Including Terraform and HCL (EU-Friendly)"
+title: "Pulumi for All Your IaC: Including Terraform and HCL (EMEA)"
 
 meta_desc: Connect existing Terraform workloads to Pulumi Cloud, reuse Terraform modules in Pulumi programs, and write IaC in OpenTofu-compatible HCL — live workshop.
 
