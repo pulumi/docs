@@ -44,16 +44,16 @@ location: virtual
 
 # Description of the event.
 description: |
-    European regulations and rising cloud bills have CTOs asking a question that was unthinkable five years ago: do we need an exit plan from our cloud provider? This panel looks at cloud sovereignty as an architecture decision rather than a slogan.
+    European regulations and rising cloud bills have CTOs asking a question that was unthinkable five years ago: do we need an exit plan from our cloud provider? This panel treats cloud sovereignty as an architecture decision.
 
-    Waldemar Kindler (CEO, Think Ahead Technologies) helps European companies plan migrations driven by compliance requirements like the Cyber Resilience Act. Jim Dowling (CEO, Hopsworks) actually made the move — AWS to Europe's OVHcloud, cutting his bill 62% without leaving the cloud. And Sarbjeet Johal (cloud economist, theCUBE analyst) separates the real risks from the perceived ones, including why public cloud economics remain hard to beat at scale.
+    Waldemar Kindler (CEO, Think Ahead Technologies) helps European companies plan migrations off the hyperscalers, driven by cost, NIS2's widening scope, and the risk of losing access to a US provider outright. He also builds tooling for the EU Cyber Resilience Act, whose first reporting deadline lands eight days after this panel. Jim Dowling (CEO, Hopsworks) actually made the move, taking Hopsworks from AWS to Europe's OVHcloud and cutting his bill 62% without leaving the cloud. Sarbjeet Johal (cloud economist, theCUBE analyst) separates the real risks from the perceived ones, including why public cloud economics remain hard to beat at scale.
 
-    Whether you're facing sovereignty requirements or just want to know your options are real, this is the conversation: who's leaving, why, when it makes sense — and when it doesn't. Adam Gordon Bell moderates, with live audience Q&A.
+    Whether you're facing sovereignty requirements or just want to know your options are real, this panel covers who's leaving, why, and when it makes sense to stay. Adam Gordon Bell moderates, with live audience Q&A.
 
 learn:
-    - Why teams actually leave the big clouds — compliance, cost, control — with real numbers from a real migration
-    - What the EU regulatory push (Cyber Resilience Act, sovereignty requirements) means for infrastructure decisions now
-    - How to separate real sovereignty risks from perceived ones — and when staying is the right call
+    - Why teams actually leave the big clouds, with real numbers from a real migration
+    - What the EU regulatory push actually requires: NIS2, DORA, and the Data Act's January 2027 ban on egress fees for switching providers
+    - How to separate real sovereignty risks from perceived ones, and when staying is the right call
 
 # The event presenters
 presenters:
