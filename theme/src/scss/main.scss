@@ -408,3 +408,5 @@ $sitenav-offset: calc($sitenav-height + 16px);
 html:not(.is-signed-in) [data-nav-dashboard] { display: none; }
 html.is-signed-in [data-nav-loggedout] { display: none; }
 
+
+// TEMP: trips the lighthouse job path filter. Revert before marking ready.
