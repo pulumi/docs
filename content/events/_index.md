@@ -24,7 +24,6 @@ footer_cta:
 aliases:
   - /webinar
   - /webinars
-  - /resources
 
   # stale events urls redirect to the list to prevent 404s
   - /events/advanced-infrastructure-as-code-2020-04-08
