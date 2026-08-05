@@ -73,7 +73,7 @@ Key benefits of child accounts include:
 
 All scanned resources are displayed on the **Resources** page in Pulumi Cloud.
 
-If a scanned account contains resources managed by an external IaC provider, such as AWS CloudFormation or Azure Resource Manager, those resources are also grouped automatically into [Discovered Stacks](/docs/insights/discovery/discovered-stacks/) — one per source stack or deployment — with a per-resource path to migrate them to Pulumi.
+If a scanned account contains resources managed by an external IaC provider, such as AWS CloudFormation or Azure Resource Manager, those resources are also grouped automatically into [Discovered Stacks](/docs/insights/discovery/discovered-stacks/) — one per source stack or resource group — with a per-resource path to migrate them to Pulumi.
 
 ### Viewing resources in the grid
 
