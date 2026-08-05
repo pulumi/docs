@@ -452,6 +452,31 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_AGE_DAYS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides how long automatic logs in <code>$PULUMI_HOME/logs</code> are kept before being
+            rotated out. Defaults to <code>7</code> days.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_AGE_DAYS=14</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_TOTAL_MB
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the maximum total size, in megabytes, of the automatic logs directory
+            (<code>$PULUMI_HOME/logs</code>) before the oldest logs are rotated out. Defaults to
+            <code>500</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_TOTAL_MB=1000</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_NEO
         </span>
     </dt>
