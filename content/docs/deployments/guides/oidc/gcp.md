@@ -65,7 +65,7 @@ Once you have created your workload identity pool and provider, you will be dire
 1. Click "Create Service Account".
 1. Enter a value for the **Service account name** field. Then click **Create And Continue**
     * The **Service account ID** field will auto-populate based on this value.
-1. In the **Grant this service account access to project** section, select the role(s) that provides the relevant access to your Pulumi service. Then click **Continue**.
+1. In the **Grant this service account access to project** section, select the role(s) that provides the relevant access to Pulumi Cloud. Then click **Continue**.
 1. Leave the values in the next section blank and click **Done**.
 
 ##### Grant access to the service account

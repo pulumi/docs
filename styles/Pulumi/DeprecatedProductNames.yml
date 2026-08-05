@@ -8,10 +8,19 @@
 # mechanically pick the wrong one, so we surface it for a human to resolve.
 #
 # Matches "Pulumi Service" / "Pulumi service" / "pulumi service" (ignorecase) but
-# not the plural "Pulumi Services" (no word boundary before the trailing "s").
+# not:
+#   - the plural "Pulumi Services" (the IDP Services concept; "e" to "s" is not
+#     a word boundary, so the base token already excludes this)
+#   - "Pulumi Service Provider" / "Pulumi Service provider", i.e. the
+#     `pulumi-pulumiservice` Terraform/Pulumi provider, which still carries its
+#     historic name upstream (the provider repo, its registry package name
+#     `pulumiservice`, and this site's own provider doc all still say "Pulumi
+#     Service Provider"). Renaming the provider is a product/IA decision with
+#     URL-alias consequences, well outside this lint rule's remit, so the
+#     negative lookahead exempts it rather than flagging false positives.
 extends: existence
 message: "'%s' is the former name of Pulumi Cloud. Use the specific current product for this context -- e.g. Pulumi Cloud, Pulumi ESC, or Pulumi Deployments (STYLE-GUIDE.md §Product Names)."
 level: warning
 ignorecase: true
 tokens:
-  - '\bPulumi Service\b'
+  - '\bPulumi Service\b(?!s\b)(?!\s+provider\b)'

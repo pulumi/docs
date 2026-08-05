@@ -29,3 +29,4 @@ swap:
   '\bPulumi Sdk\b': Pulumi SDK
   '\bPulumi Cloud Console\b': Pulumi Cloud console
   '\bPulumi Console\b': Pulumi Cloud console
+  '\bPulumi UI\b': Pulumi Cloud console
