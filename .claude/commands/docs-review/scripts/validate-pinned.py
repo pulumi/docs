@@ -323,7 +323,7 @@ class Context:
     # Schema v5: workflow pre-step `extract-urls-and-fetch.py` writes the
     # fetched URLs here. None means the file wasn't present (e.g., local
     # invocation with no PR diff context); empty list means the workflow
-    # ran but the diff had no external URLs in content/(docs|blog|learn|tutorials)/**/*.md.
+    # ran but the diff had no external URLs in content/(docs|blog|resources|tutorials)/**/*.md.
     fetched_urls: list[dict] | None = None
     # Schema v5: workflow pre-step `editorial-balance-detect.py` writes
     # Tier 1 stats here (trigger, sections, mean/median/std, outliers).

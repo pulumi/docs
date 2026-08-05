@@ -1,11 +1,11 @@
 ---
 user-invocable: false
-description: Review criteria for technical documentation under content/docs, content/tutorials, content/learn.
+description: Review criteria for technical documentation under content/docs, content/tutorials, content/resources.
 ---
 
 # Review — Docs
 
-Applied to documentation pages: technical reference, conceptual docs, tutorials, learn explainer pages. Default scrutiny is `standard` (diff-only).
+Applied to documentation pages: technical reference, conceptual docs, tutorials, resources explainer pages. Default scrutiny is `standard` (diff-only).
 
 ---
 
@@ -61,10 +61,10 @@ Apply `docs-review:references:prose-patterns` and `docs-review:references:spelli
 
 ### Priority 6 — SEO and discoverability
 
-Quote-and-rewrite mandate. Apply most strictly to **learn explainer pages** (`content/learn/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
+Quote-and-rewrite mandate. Apply most strictly to **resources explainer pages** (`content/resources/`) and **concept docs**; less strictly to reference and tutorial content where the patterns naturally differ.
 
 - **Title matches page subject.** Quote the `title:` frontmatter and the page's first paragraph; flag when the page's actual subject is materially different from what the title claims.
-- **Quotable definition for learn explainers and concept pages.** The opening 1–2 sentences should answer "what is X" as a standalone definition that could be quoted by an AI tool without surrounding context. Quote the opening; flag fluff intros ("In this guide, we'll explore...") and propose a direct definition.
+- **Quotable definition for resources explainers and concept pages.** The opening 1–2 sentences should answer "what is X" as a standalone definition that could be quoted by an AI tool without surrounding context. Quote the opening; flag fluff intros ("In this guide, we'll explore...") and propose a direct definition.
 - **Answer-first H2 headings on concept content.** Question-style or how-style headings ("How does Pulumi ESC handle secrets?") rank better for AI answer extraction than label-style ("ESC overview"). Quote the heading; propose an answer-first rewrite. Don't flag label headings on reference docs (API listings, CLI flags) — labels are correct there.
 - **Semantic chunking.** Each H2 section should cover one focused concept. Flag when a single section mixes definition, history, benefits, and a tutorial; quote the section's first heading and propose a split with new H2s.
 - **Down-funnel specificity.** Concept docs that introduce a feature without showing a concrete integration or use case are too generic to be cited. Flag the most generic section; propose adding a specific scenario, integration, or edge case.

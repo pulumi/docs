@@ -10,7 +10,7 @@
 // partials/meta-image-url.html; a page-level `meta_image` overrides it.
 //
 // Templates (all from the Figma "Social assets — banners" file):
-//   - "title"      — centered title on the LIGHT brand field (learn, migrate,
+//   - "title"      — centered title on the LIGHT brand field (resources, migrate,
 //     partner, topics, and the case-studies index). Simple frame.
 //   - "info"       — 4-field DARK docs card (section badge, corner label, title,
 //     description) — docs only. Palette INFO_DARK; same layout as "tutorial".
@@ -105,7 +105,7 @@ function collectionTitle(id) {
   return title
 }
 
-// Shared shape for the plain centered-title sections (learn + the small
+// Shared shape for the plain centered-title sections (resources + the small
 // marketing sections). They differ only in name and recursion.
 const titleSection = (name, recursive) => ({
   name,
@@ -117,9 +117,9 @@ const titleSection = (name, recursive) => ({
 
 // --- Section configuration ---------------------------------------------------
 // id is the content-relative path with .md and trailing /_index stripped, e.g.
-// "learn/what-is-yaml" or "docs/iac/concepts/inputs-outputs".
+// "resources/what-is-yaml" or "docs/iac/concepts/inputs-outputs".
 const SECTIONS = [
-  titleSection("learn", false),
+  titleSection("resources", false),
   {
     name: "tutorials",
     template: "tutorial", // light docs-style card

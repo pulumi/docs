@@ -76,9 +76,9 @@
         {{ $entity = partial "schema/collectors/article-entity.html" . }}
       {{ end }}
 
-    {{ else if eq .Type "learn" }}
+    {{ else if eq .Type "resources" }}
       {{/* Single learn pages get Article schema (with dateModified, timeRequired).
-           The /learn/ section index gets CollectionPage + ItemList so it's
+           The /resources/ section index gets CollectionPage + ItemList so it's
            treated as a directory, not an article. */}}
       {{ if .IsPage }}
         {{ $entity = partial "schema/collectors/article-entity.html" . }}
