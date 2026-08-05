@@ -1,6 +1,6 @@
 ---
 title: "OpenTofu Alternative | Pulumi"
-meta_desc: "You chose open source for the license. Now choose real languages over HCL. Pulumi is Apache 2.0, no resource caps, 170+ providers."
+meta_desc: "Open source, with your choice of language. Use Python, TypeScript, Go, or C# alongside HCL. Pulumi is Apache 2.0, no resource caps, 170+ providers."
 layout: gads-template
 block_external_search_index: true
 hide_platform_details: true
@@ -21,8 +21,8 @@ customer_quote:
     link: /case-studies/snowflake
 
 overview:
-    title: "You Left HCL's License.<br/>Now Leave Its Limits."
-    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">an OpenTofu alternative</span>? OpenTofu solved the licensing problem but you still write HCL. Pulumi is also Apache 2.0 open source, but uses Python, TypeScript, Go, or C# with real testing, IDE support, and 170+ providers. Pulumi Cloud manages OpenTofu state directly.'
+    title: "Open Source, and the Language of Your Choice"
+    description: 'Looking for <span id="dki-placeholder" style="font-weight: bold;">an OpenTofu alternative</span>? OpenTofu solved the licensing question. Pulumi is open source too, under the permissive Apache 2.0 license, and it adds a choice of language: author in Python, TypeScript, Go, or C# with testing, IDE support, and 170+ providers, or keep writing HCL, now supported natively. Pulumi Cloud manages OpenTofu state directly.'
 
 key_features_above:
     items:

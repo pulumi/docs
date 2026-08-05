@@ -51,7 +51,7 @@ A few practical reasons drive most adoptions:
 
 * **The team already knows it.** Most full-stack and frontend-heavy organizations already run Node.js in production. Using the same language for IaC means no new training, no new style guides, no new package manager.
 * **The npm ecosystem is huge.** Thousands of utility libraries, validators, AWS/GCP/Azure SDK clients, retry helpers, schema validators, and logging libraries are already published, tested, and vetted at scale.
-* **Real abstractions, not text templates.** Functions, classes, modules, generics. A repeating VPC pattern becomes a Pulumi component you import, not a folder of copy-pasted HCL.
+* **Real abstractions, not text templates.** Functions, classes, modules, generics. A repeating VPC pattern becomes a Pulumi component you import and parameterize, rather than a module you copy and edit.
 * **Real testing tools.** Jest, Vitest, ts-mocha, supertest. Unit tests for IaC use the same runners you already configured for the application code.
 * **Real IDE support.** Autocomplete, jump-to-definition, refactoring, inline error squiggles. The same VS Code or WebStorm experience that helps with app code helps with cloud APIs that have hundreds of optional properties.
 
@@ -71,7 +71,7 @@ Pulumi templates generate TypeScript projects by default for this reason. The ru
 
 ## What does JS/TS offer that an IaC DSL doesn't?
 
-DSLs like HCL or CloudFormation YAML are deliberately limited: no functions, limited loops, no real type system, no module system other than what the DSL provides. That keeps the surface area small at the cost of expressiveness. JS/TS gives back what the DSL took away:
+DSLs like HCL or CloudFormation YAML keep their surface area small on purpose. They favor a constrained, declarative model, and general-purpose languages trade that simplicity for functions, richer loops, and a type system. JS/TS gives you those when you want them:
 
 * **Loops and conditionals that compose.** A subnet per availability zone, a Lambda per region, or a Kubernetes namespace per tenant, all expressed as familiar `.map()` and `for` loops rather than DSL-specific iteration features.
 * **Abstractions you actually own.** A Pulumi component is just a TypeScript class. It can take typed inputs, build any combination of underlying resources, and expose typed outputs. You can publish it to npm, version it semantically, and depend on it from many stacks.

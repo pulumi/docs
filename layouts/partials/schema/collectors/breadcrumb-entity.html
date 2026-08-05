@@ -243,10 +243,120 @@
     "name" "Product"
     "item" "https://www.pulumi.com/product/"
   ) }}
+
+{{/* Events: mirror the visible breadcrumb in layouts/events/single.html, which
+     shows "Events and Workshops" then "Upcoming" or "On-demand" (never the
+     event page itself). */}}
+{{ else if eq .Section "events" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Events and Workshops"
+    "item" "https://www.pulumi.com/events/"
+  ) }}
+
+  {{ if .Params.sortable_date }}
+    {{ $second := dict "name" "Upcoming" "url" "/events/#upcoming" }}
+    {{ if .Params.youtube_url }}
+      {{ $second = dict "name" "On-demand" "url" "/events/#on-demand" }}
+    {{ end }}
+    {{ $position = add $position 1 }}
+    {{ $breadcrumbs = $breadcrumbs | append (dict
+      "@type" "ListItem"
+      "position" $position
+      "name" $second.name
+      "item" (printf "https://www.pulumi.com%s" $second.url)
+    ) }}
+  {{ end }}
+
+{{/* Case studies: mirror layouts/case-studies/single.html, which adds an
+     industry crumb (looked up from data/case_study_industries.yaml) between
+     "Case Studies" and the page itself. */}}
+{{ else if eq .Section "case-studies" }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" "Case Studies"
+    "item" "https://www.pulumi.com/case-studies/"
+  ) }}
+
+  {{ with .Params.industry }}
+    {{ $industry := . }}
+    {{ range site.Data.case_study_industries.industries }}
+      {{ if eq .id $industry }}
+        {{ $position = add $position 1 }}
+        {{ $breadcrumbs = $breadcrumbs | append (dict
+          "@type" "ListItem"
+          "position" $position
+          "name" .name
+          "item" (printf "https://www.pulumi.com/case-studies/industry/%s/" $industry)
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+{{/* Templates: mirror layouts/partials/templates/breadcrumb.html, which walks
+     the page's ancestors (excluding Home) to build the full nested trail,
+     e.g. Templates > Kubernetes > AWS. */}}
+{{ else if eq .Section "templates" }}
+  {{ range .Ancestors.Reverse }}
+    {{ if not .IsHome }}
+      {{ $position = add $position 1 }}
+      {{ $breadcrumbs = $breadcrumbs | append (dict
+        "@type" "ListItem"
+        "position" $position
+        "name" .LinkTitle
+        "item" .Permalink
+      ) }}
+    {{ end }}
+  {{ end }}
+
+{{/* Remaining sections that only need a single section-level crumb before the
+     page itself. "migrate" and "partner" are intentionally excluded: both
+     sections' index pages redirect elsewhere (/migrate/ -> /docs/iac/guides/migration/,
+     /partner/ -> /registry/packages/) so a crumb pointing at them would point at
+     a redirect target rather than a real page. "gads" is excluded because those
+     pages are noindexed paid-landing pages. */}}
+{{ else if in (slice "releases" "whitepapers" "solutions" "community" "topics" "about" "security" "why-pulumi" "legal") .Section }}
+  {{ $sectionNames := dict
+    "releases" "Releases"
+    "whitepapers" "Whitepapers"
+    "solutions" "Solutions"
+    "community" "Community"
+    "topics" "Topics"
+    "about" "About"
+    "security" "Pulumi Security"
+    "why-pulumi" "Why Pulumi"
+    "legal" "Legal"
+  }}
+  {{ $position = add $position 1 }}
+  {{ $breadcrumbs = $breadcrumbs | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" (index $sectionNames .Section)
+    "item" (printf "https://www.pulumi.com/%s/" .Section)
+  ) }}
 {{ end }}
 
-{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. Skipped for what-is single pages, which terminate on their section above instead of repeating the title. */}}
-{{ if not (and (eq .Type "what-is") .IsPage) }}
+{{/* A section's own index page (e.g. /docs/, /product/, /case-studies/, the new
+     /events/, /security/, etc.) already gets a crumb pointing at itself from the
+     logic above; appending a second "current page" crumb for that same page
+     produces a duplicate node (e.g. "Home > Documentation > Documentation" on
+     the live /docs/ index today). Detect that by checking whether the last
+     crumb built so far already targets this exact page, and skip the
+     otherwise-redundant terminal item when it does. */}}
+{{ $lastCrumbIsSelf := false }}
+{{ if gt (len $breadcrumbs) 0 }}
+  {{ $lastCrumb := index $breadcrumbs (sub (len $breadcrumbs) 1) }}
+  {{ if eq $lastCrumb.item .Permalink }}
+    {{ $lastCrumbIsSelf = true }}
+  {{ end }}
+{{ end }}
+
+{{/* Add current page (without URL for last item). Prefer page_title so the schema matches what readers see in the visible breadcrumb. Skipped for what-is single pages, which terminate on their section above instead of repeating the title, and for section index pages already represented by the crumb immediately above. */}}
+{{ if and (not (and (eq .Type "what-is") .IsPage)) (not $lastCrumbIsSelf) }}
   {{ $position = add $position 1 }}
   {{ $breadcrumbs = $breadcrumbs | append (dict
     "@type" "ListItem"

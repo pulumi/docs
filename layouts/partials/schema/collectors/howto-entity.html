@@ -8,10 +8,11 @@
 {{ end }}
 
 {{/* Build HowTo entity */}}
+{{ $pageName := (or .Params.title_tag .Title) }}
 {{ $schema := dict
   "@type" "HowTo"
   "@id" "#main-content"
-  "name" .Title
+  "name" $pageName
   "url" .Permalink
   "inLanguage" "en-US"
 }}

@@ -36,6 +36,7 @@ import "./neo-mode";
 import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
+import "./intercom-identity";
 
 // Register all Stencil components.
 defineCustomElements();

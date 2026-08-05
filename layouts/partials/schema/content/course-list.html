@@ -10,12 +10,13 @@
     
     {{/* Build course list items */}}
     {{ range $index, $course := $courses }}
+      {{ $courseName := (or $course.Params.title_tag $course.Title) }}
       {{ $courseItem := dict
         "@type" "ListItem"
         "position" (add $index 1)
         "item" (dict
           "@type" "Course"
-          "name" $course.Title
+          "name" $courseName
           "description" (or $course.Params.meta_desc $course.Summary (printf "Learn %s with this hands-on Pulumi tutorial" $course.Title))
           "url" $course.Permalink
           "provider" (dict
@@ -76,7 +77,7 @@
       "@context" "https://schema.org"
       "@type" "ItemList"
       "@id" (printf "%s#courselist" .Permalink)
-      "name" (printf "%s - Pulumi Tutorials" .Title)
+      "name" (printf "%s - Pulumi Tutorials" (or .Params.title_tag .Title))
       "description" (or .Params.meta_desc .Summary "Hands-on guides to help you get the most out of Pulumi Infrastructure as Code")
       "url" .Permalink
       "numberOfItems" (len $courseItems)

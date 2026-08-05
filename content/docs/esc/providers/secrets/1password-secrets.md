@@ -118,10 +118,7 @@ Vault, item, section, and field names may contain spaces (for example, `op://Pri
 
 ## Verifying your configuration
 
-Once you've saved your environment, validate that the provider resolves your secrets by running either of the following:
-
-- `esc open <org>/<project>/<environment>` command of the [Pulumi ESC CLI](/docs/esc-cli/)
-- `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)
+Once you've saved your environment, validate that the provider resolves your secrets by running the `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/).
 
 Make sure to replace `<org>`, `<project>`, and `<environment>` with the values of your Pulumi organization and environment identifier respectively. You should see output similar to the following:
 

@@ -3,12 +3,12 @@ title_tag: Next Steps | Pulumi for Terraform Users
 title: Next Steps
 h1: "Next Steps"
 meta_desc: Explore advanced Pulumi features and resources for Terraform users ready to deepen their integration or consider migration.
-weight: 10
+weight: 11
 menu:
     iac:
         name: Next Steps
         parent: terraform-get-started
-        weight: 10
+        weight: 11
 
 aliases:
 ---
