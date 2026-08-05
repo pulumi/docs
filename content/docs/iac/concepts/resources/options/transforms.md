@@ -257,7 +257,7 @@ return await Deployment.RunAsync(async () =>
 
 ## Transforms vs. Transformations
 
-Transforms are a replacement for [Transformations](/docs/concepts/options/transformations/). Transformations will be deprecated in the future in favor of Transforms.
+Transforms are a replacement for [Transformations](/docs/iac/concepts/resources/options/transformations/). Transformations will be deprecated in the future in favor of Transforms.
 
 Transforms offer support for the following capabilities that are not supported by Transformations:
 
@@ -265,7 +265,7 @@ Transforms offer support for the following capabilities that are not supported b
 
 - **Support for async transform functions**. In Node.js and Python, transform functions can optionally be `async` and return a `Promise`/`Awaitable` so you can use `await` for async calls in the transform. In .NET, transform functions take a `CancellationToken` as an argument and return a `Task` so you can use `await` for async calls in the transform. In Go, transform functions take a `context.Context` as an argument, allowing access to the async context for tracing/logging/cancellation.
 
-While the Transforms APIs are similar to Transformations, there are some differences in both API signatures and runtime behavior. These are discussed in detail in [Migrating from Transformations to Transforms](/docs/concepts/options/transformations/#migrating-from-transformations-to-transforms).
+While the Transforms APIs are similar to Transformations, there are some differences in both API signatures and runtime behavior. These are discussed in detail in [Migrating from Transformations to Transforms](/docs/iac/concepts/resources/options/transformations/#migrating-from-transformations-to-transforms).
 
 ## Transforms for Packaged Component Resources
 
