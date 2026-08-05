@@ -77,7 +77,7 @@
       {{ end }}
 
     {{ else if eq .Type "resources" }}
-      {{/* Single learn pages get Article schema (with dateModified, timeRequired).
+      {{/* Single resources pages get Article schema (with dateModified, timeRequired).
            The /resources/ section index gets CollectionPage + ItemList so it's
            treated as a directory, not an article. */}}
       {{ if .IsPage }}

@@ -81,6 +81,9 @@
                  pills are real anchor links (no-JS fallback = jump to the
                  section); resources-list.ts intercepts clicks to show only the
                  selected section in place and moves `.is-active`. */}}
+            {{/* data-track ids intentionally keep the historical what-is-* names
+                 so analytics stays comparable across the rebrand; only the DOM
+                 contract (data-resources-filter) was renamed. */}}
             <nav data-resources-filter aria-label="Filter explainers" class="mb-10 flex flex-wrap items-center gap-3">
                 <button type="button" data-section="" data-track="what-is-filter-all" aria-current="page" class="btn btn-sm btn-outline text-sm is-active">All</button>
                 {{ range $groups }}

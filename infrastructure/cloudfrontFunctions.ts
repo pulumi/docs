@@ -69,7 +69,7 @@ function handler(event) {
     var eligible = uri === '/' || uri === '/index.html' ||
         uri === '/resources.md' || uri === '/product.md' || uri === '/pricing.md' ||
         uri.indexOf('/resources/') === 0 ||
-        uri.indexOf('/what-is/') === 0 ||
+        (uri.indexOf('/what-is/') === 0 && uri !== '/what-is/') ||
         uri.indexOf('/product/') === 0 ||
         uri.indexOf('/pricing/') === 0;
     if (!eligible) {
