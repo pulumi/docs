@@ -185,6 +185,13 @@ jobs:
 
       # Install Lighthouse only, at the version yarn.lock resolves for the root
       # package.json dependency, so this job can't drift from a local `make` run.
+      #
+      # The install runs under a --prefix outside the checkout: `npm install <pkg>`
+      # reifies the whole tree from whatever package.json it finds, so installing in
+      # the repo root would drag in all ~900 root dependencies (Cypress downloads a
+      # multi-hundred-megabyte binary in its postinstall) and eat the savings this
+      # job exists for. Symlinking the result back to ./node_modules keeps Node's
+      # resolution working for scripts/lighthouse/run-audits.mjs.
       - name: Install Lighthouse
         if: steps.filter.outputs.perf == 'true'
         run: |
@@ -198,7 +205,8 @@ jobs:
             console.log(match[1]);
           ')"
           echo "Installing lighthouse@${LH_VERSION}..."
-          npm install --no-save --no-audit --no-fund "lighthouse@${LH_VERSION}"
+          npm install --no-save --no-audit --no-fund --prefix "${RUNNER_TEMP}/lighthouse" "lighthouse@${LH_VERSION}"
+          ln -s "${RUNNER_TEMP}/lighthouse/node_modules" node_modules
 
       - name: Run audits and post report
         if: steps.filter.outputs.perf == 'true'
