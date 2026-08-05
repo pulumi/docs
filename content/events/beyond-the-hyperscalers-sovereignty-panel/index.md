@@ -3,6 +3,8 @@
 title: "Beyond the Hyperscalers: Building Sovereign Infrastructure in the EU"
 allow_long_title: true
 meta_desc: A live panel on cloud sovereignty as an architecture decision. Who is leaving the hyperscalers, why — compliance, cost, control — and when it makes sense.
+meta_image: /events/beyond-the-hyperscalers-sovereignty-panel/meta.png
+meta_image_square: /events/beyond-the-hyperscalers-sovereignty-panel/meta-square.png
 
 # A featured event will display first in the list.
 featured: false
@@ -60,10 +62,13 @@ presenters:
       photo: /images/team/adam-gordon-bell.jpg
     - name: Waldemar Kindler
       role: CEO & Co-Founder, Think Ahead Technologies
+      photo: /events/beyond-the-hyperscalers-sovereignty-panel/waldemar-kindler.png
     - name: Jim Dowling
       role: Co-Founder & CEO, Hopsworks
+      photo: /events/beyond-the-hyperscalers-sovereignty-panel/jim-dowling.png
     - name: Sarbjeet Johal
       role: Cloud Economist; Founder & CEO, StackPane
+      photo: /events/beyond-the-hyperscalers-sovereignty-panel/sarbjeet-johal.png
 
 # case-sensitive
 tags:
