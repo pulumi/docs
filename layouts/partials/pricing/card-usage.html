@@ -1,0 +1,44 @@
+{{- /*
+  The usage block under a pricing card's price: the included-Credits line and the
+  "additional usage billed on demand" note. When the edition declares
+  `note_tooltip` rates, the whole block becomes the hover target for a tooltip
+  saying what that edition's extra usage actually costs, per meter — readers
+  can't get from a resource count to a dollar figure from the cards alone
+  (pulumi/docs#20696), and a Credit is $1, so these rates are the dollar rates.
+
+  Takes the card's `unit`, `note`, and `note_tooltip` from data/pulumi_pricing.yaml:
+
+      {{ partial "pricing/card-usage.html" $card }}
+
+    tooltip.intro   one line of orientation above the list
+    tooltip.rates   [{label, value}] — value is a bare number; the intro carries
+                    the unit
+
+  size="lg" widens and left-aligns the bubble (theme/src/scss/_tooltip.scss); the
+  default 12rem centered bubble wraps a two-column list into an unreadable stack.
+*/ -}}
+{{- $tooltip := .note_tooltip -}}
+{{- if $tooltip -}}
+<pulumi-tooltip size="lg" class="block">
+{{- end }}
+    <span class="block">
+        {{ with .unit }}<span class="block mb-1.5">{{ . | markdownify }}</span>{{ end }}
+        {{ with .note }}<span class="block text-gray-700 leading-normal">{{ . | markdownify }}{{ with $tooltip }}{{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 -mt-0.5 inline text-gray-600") }}{{ end }}</span>{{ end }}
+    </span>
+{{- with $tooltip }}
+    {{- /* Everything sits inside one block wrapper: _tooltip.scss sets
+           `display: unset` on the [slot="content"] element itself, which leaves
+           it inline, and rows laid out directly under an inline box misbehave. */ -}}
+    <span slot="content">
+        <span class="block">
+            {{ with .intro }}<span class="block pb-1.5 mb-1.5 border-b border-white/20">{{ . }}</span>{{ end }}
+            {{ range .rates }}
+            <span class="flex items-baseline justify-between gap-3">
+                <span>{{ .label }}</span>
+                <span class="font-semibold whitespace-nowrap">{{ .value }}</span>
+            </span>
+            {{ end }}
+        </span>
+    </span>
+</pulumi-tooltip>
+{{- end }}
