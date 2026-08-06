@@ -110,7 +110,7 @@ Replace the placeholders:
 | `<project>` | The Pulumi project name for this stack | `networking` |
 | `<stack>` | The Pulumi stack name | `prod` |
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If you are using a [self-hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) instance, replace `tf.pulumi.com` with your instance's API URL in:
 
 - The backend configuration above
@@ -344,7 +344,7 @@ tofu state push -force hcp_state_backup.tfstate
 
 {{< /chooser >}}
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 Only use `-force` if you are certain the state file is correct and no concurrent operations are running.
 {{% /notes %}}
 
@@ -432,11 +432,13 @@ Terraform root module outputs are mapped to Pulumi [stack outputs](/docs/iac/con
 
 ### Audit policies
 
+{{< pulumi-cloud "audit-policies" />}}
+
 You can run [audit (detective) policy packs](/docs/insights/policy/policy-groups/) against Terraform-managed stacks. During policy evaluation, Pulumi performs a best-effort schema mapping from Terraform resource shapes to their Pulumi bridged provider equivalents using the latest provider version. This allows existing policy packs written against Pulumi schemas — including Pulumi's [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) — to evaluate Terraform resources.
 
 To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights. Policy packs are then evaluated continuously against the stack's resources.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/resources/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 {{% /notes %}}
 

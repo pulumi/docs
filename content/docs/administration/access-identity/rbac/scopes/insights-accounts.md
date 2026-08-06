@@ -13,13 +13,10 @@ aliases:
 - /docs/intro/pulumi-service/scopes/insights-accounts
 - /docs/intro/pulumi-cloud/scopes/insights-accounts
 - /docs/pulumi-cloud/access-management/rbac/scopes/insights-accounts/
+pulumi_cloud_feature: rbac
 ---
 
 This document defines all the available [scopes](/docs/administration/access-identity/rbac/scopes/) in Pulumi Cloud assignable to specific insights accounts or sets of insights accounts.
-
-{{% notes "info" %}}
-Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
-{{% /notes %}}
 
 Note that creating, listing, or restoring insights accounts are organization-level operations, and these scopes can be found in the [organization settings scopes](/docs/administration/access-identity/rbac/scopes/org-settings).
 

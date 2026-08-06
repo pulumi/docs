@@ -592,6 +592,68 @@ stack.setConfig("aws:region", new ConfigValue("us-west-2"));
 
 {{< /chooser >}}
 
+## Manage stack tags
+
+Alongside configuration, every stack also has a tag map: arbitrary key-value metadata scoped to the stack rather than to a single update. Pulumi Cloud sets some tags automatically (for example, the associated project and runtime), and you can set your own to record information such as an owner, a cost center, or a deployment environment. Automation API exposes the same tag operations as the `pulumi stack tag` CLI command, scoped to the `Stack` object: `getTag`, `setTag`, `removeTag`, and `listTags`.
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+{{% choosable language "typescript" %}}
+
+```typescript
+await stack.setTag("team", "platform");
+const team = await stack.getTag("team");
+const allTags = await stack.listTags();
+await stack.removeTag("team");
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+stack.set_tag("team", "platform")
+team = stack.get_tag("team")
+all_tags = stack.list_tags()
+stack.remove_tag("team")
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+err = s.SetTag(ctx, "team", "platform")
+team, err := s.GetTag(ctx, "team")
+allTags, err := s.ListTags(ctx)
+err = s.RemoveTag(ctx, "team")
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp,fsharp,visualbasic" %}}
+
+```csharp
+await stack.SetTagAsync("team", "platform");
+var team = await stack.GetTagAsync("team");
+var allTags = await stack.ListTagsAsync();
+await stack.RemoveTagAsync("team");
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+```java
+stack.setTag("team", "platform");
+String team = stack.getTag("team");
+Map<String, String> allTags = stack.listTags();
+stack.removeTag("team");
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ## Using local SDKs with Automation API {#using-local-packages-with-automation-api}
 
 When working with Automation API, you may need to use [local SDKs](/docs/iac/guides/building-extending/packages/local-sdks/) that aren't published to the Pulumi Registry. This is common when using parameterized providers like [`terraform-provider`](/registry/packages/terraform-provider/) or when developing custom providers.

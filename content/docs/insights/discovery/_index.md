@@ -13,6 +13,7 @@ aliases:
 - /docs/pulumi-cloud/insights/
 - /docs/insights/concepts/
 - /docs/insights/concepts/how-insights-works/
+pulumi_cloud_feature: insights-discovery
 ---
 
 Pulumi Insights Discovery enables organizations to gain complete visibility into their cloud infrastructure by scanning cloud provider accounts and building a comprehensive inventory of all resources—regardless of how those resources were created or are currently managed.

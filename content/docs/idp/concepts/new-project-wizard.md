@@ -37,7 +37,7 @@ Within the New Project Wizard, you can configure:
 - **Deployment settings**: Configure [Pulumi Deployments](/docs/deployments/concepts/) for the new stack, including [drift detection and remediation](/docs/deployments/concepts/drift/)
 - **Service assignment**: Assign the new stack to a Pulumi IDP [Service](/docs/idp/concepts/services/)
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Configuration value forms are displayed in two scenarios:
 
 1. When the project file (`Pulumi.yaml`) includes a `config` section directly
@@ -73,6 +73,6 @@ To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/concep
 
 For GitHub, the authorization requires permissions to manage public and private repositories and workflows. Pulumi uses these permissions to read template sources, write template content into repositories, and optionally create new repositories. While the authorization request includes additional repository permissions, Pulumi does not use all of them. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Make sure you configure a [version control integration](/docs/integrations/version-control/) to ensure the New Project Wizard works seamlessly with [Pulumi Deployments](/docs/deployments/concepts/).
 {{% /notes %}}

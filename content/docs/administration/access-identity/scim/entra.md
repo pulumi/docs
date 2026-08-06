@@ -14,6 +14,7 @@ aliases:
   - /docs/administration/access-identity/scim/azuread
   - /docs/pulumi-cloud/access-management/scim/entra/
   - /docs/pulumi-cloud/access-management/scim/azuread/
+pulumi_cloud_feature: scim
 ---
 
 This document outlines the steps required to configure automatic provisioning/deprovisioning of your users in Pulumi using SCIM 2.0.
@@ -43,7 +44,7 @@ Under the **Admin Credentials** section of the **Provisioning** feature, fill ou
 * **Tenant URL**: `https://api.pulumi.com/scim/v2/{orgName}`, where `{orgName}` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
 * **Secret Token**: You will use a token from the [Pulumi Cloud](https://app.pulumi.com/signin) as the authorization bearer token. To generate a token, navigate to your org in the Pulumi Cloud, select **Settings**, then **Access Management**, and then in the **SCIM** section, generate a new token if you have never generated one for your org or regenerate it if you have already done so in the past.
 
-    {{% notes "info" %}}
+    {{% notes type="info" %}}
 Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulumi support can retrieve a token once it's been initially generated. If you lose and need the SCIM token again, you'll have to generate a new token, invalidating any previous tokens for your Pulumi organization.
     {{% /notes %}}
 
@@ -53,7 +54,7 @@ Select **Test Connection**. You should get a success notification once the conne
 
 Make sure the **Provision Microsoft Entra ID _Users_** mapping is enabled.
 
-    {{% notes "info" %}}
+    {{% notes type="info" %}}
 If you are not yet ready to enable provisioning for Groups, disable that.
     {{% /notes %}}
 
@@ -116,7 +117,7 @@ Set the **Provisioning Status** to **On** and then click **Save**.
 
 You must assign users to the Entra ID enterprise application to have them provisioned with an account in Pulumi. Click on the **Users and groups** feature in the left nav, and assign users and/or groups to the application by searching for them.
 
-    {{% notes "info" %}}
+    {{% notes type="info" %}}
 If you did not enable group provisioning while you were editing the provisioning setup, click on **Edit Provisioning** and enable the **Provision Microsoft Entra ID Groups** setting as well under the **Mappings** expansion panel.
     {{% /notes %}}
 

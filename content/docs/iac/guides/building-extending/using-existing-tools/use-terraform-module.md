@@ -89,7 +89,7 @@ Any directory containing `.tf` files and optionally `variables.tf` and `outputs.
 If your organization publishes Terraform modules to the [Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/), every published version is converted into a Pulumi package for you. Install it by package name, which is the module's name and system joined with a hyphen. The system is the last segment of the module's address, naming what the module provisions, such as `aws` or `azurerm`:
 
 ```bash
-pulumi package add <name>-<system> [<version>]
+pulumi package add <name>-<system>[@<version>]
 ```
 
 A module published as `acme-corp/vpc/aws` installs as `vpc-aws`. This is the same as any other Pulumi package: you get a generated SDK in your language, an [API reference](/docs/idp/concepts/private-registry/#api-documentation) on the package's page, and [usage tracking](/docs/idp/concepts/private-registry/#usage-tracking) showing which of your stacks depend on it and which are behind the latest version. Installing a converted package requires Pulumi CLI 3.248.0 or newer; see [Download & Install Pulumi](/docs/install/) to upgrade.

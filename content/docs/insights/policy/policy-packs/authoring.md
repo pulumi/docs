@@ -1075,7 +1075,7 @@ As shorthand, specify enforcement levels directly:
 
 - **advisory** - Issues warnings but allows deployments to proceed
 - **mandatory** - Blocks deployments when violations are detected
-- **remediate** - Automatically fixes violations in place; see [Remediating policy violations](#remediating-policy-violations)
+- **remediate** - Automatically fixes violations in place, available in the [Business Critical edition](/pricing/#policy-enforcement-modes); see [Remediating policy violations](#remediating-policy-violations)
 - **disabled** - Skips policy evaluation entirely
 
 ### Custom configuration
@@ -1263,6 +1263,8 @@ pulumi preview --policy-pack <path-to-policy-pack> --policy-pack-config config.j
 
 #### Pulumi Cloud configuration
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 After publishing, administrators configure policy packs through the Pulumi Cloud console or CLI.
 
 **Using the console:**
@@ -1298,6 +1300,8 @@ pulumi policy enable <org>/<pack-name> <version> --config config.json --policy-g
 Policy packs can also receive configuration and secrets from [Pulumi ESC](/docs/esc/) environments. When you attach an ESC environment to a policy pack in a policy group, values defined under the [`policyConfig`](/docs/esc/concepts/outputs/#policyconfig) reserved property are available to your policies at runtime. You can also use [`environmentVariables`](/docs/esc/concepts/outputs/#environmentvariables) to inject environment variables into the policy runtime.
 
 ## Publishing to your organization
+
+{{< pulumi-cloud "policy-enforcement" />}}
 
 After local validation, publish your policy pack to Pulumi Cloud. Policy enforcement runs automatically during `preview` and `update` for any stack using Pulumi Cloud.
 

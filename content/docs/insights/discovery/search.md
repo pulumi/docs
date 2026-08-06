@@ -14,6 +14,7 @@ aliases:
   - /docs/pulumi-cloud/insights/search/
   - /docs/insights/search/
   - /docs/insights/visibility/search/
+pulumi_cloud_feature: resource-search
 ---
 
 Resource Search allows you to explore your resources, stacks and projects in detail.
@@ -272,11 +273,7 @@ Ranges can also be one-sided. For example, to query everything modified after Ja
 
 ### Property queries
 
-{{% notes "info" %}}
-Property search is only available to organizations using Team, Enterprise and Business Critical editions.
-
-If you would like to use it, [contact us](/contact?form=sales) to upgrade.
-{{% /notes %}}
+{{< pulumi-cloud "property-search" />}}
 
 Property search allows you to query resources by their inputs and outputs.
 
@@ -397,11 +394,7 @@ Clicking the "X" within the search bar will remove all previously selected filte
 
 ## Download a CSV
 
-{{% notes "info" %}}
-The CSV Export feature is only available to organizations using the Enterprise and Business Critical editions.
-
-If you don't see it in your organization, [contact us](/contact?form=sales).
-{{% /notes %}}
+{{< pulumi-cloud "insights-data-export" />}}
 
 You can download a CSV with all resources matching your query by clicking the "Export CSV" button within dropdown opened by clicking the gear icon.
 
