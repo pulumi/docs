@@ -125,20 +125,24 @@ editions:
       note: Up to 500 resources, additional usage billed on demand
       # What a Credit buys, per meter, for the (i) tooltip on the note above. A
       # Credit is $1, so these are also the dollar rates — they mirror the
-      # on-demand rows below (iac-on-demand-price, esc-on-demand-price, neo,
-      # workflow-minutes-price) for this edition's column. Change a rate there
-      # and change it here.
+      # on-demand rows below (iac-on-demand-price, esc-on-demand-price,
+      # insights-on-demand-price, workflow-minutes-price, neo) for this
+      # edition's column, in that order. Change a rate there and change it here.
+      # Not every meter belongs: esc-api-call-price is free to 10K and priced per
+      # 10K rather than per unit, so it stays in the table below.
       note_tooltip:
         intro: "Additional usage, in Credits (1 Credit = $1):"
         rates:
-          - label: 1 resource / month
+          - label: 1 IaC resource / month
             value: "0.1825"
           - label: 1 secret / month
             value: "0.50"
-          - label: 1M Neo tokens
-            value: "3"
+          - label: 1 Insights resource / month
+            value: "0.0185"
           - label: 1 workflow minute
             value: "0.01"
+          - label: 1M Neo tokens
+            value: "3"
       cta:
         label: Start a free trial
         href: https://app.pulumi.com/signup?create-organization=1
@@ -166,14 +170,16 @@ editions:
       note_tooltip:
         intro: "Additional usage, in Credits (1 Credit = $1):"
         rates:
-          - label: 1 resource / month
+          - label: 1 IaC resource / month
             value: from 0.365
           - label: 1 secret / month
             value: "0.75"
-          - label: 1M Neo tokens
-            value: "3"
+          - label: 1 Insights resource / month
+            value: from 0.0365
           - label: 1 workflow minute
             value: "0.01"
+          - label: 1M Neo tokens
+            value: "3"
       cta:
         label: Start a free trial
         href: https://app.pulumi.com/signup?create-organization=1
