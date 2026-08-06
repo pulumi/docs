@@ -24,15 +24,15 @@ Use the `pulumi package add` command to add Terraform modules to your project:
 
 ```bash
 # Add a module from the Terraform Registry
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 
 # Add a local module
 $ pulumi package add hcl module ./path/to/module
 ```
 
-## Example: AWS VPC module
+## Example: AWS S3 bucket module
 
-Let's use the popular AWS `vpc` module to create a VPC with subnets, and then deploy an EC2 instance in that VPC:
+Let's use the popular AWS `s3-bucket` module to create an S3 bucket and export its outputs:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
@@ -45,109 +45,28 @@ $ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
 $ pulumi new aws-typescript --yes
 ```
 
-Next, add the VPC module:
+Next, add the S3 bucket module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
 Then use it in your Pulumi program:
 
 ```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as vpc from "@pulumi/vpc";
+import * as s3Bucket from "@pulumi/s3-bucket";
 
-// Use the Terraform VPC module
-const myVpc = new vpc.Module("my-vpc", {
-    name: "my-vpc",
-    cidr: "10.0.0.0/16",
-
-    azs: ["us-west-2a", "us-west-2b", "us-west-2c"],
-    publicSubnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
-    privateSubnets: ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"],
-
-    enableNatGateway: true,
-    enableVpnGateway: true,
-
+// Create an S3 bucket using the Terraform module
+const bucket = new s3Bucket.Module("my-bucket", {
+    bucketPrefix: "my-example-bucket",
     tags: {
-        Terraform: "true",
         Environment: "dev",
     },
 });
 
-// Create a security group
-
-const webSg = new aws.ec2.SecurityGroup("web-sg", {
-    name: "web-sg",
-    description: "Security group for web servers",
-    vpcId: myVpc.vpcId.apply(id => id!),
-    ingress: [
-        {
-            description: "HTTP",
-            fromPort: 80,
-            toPort: 80,
-            protocol: "tcp",
-            cidrBlocks: ["0.0.0.0/0"],
-        },
-        {
-            description: "SSH",
-            fromPort: 22,
-            toPort: 22,
-            protocol: "tcp",
-            cidrBlocks: ["0.0.0.0/0"],
-        },
-    ],
-    egress: [
-        {
-            fromPort: 0,
-            toPort: 0,
-            protocol: "-1",
-            cidrBlocks: ["0.0.0.0/0"],
-        },
-    ],
-});
-
-// Get the latest Amazon Linux 2 AMI
-const amazonLinux = aws.ec2.getAmiOutput({
-    mostRecent: true,
-    owners: ["amazon"],
-    filters: [
-        {
-            name: "name",
-            values: ["amzn2-ami-hvm-*-x86_64-gp2"],
-        },
-    ],
-});
-
-// Create an EC2 instance in the VPC
-const webServer = new aws.ec2.Instance("web-server", {
-    ami: amazonLinux.id,
-    instanceType: "t3.micro",
-    subnetId: myVpc.publicSubnets.apply(subnets => subnets![0]),
-    vpcSecurityGroupIds: [webSg.id],
-    associatePublicIpAddress: true,
-
-    userData: `#!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
-`,
-
-    tags: {
-        Name: "web-server",
-        Environment: "dev",
-    },
-});
-
-
-// Output important information
-export const vpcId = myVpc.vpcId;
-export const instanceId = webServer.id;
-export const publicIp = webServer.publicIp;
-export const websiteUrl = pulumi.interpolate`http://${webServer.publicIp}`;
+// The module's outputs are strongly typed
+export const bucketArn = bucket.s3BucketArn;
+export const bucketId = bucket.s3BucketId;
 ```
 
 {{% /choosable %}}
@@ -161,107 +80,28 @@ $ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
 $ pulumi new aws-python --yes
 ```
 
-Next, add the VPC module:
+Next, add the S3 bucket module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
 Then use it in your Pulumi program:
 
 ```python
 import pulumi
-import pulumi_aws as aws
-import pulumi_vpc as vpc
+import pulumi_s3_bucket as s3bucket
 
-# Use the Terraform VPC module
-my_vpc = vpc.Module("my-vpc",
-    name="my-vpc",
-    cidr="10.0.0.0/16",
-
-    azs=["us-west-2a", "us-west-2b", "us-west-2c"],
-    public_subnets=["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"],
-    private_subnets=["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"],
-
-    enable_nat_gateway=True,
-    enable_vpn_gateway=True,
-
+# Create an S3 bucket using the Terraform module
+bucket = s3bucket.Module("my-bucket",
+    bucket_prefix="my-example-bucket",
     tags={
-        "Terraform": "true",
         "Environment": "dev",
-    }
-)
+    })
 
-# Create a security group
-web_sg = aws.ec2.SecurityGroup("web-sg",
-    name="web-sg",
-    description="Security group for web servers",
-    vpc_id=my_vpc.vpc_id.apply(lambda id: id),
-    ingress=[
-        {
-            "description": "HTTP",
-            "from_port": 80,
-            "to_port": 80,
-            "protocol": "tcp",
-            "cidr_blocks": ["0.0.0.0/0"],
-        },
-        {
-            "description": "SSH",
-            "from_port": 22,
-            "to_port": 22,
-            "protocol": "tcp",
-            "cidr_blocks": ["0.0.0.0/0"],
-        },
-    ],
-    egress=[
-        {
-            "from_port": 0,
-            "to_port": 0,
-            "protocol": "-1",
-            "cidr_blocks": ["0.0.0.0/0"],
-        }
-    ]
-)
-
-# Get the latest Amazon Linux 2 AMI
-amazon_linux = aws.ec2.get_ami(
-    most_recent=True,
-    owners=["amazon"],
-    filters=[
-        {
-            "name": "name",
-            "values": ["amzn2-ami-hvm-*-x86_64-gp2"],
-        }
-    ]
-)
-
-# Create an EC2 instance in the VPC
-web_server = aws.ec2.Instance("web-server",
-    ami=amazon_linux.id,
-    instance_type="t3.micro",
-    subnet_id=my_vpc.public_subnets.apply(lambda subnets: subnets[0]),
-    vpc_security_group_ids=[web_sg.id],
-    associate_public_ip_address=True,
-
-    user_data="""#!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
-""",
-
-    tags={
-        "Name": "web-server",
-        "Environment": "dev",
-    }
-)
-
-# Output important information
-pulumi.export("vpcId", my_vpc.vpc_id)
-pulumi.export("instanceId", web_server.id)
-pulumi.export("publicIp", web_server.public_ip)
-pulumi.export("websiteUrl", pulumi.Output.format("http://{0}", web_server.public_ip))
+# The module's outputs are strongly typed
+pulumi.export("bucket_arn", bucket.s3_bucket_arn)
+pulumi.export("bucket_id", bucket.s3_bucket_id)
 ```
 
 {{% /choosable %}}
@@ -275,10 +115,10 @@ $ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
 $ pulumi new aws-go --yes
 ```
 
-Next, add the VPC module:
+Next, add the S3 bucket module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
 Then use it in your Pulumi program:
@@ -287,115 +127,25 @@ Then use it in your Pulumi program:
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-	vpc "example.com/pulumi-vpc/sdk/go/vpc"
+	"example.com/pulumi-s3-bucket/sdk/go/s3bucket"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Use the Terraform VPC module
-		myVpc, err := vpc.NewModule(ctx, "my-vpc", &vpc.ModuleArgs{
-			Name: pulumi.String("my-vpc"),
-			Cidr: pulumi.String("10.0.0.0/16"),
-
-			Azs:             pulumi.StringArray{pulumi.String("us-west-2a"), pulumi.String("us-west-2b"), pulumi.String("us-west-2c")},
-			PrivateSubnets: pulumi.StringArray{pulumi.String("10.0.1.0/24"), pulumi.String("10.0.2.0/24"), pulumi.String("10.0.3.0/24")},
-			PublicSubnets:  pulumi.StringArray{pulumi.String("10.0.10.0/24"), pulumi.String("10.0.11.0/24"), pulumi.String("10.0.12.0/24")},
-
-			EnableNatGateway: pulumi.Bool(true),
-			EnableVpnGateway: pulumi.Bool(true),
-
+		// Create an S3 bucket using the Terraform module
+		bucket, err := s3bucket.NewModule(ctx, "my-bucket", &s3bucket.ModuleArgs{
+			BucketPrefix: pulumi.String("my-example-bucket"),
 			Tags: pulumi.StringMap{
-				"Terraform":   pulumi.String("true"),
 				"Environment": pulumi.String("dev"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-
-		// Get the latest Amazon Linux 2 AMI
-		amazonLinux, err := ec2.LookupAmi(ctx, &ec2.LookupAmiArgs{
-			MostRecent: pulumi.BoolRef(true),
-			Owners:     []string{"amazon"},
-			Filters: []ec2.GetAmiFilter{
-				{
-					Name:   "name",
-					Values: []string{"amzn2-ami-hvm-*-x86_64-gp2"},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-
-		// Create a security group
-		webSg, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
-			Name:        pulumi.String("web-sg"),
-			Description: pulumi.String("Security group for web servers"),
-			VpcId:       myVpc.VpcId,
-			Ingress: ec2.SecurityGroupIngressArray{
-				&ec2.SecurityGroupIngressArgs{
-					Description: pulumi.String("HTTP"),
-					FromPort:    pulumi.Int(80),
-					ToPort:      pulumi.Int(80),
-					Protocol:    pulumi.String("tcp"),
-					CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-				},
-				&ec2.SecurityGroupIngressArgs{
-					Description: pulumi.String("SSH"),
-					FromPort:    pulumi.Int(22),
-					ToPort:      pulumi.Int(22),
-					Protocol:    pulumi.String("tcp"),
-					CidrBlocks:  pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-				},
-			},
-			Egress: ec2.SecurityGroupEgressArray{
-				&ec2.SecurityGroupEgressArgs{
-					FromPort:   pulumi.Int(0),
-					ToPort:     pulumi.Int(0),
-					Protocol:   pulumi.String("-1"),
-					CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-				},
-			},
-		})
-		if err != nil {
-			return err
-		}
-
-		// Create an EC2 instance in the VPC
-		webServer, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
-			Ami:          pulumi.String(amazonLinux.Id),
-			InstanceType: pulumi.String("t3.micro"),
-			SubnetId: myVpc.PublicSubnets.ApplyT(func(subnets []string) string {
-				return subnets[0]
-			}).(pulumi.StringOutput),
-			VpcSecurityGroupIds:      pulumi.StringArray{webSg.ID()},
-			AssociatePublicIpAddress: pulumi.Bool(true),
-
-			UserData: pulumi.String(`#!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
-`),
-
-			Tags: pulumi.StringMap{
-				"Name":        pulumi.String("web-server"),
-				"Environment": pulumi.String("dev"),
-			},
-		})
-		if err != nil {
-			return err
-		}
-
-		// Output important information
-		ctx.Export("vpcId", myVpc.VpcId)
-		ctx.Export("instanceId", webServer.ID())
-		ctx.Export("publicIp", webServer.PublicIp)
-		ctx.Export("websiteUrl", pulumi.Sprintf("http://%s", webServer.PublicIp))
+		// The module's outputs are strongly typed
+		ctx.Export("bucketArn", bucket.S3BucketArn)
+		ctx.Export("bucketId", bucket.S3BucketId)
 		return nil
 	})
 }
@@ -412,10 +162,10 @@ $ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
 $ pulumi new aws-csharp --yes
 ```
 
-Next, add the VPC module:
+Next, add the S3 bucket module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
 {{% notes type="tip" %}}
@@ -435,116 +185,25 @@ Then use it in your Pulumi program:
 ```csharp
 using System.Collections.Generic;
 using Pulumi;
-using Pulumi.Aws.Ec2;
-using Pulumi.Aws.Ec2.Inputs;
-using Pulumi.Vpc;
+using Pulumi.S3Bucket;
 
 return await Deployment.RunAsync(() =>
 {
-    // Use the Terraform VPC module
-    var myVpc = new Module("my-vpc", new ModuleArgs
+    // Create an S3 bucket using the Terraform module
+    var bucket = new Module("my-bucket", new ModuleArgs
     {
-        Name = "my-vpc",
-        Cidr = "10.0.0.0/16",
-
-        Azs = new[] { "us-west-2a", "us-west-2b", "us-west-2c" },
-        PrivateSubnets = new[] { "10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24" },
-        PublicSubnets = new[] { "10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24" },
-
-        EnableNatGateway = true,
-        EnableVpnGateway = true,
-
-        Tags = new Dictionary<string, string>
+        BucketPrefix = "my-example-bucket",
+        Tags =
         {
-            ["Terraform"] = "true",
-            ["Environment"] = "dev",
+            { "Environment", "dev" },
         },
     });
 
-    // Get the latest Amazon Linux 2 AMI
-    var amazonLinux = GetAmi.Invoke(new GetAmiInvokeArgs
-    {
-        MostRecent = true,
-        Owners = new[] { "amazon" },
-        Filters = new[]
-        {
-            new GetAmiFilterInputArgs
-            {
-                Name = "name",
-                Values = new[] { "amzn2-ami-hvm-*-x86_64-gp2" },
-            },
-        },
-    });
-
-    // Create a security group
-    var webSg = new SecurityGroup("web-sg", new SecurityGroupArgs
-    {
-        Name = "web-sg",
-        Description = "Security group for web servers",
-        VpcId = myVpc.VpcId,
-        Ingress = new[]
-        {
-            new SecurityGroupIngressArgs
-            {
-                Description = "HTTP",
-                FromPort = 80,
-                ToPort = 80,
-                Protocol = "tcp",
-                CidrBlocks = new[] { "0.0.0.0/0" },
-            },
-            new SecurityGroupIngressArgs
-            {
-                Description = "SSH",
-                FromPort = 22,
-                ToPort = 22,
-                Protocol = "tcp",
-                CidrBlocks = new[] { "0.0.0.0/0" },
-            },
-        },
-        Egress = new[]
-        {
-            new SecurityGroupEgressArgs
-            {
-                FromPort = 0,
-                ToPort = 0,
-                Protocol = "-1",
-                CidrBlocks = new[] { "0.0.0.0/0" },
-            },
-        },
-    });
-
-    // Create an EC2 instance in the VPC
-    var webServer = new Instance("web-server", new InstanceArgs
-    {
-        Ami = amazonLinux.Apply(ami => ami.Id),
-        InstanceType = "t3.micro",
-        SubnetId = myVpc.PublicSubnets.Apply(subnets => subnets[0]),
-        VpcSecurityGroupIds = new[] { webSg.Id },
-        AssociatePublicIpAddress = true,
-
-        UserData = @"#!/bin/bash
-yum update -y
-yum install -y httpd
-systemctl start httpd
-systemctl enable httpd
-echo ""<h1>Hello from Pulumi and Terraform modules!</h1>"" > /var/www/html/index.html
-",
-
-        Tags = new Dictionary<string, string>
-        {
-            ["Name"] = "web-server",
-            ["Environment"] = "dev",
-        },
-    });
-
+    // The module's outputs are strongly typed
     return new Dictionary<string, object?>
     {
-        ["vpcId"] = myVpc.VpcId,
-        ["publicSubnets"] = myVpc.PublicSubnets,
-        ["privateSubnets"] = myVpc.PrivateSubnets,
-        ["instanceId"] = webServer.Id,
-        ["publicIp"] = webServer.PublicIp,
-        ["websiteUrl"] = webServer.PublicIp.Apply(ip => $"http://{ip}"),
+        ["bucketArn"] = bucket.S3BucketArn,
+        ["bucketId"] = bucket.S3BucketId,
     };
 });
 ```
@@ -560,10 +219,10 @@ $ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
 $ pulumi new aws-java --yes
 ```
 
-Next, add the VPC module:
+Next, add the S3 bucket module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
 {{% notes type="tip" %}}
@@ -587,107 +246,28 @@ The `pulumi package add ...` command will output some important instructions. Th
 
 {{% /notes %}}
 
-Then use it in your Pulumi program, by replacing the contents of `src/main/java/myproject/App.java` with:
+Then use it in your Pulumi program:
 
 ```java
 package myproject;
 
 import com.pulumi.Pulumi;
-import com.pulumi.aws.ec2.Ec2Functions;
-import com.pulumi.aws.ec2.Instance;
-import com.pulumi.aws.ec2.InstanceArgs;
-import com.pulumi.aws.ec2.SecurityGroup;
-import com.pulumi.aws.ec2.SecurityGroupArgs;
-import com.pulumi.aws.ec2.inputs.GetAmiArgs;
-import com.pulumi.aws.ec2.inputs.GetAmiFilterArgs;
-import com.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
-import com.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
-import java.util.Collections;
+import com.pulumi.s3bucket.Module;
+import com.pulumi.s3bucket.ModuleArgs;
 import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            // Use the Terraform VPC module
-            var myVpc = new com.pulumi.vpc.Module("my-vpc", com.pulumi.vpc.ModuleArgs.builder()
-                .name("my-vpc")
-                .cidr("10.0.0.0/16")
-                .azs("us-west-2a", "us-west-2b", "us-west-2c")
-                .privateSubnets("10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24")
-                .publicSubnets("10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24")
-                .enableNatGateway(true)
-                .enableVpnGateway(true)
-                .tags(Map.of(
-                    "Terraform", "true",
-                    "Environment", "dev"
-                ))
+            // Create an S3 bucket using the Terraform module
+            var bucket = new Module("my-bucket", ModuleArgs.builder()
+                .bucketPrefix("my-example-bucket")
+                .tags(Map.of("Environment", "dev"))
                 .build());
 
-            // Get the latest Amazon Linux 2 AMI
-            var amazonLinux = Ec2Functions.getAmi(GetAmiArgs.builder()
-                .mostRecent(true)
-                .owners("amazon")
-                .filters(GetAmiFilterArgs.builder()
-                    .name("name")
-                    .values("amzn2-ami-hvm-*-x86_64-gp2")
-                    .build())
-                .build());
-
-            // Create a security group
-            var webSg = new SecurityGroup("web-sg", SecurityGroupArgs.builder()
-                .name("web-sg")
-                .description("Security group for web servers")
-                .vpcId(myVpc.vpcId().applyValue(id->id.get()).applyValue(String::valueOf))
-                .ingress(
-                    SecurityGroupIngressArgs.builder()
-                        .description("HTTP")
-                        .fromPort(80)
-                        .toPort(80)
-                        .protocol("tcp")
-                        .cidrBlocks("0.0.0.0/0")
-                        .build(),
-                    SecurityGroupIngressArgs.builder()
-                        .description("SSH")
-                        .fromPort(22)
-                        .toPort(22)
-                        .protocol("tcp")
-                        .cidrBlocks("0.0.0.0/0")
-                        .build()
-                )
-                .egress(SecurityGroupEgressArgs.builder()
-                    .fromPort(0)
-                    .toPort(0)
-                    .protocol("-1")
-                    .cidrBlocks("0.0.0.0/0")
-                    .build())
-                .build());
-
-            // Create an EC2 instance in the VPC
-            var webServer = new Instance("web-server", InstanceArgs.builder()
-                .ami(amazonLinux.applyValue(ami -> ami.id()))
-                .instanceType("t3.micro")
-                .subnetId(myVpc.publicSubnets().applyValue(subnets -> subnets.get().get(0)))
-                .vpcSecurityGroupIds(webSg.id().applyValue(s -> Collections.singletonList(s)))
-                .associatePublicIpAddress(true)
-                .userData(String.join("\n",
-                    "#!/bin/bash",
-                    "yum update -y",
-                    "yum install -y httpd",
-                    "systemctl start httpd",
-                    "systemctl enable httpd",
-                    "echo \"<h1>Hello from Pulumi and Terraform modules!</h1>\" > /var/www/html/index.html"
-                ))
-                .tags(Map.of(
-                    "Name", "web-server",
-                    "Environment", "dev"
-                ))
-                .build());
-
-            // Output important information
-            ctx.export("vpcId", myVpc.vpcId());
-            ctx.export("instanceId", webServer.id());
-            ctx.export("publicIp", webServer.publicIp());
-            ctx.export("websiteUrl", webServer.publicIp().applyValue(ip -> String.format("http://%s", ip)));
+            // The module's outputs are strongly typed
+            ctx.export("bucketArn", bucket.s3BucketArn());
+            ctx.export("bucketId", bucket.s3BucketId());
         });
     }
 }
@@ -704,10 +284,10 @@ $ mkdir pulumi-terraform-modules-test && cd pulumi-terraform-modules-test
 $ pulumi new aws-yaml --yes
 ```
 
-Next, add the VPC module:
+Next, add the S3 bucket module:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 6.0.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
 Then use it in your Pulumi program:
@@ -715,96 +295,30 @@ Then use it in your Pulumi program:
 ```yaml
 name: pulumi-terraform-modules-example
 runtime: yaml
-description: Use Terraform modules in Pulumi
-
-variables:
-  # Get the latest Amazon Linux 2 AMI
-  amazonLinux:
-    fn::invoke:
-      function: aws:ec2:getAmi
-      arguments:
-        mostRecent: true
-        owners: ["amazon"]
-        filters:
-          - name: name
-            values: ["amzn2-ami-hvm-*-x86_64-gp2"]
+description: Use a Terraform module in Pulumi
 
 resources:
-  # Use the Terraform VPC module
-  my-vpc:
-    type: vpc:index:Module
+  # Create an S3 bucket using the Terraform module
+  my-bucket:
+    type: s3-bucket:index:Module
     properties:
-      name: my-vpc
-      cidr: 10.0.0.0/16
-      azs: ["us-west-2a", "us-west-2b", "us-west-2c"]
-      privateSubnets: ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-      publicSubnets: ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
-      enableNatGateway: true
-      enableVpnGateway: true
+      bucketPrefix: my-example-bucket
       tags:
-        Terraform: "true"
-        Environment: "dev"
-
-  # Create a security group
-  web-sg:
-    type: aws:ec2:SecurityGroup
-    properties:
-      name: web-sg
-      description: Security group for web servers
-      vpcId: ${my-vpc.vpcId}
-      ingress:
-        - description: HTTP
-          fromPort: 80
-          toPort: 80
-          protocol: tcp
-          cidrBlocks: ["0.0.0.0/0"]
-        - description: SSH
-          fromPort: 22
-          toPort: 22
-          protocol: tcp
-          cidrBlocks: ["0.0.0.0/0"]
-      egress:
-        - fromPort: 0
-          toPort: 0
-          protocol: "-1"
-          cidrBlocks: ["0.0.0.0/0"]
-
-  # Create an EC2 instance in the VPC
-  web-server:
-    type: aws:ec2:Instance
-    properties:
-      ami: ${amazonLinux.id}
-      instanceType: t3.micro
-      subnetId: ${my-vpc.publicSubnets[0]}
-      vpcSecurityGroupIds:
-        - ${web-sg.id}
-      associatePublicIpAddress: true
-      userData: |
-        #!/bin/bash
-        yum update -y
-        yum install -y httpd
-        systemctl start httpd
-        systemctl enable httpd
-        echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
-      tags:
-        Name: web-server
         Environment: dev
 
+# The module's outputs are strongly typed
 outputs:
-  vpcId: ${my-vpc.vpcId}
-  instanceId: ${web-server.id}
-  publicIp: ${web-server.publicIp}
-  websiteUrl: http://${web-server.publicIp}
+  bucketArn: ${my-bucket.s3BucketArn}
+  bucketId: ${my-bucket.s3BucketId}
 
-# The vpc Terraform module package definition
 packages:
-  vpc:
+  s3-bucket:
     source: hcl
-    version: 0.12.0
+    version: 0.13.0
     parameters:
       - module
-      - terraform-aws-modules/vpc/aws
-      - 6.0.0
+      - terraform-aws-modules/s3-bucket/aws
+      - 4.1.2
 ```
 
 {{% /choosable %}}
@@ -813,7 +327,13 @@ packages:
 
 Generating an SDK gives you strongly typed inputs and outputs, IDE completion, and a package you can pin and share across your team. When you'd rather trade that type safety for flexibility — for example, to load a module whose address isn't known until runtime — you can use the [Any HCL Module](/registry/packages/hcl/) package directly.
 
-Add the Any HCL Module package to your project, then use its `Module` resource to load your desired module. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
+Add the Any HCL Module package to your project:
+
+```bash
+$ pulumi package add hcl
+```
+
+Then use its `Module` resource to load your desired module. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
@@ -823,16 +343,15 @@ Add the Any HCL Module package to your project, then use its `Module` resource t
 import * as pulumi from "@pulumi/pulumi";
 import * as hcl from "@pulumi/hcl";
 
-const vpc = new hcl.Module("vpc", {
-    source: "terraform-aws-modules/vpc/aws",
-    version: "6.0.0",
+const bucket = new hcl.Module("bucket", {
+    source: "terraform-aws-modules/s3-bucket/aws",
+    version: "4.1.2",
     inputs: {
-        name: "example-vpc",
-        cidr: "10.0.0.0/16",
+        bucket_prefix: "my-example-bucket",
     },
 });
 
-export const vpcId = vpc.outputs.apply(o => o["vpcId"]);
+export const bucketArn = bucket.outputs.apply(o => o["s3_bucket_arn"]);
 ```
 
 {{% /choosable %}}
@@ -843,15 +362,14 @@ export const vpcId = vpc.outputs.apply(o => o["vpcId"]);
 import pulumi
 import pulumi_hcl as hcl
 
-vpc = hcl.Module("vpc",
-    source="terraform-aws-modules/vpc/aws",
-    version="6.0.0",
+bucket = hcl.Module("bucket",
+    source="terraform-aws-modules/s3-bucket/aws",
+    version="4.1.2",
     inputs={
-        "name": "example-vpc",
-        "cidr": "10.0.0.0/16",
+        "bucket_prefix": "my-example-bucket",
     })
 
-pulumi.export("vpc_id", vpc.outputs["vpc_id"])
+pulumi.export("bucket_arn", bucket.outputs["s3_bucket_arn"])
 ```
 
 {{% /choosable %}}
@@ -868,18 +386,17 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		vpc, err := hcl.NewModule(ctx, "vpc", &hcl.ModuleArgs{
-			Source:  "terraform-aws-modules/vpc/aws",
-			Version: pulumi.StringRef("6.0.0"),
+		bucket, err := hcl.NewModule(ctx, "bucket", &hcl.ModuleArgs{
+			Source:  "terraform-aws-modules/s3-bucket/aws",
+			Version: pulumi.StringRef("4.1.2"),
 			Inputs: pulumi.Map{
-				"name": pulumi.String("example-vpc"),
-				"cidr": pulumi.String("10.0.0.0/16"),
+				"bucket_prefix": pulumi.String("my-example-bucket"),
 			},
 		})
 		if err != nil {
 			return err
 		}
-		ctx.Export("vpcId", vpc.Outputs.MapIndex(pulumi.String("vpc_id")))
+		ctx.Export("bucketArn", bucket.Outputs.MapIndex(pulumi.String("s3_bucket_arn")))
 		return nil
 	})
 }
@@ -896,20 +413,19 @@ using Pulumi.Hcl;
 
 return await Deployment.RunAsync(() =>
 {
-    var vpc = new Module("vpc", new ModuleArgs
+    var bucket = new Module("bucket", new ModuleArgs
     {
-        Source = "terraform-aws-modules/vpc/aws",
-        Version = "6.0.0",
+        Source = "terraform-aws-modules/s3-bucket/aws",
+        Version = "4.1.2",
         Inputs =
         {
-            { "name", "example-vpc" },
-            { "cidr", "10.0.0.0/16" },
+            { "bucket_prefix", "my-example-bucket" },
         },
     });
 
     return new Dictionary<string, object?>
     {
-        ["vpcId"] = vpc.Outputs.Apply(o => o["vpc_id"]),
+        ["bucketArn"] = bucket.Outputs.Apply(o => o["s3_bucket_arn"]),
     };
 });
 ```
@@ -929,15 +445,14 @@ import java.util.Map;
 public class App {
     public static void main(String[] args) {
         Pulumi.run(ctx -> {
-            var vpc = new Module("vpc", ModuleArgs.builder()
-                .source("terraform-aws-modules/vpc/aws")
-                .version("6.0.0")
+            var bucket = new Module("bucket", ModuleArgs.builder()
+                .source("terraform-aws-modules/s3-bucket/aws")
+                .version("4.1.2")
                 .inputs(Map.of(
-                    "name", "example-vpc",
-                    "cidr", "10.0.0.0/16"))
+                    "bucket_prefix", "my-example-bucket"))
                 .build());
 
-            ctx.export("vpcId", vpc.outputs().applyValue(o -> o.get("vpcId")));
+            ctx.export("bucketArn", bucket.outputs().applyValue(o -> o.get("s3_bucket_arn")));
         });
     }
 }
@@ -951,16 +466,15 @@ public class App {
 name: example
 runtime: yaml
 resources:
-  vpc:
+  bucket:
     type: hcl:index:Module
     properties:
-      source: terraform-aws-modules/vpc/aws
-      version: "6.0.0"
+      source: terraform-aws-modules/s3-bucket/aws
+      version: "4.1.2"
       inputs:
-        name: example-vpc
-        cidr: 10.0.0.0/16
+        bucket_prefix: my-example-bucket
 outputs:
-  vpcId: ${vpc.outputs["vpcId"]}
+  bucketArn: ${bucket.outputs["s3_bucket_arn"]}
 ```
 
 {{% /choosable %}}
@@ -971,100 +485,22 @@ The same functionality in Terraform would look like:
 
 ```hcl
 # Terraform equivalent
-module "vpc" {
-  source = "terraform-aws-modules/vpc/aws"
+module "s3_bucket" {
+  source = "terraform-aws-modules/s3-bucket/aws"
 
-  name = "my-vpc"
-  cidr = "10.0.0.0/16"
-
-  azs             = ["us-west-2a", "us-west-2b", "us-west-2c"]
-  private_subnets = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
-  public_subnets  = ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
-
-  enable_nat_gateway = true
-  enable_vpn_gateway = true
+  bucket_prefix = "my-example-bucket"
 
   tags = {
-    Terraform = "true"
     Environment = "dev"
   }
 }
 
-data "aws_ami" "amazon_linux" {
-  most_recent = true
-  owners      = ["amazon"]
-
-  filter {
-    name   = "name"
-    values = ["amzn2-ami-hvm-*-x86_64-gp2"]
-  }
+output "bucket_arn" {
+  value = module.s3_bucket.s3_bucket_arn
 }
 
-resource "aws_security_group" "web_sg" {
-  name        = "web-sg"
-  description = "Security group for web servers"
-  vpc_id      = module.vpc.vpc_id
-
-  ingress {
-    description = "HTTP"
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
-resource "aws_instance" "web_server" {
-  ami           = data.aws_ami.amazon_linux.id
-  instance_type = "t3.micro"
-  subnet_id     = module.vpc.public_subnets[0]
-  vpc_security_group_ids = [aws_security_group.web_sg.id]
-  associate_public_ip_address = true
-
-  user_data = <<-EOF
-    #!/bin/bash
-    yum update -y
-    yum install -y httpd
-    systemctl start httpd
-    systemctl enable httpd
-    echo "<h1>Hello from Pulumi and Terraform modules!</h1>" > /var/www/html/index.html
-  EOF
-
-  tags = {
-    Name = "web-server"
-    Environment = "dev"
-  }
-}
-
-output "vpc_id" {
-  value = module.vpc.vpc_id
-}
-
-output "instance_id" {
-  value = aws_instance.web_server.id
-}
-
-output "public_ip" {
-  value = aws_instance.web_server.public_ip
-}
-
-output "website_url" {
-  value = "http://${aws_instance.web_server.public_ip}"
+output "bucket_id" {
+  value = module.s3_bucket.s3_bucket_id
 }
 ```
 
@@ -1086,7 +522,6 @@ Test your deployment and clean up resources:
 # Deploy the stack
 $ pulumi up
 
-# Visit the website URL from the output
 # When done, destroy the resources
 $ pulumi destroy
 ```

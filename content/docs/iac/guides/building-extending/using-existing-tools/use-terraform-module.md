@@ -42,7 +42,7 @@ Also, many Terraform users have created their own custom modules and would like 
 The [Any HCL Module](/registry/packages/hcl/) package allows you to consume Terraform modules as if they were native Pulumi packages. It works by:
 
 1. Automatically installing and managing [OpenTofu](https://opentofu.org/) (an open-source Terraform-compatible implementation) to execute the module.
-2. Translating Pulumi resource declarations to Terraform configurations.
+2. Passing the inputs you provide to the module as Terraform variables.
 3. Managing state through your standard Pulumi state backend.
 4. Exposing module outputs as native Pulumi outputs.
 
@@ -61,10 +61,10 @@ Where:
 - `<module-source>` is either a registry module identifier (e.g. `terraform-aws-modules/rds/aws`) or a local path
 - `<version>` is an optional version constraint (e.g. `3.5.0`)
 
-For example, to add the AWS VPC module from the Terraform Registry:
+For example, to add the AWS S3 bucket module from the Terraform Registry:
 
 ```bash
-pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0
+pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program.
@@ -97,349 +97,117 @@ The package's page in Pulumi Cloud shows whether a given version has converted.
 
 See [Terraform Modules in the Pulumi Cloud Registry](/docs/idp/concepts/terraform-modules/) for the publishing side and the broader module workflow.
 
-## Example: Using the AWS RDS Module
+## Example: Using the AWS S3 Bucket Module
 
-Here's an example of how to use the AWS RDS module to provision a MySQL database in your Pulumi program.
+Here's an example of how to use the AWS S3 bucket module to create a bucket in your Pulumi program.
 
-First, start by installing the Terraform modules:
+First, add the module to your project:
 
 ```bash
-$ pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0
-$ pulumi package add hcl module terraform-aws-modules/rds/aws 6.10.0
+$ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
 ```
 
-After adding the packages, your `Pulumi.yaml` will be updated, and any necessary dependencies will be added to your project.
+After adding the package, your `Pulumi.yaml` is updated with the module definition:
 
-**Example:** Pulumi.yaml*
+**Example:** Pulumi.yaml
 
 ```yaml
-name: rds-example
+name: s3-bucket-example
 runtime:
   name: nodejs
   options:
     packagemanager: npm
 packages:
-  vpc:
+  s3-bucket:
     source: hcl
-    version: 0.12.0
+    version: 0.13.0
     parameters:
       - module
-      - terraform-aws-modules/vpc/aws
-      - 5.19.0
-  rds:
-    source: hcl
-    version: 0.12.0
-    parameters:
-      - module
-      - terraform-aws-modules/rds/aws
-      - 6.10.0
+      - terraform-aws-modules/s3-bucket/aws
+      - 4.1.2
 ```
 
 {{% chooser language "typescript,python,go,csharp,java,yaml" %}}
 
 {{% choosable language typescript %}}
 
-Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the modules, making those available to use as `@pulumi/vpc` and `@pulumi/rds` respectively. We can now use the Terraform modules directly in our TypeScript code.
+Since this was a TypeScript project, Pulumi generated a TypeScript SDK for the module, making it available as `@pulumi/s3-bucket`. We can now use the Terraform module directly in our code:
 
-**Example:** index.ts - Using the Terraform VPC and RDS module in a Pulumi program*
+**Example:** index.ts
 
 ```typescript
-import * as vpcmod from '@pulumi/vpc';
-import * as pulumi from '@pulumi/pulumi';
-import * as rdsmod from '@pulumi/rds';
-import * as aws from '@pulumi/aws';
-import * as std from '@pulumi/std';
+import * as s3Bucket from "@pulumi/s3-bucket";
 
-// Get available availability zones
-const azs = aws.getAvailabilityZonesOutput({
-  filters: [{
-        name: "opt-in-status",
-        values: ["opt-in-not-required"],
-    }]
-}).names.apply(names => names.slice(0, 3));
-
-const cidr = "10.0.0.0/16";
-
-const cfg = new pulumi.Config();
-const prefix = cfg.get("prefix") ?? pulumi.getStack();
-
-// Create a VPC using the terraform-aws-modules/vpc module
-const vpc = new vpcmod.Module("test-vpc", {
-  azs: azs,
-  name: `test-vpc-${prefix}`,
-  cidr,
-  publicSubnets: azs.apply(azs => azs.map((_, i) => {
-    return getCidrSubnet(cidr, i+1);
-  })),
-  privateSubnets: azs.apply(azs => azs.map((_, i) => {
-    return getCidrSubnet(cidr, i+1+4);
-  })),
-  databaseSubnets: azs.apply(azs => azs.map((_, i) => {
-    return getCidrSubnet(cidr, i+1 + 8);
-  })),
-  createDatabaseSubnetGroup: true,
+// Create an S3 bucket using the Terraform module
+const bucket = new s3Bucket.Module("my-bucket", {
+    bucketPrefix: "my-example-bucket",
+    tags: {
+        Environment: "dev",
+    },
 });
 
-// Create a security group for the RDS instance
-const rdsSecurityGroup = new aws.ec2.SecurityGroup('test-rds-sg', {
-  vpcId: vpc.vpcId.apply(id => id!),
-});
-
-new aws.vpc.SecurityGroupIngressRule('test-rds-sg-ingress', {
-  ipProtocol: 'tcp',
-  securityGroupId: rdsSecurityGroup.id,
-  cidrIpv4: vpc.vpcCidrBlock.apply(cidr => cidr!),
-  fromPort: 3306,
-  toPort: 3306,
-});
-
-// Create an RDS instance using the terraform-aws-modules/rds module
-new rdsmod.Module("test-rds", {
-  engine: "mysql",
-  identifier: `test-rds-${prefix}`,
-  manageMasterUserPassword: true,
-  publiclyAccessible: false,
-  allocatedStorage: 20,
-  maxAllocatedStorage: 100,
-  instanceClass: "db.t4g.large",
-  engineVersion: "8.0",
-  family: "mysql8.0",
-  dbName: "completeMysql",
-  username: "complete_mysql",
-  port: '3306',
-  multiAz: true,
-  dbSubnetGroupName: vpc.databaseSubnetGroupName.apply(name => name!),
-  vpcSecurityGroupIds: [rdsSecurityGroup.id],
-  skipFinalSnapshot: true,
-  deletionProtection: false,
-  createDbOptionGroup: false,
-  createDbParameterGroup: false,
-});
-
-// Utility function to calculate subnet CIDRs
-function getCidrSubnet(cidr: string, netnum: number): pulumi.Output<string> {
-    return std.cidrsubnetOutput({
-    input: cidr,
-    newbits: 8,
-    netnum,
-  }).result;
-}
+// The module's outputs are strongly typed
+export const bucketArn = bucket.s3BucketArn;
+export const bucketId = bucket.s3BucketId;
 ```
 
 {{% /choosable %}}
 
 {{% choosable language python %}}
 
-Since this was a Python project, Pulumi generated a Python SDK for the modules, making those available to use as `pulumi_vpc` and `pulumi_rds` respectively. We can now use the Terraform modules directly in our code:
+Since this was a Python project, Pulumi generated a Python SDK for the module, making it available as `pulumi_s3_bucket`. We can now use the Terraform module directly in our code:
 
-**Example:** `__main__.py` - Using the Terraform VPC and RDS module in a Pulumi program
+**Example:** `__main__.py`
 
 ```python
 import pulumi
-import pulumi_aws as aws
-import pulumi_vpc as vpcmod
-import pulumi_rds as rdsmod
-import pulumi_std as std
+import pulumi_s3_bucket as s3bucket
 
-# Get available availability zones
-azs = aws.get_availability_zones_output(
-    filters=[{
-        "name": "opt-in-status",
-        "values": ["opt-in-not-required"],
-    }]
-).names.apply(lambda names: names[:3])
+# Create an S3 bucket using the Terraform module
+bucket = s3bucket.Module("my-bucket",
+    bucket_prefix="my-example-bucket",
+    tags={
+        "Environment": "dev",
+    })
 
-cidr = "10.0.0.0/16"
-
-cfg = pulumi.Config()
-prefix = cfg.get("prefix") or pulumi.get_stack()
-
-# Utility function to calculate subnet CIDRs
-def get_cidr_subnet(cidr, netnum):
-    return std.cidrsubnet_output(
-        input=cidr,
-        newbits=8,
-        netnum=netnum
-    ).result
-
-# Create a VPC using the terraform-aws-modules/vpc module
-vpc = vpcmod.Module("test-vpc",
-    azs=azs,
-    name=f"test-vpc-{prefix}",
-    cidr=cidr,
-    public_subnets=azs.apply(lambda azs: [get_cidr_subnet(cidr, i+1) for i in range(len(azs))]),
-    private_subnets=azs.apply(lambda azs: [get_cidr_subnet(cidr, i+1+4) for i in range(len(azs))]),
-    database_subnets=azs.apply(lambda azs: [get_cidr_subnet(cidr, i+1+8) for i in range(len(azs))]),
-    create_database_subnet_group=True
-)
-
-# Create a security group for the RDS instance
-rds_security_group = aws.ec2.SecurityGroup('test-rds-sg',
-    vpc_id=vpc.vpc_id
-)
-
-aws.vpc.SecurityGroupIngressRule('test-rds-sg-ingress',
-    ip_protocol='tcp',
-    security_group_id=rds_security_group.id,
-    cidr_ipv4=vpc.vpc_cidr_block,
-    from_port=3306,
-    to_port=3306
-)
-
-# Create an RDS instance using the terraform-aws-modules/rds module
-rdsmod.Module("test-rds",
-    engine="mysql",
-    identifier=f"test-rds-{prefix}",
-    manage_master_user_password=True,
-    publicly_accessible=False,
-    allocated_storage=20,
-    max_allocated_storage=100,
-    instance_class="db.t4g.large",
-    engine_version="8.0",
-    family="mysql8.0",
-    db_name="completeMysql",
-    username="complete_mysql",
-    port='3306',
-    multi_az=True,
-    db_subnet_group_name=vpc.database_subnet_group_name,
-    vpc_security_group_ids=[rds_security_group.id],
-    skip_final_snapshot=True,
-    deletion_protection=False,
-    create_db_option_group=False,
-    create_db_parameter_group=False
-)
+# The module's outputs are strongly typed
+pulumi.export("bucket_arn", bucket.s3_bucket_arn)
+pulumi.export("bucket_id", bucket.s3_bucket_id)
 ```
 
 {{% /choosable %}}
 
 {{% choosable language go %}}
 
-**Example:** `main.go` - Using the Terraform VPC and RDS module in a Pulumi program
+Since this was a Go project, Pulumi generated a Go SDK for the module. We can now use the Terraform module directly in our code:
 
-Since this was a Go project, Pulumi generated a Go SDK for the modules, making those available to use as `example.com/pulumi-rds/sdk/go/rds` and `example.com/pulumi-vpc/sdk/go/vpc`. We can now use the Terraform modules directly in our code:
+**Example:** `main.go`
 
 ```go
 package main
 
 import (
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/ec2"
-	"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/vpc"
-	"github.com/pulumi/pulumi-std/sdk/go/std"
-	rdsmod "example.com/pulumi-rds/sdk/go/rds"
-	vpcmod "example.com/pulumi-vpc/sdk/go/vpc"
+	"example.com/pulumi-s3-bucket/sdk/go/s3bucket"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 )
 
-func run(ctx *pulumi.Context) error {
-	// Get available availability zones
-	azs := aws.GetAvailabilityZonesOutput(ctx, aws.GetAvailabilityZonesOutputArgs{
-		Filters: aws.GetAvailabilityZonesFilterArray{
-			aws.GetAvailabilityZonesFilterArgs{
-				Name:   pulumi.String("opt-in-status"),
-				Values: pulumi.StringArray{pulumi.String("opt-in-not-required")},
-			},
-		},
-	})
-
-	azNames := azs.Names().ApplyT(func(names []string) []string {
-		if len(names) > 3 {
-			return names[:3]
-		}
-		return names
-	}).(pulumi.StringArrayOutput)
-
-	cidr := "10.0.0.0/16"
-	cfg := config.New(ctx, "")
-	prefix := cfg.Get("prefix")
-	if prefix == "" {
-		prefix = ctx.Stack()
-	}
-
-	// Create a VPC using the terraform-aws-modules/vpc module
-	vpcInstance, err := vpcmod.NewModule(ctx, "test-vpc", &vpcmod.ModuleArgs{
-		Azs:                          azNames,
-		Name:                         pulumi.Sprintf("test-vpc-%s", prefix),
-		Cidr:                         pulumi.String(cidr),
-		PublicSubnets:               applyAznamesForSubnet(ctx, azNames, cidr, 1),
-		PrivateSubnets:              applyAznamesForSubnet(ctx, azNames, cidr, 5),
-		DatabaseSubnets:             applyAznamesForSubnet(ctx, azNames, cidr, 9),
-		CreateDatabaseSubnetGroup: pulumi.Bool(true),
-	})
-	if err != nil {
-		return err
-	}
-
-	// Create a security group for the RDS instance
-	rdsSecurityGroup, err := ec2.NewSecurityGroup(ctx, "test-rds-sg", &ec2.SecurityGroupArgs{
-		VpcId: vpcInstance.VpcId,
-	})
-	if err != nil {
-		return err
-	}
-	_, err = vpc.NewSecurityGroupIngressRule(ctx, "test-rds-sg-ingress", &vpc.SecurityGroupIngressRuleArgs{
-		IpProtocol:      pulumi.String("tcp"),
-		SecurityGroupId: rdsSecurityGroup.ID(),
-		CidrIpv4:        vpcInstance.VpcCidrBlock,
-		FromPort:        pulumi.Int(3306),
-		ToPort:          pulumi.Int(3306),
-	})
-	if err != nil {
-		return err
-	}
-
-	// Create an RDS instance using the terraform-aws-modules/rds module
-	_, err = rdsmod.NewModule(ctx, "test-rds", &rdsmod.ModuleArgs{
-		Engine:                      pulumi.String("mysql"),
-		Identifier:                  pulumi.Sprintf("test-rds-%s", prefix),
-		ManageMasterUserPassword: pulumi.Bool(true),
-		PubliclyAccessible:         pulumi.Bool(false),
-		AllocatedStorage:           pulumi.Float64(20),
-		MaxAllocatedStorage:       pulumi.Float64(100),
-		InstanceClass:              pulumi.String("db.t4g.large"),
-		EngineVersion:              pulumi.String("8.0"),
-		Family:                      pulumi.String("mysql8.0"),
-		DbName:                     pulumi.String("completeMysql"),
-		Username:                    pulumi.String("complete_mysql"),
-		Port:                        pulumi.String("3306"),
-		MultiAz:                    pulumi.Bool(true),
-		DbSubnetGroupName:        vpcInstance.DatabaseSubnetGroupName,
-		VpcSecurityGroupIds:      pulumi.StringArray{rdsSecurityGroup.ID()},
-		SkipFinalSnapshot:         pulumi.Bool(true),
-		DeletionProtection:         pulumi.Bool(false),
-		CreateDbOptionGroup:      pulumi.Bool(false),
-		CreateDbParameterGroup:   pulumi.Bool(false),
-	})
-	return err
-}
-
-func applyAznamesForSubnet(
-	ctx *pulumi.Context,
-	azNames pulumi.StringArrayOutput,
-	cidr string,
-	offset int,
-) pulumi.StringArrayOutput {
-	return azNames.ApplyT(func(azs []string) ([]string, error) {
-		subnets := make([]string, len(azs))
-		for i := range azs {
-			netnum := offset + i
-			r, err := std.Cidrsubnet(ctx, &std.CidrsubnetArgs{
-				Input:   cidr,
-				Newbits: 8,
-				Netnum:  netnum,
-			})
-			if err != nil {
-				return nil, err
-			}
-			subnets[i] = r.Result
-		}
-		return subnets, nil
-	}).(pulumi.StringArrayOutput)
-}
-
 func main() {
-	pulumi.Run(run)
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		// Create an S3 bucket using the Terraform module
+		bucket, err := s3bucket.NewModule(ctx, "my-bucket", &s3bucket.ModuleArgs{
+			BucketPrefix: pulumi.String("my-example-bucket"),
+			Tags: pulumi.StringMap{
+				"Environment": pulumi.String("dev"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		// The module's outputs are strongly typed
+		ctx.Export("bucketArn", bucket.S3BucketArn)
+		ctx.Export("bucketId", bucket.S3BucketId)
+		return nil
+	})
 }
 ```
 
@@ -447,217 +215,65 @@ func main() {
 
 {{% choosable language csharp %}}
 
-Since this was a C# project, Pulumi generated a C# SDK for the modules, making those available to use as `Pulumi.Rds` and `Pulumi.Vpc`. We can now use the Terraform modules directly in our code:
+Since this was a C# project, Pulumi generated a C# SDK for the module, making it available as `Pulumi.S3Bucket`. We can now use the Terraform module directly in our code:
 
-**Example:** `Program.cs` - Using the Terraform VPC and RDS module in a Pulumi program
+**Example:** `Program.cs`
 
 ```csharp
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using Pulumi;
-using Aws = Pulumi.Aws;
-using Rdsmod = Pulumi.Rds;
-using Std = Pulumi.Std;
-using Vpcmod = Pulumi.Vpc;
+using Pulumi.S3Bucket;
 
 return await Deployment.RunAsync(() =>
 {
-    // Get available availability zones
-    var azs = Aws.GetAvailabilityZones.Invoke(new Aws.GetAvailabilityZonesInvokeArgs
+    // Create an S3 bucket using the Terraform module
+    var bucket = new Module("my-bucket", new ModuleArgs
     {
-        Filters =
-            {
-                new Aws.Inputs.GetAvailabilityZonesFilterInputArgs
-                {
-                    Name = "opt-in-status",
-                    Values = { "opt-in-not-required" }
-                }
-            }
-    }).Apply(result => result.Names.Take(3).ToArray());
-
-    var cidr = "10.0.0.0/16";
-
-    var config = new Pulumi.Config();
-    var prefix = config.Get("prefix") ?? Deployment.Instance.StackName;
-
-    // Create a VPC using the terraform-aws-modules/vpc module
-    var vpc = new Vpcmod.Module("test-vpc", new Vpcmod.ModuleArgs
-    {
-        Azs = azs,
-        Name = Output.Format($"test-vpc-{prefix}"),
-        Cidr = cidr,
-        PublicSubnets = Utils.Subnets(cidr, azs, 1),
-        PrivateSubnets = Utils.Subnets(cidr, azs, 5),
-        DatabaseSubnets = Utils.Subnets(cidr, azs, 9),
-        CreateDatabaseSubnetGroup = true,
-    });
-
-    // Create a security group for the RDS instance
-    var rdsSecurityGroup = new Aws.Ec2.SecurityGroup("test-rds-sg", new Aws.Ec2.SecurityGroupArgs
-    {
-        VpcId = vpc.VpcId.Apply(id => id ?? string.Empty),
-    });
-
-    _ = new Aws.Vpc.SecurityGroupIngressRule("test-rds-sg-ingress", new Aws.Vpc.SecurityGroupIngressRuleArgs
-    {
-        IpProtocol = "tcp",
-        SecurityGroupId = rdsSecurityGroup.Id,
-        CidrIpv4 = vpc.VpcCidrBlock.Apply(x => x!),
-        FromPort = 3306,
-        ToPort = 3306,
-    });
-
-    // Create an RDS instance using the terraform-aws-modules/rds module
-    _ = new Rdsmod.Module("test-rds", new Rdsmod.ModuleArgs
-    {
-        Engine = "mysql",
-        Identifier = Output.Format($"test-rds-{prefix}"),
-        ManageMasterUserPassword = true,
-        PubliclyAccessible = false,
-        AllocatedStorage = 20,
-        MaxAllocatedStorage = 100,
-        InstanceClass = "db.t4g.large",
-        EngineVersion = "8.0",
-        Family = "mysql8.0",
-        DbName = "completeMysql",
-        Username = "complete_mysql",
-        Port = "3306",
-        MultiAz = true,
-        DbSubnetGroupName = vpc.DatabaseSubnetGroupName,
-        VpcSecurityGroupIds = { rdsSecurityGroup.Id },
-        SkipFinalSnapshot = true,
-        DeletionProtection = false,
-        CreateDbOptionGroup = false,
-        CreateDbParameterGroup = false,
-    });
-});
-
-// Utilities to calculate subnet CIDRs
-internal class Utils {
-    public static Output<ImmutableArray<string>> Subnets(string cidr, Output<string[]> azs, int offset) {
-        return azs.Apply(names => Pulumi.Output.All(names.Select((_, i) => Utils.GetCidrSubnet(cidr, i + 1))));
-    }
-
-    public static Output<string> GetCidrSubnet(string cidr, int netnum)
-    {
-        return Std.Cidrsubnet.Invoke(new Std.CidrsubnetInvokeArgs
+        BucketPrefix = "my-example-bucket",
+        Tags =
         {
-            Input = cidr,
-            Newbits = 8,
-            Netnum = netnum
-        }).Apply(result => result.Result);
-    }
-}
+            { "Environment", "dev" },
+        },
+    });
+
+    // The module's outputs are strongly typed
+    return new Dictionary<string, object?>
+    {
+        ["bucketArn"] = bucket.S3BucketArn,
+        ["bucketId"] = bucket.S3BucketId,
+    };
+});
 ```
 
 {{% /choosable %}}
 
 {{% choosable language java %}}
 
-Since this was a Java project, Pulumi generated a Java SDK for the modules, making those available to use as `com.pulumi.rds` and `com.pulumi.vpc`. We can now use the Terraform modules directly in our code:
+Since this was a Java project, Pulumi generated a Java SDK for the module, making it available as `com.pulumi.s3bucket`. We can now use the Terraform module directly in our code:
 
-**Example:** `App.java` - Using the Terraform VPC and RDS module in a Pulumi program
+**Example:** `App.java`
 
 ```java
 package myproject;
 
-import com.pulumi.Context;
 import com.pulumi.Pulumi;
-import com.pulumi.core.Output;
-import com.pulumi.aws.AwsFunctions;
-import com.pulumi.aws.inputs.GetAvailabilityZonesArgs;
-import com.pulumi.aws.inputs.GetAvailabilityZonesFilterArgs;
-import com.pulumi.std.StdFunctions;
-import com.pulumi.aws.ec2.SecurityGroup;
-import com.pulumi.aws.ec2.SecurityGroupArgs;
-import com.pulumi.aws.vpc.SecurityGroupIngressRule;
-import com.pulumi.aws.vpc.SecurityGroupIngressRuleArgs;
-import com.pulumi.Config;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.List;
-import java.util.Collections;
+import com.pulumi.s3bucket.Module;
+import com.pulumi.s3bucket.ModuleArgs;
+import java.util.Map;
 
 public class App {
-    public static void stack(Context ctx) {
-
-        // Get available availability zones
-        final var azNames = AwsFunctions.getAvailabilityZones(GetAvailabilityZonesArgs.builder()
-            .filters(GetAvailabilityZonesFilterArgs.builder()
-                     .name("opt-in-status")
-                     .values("opt-in-not-required")
-                     .build())
-            .build())
-            .applyValue(result -> result.names().subList(0, 3));
-
-        final var cidr = "10.0.0.0/16";
-        final var prefix = ctx.config().get("prefix").orElse(ctx.stackName());
-
-        // Create a VPC using the terraform-aws-modules/vpc module
-        final var vpc = new com.pulumi.vpc.Module("test-vpc", com.pulumi.vpc.ModuleArgs.builder()
-            .azs(azNames)
-            .name("test-vpc-" + prefix)
-            .cidr(cidr)
-            .publicSubnets(subnets(cidr, azNames, 1))
-            .privateSubnets(subnets(cidr, azNames, 5))
-            .databaseSubnets(subnets(cidr, azNames, 9))
-            .createDatabaseSubnetGroup(true)
-            .build());
-
-        final var rdsSecurityGroup = new SecurityGroup("test-rds-sg", SecurityGroupArgs.builder()
-            .vpcId(vpc.vpcId().applyValue(x -> x.get()))
-            .build());
-
-        new SecurityGroupIngressRule("test-rds-sg-ingress", SecurityGroupIngressRuleArgs.builder()
-            .ipProtocol("tcp")
-            .securityGroupId(rdsSecurityGroup.id())
-            .cidrIpv4(vpc.vpcCidrBlock().applyValue(x -> x.get()))
-            .fromPort(3306)
-            .toPort(3306)
-            .build());
-
-        new com.pulumi.rds.Module("test-rds", com.pulumi.rds.ModuleArgs.builder()
-            .engine("mysql")
-            .identifier("test-rds-" + prefix)
-            .manageMasterUserPassword(true)
-            .publiclyAccessible(false)
-            .allocatedStorage(20.0)
-            .maxAllocatedStorage(100.0)
-            .instanceClass("db.t4g.large")
-            .engineVersion("8.0")
-            .family("mysql8.0")
-            .dbName("completeMysql")
-            .username("complete_mysql")
-            .port("3306")
-            .multiAz(true)
-            .dbSubnetGroupName(vpc.databaseSubnetGroupName().applyValue(x -> x.get()))
-            .vpcSecurityGroupIds(rdsSecurityGroup.id().applyValue(x -> Collections.singletonList(x)))
-            .skipFinalSnapshot(true)
-            .deletionProtection(false)
-            .createDbOptionGroup(false)
-            .createDbParameterGroup(false)
-            .build());
-    }
-
-    private static Output<List<String>> subnets(String cidr, Output<List<String>> azNames, int offset) {
-        return azNames.apply(names -> Output.all(IntStream.range(0, names.size())
-                                                 .mapToObj(i -> getCidrSubnet(cidr, i+offset))
-                                                 .collect(Collectors.toList())));
-    }
-
-    private static Output<String> getCidrSubnet(String cidr, int netnum) {
-        return StdFunctions.cidrsubnet(com.pulumi.std.inputs.CidrsubnetArgs.builder()
-            .input(cidr)
-            .newbits(8)
-            .netnum(netnum)
-            .build()).applyValue(x -> x.result());
-    }
-
     public static void main(String[] args) {
-        Pulumi.run(App::stack);
+        Pulumi.run(ctx -> {
+            // Create an S3 bucket using the Terraform module
+            var bucket = new Module("my-bucket", ModuleArgs.builder()
+                .bucketPrefix("my-example-bucket")
+                .tags(Map.of("Environment", "dev"))
+                .build());
+
+            // The module's outputs are strongly typed
+            ctx.export("bucketArn", bucket.s3BucketArn());
+            ctx.export("bucketId", bucket.s3BucketId());
+        });
     }
 }
 ```
@@ -666,94 +282,37 @@ public class App {
 
 {{% choosable language yaml %}}
 
-When authoring in YAML, there is no need for Pulumi to generate a SDK. Pulumi generates some metadata instead:
+When authoring in YAML, there's no SDK to generate — you reference the module by its schema token, which takes the format `<package-name>:index:Module`:
 
-```bash
-$ ls sdks/vpc/
-sdks/vpc/vpc-5.19.0.yaml
-```
-
-In the YAML you can reference the Terraform module by its schema token, which takes the format `<module-name>:index:Module`:
-
-**Example:** `Pulumi.yaml` - Using the Terraform VPC and RDS module in a Pulumi program
+**Example:** `Pulumi.yaml`
 
 ```yaml
-name: testproj-yaml
-description: testproj-yaml
+name: s3-bucket-example
 runtime: yaml
+description: Use a Terraform module in Pulumi
+
 resources:
-  testVpc:
-    type: vpc:index:Module
+  # Create an S3 bucket using the Terraform module
+  my-bucket:
+    type: s3-bucket:index:Module
     properties:
-      name: test-vpc-${pulumi.stack}
-      azs:
-        - us-west-2a
-        - us-west-2b
-        - us-west-2c
-      cidr: 10.0.0.0/16
-      publicSubnets:
-        - 10.0.1.0/24
-        - 10.0.2.0/24
-        - 10.0.3.0/24
-      privateSubnets:
-        - 10.0.5.0/24
-        - 10.0.6.0/24
-        - 10.0.7.0/24
-      databaseSubnets:
-        - 10.0.9.0/24
-        - 10.0.10.0/24
-        - 10.0.11.0/24
-      createDatabaseSubnetGroup: true
-  testRdsSg:
-    type: aws:ec2:SecurityGroup
-    properties:
-      vpcId: ${testVpc.vpcId}
-  testRdsSgIngress:
-    type: aws:vpc:SecurityGroupIngressRule
-    properties:
-      ipProtocol: tcp
-      securityGroupId: ${testRdsSg.id}
-      cidrIpv4: ${testVpc.vpcCidrBlock}
-      fromPort: 3306
-      toPort: 3306
-  testRds:
-    type: rds:index:Module
-    properties:
-      engine: mysql
-      identifier: test-rds-${pulumi.stack}
-      manageMasterUserPassword: true
-      publiclyAccessible: false
-      allocatedStorage: 20
-      maxAllocatedStorage: 100
-      instanceClass: db.t4g.large
-      engineVersion: 8
-      family: mysql8.0
-      dbName: completeMysql
-      username: complete_mysql
-      port: '3306'
-      multiAz: true
-      dbSubnetGroupName: ${testVpc.databaseSubnetGroupName}
-      vpcSecurityGroupIds:
-        - ${testRdsSg.id}
-      skipFinalSnapshot: true
-      deletionProtection: false
-      createDbOptionGroup: false
-      createDbParameterGroup: false
+      bucketPrefix: my-example-bucket
+      tags:
+        Environment: dev
+
+# The module's outputs are strongly typed
+outputs:
+  bucketArn: ${my-bucket.s3BucketArn}
+  bucketId: ${my-bucket.s3BucketId}
+
 packages:
-  rds:
+  s3-bucket:
     source: hcl
-    version: 0.12.0
+    version: 0.13.0
     parameters:
       - module
-      - terraform-aws-modules/rds/aws
-      - 6.10.0
-  vpc:
-    source: hcl
-    version: 0.12.0
-    parameters:
-      - module
-      - terraform-aws-modules/vpc/aws
-      - 5.19.0
+      - terraform-aws-modules/s3-bucket/aws
+      - 4.1.2
 ```
 
 {{% /choosable %}}
@@ -764,193 +323,32 @@ In the above code, the imported Terraform module works the same as any other Pul
 
 ## Configuring Terraform Providers
 
-Some modules require Terraform providers to be configured with specific settings. You can configure these providers from within Pulumi:
+A Terraform module runs against your project's default provider configuration — the same configuration your Pulumi-native resources use — so it inherits whatever region, account, or credentials you've already set. To target a specific region, for example, set it the way you would for any Pulumi provider:
 
-{{% chooser language "typescript,python,go,csharp,java" %}}
-
-{{% choosable language typescript %}}
-
-**Example:** `index.ts` - Configuring the imported Terraform bucket module
-
-```typescript
-import * as bucket from "@pulumi/bucket";
-
-// Configure the AWS provider for the module
-const provider = new bucket.Provider("test-provider", {
-    aws: {
-        "region": "us-west-2"
-    }
-});
-
-// Use the provider with the module
-const testBucket = new bucket.Module("test-bucket", {
-    bucket: `${prefix}-test-bucket`
-}, { provider: provider });
+```bash
+$ pulumi config set aws:region us-west-2
 ```
 
-{{% /choosable %}}
-
-{{% choosable language python %}}
-
-**Example:** `__main__.py` - Configuring the imported Terraform bucket module
-
-```python
-import pulumi
-import pulumi_bucket as bucket
-
-# Configure the AWS provider for the module
-provider = bucket.Provider("bucket-provider", aws={
-    "region": "us-west-2"
-})
-
-# Use the provider with the module
-test_bucket = bucket.Module("test-bucket",
-    bucket=f"${prefix}-test-bucket"
-    opts=pulumi.ResourceOptions(provider=provider)
-)
-```
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-
-**Example:** `main.go` - Configuring the imported Terraform bucket module
-
-```go
-package main
-
-import (
-	bucket "example.com/pulumi-bucket/sdk/go/bucket"
-	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-)
-
-
-func run(ctx *pulumi.Context) error {
-	// Configure the AWS provider for the module
-	prov, err := bucket.NewProvider(ctx, "provider", &bucket.ProviderArgs{
-		Aws: pulumi.ToMap(map[string]any{
-			"region": "us-west-2",
-		}),
-	})
-	if err != nil {
-		return err
-	}
-
-	// Use the provider with the module
-	bucketInstance, err := bucket.NewModule(ctx, "test-bucket", &bucket.ModuleArgs{
-		Bucket: pulumi.Sprintf("test-vpc-%s", prefix),
-	}, pulumi.Provider(prov))
-	if err != nil {
-		return err
-	}
-}
-
-func main() {
-	pulumi.Run(run)
-}
-```
-
-{{% /choosable %}}
-
-{{% choosable language csharp %}}
-
-**Example:** `Program.cs` - Configuring the imported Terraform bucket module
-
-```csharp
-using Pulumi;
-using Bucket = Pulumi.Bucket;
-
-return await Deployment.RunAsync(() =>
-{
-    // Configure the AWS provider for the module
-    var provider = new Bucket.Provider("test-provider", new Bucket.ProviderArgs
-    {
-        Aws = {{"region", "us-west-2"}}
-    });
-
-    // Use the provider with the module
-    var bucket = new Bucket.Module("test-bucket", new Bucket.Args
-    {
-        Bucket = $"{prefix}-test-bucket"
-    }, new CustomResourceOptions
-    {
-        Provider = provider
-    });
-```
-
-{{% /choosable %}}
-
-{{% choosable language java %}}
-
-**Example:** `App.java` - Configuring the imported Terraform bucket module
-
-```java
-import com.pulumi.Context;
-import com.pulumi.Pulumi;
-import com.pulumi.resources.CustomResourceOptions;
-
-public class App {
-    public static void stack(Context ctx) {
-
-        // Configure the AWS provider for the module
-        final var provider = new com.pulumi.bucket.Provider("test-provider",
-            com.pulumi.bucket.ProviderArgs.builder()
-            .aws(Collections.singletonMap("region", "us-west-2"))
-            .build());
-
-        // Use the provider with the module
-        final var bucket = new com.pulumi.bucket.Module("test-bucket",
-            com.pulumi.bucket.ModuleArgs.builder()
-                .bucket(prefix+"-test-bucket")
-                .build(),
-            CustomResourceOptions.builder().provider(provider).build());
-    }
-
-    public static void main(String[] args) {
-        Pulumi.run(App::stack);
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{% /chooser %}}
-
-Provider configuration is module-specific, so refer to the module's documentation for available configuration options.
+You can also supply provider settings, including short-lived credentials, through a [Pulumi ESC environment](/docs/esc/). See [Providers](/docs/iac/concepts/providers/) for the full range of configuration options.
 
 ## Troubleshooting
 
 ### Fixing Invalid Relative Paths
 
-When using modules that accept file paths, use absolute paths instead of relative paths.
-
-**Example:** index.ts - Using absolute paths to reference external files*
+When a module accepts a file path, pass an absolute path instead of a relative one. For example, the [AWS Lambda module](https://registry.terraform.io/modules/terraform-aws-modules/lambda/aws) accepts a `source_path` that points to the location of function's code:
 
 ```typescript
-import * as path from "path";
-import * as process from "process";
+import * as hcl from "@pulumi/hcl";
 
-const pwd = process.cwd();
-
-const lambdaModule = new lambda.Module("my-lambda", {
-    source_path: `${pwd}/src/app.ts`,
+const lambdaModule = new hcl.Module("my-lambda", {
+    source: "terraform-aws-modules/lambda/aws",
+    inputs: {
+        function_name: "my-function",
+        handler: "index.handler",
+        runtime: "nodejs20.x",
+        source_path: `${process.cwd()}/src`,
+    },
 });
 ```
 
-This is important because the Terraform modules have a different working directory, to allow for relative import of other modules, which means during execution the working directory will be different. Using `process.cwd()` here captures the Pulumi working directory, which we then use to build an absolute path to the external file.
-
-### Fixing Incorrect Output Types
-
-If Pulumi infers an incorrect type for a module output, you can override it as documented in the [Config Reference](https://github.com/pulumi/pulumi-terraform-module/blob/main/docs/config-reference.md).
-
-## Limitations
-
-Current limitations include:
-
-- Using the `transforms` resource option
-- Targeted updates via `pulumi up --target ...`
-- Protecting individual resources deployed by the module
-
-## Conclusion
-
-Using Terraform modules directly in Pulumi allows you to leverage the vast ecosystem of Terraform modules and your existing investments into custom modules, while maintaining all the benefits of Pulumi's rich programming model. This approach enables the two products to coexist, allowing teams to continue to collaborate while using the best tools for their specific needs, and enables a gradual migration path from Terraform to Pulumi.
+This is necessary because Terraform modules run from a different working directory than your Pulumi program, so a relative path would resolve incorrectly. The example above uses the Node.js built-in `process.cwd()` to use the full path of the current working directory to resolve the full path to the function code in `src`.
