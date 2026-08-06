@@ -30,7 +30,7 @@ The New Project Wizard supports three primary workflows:
 Within the New Project Wizard, you can configure:
 
 - **Project configuration**: When creating a new project, set the project name, description, and other metadata
-- **Destination repository**: Select an existing repository or create a new one on [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), or [GitLab](/docs/integrations/version-control/gitlab/)
+- **Destination repository**: Select an existing repository or create a new one on [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), or [Bitbucket](/docs/integrations/version-control/bitbucket/)
 - **Stack configuration values**:
   - Import [ESC environments](/docs/esc/concepts/environments/) to provide configuration and secrets
   - Set individual configuration values using a form-based interface (see note below)
@@ -59,14 +59,17 @@ To add a stack to an existing project:
 
 - Navigate to **Stacks** → select a stack → select **Add Stack**
 
-## Limitations
+## Requirements by deployment method
 
-- No-code stacks are supported on [GitHub](/docs/integrations/version-control/github-app/) and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/)
-- When forking templates, destination repositories can be created on [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), or [GitLab](/docs/integrations/version-control/gitlab/)
+The wizard offers a deployment method for each new stack. What each one requires:
+
+- **Pulumi Deployments (VCS-backed)**: writes the stack's configuration to a Git repository. Supported on [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), and [Bitbucket](/docs/integrations/version-control/bitbucket/). Your organization needs an integration for that provider, and you need to authorize your individual account with it.
+- **Pulumi Deployments (no-code)**: stores the stack's configuration in a [Pulumi ESC](/docs/esc/) environment instead of a repository. See [no-code stacks](/docs/idp/concepts/no-code-stacks/) for its requirements — any configured VCS provider works.
+- **Local deployment**: deploy the stack from your machine with the Pulumi CLI. No VCS integration required.
 
 ## VCS authorization
 
-To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/concepts/), users must authorize their VCS provider. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/).
+To use the New Project Wizard with [Pulumi Deployments](/docs/deployments/concepts/), users must authorize their VCS provider. Pulumi supports [GitHub](/docs/integrations/version-control/github-app/), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), [GitLab](/docs/integrations/version-control/gitlab/), and [Bitbucket](/docs/integrations/version-control/bitbucket/).
 
 For GitHub, the authorization requires permissions to manage public and private repositories and workflows. Pulumi uses these permissions to read template sources, write template content into repositories, and optionally create new repositories. While the authorization request includes additional repository permissions, Pulumi does not use all of them. This is due to GitHub lacking fine-grained repository permissions as part of the [OAuth application scopes](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps#available-scopes).
 

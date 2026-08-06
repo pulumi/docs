@@ -34,7 +34,7 @@ Neo matches your GitHub identity to your Pulumi user. If you signed in to Pulumi
 
 ## Availability
 
-Neo code reviews run on GitHub.com. GitHub Enterprise Server is not supported. Code reviews are enabled by default for organizations with [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) turned on. If Neo already posts preview summaries on your pull requests, Neo code reviews replace them.
+Neo code reviews run on GitHub.com. They are not available on Azure DevOps, GitLab, or Bitbucket, where pull request comments come from the [version control integration](/docs/integrations/version-control/) rather than from Neo. GitHub Enterprise Server is not supported. Code reviews are enabled by default for organizations with [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) turned on. If Neo already posts preview summaries on your pull requests, Neo code reviews replace them.
 
 ## Setup
 
