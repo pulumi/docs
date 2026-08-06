@@ -52,7 +52,7 @@ description: |
 
 learn:
     - Why teams actually leave the big clouds, with real numbers from a real migration
-    - What the EU regulatory push actually requires: NIS2, DORA, and the Data Act's January 2027 ban on egress fees for switching providers
+    - "What the EU regulatory push actually requires: NIS2, DORA, and the Data Act's January 2027 ban on egress fees for switching providers"
     - How to separate real sovereignty risks from perceived ones, and when staying is the right call
 
 # The event presenters
