@@ -191,7 +191,7 @@
                     <p class="font-overline-sm text-gray-600 m-0">Estimated total</p>
                     <p class="heading-3 mt-2 mb-0">Let's talk</p>
                     <p class="mt-2 mb-0 text-sm text-gray-700">
-                        At this size, volume and committed-use pricing beat the list rates, so a list-price number would
+                        At this size, volume and committed-use pricing usually apply, so a list-price number could
                         overstate what you'd pay.
                     </p>
                 </div>
@@ -219,25 +219,32 @@
                 <p class="form-help">One Pulumi Credit costs $1 USD.</p>
             </div>
 
-            <div data-calc-cta-default>
-                <div class="flex flex-col gap-2">
-                    <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-primary btn-lg w-full">Start a free trial</a>
-                    <a href="/contact/?form=sales" class="btn btn-secondary w-full">
-                        Contact sales
-                        {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
-                    </a>
+            {{/* mt-auto pins the CTAs and the disclaimer to the bottom of the panel.
+                 The blocks above them change height when the estimate crosses into
+                 contact-sales territory — a taller message replaces the figure and the
+                 usage breakdown disappears — and without this the buttons would jump
+                 up the page mid-drag. */}}
+            <div class="mt-auto flex flex-col gap-6">
+                <div data-calc-cta-default>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-primary btn-lg w-full">Start a free trial</a>
+                        <a href="/contact/?form=sales" class="btn btn-secondary w-full">
+                            Contact sales
+                            {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="hidden" data-calc-cta-contact>
-                <div class="flex flex-col gap-2">
-                    <a href="/contact/?form=sales" class="btn btn-primary btn-lg w-full">Contact sales</a>
-                    <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-secondary w-full">Start a free trial</a>
+                <div class="hidden" data-calc-cta-contact>
+                    <div class="flex flex-col gap-2">
+                        <a href="/contact/?form=sales" class="btn btn-primary btn-lg w-full">Contact sales</a>
+                        <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-secondary w-full">Start a free trial</a>
+                    </div>
                 </div>
-            </div>
 
-            <p class="form-help my-0">
-                A full-month estimate at list prices. Excludes taxes and volume discounts.
-            </p>
+                <p class="form-help my-0">
+                    A full-month estimate at list prices. Excludes taxes and volume discounts.
+                </p>
+            </div>
         </aside>
     </div>
 
