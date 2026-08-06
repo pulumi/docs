@@ -976,6 +976,73 @@ var result = stack.up(UpOptions.builder().onStandardOutput(System.out::println).
 
 Notice how you can choose to have a callback function for standard output. In addition, the command returns a result of the update, which you can programmatically use to drive decisions within your program. For example, the result includes the stack outputs as well as a summary of the changes. This means you could choose to take different actions if there were no resources updated. Conversely, you could use the stack outputs to drive another Pulumi program within the same Automation program.
 
+### Preview a destroy or refresh without applying it
+
+Sometimes you want to know what a `destroy` or `refresh` would do before committing to it, for example to gate an automated teardown behind a manual approval step, or to inspect drift without writing it back to the stack's state. Requires Pulumi CLI 3.105.0 or later.
+
+In TypeScript, Python, and Go, this is a dedicated method that returns the same `PreviewResult` shape as `preview`, without ever calling the destroy or refresh engine operation:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+{{% choosable language "typescript" %}}
+
+```typescript
+const destroyPreview = await stack.previewDestroy({ onOutput: console.info });
+const refreshPreview = await stack.previewRefresh({ onOutput: console.info });
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+destroy_preview = stack.preview_destroy(on_output=print)
+refresh_preview = stack.preview_refresh(on_output=print)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+destroyPreview, err := s.PreviewDestroy(ctx, optdestroy.ProgressStreams(os.Stdout))
+if err != nil {
+  fmt.Printf("Failed to preview destroy: %v\n\n", err)
+  os.Exit(1)
+}
+
+refreshPreview, err := s.PreviewRefresh(ctx, optrefresh.ProgressStreams(os.Stdout))
+if err != nil {
+  fmt.Printf("Failed to preview refresh: %v\n\n", err)
+  os.Exit(1)
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp,fsharp,visualbasic" %}}
+
+C# doesn't expose a separate preview method for destroy and refresh. Instead, set `PreviewOnly` on the corresponding options object and call the regular method; the CLI runs the operation in preview mode and returns without changing the stack's state:
+
+```csharp
+var destroyPreview = await stack.DestroyAsync(new DestroyOptions { PreviewOnly = true });
+var refreshPreview = await stack.RefreshAsync(new RefreshOptions { PreviewOnly = true });
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+Java follows the same pattern as C#: set `previewOnly` on the options builder and call the regular method.
+
+```java
+var destroyPreview = stack.destroy(DestroyOptions.builder().previewOnly(true).build());
+var refreshPreview = stack.refresh(RefreshOptions.builder().previewOnly(true).build());
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
+
 ## Next steps
 
 You've now seen how to define, configure, and deploy an inline program with Automation API. To go further:
