@@ -1,0 +1,249 @@
+{{- /*
+  The /pricing/ cost estimator: sliders for every metered unit, a running
+  monthly total, and a hand-off to sales above the point where list rates stop
+  being a useful answer.
+
+  Numbers come from `calculator:` in data/pulumi_pricing.yaml — the same file
+  the cards and the comparison rows render — and are handed to
+  theme/src/ts/pricing-calculator.ts verbatim as JSON. This partial owns the
+  markup and the *presentational* half of each meter (label, help text, range,
+  step, starting value); the TS module owns the arithmetic and which rate a
+  meter is priced at. The meter ids below are the contract between the two, so
+  renaming one means renaming it in both places.
+
+  This partial is the only consumer of the `calculator:` block, so per that
+  file's split-by-consumer rule its structural validation lives here.
+
+  The model the TS module implements, recorded here because that file carries no
+  comments. Everything is denominated in Pulumi Credits (1 credit = $1) drawn
+  from one shared pool, and the monthly base buys the first tranche of it:
+
+      iacCredits = iac_resources <= included_resources
+                     ? iac_resources * (included_credits / included_resources)
+                     : included_credits
+                       + (iac_resources - included_resources) * iac_resource_month
+      credits    = iacCredits
+                   + secrets    * esc_secret_month
+                   + minutes    * workflow_minute
+                   + neoMTokens * neo_tokens_per_million
+                   + insights   * insights_resource_month
+      monthly    = base_usd + max(0, credits - included_credits)
+
+  Everything is priced for a whole month. IaC and Insights resources are really
+  billed by the hour, so a resource that exists for only part of the month costs
+  proportionally less, but there is deliberately no utilization control: it would
+  be a slider nearly every reader leaves where it starts. The disclaimer states
+  the whole-month assumption instead.
+
+  The first branch is what makes the cards true: it prices the opening tranche
+  of resources low enough that $40 covers 500 and $400 covers 2,000, then
+  charges the list rate above that. Team at 500 resources is therefore exactly
+  $40, and at 1,000 it is $131.25.
+*/ -}}
+
+{{- $where := "data/pulumi_pricing.yaml" -}}
+{{- $px := partialCached "pricing/data.html" . "pricing-data" -}}
+{{- $calc := site.Data.pulumi_pricing.calculator -}}
+{{- if not $calc -}}
+  {{- errorf "%s: no `calculator:` block, but layouts/partials/pricing/calculator.html renders one. Add the block or drop the partial from layouts/page/pricing.html." $where -}}
+{{- end -}}
+
+{{- if not $calc.contact_sales_usd -}}
+  {{- errorf "%s: calculator.contact_sales_usd is missing or zero." $where -}}
+{{- end -}}
+{{- range $k := slice "workflow_minute" "neo_tokens_per_million" -}}
+  {{- if not (index ($calc.meters | default dict) $k) -}}
+    {{- errorf "%s: calculator.meters.%s is missing or zero." $where $k -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Edition order comes from editions[] rather than from the calculator map,
+       so the toggle can never disagree with the cards above it. */ -}}
+{{- $editionIds := slice -}}
+{{- range $px.editions -}}{{- $editionIds = $editionIds | append .id -}}{{- end -}}
+{{- $calcEditions := slice -}}
+{{- range $e := $px.editions -}}
+  {{- with index $calc.editions $e.id -}}
+    {{- $ce := . -}}
+    {{- range $k := slice "base_usd" "included_credits" "included_resources" "iac_resource_month" "esc_secret_month" "insights_resource_month" -}}
+      {{- if not (index $ce $k) -}}
+        {{- errorf "%s: calculator.editions.%s.%s is missing or zero. Every calculator edition needs all six." $where $e.id $k -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $calcEditions = $calcEditions | append (dict "id" $e.id "name" $e.name "base_usd" $ce.base_usd "included_credits" $ce.included_credits) -}}
+  {{- end -}}
+{{- end -}}
+{{- range $id, $_ := $calc.editions -}}
+  {{- if not (in $editionIds $id) -}}
+    {{- errorf "%s: calculator.editions has key %q, which is not an edition id (%s)." $where $id (delimit $editionIds ", ") -}}
+  {{- end -}}
+{{- end -}}
+{{- if lt (len $calcEditions) 2 -}}
+  {{- errorf "%s: the calculator needs at least two editions to toggle between; got %d." $where (len $calcEditions) -}}
+{{- end -}}
+
+{{- /* Presentational half of each meter. `id` is the contract with the TS
+       module, and `start` values are chosen so a fresh page shows exactly the
+       edition's base price.
+
+       Each `max` is set well above what a typical reader on either edition will
+       enter: being pinned at a slider's max misrepresents someone worse than an
+       imprecise drag does, and the number input beside each slider covers
+       precision anyway. Enterprise readers run much larger numbers than Team
+       ones, so the ranges are sized for them; both editions share one range,
+       because a max that moved under the reader when they flipped the toggle
+       would be worse than a range that is too wide at the low end. */ -}}
+{{- $meters := slice
+    (dict "id" "iac_resources"
+          "label" "IaC resources"
+          "tooltip" "Every resource declared in a Pulumi program counts, including component resources and stacks. A partial resource hour is billed as a full hour."
+          "min" 0 "max" 25000 "step" 100 "start" 500)
+    (dict "id" "esc_secrets"
+          "label" "ESC secrets"
+          "tooltip" "Static and dynamic secrets in the latest revision of each environment. Plaintext config is free, and secrets are billed for the whole month."
+          "min" 0 "max" 2000 "step" 10 "start" 0)
+    (dict "id" "neo_tokens"
+          "label" "Neo tokens (millions)"
+          "tooltip" "Neo tokens meter Neo-powered features: tasks, pull-request annotations, and natural-language search. Token volume varies with the number and complexity of those activities."
+          "min" 0 "max" 200 "step" 2 "start" 0)
+    (dict "id" "workflow_minutes"
+          "label" "Workflow minutes"
+          "tooltip" "One shared pool across Pulumi Deployments and Insights: the duration of each deployment, plus time spent on cloud discovery and policy execution."
+          "min" 0 "max" 50000 "step" 250 "start" 0)
+    (dict "id" "insights_resources"
+          "label" "Insights resources"
+          "tooltip" "Cloud resources discovered by Pulumi Insights, including resources that Pulumi doesn't manage."
+          "min" 0 "max" 50000 "step" 500 "start" 0)
+-}}
+
+<section id="calculator" class="container mx-auto px-6 my-16 md:my-24 scroll-mt-24">
+    {{/* No overflow-hidden on the card: a tooltip opens above its label and would
+         be clipped by it. Nothing here has a background of its own to clip. */}}
+    <div class="card grid grid-cols-1 lg:grid-cols-[1fr_22rem] divide-y lg:divide-y-0 lg:divide-x divide-gray-200 bg-white">
+        <div class="p-6 md:p-8 flex flex-col gap-7">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                {{/* An overline that is still the section's heading, so the card isn't
+                     an unnamed landmark in the outline. */}}
+                <h2 class="font-overline m-0">Estimate your monthly cost</h2>
+
+                {{/* Same shape as the /releases/ and blog feed view toggles: a .btn-group
+                     of toggle buttons with the selected one marked aria-pressed, wearing
+                     the blog category filter's active colors. Toggle buttons rather than
+                     sr-only radios because .btn-group joins direct .btn children — radios
+                     interleaved between the labels would break its first/last-child
+                     rounding, and `peer-checked` uses a general sibling combinator that
+                     would light up every later segment. */}}
+                <div role="group" aria-label="Edition" class="btn-group shrink-0">
+                    {{ range $i, $e := $calcEditions }}
+                    <button type="button" data-calc-edition="{{ $e.id }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                            class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">{{ $e.name }}</button>
+                    {{ end }}
+                </div>
+            </div>
+
+            {{ range $m := $meters }}
+            <div class="flex flex-col gap-2" data-calc-meter="{{ $m.id }}">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    {{/* The tooltip wraps the label rather than sitting inside it, so the
+                         whole label is the hover target and the bubble centers over it. It
+                         has to be this way round: the component puts aria-labelledby on its
+                         trigger, so a tooltip *inside* the label would fold its own body
+                         into the label's text and rename the input. */}}
+                    <pulumi-tooltip class="inline-block">
+                        <label id="calc-{{ $m.id }}-label" for="calc-{{ $m.id }}-number" class="heading-6 m-0">
+                            {{ $m.label }}
+                            {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 inline text-gray-700") }}
+                        </label>
+                        <span slot="content">{{ $m.tooltip }}</span>
+                    </pulumi-tooltip>
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-gray-500 tabular-nums" data-calc-rate></span>
+                        <input type="number" id="calc-{{ $m.id }}-number" class="form-input form-input-sm w-20 text-right tabular-nums"
+                               min="{{ $m.min }}" max="{{ $m.max }}" step="{{ $m.step }}" value="{{ $m.start }}"
+                               inputmode="numeric" data-calc-number>
+                    </div>
+                </div>
+                <input type="range" id="calc-{{ $m.id }}-range" class="form-range" aria-labelledby="calc-{{ $m.id }}-label"
+                       min="{{ $m.min }}" max="{{ $m.max }}" step="{{ $m.step }}" value="{{ $m.start }}" data-calc-range>
+            </div>
+            {{ end }}
+        </div>
+
+        {{- /* Every element the TS module shows and hides is a plain wrapper with
+               no display utility on it, because it toggles the `hidden` class:
+               `hidden` and `flex` are both display utilities, and which one wins
+               is generated-stylesheet order, not markup order. Put the flex on an
+               inner element instead of racing the cascade. */ -}}
+        <aside class="p-6 md:p-8 flex flex-col gap-6">
+            {{- /* The starting figures are the first edition's base price, which the
+                   `start` values above are chosen to produce exactly. They keep the
+                   panel from rendering blank before the module runs; every one of
+                   them is replaced on the first recompute. */ -}}
+            <div aria-live="polite">
+                <div data-calc-total>
+                    <p class="font-overline-sm text-gray-600 m-0">Estimated total</p>
+                    <p class="mt-2 mb-0">
+                        <span class="heading-1 m-0 tabular-nums" data-calc-total-value>${{ (index $calcEditions 0).base_usd }}</span>
+                        <span class="text-gray-500">/month</span>
+                    </p>
+                </div>
+                <div class="hidden" data-calc-contact>
+                    <p class="font-overline-sm text-gray-600 m-0">Estimated total</p>
+                    <p class="heading-3 mt-2 mb-0">Let's talk</p>
+                    <p class="mt-2 mb-0 text-sm text-gray-700">
+                        At this size, volume and committed-use pricing beat the list rates, so a list-price number would
+                        overstate what you'd pay.
+                    </p>
+                </div>
+            </div>
+
+            <div data-calc-usage>
+                <dl class="m-0 flex flex-col gap-2 text-sm border-t border-gray-200 pt-5">
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Credits used</dt>
+                        <dd class="m-0 tabular-nums" data-calc-credits-used>{{ (index $calcEditions 0).included_credits }}</dd>
+                    </div>
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Included with base</dt>
+                        <dd class="m-0 tabular-nums" data-calc-credits-included>{{ (index $calcEditions 0).included_credits }}</dd>
+                    </div>
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Base price</dt>
+                        <dd class="m-0 tabular-nums" data-calc-base>${{ (index $calcEditions 0).base_usd }}</dd>
+                    </div>
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Additional usage</dt>
+                        <dd class="m-0 tabular-nums" data-calc-overage>$0</dd>
+                    </div>
+                </dl>
+                <p class="form-help">One Pulumi Credit costs $1 USD.</p>
+            </div>
+
+            <div data-calc-cta-default>
+                <div class="flex flex-col gap-2">
+                    <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-primary btn-lg w-full">Start a free trial</a>
+                    <a href="/contact/?form=sales" class="btn btn-secondary w-full">
+                        Contact sales
+                        {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
+                    </a>
+                </div>
+            </div>
+            <div class="hidden" data-calc-cta-contact>
+                <div class="flex flex-col gap-2">
+                    <a href="/contact/?form=sales" class="btn btn-primary btn-lg w-full">Contact sales</a>
+                    <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-secondary w-full">Start a free trial</a>
+                </div>
+            </div>
+
+            <p class="form-help my-0">
+                A full-month estimate at list prices. Excludes taxes and volume discounts.
+            </p>
+        </aside>
+    </div>
+
+    {{- /* safeJS, or Hugo emits the JSON as a quoted JS *string literal* —
+           `"{\"contact_sales_usd\":2000,…}"` — and JSON.parse hands the module a
+           string instead of the config. The block is all numbers, so there is
+           nothing here to escape. */ -}}
+    <script type="application/json" id="pricing-calculator-config">{{ $calc | jsonify | safeJS }}</script>
+</section>

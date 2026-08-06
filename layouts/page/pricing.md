@@ -54,6 +54,34 @@ title: {{ .Title }}
 {{- end }}
 {{- end }}
 {{- end }}
+{{- /* Cost estimation: the same numbers the /pricing/#calculator sliders compute
+       with, from `calculator:` in data/pulumi_pricing.yaml. The HTML page hands an
+       agent a slider it can't move, so state the per-unit rates and the model
+       outright. Rates are monthly; the comparison table above carries the hourly
+       form of each one. */}}
+{{- with site.Data.pulumi_pricing.calculator }}
+{{- $c := . }}
+
+## Cost estimation
+
+An estimate at list prices, excluding taxes, committed-use discounts, and volume pricing. All usage draws from one shared pool of Pulumi Credits, where 1 credit costs $1 USD.
+{{ range $e := $px.editions }}
+{{- with index $c.editions $e.id }}
+
+**{{ $e.name }}** — ${{ .base_usd }}/month base, which includes {{ .included_credits }} credits and covers up to {{ lang.FormatNumberCustom 0 .included_resources }} IaC resources.
+
+| Unit | Rate |
+|---|---|
+| IaC resource, per month | ${{ partial "pricing/rate.html" .iac_resource_month }} |
+| ESC secret, per month | ${{ partial "pricing/rate.html" .esc_secret_month }} |
+| Insights resource, per month | ${{ partial "pricing/rate.html" .insights_resource_month }} |
+| Workflow minute | ${{ partial "pricing/rate.html" $c.meters.workflow_minute }} |
+| 1M Neo tokens | ${{ partial "pricing/rate.html" $c.meters.neo_tokens_per_million }} |
+{{- end }}
+{{- end }}
+
+The rates above are per whole month. IaC resources and Insights resources are really billed by the hour, so infrastructure that exists for only part of the month costs proportionally less; ESC secrets are billed for the full month either way. The base price covers the included resource count, and usage beyond the included credits is billed on demand. Above ${{ lang.FormatNumberCustom 0 $c.contact_sales_usd }}/month, [contact sales](/contact/?form=sales) — volume and committed-use pricing apply at that size. An interactive estimator is at /pricing/#calculator.
+{{- end }}
 {{- /* FAQ: high-value for agents; answers are markdown in frontmatter. */}}
 {{- with .Params.faq }}
 
