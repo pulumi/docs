@@ -4,9 +4,9 @@ set -o errexit -o pipefail
 
 source ./scripts/common.sh
 
-# Pages to audit.
-page_names=("Homepage" "Install Pulumi" "AWS Get Started")
-page_paths=("/" "/docs/install/" "/docs/iac/get-started/aws/")
+# Pages to audit. This list is shared with scripts/lighthouse/run-audits.mjs, which
+# runs the audits; keeping it in one file stops the two from drifting.
+pages_file="./scripts/lighthouse/pages.json"
 
 # Read preview URL from the metadata file created by sync-and-test-bucket.sh.
 metadata_file="$(origin_bucket_metadata_filepath)"
@@ -25,7 +25,6 @@ fi
 
 echo "Running Lighthouse audits against ${base_url}..."
 
-chrome_flags="--headless --no-sandbox"
 tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
 
@@ -52,32 +51,12 @@ format_cls() {
     awk "BEGIN { printf \"%.3f\", $1 }"
 }
 
-# Run Lighthouse for each page/device combination.
-for i in "${!page_paths[@]}"; do
-    for device in mobile desktop; do
-        url="${base_url}${page_paths[$i]}"
-        output_file="${tmp_dir}/${i}-${device}.json"
-
-        echo "Auditing ${page_names[$i]} (${device}): ${url}"
-
-        lh_args=(
-            "$url"
-            --chrome-flags="$chrome_flags"
-            --output json
-            --output-path "$output_file"
-            --only-categories=performance
-            --quiet
-        )
-
-        if [[ "$device" == "desktop" ]]; then
-            lh_args+=(--preset=desktop)
-        fi
-
-        if ! npx lighthouse "${lh_args[@]}"; then
-            echo "Lighthouse failed for ${page_names[$i]} (${device}), continuing..."
-        fi
-    done
-done
+# Run every page/device combination against a single shared Chrome instance. Audits
+# that fail leave no JSON behind and render as an "Error" row below, so a bad run
+# still produces a report.
+if ! node ./scripts/lighthouse/run-audits.mjs "$base_url" "$tmp_dir"; then
+    echo "Lighthouse audits did not complete cleanly. Reporting what we have..."
+fi
 
 # Build the markdown comment.
 comment_body=""
@@ -89,11 +68,10 @@ add_line ""
 add_line "| Page | Device | Score | [FCP](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint) | [LCP](https://web.dev/articles/lcp) | [TBT](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time) | [CLS](https://web.dev/articles/cls) | [SI](https://developer.chrome.com/docs/lighthouse/performance/speed-index) |"
 add_line "|------|--------|-------|-----|-----|-----|-----|----|"
 
-for i in "${!page_paths[@]}"; do
+while IFS=$'\t' read -r page_key page_name page_path; do
     for device in mobile desktop; do
-        json_file="${tmp_dir}/${i}-${device}.json"
-        page_name="${page_names[$i]}"
-        page_url="${base_url}${page_paths[$i]}"
+        json_file="${tmp_dir}/${page_key}-${device}.json"
+        page_url="${base_url}${page_path}"
         page_link="[${page_name}](${page_url})"
 
         if [[ "$device" == "mobile" ]]; then
@@ -124,7 +102,7 @@ for i in "${!page_paths[@]}"; do
 
         add_line "| ${page_link} | ${device_label} | ${indicator} ${score} | $(format_time_s "$fcp") | $(format_time_s "$lcp") | $(format_tbt "$tbt") | $(format_cls "$cls") | $(format_time_s "$si") |"
     done
-done
+done < <(jq -r '.[] | [.key, .name, .path] | @tsv' "$pages_file")
 
 # Post (or update) a standalone Lighthouse comment on the PR.
 if [[ -n "$GITHUB_EVENT_PATH" ]]; then

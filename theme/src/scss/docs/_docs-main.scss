@@ -54,18 +54,11 @@ body.section-registry {
         p a:not(.btn),
         ul li a[href]  {
             color: var(--docs-link, var(--color-violet-primary));
-            background: linear-gradient(90deg,rgba(142, 143, 151, 0),rgba(142, 143, 151, 0)),linear-gradient(90deg,var(--color-gray-500),var(--color-gray-500));
-            background-position: 100% 100%,0 100%;
-            background-repeat: no-repeat;
-            background-size: 100% 0.1em,0 0.1em;
-            padding-bottom: 0.2rem;
-            transition: background-size .3s;
-            transition-timing-function: ease-in;
 
             &:hover {
                 color: var(--color-violet-800);
-                text-decoration: none;
-                background-size: 0 0.1em,100% 0.1em;
+                text-decoration: underline;
+                text-underline-offset: 2px;
             }
         }
 

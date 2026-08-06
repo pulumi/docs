@@ -1,0 +1,17 @@
+[
+    {
+        "key": "homepage",
+        "name": "Homepage",
+        "path": "/"
+    },
+    {
+        "key": "install",
+        "name": "Install Pulumi",
+        "path": "/docs/install/"
+    },
+    {
+        "key": "aws-get-started",
+        "name": "AWS Get Started",
+        "path": "/docs/iac/get-started/aws/"
+    }
+]

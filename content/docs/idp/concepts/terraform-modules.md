@@ -90,7 +90,7 @@ Publishing a module version also converts it into a Pulumi package, with no extr
 
 Conversion runs per version, so a module can have some versions with packages and some without. The package's page in Pulumi Cloud shows which versions have converted and gives you the command to install one.
 
-Under the hood, the conversion job derives the package schema by reading the module through Pulumi's [`hcl`](https://github.com/pulumi/pulumi-hcl) parameterized provider (`pulumi package get-schema hcl module <address>`) and publishes that schema as a package version. SDKs and API documentation come from the schema, the same as for any other package.
+Under the hood, the conversion job derives the package schema by reading the module through the [Any HCL Module](/registry/packages/hcl/) parameterized provider (`pulumi package get-schema hcl module <address>`) and publishes that schema as a package version. SDKs and API documentation come from the schema, the same as for any other package.
 
 ## Consume from a Pulumi program
 
