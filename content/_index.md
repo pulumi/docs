@@ -355,7 +355,7 @@ sections:
 
   - type: latest_posts
     title: What's new at Pulumi
-    description: Deep dives, product news, and live workshops from the Pulumi team.
+    description: Product news, engineering insights, and hands-on workshops from the team.
     count: 3
     show_event: true
     anchor: latest-posts
