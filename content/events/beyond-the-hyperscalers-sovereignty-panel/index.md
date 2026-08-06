@@ -57,9 +57,6 @@ learn:
 
 # The event presenters
 presenters:
-    - name: Adam Gordon Bell
-      role: Community Engineer, Pulumi
-      photo: /images/team/adam-gordon-bell.jpg
     - name: Waldemar Kindler
       role: CEO & Co-Founder, Think Ahead Technologies
       photo: /events/beyond-the-hyperscalers-sovereignty-panel/waldemar-kindler.png
@@ -69,6 +66,10 @@ presenters:
     - name: Sarbjeet Johal
       role: Cloud Economist; Founder & CEO, StackPane
       photo: /events/beyond-the-hyperscalers-sovereignty-panel/sarbjeet-johal.png
+    - name: Adam Gordon Bell
+      role: Community Engineer, Pulumi
+      photo: /images/team/adam-gordon-bell.jpg
+      host: true
 
 # case-sensitive
 tags:
