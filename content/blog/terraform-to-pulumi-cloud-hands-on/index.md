@@ -316,7 +316,7 @@ Resources:
 
 Having a language-specific, locally managed SDK at hand comes with many benefits, including IDE support, typed inputs and outputs, and more — but there may be times when you'll prefer a simpler or more dynamic option. In these situations, you can instead choose to load the module at runtime.
 
-In TypeScript, you'd do that with the `@pulumi/hcl` module. Try that now by installing it in your project:
+In TypeScript, you'd do that with the [`@pulumi/hcl`](/registry/packages/hcl/) module. Try that now by installing it in your project:
 
 ```bash
 $ npm install @pulumi/hcl

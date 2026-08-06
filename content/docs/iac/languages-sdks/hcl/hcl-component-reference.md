@@ -115,7 +115,7 @@ For a module on the local filesystem, pass its directory:
 pulumi package add ../randommodule
 ```
 
-For a remote module — a Git repository or a Terraform registry module — parameterize the `hcl` provider with the module source and an optional version:
+For a remote module — a Git repository or a Terraform registry module — parameterize the [Any HCL Module](/registry/packages/hcl/) package with the module source and an optional version:
 
 ```bash
 pulumi package add hcl module terraform-aws-modules/vpc/aws 5.0.0
