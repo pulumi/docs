@@ -1,0 +1,31 @@
+{{- /*
+  Turns an `editions:` list of ids into display names for a badge row:
+
+      {{ range partial "releases/edition-names.html" (dict "editions" .Params.editions "where" .RelPermalink) }}
+        <span class="badge">{{ . }}</span>
+      {{ end }}
+
+  Entries author edition *ids* (`business-critical`), matching every other
+  reference to data/pulumi_pricing.yaml; the badge shows the name Pulumi sells
+  it under ("Business Critical"). An id that isn't an edition fails the build,
+  so a badge can never silently render a slug or nothing at all.
+
+  Returns an empty slice when there are no editions, so callers can range
+  unconditionally.
+*/ -}}
+{{- $out := slice -}}
+{{- with .editions -}}
+  {{- $px := partialCached "pricing/data.html" "pricing-data" "pricing-data" -}}
+  {{- $ids := slice -}}
+  {{- range $px.editions -}}{{- $ids = $ids | append .id -}}{{- end -}}
+  {{- range . -}}
+    {{- $id := printf "%v" . -}}
+    {{- $name := index $px.names $id -}}
+    {{- if not $name -}}
+      {{- errorf "editions: %q is not an edition id (in %s). Use one of: %s. Edition names are derived from data/pulumi_pricing.yaml, so write the id, not %q." $id $.where (delimit $ids ", ") $id -}}
+    {{- else -}}
+      {{- $out = $out | append $name -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

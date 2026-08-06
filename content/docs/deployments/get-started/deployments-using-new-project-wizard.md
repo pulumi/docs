@@ -31,14 +31,14 @@ For this guide, select the `random-typescript` template. This template uses the 
 In order to use templates you will need to authorize Pulumi with your VCS provider so that it can clone private repositories as template sources and commit new code for your projects.
 Click the button and accept the required permissions if you would like to use templates.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If you select "Use a template" and your Pulumi administrator has configured [custom templates](/docs/idp/concepts/templates) for your organization, you will be able to choose from your organization's custom templates in a later step.
 If you select "Use a template" but your organization doesn't have custom templates, you'll be able to choose one of Pulumi's public templates.
 {{% /notes %}}
 
 On the next screen, select "Pulumi Deployments" as your deployment method.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 You may need to configure a [version control integration](/docs/integrations/version-control/) if you haven't already.
 {{% /notes %}}
 
@@ -66,7 +66,7 @@ This enables the resulting stack to use a bundle of pre-configured secrets and c
 
 Here you can configure the repository and optional subdirectory to use when committing your new project code.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If you granted the VCS integration access to _all_ repositories, the New Project Wizard will allow users to create projects with Deployments enabled in new repositories.
 
 If the integration only has access to _some_ repositories, users will only be able to create new projects with Deployments enabled in _existing_ repositories.

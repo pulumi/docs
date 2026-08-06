@@ -56,7 +56,7 @@ Organization-wide role settings configure the built-in **Member** role: its defa
 
 Only organization admins can change these settings. To open them, navigate to **Settings** > **Access management**, select the **Roles** tab, and choose **View organization-wide role settings**.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Organization-wide role settings are a leftover from Pulumi Cloud's pre-RBAC permission system, retained for backward compatibility. For new, fine-grained access control, use [custom roles](#custom-roles) and [permission sets](/docs/administration/access-identity/rbac/permission-sets) instead.
 {{% /notes %}}
 
@@ -104,8 +104,10 @@ This group includes a single capability toggle:
 
 ## Custom roles
 
-{{% notes "info" %}}
-Custom roles are only available in the Pulumi Enterprise or Business Critical editions. Pulumi Enterprise allows up to 25 custom roles; Pulumi Business Critical allows unlimited custom roles. To learn more, see the [pricing page](/pricing/).
+{{< pulumi-cloud "custom-roles" />}}
+
+{{% notes type="info" %}}
+Pulumi Enterprise allows up to 25 custom roles; Pulumi Business Critical allows unlimited custom roles.
 
 The baseline permissions for members who have not been given an explicit custom role are configured in [Organization-wide role settings](#organization-wide-role-settings).
 {{% /notes %}}

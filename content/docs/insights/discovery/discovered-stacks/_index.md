@@ -10,6 +10,7 @@ menu:
     identifier: insights-discovery-discovered-stacks
     weight: 45
 aliases: []
+pulumi_cloud_feature: insights-discovery
 ---
 
 Discovered Stacks bring the infrastructure you manage outside of Pulumi IaC into the same stack model it uses. When [Discovery](/docs/insights/discovery/) scans your cloud accounts, it recognizes AWS CloudFormation stacks and Azure Resource Manager (ARM) deployments, and represents them as discovered stacks in Pulumi Cloud — one per CloudFormation stack, and one per Azure resource group, combining every deployment made to it.

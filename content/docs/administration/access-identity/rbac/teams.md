@@ -13,11 +13,8 @@ aliases:
 - /docs/administration/access-identity/rbac/teams/
 - /docs/pulumi-cloud/access-management/rbac/teams/
 - /docs/pulumi-cloud/access-management/teams/
+pulumi_cloud_feature: teams
 ---
-
-{{% notes "info" %}}
-Teams are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
-{{% /notes %}}
 
 The Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allow organization admins to assign a set of stack permissions to a group of users. When your organization has custom roles enabled, teams can also be assigned **roles** (in addition to stack-level permissions), so that members receive the union of the team's roles and their own user role.
 
@@ -25,7 +22,7 @@ The Pulumi Cloud offers role-based access control (RBAC) using teams. Teams allo
 
 By default, all organization admins can create new teams.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 To allow all organization members to create teams, enable the **Allow organization members to create teams** toggle in [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings).
 {{% /notes %}}
 

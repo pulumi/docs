@@ -27,6 +27,8 @@ The `pulumi policy` command group provides CLI commands for creating, managing, 
 
 ## Policy group commands
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 | Command | Description |
 | --- | --- |
 | [`pulumi policy group`](/docs/iac/cli/commands/pulumi_policy_group/) | Manage policy groups |
@@ -68,6 +70,8 @@ pulumi preview --policy-pack .
 
 ### Publish and enable a policy pack
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 ```bash
 # Publish the policy pack to Pulumi Cloud
 pulumi policy publish
@@ -77,6 +81,8 @@ pulumi policy enable my-org/my-policy-pack latest
 ```
 
 ### Manage policy packs
+
+{{< pulumi-cloud "policy-enforcement" />}}
 
 ```bash
 # List all policy packs in your organization

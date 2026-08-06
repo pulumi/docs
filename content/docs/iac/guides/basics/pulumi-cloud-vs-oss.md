@@ -21,7 +21,7 @@ Pulumi's infrastructure as code (IaC) tool is [open source](https://github.com/p
 
 Pulumi Cloud is a managed service for storing state, managing access, and collaborating on cloud infrastructure. It is a single platform: the IaC state backend, role-based access control, secrets and configuration management, cloud resource inventory, policy enforcement, an AI agent, and managed workflows are all part of one product. Pulumi Cloud is the default backend for open source Pulumi, and it is available both as a hosted service (SaaS) and as a [self-hosted](/docs/pulumi-cloud/self-hosted/) edition you can run in your own environment.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Just as Git is fully open source and you can host, secure, and manage repositories yourself, you can also host your own Pulumi projects and stacks. However, many teams use Git with a service like GitHub for its security, reliability, and collaboration features. A similar dynamic exists with open source Pulumi and Pulumi Cloud.
 {{% /notes %}}
 

@@ -22,7 +22,7 @@ Least privilege means giving every person, pipeline, and program only the access
 
 Over-broad cloud credentials can damage running infrastructure, and over-broad Pulumi Cloud access can expose secrets or delete stacks and their state. This guide works through both, across the three places where you make access decisions: your infrastructure code (IaC), your secrets and configuration (ESC), and your automation ([CI/CD](/docs/iac/operations/continuous-delivery/) and [Pulumi Deployments](/docs/deployments/concepts/), Pulumi Cloud's managed execution service).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Pulumi Cloud's configurable RBAC features, including custom roles, permission sets, and team role assignments, are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
@@ -65,11 +65,13 @@ Pulumi Cloud [RBAC](/docs/administration/access-identity/rbac/) decides who can 
 
 Set your organization's default stack permission to None or Read, so people start with little and receive more only when they need it. The [roles documentation](/docs/administration/access-identity/rbac/roles/#organization-wide-role-settings) covers where to configure this and how the built-in Member role interacts with custom roles.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Organization-wide role settings are retained from Pulumi Cloud's pre-RBAC permission system for backward compatibility. For new, fine-grained access control, prefer custom roles and permission sets.
 {{% /notes %}}
 
 ### Grant access explicitly through permission sets and teams
+
+{{< pulumi-cloud "teams" />}}
 
 Grant elevated access with [permission sets](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets), assigned through roles and teams rather than to individuals:
 

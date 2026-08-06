@@ -66,6 +66,8 @@ Policy Versions: Pulumi Cloud tracks published policy packs by version. When a p
 
 ## Add a policy pack to an account
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 With your policy pack published, you'll need to create a Policy Group that associates your Insights account with a policy pack.
 
 1. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.

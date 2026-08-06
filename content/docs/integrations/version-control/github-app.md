@@ -59,9 +59,13 @@ Mapping a single GitHub organization to multiple Pulumi organizations requires c
 
 ### GitHub Enterprise Server support
 
-GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/). Only one GitHub Enterprise Server integration is supported per Pulumi organization.
+{{< pulumi-cloud "github-enterprise-server" />}}
+
+Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 
 ### Individual user authentication for GitHub Enterprise Server
+
+{{< pulumi-cloud "github-enterprise-server" />}}
 
 By default, Pulumi performs all GitHub Enterprise Server operations as the shared GitHub app installation. When individual user authentication is enabled, operations that a user initiates run against GitHub Enterprise as that user's own connected account instead. Pull requests, commits, and comments are attributed to the user, operations are limited to the repositories that user can access, and deployments triggered by pushes and pull requests are attributed to the user who triggered them.
 
