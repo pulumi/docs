@@ -335,7 +335,7 @@ You can also supply provider settings, including short-lived credentials, throug
 
 ### Fixing Invalid Relative Paths
 
-When a module accepts a file path, pass an absolute path instead of a relative one. For example, the [AWS Lambda module](https://registry.terraform.io/modules/terraform-aws-modules/lambda/aws) accepts a `source_path` that points to the location of function's code:
+When a module accepts a file path, pass an absolute path instead of a relative one. For example, the [AWS Lambda module](https://registry.terraform.io/modules/terraform-aws-modules/lambda/aws) accepts a `source_path` that points to your function's code:
 
 ```typescript
 import * as hcl from "@pulumi/hcl";
@@ -351,4 +351,4 @@ const lambdaModule = new hcl.Module("my-lambda", {
 });
 ```
 
-This is necessary because Terraform modules run from a different working directory than your Pulumi program, so a relative path would resolve incorrectly. The example above uses the Node.js built-in `process.cwd()` to use the full path of the current working directory to resolve the full path to the function code in `src`.
+This is necessary because Terraform modules run from a different working directory than your Pulumi program, so a relative path would resolve incorrectly. The example above uses the Node.js built-in `process.cwd()` to anchor the path to the function code in `src` to your project's working directory.

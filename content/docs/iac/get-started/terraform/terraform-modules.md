@@ -16,7 +16,7 @@ aliases:
 ## Leverage the module ecosystem
 
 Pulumi can directly use existing Terraform modules from the Terraform Registry, private registries, or local sources. This allows you to access thousands of existing modules without rewriting them in Pulumi.
-It's powered by the [Any HCL Module](/registry/packages/hcl/) package, which turns any Terraform or OpenTofu module into a Pulumi component, either as a strongly typed SDK or loaded dynamically at runtime.
+It's powered by the [Any HCL Module](/registry/packages/hcl/) package, which turns any Terraform or OpenTofu module into a Pulumi component, either generated as a strongly typed SDK or loaded dynamically at runtime.
 
 ## Add Terraform modules
 
@@ -333,7 +333,7 @@ Add the Any HCL Module package to your project:
 $ pulumi package add hcl
 ```
 
-Then use its `Module` resource to load your desired module. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
+Then use its `Module` resource to load the module you want. The constructor takes a module `source`, an optional `version`, and a map of `inputs`, and exposes the module's outputs as an untyped map:
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
 
