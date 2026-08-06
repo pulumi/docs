@@ -97,7 +97,7 @@ Under the hood, the conversion job derives the package schema by reading the mod
 Once a version has converted, install it by package name:
 
 ```bash
-pulumi package add <name>-<system> [<version>]
+pulumi package add <name>-<system>[@<version>]
 ```
 
 The module is a [multi-language component](https://github.com/pulumi/pulumi-hcl/blob/master/docs/mlc.md): its `variable` blocks become typed inputs, its `output` blocks become typed outputs, and Pulumi generates an SDK in the language your project uses. The version you pass is persisted in `Pulumi.yaml`, so `pulumi install` regenerates the same pinned version.
