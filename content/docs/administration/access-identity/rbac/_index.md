@@ -14,7 +14,7 @@ menu:
 
 Role-Based Access Control (RBAC) in Pulumi Cloud controls who can access which resources in your organization and what actions they can take. You compose access from reusable building blocks — scopes, permission sets, and roles — and assign it to users, teams, and machine tokens. [Organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings) establish the baseline permissions that every member receives by default.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Pulumi Cloud's configurable RBAC features — custom roles, custom permission sets, teams, and tag-based (ABAC) rules — are only available in the Pulumi Enterprise or Business Critical editions. The built-in roles (Admin, Member, and Billing Manager) and [organization-wide role settings](/docs/administration/access-identity/rbac/roles#organization-wide-role-settings) are available in all editions, including Team. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
@@ -38,7 +38,7 @@ Roles apply to these kinds of principals in Pulumi Cloud:
 
 Access in Pulumi Cloud is built up progressively. A user's effective permissions are the union of every grant that applies to them — from the broadest organizational constraints down to the most resource-specific automatic grants.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 All grants are strictly **additive**: no rule can revoke access that another rule provides.
 {{% /notes %}}
 

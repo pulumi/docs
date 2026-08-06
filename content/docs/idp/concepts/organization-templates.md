@@ -14,13 +14,8 @@ aliases:
   - /docs/pulumi-cloud/developer-platforms/templates/
   - /docs/pulumi-cloud/developer-portals/templates/
   - /docs/idp/concepts/templates
+pulumi_cloud_feature: organization-templates
 ---
-
-{{% notes "info" %}}
-Organization Templates are only available to organizations using the Enterprise and Business Critical editions.
-
-If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
-{{% /notes %}}
 
 A large number of public project templates are provided by Pulumi in our [examples](https://github.com/pulumi/examples) and [templates](https://github.com/pulumi/templates) repos. These can be useful for teams starting from scratch; however, as your business and infrastructure grow in complexity, it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
 
@@ -238,7 +233,7 @@ in the "OAuth App Policy" settings.
 You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/concepts/settings/) on new projects.
 See the GitHub app [installation instructions](/docs/integrations/version-control/github-app/) for more details.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Granting the app access to _some_ or _all_ of your GitHub repos will impact how the New Project Wizard behaves.
 
 If you grant the app access to _all_ repos, the New Project Wizard will allow users to create projects in new repositories. If the app only has access to _some_ repos, users will only be able to create new projects within _existing_ repositories.

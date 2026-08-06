@@ -18,11 +18,8 @@ aliases:
 - /docs/intro/pulumi-cloud/audit-logs/
 - /docs/pulumi-cloud/audit-logs/
 - /docs/pulumi-cloud/admin/audit-logs/
+pulumi_cloud_feature: audit-logs
 ---
-{{% notes "info" %}}
-Audit Logs are available to organizations using the Enterprise and Business Critical editions.
-To learn more about editions, visit the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Overview
 
@@ -40,7 +37,7 @@ of the call the user made.
 
 ## View audit logs
 
-Audit logs are an Enterprise Edition and Business Critical feature. Only organization admins can view audit logs.
+Only organization admins can view audit logs.
 
 To view audit logs:
 
@@ -54,9 +51,7 @@ also filter logs by a particular user by selecting their profile picture.
 
 ## Automated export
 
-{{% notes "info" %}}
-Automated export is only available on the Pulumi Business Critical Edition. If you don't see it in your organization, [contact sales](/contact?form=sales).
-{{% /notes %}}
+{{< pulumi-cloud "audit-log-export" />}}
 
 Pulumi Cloud supports continuously exporting audit log events to external destinations.
 
@@ -80,7 +75,7 @@ To export audit logs using the console:
 
 ### Exporting audit logs using the API
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 See [Pulumi Cloud REST API](/docs/reference/service-rest-api#audit-logs) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
 {{% /notes %}}
 

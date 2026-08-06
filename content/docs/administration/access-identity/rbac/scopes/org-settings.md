@@ -13,13 +13,10 @@ aliases:
 - /docs/intro/pulumi-service/scopes/org-settings
 - /docs/intro/pulumi-cloud/scopes/org-settings
 - /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
+pulumi_cloud_feature: rbac
 ---
 
 This document defines all the available scopes in Pulumi Cloud, organized by [entity type](/docs/administration/access-identity/rbac/entities#entity-types) and group.
-
-{{% notes "info" %}}
-Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Agent Pools
 
@@ -39,7 +36,7 @@ Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enter
 
 ## AI
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 These scopes control access to the legacy Pulumi Copilot conversation API, currently used only by the Pulumi Copilot VS Code extension. For Pulumi's current AI capabilities, see [Pulumi Neo](/docs/ai/).
 {{% /notes %}}
 

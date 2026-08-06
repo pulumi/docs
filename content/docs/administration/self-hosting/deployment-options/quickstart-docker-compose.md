@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/quickstart-docker-compose/
   - /docs/pulumi-cloud/self-hosted/deployment-options/quickstart-docker-compose/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/quickstart-docker-compose/
+pulumi_cloud_feature: self-hosting
 ---
 
 The Pulumi Cloud Docker container images can be run using any OCI-compatible container orchestrator. We provide sample docker-compose files that can help you get started with your self-evaluation quickly.
@@ -39,7 +40,7 @@ The [Quickstart Docker Compose Installer](https://github.com/pulumi/pulumi-self-
 
 If you would like to use Pulumi’s all-in-one solution, you just need to run `run-ee.sh` like this: `run-ee.sh -f ./all-in-one/docker-compose.yml`. This will start all components using working defaults, including a DB container that is migrated using our DB scripts.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Environment variables should be set in the `./all-in-one/docker-compose.yml` file.
 {{% /notes %}}
 
@@ -47,7 +48,7 @@ Environment variables should be set in the `./all-in-one/docker-compose.yml` fil
 
 The service is tested against a MySQL version 8.0 instance. It is assumed that you have a DB instance called `pulumi-db` running at port `3306` and accessible within a network called `pulumi-ee`.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 You will need the `migrations` folder downloaded locally, which contains the DB scripts that need to be applied against your DB instance.
 Your Pulumi sales contact should be able to provide you with this.
 {{% /notes %}}

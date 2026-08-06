@@ -7,13 +7,10 @@ menu:
   insights:
     parent: insights-home
     weight: 50
+pulumi_cloud_feature: insights-self-hosted
 ---
 
-Pulumi Insights supports self-hosted operation for Business Critical customers through [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). This allows you to run [discovery scans](/docs/insights/discovery/) and [policy evaluations](/docs/insights/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
-
-{{% notes "info" %}}
-Self-hosted Insights is available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested in enabling this feature.
-{{% /notes %}}
+Pulumi Insights supports self-hosted operation through [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/). This allows you to run [discovery scans](/docs/insights/discovery/) and [policy evaluations](/docs/insights/policy/) within your own infrastructure, giving you full control over where your data is processed while retaining the power of Pulumi Insights.
 
 ## Benefits
 

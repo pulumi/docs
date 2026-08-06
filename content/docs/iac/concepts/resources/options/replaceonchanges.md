@@ -135,7 +135,7 @@ The [property paths](/docs/reference/property-paths/) provided as input to `repl
 - `spec[0]`: any change to the first element of the array in the `spec` property or any of its children
 - `spec[*].item`: any change to the `item` property of any element of the array in the `spec` property or any of the `item` property's children
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The property paths passed to `replaceOnChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
 {{% /notes %}}
 

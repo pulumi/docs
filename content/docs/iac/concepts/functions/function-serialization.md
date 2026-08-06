@@ -24,7 +24,7 @@ aliases:
 - /docs/iac/concepts/miscellaneous/function-serialization/
 ---
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Currently, the functionality described in this topic is only supported for programs written in JavaScript or TypeScript. Function Serialization is only available in Node.js and while it is still a supported feature, it is not an active area of development in the Pulumi product.
 {{% /notes %}}
 
@@ -216,7 +216,7 @@ await fs.writeFile("example.txt", "data");
 
 This ensures that all modules can be referenced in application code, and then used in _run time_ code with expected semantics.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 This form of module capturing only applies to external modules that are referenced, such as modules that are directly part of Node, or are in the `node_modules` directory.
 
 The `local` module &mdash; the module for the Pulumi application itself &mdash; is not captured in this fashion. That is because this code will not actually be part of the uploaded `node_modules`, so it would not be found. The `local` module is captured as if it was a normal value, which means that all its relevant variable and functions are serialized over in a uniform fashion to the Lambda, regardless of which actual file or module they are contained in.

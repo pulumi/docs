@@ -108,6 +108,8 @@ For production workloads, configure OIDC-based authentication so Pulumi doesn't 
 
 ## Neo AI integration
 
+{{< pulumi-cloud "neo-code-reviews" />}}
+
 Neo, Pulumi's AI assistant, works with Azure DevOps pull requests. When enabled (the default), Neo posts:
 
 - **Change summaries**: plain-language explanation of what infrastructure changes a PR introduces.

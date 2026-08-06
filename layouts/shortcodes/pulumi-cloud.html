@@ -1,0 +1,71 @@
+{{- /*
+  Marks one section of a page as Pulumi Cloud, for pages that document more than
+  one way of doing something (for example content/docs/iac/concepts/secrets/,
+  where most of the page is open source and one section is ESC).
+
+  Two forms, both placed on the line directly after the heading they apply to:
+
+      ## Managing secrets with Pulumi ESC environments
+      {{< pulumi-cloud />}}                    → available in all editions
+
+      ## Organization templates
+      {{< pulumi-cloud "organization-templates" />}}
+
+  The argument is a feature id from data/pulumi_pricing.yaml — the edition the
+  sentence names ("available in the Enterprise and Business Critical editions")
+  is derived from that feature's availability, so it can't drift from
+  /pricing/.
+
+  Unlike the whole-page `pulumi_cloud_feature:` key, the no-argument form is allowed and
+  useful here: on a page that documents several ways of doing something, the
+  reader can't otherwise tell whether a given section needs Pulumi Cloud at all.
+  Note the self-closing `/>}}` — Hugo requires it because this template reads
+  `.Inner`, which powers the third form:
+
+      {{< pulumi-cloud "esc-db-secrets-rotation-private" >}}
+      Which of the methods above the edition sentence applies to.
+      {{< /pulumi-cloud >}}
+
+  That renders the availability sentence and then the prose, in one violet box,
+  for a marker that needs a qualifier.
+
+  Inner content with no feature renders the prose alone, no availability
+  sentence — which is the form for a cross-product pointer: "the page teaches
+  the open-source way, and there is a Pulumi Cloud product that solves the same
+  problem" (pulumi/docs#20529). Lead with a bold benefit line and link the
+  product inline; the violet box already says Pulumi Cloud, so the prose
+  shouldn't. This is the one Cloud callout on the site — don't add a parallel
+  shortcode for the promotional variant.
+
+  Whole Cloud pages use the `pulumi_cloud_feature:` frontmatter key instead. Markers are
+  set per page — there is no inheritance.
+*/ -}}
+{{- /* Named params make `.Get 0` nil, which would fall through to the
+       "available in all editions" sentence and quietly under-state a gated
+       feature. The `{{% notes type="…" %}}` convention makes `feature="rbac"`
+       an easy mistake, so fail the build on it. */ -}}
+{{- if reflect.IsMap .Params -}}
+  {{- errorf `pulumi-cloud takes a positional feature id, not named parameters (in %s). Write {{< pulumi-cloud "rbac" />}}.` .Page.File.Path -}}
+{{- end -}}
+{{- $feature := .Get 0 -}}
+{{- $inner := "" -}}
+{{- with .Inner }}{{ $inner = . | markdownify }}{{ end -}}
+{{- /* Inner-only means the author is writing orientation prose, so skip the
+       generated availability sentence; anything else states availability. */ -}}
+{{- $body := "" -}}
+{{- if or $feature (not $inner) -}}
+  {{- $body = partial "cloud-availability-body.html" (dict "feature" $feature "where" .Page.File.Path) | markdownify -}}
+{{- end -}}
+{{- /* With both parts, `markdownify` has already unwrapped each single
+       paragraph, so concatenating them raw would run the availability sentence
+       straight into the prose. Make both blocks instead. */ -}}
+{{- if and $body $inner -}}
+  {{- $body = printf "<p>%s</p>" $body -}}
+  {{- $inner = .Page.RenderString (dict "display" "block") .Inner -}}
+{{- end -}}
+{{- /* `cloud-marker` is what scripts/search/page.js looks for so a heading's
+       search snippet skips past this box to the real paragraph below it. */ -}}
+{{- partial "notes.html" (dict
+    "type" "cloud"
+    "class" "cloud-marker"
+    "text" (printf "%s%s" $body $inner | safeHTML)) -}}

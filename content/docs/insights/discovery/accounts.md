@@ -11,6 +11,7 @@ aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/
   - /docs/insights/accounts/
+pulumi_cloud_feature: insights-discovery
 ---
 
 This document outlines the steps required to create and manage a Pulumi Insights account used to scan provider resources.

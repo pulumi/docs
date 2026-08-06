@@ -131,6 +131,8 @@ config:
 
 ### Stack with Pulumi ESC environment
 
+{{< pulumi-cloud />}}
+
 ```yaml
 config:
   myproject:name: my-application

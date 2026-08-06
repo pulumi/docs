@@ -70,7 +70,7 @@ var dep = new Deployment("res2", new DeploymentArgs(),
 {{% /choosable %}}
 {{% choosable language java %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 This resource option is not yet implemented for Java. You can follow up the [implementation status on Github](https://github.com/pulumi/pulumi-java/issues/944).
 {{% /notes %}}
 

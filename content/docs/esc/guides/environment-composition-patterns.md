@@ -118,6 +118,8 @@ Start with direct consumption while you have a few consumers and the base enviro
 
 ## Refactoring an environment without breaking consumers
 
+{{< pulumi-cloud "esc-version-tags" />}}
+
 The contract between an environment and its consumers is its **resolved output**, not its source YAML. As long as the output is unchanged, you can restructure the source freely. That is what makes it possible to split an oversized environment without a coordinated migration.
 
 Suppose `myorg/apps/checkout-prod` has accumulated database credentials inline, and you want them in their own environment.

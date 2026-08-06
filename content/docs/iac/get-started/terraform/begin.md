@@ -19,7 +19,7 @@ aliases:
 Download and install Pulumi alongside your existing Terraform setup:
 
 {{< install-pulumi >}}
-{{% notes info %}}
+{{% notes type="info" %}}
 All Windows examples in this tutorial assume you are running in PowerShell.
 {{% /notes %}}
 {{< /install-pulumi >}}

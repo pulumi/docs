@@ -11,6 +11,7 @@ menu:
     weight: 9
 aliases:
 - /docs/esc/environments/versioning/
+pulumi_cloud_feature: esc-versioning
 ---
 
 Each time a change is made to an environment, a new immutable revision is created. You can manage and track changes to your secrets and configuration over time with a clear history you can audit, compare, and roll back.  You can assign tags to revisions, such as `production`, `v1.2.1`, or `stable`, to help organize and identify them.
@@ -30,6 +31,8 @@ environment:
 This ensures the stack always resolves revision `4`, unaffected by later changes to the environment. For a more memorable reference, you can pin to a [tag](#tagging-versions) instead of a revision number.
 
 ## Tagging versions
+
+{{< pulumi-cloud "esc-version-tags" />}}
 
 You can tag your revisions with meaningful names like `prod`, or `stable`. Each environment has a built-in `latest` tag that always points to the environment’s most recent revision. Use `pulumi env version tag` to tag a revision.
 

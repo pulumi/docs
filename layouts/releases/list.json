@@ -4,7 +4,15 @@
     A single machine-readable document built from this section's pages
     (.RegularPagesRecursive — see content/releases/_index.md), emitted
     newest-first by date. One flat entry per page:
-      { type: "release" | "changelog", title, date, url, description?, tiers?, body? }
+      { type: "release" | "changelog", title, date, url, description?,
+        editions?, tiers?, body? }
+    editions is the entry's `editions:` front matter: edition ids from
+    data/pulumi_pricing.yaml ("business-critical"). tiers is DEPRECATED but not
+    going away: the same list as display names ("Business Critical"), the key
+    and the vocabulary this feed published before the rename. The document is
+    public and we don't know who parses it, so both ship — read `editions` in
+    anything new. Dropping `tiers` would be a breaking change to announce, not
+    a cleanup to do quietly.
     description comes from the page's short_description (releases) or
     meta_desc (changelog items). body is the entry's rendered HTML content —
     the minimal fragment (no page chrome), with root-relative links and assets
@@ -17,6 +25,9 @@
 {{- $entries := slice -}}
 {{- $base := strings.TrimSuffix "/" site.BaseURL -}}
 {{- range .RegularPagesRecursive.ByDate.Reverse -}}
+    {{- /* `$` is the /releases/ list page, so hold on to the entry for the
+         partials below that report their location in a build error. */ -}}
+    {{- $page := . -}}
     {{- $type := cond (eq .Type "changelog") "changelog" "release" -}}
     {{- $entry := dict
         "type" $type
@@ -26,7 +37,10 @@
     {{- with or .Params.short_description .Params.meta_desc -}}
         {{- $entry = merge $entry (dict "description" (. | markdownify | plainify | htmlUnescape | chomp | replaceRE "\\s+" " ")) -}}
     {{- end -}}
-    {{- with .Params.tiers -}}{{- $entry = merge $entry (dict "tiers" .) -}}{{- end -}}
+    {{- with .Params.editions -}}
+        {{- $entry = merge $entry (dict "editions" .) -}}
+        {{- $entry = merge $entry (dict "tiers" (partial "releases/edition-names.html" (dict "editions" . "where" $page.RelPermalink))) -}}
+    {{- end -}}
     {{- with .Content -}}
         {{- /* Absolutize root-relative links/assets ("/..."), skipping
              protocol-relative "//" URLs, so off-domain consumers resolve them. */ -}}

@@ -64,7 +64,7 @@ output "pet_name" {
 }
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Providers resolve the same way as OpenTofu: an unqualified source such as `random` (or a fully-qualified `hashicorp/random`) is looked up in the [OpenTofu registry](https://opentofu.org/registry/) and bridged into Pulumi automatically — no `required_providers` entry is required. Prefix a source with `pulumi/` (for example, `pulumi/aws`) to consume a native Pulumi provider instead.
 {{% /notes %}}
 

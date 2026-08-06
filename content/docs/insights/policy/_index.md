@@ -78,6 +78,8 @@ The open source Pulumi CLI enables local policy execution:
 
 ### Pulumi Cloud integration
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 Pulumi Cloud extends policy capabilities with centralized management and additional enforcement modes:
 
 **Preventative policies:**
@@ -97,8 +99,6 @@ Pulumi Cloud extends policy capabilities with centralized management and additio
 - View violations in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard
 - Monitor compliance trends across your organization
 - Only available with Pulumi Cloud (cannot be used with the self-managed backend)
-
-For more information about Pulumi plans and pricing, see the [Pricing page](/pricing/).
 
 ## Languages
 

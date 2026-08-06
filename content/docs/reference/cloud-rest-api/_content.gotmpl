@@ -97,6 +97,25 @@
 }}
 
 {{/*
+    Per-tag Pulumi Cloud availability markers. These pages have no front matter
+    to carry `pulumi_cloud_feature:`, so the feature id is passed as a page
+    param instead — layouts/partials/docs/cloud-availability.html reads
+    .Params.pulumi_cloud_feature and doesn't care where it came from.
+
+    Only tags whose *every* endpoint needs the feature belong here. A tag that
+    mixes gated and ungated routes (Webhooks: org + stack hooks; PolicyPacks:
+    org packs + the public registry; AccessTokens: org + personal; Organizations:
+    five different gates plus ungated basics) gets no marker, because a page-level
+    callout would over-claim and there are no headings to attach a section
+    marker to.
+*/}}
+{{ $cloudFeatureOverrides := dict
+    "AuditLogs"                "audit-logs"
+    "DataExport"               "insights-data-export"
+    "ResourceSearch"           "resource-search"
+}}
+
+{{/*
     Per-tag alias overrides. Listed URLs are redirected to the generated tag
     page at build time (Hugo `aliases` frontmatter). Each entry preserves a
     legacy URL that existed on a hand-authored page before the OpenAPI
@@ -198,6 +217,10 @@
         "openapi_docs" true
         "filter_tag" $tag
     }}
+
+    {{ with index $cloudFeatureOverrides $tag }}
+        {{ $params = merge $params (dict "pulumi_cloud_feature" .) }}
+    {{ end }}
 
     {{ $menus := dict "reference" (dict
         "name" $display

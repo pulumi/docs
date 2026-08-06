@@ -12,6 +12,7 @@ aliases:
 - /docs/iac/adopting-pulumi/visual-iac-import/
 - /docs/iac/adopting-pulumi/visual-import/
 - /docs/insights/import/
+pulumi_cloud_feature: insights-discovery
 ---
 
 Pulumi Visual Import allows platform and development teams to leverage [Pulumi Insights](/docs/insights/) to generate [Pulumi Infrastructure as Code (IaC)](/docs/iac/) from [discovered resources](/docs/insights/discovery/#how-discovery-works) in your cloud accounts. Visual Import provides an intuitive 5-step process to start managing your infrastructure resources using Pulumi IaC.
@@ -21,8 +22,6 @@ Pulumi Visual Import allows platform and development teams to leverage [Pulumi I
 3. Generate and export IaC code in your preferred language
 4. Enhance your IaC code using Pulumi Neo
 5. Refine and integrate that code into your own Pulumi projects
-
-This feature is available to users on the Team, Enterprise, and Business Critical editions with Pulumi Insights enabled.
 
 ## Prerequisites
 
@@ -56,7 +55,7 @@ In this step, review the resources for which you want to generate IaC code. You 
 * Each group represents a top-level selected resource and its related resources
 * You can filter the Reference and Relationship columns to fine-tune what to include
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The referenced resources will show a direction: 'from' or 'to'. 'from' refers to a dependent child resource. 'to' refers to the parent resource (depends on).
 {{% /notes %}}
 
@@ -84,7 +83,7 @@ Once the code is in the format you are happy with, you can:
 
 When finished, click **Done** to return to the Visual Import start page.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Ensure that you run the pulumi CLI commands using credentials that match the cloud accounts for the imported resources, or the import will fail.
 {{% /notes %}}
 

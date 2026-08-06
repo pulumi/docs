@@ -161,7 +161,7 @@ Keys that include an explicit namespace other than the project name (such as `aw
 
 To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/concepts/config/) for the active stack.
 
-{{% notes type="info"%}}
+{{% notes type="info" %}}
 Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun).
 {{% /notes %}}
 
@@ -197,11 +197,9 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 ## Stack tags
 
-Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/iac/cli/commands/pulumi_stack_tag_ls).
+{{< pulumi-cloud />}}
 
-{{% notes "info" %}}
-Stack tags are only supported with the [Pulumi Cloud backend](/docs/concepts/state/).
-{{% /notes %}}
+Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/iac/cli/commands/pulumi_stack_tag_ls).
 
 Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
 
@@ -382,13 +380,15 @@ $ pulumi stack output --json
 }
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Note: If you export an actual resource, it too will be JSON serialized. This usually isn’t what you want, especially because some resources are quite large. For example, if you only want to export the resource’s ID or name, just export those properties directly.
 {{% /notes %}}
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as secret in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
 
 ## Stack README
+
+{{< pulumi-cloud />}}
 
 [Pulumi Cloud](https://app.pulumi.com/signin) renders a per-stack README on each stack's **README** tab from a stack output named `readme`. The README can include links, embedded documentation, and templated values that reference the stack's other outputs.
 
@@ -1019,7 +1019,7 @@ resources:
       key: logs/${infra.outputs["privateIp"]}.log
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Pulumi YAML does not distinguish between `requireOutput` and `getOutput`. Accessing a stack
 reference output via interpolation will fail at deployment time if the named output does not
 exist in the referenced stack.
@@ -1066,7 +1066,7 @@ for more information.
 {{% /choosable %}}
 {{% choosable language python %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 This functionality is not currently supported in Python.
 Progress is tracked on [pulumi/pulumi#12172](https://github.com/pulumi/pulumi/issues/12172)
 if you need this functionality.
@@ -1137,7 +1137,7 @@ infra.outputDetailsAsync("dbHost").thenAccept(dbHostDetails -> {
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 `getOutputDetails` is not supported in Pulumi YAML. To read a stack reference
 output in YAML, use the `outputs` property of a `StackReference` resource, as shown in the
 `requireOutput` example above.
@@ -1151,7 +1151,7 @@ output in YAML, use the `outputs` property of a `StackReference` resource, as sh
 
 A stack can be exported to see the raw data associated with the stack. This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of. The modified stack can then be imported to set the current state of the stack to the new values.
 
-{{% notes "warning"%}}
+{{% notes type="warning" %}}
 This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to the orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
 {{% /notes %}}
 

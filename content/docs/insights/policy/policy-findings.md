@@ -17,6 +17,7 @@ aliases:
   - /docs/iac/using-pulumi/crossguard/policy-violations/
   - /docs/insights/policy/policy-violations/
   - /docs/insights/policy/policy-packs/policy-violations/
+pulumi_cloud_feature: policy-enforcement
 ---
 
 ## Overview

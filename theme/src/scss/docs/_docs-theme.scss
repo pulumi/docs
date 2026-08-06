@@ -336,6 +336,31 @@ html[data-theme="dark"] body.section-docs {
                 background: color-mix(in oklch, var(--color-orange-300) 22%, transparent);
             }
         }
+
+        // Pulumi Cloud availability. Written out longhand like its siblings —
+        // note that `--color-violet-primary` is already remapped to violet-300
+        // above, so naming violet-300 explicitly here is the same value, just
+        // consistent with the other callouts.
+        &.note-cloud {
+            background: var(--color-violet-950);
+
+            a,
+            i {
+                color: var(--color-violet-300);
+            }
+
+            div.icon-and-line svg.ph-icon {
+                color: var(--color-violet-300);
+            }
+
+            div.line {
+                background-color: var(--color-violet-300);
+            }
+
+            code {
+                background: color-mix(in oklch, var(--color-violet-300) 22%, transparent);
+            }
+        }
     }
 
     // --- Tables: service-black cells, gray header + gray-900 gridline seams ---

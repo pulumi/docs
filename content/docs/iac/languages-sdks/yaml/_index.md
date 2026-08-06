@@ -74,7 +74,7 @@ outputs:
   bucketEndpoint: http://${my-bucket.websiteEndpoint}
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The example is a fully valid and self-contained Pulumi project. You only need one file to create resources in Pulumi YAML.
 {{% /notes %}}
 

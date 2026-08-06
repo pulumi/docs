@@ -65,6 +65,13 @@ module.exports = {
             
             let content = "";
             let $next = $h2.next();
+            // The {{< pulumi-cloud >}} availability callout renders as the heading's
+            // immediate sibling by contract (see layouts/shortcodes/pulumi-cloud.html),
+            // so skip past it to reach the paragraph that actually describes the section.
+            // Without this, every marked heading indexes with no description at all.
+            if ($next.hasClass("cloud-marker")) {
+                $next = $next.next();
+            }
             if ($next.is("p")) {
                 content = $next.text();
             }

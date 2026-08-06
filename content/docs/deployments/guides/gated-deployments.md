@@ -10,6 +10,7 @@ menu:
     weight: 15
     identifier: deployments-guides-gated-deployments
 aliases: []
+pulumi_cloud_feature: gated-deployments
 ---
 
 Pulumi Deployments does not currently support gated deployments: there is no built-in, deployment-level approval step that requires a reviewer to sign off before a deployment runs. This guide describes a **workaround** that achieves a similar outcome by gating the *credentials* a deployment needs rather than the deployment itself.
@@ -25,10 +26,6 @@ This is a workaround, not a native approval gate, and it behaves differently fro
 - **It fits user-initiated deployments best.** Git-push and pull-request deployments need extra setup and can't be gated as cleanly. See the note under [Request and approve access](#request-and-approve-access).
 
 If a native deployment approval gate would serve you better, let us know in [pulumi/pulumi-cloud-requests](https://github.com/pulumi/pulumi-cloud-requests/issues).
-{{% /notes %}}
-
-{{% notes type="info" %}}
-Open approvals in Pulumi ESC are available for organizations using the Enterprise and Business Critical editions. Learn more about editions on the [pricing page](/pricing/).
 {{% /notes %}}
 
 ## Prerequisites

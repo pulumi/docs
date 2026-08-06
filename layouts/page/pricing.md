@@ -5,39 +5,51 @@ title: {{ .Title }}
 ---
 {{ with .Params.meta_desc }}{{ replaceRE `\s+` " " (trim . " \n") }}
 {{ end }}
-{{- /* Editions: the tiers frontmatter that pricing.html renders as cards. */}}
-{{ range .Params.tiers.trialed.items }}
-{{- $item := . }}
-## {{ .title }}
-{{ with .subtitle }}
+{{- /* Editions and the comparison matrix both come from data/pulumi_pricing.yaml,
+       the same file pricing.html renders as cards and rows. */}}
+{{- $px := partialCached "pricing/data.html" . "pricing-data" }}
+{{- range $px.editions }}
+{{- $card := .card | default dict }}
+## {{ .name }}
+{{ with $card.subtitle }}
 {{ . }}
 {{ end }}
-**{{ .price }}{{ with .price_label }} {{ . }}{{ end }}**{{ with .unit }} — {{ . }}{{ end }}{{ with .note }} ({{ . }}){{ end }}
-{{ with $item.features }}
-{{ with $item.features_intro }}{{ . }}{{ end }}
+**{{ $card.price }}{{ with $card.price_label }} {{ . }}{{ end }}**{{ with $card.unit }} — {{ . }}{{ end }}{{ with $card.note }} ({{ . }}){{ end }}
+{{ with $card.features }}
+{{ with $card.features_intro }}{{ . }}{{ end }}
 {{- range . }}
 - {{ . }}
 {{- end }}
 {{ end }}
 {{- end }}
-{{- /* Edition comparison: mirror the comparison_table frontmatter as markdown
-       tables, one per product area, with the tier names as columns. */}}
-{{- $tierNames := slice }}
-{{- range .Params.tiers.trialed.items }}{{ $tierNames = $tierNames | append .title }}{{ end }}
-{{- with .Params.comparison_table }}
+{{- /* Edition comparison: one markdown table per category, with the edition names
+       as columns. The old frontmatter used `_check`/`_blank` sentinels for the
+       icon cells; the data file says the same thing with a bool, which
+       pricing/value.html normalizes into a "check" or "blank" kind. Hidden
+       features have no row on /pricing/, so they get none here either. */}}
+{{- $editionNames := slice }}
+{{- range $px.editions }}{{ $editionNames = $editionNames | append .name }}{{ end }}
+
 ## Edition comparison
-{{ range .sections }}
-{{- range .tables }}
+{{ range $px.groups }}
+{{- range .categories }}
 
-### {{ .header }}
+### {{ .name }}
 
-| | {{ delimit $tierNames " | " }} |
-|---|{{ range $tierNames }}---|{{ end }}
-{{- range .rows }}
-| {{ replace .title "|" "\\|" }} |
-{{- range .items }} {{ with .content }}
-{{- /* _check/_blank are sentinels the HTML table renders as icons. */ -}}
-{{- if eq . "_check" }}✓{{ else if eq . "_blank" }}—{{ else }}{{ replace (replace . "\n" " ") "|" "\\|" }}{{ end }}{{ end }}{{ with .subtext }} ({{ replace . "|" "\\|" }}){{ end }} |{{ end }}
+| | {{ delimit $editionNames " | " }} |
+|---|{{ range $editionNames }}---|{{ end }}
+{{- range .features }}
+{{- if not .hidden }}
+{{- $feature := . }}
+| {{ replace .name "|" "\\|" }} |
+{{- range $px.editions }}
+{{- $cell := partial "pricing/value.html" (index $feature.cells .id) }}
+{{- if eq $cell.kind "check" }} ✓
+{{- else if eq $cell.kind "text" }} {{ replace (replace $cell.content "\n" " ") "|" "\\|" }}
+{{- else }} —
+{{- end }}
+{{- with $cell.subtext }} ({{ replace (replace . "\n" " ") "|" "\\|" }}){{ end }} |
+{{- end }}
 {{- end }}
 {{- end }}
 {{- end }}

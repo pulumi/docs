@@ -26,11 +26,11 @@ ESC Webhooks can be attached to either an environment or a Pulumi Cloud organiza
 - **Environment webhooks** will fire in response to events you specify for a single ESC environment.
 - **Organization webhooks** can be configured to trigger in response to events you specify for _all_ environments in your Pulumi Cloud organization, in addition to other organization-wide events.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/concepts/webhooks).
 {{% /notes %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Webhooks do not guarantee ordered delivery of events. That is, you should not assume events will be received in the order in which they occurred.
 {{% /notes %}}
 
@@ -56,7 +56,7 @@ Pulumi Webhooks may be created through any of the following methods:
 
 #### Create an Organization Webhook in the Pulumi Cloud UI
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 You must be an admin of the organization to create organization webhooks.
 {{% /notes %}}
 
@@ -213,7 +213,7 @@ When using generic JSON webhooks, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook can then be used to emit a
 notification, start running integration tests, or even update additional stacks.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If a secret is provided, webhook deliveries will contain a signature in the HTTP request header that can be used
 to authenticate messages as coming from the Pulumi Cloud.
 {{% /notes %}}

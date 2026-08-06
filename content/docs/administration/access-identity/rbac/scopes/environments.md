@@ -13,13 +13,10 @@ aliases:
 - /docs/intro/pulumi-service/scopes/environments
 - /docs/intro/pulumi-cloud/scopes/environments
 - /docs/pulumi-cloud/access-management/rbac/scopes/environments/
+pulumi_cloud_feature: rbac
 ---
 
 This document defines all the available [scopes](/docs/administration/access-identity/rbac/scopes/) in Pulumi Cloud assignable to specific environments or sets of environments.
-
-{{% notes "info" %}}
-Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
-{{% /notes %}}
 
 Note that creating, listing, or restoring environments are organization-level operations, and these scopes can be found in the [organization settings scopes](/docs/administration/access-identity/rbac/scopes/org-settings).
 

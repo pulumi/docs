@@ -28,15 +28,16 @@ meta_desc:
 authors:
     - christian-nunciato
 
-# Optional pricing-tier availability, shown as badge(s) beside the date. A YAML
-# array drawn only from the four pricing tiers (Free, Team, Enterprise, Business
-# Critical — see content/pricing/_index.md); `make lint` enforces the set. List
-# every tier the feature is available in — since a lower tier implies the tiers
-# above it, that means the lowest applicable tier and all tiers above it. Remove
-# if not tier-gated.
-# tiers:
-#     - Enterprise
-#     - Business Critical
+# Optional Pulumi Cloud edition availability, shown as badge(s) beside the date.
+# A YAML array of edition ids from the closed set in data/pulumi_pricing.yaml
+# (individual, team, enterprise, business-critical); `make lint` enforces it.
+# Write the id — the badge renders the display name ("Business Critical") from
+# it. List every edition the feature is available in — since a lower edition
+# implies the ones above it, that means the lowest applicable edition and all
+# editions above it. Remove if not edition-gated.
+# editions:
+#     - enterprise
+#     - business-critical
 ---
 
 Describe what shipped in a short paragraph or two. Lead with what the reader can now do, then link out to the announcement post and/or the docs for details.

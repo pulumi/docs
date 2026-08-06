@@ -8,13 +8,10 @@ menu:
     parent: deployments-guides
     weight: 20
     identifier: deployments-guides-customer-managed-runners
+pulumi_cloud_feature: customer-managed-runners
 ---
 
 Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).
-
-{{% notes "info" %}}
-Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
-{{% /notes %}}
 
 ## Using customer-managed workflow runners
 
@@ -55,7 +52,7 @@ Patterns for scaling:
 - **Ephemeral runners**: Set `single_run: true` and use a Kubernetes `Job`/`CronJob` (or equivalent) to start a runner per job; the process exits after completing the job.
 - **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Insights scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.
 {{% /notes %}}
 

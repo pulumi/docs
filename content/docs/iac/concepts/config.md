@@ -47,7 +47,7 @@ The `pulumi config` CLI command can get, set, or list configuration key-value pa
 * `pulumi config get <key>` gets an existing configuration value with the key `<key>`.
 * `pulumi config` gets all configuration key-value pairs in the current stack (as JSON if `--json` is passed).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 When using the `config set` command, any existing values for `<key>` will be overridden without warning.
 {{% /notes %}}
 
@@ -645,7 +645,7 @@ There are cases where configuration for more than one stack in a given project i
 
 Project level configuration is defined inside the project folder's `Pulumi.yaml` file using one's favorite editor.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 At this time, the `pulumi config set` command does not support project level configuration. Therefore the configuration values are entered directly in the `Pulumi.yaml` file. Also, project level configuration only supports clear text configuration. Support for [pulumi config](https://github.com/pulumi/pulumi/issues/12041) and [project-level secrets](https://github.com/pulumi/pulumi/issues/11549) and other features are planned.
 {{% /notes %}}
 
@@ -724,7 +724,7 @@ config:
 
 The stacks will default to using `BroomeLLC` for the name configuration item. And the `pulumi` cli will throw an error if the stack configuration file contains a `name` property set to, say, an integer. Similarly, if the stack configuration file has a `subnets` property and it is not defined as an array of strings, the `pulumi` cli will throw an error.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 At this time, configuration specifications are not supported for structured configuration.
 {{% /notes %}}
 
@@ -778,6 +778,8 @@ Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overvie
 ![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
 
 ## Using Pulumi ESC from Pulumi Stack Config
+
+{{< pulumi-cloud />}}
 
 Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC can help with that!
 

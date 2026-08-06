@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/components/search/
   - /docs/pulumi-cloud/self-hosted/components/search/
   - /docs/pulumi-cloud/admin/self-hosted/components/search/
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}
