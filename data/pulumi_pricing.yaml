@@ -131,14 +131,14 @@ editions:
       # Not every meter belongs: esc-api-call-price is free to 10K and priced per
       # 10K rather than per unit, so it stays in the table below.
       note_tooltip:
-        intro: "Additional usage, in Credits (1 Credit = $1):"
+        intro: "Additional usage, in Credits (1 Credit = $1)"
         rates:
-          - label: 1 IaC resource / month
-            value: "0.1825"
-          - label: 1 secret / month
-            value: "0.50"
-          - label: 1 Insights resource / month
-            value: "0.0185"
+          - label: 1 IaC resource
+            value: "0.1825/month"
+          - label: 1 managed secret
+            value: "0.50/month"
+          - label: 1 Insights resource
+            value: "0.0185/month"
           - label: 1 workflow minute
             value: "0.01"
           - label: 1M Neo tokens
@@ -168,14 +168,14 @@ editions:
       unit: "**Includes 400 Credits**"
       note: Up to 2,000 resources, additional usage billed on demand
       note_tooltip:
-        intro: "Additional usage, in Credits (1 Credit = $1):"
+        intro: "Additional usage, in Credits (1 Credit = $1)"
         rates:
-          - label: 1 IaC resource / month
-            value: from 0.365
-          - label: 1 secret / month
-            value: "0.75"
-          - label: 1 Insights resource / month
-            value: from 0.0365
+          - label: 1 IaC resource
+            value: from 0.365/month
+          - label: 1 managed secret
+            value: "0.75/month"
+          - label: 1 Insights resource
+            value: from 0.0365/month
           - label: 1 workflow minute
             value: "0.01"
           - label: 1M Neo tokens

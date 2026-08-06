@@ -23,7 +23,7 @@
 {{- end }}
     <span class="block">
         {{ with .unit }}<span class="block mb-1.5">{{ . | markdownify }}</span>{{ end }}
-        {{ with .note }}<span class="block text-gray-700 leading-normal">{{ . | markdownify }}{{ with $tooltip }}{{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 -mt-0.5 inline text-gray-600") }}{{ end }}</span>{{ end }}
+        {{ with .note }}<span class="block text-gray-700 leading-normal">{{ . | markdownify }}{{ with $tooltip }}{{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 -mt-0.5 inline text-gray-700") }}{{ end }}</span>{{ end }}
     </span>
 {{- with $tooltip }}
     {{- /* Everything sits inside one block wrapper: _tooltip.scss sets
