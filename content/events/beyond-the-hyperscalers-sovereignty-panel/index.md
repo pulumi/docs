@@ -1,7 +1,6 @@
 ---
 # Name of the event, <= 60 characters
-title: "Beyond the Hyperscalers: Building Sovereign Infrastructure in the EU"
-allow_long_title: true
+title: "Beyond the Hyperscalers: Building Sovereign Infrastructure"
 meta_desc: A live panel on cloud sovereignty as an architecture decision. Who is leaving the hyperscalers, why, and when staying is the right call.
 meta_image: /events/beyond-the-hyperscalers-sovereignty-panel/meta.png
 meta_image_square: /events/beyond-the-hyperscalers-sovereignty-panel/meta-square.png
