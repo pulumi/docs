@@ -13,14 +13,18 @@ menu:
 
 ## Do you need to convert?
 
-Converting is not the only way to run Terraform configuration with Pulumi. Pulumi's [HCL runtime](/docs/iac/languages-sdks/hcl/) runs your existing `.tf` files directly: set `runtime: hcl` in `Pulumi.yaml` and `pulumi up` deploys the configuration you already have, unchanged.
+Converting is one of several ways to bring Terraform configuration to Pulumi, and often not the one you want. Three alternatives leave your HCL where it is:
 
-Which path you take comes down to what you want out of the move:
+* **Run your HCL natively.** Pulumi's [HCL runtime](/docs/iac/languages-sdks/hcl/) runs your existing `.tf` files directly: set `runtime: hcl` in `Pulumi.yaml` and `pulumi up` deploys the configuration you already have, unchanged. Reach for this when you want to keep writing HCL and are after Pulumi's engine, state management, secrets, and cloud platform.
+* **Consume a module as a package.** The [Any HCL Module](/registry/packages/hcl/) package turns any Terraform or OpenTofu module into a Pulumi component with a generated, strongly typed SDK, so a Pulumi program in any language can use the module without it being rewritten. See [Import Terraform Modules](/docs/iac/get-started/terraform/terraform-modules/).
 
-* **Run your HCL natively** when you want to keep writing HCL and are after Pulumi's engine, state management, secrets, and cloud platform.
-* **Convert** when you want the infrastructure code itself in a general-purpose language, for the testing, abstraction, and IDE support that comes with TypeScript, Python, Go, C#, or Java.
+  ```bash
+  $ pulumi package add hcl module terraform-aws-modules/s3-bucket/aws 4.1.2
+  ```
 
-The rest of this page covers converting.
+* **Publish your modules to the Pulumi Cloud registry.** Pulumi Cloud hosts your team's Terraform modules and converts every published version into a Pulumi package automatically, with no conversion step on your part. Existing `.tf` consumers keep resolving the module over the Terraform protocol. Publishing requires the Enterprise or Business Critical plan; reading and listing modules works on any plan. See [Terraform modules in the Pulumi Cloud registry](/docs/idp/concepts/terraform-modules/).
+
+Convert when you want the infrastructure code itself in a general-purpose language, for the testing, abstraction, and IDE support that comes with TypeScript, Python, Go, C#, or Java. The rest of this page covers converting.
 
 ## When to convert
 

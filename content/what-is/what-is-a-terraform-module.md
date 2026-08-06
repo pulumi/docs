@@ -207,7 +207,7 @@ export class S3Bucket extends pulumi.ComponentResource {
 
 Because a component is ordinary code, you get the reuse tools of the host language for free: loops, conditionals, functions, unit tests with your normal test framework, and package managers (npm, PyPI, NuGet, Maven) for distribution. A component packaged as a [Pulumi package](/docs/iac/concepts/packages/) can be published with a Pulumi plugin so that Pulumi generates SDKs for it in every supported language, letting a component authored in one language be consumed from another.
 
-Pulumi also interoperates with the Terraform ecosystem rather than replacing it. You can [consume an existing Terraform module directly from a Pulumi program](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/), which lets teams reuse modules they've already written while adopting Pulumi. For a side-by-side of the two tools' models and terminology, see the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/).
+Pulumi also interoperates with the Terraform ecosystem rather than replacing it. The [Any HCL Module](/registry/packages/hcl/) package turns any Terraform or OpenTofu module into a Pulumi component, so you can [consume an existing module directly from a Pulumi program](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) in any supported language and reuse modules you've already written. For a side-by-side of the two tools' models and terminology, see the [Pulumi and Terraform comparison](/docs/iac/comparisons/terraform/).
 
 | Aspect | Terraform module | Pulumi component |
 |---|---|---|
@@ -244,7 +244,7 @@ The root module is the directory where you run Terraform commands; Terraform alw
 
 ### Where can Terraform modules be stored?
 
-The `source` argument supports several locations: a local path in the same repository, the public Terraform Registry, a Git repository (including private ones over SSH), and generic or cloud object-storage sources such as HTTP URLs, Amazon S3, or Google Cloud Storage. Registry and Git sources also support version pinning.
+The `source` argument supports several locations: a local path in the same repository, the public Terraform Registry, a Git repository (including private ones over SSH), and generic or cloud object-storage sources such as HTTP URLs, Amazon S3, or Google Cloud Storage. Registry and Git sources also support version pinning. Private registries are another option: [Pulumi Cloud's registry](/docs/idp/concepts/terraform-modules/), for example, hosts Terraform modules over the same protocol HCP Terraform uses, so `.tf` files reference them with an ordinary `tf.pulumi.com/<namespace>/<name>/<system>` source address.
 
 ### What is the difference between a Terraform module and a Pulumi component?
 
@@ -252,7 +252,7 @@ Both encapsulate a group of resources behind inputs and outputs. A Terraform mod
 
 ### Can you use Terraform modules with Pulumi?
 
-Yes. Pulumi can consume an existing Terraform module directly from a Pulumi program, so teams can reuse modules they've already written while adopting Pulumi's programming model. See the guide on [using a Terraform module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
+Yes. `pulumi package add hcl module <source> [<version>]` turns any Terraform or OpenTofu module into a Pulumi component with a generated, strongly typed SDK, so teams can reuse modules they've already written while adopting Pulumi's programming model. Organizations that publish their modules to [Pulumi Cloud's registry](/docs/idp/concepts/terraform-modules/) get that conversion automatically for every version they publish. See the guide on [using a Terraform module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 ## Learn more
 
