@@ -21,7 +21,7 @@ Each transformation is a callback that gets invoked by the Pulumi runtime. It re
 {{< resource-option-scope "transformations" >}}
 
 {{% notes type="warning" %}}
-Note that Transformations will be deprecated in the future in favor of [Transforms](/docs/concepts/options/transforms).
+Note that Transformations will be deprecated in the future in favor of [Transforms](/docs/iac/concepts/resources/options/transforms/).
 
 Transforms support modifying child resources of packaged components (such as those in [awsx](/registry/packages/awsx) and [eks](/registry/packages/eks)) whereas Transformations do not.
 
@@ -295,7 +295,7 @@ var vpc = new MyVpcComponent("vpc",
 
 ## Stack Transformations
 
-Transformations can also be applied in bulk to many or all resources in a stack by using Stack Transformations, which are applied to the root stack resource and as a result inherited by all other resources in the stack.  Note that this applies only to resources that are registered after the stack transformation is registered.  Resources in the stack that have already been registered will not get the Stack Transformation applied to them.
+Transformations can also be applied in bulk to many or all resources in a stack by using Stack Transformations, which are applied to the root stack resource and as a result inherited by all other resources in the stack.  Note that this applies only to resources that are registered after the stack transformation is registered.  Resources in the stack that have already been registered will not get the Stack Transformation applied to them.  For full coverage, register the stack transformation at the start of your program, before declaring any resources.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -421,15 +421,15 @@ Pulumi.withOptions(stackOptions).run(ctx -> {
 
 ## Migrating from Transformations to Transforms
 
-Transformations will be deprecated in the future in favor of the more capable [Transforms](/docs/concepts/options/transforms) APIs. While the Transforms APIs are similar to Transformations, there are some differences in both API signatures and runtime behavior to be aware of. When moving from Transformations to Transforms you will need to update your transform code to handle the differences.
+Transformations will be deprecated in the future in favor of the more capable [Transforms](/docs/iac/concepts/resources/options/transforms/) APIs. While the Transforms APIs are similar to Transformations, there are some differences in both API signatures and runtime behavior to be aware of. When moving from Transformations to Transforms you will need to update your transform code to handle the differences.
 
 Summary of key differences:
 
-- [**No resource object**](#no-resource-object): There is no `Resource` object passed to transform functions. Most of the information you could have retrieved from that object is presented on the transform arguments directly, such as the type of the resource.
+- [**No resource object**](#no-resource-object): transform functions receive the resource's details on their arguments instead of a `Resource` object.
 
-- [**No typed args classes**](#no-typed-args-classes): In the old transformation system the transform function is called with the same values that are passed to the resource constructor. This means that in languages like Go, C#, and Python, you could typecast the arguments to the typed args struct/class. The new transform system works over the wire protocol, allowing it to run for resources created in other processes, but it means the properties object you get is closer to the raw protocol than the typed arguments you might expect. Objects are represented as dictionaries/maps with camelCase keys (e.g. in Python, access properties with camelCase keys like `environmentVariables` instead of snake_case keys like `environment_variables`). Property names in resource options are also camelCase.
+- [**No typed args classes**](#no-typed-args-classes): transforms work over the wire protocol, so properties arrive as dictionaries/maps with camelCase keys rather than typed args classes.
 
-- [**Natively Async**](#natively-async): The new transform API has been designed from the start with async support in mind. In all applicable languages the transform functions support returning a Promise/Task so you can use standard `await` operators for async calls in the transform. In Node.js and Python, returning a Promise/Awaitable is optional.
+- [**Natively Async**](#natively-async): the transform API supports async transform functions in all applicable languages.
 
 ### No Resource Object
 
