@@ -21,6 +21,7 @@ With the integration in place you can:
 
 - **Preview pull requests.** Run `pulumi preview` when a pull request is opened or updated and post the resource changes back as a pull request comment, so reviewers see the infrastructure impact without leaving Azure DevOps. See [pull request comments](#pull-request-comments).
 - **Deploy on push.** Run `pulumi up` automatically when commits land on a configured branch, or when a matching git tag is pushed. See [push-to-deploy](#push-to-deploy).
+- **Report pass/fail on the commit.** Post the deployment's outcome as an Azure DevOps commit status — the green check or red X that appears on the pull request — so the result is visible without opening the comment. See [commit status checks](#commit-status-checks).
 - **Stand up review stacks.** Create a real, ephemeral environment per pull request and tear it down on merge or close. See [review stacks](#review-stacks).
 - **Create new projects from the developer portal.** Use the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) to scaffold Pulumi projects and stacks into Azure DevOps repositories, and register Azure DevOps repositories as [template sources](#template-sources).
 
@@ -105,15 +106,19 @@ Pulumi automatically posts comments on pull requests with the results of any sta
 
 For [review stacks](#review-stacks), comments show the review stack status and outputs instead of a standard preview summary.
 
-Draft pull requests do not trigger deployments.
+Draft pull requests do not trigger deployments, so no preview runs and no comment is posted until the pull request is published. Azure DevOps is the exception here: [GitLab](/docs/integrations/version-control/gitlab/) and [Bitbucket](/docs/integrations/version-control/bitbucket/) treat drafts like any other request, and [GitHub](/docs/integrations/version-control/github-app/) makes draft comments a setting you can turn off.
 
 These comments come from Pulumi Deployments. [Neo code reviews](/docs/ai/neo/code-reviews/), which analyze a pull request and leave inline feedback, are available on GitHub only — Neo does not comment on Azure DevOps pull requests.
 
 ### Commit status checks
 
-Pulumi posts commit status checks to Azure DevOps for pull request deployments, under the status genre `pulumi`. Each status includes a link back to the deployment in Pulumi Cloud, and is named after the project, stack, and operation — for example `my-project/dev - preview deployment`.
+A commit status is the pass/fail marker Azure DevOps attaches to a commit and displays on the pull request. Pulumi posts one for each pull request deployment, so reviewers can see whether the preview succeeded without reading the comment, and you can require it to pass by adding a status check [branch policy](https://learn.microsoft.com/en-us/azure/devops/repos/git/pr-status-policy) in Azure DevOps.
 
-Azure DevOps commit statuses are additive: posting a new status with the same context name supersedes the previous one, so the latest result is what appears on the commit.
+Statuses are posted under the genre `pulumi` and named after the project, stack, and operation — for example `my-project/dev - preview deployment`. Each one links back to the full deployment in Pulumi Cloud.
+
+Azure DevOps commit statuses are additive: posting a new status with the same genre and name supersedes the previous one, so the latest result is what appears on the commit.
+
+Push-to-deploy runs do not post a commit status. Statuses are tied to a pull request's head commit, so they're only produced by pull request deployments.
 
 ### Push-to-deploy
 
@@ -152,6 +157,8 @@ Pulumi injects the following environment variables during Azure DevOps-triggered
 | `PULUMI_CI_BRANCH_NAME` | Pull request and tag push events | Source branch name, or `refs/tags/<tag>` for a tag push |
 | `PULUMI_CI_TAG_NAME` | Tag push events | The pushed tag |
 
+On a tag push, `PULUMI_CI_BRANCH_NAME` carries `refs/tags/<tag>` rather than a branch name. This is intentional: the deployment runner clones by commit SHA, leaving a detached `HEAD` that the Pulumi engine can't read a ref from, so it falls back to `PULUMI_CI_BRANCH_NAME` and records that value as the update's `git.headName`. Use `PULUMI_CI_TAG_NAME` when you need the tag on its own.
+
 Pulumi also injects an `AZURE_DEV_OPS_TOKEN` environment variable that your Pulumi program and [pre-run commands](/docs/deployments/concepts/settings/pre-run-commands/) can use to authenticate to Azure DevOps — for example, to install a private package or clone another repository. To supply your own value instead, set it through [custom environment variables](/docs/deployments/concepts/settings/environment-variables/); an explicit value always overrides the one Pulumi provides.
 
 ## New project wizard
@@ -162,7 +169,7 @@ The [New Project Wizard](/docs/idp/concepts/new-project-wizard/) supports Azure 
 - Select an existing Azure DevOps repository and branch
 - Choose any deployment method: CLI, Pulumi Deployments (no-code), or Pulumi Deployments (VCS-backed)
 
-Select **Azure DevOps** as the VCS provider during project setup. If only one provider is configured, it's selected automatically. When using the VCS-backed deployment method, the wizard configures deploy-on-push, pull request previews, and review stacks automatically.
+Select **Azure DevOps** as the VCS provider during project setup. If only one provider is configured, it's selected automatically. When using the VCS-backed deployment method, the wizard turns on deploy-on-push and pull request previews for you. [Review stacks](#review-stacks) stay off — enable them afterward on the stack you want to use as a template.
 
 ## Template sources
 

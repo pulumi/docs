@@ -147,7 +147,7 @@ After installing the app, you can configure pull request behavior. Toggle these 
 
 Changes save automatically. Detailed diff requires pull request comments to be enabled. Draft pull request comments is specific to the GitHub app.
 
-[Neo code reviews](/docs/ai/neo/code-reviews/) are configured separately, under **Settings** > **Neo** > **Code reviews**, not in the integration settings above.
+[Neo code reviews](/docs/ai/neo/code-reviews/) are configured separately, under **Settings** > **Neo settings** > **Code reviews**, not in the integration settings above.
 
 To remove an integration, see [Uninstallation](#uninstallation).
 
