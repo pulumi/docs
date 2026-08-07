@@ -14,6 +14,8 @@ Using the `aws sts get-caller-identity` command is key in managing access to AWS
 
 With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws sts get-caller-identity`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
 
+The same dynamic-credentials approach also prevents the AWS CLI credential errors this pattern is built to avoid, `ExpiredToken`, `InvalidAccessKeyId`, `SignatureDoesNotMatch`, and "Unable to locate credentials" among them, and applies to any AWS CLI command, not just this one. See [Fix AWS CLI Credential Errors and Run AWS Commands with Pulumi ESC](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) for the full picture.
+
 ## Using Pulumi ESC for dynamic credentials with AWS
 
 [Pulumi ESC](https://www.pulumi.com/product/esc/) is a service that helps to alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. The `pulumi env run` command of this service in particular helps to resolve concerns around how to:
