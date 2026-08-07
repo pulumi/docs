@@ -219,7 +219,12 @@
                 <p class="form-help">One Pulumi Credit costs $1 USD.</p>
             </div>
 
-            {{/* mt-auto pins the CTAs and the disclaimer to the bottom of the panel.
+            {{/* The two CTA blocks point at the same two destinations, so their
+                 data-track names carry the state they were clicked from — that is the
+                 only way to tell a Contact sales click we prompted from one the reader
+                 chose while looking at a price.
+
+                 mt-auto pins the CTAs and the disclaimer to the bottom of the panel.
                  The blocks above them change height when the estimate crosses into
                  contact-sales territory — a taller message replaces the figure and the
                  usage breakdown disappears — and without this the buttons would jump
@@ -227,8 +232,8 @@
             <div class="mt-auto flex flex-col gap-6">
                 <div data-calc-cta-default>
                     <div class="flex flex-col gap-2">
-                        <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-primary btn-lg w-full">Start a free trial</a>
-                        <a href="/contact/?form=sales" class="btn btn-secondary w-full">
+                        <a href="https://app.pulumi.com/signup?create-organization=1" data-track="pricing-calculator-trial" class="btn btn-primary btn-lg w-full">Start a free trial</a>
+                        <a href="/contact/?form=sales" data-track="pricing-calculator-contact-sales" class="btn btn-secondary w-full">
                             Contact sales
                             {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
                         </a>
@@ -236,8 +241,8 @@
                 </div>
                 <div class="hidden" data-calc-cta-contact>
                     <div class="flex flex-col gap-2">
-                        <a href="/contact/?form=sales" class="btn btn-primary btn-lg w-full">Contact sales</a>
-                        <a href="https://app.pulumi.com/signup?create-organization=1" class="btn btn-secondary w-full">Start a free trial</a>
+                        <a href="/contact/?form=sales" data-track="pricing-calculator-contact-sales-above-threshold" class="btn btn-primary btn-lg w-full">Contact sales</a>
+                        <a href="https://app.pulumi.com/signup?create-organization=1" data-track="pricing-calculator-trial-above-threshold" class="btn btn-secondary w-full">Start a free trial</a>
                     </div>
                 </div>
 
