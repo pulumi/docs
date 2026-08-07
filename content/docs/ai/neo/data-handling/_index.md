@@ -23,7 +23,7 @@ Neo only sees what the invoking person or automation is authorized to see. Every
 
 ## How prompts, completions, and task history are handled
 
-Because Neo's models run through Amazon Bedrock, Bedrock itself does not retain the prompts sent to it or the completions it returns. A Neo task's runtime session is torn down once it goes idle; the next turn in that task rebuilds its context from Pulumi's own stored, redacted task history rather than from anything held open in the model provider's infrastructure.
+Because Neo's models run through Amazon Bedrock, prompts and completions are not retained by the model provider under Pulumi's Bedrock configuration. A Neo task's runtime session is torn down once it goes idle; the next turn in that task rebuilds its context from Pulumi's own stored, redacted task history rather than from anything held open in the model provider's infrastructure.
 
 That stored history is also where Pulumi's own redaction runs. Task events are scanned for credential-shaped patterns before they're written to storage, and detected values are replaced with `[REDACTED]` so they never appear in task history, shared task views, or the Slack and pull request output Neo produces. See [handling of secret values](/docs/ai/neo/permissions/#handling-of-secret-values) in the permissions model for the specifics, including why that scan is defense in depth rather than a guarantee.
 
