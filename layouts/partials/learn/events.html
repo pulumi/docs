@@ -1,0 +1,57 @@
+{{- /*
+    Workshops and events: a mixed grid of what's next and what's worth watching
+    now.
+
+    Upcoming events come first (from the shared events/upcoming.html helper, so
+    this agrees with the events list page and the homepage), and the curated
+    on-demand slugs fill the remainder up to `count`. Any curated slug that no
+    longer resolves — a deleted or renamed event — is silently skipped and
+    back-filled from events/on-demand.html, so a stale slug can never leave a
+    hole in the grid.
+
+    Each card is events/event-card.html, which derives Register-vs-Watch from the
+    event's own youtube_url; nothing here needs to tell it which it is.
+
+    Params:
+      params       {title, count, on_demand: [<slug>…]}
+      pageContext  the page, for the card's relref resolution
+*/ -}}
+{{- $p := .params -}}
+{{- $ctx := .pageContext -}}
+{{- $count := $p.count | default 6 -}}
+
+{{- /* Upcoming first, capped at half the grid so a busy month can't crowd out
+       every recording. */ -}}
+{{- $chosen := slice -}}
+{{- $upcomingCap := div $count 2 -}}
+{{- range first $upcomingCap (partialCached "events/upcoming.html" . "upcoming") -}}
+    {{- $chosen = $chosen | append .data -}}
+{{- end -}}
+
+{{- /* Then the curated on-demand slugs, in order. */ -}}
+{{- range $p.on_demand -}}
+    {{- with site.GetPage (printf "/events/%s" .) -}}
+        {{- if not (in $chosen .) -}}{{ $chosen = $chosen | append . }}{{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* Back-fill anything still missing with the most recent recordings. */ -}}
+{{- range (partialCached "events/on-demand.html" . "on-demand") -}}
+    {{- if and (lt (len $chosen) $count) (not (in $chosen .data)) -}}
+        {{- $chosen = $chosen | append .data -}}
+    {{- end -}}
+{{- end -}}
+
+{{- with first $count $chosen }}
+<section aria-labelledby="learn-events-heading">
+    <div class="mb-8 flex items-center justify-between gap-4">
+        <h2 id="learn-events-heading" class="font-overline m-0 text-service-black">{{ $p.title }}</h2>
+        <a href="/events/" data-track="learn-events-see-all" class="btn btn-link shrink-0">See all &rarr;</a>
+    </div>
+    <ul class="grid list-none grid-cols-1 gap-4 p-0 md:grid-cols-2 lg:grid-cols-3">
+        {{ range . }}
+        <li class="m-0">{{ partial "events/event-card.html" (dict "page" . "pageContext" $ctx) }}</li>
+        {{ end }}
+    </ul>
+</section>
+{{- end }}

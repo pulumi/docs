@@ -14,7 +14,9 @@
 {{- $ring := cond $dark "ring-violet-950" "ring-gray-100" -}}
 {{- $fg := cond $dark "text-white" "text-service-black" -}}
 {{- with $authors -}}
-<span class="flex items-center gap-2">
+{{- /* min-w-0 + a truncating label: in a narrow card the name is the only
+       variable-width part of a byline, so it's the part that gives. */ -}}
+<span class="flex min-w-0 items-center gap-2">
     <span class="flex items-center shrink-0">
         {{- range $i, $id := . -}}
             {{- with index site.Data.team.team $id -}}
@@ -26,9 +28,9 @@
     </span>
     {{- if $showLabel -}}
         {{- if eq (len .) 1 -}}
-            {{- with index site.Data.team.team (index . 0) }}<span class="body-sm {{ $fg }} whitespace-nowrap">{{ .name }}</span>{{ end -}}
+            {{- with index site.Data.team.team (index . 0) }}<span class="body-sm {{ $fg }} truncate">{{ .name }}</span>{{ end -}}
         {{- else -}}
-            <span class="body-sm {{ $fg }} whitespace-nowrap">{{ len . }} authors</span>
+            <span class="body-sm {{ $fg }} truncate">{{ len . }} authors</span>
         {{- end -}}
     {{- end -}}
 </span>

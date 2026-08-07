@@ -9,11 +9,14 @@
 // (chooser preview pill, docs nav count, Algolia count, event-card tag) can pull in a
 // single variant. `ghost`/`link` from the cva source are omitted — no consumers yet.
 
+// `font-normal` is deliberate and load-bearing: a badge is never bold. Without
+// it the weight is inherited, so a badge composed onto a heading or inside a
+// <strong> would render bold and stop looking like a badge.
 .badge {
     @apply inline-flex h-5 w-fit shrink-0 items-center justify-center gap-1
         overflow-hidden rounded-full border border-transparent px-2 py-0.5
-        align-middle font-mono text-xs uppercase tracking-wide whitespace-nowrap
-        transition-colors;
+        align-middle font-mono text-xs font-normal uppercase tracking-wide
+        whitespace-nowrap transition-colors;
 
     // Optional leading/trailing icon (parity with cva `[&>svg]:size-3`).
     & > svg {

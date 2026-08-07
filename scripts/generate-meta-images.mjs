@@ -150,6 +150,7 @@ const SECTIONS = [
     valid: (f, t) => !!f.title && (t === "title" || !!f.companyLogo),
   },
   // Small marketing sections converted from off-brand meta images to light title cards.
+  titleSection("learn", false),
   titleSection("migrate", true),
   titleSection("partner", true),
   titleSection("topics", true),

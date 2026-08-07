@@ -1,0 +1,64 @@
+{{- /*
+    /learn — the single front door to every Pulumi learning resource: the Dev
+    Hub, Pulumi Academy, the get-started path, workshops, and the blog's series
+    and tutorials.
+
+    A bespoke section page (like /state-of-agentic-infrastructure/), not a
+    template-partials page: all content lives in content/learn/_index.md
+    frontmatter and each top-level key dispatches to a partial in the private
+    learn/ namespace. Every section is optional — drop the key and the section
+    disappears without touching the layout.
+*/ -}}
+{{ define "hero" }}
+{{ end }}
+
+{{ define "main" }}
+{{/*
+    Two containers with a rule between them, rather than one: the <hr> is meant
+    to span the full page width, so it has to sit outside the container that
+    constrains and pads everything else. Doing it inside would mean a 100vw
+    break-out, which overflows by the width of the scrollbar.
+
+    The first group (spotlight + "New to Pulumi?") is spaced tighter than the
+    page's usual rhythm — they read as one "start here" block above the rule.
+*/}}
+<div class="font-body">
+
+    <div class="container mx-auto mt-8 flex flex-col gap-16 px-6 md:mt-16 md:gap-20 md:px-8">
+        {{/* Hero — the same centered pattern as /case-studies/. */}}
+        <section id="hero" class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+            <h1 class="heading-1">{{ .Title }}</h1>
+            {{ with .Params.description }}
+            <p class="body-lg text-gray-primary mb-0 max-w-2xl">{{ . | markdownify }}</p>
+            {{ end }}
+        </section>
+
+        <div class="flex flex-col gap-6 md:gap-8">
+            {{ with .Params.spotlight }}
+            {{ partial "learn/spotlight.html" . }}
+            {{ end }}
+
+            {{ with .Params.new_to_pulumi }}
+            {{ partial "learn/new-to-pulumi.html" . }}
+            {{ end }}
+        </div>
+    </div>
+
+    <hr class="my-16 border-0 border-t border-gray-200 md:my-20" />
+
+    <div class="container mx-auto mb-20 flex flex-col gap-16 px-6 md:gap-20 md:px-8">
+        {{ with .Params.events }}
+        {{ partial "learn/events.html" (dict "params" . "pageContext" $) }}
+        {{ end }}
+
+        {{ with .Params.series }}
+        {{ partial "learn/series.html" . }}
+        {{ end }}
+
+        {{ with .Params.tutorials }}
+        {{ partial "learn/tutorials.html" . }}
+        {{ end }}
+    </div>
+
+</div>
+{{ end }}

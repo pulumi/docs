@@ -1,0 +1,56 @@
+{{- /*
+    The two large side-by-side cards at the top of /learn (Dev Hub, Academy).
+
+    Dark violet-950 panels, so the two headline destinations read as the top of
+    the page against the lighter sections below. The illustrations are
+    transparent line art sitting directly on the fill (no boxed image well), and
+    their palette is inverted for the dark ground: the faint outer frames drop to
+    violet-800 and the glyph rises to violet-200. This is a permanently dark
+    card, not a dark-mode variant — /learn is outside /docs, so there is no theme
+    toggle here and no need for a second set of assets.
+
+    The whole card is one stretched link, so the CTA is a styled span, not a
+    nested anchor. Everything is centered, and `mt-auto` on the CTA pushes it to
+    the foot of the card. Grid items stretch to a common height, so the two CTAs
+    land on the same baseline however long the copy above them runs.
+
+    Params:
+      . (the context) a slice of {title, description, image, href, cta}
+
+    Links are written out verbatim rather than run through relref: /dev-hub/ is
+    built in the marketing-web repo, so it isn't a page Hugo can resolve here.
+
+    The illustration is looked up defensively: a missing asset would otherwise
+    panic the build (see layouts/partials/fingerprinted-img.html), so an absent
+    image just leaves the panel empty and the card still renders.
+*/ -}}
+<section aria-label="Featured learning resources">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        {{ range . }}
+        <article class="group relative h-full">
+            <a href="{{ .href }}"{{ partial "external-link-attrs.html" .href | safeHTMLAttr }} class="flex h-full flex-col items-center rounded-lg bg-violet-950 p-8 text-center no-underline md:p-10">
+                {{ with .image }}
+                {{ $asset := resources.Get (printf "fingerprinted/%s" (strings.TrimPrefix "/" .)) }}
+                {{ if $asset }}
+                <div class="mb-6 flex items-center justify-center">
+                    {{ partial "fingerprinted-img.html" (dict "src" . "alt" "" "ariaHidden" "true" "class" "h-40 w-auto md:h-52") }}
+                </div>
+                {{ end }}
+                {{ end }}
+                <h2 class="heading-2 m-0 text-white transition-colors group-hover:text-violet-300">{{ .title }}</h2>
+                {{ with .description }}
+                <p class="body-base mt-3 mb-0 max-w-md text-violet-200">{{ . }}</p>
+                {{ end }}
+                {{ with .cta }}
+                <div class="mt-auto pt-8">
+                    <span class="btn btn-primary btn-xl group-hover:bg-violet-800">
+                        {{ . }}
+                        {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                    </span>
+                </div>
+                {{ end }}
+            </a>
+        </article>
+        {{ end }}
+    </div>
+</section>
