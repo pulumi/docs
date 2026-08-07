@@ -11,9 +11,10 @@
 
 {{ $allEvents := (where $.Site.Pages "Type" "events") }}
 
-{{/* Upcoming events come from the shared helper so this list and any other
-     consumer (e.g. the homepage section) agree on what "upcoming" means. */}}
-{{ $upcomingEvents := partialCached "events/upcoming.html" . "upcoming" }}
+{{/* Shared with the homepage section so both agree on how "upcoming" is decided.
+     A cutoff 24 hours back keeps an event listed until a day after it starts,
+     so a session running right now doesn't disappear mid-event. */}}
+{{ $upcomingEvents := partialCached "events/upcoming.html" (now.Add (duration "hour" -24)) "upcoming-list" }}
 {{ $upcomingPages := slice }}
 {{ range $upcomingEvents }}{{ $upcomingPages = $upcomingPages | append .data }}{{ end }}
 

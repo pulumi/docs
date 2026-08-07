@@ -26,7 +26,8 @@
       { text: "Read the blog", link: "/blog/" }. The row mixes two content types,
       so this takes a list rather than the single cta_text/cta_link other sections use.
     - count: Total number of tiles in the row. Default 3.
-    - show_event: Optional true to give the last slot to the next upcoming event.
+    - show_event: Optional true to give the last slot to the next upcoming event
+      that's more than a day out — see the cutoff below.
     - anchor: Optional anchor for section id
 */}}
 
@@ -42,7 +43,10 @@
 
 {{ $nextEvent := "" }}
 {{ if $showEvent }}
-    {{ with first 1 (partialCached "events/upcoming.html" $ctx "upcoming") }}
+    {{/* A day of lead time so the tile can't go stale-dated while this page sits
+         published between builds (see events/upcoming.html); the practical
+         effect is that an event drops off the homepage the day before it runs. */}}
+    {{ with first 1 (partialCached "events/upcoming.html" (now.Add (duration "hour" 24)) "upcoming-homepage") }}
         {{ $nextEvent = index . 0 }}
     {{ end }}
 {{ end }}
