@@ -141,8 +141,9 @@ feed_section:
     - /blog/bring-your-terraform-estate-into-the-agentic-era
     - /blog/terraform-to-pulumi-cloud-hands-on
     - /blog/terraforms-data-model-on-pulumis-engine
-  events_title: Upcoming events
-  # Rendered only while they're still ahead of us — past events drop off on their own.
+  events_title: Related events
+  # Listed while they're still ahead of us, then for as long as there's a recording
+  # to watch; an event that has run with nothing to watch drops off on its own.
   events:
     - /events/pulumi-for-all-your-iac-terraform-hcl
     - /events/pulumi-for-all-your-iac-terraform-hcl-eu

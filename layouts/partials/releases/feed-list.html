@@ -1,26 +1,31 @@
 {{/*
     Releases Feed List
 
-    One bordered .card holding up to two lists — blog posts and upcoming events —
+    One bordered .card holding up to two lists — blog posts and related events —
     each under its own overline. Rows come from the shared compact list-row
     components, so both lists line up on the same columns.
 
-    Events are filtered through events/upcoming.html, the site-wide definition of
-    "still ahead of us", so a release page never advertises a workshop that has
-    already run; when the last one passes, the heading goes with it.
+    An event stays on the page for as long as it's worth a click: while it's still
+    ahead of us (per events/upcoming.html, the site-wide definition of "upcoming"
+    shared with the events list and the homepage), and afterwards for as long as
+    it has a recording — in which case its row flips itself from Register to
+    Watch. An event that has run with nothing to watch drops off, and the heading
+    goes with the last of them, so the card can never advertise a date that has
+    already passed.
 
     Parameters:
     - anchor:       Optional section ID for TOC link targets.
     - posts_title:  Overline above the posts. Defaults to "More from the blog".
     - posts:        Array of blog post paths (e.g. "/blog/some-post").
-    - events_title: Overline above the events. Defaults to "Upcoming events".
+    - events_title: Overline above the events. Defaults to "Related events" — the
+                    list mixes upcoming and on-demand, so it isn't "Upcoming".
     - events:       Array of event paths (e.g. "/events/some-event").
                     Both lists are looked up via site.GetPage; missing pages are skipped.
 */}}
 
 {{ $anchor := .anchor }}
 {{ $postsTitle := .posts_title | default "More from the blog" }}
-{{ $eventsTitle := .events_title | default "Upcoming events" }}
+{{ $eventsTitle := .events_title | default "Related events" }}
 
 {{ $posts := slice }}
 {{ range .posts }}
@@ -34,7 +39,9 @@
 {{ $events := slice }}
 {{ range .events }}
     {{ with site.GetPage . }}
-        {{ if in $upcoming .RelPermalink }}{{ $events = $events | append . }}{{ end }}
+        {{ if or (in $upcoming .RelPermalink) .Params.youtube_url }}
+            {{ $events = $events | append . }}
+        {{ end }}
     {{ end }}
 {{ end }}
 

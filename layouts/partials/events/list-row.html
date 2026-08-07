@@ -1,7 +1,17 @@
 {{- /*
     Compact event row — the events counterpart of blog/card/list-row.html, with
     the same columns (title left; badge, presenter avatars, and date right) so
-    the two can stack inside a single card. The whole row is a stretched link.
+    the two can stack inside a single card. The whole row is a stretched link, so
+    the CTA renders as a styled span rather than a nested anchor, exactly as it
+    does on events/event-card.html.
+
+    The CTA follows the same rule as the card — Register while the event is ahead
+    of us, Watch once there's a recording — but as the quieter ghost-primary
+    variant, and it sits between the title and the badge so the badge, avatar, and
+    date columns still line up with the blog rows above it. For the same
+    alignment reason the date stays put on an on-demand row (the card drops it):
+    in a list, a recorded session's original date reads as context rather than as
+    a promise, and an empty column would break the grid.
 
     Unlike events/event-card.html, the internal href comes from the event page
     itself rather than a relref of url_slug, so this needs no page context;
@@ -16,10 +26,16 @@
 {{- $external := or $page.Params.external $page.Params.internal_landing_page -}}
 {{- $href := cond $external ($page.Params.url_slug | string) $page.RelPermalink -}}
 {{- $date := $page.Params.sortable_date -}}
+{{- $onDemand := $page.Params.youtube_url -}}
 <article class="group relative border-b border-gray-200 last:border-0">
     <div class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 py-6">
         <h4 class="m-0! min-w-0 flex-1 md:truncate"><a href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }} data-track="event-row-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}{{ if $external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}</a></h4>
         <div class="flex shrink-0 items-center gap-2">
+            {{ if $onDemand }}
+            <span class="btn btn-ghost-primary btn-sm shrink-0 group-hover:bg-violet-50">{{ partial "icon.html" (dict "name" "play" "class" "size-4") }}Watch</span>
+            {{ else }}
+            <span class="btn btn-ghost-primary btn-sm shrink-0 group-hover:bg-violet-50">{{ partial "icon.html" (dict "name" "calendar-check" "class" "size-4") }}Register</span>
+            {{ end }}
             <span class="hidden md:inline-flex">{{ partial "badge.html" (dict "text" $page.Params.event_type "variant" "outline") }}</span>
             <span class="w-32 mx-auto hidden md:inline-flex justify-center">
                 {{- with $page.Params.presenters -}}
