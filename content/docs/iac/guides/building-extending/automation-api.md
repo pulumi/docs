@@ -978,7 +978,7 @@ Notice how you can choose to have a callback function for standard output. In ad
 
 ### Preview a destroy or refresh without applying it
 
-Sometimes you want to know what a `destroy` or `refresh` would do before committing to it, for example to gate an automated teardown behind a manual approval step, or to inspect drift without writing it back to the stack's state. Requires Pulumi CLI 3.105.0 or later.
+Sometimes you want to know what a `destroy` or `refresh` would do before committing to it. For example, you might gate an automated teardown behind a manual approval step, or inspect drift without writing it back to the stack's state. Requires Pulumi CLI 3.105.0 or later.
 
 In TypeScript, Python, and Go, this is a dedicated method that returns the same `PreviewResult` shape as `preview`, without ever calling the destroy or refresh engine operation:
 
@@ -1019,7 +1019,7 @@ if err != nil {
 
 {{% /choosable %}}
 
-{{% choosable language "csharp,fsharp,visualbasic" %}}
+{{% choosable language "csharp" %}}
 
 C# doesn't expose a separate preview method for destroy and refresh. Instead, set `PreviewOnly` on the corresponding options object and call the regular method; the CLI runs the operation in preview mode and returns without changing the stack's state:
 
