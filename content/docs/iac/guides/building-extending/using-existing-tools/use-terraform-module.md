@@ -9,7 +9,7 @@ menu:
         parent: iac-guides-using-existing-tools
         weight: 50
 aliases:
-- /docs/iac/using-pulumi/extending-pulumi/use-terraform-module/
+- /docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/
 - /docs/iac/extending-pulumi/use-terraform-module/
 - /docs/iac/build-with-pulumi/use-terraform-module/
 ---

@@ -22,11 +22,13 @@ This step-by-step tutorial focuses on coexistence patterns that let you leverage
 
 Through progressive examples, you'll discover how to:
 
+* Run your existing `.tf` files unchanged on [Pulumi HCL](/docs/iac/languages-sdks/hcl/)
 * Reference existing Terraform state files from Pulumi
 * Use any Terraform provider in Pulumi programs
 * Import and use Terraform modules directly
 * Convert HCL code to Pulumi when beneficial
 * Orchestrate both Terraform and Pulumi deployments together
+* Use Pulumi Cloud as your Terraform state backend, with plans and applies running remotely
 
 ## Overview of examples
 
@@ -36,10 +38,11 @@ Starting with simple state referencing, you'll progressively add complexity whil
 The examples demonstrate:
 
 1. **Coexistence**: Reading Terraform state from Pulumi
-2. **Provider sharing**: Using Terraform providers in Pulumi
-3. **Module reuse**: Leveraging existing Terraform modules
-4. **Selective conversion**: Converting specific HCL when advantageous
-5. **Orchestration**: Managing both tools in unified workflows
+1. **Provider sharing**: Using Terraform providers in Pulumi
+1. **Module reuse**: Leveraging existing Terraform modules
+1. **Selective conversion**: Converting specific HCL when advantageous
+1. **Orchestration**: Managing both tools in unified workflows
+1. **State and execution**: Moving Terraform state and runs onto Pulumi Cloud
 
 ## Prerequisites
 
