@@ -160,10 +160,10 @@ If you would rather see this running than read about it, Docker and Pulumi are t
 
 **Americas — September 16, 9:00 AM Pacific**
 
-{{< blog/cards "/events/neo-in-a-docker-sandbox/" >}}
+{{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
 
 **EMEA — October 14, 10:00 AM CEST**
 
-{{< blog/cards "/events/neo-in-a-docker-sandbox-eu/" >}}
+{{< blog/card "/events/neo-in-a-docker-sandbox-eu/" >}}
 
 And if your coding agent has already written its own horror story, come tell me in the [Pulumi Community Slack](https://slack.pulumi.com/). I collect them.

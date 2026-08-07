@@ -316,26 +316,25 @@ Place the card yourself, wherever it reads best — usually at a natural section
 
 #### Event and Post Cards
 
-To point readers at an event or another blog post, embed its card with the `blog/cards` shortcode instead of describing it in a CTA card. Pass one or more content paths:
+To point readers at an event or another blog post, embed its card with the `blog/card` shortcode instead of describing it in a CTA card. Pass one content path:
 
 ```plain
-{{< blog/cards "/events/neo-in-a-docker-sandbox/" >}}
-{{< blog/cards "/events/neo-in-a-docker-sandbox/" "/events/neo-in-a-docker-sandbox-eu/" >}}
-{{< blog/cards "/blog/pulumi-neo/" >}}
+{{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
+{{< blog/card "/blog/pulumi-neo/" >}}
 ```
 
-These are the same tiles the [events list](/events/) and the blog homepage use, so the card pulls its title, date, location, presenters, and blurb from the target page — nothing to restate and nothing to go stale. An event card also flips its own CTA from "Register" to "Watch" once a recording is added to the event page, so a post that outlives the event still links somewhere useful.
+This is the same tile the [events list](/events/) and the blog homepage use, so the card pulls its title, date, location, presenters, and blurb from the target page — nothing to restate and nothing to go stale. An event card also flips its own CTA from "Register" to "Watch" once a recording is added to the event page, so a post that outlives the event still links somewhere useful.
 
-Cards are always full width and stacked. Because a card carries no copy of its own, label it with ordinary markdown above its own single-path shortcode when the target page's title doesn't say everything the reader needs:
+A card is always full width, so it's one card per shortcode — several in a row is simply several shortcodes. Because a card carries no copy of its own, label it with ordinary markdown above the shortcode when the target page's title doesn't say everything the reader needs:
 
 ```plain
 **Americas — September 16, 9:00 AM Pacific**
 
-{{< blog/cards "/events/neo-in-a-docker-sandbox/" >}}
+{{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
 
 **EMEA — October 14, 10:00 AM CEST**
 
-{{< blog/cards "/events/neo-in-a-docker-sandbox-eu/" >}}
+{{< blog/card "/events/neo-in-a-docker-sandbox-eu/" >}}
 ```
 
 Paths must be absolute and resolve to a page under `/events/` or `/blog/` — a typo fails the build rather than dropping the card silently.
