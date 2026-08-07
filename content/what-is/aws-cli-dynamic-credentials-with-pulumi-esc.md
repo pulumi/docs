@@ -1,9 +1,8 @@
 ---
 title: Fix AWS CLI Credential Errors and Run AWS Commands with Pulumi ESC
 meta_desc: |
-     Learn how Pulumi ESC's dynamic AWS credentials via OIDC prevent errors like
-     ExpiredToken and InvalidAccessKeyId, and how to run any AWS CLI command
-     without configuring long-lived local credentials.
+     Learn how Pulumi ESC's dynamic AWS credentials fix errors like ExpiredToken
+     and let you run any AWS CLI command without local credential setup.
 type: what-is
 page_title: Fix AWS CLI Credential Errors and Run AWS Commands with Pulumi ESC
 authors: ["diana-esteves", "torian-crane"]
