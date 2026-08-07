@@ -136,7 +136,7 @@ def test_style_findings_counted_not_classified():
             "\n"
             "#### Style findings\n"
             "\n"
-            "*Found by pattern-based linting; Findings may be false positives.*\n"
+            "*Optional polish from pattern-based linting.*\n"
             "\n"
             "- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.\n"
             "- **line 87:** [style] _passive voice_ — Use active voice.\n"

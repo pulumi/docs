@@ -103,7 +103,7 @@ The table header row stays fixed; only the number row changes per review. Bold t
 
 The ⚠️ Low-confidence count does **not** include advisory style suggestions — they render expanded but uncounted (optional polish, not reviewer burden). Blocker-tier style findings (`[style-blocker]`) render in 🚨 Outstanding and **are** counted there. The maintainer's review burden equals the count rendered in the table; misstating it in either direction is a false signal.
 
-**The ✏️ banner under the table is workflow-written — never author or edit it.** When one-click suggestions posted, `post-style-suggestions.py --annotate-draft` inserts a single line directly beneath the number row announcing how many, deep-linked to the Files-changed tab. It exists because the ✏️ marks themselves sit in the *last* section of a comment that routinely runs 16 KB: an author who clears 🚨 and stops reading would never learn the buttons exist. The line is rewritten from the set the GitHub API accepted on every run and removed when nothing posts, so a hand-written or carried-over one risks advertising buttons that aren't there. Uncounted, like the suggestions it announces.
+**The ✏️ banner under the table is workflow-written — never author or edit it.** When one-click suggestions posted, `post-style-suggestions.py` inserts a single line directly beneath the number row announcing how many, deep-linked to the Files-changed tab — on the initial lane via `--annotate-draft` against the composed draft, on the re-entrant lane via `--annotate-pinned` against the published comment. Both lanes write it. It exists because the ✏️ marks themselves sit in the *last* section of a comment that routinely runs 16 KB: an author who clears 🚨 and stops reading would never learn the buttons exist. The line is rewritten from the set the GitHub API accepted on every run and removed when nothing posts, so a hand-written or carried-over one risks advertising buttons that aren't there. Uncounted, like the suggestions it announces.
 
 ### Composed-draft contract
 
@@ -357,14 +357,22 @@ For all other infra risks -- Lambda@Edge bundling concerns, CloudFront behavior 
 
 ### Per-file collapsing
 
-Files with more than 5 findings render under a `<details>` block:
+**Does not apply to `#### Style suggestions`** — those render expanded at any
+count, per §Bucket rules above, and the `style-render-mode` validator fails a
+body that hides them behind a `<details>`. This section covers the per-file
+finding lists that *are* collapsible: chiefly 💡 Pre-existing, whose own rule
+(cap 15 per file, collapse when the comment would pass 25k characters) governs
+when to reach for it.
+
+Where it applies, a file with more than 5 findings renders under a `<details>`
+block:
 
 ```markdown
 <details>
 <summary>content/blog/foo/index.md (12 findings)</summary>
 
-- line 14: ...
-- line 18: ...
+- **[L14]** `content/blog/foo/index.md` — …
+- **[L18]** `content/blog/foo/index.md` — …
 </details>
 ```
 

@@ -29,8 +29,8 @@ deterministic_fix:
 
 # Rules elevated to blocker in the pinned PR review: the composer renders these
 # under 🚨 Outstanding (counted, label-driving, auto-refresh-anchored) instead
-# of the advisory Style findings roll-up. A rule earns a place here only when
-# its finding is a *correctness* error (wrong product name, misspelling,
+# of the advisory `#### Style suggestions` block. A rule earns a place here
+# only when its finding is a *correctness* error (wrong product name, misspelling,
 # grammatical agreement) with a near-zero false-positive rate — not a style
 # preference. Blocker is independent of deterministic_fix: PoliciesSingular is
 # a blocker whose fix needs verb conjugation; CrossReferenceHeadings has a
@@ -45,8 +45,11 @@ blocker:
   - Google.Spelling             # Unambiguous misspelling.
   - Pulumi.DeprecatedProductNames  # "Pulumi Service" is always wrong; the replacement (Cloud/ESC/Deployments) is the author's call, but shipping the dead name is not.
 
-# Deliberately NOT listed (no fixed replacement -> stays flag-only, the reviewer
-# must compose the fix) and why:
+# Deliberately NOT listed ABOVE IN `deterministic_fix` (no fixed replacement --
+# the reviewer must compose the fix) and why. Note this says nothing about
+# blocking: the two lists are independent, so DeprecatedProductNames appears
+# here *and* in `blocker` -- its fix needs authoring, but shipping the dead
+# name still blocks.
 #   Pulumi.DeprecatedProductNames - "Pulumi Service" -> Cloud/ESC/Deployments is context-dependent.
 #   Pulumi.BannedWords            - replacement needs judgment (whitelist->allowlist is safe; master/guys are not mechanical).
 #   Pulumi.Difficulty             - "easily"/"simply" needs a rewrite, not a swap.

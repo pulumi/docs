@@ -436,3 +436,81 @@ def test_post_individually_returns_only_landed(monkeypatch):
     landed = pss.post_individually("o/r", "1", "deadbeef", entries)
     assert [e["line"] for e in landed] == [2]
     assert len(calls) == 2
+
+
+def test_suggestion_key_normalizes_crlf_and_outdated_lines():
+    """Body newline style must not force a repost; an outdated anchor must."""
+    assert (pss.suggestion_key("a.md", 2, "x\r\ny")
+            == pss.suggestion_key("a.md", 2, "x\ny"))
+    # GitHub reports line: null once a comment goes outdated -- never equal to
+    # a live anchor, so a moved suggestion is correctly seen as changed.
+    assert pss.suggestion_key("a.md", None, "x") != pss.suggestion_key("a.md", 2, "x")
+
+
+def test_unchanged_set_skips_repost(repo, tmp_path, monkeypatch):
+    """A refresh that would re-post the identical set must not touch GitHub.
+
+    Reposting deletes the live buttons, re-notifies every subscriber, and
+    strands another undeletable review event in the timeline -- all to arrive
+    at the state we were already in.
+    """
+    (tmp_path / "sugg.json").write_text(json.dumps([entry()]))
+    (tmp_path / "pr.patch").write_text(PATCH)
+    existing = [{"id": 1, "path": "content/docs/foo.md", "line": 2,
+                 "body": pss.comment_body(dict(entry(), new_line="You can use the CLI to deploy."))}]
+    calls = []
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "delete_comments", lambda r, ids: calls.append(("delete", ids)))
+    monkeypatch.setattr(pss, "gh_api", lambda *a, **k: calls.append(("api", a)) or SimpleNamespace(
+        returncode=1, stdout="", stderr=""))
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "1",
+        "--in", str(tmp_path / "sugg.json"), "--patch-file", str(tmp_path / "pr.patch"),
+        "--repo-root", str(repo), "--vale-findings", str(tmp_path / "absent.json"),
+    ])
+    assert pss.main() == 0
+    assert calls == [], f"expected no GitHub writes, got {calls}"
+
+
+def test_changed_set_does_repost(repo, tmp_path, monkeypatch):
+    existing = [{"id": 1, "path": "content/docs/foo.md", "line": 2, "body": "stale body"}]
+    (tmp_path / "sugg.json").write_text(json.dumps([entry()]))
+    (tmp_path / "pr.patch").write_text(PATCH)
+    deleted, posts = [], []
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "delete_comments", lambda r, ids: deleted.extend(ids))
+    monkeypatch.setattr(pss, "gh_api", lambda *a, **k: posts.append(a) or SimpleNamespace(
+        returncode=0, stdout="", stderr=""))
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "1",
+        "--in", str(tmp_path / "sugg.json"), "--patch-file", str(tmp_path / "pr.patch"),
+        "--repo-root", str(repo), "--vale-findings", str(tmp_path / "absent.json"),
+    ])
+    assert pss.main() == 0
+    assert deleted == [1]
+    assert any("reviews" in str(a) for a in posts)
+
+
+def test_orphaned_bullet_loses_stale_mark(tmp_path):
+    """Page 2 of a split review: no `##### <path>` heading to attribute bullets.
+
+    The mark cannot be re-earned there, so it must still be removed -- the
+    comments it pointed at were deleted moments earlier.
+    """
+    page2 = ("<!-- CLAUDE_REVIEW 2/2 -->\n\n"
+             "- **line 12:** [style] _wordiness_ — 'utilize' is too wordy. ✏️\n")
+    out, marked = pss.annotate_text(page2, posted=[])
+    assert marked == 0
+    assert "✏️" not in out
+
+
+def test_annotate_preserves_trailing_newline_state(tmp_path):
+    """GitHub bodies have no trailing newline; adding one forces a needless PATCH."""
+    body = "##### a.md\n\n- **line 2:** [style] _x_ — y."
+    assert pss.annotate_text(body, posted=[])[0] == body
+    assert pss.annotate_text(body + "\n", posted=[])[0] == body + "\n"
+
+
+def test_annotate_preserves_double_space_in_message():
+    msg = "##### a.md\n\n- **line 2:** [style] _x_ — 'a.  b' is wordy.\n"
+    assert "'a.  b'" in pss.annotate_text(msg, posted=[])[0]

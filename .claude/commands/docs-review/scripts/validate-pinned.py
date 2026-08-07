@@ -2752,11 +2752,22 @@ def repo_root() -> Path:
         return Path.cwd()
 
 
-def run_checks(ctx: Context, skip_rules: set[str] | None = None) -> list[Violation]:
+def run_checks(ctx: Context, skip_rules: set[str] | None = None,
+               only_rules: set[str] | None = None) -> list[Violation]:
+    """Run every rule, minus `skip_rules`. `only_rules`, when given, narrows the
+    set to exactly those ids (and still honours `skip_rules`).
+
+    `only_rules` exists for lanes that cannot afford the full contract but want
+    one specific guarantee -- e.g. claude-update.yml, which renders its body
+    freehand and would fail most structural rules, running
+    `--only-rule style-blocker-provenance` as a non-blocking warning.
+    """
     skip_rules = skip_rules or set()
     out: list[Violation] = []
     for rule in RULES:
         if rule["id"] in skip_rules:
+            continue
+        if only_rules is not None and rule["id"] not in only_rules:
             continue
         try:
             out.extend(rule["check"](ctx))
@@ -2848,13 +2859,23 @@ def cmd_check(args: argparse.Namespace) -> int:
         vale_findings=vale_findings,
     )
 
+    known = {r["id"] for r in RULES}
     skip_rules = set(args.skip_rule or [])
     if skip_rules:
-        unknown = skip_rules - {r["id"] for r in RULES}
+        unknown = skip_rules - known
         if unknown:
             print(f"validate-pinned.py: warning: --skip-rule names unknown rule(s): {sorted(unknown)}",
                   file=sys.stderr)
-    violations = run_checks(ctx, skip_rules=skip_rules)
+    only_rules = set(args.only_rule or []) or None
+    if only_rules:
+        unknown = only_rules - known
+        if unknown:
+            # Unlike --skip-rule, a typo here silently checks NOTHING and exits
+            # 0, which reads as "clean". Fail loudly instead.
+            print(f"validate-pinned.py: --only-rule names unknown rule(s): {sorted(unknown)}",
+                  file=sys.stderr)
+            return 2
+    violations = run_checks(ctx, skip_rules=skip_rules, only_rules=only_rules)
 
     json_path = Path(args.output_json or DEFAULT_OUTPUT_JSON)
     md_path = Path(args.output_markdown or DEFAULT_OUTPUT_MARKDOWN)
@@ -2945,6 +2966,12 @@ def main() -> int:
                          help="Rule id to skip (repeatable). Used by compose-review.py's self-check "
                               "to suppress `no-todo-tokens` on its `<TODO>`-laden draft; the publish "
                               "path (pinned-comment.sh upsert-validated) does NOT pass this.")
+    p_check.add_argument("--only-rule", action="append", default=[],
+                         help="Run ONLY this rule id (repeatable); everything else is skipped. "
+                              "For lanes that render freehand and cannot satisfy the full "
+                              "contract but want one specific guarantee — e.g. claude-update.yml "
+                              "running `--only-rule style-blocker-provenance` as a warning. "
+                              "An unknown id exits 2 rather than vacuously passing.")
     p_check.add_argument("--fetched-urls",
                          help="Path to `.fetched-urls.json` from the workflow pre-step. "
                               "Defaults to ./.fetched-urls.json. Pass-through to "

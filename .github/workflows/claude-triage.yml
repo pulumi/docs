@@ -332,7 +332,7 @@ jobs:
               fi
               BULLETS=""
               if [[ -n "$VALE_BLOCKERS" ]]; then
-                BULLETS+=$(echo "$VALE_BLOCKERS" | sed 's/^/- [blocker] /')
+                BULLETS+=$(echo "$VALE_BLOCKERS" | sed 's/^/- [style-blocker] /')
               fi
               if [[ -n "$PROSE_CONCERNS" ]]; then
                 [[ -n "$BULLETS" ]] && BULLETS+=$'\n'
@@ -348,7 +348,7 @@ jobs:
 
           $BULLETS
 
-          _This is a simplified spelling/grammar/style check in lieu of a full review. Reject false positives at your discretion._
+          _This is a simplified spelling/grammar/style check in lieu of a full review. \`[style-blocker]\` entries come from the correctness tier (wrong or deprecated product names, banned terms, misspellings, agreement) and would block on a full review — please fix those. Reject \`[spelling]\` / \`[style]\` false positives at your discretion._
           EOF
           )
               gh pr comment "$PR" --repo "$REPO" --body "$BODY" || true
