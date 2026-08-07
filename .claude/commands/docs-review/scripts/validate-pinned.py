@@ -681,9 +681,9 @@ def check_style_render_mode(ctx: Context) -> list[Violation]:
             line_ref="<#### Style suggestions>",
             expected=f"expanded (no <details>); bullets={bullet_count}",
             actual="collapsed inside a <details> block",
-            hint=("Render style suggestions expanded, grouped under a bold `**<path>**` line per "
-                  "file. They are uncounted, so they cost no review burden, and collapsing them "
-                  "hides the ✏️ marks that flag one-click suggestions."),
+            hint=("Render style suggestions expanded, grouped under an `##### <path>` H5 heading "
+                  "per file. They are uncounted, so they cost no review burden, and collapsing "
+                  "them hides the ✏️ marks that flag one-click suggestions."),
         )]
     return []
 
@@ -2412,7 +2412,7 @@ RULES = [
     {
         "id": "style-render-mode",
         "desc": "Style suggestions render expanded, never hidden behind a <details> block.",
-        "hint": "Inline-all when total ≤5 OR concentrated in one file (≤30); collapse-all when multi-file AND total >5, or total >30.",
+        "hint": "Render advisory style suggestions expanded — remove the <details> wrapper and group them under an `##### <path>` H5 heading per file.",
         "check": check_style_render_mode,
     },
     {
