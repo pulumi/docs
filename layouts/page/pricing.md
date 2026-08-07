@@ -80,7 +80,7 @@ An estimate at list prices, excluding taxes, committed-use discounts, and volume
 {{- end }}
 {{- end }}
 
-The rates above are per whole month. IaC resources and Insights resources are really billed by the hour, so infrastructure that exists for only part of the month costs proportionally less; ESC secrets are billed for the full month either way. The base price covers the included resource count, and usage beyond the included credits is billed on demand. Above ${{ lang.FormatNumberCustom 0 $c.contact_sales_usd }}/month, [contact sales](/contact/?form=sales) — volume and committed-use pricing apply at that size. An interactive estimator is at /pricing/#calculator.
+The rates above are per whole month. IaC resources and Insights resources are really billed by the hour, so infrastructure that exists for only part of the month costs proportionally less; ESC secrets are billed for the full month either way. The base price covers the included resource count, and usage beyond the included credits is billed on demand. Past about {{ lang.FormatNumberCustom 0 $c.contact_sales_resources }} IaC resources, volume pricing usually applies, so figures computed from the rates above are an upper bound rather than a quote — [contact sales](/contact/?form=sales) for what it would actually cost at that size. An interactive estimator is at /pricing/#calculator.
 {{- end }}
 {{- /* FAQ: high-value for agents; answers are markdown in frontmatter. */}}
 {{- with .Params.faq }}

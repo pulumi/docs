@@ -218,11 +218,12 @@ editions:
         - 24x7 Enterprise Support available
 
 calculator:
-  # Above this monthly estimate the calculator stops quoting a number and asks
-  # the reader to talk to sales, because volume and commitment pricing make a
-  # list-rate figure misleading at that size. Carried over from the calculator
-  # this one replaces.
-  contact_sales_usd: 1670
+  # Above this many IaC resources the calculator keeps quoting a price but
+  # flags that volume pricing usually applies at that size, so the list-rate
+  # figure is an upper bound rather than a quote. Counted in resources rather
+  # than dollars because resource count is the number the reader typed and can
+  # reason about; a dollar threshold moves whenever any rate on this page does.
+  contact_sales_resources: 3000
   # Meters priced the same on every edition the calculator offers.
   meters:
     workflow_minute: 0.01

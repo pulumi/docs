@@ -1,7 +1,7 @@
 {{- /*
   The /pricing/ cost estimator: sliders for every metered unit, a running
-  monthly total, and a hand-off to sales above the point where list rates stop
-  being a useful answer.
+  monthly total, and — past the resource count where volume pricing usually
+  starts to apply — a note that the figure is an upper bound, not a quote.
 
   Numbers come from `calculator:` in data/pulumi_pricing.yaml — the same file
   the cards and the comparison rows render — and are handed to
@@ -48,8 +48,8 @@
   {{- errorf "%s: no `calculator:` block, but layouts/partials/pricing/calculator.html renders one. Add the block or drop the partial from layouts/page/pricing.html." $where -}}
 {{- end -}}
 
-{{- if not $calc.contact_sales_usd -}}
-  {{- errorf "%s: calculator.contact_sales_usd is missing or zero." $where -}}
+{{- if not $calc.contact_sales_resources -}}
+  {{- errorf "%s: calculator.contact_sales_resources is missing or zero." $where -}}
 {{- end -}}
 {{- range $k := slice "workflow_minute" "neo_tokens_per_million" -}}
   {{- if not (index ($calc.meters | default dict) $k) -}}
@@ -179,25 +179,47 @@
                    `start` values above are chosen to produce exactly. They keep the
                    panel from rendering blank before the module runs; every one of
                    them is replaced on the first recompute. */ -}}
-            <div aria-live="polite">
-                <div data-calc-total>
-                    <p class="font-overline-sm text-gray-600 m-0">Estimated total</p>
-                    <p class="mt-2 mb-0">
-                        <span class="heading-1 m-0 tabular-nums" data-calc-total-value>${{ (index $calcEditions 0).base_usd }}</span>
-                        <span class="text-gray-500">/month</span>
+            {{/* The figure never goes away — it is still the reader's best upper
+                 bound — but past the threshold it greys back and yields prominence
+                 to the note, which is the more useful answer at that size. */}}
+            <div class="relative" aria-live="polite">
+                {{/* Floating only from lg up, where the panel sits beside the sliders
+                     and there is empty card above the figure to float into. Below that
+                     the panel stacks underneath the meters, so an absolutely positioned
+                     popover lands on top of the last slider — it goes back in flow and
+                     simply pushes the figure down instead, at the panel's own width.
+
+                     Floating, it is inset to the panel's outer edges rather than its
+                     content box — 288px of content plus the 32px padding either side —
+                     so it lines up with the results column instead of sitting a step
+                     inside it, and the extra width buys the copy fewer lines.
+
+                     The caret is a rotated square in the same fill, half-buried in the
+                     card's bottom edge, so the two read as one shape; the popover keeps
+                     `relative` at every width so the caret has something to anchor to
+                     once it is no longer absolute itself.
+
+                     The link is violet-300, not violet-primary: violet-primary is a
+                     light-surface colour and would fail against service-black. 300 is
+                     what the docs dark theme remaps violet-primary to, so this is the
+                     same role, read for a dark surface — 7.9:1 here. */}}
+                <div class="hidden relative lg:absolute lg:bottom-full lg:-left-8 lg:-right-8 mb-4 p-4 z-10 rounded-lg bg-service-black" data-calc-volume-note>
+                    <p class="m-0 text-sm text-white">
+                        At this level, volume discounts and annual pricing can reduce your cost.
+                        <a href="/contact/?form=sales" data-track="pricing-calculator-volume-note" class="text-violet-300 hover:underline">Contact us</a>
+                        to learn how we can help you save as you scale.
                     </p>
+                    <span aria-hidden="true" class="bg-service-black rounded-[2px] absolute left-1/2 -ml-1.5 -bottom-1.5 size-3 rotate-45"></span>
                 </div>
-                <div class="hidden" data-calc-contact>
-                    <p class="font-overline-sm text-gray-600 m-0">Estimated total</p>
-                    <p class="heading-3 mt-2 mb-0">Let's talk</p>
-                    <p class="mt-2 mb-0 text-sm text-gray-700">
-                        At this size, volume and committed-use pricing usually apply, so a list-price number could
-                        overstate what you'd pay.
-                    </p>
-                </div>
+
+                <p class="font-overline-sm text-gray-600 m-0">Estimated total</p>
+                <p class="mt-2 mb-0">
+                    <span class="heading-1 m-0 tabular-nums transition-colors" data-calc-total-value>${{ (index $calcEditions 0).base_usd }}</span>
+                    <span class="text-gray-500">/month</span>
+                </p>
             </div>
 
-            <div data-calc-usage>
+            <div>
                 <dl class="m-0 flex flex-col gap-2 text-sm border-t border-gray-200 pt-5">
                     <div class="flex items-baseline justify-between gap-3">
                         <dt class="text-gray-700 m-0">Credits used</dt>
@@ -242,7 +264,10 @@
                 <div class="hidden" data-calc-cta-contact>
                     <div class="flex flex-col gap-2">
                         <a href="/contact/?form=sales" data-track="pricing-calculator-contact-sales-above-threshold" class="btn btn-primary btn-lg w-full">Contact sales</a>
-                        <a href="https://app.pulumi.com/signup?create-organization=1" data-track="pricing-calculator-trial-above-threshold" class="btn btn-secondary w-full">Start a free trial</a>
+                        <a href="https://app.pulumi.com/signup?create-organization=1" data-track="pricing-calculator-trial-above-threshold" class="btn btn-secondary w-full">
+                            Start a free trial
+                            {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
+                        </a>
                     </div>
                 </div>
 
@@ -254,7 +279,7 @@
     </div>
 
     {{- /* safeJS, or Hugo emits the JSON as a quoted JS *string literal* —
-           `"{\"contact_sales_usd\":2000,…}"` — and JSON.parse hands the module a
+           `"{\"contact_sales_resources\":3000,…}"` — and JSON.parse hands the module a
            string instead of the config. The block is all numbers, so there is
            nothing here to escape. */ -}}
     <script type="application/json" id="pricing-calculator-config">{{ $calc | jsonify | safeJS }}</script>

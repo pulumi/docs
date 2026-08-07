@@ -8,7 +8,7 @@ interface EditionRates {
 }
 
 interface CalculatorConfig {
-    contact_sales_usd: number;
+    contact_sales_resources: number;
     meters: {
         workflow_minute: number;
         neo_tokens_per_million: number;
@@ -93,12 +93,10 @@ function init(): void {
     const editionButtons = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-calc-edition]"));
 
     const el = <T extends HTMLElement>(selector: string): T | null => root.querySelector<T>(selector);
-    const totalBlock = el("[data-calc-total]");
     const totalValue = el("[data-calc-total-value]");
-    const contactBlock = el("[data-calc-contact]");
+    const volumeNote = el("[data-calc-volume-note]");
     const ctaDefault = el("[data-calc-cta-default]");
     const ctaContact = el("[data-calc-cta-contact]");
-    const usageBlock = el("[data-calc-usage]");
     const creditsUsed = el("[data-calc-credits-used]");
     const creditsIncluded = el("[data-calc-credits-included]");
     const baseOut = el("[data-calc-base]");
@@ -146,7 +144,7 @@ function init(): void {
 
         const overage = Math.max(0, credits - edition.included_credits);
         const total = edition.base_usd + overage;
-        const contact = total > config.contact_sales_usd;
+        const volume = (values.iac_resources || 0) > config.contact_sales_resources;
 
         if (totalValue) totalValue.textContent = usd.format(total);
         if (creditsUsed) creditsUsed.textContent = count.format(credits);
@@ -154,11 +152,10 @@ function init(): void {
         if (baseOut) baseOut.textContent = usd.format(edition.base_usd);
         if (overageOut) overageOut.textContent = usd.format(overage);
 
-        totalBlock?.classList.toggle("hidden", contact);
-        contactBlock?.classList.toggle("hidden", !contact);
-        usageBlock?.classList.toggle("hidden", contact);
-        ctaDefault?.classList.toggle("hidden", contact);
-        ctaContact?.classList.toggle("hidden", !contact);
+        totalValue?.classList.toggle("text-gray-500", volume);
+        volumeNote?.classList.toggle("hidden", !volume);
+        ctaDefault?.classList.toggle("hidden", volume);
+        ctaContact?.classList.toggle("hidden", !volume);
     };
 
     const paintRates = (): void => {

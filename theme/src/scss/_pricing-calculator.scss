@@ -1,0 +1,33 @@
+// The volume-pricing popover in the /pricing/ estimator's results panel.
+//
+// Everything else about the calculator is inline utilities on the partial
+// (layouts/partials/pricing/calculator.html). This is here because it can't be:
+// the popover is shown by removing `hidden`, so it animates in from
+// `display: none`, and no transition can run across that. A keyframe animation
+// can — it plays whenever the element starts being displayed — but keyframes
+// have no utility-class form.
+//
+// The animation therefore lives on the shown state only. It re-runs on every
+// display:none -> block flip and never while the popover is already up, because
+// classList.toggle is a no-op when the class is already in the wanted state.
+@keyframes pricing-calculator-popover-in {
+    from {
+        opacity: 0;
+        transform: translateY(0.5rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#calculator [data-calc-volume-note]:not(.hidden) {
+    animation: pricing-calculator-popover-in 200ms ease-out;
+}
+
+// Respect a reduced-motion preference: still fade, but don't travel.
+@media (prefers-reduced-motion: reduce) {
+    #calculator [data-calc-volume-note]:not(.hidden) {
+        animation-name: none;
+    }
+}
