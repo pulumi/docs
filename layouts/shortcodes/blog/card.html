@@ -14,9 +14,8 @@
 
     The card is full width, never side by side: the text column is only so wide,
     and a full-width card reads as part of the post rather than as an ad unit. So
-    one card per shortcode — several in a row is just several shortcodes. To label
-    a card ("Americas", "EMEA"), write the label as ordinary markdown above it; the
-    card is derived entirely from the target page and takes no copy of its own.
+    one card per shortcode — several in a row is just several shortcodes. The path
+    is the only parameter; everything the card shows comes from the target page.
 
     Parameters (positional only): one absolute content path, resolving to a page
     under /events/ or /blog/. An unresolvable path or an unsupported section is a
