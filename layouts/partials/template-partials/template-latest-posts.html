@@ -1,0 +1,90 @@
+{{/*
+    Template Latest Posts Partial
+
+    One row of recent content: the latest blog posts plus, when `show_event` is
+    on and something is actually coming up, the next upcoming event in the last
+    slot. The row is always `count` tiles wide — with an event that's
+    (count - 1) posts + the event; with none it's `count` posts, so the row never
+    goes ragged in a quiet stretch between events.
+
+    Tiles are rendered with the shared card partials — blog/card/contained.html
+    (the boxed variant of the medium card, so it matches the event tile) and
+    events/event-card.html — so they stay in sync with those designs for free.
+
+    Posts are ranked exactly as the blog homepage ranks them (blog/feed.html):
+    the curated `featured` slots first — so a post pinned in blog_home.yaml leads
+    here too — then the rest of the feed, newest-first. Editing blog_home.yaml
+    therefore changes both pages at once, and the row is never merely "the newest
+    thing we published". Because these stay recent posts, the image-forward
+    medium card is a safe choice: every post from the last year or so has a
+    feature image.
+
+    Schema:
+    - title: Optional section heading
+    - description: Optional section description (supports markdown)
+    - ctas: Optional array of CTA links rendered below the description. Each item:
+      { text: "Read the blog", link: "/blog/" }. The row mixes two content types,
+      so this takes a list rather than the single cta_text/cta_link other sections use.
+    - count: Total number of tiles in the row. Default 3.
+    - show_event: Optional true to give the last slot to the next upcoming event
+      that's more than a day out — see the cutoff below.
+    - anchor: Optional anchor for section id
+*/}}
+
+{{/* Sections are dispatched with only their frontmatter dict as context, so reach
+     for the current page via Hugo's `page` global (needed for relref). */}}
+{{ $ctx := page }}
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $ctas := .ctas }}
+{{ $count := .count | default 3 }}
+{{ $showEvent := .show_event | default false }}
+{{ $anchor := .anchor }}
+
+{{ $nextEvent := "" }}
+{{ if $showEvent }}
+    {{/* A day of lead time so the tile can't go stale-dated while this page sits
+         published between builds (see events/upcoming.html); the practical
+         effect is that an event drops off the homepage the day before it runs. */}}
+    {{ with first 1 (partialCached "events/upcoming.html" (now.Add (duration "hour" 24)) "upcoming-homepage") }}
+        {{ $nextEvent = index . 0 }}
+    {{ end }}
+{{ end }}
+
+{{ $postCount := cond (ne $nextEvent "") (sub $count 1) $count }}
+{{ $bf := partialCached "blog/feed.html" $ctx "blog-home" }}
+{{ $posts := first $postCount ($bf.featured | append $bf.feed) }}
+
+{{ if $posts }}
+{{/* mb-* on top of the container's section gap: this row sits between two
+     heavier sections and needs the extra breathing room. */}}
+<section class="template-latest-posts mb-8 flex flex-col gap-8 md:mb-12"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
+    {{ if or $title $description $ctas }}
+    <div class="text-center">
+        {{/* heading-1 is the shared section-header size every other template
+             section uses (see the section-header() mixin in _templates.scss). */}}
+        {{ if $title }}<h2 class="heading-1 m-0">{{ $title }}</h2>{{ end }}
+        {{ if $description }}<p class="text-gray-600 text-xl mt-4">{{ $description | markdownify }}</p>{{ end }}
+        {{ with $ctas }}
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-x-8">
+            {{ range . }}
+            <a href="{{ .link }}"{{ partial "external-link-attrs.html" .link | safeHTMLAttr }} class="btn btn-link btn-xl">
+                {{ .text }}
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+            </a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {{ range $posts }}
+            {{ partialCached "blog/card/contained.html" (dict "page" .) .RelPermalink }}
+        {{ end }}
+        {{ with $nextEvent }}
+            {{ partial "events/event-card.html" (dict "page" .data "pageContext" $ctx) }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}

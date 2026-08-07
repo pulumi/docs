@@ -1,0 +1,37 @@
+{{- /*
+    Upcoming events — the single source of truth for "which events are still
+    ahead of us", shared by the events list page and the homepage section.
+
+    Context: the cutoff time. An event is upcoming while its start time is after
+    that instant. Callers pass a cutoff because "upcoming" means two things here:
+
+      - The events list passes `now` minus 24 hours, so a session running right
+        now doesn't vanish from the list mid-event.
+
+      - The homepage passes `now` plus 24 hours, so the one event it promotes is
+        still in the future at every moment the page is served — published HTML
+        outlives the `now` it was built with, and weekend gaps between builds
+        have measured 15+ hours. A cutoff of `now` would leave an evening event
+        on the page into the next morning, a day after it happened.
+
+        Lead time rather than "end of the build day" because Hugo's `now` is the
+        runner's clock and the runner is UTC, so end-of-day lands at 5pm Pacific
+        and lets US evening events through — the exact case this guards against.
+
+    Returns: a slice of dicts, oldest-first (i.e. the next event is index 0):
+      date  the event's sortable_date
+      data  the event page
+
+    Depends only on site content and the cutoff, so callers should use
+    partialCached with a constant key per cutoff.
+*/ -}}
+{{- $cutoffUnix := .UnixMilli -}}
+{{- $upcoming := slice -}}
+{{- range where site.Pages "Type" "events" -}}
+    {{- if eq .Params.unlisted false -}}
+        {{- if gt (.Params.sortable_date | time.AsTime).UnixMilli $cutoffUnix -}}
+            {{- $upcoming = $upcoming | append (dict "date" .Params.sortable_date "data" .) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- return sort $upcoming "date" "asc" -}}

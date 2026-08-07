@@ -107,5 +107,8 @@ const renderEventCountdowns = () => {
 // Apply initial filter state on page load.
 if (document.querySelector(".template-event-list")) {
     filterResourceItems([]);
-    renderEventCountdowns();
 }
+
+// Keyed off the cards themselves, not the event list: event cards also render
+// outside /events/ (e.g. the homepage "what's new" row). No-ops when there are none.
+renderEventCountdowns();

@@ -1,0 +1,28 @@
+{{- /*
+    Contained card: the medium card's content, boxed in a bordered .card so it
+    sits alongside the event card (events/event-card.html) without the two tile
+    styles fighting. The card clips its children, so the 3:2 image inherits the
+    card's rounded top corners and butts flush against the padded content below.
+
+    Params: page (required) the post page.
+*/ -}}
+{{- $page := .page -}}
+{{- $excerpt := $page.Params.meta_desc -}}
+{{- if not $excerpt }}{{ $excerpt = $page.Summary | plainify | truncate 160 }}{{ end -}}
+<article data-post-card class="card card-hover group relative flex h-full flex-col overflow-hidden bg-white">
+    {{ if partial "blog/has-feature-image.html" $page }}
+    <div class="flex aspect-[3/2] w-full items-center justify-center overflow-hidden bg-violet-950">
+        {{ partialCached "blog/feature-image.html" (dict "page" $page "w" 640 "h" 427 "mode" "fit" "class" "h-full w-auto max-w-none" "sizes" "(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw") $page.RelPermalink "fit-640x427" }}
+    </div>
+    {{ end }}
+    <div class="flex flex-1 flex-col p-6 md:p-7">
+        <div class="flex flex-col items-start gap-2">
+            {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}
+            <h3 class="mt-2 mb-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-contained-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
+            {{- with $excerpt }}<p class="m-0! body-base text-service-black line-clamp-2">{{ . }}</p>{{ end -}}
+        </div>
+        <div class="mt-auto pt-6">
+            {{ partial "blog/post-meta.html" (dict "page" $page "readingTime" true) }}
+        </div>
+    </div>
+</article>

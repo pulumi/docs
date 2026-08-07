@@ -73,6 +73,15 @@ pulumi-tooltip {
         }
     }
 
+    // Wide placement (opt in with size="lg"): a roomier, left-aligned bubble for
+    // multi-line content — e.g. the label/value rate lists on the /pricing/ cards,
+    // which the default 12rem centered bubble wraps into an unreadable stack.
+    &[size="lg"] {
+        .tooltip-content {
+            @apply w-72 text-left leading-relaxed;
+        }
+    }
+
     // To prevent a flash of unstyled/understyled slotted content, we hide that content until
     // it's rendered as a child of the tooltip component.
     [slot="content"] {

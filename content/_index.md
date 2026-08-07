@@ -353,6 +353,13 @@ sections:
         size: half
     anchor: case-studies
 
+  - type: latest_posts
+    title: What's new at Pulumi
+    description: Product news, engineering insights, and hands-on workshops from the team.
+    count: 3
+    show_event: true
+    anchor: latest-posts
+
   - type: social_carousel
     title: Open source. Built by engineers for engineers.
     description: Join the Pulumi community, and let's build together.
