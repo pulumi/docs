@@ -147,6 +147,12 @@ See `BLOGGING.md` for the author-facing version of these rules.
 
 Per-post optional front matter beyond the taxonomy axes — `resource_links` (icon links at the foot of the post), `related_posts` (pinned related slugs), `author_roles`, and `updated` — is documented in `BLOGGING.md`. The blog homepage is curated separately in `data/blog_home.yaml` (`featured` = the four hero/featured slots; `featured_series` = the "Popular series" strip); that file's header comment is the authoritative reference.
 
+### Embedding events and posts in a post body
+
+To promote an event or another post from inside a post, embed its card with `{{< blog/cards "/events/<slug>/" >}}` — **do not hand-write a `blog/cta-card`** that restates the title, date, and blurb. Those copies rot: the shortcode renders the same tiles as `/events/` and the blog homepage, derived entirely from the target page, so an event card picks up a retitled session or a newly added recording (Register → Watch) on its own. Cards are always full width and stacked; a card carries no copy of its own, so any label ("Americas", "EMEA") is ordinary markdown above its own single-path invocation. Reserve `blog/cta-card` for destinations that have no card (docs, product pages, signup) and for generic get-started asks.
+
+Card layouts live in `layouts/partials/blog/card/` — `medium` (grid tile), `contained` (`medium` boxed in a `.card`), `wide` (text left, square image right; the homepage feed's card view **and** in-body embeds), `small`, `featured`, `series`, `list-row`. Reuse one; don't clone its markup into a new partial. `wide` renders only its wrapper's contents and takes the wrapper's classes as a param, because the homepage row starts `hidden` (the view toggle flips it to flex) while an embed is a boxed `.card`.
+
 ### Dates: `updated` vs `lastmod`
 
 When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `lastmod`. This is the established convention (the vast majority of revised posts use it) and the one wired to the UI: `layouts/blog/single.html` renders `.Params.updated` as the visible "Updated \<date\>" line beside the publish date. Leave the original `date` unchanged; set `updated` to the revision date. It's the same field documented in `BLOGGING.md`.
