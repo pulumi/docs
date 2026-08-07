@@ -1,0 +1,25 @@
+{{- /*
+    Upcoming events — the single source of truth for "which events are still
+    ahead of us", shared by the events list page and the homepage section.
+
+    An event counts as upcoming until 24 hours after its start time, so a session
+    that ran earlier today doesn't vanish from the list mid-event.
+
+    Returns: a slice of dicts, oldest-first (i.e. the next event is index 0):
+      date  the event's sortable_date
+      data  the event page
+
+    Global (depends only on site content), so callers should use partialCached
+    with a constant key.
+*/ -}}
+{{- $nowUnix := now.UnixMilli -}}
+{{- $upcoming := slice -}}
+{{- range where site.Pages "Type" "events" -}}
+    {{- if eq .Params.unlisted false -}}
+        {{- $endUnix := add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds -}}
+        {{- if lt $nowUnix $endUnix -}}
+            {{- $upcoming = $upcoming | append (dict "date" .Params.sortable_date "data" .) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- return sort $upcoming "date" "asc" -}}
