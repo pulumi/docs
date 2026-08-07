@@ -517,7 +517,6 @@ jobs:
           .claude/commands/docs-review/scripts/set-review-label.sh \
             --pr "${{ steps.pr-context.outputs.pr_number }}" \
             --repo "${{ github.repository }}" \
-            --vale-findings .vale-findings.json \
             --label review:in-progress
 
       # An oversized skip supersedes any leftover terminal state from earlier

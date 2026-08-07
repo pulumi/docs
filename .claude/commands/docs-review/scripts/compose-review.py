@@ -1379,7 +1379,7 @@ def compose(args: argparse.Namespace) -> str:
     # Blocker-tier Vale findings (stamped by vale-findings-filter.py from the
     # `blocker:` allowlist) count toward 🚨 — they drive the
     # review:outstanding-issues label like any other outstanding finding.
-    # Advisory style findings render collapsed under ⚠️ and are NOT counted:
+    # Advisory style findings render expanded under ⚠️ and are NOT counted:
     # they're kept for the rule-tuning loop, not the reviewer's burden.
     vale_blockers = [f for f in vale_findings if f.get("blocker")]
     vale_nags = [f for f in vale_findings if not f.get("blocker")]
