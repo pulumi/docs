@@ -345,6 +345,61 @@ def _banner_text(n: int, files_url: str) -> str:
             f"**Add suggestion to batch**.")
 
 
+# The `#### Style suggestions` heading, plus the pre-rename spelling so a body
+# composed before the rename still reconciles. Mirrors validate-pinned.py.
+STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
+
+
+def _caption_text(files_url: str) -> str:
+    """The canonical caption under the style heading.
+
+    Must stay byte-identical to what `compose-review.py` emits, so that
+    reconciling an initial-lane body is a no-op rather than a churn edit.
+    `test_caption_matches_composer` pins the two together.
+    """
+    link = f"[Files changed]({files_url})" if files_url else "Files changed"
+    return ("*Optional polish from pattern-based linting — never blocking, not counted above. "
+            "Take the ones that read better and ignore the rest. "
+            f"✏️ marks one you can apply from the {link} tab — use **Add suggestion to batch** "
+            "on each, then **Commit suggestions** to take several in a single commit.*")
+
+
+def _reconcile_caption(lines: list[str], files_url: str) -> bool:
+    """Rewrite the italic caption under the style heading.
+
+    Authoritative, for the same reason the marks and the banner are. The
+    initial lane gets this caption from `compose-review.py` and it is correct;
+    the re-entrant lane renders the body freehand and was observed paraphrasing
+    it away — fork PR #231 refreshed to a caption that had dropped the
+    "✏️ marks one you can apply" legend entirely, leaving six marks on the page
+    with nothing explaining them. Nothing gated it: `style-render-mode` only
+    checks that the block is not collapsed behind a <details>.
+
+    A caption is only rewritten, never invented: with no style heading there is
+    no block to caption, and we leave the body alone.
+    """
+    head = next((i for i, ln in enumerate(lines) if ln.strip() in STYLE_HEADINGS), None)
+    if head is None:
+        return False
+    j = head + 1
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j >= len(lines):
+        return False
+    want = _caption_text(files_url)
+    cur = lines[j].strip()
+    # The caption is the italic one-liner between the heading and the first
+    # `##### <path>` group. Anything else there means the model omitted it.
+    if cur.startswith("*") and cur.endswith("*") and not cur.startswith("**"):
+        if lines[j] == want:
+            return False
+        lines[j] = want
+        return True
+    lines.insert(j, want)
+    lines.insert(j + 1, "")
+    return True
+
+
 def _reconcile_banner(lines: list[str], n: int, files_url: str) -> bool:
     """Rewrite the suggestion banner under the bucket-count table.
 
@@ -431,6 +486,7 @@ def annotate_text(text: str, posted: list[dict], files_url: str = "") -> tuple[s
             marked += 1
         if rebuilt != line:
             lines[i] = rebuilt
+    _reconcile_caption(lines, files_url)
     _reconcile_banner(lines, len(want), files_url)
     out = "\n".join(lines)
     # Preserve the input's trailing-newline state. GitHub stores comment bodies

@@ -191,7 +191,7 @@ DRAFT = """### ⚠️ Low-confidence
 
 #### Style suggestions
 
-*Optional polish from pattern-based linting.*
+*Optional polish from pattern-based linting — never blocking, not counted above. Take the ones that read better and ignore the rest. ✏️ marks one you can apply from the Files changed tab — use **Add suggestion to batch** on each, then **Commit suggestions** to take several in a single commit.*
 
 ##### content/docs/foo.md
 
@@ -241,7 +241,8 @@ def test_annotate_overwrites_model_authored_marks(tmp_path):
     n = pss.annotate_draft(d, [{"file": "content/docs/foo.md", "line": 2}])
     out = d.read_text()
     assert n == 1
-    assert out.count("✏️") == 1
+    assert sum(l.count("✏️") for l in out.splitlines()
+               if l.startswith("- **line ")) == 1
     # the surviving mark is the workflow's, appended at end of line
     assert "- **line 2:** [style] _wordiness_ — 'utilize' is too wordy. ✏️" in out
     # the unposted one lost its mark entirely
@@ -258,7 +259,8 @@ def test_annotate_is_idempotent(tmp_path):
     once = d.read_text()
     assert pss.annotate_draft(d, posted) == 1
     assert d.read_text() == once
-    assert once.count("✏️") == 1
+    assert sum(l.count("✏️") for l in once.splitlines()
+               if l.startswith("- **line ")) == 1
 
 
 def test_annotate_noop_on_empty_or_missing(tmp_path):
@@ -272,7 +274,7 @@ FILES_URL = "https://github.com/pulumi/docs/pull/7/files"
 
 # The banner keys off the count-table VALUES row, so the fixture needs the
 # table above the style block, exactly as compose-review.py renders it.
-DRAFT_TABLE = """### 🤖 Pre-merge review
+DRAFT_TABLE = ("""### 🤖 Pre-merge review
 
 | 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
 | :---: | :---: | :---: | :---: |
@@ -282,7 +284,7 @@ DRAFT_TABLE = """### 🤖 Pre-merge review
 <summary>Verification trail</summary>
 </details>
 
-""" + DRAFT
+""" + DRAFT).replace(pss._caption_text(""), pss._caption_text(FILES_URL))
 
 
 def test_banner_announces_posted_count_under_the_table(tmp_path):
@@ -514,3 +516,93 @@ def test_annotate_preserves_trailing_newline_state(tmp_path):
 def test_annotate_preserves_double_space_in_message():
     msg = "##### a.md\n\n- **line 2:** [style] _x_ — 'a.  b' is wordy.\n"
     assert "'a.  b'" in pss.annotate_text(msg, posted=[])[0]
+
+
+# --- caption reconciliation -------------------------------------------------
+#
+# The caption is deterministic on the initial lane (compose-review.py writes
+# it) but freehand on the re-entrant one, where it was seen paraphrased away.
+
+
+CAPTION_BODY = """\
+| 🚨 Outstanding | ⚠️ Low-confidence | 💡 Pre-existing | ✅ Resolved |
+| :---: | :---: | :---: | :---: |
+| **0** | **1** | **0** | **0** |
+
+#### Style suggestions
+
+{caption}
+
+##### content/docs/foo.md
+
+- **line 2:** [style] _wordiness_ — 'utilize' is too wordy.
+"""
+
+
+def _canonical(files_url=""):
+    return pss._caption_text(files_url)
+
+
+def test_caption_normalized_when_model_paraphrased():
+    drifted = ("*Optional polish from pattern-based linting — never blocking. "
+               "Apply them from the Files changed tab.*")
+    body = CAPTION_BODY.format(caption=drifted)
+    out, _ = pss.annotate_text(body, [])
+    assert _canonical() in out
+    assert drifted not in out
+
+
+def test_caption_left_alone_when_already_canonical():
+    """An initial-lane body must reconcile to itself, not churn."""
+    body = CAPTION_BODY.format(caption=_canonical())
+    lines = body.splitlines()
+    assert pss._reconcile_caption(lines, "") is False
+    assert "\n".join(lines) == body.rstrip("\n")
+
+
+def test_caption_inserted_when_model_omitted_it():
+    body = CAPTION_BODY.format(caption="").replace("\n\n\n", "\n\n")
+    lines = body.splitlines()
+    assert pss._reconcile_caption(lines, "") is True
+    joined = "\n".join(lines)
+    assert _canonical() in joined
+    # still exactly one caption, and it precedes the file group
+    assert joined.index(_canonical()) < joined.index("##### content/docs/foo.md")
+
+
+def test_caption_not_invented_without_style_block():
+    body = "## Review\n\nNo style findings here.\n"
+    lines = body.splitlines()
+    assert pss._reconcile_caption(lines, "") is False
+    assert "\n".join(lines) == body.rstrip("\n")
+
+
+def test_caption_carries_files_url_when_known():
+    body = CAPTION_BODY.format(caption="*stale*")
+    out, _ = pss.annotate_text(body, [], files_url="https://x/pull/1/files")
+    assert "[Files changed](https://x/pull/1/files)" in out
+
+
+def test_caption_matches_composer():
+    """Pin the two copies together — drift here is invisible in production.
+
+    compose-review.py writes this caption on the initial lane; annotate_text
+    rewrites it on both. If they disagree, every initial-lane review churns
+    its own caption on first refresh.
+    """
+    spec = importlib.util.spec_from_file_location(
+        "compose_review", HERE / "compose-review.py")
+    cr = importlib.util.module_from_spec(spec)
+    sys.modules["compose_review"] = cr
+    spec.loader.exec_module(cr)
+
+    for url in ("", "https://github.com/o/r/pull/7/files"):
+        block = cr._render_style_findings(
+            [{"file": "content/docs/foo.md", "line": 2,
+              "category": "wordiness", "message": "'utilize' is too wordy."}],
+            files_url=url)
+        caption = next(ln for ln in block.splitlines()
+                       if ln.startswith("*Optional polish"))
+        assert caption == pss._caption_text(url), (
+            f"caption drift for files_url={url!r}:\n"
+            f"  composer: {caption}\n  annotator: {pss._caption_text(url)}")
