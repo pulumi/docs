@@ -64,7 +64,7 @@ Organization-wide role settings are a leftover from Pulumi Cloud's pre-RBAC perm
 
 The **Stack permissions** dropdown sets the access level that members on the Member role have to all [stacks](/docs/iac/concepts/stacks/) in the organization:
 
-- **None** — Members have no default access to stacks. They can only access stacks granted to them through a role, team, or creator grant.
+- **None** — Members have no default access to stacks. They can only access stacks granted to them through a role, a team, or a [creator grant](/docs/administration/access-identity/rbac/#creator-grants) — the automatic Stack Admin permission set that whoever creates a stack receives on it. Creator grants are not configurable here; to remove one, delete it from the stack's **Access** tab.
 - **Read** — Members can view stacks, including their resources and state.
 - **Write** — Members can view stacks and run updates on them, including `pulumi up` and `pulumi destroy`. Removing a stack itself (`pulumi stack rm`) is *not* included — that requires the `stack:delete` [scope](/docs/administration/access-identity/rbac/scopes/stacks), which is granted by the Stack Admin permission set and gated by the **Allow stack admins to delete stacks** toggle below.
 
