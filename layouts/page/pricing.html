@@ -45,7 +45,10 @@
         {{ $borderClass := "" }}
         {{ if $card.badge }}{{ $borderClass = "rounded-lg border-0 ring ring-[1.5px] relative z-10 ring-offset-4 ring-violet-accent" }}{{ end }}
         <div>
-            <div class=" p-8 flex flex-col gap-6 bg-white h-full overflow-hidden rounded-lg {{ $borderClass }}">
+            {{/* No overflow-hidden: the note's rate tooltip is absolutely
+                 positioned and wider than the card's content column, so
+                 clipping the card would cut the bubble in half. */}}
+            <div class=" p-8 flex flex-col gap-6 bg-white h-full rounded-lg {{ $borderClass }}">
                 <div>
                     <div class="flex items-center gap-3">
                         <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $edition.name }}</h2>
@@ -66,11 +69,7 @@
                     <p class="text-3xl font-semibold tracking-tight m-0">{{ $card.price }}</p>
                     {{ end }}
                     <div class="mt-4 md:min-h-[4rem] text-sm">
-                        {{ with $card.unit }}
-                        <p class="m-0">{{ . | markdownify }}</p>
-                        {{ end }} {{ with $card.note }}
-                        <p class="text-gray-700 m-0">{{ . | markdownify }}</p>
-                        {{ end }}
+                        {{ partial "pricing/card-usage.html" $card }}
                     </div>
                 </div>
 
