@@ -1,0 +1,38 @@
+{{- /*
+    Compact event row — the events counterpart of blog/card/list-row.html, with
+    the same columns (title left; badge, presenter avatars, and date right) so
+    the two can stack inside a single card. The whole row is a stretched link.
+
+    Unlike events/event-card.html, the internal href comes from the event page
+    itself rather than a relref of url_slug, so this needs no page context;
+    external and internal-landing-page events still point at the full URL in
+    url_slug. Presenter avatars are inlined rather than reusing blog/avatars.html
+    because presenters carry their own name and photo (they aren't all on the
+    team roster).
+
+    Params: page (required) the event page.
+*/ -}}
+{{- $page := .page -}}
+{{- $external := or $page.Params.external $page.Params.internal_landing_page -}}
+{{- $href := cond $external ($page.Params.url_slug | string) $page.RelPermalink -}}
+{{- $date := $page.Params.sortable_date -}}
+<article class="group relative border-b border-gray-200 last:border-0">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-4 py-6">
+        <h4 class="m-0! min-w-0 flex-1 md:truncate"><a href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }} data-track="event-row-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}{{ if $external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}</a></h4>
+        <div class="flex shrink-0 items-center gap-2">
+            <span class="hidden md:inline-flex">{{ partial "badge.html" (dict "text" $page.Params.event_type "variant" "outline") }}</span>
+            <span class="w-32 mx-auto hidden md:inline-flex justify-center">
+                {{- with $page.Params.presenters -}}
+                <span class="flex items-center shrink-0">
+                    {{- range $i, $presenter := . -}}
+                    <img src="{{ $presenter.photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ $presenter.name }}" title="{{ $presenter.name }}"
+                        class="size-8 rounded-full object-cover bg-violet-200 ring-1 ring-gray-100 shrink-0 {{ if gt $i 0 }}-ml-3{{ end }}"
+                        loading="lazy" decoding="async" />
+                    {{- end -}}
+                </span>
+                {{- end -}}
+            </span>
+            <time class="body-sm whitespace-nowrap text-service-black md:w-28 md:text-right" datetime="{{ $date | time.Format "2006-01-02" }}">{{ $date | time.Format "Jan 2, 2006" }}</time>
+        </div>
+    </div>
+</article>

@@ -181,9 +181,9 @@ sections:
           A new benchmark for measuring how well agents perform on a wide array of representative
           infrastructure tasks — like the infrastructure equivalent of SWE-bench.
 
-blog_section:
+feed_section:
   anchor: from-the-blog
-  title: From the blog
+  posts_title: From the blog
   posts:
     - /blog/the-agentic-infrastructure-era
     - /blog/better-cli-interactions-for-agents-and-humans

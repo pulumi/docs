@@ -134,11 +134,16 @@ sections:
           With Pulumi, teams that prefer HCL can produce typed, multi-language components ready to use in any Pulumi language.
         link: /docs/iac/languages-sdks/hcl/hcl-component-reference/
 
-blog_section:
+feed_section:
   anchor: from-the-blog
-  title: From the blog
+  posts_title: From the blog
   posts:
     - /blog/bring-your-terraform-estate-into-the-agentic-era
     - /blog/terraform-to-pulumi-cloud-hands-on
     - /blog/terraforms-data-model-on-pulumis-engine
+  events_title: Upcoming events
+  # Rendered only while they're still ahead of us — past events drop off on their own.
+  events:
+    - /events/pulumi-for-all-your-iac-terraform-hcl
+    - /events/pulumi-for-all-your-iac-terraform-hcl-eu
 ---
