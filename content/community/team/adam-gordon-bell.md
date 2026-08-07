@@ -9,6 +9,10 @@ aliases:
   - /adam
   - /community/community-engineering/adam-gordon-bell/
 talks:
+- event: "KubeCon + CloudNativeCon North America 2026"
+  title: "I Built an AI Running Coach: A Personal kagent Agent in Production"
+  url: "https://kubecon-cloudnativecon-north-america-2026.sessionize.com/session/1246044"
+  date: 2026-11-10T14:50:00.000-07:00
 - event: "DevOpsDays Rockies 2026"
   title: "When AI Agents Touch Real Infrastructure"
   url: "https://talks.devopsdays.org/dodroxrox26/"
