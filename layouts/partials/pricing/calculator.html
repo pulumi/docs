@@ -11,8 +11,9 @@
   meter is priced at. The meter ids below are the contract between the two, so
   renaming one means renaming it in both places.
 
-  This partial is the only consumer of the `calculator:` block, so per that
-  file's split-by-consumer rule its structural validation lives here.
+  Per that file's split-by-consumer rule, the parts of the `calculator:` block
+  this partial reads are validated here; `card_tooltip`, which only the pricing
+  cards render, is validated in layouts/partials/pricing/card-usage.html.
 
   The model the TS module implements, recorded here because that file carries no
   comments. Everything is denominated in Pulumi Credits (1 credit = $1) drawn
@@ -278,9 +279,17 @@
         </aside>
     </div>
 
-    {{- /* safeJS, or Hugo emits the JSON as a quoted JS *string literal* —
+    {{- /* Spelled out rather than dumping `$calc`, so the payload is exactly the
+           CalculatorConfig the TS module declares — `card_tooltip` is the cards'
+           display spec and has no business in the arithmetic.
+
+           safeJS, or Hugo emits the JSON as a quoted JS *string literal* —
            `"{\"contact_sales_resources\":3000,…}"` — and JSON.parse hands the module a
            string instead of the config. The block is all numbers, so there is
            nothing here to escape. */ -}}
-    <script type="application/json" id="pricing-calculator-config">{{ $calc | jsonify | safeJS }}</script>
+    {{- $config := dict
+        "contact_sales_resources" $calc.contact_sales_resources
+        "meters" $calc.meters
+        "editions" $calc.editions -}}
+    <script type="application/json" id="pricing-calculator-config">{{ $config | jsonify | safeJS }}</script>
 </section>
