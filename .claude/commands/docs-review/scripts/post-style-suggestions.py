@@ -414,9 +414,13 @@ def _reconcile_caption(lines: list[str], files_url: str) -> bool:
         return False
     want = _caption_text(files_url)
     cur = lines[j].strip()
-    # The caption is the italic one-liner between the heading and the first
-    # `##### <path>` group. Anything else there means the model omitted it.
-    if cur.startswith("*") and cur.endswith("*") and not cur.startswith("**"):
+    # Positional, not shape-based: the slot between the heading and the first
+    # `##### <path>` group holds the caption and nothing else, so whatever sits
+    # there gets replaced regardless of how the model wrapped it. Sniffing for
+    # single asterisks missed a bold-wrapped caption and inserted a second one
+    # above it — and a column-0 `**bold**` line is exactly the shape the render
+    # contract forbids, since `extract_bucket_bullets` counts it as a finding.
+    if not cur.startswith("#####") and not cur.startswith("- "):
         if lines[j] == want:
             return False
         lines[j] = want
@@ -584,15 +588,21 @@ def annotate_pinned(repo: str, pr: str, posted: list[dict], files_url: str = "")
     return marked
 
 
-def live_posted(repo: str, pr: str) -> list[dict]:
+def live_posted(repo: str, pr: str) -> list[dict] | None:
     """Currently-posted suggestions, shaped for `annotate_text`.
+
+    Returns None when the listing FAILED, which is not the same as an empty
+    list. Annotating from a wrongly-empty set would strip the marks and zero
+    the banner while the real comments stayed live — the same unknown-versus-
+    confirmed-empty conflation this module fixes for the sidecar, so it must
+    not be reintroduced here.
 
     Outdated comments report `line: null` and are dropped: there is no line to
     mark, and `annotate_text` coerces the line to `int`.
     """
     prior = fetch_prior_suggestions(repo, pr)
-    if not prior:
-        return []
+    if prior is None:
+        return None
     return [{"file": c.get("path"), "line": c.get("line")}
             for c in prior if isinstance(c.get("line"), int)]
 
@@ -667,6 +677,14 @@ def main() -> int:
             print(json.dumps(build_review_payload([]), indent=2))
             return 0
         posted = live_posted(args.repo, args.pr)
+        if posted is None:
+            # Unknown sidecar AND an unreadable comment list: we know nothing
+            # about what is out there, so touch nothing. Leaving last run's
+            # marks standing is the lesser error — the comments they point at
+            # were not deleted on this path either.
+            print("post-style-suggestions: could not list existing suggestions; "
+                  "leaving the review untouched.", file=sys.stderr)
+            return 0
         print(f"post-style-suggestions: {len(posted)} existing suggestion(s) left "
               "in place.", file=sys.stderr)
         _annotate(args, posted)

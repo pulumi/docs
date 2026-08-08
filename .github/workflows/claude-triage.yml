@@ -251,7 +251,7 @@ jobs:
                 || echo '[]' > .vale-findings.json
               # Blocker-tier findings (the blocker: allowlist in
               # vale-deterministic-fixes.yaml) surface with a distinct
-              # [blocker] prefix so trivial-PR authors see the correctness
+              # [style-blocker] prefix so trivial-PR authors see the correctness
               # errors first; the comment itself stays advisory on this lane.
               VALE_BLOCKERS=$(jq -r '.[] | select(.blocker) | "\(.file):\(.line) — \(.category): \(.message)"' .vale-findings.json)
               VALE_CONCERNS=$(jq -r '.[] | select(.blocker | not) | "\(.file):\(.line) — \(.category): \(.message)"' .vale-findings.json)

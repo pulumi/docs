@@ -740,3 +740,54 @@ def test_live_posted_drops_outdated_comments(monkeypatch):
         {"id": 2, "path": "a.md", "line": None, "body": "x"},
     ])
     assert pss.live_posted("o/r", "1") == [{"file": "a.md", "line": 5}]
+
+
+def test_live_posted_returns_none_when_listing_fails():
+    """None means "we could not look", which is not "there is nothing"."""
+    saved = pss.fetch_prior_suggestions
+    try:
+        pss.fetch_prior_suggestions = lambda r, p: None
+        assert pss.live_posted("o/r", "1") is None
+        pss.fetch_prior_suggestions = lambda r, p: []
+        assert pss.live_posted("o/r", "1") == []
+    finally:
+        pss.fetch_prior_suggestions = saved
+
+
+def test_absent_sidecar_with_failed_listing_touches_nothing(tmp_path, repo, monkeypatch):
+    """Unknown sidecar + unknown comment list must not strip live marks.
+
+    Annotating from a wrongly-empty set would zero the banner and strip every
+    ✏️ while the real comments stayed live — nothing is deleted on this path.
+    """
+    d = tmp_path / "draft.md"
+    before = DRAFT.replace(
+        "- **line 2:** [style] _wordiness_ — 'utilize' is too wordy.",
+        "- **line 2:** [style] _wordiness_ — 'utilize' is too wordy. ✏️")
+    d.write_text(before)
+    calls = _run(tmp_path, repo, monkeypatch, sidecar=None, prior=None,
+                 extra_argv=("--annotate-draft", str(d)))
+    assert calls == []
+    assert d.read_text() == before, "draft must be left exactly as found"
+
+
+def test_caption_replaced_when_model_wrapped_it_in_bold(tmp_path):
+    """A column-0 **bold** line is the one shape the render contract forbids.
+
+    Shape-sniffing for single asterisks missed it and inserted a second
+    caption above it, leaving the forbidden line in place — where
+    extract_bucket_bullets counts it as a bucket finding.
+    """
+    bold = "**Optional polish from pattern-based linting. Apply what reads better.**"
+    body = CAPTION_BODY.format(caption=bold)
+    out, _ = pss.annotate_text(body, [])
+    assert bold not in out
+    assert out.count("Optional polish") == 1
+    assert _canonical() in out
+
+
+def test_caption_replaced_when_model_wrote_plain_prose(tmp_path):
+    body = CAPTION_BODY.format(caption="Some optional polish suggestions follow.")
+    out, _ = pss.annotate_text(body, [])
+    assert "Some optional polish suggestions follow." not in out
+    assert out.count("Optional polish") == 1
