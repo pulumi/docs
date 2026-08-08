@@ -40,7 +40,7 @@ CDK for Terraform (CDKTF) was a HashiCorp project, released in 2020 and [depreca
 
 | Feature | Pulumi | CDKTF |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML | TypeScript, Python, Go, C#, Java |
+| Language support | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL | TypeScript, Python, Go, C#, Java |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/); [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider, and [Terraform modules](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) can be consumed directly | Terraform providers only, accessed through project-specific SDKs generated on demand by `cdktf get` |
 | Transpiled to another format? | No — programs run directly in their host language | Yes — programs are synthesized into Terraform JSON and deployed by the Terraform CLI |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Local, remote, or cloud-hosted (the Terraform state model) |
@@ -118,7 +118,7 @@ Yes. HashiCorp [deprecated CDKTF in December 2025](/blog/cdktf-is-deprecated-wha
 
 ### What is the recommended replacement for CDKTF?
 
-Pulumi is a direct replacement because it covers the same primary use case — defining infrastructure in TypeScript, Python, Go, C#, or Java — without a transpilation step, and it supports the same Terraform providers and Terraform modules that CDKTF relied on. See [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
+Pulumi is a direct replacement because it covers the same primary use case — defining infrastructure in TypeScript, Python, Go, .NET, or Java — without a transpilation step, and it supports the same Terraform providers and Terraform modules that CDKTF relied on. See [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
 
 ### How do I migrate from CDKTF to Pulumi?
 
