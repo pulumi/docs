@@ -1,7 +1,7 @@
 ---
 title: What is Pulumi?
 meta_desc: |
-    Pulumi is an open source infrastructure as code platform for defining, deploying, and managing cloud infrastructure with TypeScript, Python, Go, C#, Java, YAML, or HCL.
+    Pulumi is an open source infrastructure as code platform for defining and managing cloud infrastructure with TypeScript, Python, Go, C#, Java, YAML, or HCL.
 type: what-is
 page_title: "What is Pulumi?"
 authors: ["pulumi-content-team"]
