@@ -346,7 +346,6 @@ jobs:
         with:
           organization: ${{ env.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:organization
-          scope: admin
 
       # Determine the version to use - either the triggered tag or latest tag for manual runs
       - name: Determine Component Version
