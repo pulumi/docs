@@ -76,9 +76,9 @@
         {{ $entity = partial "schema/collectors/article-entity.html" . }}
       {{ end }}
 
-    {{ else if eq .Type "what-is" }}
-      {{/* Single what-is pages get Article schema (with dateModified, timeRequired).
-           The /what-is/ section index gets CollectionPage + ItemList so it's
+    {{ else if eq .Type "resources" }}
+      {{/* Single resources pages get Article schema (with dateModified, timeRequired).
+           The /resources/ section index gets CollectionPage + ItemList so it's
            treated as a directory, not an article. */}}
       {{ if .IsPage }}
         {{ $entity = partial "schema/collectors/article-entity.html" . }}

@@ -1,5 +1,5 @@
 ---
-description: Analyze content for search engine and AI discoverability. Use when writing new blog posts, documentation, or what-is pages, or when reviewing existing content for SEO and AEO (evaluates titles, meta descriptions, headings, and AEO patterns).
+description: Analyze content for search engine and AI discoverability. Use when writing new blog posts, documentation, or resources explainer pages, or when reviewing existing content for SEO and AEO (evaluates titles, meta descriptions, headings, and AEO patterns).
 ---
 
 # /seo-analyze Command
@@ -15,7 +15,7 @@ description: Analyze content for search engine and AI discoverability. Use when 
 **Examples:**
 - `/seo-analyze content/blog/2026/01/my-post/index.md` - Analyze a blog post
 - `/seo-analyze content/docs/esc/get-started/_index.md` - Analyze documentation
-- `/seo-analyze content/what-is/infrastructure-as-code.md` - Analyze a what-is page
+- `/seo-analyze content/resources/what-is-infrastructure-as-code.md` - Analyze a resources explainer page
 
 ## Instructions for Claude
 

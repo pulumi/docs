@@ -1,0 +1,89 @@
+{{ define "hero" }}
+{{/* Use the same word-count source as the schema collector so visible "X min read" matches JSON-LD timeRequired. */}}
+{{ $wordCount := .Content | plainify | countwords }}
+{{ if not $wordCount }}{{ $wordCount = 500 }}{{ end }}
+{{ $readTime := div $wordCount 200 }}
+{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+
+{{/* Only show the "Updated" line when we have a real source of truth — never fall back to now, which would churn each build. */}}
+{{ $modifiedDate := "" }}
+{{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") "0001-01-01") }}
+    {{ $modifiedDate = .Lastmod }}
+{{ else if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+{{ end }}
+<header class="page-hero text-left">
+    <div class="container mx-auto px-6 lg:px-0 flex flex-col items-start">
+        {{ $section := partial "resources/section-for-page.html" . }}
+        {{ partial "breadcrumb.html" (dict "class" "max-w-4xl mx-auto mb-6" "crumbs" (slice
+            (dict "name" "Resources" "url" "/resources/")
+            (dict "name" $section.title "url" $section.url))) }}
+        <div class="page-hero-title">
+            <h1>
+                <span><span data-text="{{ .Params.page_title }}">{{ .Params.page_title | safeHTML }}</span></span>
+            </h1>
+        </div>
+        <div class="max-w-4xl mx-auto mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+            {{ with $modifiedDate }}
+                <time datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+                    Updated {{ .Format "January 2, 2006" }}
+                </time>
+                <span aria-hidden="true">·</span>
+            {{ end }}
+            <span>{{ $readTime }} min read</span>
+            {{ with .Params.authors }}
+                <span aria-hidden="true">·</span>
+                {{ range $id := . }}
+                    {{ $authorPage := $.Site.GetPage (printf "/authors/%s" ($id | urlize)) }}
+                    {{ $authorData := index site.Data.team.team $id }}
+                    {{ if $authorData }}
+                        <a class="inline-flex items-center gap-2 hover:text-violet-700" href="{{ with $authorPage }}{{ .RelPermalink }}{{ end }}" rel="author" data-track="{{ $authorData.name | urlize }}-byline">
+                            <img class="w-6 h-6 rounded-full" src="/images/team/{{ $authorData.id }}.jpg" alt="{{ $authorData.name }}" title="{{ $authorData.name }}" loading="lazy" />
+                            <span>{{ $authorData.name }}</span>
+                        </a>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<section class="mb-16 relative">
+    <div class="container mx-auto">
+        <div class="lg:max-w-4xl mx-auto">
+            {{ with .Params.video }}
+            <div class="card p-6 my-12">
+                <h4>{{ .title }}</h4>
+                <div>
+                    <div class="" style="position: relative; padding-bottom: 48.25%; height: 0; overflow: hidden;">
+                        <iframe src="{{ .youtube_url }}"
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                            allowfullscreen=""></iframe>
+                    </div>
+                    <p>
+                        {{ .description }}
+                    </p>
+                </div>
+                <div>
+                    <div class="accordion-item text-2xl py-3 border-b-2 border-t-2">
+                        {{ partial "accordian-header" (dict "text" "Transcript" "large_header" false) }}
+
+
+                        <div class="accordion-item-body-no-animation text-base">
+                            <p>{{ .transcript | markdownify }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+
+
+            <div class="bg-white px-3">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

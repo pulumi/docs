@@ -36,10 +36,10 @@
 }
 
 // Active state for the homepage category filter pill (default "All", moved by
-// blog-list.ts) and the /what-is/ section filter pill (moved by what-is-list.ts).
+// blog-list.ts) and the /resources/ section filter pill (moved by resources-list.ts).
 // Styled to match the mockup's selected pill.
 [data-blog-filter] .is-active,
-[data-what-is-filter] .is-active,
+[data-resources-filter] .is-active,
 [data-case-study-filter] .is-active {
     @apply border-gray-500 bg-gray-100;
 }

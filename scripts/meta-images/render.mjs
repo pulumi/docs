@@ -50,7 +50,7 @@ const LOGO_LIGHT = svgDataUri("pulumi-logo-horizontal-color-light.svg") // dark 
 INFO_DARK.logo = LOGO
 INFO_LIGHT.logo = LOGO_LIGHT
 
-// --- Template: "title" (what-is, migrate, partner, topics, case-studies index)
+// --- Template: "title" (resources, migrate, partner, topics, case-studies index)
 // — centered title on the light brand field. ----------------------------------
 const T_PAD_X = 152
 const T_BOX_W = CANVAS_W - 2 * T_PAD_X

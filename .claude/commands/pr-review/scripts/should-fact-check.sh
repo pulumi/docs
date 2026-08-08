@@ -10,7 +10,7 @@
 #   1. AI_SUSPECT=true       -> always RUN (AI hallucinations show up everywhere)
 #   2. RISK_TIER=typo        -> SKIP (nothing to fact-check on a 5-line typo fix)
 #   3. dependabot/bot PR     -> SKIP unless content paths are touched
-#   4. Any content/{docs,blog,tutorials,learn,what-is}/ path in diff -> RUN
+#   4. Any content/{docs,blog,tutorials,resources}/ path in diff -> RUN
 #   5. Otherwise -> SKIP
 #
 # See references/trust-and-scrutiny.md and references/fact-check.md for the spec.
@@ -46,7 +46,7 @@ fi
 FILES=$(gh pr view "$PR_NUMBER" --json files --jq '.files[].path' 2>/dev/null || echo "")
 
 # Check for content paths
-CONTENT_HIT=$(echo "$FILES" | grep -E '^content/(docs|blog|tutorials|learn|what-is)/' || true)
+CONTENT_HIT=$(echo "$FILES" | grep -E '^content/(docs|blog|tutorials|resources)/' || true)
 CONTENT_COUNT=$(echo "$CONTENT_HIT" | grep -c . || true)
 CONTENT_COUNT=${CONTENT_COUNT:-0}
 

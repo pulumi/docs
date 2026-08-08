@@ -7,7 +7,7 @@ user-invocable: false
 `meta_image` is **optional**. Leave it blank/omit it and the build generates an
 on-brand social-media card for the page automatically — see
 `scripts/generate-meta-images.mjs` and `layouts/partials/meta-image-url.html`.
-Generated cards cover `docs`, `tutorials`, `case-studies`, `what-is`, `migrate`,
+Generated cards cover `docs`, `tutorials`, `case-studies`, `resources`, `migrate`,
 `partner`, and `topics`. Prefer the generated card for new pages.
 
 Only set `meta_image` when you need a **custom** image that overrides the
