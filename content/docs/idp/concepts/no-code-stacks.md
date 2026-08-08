@@ -18,7 +18,13 @@ No-code workflows are currently available for projects created through the [New 
 {{% /notes %}}
 
 {{% notes type="info" %}}
-No-code workflows require [Pulumi Deployments](/docs/deployments/concepts/)
+No-code workflows require:
+
+- [Pulumi Deployments](/docs/deployments/concepts/)
+- [Pulumi ESC](/docs/esc/) enabled for the organization, since that is where the stack's configuration is stored
+- At least one [version control integration](/docs/integrations/version-control/) configured for the organization. Any provider works — GitHub, GitLab, Azure DevOps, or Bitbucket — and the template can be sourced from a different provider than the one you have connected. The no-code stack itself is not written to a repository.
+
+The template must come from a repository on one of those providers or from the [private registry](/docs/idp/concepts/organization-templates/#registry-backed-templates).
 {{% /notes %}}
 
 ## Creating a no-code project
