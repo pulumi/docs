@@ -128,6 +128,21 @@ exceptions:
   - Stripe
   - Vault
   - Consul
+  # Secrets managers & security vendors (multi-word product names listed as
+  # phrases so generic words like "Secrets"/"Manager"/"Key" stay flagged when
+  # capitalized outside the product name)
+  - HashiCorp
+  - HashiCorp Vault
+  - AWS Secrets Manager
+  - Azure Key Vault
+  - Google Cloud Secret Manager
+  - 1Password
+  - 1Password Secrets Automation
+  - CyberArk
+  - Conjur
+  - CyberArk Conjur
+  - Doppler
+  - Infisical
   # Languages, formats, runtimes
   - Python
   - TypeScript

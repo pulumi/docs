@@ -82,6 +82,11 @@ AUTOMERGE_NOTICE = (
     "(or convert the PR back to a draft) before approving."
 )
 
+# Related but distinct: the `blocker:` rule list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml drives
+# which Vale findings the PR review renders as 🚨 blockers. This set is keyed
+# on category (not rule) and decides fix-vs-defer for the content-review PR
+# body; keep the two aligned when adding correctness-class rules.
 # Vale categories whose fix has exactly one correct form and preserves meaning —
 # safe to pre-bucket as a fix candidate. Everything else (passive voice,
 # wordiness, hedging, em-dash density, tone, punctuation style …) starts as a

@@ -128,13 +128,15 @@ def test_stale_review_at_merge():
 
 
 def test_style_findings_counted_not_classified():
+    # Deliberately uses the pre-2026-08-03 "Style findings" heading: this
+    # reader parses historical merged PRs, which carry the old spelling.
     body = body_with(
         low_confidence=(
             "- **[L20]** Please cite a source.\n"
             "\n"
             "#### Style findings\n"
             "\n"
-            "*Found by pattern-based linting; Findings may be false positives.*\n"
+            "*Optional polish from pattern-based linting.*\n"
             "\n"
             "- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.\n"
             "- **line 87:** [style] _passive voice_ — Use active voice.\n"

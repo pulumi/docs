@@ -15,7 +15,7 @@ turns.
 The design frame: **the composer ASSEMBLES, Opus JUDGES.** The composer never
 decides which findings surface — it lays out the skeleton, renders the 🔍 trail
 verbatim from `.verified-claims.json`, the bucket-count table, the investigation
-log scaffold, the 📊 Editorial-balance Tier 1, the `#### Style findings` block,
+log scaffold, the 📊 Editorial-balance Tier 1, the `#### Style suggestions` block,
 the 📜 Review-history line, and *stub* 🚨/⚠️ bucket bullets (one per promoting
 verdict) carrying a `<TODO>` marker. Whether a stub is a real finding, what the
 fix prose should be, the summary paragraph, the confidence levels, the
@@ -532,8 +532,22 @@ def first_line_ref(line_range: str) -> str:
 
 
 def trunc(s: str, n: int) -> str:
+    """Truncate to <= n chars, breaking on a word boundary.
+
+    Cutting mid-word produces the likes of `…you reuse the "same IAM policies
+    you have al…`, which reads as a rendering bug and costs the reader the one
+    clause that would have made the sentence land. Back up to the last space
+    in the final quarter of the budget when there is one; hard-cut otherwise
+    (a long unbroken token, e.g. a URL).
+    """
     s = (s or "").strip().replace("\n", " ")
-    return s if len(s) <= n else s[: n - 1].rstrip() + "…"
+    if len(s) <= n:
+        return s
+    cut = s[: n - 1].rstrip()
+    space = cut.rfind(" ")
+    if space >= int((n - 1) * 0.75):
+        cut = cut[:space].rstrip()
+    return cut.rstrip(",;:—-") + "…"
 
 
 def quote(s: str) -> str:
@@ -772,9 +786,16 @@ def render_count_table(a: int, b: int, c: int, d: int) -> str:
     )
 
 
+# The advisory-tier sub-heading. Renamed from "Style findings" on 2026-08-03:
+# once the blocker tier carries the correctness errors and the known
+# false-positive rules are disabled, what's left is optional polish, and
+# "findings" oversold it. validate-pinned.py still recognizes the old spelling
+# so an in-flight review that merges a pre-rename body keeps validating.
+STYLE_HEADING = "#### Style suggestions"
+
 # Italic one-liners that open the 🚨 / ⚠️ sections when they have findings
-# (parallel to `*Found by pattern-based linting; Findings may be false
-# positives.*` under `#### Style findings`) — omitted on the explicit-empty form.
+# (parallel to the pattern-based-linting caption under STYLE_HEADING) —
+# omitted on the explicit-empty form.
 _OUTSTANDING_NOTE = "*These must be resolved or refuted before merging.*"
 _LOWCONF_NOTE = "*Review each and resolve as appropriate — these don't block the PR.*"
 
@@ -921,10 +942,10 @@ def render_editorial_balance(eb: dict | None, is_blog: bool) -> str:
     )
 
 
-def render_outstanding(stubs: list[dict]) -> str:
+def render_outstanding(stubs: list[dict], vale_blockers: list[dict]) -> str:
     # Empty form is reader-facing — the "what the reviewer should add here"
     # guidance lives in ci.md §3, never in the published body.
-    if not stubs:
+    if not stubs and not vale_blockers:
         return "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._"
     lines = ["### 🚨 Outstanding in this PR", "", _OUTSTANDING_NOTE, ""]
     # Blank line between bullets renders as a "loose list" — each bullet gets
@@ -935,10 +956,25 @@ def render_outstanding(stubs: list[dict]) -> str:
         if i > 0:
             lines.append("")
         lines.append(s["bullet"])
+    # Blocker-tier Vale findings (the `blocker:` allowlist in
+    # vale-deterministic-fixes.yaml): correctness errors with near-zero
+    # false-positive rates. Rendered with the standard `**[L<n>]**` anchor so
+    # auto-refresh-gate.py can match a fix-push against them, plus a
+    # `[style-blocker]` marker that exempts them from trail-matching in
+    # validate-pinned.py (they have no verification-trail record) and tells
+    # the reviewer these are composer-rendered, not model findings.
+    for i, f in enumerate(vale_blockers):
+        if stubs or i > 0:
+            lines.append("")
+        fname = str(f.get("file") or "").strip()
+        file_part = f" `{fname}` —" if fname else ""
+        cat = str(f.get("category") or "style")
+        msg = str(f.get("message") or "").strip()
+        lines.append(f"- **[L{f.get('line', '?')}]**{file_part} [style-blocker] _{cat}_ — {msg}")
     return "\n".join(lines)
 
 
-def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
+def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "") -> str:
     has_style = bool(vale_findings)
     if not stubs and not has_style:
         return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
@@ -950,58 +986,63 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
     if has_style:
         if stubs:
             lines.append("")
-        lines.append(_render_style_findings(vale_findings))
+        lines.append(_render_style_findings(vale_findings, files_url))
     return "\n".join(lines)
 
 
-def _style_mode(total: int, n_files: int) -> str:
-    if total <= 5:
-        return "inline"
-    if n_files <= 1 and total <= 30:
-        return "inline"
-    if total > 30:
-        return "collapse"
-    if n_files > 1 and total > 5:
-        return "collapse"
-    return "inline"
-
-
-def _render_style_findings(findings: list[dict]) -> str:
-    total = len(findings)
+def _render_style_findings(findings: list[dict], files_url: str = "") -> str:
+    # Rendered EXPANDED (no <details>) and excluded from the ⚠️ count. These
+    # are advisory nags kept for the rule-tuning loop, not reviewer burden —
+    # the count exclusion carries that signal, so hiding them behind a
+    # disclosure just costs a click. Blocker-tier Vale findings render under
+    # 🚨 instead and never reach this function.
+    #
+    # Each file gets an `##### <path>` heading rather than a <summary>.
+    # Two constraints pin that shape:
+    #   1. post-style-suggestions.py --annotate-draft walks these headings to
+    #      attribute `- **line N:**` bullets to a file before appending ✏️.
+    #   2. It must NOT start with `**` at column 0 — validate-pinned.py's
+    #      extract_bucket_bullets counts any such line as a bucket finding,
+    #      which would inflate the ⚠️ count and trip the L-prefix rule.
+    # Keep all three in sync.
     by_file: dict[str, list[dict]] = {}
     for f in findings:
         by_file.setdefault(str(f.get("file") or "?"), []).append(f)
-    n_files = len(by_file)
-    mode = _style_mode(total, n_files)
-    out = ["#### Style findings", "", "*Found by pattern-based linting; Findings may be false positives.*", ""]
-    if mode == "inline":
-        for f in sorted(findings, key=lambda x: (str(x.get("file") or ""), int(x.get("line") or 0))):
-            cat = str(f.get("category") or "style")
-            msg = str(f.get("message") or "").strip()
-            out.append(f"- **line {f.get('line', '?')}:** [style] _{cat}_ — {msg}")
-    else:
-        out.append("<sub>Click each filename to expand.</sub>")
+    # The caption links straight to the Files-changed tab when the composer
+    # knows the PR: that is where the ```suggestion blocks render, and where
+    # "Add suggestion to batch" lets the author stage several and commit them
+    # in one go. Without a link the reader has to work out where to look.
+    files_link = f"[Files changed]({files_url})" if files_url else "Files changed"
+    out = [
+        STYLE_HEADING,
+        "",
+        "*Optional polish from pattern-based linting — never blocking, not counted above. "
+        "Take the ones that read better and ignore the rest. "
+        f"✏️ marks one you can apply from the {files_link} tab — use **Add suggestion to batch** "
+        "on each, then **Commit suggestions** to take several in a single commit.*",
+        "",
+    ]
+    multi = len(by_file) > 1
+    for fname in sorted(by_file):
+        items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
+        kind_counts: dict[str, int] = {}
+        for it in items:
+            kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
+        kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        breakdown = ", ".join(f"{c} {k}" for k, c in kinds_sorted)
+        # The file heading is always rendered — the annotator needs it even on
+        # a single-file review to bind bullets to a path.
+        suffix = f" — {len(items)} ({breakdown})" if multi else ""
+        out.append(f"##### {fname}{suffix}")
         out.append("")
-        for fname in sorted(by_file):
-            items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
-            kind_counts: dict[str, int] = {}
-            for it in items:
-                kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
-            kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
-            breakdown = ", ".join(f"<strong>{c}</strong> {k}" for k, c in kinds_sorted)
-            out.append(f"<details>")
-            out.append(f"<summary><strong>{fname}</strong> (<strong>{len(items)}</strong> issues: {breakdown})</summary>")
-            out.append("")
-            for it in items:
-                cat = str(it.get("category") or "style")
-                msg = str(it.get("message") or "").strip()
-                out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
-            out.append("")
-            out.append("</details>")
-            out.append("")
-        # drop trailing blank
-        while out and out[-1] == "":
-            out.pop()
+        for it in items:
+            cat = str(it.get("category") or "style")
+            msg = str(it.get("message") or "").strip()
+            out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
+        out.append("")
+    # drop trailing blank
+    while out and out[-1] == "":
+        out.pop()
     return "\n".join(out)
 
 
@@ -1061,20 +1102,34 @@ def _stub_bullet(v: dict, todo: str) -> dict:
     ref = first_line_ref(v.get("line_range") or "")
     text = quote(redact(trunc(v.get("text") or "", TEXT_TRUNC)))
     verdict = v.get("verdict") or "?"
-    pointer = _evidence_pointer(v)
     file_path = (v.get("file") or "").strip()
-    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — <commentary>`.
-    # Three visually distinct segments separated by em-dashes:
+    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — verdict: <v>[; framing: …] <TODO>`.
     #   1. L-prefix + file path (the validator anchors here)
     #   2. italicized quoted claim (so the reader can scan claims fast)
-    #   3. verdict + evidence pointer + TODO (the actionable bit)
+    #   3. verdict + the reviewer's fix prose (the actionable bit)
     # The file path is rendered AFTER `**[L<n>]**` so the validator's
     # bucket-bullet-line-range-prefix regex (`^\s*-\s+\*\*\[(L\d+...)\]\*\*`)
     # still anchors on the L-token; the filename disambiguates which file
     # the line number refers to on multi-file PRs.
+    #
+    # The evidence/source/intuition pointer is deliberately NOT repeated here.
+    # It is already rendered verbatim on this claim's 🔍 trail line a few
+    # lines above, and measuring a published review (2026-08-03, fork PR #228)
+    # put the duplicate at 1,596 chars — 10% of the whole comment — sitting
+    # between the claim and the fix the author actually has to read. The trail
+    # is the evidence record; the bucket bullet is the instruction. Every
+    # evidence-checking validator rule (pass-3-unverifiable-evidence,
+    # pass-3-evidence-faithful, verified-claims-trail-faithful) reads the
+    # trail, not this bullet, so nothing is weakened by dropping it.
+    #
+    # `framing:` survives: the editorial pass is told to mirror it (anti-hedge
+    # on ⚔️ mismatch), so it stays where the reviewer is working.
+    fn = (v.get("framing_note") or "").strip()
+    framing_part = f"; framing: {redact(trunc(fn, 160))}" if fn else ""
     file_part = f" `{file_path}` —" if file_path else ""
     italic_text = f"*{text}*" if text else text
-    bullet = f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}; {pointer} <TODO: {todo}>"
+    bullet = (f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}{framing_part} "
+              f"<TODO: {todo}>")
     return {"ref": ref, "bullet": bullet, "verdict": verdict}
 
 
@@ -1315,10 +1370,21 @@ def compose(args: argparse.Namespace) -> str:
 
     route_counts = compute_route_counts(verdicts, candidate_claims)
 
+    # Deep-link target for the style caption. Both parts are optional (local
+    # /docs-review runs have neither), so fall back to unlinked prose.
+    files_url = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
+                 if args.repo and args.pr else "")
+
     outstanding_stubs, lowconf_stubs = build_stubs(verdicts)
-    style_count = len(vale_findings)
-    a = len(outstanding_stubs)
-    b = len(lowconf_stubs) + style_count
+    # Blocker-tier Vale findings (stamped by vale-findings-filter.py from the
+    # `blocker:` allowlist) count toward 🚨 — they drive the
+    # review:outstanding-issues label like any other outstanding finding.
+    # Advisory style findings render expanded under ⚠️ and are NOT counted:
+    # they're kept for the rule-tuning loop, not the reviewer's burden.
+    vale_blockers = [f for f in vale_findings if f.get("blocker")]
+    vale_nags = [f for f in vale_findings if not f.get("blocker")]
+    a = len(outstanding_stubs) + len(vale_blockers)
+    b = len(lowconf_stubs)
     c_pre = 0
     d_resolved = 0
 
@@ -1371,9 +1437,9 @@ def compose(args: argparse.Namespace) -> str:
         sections.append(eb_block)
         sections.append("")
     sections += [
-        render_outstanding(outstanding_stubs),
+        render_outstanding(outstanding_stubs, vale_blockers),
         "",
-        render_lowconfidence(lowconf_stubs, vale_findings),
+        render_lowconfidence(lowconf_stubs, vale_nags, files_url),
         "",
         render_triaged(),
         "",
