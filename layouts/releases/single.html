@@ -24,9 +24,9 @@
     {{ partial "releases/section.html" (merge $section (dict "number" $i)) }}
     {{ end }}
 
-    {{/* "More from the blog" list */}}
-    {{ with .Params.blog_section }}
-    {{ partial "releases/blog-list.html" . }}
+    {{/* "More from the blog" + upcoming events list */}}
+    {{ with .Params.feed_section }}
+    {{ partial "releases/feed-list.html" . }}
     {{ end }}
 
 </div>

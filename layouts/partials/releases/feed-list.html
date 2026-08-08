@@ -1,0 +1,68 @@
+{{/*
+    Releases Feed List
+
+    One bordered .card holding up to two lists — blog posts and related events —
+    each under its own overline. Rows come from the shared compact list-row
+    components, so both lists line up on the same columns.
+
+    An event stays on the page for as long as it's worth a click: while it's still
+    ahead of us (per events/upcoming.html, the site-wide definition of "upcoming"
+    shared with the events list and the homepage), and afterwards for as long as
+    it has a recording — in which case its row flips itself from Register to
+    Watch. An event that has run with nothing to watch drops off, and the heading
+    goes with the last of them, so the card can never advertise a date that has
+    already passed.
+
+    Parameters:
+    - anchor:       Optional section ID for TOC link targets.
+    - posts_title:  Overline above the posts. Defaults to "More from the blog".
+    - posts:        Array of blog post paths (e.g. "/blog/some-post").
+    - events_title: Overline above the events. Defaults to "Related events" — the
+                    list mixes upcoming and on-demand, so it isn't "Upcoming".
+    - events:       Array of event paths (e.g. "/events/some-event").
+                    Both lists are looked up via site.GetPage; missing pages are skipped.
+*/}}
+
+{{ $anchor := .anchor }}
+{{ $postsTitle := .posts_title | default "More from the blog" }}
+{{ $eventsTitle := .events_title | default "Related events" }}
+
+{{ $posts := slice }}
+{{ range .posts }}
+    {{ with site.GetPage . }}{{ $posts = $posts | append . }}{{ end }}
+{{ end }}
+
+{{ $upcoming := slice }}
+{{ range partialCached "events/upcoming.html" . "global" }}
+    {{ $upcoming = $upcoming | append .data.RelPermalink }}
+{{ end }}
+{{ $events := slice }}
+{{ range .events }}
+    {{ with site.GetPage . }}
+        {{ if or (in $upcoming .RelPermalink) .Params.youtube_url }}
+            {{ $events = $events | append . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ if or $posts $events }}
+<section{{ with $anchor }} id="{{ . }}"{{ end }} class="card bg-white p-8 md:p-10 scroll-mt-28">
+    {{ with $posts }}
+    <p class="font-overline m-0 mb-6 text-service-black">{{ $postsTitle }}</p>
+    <div class="flex flex-col">
+        {{ range . }}
+            {{ partialCached "blog/card/list-row.html" (dict "page" .) .RelPermalink }}
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ with $events }}
+    <p class="font-overline m-0 mb-6 text-service-black{{ if $posts }} mt-10{{ end }}">{{ $eventsTitle }}</p>
+    <div class="flex flex-col">
+        {{ range . }}
+            {{ partial "events/list-row.html" (dict "page" .) }}
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+{{ end }}
