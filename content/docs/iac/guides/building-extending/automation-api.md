@@ -978,7 +978,17 @@ Notice how you can choose to have a callback function for standard output. In ad
 
 ### Preview a destroy or refresh without applying it
 
-Sometimes you want to know what a `destroy` or `refresh` would do before committing to it. For example, you might gate an automated teardown behind a manual approval step, or inspect drift without writing it back to the stack's state. Requires Pulumi CLI 3.105.0 or later.
+Sometimes you want to know what a `destroy` or `refresh` would do before committing to it. For example, you might gate an automated teardown behind a manual approval step, or inspect drift without writing it back to the stack's state.
+
+Each language SDK shipped this capability on its own schedule, so the minimum version to check is your language's own Automation API package, not a single Pulumi CLI version:
+
+- TypeScript/JavaScript (`@pulumi/pulumi`): `previewRefresh` requires 3.181.0 or later; `previewDestroy` requires 3.192.0 or later.
+- Python (`pulumi`): `preview_refresh` and `preview_destroy` both require 3.181.0 or later.
+- Go (`github.com/pulumi/pulumi/sdk/v3`): `PreviewRefresh` and `PreviewDestroy` both require 3.181.0 or later.
+- C# (`Pulumi.Automation` on NuGet): `RefreshOptions.PreviewOnly` requires 3.75.0 or later; `DestroyOptions.PreviewOnly` requires 3.78.0 or later.
+- Java (`com.pulumi:pulumi`): `RefreshOptions.previewOnly` requires 1.6.0 or later; `DestroyOptions.previewOnly` requires 1.9.0 or later.
+
+If you call one of these before your language SDK supports it, you'll see an error such as `stack.previewDestroy is not a function`, `AttributeError`, or a missing builder method, rather than a clear version message. Upgrade the Automation API package for your language first.
 
 In TypeScript, Python, and Go, this is a dedicated method that returns the same `PreviewResult` shape as `preview`, without ever calling the destroy or refresh engine operation:
 
