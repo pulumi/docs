@@ -86,12 +86,42 @@
 #                    row it deep-links to.
 #
 # -----------------------------------------------------------------------------
+# CALCULATOR
+# -----------------------------------------------------------------------------
+# The `calculator:` block holds the *numbers* behind the same prices the
+# comparison rows state in prose ("$0.00025/hour"), so the estimator on
+# /pricing/ and the markdown output can do arithmetic with them. It is a
+# separate block rather than extra keys on the rows because a cell is display
+# copy — it carries "Starting at", a subtext, and a Custom column — and parsing
+# a dollar figure back out of it would make every copy edit a pricing change.
+#
+# When you change a rate, change it in BOTH places: the feature cell a reader
+# reads and the calculator meter the estimator computes with. There is no
+# derivation between them.
+#
+# `calculator.editions` is keyed by edition id and only covers the editions the
+# estimator offers (Individual is free; Business Critical is quoted), so it is
+# deliberately not a full row of the editions list above.
+#
+# The metered rates here are the MONTHLY ones — the figure each comparison cell
+# carries as its subtext — even though billing is hourly. Rounding runs in both
+# directions between the two published forms (an ESC secret is $0.000685/hour
+# and $0.50/month, but 0.000685 x 730 is 0.50005; a Team Insights resource is
+# $0.000025/hour and $0.0185/month, but 0.000025 x 730 is 0.01825), so a
+# calculator that multiplied the hourly rate out would quote figures that
+# contradict the table directly below it. Storing the monthly rate keeps every
+# number on the page identical. Partial months are handled by the utilization
+# slider, not by an hours constant.
+#
+# -----------------------------------------------------------------------------
 # ADDING OR RENAMING
 # -----------------------------------------------------------------------------
 # Edit this file only. layouts/partials/pricing/data.html expands it and raises
-# every structural error; scripts/lint/lint-markdown.js validates the
-# frontmatter and shortcode values that point at it. Renaming a feature id is a
-# breaking change — grep for `pulumi_cloud_feature:` and `pulumi-cloud "` first.
+# every structural error; layouts/partials/pricing/calculator.html validates the
+# `calculator:` block (its only consumer); scripts/lint/lint-markdown.js
+# validates the frontmatter and shortcode values that point at it. Renaming a
+# feature id is a breaking change — grep for `pulumi_cloud_feature:` and
+# `pulumi-cloud "` first.
 
 editions:
   - id: individual
@@ -219,6 +249,33 @@ editions:
         - Volume pricing and invoicing
         - Private Slack and Professional Services
         - 24x7 Enterprise Support available
+
+calculator:
+  # Above this many IaC resources the calculator keeps quoting a price but
+  # flags that volume pricing usually applies at that size, so the list-rate
+  # figure is an upper bound rather than a quote. Counted in resources rather
+  # than dollars because resource count is the number the reader typed and can
+  # reason about; a dollar threshold moves whenever any rate on this page does.
+  contact_sales_resources: 3000
+  # Meters priced the same on every edition the calculator offers.
+  meters:
+    workflow_minute: 0.01
+    neo_tokens_per_million: 3
+  editions:
+    team:
+      base_usd: 40
+      included_credits: 40
+      included_resources: 500
+      iac_resource_month: 0.1825
+      esc_secret_month: 0.50
+      insights_resource_month: 0.0185
+    enterprise:
+      base_usd: 400
+      included_credits: 400
+      included_resources: 2000
+      iac_resource_month: 0.365
+      esc_secret_month: 0.75
+      insights_resource_month: 0.0365
 
 groups:
   - id: product
