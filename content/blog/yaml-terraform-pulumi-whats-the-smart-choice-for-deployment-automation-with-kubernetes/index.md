@@ -413,6 +413,8 @@ Next time you start a new project, try Pulumi. See for yourself that it's a smar
 
 But that's my opinion. What's your opinion? What's your smart choice for deployment automation with Kubernetes?
 
+This post focuses on how you author manifests. If you also want the wider operating picture — provisioning, testing, policy, and where AI agents fit into managing Kubernetes infrastructure day to day — see [Terraform and Kubernetes: A Practical Guide for 2026](/blog/terraform-kubernetes/).
+
 If you want to try out Pulumi or play around to prove [me](/blog/author/engin-diri) wrong, you can start with:
 
 {{< get-started >}}
