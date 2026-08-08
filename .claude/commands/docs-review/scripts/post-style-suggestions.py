@@ -316,15 +316,41 @@ def fetch_prior_suggestions(repo: str, pr: str) -> list[dict] | None:
     return out
 
 
+_SUGGESTION_BLOCK_RE = re.compile(r"```suggestion\n(.*?)\n```", re.S)
+
+
+def _replacement_of(body: str) -> str:
+    """The proposed line inside a suggestion comment, or the whole body.
+
+    Falls back to the full body when there is no suggestion block, so two
+    malformed comments can't collide on an empty string.
+    """
+    text = (body or "").replace("\r\n", "\n")
+    m = _SUGGESTION_BLOCK_RE.search(text)
+    return m.group(1) if m else text.strip()
+
+
 def suggestion_key(path: str, line, body: str) -> tuple[str, int, str]:
     """Identity of a posted suggestion, for the unchanged-set comparison.
+
+    Keyed on the REPLACEMENT LINE, not the whole body. The body's first line
+    carries `note` -- a free-text reason the editorial pass rewrites every run
+    ("'utilize' means 'use'" one run, "utilize -> use" the next, observed
+    across three runs on fork #232 while the suggestion blocks stayed
+    byte-identical). Keying on the body meant the desired set never matched the
+    posted one, so the unchanged-set short-circuit below could never fire and
+    every refresh still deleted and re-posted live buttons.
+
+    The trade-off is deliberate: when only the note changed we keep the
+    previously posted wording rather than churn the comment for a cosmetic
+    difference. The replacement is what the author actually applies.
 
     Body is newline-normalized because GitHub stores `\r\n`. An outdated
     comment reports `line: null`, which can never equal a desired anchor -- so
     a suggestion whose line moved is correctly treated as changed.
     """
     return (path or "", int(line) if isinstance(line, int) else -1,
-            (body or "").replace("\r\n", "\n").strip())
+            _replacement_of(body))
 
 
 def delete_comments(repo: str, ids: list) -> None:

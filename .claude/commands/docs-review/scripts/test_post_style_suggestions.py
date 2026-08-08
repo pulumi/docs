@@ -606,3 +606,61 @@ def test_caption_matches_composer():
         assert caption == pss._caption_text(url), (
             f"caption drift for files_url={url!r}:\n"
             f"  composer: {caption}\n  annotator: {pss._caption_text(url)}")
+
+
+def test_key_ignores_note_but_not_replacement():
+    """The note churns every run; the replacement is the real identity."""
+    a = pss.comment_body(dict(entry(), new_line="You can use the CLI.",
+                              note="'utilize' means 'use'"))
+    b = pss.comment_body(dict(entry(), new_line="You can use the CLI.",
+                              note="utilize -> use"))
+    c = pss.comment_body(dict(entry(), new_line="You may use the CLI.",
+                              note="utilize -> use"))
+    k = pss.suggestion_key
+    assert k("f.md", 2, a) == k("f.md", 2, b)
+    assert k("f.md", 2, a) != k("f.md", 2, c)
+
+
+def test_unchanged_set_skips_repost_despite_reworded_note(repo, tmp_path, monkeypatch):
+    """The production case the body-keyed version could never hit.
+
+    Regression: fork #232 re-posted on all three runs because the editorial
+    pass reworded its note each time, so `have == wanted` never held.
+    """
+    (tmp_path / "sugg.json").write_text(json.dumps([entry(note="utilize -> use")]))
+    (tmp_path / "pr.patch").write_text(PATCH)
+    existing = [{"id": 1, "path": "content/docs/foo.md", "line": 2,
+                 "body": pss.comment_body(dict(entry(), new_line="You can use the CLI to deploy.",
+                                               note="'utilize' means 'use'"))}]
+    calls = []
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "delete_comments", lambda r, ids: calls.append(("delete", ids)))
+    monkeypatch.setattr(pss, "gh_api", lambda *a, **k: calls.append(("api", a)) or SimpleNamespace(
+        returncode=1, stdout="", stderr=""))
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "1",
+        "--in", str(tmp_path / "sugg.json"), "--patch-file", str(tmp_path / "pr.patch"),
+        "--repo-root", str(repo), "--vale-findings", str(tmp_path / "absent.json"),
+    ])
+    assert pss.main() == 0
+    assert calls == [], f"expected no GitHub writes, got {calls}"
+
+
+def test_changed_replacement_still_reposts(repo, tmp_path, monkeypatch):
+    (tmp_path / "sugg.json").write_text(json.dumps([entry()]))
+    (tmp_path / "pr.patch").write_text(PATCH)
+    existing = [{"id": 1, "path": "content/docs/foo.md", "line": 2,
+                 "body": pss.comment_body(dict(entry(), new_line="Something else entirely."))}]
+    deleted, posts = [], []
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: existing)
+    monkeypatch.setattr(pss, "delete_comments", lambda r, ids: deleted.extend(ids))
+    monkeypatch.setattr(pss, "gh_api", lambda *a, **k: posts.append(a) or SimpleNamespace(
+        returncode=0, stdout="", stderr=""))
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "1",
+        "--in", str(tmp_path / "sugg.json"), "--patch-file", str(tmp_path / "pr.patch"),
+        "--repo-root", str(repo), "--vale-findings", str(tmp_path / "absent.json"),
+    ])
+    assert pss.main() == 0
+    assert deleted == [1]
+    assert any("reviews" in str(a) for a in posts)
