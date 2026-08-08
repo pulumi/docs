@@ -9,7 +9,7 @@ authors: ["asaf-ashirov"]
 
 The modern cloud landscape has transformed how organizations build and deploy applications, but managing cloud infrastructure often remains a complex, error-prone process involving clicking through web consoles, writing brittle scripts, or learning a new tool-specific language. Pulumi emerges as a solution that fundamentally changes this paradigm by enabling developers and infrastructure teams to manage cloud resources using the same programming languages they already know and love.
 
-Pulumi is a cloud engineering platform that treats infrastructure as software, letting teams define, deploy, and manage cloud resources using familiar programming languages like TypeScript, Python, Go, C#, Java, and YAML, plus HCL as a first-class option. Whichever language a team chooses, Pulumi brings the full power of modern software development practices to infrastructure management.
+Pulumi is a cloud engineering platform that treats infrastructure as software, letting teams define, deploy, and manage cloud resources using familiar programming languages like TypeScript, Python, JavaScript, Go, .NET, Java, and YAML, plus HCL as a first-class option. Whichever language a team chooses, Pulumi brings the full power of modern software development practices to infrastructure management.
 
 ## The evolution of infrastructure management
 
@@ -65,7 +65,7 @@ The registry extends far beyond traditional cloud providers to include specializ
 
 ### Community and official packages
 
-The registry combines official packages maintained by Pulumi with a growing ecosystem of community contributions. Popular packages include Kubernetes operators, Docker configurations, and specialized industry solutions. Each package is automatically generated for all supported programming languages, meaning a single package definition provides TypeScript, Python, Go, C#, and Java bindings.
+The registry combines official packages maintained by Pulumi with a growing ecosystem of community contributions. Popular packages include Kubernetes operators, Docker configurations, and specialized industry solutions. Each package is automatically generated for all supported programming languages, meaning a single package definition provides TypeScript, Python, Go, .NET, and Java bindings.
 
 ### AWSx components
 
@@ -73,7 +73,7 @@ Pulumi AWSx components represent opinionated, well-architected patterns for comm
 
 ## The power of real programming languages
 
-One of Pulumi's defining features is the breadth of languages it supports: general-purpose languages like TypeScript, Python, Go, C#, and Java, alongside YAML and HCL. Teams can pick the language that best fits how they already work, which shapes how they approach infrastructure management.
+One of Pulumi's defining features is the breadth of languages it supports: general-purpose languages like TypeScript, Python, JavaScript, Go, .NET, and Java, alongside YAML and HCL. Teams can pick the language that best fits how they already work, which shapes how they approach infrastructure management.
 
 Using familiar programming languages means developers can apply existing skills and knowledge to infrastructure problems. They can use the full ecosystem of language features, including package managers, testing frameworks, and development tools, while still reaching for declarative formats like YAML or HCL when those fit better. The result is infrastructure code that's easier to maintain and build on.
 
