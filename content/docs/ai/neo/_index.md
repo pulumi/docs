@@ -18,7 +18,9 @@ menu:
 Pulumi Neo is Pulumi's own infrastructure agent, powered by Anthropic's Claude
 family of models accessed via Amazon Bedrock. It ships with the Pulumi Agent
 Skills catalog built in, and adds organizational context, policy guardrails,
-human-in-the-loop approvals, and scheduled autonomous work.
+human-in-the-loop approvals, and scheduled autonomous work. See
+[data handling](/docs/ai/neo/data-handling/) for which models power Neo and how
+it handles prompts, task history, and secret values.
 
 Neo works on infrastructure the way a teammate would: it reads your
 organization's live state in Pulumi Cloud, and depending on what you asked for,
@@ -89,3 +91,6 @@ before it acts, [task modes](/docs/ai/neo/tasks/#task-modes) control which steps
 need your approval, and
 [read-only mode](/docs/ai/neo/get-started/#read-only-mode) removes its ability
 to change anything at all. Neo never has more access than you do, only less.
+For the full detail on what Neo can reach and how it handles what it sees, see
+the [permissions model](/docs/ai/neo/permissions/) and
+[data handling](/docs/ai/neo/data-handling/).
