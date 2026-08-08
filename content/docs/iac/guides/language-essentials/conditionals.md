@@ -40,7 +40,7 @@ A general-purpose language has `if`/`else` directly, plus a conditional
 (ternary) expression for picking between two values. Go doesn't have a ternary
 operator, so an `if` is the idiom there for both cases.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -96,6 +96,46 @@ if (environment.equals("production")) {
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML has no `if` or ternary expression. `fn::select` picks a value out
+of a list by a 0-based integer index, which stands in for a two-way choice
+when that index itself comes from config:
+
+```yaml
+config:
+  isProduction:
+    type: integer
+variables:
+  instanceSize:
+    fn::select:
+      - ${isProduction}
+      - - t3.micro
+        - m5.large
+```
+
+There's no way to skip creating a resource entirely from YAML; that requires a
+general-purpose language or a component.
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+HCL has a ternary expression but no `if` statement, so both branching on a
+value and deciding whether to create a resource at all go through the
+conditional expression, the second one via `count`:
+
+```hcl
+locals {
+  instance_size = var.environment == "production" ? "m5.large" : "t3.micro"
+}
+
+resource "aws_s3_bucket" "backups" {
+  count  = var.environment == "production" ? 1 : 0
+  bucket = "app-backups"
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -106,7 +146,7 @@ only exists in production, is a plain `if` around the resource declaration.
 `pulumi.getStack()` returns the current stack name, which is the language
 equivalent of the stack-scoped variables you'd otherwise branch on in HCL:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -184,6 +224,24 @@ public class App {
             }
         });
     }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML has no way to skip declaring a resource based on a condition; every
+resource in the file is always created. Reaching for a general-purpose
+language, or a component someone already wrote in one, is the way to make
+resource creation itself conditional.
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_s3_bucket" "backups" {
+  count  = terraform.workspace == "production" ? 1 : 0
+  bucket = "app-backups"
 }
 ```
 

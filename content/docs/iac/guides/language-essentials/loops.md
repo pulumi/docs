@@ -37,12 +37,11 @@ resource "aws_subnet" "app" {
 
 ## The syntax
 
-Each language has an idiomatic way to iterate a list: `for...of` or `.map()`
-in TypeScript, a `for` loop or a list comprehension in Python, `for ... range`
-in Go, `foreach` or LINQ's `.Select()` in C#, and an enhanced `for` loop or a
-`Stream` in Java.
+Each language has an idiomatic way to iterate a list: `for...of` in
+TypeScript, a `for` loop in Python, `for ... range` in Go, `foreach` in C#,
+and an enhanced `for` loop in Java.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -54,6 +53,14 @@ for (const zone of zones) {
 }
 ```
 
+TypeScript also has `.map()`, which builds a new array by applying a function
+to every element, and reads well when the loop's whole purpose is to produce
+a value per item, which is exactly the shape of most resource loops:
+
+```typescript
+const upper = zones.map((zone) => zone.toUpperCase());
+```
+
 {{% /choosable %}}
 {{% choosable language python %}}
 
@@ -62,6 +69,13 @@ zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
 
 for zone in zones:
     print(zone)
+```
+
+A list comprehension is Python's equivalent of `.map()`, building a new list
+from an existing one in a single expression:
+
+```python
+upper = [zone.upper() for zone in zones]
 ```
 
 {{% /choosable %}}
@@ -75,6 +89,9 @@ for _, zone := range zones {
 }
 ```
 
+Go has no built-in `map`-style function; a `for ... range` loop that appends
+to a new slice is the idiomatic way to transform a list.
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 
@@ -87,6 +104,13 @@ foreach (var zone in zones)
 }
 ```
 
+LINQ's `.Select()` is C#'s equivalent of `.map()`, useful when the loop's job
+is to produce a new sequence rather than perform a side effect:
+
+```csharp
+var upper = zones.Select(zone => zone.ToUpper());
+```
+
 {{% /choosable %}}
 {{% choosable language java %}}
 
@@ -95,6 +119,34 @@ var zones = List.of("us-east-1a", "us-east-1b", "us-east-1c");
 
 for (var zone : zones) {
     System.out.println(zone);
+}
+```
+
+The `Stream` API's `.map()` is Java's equivalent, useful when you're
+transforming a list into another list rather than iterating for a side
+effect:
+
+```java
+var upper = zones.stream().map(String::toUpperCase).toList();
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML has no looping construct of any kind, functional or otherwise.
+Every resource in the file has to be written out explicitly.
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "availability_zones" {
+  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
+}
+
+resource "aws_subnet" "app" {
+  for_each          = toset(var.availability_zones)
+  availability_zone = each.value
 }
 ```
 
@@ -109,7 +161,7 @@ declaration as the body. The index or the zone name becomes part of the
 resource's logical name, so each iteration produces a distinct resource
 instead of overwriting the same one:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -217,6 +269,42 @@ public class App {
             }
         });
     }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML can't create a resource per item in a list. Each subnet has to be
+declared as its own resource, so a fixed, small set of zones is written out
+by hand:
+
+```yaml
+resources:
+  appSubnetA:
+    type: aws:ec2:Subnet
+    properties:
+      availabilityZone: us-east-1a
+      cidrBlock: 10.0.0.0/24
+  appSubnetB:
+    type: aws:ec2:Subnet
+    properties:
+      availabilityZone: us-east-1b
+      cidrBlock: 10.0.1.0/24
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "availability_zones" {
+  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
+}
+
+resource "aws_subnet" "app" {
+  for_each          = toset(var.availability_zones)
+  availability_zone = each.value
+  cidr_block        = "10.0.${index(var.availability_zones, each.value)}.0/24"
 }
 ```
 

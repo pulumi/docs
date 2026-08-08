@@ -38,26 +38,32 @@ Here's how the ideas map from configuration languages to a general-purpose one:
 
 Nothing here implies you should stop writing Pulumi YAML or Terraform HCL. Both
 are complete, supported ways to define infrastructure, and for many teams and
-many stacks, they're the right choice. The honest limit is this: neither
-expresses a conditional or a loop natively. Pulumi YAML covers configuration,
-resources, providers, outputs, and a set of built-in functions (see the
+many stacks, they're the right choice. Terraform HCL reaches conditionals and
+loops through `count` and `for_each`, the same idiom you already know. Pulumi
+YAML has no equivalent: it covers configuration, resources, providers, outputs,
+and a set of built-in functions (see the
 [YAML language reference](/docs/iac/languages-sdks/yaml/yaml-language-reference/)),
-but the moment you need to create a resource only in production, or create one
-resource per item in a list, you need a general-purpose language, or a
+but it has no way to create a resource conditionally or create one resource per
+item in a list. That's where a general-purpose language, or a
 [component](/docs/iac/guides/building-extending/components/when-to-build-a-component/)
-that someone already wrote in one. That's the point where this series pays for
-itself.
+that someone already wrote in one, pays for itself. This series shows the
+general-purpose-language equivalent of `count` and `for_each` too, since even
+teams that write HCL today may want it for the same reasons Terraform users
+reach for a general-purpose provisioner.
 
-If you're using [Pulumi Neo](/) while you're learning, it can draft and explain
-program code for you, which is a reasonable way to see a construct in context
-before you write it yourself.
+If you're using [Pulumi Neo](/product/neo/) while you're learning, it can draft
+and explain program code for you, which is a reasonable way to see a construct
+in context before you write it yourself.
 
 ## How to read this series
 
 Each guide covers one construct: how you've already expressed the same idea in
 YAML or HCL, the minimal syntax in each Pulumi language, a realistic
 infrastructure example, and the Pulumi-specific details worth knowing before you
-use it. Work through them in order, or jump to the one you need:
+use it. YAML and HCL appear as tabs alongside the general-purpose languages
+throughout, so you can flip back to what you already know at any point; where
+one of them has no equivalent construct, its tab says so. Work through them in
+order, or jump to the one you need:
 
 1. [Variables and values](/docs/iac/guides/language-essentials/variables/)
 1. [Conditionals](/docs/iac/guides/language-essentials/conditionals/)
