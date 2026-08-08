@@ -1,7 +1,7 @@
 ---
-title: What is HashiCorp Vault?
+title: What is HashiCorp Vault? Features, Use Cases & Setup
 meta_desc: |
-     HashiCorp Vault is a tool for securing, storing, and tightly controlling access to tokens, passwords, certificates, and encryption keys.
+    HashiCorp Vault securely stores and controls access to secrets: tokens, passwords, and encryption keys. Learn its features, use cases, and Pulumi ESC integration.
 
 type: what-is
 page_title: "What is HashiCorp Vault?"
