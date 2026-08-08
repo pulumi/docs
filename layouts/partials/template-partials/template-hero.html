@@ -171,7 +171,18 @@
                     {{ partial "code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
                 </div>
                 {{ if $overlayImage }}
-                {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "fetchpriority" "high" "ariaHidden" "true") }}
+                {{ $overlayImgArgs := dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "fetchpriority" "high" "ariaHidden" "true" }}
+                {{/* The overlay is an SVG, which resources.Get returns as a generic (non-image)
+                     resource with no .Width/.Height. Derive intrinsic dimensions instead from the
+                     page's code_aspect_ratio frontmatter (e.g. "666/513"), which already drives the
+                     container's CSS aspect-ratio above, so both stay in sync. */}}
+                {{ with $codeAspectRatio }}
+                    {{ $ratioParts := strings.Split . "/" }}
+                    {{ if eq (len $ratioParts) 2 }}
+                        {{ $overlayImgArgs = merge $overlayImgArgs (dict "width" (index $ratioParts 0) "height" (index $ratioParts 1)) }}
+                    {{ end }}
+                {{ end }}
+                {{ partial "fingerprinted-img.html" $overlayImgArgs }}
                 {{ end }}
             </div>
             {{ else }}
@@ -245,7 +256,18 @@
                     {{ partial "code-snippets.html" (dict "code_snippets" $codeSnippets "title" $codeTitle) }}
                 </div>
                 {{ if $overlayImage }}
-                {{ partial "fingerprinted-img.html" (dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "fetchpriority" "high" "ariaHidden" "true") }}
+                {{ $overlayImgArgs := dict "src" $overlayImage "alt" $overlayAlt "class" "hero-code-overlay" "loading" "eager" "fetchpriority" "high" "ariaHidden" "true" }}
+                {{/* The overlay is an SVG, which resources.Get returns as a generic (non-image)
+                     resource with no .Width/.Height. Derive intrinsic dimensions instead from the
+                     page's code_aspect_ratio frontmatter (e.g. "666/513"), which already drives the
+                     container's CSS aspect-ratio above, so both stay in sync. */}}
+                {{ with $codeAspectRatio }}
+                    {{ $ratioParts := strings.Split . "/" }}
+                    {{ if eq (len $ratioParts) 2 }}
+                        {{ $overlayImgArgs = merge $overlayImgArgs (dict "width" (index $ratioParts 0) "height" (index $ratioParts 1)) }}
+                    {{ end }}
+                {{ end }}
+                {{ partial "fingerprinted-img.html" $overlayImgArgs }}
                 {{ end }}
             </div>
         </div>
