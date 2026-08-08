@@ -1,7 +1,7 @@
 ---
 title: What are Docker Secrets? Setup & Best Practices
 meta_desc: |
-    Docker Secrets pass sensitive data, like passwords and keys, to Swarm containers without hard-coding it. Learn to create and mount secrets via the CLI or Compose.
+    Docker Secrets pass sensitive data, like passwords and keys, to Swarm containers without hard-coding it. Learn to create secrets via the CLI or Compose.
 
 type: what-is
 page_title: "What are Docker Secrets?"

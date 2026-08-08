@@ -1,7 +1,7 @@
 ---
 title: What is a GitHub Actions Secret? How It Works
 meta_desc: |
-    A GitHub Actions secret is an encrypted variable at the repo, environment, or org level so workflows use credentials safely. Learn how to create and reference one.
+    A GitHub Actions secret is an encrypted variable at the repo, environment, or org level so workflows use credentials safely. Learn to create one.
 
 type: what-is
 page_title: "What is a GitHub Actions Secret?"
