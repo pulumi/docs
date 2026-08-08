@@ -664,3 +664,79 @@ def test_changed_replacement_still_reposts(repo, tmp_path, monkeypatch):
     assert pss.main() == 0
     assert deleted == [1]
     assert any("reviews" in str(a) for a in posts)
+
+
+# --- absent/unreadable sidecar is UNKNOWN, not "none" ------------------------
+#
+# Regression: fork #233 refresh 2. The model wrote no sidecar at all, the
+# script read that as an authoritative empty set, and deleted three live
+# buttons out from under the author.
+
+
+def _prior(n=3):
+    return [{"id": 100 + i, "path": "content/docs/foo.md", "line": 2 + i,
+             "body": pss.comment_body(dict(entry(line=2 + i),
+                                           new_line=f"line {2 + i} rewritten"))}
+            for i in range(n)]
+
+
+def _run(tmp_path, repo, monkeypatch, sidecar, prior, extra_argv=()):
+    calls = []
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: prior)
+    monkeypatch.setattr(pss, "delete_comments",
+                        lambda r, ids: calls.append(("delete", list(ids))))
+    monkeypatch.setattr(pss, "gh_api", lambda *a, **k: calls.append(("api", a)) or
+                        SimpleNamespace(returncode=1, stdout="", stderr=""))
+    infile = tmp_path / "sugg.json"
+    if sidecar is not None:
+        infile.write_text(sidecar)
+    (tmp_path / "pr.patch").write_text(PATCH)
+    monkeypatch.setattr(sys, "argv", [
+        "post-style-suggestions.py", "--pr", "1", "--in", str(infile),
+        "--patch-file", str(tmp_path / "pr.patch"), "--repo-root", str(repo),
+        "--vale-findings", str(tmp_path / "absent.json"), *extra_argv])
+    assert pss.main() == 0
+    return calls
+
+
+def test_absent_sidecar_leaves_existing_suggestions_alone(tmp_path, repo, monkeypatch):
+    calls = _run(tmp_path, repo, monkeypatch, sidecar=None, prior=_prior())
+    assert calls == [], f"expected no GitHub writes, got {calls}"
+
+
+def test_explicit_empty_array_still_deletes(tmp_path, repo, monkeypatch):
+    """`[]` is authoritative: the author fixed everything, clear the buttons."""
+    calls = _run(tmp_path, repo, monkeypatch, sidecar="[]", prior=_prior())
+    assert calls == [("delete", [100, 101, 102])]
+
+
+def test_unreadable_sidecar_leaves_existing_suggestions_alone(tmp_path, repo, monkeypatch):
+    calls = _run(tmp_path, repo, monkeypatch, sidecar="{not json", prior=_prior())
+    assert calls == []
+
+
+def test_non_array_sidecar_leaves_existing_suggestions_alone(tmp_path, repo, monkeypatch):
+    calls = _run(tmp_path, repo, monkeypatch, sidecar='{"file": "x"}', prior=_prior())
+    assert calls == []
+
+
+def test_absent_sidecar_marks_from_what_is_actually_posted(tmp_path, repo, monkeypatch):
+    """Unknown must not mean unmarked — the marks track live buttons."""
+    d = tmp_path / "draft.md"
+    d.write_text(DRAFT)
+    live = [{"id": 1, "path": "content/docs/foo.md", "line": 2,
+             "body": pss.comment_body(dict(entry(), new_line="You can use the CLI to deploy."))}]
+    _run(tmp_path, repo, monkeypatch, sidecar=None, prior=live,
+         extra_argv=("--annotate-draft", str(d)))
+    out = d.read_text()
+    assert "- **line 2:** [style] _wordiness_ — 'utilize' is too wordy. ✏️" in out
+    assert "'usually' is a weasel word!\n" in out      # no live button, no mark
+
+
+def test_live_posted_drops_outdated_comments(monkeypatch):
+    """An outdated comment reports line: null and cannot be marked."""
+    monkeypatch.setattr(pss, "fetch_prior_suggestions", lambda r, p: [
+        {"id": 1, "path": "a.md", "line": 5, "body": "x"},
+        {"id": 2, "path": "a.md", "line": None, "body": "x"},
+    ])
+    assert pss.live_posted("o/r", "1") == [{"file": "a.md", "line": 5}]

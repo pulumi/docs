@@ -584,6 +584,32 @@ def annotate_pinned(repo: str, pr: str, posted: list[dict], files_url: str = "")
     return marked
 
 
+def live_posted(repo: str, pr: str) -> list[dict]:
+    """Currently-posted suggestions, shaped for `annotate_text`.
+
+    Outdated comments report `line: null` and are dropped: there is no line to
+    mark, and `annotate_text` coerces the line to `int`.
+    """
+    prior = fetch_prior_suggestions(repo, pr)
+    if not prior:
+        return []
+    return [{"file": c.get("path"), "line": c.get("line")}
+            for c in prior if isinstance(c.get("line"), int)]
+
+
+def _annotate(args, posted: list[dict]) -> None:
+    """Reconcile marks and banner against `posted`, on whichever lane asked."""
+    files_url = f"https://github.com/{args.repo}/pull/{args.pr}/files"
+    n = None
+    if args.annotate_draft:
+        n = annotate_draft(Path(args.annotate_draft), posted, files_url)
+    elif args.annotate_pinned:
+        n = annotate_pinned(args.repo, args.pr, posted, files_url)
+    if n is not None:
+        print(f"post-style-suggestions: {n} style bullet(s) carry the ✏️ mark.",
+              file=sys.stderr)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pr", required=True)
@@ -605,20 +631,46 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
-    # A missing or unreadable sidecar is treated as "no suggestions this run",
-    # NOT as "skip the run": delete-and-repost is the documented semantics, so
-    # the re-entrant lane still has to clear last run's comments and strip the
-    # marks they justified. Bailing early would leave a refreshed review
-    # advertising buttons for findings it no longer reports.
+    # An explicit `[]` means "nothing qualified this run" and IS authoritative:
+    # the run clears last run's comments and strips the marks they justified.
+    # A sidecar that is absent, unreadable, or not an array means we do not
+    # know, and the two are not the same. The prompts ask for `[]` rather than
+    # nothing precisely so the difference is legible; this used to conflate
+    # them, and a refresh where the model simply forgot the sidecar deleted
+    # three live buttons out from under the author (fork #233, 2026-08-08).
+    #
+    # The original rationale for deleting on absence was that a refreshed
+    # review must not advertise buttons for findings it no longer reports.
+    # That still holds -- it is satisfied by annotating from what is ACTUALLY
+    # posted (see below) rather than by destroying the comments, so the marks
+    # cannot over-promise either way.
     path = Path(args.infile)
-    entries: list = []
+    entries: list | None = None      # None == unknown, leave things alone
     if not path.is_file():
-        print("post-style-suggestions: no suggestions file; treating as none.", file=sys.stderr)
+        print("post-style-suggestions: no suggestions file; leaving any existing "
+              "suggestions in place.", file=sys.stderr)
     else:
         try:
-            entries = json.loads(path.read_text(encoding="utf-8") or "[]")
+            parsed = json.loads(path.read_text(encoding="utf-8") or "[]")
         except (json.JSONDecodeError, UnicodeDecodeError) as exc:
-            print(f"post-style-suggestions: unreadable {path}: {exc}", file=sys.stderr)
+            print(f"post-style-suggestions: unreadable {path}: {exc}; leaving any "
+                  "existing suggestions in place.", file=sys.stderr)
+        else:
+            if isinstance(parsed, list):
+                entries = parsed
+            else:
+                print(f"post-style-suggestions: {path} is not a JSON array; leaving "
+                      "any existing suggestions in place.", file=sys.stderr)
+
+    if entries is None:
+        if args.dry_run:
+            print(json.dumps(build_review_payload([]), indent=2))
+            return 0
+        posted = live_posted(args.repo, args.pr)
+        print(f"post-style-suggestions: {len(posted)} existing suggestion(s) left "
+              "in place.", file=sys.stderr)
+        _annotate(args, posted)
+        return 0
 
     if not entries:
         patch = ""
@@ -709,15 +761,7 @@ def main() -> int:
     # lane the draft is last run's published body, so a refresh that converts
     # nothing has to actively strip the stale marks and banner — returning
     # early would leave the review advertising buttons that were just deleted.
-    files_url = f"https://github.com/{args.repo}/pull/{args.pr}/files"
-    n = None
-    if args.annotate_draft:
-        n = annotate_draft(Path(args.annotate_draft), posted, files_url)
-    elif args.annotate_pinned:
-        n = annotate_pinned(args.repo, args.pr, posted, files_url)
-    if n is not None:
-        print(f"post-style-suggestions: {n} style bullet(s) carry the ✏️ mark.",
-              file=sys.stderr)
+    _annotate(args, posted)
     return 0
 
 
