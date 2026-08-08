@@ -984,7 +984,7 @@ Each language SDK shipped this capability on its own schedule, so the minimum ve
 
 - TypeScript/JavaScript (`@pulumi/pulumi`): `previewRefresh` requires 3.181.0 or later; `previewDestroy` requires 3.192.0 or later.
 - Python (`pulumi`): `preview_refresh` and `preview_destroy` both require 3.181.0 or later.
-- Go (`github.com/pulumi/pulumi/sdk/v3`): `PreviewRefresh` and `PreviewDestroy` both require 3.181.0 or later.
+- Go (`github.com/pulumi/pulumi/sdk/v3`): `PreviewRefresh` requires 3.107.0 or later; `PreviewDestroy` requires 3.128.0 or later.
 - C# (`Pulumi.Automation` on NuGet): `RefreshOptions.PreviewOnly` requires 3.75.0 or later; `DestroyOptions.PreviewOnly` requires 3.78.0 or later.
 - Java (`com.pulumi:pulumi`): `RefreshOptions.previewOnly` requires 1.6.0 or later; `DestroyOptions.previewOnly` requires 1.9.0 or later.
 
@@ -1029,7 +1029,7 @@ if err != nil {
 
 {{% /choosable %}}
 
-{{% choosable language "csharp" %}}
+{{% choosable language "csharp,fsharp,visualbasic" %}}
 
 C# doesn't expose a separate preview method for destroy and refresh. Instead, set `PreviewOnly` on the corresponding options object and call the regular method; the CLI runs the operation in preview mode and returns without changing the stack's state:
 
