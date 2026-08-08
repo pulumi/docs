@@ -19,9 +19,9 @@ related_posts:
 
 social:
     twitter: |
-        Terraform can absolutely manage Kubernetes — the `hashicorp/kubernetes` provider is real and widely used. But HashiCorp's own docs flag two structural limits: plan-time API access and a provider-credential ordering trap.
+        Terraform can manage Kubernetes — the hashicorp/kubernetes provider works. But HashiCorp's own docs flag two limits: plan-time API access and a provider-credential ordering trap.
 
-        Here's how that plays out in 2026, and where a general-purpose language changes the picture:
+        Here's how that plays out in 2026:
     linkedin: |
         Terraform's `kubernetes` provider is a legitimate, well-maintained way to manage cluster objects as code. It's also worth reading HashiCorp's own warnings closely: `kubernetes_manifest` needs API access at plan time, and mixing cluster-provisioning resources with Kubernetes-provider resources in one module produces "intermittent and unpredictable errors."
 
