@@ -51,7 +51,7 @@ In a general-purpose language, you declare a variable and assign it a value in
 one statement. Most Pulumi languages infer the type from the value, so you
 rarely write the type out yourself.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -93,6 +93,25 @@ var replicaCount = 3;
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  bucketName: my-app-data
+  replicaCount: 3
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  bucket_name   = "my-app-data"
+  replica_count = 3
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -101,7 +120,7 @@ interpolation, just with each language's own syntax: template literals in
 TypeScript, f-strings in Python, `fmt.Sprintf` in Go, `$"..."` in C#, and
 `String.format` in Java.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -138,6 +157,23 @@ var label = String.format("%s-%d", bucketName, replicaCount);
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+variables:
+  label: ${bucketName}-${replicaCount}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+locals {
+  label = "${local.bucket_name}-${local.replica_count}"
+}
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -147,7 +183,7 @@ Stack configuration is the language equivalent of a `Pulumi.<stack>.yaml`
 value you'd otherwise reference directly. You read it into a variable with
 `pulumi.Config` and use it the same way you'd use any other variable:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -232,6 +268,33 @@ public class App {
             var bucket = new Bucket("data-" + environment);
         });
     }
+}
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+```yaml
+config:
+  environment:
+    type: string
+resources:
+  bucket:
+    type: aws:s3:Bucket
+    properties:
+      bucket: data-${environment}
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+variable "environment" {
+  type = string
+}
+
+resource "aws_s3_bucket" "bucket" {
+  bucket = "data-${var.environment}"
 }
 ```
 

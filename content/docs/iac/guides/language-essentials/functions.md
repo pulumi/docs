@@ -43,7 +43,7 @@ directory or source block, just a callable name in the same file.
 A function takes parameters, does something with them, and optionally returns
 a value.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -97,6 +97,21 @@ var name = taggedName("app", "production");
 ```
 
 {{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML has no way to define your own function. Its built-in functions,
+such as `fn::join` and `fn::toJSON`, cover common value transformations, but
+you can't add to that set from within a YAML program.
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+Terraform HCL doesn't support user-defined functions either; it ships a fixed
+set of built-in functions instead. A module is the closest equivalent to
+reuse, shown above, but it reuses a group of resources, not a single
+computed value.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -107,7 +122,7 @@ than compute a string. A function that creates a bucket with a standard set of
 properties lets every call site stay short, and it keeps the tagging or
 naming convention in one place:
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -204,6 +219,45 @@ static Bucket createLoggingBucket(String name) {
 
 var appLogs = createLoggingBucket("app-logs");
 var auditLogs = createLoggingBucket("audit-logs");
+```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML has to declare each bucket as its own resource; there's no way to
+factor the shared properties into something callable from within the file:
+
+```yaml
+resources:
+  appLogs:
+    type: aws:s3:Bucket
+    properties:
+      lifecycleRules:
+        - enabled: true
+          expiration:
+            days: 90
+  auditLogs:
+    type: aws:s3:Bucket
+    properties:
+      lifecycleRules:
+        - enabled: true
+          expiration:
+            days: 90
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+module "logging_bucket" {
+  source = "./modules/logging-bucket"
+  name   = "app-logs"
+}
+
+module "audit_logging_bucket" {
+  source = "./modules/logging-bucket"
+  name   = "audit-logs"
+}
 ```
 
 {{% /choosable %}}

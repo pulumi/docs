@@ -30,7 +30,7 @@ separate module directory.
 
 A class has fields to hold state and a constructor to set them.
 
-{{< chooser language "typescript,python,go,csharp,java" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -124,6 +124,20 @@ class Endpoint {
 
 var endpoint = new Endpoint("api.example.com", 443);
 ```
+
+{{% /choosable %}}
+{{% choosable language yaml %}}
+
+Pulumi YAML has no classes and no way to define a reusable type. It works
+directly with the resource types and object shapes that a provider or
+component already defines.
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+Terraform HCL has no classes either. A module, shown below, is the closest
+equivalent, and it's a directory-level construct rather than a language-level
+one.
 
 {{% /choosable %}}
 
