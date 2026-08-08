@@ -158,12 +158,12 @@ One boundary this post has deliberately stayed inside: everything here protects 
 
 If you would rather see this running than read about it, Docker and Pulumi are teaching it together: a hands-on workshop where we put [Pulumi Neo](/product/neo/), Pulumi's infrastructure coding agent, inside a Docker Sandbox and turn a plain-English request into running infrastructure in a real cloud account, with [Pulumi ESC](/docs/esc/) issuing short-lived cloud credentials instead of static keys. Same session, two time zones:
 
-{{< blog/cta-card title="Neo in a Docker Sandbox (Americas): September 16" href="/events/neo-in-a-docker-sandbox/" >}}
-A 60-minute live session with Docker and Pulumi: sandbox internals, sealed agent workspaces, and real infrastructure from a plain-English request. September 16, 9:00 AM Pacific.
-{{< /blog/cta-card >}}
+**Americas — September 16, 9:00 AM Pacific**
 
-{{< blog/cta-card title="Neo in a Docker Sandbox (EMEA): October 14" href="/events/neo-in-a-docker-sandbox-eu/" >}}
-The same live session at a Europe-friendly hour: sandbox internals, sealed agent workspaces, and real infrastructure from a plain-English request. October 14, 10:00 AM CEST.
-{{< /blog/cta-card >}}
+{{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
+
+**EMEA — October 14, 10:00 AM CEST**
+
+{{< blog/card "/events/neo-in-a-docker-sandbox-eu/" >}}
 
 And if your coding agent has already written its own horror story, come tell me in the [Pulumi Community Slack](https://slack.pulumi.com/). I collect them.
