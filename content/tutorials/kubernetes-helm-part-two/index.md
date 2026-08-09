@@ -43,13 +43,13 @@ collections:
 
 ## Why using the `Chart` resource over the `Release` resource?
 
-The [`Helm Chart`](/registry/packages/kubernetes/api-docs/helm/v4/chart) resource renders the templates from your chart and then manages the objects directly with the Pulumi Kubernetes provider. `Chart` is implemented as a [`Component Resource`](/docs/concepts/resources/components) which provide a number of benefits for Pulumi users:
+The [`Helm Chart`](/registry/packages/kubernetes/api-docs/helm/v4/chart) resource renders the templates from your chart and then manages the objects directly with the Pulumi Kubernetes provider. `Chart` is implemented as a [`Component Resource`](/docs/iac/concepts/components/) which provide a number of benefits for Pulumi users:
 
 ### Benefits
 
 1. Visibility into all resources encapsulated by the Chart in Pulumi's state, allowing users to directly query properties of individual resources.
-2. Tight integration with Pulumi's Policy-as-Code framework - [`CrossGuard`](/docs/guides/crossguard/) to enforce policies on all resources installed by Helm charts
-3. Ability to leverage [transformations](/docs/concepts/options/transformations/) to programmatically manipulate resources installed by Helm charts in any of the Pulumi supported programming languages
+2. Tight integration with Pulumi's Policy-as-Code framework - [`CrossGuard`](/docs/insights/policy/) to enforce policies on all resources installed by Helm charts
+3. Ability to leverage [transformations](/docs/iac/concepts/resources/options/transformations/) to programmatically manipulate resources installed by Helm charts in any of the Pulumi supported programming languages
 4. Detailed previews and diffs rendered in the Pulumi CLI and Console for each Kubernetes resource resulting from Helm Chart config changes
 
 We have seen significant adoption of `Chart` over the years. However, since these resources are not directly managed by Helm, the following limitations apply:

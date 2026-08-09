@@ -546,7 +546,7 @@ Pulumi supports private repos in GitHub and GitLab. Pulumi reads standard enviro
 
 {{< pulumi-cloud "private-registry" />}}
 
-A source-based plugin package can be published to the [IDP Private Registry](/docs/idp/concepts/private-registry/) so it shows up alongside the rest of your organization's infrastructure building blocks — the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. See the [Pulumi Private Registry guide](/docs/idp/concepts/private-registry/) for publishing instructions.
+A source-based plugin package can be published to the [IDP Private Registry](/docs/idp/concepts/private-registry/) so it shows up alongside the rest of your organization's infrastructure building blocks — the same [components](/docs/iac/concepts/components/) and [templates](/docs/idp/concepts/organization-templates/) that power golden path workflows in Pulumi. See the [Pulumi Private Registry guide](/docs/idp/concepts/private-registry/) for publishing instructions.
 
 ### Pre-publishing language SDKs
 

@@ -14,7 +14,7 @@ menu:
 aliases:
 ---
 
-Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicorp.com/terraform/language/backend), letting you store and manage Terraform state alongside your Pulumi stacks. Your team can continue using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, agentic infrastructure coding with Neo, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/pulumi-cloud/insights/).
+Pulumi Cloud can serve as a [Terraform state backend](https://developer.hashicorp.com/terraform/language/backend), letting you store and manage Terraform state alongside your Pulumi stacks. Your team can continue using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: encrypted state storage, update history, state locking, agentic infrastructure coding with Neo, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/insights/discovery/).
 
 ## Why store Terraform state in Pulumi Cloud
 
@@ -24,7 +24,7 @@ If you are managing Terraform state in S3, Azure Blob Storage, or another DIY ba
 - **Update history and versioning** — every state change is tracked as a versioned checkpoint, visible in the [Pulumi Cloud](https://app.pulumi.com/signin) stack Activity tab
 - **Automatic state locking** — prevents concurrent operations from corrupting state
 - **Role-based access control** — control who can read or modify each stack with [teams and RBAC](/docs/administration/access-identity/rbac/)
-- **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/pulumi-cloud/insights/search/)
+- **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/insights/discovery/search/)
 - **Platform integration** — root module outputs become Pulumi stack outputs, accessible via [stack references](/docs/iac/concepts/stacks/#stackreferences) from other Pulumi stacks or via the [`pulumi-stacks` ESC provider](/docs/esc/providers/iac/pulumi-stacks/) with no extra tokens or credentials required
 
 ## How it works
@@ -111,7 +111,7 @@ Replace the placeholders:
 | `<stack>` | The Pulumi stack name | `prod` |
 
 {{% notes type="info" %}}
-If you are using a [self-hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/) instance, replace `tf.pulumi.com` with your instance's API URL in:
+If you are using a [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) instance, replace `tf.pulumi.com` with your instance's API URL in:
 
 - The backend configuration above
 - The `terraform login` or `tofu login` command (e.g., `terraform login your-pulumi-host.example.com`)
@@ -418,7 +418,7 @@ steps:
 
 Once your Terraform state is in Pulumi Cloud, you can:
 
-- **View resources** in [Resource Search](/docs/pulumi-cloud/insights/search/) alongside your Pulumi-managed resources
+- **View resources** in [Resource Search](/docs/insights/discovery/search/) alongside your Pulumi-managed resources
 - **Run audit policies** by adding the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights
 - **Continue using Terraform or OpenTofu** for all `plan`, `apply`, and `destroy` operations
 
@@ -439,7 +439,7 @@ You can run [audit (detective) policy packs](/docs/insights/policy/policy-groups
 To configure audit policies for a Terraform stack, add the stack to an [audit policy group](/docs/insights/policy/policy-groups/) in Insights. Policy packs are then evaluated continuously against the stack's resources.
 
 {{% notes type="info" %}}
-Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/resources/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+Stacks using local execution mode support audit (detective) policies only. Stacks using [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) also support preventative policies, which evaluate against the plan and can block an apply. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 {{% /notes %}}
 
 ### Restoring a previous state version
@@ -461,7 +461,7 @@ Yes. Pulumi Cloud can execute your Terraform and OpenTofu plans and applies remo
 
 ### Can I use drift detection with Terraform-managed stacks?
 
-Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/pulumi-cloud/deployments/drift/).
+Not currently. Drift detection requires a Pulumi program. If you want this feature, you can [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) — including [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which preserves HCL syntax — and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
 
 Note that running on the HCL runtime is a different arrangement from using Pulumi Cloud as a Terraform state backend. Under the HCL runtime, state is Pulumi's own — it lives wherever you have `pulumi login` pointed, and a `terraform { backend { ... } }` block in your configuration is accepted but ignored with a warning. Your existing resources are not inherited from the Terraform state file; you adopt them with `pulumi import --from hcl terraform.tfstate`.
 

@@ -94,7 +94,7 @@ The same CI/CD machinery that ships application code can ship infrastructure onc
 1. CI runs `pulumi up` to apply the change to staging, then to production after smoke tests pass.
 1. Drift detection runs on a schedule against the deployed state.
 
-The principle is the same as application CI: fast feedback for in-progress changes, slower and broader checks closer to production. Pulumi integrates with all major CI/CD systems via [the Pulumi CI/CD integration guide](/docs/iac/guides/continuous-delivery/) and [GitHub Actions](/docs/iac/guides/continuous-delivery/github-actions/).
+The principle is the same as application CI: fast feedback for in-progress changes, slower and broader checks closer to production. Pulumi integrates with all major CI/CD systems via [the Pulumi CI/CD integration guide](/docs/iac/operations/continuous-delivery/) and [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/).
 
 ## How does IaC enable shift-left testing and policy as code?
 
@@ -157,7 +157,7 @@ A DevOps toolchain built around IaC typically combines tools from several catego
 | Policy as code | [Pulumi Policies](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
 | Static IaC scanning | Checkov, tfsec, Terrascan, Snyk IaC |
 | Containers and orchestration | Docker, Podman, Kubernetes, ECS |
-| Secrets and config | [Pulumi ESC](/product/esc/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
+| Secrets and config | [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
 | Observability | Prometheus, Grafana, Datadog, New Relic, OpenTelemetry |
 | Incident management | PagerDuty, Opsgenie, FireHydrant, Rootly |
 
@@ -169,10 +169,10 @@ Pulumi is IaC built for engineering teams that already use DevOps practices. Con
 
 * **Real languages.** Write IaC in TypeScript, Python, Go, C#, Java, or YAML. The same languages, test runners, and IDE tooling that work for application code work for the platform.
 * **Same review process.** Pulumi programs live in the same repos as application code (or in their own platform repos). Every change is a pull request with a diff that reviewers can read.
-* **CI/CD-native.** Pulumi runs in every major CI/CD platform. The [Pulumi GitHub Actions integration](/docs/iac/guides/continuous-delivery/github-actions/) and [CI/CD guide](/docs/iac/guides/continuous-delivery/) document common patterns.
+* **CI/CD-native.** Pulumi runs in every major CI/CD platform. The [Pulumi GitHub Actions integration](/docs/iac/operations/continuous-delivery/github-actions/) and [CI/CD guide](/docs/iac/operations/continuous-delivery/) document common patterns.
 * **Policy as code.** Write policies in the same language as the IaC using [Pulumi Policies](/docs/insights/policy/). Run them on every preview and update.
-* **Secrets through Pulumi ESC.** Centralized, encrypted, audited. [Pulumi ESC](/product/esc/) pulls secrets at runtime into Pulumi programs, CI jobs, and applications without leaving plaintext copies in code or state.
-* **Self-service through automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) turns Pulumi programs into libraries that other software can call, which is how platform teams expose self-service over their components.
+* **Secrets through Pulumi ESC.** Centralized, encrypted, audited. [Pulumi ESC](/product/secrets-management/) pulls secrets at runtime into Pulumi programs, CI jobs, and applications without leaving plaintext copies in code or state.
+* **Self-service through automation API.** The [automation API](/docs/iac/concepts/automation-api/) turns Pulumi programs into libraries that other software can call, which is how platform teams expose self-service over their components.
 
 [Get started with Pulumi](/docs/get-started/) to put your cloud infrastructure on the same engineering footing as your application code.
 

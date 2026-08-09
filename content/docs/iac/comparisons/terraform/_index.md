@@ -81,7 +81,7 @@ Both tools provide a CLI and a managed remote-run service: Pulumi Cloud Deployme
 
 Pulumi Cloud manages state by default — encrypted in transit and at rest, versioned checkpoints, automatic state locking, and role-based access control — and self-managed backends (Amazon S3, Azure Blob Storage, Google Cloud Storage, local files) are supported for teams that want to own the storage.
 
-Pulumi Cloud can also serve as the [state backend for Terraform and OpenTofu](/docs/iac/get-started/terraform/terraform-state-backend/). It implements Terraform's remote backend API, so a team points the Terraform CLI at Pulumi Cloud with a standard `backend "remote"` block and keeps its existing HCL and day-to-day workflow unchanged. In return they get encrypted state, update history, automatic state locking, RBAC, audit policies, and a unified view of Terraform-managed resources alongside Pulumi-managed ones in [Resource Search](/docs/pulumi-cloud/insights/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so other stacks can consume them without extra credentials. This makes Pulumi Cloud a governance and visibility plane you can adopt on its own merits, not only a stepping stone to converting code.
+Pulumi Cloud can also serve as the [state backend for Terraform and OpenTofu](/docs/iac/get-started/terraform/terraform-state-backend/). It implements Terraform's remote backend API, so a team points the Terraform CLI at Pulumi Cloud with a standard `backend "remote"` block and keeps its existing HCL and day-to-day workflow unchanged. In return they get encrypted state, update history, automatic state locking, RBAC, audit policies, and a unified view of Terraform-managed resources alongside Pulumi-managed ones in [Resource Search](/docs/insights/discovery/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so other stacks can consume them without extra credentials. This makes Pulumi Cloud a governance and visibility plane you can adopt on its own merits, not only a stepping stone to converting code.
 
 ### Secrets handling
 
@@ -168,7 +168,7 @@ Yes. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a supported language: a proj
 
 ## Next steps
 
-* [Get started with Pulumi](/docs/iac/get-started/)
+* [Get started with Pulumi](/docs/get-started/)
 * [Pulumi HCL: run Terraform HCL on Pulumi](/docs/iac/languages-sdks/hcl/)
 * [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
 * [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/)

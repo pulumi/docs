@@ -142,7 +142,7 @@ $ az keyvault secret list --vault-name <YourVaultName>
 
 {{< notes type="info" >}}
 
-Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/iac/concepts/secrets/).
 
 {{< /notes >}}
 
@@ -195,4 +195,4 @@ These considerations highlight the importance of understanding Azure Key Vault's
 
 The hard part of Azure Key Vault is not storing a secret, it's everything that surrounds it: who can reach the vault, how access is authenticated and authorized, how secrets get rotated, and how vaults are segmented across applications and environments. Treat the vault as one piece of your infrastructure rather than a manual side task, and define it, its access policies, and the secrets it holds the same way you define the rest of your cloud resources. When the vault is described as code, its security boundaries become reviewable and repeatable instead of something a person has to remember to configure correctly.
 
-You can manage [Azure Key Vault secrets](/registry/packages/azure-native/api-docs/keyvault/secret/) as code with Pulumi, and centralize secrets across environments with [Pulumi ESC](/docs/pulumi-cloud/esc/). The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.
+You can manage [Azure Key Vault secrets](/registry/packages/azure-native/api-docs/keyvault/secret/) as code with Pulumi, and centralize secrets across environments with [Pulumi ESC](/docs/esc/). The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

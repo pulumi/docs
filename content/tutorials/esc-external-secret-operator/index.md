@@ -86,7 +86,7 @@ EOF
 
 Please replace `${PULUMI_ORG_NAME}`, `${ESC_PROJECT_NAME}`, `${ESC_ENV_NAME}` with your Pulumi organization, project, and environment names.
 
-For demo purposes, we assume that we already have an [ESC environment](/docs/esc/get-started/create-environment/) `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using the External Secrets Operator.
+For demo purposes, we assume that we already have an [ESC environment](/docs/esc/get-started/) `my-org/my-project/my-env` with a secret `my-secret` that we want to manage using the External Secrets Operator.
 
 ```yaml
 values:

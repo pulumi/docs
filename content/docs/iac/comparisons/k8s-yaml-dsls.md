@@ -142,7 +142,7 @@ Yes — and this is a common adoption pattern. Pulumi can deploy existing manife
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Get started with Pulumi on Kubernetes](/docs/iac/get-started/kubernetes/)
 - [Pulumi Kubernetes provider](/registry/packages/kubernetes/)
 - [Migrating from Kubernetes YAML or Helm Charts to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/)

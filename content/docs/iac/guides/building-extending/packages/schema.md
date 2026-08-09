@@ -23,7 +23,7 @@ Pulumi Packages are described by a package schema, which is used to drive code g
 
 ## Example
 
-An example of the Pulumi Package Schema is below.  This schema describes a package named `apigateway`, with a single resource `RestAPI` which is a [component](/docs/concepts/resources#components), and which has a required input property `routes` and required (always populated) output properties `url` of type `string` and `api` which references the external type of the AWS API Gateway [`RestAPI`](/docs/reference/pkg/aws/apigateway/restapi/) resource.  The type of the `routes` input is a custom type named `EventHandlerRoute` defined in the schema, which is an object type with `path`,`method` and `function` properties. The schema supports generation of SDKs for `csharp`, `go`, `nodejs` and `python`, with metadata configuring each of the generated SDKs in the corresponding sections.
+An example of the Pulumi Package Schema is below.  This schema describes a package named `apigateway`, with a single resource `RestAPI` which is a [component](/docs/iac/concepts/resources/#components), and which has a required input property `routes` and required (always populated) output properties `url` of type `string` and `api` which references the external type of the AWS API Gateway [`RestAPI`](/registry/packages/aws/api-docs/apigateway/restapi/) resource.  The type of the `routes` input is a custom type named `EventHandlerRoute` defined in the schema, which is an object type with `path`,`method` and `function` properties. The schema supports generation of SDKs for `csharp`, `go`, `nodejs` and `python`, with metadata configuring each of the generated SDKs in the corresponding sections.
 
 ```json
 {

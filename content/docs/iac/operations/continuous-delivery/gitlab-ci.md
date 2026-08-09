@@ -34,7 +34,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A GitLab project.
-1. A Pulumi program committed to that project. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program committed to that project. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Authenticate with Pulumi Cloud
 
@@ -411,7 +411,7 @@ Keying the cache on your dependency manifest rebuilds it when dependencies chang
 
 ## Serialize deployments
 
-When commits land faster than a pipeline finishes, deployment jobs can overlap. Running two `pulumi up` jobs against the same stack at once causes one to fail on an [update conflict](/docs/support/troubleshooting/common-issues/update-conflicts/). Assign deployment jobs a [`resource_group`](https://docs.gitlab.com/ci/resource_groups/) so GitLab runs them one at a time:
+When commits land faster than a pipeline finishes, deployment jobs can overlap. Running two `pulumi up` jobs against the same stack at once causes one to fail on an [update conflict](/docs/iac/operations/troubleshooting/update-conflicts/). Assign deployment jobs a [`resource_group`](https://docs.gitlab.com/ci/resource_groups/) so GitLab runs them one at a time:
 
 ```yaml
 deploy-staging:

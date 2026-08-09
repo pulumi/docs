@@ -21,7 +21,7 @@ For the Managed Pulumi Cloud (i.e. [app.pulumi.com](https://app.pulumi.com/signi
 https://api.pulumi.com
 ```
 
-If you are using [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/), then use the configured endpoint for the [Pulumi API component](/docs/pulumi-cloud/self-hosted/components/api#api-service) (e.g. `https://api.pulumi.example.com`).
+If you are using [Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/), then use the configured endpoint for the [Pulumi API component](/docs/administration/self-hosting/components/api/#api-service) (e.g. `https://api.pulumi.example.com`).
 
 ## Authentication
 

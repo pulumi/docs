@@ -21,7 +21,7 @@ This guide uses the [Pulumi Go Provider SDK](/docs/iac/guides/building-extending
 
 ## When to use a provider
 
-A Pulumi Provider allows you to define new resource types, enabling integration with virtually any service or tool. Pulumi providers are ideal when you need to manage resources that are not yet supported by existing Pulumi providers or when you require custom behavior for managing external systems or APIs. Providers are a powerful extension point, but before building a full provider consider if your use case can be covered by [building a component](/docs/iac/using-pulumi/extending-pulumi/build-a-component/) or authoring a [dynamic provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).
+A Pulumi Provider allows you to define new resource types, enabling integration with virtually any service or tool. Pulumi providers are ideal when you need to manage resources that are not yet supported by existing Pulumi providers or when you require custom behavior for managing external systems or APIs. Providers are a powerful extension point, but before building a full provider consider if your use case can be covered by [building a component](/docs/iac/guides/building-extending/components/build-a-component/) or authoring a [dynamic provider](/docs/iac/guides/building-extending/providers/dynamic-providers/).
 
 ## What’s needed to implement a provider?
 
@@ -55,7 +55,7 @@ Providers should report meaningful error messages. It’s important to handle tr
 
 ### The provider schema
 
-A provider's [package schema](/docs/iac/using-pulumi/extending-pulumi/schema/) defines the resources, their input and output properties, descriptions, and configuration options. This schema enables Pulumi to generate SDKs for multiple languages and ensures consistency across them, as well as providing documentation.
+A provider's [package schema](/docs/iac/guides/building-extending/packages/schema/) defines the resources, their input and output properties, descriptions, and configuration options. This schema enables Pulumi to generate SDKs for multiple languages and ensures consistency across them, as well as providing documentation.
 
 {{% notes type="info" %}}
 
@@ -728,4 +728,4 @@ Historically, Pulumi providers required a `schema.json` file. This is now genera
 
 Using a provider from another directory on your local filesystem is the easiest way to develop a new custom provider. However, once you're ready to share with others at your company, or with the world, you'll need to explore how to publish and package your provider for consumption. There are many ways to accomplish this, from hosting either publicly or privately in GitHub and GitLab, using a private registry within Pulumi Cloud, or publishing to the public Pulumi registry.
 
-See the [Pulumi package authoring guide](/docs/iac/using-pulumi/pulumi-packages/authoring/) for full details.
+See the [Pulumi package authoring guide](/docs/iac/guides/building-extending/packages/publishing-packages/) for full details.

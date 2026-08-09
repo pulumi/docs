@@ -32,7 +32,7 @@ The table below describes all supported metadata fields and their usage:
 | `framework.version` | Yes* | Framework version (e.g., `"3.2.1"`, `"2022"`). |
 | `framework.reference` | Yes* | Specific control or requirement reference within the framework. |
 | `framework.specification` | Yes* | Detailed description of the related compliance requirement. |
-| `configSchema` | No | Schema defining user-configurable parameters for the policy. For more information on configSchema, see [authoring](/docs/insights/policy/authoring/)|
+| `configSchema` | No | Schema defining user-configurable parameters for the policy. For more information on configSchema, see [authoring](/docs/insights/policy/policy-packs/authoring/)|
 | `configSchema.properties` | Yes* | Object describing available configuration options and their types. |
 | `configSchema.required` | No | Array of property names that must be supplied when configuring the policy. |
 
