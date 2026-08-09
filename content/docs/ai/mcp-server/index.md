@@ -187,7 +187,7 @@ These tools query your Pulumi Cloud organization:
 
 These tools launch and manage automated infrastructure tasks via Pulumi Neo:
 
-- **`neo-task-launcher`** - Launch a new Pulumi Neo task. Neo will analyze your request, create a plan, and execute it autonomously. Returns a link to track progress in Pulumi Console.
+- **`neo-task-launcher`** - Launch a new Pulumi Neo task. Neo analyzes your request, creates a plan, and executes it autonomously. Returns a link to track progress in the Pulumi Cloud console.
 
 - **`neo-get-tasks`** - List your Neo tasks and their current status.
 
