@@ -29,14 +29,13 @@ Since OpenAI adopted MCP for its Agents SDK and ChatGPT desktop app on March 26,
 
 ## Why does MCP matter for infrastructure as code?
 
-Infrastructure as code was already a natural fit for AI agents because, by definition, it's code: something a language model can read, generate, and reason about the way it reasons about any other program.
- What MCP adds is a standard way for an agent to act on that code safely, calling the same preview, deploy, and inspection operations a human engineer would run, instead of an agent guessing at shell commands or hallucinating an API that does not exist.
+Infrastructure as code was already a natural fit for AI agents because, by definition, it's code: something a language model can read, generate, and reason about the way it reasons about any other program. What MCP adds is a standard way for an agent to act on that code safely, calling the same preview, deploy, and inspection operations a human engineer would run, instead of an agent guessing at shell commands or hallucinating an API that does not exist.
 
-That distinction matters more for infrastructure than for most domains an agent touches. A mistaken edit to a text document can usually be undone in seconds. A mistaken `apply` against a production VPC, database, or IAM policy cannot. MCP does not eliminate that risk, but it gives infrastructure tools a structured surface, typed tool calls with defined inputs and outputs, on which to build guardrails: previews before changes, scoped credentials, and policy checks that run in the same loop as the agent's own reasoning.
+That distinction matters more for infrastructure than for most domains an agent touches. A mistaken edit to a text document can be undone in seconds. A mistaken `apply` against a production VPC, database, or IAM policy cannot. MCP does not eliminate that risk, but it gives infrastructure tools a structured surface, typed tool calls with defined inputs and outputs, on which to build guardrails: previews before changes, scoped credentials, and policy checks that run in the same loop as the agent's own reasoning.
 
 ## Who is building MCP servers for infrastructure?
 
-MCP for infrastructure is a genuinely multi-vendor category, and it's moving fast. No single company owns this space yet, which is exactly why an accurate, current picture of it is useful.
+MCP for infrastructure is a genuinely multi-vendor category, and it's moving fast. No single company owns this space yet, which is exactly why an accurate, current picture matters.
 
 | Vendor | What they shipped | Status as of mid-2026 |
 | --- | --- | --- |
@@ -48,7 +47,7 @@ MCP for infrastructure is a genuinely multi-vendor category, and it's moving fas
 
 A few patterns hold across most of them. Well-designed servers distinguish read operations (list resources, inspect state, run a plan or preview) from write operations (apply, deploy, delete), and the ones built around a plan-and-apply workflow treat the preview-before-apply step as a first-class safety mechanism rather than an afterthought. Where vendors differ is breadth: cloud-provider servers (AWS, Azure) are naturally scoped to their own resources, Kubernetes-focused servers are scoped to cluster operations, and Pulumi's server is the one built specifically around the IaC development loop itself, spanning any of Pulumi's 180+ providers rather than one cloud.
 
-The category is young enough that survey data captures both the appetite and the friction. Zuplo's ["State of MCP" research](https://zuplo.com/blog/mcp-survey) counted over 17,000 publicly listed MCP servers, and a companion survey of technical professionals conducted November-December 2025 found 72% of adopters expect their use of MCP to increase over the next 12 months, while 50% named security and access control as their top challenge. Separately, [Stacklok's "State of Model Context Protocol in Software 2026" report](https://stacklok.com/), published January 2026, found 41% of surveyed software organizations already report limited or broad production use of MCP servers. Adoption and unease are rising together, which is the normal shape of a fast-moving, pre-standardized security posture.
+The category is young enough that survey data captures both the appetite and the friction. Zuplo's "State of MCP" research counted over 17,000 publicly listed MCP servers, and a [companion survey of technical professionals](https://zuplo.com/blog/mcp-survey) conducted November-December 2025 found 72% of adopters expect their use of MCP to increase over the next 12 months, while 50% named security and access control as their top challenge. Separately, [Stacklok's "State of Model Context Protocol in Software 2026" report](https://stacklok.com/wp-content/uploads/2026/01/State-of-MCP-in-Software-2026_FINAL.pdf), published January 2026, found 41% of surveyed software organizations already report limited or broad production use of MCP servers. Adoption and unease are rising together, which is the normal shape of a fast-moving, pre-standardized security posture.
 
 ## How does Pulumi's MCP server work?
 
