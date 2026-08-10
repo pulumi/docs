@@ -44,11 +44,15 @@ const OVERLAY_MARGIN_X = 64;
 const OVERLAY_MARGIN_Y = 160;
 
 // The injected wrapper must not change the media's box: no padding, no border,
-// and shrink-to-fit like the image it wraps. `group` drives the badge's
-// hover/focus reveal (see the template in the partial).
+// and shrink-to-fit like the image it wraps.
 const TRIGGER_CLASS =
-    "group relative block cursor-zoom-in appearance-none border-0 bg-transparent p-0 " +
+    "relative block appearance-none border-0 bg-transparent p-0 " +
     "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-primary";
+
+// Carried only while the wrapper is live, so that an inert one (see disable())
+// neither advertises a click nor reveals the badge: `group` is what drives the
+// badge's hover/focus reveal (see the template in the partial).
+const ACTIVE_CLASSES = ["group", "cursor-zoom-in"];
 
 // Videos need the wrapper to span the column instead: the shortcode renders
 // them `w-full`, and a percentage width resolved against a shrink-to-fit button
@@ -119,13 +123,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let pausedSource: HTMLVideoElement | null = null;
 
     function enable(el: Media): void {
-        if (el.parentElement?.hasAttribute("data-lightbox-trigger")) {
+        const existing = el.parentElement;
+        if (existing?.hasAttribute("data-lightbox-trigger")) {
+            // An inert wrapper left behind by disable(), now eligible again.
+            existing.removeAttribute("data-lightbox-inert");
+            (existing as HTMLButtonElement).disabled = false;
+            existing.classList.add(...ACTIVE_CLASSES);
             return;
         }
         const button = document.createElement("button");
         button.type = "button";
         button.setAttribute("data-lightbox-trigger", "");
         button.className = isVideo(el) ? VIDEO_TRIGGER_CLASS : TRIGGER_CLASS;
+        button.classList.add(...ACTIVE_CLASSES);
         // The alt text or title still names the media; the suffix says what the
         // button does with it.
         const description = describe(el);
@@ -135,9 +145,22 @@ document.addEventListener("DOMContentLoaded", () => {
         button.appendChild(badge.content.cloneNode(true));
     }
 
+    // An image is simply unwrapped. A video isn't: moving a media element in
+    // the DOM re-runs resource selection in some engines, and a post-body clip
+    // is an autoplaying loop, so unwrapping one mid-resize can restart it from
+    // frame 0. Its wrapper stays where it is and goes inert instead — disabled
+    // (out of the tab order, and no longer announced as a control) and stripped
+    // of the classes that make it look clickable.
     function disable(el: Media): void {
         const button = el.parentElement;
-        if (button?.hasAttribute("data-lightbox-trigger")) {
+        if (!button?.hasAttribute("data-lightbox-trigger")) {
+            return;
+        }
+        if (isVideo(el)) {
+            button.setAttribute("data-lightbox-inert", "");
+            (button as HTMLButtonElement).disabled = true;
+            button.classList.remove(...ACTIVE_CLASSES);
+        } else {
             button.replaceWith(el);
         }
     }
@@ -199,8 +222,11 @@ document.addEventListener("DOMContentLoaded", () => {
         dialog.showModal();
     }
 
+    // The :not() covers the inert wrappers disable() leaves around videos,
+    // rather than trusting engines to agree on whether a click inside a
+    // disabled button is dispatched at all.
     postBody.addEventListener("click", (e: MouseEvent) => {
-        const button = (e.target as HTMLElement).closest("[data-lightbox-trigger]");
+        const button = (e.target as HTMLElement).closest("[data-lightbox-trigger]:not([data-lightbox-inert])");
         const el = button?.querySelector<Media>("img, video");
         if (el) {
             open(el);
