@@ -44,7 +44,7 @@ values:
   currentUser: ${context.pulumi.user.login}
 ```
 
-For the current, complete list of `context` properties, see [Built-in properties](/docs/esc/concepts/interpolations-and-references/#context).
+For the current, complete list of `context` properties, see [Built-in properties](/docs/esc/concepts/builtin-properties/#context).
 
 ## A Seamless Authoring Experience Awaits
 

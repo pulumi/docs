@@ -6,7 +6,7 @@ h1: ESC Webhooks
 menu:
   esc:
     parent: esc-concepts
-    weight: 10
+    weight: 11
 aliases:
 - /docs/esc/webhooks/
 - /docs/esc/environments/webhooks/

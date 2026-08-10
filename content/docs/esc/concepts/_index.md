@@ -29,6 +29,7 @@ ESC is built around a small set of concepts, each covered in depth on its own pa
 
 - [**Environments**](/docs/esc/concepts/environments/) — the fundamental unit of organization: YAML documents that hold configuration values and secrets, import other environments, and reference providers. You open an environment to produce its evaluated values.
 - [**Providers**](/docs/esc/concepts/providers/) and [**rotators**](/docs/esc/concepts/rotators/) — the first-party plugins that issue short-lived logins, import secrets from external systems like AWS Secrets Manager and HashiCorp Vault, and rotate credentials on a schedule.
+- [**Built-in properties**](/docs/esc/concepts/builtin-properties/) — the values every environment can reference without defining them: who is opening the environment (`context`), other environments in the organization (`environments`), and imported environments (`imports`).
 - [**SDKs**](/docs/esc/concepts/sdks/) — language libraries for reading and managing environments from your own code, including reading resolved values from workloads at runtime.
 
 ## How Pulumi ESC works
@@ -84,6 +85,7 @@ Because dynamic values are resolved at open time, the temporary AWS credentials 
 
 - [Environments](/docs/esc/concepts/environments/) — define, compose, version, and consume environments.
 - [Providers](/docs/esc/concepts/providers/) and [rotators](/docs/esc/concepts/rotators/) — the plugins that produce and rotate values.
+- [Built-in properties](/docs/esc/concepts/builtin-properties/) — the `context`, `environments`, and `imports` values available to every reference.
 - [SDKs](/docs/esc/concepts/sdks/) — work with environments from your own code.
 - [Integrations](/docs/esc/integrations/) — tools with a dedicated ESC integration component.
 - [Access control](/docs/administration/access-identity/rbac/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/administration/customer-managed-keys/) — administer and secure your environments.

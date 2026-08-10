@@ -1,0 +1,40 @@
+{{/*
+  Recursively searches an ESC schema for `subjectAttributes` declarations and
+  returns each one's allow-list, as a slice of dicts with a single "enum" key.
+
+  It searches rather than indexing a fixed path because the property sits at a
+  different depth in every login provider: under `oidc` for aws-login,
+  doppler-login, gcp-login, and infisical-login; at the top level for
+  azure-login; and under `jwt` for vault-login.
+
+  Rows are dicts rather than bare slices because Hugo's `append` flattens a
+  slice argument, which would merge separate allow-lists into one.
+
+  Input: dict with "node" — any node of a schema document.
+*/}}
+{{ $node := .node }}
+{{ $found := slice }}
+
+{{ if reflect.IsMap $node }}
+  {{ range $key, $value := $node }}
+    {{ $enum := "" }}
+    {{ if and (eq $key "subjectAttributes") (reflect.IsMap $value) }}
+      {{ with $value.items }}{{ $enum = .enum }}{{ end }}
+    {{ end }}
+    {{ if $enum }}
+      {{ $found = $found | append (dict "enum" $enum) }}
+    {{ else }}
+      {{ range partial "esc/find-subject-attributes.html" (dict "node" $value) }}
+        {{ $found = $found | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else if reflect.IsSlice $node }}
+  {{ range $node }}
+    {{ range partial "esc/find-subject-attributes.html" (dict "node" .) }}
+      {{ $found = $found | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return $found }}
