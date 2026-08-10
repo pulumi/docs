@@ -94,7 +94,7 @@ For background on plugins and the [`pulumi plugin`](/docs/iac/cli/commands/pulum
 
 ## Supported languages
 
-Like the rest of Pulumi, Automation API is available in multiple languages, so you can build applications that use it in TypeScript/JavaScript, Python, Go, C#, and Java. Automation API also supports cross-language use, where it runs in a program written in a different language than the Pulumi programs it manages.
+Like the rest of Pulumi, Automation API is available in multiple languages, so you can build applications that use it in TypeScript/JavaScript, Python, Go, .NET, and Java. Automation API also supports cross-language use, where it runs in a program written in a different language than the Pulumi programs it manages.
 
 Each language has its own Automation API reference documentation. Follow the link in the **API reference** column below to view the reference for your language.
 
