@@ -1,5 +1,5 @@
 ---
-title: All your IaC, including Terraform and HCL
+title: Full support for Terraform state, cross-language modules, and HCL
 date: 2026-08-04
 meta_desc: Manage your Terraform state, publish and share Terraform modules across languages, and write programs in HCL as a first-class Pulumi language.
 label: August 2026 release
@@ -14,7 +14,7 @@ meta_image: /images/releases/august-2026/meta.png
 
 hero:
   breadcrumb_label: August 2026
-  heading: All your IaC, including<br>Terraform and HCL
+  heading: Full support for Terraform state, modules, and HCL
   description: |
     Manage your Terraform state with Pulumi Cloud, publish and consume Terraform modules across multiple languages, and author your IaC in HCL as a first-class Pulumi language.
   hero_image: /images/releases/august-2026/release-hero-bottom-dark.svg
@@ -77,7 +77,7 @@ sections:
         link: /docs/ai/neo/code-reviews/
 
   - anchor: terraform-modules
-    label: Private registry for sharing modules across languages
+    label: Terraform modules consumable across languages
     heading: Terraform modules for everyone
     description: |
       Host your team's Terraform modules in the Pulumi Cloud private registry and make them available to any Terraform or Pulumi project, even across language boundaries.
@@ -133,6 +133,14 @@ sections:
         description: |
           With Pulumi, teams that prefer HCL can produce typed, multi-language components ready to use in any Pulumi language.
         link: /docs/iac/languages-sdks/hcl/hcl-component-reference/
+
+# Full event cards in a panel above the blog list. Listed while they're still
+# ahead of us, then for as long as there's a recording to watch; an event that has
+# run with nothing to watch drops off on its own.
+related_events:
+  anchor: related-events
+  events:
+    - /events/pulumi-for-all-your-iac-terraform-hcl
 
 blog_section:
   anchor: from-the-blog
