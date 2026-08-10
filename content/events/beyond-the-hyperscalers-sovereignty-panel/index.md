@@ -57,14 +57,14 @@ learn:
 # The event presenters
 presenters:
     - name: Waldemar Kindler
-      role: CEO & Co-Founder, Think Ahead Technologies
+      role: CEO & Co-Founder
       photo: /events/beyond-the-hyperscalers-sovereignty-panel/waldemar-kindler.png
       company: Think Ahead Technologies
       company_url: https://think-ahead.tech/en
       social:
           linkedin: waldemar-kindler
     - name: Jim Dowling
-      role: Co-Founder & CEO, Hopsworks
+      role: Co-Founder & CEO
       photo: /events/beyond-the-hyperscalers-sovereignty-panel/jim-dowling.png
       company: Hopsworks
       company_url: https://www.hopsworks.ai
@@ -72,7 +72,7 @@ presenters:
           linkedin: jim-dowling-206a98
           x: jim_dowling
     - name: Sarbjeet Johal
-      role: Cloud Economist; Founder & CEO, StackPane
+      role: Cloud Economist; Founder & CEO
       photo: /events/beyond-the-hyperscalers-sovereignty-panel/sarbjeet-johal.png
       company: StackPane
       company_url: https://stackpane.com
