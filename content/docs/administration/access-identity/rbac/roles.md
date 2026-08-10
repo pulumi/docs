@@ -152,6 +152,10 @@ Tag-based rules (also called ABAC — attribute-based access control) grant a pe
 
 **How it works:** When evaluating access, Pulumi Cloud checks the user's roles (and the roles of the teams they belong to). For each tag rule in those roles, it evaluates the resource's tags against the rule's conditions. If they match, the rule's permission set is applied to that resource.
 
+{{% notes type="warning" %}}
+Tag-based rules only **grant** access. Like every other rule, they cannot revoke access that a principal already holds through another grant, so a tag rule is not a way to confine a principal to the resources that match it. In particular, a machine token that creates a stack holds a [creator grant](/docs/administration/access-identity/rbac/#creator-grants) of Stack Admin on that stack, and can keep operating on it even though the stack's tags do not match any rule in the token's role.
+{{% /notes %}}
+
 To configure a tag-based rule, choose the entity type and select **Set conditions**, then enter one or more tag key/value conditions and choose a permission set.
 
 In the Pulumi Cloud UI and API, these rules may be labeled "tag rules" or "tag-based access control rules"; ABAC (attribute-based access control) is the general industry term.
@@ -187,6 +191,7 @@ When working with roles in Pulumi Cloud, consider these best practices:
 1. **Principle of least privilege**: Assign only the scopes necessary for users to perform their tasks.
 1. **Role reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
 1. **Tag-based rules**: Use tag-based rules to grant access to many resources by tag (e.g. `team=platform`) without listing each resource.
+1. **Stack ownership in automation**: When automation creates stacks with a machine token, have the run transfer stack ownership to a break-glass user or team, or remove the automatic [creator grant](/docs/administration/access-identity/rbac/#creator-grants), so a long-lived token does not accumulate Stack Admin on every stack it has created.
 1. **Regular review**: Periodically schedule reviews of role assignments and scopes.
 1. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
