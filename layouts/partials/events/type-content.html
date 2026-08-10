@@ -90,7 +90,6 @@
     </div>
 
     {{ with partial "events/presenters.html" . }}
-        <hr class="m-0 h-px border-0 bg-gray-200" />
         {{ partial "events/speakers-template.html" (dict "presenters" .) }}
     {{ end }}
 
@@ -157,7 +156,6 @@
     </div>
 
     {{ if $anyPresenters }}
-        <hr class="m-0 h-px border-0 bg-gray-200" />
         {{ range $sessions }}
             {{ if $multi }}<div data-session-panel="{{ .key }}"{{ if ne .key $activeKey }} hidden{{ end }}>{{ end }}
             {{ with .presenters }}
