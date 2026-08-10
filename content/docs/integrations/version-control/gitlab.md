@@ -59,9 +59,8 @@ After creating an integration, you can configure merge request behavior. Toggle 
 
 | Setting | Default | Description |
 |---|---|---|
-| Pull request comments | Enabled | Post deployment status and resource changes as comments on GitLab merge requests |
-| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in merge request comments (requires [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
-| Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in merge request comments |
+| Merge request comments | Enabled | Post deployment status and resource changes as comments on GitLab merge requests |
+| Detailed diff for merge request comments | Enabled | Show property-level before/after diffs for changed resources in merge request comments |
 
 To delete an integration, select **Delete Integration** on the integration card. This removes the webhook from your GitLab group and disconnects all stacks using that integration.
 
@@ -69,15 +68,17 @@ To delete an integration, select **Delete Integration** on the integration card.
 
 ### Merge request comments
 
-Pulumi automatically posts comments on merge requests with the results of any stack changes. This includes a summary of how many resources were created, updated, or deleted, with a link to the full details in [Pulumi Cloud](https://app.pulumi.com/signin). When enabled, comments also include a collapsible detailed diff and an AI-generated explanation from Neo.
+Pulumi automatically posts comments on merge requests with the results of any stack changes. This includes a summary of how many resources were created, updated, or deleted, with a link to the full details in [Pulumi Cloud](https://app.pulumi.com/signin). When enabled, comments also include a collapsible detailed diff.
 
 Comments are idempotent: updates to the same stack edit the existing comment rather than creating a new one. Draft and WIP merge requests are treated identically to regular merge requests.
 
 For [review stacks](#review-stacks), comments show the review stack status and outputs instead of a standard preview summary.
 
+These comments come from Pulumi Deployments. [Neo code reviews](/docs/ai/neo/code-reviews/), which analyze a pull request and leave inline feedback, are available on GitHub only — Neo does not comment on GitLab merge requests.
+
 ### Commit status checks
 
-Pulumi posts commit status checks to GitLab on every deployment, for both push and merge request events. Statuses map to GitLab's `pending`, `running`, `success`, and `failed` states and include a link back to the deployment in Pulumi Cloud.
+Pulumi posts commit status checks to GitLab for merge request deployments. Statuses map to GitLab's `pending`, `running`, `success`, and `failed` states and include a link back to the deployment in Pulumi Cloud. Push-to-deploy runs do not post a commit status.
 
 ### Push-to-deploy
 
