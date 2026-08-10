@@ -350,6 +350,43 @@ cmd_upsert() {
         fi
     fi
 
+    # Evidence-spine floor. This is the only point in the system that holds the
+    # old body and the new one at the same moment: everything above fetches
+    # comment IDs, not bodies, so nothing else can notice that a re-render
+    # dropped the 🔍 Verification trail. Measured on 2026-08-10, the update
+    # lane dropped it in 1 of 6 chained refreshes and published green.
+    #
+    # UNCONDITIONAL, deliberately. The model composes its own `pinned-comment.sh
+    # upsert` command and the Bash allow-list is a prefix match, so a
+    # `--spine-floor` flag could simply be omitted — the same reason the ✏️
+    # marks are workflow-written rather than model-written. The escape hatch is
+    # the env var, which does NOT match the allow-list pattern (that requires
+    # the command to begin `bash .claude/…`), so it is reachable by a human or
+    # a workflow step and not by the model.
+    #
+    # Never fatal: splice-spine.py exits 0 on any internal failure and leaves
+    # the body as rendered. A repair pass must not be the reason a review fails
+    # to publish. Operates on a COPY so a caller's file is never mutated.
+    if [[ "${SPLICE_SPINE:-1}" != "0" ]]; then
+        local script_dir splicer
+        script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+        splicer="$script_dir/splice-spine.py"
+        if [[ -f "$splicer" ]]; then
+            local prior_file spliced_file
+            prior_file=$(mktemp)
+            spliced_file=$(mktemp)
+            fetch_pinned_bodies "$repo" "$pr" >"$prior_file" 2>/dev/null || true
+            cp "$body_file" "$spliced_file"
+            python3 "$splicer" \
+                --prior "$prior_file" \
+                --body "$spliced_file" \
+                --in-place \
+                --report "${SPLICE_SPINE_REPORT:-/tmp/splice-spine.json}" || true
+            body_file="$spliced_file"
+            rm -f "$prior_file"
+        fi
+    fi
+
     # Reserve the footer's bytes out of the per-page budget up front: it is
     # appended to every page after the split, and a page sized to exactly
     # MAX_BYTES plus a footer would sail past GitHub's 65536 hard cap.
