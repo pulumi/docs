@@ -472,8 +472,13 @@ jobs:
           # investigation log). opus-5 at medium effort was the only arm intact in
           # every cell (6/6); sonnet-5 with effort unset — what ran here before —
           # and opus-5 unset each lost the spine in 1 of 6. It also gets there in
-          # 0.43x the output tokens and 0.64x the turns, which is ~1.25x the cost
-          # today and ~0.83x once Sonnet 5's introductory rate lapses 2026-08-31.
+          # 0.43x the output tokens and 0.64x the turns — but Opus is 2.5x Sonnet
+          # per token, so it costs ~1.25x, about $0.27 more per refresh at the
+          # rate this lane fires. That premium is permanent: Sonnet 5's $2/$10
+          # introductory rate was made its standing price on 2026-08-10, so the
+          # crossover the first cut of this comment predicted never happens.
+          # It buys removing a failure that is unrecoverable (the pinned comment
+          # is the only copy of the trail) and unvalidated on this lane.
           #
           # `--effort low` stays OFF this lane. It rewrites the pinned review
           # without the trail's contents — keeping the heading and replacing 40
