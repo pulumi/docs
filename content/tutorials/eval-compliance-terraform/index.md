@@ -121,7 +121,7 @@ Then run the `terraform apply` command to have the following resources deployed 
 
 ## Scan Terraform resources
 
-Now that you have deployed your resources, you will run a Discovery scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Console](https://app.pulumi.com/signin) and click on your cloud account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
+Now that you have deployed your resources, you will run a Discovery scan to retrieve a list of the resources in your account. To do so, navigate to the **Accounts** page in the [Pulumi Cloud console](https://app.pulumi.com/signin) and select your cloud account. For the purposes of this tutorial, we have created an account named `pulumi-tutorials-insights`.
 
 {{< video title="Navigating to the cloud accounts page" src="/tutorials/eval-compliance-terraform/assets/insights-nav-to-accounts.mp4" autoplay="true" loop="true" >}}
 
@@ -129,7 +129,7 @@ Once there, click on the **Actions** dropdown and select the `Scan` radio button
 
 {{< video title="Initializing account scan" src="/tutorials/eval-compliance-terraform/assets/insights-start-account-scan.mp4" autoplay="true" loop="true" >}}
 
-To check on the status of the scan, you will need to navigate to the individual sub-accounts of your cloud account and click the **Scans** tab.
+To check on the status of the scan, you will need to navigate to the individual sub-accounts of your cloud account and select the **Scans** tab.
 
 {{< video title="View sub-account scans" src="/tutorials/eval-compliance-terraform/assets/insights-view-sub-acct-scan.mp4" autoplay="true" loop="true" >}}
 
@@ -212,7 +212,7 @@ Select your newly published policy pack from the dropdown and choose the version
 
 !["Configuring the policy pack"](/tutorials/eval-compliance-terraform/assets/insights-configure-policy-pack.png)
 
-The last thing you need to do in this section is add your cloud account to the policy group. On your Policy Group configuration page, click **Add accounts**, and type the name of the account you want to include for policy evaluation (e.g. pulumi-tutorials-insights/us-west-2). Then click **Add account to policy group**.
+The last thing you need to do in this section is add your cloud account to the policy group. On your Policy Group configuration page, select **Add accounts**, and type the name of the account you want to include for policy evaluation (e.g. pulumi-tutorials-insights/us-west-2). Then select **Add account to policy group**.
 
 !["Adding an account to the policy group"](/tutorials/eval-compliance-terraform/assets/insights-add-policy-group-acct.png)
 
