@@ -55,7 +55,7 @@
                         <span data-event-countdown data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" hidden></span>
                     {{ end }}
                 </div>
-                <h3 class="m-0 max-w-prose heading-3 leading-snug text-service-black transition-colors group-hover:text-violet-primary">
+                <h3 class="m-0 heading-3 leading-snug text-service-black transition-colors group-hover:text-violet-primary">
                     {{ $title }}
                     {{ if $target }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}
                 </h3>
@@ -68,7 +68,7 @@
             {{ end }}
         </div>
 
-        {{ with $data.Params.meta_desc }}<p class="mt-1.5 mb-0 max-w-prose body-base line-clamp-3 text-service-black">{{ . }}</p>{{ end }}
+        {{ with $data.Params.meta_desc }}<p class="mt-1.5 mb-0 body-base line-clamp-3 text-service-black">{{ . }}</p>{{ end }}
 
         <div class="mt-auto flex flex-col gap-4 pt-6">
             {{ with $data.Params.presenters }}
