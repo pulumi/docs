@@ -36,7 +36,7 @@ You don't need to install or configure anything. The catalog updates with each N
 
 ## Available Skills
 
-Skills are organized into three plugin groups: Migration, Pulumi, and Delegation.
+Skills are organized into four plugin groups: Migration, Pulumi, Package Maintenance, and Delegation.
 
 ### Migration Plugin
 
@@ -48,6 +48,7 @@ Convert and import infrastructure from other tools to Pulumi:
 | pulumi-cdk-to-pulumi | Migrate AWS CDK applications to Pulumi |
 | cloudformation-to-pulumi | Migrate AWS CloudFormation stacks/templates to Pulumi |
 | pulumi-arm-to-pulumi | Migrate Azure ARM templates and Bicep to Pulumi |
+| pulumi-migrate-from-discovered-stack | Migrate a CloudFormation or ARM stack that Pulumi Cloud's Discovery feature has already found, using the discovered-stacks API |
 
 ### Pulumi Plugin
 
@@ -60,8 +61,16 @@ Entry-point and specialized skills for writing and operating Pulumi infrastructu
 | pulumi-component | Guide for authoring ComponentResource classes |
 | pulumi-automation-api | Best practices for using Pulumi Automation API |
 | pulumi-esc | Guidance for working with Pulumi ESC (Environments, Secrets, and Configuration) |
+| pulumi-debug-failed-operation | Debug a failed `pulumi up` or `pulumi preview` from the failure Pulumi already recorded |
 | package-usage | Audit which stacks across an organization use a package and at what versions |
 | provider-upgrade | Safely upgrade a Pulumi provider and reconcile the resulting diff |
+
+### Package Maintenance Plugin
+
+Maintain Pulumi provider repositories, for provider authors and bridge maintainers:
+
+| Skill | Description |
+|-------|-------------|
 | pulumi-upgrade-provider | Automate Pulumi provider repo upgrades with the `upgrade-provider` tool |
 | upstream-patches | Manage upstream Terraform patch stacks in provider repos |
 
@@ -73,6 +82,8 @@ Hand off in-progress work from coding agents to Pulumi Neo:
 |-------|-------------|
 | pulumi-neo-handoff | Transfer the current work to a Pulumi Neo task with goal, repository pointers, and a compacted conversation summary |
 
+The `pulumi` plugin bundles the Pulumi, Migration, and Delegation skill groups together in a single install. If you only need a subset, install `pulumi-migration` or `pulumi-delegation` on their own rather than alongside `pulumi`, which already includes both and would otherwise install the same skills twice. `pulumi-package-maintenance` targets provider authors specifically and combines fine with any of the others.
+
 ## Installation
 
 ### Claude Code Plugin System
@@ -80,10 +91,16 @@ Hand off in-progress work from coding agents to Pulumi Neo:
 For Claude Code users, the plugin system provides the simplest installation experience:
 
 ```bash
-claude plugin marketplace add pulumi/agent-skills
-claude plugin install pulumi-migration      # Install migration skills
-claude plugin install pulumi                # Install Pulumi skills (overview + specialized)
-claude plugin install pulumi-delegation     # Install delegation skills (Neo handoff)
+/plugin marketplace add pulumi/agent-skills
+/plugin install pulumi                        # All end-user skills: authoring, migration, and Neo handoff
+```
+
+Prefer a subset? Install `pulumi-migration` or `pulumi-delegation` instead of `pulumi`, not alongside it, since `pulumi` already includes both:
+
+```bash
+/plugin install pulumi-migration              # Migration skills only
+/plugin install pulumi-delegation             # Neo handoff skill only
+/plugin install pulumi-package-maintenance    # Provider-repo maintenance skills, for provider authors
 ```
 
 ### OpenAI Codex
@@ -94,7 +111,7 @@ Register the marketplace, then install plugins from the Codex TUI:
 codex plugin marketplace add pulumi/agent-skills
 ```
 
-Once the marketplace is registered, run `codex`, open the plugin marketplace, and pick `pulumi-migration`, `pulumi`, or `pulumi-delegation`.
+Once the marketplace is registered, run `codex`, open the plugin marketplace, and pick `pulumi-migration`, `pulumi`, `pulumi-delegation`, or `pulumi-package-maintenance`. As with Claude Code, `pulumi` already includes the migration and delegation skills, so don't combine it with `pulumi-migration` or `pulumi-delegation`.
 
 ### Universal Installation
 
@@ -107,9 +124,10 @@ npx skills add pulumi/agent-skills --skill '*'
 Or install individual plugin groups:
 
 ```bash
-npx skills add pulumi/agent-skills/migration --skill '*'      # 4 migration skills
-npx skills add pulumi/agent-skills/pulumi --skill '*'         # 9 pulumi skills (overview + specialized)
-npx skills add pulumi/agent-skills/delegation --skill '*'     # 1 delegation skill
+npx skills add pulumi/agent-skills/migration --skill '*'             # 5 migration skills
+npx skills add pulumi/agent-skills/pulumi --skill '*'                # 8 pulumi skills (overview + specialized)
+npx skills add pulumi/agent-skills/delegation --skill '*'            # 1 delegation skill
+npx skills add pulumi/agent-skills/package-maintenance --skill '*'   # 2 package-maintenance skills
 ```
 
 This works with Claude Code, Cursor, Copilot, Codex, Junie, and other agent tools. To install for a specific agent, use the `--agent` flag:
