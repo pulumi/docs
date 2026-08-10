@@ -148,6 +148,27 @@ def fetch_pr_meta(repo: str, pr: int) -> dict | None:
         return None
 
 
+def _decode_gh_json_line(line: str) -> dict | None:
+    """Decode one line of `gh api --jq '... | @json'` output.
+
+    `gh` emits one SINGLE-encoded JSON object per line. Earlier code here
+    assumed `@json` double-encoded and decoded twice, which raised on every
+    real line. The double-encoded form is still accepted so a fixture or a
+    future `gh` that wraps the value keeps working; anything else returns None
+    for the caller to count.
+    """
+    try:
+        obj = json.loads(line)
+    except json.JSONDecodeError:
+        return None
+    if isinstance(obj, str):          # double-encoded: a JSON string of JSON
+        try:
+            obj = json.loads(obj)
+        except json.JSONDecodeError:
+            return None
+    return obj if isinstance(obj, dict) else None
+
+
 def fetch_pinned_bodies(repo: str, pr: int) -> list[str]:
     """Return the bodies of every CLAUDE_REVIEW N/M comment, ordered by N.
 
@@ -160,21 +181,29 @@ def fetch_pinned_bodies(repo: str, pr: int) -> list[str]:
             "--jq", '.[] | {id: .id, body: .body} | @json',
         ]
     )
-    tagged = []
-    for line in out.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            # --jq '@json' double-encodes: each output line is a JSON string
-            # containing a JSON object.
-            obj = json.loads(json.loads(line))
-        except (json.JSONDecodeError, TypeError):
+    tagged, undecodable = [], 0
+    lines = [ln for ln in (l.strip() for l in out.splitlines()) if ln]
+    for line in lines:
+        obj = _decode_gh_json_line(line)
+        if obj is None:
+            undecodable += 1
             continue
         body = obj.get("body") or ""
         m = MARKER_RE.match(body.split("\n", 1)[0])
         if m:
             tagged.append((int(m.group(1)), body))
+    # A PR with no pinned review legitimately yields zero tagged comments. A
+    # payload where NOTHING decoded is a different thing entirely -- the wire
+    # format moved -- and must not be reported as "this PR has no review data".
+    # That conflation is exactly how this went unnoticed: the decoder assumed
+    # the wrong encoding, every line raised, the bare except swallowed it, and
+    # 100% scrape failure rendered as a tidy row of zeros.
+    if lines and undecodable == len(lines):
+        raise RuntimeError(
+            f"could not decode any of {len(lines)} comment records for {repo}#{pr}; "
+            f"`gh api --jq '... | @json'` output is not in a recognized form. "
+            f"First line: {lines[0][:120]!r}"
+        )
     tagged.sort(key=lambda t: t[0])
     return [body for _, body in tagged]
 

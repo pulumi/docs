@@ -187,24 +187,57 @@ def test_legacy_unparseable_degrades():
     assert rec["parse_confidence"] == "low"
 
 
-def test_fetch_pinned_bodies_filters_and_orders():
-    def fake_run_gh(args):
-        rows = [
-            {"id": 3, "body": "<!-- CLAUDE_REVIEW 2/2 -->\nsecond"},
-            {"id": 1, "body": "just a human comment"},
-            {"id": 2, "body": "<!-- CLAUDE_REVIEW 1/2 -->\nfirst"},
-            {"id": 4, "body": "<!-- CLAUDE_PROGRESS -->\nprogress note"},
-        ]
-        return "\n".join(json.dumps(json.dumps(r)) for r in rows) + "\n"
+ROWS = [
+    {"id": 3, "body": "<!-- CLAUDE_REVIEW 2/2 -->\nsecond"},
+    {"id": 1, "body": "just a human comment"},
+    {"id": 2, "body": "<!-- CLAUDE_REVIEW 1/2 -->\nfirst"},
+    {"id": 4, "body": "<!-- CLAUDE_PROGRESS -->\nprogress note"},
+]
 
+
+def _with_fake_gh(payload):
     original = sro.run_gh
-    sro.run_gh = fake_run_gh
+    sro.run_gh = lambda args: payload
     try:
-        bodies = sro.fetch_pinned_bodies("pulumi/docs", 1)
+        return sro.fetch_pinned_bodies("pulumi/docs", 1)
     finally:
         sro.run_gh = original
+
+
+def test_fetch_pinned_bodies_filters_and_orders():
+    # gh emits ONE SINGLE-ENCODED object per line. The previous fixture
+    # double-encoded (json.dumps(json.dumps(row))), which matched the decoder's
+    # wrong assumption instead of gh's real output -- so the test passed while
+    # every production scrape silently returned nothing.
+    payload = "\n".join(json.dumps(r) for r in ROWS) + "\n"
+    bodies = _with_fake_gh(payload)
     assert len(bodies) == 2
     assert bodies[0].endswith("first") and bodies[1].endswith("second")
+
+
+def test_fetch_pinned_bodies_accepts_double_encoded():
+    """The legacy shape still decodes, so a wrapping gh/jq wouldn't regress."""
+    payload = "\n".join(json.dumps(json.dumps(r)) for r in ROWS) + "\n"
+    bodies = _with_fake_gh(payload)
+    assert len(bodies) == 2
+
+
+def test_fetch_pinned_bodies_raises_when_nothing_decodes():
+    """Total decode failure must be loud, not an empty list.
+
+    Returning [] here is what let a wire-format mismatch masquerade as
+    "this PR has no pinned review" for every PR at once.
+    """
+    try:
+        _with_fake_gh("not json at all\nalso not json\n")
+    except RuntimeError as exc:
+        assert "could not decode any" in str(exc)
+    else:
+        raise AssertionError("expected RuntimeError on undecodable payload")
+
+
+def test_fetch_pinned_bodies_empty_output_is_not_an_error():
+    assert _with_fake_gh("") == []
 
 
 def test_scrape_pr_no_review_data():
