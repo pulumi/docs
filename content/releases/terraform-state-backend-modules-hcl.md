@@ -141,7 +141,6 @@ related_events:
   anchor: related-events
   events:
     - /events/pulumi-for-all-your-iac-terraform-hcl
-    - /events/pulumi-for-all-your-iac-terraform-hcl-eu
 
 blog_section:
   anchor: from-the-blog
