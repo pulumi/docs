@@ -41,7 +41,7 @@ location: virtual
 description: |
     Infrastructure work lives between browser tabs: PagerDuty in one, Datadog in another, the AWS console in a third, your Pulumi state somewhere else entirely. Pulumi Neo already understands your infrastructure — your code, your stacks, your state. Its newest integrations extend that reach in two directions: into the third-party systems your team uses to plan and observe, and out to the cloud CLIs that actually drive your infrastructure.
 
-    In this live workshop, Adam works a realistic incident end to end inside a single Neo conversation: an alert fires, Neo pulls the incident from PagerDuty, checks the metrics history, queries live cloud state through a scoped CLI integration, and opens a reviewed pull request with the fix. Along the way you'll see how MCP integrations (Atlassian, Datadog, Honeycomb, Linear, PagerDuty, Supabase) and CLI integrations (aws, gcloud, az, kubectl) are configured, scoped, and controlled per task.
+    In this live workshop, we'll work a realistic incident end to end inside a single Neo conversation: an alert fires, Neo pulls in the incident details, checks the recent metric history, queries live cloud state through a scoped CLI integration, and opens a reviewed pull request with the fix. Along the way you'll see how MCP integrations (Atlassian, Datadog, Honeycomb, Linear, PagerDuty, Supabase) and CLI integrations (aws, gcloud, az, kubectl) are configured, scoped, and controlled per task.
 
     We'll close with the newest additions to the integrations story: CLI integrations inside scheduled Neo Automations, so your recurring checks can reach live cloud state without a human in the loop, and Neo in your editor — Zed, JetBrains, VS Code, or Cursor — where it inherits the CLIs you're already authenticated to.
 learn:
@@ -49,7 +49,7 @@ learn:
     - How CLI integrations give Neo scoped, named access to live cloud state — staging without touching production.
     - How Pulumi ESC backs each CLI integration with credentials your org owns, instead of static API keys.
     - How per-task toggles and org-level settings keep the agent's reach under your control.
-    - What's new since launch: CLI integrations in scheduled Automations, and Neo in your editor via the Agent Client Protocol.
+    - "What's new since launch — CLI integrations in scheduled Automations, and Neo in your editor via the Agent Client Protocol."
 
 # The event presenters
 presenters:
