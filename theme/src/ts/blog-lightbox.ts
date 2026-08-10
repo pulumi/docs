@@ -16,11 +16,13 @@
 //
 // Authors can opt an element (or a block of them) out explicitly by putting
 // data-no-lightbox on it or any ancestor. Anything inside a link is always
-// skipped — it already does something when clicked — which also covers the card
-// embeds ({{< blog/card >}}) that render inside a post body. A video with
-// controls is skipped too: a wrapping button would swallow clicks meant for the
-// control bar, and those controls already carry a fullscreen button, which is
-// the same offer the lightbox makes.
+// skipped — it already does something when clicked. That doesn't reach the card
+// embeds ({{< blog/card >}}) that render inside a post body, whose link is
+// stretched over the card from the title rather than wrapped around its
+// thumbnail; it's the display-width floor below that keeps those out. A video
+// with controls is skipped too: a wrapping button would swallow clicks meant for
+// the control bar, and those controls already carry a fullscreen button, which
+// is the same offer the lightbox makes.
 
 // Narrower than this on screen and it's a badge or an icon, not a figure.
 const MIN_DISPLAY_WIDTH = 240;
@@ -156,6 +158,9 @@ document.addEventListener("DOMContentLoaded", () => {
         overlayVideo.src = video.currentSrc;
         overlayVideo.muted = video.muted;
         overlayVideo.loop = video.loop;
+        // The name the caption shows is aria-hidden, so the title is what names
+        // the player for assistive tech.
+        overlayVideo.title = video.title;
         // Pick up where the inline clip was rather than restarting it, and hold
         // the inline copy still while its bigger twin plays. currentTime is only
         // settable once the new source has metadata.
