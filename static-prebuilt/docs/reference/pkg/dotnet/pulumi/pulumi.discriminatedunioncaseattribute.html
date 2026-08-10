@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class OutputAttribute </title>
+      <title>Class DiscriminatedUnionCaseAttribute </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class OutputAttribute ">
+      <meta name="title" content="Class DiscriminatedUnionCaseAttribute ">
     
-    <meta name="description" content="Attribute used by a mark  output properties. Use this attribute in your Pulumi programs to mark outputs of  and  resources.">
+    <meta name="description" content="Attribute used to declare one member of a discriminated union interface marked with .  is the discriminator property value that selects this member, and  is the concrete  class to instantiate; it must implement the annotated interface.">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -64,20 +64,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Pulumi.OutputAttribute">
+            <article class="content wrap" id="_content" data-uid="Pulumi.DiscriminatedUnionCaseAttribute">
 
 
-  <h1 id="Pulumi_OutputAttribute" data-uid="Pulumi.OutputAttribute" class="text-break">Class OutputAttribute</h1>
-  <div class="markdown level0 summary"><p>Attribute used by a mark <a class="xref" href="pulumi.resource.html">Resource</a> output properties. Use this attribute
-in your Pulumi programs to mark outputs of <a class="xref" href="pulumi.componentresource.html">ComponentResource</a> and
-<a class="xref" href="pulumi.stack.html">Stack</a> resources.</p>
+  <h1 id="Pulumi_DiscriminatedUnionCaseAttribute" data-uid="Pulumi.DiscriminatedUnionCaseAttribute" class="text-break">Class DiscriminatedUnionCaseAttribute</h1>
+  <div class="markdown level0 summary"><p>Attribute used to declare one member of a discriminated union interface marked with
+<a class="xref" href="pulumi.discriminateduniondiscriminatorattribute.html">DiscriminatedUnionDiscriminatorAttribute</a>. <a class="xref" href="pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Tag">Tag</a> is the
+discriminator property value that selects this member, and <a class="xref" href="pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Type">Type</a> is the
+concrete <a class="xref" href="pulumi.outputtypeattribute.html">OutputTypeAttribute</a> class to instantiate; it must implement the
+annotated interface.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
     <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.attribute">Attribute</a></div>
-    <div class="level2"><span class="xref">OutputAttribute</span></div>
+    <div class="level2"><span class="xref">DiscriminatedUnionCaseAttribute</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -207,23 +209,23 @@ in your Pulumi programs to mark outputs of <a class="xref" href="pulumi.componen
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="pulumi.html">Pulumi</a></h6>
   <h6><strong>Assembly</strong>: Pulumi.dll</h6>
-  <h5 id="Pulumi_OutputAttribute_syntax">Syntax</h5>
+  <h5 id="Pulumi_DiscriminatedUnionCaseAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
-public sealed class OutputAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Interface, AllowMultiple = true)]
+public sealed class DiscriminatedUnionCaseAttribute : Attribute</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Serialization/Attributes.cs/#L19">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Serialization/Attributes.cs/#L145">View Source</a>
   </span>
-  <a id="Pulumi_OutputAttribute__ctor_" data-uid="Pulumi.OutputAttribute.#ctor*"></a>
-  <h4 id="Pulumi_OutputAttribute__ctor_System_String_" data-uid="Pulumi.OutputAttribute.#ctor(System.String)">OutputAttribute(string?)</h4>
+  <a id="Pulumi_DiscriminatedUnionCaseAttribute__ctor_" data-uid="Pulumi.DiscriminatedUnionCaseAttribute.#ctor*"></a>
+  <h4 id="Pulumi_DiscriminatedUnionCaseAttribute__ctor_System_String_System_Type_" data-uid="Pulumi.DiscriminatedUnionCaseAttribute.#ctor(System.String,System.Type)">DiscriminatedUnionCaseAttribute(string, Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public OutputAttribute(string? name = null)</code></pre>
+    <pre><code class="lang- hljs">public DiscriminatedUnionCaseAttribute(string tag, Type type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -237,7 +239,12 @@ public sealed class OutputAttribute : Attribute</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">name</span></td>
+        <td><span class="parametername">tag</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -245,15 +252,15 @@ public sealed class OutputAttribute : Attribute</code></pre>
   <h3 id="properties">Properties
 </h3>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Serialization/Attributes.cs/#L17">View Source</a>
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Serialization/Attributes.cs/#L142">View Source</a>
   </span>
-  <a id="Pulumi_OutputAttribute_Name_" data-uid="Pulumi.OutputAttribute.Name*"></a>
-  <h4 id="Pulumi_OutputAttribute_Name" data-uid="Pulumi.OutputAttribute.Name">Name</h4>
+  <a id="Pulumi_DiscriminatedUnionCaseAttribute_Tag_" data-uid="Pulumi.DiscriminatedUnionCaseAttribute.Tag*"></a>
+  <h4 id="Pulumi_DiscriminatedUnionCaseAttribute_Tag" data-uid="Pulumi.DiscriminatedUnionCaseAttribute.Tag">Tag</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang- hljs">public string? Name { get; }</code></pre>
+    <pre><code class="lang- hljs">public string Tag { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -270,6 +277,32 @@ public sealed class OutputAttribute : Attribute</code></pre>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Serialization/Attributes.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_DiscriminatedUnionCaseAttribute_Type_" data-uid="Pulumi.DiscriminatedUnionCaseAttribute.Type*"></a>
+  <h4 id="Pulumi_DiscriminatedUnionCaseAttribute_Type" data-uid="Pulumi.DiscriminatedUnionCaseAttribute.Type">Type</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang- hljs">public Type Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 
 </article>
           </div>
@@ -279,7 +312,7 @@ public sealed class OutputAttribute : Attribute</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Serialization/Attributes.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/pulumi/pulumi-dotnet/blob/master/sdk/Pulumi/Serialization/Attributes.cs/#L139" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

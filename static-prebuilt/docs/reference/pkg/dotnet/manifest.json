@@ -1753,6 +1753,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DiscriminatedUnionCaseAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.discriminatedunioncaseattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DiscriminatedUnionCaseAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DiscriminatedUnionCaseAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used to declare one member of a discriminated union interface marked with\n<xref href=\"Pulumi.DiscriminatedUnionDiscriminatorAttribute\" data-throw-if-not-resolved=\"false\"></xref>. <xref href=\"Pulumi.DiscriminatedUnionCaseAttribute.Tag\" data-throw-if-not-resolved=\"false\"></xref> is the\ndiscriminator property value that selects this member, and <xref href=\"Pulumi.DiscriminatedUnionCaseAttribute.Type\" data-throw-if-not-resolved=\"false\"></xref> is the\nconcrete <xref href=\"Pulumi.OutputTypeAttribute\" data-throw-if-not-resolved=\"false\"></xref> class to instantiate; it must implement the\nannotated interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DiscriminatedUnionDiscriminatorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.discriminateduniondiscriminatorattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DiscriminatedUnionDiscriminatorAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DiscriminatedUnionDiscriminatorAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used to mark an interface that represents a discriminated union of complex\noutput property types. The interface must also carry one\n<xref href=\"Pulumi.DiscriminatedUnionCaseAttribute\" data-throw-if-not-resolved=\"false\"></xref> per union member. When deserializing, the\nPulumi runtime reads the discriminator property named by <xref href=\"Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName\" data-throw-if-not-resolved=\"false\"></xref> from\nthe raw value and instantiates the member whose tag matches.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "metadata/Pulumi/Pulumi.EnumTypeAttribute.yml",
       "output": {
         ".html": {
