@@ -19,6 +19,7 @@ import "./copybutton";
 import "./code-tabbed";
 import "./code-snippets-dropdown";
 import "./resources";
+import "./event-sessions";
 import "./releases";
 import "./packages";
 import "./pricing-trial";

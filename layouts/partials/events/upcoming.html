@@ -18,9 +18,20 @@
         runner's clock and the runner is UTC, so end-of-day lands at 5pm Pacific
         and lets US evening events through — the exact case this guards against.
 
+    An event that runs more than once contributes one entry per session still
+    ahead of the cutoff, not one entry for the event: two dates are two things a
+    reader can attend, and a list that collapses them to the earlier one hides the
+    later one entirely. Cards built from these entries deep-link to their session
+    on the event page. See events/sessions.html.
+
     Returns: a slice of dicts, oldest-first (i.e. the next event is index 0):
-      date  the event's sortable_date
-      data  the event page
+      date     the session's start time
+      unix     that start as epoch milliseconds — what the slice is sorted by, and
+               what a caller that re-sorts should sort by. `sortable_date` is a
+               string, so ordering the raw value is lexical, which puts two
+               same-day events in different timezones in the wrong order.
+      data     the event page
+      session  the normalized session (see events/sessions.html)
 
     Depends only on site content and the cutoff, so callers should use
     partialCached with a constant key per cutoff.
@@ -29,9 +40,28 @@
 {{- $upcoming := slice -}}
 {{- range where site.Pages "Type" "events" -}}
     {{- if eq .Params.unlisted false -}}
-        {{- if gt (.Params.sortable_date | time.AsTime).UnixMilli $cutoffUnix -}}
-            {{- $upcoming = $upcoming | append (dict "date" .Params.sortable_date "data" .) -}}
+        {{- $event := . -}}
+        {{- if .Params.youtube_url -}}
+            {{- /* Once a recording exists the event page drops its session layout
+                   for the video, so a card deep-linking to a session tab would
+                   point at nothing. Treat it as the single thing it now is.
+
+                   Which is why `youtube_url` must not be set until every session
+                   has run: doing it early takes the remaining session's form off
+                   the page and drops the event from this list on the strength of
+                   a `sortable_date` that only dates the *first* session. See the
+                   warning in archetypes/event/index.md. */ -}}
+            {{- $unix := (.Params.sortable_date | time.AsTime).UnixMilli -}}
+            {{- if gt $unix $cutoffUnix -}}
+                {{- $upcoming = $upcoming | append (dict "date" .Params.sortable_date "unix" $unix "data" $event) -}}
+            {{- end -}}
+        {{- else -}}
+            {{- range partial "events/sessions.html" . -}}
+                {{- if gt .unix $cutoffUnix -}}
+                    {{- $upcoming = $upcoming | append (dict "date" .date "unix" .unix "data" $event "session" .) -}}
+                {{- end -}}
+            {{- end -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}
-{{- return sort $upcoming "date" "asc" -}}
+{{- return sort $upcoming "unix" "asc" -}}

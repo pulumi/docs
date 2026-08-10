@@ -14,6 +14,7 @@ heading — compose the classes below in markup, or `@extend`/`@apply` them in S
 | `_card.scss` | `.card`, `.card-hover`, `.card-highlight` (tinted panel) | `class="card"` / `@extend .card;` |
 | `_forms.scss` | `.form-input`, `.form-textarea`, `.form-select`, `.form-checkbox`, `.form-radio`, `.form-label`/`.form-help`/`.form-error`, sizes (`sm/lg/xl`); plus `@mixin`s (`form-control-base`, `form-check-base`, …) | `class="form-input form-input-lg"`, or `@include form-control-base;`. Heights mirror the `.btn` scale |
 | `_badge.scss` | `.badge` base + variants (`default`, `brand`, `secondary`, `outline`, `success`, `warning`, `destructive`, `info`, `dark`, `ghost`, `preview`, `required`), sizes (`sm/lg`) | `class="badge badge-success"`, `layouts/partials/badge.html`, or `@extend .badge; @extend .badge-<variant>;` |
+| `_tabs.scss` | `.tabs` row (full-width rule) + `.tab` / `.tab.is-active` (violet underline) | `class="tabs"` on the row, `class="tab"` on each item, `is-active` + `aria-current` on the current one. Use for switching *views*; use `.btn.btn-sm.btn-outline` pills for filter/toggle rows |
 | `_utilities.scss` | `@utility` type scale: `heading-xl`/`heading-1`…`heading-6`, `body-sm`…`body-2xl`, `font-overline`, `font-overline-sm` | `class="heading-2"` / `@apply heading-2;` |
 | `_base.scss` | `@layer base` element defaults (border-color reset, custom-element `display:block`, `h1`–`h6`/`p`) — foundation, not a class you apply | imported inside `@layer base` |
 

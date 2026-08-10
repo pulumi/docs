@@ -22,6 +22,10 @@ block_external_search_index: false
 # The url slug for the event landing page.
 url_slug: pulumi-for-all-your-iac-terraform-hcl
 
+# The EMEA sitting used to be its own event page; it's a session here now.
+aliases:
+    - /events/pulumi-for-all-your-iac-terraform-hcl-eu/
+
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -29,10 +33,39 @@ event_type: workshop
 youtube_url:
 
 # Sortable date. The datetime Hugo will use to sort the events in date order.
+# With sessions below, this is the earliest session's date.
 sortable_date: 2026-08-19T12:00:00.000-07:00
 
 # Duration of the event.
 duration: 60 minutes
+
+# The event runs twice, once per region. Each session gets its own tab on this
+# page, its own card in the event list, and its own registration form.
+sessions:
+    - label: Americas
+      sortable_date: 2026-08-19T12:00:00.000-07:00
+      form:
+          hubspot_form_id: 17009b6b-9d0c-4f9b-a144-96aa699d1ba6
+          salesforce_campaign_id: 701PQ00000yh82zYAA
+      presenters:
+          - name: Daniel Perlovsky
+            role: Principal Product Manager, Pulumi
+            photo: /images/team/daniel-perlovsky.jpg
+          - name: Adam Gordon Bell
+            role: Community Engineer, Pulumi
+            photo: /images/team/adam-gordon-bell.jpg
+    - label: EMEA
+      sortable_date: 2026-08-26T07:00:00.000-07:00
+      form:
+          hubspot_form_id: 6c17ee84-c999-481c-8f5f-86c348bfa063
+          salesforce_campaign_id: 701PQ00000ygwGQYAY
+      presenters:
+          - name: Daniel Perlovsky
+            role: Principal Product Manager, Pulumi
+            photo: /images/team/daniel-perlovsky.jpg
+          - name: Engin Diri
+            role: Senior Solutions Architect, Pulumi
+            photo: /images/team/engin-diri.jpg
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
@@ -47,14 +80,8 @@ learn:
     - How to reuse existing Terraform modules inside a new Pulumi program.
     - How to write Pulumi IaC in HCL. 100% OpenTofu-compatible, with access to the full Pulumi provider ecosystem.
 
-# The event presenters
-presenters:
-    - name: Daniel Perlovsky
-      role: Principal Product Manager, Pulumi
-      photo: /images/team/daniel-perlovsky.jpg
-    - name: Adam Gordon Bell
-      role: Community Engineer, Pulumi
-      photo: /images/team/adam-gordon-bell.jpg
+# No top-level presenters: each session above names its own lineup, and anything
+# that needs "everyone at this event" derives the union from them.
 
 # case-sensitive
 tags:
@@ -62,10 +89,4 @@ tags:
     topics: ["Pulumi Neo", "Infrastructure as Code", "DevOps"]
     languages: [HCL]
     clouds: []
-
-# The right hand side form section.
-form:
-    # HubSpot form id.
-    hubspot_form_id: 17009b6b-9d0c-4f9b-a144-96aa699d1ba6
-    salesforce_campaign_id: 701PQ00000yh82zYAA
 ---

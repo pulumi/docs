@@ -12,15 +12,35 @@
     dropped anywhere (the events list, a template page section). The events list
     wraps it in a filterable <li> — see events/event-list-item.html.
 
+    An event that runs more than once gets one card per session (see
+    events/upcoming.html): same title and blurb, but the session's own date, its
+    presenters, a label badge, and a link straight to that session's tab.
+
     Parameters:
     - page: The event page
     - pageContext: Page context for relref resolution
+    - session: Optional. One normalized session (see events/sessions.html). Omit
+      it and the card stands for the event as a whole: its own date, and everyone
+      who presents at any session. For a single-session event those are the same
+      thing either way.
 */}}
 
 {{ $data := .page }}
 {{ $title := $data.Params.title }}
 {{ $onDemand := $data.Params.youtube_url }}
+{{ $session := .session }}
+
 {{ $datetime := $data.Params.sortable_date }}
+{{/* Everyone across every session, so a card with no session of its own (the
+     on-demand card a recording produces) still names the speakers even when the
+     event keeps its lineups per-session rather than at the top level. */}}
+{{ $presenters := partial "events/presenters.html" $data }}
+{{ $label := "" }}
+{{ with $session }}
+    {{ $datetime = .date }}
+    {{ $presenters = .presenters }}
+    {{ $label = .label }}
+{{ end }}
 
 {{/* External and internal-landing-page events point at a full URL in url_slug;
      everything else resolves to an event page under /events/. */}}
@@ -33,6 +53,11 @@
     {{ $target = "_blank" }}
 {{ else }}
     {{ $href = relref .pageContext (printf "/events/%s" $data.Params.url_slug) }}
+    {{/* Only a labelled session has a tab to land on: a single-session event
+         renders no tabs, so appending its key would be a dead hash. */}}
+    {{ with $label }}
+        {{ $href = printf "%s#%s" $href $session.key }}
+    {{ end }}
 {{ end }}
 
 <article class="group relative h-full">
@@ -44,6 +69,9 @@
                 <div class="mb-4 flex flex-wrap items-center gap-2">
                     {{ partial "badge.html" (dict "text" $data.Params.event_type "variant" "outline") }}
                     {{ partial "badge.html" (dict "text" (cond (ne $onDemand nil) "On-demand" ($data.Params.location | string)) "variant" "ghost") }}
+                    {{ with $label }}
+                        {{ partial "badge.html" (dict "text" . "variant" "ghost") }}
+                    {{ end }}
                     {{ if not $onDemand }}
                         {{/* Populated client-side (see resources.ts): a build-time "in X days"
                              would go stale between builds and ignores the visitor's timezone. */}}
@@ -56,9 +84,19 @@
                 </h3>
             </div>
             {{ if not $onDemand }}
-            <div class="flex size-14 shrink-0 flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 text-gray-950">
-                <div class="font-mono text-xl leading-none">{{ $datetime | time.Format "2" }}</div>
-                <div class="font-mono text-[0.65rem] uppercase">{{ $datetime | time.Format "Jan" }}</div>
+            {{/* Server-rendered in the event's own timezone as the no-JS fallback;
+                 resources.ts rewrites all three lines in the visitor's zone. The
+                 whole tile localizes, not just the time, because a US evening slot
+                 is the next calendar day in Europe — "Sep 15" over "1:00 AM" would
+                 be wrong twice over. */}}
+            <div data-event-tile data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" class="flex h-auto w-16 shrink-0 flex-col items-center overflow-hidden rounded-lg border border-gray-200 text-gray-950">
+                {{/* Day and month in their own padded block so the time's top rule
+                     can run edge to edge, like a calendar tile's tear line. */}}
+                <div class="flex w-full flex-col items-center px-1 py-1.5">
+                    <div data-event-tile-day class="font-mono text-xl leading-none">{{ $datetime | time.Format "2" }}</div>
+                    <div data-event-tile-month class="font-mono text-[0.65rem] uppercase">{{ $datetime | time.Format "Jan" }}</div>
+                </div>
+                <div data-event-tile-time class="w-full border-t border-gray-200 p-1 text-center font-mono text-[0.6rem] whitespace-nowrap uppercase" hidden></div>
             </div>
             {{ end }}
         </div>
@@ -66,7 +104,7 @@
         {{ with $data.Params.meta_desc }}<p class="mt-1.5 mb-0 max-w-prose body-base line-clamp-3 text-service-black">{{ . }}</p>{{ end }}
 
         <div class="mt-auto flex flex-col gap-4 pt-6">
-            {{ with $data.Params.presenters }}
+            {{ with $presenters }}
             <div class="flex items-center gap-3">
                 <div class="flex -space-x-2 shrink-0">
                     {{ range . }}

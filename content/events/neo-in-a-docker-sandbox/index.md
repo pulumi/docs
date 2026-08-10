@@ -27,6 +27,10 @@ block_external_search_index: false
 # event, use the external URL as the value here.
 url_slug: neo-in-a-docker-sandbox
 
+# The EMEA sitting used to be its own event page; it's a session here now.
+aliases:
+    - /events/neo-in-a-docker-sandbox-eu/
+
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
@@ -34,10 +38,25 @@ event_type: workshop
 youtube_url:
 
 # Sortable date. The datetime Hugo will use to sort the events in date order.
+# With sessions below, this is the earliest session's date.
 sortable_date: 2026-09-16T09:00:00.000-07:00
 
 # Duration of the event.
 duration: 60 minutes
+
+# The event runs twice, once per region. Same speakers both times, so the
+# sessions inherit the presenter list below and differ only in date and form.
+sessions:
+    - label: Americas
+      sortable_date: 2026-09-16T09:00:00.000-07:00
+      form:
+          hubspot_form_id: 37d15e98-1e00-4b10-864c-629d7f55d4a1
+          salesforce_campaign_id: 701PQ00000yEUGcYAO
+    - label: EMEA
+      sortable_date: 2026-10-14T10:00:00.000+02:00
+      form:
+          hubspot_form_id: ef67fdd1-fe12-427d-84c3-f3b99476d792
+          salesforce_campaign_id: 701PQ00000yEZhiYAG
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
@@ -72,11 +91,4 @@ tags:
     topics: ["AI", "Docker", "DevOps"]
     languages: []
     clouds: []
-
-# The right hand side form section.
-form:
-    # HubSpot form id.
-    hubspot_form_id: 37d15e98-1e00-4b10-864c-629d7f55d4a1
-    salesforce_campaign_id: 701PQ00000yEUGcYAO
-
 ---
