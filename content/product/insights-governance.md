@@ -196,8 +196,8 @@ sections:
       - title: Start with complete visibility
         description: |
           Get instant visibility into all your cloud resources. Add governance policies and AI-powered remediation to maintain compliance automatically.
-        cta_primary_text: Get Started with Insights
-        cta_primary_link: /docs/insights/get-started/
+        cta_primary_text: Get Started with Discovery
+        cta_primary_link: /docs/insights/discovery/get-started/
         cta_text: Book a Demo
         cta_link: /contact/?form=request-a-demo
       - title: Enforce compliance with policy as code

@@ -39,7 +39,7 @@ Let's look at some common use cases and questions you might have about your infr
 
 `modified:<now-30d`
 
-![Resource Explorer filtered to resources created in the last 30 days](/docs/insights/assets/resource-explorer-filter-30days.png)
+![Resource Explorer filtered to resources modified in the last 30 days](/docs/insights/assets/resource-explorer-filter-30days.png)
 
 You can also filter your search using the most common keywords, such as **Type**, **Project**, **Stack** and more.
 

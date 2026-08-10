@@ -37,7 +37,7 @@ Currently while in public preview, Discovery supports AWS, Azure, Oracle Cloud, 
 Scheduled scans run every 24 hours by default; you can switch to a 12-hour schedule instead.
 {{< /notes >}}
 
-To finish, select **Next**. The wizard creates the IAM role and an ESC environment for the account, connects it, and shows a summary with next steps. The account is named after your cloud account: for example, an AWS account named `production` becomes the `production` account in Pulumi. The rest of this guide uses `production` as the example name; substitute the name of the account you connected.
+To finish, select **Next**. The wizard creates the IAM role and an ESC environment for the account, connects it, and shows a summary with next steps. The account in Pulumi is named after the AWS account it connects: for example, an AWS account named `production` becomes the `production` account in Pulumi. The rest of this guide uses `production` as the example name; substitute the name of the account you connected.
 
 For the full reference on the wizard, including the other authentication options and what gets created in your cloud accounts, see [Connect cloud accounts](/docs/insights/discovery/connect-cloud-accounts/).
 

@@ -45,7 +45,7 @@ After you select the `production` account, select the **Actions** drop-down, cho
 
 Discovery will kick off a scan across each child account / region in parallel and as resources are discovered you will begin to see a status of the number of resources known to Pulumi.
 
-As each account scan completes, you will see a checkmark and status update per account. The scan duration will depend on the number of resources for each account, however as soon as they are discovered you can begin to explore insights and do not have to wait for the entire discovery to finish.
+As each account scan completes, you will see a checkmark and status update per account. The scan duration will depend on the number of resources for each account, however as soon as they are discovered you can begin exploring the discovered resources and do not have to wait for the entire discovery to finish.
 
 Let's introduce the Pulumi Resource Explorer for your newly discovered resources and learn how to draw insights about your cloud infrastructure.
 

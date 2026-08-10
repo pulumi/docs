@@ -14,7 +14,7 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-This document outlines the steps required to create and manage a cloud account used to scan provider resources.
+This document outlines the steps required to create and manage a cloud account used by Discovery to scan provider resources.
 
 {{% notes type="info" %}}
 To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect cloud accounts wizard](/docs/insights/discovery/connect-cloud-accounts/). This page covers connecting a single account using a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configure yourself.
@@ -38,7 +38,7 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
   See below for details on how to set up the ESC environment for each provider.  
 {{< /notes >}}
 1. On the **Discovery** step, review the defaults: scheduled scans and policy evaluation are both enabled, with a default policy pack pre-selected, and you can turn either off. Scans run every 24 hours; you can switch to a 12-hour schedule instead. For AWS, also select the [partition](#aws-partitions) the account belongs to and the regions you want scanned; global services are always scanned.  
-1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. Accounts connected with existing ESC credentials are named after the selected ESC environment; accounts connected with a browser-based sign-in are named after the cloud account.
+1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. Accounts connected with existing ESC credentials are named after the selected ESC environment; accounts connected with a browser-based sign-in are named after the provider account.
 {{< notes type="info" >}}  
   Child accounts are automatically named with a `/` separator (for example, `<account>/us-east-1`). For more information, see **Account hierarchies** below.  
 {{< /notes >}}

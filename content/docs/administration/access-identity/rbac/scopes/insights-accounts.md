@@ -30,7 +30,7 @@ Note that creating, listing, or restoring cloud accounts are organization-level 
 | `insights_account:read` | View cloud account configurations and data. This includes access to monitoring settings and analysis results.<br><br>**Granted by default permission set**: `Account Read` |
 | `insights_account:update` | Modify cloud account settings and configurations. This allows updating monitoring parameters and analysis rules.<br><br>**Granted by default permission set**: `Account Write` |
 
-## Insights Scan
+## Cloud account scans
 
 | Value | Description |
 |-------|-------------|

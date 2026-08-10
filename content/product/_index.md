@@ -109,7 +109,7 @@ sections:
     cta_text: Explore Pulumi Discovery & Governance
     cta_link: /product/pulumi-insights/
     image: /images/product/overview/overview-governance.svg
-    image_alt: Pulumi Insights resource search across clouds
+    image_alt: Pulumi resource search across clouds
     cards:
       - icon: hard-drives
         title: Multi-cloud visibility

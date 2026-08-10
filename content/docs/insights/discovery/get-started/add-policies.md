@@ -2,7 +2,7 @@
 title: Using Policies
 title_tag: "Policies | Discovery & Governance"
 h1: Using Policies and Policy Remediation
-meta_desc: Learn how to use Pulumi Policy policies to evaluate cloud resources discovered through Discovery.
+meta_desc: Learn how to use policies to evaluate cloud resources found by Discovery.
 weight: 6
 menu:
   insights:
@@ -70,7 +70,7 @@ Policy Versions: Pulumi Cloud tracks published policy packs by version. When a p
 
 With your policy pack published, you'll need to create a Policy Group that associates your cloud account with a policy pack.
 
-1. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
+1. In the Pulumi Cloud console, navigate to **Management** > **Policies**.
 
     ![Insights Policies - New Policy Pack](/docs/insights/assets/policy-groups.png)
 

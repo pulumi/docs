@@ -200,7 +200,7 @@ pulumi policy publish
 
 ### Add policy pack to a cloud account
 
-With your policy pack published, you’ll need to create a Policy Group that associates your cloud account with a policy pack. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
+With your policy pack published, you’ll need to create a Policy Group that associates your cloud account with a policy pack. In the Pulumi Cloud console, navigate to **Management** > **Policies**.
 
 ![Insights Policies - New Policy Pack](/docs/insights/assets/create-policy-group.png)
 
