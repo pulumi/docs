@@ -12,12 +12,17 @@
 //
 // Render as:
 //   <nav class="tabs">
+//     <span class="tabs-label">Sessions</span>   {{/* optional */}}
 //     <a class="tab is-active" aria-current="true" href="#a">First</a>
 //     <a class="tab" href="#b">Second</a>
 //   </nav>
 // The active tab takes BOTH `.is-active` and `aria-current` — the class is what
 // client-side code toggles, and the attribute is what tells assistive tech which
 // one is current. `<button>` works in place of `<a>` for JS-driven tabs.
+//
+// `.tabs-label` is an optional overline naming the group ("SESSIONS"), for rows
+// that would otherwise read as loose links rather than a control. Point the
+// row's `aria-labelledby` at it instead of duplicating the text in `aria-label`.
 //
 // Put the tabs in a `<ul>` if the markup calls for it; `.tabs` handles a list by
 // flattening the items, so the rule still spans the row.
@@ -56,4 +61,12 @@
     &.is-active {
         @apply border-violet-primary text-violet-primary;
     }
+}
+
+// Same box as `.tab` (so it sits on the same baseline and the rule stays
+// unbroken beneath it) but overline type and no interactive state — it names the
+// row, it isn't one of the choices.
+.tabs-label {
+    @apply -mb-px inline-flex items-center border-b-2 border-transparent pb-3
+        font-overline-sm whitespace-nowrap text-gray-600;
 }

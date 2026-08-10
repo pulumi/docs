@@ -27,7 +27,11 @@
 
 {{ $active := .active }}
 
-<nav class="tabs" aria-label="Sessions">
+<nav class="tabs" aria-labelledby="event-sessions-label">
+    {{/* Naming the row matters more here than on a typical tab strip: two dates
+         of the same workshop look enough alike that readers have skimmed past
+         them without registering there was a choice to make. */}}
+    <span id="event-sessions-label" class="tabs-label">Sessions</span>
     {{ range .sessions }}
         {{/* data-track gives these tabs a stable analytics id; without it
              tracking.ts would derive one from the href and every event page
