@@ -1,8 +1,8 @@
 ---
 title: Resource Search
-title_tag: "Pulumi Insights: Resource Search"
+title_tag: "Resource Search | Discovery & Governance"
 h1: Resource Search
-meta_desc: Documentation and query syntax for the Pulumi Insights search feature.
+meta_desc: Documentation and query syntax for the Resource Search feature in Pulumi Cloud.
 menu:
   insights:
     name: Resource Search
@@ -366,9 +366,9 @@ Selecting the **"X"** in the filter bar will remove all previously selected filt
 
 ## Unified resources
 
-When a resource exists in multiple sources (such as both IaC stacks and Insights scans), Pulumi Cloud consolidates these in the search results. Resources from multiple sources are indicated with a <img src="/docs/insights/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: sub;"> icon in the results table. This behavior helps reduce duplicate entries while ensuring all sources that match your query are considered.
+When a resource exists in multiple sources (such as both IaC stacks and Discovery scans), Pulumi Cloud consolidates these in the search results. Resources from multiple sources are indicated with a <img src="/docs/insights/assets/spoke.svg" alt="spoke icon" style="display: inline; width: 16px; height: 16px; vertical-align: sub;"> icon in the results table. This behavior helps reduce duplicate entries while ensuring all sources that match your query are considered.
 
-When using the "group by" functionality, a consolidated resource can appear in multiple groups if it has sources present in each group. For example, when grouping by project, a resource that exists in both an IaC stack and an Insights scan from different projects will appear under both project groups.
+When using the "group by" functionality, a consolidated resource can appear in multiple groups if it has sources present in each group. For example, when grouping by project, a resource that exists in both an IaC stack and a Discovery scan from different projects will appear under both project groups.
 
 ## Managed by attribute
 
@@ -398,7 +398,7 @@ Clicking the "X" within the search bar will remove all previously selected filte
 
 You can download a CSV with all resources matching your query by clicking the "Export CSV" button within dropdown opened by clicking the gear icon.
 
-For a complete description of the CSV format returned, see the [Data Export](/docs/pulumi-cloud/insights/export/) documentation.
+For a complete description of the CSV format returned, see the [Data Export](/docs/insights/discovery/data-export/) documentation.
 
 ## API access
 

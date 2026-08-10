@@ -31,7 +31,7 @@ items:
             description: Environments, secrets, and configuration management
             icon: custom/pulumi-secrets
             track: header-product-secrets
-          - label: Insights & governance
+          - label: Discovery & governance
             href: /product/insights-governance/
             description: Asset management, compliance remediation, and AI insights over the cloud
             icon: custom/pulumi-insights

@@ -1,8 +1,8 @@
 ---
-title: Using Insights Policies
-title_tag: "Policies | Pulumi Insights"
-h1: "Pulumi Insights: Using Policies and Policy Remediation"
-meta_desc: Learn how to use Pulumi Policy policies to evaluate cloud resources discovered through Pulumi Insights account discovery.
+title: Using Policies
+title_tag: "Policies | Discovery & Governance"
+h1: Using Policies and Policy Remediation
+meta_desc: Learn how to use policies to evaluate cloud resources found by Discovery.
 weight: 6
 menu:
   insights:
@@ -68,9 +68,9 @@ Policy Versions: Pulumi Cloud tracks published policy packs by version. When a p
 
 {{< pulumi-cloud "policy-enforcement" />}}
 
-With your policy pack published, you'll need to create a Policy Group that associates your Insights account with a policy pack.
+With your policy pack published, you'll need to create a Policy Group that associates your cloud account with a policy pack.
 
-1. In the Pulumi Cloud console, navigate to **Policies** under the **Pulumi Insights** section.
+1. In the Pulumi Cloud console, navigate to **Management** > **Policies**.
 
     ![Insights Policies - New Policy Pack](/docs/insights/assets/policy-groups.png)
 
@@ -86,7 +86,7 @@ With your policy pack published, you'll need to create a Policy Group that assoc
 
     ![Insights Policies - New Policy Pack](/docs/insights/assets/enable-policy-pack.png)
 
-1. Now add your insights account to the policy group. Select **Add accounts** and type the name of the account you want to include for Insights policies. (e.g. production/us-west-2) Finally, select **Add account to policy group**
+1. Now add your cloud account to the policy group. Select **Add accounts** and type the name of the account you want to include for policy evaluation. (e.g. production/us-west-2) Finally, select **Add account to policy group**
 
 {{% notes type="info" %}}
 Cloud accounts are automatically added to `default-accounts-policy-group`, and stacks to `default-policy-group`, as they are created. See [default policy groups](/docs/insights/policy/policy-groups/#default-policy-groups).

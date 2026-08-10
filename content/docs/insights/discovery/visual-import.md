@@ -25,7 +25,7 @@ Pulumi Visual Import allows platform and development teams to leverage [Pulumi I
 
 ## Prerequisites
 
-Before you start, ensure you have at least one [Pulumi Insights account](/docs/insights/accounts/) set up with discovered resources
+Before you start, ensure you have at least one [cloud account](/docs/insights/discovery/accounts/) set up with discovered resources
 
 ## Accessing visual import
 

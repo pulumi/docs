@@ -22,7 +22,7 @@ By default, deployments run on [Pulumi-managed runners](/docs/deployments/concep
 
 ## Customer-managed workflow runners
 
-Customer-Managed Workflow Runners allow you to self-host workflow runners, bringing the same power and flexibility as Pulumi-hosted workflows. Self-hosting your workflow runners comes with many benefits for deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/):
+Customer-Managed Workflow Runners allow you to self-host workflow runners, bringing the same power and flexibility as Pulumi-hosted workflows. Self-hosting your workflow runners comes with many benefits for deployments, [Discovery](/docs/insights/discovery/) scans, and [policy evaluations](/docs/insights/policy/):
 
 - **Host anywhere**: You can host the workflow runners anywhere to manage infrastructure, even within your fully private VPCs
 - **Any hardware, any environment<sup>1</sup>**: Run the workflow runners on any hardware of your choice and configure the environment that meets your needs
@@ -32,7 +32,7 @@ Customer-Managed Workflow Runners allow you to self-host workflow runners, bring
 
 <sup>1</sup> *Currently Linux and macOS are supported*
 
-Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/concepts/triggers/) currently offered by Pulumi Deployments such as click to deploy, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Insights discovery scans and policy evaluations.
+Customer-Managed Workflow Runners support all the [deployment triggers](/docs/deployments/concepts/triggers/) currently offered by Pulumi Deployments such as on-demand deployment from the Pulumi Cloud console, the Pulumi Deployments REST API, git push to deploy, Review Stacks, and remote Automation API. They also support running Discovery scans and policy evaluations.
 
 To set up, scale, and assign a customer-managed runner pool, see [Customer-Managed Workflow Runners](/docs/deployments/guides/customer-managed-workflow-runners/). The rest of this page covers how to supply cloud credentials to runners and the full configuration reference.
 

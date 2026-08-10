@@ -1,8 +1,8 @@
 ---
 title: Get Started
-title_tag: Get Started with Pulumi Insights Account Discovery
-h1: Get Started with Pulumi Insights Account Discovery
-meta_desc: Learn how to set up and manage Pulumi Insights accounts to gain visibility into your cloud infrastructure.
+title_tag: Get Started with Discovery | Discovery & Governance
+h1: Get Started with Discovery
+meta_desc: Learn how to set up and manage cloud accounts to gain visibility into your cloud infrastructure.
 weight: 1
 menu:
   insights:
@@ -15,9 +15,9 @@ aliases:
 pulumi_cloud_feature: insights-discovery
 ---
 
-Pulumi Insights is an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. Insights improves security, compliance, and efficiency through AI-powered asset and compliance management.
+Discovery is the resource-scanning feature of Pulumi Insights, an intelligent infrastructure management service that helps you discover, understand, manage, and improve your cloud infrastructure. It improves security, compliance, and efficiency through AI-powered asset and compliance management.
 
-Pulumi Insights gives you the tools to:
+Discovery and Resource Explorer give you the tools to:
 
 - **Discover**: Scan and sync all your cloud infrastructure – including resources provisioned manually or through other tools like Terraform, CloudFormation, Kubernetes and ARM – to bring everything under a single pane of glass. Gain complete visibility across clouds, regions, and accounts.
 
@@ -27,7 +27,7 @@ Pulumi Insights gives you the tools to:
 
 - **Improve**: Optimize your cloud infrastructure with actionable recommendations. Detect and remediate security violations, reduce costs by identifying inefficient resources, and enforce compliance policies.
 
-For an overview of how Pulumi Insights works, check out the following 5-min video:
+For an overview of how Discovery works, check out the following 5-min video:
 
 <div class="rounded-md shadow border border-gray-300 w-3/4 mx-auto my-4" style="position: relative; padding-bottom: 40.25%; height: 0; overflow: hidden;">
     <iframe
@@ -38,12 +38,12 @@ For an overview of how Pulumi Insights works, check out the following 5-min vide
     </iframe>
 </div>
 
-This guide will take you through the following steps to get started with Pulumi Insights Account Discovery and Resource Explorer:
+This guide will take you through the following steps to get started with Discovery and Resource Explorer:
 
 1. Confirm the prerequisites for connecting your cloud accounts.
 1. Connect a cloud account and run your first discovery scan.
 1. Manage your accounts and launch scans on demand.
-1. Use Insights Resource Explorer to understand your infrastructure, and ask natural language questions using Pulumi Neo.
+1. Use Resource Explorer to understand your infrastructure, and ask natural language questions using Pulumi Neo.
 1. Apply policies to your discovered resources.
 
 {{< get-started-stepper >}}

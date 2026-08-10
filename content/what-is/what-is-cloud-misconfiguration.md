@@ -127,7 +127,7 @@ Pulumi addresses cloud misconfiguration on two fronts: making configuration revi
 
 **Drift detection.** Pulumi can run scheduled drift detection, comparing live infrastructure against its declared configuration and alerting when they diverge, so an out-of-band change that reintroduces a misconfiguration is surfaced instead of silently persisting.
 
-Together, [Pulumi Insights and governance](/product/insights-governance/) let a team prevent new misconfigurations at deploy time and continuously audit for existing ones, which is the preventative-plus-detective combination that a durable posture requires.
+Together, [Pulumi Discovery and governance](/product/insights-governance/) let a team prevent new misconfigurations at deploy time and continuously audit for existing ones, which is the preventative-plus-detective combination that a durable posture requires.
 
 ## Frequently asked questions about cloud misconfiguration
 
@@ -167,8 +167,8 @@ Related reading:
 
 * [Pulumi policy as code documentation](/docs/insights/policy/)
 * [Policy packs guide](/docs/insights/policy/policy-packs/)
-* [Insights and governance](/product/insights-governance/)
-* [Pulumi Insights discovery](/docs/insights/discovery/)
+* [Discovery and governance](/product/insights-governance/)
+* [Pulumi Discovery](/docs/insights/discovery/)
 * [What is policy as code?](/what-is/what-is-policy-as-code/)
 * [What is cloud security?](/what-is/what-is-cloud-security/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)

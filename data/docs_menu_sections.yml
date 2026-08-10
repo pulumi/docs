@@ -11,7 +11,7 @@
 - menu: esc
   label: Secrets & Configuration (ESC)
 - menu: insights
-  label: Insights & Governance
+  label: Discovery & Governance
 - menu: idp
   label: Internal Developer Platform
 - menu: administration

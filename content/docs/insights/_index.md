@@ -1,6 +1,6 @@
 ---
-title: Insights & Governance
-linktitle: Insights & Governance
+title: Discovery & Governance
+linktitle: Discovery & Governance
 docs_home: true
 notitle: true
 norightnav: true
@@ -9,9 +9,9 @@ menu:
     identifier: insights-home
     weight: 1
 meta_desc: Discover, secure, and govern cloud infrastructure with comprehensive visibility and policy enforcement across all your resources.
-h1: Insights & Governance
+h1: Discovery & Governance
 description: |
-  Pulumi Insights & Governance provides comprehensive cloud visibility and policy enforcement—discover all infrastructure and ensure compliance, regardless of how resources were created.
+  Pulumi Discovery & Governance provides comprehensive cloud visibility and policy enforcement—discover all infrastructure and ensure compliance, regardless of how resources were created.
 
 link_buttons:
   primary:
@@ -40,7 +40,7 @@ sections:
     link: /docs/insights/discovery/
     description: Learn how Discovery scans cloud accounts and organizes resources for visibility and import.
   - icon: link
-    heading: Accounts
+    heading: Cloud Accounts
     link: /docs/insights/discovery/accounts/
     description: Connect cloud accounts to sync and monitor infrastructure resources.
   - icon: magnifying-glass
@@ -86,7 +86,7 @@ sections:
   - icon: buildings
     heading: Self-hosted Insights
     link: /docs/insights/self-hosted/
-    description: Run Insights discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
+    description: Run Discovery scans and policy evaluations in your own environment using customer-managed workflow runners.
 
 - type: flat
   heading: Have questions?

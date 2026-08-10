@@ -148,7 +148,7 @@ The policy packs served simultaneously as the enforcement mechanism and the audi
 
 ### Modivcare: up to 25% infrastructure cost reduction and governance over legacy infrastructure
 
-Modivcare needed to bring governance to a mixed environment: some infrastructure managed by Pulumi IaC, some inherited from Terraform, some provisioned manually. Pulumi Policies in audit mode, combined with Pulumi Insights account scanning, gave them visibility across the entire estate.
+Modivcare needed to bring governance to a mixed environment: some infrastructure managed by Pulumi IaC, some inherited from Terraform, some provisioned manually. Pulumi Policies in audit mode, combined with Pulumi cloud account scanning, gave them visibility across the entire estate.
 
 As Zachary Cook, Senior Manager of DevOps at Modivcare, put it:
 
@@ -206,7 +206,7 @@ Related reading:
 
 * [Pulumi Policies documentation](/docs/insights/policy/)
 * [Policy packs guide](/docs/insights/policy/policy-packs/)
-* [Insights and governance](/product/insights-governance/)
+* [Discovery and governance](/product/insights-governance/)
 * [Benefits of policy as code](/blog/benefits-of-policy-as-code/)
 * [Enforcing policy as code on discovered resources](/blog/enforcing-policy-as-code-on-discovered-resources-with-pulumi/)
 * [OPA support for Pulumi Policies](/blog/opa-support-for-crossguard/)

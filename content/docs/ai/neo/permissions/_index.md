@@ -54,7 +54,7 @@ Neo's access ceiling is the acting user's RBAC. Within that ceiling, Neo reads b
 | Environments and secrets ([ESC](/docs/esc/)) | Any environment the user can open — including decrypting secrets and minting dynamic cloud credentials | Through ESC code changes where the environment is managed in IaC; otherwise Neo edits the environment definition directly. Environments with [update approvals](/docs/esc/concepts/approvals/) force those edits into a draft that a reviewer must approve. |
 | Deployment settings | Settings the user can read | Through code and pull requests where the settings are managed in IaC; otherwise Neo edits them directly through the API. |
 | Policy packs | Packs and results the user can read | No direct management of policy packs. |
-| Insights / discovery (cloud) accounts | Accounts and scan results the user can read | No direct management of accounts. |
+| Cloud accounts | Accounts and scan results the user can read | No direct management of accounts. |
 | Audit logs | Logs, if the user holds an audit-log read permission (typically Admin) | Read-only resource. |
 
 ### ESC, secrets, and downstream cloud access

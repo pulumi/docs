@@ -69,7 +69,7 @@ Your Pulumi Cloud hierarchy consists of **users**, **organizations**, and **team
 
 ### Setting up your organization
 
-Start by creating an organization—a container for your IaC projects and stacks, ESC projects and environments, and Insights accounts and discovered resources. Most companies need only a single organization, though you can create multiple if you require extra separation or multiple identity providers. The infrastructure platform group typically owns this configuration and handles onboarding developers and security experts.
+Start by creating an organization—a container for your IaC projects and stacks, ESC projects and environments, and connected cloud accounts and discovered resources. Most companies need only a single organization, though you can create multiple if you require extra separation or multiple identity providers. The infrastructure platform group typically owns this configuration and handles onboarding developers and security experts.
 
 Organizations and their capabilities are a paid feature of Pulumi Cloud. Creating an organization starts a free trial. [Create your organization here](https://app.pulumi.com/site/organizations/add).
 
