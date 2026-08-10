@@ -230,14 +230,54 @@ def test_fetch_pinned_bodies_raises_when_nothing_decodes():
     """
     try:
         _with_fake_gh("not json at all\nalso not json\n")
-    except RuntimeError as exc:
+    except sro.CommentDecodeError as exc:
         assert "could not decode any" in str(exc)
     else:
-        raise AssertionError("expected RuntimeError on undecodable payload")
+        raise AssertionError("expected CommentDecodeError on undecodable payload")
 
 
 def test_fetch_pinned_bodies_empty_output_is_not_an_error():
     assert _with_fake_gh("") == []
+
+
+def test_scrape_pr_records_decode_failure_instead_of_propagating():
+    """One unreadable PR must not abort a whole --closed-since window.
+
+    The raise is per PR; the window scrape is per run. If it propagated, a
+    single bad payload would lose every record already gathered and mute the
+    digest's outcomes section -- the same "no data" reading the raise exists
+    to prevent, one level up.
+    """
+    def fake_meta(repo, pr):
+        return {
+            "number": pr, "title": "t", "url": "u", "state": "MERGED",
+            "mergedAt": "2026-07-01T00:00:00Z", "closedAt": None,
+            "headRefOid": MERGE_HEAD, "headRefName": "feature",
+            "author": {"login": "alice"}, "labels": [],
+        }
+
+    original_meta, original_gh = sro.fetch_pr_meta, sro.run_gh
+    sro.fetch_pr_meta = fake_meta
+    sro.run_gh = lambda args: "not json at all\n"
+    try:
+        record = sro.scrape_pr("pulumi/docs", 1)
+    finally:
+        sro.fetch_pr_meta, sro.run_gh = original_meta, original_gh
+
+    assert record["status"] == "decode_failed"
+    assert "could not decode any" in record["detail"]
+
+
+def test_aggregate_separates_decode_failures_from_no_review_data():
+    """The two must not share a column -- that conflation is the whole bug."""
+    agg = sro.aggregate([
+        {"status": "no_review_data", "pr": 1},
+        {"status": "decode_failed", "pr": 2, "detail": "boom"},
+        {"status": "pr_unavailable", "pr": 3},
+    ])
+    assert agg["prs_decode_failed"] == 1
+    assert agg["prs_no_review_data"] == 2
+    assert agg["prs_scraped"] == 0
 
 
 def test_scrape_pr_no_review_data():
