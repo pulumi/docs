@@ -29,13 +29,6 @@ intro:
   link: /blog/bring-your-terraform-estate-into-the-agentic-era/
   link_label: Read the blog post
 
-# Full-width event banner under the intro and TOC. Drops off once the workshop
-# has run, unless there's a recording to watch. Keep it out of feed_section.events.
-featured_event:
-  event: /events/pulumi-for-all-your-iac-terraform-hcl
-  badge: Virtual workshop
-  cta_label: Register for workshop
-
 sections:
   - anchor: terraform-backend
     label: Terraform state and remote execution in Pulumi Cloud
@@ -141,17 +134,20 @@ sections:
           With Pulumi, teams that prefer HCL can produce typed, multi-language components ready to use in any Pulumi language.
         link: /docs/iac/languages-sdks/hcl/hcl-component-reference/
 
-feed_section:
+# Full event cards in a panel above the blog list. Listed while they're still
+# ahead of us, then for as long as there's a recording to watch; an event that has
+# run with nothing to watch drops off on its own.
+related_events:
+  anchor: related-events
+  events:
+    - /events/pulumi-for-all-your-iac-terraform-hcl
+    - /events/pulumi-for-all-your-iac-terraform-hcl-eu
+
+blog_section:
   anchor: from-the-blog
-  posts_title: From the blog
+  title: From the blog
   posts:
     - /blog/bring-your-terraform-estate-into-the-agentic-era
     - /blog/terraform-to-pulumi-cloud-hands-on
     - /blog/terraforms-data-model-on-pulumis-engine
-  events_title: Related events
-  # Listed while they're still ahead of us, then for as long as there's a recording
-  # to watch; an event that has run with nothing to watch drops off on its own.
-  events:
-    - /events/pulumi-for-all-your-iac-terraform-hcl
-    - /events/pulumi-for-all-your-iac-terraform-hcl-eu
 ---
