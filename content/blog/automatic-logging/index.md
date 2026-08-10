@@ -1,6 +1,6 @@
 ---
 title: "Automatic Logging for Faster, Secure Debugging"
-date: 2026-07-17
+date: 2026-08-10
 draft: false
 meta_desc: "Pulumi now writes encrypted logs for every operation automatically"
 feature_image: feature.png
@@ -29,7 +29,7 @@ social:
 
         We wrote up how it works.
     bluesky: |
-        Debugging an Pulumi error usually meant reproducing it by hand just to capture a log, then finding a safe way to share a file full of secrets. Pulumi v3.254.0 makes logs automatic and encrypted, safe to share even on a public GitHub issue.
+        Debugging a Pulumi error usually meant reproducing it by hand just to capture a log, then finding a safe way to share a file full of secrets. Pulumi v3.254.0 makes logs automatic and encrypted, safe to share even on a public GitHub issue.
 
         Here's what changed.
 ---
