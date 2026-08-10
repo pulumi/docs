@@ -24,6 +24,11 @@
     {{ partial "releases/section.html" (merge $section (dict "number" $i)) }}
     {{ end }}
 
+    {{/* Related events, in full event cards */}}
+    {{ with .Params.related_events }}
+    {{ partial "releases/related-events.html" (merge . (dict "pageContext" $)) }}
+    {{ end }}
+
     {{/* "More from the blog" list */}}
     {{ with .Params.blog_section }}
     {{ partial "releases/blog-list.html" . }}

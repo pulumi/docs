@@ -1,0 +1,55 @@
+{{/*
+    Releases Related Events
+
+    A bordered .card — the same panel as the blog list below it — holding the
+    full events/event-card.html for each related event: badges, countdown, date
+    chip, description, presenters, tags, and Register/Watch CTA. The cards run
+    `bare` (no border, surface, or padding of their own), since a card inside a
+    card reads as a box in a box; the panel supplies the chrome and they supply
+    the contents.
+
+    Events sit two to a row, separated by a rule down the gutter; a lone event
+    runs full width with no rule. Anything that has already happened without
+    leaving a recording behind is dropped (see events/is-current.html), and if
+    that empties the list the panel doesn't render at all.
+
+    Parameters:
+    - title:       Overline text. Defaults to "Related event" or "Related events",
+                   whichever matches what's left after filtering.
+    - anchor:      Optional section ID for TOC link targets.
+    - events:      Array of event paths (e.g. "/events/some-event"), looked up via
+                   site.GetPage; missing pages are skipped.
+    - pageContext: The release page, for the cards' relref resolution.
+*/}}
+
+{{ $anchor := .anchor }}
+{{ $pageContext := .pageContext }}
+
+{{ $events := slice }}
+{{ range .events }}
+    {{ with site.GetPage . }}
+        {{ if partial "events/is-current.html" (dict "page" .) }}
+            {{ $events = $events | append . }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{ with $events }}
+    {{ $title := $.title | default (cond (eq (len .) 1) "Related event" "Related events") }}
+    {{/* Literal class strings, not printf'd: Tailwind scans these templates as raw
+         text, so an assembled class name is never emitted.
+
+         The rule goes on every second card rather than on the container, so it
+         repeats correctly row by row for more than two events and never lands on
+         the left edge of the first column. Its own pl matches the column gap, so
+         the rule sits centered in the gutter with equal air on both sides. */}}
+    {{ $gridClass := cond (eq (len .) 1) "grid grid-cols-1 gap-10" "grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-x-10 md:[&>*:nth-child(even)]:border-l md:[&>*:nth-child(even)]:border-gray-200 md:[&>*:nth-child(even)]:pl-10" }}
+    <section{{ with $anchor }} id="{{ . }}"{{ end }} class="card bg-white p-8 md:p-10 scroll-mt-28">
+        <p class="font-overline m-0 mb-6 text-service-black">{{ $title }}</p>
+        <div class="{{ $gridClass }}">
+            {{ range . }}
+                {{ partial "events/event-card.html" (dict "page" . "pageContext" $pageContext "bare" true) }}
+            {{ end }}
+        </div>
+    </section>
+{{ end }}

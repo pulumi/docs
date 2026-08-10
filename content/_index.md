@@ -10,8 +10,8 @@ sections:
     layout: split
     cta_secondary_text: Download open source
     cta_secondary_link: /docs/install/
-    badge_highlight_text: "New this week:"
-    badge_text: "All your IaC, including Terraform and HCL"
+    badge_highlight_text: "Latest release:"
+    badge_text: "Full support for Terraform and HCL"
     badge_link: /releases/terraform-state-backend-modules-hcl/
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
