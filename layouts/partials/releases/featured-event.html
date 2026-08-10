@@ -13,8 +13,10 @@
 
     Nothing renders if the event has run without leaving a recording behind (see
     events/is-current.html), so the top of the page can't end up promoting a date
-    that has passed. Don't also list it under the feed section's events — both
-    keys are read literally, so it would appear twice.
+    that has passed. Featuring an event doesn't remove it from the feed section's
+    events list: both keys are read literally, and a session worth promoting at
+    the top is usually worth keeping in the list of everything related at the
+    bottom. Leave it out of one or the other if you'd rather it appeared once.
 
     Parameters:
     - event:       Event path (e.g. "/events/some-event"), looked up via

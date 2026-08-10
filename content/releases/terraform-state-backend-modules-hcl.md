@@ -151,7 +151,7 @@ feed_section:
   events_title: Related events
   # Listed while they're still ahead of us, then for as long as there's a recording
   # to watch; an event that has run with nothing to watch drops off on its own.
-  # The US session is the featured_event above, so it isn't repeated here.
   events:
+    - /events/pulumi-for-all-your-iac-terraform-hcl
     - /events/pulumi-for-all-your-iac-terraform-hcl-eu
 ---
