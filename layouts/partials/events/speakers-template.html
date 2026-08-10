@@ -5,12 +5,30 @@
 
     Parameters:
     - presenters: Array of presenter objects with name, role, and photo
+
+    Optional: mark a presenter with `host: true` in front matter to split them
+    out into a secondary "Host" row below the main grid — for panels where the
+    moderator shouldn't read as one of the panelists. With no host flagged, the
+    section renders as a single "Speakers" grid.
 */}}
 
+{{/* Partition explicitly rather than with `where` — `where ... "!=" true` drops
+     entries that lack the key entirely, which is every presenter on every event
+     page that hasn't opted in. */}}
+{{- $hosts := slice -}}
+{{- $speakers := slice -}}
+{{- range $presenter := .presenters -}}
+    {{- if $presenter.host -}}
+        {{- $hosts = $hosts | append $presenter -}}
+    {{- else -}}
+        {{- $speakers = $speakers | append $presenter -}}
+    {{- end -}}
+{{- end -}}
+
 <section class="template-event-speakers">
-    <span class="font-overline-sm text-gray-600">Speakers</span>
+    <span class="font-overline-sm text-gray-600">{{ if $hosts }}Panelists{{ else }}Speakers{{ end }}</span>
     <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
-        {{ range $presenter := .presenters }}
+        {{ range $presenter := $speakers }}
             <div class="flex items-center gap-4">
                 <img class="event-speaker-photo" src="{{ $presenter.photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ $presenter.name }}" />
                 <div>
@@ -20,4 +38,21 @@
             </div>
         {{ end }}
     </div>
+
+    {{ with $hosts }}
+        <div class="mt-8">
+            <span class="font-overline-sm text-gray-600">{{ if gt (len .) 1 }}Hosts{{ else }}Host{{ end }}</span>
+            <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
+                {{ range $host := . }}
+                    <div class="flex items-center gap-4">
+                        <img class="event-speaker-photo event-host-photo" src="{{ $host.photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ $host.name }}" />
+                        <div>
+                            <div class="event-speaker-name">{{ $host.name }}</div>
+                            <div class="event-speaker-role">{{ $host.role }}</div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
 </section>

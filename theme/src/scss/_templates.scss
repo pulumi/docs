@@ -603,6 +603,11 @@
         @apply rounded-full object-cover w-20 h-20;
     }
 
+    // Hosts/moderators read as secondary to the panel — smaller portrait.
+    .event-host-photo {
+        @apply w-14 h-14;
+    }
+
     .event-speaker-name {
         @apply font-semibold body-base text-gray-950;
     }
