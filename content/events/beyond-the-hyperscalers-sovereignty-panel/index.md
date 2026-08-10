@@ -13,7 +13,7 @@ unlisted: false
 
 # Gated events will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: false
+gated: true
 
 # External events will link to an external page instead of an event
 # landing/registration page. If the event is external you will need
@@ -80,6 +80,6 @@ tags:
 # The right hand side form section.
 form:
     # HubSpot form id.
-    hubspot_form_id:
-    salesforce_campaign_id:
+    hubspot_form_id: 34bf4aa2-24c2-4d27-a15e-73672b986bcf
+    salesforce_campaign_id: 701PQ00000yqHVGYA2
 ---
