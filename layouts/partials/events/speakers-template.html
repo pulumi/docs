@@ -9,8 +9,10 @@
       - social: map of platform → handle (github, linkedin, twitter, x,
         bluesky), rendered as icons via widgets/social-icons.html — the same
         shape the team data files use.
-      - company_url: full URL to the presenter's company site, rendered as a
-        short domain-name link.
+      - company + company_url: `company` names the company as it appears
+        inside the role string, and that occurrence is rendered as a link to
+        `company_url`. Both must be present (and `company` must match the
+        role text) for the link to appear.
 
     Optional: mark a presenter with `host: true` in front matter to split them
     out into a secondary "Host" row below the main grid — for panels where the
@@ -39,13 +41,16 @@
                 <img class="event-speaker-photo" src="{{ $presenter.photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ $presenter.name }}" />
                 <div>
                     <div class="event-speaker-name">{{ $presenter.name }}</div>
-                    <div class="event-speaker-role">{{ $presenter.role }}</div>
-                    {{ if or $presenter.social $presenter.company_url }}
-                        <div class="event-speaker-links mt-1 flex items-center gap-3">
-                            {{ partial "widgets/social-icons.html" (dict "social" $presenter.social) }}
-                            {{ with $presenter.company_url }}
-                                <a class="text-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ strings.TrimPrefix "www." (urls.Parse .).Host }}</a>
-                            {{ end }}
+                    <div class="event-speaker-role">
+                        {{- if and $presenter.company $presenter.company_url (in $presenter.role $presenter.company) -}}
+                            {{ replace $presenter.role $presenter.company (printf `<a class="link hover:underline" href="%s" target="_blank" rel="noopener noreferrer">%s</a>` $presenter.company_url $presenter.company) | safeHTML }}
+                        {{- else -}}
+                            {{ $presenter.role }}
+                        {{- end -}}
+                    </div>
+                    {{ with $presenter.social }}
+                        <div class="event-speaker-links mt-1">
+                            {{ partial "widgets/social-icons.html" (dict "social" .) }}
                         </div>
                     {{ end }}
                 </div>
@@ -62,13 +67,16 @@
                         <img class="event-speaker-photo event-host-photo" src="{{ $host.photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ $host.name }}" />
                         <div>
                             <div class="event-speaker-name">{{ $host.name }}</div>
-                            <div class="event-speaker-role">{{ $host.role }}</div>
-                            {{ if or $host.social $host.company_url }}
-                                <div class="event-speaker-links mt-1 flex items-center gap-3">
-                                    {{ partial "widgets/social-icons.html" (dict "social" $host.social) }}
-                                    {{ with $host.company_url }}
-                                        <a class="text-sm" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ strings.TrimPrefix "www." (urls.Parse .).Host }}</a>
-                                    {{ end }}
+                            <div class="event-speaker-role">
+                                {{- if and $host.company $host.company_url (in $host.role $host.company) -}}
+                                    {{ replace $host.role $host.company (printf `<a class="link hover:underline" href="%s" target="_blank" rel="noopener noreferrer">%s</a>` $host.company_url $host.company) | safeHTML }}
+                                {{- else -}}
+                                    {{ $host.role }}
+                                {{- end -}}
+                            </div>
+                            {{ with $host.social }}
+                                <div class="event-speaker-links mt-1">
+                                    {{ partial "widgets/social-icons.html" (dict "social" .) }}
                                 </div>
                             {{ end }}
                         </div>
