@@ -464,18 +464,29 @@ jobs:
 
             Advisory style findings are **not** tracked across reviews. Each `#update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved advisory nits into ✅ Resolved. Blocker-tier `[style-blocker]` bullets ARE tracked like regular findings: when a fix-push resolves one, move it to ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches and `[style-blocker]` bullets, not advisory `[style]` bullets.
 
-          # Effort is deliberately left unset on this lane. A 2026-07-30 fork A/B
-          # found `--effort low` makes the re-entrant path rewrite the pinned
-          # review WITHOUT the 🔍 Verification trail, 📊 Editorial balance, and
-          # investigation-log blocks (2/2 runs; the control kept all three). The
-          # loss is permanent — later updates merge from the prior comment — and
-          # invisible, because this workflow runs only `validate-pinned.py
-          # count-buckets`, never the validate → splice → validator-fix chain.
-          # The 2026-07-24 measurement that motivated the flag compared cost and
-          # latency only, not output completeness. Don't re-add it here without
-          # wiring in full validation first; the composer lane in
-          # claude-code-review.yml is a different case and keeps its low effort.
-          claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
+          # Model and effort are set from the 2026-08-10 campaign
+          # (`2026-08-10-update-lane-model-config` in pulumi/docs-review-benchmarks),
+          # a synthetic replay of this lane: 4 arms x 3 reps x 2 chained refreshes,
+          # scored on whether the re-rendered pinned body keeps its evidence spine
+          # (the 🔍 Verification trail's line floor, 📊 Editorial balance, and the
+          # investigation log). opus-5 at medium effort was the only arm intact in
+          # every cell (6/6); sonnet-5 with effort unset — what ran here before —
+          # and opus-5 unset each lost the spine in 1 of 6. It also gets there in
+          # 0.43x the output tokens and 0.64x the turns, which is ~1.25x the cost
+          # today and ~0.83x once Sonnet 5's introductory rate lapses 2026-08-31.
+          #
+          # `--effort low` stays OFF this lane. It rewrites the pinned review
+          # without the trail's contents — keeping the heading and replacing 40
+          # claim lines with a "see the full trail in the prior pass" pointer that
+          # dangles, because the prior pass is the comment it just overwrote. One
+          # rep of three collapsed to 11 of 40 lines and held exactly 11 through
+          # the next refresh. The loss is permanent — later updates merge from the
+          # prior comment — and invisible, because this workflow runs only
+          # `validate-pinned.py count-buckets`, never the validate → splice →
+          # validator-fix chain. Don't re-add it without wiring in full validation
+          # first; the composer lane in claude-code-review.yml is a different job
+          # shape and keeps its low effort.
+          claude_args: '--model claude-opus-5 --effort medium --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
 
       # Re-post the one-click style suggestions and reconcile the pinned
       # comment against what actually landed. Delete-and-repost, exactly like

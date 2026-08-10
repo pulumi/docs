@@ -36,7 +36,7 @@ If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`C
 A pinned review goes **stale** when you push new commits after it ran. One case refreshes itself: when the review had outstanding findings and your push is small (≤80 changed lines) and touches only the flagged lines — the "I fixed what you flagged" push — a deterministic gate auto-fires the scoped `#update-review` path with no mention needed. Everything else stays stale until you refresh explicitly. Three ways:
 
 1. **`@claude` mention** — hashtag-driven routing. The re-entrant pipeline branches on what you put after `@claude`:
-    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-sonnet-5`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
+    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-opus-5`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
         - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
         - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
         - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
