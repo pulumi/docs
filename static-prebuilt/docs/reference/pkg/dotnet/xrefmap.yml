@@ -10881,6 +10881,95 @@ references:
   fullName.vb: Pulumi.DictionaryResourceArgs.New
   nameWithType: DictionaryResourceArgs.DictionaryResourceArgs
   nameWithType.vb: DictionaryResourceArgs.New
+- uid: Pulumi.DiscriminatedUnionCaseAttribute
+  name: DiscriminatedUnionCaseAttribute
+  href: pulumi/pulumi.discriminatedunioncaseattribute.html
+  commentId: T:Pulumi.DiscriminatedUnionCaseAttribute
+  fullName: Pulumi.DiscriminatedUnionCaseAttribute
+  nameWithType: DiscriminatedUnionCaseAttribute
+- uid: Pulumi.DiscriminatedUnionCaseAttribute.#ctor(System.String,System.Type)
+  name: DiscriminatedUnionCaseAttribute(string, Type)
+  href: pulumi/pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute__ctor_System_String_System_Type_
+  commentId: M:Pulumi.DiscriminatedUnionCaseAttribute.#ctor(System.String,System.Type)
+  name.vb: New(String, Type)
+  fullName: Pulumi.DiscriminatedUnionCaseAttribute.DiscriminatedUnionCaseAttribute(string, System.Type)
+  fullName.vb: Pulumi.DiscriminatedUnionCaseAttribute.New(String, System.Type)
+  nameWithType: DiscriminatedUnionCaseAttribute.DiscriminatedUnionCaseAttribute(string, Type)
+  nameWithType.vb: DiscriminatedUnionCaseAttribute.New(String, Type)
+- uid: Pulumi.DiscriminatedUnionCaseAttribute.#ctor*
+  name: DiscriminatedUnionCaseAttribute
+  href: pulumi/pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute__ctor_
+  commentId: Overload:Pulumi.DiscriminatedUnionCaseAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Pulumi.DiscriminatedUnionCaseAttribute.DiscriminatedUnionCaseAttribute
+  fullName.vb: Pulumi.DiscriminatedUnionCaseAttribute.New
+  nameWithType: DiscriminatedUnionCaseAttribute.DiscriminatedUnionCaseAttribute
+  nameWithType.vb: DiscriminatedUnionCaseAttribute.New
+- uid: Pulumi.DiscriminatedUnionCaseAttribute.Tag
+  name: Tag
+  href: pulumi/pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Tag
+  commentId: P:Pulumi.DiscriminatedUnionCaseAttribute.Tag
+  fullName: Pulumi.DiscriminatedUnionCaseAttribute.Tag
+  nameWithType: DiscriminatedUnionCaseAttribute.Tag
+- uid: Pulumi.DiscriminatedUnionCaseAttribute.Tag*
+  name: Tag
+  href: pulumi/pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Tag_
+  commentId: Overload:Pulumi.DiscriminatedUnionCaseAttribute.Tag
+  isSpec: "True"
+  fullName: Pulumi.DiscriminatedUnionCaseAttribute.Tag
+  nameWithType: DiscriminatedUnionCaseAttribute.Tag
+- uid: Pulumi.DiscriminatedUnionCaseAttribute.Type
+  name: Type
+  href: pulumi/pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Type
+  commentId: P:Pulumi.DiscriminatedUnionCaseAttribute.Type
+  fullName: Pulumi.DiscriminatedUnionCaseAttribute.Type
+  nameWithType: DiscriminatedUnionCaseAttribute.Type
+- uid: Pulumi.DiscriminatedUnionCaseAttribute.Type*
+  name: Type
+  href: pulumi/pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Type_
+  commentId: Overload:Pulumi.DiscriminatedUnionCaseAttribute.Type
+  isSpec: "True"
+  fullName: Pulumi.DiscriminatedUnionCaseAttribute.Type
+  nameWithType: DiscriminatedUnionCaseAttribute.Type
+- uid: Pulumi.DiscriminatedUnionDiscriminatorAttribute
+  name: DiscriminatedUnionDiscriminatorAttribute
+  href: pulumi/pulumi.discriminateduniondiscriminatorattribute.html
+  commentId: T:Pulumi.DiscriminatedUnionDiscriminatorAttribute
+  fullName: Pulumi.DiscriminatedUnionDiscriminatorAttribute
+  nameWithType: DiscriminatedUnionDiscriminatorAttribute
+- uid: Pulumi.DiscriminatedUnionDiscriminatorAttribute.#ctor(System.String)
+  name: DiscriminatedUnionDiscriminatorAttribute(string)
+  href: pulumi/pulumi.discriminateduniondiscriminatorattribute.html#Pulumi_DiscriminatedUnionDiscriminatorAttribute__ctor_System_String_
+  commentId: M:Pulumi.DiscriminatedUnionDiscriminatorAttribute.#ctor(System.String)
+  name.vb: New(String)
+  fullName: Pulumi.DiscriminatedUnionDiscriminatorAttribute.DiscriminatedUnionDiscriminatorAttribute(string)
+  fullName.vb: Pulumi.DiscriminatedUnionDiscriminatorAttribute.New(String)
+  nameWithType: DiscriminatedUnionDiscriminatorAttribute.DiscriminatedUnionDiscriminatorAttribute(string)
+  nameWithType.vb: DiscriminatedUnionDiscriminatorAttribute.New(String)
+- uid: Pulumi.DiscriminatedUnionDiscriminatorAttribute.#ctor*
+  name: DiscriminatedUnionDiscriminatorAttribute
+  href: pulumi/pulumi.discriminateduniondiscriminatorattribute.html#Pulumi_DiscriminatedUnionDiscriminatorAttribute__ctor_
+  commentId: Overload:Pulumi.DiscriminatedUnionDiscriminatorAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Pulumi.DiscriminatedUnionDiscriminatorAttribute.DiscriminatedUnionDiscriminatorAttribute
+  fullName.vb: Pulumi.DiscriminatedUnionDiscriminatorAttribute.New
+  nameWithType: DiscriminatedUnionDiscriminatorAttribute.DiscriminatedUnionDiscriminatorAttribute
+  nameWithType.vb: DiscriminatedUnionDiscriminatorAttribute.New
+- uid: Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName
+  name: PropertyName
+  href: pulumi/pulumi.discriminateduniondiscriminatorattribute.html#Pulumi_DiscriminatedUnionDiscriminatorAttribute_PropertyName
+  commentId: P:Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName
+  fullName: Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName
+  nameWithType: DiscriminatedUnionDiscriminatorAttribute.PropertyName
+- uid: Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName*
+  name: PropertyName
+  href: pulumi/pulumi.discriminateduniondiscriminatorattribute.html#Pulumi_DiscriminatedUnionDiscriminatorAttribute_PropertyName_
+  commentId: Overload:Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName
+  isSpec: "True"
+  fullName: Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName
+  nameWithType: DiscriminatedUnionDiscriminatorAttribute.PropertyName
 - uid: Pulumi.EnumTypeAttribute
   name: EnumTypeAttribute
   href: pulumi/pulumi.enumtypeattribute.html
