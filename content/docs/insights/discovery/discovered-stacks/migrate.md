@@ -1,6 +1,6 @@
 ---
 title: Migrate from a Discovered Stack
-title_tag: "Migrate from a Discovered Stack | Pulumi Insights"
+title_tag: "Migrate from a Discovered Stack | Discovery & Governance"
 h1: Migrate from a Discovered Stack
 meta_desc: Migrate CloudFormation and ARM resources from a discovered stack to Pulumi IaC with Neo, import commands, or your own agent, verified by a zero-diff preview.
 menu:

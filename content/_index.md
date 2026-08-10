@@ -309,12 +309,12 @@ sections:
         image_alt: Pulumi ESC secrets management
         cta_text: Learn more about Pulumi ESC
         cta_link: /product/secrets-management/
-      - title: Insights & governance
+      - title: Discovery & governance
         description: |
           Use natural language queries to find managed and unmanaged resources — even across clouds. Enforce policies, track compliance in real-time, and find vulnerabilities before they become incidents.
         image: /images/home/ig-card-image.svg
-        image_alt: Pulumi Insights governance dashboard
-        cta_text: Learn more about insights & governance
+        image_alt: Pulumi Discovery & Governance dashboard
+        cta_text: Learn more about discovery & governance
         cta_link: /product/insights-governance/
       - title: Self-service infrastructure
         description: |
