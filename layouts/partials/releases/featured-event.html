@@ -2,25 +2,57 @@
     Releases Featured Event
 
     One event promoted to the top of a release page, directly under the intro and
-    TOC row: the full events/event-card.html — badges, countdown, description,
-    presenters, tags, and Register/Watch CTA — run at the page's full width rather
-    than in a grid column. The card's own max-w-prose keeps the title and
-    description readable at that width, and it borrows the page's violet hover so
-    it behaves like every other clickable card around it.
+    TOC row: a full-width banner card carrying a large calendar icon, a violet
+    badge, the event title, and a link-style CTA. It deliberately isn't
+    events/event-card.html — at full width that card's description, presenter
+    photos, and tag chips are more page than a single upcoming session warrants.
+    The surface, hover, and CTA are the intro card's, so it reads as the next
+    panel in the page rather than an events-page transplant.
 
-    Nothing renders if the event has run without leaving a recording behind
-    (see events/is-current.html), so the top of the page can't end up promoting a
-    date that has passed. Don't also list it under the feed section's events —
-    both keys are read literally, so it would appear twice.
+    Nothing renders if the event has run without leaving a recording behind (see
+    events/is-current.html), so the top of the page can't end up promoting a date
+    that has passed. Don't also list it under the feed section's events — both
+    keys are read literally, so it would appear twice.
 
     Parameters:
     - event:       Event path (e.g. "/events/some-event"), looked up via
                    site.GetPage; a missing page renders nothing.
-    - pageContext: The release page, for the card's relref resolution.
+    - badge:       Optional badge text (e.g. "Virtual workshop"). Free text rather
+                   than the event's own event_type, which is a bare "workshop".
+    - title:       Optional override for the event's title, which can be long.
+    - cta_label:   Optional CTA text. Defaults to "Register for event", or
+                   "Watch the recording" once there's a recording.
+    - icon:        Optional Phosphor icon name. Defaults to "calendar-check".
 */}}
+
+{{ $badge := .badge }}
+{{ $titleOverride := .title }}
+{{ $ctaLabel := .cta_label }}
+{{ $icon := .icon | default "calendar-check" }}
 
 {{ with site.GetPage .event }}
     {{ if partial "events/is-current.html" (dict "page" .) }}
-        {{ partial "events/event-card.html" (dict "page" . "pageContext" $.pageContext "hoverClass" "card-hover-violet") }}
+        {{ $onDemand := .Params.youtube_url }}
+        {{ $title := $titleOverride | default .Params.title }}
+        {{ $cta := $ctaLabel | default (cond (not (not $onDemand)) "Watch the recording" "Register for event") }}
+
+        {{/* External and internal-landing-page events point at a full URL in
+             url_slug; everything else is just the event page. */}}
+        {{ $external := or .Params.external .Params.internal_landing_page }}
+        {{ $href := cond $external (.Params.url_slug | string) .RelPermalink }}
+
+        <a href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }} data-track="release-featured-event-{{ .Title | urlize }}" class="card bg-white p-8 lg:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-8 no-underline hover:no-underline transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary group">
+            <div class="text-violet-primary shrink-0">
+                {{ partial "icon.html" (dict "name" $icon "weight" "duotone" "class" "size-14 md:size-16") }}
+            </div>
+            <div class="flex min-w-0 flex-1 flex-col items-start gap-3">
+                {{ with $badge }}{{ partial "badge.html" (dict "text" . "variant" "brand") }}{{ end }}
+                <h3 class="heading-2 m-0 font-display font-semibold tracking-tighter text-service-black leading-[1.1]">{{ $title }}{{ if $external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-5 ml-1.5 opacity-50") }}{{ end }}</h3>
+            </div>
+            <span class="inline-flex shrink-0 items-center gap-1 font-semibold text-violet-primary">
+                {{ $cta }}
+                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-5") }}
+            </span>
+        </a>
     {{ end }}
 {{ end }}

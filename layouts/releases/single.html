@@ -21,7 +21,7 @@
 
     {{/* Featured event, full width under the intro/TOC row */}}
     {{ with .Params.featured_event }}
-    {{ partial "releases/featured-event.html" (dict "event" . "pageContext" $) }}
+    {{ partial "releases/featured-event.html" . }}
     {{ end }}
 
     {{/* Page sections */}}

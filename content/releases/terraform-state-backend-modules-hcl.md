@@ -29,9 +29,12 @@ intro:
   link: /blog/bring-your-terraform-estate-into-the-agentic-era/
   link_label: Read the blog post
 
-# Full-width event card under the intro and TOC. Drops off once the workshop has
-# run, unless there's a recording to watch. Keep it out of feed_section.events.
-featured_event: /events/pulumi-for-all-your-iac-terraform-hcl
+# Full-width event banner under the intro and TOC. Drops off once the workshop
+# has run, unless there's a recording to watch. Keep it out of feed_section.events.
+featured_event:
+  event: /events/pulumi-for-all-your-iac-terraform-hcl
+  badge: Virtual workshop
+  cta_label: Register for event
 
 sections:
   - anchor: terraform-backend

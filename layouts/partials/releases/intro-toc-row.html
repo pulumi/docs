@@ -17,7 +17,7 @@
         {{ $hasLink := .link }}
         {{ $hasLinkLabel := .link_label }}
         {{ $introClasses := "card bg-white p-8 lg:p-10 flex flex-col gap-6 no-underline hover:no-underline h-full" }}
-        {{ if $hasLink }}{{ $introClasses = printf "%s card-hover-violet group" $introClasses }}{{ end }}
+        {{ if $hasLink }}{{ $introClasses = printf "%s transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary group" $introClasses }}{{ end }}
         {{ if $hasLink }}<a href="{{ .link }}" class="{{ $introClasses }}">{{ else }}<div class="{{ $introClasses }}">{{ end }}
             {{ with .quote }}
             <div class="heading-2 m-0! font-display font-semibold tracking-tighter text-service-black leading-[1.1]">{{ . | markdownify }}</div>
