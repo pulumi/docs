@@ -314,6 +314,21 @@ Place the card yourself, wherever it reads best — usually at a natural section
 
 **When to add one:** the card suits evergreen, search-and-discovery content (comparisons, best-practices guides, how-to tutorials, explainers) of at least ~800 words. Skip it on very short posts, where it overwhelms the content, and on time-bound announcement or news content — funding, partnerships, brand milestones, year-in-review recaps, and `category: company` posts generally — where a "get started" ask is off-topic.
 
+#### Event and Post Cards
+
+To point readers at an event or another blog post, embed its card with the `blog/card` shortcode instead of describing it in a CTA card. Pass one content path:
+
+```plain
+{{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
+{{< blog/card "/blog/pulumi-neo/" >}}
+```
+
+This is the same tile the [events list](/events/) and the blog homepage use, so the card pulls its title, date, location, presenters, and blurb from the target page — nothing to restate and nothing to go stale. An event card also flips its own CTA from "Register" to "Watch" once a recording is added to the event page, so a post that outlives the event still links somewhere useful.
+
+A card is always full width, so it's one card per shortcode — several in a row is simply several shortcodes. The path is the only parameter: there's no title or body copy to set, so anything you want to say about a card goes in the prose around it. Paths must be absolute and resolve to a page under `/events/` or `/blog/` — a typo fails the build rather than dropping the card silently.
+
+Reach for `blog/cta-card` instead when you're linking somewhere without a card (docs, a product page, a signup) or writing a generic get-started ask.
+
 #### Animated GIFs
 
 GIFs are welcome, but should be optimized. In general, animated GIFs should be no more than 1200 pixels wide and 3 MB in size. If you need help optimizing your GIF, consider [Gifsicle](https://www.lcdf.org/gifsicle/); it's available through Homebrew and has an easy-to-use command-line API. For example, to resize (e.g., downscale) and optimize a GIF in place:

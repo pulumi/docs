@@ -1,0 +1,54 @@
+{{/*
+    Blog Body Card Shortcode
+
+    Embeds an event or blog post card in the body of a post — the same tiles the
+    events list and the blog homepage use, so an embedded event stays in sync with
+    its event page for free (title, date chip, location, presenters, and the
+    Register → Watch flip once a recording lands). Prefer this over hand-writing a
+    `blog/cta-card` for an event: a CTA card has to restate the title, date, and
+    blurb, and those copies go stale.
+
+    Usage (one positional page path):
+        {{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
+        {{< blog/card "/blog/pulumi-neo/" >}}
+
+    The card is full width, never side by side: the text column is only so wide,
+    and a full-width card reads as part of the post rather than as an ad unit. So
+    one card per shortcode — several in a row is just several shortcodes. The path
+    is the only parameter; everything the card shows comes from the target page.
+
+    Parameters (positional only): one absolute content path, resolving to a page
+    under /events/ or /blog/. An unresolvable path or an unsupported section is a
+    build error — a silently missing card is worse than a failed build.
+*/}}
+{{/* errorf doesn't halt the template, so the argument checks set a flag and the
+     body is gated on it — otherwise a bad call reports its real error and then
+     panics again downstream on the nil path, burying the useful message. */}}
+{{ $valid := true }}
+{{ if .IsNamedParams }}
+    {{ $valid = false }}
+    {{ errorf "blog/card shortcode takes one positional page path, not named parameters — e.g. {{< blog/card \"/events/some-event/\" >}}: %s" .Position }}
+{{ else if ne (len .Params) 1 }}
+    {{ $valid = false }}
+    {{ errorf "blog/card shortcode takes exactly one page path (got %d); a card is full width, so use one shortcode per card: %s" (len .Params) .Position }}
+{{ end }}
+
+{{ if $valid }}
+    {{ $ref := .Get 0 }}
+    {{ with site.GetPage $ref }}
+        {{ if eq .Type "events" }}
+            <div class="my-8">{{ partial "events/event-card.html" (dict "page" . "pageContext" $.Page) }}</div>
+        {{ else if eq .Type "blog" }}
+            {{/* The wide card, boxed to match the event card. `group relative` on
+                 the wrapper anchors the title's stretched link. */}}
+            {{ partial "blog/card/wide.html" (dict
+                "page" .
+                "class" "card card-hover group relative my-8 flex items-center gap-4 p-6 md:gap-8 md:p-7"
+            ) }}
+        {{ else }}
+            {{ errorf "blog/card shortcode: %q is a %q page; only /events/ and /blog/ pages have cards: %s" $ref .Type $.Position }}
+        {{ end }}
+    {{ else }}
+        {{ errorf "blog/card shortcode: no page found at %q: %s" $ref $.Position }}
+    {{ end }}
+{{ end }}
