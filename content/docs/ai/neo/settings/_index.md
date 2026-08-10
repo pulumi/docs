@@ -35,7 +35,7 @@ If you'd rather keep Neo on but disable specific capabilities, use the per-featu
 - **Enable Neo CLI explanations**: AI explanations served to the Pulumi CLI
 - **Enable natural-language resource search**: Searching your resources with natural-language queries
 
-To disable [Neo code reviews](/docs/ai/neo/code-reviews/), navigate to your [VCS integration settings](/docs/integrations/version-control/) under **Management** > **Version control**.
+To disable [Neo code reviews](/docs/ai/neo/code-reviews/), select the "Code reviews" tab in Neo Settings and turn off "Enable code reviews".
 
 ![Neo access settings](toggle-neo-access.png)
 

@@ -61,7 +61,6 @@ After creating an integration, you can configure pull request behavior. Toggle t
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on Bitbucket pull requests |
-| Neo Code Reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
 To delete an integration, select **Delete Integration** on the integration card. This removes the webhooks Pulumi created on your Bitbucket repositories and disconnects all stacks using that integration.
@@ -70,15 +69,17 @@ To delete an integration, select **Delete Integration** on the integration card.
 
 ### Pull request comments
 
-Pulumi automatically posts comments on pull requests with the results of any stack changes. This includes a summary of how many resources were created, updated, or deleted, with a link to the full details in [Pulumi Cloud](https://app.pulumi.com/signin). When enabled, comments also include a collapsible detailed diff and an AI-generated explanation from Neo.
+Pulumi automatically posts comments on pull requests with the results of any stack changes. This includes a summary of how many resources were created, updated, or deleted, with a link to the full details in [Pulumi Cloud](https://app.pulumi.com/signin). When enabled, comments also include a collapsible detailed diff.
 
 Comments are idempotent: updates to the same stack edit the existing comment rather than creating a new one. Draft pull requests are treated identically to regular pull requests.
 
 For [review stacks](#review-stacks), comments show the review stack status and outputs instead of a standard preview summary.
 
+These comments come from Pulumi Deployments. [Neo code reviews](/docs/ai/neo/code-reviews/), which analyze a pull request and leave inline feedback, are available on GitHub only — Neo does not comment on Bitbucket pull requests.
+
 ### Commit status checks
 
-Pulumi posts commit status checks to Bitbucket on every deployment, for both push and pull request events. Statuses include a link back to the deployment in Pulumi Cloud.
+Pulumi posts commit status checks to Bitbucket for pull request deployments. Statuses include a link back to the deployment in Pulumi Cloud. Push-to-deploy runs do not post a commit status.
 
 ### Push-to-deploy
 
