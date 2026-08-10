@@ -91,4 +91,4 @@ values:
 
 ## Built-in properties
 
-In addition to referencing properties defined within an environment, references can access several built-in properties: information about the user evaluating an environment (`context`), other environments in the organization (`environments`), and imported environments (`imports`). See [Built-in properties](/docs/esc/concepts/builtin-properties/).
+Besides the properties defined within an environment, references can access three built-in properties: information about the user evaluating an environment (`context`), other environments in the organization (`environments`), and imported environments (`imports`). See [Built-in properties](/docs/esc/concepts/builtin-properties/).

@@ -23,7 +23,7 @@ menu:
     weight: 7
 ---
 
-In addition to referencing properties defined within an environment, [references](/docs/esc/concepts/interpolations-and-references/) can access several built-in properties: information about the user evaluating an environment (`context`), other environments in the organization (`environments`), and imported environments (`imports`).
+Besides the properties defined within an environment, [references](/docs/esc/concepts/interpolations-and-references/) can access three built-in properties: information about the user evaluating an environment (`context`), other environments in the organization (`environments`), and imported environments (`imports`).
 
 ## context
 
