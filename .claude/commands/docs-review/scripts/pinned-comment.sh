@@ -367,7 +367,18 @@ cmd_upsert() {
     # Never fatal: splice-spine.py exits 0 on any internal failure and leaves
     # the body as rendered. A repair pass must not be the reason a review fails
     # to publish. Operates on a COPY so a caller's file is never mutated.
-    if [[ "${SPLICE_SPINE:-1}" != "0" ]]; then
+    # Scoped by CAPABILITY, not by lane name. The floor is only sound where the
+    # caller could not have re-derived the trail: claude-update.yml does a fresh
+    # shallow checkout and runs only Vale, so a shrunken trail there is always a
+    # loss. The composer lane (claude-code-review.yml, which reaches this
+    # function through cmd_upsert_validated) recomposes from
+    # `.verified-claims.json` against the CURRENT diff — if the author force-
+    # pushed a smaller change and re-requested review, a shorter trail is
+    # CORRECT there, and restoring the old one would inject records for lines
+    # that no longer exist. So: claims artifacts present => the caller owns the
+    # trail, stand down. Absent => the prior comment is the only copy, hold.
+    if [[ "${SPLICE_SPINE:-1}" != "0" ]] \
+       && [[ ! -f .verified-claims.json && ! -f .candidate-claims.json ]]; then
         local script_dir splicer
         script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
         splicer="$script_dir/splice-spine.py"
