@@ -31,6 +31,12 @@
 {{ $session := .session }}
 
 {{ $datetime := $data.Params.sortable_date }}
+{{/* Conferences and the like ("event") are all-day or multi-day: the frontmatter
+     time is just the slot the day starts, so a "9AM PDT" line under the date
+     would read as a session start that doesn't exist. Workshops, talks, and
+     webinars are single sessions, where the local start time is the whole
+     question the card has to answer. */}}
+{{ $showTime := ne $data.Params.event_type "event" }}
 {{/* Everyone across every session, so a card with no session of its own (the
      on-demand card a recording produces) still names the speakers even when the
      event keeps its lineups per-session rather than at the top level. */}}
@@ -85,18 +91,23 @@
             </div>
             {{ if not $onDemand }}
             {{/* Server-rendered in the event's own timezone as the no-JS fallback;
-                 resources.ts rewrites all three lines in the visitor's zone. The
-                 whole tile localizes, not just the time, because a US evening slot
-                 is the next calendar day in Europe — "Sep 15" over "1:00 AM" would
-                 be wrong twice over. */}}
-            <div data-event-tile data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" class="flex h-auto w-16 shrink-0 flex-col items-center overflow-hidden rounded-lg border border-gray-200 text-gray-950">
+                 where a start time applies, resources.ts rewrites the whole tile in
+                 the visitor's zone — not just the time, because a US evening slot is
+                 the next calendar day in Europe, so "Sep 15" over "1:00 AM" would be
+                 wrong twice over. A timeless tile stays server-rendered for the same
+                 reason in reverse: with no time line to explain it, a shifted day
+                 would just look like the wrong date for a conference everyone else
+                 calls Sep 15. */}}
+            <div {{ if $showTime }}data-event-tile data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}"{{ end }} class="flex h-auto w-16 shrink-0 flex-col items-center overflow-hidden rounded-lg border border-gray-200 text-gray-950">
                 {{/* Day and month in their own padded block so the time's top rule
                      can run edge to edge, like a calendar tile's tear line. */}}
                 <div class="flex w-full flex-col items-center px-1 py-1.5">
                     <div data-event-tile-day class="font-mono text-xl leading-none">{{ $datetime | time.Format "2" }}</div>
                     <div data-event-tile-month class="font-mono text-[0.65rem] uppercase">{{ $datetime | time.Format "Jan" }}</div>
                 </div>
-                <div data-event-tile-time class="w-full border-t border-gray-200 p-1 text-center font-mono text-[0.6rem] whitespace-nowrap uppercase" hidden></div>
+                {{ if $showTime }}
+                    <div data-event-tile-time class="w-full border-t border-gray-200 p-1 text-center font-mono text-[0.6rem] whitespace-nowrap uppercase" hidden></div>
+                {{ end }}
             </div>
             {{ end }}
         </div>
