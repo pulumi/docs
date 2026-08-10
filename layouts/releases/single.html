@@ -10,18 +10,14 @@
     {{ partial "releases/hero-card.html" . }}
     {{ end }}
 
-    {{/* Intro card + TOC */}}
-    {{ if or .Params.intro .Params.sections }}
+    {{/* Intro card + TOC, plus any featured event under them */}}
+    {{ if or .Params.intro .Params.sections .Params.featured_event }}
     {{ partial "releases/intro-toc-row.html" (dict
         "intro" .Params.intro
         "toc_heading" .Params.toc_heading
         "sections" .Params.sections
+        "featured_event" .Params.featured_event
     ) }}
-    {{ end }}
-
-    {{/* Featured event, full width under the intro/TOC row */}}
-    {{ with .Params.featured_event }}
-    {{ partial "releases/featured-event.html" . }}
     {{ end }}
 
     {{/* Page sections */}}

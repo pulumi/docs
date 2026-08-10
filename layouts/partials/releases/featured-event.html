@@ -1,13 +1,15 @@
 {{/*
     Releases Featured Event
 
-    One event promoted to the top of a release page, directly under the intro and
-    TOC row: a full-width banner card carrying a large calendar icon, a violet
-    badge, the event title, and a link-style CTA. It deliberately isn't
-    events/event-card.html — at full width that card's description, presenter
-    photos, and tag chips are more page than a single upcoming session warrants.
-    The surface, hover, and CTA are the intro card's, so it reads as the next
-    panel in the page rather than an events-page transplant.
+    One event promoted to the top of a release page: a banner carrying a calendar
+    icon, a violet badge, the event title, and a link-style CTA. It rides in the
+    intro/TOC grid (see releases/intro-toc-row.html), spanning both columns under
+    those two cards, and borrows the intro card's surface, hover, icon size, and
+    CTA so the three read as one row of furniture.
+
+    It deliberately isn't events/event-card.html — at this width that card's
+    description, presenter photos, and tag chips are more page than a single
+    session warrants, and they'd outweigh the release's own section cards.
 
     Nothing renders if the event has run without leaving a recording behind (see
     events/is-current.html), so the top of the page can't end up promoting a date
@@ -22,13 +24,14 @@
     - title:       Optional override for the event's title, which can be long.
     - cta_label:   Optional CTA text. Defaults to "Register for event", or
                    "Watch the recording" once there's a recording.
-    - icon:        Optional Phosphor icon name. Defaults to "calendar-check".
+    - icon:        Optional Phosphor icon name. Defaults to "calendar-blank"; the
+                   sprite also carries "calendar" and "calendar-check".
 */}}
 
 {{ $badge := .badge }}
 {{ $titleOverride := .title }}
 {{ $ctaLabel := .cta_label }}
-{{ $icon := .icon | default "calendar-check" }}
+{{ $icon := .icon | default "calendar-blank" }}
 
 {{ with site.GetPage .event }}
     {{ if partial "events/is-current.html" (dict "page" .) }}
@@ -41,18 +44,18 @@
         {{ $external := or .Params.external .Params.internal_landing_page }}
         {{ $href := cond $external (.Params.url_slug | string) .RelPermalink }}
 
-        <a href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }} data-track="release-featured-event-{{ .Title | urlize }}" class="card bg-white p-8 lg:p-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-8 no-underline hover:no-underline transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary group">
-            <div class="text-violet-primary shrink-0">
-                {{ partial "icon.html" (dict "name" $icon "weight" "duotone" "class" "size-14 md:size-16") }}
-            </div>
-            <div class="flex min-w-0 flex-1 flex-col items-start gap-3">
+        <a href="{{ $href }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }} data-track="release-featured-event-{{ .Title | urlize }}" class="card lg:col-span-2 bg-white p-8 lg:p-10 flex flex-col gap-6 no-underline hover:no-underline transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary group">
+            <div class="flex items-center gap-3">
+                <span class="text-violet-primary shrink-0 inline-flex">{{ partial "icon.html" (dict "name" $icon "weight" "duotone" "class" "size-8") }}</span>
                 {{ with $badge }}{{ partial "badge.html" (dict "text" . "variant" "brand") }}{{ end }}
-                <h3 class="heading-2 m-0 font-display font-semibold tracking-tighter text-service-black leading-[1.1]">{{ $title }}{{ if $external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-5 ml-1.5 opacity-50") }}{{ end }}</h3>
             </div>
-            <span class="inline-flex shrink-0 items-center gap-1 font-semibold text-violet-primary">
-                {{ $cta }}
-                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-5") }}
-            </span>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <h3 class="heading-2 m-0 font-display font-semibold tracking-tighter text-service-black leading-[1.1]">{{ $title }}{{ if $external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-5 ml-1.5 opacity-50") }}{{ end }}</h3>
+                <span class="inline-flex shrink-0 items-center gap-1 font-semibold text-violet-primary">
+                    {{ $cta }}
+                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-5") }}
+                </span>
+            </div>
         </a>
     {{ end }}
 {{ end }}

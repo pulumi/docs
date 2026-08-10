@@ -2,14 +2,18 @@
     Releases Intro + TOC Row
 
     Parameters:
-    - intro:        Map with .quote (markdown), .attribution (markdown), and optional .link.
-    - toc_heading:  Heading text for the TOC card. Defaults to "What we're shipping".
-    - sections:     Array of {anchor, label, heading, ...}.
+    - intro:          Map with .quote (markdown), .attribution (markdown), and optional .link.
+    - toc_heading:    Heading text for the TOC card. Defaults to "What we're shipping".
+    - sections:       Array of {anchor, label, heading, ...}.
+    - featured_event: Optional map for releases/featured-event.html, which rides in
+                      this grid — full width under the intro and TOC — so it keeps
+                      the row's gap rather than the wider gap between page sections.
 */}}
 
 {{ $intro := .intro }}
 {{ $tocHeading := .toc_heading | default "What we're shipping" }}
 {{ $sections := .sections }}
+{{ $featuredEvent := .featured_event }}
 
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 -mt-10 md:-mt-14 lg:-mt-18">
     {{/* Intro / quote card */}}
@@ -49,5 +53,10 @@
             {{ end }}
         </ul>
     </aside>
+    {{ end }}
+
+    {{/* Featured event, spanning the row under the intro and TOC */}}
+    {{ with $featuredEvent }}
+    {{ partial "releases/featured-event.html" . }}
     {{ end }}
 </div>

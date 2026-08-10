@@ -34,7 +34,7 @@ intro:
 featured_event:
   event: /events/pulumi-for-all-your-iac-terraform-hcl
   badge: Virtual workshop
-  cta_label: Register for event
+  cta_label: Register for workshop
 
 sections:
   - anchor: terraform-backend
