@@ -29,6 +29,10 @@ intro:
   link: /blog/bring-your-terraform-estate-into-the-agentic-era/
   link_label: Read the blog post
 
+# Full-width event card under the intro and TOC. Drops off once the workshop has
+# run, unless there's a recording to watch. Keep it out of feed_section.events.
+featured_event: /events/pulumi-for-all-your-iac-terraform-hcl
+
 sections:
   - anchor: terraform-backend
     label: Terraform state and remote execution in Pulumi Cloud
@@ -144,7 +148,7 @@ feed_section:
   events_title: Related events
   # Listed while they're still ahead of us, then for as long as there's a recording
   # to watch; an event that has run with nothing to watch drops off on its own.
+  # The US session is the featured_event above, so it isn't repeated here.
   events:
-    - /events/pulumi-for-all-your-iac-terraform-hcl
     - /events/pulumi-for-all-your-iac-terraform-hcl-eu
 ---

@@ -19,6 +19,11 @@
     ) }}
     {{ end }}
 
+    {{/* Featured event, full width under the intro/TOC row */}}
+    {{ with .Params.featured_event }}
+    {{ partial "releases/featured-event.html" (dict "event" . "pageContext" $) }}
+    {{ end }}
+
     {{/* Page sections */}}
     {{ range $i, $section := .Params.sections }}
     {{ partial "releases/section.html" (merge $section (dict "number" $i)) }}

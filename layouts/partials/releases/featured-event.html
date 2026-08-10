@@ -1,0 +1,26 @@
+{{/*
+    Releases Featured Event
+
+    One event promoted to the top of a release page, directly under the intro and
+    TOC row: the full events/event-card.html — badges, countdown, description,
+    presenters, tags, and Register/Watch CTA — run at the page's full width rather
+    than in a grid column. The card's own max-w-prose keeps the title and
+    description readable at that width, and it borrows the page's violet hover so
+    it behaves like every other clickable card around it.
+
+    Nothing renders if the event has run without leaving a recording behind
+    (see events/is-current.html), so the top of the page can't end up promoting a
+    date that has passed. Don't also list it under the feed section's events —
+    both keys are read literally, so it would appear twice.
+
+    Parameters:
+    - event:       Event path (e.g. "/events/some-event"), looked up via
+                   site.GetPage; a missing page renders nothing.
+    - pageContext: The release page, for the card's relref resolution.
+*/}}
+
+{{ with site.GetPage .event }}
+    {{ if partial "events/is-current.html" (dict "page" .) }}
+        {{ partial "events/event-card.html" (dict "page" . "pageContext" $.pageContext "hoverClass" "card-hover-violet") }}
+    {{ end }}
+{{ end }}

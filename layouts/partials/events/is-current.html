@@ -1,0 +1,19 @@
+{{- /*
+    Is this event still worth linking to? True while it's ahead of us (per
+    events/upcoming.html, the site-wide definition of "upcoming"), and afterwards
+    for as long as it has a recording to watch — the point at which
+    events/event-card.html and events/list-row.html swap Register for Watch.
+
+    Pages that pin specific events (a release page's featured event and related
+    events list) use this to drop an event that has run with nothing to watch,
+    rather than advertising a date that has already passed.
+
+    Params: page (required) the event page.
+    Returns: bool.
+*/ -}}
+{{- $page := .page -}}
+{{- $upcoming := false -}}
+{{- range partialCached "events/upcoming.html" . "global" -}}
+    {{- if eq .data.RelPermalink $page.RelPermalink }}{{ $upcoming = true }}{{ end -}}
+{{- end -}}
+{{- return or $upcoming (not (not $page.Params.youtube_url)) -}}

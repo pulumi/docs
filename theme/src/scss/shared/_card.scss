@@ -7,6 +7,14 @@
     @apply cursor-pointer hover:border-gray-300;
 }
 
+// The louder, brand-violet flavour of the same idea, for pages that make whole
+// cards clickable and want the hover to read across a grid of them (release
+// pages, template pages). Swap it in for `.card-hover`, don't stack the two —
+// they both set the hover border.
+.card-hover-violet {
+    @apply cursor-pointer transition-colors duration-200 hover:bg-violet-50 hover:border-violet-primary;
+}
+
 // Tinted panel for a supporting note — a "see also" list, a callout. The fill is
 // the boundary, so no border; it deliberately does not extend .card. Compose
 // with padding: `class="card-highlight p-8"`.

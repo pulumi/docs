@@ -5,13 +5,14 @@
     each under its own overline. Rows come from the shared compact list-row
     components, so both lists line up on the same columns.
 
-    An event stays on the page for as long as it's worth a click: while it's still
-    ahead of us (per events/upcoming.html, the site-wide definition of "upcoming"
-    shared with the events list and the homepage), and afterwards for as long as
-    it has a recording — in which case its row flips itself from Register to
-    Watch. An event that has run with nothing to watch drops off, and the heading
-    goes with the last of them, so the card can never advertise a date that has
-    already passed.
+    An event stays on the page for as long as events/is-current.html says it's
+    worth a click — while it's still ahead of us, and afterwards for as long as it
+    has a recording, in which case its row flips itself from Register to Watch. An
+    event that has run with nothing to watch drops off, and the heading goes with
+    the last of them, so the card can never advertise a date that has passed.
+
+    An event pinned as the page's featured_event shouldn't also be listed here;
+    the two keys are read literally, so listing it in both renders it twice.
 
     Parameters:
     - anchor:       Optional section ID for TOC link targets.
@@ -32,14 +33,10 @@
     {{ with site.GetPage . }}{{ $posts = $posts | append . }}{{ end }}
 {{ end }}
 
-{{ $upcoming := slice }}
-{{ range partialCached "events/upcoming.html" . "global" }}
-    {{ $upcoming = $upcoming | append .data.RelPermalink }}
-{{ end }}
 {{ $events := slice }}
 {{ range .events }}
     {{ with site.GetPage . }}
-        {{ if or (in $upcoming .RelPermalink) .Params.youtube_url }}
+        {{ if partial "events/is-current.html" (dict "page" .) }}
             {{ $events = $events | append . }}
         {{ end }}
     {{ end }}
