@@ -49,7 +49,7 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 
 ## Account hierarchies
 
-Account hierarchies allow you to organize and manage cloud accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so in the case of AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.
+Account hierarchies allow you to organize and manage cloud accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so for AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.
 
 ### How child accounts work
 
@@ -61,7 +61,7 @@ For example:
 * Child account (region): `my-aws-account/us-east-1`  
 * Sub-child account (K8s cluster): `my-aws-account/us-east-1/my-cluster`
 
-If you scan or delete the `my-aws-account` cloud account, Pulumi applies this action to all child accounts. However, you can still scan or delete `my-aws-account/us-east-1` without affecting other children of `my-aws-account` and future scans of `my-aws-account` will no longer include `us-east-1` unless it is updated.
+If you scan or delete the `my-aws-account` cloud account, Pulumi applies this action to all child accounts. However, you can still scan or delete `my-aws-account/us-east-1` without affecting other children of `my-aws-account` and future scans of `my-aws-account` will no longer include `us-east-1` unless updated.
 
 Key benefits of child accounts include:
 

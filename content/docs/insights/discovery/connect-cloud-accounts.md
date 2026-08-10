@@ -170,7 +170,7 @@ The recommended flows authenticate with OIDC and workload identity federation, s
 
 ## Azure management groups
 
-Pulumi models each Azure subscription as its own cloud account. There is no management-group-level account, and a single cloud account can't scan more than one subscription. What is shared across your tenant is the *identity*: the wizard creates one app registration, one federated identity credential, and one service principal for the whole tenant, plus one ESC environment (`discover/azure-<tenantId>-env`) that every subscription's cloud account references. Connecting 40 subscriptions produces 40 cloud accounts, but still only one app registration and one set of credentials.
+Pulumi models each Azure subscription as its own cloud account. No management-group-level account exists, and a single cloud account can't scan more than one subscription. What is shared across your tenant is the *identity*: the wizard creates one app registration, one federated identity credential, and one service principal for the whole tenant, plus one ESC environment (`discover/azure-<tenantId>-env`) that every subscription's cloud account references. Connecting 40 subscriptions produces 40 cloud accounts, but still only one app registration and one set of credentials.
 
 If your subscriptions are organized under management groups, you have two options.
 
@@ -190,7 +190,7 @@ Because the environment carries the subscription ID, this path takes one ESC env
 
 ### Some accounts failed to connect
 
-When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Alternatively, set up the remaining accounts manually by following [Create and manage cloud accounts](/docs/insights/discovery/accounts/).
+When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Or set up the remaining accounts manually by following [Create and manage cloud accounts](/docs/insights/discovery/accounts/).
 
 ### AWS IAM role creation is denied
 

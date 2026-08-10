@@ -58,7 +58,7 @@ If you are running the workflow runner inside a firewall ensure to allow outboun
 
 ### Setting an organization default pool
 
-You can designate one pool as the **organization default**. When a default pool is set, any deployment, Discovery scan, or policy evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
+You can set one pool as the **organization default**. When a default pool is set, any deployment, Discovery scan, or policy evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
 
 The resolution order for each workflow is:
 

@@ -58,7 +58,7 @@ Every member of a Pulumi organization has a user role — a built-in role (Admin
 
 ### Team roles and entity access grants
 
-Members who belong to teams inherit all roles assigned to those teams, in addition to their user role. Teams can also be granted [entity access](/docs/administration/access-identity/rbac/teams#team-entity-access-grants) directly on specific stacks, environments, and cloud accounts, outside of any role; team members receive that access too. Users in multiple teams accumulate permissions from all of the teams of which they are a member.
+Members who belong to teams inherit all roles assigned to those teams, plus their own user role. Teams can also be granted [entity access](/docs/administration/access-identity/rbac/teams#team-entity-access-grants) directly on specific stacks, environments, and cloud accounts, outside of any role; team members receive that access too. Users in multiple teams accumulate permissions from every team they belong to.
 
 ### Creator grants
 

@@ -38,5 +38,5 @@ Note that creating, listing, or restoring cloud accounts are organization-level 
 | `insights_account_scan:cancel` | Stop an ongoing cloud account scan. This halts the current analysis process.<br><br>**Granted by default permission set**: `Account Write` |
 | `insights_account_scan:pause` | Temporarily suspend a cloud account scan. This pauses the analysis process without losing progress.<br><br>**Granted by default permission set**: `Account Write` |
 | `insights_account_scan:read` | View cloud account scan results and status. This includes access to analysis findings and progress.<br><br>**Granted by default permission set**: `Account Read` |
-| `insights_account_scan:resume` | Resume a paused cloud account scan. This continues the analysis process from where it was paused.<br><br>**Granted by default permission set**: `Account Write` |
+| `insights_account_scan:resume` | Resume a paused cloud account scan. This continues the analysis process from where it paused.<br><br>**Granted by default permission set**: `Account Write` |
 | `insights_account_scan:update` | Modify cloud account scan settings. This allows updating scan parameters and analysis configurations.<br><br>**Granted by default permission set**: `Account Write` |
