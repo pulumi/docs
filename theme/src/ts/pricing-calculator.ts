@@ -50,6 +50,39 @@ const METERS: Record<string, Meter> = {
     },
 };
 
+// The sliders are a power curve, not a linear scale. Their ceilings are sized at
+// a very large customer fully using each product (see the meter table in
+// layouts/partials/pricing/calculator.html), three to four orders of magnitude
+// above where a Team reader sits — linear, that reader's entire range would be
+// the first two or three pixels of travel. So a range input holds a position
+// from 0 to POSITIONS and the meter's value is max * (pos/POSITIONS)^CURVE,
+// which spends the first third of the travel on the first few percent of the
+// range and still lands exactly on max at the far end.
+const POSITIONS = 1000;
+const CURVE = 3;
+
+// Two significant figures, so dragging lands on a number someone would say out
+// loud (31,000) instead of wherever the curve happened to fall (31,247). The
+// number input beside the slider is what exact figures are for, and it is not
+// snapped.
+function snap(value: number): number {
+    if (value <= 0) return 0;
+    if (value < 10) return Math.round(value);
+    const magnitude = Math.pow(10, Math.floor(Math.log10(value)) - 1);
+    return Math.round(value / magnitude) * magnitude;
+}
+
+function valueAt(pos: number, max: number): number {
+    return snap(max * Math.pow(pos / POSITIONS, CURVE));
+}
+
+// Values past the ceiling pin the thumb at the far end rather than rescaling the
+// slider: the number input accepts them, and the estimate is computed from it.
+function posFor(value: number, max: number): number {
+    if (!(value > 0) || !(max > 0)) return 0;
+    return Math.round(POSITIONS * Math.pow(Math.min(1, value / max), 1 / CURVE));
+}
+
 const usd = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -111,22 +144,19 @@ function init(): void {
 
     const parts = (row: HTMLElement) => ({
         id: row.dataset.calcMeter as string,
+        max: parseFloat(row.dataset.calcMax || "") || 0,
         range: row.querySelector<HTMLInputElement>("[data-calc-range]"),
         number: row.querySelector<HTMLInputElement>("[data-calc-number]"),
         rate: row.querySelector<HTMLElement>("[data-calc-rate]"),
     });
 
+    // The number input is the meter's value; the range only ever holds a curve
+    // position. Negatives floor at zero here rather than in the input handler,
+    // so a half-typed "-" never briefly subtracts from the estimate.
     const valueOf = (row: HTMLElement): number => {
-        const { number, range } = parts(row);
-        const raw = parseFloat((number || range)?.value || "");
-        return isFinite(raw) ? raw : 0;
-    };
-
-    const paintRange = (range: HTMLInputElement, value: number): void => {
-        const min = parseFloat(range.min) || 0;
-        const max = parseFloat(range.max) || 100;
-        const pct = max > min ? Math.min(100, Math.max(0, ((value - min) / (max - min)) * 100)) : 0;
-        range.style.setProperty("--form-range-fill", `${pct}%`);
+        const { number } = parts(row);
+        const raw = parseFloat(number?.value || "");
+        return isFinite(raw) && raw > 0 ? raw : 0;
     };
 
     const recompute = (): void => {
@@ -169,18 +199,25 @@ function init(): void {
     };
 
     const syncRow = (row: HTMLElement, source: "range" | "number"): void => {
-        const { id, range, number } = parts(row);
+        const { id, max, range, number } = parts(row);
         if (range && number) {
-            if (source === "range") number.value = range.value;
-            else range.value = number.value;
+            if (source === "range") number.value = String(valueAt(parseFloat(range.value) || 0, max));
+            else range.value = String(posFor(valueOf(row), max));
         }
-        const value = valueOf(row);
         if (range) {
-            paintRange(range, value);
-            range.setAttribute("aria-valuetext", METERS[id].valueText(count.format(value)));
+            const pos = parseFloat(range.value) || 0;
+            range.style.setProperty("--form-range-fill", `${(pos / POSITIONS) * 100}%`);
+            // What the thumb's position selects, not what the reader typed: past
+            // the ceiling the two differ, and this attribute describes the slider.
+            range.setAttribute("aria-valuetext", METERS[id].valueText(count.format(valueAt(pos, max))));
         }
     };
 
+    // Holds a typed figure to the number input's own min/max, which is a sanity
+    // ceiling well above the slider's — a reader whose fleet is off the end of
+    // the slider still gets a real estimate, a fat-fingered extra digit doesn't.
+    // The floor is only applied on `change`, so typing "1" toward "100" is left
+    // alone mid-keystroke.
     const clamp = (input: HTMLInputElement, floor: boolean): void => {
         const min = parseFloat(input.min);
         const max = parseFloat(input.max);
@@ -213,7 +250,10 @@ function init(): void {
             recompute();
         });
 
-        syncRow(row, "range");
+        // "number", not "range": the markup's starting values live on the number
+        // inputs, and they are chosen to produce exactly the edition's base price.
+        // Seeding from the range would round them off through the curve first.
+        syncRow(row, "number");
     });
 
     editionButtons.forEach(button => {

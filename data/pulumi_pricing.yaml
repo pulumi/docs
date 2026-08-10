@@ -110,8 +110,8 @@
 # $0.000025/hour and $0.0185/month, but 0.000025 x 730 is 0.01825), so a
 # calculator that multiplied the hourly rate out would quote figures that
 # contradict the table directly below it. Storing the monthly rate keeps every
-# number on the page identical. Partial months are handled by the utilization
-# slider, not by an hours constant.
+# number on the page identical. The estimator prices whole months and says so;
+# it has no utilization control and no hours constant.
 #
 # -----------------------------------------------------------------------------
 # ADDING OR RENAMING

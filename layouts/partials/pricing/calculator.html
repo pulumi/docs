@@ -87,34 +87,47 @@
        module, and `start` values are chosen so a fresh page shows exactly the
        edition's base price.
 
-       Each `max` is set well above what a typical reader on either edition will
-       enter: being pinned at a slider's max misrepresents someone worse than an
-       imprecise drag does, and the number input beside each slider covers
-       precision anyway. Enterprise readers run much larger numbers than Team
-       ones, so the ranges are sized for them; both editions share one range,
-       because a max that moved under the reader when they flipped the toggle
-       would be worse than a range that is too wide at the low end. */ -}}
+       `max` is the far end of the slider, and it is deliberately set at what one
+       of our largest customers *fully* using that product looks like rather than
+       at what a typical reader will enter. A ceiling sized for the typical reader
+       reads as the ceiling of the product: someone whose fleet is bigger than the
+       slider learns that we don't scale to them, which is the opposite of true.
+       Deployments, Neo, and Insights are the ones this matters most for, because
+       today's usage understates them — most customers have not turned them all
+       the way up yet, and the estimator shouldn't bake that in.
+
+       Nobody is pinned at the end regardless: the number input beside each
+       slider accepts anything up to $numberMaxFactor x these figures, so the
+       slider is for exploring the order of magnitude and the input is for saying
+       the exact number. That is also why one range can serve both editions —
+       there is no max that could move under a reader when they flip the toggle.
+
+       These spans are three to four orders of magnitude, so the slider is a power
+       curve rather than a linear scale; see theme/src/ts/pricing-calculator.ts.
+       `step` is the number input's arrow-key increment only — the slider's
+       granularity comes from the curve. */ -}}
+{{- $numberMaxFactor := 10 -}}
 {{- $meters := slice
     (dict "id" "iac_resources"
           "label" "IaC resources"
           "tooltip" "Every resource declared in a Pulumi program counts, including component resources and stacks. A partial resource hour is billed as a full hour."
-          "min" 0 "max" 25000 "step" 100 "start" 500)
+          "min" 0 "max" 250000 "step" 100 "start" 500)
     (dict "id" "esc_secrets"
           "label" "ESC secrets"
           "tooltip" "Static and dynamic secrets in the latest revision of each environment. Plaintext config is free, and secrets are billed for the whole month."
-          "min" 0 "max" 2000 "step" 10 "start" 0)
+          "min" 0 "max" 50000 "step" 10 "start" 0)
     (dict "id" "neo_tokens"
           "label" "Neo tokens (millions)"
           "tooltip" "Neo tokens meter Neo-powered features: tasks, pull-request annotations, and natural-language search. Token volume varies with the number and complexity of those activities."
-          "min" 0 "max" 200 "step" 2 "start" 0)
+          "min" 0 "max" 5000 "step" 5 "start" 0)
     (dict "id" "workflow_minutes"
           "label" "Workflow minutes"
           "tooltip" "One shared pool across Pulumi Deployments and Insights: the duration of each deployment, plus time spent on cloud discovery and policy execution."
-          "min" 0 "max" 50000 "step" 250 "start" 0)
+          "min" 0 "max" 1000000 "step" 100 "start" 0)
     (dict "id" "insights_resources"
           "label" "Insights resources"
           "tooltip" "Cloud resources discovered by Pulumi Insights, including resources that Pulumi doesn't manage."
-          "min" 0 "max" 50000 "step" 500 "start" 0)
+          "min" 0 "max" 2000000 "step" 500 "start" 0)
 -}}
 
 <section id="calculator" class="container mx-auto px-6 my-16 md:my-24 scroll-mt-24">
@@ -143,7 +156,7 @@
             </div>
 
             {{ range $m := $meters }}
-            <div class="flex flex-col gap-2" data-calc-meter="{{ $m.id }}">
+            <div class="flex flex-col gap-2" data-calc-meter="{{ $m.id }}" data-calc-max="{{ $m.max }}">
                 <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                     {{/* The tooltip wraps the label rather than sitting inside it, so the
                          whole label is the hover target and the bubble centers over it. It
@@ -159,13 +172,19 @@
                     </pulumi-tooltip>
                     <div class="flex items-center gap-2">
                         <span class="text-xs text-gray-500 tabular-nums" data-calc-rate></span>
-                        <input type="number" id="calc-{{ $m.id }}-number" class="form-input form-input-sm w-20 text-right tabular-nums"
-                               min="{{ $m.min }}" max="{{ $m.max }}" step="{{ $m.step }}" value="{{ $m.start }}"
+                        {{/* Wide enough for the seven or eight digits its max allows,
+                             plus the spinner Chrome draws inside the box on hover. */}}
+                        <input type="number" id="calc-{{ $m.id }}-number" class="form-input form-input-sm w-28 text-right tabular-nums"
+                               min="{{ $m.min }}" max="{{ mul $m.max $numberMaxFactor }}" step="{{ $m.step }}" value="{{ $m.start }}"
                                inputmode="numeric" data-calc-number>
                     </div>
                 </div>
+                {{/* A position on the curve, not the meter's value — the TS module
+                     converts between the two and writes the result into the number
+                     input above. It also sets the starting position, so this renders
+                     at 0, which is where the unpainted track already reads as being. */}}
                 <input type="range" id="calc-{{ $m.id }}-range" class="form-range" aria-labelledby="calc-{{ $m.id }}-label"
-                       min="{{ $m.min }}" max="{{ $m.max }}" step="{{ $m.step }}" value="{{ $m.start }}" data-calc-range>
+                       min="0" max="1000" step="1" value="0" data-calc-range>
             </div>
             {{ end }}
         </div>
