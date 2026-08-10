@@ -10,9 +10,9 @@ The word **"guides"** currently means three different things:
 2. Marketing publishes **pulumi.com/guides** — "End-to-end blueprints for real cloud patterns" plus a library of Neo prompts. That page is **not** served from this repository.
 3. Historic docs URLs like `/docs/guides/...` still circulate and are handled by redirects (`scripts/redirects/`).
 
-Meanwhile **pulumi.com/tutorials** *is* served from this repo (`content/tutorials/`) and is docs-owned, which is easy to confuse with the marketing-owned `/guides` hub next door.
+Meanwhile **pulumi.com/tutorials** *is* served from this repo (`content/tutorials/`), which is easy to confuse with the `/guides` hub next door even though the two are produced by different teams through different pipelines.
 
-This document disambiguates those terms, assigns an owner to every content type, and makes rename recommendations where names collide. It complements, and does not replace:
+This document disambiguates those terms, assigns an owner to every content type, and records the naming conflicts we still need to resolve. It complements, and does not replace:
 
 - `AGENTS.md` — file placement and agent workflow rules
 - `STYLE-GUIDE.md` — prose and formatting rules
@@ -52,7 +52,7 @@ Four teams appear on the ownership axis:
 - **Contributes:** Eng/Product, DevRel, community
 - **Consumes:** Practitioners with a specific job to do
 
-> **This is the type currently nav-labeled just "Guides."** See [Recommendations](#recommendations) for the proposed rename.
+> **This is the type nav-labeled "Guides" in the docs.** That label stays for now, but it collides with the marketing hub at pulumi.com/guides — see [Open questions](#open-questions-and-naming-conflicts).
 
 ### Tutorials (hands-on learning)
 
@@ -60,8 +60,8 @@ Four teams appear on the ownership axis:
 
 - **Lives at:** `content/tutorials/` → [pulumi.com/tutorials](https://www.pulumi.com/tutorials/) (also aliased at `/learn`)
 - **Examples:** Pulumi Fundamentals (3-part module), "Importing AWS Infrastructure"
-- **Owns:** Docs
-- **Contributes:** DevRel, Eng/Product
+- **Owns:** Marketing/DevRel (current state — though the commented-out CODEOWNERS maps `content/tutorials/` to `@pulumi/docs`; see [Open questions](#open-questions-and-naming-conflicts) on whether tutorials should roll into Docs)
+- **Contributes:** Docs, Eng/Product
 - **Consumes:** Newcomers and learners
 
 **Getting Started** (`content/docs/get-started/`, `content/docs/install/`) is the onboarding end of this same family — first-run, learning-oriented content — and follows tutorial conventions, but lives inside `/docs/` because it's the docs' front door.
@@ -76,16 +76,16 @@ Four teams appear on the ownership axis:
 - **Contributes:** Eng/Product
 - **Consumes:** Practitioners who know what they're looking for
 
-### Solution blueprints (the marketing "guides" hub)
+### Marketing guides (pulumi.com/guides)
 
-**Definition:** End-to-end, outcome-framed patterns for a complete real-world scenario ("Build a Cloud Landing Zone," "HIPAA-Compliant Infrastructure on AWS"), packaged to show what Pulumi can do — including Neo prompt libraries. Part sales asset, part architecture pattern.
+**Definition:** End-to-end, outcome-framed patterns for a complete real-world scenario ("Build a Cloud Landing Zone," "HIPAA-Compliant Infrastructure on AWS"), packaged to show what Pulumi can do — including Neo prompt libraries. Part sales asset, part architecture pattern; the page describes them as "end-to-end blueprints for real cloud patterns."
 
 - **Lives at:** [pulumi.com/guides](https://www.pulumi.com/guides/) — **not in this repository**; published from a separate marketing pipeline
 - **Owns:** Marketing
 - **Contributes:** DevRel, Eng/Product (technical validation)
 - **Consumes:** Evaluators and buyers scoping a solution
 
-> The page's own tagline is "end-to-end blueprints," which is why this taxonomy names the type *solution blueprints* rather than "guides." See [Recommendations](#recommendations).
+> This type shares the name "Guides" with the docs how-to sections above. Both keep the name for now — see [Open questions](#open-questions-and-naming-conflicts).
 
 ### Explainers ("What is X")
 
@@ -155,9 +155,9 @@ Four teams appear on the ownership axis:
 |---|---|---|---|---|---|
 | Conceptual docs | Explains how Pulumi works and why | `content/docs/*/concepts/` | Docs | Eng/Product, DevRel | Practitioners |
 | How-to guides | Steps to a specific practical goal | `content/docs/*/guides/` | Docs | Eng/Product, DevRel, community | Practitioners |
-| Tutorials | Sequenced hands-on learning | `content/tutorials/` | Docs | DevRel, Eng/Product | Newcomers, learners |
+| Tutorials | Sequenced hands-on learning | `content/tutorials/` | Marketing/DevRel | Docs, Eng/Product | Newcomers, learners |
 | Reference | Exhaustive lookup material | `content/docs/reference/`, generated CLI docs | Docs + Eng/Product | Eng/Product | Practitioners |
-| Solution blueprints | End-to-end sellable patterns | pulumi.com/guides (external to repo) | Marketing | DevRel, Eng/Product | Evaluators, buyers |
+| Marketing guides | End-to-end sellable patterns | pulumi.com/guides (external to repo) | Marketing | DevRel, Eng/Product | Evaluators, buyers |
 | Explainers | Definitional SEO/AEO pages | `content/what-is/` | Marketing + Docs | DevRel | Search traffic, evaluators |
 | Blog posts | Point-in-time posts; historical | `content/blog/` | Author (Marketing amplifies) | Everyone | Community |
 | Case studies | Customer success stories | `content/case-studies/` | Marketing | Sales/CS, DevRel | Buyers |
@@ -166,17 +166,21 @@ Four teams appear on the ownership axis:
 | Releases & changelog | Dated record of what shipped | `content/releases/` | Eng/Product | Docs, Marketing | Existing users |
 | Templates & programs | Runnable starting points | `content/templates/`, `static/programs/` | Docs | Eng/Product, DevRel | Practitioners |
 
-## Recommendations
+## Open questions and naming conflicts
 
-These are recommendations only; this document does not itself rename anything.
+This document records these as unresolved; it does not itself rename anything or move ownership.
 
-1. **Docs: retitle "Guides" nav sections to "How-to guides."** The sections at `content/docs/{esc,deployments,idp}/guides/` should change `title`/`h1`/menu name from "Guides" to "How-to guides." This is a label-only change — URLs keep the `/guides/` slug, so no aliases or redirects are needed, and it removes the collision with pulumi.com/guides at zero SEO cost.
-1. **Docs: give `content/docs/iac/guides/` a landing page.** IaC holds the same how-to content as the other sections but has no `_index.md`, so the type is invisible in the IaC nav. Add one, titled "How-to guides," to match.
-1. **Marketing: call pulumi.com/guides content "solution blueprints."** The page already describes itself as blueprints. In cross-team communication, use that term. Longer term, consider rehoming the hub at a URL that matches (e.g. `/blueprints`), releasing "guides" to mean only how-to documentation. That property is outside this repo, so this is a recommendation to its owners.
+1. **The "Guides" name collision.** Docs nav sections and the marketing hub at pulumi.com/guides both go by "Guides," and both keep the name for now. This is a real conflict we should resolve: two different content types — task-scoped how-to docs and end-to-end sellable blueprints — answer to the same word, which muddies nav, search, and cross-team conversation. Possible resolutions:
+   - Marketing renames its hub (its content self-describes as "blueprints"), releasing "guides" to docs. This may not be palatable to the marketing side.
+   - Docs renames its sections — to "How-tos," "How-to guides," "Tasks," or similar. A label-only change: URLs keep the `/guides/` slug, so no aliases or redirects would be needed.
+
+   No decision is made here; until one is, use the qualified terms from this document ("how-to guides" for the docs type, "marketing guides" for the hub) when the bare word would be ambiguous.
+1. **Tutorials ownership.** pulumi.com/tutorials is Marketing/DevRel-owned today, but it's learner-facing technical content served from this repo alongside the docs — and the (commented-out) CODEOWNERS mapping assigns it to `@pulumi/docs`. Should tutorials roll into Docs ownership? Open question.
+1. **Docs: give `content/docs/iac/guides/` a landing page.** IaC holds the same how-to content as the other product sections but has no `_index.md`, so the type is invisible in the IaC nav. Add one — titled "Guides" to match its siblings for now; it inherits whatever name the collision resolution lands on.
 1. **Reserve "tutorials" for `content/tutorials/`.** Don't introduce "tutorial" sections inside `/docs/` (none exist today — keep it that way). Note that `/learn` is an alias of `/tutorials`, and `content/learn` does not exist as a directory.
 
 ## Known gaps
 
-- **CODEOWNERS is entirely commented out** (`.github/CODEOWNERS`), so the docs-team ownership described above (`content/docs/`, `content/tutorials/`, `content/templates/`) is intent, not enforcement.
+- **CODEOWNERS is entirely commented out** (`.github/CODEOWNERS`), so no ownership is enforced — and the commented-out mapping doesn't fully match reality anyway (it assigns `content/tutorials/` to `@pulumi/docs`, while actual ownership sits with Marketing/DevRel).
 - **Stale `content/learn` reference:** the docs-review criteria (`.claude/commands/docs-review/references/docs.md`) scope includes `content/learn`, which doesn't exist.
 - **Untyped campaign directories:** ~20 one-off landing directories under `content/` (`gads/`, `cjs26/`, `kubecon/`, `reinvent/`, …) have no declared type or owner beyond falling into the "website" review domain. They are treated here as product/campaign pages.
