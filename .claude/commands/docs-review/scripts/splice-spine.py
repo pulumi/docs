@@ -321,9 +321,18 @@ def main() -> int:
             # First review on this PR, or the pinned comment was deleted. Both
             # are ordinary; there is simply no floor to hold.
             report["status"] = "no-prior"
+            log("no prior pinned review; no floor to hold")
         else:
             drops = assess(prior, new)
             report["considered"] = drops
+            # Always say what happened, including the quiet case. A check that
+            # is silent when it passes cannot be distinguished in a CI log from
+            # a check that never ran -- and the whole point of this one is that
+            # nothing else notices the failure it guards against.
+            if not drops:
+                log(f"spine floor held ({len(_vp.extract_trail_records(prior))} trail records, "
+                    f"balance={'yes' if _section_with_heading(prior, BALANCE_HEADING) else 'n/a'}, "
+                    f"log bullets={_log_bullet_count(_investigation_log(prior))})")
             if drops:
                 new, applied = restore(prior, new, drops)
                 report["restored"] = applied
