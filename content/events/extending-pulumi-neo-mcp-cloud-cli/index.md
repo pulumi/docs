@@ -2,6 +2,9 @@
 # Name of the event, <= 60 characters
 title: "Extending Pulumi Neo: MCP Servers and Cloud CLIs"
 
+meta_image: /events/extending-pulumi-neo-mcp-cloud-cli/meta.png
+meta_image_square: /events/extending-pulumi-neo-mcp-cloud-cli/meta-square.png
+
 meta_desc: Connect Pulumi Neo to Datadog, PagerDuty, Linear, and more via MCP, and to aws, gcloud, az, and kubectl — live workshop with real incident workflows.
 
 # A featured event will display first in the list.
