@@ -1,4 +1,72 @@
 {
+  "context": {
+    "description": "The schema of the Pulumi ESC built-in `context` object available for interpolation in environments.",
+    "properties": {
+      "currentEnvironment": {
+        "properties": {
+          "name": {
+            "description": "The name of the environment currently being evaluated \u2014 the one the reference itself is written in \u2014 as `<project>/<name>`. Inside an imported environment it is the import exactly as written in the importing environment's `imports:` list, so an import written `payments/db` resolves to `payments/db`. Environments in the legacy `default` project may be imported without a project prefix; those resolve as written too, so `db` stays `db` and `default/db` stays `default/db`.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "pulumi": {
+        "properties": {
+          "openDuration": {
+            "description": "How long the opened environment's values remain valid, as a [Go duration](https://pkg.go.dev/time#ParseDuration) string such as `2h0m0s`. This reflects the lifetime requested for this particular open, so the same environment can evaluate it differently from one open to the next: `pulumi env open <environment> --lifetime 30m` resolves it to `30m0s`, and opening without a lifetime resolves it to the default of `2h0m0s`.",
+            "type": "string"
+          },
+          "organization": {
+            "properties": {
+              "login": {
+                "description": "The login of the organization that owns the environment being opened. This is the organization's URL slug, not its display name: an organization displayed as \"Acme Corp\" resolves to `acme-corp`.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "token": {
+            "properties": {
+              "name": {
+                "description": "The token's name. Empty for personal and web tokens.",
+                "type": "string"
+              },
+              "team": {
+                "description": "The name of the team a team-scoped token belongs to. Empty for tokens that aren't team-scoped.",
+                "type": "string"
+              },
+              "type": {
+                "description": "The type of the access token used to open the environment, such as `personal`, `team`, or `organization`.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "user": {
+            "properties": {
+              "login": {
+                "description": "The login of the requesting user. For a team or organization token this resolves to the organization's name rather than an individual, so it does not on its own identify who is calling \u2014 use `pulumi.token.type` and `pulumi.token.team` to tell those callers apart.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "type": "object"
+      },
+      "rootEnvironment": {
+        "properties": {
+          "name": {
+            "description": "The name of the environment the caller opened directly, as `<project>/<name>`. It is fixed for the whole evaluation, so a reference in an imported environment still resolves it to the environment that started the evaluation rather than to the import: opening `payments/prod` resolves it to `payments/prod` throughout. Environments in the legacy `default` project are the exception \u2014 the prefix is stripped, so opening `default/prod` resolves it to `prod`.",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      }
+    },
+    "type": "object"
+  },
   "providers": {
     "1password-secrets": {
       "description": "The [`1password-secrets` provider](https://www.pulumi.com/docs/esc/integrations/dynamic-secrets/1password-secrets/) dynamically imports secrets from 1Password into your Environment.",
@@ -105,11 +173,11 @@
                 "description": "The attributes used to issue the oidc token subject.",
                 "items": {
                   "enum": [
-                    "pulumi.user.login",
-                    "pulumi.organization.login",
-                    "pulumi.token.type",
-                    "pulumi.token.team",
                     "currentEnvironment.name",
+                    "pulumi.organization.login",
+                    "pulumi.token.team",
+                    "pulumi.token.type",
+                    "pulumi.user.login",
                     "rootEnvironment.name"
                   ],
                   "type": "string"
@@ -118,8 +186,8 @@
               }
             },
             "required": [
-              "sessionName",
-              "roleArn"
+              "roleArn",
+              "sessionName"
             ],
             "title": "AWSLoginOIDC",
             "type": "object"
@@ -356,11 +424,11 @@
             "description": "The attributes used to issue the oidc token subject.",
             "items": {
               "enum": [
-                "pulumi.user.login",
-                "pulumi.organization.login",
-                "pulumi.token.type",
-                "pulumi.token.team",
                 "currentEnvironment.name",
+                "pulumi.organization.login",
+                "pulumi.token.team",
+                "pulumi.token.type",
+                "pulumi.user.login",
                 "rootEnvironment.name"
               ],
               "type": "string"
@@ -535,11 +603,11 @@
                 "description": "The attributes used to issue the oidc token subject.",
                 "items": {
                   "enum": [
-                    "pulumi.user.login",
-                    "pulumi.organization.login",
-                    "pulumi.token.type",
-                    "pulumi.token.team",
                     "currentEnvironment.name",
+                    "pulumi.organization.login",
+                    "pulumi.token.team",
+                    "pulumi.token.type",
+                    "pulumi.user.login",
                     "rootEnvironment.name"
                   ],
                   "type": "string"
@@ -737,11 +805,11 @@
                 "description": "The attributes used to issue the oidc token subject.",
                 "items": {
                   "enum": [
-                    "pulumi.user.login",
-                    "pulumi.organization.login",
-                    "pulumi.token.type",
-                    "pulumi.token.team",
                     "currentEnvironment.name",
+                    "pulumi.organization.login",
+                    "pulumi.token.team",
+                    "pulumi.token.type",
+                    "pulumi.user.login",
                     "rootEnvironment.name"
                   ],
                   "type": "string"
@@ -760,9 +828,9 @@
               }
             },
             "required": [
-              "workloadPoolId",
               "providerId",
-              "serviceAccount"
+              "serviceAccount",
+              "workloadPoolId"
             ],
             "type": "object"
           },
@@ -1066,8 +1134,8 @@
         },
         "required": [
           "appId",
-          "privateKey",
-          "owner"
+          "owner",
+          "privateKey"
         ],
         "type": "object"
       },
@@ -1103,11 +1171,11 @@
           }
         },
         "required": [
+          "accessToken",
           "appId",
           "appSlug",
-          "installationId",
-          "accessToken",
           "expiry",
+          "installationId",
           "type"
         ],
         "type": "object"
@@ -1133,11 +1201,11 @@
                 "description": "The attributes used to issue the oidc token subject.",
                 "items": {
                   "enum": [
-                    "pulumi.user.login",
-                    "pulumi.organization.login",
-                    "pulumi.token.type",
-                    "pulumi.token.team",
                     "currentEnvironment.name",
+                    "pulumi.organization.login",
+                    "pulumi.token.team",
+                    "pulumi.token.type",
+                    "pulumi.user.login",
                     "rootEnvironment.name"
                   ],
                   "type": "string"
@@ -1228,8 +1296,8 @@
                 }
               },
               "required": [
-                "projectId",
                 "environment",
+                "projectId",
                 "secretKey"
               ],
               "title": "InfisicalSecretsGet",
@@ -1468,8 +1536,8 @@
                     },
                     "required": [
                       "organization",
-                      "workspace",
-                      "token"
+                      "token",
+                      "workspace"
                     ],
                     "title": "TerraformRemoteBackend",
                     "type": "object"
@@ -1532,11 +1600,11 @@
                 "description": "The attributes used to issue the oidc token subject.",
                 "items": {
                   "enum": [
-                    "pulumi.user.login",
-                    "pulumi.organization.login",
-                    "pulumi.token.type",
-                    "pulumi.token.team",
                     "currentEnvironment.name",
+                    "pulumi.organization.login",
+                    "pulumi.token.team",
+                    "pulumi.token.type",
+                    "pulumi.user.login",
                     "rootEnvironment.name"
                   ],
                   "type": "string"
@@ -1916,8 +1984,8 @@
               }
             },
             "required": [
-              "login",
-              "clientId"
+              "clientId",
+              "login"
             ],
             "rotateOnly": [
               "login"
@@ -1947,8 +2015,8 @@
                   }
                 },
                 "required": [
-                  "secretValue",
-                  "secretId"
+                  "secretId",
+                  "secretValue"
                 ],
                 "type": "object"
               },
@@ -1973,8 +2041,8 @@
                   }
                 },
                 "required": [
-                  "secretValue",
-                  "secretId"
+                  "secretId",
+                  "secretValue"
                 ],
                 "type": "object"
               }
@@ -2014,8 +2082,8 @@
               }
             },
             "required": [
-              "secretValue",
-              "secretId"
+              "secretId",
+              "secretValue"
             ],
             "type": "object"
           },
@@ -2040,8 +2108,8 @@
               }
             },
             "required": [
-              "secretValue",
-              "secretId"
+              "secretId",
+              "secretValue"
             ],
             "type": "object"
           }
@@ -2212,10 +2280,10 @@
                   }
                 },
                 "required": [
-                  "host",
-                  "port",
                   "database",
-                  "managingUser"
+                  "host",
+                  "managingUser",
+                  "port"
                 ],
                 "rotateOnly": [
                   "managingUser"
@@ -2611,10 +2679,10 @@
                   }
                 },
                 "required": [
-                  "host",
-                  "port",
                   "database",
-                  "managingUser"
+                  "host",
+                  "managingUser",
+                  "port"
                 ],
                 "rotateOnly": [
                   "managingUser"

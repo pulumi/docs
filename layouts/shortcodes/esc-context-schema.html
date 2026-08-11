@@ -1,0 +1,50 @@
+{{/*
+  Renders the ESC built-in `context` object as a property reference, from the
+  committed data/esc_schemas.json (the single source of truth, refreshed by
+  scripts/fetch-esc-schemas.sh via the esc-update-schemas GitHub workflow).
+  Reuses the REST API schema styling (assets/fingerprinted/css/openapi.css,
+  .api-param* classes) for visual consistency with the provider and rotator
+  pages and with /docs/reference/cloud-rest-api.
+
+  Takes no parameters. Unlike the provider and rotator schemas that
+  esc-schema.html renders, `context` is a singleton: one schema, no name, no
+  inputs/state/outputs sections.
+
+  Rows carry no required/optional badge — every `context` property always
+  resolves — and show the full dotted path, which is what readers write:
+  ${context.pulumi.token.type}.
+
+  Each row gets an id of the form "context-pulumi-token-type" so other pages can
+  deep-link to a single property's description; esc-oidc-subject-attributes.html
+  does exactly that. Dots become hyphens because `anchorize` would strip them,
+  collapsing distinct paths into the same id.
+
+  Author keeps the surrounding Markdown headings; this renders only the list.
+*/}}
+{{ $schema := site.Data.esc_schemas.context }}
+
+{{ if not $schema }}
+  {{ warnf "esc-context-schema: no \"context\" key in data/esc_schemas.json (%s)" .Position }}
+{{ else }}
+  {{ $rows := partial "esc/context-properties.html" (dict "properties" $schema.properties) }}
+  {{ if not $rows }}
+    {{ warnf "esc-context-schema: the \"context\" schema has no properties (%s)" .Position }}
+  {{ else }}
+    {{ $css := resources.Get "fingerprinted/css/openapi.css" | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+    <ul class="api-params">
+      {{ range $rows }}
+        <li class="api-param" id="context-{{ replace .path "." "-" }}">
+          <div class="api-param-header">
+            <code class="api-param-name">context.{{ .path }}</code>
+            <span class="api-param-badge api-param-type">{{ .type }}</span>
+          </div>
+          {{ with .description }}
+            <div class="api-param-description">{{ . | markdownify }}</div>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+{{ end }}

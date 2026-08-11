@@ -8,7 +8,7 @@ menu:
   esc:
     identifier: esc-versioning
     parent: esc-concepts
-    weight: 9
+    weight: 10
 aliases:
 - /docs/esc/environments/versioning/
 pulumi_cloud_feature: esc-versioning

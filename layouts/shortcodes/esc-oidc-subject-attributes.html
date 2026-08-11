@@ -1,0 +1,63 @@
+{{/*
+  Renders the allow-list of OIDC subject attributes — the deliberately
+  restricted subset of the `context` built-in that may be encoded into the
+  subject claim — from the `subjectAttributes` enum in data/esc_schemas.json.
+
+  Names only, by design. The descriptions in the context schema are written as a
+  general reference and run several times longer than this page needs, so each
+  attribute instead links to its own description on the built-in properties page
+  (the row ids that esc-context-schema.html emits). What actually drifts here is
+  which attributes are permitted, and that is what this generates.
+
+  Two drift alarms, both warnings rather than build failures (matching
+  esc-schema.html): every *-login provider declares this enum and all of them
+  must agree, and every attribute must exist in the `context` schema. Either
+  warning means the platform changed and the prose on this page needs a human
+  look — in particular the note explaining why `pulumi.token.name` is excluded.
+
+  Attributes render alphabetically: fetch-esc-schemas.sh sorts the schema's
+  string arrays so the nightly refresh produces no diff when nothing changed,
+  and this enum is one of them.
+*/}}
+{{ $lists := slice }}
+{{ range $name, $schema := site.Data.esc_schemas.providers }}
+  {{ range partial "esc/find-subject-attributes.html" (dict "node" $schema) }}
+    {{ $lists = $lists | append (dict "provider" $name "enum" .enum) }}
+  {{ end }}
+{{ end }}
+
+{{ if not $lists }}
+  {{ warnf "esc-oidc-subject-attributes: no subjectAttributes enum found in data/esc_schemas.json (%s)" .Position }}
+{{ else }}
+  {{ $attributes := (index $lists 0).enum }}
+  {{ $canonical := delimit $attributes ", " }}
+
+  {{/* All login providers must offer the same allow-list. */}}
+  {{ range $lists }}
+    {{ if ne (delimit .enum ", ") $canonical }}
+      {{ warnf "esc-oidc-subject-attributes: %s declares a different subjectAttributes allow-list (%q) than %q — the page's prose may no longer be accurate (%s)" .provider (delimit .enum ", ") $canonical $.Position }}
+    {{ end }}
+  {{ end }}
+
+  {{/* Every attribute must resolve to a real path in the context schema. This
+       doubles as link validation: the anchors below are the row ids that
+       esc-context-schema.html emits, one per context property. */}}
+  {{ $paths := slice }}
+  {{ with site.Data.esc_schemas.context }}
+    {{ range partial "esc/context-properties.html" (dict "properties" .properties) }}
+      {{ $paths = $paths | append .path }}
+    {{ end }}
+  {{ end }}
+  {{ if $paths }}
+    {{ range $attributes }}
+      {{ if not (in $paths .) }}
+        {{ warnf "esc-oidc-subject-attributes: %q is not a property of the context schema (%s)" . $.Position }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $reference := "/docs/esc/concepts/builtin-properties/" }}
+  <ul>
+    {{ range $attributes }}<li><a href="{{ $reference }}#context-{{ replace . "." "-" }}"><code>{{ . }}</code></a></li>{{ end }}
+  </ul>
+{{ end }}

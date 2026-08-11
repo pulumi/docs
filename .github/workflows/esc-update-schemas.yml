@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-      - name: Fetch ESC provider/rotator schemas
+      - name: Fetch ESC schemas
         run: ./scripts/fetch-esc-schemas.sh
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
@@ -61,7 +61,7 @@ jobs:
             # esc_schemas.json so the no-change check above stays byte-exact.
             printf '{\n  "updated": "%s"\n}\n' "$(date -u +%F)" > data/esc_schemas_updated.json
             git add data/esc_schemas_updated.json
-            git commit -m "Update ESC provider/rotator schemas"
+            git commit -m "Update ESC schemas"
             git push origin esc-schemas/${{ github.run_id }}-${{ github.run_number }}
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
@@ -81,8 +81,8 @@ jobs:
         with:
           source_branch: "esc-schemas/${{ github.run_id }}-${{ github.run_number }}"
           destination_branch: "master"
-          pr_title: "Update ESC provider/rotator schemas"
-          pr_body: "Automated regeneration of `data/esc_schemas.json` from the Pulumi Cloud ESC schema API. Renders the Inputs/State/Outputs tables on the ESC provider and rotator pages."
+          pr_title: "Update ESC schemas"
+          pr_body: "Automated regeneration of `data/esc_schemas.json` from the Pulumi Cloud ESC schema API. Renders the Inputs/State/Outputs tables on the ESC provider and rotator pages, and the built-in properties reference on the ESC built-in properties page."
           pr_label: "automation/merge"
           github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
       - name: Enable auto-merge

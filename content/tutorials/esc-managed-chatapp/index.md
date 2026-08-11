@@ -416,7 +416,7 @@ values:
 ---
 ```
 
-Here we have added three new ESC values `esc_org`, `esc_project`, and `esc_environment`, with the organization and environment pulled from the [ESC execution context](/docs/esc/concepts/interpolations-and-references/#context) directly. These are projected into the `ESC_ORG`, `ESC_PROJECT`, and `ESC_ENVIRONMENT` environment variables respectively.
+Here we have added three new ESC values `esc_org`, `esc_project`, and `esc_environment`, with the organization and environment pulled from the [ESC execution context](/docs/esc/concepts/builtin-properties/#context) directly. These are projected into the `ESC_ORG`, `ESC_PROJECT`, and `ESC_ENVIRONMENT` environment variables respectively.
 
 {{% notes type="warning" %}}
 **Project Naming:** The project name is not able to be derived from context, so we have to use a static value here. If your project name is something other than `default`, make sure to set this value to the name of your project.

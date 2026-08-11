@@ -6,7 +6,7 @@ h1: Customer Managed Keys
 menu:
   esc:
     parent: esc-concepts
-    weight: 12
+    weight: 13
   administration:
     name: ESC Customer Managed Keys
     parent: administration-security-compliance
