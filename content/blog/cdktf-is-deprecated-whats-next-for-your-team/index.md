@@ -71,7 +71,7 @@ Despite their surface similarities, CDKTF and AWS CDK have little in common. Mig
 
 This is where we should acknowledge our obvious bias — but we genuinely believe that for most users of CDKTF, Pulumi really is the simplest and most broadly compatible alternative.
 
-Like CDKTF, Pulumi lets you build and manage your infrastructure with general-purpose languages like TypeScript, Python, Go, C#, and Java, and it supports organizing your code into higher-level abstractions called [_components_](/docs/iac/concepts/components/), which you can think of like CDKTF constructs. Both organize cloud resources into [_stacks_](/docs/iac/concepts/stacks/) (think `dev`, `prod`), and both track [deployment state](/docs/iac/concepts/state-and-backends/) similarly, with local, remote, and cloud-hosted options available.
+Like CDKTF, Pulumi lets you build and manage your infrastructure with general-purpose languages like TypeScript, JavaScript, Python, Go, .NET, and Java, plus YAML and HCL, and it supports organizing your code into higher-level abstractions called [_components_](/docs/iac/concepts/components/), which you can think of like CDKTF constructs. Both organize cloud resources into [_stacks_](/docs/iac/concepts/stacks/) (think `dev`, `prod`), and both track [deployment state](/docs/iac/concepts/state-and-backends/) similarly, with local, remote, and cloud-hosted options available.
 
 Many of Pulumi's most popular [providers](/docs/iac/concepts/resources/providers/) (e.g., the AWS provider) are also built from open-source Terraform schemas, which means their resource models will be nearly identical to what you're used to with CDKTF. Here's what an S3 bucket looks like in Pulumi, for example:
 
@@ -94,7 +94,7 @@ Pulumi is also different from CDKTF in several ways. One is that rather than tra
 Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best alternative for most teams looking to migrate.
 
 {{< blog/cta-card title="Migrate from CDKTF to Pulumi" href="/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/" >}}
-Keep writing infrastructure in TypeScript, Python, Go, C#, or Java, and use Pulumi's built-in convert and import commands to bring your CDKTF projects and state across.
+Keep writing infrastructure in TypeScript, JavaScript, Python, Go, .NET, or Java, plus YAML and HCL, and use Pulumi's built-in convert and import commands to bring your CDKTF projects and state across.
 {{< /blog/cta-card >}}
 
 ## What migrating to Pulumi looks like

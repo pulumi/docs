@@ -21,7 +21,7 @@ jobs:
 
       - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -31,7 +31,7 @@ jobs:
             theme/yarn.lock
             theme/stencil/yarn.lock
 
-      - uses: actions/setup-go@v6
+      - uses: actions/setup-go@v7
         with:
           go-version: 1.26.x
 
@@ -68,6 +68,29 @@ jobs:
 
       - name: Install Pulumi CLI
         uses: pulumi/actions@v7
+
+      # Restore previously generated OpenGraph cards so the build-time generator
+      # only re-renders pages that changed (manifest content-hash skip). The
+      # cards are gitignored; this cache is their only persistence across runs.
+      - name: Cache generated meta images
+        uses: actions/cache@v6
+        with:
+          path: assets/images/generated
+          key: meta-images-${{ github.sha }}
+          restore-keys: |
+            meta-images-
+
+      # Persist Hugo's processed-image cache (resources/_gen). Blog templates
+      # process feature images to WebP at several sizes via .Process; without
+      # this cache every CI run re-encodes ~2,400 images from scratch (~4-5
+      # minutes of the build). With a warm cache, .Process is a lookup.
+      - name: Cache Hugo processed images
+        uses: actions/cache@v6
+        with:
+          path: resources
+          key: hugo-resources-${{ github.sha }}
+          restore-keys: |
+            hugo-resources-
 
       - name: Build and deploy
         run: make ci_push

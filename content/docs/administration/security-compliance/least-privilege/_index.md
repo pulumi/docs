@@ -22,7 +22,7 @@ Least privilege means giving every person, pipeline, and program only the access
 
 Over-broad cloud credentials can damage running infrastructure, and over-broad Pulumi Cloud access can expose secrets or delete stacks and their state. This guide works through both, across the three places where you make access decisions: your infrastructure code (IaC), your secrets and configuration (ESC), and your automation ([CI/CD](/docs/iac/operations/continuous-delivery/) and [Pulumi Deployments](/docs/deployments/concepts/), Pulumi Cloud's managed execution service).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Pulumi Cloud's configurable RBAC features, including custom roles, permission sets, and team role assignments, are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
@@ -65,11 +65,13 @@ Pulumi Cloud [RBAC](/docs/administration/access-identity/rbac/) decides who can 
 
 Set your organization's default stack permission to None or Read, so people start with little and receive more only when they need it. The [roles documentation](/docs/administration/access-identity/rbac/roles/#organization-wide-role-settings) covers where to configure this and how the built-in Member role interacts with custom roles.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Organization-wide role settings are retained from Pulumi Cloud's pre-RBAC permission system for backward compatibility. For new, fine-grained access control, prefer custom roles and permission sets.
 {{% /notes %}}
 
 ### Grant access explicitly through permission sets and teams
+
+{{< pulumi-cloud "teams" />}}
 
 Grant elevated access with [permission sets](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets), assigned through roles and teams rather than to individuals:
 
@@ -146,6 +148,12 @@ Scope these tokens as narrowly as the work allows. Team-scoped tokens, which con
 
 Where OIDC is not an option, you can fall back to a stored [Pulumi access token](/docs/administration/access-identity/access-tokens/). This is the least preferable choice, because a long-lived token in a CI secret is exactly the standing credential OIDC is designed to remove. If you must use one, prefer a team or organization token over a personal one, give it the shortest workable expiration, and rotate it regularly.
 
+### Hand off ownership of stacks your automation creates
+
+Whichever credential a pipeline uses, creating a stack leaves a permanent mark on the identity that created it. The creator receives an automatic [creator grant](/docs/administration/access-identity/rbac/#creator-grants) of Stack Admin on that stack, and because every grant in Pulumi Cloud is additive, no role, organization-wide setting, or tag-based rule takes it back. The grant belongs to the organization or team the token authenticates as, so it outlives the token itself, including a short-lived OIDC-issued one.
+
+Automation that creates stacks accumulates administrative access to every stack it has ever created, which is rarely what the pipeline's role implies. Keep that under control by making the hand-off part of the run: once the stack exists, transfer its ownership to a break-glass user or team, or delete the automatic Stack Admin entry from the stack's **Access** tab. Then the automation keeps only the access its role grants, and elevated standing access to the stack sits with the audited break-glass identity instead.
+
 ## Audit and review access
 
 Least privilege drifts over time, so check it on a regular cadence:
@@ -160,5 +168,5 @@ Least privilege drifts over time, so check it on a regular cadence:
 - **Cloud credentials:** accept that IaC often needs broad access, but do not give every principal that access in every environment. Favor read-only production for people, production writes through automation, and short-lived credentials over stored keys.
 - **IaC:** default organization stack permissions to None or Read, and grant Stack Read, Write, or Admin explicitly through roles and teams.
 - **ESC:** treat Environment Open as the sensitive permission, scope the cloud roles an environment can assume, and segment environments around their secret stores.
-- **CI/CD and Deployments:** run production changes through Pulumi Deployments or an OIDC-authenticated pipeline, and reserve long-lived tokens for when OIDC is not available.
+- **CI/CD and Deployments:** run production changes through Pulumi Deployments or an OIDC-authenticated pipeline, reserve long-lived tokens for when OIDC is not available, and hand off ownership of the stacks your automation creates.
 - **Audit:** review logs and access grants regularly.

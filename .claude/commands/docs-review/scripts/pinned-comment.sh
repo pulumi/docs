@@ -28,6 +28,20 @@ set -euo pipefail
 MARKER_RE='^<!-- CLAUDE_REVIEW ([0-9]+)/([0-9]+) -->'
 DEFAULT_MAX_BYTES=60000
 
+# The review footer (refresh instructions + the don't-hide-me warning) lives in
+# one place, `docs-review/footer.md`, and this script is its authoritative
+# writer: split_body strips any inbound copy and every page gets a freshly
+# stamped one. Two reasons it can't just ride along in the composed body:
+#   1. On a split review the composed footer lands on the LAST page only --
+#      i.e. comment 3/3 -- while the comment everyone actually reads is 1/3.
+#   2. The re-entrant path re-renders the whole body through the model, which
+#      can silently drop it. Stamping here makes that unlosable.
+# compose-review.py renders the same file so drafts stay complete documents;
+# keep FOOTER_SENTINEL in sync with its copy of the constant.
+FOOTER_SENTINEL='<!-- CLAUDE_REVIEW_FOOTER -->'
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+FOOTER_FILE="$SCRIPT_DIR/../footer.md"
+
 usage() {
     sed -n '2,19p' "$0" | sed 's/^# \{0,1\}//' >&2
     exit 2
@@ -54,8 +68,21 @@ resolve_repo() {
     fi
 }
 
+# load_footer
+# Print the canonical footer text (no trailing newline handling; callers add).
+# Missing/unreadable file is non-fatal: publish an un-footered review rather
+# than block the pipeline on a missing doc fragment.
+load_footer() {
+    if [[ -r "$FOOTER_FILE" ]]; then
+        cat "$FOOTER_FILE"
+    else
+        printf 'pinned-comment.sh: WARNING: footer file not readable (%s); publishing without a footer\n' \
+            "$FOOTER_FILE" >&2
+    fi
+}
+
 # list_pinned_comments <repo> <pr>
-# Emits TSV: comment_id<TAB>position<TAB>total<TAB>created_at
+# Emits TSV: comment_id<TAB>position<TAB>total<TAB>created_at<TAB>node_id
 # Sorted by position ascending.
 list_pinned_comments() {
     local repo="$1" pr="$2"
@@ -72,8 +99,48 @@ list_pinned_comments() {
         | . as $c
         | (.body | split("\n") | .[0]) as $line1
         | ($line1 | capture("^<!-- CLAUDE_REVIEW (?<n>[0-9]+)/(?<m>[0-9]+) -->")? // empty)
-        | [$c.id, .n, .m, $c.created_at] | @tsv
+        | [$c.id, .n, .m, $c.created_at, $c.node_id] | @tsv
     ' | sort -t$'\t' -k2,2n
+}
+
+# unminimize_if_hidden <node_id>
+# GitHub lets anyone with write access hide a comment (Hide -> Resolved), which
+# collapses it in the UI. The REST list endpoint still returns it, body intact,
+# so upsert would happily PATCH a comment nobody can see: the refresh job runs
+# green, posts its progress comment, and the updated review is invisible. That
+# is exactly what happened on pulumi/docs#20533 -- an `#update-review` reported
+# success at 14:12 and the PR showed nothing until a `#new-review` six hours
+# later. Unhide before patching so the update lands somewhere visible.
+#
+# Non-fatal on failure: unminimizeComment can be refused by the token's scopes,
+# and a visible-but-stale review still beats no review at all. We warn loudly
+# instead, so the operator sees why the refresh looked like a no-op.
+unminimize_if_hidden() {
+    local node_id="$1"
+    [[ -z "$node_id" || "$node_id" == "null" ]] && return 0
+
+    local minimized
+    minimized=$(gh api graphql -f query='
+        query($id: ID!) {
+          node(id: $id) { ... on IssueComment { isMinimized } }
+        }' -f id="$node_id" --jq '.data.node.isMinimized' 2>/dev/null || true)
+
+    [[ "$minimized" != "true" ]] && return 0
+
+    if (( DRY_RUN )); then
+        printf '[dry-run] unminimizeComment %s\n' "$node_id" >&2
+        return 0
+    fi
+
+    if gh api graphql -f query='
+        mutation($id: ID!) {
+          unminimizeComment(input: {subjectId: $id}) { clientMutationId }
+        }' -f id="$node_id" >/dev/null 2>&1; then
+        printf 'pinned-comment.sh: unhid minimized pinned comment %s before patching\n' "$node_id" >&2
+    else
+        printf 'pinned-comment.sh: WARNING: pinned comment %s is hidden and could not be unhidden; this update will not be visible on the PR\n' \
+            "$node_id" >&2
+    fi
 }
 
 # fetch_pinned_bodies <repo> <pr>
@@ -111,6 +178,10 @@ split_body() {
     #   echo the previous pinned body (marker included) into the upsert
     #   input, and without this filter render_with_markers would prepend a
     #   second marker on top of the stale one.
+    # - Strip the footer the same way, for the same reason: everything from
+    #   the CLAUDE_REVIEW_FOOTER sentinel to EOF is dropped and re-stamped per
+    #   page by append_footer. The footer is by contract the LAST block of the
+    #   body (output-format.md), so sentinel-to-EOF is the whole of it.
     # - Walk the remaining lines, accumulating into the current page.
     # - When adding the next line would exceed max_bytes, finalize the page
     #   and start a new one with that line.
@@ -121,7 +192,7 @@ split_body() {
     #   `<details>` at the start of the next so the spilled list stays
     #   visually collapsed (otherwise the trailing items render as a naked
     #   bulleted list under the next H3 heading).
-    awk -v max="$max_bytes" -v outdir="$tmpdir" '
+    awk -v max="$max_bytes" -v outdir="$tmpdir" -v sentinel="$FOOTER_SENTINEL" '
         function flush() {
             if (length(buf) == 0) return
             # If a <details> is open mid-flush, close it on this page; the
@@ -143,7 +214,9 @@ split_body() {
                 cur = length(cont)
             }
         }
-        BEGIN { page = 0; buf = ""; cur = 0; in_details = 0; soft = int(max * 0.75) }
+        BEGIN { page = 0; buf = ""; cur = 0; in_details = 0; soft = int(max * 0.75); footer = 0 }
+        index($0, sentinel) == 1 { footer = 1 }
+        footer { next }
         /^<!-- CLAUDE_REVIEW [0-9]+\/[0-9]+ -->[[:space:]]*$/ { next }
         {
             line = $0 "\n"
@@ -185,6 +258,20 @@ render_with_markers() {
         printf '%s\n' "$marker" >"$tmp"
         cat "$page" >>"$tmp"
         mv "$tmp" "$page"
+    done
+}
+
+# append_footer <pages_dir> <footer_file>
+# Append the canonical footer to every page, so the refresh instructions and
+# the don't-hide-me warning ride on the comment the reader is actually looking
+# at -- not just on the tail comment of a split review.
+append_footer() {
+    local pages_dir="$1" footer_file="$2"
+    [[ -s "$footer_file" ]] || return 0
+    local page
+    for page in "$pages_dir"/page-*; do
+        printf '\n' >>"$page"
+        cat "$footer_file" >>"$page"
     done
 }
 
@@ -263,13 +350,74 @@ cmd_upsert() {
         fi
     fi
 
+    # Evidence-spine floor. This is the only point in the system that holds the
+    # old body and the new one at the same moment: everything above fetches
+    # comment IDs, not bodies, so nothing else can notice that a re-render
+    # dropped the 🔍 Verification trail. Measured on 2026-08-10, the update
+    # lane dropped it in 1 of 6 chained refreshes and published green.
+    #
+    # UNCONDITIONAL, deliberately. The model composes its own `pinned-comment.sh
+    # upsert` command and the Bash allow-list is a prefix match, so a
+    # `--spine-floor` flag could simply be omitted — the same reason the ✏️
+    # marks are workflow-written rather than model-written. The escape hatch is
+    # the env var, which does NOT match the allow-list pattern (that requires
+    # the command to begin `bash .claude/…`), so it is reachable by a human or
+    # a workflow step and not by the model.
+    #
+    # Never fatal: splice-spine.py exits 0 on any internal failure and leaves
+    # the body as rendered. A repair pass must not be the reason a review fails
+    # to publish. Operates on a COPY so a caller's file is never mutated.
+    # Scoped by CAPABILITY, not by lane name. The floor is only sound where the
+    # caller could not have re-derived the trail: claude-update.yml does a fresh
+    # shallow checkout and runs only Vale, so a shrunken trail there is always a
+    # loss. The composer lane (claude-code-review.yml, which reaches this
+    # function through cmd_upsert_validated) recomposes from
+    # `.verified-claims.json` against the CURRENT diff — if the author force-
+    # pushed a smaller change and re-requested review, a shorter trail is
+    # CORRECT there, and restoring the old one would inject records for lines
+    # that no longer exist. So: claims artifacts present => the caller owns the
+    # trail, stand down. Absent => the prior comment is the only copy, hold.
+    if [[ "${SPLICE_SPINE:-1}" != "0" ]] \
+       && [[ ! -f .verified-claims.json && ! -f .candidate-claims.json ]]; then
+        local script_dir splicer
+        script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+        splicer="$script_dir/splice-spine.py"
+        if [[ -f "$splicer" ]]; then
+            local prior_file spliced_file
+            prior_file=$(mktemp)
+            spliced_file=$(mktemp)
+            fetch_pinned_bodies "$repo" "$pr" >"$prior_file" 2>/dev/null || true
+            cp "$body_file" "$spliced_file"
+            python3 "$splicer" \
+                --prior "$prior_file" \
+                --body "$spliced_file" \
+                --in-place \
+                --report "${SPLICE_SPINE_REPORT:-/tmp/splice-spine.json}" || true
+            body_file="$spliced_file"
+            rm -f "$prior_file"
+        fi
+    fi
+
+    # Reserve the footer's bytes out of the per-page budget up front: it is
+    # appended to every page after the split, and a page sized to exactly
+    # MAX_BYTES plus a footer would sail past GitHub's 65536 hard cap.
+    local footer_file
+    footer_file=$(mktemp)
+    load_footer >"$footer_file"
+    local footer_bytes=0
+    [[ -s "$footer_file" ]] && footer_bytes=$(( $(wc -c <"$footer_file") + 1 ))
+    local split_budget=$(( MAX_BYTES - footer_bytes ))
+    (( split_budget > 0 )) || die "footer ($footer_bytes bytes) exceeds --max-bytes ($MAX_BYTES)"
+
     local pages_dir
-    pages_dir=$(split_body "$body_file" "$MAX_BYTES")
+    pages_dir=$(split_body "$body_file" "$split_budget")
     local pages
     pages=( "$pages_dir"/page-* )
     local total=${#pages[@]}
     (( total > 0 )) || die "split produced no pages (empty input?)"
     render_with_markers "$pages_dir" "$total"
+    append_footer "$pages_dir" "$footer_file"
+    rm -f "$footer_file"
 
     # Re-glob after marker prepend.
     pages=( "$pages_dir"/page-* )
@@ -277,9 +425,11 @@ cmd_upsert() {
     local existing_tsv
     existing_tsv=$(list_pinned_comments "$repo" "$pr" || true)
     local existing_ids=()
+    local existing_nodes=()
     if [[ -n "$existing_tsv" ]]; then
-        while IFS=$'\t' read -r id _pos _tot _created; do
+        while IFS=$'\t' read -r id _pos _tot _created node_id; do
             existing_ids+=("$id")
+            existing_nodes+=("$node_id")
         done <<< "$existing_tsv"
     fi
 
@@ -288,6 +438,7 @@ cmd_upsert() {
     for (( i = 0; i < total; i++ )); do
         local page="${pages[$i]}"
         if (( i < existing_count )); then
+            unminimize_if_hidden "${existing_nodes[$i]}"
             patch_comment "$repo" "${existing_ids[$i]}" "$page"
         else
             create_comment "$repo" "$pr" "$page"

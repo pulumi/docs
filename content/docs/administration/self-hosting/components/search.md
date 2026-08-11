@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/components/search/
   - /docs/pulumi-cloud/self-hosted/components/search/
   - /docs/pulumi-cloud/admin/self-hosted/components/search/
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}
@@ -50,7 +51,7 @@ The following environment variables must be set on the API container for Pulumi 
 
 ### Index Rotation
 
-The Pulumi service automatically triggers the OpenSearch cluster to reindex resource search results on a weekly basis.
+Pulumi Cloud automatically triggers the OpenSearch cluster to reindex resource search results on a weekly basis.
 
 ### Backfilling Data
 
@@ -58,6 +59,6 @@ If a reindex operation is needed outside the normal weekly rotation, users with 
 organization have access to a menu under `Settings -> Self-hosted`. This menu contains a `Reindex search cluster`
 button to manually trigger a backfill/reindex operation for the OpenSearch cluster.
 
-It can be useful to run a manual backfill when an OpenSearch cluster is first added to the Pulumi service configuration,
+It can be useful to run a manual backfill when an OpenSearch cluster is first added to the Pulumi Cloud configuration,
 or to bring things back in sync in case of operational issues. The backfill operation iterates over all Pulumi stacks, finds their latest checkpoints, and indexes the resources.
 It will also ensure any soft-deleted stacks do not have resources in the search index. As a rule of thumb, if there are every any serious issues with the cluster -- indexing is broken or delayed, the cluster is wiped out, etc. -- it's always safest and easiest to rebuild the search data from scratch using this command.

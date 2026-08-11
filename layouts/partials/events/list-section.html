@@ -8,11 +8,16 @@
 */}}
 
 {{ $pageContext := . }}
-{{ $nowUnix := now.UnixMilli }}
 
 {{ $allEvents := (where $.Site.Pages "Type" "events") }}
 
-{{ $upcomingEvents := slice }}
+{{/* Shared with the homepage section so both agree on how "upcoming" is decided.
+     A cutoff 24 hours back keeps an event listed until a day after it starts,
+     so a session running right now doesn't disappear mid-event. */}}
+{{ $upcomingEvents := partialCached "events/upcoming.html" (now.Add (duration "hour" -24)) "upcoming-list" }}
+{{ $upcomingPages := slice }}
+{{ range $upcomingEvents }}{{ $upcomingPages = $upcomingPages | append .data }}{{ end }}
+
 {{ $onDemandRecordings := slice }}
 {{ $filterTopics := slice }}
 {{ $filterLangs := slice }}
@@ -20,11 +25,9 @@
 
 {{ range $allEvents }}
     {{ if eq .Params.unlisted false }}
-        {{ $eventDateUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
         {{ $listed := false }}
-        {{ if lt $nowUnix $eventDateUnix }}
+        {{ if in $upcomingPages . }}
             {{ $listed = true }}
-            {{ $upcomingEvents = $upcomingEvents | append (dict "date" .Params.sortable_date "data" .) }}
         {{ else if .Params.youtube_url }}
             {{ $listed = true }}
             {{ $onDemandRecordings = $onDemandRecordings | append (dict "date" .Params.sortable_date "data" .) }}
@@ -165,18 +168,8 @@
                 <ul class="list-none p-0 grid grid-cols-1 lg:grid-cols-2 gap-4">
                     {{ range $group.events }}
                         {{ $data := .data }}
-                        {{ $link := "" }}
-                        {{ $external := false }}
                         {{ $filters := slice }}
                         {{ $tags := $data.Params.tags }}
-                        {{ $displayDate := dateFormat "January 2, 2006" .date }}
-
-                        {{ if or $data.Params.external $data.Params.internal_landing_page }}
-                            {{ $link = $data.Params.url_slug }}
-                            {{ $external = true }}
-                        {{ else }}
-                            {{ $link = printf "/events/%s" $data.Params.url_slug }}
-                        {{ end }}
 
                         {{ if $data.Params.featured }}
                             {{ $filters = $filters | append "featured" }}
@@ -201,8 +194,7 @@
                              needs no "upcoming" flag: this list only renders events that
                              are upcoming or have a recording (see above), making
                              "not on-demand" equivalent to "upcoming". */}}
-                        {{ $tileOptions := (dict "pageContext" $pageContext "external" $external "filters" $filters "link" $link "datetime" .date "displayDate" $displayDate "data" $data) }}
-                        {{ partial "events/event-card.html" $tileOptions }}
+                        {{ partial "events/event-list-item.html" (dict "pageContext" $pageContext "page" $data "filters" $filters) }}
                     {{ end }}
                 </ul>
             </div>

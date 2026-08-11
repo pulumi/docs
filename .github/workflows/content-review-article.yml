@@ -94,7 +94,7 @@ jobs:
           fi
           exit "$FAIL"
       - name: Install Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -387,7 +387,7 @@ jobs:
           # Anthropic API key the model inherently runs on. Every write
           # (branch, push, PR) happens in the publish job behind
           # publish-gate.py.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
+          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
 
       # Hand the model's work to the publish job as data. Stage everything
       # EXCEPT dot-paths — that excludes the runtime artifacts above AND
@@ -457,7 +457,7 @@ jobs:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           fetch-depth: 0
       - name: Install Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -474,7 +474,7 @@ jobs:
 
       - name: Download handoff artifact
         continue-on-error: true
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: review-handoff
 
@@ -498,7 +498,7 @@ jobs:
       - name: Download guardrail snapshot
         if: always()
         continue-on-error: true
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: review-snapshot
           path: .review-snapshot

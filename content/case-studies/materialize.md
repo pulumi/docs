@@ -44,7 +44,7 @@ Materialize’s cloud team operates the database as a SaaS service. The team is 
 
 Materialize runs all its deployments in Kubernetes using Amazon EKS. A multi-cluster architecture enables regional operations, but this increases complexity. It's critical that consistent configuration is applied across different clusters and regions, along with clear visibility into what's running and where.
 
-## Database-as-a-Service Infrastructure Challenges {#infrastructure-challenges}
+## Database-as-a-service infrastructure challenges {#infrastructure-challenges}
 
 Operating across multiple regions requires Materialize to maintain numerous EKS clusters, including data plane clusters that serve the database to users and control plane clusters that manage operations and observability. Ensuring consistent configuration across this distributed infrastructure is crucial, as even minor discrepancies between environments could lead to complex operational issues. This necessitated an automated system capable of efficiently deploying changes across the entire cluster fleet.
 
@@ -52,7 +52,7 @@ The company's infrastructure needs are further complicated by its organizational
 
 Infrastructure reliability is paramount given Materialize's responsibility for multiple clusters, regions, and customer database instances. The team requires confidence that infrastructure changes will deploy correctly without triggering a service outage. Additionally, the cloud team must maintain robust security and governance standards across all environments to prevent misconfigurations, ensure compliance, and maintain appropriate access controls.
 
-## Automated Infrastructure Management with Pulumi {#automated-infratructure-management}
+## Automated infrastructure management with Pulumi {#automated-infratructure-management}
 
 Materialize implemented Pulumi as its infrastructure management solution from day one, driven by previous challenges with traditional Infrastructure as Code tools. The team had found that tools like Terraform required developers to learn proprietary configuration languages and unfamiliar concepts, creating unnecessary friction, delays and complexity in their development process.
 
@@ -60,7 +60,7 @@ The organization now runs its infrastructure management through a GitHub Actions
 
 Materialize maintains a strict "no ClickOps" policy, relying on Pulumi to manage every aspect of their infrastructure. The team has expanded beyond Pulumi's built-in Amazon EKS components by developing custom Pulumi Providers to manage additional infrastructure components. This comprehensive approach to infrastructure automation has streamlined development processes, reduced learning curves, and enabled the cloud team to provide reliable "staging as a service" capabilities to their database engineers.
 
-## Benefits of Using Pulumi {#benefits}
+## Benefits of using Pulumi {#benefits}
 
 Using Pulumi to manage Kubernetes infrastructure has unlocked far-reaching benefits for Materialize. The company has been able to standardize its cluster configuration so it's easy for developers to maintain and is reliable in production.
 
@@ -88,7 +88,7 @@ The adoption of standard programming languages for infrastructure management has
 
 Overall, using Pulumi for Kubernetes IaC has substantially optimized Materialize’s operating efficiency. Pulumi simplifies infrastructure management and ensures all resources run reliably, improving the customer experience for Materialize's enterprise database users.
 
-### Key Points
+### Key points
 
 * Pulumi lets Materialize onboard new cloud team members 75% faster—within one week, instead of an estimated month without Pulumi.
 * Pulumi supports Materialize in operating multi-cluster Kubernetes environments at scale. It ensures cluster configurations are reproducible and simplifies the rollout of changes across the entire Amazon EKS fleet.

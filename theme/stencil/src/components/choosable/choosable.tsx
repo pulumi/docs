@@ -91,7 +91,7 @@ export class Choosable {
             // @ts-ignore-next-line
             this.storeUnsubscribe = store.mapStateToProps(this, (state: AppState) => {
                 const {
-                    preferences: { language, k8sLanguage, os, cloud, persona, backend, pythontoolchain },
+                    preferences: { language, k8sLanguage, os, cloud, persona, backend, pythontoolchain, tfTool },
                 } = state;
 
                 switch (this.type) {
@@ -109,6 +109,8 @@ export class Choosable {
                         return { selection: backend };
                     case "pythontoolchain":
                         return { selection: pythontoolchain };
+                    case "tf-tool":
+                        return { selection: tfTool };
                 }
             });
         }

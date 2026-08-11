@@ -283,7 +283,7 @@ The direct form is invoked using `fn::invoke`. The result is resolved synchronou
 
 ### Output form
 
-The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/concepts/inputs-outputs/).
+The **output form** accepts Pulumi Inputs (or plain values) as arguments and returns a Pulumi Output as a result. For more information on these types, see [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/).
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
 
@@ -329,11 +329,11 @@ The [Pulumi Registry](/registry) contains authoritative documentation for all pr
 
 ## Invoke options
 
-In addition to function arguments, provider functions also accept "invoke options", similar to the way Pulumi resources accept [resource options](/docs/concepts/options/). Invoke options may be specified either as an object or as a list of arguments depending on the language you're writing your Pulumi program in. The available options are:
+In addition to function arguments, provider functions also accept "invoke options", similar to the way Pulumi resources accept [resource options](/docs/iac/concepts/resources/options/). Invoke options may be specified either as an object or as a list of arguments depending on the language you're writing your Pulumi program in. The available options are:
 
-* `dependsOn`: An array of resources that this function depends on. This option is only available in the Output form of a provider function. See [Choosing between direct form and output form](#choosing-between-direct-form-and-output-form) for a full explanation.
-* `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/concepts/options/parent/), the parent will be consulted when determining the provider to use.
-* `provider`: Pass an [explicitly configured provider](/docs/concepts/resources/providers/#explicit-provider-configuration) to use for this function call, instead of using the default provider. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
+* `dependsOn`: An array of resources that this function depends on. This option is only available in the output form of a provider function, because only the output form participates in the dependency graph and can wait on other resources before it executes. See [Choosing between direct form and output form](#choosing-between-direct-form-and-output-form) for a full explanation.
+* `parent`: Supply a parent resource for this function call. Much like the [parent resource option](/docs/iac/concepts/resources/options/parent/), the parent will be consulted when determining the provider to use.
+* `provider`: Pass an [explicitly configured provider](/docs/iac/concepts/providers/#explicit-provider-configuration) to use for this function call, instead of using the default provider. This is useful, for example, if you want to invoke a function in each of a set of AWS regions.
 
 The following options are also available, but are deprecated and should not be used in modern Pulumi programs as the functionality they control are commonly handled when you install a provider package:
 

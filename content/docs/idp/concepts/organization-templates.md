@@ -14,13 +14,8 @@ aliases:
   - /docs/pulumi-cloud/developer-platforms/templates/
   - /docs/pulumi-cloud/developer-portals/templates/
   - /docs/idp/concepts/templates
+pulumi_cloud_feature: organization-templates
 ---
-
-{{% notes "info" %}}
-Organization Templates are only available to organizations using the Enterprise and Business Critical editions.
-
-If you would like to use this feature, [contact us](/contact?form=sales) to upgrade.
-{{% /notes %}}
 
 A large number of public project templates are provided by Pulumi in our [examples](https://github.com/pulumi/examples) and [templates](https://github.com/pulumi/templates) repos. These can be useful for teams starting from scratch; however, as your business and infrastructure grow in complexity, it is likely you will want new Pulumi projects to include some custom, internal functionality not provided by these public templates.
 
@@ -227,7 +222,7 @@ If you plan on using no-code or CLI deployment methods these prerequisites are n
 This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when creating private repositories; fetching template sources may use the Pulumi GitHub app instead, if installed.
 More specifically, this ensures that any repositories created on your behalf are created using your own GitHub user's permissions, rather than the (potentially broader) access granted to the Pulumi GitHub app.
 
-Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#github-oauth-application).
+Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#vcs-authorization).
 
 If you have OAuth App access restrictions enabled in your Github organization, you will also need to
 [authorize the Pulumi Github App](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
@@ -240,7 +235,7 @@ See the GitHub app [installation instructions](/docs/integrations/version-contro
 
 Because the app is installed and granted repository access at the organization level, any repository it can reach becomes usable as a template source by every member of your Pulumi organization -- regardless of whether an individual member's own GitHub user has access to that repository. An organization admin who adds a source is assumed to be making it available to the whole organization.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Granting the app access to _some_ or _all_ of your GitHub repos will impact how the New Project Wizard behaves.
 
 If you grant the app access to _all_ repos, the New Project Wizard will allow users to create projects in new repositories. If the app only has access to _some_ repos, users will only be able to create new projects within _existing_ repositories.

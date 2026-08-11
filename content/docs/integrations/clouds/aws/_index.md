@@ -1,6 +1,6 @@
 ---
 title_tag: "AWS | Pulumi Integrations"
-meta_desc: AWS integration with Pulumi — providers, packages, architecture templates, guides, ESC integrations, Insights account scanning, and pre-built policy packs.
+meta_desc: AWS integration with Pulumi — providers, packages, architecture templates, guides, ESC integrations, cloud account scanning, and pre-built policy packs.
 title: AWS
 linktitle: AWS
 h1: AWS
@@ -15,7 +15,7 @@ aliases:
 - /docs/clouds/aws/
 ---
 
-Build, deploy, and manage AWS infrastructure with Pulumi. This page links to every Pulumi capability for AWS: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), Insights account scanning, and policy packs.
+Build, deploy, and manage AWS infrastructure with Pulumi. This page links to every Pulumi capability for AWS: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), cloud account scanning, and policy packs.
 
 To start from scratch, follow the [AWS get-started guide](/docs/iac/get-started/aws/).
 
@@ -76,7 +76,7 @@ ESC integrates directly with AWS for short-lived credentials and secret retrieva
 
 [Pulumi Insights](/docs/insights/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For AWS, Insights connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Insights discovery overview](/docs/insights/discovery/accounts/) for background.
+For AWS, Insights connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/insights/discovery/) for background.
 
 ## Policy packs
 

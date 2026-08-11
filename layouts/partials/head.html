@@ -20,21 +20,6 @@
         {{- end }}
     </script>
 
-    {{- /* A/B test 20260723-mktg-ctas anti-flicker (homepage only): hold the
-           hero secondary CTA hidden (space reserved) before first paint so its
-           label doesn't visibly flip while GrowthBook resolves the variant.
-           mktg-ctas-experiment.ts reveals it on resolve; the timeout is a
-           safety net so a slow/blocked GrowthBook can never leave it hidden. */ -}}
-    {{ if .IsHome }}
-    <style>html.mktg-ctas-pending a[data-role="cta-secondary"]{visibility:hidden}</style>
-    <script>
-        document.documentElement.classList.add("mktg-ctas-pending");
-        window.setTimeout(function () {
-            document.documentElement.classList.remove("mktg-ctas-pending");
-        }, 400);
-    </script>
-    {{ end }}
-
     <!-- Preconnect to Segment (used on every page). -->
     <link rel="preconnect" href="https://cdn.segment.com" crossorigin />
     <!-- Preconnect to GrowthBook (A/B testing, used on every page). -->
@@ -522,9 +507,16 @@
 
     {{- end }}
 
-    <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
+    <!-- Apply anchor links to headings in the docs, blog and taxonomy pages.
+         Self-hosted (static/js/anchor-js.min.js, vendored from anchor-js v4.1.0's anchor.min.js)
+         rather than loaded from cdnjs: this removes a third-party render-relevant dependency and
+         its DNS/TLS/connection setup cost from every docs/tutorials/blog/authors/tags/registry
+         page, and eliminates the single point of failure where a cdnjs slowdown or outage delayed
+         anchors sitewide. The vendored file's SHA-512 matches cdnjs's own published SRI hash for
+         anchor-js@4.1.0/anchor.min.js (sha512-8IXYpHF8LXD5JYo9bhj3ja2uLOJ7QJ/o+F1DSitgu0HmT5W0Vv3vTi+p5nn9jbi/cPnskPO9qT0RY5VAdofRJQ==,
+         per https://api.cdnjs.com/libraries/anchor-js/4.1.0), confirming it is unmodified. -->
     {{ if and (not .IsHome) (.Section) (in "docs tutorials blog authors tags registry" .Section) }}
-        <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script async defer src="{{ "js/anchor-js.min.js" | relURL }}"></script>
         <script>
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
             window.addEventListener("load", function (event) {

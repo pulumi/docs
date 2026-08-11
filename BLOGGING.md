@@ -42,7 +42,7 @@ proceed to the next section.
    ---
    title: "My New Post"
    date: 2019-07-17T14:26:50-07:00
-   feature_image: feature.png
+   feature_image:
    authors:
        - joe-duffy
    tags:
@@ -230,11 +230,11 @@ To add images to the body of your post, first place them within the folder conta
 > [!IMPORTANT]
 > If you are adding _any_ logos to the images, you must absolutely ensure these are current. Using a wrong or outdated logo can have a severe negative impact on social sharing timelines due to caching.
 
-When you generate a new post, a placeholder `feature_image` is included:
+When you generate a new post, the `feature_image` field is included but left blank:
 
 - **`feature_image`** — A high-resolution hero image (1884×1256) displayed in the blog listing and at the top of the blog post page. It also drives the post's **social/OpenGraph card** (the 1200×628 image used in Twitter cards, unfurled Slack links, etc. and on the blog home page), which is generated on-brand at **build time** from the post title + feature image. You no longer create or commit a separate `meta_image` — leave it blank.
 
-The `feature_image` is optional but strongly recommended. Without one, the post-page hero and the listing cards show **no image** — the title and metadata simply span the full width (most pre-redesign posts are like this). Only the build-time social card falls back to a generic branded plate; the on-page layout no longer shows a placeholder.
+**Every published post needs a feature image**, with two exceptions: posts in the catch-all `general` category (SEO comparisons, "what is X" explainers — lower-touch by design) and drafts (`draft: true`), where the image lands before you undraft. Without one, the post-page hero and the listing cards show **no image** — the title and metadata simply span the full width (most pre-redesign posts are like this, and those are grandfathered). Only the build-time social card falls back to a generic branded plate; the on-page layout no longer shows a placeholder.
 
 If you'd like a custom-designed feature image, label your PR with `needs-design` and a designer will create one for your post. Alternatively, use the `/blog-feature-image` command in Claude Code to generate one automatically from a curated set of branded templates.
 
@@ -242,7 +242,7 @@ If you'd like a custom-designed feature image, label your PR with `needs-design`
 | --------------- | ---------------- | ------------ | ------ | ------------------------ |
 | `feature_image` | 1884×1256        | 3:2          | PNG    | Opaque (No Transparency) |
 
-Remember to replace the placeholder feature image (or remove the property and delete the placeholder file) before submitting your post.
+Add your image to the post's directory and set `feature_image` to its filename before submitting your post. Never commit a placeholder image.
 
 > [!NOTE]
 > **Don't set a custom `meta_image`.** You should almost never need one — the build-time card covers virtually every post and keeps social previews on-brand automatically, including when the brand evolves. A hand-made override is frozen in time: it drifts off-brand silently, which is exactly why hundreds of older posts needed cleanup. If you want a nicer card, invest in a better feature image (label your PR `needs-design` for a custom-designed one). If the generated card genuinely doesn't work for your post, raise it in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) before committing an override.
@@ -314,6 +314,21 @@ Place the card yourself, wherever it reads best — usually at a natural section
 
 **When to add one:** the card suits evergreen, search-and-discovery content (comparisons, best-practices guides, how-to tutorials, explainers) of at least ~800 words. Skip it on very short posts, where it overwhelms the content, and on time-bound announcement or news content — funding, partnerships, brand milestones, year-in-review recaps, and `category: company` posts generally — where a "get started" ask is off-topic.
 
+#### Event and Post Cards
+
+To point readers at an event or another blog post, embed its card with the `blog/card` shortcode instead of describing it in a CTA card. Pass one content path:
+
+```plain
+{{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
+{{< blog/card "/blog/pulumi-neo/" >}}
+```
+
+This is the same tile the [events list](/events/) and the blog homepage use, so the card pulls its title, date, location, presenters, and blurb from the target page — nothing to restate and nothing to go stale. An event card also flips its own CTA from "Register" to "Watch" once a recording is added to the event page, so a post that outlives the event still links somewhere useful.
+
+A card is always full width, so it's one card per shortcode — several in a row is simply several shortcodes. The path is the only parameter: there's no title or body copy to set, so anything you want to say about a card goes in the prose around it. Paths must be absolute and resolve to a page under `/events/` or `/blog/` — a typo fails the build rather than dropping the card silently.
+
+Reach for `blog/cta-card` instead when you're linking somewhere without a card (docs, a product page, a signup) or writing a generic get-started ask.
+
 #### Animated GIFs
 
 GIFs are welcome, but should be optimized. In general, animated GIFs should be no more than 1200 pixels wide and 3 MB in size. If you need help optimizing your GIF, consider [Gifsicle](https://www.lcdf.org/gifsicle/); it's available through Homebrew and has an easy-to-use command-line API. For example, to resize (e.g., downscale) and optimize a GIF in place:
@@ -329,7 +344,7 @@ Before submitting your post:
 1. **Review for quality**: Run `/docs-review` in Claude Code to check for style and content issues
 2. **Add borders to images**: If you have screenshots, run `/add-borders` to add 1px grey borders for better visual clarity
 3. **Preview locally**: Run `make serve` and check your post at <http://localhost:1313/blog/[your-slug>]
-4. **Replace the placeholder feature image**: Add a 1884×1256 hero image (or run `/blog-feature-image`); it also drives the build-time social card (see [feature image guidelines](#social-meta-and-feature-images) above)
+4. **Add a feature image**: Add a 1884×1256 hero image (or run `/blog-feature-image`) and set `feature_image` to its filename; it also drives the build-time social card (see [feature image guidelines](#social-meta-and-feature-images) above)
 5. **Submit for review**: Create a Pull Request against the `master` branch
 6. **Publicize**: Before merge, reach out in [#blogs](https://pulumi.slack.com/archives/CCBFCGU94) so Marketing can help broadcast your post
 
@@ -368,7 +383,7 @@ Because the website is deployed in response to a commit to pulumi/docs `master`,
 - [ ] Check for a break `<!--more-->` after the first paragraph, and ensure that your post's introduction looks right on the blog home page
 - [ ] Run `/docs-review` to check for style and content issues
 - [ ] Run `/add-borders` if your post includes images
-- [ ] Check that your feature_image appears properly on the blog home page and at the top of the post. Do not use animated GIFs
+- [ ] Set a `feature_image` (required unless the post is `category: general` or `draft: true`), and check that it appears properly on the blog home page and at the top of the post. Do not use animated GIFs
 - [ ] If your feature image includes logos, confirm they are the current Pulumi/partner logos (the build-time social card is generated from the feature image)
 - [ ] Preview locally with `make serve`. Check formatting, links, and images for appearance
 - [ ] Use the [Twitter card validator](https://cards-dev.twitter.com/validator) to check how the blog appears in a tweet (use the preview provided in the PR)

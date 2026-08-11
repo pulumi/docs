@@ -20,7 +20,7 @@ For example, with Kubernetes `CustomResource` resources, the Kubernetes resource
 
 {{< resource-option-scope "replaceOnChanges" >}}
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -104,6 +104,27 @@ var widget = new com.pulumi.kubernetes.apiextensions.CustomResource("widget",
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "kubernetes_manifest" "widget" {
+  manifest = {
+    apiVersion = "acmecorp.com/v1alpha1"
+    kind       = "Widget"
+    spec = {
+      input = "something"
+    }
+  }
+
+  pulumi {
+    replace_on_changes = [manifest]
+  }
+}
+```
+
+In HCL, each entry is a bare attribute name (in the provider's `snake_case` form), not a quoted string.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
@@ -114,7 +135,7 @@ The [property paths](/docs/reference/property-paths/) provided as input to `repl
 - `spec[0]`: any change to the first element of the array in the `spec` property or any of its children
 - `spec[*].item`: any change to the `item` property of any element of the array in the `spec` property or any of the `item` property's children
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The property paths passed to `replaceOnChanges` should always be the "camelCase" version of the property name, as used in the core Pulumi resource model.
 {{% /notes %}}
 

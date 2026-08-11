@@ -8,9 +8,11 @@ include_organization_schema: true
 sections:
   - type: hero
     layout: split
-    badge_highlight_text: "New Release:"
-    badge_text: "Building for the Agentic Era"
-    badge_link: /releases/agentic-infrastructure-era/
+    cta_secondary_text: Download open source
+    cta_secondary_link: /docs/install/
+    badge_highlight_text: "Latest release:"
+    badge_text: "Full support for Terraform and HCL"
+    badge_link: /releases/terraform-state-backend-modules-hcl/
     title_primary: "Next-level"
     title_secondary: "infrastructure as code \n for humans and agents."
     description: |
@@ -307,12 +309,12 @@ sections:
         image_alt: Pulumi ESC secrets management
         cta_text: Learn more about Pulumi ESC
         cta_link: /product/secrets-management/
-      - title: Insights & governance
+      - title: Discovery & governance
         description: |
           Use natural language queries to find managed and unmanaged resources — even across clouds. Enforce policies, track compliance in real-time, and find vulnerabilities before they become incidents.
         image: /images/home/ig-card-image.svg
-        image_alt: Pulumi Insights governance dashboard
-        cta_text: Learn more about insights & governance
+        image_alt: Pulumi Discovery & Governance dashboard
+        cta_text: Learn more about discovery & governance
         cta_link: /product/insights-governance/
       - title: Self-service infrastructure
         description: |
@@ -350,6 +352,13 @@ sections:
       - slug: panther-labs
         size: half
     anchor: case-studies
+
+  - type: latest_posts
+    title: What's new at Pulumi
+    description: Product news, engineering insights, and hands-on workshops from the team.
+    count: 3
+    show_event: true
+    anchor: latest-posts
 
   - type: social_carousel
     title: Open source. Built by engineers for engineers.

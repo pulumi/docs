@@ -14,6 +14,8 @@ Pulumi policies integrate with CI/CD pipelines to automatically enforce complian
 
 ## How policy enforcement works in CI/CD
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 When your CI/CD pipeline runs Pulumi commands, policy enforcement happens automatically:
 
 1. The pipeline runs `pulumi preview` or `pulumi up`.
@@ -21,6 +23,10 @@ When your CI/CD pipeline runs Pulumi commands, policy enforcement happens automa
 1. Each policy pack evaluates the proposed infrastructure changes.
 1. If any policy in **advisory** mode detects a violation, a warning is logged but the operation continues.
 1. If any policy in **mandatory** mode detects a violation, the operation fails and the pipeline stops.
+
+{{% notes type="warning" %}}
+Your CI image needs the policy pack's [runtime](/docs/insights/policy/policy-packs/#runtime-requirements) installed, which is not necessarily the runtime your Pulumi program uses. All of Pulumi's pre-built policy packs run on Node.js, so a Python or Go pipeline that enforces one needs Node.js in the image as well.
+{{% /notes %}}
 
 You can also run policy packs locally in CI by passing the `--policy-pack` flag:
 

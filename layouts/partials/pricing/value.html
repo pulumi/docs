@@ -1,0 +1,44 @@
+{{- /*
+  Normalizes one availability cell from data/pulumi_pricing.yaml into something
+  a template can render without type-switching. Pass the raw value:
+
+      {{ $cell := partial "pricing/value.html" (index $f.cells $e.id) }}
+
+  Accepts a bool, a number, a string, or a map of {content, subtext, tooltip}
+  where `content` may itself be `true`. Returns a dict:
+
+    available  whether the feature is on this edition at all
+    kind       "check" | "text" | "blank"
+    content    Markdown for the "text" kind, "" otherwise
+    subtext    Markdown shown under the content, or ""
+    tooltip    Markdown shown in a hover tooltip, or ""
+
+  The blank branch catches both `false` and nil, so no caller ever compares
+  against nil.
+*/ -}}
+{{- $v := . -}}
+{{- $raw := $v -}}
+{{- $subtext := "" -}}
+{{- $tooltip := "" -}}
+{{- if reflect.IsMap $v -}}
+  {{- $raw = index $v "content" -}}
+  {{- with index $v "subtext" -}}{{- $subtext = printf "%v" . -}}{{- end -}}
+  {{- with index $v "tooltip" -}}{{- $tooltip = printf "%v" . -}}{{- end -}}
+{{- end -}}
+{{- $available := false -}}
+{{- $kind := "blank" -}}
+{{- $content := "" -}}
+{{- if eq $raw true -}}
+  {{- $available = true -}}
+  {{- $kind = "check" -}}
+{{- else if $raw -}}
+  {{- $available = true -}}
+  {{- $kind = "text" -}}
+  {{- $content = printf "%v" $raw -}}
+{{- end -}}
+{{- return (dict
+    "available" $available
+    "kind" $kind
+    "content" $content
+    "subtext" $subtext
+    "tooltip" $tooltip) -}}

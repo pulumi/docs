@@ -15,6 +15,6 @@ redirect_to: https://sst.dev/blog/moving-away-from-cdk
 
 ---
 
-## Read the Blog
+## Read the blog
 
    SST is working on a new version of SST called Ion. The current iteration of SST is based off of AWS CDK and CloudFormation. There are significant limitations to SST because of its dependencies on CDK and CloudFormation. CloudFormation is a proprietary cloud-based service that is opaque and CDK is only transpiling down to CloudFormation and doesn't create any infrastructure. This creates issues around speed, error handling, leaky abstractions, and state management. For Ion, SST uses Pulumi's engine underneath, which provides greater transparency and control over how the code executes and the infrastructure that is provisioned. Read Jay V's (Founder & CEO of SST) blog post on "[Moving away from CDK](https://sst.dev/blog/moving-away-from-cdk.html)".

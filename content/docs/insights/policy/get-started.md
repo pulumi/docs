@@ -21,6 +21,7 @@ aliases:
   - /docs/iac/packages-and-automation/crossguard/get-started/
   - /docs/iac/using-pulumi/crossguard/get-started/
   - /docs/iac/packages-and-automation/crossguard/get-started/
+pulumi_cloud_feature: policy-enforcement
 ---
 
 Pulumi Policies enforces compliance, security, and best practices across your cloud infrastructure, whether managed by Pulumi, provisioned by other tools, or created manually.
@@ -28,7 +29,7 @@ Pulumi Policies enforces compliance, security, and best practices across your cl
 Policy enforcement is applied in two ways:
 
 - **Preventative**: Blocking non-compliant resources before deployment during Pulumi stack updates
-- **Audit**: Continuously scan existing resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations
+- **Audit**: Continuously scan existing resources discovered through [Discovery](/docs/insights/discovery/) to identify violations
 
 This guide walks you through getting started with Pulumi Policies using both preventative and audit policies.
 
@@ -38,7 +39,7 @@ To follow this guide, ensure you have:
 
 - Access to Pulumi Cloud with Policy enabled for your organization.
 - **For preventative policies**: One or more Pulumi stacks.
-- **For audit policies**: Cloud accounts connected via [Insights Discovery](/docs/insights/discovery/).
+- **For audit policies**: Cloud accounts connected via [Discovery](/docs/insights/discovery/).
 - Organization admin permissions to configure policies.
 
 ## Understanding the Policies page
@@ -84,7 +85,7 @@ The policy groups table shows:
 - **Entities Applied**: Number of stacks or accounts governed by this group
 - **Policy Packs**: Number of policy packs included in this group
 
-Your organization includes a default policy group for each type: one for preventative policies (applies to all stacks) and one for audit policies (applies to all accounts). These default groups automatically include new stacks and accounts as they're created.
+Your organization includes a default policy group for each type: `default-policy-group` for preventative policies, which applies to all stacks, and `default-accounts-policy-group` for audit policies, which applies to all cloud accounts. These default groups automatically include new stacks and accounts as they're created, and there are limits on how you can change them. See [default policy groups](/docs/insights/policy/policy-groups/#default-policy-groups).
 
 #### Creating a preventative policy group
 

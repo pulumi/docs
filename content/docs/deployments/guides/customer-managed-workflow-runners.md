@@ -8,13 +8,10 @@ menu:
     parent: deployments-guides
     weight: 20
     identifier: deployments-guides-customer-managed-runners
+pulumi_cloud_feature: customer-managed-runners
 ---
 
-Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Insights](/docs/insights/) discovery scans, and [policy evaluations](/docs/insights/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).
-
-{{% notes "info" %}}
-Customer-Managed Workflow Runners are available on the Business Critical edition of Pulumi Cloud. [Contact sales](/contact/?form=sales) if you are interested and want to enable Customer-Managed Workflow Runners.
-{{% /notes %}}
+Customer-managed workflow runners let you self-host the compute that runs Pulumi Deployments, [Discovery](/docs/insights/discovery/) scans, and [policy evaluations](/docs/insights/policy/), so workflows execute inside your own network and on hardware you control. For an overview of how runners fit into a deployment run — and the full configuration reference — see [Runners](/docs/deployments/concepts/customer-managed-runners/).
 
 ## Using customer-managed workflow runners
 
@@ -26,12 +23,12 @@ Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [
 1. Verify the workflow runner status by refreshing the page
 1. Configure the workflow runner pool for the workflows you want to run:
    - **Deployments**: Navigate to **Stack Settings** > **Deploy** tab and select the pool under the **Deployment Runner** pool dropdown
-   - **Insights discovery scans**: Navigate to **Management** > **Accounts** and select the pool for the account you want to scan
+   - **Discovery scans**: Navigate to **Management** > **Accounts** and select the pool for the account you want to scan
    - **Policy evaluation**: Navigate to **Management** > **Policies** > **Policy Groups** and select the pool for an audit policy group
 1. **(Optional)** Add more workflow runners to the pool to increase concurrency by using the same token
 1. Verify your setup:
    - **Deployments**: Run a `pulumi refresh` through the **Actions** dropdown in your stack page
-   - **Insights discovery scans**: Trigger a scan from the **Management** > **Accounts** page and confirm it completes successfully
+   - **Discovery scans**: Trigger a scan from the **Management** > **Accounts** page and confirm it completes successfully
    - **Policy evaluation**: Run a policy evaluation against a stack and confirm the results appear as expected
 
 Workflow runners poll Pulumi Cloud for pending workflows at a configurable interval (default: every 1 minute) and will disappear from the Pool details page 1-2 hours after being offline. On the deployments page, you can see all the deployments including pending deployments, and which workflow runners were used in a deployment.
@@ -55,13 +52,13 @@ Patterns for scaling:
 - **Ephemeral runners**: Set `single_run: true` and use a Kubernetes `Job`/`CronJob` (or equivalent) to start a runner per job; the process exits after completing the job.
 - **Specialized pools**: Use `enabled_workflow_types` to dedicate some runners to deployments and others to Insights scans or policy evaluations, so heavy deployments do not crowd out faster scan jobs.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If you are running the workflow runner inside a firewall ensure to allow outbound requests to api.pulumi.com. Ensure workflow runners have the cloud provider credentials to be able to deploy in your environments.
 {{% /notes %}}
 
 ### Setting an organization default pool
 
-You can designate one pool as the **organization default**. When a default pool is set, any deployment, Insights discovery scan, or policy evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
+You can set one pool as the **organization default**. When a default pool is set, any deployment, Discovery scan, or policy evaluation that does not have an explicit workflow runner pool configured will use the default pool instead of the Pulumi Hosted Pool.
 
 The resolution order for each workflow is:
 

@@ -40,6 +40,8 @@ The registration steps are the same for all token types.
 
 ## Organization tokens
 
+{{< pulumi-cloud "org-team-access-tokens" />}}
+
 Organization tokens grant access on behalf of the entire Pulumi organization. They are appropriate for CI/CD pipelines that need broad access across stacks in the organization.
 
 ### Authorization policy
@@ -99,7 +101,9 @@ jobs:
 
 ## Team tokens
 
-Team tokens are scoped to a specific team within your Pulumi organization. They are useful when you want to limit CI/CD access to only the stacks a particular team is authorized to manage. Team tokens require the Enterprise or Business Critical edition.
+{{< pulumi-cloud "teams" />}}
+
+Team tokens are scoped to a specific team within your Pulumi organization. They are useful when you want to limit CI/CD access to only the stacks a particular team is authorized to manage.
 
 ### Authorization policy
 

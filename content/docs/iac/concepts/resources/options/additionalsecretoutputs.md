@@ -20,7 +20,7 @@ The `additionalSecretOutputs` resource option specifies a list of named output p
 
 This example ensures that the password generated for a database resource is an encrypted secret:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -77,11 +77,26 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    additional_secret_outputs = [password]
+  }
+}
+```
+
+In HCL, each entry is a bare attribute name (in the provider's `snake_case` form), not a quoted string.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
 Only top-level resource properties can be designated secret. If sensitive data is nested inside of a property, you must mark the entire top-level output property as secret.
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 A resource's [physical ID](/docs/iac/concepts/resources/names/#physicalid) (the `id` output property) cannot be included in `additionalSecretOutputs`. The `id` is a special property, not a regular output, so it is always stored in plain text in the state file. See [The resource ID cannot be made secret](/docs/concepts/secrets/#the-resource-id-cannot-be-made-secret) for the implications and a workaround.
 {{% /notes %}}

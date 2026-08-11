@@ -7,6 +7,7 @@ weight: 7
 menu:
     iac:
         name: Create a component
+        identifier: aws-get-started.create-component
         parent: aws-get-started
         weight: 7
 

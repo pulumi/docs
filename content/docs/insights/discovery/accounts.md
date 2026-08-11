@@ -1,8 +1,8 @@
 ---
-title: Accounts
-title_tag: Create and manage Insights accounts | Pulumi Insights
-h1: Create and manage Insights accounts
-meta_desc: This page describes how to create accounts used by Pulumi Insights to scan provider resources for use within Pulumi Cloud.
+title: Cloud Accounts
+title_tag: Create and Manage Cloud Accounts | Discovery & Governance
+h1: Create and Manage Cloud Accounts
+meta_desc: This page describes how to create cloud accounts used by Discovery to scan provider resources for use within Pulumi Cloud.
 menu:
   insights:
     parent: insights-discovery
@@ -11,9 +11,10 @@ aliases:
   - /docs/pulumi-cloud/insights/accounts/
   - /docs/pulumi-cloud/insights/import/
   - /docs/insights/accounts/
+pulumi_cloud_feature: insights-discovery
 ---
 
-This document outlines the steps required to create and manage a Pulumi Insights account used to scan provider resources.
+This document outlines the steps required to create and manage a cloud account used by Discovery to scan provider resources.
 
 {{% notes type="info" %}}
 To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect cloud accounts wizard](/docs/insights/discovery/connect-cloud-accounts/). This page covers connecting a single account using a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment you configure yourself.
@@ -30,25 +31,25 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 1. On this page, select the **Connect cloud accounts** button to open the connection wizard.  
 1. Select your provider.
 {{< notes type="info" >}}  
-  Currently, Pulumi supports AWS, Azure, Google Cloud, Oracle Cloud, and Kubernetes as providers for Insights accounts.  
+  Currently, Pulumi supports AWS, Azure, Google Cloud, Oracle Cloud, and Kubernetes as providers for cloud accounts.  
 {{< /notes >}}
 1. On the **Authentication** step, choose **Connect using existing ESC credentials** and select an ESC environment that has the correct credentials to scan the selected provider, then select **Next**. Pulumi validates the credentials stored in the environment.  
 {{< notes type="info" >}}  
   See below for details on how to set up the ESC environment for each provider.  
 {{< /notes >}}
 1. On the **Discovery** step, review the defaults: scheduled scans and policy evaluation are both enabled, with a default policy pack pre-selected, and you can turn either off. Scans run every 24 hours; you can switch to a 12-hour schedule instead. For AWS, also select the [partition](#aws-partitions) the account belongs to and the regions you want scanned; global services are always scanned.  
-1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. Accounts connected with existing ESC credentials are named after the selected ESC environment; accounts connected with a browser-based sign-in are named after the cloud account.
+1. Select **Next**. You should see a success notification, and the wizard shows a summary with next steps. Accounts connected with existing ESC credentials are named after the selected ESC environment; accounts connected with a browser-based sign-in are named after the provider account.
 {{< notes type="info" >}}  
   Child accounts are automatically named with a `/` separator (for example, `<account>/us-east-1`). For more information, see **Account hierarchies** below.  
 {{< /notes >}}
 
 {{< notes type="info" >}}  
-  A scan should be kicked off immediately. If you are creating a new Insights account for AWS, see the **child accounts** (one for each region) for scan status.
+  A scan should be kicked off immediately. If you are creating a new cloud account for AWS, see the **child accounts** (one for each region) for scan status.
 {{< /notes >}}
 
 ## Account hierarchies
 
-Account hierarchies allow you to organize and manage Insights accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so in the case of AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.
+Account hierarchies allow you to organize and manage cloud accounts in a structured way. Currently, child accounts can only be created automatically by Pulumi and is only done so for AWS regions. In the future, this feature will be expanded to support creating custom hierarchies, providing more flexibility for structuring accounts, such as for organizing Kubernetes clusters within an Azure subscription.
 
 ### How child accounts work
 
@@ -60,7 +61,7 @@ For example:
 * Child account (region): `my-aws-account/us-east-1`  
 * Sub-child account (K8s cluster): `my-aws-account/us-east-1/my-cluster`
 
-If you scan or delete the `my-aws-account` Insights account, Pulumi applies this action to all child accounts. However, you can still scan or delete `my-aws-account/us-east-1` without affecting other children of `my-aws-account` and future scans of `my-aws-account` will no longer include `us-east-1` unless it is updated.
+If you scan or delete the `my-aws-account` cloud account, Pulumi applies this action to all child accounts. However, you can still scan or delete `my-aws-account/us-east-1` without affecting other children of `my-aws-account` and future scans of `my-aws-account` will no longer include `us-east-1` unless updated.
 
 Key benefits of child accounts include:
 
@@ -71,7 +72,9 @@ Key benefits of child accounts include:
 
 ## Resources
 
-All scanned resources are displayed on the **Resources** page in Pulumi Cloud.  
+All scanned resources are displayed on the **Resources** page in Pulumi Cloud.
+
+If a scanned account contains resources managed by an external IaC provider, such as AWS CloudFormation or Azure Resource Manager, those resources are also grouped automatically into [Discovered Stacks](/docs/insights/discovery/discovered-stacks/) — one per source stack or resource group — with a per-resource path to migrate them to Pulumi.
 
 ### Viewing resources in the grid
 
@@ -98,7 +101,7 @@ The AWS scanner for Pulumi Cloud requires access to the AWS account you want to 
 
 #### AWS partitions
 
-Pulumi Insights supports every AWS partition. Select the partition that matches the account you are scanning on the **Discovery** step when you create the Insights account:
+Pulumi Insights supports every AWS partition. Select the partition that matches the account you are scanning on the **Discovery** step when you create the cloud account:
 
 * AWS Standard (commercial)
 * AWS GovCloud (US)
@@ -144,7 +147,7 @@ When creating the IAM trust policy below, use the ARN prefix for your partition 
 
 3. **Create an ESC environment**: Configure it to assume the role via OIDC. See [ESC AWS provider documentation](/docs/esc/guides/configuring-oidc/aws/).
 
-4. **Assign the ESC environment**: Link the ESC environment to your Insights account during account creation.
+4. **Assign the ESC environment**: Link the ESC environment to your cloud account during account creation.
 
 ### Azure
 
@@ -211,7 +214,7 @@ The Azure scanner for Pulumi Cloud requires access to your Azure subscription. T
         AZURE_CLIENT_SECRET: ${azure.clientSecret}
     ```
 
-Once the ESC environment is set up with the proper credentials (either OIDC or client secret), assign it to your Insights account during the account creation phase.
+Once the ESC environment is set up with the proper credentials (either OIDC or client secret), assign it to your cloud account during the account creation phase.
 
 ### OCI
 
@@ -239,7 +242,7 @@ values:
     OCI_PRIVATE_KEY_PATH: "<PRIVATE_KEY_CONTENT>"
 ```
 
-Once the ESC environment is set up with the proper credentials, assign it to your Insights account during the account creation phase.
+Once the ESC environment is set up with the proper credentials, assign it to your cloud account during the account creation phase.
 
 ### Kubernetes (K8s)
 

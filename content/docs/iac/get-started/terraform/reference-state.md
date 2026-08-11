@@ -494,7 +494,16 @@ const service = new awsx.ecs.FargateService("service", {
 export const frontendURL = pulumi.interpolate `http://${loadbalancer.loadBalancer.dnsName}`;
 ```
 
-With the program in place, deploy it with `pulumi up`:
+Before deploying, apply the Terraform configuration so that the state file the Pulumi program reads actually exists. From the `infrastructure/` directory:
+
+```bash
+terraform init
+terraform apply
+```
+
+That writes `infrastructure/terraform.tfstate`, which the Pulumi program references at `../infrastructure/terraform.tfstate`.
+
+With the program in place, initialize a Pulumi project and stack for it with [`pulumi new`](/docs/iac/cli/commands/pulumi_new/) if you haven't already, then deploy it with `pulumi up`:
 
 ```bash
 pulumi up

@@ -97,6 +97,18 @@ def main() -> int:
     check("1 of 2 claims verified" in log, "claim count excludes the 2 detector findings")
     check("routed: 0 inline, 2 Pass 1" in log, "route counts exclude preflight (sum to 2)")
 
+    # --- ...and the trail header agrees with that count. Counting detectors in N
+    # made the two headline numbers disagree by exactly the detector count, and
+    # gave 🚩 lines a phantom presence in a tally they contribute to nowhere. ---
+    mixed_trail, n_claims, *_ = cr.render_trail(mixed, None)
+    check(n_claims == 2, "render_trail's N counts claims only")
+    check("<strong>2 claims extracted</strong>" in mixed_trail, "header N excludes detector findings")
+    check("<strong>2</strong> detector findings" in mixed_trail, "detector findings carry their own count")
+    claims_only, *_ = cr.render_trail([{"verdict": "verified", "route": "pass1"}], None)
+    check("detector finding" not in claims_only, "no detector segment when there are none")
+    one_detector, *_ = cr.render_trail([{"verdict": "verified", "route": "pass1"}, sv[0]], None)
+    check("<strong>1</strong> detector finding<" in one_detector, "detector count is singular for one")
+
     # --- validate-pinned accepts a flagged trail line + its bucket bullet ---
     body = (
         "### 🔍 Verification trail\n\n"

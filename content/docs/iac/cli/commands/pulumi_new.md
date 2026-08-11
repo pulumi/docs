@@ -58,10 +58,6 @@ Ensure your SSH agent has the correct identity (ssh-add) or you may be prompted 
 * `pulumi new https://<user>:<password>@<hostname>/<project>/<repo>`
 * `pulumi new <user>@<hostname>:<project>/<repo>`
 * `PULUMI_GITSSH_PASSPHRASE=<passphrase> pulumi new ssh://<user>@<hostname>/<project>/<repo>`
-To create a project using Pulumi AI, either select `ai` from the first selection, or provide any of the following:
-* `pulumi new --ai "<prompt>"`
-* `pulumi new --language <language>`
-* `pulumi new --ai "<prompt>" --language <language>`
 Any missing but required information will be prompted for.
 
 
@@ -72,23 +68,20 @@ pulumi new [template|url] [flags]
 ## Options
 
 ```
-      --ai string                   Prompt to use for Pulumi AI
-  -c, --config stringArray          Config to save
-      --config-path                 Config keys contain a path to a property in a map or list to set
-  -d, --description string          The project description; if not specified, a prompt will request it
-      --dir string                  The location to place the generated project; if not specified, the current directory is used
-  -f, --force                       Forces content to be generated even if it would change existing files
-  -g, --generate-only               Generate the project only; do not create a stack, save config, or install dependencies
-  -h, --help                        help for new
-      --language pulumiAILanguage   Language to use for Pulumi AI (must be one of TypeScript, JavaScript, Python, Go, C#, Java, or YAML)
-  -l, --list-templates              List locally installed templates and exit
-  -n, --name string                 The project name; if not specified, a prompt will request it
-  -o, --offline                     Use locally cached templates without making any network requests
-      --runtime-options strings     Additional options for the language runtime (format: key1=value1,key2=value2)
-      --secrets-provider string     The type of the provider that should be used to encrypt and decrypt secrets (possible choices: default, passphrase, awskms, azurekeyvault, gcpkms, hashivault) (default "default")
-  -s, --stack string                The stack name; either an existing stack or stack to create; if not specified, a prompt will request it
-  -t, --template-mode               Run in template mode, which will skip prompting for AI or Template functionality
-  -y, --yes                         Skip prompts and proceed with default values
+  -c, --config stringArray        Config to save
+      --config-path               Config keys contain a path to a property in a map or list to set
+  -d, --description string        The project description; if not specified, a prompt will request it
+      --dir string                The location to place the generated project; if not specified, the current directory is used
+  -f, --force                     Forces content to be generated even if it would change existing files
+  -g, --generate-only             Generate the project only; do not create a stack, save config, or install dependencies
+  -h, --help                      help for new
+  -l, --list-templates            List locally installed templates and exit
+  -n, --name string               The project name; if not specified, a prompt will request it
+  -o, --offline                   Use locally cached templates without making any network requests
+      --runtime-options strings   Additional options for the language runtime (format: key1=value1,key2=value2)
+      --secrets-provider string   The type of the provider that should be used to encrypt and decrypt secrets (possible choices: default, passphrase, awskms, azurekeyvault, gcpkms, hashivault) (default "default")
+  -s, --stack string              The stack name; either an existing stack or stack to create; if not specified, a prompt will request it
+  -y, --yes                       Skip prompts and proceed with default values
 ```
 
 ## Options inherited from parent commands
@@ -103,7 +96,7 @@ pulumi new [template|url] [flags]
       --logtostderr                  Log to stderr instead of to files
       --memprofilerate int           Enable more precise (and expensive) memory allocation profiles by setting runtime.MemProfileRate
       --non-interactive              Disable interactive mode for all commands
-      --otel-traces string           Export OpenTelemetry traces to the specified endpoint. Use file:// for local JSON files, grpc:// for remote collectors
+      --otel-traces string           Export OpenTelemetry traces to the specified endpoint. Use file:// for local JSON files, grpc:// or https:// for remote collectors
       --profiling string             Emit CPU and memory profiles and an execution trace to '[filename].[pid].{cpu,mem,trace}', respectively
       --tracing file:                Emit tracing to the specified endpoint. Use the file: scheme to write tracing data to a local file
   -v, --verbose int                  Enable verbose logging (e.g., v=3); anything >3 is very verbose
@@ -113,4 +106,4 @@ pulumi new [template|url] [flags]
 
 * [pulumi](/docs/iac/cli/commands/pulumi/)	 - Pulumi command line
 
-###### Auto generated by spf13/cobra on 23-Jul-2026
+###### Auto generated by spf13/cobra on 4-Aug-2026

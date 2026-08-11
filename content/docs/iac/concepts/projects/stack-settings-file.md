@@ -131,6 +131,8 @@ config:
 
 ### Stack with Pulumi ESC environment
 
+{{< pulumi-cloud />}}
+
 ```yaml
 config:
   myproject:name: my-application
@@ -183,7 +185,7 @@ The following CLI commands are commonly used to manage stack settings files:
 - [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/): Export the entire stack state
 - [`pulumi stack import`](/docs/iac/cli/commands/pulumi_stack_import/): Import stack state from a file
 
-## See also
+## Learn more
 
 - [Configuration](/docs/iac/concepts/config/): Learn about Pulumi's configuration system
 - [Secrets](/docs/iac/concepts/secrets/): Learn about managing secrets in Pulumi

@@ -195,12 +195,12 @@ Pulumi treats Kubernetes the same way it treats every other cloud target: as res
 * **Unified cluster + workload programs.** The same Pulumi program creates the EKS / GKE / AKS cluster, sets up IAM, deploys the CNI and ingress controller, and applies the application workloads. Resource dependencies are explicit, so the order is correct without manual sequencing.
 * **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format (`ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles) so adoption can be incremental without re-authoring the source artifacts.
 * **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) cover each provider along with Helm and Kustomize support, architecture templates, and ESC integration.
-* **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, C#, and Java. In TypeScript, Go, C#, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
+* **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, .NET, and Java. In TypeScript, Go, .NET, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
 * **Policy as code.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
 * **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.
 * **[Automation API](/docs/iac/automation-api/).** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
 
-[Get started with Pulumi Kubernetes](/docs/iac/get-started/kubernetes/) to manage a cluster and its workloads in TypeScript, Python, Go, C#, Java, or YAML.
+[Get started with Pulumi Kubernetes](/docs/iac/get-started/kubernetes/) to manage a cluster and its workloads in TypeScript, Python, Go, .NET, Java, or YAML.
 
 ## Frequently asked questions about IaC for Kubernetes
 

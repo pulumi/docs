@@ -15,7 +15,7 @@ turns.
 The design frame: **the composer ASSEMBLES, Opus JUDGES.** The composer never
 decides which findings surface — it lays out the skeleton, renders the 🔍 trail
 verbatim from `.verified-claims.json`, the bucket-count table, the investigation
-log scaffold, the 📊 Editorial-balance Tier 1, the `#### Style findings` block,
+log scaffold, the 📊 Editorial-balance Tier 1, the `#### Style suggestions` block,
 the 📜 Review-history line, and *stub* 🚨/⚠️ bucket bullets (one per promoting
 verdict) carrying a `<TODO>` marker. Whether a stub is a real finding, what the
 fix prose should be, the summary paragraph, the confidence levels, the
@@ -72,6 +72,14 @@ from pathlib import Path
 
 # ---- constants -------------------------------------------------------------
 
+# Single source of truth for the review footer. `pinned-comment.sh` reads the
+# same file and is the authoritative writer on publish (it stamps the footer
+# onto every page of a split review); the sentinel is how both sides find and
+# strip an existing copy. Keep the sentinel in sync with the shell's
+# FOOTER_SENTINEL.
+FOOTER_SENTINEL = "<!-- CLAUDE_REVIEW_FOOTER -->"
+FOOTER_PATH = Path(__file__).resolve().parent.parent / "footer.md"
+
 # Quick-win: an `unverifiable` *factual* claim renders in ⚠️ Low-confidence
 # (with an author-question line), not 🚨. Flip to "outstanding" if that spec
 # change reverts. (The validator never enforced always-🚨 for unverifiable —
@@ -85,7 +93,14 @@ PROMOTE_UNVERIFIABLE_TO = "warning"
 # outcome — `contradicted`/`mismatch` mean "a source disagrees with a claim",
 # which a build error or a coherence gap is not. The specific detector lives in
 # the record's `type`/`source`, rendered in the trail-line parenthetical.
-TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged")
+# `framing-drift` is the fact-check verdict for "the anchor value is accurate
+# but the claim's published meaning differs from what the source supports"
+# (widened denominator, usage → intent, dropped qualifier). It stubs into
+# ⚠️ Low-confidence by default — the reviewer promotes to 🚨 when the drifted
+# phrasing also rides `social.*` frontmatter (auto-posted on merge) or
+# otherwise misleads a reader. It is counted SEPARATELY from the contradiction
+# family in the headline tallies — see DRIFT_VERDICTS below.
+TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -94,8 +109,18 @@ EXPECTED_TRAIL_EMOJI = {
     "contradicted": "❌",
     "mismatch": "⚔️",
     "flagged": "🚩",
+    "framing-drift": "🌀",
 }
 OUTSTANDING_VERDICTS = {"contradicted", "mismatch", "flagged"}
+# Verdicts that say the claim is wrong as written — the ones the headline
+# tallies label `contradicted`, and the ones that must reach 🚨.
+CONTRADICTION_FAMILY = {"contradicted", "mismatch"}
+# `framing-drift` is adjacent but not one of them: the anchor value is accurate
+# and the default bucket is ⚠️. Folding it into the `contradicted` tally makes
+# the trail header and the investigation log report contradictions the body
+# doesn't contain (observed live: a header reading `2 contradicted` above a
+# trail with zero ❌ lines). It gets its own segment in both places instead.
+DRIFT_VERDICTS = {"framing-drift"}
 
 # Mirror of `validate-pinned.py` TEMPORAL_TRIGGERS — keep synchronized.
 TEMPORAL_TRIGGERS = {
@@ -401,6 +426,29 @@ def _frontmatter_synthetic_verdicts(frontmatter_files: list[dict]) -> list[dict]
 
 _RT_SOURCE = "readthrough pre-step"
 
+# Backstop mirror of `readthrough.py`'s normalize_line_range() — kept here (and
+# deliberately duplicated rather than imported; these scripts are standalone by
+# design) so an artifact from an older readthrough run, or one whose anchor
+# repair failed, still can't render the degenerate `L0` anchor in both the trail
+# line and the bucket bullet. File-less, so no anchor-quote fallback: numeric
+# parse only, then `L1`.
+_RT_DASHES = str.maketrans({c: "-" for c in "‐‑‒–—―−"})
+_RT_L_RANGE_RE = re.compile(r"L(\d+)(?:\s*-\s*L?(\d+))?", re.IGNORECASE)
+_RT_BARE_RANGE_RE = re.compile(r"(\d+)(?:\s*-\s*(\d+))?")
+
+
+def _rt_normalize_line_range(raw: str) -> str:
+    """Coerce a readthrough `line_range` to `L<a>` / `L<a>-<b>`; "" if unusable."""
+    s = (raw or "").translate(_RT_DASHES)
+    m = _RT_L_RANGE_RE.search(s) or _RT_BARE_RANGE_RE.search(s)
+    if not m:
+        return ""
+    a = int(m.group(1))
+    b = int(m.group(2)) if m.group(2) else a
+    if a <= 0:  # `L0` is not a line
+        return ""
+    return f"L{a}" if b <= a else f"L{a}-{b}"
+
 
 def _readthrough_synthetic_verdicts(readthrough_artifact: dict | None) -> list[dict]:
     """Synthesize `🚩 flagged` verdict-shaped dicts from `.readthrough-findings.json`.
@@ -425,7 +473,7 @@ def _readthrough_synthetic_verdicts(readthrough_artifact: dict | None) -> list[d
         out.append({
             "claim_id": f"readthrough-{len(out)}",
             "file": f.get("file") or "",
-            "line_range": f.get("line_range") or "L1",
+            "line_range": _rt_normalize_line_range(f.get("line_range")) or "L1",
             "text": (anchor or mode)[:TEXT_TRUNC],
             "type": f"readthrough-{mode}",
             "route": "preflight",
@@ -484,8 +532,22 @@ def first_line_ref(line_range: str) -> str:
 
 
 def trunc(s: str, n: int) -> str:
+    """Truncate to <= n chars, breaking on a word boundary.
+
+    Cutting mid-word produces the likes of `…you reuse the "same IAM policies
+    you have al…`, which reads as a rendering bug and costs the reader the one
+    clause that would have made the sentence land. Back up to the last space
+    in the final quarter of the budget when there is one; hard-cut otherwise
+    (a long unbroken token, e.g. a URL).
+    """
     s = (s or "").strip().replace("\n", " ")
-    return s if len(s) <= n else s[: n - 1].rstrip() + "…"
+    if len(s) <= n:
+        return s
+    cut = s[: n - 1].rstrip()
+    space = cut.rfind(" ")
+    if space >= int((n - 1) * 0.75):
+        cut = cut[:space].rstrip()
+    return cut.rstrip(",;:—-") + "…"
 
 
 def quote(s: str) -> str:
@@ -503,8 +565,22 @@ def touches_programs(diff_files: list[str]) -> bool:
 # ---- section renderers -----------------------------------------------------
 
 
-def render_header(timestamp: str) -> str:
-    return f"## Pre-merge Review — Last updated {timestamp}"
+def render_header(timestamp: str, head_sha: str = "") -> str:
+    """Header line plus, when the head SHA is known, a machine-readable
+    freshness sentinel. The sentinel exists because an entire class of pusher
+    (the Copilot coding agent, `GITHUB_TOKEN` pushes) never fires the
+    `pull_request: synchronize` event, so the `review:stale` label can miss a
+    push entirely (PR #20556 closed wearing `review:no-blockers` while the
+    pinned review described content a later conflict-resolution commit had
+    replaced). Label-independent consumers (`/pr-review` Step 2, the
+    review-label-reconcile workflow) compare this SHA against the PR head —
+    an exact check, immune to suppressed webhooks. The re-entrant update path
+    must refresh it alongside the `Last updated` timestamp (see
+    `docs-review:references:update`)."""
+    header = f"## Pre-merge Review — Last updated {timestamp}"
+    if head_sha:
+        header += f"\n<!-- CLAUDE_REVIEW_HEAD {head_sha} -->"
+    return header
 
 
 def count_verifier_outages(verdicts: list[dict] | None) -> tuple[int, int]:
@@ -613,7 +689,8 @@ def render_investigation_log(
         y = len(fact_verdicts)
         x = sum(1 for v in fact_verdicts if v.get("verdict") in ("verified", "matches"))
         n_unver = sum(1 for v in fact_verdicts if v.get("verdict") == "unverifiable")
-        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+        n_contra = sum(1 for v in fact_verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+        n_drift = sum(1 for v in fact_verdicts if v.get("verdict") in DRIFT_VERDICTS)
         i_inline = route_counts.get("inline", 0)
         p1 = route_counts.get("pass1", 0)
         f2 = route_counts.get("pass2", 0)
@@ -621,7 +698,8 @@ def render_investigation_log(
         k_corr = route_counts.get("k_corr", 0)
         seg = (
             f"- **External claim verification:** {x} of {y} claims verified "
-            f"({n_unver} unverifiable, {n_contra} contradicted) · "
+            f"({n_unver} unverifiable, {n_contra} contradicted"
+            f"{f', {n_drift} framing-drift' if n_drift else ''}) · "
             f"4 specialists (numerical, cross-reference, capability, framing); "
             f"{k_corr} cross-specialist corroborations · "
             f"routed: {i_inline} inline, {p1} Pass 1, {f2} Pass 2"
@@ -708,9 +786,16 @@ def render_count_table(a: int, b: int, c: int, d: int) -> str:
     )
 
 
+# The advisory-tier sub-heading. Renamed from "Style findings" on 2026-08-03:
+# once the blocker tier carries the correctness errors and the known
+# false-positive rules are disabled, what's left is optional polish, and
+# "findings" oversold it. validate-pinned.py still recognizes the old spelling
+# so an in-flight review that merges a pre-rename body keeps validating.
+STYLE_HEADING = "#### Style suggestions"
+
 # Italic one-liners that open the 🚨 / ⚠️ sections when they have findings
-# (parallel to `*Found by pattern-based linting; Findings may be false
-# positives.*` under `#### Style findings`) — omitted on the explicit-empty form.
+# (parallel to the pattern-based-linting caption under STYLE_HEADING) —
+# omitted on the explicit-empty form.
 _OUTSTANDING_NOTE = "*These must be resolved or refuted before merging.*"
 _LOWCONF_NOTE = "*Review each and resolve as appropriate — these don't block the PR.*"
 
@@ -768,13 +853,24 @@ def _evidence_pointer(v: dict) -> str:
 
 
 def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, int, int, int, int]:
-    """Return (block, n, x_verified, y_unverifiable, z_contradicted)."""
+    """Return (block, n_claims, x_verified, y_unverifiable, z_contradicted).
+
+    `n_claims` excludes `route: "preflight"` detector synthetics (Hugo build,
+    frontmatter collisions, readthrough coherence). They are not claims, they
+    are counted in none of x/y/z, and the investigation log's "X of Y claims
+    verified" already excludes them (compute_route_counts) — so counting them
+    in N made the two headline numbers disagree by exactly the detector count
+    and gave the 🚩 lines a phantom presence in a claim tally. They get their
+    own trailing count instead.
+    """
     if not verdicts:
         return ("### 🔍 Verification trail\n\n_No verifiable claims extracted from this diff._", 0, 0, 0, 0)
-    n = len(verdicts)
+    n_detector = sum(1 for v in verdicts if v.get("route") == "preflight")
+    n = len(verdicts) - n_detector
     x = sum(1 for v in verdicts if v.get("verdict") in ("verified", "matches"))
     y = sum(1 for v in verdicts if v.get("verdict") == "unverifiable")
-    z = sum(1 for v in verdicts if v.get("verdict") in ("contradicted", "mismatch"))
+    z = sum(1 for v in verdicts if v.get("verdict") in CONTRADICTION_FAMILY)
+    n_drift = sum(1 for v in verdicts if v.get("verdict") in DRIFT_VERDICTS)
     lines: list[str] = []
     for v in verdicts:
         verdict = v.get("verdict")
@@ -791,10 +887,17 @@ def render_trail(verdicts: list[dict], degraded_note: str | None) -> tuple[str, 
         file_path = (v.get("file") or "").strip()
         file_in = f" in `{file_path}`" if file_path else ""
         lines.append(f"- {first}{file_in} {text}{also} → {emoji} {verdict} ({pointer})")
+    drift_part = f" · <strong>{n_drift}</strong> framing-drift" if n_drift else ""
+    detector_part = ""
+    if n_detector:
+        detector_part = (
+            f" · <strong>{n_detector}</strong> detector "
+            f"finding{'' if n_detector == 1 else 's'}"
+        )
     header = (
         f"<details>\n<summary><strong>{n} claims extracted</strong> · "
         f"<strong>{x}</strong> verified · <strong>{y}</strong> unverifiable · "
-        f"<strong>{z}</strong> contradicted</summary>"
+        f"<strong>{z}</strong> contradicted{drift_part}{detector_part}</summary>"
     )
     block = "### 🔍 Verification trail\n\n" + header + "\n\n" + "\n".join(lines) + "\n\n</details>"
     if degraded_note:
@@ -839,10 +942,10 @@ def render_editorial_balance(eb: dict | None, is_blog: bool) -> str:
     )
 
 
-def render_outstanding(stubs: list[dict]) -> str:
+def render_outstanding(stubs: list[dict], vale_blockers: list[dict]) -> str:
     # Empty form is reader-facing — the "what the reviewer should add here"
     # guidance lives in ci.md §3, never in the published body.
-    if not stubs:
+    if not stubs and not vale_blockers:
         return "### 🚨 Outstanding in this PR\n\n_No outstanding findings in this PR._"
     lines = ["### 🚨 Outstanding in this PR", "", _OUTSTANDING_NOTE, ""]
     # Blank line between bullets renders as a "loose list" — each bullet gets
@@ -853,10 +956,25 @@ def render_outstanding(stubs: list[dict]) -> str:
         if i > 0:
             lines.append("")
         lines.append(s["bullet"])
+    # Blocker-tier Vale findings (the `blocker:` allowlist in
+    # vale-deterministic-fixes.yaml): correctness errors with near-zero
+    # false-positive rates. Rendered with the standard `**[L<n>]**` anchor so
+    # auto-refresh-gate.py can match a fix-push against them, plus a
+    # `[style-blocker]` marker that exempts them from trail-matching in
+    # validate-pinned.py (they have no verification-trail record) and tells
+    # the reviewer these are composer-rendered, not model findings.
+    for i, f in enumerate(vale_blockers):
+        if stubs or i > 0:
+            lines.append("")
+        fname = str(f.get("file") or "").strip()
+        file_part = f" `{fname}` —" if fname else ""
+        cat = str(f.get("category") or "style")
+        msg = str(f.get("message") or "").strip()
+        lines.append(f"- **[L{f.get('line', '?')}]**{file_part} [style-blocker] _{cat}_ — {msg}")
     return "\n".join(lines)
 
 
-def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
+def render_lowconfidence(stubs: list[dict], vale_findings: list[dict], files_url: str = "") -> str:
     has_style = bool(vale_findings)
     if not stubs and not has_style:
         return "### ⚠️ Low-confidence\n\n_No low-confidence findings._"
@@ -868,58 +986,63 @@ def render_lowconfidence(stubs: list[dict], vale_findings: list[dict]) -> str:
     if has_style:
         if stubs:
             lines.append("")
-        lines.append(_render_style_findings(vale_findings))
+        lines.append(_render_style_findings(vale_findings, files_url))
     return "\n".join(lines)
 
 
-def _style_mode(total: int, n_files: int) -> str:
-    if total <= 5:
-        return "inline"
-    if n_files <= 1 and total <= 30:
-        return "inline"
-    if total > 30:
-        return "collapse"
-    if n_files > 1 and total > 5:
-        return "collapse"
-    return "inline"
-
-
-def _render_style_findings(findings: list[dict]) -> str:
-    total = len(findings)
+def _render_style_findings(findings: list[dict], files_url: str = "") -> str:
+    # Rendered EXPANDED (no <details>) and excluded from the ⚠️ count. These
+    # are advisory nags kept for the rule-tuning loop, not reviewer burden —
+    # the count exclusion carries that signal, so hiding them behind a
+    # disclosure just costs a click. Blocker-tier Vale findings render under
+    # 🚨 instead and never reach this function.
+    #
+    # Each file gets an `##### <path>` heading rather than a <summary>.
+    # Two constraints pin that shape:
+    #   1. post-style-suggestions.py --annotate-draft walks these headings to
+    #      attribute `- **line N:**` bullets to a file before appending ✏️.
+    #   2. It must NOT start with `**` at column 0 — validate-pinned.py's
+    #      extract_bucket_bullets counts any such line as a bucket finding,
+    #      which would inflate the ⚠️ count and trip the L-prefix rule.
+    # Keep all three in sync.
     by_file: dict[str, list[dict]] = {}
     for f in findings:
         by_file.setdefault(str(f.get("file") or "?"), []).append(f)
-    n_files = len(by_file)
-    mode = _style_mode(total, n_files)
-    out = ["#### Style findings", "", "*Found by pattern-based linting; Findings may be false positives.*", ""]
-    if mode == "inline":
-        for f in sorted(findings, key=lambda x: (str(x.get("file") or ""), int(x.get("line") or 0))):
-            cat = str(f.get("category") or "style")
-            msg = str(f.get("message") or "").strip()
-            out.append(f"- **line {f.get('line', '?')}:** [style] _{cat}_ — {msg}")
-    else:
-        out.append("<sub>Click each filename to expand.</sub>")
+    # The caption links straight to the Files-changed tab when the composer
+    # knows the PR: that is where the ```suggestion blocks render, and where
+    # "Add suggestion to batch" lets the author stage several and commit them
+    # in one go. Without a link the reader has to work out where to look.
+    files_link = f"[Files changed]({files_url})" if files_url else "Files changed"
+    out = [
+        STYLE_HEADING,
+        "",
+        "*Optional polish from pattern-based linting — never blocking, not counted above. "
+        "Take the ones that read better and ignore the rest. "
+        f"✏️ marks one you can apply from the {files_link} tab — use **Add suggestion to batch** "
+        "on each, then **Commit suggestions** to take several in a single commit.*",
+        "",
+    ]
+    multi = len(by_file) > 1
+    for fname in sorted(by_file):
+        items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
+        kind_counts: dict[str, int] = {}
+        for it in items:
+            kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
+        kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
+        breakdown = ", ".join(f"{c} {k}" for k, c in kinds_sorted)
+        # The file heading is always rendered — the annotator needs it even on
+        # a single-file review to bind bullets to a path.
+        suffix = f" — {len(items)} ({breakdown})" if multi else ""
+        out.append(f"##### {fname}{suffix}")
         out.append("")
-        for fname in sorted(by_file):
-            items = sorted(by_file[fname], key=lambda x: int(x.get("line") or 0))
-            kind_counts: dict[str, int] = {}
-            for it in items:
-                kind_counts[str(it.get("category") or "style")] = kind_counts.get(str(it.get("category") or "style"), 0) + 1
-            kinds_sorted = sorted(kind_counts.items(), key=lambda kv: (-kv[1], kv[0]))
-            breakdown = ", ".join(f"<strong>{c}</strong> {k}" for k, c in kinds_sorted)
-            out.append(f"<details>")
-            out.append(f"<summary><strong>{fname}</strong> (<strong>{len(items)}</strong> issues: {breakdown})</summary>")
-            out.append("")
-            for it in items:
-                cat = str(it.get("category") or "style")
-                msg = str(it.get("message") or "").strip()
-                out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
-            out.append("")
-            out.append("</details>")
-            out.append("")
-        # drop trailing blank
-        while out and out[-1] == "":
-            out.pop()
+        for it in items:
+            cat = str(it.get("category") or "style")
+            msg = str(it.get("message") or "").strip()
+            out.append(f"- **line {it.get('line', '?')}:** [style] _{cat}_ — {msg}")
+        out.append("")
+    # drop trailing blank
+    while out and out[-1] == "":
+        out.pop()
     return "\n".join(out)
 
 
@@ -955,11 +1078,21 @@ def render_review_history(timestamp: str, head_sha_short: str) -> str:
 
 
 def render_footer() -> str:
-    return (
-        "---\n"
-        "Need a re-review? Want to dispute a finding? Mention `@claude` and include `#update-review`.  \n"
-        "(For ad-hoc questions or fixes, just `@claude` — no hashtag.)"
-    )
+    """Return the canonical footer, read from `docs-review/footer.md`.
+
+    `pinned-comment.sh` is the authoritative writer: on upsert it strips this
+    block from the inbound body and re-stamps it onto EVERY page of a split
+    review. Rendering it here anyway keeps the composed draft (and the local
+    `/docs-review` output, which never reaches the shell) a complete document,
+    and keeps exactly one copy of the text in the repo.
+
+    If the file is unreadable, emit the bare sentinel: it renders to nothing in
+    a GitHub comment, and the shell still supplies the real text on publish.
+    """
+    try:
+        return FOOTER_PATH.read_text(encoding="utf-8").rstrip("\n")
+    except OSError:
+        return FOOTER_SENTINEL
 
 
 # ---- stub bucket bullets ---------------------------------------------------
@@ -969,20 +1102,34 @@ def _stub_bullet(v: dict, todo: str) -> dict:
     ref = first_line_ref(v.get("line_range") or "")
     text = quote(redact(trunc(v.get("text") or "", TEXT_TRUNC)))
     verdict = v.get("verdict") or "?"
-    pointer = _evidence_pointer(v)
     file_path = (v.get("file") or "").strip()
-    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — <commentary>`.
-    # Three visually distinct segments separated by em-dashes:
+    # Bullet shape: `- **[L<n>]** `<file>` — *"<claim text>"* — verdict: <v>[; framing: …] <TODO>`.
     #   1. L-prefix + file path (the validator anchors here)
     #   2. italicized quoted claim (so the reader can scan claims fast)
-    #   3. verdict + evidence pointer + TODO (the actionable bit)
+    #   3. verdict + the reviewer's fix prose (the actionable bit)
     # The file path is rendered AFTER `**[L<n>]**` so the validator's
     # bucket-bullet-line-range-prefix regex (`^\s*-\s+\*\*\[(L\d+...)\]\*\*`)
     # still anchors on the L-token; the filename disambiguates which file
     # the line number refers to on multi-file PRs.
+    #
+    # The evidence/source/intuition pointer is deliberately NOT repeated here.
+    # It is already rendered verbatim on this claim's 🔍 trail line a few
+    # lines above, and measuring a published review (2026-08-03, fork PR #228)
+    # put the duplicate at 1,596 chars — 10% of the whole comment — sitting
+    # between the claim and the fix the author actually has to read. The trail
+    # is the evidence record; the bucket bullet is the instruction. Every
+    # evidence-checking validator rule (pass-3-unverifiable-evidence,
+    # pass-3-evidence-faithful, verified-claims-trail-faithful) reads the
+    # trail, not this bullet, so nothing is weakened by dropping it.
+    #
+    # `framing:` survives: the editorial pass is told to mirror it (anti-hedge
+    # on ⚔️ mismatch), so it stays where the reviewer is working.
+    fn = (v.get("framing_note") or "").strip()
+    framing_part = f"; framing: {redact(trunc(fn, 160))}" if fn else ""
     file_part = f" `{file_path}` —" if file_path else ""
     italic_text = f"*{text}*" if text else text
-    bullet = f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}; {pointer} <TODO: {todo}>"
+    bullet = (f"- **[{ref}]**{file_part} {italic_text} — verdict: {verdict}{framing_part} "
+              f"<TODO: {todo}>")
     return {"ref": ref, "bullet": bullet, "verdict": verdict}
 
 
@@ -1046,8 +1193,22 @@ def build_stubs(verdicts: list[dict]) -> tuple[list[dict], list[dict]]:
                         "If pre-existing on a line this PR didn't touch, replace with `**Pre-existing:** <reason>` AND move to `### 💡 Pre-existing`. "
                         "`trail-verdict-bucket-promotion` accepts the bullet under 🚨, 📋, or 💡.")
             outstanding.append(_stub_bullet(v, todo))
+        elif verdict == "framing-drift":
+            lowconf.append(_stub_bullet(
+                v, "this is a `framing-drift` finding — the anchor value is accurate but the claim's published meaning "
+                   "differs from what the source supports (see the framing note). Write the fix as a quote-and-rewrite "
+                   "that restores the source's framing (scope, denominator, tense, qualifiers). PROMOTE to 🚨 Outstanding "
+                   "if the drifted phrasing also appears in `social.*` frontmatter (it auto-posts on merge) or would "
+                   "materially mislead a reader; move to 📋 Triaged with `**Spurious:**` only if the framing comparison "
+                   "itself is wrong."))
         elif verdict == "unverifiable":
-            if PROMOTE_UNVERIFIABLE_TO == "outstanding":
+            if v.get("turn_cap_exhausted"):
+                lowconf.append(_stub_bullet(
+                    v, "this `unverifiable` is a TURN-BUDGET failure (the verifier ran out of turns), NOT evidence that "
+                       "no authoritative source exists — never describe it as 'out of scope' or 'can't be verified'. "
+                       "Verify it yourself in-review if cheap (one gh read / one fetch), else file the author-question "
+                       "line saying verification ran out of budget and the claim is retryable."))
+            elif PROMOTE_UNVERIFIABLE_TO == "outstanding":
                 outstanding.append(_stub_bullet(
                     v, "if this isn't actually a checkable factual claim, it should be `not-a-claim` not `unverifiable`; "
                        "otherwise file the author-question buffer line and keep here. "
@@ -1095,7 +1256,14 @@ def compute_route_counts(verdicts: list[dict], candidate_claims: list[dict] | No
             verd = x.get("verdict")
             if verd in ("verified", "matches"):
                 v += 1
-            elif verd in ("contradicted", "mismatch"):
+            elif verd in CONTRADICTION_FAMILY or verd in DRIFT_VERDICTS:
+                # `framing-drift` rides the `contradicted` column here, unlike
+                # the two headline tallies. This triple's shape is pinned by
+                # validate-pinned.py's PASS2_OUTCOME_RE / PASS3_OUTCOME_RE
+                # (`verified N, contradicted N, unverifiable N`), and it is a
+                # routing diagnostic rather than a reader-facing count — better
+                # grouped with the disagreements than silently counted as
+                # `unverifiable`, which is what the plain `else` would do.
                 c += 1
             else:  # unverifiable / not-a-claim (rare on an external lane)
                 u += 1
@@ -1202,10 +1370,21 @@ def compose(args: argparse.Namespace) -> str:
 
     route_counts = compute_route_counts(verdicts, candidate_claims)
 
+    # Deep-link target for the style caption. Both parts are optional (local
+    # /docs-review runs have neither), so fall back to unlinked prose.
+    files_url = (f"https://github.com/{args.repo}/pull/{args.pr}/files"
+                 if args.repo and args.pr else "")
+
     outstanding_stubs, lowconf_stubs = build_stubs(verdicts)
-    style_count = len(vale_findings)
-    a = len(outstanding_stubs)
-    b = len(lowconf_stubs) + style_count
+    # Blocker-tier Vale findings (stamped by vale-findings-filter.py from the
+    # `blocker:` allowlist) count toward 🚨 — they drive the
+    # review:outstanding-issues label like any other outstanding finding.
+    # Advisory style findings render expanded under ⚠️ and are NOT counted:
+    # they're kept for the rule-tuning loop, not the reviewer's burden.
+    vale_blockers = [f for f in vale_findings if f.get("blocker")]
+    vale_nags = [f for f in vale_findings if not f.get("blocker")]
+    a = len(outstanding_stubs) + len(vale_blockers)
+    b = len(lowconf_stubs)
     c_pre = 0
     d_resolved = 0
 
@@ -1229,7 +1408,7 @@ def compose(args: argparse.Namespace) -> str:
     if outage_banner:
         forced_levels["facts"] = ("LOW", "automated fact-checking errored — claims unverified")
 
-    sections: list[str] = [render_header(timestamp), ""]
+    sections: list[str] = [render_header(timestamp, head_sha), ""]
     if outage_banner:
         sections += [outage_banner, ""]
     sections += [
@@ -1258,9 +1437,9 @@ def compose(args: argparse.Namespace) -> str:
         sections.append(eb_block)
         sections.append("")
     sections += [
-        render_outstanding(outstanding_stubs),
+        render_outstanding(outstanding_stubs, vale_blockers),
         "",
-        render_lowconfidence(lowconf_stubs, vale_findings),
+        render_lowconfidence(lowconf_stubs, vale_nags, files_url),
         "",
         render_triaged(),
         "",

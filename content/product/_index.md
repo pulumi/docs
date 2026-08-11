@@ -5,6 +5,13 @@ meta_image: /images/product/overview/overview-meta.png
 type: page
 layout: template-page
 include_floqer: true
+outputs:
+  - HTML
+  - markdown
+cascade:
+  outputs:
+    - HTML
+    - markdown
 
 aliases:
   - /product/pulumi-cloud/
@@ -95,14 +102,14 @@ sections:
     anchor: secrets
 
   - type: section_header_with_image
-    tag_line: Insights & governance
+    tag_line: Discovery & governance
     title: See everything, control everything
     description: |
       Search across all clouds from a single pane of glass in Pulumi Cloud. Enforce policies automatically, track compliance, and get AI-powered insights. Know exactly what's running where and why.
-    cta_text: Explore Pulumi Insights & Governance
+    cta_text: Explore Pulumi Discovery & Governance
     cta_link: /product/pulumi-insights/
     image: /images/product/overview/overview-governance.svg
-    image_alt: Pulumi Insights resource search across clouds
+    image_alt: Pulumi resource search across clouds
     cards:
       - icon: hard-drives
         title: Multi-cloud visibility

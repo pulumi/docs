@@ -39,10 +39,12 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 | :---: | :---: | :---: | :---: |
 | **N** | **N** | **N** | **N** |
 
+✏️ **N one-click style suggestions** are posted inline — apply them from the [Files changed](…/files) tab, individually or with **Add suggestion to batch**.
+
 ### 🔍 Verification trail
 
 <details>
-<summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted</summary>
+<summary><strong>N claims extracted</strong> · <strong>X</strong> verified · <strong>Y</strong> unverifiable · <strong>Z</strong> contradicted[ · <strong>W</strong> framing-drift][ · <strong>D</strong> detector findings]</summary>
 
 - L<line> "<claim text>" → ✅ verified (evidence: <source pointer>)
 - L<line> "<claim text>" → 🤷 unverifiable (no inline citation; author question filed)
@@ -80,20 +82,34 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 
 - <ISO 8601 timestamp> — <one-line summary> (<commit SHA prefix>)
 
+<!-- CLAUDE_REVIEW_FOOTER -->
+
 ---
-Need a re-review? Want to dispute a finding? Mention `@claude` and include `#update-review`.  
-(For ad-hoc questions or fixes, just `@claude` — no hashtag.)
+
+- **Refresh this review** — comment `@claude #update-review`. …
+- **Ask for anything else** — comment `@claude` with no hashtag …
+
+> [!IMPORTANT]
+> Please don't hide, resolve, or delete this comment! It breaks things!
+
+📖 [How pre-merge review works](…) — the full lifecycle, short-circuits, and escape hatches.
 ```
 
 **Mandatory sections render on every review** — Investigation log, bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
 
-The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero. The footer tagline is part of every initial and re-entrant review.
+The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero.
 
-The ⚠️ Low-confidence count includes style findings. The maintainer's review burden equals the count rendered in the table; understating it is a false signal.
+**You do not write the footer.** Its canonical text lives in `.claude/commands/docs-review/footer.md`, and `pinned-comment.sh` is its sole writer on publish: it strips whatever footer the inbound body carries and stamps a fresh copy onto *every* comment of a split review, so the refresh instructions ride on the 1/M comment people actually read rather than only on the tail. `compose-review.py` renders the same file into the draft (abridged above — read `footer.md` for the exact text) so drafts stay complete documents. Leave it in place when you edit the draft; if you drop it, publish restores it. To change the wording, edit `footer.md` — that one file feeds the composer, the shell, and this reference.
+
+The ⚠️ Low-confidence count does **not** include advisory style suggestions — they render expanded but uncounted (optional polish, not reviewer burden). Blocker-tier style findings (`[style-blocker]`) render in 🚨 Outstanding and **are** counted there. The maintainer's review burden equals the count rendered in the table; misstating it in either direction is a false signal.
+
+**The ✏️ banner under the table is workflow-written — never author or edit it.** When one-click suggestions posted, `post-style-suggestions.py` inserts a single line directly beneath the number row announcing how many, deep-linked to the Files-changed tab — on the initial lane via `--annotate-draft` against the composed draft, on the re-entrant lane via `--annotate-pinned` against the published comment. Both lanes write it. It exists because the ✏️ marks themselves sit in the *last* section of a comment that routinely runs 16 KB: an author who clears 🚨 and stops reading would never learn the buttons exist. The line is rewritten from the set the GitHub API accepted on every run and removed when nothing posts, so a hand-written or carried-over one risks advertising buttons that aren't there. Uncounted, like the suggestions it announces.
+
+**The italic caption under `#### Style suggestions` is workflow-written too — write it if you like, but it will be overwritten.** `compose-review.py` emits it on the initial lane and both lanes reconcile it to one canonical string, for the same reason the marks and banner are authoritative: the re-entrant lane renders freehand and was observed paraphrasing the caption away, dropping the "✏️ marks one you can apply" legend and leaving six marks on the page with nothing explaining them (fork PR #231). `style-render-mode` only checks that the block isn't collapsed, so nothing else catches it.
 
 ### Composed-draft contract
 
-In CI the workflow's `compose-review.py` pre-step assembles most of this body deterministically into `.review-draft.md` and the reviewer *edits* it (see `.claude/commands/docs-review/ci.md` §2-3 and `docs-review:references:pre-computation` §Bundle architecture). The composer produces, fully assembled and self-consistent: the `## Pre-merge Review` header + timestamp; the 🔍 Verification trail (one line per `.verified-claims.json` verdict, verbatim — verdict word + per-verdict emoji + evidence pointer + source); the bucket-count table (a *starting point* equal to the stub-bullet counts — the reviewer keeps it equal as it edits); the Investigation-log `<details>` block (all 8 bullets, all deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder); the 📊 Editorial-balance Tier 1 (blog only); the `#### Style findings` block (correct render mode); the empty 💡/✅ forms; the 📜 Review-history line; and *stub* 🚨/⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch`/`flagged` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker — including the `route: "preflight"` detector synthetics (Hugo build, frontmatter collisions, readthrough coherence), which render as `🚩 flagged` and are excluded from the fact-check claim counts. The composer does **not** decide which findings surface, write the fix prose, fill the summary / confidence levels / cross-sibling count / review-history summary / Tier-2 editorial-balance counts, or add the findings it can't pre-stub (Hugo-build, frontmatter collisions, internal-link/shortcode breaks, cross-sibling mismatches, code-examples findings, editorial-balance threshold flags, intuition promotions, domain two-question-test findings) — those are `<TODO>`s / the reviewer's editorial pass.
+In CI the workflow's `compose-review.py` pre-step assembles most of this body deterministically into `.review-draft.md` and the reviewer *edits* it (see `.claude/commands/docs-review/ci.md` §2-3 and `docs-review:references:pre-computation` §Bundle architecture). The composer produces, fully assembled and self-consistent: the `## Pre-merge Review` header + timestamp; the 🔍 Verification trail (one line per `.verified-claims.json` verdict, verbatim — verdict word + per-verdict emoji + evidence pointer + source); the bucket-count table (a *starting point* equal to the stub-bullet counts — the reviewer keeps it equal as it edits); the Investigation-log `<details>` block (all 8 bullets, all deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder); the 📊 Editorial-balance Tier 1 (blog only); the `#### Style suggestions` block (advisory tier, expanded, grouped per file) plus any `[style-blocker]` bullets in 🚨; the empty 💡/✅ forms; the 📜 Review-history line; and *stub* 🚨/⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch`/`flagged` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + the verdict (and its `framing:` note when present) + a `<TODO>` marker. The evidence/source pointer is deliberately NOT repeated in the bullet — it already renders verbatim on that claim's 🔍 trail line, and duplicating it put ~10% of the comment between the claim and the fix. The trail is the evidence record; the bucket bullet is the instruction — including the `route: "preflight"` detector synthetics (Hugo build, frontmatter collisions, readthrough coherence), which render as `🚩 flagged` and are excluded from the fact-check claim counts. The composer does **not** decide which findings surface, write the fix prose, fill the summary / confidence levels / cross-sibling count / review-history summary / Tier-2 editorial-balance counts, or add the findings it can't pre-stub (Hugo-build, frontmatter collisions, internal-link/shortcode breaks, cross-sibling mismatches, code-examples findings, editorial-balance threshold flags, intuition promotions, domain two-question-test findings) — those are `<TODO>`s / the reviewer's editorial pass.
 
 **No `<TODO:` placeholder survives to the published body.** Every `<TODO: …>` (and bare `<TODO>`) the composer seeded must be replaced before posting; `validate-pinned.py`'s `no-todo-tokens` rule fails the review otherwise. (The composer suppresses just that one rule when self-checking its own still-`<TODO>`-laden draft, via `--skip-rule no-todo-tokens`; the publish path does not.)
 
@@ -195,7 +211,9 @@ Some passes (claim extraction, cross-sibling reads) fan out into parallel specia
 
 The 🔍 Verification trail section sits between the bucket count table and the 🚨 Outstanding bucket. It renders the `evidence_trail` from `docs-review:references:fact-check` verbatim — one bullet per claim record, including cross-sibling-consistency checks framed as `claim_type: cross-reference`.
 
-**Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral.
+**Render every claim** — verified, unverifiable, contradicted, sibling-checked. The collapsed `<details>` summary shows totals: `N claims extracted · X verified · Y unverifiable · Z contradicted` (sibling checks count under verified/contradicted by their result). Bold each numeral. `🚩 flagged` detector lines (`route: "preflight"`) are **not** claims: they are excluded from `N` — which therefore equals `Y` in the investigation log's "X of Y claims verified" — and counted in none of X/Y/Z. When any are present, a trailing `· D detector findings` segment carries them, so the trail's own lines still add up to `N + D`.
+
+`🌀 framing-drift` lines **are** claims (they count in `N`), but they are **not** part of `Z contradicted`. `Z` counts only `contradicted` + `mismatch` — the verdicts that say the claim is wrong as written and must reach 🚨. Drift defaults to ⚠️, so counting it as a contradiction makes the header report contradictions the body doesn't contain. When any are present they get their own `· W framing-drift` segment, in the summary and in the investigation log's `(N unverifiable, M contradicted, W framing-drift)` parenthetical alike. (The per-lane `Pass 2 (verified …, contradicted …, unverifiable …)` triple is the one exception: drift rides the `contradicted` column there, because that triple's shape is pinned by the validator and it's a routing diagnostic, not a headline.)
 
 **The candidate-claims floor must be fully covered.** When the workflow's claim-extraction pre-step ran, `.candidate-claims.json` is the *floor* — every entry in it must appear in this trail with a verdict (the `candidate-claims-coverage` validator rule fails the review otherwise, soft-flooring loudly). `N claims extracted` (the `<details>` summary) and `Y` in the investigation-log "X of Y claims verified" line are therefore **≥ the count of `.candidate-claims.json` entries** — you may add claims the artifact missed (`N`/`Y` go up), you may not drop one (`N`/`Y` can't go below the floor). When the workflow's verification pre-step also ran, `.verified-claims.json` is the *verdict source* — render each floor entry's trail line with the verdict + `evidence` + `source` it records there (don't re-verify); the `verified-claims-trail-faithful` validator rule fails the review when the trail's verdict word disagrees with the artifact's in the dangerous direction. A candidate claim you (or the verifier) triage down to "not actually a checkable claim" still gets a trail line: `- L<line> "<text>" → ➖ not-a-claim — <one-line reason>` (git metadata, a Dockerfile-comment tag, a faithful description of the author's own design — see `docs-review:references:claim-extraction` §"What is NOT a claim"). See `docs-review:references:fact-check` §Pre-step artifact `.candidate-claims.json` and §Routed verification.
 
@@ -203,17 +221,18 @@ The 🔍 Verification trail section sits between the bucket count table and the 
 
 | Verdict word | Emoji | Bucket | When |
 |---|:---:|---|---|
-| `verified` | ✅ | trail-only (or ⚠️ Low-confidence verified when `confidence: low` / medium-under-heightened) | an authoritative source confirms the claim's exact framing, OR the source's broader form proves the claim as a narrower subset (`framing_note: "strengthened"`) |
+| `verified` | ✅ | trail-only (or ⚠️ Low-confidence verified when `confidence: low` / medium-under-heightened) | an authoritative source confirms the claim's exact framing, OR the source's broader form proves the claim as a special case (`framing: entailed-narrower`) |
 | `matches` | 🤝 | trail-only | a cross-sibling-consistency check that's consistent with the sibling pages |
 | `not-a-claim` | ➖ | trail-only | a candidate that isn't a falsifiable assertion (git metadata, a comment-tag, a faithful description of the author's own design) — demoted, not failed |
 | `unverifiable` | 🤷 | ⚠️ Low-confidence (genuine author-check) OR 📋 Triaged verifier findings (mis-sourced verifier noise; see §Bucket rules) | genuinely not checkable — paywalled, internal-only, future-dated, or a dead/404 source with no live alternative |
-| `contradicted` | ❌ | 🚨 Outstanding (actionable) OR 📋 Triaged verifier findings (verifier false-positive — `**Spurious:**` label) OR 💡 Pre-existing (already there on a line this PR didn't touch — `**Pre-existing:**` label) | a source positively disagrees, OR the claim overclaims (`framing_note: "narrowed"` — claim broader than source) / shifts subject (`framing_note: "shifted"`). A claim that's a *narrower* subset of a broader source statement is `verified`, not contradicted — see the `verified` row. |
+| `contradicted` | ❌ | 🚨 Outstanding (actionable) OR 📋 Triaged verifier findings (verifier false-positive — `**Spurious:**` label) OR 💡 Pre-existing (already there on a line this PR didn't touch — `**Pre-existing:**` label) | a source positively disagrees with the claim's anchor fact (the number, name, date, or capability is wrong), or the cited page says the opposite. A claim the source proves as a special case is `verified` (see the `verified` row); a claim whose anchor is right but whose meaning drifted is `framing-drift` (next row after `flagged`). |
 | `mismatch` | ⚔️ | 🚨 Outstanding (actionable) OR 📋 Triaged verifier findings OR 💡 Pre-existing (same triage outcomes as `contradicted`) | a cross-sibling-consistency check where this PR diverges from the siblings' established pattern |
 | `flagged` | 🚩 | 🚨 Outstanding (actionable) OR ⚠️ Low-confidence OR 📋 Triaged OR 💡 Pre-existing | a **detector** finding — not a fact-check outcome. Synthesized from a deterministic pre-flight check (Hugo build, frontmatter collision, readthrough coherence) carrying `route: "preflight"`; the specific detector is named in the parenthetical (`🚩 flagged (readthrough: prerequisite-inversion)`). **The reviewer buckets by reader impact: 🚨 Outstanding when a reader can't reach the page's stated outcome without it, otherwise ⚠️ Low-confidence** (a non-blocking readthrough nit — a redundancy, a recommended restructure routed to a follow-up — belongs in ⚠️, and the `trail-verdict-bucket-promotion` rule accepts it there for `flagged` only; `contradicted`/`mismatch` must still go to 🚨). It must surface in *some* actionable bucket, not vanish. Detector findings are excluded from the "X of Y claims verified" counts. **Render its bucket bullet as a plain detector statement (what's broken + the fix); do NOT attach fact-check verdict framing (`verdict: contradicted`, `framing: shifted`) — the `🚩 flagged` trail line is the verdict.** |
+| `framing-drift` | 🌀 | ⚠️ Low-confidence (default) OR 🚨 Outstanding (promoted) OR 📋 Triaged / 💡 Pre-existing (same triage outcomes as `contradicted`) | **the anchor value/fact is accurate, but the claim's published meaning differs from what the source supports** — a widened denominator, present usage recast as intent, a dropped qualifier, or a value published under semantics the source doesn't carry (a bare schema.org `Offer.price` for a monthly plan). The bucket bullet quotes the source form vs the claim form and proposes a rewrite restoring the source's framing. **Promote to 🚨 when the drifted phrasing also rides `social.*` frontmatter (auto-posted on merge) or would materially mislead**; the `trail-verdict-bucket-promotion` rule accepts ⚠️ for `framing-drift` (like `flagged`). |
 
 `✅` is the canonical `verified` glyph — it is *not* a generic stand-in for "passed". `matches` uses `🤝`, `not-a-claim` uses `➖`. The `trail-bucket-consistency` rule emits a `trail-per-verdict-emoji` nudge when a trail line still renders a legacy bucket emoji (✅ on `matches`/`not-a-claim`, ⚠️ on `unverifiable`, 🚨 on `contradicted`/`mismatch`) instead of the per-verdict glyph.
 
-**Use the six canonical words verbatim — never a variant.** On a 🔍 trail line, the verdict immediately after the emoji is EXACTLY one of `verified` / `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch`. Do not freelance descriptive variants — `source-mismatch`, `author-authored`, `author`, `source-title-match`, `failed-to-find`, `verified weakly` and the like are not verdict words. A non-canonical token parses as "no verdict" and slips past the `verified-claims-trail-faithful` / `trail-per-verdict-emoji` checks, so the `trail-canonical-verdict-word` rule flags it (the surgical fixer derives the right word from the rendered glyph). A framing nuance (`strengthened`/`narrowed`/`shifted`) belongs in the parenthetical alongside the canonical verdict word (`→ ✅ verified (strengthened — claim narrows "elsewhere" to "in `PulumiPlugin.yaml`"; source's broader form proves the claim)` for `strengthened`; `→ ❌ contradicted (narrowed — claim broadens "U.S. enterprise" to "enterprise")` for `narrowed`; `→ ❌ contradicted (shifted — "evaluate" vs "deploy")` for `shifted`), never in place of the verdict word.
+**Use the canonical words verbatim — never a variant.** On a 🔍 trail line, the verdict immediately after the emoji is EXACTLY one of `verified` / `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch` / `framing-drift`. Do not freelance descriptive variants — `source-mismatch`, `author-authored`, `author`, `source-title-match`, `failed-to-find`, `verified weakly` and the like are not verdict words. A non-canonical token parses as "no verdict" and slips past the `verified-claims-trail-faithful` / `trail-per-verdict-emoji` checks, so the `trail-canonical-verdict-word` rule flags it (the surgical fixer derives the right word from the rendered glyph). A framing nuance (`entailed-narrower`/`overclaim-broader`/`shifted`) belongs in the parenthetical alongside the canonical verdict word (`→ ✅ verified (framing: entailed-narrower — source's broader "elsewhere" proves "in `PulumiPlugin.yaml`")`; `→ 🌀 framing-drift (framing: overclaim-broader — claim broadens "U.S. enterprise" to "enterprise")`; `→ 🌀 framing-drift (framing: shifted — "use" became "betting on")`), never in place of the verdict word.
 
 **Per-claim bullet format.** `- L<line> "<short quote or claim text>" → <per-verdict emoji> <verdict word> (<evidence pointer>)`. Cross-sibling checks render as `→ 🤝 matches <sibling-A>, <sibling-B>, <sibling-C>` or `→ ⚔️ mismatch: <sibling-A>/<sibling-B> use <X>; this PR uses <Y>`. A trail line may carry several line refs when one verdict covers a frontmatter-sweep-collapsed claim (`- L12 "..." (also L88, L91) → 🤝 matches`). Strip credentials per `fact-check.md` §Credential redaction before rendering.
 
@@ -273,11 +292,11 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
 
 - **🚨 Outstanding** is the bucket that says "the author must address or refute this before a human approves the PR." The carve-outs below promote a finding to 🚨 regardless of size; everything else uses the two-question test.
 
-  When the section has findings, it opens with the italic one-liner `*These must be resolved or refuted before merging.*` immediately under the `### 🚨 Outstanding in this PR` heading (parallel to the `*Found by pattern-based linting; Findings may be false positives.*` note under `#### Style findings`); omit it on the explicit-empty form. The ⚠️ Low-confidence section opens with `*Review each and resolve as appropriate — these don't block the PR.*` on the same terms.
+  When the section has findings, it opens with the italic one-liner `*These must be resolved or refuted before merging.*` immediately under the `### 🚨 Outstanding in this PR` heading (parallel to the pattern-based-linting note under `#### Style suggestions`); omit it on the explicit-empty form. The ⚠️ Low-confidence section opens with `*Review each and resolve as appropriate — these don't block the PR.*` on the same terms.
 
   **Trail verdict drives bucket placement.** If the verification trail records `❌ contradicted` or `⚔️ mismatch` for a finding, render that finding in 🚨 Outstanding. The `trail-bucket-consistency` validator rule enforces this — keyed on the verdict *word* (`contradicted` / `mismatch`), not the emoji. The two-question test below does NOT relitigate trail verdicts — verification has already adjudicated. It applies only to findings without a decisive trail verdict (a 🤔 intuition-check, a `verified` claim where the residual judgment is about reader impact, etc.) — a `🤷 unverifiable` *factual* claim isn't a two-question-test case either: it renders in ⚠️ Low-confidence with an author-question line filed (see the ⚠️ entry below and `docs-review:references:fact-check` §Tier rules), unless something *else* about it hits an always-🚨 carve-out.
 
-  **Bucket-bullet line-range prefix.** Every bullet in 🚨 Outstanding, ⚠️ Low-confidence, and 💡 Pre-existing MUST start with `**[L<start>-<end>]**` (or `**[L<line>]**` for single-line) matching a corresponding record in 🔍 Verification trail. The prefix turns fuzzy entity-matching between trail and bucket into exact key-matching for both human readers and the validator. Style findings under `#### Style findings` use the `**line N:**` prefix below — they're not subject to the trail-prefix mandate.
+  **Bucket-bullet line-range prefix.** Every bullet in 🚨 Outstanding, ⚠️ Low-confidence, and 💡 Pre-existing MUST start with `**[L<start>-<end>]**` (or `**[L<line>]**` for single-line) matching a corresponding record in 🔍 Verification trail. The prefix turns fuzzy entity-matching between trail and bucket into exact key-matching for both human readers and the validator. Two style-finding exceptions: advisory style findings under `#### Style suggestions` use the `**line N:**` prefix below and aren't subject to the trail-prefix mandate; `[style-blocker]` bullets in 🚨 carry the `**[L<line>]**` anchor (so the auto-refresh gate can match a fix-push) but have no verification-trail record — the validator exempts them from trail-matching.
 
   **Loose-list spacing.** Separate top-level bullets in 🚨 Outstanding, ⚠️ Low-confidence, 📋 Triaged verifier findings, and 💡 Pre-existing with a blank line so each renders as its own paragraph (a "loose list"). A stack of 8+ findings without spacing reads as a wall of text. When moving a bullet between buckets, preserve the surrounding blank-line separation in the destination.
 
@@ -293,6 +312,7 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   - Clearly-broken state that would fail CI on merge (per `docs-review:references:infra`).
   - Legal semantic change on `/legal/` content (per `docs-review:references:website`).
   - Public-source-contradicted competitor claim (per `docs-review:references:website`).
+  - Blocker-tier Vale finding (`blocker: true` in `.vale-findings.json`, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product name, banned term with a fixed replacement, misspelling, grammatical agreement). The composer renders these as `[style-blocker]` bullets in 🚨; the reviewer never demotes or deletes them. **The reviewer also never *writes* one.** The marker is composer-only: it certifies Vale's blocker tier produced the finding, and it is what exempts the bullet from the trail-prefix match. A hand-authored `[style-blocker]` therefore smuggles an unverified finding past that check — render reviewer-found issues as ordinary `**[L…]**` bullets with a trail record instead. Enforced by `style-blocker-provenance`, which matches every such bullet against `.vale-findings.json`.
 
   **Two-question test for non-listed findings.** Promote to 🚨 only when the answer to *both* questions below is yes:
 
@@ -302,40 +322,28 @@ Computation rules live in `docs-review:references:blog` §Priority 2.5.
   If either answer is no, default to ⚠️. Findings that are confident but recoverable, or where the author has a sensible refusal path, belong in ⚠️.
 
 - **⚠️ Low-confidence** is for findings outside the always-🚨 carve-out list that fail the two-question test, plus `unverifiable` factual claims (the verifier couldn't confirm them — surface one bullet quoting the claim and asking the author to cite a source, the "author-question buffer line" per `docs-review:references:fact-check`), plus findings where the reviewer is <80% sure of the rule, the diagnosis, or the fix. Don't pad with hedging on confident findings — frame the bullet as "do X" with a suggestion block; don't soften the prose to fit the bucket name.
-  - **Style findings.** When `.vale-findings.json` is present, render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category; keep the literal `[style]` tag so a finding stays self-labeled when quoted out of the `#### Style findings` block. Examples:
-    - `- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.`
-    - `- **line 87:** [style] _passive voice_ — Use active voice instead of passive voice ('is created').`
+  - **Style suggestions (advisory tier).** Vale findings split into two tiers on the `blocker` field in `.vale-findings.json`. Blocker-tier findings render in 🚨 Outstanding (see the carve-out above) as `- **[L<n>]** <file-in-backticks> — [style-blocker] _category_ — <message>` and count in the 🚨 cell. Everything else is advisory: render each entry as a bullet `- **line N:** [style] _category_ — <message>`, citing the line in the bullet prefix. Use the `category` field from the JSON; never surface the `rule` field (it's an internal linter implementation detail). Bold the line number for skim-scanning; italicize the category; keep the literal `[style]` tag so a finding stays self-labeled when quoted out of the `#### Style suggestions` block. Examples:
+    - `- **line 42:** [style] _wordiness_ — 'prioritize' is too wordy.`
+    - `- **line 87:** [style] _weasel word_ — 'usually' is a weasel word!`
 
-    **Always group style findings under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets, and labels the section so a reader skimming a collapsed `<details>` block knows immediately what's inside. Omit the sub-heading only when there are no style findings at all.
+    **Always group advisory style suggestions under a `#### Style suggestions` H4 sub-heading inside ⚠️ Low-confidence.** The sub-heading appears once, after any regular low-confidence bullets. Omit it only when there are no advisory suggestions at all. These bullets are **not counted** in the ⚠️ cell of the bucket table.
 
-    **Render mode — single mode per comment.** Pick one mode for *all* style findings in this review based on file count and total finding count, not per-file:
+    **Render expanded — never behind a `<details>`.** They were collapsed while they still counted toward ⚠️; now that the count excludes them they cost no review burden, so a disclosure only adds a click and hides the ✏️ marks. Group them under an `##### <path>` H5 heading per file, in line order. On a multi-file review the heading also carries the per-file total and kind breakdown (`##### content/docs/foo.md — 8 (4 wordiness, 2 punctuation, 1 weasel word, 1 filler)`); on a single-file review the path alone is enough. The per-file heading is **mandatory either way**, and must be an H5 rather than a bold line: `post-style-suggestions.py --annotate-draft` walks those headings to bind a `- **line N:**` bullet to a file, and a column-0 `**bold**` line would be miscounted as a bucket finding by `extract_bucket_bullets` (inflating the ⚠️ count and tripping the L-prefix rule).
 
-    - **Inline-all (no collapsing).** When (a) total style findings ≤5, OR (b) style findings concentrate in a single file AND total ≤30. Render every bullet flat under `#### Style findings`. No `<details>` block. No expand-hint.
-    - **Collapse-all.** When style findings span multiple files AND total >5, OR total >30 regardless of file count. Render every file as its own `<details>` block (one `<summary>` per file, even files with a single finding) with the file roll-up summary format below. Render the expand-hint once under the H4.
-
-    Mixed-mode (some files inline, some collapsed) is forbidden — it reads as inconsistent. The two-mode rule keeps each comment internally consistent.
-
-    **Expand-hint** (collapse-all mode only). Immediately under the H4 heading, render `<sub>Click each filename to expand.</sub>`.
-
-    **Per-file roll-up summary** (collapse-all mode only). Each file renders under a `<details>` block whose summary names the file (bold), the total (bold), and a kind breakdown with each count bolded:
+    **✏️ marks a one-click suggestion.** A bullet whose finding was posted as an applyable `suggestion` comment gets ` ✏️` appended, and the caption deep-links to the PR's Files-changed tab (where the suggestion renders and where **Add suggestion to batch** stages several for a single commit). **Both review lanes re-post suggestions on every run and both write the mark themselves, from the set the GitHub API accepted — never the reviewer.** The initial lane (`claude-code-review.yml`) runs `post-style-suggestions.py --annotate-draft` against the composed draft before it publishes; the re-entrant lane (`claude-update.yml`) has no draft to intercept — the model renders and upserts inside its own step — so it runs `--annotate-pinned`, which PATCHes each published `<!-- CLAUDE_REVIEW N/M -->` part in place. Either way the marks and the ✏️ banner are stripped and recomputed on every run, so a mark carried over from the previous pinned body is discarded. Do not add or remove one by hand, and do not carry one across a refresh. The mark is keyed to the **line**, not the individual finding — a suggestion is a whole-line replacement, so when one line carries two findings both bullets are marked by the single suggestion that rewrites it. Mark count can therefore exceed the banner's suggestion count; the banner counts buttons, the marks point at the lines they sit on.
 
     ```markdown
-    #### Style findings
+    #### Style suggestions
 
-    *Found by pattern-based linting; Findings may be false positives.*
+    *Optional polish from pattern-based linting — never blocking, not counted above. Take the ones that read better and ignore the rest. ✏️ marks one you can apply from the [Files changed](…/files) tab — use **Add suggestion to batch** on each, then **Commit suggestions** to take several in a single commit.*
 
-    <sub>Click each filename to expand.</sub>
+    ##### content/docs/foo.md
 
-    <details>
-    <summary><strong>content/docs/foo.md</strong> (<strong>8</strong> issues: <strong>4</strong> wordiness, <strong>2</strong> punctuation, <strong>1</strong> passive voice, <strong>1</strong> substitution)</summary>
-
-    - **line 12:** _wordiness_ — …
-    - **line 14:** _wordiness_ — …
-    ...
-    </details>
+    - **line 12:** [style] _wordiness_ — 'in order to' is too wordy. ✏️
+    - **line 14:** [style] _weasel word_ — 'usually' is a weasel word!
     ```
 
-    Bold every numeral in the summary (the total and each kind count) so they read at a glance even on a narrow screen. Order kinds by count descending; ties alphabetical. Render the breakdown even on single-finding files (the format is uniform across the review).
+    **Inline-suggestion sidecar (both CI lanes).** The editorial pass may additionally stage up to 10 advisory findings as one-click GitHub `suggestion` comments by writing `.style-suggestions.json` (see `ci.md` §3 step 10); `post-style-suggestions.py` validates each entry against the PR diff and file content and posts them as a single `event: COMMENT` review, deleting the prior run's suggestion comments first. Suggestions are a *copy* of the actionable subset — the `#### Style suggestions` block remains the complete record, and a suggested finding keeps its `[style]` bullet. Blocker findings never render as suggestions. Because each run deletes what the last one posted, **stage the full qualifying set every run, not just what's new** — an omitted finding silently loses its button. A run that posts an identical set is short-circuited: the existing comments are left live rather than deleted and re-posted, since a re-post drops the buttons, re-notifies every subscriber, and strands another undeletable review event in the timeline. **An explicit `[]` is authoritative and clears the buttons; an absent, unreadable, or non-array sidecar means "unknown" and leaves them standing** — the marks are then reconciled against what is actually posted, so they can't over-promise either way. The two are deliberately not the same: conflating them once deleted three live buttons on a refresh where the model simply forgot the file.
 - **💡 Pre-existing** is opt-in per domain (see each domain file). When emitted, cap at 15 per file. Render under a `<details>` block when the count would push the comment past 25k characters.
 - **✅ Resolved** lists findings from the previous review that no longer appear. Annotate conceded findings with `concede: <reason>` (per `docs-review:references:update` Case 2) — the outcome telemetry (`scrape-review-outcomes.py`) distinguishes fixed from conceded by that exact token, and the `outcome-annotation-shape` validator rule flags freelanced variants. The same applies to the held-dispute annotation `🛡️ **Disputed by <author> on YYYY-MM-DD, model held.**` in 🚨/⚠️.
 - **📜 Review history** is append-only across re-runs. Initial entry is the first line.
@@ -351,14 +359,22 @@ For all other infra risks -- Lambda@Edge bundling concerns, CloudFront behavior 
 
 ### Per-file collapsing
 
-Files with more than 5 findings render under a `<details>` block:
+**Does not apply to `#### Style suggestions`** — those render expanded at any
+count, per §Bucket rules above, and the `style-render-mode` validator fails a
+body that hides them behind a `<details>`. This section covers the per-file
+finding lists that *are* collapsible: chiefly 💡 Pre-existing, whose own rule
+(cap 15 per file, collapse when the comment would pass 25k characters) governs
+when to reach for it.
+
+Where it applies, a file with more than 5 findings renders under a `<details>`
+block:
 
 ```markdown
 <details>
 <summary>content/blog/foo/index.md (12 findings)</summary>
 
-- line 14: ...
-- line 18: ...
+- **[L14]** `content/blog/foo/index.md` — …
+- **[L18]** `content/blog/foo/index.md` — …
 </details>
 ```
 
@@ -376,13 +392,13 @@ The pinned comment sequence is managed by `bash .claude/commands/docs-review/scr
 
 These rules apply to every review, regardless of entry point or domain. Do not surface them in the comment body itself.
 
-1. **No retracted findings.** If you decide a finding is wrong mid-review, drop it. Do not write "I considered X but ..." in the output.
+1. **No retracted findings.** If you decide a finding is wrong mid-review, drop it. Do not write "I considered X but ..." in the output. This covers false-positive style suggestions too: delete the bullet and say nothing — no count of what was dropped, no naming the rule, no sentence explaining that the headings were product names. Narrating a deleted finding re-adds the noise deleting it removed.
 2. **No speculative future-proofing.** "What if a future caller does Y?" is not a finding. Stick to current behavior.
 3. **No unsolicited drafts** of marketing copy, social posts, alternate titles, or tagline rewrites.
 4. **No nanny feedback on colloquialisms.** Words like "overkill," "kill," "blow away," "destroy" are fine in technical context. Do not flag.
 5. **No `@claude` trailer on every comment.** The mention prompt at the bottom of the 1/M comment is enough; do not add it to every section.
 6. **No "informational only" findings.** If a finding is not actionable, it does not belong in the output.
-7. **No findings markdownlint or Prettier catches.** Specifically: trailing newlines, heading case, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are *not* linter-caught -- flag those per `docs-review:references:image-review` and `docs-review:references:code-examples`. Ordered-list `1.`-numbering style is *not* lint-caught either — `markdownlint`'s MD029 uses `one_or_ordered` and `.md` is in `.prettierignore` — so it stays in scope per `docs-review:references:shared-criteria` §Ordered-list numbering.) Vale findings from `.vale-findings.json` ARE in scope -- render them under ⚠️ Low-confidence (see Style findings below).
+7. **No findings markdownlint or Prettier catches.** Specifically: trailing newlines, heading case, trailing whitespace. The lint job runs in parallel; double-flagging is noise. (Image alt text and fenced-code-block language specifiers are *not* linter-caught -- flag those per `docs-review:references:image-review` and `docs-review:references:code-examples`. Ordered-list `1.`-numbering style is *not* lint-caught either — `markdownlint`'s MD029 uses `one_or_ordered` and `.md` is in `.prettierignore` — so it stays in scope per `docs-review:references:shared-criteria` §Ordered-list numbering.) Vale findings from `.vale-findings.json` ARE in scope -- blocker-tier entries render in 🚨 Outstanding, advisory entries under ⚠️ Low-confidence (see Style suggestions below).
 8. **No pre-existing findings from files the PR doesn't touch.** Pre-existing extraction is scoped to the PR's changed files only.
 9. **No pre-existing findings that would require the author to rewrite rather than fix.** "This whole section is poorly structured" belongs in a separate issue, not in this review.
 10. **No restating outstanding findings on re-review.** If a finding is still in 🚨 Outstanding from the previous run, the author can see it; do not repeat it in the run history.

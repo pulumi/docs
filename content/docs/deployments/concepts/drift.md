@@ -31,6 +31,8 @@ For the full CLI workflow — detection, remediation, adoption, and `--expect-no
 
 ## Pulumi Cloud UI
 
+{{< pulumi-cloud "drift-detection" />}}
+
 ### Running via Click to Deploy
 
 You can run a drift or remediate-drift run ad hoc from your stack using the **Click to Deploy** menu, which lists the operations available for the stack. Select **Detect drift** to run a preview-only refresh, or **Remediate drift** to reconcile any detected drift. Both runs appear in the Drift tab when they complete.
@@ -71,6 +73,8 @@ You can route drift notifications to Slack, Microsoft Teams, and more using the 
 
 ### Setting it up via the REST API
 
+{{< pulumi-cloud "drift-detection" />}}
+
 For those who prefer to automate and script their infrastructure tasks, drift detection and remediation can be configured programmatically using HTTP requests. The available endpoints are:
 
 * Create a drift schedule
@@ -93,6 +97,8 @@ curl -H "Accept: application/vnd.pulumi+json" \
 ```
 
 ### Setting it up via the Pulumi Service Provider
+
+{{< pulumi-cloud "drift-detection" />}}
 
 The Pulumi Service Provider allows you to set up automated drift detection and remediation in source control.
 

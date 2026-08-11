@@ -10,13 +10,25 @@
 {{- $ctx := partialCached "icon-context.html" "icon-context" -}}
 {{- $symbolId := "" -}}
 {{- $isBrand := false -}}
+{{- /* An explicit set/ prefix names the sprite symbol directly, so check it
+       against the manifest too: `<use>` on a symbol the sprite doesn't carry
+       renders nothing at all, and a blank space in a row of icons is easy to
+       miss in review (pulumi/docs#20560 shipped `phosphor/git-pull-request`
+       that way). The bare-name branch below has its own check. */ -}}
+{{- $missing := "icon: %q (weight=%s) not in sprite manifest. Re-run make sync-icons or add to FORCE_INCLUDE in scripts/build-icon-sprite.js." -}}
 {{- if hasPrefix $name "brand/" -}}
-    {{- $symbolId = printf "b-%s" (strings.TrimPrefix "brand/" $name) -}}
+    {{- $bare := strings.TrimPrefix "brand/" $name -}}
+    {{- if not (index $ctx.brand $bare) -}}{{- errorf $missing $name $weight -}}{{- end -}}
+    {{- $symbolId = printf "b-%s" $bare -}}
     {{- $isBrand = true -}}
 {{- else if hasPrefix $name "custom/" -}}
-    {{- $symbolId = printf "c-%s-%s" (strings.TrimPrefix "custom/" $name) $weight -}}
+    {{- $bare := strings.TrimPrefix "custom/" $name -}}
+    {{- if not (index $ctx.custom $bare) -}}{{- errorf $missing $name $weight -}}{{- end -}}
+    {{- $symbolId = printf "c-%s-%s" $bare $weight -}}
 {{- else if hasPrefix $name "phosphor/" -}}
-    {{- $symbolId = printf "p-%s-%s" (strings.TrimPrefix "phosphor/" $name) $weight -}}
+    {{- $bare := strings.TrimPrefix "phosphor/" $name -}}
+    {{- if not (index $ctx.phosphor $bare) -}}{{- errorf $missing $name $weight -}}{{- end -}}
+    {{- $symbolId = printf "p-%s-%s" $bare $weight -}}
 {{- else -}}
     {{- if index $ctx.phosphor $name -}}
         {{- $symbolId = printf "p-%s-%s" $name $weight -}}
@@ -29,7 +41,7 @@
         {{- if templates.Exists (printf "partials/icons/%s.html" $name) -}}
             {{- partial (printf "icons/%s" $name) . -}}
         {{- else -}}
-            {{- errorf "icon: %q (weight=%s) not in sprite manifest. Re-run make sync-icons or add to FORCE_INCLUDE in scripts/build-icon-sprite.js." $name $weight -}}
+            {{- errorf $missing $name $weight -}}
         {{- end -}}
     {{- end -}}
 {{- end -}}

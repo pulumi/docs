@@ -9,6 +9,8 @@ menu:
         weight: 8
 aliases:
   - /docs/esc/access-management/
+# The landing page itself lists both gated and ungated features, so it carries no
+# marker; the pages below it are Enterprise-gated unless they say otherwise.
 ---
 
 Pulumi ESC is built upon [Pulumi Cloud](/docs/pulumi-cloud/), our managed cloud service for individuals and teams that allows you to manage and secure infrastructure at scale.
