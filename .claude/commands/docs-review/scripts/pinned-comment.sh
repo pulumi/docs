@@ -350,6 +350,54 @@ cmd_upsert() {
         fi
     fi
 
+    # Evidence-spine floor. This is the only point in the system that holds the
+    # old body and the new one at the same moment: everything above fetches
+    # comment IDs, not bodies, so nothing else can notice that a re-render
+    # dropped the 🔍 Verification trail. Measured on 2026-08-10, the update
+    # lane dropped it in 1 of 6 chained refreshes and published green.
+    #
+    # UNCONDITIONAL, deliberately. The model composes its own `pinned-comment.sh
+    # upsert` command and the Bash allow-list is a prefix match, so a
+    # `--spine-floor` flag could simply be omitted — the same reason the ✏️
+    # marks are workflow-written rather than model-written. The escape hatch is
+    # the env var, which does NOT match the allow-list pattern (that requires
+    # the command to begin `bash .claude/…`), so it is reachable by a human or
+    # a workflow step and not by the model.
+    #
+    # Never fatal: splice-spine.py exits 0 on any internal failure and leaves
+    # the body as rendered. A repair pass must not be the reason a review fails
+    # to publish. Operates on a COPY so a caller's file is never mutated.
+    # Scoped by CAPABILITY, not by lane name. The floor is only sound where the
+    # caller could not have re-derived the trail: claude-update.yml does a fresh
+    # shallow checkout and runs only Vale, so a shrunken trail there is always a
+    # loss. The composer lane (claude-code-review.yml, which reaches this
+    # function through cmd_upsert_validated) recomposes from
+    # `.verified-claims.json` against the CURRENT diff — if the author force-
+    # pushed a smaller change and re-requested review, a shorter trail is
+    # CORRECT there, and restoring the old one would inject records for lines
+    # that no longer exist. So: claims artifacts present => the caller owns the
+    # trail, stand down. Absent => the prior comment is the only copy, hold.
+    if [[ "${SPLICE_SPINE:-1}" != "0" ]] \
+       && [[ ! -f .verified-claims.json && ! -f .candidate-claims.json ]]; then
+        local script_dir splicer
+        script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+        splicer="$script_dir/splice-spine.py"
+        if [[ -f "$splicer" ]]; then
+            local prior_file spliced_file
+            prior_file=$(mktemp)
+            spliced_file=$(mktemp)
+            fetch_pinned_bodies "$repo" "$pr" >"$prior_file" 2>/dev/null || true
+            cp "$body_file" "$spliced_file"
+            python3 "$splicer" \
+                --prior "$prior_file" \
+                --body "$spliced_file" \
+                --in-place \
+                --report "${SPLICE_SPINE_REPORT:-/tmp/splice-spine.json}" || true
+            body_file="$spliced_file"
+            rm -f "$prior_file"
+        fi
+    fi
+
     # Reserve the footer's bytes out of the per-page budget up front: it is
     # appended to every page after the split, and a page sized to exactly
     # MAX_BYTES plus a footer would sail past GitHub's 65536 hard cap.

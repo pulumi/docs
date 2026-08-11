@@ -129,7 +129,7 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 
 | Tool | Language / approach | Clouds supported | State management | Best for |
 |---|---|---|---|---|
-| [Pulumi](#1-pulumi) | Python, TypeScript, Go, C#, Java, or YAML | AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers | Pulumi Cloud (managed, free tier available) or self-managed backend | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
+| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers | Pulumi Cloud (managed, free tier available) or self-managed backend | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
 | [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | State file, self-managed or via HCP Terraform | Teams with existing Terraform expertise and established workflows |
 | [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Delegated to the underlying CloudFormation stack | AWS-focused teams who prefer programming languages over templates |
 | [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Managed entirely by AWS | AWS-only deployments requiring deep service integration |
@@ -147,13 +147,13 @@ Use the table as a map: each tool links to its full breakdown below, where you'l
 License: Apache 2.0  
 Best For: Teams who want flexible, language-agnostic IaC for infrastructure and operations
 
-Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
+Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, JavaScript, Go, .NET, and Java, plus YAML and HCL for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
 Pulumi's approach combines the best of both imperative and declarative paradigms: you use imperative programming languages to define your desired infrastructure state, but the Pulumi engine processes this declaratively to determine what changes are needed to achieve your intended outcome.
 
 ### Key Features:
 
-- **Universal language support**: Use Python, TypeScript, Go, C#, Java, or YAML configurations—no new DSL to learn
+- **Universal language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL configurations—no new DSL to learn
 - **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
@@ -423,7 +423,7 @@ outputs:
 
 Key Features:
 
-- **General-purpose language support**: Use Python, TypeScript, Go, C#, Java, or YAML without learning new DSLs
+- **General-purpose language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
 - **Multi-cloud flexibility**: Native cloud provider SDKs with same-day feature access across [150+ providers](/registry/)
 - **Incremental adoption**: Migration tools and state integration for gradual transitions

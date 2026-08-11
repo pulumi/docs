@@ -44,7 +44,7 @@ sections:
     description: Centralized secrets and configuration management with environments.
     link: /docs/esc/
   - icon: pulumi-insights
-    heading: Insights & Governance
+    heading: Discovery & Governance
     description: Search, compliance, and policy enforcement across your cloud infrastructure.
     link: /docs/insights/
   - icon: link

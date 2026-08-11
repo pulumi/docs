@@ -641,7 +641,7 @@ To set the value correctly using Automation API, you must use the `path` paramet
 {{% choosable language typescript %}}
 
 ```typescript
-await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, path: true);
+await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, true);
 ```
 
 {{% /choosable %}}
@@ -655,7 +655,7 @@ await stack.SetConfigAsync("pulumi:disable-default-providers[0]", new ConfigValu
 {{% choosable language python %}}
 
 ```python
-stack.set_config("pulumi:disable-default-providers[0]", auto.ConfigValue(value="*"), True)
+stack.set_config("pulumi:disable-default-providers[0]", auto.ConfigValue(value="*"), path=True)
 ```
 
 {{% /choosable %}}

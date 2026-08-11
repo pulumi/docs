@@ -132,7 +132,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 19
+SCHEMA_VERSION = 20
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
@@ -2279,6 +2279,61 @@ def check_no_placeholder_empty_form(ctx: Context) -> list[Violation]:
     return violations
 
 
+TRIAGED_SUMMARY = "I double-checked these and realized they weren't real findings"
+
+
+def check_triaged_details_wrapper(ctx: Context) -> list[Violation]:
+    """📋 Triaged verifier findings keeps its collapsed `<details>` wrapper.
+
+    `compose-review.py:render_triaged` always emits the section inside a
+    `<details>` whose `<summary>` carries the line telling a reader what the
+    section IS — findings the reviewer checked and concluded were verifier
+    noise, not things to act on. The editorial pass then replaces the
+    `_No triaged findings._` placeholder with the real `**Spurious:**` /
+    `**Mis-sourced:**` bullets, and can take the wrapper out with it. The
+    section then renders expanded and unexplained, so triaged NON-findings sit
+    open on the page looking exactly like the real findings above them — the
+    opposite of what the triage was for.
+
+    Nothing else noticed: no rule covered this, `splicer.py`'s canonical block
+    only lands when the section is missing ENTIRELY, and
+    `strip-empty-triaged.py` keys on the placeholder the editorial pass just
+    removed. Rare but real — 1 of 28 published reviews carrying the section
+    (pulumi/docs#20781), and it came from the composer lane's own editorial
+    pass, not from a re-render.
+
+    Fires only when the section exists AND carries bullets. The section is
+    optional and absent from MANDATORY_H3_SECTIONS, and an empty one belongs to
+    `strip-empty-triaged.py`, not to this rule.
+    """
+    span = find_section(ctx.body, "📋 Triaged verifier findings")
+    if span is None:
+        return []
+    start, end = span
+    section = "\n".join(ctx.body_lines[start:end])
+    if not extract_bucket_bullets(ctx.body, "📋 Triaged verifier findings"):
+        return []
+    if TRIAGED_SUMMARY in section and "<details>" in section:
+        return []
+    missing = "<summary>" if "<details>" in section else "<details> wrapper"
+    return [Violation(
+        rule_id="triaged-details-wrapper",
+        line_ref="<### 📋 Triaged verifier findings>",
+        expected=(
+            "the 📋 section's bullets wrapped in `<details>` with "
+            f"`<summary><em>{TRIAGED_SUMMARY} — click to expand</em></summary>`"
+        ),
+        actual=f"section has bullets but no {missing}",
+        hint=(
+            "Re-wrap the bullets: `### 📋 Triaged verifier findings`, blank line, "
+            "`<details>`, `<summary><em>I double-checked these and realized they "
+            "weren't real findings — click to expand</em></summary>`, blank line, the "
+            "bullets, blank line, `</details>`. Keep the bullets exactly as they are — "
+            "only the wrapper is missing."
+        ),
+    )]
+
+
 def check_no_todo_tokens(ctx: Context) -> list[Violation]:
     """No `<TODO: …>` (or bare `<TODO>`) placeholder survives to the published body.
 
@@ -2558,6 +2613,12 @@ RULES = [
         "desc": "Schema v11: an explicit-empty-form line (`_No …._`) must be reader-facing — no leftover composer instructions (`per ci.md §`, `surfaced by the composer`, `docs-review:references:`, `pre-stubbed`).",
         "hint": "Replace the placeholder line with the clean reader-facing empty form (e.g. `_No pre-existing issues in touched files._`, `_No items resolved since the last review._`); 'what to add here' guidance belongs in ci.md §3, not the published body.",
         "check": check_no_placeholder_empty_form,
+    },
+    {
+        "id": "triaged-details-wrapper",
+        "desc": "Schema v20: a 📋 Triaged verifier findings section with bullets keeps its collapsed <details> wrapper and the summary line explaining what the section is.",
+        "hint": "Re-wrap the bullets in `<details>` + `<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>`; leave the bullets themselves alone.",
+        "check": check_triaged_details_wrapper,
     },
 ]
 

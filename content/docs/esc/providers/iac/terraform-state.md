@@ -17,6 +17,10 @@ aliases:
   - /docs/esc/concepts/providers/secrets/terraform-state/
 ---
 
+{{% notes type="info" %}}
+If using Pulumi Cloud as your state backend for Terraform, use the [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) provider instead.
+{{% /notes %}}
+
 The `terraform-state` provider enables you to read outputs from Terraform state files stored in S3 or Terraform Cloud. By importing those outputs into your environment, you can seamlessly consume Terraform-managed infrastructure as inputs to your Pulumi programs — referencing values such as VPC IDs, subnet IDs, and cluster endpoints directly, without copying them by hand or rewriting your Terraform in Pulumi. This bridges the two tools, so you can adopt Pulumi incrementally alongside an existing Terraform footprint.
 
 Imported outputs are available under the `outputs` key (for example, `${terraform.outputs.vpc_id}`) and can be mapped to either of the following:
