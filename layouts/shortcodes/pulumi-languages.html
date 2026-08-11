@@ -1,0 +1,28 @@
+{{- /*
+    Canonical list of the languages Pulumi supports. Single source of truth for
+    every page that states which languages Pulumi programs can be written in, so
+    the set never drifts page to page (JavaScript quietly dropped, ".NET" written
+    as "C#", HCL missing). Mirrors /docs/iac/languages-sdks/.
+
+    Params:
+      set (positional 0, or named)
+        "all"             (default) general-purpose languages plus YAML and HCL
+        "general-purpose" general-purpose languages only, for sentences that add
+                          their own "plus YAML and HCL" tail
+      links
+        "true"            link YAML and HCL to their language docs (set="all" only)
+
+    Call with {{< pulumi-languages >}} — the angle-bracket form — since this
+    emits HTML when links are on. Keep a matching .markdown.md variant in step.
+*/ -}}
+{{- $set := default (.Get "set") (.Get 0) -}}
+{{- $set = default "all" $set -}}
+{{- $links := eq (.Get "links") "true" -}}
+{{- $general := "Python, TypeScript, JavaScript, Go, .NET, and Java" -}}
+{{- if eq $set "general-purpose" -}}
+{{- $general -}}
+{{- else if $links -}}
+Python, TypeScript, JavaScript, Go, .NET, Java, <a href="/docs/iac/languages-sdks/yaml/">YAML</a>, and <a href="/docs/iac/languages-sdks/hcl/">HCL</a>
+{{- else -}}
+Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL
+{{- end -}}

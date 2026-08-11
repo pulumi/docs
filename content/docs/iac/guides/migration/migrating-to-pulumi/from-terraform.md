@@ -102,6 +102,8 @@ $ pulumi import --from hcl terraform.tfstate
 
 This reads a Terraform or OpenTofu state file and imports every managed resource in the root module into your stack. Resources nested inside modules are skipped with a warning; import those [in the usual way](/docs/iac/guides/migration/import/).
 
+`--from hcl` reads your `.tf` files alongside the state file, so run it from the project directory. If you have converted to a general-purpose language and no longer have `.tf` files on disk, use [`--from terraform`](#importing-resources) instead.
+
 ### State-first migration with pulumi-terraform-migrate
 
 The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) tool provides a state-first approach to migration by translating your Terraform state into Pulumi state. You then use an LLM agent to convert your Terraform code to Pulumi. This approach is useful when:
@@ -279,6 +281,11 @@ pulumi import --from terraform ./terraform.tfstate
 ```
 
 Given a path to a valid `.tfstate` file and a target Pulumi stack, Pulumi will import the resources defined in that file into the stack and mark them [protected](/docs/iac/concepts/resources/options/protect/) to allow you to make follow-up changes to their source code safely. You can also import resources individually using the [`import`](https://www.pulumi.com/docs/iac/concepts/resources/options/import/) resource option.
+
+Two converters can read a state file, selected with `--from`, and the choice follows the same rule as it does for [`pulumi convert`](/docs/iac/get-started/terraform/convert-hcl/#automated-conversion-with-pulumi-convert):
+
+* `--from terraform` reads the state file on its own, so it works from a Pulumi project in any language. Reach for it after converting your configuration to a general-purpose language, as above.
+* `--from hcl` parses the `.tf` files in the project directory alongside the state file. Reach for it when you are [running those `.tf` files under `runtime: hcl`](#keep-your-code-in-hcl).
 
 To learn more about importing resources with Pulumi, see [Importing Resources](/docs/iac/guides/migration/import/).
 
