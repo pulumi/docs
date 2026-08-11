@@ -25,7 +25,7 @@ Design notes:
     inside a 50KB CalledProcessError repr, and (c) it removes the dependency
     on the `claude` CLI being installed at a compatible version.
 
-    The caller (pinned-comment.sh cmd_upsert_validated) is expected to:
+    The caller (the workflow's validate / splice / re-validate / upsert chain) is expected to:
     1. snapshot the pre-fix body to a .pre-haiku.bak file
     2. invoke this script
     3. re-validate after success

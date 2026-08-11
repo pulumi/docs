@@ -138,9 +138,17 @@ SCHEMA_VERSION = 20
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
 
-# Mandatory H3 sections in the order they must appear in any review body. Mirror
-# of `references/output-format.md` L81 — keep these synchronized; the schema-
-# version bump catches drift.
+# Mandatory H3 sections in the order they must appear in any review body.
+# Mirror of `references/output-format.md` §"Mandatory sections render on every
+# review" — keep these synchronized; the schema-version bump catches drift.
+# (Referenced by section, not line number: the old "L81" pointer had already
+# drifted by ~26 lines.)
+#
+# Deliberately PARTIAL: that section also lists `📋 Triaged verifier findings`,
+# which is absent here on purpose. The composer always renders it, but Step D2
+# (`strip-empty-triaged.py`) removes it post-edit when it is still empty, so a
+# published body legitimately may not carry it. Requiring it here would fail
+# every clean review.
 MANDATORY_H3_SECTIONS = [
     "🔍 Verification trail",
     "🚨 Outstanding",

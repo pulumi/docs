@@ -659,9 +659,15 @@ jobs:
           # Stamp the authoritative lint result into the PR body's Verification
           # section, replacing the composer's placeholder (idempotent: only acts
           # if the placeholder is still present, so a re-run can't double-stamp).
+          # The script handles its own failure paths and returns 0 for each, so
+          # a non-zero exit here is an unhandled crash. Surface it loudly but
+          # keep going: the auto-merge arming and the lint-failure comment
+          # below are what the author actually needs, and `set -e` would abort
+          # the step before either of them runs.
           stamp_body() {
             python3 scripts/content-review/stamp-lint-result.py \
-              --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)"
+              --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)" \
+              || echo "::error::stamp-lint-result.py crashed; PR body not stamped with the $1 lint result"
           }
           if [ "${{ steps.publish.outputs.lint_result }}" = "passed" ]; then
             stamp_body passed

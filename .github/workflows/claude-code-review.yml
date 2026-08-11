@@ -304,10 +304,10 @@ jobs:
           # real changes. Retry once after a pause to catch the race
           # before falling through to the empty-diff skip.
           fetch_pr() {
-            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,files,title
+            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,changedFiles,files,title
           }
           DATA=$(fetch_pr)
-          if [[ "$(echo "$DATA" | jq -r '.files | length')" == "0" ]]; then
+          if [[ "$(echo "$DATA" | jq -r '.changedFiles')" == "0" ]]; then
             echo "review: pr=$PR file_count=0 on first read, retrying after 30s (likely post-force-push race)"
             sleep 30
             DATA=$(fetch_pr)
@@ -328,13 +328,21 @@ jobs:
           ADDITIONS=$(echo "$DATA" | jq -r '.additions')
           DELETIONS=$(echo "$DATA" | jq -r '.deletions')
           TITLE=$(echo "$DATA" | jq -r '.title')
-          FILE_COUNT=$(echo "$DATA" | jq -r '.files | length')
+          # `.changedFiles` is the true total; `.files` is capped at 100 by the
+          # GraphQL page `gh pr view` requests, so `.files | length` under-reports
+          # (and stalls at 100) on a large PR.
+          FILE_COUNT=$(echo "$DATA" | jq -r '.changedFiles')
           FILES_LIST=$(echo "$DATA" | jq -r '.files[] | "  - \(.path) (+\(.additions)/-\(.deletions))"')
-          # Bare paths, one per line. FILES_LIST above is the human-readable
-          # form rendered into the prompt ("  - path (+n/-m)"); its two-space
-          # bullet prefix means an anchored ^path/ pattern can never match it,
-          # so any path matching must use FILES_PATHS instead.
-          FILES_PATHS=$(echo "$DATA" | jq -r '.files[].path')
+          if [[ "$FILE_COUNT" =~ ^[0-9]+$ ]] && [ "$FILE_COUNT" -gt 100 ]; then
+            FILES_LIST="$FILES_LIST"$'\n'"  - … and $((FILE_COUNT - 100)) more (list truncated at 100 by the API)"
+          fi
+          # Bare paths, one per line, for path matching. Two reasons this can't
+          # reuse FILES_LIST: that is the human-readable "  - path (+n/-m)" form
+          # rendered into the prompt, whose two-space bullet prefix means an
+          # anchored ^path/ pattern never matches it; and it is capped at 100,
+          # so a templating change sorting past that position would be missed.
+          # The paginated REST endpoint returns every file.
+          FILES_PATHS=$(gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[].filename')
 
           # force=true (set by claude-new.yml on #new-review dispatch)
           # bypasses the auto-skip heuristics. The user explicitly asked
@@ -1496,6 +1504,7 @@ jobs:
           OUTCOME="${{ steps.claude-review.outcome }}"
           SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
           TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
+          HAS_WRITE_ACCESS="${{ steps.check-access.outputs.has_write_access }}"
           if [ "$OUTCOME" = "success" ]; then
             CONCLUSION="success"
             SUMMARY="Pinned review updated. See the PR's pinned comment for findings."
@@ -1508,13 +1517,19 @@ jobs:
           elif [ "$OUTCOME" = "cancelled" ]; then
             CONCLUSION="neutral"
             SUMMARY="Cancelled — superseded by a newer run."
-          elif [ "$OUTCOME" = "skipped" ]; then
-            # The review step was gated off with no skip_reason set — the only
-            # path there is has_write_access=false. That is a deliberate skip,
-            # not a failure, and publishing it as a red ✗ misreads as a broken
-            # pipeline.
+          elif [ "$OUTCOME" = "skipped" ] && [ "$HAS_WRITE_ACCESS" = "false" ]; then
+            # Deliberate skip — the author can't trigger a review here.
+            # Publishing it as a red ✗ misreads as a broken pipeline.
             CONCLUSION="skipped"
             SUMMARY="Review skipped: PR author lacks write access to this repository."
+          elif [ "$OUTCOME" = "skipped" ]; then
+            # Skipped for some other reason: the job was cancelled during the
+            # pre-steps (cancel-in-progress fires before the review step, so
+            # the "cancelled" branch above doesn't catch it), or a pre-step
+            # failed outright. Neither is the author's doing — don't claim a
+            # permissions problem, and don't publish a red ✗ for a supersede.
+            CONCLUSION="neutral"
+            SUMMARY="Review did not run — superseded by a newer run, or a pre-step failed. See workflow logs."
           else
             CONCLUSION="failure"
             SUMMARY="Review failed. See workflow logs."

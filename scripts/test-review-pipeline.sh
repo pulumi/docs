@@ -3,10 +3,10 @@
 # daily content review, blog known-issues index).
 #
 # These suites were all green but nothing ran them: `make test` covers only the
-# example programs, and no workflow invoked pytest or a --self-test. That gap
-# is how a selector bot-list omission and a pytest-red test file both survived
-# in master. This script is the single entry point; review-pipeline-tests.yml
-# runs it on any PR that touches the pipeline.
+# example programs, and no workflow invoked pytest or a --self-test. Unrun
+# tests rot — test_select_posts.py had been erroring under pytest collection
+# and nobody saw it. This script is the single entry point;
+# review-pipeline-tests.yml runs it on any PR that touches the pipeline.
 #
 # Three suite kinds, discovered rather than enumerated so a new script is
 # covered the day it lands:
@@ -17,16 +17,25 @@ set -uo pipefail
 
 cd "$(dirname "$0")/.."
 
+OUT=$(mktemp -t review-pipeline-tests.XXXXXX)
+trap 'rm -f "$OUT"' EXIT
+
 FAILED=0
 run() {
     local label="$1"; shift
-    if "$@" >/tmp/rpt-out.txt 2>&1; then
+    if "$@" >"$OUT" 2>&1; then
         echo "  PASS  $label"
     else
         echo "  FAIL  $label"
-        sed 's/^/        /' /tmp/rpt-out.txt | tail -25
+        sed 's/^/        /' "$OUT" | tail -25
         FAILED=1
     fi
+}
+
+command -v python3 >/dev/null || { echo "python3 not found"; exit 1; }
+python3 -c 'import pytest' 2>/dev/null || {
+    echo "pytest is not installed — install it with: python3 -m pip install pytest pyyaml"
+    exit 1
 }
 
 echo "== pytest: docs-review scripts"
@@ -43,7 +52,10 @@ echo "== --self-test suites"
 for f in scripts/content-review/*.py scripts/blog-review/*.py \
          .claude/commands/docs-review/scripts/*.py; do
     [ -e "$f" ] || continue
-    grep -q -- '--self-test' "$f" || continue
+    # Match the argparse registration, not any mention of the flag — a script
+    # that merely documents --self-test in a docstring must not be invoked
+    # with it and then reported FAIL.
+    grep -qE '(add_argument\(|")--self-test' "$f" || continue
     run "$(basename "$f") --self-test" python3 "$f" --self-test
 done
 

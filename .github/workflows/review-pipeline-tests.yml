@@ -5,9 +5,15 @@ name: Review pipeline tests
 #
 # These suites already existed and were green, but nothing ran them: `make
 # test` covers only the example programs, and no workflow invoked pytest or a
-# --self-test. Two defects reached master through that gap — a selector
-# bot-author omission that suppressed the staleness clock on ~65% of docs
-# pages, and a test file that errored under pytest collection.
+# --self-test. Unrun tests rot — test_select_posts.py had been erroring under
+# pytest collection for some time and nobody saw it, because nothing collected
+# it. Running them on every pipeline PR is what keeps them honest.
+#
+# Note what this job does and does not buy: it only catches what the suites
+# actually assert. The selector bot-author defect fixed alongside this workflow
+# was NOT covered by any suite, so a green run would have shipped it — a
+# regression test for it was added at the same time. Coverage is the suites'
+# job; this workflow's job is making sure they run.
 #
 # Path-filtered so it only fires on pipeline changes; content-only PRs (the
 # large majority) never see this job.
@@ -36,7 +42,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           fetch-depth: 1
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
       - name: Install test deps
