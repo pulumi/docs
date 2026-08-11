@@ -27,10 +27,6 @@ block_external_search_index: false
 # event, use the external URL as the value here.
 url_slug: neo-in-a-docker-sandbox
 
-# The EMEA sitting used to be its own event page; it's a session here now.
-aliases:
-    - /events/neo-in-a-docker-sandbox-eu/
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 

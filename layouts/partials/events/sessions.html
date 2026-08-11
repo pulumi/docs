@@ -33,6 +33,10 @@
       presenters  per-session, or the event's
       index       position after sorting, 0-based
 
+    Returns an empty slice for a page under content/events/ with neither key —
+    a redirect stub, which is still an events-typed page and so still reaches the
+    schema collector. Callers use `range`/`with`, so empty means "nothing to say".
+
     Pure: depends only on the page's front matter, never on `now`, so "has this
     session passed" is the caller's business and callers are free to partialCache
     the result. Top-level `sortable_date` stays authoritative for the event as a
@@ -60,7 +64,7 @@
         ) -}}
     {{- end -}}
     {{- $sessions = sort $sessions "unix" "asc" -}}
-{{- else -}}
+{{- else if $page.Params.sortable_date -}}
     {{- $sessions = slice (dict
         "key" "session-1"
         "label" ""

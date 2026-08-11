@@ -22,10 +22,6 @@ block_external_search_index: false
 # The url slug for the event landing page.
 url_slug: pulumi-for-all-your-iac-terraform-hcl
 
-# The EMEA sitting used to be its own event page; it's a session here now.
-aliases:
-    - /events/pulumi-for-all-your-iac-terraform-hcl-eu/
-
 # The event type (workshop, webinar, talk).
 event_type: workshop
 
