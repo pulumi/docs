@@ -23,7 +23,7 @@ OpenTofu and Terraform are both infrastructure as code technologies that have si
 
 ## OpenTofu vs. Terraform: Similarities {#similarities}
 
-OpenTofu is a fork of Terraform 1.6.x so there are many similarities for now. They both have the ability to create, deploy, and manage infrastructure as code on any cloud. Both Terraform and OpenTofu follow a desired state infrastructure as code model, where the IaC code represents the desired state of the infrastructure. The deployment engine compares this desired state with the current state of the stack and determines the necessary actions, such as creating, updating, or deleting resources. Both Terraform and OpenTofu support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. They also both require the use of a domain-specific language: HashiCorp Configuration Language (HCL).
+OpenTofu is a fork of Terraform so there are many similarities for now. They both have the ability to create, deploy, and manage infrastructure as code on any cloud. Both Terraform and OpenTofu follow a desired state infrastructure as code model, where the IaC code represents the desired state of the infrastructure. The deployment engine compares this desired state with the current state of the stack and determines the necessary actions, such as creating, updating, or deleting resources. Both Terraform and OpenTofu support many cloud providers, including [AWS](/aws/), [Azure](/azure/), and [Google Cloud](/gcp/), plus other services like CloudFlare, Digital Ocean, and more. They also both require the use of a domain-specific language: HashiCorp Configuration Language (HCL).
 
 ## OpenTofu vs. Terraform: Key Differences {#differences}
 
@@ -101,7 +101,7 @@ Pulumi promotes creating reusable and modular components which allows standard a
 
 Pulumi also provides the [Pulumi Registry](/registry/) which is a searchable collection of Pulumi Packages published by Pulumi and our partners. With Pulumi Registry, you can easily find the package with the resources you need, install that package directly into your project, and start building.
 
-Existing module investments carry over. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) consumes Terraform and OpenTofu Registry modules directly — along with local paths, Git URLs, GitHub shorthand, and HTTP archives — and maps each `module` block to a Pulumi component resource. An HCL module can also be published as a Pulumi package, which makes it consumable from TypeScript, Python, Go, C#, Java, and YAML.
+Existing module investments carry over. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) consumes Terraform and OpenTofu Registry modules directly — along with local paths, Git URLs, GitHub shorthand, and HTTP archives — and maps each `module` block to a Pulumi component resource. An HCL module can also be published as a Pulumi package, which makes it consumable from {{< pulumi-languages "general-purpose" >}}, as well as YAML.
 
 ### Testing and Validation {#testing}
 
