@@ -346,17 +346,25 @@ def splice_triaged_details_wrapper(lines: list[str], violation: dict) -> tuple[l
     re-render — the editorial pass's triage prose is the valuable part and this
     never touches it.
 
-    Defers to fallback if a `<details>` is already open in the section (a
-    partial wrapper is ambiguous — we would have to guess whether the bullets
-    belong inside it), or if the section has no bullets (nothing to wrap;
+    Defers to fallback if EITHER `<details>` tag is already present in the
+    section — a partial wrapper is ambiguous and we would have to guess where
+    the bullets belong — or if the section has no bullets (nothing to wrap;
     strip-empty-triaged.py owns that case).
+
+    Both tags, not just the opener. An editorial pass that deleted the
+    `<details>` line but left `</details>` behind would otherwise take the wrap
+    path and produce `<details>` → summary → some bullets → stray `</details>`
+    → the rest of the bullets → `</details>`: the section closes early, the
+    trailing bullets render expanded, and the re-validate pass sees a wrapper
+    and a summary and calls it clean. That ships silently, which is worse than
+    the defect this rule exists to fix. Deferring hands it to the model lane.
     """
     span = _section_span(lines, TRIAGED_HEADING)
     if span is None:
         return lines, False
     start, end = span
     body = lines[start:end]
-    if any(ln.strip().startswith("<details>") for ln in body):
+    if any(ln.strip().startswith(("<details>", "</details>")) for ln in body):
         return lines, False
 
     # Split heading from content, preserving the bullets exactly.

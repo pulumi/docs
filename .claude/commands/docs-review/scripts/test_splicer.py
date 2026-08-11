@@ -545,60 +545,6 @@ def test_apply_order_processes_trail_faithful_before_per_verdict_emoji():
 # ---- Test runner -----------------------------------------------------------
 
 
-TESTS = [
-    test_internal_link_existence_unwraps_markdown_link,
-    test_shortcode_existence_deletes_line,
-    test_mandatory_h3_order_inserts_missing_section,
-    test_mandatory_h3_order_inserts_triaged_with_details_wrapper,
-    test_mandatory_h3_order_defers_when_already_present,
-    test_trail_per_verdict_emoji_replaces_legacy_glyph,
-    test_trail_canonical_verdict_word_replaces_freelanced_token,
-    test_verified_claims_trail_faithful_restores_artifact_verdict,
-    test_verified_claims_trail_faithful_file_filter_skips_cross_file_overlap,
-    test_verified_claims_trail_faithful_strict_pairing_defers_on_anchor_mismatch,
-    test_verified_claims_trail_faithful_idempotent_across_duplicate_violations,
-    test_verified_claims_trail_faithful_matches_by_range_overlap,
-    test_pass3_unverifiable_evidence_inserts_pointer,
-    test_pass3_unverifiable_evidence_idempotent,
-    test_trail_canonical_verdict_word_idempotent,
-    test_external_claim_state_format_defers_to_fallback,
-    test_external_claim_dispatch_metadata_appends_segment,
-    test_external_claim_routed_metadata_appends_segment,
-    test_external_claim_pass2_outcome_drops_zero_parenthetical,
-    test_external_claim_pass2_outcome_defers_when_f_positive,
-    test_bucket_bullet_line_range_prefix_prepends_anchor,
-    test_empty_violations_no_op,
-    test_non_surgical_only_passes_through,
-    test_mixed_surgical_and_nonsurgical_applies_surgical,
-    test_apply_order_processes_trail_faithful_before_per_verdict_emoji,
-]
-
-
-def main() -> int:
-    failures: list[tuple[str, str]] = []
-    for t in TESTS:
-        name = t.__name__
-        try:
-            t()
-            print(f"  ok  {name}")
-        except AssertionError as e:
-            failures.append((name, str(e) or "assertion failed"))
-            print(f"  FAIL {name}: {e}")
-        except Exception:
-            failures.append((name, traceback.format_exc()))
-            print(f"  ERROR {name}:\n{traceback.format_exc()}")
-    print()
-    if failures:
-        print(f"{len(failures)}/{len(TESTS)} tests failed")
-        return 1
-    print(f"{len(TESTS)}/{len(TESTS)} tests passed")
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())
-
-
 TRIAGED_UNWRAPPED = (
     "### ⚠️ Low-confidence\n\n"
     "_No low-confidence findings._\n\n"
@@ -651,3 +597,77 @@ def test_triaged_details_wrapper_defers_on_partial_wrapper():
         "### 📋 Triaged verifier findings\n\n<details>\n<summary><em>something else</em></summary>\n\n")
     _, applied, fallback = splicer.apply_splices(partial, [TRIAGED_VIOLATION])
     assert applied == [] and fallback == ["triaged-details-wrapper"]
+
+
+def test_triaged_details_wrapper_defers_on_orphan_closing_tag():
+    """An orphan `</details>` must defer too — wrapping it would nest badly.
+
+    The dangerous asymmetry: guarding only on the OPENING tag lets a section
+    whose `<details>` was deleted but whose `</details>` survived take the wrap
+    path. The result closes the block early, leaves the trailing bullets
+    expanded, and then PASSES re-validation because a wrapper and a summary are
+    both present — silent corruption, where deferring to the model lane is the
+    documented posture.
+    """
+    orphan = TRIAGED_UNWRAPPED.replace(
+        "### 💡 Pre-existing", "</details>\n\n### 💡 Pre-existing")
+    new_body, applied, fallback = splicer.apply_splices(orphan, [TRIAGED_VIOLATION])
+    assert applied == [] and fallback == ["triaged-details-wrapper"], (applied, fallback)
+    assert new_body == orphan, "must not rewrite a section it deferred on"
+
+
+TESTS = [
+    test_internal_link_existence_unwraps_markdown_link,
+    test_shortcode_existence_deletes_line,
+    test_mandatory_h3_order_inserts_missing_section,
+    test_mandatory_h3_order_inserts_triaged_with_details_wrapper,
+    test_mandatory_h3_order_defers_when_already_present,
+    test_trail_per_verdict_emoji_replaces_legacy_glyph,
+    test_trail_canonical_verdict_word_replaces_freelanced_token,
+    test_verified_claims_trail_faithful_restores_artifact_verdict,
+    test_verified_claims_trail_faithful_file_filter_skips_cross_file_overlap,
+    test_verified_claims_trail_faithful_strict_pairing_defers_on_anchor_mismatch,
+    test_verified_claims_trail_faithful_idempotent_across_duplicate_violations,
+    test_verified_claims_trail_faithful_matches_by_range_overlap,
+    test_pass3_unverifiable_evidence_inserts_pointer,
+    test_pass3_unverifiable_evidence_idempotent,
+    test_trail_canonical_verdict_word_idempotent,
+    test_external_claim_state_format_defers_to_fallback,
+    test_external_claim_dispatch_metadata_appends_segment,
+    test_external_claim_routed_metadata_appends_segment,
+    test_external_claim_pass2_outcome_drops_zero_parenthetical,
+    test_external_claim_pass2_outcome_defers_when_f_positive,
+    test_bucket_bullet_line_range_prefix_prepends_anchor,
+    test_empty_violations_no_op,
+    test_non_surgical_only_passes_through,
+    test_mixed_surgical_and_nonsurgical_applies_surgical,
+    test_apply_order_processes_trail_faithful_before_per_verdict_emoji,
+    test_triaged_details_wrapper_rewraps_without_touching_bullets,
+    test_triaged_details_wrapper_is_idempotent,
+    test_triaged_details_wrapper_defers_on_partial_wrapper,
+    test_triaged_details_wrapper_defers_on_orphan_closing_tag,
+]
+
+
+def main() -> int:
+    failures: list[tuple[str, str]] = []
+    for t in TESTS:
+        name = t.__name__
+        try:
+            t()
+            print(f"  ok  {name}")
+        except AssertionError as e:
+            failures.append((name, str(e) or "assertion failed"))
+            print(f"  FAIL {name}: {e}")
+        except Exception:
+            failures.append((name, traceback.format_exc()))
+            print(f"  ERROR {name}:\n{traceback.format_exc()}")
+    print()
+    if failures:
+        print(f"{len(failures)}/{len(TESTS)} tests failed")
+        return 1
+    print(f"{len(TESTS)}/{len(TESTS)} tests passed")
+    return 0
+
+if __name__ == "__main__":
+    sys.exit(main())
