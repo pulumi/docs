@@ -19,6 +19,14 @@ aliases:
 
 ## 2026
 
+### August
+
+* Tightened encryption checks for Pulumi ESC environments: ciphertext that was copied from another environment is now blocked when the environment is opened
+
+{{< notes type="info" >}}
+If an environment fails to open because of this check, set the `PULUMI_DISABLE_CRYPTO_ACCESS_ENFORCEMENT=true` environment variable, create a new revision of the affected environment from its plaintext values, and then remove the environment variable again.
+{{< /notes >}}
+
 ### April
 
 * Added SSRF (server-side request forgery) protection to Pulumi ESC providers to prevent requests to private, loopback, and link-local IP addresses
