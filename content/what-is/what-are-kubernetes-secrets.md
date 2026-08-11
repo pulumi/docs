@@ -1,7 +1,7 @@
 ---
-title: What are Kubernetes Secrets?
+title: What are Kubernetes Secrets? Guide & Best Practices
 meta_desc: |
-     Learn about Kubernetes Secrets and how to manage sensitive information securely in your Kubernetes clusters.
+    Kubernetes Secrets store sensitive data apart from pod specs so it isn't hard-coded into manifests. Learn to create, read, update, and delete Secrets safely.
 
 type: what-is
 page_title: "What are Kubernetes Secrets?"
