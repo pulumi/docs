@@ -36,6 +36,15 @@ name: "Scheduled jobs: Blog review index"
 # the default documented above. That bug kept this lane from ever running on
 # schedule; every S3 object under blog-review/ came from a manual dispatch,
 # which short-circuits the gate on its first clause.
+#
+# CURRENTLY PARKED. `BLOG_REVIEW_COUNT` is set to '0' in pulumi/docs as of
+# 2026-08-11, so this lane stays off even though the gate above now works. That
+# is a deliberate decision, not leftover state: fixing the gate would otherwise
+# have started ~5 Opus post-reviews/day on a lane that had never run, and the
+# downstream consumer (the noindex decision process this index feeds) does not
+# exist yet. Nothing here is blocked — set the variable to a positive count, or
+# delete it, to start the sweep. The sibling claims-reverify lane, which shared
+# the same gate bug, WAS turned on at the same time.
 
 on:
   schedule:

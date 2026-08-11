@@ -26,6 +26,15 @@ name: "Scheduled jobs: Re-verify volatile claims"
 # schedule — and because the health signal below only reports from a run that
 # actually happened, a never-started lane never tripped it either.
 #
+# TURNED ON 2026-08-11 with `CLAIMS_REVERIFY_COUNT` set explicitly to '25' in
+# pulumi/docs, so the first live run is a recorded decision rather than an
+# implicit default. At the time there were 63 volatile entities across 86
+# claim snapshots — a full sweep every 3 nights. Because the lane had never
+# executed, watch the first few reports for false-positive churn: most entities
+# are typed `numerical`, and some keys read like prose fragments rather than
+# version pins or limits, which would point at the volatile classifier rather
+# than at genuinely rotted facts.
+#
 # DEGRADATION HEALTH: this lane only Slacks when it finds STALE entities, so a
 # dead lane (claims index gone, API key missing, every check inconclusive)
 # would otherwise look identical to a healthy quiet one. The health steps at
