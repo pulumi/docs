@@ -4,13 +4,13 @@ This document defines the canonical vocabulary for the kinds of content publishe
 
 ## Why this document exists
 
-The word **"guides"** currently means three different things:
+The word **"guides"** currently refers to five different things:
 
 1. Docs uses **"Guides"** as a second-level nav heading inside several product sections (`content/docs/esc/guides/`, `content/docs/deployments/guides/`, `content/docs/idp/guides/` all carry `title: Guides`; `content/docs/iac/guides/` holds the same kind of content but has no landing page of its own).
 2. Marketing publishes **pulumi.com/guides** — "End-to-end blueprints for real cloud patterns" plus a library of Neo prompts. That page is **not** served from this repository.
-3. Historic docs URLs like `/docs/guides/...` still circulate and are handled by redirects (`scripts/redirects/`).
-
-Meanwhile **pulumi.com/tutorials** *is* served from this repo (`content/tutorials/`), which is easy to confuse with the `/guides` hub next door even though the two are produced by different teams through different pipelines.
+3. Marketing also publishes **pulumi.com/tutorials**, which are occasionally referred to as guides.
+4. The Registry currently republishes Pulumi examples and labels them "how-to guides".
+5. Historic docs URLs like `/docs/guides/...` still circulate and are handled by redirects (`scripts/redirects/`).
 
 This document disambiguates those terms, assigns an owner to every content type, and records the naming conflicts we still need to resolve. It complements, and does not replace:
 
@@ -21,11 +21,11 @@ This document disambiguates those terms, assigns an owner to every content type,
 
 ## Ownership vocabulary
 
-Four teams appear on the ownership axis:
+Teams:
 
 - **Docs** — the documentation team (`@pulumi/docs` in the intended CODEOWNERS mapping).
-- **DevRel** — developer relations and advocacy.
-- **Marketing** — growth, demand-gen, and web marketing.
+- **Community Eng** — developer relations and advocacy.
+- **Marketing** — technical content marketing, product marketing, and growth.
 - **Eng/Product** — product engineering and product management.
 
 "Owns" means: sets the standards for the type, approves changes, and is accountable for accuracy and upkeep. "Contributes" means: routinely authors or supplies material, subject to the owner's review. "Consumes" describes the primary audience the type is written for.
@@ -42,7 +42,7 @@ Four teams appear on the ownership axis:
 - **Contributes:** Eng/Product (feature knowledge), DevRel
 - **Consumes:** Practitioners building an understanding of how Pulumi works
 
-### How-to guides
+### Guides
 
 **Definition:** Task-oriented documentation for a reader who already knows what they want to accomplish — a sequence of steps to a specific, practical goal, inside the product docs. Assumes working knowledge; doesn't teach fundamentals.
 
@@ -50,17 +50,15 @@ Four teams appear on the ownership axis:
 - **Examples:** [Migrating from Terraform](https://www.pulumi.com/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), ESC + GitHub Actions integration guides
 - **Owns:** Docs
 - **Contributes:** Eng/Product, DevRel, community
-- **Consumes:** Practitioners with a specific job to do
+- **Consumes:** Practitioners new to Pulumi or seeking help with (or a better understanding of) a particular product or feature
 
-> **This is the type nav-labeled "Guides" in the docs.** That label stays for now, but it collides with the marketing hub at pulumi.com/guides — see [Open questions](#open-questions-and-naming-conflicts).
+### Tutorials
 
-### Tutorials (hands-on learning)
+**Definition:** Task-oriented, sequenced, hands-on lessons. The reader follows along end to end and comes out having *built something* and *learned Pulumi*. Tutorials sometimes have time estimates and are occasionally grouped into collections and multi-part modules. 
 
-**Definition:** Learning-oriented, sequenced, hands-on lessons. The reader follows along end to end and comes out having *built something* and *learned Pulumi*, not just completed a task. Tutorials carry time estimates and are grouped into collections and multi-part modules.
-
-- **Lives at:** `content/tutorials/` → [pulumi.com/tutorials](https://www.pulumi.com/tutorials/) (also aliased at `/learn`)
-- **Examples:** Pulumi Fundamentals (3-part module), "Importing AWS Infrastructure"
-- **Owns:** Marketing/DevRel (current state — though the commented-out CODEOWNERS maps `content/tutorials/` to `@pulumi/docs`; see [Open questions](#open-questions-and-naming-conflicts) on whether tutorials should roll into Docs)
+- **Lives at:** `content/tutorials/` → [pulumi.com/tutorials](https://www.pulumi.com/tutorials/) (also aliased at `/learn`) and `content/docs/*/get-started`
+- **Examples:** IaC Get Started, Deployments Get Started, ESC Get Started, Pulumi Fundamentals (3-part module), "Importing AWS Infrastructure"
+- **Owns:** Marketing
 - **Contributes:** Docs, Eng/Product
 - **Consumes:** Newcomers and learners
 
@@ -87,21 +85,21 @@ Four teams appear on the ownership axis:
 
 > This type shares the name "Guides" with the docs how-to sections above. Both keep the name for now — see [Open questions](#open-questions-and-naming-conflicts).
 
-### Explainers ("What is X")
+### Topics 
 
-**Definition:** Standalone educational pages answering a definitional search query ("What is GitOps?"). Written for search and AI-answer-engine discovery; product-light, concept-heavy.
+**Definition:** Educational pages or topic clusters answering a definitional search query ("What is GitOps?"). Product-light, concept-heavy.
 
 - **Lives at:** `content/what-is/` (section title: "Cloud Engineering Concepts Explained")
-- **Owns:** Marketing and Docs, jointly (Marketing drives topic selection for search demand; Docs owns technical accuracy)
-- **Contributes:** DevRel
-- **Consumes:** Search and AI-engine traffic; evaluators early in research
+- **Owns:** Marketing
+- **Contributes:** Docs, DevRel
+- **Consumes:** Evaluators early in research
 
 ### Blog posts
 
 **Definition:** Point-in-time announcements, engineering stories, and opinion. Blog posts are **historical records**: per `AGENTS.md`, they are not kept current — broken links get routed around, and revisions are the exception (stamped with `updated:`).
 
 - **Lives at:** `content/blog/`
-- **Owns:** The author (accuracy at time of publishing); Marketing owns amplification and the blog homepage curation (`#blogs`, `data/blog_home.yaml`)
+- **Owns:** Marketing. Individual blog authors own the accuracy of their content at time of publishing. Marketing owns the rest, including design, editorial, and amplification.
 - **Contributes:** Everyone — Eng/Product, DevRel, Docs, Marketing, guest authors
 - **Consumes:** Community, customers, news readers
 
@@ -131,40 +129,49 @@ Four teams appear on the ownership axis:
 - **Owns:** Marketing and DevRel, jointly (Marketing owns promotion and pages; DevRel owns technical content delivered)
 - **Consumes:** Community members and prospects
 
-### Releases and changelog
+### Releases and Changelog
 
 **Definition:** Dated records of what shipped — one changelog entry per change, plus launch pages.
 
 - **Lives at:** `content/releases/`, `content/releases/changelog/`
-- **Owns:** Eng/Product
-- **Contributes:** Docs (editing), Marketing (launch coordination)
-- **Consumes:** Existing users tracking product evolution
+- **Owns:** Marketing
+- **Contributes:** Eng/Product, Docs, DevRel
+- **Consumes:** Existing and prospective users tracking product evolution
 
-### Templates and example programs
+### Templates 
 
-**Definition:** Runnable starting points — project templates and the tested example programs embedded throughout docs and tutorials.
+**Definition:** Starter kits for generating new Pulumi projects with `pulumi new`.
 
-- **Lives at:** `content/templates/`, `static/programs/` (tested via `scripts/programs/test.sh`)
-- **Owns:** Docs
+- **Lives at:** `content/templates/` (sourced from https://github.com/pulumi/templates); includes both starter 
+- **Owns:** Marketing
 - **Contributes:** Eng/Product, DevRel
-- **Consumes:** Practitioners bootstrapping projects; every docs/tutorial page that embeds an example
+- **Consumes:** Practitioners bootstrapping new projects
+
+### Example programs
+
+**Definition:** Testable programs designed for embedding into docs and tutorials.
+
+- **Lives at:** `static/programs/`, tested via `scripts/programs/test.sh`
+- **Owns:** Docs
+- **Contributes:** Eng/Product, Marketing, DevRel
+- **Consumes:** Practitioners engaging with the docs. Every docs page that embeds an example should ideally use one of these programs.
 
 ## Summary table
 
 | Type | One-line definition | Lives at | Owns | Contributes | Consumes |
 |---|---|---|---|---|---|
 | Conceptual docs | Explains how Pulumi works and why | `content/docs/*/concepts/` | Docs | Eng/Product, DevRel | Practitioners |
-| How-to guides | Steps to a specific practical goal | `content/docs/*/guides/` | Docs | Eng/Product, DevRel, community | Practitioners |
-| Tutorials | Sequenced hands-on learning | `content/tutorials/` | Marketing/DevRel | Docs, Eng/Product | Newcomers, learners |
+| Guides | Walkthroughs designed for understanding and using Pulumi | `content/docs/*/guides/` | Docs | Eng/Product, DevRel, community | Practitioners |
+| Tutorials | Sequenced hands-on learning | `content/tutorials/` | Marketing | Docs, Eng/Product | Newcomers, learners |
 | Reference | Exhaustive lookup material | `content/docs/reference/`, generated CLI docs | Docs + Eng/Product | Eng/Product | Practitioners |
-| Marketing guides | End-to-end sellable patterns | pulumi.com/guides (external to repo) | Marketing | DevRel, Eng/Product | Evaluators, buyers |
-| Explainers | Definitional SEO/AEO pages | `content/what-is/` | Marketing + Docs | DevRel | Search traffic, evaluators |
-| Blog posts | Point-in-time posts; historical | `content/blog/` | Author (Marketing amplifies) | Everyone | Community |
+| Topics | Adjacent and industry-relevant content | `content/what-is/` | Marketing | Docs, DevRel | Learners, evaluators |
+| Blog posts | Point-in-time posts; historical | `content/blog/` | Marketing | Everyone | Community |
 | Case studies | Customer success stories | `content/case-studies/` | Marketing | Sales/CS, DevRel | Buyers |
 | Product/campaign pages | Pages that sell | `content/product/`, `solutions/`, `gads/`, … | Marketing | Eng/Product, Docs | Evaluators, buyers |
 | Events & workshops | Registration/recap pages | `content/events/` | Marketing + DevRel | — | Community, prospects |
-| Releases & changelog | Dated record of what shipped | `content/releases/` | Eng/Product | Docs, Marketing | Existing users |
-| Templates & programs | Runnable starting points | `content/templates/`, `static/programs/` | Docs | Eng/Product, DevRel | Practitioners |
+| Releases & changelog | Dated record of what shipped | `content/releases/` | Marketing | Eng/Product, Docs | Existing and prospective users |
+| Templates | Runnable starting points | `content/templates/` | Marketing | Eng/Product, DevRel | Practitioners |
+| Example programs | Tested, embeddable code | `static/programs/` | Docs | Eng/Product, DevRel | Practitioners |
 
 ## Open questions and naming conflicts
 
