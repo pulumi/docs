@@ -306,8 +306,7 @@ jobs:
             || echo "review ledger unavailable; selection proceeds on git staleness alone"
 
       # Deterministic selection: the model never chooses what to review.
-      # Writes has_articles= / halted= / count= to $GITHUB_OUTPUT for the
-      # gates below.
+      # Writes has_articles= / halted= to $GITHUB_OUTPUT for the gates below.
       - name: Select articles
         id: select
         env:

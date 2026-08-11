@@ -365,8 +365,34 @@ jobs:
           fi
           vale --no-exit --output=JSON $CHANGED > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
+          # Vale renders markdown to HTML before applying rules, so bracket
+          # constructions (`[here](url)`, `![](url)`) are gone before tokens
+          # match. markdown-syntax-findings.py scans the raw markdown and emits
+          # Vale-shaped JSON, merged in before filtering. This block mirrors
+          # claude-code-review.yml — without it a refresh dropped the two rules
+          # it contributes (Pulumi.EmptyAltText, Pulumi.LinkText) from a review
+          # the initial pass had raised them on.
+          #
+          # This affects the ADVISORY tier only. Neither rule is blocker-tier
+          # (see vale-deterministic-fixes.yaml), so the [style-blocker] set is
+          # byte-identical with and without this merge, and the provenance
+          # check downstream is unaffected. Note Pulumi.LinkText flags *vague*
+          # link text — there is no broken-link detector here.
+          python3 .claude/commands/docs-review/scripts/markdown-syntax-findings.py \
+            $CHANGED > .syntax-findings.json \
+            || echo '{}' > .syntax-findings.json
+          # Concatenate per-file alert arrays (jq's `*` shallow-merges and would
+          # *replace* Vale's array with the script's for any overlapping file).
+          jq -s 'reduce .[] as $o ({}; reduce ($o | keys_unsorted[]) as $k (.; .[$k] = ((.[$k] // []) + $o[$k])))' \
+            .vale-raw.json .syntax-findings.json > .vale-raw.merged.json \
+            && mv .vale-raw.merged.json .vale-raw.json \
+            || true
+          # No 2>/dev/null on the filter: it has no safe_main wrapper, so the
+          # redirect discarded the only trace of a crash. (Vale's own stderr
+          # above is still redirected — it is noisy and exits 0 regardless.)
+          # The `||` fallback still keeps the lane green.
           python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-            --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json \
             || echo '[]' > .vale-findings.json
 
       # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author

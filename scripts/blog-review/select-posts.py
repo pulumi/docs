@@ -62,28 +62,54 @@ Usage:
 
 `--paths` bypasses scoring entirely (workflow_dispatch testing). `--today`
 exists for tests. When `$GITHUB_OUTPUT` is set, the script appends
-`has_posts=`, `halted=`, and `count=` for workflow gating.
+`has_posts=` and `halted=` for workflow gating.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
-import io
 import json
 import math
-import os
-import re
-import subprocess
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
 import yaml
 
+# Infrastructure this selector shares with scripts/content-review/select-articles.py —
+# see _selector_common.py's docstring for why it is shared rather than copied. The
+# shared module lives in the docs selector's directory, so put that directory on
+# the path explicitly: the workflow runs this script as
+# `python3 scripts/blog-review/select-posts.py` from the repo root, which puts
+# only *this* directory on sys.path.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "content-review"))
+
+from _selector_common import (  # noqa: E402  (needs the sys.path insert above)
+    FRONTMATTER_RE,
+    INCOMPLETE_STATUS,
+    Lane,
+    cmd_prune,
+    effective_last_review,
+    finish,
+    git_history_signals,
+    load_ledger,
+    load_traffic,
+    normalize_url_path,
+    parse_day,
+)
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_LEDGER_DIR = REPO_ROOT / "scripts/blog-review/ledger"
 CONTENT_DIR = "content/blog"
+
+# How the shared helpers in _selector_common.py address this lane.
+LANE = Lane(
+    prog="select-posts",
+    items_key="posts",
+    corpus_noun="post",
+    item_noun="post",
+    has_output="has_posts",
+)
 
 # An `incomplete` review (worker exited before recording valid findings)
 # never advances the staleness clock, so the post stays due and is retried
@@ -103,21 +129,6 @@ MIN_AGE_DAYS = 90
 # it reorders comparably stale peers without overriding staleness.
 GSC_MIN_IMPRESSIONS = 200  # below this, CTR is noise -> neutral
 GSC_BOOST_MAX = 0.25  # gsc multiplier in [1.0, 1.25]
-
-# Statuses a ledger entry can carry (set by record-findings.py). Any status
-# other than "incomplete" is a completed review whose date advances the clock.
-INCOMPLETE_STATUS = "incomplete"
-
-# "Pulumi Bot" (display name) is how the SDK-regen tooling authors its
-# commits; "pulumi-bot" is how the review workflows configure git. Both are
-# the same bot and neither resets a post's staleness clock, and neither does
-# "workprentice[bot]", the docs automation app.
-BOT_AUTHORS = {
-    "pulumi-bot", "Pulumi Bot", "workprentice[bot]",
-    "dependabot[bot]", "github-actions[bot]",
-}
-
-FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
 
 # ---- Path helpers -----------------------------------------------------------
@@ -145,10 +156,7 @@ def url_for(content_path: str) -> str:
 
 def content_path_for_url(url_path: str, known_paths: set[str]) -> str | None:
     """Map a live /blog/... URL path back to its content bundle, if it exists."""
-    p = url_path.split("#", 1)[0].split("?", 1)[0].strip()
-    if p.startswith("https://"):
-        p = re.sub(r"^https://[^/]+", "", p)
-    p = "/" + p.strip("/")
+    p = normalize_url_path(url_path)
     candidate = f"content{p}/index.md"
     if candidate in known_paths:
         return candidate
@@ -156,56 +164,6 @@ def content_path_for_url(url_path: str, known_paths: set[str]) -> str | None:
 
 
 # ---- Input loading ----------------------------------------------------------
-
-
-def load_traffic(traffic_file: Path | None, known_paths: set[str]) -> tuple[dict[str, int], dict]:
-    """Parse the S3 traffic snapshot (JSON or CSV) into {content_path: visits}.
-
-    Returns ({}, meta) when the file is missing/unreadable — selection then
-    drops the traffic term entirely (graceful degradation).
-    """
-    meta = {"source": None, "period": None, "pages_matched": 0}
-    if traffic_file is None or not traffic_file.is_file():
-        return {}, meta
-    raw = traffic_file.read_text(errors="replace").strip()
-    if not raw:
-        return {}, meta
-
-    pages: dict[str, int] = {}
-
-    def record(url_path: str, views) -> None:
-        try:
-            views = int(float(views))
-        except (TypeError, ValueError):
-            return
-        cp = content_path_for_url(str(url_path), known_paths)
-        if cp:
-            # A URL and its aliases may both appear; credit the same post once
-            # with the larger figure rather than double-counting.
-            pages[cp] = max(pages.get(cp, 0), views)
-
-    try:
-        data = json.loads(raw)
-    except json.JSONDecodeError:
-        data = None
-
-    if isinstance(data, dict):
-        meta["source"] = data.get("source")
-        meta["period"] = data.get("period") or data.get("generated")
-        body = data.get("pages", data)
-        if isinstance(body, dict):
-            for url_path, views in body.items():
-                record(url_path, views)
-    elif data is None:
-        # CSV: `path,views` with an optional header row.
-        reader = csv.reader(io.StringIO(raw))
-        for row in reader:
-            if len(row) < 2:
-                continue
-            record(row[0], row[1])
-
-    meta["pages_matched"] = len(pages)
-    return pages, meta
 
 
 def load_reader_signals(
@@ -282,34 +240,6 @@ def load_reader_signals(
     return gsc, meta
 
 
-def load_ledger(ledger_dir: Path) -> dict[str, dict]:
-    """Return {content_path: ledger entry} from one-file-per-post JSON."""
-    entries: dict[str, dict] = {}
-    if not ledger_dir.is_dir():
-        # Not fatal — the workflow only passes --ledger-dir when the S3 sync
-        # produced one — but never silent: with no ledger every post scores as
-        # never-reviewed, which is a very different queue. DEFAULT_LEDGER_DIR is
-        # the in-repo path this script has never actually had, so a run that
-        # falls back to it is one that meant to read the S3 cache and didn't.
-        print(
-            f"select-posts: no ledger directory at {ledger_dir}; scoring every "
-            "post as never-reviewed",
-            file=sys.stderr,
-        )
-        return entries
-    for f in sorted(ledger_dir.glob("*.json")):
-        try:
-            entry = json.loads(f.read_text())
-        except (OSError, json.JSONDecodeError):
-            print(f"select-posts: unreadable ledger file {f}", file=sys.stderr)
-            continue
-        path = entry.get("path")
-        if path:
-            entry["_file"] = str(f)
-            entries[path] = entry
-    return entries
-
-
 # ---- Frontmatter ------------------------------------------------------------
 
 
@@ -341,97 +271,7 @@ def publish_date(fm: dict) -> date | None:
     return parse_day(str(d)) if d else None
 
 
-# ---- Git signals (single-pass, no per-file subprocess fan-out) ---------------
-
-
-def git_history_signals(repo: Path) -> tuple[dict[str, int], dict[str, int]]:
-    """Per-path git timestamps for content/blog, from one history pass.
-
-    Walks history newest-first and returns two maps of unix commit times:
-
-      newest_non_bot : the most recent commit by a *non-bot* author that
-                       touched the path (a human edit — resets the staleness
-                       clock). Absent for posts only ever touched by bots.
-      created        : the oldest commit that touched the path, the fallback
-                       clock when a post's frontmatter carries no usable date.
-    """
-    out = run_git(repo, ["log", "--name-only", "--format=%x01%ct%x01%an", "--", CONTENT_DIR])
-    newest_non_bot: dict[str, int] = {}
-    created: dict[str, int] = {}
-    current_ct = 0
-    author_is_bot = True
-    for line in out.splitlines():
-        if line.startswith("\x01"):
-            # Header line is "\x01<commit-time>\x01<author-name>".
-            parts = line.split("\x01")
-            ct = parts[1] if len(parts) > 1 else ""
-            an = parts[2] if len(parts) > 2 else ""
-            try:
-                current_ct = int(ct.strip())
-            except ValueError:
-                current_ct = 0
-            author_is_bot = an.strip() in BOT_AUTHORS
-        elif line.strip():
-            path = line.strip()
-            created[path] = current_ct  # last write wins -> oldest commit
-            if not author_is_bot and path not in newest_non_bot:
-                newest_non_bot[path] = current_ct
-    return newest_non_bot, created
-
-
-def run_git(repo: Path, args: list[str]) -> str:
-    proc = subprocess.run(
-        ["git", "-C", str(repo), *args], capture_output=True, text=True, check=False
-    )
-    return proc.stdout
-
-
 # ---- Scoring -----------------------------------------------------------------
-
-
-def parse_day(s: str | None) -> date | None:
-    if not s:
-        return None
-    try:
-        return datetime.fromisoformat(str(s).replace("Z", "+00:00")).date()
-    except ValueError:
-        try:
-            return datetime.strptime(str(s), "%Y-%m-%d").date()
-        except ValueError:
-            return None
-
-
-def _ts_to_day(ts: int | None) -> date | None:
-    if not ts:
-        return None
-    return datetime.fromtimestamp(ts, tz=timezone.utc).date()
-
-
-def effective_last_review(
-    path: str,
-    entry: dict | None,
-    newest_non_bot: dict[str, int],
-    published: date | None,
-    created: dict[str, int],
-) -> date | None:
-    """The date the staleness clock is measured from.
-
-    max(completed bot review, newest human edit); an `incomplete` review does
-    not count, so the post stays due. Never-reviewed posts fall back to their
-    publish date (frontmatter `date`), then to the git creation date. None
-    only when the post has no usable date at all.
-    """
-    cands: list[date] = []
-    if entry:
-        reviewed = parse_day(entry.get("reviewed_at"))
-        if reviewed and entry.get("status") != INCOMPLETE_STATUS:
-            cands.append(reviewed)
-    human = _ts_to_day(newest_non_bot.get(path))
-    if human:
-        cands.append(human)
-    if cands:
-        return max(cands)
-    return published or _ts_to_day(created.get(path))
 
 
 def gsc_multiplier(
@@ -491,7 +331,7 @@ def score_post(
 
 
 def cmd_stats(ledger_dir: Path) -> int:
-    entries = load_ledger(ledger_dir)
+    entries = load_ledger(ledger_dir, LANE)
     counts = {"reviewed": 0, "clean": 0, "skipped": 0,
               "incomplete": 0, "capped": 0, "other": 0}
     with_issues = 0
@@ -513,31 +353,7 @@ def cmd_stats(ledger_dir: Path) -> int:
     return 0
 
 
-def cmd_prune(ledger_dir: Path, repo: Path, dry_run: bool) -> int:
-    pruned = []
-    for path, entry in load_ledger(ledger_dir).items():
-        if not (repo / path).is_file():
-            pruned.append(entry["_file"])
-            if not dry_run:
-                Path(entry["_file"]).unlink()
-    verb = "would prune" if dry_run else "pruned"
-    print(f"select-posts: {verb} {len(pruned)} orphaned ledger file(s)")
-    for f in pruned:
-        print(f"  {f}")
-    return 0
-
-
 # ---- Main ----------------------------------------------------------------------
-
-
-def write_github_output(queue: dict) -> None:
-    gh_out = os.environ.get("GITHUB_OUTPUT")
-    if not gh_out:
-        return
-    with open(gh_out, "a") as fh:
-        fh.write(f"has_posts={'true' if queue['posts'] else 'false'}\n")
-        fh.write(f"halted={queue.get('halted') or ''}\n")
-        fh.write(f"count={len(queue['posts'])}\n")
 
 
 def main() -> int:
@@ -562,12 +378,12 @@ def main() -> int:
     if args.stats:
         return cmd_stats(ledger_dir)
     if args.prune:
-        return cmd_prune(ledger_dir, repo, args.dry_run)
+        return cmd_prune(ledger_dir, repo, args.dry_run, LANE)
     if not args.out and not args.dry_run:
         p.error("--out is required (or use --dry-run/--stats/--prune)")
 
     today = parse_day(args.today) or datetime.now(timezone.utc).date()
-    ledger = load_ledger(ledger_dir)
+    ledger = load_ledger(ledger_dir, LANE)
 
     all_paths = sorted(
         str(f.relative_to(repo)) for f in (repo / CONTENT_DIR).glob("*/index.md")
@@ -576,7 +392,7 @@ def main() -> int:
     frontmatter = {path: read_frontmatter(repo / path) for path in all_paths}
 
     traffic, traffic_meta = load_traffic(
-        Path(args.traffic_file) if args.traffic_file else None, known
+        Path(args.traffic_file) if args.traffic_file else None, known, content_path_for_url
     )
     have_traffic = bool(traffic)
     visits_known = sorted(traffic.values())
@@ -642,9 +458,9 @@ def main() -> int:
                 print(f"select-posts: --paths entry not found: {path}", file=sys.stderr)
                 return 1
             queue["posts"].append(post(path, lane, None))
-        return finish(queue, args)
+        return finish(queue, args, LANE)
 
-    newest_non_bot, created = git_history_signals(repo)
+    newest_non_bot, created = git_history_signals(repo, CONTENT_DIR)
 
     candidates: list[str] = []
     capped: list[str] = []
@@ -678,8 +494,8 @@ def main() -> int:
                 max_visits,
                 median_visits,
                 effective_last_review(
-                    path, ledger.get(path), newest_non_bot,
-                    publish_date(frontmatter.get(path, {})), created,
+                    path, ledger.get(path), newest_non_bot, created,
+                    fallback=publish_date(frontmatter.get(path, {})),
                 ),
                 today,
                 have_traffic,
@@ -696,26 +512,7 @@ def main() -> int:
     for score, path in scored[: max(args.count, 0)]:
         queue["posts"].append(post(path, "priority", score))
 
-    return finish(queue, args)
-
-
-def finish(queue: dict, args) -> int:
-    queue["count"] = len(queue["posts"])
-    body = json.dumps(queue, indent=2)
-    if args.dry_run or not args.out:
-        print(body)
-    else:
-        out = Path(args.out)
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(body + "\n")
-        print(
-            f"select-posts: {queue['count']} post(s)"
-            + (f" (halted: {queue['halted']})" if queue["halted"] else "")
-            + f" → {out}",
-            file=sys.stderr,
-        )
-    write_github_output(queue)
-    return 0
+    return finish(queue, args, LANE)
 
 
 if __name__ == "__main__":
