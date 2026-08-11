@@ -1,7 +1,7 @@
 ---
-title: What is a Cloudflare Secret?
+title: What is a Cloudflare Secret? Setup & Best Practices
 meta_desc: |
-    Learn more about Cloudflare secrets and how to use them.
+    A Cloudflare secret is an encrypted variable Workers read at runtime, never exposed in code. Learn to create secrets with Wrangler and access them.
 
 type: what-is
 page_title: "What is a Cloudflare Secret?"
