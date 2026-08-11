@@ -21,7 +21,6 @@ Today we're introducing the Notification Center: a single inbox in the Pulumi Cl
 
 ![Notification center page](/blog/notification-center/notification-center.png)
 
-
 ## What you'll hear about
 
 We've started with the moments where being a few minutes late actually costs you something: a Neo task that's paused waiting on your approval, a Neo task that's finished, an ESC change request waiting on your sign-off, and billing conditions like a locked organization or a trial that's about to end. Approval-shaped notifications go to the people who can approve; billing alerts go to org admins. Nobody gets paged for someone else's work.
