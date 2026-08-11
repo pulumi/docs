@@ -21,7 +21,7 @@ aliases:
 - /docs/iac/concepts/vs/opentofu/
 ---
 
-Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/) itself; OpenTofu is a Linux Foundation fork of Terraform 1.6 that uses the HashiCorp Configuration Language (HCL).
+Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/) itself; OpenTofu is a Linux Foundation fork of Terraform that uses the HashiCorp Configuration Language (HCL).
 
 The two are unusually interoperable. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) runs valid OpenTofu configurations, with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility), and resolves providers against the OpenTofu registry by default. Pulumi Cloud can operate as a managed [OpenTofu backend](/docs/iac/get-started/terraform/terraform-state-backend/) and [remote runner](/docs/iac/get-started/terraform/terraform-remote-execution/) for the `tofu` CLI. Pulumi programs can execute your existing OpenTofu modules. Adopting Pulumi does not require leaving HCL, your modules, or the OpenTofu ecosystem behind.
 

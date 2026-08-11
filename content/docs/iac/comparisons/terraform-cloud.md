@@ -67,7 +67,7 @@ Workspace organization has a similar shape. Because HCP Terraform organizes infr
 
 Pulumi lets you define infrastructure in the same general-purpose languages your engineering organization already uses: {{< pulumi-languages "general-purpose" >}}, plus YAML for teams that prefer a markup format and [HCL](/docs/iac/languages-sdks/hcl/) for teams that want to keep the syntax they already know. Choosing a general-purpose language means real loops, conditionals, classes, and functions instead of a DSL's limited expressiveness; the testing frameworks, linters, and IDE tooling (autocomplete, type checking, go-to-definition) your teams already rely on for application code; and dependency management through the same package managers — npm, PyPI, NuGet, Maven, Go modules — your teams use everywhere else. Infrastructure code becomes software, reviewed, tested, and refactored the same way, rather than a separate discipline bolted onto the side of engineering.
 
-That same language flexibility carries through to cloud coverage. Pulumi supports [150+ providers](/registry/) spanning AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms, including schema-generated native providers for [Kubernetes](/registry/packages/kubernetes/), [Azure Native](/registry/packages/azure-native/), [AWS Cloud Control](/registry/packages/aws-native/), and [Google Cloud Native](/registry/packages/google-native/) that ship support for new cloud APIs without waiting on a hand-authored release. For an organization running true multi-cloud, that means one platform, one state model, and one policy framework across every provider, rather than stitching together separate workspaces and separate governance for each cloud.
+That same language flexibility carries through to cloud coverage. Pulumi supports [200+ providers](/registry/) spanning AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms, including schema-generated native providers for [Kubernetes](/registry/packages/kubernetes/), [Azure Native](/registry/packages/azure-native/), [AWS Cloud Control](/registry/packages/aws-native/), and [Google Cloud Native](/registry/packages/google-native/) that ship support for new cloud APIs without waiting on a hand-authored release. For an organization running true multi-cloud, that means one platform, one state model, and one policy framework across every provider, rather than stitching together separate workspaces and separate governance for each cloud.
 
 ## One unified platform, not a pile of point tools
 
@@ -96,7 +96,7 @@ Mercedes-Benz Research & Development adopted Pulumi specifically to unify applic
 | Secrets and configuration | [Pulumi ESC](/docs/esc/) centralizes secrets and config across infrastructure and applications | Workspace variables plus a separate HashiCorp Vault integration for centralized secrets |
 | Estate visibility | [Pulumi Insights](/docs/insights/) inventories every resource across every provider, however it was provisioned, including resources in Terraform-backed stacks | No equivalent; visibility is scoped to what's tracked in HCP Terraform workspaces |
 | AI and agent readiness | [Pulumi Neo](/docs/ai/) and general-purpose AI coding agents operate directly on real, familiar code | Agents must generate and reason about HCL, a narrower and less common training target |
-| Multi-cloud coverage | 150+ providers, one state model, one policy framework across every cloud | Large, mature provider ecosystem; state and policy are scoped per workspace, so multi-cloud governance is assembled by the platform team |
+| Multi-cloud coverage | 200+ providers, one state model, one policy framework across every cloud | Large, mature provider ecosystem; state and policy are scoped per workspace, so multi-cloud governance is assembled by the platform team |
 | Migration path | Point Terraform at Pulumi Cloud as its backend and change no code, or bring existing HCL and already-provisioned resources under Pulumi management incrementally with `pulumi convert` and `pulumi import` | N/A |
 | Ecosystem maturity | Fast-growing registry, with any existing Terraform provider or module usable from Pulumi | The largest and most mature IaC provider and module ecosystem in the industry today |
 
@@ -142,7 +142,7 @@ Three options, usable independently or together: convert HCL to a Pulumi program
 
 ### Can Pulumi manage multiple clouds in a single project?
 
-Yes. Pulumi supports [150+ providers](/registry/) across AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms from the same program, in the same state, under the same policy framework, which is what large organizations with genuinely multi-cloud estates use it for today.
+Yes. Pulumi supports [200+ providers](/registry/) across AWS, Azure, Google Cloud, Kubernetes, and hundreds of SaaS platforms from the same program, in the same state, under the same policy framework, which is what large organizations with genuinely multi-cloud estates use it for today.
 
 ### Does Pulumi work with AI coding agents?
 
