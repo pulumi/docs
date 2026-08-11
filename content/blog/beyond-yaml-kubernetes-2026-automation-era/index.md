@@ -96,7 +96,7 @@ Teams across disciplines face similar challenges:
 - Lack of policy enforcement and governance at scale
 - Secrets scattered across systems
 
-Pulumi addresses these challenges by introducing **general-purpose programming languages** such as TypeScript, Python, Go, C#, and Java into Kubernetes management. This approach enables teams to define, test, and share reusable infrastructure code, bridging the gap between declarative manifests and modern software engineering practices.
+Pulumi addresses these challenges by introducing **general-purpose programming languages** such as TypeScript, JavaScript, Python, Go, .NET, and Java into Kubernetes management. This approach enables teams to define, test, and share reusable infrastructure code, bridging the gap between declarative manifests and modern software engineering practices.
 
 {{< youtube "Q8WKLq-v_6k?rel=0" >}}
 

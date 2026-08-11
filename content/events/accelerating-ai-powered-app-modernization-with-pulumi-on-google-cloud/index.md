@@ -44,7 +44,7 @@ location: virtual
 description: |
     As enterprises race to modernize their applications for the AI era, the complexity of managing cloud infrastructure has become a critical bottleneck. This hands-on workshop demonstrates how Google Cloud customers can accelerate their app modernization journey by leveraging Pulumi's developer-first Infrastructure as Code approach alongside Google Cloud's cutting-edge AI services.
 
-    Unlike traditional infrastructure tools like Terraform, which were built for operators, creating friction between development and DevOps teams. Pulumi revolutionizes this paradigm by empowering developers to manage Google Cloud resources using familiar programming languages, such as Python, TypeScript, Go, C#, and Java.
+    Unlike traditional infrastructure tools like Terraform, which were built for operators, creating friction between development and DevOps teams. Pulumi revolutionizes this paradigm by empowering developers to manage Google Cloud resources using familiar programming languages, such as Python, TypeScript, Go, .NET, and Java.
     Build, deploy, and iterate with the languages you already know, no ticket queues required.
 learn:
     - Deploy AI/ML workloads on Google Cloud using Pulumi's intuitive programming model

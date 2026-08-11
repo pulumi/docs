@@ -1023,7 +1023,7 @@ For the full schema, see the [YAML component reference](/docs/iac/languages-sdks
 
 ### Defining a component resource
 
-Once your arguments are defined, write the component itself. The pattern differs by language: TypeScript, Python, C#, and Java use a class with a constructor; Go uses a struct paired with a factory function (Go has no constructors); YAML uses a declarative definition (no class) under the [`components` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/).
+Once your arguments are defined, write the component itself. The pattern differs by language: TypeScript, Python, .NET, and Java use a class with a constructor; Go uses a struct paired with a factory function (Go has no constructors); YAML uses a declarative definition (no class) under the [`components` key](/docs/iac/languages-sdks/yaml/yaml-component-reference/).
 
 In all cases, the component must register a unique type name with the engine. The type name takes the form `<package-name>:index:<component-class-name>` — the `index` portion is required. Type names are namespaced alongside non-component resources such as `aws:lambda:Function`.
 

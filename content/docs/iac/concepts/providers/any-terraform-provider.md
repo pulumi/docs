@@ -14,7 +14,7 @@ Pulumi enables you to use any [Terraform](https://registry.terraform.io) or [Ope
 
 ## Overview
 
-The Any Terraform Provider feature allows you to generate a Pulumi SDK locally for any Terraform or OpenTofu provider. When you run `pulumi package add terraform-provider <provider-name>`, Pulumi generates a fully-typed [local SDK](/docs/iac/guides/building-extending/packages/local-sdks/) in your programming language (TypeScript, Python, Go, C#, Java, or YAML) that works just like any other Pulumi provider. You get the same developer experience: strong typing, IDE autocompletion, inline documentation, and the full power of general-purpose programming languages.
+The Any Terraform Provider feature allows you to generate a Pulumi SDK locally for any Terraform or OpenTofu provider. When you run `pulumi package add terraform-provider <provider-name>`, Pulumi generates a fully-typed [local SDK](/docs/iac/guides/building-extending/packages/local-sdks/) in your programming language (TypeScript, Python, Go, .NET, Java, or YAML) that works just like any other Pulumi provider. You get the same developer experience: strong typing, IDE autocompletion, inline documentation, and the full power of general-purpose programming languages.
 
 Common scenarios for generating local SDKs include:
 
@@ -393,7 +393,7 @@ pulumi config set <provider>:clientId <value>
 
 This same camelCase requirement applies wherever provider configuration is set, including [`pulumi config set`](/docs/iac/cli/commands/pulumi_config_set/), [ESC](/docs/esc/), and the Automation API's `setConfig`.
 
-Keep in mind that this is a different surface than the properties you pass to a resource constructor in your program. Those follow your program language's own idiom, just like with any other Pulumi provider: camelCase in TypeScript, Go, C#, and Java, and snake_case in Python. For instance, a Python program still calls a resource constructor with `client_id=...`, while the underlying provider configuration key set via `pulumi config set` remains `clientId`.
+Keep in mind that this is a different surface than the properties you pass to a resource constructor in your program. Those follow your program language's own idiom, just like with any other Pulumi provider: camelCase in TypeScript, Go, .NET, and Java, and snake_case in Python. For instance, a Python program still calls a resource constructor with `client_id=...`, while the underlying provider configuration key set via `pulumi config set` remains `clientId`.
 
 ### Discovering names with `pulumi package get-schema`
 
