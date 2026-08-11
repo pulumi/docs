@@ -1,6 +1,6 @@
 ---
 user-invocable: false
-description: Review criteria for technical documentation under content/docs, content/learn, content/tutorials, content/what-is.
+description: Review criteria for technical documentation under content/docs, content/tutorials, content/what-is.
 ---
 
 # Review — Docs

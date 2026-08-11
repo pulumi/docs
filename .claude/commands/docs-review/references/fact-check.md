@@ -127,8 +127,8 @@ The model still calibrates phrasing and may demote to ⚠️ when context overri
 
 Templated sections include (non-exhaustive):
 
-- `content/docs/pulumi-cloud/admin/sso/saml/` (SAML setup guides)
-- `content/docs/pulumi-cloud/admin/scim/` (SCIM provisioning guides)
+- `content/docs/administration/access-identity/saml/` (SAML setup guides)
+- `content/docs/administration/access-identity/scim/` (SCIM provisioning guides)
 - `content/docs/iac/languages-sdks/` (language reference pages)
 - Provider integration directories under `content/docs/iac/` and `content/docs/esc/integrations/`
 
@@ -148,7 +148,7 @@ Verify each by reading the sibling pages and recording whether the same step / h
 ```json
 {
   "id": "c12",
-  "file": "content/docs/pulumi-cloud/admin/sso/saml/<vendor>.md",
+  "file": "content/docs/administration/access-identity/saml/<vendor>.md",
   "line": 42,
   "claim_text": "Settings → Access Management",
   "claim_type": "cross-reference",
@@ -157,7 +157,7 @@ Verify each by reading the sibling pages and recording whether the same step / h
 }
 ```
 
-**Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 5 per batch (matches §Routed verification's Pass 1 lane batch cap). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
+**Sibling-read dispatch.** Fresh-review path only -- same constraint as §Subagent extraction dispatch. For each detected sibling set, fan out N parallel digest subagents via the Agent tool (`general-purpose`, Haiku 4.5), capped at 4 per batch (matches §Routed verification's Pass 1 lane batch cap). Each subagent prompt is *only* the file path plus the JSON digest schema `{nav_steps, h2_headings, required_field_labels, placeholder_conventions}` -- "quote each item verbatim with line number; do not analyze, compare, or extract claims." The main agent compares the N digests against the PR-under-review's claims; existing rendering, bucket-promotion, and confidence-calibration rules below apply unchanged. The fan-out makes the reads non-optional -- a model running short on turns can't elide them.
 
 **Uniform-dispatch mandate.** Every sibling gets the **same** digest-schema prompt; only the file path differs across the N subagents. The main agent **must not**:
 

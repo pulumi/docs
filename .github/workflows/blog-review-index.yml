@@ -28,6 +28,23 @@ name: "Scheduled jobs: Blog review index"
 #   'N'   -> on, N posts/run
 # workflow_dispatch always runs regardless (the testing path; see the
 # dry_run / count / paths inputs).
+#
+# The select gate wraps the variable in format('{0}', ...) — do not "simplify"
+# it back to a bare `vars.X != '0'`. An unset variable is null, and GitHub
+# coerces a Null-vs-String comparison to numbers (null -> 0, '0' -> 0), so the
+# bare form evaluates 0 != 0 = FALSE and unset silently means OFF, inverting
+# the default documented above. That bug kept this lane from ever running on
+# schedule; every S3 object under blog-review/ came from a manual dispatch,
+# which short-circuits the gate on its first clause.
+#
+# CURRENTLY PARKED. `BLOG_REVIEW_COUNT` is set to '0' in pulumi/docs as of
+# 2026-08-11, so this lane stays off even though the gate above now works. That
+# is a deliberate decision, not leftover state: fixing the gate would otherwise
+# have started ~5 Opus post-reviews/day on a lane that had never run, and the
+# downstream consumer (the noindex decision process this index feeds) does not
+# exist yet. Nothing here is blocked — set the variable to a positive count, or
+# delete it, to start the sweep. The sibling claims-reverify lane, which shared
+# the same gate bug, WAS turned on at the same time.
 
 on:
   schedule:
@@ -104,10 +121,9 @@ jobs:
     timeout-minutes: 15
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (vars.BLOG_REVIEW_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
+      (format('{0}', vars.BLOG_REVIEW_COUNT) != '0' && needs.holiday-check.outputs.is_holiday != 'true')
     outputs:
       has_posts: ${{ steps.select.outputs.has_posts }}
-      count: ${{ steps.select.outputs.count }}
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -459,9 +475,14 @@ jobs:
           echo "${{ steps.claude.outcome }}" > .blog-review-handoff/claude-outcome
           git rev-parse HEAD > .blog-review-handoff/head-sha
           cp .blog-review-queue.json .blog-review-handoff/queue.json
-          [ -f .blog-review-findings.json ] \
-            && cp .blog-review-findings.json .blog-review-handoff/findings.json \
-            || echo "no findings sentinel produced"
+          # if/else, not `[ -f ] && cp || echo`: the short-circuit form reports a
+          # real copy failure as the benign "no sentinel" case.
+          if [ -f .blog-review-findings.json ]; then
+            cp .blog-review-findings.json .blog-review-handoff/findings.json \
+              || { echo "::error::failed to stage .blog-review-findings.json"; exit 1; }
+          else
+            echo "no findings sentinel produced"
+          fi
       - name: Upload findings artifact
         if: always()
         uses: actions/upload-artifact@v7
@@ -594,6 +615,16 @@ jobs:
           mkdir -p .index-cache
           aws s3 sync "${{ steps.state-bucket.outputs.index_uri }}" .index-cache/ --quiet \
             --exclude "_summary.json"
+          # `aws s3 sync` exits 0 on a zero-object sync, so a transient S3
+          # failure, a wrong prefix, and a genuinely empty index are
+          # indistinguishable here. Without this guard build-summary.py would
+          # emit posts_indexed: 0 and the cp below would overwrite
+          # _summary.json — destroying the lane's only accumulated artifact.
+          # Bail out instead; the next run rebuilds from a real sync.
+          if [ -z "$(find .index-cache -name '*.json' -type f -print -quit)" ]; then
+            echo "::warning::index sync produced no objects; leaving the existing _summary.json untouched"
+            exit 0
+          fi
           python3 scripts/blog-review/build-summary.py \
             --index-dir .index-cache --out .index-summary.json
           cat .index-summary.json

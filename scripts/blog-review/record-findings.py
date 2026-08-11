@@ -33,6 +33,12 @@ Three objects are written (locally always; to S3 when the URIs are set):
 Every object carries `schema_version` and `reviewed_at` so the warehouse
 ingestion (see the blog-review section of AGENTS.md) can consume increments.
 
+Exit code: 0 normally, 1 when the LEDGER upload fails. The workflow's record
+loop only marks a post FAILED on a non-zero exit, and a lost ledger write is
+the one failure that must not pass silently — the post's outcome (including
+`incomplete`) would never reach the staleness clock. The index and run-log
+uploads stay best-effort; a later run rebuilds them.
+
 Self-contained — run the smoke checks with `python3 record-findings.py --self-test`.
 """
 
@@ -251,8 +257,14 @@ def build_records(
 # ---- output -----------------------------------------------------------------
 
 
-def upload(record: dict, key: str) -> None:
-    """Upload the record to the S3 key via the aws CLI (stdin)."""
+def upload(record: dict, key: str) -> bool:
+    """Upload the record to the S3 key via the aws CLI (stdin).
+
+    Returns True on success. The caller decides what a failure costs: a lost
+    LEDGER write means the post's staleness clock never advances (or, worse,
+    an incomplete outcome is never recorded), so the record job must go red;
+    the index and run-log writes are best-effort.
+    """
     try:
         subprocess.run(
             ["aws", "s3", "cp", "-", key],
@@ -260,10 +272,13 @@ def upload(record: dict, key: str) -> None:
             text=True, check=True,
         )
         log(f"uploaded {key}")
+        return True
     except FileNotFoundError:
         warn("aws CLI not available; record not uploaded")
+        return False
     except subprocess.CalledProcessError as e:
         warn(f"upload failed for {key} ({e})")
+        return False
 
 
 def s3_key(uri: str, *parts: str) -> str:
@@ -296,8 +311,14 @@ def run(args) -> int:
     ledger_uri = os.environ.get("BLOG_REVIEW_LEDGER_URI", "").strip()
     index_uri = os.environ.get("BLOG_REVIEW_INDEX_URI", "").strip()
     runs_uri = os.environ.get("BLOG_REVIEW_RUNS_URI", "").strip()
+    # The workflow marks the post FAILED only on a non-zero exit, so a lost
+    # ledger write has to be one: without it the post's outcome is invisible to
+    # the next sweep. An unset URI is the configured-off case, not a failure;
+    # the index and run-log writes stay best-effort (the ledger is the state
+    # that matters, and both are rebuilt from later runs).
+    ledger_uploaded = True
     if ledger_uri:
-        upload(ledger, s3_key(ledger_uri, f"{slug}.json"))
+        ledger_uploaded = upload(ledger, s3_key(ledger_uri, f"{slug}.json"))
     else:
         warn("BLOG_REVIEW_LEDGER_URI unset; ledger record written locally only")
     if index and index_uri:
@@ -305,6 +326,9 @@ def run(args) -> int:
     if runs_uri:
         upload(run_log, s3_key(runs_uri, ledger["reviewed_at"], f"{slug}.json"))
 
+    if not ledger_uploaded:
+        warn(f"ledger upload failed for {slug}; recording the run as failed")
+        return 1
     return 0
 
 

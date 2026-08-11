@@ -154,6 +154,13 @@ test:
 test-programs:
 	./scripts/programs/test.sh preview
 
+# Every test suite belonging to the review pipelines (pre-merge PR review,
+# daily content review, blog known-issues index). Not part of `make test`,
+# which is scoped to the example programs; run by review-pipeline-tests.yml.
+.PHONY: test-review-pipeline
+test-review-pipeline:
+	./scripts/test-review-pipeline.sh
+
 .PHONY: upgrade-programs
 upgrade-programs:
 	./scripts/programs/upgrade.sh

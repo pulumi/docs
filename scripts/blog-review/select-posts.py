@@ -110,8 +110,12 @@ INCOMPLETE_STATUS = "incomplete"
 
 # "Pulumi Bot" (display name) is how the SDK-regen tooling authors its
 # commits; "pulumi-bot" is how the review workflows configure git. Both are
-# the same bot and neither resets a post's staleness clock.
-BOT_AUTHORS = {"pulumi-bot", "Pulumi Bot", "dependabot[bot]", "github-actions[bot]"}
+# the same bot and neither resets a post's staleness clock, and neither does
+# "workprentice[bot]", the docs automation app.
+BOT_AUTHORS = {
+    "pulumi-bot", "Pulumi Bot", "workprentice[bot]",
+    "dependabot[bot]", "github-actions[bot]",
+}
 
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
@@ -282,6 +286,16 @@ def load_ledger(ledger_dir: Path) -> dict[str, dict]:
     """Return {content_path: ledger entry} from one-file-per-post JSON."""
     entries: dict[str, dict] = {}
     if not ledger_dir.is_dir():
+        # Not fatal — the workflow only passes --ledger-dir when the S3 sync
+        # produced one — but never silent: with no ledger every post scores as
+        # never-reviewed, which is a very different queue. DEFAULT_LEDGER_DIR is
+        # the in-repo path this script has never actually had, so a run that
+        # falls back to it is one that meant to read the S3 cache and didn't.
+        print(
+            f"select-posts: no ledger directory at {ledger_dir}; scoring every "
+            "post as never-reviewed",
+            file=sys.stderr,
+        )
         return entries
     for f in sorted(ledger_dir.glob("*.json")):
         try:

@@ -77,7 +77,8 @@ Usage:
 
 `--paths` bypasses scoring entirely (workflow_dispatch testing). `--no-gh`
 and `--today` exist for tests. When `$GITHUB_OUTPUT` is set, the script
-appends `has_articles=`, `halted=`, and `count=` for workflow gating.
+appends `has_articles=` and `halted=` for workflow gating (the queue count is
+read from the queue JSON, which every consumer already has).
 """
 
 from __future__ import annotations
@@ -144,7 +145,16 @@ LOW_CTR_FLAG_RATIO = 0.5  # flag when ctr <= 0.5 * corpus median CTR
 # entries predating the field have no `status` and are treated as completed.
 INCOMPLETE_STATUS = "incomplete"
 
-BOT_AUTHORS = {"pulumi-bot", "dependabot[bot]", "github-actions[bot]"}
+# "Pulumi Bot" (display name) is how the SDK-regen tooling authors its commits
+# and "pulumi-bot" is how the review workflows configure git — the same bot
+# either way; "workprentice[bot]" is the docs automation app. None of them is a
+# human edit, so none resets a page's staleness clock. Missing names here are
+# expensive: a single bot touch would otherwise look like a fresh human edit and
+# park the page at the back of the queue.
+BOT_AUTHORS = {
+    "pulumi-bot", "Pulumi Bot", "workprentice[bot]",
+    "dependabot[bot]", "github-actions[bot]",
+}
 
 FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
@@ -366,6 +376,16 @@ def load_ledger(ledger_dir: Path) -> dict[str, dict]:
     """Return {content_path: ledger entry} from one-file-per-page JSON."""
     entries: dict[str, dict] = {}
     if not ledger_dir.is_dir():
+        # Not fatal — the workflow only passes --ledger-dir when the S3 sync
+        # produced one — but never silent: with no ledger every page scores as
+        # never-bot-reviewed, which is a very different queue. DEFAULT_LEDGER_DIR
+        # is the in-repo path this script has never actually had, so a run that
+        # falls back to it is one that meant to read the S3 cache and didn't.
+        print(
+            f"select-articles: no ledger directory at {ledger_dir}; scoring every "
+            "page as never-reviewed",
+            file=sys.stderr,
+        )
         return entries
     for f in sorted(ledger_dir.glob("*.json")):
         try:
@@ -640,7 +660,6 @@ def write_github_output(queue: dict) -> None:
     with open(gh_out, "a") as fh:
         fh.write(f"has_articles={'true' if queue['articles'] else 'false'}\n")
         fh.write(f"halted={queue.get('halted') or ''}\n")
-        fh.write(f"count={len(queue['articles'])}\n")
 
 
 def main() -> int:

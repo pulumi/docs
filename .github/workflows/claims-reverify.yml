@@ -18,6 +18,23 @@ name: "Scheduled jobs: Re-verify volatile claims"
 # The sweep is a stateless day rotation over the volatile entity set, so all
 # of it is covered every ceil(N_entities/count) nights regardless of the knob.
 #
+# The job gate wraps the variable in format('{0}', ...) — do not "simplify" it
+# back to a bare `vars.X != '0'`. An unset variable is null, and GitHub coerces
+# a Null-vs-String comparison to numbers (null -> 0, '0' -> 0), so the bare
+# form evaluates 0 != 0 = FALSE and unset silently means OFF, inverting the
+# default documented above. That bug kept this lane from ever running on
+# schedule — and because the health signal below only reports from a run that
+# actually happened, a never-started lane never tripped it either.
+#
+# TURNED ON 2026-08-11 with `CLAIMS_REVERIFY_COUNT` set explicitly to '25' in
+# pulumi/docs, so the first live run is a recorded decision rather than an
+# implicit default. At the time there were 63 volatile entities across 86
+# claim snapshots — a full sweep every 3 nights. Because the lane had never
+# executed, watch the first few reports for false-positive churn: most entities
+# are typed `numerical`, and some keys read like prose fragments rather than
+# version pins or limits, which would point at the volatile classifier rather
+# than at genuinely rotted facts.
+#
 # DEGRADATION HEALTH: this lane only Slacks when it finds STALE entities, so a
 # dead lane (claims index gone, API key missing, every check inconclusive)
 # would otherwise look identical to a healthy quiet one. The health steps at
@@ -89,7 +106,7 @@ jobs:
     timeout-minutes: 30
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (vars.CLAIMS_REVERIFY_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
+      (format('{0}', vars.CLAIMS_REVERIFY_COUNT) != '0' && needs.holiday-check.outputs.is_holiday != 'true')
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets

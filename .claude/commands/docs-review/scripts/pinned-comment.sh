@@ -6,7 +6,6 @@
 #   find             --pr <N>                           List pinned comment IDs in marker order.
 #   fetch            --pr <N>                           Print the full body of every pinned comment, in order, separated by markers.
 #   upsert           --pr <N> --body-file <path> [--soft-floor]   Split body, edit existing comments in place, append new, prune tail. With --soft-floor: re-run validate-pinned.py --soft-floor first (emits the `soft-floor`-labeled CI annotation surfacing residual violations to the maintainer), then publish regardless — the documented second-failure fallback per ci.md §4.
-#   upsert-validated --pr <N> --body-file <path>        Run validate-pinned.py first; on success, call upsert. On violation, exit non-zero and write a fix-me marker the model re-reads. Fresh-review path only.
 #   prune            --pr <N> --keep <count>            Delete tail-end pinned comments past <count>.
 #   clear            --pr <N>                           Delete ALL pinned comments (1/M and tail). Bypasses the 1/M-sacrosanct rule. For explicit regenerate-from-scratch flows only.
 #   last-reviewed-sha --pr <N>                          Print the most recent SHA from the 1/M comment's review history.
@@ -371,7 +370,8 @@ cmd_upsert() {
     # caller could not have re-derived the trail: claude-update.yml does a fresh
     # shallow checkout and runs only Vale, so a shrunken trail there is always a
     # loss. The composer lane (claude-code-review.yml, which reaches this
-    # function through cmd_upsert_validated) recomposes from
+    # function through its validate / splice / re-validate / upsert step
+    # chain) recomposes from
     # `.verified-claims.json` against the CURRENT diff — if the author force-
     # pushed a smaller change and re-requested review, a shorter trail is
     # CORRECT there, and restoring the old one would inject records for lines
@@ -457,94 +457,6 @@ cmd_upsert() {
     fi
 
     rm -rf "$pages_dir"
-}
-
-cmd_upsert_validated() {
-    # Wrap upsert with a pre-publish call to validate-pinned.py. On validation
-    # failure (exit 1), attempt a deterministic Haiku surgical-fix pass via
-    # validator-fix.py for the violation classes where the fix is text-localized
-    # (links to remove, missing parentheticals to append, etc.). If the fix-pass
-    # recovers the body, publish; otherwise restore the pre-fix body and exit
-    # non-zero so the model can re-render. The model retries once, then falls
-    # back to plain `upsert` (the soft-floor) — see ci.md Hard Rules.
-    local repo pr body_file
-    repo=$(resolve_repo)
-    pr="${PR:?--pr required}"
-    body_file="${BODY_FILE:?--body-file required}"
-    [[ -r "$body_file" ]] || die "body file not readable: $body_file"
-
-    local script_dir
-    script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-    local validator="$script_dir/validate-pinned.py"
-    local fixer="$script_dir/validator-fix.py"
-    [[ -x "$validator" || -f "$validator" ]] || die "validator not found: $validator"
-
-    local soft_floor_flag=()
-    if [[ -n "${VALIDATE_SOFT_FLOOR:-}" ]]; then
-        soft_floor_flag=(--soft-floor)
-    fi
-
-    if python3 "$validator" check \
-            --body-file "$body_file" \
-            --pr "$pr" \
-            --repo "$repo" \
-            "${soft_floor_flag[@]}"; then
-        cmd_upsert
-        return $?
-    fi
-
-    # First validator pass failed. Try Haiku surgical-fix BEFORE falling
-    # through. The fixer's exit codes:
-    #   0 — all violations resolved surgically; re-validate + publish.
-    #   2 — surgical fixes applied, but non-surgical violations remain; keep
-    #       the partial-fix body and re-write the fix-me marker so the model's
-    #       retry starts from a strictly-better body. (Was: all-or-nothing
-    #       "any non-surgical → defer everything"; that wedged the surgical
-    #       lane for any review that also tripped a model-retry rule.)
-    #   1 — Haiku CLI / dispatch error; restore the pre-fix body to avoid
-    #       publishing a Haiku-degraded render.
-    if [[ -f "$fixer" && -f /tmp/validate-pinned.fix-me.json ]]; then
-        cp "$body_file" "${body_file}.pre-haiku.bak"
-        python3 "$fixer" \
-            --body-file "$body_file" \
-            --fix-me-json /tmp/validate-pinned.fix-me.json
-        local fix_status=$?
-        case "$fix_status" in
-            0)
-                # All resolved surgically. Re-validate (no --soft-floor —
-                # we want a clean retry-0 verdict).
-                if python3 "$validator" check \
-                        --body-file "$body_file" \
-                        --pr "$pr" \
-                        --repo "$repo"; then
-                    cmd_upsert
-                    return $?
-                fi
-                # Re-validate still fails (defensive — Haiku regression);
-                # restore pre-fix.
-                cp "${body_file}.pre-haiku.bak" "$body_file"
-                ;;
-            2)
-                # Partial fix. Keep the post-fix body. Re-run validate to
-                # rewrite /tmp/validate-pinned.fix-me.{json,md} so the
-                # model's next retry sees the residual non-surgical
-                # violations only, not the pre-fix superset.
-                python3 "$validator" check \
-                    --body-file "$body_file" \
-                    --pr "$pr" \
-                    --repo "$repo" || true
-                ;;
-            *)
-                # Haiku dispatch error (exit 1) or unexpected exit; restore
-                # pre-fix body.
-                if [[ -f "${body_file}.pre-haiku.bak" ]]; then
-                    cp "${body_file}.pre-haiku.bak" "$body_file"
-                fi
-                ;;
-        esac
-    fi
-
-    return 1
 }
 
 cmd_prune() {
@@ -636,7 +548,6 @@ case "$SUBCOMMAND" in
     find)              cmd_find ;;
     fetch)             cmd_fetch ;;
     upsert)            cmd_upsert ;;
-    upsert-validated)  cmd_upsert_validated ;;
     prune)             cmd_prune ;;
     clear)             cmd_clear ;;
     last-reviewed-sha) cmd_last_reviewed_sha ;;

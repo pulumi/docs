@@ -105,7 +105,8 @@ Schema version: 19 (v18→v19 adds the `framing-drift` (🌀) fact-check verdict
   summary — so a survivor soft-floors loudly. `validate-pinned.py check`
   takes a `--skip-rule <id>` flag (repeatable) so the composer's self-check
   on its own still-`<TODO>`-laden draft can suppress just this rule; the
-  publish path (`pinned-comment.sh upsert-validated`) does NOT pass it.
+  publish path (the workflow's validate / splice / re-validate / upsert
+  step chain) does NOT pass it.
   v8→v9 added `trail-canonical-verdict-word`: every 🔍 Verification trail
   line's verdict must be EXACTLY one of the six canonical words — `verified` /
   `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch` —
@@ -137,9 +138,17 @@ SCHEMA_VERSION = 20
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
 
-# Mandatory H3 sections in the order they must appear in any review body. Mirror
-# of `references/output-format.md` L81 — keep these synchronized; the schema-
-# version bump catches drift.
+# Mandatory H3 sections in the order they must appear in any review body.
+# Mirror of `references/output-format.md` §"Mandatory sections render on every
+# review" — keep these synchronized; the schema-version bump catches drift.
+# (Referenced by section, not line number: the old "L81" pointer had already
+# drifted by ~26 lines.)
+#
+# Deliberately PARTIAL: that section also lists `📋 Triaged verifier findings`,
+# which is absent here on purpose. The composer always renders it, but Step D2
+# (`strip-empty-triaged.py`) removes it post-edit when it is still empty, so a
+# published body legitimately may not carry it. Requiring it here would fail
+# every clean review.
 MANDATORY_H3_SECTIONS = [
     "🔍 Verification trail",
     "🚨 Outstanding",
@@ -314,7 +323,7 @@ class Context:
     # Schema v5: workflow pre-step `extract-urls-and-fetch.py` writes the
     # fetched URLs here. None means the file wasn't present (e.g., local
     # invocation with no PR diff context); empty list means the workflow
-    # ran but the diff had no external URLs in content/(docs|blog|what-is|tutorials|learn)/**/*.md.
+    # ran but the diff had no external URLs in content/(docs|blog|what-is|tutorials)/**/*.md.
     fetched_urls: list[dict] | None = None
     # Schema v5: workflow pre-step `editorial-balance-detect.py` writes
     # Tier 1 stats here (trigger, sections, mean/median/std, outliers).
@@ -817,7 +826,7 @@ def check_external_claim_state_format(ctx: Context) -> list[Violation]:
             line_ref="<investigation log: External claim verification>",
             expected="line uses canonical `X of Y claims verified (N unverifiable, M contradicted)` state form",
             actual=line.strip()[:160],
-            hint="Render the bullet as `X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (...); K cross-specialist corroborations · Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable.` or as `not run (<reason>)`. Compaction (e.g., `single-pass`, `ran (N claims, ...)`, `N of M verifiable claims verified`) is not permitted.",
+            hint="Render the bullet as `X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (...); K cross-specialist corroborations · routed: I inline, P Pass 1, F Pass 2 (verified V, contradicted C, unverifiable U), S Pass 3 (verified V, contradicted C, unverifiable U).` or as `not run (<reason>)`. Compaction (e.g., `single-pass`, `ran (N claims, ...)`, `N of M verifiable claims verified`) is not permitted.",
         )]
     return []
 
@@ -2849,7 +2858,7 @@ def render_markdown(violations: list[Violation]) -> str:
     out = [
         "# validate-pinned.py — fix-me marker",
         "",
-        f"{len(violations)} violation(s) found. Re-render the body addressing each violation below, then call `pinned-comment.sh upsert-validated` once more. If a second validation also fails, fall back to plain `upsert` — the validator's CI annotation will surface the residual to the maintainer.",
+        f"{len(violations)} violation(s) found. Re-render the body addressing each violation below, then re-run `validate-pinned.py check`. If a second validation also fails, the workflow publishes with `pinned-comment.sh upsert --soft-floor` — the validator's CI annotation surfaces the residual to the maintainer.",
         "",
     ]
     for v in violations:
@@ -3025,8 +3034,8 @@ def main() -> int:
                          help="Annotation labels as soft-floor (second-failure publish-anyway).")
     p_check.add_argument("--skip-rule", action="append", default=[],
                          help="Rule id to skip (repeatable). Used by compose-review.py's self-check "
-                              "to suppress `no-todo-tokens` on its `<TODO>`-laden draft; the publish "
-                              "path (pinned-comment.sh upsert-validated) does NOT pass this.")
+                              "to suppress `no-todo-tokens` on its `<TODO>`-laden draft; the workflow "
+                              "publish chain does NOT pass this.")
     p_check.add_argument("--only-rule", action="append", default=[],
                          help="Run ONLY this rule id (repeatable); everything else is skipped. "
                               "For lanes that render freehand and cannot satisfy the full "

@@ -19,6 +19,7 @@ Agents must use these exact commands:
 - Lint prose: `make lint-prose` (Vale; nags, never blocks. Also surfaces in pinned PR reviews.)
 - Format: `make format`
 - Run all tests: `make test`
+- Run the review pipelines' own test suites: `make test-review-pipeline` (pytest + standalone harnesses + every `--self-test`; required if you touch `scripts/content-review/`, `scripts/blog-review/`, or `.claude/commands/docs-review/scripts/`)
 - Run specific program test:  
   `ONLY_TEST="program-name" ./scripts/programs/test.sh`
 - Fix trailing spaces:  
