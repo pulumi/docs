@@ -21,42 +21,34 @@
 
 {{/* Add duration in ISO 8601 format (required by Schema.org) */}}
 {{ with .Params.duration }}
-  {{ $raw := . | strings.TrimLeft "\"" | strings.TrimRight "\"" }}
-  {{ $iso := "" }}
-  {{/* Parse "N minutes", "N hour(s)", "N day(s)" into ISO 8601 durations */}}
-  {{ if findRE `^\d+\s*minutes?$` $raw }}
-    {{ $iso = printf "PT%sM" (index (findRE `\d+` $raw) 0) }}
-  {{ else if findRE `^\d+\s*hours?$` $raw }}
-    {{ $iso = printf "PT%sH" (index (findRE `\d+` $raw) 0) }}
-  {{ else if findRE `^\d+\s*days?$` $raw }}
-    {{ $iso = printf "P%sD" (index (findRE `\d+` $raw) 0) }}
-  {{ end }}
-  {{ with $iso }}
+  {{ with partial "schema/iso-duration.html" . }}
     {{ $schema = merge $schema (dict "duration" .) }}
   {{ end }}
 {{ end }}
 
 {{/* Add location — default to virtual when not specified, since Google requires location for Event schema */}}
 {{ $location := .Params.location | default "virtual" }}
+{{ $place := dict }}
 {{ if eq $location "virtual" }}
   {{/* Virtual event */}}
-  {{ $schema = merge $schema (dict
+  {{ $place = dict
     "eventAttendanceMode" "https://schema.org/OnlineEventAttendanceMode"
     "location" (dict
       "@type" "VirtualLocation"
       "url" .Permalink
     )
-  ) }}
+  }}
 {{ else }}
   {{/* Physical location */}}
-  {{ $schema = merge $schema (dict
+  {{ $place = dict
     "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
     "location" (dict
       "@type" "Place"
       "name" $location
     )
-  ) }}
+  }}
 {{ end }}
+{{ $schema = merge $schema $place }}
 
 {{/* Add event status - if external and block_external_search_index is true, might be past */}}
 {{ $eventStatus := "https://schema.org/EventScheduled" }}
@@ -89,22 +81,59 @@
   {{ $schema = merge $schema (dict "image" .) }}
 {{ end }}
 
-{{/* Add presenter/performer if available */}}
-{{ with .Params.presenters }}
-  {{ $performers := slice }}
-  {{ range . }}
-    {{ $presenter := . }}
-    {{ with $presenter.name }}
-      {{ $performer := dict "@type" "Person" "name" . }}
-      {{ with $presenter.role }}
-        {{ $performer = merge $performer (dict "jobTitle" .) }}
+{{/* Add presenter/performer if available. An event that runs more than once can
+     line up different people per session, so the parent Event lists everyone who
+     appears on any of them — the parent is the whole offering, and each session's
+     own lineup is stated on its subEvent below. */}}
+{{ $sessions := partial "events/sessions.html" . }}
+{{ $performers := slice }}
+{{ range partial "events/presenters.html" . }}
+  {{ $performer := dict "@type" "Person" "name" .name }}
+  {{ with .role }}
+    {{ $performer = merge $performer (dict "jobTitle" .) }}
+  {{ end }}
+  {{ $performers = $performers | append $performer }}
+{{ end }}
+{{ if $performers }}
+  {{ $schema = merge $schema (dict "performer" $performers) }}
+{{ end }}
+
+{{/* An event that runs more than once is one Event with a subEvent per session:
+     the parent keeps the earliest start (its top-level sortable_date) so it still
+     reads as a single dated offering, and each session states its own start,
+     duration, and lineup. Location and attendance mode are shared, so they're
+     inherited verbatim rather than restated differently. */}}
+{{ if gt (len $sessions) 1 }}
+  {{ $subEvents := slice }}
+  {{ range $sessions }}
+    {{ $sub := merge (dict
+      "@type" "Event"
+      "name" (printf "%s — %s session" (or $.Params.title $.Title) .label)
+      "startDate" .date
+      "url" (printf "%s#%s" $.Permalink .key)
+      "eventStatus" $eventStatus
+    ) $place }}
+    {{ with .duration }}
+      {{ with partial "schema/iso-duration.html" . }}
+        {{ $sub = merge $sub (dict "duration" .) }}
       {{ end }}
-      {{ $performers = $performers | append $performer }}
     {{ end }}
+    {{ $sessionPerformers := slice }}
+    {{ range .presenters }}
+      {{ if .name }}
+        {{ $performer := dict "@type" "Person" "name" .name }}
+        {{ with .role }}
+          {{ $performer = merge $performer (dict "jobTitle" .) }}
+        {{ end }}
+        {{ $sessionPerformers = $sessionPerformers | append $performer }}
+      {{ end }}
+    {{ end }}
+    {{ with $sessionPerformers }}
+      {{ $sub = merge $sub (dict "performer" .) }}
+    {{ end }}
+    {{ $subEvents = $subEvents | append $sub }}
   {{ end }}
-  {{ if $performers }}
-    {{ $schema = merge $schema (dict "performer" $performers) }}
-  {{ end }}
+  {{ $schema = merge $schema (dict "subEvent" $subEvents) }}
 {{ end }}
 
 {{ return $schema }}

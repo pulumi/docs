@@ -1,0 +1,19 @@
+{{/*
+    Parses a human-readable event duration ("60 minutes", "2 hours", "3 days")
+    into the ISO 8601 duration Schema.org requires. Returns "" for anything it
+    doesn't recognize, so callers can skip the property entirely rather than
+    emitting something a validator will reject.
+
+    Parameters: the raw duration string (.)
+*/}}
+
+{{ $raw := . | strings.TrimLeft "\"" | strings.TrimRight "\"" }}
+{{ $iso := "" }}
+{{ if findRE `^\d+\s*minutes?$` $raw }}
+  {{ $iso = printf "PT%sM" (index (findRE `\d+` $raw) 0) }}
+{{ else if findRE `^\d+\s*hours?$` $raw }}
+  {{ $iso = printf "PT%sH" (index (findRE `\d+` $raw) 0) }}
+{{ else if findRE `^\d+\s*days?$` $raw }}
+  {{ $iso = printf "P%sD" (index (findRE `\d+` $raw) 0) }}
+{{ end }}
+{{ return $iso }}

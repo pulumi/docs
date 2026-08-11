@@ -1,0 +1,39 @@
+{{- /*
+    Event Presenters Partial
+
+    Everyone who appears at the event, across every session, deduped by name and
+    in session order. Use this wherever the subject is the event as a whole — the
+    schema.org `performer` list, the social card, the speakers row once a recording
+    replaces the sessions — as opposed to one session's own lineup, which is
+    `.presenters` on the session (see events/sessions.html).
+
+    Because a session inherits the event's top-level `presenters` when it doesn't
+    declare its own, this is usually just that top-level list. It only diverges
+    when sessions name different people, and then it's the union — which is why an
+    event whose sessions each name their own lineup doesn't need a top-level list
+    at all. The top-level list is still folded in last, so an event that lists
+    someone there and nowhere else keeps them.
+
+    Parameters: the event page (.)
+
+    Returns: a slice of presenter maps (name, role, photo), possibly empty.
+*/ -}}
+
+{{- $page := . -}}
+{{- $seen := slice -}}
+{{- $presenters := slice -}}
+{{- range partial "events/sessions.html" $page -}}
+    {{- range .presenters -}}
+        {{- if and .name (not (in $seen .name)) -}}
+            {{- $seen = $seen | append .name -}}
+            {{- $presenters = $presenters | append . -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- range $page.Params.presenters -}}
+    {{- if and .name (not (in $seen .name)) -}}
+        {{- $seen = $seen | append .name -}}
+        {{- $presenters = $presenters | append . -}}
+    {{- end -}}
+{{- end -}}
+{{- return $presenters -}}

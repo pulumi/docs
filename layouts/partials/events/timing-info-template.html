@@ -17,7 +17,10 @@
 <div class="flex flex-wrap gap-x-10 gap-y-5">
     <div>
         <div class="font-overline-sm text-gray-600 mb-1">Date</div>
-        <div class="body-base font-semibold text-gray-950">{{ .datetime | time.Format ":date_medium" }}</div>
+        {{/* Rendered in the event's timezone as the no-JS fallback, then rewritten
+             in the visitor's by resources.ts — the Time beside it already localizes,
+             and a far-enough-east visitor is on the next calendar day. */}}
+        <div data-local-date="{{ .datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" class="body-base font-semibold text-gray-950">{{ .datetime | time.Format ":date_medium" }}</div>
     </div>
     <div>
         <div class="font-overline-sm text-gray-600 mb-1">Time</div>

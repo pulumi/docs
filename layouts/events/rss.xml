@@ -1,5 +1,17 @@
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\" ?>" | safeHTML }}
-{{ $events := .Data.Pages }}
+{{/* One item per session, not per event: an event offered on two dates is two
+     things a subscriber can attend, and each gets its own guid so a reader that
+     has already shown the first still surfaces the second. Unlisted events are
+     excluded here for the same reason they're excluded from /events/. */}}
+{{ $items := slice }}
+{{ range .Data.Pages }}
+    {{ if eq .Params.unlisted false }}
+        {{ $event := . }}
+        {{ range partial "events/sessions.html" . }}
+            {{ $items = $items | append (dict "date" .date "unix" .unix "event" $event "session" .) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
 
 <rss version="2.0">
     <channel>
@@ -8,21 +20,29 @@
         <description>Feed containing upcoming Pulumi events.</description>
         <language>{{ .Site.LanguageCode }}</language>
         <pubDate>{{ now | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-        {{ range sort $events }}
+        {{ range sort $items "unix" "desc" }}
+            {{ $event := .event }}
+            {{ $session := .session }}
             <item>
-                {{ $eventLink := printf "%s%s" .Site.Params.canonicalURL .RelPermalink }}
+                {{ $eventLink := printf "%s%s" site.Params.canonicalURL $event.RelPermalink }}
                 <!--
                     When the event is external, the `url_slug` property is set to the external link
                     in the event template.
                 -->
-                {{ if .Params.external }}
-                    {{ $eventLink = .Params.url_slug }}
+                {{ if $event.Params.external }}
+                    {{ $eventLink = $event.Params.url_slug }}
                 {{ end }}
-                <guid>{{ $eventLink }}</guid>
-                <title>{{ .Params.title }}</title>
-                <description>{{ .Params.meta_desc }}</description>
-                <pubDate>{{ .Params.sortable_date }}</pubDate>
-                <link>{{ $eventLink }}</link>
+                {{/* A labelled session has a tab on the event page to land on;
+                     a single-session event has none, so its link stays bare. */}}
+                {{ $sessionLink := $eventLink }}
+                {{ with $session.label }}
+                    {{ $sessionLink = printf "%s#%s" $eventLink $session.key }}
+                {{ end }}
+                <guid>{{ $sessionLink }}</guid>
+                <title>{{ $event.Params.title }}{{ with $session.label }} ({{ . }} session){{ end }}</title>
+                <description>{{ $event.Params.meta_desc }}</description>
+                <pubDate>{{ .date | time.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+                <link>{{ $sessionLink }}</link>
             </item>
         {{ end }}
     </channel>

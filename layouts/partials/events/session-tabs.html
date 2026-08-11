@@ -1,0 +1,49 @@
+{{/*
+    Event Session Tabs Partial
+
+    The tab row at the top of a multi-session event page — one tab per session, on
+    the shared underline tab system (`.tabs` / `.tab`, see
+    theme/src/scss/shared/_tabs.scss). Tabs rather than the filter pills used on
+    /events/ because picking a session *replaces* the timing, form, and speakers
+    below it; the pills filter a list that stays where it is.
+
+    Each tab is a plain link to `#<session key>`. Nothing on the page carries that
+    id: the hash is state, not a scroll target, so switching sessions swaps the
+    panels in place instead of jumping down the page (the same trick the /events/
+    filter tabs use). event-sessions.ts reads the hash on load and on hashchange
+    and toggles the matching `[data-session-panel]` regions in type-content.html.
+    Without JS the server-rendered default session stays up and every panel it
+    belongs to is already visible.
+
+    A session that has already run keeps its tab — the page is a record of both
+    dates — but reads as muted and says so, and its register panel points at the
+    session that's still ahead.
+
+    Parameters:
+    - sessions: the normalized session slice (see events/sessions.html), each
+      session carrying an extra `passed` bool
+    - active: the key of the session to mark active
+*/}}
+
+{{ $active := .active }}
+
+<nav class="tabs" aria-labelledby="event-sessions-label">
+    {{/* Naming the row matters more here than on a typical tab strip: two dates
+         of the same workshop look enough alike that readers have skimmed past
+         them without registering there was a choice to make. */}}
+    <span id="event-sessions-label" class="tabs-label">Sessions</span>
+    {{ range .sessions }}
+        {{/* data-track gives these tabs a stable analytics id; without it
+             tracking.ts would derive one from the href and every event page
+             would report the same bare "anchor-session-…" label. */}}
+        <a href="#{{ .key }}"
+            data-session-tab="{{ .key }}"
+            data-track="event-session-tab-{{ anchorize .label }}"
+            {{ if eq .key $active }}aria-current="true"{{ end }}
+            class="tab{{ if eq .key $active }} is-active{{ end }}{{ if .passed }} opacity-60{{ end }}">
+            {{/* The date localizes client-side (resources.ts) so the tab agrees with
+                 the card that linked here, which localizes its calendar tile. */}}
+            {{ .label }} &middot; <span data-local-date="{{ .date | time.Format "2006-01-02T15:04:05Z07:00" }}" data-local-date-format="short">{{ .date | time.Format "Jan 2" }}</span>{{ if .passed }} (passed){{ end }}
+        </a>
+    {{ end }}
+</nav>

@@ -9,9 +9,13 @@
     - page: The event page
     - pageContext: Page context for relref resolution
     - filters: Array of filter strings for CSS filtering
+    - session: Optional. One normalized session (see events/sessions.html), for an
+      event that runs more than once and so appears in the list once per session.
 */}}
 
-{{ $displayDate := dateFormat "January 2, 2006" .page.Params.sortable_date }}
+{{ $date := .page.Params.sortable_date }}
+{{ with .session }}{{ $date = .date }}{{ end }}
+{{ $displayDate := dateFormat "January 2, 2006" $date }}
 <li data-display-date="{{ $displayDate }}" class="m-0 p-0" data-filters="{{ delimit .filters " " }}">
-    {{ partial "events/event-card.html" (dict "page" .page "pageContext" .pageContext) }}
+    {{ partial "events/event-card.html" (dict "page" .page "pageContext" .pageContext "session" .session) }}
 </li>

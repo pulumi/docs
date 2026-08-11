@@ -13,7 +13,12 @@
 
 {{/* Shared with the homepage section so both agree on how "upcoming" is decided.
      A cutoff 24 hours back keeps an event listed until a day after it starts,
-     so a session running right now doesn't disappear mid-event. */}}
+     so a session running right now doesn't disappear mid-event.
+
+     An event that runs more than once returns one entry per remaining session,
+     so it appears here once per date — including under two different month
+     headers when the dates straddle a month, since the grouping below keys off
+     each entry's own date. */}}
 {{ $upcomingEvents := partialCached "events/upcoming.html" (now.Add (duration "hour" -24)) "upcoming-list" }}
 {{ $upcomingPages := slice }}
 {{ range $upcomingEvents }}{{ $upcomingPages = $upcomingPages | append .data }}{{ end }}
@@ -123,7 +128,7 @@
     {{ $upcomingMonthHeader := "" }}
     {{ $upcomingGroups := slice }}
     {{ $currentGroup := dict "month" "" "monthKey" "" "icon" "calendar" "tab" "upcoming" "events" slice }}
-    {{ range sort $upcomingEvents "date" "asc" }}
+    {{ range sort $upcomingEvents "unix" "asc" }}
         {{ $monthLabel := (.date | time.Format "January 2006") }}
         {{ if ne $upcomingMonthHeader $monthLabel }}
             {{ if $currentGroup.month }}
@@ -194,7 +199,7 @@
                              needs no "upcoming" flag: this list only renders events that
                              are upcoming or have a recording (see above), making
                              "not on-demand" equivalent to "upcoming". */}}
-                        {{ partial "events/event-list-item.html" (dict "pageContext" $pageContext "page" $data "filters" $filters) }}
+                        {{ partial "events/event-list-item.html" (dict "pageContext" $pageContext "page" $data "filters" $filters "session" .session) }}
                     {{ end }}
                 </ul>
             </div>

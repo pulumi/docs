@@ -757,6 +757,166 @@ function checkSeriesConsistency(series, tags, fullPath) {
 }
 
 /**
+ * Approximates Hugo's `anchorize` well enough to detect two session labels that
+ * would collide into the same anchor (and so the same DOM key): lowercase, spaces
+ * to hyphens, drop anything that isn't a word character or a hyphen.
+ *
+ * @param {string} value The label to anchorize.
+ * @returns {string} The anchorized form.
+ */
+function anchorizeLabel(value) {
+    return String(value)
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9_-]/g, "");
+}
+
+/**
+ * Parses a front matter datetime into a Date. js-yaml resolves an unquoted ISO
+ * timestamp to a Date and leaves a quoted one a string, so handle both. Returns
+ * null when the value is missing or unparseable.
+ *
+ * @param {*} value The raw front matter value.
+ * @returns {Date|null} The parsed date, or null.
+ */
+function parseDateTime(value) {
+    if (value instanceof Date) {
+        return isNaN(value.getTime()) ? null : value;
+    }
+    if (typeof value !== "string" || value.trim() === "") {
+        return null;
+    }
+    const parsed = new Date(value);
+    return isNaN(parsed.getTime()) ? null : parsed;
+}
+
+/**
+ * checkEventSessions validates the optional `sessions:` front matter on event
+ * pages (content/events/<slug>/index.md). An event offered on more than one date
+ * — an Americas slot and an EMEA slot, say — is one page with a `sessions:`
+ * array rather than two near-identical bundles; see the archetype and
+ * layouts/partials/events/sessions.html.
+ *
+ * What's enforced, and why each one would otherwise ship silently broken:
+ *   - every session needs a parseable `sortable_date`; a session without one
+ *     sorts to the front of every list with a zero date
+ *   - with more than one session, each needs a `label`, and no two may anchorize
+ *     to the same key — the label is the tab, the badge, and the deep-link anchor,
+ *     so a collision makes two sessions share one panel
+ *   - a gated event needs a `form.hubspot_form_id` per session, since the
+ *     top-level form no longer applies
+ *   - the top-level `form:` must be gone when sessions are present, so there's no
+ *     ambiguity about which form a session renders
+ *   - the top-level `sortable_date` must equal the earliest session's; it stays
+ *     the event's own date for sorting, schema.org, and the social card, and
+ *     drifting from the sessions makes the event sort to a date it doesn't run on
+ *
+ * Reusing one HubSpot form id across sessions is warned about rather than
+ * rejected: the page renders two <pulumi-hubspot-form> instances and they filter
+ * HubSpot's window messages by form id, so identical ids make the two forms react
+ * to each other's events.
+ *
+ * @param {*} obj The parsed front matter object.
+ * @param {string} fullPath The absolute path of the file being linted.
+ * @returns {string|null} An error message, or null when valid/not applicable.
+ */
+function checkEventSessions(obj, fullPath) {
+    const normalized = fullPath.replace(/\\/g, "/");
+    const isEvent =
+        normalized.includes("/content/events/") && path.basename(normalized) === "index.md";
+    if (!isEvent || obj.sessions === undefined) {
+        return null;
+    }
+
+    if (!Array.isArray(obj.sessions) || obj.sessions.length === 0) {
+        return "Event 'sessions' must be a non-empty YAML array, one entry per date the event runs. Remove the key entirely for an event that runs once. See archetypes/event/index.md.";
+    }
+
+    const errors = [];
+    const sessions = obj.sessions;
+    const multi = sessions.length > 1;
+
+    if (obj.form !== undefined) {
+        errors.push(
+            "Event has both a top-level 'form:' and 'sessions:'. Move the form into each session so there's no question which one renders, and delete the top-level key.",
+        );
+    }
+
+    const dates = [];
+    const anchors = new Map();
+    const formIds = new Map();
+
+    sessions.forEach(function (session, i) {
+        const at = `sessions[${i}]`;
+        if (!session || typeof session !== "object" || Array.isArray(session)) {
+            errors.push(`${at} must be a mapping with at least a 'sortable_date'.`);
+            return;
+        }
+
+        const date = parseDateTime(session.sortable_date);
+        if (!date) {
+            errors.push(
+                `${at} is missing a valid 'sortable_date' (RFC 3339, e.g. 2026-09-16T09:00:00.000-07:00).`,
+            );
+        } else {
+            dates.push(date);
+        }
+
+        const label = typeof session.label === "string" ? session.label.trim() : "";
+        if (multi && !label) {
+            errors.push(
+                `${at} is missing a 'label'. With more than one session the label is the tab, the badge, and the deep-link anchor (e.g. 'label: EMEA').`,
+            );
+        } else if (multi) {
+            const anchor = anchorizeLabel(label);
+            if (!anchor) {
+                errors.push(`${at} has a 'label' with no letters or digits ('${label}'), which anchorizes to nothing.`);
+            } else if (anchors.has(anchor)) {
+                errors.push(
+                    `${at} label '${label}' collides with '${anchors.get(anchor)}' (both anchorize to '${anchor}'), so the two sessions would share one tab and one panel.`,
+                );
+            } else {
+                anchors.set(anchor, label);
+            }
+        }
+
+        const hubspotFormId = session.form && session.form.hubspot_form_id;
+        if (obj.gated === true && !hubspotFormId) {
+            errors.push(
+                `${at} is missing 'form.hubspot_form_id'. A gated event needs a registration form per session.`,
+            );
+        } else if (hubspotFormId) {
+            if (formIds.has(hubspotFormId)) {
+                console.warn(
+                    `Warning: ${normalized}: ${at} reuses the HubSpot form id '${hubspotFormId}' from ${formIds.get(hubspotFormId)}. Both forms render on the page and filter HubSpot's events by form id, so they will react to each other. Give each session its own form.`,
+                );
+            } else {
+                formIds.set(hubspotFormId, at);
+            }
+        }
+    });
+
+    const topDate = parseDateTime(obj.sortable_date);
+    if (!topDate) {
+        errors.push(
+            "Event is missing a valid top-level 'sortable_date'. It stays required alongside 'sessions' and must equal the earliest session's date.",
+        );
+    } else if (dates.length > 0) {
+        const earliest = dates.reduce(function (a, b) {
+            return a < b ? a : b;
+        });
+        if (topDate.getTime() !== earliest.getTime()) {
+            errors.push(
+                `Event's top-level 'sortable_date' (${topDate.toISOString()}) must equal the earliest session's date (${earliest.toISOString()}). It's what sorts the event, dates its schema.org entry, and stamps its social card.`,
+            );
+        }
+    }
+
+    return errors.length > 0 ? errors.join(" ") : null;
+}
+
+/**
  * Normalizes a front matter `date:` value to a YYYY-MM-DD string. js-yaml parses
  * an unquoted ISO date into a Date, while a quoted one stays a string, so handle
  * both. Returns null if the value is missing or unparseable.
@@ -1388,6 +1548,7 @@ function searchForMarkdown(paths) {
                     caseStudyIndustry: checkCaseStudyIndustry(obj.industry, fullPath),
                     caseStudyLogoTile: checkCaseStudyLogoTile(obj, fullPath),
                     seriesConsistency: checkSeriesConsistency(obj.series, obj.tags, fullPath),
+                    eventSessions: checkEventSessions(obj, fullPath),
                     changelogFilename: checkChangelogFilename(obj.date, fullPath),
                     changelogEditions: checkChangelogEditions(obj.editions, obj.tiers, obj.tier, fullPath),
                     pulumiCloudFeature: checkPulumiCloudFeature(obj.pulumi_cloud_feature, obj.pulumi_cloud),
@@ -1554,6 +1715,12 @@ function groupLintErrorOutput(result) {
                 lintErrors.push({
                     lineNumber: "File Header",
                     ruleDescription: frontMatterErrors.seriesConsistency,
+                });
+            }
+            if (frontMatterErrors.eventSessions) {
+                lintErrors.push({
+                    lineNumber: "File Header",
+                    ruleDescription: frontMatterErrors.eventSessions,
                 });
             }
             if (frontMatterErrors.changelogFilename) {

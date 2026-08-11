@@ -27,7 +27,9 @@
       so this takes a list rather than the single cta_text/cta_link other sections use.
     - count: Total number of tiles in the row. Default 3.
     - show_event: Optional true to give the last slot to the next upcoming event
-      that's more than a day out — see the cutoff below.
+      that's more than a day out — see the cutoff below. For an event that runs
+      more than once, that's the next *session*: the upcoming list breaks those
+      out per session, so "first" is the soonest date on offer either way.
     - anchor: Optional anchor for section id
 */}}
 
@@ -83,7 +85,7 @@
             {{ partialCached "blog/card/contained.html" (dict "page" .) .RelPermalink }}
         {{ end }}
         {{ with $nextEvent }}
-            {{ partial "events/event-card.html" (dict "page" .data "pageContext" $ctx) }}
+            {{ partial "events/event-card.html" (dict "page" .data "pageContext" $ctx "session" .session) }}
         {{ end }}
     </div>
 </section>

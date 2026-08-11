@@ -17,6 +17,14 @@
     one card per shortcode — several in a row is just several shortcodes. The path
     is the only parameter; everything the card shows comes from the target page.
 
+    The exception is an event that runs more than once: that renders one stacked
+    card per session still ahead, each linking to its own session tab, because the
+    reader's question is which date works for them. It collapses back to a single
+    card once every session has run. (This assumes `youtube_url` isn't set until
+    then — a recording removes the session tabs, so an early one would leave these
+    cards linking to anchors the event page no longer has. See the warning in
+    archetypes/event/index.md.)
+
     Parameters (positional only): one absolute content path, resolving to a page
     under /events/ or /blog/. An unresolvable path or an unsupported section is a
     build error — a silently missing card is worse than a failed build.
@@ -37,7 +45,23 @@
     {{ $ref := .Get 0 }}
     {{ with site.GetPage $ref }}
         {{ if eq .Type "events" }}
-            <div class="my-8">{{ partial "events/event-card.html" (dict "page" . "pageContext" $.Page) }}</div>
+            {{ $event := . }}
+            {{/* The same 24-hours-back cutoff the events list uses, so a session
+                 running right now is still offered here. */}}
+            {{ $cutoffUnix := (now.Add (duration "hour" -24)).UnixMilli }}
+            {{ $upcoming := slice }}
+            {{ range partial "events/sessions.html" . }}
+                {{ if gt .unix $cutoffUnix }}
+                    {{ $upcoming = $upcoming | append . }}
+                {{ end }}
+            {{ end }}
+            {{ if $upcoming }}
+                {{ range $upcoming }}
+                    <div class="my-8">{{ partial "events/event-card.html" (dict "page" $event "pageContext" $.Page "session" .) }}</div>
+                {{ end }}
+            {{ else }}
+                <div class="my-8">{{ partial "events/event-card.html" (dict "page" $event "pageContext" $.Page) }}</div>
+            {{ end }}
         {{ else if eq .Type "blog" }}
             {{/* The wide card, boxed to match the event card. `group relative` on
                  the wrapper anchors the title's stretched link. */}}

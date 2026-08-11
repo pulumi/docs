@@ -300,11 +300,31 @@ export function presentersLine(presenters, { roles = true } = {}) {
   return `With ${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`
 }
 
+// Everyone who appears on the event, deduped by name: the top-level presenters
+// plus any the individual sessions add. There's one social card for the event as
+// a whole, so a session-specific co-presenter belongs on it — an EMEA-only host
+// is still someone the card should name.
+function allPresenters(fm) {
+  const lists = [Array.isArray(fm.presenters) ? fm.presenters : []]
+  for (const session of Array.isArray(fm.sessions) ? fm.sessions : []) {
+    if (Array.isArray(session?.presenters)) lists.push(session.presenters)
+  }
+  const seen = new Set()
+  const out = []
+  for (const p of lists.flat()) {
+    const name = clean(p?.name)
+    if (!name || seen.has(name)) continue
+    seen.add(name)
+    out.push(p)
+  }
+  return out
+}
+
 // The build default's field builder: overline from fm.overline || event_type
 // (uppercased), "With…" from presenters, Pulumi logo only, speakers = resolved
 // presenter photos (skip blanks).
 export function eventFieldsFromFrontmatter(fm, _id) {
-  const presenters = Array.isArray(fm.presenters) ? fm.presenters : []
+  const presenters = allPresenters(fm)
   const speakers = presenters
     .map((p) => p && resolvePhoto(p.photo))
     .filter(Boolean)
