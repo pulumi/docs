@@ -41,6 +41,14 @@ items:
             description: The fastest, most secure way to deliver cloud infrastructure
             icon: custom/pulumi-idp
             track: header-product-idp
+      - heading: Security & trust
+        columns: 2
+        items:
+          - label: Security & compliance
+            href: /security/
+            description: SOC 2 Type II, our security architecture, and the Pulumi Cloud security whitepaper
+            icon: shield-check
+            track: header-product-security
 
   - label: For engineers
     wide: true

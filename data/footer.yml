@@ -107,7 +107,7 @@ columns:
       - label: Awards
         href: /awards/
         track: footer-awards
-      - label: Security
+      - label: Security & compliance
         href: /security/
         track: footer-security
       - label: Brand

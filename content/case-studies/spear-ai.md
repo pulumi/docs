@@ -6,7 +6,7 @@ description: |
 meta_desc: Learn how Spear AI used Pulumi to achieve government Authorization to Operate in 3 months.
 
 customer_name: Spear AI
-industry: ai-ml
+industry: public-sector
 customer_logo: /logos/customers/spearAI.svg
 logo_bg_color: "#000031"
 logo_style: white

@@ -21,7 +21,12 @@
                 <div>
                     <h3>Learn more</h3>
                     <p class="mb-8">Read our whitepaper to learn more about our product architecture and security practices.</p>
-                    <a class="btn btn-outline" href="{{ .Resources.GetMatch "pulumi-cloud-security-whitepaper" }}" target="_blank">Read Whitepaper</a>
+                    {{/* The whitepaper is a content page, not a page resource, so .Resources.GetMatch never finds it. */}}
+                    {{ with site.GetPage "/security/pulumi-cloud-security-whitepaper" }}
+                        <a class="btn btn-outline" href="{{ .RelPermalink }}">Read the whitepaper</a>
+                    {{ else }}
+                        {{ errorf "layouts/security/section.html: security whitepaper page not found" }}
+                    {{ end }}
                 </div>
             </div>
             <div class="md:w-1/3 flex md:ml-6">
