@@ -520,6 +520,39 @@ jobs:
             --vale-findings .vale-findings.json \
             --annotate-pinned
 
+      # Surface the evidence-spine floor's verdict. The floor itself runs inside
+      # `pinned-comment.sh upsert`, which the MODEL calls from its own Bash tool
+      # — and this action does not echo tool output into the job log, so without
+      # this step the check is completely invisible from CI: a run where it held
+      # and a run where it never executed look identical.
+      #
+      # The ::warning:: on a restore is the point, not decoration. Every real
+      # restore is a production instance of the model dropping the review's
+      # evidence spine, which is exactly the rate the 2026-08-10 campaign had to
+      # measure synthetically. Surfaced here, the lane measures it on live
+      # traffic for free — and a run of them is the case for revisiting the
+      # model config rather than leaning harder on the repair.
+      - name: Report evidence-spine floor
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.pr_number != ''
+        continue-on-error: true
+        run: |
+          if [ ! -f /tmp/splice-spine.json ]; then
+            echo "::warning::No evidence-spine floor report. pinned-comment.sh upsert did not run, or ran without reaching the floor check — the refreshed review published unguarded."
+            exit 0
+          fi
+          echo "evidence-spine floor report:"
+          cat /tmp/splice-spine.json
+          status=$(jq -r '.status // "unknown"' /tmp/splice-spine.json)
+          case "$status" in
+            restored)
+              secs=$(jq -r '[.restored[].section] | join(", ")' /tmp/splice-spine.json)
+              echo "::warning::The refreshed review dropped evidence-spine section(s) — $secs — and they were restored from the previous pinned comment. The published review is correct; the render was not."
+              ;;
+            error)
+              echo "::warning::The evidence-spine floor errored and the review published as rendered: $(jq -r '.error' /tmp/splice-spine.json)"
+              ;;
+          esac
+
       # Provenance spot-check. The full validate -> splice -> re-validate chain
       # does not run on this lane (the model renders the body freehand and
       # would fail most structural rules), but ONE rule earns its keep here:
