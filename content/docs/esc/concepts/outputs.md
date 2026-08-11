@@ -21,7 +21,7 @@ menu:
   esc:
     parent: esc-concepts
     identifier: esc-syntax-reserved-properties
-    weight: 8
+    weight: 9
 ---
 
 The [`pulumi` CLI](/docs/iac/download-install/) and other ESC consumers conventionally assign specific semantics to certain top-level properties of an evaluated ESC environment (i.e. properties defined under the [`values` section of the environment definition](/docs/esc/concepts/environments/)). These _reserved properties_ shape the outputs an environment produces when it is opened: environment variables, temporary files, Pulumi IaC stack configuration, and Pulumi policy pack configuration.

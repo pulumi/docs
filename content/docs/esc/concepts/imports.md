@@ -123,7 +123,7 @@ imports:
 
 | Option  | Type    | Default | Description |
 |---------|---------|---------|-------------|
-| `merge` | boolean | `true`  | Whether to add the imported environment to the merge stack. When `false`, the environment is evaluated but its values are not automatically merged into the current environment. Unmerged imports are still accessible via the [`imports` built-in property](/docs/esc/concepts/interpolations-and-references/#imports). |
+| `merge` | boolean | `true`  | Whether to add the imported environment to the merge stack. When `false`, the environment is evaluated but its values are not automatically merged into the current environment. Unmerged imports are still accessible via the [`imports` built-in property](/docs/esc/concepts/builtin-properties/#imports). |
 
 ## Implicit imports
 
