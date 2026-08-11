@@ -23,7 +23,7 @@ The repository runs a tiered review pipeline on every PR. AI-assisted contributo
 Transitioning to **Ready for review** triggers:
 
 1. A re-triage to refresh labels (domain, trivial / frontmatter-only short-circuits, prose-flagged signal if applicable).
-1. The full Claude review (currently `claude-opus-4-8`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
+1. The full Claude review (currently `claude-opus-5`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
 
 Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
 
