@@ -15,7 +15,7 @@ tags:
 category: product
 ---
 
-With [Pulumi ESC](/product/esc), our goal is to not only create a tool that simplifies the development process but also one that developers love. In pursuit of this goal, we're excited to announce enhancements to the Pulumi ESC environment editor. These enhancements are focused on addressing common challenges encountered when authoring environments: syntax errors, type errors, frequent context switches to and from documentation, and more. Our aim is to make the process of authoring environments as straightforward as possible by removing common hurdles.
+With [Pulumi ESC](/product/secrets-management/), our goal is to not only create a tool that simplifies the development process but also one that developers love. In pursuit of this goal, we're excited to announce enhancements to the Pulumi ESC environment editor. These enhancements are focused on addressing common challenges encountered when authoring environments: syntax errors, type errors, frequent context switches to and from documentation, and more. Our aim is to make the process of authoring environments as straightforward as possible by removing common hurdles.
 
 <!--more-->
 
@@ -50,4 +50,4 @@ For the current, complete list of `context` properties, see [Built-in properties
 
 The updated editor experience is designed to minimize friction, boost productivity, and transform cloud development into a more enjoyable and effective journey. We are eager for you to explore these new features and see firsthand how they enhance your development process.
 
-Discover more about the capabilities of Pulumi ESC and how it can support your projects by checking out our [documentation](/docs/esc).
+Discover more about the capabilities of Pulumi ESC and how it can support your projects by checking out our [documentation](/docs/esc/).

@@ -162,8 +162,8 @@ With Pulumi, you get:
 - [Cloud-native container orchestration](https://www.pulumi.com/registry/) across all major platforms and Kubernetes distributions
 - [Infrastructure testing](/docs/iac/concepts/testing/) to ensure your containers deploy correctly (even in the weird places)
 - [Provider templates](/blog/pulumi-go-boilerplate-v2/) for when you invent yet another way to run containers
-- [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple environments without losing your mind
-- [Automation API](/docs/iac/packages-and-automation/automation-api/) for programmatically herding your container fleets
+- [Stack references](/docs/iac/concepts/stacks/#stackreferences) for managing multiple environments without losing your mind
+- [Automation API](/docs/iac/concepts/automation-api/) for programmatically herding your container fleets
 
 Ready to bring some sanity to your container deployment strategy? Get started with Pulumi:
 

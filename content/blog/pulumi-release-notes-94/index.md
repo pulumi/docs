@@ -93,7 +93,7 @@ Pulumi Cloud now offers the capability to [restore previously deleted stacks](/b
 
 ### Review Stacks
 
-New to Pulumi Deployments are [Review Stacks](/blog/review-stacks/), ephemeral cloud environments created automatically when a pull request is opened. These environments enable developers to make changes to both application and infrastructure code simultaneously, streamlining the development process. Review Stacks comment with the outputs from the deployment, making it easier to review code changes and collaborate with teammates. Review Stacks help optimize cloud costs by only existing as long as necessary during feature development. Configuring Review Stacks is a simple process that enhances development efficiency and collaboration among teams. Find more information in the [Review Stacks documentation](/docs/pulumi-cloud/deployments/review-stacks/).
+New to Pulumi Deployments are [Review Stacks](/blog/review-stacks/), ephemeral cloud environments created automatically when a pull request is opened. These environments enable developers to make changes to both application and infrastructure code simultaneously, streamlining the development process. Review Stacks comment with the outputs from the deployment, making it easier to review code changes and collaborate with teammates. Review Stacks help optimize cloud costs by only existing as long as necessary during feature development. Configuring Review Stacks is a simple process that enhances development efficiency and collaboration among teams. Find more information in the [Review Stacks documentation](/docs/deployments/concepts/review-stacks/).
 
 ![Review Stacks](comment.png)
 
@@ -113,7 +113,7 @@ Resource Search for Pulumi Cloud capabilities have been enhanced by allowing use
 
 ### Dependent Stack Updates with Pulumi Deployments
 
-Pulumi Deployments has two new features to help manage complex infrastructure projects more easily. The Deployment Webhook Destinations allow automatic triggering of updates in dependent stacks when changes occur in the parent stack. We've also added the Pulumi Auto Deploy Package to simplify the way you express stack dependencies, automating the creation and updating of Deployment Webhooks. For all the details and to get started, visit the [blog post](/blog/dependent-stack-updates/), [auto deploy package](/registry/packages/auto-deploy/) registry page, and [Pulumi Deployments](/docs/pulumi-cloud/deployments/) documentation.
+Pulumi Deployments has two new features to help manage complex infrastructure projects more easily. The Deployment Webhook Destinations allow automatic triggering of updates in dependent stacks when changes occur in the parent stack. We've also added the Pulumi Auto Deploy Package to simplify the way you express stack dependencies, automating the creation and updating of Deployment Webhooks. For all the details and to get started, visit the [blog post](/blog/dependent-stack-updates/), [auto deploy package](/registry/packages/auto-deploy/) registry page, and [Pulumi Deployments](/docs/deployments/concepts/) documentation.
 
 ## Core
 
@@ -176,7 +176,7 @@ $ pulumi convert --from terraform --language csharp --out pulumi
 
 ### Pulumi New support for SSH-style Git URLs
 
-In the [v3.77.0](https://github.com/pulumi/pulumi/releases/tag/v3.77.0) release of the Pulumi CLI, we added support for `pulumi new` to use SSH-style Git URLs which enables accessing templates from private Git repos, authenticated via normal Git SSH support.  Many teams have been building libraries of their own private templates, and this enables those templates to be used much more naturally via `pulumi new` and the [Deploy with Pulumi](/docs/pulumi-cloud/pulumi-button/) button.
+In the [v3.77.0](https://github.com/pulumi/pulumi/releases/tag/v3.77.0) release of the Pulumi CLI, we added support for `pulumi new` to use SSH-style Git URLs which enables accessing templates from private Git repos, authenticated via normal Git SSH support.  Many teams have been building libraries of their own private templates, and this enables those templates to be used much more naturally via `pulumi new` and the [Deploy with Pulumi](/docs/idp/integrations/pulumi-button/) button.
 
 ```shell
 $ pulumi new git@github.com:acmecorp/templates/website

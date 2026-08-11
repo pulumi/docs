@@ -107,4 +107,4 @@ so we cannot access them in the same way.
 
 ## Availability
 
-This feature is available in all stable SDKs for Pulumi, starting from v3.55.0. [Give it a spin](/docs/iac/get-started/) and share your thoughts with us on [Slack](https://slack.pulumi.com/)!
+This feature is available in all stable SDKs for Pulumi, starting from v3.55.0. [Give it a spin](/docs/get-started/) and share your thoughts with us on [Slack](https://slack.pulumi.com/)!

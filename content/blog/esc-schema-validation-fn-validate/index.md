@@ -63,7 +63,7 @@ If any required field is missing or has the wrong type, the environment cannot b
 
 ## Reusing schemas across environments
 
-Define schemas once and reference them across multiple environments. Using the [`environments` built-in property](/docs/esc/environments/syntax/builtin-properties/environments/) keeps the schema out of your environment's output:
+Define schemas once and reference them across multiple environments. Using the [`environments` built-in property](/docs/esc/concepts/interpolations-and-references/) keeps the schema out of your environment's output:
 
 **Schema environment (my-project/schemas)**
 
@@ -119,4 +119,4 @@ Enable `fn::validate` for:
 
 The `fn::validate` function is available now in all Pulumi ESC environments. Add schema validation to your existing environments or use it when creating new ones.
 
-For more information, see the [fn::validate documentation](/docs/esc/environments/syntax/builtin-functions/fn-validate/).
+For more information, see the [fn::validate documentation](/docs/esc/concepts/builtin-functions/fn-validate/).

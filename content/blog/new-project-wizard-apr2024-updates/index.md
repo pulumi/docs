@@ -15,7 +15,7 @@ category: product
 
 ---
 
-We're constantly evolving the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) to make it the preferred choice for platform teams to empower their internal teams to deploy resources quickly and in adherence to organizational standards. In January, we launched the [Developer Portal Gallery](/blog/developer-portal-gallery/) to boost development velocity and reduce operational friction.  Since then, we have seen strong adoption from our customers and received several new requests. We are excited to share the latest improvements we've made.
+We're constantly evolving the [New Project Wizard](/docs/idp/concepts/new-project-wizard/) to make it the preferred choice for platform teams to empower their internal teams to deploy resources quickly and in adherence to organizational standards. In January, we launched the [Developer Portal Gallery](/blog/developer-portal-gallery/) to boost development velocity and reduce operational friction.  Since then, we have seen strong adoption from our customers and received several new requests. We are excited to share the latest improvements we've made.
 
 <!--more-->
 

@@ -25,7 +25,7 @@ Customer Managed Agents, [announced earlier this year](/blog/customer-managed-de
 
 ### Key Features of Pulumi Deployments
 
-Customer-Managed agents support all the capabilities of [Pulumi Deployments](/docs/pulumi-cloud/deployments/) including:
+Customer-Managed agents support all the capabilities of [Pulumi Deployments](/docs/deployments/concepts/) including:
 
 1. **Multiple Deployment Triggers**: Supports all Pulumi Deployment triggers such as Drift Detection, Scheduled Deployments, click to deploy, REST API, Git push to deploy, Review Stacks, and remote Automation API.
 2. **OpenID Authentication**: Fetch tokens dynamically for increased security.
@@ -39,7 +39,7 @@ By default, Customer-Managed Agents are deployed on Virtual Machines using Docke
 
 To use Kubernetes for running Customer-Managed Agents:
 
-1. **Install the Pulumi GitHub App**: [Install the Pulumi GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app) and ensure that it is integrated with your source control.
+1. **Install the Pulumi GitHub App**: [Install the Pulumi GitHub App](/docs/integrations/version-control/github-app/) and ensure that it is integrated with your source control.
 1. **Set Up Deployment Pools**:
    - Navigate to Deployment Runners under Organization Settings in the left hand navigation bar.
    - Create a new pool by clicking 'Add new pool'
@@ -63,6 +63,6 @@ To increase deployment concurrency, use the same token to set up multiple agents
 
 Customer-Managed Agents with Kubernetes support empower you to manage deployments according to your specific needs. Whether it’s for security, compliance, or operational efficiency, this feature provides the flexibility and control necessary for modern infrastructure management.
 
-For more details, check out our [documentation](/docs/pulumi-cloud/deployments/customer-managed-agents/#kubernetes) or [contact our sales team](/contact) to get started with Customer-Managed Agents today.
+For more details, check out our [documentation](/docs/deployments/concepts/customer-managed-runners/#kubernetes) or [contact our sales team](/contact) to get started with Customer-Managed Agents today.
 
 Feel free to reach out with feedback or questions. We’re here to support you every step of the way.

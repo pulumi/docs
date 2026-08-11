@@ -13,7 +13,7 @@ tags:
 category: product
 ---
 
-Today, we’re excited to introduce [**Pulumi ESC**](/product/esc/), a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments.  Pulumi ESC introduces a new category of configuration-as-code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.
+Today, we’re excited to introduce [**Pulumi ESC**](/product/secrets-management/), a new product from Pulumi that manages and tames secrets and configuration complexity across all of your cloud infrastructure and application environments.  Pulumi ESC introduces a new category of configuration-as-code product, motivated by our experience working with hundreds of Pulumi IaC customers to address their needs in managing secrets and configuration at scale within their Pulumi infrastructure and across other cloud applications and infrastructure projects.
 
 <!--more-->
 
@@ -129,9 +129,9 @@ values:
           duration: 1h
 ```
 
-This indicates that we want to pull a set of AWS credentials from the aws-login dynamic provider, which expects a few inputs - including a `roleArn` we would like to assume and a `duration` for the short lived AWS credentials that will be returned.  If we have [configured OIDC in AWS](/docs/pulumi-cloud/esc/providers/aws-login) to allow this Pulumi Cloud organization and environment to request short-lived credentials, then this will allow our environment to dynamically pull in those credentials for an authenticated user, and present back a config object that includes them.
+This indicates that we want to pull a set of AWS credentials from the aws-login dynamic provider, which expects a few inputs - including a `roleArn` we would like to assume and a `duration` for the short lived AWS credentials that will be returned.  If we have [configured OIDC in AWS](/docs/esc/providers/login/aws-login/) to allow this Pulumi Cloud organization and environment to request short-lived credentials, then this will allow our environment to dynamically pull in those credentials for an authenticated user, and present back a config object that includes them.
 
-To see the values computed by an environment, we need to "open" it.  That can be done via the CLI, the REST API or the integrations into other systems (like Pulumi IaC).  Let’s open it with the `pulumi` CLI first.  [Install the Pulumi CLI](/docs/iac/download-install/), and then run the following commands:
+To see the values computed by an environment, we need to "open" it.  That can be done via the CLI, the REST API or the integrations into other systems (like Pulumi IaC).  Let’s open it with the `pulumi` CLI first.  [Install the Pulumi CLI](/docs/install/), and then run the following commands:
 
 ```shell
 $ pulumi env ls
@@ -286,7 +286,7 @@ Pulumi ESC is a new kind of configuration management offering that addresses per
 
 You can learn more about Pulumi ESC at:
 
-* [Getting Started](/docs/pulumi-cloud/esc/get-started)
-* [Documentation](/docs/pulumi-cloud/esc)
+* [Getting Started](/docs/esc/get-started/)
+* [Documentation](/docs/esc/)
 * [Open Source](https://github.com/pulumi/esc)
 * [Community Slack](https://slack.pulumi.com/)

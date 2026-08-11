@@ -235,6 +235,6 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/esc/providers/secrets/aws-secrets/).
 
 The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.
