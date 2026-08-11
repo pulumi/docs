@@ -1,6 +1,6 @@
 ---
-title_tag: Pulumi Get Started: Infrastructure as Code Tutorial
-meta_desc: Learn infrastructure as code hands-on: install Pulumi, write your first program in a language you know, and deploy to AWS, Azure, or GCP in minutes.
+title_tag: "Pulumi Get Started: Infrastructure as Code Tutorial"
+meta_desc: "Learn infrastructure as code hands-on: install Pulumi, write your first program in a language you know, and deploy to AWS, Azure, or GCP in minutes."
 title: Get Started #Breadcrumb
 h1: Get Started with Pulumi # Page title
 no_on_this_page: true
