@@ -356,7 +356,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
@@ -491,7 +491,7 @@ jobs:
           # validator-fix chain. Don't re-add it without wiring in full validation
           # first; the composer lane in claude-code-review.yml is a different job
           # shape and keeps its low effort.
-          claude_args: '--model claude-opus-5 --effort medium --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
+          claude_args: '--model claude-opus-5 --effort medium --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash ${{ github.workspace }}/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
 
       # Re-post the one-click style suggestions and reconcile the pinned
       # comment against what actually landed. Delete-and-repost, exactly like
@@ -509,7 +509,7 @@ jobs:
       # continue-on-error: suggestions are a convenience layer; a failure here
       # must never mark a successful review as errored.
       - name: Post inline style suggestions
-        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.pr_number != ''
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -533,7 +533,7 @@ jobs:
       # traffic for free — and a run of them is the case for revisiting the
       # model config rather than leaning harder on the repair.
       - name: Report evidence-spine floor
-        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.pr_number != ''
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
         continue-on-error: true
         run: |
           if [ ! -f /tmp/splice-spine.json ]; then
@@ -567,7 +567,7 @@ jobs:
       # fires repeatedly, that is the case for either stripping the marker
       # automatically or bringing real validation to this lane.
       - name: Warn on forged [style-blocker] provenance
-        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.pr_number != ''
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

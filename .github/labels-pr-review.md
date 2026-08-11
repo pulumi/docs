@@ -10,7 +10,7 @@ Informational signal labels — surfaced for human filterability. Routing in CI 
 
 | Label | Color | Description |
 |---|---|---|
-| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/learn/`, `content/tutorials/`, `content/what-is/`). |
+| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/tutorials/`, `content/what-is/`). |
 | `domain:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
 | `domain:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, or build/bundling config. |
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |
@@ -24,7 +24,7 @@ Load-bearing — these gate workflow execution.
 |---|---|---|
 | `review:trivial` | `c2e0c6` | Tiny prose-only change. Skips Claude review entirely; lint still runs. Set by triage. |
 | `review:frontmatter-only` | `e0f5d8` | Hugo content `.md` files where every change is inside the frontmatter block. Skips Claude review; lint still runs. Set by triage. |
-| `review:oversized` | `f9d0c4` | Diff exceeds the automated review budget (>15K changed lines — in practice generated corpora). Skips Claude review; triage posts a `<!-- TRIAGE_OVERSIZED -->` advisory comment. Set by triage. |
+| `review:oversized` | `f9d0c4` | Diff exceeds the automated review budget (>15K changed lines or >150 files — in practice generated corpora). Skips Claude review; triage posts a `<!-- TRIAGE_OVERSIZED -->` advisory comment. Set by triage. |
 | `review:prose-flagged` | `fef2c0` | Trivial or frontmatter-only PR where triage's prose-check pass found possible spelling/grammar issues. See the `<!-- TRIAGE_PROSE -->` comment. Set by triage. |
 | `review:triaging` | `e8db95` | Claude Triage is currently classifying the PR (domain routing, trivial/frontmatter-only short-circuit). Visible from PR-open until triage finishes (~10-60s). |
 | `review:in-progress` | `fbca04` | Claude review is currently running for this PR's current state. |

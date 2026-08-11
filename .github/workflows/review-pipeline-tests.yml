@@ -1,0 +1,45 @@
+name: Review pipeline tests
+
+# Runs the review pipelines' own test suites (pre-merge PR review, daily
+# content review, blog known-issues index) on any PR that touches them.
+#
+# These suites already existed and were green, but nothing ran them: `make
+# test` covers only the example programs, and no workflow invoked pytest or a
+# --self-test. Two defects reached master through that gap — a selector
+# bot-author omission that suppressed the staleness clock on ~65% of docs
+# pages, and a test file that errored under pytest collection.
+#
+# Path-filtered so it only fires on pipeline changes; content-only PRs (the
+# large majority) never see this job.
+on:
+  pull_request:
+    paths:
+      - 'scripts/content-review/**'
+      - 'scripts/blog-review/**'
+      - 'scripts/test-review-pipeline.sh'
+      - '.claude/commands/docs-review/scripts/**'
+      - '.github/workflows/review-pipeline-tests.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: review-pipeline-tests-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Run review-pipeline test suites
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install test deps
+        run: python3 -m pip install --quiet pytest pyyaml
+      - name: Run suites
+        run: ./scripts/test-review-pipeline.sh

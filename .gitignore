@@ -113,9 +113,17 @@ _vendor/
 /.content-review-queue.json
 /.content-review-verdict.json
 /.content-review-ledger.json
+/.content-review-claims.json
 /.ledger-cache/
 /.traffic-snapshot
+/.reader-signals.json
 /.synthetic.patch
+# Volatile-claim re-verification (claims-reverify.yml) and the shared
+# signal-health state both lanes read-modify-write.
+/.claims-reverify-report.json
+/.claims-cache/
+/.health-state.json
+/.health-alert.txt
 # Local cache for scripts/review-admin (synced S3 ledgers, exports, dashboard).
 /.review-admin-cache/
 # Lint re-gate scratch (worker re-lints the fix branch and captures output).
@@ -144,7 +152,18 @@ _vendor/
 /.frontmatter-validation.json
 /.cross-sibling-discovery.json
 /.readthrough-findings.json
+/.syntax-findings.json
+/.editorial-balance.json
+/.hugo-build.json
 /.pr-body-draft.md
+# Composed review body + the update lane's scratch. The update lane runs with
+# contents: write and grants the model Bash(git:*), so an unignored artifact
+# here can ride along in a `git add -A`.
+/.review-draft.md
+/.pinned-body.md
+/.style-suggestions.json
+/.claude-mention-body.txt
+/.review-changes.u0.diff
 
 .doctrees/
 .buildinfo

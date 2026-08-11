@@ -99,7 +99,7 @@ SHRINK_FLOOR = 0.9
 # Maximum number of surgical violations to fold into a single batched Haiku
 # call. Pre-v16 was N sequential calls (each one rewrites the whole ~50KB
 # body — ~12K output tokens × ~250 tok/s = ~50s/call); a hot review with 30
-# violations cost ~5-10 min wall-clock per upsert-validated retry and tripped
+# violations cost ~5-10 min wall-clock per publish-chain retry and tripped
 # Opus's 2-min Bash timeout, leaving the model to defer to soft-floor without
 # the splices applying. v16 batches all surgical fixes into ONE Haiku call:
 # the body is sent + received once, the per-violation instructions stack

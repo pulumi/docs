@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """Tests for select-posts.py.
 
-Self-contained — run with `python3 test_select_posts.py` (no pytest dep).
+Self-contained — run with `python3 test_select_posts.py` (no pytest dep). The
+cases are named `_case_*` rather than `test_*` on purpose: pytest still collects
+this file by name, and a `test_*(tmp: Path)` signature makes it error out
+looking for a `tmp` fixture that doesn't exist. Keep new cases `_case_*` and
+call them from main().
+
 Builds a throwaway git repo with a miniature content/blog tree committed at
 controlled dates by human and bot authors, plus fixture ledger/traffic/signals
 files, and shells out to the script with `--today` (frozen clock), asserting
@@ -143,7 +148,7 @@ def write_ledger(tmp: Path, entries: list[dict]) -> Path:
     return d
 
 
-def test_age_based_sweep(tmp: Path) -> None:
+def _case_age_based_sweep(tmp: Path) -> None:
     print("test: degraded (no traffic) selection is an oldest-first sweep")
     repo = make_repo(tmp / "t1")
     q = run_select(repo, "--count", "10")
@@ -164,7 +169,7 @@ def test_age_based_sweep(tmp: Path) -> None:
     check(q["posts"][0]["post_date"] == "2019-01-01", "post_date carried on the entry")
 
 
-def test_ledger_clock(tmp: Path) -> None:
+def _case_ledger_clock(tmp: Path) -> None:
     print("test: ledger review advances the clock; incomplete does not; cap excludes")
     repo = make_repo(tmp / "t2")
     ledger = write_ledger(tmp / "t2", [
@@ -192,7 +197,7 @@ def test_ledger_clock(tmp: Path) -> None:
           "attempt-capped post is excluded")
 
 
-def test_traffic_and_gsc(tmp: Path) -> None:
+def _case_traffic_and_gsc(tmp: Path) -> None:
     print("test: traffic weights equally stale posts; GSC boost is boost-only")
     repo = make_repo(tmp / "t3")
     # Give every post the same publish date so staleness ties and importance
@@ -245,7 +250,7 @@ def test_traffic_and_gsc(tmp: Path) -> None:
           "sub-noise-floor impressions are neutral")
 
 
-def test_paths_override_and_output(tmp: Path) -> None:
+def _case_paths_override_and_output(tmp: Path) -> None:
     print("test: --paths bypasses scoring/filters; GITHUB_OUTPUT contract")
     repo = make_repo(tmp / "t4")
     gh_out = tmp / "t4" / "gh_output"
@@ -268,7 +273,7 @@ def test_paths_override_and_output(tmp: Path) -> None:
     check(proc.returncode == 1, "unknown --paths entry fails loudly")
 
 
-def test_determinism(tmp: Path) -> None:
+def _case_determinism(tmp: Path) -> None:
     print("test: repeated runs produce identical ordering")
     repo = make_repo(tmp / "t5")
     a = paths(run_select(repo, "--count", "10"))
@@ -281,11 +286,11 @@ def test_determinism(tmp: Path) -> None:
 def main() -> int:
     with tempfile.TemporaryDirectory() as d:
         tmp = Path(d)
-        test_age_based_sweep(tmp)
-        test_ledger_clock(tmp)
-        test_traffic_and_gsc(tmp)
-        test_paths_override_and_output(tmp)
-        test_determinism(tmp)
+        _case_age_based_sweep(tmp)
+        _case_ledger_clock(tmp)
+        _case_traffic_and_gsc(tmp)
+        _case_paths_override_and_output(tmp)
+        _case_determinism(tmp)
 
     if _failures:
         print(f"\n{len(_failures)} failure(s), {_passes} passed", file=sys.stderr)

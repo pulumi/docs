@@ -54,7 +54,7 @@ Format for terminal display. Include the scope in the summary, and offer to broa
 
 ## Outcome telemetry (quarterly review)
 
-Every closed PR's pinned review encodes what happened to its findings (✅ Resolved = fixed, `concede:` = conceded, `🛡️ Disputed … model held` = disputed, still-🚨-at-merge = ignored). `scripts/scrape-review-outcomes.py` derives per-finding outcomes from that structure; the weekly digest (`scripts/weekly-digest/digest.py`) aggregates the trailing week automatically. Quarterly, run the long-window tuning report:
+Every closed PR's pinned review encodes what happened to its findings (✅ Resolved = fixed, `concede:` = conceded, `🛡️ Disputed … model held` = disputed, still-🚨-at-merge = ignored). `.claude/commands/docs-review/scripts/scrape-review-outcomes.py` derives per-finding outcomes from that structure; the weekly digest (`scripts/weekly-digest/digest.py`) aggregates the trailing week automatically. Quarterly, run the long-window tuning report:
 
 ```bash
 uv run .claude/commands/docs-review/scripts/scrape-review-outcomes.py \
