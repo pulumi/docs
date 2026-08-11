@@ -597,3 +597,57 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+TRIAGED_UNWRAPPED = (
+    "### ⚠️ Low-confidence\n\n"
+    "_No low-confidence findings._\n\n"
+    "### 📋 Triaged verifier findings\n\n"
+    "- **[L107]** `a.md` — *\"claim one\"* — **Spurious:** verifier compared the wrong sibling.\n\n"
+    "- **[L60]** `b.md` — *\"claim two\"* — **Mis-sourced:** cited URL is unrelated.\n\n"
+    "- ~~**[L405]** `c.md` — **Mis-sourced.**~~ **This triage was wrong** — promoted to 🚨.\n\n"
+    "### 💡 Pre-existing issues in touched files (optional)\n\n"
+    "_No pre-existing issues in touched files._\n"
+)
+TRIAGED_VIOLATION = {
+    "rule_id": "triaged-details-wrapper",
+    "line_ref": "<### 📋 Triaged verifier findings>",
+    "expected": "bullets wrapped in <details> with the summary line",
+    "actual": "section has bullets but no <details> wrapper",
+    "hint": "Re-wrap the bullets.",
+}
+
+
+def test_triaged_details_wrapper_rewraps_without_touching_bullets():
+    """The editorial pass can replace the placeholder AND the wrapper around it.
+
+    Re-wrapping must be purely additive — the triage prose is the valuable part
+    and the splicer must not reflow, reorder, or drop any of it, including the
+    struck-through 'this triage was wrong' form that isn't a bucket bullet.
+    """
+    new_body, applied, fallback = splicer.apply_splices(TRIAGED_UNWRAPPED, [TRIAGED_VIOLATION])
+    assert applied == ["triaged-details-wrapper"], (applied, fallback)
+    assert "<summary><em>I double-checked these" in new_body
+    for original in ("claim one", "claim two", "**Spurious:**", "**Mis-sourced:**",
+                     "~~**[L405]**", "This triage was wrong"):
+        assert original in new_body, original
+    # Wrapper encloses the bullets, and the neighbouring sections are untouched.
+    assert new_body.index("<details>") < new_body.index("**[L107]**") < new_body.index("</details>")
+    assert new_body.index("⚠️ Low-confidence") < new_body.index("📋 Triaged")
+    assert new_body.index("📋 Triaged") < new_body.index("💡 Pre-existing")
+
+
+def test_triaged_details_wrapper_is_idempotent():
+    once, _, _ = splicer.apply_splices(TRIAGED_UNWRAPPED, [TRIAGED_VIOLATION])
+    twice, applied, fallback = splicer.apply_splices(once, [TRIAGED_VIOLATION])
+    assert applied == [] and fallback == ["triaged-details-wrapper"], (applied, fallback)
+    assert once == twice
+
+
+def test_triaged_details_wrapper_defers_on_partial_wrapper():
+    """A <details> already open in the section is ambiguous — don't guess."""
+    partial = TRIAGED_UNWRAPPED.replace(
+        "### 📋 Triaged verifier findings\n\n",
+        "### 📋 Triaged verifier findings\n\n<details>\n<summary><em>something else</em></summary>\n\n")
+    _, applied, fallback = splicer.apply_splices(partial, [TRIAGED_VIOLATION])
+    assert applied == [] and fallback == ["triaged-details-wrapper"]

@@ -88,6 +88,7 @@ EMPTY_FORMS = {
 # bucket-bullet prefix prepends run last so trail records are stable.
 APPLY_ORDER = [
     "mandatory-h3-order",
+    "triaged-details-wrapper",
     "internal-link-existence",
     "shortcode-existence",
     "verified-claims-trail-faithful",
@@ -328,6 +329,47 @@ def splice_mandatory_h3_order(lines: list[str], violation: dict) -> tuple[list[s
 
     block = empty_form.split("\n") + [""]
     return lines[:insert_idx] + block + lines[insert_idx:], True
+
+
+TRIAGED_HEADING = "📋 Triaged verifier findings"
+TRIAGED_SUMMARY_LINE = (
+    "<summary><em>I double-checked these and realized they weren't real findings "
+    "— click to expand</em></summary>"
+)
+
+
+def splice_triaged_details_wrapper(lines: list[str], violation: dict) -> tuple[list[str], bool]:
+    """Re-wrap the 📋 section's bullets in their collapsed `<details>`.
+
+    Purely additive: the bullets are kept byte-for-byte and only the wrapper is
+    rebuilt around them. That is what makes this surgical rather than a
+    re-render — the editorial pass's triage prose is the valuable part and this
+    never touches it.
+
+    Defers to fallback if a `<details>` is already open in the section (a
+    partial wrapper is ambiguous — we would have to guess whether the bullets
+    belong inside it), or if the section has no bullets (nothing to wrap;
+    strip-empty-triaged.py owns that case).
+    """
+    span = _section_span(lines, TRIAGED_HEADING)
+    if span is None:
+        return lines, False
+    start, end = span
+    body = lines[start:end]
+    if any(ln.strip().startswith("<details>") for ln in body):
+        return lines, False
+
+    # Split heading from content, preserving the bullets exactly.
+    content = body[1:]
+    while content and not content[0].strip():
+        content.pop(0)
+    while content and not content[-1].strip():
+        content.pop()
+    if not content:
+        return lines, False
+
+    rebuilt = [body[0], "", "<details>", TRIAGED_SUMMARY_LINE, "", *content, "", "</details>", ""]
+    return lines[:start] + rebuilt + lines[end:], True
 
 
 def splice_trail_per_verdict_emoji(lines: list[str], violation: dict) -> tuple[list[str], bool]:
@@ -672,6 +714,7 @@ SPLICERS = {
     "internal-link-existence": splice_internal_link_existence,
     "shortcode-existence": splice_shortcode_existence,
     "mandatory-h3-order": splice_mandatory_h3_order,
+    "triaged-details-wrapper": splice_triaged_details_wrapper,
     "trail-per-verdict-emoji": splice_trail_per_verdict_emoji,
     "trail-canonical-verdict-word": splice_trail_canonical_verdict_word,
     "verified-claims-trail-faithful": splice_verified_claims_trail_faithful,
