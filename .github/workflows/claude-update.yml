@@ -464,18 +464,34 @@ jobs:
 
             Advisory style findings are **not** tracked across reviews. Each `#update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved advisory nits into ✅ Resolved. Blocker-tier `[style-blocker]` bullets ARE tracked like regular findings: when a fix-push resolves one, move it to ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches and `[style-blocker]` bullets, not advisory `[style]` bullets.
 
-          # Effort is deliberately left unset on this lane. A 2026-07-30 fork A/B
-          # found `--effort low` makes the re-entrant path rewrite the pinned
-          # review WITHOUT the 🔍 Verification trail, 📊 Editorial balance, and
-          # investigation-log blocks (2/2 runs; the control kept all three). The
-          # loss is permanent — later updates merge from the prior comment — and
-          # invisible, because this workflow runs only `validate-pinned.py
-          # count-buckets`, never the validate → splice → validator-fix chain.
-          # The 2026-07-24 measurement that motivated the flag compared cost and
-          # latency only, not output completeness. Don't re-add it here without
-          # wiring in full validation first; the composer lane in
-          # claude-code-review.yml is a different case and keeps its low effort.
-          claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
+          # Model and effort are set from the 2026-08-10 campaign
+          # (`2026-08-10-update-lane-model-config` in pulumi/docs-review-benchmarks),
+          # a synthetic replay of this lane: 4 arms x 3 reps x 2 chained refreshes,
+          # scored on whether the re-rendered pinned body keeps its evidence spine
+          # (the 🔍 Verification trail's line floor, 📊 Editorial balance, and the
+          # investigation log). opus-5 at medium effort was the only arm intact in
+          # every cell (6/6); sonnet-5 with effort unset — what ran here before —
+          # and opus-5 unset each lost the spine in 1 of 6. It also gets there in
+          # 0.43x the output tokens and 0.64x the turns — but Opus is 2.5x Sonnet
+          # per token, so it costs ~1.25x, about $0.27 more per refresh at the
+          # rate this lane fires. That premium is permanent: Sonnet 5's $2/$10
+          # introductory rate was made its standing price on 2026-08-10, so the
+          # crossover the first cut of this comment predicted never happens.
+          # It buys removing a failure that is unrecoverable (the pinned comment
+          # is the only copy of the trail) and unvalidated on this lane.
+          #
+          # `--effort low` stays OFF this lane. It rewrites the pinned review
+          # without the trail's contents — keeping the heading and replacing 40
+          # claim lines with a "see the full trail in the prior pass" pointer that
+          # dangles, because the prior pass is the comment it just overwrote. One
+          # rep of three collapsed to 11 of 40 lines and held exactly 11 through
+          # the next refresh. The loss is permanent — later updates merge from the
+          # prior comment — and invisible, because this workflow runs only
+          # `validate-pinned.py count-buckets`, never the validate → splice →
+          # validator-fix chain. Don't re-add it without wiring in full validation
+          # first; the composer lane in claude-code-review.yml is a different job
+          # shape and keeps its low effort.
+          claude_args: '--model claude-opus-5 --effort medium --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
 
       # Re-post the one-click style suggestions and reconcile the pinned
       # comment against what actually landed. Delete-and-repost, exactly like
@@ -503,6 +519,39 @@ jobs:
             --repo "${{ github.repository }}" \
             --vale-findings .vale-findings.json \
             --annotate-pinned
+
+      # Surface the evidence-spine floor's verdict. The floor itself runs inside
+      # `pinned-comment.sh upsert`, which the MODEL calls from its own Bash tool
+      # — and this action does not echo tool output into the job log, so without
+      # this step the check is completely invisible from CI: a run where it held
+      # and a run where it never executed look identical.
+      #
+      # The ::warning:: on a restore is the point, not decoration. Every real
+      # restore is a production instance of the model dropping the review's
+      # evidence spine, which is exactly the rate the 2026-08-10 campaign had to
+      # measure synthetically. Surfaced here, the lane measures it on live
+      # traffic for free — and a run of them is the case for revisiting the
+      # model config rather than leaning harder on the repair.
+      - name: Report evidence-spine floor
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.pr_number != ''
+        continue-on-error: true
+        run: |
+          if [ ! -f /tmp/splice-spine.json ]; then
+            echo "::warning::No evidence-spine floor report. pinned-comment.sh upsert did not run, or ran without reaching the floor check — the refreshed review published unguarded."
+            exit 0
+          fi
+          echo "evidence-spine floor report:"
+          cat /tmp/splice-spine.json
+          status=$(jq -r '.status // "unknown"' /tmp/splice-spine.json)
+          case "$status" in
+            restored)
+              secs=$(jq -r '[.restored[].section] | join(", ")' /tmp/splice-spine.json)
+              echo "::warning::The refreshed review dropped evidence-spine section(s) — $secs — and they were restored from the previous pinned comment. The published review is correct; the render was not."
+              ;;
+            error)
+              echo "::warning::The evidence-spine floor errored and the review published as rendered: $(jq -r '.error' /tmp/splice-spine.json)"
+              ;;
+          esac
 
       # Provenance spot-check. The full validate -> splice -> re-validate chain
       # does not run on this lane (the model renders the body freehand and

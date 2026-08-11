@@ -187,7 +187,7 @@ These tools query your Pulumi Cloud organization:
 
 These tools launch and manage automated infrastructure tasks via Pulumi Neo:
 
-- **`neo-bridge`** - Launch a new Pulumi Neo task. Neo will analyze your request, create a plan, and execute it autonomously. Returns a link to track progress in Pulumi Console.
+- **`neo-task-launcher`** - Launch a new Pulumi Neo task. Neo analyzes your request, creates a plan, and executes it autonomously. Returns a link to track progress in the Pulumi Cloud console.
 
 - **`neo-get-tasks`** - List your Neo tasks and their current status.
 
@@ -275,7 +275,7 @@ For complex infrastructure tasks, delegate to Neo:
 
 The assistant will:
 
-- Use `neo-bridge` to launch a Neo task
+- Use `neo-task-launcher` to launch a Neo task
 - Provide a link to track Neo's progress in Pulumi Console
 - Neo will autonomously create a plan, analyze buckets, generate fixes, and create a PR
 
@@ -322,7 +322,7 @@ Delegate to Neo for tasks that require:
 
 **AI Assistant response:**
 
-1. Uses `neo-bridge` to launch a task with the instructions
+1. Uses `neo-task-launcher` to launch a task with the instructions
 2. Provides link: "Neo task created: https://app.pulumi.com/pulumi/tasks/abc123"
 3. Neo autonomously:
    - Searches for security groups with overly permissive SSH rules
@@ -337,7 +337,7 @@ Delegate to Neo for tasks that require:
 
 **AI Assistant response:**
 
-1. Uses `neo-bridge` to launch the migration task
+1. Uses `neo-task-launcher` to launch the migration task
 2. Neo creates a plan covering:
    - Finding all Lambda functions with Python 3.8 runtime
    - Updating runtime to Python 3.12
@@ -417,7 +417,7 @@ If `resource-search` isn't finding resources:
 
 ### Neo tasks not starting
 
-If `neo-bridge` fails to launch tasks:
+If `neo-task-launcher` fails to launch tasks:
 
 1. **Check Neo access**: Verify you have access to Pulumi Neo in your organization
 2. **Verify task description**: Ensure your task instructions are clear and actionable

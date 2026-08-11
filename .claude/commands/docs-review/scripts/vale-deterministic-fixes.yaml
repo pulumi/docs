@@ -22,7 +22,8 @@
 # reviewer can verify rather than compose; anything requiring an editorial
 # rewrite or a context-dependent choice is deliberately excluded (see below).
 deterministic_fix:
-  - Pulumi.Substitutions        # Fixed swaps: click->select, public beta->public preview, ...
+  - Pulumi.Substitutions        # Fixed terminology swaps: public beta->public preview, CrossGuard->Pulumi Policies, ...
+  - Pulumi.WordChoice           # Fixed word-preference swaps: click->select, go to->navigate to.
   - Pulumi.Nomenclature         # Canonical product-name spellings: pulumi esc->Pulumi ESC, ...
   - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
   - Google.Spelling             # Single suggested spelling for an unambiguous misspelling.
@@ -39,11 +40,16 @@ deterministic_fix:
 # exempts blockers from the per-file/total caps so one is never silently
 # dropped.
 blocker:
-  - Pulumi.Substitutions        # Banned term with a fixed correct replacement.
+  - Pulumi.Substitutions        # Wrong term (dead brand name, misstated lifecycle stage) with a fixed correct replacement.
   - Pulumi.Nomenclature         # Misspelled/miscased Pulumi product name.
   - Pulumi.PoliciesSingular     # Grammatical agreement error ("policies is").
   - Google.Spelling             # Unambiguous misspelling.
   - Pulumi.DeprecatedProductNames  # "Pulumi Service" is always wrong; the replacement (Cloud/ESC/Deployments) is the author's call, but shipping the dead name is not.
+# Pulumi.WordChoice (click->select, go to->navigate to) is deliberately absent
+# from `blocker:` despite having a deterministic fix — those swaps are house
+# word preferences, not correctness errors, so they fail this list's admission
+# criterion and stay advisory. That distinction is why WordChoice was split out
+# of Substitutions in the first place (styles/Pulumi/WordChoice.yml).
 
 # Deliberately NOT listed ABOVE IN `deterministic_fix` (no fixed replacement --
 # the reviewer must compose the fix) and why. Note this says nothing about

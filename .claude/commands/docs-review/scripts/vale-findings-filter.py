@@ -103,6 +103,7 @@ DETERMINISTIC_FIX_RULES, BLOCKER_RULES = load_rule_lists()
 # Unmapped rules fall back to "style".
 RULE_CATEGORIES: dict[str, str] = {
     "Pulumi.Substitutions": "substitution",
+    "Pulumi.WordChoice": "word choice",
     "Pulumi.Nomenclature": "nomenclature",
     "Pulumi.DeprecatedProductNames": "deprecated product name",
     "Pulumi.BannedWords": "inclusive language",
