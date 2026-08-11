@@ -212,6 +212,10 @@ VCS-backed templates require that your Pulumi account has an integration configu
 This can be set up by navigating to your organization's "Settings → Integrations" tab, under the "Organization Template Sources" section.
 If you have not already authorized you will see an "Authorize GitHub" or "Authorize GitLab" button. Click the button and accept the required permissions.
 
+Template source content itself is fetched using the Pulumi GitHub app, so the app must also be installed and connected to your Pulumi organization for GitHub-backed sources. See the GitHub app [installation instructions](/docs/integrations/version-control/github-app/) for more details.
+
+Because the app is installed and granted repository access at the organization level, any repository it can reach becomes usable as a template source by every member of your Pulumi organization — regardless of whether an individual member's own GitHub user has access to that repository. An organization admin who adds a source is assumed to be making it available to the whole organization.
+
 #### Template destinations
 
 VCS-backed template destinations only support GitHub as they leverage Deployments for Pulumi operations.
@@ -219,18 +223,18 @@ If you plan on using no-code or CLI deployment methods these prerequisites are n
 
 ##### GitHub OAuth
 
-This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when fetching and creating private repositories.
-More specifically, this ensures that only repositories your GitHub user would normally have access can be used as template sources.
+This authorization is needed in order to act on your behalf (and not as the Pulumi GitHub app) when creating private repositories; template source content is fetched using the Pulumi GitHub app.
+More specifically, this ensures that any repositories created on your behalf are created using your own GitHub user's permissions, rather than the (potentially broader) access granted to the Pulumi GitHub app.
 
 Navigating to your organization's "Settings → Integrations" tab will show an "Organization Template Sources" section. If you have not already authorized the app you will see an "Authorize GitHub" button. Click the button and accept the required permissions. This can also be set up during the new [project wizard flow](/docs/idp/concepts/new-project-wizard/#vcs-authorization).
 
-If you have OAuth App access restrictions enabled in your Github organization, you will also need to
-[authorize the Pulumi Github App](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
+If you have OAuth App access restrictions enabled in your GitHub organization, you will also need to
+[approve the Pulumi OAuth app](https://docs.github.com/en/organizations/managing-oauth-access-to-your-organizations-data/approving-oauth-apps-for-your-organization)
 in the "OAuth App Policy" settings.
 
 ##### GitHub App
 
-You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/concepts/settings/) on new projects.
+You will need the Pulumi GitHub application installed and connected to your Pulumi organization in order to configure [Deployment settings](/docs/deployments/concepts/settings/) on new projects. It is also what fetches content from configured template sources (see [Template sources](#template-sources) above).
 See the GitHub app [installation instructions](/docs/integrations/version-control/github-app/) for more details.
 
 {{% notes type="info" %}}
@@ -247,6 +251,6 @@ Enter sources as `github.com/<owner>/<repo>/<optional subdirectory>`. A source c
 - `github.com/pulumi/templates` (all public Pulumi templates)
 - `github.com/pulumi/templates/aws-typescript` (a specific public template)
 
-Private repositories work similarly as long as your GitHub user has access to the repository.
+Private repositories work similarly, as long as the Pulumi GitHub app has been granted access to the repository (see the [GitHub App](#github-app) prerequisite) — an individual member's own GitHub user does not need direct access to the repository.
 
 After you have configured template sources, the private registry and New Project Wizard will allow users to use those sources when creating new projects with Deployments.
