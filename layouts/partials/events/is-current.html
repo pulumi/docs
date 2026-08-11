@@ -13,7 +13,11 @@
 */ -}}
 {{- $page := .page -}}
 {{- $upcoming := false -}}
-{{- range partialCached "events/upcoming.html" . "global" -}}
+{{- /* events/upcoming.html takes the cutoff as its context, so pass the one the
+       events list uses (and its cache key, so the two share the single pass over
+       site.Pages) — not this partial's own dict, which has no .UnixMilli and made
+       every event compare as upcoming. */ -}}
+{{- range partialCached "events/upcoming.html" (now.Add (duration "hour" -24)) "upcoming-list" -}}
     {{- if eq .data.RelPermalink $page.RelPermalink }}{{ $upcoming = true }}{{ end -}}
 {{- end -}}
 {{- return or $upcoming (not (not $page.Params.youtube_url)) -}}
