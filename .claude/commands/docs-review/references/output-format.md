@@ -70,6 +70,15 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 
 [Findings worth surfacing but not blocking]
 
+### 📋 Triaged verifier findings
+
+<details>
+<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>
+
+_No triaged findings._
+
+</details>
+
 ### 💡 Pre-existing issues in touched files (optional)
 
 [Pre-existing findings, capped per file at 15]
@@ -95,7 +104,7 @@ Every review — initial or re-entrant, interactive or CI — produces output in
 📖 [How pre-merge review works](…) — the full lifecycle, short-circuits, and escape hatches.
 ```
 
-**Mandatory sections render on every review** — Investigation log, bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
+**Mandatory sections render on every review** — Investigation log, bucket count table, 🔍 Verification trail, 🚨 Outstanding, ⚠️ Low-confidence, 📋 Triaged verifier findings, 📜 Review history, and (for `content/blog/**`) 📊 Editorial balance. When a section has no content, render its explicit-empty form; never omit the heading. (📋 is the one section whose empty form doesn't survive to the published body: `strip-empty-triaged.py` removes it in the post-edit chain when the `_No triaged findings._` marker is still there. The reviewer still never deletes it — the composer re-renders it next run.) The empty form means "checked, nothing to render"; absence means "didn't check." A missing mandatory section is a reviewer bug.
 
 The table header row stays fixed; only the number row changes per review. Bold the numbers so they read at a glance even when zero.
 
@@ -109,7 +118,7 @@ The ⚠️ Low-confidence count does **not** include advisory style suggestions 
 
 ### Composed-draft contract
 
-In CI the workflow's `compose-review.py` pre-step assembles most of this body deterministically into `.review-draft.md` and the reviewer *edits* it (see `.claude/commands/docs-review/ci.md` §2-3 and `docs-review:references:pre-computation` §Bundle architecture). The composer produces, fully assembled and self-consistent: the `## Pre-merge Review` header + timestamp; the 🔍 Verification trail (one line per `.verified-claims.json` verdict, verbatim — verdict word + per-verdict emoji + evidence pointer + source); the bucket-count table (a *starting point* equal to the stub-bullet counts — the reviewer keeps it equal as it edits); the Investigation-log `<details>` block (all 8 bullets, all deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder); the 📊 Editorial-balance Tier 1 (blog only); the `#### Style suggestions` block (advisory tier, expanded, grouped per file) plus any `[style-blocker]` bullets in 🚨; the empty 💡/✅ forms; the 📜 Review-history line; and *stub* 🚨/⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch`/`flagged` → 🚨; `unverifiable` and low-confidence `verified` → ⚠️), each carrying the claim text + the verdict (and its `framing:` note when present) + a `<TODO>` marker. The evidence/source pointer is deliberately NOT repeated in the bullet — it already renders verbatim on that claim's 🔍 trail line, and duplicating it put ~10% of the comment between the claim and the fix. The trail is the evidence record; the bucket bullet is the instruction — including the `route: "preflight"` detector synthetics (Hugo build, frontmatter collisions, readthrough coherence), which render as `🚩 flagged` and are excluded from the fact-check claim counts. The composer does **not** decide which findings surface, write the fix prose, fill the summary / confidence levels / cross-sibling count / review-history summary / Tier-2 editorial-balance counts, or add the findings it can't pre-stub (Hugo-build, frontmatter collisions, internal-link/shortcode breaks, cross-sibling mismatches, code-examples findings, editorial-balance threshold flags, intuition promotions, domain two-question-test findings) — those are `<TODO>`s / the reviewer's editorial pass.
+In CI the workflow's `compose-review.py` pre-step assembles most of this body deterministically into `.review-draft.md` and the reviewer *edits* it (see `.claude/commands/docs-review/ci.md` §2-3 and `docs-review:references:pre-computation` §Bundle architecture). The composer produces, fully assembled and self-consistent: the `## Pre-merge Review` header + timestamp; the 🔍 Verification trail (one line per `.verified-claims.json` verdict, verbatim — verdict word + per-verdict emoji + evidence pointer + source); the bucket-count table (a *starting point* equal to the stub-bullet counts — the reviewer keeps it equal as it edits); the Investigation-log `<details>` block (all 8 bullets, all deterministic except the **Cross-sibling reads** count, which is a `0 of N siblings (fan-out runs in-review — replace this count)` placeholder); the 📊 Editorial-balance Tier 1 (blog only); the `#### Style suggestions` block (advisory tier, expanded, grouped per file) plus any `[style-blocker]` bullets in 🚨; the empty 💡/✅ forms; the 📜 Review-history line; and *stub* 🚨/⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch`/`flagged` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + the verdict (and its `framing:` note when present) + a `<TODO>` marker. The evidence/source pointer is deliberately NOT repeated in the bullet — it already renders verbatim on that claim's 🔍 trail line, and duplicating it put ~10% of the comment between the claim and the fix. The trail is the evidence record; the bucket bullet is the instruction — including the `route: "preflight"` detector synthetics (Hugo build, frontmatter collisions, readthrough coherence), which render as `🚩 flagged` and are excluded from the fact-check claim counts. The composer does **not** decide which findings surface, write the fix prose, fill the summary / confidence levels / cross-sibling count / review-history summary / Tier-2 editorial-balance counts, or add the findings it can't pre-stub (Hugo-build, frontmatter collisions, internal-link/shortcode breaks, cross-sibling mismatches, code-examples findings, editorial-balance threshold flags, intuition promotions, domain two-question-test findings) — those are `<TODO>`s / the reviewer's editorial pass.
 
 **No `<TODO:` placeholder survives to the published body.** Every `<TODO: …>` (and bare `<TODO>`) the composer seeded must be replaced before posting; `validate-pinned.py`'s `no-todo-tokens` rule fails the review otherwise. (The composer suppresses just that one rule when self-checking its own still-`<TODO>`-laden draft, via `--skip-rule no-todo-tokens`; the publish path does not.)
 
@@ -414,6 +423,8 @@ These rules apply to every review, regardless of entry point or domain. Do not s
 | docs | `standard` |
 | blog | `heightened` |
 | programs | `heightened` |
+| website | `heightened` |
 | infra | n/a (no fact-check) |
+| shared-criteria only | n/a (no fact-check) |
 
 Domain files may bump scrutiny internally for whole-file rewrites or new pages.

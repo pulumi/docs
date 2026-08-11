@@ -20,6 +20,7 @@ commits are dated deliberately:
 
 from __future__ import annotations
 
+import ast
 import json
 import os
 import subprocess
@@ -38,6 +39,23 @@ TODAY = "2026-06-12"
 
 _failures: list[str] = []
 _passes = 0
+
+
+def _bot_authors() -> set[str]:
+    """Read BOT_AUTHORS out of select-articles.py without importing it.
+
+    The script's filename is hyphenated (not importable) and it runs argparse
+    at module scope, so the constant is parsed from source instead. Reading it
+    rather than restating it is the point: the test then covers whatever the
+    set actually contains.
+    """
+    tree = ast.parse(SCRIPT.read_text())
+    for node in tree.body:
+        if isinstance(node, ast.Assign) and any(
+            isinstance(t, ast.Name) and t.id == "BOT_AUTHORS" for t in node.targets
+        ):
+            return set(ast.literal_eval(node.value))
+    raise AssertionError("BOT_AUTHORS not found in select-articles.py")
 
 
 def check(cond: bool, msg: str) -> None:
@@ -185,6 +203,37 @@ def main() -> int:
         check(s[STACKS] < s[KEEP], "freshly human-edited page falls below stale tier-3 pages")
         check(s[ONE] == s[TWO], "bot-edited page scores identically to its never-edited tier-3 sibling")
         check(s[ONE] > s[STACKS], "bot edit left the page stale (unlike the human-edited one)")
+
+        # Every name in BOT_AUTHORS must suppress the staleness clock, not just
+        # the one the fixture above happens to use. This is the regression guard
+        # for the real defect: "Pulumi Bot" and "workprentice[bot]" were missing
+        # from the set, so their commits looked like human edits and reset the
+        # clock on ~65% of content/docs pages. Driving the assertion off the
+        # constant means the next identity added to the set is covered the day
+        # it lands, and one omitted from it fails here.
+        print("every BOT_AUTHORS identity suppresses the staleness clock")
+        bot_names = sorted(_bot_authors())
+        # Identities observed authoring commits in pulumi/docs. A name missing
+        # here can't be caught by the loop below (the loop only iterates what is
+        # already in the set), so the membership assertion is the actual guard —
+        # "Pulumi Bot" and "workprentice[bot]" are precisely what was missing.
+        # Add to this list whenever a new automation starts committing.
+        for required in ("pulumi-bot", "Pulumi Bot", "workprentice[bot]",
+                         "dependabot[bot]", "github-actions[bot]"):
+            check(required in bot_names,
+                  f"{required!r} is missing from BOT_AUTHORS, so its commits "
+                  f"reset the staleness clock as if a human made them")
+        for i, bot in enumerate(bot_names):
+            botdir = tmp / f"botclock{i}"
+            botdir.mkdir()
+            botrepo = make_repo(botdir)
+            (botrepo / "content/docs/misc/two.md").write_text(PAGE + f"\n{bot} touch.\n")
+            git(botrepo, "add", ".")
+            git(botrepo, "commit", "-q", "-m", f"{bot} edit", date="2026-06-11T00:00:00Z",
+                name=bot, email="bot@example.com")
+            sb = scores(run_select(botrepo, tiers, empty, "--count", "20"))
+            check(sb[TWO] == s[TWO],
+                  f"a commit authored by {bot!r} did not reset the clock on {TWO}")
 
         print("multiplicative score: stale tier-2 beats a fresh tier-1")
         check(s[OVERVIEW] > s[STACKS], "importance*staleness lets a very stale tier-2 outrank a fresh tier-1")

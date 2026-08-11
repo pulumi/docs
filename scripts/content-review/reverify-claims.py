@@ -12,7 +12,9 @@ night instead of waiting for the page's next staleness-driven sweep.
 How a stale finding flows (no new human burden, no prose generation):
   1. An entity re-verifies `contradicted`/`mismatch`.
   2. Every page asserting that entity gets a `stale_claims` marker written
-     into its LEDGER object (`ledger/<slug>.json`) — evidence attached.
+     into its LEDGER object (`ledger/<slug>.json`) — evidence attached. A page
+     with no ledger object yet is skipped rather than stubbed: the marker
+     write is a whole-object overwrite of a key `record-review.py` owns.
   3. `select-articles.py` adds a large additive boost for marked pages, so
      the next daily content-review sweep picks them up; the normal worker
      re-reviews the page, fixes it through the existing PR machinery, and
@@ -172,9 +174,12 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
 
     Returns {slug: updated entry (without bookkeeping keys)} for every entry
     that changed. Idempotent: a marker for an already-marked entity_key is
-    replaced, not duplicated. A page missing from the ledger (shouldn't
-    happen — the same worker run writes both objects) gets a minimal entry so
-    the selector can still see the marker."""
+    replaced, not duplicated. A page missing from the local ledger cache
+    (shouldn't happen — the same worker run writes both objects) is SKIPPED,
+    not synthesized: every changed entry is uploaded to the same S3 key
+    record-review.py owns, so a two-field stub would silently destroy that
+    page's status / reviewed_at / attempts / tier / score. The entity simply
+    stays unmarked and comes back around on a later rotation."""
     changed: dict[str, dict] = {}
     for s in stale:
         marker = {
@@ -187,9 +192,11 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
         for page in s["pages"]:
             entry = ledger.get(page["path"])
             if entry is None:
-                warn(f"no ledger entry for {page['path']}; creating a minimal one")
-                entry = {"path": page["path"], "slug": page["slug"]}
-                ledger[page["path"]] = entry
+                warn(
+                    f"no ledger entry for {page['path']}; skipping its stale-claims "
+                    "marker rather than overwriting the ledger object with a stub"
+                )
+                continue
             markers = [m for m in (entry.get("stale_claims") or [])
                        if isinstance(m, dict) and m.get("entity_key") != s["entity_key"]]
             markers.append(marker)
@@ -223,8 +230,8 @@ def write_outputs(report: dict) -> None:
     if not gh_out:
         return
     with open(gh_out, "a") as fh:
-        fh.write(f"n_checked={report['meta']['n_checked']}\n")
-        fh.write(f"n_stale={report['meta']['n_stale']}\n")
+        # Only the gating flag: claims-reverify.yml reads the counts straight
+        # out of the report JSON for its Slack summary.
         fh.write(f"has_stale={'true' if report['meta']['n_stale'] else 'false'}\n")
 
 
@@ -387,15 +394,15 @@ def self_test() -> int:
                         {"path": "content/docs/b.md", "slug": "docs-b"}]}]
     today = date(2026, 7, 9)
     changed = apply_markers(ledger, stale, today)
-    check("marker fans out to both pages", set(changed) == {"docs-a", "docs-b"})
+    check("marker lands on the page with a ledger entry", set(changed) == {"docs-a"})
     check("existing entry keeps its fields",
           changed["docs-a"]["status"] == "clean" and "_file" not in changed["docs-a"])
     check("marker shape", changed["docs-a"]["stale_claims"][0] == {
         "entity_key": "version/pulumi-gcp", "verdict": "contradicted",
         "evidence": "v9.0 released", "source": "gh release view",
         "checked_at": "2026-07-09"})
-    check("minimal entry created for ledger gap",
-          changed["docs-b"]["path"] == "content/docs/b.md")
+    check("ledger gap is skipped, not stubbed over",
+          "docs-b" not in changed and "content/docs/b.md" not in ledger)
 
     changed2 = apply_markers(ledger, stale, today)
     check("re-marking is idempotent",
