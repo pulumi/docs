@@ -2,7 +2,7 @@
 title: "Never Miss What Your Infrastructure Is Telling You"
 date: 2026-08-11
 meta_desc: "The Notification Center brings Neo task updates, ESC change requests, and billing alerts into a single real-time inbox in the Pulumi Cloud console."
-feature_image:
+feature_image: feature.png
 authors:
     - tom-king
 tags:
