@@ -775,7 +775,7 @@ jobs:
       # verify-claims.py routes every entry in .candidate-claims.json to one of
       # three lanes — Pass 1 (pulumi-internal: `gh` + local reads), Pass 2
       # (external w/ a fetched URL: consult .fetched-urls.json), Pass 3
-      # (external w/o a fetched URL: server-side web_search) — fires ≤8 parallel
+      # (external w/o a fetched URL: server-side web_search) — fires ≤16 parallel
       # Sonnet 5 verifiers via direct /v1/messages with a forced `verify_claim`
       # tool, and emits .verified-claims.json. The main review reads that file as
       # the verdict *source* (it does NOT re-verify); validate-pinned.py's
