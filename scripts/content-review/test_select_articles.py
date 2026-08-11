@@ -30,6 +30,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SCRIPT = HERE / "select-articles.py"
+COMMON = HERE / "_selector_common.py"
+BLOG_SCRIPT = HERE.parent / "blog-review" / "select-posts.py"
 REPO_TIERS = (
     HERE.parents[1]
     / ".claude/commands/review-existing-content/references/strategic-tiers.yaml"
@@ -41,21 +43,39 @@ _failures: list[str] = []
 _passes = 0
 
 
-def _bot_authors() -> set[str]:
-    """Read BOT_AUTHORS out of select-articles.py without importing it.
+def _module_assign(path: Path, name: str):
+    """Return a module-level literal assignment's value, or None if absent.
 
-    The script's filename is hyphenated (not importable) and it runs argparse
-    at module scope, so the constant is parsed from source instead. Reading it
-    rather than restating it is the point: the test then covers whatever the
-    set actually contains.
+    Parsed from source rather than imported: these filenames are hyphenated
+    (not importable) and run argparse at module scope. Reading the value rather
+    than restating it is the point — the test then covers whatever the constant
+    actually holds.
     """
-    tree = ast.parse(SCRIPT.read_text())
-    for node in tree.body:
+    for node in ast.parse(path.read_text()).body:
         if isinstance(node, ast.Assign) and any(
-            isinstance(t, ast.Name) and t.id == "BOT_AUTHORS" for t in node.targets
+            isinstance(t, ast.Name) and t.id == name for t in node.targets
         ):
-            return set(ast.literal_eval(node.value))
-    raise AssertionError("BOT_AUTHORS not found in select-articles.py")
+            try:
+                return ast.literal_eval(node.value)
+            except ValueError:
+                # A non-literal re-declaration (`BOT_AUTHORS = COMMON | {...}`)
+                # is still a re-declaration. Report it as one rather than
+                # letting literal_eval raise out of the test harness.
+                return f"<non-literal assignment in {path.name}>"
+    return None
+
+
+def _bot_authors() -> set[str]:
+    """Read BOT_AUTHORS out of the shared selector module.
+
+    It lives in _selector_common.py, not in either selector, because the two
+    copies drifted once and cost ~65% of content/docs their staleness clock.
+    _check_bot_authors_single_definition below is the guard that keeps it there.
+    """
+    value = _module_assign(COMMON, "BOT_AUTHORS")
+    if value is None:
+        raise AssertionError(f"BOT_AUTHORS not found in {COMMON.name}")
+    return set(value)
 
 
 def check(cond: bool, msg: str) -> None:
@@ -212,6 +232,14 @@ def main() -> int:
         # constant means the next identity added to the set is covered the day
         # it lands, and one omitted from it fails here.
         print("every BOT_AUTHORS identity suppresses the staleness clock")
+        # The set has exactly one home. It used to have two, and the second one
+        # missed the fix — which is the whole reason _selector_common.py exists.
+        # A selector that re-declares it locally shadows the shared set for its
+        # own lane only, silently recreating the divergence.
+        for script in (SCRIPT, BLOG_SCRIPT):
+            check(_module_assign(script, "BOT_AUTHORS") is None,
+                  f"{script.name} re-declares BOT_AUTHORS instead of importing it "
+                  f"from _selector_common.py; the two copies will drift again")
         bot_names = sorted(_bot_authors())
         # Identities observed authoring commits in pulumi/docs. A name missing
         # here can't be caught by the loop below (the loop only iterates what is
