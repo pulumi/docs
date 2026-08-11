@@ -153,6 +153,10 @@ _vendor/
 /.cross-sibling-discovery.json
 /.readthrough-findings.json
 /.syntax-findings.json
+# Intermediate of the Vale + markdown-syntax merge. Survives exactly when the
+# `jq` merge fails, which is the case its `|| true` exists to tolerate — and the
+# update lane runs with contents: write.
+/.vale-raw.merged.json
 /.editorial-balance.json
 /.hugo-build.json
 /.pr-body-draft.md

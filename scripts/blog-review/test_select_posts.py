@@ -263,7 +263,9 @@ def _case_paths_override_and_output(tmp: Path) -> None:
     check(q["posts"][0]["slug"] == "recent-post", "slug is the bundle dir name")
     check(q["posts"][0]["url"] == "/blog/recent-post/", "url derived from the bundle")
     out = gh_out.read_text()
-    check("has_posts=true" in out and "count=1" in out and "halted=\n" in out,
+    # `count=` was written here but no workflow ever read it; asserting its
+    # absence keeps it from drifting back in.
+    check("has_posts=true" in out and "halted=\n" in out and "count=" not in out,
           f"GITHUB_OUTPUT contract, got: {out!r}")
 
     proc = subprocess.run(
