@@ -6,6 +6,12 @@ docs/iac/guides/index.html|/docs/iac/
 docs/iac/guides/ai-integration/index.html|/docs/iac/guides/ai-integration/mcp-server/
 docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/index.html|/docs/iac/guides/migration/
 what-is/infrastructure-as-code/index.html|/what-is/what-is-infrastructure-as-code/
+
+# The explainer section moved from content/what-is/ to content/resources/ (the
+# Pulumi Resources rebrand). Article URLs are pinned to their old /what-is/
+# paths in frontmatter, but the section's one image asset is published at the
+# section path, and Hugo aliases are page-level and don't cover assets.
+what-is/serverless-resources.png|/resources/serverless-resources.png
 docs/support/troubleshooting/debugging/images/automatic-1.png|/docs/support/debugging/images/automatic-1.png
 docs/support/troubleshooting/debugging/images/automatic-2.png|/docs/support/debugging/images/automatic-2.png
 docs/support/troubleshooting/debugging/images/stack-selection-1.png|/docs/support/debugging/images/stack-selection-1.png
