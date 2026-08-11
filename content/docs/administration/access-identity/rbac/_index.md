@@ -64,7 +64,9 @@ Members who belong to teams inherit all roles assigned to those teams, plus thei
 
 Whoever creates a stack is automatically granted the Stack Admin permission set on that stack, regardless of their organization role or team memberships. This applies to machine tokens as well as to people: a stack created with an [organization or team token](/docs/administration/access-identity/access-tokens/) carries the same automatic grant, held by the machine identity the token authenticates as rather than by the person who created the token.
 
-Like every other grant, a creator grant is additive, so no role or organization-wide setting suppresses it. To change it after the fact:
+Like every other grant, a creator grant is additive, so no role or organization-wide setting suppresses it. This matters most for automation: a long-lived machine token accumulates a creator grant on every stack it has ever created, so its standing access grows well beyond what its assigned role suggests. For automation that creates stacks, have the run remove the grant or transfer stack ownership to a break-glass user or team once the stack exists, so the token keeps only the access its role provides.
+
+To change a creator grant after the fact:
 
 - **Remove the grant**: open the stack, select the **Access** tab, and delete the automatically added Stack Admin entry.
 - **Change the owner**: from the stack's details page, under **Access** > **Settings** > **Change owner**.
