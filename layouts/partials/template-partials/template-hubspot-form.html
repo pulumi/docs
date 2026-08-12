@@ -1,0 +1,38 @@
+{{/*
+    Template HubSpot Form Partial
+
+    A centered HubSpot form block for template-driven pages. Wraps the shared
+    <pulumi-hubspot-form> element, which handles lazy loading and styling.
+
+    The anchor is part of the contract, not decoration: /product/self-hosted/
+    #self-hosted-trial is linked from the self-hosting-trial-note shortcode
+    (which fans out across the self-hosting docs), the pricing FAQ, and the
+    enterprise page. Renaming it breaks all of them.
+
+    Parameters:
+    - title: Section heading.
+    - description: Optional body copy above the form (markdown supported).
+    - hubspot_form_id: HubSpot form GUID.
+    - anchor: Anchor for the section id. Required when the form is deep-linked.
+*/}}
+
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $formID := .hubspot_form_id }}
+{{ $anchor := .anchor }}
+
+<section class="template-hubspot-form"{{ with $anchor }} id="{{ . }}"{{ end }}>
+    <div class="text-center">
+        {{ with $title }}
+            <h2 class="section-header-title m-0 mb-4">{{ . }}</h2>
+        {{ end }}
+        {{ with $description }}
+            <p class="section-header-description">{{ . | markdownify }}</p>
+        {{ end }}
+    </div>
+    <div class="card bg-white mt-10 mx-auto max-w-2xl p-8 md:px-16 md:py-12">
+        <div class="hs-form hs-form-fg-dark font-normal">
+            <pulumi-hubspot-form form-id="{{ $formID }}"></pulumi-hubspot-form>
+        </div>
+    </div>
+</section>
