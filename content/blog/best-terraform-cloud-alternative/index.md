@@ -32,7 +32,7 @@ The best Terraform Cloud alternative for a large multi-cloud team is Pulumi Clou
 
 ## Terraform Cloud is now called HCP Terraform
 
-HashiCorp renamed Terraform Cloud to HCP Terraform in September 2025, after IBM completed its acquisition of HashiCorp that February. Terraform Enterprise became IBM Terraform Enterprise. No functionality changed with the rename, but "Terraform Cloud" remains the term most teams still search for, so this article uses both names interchangeably. Everything below applies to the current HCP Terraform product.
+HashiCorp renamed Terraform Cloud to HCP Terraform in 2024, before IBM's acquisition of HashiCorp closed in February 2025. Terraform Enterprise became IBM Terraform Enterprise after the acquisition. No functionality changed with the rename, but "Terraform Cloud" remains the term most teams still search for, so this article uses both names interchangeably. Everything below applies to the current HCP Terraform product.
 
 ## What makes a strong Terraform Cloud alternative for a large multi-cloud team
 
@@ -40,9 +40,9 @@ A control plane that works for a five-person team running one AWS account rarely
 
 1. **State management for every IaC tool you actually run.** Most large organizations don't run one tool; they run Terraform, OpenTofu, and increasingly a general-purpose-language platform side by side. A strong alternative should hold state for all of them, not force a single-tool migration before it delivers value.
 2. **Policy as code in languages your team already writes.** Compliance and security guardrails need to be testable and reviewable the same way application code is, not siloed in a DSL only the platform team touches.
-3. **RBAC, SSO, and audit that map to how your org is actually structured.** Teams, custom roles, and centralized audit logs need to scale to dozens of business units, not just a handful of workspaces.
+3. **RBAC, SSO, and audit that map to how your org is actually structured.** Teams, custom roles, and centralized audit logs need to scale to dozens of business units, beyond a handful of workspaces.
 4. **Concurrency that doesn't queue your estate.** A control plane that serializes runs across hundreds of components turns routine changes into a backlog.
-5. **Visibility across every resource, regardless of how it was provisioned.** A large estate accumulates resources created by Terraform, by hand, and by other automation; a strong alternative should inventory all of it, not just what it manages directly.
+5. **Visibility across every resource, regardless of provisioning method.** A large estate accumulates resources created by Terraform, by hand, and by other automation; a strong alternative should inventory everything, not only what it manages directly.
 6. **A migration path that doesn't require rewriting your HCL.** Rip-and-replace migrations are the single biggest reason platform teams delay evaluating alternatives at all.
 7. **Readiness for AI agents in the loop.** AI coding agents are now part of most infrastructure workflows; the control plane should let an agent propose changes, run previews, and open pull requests inside existing review processes.
 
@@ -54,7 +54,7 @@ A control plane that works for a five-person team running one AWS account rarely
 | Migration path | Point your existing `terraform` or `tofu` CLI at Pulumi Cloud with no rewrite, or convert incrementally with `pulumi convert` and `pulumi import` | N/A |
 | Language | Python, TypeScript, Go, C#, Java, and HCL natively, plus YAML | HCL, a configuration-focused DSL |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/) in Python, TypeScript, or OPA Rego, enforced on every update | Sentinel or OPA, run as a distinct pipeline step |
-| RBAC and identity | Teams, built-in and custom roles, SAML/SSO, SCIM, and audit logs as part of the core platform | Teams and workspace permissions, with SSO and audit logs on higher tiers |
+| RBAC and identity | Teams and built-in roles on all tiers; custom roles, SAML/SSO, SCIM, and audit logs on Enterprise and above | Teams and workspace permissions, with SSO on all tiers and audit logging on higher tiers |
 | Concurrency | 1 concurrent stack update on the free Individual tier, 5 on Team, unlimited on Enterprise | 1 concurrent run on the Free tier, 3 on Standard |
 | Estate visibility | [Pulumi Insights](/docs/insights/) inventories resources across providers regardless of how they were provisioned | Scoped to workspaces the platform tracks |
 | Secrets and configuration | [Pulumi ESC](/docs/esc/) for dynamic credentials, rotation, and shared config | Workspace variables, plus a separate Vault integration for centralized secrets |
@@ -64,27 +64,27 @@ A control plane that works for a five-person team running one AWS account rarely
 
 ## State management is the first constraint to evaluate
 
-Most Terraform Cloud alternatives ask a team to migrate its state before delivering any value, which is exactly the friction that keeps large organizations on a tool they've already outgrown. Pulumi Cloud removes that requirement: as of March 2026, it's a [generally available Terraform-compatible state backend](/blog/terraform-state-backend-pulumi-cloud/), so a platform team can point its existing `terraform` or `tofu` CLI at Pulumi Cloud, keep every `.tf` file exactly as written, and immediately gain encrypted state storage, locking, RBAC, and audit history it didn't have before. There's no equivalent path for moving off HCP Terraform without adopting a new control plane wholesale.
+Most Terraform Cloud alternatives ask a team to migrate its state before delivering any value, which is exactly the friction that keeps large organizations on a tool they've already outgrown. Pulumi Cloud removes that requirement: as of March 2026, it's a [generally available Terraform-compatible state backend](/blog/terraform-state-backend-pulumi-cloud/), so a platform team can point its existing `terraform` or `tofu` CLI at Pulumi Cloud, keep every `.tf` file exactly as written, and immediately gain encrypted state storage, locking, RBAC, and audit history it didn't have before. Unlike a bare backend swap, pointing your existing CLI at Pulumi Cloud keeps every `.tf` file unchanged and layers on unified policy, secrets, RBAC, and estate visibility.
 
 ## Policy as code in languages your team already writes
 
-HCP Terraform enforces guardrails through Sentinel, a proprietary policy language, or Open Policy Agent (OPA) Rego, both run as a distinct step in the run pipeline. Pulumi Policies support the same OPA Rego, plus Python and TypeScript, so security and platform engineers can write, test, and review policy code with the same linters, type checkers, and unit test frameworks they already use for application code, and it's enforced inline with every `pulumi up` rather than as a separate pipeline stage.
+HCP Terraform enforces guardrails through Sentinel, a proprietary policy language, or Open Policy Agent (OPA) Rego, both run as a distinct step in the run pipeline. Pulumi Policies supports the same OPA Rego, plus Python and TypeScript, so security and platform engineers can write, test, and review policy code with the same linters, type checkers, and unit test frameworks they already use for application code, and it's enforced inline with every `pulumi up` rather than as a separate pipeline stage.
 
 ## RBAC, SSO, and audit at organizational scale
 
-A large multi-cloud org needs access controls that mirror how it's actually structured: business units, environments, and shared platform teams that each need different levels of access to different parts of the estate. Pulumi Cloud provides teams, built-in and custom roles, SAML/SSO, SCIM provisioning, and audit logs as part of the core platform, scaling from a handful of teams to an entire enterprise's org chart. HCP Terraform offers comparable controls, but SSO and audit logging are gated to its higher-priced tiers, which matters when comparing total cost of adoption, not just the headline resource rate.
+A large multi-cloud org needs access controls that mirror how it's actually structured: business units, environments, and shared platform teams that each need different levels of access to different parts of the estate. Pulumi Cloud provides teams and built-in roles across all tiers, with custom roles, SAML/SSO, SCIM provisioning, and audit logs from the Enterprise tier up, scaling from a handful of teams to an entire enterprise's org chart. HCP Terraform offers comparable controls, but audit logging is gated to its higher-priced tiers, which matters when comparing total cost of adoption, not only the headline resource rate.
 
 ## Concurrency limits large estates hit first
 
 Concurrency is the constraint teams notice fastest once they're managing more than a handful of environments. HCP Terraform's Free plan allows one concurrent run, and Standard raises that to three, [per HashiCorp's own documented limits](https://support.hashicorp.com/hc/en-us/articles/4414055267603-HCP-Terraform-Limits); everything else queues. That same page notes the Free tier retains only the last 100 state versions across an entire organization, with older versions kept for six months before deletion. Pulumi's free Individual tier supports one concurrent stack update, Team supports five, and Enterprise and Business Critical tiers remove the cap, which matters directly to how fast a large estate can ship routine changes in parallel rather than one at a time.
 
-## Visibility across the whole estate, not just managed workspaces
+## Visibility across the whole estate, not only managed workspaces
 
 A large multi-cloud estate accumulates resources that were never provisioned through the control plane at all: manually created infrastructure, resources from other automation, and orphaned test environments. [Pulumi Insights](/docs/insights/) inventories and searches across resources regardless of how they were provisioned, giving a platform team one place to answer "what do we actually have," rather than reconstructing that picture from workspace-scoped state files.
 
 ## Secrets and configuration as part of the platform
 
-HCP Terraform manages configuration through workspace variables and typically pairs with a separate HashiCorp Vault deployment for centralized secrets management, which means running and licensing a second product. [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) handles dynamic credentials, automatic rotation, and shared configuration inside the same platform that manages state and policy, so a large org isn't standing up and maintaining a separate secrets system just to secure its infrastructure pipeline.
+HCP Terraform manages configuration through workspace variables and typically pairs with a separate HashiCorp Vault deployment for centralized secrets management, which means running and licensing a second product. [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) handles dynamic credentials, automatic rotation, and shared configuration inside the same platform that manages state and policy, so a large org isn't standing up and maintaining a separate secrets system to secure its infrastructure pipeline.
 
 ## AI-native operations
 
@@ -133,7 +133,7 @@ A large multi-cloud team doesn't have to choose between keeping its Terraform in
 
 ### Is Terraform Cloud the same as HCP Terraform?
 
-Yes. HashiCorp renamed Terraform Cloud to HCP Terraform in September 2025, following IBM's completed acquisition of HashiCorp that February. The product and its capabilities didn't change; only the name did. Terraform Enterprise was renamed IBM Terraform Enterprise at the same time.
+Yes. HashiCorp renamed Terraform Cloud to HCP Terraform in 2024, before IBM's acquisition of HashiCorp closed in February 2025. The product and its capabilities didn't change; only the name did. Terraform Enterprise was renamed IBM Terraform Enterprise after the acquisition.
 
 ### Can I use Pulumi Cloud without rewriting my Terraform code?
 
@@ -141,7 +141,7 @@ Yes. Pulumi Cloud works as a [Terraform-compatible state backend](/docs/iac/get-
 
 ### Does Pulumi Cloud support Open Policy Agent (OPA) policies?
 
-Yes. Pulumi Policies support OPA Rego, alongside Python and TypeScript, so teams that have already invested in OPA policies for HCP Terraform can reuse that investment.
+Yes. Pulumi Policies supports OPA Rego, alongside Python and TypeScript, so teams that have already invested in OPA policies for HCP Terraform can reuse that investment.
 
 ### How does Pulumi Cloud handle state locking and encryption?
 
@@ -153,7 +153,7 @@ Pulumi Cloud, Spacelift, env0, and Scalr are the four most commonly evaluated al
 
 ### Does Pulumi Cloud offer self-hosting?
 
-Yes, for organizations with data-residency or network-isolation requirements; Pulumi offers self-hosted deployment options at the Enterprise and Business Critical tiers, in addition to its standard SaaS offering.
+Yes, for organizations with data-residency or network-isolation requirements; Pulumi offers self-hosted deployment options at the Business Critical tier, in addition to its standard SaaS offering.
 
 ### How does Pulumi Cloud's pricing compare to Terraform Cloud's pricing?
 
