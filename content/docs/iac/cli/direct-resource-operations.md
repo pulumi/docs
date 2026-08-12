@@ -28,7 +28,7 @@ The `pulumi do` command provides direct operations on cloud resources through th
 
 ### Modes
 
-- Stateful: This is the default mode for `pulumi do`. Resources created or updated in this mode are recorded as snippets in the state file of your current project, and their lifetime is tracked. If you are not currently in a project, they are recorded in a global project named `default-global-project` (stored in your Pulumi home directory, with a stack named `default`) that's created automatically on first use.
+- Stateful: This is the default mode for `pulumi do`. Resources created or updated in this mode are recorded as snippets in the state file of your current project, and their lifetime is tracked. Because they live in ordinary Pulumi state, they get the same benefits as program-managed resources: policy enforcement, drift detection with `pulumi refresh`, and references between resources. If you are not currently in a project, they are recorded in a global project named `default-global-project` (stored in your Pulumi home directory, with a stack named `default`) that's created automatically on first use.
 - Stateless: This mode can be enabled using the `--stateless` flag. In this mode resources are not recorded anywhere, so it's a good fit for one-off operations or testing.
 
 ### Command syntax
@@ -41,7 +41,7 @@ pulumi do <package:module:function> [flags]
 pulumi do <package:module:type> <operation> [<name>|<id>] [flags]
 ```
 
-The positional argument depends on the operation: `create` and `delete` take the resource name, while `read` and `patch` take the provider-assigned resource ID. With `--stateless`, `create` takes no argument and `delete` takes the provider-assigned ID instead of the name.
+The positional argument depends on the operation: `create`, `delete` and `patch` take the resource name, while `read` takes the provider-assigned resource ID. With `--stateless`, `create` takes no argument and `delete` and `patch` take the provider-assigned ID instead of the name.
 
 The package, module, and type/function segments come directly from the provider schema. Pass `--help` at any level of the command tree to discover available subcommands.
 
@@ -115,10 +115,11 @@ Resource operations let you create, read, update, and delete cloud resources dir
 
 ### Create
 
-Creates a new cloud resource. Pass inputs via an input file and for scalar input also command line flag. The CLI prompts for confirmation before creating.
+Creates a new cloud resource. Pass inputs via an input file, or set scalar inputs directly with per-input command-line flags. The CLI prompts for confirmation before creating.
 
 ```bash
-$ pulumi do <package:module:type> create --input-file <path> --<input-name> value
+$ pulumi do <package:module:type> create <name> --input-file <path>
+$ pulumi do <package:module:type> create <name> --<input-name> <value>
 ```
 
 Output on success is a JSON object with the provider-assigned `id` and all resource properties.
@@ -179,7 +180,7 @@ $ pulumi do aws:s3:Bucket read my-bucket > result.json
 
 Secrets appear as `[secret]` in output by default. Use `--show-secrets` to reveal them.
 
-Provider functions return the raw function result as JSON. Resource operations return a JSON object with `id` and `properties` fields.
+Provider functions return the raw function result as JSON. Resource operations return the resource's properties as a flat JSON object that includes the provider-assigned `id`.
 
 ## Provider configuration
 
