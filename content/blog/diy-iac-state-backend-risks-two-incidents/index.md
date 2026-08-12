@@ -18,39 +18,38 @@ social:
     twitter: |
         Two incidents. One root cause: a self-managed state backend.
 
-        A leaked IAM key in an S3-hosted tfstate file opened a second AWS account. An out-of-order merge deleted two of three production Kubernetes clusters. Here's the common thread.
+        A leaked IAM key in an S3-hosted tfstate file put a second AWS account's keys within reach. An out-of-order merge deleted two of three production Kubernetes clusters.
     linkedin: |
         Two real-world incidents. One root cause: a self-managed infrastructure-as-code state backend.
 
-        We walk through a credential leak that pivoted an attacker into a second AWS account, and a state race condition that deleted two of three production Kubernetes clusters, then show what a managed backend changes about both.
+        We walk through a credential leak that exposed a second AWS account's keys, and a state race condition that deleted two of three production Kubernetes clusters, then show what a managed backend changes about both.
     bluesky: |
         A leaked IAM key in S3. An out-of-order Terraform merge.
 
         Two incidents, one root cause: DIY state management.
 ---
 
-Two publicly documented infrastructure-as-code incidents, a cloud intrusion and a mass cluster deletion, trace back to the same root cause: a self-managed state backend. Neither is a knock on any one tool. Plaintext credentials in object storage and unprotected concurrent writes are risks inherent to running your own state backend, whether that state file is written by Terraform or by Pulumi in a self-managed configuration. A managed backend, like Pulumi Cloud, is purpose-built to close both gaps.
+Two publicly documented infrastructure-as-code incidents, a cloud intrusion and a mass cluster deletion, trace back to the same root cause: a self-managed state backend. Neither is a knock on any one tool. Plaintext credentials in object storage and unprotected concurrent writes are risks inherent to running your own state backend, not defects unique to Terraform: Pulumi encrypts values marked as secrets by default even on a self-managed backend, but on a DIY backend neither tool enforces storage-level encryption or locking, so both share the exposure these incidents reveal. A managed backend, like Pulumi Cloud, is purpose-built to close both gaps.
 
-## Incident one: how a single plaintext state file opened two AWS accounts
+## Incident one: how a single plaintext state file exposed a second AWS account's credentials
 
 In 2023, the [Sysdig Threat Research Team documented an intrusion](https://www.sysdig.com/blog/cloud-breach-terraform-data-theft) it named SCARLETEEL, discovered in a single customer's environment. The attack chain ran through infrastructure, not application code:
 
 1. The attacker exploited a public-facing service running in a self-managed Kubernetes cluster to gain initial access to a worker node.
 2. From that node, they queried the [IMDSv1 instance metadata service](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html) to retrieve the node's IAM role credentials.
-3. With those credentials, they enumerated the AWS account's resources, including S3 buckets, and found a `terraform.tfstate` file stored in plaintext.
-4. That state file contained a second, more privileged set of IAM access keys in plaintext, which the attacker used to pivot into a **second AWS account**.
-5. Once inside, the attacker disabled CloudTrail logging to cover their tracks before continuing to explore the environment.
+3. While enumerating the account's resources, the attacker disabled CloudTrail logging to evade detection and found a `terraform.tfstate` file in S3 holding a second AWS account's IAM access keys, stored in plaintext.
+4. The attacker attempted to use those keys to move into the second account, but every API request they made there failed: the credentials didn't carry the permissions needed to do anything with them.
 
-**Root cause**: this was not a Terraform vulnerability. Terraform's [own state documentation](https://developer.hashicorp.com/terraform/language/state/sensitive-data) has long warned that state files "can contain sensitive data" in plaintext and that "care should be taken" to limit access. The exposure came from where and how the state was stored: an S3 bucket subject to whatever object-storage ACLs the team configured, holding secrets in cleartext with no engine-level enforcement of encryption. A Pulumi project on a self-managed backend still leaves the state file's storage, the S3 bucket ACLs, the local filesystem, in the team's hands, so the same object-storage misconfiguration that exposed the SCARLETEEL state file applies. Pulumi does encrypt values explicitly marked as secrets by default, even on a self-managed backend, so it doesn't share Terraform's plaintext-secret default, but any credential written to state without being marked secret is still only as protected as the bucket around it. The risk lives in the DIY backend model's storage layer, not in a specific IaC language or syntax.
+**Root cause**: this was not a Terraform vulnerability. Terraform's [own state documentation](https://developer.hashicorp.com/terraform/language/state/sensitive-data) acknowledges that state files "contain detailed information about your infrastructure, including resource attributes and metadata that can contain sensitive values, such as initial database passwords or API tokens," and that by default Terraform "stores your state in a plaintext file," instructing teams to "treat your state file as sensitive data." The exposure came from where and how the state was stored: an S3 bucket subject to whatever object-storage ACLs the team configured, holding secrets in cleartext with no engine-level enforcement of encryption. A Pulumi project on a self-managed backend still leaves the state file's storage, the S3 bucket ACLs, the local filesystem, in the team's hands, so the same object-storage misconfiguration that exposed the SCARLETEEL state file applies. Pulumi does encrypt values explicitly marked as secrets by default, even on a self-managed backend, so it doesn't share Terraform's plaintext-secret default, but any credential written to state without being marked secret is still only as protected as the bucket around it. The risk lives in the DIY backend model's storage layer, not in a specific IaC language or syntax.
 
 ## Incident two: how shared state deleted two of three production clusters
 
-In a [2019 KubeCon EU keynote](https://www.youtube.com/watch?v=ix0Tw8uinWs), Spotify infrastructure engineer David Xia described how the company deleted most of its production Kubernetes clusters, twice, during a migration. The proximate cause in the more severe incident:
+In a [2019 KubeCon EU keynote](https://www.youtube.com/watch?v=ix0Tw8uinWs), Spotify infrastructure engineer David Xia described two separate incidents in which the company accidentally deleted production Kubernetes clusters: one caused by a mistaken click in the wrong browser tab, the other by two Terraform pull requests merged out of order. The Terraform incident, the more serious of the two:
 
 - Two pull requests, both touching the same shared Terraform state for the cluster fleet, were merged out of order.
 - The resulting `terraform apply` attempted to recreate a cluster and hit a permissions mismatch between what the state expected and what existed.
 - The apply's failure mode was destructive rather than inert: **two of Spotify's three production Kubernetes clusters were deleted**.
-- Restoring service took **three hours and fifteen minutes**, made slower because the automation scripts involved were not resumable, so failed steps had to be worked around or rerun from scratch.
+- The incident ran roughly **nine hours, from 8 p.m. to 5 a.m.**, before Spotify restored service and its integrations.
 - Critically, Spotify reported **no end-user impact**, because the team had deliberately engineered redundancy across clusters as a hedge against exactly this class of failure.
 
 **Root cause**: this is a general property of self-managed, serialized state protocols, not a Terraform-specific defect. Whenever two changes race to mutate the same state file without an enforced lock, the outcome depends on merge order and timing rather than intent. Any DIY-backend IaC tool is exposed to this class of failure to the degree its locking is optional or must be stood up separately. Terraform's S3 backend historically required a separate lock service; Pulumi's self-managed backends enable a basic file-based lock by default, though a shared object store still depends on that store honoring the lock.
@@ -77,19 +76,19 @@ Neither Spotify nor the SCARLETEEL victim organization did anything unusual. The
 | Plaintext secrets in state (SCARLETEEL) | [State is encrypted at rest and in transit by default](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), with engine-level [transitive secret tainting](https://www.pulumi.com/blog/pulumi-state-taint/) that marks any value derived from a secret as sensitive, so it can't leak downstream unnoticed |
 | Long-lived plaintext IAM keys (SCARLETEEL) | [Pulumi ESC](https://www.pulumi.com/docs/esc/) issues short-lived, dynamic credentials via OIDC federation, so there is no durable IAM access key sitting in state or in a config file for an attacker to find |
 | Out-of-order concurrent writes (Spotify) | Automatic stack locking prevents two operations from mutating the same stack's state at once, removing the race condition that let two merges collide |
-| Slow, non-resumable recovery (Spotify) | A [transactional, journaling state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), reported up to 20x faster than file-based alternatives, plus built-in deleted-stack restoration, so a destructive operation is a recoverable event rather than a three-hour incident |
+| Slow, destructive recovery (Spotify) | A [transactional, journaling state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), reported up to 20x faster than file-based alternatives, plus built-in deleted-stack restoration, so a destructive operation is a recoverable event rather than a multi-hour incident |
 
 A team does not have to rewrite its infrastructure code to get these protections. Teams already on Pulumi get them by pointing their stacks at Pulumi Cloud instead of a self-managed backend. Teams currently on Terraform can [migrate existing state to Pulumi](https://www.pulumi.com/blog/converting-full-terraform-states-to-pulumi/) or, with Pulumi's native Terraform state backend support, connect Pulumi Cloud directly to their existing Terraform-managed state without a rewrite at all.
 
 ## What the downtime and breach math says
 
-Neither incident's owning company disclosed a specific dollar figure, but industry benchmarks make clear why leadership treats state-backend risk as a business problem, not just an engineering one. [IBM's Cost of a Data Breach Report 2025](https://www.ibm.com/reports/data-breach) put the global average cost of a data breach at **$4.44 million**, the first year-over-year decline in five years, but still a number few organizations can absorb repeatedly. On the availability side, [ITIC's 2024 Hourly Cost of Downtime survey](https://itic-corp.com/itic-2024-hourly-cost-of-downtime-report/) found that more than **90% of mid-size and large enterprises** report an hourly downtime cost exceeding **$300,000**, with 41% reporting figures between $1 million and over $5 million per hour. A three-hour recovery window, of the kind Spotify navigated without customer impact only because of infrastructure they had deliberately over-provisioned, is exactly the scenario those figures describe for teams without that redundancy already in place.
+Neither incident's owning company disclosed a specific dollar figure, but industry benchmarks make clear why leadership treats state-backend risk as a business problem, not just an engineering one. [IBM's Cost of a Data Breach Report 2026](https://www.ibm.com/reports/data-breach) put the global average cost of a data breach at **$4.99 million**, a 12% year-over-year increase and a record high, driven in part by rising detection, escalation, and lost-business costs. On the availability side, [ITIC's 2024 Hourly Cost of Downtime survey](https://itic-corp.com/itic-2024-hourly-cost-of-downtime-report/) found that more than **90% of mid-size and large enterprises** report an hourly downtime cost exceeding **$300,000**, with 41% reporting figures between $1 million and over $5 million per hour. A nine-hour recovery window, of the kind Spotify navigated without customer impact only because of infrastructure they had deliberately over-provisioned, is exactly the scenario those figures describe for teams without that redundancy already in place.
 
 ## Frequently asked questions
 
 ### Is this a Terraform-specific problem?
 
-No. Both incidents stem from properties of self-managed, file-based state backends: plaintext secret storage and unenforced concurrent writes. Any infrastructure-as-code tool, including Pulumi, carries the same exposure when it is pointed at a self-managed backend such as a raw S3 bucket or local file rather than a managed backend with encryption and locking built in.
+No. Both incidents stem from properties of self-managed, file-based state backends: plaintext secret storage and unenforced concurrent writes. Pulumi encrypts values explicitly marked as secrets by default, even on a self-managed backend, but the underlying gap, no storage-level encryption or locking enforced by the platform itself, applies to any infrastructure-as-code tool run against a self-managed backend such as a raw S3 bucket or local file, Pulumi included.
 
 ### What is a state backend in infrastructure as code?
 
