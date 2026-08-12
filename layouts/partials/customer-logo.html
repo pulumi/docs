@@ -101,8 +101,11 @@
              than fabricate a number. */}}
         {{ $svgW := "" }}
         {{ $svgH := "" }}
-        {{ with findRE `viewBox="[^"]*"` $fingerprintedSvg.Content 1 }}
-            {{ $vb := strings.TrimSuffix `"` (strings.TrimPrefix `viewBox="` (index . 0)) }}
+        {{ with findRE `viewBox=["'][^"']*["']` $fingerprintedSvg.Content 1 }}
+            {{/* Quote character varies across assets (most are double-quoted; at least one
+                 logo writes single-quoted attributes), so strip the `viewBox=` prefix and
+                 the closing quote positionally rather than by literal. */}}
+            {{ $vb := substr (index . 0) 9 -1 }}
             {{ $vbParts := split $vb " " }}
             {{ if eq (len $vbParts) 4 }}
                 {{ $wCandidate := index $vbParts 2 }}
