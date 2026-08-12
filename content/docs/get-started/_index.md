@@ -1,6 +1,6 @@
 ---
-title_tag: Get Started with Pulumi
-meta_desc: Step-by-step guides for creating, deploying, and managing infrastructure with Pulumi on the cloud using your favorite language.
+title_tag: "Get Started with Pulumi Infrastructure as Code"
+meta_desc: "Learn infrastructure as code in this hands-on tutorial. Install Pulumi, write your first program, and deploy to AWS, Azure, or Google Cloud in minutes."
 title: Get Started #Breadcrumb
 h1: Get Started with Pulumi # Page title
 no_on_this_page: true
