@@ -17,6 +17,8 @@ aliases:
 pulumi_cloud_feature: self-hosting
 ---
 
+{{< self-hosting-trial-note />}}
+
 The self-hosted option allows you to control various aspects of Pulumi Cloud including how users will sign in to the [Pulumi Cloud console](/docs/administration/self-hosting/components/console/).
 
 ## Creating the keys

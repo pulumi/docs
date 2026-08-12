@@ -16,6 +16,8 @@ aliases:
 pulumi_cloud_feature: self-hosting
 ---
 
+{{< self-hosting-trial-note />}}
+
 The fastest way to try self-hosted Pulumi Cloud is the all-in-one Docker Compose stack. It runs the API, the web Console, a migrated MySQL database, and OpenSearch on a single host with working defaults, so you can evaluate the full platform in about ten minutes. Use it for evaluation and testing; for production, see the [production deployment options](/docs/administration/self-hosting/deployment-options/).
 
 ## Prerequisites

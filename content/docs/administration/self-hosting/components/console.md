@@ -43,7 +43,7 @@ You can run this container on the same host that your API container is running o
 ## What's In The Container?
 
 {{% notes type="info" %}}
-The container image repository is private. [Contact us](/contact/) if you would like to evaluate the Self-Hosted Pulumi Cloud.
+The console image is published publicly at [`pulumi/console`](https://hub.docker.com/r/pulumi/console). Running it still requires a license key — see [Components](/docs/administration/self-hosting/components/) for the full image list.
 {{% /notes %}}
 
 The Console container runs a web server using a Node 18-based image.

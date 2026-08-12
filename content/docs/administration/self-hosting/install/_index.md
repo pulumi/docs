@@ -17,9 +17,9 @@ pulumi_cloud_feature: self-hosting
 
 Run the full Pulumi Cloud platform in your own cloud account or data center. Start with the all-in-one Docker Compose stack to evaluate on a single host, then choose a production deployment for your platform.
 
-{{% notes type="info" %}}
-Every installation needs a license key. [Request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) and a solutions architect will get you an evaluation key and walk through sizing. Self-hosting is available with the [Business Critical edition](/pricing/).
-{{% /notes %}}
+{{< self-hosting-trial-note >}}
+Every installation needs a license key, which you receive as part of the proof of concept.
+{{< /self-hosting-trial-note >}}
 
 ## Choose your platform
 

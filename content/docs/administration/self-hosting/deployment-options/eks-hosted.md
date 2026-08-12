@@ -16,6 +16,8 @@ aliases:
 pulumi_cloud_feature: self-hosting
 ---
 
+{{< self-hosting-trial-note />}}
+
 The [EKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Amazon Elastic Kubernetes Service (EKS).
 
 ## Prerequisites
@@ -73,15 +75,22 @@ The buckets will have names of the form:
 * `pulumi-checkpoint-XXX`
 * `pulumi-policy-XXX`
 
-### Updating the EKS Cluster Kubernetes Version
+### Supported Kubernetes versions
 
-If your EKS-hosted installation was deployed on Kubernetes version 1.19 or later, you can update the `clusterConfig:ClusterVersion` configuration property to the desired version.
-Then, rerun the `npm run install -- update --` command to update the cluster with the new version.
+| Installer version | Released | Kubernetes |
+| :-- | :-- | :-- |
+| 4.0 | March 2026 | 1.34.0 |
+| 3.1 | February 2025 | 1.31.0 |
+| 3.0 | December 2024 | 1.30.3 |
+| 2.1 | November 2024 | 1.30.3 |
+| 1.0 | October 2024 | 1.30.3 |
+
+### Updating the EKS cluster Kubernetes version
+
+Set `clusterVersion` in the `05-eks-cluster` project's stack configuration to the version you want, then run `pulumi up` in that project.
 
 {{% notes type="info" %}}
-AWS requires moving one Kubernetes release at a time. So if moving from 1.19 to 1.21, perform the steps twice: once to move to 1.20 and wait for that to complete before moving to 1.21.
+AWS upgrades the EKS control plane one minor release at a time. To move from 1.31 to 1.34, repeat the step for each intervening release, waiting for each upgrade to finish before starting the next.
 {{% /notes %}}
 
-{{% notes type="info" %}}
-If running the Pulumi Cloud with Kubernetes version 1.18, please refer to the installation package README for details on how to upgrade to V2.0 of the EKS installer before upgrading the Kubernetes version.
-{{% /notes %}}
+If you are still running an EKS installer released before October 2024, contact [Pulumi support](/support/) to plan a migration to the current installer before changing the Kubernetes version.
