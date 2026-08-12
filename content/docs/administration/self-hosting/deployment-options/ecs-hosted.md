@@ -66,6 +66,8 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 ### Pulumi Cloud Updates
 
+{{< self-hosting-schema-v2-note />}}
+
 When deploying the Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) file to set the `imageTag` configuration property for the installer to use.
 
 When ready to update the Pulumi Cloud containers to use a different version, do the following:

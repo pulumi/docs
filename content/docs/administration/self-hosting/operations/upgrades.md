@@ -16,6 +16,8 @@ pulumi_cloud_feature: self-hosting
 
 This page covers how to safely update your self-hosted Pulumi Cloud deployment. For version-specific changes, see the [Changelog](/docs/administration/self-hosting/changelog/).
 
+{{< self-hosting-schema-v2-note />}}
+
 ## Staged rollouts
 
 Deploy updates through staged environments:

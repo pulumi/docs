@@ -1,0 +1,15 @@
+{{- /* The V2 engine-events schema gate. Stated once here and included wherever a
+       reader is about to upgrade an install, because the installer READMEs carry
+       this as a hard stop and the API reference buries it in a table row. */ -}}
+<div class="note note-warning">
+    <div class="icon-and-line">
+        {{ partial "icon.html" (dict "name" "warning" "weight" "fill") }}
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{ printf "**Upgrading an existing installation?** The current installers enable the V2 engine events database schema (`PULUMI_ENGINE_EVENTS_SCHEMA_V2`). Moving an existing installation onto it requires a database migration that Pulumi performs with you. [Contact Pulumi support](/support/) before pointing an existing install at a current installer version or changing `PULUMI_ENGINE_EVENTS_SCHEMA_V2` or `PULUMI_ENGINE_EVENTS_LEGACY_WRITE`. Fresh installations are unaffected." | markdownify }}
+        {{- with .Inner }}
+        {{ . | markdownify }}
+        {{- end }}
+    </div>
+</div>
