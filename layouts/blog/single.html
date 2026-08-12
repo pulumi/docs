@@ -102,4 +102,9 @@
     </div>
 
     {{ partial "blog/related-posts.html" . }}
+
+    {{- /* Overlay shell for the post-body media lightbox; blog-lightbox.ts
+        decides at runtime which images and videos (if any) open into it. Only
+        posts carrying one or the other need it. */ -}}
+    {{ if or (strings.Contains .Content "<img") (strings.Contains .Content "<video") }}{{ partial "blog/lightbox.html" . }}{{ end }}
 {{ end }}

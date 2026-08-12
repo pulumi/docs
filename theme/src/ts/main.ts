@@ -12,6 +12,7 @@ import "./tracking";
 import "./docs-feedback";
 import "./blog-list";
 import "./blog-post";
+import "./blog-lightbox";
 import "./what-is-list";
 import "./case-studies-list";
 import "./details-dropdown";

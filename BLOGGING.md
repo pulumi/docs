@@ -225,6 +225,10 @@ To add images to the body of your post, first place them within the folder conta
 ![The humble platypus](platypus.png)
 ```
 
+Readers can click an image to see it full size in an overlay, but only where that actually helps: an image gets the treatment when the overlay could draw it meaningfully bigger than the post does, so screenshots and other detail-heavy images become clickable while icons, badges, and images already shown at their full size stay plain. That's decided in the browser from the image's own dimensions — there's nothing to add to your Markdown. If you have an image that qualifies but shouldn't be clickable, add `data-no-lightbox` to it (or to a wrapping element) in raw HTML.
+
+The same applies to videos added with the [`video` shortcode](#video) below, which is worth knowing when you record one: a clip shot at 1080p is being squeezed into the ~768px content column, and readers can open it at full size, so record at a comfortably higher resolution than the column rather than at the column's width. The enlarged copy always gets playback controls, even though the clip in the post body has none, so readers can pause and scrub there. Clips you give `controls="true"` are left out of this altogether — their controls already include a fullscreen button.
+
 #### Social ("Meta") and Feature Images
 
 > [!IMPORTANT]
