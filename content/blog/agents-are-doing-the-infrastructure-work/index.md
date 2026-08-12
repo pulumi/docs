@@ -23,11 +23,11 @@ social:
     bluesky: "New data on agentic infrastructure: orgs using an AI agent to change real infra grew 2.75x in 4 months, Neo tasks grew ~13x in a year, and it now reaches Terraform estates too. The receipts, the charts, and what it means for platform teams:"
 ---
 
-AI agents are no longer just writing code — they are changing real, running cloud infrastructure, today, at a scale you can measure. The number of organizations using an AI agent to modify real infrastructure grew 2.75x in four months. Pulumi Neo task volume grew roughly 13x in less than a year. And this is no longer confined to Pulumi programs: agents are now doing real work against Terraform and HCL estates too.
+AI agents are changing real, running cloud infrastructure today, at a scale you can measure. The number of organizations using an AI agent to modify real infrastructure grew 2.75x in four months. Pulumi Neo task volume grew roughly 13x in less than a year. And the reach now extends past Pulumi programs into Terraform and HCL estates as well.
 
 <!--more-->
 
-We [made the case in May](/blog/the-agentic-infrastructure-era/) that [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) — infrastructure as code, expressed in real programming languages, changed and verified by AI agents — is the natural substrate for agentic work, and that we expected agentic deployments to cross 20% of all Pulumi operations this year and 50%+ by the end of it. That was the thesis. This post is the receipts: the platform telemetry, the survey data, and the third-party benchmarks that show agents are already doing the infrastructure work, not just experimenting with it, and that the frontier of this shift now includes the Terraform and HCL estates most platform teams still run.
+We [made the case in May](/blog/the-agentic-infrastructure-era/) that [agentic infrastructure](/what-is/what-is-agentic-infrastructure/) — infrastructure as code, expressed in real programming languages, changed and verified by AI agents — is the natural substrate for agentic work, and that we expected agentic deployments to cross 20% of all Pulumi operations this year and 50%+ by the end of it. This post lays out the receipts: the platform telemetry, the survey data, and the third-party benchmarks showing agents already doing the infrastructure work, past the experimentation phase, with the frontier now reaching the Terraform and HCL estates most platform teams still run.
 
 ## The receipts
 
@@ -38,7 +38,7 @@ Start with the plainest signal we have: how many distinct organizations and user
 - **Organizations** using an AI agent to change real infrastructure grew **2.75x** between April and July 2026.
 - **Users** doing the same grew **3.1x** over the same window.
 
-That is not a handful of power users kicking the tires. It is broad-based growth in real teams letting agents touch production-track infrastructure. Breaking that volume down by agent shows the same story from a different angle:
+That's broad-based growth across real teams letting agents touch production-track infrastructure, well beyond a handful of power users kicking the tires. Breaking that volume down by agent shows the same story from a different angle:
 
 ![Claude Code and Codex account for a growing share of agent-attributed infrastructure operations, with Codex's share expanding fastest between April and July 2026.](agent-attributed-ops-by-agent.png)
 
@@ -46,13 +46,13 @@ That is not a handful of power users kicking the tires. It is broad-based growth
 - **Codex**-driven operations grew roughly **6x** over the same window, the fastest-growing agent in the mix.
 - Across all agents, total agent-attributed real infrastructure operations grew several-fold over the same four months.
 
-One caveat, in the interest of transparency: Pulumi only began tagging operations with agent attribution in April 2026. These charts describe growth from that baseline, not the total history of agentic infrastructure work at Pulumi — the underlying trend was already building before we could measure it this precisely.
+One caveat, in the interest of transparency: Pulumi only began tagging operations with agent attribution in April 2026, so these charts describe growth from that measurement baseline. The underlying trend was almost certainly building before we had the instrumentation to see it this precisely.
 
 ## What the work actually is
 
 Growth curves answer "is this real," but not "what are agents actually doing all day." For that, we combined our own product telemetry with our [State of Agentic Infrastructure 2026 survey](/state-of-agentic-infrastructure/) of 510 platform, DevOps, and product engineers.
 
-The clearest pattern: agents show up earliest and most heavily in *review and verification* work, not in freehand authoring.
+The clearest pattern: agents show up earliest and most heavily in *review and verification* work, well ahead of freehand authoring.
 
 ![Survey respondents report AI already reviewing code (70%), scanning for security issues (56%), and optimizing cost (52%) more than it authors infrastructure code (29%).](where-ai-shows-up-survey.png)
 
@@ -60,21 +60,21 @@ The clearest pattern: agents show up earliest and most heavily in *review and ve
 - **96%** use some form of AI in their infrastructure workflow today; only 4% use none.
 - **45%** say agents already handle half or more of their team's infrastructure work, and that share is expected to rise to **52%** within six months.
 
-That "review before write" pattern matches what we see inside [Pulumi Neo](/neo/), our own infrastructure agent. Neo's automated code review dispatches a rapidly growing volume of completed reviews every month — up roughly 2.5x month over month between June and July 2026 — and more than 99.99% of those reviews are triggered automatically the moment a pull request opens, not requested by a human. Nobody has to remember to ask Neo to check their work; it already has, before they finish their coffee.
+That "review before write" pattern matches what we see inside [Pulumi Neo](/neo/), our own infrastructure agent. Neo's automated code review dispatches a rapidly growing volume of completed reviews every month — up roughly 2.5x month over month between June and July 2026 — and more than 99.99% of those reviews trigger automatically the moment a pull request opens. Nobody has to remember to ask Neo to check their work; it already has, before they finish their coffee.
 
-Overall Neo task volume tells a complementary story about depth, not just breadth:
+Overall Neo task volume tells a complementary story about depth of use:
 
-![Pulumi Neo task volume grew roughly 13x from September 2025 through July 2026, growing faster than the number of active organizations running it — a sign of existing teams going deeper, not just new sign-ups.](neo-task-volume-growth.png)
+![Pulumi Neo task volume grew roughly 13x from September 2025 through July 2026, growing faster than the number of active organizations running it — a sign of existing teams going deeper with the tool.](neo-task-volume-growth.png)
 
-Neo's monthly task volume grew roughly **13x** between its first full month (September 2025) and July 2026. Over that same stretch, the number of organizations running Neo each month grew far more slowly than task volume did. In other words, this growth is not just new sign-ups trying Neo once; it's existing teams asking Neo to do more, with task depth per active organization growing roughly **17x**. Depth of use is compounding faster than breadth of adoption, which is exactly the pattern you'd want to see from a tool that earns more trust the more you use it.
+Neo's monthly task volume grew roughly **13x** between its first full month (September 2025) and July 2026. Over that same stretch, the number of organizations running Neo each month grew far more slowly than task volume did — meaning existing teams are asking Neo to do more work over time, with task depth per active organization growing roughly **17x**. Depth of use compounding faster than breadth of adoption is exactly the pattern you'd want to see from a tool that earns more trust the more you use it.
 
 Governance hasn't caught up to autonomy yet, and our own survey data says so plainly: **81%** of respondents let agents change production infrastructure, but the overwhelming majority of that is gated — 62% require approval, versus 19% that run autonomously. On the guardrail side, 61% still use manual review gates and 54% use policy as code in CI. That's the honest state of the industry: stated trust in agents (63% trust them with production changes) is outrunning the guardrails teams have actually built, which is precisely the gap Pulumi Cloud, [Pulumi Insights policy packs](/docs/insights/policy/policy-packs/), and organization access tokens with role-based access control exist to close.
 
-## It's not just Pulumi programs anymore
+## The reach extends past Pulumi programs
 
 Most of the conversation about agentic infrastructure — including our own thesis post — has focused on teams already writing IaC in Python, TypeScript, or Go. But the majority of the world's infrastructure still lives in Terraform and HCL, and [that estate is now catching up too](/blog/bring-your-terraform-estate-into-the-agentic-era/). We [reported in August](/blog/bring-your-terraform-estate-into-the-agentic-era/) that over 40% of our users now manage infrastructure using AI agents; the newer signal is that agentic work is reaching into the Terraform estates those same users haven't migrated yet.
 
-Inside Pulumi Neo, customers have been bringing Terraform work into agent conversations since February 2026, and a broad and growing set of organizations are doing it. Many of these conversations progress well past initial exploration: a meaningful share reach completion, and of those, a good number produce real code changes — with a share of those going all the way to an opened pull request. We're leaning on that funnel, not a single top-line count, as the load-bearing evidence, since the raw conversation count is a keyword match on an AI-generated summary we have not yet hand-audited end to end. Even on the conservative reading, this is not hypothetical: agents are opening real pull requests against real Terraform estates today. (Terraform's share of overall Neo task volume is actually shrinking as total Neo usage grows elsewhere, so we're not claiming acceleration here — just that the door is open and customers are already walking through it.)
+Inside Pulumi Neo, customers have been bringing Terraform work into agent conversations since February 2026, and a broad and growing set of organizations are doing it. Many of these conversations progress well past initial exploration: a meaningful share reach completion, and of those, a good number produce real code changes — with a share of those going all the way to an opened pull request. We're leaning on that completion-to-PR funnel as the load-bearing evidence rather than a single top-line count, since the raw conversation count is a keyword match on an AI-generated summary we have not yet hand-audited end to end. Even on the conservative reading, agents are opening real pull requests against real Terraform estates today. (Terraform's share of overall Neo task volume is actually shrinking as total Neo usage grows elsewhere, so we're not claiming acceleration here — just that the door is open and customers are already walking through it.)
 
 The infrastructure underneath is also filling in. [Pulumi Cloud now speaks the Terraform/OpenTofu remote-state protocol](/docs/iac/get-started/terraform/terraform-state-backend/), so teams can point an existing Terraform workflow at Pulumi Cloud without rewriting anything first: a small but growing set of organizations are already running state through it, with monthly run volume roughly tripling between May and mid-August. And [Pulumi's HCL runtime](/docs/iac/languages-sdks/hcl/) lets you run actual HCL programs on the Pulumi engine, with a similarly early set of organizations already running it in production or testing and usage climbing steadily each month since January 2026. Both are early — we're not going to dress up early-adopter usage as a market shift — but they're real, they're growing, and they mean you don't have to rip out Terraform to get agents working safely on your infrastructure.
 
@@ -98,8 +98,8 @@ That is the throughline connecting the benchmark scores, the growth charts, and 
 
 None of this is safe by accident. It's safe because the same infrastructure-as-code engine that makes agentic work possible also makes it verifiable before anything ships:
 
-1. **Preview as the oracle.** Every agent-proposed change runs through `pulumi preview` before it runs through `pulumi up`, giving both the agent and the human reviewer a concrete, line-by-line diff of what will actually happen to real infrastructure — not a guess.
-2. **Policy as code in the loop, not after the fact.** [Pulumi Insights policy packs](/docs/insights/policy/policy-packs/) let you encode the guardrails 54% of survey respondents say they already run in CI, and enforce them automatically against every agent-proposed change, not just human-authored ones.
+1. **Preview as the oracle.** Every agent-proposed change runs through `pulumi preview` before it runs through `pulumi up`, giving both the agent and the human reviewer a concrete, line-by-line diff of what will actually happen to real infrastructure.
+2. **Policy as code enforced in the loop.** [Pulumi Insights policy packs](/docs/insights/policy/policy-packs/) let you encode the guardrails 54% of survey respondents say they already run in CI, and enforce them automatically against every agent-proposed change, human-authored or otherwise.
 3. **Agent identities and human-in-the-loop approval.** Agents work under their own Pulumi Cloud identity rather than borrowing a person's — [agent accounts](/docs/administration/organizations-teams/agent-accounts/) give an agent its own ephemeral account from first use, and organization access tokens with role-based access control scope what an agent can touch and record it in the audit log. So the 62% of teams who require approval before a production change can keep that gate exactly where they want it, whether the proposer is a person or a process.
 4. **Automatic PR review as a second set of eyes.** Neo's automated review — dispatched on well over 99.99% of pull requests without anyone asking — catches problems the same way a senior engineer would, before a human reviewer even opens the diff.
 
@@ -109,7 +109,7 @@ If you're running Terraform or HCL today, none of this requires a rewrite first:
 
 ### Can AI agents actually deploy real cloud infrastructure today?
 
-Yes. Pulumi's platform telemetry shows the number of distinct organizations using an AI coding agent to change real, non-dry-run infrastructure grew 2.75x between April and July 2026, and Pulumi Neo's own task volume grew roughly 13x between September 2025 and July 2026. This is measured production usage, not a lab demo.
+Yes. Pulumi's platform telemetry shows the number of distinct organizations using an AI coding agent to change real, non-dry-run infrastructure grew 2.75x between April and July 2026, and Pulumi Neo's own task volume grew roughly 13x between September 2025 and July 2026 — measured production usage from a live platform.
 
 ### How do AI agents deploy cloud infrastructure using MCP?
 
@@ -129,7 +129,7 @@ The most common guardrails, per our 510-person survey, are manual review gates (
 
 ### How is agentic infrastructure different from traditional automation?
 
-Traditional automation (a fixed CI/CD pipeline, a scheduled Terraform apply) executes a script a human wrote in advance. Agentic infrastructure means an AI agent is proposing the change itself — writing or editing the code, reasoning about what needs to happen, and only then handing off to the same preview-and-apply pipeline for verification. The agent is a new kind of author, not a new kind of trigger.
+Traditional automation (a fixed CI/CD pipeline, a scheduled Terraform apply) executes a script a human wrote in advance. Agentic infrastructure means an AI agent is proposing the change itself — writing or editing the code, reasoning about what needs to happen, and only then handing off to the same preview-and-apply pipeline for verification. The agent takes on the role of author, distinct from the role a trigger plays in a fixed pipeline.
 
 ### Do AI agents work better with code-based IaC than with HCL or YAML?
 
