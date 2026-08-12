@@ -181,13 +181,27 @@
                         </label>
                         <span slot="content">{{ $m.tooltip }}</span>
                     </pulumi-tooltip>
-                    <div class="flex items-center gap-2">
-                        <span class="text-xs text-gray-500 tabular-nums" data-calc-rate></span>
+                    {{/* The rate sits under its input rather than beside it. Side by
+                         side, the label, rate and input are too wide for a phone and
+                         the rate and input wrap onto a line of their own — and since
+                         justify-content aligns each flex line independently, a line
+                         holding one item puts it at the start, so the inputs came out
+                         at five different left edges (the rate strings are different
+                         widths: $3.00/M tokens against $0.0185/resource/mo). Stacked,
+                         only the label and the input share a line, which fits.
+
+                         ml-auto for the narrowest phones, where the longest labels
+                         still push the group down to its own line: an auto margin
+                         belongs to the item rather than to the line, so it holds the
+                         group right whether it wrapped or not, and does nothing where
+                         the row already fits. */}}
+                    <div class="ml-auto flex flex-col items-end gap-1">
                         {{/* Wide enough for the seven or eight digits its max allows,
                              plus the spinner Chrome draws inside the box on hover. */}}
                         <input type="number" id="calc-{{ $m.id }}-number" class="form-input form-input-sm w-28 text-right tabular-nums"
                                min="{{ $m.min }}" max="{{ mul $m.max $numberMaxFactor }}" step="{{ $m.step }}" value="{{ $m.start }}"
                                inputmode="numeric" data-calc-number>
+                        <span class="text-xs text-gray-500 tabular-nums" data-calc-rate></span>
                     </div>
                 </div>
                 {{/* A position on the curve, not the meter's value — the TS module
