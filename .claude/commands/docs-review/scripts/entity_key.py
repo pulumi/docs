@@ -30,7 +30,8 @@ the index), a wrong key is not.
 `volatile` marks the claim types worth cheap nightly re-verification straight
 from the index — assertions whose truth drifts with the outside world even
 when the page doesn't change: version pins, prices/rates/limits, and
-pricing/limit-flavored entity specs.
+pricing/limit-flavored entity specs. A `numerical` claim about the page's own
+example or tutorial output is excluded: see SELF_DESCRIBING_RE.
 
 No LLM involvement: derivation is pure text normalization, so keys are
 reproducible from the claim record alone. Run the smoke checks with
@@ -58,6 +59,30 @@ PRICING_LIMIT_RE = re.compile(
     r"tier|tiers|plan|plans|edition|editions|subscription|"
     r"limit|limits|limited|quota|quotas|cap|capped|maximum|minimum|"
     r"free|paid|enterprise|business[- ]critical)\b",
+    re.IGNORECASE,
+)
+
+# A `numerical` claim counting something the page itself produced — "the
+# example update creates 3 resources", "this tutorial takes 15 minutes", "the
+# preview output shows 2 changes". The figure is a property of the prose, not
+# of the world: it can only change when the page changes, so the nightly lane
+# can never find drift in it, and the verifier has nothing to check it against
+# except the page it came from (which is what makes those checks circular —
+# see reverify-claims.py's own-corpus demotion). Excluded from `volatile`;
+# still keyed, still indexed, still re-checked whenever the page is reviewed.
+#
+# PRICING_LIMIT_RE vetoes the exclusion, because the two overlap on the one
+# phrasing where this rule would otherwise do damage: "the example stack costs
+# $12/month" is self-describing in form but the figure is an outside-world
+# price that drifts on its own. Keeping a stray example count in the nightly
+# pool costs one verifier call and a demoted verdict; dropping a real price
+# means never checking it again.
+SELF_DESCRIBING_RE = re.compile(
+    r"\b(?:examples?|samples?|tutorials?|walkthroughs?|screenshots?|"
+    r"meta[- ]description|"
+    r"(?:preview|update|command|terminal|console)\s+output|"
+    r"output\s+(?:shows|displays|lists|reports|contains|includes)|"
+    r"shown\s+(?:above|below))\b",
     re.IGNORECASE,
 )
 
@@ -147,6 +172,9 @@ def derive(claim: dict) -> tuple[str | None, bool]:
     volatile = ctype in ALWAYS_VOLATILE_TYPES or (
         ctype == "entity-spec" and bool(PRICING_LIMIT_RE.search(text))
     )
+    if (ctype == "numerical" and SELF_DESCRIBING_RE.search(text)
+            and not PRICING_LIMIT_RE.search(text)):
+        volatile = False
 
     if ctype not in KEYED_TYPES:
         return None, volatile
@@ -168,6 +196,17 @@ def derive(claim: dict) -> tuple[str | None, bool]:
     if not tokens:
         return None, volatile
     return f"{ctype}/{'-'.join(tokens)}", volatile
+
+
+def is_volatile(claim: dict) -> bool:
+    """Volatility of one claim record, re-derived from `type`/`text`.
+
+    Both inputs are persisted in the claims index, so `reverify-claims.py`
+    calls this to apply the current policy to snapshots that were stamped
+    under an older one — a narrowed rule takes effect on the whole index that
+    night rather than page by page as each is re-reviewed.
+    """
+    return derive(claim)[1]
 
 
 def stamp(claim: dict) -> dict:
@@ -233,6 +272,40 @@ def self_test() -> int:
     _, v = derive({"type": "entity-spec",
                    "text": "Pulumi-hosted deployment runners run in AWS us-west-2."})
     check("hosting entity-spec is not volatile", v is False)
+
+    # Self-describing numerical claims: still keyed, never volatile. Each of
+    # these was in the nightly lane's first two live sweeps.
+    for text in ("This tutorial takes about 15 minutes to complete.",
+                 "The example update creates 3 resources.",
+                 "The preview output shows 2 changes.",
+                 "The page meta description characterizes the list as complete.",
+                 "The command output lists 4 stacks."):
+        k, v = derive({"type": "numerical", "text": text})
+        check(f"self-describing not volatile: {text[:34]}...", v is False)
+        check(f"self-describing still keyed: {text[:34]}...", k is not None)
+
+    # ...but a count of something the outside world owns still is, including
+    # the policy-pack row counts that share the "lists/complete" vocabulary.
+    k, v = derive({"type": "numerical",
+                   "text": "This page lists all 139 policies in the NIST SP 800-53 pack."})
+    check("policy-pack count stays volatile", v is True)
+    k, v = derive({"type": "numerical",
+                   "text": "An operation is retried a maximum of 100 times."})
+    check("external limit stays volatile", v is True)
+
+    # A price or limit inside self-describing phrasing keeps the claim in the
+    # nightly pool: the two regexes disagree here, and the figure still drifts
+    # on its own even though the sentence is about the page's own example.
+    for text in ("The example stack costs about $12 per month.",
+                 "The tutorial's cluster stays within the 5-node free limit.",
+                 "The example uses 2 of the 10 seats on the Team plan."):
+        k, v = derive({"type": "numerical", "text": text})
+        check(f"pricing vetoes the exclusion: {text[:34]}...", v is True)
+
+    # is_volatile() re-derives from a persisted record, ignoring its stored flag.
+    check("is_volatile re-derives from type/text",
+          is_volatile({"type": "numerical", "volatile": True,
+                       "text": "The example update creates 3 resources."}) is False)
 
     # Non-keyed types: no key, not volatile.
     k, v = derive({"type": "behavior",

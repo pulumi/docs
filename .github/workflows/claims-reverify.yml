@@ -29,11 +29,20 @@ name: "Scheduled jobs: Re-verify volatile claims"
 # TURNED ON 2026-08-11 with `CLAIMS_REVERIFY_COUNT` set explicitly to '25' in
 # pulumi/docs, so the first live run is a recorded decision rather than an
 # implicit default. At the time there were 63 volatile entities across 86
-# claim snapshots — a full sweep every 3 nights. Because the lane had never
-# executed, watch the first few reports for false-positive churn: most entities
-# are typed `numerical`, and some keys read like prose fragments rather than
-# version pins or limits, which would point at the volatile classifier rather
-# than at genuinely rotted facts.
+# claim snapshots — a full sweep every 3 nights.
+#
+# The first two live sweeps (Aug 11-12, 50 entities, 0 stale) confirmed both
+# of the things that warning called for; pulumi/docs#20851 fixed them:
+#   * 48 of 50 entities were typed `numerical`, and many were counts of the
+#     page's own example output ("the example update creates 3 resources")
+#     rather than version pins or limits. entity_key.py now excludes
+#     self-describing numerical claims from `volatile`, and this lane
+#     re-derives the flag rather than trusting what the snapshot stored.
+#   * 22 of 35 `verified` verdicts cited only Pulumi's own published docs —
+#     16 of them the published copy of the very page making the claim. Those
+#     are demoted to `unverifiable` now: the site is this repo rendered, so
+#     such a check can never detect drift. Expect `fresh` to read far lower
+#     than it did on those two nights; the difference was never real.
 #
 # DEGRADATION HEALTH: this lane only Slacks when it finds STALE entities, so a
 # dead lane (claims index gone, API key missing, every check inconclusive)
@@ -178,6 +187,18 @@ jobs:
           python3 scripts/content-review/reverify-claims.py "${ARGS[@]}"
           echo "--- report ---"
           cat .claims-reverify-report.json
+
+      # The report is the lane's only durable evidence: the run log masks every
+      # occurrence of the org name (so source URLs read as `www.***.com`) and
+      # ages out with the run. Uploaded unconditionally — a run worth debugging
+      # is usually one where the verify step failed.
+      - name: Upload re-verify report
+        if: always() && hashFiles('.claims-reverify-report.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: claims-reverify-report
+          path: .claims-reverify-report.json
+          retention-days: 90
 
       # Counts only + a run link — the evidence lives in the report artifact
       # and the ledger markers; the fix arrives as a normal content-review PR.

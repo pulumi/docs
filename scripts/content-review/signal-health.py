@@ -18,8 +18,9 @@ workflow; all share one state object:
   reverify        the nightly volatile-claims re-verification only Slacks when
                   it finds STALE entities, so a dead lane (claims index gone,
                   API key missing, every check inconclusive because the
-                  verifier's gh/API plumbing broke) looks identical to a
-                  healthy quiet one
+                  verifier's gh/API plumbing broke — or because every verdict
+                  was demoted for citing only our own docs) looks identical to
+                  a healthy quiet one
 
 Graceful degradation is the right behavior; this script adds the missing
 observability. The dispatcher runs it once per scheduled run with that run's
@@ -109,8 +110,10 @@ CONSEQUENCES = {
     "reverify": (
         "nightly claims re-verify: no conclusive results for {days} day(s) "
         "({detail}) — volatile-claim drift (version pins, prices, limits) is "
-        "going undetected. Check the claims-index S3 sync, ANTHROPIC_API_KEY, "
-        "and the verifier's gh lane on claims-reverify.yml."
+        "going undetected. A demotion count above means the verifier is only "
+        "citing our own docs: that's its source routing, not the plumbing. "
+        "Otherwise check the claims-index S3 sync, ANTHROPIC_API_KEY, and the "
+        "verifier's gh lane on claims-reverify.yml."
     ),
 }
 
@@ -192,6 +195,13 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     `meta.n_due` on every run, so a quiet night (nothing due) is distinguishable
     from a dead lane. A missing/unreadable report is NOT evidence of
     degradation (the job may not have run at all) — return None.
+
+    An all-inconclusive night still degrades when the cause is demotion (the
+    verifier only cited our own docs, so nothing it returned could be trusted
+    either way): no drift was detected, which is the thing this signal exists
+    to notice. But the count is carried into the detail so the alert points at
+    the verifier's source routing rather than at S3 and API keys — the
+    remediation for a demoted night is nothing like the one for a dead lane.
     """
     if report_path is None or not report_path.is_file():
         return None
@@ -204,12 +214,16 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     n_due = int(meta.get("n_due") or 0)
     n_checked = int(meta.get("n_checked") or 0)
     n_inconclusive = int(meta.get("n_inconclusive") or 0)
+    n_demoted = int(meta.get("n_demoted") or 0)
     if skipped == "no_snapshots":
         return "degraded", "claims index empty or unfetchable"
     if skipped:
         return "degraded", f"{n_due} entities due but run skipped ({skipped})"
     if n_checked and n_inconclusive == n_checked:
-        return "degraded", f"all {n_checked} checks inconclusive"
+        detail = f"all {n_checked} checks inconclusive"
+        if n_demoted:
+            detail += f", {n_demoted} demoted for citing only our own docs"
+        return "degraded", detail
     if n_checked:
         return "ok", f"checked={n_checked} inconclusive={n_inconclusive}"
     return "ok", "nothing due tonight"
@@ -507,6 +521,9 @@ def self_test() -> int:
                          "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0}}
     rv_dead = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
                         "n_checked": 25, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 25}}
+    rv_demoted = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
+                           "n_checked": 25, "n_stale": 0, "n_fresh": 0,
+                           "n_inconclusive": 25, "n_demoted": 22}}
     rv_nokey = {"meta": {"n_snapshots": 40, "n_entities": 90, "n_due": 25,
                          "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0,
                          "skipped": "no_api_key"}}
@@ -535,6 +552,15 @@ def self_test() -> int:
         check("skipped run stays degraded with skip detail",
               st["signals"]["reverify"]["status"] == "degraded"
               and "no_api_key" in st["signals"]["reverify"]["detail"])
+
+        # An all-demoted night is still no drift detection, so it still
+        # degrades — but the detail has to name demotion, or the alert sends
+        # the on-call after S3 and API keys for a routing problem.
+        st, alert = run_once(d, "2026-09-07", reverify=rv_demoted)
+        check("all-demoted night still degrades",
+              st["signals"]["reverify"]["status"] == "degraded")
+        check("all-demoted detail names the cause",
+              "22 demoted" in st["signals"]["reverify"]["detail"])
         st, alert = run_once(d, "2026-09-10", reverify=rv_dead)
         check("reverify alert fires at threshold and names the consequence",
               alert is not None and "volatile-claim drift" in alert)
