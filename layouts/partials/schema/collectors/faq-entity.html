@@ -64,7 +64,10 @@
     {{ $currentQuestion = $line }}
     {{ $currentAnswer = slice }}
     {{ $inQuestion = true }}
-  {{ else if strings.HasPrefix $line "## " }}
+  {{ else if strings.HasPrefix (trim $line " \t") "#" }}
+    {{/* Any other markdown heading (## section break or a non-question ###/#### sub-heading)
+         ends the current answer too, so narrative sub-headings inside an answer's
+         span don't get swallowed verbatim into acceptedAnswer.text. */}}
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
       {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
