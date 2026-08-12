@@ -26,12 +26,16 @@ social:
 
         If you're building the agent runtime itself, our post on running AI agents on Kubernetes is the right next stop. This one is about the substrate underneath it.
     bluesky: |
-        The agent runtime gets the attention, but the GPU node pool underneath it is what actually runs out. Here's how to provision and govern GPU capacity on Kubernetes with Pulumi.
+        The agent runtime gets the attention, but the GPU node pool underneath it is what actually runs out.
+
+        Here's how to provision and govern GPU capacity on Kubernetes with Pulumi.
 ---
 
 Provisioning GPU infrastructure for AI workloads on Kubernetes means creating GPU-backed node pools, installing a device plugin so the scheduler can see the accelerators, and adding quotas, taints, and cost guardrails so GPU capacity is shared fairly instead of claimed by whichever job launches first. On any major cloud, Pulumi provisions all of it, cluster and node pool alike, in the same program and the same language as everything else you deploy.
 
 That is the substrate question. It's a different question from "how do I run an AI agent on Kubernetes," which is about the runtime: agent CRDs, tool-calling controllers, and the orchestration loop that decides what an agent is allowed to do. If that's what you're after, [our post on running AI agents on Kubernetes](/blog/ai-agents-on-kubernetes/) covers it end to end. This post is about the layer underneath: the GPU capacity every agent, model server, and training job ultimately competes for.
+
+<!--more-->
 
 ## Why the compute substrate is the new platform boundary
 
@@ -84,16 +88,17 @@ const cluster = new eks.Cluster("ai-platform", {
 const gpuNodeGroup = new eks.NodeGroup("gpu-pool", {
     cluster: cluster,
     instanceType: "g5.xlarge",
-    amiType: "AL2_x86_64_GPU",
+    gpu: true,
     desiredCapacity: 1,
     minSize: 0,
     maxSize: 4,
     labels: { "workload-type": "gpu" },
-    taints: [{
-        key: "nvidia.com/gpu",
-        value: "present",
-        effect: "NO_SCHEDULE",
-    }],
+    taints: {
+        "nvidia.com/gpu": {
+            value: "present",
+            effect: "NoSchedule",
+        },
+    },
 });
 
 const provider = new k8s.Provider("gpu-cluster", {
@@ -145,7 +150,7 @@ gpu_node_pool = gcp.container.NodePool(
 
 provider = k8s.Provider(
     "gpu-cluster",
-    kubeconfig=cluster.name.apply(lambda _: pulumi.Output.secret("<kubeconfig>")),
+    kubeconfig=pulumi.Config().require_secret("kubeconfig"),
 )
 
 gpu_operator = k8s.helm.v4.Chart(
@@ -159,7 +164,7 @@ gpu_operator = k8s.helm.v4.Chart(
 )
 ```
 
-Both programs do the same three things: request GPU-backed nodes, taint them so ordinary workloads can't land there by accident, and install the operator that turns physical accelerators into a schedulable Kubernetes resource. Credentials for the cluster follow the same pattern as the rest of your Pulumi stack: pull them from Pulumi ESC rather than hardcoding a kubeconfig.
+Both programs do the same three things: request GPU-backed nodes, taint them so ordinary workloads can't land there by accident, and install the operator that turns physical accelerators into a schedulable Kubernetes resource. Credentials for the cluster follow the same pattern as the rest of your Pulumi stack: pull them from Pulumi ESC rather than hardcoding a kubeconfig. In practice that means an ESC environment (for example `gcp-gke-gpu-cluster`) that resolves a short-lived GKE credential and writes it into the stack's `kubeconfig` config value, which is what `pulumi.Config().require_secret("kubeconfig")` reads above — one more reason to run this stack against [Pulumi Cloud](/product/pulumi-cloud/) rather than a self-managed backend, since ESC and Pulumi Cloud share the same identity and secrets layer.
 
 ## How do you keep GPU capacity from being wasted or blown through?
 
