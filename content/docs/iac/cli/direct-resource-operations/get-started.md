@@ -21,7 +21,7 @@ This guide takes you from zero to your first resource operations, and shows you 
 
 ## Prerequisites
 
-1. [Install the Pulumi CLI](/docs/install/), version v3.257.0 or later. Because `pulumi do` is in research preview and evolving quickly, we recommend the latest version.
+1. [Install the Pulumi CLI](/docs/install/), version 3.257.0 or later. Because `pulumi do` is in research preview and evolving quickly, we recommend the latest version.
 1. Credentials for a cloud provider. The examples use AWS, but any [Pulumi provider](/registry/) works the same way.
 
 ## Create your first resource
@@ -55,9 +55,18 @@ By default, `pulumi do` runs in stateful mode: the bucket is recorded as a snipp
 
 A bucket wouldn't be very useful without anything to put into it.  Let's create a bucket object in the bucket.
 
-To do that, we need to reference the newly created bucket.  We can do that either by creating a resource-file (in JSON format), and passing that via the `--resources-file` option.  The easiest way to create that file is by using the output of `pulumi do show-resources --json`. The names `pulumi do show-resources` shows can also be used to reference the resource directly, as we'll do in the example below.
+The object needs to reference the bucket you just created. `pulumi do` auto-assigns every tracked resource an identifier, derived from its name with hyphens converted to underscores — so `my-bucket` becomes `my_bucket`. Run `pulumi do show-resources` to list them:
 
-Further, inputs can be passed to `pulumi do` either via `--<input>` flags for scalar inputs, or through a YAML formatted file, that's passed with `--input-file`. In the following example we'll pass the bucket name through the YAML file, while passing the content through an `--<input>` flag.
+```bash
+$ pulumi do show-resources
+
+NAME       URN
+my_bucket  urn:pulumi:default::default-global-project::aws:s3/bucket:Bucket::my-bucket
+```
+
+You can also supply your own identifiers by passing a JSON file that maps identifiers to resource URNs with `--resources-file`; its entries take precedence over the auto-assigned ones.
+
+Inputs can be passed to `pulumi do` either via `--<input>` flags for scalar inputs, or through a YAML formatted file that's passed with `--input-file`. Inside an input file, reference another resource by its identifier with `${...}`. The following example passes the bucket reference through the YAML file, while passing the content through an `--<input>` flag:
 
 ```yaml
 # object.yaml
@@ -82,7 +91,7 @@ Created my-object (snippet 08de6783-0957-415d-98f8-e304399a1d09)
 
 ## Read, update, and delete
 
-Read the current state of any resource by its cloud provider ID. The id is shown in the outputs, or can be read using `pulumi state get <name>`.
+Read the current state of any resource by its cloud provider ID, which is shown in the `id` output when the resource is created.
 
 ```bash
 $ pulumi do aws:s3:Bucket read my-bucket-f998a37
@@ -151,6 +160,8 @@ $ pulumi do aws:ec2:getVpc --default
   ...
 }
 ```
+
+`--default` isn't a `pulumi do` flag — it's the `default` input of `getVpc`, passed with the same `--<input>` form used for resource inputs.
 
 ## Use it in scripts
 
