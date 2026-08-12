@@ -24,19 +24,33 @@
 {{ $currentQuestion := "" }}
 {{ $currentAnswer := slice }}
 {{ $inQuestion := false }}
+{{ $inCodeFence := false }}
 
 {{ range $index, $line := $lines }}
+  {{/* Track fenced code blocks so heading-shaped comment lines inside a
+       code sample (e.g. "# Install the CLI") are never mistaken for a
+       markdown heading or a question. */}}
+  {{ $trimmedForFence := trim $line " \t" }}
+  {{ $isFenceDelim := or (strings.HasPrefix $trimmedForFence "```") (strings.HasPrefix $trimmedForFence "~~~") }}
+  {{ if $isFenceDelim }}
+    {{ $inCodeFence = not $inCodeFence }}
+  {{ end }}
   {{/* Check if this is a question (H2 ending with ? or context-aware H3) */}}
   {{/* Context-aware H3 detection:
        - In FAQ pages (/faq in URL): All H3s are treated as questions
        - Elsewhere: H3 must end with ? to be a question */}}
   {{ $isH3Question := false }}
-  {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
-    {{ $isH3Question = strings.HasPrefix $line "### " }}
-  {{ else }}
-    {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ if and (not $inCodeFence) (not $isFenceDelim) }}
+    {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
+      {{ $isH3Question = strings.HasPrefix $line "### " }}
+    {{ else }}
+      {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+    {{ end }}
   {{ end }}
-  {{ $isH2Question := and (strings.HasPrefix $line "## ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ $isH2Question := false }}
+  {{ if and (not $inCodeFence) (not $isFenceDelim) }}
+    {{ $isH2Question = and (strings.HasPrefix $line "## ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ end }}
   {{ if or $isH3Question $isH2Question }}
     {{/* Save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
@@ -64,10 +78,14 @@
     {{ $currentQuestion = $line }}
     {{ $currentAnswer = slice }}
     {{ $inQuestion = true }}
-  {{ else if strings.HasPrefix (trim $line " \t") "#" }}
+  {{ else if and (not $inCodeFence) (not $isFenceDelim) (findRE "^#{1,6}[ \t]" $trimmedForFence) }}
     {{/* Any other markdown heading (## section break or a non-question ###/#### sub-heading)
          ends the current answer too, so narrative sub-headings inside an answer's
-         span don't get swallowed verbatim into acceptedAnswer.text. */}}
+         span don't get swallowed verbatim into acceptedAnswer.text.
+         Requires actual heading syntax (one to six "#" followed by a space) and
+         excludes lines inside fenced code blocks, so a heading-shaped comment
+         (e.g. "# Install the CLI") in a shell/YAML/Python sample is never
+         mistaken for a markdown heading. */}}
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
       {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
