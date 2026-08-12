@@ -1286,7 +1286,7 @@ Internal Developer Platform Evolution: Organizations are building sophisticated 
 
 AI-Enhanced Development: Integration of AI tools to help generate, optimize, and troubleshoot infrastructure code, with particular strength in environments that use familiar programming languages where AI assistance is most mature. Emerging technologies like Model Context Protocol (MCP) and AI prompt templates are beginning to enable more sophisticated AI-infrastructure interactions.
 
-> "In under a year, AI has reshaped how we build applications. With Pulumi Neo, platform engineering is now catching up."
+> "In under a year, AI has completely reshaped how we build applications. With Pulumi Neo, platform engineering is now catching up."
 >
 > — Joe Duffy, Founder & CEO, [Pulumi](https://www.prnewswire.com/news-releases/introducing-pulumi-neo-the-industrys-first-ai-powered-platform-engineer-302556718.html)
 
