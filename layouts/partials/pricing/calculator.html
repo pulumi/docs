@@ -181,21 +181,29 @@
                         </label>
                         <span slot="content">{{ $m.tooltip }}</span>
                     </pulumi-tooltip>
-                    {{/* The rate sits under its input rather than beside it. Side by
-                         side, the label, rate and input are too wide for a phone and
-                         the rate and input wrap onto a line of their own — and since
-                         justify-content aligns each flex line independently, a line
-                         holding one item puts it at the start, so the inputs came out
-                         at five different left edges (the rate strings are different
-                         widths: $3.00/M tokens against $0.0185/resource/mo). Stacked,
-                         only the label and the input share a line, which fits.
+                    {{/* From sm up the rate sits to the left of its input, which is
+                         the roomy layout. On a phone those two plus the label are
+                         wider than the card, so they wrapped onto a line of their own
+                         — and since justify-content aligns each flex line
+                         independently, a line holding one item puts it at the start,
+                         leaving the five inputs at five different left edges (the rate
+                         strings are different widths: $3.00/M tokens against
+                         $0.0185/resource/mo). Stacking the rate under the input below
+                         sm leaves only the label and the input sharing a line, which
+                         fits.
 
-                         ml-auto for the narrowest phones, where the longest labels
+                         row-reverse rather than reordering the markup, so the input
+                         stays first in the DOM and the column keeps its natural order:
+                         the parent row aligns this group by its first baseline, which
+                         needs to be the input's at every width or the label stops
+                         lining up with it.
+
+                         ml-auto for the narrowest phones, where the longest labels can
                          still push the group down to its own line: an auto margin
                          belongs to the item rather than to the line, so it holds the
                          group right whether it wrapped or not, and does nothing where
                          the row already fits. */}}
-                    <div class="ml-auto flex flex-col items-end gap-1">
+                    <div class="ml-auto flex flex-col items-end gap-1 sm:flex-row-reverse sm:items-center sm:gap-2">
                         {{/* Wide enough for the seven or eight digits its max allows,
                              plus the spinner Chrome draws inside the box on hover. */}}
                         <input type="number" id="calc-{{ $m.id }}-number" class="form-input form-input-sm w-28 text-right tabular-nums"
