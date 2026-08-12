@@ -19,6 +19,8 @@ aliases:
 
 The `pulumi do` command provides direct operations on cloud resources through the Pulumi CLI without requiring a project, program, or state file. It exposes the full Pulumi provider ecosystem as a CLI, with commands generated dynamically from each provider's schema.
 
+New to `pulumi do`? Follow the [getting started guide](/docs/iac/cli/direct-resource-operations/get-started/) to run your first resource operations in a few minutes.
+
 ## Overview
 
 `pulumi do` supports two types of operations:
