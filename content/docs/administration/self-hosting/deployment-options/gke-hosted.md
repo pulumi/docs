@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted GKE install
 menu:
   administration:
         name: GKE
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 5
-        identifier: administration-security-compliance-self-hosted-deployment-options-gke
+        identifier: administration-self-hosting-deployment-options-gke
 aliases:
   - /docs/guides/self-hosted/gke-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/gke-hosted/

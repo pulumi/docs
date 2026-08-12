@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted OpenSearch cluster
 menu:
   administration:
         name: OpenSearch cluster
-        parent: administration-security-compliance-self-hosted-components
+        parent: administration-self-hosting-components
         weight: 3
-        identifier: administration-security-compliance-self-hosted-components-search
+        identifier: administration-self-hosting-components-search
 aliases:
   - /docs/guides/self-hosted/components/search/
   - /docs/pulumi-cloud/self-hosted/components/search/

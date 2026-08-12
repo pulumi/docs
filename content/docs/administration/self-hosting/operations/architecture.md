@@ -6,9 +6,9 @@ h1: Self-Hosted Architecture Overview
 menu:
   administration:
     name: Architecture
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 1
-    identifier: administration-security-compliance-self-hosted-operations-architecture
+    identifier: administration-self-hosting-operations-architecture
 pulumi_cloud_feature: self-hosting
 ---
 

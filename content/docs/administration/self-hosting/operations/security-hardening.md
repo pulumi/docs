@@ -6,9 +6,9 @@ h1: Security Hardening
 menu:
   administration:
     name: Security Hardening
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 9
-    identifier: administration-security-compliance-self-hosted-operations-security-hardening
+    identifier: administration-self-hosting-operations-security-hardening
 pulumi_cloud_feature: self-hosting
 ---
 

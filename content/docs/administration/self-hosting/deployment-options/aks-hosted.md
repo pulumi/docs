@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted AKS install
 menu:
   administration:
         name: AKS
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 4
-        identifier: administration-security-compliance-self-hosted-deployment-options-aks
+        identifier: administration-self-hosting-deployment-options-aks
 aliases:
   - /docs/guides/self-hosted/aks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted/

@@ -7,7 +7,7 @@ menu:
   administration:
     parent: administration-self-hosting
     weight: 2
-    identifier: administration-security-compliance-self-hosted-components
+    identifier: administration-self-hosting-components
 aliases:
 - /docs/guides/self-hosted/console/
 - /docs/guides/self-hosted/components/

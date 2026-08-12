@@ -6,9 +6,9 @@ h1: Networking and Load Balancing
 menu:
   administration:
     name: Networking
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 5
-    identifier: administration-security-compliance-self-hosted-operations-networking
+    identifier: administration-self-hosting-operations-networking
 pulumi_cloud_feature: self-hosting
 ---
 

@@ -8,7 +8,7 @@ menu:
         name: Network reqs
         parent: administration-self-hosting
         weight: 4
-        identifier: administration-security-compliance-self-hosted-network
+        identifier: administration-self-hosting-network
 aliases:
   - /docs/guides/self-hosted/requirements/
   - /docs/guides/self-hosted/requirements/network/

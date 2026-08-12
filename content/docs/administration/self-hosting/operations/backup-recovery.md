@@ -6,9 +6,9 @@ h1: Backup and Recovery
 menu:
   administration:
     name: Backup and Recovery
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 7
-    identifier: administration-security-compliance-self-hosted-operations-backup-recovery
+    identifier: administration-self-hosting-operations-backup-recovery
 pulumi_cloud_feature: self-hosting
 ---
 

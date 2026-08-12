@@ -7,7 +7,7 @@ menu:
   administration:
     parent: administration-self-hosting
     weight: 1
-    identifier: administration-security-compliance-self-hosted-deployment-options
+    identifier: administration-self-hosting-deployment-options
 aliases:
   - /docs/pulumi-cloud/self-hosted/deployment-options/
   - /docs/administration/self-hosting/pulumi-cloud/deployment-options/

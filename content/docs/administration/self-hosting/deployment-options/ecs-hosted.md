@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted ECS install
 menu:
   administration:
         name: ECS
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 2
-        identifier: administration-security-compliance-self-hosted-deployment-options-ecs
+        identifier: administration-self-hosting-deployment-options-ecs
 aliases:
   - /docs/guides/self-hosted/ecs-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/ecs-hosted/

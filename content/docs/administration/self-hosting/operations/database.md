@@ -6,9 +6,9 @@ h1: Database Best Practices
 menu:
   administration:
     name: Database
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 2
-    identifier: administration-security-compliance-self-hosted-operations-database
+    identifier: administration-self-hosting-operations-database
 pulumi_cloud_feature: self-hosting
 ---
 

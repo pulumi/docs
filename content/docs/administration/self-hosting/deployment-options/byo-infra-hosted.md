@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted BYO-infra install
 menu:
   administration:
         name: Bring-your-own infra
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 7
-        identifier: administration-security-compliance-self-hosted-deployment-options-byo-infra-hosted
+        identifier: administration-self-hosting-deployment-options-byo-infra-hosted
 aliases:
   - /docs/guides/self-hosted/byo-infra-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted/

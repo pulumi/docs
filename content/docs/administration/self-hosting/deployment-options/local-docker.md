@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted local-Docker install
 menu:
   administration:
         name: Local-Docker
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 6
-        identifier: administration-security-compliance-self-hosted-deployment-options-local-docker
+        identifier: administration-self-hosting-deployment-options-local-docker
 aliases:
   - /docs/guides/self-hosted/local-docker/
   - /docs/pulumi-cloud/self-hosted/deployment-options/local-docker/

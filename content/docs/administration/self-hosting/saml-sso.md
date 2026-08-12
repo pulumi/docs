@@ -8,7 +8,7 @@ menu:
         name: SAML SSO
         parent: administration-self-hosting
         weight: 3
-        identifier: administration-security-compliance-self-hosted-saml-sso
+        identifier: administration-self-hosting-saml-sso
 aliases:
   - /docs/guides/self-hosted/saml-sso/
   - /docs/pulumi-cloud/self-hosted/saml-sso/

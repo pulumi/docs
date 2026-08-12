@@ -6,9 +6,9 @@ h1: Upgrade Pipeline
 menu:
   administration:
     name: Upgrades
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 8
-    identifier: administration-security-compliance-self-hosted-operations-upgrades
+    identifier: administration-self-hosting-operations-upgrades
 pulumi_cloud_feature: self-hosting
 ---
 

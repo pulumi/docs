@@ -6,9 +6,9 @@ meta_desc: Pulumi console is one of the components required for self-hosting Pul
 menu:
   administration:
         name: Pulumi console
-        parent: administration-security-compliance-self-hosted-components
+        parent: administration-self-hosting-components
         weight: 2
-        identifier: administration-security-compliance-self-hosted-components-console
+        identifier: administration-self-hosting-components-console
 aliases:
   - /docs/guides/self-hosted/components/console/
   - /docs/pulumi-cloud/self-hosted/components/console/

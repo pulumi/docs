@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted API
 menu:
   administration:
         name: Pulumi API
-        parent: administration-security-compliance-self-hosted-components
+        parent: administration-self-hosting-components
         weight: 1
-        identifier: administration-security-compliance-self-hosted-components-api
+        identifier: administration-self-hosting-components-api
 aliases:
   - /docs/guides/self-hosted/components/api/
   - /docs/pulumi-cloud/self-hosted/components/api/

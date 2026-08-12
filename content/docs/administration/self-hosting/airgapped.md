@@ -8,7 +8,7 @@ menu:
         name: Air-Gapped
         parent: administration-self-hosting
         weight: 5
-        identifier: administration-security-compliance-self-hosted-airgapped
+        identifier: administration-self-hosting-airgapped
 aliases:
 - /docs/administration/self-hosting/airgapped/
 - /docs/pulumi-cloud/admin/self-hosted/airgapped/

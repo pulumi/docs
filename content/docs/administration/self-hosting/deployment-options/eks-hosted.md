@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted EKS install
 menu:
   administration:
         name: EKS
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 3
-        identifier: administration-security-compliance-self-hosted-deployment-options-eks
+        identifier: administration-self-hosting-deployment-options-eks
 aliases:
   - /docs/guides/self-hosted/eks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/eks-hosted/

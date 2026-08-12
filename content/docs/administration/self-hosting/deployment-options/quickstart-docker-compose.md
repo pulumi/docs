@@ -6,9 +6,9 @@ h1: Try Self-Hosted Pulumi Cloud with Docker Compose
 menu:
   administration:
         name: Docker Compose
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 1
-        identifier: administration-security-compliance-self-hosted-deployment-options-quickstart-docker-compose
+        identifier: administration-self-hosting-deployment-options-quickstart-docker-compose
 aliases:
   - /docs/guides/self-hosted/quickstart-docker-compose/
   - /docs/pulumi-cloud/self-hosted/deployment-options/quickstart-docker-compose/

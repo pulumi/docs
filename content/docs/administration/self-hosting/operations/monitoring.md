@@ -6,9 +6,9 @@ h1: Monitoring and Alerting
 menu:
   administration:
     name: Monitoring
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 6
-    identifier: administration-security-compliance-self-hosted-operations-monitoring
+    identifier: administration-self-hosting-operations-monitoring
 pulumi_cloud_feature: self-hosting
 ---
 
