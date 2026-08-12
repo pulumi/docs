@@ -77,6 +77,10 @@ $ pulumi up
 
 Re-run `pulumi install` whenever you change the set of providers your program uses.
 
+`pulumi install` writes each provider's descriptor to `sdks/<provider>/hcl.sdk.json` in your project directory. Check the `sdks` directory into version control along with the rest of your program. A committed descriptor lets teammates and CI/CD run `pulumi preview` or `pulumi up` right away, without a `pulumi install` step first, and it keeps everyone resolving the same provider version. Without it, Pulumi reports unresolved package specs and stops until `pulumi install` runs. Unlike the [local SDKs generated for other languages](/docs/iac/concepts/providers/any-terraform-provider/#version-control-considerations), an `hcl.sdk.json` descriptor is a small, portable JSON file with no host-specific paths, so there's no repository-size tradeoff to weigh.
+
+When you re-run `pulumi install` after changing providers, commit the updated descriptor too; the diff is a normal part of code review, the same way you'd review a lockfile change.
+
 Further examples are available in the [Pulumi HCL GitHub repository](https://github.com/pulumi/pulumi-hcl/tree/master/examples). The specification for Pulumi HCL programs is in the [Pulumi HCL reference](/docs/iac/languages-sdks/hcl/hcl-language-reference/).
 
 ## Pulumi programming model
