@@ -70,6 +70,13 @@ PRICING_LIMIT_RE = re.compile(
 # except the page it came from (which is what makes those checks circular —
 # see reverify-claims.py's own-corpus demotion). Excluded from `volatile`;
 # still keyed, still indexed, still re-checked whenever the page is reviewed.
+#
+# PRICING_LIMIT_RE vetoes the exclusion, because the two overlap on the one
+# phrasing where this rule would otherwise do damage: "the example stack costs
+# $12/month" is self-describing in form but the figure is an outside-world
+# price that drifts on its own. Keeping a stray example count in the nightly
+# pool costs one verifier call and a demoted verdict; dropping a real price
+# means never checking it again.
 SELF_DESCRIBING_RE = re.compile(
     r"\b(?:examples?|samples?|tutorials?|walkthroughs?|screenshots?|"
     r"meta[- ]description|"
@@ -165,7 +172,8 @@ def derive(claim: dict) -> tuple[str | None, bool]:
     volatile = ctype in ALWAYS_VOLATILE_TYPES or (
         ctype == "entity-spec" and bool(PRICING_LIMIT_RE.search(text))
     )
-    if ctype == "numerical" and SELF_DESCRIBING_RE.search(text):
+    if (ctype == "numerical" and SELF_DESCRIBING_RE.search(text)
+            and not PRICING_LIMIT_RE.search(text)):
         volatile = False
 
     if ctype not in KEYED_TYPES:
@@ -284,6 +292,15 @@ def self_test() -> int:
     k, v = derive({"type": "numerical",
                    "text": "An operation is retried a maximum of 100 times."})
     check("external limit stays volatile", v is True)
+
+    # A price or limit inside self-describing phrasing keeps the claim in the
+    # nightly pool: the two regexes disagree here, and the figure still drifts
+    # on its own even though the sentence is about the page's own example.
+    for text in ("The example stack costs about $12 per month.",
+                 "The tutorial's cluster stays within the 5-node free limit.",
+                 "The example uses 2 of the 10 seats on the Team plan."):
+        k, v = derive({"type": "numerical", "text": text})
+        check(f"pricing vetoes the exclusion: {text[:34]}...", v is True)
 
     # is_volatile() re-derives from a persisted record, ignoring its stored flag.
     check("is_volatile re-derives from type/text",

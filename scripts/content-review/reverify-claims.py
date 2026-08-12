@@ -329,9 +329,11 @@ def run(args) -> int:
 
     # The meta block doubles as the health observation consumed by
     # signal-health.py's reverify signal: `skipped` distinguishes "couldn't
-    # run" (degraded) from the quiet-night n_due=0 (healthy), and an
-    # all-inconclusive n_checked is the broken-verifier tell. Keep those
-    # semantics intact when touching the early-exit paths below.
+    # run" (degraded) from the quiet-night n_due=0 (healthy), an
+    # all-inconclusive n_checked is the no-drift-detected tell, and n_demoted
+    # says how much of that was own-corpus evidence rather than broken
+    # plumbing — the two want opposite fixes. Keep those semantics intact when
+    # touching the early-exit paths below.
     snapshots = load_snapshots(Path(args.claims_dir))
     report["meta"]["n_snapshots"] = len(snapshots)
     if not snapshots:
