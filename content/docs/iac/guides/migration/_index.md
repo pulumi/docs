@@ -55,7 +55,7 @@ Let's say you already have infrastructure provisioned by an existing tool, such 
 
 In these cases, new infrastructure can coexist with old infrastructure in two ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management. The following techniques can be used:
 
-* [**Resource Getters**](/docs/iac/concepts/resources/#resource-get) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
+* [**Resource Getters**](/docs/iac/concepts/functions/get-functions/) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
 
 * [**Stack References**](/docs/iac/concepts/stacks/#stackreferences) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
 
@@ -79,4 +79,4 @@ The final approach is to convert an existing infrastructure as code program to P
 
 Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
 
-There are conversion tools available for [Terraform HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/#using-the-next-generation-pulumi-azure-provider).
+There are conversion tools available for [Terraform HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi).

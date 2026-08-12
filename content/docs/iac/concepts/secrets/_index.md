@@ -190,7 +190,7 @@ An output can be marked secret in a number of ways:
 - By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
 - By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
 - By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/iac/concepts/inputs-outputs/).
-- By computing a secret value by using [`apply`](/docs/iac/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
+- By computing a secret value by using [`apply`](/docs/iac/concepts/inputs-outputs/apply/) or {{< pulumi-all >}} with another secret value.
 
 As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
@@ -200,7 +200,7 @@ Be careful that you do not pass this plain-text value to code that might expose 
 
 ### Explicitly marking resource outputs as secrets
 
-It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/iac/concepts/resources/#additionalsecretoutputs) option.
+It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/) option.
 
 ### The resource ID cannot be made secret
 
@@ -760,6 +760,6 @@ config:
     secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
 ```
 
-Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/access-identity/rbac/permission-sets#stack-permission-sets) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
+Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
 It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).

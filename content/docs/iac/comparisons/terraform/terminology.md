@@ -29,7 +29,7 @@ If you're already familiar with Terraform, learning Pulumi terminology and comma
 | Directory | [Project](/docs/iac/concepts/projects/) |
 | Module | [Component](/docs/iac/concepts/components/) |
 | Resource | [Resource](/docs/iac/concepts/resources/) |
-| Interpolation | [Interpolation](/docs/iac/concepts/inputs-outputs/#outputs-and-strings) |
+| Interpolation | [Interpolation](/docs/iac/concepts/inputs-outputs/outputs-and-strings/) |
 | Run | [Up](/docs/iac/cli/commands/pulumi_up/) |
 | Output Values | [Outputs](/docs/iac/concepts/inputs-outputs/) |
 | State | [State](/docs/iac/concepts/state-and-backends/) |

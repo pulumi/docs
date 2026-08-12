@@ -149,7 +149,7 @@ Resources:
 Duration: 2s
 ```
 
-Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/iac/concepts/resources/#protect) documentation to learn more.
+Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/iac/concepts/resources/options/protect/) documentation to learn more.
 
 ### Demo
 

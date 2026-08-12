@@ -526,7 +526,7 @@ Diagnostics:
     warning: inputs to import do not match the existing resource; importing this resource will fail
 ```
 
-This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can suppress the warning by setting the [`ignoreChanges`](/docs/iac/concepts/resources/#ignorechanges) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
+This is because the import operation requires explicit definitions for all properties that may have been auto-populated by Azure during the resource creation. You can suppress the warning by setting the [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) option to `["accessTier","enableHttpsTrafficOnly","encryption","networkRuleSet"]`.
 
 After running `pulumi up` again, your storage account will become under the control of Pulumi without any disruption. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
 

@@ -619,7 +619,7 @@ resources:
 
 ## Disabling default providers
 
-While default providers are enabled by default, they [can be disabled](/docs/iac/concepts/config/#special-configuration-options) on a per stack basis. Disabling default providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
+While default providers are enabled by default, they [can be disabled](/docs/iac/concepts/config/#pulumidisable-default-providers) on a per stack basis. Disabling default providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
 
 {{% notes type="tip" %}}
 Disabling default providers will help ensure that the [`provider` resource option](/docs/iac/concepts/resources/options/provider/) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.

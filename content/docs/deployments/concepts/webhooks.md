@@ -51,7 +51,7 @@ Webhooks do not guarantee event order. You should not assume events will be rece
 
 Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
 [Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
-or by [using the API](/docs/reference/cloud-rest-api/#create-webhook) directly.
+or by [using the API](/docs/reference/cloud-rest-api/webhooks/) directly.
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}

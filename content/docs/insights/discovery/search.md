@@ -98,7 +98,7 @@ Examples: _delete:true_ | _delete:false_
 
 #### dependency
 
-The [URN][urn] of another resource this resource explicitly or implicitly [depends on](/docs/iac/concepts/resources/#dependson).
+The [URN][urn] of another resource this resource explicitly or implicitly [depends on](/docs/iac/concepts/resources/options/dependson/).
 
 A resource can have multiple dependencies. When querying, `dependency:foo` returns resources with any dependency with a URN matching `foo`.
 
@@ -402,7 +402,7 @@ For a complete description of the CSV format returned, see the [Data Export](/do
 
 ## API access
 
-Resources can also be queried programmatically. See the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/#resource-search) for full details of the API endpoint to query resources.
+Resources can also be queried programmatically. See the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/resource-search/) for full details of the API endpoint to query resources.
 
 ## AI assist
 
@@ -436,12 +436,12 @@ You do not need to query AI Assist with English:
 
 ## Access controls
 
-Resource Search is available to all members of an organization, but as a user you are only able to see and query resources that you have [permission](/docs/administration/access-identity/rbac/permission-sets#stack-permission-sets) to access.
+Resource Search is available to all members of an organization, but as a user you are only able to see and query resources that you have [permission](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets) to access.
 More specifically:
 
 - Organization admins have access to all resources.
 - If an organization has a default permission of read or write, then all users can query all resources.
-- If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/administration/access-identity/rbac/permission-sets#stack-permission-sets) or [Team](/docs/administration/organizations-teams/teams/#team-permissions) permissions.
+- If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets) or [Team](/docs/administration/access-identity/rbac/teams/#team-access-types) permissions.
 
 [types]: /docs/concepts/resources/names/#types
 [urn]: /docs/concepts/resources/names/#urns

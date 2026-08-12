@@ -35,9 +35,9 @@ You can use both the CLI and the programming model for your Pulumi configuration
 
 ## Configuration Keys
 
-Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name](/docs/iac/concepts/projects/#project-name) from `Pulumi.yaml` as the namespace.
+Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name](/docs/iac/concepts/projects/#pulumi-yaml) from `Pulumi.yaml` as the namespace.
 
-As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components](/docs/iac/concepts/resources/#components) to define their own key spaces without risk of conflicting with other components, packages, or projects.
+As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components](/docs/iac/concepts/components/) to define their own key spaces without risk of conflicting with other components, packages, or projects.
 
 ## Setting and Getting Configuration Values
 
