@@ -18,13 +18,15 @@ social:
     twitter: |
         Two incidents. One root cause: a self-managed state backend.
 
-        A leaked IAM key in an S3-hosted tfstate file opened a second AWS account. An out-of-order merge deleted two of three production Kubernetes clusters. Here's the common thread, and what closes the gap.
+        A leaked IAM key in an S3-hosted tfstate file opened a second AWS account. An out-of-order merge deleted two of three production Kubernetes clusters. Here's the common thread.
     linkedin: |
         Two real-world incidents. One root cause: a self-managed infrastructure-as-code state backend.
 
         We walk through a credential leak that pivoted an attacker into a second AWS account, and a state race condition that deleted two of three production Kubernetes clusters, then show what a managed backend changes about both.
     bluesky: |
-        A leaked IAM key in S3. An out-of-order Terraform merge. Two incidents, one root cause: DIY state management.
+        A leaked IAM key in S3. An out-of-order Terraform merge.
+
+        Two incidents, one root cause: DIY state management.
 ---
 
 Two publicly documented infrastructure-as-code incidents, a cloud intrusion and a mass cluster deletion, trace back to the same root cause: a self-managed state backend. Neither is a knock on any one tool. Plaintext credentials in object storage and unprotected concurrent writes are risks inherent to running your own state backend, whether that state file is written by Terraform or by Pulumi in a self-managed configuration. A managed backend, like Pulumi Cloud, is purpose-built to close both gaps.
@@ -39,7 +41,7 @@ In 2023, the [Sysdig Threat Research Team documented an intrusion](https://www.s
 4. That state file contained a second, more privileged set of IAM access keys in plaintext, which the attacker used to pivot into a **second AWS account**.
 5. Once inside, the attacker disabled CloudTrail logging to cover their tracks before continuing to explore the environment.
 
-**Root cause**: this was not a Terraform vulnerability. Terraform's [own state documentation](https://developer.hashicorp.com/terraform/language/state/sensitive-data) has long warned that state files "can contain sensitive data" in plaintext and that "care should be taken" to limit access. The exposure came from where and how the state was stored: an S3 bucket subject to whatever object-storage ACLs the team configured, holding secrets in cleartext with no engine-level enforcement of encryption. A Pulumi project on a self-managed backend, an S3 bucket, a local file, or any object store you administer yourself, carries the identical exposure. The risk lives in the DIY backend model, not in a specific IaC language or syntax.
+**Root cause**: this was not a Terraform vulnerability. Terraform's [own state documentation](https://developer.hashicorp.com/terraform/language/state/sensitive-data) has long warned that state files "can contain sensitive data" in plaintext and that "care should be taken" to limit access. The exposure came from where and how the state was stored: an S3 bucket subject to whatever object-storage ACLs the team configured, holding secrets in cleartext with no engine-level enforcement of encryption. A Pulumi project on a self-managed backend still leaves the state file's storage, the S3 bucket ACLs, the local filesystem, in the team's hands, so the same object-storage misconfiguration that exposed the SCARLETEEL state file applies. Pulumi does encrypt values explicitly marked as secrets by default, even on a self-managed backend, so it doesn't share Terraform's plaintext-secret default, but any credential written to state without being marked secret is still only as protected as the bucket around it. The risk lives in the DIY backend model's storage layer, not in a specific IaC language or syntax.
 
 ## Incident two: how shared state deleted two of three production clusters
 
@@ -51,7 +53,7 @@ In a [2019 KubeCon EU keynote](https://www.youtube.com/watch?v=ix0Tw8uinWs), Spo
 - Restoring service took **three hours and fifteen minutes**, made slower because the automation scripts involved were not resumable, so failed steps had to be worked around or rerun from scratch.
 - Critically, Spotify reported **no end-user impact**, because the team had deliberately engineered redundancy across clusters as a hedge against exactly this class of failure.
 
-**Root cause**: this is a general property of self-managed, serialized state protocols, not a Terraform-specific defect. Whenever two changes race to mutate the same state file without an enforced lock, the outcome depends on merge order and timing rather than intent. Any DIY-backend IaC tool, again including Pulumi run against a self-managed backend, is exposed to the same class of failure absent an external locking mechanism the team builds and maintains themselves.
+**Root cause**: this is a general property of self-managed, serialized state protocols, not a Terraform-specific defect. Whenever two changes race to mutate the same state file without an enforced lock, the outcome depends on merge order and timing rather than intent. Any DIY-backend IaC tool is exposed to this class of failure to the degree its locking is optional or must be stood up separately. Terraform's S3 backend historically required a separate lock service; Pulumi's self-managed backends enable a basic file-based lock by default, though a shared object store still depends on that store honoring the lock.
 
 ## The common thread: the DIY state backend
 
@@ -60,7 +62,7 @@ Both incidents map cleanly onto the same underlying gaps in how a self-managed b
 | Risk surface | Self-managed backend (e.g. raw S3, local file) | What it takes to close the gap yourself |
 | --- | --- | --- |
 | Secret handling | Secrets, including IAM keys, stored in plaintext by default | Manually configure bucket encryption, apply strict IAM policies, and hope no credential is ever written to state without being caught |
-| Concurrency and locking | No enforced lock between competing writers; behavior depends on merge order | Stand up and maintain a separate distributed lock service (e.g. DynamoDB for Terraform's S3 backend) |
+| Concurrency and locking | No enforced lock between competing writers; behavior depends on merge order | Locking is opt-in and yours to enable (Terraform's S3 backend historically required a separate DynamoDB table; as of Terraform 1.10 it also supports native S3 lockfile locking via `use_lockfile`, with DynamoDB-based locking now deprecated) |
 | Recoverability | A destructive apply is final; recovery depends on backups and runbooks you built | Maintain your own state backup and restore process, tested under pressure |
 | Auditability | Access and mutation history exists only if you built logging on top of the object store | Instrument CloudTrail (or equivalent), and don't let anyone disable it |
 
