@@ -4,16 +4,20 @@
     page context. Only renders for pages backed by a file.
 */ -}}
 {{- with .File -}}
-{{- $title := $.Title -}}
-{{- $url := $.Permalink -}}
-{{- $t := $title | urlquery -}}
-{{- $u := $url | urlquery -}}
-{{- $tu := (printf "%s %s" $title $url) | urlquery -}}
+{{- /*
+    Interpolate the title and URL raw. Hugo percent-encodes a value emitted
+    inside an href's query string automatically, so piping through urlquery
+    first double-encodes it (the comma in a title arrives at X/Reddit/HN as
+    "%2C"), and urlquery's "+" for a space arrives there as a literal "+".
+*/ -}}
+{{- $t := $.Title -}}
+{{- $u := $.Permalink -}}
+{{- $tu := printf "%s %s" $.Title $.Permalink -}}
 <div>
     <p class="font-overline-sm mb-4 text-service-black">Share</p>
     <ul class="m-0 flex list-none items-center gap-3 p-0">
         <li class="m-0">
-            <button type="button" data-copy-link data-url="{{ $url }}" aria-label="Copy link" data-track="blog-share-copy-link" class="block cursor-pointer text-gray-500 transition-colors hover:text-violet-primary">
+            <button type="button" data-copy-link data-url="{{ $u }}" aria-label="Copy link" data-track="blog-share-copy-link" class="block cursor-pointer text-gray-500 transition-colors hover:text-violet-primary">
                 <span data-copy-link-idle>{{ partial "icon.html" (dict "name" "link" "class" "text-lg") }}</span>
                 <span data-copy-link-done hidden class="text-green-500">{{ partial "icon.html" (dict "name" "check" "class" "text-lg") }}</span>
             </button>
