@@ -46,10 +46,13 @@ sections:
     link: /docs/administration/security-compliance/
     description: Set up audit logs and customer managed encryption keys.
 
+- type: full-width-cards
+  heading: Self-hosting
+  cards:
   - icon: buildings
-    heading: Self-Hosting
+    heading: Run Pulumi Cloud in your own infrastructure
     link: /docs/administration/self-hosting/
-    description: Deploy Pulumi Cloud in your own infrastructure with the Business Critical edition.
+    description: Install and operate the full platform on AWS, Azure, Google Cloud, Kubernetes, or your own hardware, including fully air-gapped networks. Available with the Business Critical edition.
 
 - type: flat
   heading: Have questions?
