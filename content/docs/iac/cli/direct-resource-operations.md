@@ -29,7 +29,7 @@ The `pulumi do` command provides direct operations on cloud resources through th
 ### Modes
 
 - Stateful: This is the default mode for `pulumi do`.  Resources created/updated using `do` in this mode will be recorded as snippets in the state file of your current project, and their lifetime will be tracked. If you are not currently in a project, they will be recorded in a global root project that's automatically created for `pulumi do`.
-- Stateless: This mode can be enabled using the `--stateless` flag. In this mode resources are not recorded anywhere, so it is usually good for one off operations, or testing.
+- Stateless: This mode can be enabled using the `--stateless` flag. In this mode resources are not recorded anywhere, so it's a good fit for one-off operations or testing.
 
 ### Command syntax
 
