@@ -23,11 +23,13 @@ social:
 
         Here's how that plays out in 2026:
     linkedin: |
-        Terraform's `kubernetes` provider is a legitimate, well-maintained way to manage cluster objects as code. It's also worth reading HashiCorp's own warnings closely: `kubernetes_manifest` needs API access at plan time, and mixing cluster-provisioning resources with Kubernetes-provider resources in one module produces "intermittent and unpredictable errors."
+        Terraform's kubernetes provider is a legitimate, well-maintained way to manage cluster objects as code. It's also worth reading HashiCorp's own warnings closely: kubernetes_manifest needs API access at plan time, and mixing cluster-provisioning resources with Kubernetes-provider resources in one module produces "intermittent and unpredictable errors."
 
         We wrote a practical, fair look at what that means day to day — what Terraform does well, where teams hit friction, how a general-purpose language (Pulumi's approach) changes testing and CRD handling, and how AI agents are starting to operate inside these workflows. Includes a step-by-step guide to provisioning a Kubernetes app stack with Pulumi.
     bluesky: |
-        Terraform + Kubernetes, without the hot takes: what the hashicorp/kubernetes provider does well, HashiCorp's own documented limits (plan-time API access, provider ordering), and how a general-purpose language changes testing and CRD handling.
+        Terraform + Kubernetes, without the hot takes.
+
+        What the hashicorp/kubernetes provider does well, HashiCorp's own documented limits (plan-time API access, provider ordering), and how a general-purpose language changes testing and CRD handling.
 ---
 
 Yes, Terraform can manage Kubernetes: the official `hashicorp/kubernetes` provider lets you declare Deployments, Services, and other objects as HCL resources, and community providers like `kubectl` fill in the gaps. It works well for many teams. The friction shows up around two well-documented limits — provider ordering and plan-time API access — and around testing, where a general-purpose language changes what's possible.
@@ -43,7 +45,7 @@ The `hashicorp/kubernetes` provider (current release v3.2.1, requiring Terraform
 | Approach | What it's for | Notes |
 | --- | --- | --- |
 | Typed resources (`kubernetes_deployment_v1`, `kubernetes_service_v1`, etc.) | Core, well-known object types | Full HCL validation and typed attributes for the objects the provider models explicitly |
-| `kubernetes_manifest` | Custom resources or object types the provider doesn't model yet | Requires live API access during `terraform plan`, which shapes how it can be sequenced (see below) |
+| `kubernetes_manifest` | Custom resources or object types the provider doesn't model yet | Requires live API access during `terraform plan`, which shapes how it can be sequenced ([details](#what-are-the-hard-parts-of-managing-kubernetes-with-terraform)) |
 | `hashicorp/helm` provider | Installing Helm charts | Wraps the Helm SDK; chart internals aren't individually visible to Terraform's plan/diff |
 | Community `kubectl` provider (`alekc/kubectl`, a maintained fork of `gavinbunney/kubectl`) | Applying free-form YAML manifests | Common workaround for `kubernetes_manifest`'s plan-time requirement; newer versions support Terraform 1.10+ ephemeral resources so secrets don't have to land in state |
 
@@ -168,12 +170,12 @@ Testing is one of the sharpest differences between the two approaches, and it's 
 
 | Capability | Terraform | Pulumi |
 | --- | --- | --- |
-| Unit tests (no cloud calls) | `.tftest.hcl` files with `command = plan`, plus `mock_provider` (GA since v1.7.0) for provider-free assertions | `pulumi.runtime.setMocks` (TypeScript), `pulumi.runtime.set_mocks` (Python), or `pulumi.NewMocks` (Go), run inside the same test framework as application code |
+| Unit tests (no cloud calls) | `.tftest.hcl` files with `command = plan`, plus `mock_provider` (GA since v1.7.0) for provider-free assertions | `pulumi.runtime.setMocks` (TypeScript), `pulumi.runtime.set_mocks` (Python), or `pulumi.WithMocks` (Go), run inside the same test framework as application code |
 | Integration tests (real infra) | `.tftest.hcl` files with `command = apply` against a real or ephemeral environment | Automation API drives real preview/up/destroy cycles against ephemeral stacks, orchestrated from your own code |
 | Test language | A second, declarative, test-specific language (`.tftest.hcl`) | The same language and test runner already used for application code — Jest, pytest, `go test`, xUnit |
-| Policy enforcement | Sentinel or OPA/Rego, evaluated against the plan | CrossGuard (policy packs in TypeScript, Python, Go, C#, or Java) or OPA/Rego via `pulumi-policy-opa`, evaluated against the resource graph |
+| Policy enforcement | Sentinel or OPA/Rego, evaluated against the plan | Pulumi Policies (policy packs in TypeScript/JavaScript or Python) or OPA/Rego via `pulumi-policy-opa`, evaluated against the resource graph of a stack written in any Pulumi language |
 
-`terraform test` with `mock_provider` is a legitimate, GA capability, and teams that have standardized on HCL testing patterns can write real infrastructure-free unit tests with it. The practical difference isn't "Terraform can't test" — it's that Terraform tests live in a separate language and toolchain from the application code they support, while Pulumi's tests run in the same Jest, pytest, or `go test` suite a team already runs on every commit. Because Kubernetes objects created through `Chart`, `ConfigGroup`, or `CustomResource` resources appear individually in Pulumi's resource graph, CrossGuard policies apply to them the same way they'd apply to a cloud resource — there's no separately named "Kubernetes policy" product, just the same policy-as-code engine applied to whatever's in the graph.
+`terraform test` with `mock_provider` is a legitimate, GA capability, and teams that have standardized on HCL testing patterns can write real infrastructure-free unit tests with it. The practical difference isn't "Terraform can't test" — it's that Terraform tests live in a separate language and toolchain from the application code they support, while Pulumi's tests run in the same Jest, pytest, or `go test` suite a team already runs on every commit. Because Kubernetes objects created through `Chart`, `ConfigGroup`, or `CustomResource` resources appear individually in Pulumi's resource graph, Pulumi Policies apply to them the same way they'd apply to a cloud resource — there's no separately named "Kubernetes policy" product, only the same policy-as-code engine applied to whatever's in the graph.
 
 ## Where do AI agents fit into Kubernetes infrastructure management?
 
@@ -186,8 +188,8 @@ Pulumi Neo is built for exactly this loop: an infrastructure agent with organiza
 Fair comparisons cut both ways, and there are good reasons a team keeps using Terraform for Kubernetes:
 
 - **Provider and module catalog breadth.** Terraform's registry has the largest catalog of providers and community modules of any IaC tool, and that matters for teams integrating many third-party systems alongside Kubernetes.
-- **A single tool across the whole estate.** Teams that have already standardized on Terraform for networking, IAM, and managed services often prefer one state model and one pipeline rather than introducing a second tool just for Kubernetes.
-- **HCL's simplicity for mostly-static configuration.** For infrastructure that's genuinely declarative and doesn't need loops, abstraction, or conditional logic, HCL is easy to read and review.
+- **A single tool across the whole estate.** Teams that have already standardized on Terraform for networking, IAM, and managed services often prefer one state model and one pipeline rather than introducing a second tool solely for Kubernetes.
+- **HCL's simplicity for static configuration.** For infrastructure that's genuinely declarative and doesn't need loops, abstraction, or conditional logic, HCL reads and reviews cleanly.
 - **Existing governance investment.** Teams with mature Sentinel or OPA policy libraries and deep in-house HCL expertise have real switching costs, and those costs are legitimate inputs to the decision.
 - **The plan-time limitation is manageable in practice.** Once cluster provisioning and workload deployment are split into separate applies — HashiCorp's own documented pattern — the `kubernetes_manifest` plan-time requirement stops being a daily obstacle.
 
