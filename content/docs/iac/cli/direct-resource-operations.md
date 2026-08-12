@@ -26,6 +26,11 @@ The `pulumi do` command provides direct operations on cloud resources through th
 - **Provider functions**: Read-only queries against cloud APIs (e.g., looking up a VPC, fetching an AMI).
 - **Resource operations**: Create, read, patch (update), and delete cloud resources.
 
+### Modes
+
+- Stateful: This is the default mode for `pulumi do`.  Resources created/updated using `do` in this mode will be recorded as snippets in the state file of your current project, and their lifetime will be tracked. If you are not currently in a project, they will be recorded in a global root project that's automatically created for `pulumi do`.
+- Stateless: This mode can be enabled using the `--stateless` flag. In this mode resources are not recorded anywhere, so it is usually good for one off operations, or testing.
+
 ### Command syntax
 
 ```
@@ -33,7 +38,7 @@ The `pulumi do` command provides direct operations on cloud resources through th
 pulumi do <package:module:function> [flags]
 
 # Resource operations
-pulumi do <package:module:type> <operation> [<id>] [flags]
+pulumi do <package:module:type> <operation> [<name>] [flags]
 ```
 
 The package, module, and type/function segments come directly from the provider schema. Pass `--help` at any level of the command tree to discover available subcommands.
@@ -47,9 +52,9 @@ The package, module, and type/function segments come directly from the provider 
 | Exploring a provider's capabilities | Yes | No |
 | Agent-driven ad-hoc operations | Yes | Better for repeatable workflows |
 | Production infrastructure management | No | Yes |
-| State tracking and drift detection | No (stateless) | Yes |
-| Multi-resource dependency graphs | No | Yes |
-| Policy enforcement and compliance | No | Yes |
+| State tracking and drift detection | Yes | Yes |
+| Multi-resource dependency graphs | Yes | Yes |
+| Policy enforcement and compliance | Yes | Yes |
 | Repeatable, reviewable deployments | No | Yes |
 
 ## Provider functions
@@ -108,10 +113,10 @@ Resource operations let you create, read, update, and delete cloud resources dir
 
 ### Create
 
-Creates a new cloud resource. Pass inputs via an input file. The CLI prompts for confirmation before creating.
+Creates a new cloud resource. Pass inputs via an input file and for scalar input also command line flag. The CLI prompts for confirmation before creating.
 
 ```bash
-$ pulumi do <package:module:type> create --input-file <path>
+$ pulumi do <package:module:type> create --input-file <path> --<input-name> value
 ```
 
 Output on success is a JSON object with the provider-assigned `id` and all resource properties.
@@ -147,14 +152,15 @@ $ pulumi do <package:module:type> delete <provider-resource-id>
 | `--input-file` | string | | Path to a file containing function or resource inputs |
 | `--input` | string | `yaml` | Input file format |
 | `--provider-file` | string | | Path to a file containing provider configuration |
-| `--provider-format` | string | `yaml` | Format of the provider configuration file |
 | `--dry-run` | bool | `false` | Run in preview mode (provider returns placeholder values) |
 | `--show-secrets` | bool | `false` | Show secret values in output |
 | `--yes` | bool | `false` | Auto-approve confirmation prompts |
 
 ## Output format
 
-All `pulumi do` operations write structured JSON to stdout. Progress messages and prompts go to stderr. This separation allows clean piping and scripting:
+All `pulumi do` operations write output to stdout. Progress messages and prompts go to stderr.
+
+For structured output for piping and scripting the `--output json` flag can be used:
 
 ```bash
 # Pipe function output to jq
