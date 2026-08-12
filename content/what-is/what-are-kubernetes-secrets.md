@@ -15,7 +15,7 @@ Kubernetes, or K8s, is an open-source container orchestration platform designed 
 
 Kubernetes Secrets, or [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) for short, are a built-in Kubernetes solution to manage the lifecycle of secrets, which are sensitive data such as passwords, API keys, and tokens. These secrets are consumed by containerized applications directly, to prevent the exposure of sensitive data in code, Docker images, or configuration files.
 
-## Why use Kubernetes Secrets?
+## Reasons to use Kubernetes Secrets
 
 Manual secrets management is prone to introducing errors and poses high-lift operational challenges. At the same time, the absence of a dedicated secret management solution means carrying a higher risk of accidental data leaks or unauthorized access to private information. One should never use ConfigMaps to hold secrets. Kubernetes Secrets come into play by providing an integrated mechanism for the secure storage and distribution of sensitive data to pods.
 
@@ -267,3 +267,21 @@ To address these challenges, you may consider using external secret management t
 The thing to internalize is that a Kubernetes Secret is a storage and distribution primitive, not an encryption boundary. Base64 is encoding, namespace-scoped RBAC is the only built-in access control, and there is no versioning, rotation, or audit trail in the box. Treating the native Secret as "secure by default" is where most real exposures start. The practical decision is not whether to use Kubernetes Secrets, but what you layer on top: encryption at rest in etcd, tight RBAC, and an external system when you need rotation, cross-namespace sharing, or an audit history.
 
 For encrypting values so they never appear in plain text in your state file, see Pulumi's [Secrets Management guide](/blog/managing-secrets-with-pulumi/). The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.
+
+## Frequently asked questions
+
+### What is a Kubernetes Secret used for?
+
+A Kubernetes Secret holds small amounts of sensitive data, such as passwords, tokens, and keys, separately from application code and pod specifications. Rather than hard-coding credentials into a container image or manifest, an app references a Secret by name and Kubernetes injects the value as an environment variable or mounted file at runtime.
+
+### How secure are Kubernetes Secrets?
+
+Kubernetes Secrets are base64-encoded by default, not encrypted, so anyone with cluster or etcd access can trivially decode them. Real security depends on what you layer on top: enabling encryption at rest for etcd, restricting access with RBAC and namespaces, and rotating values regularly. Treat the native Secret object as a storage primitive, not a security boundary.
+
+### What is the difference between a Kubernetes Secret and a ConfigMap?
+
+A Kubernetes Secret is for sensitive data, like passwords, tokens, and certificates, while a ConfigMap is for non-sensitive configuration, like environment settings or feature flags. Both expose data to pods the same way, as environment variables or mounted files, but Secrets receive additional handling, such as base64 encoding and tighter RBAC defaults, that ConfigMaps do not.
+
+### How do you manage secrets in Kubernetes with infrastructure as code?
+
+With Pulumi, you manage Kubernetes Secrets as native resources in a real language, TypeScript, Python, Go, C#, or Java, using the Kubernetes provider's `Secret` resource alongside encrypted Pulumi config or ESC for the underlying values. This keeps sensitive data out of source control, lets you test and preview changes before applying them, and ties secret creation into the same CI/CD workflow as the rest of your infrastructure.
