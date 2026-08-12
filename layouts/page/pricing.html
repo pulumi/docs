@@ -326,7 +326,18 @@
                         <span class="text-sm font-semibold pr-4">{{ $question.question }}</span>
                         {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-5 text-gray-600 transition-transform group-open:rotate-180 flex-shrink-0") }}
                     </summary>
-                    <div class="pb-5 text-base text-gray-700 prose prose-sm max-w-none">
+                    {{/* markdownify only emits <p> when an answer runs to more than
+                         one paragraph, so an FAQ list renders as a mix of bare text
+                         and real paragraphs. Bare text takes the color here; a <p>
+                         does not, because `p` in shared/_base.scss sets its own
+                         color and margins and an element's own rule beats anything
+                         it would otherwise inherit. Hence the child selectors —
+                         without them the two kinds of answer don't match each other.
+
+                         Zeroing the outer margins rather than restyling them: the
+                         summary's py-5 above and this pb-5 below already space the
+                         answer, and a bare-text answer has no margin to add. */}}
+                    <div class="pb-5 text-base text-gray-700 [&_p]:text-inherit [&>p:first-child]:mt-0 [&>p:last-child]:mb-0">
                         {{ $question.answer | markdownify }}
                     </div>
                 </details>
