@@ -100,6 +100,33 @@
                         }}
                     </ul>
                 </div>
+
+                {{/* The two ways further down the page, at the foot of every card:
+                     the feature list above is a summary, and the price above it is
+                     a starting point. mt-auto pins them to the bottom of the card
+                     so they line up across the row even though the feature lists
+                     are different lengths.
+
+                     The estimator link renders exactly where the estimator prices
+                     the edition — the same condition the card's rate tooltip uses
+                     (layouts/partials/pricing/card-usage.html) — so it can't appear
+                     on a card the calculator has no toggle for. Its href carries
+                     the edition, and theme/src/ts/pricing-calculator.ts presses the
+                     matching toggle on the way down: from the Enterprise card you
+                     should not land on a Team estimate. */}}
+                {{ $priced := index (site.Data.pulumi_pricing.calculator.editions | default dict) $edition.id }}
+                <div class="mt-auto pt-2 flex flex-col items-start gap-2 text-sm">
+                    {{ if $priced }}
+                    <a href="#calculator-{{ $edition.id }}" data-track="pricing-card-{{ $edition.id }}-estimate" class="inline-flex items-center gap-1.5 text-violet-primary hover:underline">
+                        {{ partial "icon.html" (dict "name" "phosphor/calculator" "class" "size-4") }}
+                        Estimate your cost
+                    </a>
+                    {{ end }}
+                    <a href="#compare" data-track="pricing-card-{{ $edition.id }}-compare" class="inline-flex items-center gap-1.5 text-violet-primary hover:underline">
+                        {{ partial "icon.html" (dict "name" "phosphor/arrow-down" "class" "size-4") }}
+                        View all features
+                    </a>
+                </div>
             </div>
         </div>
         {{ end }}
@@ -132,12 +159,18 @@
     </div>
 </section>
 
-{{ partial "pricing/calculator.html" . }}
-
-<section id="compare" class="container mx-auto px-6">
+{{/* scroll-mt clears the sticky site nav, so a card's "View all features" link
+     lands the table's own sticky header below it rather than underneath it. */}}
+<section id="compare" class="container mx-auto px-6 scroll-mt-24">
 
     <div class="sticky top-16 z-30 bg-white py-4">
         <div class="grid {{ $cols }} {{ $colsMd }} gap-x-4 items-end">
+            {{/* The label column's header cell is otherwise empty, so it carries
+                 the second way into the estimator — on screen for as long as the
+                 reader is scanning features, which is the whole time the question
+                 is live, and without adding a floating element to the viewport.
+                 It's hidden below md along with the column itself; the strip above
+                 the table is what mobile has. */}}
             <div class="hidden md:block"></div>
             {{ range $edition := $editions }}
             {{ $card := $edition.card }}
@@ -261,6 +294,12 @@
         window.addEventListener("hashchange", revealHash);
     })();
 </script>
+
+{{/* The estimator sits below the comparison table: it answers "what would this
+     cost me", which is a question a reader only has once they've seen the cards
+     and worked out which edition they'd be on. Entry points above link down to
+     #calculator. */}}
+{{ partial "pricing/calculator.html" . }}
 
 {{ with .Params.testimonial }}
 <section class="container mx-auto px-6 my-24">

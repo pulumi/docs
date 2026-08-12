@@ -256,16 +256,73 @@ function init(): void {
         syncRow(row, "number");
     });
 
+    const buttonFor = (id: string): HTMLButtonElement | undefined =>
+        editionButtons.filter(button => button.dataset.calcEdition === id)[0];
+
+    const selectEdition = (id: string): boolean => {
+        const target = buttonFor(id);
+        if (!target) return false;
+        editionButtons.forEach(other => other.setAttribute("aria-pressed", String(other === target)));
+        paintRates();
+        recompute();
+        return true;
+    };
+
     editionButtons.forEach(button => {
         button.addEventListener("click", () => {
-            editionButtons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
-            paintRates();
-            recompute();
+            selectEdition(button.dataset.calcEdition || "");
         });
+    });
+
+    // Deep links from the pricing cards: #calculator-<edition> scrolls here and
+    // presses that edition's toggle, so a reader who clicked "Estimate your cost"
+    // on the Enterprise card doesn't land on a Team estimate. The same URL works
+    // pasted into Slack.
+    //
+    // The hash names an edition, which is deliberately not the id of any element:
+    // the section is #calculator and the toggles are buttons, and hanging the id
+    // on a toggle would make the browser scroll to a control partway down the
+    // card instead of to the card. So the browser has nothing to jump to and the
+    // scrolling is ours — scrollIntoView honours the section's scroll-margin, so
+    // it lands exactly where a plain #calculator link does.
+    const EDITION_HASH = /^#calculator-(.+)$/;
+
+    const goToEdition = (id: string, focus: boolean): boolean => {
+        if (!selectEdition(id)) return false;
+        root.scrollIntoView();
+        // Focus follows the scroll, so a keyboard reader carries on from the
+        // calculator rather than from the card they left, and a screen reader is
+        // told which edition is now pressed. Not on load, where moving focus is
+        // something the reader didn't ask for.
+        if (focus) buttonFor(id)?.focus({ preventScroll: true });
+        return true;
+    };
+
+    // Handling the click rather than leaning on `hashchange` alone is what makes
+    // the second click on the same link work: the hash is already set by then, so
+    // no event fires and a plain listener would sit there doing nothing.
+    document.addEventListener("click", event => {
+        const target = event.target as Element | null;
+        const link = target && target.closest ? target.closest<HTMLAnchorElement>('a[href^="#calculator-"]') : null;
+        if (!link) return;
+        const match = EDITION_HASH.exec(link.hash);
+        // An edition the calculator doesn't price falls through to the browser
+        // rather than being swallowed here.
+        if (!match || !goToEdition(decodeURIComponent(match[1]), true)) return;
+        event.preventDefault();
+        history.pushState(null, "", link.hash);
+    });
+
+    window.addEventListener("hashchange", () => {
+        const match = EDITION_HASH.exec(window.location.hash);
+        if (match) goToEdition(decodeURIComponent(match[1]), true);
     });
 
     paintRates();
     recompute();
+
+    const initial = EDITION_HASH.exec(window.location.hash);
+    if (initial) goToEdition(decodeURIComponent(initial[1]), false);
 }
 
 if (document.readyState === "loading") {

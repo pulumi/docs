@@ -130,15 +130,26 @@
           "min" 0 "max" 2000000 "step" 500 "start" 0)
 -}}
 
-<section id="calculator" class="container mx-auto px-6 my-16 md:my-24 scroll-mt-24">
+{{/* scroll-mt clears the site nav (64px) with room to spare, so a jump to
+     #calculator lands the card below the header rather than under it. The sticky
+     edition header above belongs to #compare and has stopped at that section's
+     bottom edge by the time this one is at the top of the viewport, so it doesn't
+     add to the offset the way it does for a feature row. */}}
+<section id="calculator" class="container mx-auto px-6 my-16 md:my-24 scroll-mt-28">
     {{/* No overflow-hidden on the card: a tooltip opens above its label and would
          be clipped by it. Nothing here has a background of its own to clip. */}}
     <div class="card grid grid-cols-1 lg:grid-cols-[1fr_22rem] divide-y lg:divide-y-0 lg:divide-x divide-gray-200 bg-white">
         <div class="p-6 md:p-8 flex flex-col gap-7">
             <div class="flex flex-wrap items-center justify-between gap-3">
                 {{/* An overline that is still the section's heading, so the card isn't
-                     an unnamed landmark in the outline. */}}
-                <h2 class="font-overline m-0">Estimate your monthly cost</h2>
+                     an unnamed landmark in the outline. It links to its own anchor —
+                     the estimator is worth linking to from elsewhere on the page and
+                     from a Slack thread, and a self-link is the conventional way to
+                     hand someone that URL. Inherits the overline's color and only
+                     underlines on hover, so it reads as a heading first. */}}
+                <h2 class="font-overline m-0">
+                    <a href="#calculator" class="no-underline hover:underline">Estimate your monthly cost</a>
+                </h2>
 
                 {{/* Same shape as the /releases/ and blog feed view toggles: a .btn-group
                      of toggle buttons with the selected one marked aria-pressed, wearing
