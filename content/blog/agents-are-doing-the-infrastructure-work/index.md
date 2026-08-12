@@ -18,7 +18,7 @@ faq_schema: true
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter: "AI agents aren't just writing code anymore — they're changing real cloud infrastructure. New data: agent-driven infra operations grew 2.75x in 4 months, Neo tasks grew ~13x in a year, and it now reaches Terraform estates too."
+    twitter: "AI agents are changing real cloud infrastructure today, and the numbers back it up. Agent-driven infra operations grew 2.75x in 4 months, Neo tasks grew ~13x in a year, and it now reaches Terraform estates too."
     linkedin: "We keep saying agentic infrastructure is real. Here's the data. Distinct organizations using an AI agent to change real infrastructure grew 2.75x in four months. Claude Code-driven infrastructure operations grew 3.4x. Pulumi Neo task volume grew roughly 13x in eleven months, with depth of use (tasks per organization) growing faster than the number of organizations. And it's no longer limited to Pulumi programs: Neo is already doing real work against Terraform and HCL estates. This post lays out the receipts, what the work actually looks like day to day (per our 510-person State of Agentic Infrastructure survey), and why code — not YAML or HCL — is the substrate agents need to do this safely at scale."
     bluesky: "New data on agentic infrastructure: orgs using an AI agent to change real infra grew 2.75x in 4 months, Neo tasks grew ~13x in a year, and it now reaches Terraform estates too. The receipts, the charts, and what it means for platform teams:"
 ---
