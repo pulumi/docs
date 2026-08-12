@@ -1,0 +1,61 @@
+{{/*
+    Blog media lightbox
+
+    Hidden overlay shell for a blog post. theme/src/ts/blog-lightbox.ts decides
+    which images and videos in the post body are worth enlarging (see that file
+    for the rules), wraps each one in a [data-lightbox-trigger] button, and
+    shows it here at up to its intrinsic size. The close button, Escape, and a
+    click anywhere in the overlay but the video itself all close it. No
+    parameters.
+
+    A native <dialog> rather than a hand-rolled overlay like the changelog modal
+    (partials/releases/changelog-modal.html): showModal() gives the top layer,
+    the focus trap, the inert background, Escape, and focus restoration for
+    free, and unlike that modal this one holds no prose, so it doesn't need to
+    stay inside <main> for content styles to reach it.
+
+    Do NOT put a display utility (flex/grid/block) on the <dialog> itself — it
+    would defeat the UA's `display: none` and leave the overlay on screen while
+    closed. Layout classes belong on the <figure> inside.
+*/}}
+
+<dialog data-lightbox aria-label="Expanded view"
+        class="fixed inset-0 m-0 h-full max-h-none w-full max-w-none border-0 bg-transparent p-4 backdrop:bg-service-black/90 md:p-8">
+    <button type="button" data-lightbox-close aria-label="Close"
+            class="absolute right-2 top-2 z-10 inline-flex size-10 items-center justify-center rounded-full border-0 bg-transparent text-white transition-colors hover:bg-white/15 md:right-4 md:top-4">
+        {{ partial "icon.html" (dict "name" "x" "class" "size-6") }}
+    </button>
+
+    {{- /* Media and caption are centred as one group, caption directly beneath.
+        The 6rem the media gives up is the caption's: three clamped lines plus
+        the gap, with room to spare, so the media never has to flex-shrink (which
+        would squash it — a shrunk flex item keeps its own width). Width and
+        height are capped and the intrinsic ratio does the rest, so it scales
+        down to fit and is never upscaled. Only one of the two media elements is
+        shown at a time; the script hides the other.
+
+        blog-lightbox.ts subtracts the same budget when it decides whether the
+        overlay is bigger than the post — keep OVERLAY_MARGIN_Y in step with the
+        6rem here plus this element's padding. */ -}}
+    <figure class="m-0 flex h-full w-full flex-col items-center justify-center gap-3">
+        <img data-lightbox-image alt="" class="max-h-[calc(100%-6rem)] max-w-full rounded-lg shadow-2xl" />
+        {{- /* Controls here but not inline: a post-body clip is an autoplaying
+            loop with nothing to operate, while at full size it's worth being
+            able to pause, scrub, or go fullscreen. blog-lightbox.ts exempts
+            this element from the click-to-close handler so that operating them
+            doesn't also dismiss the overlay. */ -}}
+        <video data-lightbox-video controls playsinline
+               class="hidden max-h-[calc(100%-6rem)] max-w-full rounded-lg shadow-2xl"></video>
+        <figcaption data-lightbox-caption aria-hidden="true"
+                    class="body-sm line-clamp-3 max-w-3xl shrink-0 text-center text-gray-300 empty:hidden"></figcaption>
+    </figure>
+
+    {{- /* Cloned into each trigger button as the hover/focus affordance. Lives
+        here rather than in the TypeScript so the icon comes from the sprite. */ -}}
+    <template data-lightbox-badge>
+        <span aria-hidden="true"
+              class="pointer-events-none absolute right-3 top-3 inline-flex size-9 items-center justify-center rounded-md bg-service-black/60 text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+            {{ partial "icon.html" (dict "name" "magnifying-glass-plus" "class" "size-5") }}
+        </span>
+    </template>
+</dialog>
