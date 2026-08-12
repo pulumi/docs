@@ -28,7 +28,7 @@ The `pulumi do` command provides direct operations on cloud resources through th
 
 ### Modes
 
-- Stateful: This is the default mode for `pulumi do`.  Resources created/updated using `do` in this mode will be recorded as snippets in the state file of your current project, and their lifetime will be tracked. If you are not currently in a project, they will be recorded in a global root project that's automatically created for `pulumi do`.
+- Stateful: This is the default mode for `pulumi do`. Resources created or updated in this mode are recorded as snippets in the state file of your current project, and their lifetime is tracked. If you are not currently in a project, they are recorded in a global project named `default-global-project` (stored in your Pulumi home directory, with a stack named `default`) that's created automatically on first use.
 - Stateless: This mode can be enabled using the `--stateless` flag. In this mode resources are not recorded anywhere, so it's a good fit for one-off operations or testing.
 
 ### Command syntax
@@ -38,8 +38,10 @@ The `pulumi do` command provides direct operations on cloud resources through th
 pulumi do <package:module:function> [flags]
 
 # Resource operations
-pulumi do <package:module:type> <operation> [<name>] [flags]
+pulumi do <package:module:type> <operation> [<name>|<id>] [flags]
 ```
+
+The positional argument depends on the operation: `create` and `delete` take the resource name, while `read` and `patch` take the provider-assigned resource ID. With `--stateless`, `create` takes no argument and `delete` takes the provider-assigned ID instead of the name.
 
 The package, module, and type/function segments come directly from the provider schema. Pass `--help` at any level of the command tree to discover available subcommands.
 
@@ -52,9 +54,9 @@ The package, module, and type/function segments come directly from the provider 
 | Exploring a provider's capabilities | Yes | No |
 | Agent-driven ad-hoc operations | Yes | Better for repeatable workflows |
 | Production infrastructure management | No | Yes |
-| State tracking and drift detection | Yes | Yes |
-| Multi-resource dependency graphs | Yes | Yes |
-| Policy enforcement and compliance | Yes | Yes |
+| State tracking and drift detection | Yes (stateful mode) | Yes |
+| Multi-resource dependency graphs | Yes (stateful mode) | Yes |
+| Policy enforcement and compliance | Yes (stateful mode) | Yes |
 | Repeatable, reviewable deployments | No | Yes |
 
 ## Provider functions
@@ -139,11 +141,13 @@ $ pulumi do <package:module:type> patch <provider-resource-id> --input-file <pat
 
 ### Delete
 
-Deletes a resource. The CLI prompts for confirmation before destroying.
+Deletes a resource by the name it was created with. The CLI prompts for confirmation before destroying.
 
 ```bash
-$ pulumi do <package:module:type> delete <provider-resource-id>
+$ pulumi do <package:module:type> delete <name>
 ```
+
+With `--stateless`, pass the provider-assigned resource ID instead of the name.
 
 ## Flags
 
@@ -151,16 +155,19 @@ $ pulumi do <package:module:type> delete <provider-resource-id>
 |------|------|---------|-------------|
 | `--input-file` | string | | Path to a file containing function or resource inputs |
 | `--input` | string | `yaml` | Input file format |
+| `--<input-name>` | | | Set a single scalar input directly (one flag per input in the schema) |
 | `--provider-file` | string | | Path to a file containing provider configuration |
 | `--dry-run` | bool | `false` | Run in preview mode (provider returns placeholder values) |
+| `--output` | string | `default` | Output format for resource operation results (`default` or `json`) |
 | `--show-secrets` | bool | `false` | Show secret values in output |
+| `--stateless` | bool | `false` | Run resource operations directly against the provider without recording state |
 | `--yes` | bool | `false` | Auto-approve confirmation prompts |
 
 ## Output format
 
-All `pulumi do` operations write output to stdout. Progress messages and prompts go to stderr.
+All `pulumi do` operations write output to stdout. Progress messages and prompts are written to stderr.
 
-For structured output for piping and scripting the `--output json` flag can be used:
+For structured output suitable for piping and scripting, pass `--output json`:
 
 ```bash
 # Pipe function output to jq
