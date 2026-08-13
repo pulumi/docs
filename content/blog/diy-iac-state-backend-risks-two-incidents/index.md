@@ -60,7 +60,7 @@ Both incidents map cleanly onto the same underlying gaps in how a self-managed b
 
 | Risk surface | Self-managed backend (e.g. raw S3, local file) | What it takes to close the gap yourself |
 | --- | --- | --- |
-| Secret handling | Secrets, including IAM keys, stored in plaintext by default | Manually configure bucket encryption, apply strict IAM policies, and hope no credential is ever written to state without being caught |
+| Secret handling | Secrets, including IAM keys, are only as protected as the bucket (Terraform stores state in plaintext by default; Pulumi encrypts secret-marked values, but anything not marked is in the clear) | Manually configure bucket encryption, apply strict IAM policies, and hope no credential is ever written to state without being caught |
 | Concurrency and locking | No enforced lock between competing writers; behavior depends on merge order | Locking is opt-in and yours to enable (Terraform's S3 backend historically required a separate DynamoDB table; as of Terraform 1.10 it also supports native S3 lockfile locking via `use_lockfile`, with DynamoDB-based locking now deprecated) |
 | Recoverability | A destructive apply is final; recovery depends on backups and runbooks you built | Maintain your own state backup and restore process, tested under pressure |
 | Auditability | Access and mutation history exists only if you built logging on top of the object store | Instrument CloudTrail (or equivalent), and don't let anyone disable it |
