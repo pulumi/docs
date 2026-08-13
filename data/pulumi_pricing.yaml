@@ -106,7 +106,7 @@
 # The metered rates here are the MONTHLY ones — the figure each comparison cell
 # carries as its subtext — even though billing is hourly. Rounding runs in both
 # directions between the two published forms (an ESC secret is $0.000685/hour
-# and $0.50/month, but 0.000685 x 730 is 0.50005; a Team Insights resource is
+# and $0.50/month, but 0.000685 x 730 is 0.50005; a Team discovered resource is
 # $0.000025/hour and $0.0185/month, but 0.000025 x 730 is 0.01825), so a
 # calculator that multiplied the hourly rate out would quote figures that
 # contradict the table directly below it. Storing the monthly rate keeps every
@@ -273,7 +273,7 @@ calculator:
       - label: 1 managed secret
         key: esc_secret_month
         suffix: /month
-      - label: 1 Insights resource
+      - label: 1 discovered resource
         key: insights_resource_month
         suffix: /month
         from: [enterprise]
@@ -354,7 +354,7 @@ categories:
         available_from: individual
 
   - id: deployments
-    name: Deployments & Workflows
+    name: Deployments & workflows
     group: product
     icon: phosphor/git-pull-request
     features:
@@ -520,7 +520,7 @@ categories:
         available_from: individual
 
   - id: insights
-    name: Discovery & Governance
+    name: Discovery & governance
     group: product
     icon: custom/pulumi-insights
     features:
@@ -624,7 +624,7 @@ categories:
           business-critical: Advisory, Mandatory & Remediation
 
       - id: insights-self-hosted
-        name: Insights on self-hosted Pulumi Cloud
+        name: Discovery on self-hosted Pulumi Cloud
         link: /docs/insights/self-hosted/
         available_from: business-critical
 

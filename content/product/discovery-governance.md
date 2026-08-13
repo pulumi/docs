@@ -1,13 +1,15 @@
 ---
-title: Discovery & Governance - Continuous Compliance, By Construction
+title: Discovery & governance - Continuous compliance, by construction
 type: page
 layout: template-page
 meta_desc: Automated compliance made simple — continuously audit, remediate, and enforce policies to keep your cloud secure and reliable.
-meta_image: /images/product/insights-governance/ig-meta.png
+meta_image: /images/product/discovery-governance/ig-meta.png
 
 aliases:
 - /insights
 - /pulumi-policies
+- /product/insights-governance
+- /product/insights-governance/
 - /product/pulumi-insights
 - /product/pulumi-insights/
 - /product/crossguard
@@ -18,8 +20,8 @@ sections:
     title_primary: "Continuous compliance,"
     title_secondary: "by construction."
     description: Audit, remediate, and enforce compliance policies across all your cloud infrastructure automatically.
-    image: /images/product/insights-governance/ig-hero.svg
-    image_alt: Pulumi Discovery & Governance dashboard showing cloud resource compliance
+    image: /images/product/discovery-governance/ig-hero.svg
+    image_alt: Discovery & governance dashboard showing cloud resource compliance
     anchor: hero
 
   - type: feature_split
@@ -27,7 +29,7 @@ sections:
     description: |
       Govern your cloud automatically.
 
-      Pulumi Discovery & Governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix violations with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
+      Discovery & governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix findings with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
 
     cards:
       - icon: arrows-clockwise
@@ -47,7 +49,7 @@ sections:
   - type: video_embed
     youtube_id: mwcrOTEf1EQ
     title: Pulumi policy automation
-    poster_image: /images/product/insights-governance/ig-poster.png
+    poster_image: /images/product/discovery-governance/ig-poster.png
     poster_alt: Pulumi policy automation – watch the demo
     anchor: demo
 
@@ -63,14 +65,14 @@ sections:
       - Evaluate existing infrastructure on demand with audit mode
       - Automatic triggers after deployments
       - Auditor-friendly compliance reporting
-    image: /images/product/insights-governance/ig-auditing.png
+    image: /images/product/discovery-governance/ig-auditing.png
     image_alt: Audit findings dashboard showing compliance posture
     anchor: audit
 
   - type: section_header_with_image
     flip: true
     tag_line: AI-Powered Remediation
-    title: Automatically generate fixes for policy violations
+    title: Automatically generate fixes for policy findings
     description: |
       Pulumi Neo identifies policy issues and fixes them automatically. For resources created outside your control (manual console changes, unmanaged deployments), Neo finds and fixes compliance violations in a single workflow, eliminating surprise audit findings and cost overruns. Transform hours of manual work into simple review-and-merge processes.
 
@@ -79,7 +81,7 @@ sections:
       - Integrated approval workflows
       - Complete audit trails for compliance
       - Governance-aware remediation with policy compliance checks
-    image: /images/product/insights-governance/ig-neo-policy.png
+    image: /images/product/discovery-governance/ig-neo-policy.png
     image_alt: AI-powered remediation workflow in Pulumi Neo
     anchor: remediate
 
@@ -103,7 +105,7 @@ sections:
       - Progressive enforcement (advisory → mandatory)
       - Immediate feedback during deployment workflows
       - Neo-generated infrastructure automatically complies with policy standards
-    image: /images/product/insights-governance/ig-shift-left.png
+    image: /images/product/discovery-governance/ig-shift-left.png
     image_alt: Policy enforcement blocking a non-compliant deployment
     anchor: prevent
 
@@ -118,7 +120,7 @@ sections:
       - Multi-cloud resource discovery
       - Configuration change history
       - Resource relationship mapping
-    image: /images/product/insights-governance/ig-visibility.png
+    image: /images/product/discovery-governance/ig-visibility.png
     image_alt: Cloud resource search interface
     anchor: search
 
@@ -132,7 +134,7 @@ sections:
       - Clear, actionable error messages
       - Policy-aware AI remediation
       - Measurable compliance improvements without velocity loss
-    image: /images/product/insights-governance/ig-developer-first.png
+    image: /images/product/discovery-governance/ig-developer-first.png
     image_alt: AI-powered developer guardrails in practice
     anchor: guardrails
 
@@ -147,19 +149,19 @@ sections:
   - type: logo_banner
     bordered: true
     logos:
-      - src: /images/product/insights-governance/ig-logo-cis.png
+      - src: /images/product/discovery-governance/ig-logo-cis.png
         alt: CIS Controls
-      - src: /images/product/insights-governance/ig-logo-nist.png
+      - src: /images/product/discovery-governance/ig-logo-nist.png
         alt: NIST SP 800-53
-      - src: /images/product/insights-governance/ig-logo-pci-dss.png
+      - src: /images/product/discovery-governance/ig-logo-pci-dss.png
         alt: PCI DSS
-      - src: /images/product/insights-governance/ig-logo-hitrust.png
+      - src: /images/product/discovery-governance/ig-logo-hitrust.png
         alt: HITRUST CSF
-      - src: /images/product/insights-governance/ig-logo-aicpa.png
+      - src: /images/product/discovery-governance/ig-logo-aicpa.png
         alt: AICPA SOC
-      - src: /images/product/insights-governance/ig-logo-fedramp.png
+      - src: /images/product/discovery-governance/ig-logo-fedramp.png
         alt: FedRAMP
-      - src: /images/product/insights-governance/ig-logo-iso27001.png
+      - src: /images/product/discovery-governance/ig-logo-iso27001.png
         alt: ISO 27001
     anchor: frameworks-logos
 
@@ -177,9 +179,9 @@ sections:
       - icon: list-checks
         title: "Step 2: Remediate"
         description: |
-          AI generates infrastructure-as-code fixes for policy violations.
+          AI generates infrastructure-as-code fixes for policy findings.
 
-          - AI-powered fixes for policy violations
+          - AI-powered fixes for policy findings
           - Automated pull requests with verified solutions
       - icon: shield-check
         title: "Step 3: Prevent"

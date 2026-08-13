@@ -51,12 +51,12 @@
   )
 }}
 
-{{ $pulumiInsights := dict
+{{ $pulumiDiscovery := dict
   "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/product/pulumi-insights/#software"
-  "name" "Pulumi Insights"
+  "@id" "https://www.pulumi.com/product/discovery-governance/#software"
+  "name" "Pulumi Discovery"
   "applicationCategory" "Cloud Intelligence Platform"
-  "url" "https://www.pulumi.com/product/pulumi-insights/"
+  "url" "https://www.pulumi.com/product/discovery-governance/"
   "isPartOf" (dict
     "@type" "SoftwareApplication"
     "@id" "https://www.pulumi.com/product/#pulumi-platform"
@@ -72,34 +72,34 @@
 {{/* Check URL patterns for product detection */}}
 {{ if in $url "/docs/iac/" }}
   {{ $mainProduct = $pulumiCLI }}
-  {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+  {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiDiscovery }}
 {{ else if in $url "/docs/esc/" }}
   {{ $mainProduct = $pulumiESC }}
-  {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiDiscovery }}
 {{ else if in $url "/docs/insights/" }}
-  {{ $mainProduct = $pulumiInsights }}
+  {{ $mainProduct = $pulumiDiscovery }}
   {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
 {{ else if in $url "/docs/pulumi-cloud/" }}
   {{ $mainProduct = $pulumiCloud }}
-  {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+  {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiDiscovery }}
 {{ else if in $url "/product/" }}
   {{/* For product pages, determine based on URL */}}
   {{ if in $url "/infrastructure-as-code/" }}
     {{ $mainProduct = $pulumiCLI }}
-    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiDiscovery }}
   {{ else if in $url "/pulumi-cloud/" }}
     {{ $mainProduct = $pulumiCloud }}
-    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiDiscovery }}
   {{ else if in $url "/esc/" }}
     {{ $mainProduct = $pulumiESC }}
-    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiDiscovery }}
   {{ else if in $url "/insights/" }}
-    {{ $mainProduct = $pulumiInsights }}
+    {{ $mainProduct = $pulumiDiscovery }}
     {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
   {{ else }}
     {{/* Default to CLI for general product pages */}}
     {{ $mainProduct = $pulumiCLI }}
-    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiDiscovery }}
   {{ end }}
 {{ end }}
 
@@ -110,16 +110,16 @@
   
   {{ if or (in $content "pulumi cloud") (in $title "pulumi cloud") }}
     {{ $mainProduct = $pulumiCloud }}
-    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiESC $pulumiDiscovery }}
   {{ else if or (in $content "pulumi env") (in $content "environments secrets configuration") (in $title "esc") }}
     {{ $mainProduct = $pulumiESC }}
-    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiDiscovery }}
   {{ else if or (in $content "pulumi insights") (in $title "insights") }}
-    {{ $mainProduct = $pulumiInsights }}
+    {{ $mainProduct = $pulumiDiscovery }}
     {{ $relatedProducts = slice $pulumiCLI $pulumiCloud $pulumiESC }}
   {{ else if or (in $content "pulumi cli") (in $content "pulumi command") (in $title "cli") }}
     {{ $mainProduct = $pulumiCLI }}
-    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiInsights }}
+    {{ $relatedProducts = slice $pulumiCloud $pulumiESC $pulumiDiscovery }}
   {{ end }}
 {{ end }}
 

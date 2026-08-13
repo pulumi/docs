@@ -54,7 +54,7 @@ columns:
         href: /product/secrets-management/
         track: footer-platform-secrets
       - label: Discovery & governance
-        href: /product/insights-governance/
+        href: /product/discovery-governance/
         track: footer-platform-insights
       - label: AI infrastructure agent
         href: /product/neo/
