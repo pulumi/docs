@@ -1,0 +1,55 @@
+{
+    "skill_name": "create-event",
+    "evals": [
+        {
+            "id": 0,
+            "name": "full-spec-workshop-dry-run",
+            "prompt": "/create-event I need a new workshop set up: title 'Getting Started with Pulumi on AWS', on 2026-09-24 at 11:00 AM PT, 60 minutes, virtual, gated registration. Presenter: Engin Diri. It's a beginner session about provisioning your first AWS resources with Pulumi and TypeScript: the abstract should cover installing Pulumi, standing up a VPC + S3 + Lambda starter stack, and previewing/applying changes safely. Marketing theme: IaC. Tags: level Beginner, topics Infrastructure as Code, clouds AWS, languages TypeScript. --dry-run -y",
+            "expected_output": "content/events/getting-started-with-pulumi-on-aws/index.md with archetype-complete frontmatter (workshop, gated, virtual, 60 minutes, DST-correct sortable_date 2026-09-24T11:00:00.000-07:00, Engin Diri resolved to Principal Solutions Architect + team photo, exact tags, meta_desc 50-160 chars, meta_image left blank); .context/create-event/<slug>/issue-preview.md matching the pulumi-workshop template ([2026-09-24]: title (Engin), Theme IaC, Tasks checklist) and pr-preview.md (Proposed changes / Related issues, draft, [workshop] title); zero GitHub writes.",
+            "files": [],
+            "assertions": [
+                "Bundle created at content/events/getting-started-with-pulumi-on-aws/index.md",
+                "Core frontmatter: exact title, event_type=workshop, gated=true, location=virtual, duration='60 minutes', url_slug matches",
+                "sortable_date is DST-correct: 2026-09-24T11:00:00.000-07:00",
+                "Presenter resolved from team data: Engin Diri, role contains 'Principal Solutions Architect', photo /images/team/engin-diri.jpg",
+                "Tags exact vocabulary: level=Beginner, topics=[Infrastructure as Code], clouds=[AWS], languages=[TypeScript]",
+                "meta_desc length 50-160 chars",
+                "meta_image left blank (build auto-generates; no enrichment needed)",
+                "Issue preview matches pulumi-workshop template: [2026-09-24] title with (Engin), Theme IaC, Tags + Tasks checklist (>=8 unchecked)",
+                "PR preview has Proposed changes + Related issues sections, [workshop] title, draft",
+                "Dry-run honored: report present, previews instead of created URLs, no live issue/PR claimed"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "prefill-existing-issue-idempotent",
+            "prompt": "/create-event https://github.com/pulumi/marketing/issues/1688 --dry-run -y",
+            "expected_output": "Recognizes the tracking issue AND the already-merged page content/events/getting-started-with-devops-ai-skills/ (update mode / idempotence): creates no duplicate bundle and no new event directory, confirms the page already carries the HubSpot form id 10627c10-9d63-4437-8573-da3f28ad0698 and SF campaign 701PQ00000uMIkPYAW (or extracts them from the issue), reports the event as fully set up with nothing to change, zero GitHub writes.",
+            "files": [],
+            "assertions": [
+                "Idempotent: no new/duplicate event bundle created for an event that already exists",
+                "Recognizes the existing page content/events/getting-started-with-devops-ai-skills/ (update mode / already set up)",
+                "Form IDs accounted for: mentions the wired HubSpot form id or SF campaign id (or states IDs already wired)",
+                "Dry-run honored: no GitHub writes claimed, run-report.md present"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "webinar-external-copresenter",
+            "prompt": "hey — we're running a joint webinar with our partner StackGuard: 'Policy as Code in CI/CD with Pulumi and StackGuard', October 15 2026, 10:00 AM ET, 60 minutes, virtual + gated. presenters: Engin Diri (pulumi) and Maya Chen, Head of Platform at StackGuard. security theme. level Beginner, topics Security and Infrastructure as Code. set it all up please --dry-run -y",
+            "expected_output": "Webinar bundle (event_type: webinar) with sortable_date 2026-10-15T10:00:00.000-04:00 (EDT), Engin resolved from team data, external presenter Maya Chen as 'Head of Platform, StackGuard' with unresolvable photo skipped-with-warning; enrichment path attempted (external co-presenter) but renderer deps missing → graceful skip with recovery commands; issue preview [2026-10-15] via the pulumi-workshop template with Theme Security; previews only, zero GitHub writes.",
+            "files": [],
+            "assertions": [
+                "Webinar bundle created (policy-as-code / StackGuard slug)",
+                "event_type is webinar, gated true, virtual",
+                "sortable_date is EDT-correct: 2026-10-15T10:00:00.000-04:00",
+                "Presenters: Engin resolved from team data; external Maya Chen as 'Head of Platform, StackGuard' with photo skipped",
+                "Tags: level Beginner; topics include Security and Infrastructure as Code",
+                "Graceful degradation reported: unresolved photo / card rendering skipped, with recovery command",
+                "Issue preview: [2026-10-15] title, Theme Security, workshop-template sections",
+                "Gated with pending form IDs: hubspot_form_id empty + TODO marker present",
+                "Dry-run honored: previews only, no created issue/PR URLs, run-report.md present"
+            ]
+        }
+    ]
+}

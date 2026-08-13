@@ -182,6 +182,12 @@ Case studies live at `content/case-studies/<slug>.md` — scaffold a new one wit
 
 ---
 
+## Events
+
+Event pages live at `content/events/<slug>/index.md` — a bundle whose content is entirely frontmatter; the schema's source of truth is `archetypes/event/index.md` (its comments are kept current). **Create a new event with the `/create-event` skill** (`.claude/commands/create-event/SKILL.md`): it collects details from the prompt or an interactive wizard, scaffolds the bundle, generates social cards via `/event-meta-image`, files the pulumi/marketing tracking issue from its issue template, and opens the docs PR. It supports `--dry-run` (writes issue/PR previews instead of touching GitHub) and delegates execution to the `event-creator` subagent (`.claude/agents/event-creator.md`). HubSpot form and Salesforce campaign IDs come back from marketing on the tracking issue — never invent them; a gated page carries TODO placeholders until they land, then a rerun of `/create-event <issue-url>` wires them in.
+
+---
+
 ## Releases changelog entries
 
 Individual changelog items live in `content/releases/changelog/` — one markdown file per entry, listed by month on `/releases/` and rendered at `/releases/changelog/<slug>/` (`layouts/changelog/single.html`). Shared images/videos live in the `images/` and `videos/` subfolders and are referenced by absolute path (e.g. `/releases/changelog/images/2026-06-18-foo.png`), so entry renames don't affect them.
