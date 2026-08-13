@@ -11,6 +11,26 @@ tags:
     - terraform
 category: engineering
 schema_type: auto
+
+# Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
+# Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
+social:
+    twitter: |
+        Pulumi HCL has at its core a simple promise: a program that works for tofu apply also works for pulumi up.
+
+        That promise makes correctness testable, and it lets LLMs hunt real bugs. Here's how.
+    linkedin: |
+        If you squint hard enough, Terraform and Pulumi do the same thing: turn desired state into provider steps. So Pulumi HCL makes a simple promise: a program that works for tofu apply also works for pulumi up.
+
+        Our tfcompat tests assert exactly that. A test never says what Pulumi HCL should do — it's just an HCL program and its providers. If OpenTofu and Pulumi HCL don't make the same provider calls, it fails.
+
+        Tests like that are very hard to make fail for a bad reason. So we let LLMs write them, and every failure they find is a real divergence.
+
+        We wrote up how it works, prompt included.
+    bluesky: |
+        Our tfcompat tests never say what Pulumi HCL should do. A test is just an HCL program and its providers; OpenTofu's behavior is the spec.
+
+        That one choice lets LLMs hunt our bugs. We wrote up how.
 ---
 
 [Pulumi HCL](/docs/iac/languages-sdks/hcl/) has at its core a simple promise:
