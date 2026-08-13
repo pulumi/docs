@@ -106,7 +106,7 @@ sections:
         cta_primary_text: Get Started with Pulumi
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo
-        cta_link: /contact/?form=request-a-demo
+        cta_link: /request-a-demo/
       - title: Platform engineering guide
         description: Learn how to build an IDP with components, templates, policies, and self-service patterns.
         cta_primary_text: Read the Docs

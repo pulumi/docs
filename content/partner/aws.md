@@ -115,7 +115,7 @@ sections:
       - title: Interested in learning more about Neo + Amazon Bedrock AgentCore?
         description: Request a session with one of our solution architects for a customized demo.
         cta_primary_text: Request a session
-        cta_primary_link: /contact/?form=request-a-demo
+        cta_primary_link: /request-a-demo/
       - title: Get started with Pulumi and AWS joint solutions
         description: Ready to deploy AWS infrastructure at AI speed? Start with our quickstart guide, explore workshops, or talk to our AWS specialists about your specific needs.
         cta_primary_text: AWS Marketplace

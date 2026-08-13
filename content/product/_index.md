@@ -159,7 +159,7 @@ sections:
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo
-        cta_link: /contact/?form=request-a-demo
+        cta_link: /request-a-demo/
       - title: Migrating to Pulumi?
         description: |
           Our tools can help you migrate your code and resource state from Terraform, AWS CloudFormation, Azure Resource Manager, and others to Pulumi. Use Neo to make the process even easier.

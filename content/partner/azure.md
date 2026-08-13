@@ -244,7 +244,7 @@ sections:
       - title: Need help with Azure?
         description: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage Azure resources.
         cta_primary_text: Request a demo
-        cta_primary_link: /contact/?form=request-a-demo
+        cta_primary_link: /request-a-demo/
       - title: Get started with Pulumi and Azure
         description: Deploy your first Azure project in minutes. Follow our quickstart guide, or talk to our team about your specific needs.
         cta_primary_text: Get started

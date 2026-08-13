@@ -153,4 +153,4 @@ Spear AI is a defense technology startup building AI-powered solutions for gover
 
 Ready to accelerate your compliance timeline while maintaining security?
 
-[Start Free](https://app.pulumi.com/signup) | [Talk with an Expert](/contact/?form=request-a-demo)
+[Start Free](https://app.pulumi.com/signup) | [Talk with an Expert](/request-a-demo/)

@@ -322,7 +322,7 @@ sections:
       - title: Need help with Google Cloud?
         description: Learn how top engineering teams are using Pulumi's SDK to create, deploy, and manage Google Cloud resources.
         cta_primary_text: Request a demo
-        cta_primary_link: /contact/?form=request-a-demo
+        cta_primary_link: /request-a-demo/
       - title: Get started with Pulumi and Google Cloud
         description: Deploy your first Google Cloud project in minutes. Follow our quickstart guide, or talk to our team about your specific needs.
         cta_primary_text: Get started

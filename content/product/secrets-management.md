@@ -113,7 +113,7 @@ sections:
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo
-        cta_link: /contact/?form=request-a-demo
+        cta_link: /request-a-demo/
       - title: Learn more
         description: Explore the documentation and Get Started guides to implement ESC in your infrastructure.
         cta_primary_text: Read the Docs

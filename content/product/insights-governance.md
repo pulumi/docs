@@ -199,7 +199,7 @@ sections:
         cta_primary_text: Get Started with Discovery
         cta_primary_link: /docs/insights/discovery/get-started/
         cta_text: Book a Demo
-        cta_link: /contact/?form=request-a-demo
+        cta_link: /request-a-demo/
       - title: Enforce compliance with policy as code
         description: |
           Deploy pre-built compliance packs for CIS, NIST, HITRUST, and PCI DSS, or write custom policies in TypeScript and Python.
