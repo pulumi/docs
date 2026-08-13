@@ -23,7 +23,7 @@ Today we're introducing the Notification Center: a single inbox in the Pulumi Cl
 
 ## What you'll hear about
 
-We've started with the moments where being a few minutes late actually costs you something: a Neo task that's paused waiting on your approval, a Neo task that's finished, an ESC change request waiting on your sign-off, and billing conditions like a locked organization or a trial that's about to end. Approval-shaped notifications go to the people who can approve; billing alerts go to org admins. Nobody gets paged for someone else's work.
+We've started with the moments where being a few minutes late actually costs you something: a Neo task that's paused waiting on your approval, a Neo task that's finished, an ESC change request waiting on your sign-off, and billing conditions like a locked organization or a trial that's about to end. Relevant people in your organization will be notified when there's a pending approval, or billing alert. Nobody gets paged for someone else's work.
 
 ## Where you'll hear about it
 
@@ -34,3 +34,5 @@ Every notification type can be delivered two ways — in the console and over em
 ## What's next
 
 The Notification Center is available today. We're starting with this set of notifications and expanding from there. If there's an event you'd rather hear about from the bell than from a colleague on Slack, we'd like to know which one.
+
+Join our [Community Slack](https://slack.pulumi.com/) to connect with the Pulumi team and other users, or open an issue on our [GitHub repository](https://github.com/pulumi/pulumi).
