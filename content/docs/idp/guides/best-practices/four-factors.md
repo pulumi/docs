@@ -107,7 +107,7 @@ This approach delivers several key benefits:
 
 By leveraging these four factors together, organizations can create internal developer platforms that balance developer productivity with operational requirements, security, and compliance.
 
-## Learn More
+## Learn more
 
 To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/guides/best-practices/patterns) library.
 
