@@ -172,6 +172,15 @@
         {{ end }}
       {{ end }}
 
+    {{ else }}
+
+      {{/* Header row matched the collector but the cell count doesn't resolve to a
+           supported 2-way or N>=3-way shape -- most likely a header row missing its
+           leading/trailing pipe, which shifts every index below. Log rather than fail
+           silently, so a malformed comparison table is caught in build output instead
+           of just missing structured data. */}}
+      {{ warnf "comparison-table-entity: %s header row resolved to %d data column(s) (expected 2, or >=3); no ItemList entity emitted for this page" .RelPermalink $numDataCols }}
+
     {{ end }}
   {{ end }}
 {{ end }}
