@@ -53,9 +53,9 @@ By default, `pulumi do` runs in stateful mode: the bucket is recorded as a snipp
 
 ## Add an object to the bucket
 
-A bucket wouldn't be very useful without anything to put into it.  Let's create a bucket object in the bucket.
+A bucket wouldn't be useful without anything to put into it. Create a bucket object in the bucket.
 
-The object needs to reference the bucket you just created. `pulumi do` auto-assigns every tracked resource an identifier, derived from its name with hyphens converted to underscores — so `my-bucket` becomes `my_bucket`. Run `pulumi do show-resources` to list them:
+The object needs to reference the bucket you just created. `pulumi do` auto-assigns every tracked resource an identifier, derived from its name with hyphens converted to underscores — so `my-bucket` becomes `my_bucket`. To check the identifiers Pulumi assigned, run `pulumi do show-resources`:
 
 ```bash
 $ pulumi do show-resources
@@ -165,7 +165,7 @@ $ pulumi do aws:ec2:getVpc --default
 
 ## Use it in scripts
 
-Pass `--output json` to get machine-readable output for resource operations, which makes `pulumi do` easy to compose with tools like `jq`:
+Pass `--output json` to get machine-readable output for resource operations, which lets you compose `pulumi do` with tools like `jq`:
 
 ```bash
 $ pulumi do aws:s3:Bucket create --stateless --yes --output json | jq -r '.id'
