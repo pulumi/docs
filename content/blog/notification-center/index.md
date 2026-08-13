@@ -13,7 +13,7 @@ tags:
 category: product
 ---
 
-Plenty happens in a Pulumi organization while you're looking somewhere else. Neo finishes a task you kicked off just before taking lunch. A teammate submits an ESC change request that needs your approval before it can land. A trial quietly starts counting down. Until now, catching any of that meant either keeping the right tab open or hoping the right email reached you.
+Plenty happens in a Pulumi organization while you're looking somewhere else. Neo finishes a task you kicked off just before taking lunch. A teammate submits an ESC change request that needs your approval before it can land. Until now, catching any of that meant either keeping the right tab open or hoping the right email reached you.
 
 Today we're introducing the Notification Center: a single inbox in the Pulumi Cloud console for the things that actually need you. It lives behind the bell in the sidebar, with a dot when something's waiting. Notifications arrive in real time — no refresh — and each one carries exactly one action: Review request, View task, Update billing. Click it and you land on the page where you can do the thing, not on a dashboard where you have to go find it.
 
