@@ -100,3 +100,9 @@ migrate/arm2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/fro
 # so the social cards that were already shared need these.
 events/neo-in-a-docker-sandbox-eu/meta.png|/events/neo-in-a-docker-sandbox/meta.png
 events/neo-in-a-docker-sandbox-eu/meta-square.png|/events/neo-in-a-docker-sandbox/meta-square.png
+
+# /docs/get-started/connect-cloud/ was live on master from 2026-07-27 to 2026-08-03 and
+# died with the revert of #20428 (#20638), which left no alias or redirect behind. The
+# content question -- where the credential-setup steps ultimately live -- is still open;
+# this just stops the orphaned URL from 404ing in the meantime.
+docs/get-started/connect-cloud/index.html|/docs/get-started/
