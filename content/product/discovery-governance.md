@@ -54,7 +54,7 @@ sections:
     anchor: demo
 
   - type: section_header_with_image
-    tag_line: Always-On Auditing
+    tag_line: Always-on auditing
     title: Audit existing infrastructure against compliance standards
     description: |
       Works with any infrastructure, whether provisioned with Pulumi, Terraform, CloudFormation, or manual processes.
@@ -71,7 +71,7 @@ sections:
 
   - type: section_header_with_image
     flip: true
-    tag_line: AI-Powered Remediation
+    tag_line: AI-powered remediation
     title: Automatically generate fixes for policy findings
     description: |
       Pulumi Neo identifies policy issues and fixes them automatically. For resources created outside your control (manual console changes, unmanaged deployments), Neo finds and fixes compliance violations in a single workflow, eliminating surprise audit findings and cost overruns. Transform hours of manual work into simple review-and-merge processes.
@@ -95,7 +95,7 @@ sections:
     anchor: testimonial
 
   - type: section_header_with_image
-    tag_line: Shift-Left Governance
+    tag_line: Shift-left governance
     title: Prevent non-compliant deployments before production
     description: |
       Write governance policies in TypeScript or Python, languages your team already knows. Deploy pre-built compliance packs or create custom rules that enforce your organization's standards. Policies block problematic configurations during deployment, providing immediate feedback to developers within their existing workflows.
@@ -111,7 +111,7 @@ sections:
 
   - type: section_header_with_image
     flip: true
-    tag_line: Full Cloud Visibility
+    tag_line: Full cloud visibility
     title: Search and understand your entire cloud footprint
     description: |
       Query any resource across major clouds with natural language or advanced filters. Track configuration changes, analyze relationships between resources, and get answers about your infrastructure in seconds. Pulumi discovers all resources, including those created outside infrastructure-as-code, providing complete visibility for governance and troubleshooting.
@@ -125,7 +125,7 @@ sections:
     anchor: search
 
   - type: section_header_with_image
-    tag_line: Developer-First Compliance
+    tag_line: Developer-first compliance
     title: Give developers AI-powered guardrails, not red tape
     description: |
       Developers get immediate policy feedback during deployment, with AI-generated fixes when issues arise. Platform teams get measurable compliance improvements without becoming bottlenecks. Policy enforcement accelerates development velocity.
