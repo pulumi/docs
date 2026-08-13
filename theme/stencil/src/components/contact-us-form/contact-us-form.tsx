@@ -66,7 +66,7 @@ export class ContactUsForm {
                 items={this.parsedItems}
                 selectClass={this.selectClass}
                 labelClass={this.labelClass}
-                labelText="Why are you contacting us today?"
+                labelText="What can we help you with?"
                 defaultFormId={this.defaultFormId}
                 linkedinConversionId={24927132}
             />

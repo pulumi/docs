@@ -1,5 +1,5 @@
 ---
-title: Talk to a human
+title: Talk to an expert
 meta_desc: Contact Pulumi for any general inquiries, including requests for pricing, support, or training.
 type: page
 layout: contact
