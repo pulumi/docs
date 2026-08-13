@@ -92,6 +92,127 @@ A `Workspace` still exposes an explicit `installPlugin` method (`install_plugin`
 
 For background on plugins and the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin/) CLI commands that manage them, see [Pulumi packages](/docs/iac/concepts/packages/).
 
+## Importing resources
+
+A `Stack` also exposes an import operation, the programmatic equivalent of the [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) CLI command. It brings existing cloud resources under Pulumi management without creating or modifying anything in the target cloud, generates program code for the imported resources, and records them in the stack's state so subsequent updates manage them going forward. This makes it the building block for programmatic brownfield adoption---platforms that migrate teams onto Pulumi Cloud in bulk, rather than one resource at a time from the CLI, drive that migration through this method.
+
+The method takes a list of resources to import, each identified by its Pulumi type token, a logical name, and the cloud provider's own resource ID. If any imported resource specifies a parent or provider, you also need a name table mapping the language names used in the generated program to their corresponding parent and provider URNs. By default, imported resources are protected from deletion and the operation generates program code alongside the import; both behaviors can be turned off.
+
+The method name differs slightly across languages, since `import` is a reserved word in some of them:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import { LocalWorkspace } from "@pulumi/pulumi/automation";
+
+const stack = await LocalWorkspace.createOrSelectStack(args);
+
+const result = await stack.import({
+    resources: [
+        {
+            type: "aws:s3/bucketV2:BucketV2",
+            name: "my-bucket",
+            id: "my-existing-bucket-name",
+        },
+    ],
+    protect: false,
+});
+
+console.log(result.generatedCode);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python" %}}
+
+```python
+from pulumi.automation import LocalWorkspace, ImportResource
+
+stack = LocalWorkspace.create_or_select_stack(args)
+
+result = stack.import_resources(
+    resources=[
+        ImportResource(
+            type="aws:s3/bucketV2:BucketV2",
+            name="my-bucket",
+            id="my-existing-bucket-name",
+        ),
+    ],
+    protect=False,
+)
+
+print(result.generated_code)
+```
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+```go
+import "github.com/pulumi/pulumi/sdk/v3/go/auto/optimport"
+
+stack, err := auto.UpsertStack(ctx, stackName, project)
+if err != nil {
+    return err
+}
+
+result, err := stack.ImportResources(ctx,
+    optimport.Resources([]*optimport.ImportResource{
+        {
+            Type: "aws:s3/bucketV2:BucketV2",
+            Name: "my-bucket",
+            ID:   "my-existing-bucket-name",
+        },
+    }),
+    optimport.Protect(false),
+)
+if err != nil {
+    return err
+}
+
+fmt.Println(result.GeneratedCode)
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+```csharp
+using Pulumi.Automation;
+
+var stack = await LocalWorkspace.CreateOrSelectStackAsync(args);
+
+var result = await stack.ImportAsync(new ImportOptions
+{
+    Resources = new List<ImportResource>
+    {
+        new ImportResource
+        {
+            Type = "aws:s3/bucketV2:BucketV2",
+            Name = "my-bucket",
+            Id = "my-existing-bucket-name",
+        },
+    },
+    Protect = false,
+});
+
+Console.WriteLine(result.GeneratedCode);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+The Java Automation API doesn't yet expose a resource-import method; `WorkspaceStack` has no equivalent to the other languages' `import`/`import_resources`/`ImportResources`/`ImportAsync`. Drive `pulumi import` directly through the CLI in the meantime.
+
+{{% /choosable %}}
+
+{{% /chooser %}}
+
+This capability has shipped since Pulumi CLI v3.127.0. If your program [installs the CLI programmatically](/docs/iac/guides/building-extending/automation-api/#install-the-cli-programmatically) rather than relying on a preinstalled copy, make sure it resolves to that version or later.
+
 ## Supported languages
 
 Like the rest of Pulumi, Automation API is available in multiple languages, so you can build applications that use it in TypeScript/JavaScript, Python, Go, .NET, and Java. Automation API also supports cross-language use, where it runs in a program written in a different language than the Pulumi programs it manages.
