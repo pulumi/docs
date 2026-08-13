@@ -94,7 +94,7 @@ For background on plugins and the [`pulumi plugin`](/docs/iac/cli/commands/pulum
 
 ## Importing resources
 
-A `Stack` also exposes an import operation, the programmatic equivalent of the [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) CLI command. It brings existing cloud resources under Pulumi management without creating or modifying anything in the target cloud, generates program code for the imported resources, and records them in the stack's state so subsequent updates manage them going forward. This makes it the building block for programmatic brownfield adoption---platforms that migrate teams onto Pulumi Cloud in bulk, rather than one resource at a time from the CLI, drive that migration through this method.
+A `Stack` also exposes an import operation, the programmatic equivalent of the [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) CLI command. It brings existing cloud resources under Pulumi management without creating or modifying anything in the target cloud, generates program code for the imported resources, and records them in the stack's state so later updates manage them going forward. This makes it the building block for programmatic brownfield adoption---platforms that migrate teams onto Pulumi Cloud in bulk, rather than one resource at a time from the CLI, drive that migration through this method.
 
 The method takes a list of resources to import, each identified by its Pulumi type token, a logical name, and the cloud provider's own resource ID. If any imported resource specifies a parent or provider, you also need a name table mapping the language names used in the generated program to their corresponding parent and provider URNs. By default, imported resources are protected from deletion and the operation generates program code alongside the import; both behaviors can be turned off.
 
@@ -128,9 +128,10 @@ console.log(result.generatedCode);
 {{% choosable language "python" %}}
 
 ```python
-from pulumi.automation import LocalWorkspace, ImportResource
+from pulumi import automation as auto
+from pulumi.automation import ImportResource
 
-stack = LocalWorkspace.create_or_select_stack(args)
+stack = auto.create_or_select_stack(stack_name=stack_name, work_dir=work_dir)
 
 result = stack.import_resources(
     resources=[
@@ -151,9 +152,14 @@ print(result.generated_code)
 {{% choosable language "go" %}}
 
 ```go
-import "github.com/pulumi/pulumi/sdk/v3/go/auto/optimport"
+import (
+    "fmt"
 
-stack, err := auto.UpsertStack(ctx, stackName, project)
+    "github.com/pulumi/pulumi/sdk/v3/go/auto"
+    "github.com/pulumi/pulumi/sdk/v3/go/auto/optimport"
+)
+
+stack, err := auto.UpsertStackLocalSource(ctx, stackName, workDir)
 if err != nil {
     return err
 }
