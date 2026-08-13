@@ -37,7 +37,7 @@ social:
 
 > A program that works for `tofu apply` will also work for `pulumi up`.
 
-This *must* be true to allow Terraform modules to be shared between `tofu` config and Pulumi programs. This property makes testing Pulumi HCL very simple. Let me explain.
+This *must* be true to allow Terraform modules to be shared between `tofu` config and Pulumi programs. This property makes testing Pulumi HCL simple. Let me explain.
 
 <!--more-->
 
