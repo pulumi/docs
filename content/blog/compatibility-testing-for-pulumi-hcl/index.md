@@ -1,6 +1,6 @@
 ---
 title: "Compatibility Testing Pulumi HCL"
-date: 2026-08-14
+date: 2026-08-13
 draft: false
 meta_desc: "How we test that Pulumi HCL is an OpenTofu compatible HCL runtime."
 feature_image: feature.png
