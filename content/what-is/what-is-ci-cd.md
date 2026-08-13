@@ -97,7 +97,7 @@ Continuous delivery automates every release step but stops just short of product
 
 ### What is a continuous integration platform?
 
-A continuous integration platform is the tooling that runs your automated builds and tests whenever code changes, such as GitHub Actions, GitLab CI, CircleCI, or Jenkins. For infrastructure specifically, Pulumi integrates with all of these CI/CD platforms, and Pulumi Deployments extends that model by running infrastructure previews, tests, and updates directly from your existing CI/CD workflows.
+A continuous integration platform is the tooling that runs your automated builds and tests whenever code changes, such as GitHub Actions, GitLab CI, CircleCI, or Jenkins. For infrastructure specifically, Pulumi integrates with these CI/CD platforms, and Pulumi Deployments extends that model by running infrastructure previews, tests, and updates directly from your existing CI/CD workflows.
 
 ## Learn more
 
