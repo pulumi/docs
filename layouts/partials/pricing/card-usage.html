@@ -1,38 +1,65 @@
 {{- /*
   The usage block under a pricing card's price: the included-Credits line and the
-  "additional usage billed on demand" note. When the edition declares
-  `note_tooltip` rates, the whole block becomes the hover target for a tooltip
-  saying what that edition's extra usage actually costs, per meter — readers
-  can't get from a resource count to a dollar figure from the cards alone
-  (pulumi/docs#20696), and a Credit is $1, so these rates are the dollar rates.
+  "additional usage billed on demand" note. When the estimator prices the edition
+  — that is, when `calculator.editions` has a key for it — the whole block becomes
+  the hover target for a tooltip saying what that edition's extra usage actually
+  costs, per meter. Readers can't get from a resource count to a dollar figure
+  from the cards alone (pulumi/docs#20696), and a Credit is $1, so these rates are
+  the dollar rates.
 
-  Takes the card's `unit`, `note`, and `note_tooltip` from data/pulumi_pricing.yaml:
+  Takes an edition from data/pulumi_pricing.yaml, not its card, because the rates
+  are looked up by edition id:
 
-      {{ partial "pricing/card-usage.html" $card }}
+      {{ partial "pricing/card-usage.html" $edition }}
 
-    tooltip.intro   one line of orientation above the list
-    tooltip.rates   [{label, value}] — value is a bare number; the intro carries
-                    the unit
+  The rows are `calculator.card_tooltip`, which names rates rather than repeating
+  them: each entry's `key` resolves against that edition's rates first, then the
+  shared `meters`. So the tooltip and the estimator below it cannot disagree, and
+  neither can drift from the hourly on-demand rows in the comparison table.
 
   size="lg" widens and left-aligns the bubble (theme/src/scss/_tooltip.scss); the
   default 12rem centered bubble wraps a two-column list into an unreadable stack.
 */ -}}
-{{- $tooltip := .note_tooltip -}}
-{{- if $tooltip -}}
+{{- $where := "data/pulumi_pricing.yaml" -}}
+{{- $card := .card -}}
+{{- $calc := site.Data.pulumi_pricing.calculator -}}
+{{- $spec := ($calc.card_tooltip | default dict) -}}
+{{- $rates := index ($calc.editions | default dict) .id -}}
+
+{{- /* Resolve every row up front, so a bad `key` reports itself even on an
+       edition the estimator doesn't price. */ -}}
+{{- $rows := slice -}}
+{{- range $i, $r := ($spec.rates | default slice) -}}
+  {{- if not $r.key -}}
+    {{- errorf "%s: calculator.card_tooltip.rates[%d] (%q) has no key." $where $i $r.label -}}
+  {{- end -}}
+  {{- $v := index ($rates | default dict) $r.key -}}
+  {{- if not $v -}}{{- $v = index ($calc.meters | default dict) $r.key -}}{{- end -}}
+  {{- if $rates -}}
+    {{- if not $v -}}
+      {{- errorf "%s: calculator.card_tooltip.rates[%d] has key %q, which is neither a rate on calculator.editions.%s nor a shared meter." $where $i $r.key $.id -}}
+    {{- end -}}
+    {{- $value := printf "%s%s" (partial "pricing/rate.html" $v) ($r.suffix | default "") -}}
+    {{- if in ($r.from | default slice) $.id -}}{{- $value = printf "from %s" $value -}}{{- end -}}
+    {{- $rows = $rows | append (dict "label" $r.label "value" $value) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $rows -}}
 <pulumi-tooltip size="lg" class="block">
 {{- end }}
     <span class="block">
-        {{ with .unit }}<span class="block mb-1.5">{{ . | markdownify }}</span>{{ end }}
-        {{ with .note }}<span class="block text-gray-700 leading-normal">{{ . | markdownify }}{{ with $tooltip }}{{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 -mt-0.5 inline text-gray-700") }}{{ end }}</span>{{ end }}
+        {{ with $card.unit }}<span class="block mb-1.5">{{ . | markdownify }}</span>{{ end }}
+        {{ with $card.note }}<span class="block text-gray-700 leading-normal">{{ . | markdownify }}{{ if $rows }}{{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 -mt-0.5 inline text-gray-700") }}{{ end }}</span>{{ end }}
     </span>
-{{- with $tooltip }}
+{{- if $rows }}
     {{- /* Everything sits inside one block wrapper: _tooltip.scss sets
            `display: unset` on the [slot="content"] element itself, which leaves
            it inline, and rows laid out directly under an inline box misbehave. */ -}}
     <span slot="content">
         <span class="block">
-            {{ with .intro }}<span class="block pb-1.5 mb-1.5 border-b border-white/20">{{ . }}</span>{{ end }}
-            {{ range .rates }}
+            {{ with $spec.intro }}<span class="block pb-1.5 mb-1.5 border-b border-white/20">{{ . }}</span>{{ end }}
+            {{ range $rows }}
             <span class="flex items-baseline justify-between gap-3">
                 <span>{{ .label }}</span>
                 <span class="font-semibold whitespace-nowrap">{{ .value }}</span>
