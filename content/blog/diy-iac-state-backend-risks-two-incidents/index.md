@@ -49,7 +49,7 @@ In a [2019 KubeCon EU keynote](https://www.youtube.com/watch?v=ix0Tw8uinWs), Spo
 - Two pull requests, both touching the same shared Terraform state for the cluster fleet, were merged out of order.
 - The resulting `terraform apply` attempted to recreate a cluster and hit a permissions mismatch between what the state expected and what existed.
 - The apply's failure mode was destructive rather than inert: **two of Spotify's three production Kubernetes clusters were deleted**.
-- The incident ran roughly **nine hours, from 8 p.m. to 5 a.m.**, before Spotify restored service and its integrations.
+- The incident ran roughly **nine hours, from 8 PM to 5 AM**, before Spotify restored service and its integrations.
 - Critically, Spotify reported **no end-user impact**, because the team had deliberately engineered redundancy across clusters as a hedge against exactly this class of failure.
 
 **Root cause**: this is a general property of self-managed, serialized state protocols, not a Terraform-specific defect. Whenever two changes race to mutate the same state file without an enforced lock, the outcome depends on merge order and timing rather than intent. Any DIY-backend IaC tool is exposed to this class of failure to the degree its locking is optional or must be stood up separately. Terraform's S3 backend historically required a separate lock service; Pulumi's self-managed backends enable a basic file-based lock by default, though a shared object store still depends on that store honoring the lock.
