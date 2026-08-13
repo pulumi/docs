@@ -1,8 +1,8 @@
 <section id="contact" class="py-16 px-4 border-b border-gray-300">
-        <div class="md:max-w-2xl md:mx-auto flex flex-col">
-            <div class="w-full order-2">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 items-start">
+            <div class="w-full">
                 <div class="card mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white">
-                    <h1 class="heading-1 mb-6">Have a specific question?</h1>
+                    <h1 class="heading-1 mb-6">What can we help you with?</h1>
                     <p class="body-sm text-gray-600 mb-6">Tell us what you need and we'll route you to the right person on our team.</p>
                     <div class="w-full">
                         <div class="hs-form hs-form-fg-dark font-normal">
@@ -14,12 +14,27 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-16">
+                    <h2 class="font-overline my-6">Our Address</h2>
+                    <p class="m-0">
+                        Pulumi Corporation<br />
+                        601 Union St., Suite 1415<br />
+                        Seattle, WA 98101
+                    </p>
+                </div>
             </div>
 
+            {{/*
+                Narrow sidebar of self-serve options for visitors who don't need
+                a sales conversation. Keep this visually secondary to the form
+                (a slim side column, never a full-width block above it) so it
+                doesn't pull volume away from Contact Us submissions.
+            */}}
             {{ with .Params.quick_links }}
-            <div class="w-full mb-10 order-1">
+            <div class="w-full mt-4">
                 <p class="font-overline mb-4">{{ .title }}</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid grid-cols-1 gap-4">
                     {{ range .items }}
                         <a href="{{ .url }}" class="card block p-6 bg-white hover:shadow-lg transition-shadow">
                             <h2 class="heading-4 mb-1">{{ .label }}</h2>
@@ -30,14 +45,5 @@
                 </div>
             </div>
             {{ end }}
-
-            <div class="mt-16 order-3">
-                <h2 class="font-overline my-6">Our Address</h2>
-                <p class="m-0">
-                    Pulumi Corporation<br />
-                    601 Union St., Suite 1415<br />
-                    Seattle, WA 98101
-                </p>
-            </div>
         </div>
 </section>

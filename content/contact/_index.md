@@ -6,10 +6,10 @@ layout: contact
 quick_links:
     title: Looking for something quicker?
     items:
-        - label: Start free
+        - label: Start a trial
           description: No sales call needed. Create an org and ship infrastructure in minutes.
-          cta_label: Sign up
-          url: https://app.pulumi.com/signup
+          cta_label: Start a trial
+          url: https://app.pulumi.com/signup?create-organization=1
 
         - label: See it in action
           description: Get a guided walkthrough from our team before you commit to anything.
