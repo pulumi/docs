@@ -69,7 +69,7 @@
                     <p class="text-3xl font-semibold tracking-tight m-0">{{ $card.price }}</p>
                     {{ end }}
                     <div class="mt-4 md:min-h-[4rem] text-sm">
-                        {{ partial "pricing/card-usage.html" $card }}
+                        {{ partial "pricing/card-usage.html" $edition }}
                     </div>
                 </div>
 
@@ -99,6 +99,38 @@
                             end
                         }}
                     </ul>
+                </div>
+
+                {{/* The two ways further down the page, at the foot of every card:
+                     the feature list above is a summary, and the price above it is
+                     a starting point. mt-auto pins them to the bottom of the card
+                     so they line up across the row even though the feature lists
+                     are different lengths.
+
+                     The estimator link renders exactly where the estimator prices
+                     the edition — the same condition the card's rate tooltip uses
+                     (layouts/partials/pricing/card-usage.html) — so it can't appear
+                     on a card the calculator has no toggle for. Its href carries
+                     the edition, and theme/src/ts/pricing-calculator.ts presses the
+                     matching toggle on the way down: from the Enterprise card you
+                     should not land on a Team estimate. */}}
+                {{ $priced := index (site.Data.pulumi_pricing.calculator.editions | default dict) $edition.id }}
+                {{/* Side by side, wrapping to a second line in the narrow cards — the
+                     four-column grid at xl leaves barely enough width for both, and
+                     the labels are long enough that it's a close call either way. The
+                     row gap is smaller than the column gap so a wrapped pair reads as
+                     two lines of one group rather than two separate blocks. */}}
+                <div class="mt-auto pt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                    <a href="#compare" data-track="pricing-card-{{ $edition.id }}-compare" class="inline-flex items-center gap-1.5 text-violet-primary hover:underline">
+                        {{ partial "icon.html" (dict "name" "phosphor/arrow-down" "class" "size-4") }}
+                        View all features
+                    </a>
+                    {{ if $priced }}
+                    <a href="#calculator-{{ $edition.id }}" data-track="pricing-card-{{ $edition.id }}-estimate" class="inline-flex items-center gap-1.5 text-violet-primary hover:underline">
+                        {{ partial "icon.html" (dict "name" "phosphor/calculator" "class" "size-4") }}
+                        Estimate your cost
+                    </a>
+                    {{ end }}
                 </div>
             </div>
         </div>
@@ -132,10 +164,18 @@
     </div>
 </section>
 
-<section id="compare" class="container mx-auto px-6">
+{{/* scroll-mt clears the sticky site nav, so a card's "View all features" link
+     lands the table's own sticky header below it rather than underneath it. */}}
+<section id="compare" class="container mx-auto px-6 scroll-mt-24">
 
     <div class="sticky top-16 z-30 bg-white py-4">
         <div class="grid {{ $cols }} {{ $colsMd }} gap-x-4 items-end">
+            {{/* The label column's header cell is otherwise empty, so it carries
+                 the second way into the estimator — on screen for as long as the
+                 reader is scanning features, which is the whole time the question
+                 is live, and without adding a floating element to the viewport.
+                 It's hidden below md along with the column itself; the strip above
+                 the table is what mobile has. */}}
             <div class="hidden md:block"></div>
             {{ range $edition := $editions }}
             {{ $card := $edition.card }}
@@ -260,6 +300,12 @@
     })();
 </script>
 
+{{/* The estimator sits below the comparison table: it answers "what would this
+     cost me", which is a question a reader only has once they've seen the cards
+     and worked out which edition they'd be on. Entry points above link down to
+     #calculator. */}}
+{{ partial "pricing/calculator.html" . }}
+
 {{ with .Params.testimonial }}
 <section class="container mx-auto px-6 my-24">
     {{ partial "template-partials/template-testimonial.html" (dict
@@ -285,7 +331,18 @@
                         <span class="text-sm font-semibold pr-4">{{ $question.question }}</span>
                         {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-5 text-gray-600 transition-transform group-open:rotate-180 flex-shrink-0") }}
                     </summary>
-                    <div class="pb-5 text-base text-gray-700 prose prose-sm max-w-none">
+                    {{/* markdownify only emits <p> when an answer runs to more than
+                         one paragraph, so an FAQ list renders as a mix of bare text
+                         and real paragraphs. Bare text takes the color here; a <p>
+                         does not, because `p` in shared/_base.scss sets its own
+                         color and margins and an element's own rule beats anything
+                         it would otherwise inherit. Hence the child selectors —
+                         without them the two kinds of answer don't match each other.
+
+                         Zeroing the outer margins rather than restyling them: the
+                         summary's py-5 above and this pb-5 below already space the
+                         answer, and a bare-text answer has no margin to add. */}}
+                    <div class="pb-5 text-base text-gray-700 [&_p]:text-inherit [&>p:first-child]:mt-0 [&>p:last-child]:mb-0">
                         {{ $question.answer | markdownify }}
                     </div>
                 </details>

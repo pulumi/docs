@@ -91,9 +91,50 @@
     {{ $svgPath := printf "logos/customers/%s.svg" .logo }}
     {{ $fingerprintedSvg := resources.Get (printf "fingerprinted/%s" $svgPath) }}
     {{ if $fingerprintedSvg }}
+        {{/* Read the SVG's own declared dimensions so the <img> can carry real width/height
+             attributes (CLS: lets the browser reserve layout space before the stylesheet
+             that ultimately sizes the logo via object-contain has applied). Hugo's image
+             pipeline does not support .Width/.Height on SVG resources, so parse the source
+             markup directly instead of guessing — first the viewBox (most logos declare
+             one), falling back to the root <svg> element's own width/height attributes.
+             If neither is present, degrade to the pre-existing unsized behavior rather
+             than fabricate a number. */}}
+        {{ $svgW := "" }}
+        {{ $svgH := "" }}
+        {{ with findRE `viewBox=["'][^"']*["']` $fingerprintedSvg.Content 1 }}
+            {{/* Quote character varies across assets (most are double-quoted; at least one
+                 logo writes single-quoted attributes), so strip the `viewBox=` prefix and
+                 the closing quote positionally rather than by literal. */}}
+            {{ $vb := substr (index . 0) 9 -1 }}
+            {{ $vbParts := split $vb " " }}
+            {{ if eq (len $vbParts) 4 }}
+                {{ $wCandidate := index $vbParts 2 }}
+                {{ $hCandidate := index $vbParts 3 }}
+                {{ if and (findRE `^[0-9.]+$` $wCandidate 1) (findRE `^[0-9.]+$` $hCandidate 1) }}
+                    {{ $svgW = $wCandidate }}
+                    {{ $svgH = $hCandidate }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ if and (not $svgW) (not $svgH) }}
+            {{ with findRE `<svg\b[^>]*>` $fingerprintedSvg.Content 1 }}
+                {{ $tag := index . 0 }}
+                {{ $wAttr := findRE `width="[0-9.]+"` $tag 1 }}
+                {{ $hAttr := findRE `height="[0-9.]+"` $tag 1 }}
+                {{ if and $wAttr $hAttr }}
+                    {{ $svgW = strings.TrimSuffix `"` (strings.TrimPrefix `width="` (index $wAttr 0)) }}
+                    {{ $svgH = strings.TrimSuffix `"` (strings.TrimPrefix `height="` (index $hAttr 0)) }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{/* width/height are required to be non-negative integers per the HTML5 spec;
+             several source SVGs declare fractional viewBox dimensions, so round rather
+             than truncate to stay closest to the SVG's real aspect ratio. */}}
+        {{ if $svgW }}{{ $svgW = math.Round (float $svgW) }}{{ end }}
+        {{ if $svgH }}{{ $svgH = math.Round (float $svgH) }}{{ end }}
         <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
             {{ $fingerprintedSvg = $fingerprintedSvg | fingerprint }}
-            <img src="{{ $fingerprintedSvg.RelPermalink }}" alt="{{ .logo }} logo" loading="lazy" />
+            <img src="{{ $fingerprintedSvg.RelPermalink }}" alt="{{ .logo }} logo" {{ with $svgW }}width="{{ . }}"{{ end }} {{ with $svgH }}height="{{ . }}"{{ end }} loading="lazy" />
         </span>
     {{ else }}
         <span class="{{ $logoClass }} w-full h-full flex m-auto justify-center">
