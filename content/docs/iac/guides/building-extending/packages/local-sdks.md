@@ -15,7 +15,7 @@ Pulumi Packages are the core technology that enables cloud infrastructure resour
 
 ## Understanding local SDKs
 
-A local SDK is a Pulumi package SDK generated on your own computer, in the language of your program, instead of being checked into a provider repository and published to the Pulumi Registry. The package's source or executable is often downloaded from a remote source (for example, a registry or a Git repository), but the SDK itself is generated locally. Given a [package schema](/docs/iac/guides/building-extending/packages/schema/) `pulumi` can generate your package SDK for you. Local SDKs are frequently part of the Pulumi experience in several contexts:
+A local SDK is a Pulumi package SDK generated on your own computer, in the language of your program, instead of being checked into a provider repository and published to the Pulumi Registry. The package's source or executable is often downloaded from a remote source (for example, a registry or a Git repository), but the SDK itself is generated locally. Given a [package schema](/docs/iac/guides/building-extending/packages/schema/) `pulumi` can generate your package SDK for you. Local SDKs are frequently part of the Pulumi experience in these contexts:
 
 - When using parameterized providers like [`terraform-provider`](/registry/packages/terraform-provider/).
 - When working with components as packages.
