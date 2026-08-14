@@ -3,6 +3,8 @@ title: "Speeding up Pulumi Operations by up to 20x"
 
 date: 2026-01-12T18:57:55+02:00
 
+updated: 2026-08-14
+
 draft: false
 
 meta_desc: Pulumi operations get up to 20x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
