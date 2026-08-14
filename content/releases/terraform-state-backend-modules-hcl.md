@@ -149,4 +149,5 @@ blog_section:
     - /blog/bring-your-terraform-estate-into-the-agentic-era
     - /blog/terraform-to-pulumi-cloud-hands-on
     - /blog/terraforms-data-model-on-pulumis-engine
+    - /blog/compatibility-testing-pulumi-hcl
 ---

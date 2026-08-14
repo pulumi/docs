@@ -16,6 +16,7 @@ category: tutorials
 related_posts:
     - bring-your-terraform-estate-into-the-agentic-era
     - terraforms-data-model-on-pulumis-engine
+    - compatibility-testing-pulumi-hcl
 ---
 
 [Today's big release](/releases/terraform-state-backend-modules-hcl/) contains a whole new set of features designed for seamless interoperability with the Terraform and OpenTofu ecosystems, and there's a lot there — so much that it can be tough to get your head around all of it. But it generally falls into three major categories:
