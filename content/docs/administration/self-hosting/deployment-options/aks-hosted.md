@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/aks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/aks-hosted/
+pulumi_cloud_feature: self-hosting
 ---
 
 The [AKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/aks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Azure Kubernetes Service (AKS)
@@ -45,7 +46,7 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 When deploying the Service, it is recommended to pin the Pulumi Cloud image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/aks-hosted/README.md) file to set the `imageTag` configuration property for the installer to use.
 
-When ready to update the Pulumi Service containers to use a different version, do the following:
+When ready to update the Pulumi Cloud containers to use a different version, do the following:
 
 * `pulumi login` to the DIY backend as chosen above when installing the self-hosted service.
 * `pulumi config set imageTag {image tag}` to set the version you want to use.

@@ -12,6 +12,7 @@
 //     "title": "Advanced CI/CD for AWS",     // required
 //     "secondaryTitle": "",                  // hidden unless set
 //     "additionalText": "With Jane Doe - Staff Engineer, Acme",
+//     "additionalTextShort": "With Jane Doe",  // names-only byline, used by the square card
 //     "showButton": false,                   // "Register" pill, hidden by default
 //     "buttonText": "Register",
 //     "speakers": ["/images/people/jane.jpg", "/abs/path.png", "data:image/png;base64,..."],
@@ -68,8 +69,13 @@ const logos = (cfg.logos && cfg.logos.length ? cfg.logos : ["pulumi"])
 for (const p of cfg.logos || []) if (!resolveLogo(p, [cfgDir])) console.error(`  warning: could not resolve logo: ${p}`)
 
 // additionalText may be supplied directly, or derived from a presenters list.
+// A presenters list also yields the names-only byline the square card prefers;
+// additionalTextShort can be supplied directly alongside a literal additionalText.
 const additionalText = cfg.additionalText != null ? cfg.additionalText
   : cfg.presenters ? presentersLine(cfg.presenters)
+  : ""
+const additionalTextShort = cfg.additionalTextShort != null ? cfg.additionalTextShort
+  : cfg.presenters ? presentersLine(cfg.presenters, { roles: false })
   : ""
 
 const fields = {
@@ -77,6 +83,7 @@ const fields = {
   title: (cfg.title || "").toString().trim(),
   secondaryTitle: (cfg.secondaryTitle || "").toString().trim(),
   additionalText,
+  additionalTextShort,
   logos,
   speakers,
   showButton: !!cfg.showButton,

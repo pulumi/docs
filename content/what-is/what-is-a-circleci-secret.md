@@ -1,7 +1,7 @@
 ---
-title: What is a CircleCI Secret?
+title: What is a CircleCI Secret? Setup & Best Practices
 meta_desc: |
-    Learn more about CircleCI secrets and how to use them.
+    A CircleCI secret is an encrypted variable that keeps credentials out of config files. Learn to define, reference, and rotate secrets, and use OIDC with ESC.
 
 type: what-is
 page_title: "What is a CircleCI Secret?"
@@ -10,7 +10,7 @@ authors: ["diana-esteves"]
 
 [CircleCI](https://circleci.com/) is an agile, continuous integration/continuous deployment ([CI/CD](/what-is/what-is-ci-cd/)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.
 
-## What is a CircleCI secret?
+## CircleCI secrets, defined
 
 CircleCI secrets are sensitive information that must be protected to guarantee the safe and reliable building and deployment of applications within your CI/CD pipeline. They can include API tokens, SSH keys, and environment variables containing credentials. These are to be hidden from the public and protected with access control to maintain security and integrity. In CircleCI, secrets are used within the configuration of continuous integration and delivery pipelines to allow automated processes to interact securely with other services, repositories, and infrastructure. Managing these secrets is crucial to prevent unauthorized access and potential security breaches.
 
@@ -160,6 +160,24 @@ Using CircleCI secrets comes with particular challenges and considerations that 
 - **Integration with external secret management systems:** Organizations may already have established processes for secret management using external tools, and integrating these with CircleCI secrets can be complex. Evaluate whether integrating with an external secrets management system is necessary for your organization. If required, explore solutions that integrate with CircleCI and provide a unified approach to secrets management. Ensure that the chosen solution aligns with your security and compliance requirements.
 
 Addressing these challenges and considerations requires a thoughtful approach to [secrets management](/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices throughout the CI/CD pipeline. Regular reviews and updates to your secret management strategy will help ensure a secure and efficient development process.
+
+## Frequently asked questions
+
+### What is a CircleCI secret?
+
+A CircleCI secret is an encrypted environment variable or credential, such as an API token, SSH key, or password, stored in a CircleCI project's or context's settings rather than in code. CircleCI injects it into build jobs at runtime so pipelines can authenticate with external services without exposing the underlying value in configuration files, logs, or version control.
+
+### What is CircleCI used for?
+
+CircleCI is a continuous integration and continuous delivery (CI/CD) platform used to automate the build, test, and deployment stages of the software release process. Teams configure pipelines that trigger on code changes, run automated test suites, and deploy validated builds to staging or production environments, reducing manual effort and catching issues earlier in development.
+
+### What are CircleCI's key features?
+
+CircleCI's headline capabilities include contexts, which let teams share secrets securely across multiple projects and pipelines without duplicating them; orbs, reusable packages of configuration that simplify integrating third-party tools; and parallelism with configurable resource classes, which split test suites across multiple containers to shorten build times on larger codebases.
+
+### How did the CircleCI breach demonstrate the risks of long-lived secrets?
+
+In January 2023, CircleCI disclosed a security incident in which an attacker gained access to its internal systems. CircleCI advised all customers to immediately rotate every secret and token stored in the platform as a precaution. The episode illustrated why static, long-lived secrets are risky: a single compromised store can expose credentials across many pipelines, which is why short-lived, frequently rotated, or dynamically issued secrets are preferable.
 
 ## Conclusion
 

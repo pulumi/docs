@@ -1,0 +1,880 @@
+# What Pulumi sells: the Pulumi Cloud editions, and which edition each feature
+# needs. Single source of truth for the /pricing/ comparison table, the
+# `pulumi_cloud_feature:` docs marker, the {{< pulumi-cloud >}} shortcode, and the
+# changelog `editions:` badges.
+#
+# This file describes the product, not any page. Nothing in it names a page, a
+# section, a table, a row, or a column — the pricing page's accordion is one
+# *rendering* of this taxonomy, and a docs callout reads the same file without
+# inheriting that shape.
+#
+# -----------------------------------------------------------------------------
+# VOCABULARY
+# -----------------------------------------------------------------------------
+# The collective noun is "edition" — not "plan", "tier", or "subscription":
+#
+#   - "plan" collides with Neo's Plan mode and `pulumi preview --save-plan`.
+#   - "tier" is absent from the product UI (it means usage tier, not edition).
+#   - "subscription" is the billing record, not the edition itself.
+#
+# Never "Free" — the product calls the free edition Individual, and uses "free"
+# only as an adjective. Never "Starter" or "Pro"; those are legacy grandfathered
+# SKUs, not editions a reader can buy today.
+#
+# Edition names are lowercase-noun in prose ("the Enterprise edition"), per the
+# brand rule against overcapitalizing concepts.
+#
+# -----------------------------------------------------------------------------
+# ORDER MATTERS
+# -----------------------------------------------------------------------------
+# List order is the only ordering mechanism, at every level. There is no
+# `weight` and nothing is sorted at render time.
+#
+#   editions[]   pricing card order, comparison column order, and the
+#                "the Team, Enterprise, and Business Critical editions"
+#                expansion in availability markers. The product never says
+#                "and above" — it enumerates — so that sentence is generated
+#                from this one list rather than written by hand on each page.
+#   groups[]     order of the coarse bands on /pricing/. There is one band
+#                today — the tables are a flat list of product areas, mirroring
+#                the sections of /docs/ — but the level stays so splitting them
+#                again is an edit here rather than a template change.
+#   categories[] order of the product tables within a band.
+#   features[]   row order within a table.
+#
+# -----------------------------------------------------------------------------
+# FEATURES
+# -----------------------------------------------------------------------------
+# Every feature needs an `id` that is unique across *all* categories. Ids are
+# not slugged from names, because names collide ("Self-hosting" and "On-demand
+# resource price" each appear under more than one product) — disambiguate with a
+# product prefix (`esc-self-hosting`). Charset: ^[a-z0-9][a-z0-9-]*$, because
+# Hugo's map lookups are case-insensitive and would collapse `RBAC` into `rbac`.
+#
+# Availability is expressed two ways, which compose:
+#
+#   available_from: <edition-id>   Unavailable below that edition, available
+#                                  from it up. 40-odd features are exactly this.
+#   availability: {<edition-id>: <value>}
+#                                  Overlays specific editions on top of
+#                                  `available_from`. A value is:
+#                                    true            a check mark
+#                                    false / omitted a dash
+#                                    a string        rendered as Markdown
+#                                    a map           {content, subtext, tooltip}
+#
+# Availability must be monotone: once a feature is available it stays available
+# in every higher edition. The build fails otherwise, because the generated
+# marker sentence enumerates "this edition and everything above it".
+#
+# Quote any string cell that could be read as a YAML 1.1 boolean — `no`, `yes`,
+# `on`, `off`, `y`, `n` all parse as bools unquoted. `make lint` rejects them.
+#
+# Other per-feature keys:
+#
+#   link / tooltip   decoration for the comparison row.
+#   hidden: true     not a marketed line item: left out of the comparison table,
+#                    but still resolvable by id from a docs marker.
+#   requires: <edition-id>
+#                    the edition a docs marker should name, when it differs from
+#                    the first edition with a truthy cell. Needed wherever the
+#                    free column is a *limited variant* of the feature rather
+#                    than the feature itself ("Manual" policy enforcement).
+#                    It only ever *raises* that edition, so it has to name one
+#                    above the first truthy cell — the build fails otherwise,
+#                    since a lower value would make every marker contradict the
+#                    row it deep-links to.
+#
+# -----------------------------------------------------------------------------
+# CALCULATOR
+# -----------------------------------------------------------------------------
+# The `calculator:` block holds the *numbers* behind the same prices the
+# comparison rows state in prose ("$0.00025/hour"), so the estimator on
+# /pricing/ and the markdown output can do arithmetic with them. It is a
+# separate block rather than extra keys on the rows because a cell is display
+# copy — it carries "Starting at", a subtext, and a Custom column — and parsing
+# a dollar figure back out of it would make every copy edit a pricing change.
+#
+# When you change a rate, change it in BOTH places: the feature cell a reader
+# reads and the calculator meter the estimator computes with. There is no
+# derivation between them.
+#
+# `calculator.editions` is keyed by edition id and only covers the editions the
+# estimator offers (Individual is free; Business Critical is quoted), so it is
+# deliberately not a full row of the editions list above.
+#
+# The metered rates here are the MONTHLY ones — the figure each comparison cell
+# carries as its subtext — even though billing is hourly. Rounding runs in both
+# directions between the two published forms (an ESC secret is $0.000685/hour
+# and $0.50/month, but 0.000685 x 730 is 0.50005; a Team Insights resource is
+# $0.000025/hour and $0.0185/month, but 0.000025 x 730 is 0.01825), so a
+# calculator that multiplied the hourly rate out would quote figures that
+# contradict the table directly below it. Storing the monthly rate keeps every
+# number on the page identical. The estimator prices whole months and says so;
+# it has no utilization control and no hours constant.
+#
+# -----------------------------------------------------------------------------
+# ADDING OR RENAMING
+# -----------------------------------------------------------------------------
+# Edit this file only. layouts/partials/pricing/data.html expands it and raises
+# every structural error; layouts/partials/pricing/calculator.html validates the
+# part of the `calculator:` block the estimator reads and
+# layouts/partials/pricing/card-usage.html validates `card_tooltip`, the part
+# only the cards render; scripts/lint/lint-markdown.js
+# validates the frontmatter and shortcode values that point at it. Renaming a
+# feature id is a breaking change — grep for `pulumi_cloud_feature:` and
+# `pulumi-cloud "` first.
+
+editions:
+  - id: individual
+    name: Individual
+    card:
+      subtitle: Free forever for individuals.
+      price: $0
+      price_label: forever
+      note: No credit card required
+      cta:
+        label: Get started
+        href: https://app.pulumi.com/signup
+        style: outline
+        data_role: cta-get-started
+      features_intro: "Includes:"
+      features:
+        - 1 user
+        - IaC state management
+        - Unlimited projects, stacks, and environments
+        - Unlimited updates and history
+        - Up to 500 workflow minutes
+        - Pulumi Neo with 5M free tokens/month
+
+  - id: team
+    name: Team
+    card:
+      subtitle: Everything you need to get started.
+      price: $40
+      price_label: /month base
+      unit: "**Includes 40 Credits**"
+      # The (i) tooltip on this note lists what a Credit buys per meter; the
+      # rates come from `calculator:` below, keyed by this edition's id.
+      note: Up to 500 resources, additional usage billed on demand
+      cta:
+        label: Start a free trial
+        href: https://app.pulumi.com/signup?create-organization=1
+        style: primary
+      features_intro: "Everything in **Individual**, plus:"
+      features:
+        - Up to 10 users
+        - Secure collaboration and CI/CD
+        - Neo code reviews and Slack integration
+        - Resource search
+        - OIDC and org access tokens
+        - Webhooks
+        - Automatic secrets rotation
+        - Community support
+
+  - id: enterprise
+    name: Enterprise
+    card:
+      subtitle: Security and collaboration for large teams.
+      badge: Popular
+      price: $400
+      price_label: /month base
+      unit: "**Includes 400 Credits**"
+      note: Up to 2,000 resources, additional usage billed on demand
+      cta:
+        label: Start a free trial
+        href: https://app.pulumi.com/signup?create-organization=1
+        style: primary
+      cta_secondary:
+        label: Contact sales
+        href: /contact/?form=sales
+      features_intro: "Everything in **Team**, plus:"
+      features:
+        - Unlimited users
+        - SAML/SSO and RBAC
+        - Neo scheduled tasks
+        - Internal developer platform (IDP)
+        - Audit logs
+        - Drift detection and remediation
+        - Time-to-live stacks
+        - Customer-managed keys
+        - Priority feature requests
+        - 12x5 Enterprise Support available
+
+  - id: business-critical
+    name: Business Critical
+    card:
+      subtitle: Advanced governance, policies, and controls.
+      price: Custom
+      note: Volume discounts and invoicing
+      cta:
+        label: Contact sales
+        href: /contact/?form=sales
+        style: primary
+      features_intro: "Everything in **Enterprise**, plus:"
+      features:
+        - "[Self-hosting available](/product/self-hosted)"
+        - Built-in compliance (NIST, PCI, and more)
+        - Automatic group & user sync (SCIM)
+        - Audit logs export
+        - Volume pricing and invoicing
+        - Private Slack and Professional Services
+        - 24x7 Enterprise Support available
+
+calculator:
+  # Above this many IaC resources the calculator keeps quoting a price but
+  # flags that volume pricing usually applies at that size, so the list-rate
+  # figure is an upper bound rather than a quote. Counted in resources rather
+  # than dollars because resource count is the number the reader typed and can
+  # reason about; a dollar threshold moves whenever any rate on this page does.
+  contact_sales_resources: 3000
+  # Meters priced the same on every edition the calculator offers.
+  meters:
+    workflow_minute: 0.01
+    neo_tokens_per_million: 3
+  editions:
+    team:
+      base_usd: 40
+      included_credits: 40
+      included_resources: 500
+      iac_resource_month: 0.1825
+      esc_secret_month: 0.50
+      insights_resource_month: 0.0185
+    enterprise:
+      base_usd: 400
+      included_credits: 400
+      included_resources: 2000
+      iac_resource_month: 0.365
+      esc_secret_month: 0.75
+      insights_resource_month: 0.0365
+  # What a Credit buys, per meter, for the (i) tooltip on each card's "additional
+  # usage" note. This is a *view* of the rates above, not a second copy of them:
+  # `key` names one of the per-edition rates or shared meters, and the card
+  # resolves it for its own edition — so an edition gets the tooltip exactly when
+  # the estimator prices it, and there is no number here to fall out of date. A
+  # Credit is $1, so these are also the dollar rates: they still have to match
+  # the monthly subtext on the on-demand rows below (iac-on-demand-price,
+  # esc-on-demand-price, insights-on-demand-price, workflow-minutes-price, neo),
+  # which is the one copy of these figures this file still keeps by hand — but
+  # that agreement is now the estimator's to keep, not the cards'.
+  #
+  # Not every meter belongs: esc-api-call-price is free to 10K and priced per 10K
+  # rather than per unit, so it stays in the comparison table below.
+  #
+  # `from` lists the editions where the rate is a floor rather than the price,
+  # mirroring the "Starting at" in those editions' comparison cells.
+  card_tooltip:
+    intro: "Additional usage, in Credits (1 Credit = $1)"
+    rates:
+      - label: 1 IaC resource
+        key: iac_resource_month
+        suffix: /month
+        from: [enterprise]
+      - label: 1 managed secret
+        key: esc_secret_month
+        suffix: /month
+      - label: 1 Insights resource
+        key: insights_resource_month
+        suffix: /month
+        from: [enterprise]
+      - label: 1 workflow minute
+        key: workflow_minute
+      - label: 1M Neo tokens
+        key: neo_tokens_per_million
+
+groups:
+  - id: product
+    name: Product
+
+categories:
+  - id: iac
+    name: Infrastructure as Code
+    group: product
+    icon: custom/pulumi-iac
+    features:
+      - id: iac-on-demand-price
+        name: On-demand resource price
+        availability:
+          individual: Free
+          team:
+            content: $0.00025/hour
+            subtext: $0.1825/month
+          enterprise:
+            content: Starting at $0.0005/hour
+            subtext: $0.365/month
+          business-critical: Custom
+
+      - id: iac-commitment-pricing
+        name: Commitment pricing
+        available_from: enterprise
+
+      - id: self-hosting
+        name: Self-hosting
+        link: /product/self-hosted/
+        available_from: business-critical
+
+      - id: updates
+        name: Updates
+        availability:
+          individual: Unlimited
+          team: Unlimited
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: concurrent-stack-updates
+        name: Concurrent stack updates
+        availability:
+          individual: 1
+          team: 5
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: restore-deleted-stacks
+        name: Restore deleted stacks
+        link: /blog/restore-stacks
+        available_from: enterprise
+
+      - id: update-history
+        name: Update history
+        available_from: individual
+
+      - id: rest-api
+        name: REST API
+        link: /docs/reference/cloud-rest-api/
+        available_from: individual
+
+      - id: automation-api
+        name: Automation API
+        link: /automation/
+        available_from: individual
+
+      - id: pulumi-service-provider
+        name: Pulumi-service provider
+        link: /registry/packages/pulumiservice/
+        available_from: individual
+
+  - id: deployments
+    name: Deployments & Workflows
+    group: product
+    icon: phosphor/git-pull-request
+    features:
+      - id: cicd-integrations
+        name: CI/CD integrations
+        link: /docs/iac/operations/continuous-delivery/
+        availability:
+          individual:
+            content: Many
+            tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+          team:
+            content: Many
+            tooltip: AWS Code Services, Azure DevOps, Codeship, CircleCI, GitHub, GitLab, Google Cloud Build, Jenkins, Travis, and more
+          enterprise: Customized for you
+          business-critical: Customized for you
+
+      - id: drift-detection
+        name: Drift detection
+        link: /docs/deployments/concepts/drift/
+        available_from: enterprise
+
+      - id: ttl-stacks
+        name: Time-to-live stacks
+        link: /docs/deployments/concepts/ttl/
+        available_from: enterprise
+
+      - id: scheduled-deployments
+        name: Scheduled deployments
+        link: /docs/deployments/concepts/schedules/
+        available_from: enterprise
+
+      - id: github-enterprise-server
+        name: GitHub Enterprise Server support
+        available_from: business-critical
+
+      - id: customer-managed-runners
+        name: Customer-managed deployment runners
+        link: /docs/deployments/concepts/customer-managed-runners/
+        available_from: business-critical
+
+      - id: gated-deployments
+        name: Gated deployments
+        available_from: enterprise
+        hidden: true
+
+      - id: webhooks
+        name: Webhooks
+        link: /docs/deployments/concepts/webhooks/
+        available_from: team
+
+  - id: esc
+    name: Secrets & Configuration
+    group: product
+    icon: custom/pulumi-secrets
+    features:
+      - id: esc-on-demand-price
+        name: On-demand secret price
+        availability:
+          individual: 25 free
+          team:
+            content: $0.000685/hour
+            subtext: $0.50/month
+          enterprise:
+            content: $0.001/hour
+            subtext: $0.75/month
+          business-critical: Custom
+
+      - id: esc-plaintext-config-price
+        name: Price per plaintext config
+        availability:
+          individual: Free
+          team: Free
+          enterprise: Free
+          business-critical: Free
+
+      - id: esc-api-call-price
+        name: Price per 10K API calls
+        availability:
+          individual: 10K free
+          team: $0.10
+          enterprise: $0.10
+          business-critical: $0.10
+
+      - id: esc-commitment-pricing
+        name: Commitment pricing
+        available_from: enterprise
+
+      - id: esc-self-hosting
+        name: Self-hosting
+        link: /product/self-hosted/
+        available_from: business-critical
+        availability:
+          business-critical: Available
+
+      - id: esc-max-secrets
+        name: "Max # of secrets"
+        availability:
+          individual: 25
+          team: Unlimited
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: esc-max-api-calls
+        name: "Max # of API calls"
+        availability:
+          individual: 10K / month
+          team: Unlimited
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: esc-versioning
+        name: Version history
+        link: /docs/esc/concepts/versioning/
+        available_from: team
+
+      - id: esc-version-tags
+        name: Version tags and import by tags
+        link: /docs/esc/concepts/versioning/#tagging-versions
+        available_from: team
+
+      - id: esc-change-requests
+        name: Change requests and approvals
+        available_from: enterprise
+        hidden: true
+
+      - id: esc-dynamic-credentials
+        name: Dynamic credentials
+        link: /docs/esc/providers/login/
+        available_from: individual
+
+      - id: esc-dynamic-secrets
+        name: Dynamic secrets
+        link: /docs/esc/providers/secrets/
+        available_from: individual
+
+      - id: esc-rotated-secrets
+        name: Rotated secrets
+        link: /docs/esc/providers/rotators/
+        available_from: individual
+
+      - id: esc-db-secrets-rotation
+        name: Database secrets rotation
+        link: /blog/esc-db-secrets-rotation-launch/
+        available_from: individual
+
+      - id: esc-db-secrets-rotation-private
+        name: Database secrets rotation in private networks
+        link: /blog/esc-db-secrets-rotation-launch/
+        available_from: enterprise
+
+      - id: customer-managed-keys
+        name: Customer-managed keys
+        link: /docs/esc/concepts/customer-managed-keys/
+        available_from: enterprise
+
+      - id: esc-integrations-sync
+        name: Integrations - sync
+        available_from: individual
+
+      - id: esc-sdks
+        name: Multi-language SDKs
+        link: /docs/esc/languages-sdks/
+        available_from: individual
+
+  - id: insights
+    name: Discovery & Governance
+    group: product
+    icon: custom/pulumi-insights
+    features:
+      - id: insights-on-demand-price
+        name: On-demand resource price
+        availability:
+          individual: Free
+          team:
+            content: $0.000025/hour
+            subtext: $0.0185/month
+          enterprise:
+            content: Starting at $0.00005/hour
+            subtext: $0.0365/month
+          business-critical: Custom
+
+      - id: workflow-minutes-price
+        name: Workflow cost per minute / included per month
+        link: /pricing#faq
+        availability:
+          individual: 500 free
+          team: $0.01
+          enterprise: $0.01 / Custom
+          business-critical: $0.01 / Custom
+
+      - id: resource-search
+        name: Resource search
+        link: /docs/insights/discovery/search/
+        available_from: team
+
+      - id: insights-discovery
+        name: Cloud account discovery
+        link: /docs/insights/discovery/
+        available_from: team
+
+      - id: insights-primary-accounts
+        name: Primary accounts
+        availability:
+          team: 1
+          enterprise: 10 / Custom
+          business-critical: Custom
+
+      - id: insights-data-export
+        name: Data export
+        link: /docs/insights/discovery/data-export/
+        available_from: enterprise
+
+      - id: property-search
+        name: Property search
+        link: /docs/insights/discovery/search/#property-queries
+        available_from: team
+
+      - id: policy-enforcement
+        name: Policy enforcement
+        link: /docs/insights/policy/
+        requires: team
+        availability:
+          individual: Manual
+          team: "[Organization-managed](/docs/insights/policy/#pulumi-cloud-integration)"
+          enterprise: "[Organization-managed](/docs/insights/policy/get-started/)"
+          business-critical: "[Organization-managed](/docs/insights/policy/get-started/)"
+
+      - id: preventative-policies
+        name: Preventative policies
+        link: /docs/insights/policy/policy-groups/
+        requires: team
+        available_from: team
+        availability:
+          individual: Manual
+
+      - id: audit-policies
+        name: Audit policies
+        link: /docs/insights/policy/policy-groups/
+        available_from: team
+
+      - id: pre-built-policy-packs
+        name: Pre-built policy packs
+        link: /docs/insights/policy/policy-packs/pre-built-packs/
+        availability:
+          team: Pulumi Best Practices
+          enterprise: Pulumi Best Practices
+          business-critical: Pulumi Best Practices, CIS, NIST, HITRUST, PCI DSS
+
+      - id: custom-policy-packs
+        name: Custom policy packs
+        link: /docs/insights/policy/policy-packs/authoring/#creating-a-policy-pack
+        availability:
+          team:
+            content: Up to 25 policies
+            subtext: 1 pack limit
+          enterprise:
+            content: Up to 100 policies
+            subtext: 3 pack limit
+          business-critical: Unlimited
+
+      - id: policy-enforcement-modes
+        name: Enforcement Modes
+        link: /docs/insights/policy/#local-policy-execution
+        availability:
+          team: Advisory & Mandatory
+          enterprise: Advisory & Mandatory
+          business-critical: Advisory, Mandatory & Remediation
+
+      - id: insights-self-hosted
+        name: Insights on self-hosted Pulumi Cloud
+        link: /docs/insights/self-hosted/
+        available_from: business-critical
+
+  - id: idp
+    name: Internal Developer Platform
+    group: product
+    icon: custom/pulumi-idp
+    features:
+      - id: developer-portal
+        name: Developer portal
+        availability:
+          individual: Host public templates
+          team: Host public templates
+          enterprise: Host private templates
+          business-critical: Host private templates
+
+      - id: private-registry
+        name: Private Registry
+        available_from: enterprise
+        hidden: true
+
+      - id: organization-templates
+        name: Organization templates in the Private Registry
+        available_from: enterprise
+        hidden: true
+
+  - id: neo
+    name: Infrastructure AI
+    group: product
+    icon: custom/pulumi-neo
+    icon_weight: fill
+    features:
+      - id: neo
+        name: Pulumi Neo
+        link: /docs/ai/neo/
+        availability:
+          individual:
+            content: 5M tokens/month
+            subtext: free
+          team: $3/M tokens
+          enterprise: $3/M tokens
+          business-critical: $3/M tokens
+
+      - id: neo-cli
+        name: Neo in the CLI
+        link: /docs/ai/neo/pulumi-cli/
+        available_from: individual
+
+      - id: neo-integrations
+        name: MCP & CLI Integrations
+        link: /docs/ai/neo/integrations/
+        available_from: individual
+
+      - id: neo-code-reviews
+        name: Neo code reviews
+        link: /docs/ai/neo/code-reviews/
+        available_from: team
+
+      - id: neo-slack
+        name: Slack integration
+        link: /docs/ai/neo/integrations/slack/
+        available_from: team
+
+      - id: neo-scheduled-tasks
+        name: Scheduled tasks
+        link: /docs/ai/neo/automations/
+        available_from: enterprise
+
+  - id: administration
+    name: Administration
+    group: product
+    icon: phosphor/shield-check
+    features:
+      - id: members
+        name: Members
+        availability:
+          individual: 1
+          team: Up to 10
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: admins
+        name: Admins
+        availability:
+          team: 1
+          enterprise: Unlimited
+          business-critical: Unlimited
+
+      - id: billing-managers
+        name: Billing managers
+        available_from: team
+        availability:
+          team: "1"
+          enterprise: Unlimited
+          business-critical: Unlimited
+        hidden: true
+
+      - id: organizations
+        name: Organizations
+        link: /docs/administration/organizations-teams/organizations/
+        availability:
+          team: 1
+          enterprise: Multiple supported
+          business-critical: Multiple supported
+
+      - id: identity-providers
+        name: Identity providers
+        link: /docs/administration/organizations-teams/accounts/
+        availability:
+          individual: GitHub, GitLab, Atlassian
+          team: GitHub, GitLab, Atlassian
+          enterprise: GitHub, GitLab, Atlassian, SAML/SSO
+          business-critical: GitHub, GitLab, Atlassian, SAML/SSO
+
+      - id: saml-sso
+        name: SAML/SSO
+        link: /docs/administration/access-identity/saml/
+        available_from: enterprise
+        availability:
+          enterprise:
+            content: Many
+            tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+          business-critical:
+            content: Many
+            tooltip: Microsoft Entra ID, Google Workspace, Okta, OneLogin, and more
+
+      - id: scim
+        name: SCIM integration
+        link: /docs/administration/access-identity/scim/
+        available_from: business-critical
+
+      - id: oidc
+        name: OIDC support
+        link: /docs/deployments/guides/oidc/
+        available_from: individual
+
+      - id: teams
+        name: Create and manage teams
+        link: /docs/administration/access-identity/rbac/teams/
+        available_from: enterprise
+
+      - id: rbac
+        name: Role-based access control (RBAC)
+        # Not organizations/#organization-roles: that section documents the
+        # built-in Admin/Member/Billing Manager roles, which are available in
+        # every edition. This row is the configurable RBAC that starts at
+        # Enterprise, which is what the rbac/ pages cover.
+        link: /docs/administration/access-identity/rbac/
+        available_from: enterprise
+
+      - id: custom-roles
+        name: Custom roles
+        link: /docs/administration/access-identity/rbac/roles
+        available_from: enterprise
+        availability:
+          enterprise: Up to 25
+          business-critical: Unlimited
+
+      - id: tag-based-access-control
+        name: Tag-based access control
+        link: /blog/expanding-pulumi-iam-custom-permissions/
+        available_from: enterprise
+
+      - id: assign-custom-roles
+        name: Assign custom roles to users and teams
+        link: /blog/expanding-pulumi-iam-custom-permissions/
+        available_from: enterprise
+
+      - id: org-team-access-tokens
+        name: Organization and team access tokens
+        link: /docs/administration/access-identity/access-tokens/
+        tooltip: These are machine access tokens that are scoped to the organization or team level
+        available_from: team
+        availability:
+          team:
+            content: true
+            tooltip: Organization access token only
+
+      - id: audit-logs
+        name: Audit logs
+        link: /docs/administration/security-compliance/audit-logs/
+        available_from: enterprise
+
+      - id: audit-log-export
+        name: Automated log export to S3
+        link: /docs/administration/security-compliance/audit-logs/aws-s3/
+        available_from: business-critical
+
+  - id: support
+    name: Support
+    group: product
+    icon: phosphor/lifebuoy
+    features:
+      - id: support
+        name: Support
+        available_from: enterprise
+        availability:
+          enterprise: Available, 12x5 / 24x7 support
+          business-critical: Available, 12x5 / 24x7 support
+
+      - id: support-normal-sla
+        name: Normal ticket SLA
+        available_from: enterprise
+        availability:
+          enterprise: Available, 1 or 5 business days
+          business-critical: Available, 1 or 5 business days
+
+      - id: support-urgent-sla
+        name: Urgent ticket SLA
+        available_from: enterprise
+        availability:
+          enterprise: Available, 4 hours to 2 business days
+          business-critical: Available, 4 hours to 2 business days
+
+      - id: support-private-slack
+        name: Private Slack channel
+        available_from: enterprise
+        availability:
+          enterprise: Available
+          business-critical: Available
+
+      - id: community-slack
+        name: Community Slack
+        link: https://slack.pulumi.com/
+        available_from: individual
+
+      - id: professional-services
+        name: Professional services
+        available_from: enterprise
+        availability:
+          enterprise: Available
+          business-critical: Available
+
+      - id: onboarding-training
+        name: Onboarding and training
+        available_from: enterprise
+        availability:
+          enterprise: Available
+          business-critical: Available
+
+      - id: terraform-migration
+        name: Terraform Migration
+        available_from: enterprise
+        availability:
+          enterprise: Available
+          business-critical: Available
+
+      - id: support-sla
+        name: SLA
+        available_from: enterprise
+        availability:
+          enterprise: Available
+          business-critical: Available

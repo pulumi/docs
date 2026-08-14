@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/local-docker/
   - /docs/pulumi-cloud/self-hosted/deployment-options/local-docker/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/local-docker/
+pulumi_cloud_feature: self-hosting
 ---
 
 The [Local-Docker Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker) is generally meant to be used where an on-premise solution is needed or where the cloud-based installation solutions (i.e. EKS, ECS, AKS) are not possible.
@@ -56,7 +57,7 @@ See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/ma
 
 When deploying the Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file to set the `imageTag` configuration property for the installer to use.
 
-When ready to update the Pulumi Service containers to use a different version, do the following:
+When ready to update the Pulumi Cloud containers to use a different version, do the following:
 
 * `pulumi login` to the self-managed (not self-hosted) backend as chosen above when installing the self-hosted service.
 * `pulumi config set imageTag {image tag}` to set the version you want to use.

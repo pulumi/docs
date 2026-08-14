@@ -13,6 +13,7 @@ menu:
     parent: deployments-guides
     identifier: deployments-guides-dependent-stack-updates
     weight: 50
+pulumi_cloud_feature: webhooks
 ---
 
 When you split your infrastructure across multiple stacks, an upstream stack often exposes outputs that downstream stacks consume through a [stack reference](/docs/iac/concepts/stacks/#stackreferences) — for example, a `network` stack whose VPC ID feeds a `database` stack, which in turn feeds a `compute` stack. A stack reference reads the *current* outputs of the upstream stack, but it does not re-run the downstream stack on its own. When the upstream stack changes, you need a way to cascade an update to the stacks that depend on it.

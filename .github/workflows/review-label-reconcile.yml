@@ -1,0 +1,117 @@
+name: Review Label Reconcile
+
+# Safety net for the review:* label state machine.
+#
+# claude-code-review.yml's mark-stale job flips review:no-blockers /
+# review:outstanding-issues to review:stale on `pull_request: synchronize`.
+# But GitHub suppresses workflow triggers for an entire class of pushers —
+# pushes made with the workflow GITHUB_TOKEN, and pushes by the Copilot
+# coding agent (which additionally sit behind "Approve and run workflows") —
+# so those pushes never fire synchronize and the label silently keeps
+# describing a review of content that no longer exists. Observed on
+# PR #20556: a Copilot conflict-resolution push at 2026-07-30T00:47Z fired
+# no workflow run at all, and the PR closed still wearing review:no-blockers
+# while the pinned review described the pre-conflict content.
+#
+# This job closes the hole from the polling side: for every open PR carrying
+# a terminal-success review label, compare the SHA the pinned review recorded
+# (the `<!-- CLAUDE_REVIEW_HEAD <sha> -->` sentinel compose-review.py stamps
+# under the header; falling back to the last `(<sha>)` in 📜 Review history
+# for reviews composed before the sentinel existed) against the live PR head.
+# On a mismatch, apply the same transition mark-stale would have applied.
+# When no SHA is recoverable, fall back to comparing the header's
+# `Last updated` timestamp against the head commit's committer date with a
+# 10-minute slack; if still indeterminate, skip — this job must never flip a
+# label it can't justify.
+#
+# Deterministic — no model calls. Mutations are label transitions only.
+
+on:
+  schedule:
+    - cron: '23 */2 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Reconcile review labels against PR heads
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          prs=$(
+            {
+              gh pr list --repo "$REPO" --state open --label review:no-blockers \
+                --json number --jq '.[].number'
+              gh pr list --repo "$REPO" --state open --label review:outstanding-issues \
+                --json number --jq '.[].number'
+            } | sort -un
+          )
+          [ -z "$prs" ] && { echo "no open PRs carry a terminal review label"; exit 0; }
+
+          for pr in $prs; do
+            head_sha=$(gh pr view "$pr" --repo "$REPO" --json headRefOid --jq .headRefOid)
+
+            # The 1/M pinned review body (first comment starting with the marker).
+            body=$(gh api "repos/$REPO/issues/$pr/comments" --paginate \
+              --jq '[.[] | select(.body | startswith("<!-- CLAUDE_REVIEW 1/"))][0].body' 2>/dev/null || true)
+            if [ -z "$body" ] || [ "$body" = "null" ]; then
+              echo "PR #$pr: no pinned review found; skipping"
+              continue
+            fi
+
+            reviewed=$(printf '%s\n' "$body" \
+              | grep -oE '<!-- CLAUDE_REVIEW_HEAD [0-9a-f]{7,40} -->' | tail -1 \
+              | grep -oE '[0-9a-f]{7,40}' || true)
+            if [ -z "$reviewed" ]; then
+              # Pre-sentinel reviews: last (sha) parenthetical in 📜 Review history.
+              reviewed=$(printf '%s\n' "$body" \
+                | awk '/^### .*Review history/ { h = 1; next } h && /^### / { h = 0 } h' \
+                | grep -oE '\([0-9a-f]{7,40}\)' | tail -1 | tr -d '()' || true)
+            fi
+
+            if [ -n "$reviewed" ]; then
+              case "$head_sha" in
+                "$reviewed"*)
+                  echo "PR #$pr: reviewed SHA $reviewed matches head; fresh"
+                  continue
+                  ;;
+              esac
+              echo "PR #$pr: reviewed SHA $reviewed != head $head_sha; marking stale"
+            else
+              # Timestamp fallback, 10-minute slack. Skip when indeterminate.
+              updated=$(printf '%s\n' "$body" \
+                | grep -oE 'Last updated [0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9:]{8}Z?' \
+                | head -1 | sed 's/Last updated //' || true)
+              if [ -z "$updated" ]; then
+                echo "PR #$pr: no reviewed SHA or timestamp recoverable; skipping"
+                continue
+              fi
+              head_date=$(gh api "repos/$REPO/commits/$head_sha" --jq '.commit.committer.date')
+              upd_s=$(date -u -d "$updated" +%s)
+              head_s=$(date -u -d "$head_date" +%s)
+              if [ $((head_s - upd_s)) -le 600 ]; then
+                echo "PR #$pr: head commit not newer than review timestamp (+10m slack); fresh"
+                continue
+              fi
+              echo "PR #$pr: head commit ($head_date) postdates review ($updated); marking stale"
+            fi
+
+            # Same transition mark-stale applies; the two terminal labels are
+            # mutually exclusive by convention.
+            labels=$(gh pr view "$pr" --repo "$REPO" --json labels --jq '[.labels[].name] | join(",")')
+            if [[ ",$labels," == *",review:outstanding-issues,"* ]]; then
+              gh pr edit "$pr" --repo "$REPO" \
+                --add-label "review:stale" --remove-label "review:outstanding-issues"
+            elif [[ ",$labels," == *",review:no-blockers,"* ]]; then
+              gh pr edit "$pr" --repo "$REPO" \
+                --add-label "review:stale" --remove-label "review:no-blockers"
+            fi
+          done

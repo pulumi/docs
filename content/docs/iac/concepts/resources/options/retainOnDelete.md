@@ -29,7 +29,7 @@ Once the resource is no longer marked retained, it can be fully deleted as part 
 
 The default is to inherit this value from the parent resource, and `false` for resources without a parent.
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -79,6 +79,19 @@ resources:
     type: Database
     options:
       retainOnDelete: true
+```
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "database" "db" {
+  # ...
+
+  pulumi {
+    retain_on_delete = true
+  }
+}
 ```
 
 {{% /choosable %}}

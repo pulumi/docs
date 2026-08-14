@@ -4,20 +4,90 @@
     Displays event presenters as a clean, borderless section.
 
     Parameters:
-    - presenters: Array of presenter objects with name, role, and photo
+    - presenters: Array of presenter objects with name, role, and photo.
+      Each may optionally carry:
+      - social: map of platform → handle (github, linkedin, twitter, x,
+        bluesky), rendered as icons via widgets/social-icons.html — the same
+        shape the team data files use.
+      - company + company_url: when `company` is set, it renders on its own
+        line below the role (so keep the company out of the `role` string),
+        linked to `company_url` when that's present too.
+
+    Optional: mark a presenter with `host: true` in front matter to split them
+    out into a secondary "Host" row below the main grid — for panels where the
+    moderator shouldn't read as one of the panelists. With no host flagged, the
+    section renders as a single "Speakers" grid.
 */}}
 
+{{/* Partition explicitly rather than with `where` — `where ... "!=" true` drops
+     entries that lack the key entirely, which is every presenter on every event
+     page that hasn't opted in. */}}
+{{- $hosts := slice -}}
+{{- $speakers := slice -}}
+{{- range $presenter := .presenters -}}
+    {{- if $presenter.host -}}
+        {{- $hosts = $hosts | append $presenter -}}
+    {{- else -}}
+        {{- $speakers = $speakers | append $presenter -}}
+    {{- end -}}
+{{- end -}}
+
 <section class="template-event-speakers">
-    <span class="font-overline-sm text-gray-600">Speakers</span>
+    <span class="font-overline-sm text-gray-600">{{ if $hosts }}Panelists{{ else }}Speakers{{ end }}</span>
     <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
-        {{ range $presenter := .presenters }}
+        {{ range $presenter := $speakers }}
             <div class="flex items-center gap-4">
                 <img class="event-speaker-photo" src="{{ $presenter.photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ $presenter.name }}" />
                 <div>
                     <div class="event-speaker-name">{{ $presenter.name }}</div>
                     <div class="event-speaker-role">{{ $presenter.role }}</div>
+                    {{ with $presenter.company }}
+                        <div class="event-speaker-role">
+                            {{- with $presenter.company_url -}}
+                                <a class="link hover:underline" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $presenter.company }}</a>
+                            {{- else -}}
+                                {{ . }}
+                            {{- end -}}
+                        </div>
+                    {{ end }}
+                    {{ with $presenter.social }}
+                        <div class="event-speaker-links">
+                            {{ partial "widgets/social-icons.html" (dict "social" .) }}
+                        </div>
+                    {{ end }}
                 </div>
             </div>
         {{ end }}
     </div>
+
+    {{ with $hosts }}
+        <div class="mt-8">
+            <span class="font-overline-sm text-gray-600">{{ if gt (len .) 1 }}Hosts{{ else }}Host{{ end }}</span>
+            <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
+                {{ range $host := . }}
+                    <div class="flex items-center gap-4">
+                        <img class="event-speaker-photo event-host-photo" src="{{ $host.photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ $host.name }}" />
+                        <div>
+                            <div class="event-speaker-name">{{ $host.name }}</div>
+                            <div class="event-speaker-role">{{ $host.role }}</div>
+                            {{ with $host.company }}
+                                <div class="event-speaker-role">
+                                    {{- with $host.company_url -}}
+                                        <a class="link hover:underline" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $host.company }}</a>
+                                    {{- else -}}
+                                        {{ . }}
+                                    {{- end -}}
+                                </div>
+                            {{ end }}
+                            {{ with $host.social }}
+                                <div class="event-speaker-links">
+                                    {{ partial "widgets/social-icons.html" (dict "social" .) }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    {{ end }}
 </section>

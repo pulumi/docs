@@ -3,7 +3,7 @@
 // Compose with:  class="form-input form-input-lg"  (default size baked into the
 // base class; add a size modifier only to override — same convention as .btn/.badge).
 //
-// Controls:  form-input | form-textarea | form-select | form-checkbox | form-radio
+// Controls:  form-input | form-textarea | form-select | form-checkbox | form-radio | form-range
 // Sizes:     (default) | -sm | -lg | -xl
 // Meta:      form-label | form-help | form-error
 //
@@ -113,6 +113,32 @@ $form-radio-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     }
 }
 
+// Range track and thumb. Both live behind vendor pseudo-elements that no
+// utility class can target, and WebKit and Firefox disagree about who centers
+// the thumb — WebKit stacks it on top of the track (hence the negative margin),
+// Firefox centers it for you. Two mixins, four selectors.
+@mixin form-range-track {
+    @apply w-full rounded-full border-0;
+
+    height: var(--form-range-track-h);
+    // Violet up to the current value, gray after it. The stop is a custom
+    // property so a consumer can paint the filled portion by setting one
+    // percentage on the element; unset, the track is simply gray.
+    background: linear-gradient(
+        to right,
+        var(--color-violet-primary) var(--form-range-fill, 0%),
+        var(--color-gray-200) var(--form-range-fill, 0%)
+    );
+}
+
+@mixin form-range-thumb {
+    @apply appearance-none rounded-full border-0 bg-violet-primary cursor-pointer;
+
+    height: var(--form-range-thumb-size);
+    width: var(--form-range-thumb-size);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.25);
+}
+
 // Shadcn-style checkbox/radio base. No inner depth shadow on check controls.
 @mixin form-check-base {
     // p-0 + box-border keep it a 1rem SQUARE even when a wider control padding
@@ -186,6 +212,38 @@ $form-radio-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
     @apply rounded-full;
 
     &:checked { background-image: url("#{$form-radio-svg}"); }
+}
+
+.form-range {
+    --form-range-track-h: 0.375rem;
+    --form-range-thumb-size: 1.125rem;
+
+    @apply block w-full appearance-none bg-transparent cursor-pointer outline-none
+           disabled:pointer-events-none disabled:opacity-50;
+
+    // Match the thumb so the control's box is the thumb's box — otherwise the
+    // track's height boxes the thumb in and it clips at both ends.
+    height: var(--form-range-thumb-size);
+
+    &::-webkit-slider-runnable-track { @include form-range-track; }
+    &::-moz-range-track { @include form-range-track; }
+
+    &::-webkit-slider-thumb {
+        @include form-range-thumb;
+        margin-top: calc((var(--form-range-track-h) - var(--form-range-thumb-size)) / 2);
+    }
+    &::-moz-range-thumb { @include form-range-thumb; }
+
+    // Focus lands on the thumb, not the whole control — a ring around a
+    // full-width track reads as a focused row rather than a focused slider.
+    // Kept in separate rules per engine: a selector list containing one
+    // unknown vendor pseudo-element invalidates the whole rule.
+    &:focus-visible::-webkit-slider-thumb {
+        box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-violet-primary) 40%, transparent);
+    }
+    &:focus-visible::-moz-range-thumb {
+        box-shadow: 0 0 0 3px color-mix(in oklch, var(--color-violet-primary) 40%, transparent);
+    }
 }
 
 .form-label { @apply block text-sm mb-1 text-gray-950; }

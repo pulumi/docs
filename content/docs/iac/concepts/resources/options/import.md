@@ -22,7 +22,7 @@ To import a resource, first specify the `import` option with the resource’s ID
 
 This example imports an existing EC2 security group with ID `sg-04aeda9a214730248` and an EC2 instance with ID `i-06a1073de86f4adef`:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -192,12 +192,47 @@ resources:
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```hcl
+resource "aws_security_group" "group" {
+  name        = "web-sg-62a569b"
+  description = "Enable HTTP access"
+
+  ingress {
+    protocol    = "tcp"
+    from_port   = 80
+    to_port     = 80
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  pulumi {
+    import_id = "sg-04aeda9a214730248"
+  }
+}
+
+resource "aws_instance" "server" {
+  ami             = "ami-6869aa05"
+  instance_type   = "t2.micro"
+  security_groups = [aws_security_group.group.name]
+
+  pulumi {
+    import_id = "i-06a1073de86f4adef"
+  }
+}
+```
+
+HCL also supports Terraform's standard top-level `import` blocks as an alternative.
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct.
+For this to work, your Pulumi stack must be configured correctly. In this example, it’s important that the AWS region is correct. Check the current value with `pulumi config get aws:region`, and set it with `pulumi config set aws:region <region>`.
 
 If the resource's arguments differ from the imported state, the import will succeed, and the resource will then be modified to reflect the inputs in your Pulumi program.
+
+The following example preview output, from a program that imports an S3 bucket, shows what that looks like:
 
 ```bash
 $ pulumi preview

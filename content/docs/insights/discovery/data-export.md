@@ -1,8 +1,8 @@
 ---
 title: Data Export
-title_tag: Data Export | Pulumi Insights
+title_tag: Data Export | Discovery & Governance
 h1: Data Export
-meta_desc: Documentation and schema for the Pulumi Insights CSV Data Export feature.
+meta_desc: Documentation and schema for the CSV Data Export feature in Pulumi Cloud.
 menu:
   insights:
     name: Data Export
@@ -13,15 +13,16 @@ aliases:
   - /docs/pulumi-cloud/insights/export/
   - /docs/insights/export/
   - /docs/insights/import/data-export/
+pulumi_cloud_feature: insights-data-export
 ---
 
-Pulumi Insights data export allows you to export any set of Pulumi Insights search results to a CSV file. You can, in turn, use this CSV file to join to any external data in a data warehouse, perform ETL transforms, etc.
+Data Export allows you to export any set of Resource Search results to a CSV file. You can, in turn, use this CSV file to join to any external data in a data warehouse, perform ETL transforms, etc.
 
 There are two ways to perform a data export:
 
 1. Point-and-click, via the Pulumi Cloud web UI, by clicking the Export CSV menu item:
 
-    ![a screenshot of the Pulumi Cloud web UI showing the drop-down for Pulumi Insights results and the Export CSV command highlighted](/docs/insights/assets/data-export-pulumi-cloud-ui.png)
+    ![a screenshot of the Pulumi Cloud web UI showing the drop-down for Resource Search results and the Export CSV command highlighted](/docs/insights/assets/data-export-pulumi-cloud-ui.png)
 
 1. Programmatically, by calling the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/cloud-rest-api/#data-export)
 

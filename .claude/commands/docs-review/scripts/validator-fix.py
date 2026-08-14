@@ -25,7 +25,7 @@ Design notes:
     inside a 50KB CalledProcessError repr, and (c) it removes the dependency
     on the `claude` CLI being installed at a compatible version.
 
-    The caller (pinned-comment.sh cmd_upsert_validated) is expected to:
+    The caller (the workflow's validate / splice / re-validate / upsert chain) is expected to:
     1. snapshot the pre-fix body to a .pre-haiku.bak file
     2. invoke this script
     3. re-validate after success
@@ -99,7 +99,7 @@ SHRINK_FLOOR = 0.9
 # Maximum number of surgical violations to fold into a single batched Haiku
 # call. Pre-v16 was N sequential calls (each one rewrites the whole ~50KB
 # body — ~12K output tokens × ~250 tok/s = ~50s/call); a hot review with 30
-# violations cost ~5-10 min wall-clock per upsert-validated retry and tripped
+# violations cost ~5-10 min wall-clock per publish-chain retry and tripped
 # Opus's 2-min Bash timeout, leaving the model to defer to soft-floor without
 # the splices applying. v16 batches all surgical fixes into ONE Haiku call:
 # the body is sent + received once, the per-violation instructions stack
@@ -169,7 +169,7 @@ def build_instruction(rule_id: str, violation: dict) -> str:
             f"Replace ONLY its emoji (the glyph immediately after the `→`) with the "
             f"glyph named in `Expected`. The per-verdict map is: ✅ `verified`, "
             f"🤝 `matches`, ➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, "
-            f"⚔️ `mismatch`. Do not change the verdict word, the line text, the "
+            f"⚔️ `mismatch`, 🌀 `framing-drift`. Do not change the verdict word, the line text, the "
             f"evidence pointer, or any other line."
         )
     elif rule_id == "trail-canonical-verdict-word":
@@ -179,7 +179,7 @@ def build_instruction(rule_id: str, violation: dict) -> str:
         line_ref = violation.get("line_ref", "")
         instr = (
             f"VIOLATION (`trail-canonical-verdict-word`): A line in the 🔍 Verification "
-            f"trail uses a freelanced verdict token instead of one of the six canonical "
+            f"trail uses a freelanced verdict token instead of one of the canonical "
             f"verdict words.\n\n"
             f"Trail line anchor: `{line_ref}`\n"
             f"Actual: {actual}\n"
@@ -190,9 +190,9 @@ def build_instruction(rule_id: str, violation: dict) -> str:
             f"immediately after the `→ <emoji>`, before any parenthetical) with the "
             f"canonical verdict word the validator hint names. If the hint does not name "
             f"a specific word, pick the one of `verified` / `matches` / `not-a-claim` / "
-            f"`unverifiable` / `contradicted` / `mismatch` that best matches the line's "
+            f"`unverifiable` / `contradicted` / `mismatch` / `framing-drift` that best matches the line's "
             f"evidence text, and set the emoji to its glyph (✅ `verified`, 🤝 `matches`, "
-            f"➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, ⚔️ `mismatch`). Keep "
+            f"➖ `not-a-claim`, 🤷 `unverifiable`, ❌ `contradicted`, ⚔️ `mismatch`, 🌀 `framing-drift`). Keep "
             f"the claim quote, the parenthetical evidence pointer, and every other line "
             f"unchanged."
         )

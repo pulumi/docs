@@ -37,7 +37,7 @@ You may have also heard the phrase "continuous deployment." Continuous deploymen
 
 To add continuous deployment to our Hello World example, we'd take the latest Docker image tag and deploy it in a running container so that end users can take advantage of the new code changes. However, let's first learn about pipelines before we show you how to do so.
 
-### What is a CI/CD pipeline?
+### What a CI/CD pipeline looks like
 
 The sequential nature of continuous integration, delivery, and deployment practices creates a symbolic pipeline, hence the CI/CD pipeline.
 
@@ -80,6 +80,24 @@ For a detailed exploration and steps to implement CI/CD and DevOps practices, re
 * **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/)**: Start with Infrastructure as Code using Pulumi by accessing our [getting started guide](https://www.pulumi.com/docs/get-started/).
 
 * **Version control**: Learn about version control systems supported by Pulumi in our [version control documentation](https://www.pulumi.com/docs/intro/concepts/state/#backends).
+
+## Frequently asked questions
+
+### What is CI/CD?
+
+CI/CD stands for continuous integration and continuous delivery (or deployment), a methodology that automates how code moves from a shared repository into production. Continuous integration merges and tests code changes frequently, while continuous delivery/deployment automates the release process so validated changes reach users quickly, reliably, and with minimal manual intervention.
+
+### What is a CI/CD pipeline?
+
+A CI/CD pipeline is the automated sequence of stages a code change passes through on its way to production: build, test, and deploy. Each commit triggers the pipeline, which compiles the code, runs unit and integration tests, and, if those pass, packages and releases the change, often with security scans, approvals, or notifications added along the way.
+
+### What is the difference between continuous delivery and continuous deployment?
+
+Continuous delivery automates every release step but stops just short of production, requiring a manual approval before the change ships. Continuous deployment removes that gate entirely: any change that passes automated tests deploys straight to production without human sign-off. Both assume the codebase is always in a releasable state; they differ only in whether a person decides when releases happen.
+
+### What is a continuous integration platform?
+
+A continuous integration platform is the tooling that runs your automated builds and tests whenever code changes, such as GitHub Actions, GitLab CI, CircleCI, or Jenkins. For infrastructure specifically, Pulumi integrates with these CI/CD platforms, and Pulumi Deployments extends that model by running infrastructure previews, tests, and updates directly from your existing CI/CD workflows.
 
 ## Learn more
 

@@ -18,11 +18,11 @@ aliases:
 
 ### How does Pulumi store state?
 
-Pulumi needs to store the result of operations. On creation of a Pulumi resource, Pulumi makes a call to the cloud provider's API and then it stores the result of that API call. The place where Pulumi stores that result is called the "state" or "checkpoint". The state can be stored using the Pulumi Cloud or in files on Amazon S3, Azure Blob Storage, Google Cloud Storage Buckets, or as a file on your local machine that you manage yourself.
+Pulumi needs to store the result of operations. On creation of a Pulumi resource, Pulumi makes a call to the cloud provider's API and then it stores the result of that API call. The place where Pulumi stores that result is called the "state" or "checkpoint". The state can be stored in Pulumi Cloud or in files on Amazon S3, Azure Blob Storage, Google Cloud Storage Buckets, or as a file on your local machine that you manage yourself.
 
-## What browsers are supported?
+### What browsers are supported?
 
-The Pulumi Cloud supports the following browsers:
+Pulumi Cloud supports the following browsers:
 
 | Browser |
 |--------|
@@ -31,9 +31,9 @@ The Pulumi Cloud supports the following browsers:
 | Safari |
 | Edge |
 
-### How does Pulumi depend on the Pulumi Cloud?
+### How does Pulumi depend on Pulumi Cloud?
 
-Pulumi uses the Pulumi Cloud to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, the Pulumi Cloud ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on the Pulumi Cloud. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/).
+Pulumi uses Pulumi Cloud to store information about the current state of your application, which is used during updates, previews, and destroys as the source of truth for the current state of your cloud resources. We refer to this state as the "checkpoint" for your application. In addition, Pulumi Cloud ensures that for a given stack, only a single update is running at once (so, if you and someone else are collaborating on a stack together, it ensures that you both don't update the same stack at the same time.) Once your stack has been deployed, it has no dependency on Pulumi Cloud. To learn more about how the Pulumi engine uses pulumi.com, see [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/).
 
 ### What happens if app.pulumi.com is down?
 
@@ -41,15 +41,15 @@ Any infrastructure that you’ve deployed using Pulumi will continue working and
 
 If app.pulumi.com is down, you'll be unable to preview, update, or destroy a stack using Pulumi. Some commands, like `pulumi logs`, use app.pulumi.com to find the correct log stream so will not function until pulumi.com recovers; however, your cloud provider will still produce logs that you can use for diagnostics, which you can view via your cloud console or CLI.
 
-### Can I use Pulumi without depending on the Pulumi Cloud?
+### Can I use Pulumi without depending on Pulumi Cloud?
 
-Using the Pulumi Cloud with Pulumi provide a good combination of usability, safety, and security. However, for users with especially unique requirements, it is possible to use Pulumi apart from the Pulumi Cloud.
+Pulumi Cloud offers a good combination of usability, safety, and security, but you can use Pulumi without it.
 
-When you use Pulumi without the Pulumi Cloud, the checkpoint for your stack is stored locally or in your own external [DIY backend](/docs/concepts/state/#using-a-diy-backend). If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, the Pulumi Cloud features, such as the deployment history and resource view, will not be available.
+When you use Pulumi without Pulumi Cloud, the checkpoint for your stack is stored locally or in your own external [DIY backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend). If that file is lost or outdated, Pulumi can no longer operate on your stack. To collaborate with others on your stack, you must host this file yourself and protect against conflicting updates to it. If you use your own checkpoint file, Pulumi Cloud features such as the deployment history and resource view will not be available.
 
-To use Pulumi without the Pulumi Cloud, log in using `pulumi login --local` or by logging in to an alternative backend. For more information, read more at [State and Backends](/docs/concepts/state/).
+To use Pulumi without Pulumi Cloud, log in with `pulumi login --local` or log in to an alternative backend. For more information, see [State and backends](/docs/iac/concepts/state-and-backends/).
 
-### How can I go back to using the Pulumi Cloud?
+### How can I go back to using Pulumi Cloud?
 
 Log in to Pulumi Cloud with `pulumi login`, then follow [Migrating between state backends](/docs/iac/concepts/state-and-backends/#migrating-between-state-backends).
 
@@ -91,7 +91,7 @@ $ pulumi stack init acme-corp/widget-server
 
 ### How do I migrate stacks from an individual account to an organization account?
 
-The [Pulumi Cloud](https://app.pulumi.com/signin) allows you to transfer stacks from your individual account to any organization account you belong to as an administrator.
+[Pulumi Cloud](https://app.pulumi.com/signin) lets you transfer stacks from your individual account to any organization account you belong to as an administrator.
 
 To transfer a stack from your individual account to an organization, navigate to the Stacks page and select **Transfer stacks**.
 
@@ -137,69 +137,67 @@ For more information, see [Deleting your account](/docs/administration/organizat
 
 ### How do I get started for free?
 
-To get started, simply sign up for free using your identity provider of
-choice (ideally the same one your organization will be backed by). From
-there, create an organization that your team members will use. To use
-the free Community Edition, just [download the CLI](/docs/get-started/) and
-sign into the free tier of the service when it prompts you.
+Sign up with the identity provider your organization uses, then
+[download the CLI](/docs/get-started/) and sign in when it prompts you. The
+Individual edition is free forever and needs no credit card. It covers one user,
+unlimited projects, stacks, and environments, and unlimited updates and history.
 
-### Are organizations available in the free Community Edition?
+### Are organizations available on the Individual edition?
 
-The key distinction between Pulumi's free Community Edition and its paid
-offerings — Team Starter, Team Pro, and Enterprise — is the presence
-of an organization. The Community Edition is meant for individuals using
-Pulumi for their private projects, but this tends not to work in a team
-setting. Most teams want multiple engineers to have access to their
-projects. This is precisely what organizations deliver to you. The
-advanced tiers offer even more sophisticated organization management
-facilities, including RBAC for advanced policy controls.
+No. The Individual edition covers a single user, which suits private projects but
+not a team. Organizations — the shared workspace where several engineers work on
+the same projects — start with the Team edition. Enterprise and Business Critical
+add [role-based access control](/docs/administration/access-identity/rbac/) and
+[SAML/SSO](/docs/administration/access-identity/saml/) on top of that.
 
 ### Can I start small and upgrade later?
 
-Yes! We designed the editions to make it easy to get started with Team
-Starter, and once you've outgrown it, upgrading to Team Pro is a single
-click away. To upgrade to Enterprise, please [contact
-us](/contact).
+Yes. You can move up an edition at any time from your organization's
+**Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin).
+Your stacks, environments, and history carry over untouched. Business Critical is
+priced per organization, so [contact us](/contact/?form=sales) for that one.
 
-### I'm an existing customer on a per stack plan -- what do I do?
+### I'm on a legacy Starter, Pro, or per-stack plan. What do I do?
 
-We are in the process of reaching out to all existing customers to offer
-a switch to one of the new plans. If you haven't heard from us yet,
-please don't hesitate to [drop us a
-line](/contact). If now isn't the right time to change
-for your team, however, don't worry — we are happy to honor your
-existing subscription terms.
+Those editions are retired and don't include newer capabilities such as
+[Pulumi Deployments](/docs/deployments/), [Pulumi Insights](/docs/insights/), and
+[Pulumi Neo](/docs/ai/neo/). [Contact us](/contact/?form=sales) to move to a
+current edition. If now isn't the right time for your team, we're happy to honor
+your existing terms.
 
 ### Do you offer custom pricing for large teams?
 
 We are always happy to discuss the best way to ensure Pulumi can work
-for your team. To talk with a leader at the company, please simply [fill
-out the contact us form](/contact) and we'll be
+for your team. To talk with a leader at the company, please [fill
+out the contact us form](/contact) and we'll be
 in touch.
 
 ### What payment options do you accept?
 
-All subscriptions can be paid with a credit card (we use Stripe for
-processing). The Pulumi Service is meant to be easy to sign up for, so feel free
-to simply begin your trial, and then you may enter your credit card on
-your organization's Settings page.
+You can pay by credit card (we use Stripe for processing). Start your trial
+first, then add a card from your organization's **Billing & usage** settings.
 
-For annual subscriptions, we also offer invoicing that is payable with
-bank transfer or check. To discuss those options in more detail, please
-[contact us](/contact/).
+For annual billing we also offer invoicing, payable by bank transfer or check.
+To discuss that, [contact us](/contact/).
 
-### What upgrade editions are available?
+### What editions are available?
 
-The following editions are also available as upgrade options:
+- **Individual** is free forever for one user, and covers state management,
+  unlimited projects, stacks, and environments, and unlimited updates and history.
 
-- **Pulumi Team** is ideal for teams of up to 10 members and provides the basics of infrastructure as code in popular languages, enabling teams to ship faster. Includes 150K free credits each month.
+- **Team** adds organizations for up to 10 users, secure collaboration and CI/CD,
+  resource search, webhooks, and automatic secrets rotation.
 
-- **Pulumi Enterprise** is ideal for large teams and organizations in production. It offers an unlimited number of members and teams and provides full cloud engineering capabilities.
+- **Enterprise** adds unlimited users, SAML/SSO and role-based access control,
+  audit logs, drift detection and remediation, time-to-live stacks, and
+  customer-managed keys.
 
-- **Pulumi Business Critical** is ideal for enterprises that have specific requirements, like advanced security and compliance features, premium support, and [self-hosting options](/docs/pulumi-cloud/self-hosted/).
+- **Business Critical** adds [self-hosting](/docs/administration/self-hosting/),
+  built-in compliance frameworks,
+  [SCIM](/docs/administration/access-identity/scim/) user and group sync, audit
+  log export, and 24x7 support.
 
-For more information about the specific differences and capabilities offered for the
-Pulumi Team, Enterprise and Business Critical editions, refer to the [pricing page](/pricing/).
+For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
 ### How can I update my payment information?
 
@@ -215,11 +213,11 @@ Click the **GitLab** sign-in button on <app.pulumi.com>, Pulumi
 will redirect you to [gitlab.com](https://gitlab.com) where GitLab will
 present you with the sign-in options to login into your GitLab account.
 At that point, you may choose any of the sign-in options GitLab provides
-to sign-in.
+to sign in.
 
 ### I already have an account on Pulumi. Will signing-in with my GitLab identity create a new account?
 
-Yes. Signing-in with a GitLab account will create a new account. That
+Yes. Signing in with a GitLab account will create a new account. That
 means, your stacks and activity will stay with the other account. You
 can copy stack state, but not Pulumi Cloud activity history, by performing a
 [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export)
@@ -249,7 +247,7 @@ used.
 
 ## More FAQ
 
-- [Pulumi IaC FAQ](/docs/iac/support/faq/)
+- [Pulumi IaC FAQ](/docs/support/faq/infrastructure/)
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
-- [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
-- [Pulumi Policies FAQ](/docs/support/faq/policies)
+- [Pulumi Cloud SCIM FAQ](/docs/support/faq/scim/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies/)

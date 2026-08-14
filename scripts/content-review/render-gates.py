@@ -136,7 +136,7 @@ def self_test() -> int:
     check("figure shortcode: also trips render pass (not chrome)",
           figure["needs_render_pass"] is True)
 
-    meta_only = analyze("---\ntitle: X\nmeta_image: /images/docs/meta-images/docs-meta.png\n---\n\nProse.\n")
+    meta_only = analyze("---\ntitle: X\nmeta_image: /logos/brand/og-default.png\n---\n\nProse.\n")
     check("meta_image only: not a content image", meta_only["has_images"] is False)
 
     mixed = analyze("{{< notes >}}n{{< /notes >}}\n{{< langfile >}}\n{{< pulumi-examples >}}\n")

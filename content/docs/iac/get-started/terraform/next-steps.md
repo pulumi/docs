@@ -3,12 +3,12 @@ title_tag: Next Steps | Pulumi for Terraform Users
 title: Next Steps
 h1: "Next Steps"
 meta_desc: Explore advanced Pulumi features and resources for Terraform users ready to deepen their integration or consider migration.
-weight: 10
+weight: 11
 menu:
     iac:
         name: Next Steps
         parent: terraform-get-started
-        weight: 10
+        weight: 11
 
 aliases:
 ---
@@ -324,7 +324,7 @@ const app = new WebApplication("my-app", {
 
 ### Documentation and guides
 
-* **[Pulumi Architecture & Concepts](/docs/intro/concepts/)**: Deep dive into Pulumi's architecture
+* **[Pulumi Architecture & Concepts](/docs/iac/concepts/)**: Deep dive into Pulumi's architecture
 * **[Adopting Pulumi](/docs/using-pulumi/adopting-pulumi/)**: Comprehensive migration strategies
 * **[Pulumi vs Terraform](/docs/iac/comparisons/terraform/)**: Detailed comparison of features
 * **[Automation API](/docs/iac/concepts/automation-api/)**: Programmatic infrastructure management

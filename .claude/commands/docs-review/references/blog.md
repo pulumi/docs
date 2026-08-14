@@ -99,7 +99,7 @@ Apply `docs-review:references:code-examples`.
 
 ### Priority 4 — Product accuracy
 
-Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-verb rule, and "public preview" vs "public beta" (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style findings). The reviewer's job here is the things Vale can't:
+Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-verb rule, and "public preview" vs "public beta" (surfaced under ⚠️ Low-confidence per `docs-review:references:output-format` §Style suggestions). The reviewer's job here is the things Vale can't:
 
 - **Feature names.** Capitalization and punctuation must match how the product refers to itself in docs. If a blog introduces a feature, the feature name should match the canonical doc page's title.
 - **"Generally available," not "generally released."** Release terminology beyond what Vale's substitution list covers.
@@ -114,7 +114,7 @@ Vale catches Pulumi product-name capitalization, the Pulumi Policies singular-ve
 
 When a blog post announces a new feature, provider, or significant capability:
 
-- **Check that `/content/docs/` covers it.** Search for the feature name across `content/docs/`, `content/learn/`, `content/tutorials/`. If the only mention of the feature is the blog post itself, that's a finding.
+- **Check that `/content/docs/` covers it.** Search for the feature name across `content/docs/`, `content/tutorials/`. If the only mention of the feature is the blog post itself, that's a finding.
 - **Note specific gaps.** Don't just say "docs are missing" — name the page that should exist (e.g., "no `content/docs/esc/integrations/<feature>/` page found").
 - **Suggest a doc type.** Reference / tutorial / concept guide / how-to — pick the one that matches the feature's nature.
 
@@ -152,7 +152,7 @@ Scope of pre-existing findings for blog: everything from `docs-review:references
 - **Meta image colors, composition, or layout.** Do not critique design choices. (See §Publishing blockers for the custom-override retired-logo and animated-GIF cases.)
 - **Vague editorial feedback without quote-and-rewrite.** "Consider rewording for engagement" / "this could be clearer" / "you should reorganize this section" without a quoted construction and a specific proposed rewrite is editorial vagueness, not a review finding. Concrete prose, structural, and SEO/AEO suggestions (apply `docs-review:references:prose-patterns`; split a mixed-concept H2; rewrite a label-style heading as answer-first) ARE in scope -- but every finding must quote the offending text and propose the fix.
 - **Heading case.** markdownlint owns case-consistency; Vale owns product-name miscapitalization (e.g., "Pulumi esc"). Don't flag either here.
-- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style findings. Don't double-flag.
+- **Anything Vale catches.** Product-name capitalization, Policies-singular, public-preview/public-beta, click→select, banned words, difficulty qualifiers — all surface via `.vale-findings.json` per `docs-review:references:output-format` §Style suggestions. Don't double-flag.
 
 ## Publishing blockers
 
@@ -161,6 +161,7 @@ Each item below renders as a single 🚨 Outstanding finding when violated. Quot
 - **A custom `meta_image` override uses retired Pulumi logos.** Only applies when a post sets its own `meta_image` — most posts leave it blank and get the on-brand build-time card, so there is nothing to inspect. When an override is present, inspect it (its filename / path or rendered image) for retired brand variants; quote the path and propose the current-brand replacement, or suggest dropping the override to fall back to the build-time card. (A renamed `meta-legacy.png` archive image is not a `meta_image` and is never flagged.)
 - **`meta_image` animated-GIF / format constraints** — see `docs-review:references:image-review`.
 - **`<!--more-->` break missing or buried.** The break must be present and land after the first 1–3 paragraphs, not buried mid-post. Without it, the entire post body renders on the blog index. Quote the surrounding paragraphs; propose the correct placement. Skip on `draft: true` or archival posts.
+- **`feature_image` missing.** Active blog posts (not draft, not archival) must set `feature_image` to a hero image in the post's directory. New posts scaffold with the field blank — that's the starting state, not the shipping state. Two exemptions, both deliberate: `category: general` (the catch-all bucket — SEO comparisons, "what is X" explainers — which is lower-touch by design) and `draft: true` (a work in progress; the image lands before undrafting). Flag the empty field; propose running `/blog-feature-image`, labeling the PR `needs-design` for a designer-made image, or — if the post really is a catch-all — moving it to `category: general`. Posts predating the blog redesign are grandfathered; only flag posts new or changed in this PR.
 - **`social:` block missing or empty.** Active blog posts (not draft, not archival) must have a `social:` frontmatter block with at least one of `twitter`, `linkedin`, or `bluesky` populated; without it the post won't be promoted. Flag the missing/empty block; do not draft the copy (marketing owns voice).
 - **Author profile avatar missing.** `data/team/team/{author}.yaml` must reference an avatar file. Quote the missing field or the path of the file that should exist.
 

@@ -21,7 +21,7 @@ featured: []
 # "Popular series" strip. Defaults to the first 4 entries of blog_series.yml,
 # which is maintained newest-first.
 featured_series:
-    - neo-things # Things You Can Do With Neo
-    - iac-best-practices # IaC Best Practices
-    - platform-engineering-pillars # Platform Engineering Pillars
-    - kubernetes-getting-started # Getting Started with Kubernetes
+    - neo-things
+    - iac-best-practices
+    - platform-engineering-pillars
+    - kubernetes-getting-started

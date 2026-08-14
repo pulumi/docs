@@ -8,15 +8,13 @@
 
       compact (default): title (h4) left; category badge + avatar stack + date
                          right. Whole row is a stretched link.
-      cards:             category, title (h3), excerpt, byline stacked left, with
-                         an optional square feature image on the right — arranged
-                         like the other blog cards.
+      cards:             the shared wide card (blog/card/wide.html) — category,
+                         title (h3), excerpt, byline stacked left, with an
+                         optional square feature image on the right.
 
     Params: page (required) the post page.
 */ -}}
 {{- $page := .page -}}
-{{- $excerpt := $page.Params.meta_desc -}}
-{{- if not $excerpt }}{{ $excerpt = $page.Summary | plainify | truncate 160 }}{{ end -}}
 <article data-post-row data-category="{{ $page.Params.category }}" class="group relative border-b border-gray-200 last:border-0">
 
     {{/* Compact list view (default). */}}
@@ -31,19 +29,7 @@
         </div>
     </div>
 
-    {{/* Card view (toggled on). */}}
-    <div data-row-card class="hidden items-center gap-4 py-6 md:gap-8">
-        <div class="flex min-w-0 flex-1 flex-col items-start gap-2">
-            {{ partial "blog/category-badge.html" (dict "category" $page.Params.category "link" false) }}
-            <h3 class="heading-4 mt-1 mb-0!"><a href="{{ $page.RelPermalink }}" data-track="blog-card-{{ $page.Title | urlize }}" class="text-service-black transition-colors after:absolute after:inset-0 after:content-[''] group-hover:text-violet-primary">{{ $page.Title }}</a></h3>
-            {{- with $excerpt }}<p class="m-0! body-sm text-service-black line-clamp-2">{{ . }}</p>{{ end -}}
-            <div class="mt-1">{{ partial "blog/post-meta.html" (dict "page" $page) }}</div>
-        </div>
-        {{ if partial "blog/has-feature-image.html" $page }}
-        <div class="flex size-20 sm:size-28 lg:size-36 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-violet-950">
-            {{ partial "blog/feature-image.html" (dict "page" $page "w" 288 "h" 288 "mode" "fit" "class" "h-full w-auto max-w-none") }}
-        </div>
-        {{ end }}
-    </div>
+    {{/* Card view (toggled on) — shared with in-body embeds, see blog/card/wide.html. */}}
+    {{ partial "blog/card/wide.html" (dict "page" $page "attrs" "data-row-card" "class" "hidden items-center gap-4 py-6 md:gap-8") }}
 
 </article>

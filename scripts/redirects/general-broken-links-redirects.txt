@@ -94,3 +94,9 @@ kube2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-kuber
 migrate/kube2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/
 arm2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-arm/
 migrate/arm2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/from-arm/
+
+# The -eu sitting of these events was merged into the surviving page as a
+# session. Hugo aliases cover the page URL; a bundle's images aren't page URLs,
+# so the social cards that were already shared need these.
+events/neo-in-a-docker-sandbox-eu/meta.png|/events/neo-in-a-docker-sandbox/meta.png
+events/neo-in-a-docker-sandbox-eu/meta-square.png|/events/neo-in-a-docker-sandbox/meta-square.png

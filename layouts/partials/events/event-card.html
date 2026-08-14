@@ -1,5 +1,5 @@
 {{/*
-    Template Event Card Partial
+    Event Card Partial
 
     Text event card built on the shared design system (.card, .badge, .btn, shared
     type scale). The whole card is a single stretched link, so the CTA and tags
@@ -8,75 +8,133 @@
     Upcoming cards show a date chip and a Register CTA; on-demand cards hide the date
     and show a Watch CTA.
 
+    Everything the card needs is derived from the event page itself, so it can be
+    dropped anywhere (the events list, a template page section). The events list
+    wraps it in a filterable <li> — see events/event-list-item.html.
+
+    An event that runs more than once gets one card per session (see
+    events/upcoming.html): same title and blurb, but the session's own date, its
+    presenters, a label badge, and a link straight to that session's tab.
+
     Parameters:
+    - page: The event page
     - pageContext: Page context for relref resolution
-    - external: Whether the event links to an external URL
-    - filters: Array of filter strings for CSS filtering
-    - link: Event URL
-    - datetime: Event date string
-    - displayDate: Formatted display date
-    - data: The event page data
+    - session: Optional. One normalized session (see events/sessions.html). Omit
+      it and the card stands for the event as a whole: its own date, and everyone
+      who presents at any session. For a single-session event those are the same
+      thing either way.
+    - bare: true drops the card chrome — border, surface, padding, hover — leaving
+      just the contents and the stretched link. For laying cards out *inside* a
+      card (a release page's related events panel), where a card on a card reads
+      as a box in a box.
 */}}
 
-{{ $data := .data }}
+{{ $data := .page }}
+{{ $chrome := cond .bare "" "card card-hover bg-white p-6 md:p-7" }}
 {{ $title := $data.Params.title }}
 {{ $onDemand := $data.Params.youtube_url }}
+{{ $session := .session }}
 
-{{ $href := .link }}
-{{ $relref := "noopener noreferrer" }}
-{{ $target := "_blank" }}
-{{ if eq .external false }}
-    {{ $href = (relref .pageContext .link) }}
-    {{ $relref = "" }}
-    {{ $target = "" }}
+{{ $datetime := $data.Params.sortable_date }}
+{{/* Conferences and the like ("event") are all-day or multi-day: the frontmatter
+     time is just the slot the day starts, so a "9AM PDT" line under the date
+     would read as a session start that doesn't exist. Workshops, talks, and
+     webinars are single sessions, where the local start time is the whole
+     question the card has to answer. */}}
+{{ $showTime := ne $data.Params.event_type "event" }}
+{{/* Everyone across every session, so a card with no session of its own (the
+     on-demand card a recording produces) still names the speakers even when the
+     event keeps its lineups per-session rather than at the top level. */}}
+{{ $presenters := partial "events/presenters.html" $data }}
+{{ $label := "" }}
+{{ with $session }}
+    {{ $datetime = .date }}
+    {{ $presenters = .presenters }}
+    {{ $label = .label }}
 {{ end }}
 
-<li data-display-date="{{ .displayDate }}" class="m-0 p-0" data-filters="{{ delimit .filters " " }}">
-    <article class="group relative h-full">
-        <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="card card-hover flex h-full flex-col bg-white p-6 md:p-7 no-underline">
-            <div class="flex items-start justify-between gap-16">
-                <div class="min-w-0">
-                    <div class="mb-4 flex flex-wrap items-center gap-2">
-                        {{ partial "badge.html" (dict "text" $data.Params.event_type "variant" "outline") }}
-                        {{ partial "badge.html" (dict "text" (cond (ne $onDemand nil) "On-demand" ($data.Params.location | string)) "variant" "ghost") }}
-                        {{ if not $onDemand }}
-                            {{/* Populated client-side (see resources.ts): a build-time "in X days"
-                                 would go stale between builds and ignores the visitor's timezone. */}}
-                            <span data-event-countdown data-event-date="{{ .datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" hidden></span>
-                        {{ end }}
-                    </div>
-                    <h3 class="m-0 max-w-prose heading-3 leading-snug text-service-black transition-colors group-hover:text-violet-primary">
-                        {{ $title }}
-                        {{ if .external }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}
-                    </h3>
+{{/* External and internal-landing-page events point at a full URL in url_slug;
+     everything else resolves to an event page under /events/. */}}
+{{ $href := "" }}
+{{ $relref := "" }}
+{{ $target := "" }}
+{{ if or $data.Params.external $data.Params.internal_landing_page }}
+    {{ $href = $data.Params.url_slug }}
+    {{ $relref = "noopener noreferrer" }}
+    {{ $target = "_blank" }}
+{{ else }}
+    {{ $href = relref .pageContext (printf "/events/%s" $data.Params.url_slug) }}
+    {{/* Only a labelled session has a tab to land on: a single-session event
+         renders no tabs, so appending its key would be a dead hash. */}}
+    {{ with $label }}
+        {{ $href = printf "%s#%s" $href $session.key }}
+    {{ end }}
+{{ end }}
+
+<article class="group relative h-full">
+    <a href="{{ $href }}" rel="{{ $relref }}" target="{{ $target }}" class="{{ with $chrome }}{{ . }} {{ end }}flex h-full flex-col no-underline">
+        {{/* justify-between already pins the date chip right when there's room, so
+             a small gap only matters in a narrow column (e.g. the homepage row). */}}
+        <div class="flex items-start justify-between gap-6">
+            <div class="min-w-0">
+                <div class="mb-4 flex flex-wrap items-center gap-2">
+                    {{ partial "badge.html" (dict "text" $data.Params.event_type "variant" "outline") }}
+                    {{ partial "badge.html" (dict "text" (cond (ne $onDemand nil) "On-demand" ($data.Params.location | string)) "variant" "ghost") }}
+                    {{ with $label }}
+                        {{ partial "badge.html" (dict "text" . "variant" "ghost") }}
+                    {{ end }}
+                    {{ if not $onDemand }}
+                        {{/* Populated client-side (see resources.ts): a build-time "in X days"
+                             would go stale between builds and ignores the visitor's timezone. */}}
+                        <span data-event-countdown data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}" hidden></span>
+                    {{ end }}
                 </div>
-                {{ if not $onDemand }}
-                <div class="flex size-14 shrink-0 flex-col items-center justify-center overflow-hidden rounded-lg border border-gray-200 text-gray-950">
-                    <div class="font-mono text-xl leading-none">{{ .datetime | time.Format "2" }}</div>
-                    <div class="font-mono text-[0.65rem] uppercase">{{ .datetime | time.Format "Jan" }}</div>
+                <h3 class="m-0 heading-3 leading-snug text-service-black transition-colors group-hover:text-violet-primary">
+                    {{ $title }}
+                    {{ if $target }}{{ partial "icon.html" (dict "name" "arrow-square-out" "class" "inline size-4 ml-1 opacity-50") }}{{ end }}
+                </h3>
+            </div>
+            {{ if not $onDemand }}
+            {{/* Server-rendered in the event's own timezone as the no-JS fallback;
+                 where a start time applies, resources.ts rewrites the whole tile in
+                 the visitor's zone — not just the time, because a US evening slot is
+                 the next calendar day in Europe, so "Sep 15" over "1:00 AM" would be
+                 wrong twice over. A timeless tile stays server-rendered for the same
+                 reason in reverse: with no time line to explain it, a shifted day
+                 would just look like the wrong date for a conference everyone else
+                 calls Sep 15. */}}
+            <div {{ if $showTime }}data-event-tile data-event-date="{{ $datetime | time.Format "2006-01-02T15:04:05Z07:00" }}"{{ end }} class="flex h-auto w-16 shrink-0 flex-col items-center overflow-hidden rounded-lg border border-gray-200 text-gray-950">
+                {{/* Day and month in their own padded block so the time's top rule
+                     can run edge to edge, like a calendar tile's tear line. */}}
+                <div class="flex w-full flex-col items-center px-1 py-1.5">
+                    <div data-event-tile-day class="font-mono text-xl leading-none">{{ $datetime | time.Format "2" }}</div>
+                    <div data-event-tile-month class="font-mono text-[0.65rem] uppercase">{{ $datetime | time.Format "Jan" }}</div>
                 </div>
+                {{ if $showTime }}
+                    <div data-event-tile-time class="w-full border-t border-gray-200 p-1 text-center font-mono text-[0.6rem] whitespace-nowrap uppercase" hidden></div>
                 {{ end }}
             </div>
+            {{ end }}
+        </div>
 
-            {{ with $data.Params.meta_desc }}<p class="mt-1.5 mb-0 max-w-prose body-base line-clamp-3 text-service-black">{{ . }}</p>{{ end }}
+        {{ with $data.Params.meta_desc }}<p class="mt-1.5 mb-0 body-base line-clamp-3 text-service-black">{{ . }}</p>{{ end }}
 
-            <div class="mt-auto flex flex-col gap-4 pt-6">
-                {{ with $data.Params.presenters }}
-                <div class="flex items-center gap-3">
-                    <div class="flex -space-x-2 shrink-0">
-                        {{ range . }}
-                            <img class="size-14 rounded-full object-cover ring-2 ring-white" src="{{ .photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ .name }}" loading="lazy" />
-                        {{ end }}
-                    </div>
-                    <span class="body-sm text-gray-600 line-clamp-1">with {{ range $i, $p := . }}{{ if $i }}, {{ end }}{{ $p.name }}{{ end }}</span>
+        <div class="mt-auto flex flex-col gap-4 pt-6">
+            {{ with $presenters }}
+            <div class="flex items-center gap-3">
+                <div class="flex -space-x-2 shrink-0">
+                    {{ range . }}
+                        <img class="size-14 rounded-full object-cover ring-2 ring-white" src="{{ .photo | default "/images/avatars/avatar-generic.svg" }}" alt="{{ .name }}" loading="lazy" />
+                    {{ end }}
                 </div>
-                {{ end }}
-
-                <div class="flex items-end justify-between gap-3">
-                    {{ partial "template-partials/event-card-tags.html" $data }}
-                    {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand) }}
-                </div>
+                <span class="body-sm text-gray-600 line-clamp-1">with {{ range $i, $p := . }}{{ if $i }}, {{ end }}{{ $p.name }}{{ end }}</span>
             </div>
-        </a>
-    </article>
-</li>
+            {{ end }}
+
+            <div class="flex items-end justify-between gap-3">
+                {{ partial "template-partials/event-card-tags.html" $data }}
+                {{ partial "template-partials/event-card-cta.html" (dict "onDemand" $onDemand) }}
+            </div>
+        </div>
+    </a>
+</article>

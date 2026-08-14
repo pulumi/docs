@@ -19,7 +19,8 @@
 
 import { join } from "path"
 import {
-  REPO_ROOT, ASSET_DIR, clean, h, fitTitle, clampText, titleTextStyle, titleFont, svgDataUri, fileToImage,
+  REPO_ROOT, ASSET_DIR, clean, h, fitTitle, clampText, wrapLines, titleTextStyle, titleFont, bodyFont,
+  svgDataUri, fileToImage,
 } from "./lib.mjs"
 
 // --- Brand tokens (from the Figma frames / Pulumi palette) -------------------
@@ -48,7 +49,7 @@ function specFor(w, height) {
     return {
       family: "portrait", s: 1, bg: "portrait", padding: 40, mainGap: 23, textGap: 8,
       overline: { font: 20, ls: 1 }, secondary: { font: 30 }, title: { max: 40, min: 24, maxLines: 3 },
-      additional: { font: 20 }, divider: 2, logoH: 40, speaker: 216, speakersRowH: 359,
+      additional: { font: 20, maxLines: 3 }, divider: 2, logoH: 40, speaker: 216, speakersRowH: 359,
       button: { h: 72, px: 20, font: 24 },
     }
   }
@@ -58,14 +59,14 @@ function specFor(w, height) {
     return {
       family: "square", s, bg: "square", padding: r(40), mainGap: r(16), textGap: r(8),
       overline: { font: r(20), ls: s }, secondary: { font: r(30) }, title: { max: r(40), min: r(24), maxLines: 3 },
-      additional: { font: r(20) }, divider: Math.max(2, r(2)), logoH: r(44), speaker: r(224),
+      additional: { font: r(20), maxLines: 3, namesOnly: true }, divider: Math.max(2, r(2)), logoH: r(44), speaker: r(224),
       button: { h: r(72), px: r(20), font: r(24) },
     }
   }
   return {
     family: "landscape", s: 1, bg: "landscape", padding: 40, mainGap: 29, textGap: 16, columnGap: 40,
     overline: { font: 24, ls: 1.2 }, secondary: { font: 36 }, title: { max: 64, min: 34, maxLines: 3 },
-    additional: { font: 28 }, divider: 2, logoH: 44, speaker: 224,
+    additional: { font: 28, maxLines: 2 }, divider: 2, logoH: 44, speaker: 224,
     // Right gutter that keeps full-width (speaker-less) text clear of the
     // decorative accent lines in the top-right corner (they begin ~x1017).
     lineGutter: 220,
@@ -152,11 +153,34 @@ function buttonNode(text, spec) {
 // title is sized to the leftover vertical space (columnH minus every other row),
 // so it never clips in the tighter square / portrait stacks. ------------------
 const ADDITIONAL_LH = 1.2
-function mainColumn(fields, spec, font, textW, columnH) {
+const ADDITIONAL_MIN_LINES = 2 // the design's byline slot; a shorter byline doesn't grow the title
+const ADDITIONAL_MIN_F = 0.75 // shrink the byline this far to win a line back before clamping
+// Byline ("With Name - Role, Company and …"). Satori's -webkit-line-clamp does
+// NOT bound the box inside a fixed-height flex column: an over-long byline is
+// squeezed by the flex layout and sliced through the middle of a glyph. So
+// measure it here, shrink the font a little if that saves a line, and hard-clamp
+// the string — then render at the height we measured, so nothing can squeeze it.
+function fitAdditional(font, text, { fontSize, boxW, maxLines }) {
+  const words = text.split(/\s+/).filter(Boolean)
+  const min = Math.max(12, Math.round(fontSize * ADDITIONAL_MIN_F))
+  for (let f = fontSize; f >= min; f--) {
+    const lines = wrapLines(font, words, f, boxW, 0)
+    if (lines.length <= maxLines) return { fontSize: f, lines: lines.length, text }
+  }
+  return { fontSize: min, lines: maxLines, text: clampText(font, text, min, boxW, maxLines, 0) }
+}
+
+function mainColumn(fields, spec, font, bodyF, textW, columnH) {
   const g = spec.mainGap
+  // The tight square stack prefers the names-only byline when one is supplied.
+  const bylineText = clean((spec.additional.namesOnly && fields.additionalTextShort) || fields.additionalText)
+  const byline = bylineText
+    ? fitAdditional(bodyF, bylineText, { fontSize: spec.additional.font, boxW: textW, maxLines: spec.additional.maxLines })
+    : null
   const overlineH = fields.overline ? Math.ceil(spec.overline.font * 1.1) : 0
   const secondaryH = fields.secondaryTitle ? Math.ceil(spec.secondary.font * 1.1) : 0
-  const additionalH = fields.additionalText ? Math.ceil(spec.additional.font * ADDITIONAL_LH * 2) : 0 // reserve 2 lines
+  const bylineH = byline ? Math.ceil(byline.fontSize * ADDITIONAL_LH * byline.lines) : 0
+  const additionalH = byline ? Math.ceil(byline.fontSize * ADDITIONAL_LH * Math.max(ADDITIONAL_MIN_LINES, byline.lines)) : 0
   const logosH = fields.logos && fields.logos.length ? spec.logoH : 0
   const buttonH = fields.showButton ? spec.button.h : 0
   // Gaps between visible blocks: title + divider are always present.
@@ -178,8 +202,8 @@ function mainColumn(fields, spec, font, textW, columnH) {
     : null
   const titleEl = h("div", { style: { ...titleTextStyle(fit.fontSize, fit.lineClamp), color: C.title, width: "100%" } }, titleStr)
   const textBlock = h("div", { style: { display: "flex", flexDirection: "column", height: titleBoxH + (secondaryH ? secondaryH + spec.textGap : 0), justifyContent: "center", gap: spec.textGap, overflow: "hidden", width: "100%" } }, secondaryEl, titleEl)
-  const additionalEl = fields.additionalText
-    ? h("div", { style: { fontFamily: "Inter", fontWeight: 400, fontSize: spec.additional.font, lineHeight: ADDITIONAL_LH, color: C.title, display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 2, overflow: "hidden", width: "100%" } }, fields.additionalText)
+  const additionalEl = byline
+    ? h("div", { style: { fontFamily: "Inter", fontWeight: 400, fontSize: byline.fontSize, lineHeight: ADDITIONAL_LH, color: C.title, height: bylineH, flexShrink: 0, overflow: "hidden", width: "100%" } }, byline.text)
     : null
   const dividerEl = h("div", { style: { width: "100%", height: spec.divider, backgroundColor: C.divider } })
   const logosEl = logosRow(fields.logos, spec.logoH, spec.s, textW)
@@ -199,11 +223,12 @@ function frame(w, height, spec, content) {
     content)
 }
 
-// fields: { overline, title, secondaryTitle?, additionalText?, logos:[{uri,iw,ih}],
-//           speakers:[{uri}], showButton?, buttonText? }
+// fields: { overline, title, secondaryTitle?, additionalText?, additionalTextShort?,
+//           logos:[{uri,iw,ih}], speakers:[{uri}], showButton?, buttonText? }
+// additionalTextShort is the names-only byline; the square card uses it when present.
 export async function eventsTree(fields, { w, h: height }) {
   const spec = specFor(w, height)
-  const font = await titleFont()
+  const [font, bodyF] = await Promise.all([titleFont(), bodyFont()])
   const innerW = w - 2 * spec.padding
   const innerH = height - 2 * spec.padding
   const speakers = (fields.speakers || []).filter((sp) => sp && sp.uri).slice(0, MAX_SPEAKERS)
@@ -218,7 +243,7 @@ export async function eventsTree(fields, { w, h: height }) {
     // With no speakers, reserve a gutter so the title clears the top-right lines.
     const shift = n ? landscapeShift(n) : 0
     const textW = n ? innerW - shift - spec.columnGap - colW : innerW - spec.lineGutter
-    const main = mainColumn(fields, spec, font, textW, innerH)
+    const main = mainColumn(fields, spec, font, bodyF, textW, innerH)
     const right = n
       ? h("div", { style: { display: "flex", flexDirection: "column", justifyContent: "center", height: innerH, flexShrink: 0 } }, speakerCluster(speakers, sS, spec.s, "column"))
       : null
@@ -236,7 +261,7 @@ export async function eventsTree(fields, { w, h: height }) {
     // divider/logo lockup never overlaps the accent lines curving in from the
     // bottom-right (spec.padding already provides part of the clearance).
     const bottomH = n ? rowH + padTop : Math.round(190 * spec.s) - spec.padding
-    const main = mainColumn(fields, spec, font, innerW, innerH - bottomH)
+    const main = mainColumn(fields, spec, font, bodyF, innerW, innerH - bottomH)
     const bottom = n
       ? h("div", { style: { display: "flex", alignItems: "center", width: innerW, height: bottomH, paddingTop: padTop, flexShrink: 0 } }, speakerCluster(speakers, sS, spec.s))
       : null
@@ -253,7 +278,7 @@ export async function eventsTree(fields, { w, h: height }) {
   const top = n
     ? h("div", { style: { display: "flex", alignItems: "center", width: innerW, height: topH, flexShrink: 0 } }, speakerCluster(speakers, sS, spec.s))
     : h("div", { style: { width: innerW, height: topH, flexShrink: 0 } })
-  const main = mainColumn(fields, spec, font, innerW, innerH - topH - portraitGap)
+  const main = mainColumn(fields, spec, font, bodyF, innerW, innerH - topH - portraitGap)
   return frame(w, height, spec,
     h("div", { style: { display: "flex", flexDirection: "column", width: innerW, height: innerH, justifyContent: "space-between" } }, top, main))
 }
@@ -263,22 +288,43 @@ const MAX_SPEAKERS = 5 // photos shown; the byline lists every name regardless
 
 // Byline. One or two presenters include their role/company ("Name - Role, Company"),
 // since those fit; three or more list names only (with an Oxford comma, never
-// "and N others"). The byline clamps to two lines if it runs long.
-export function presentersLine(presenters) {
+// "and N others"). Pass { roles: false } for the names-only form the square card
+// uses — its text column is too narrow for two full "Name - Role, Company" runs.
+export function presentersLine(presenters, { roles = true } = {}) {
   const named = (presenters || []).filter((p) => p && clean(p.name))
   if (!named.length) return ""
-  const withRole = (p) => { const r = clean(p.role); return r ? `${clean(p.name)} - ${r}` : clean(p.name) }
-  if (named.length === 1) return `With ${withRole(named[0])}`
-  if (named.length === 2) return `With ${withRole(named[0])} and ${withRole(named[1])}`
+  const label = (p) => { const r = roles ? clean(p.role) : ""; return r ? `${clean(p.name)} - ${r}` : clean(p.name) }
+  if (named.length === 1) return `With ${label(named[0])}`
+  if (named.length === 2) return `With ${label(named[0])} and ${label(named[1])}`
   const names = named.map((p) => clean(p.name))
   return `With ${names.slice(0, -1).join(", ")}, and ${names[names.length - 1]}`
+}
+
+// Everyone who appears on the event, deduped by name: the top-level presenters
+// plus any the individual sessions add. There's one social card for the event as
+// a whole, so a session-specific co-presenter belongs on it — an EMEA-only host
+// is still someone the card should name.
+function allPresenters(fm) {
+  const lists = [Array.isArray(fm.presenters) ? fm.presenters : []]
+  for (const session of Array.isArray(fm.sessions) ? fm.sessions : []) {
+    if (Array.isArray(session?.presenters)) lists.push(session.presenters)
+  }
+  const seen = new Set()
+  const out = []
+  for (const p of lists.flat()) {
+    const name = clean(p?.name)
+    if (!name || seen.has(name)) continue
+    seen.add(name)
+    out.push(p)
+  }
+  return out
 }
 
 // The build default's field builder: overline from fm.overline || event_type
 // (uppercased), "With…" from presenters, Pulumi logo only, speakers = resolved
 // presenter photos (skip blanks).
 export function eventFieldsFromFrontmatter(fm, _id) {
-  const presenters = Array.isArray(fm.presenters) ? fm.presenters : []
+  const presenters = allPresenters(fm)
   const speakers = presenters
     .map((p) => p && resolvePhoto(p.photo))
     .filter(Boolean)
@@ -289,6 +335,7 @@ export function eventFieldsFromFrontmatter(fm, _id) {
     title: clean(fm.title),
     secondaryTitle: "",
     additionalText: presentersLine(presenters),
+    additionalTextShort: presentersLine(presenters, { roles: false }),
     logos: [resolveLogo("pulumi")].filter(Boolean),
     speakers,
     showButton: false,

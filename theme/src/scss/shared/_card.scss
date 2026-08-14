@@ -6,3 +6,17 @@
     @include transition;
     @apply cursor-pointer hover:border-gray-300;
 }
+
+// Tinted panel for a supporting note — a "see also" list, a callout. The fill is
+// the boundary, so no border; it deliberately does not extend .card. Compose
+// with padding: `class="card-highlight p-8"`.
+//
+// The fill is the `--docs-bg-alt` token with violet-50 as the fallback: that
+// token is only defined on `body.section-docs`, so off docs (and in docs light
+// mode, where it resolves to violet-50) nothing changes, while docs dark mode
+// flips it to violet-950 for free. An `@apply bg-violet-50` would not — the
+// automatic dark remap only reaches literal utility classes in markup.
+.card-highlight {
+    @apply rounded-lg;
+    background-color: var(--docs-bg-alt, var(--color-violet-50));
+}

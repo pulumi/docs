@@ -21,7 +21,7 @@ menu:
   esc:
     parent: esc-concepts
     identifier: esc-syntax-reserved-properties
-    weight: 8
+    weight: 9
 ---
 
 The [`pulumi` CLI](/docs/iac/download-install/) and other ESC consumers conventionally assign specific semantics to certain top-level properties of an evaluated ESC environment (i.e. properties defined under the [`values` section of the environment definition](/docs/esc/concepts/environments/)). These _reserved properties_ shape the outputs an environment produces when it is opened: environment variables, temporary files, Pulumi IaC stack configuration, and Pulumi policy pack configuration.
@@ -70,7 +70,7 @@ When an ESC consumer such as [`pulumi env run`](/docs/iac/cli/commands/pulumi_en
 For example, the `default/greet` environment above sets `GREETING: Hello`. Even if `GREETING` is already set in your shell, the environment's value is used:
 
 ```console
-$ GREETING=from-shell esc run default/greet -- printenv GREETING
+$ GREETING=from-shell pulumi env run default/greet -- printenv GREETING
 Hello
 ```
 

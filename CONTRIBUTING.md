@@ -23,7 +23,7 @@ The repository runs a tiered review pipeline on every PR. AI-assisted contributo
 Transitioning to **Ready for review** triggers:
 
 1. A re-triage to refresh labels (domain, trivial / frontmatter-only short-circuits, prose-flagged signal if applicable).
-1. The full Claude review (currently `claude-opus-4-8`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
+1. The full Claude review (currently `claude-opus-5`), composed per touched domain. Findings post to a single pinned comment at the top of the PR — overflow is appended as additional pinned comments tagged `<!-- CLAUDE_REVIEW N/M -->`.
 
 Mark the PR ready when you're done iterating, not when you start. Each ready-transition produces one full review run; thrashing through draft → ready → draft burns review budget and produces stale pinned comments.
 
@@ -36,7 +36,7 @@ If the PR was AI-drafted, leave the AI authoring trailers in commit messages (`C
 A pinned review goes **stale** when you push new commits after it ran. One case refreshes itself: when the review had outstanding findings and your push is small (≤80 changed lines) and touches only the flagged lines — the "I fixed what you flagged" push — a deterministic gate auto-fires the scoped `#update-review` path with no mention needed. Everything else stays stale until you refresh explicitly. Three ways:
 
 1. **`@claude` mention** — hashtag-driven routing. The re-entrant pipeline branches on what you put after `@claude`:
-    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-sonnet-5`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
+    - **`@claude #update-review`** — refresh the pinned review against the current PR head. Runs `claude-opus-5`. Three patterns the update path understands, all of which can appear in the same mention (the pipeline addresses any embedded asks inline before re-rendering the review):
         - **Fix-response** ("I addressed your feedback"): re-verifies the previous outstanding findings against the new diff and moves the resolved ones into ✅ Resolved.
         - **Dispute** ("I disagree with the X finding because Y"): re-examines the disputed finding with your evidence; either concedes cleanly or explains why it's keeping the finding.
         - **Re-verify** (no specific request beyond the hashtag): re-checks outstanding findings only.
@@ -52,6 +52,8 @@ Rare. Use when the pinned-review state is corrupted (the 1/M comment was manuall
 
 The `<!-- CLAUDE_REVIEW N/M -->` comments are managed by the pipeline. Don't delete them — the re-entrant skill expects to find and edit them in place. If you accidentally delete the 1/M summary, the next run posts fresh at the bottom of the timeline; recoverable but ugly.
 
+**Don't hide them either.** Marking the pinned comment resolved (**Hide** → *Resolved*) collapses it but leaves it in place, so a later `#update-review` edits a comment nobody can see: the job runs green, posts its "🤖 Review updated" progress note, and the refreshed review never appears. The publish path now unhides the comment before patching, but the mutation can be refused by the token's scopes — if a refresh looks like a no-op, check whether the pinned comment is collapsed and unhide it. Use the ✅ Resolved section inside the review to track what you've addressed; that's what it's for.
+
 The pinned comment is also the pipeline's outcome ledger: after a PR closes, a weekly scrape derives what happened to each finding (fixed, conceded, disputed, or merged over) and aggregates it into the Monday `#docs-ops` digest, which is how the review's severity rules get tuned over time.
 
 ### Trivial, frontmatter-only, and oversized short-circuits
@@ -60,7 +62,7 @@ Three label-driven short-circuits skip the full Claude review (linters still run
 
 - **`review:trivial`** — ≤10 added lines, prose-only body changes, ≤2 docs/blog `.md` files, no frontmatter changes, no link changes, no code blocks. Typo fixes, wording polish, small same-claim sweeps across siblings, and removal-dominant cleanup (no upper bound on deletions). Marketing/website pages (`domain:website`) get full review regardless of size.
 - **`review:frontmatter-only`** — any number of docs/blog `.md` files where every change is inside the frontmatter block. Aliases sweeps, `draft: false` flips, `meta_desc` rewrites, social copy edits.
-- **`review:oversized`** — more than 15K changed lines. At that scale the bulk is invariably generated output: the review can't finish inside its job timeout and wouldn't add value to generated lines anyway. Triage posts a `<!-- TRIAGE_OVERSIZED -->` advisory comment suggesting the hand-written source be split into its own PR. `@claude #new-review` force-overrides the skip.
+- **`review:oversized`** — more than 15K changed lines, or more than 150 changed files. At that scale the bulk is invariably generated output: the review can't finish inside its job timeout and wouldn't add value to generated lines anyway. Triage posts a `<!-- TRIAGE_OVERSIZED -->` advisory comment suggesting the hand-written source be split into its own PR. `@claude #new-review` force-overrides the skip.
 
 For both categories, triage runs a focused spelling/grammar pass on the relevant diff slice. If it finds anything, it posts a single advisory comment listing the concerns AND applies `review:prose-flagged` so reviewers don't miss it. The short-circuit label still applies and the full review still skips. This is a guard against rubber-stamping — a typo "fix" that introduces a typo, or a `meta_desc` rewrite with a wrong-word substitution, gets flagged before merge.
 

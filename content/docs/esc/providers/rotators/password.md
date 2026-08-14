@@ -15,7 +15,7 @@ aliases:
 
 The `password` rotator enables you to rotate any user-defined key by generating random passwords.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If you want to generate _memorable passphrases_ use the [passphrase rotator](/docs/esc/providers/rotators/passphrase/)
 {{% /notes %}}
 

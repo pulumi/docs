@@ -82,6 +82,11 @@ AUTOMERGE_NOTICE = (
     "(or convert the PR back to a draft) before approving."
 )
 
+# Related but distinct: the `blocker:` rule list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml drives
+# which Vale findings the PR review renders as 🚨 blockers. This set is keyed
+# on category (not rule) and decides fix-vs-defer for the content-review PR
+# body; keep the two aligned when adding correctness-class rules.
 # Vale categories whose fix has exactly one correct form and preserves meaning —
 # safe to pre-bucket as a fix candidate. Everything else (passive voice,
 # wordiness, hedging, em-dash density, tone, punctuation style …) starts as a
@@ -133,18 +138,25 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
         for v in verified.get("verdicts") or []:
             verdict = (v.get("verdict") or "").lower()
             conf = (v.get("confidence") or "").lower()
-            if verdict in ("contradicted", "mismatch"):
+            if verdict in ("contradicted", "mismatch", "framing-drift"):
                 loc = v.get("line_range") or ""
+                tag = " — framing drift (value accurate, meaning drifted)" if verdict == "framing-drift" else ""
                 findings.append({
                     "label": f"Claim ({v.get('claim_id', '?')}{', ' + loc if loc else ''}): "
-                             f"{_truncate(v.get('text', ''))}",
+                             f"{_truncate(v.get('text', ''))}{tag}",
                     "source": _truncate(v.get("source", ""), 200) or "(no source pointer)",
                     "detail": _truncate(v.get("evidence", "")),
                     "fix": conf == "high",
                 })
             elif verdict == "unverifiable":
+                # Distinguish a retryable turn-budget failure from a genuine
+                # no-source unverifiable — the two must never read identically
+                # downstream (a budget failure is worth retrying; "no source
+                # exists" is not).
+                cap = bool(v.get("turn_cap_exhausted"))
+                tag = " — unverifiable (verifier turn budget exhausted; retryable)" if cap else " — unverifiable"
                 findings.append({
-                    "label": f"Claim ({v.get('claim_id', '?')}): {_truncate(v.get('text', ''))} — unverifiable",
+                    "label": f"Claim ({v.get('claim_id', '?')}): {_truncate(v.get('text', ''))}{tag}",
                     "source": _truncate(v.get("source", ""), 200) or "(verifier did not converge)",
                     "detail": _truncate(v.get("evidence", "")) or "verification did not converge",
                     "fix": False,

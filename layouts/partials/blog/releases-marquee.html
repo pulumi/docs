@@ -1,0 +1,77 @@
+{{- /*
+    Blog homepage releases ticker — a scrolling marquee of the newest entries in
+    the /releases section (both full releases and individual changelog items),
+    pinned along the top of /blog/ under the header. Pauses on hover; falls back
+    to a plain horizontally scrollable strip under prefers-reduced-motion.
+    Styles: theme/src/scss/_blog.scss.
+
+    The track holds $copies identical copies of the item list side by side, so
+    animating it by -(100 / $copies)% advances exactly one copy and lands the
+    next clone where the original started — a seamless loop. Three copies (not
+    two) keep the track wider than the viewport on ultrawide displays, where one
+    copy of the list wouldn't fill the strip and the loop would show a gap.
+
+    Clones are aria-hidden and their links tabindex="-1" so the ticker exposes
+    each entry to assistive tech and the tab order exactly once.
+
+    Changelog items open in the same modal as /releases/: the shared shell is
+    rendered below the strip and theme/src/ts/releases.ts (already in the global
+    bundle) picks up the data-changelog-link rows. Only changelog items carry
+    that attribute — full release pages have no <article data-changelog-article>
+    fragment to inject, so they stay plain links.
+
+    Takes no params; reads the /releases section directly.
+*/ -}}
+{{- $limit := 12 -}}
+{{- $copies := 3 -}}
+{{- /* Seconds of travel per item, at the fixed linear rate — the whole cycle
+    covers one copy, so the duration scales with the item count. */ -}}
+{{- $secondsPerItem := 9 -}}
+{{- with site.GetPage "/releases" -}}
+{{- $items := first $limit (.RegularPagesRecursive.ByDate.Reverse) -}}
+{{- if $items -}}
+{{- /* The wrapper exists so CSS can reach the track from the modal's open
+    state: the modal renders after the strip, and sibling combinators only look
+    forward, so the pause rule hangs a :has() off a common ancestor. */ -}}
+<div data-blog-releases>
+<div class="blog-releases-marquee border-b border-gray-200 bg-gray-50">
+    <div class="container mx-auto flex items-center px-4">
+        <a href="{{ .RelPermalink }}" data-track="blog-marquee-releases" class="group flex shrink-0 items-center gap-1.5 self-stretch border-r border-gray-200 pr-4 no-underline hover:no-underline">
+            <span class="font-overline-sm whitespace-nowrap text-gray-700 transition-colors group-hover:text-violet-primary">What's new</span>
+            {{ partial "icon.html" (dict "name" "arrow-right" "class" "size-3 shrink-0 text-gray-400 transition-colors group-hover:text-violet-primary") }}
+        </a>
+
+        <div data-releases-marquee style="--marquee-duration: {{ mul (len $items) $secondsPerItem }}s" class="relative min-w-0 flex-1 overflow-hidden" role="region" aria-label="Latest releases and changelog entries">
+            <div data-marquee-track class="flex w-max">
+                {{- range $copy := seq $copies }}
+                {{- $isClone := gt $copy 1 }}
+                <ul data-marquee-copy {{ if $isClone }}aria-hidden="true"{{ end }} class="m-0 flex shrink-0 list-none items-center p-0">
+                    {{- range $items }}
+                    <li class="m-0 flex items-center">
+                        <a href="{{ .RelPermalink }}" {{ if eq .Type "changelog" }}data-changelog-link{{ end }} {{ if $isClone }}tabindex="-1"{{ end }} data-track="blog-marquee-item" class="group/mq flex items-center gap-2 whitespace-nowrap px-4 py-2.5 no-underline hover:no-underline">
+                            <span aria-hidden="true" class="size-1 shrink-0 rounded-full bg-gray-300 transition-colors group-hover/mq:bg-violet-primary"></span>
+                            {{- if eq .Type "releases" }}
+                            <span class="badge badge-secondary badge-sm">Release</span>
+                            {{- end }}
+                            <span class="body-sm text-service-black transition-colors group-hover/mq:text-violet-primary">{{ .Title }}</span>
+                            <time datetime="{{ .Date.Format "2006-01-02" }}" class="body-sm text-gray-500">{{ .Date.Format "Jan 2" }}</time>
+                        </a>
+                    </li>
+                    {{- end }}
+                </ul>
+                {{- end }}
+            </div>
+            {{- /* Fade the trailing edge so items dissolve into the strip
+                instead of popping across a hard clip. Left edge needs none —
+                the label's divider already reads as the boundary. */}}
+            <div data-marquee-fade aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-r from-transparent to-gray-50"></div>
+        </div>
+    </div>
+</div>
+{{- /* Modal shell for the changelog rows above. Must stay inside <main> —
+    releases.ts injects the fetched article here and the content styles it
+    relies on are scoped to main. */}}
+{{ partial "releases/changelog-modal.html" . }}
+</div>
+{{- end -}}
+{{- end -}}

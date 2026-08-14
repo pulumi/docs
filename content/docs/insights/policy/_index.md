@@ -1,6 +1,6 @@
 ---
 title: Policies
-title_tag: "Pulumi Policies | Insights & Governance"
+title_tag: "Pulumi Policies | Discovery & Governance"
 meta_desc: Enforce compliance and security across all cloud infrastructure using policy as code with Pulumi Policies, for both IaC stacks and discovered resources.
 h1: Policies
 menu:
@@ -60,7 +60,7 @@ Pulumi Policies uses a hierarchy of components to enforce compliance rules:
 Policy enforcement works in two modes:
 
 - **Preventative**: Validates Pulumi stack resources during `pulumi preview` and `pulumi up`, blocking deployments when violations are detected. Prevents non-compliant resources from being created.
-- **Audit**: Continuously scans resources discovered through [Insights Discovery](/docs/insights/discovery/) to identify violations across all infrastructure, including resources created with Terraform, CloudFormation, or manually. Provides visibility without blocking operations.
+- **Audit**: Continuously scans resources discovered through [Discovery](/docs/insights/discovery/) to identify violations across all infrastructure, including resources created with Terraform, CloudFormation, or manually. Provides visibility without blocking operations.
 
 Organization administrators configure which enforcement mode applies to each policy group. Policy violations can gate deployments (preventative) or appear in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard (audit).
 
@@ -78,6 +78,8 @@ The open source Pulumi CLI enables local policy execution:
 
 ### Pulumi Cloud integration
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 Pulumi Cloud extends policy capabilities with centralized management and additional enforcement modes:
 
 **Preventative policies:**
@@ -92,13 +94,11 @@ Pulumi Cloud extends policy capabilities with centralized management and additio
 
 **Audit policies:**
 
-- Continuously scan resources discovered through [Insights Discovery](/docs/insights/discovery/)
+- Continuously scan resources discovered through [Discovery](/docs/insights/discovery/)
 - Identify violations across all infrastructure, including resources created with Terraform, CloudFormation, or manually
 - View violations in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard
 - Monitor compliance trends across your organization
 - Only available with Pulumi Cloud (cannot be used with the self-managed backend)
-
-For more information about Pulumi plans and pricing, see the [Pricing page](/pricing/).
 
 ## Languages
 
@@ -118,7 +118,7 @@ Choose your path based on your needs:
 - **Want ready-made compliance rules?** Browse [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, PCI DSS, HITRUST, NIST, and other frameworks. Enable them directly from Pulumi Cloud with no code required.
 - **Need custom policies?** Learn to [write custom policy packs](/docs/insights/policy/policy-packs/authoring/) in TypeScript, JavaScript, Python, or OPA (Rego). Create organization-specific rules tailored to your requirements.
 - **Managing compliance?** View violations and track remediation progress in [Policy Findings](/docs/insights/policy/policy-findings/). Triage issues, assign owners, and monitor compliance trends across your organization.
-- **Configuring discovered resources?** Visit the [Insights Get Started tutorial](/docs/insights/discovery/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
+- **Configuring discovered resources?** Visit the [Discovery Get Started tutorial](/docs/insights/discovery/get-started/) for a detailed guide on audit policies for cloud resources discovered outside Pulumi.
 - **Using the CLI?** See the [CLI reference](/docs/insights/policy/cli/) for `pulumi policy` commands to create, publish, and manage policy packs from the command line.
 - **Enforcing policies in CI/CD?** Learn how to [integrate policy enforcement](/docs/insights/policy/ci-cd/) into GitHub Actions, Google Cloud Build, and other CI/CD pipelines.
 - **Building custom tooling?** Explore the [API & SDK reference](/docs/insights/policy/api-reference/) for the Policy SDK and Pulumi Cloud REST API endpoints.

@@ -382,6 +382,7 @@ make new-example-program
 | `lint` | Run markdown linting and Prettier checks |
 | `format` | Auto-format with Prettier |
 | `test` / `test-programs` | Run example program tests (preview mode) |
+| `test-review-pipeline` | Run the review pipelines' own test suites (pytest + standalone harnesses + every `--self-test`) |
 | `check_links` | Validate all links in production site |
 | `check_search_urls` | Validate search index URLs |
 
@@ -522,7 +523,7 @@ Complete production deployment pipeline.
 1. Build site: `./scripts/build-site.sh`
 2. Sync to S3: `./scripts/sync-and-test-bucket.sh update`
 3. Generate search index
-4. Wait for in-progress operations: `node await-in-progress.js`
+4. Wait for in-progress operations: `node await-in-progress.js` (records the time spent waiting in `.build-queue-wait-seconds`, which `scripts/ci-build-duration-alert.sh` subtracts so a queued run isn't reported as a slow build)
 5. Pulumi infrastructure update: `./scripts/run-pulumi.sh`
 6. Generate S3 redirects: `./scripts/make-s3-redirects.sh`
 
@@ -859,16 +860,22 @@ Hugo generates:
 - Sitemap.xml
 - robots.txt
 - Meta-refresh redirect pages (from aliases)
-- Markdown output (`.md`) for `/docs/` pages (for content negotiation)
+- Markdown output (`.md`) for `/docs/` pages, the homepage, `/what-is/`, `/product/`, and `/pricing/` (for content negotiation)
 - LLM sitemap JSON (`llmsitemap`) — hierarchical JSON index of docs navigation, served at `/docs/llm-sitemap.json`
 - LLM index (`llms`) — curated text overview at `/llms.txt` for AI agents
 
 **Markdown output format:** Hugo generates clean markdown versions of documentation pages alongside HTML. These are served via CloudFront content negotiation when clients send `Accept: text/markdown`. The conversion is handled by an 8-phase pipeline in `layouts/partials/docs/markdown-pipeline.md` that converts rendered HTML back to markdown (Chroma → fenced code blocks, HTML tags → markdown syntax, choosable options → chooser comment blocks, etc.).
 
+The same negotiation covers the marketing front door: the homepage, `/what-is/`, `/product/`, and `/pricing/` emit `index.md` artifacts (enabled via `outputs`/`cascade` front matter), served by a second viewer-request CloudFront Function on the default cache behavior (`marketing-markdown-negotiation` in `infrastructure/cloudfrontFunctions.ts`). That function rewrites only an allowlist of prefixes — a rewrite on a path with no `.md` artifact would 404, so extending coverage to a new section means BOTH enabling the `markdown` output for that section AND adding its prefix to the function. Template-driven pages (frontmatter `sections:` arrays) render markdown via `layouts/partials/markdown/sections.md`, a type-agnostic walker over the sections' textual fields.
+
 **Layout files:**
 
 - `layouts/docs/single.md` — Markdown output for single pages
 - `layouts/docs/list.md` — Markdown output for list pages
+- `layouts/index.md` — Markdown output for the homepage
+- `layouts/page/template-page.md` — Markdown output for template-driven pages (frontmatter `sections:`)
+- `layouts/page/pricing.md` — Markdown output for `/pricing/` (tiers, edition comparison, FAQ)
+- `layouts/_default/single.md`, `layouts/_default/list.md` — generic markdown fallbacks for markdown-enabled sections whose pages use bespoke layouts
 - `layouts/docs/list.llmsitemap.json` — Hierarchical JSON sitemap
 - `layouts/index.llms.txt` — Curated text overview at `/llms.txt`
 

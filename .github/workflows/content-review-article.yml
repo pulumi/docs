@@ -94,7 +94,7 @@ jobs:
           fi
           exit "$FAIL"
       - name: Install Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -238,12 +238,41 @@ jobs:
       # bare template: provenance and the finding inventory are rendered for it,
       # each finding pre-bucketed into Fixes/Findings-not-applied with a <TODO>.
       # Degrades to a minimal valid draft so a compose hiccup never blocks the run.
+      # The fallback must carry the same two contract-bearing pieces the composer
+      # emits (compose-pr-body.py's AUTOMERGE_NOTICE and LINT_PLACEHOLDER): the
+      # auto-merge notice, because the re-lint gate arms auto-merge either way and
+      # a reviewer must not be surprised by it, and the `<!-- LINT-RESULT -->`
+      # placeholder, because stamp-lint-result.py silently no-ops without it and
+      # the authoritative lint result would never reach the PR body.
       - name: Compose PR body draft
         if: steps.precheck.outputs.skip != 'true'
         run: |
-          python3 scripts/content-review/compose-pr-body.py \
-            --queue .content-review-queue.json --out .pr-body-draft.md \
-            || printf '## Why this page\n\n_Draft composition failed; build the body from the template and the run log._\n\n## Fixes applied\n\n## Findings not applied\n\n## Screenshot check\n\n## Rendered content\n\n## Verification\n' > .pr-body-draft.md
+          if ! python3 scripts/content-review/compose-pr-body.py \
+              --queue .content-review-queue.json --out .pr-body-draft.md; then
+            echo "::warning::compose-pr-body.py failed; writing the minimal fallback draft"
+            # The heredoc body sits at the YAML block scalar's own indentation,
+            # which YAML strips — the shell (and the file) sees it at column 0.
+            cat > .pr-body-draft.md <<'FALLBACK'
+          > [!IMPORTANT]
+          > **This PR is set to auto-merge (squash).** Once it has an approving review and the required build check passes, GitHub will merge it automatically — **approving this PR will merge it.** To prevent that, disable auto-merge (or convert the PR back to a draft) before approving.
+
+          ## Why this page
+
+          _Draft composition failed; build the body from the template and the run log._
+
+          ## Fixes applied
+
+          ## Findings not applied
+
+          ## Screenshot check
+
+          ## Rendered content
+
+          ## Verification
+
+          - `make lint`: <!-- LINT-RESULT --> <!-- stamped by the workflow re-lint gate; leave this line as-is -->
+          FALLBACK
+          fi
           echo "--- pr body draft ---"
           cat .pr-body-draft.md
 
@@ -258,14 +287,20 @@ jobs:
       # excluded from the export step's staging, so it can never ride the
       # patch.)
       - name: Snapshot guardrail inputs
-        id: snapshot
         run: |
           SNAP=".review-snapshot"
           mkdir -p "$SNAP"
+          # if/else, not `[ -f ] && cp || echo`: the short-circuit form reports a
+          # real copy failure as the benign "missing" case, and these are the
+          # files the publish job's guardrail gates are judged against.
           for f in .content-review-queue.json .verified-claims.json \
                    .vale-findings.json .readthrough-findings.json \
                    .frontmatter-validation.json; do
-            [ -f "$f" ] && cp "$f" "$SNAP/" || echo "::warning::snapshot: $f missing"
+            if [ -f "$f" ]; then
+              cp "$f" "$SNAP/" || { echo "::error::snapshot: failed to copy $f"; exit 1; }
+            else
+              echo "::warning::snapshot: $f missing"
+            fi
           done
           git rev-parse HEAD > "$SNAP/base-sha.txt"
       - name: Upload guardrail snapshot
@@ -387,7 +422,7 @@ jobs:
           # Anthropic API key the model inherently runs on. Every write
           # (branch, push, PR) happens in the publish job behind
           # publish-gate.py.
-          claude_args: '--model claude-opus-4-8 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
+          claude_args: '--model claude-opus-5 --effort low --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash"'
 
       # Hand the model's work to the publish job as data. Stage everything
       # EXCEPT dot-paths — that excludes the runtime artifacts above AND
@@ -457,7 +492,7 @@ jobs:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           fetch-depth: 0
       - name: Install Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '24.x'
           cache: 'yarn'
@@ -474,7 +509,7 @@ jobs:
 
       - name: Download handoff artifact
         continue-on-error: true
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: review-handoff
 
@@ -498,7 +533,7 @@ jobs:
       - name: Download guardrail snapshot
         if: always()
         continue-on-error: true
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           name: review-snapshot
           path: .review-snapshot
@@ -522,7 +557,6 @@ jobs:
       # pushed, and the ledger step still records the page incomplete
       # (if: always()) so it is retried under the attempt cap.
       - name: Enforce guardrail gates
-        id: gates
         if: steps.gate.outputs.publish == 'true'
         env:
           ARTICLE_PATH: ${{ github.event.inputs.path }}
@@ -616,7 +650,6 @@ jobs:
       # to the PR's normal CI. `master` requires 1 approval + the build check,
       # so auto-merge never merges on its own.
       - name: Stamp lint result and arm auto-merge
-        id: lint
         if: steps.publish.outcome == 'success' && steps.gate.outputs.publish == 'true'
         continue-on-error: true
         env:
@@ -626,9 +659,15 @@ jobs:
           # Stamp the authoritative lint result into the PR body's Verification
           # section, replacing the composer's placeholder (idempotent: only acts
           # if the placeholder is still present, so a re-run can't double-stamp).
+          # The script handles its own failure paths and returns 0 for each, so
+          # a non-zero exit here is an unhandled crash. Surface it loudly but
+          # keep going: the auto-merge arming and the lint-failure comment
+          # below are what the author actually needs, and `set -e` would abort
+          # the step before either of them runs.
           stamp_body() {
             python3 scripts/content-review/stamp-lint-result.py \
-              --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)" || true
+              --branch "$BRANCH" --result "$1" --sha "$(git rev-parse --short HEAD)" \
+              || echo "::error::stamp-lint-result.py crashed; PR body not stamped with the $1 lint result"
           }
           if [ "${{ steps.publish.outputs.lint_result }}" = "passed" ]; then
             stamp_body passed
@@ -657,7 +696,6 @@ jobs:
       # role can't be assumed the review still ran, the ledger write is just
       # skipped (the page reappears next cycle rather than going into cooldown).
       - name: Configure AWS credentials
-        id: aws-creds
         if: always()
         continue-on-error: true
         uses: aws-actions/configure-aws-credentials@v6
@@ -702,7 +740,6 @@ jobs:
       # `gh`, stamps reviewed_at, increments attempts, and uploads. One article
       # per run ⇒ one object, so writes never collide.
       - name: Record review ledger
-        id: record
         if: always() && steps.ledger-bucket.outputs.uri != ''
         continue-on-error: true
         env:

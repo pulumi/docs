@@ -42,14 +42,14 @@ location: virtual
 
 # Description of the event.
 description: |
-   Organizations often find themselves constrained by domain-specific languages when managing cloud infrastructure, leading to complex workarounds and maintenance challenges. This workshop demonstrates how transitioning to a general-purpose programming language can transform your infrastructure management, making common tasks more intuitive and maintainable.
+   Teams managing cloud infrastructure sometimes want the flexibility of a general-purpose language for complex workflows and long-term maintainability. This workshop demonstrates how transitioning to a general-purpose programming language can transform your infrastructure management, making common tasks more intuitive and maintainable.
    
    You'll discover how TypeScript's rich ecosystem of libraries and familiar syntax can simplify everything from dynamic resource creation to complex configuration management. Through practical examples, we'll explore strategies for gradually migrating existing infrastructure code while maintaining operational stability.
    
    Whether you're dealing with repetitive boilerplate, struggling with complex state management, or seeking more flexibility in your infrastructure automation, you'll learn how to leverage TypeScript's capabilities to build more elegant and powerful infrastructure solutions that scale with your organization's needs.
 
 learn:
-    - How general-purpose languages like TypeScript make infrastructure management easier compared to domain-specific languages like HCL and YAML
+    - How a general-purpose language like TypeScript can simplify common infrastructure tasks for teams that prefer one
     - How to introduce Pulumi IaC and either coexist with or convert your existing Terraform code
     - How Pulumi's advanced features can help enable even greater capabilities for your organization to keep teams moving fast, securely
 

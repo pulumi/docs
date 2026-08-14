@@ -54,6 +54,17 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_API
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the URL of the Pulumi Cloud API that the CLI communicates with when using the Pulumi Cloud backend. Most users should set <span class="font-mono">PULUMI_BACKEND_URL</span> instead, which selects the backend itself; this variable is for advanced scenarios, such as pointing the CLI at a non-default Pulumi Cloud API endpoint.
+        </p>
+        <pre><code class="text-xs">PULUMI_API="https://api.pulumi.com"</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_BACKEND_URL
         </span>
     </dt>
@@ -125,17 +136,6 @@ aliases:
             Continues to perform the update/destroy operation despite the occurrence of errors.
         </p>
         <pre><code class="text-xs">PULUMI_CONTINUE_ON_ERROR=true</code></pre>
-    </dd>
-    <dt>
-        <span class="font-mono">
-            PULUMI_COPILOT
-        </span>
-    </dt>
-    <dd>
-        <p>
-            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization.
-        </p>
-        <pre><code class="text-xs">PULUMI_COPILOT=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -226,6 +226,19 @@ aliases:
             Disables format validation of system inputs. Currently, this disables validation of stack names.
         </p>
         <pre><code class="text-xs">PULUMI_DISABLE_VALIDATION=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_DISABLE_REGISTRY_RESOLVE
+        </span>
+    </dt>
+    <dd>
+        <p>
+            By default, <code class="text-xs">pulumi install</code> and related package-resolution commands use the
+            <a href="/registry/">Pulumi Registry</a> to resolve package names. Set this to <code>true</code> to disable
+            registry-based resolution and fall back to the CLI's other resolution mechanisms.
+        </p>
+        <pre><code class="text-xs">PULUMI_DISABLE_REGISTRY_RESOLVE=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -348,6 +361,19 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
+            PULUMI_ENABLE_STREAMING_JSON_PREVIEW
+        </span>
+    </dt>
+    <dd>
+        <p>
+            By default, <code class="text-xs">pulumi preview --json</code> emits a single <code>PreviewDigest</code> JSON
+            object to stdout after the preview completes. Set this to <code>true</code> to instead stream JSON events to
+            stdout as the preview runs, matching the behavior of <code class="text-xs">pulumi up|destroy|refresh --json</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_ENABLE_STREAMING_JSON_PREVIEW=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
             PULUMI_ERROR_ON_DEPENDENCY_CYCLES
         </span>
     </dt>
@@ -423,6 +449,42 @@ aliases:
             Disables discovering additional plugins by examining $PATH.
         </p>
         <pre><code class="text-xs">PULUMI_IGNORE_AMBIENT_PLUGINS=true</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_AGE_DAYS
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides how long automatic logs in <code>$PULUMI_HOME/logs</code> are kept before being
+            rotated out. Defaults to <code>7</code> days.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_AGE_DAYS=14</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_LOG_ROTATION_MAX_TOTAL_MB
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Overrides the maximum total size, in megabytes, of the automatic logs directory
+            (<code>$PULUMI_HOME/logs</code>) before the oldest logs are rotated out. Defaults to
+            <code>500</code>.
+        </p>
+        <pre><code class="text-xs">PULUMI_LOG_ROTATION_MAX_TOTAL_MB=1000</code></pre>
+    </dd>
+    <dt>
+        <span class="font-mono">
+            PULUMI_NEO
+        </span>
+    </dt>
+    <dd>
+        <p>
+            Enables Neo help and links in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_COPILOT</span> is still accepted as an alias.
+        </p>
+        <pre><code class="text-xs">PULUMI_NEO=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">
@@ -530,14 +592,14 @@ aliases:
     </dd>
     <dt>
         <span class="font-mono">
-            PULUMI_SUPPRESS_COPILOT_LINK
+            PULUMI_SUPPRESS_NEO_LINK
         </span>
     </dt>
     <dd>
         <p>
-            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization.
+            Suppresses showing the 'explainFailure' link to Neo in the CLI output, regardless of the Neo settings for the given Pulumi organization. The legacy name <span class="font-mono">PULUMI_SUPPRESS_COPILOT_LINK</span> is still accepted as an alias.
         </p>
-        <pre><code class="text-xs">PULUMI_SUPPRESS_COPILOT_LINK=true</code></pre>
+        <pre><code class="text-xs">PULUMI_SUPPRESS_NEO_LINK=true</code></pre>
     </dd>
     <dt>
         <span class="font-mono">

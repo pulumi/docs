@@ -128,13 +128,15 @@ def test_stale_review_at_merge():
 
 
 def test_style_findings_counted_not_classified():
+    # Deliberately uses the pre-2026-08-03 "Style findings" heading: this
+    # reader parses historical merged PRs, which carry the old spelling.
     body = body_with(
         low_confidence=(
             "- **[L20]** Please cite a source.\n"
             "\n"
             "#### Style findings\n"
             "\n"
-            "*Found by pattern-based linting; Findings may be false positives.*\n"
+            "*Optional polish from pattern-based linting.*\n"
             "\n"
             "- **line 42:** [style] _substitution_ — Use 'select' instead of 'click'.\n"
             "- **line 87:** [style] _passive voice_ — Use active voice.\n"
@@ -185,24 +187,97 @@ def test_legacy_unparseable_degrades():
     assert rec["parse_confidence"] == "low"
 
 
-def test_fetch_pinned_bodies_filters_and_orders():
-    def fake_run_gh(args):
-        rows = [
-            {"id": 3, "body": "<!-- CLAUDE_REVIEW 2/2 -->\nsecond"},
-            {"id": 1, "body": "just a human comment"},
-            {"id": 2, "body": "<!-- CLAUDE_REVIEW 1/2 -->\nfirst"},
-            {"id": 4, "body": "<!-- CLAUDE_PROGRESS -->\nprogress note"},
-        ]
-        return "\n".join(json.dumps(json.dumps(r)) for r in rows) + "\n"
+ROWS = [
+    {"id": 3, "body": "<!-- CLAUDE_REVIEW 2/2 -->\nsecond"},
+    {"id": 1, "body": "just a human comment"},
+    {"id": 2, "body": "<!-- CLAUDE_REVIEW 1/2 -->\nfirst"},
+    {"id": 4, "body": "<!-- CLAUDE_PROGRESS -->\nprogress note"},
+]
 
+
+def _with_fake_gh(payload):
     original = sro.run_gh
-    sro.run_gh = fake_run_gh
+    sro.run_gh = lambda args: payload
     try:
-        bodies = sro.fetch_pinned_bodies("pulumi/docs", 1)
+        return sro.fetch_pinned_bodies("pulumi/docs", 1)
     finally:
         sro.run_gh = original
+
+
+def test_fetch_pinned_bodies_filters_and_orders():
+    # gh emits ONE SINGLE-ENCODED object per line. The previous fixture
+    # double-encoded (json.dumps(json.dumps(row))), which matched the decoder's
+    # wrong assumption instead of gh's real output -- so the test passed while
+    # every production scrape silently returned nothing.
+    payload = "\n".join(json.dumps(r) for r in ROWS) + "\n"
+    bodies = _with_fake_gh(payload)
     assert len(bodies) == 2
     assert bodies[0].endswith("first") and bodies[1].endswith("second")
+
+
+def test_fetch_pinned_bodies_accepts_double_encoded():
+    """The legacy shape still decodes, so a wrapping gh/jq wouldn't regress."""
+    payload = "\n".join(json.dumps(json.dumps(r)) for r in ROWS) + "\n"
+    bodies = _with_fake_gh(payload)
+    assert len(bodies) == 2
+
+
+def test_fetch_pinned_bodies_raises_when_nothing_decodes():
+    """Total decode failure must be loud, not an empty list.
+
+    Returning [] here is what let a wire-format mismatch masquerade as
+    "this PR has no pinned review" for every PR at once.
+    """
+    try:
+        _with_fake_gh("not json at all\nalso not json\n")
+    except sro.CommentDecodeError as exc:
+        assert "could not decode any" in str(exc)
+    else:
+        raise AssertionError("expected CommentDecodeError on undecodable payload")
+
+
+def test_fetch_pinned_bodies_empty_output_is_not_an_error():
+    assert _with_fake_gh("") == []
+
+
+def test_scrape_pr_records_decode_failure_instead_of_propagating():
+    """One unreadable PR must not abort a whole --closed-since window.
+
+    The raise is per PR; the window scrape is per run. If it propagated, a
+    single bad payload would lose every record already gathered and mute the
+    digest's outcomes section -- the same "no data" reading the raise exists
+    to prevent, one level up.
+    """
+    def fake_meta(repo, pr):
+        return {
+            "number": pr, "title": "t", "url": "u", "state": "MERGED",
+            "mergedAt": "2026-07-01T00:00:00Z", "closedAt": None,
+            "headRefOid": MERGE_HEAD, "headRefName": "feature",
+            "author": {"login": "alice"}, "labels": [],
+        }
+
+    original_meta, original_gh = sro.fetch_pr_meta, sro.run_gh
+    sro.fetch_pr_meta = fake_meta
+    sro.run_gh = lambda args: "not json at all\n"
+    try:
+        record = sro.scrape_pr("pulumi/docs", 1)
+    finally:
+        sro.fetch_pr_meta, sro.run_gh = original_meta, original_gh
+
+    assert record["status"] == "decode_failed"
+    assert "could not decode any" in record["detail"]
+
+
+def test_aggregate_separates_decode_failures_from_no_review_data():
+    """The two must not share a column -- that conflation is the whole bug."""
+    agg = sro.aggregate([
+        {"status": "no_review_data", "pr": 1},
+        {"status": "decode_failed", "pr": 2, "detail": "boom"},
+        {"status": "pr_unavailable", "pr": 3},
+    ])
+    assert agg["prs_decode_failed"] == 1
+    assert agg["prs_no_review_data"] == 2
+    assert agg["prs_scraped"] == 0
 
 
 def test_scrape_pr_no_review_data():

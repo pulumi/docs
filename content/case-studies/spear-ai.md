@@ -45,7 +45,7 @@ sections:
       anchor: about-spear-ai
 ---
 
-## Challenge: Military-grade Infrastructure at the Speed of AI
+## Challenge: military-grade infrastructure at the speed of AI
 
 As an innovator in the defense technology space, Spear AI faced a unique infrastructure challenge that would test the limits of traditional tooling: they needed to build infrastructure that could operate on standard AWS cloud services for development, the classified air-gapped AWS Secret Cloud for government operations, and manage edge deployments on nuclear submarines. These are daunting requirements for any organization, let alone a seed-stage startup.
 
@@ -53,7 +53,7 @@ The traditional path to government Authorization to Operate (ATO) certification,
 
 For a fast-moving startup, this timeline and manual process posed a bottleneck that could derail their ability to get their product to market and serve government customers. Instead of adopting a lengthy, manual process, the team sought to accelerate time to market by applying preventive policies and state management to demonstrate compliance in a verifiable, automated way.
 
-## Solution: Infrastructure as Code with Built-in Governance
+## Solution: infrastructure as code with built-in governance
 
 After evaluating legacy infrastructure approaches and next-generation solutions, Spear AI selected Pulumi as the only platform capable of meeting both defense-grade security requirements and delivering startup speed.
 
@@ -69,45 +69,45 @@ The team implemented a comprehensive infrastructure strategy using:
 - [Review Stacks](https://www.pulumi.com/docs/deployments/deployments/review-stacks/) for rapid development environment provisioning and cost management
 - [Kubernetes](https://www.pulumi.com/registry/packages/kubernetes/api-docs/) for portability across all deployment targets, from Amazon EKS to edge clusters
 
-## Architecture: Reproducible Environments from Cloud to Submarine
+## Architecture: reproducible environments from cloud to submarine
 
 Spear AI's infrastructure spans three critical environments, each with unique constraints:
 
-### 1. Development Environment (AWS Commercial Cloud)
+### 1. Development environment (AWS Commercial Cloud)
 
 The Spear team uses Pulumi to manage standard AWS services for rapid iteration and testing, integrated with modern development workflows including GitHub Actions, Vercel deployments, and Neon database branching.
 
-### 2. Government Environments (AWS GovCloud, AWS Secret Cloud, AWS Top Secret Cloud)
+### 2. Government environments (AWS GovCloud, AWS Secret Cloud, AWS Top Secret Cloud)
 
 Production operates in regions ranging from GovCloud to the air-gapped AWS Secret Cloud environment and will also need to support Top Secret Cloud. These environments lack many standard services, such as Amazon SES (email), ACM (certificate management), and third-party APIs for AI/ML model serving. Spear AI uses Pulumi to rapidly provision custom services to replicate missing cloud functionality in this environment.
 
-### 3. Edge Deployments (Nuclear Submarines)
+### 3. Edge deployments (nuclear submarines)
 
 On-premises Kubernetes environments make it easy to mirror cloud architectures at the edge. "If you think of a nuclear submarine, it's essentially a data center underwater," Michael explains.
 
 The unifying technology is EKS, chosen explicitly for its portability. "We're migrating everything to EKS to take advantage of the uniformity and portability that EKS enables," Dennis explains. "There's no ECS on a submarine—it's just easier for us to write a Kubernetes pod once and deploy it across all environments from sea to cloud," says Dennis.
 
-## Results: Transforming Government Compliance Through Code
+## Results: transforming government compliance through code
 
-### 6x Faster Authority to Operate (ATO)
+### 6x faster Authority to Operate (ATO)
 
 The most dramatic result was the compression of government compliance timelines from an average of 18 months to 3 months. This acceleration came from Pulumi's ability to express security controls as code rather than traditional documentation and templates.
 
 "We gave our auditors access to our policy packs because it's far easier to understand and prove controls in code than in a bunch of docs and diagrams," Michael explains. "That process [of manual review] has gone away. We've gone down from a year and a half to expecting an ATO in three months."
 
-### Improved Code Readability and Review Speed
+### Improved code readability and review speed
 
 The shift from Terraform HCL to TypeScript dramatically improved code review and audit processes. "When you look at a Pulumi stack, it's just easier to understand and grok versus Terraform HCL," Dennis notes. "HCL is far too verbose, which makes it hard for auditors to really understand how your proposed implementation works."
 
 This readability improvement directly impacts compliance review speed, as auditors can more easily verify security controls embedded in readable code rather than parsing complex domain-specific languages that can be 10 times more verbose.
 
-### Democratized Infrastructure Access
+### Democratized infrastructure access
 
 By using familiar programming languages, Spear AI achieved infrastructure democratization across its engineering team. "It doesn't end up falling on any one person's plate—any engineer, if they need to make a change to the stack, can do so, even if they're not an infrastructure expert," Dennis explains. "The combination of modern languages and policy gives the team safety and control."
 
 This follows the same model as Docker's democratization effect: "Everyone can modify a Dockerfile and spin up their infrastructure in their local machine. If it works there, it will work in the cloud."
 
-### Rapid Service Provisioning
+### Rapid service provisioning
 
 The combination of Pulumi's development velocity and Review Stacks capabilities enables rapid experimentation. Dennis was able to "spin up new capabilities in less than a week," compared to estimates of "over a month" using traditional approaches.
 
@@ -121,23 +121,23 @@ The team leverages this capability alongside other branch-based development tool
 - Postgres databases with Neon branch deployments
 - Infrastructure with Pulumi review stacks
 
-## Technical Implementation: Modern Development Workflows
+## Technical implementation: modern development workflows
 
 Learn more in the [Pulumi documentation](/docs/).
 
-### Policy as Code for Automated Compliance
+### Policy as code for automated compliance
 
 Pulumi's policy packs enable Spear AI to encode security requirements directly into its infrastructure deployment process. This ensures that every deployment can automatically prove compliance with government requirements, without manual review.
 
-### Secrets Management with Pulumi ESC
+### Secrets management with Pulumi ESC
 
 "We're using ESC for config and for secrets," Dennis confirms. This avoids the common pitfall of "committing all the secrets to a repo," significantly improving security posture and collaboration workflows.
 
-### Developer Experience Benefits
+### Developer experience benefits
 
 "It's fun to write Pulumi code," Dennis observes. "Because it's a programming language, you inherit all the benefits that you get from your programming language of choice: you get benefits like type completion." Now that the team is adopting LLM-powered code assistants like Anthropic Claude, they are finding that type completion is even more valuable.
 
-## Looking Forward: Infrastructure for National Security Innovation
+## Looking forward: infrastructure for national security innovation
 
 Spear AI's success with Pulumi establishes the new standard for defense technology delivery. This isn't just one company's success story: it's a blueprint that will fundamentally transform how government contractors approach infrastructure, compliance, and speed to mission. By pioneering infrastructure as code for the most demanding environments on Earth, Spear AI and Pulumi have proven that there's no trade-off between security and speed, between compliance and innovation. This approach will become the standard for any organization serious about both governance and velocity.
 
@@ -153,4 +153,4 @@ Spear AI is a defense technology startup building AI-powered solutions for gover
 
 Ready to accelerate your compliance timeline while maintaining security?
 
-[Start Free](https://app.pulumi.com/signup) | [Talk with an Expert](/contact/?form=request-a-demo)
+[Start Free](https://app.pulumi.com/signup) | [Talk with an Expert](/request-a-demo/)

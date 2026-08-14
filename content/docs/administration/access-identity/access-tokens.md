@@ -26,14 +26,14 @@ The token you use for `pulumi login` also authorizes the [`pulumi api`](/docs/ia
 Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
-1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are only available to Enterprise and Business Critical customers.
+1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Team, Enterprise, and Business Critical editions.
 1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Enterprise and Business Critical customers.
 
 When using tokens, be mindful of the following security best practices:
 
 * Organization and team access tokens are machine tokens that are not connected to a user account, and therefore should only be used in scenarios like CI/CD pipelines, where the Pulumi actions are not being performed directly by a particular user.
 * Tokens can optionally be assigned an expiration period of up to two years, at which point the token will no longer be valid for any Pulumi operation. Expired tokens cannot be refreshed or reactivated. It's strongly recommended that you assign an expiration to your token to encourage token rotation and improve your organization's security posture. Organization administrators can make expiries mandatory with an [access token expiry policy](#access-token-expiry-policy).
-* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. The stack creator will automatically become its owner and will have all stack permissions, including deletion. See [RBAC](/docs/administration/access-identity/rbac/) for more on how org-wide settings and role scopes interact.
+* Access tokens can create stacks if the organization's access management settings permit all members to do so, or if the token's assigned role includes the `stack:create` scope. Admin organization tokens always have this capability. A stack created with a token carries an automatic [creator grant](/docs/administration/access-identity/rbac/#creator-grants) of the Stack Admin permission set, including deletion. That grant is held by the machine identity the token authenticates as, not by the person who created the token, and it persists for as long as the stack exists. To keep a long-lived token from accumulating Stack Admin on every stack it creates, have the automation transfer stack ownership to a break-glass user or team, or delete the automatic entry from the stack's **Access** tab, once the stack exists. See [RBAC](/docs/administration/access-identity/rbac/) for more on how org-wide settings and role scopes interact.
 
 ## Personal access tokens
 
@@ -60,9 +60,7 @@ To delete an access token:
 
 ## Organization access tokens {#creating-an-organization-access-token}
 
-{{% notes type="info" %}}
-Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
-{{% /notes %}}
+{{< pulumi-cloud "org-team-access-tokens" />}}
 
 Organization tokens authenticate as the organization itself rather than any individual user. They are the recommended token type for any automated or non-interactive workflow, including:
 
@@ -87,9 +85,7 @@ Deleting a token immediately revokes its access; all further operations using it
 
 ## Team access tokens
 
-{{% notes type="info" %}}
-Please note that this functionality is available only in the [Enterprise and Business Critical editions](https://www.pulumi.com/pricing/) of Pulumi.
-{{% /notes %}}
+{{< pulumi-cloud "teams" />}}
 
 Team tokens are machine tokens scoped to the resources and permissions of a specific team. They are useful for automated processes (like CI/CD pipelines) that should only be able to access the infrastructure a particular team owns. This avoids the need to use a personal token from any individual team member.
 

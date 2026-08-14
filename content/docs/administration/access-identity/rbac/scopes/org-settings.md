@@ -13,13 +13,10 @@ aliases:
 - /docs/intro/pulumi-service/scopes/org-settings
 - /docs/intro/pulumi-cloud/scopes/org-settings
 - /docs/pulumi-cloud/access-management/rbac/scopes/org-settings/
+pulumi_cloud_feature: rbac
 ---
 
 This document defines all the available scopes in Pulumi Cloud, organized by [entity type](/docs/administration/access-identity/rbac/entities#entity-types) and group.
-
-{{% notes "info" %}}
-Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Agent Pools
 
@@ -39,7 +36,7 @@ Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enter
 
 ## AI
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 These scopes control access to the legacy Pulumi Copilot conversation API, currently used only by the Pulumi Copilot VS Code extension. For Pulumi's current AI capabilities, see [Pulumi Neo](/docs/ai/).
 {{% /notes %}}
 
@@ -77,11 +74,11 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 | `environment_tags:list` | View all tags used across environments. This provides a comprehensive view of environment categorization.<br><br>**Granted by default permission set**: `Environment Read` |
 | `environment_yaml:open` | Access and view environment configuration in YAML format. This provides a structured view of environment settings.<br><br>**Granted by default roles**: `Member`, `Admin` |
 
-## Insights Accounts
+## Cloud accounts
 
 | Value | Description |
 |-------|-------------|
-| `insights_account:create` | Create a new insights account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
+| `insights_account:create` | Create a new cloud account. This allows setting up monitoring and analysis capabilities for infrastructure.<br><br>**Granted by default roles**: `Admin` |
 
 ## Insights Policy
 
@@ -95,7 +92,7 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 | `policy_pack:delete` | Remove an existing Infrastructure as Code policy pack. This permanently deletes the policy pack and its configurations.<br><br>**Granted by default roles**: `Admin` |
 | `policy_pack:read` | View Infrastructure as Code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
 | `policy_pack:update` | Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
-| `policy_results:create` | Create policy evaluation results for an insights account.<br><br>**Granted by default roles**: `Admin` |
+| `policy_results:create` | Create policy evaluation results for a cloud account.<br><br>**Granted by default roles**: `Admin` |
 | `policy_results:read` | View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
 | `policy_results:update` | Update policy evaluation results and compliance data.<br><br>**Granted by default roles**: `Admin` |
 | `policy_results:delete` | Delete policy evaluation results.<br><br>**Granted by default roles**: `Admin` |

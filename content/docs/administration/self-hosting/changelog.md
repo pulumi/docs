@@ -13,11 +13,20 @@ aliases:
   - /docs/pulumi-cloud/self-hosted/changelog/
   - /docs/administration/self-hosting/pulumi-cloud/changelog/
   - /docs/pulumi-cloud/admin/self-hosted/changelog/
+pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}
 
 ## 2026
+
+### August
+
+* Tightened encryption checks for Pulumi ESC environments: ciphertext that was copied from another environment is now blocked when the environment is opened
+
+{{< notes type="info" >}}
+If an environment fails to open because of this check, set the `PULUMI_DISABLE_CRYPTO_ACCESS_ENFORCEMENT=true` environment variable, create a new revision of the affected environment from its plaintext values, and then remove the environment variable again.
+{{< /notes >}}
 
 ### April
 

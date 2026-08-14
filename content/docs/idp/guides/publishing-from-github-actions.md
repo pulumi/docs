@@ -11,6 +11,7 @@ menu:
     parent: idp-guides
     identifier: idp-guides-publishing-github-actions
     weight: 20
+pulumi_cloud_feature: private-registry
 ---
 
 Automating the publication of Pulumi components from GitHub Actions to your Pulumi Cloud private registry enables robust CI/CD workflows for infrastructure building blocks.
@@ -345,7 +346,6 @@ jobs:
         with:
           organization: ${{ env.PULUMI_ORG }}
           requested-token-type: urn:pulumi:token-type:access_token:organization
-          scope: admin
 
       # Determine the version to use - either the triggered tag or latest tag for manual runs
       - name: Determine Component Version

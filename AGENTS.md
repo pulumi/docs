@@ -19,6 +19,7 @@ Agents must use these exact commands:
 - Lint prose: `make lint-prose` (Vale; nags, never blocks. Also surfaces in pinned PR reviews.)
 - Format: `make format`
 - Run all tests: `make test`
+- Run the review pipelines' own test suites: `make test-review-pipeline` (pytest + standalone harnesses + every `--self-test`; required if you touch `scripts/content-review/`, `scripts/blog-review/`, or `.claude/commands/docs-review/scripts/`)
 - Run specific program test:  
   `ONLY_TEST="program-name" ./scripts/programs/test.sh`
 - Fix trailing spaces:  
@@ -108,6 +109,33 @@ The reference pages under `content/docs/iac/concepts/resources/options/` show a 
 
 ---
 
+## Pulumi Cloud availability markers
+
+Docs pages state which Pulumi Cloud edition a feature needs through a generated violet callout, not hand-written prose. A marker names a **feature**, never an edition — the edition the callout states is derived from that feature's availability in `data/pulumi_pricing.yaml` (see "Pricing data" below), so a feature that moves editions is a one-line edit that updates `/pricing/` and every marked page at once.
+
+- **Whole page**: add `pulumi_cloud_feature: <feature-id>` to the front matter (for example `pulumi_cloud_feature: rbac`). `layouts/docs/{single,list}.{html,md}` renders the callout above the content. We only mark what a reader has to buy, so an unknown id, an *edition* id, `true`, `false`, and a feature that's available on the Individual edition are all hard lint failures (`checkPulumiCloudFeature` in `scripts/lint/lint-markdown.js`). An ungated page carries no key. The key names the feature because the value does; it isn't `cloud_feature` because `content/templates/` already uses `cloud:` for the cloud *provider* a template targets.
+- **One section**: put `{{< pulumi-cloud "<feature-id>" />}}` on the line **directly after** the heading it applies to. `scripts/search/page.js` relies on that adjacency to skip the callout when it builds a heading's search snippet. The no-argument form `{{< pulumi-cloud />}}` means "Pulumi Cloud, all editions" and is only for mixed pages where the reader can't otherwise tell a section needs Cloud at all; a block form with inner content renders orientation prose in the same box. `checkPulumiCloudShortcode` validates the argument against the same vocabulary as the front matter key.
+- **If the feature isn't in the data file yet, add it there first.** Give it `hidden: true` when it isn't a marketed line item on `/pricing/` (gated deployments, ESC change requests, organization templates): hidden features stay out of the comparison table but remain resolvable by id.
+- **Don't say it twice.** When you add a marker, delete the hand-written "only available in the Enterprise and Business Critical editions" sentence or note it replaces. The callout already links to `/pricing/`. Keep only prose that says something the callout doesn't (for example, a per-edition limit like "Enterprise allows up to 25 custom roles").
+- Edition names are lowercase-noun in prose ("the Enterprise edition"). Never "Free", "Starter", or "Pro".
+
+### Pricing data
+
+`data/pulumi_pricing.yaml` is the single source of truth for **what Pulumi sells**: the ordered, closed set of editions (Individual, Team, Enterprise, Business Critical) with the display copy for their `/pricing/` cards, and a per-feature availability matrix. Its header comment is authoritative for the vocabulary ("edition", never "plan"/"tier"/"subscription") and for adding or renaming an edition or a feature. Everything downstream reads it: the `/pricing/` comparison table, the docs availability markers above, and the changelog `editions:` badges.
+
+- **Availability is a map keyed by edition id**, not a positional array. `available_from: <edition>` is shorthand for false-below/true-from; `availability:` overlays specific editions on top of it. Availability must be monotone — the build fails otherwise.
+- **`id` is required and unique across every category.** Names collide ("Self-hosting" appears under both IaC and ESC), so ids are not slugged from names; disambiguate with a product prefix (`esc-self-hosting`).
+- **`requires:`** names the edition a marker should state when it differs from the first edition with a truthy cell — needed wherever the free column is a *limited variant* rather than the feature itself ("Manual" policy enforcement at Individual).
+- **Order is the only ordering mechanism**, at every level. No `weight`, no sorting.
+- **Validation is split by consumer**, matching `data/resource_options.yaml`: structural invariants (duplicate ids, unknown edition keys, non-monotone availability) are `errorf`s in `layouts/partials/pricing/data.html`, the partial that expands the file; frontmatter- and shortcode-facing invariants are in `scripts/lint/lint-markdown.js` so authors fail in `make lint` rather than in a full Hugo build. There is deliberately no third standalone validator script.
+- **Grid classes on `/pricing/` are literal strings selected by edition count.** Tailwind v4 content-scans `layouts/**/*.html` as raw text and PurgeCSS is gone, so a class assembled with `printf` is never emitted and the grid collapses to one column. Adding an edition means adding a case to the dicts at the top of `layouts/page/pricing.html`.
+
+Callout markup for all callout types (`info`, `tip`, `warning`, `cloud`, and the GitHub-alert types) comes from the shared `layouts/partials/notes.html`. The `{{% notes %}}` shortcode takes a **named** `type` argument only — `{{% notes "warning" %}}` is silently ignored and renders an info box, so always write `{{% notes type="warning" %}}`. Adding a new callout type means adding it to the `$icons` dict in that partial **and** adding a `&.note-<type>` block to both `theme/src/scss/_notes.scss` and `theme/src/scss/docs/_docs-theme.scss` — dark mode is not automatic.
+
+**Callouts inside a list item**: use the `{{< notes >}}` form, indented to the item's continuation column. `{{%` shortcode output is spliced back into the markdown source before it is rendered, so an indented `{{% notes %}}` always lands at column 0 and splits the list in two (restarting the numbering); `{{<` is substituted after the markdown pass, so the callout stays inside the `<li>`. The shortcode strips the body's common indentation either way, so indent the body to match the tags.
+
+---
+
 ## Blog categories and tags
 
 Blog posts carry three taxonomy axes (`category` and `tags` are always present; `series` is optional):
@@ -119,6 +147,18 @@ Blog posts carry three taxonomy axes (`category` and `tags` are always present; 
 See `BLOGGING.md` for the author-facing version of these rules.
 
 Per-post optional front matter beyond the taxonomy axes — `resource_links` (icon links at the foot of the post), `related_posts` (pinned related slugs), `author_roles`, and `updated` — is documented in `BLOGGING.md`. The blog homepage is curated separately in `data/blog_home.yaml` (`featured` = the four hero/featured slots; `featured_series` = the "Popular series" strip); that file's header comment is the authoritative reference.
+
+### Embedding events and posts in a post body
+
+To promote an event or another post from inside a post, embed its card with `{{< blog/card "/events/<slug>/" >}}` — **do not hand-write a `blog/cta-card`** that restates the title, date, and blurb. Those copies rot: the shortcode renders the same tiles as `/events/` and the blog homepage, derived entirely from the target page, so an event card picks up a retitled session or a newly added recording (Register → Watch) on its own. A card is always full width, so it takes exactly one path — several in a row is several shortcodes — and the path is its only parameter: there is no title or body copy to set. Reserve `blog/cta-card` for destinations that have no card (docs, product pages, signup) and for generic get-started asks.
+
+Card layouts live in `layouts/partials/blog/card/` — `medium` (grid tile), `contained` (`medium` boxed in a `.card`), `wide` (text left, square image right; the homepage feed's card view **and** in-body embeds), `small`, `featured`, `series`, `list-row`. Reuse one; don't clone its markup into a new partial. `wide` renders only its wrapper's contents and takes the wrapper's classes as a param, because the homepage row starts `hidden` (the view toggle flips it to flex) while an embed is a boxed `.card`.
+
+### Images and videos in a post body
+
+Post-body images and `{{< video >}}` clips open in a lightbox when — and only when — enlarging them would show the reader more. `theme/src/ts/blog-lightbox.ts` measures each one in `.blog-post-content` against the viewport (intrinsic size vs. rendered size vs. the size the overlay could draw it at) and wraps the ones that qualify in a trigger button; the overlay shell is `layouts/partials/blog/lightbox.html`, rendered by `layouts/blog/single.html`. Nothing about this is author-driven: **do not add a wrapping link, a `figure`, or a per-image opt-in** to make something clickable, and don't hand-roll a second modal. The escape hatch runs the other way — `data-no-lightbox` on the element or any ancestor keeps it plain. A post-body video that already has `controls` is skipped entirely: a wrapping button would swallow clicks meant for the control bar, and those controls already offer fullscreen. (The overlay's own copy of a video always has controls, and is exempt from click-to-close for the same reason.)
+
+The thresholds live at the top of the TypeScript file with the reasoning for each; tune them there rather than special-casing a post. Two of them, `OVERLAY_MARGIN_X`/`OVERLAY_MARGIN_Y`, mirror the overlay's padding and its caption budget — **if you change the spacing in `lightbox.html`, change them to match**, or the script will promise an enlargement the overlay can't deliver.
 
 ### Dates: `updated` vs `lastmod`
 
@@ -142,6 +182,12 @@ Case studies live at `content/case-studies/<slug>.md` — scaffold a new one wit
 
 ---
 
+## Events
+
+Event pages live at `content/events/<slug>/index.md` — a bundle whose content is entirely frontmatter; the schema's source of truth is `archetypes/event/index.md` (its comments are kept current). **Create a new event with the `/create-event` skill** (`.claude/commands/create-event/SKILL.md`): it collects details from the prompt or an interactive wizard, scaffolds the bundle, generates social cards via `/event-meta-image`, files the pulumi/marketing tracking issue from its issue template, and opens the docs PR. It supports `--dry-run` (writes issue/PR previews instead of touching GitHub) and delegates execution to the `event-creator` subagent (`.claude/agents/event-creator.md`). HubSpot form and Salesforce campaign IDs come back from marketing on the tracking issue — never invent them; a gated page carries TODO placeholders until they land, then a rerun of `/create-event <issue-url>` wires them in.
+
+---
+
 ## Releases changelog entries
 
 Individual changelog items live in `content/releases/changelog/` — one markdown file per entry, listed by month on `/releases/` and rendered at `/releases/changelog/<slug>/` (`layouts/changelog/single.html`). Shared images/videos live in the `images/` and `videos/` subfolders and are referenced by absolute path (e.g. `/releases/changelog/images/2026-06-18-foo.png`), so entry renames don't affect them.
@@ -149,7 +195,7 @@ Individual changelog items live in `content/releases/changelog/` — one markdow
 - **Filenames must be `YYYY-MM-DD-<slug>.md`**, and the date prefix must match the frontmatter `date:`. `make lint` enforces both (`checkChangelogFilename` in `scripts/lint/lint-markdown.js`) — a mismatch or non-prefixed name is a hard build failure.
 - **Assets in `images/` and `videos/` must also be date-prefixed** as `YYYY-MM-DD-<slug>.<ext>` (use the referencing entry's date). `make lint` enforces this too (`checkChangelogAssets`). Rename the asset and update its reference together.
 - **Create a new entry with the `/new-changelog` skill** (or `hugo new --kind changelog content/releases/changelog/YYYY-MM-DD-<slug>.md`, which uses `archetypes/changelog.md`). The archetype derives `title` and `date` from the filename.
-- **Optional `tiers:`** is a YAML array marking pricing-tier availability, rendered as badge(s) beside the date. Values are a **closed set** — only the four pricing tiers (`Free`, `Team`, `Enterprise`, `Business Critical`; see `content/pricing/_index.md`), enforced by `checkChangelogTiers` in `scripts/lint/lint-markdown.js` (an out-of-set value or the legacy singular `tier:` is a hard build failure). List **every** tier the feature is available in — since a lower tier implies the tiers above it, that means the lowest applicable tier and all tiers above it (e.g. an Enterprise feature lists both `Enterprise` and `Business Critical`).
+- **Optional `editions:`** is a YAML array marking Pulumi Cloud edition availability, rendered as badge(s) beside the date. Values are edition **ids** from the closed set in `data/pulumi_pricing.yaml` (`individual`, `team`, `enterprise`, `business-critical`), enforced by `checkChangelogEditions` in `scripts/lint/lint-markdown.js`; the templates look the id up and render the display name, so write `business-critical`, not `Business Critical`. List **every** edition the feature is available in — since a lower edition implies the ones above it, that means the lowest applicable edition and all editions above it (e.g. an Enterprise feature lists both `enterprise` and `business-critical`). The legacy `tiers:` array and singular `tier:` scalar are hard build failures: "tier" isn't a word the product uses, and the old list carried a `Free` value for an edition that doesn't exist.
 - **Renaming an entry** (changing its slug) changes its URL, so add an `aliases:` entry pointing at the old `/releases/changelog/<old-slug>/` path — same SEO rule as moving any content file.
 
 ---

@@ -603,12 +603,33 @@
         @apply rounded-full object-cover w-20 h-20;
     }
 
+    // Hosts/moderators read as secondary to the panel — smaller portrait.
+    .event-host-photo {
+        @apply w-14 h-14;
+    }
+
     .event-speaker-name {
         @apply font-semibold body-base text-gray-950;
     }
 
     .event-speaker-role {
         @apply font-normal body-sm text-gray-700;
+    }
+
+    // widgets/social-icons.html is shared with the team, author, and leadership
+    // pages, so trim it here rather than in the widget. Two things need it: the
+    // icons size off the inherited font size (1.25em), which lands them larger
+    // than the body-sm role line they sit under; and the <li>s pick up the
+    // vertical margin main's base list styles give every list item, which reads
+    // as a gap above the row.
+    .event-speaker-links {
+        .ph-icon {
+            @apply size-4;
+        }
+
+        li {
+            @apply my-0;
+        }
     }
 }
 

@@ -12,9 +12,10 @@ describe("pulumi-multi-select-form", () => {
         <div>
            <span>
              <span></span>
-             <select></select>
+             <select>
+               <option disabled hidden selected value="">Please select</option>
+             </select>
            </span>
-           <pulumi-hubspot-form></pulumi-hubspot-form>
         </div>
       </pulumi-multi-select-form>
     `);

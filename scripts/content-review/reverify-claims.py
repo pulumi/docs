@@ -12,7 +12,9 @@ night instead of waiting for the page's next staleness-driven sweep.
 How a stale finding flows (no new human burden, no prose generation):
   1. An entity re-verifies `contradicted`/`mismatch`.
   2. Every page asserting that entity gets a `stale_claims` marker written
-     into its LEDGER object (`ledger/<slug>.json`) — evidence attached.
+     into its LEDGER object (`ledger/<slug>.json`) — evidence attached. A page
+     with no ledger object yet is skipped rather than stubbed: the marker
+     write is a whole-object overwrite of a key `record-review.py` owns.
   3. `select-articles.py` adds a large additive boost for marked pages, so
      the next daily content-review sweep picks them up; the normal worker
      re-reviews the page, fixes it through the existing PR machinery, and
@@ -31,6 +33,12 @@ agent-loop verifier) by module import; each entity's freshest claim record is
 the input. `contradicted`/`mismatch` → stale; `verified`/`matches` → fresh;
 anything else (`unverifiable`, errors) → inconclusive, reported but never
 marked — a flaky check must not burn review-queue slots.
+
+Evidence independence: a verdict whose only cited source is Pulumi's own
+published docs — a www.pulumi.com URL, or a `content/` source file — is
+demoted to `unverifiable` before that mapping (see `source_is_own_corpus`).
+The site is this repo rendered, so such a check has confirmed the page
+against itself and cannot detect drift in either direction.
 
 Writes `.claims-reverify-report.json` (plus `n_checked`/`n_stale`/`has_stale`
 to $GITHUB_OUTPUT) and, when CONTENT_REVIEW_LEDGER_URI is set, uploads each
@@ -51,6 +59,7 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timezone
@@ -58,12 +67,16 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[2]
 VERIFY_CLAIMS = HERE / ".claude/commands/docs-review/scripts/verify-claims.py"
+ENTITY_KEY = HERE / ".claude/commands/docs-review/scripts/entity_key.py"
 
 SCHEMA_VERSION = 1
 DEFAULT_COUNT = 25
 MAX_CONCURRENCY = 8
-STALE_VERDICTS = {"contradicted", "mismatch"}
+STALE_VERDICTS = {"contradicted", "mismatch", "framing-drift"}
 FRESH_VERDICTS = {"verified", "matches"}
+# Verdicts that assert something either way, and so have to rest on evidence
+# from outside the docs corpus to mean anything.
+DECIDED_VERDICTS = STALE_VERDICTS | FRESH_VERDICTS
 
 
 def log(msg: str) -> None:
@@ -82,6 +95,55 @@ def _load_verify_claims():
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+def _load_is_volatile():
+    """entity_key.is_volatile, or None if the module can't be loaded.
+
+    Re-deriving beats trusting the snapshot's stored `volatile` flag: the flag
+    was stamped whenever the page was last reviewed, so a narrowing of the
+    policy would otherwise only reach the index page by page over months. None
+    falls the caller back to the stored flag — a stale policy is a much smaller
+    problem than a lane that stops selecting anything."""
+    try:
+        spec = importlib.util.spec_from_file_location("entity_key", ENTITY_KEY)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return mod.is_volatile
+    except Exception as e:  # noqa: BLE001 - never break the lane over this
+        warn(f"entity_key module unavailable ({e}); using stored volatile flags")
+        return None
+
+
+# ---- evidence independence ---------------------------------------------------
+
+# www.pulumi.com is this repo rendered and `content/` is its source, so a
+# verdict citing only those has checked the page against itself: it can never
+# go stale, and a `contradicted` from the same place is equally meaningless.
+# Demoted to `unverifiable` — reported, never counted fresh, never marked.
+_URL_RE = re.compile(r"https?://[^\s,;)\]]+", re.IGNORECASE)
+_OWN_HOST_RE = re.compile(r"^https?://(?:[\w-]+\.)*pulumi\.com(?:[/:?#]|$)", re.IGNORECASE)
+_PATH_RE = re.compile(
+    r"(?<![\w/-])[\w][\w./-]*\.(?:json|ya?ml|md|mdx|go|ts|tsx|js|py|cs|java|tf|toml)\b"
+)
+
+
+def source_is_own_corpus(source: str) -> bool:
+    """True when every source the verifier cited is our own published docs.
+
+    Positive evidence only: a source naming nothing identifiable (no URL, no
+    file path) is left alone rather than demoted — unrecognized is not the
+    same as circular.
+    """
+    src = source or ""
+    urls = _URL_RE.findall(src)
+    if any(not _OWN_HOST_RE.match(u) for u in urls):
+        return False
+    paths = _PATH_RE.findall(_URL_RE.sub(" ", src))
+    own_paths = [p for p in paths if p.startswith("content/") or "/content/" in p]
+    if len(paths) > len(own_paths):
+        return False
+    return bool(urls) or bool(own_paths)
 
 
 # ---- index loading -----------------------------------------------------------
@@ -103,16 +165,20 @@ def load_snapshots(claims_dir: Path) -> list[dict]:
     return out
 
 
-def volatile_entities(snapshots: list[dict]) -> dict[str, list[dict]]:
+def volatile_entities(snapshots: list[dict], is_volatile=None) -> dict[str, list[dict]]:
     """{entity_key: [assertion, ...]} over every volatile keyed claim.
 
     Each assertion carries the claim record plus its page provenance
     (path/slug/reviewed_at), so a stale verdict can fan back out to every
-    page asserting the entity."""
+    page asserting the entity.
+
+    `is_volatile` re-derives the flag under today's policy (see
+    `_load_is_volatile`); omitting it reads the snapshot's stored flag."""
+    decide = is_volatile or (lambda c: bool(c.get("volatile")))
     entities: dict[str, list[dict]] = {}
     for snap in snapshots:
         for c in snap.get("claims") or []:
-            if not isinstance(c, dict) or not c.get("entity_key") or not c.get("volatile"):
+            if not isinstance(c, dict) or not c.get("entity_key") or not decide(c):
                 continue
             entities.setdefault(c["entity_key"], []).append({
                 "claim": c,
@@ -172,9 +238,12 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
 
     Returns {slug: updated entry (without bookkeeping keys)} for every entry
     that changed. Idempotent: a marker for an already-marked entity_key is
-    replaced, not duplicated. A page missing from the ledger (shouldn't
-    happen — the same worker run writes both objects) gets a minimal entry so
-    the selector can still see the marker."""
+    replaced, not duplicated. A page missing from the local ledger cache
+    (shouldn't happen — the same worker run writes both objects) is SKIPPED,
+    not synthesized: every changed entry is uploaded to the same S3 key
+    record-review.py owns, so a two-field stub would silently destroy that
+    page's status / reviewed_at / attempts / tier / score. The entity simply
+    stays unmarked and comes back around on a later rotation."""
     changed: dict[str, dict] = {}
     for s in stale:
         marker = {
@@ -187,9 +256,11 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
         for page in s["pages"]:
             entry = ledger.get(page["path"])
             if entry is None:
-                warn(f"no ledger entry for {page['path']}; creating a minimal one")
-                entry = {"path": page["path"], "slug": page["slug"]}
-                ledger[page["path"]] = entry
+                warn(
+                    f"no ledger entry for {page['path']}; skipping its stale-claims "
+                    "marker rather than overwriting the ledger object with a stub"
+                )
+                continue
             markers = [m for m in (entry.get("stale_claims") or [])
                        if isinstance(m, dict) and m.get("entity_key") != s["entity_key"]]
             markers.append(marker)
@@ -223,8 +294,8 @@ def write_outputs(report: dict) -> None:
     if not gh_out:
         return
     with open(gh_out, "a") as fh:
-        fh.write(f"n_checked={report['meta']['n_checked']}\n")
-        fh.write(f"n_stale={report['meta']['n_stale']}\n")
+        # Only the gating flag: claims-reverify.yml reads the counts straight
+        # out of the report JSON for its Slack summary.
         fh.write(f"has_stale={'true' if report['meta']['n_stale'] else 'false'}\n")
 
 
@@ -232,7 +303,8 @@ def finish(report: dict, out_path: Path) -> int:
     out_path.write_text(json.dumps(report, indent=2) + "\n")
     m = report["meta"]
     log(f"checked={m['n_checked']} stale={m['n_stale']} fresh={m['n_fresh']} "
-        f"inconclusive={m['n_inconclusive']} (volatile entities={m['n_entities']}) -> {out_path}")
+        f"inconclusive={m['n_inconclusive']} (of which {m['n_demoted']} demoted for "
+        f"own-corpus evidence) (volatile entities={m['n_entities']}) -> {out_path}")
     write_outputs(report)
     return 0
 
@@ -251,15 +323,17 @@ def run(args) -> int:
         "checked_at": today.isoformat(),
         "entities": [],
         "meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0, "n_checked": 0,
-                 "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0},
+                 "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0, "n_demoted": 0},
     }
     out_path = Path(args.out)
 
     # The meta block doubles as the health observation consumed by
     # signal-health.py's reverify signal: `skipped` distinguishes "couldn't
-    # run" (degraded) from the quiet-night n_due=0 (healthy), and an
-    # all-inconclusive n_checked is the broken-verifier tell. Keep those
-    # semantics intact when touching the early-exit paths below.
+    # run" (degraded) from the quiet-night n_due=0 (healthy), an
+    # all-inconclusive n_checked is the no-drift-detected tell, and n_demoted
+    # says how much of that was own-corpus evidence rather than broken
+    # plumbing — the two want opposite fixes. Keep those semantics intact when
+    # touching the early-exit paths below.
     snapshots = load_snapshots(Path(args.claims_dir))
     report["meta"]["n_snapshots"] = len(snapshots)
     if not snapshots:
@@ -268,7 +342,7 @@ def run(args) -> int:
         return finish(report, out_path)
 
     ledger = load_ledger(Path(args.ledger_dir))
-    entities = volatile_entities(snapshots)
+    entities = volatile_entities(snapshots, _load_is_volatile())
     report["meta"]["n_entities"] = len(entities)
 
     unmarked = sorted(k for k, v in entities.items() if not already_marked(k, v, ledger))
@@ -292,9 +366,14 @@ def run(args) -> int:
         claim["__id"] = key
         claim["__route"] = vc.route_claim(claim, {})
         rec, err = vc.process_claim(api_key, claim, {}, args.model, repo_root, args.dry_run)
+        verdict = rec.get("verdict")
+        demoted_from = None
+        if verdict in DECIDED_VERDICTS and source_is_own_corpus(rec.get("source") or ""):
+            demoted_from, verdict = verdict, "unverifiable"
         return {
             "entity_key": key,
-            "verdict": rec.get("verdict"),
+            "verdict": verdict,
+            "demoted_from": demoted_from,
             "confidence": rec.get("confidence"),
             "evidence": rec.get("evidence"),
             "source": rec.get("source"),
@@ -313,6 +392,7 @@ def run(args) -> int:
     report["meta"]["n_stale"] = len(stale)
     report["meta"]["n_fresh"] = len(fresh)
     report["meta"]["n_inconclusive"] = len(results) - len(stale) - len(fresh)
+    report["meta"]["n_demoted"] = sum(1 for r in results if r["demoted_from"])
 
     if stale:
         changed = apply_markers(ledger, stale, today)
@@ -364,9 +444,42 @@ def self_test() -> int:
     ents = volatile_entities(snaps)
     check("volatile keyed entities only",
           set(ents) == {"version/pulumi-gcp", "numerical/team-plan-price"})
+
     check("entity fans out across pages", len(ents["version/pulumi-gcp"]) == 2)
     check("representative is the freshest assertion",
           representative(ents["version/pulumi-gcp"])["text"] == "pulumi-gcp v8.3.0")
+
+    # Re-derived volatility overrides the snapshot's stored flag, so a
+    # narrowed policy reaches the whole index the night it ships.
+    stale_flag = {"entity_key": "numerical/example-resources-created", "volatile": True,
+                  "type": "numerical", "line_range": "L3", "verdict": "verified",
+                  "text": "The example update creates 3 resources."}
+    rederived = volatile_entities(
+        snaps + [snap("c", "2026-07-06", stale_flag)], _load_is_volatile())
+    check("re-derive drops a self-describing claim stamped volatile",
+          "numerical/example-resources-created" not in rederived)
+    check("re-derive keeps genuinely volatile entities",
+          set(rederived) == {"version/pulumi-gcp", "numerical/team-plan-price"})
+    check("no re-derive falls back to the stored flag",
+          "numerical/example-resources-created"
+          in volatile_entities(snaps + [snap("c", "2026-07-06", stale_flag)]))
+
+    # Evidence independence: only own-corpus-sourced verdicts are demoted, and
+    # an unrecognizable source is never treated as circular.
+    own = ["https://www.pulumi.com/docs/iac/get-started/aws/modify-program/",
+           "https://www.pulumi.com/docs/a/ and https://www.pulumi.com/docs/b/",
+           "repo:content/docs/iac/concepts/providers/_index.md"]
+    independent = ["https://docs.aws.amazon.com/config/latest/developerguide/x.html",
+                   "gh api repos/pulumi/pulumi/contents/pkg/resource/deploy/retries.go",
+                   "repo:data/policy_pack_policies/cis-aws.json (line 2872)",
+                   "https://github.com/pulumi/pulumi/blob/master/.goreleaser.yml",
+                   "https://www.pulumi.com/docs/a/ and https://docs.aws.amazon.com/x.html",
+                   "N/A - author's own estimate of their tutorial content",
+                   ""]
+    for s in own:
+        check(f"own-corpus source: {s[:44]}", source_is_own_corpus(s) is True)
+    for s in independent:
+        check(f"independent source: {s[:44] or '(empty)'}", source_is_own_corpus(s) is False)
 
     # Chunk rotation: deterministic, complete coverage across consecutive days.
     keys = [f"k{i}" for i in range(5)]
@@ -387,15 +500,15 @@ def self_test() -> int:
                         {"path": "content/docs/b.md", "slug": "docs-b"}]}]
     today = date(2026, 7, 9)
     changed = apply_markers(ledger, stale, today)
-    check("marker fans out to both pages", set(changed) == {"docs-a", "docs-b"})
+    check("marker lands on the page with a ledger entry", set(changed) == {"docs-a"})
     check("existing entry keeps its fields",
           changed["docs-a"]["status"] == "clean" and "_file" not in changed["docs-a"])
     check("marker shape", changed["docs-a"]["stale_claims"][0] == {
         "entity_key": "version/pulumi-gcp", "verdict": "contradicted",
         "evidence": "v9.0 released", "source": "gh release view",
         "checked_at": "2026-07-09"})
-    check("minimal entry created for ledger gap",
-          changed["docs-b"]["path"] == "content/docs/b.md")
+    check("ledger gap is skipped, not stubbed over",
+          "docs-b" not in changed and "content/docs/b.md" not in ledger)
 
     changed2 = apply_markers(ledger, stale, today)
     check("re-marking is idempotent",

@@ -1,3 +1,10 @@
+# Terminology-correctness substitutions: each flagged term is *wrong* (a dead
+# brand name, a misstated product lifecycle stage, or non-canonical package
+# terminology) and has one fixed correct replacement. Word-choice *preferences*
+# (click -> select, go to -> navigate to) live in WordChoice.yml instead — this
+# split is what lets the pinned PR review treat Substitutions findings as
+# blockers while WordChoice stays advisory (see the `blocker:` list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml).
 extends: substitution
 message: "Use '%s' instead of '%s' (STYLE-GUIDE.md)."
 level: error
@@ -5,8 +12,6 @@ ignorecase: true
 action:
   name: replace
 swap:
-  '\bclick\b': select
-  '\bgo to\b': navigate to
   '\bpublic beta\b': public preview
   '\bcross-language package\b': Pulumi package
   '\bsingle-language package\b': native language package
