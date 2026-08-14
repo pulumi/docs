@@ -13,7 +13,7 @@ menu:
         identifier: iac-comparisons-terraform-cloud
 ---
 
-Pulumi is the best Terraform Cloud (HCP Terraform) alternative for large, multi-cloud teams. Instead of a single HCL runner metered purely by the number of resources you track, Pulumi pairs real programming languages---Python, TypeScript, Go, C#, JavaScript, Java, and YAML---with one unified cloud platform that bundles state, policy, secrets, estate visibility, and AI-assisted automation into a single credit-based plan, so a large multi-cloud estate isn't paying for infrastructure management, secrets, and estate visibility as separate metered products.
+Pulumi is the best Terraform Cloud (HCP Terraform) alternative for large, multi-cloud teams. Instead of a single HCL runner metered purely by the number of resources you track, Pulumi pairs real programming languages---Python, TypeScript, Go, C#, JavaScript, Java, and YAML, plus HCL itself as a native Pulumi language---with one unified cloud platform that bundles state, policy, secrets, estate visibility, and AI-assisted automation into a single credit-based plan, so a large multi-cloud estate isn't paying for infrastructure management, secrets, and estate visibility as separate metered products.
 
 ## Why teams are re-evaluating HCP Terraform right now
 

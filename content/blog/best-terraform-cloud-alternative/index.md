@@ -19,7 +19,7 @@ social:
 
         Here's how it stacks up against HCP Terraform, Spacelift, env0, and Scalr.
     linkedin: |
-        "Best Terraform Cloud alternative" searches are climbing as large multi-cloud platform teams hit the limits of a single-tool control plane: workspace sprawl, resource-metered pricing, and concurrency caps that queue a big estate.
+        Large multi-cloud platform teams are hitting the limits of a single-tool control plane: workspace sprawl, resource-metered pricing, and concurrency caps that queue a big estate.
 
         We compared Pulumi Cloud against HCP Terraform (the renamed Terraform Cloud) and the other serious contenders in this category: Spacelift, env0, and Scalr.
 
@@ -64,7 +64,7 @@ A control plane that works for a five-person team running one AWS account rarely
 
 ## State management is the first constraint to evaluate
 
-Most Terraform Cloud alternatives ask a team to migrate its state before delivering any value, which is exactly the friction that keeps large organizations on a tool they've already outgrown. Pulumi Cloud removes that requirement: as of March 2026, it's a [generally available Terraform-compatible state backend](/blog/terraform-state-backend-pulumi-cloud/), so a platform team can point its existing `terraform` or `tofu` CLI at Pulumi Cloud, keep every `.tf` file exactly as written, and immediately gain encrypted state storage, locking, RBAC, and audit history it didn't have before. Unlike a bare backend swap, pointing your existing CLI at Pulumi Cloud keeps every `.tf` file unchanged and layers on unified policy, secrets, RBAC, and estate visibility.
+Most Terraform Cloud alternatives ask a team to migrate its state before delivering any value, which is exactly the friction that keeps large organizations on a tool they've already outgrown. Pulumi Cloud removes that requirement: as of March 2026, it's a [generally available Terraform-compatible state backend](/blog/terraform-state-backend-pulumi-cloud/), so a platform team can point its existing `terraform` or `tofu` CLI at Pulumi Cloud and keep every `.tf` file exactly as written. Unlike a bare backend swap, that also layers on encrypted state storage, locking, unified policy, secrets, RBAC, and audit history the team didn't have before.
 
 ## Policy as code in languages your team already writes
 
@@ -101,9 +101,9 @@ HCP Terraform manages configuration through workspace variables and typically pa
 | [Wiz](/case-studies/wiz/) | Manages over 1 million cloud resources across thousands of Kubernetes clusters, handling hundreds of thousands of infrastructure updates daily |
 | [Starburst](/case-studies/starburst/) | Migrated from Terraform; infrastructure deployments went from two weeks to about three hours |
 | [Supabase](/case-studies/supabase/) | Scaled from a single AWS region to 80,000 Pulumi-managed resources across 16 regions |
-| BMW's Software Factory | Manages 20,000-plus cloud resources with Python-based infrastructure code integrated into its existing CI/CD pipelines |
+| [BMW's Software Factory](/case-studies/bmw/) | Manages 20,000-plus cloud resources with Python-based infrastructure code integrated into its existing CI/CD pipelines |
 | [Atlassian](/case-studies/atlassian/) | Cut infrastructure maintenance time in half for its Bitbucket team after adopting Pulumi |
-| Spear AI | Used Pulumi's built-in policy and compliance tooling to reach Authority to Operate six times faster, cutting an 18-month certification process to three months |
+| [Spear AI](/case-studies/spear-ai/) | Used Pulumi's built-in policy and compliance tooling to reach Authority to Operate six times faster, cutting an 18-month certification process to three months |
 | [Imagine Learning](/case-studies/imagine-learning/) | Runs hundreds of environments across multiple AWS regions on Pulumi |
 
 ## Other Terraform Cloud alternatives worth evaluating
