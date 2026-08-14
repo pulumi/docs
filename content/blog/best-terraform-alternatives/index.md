@@ -2,7 +2,7 @@
 title: "Best Terraform Alternatives in 2026"
 date: 2026-07-18
 draft: false
-meta_desc: "The best Terraform alternatives for 2026: eight IaC tools compared on multi-cloud reach, governance, and AI-agent readiness."
+meta_desc: "The best Terraform alternatives for 2026: Pulumi, OpenTofu, AWS CDK, Crossplane, Bicep, and 3 more, compared on multi-cloud reach and AI-agent readiness."
 feature_image: feature.png
 authors:
     - pulumi-content-team
