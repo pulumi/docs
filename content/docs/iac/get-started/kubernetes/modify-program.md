@@ -506,9 +506,13 @@ resource "kubernetes_core_v1_service" "nginx" {
   }
 }
 
-# Export the service cluster IP (available for both ClusterIP and LoadBalancer types)
+# When the service is a LoadBalancer, export its external address; with minikube,
+# export the cluster IP for use with port forwarding.
 output "ip" {
-  value = kubernetes_core_v1_service.nginx.spec.cluster_ip
+  value = var.isMinikube ? kubernetes_core_v1_service.nginx.spec.cluster_ip : coalesce(
+    kubernetes_core_v1_service.nginx.status.load_balancer.ingress[0].ip,
+    kubernetes_core_v1_service.nginx.status.load_balancer.ingress[0].hostname,
+  )
 }
 ```
 

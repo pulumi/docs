@@ -838,9 +838,13 @@ resource "kubernetes_core_v1_service" "nginx" {
   }
 }
 
-# Capture the IP and make it available as a component output:
+# When the service is a LoadBalancer, capture its external address; with minikube,
+# capture the cluster IP for use with port forwarding.
 output "ip" {
-  value = kubernetes_core_v1_service.nginx.spec.cluster_ip
+  value = var.isMinikube ? kubernetes_core_v1_service.nginx.spec.cluster_ip : coalesce(
+    kubernetes_core_v1_service.nginx.status.load_balancer.ingress[0].ip,
+    kubernetes_core_v1_service.nginx.status.load_balancer.ingress[0].hostname,
+  )
 }
 ```
 
