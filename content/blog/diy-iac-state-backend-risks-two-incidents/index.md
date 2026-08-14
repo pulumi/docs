@@ -29,7 +29,7 @@ social:
         Two incidents, one root cause: DIY state management.
 ---
 
-Two publicly documented infrastructure-as-code incidents, a cloud intrusion and a mass cluster deletion, trace back to the same root cause: a self-managed state backend. Neither is a knock on any one tool. Plaintext credentials in object storage and unprotected concurrent writes are risks inherent to running your own state backend, not defects unique to Terraform: Pulumi encrypts values marked as secrets by default even on a self-managed backend, but on a DIY backend neither tool enforces storage-level encryption or locking, so both share the exposure these incidents reveal. A managed backend, like Pulumi Cloud, is purpose-built to close both gaps.
+Two publicly documented infrastructure-as-code incidents, a cloud intrusion and a mass cluster deletion, trace back to the same root cause: a self-managed state backend. Neither is a knock on any one tool. Plaintext credentials in object storage and unprotected concurrent writes are risks inherent to running your own state backend, not defects unique to Terraform: Pulumi encrypts values marked as secrets by default even on a self-managed backend, but on a DIY backend neither tool can enforce encryption or locking at the storage layer, so both share the exposure these incidents reveal. A managed backend, like Pulumi Cloud, is purpose-built to close both gaps.
 
 ## Incident one: how a single plaintext state file exposed a second AWS account's credentials
 
@@ -49,7 +49,7 @@ In a [2019 KubeCon EU keynote](https://www.youtube.com/watch?v=ix0Tw8uinWs), Spo
 - Two pull requests, both touching the same shared Terraform state for the cluster fleet, were merged out of order.
 - The resulting `terraform apply` attempted to recreate a cluster and hit a permissions mismatch between what the state expected and what existed.
 - The apply's failure mode was destructive rather than inert: **two of Spotify's three production Kubernetes clusters were deleted**.
-- The incident ran roughly **nine hours, from 8 PM to 5 AM**, before Spotify restored service and its integrations.
+- The incident ran roughly **nine hours, from 8 PM to 5 AM**, before Spotify finished restoring the clusters and their integrations.
 - Critically, Spotify reported **no end-user impact**, because the team had deliberately engineered redundancy across clusters as a hedge against exactly this class of failure.
 
 **Root cause**: this is a general property of self-managed, serialized state protocols, not a Terraform-specific defect. Whenever two changes race to mutate the same state file without an enforced lock, the outcome depends on merge order and timing rather than intent. Any DIY-backend IaC tool is exposed to this class of failure to the degree its locking is optional or must be stood up separately. Terraform's S3 backend historically required a separate lock service; Pulumi's self-managed backends enable a basic file-based lock by default, though a shared object store still depends on that store honoring the lock.
@@ -76,7 +76,7 @@ Neither Spotify nor the SCARLETEEL victim organization did anything unusual. The
 | Plaintext secrets in state (SCARLETEEL) | [State is encrypted at rest and in transit by default](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), with engine-level [transitive secret tainting](https://www.pulumi.com/blog/pulumi-state-taint/) that marks any value derived from a secret as sensitive, so it can't leak downstream unnoticed |
 | Long-lived plaintext IAM keys (SCARLETEEL) | [Pulumi ESC](https://www.pulumi.com/docs/esc/) issues short-lived, dynamic credentials via OIDC federation, so there is no durable IAM access key sitting in state or in a config file for an attacker to find |
 | Out-of-order concurrent writes (Spotify) | Automatic stack locking prevents two operations from mutating the same stack's state at once, removing the race condition that let two merges collide |
-| Slow, destructive recovery (Spotify) | A [transactional, journaling state backend](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), reported up to 20x faster than file-based alternatives, plus built-in deleted-stack restoration, so a destructive operation is a recoverable event rather than a multi-hour incident |
+| Slow, destructive recovery (Spotify) | A transactional, journaling state backend, with journaling alone [reported to speed up operations by up to 20x](https://www.pulumi.com/blog/journaling-ga/) over Pulumi Cloud's own prior full-snapshot behavior. Deleted-stack restoration brings back a stack's state file and update history, so a team recovering from a destructive operation is rebuilding from an intact source of truth rather than reconstructing one from scratch, though it does not re-create cloud resources a `destroy` already removed |
 
 A team does not have to rewrite its infrastructure code to get these protections. Teams already on Pulumi get them by pointing their stacks at Pulumi Cloud instead of a self-managed backend. Teams currently on Terraform can [migrate existing state to Pulumi](https://www.pulumi.com/blog/converting-full-terraform-states-to-pulumi/) or, with Pulumi's native Terraform state backend support, connect Pulumi Cloud directly to their existing Terraform-managed state without a rewrite at all.
 
@@ -88,7 +88,7 @@ Neither incident's owning company disclosed a specific dollar figure, but indust
 
 ### Is this a Terraform-specific problem?
 
-No. Both incidents stem from properties of self-managed, file-based state backends: plaintext secret storage and unenforced concurrent writes. Pulumi encrypts values explicitly marked as secrets by default, even on a self-managed backend, but the underlying gap, no storage-level encryption or locking enforced by the platform itself, applies to any infrastructure-as-code tool run against a self-managed backend such as a raw S3 bucket or local file, Pulumi included.
+No. Both incidents stem from properties of self-managed, file-based state backends: plaintext secret storage and unenforced concurrent writes. Pulumi encrypts values explicitly marked as secrets by default, even on a self-managed backend, but the underlying gap, no encryption or locking enforced at the storage layer by the platform itself, applies to any infrastructure-as-code tool run against a self-managed backend such as a raw S3 bucket or local file, Pulumi included.
 
 ### What is a state backend in infrastructure as code?
 
