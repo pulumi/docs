@@ -463,6 +463,18 @@ resources:
 pulumi config set aws:region us-west-2
 ```
 
+{{% notes type="info" %}}
+Explicit providers don't automatically inherit configuration values set on the default
+provider of the same type. In the example above, if `aws:profile`, `aws:assumeRole`, or
+`aws:allowedAccountIds` were set in stack configuration for the default AWS provider, the
+`useast1` explicit provider would still need those same values passed to it directly; it
+starts from an empty configuration rather than copying the default provider's settings.
+If several explicit providers (or an explicit provider and the default provider) need to
+share credentials or account-level settings, read those values once from your stack
+configuration and pass them to each provider explicitly, rather than relying on any
+implicit inheritance.
+{{% /notes %}}
+
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below is created in `us-east-1`, and the Kubernetes pod parented to myResource is created in the cluster targeted by the `test-ci` context.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
