@@ -8,6 +8,8 @@ menu:
         name: Variables & Values
         parent: iac-guides-language-essentials
         weight: 10
+aliases:
+    - /docs/iac/guides/language-essentials/variables/
 ---
 
 A variable gives a name to a value so you can reuse it and refer to it later.
@@ -181,7 +183,12 @@ locals {
 
 Stack configuration is the language equivalent of a `Pulumi.<stack>.yaml`
 value you'd otherwise reference directly. You read it into a variable with
-`pulumi.Config` and use it the same way you'd use any other variable:
+`pulumi.Config` and use it the same way you'd use any other variable. Set the
+value first, since `config.require` fails if it isn't set:
+
+```bash
+pulumi config set environment production
+```
 
 {{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
@@ -316,7 +323,7 @@ of them.
 
 ## Next steps
 
-Continue to [conditionals](/docs/iac/guides/language-essentials/conditionals/)
+Continue to [conditionals](/docs/iac/guides/basics/language-essentials/conditionals/)
 to see how `if` statements replace `count`-based conditionals.
 
 ## Learn more

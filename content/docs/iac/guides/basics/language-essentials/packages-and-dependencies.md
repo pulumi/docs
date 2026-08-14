@@ -8,6 +8,8 @@ menu:
         name: Packages & Dependencies
         parent: iac-guides-language-essentials
         weight: 60
+aliases:
+    - /docs/iac/guides/language-essentials/packages-and-dependencies/
 ---
 
 A package is a unit of code you install rather than write. You already depend
@@ -64,7 +66,7 @@ without publishing anything externally.
 
 ## Next steps
 
-Revisit the [series overview](/docs/iac/guides/language-essentials/) or apply
+Revisit the [series overview](/docs/iac/guides/basics/language-essentials/) or apply
 what you've learned by
 [organizing your projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
 

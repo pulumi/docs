@@ -8,6 +8,8 @@ menu:
         name: Conditionals
         parent: iac-guides-language-essentials
         weight: 20
+aliases:
+    - /docs/iac/guides/language-essentials/conditionals/
 ---
 
 A conditional decides whether to do something, or which of two things to do,
@@ -263,6 +265,6 @@ works.
 
 ## Next steps
 
-Continue to [loops and iteration](/docs/iac/guides/language-essentials/loops/)
+Continue to [loops and iteration](/docs/iac/guides/basics/language-essentials/loops/)
 to see how a `for` loop replaces `count` and `for_each` for creating multiple
 resources.

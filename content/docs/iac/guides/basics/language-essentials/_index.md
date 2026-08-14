@@ -6,9 +6,11 @@ h1: Language Essentials for Pulumi Programs
 menu:
     iac:
         name: Language Essentials
-        parent: iac-using-pulumi
-        weight: 15
+        parent: iac-guides-basics
+        weight: 30
         identifier: iac-guides-language-essentials
+aliases:
+    - /docs/iac/guides/language-essentials/
 ---
 
 This series is for engineers who are fluent in YAML, HCL, and cloud APIs, but who
@@ -48,8 +50,8 @@ item in a list. That's where a general-purpose language, or a
 [component](/docs/iac/guides/building-extending/components/when-to-build-a-component/)
 that someone already wrote in one, pays for itself. This series shows the
 general-purpose-language equivalent of `count` and `for_each` too, since even
-teams that write HCL today may want it for the same reasons Terraform users
-reach for a general-purpose provisioner.
+teams that write HCL today may want to step outside HCL for a general-purpose
+language when a conditional or a loop gets complicated enough to need one.
 
 If you're using [Pulumi Neo](/product/neo/) while you're learning, it can draft
 and explain program code for you, which is a reasonable way to see a construct
@@ -65,18 +67,17 @@ throughout, so you can flip back to what you already know at any point; where
 one of them has no equivalent construct, its tab says so. Work through them in
 order, or jump to the one you need:
 
-1. [Variables and values](/docs/iac/guides/language-essentials/variables/)
-1. [Conditionals](/docs/iac/guides/language-essentials/conditionals/)
-1. [Loops and iteration](/docs/iac/guides/language-essentials/loops/)
-1. [Functions](/docs/iac/guides/language-essentials/functions/)
-1. [Classes and components](/docs/iac/guides/language-essentials/classes/)
-1. [Packages and dependencies](/docs/iac/guides/language-essentials/packages-and-dependencies/)
+1. [Variables and values](/docs/iac/guides/basics/language-essentials/variables/)
+1. [Conditionals](/docs/iac/guides/basics/language-essentials/conditionals/)
+1. [Loops and iteration](/docs/iac/guides/basics/language-essentials/loops/)
+1. [Functions](/docs/iac/guides/basics/language-essentials/functions/)
+1. [Classes and components](/docs/iac/guides/basics/language-essentials/classes/)
+1. [Packages and dependencies](/docs/iac/guides/basics/language-essentials/packages-and-dependencies/)
 
 ## Next steps
 
-Start with [variables and values](/docs/iac/guides/language-essentials/variables/),
-or see [Get started](/docs/iac/get-started/aws/) if you haven't installed Pulumi or
-written your first program yet.
+Work through the guides above in order, or see [Get started](/docs/iac/get-started/aws/)
+first if you haven't installed Pulumi or written your first program yet.
 
 ## Learn more
 

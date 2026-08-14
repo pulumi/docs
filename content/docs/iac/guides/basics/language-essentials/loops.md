@@ -8,6 +8,8 @@ menu:
         name: Loops
         parent: iac-guides-language-essentials
         weight: 30
+aliases:
+    - /docs/iac/guides/language-essentials/loops/
 ---
 
 A loop repeats an action once for each item in a collection. This is the
@@ -324,12 +326,20 @@ URNs, and physical IDs relate.
 
 Don't iterate an output directly the way you'd iterate a plain list. A list of
 resource outputs isn't resolved until each resource exists, so looping over it
-with a plain `for` won't see real values yet. Use `apply` or `all` to work
-with resolved values from a set of outputs; see
-[working with outputs](/docs/iac/concepts/inputs-outputs/apply/) and
-[combining outputs](/docs/iac/concepts/inputs-outputs/all/).
+with a plain `for` won't see real values yet. Call `.apply()` on a single
+output, or `pulumi.all([...])` to wait on several at once, and iterate inside
+the callback instead, where the values are resolved:
+
+```typescript
+pulumi.all(buckets.map(b => b.bucket)).apply(names =>
+    names.forEach(name => console.log(name)));
+```
+
+See [working with outputs](/docs/iac/concepts/inputs-outputs/apply/) and
+[combining outputs](/docs/iac/concepts/inputs-outputs/all/) for the full
+picture in every language.
 
 ## Next steps
 
-Continue to [functions](/docs/iac/guides/language-essentials/functions/) to
+Continue to [functions](/docs/iac/guides/basics/language-essentials/functions/) to
 see how to package a repeated set of resources behind a single call.

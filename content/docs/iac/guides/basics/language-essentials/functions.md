@@ -8,6 +8,8 @@ menu:
         name: Functions
         parent: iac-guides-language-essentials
         weight: 40
+aliases:
+    - /docs/iac/guides/language-essentials/functions/
 ---
 
 A function packages a piece of logic so you can call it with different inputs
@@ -268,16 +270,16 @@ module "audit_logging_bucket" {
 
 Calling the same function twice creates two separate resources, so the name
 you pass in has to be unique each time, the same requirement covered in
-[loops](/docs/iac/guides/language-essentials/loops/). A function is the right
+[loops](/docs/iac/guides/basics/language-essentials/loops/). A function is the right
 tool as long as the group of resources it creates doesn't need its own
 identity in Pulumi's state: no combined outputs, no shared configuration,
 nothing another part of the program needs to reference as a unit. Once it
 does, that's the signal to move to a class-based
-[component](/docs/iac/guides/language-essentials/classes/)
+[component](/docs/iac/guides/basics/language-essentials/classes/)
 instead.
 
 ## Next steps
 
 Continue to
-[classes and components](/docs/iac/guides/language-essentials/classes/)
+[classes and components](/docs/iac/guides/basics/language-essentials/classes/)
 to see how grouping resources into a class gives them a shared identity.

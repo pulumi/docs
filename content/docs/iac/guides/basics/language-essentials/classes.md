@@ -8,6 +8,8 @@ menu:
         name: Classes & Components
         parent: iac-guides-language-essentials
         weight: 50
+aliases:
+    - /docs/iac/guides/language-essentials/classes/
 ---
 
 A class groups related data and behavior under one name. Where a function
@@ -312,7 +314,7 @@ resource's parent to the component attaches it in the resource graph, and
 `registerOutputs` (or `RegisterResourceOutputs` in Go) declares which of the
 component's own properties are worth exposing.
 
-## What to watch out for
+## Reusing a component across languages
 
 A component authored once, packaged, and published can be consumed from any
 Pulumi language, including Pulumi YAML. That means a team that prefers to
@@ -328,5 +330,5 @@ consume.
 ## Next steps
 
 Continue to
-[packages and dependencies](/docs/iac/guides/language-essentials/packages-and-dependencies/)
+[packages and dependencies](/docs/iac/guides/basics/language-essentials/packages-and-dependencies/)
 to see how a component gets published and installed like any other package.
