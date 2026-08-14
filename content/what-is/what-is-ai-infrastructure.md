@@ -6,7 +6,7 @@ page_title: "What Is AI Infrastructure?"
 authors: ["alex-leventer"]
 ---
 
-AI infrastructure is the compute, data, orchestration, and control-plane layers that training and inference workloads run on, plus the tooling teams use to provision, govern, and operate all of it. That includes accelerators and networking, data pipelines and storage, model-serving and orchestration frameworks, and the infrastructure-as-code and policy layer that defines, changes, and secures the rest. This page covers what belongs in each layer, how AI infrastructure differs from the cloud infrastructure teams already run, and how cloud engineering teams actually build and operate it, including with AI agents doing part of the work.
+AI infrastructure is the compute, data, orchestration, and control-plane layers that training and inference workloads run on, plus the tooling teams use to provision, govern, and operate it. That includes accelerators and networking, data pipelines and storage, model-serving and orchestration frameworks, and the infrastructure-as-code and policy layer that defines, changes, and secures the rest. This page covers what belongs in each layer, how AI infrastructure differs from the cloud infrastructure teams already run, and how cloud engineering teams actually build and operate it, including with AI agents doing part of the work.
 
 ## What counts as AI infrastructure?
 
@@ -22,7 +22,7 @@ AI infrastructure is every layer a model needs to train, serve, and stay operabl
 | Serving and MLOps | Runs models in production and tracks their behavior over time | KServe, vLLM, MLflow, Weights & Biases |
 | Control plane | Provisions, versions, tests, and governs everything above it | Infrastructure as code, policy as code, secrets management, CI/CD |
 
-Most AI infrastructure guides treat that fifth layer as an afterthought, usually a single line naming a provisioning tool. That is a gap worth naming directly: an AI stack that nobody can safely change, audit, or roll back is not production infrastructure, it is a demo.
+Most AI infrastructure guides treat that fifth layer as an afterthought, often a single line naming a provisioning tool. That is a gap worth naming directly: an AI stack that nobody can safely change, audit, or roll back is not production infrastructure, it is a demo.
 
 ## How is AI infrastructure different from traditional cloud infrastructure?
 
@@ -67,7 +67,7 @@ Agent-ready infrastructure as code is written in a language and structure that a
 
 ### Properties of agent-ready infrastructure
 
-- Written in a real programming language (Python, TypeScript, Go, C#, Java, or HCL), so agents can use the same generation, testing, and refactoring patterns they already use for application code.
+- Written in a real programming language (Python, TypeScript, Go, C#, or Java), so agents can use the same generation, testing, and refactoring patterns they already use for application code.
 - Previewable before it runs, so an agent's proposed change is visible as a diff before it touches anything live.
 - Auditable after it runs, showing what changed, when, and by whom, including which changes came from an agent.
 - Governable by policy, so guardrails apply automatically regardless of whether a human or an agent proposed the change.
@@ -103,7 +103,7 @@ Teams govern AI infrastructure the same way they govern any production infrastru
 
 ### Guardrails that hold up in production
 
-- **Policy as code** evaluates every proposed change, human or agent-authored, against organizational rules before it can apply. See [what policy as code is](/what-is/what-is-policy-as-code/) and Pulumi's [CrossGuard](/docs/iac/crossguard/) implementation.
+- **Policy as code** evaluates every proposed change, human or agent-authored, against organizational rules before it can apply. See [what policy as code is](/what-is/what-is-policy-as-code/) and Pulumi's [Pulumi Policies](/docs/insights/policy/) implementation.
 - **Secrets and configuration management** keeps credentials out of code and out of an agent's prompt context. See Pulumi's [secrets management](/product/secrets-management/).
 - **Drift detection and inventory** catch infrastructure that diverged from what is declared, whether a person clicked around in a console or an agent applied a change outside the normal path. See Pulumi's [insights and governance](/product/insights-governance/) capabilities.
 - **Human-in-the-loop approval** keeps a person in the decision path for changes above a defined risk threshold, even when an agent generated the change.
@@ -125,7 +125,7 @@ A working AI infrastructure stack combines accelerator capacity, a data layer, a
 | Serving and MLOps | KServe, vLLM, MLflow, Weights & Biases |
 | Control plane | Infrastructure as code, policy as code, secrets management, CI/CD |
 
-Kubernetes has become the default orchestration layer for AI workloads specifically, not just container workloads generally; see [how teams run AI agents on Kubernetes](/blog/ai-agents-on-kubernetes/) for the node groups, schedulers, and serving patterns that shows up in practice. Tool selection within each layer is a fast-moving, genuinely vendor-specific decision; for a detailed, evaluated comparison of AI infrastructure tools by category, see [the best AI infrastructure tools](/blog/ai-infrastructure-tools/).
+Kubernetes has become the default orchestration layer for AI workloads specifically, not just container workloads generally — the CNCF figures above show 66% of organizations hosting generative AI models already run inference on it. See [how teams run AI agents on Kubernetes](/blog/ai-agents-on-kubernetes/) for the node groups, schedulers, and serving patterns that show up in practice. Tool selection within each layer is a fast-moving, genuinely vendor-specific decision; for a detailed, evaluated comparison of AI infrastructure tools by category, see [the best AI infrastructure tools](/blog/ai-infrastructure-tools/).
 
 ## How do you build AI infrastructure?
 
@@ -160,7 +160,7 @@ AI infrastructure is the stack that AI workloads run on, including compute, data
 
 ### Do you need Kubernetes for AI infrastructure?
 
-Not strictly, but it has become the default choice. Kubernetes runs in production for 82% of container users as of 2025, up from 66% in 2023, and 66% of organizations hosting generative AI models use it to manage some or all of their inference workloads, according to the CNCF's 2025 Annual Cloud Native Survey. Teams can run AI workloads without it, but most production stacks now build on Kubernetes for scheduling and serving.
+Not strictly, but it has become the default choice. Most production stacks now build on Kubernetes for scheduling and serving; per the CNCF's 2025 Annual Cloud Native Survey, 66% of organizations hosting generative AI models already use it to manage some or all of their inference workloads. Teams can run AI workloads without it, but doing so means giving up the scheduling, autoscaling, and multi-tenant isolation most teams already depend on.
 
 ### What is the difference between training and inference infrastructure?
 
@@ -172,7 +172,7 @@ The right tools depend on the layer: accelerator providers like NVIDIA, AMD, Cor
 
 ### How do AI agents deploy cloud infrastructure?
 
-AI agents deploy cloud infrastructure through a coding interface, generating or editing infrastructure-as-code programs, then routing the resulting change through an automated preview and policy check before it applies. Research on agent performance across cloud interfaces found infrastructure as code gave agents a perfect provisioning success rate in a fixed number of steps, while a browser-based console required roughly 30 times more steps for the same task. See [what MCP means for infrastructure as code](/what-is/mcp-for-infrastructure-as-code/) for how agents get grounded access to live infrastructure state before proposing changes.
+AI agents deploy cloud infrastructure through a coding interface, generating or editing infrastructure-as-code programs, then routing the resulting change through an automated preview and policy check before it applies. Research on agent performance across cloud interfaces found infrastructure as code gave agents a perfect provisioning success rate in a fixed number of steps, while a browser-based console needed roughly 30 times more steps than the fastest interface tested, the command line. See [what MCP means for infrastructure as code](/what-is/mcp-for-infrastructure-as-code/) for how agents get grounded access to live infrastructure state before proposing changes.
 
 ### How do you secure AI infrastructure?
 
