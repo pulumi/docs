@@ -33,9 +33,9 @@ itemlist:
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        There is no single "Kubernetes IaC tool." There's a cluster layer, a workload layer, and a delivery layer, and most roundups blur all three together.
+        "Kubernetes IaC" actually spans a cluster layer, a workload layer, and a delivery layer. Most roundups blur all three together.
 
-        We separated them and compared what actually fits each one: Pulumi, Terraform, Helm, Kustomize, Crossplane, Argo CD, Flux, cdk8s, and kro.
+        We separated them and compared what fits each one: Pulumi, Terraform, Helm, Kustomize, Crossplane, Argo CD, Flux, cdk8s, and kro.
     linkedin: |
         Most "best Kubernetes IaC tools" lists compare Terraform, Helm, and Argo CD as if they compete for the same job. They don't.
 
