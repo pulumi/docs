@@ -24,6 +24,8 @@ We've actually already started creating a component resource in the encapsulatio
 
 When we're converting to a component resource, we subclass `pulumi.ComponentResource` so that our new component resource can get all of the lovely benefits of a resource (state tracking, diffs, name fields, etc.) that other resources have.
 
+{{< chooser language "typescript,python" />}}
+
 {{% choosable language typescript %}}
 
 In TypeScript, we do this by extending `pulumi.ComponentResource` and calling `super()` in the class constructor. This call ensures that Pulumi registers the component resource as a resource properly.
@@ -35,8 +37,6 @@ In TypeScript, we do this by extending `pulumi.ComponentResource` and calling `s
 In Python, we do this by passing `pulumi.ComponentResource` in the class definition and calling `super()` in the initializer. This call ensures that Pulumi registers the component resource as a resource properly.
 
 {{% /choosable %}}
-
-{{< chooser language "typescript,python" />}}
 
 {{% choosable language typescript %}}
 

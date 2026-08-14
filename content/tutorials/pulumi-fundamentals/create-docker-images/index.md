@@ -52,6 +52,8 @@ For the purposes of this topic, we've already built the images. We are showing t
 
 ## Pull a Docker Image with Pulumi
 
+{{< chooser language "typescript,python" />}}
+
 {{% choosable language typescript %}}
 
 Before you start writing a Pulumi program, you need to install a resource provider. In this case, you'll need the `@pulumi/docker` provider for Node.js. Let's install the provider now:

@@ -39,6 +39,20 @@ describe("normalizeState", () => {
                 });
             });
         });
+
+        describe("with a persisted HCL language preference", () => {
+            it("keeps HCL as the language", () => {
+                const state = normalizeState({ preferences: { language: "hcl" } });
+                expect(state.preferences.language).toBe("hcl");
+            });
+        });
+
+        describe("with a persisted special-purpose language preference", () => {
+            it("coerces OPA back to the default language", () => {
+                const state = normalizeState({ preferences: { language: "opa" } });
+                expect(state.preferences.language).toBe("typescript");
+            });
+        });
     });
 
     describe("given a banners slice", () => {
