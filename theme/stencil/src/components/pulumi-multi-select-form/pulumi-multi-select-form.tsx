@@ -46,9 +46,11 @@ export class PulumiMultiSelectForm {
     @Prop()
     linkedinConversionId?: number;
 
-    // The currently selected item.
+    // The currently selected item. Left undefined until the visitor makes a
+    // choice (or arrives via a ?form= deep link that pre-selects one), so the
+    // embedded HubSpot form's extra fields stay hidden until they're relevant.
     @State()
-    selectedItem: MultiSelectFormItem;
+    selectedItem: MultiSelectFormItem | undefined;
 
     @State()
     formSubmitted = false;
@@ -60,13 +62,7 @@ export class PulumiMultiSelectForm {
     componentWillLoad() {
         if (this.defaultFormId !== "") {
             this.selectedItem = this.items.find(item => item.hubspotFormId === this.defaultFormId);
-
-            if (this.selectedItem) {
-                return;
-            }
         }
-
-        this.selectedItem = this.items[0];
     }
 
     // After the form submits we should hide the session selector.
@@ -98,12 +94,15 @@ export class PulumiMultiSelectForm {
     }
 
     // When the select input changes we need to update the state accordingly.
+    // An empty value means the visitor is back on the unselected placeholder,
+    // so collapse back to the not-yet-chosen state rather than crashing on a
+    // missing item.
     private handleSelectChange(hubspotFormId: string) {
-        this.selectedItem = this.items.find(item => item.hubspotFormId === hubspotFormId);
+        this.selectedItem = hubspotFormId ? this.items.find(item => item.hubspotFormId === hubspotFormId) : undefined;
     }
 
     render() {
-        const selectedFormId = this.selectedItem?.hubspotFormId;
+        const selectedFormId = this.selectedItem?.hubspotFormId || "";
 
         return (
             <div>
@@ -111,6 +110,9 @@ export class PulumiMultiSelectForm {
                     <span>
                         <span class={this.labelClass || ""}>{this.labelText}</span>
                         <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
+                            <option value="" selected={!selectedFormId} disabled hidden>
+                                Please select
+                            </option>
                             {this.items.map(item => {
                                 const isSelected = item.hubspotFormId === selectedFormId;
                                 return (
@@ -122,7 +124,7 @@ export class PulumiMultiSelectForm {
                         </select>
                     </span>
                 )}
-                {this.selectedItem.cta ? (
+                {!this.selectedItem ? null : this.selectedItem.cta ? (
                     <div class="mt-8"><a class="btn btn-secondary" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
                 ) : (
                     <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
