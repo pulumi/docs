@@ -85,7 +85,7 @@ EOT
 
 Now that you have an `index.html` file with some content, open {{< langfile >}} and modify it to add that file to your storage bucket.
 
-For this, you'll use a Pulumi [asset](/docs/iac/concepts/assets-archives/#assets) to assign the content of the file to a new `BucketObject`.
+For this, you'll use a Pulumi [asset](/docs/iac/concepts/assets-archives/#assets) to assign the content of the file to a new bucket object.
 
 {{% choosable language typescript %}}
 
@@ -220,9 +220,9 @@ resource "gcp_storage_bucket_object" "index-html" {
 
 {{% /choosable %}}
 
-Notice how you provide the name of the bucket you created earlier as an input for the `BucketObject`. This tells Pulumi which bucket the object should live in.
+Notice how you provide the name of the bucket you created earlier as an input for the bucket object. This tells Pulumi which bucket the object should live in.
 
-Below the `BucketObject`, add an IAM binding allowing the contents of the bucket to be viewed anonymously over the Internet:
+Below the bucket object, add an IAM binding allowing the contents of the bucket to be viewed anonymously over the Internet:
 
 {{% choosable language typescript %}}
 

@@ -112,7 +112,7 @@ component -- the `files` to add to the website -- and outputs -- a single proper
 {{% choosable language hcl %}}
 
 In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It starts out
-with just its input declared, and you will add the Google Cloud Storage resources to it in the next step. The module's
+with only its input declared, and you will add the Google Cloud Storage resources to it in the next step. The module's
 `variable` blocks declare the inputs for the component -- the `files` to add to the website -- and its `output` blocks
 declare the outputs -- a single website `url`.
 

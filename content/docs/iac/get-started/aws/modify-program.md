@@ -300,7 +300,7 @@ Next, add a new file called `index.html` to your current directory with these co
 </html>
 ```
 
-Then open {{< langfile >}} and create a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) after the three other new resources:
+Then open {{< langfile >}} and create a [bucket object](/registry/packages/aws/api-docs/s3/bucketobject/) after the three other new resources:
 
 {{% choosable language "typescript" %}}
 

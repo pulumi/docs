@@ -234,7 +234,7 @@ resource "azure-native_storage_storage_account_static_website" "staticWebsite" {
 Notice that resources can reference each other, which forms automatic dependencies between them.
 Pulumi uses this information to parallelize deployments safely.
 
-Now use all of these cloud resources and a local `FileAsset` resource to upload `index.html` into your storage container by adding a [`Blob`](/registry/packages/azure-native/api-docs/storage/blob/) at the end of the file (after enabling the static website support):
+Now use all of these cloud resources and a local file asset to upload `index.html` into your storage container by adding a [blob](/registry/packages/azure-native/api-docs/storage/blob/) at the end of the file (after enabling the static website support):
 {{% choosable language typescript %}}
 
 ```typescript
@@ -353,7 +353,7 @@ This uploads the `index.html` file to your storage container using a Pulumi conc
 
 ### Export the website URL
 
-Now to export the website's URL for easy access, add the `staticEndpoint` export to your return statement as shown in this example:
+Now to export the website's URL for easy access, add a static endpoint export as shown in this example:
 
 {{% choosable language typescript %}}
 

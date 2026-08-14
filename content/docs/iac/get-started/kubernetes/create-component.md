@@ -124,7 +124,7 @@ component -- the `isMinikube` flag to determine service type -- and outputs -- a
 {{% choosable language hcl %}}
 
 In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It starts out
-with just its input declared, and you will add the Kubernetes resources to it in the next step. The module's `variable` blocks
+with only its input declared, and you will add the Kubernetes resources to it in the next step. The module's `variable` blocks
 declare the inputs for the component -- the `isMinikube` flag to determine service type -- and its `output` blocks declare
 the outputs -- a single service `ip`.
 
