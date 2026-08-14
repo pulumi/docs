@@ -1,6 +1,6 @@
 ---
 title: "Compatibility Testing Pulumi HCL"
-date: 2026-08-13
+date: 2026-08-14
 draft: false
 meta_desc: "How we test that Pulumi HCL is an OpenTofu compatible HCL runtime."
 feature_image: feature.png
@@ -11,6 +11,10 @@ tags:
     - terraform
 category: engineering
 schema_type: auto
+related_posts:
+    - bring-your-terraform-estate-into-the-agentic-era
+    - terraform-to-pulumi-cloud-hands-on
+    - terraforms-data-model-on-pulumis-engine
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
@@ -45,26 +49,28 @@ At the end of the day, Pulumi is a system to translate actual state & desired st
 
 Executing a Terraform program looks like this:
 
-```
-              +---------------+
-              | current state |
-              +---------------+
-                       |
-                       v
-                    +-----------------------------------------+
- +------------+     | +---------------+    +----------------+ |
- | *.tf files | --> | | desired state |--->| provider steps | |
- +------------+     | +---------------+    +----------------+ |     +----------------+
-                    |        reconciliation engine            | --> | provider steps |
-                    +-----------------------------------------+     +----------------+
+```mermaid
+flowchart LR
+    tf["*.tf files"]
+    current["current state"]
+    subgraph engine["reconciliation engine"]
+        direction LR
+        desired["desired state"] --> internal["provider steps"]
+    end
+    output["provider steps"]
+
+    tf --> desired
+    current --> engine
+    engine --> output
 ```
 
 Executing a Pulumi program is more dynamic, because the reconciliation engine is in more active dialog with the user's program. That said, the diagram is the same shape. To [match semantics](/blog/terraforms-data-model-on-pulumis-engine/#providers), Pulumi HCL dynamically bridges [any Terraform provider in the registry](/registry/packages/terraform-provider/). This means that, for the subset of Pulumi programs that are valid OpenTofu programs, both programs take the same input (`*.tf` files) and produce the same step output (Terraform provider steps). Providers are the part of our model that generates user-observable behavior, which means if we match what providers see, we match what users see. This gives us a really nice definition of correctness for Pulumi HCL[^1]:
 
 > Pulumi HCL correctly interprets an HCL program when it generates the same set of provider steps as `tofu` does.
 
-> [!NOTE]
-> If you are familiar with property-based testing, you might be thinking this looks like a testable property. You're right.
+{{% notes type="info" %}}
+If you are familiar with property-based testing, you might be thinking this looks like a testable property. You're right.
+{{% /notes %}}
 
 [^1]: Pulumi HCL accepts a superset of what OpenTofu accepts. This method only applies to the subset of programs that OpenTofu accepts.
 
@@ -122,11 +128,11 @@ One really important takeaway is that nowhere in this test case do we write down
 
 Every [`tfcompat.RunCase`](https://github.com/pulumi/pulumi-hcl/blob/b966ee6fd0a6d08389856b3d98cb28e58072927d/tests/testutil/tfcompat/harness.go#L191) runs 2 parallel processes, then compares the results:
 
-**The Terraform Side:** `tfcompat.RunCase` runs each Terraform provider in-memory, then copies the files in its test directory to a temp dir and runs `tofu plan`, then `tofu apply` against the temp dir. We use [`TF_REATTACH_PROVIDERS`](https://developer.hashicorp.com/terraform/plugin/debugging#running-terraform-with-a-provider-in-debug-mode) to have `tofu` attach to our in-memory Terraform providers.
+- **The Terraform Side:** `tfcompat.RunCase` runs each Terraform provider in-memory, then copies the files in its test directory to a temp dir and runs `tofu plan`, then `tofu apply` against the temp dir. We use [`TF_REATTACH_PROVIDERS`](https://developer.hashicorp.com/terraform/plugin/debugging#running-terraform-with-a-provider-in-debug-mode) to have `tofu` attach to our in-memory Terraform providers.
 
-**The Pulumi Side:** `tfcompat.RunCase` runs each Terraform provider in-memory & copies the test files in its test directory to a separate test dir, and runs `pulumi preview`, then `pulumi up` against the temp dir. We use [`PULUMI_BRIDGE_REATTACH_PROVIDERS`](https://github.com/pulumi/pulumi-terraform-bridge/pull/3559) to instruct [our dynamic bridge](/registry/packages/terraform-provider/) to attach to our in-memory provider.
+- **The Pulumi Side:** `tfcompat.RunCase` runs each Terraform provider in-memory & copies the test files in its test directory to a separate test dir, and runs `pulumi preview`, then `pulumi up` against the temp dir. We use [`PULUMI_BRIDGE_REATTACH_PROVIDERS`](https://github.com/pulumi/pulumi-terraform-bridge/pull/3559) to instruct [our dynamic bridge](/registry/packages/terraform-provider/) to attach to our in-memory provider.
 
-**For both** Pulumi & Terraform: the test harness [records each provider's gRPC calls](https://github.com/pulumi/pulumi-hcl/blob/b966ee6fd0a6d08389856b3d98cb28e58072927d/tests/testutil/tfexec/recorder.go#L50) for all providers and it records the stack outputs for both invocations.
+**For both** Pulumi & Terraform, the test harness [records each provider's gRPC calls](https://github.com/pulumi/pulumi-hcl/blob/b966ee6fd0a6d08389856b3d98cb28e58072927d/tests/testutil/tfexec/recorder.go#L50) for all providers and it records the stack outputs for both invocations.
 
 After both runs have completed, the test asserts that the outputs of the Pulumi program & the Terraform program match, and that the providers saw the same operations. A test case passes if and only if the providers for OpenTofu & Pulumi saw the same operations, and stack outputs were equal.
 
@@ -144,4 +150,4 @@ Because of how easy it is to send LLMs to hunt bugs, I think of this almost as a
 
 ## Conclusion
 
-Having a strong and testable definition for Pulumi HCL makes it easy & fast to write integration tests, ensuring that our implementation is correct. LLMs are excellent at finding bugs when given the ability to write tests that fail if and only if they show a real divergence between our HCL implementation & OpenTofu, letting us hunt for bugs at LLM scale. All this testing has made us pretty confident that what we've shipped is pretty close to full parity with OpenTofu, and we'd love it if you [gave it a try](/docs/iac/languages-sdks/hcl/).
+Having a strong and testable definition for Pulumi HCL makes it easy & fast to write integration tests, ensuring that our implementation is correct. LLMs are excellent at finding bugs when given the ability to write tests that fail if and only if they show a real divergence between our HCL implementation & OpenTofu, letting us hunt for bugs at LLM scale. All this testing has made us pretty confident that [what we've shipped](/releases/terraform-state-backend-modules-hcl/) is pretty close to full parity with OpenTofu, and we'd love it if you [gave it a try](/docs/iac/languages-sdks/hcl/).
