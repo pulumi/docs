@@ -26,7 +26,7 @@ aliases:
 
 Most AWS CLI credential errors, such as `ExpiredToken`, `InvalidAccessKeyId`, `InvalidClientTokenId`, `SignatureDoesNotMatch`, and "Unable to locate credentials," trace back to the same root cause: long-lived credentials that were configured locally, went stale, or were never configured correctly in the first place. Amazon Security Token Service (STS) issues temporary, limited-privilege credentials specifically to reduce this risk, but temporary credentials still require someone to generate, distribute, and refresh them by hand unless a tool does it automatically.
 
-[Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) removes that manual step. With [dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), Pulumi ESC requests short-lived AWS credentials on demand and injects them into the shell for the duration of a single command, via `pulumi env run`. There is nothing stored on disk to expire, misconfigure, or leak, and every AWS CLI command, from `aws s3 ls` to `aws sts get-caller-identity`, runs against fresh, correctly scoped credentials every time.
+[Pulumi ESC (Environments, Secrets, and Configurations)](/docs/esc/) removes that manual step. With [dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), Pulumi ESC requests short-lived AWS credentials on demand and injects them into the shell for the duration of a single command, via `pulumi env run`. There is nothing stored on disk to expire, misconfigure, or leak, and every AWS CLI command, from `aws s3 ls` to `aws sts get-caller-identity`, runs against fresh, correctly scoped credentials every time.
 
 ## Common AWS CLI credential errors and their cause
 
@@ -36,7 +36,7 @@ Most AWS CLI credential errors, such as `ExpiredToken`, `InvalidAccessKeyId`, `I
 
 ### InvalidAccessKeyId
 
-"An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation" means the access key ID in the request does not exist in AWS's records for the target account, most often because the key was deleted, belongs to a different account, or was mistyped.
+"An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation" means the access key ID in the request does not exist in AWS's records for the target account — commonly because the key was deleted, belongs to a different account, or was mistyped.
 
 ### InvalidClientTokenId
 
@@ -89,11 +89,11 @@ Logged in to pulumi.com as …
 
 ### Step 2: Create the OIDC configuration
 
-Rather than storing AWS credentials as static secrets in an ESC environment, configure dynamic credentials so Pulumi ESC generates them on demand. Follow the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/), and make sure the IAM role you create has sufficient permissions for the AWS operations you plan to run.
+Rather than storing AWS credentials as static secrets in an ESC environment, configure dynamic credentials so Pulumi ESC generates them on demand. Follow the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/guides/configuring-oidc/aws/), and make sure the IAM role you create has sufficient permissions for the AWS operations you plan to run.
 
 ### Step 3: Create a new Pulumi ESC environment
 
-Once OIDC is configured, create a new environment in [Pulumi Cloud](https://app.pulumi.com/signin). Select the correct organization in the left-hand navigation, click **Environments**, then **Create environment**, and give it a name.
+Once OIDC is configured, create a new environment in [Pulumi Cloud](https://app.pulumi.com/signin). Make sure you have the correct organization selected in the left-hand navigation, select **Environments**, then **+ Create Environment**, and give it a name.
 
 {{< video title="Open environment in Pulumi ESC console" src="https://www.pulumi.com/uploads/esc-create-new-env.mp4" autoplay="true" loop="true" >}}
 
@@ -175,8 +175,8 @@ Yes. Once an environment is configured with the `aws-login` OIDC provider, `pulu
 
 Pulumi ESC makes it easier than ever to tame AWS credential management, from everyday commands like `aws s3 ls` to the errors that show up when credentials are stale, wrong, or missing entirely. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more:
 
-- Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
+- Follow the [Getting Started](/docs/esc/get-started/) guide.
+- Read the [documentation](/docs/esc/) for all the commands and features available.
 - Visit the [open source](https://github.com/pulumi/esc) repo for Pulumi ESC.
 
 Feel free to [join the Pulumi community on Slack](https://slack.pulumi.com/) and let us know what you think!
