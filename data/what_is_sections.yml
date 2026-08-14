@@ -86,18 +86,4 @@ troubleshooting:
   short: Troubleshooting
   slugs:
     - run-aws-sts-get-caller-identity-with-dynamic-credentials
-    - run-aws-s3-ls-with-dynamic-credentials
-    - run-aws-s3-cp-with-dynamic-credentials
-    - run-aws-s3-sync-with-dynamic-credentials
-    - run-aws-ec2-describe-instances-with-dynamic-credentials
-    - run-aws-ec2-start-instances-with-dynamic-credentials
-    - run-aws-ec2-stop-instances-with-dynamic-credentials
-    - run-aws-dynamodb-list-tables-with-dynamic-credentials
-    - run-aws-lambda-list-functions-with-dynamic-credentials
-    - run-aws-iam-list-users-with-dynamic-credentials
-    - run-aws-cloudwatch-get-metric-data-with-dynamic-credentials
-    - resolve-unable-to-locate-credentials
-    - resolve-list-buckets-expired-token
-    - resolve-list-buckets-invalid-access-key-id
-    - resolve-list-buckets-invalid-client-token-id
-    - resolve-list-buckets-signature-does-not-match
+    - aws-cli-dynamic-credentials-with-pulumi-esc
