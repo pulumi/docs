@@ -28,16 +28,20 @@
 }}
 
 {{/*
-  Add dates, but only from a real source of truth — front-matter dates or git
-  commit info. Never fall back to `now`: an absent git history (e.g. a shallow
-  CI checkout) would otherwise stamp every page as modified today, which is both
-  wrong and harmful for SEO/AEO. When no real date exists, omit the fields.
+  Add dates, but only from a real source of truth. datePublished must come from
+  an explicit front-matter date/publishDate — never from git info, since a
+  page's git history reflects when it was last *touched*, not when it was
+  first published, and using it here fabricates a publish date that always
+  equals dateModified. When no explicit front-matter date exists, omit
+  datePublished entirely (a page with only dateModified is valid schema.org).
+  dateModified may fall back to git info, since that's an honest modification
+  signal. Never fall back to `now`: an absent git history (e.g. a shallow CI
+  checkout) would otherwise stamp every page as modified today, which is both
+  wrong and harmful for SEO/AEO.
 */}}
 {{ $publishDate := "" }}
 {{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") }}
   {{ $publishDate = .PublishDate }}
-{{ else if and .GitInfo .GitInfo.AuthorDate }}
-  {{ $publishDate = .GitInfo.AuthorDate }}
 {{ end }}
 
 {{ $modifiedDate := "" }}
