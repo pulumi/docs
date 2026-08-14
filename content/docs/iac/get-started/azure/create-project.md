@@ -486,8 +486,8 @@ output "storage_account_name" {
 }
 ```
 
-The `pulumi/azure-native` source selects the native Pulumi Azure provider, whose resource types follow the Azure
-resource manager APIs directly. Drop the `pulumi/` prefix and the source resolves from the
+The `pulumi/azure-native` source selects the Pulumi Azure Native provider, whose resource types follow the Azure
+Resource Manager APIs directly. Drop the `pulumi/` prefix and the source resolves from the
 [OpenTofu registry](https://opentofu.org/registry/) instead, exactly as it would in Terraform.
 
 {{% /choosable %}}

@@ -111,8 +111,8 @@ component -- the `files` to add to the website -- and outputs -- a single proper
 
 {{% choosable language hcl %}}
 
-In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It'll be
-mostly empty to start with but you will add the Google Cloud Storage resources to it in the next step. The module's
+In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It starts out
+with just its input declared, and you will add the Google Cloud Storage resources to it in the next step. The module's
 `variable` blocks declare the inputs for the component -- the `files` to add to the website -- and its `output` blocks
 declare the outputs -- a single website `url`.
 
@@ -315,8 +315,8 @@ Next, make three changes:
 1. Generalize the creation of bucket objects by looping over the list of `files` with `for_each`
 1. Return the resulting website URL as the module's `url` output
 
-There is no step to reparent the resources: everything a module declares is automatically a child of the component
-resource that Pulumi creates for the module instance.
+Nothing needs reparenting: everything a module declares is automatically a child of the component resource that
+Pulumi creates for the module instance.
 
 {{% /choosable %}}
 
@@ -675,8 +675,8 @@ resource "gcp_storage_bucket" "my-bucket" {
     main_page_suffix = "index.html"
   }
 
-  # A module prefixes the Pulumi names of the resources it contains, so set the
-  # name explicitly (here and below) to keep the names the program used before.
+  # A module prefixes the Pulumi names of the resources it contains, so set each
+  # name explicitly (here and below) to keep the names free of that prefix.
   pulumi {
     name = "my-bucket"
   }
@@ -931,7 +931,8 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
   details
 ```
 
-The component's type, `components:index:Website`, is derived from the name of the directory the module lives in.
+The `Website` segment of the component's type, `components:index:Website`, is the title-cased name of the
+directory the module lives in; the `components:index:` prefix is fixed.
 
 {{% /choosable %}}
 

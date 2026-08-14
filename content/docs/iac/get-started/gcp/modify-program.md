@@ -85,7 +85,7 @@ EOT
 
 Now that you have an `index.html` file with some content, open {{< langfile >}} and modify it to add that file to your storage bucket.
 
-For this, you'll use Pulumi's `FileAsset` class to assign the content of the file to a new `BucketObject`.
+For this, you'll use a Pulumi [asset](/docs/iac/concepts/assets-archives/#assets) to assign the content of the file to a new `BucketObject`.
 
 {{% choosable language typescript %}}
 
