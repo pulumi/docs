@@ -255,6 +255,38 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Bucket ...
+
+# Turn the bucket into a website:
+resource "aws_s3_bucket_website_configuration" "website" {
+  bucket = aws_s3_bucket.my-bucket.id
+
+  index_document {
+    suffix = "index.html"
+  }
+}
+
+# Permit access control configuration:
+resource "aws_s3_bucket_ownership_controls" "ownership-controls" {
+  bucket = aws_s3_bucket.my-bucket.id
+
+  rule {
+    object_ownership = "ObjectWriter"
+  }
+}
+
+# Enable public access to the website:
+resource "aws_s3_bucket_public_access_block" "public-access-block" {
+  bucket            = aws_s3_bucket.my-bucket.id
+  block_public_acls = false
+}
+```
+
+{{% /choosable %}}
+
 Notice that resources can reference each other, which forms automatic dependencies between them.
 Pulumi uses this information to parallelize deployments safely.
 
@@ -393,6 +425,30 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Other resources ...
+
+# Create an S3 Bucket object
+resource "aws_s3_bucket_object" "index-html" {
+  bucket       = aws_s3_bucket.my-bucket.id
+  key          = "index.html"
+  source       = fileasset("index.html")
+  content_type = "text/html"
+  acl          = "public-read"
+
+  depends_on = [
+    aws_s3_bucket_ownership_controls.ownership-controls,
+    aws_s3_bucket_public_access_block.public-access-block,
+  ]
+}
+```
+
+In HCL, explicit dependencies use the standard Terraform `depends_on` meta-argument rather than a `pulumi` option, and `fileasset` is a [Pulumi-specific function](/docs/iac/languages-sdks/hcl/hcl-language-reference/#pulumi-specific-functions) that turns a local file into an asset. Resource labels can't contain dots, so the resource is labeled `index-html` and the `key` attribute names the object in the bucket.
+
+{{% /choosable %}}
+
 This uploads the `index.html` file to your bucket using a Pulumi concept called an [asset](/docs/iac/concepts/assets-archives/#assets).
 
 The bucket object also declares that it [`dependsOn`](/docs/iac/concepts/resources/options/dependson/) the other resources. That is because
@@ -462,6 +518,17 @@ ctx.export("url", website.websiteEndpoint().applyValue(
 outputs:
   # ...
   url: http://${website.websiteEndpoint}
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+# Export the bucket's autoassigned URL:
+output "url" {
+  value = "http://${aws_s3_bucket_website_configuration.website.website_endpoint}"
+}
 ```
 
 {{% /choosable %}}

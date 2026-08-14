@@ -84,16 +84,44 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+resource "website_aws_s3_website" "my-website" {
+  files = [abspath("index.html")]
+}
+```
+
+{{% /choosable %}}
+
 Using components here also has the benefit that, as the requirements for S3 websites changes, you can
 update the one component definition and have all uses of it benefit.
 
 ### Define a new component
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 To define a new component, create a class called `AwsS3Website` that derives from `ComponentResource`. It'll have a mostly-empty
 constructor to start with but you will add the AWS S3 resources to it in the next step. You'll also define the inputs for the
 component -- the `files` to add to the website -- and outputs -- a single property with the website `url`.
 
 To get going, create a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+In HCL, a component is a module: a directory of `.tf` files with a `PulumiPlugin.yaml` naming the `hcl` runtime. The module's `variable` blocks become the component's inputs -- the `files` to add to the website -- and its `output` blocks become the component's outputs -- a single `url` value.
+
+To get going, create a new directory called `website` alongside `main.tf` and add two files to it. First, `website/PulumiPlugin.yaml`:
+
+```yaml
+name: website
+runtime: hcl
+```
+
+Then a mostly-empty `website/main.tf` that declares the component and its inputs; you will add the AWS S3 resources to it in the next step:
+
+{{% /choosable %}}
 
 {{% choosable language typescript %}}
 
@@ -247,19 +275,63 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  component {
+    name = "AwsS3Website"
+  }
+  package {
+    name    = "website"
+    version = "1.0.0"
+  }
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+# The files to serve from the website.
+variable "files" {
+  type = list(string)
+}
+```
+
+The `component` and `package` blocks set the component's name and its package identity; everything else is an ordinary Pulumi HCL program. See the [HCL component reference](/docs/iac/languages-sdks/hcl/hcl-component-reference/) for the full details.
+
+{{% /choosable %}}
+
 This defines a component but it doesn't do much yet.
 
 ### Refactor your code into the component
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Next, make four changes:
 
-1. Move all resources from {{< langfile >}} ino the component's constructor
-2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
-3. Generalize the creation of bucket objects by looping over the list of `files`
-4. Assign the resulting website URL to the `url` property of the component
+1. Move all resources from {{< langfile >}} into the component's constructor
+1. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
+1. Generalize the creation of bucket objects by looping over the list of `files`
+1. Assign the resulting website URL to the `url` property of the component
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or paste the contents of this into {{< compfile >}}:
+
+{{% /choosable %}}
+{{% choosable language hcl %}}
+
+Next, make three changes:
+
+1. Move all resources from `main.tf` into `website/main.tf`
+1. Generalize the creation of bucket objects by looping over the list of `files` with `for_each`
+1. Assign the resulting website URL to a `url` output of the module
+
+The resulting `website/main.tf` will look like this; you can make each edit one at a time if preferred
+to get a feel for things, or paste the contents of this into `website/main.tf`:
+
+{{% /choosable %}}
 
 {{% choosable language typescript %}}
 
@@ -677,6 +749,82 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  component {
+    name = "AwsS3Website"
+  }
+  package {
+    name    = "website"
+    version = "1.0.0"
+  }
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+# The files to serve from the website.
+variable "files" {
+  type = list(string)
+}
+
+# Create an S3 bucket for the website:
+resource "aws_s3_bucket" "bucket" {}
+
+# Turn the bucket into a website:
+resource "aws_s3_bucket_website_configuration" "website" {
+  bucket = aws_s3_bucket.bucket.id
+
+  index_document = {
+    suffix = "index.html"
+  }
+}
+
+# Permit access control configuration:
+resource "aws_s3_bucket_ownership_controls" "ownership-controls" {
+  bucket = aws_s3_bucket.bucket.id
+
+  rule = {
+    object_ownership = "ObjectWriter"
+  }
+}
+
+# Enable public access to the website:
+resource "aws_s3_bucket_public_access_block" "public-access-block" {
+  bucket            = aws_s3_bucket.bucket.id
+  block_public_acls = false
+}
+
+# Upload each file to the bucket:
+resource "aws_s3_bucket_object" "files" {
+  for_each = toset(var.files)
+
+  bucket       = aws_s3_bucket.bucket.id
+  key          = basename(each.value)
+  source       = fileasset(each.value)
+  content_type = "text/html"
+  acl          = "public-read"
+
+  depends_on = [
+    aws_s3_bucket_ownership_controls.ownership-controls,
+    aws_s3_bucket_public_access_block.public-access-block,
+  ]
+}
+
+# The website's URL:
+output "url" {
+  value = "http://${aws_s3_bucket_website_configuration.website.website_endpoint}"
+}
+```
+
+Two things are specific to running inside a component module. Nested properties such as `index_document` and `rule` are written as attribute maps (with `=`) rather than Terraform's nested block syntax. And `fileasset` resolves relative paths against the module's own directory, so the component takes absolute paths as input and derives each object's key from the file name with `basename`. There is no `parent` to set: resources in the module are parented to the component instance automatically.
+
+{{% /choosable %}}
+
 ### Instantiate the component
 
 Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
@@ -802,6 +950,32 @@ public class App {
 Unfortunately, YAML lacks the language facilities to author components. Feel free to [skip ahead](/docs/iac/get-started/aws/destroy-stack/).
 
 {{% /notes %}}
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+First register the component with your project. The `pulumi package add` command records the module in `Pulumi.yaml` and generates a local SDK for it:
+
+```bash
+$ pulumi package add ./website
+```
+
+Then add this to `main.tf`:
+
+```hcl
+# Create an instance of our component with the same files as before:
+resource "website_aws_s3_website" "my-website" {
+  files = [abspath("index.html")]
+}
+
+# And export its autoassigned URL:
+output "url" {
+  value = website_aws_s3_website.my-website.url
+}
+```
+
+The resource type `website_aws_s3_website` combines the package name and the component name. Passing the file through `abspath` hands the module an absolute path it can resolve from its own directory.
 
 {{% /choosable %}}
 

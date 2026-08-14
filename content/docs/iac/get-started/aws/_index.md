@@ -27,7 +27,7 @@ Complete this step-by-step tutorial to deploy an AWS S3 bucket-based website usi
 
 First, choose your language and ensure you've performed any prerequisites:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -67,6 +67,12 @@ First, choose your language and ensure you've performed any prerequisites:
 {{% choosable language "yaml" %}}
 
 * <a href="https://aws.amazon.com/free" target="_blank">An AWS account</a>
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+* An <a href="https://aws.amazon.com/free" target="_blank">AWS account</a>
 
 {{% /choosable %}}
 
