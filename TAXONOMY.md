@@ -142,7 +142,7 @@ Teams:
 
 **Definition:** Starter kits for generating new Pulumi projects with `pulumi new`.
 
-- **Lives at:** `content/templates/` (sourced from https://github.com/pulumi/templates); includes both starter 
+- **Lives at:** `content/templates/` (sourced from https://github.com/pulumi/templates); includes both starter and architecture templates.
 - **Owns:** Marketing
 - **Contributes:** Eng/Product, DevRel
 - **Consumes:** Practitioners bootstrapping new projects
