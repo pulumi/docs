@@ -430,9 +430,8 @@ output "bucket_name" {
 }
 ```
 
-The `pulumi/gcp` source selects the Pulumi Google Cloud provider from the [Pulumi Registry](/registry/). Drop the
-`pulumi/` prefix and the source resolves from the [OpenTofu registry](https://opentofu.org/registry/) instead,
-exactly as it would in Terraform.
+The `pulumi/gcp` source selects the Pulumi Google Cloud provider from the [Pulumi Registry](/registry/). See
+[Pulumi HCL](/docs/iac/languages-sdks/hcl/) for how provider sources resolve.
 
 {{% /choosable %}}
 

@@ -429,8 +429,9 @@ resources:
 # Other resources ...
 
 # Create an S3 Bucket object
-resource "aws_s3_bucket_object" "index.html" {
+resource "aws_s3_bucket_object" "index-html" {
   bucket       = aws_s3_bucket.my-bucket.id
+  key          = "index.html"
   source       = fileasset("index.html")
   content_type = "text/html"
   acl          = "public-read"
@@ -440,6 +441,9 @@ resource "aws_s3_bucket_object" "index.html" {
   ]
 }
 ```
+
+HCL resource labels can't contain dots, so the resource is labeled `index-html` and the `key` attribute names the
+object in the bucket.
 
 {{% /choosable %}}
 

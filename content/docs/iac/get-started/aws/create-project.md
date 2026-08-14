@@ -400,9 +400,9 @@ output "bucket_name" {
 }
 ```
 
-The `pulumi/aws` source selects the Pulumi AWS provider from the [Pulumi Registry](/registry/). Drop the `pulumi/`
-prefix and the source resolves from the [OpenTofu registry](https://opentofu.org/registry/) instead, exactly as it
-would in Terraform.
+The `pulumi/aws` source selects the Pulumi AWS provider from the [Pulumi Registry](/registry/). An unprefixed
+source such as `hashicorp/aws` resolves from the [OpenTofu registry](https://opentofu.org/registry/) instead, the
+same way it does in OpenTofu.
 
 {{% /choosable %}}
 

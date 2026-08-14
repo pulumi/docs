@@ -567,8 +567,7 @@ output "name" {
 ```
 
 The `pulumi/kubernetes` source selects the Pulumi Kubernetes provider, whose resource types follow the Kubernetes
-API groups directly. Drop the `pulumi/` prefix and the source resolves from the
-[OpenTofu registry](https://opentofu.org/registry/) instead, exactly as it would in Terraform.
+API groups directly. See [Pulumi HCL](/docs/iac/languages-sdks/hcl/) for how provider sources resolve.
 
 {{% /choosable %}}
 

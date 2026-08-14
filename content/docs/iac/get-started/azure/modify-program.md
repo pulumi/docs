@@ -338,14 +338,18 @@ resources:
 
 ```hcl
 # Upload the file
-resource "azure-native_storage_blob" "index.html" {
+resource "azure-native_storage_blob" "index-html" {
   resource_group_name = azure-native_resources_resource_group.resource-group.name
   account_name        = azure-native_storage_storage_account.sa.name
   container_name      = azure-native_storage_storage_account_static_website.staticWebsite.container_name
+  blob_name           = "index.html"
   source              = fileasset("index.html")
   content_type        = "text/html"
 }
 ```
+
+HCL resource labels can't contain dots, so the resource is labeled `index-html` and the `blob_name` attribute names
+the blob in the container.
 
 {{% /choosable %}}
 

@@ -918,7 +918,7 @@ Previewing update (dev)
 
 Outputs:
   - bucket_name: "gs://my-bucket-a2b3c4d"
-  ~ url        : "http://storage.googleapis.com/my-bucket-a2b3c4d/index.html-07d2e19" => "http://storage.googleapis.com/my-bucket-297424e/index.html"
+  ~ url        : "http://storage.googleapis.com/my-bucket-a2b3c4d/index.html" => "http://storage.googleapis.com/my-bucket-297424e/index.html"
 
 Resources:
     + 4 to create
@@ -995,7 +995,7 @@ Updating (dev)
 
 Outputs:
   - bucket_name: "gs://my-bucket-a2b3c4d"
-  ~ url        : "http://storage.googleapis.com/my-bucket-a2b3c4d/index.html-07d2e19" => "http://storage.googleapis.com/my-bucket-297424e/index.html"
+  ~ url        : "http://storage.googleapis.com/my-bucket-a2b3c4d/index.html" => "http://storage.googleapis.com/my-bucket-297424e/index.html"
 
 Resources:
     + 4 created
