@@ -160,7 +160,7 @@ Tool cost is rarely the license alone. Here's what each option actually costs to
 | Crossplane | Free and open source | N/A (cluster infra costs apply) | N/A |
 | OpenTofu | Free and open source | N/A | N/A |
 
-Spacelift and env0, two managed CI/CD layers frequently compared against these core tools, publish their own tiers but denominate them differently — largely per-seat and per-worker rather than per-resource — with quote-based pricing at the top end. Check their pricing pages directly, since the figures change often and don't map cleanly onto the table above.
+Spacelift and env0, two managed CI/CD layers frequently compared against these core tools, publish their own tiers but denominate them differently — per-seat and per-worker rather than per-resource — with quote-based pricing at the top end. Check their pricing pages directly, since the figures change often and don't map cleanly onto the table above.
 
 ### License, governance, and release cadence
 
@@ -494,7 +494,7 @@ Considerations:
 - **Ecosystem maturity**: Smaller community compared to more established tools like Terraform
 - **Tool complexity**: Advanced features may require more setup than simpler template systems
 
-Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — Unity at 80%, SANS at 70%, and Starburst at 99% (two weeks down to about three hours) — when adopting programming language-based approaches. These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
+Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — SANS at 70%, Unity at 80%, and Starburst at 99% (two weeks down to about three hours). These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
 > **Ready to get started?** [Experience Pulumi's programming language approach](/docs/get-started/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
 
@@ -693,7 +693,7 @@ Code Example:
 
 ## Cloud-Native and Community Declarative Tools
 
-The remaining five tools take a more declarative, cloud- or platform-native approach: each is scoped to a single cloud or a single control plane, and each trades some of the flexibility of a general-purpose language for tighter integration with the platform it targets.
+The remaining five tools take a more declarative, cloud- or platform-native approach: four are scoped to a single cloud or a single control plane, and OpenTofu is the exception as a general-purpose, multi-cloud Terraform fork included here for its shared declarative, community-governed lineage. Each trades some of the flexibility of a general-purpose language for tighter integration with the platform it targets, or in OpenTofu's case, for open governance over a widely adopted DSL.
 
 ### 6. Azure Bicep
 
@@ -1490,7 +1490,7 @@ Managed platforms price differently. Pulumi Cloud's Individual plan is free fore
 
 Tools built on general-purpose programming languages give AI agents the biggest advantage, because agents can read, generate, test, and refactor real code the same way they do application code. Pulumi is explicitly built for this: it lets agents like [Pulumi Neo](/product/neo/) propose changes, run previews, respond to failures, and open pull requests using the same Python, TypeScript, Go, C#, or Java that developers already write and test, rather than reasoning about HCL diffs or templated JSON/YAML that are harder for a language-aware toolchain to test against.
 
-Declarative DSL-based tools such as Terraform and OpenTofu can also be driven by AI coding assistants, and both ship a native test framework (`terraform test` / `tofu test`) plus language servers and editor extensions. What agents don't get in HCL is the depth of the surrounding toolchain — the assertion and mocking libraries, package ecosystem, and refactoring tools that come free with a general-purpose language — so validating an agent-generated change tends to take more bespoke scaffolding. This is a tradeoff rather than a hard blocker: AI coding assistants such as Claude Code, Cursor, and Codex work with Pulumi through the same code-first path they use for application code, which is the structural advantage general-purpose-language IaC has for agent-driven workflows.
+Declarative DSL-based tools such as Terraform and OpenTofu can also be driven by AI coding assistants, and both ship a native test framework (`terraform test` / `tofu test`) plus language servers and editor extensions. What agents don't get in HCL is the depth of the surrounding toolchain — the assertion and mocking libraries, package ecosystem, and refactoring tools that come free with a general-purpose language — so validating an agent-generated change tends to take more bespoke scaffolding. That's a tradeoff, not a hard blocker — plenty of teams drive HCL with agents productively today. It does mean general-purpose-language IaC starts from a stronger position for agent-driven work: AI coding assistants such as Claude Code, Cursor, and Codex reach Pulumi through the same code-first path they already use for application code, with no IaC-specific tooling to bolt on.
 
 ### What is the most popular infrastructure as code tool in 2026?
 
