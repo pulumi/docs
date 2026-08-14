@@ -3,6 +3,8 @@ title: "Speeding up Pulumi Operations by up to 20x"
 
 date: 2026-01-12T18:57:55+02:00
 
+updated: 2026-08-14
+
 draft: false
 
 meta_desc: Pulumi operations get up to 20x faster with journaling, a new snapshotting approach that speeds up large stacks while keeping full data integrity.
@@ -55,6 +57,10 @@ social:
 ---
 
 Today we're introducing an improvement that can speed up operations by up to 20x. At every operation, and at every step within an operation, `pulumi` saves a snapshot of your cloud infrastructure. This gives `pulumi` a current view of state even if something fails mid-operation, but it comes with a performance penalty for large stacks. Here's how we fixed it.
+
+{{% notes type="info" %}}
+Update: Journaling reached general availability in March 2026 and is now enabled by default for all Pulumi Cloud organizations on CLI v3.225.0+, no opt-in required. See [Now GA: Up to 20x Faster Pulumi Operations for Everyone](/blog/journaling-ga/) for details, including how to opt out with `PULUMI_DISABLE_JOURNALING`.
+{{% /notes %}}
 
 <!--more-->
 
