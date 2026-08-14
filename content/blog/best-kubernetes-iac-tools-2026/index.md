@@ -33,7 +33,7 @@ itemlist:
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        "Kubernetes IaC" actually spans a cluster layer, a workload layer, and a delivery layer. Most roundups blur all three together.
+        "Kubernetes IaC" actually spans a cluster layer, a workload layer, and a delivery layer. Most roundups blur them together.
 
         We separated them and compared what fits each one: Pulumi, Terraform, Helm, Kustomize, Crossplane, Argo CD, Flux, cdk8s, and kro.
     linkedin: |
