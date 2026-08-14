@@ -80,7 +80,7 @@ EOT
 
 {{% /choosable %}}
 
-Now open {{< langfile >}} in your editor and enable static website support by adding a [`StorageAccountStaticWebsite`](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account is created:
+Now open {{< langfile >}} in your editor and enable static website support by adding a [static website](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account is created:
 
 {{% choosable language typescript %}}
 

@@ -527,7 +527,7 @@ output "url" {
 
 {{% /choosable %}}
 
-We prepend `http://` using a helper because `websiteEndpoint` is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
+We prepend `http://` because the bucket's website endpoint is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
 that AWS assigns at deployment time, not a raw string, meaning its value isn't known in advance.
 
 ### Deploy the changes
