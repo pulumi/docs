@@ -21,7 +21,7 @@ Now that you have an instance of your Pulumi program deployed, update it to do s
 
 Replace the entire contents of {{< langfile >}} with the following:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -443,6 +443,77 @@ outputs:
 {{% notes type="info" %}}
 The YAML program always uses a `ClusterIP` service and does not read the `isMinikube` configuration value. If you are using YAML, you can skip the `pulumi config set isMinikube` step described below.
 {{% /notes %}}
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source = "pulumi/kubernetes"
+    }
+  }
+}
+
+# By default, minikube does not expose LoadBalancer services externally. You can either:
+# 1. Run `minikube tunnel` in a separate terminal (recommended), then set isMinikube to false.
+# 2. Set isMinikube to true to use ClusterIP with port-forwarding instead.
+variable "isMinikube" {
+  type = bool
+}
+
+locals {
+  app_labels = {
+    app = "nginx"
+  }
+}
+
+resource "kubernetes_apps_v1_deployment" "deployment" {
+  spec = {
+    selector = {
+      match_labels = local.app_labels
+    }
+    replicas = 1
+    template = {
+      metadata = {
+        labels = local.app_labels
+      }
+      spec = {
+        containers = [{
+          name  = "nginx"
+          image = "nginx"
+        }]
+      }
+    }
+  }
+}
+
+# Allocate an IP to the Deployment.
+resource "kubernetes_core_v1_service" "nginx" {
+  metadata = {
+    labels = local.app_labels
+  }
+  spec = {
+    type     = var.isMinikube ? "ClusterIP" : "LoadBalancer"
+    selector = local.app_labels
+    ports = [{
+      port        = 80
+      target_port = 80
+      protocol    = "TCP"
+    }]
+  }
+}
+
+# Export the service cluster IP (available for both ClusterIP and LoadBalancer types)
+output "ip" {
+  value = kubernetes_core_v1_service.nginx.spec.cluster_ip
+}
+```
+
+A `variable` block is how a Pulumi HCL program reads [configuration](/docs/iac/concepts/config/), so
+`pulumi config set isMinikube <true|false>` below supplies `var.isMinikube`.
 
 {{% /choosable %}}
 

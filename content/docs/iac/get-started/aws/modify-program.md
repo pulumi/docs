@@ -255,6 +255,36 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Bucket ...
+
+# Turn the bucket into a website:
+resource "aws_s3_bucket_website_configuration" "website" {
+  bucket = aws_s3_bucket.my-bucket.id
+  index_document {
+    suffix = "index.html"
+  }
+}
+
+# Permit access control configuration:
+resource "aws_s3_bucket_ownership_controls" "ownership-controls" {
+  bucket = aws_s3_bucket.my-bucket.id
+  rule {
+    object_ownership = "ObjectWriter"
+  }
+}
+
+# Enable public access to the website:
+resource "aws_s3_bucket_public_access_block" "public-access-block" {
+  bucket            = aws_s3_bucket.my-bucket.id
+  block_public_acls = false
+}
+```
+
+{{% /choosable %}}
+
 Notice that resources can reference each other, which forms automatic dependencies between them.
 Pulumi uses this information to parallelize deployments safely.
 
@@ -393,6 +423,26 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Other resources ...
+
+# Create an S3 Bucket object
+resource "aws_s3_bucket_object" "index.html" {
+  bucket       = aws_s3_bucket.my-bucket.id
+  source       = fileasset("index.html")
+  content_type = "text/html"
+  acl          = "public-read"
+  depends_on = [
+    aws_s3_bucket_ownership_controls.ownership-controls,
+    aws_s3_bucket_public_access_block.public-access-block,
+  ]
+}
+```
+
+{{% /choosable %}}
+
 This uploads the `index.html` file to your bucket using a Pulumi concept called an [asset](/docs/iac/concepts/assets-archives/#assets).
 
 The bucket object also declares that it [`dependsOn`](/docs/iac/concepts/resources/options/dependson/) the other resources. That is because
@@ -462,6 +512,17 @@ ctx.export("url", website.websiteEndpoint().applyValue(
 outputs:
   # ...
   url: http://${website.websiteEndpoint}
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+# Export the bucket's autoassigned URL:
+output "url" {
+  value = "http://${aws_s3_bucket_website_configuration.website.website_endpoint}"
+}
 ```
 
 {{% /choosable %}}

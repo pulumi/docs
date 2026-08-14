@@ -85,14 +85,38 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+module "my-website" {
+  source = "./website"
+  files  = ["index.html"]
+}
+```
+
+{{% /choosable %}}
+
 Using components here also has the benefit that, as the requirements for Azure static websites changes, you can
 update the one component definition and have all uses of it benefit.
 
 ### Define a new component
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 To define a new component, create a class called `AzureStaticWebsite` that derives from `ComponentResource`. It'll have a mostly-empty
 constructor to start with but you will add the Azure resources to it in the next step. You'll also define the inputs for the
 component -- the `files` to add to the website -- and outputs -- a single property with the website `url`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It'll be
+mostly empty to start with but you will add the Azure resources to it in the next step. The module's `variable` blocks
+declare the inputs for the component -- the `files` to add to the website -- and its `output` blocks declare the outputs --
+a single website `url`.
+
+{{% /choosable %}}
 
 To get going, create a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
 
@@ -251,9 +275,32 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
+
+# A list of files to serve.
+variable "files" {
+  type = list(string)
+}
+
+# The Azure resources and the website url output will go here next...
+```
+
+{{% /choosable %}}
+
 This defines a component but it doesn't do much yet.
 
 ### Refactor your code into the component
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 Next, make four changes:
 
@@ -261,6 +308,21 @@ Next, make four changes:
 1. Change each resource to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
 1. Generalize the creation of blobs by looping over the list of `files`
 1. Assign the resulting website URL to the `url` property of the component
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Next, make three changes:
+
+1. Move all resources from {{< langfile >}} into the module
+1. Generalize the creation of blobs by looping over the list of `files` with `for_each`
+1. Return the resulting website URL as the module's `url` output
+
+There is no step to reparent the resources: everything a module declares is automatically a child of the component
+resource that Pulumi creates for the module instance.
+
+{{% /choosable %}}
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or simply paste the contents of this into {{< compfile >}}:
@@ -633,6 +695,80 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
+
+# A list of files to serve.
+variable "files" {
+  type = list(string)
+}
+
+# Create a resource group
+resource "azure-native_resources_resource_group" "my-group" {
+  # A module prefixes the Pulumi names of the resources it contains, so set the
+  # name explicitly (here and below) to keep the names the program used before.
+  pulumi {
+    name = "my-group"
+  }
+}
+
+# Create a storage account
+resource "azure-native_storage_storage_account" "myaccount" {
+  resource_group_name = azure-native_resources_resource_group.my-group.name
+  kind                = "StorageV2"
+  sku = {
+    name = "Standard_LRS"
+  }
+
+  pulumi {
+    name = "myaccount"
+  }
+}
+
+# Enable static website support
+resource "azure-native_storage_storage_account_static_website" "static-website" {
+  account_name        = azure-native_storage_storage_account.myaccount.name
+  resource_group_name = azure-native_resources_resource_group.my-group.name
+  index_document      = "index.html"
+
+  pulumi {
+    name = "static-website"
+  }
+}
+
+# Upload each file as a blob:
+resource "azure-native_storage_blob" "files" {
+  for_each            = toset(var.files)
+  resource_group_name = azure-native_resources_resource_group.my-group.name
+  account_name        = azure-native_storage_storage_account.myaccount.name
+  container_name      = azure-native_storage_storage_account_static_website.static-website.container_name
+  source              = fileasset(each.value)
+  content_type        = "text/html"
+
+  pulumi {
+    name = each.value
+  }
+}
+
+# Capture the URL and make it available as a component output:
+output "url" {
+  value = azure-native_storage_storage_account.myaccount.primary_endpoints.web
+}
+```
+
+Naming the storage account explicitly matters here: Azure requires storage account names to be lowercase
+alphanumerics of at most 24 characters, which the module-prefixed name would violate.
+
+{{% /choosable %}}
+
 ### Instantiate the component
 
 Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
@@ -762,17 +898,37 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Instantiate our new component with the same files as before; the source is the
+# directory the module lives in:
+module "my-website" {
+  source = "./website"
+  files  = ["index.html"]
+}
+
+# And export its autoassigned URL:
+output "url" {
+  value = module.my-website.url
+}
+```
+
+{{% /choosable %}}
+
 ### Deploy the component
 
 Now deploy the resulting component instantiation. To do so, run `pulumi up` as usual:
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 ```
 $ pulumi up
 Previewing update (dev)
 
-     Type                                            Name                 Plan
-     pulumi:pulumi:Stack                             quickstart-dev
- +   ├─ quickstart:index:AzureStaticWebsite                  my-site         create
+     Type                                                    Name            Plan
+     pulumi:pulumi:Stack                                     quickstart-dev
+ +   ├─ quickstart:index:AzureStaticWebsite                  my-website      create
  +   │  ├─ azure-native:resources:ResourceGroup              my-group        create
  +   │  ├─ azure-native:storage:StorageAccount               myaccount       create
  +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website  create
@@ -793,7 +949,42 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
   details
 ```
 
-This preview shows you a few things. First, you'll see our `AzureStaticWebsite` component with all of its children
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+$ pulumi up
+Previewing update (dev)
+
+     Type                                                    Name            Plan
+     pulumi:pulumi:Stack                                     quickstart-dev
+ +   ├─ components:index:Website                             my-website      create
+ +   │  ├─ azure-native:resources:ResourceGroup              my-group        create
+ +   │  ├─ azure-native:storage:StorageAccount               myaccount       create
+ +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website  create
+ +   │  └─ azure-native:storage:Blob                         index.html      create
+ -   ├─ azure-native:storage:Blob                            index.html      delete
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite     static-website  delete
+ -   ├─ azure-native:storage:StorageAccount                  myaccount       delete
+ -   └─ azure-native:resources:ResourceGroup                 my-group        delete
+
+Resources:
+    + 5 to create
+    - 4 to delete
+    9 changes. 1 unchanged
+
+Do you want to perform this update?  [Use arrows to move, type to filter]
+> yes
+  no
+  details
+```
+
+The component's type, `components:index:Website`, is derived from the name of the directory the module lives in.
+
+{{% /choosable %}}
+
+This preview shows you a few things. First, you'll see our website component with all of its children
 resources neatly parented underneath it. This helps to see what resources relate to which components. Next,
 you'll see that your old resources are being destroyed.
 
@@ -808,20 +999,22 @@ properties or moving resources between files are not disruptive like this. In su
 
 Accept the changes by selecting `yes` and the deployment will occur:
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 ```
 Updating (dev)
 
-     Type                                                    Name               Status
-     pulumi:pulumi:Stack                                     pu-quickstart-dev
- +   ├─ quickstart:index:AzureStaticWebsite                  my-site            created (0.16s)
- +   │  ├─ azure-native:resources:ResourceGroup              my-group           created (1s)
- +   │  ├─ azure-native:storage:StorageAccount               myaccount          created (2s)
- +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website     created (0.24s)
- +   │  └─ azure-native:storage:Blob                         index.html         created (0.19s)
- -   ├─ azure-native:storage:Blob                            index.html         deleted (0.18s)
- -   ├─ azure-native:storage:StorageAccountStaticWebsite     static-website     deleted (0.27s)
- -   ├─ azure-native:storage:StorageAccount                  myaccount          deleted (0.51s)
- -   └─ azure-native:resources:ResourceGroup                 my-group           deleted (0.58s)
+     Type                                                    Name            Status
+     pulumi:pulumi:Stack                                     quickstart-dev
+ +   ├─ quickstart:index:AzureStaticWebsite                  my-website      created (0.16s)
+ +   │  ├─ azure-native:resources:ResourceGroup              my-group        created (1s)
+ +   │  ├─ azure-native:storage:StorageAccount               myaccount       created (2s)
+ +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website  created (0.24s)
+ +   │  └─ azure-native:storage:Blob                         index.html      created (0.19s)
+ -   ├─ azure-native:storage:Blob                            index.html      deleted (0.18s)
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite     static-website  deleted (0.27s)
+ -   ├─ azure-native:storage:StorageAccount                  myaccount       deleted (0.51s)
+ -   └─ azure-native:resources:ResourceGroup                 my-group        deleted (0.58s)
 
 Outputs:
   ~ url: "https://myaccountabc123.z13.web.core.windows.net/" => "https://myaccountxyz789.z13.web.core.windows.net/"
@@ -833,6 +1026,38 @@ Resources:
 
 Duration: 10s
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+Updating (dev)
+
+     Type                                                    Name            Status
+     pulumi:pulumi:Stack                                     quickstart-dev
+ +   ├─ components:index:Website                             my-website      created (0.16s)
+ +   │  ├─ azure-native:resources:ResourceGroup              my-group        created (1s)
+ +   │  ├─ azure-native:storage:StorageAccount               myaccount       created (2s)
+ +   │  ├─ azure-native:storage:StorageAccountStaticWebsite  static-website  created (0.24s)
+ +   │  └─ azure-native:storage:Blob                         index.html      created (0.19s)
+ -   ├─ azure-native:storage:Blob                            index.html      deleted (0.18s)
+ -   ├─ azure-native:storage:StorageAccountStaticWebsite     static-website  deleted (0.27s)
+ -   ├─ azure-native:storage:StorageAccount                  myaccount       deleted (0.51s)
+ -   └─ azure-native:resources:ResourceGroup                 my-group        deleted (0.58s)
+
+Outputs:
+  ~ url: "https://myaccountabc123.z13.web.core.windows.net/" => "https://myaccountxyz789.z13.web.core.windows.net/"
+
+Resources:
+    + 5 created
+    - 4 deleted
+    9 changes. 1 unchanged
+
+Duration: 10s
+```
+
+{{% /choosable %}}
 
 Now test out your new website -- it works like before, just with a tidier codebase now!
 

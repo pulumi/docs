@@ -169,6 +169,24 @@ $ pulumi new aws-yaml
 {{% /choosable %}}
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ pulumi new aws-hcl
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new aws-hcl
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
 
 The `pulumi new` command interactively walks through initializing a new project, as well as creating a
 [**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your
@@ -207,6 +225,12 @@ After the command completes, the project and stack will be ready.
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+After the command completes, the project and stack will be ready.
+
+{{% /choosable %}}
+
 ### Review your new project's contents
 
 If you list the contents of your directory, you'll see some key files:
@@ -217,7 +241,7 @@ If you list the contents of your directory, you'll see some key files:
 
 {{% /choosable %}}
 
-{{% choosable language "typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java,hcl" %}}
 
 - <span>{{< langfile >}}</span> contains your project's main code that declares a new S3 bucket
 
@@ -353,6 +377,31 @@ outputs:
   # Export the name of the bucket
   bucketName: ${my-bucket.id}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+# Create an AWS resource (S3 Bucket)
+resource "aws_s3_bucket" "my-bucket" {}
+
+# Export the name of the bucket
+output "bucket_name" {
+  value = aws_s3_bucket.my-bucket.id
+}
+```
+
+The `pulumi/aws` source selects the native Pulumi AWS provider. Drop the `pulumi/` prefix and the source resolves
+from the [OpenTofu registry](https://opentofu.org/registry/) instead, exactly as it would in Terraform.
 
 {{% /choosable %}}
 

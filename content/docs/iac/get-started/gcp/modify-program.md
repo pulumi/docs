@@ -205,6 +205,21 @@ index-html:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+In {{< langfile >}}, create the bucket object right below the bucket itself.
+
+```hcl
+# Upload the file
+resource "gcp_storage_bucket_object" "index-html" {
+  bucket = gcp_storage_bucket.my-bucket.name
+  name   = "index.html"
+  source = fileasset("index.html")
+}
+```
+
+{{% /choosable %}}
+
 Notice how you provide the name of the bucket you created earlier as an input for the `BucketObject`. This tells Pulumi which bucket the object should live in.
 
 Below the `BucketObject`, add an IAM binding allowing the contents of the bucket to be viewed anonymously over the Internet:
@@ -290,6 +305,21 @@ my-bucket-binding:
     members:
       - allUsers
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+resource "gcp_storage_bucket_i_a_m_binding" "my-bucket-binding" {
+  bucket  = gcp_storage_bucket.my-bucket.name
+  role    = "roles/storage.objectViewer"
+  members = ["allUsers"]
+}
+```
+
+Pulumi HCL derives a resource's type name by snake-casing its Pulumi type, so `gcp:storage:BucketIAMBinding`
+becomes `gcp_storage_bucket_i_a_m_binding`.
 
 {{% /choosable %}}
 
@@ -460,6 +490,36 @@ resources:
 outputs:
   bucketName: ${my-bucket.url}
   url: http://storage.googleapis.com/${my-bucket.name}/${index-html.name}
+```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+resource "gcp_storage_bucket" "my-bucket" {
+  location                    = "US"
+  uniform_bucket_level_access = true
+  website = {
+    main_page_suffix = "index.html"
+  }
+}
+```
+
+### Export the website URL
+
+Now to export the website's public URL, add the `url` output as shown in this example:
+
+```hcl
+# Export the DNS name of the bucket
+output "bucket_name" {
+  value = gcp_storage_bucket.my-bucket.url
+}
+
+# Export the bucket's public URL
+output "url" {
+  value = "http://storage.googleapis.com/${gcp_storage_bucket.my-bucket.name}/${gcp_storage_bucket_object.index-html.name}"
+}
 ```
 
 {{% /choosable %}}
