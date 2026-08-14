@@ -23,7 +23,7 @@ Because mocks don't execute any real work, unit tests run very fast. Also, they 
 
 ## Get started
 
-Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/iac/get-started/aws/) guide to set up a basic Pulumi program in your language of choice.
+Build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/iac/get-started/aws/) guide to set up a basic Pulumi program in your language of choice.
 
 Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 
