@@ -524,7 +524,7 @@ output "url" {
 
 {{% /choosable %}}
 
-We prepend `http://` using a helper because the bucket's URL is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
+We prepend `http://` because the bucket's URL is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
 that Google Cloud assigns at deployment time, not a raw string, meaning its value is not known in advance.
 
 ### Deploy the changes
