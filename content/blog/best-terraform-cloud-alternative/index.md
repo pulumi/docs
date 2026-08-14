@@ -153,7 +153,7 @@ Pulumi Cloud, Spacelift, env0, and Scalr are the four most commonly evaluated al
 
 ### Does Pulumi Cloud offer self-hosting?
 
-Yes, for organizations with data-residency or network-isolation requirements; Pulumi offers self-hosted deployment options at the Business Critical tier, in addition to its standard SaaS offering.
+Yes, for organizations with data-residency or network-isolation requirements; Pulumi offers self-hosted deployment options at the Business Critical tier, alongside its standard SaaS offering.
 
 ### How does Pulumi Cloud's pricing compare to Terraform Cloud's pricing?
 

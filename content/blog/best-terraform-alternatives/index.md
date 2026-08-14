@@ -160,7 +160,7 @@ OpenTofu tracks Terraform's last open-source release closely and remains compati
 
 For a broader roundup covering the full infrastructure-as-code category rather than Terraform alternatives specifically, see our guide to [the best IaC tools](/what-is/top-iac-tools/).
 
-## Related reading
+## Learn more
 
 This article compares Terraform against other **infrastructure-as-code engines**. If you're evaluating **managed control planes and orchestration platforms** instead, like HCP Terraform (formerly Terraform Cloud), Spacelift, or env0, see [Best Terraform Cloud Alternative for Large Multi-Cloud Teams](/blog/best-terraform-cloud-alternative/).
 
