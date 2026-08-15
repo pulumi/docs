@@ -36,7 +36,7 @@ HashiCorp renamed Terraform Cloud to HCP Terraform in 2024, before IBM's acquisi
 
 ## What makes a strong Terraform Cloud alternative for a large multi-cloud team
 
-A control plane that works for a five-person team running one AWS account rarely works for an organization running dozens of accounts across several clouds. At that scale, evaluate any alternative against seven criteria:
+A control plane that works for a five-person team running one AWS account rarely works for an organization running dozens of accounts across multiple clouds. At that scale, evaluate any alternative against seven criteria:
 
 1. **State management for every IaC tool you actually run.** Most large organizations don't run one tool; they run Terraform, OpenTofu, and increasingly a general-purpose-language platform side by side. A strong alternative should hold state for all of them, not force a single-tool migration before it delivers value.
 2. **Policy as code in languages your team already writes.** Compliance and security guardrails need to be testable and reviewable the same way application code is, not siloed in a DSL only the platform team touches.
@@ -110,7 +110,7 @@ HCP Terraform manages configuration through workspace variables and typically pa
 
 Pulumi Cloud isn't the only serious option in this category, and a fair comparison should name the others:
 
-- **Spacelift** orchestrates Terraform, OpenTofu, Terragrunt, Pulumi, CloudFormation, Kubernetes manifests, and Ansible from one control plane, with OPA-based policies and self-hosted worker pools. It's a strong fit for a team that wants one orchestration layer across several IaC tools without changing any of them, though it doesn't provide a native IaC language of its own or a bundled secrets/estate-visibility platform the way Pulumi Cloud does.
+- **Spacelift** orchestrates Terraform, OpenTofu, Terragrunt, Pulumi, CloudFormation, Kubernetes manifests, and Ansible from one control plane, with OPA-based policies and self-hosted worker pools. It's a strong fit for a team that wants one orchestration layer across multiple IaC tools without changing any of them, though it doesn't provide a native IaC language of its own or a bundled secrets/estate-visibility platform the way Pulumi Cloud does.
 - **env0** takes a similar multi-IaC orchestration approach, layered with cost-analytics tooling ("Cloud Analyst") and OPA policy enforcement, and is worth a look for teams that weight cost visibility heavily in their evaluation.
 - **Scalr** positions itself explicitly as a drop-in HCP Terraform replacement, focused on Terraform and OpenTofu workflows with per-run pricing and a free tier up to 50 runs a month; it's a reasonable option for a team that wants to leave HCP Terraform specifically without taking on a broader platform.
 - **Self-managed OpenTofu with object storage as a backend** is the lowest-cost path for a team willing to own its own locking, governance, and audit tooling instead of buying a managed control plane at all.
@@ -149,7 +149,7 @@ Pulumi Cloud encrypts state at rest and in transit and manages locking automatic
 
 ### What are the best Terraform Cloud alternatives for multi-cloud teams?
 
-Pulumi Cloud, Spacelift, env0, and Scalr are the four most commonly evaluated alternatives to HCP Terraform for multi-cloud teams. Pulumi Cloud is the only one of the four that also functions as a general-purpose infrastructure-as-code platform with its own languages, in addition to acting as a control plane for existing Terraform and OpenTofu code.
+Pulumi Cloud, Spacelift, env0, and Scalr are the four most commonly evaluated alternatives to HCP Terraform for multi-cloud teams. Pulumi Cloud is the only one of the four that also functions as a general-purpose infrastructure-as-code platform with its own languages, not only a control plane for existing Terraform and OpenTofu code.
 
 ### Does Pulumi Cloud offer self-hosting?
 
