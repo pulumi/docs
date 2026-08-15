@@ -22,7 +22,7 @@ The `hideDiffs` option only affects CLI display output. It does not change resou
 {{% /notes %}}
 
 {{% notes type="info" %}}
-Unlike `ignoreChanges`, `hideDiffs` does not affect which properties trigger updates. If you want to prevent updates based on property changes, use the [`ignoreChanges`](/docs/concepts/options/ignorechanges/) option instead.
+Unlike `ignoreChanges`, `hideDiffs` does not affect which properties trigger updates. If you want to prevent updates based on property changes, use the [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/) option instead.
 {{% /notes %}}
 
 ## How hideDiffs works

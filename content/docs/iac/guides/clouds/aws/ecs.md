@@ -37,7 +37,7 @@ An alternative to ECS is Amazon's Elastic Kubernetes Service (EKS). Similar to E
 containerized applications in a cluster. EKS tends to be more complex to provision and manage, but has
 the added advantage of using the industry standard container orchestrator, Kubernetes, and therefore can help
 with portability between clouds and self-hosted configurations. See
-[AWS Guides for EKS](/docs/clouds/aws/guides/eks/) for more information about using EKS.
+[AWS Guides for EKS](/docs/iac/guides/clouds/aws/eks/) for more information about using EKS.
 {{< /notes >}}
 
 ## Creating a Load Balanced ECS Service

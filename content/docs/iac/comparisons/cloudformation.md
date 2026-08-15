@@ -148,7 +148,7 @@ Yes — and this is one of the more common adoption patterns. Teams keep AWS inf
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Get started with Pulumi and AWS](/docs/iac/get-started/aws/)
 - [Pulumi for AWS](/docs/integrations/clouds/aws/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)

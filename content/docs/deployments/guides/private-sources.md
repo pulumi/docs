@@ -19,7 +19,7 @@ A Pulumi Deployment runs in an isolated environment that, by default, can only r
 - **Private package feeds** — a private npm, PyPI, or NuGet registry that hosts your packages.
 
 {{% notes type="info" %}}
-This page is about private dependencies that a deployment pulls *during a run*. To deploy from a private repository that holds your Pulumi program itself, configure source control through the [Pulumi GitHub App](/docs/using-pulumi/continuous-delivery/github-app/) instead — that grants Pulumi Deployments access to the program's own repository.
+This page is about private dependencies that a deployment pulls *during a run*. To deploy from a private repository that holds your Pulumi program itself, configure source control through the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) instead — that grants Pulumi Deployments access to the program's own repository.
 {{% /notes %}}
 
 ## Private Git dependencies

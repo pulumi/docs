@@ -140,7 +140,7 @@ Yes — and this is a common adoption pattern. Teams keep AWS serverless service
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Migrating from Serverless Framework to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-serverless/)

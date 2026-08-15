@@ -82,7 +82,7 @@ For a complete list of all `PulumiPolicy.yaml` fields, see the [policy pack proj
 
 ## How are secrets handled in policies?
 
-Encrypted [secrets](/docs/concepts/secrets#secrets) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
+Encrypted [secrets](/docs/iac/concepts/secrets/#secrets) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
 
 ## How are dependencies managed with Python Policy Packs?
 
@@ -177,7 +177,7 @@ venv/bin/pip install -r requirements.txt
 
 ## More FAQ
 
-- [Pulumi IaC FAQ](/docs/iac/support/faq/)
+- [Pulumi IaC FAQ](/docs/support/faq/infrastructure/)
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
 - [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
+- [Pulumi Cloud SCIM FAQ](/docs/support/faq/scim/)

@@ -20,7 +20,7 @@ Run `pulumi cancel` to cancel the update.
 Warning! If you cancel another person's update, their update will fail immediately.
 {{% /notes %}}
 
-One of the services that the [Pulumi Cloud](/docs/pulumi-cloud/) provides is *concurrency control*. The service will allow at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user requests an update, they request a "lease" on the stack that gives them the right to update the requested stack. The service makes sure that only one person has a lease active at a time.
+One of the services that the [Pulumi Cloud](/docs/administration/) provides is *concurrency control*. The service allows at most one user to update a particular stack at a time. This is accomplished by using "leases"; whenever a user requests an update, they request a "lease" on the stack that gives them the right to update the requested stack. The service makes sure that only one person has a lease active at a time.
 
 If you get this error message, this means that the service believes that somebody else has requested and was granted a lease to the stack that you are attempting to update. There are two reasons why this could be:
 

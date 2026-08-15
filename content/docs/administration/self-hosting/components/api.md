@@ -17,7 +17,7 @@ pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/concepts/state/).
+To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
 The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/administration/self-hosting/components/console/).
@@ -73,8 +73,8 @@ between the API and the database. The API also supports [exporting OpenTelemetry
 | PULUMI_DATABASE_NAME     | The name of the database on the database server.                                                                                             |
 | PULUMI_API_DOMAIN        | The internet or network-local domain using which the API service can be reached, e.g. `pulumiapi.acmecorp.com`. Default is `localhost:8080`. |
 | PULUMI_CONSOLE_DOMAIN    | The internet or network-local domain using which the Console can be reached, e.g. `pulumiconsole.acmecorp.com`. Default is `localhost:3000`. |
-| PULUMI_ENGINE_EVENTS_SCHEMA_V2 | Set this environment variable to `true` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `false`, contact [Pulumi support](/support/) before setting it to `true`.** |
-| PULUMI_ENGINE_EVENTS_LEGACY_WRITE | Set this environment variable to `false` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `true` in your installation, contact [Pulumi support](/support/) before setting it to `false`.** |
+| PULUMI_ENGINE_EVENTS_SCHEMA_V2 | Set this environment variable to `true` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `false`, contact [Pulumi support](https://support.pulumi.com/) before setting it to `true`.** |
+| PULUMI_ENGINE_EVENTS_LEGACY_WRITE | Set this environment variable to `false` for fresh installs. **If you have an existing installation and the environment variable is currently not set or set to `true` in your installation, contact [Pulumi support](https://support.pulumi.com/) before setting it to `false`.** |
 
 ## Object storage
 
@@ -465,7 +465,7 @@ scrape_configs:
 
 ## Pulumi Deployments
 
-In order to enable [Pulumi Deployments](/docs/pulumi-cloud/deployments), the following must be configured:
+To enable [Pulumi Deployments](/docs/deployments/concepts/), the following must be configured:
 
 * `PULUMI_SERVICE_METADATA_BLOB_STORAGE_ENDPOINT` or `PULUMI_LOCAL_OBJECTS` [object storage](#object-storage)
 * [Customer-Managed Workflow Runners](/docs/deployments/concepts/customer-managed-runners/) - You also need to update the `pulumi-workflow-agent.yaml` [configuration file](/docs/deployments/concepts/customer-managed-runners/#configuration-reference) by setting `service_url` to `<PULUMI_API_DOMAIN>`. Example:

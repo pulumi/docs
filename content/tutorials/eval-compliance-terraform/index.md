@@ -242,6 +242,6 @@ In this tutorial, you used Pulumi Insights to scan your AWS account for resource
 
 To learn more about Pulumi services, take a look at the following resources:
 
-- Learn more about the Pulumi Cloud in the [Pulumi Cloud](/docs/pulumi-cloud/) documentation.
+- Learn more about the Pulumi Cloud in the [Pulumi Cloud](/docs/administration/) documentation.
 - Learn more about how you can use Pulumi to centrally manage configuration and secrets in the [Pulumi ESC](/docs/esc/) documentation.
 - Learn how you can deploy cloud resources uses modern programming languages in the [Pulumi IaC](/docs/iac/) documentation.

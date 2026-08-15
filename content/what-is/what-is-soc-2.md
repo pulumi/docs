@@ -119,7 +119,7 @@ Concrete patterns:
 * **Change management evidence.** Every infrastructure change is a pull request with author, approver, and timestamp. The same artifact that lets developers ship is the artifact the auditor wants for change-management controls.
 * **Access control as code.** IAM roles, group memberships, and trust policies live in Pulumi programs that get reviewed in code, not configured by hand in a console. Auditors can read the code and the diff history to verify least-privilege controls.
 * **Policy as code in CI.** [Pulumi Policies](/docs/insights/policy/) block insecure configurations (public storage, missing encryption, wildcard IAM) in CI before they ever reach production. The auditor's question "how do you prevent public S3 buckets?" has a code-and-CI-log answer.
-* **Secrets management.** [Pulumi ESC](/product/esc/) keeps secrets out of code, CI logs, and state files, and gives every read an audit trail. SOC 2 controls around access to sensitive credentials line up directly.
+* **Secrets management.** [Pulumi ESC](/product/secrets-management/) keeps secrets out of code, CI logs, and state files, and gives every read an audit trail. SOC 2 controls around access to sensitive credentials line up directly.
 * **Reusable secure defaults.** Platform teams ship [Pulumi components](/docs/iac/concepts/components/) with encryption, logging, and IAM baked in. Product teams consume secure infrastructure by default, and the auditor sees a single component definition instead of dozens of one-off configurations to test.
 * **Drift detection.** When a console click breaks the IaC contract, the next `pulumi preview` surfaces it. Auditors can see a clean control loop instead of asking how unauthorized changes would be detected.
 
@@ -169,7 +169,7 @@ A SOC 2 with the Privacy criterion covers the substance of many GDPR and CCPA co
 
 ## Learn more
 
-Pulumi helps engineering teams put SOC 2 evidence into code: every change is a reviewable pull request, [policy as code](/docs/insights/policy/) blocks non-compliant configurations in CI, secrets live in [a central encrypted store](/product/esc/), and platform teams ship secure defaults as [reusable components](/docs/iac/concepts/components/). [Get started today](/docs/get-started/).
+Pulumi helps engineering teams put SOC 2 evidence into code: every change is a reviewable pull request, [policy as code](/docs/insights/policy/) blocks non-compliant configurations in CI, secrets live in [a central encrypted store](/product/secrets-management/), and platform teams ship secure defaults as [reusable components](/docs/iac/concepts/components/). [Get started today](/docs/get-started/).
 
 Related reading:
 

@@ -155,7 +155,7 @@ Yes. [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) compares the sta
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. AWS CloudFormation](/docs/iac/comparisons/cloudformation/)
 - [Pulumi vs. CDKTF](/docs/iac/comparisons/cdktf/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)

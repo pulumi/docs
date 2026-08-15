@@ -29,4 +29,4 @@ To set up synchronization between Pulumi and your SAML 2.0 identity provider, re
 - [Microsoft Entra ID (formerly Azure Active Directory)](/docs/administration/access-identity/scim/entra/)
 - [Okta](/docs/administration/access-identity/scim/okta/)
 - [OneLogin](/docs/administration/access-identity/scim/onelogin/)
-- [FAQ](/docs/administration/access-identity/scim/faq/)
+- [FAQ](/docs/support/faq/scim/)

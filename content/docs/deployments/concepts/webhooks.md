@@ -41,7 +41,7 @@ stacks.
 
 The Webhooks page is located at **Settings** > **Integrations** > **Webhooks**.
 
-If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
+If you are looking for Environment Webhook documentation, it's [here](/docs/esc/concepts/webhooks/).
 
 {{% notes type="info" %}}
 Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
@@ -51,7 +51,7 @@ Webhooks do not guarantee event order. You should not assume events will be rece
 
 Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
 [Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
-or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
+or by [using the API](/docs/reference/cloud-rest-api/webhooks/) directly.
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -211,7 +211,7 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/iac/concepts/stacks/#stackreferences).
 
 Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/concepts/settings/).
 
@@ -525,4 +525,4 @@ environment webhooks from the Pulumi Cloud UI.
 ## Additional Resources
 
 * [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
-* [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
+* [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)

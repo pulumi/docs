@@ -28,7 +28,7 @@ about scaling the underlying infrastructure, while hosting your images in a high
 ## Overview
 
 The [AWSx](https://www.pulumi.com/registry/packages/awsx/) ECR components simplify the provisioning of new ECR repositories,
-integrate with the AWSx [ECS](/docs/clouds/aws/guides/ecs/) and [EKS](/docs/clouds/aws/guides/eks/) components to ease
+integrate with the AWSx [ECS](/docs/iac/guides/clouds/aws/ecs/) and [EKS](/docs/iac/guides/clouds/aws/eks/) components to ease
 deployment of new application containers to your ECS, "Fargate", and/or Kubernetes clusters, and even support
 building and deploying Docker images from your developer desktop or CI/CD workflows.
 

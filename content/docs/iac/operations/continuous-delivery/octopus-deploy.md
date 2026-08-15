@@ -34,7 +34,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. An Octopus Deploy instance — [Octopus Cloud](https://octopus.com) or a self-hosted server — with a project and one or more environments configured.
-1. A Pulumi program in a Git repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program in a Git repository. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 1. An upstream CI system that builds your program and publishes it as a [package](https://octopus.com/docs/packaging-applications) for Octopus to release.
 
 ## Authenticate with Pulumi Cloud

@@ -79,7 +79,7 @@ This will create simple Pulumi program without any resources or configuration de
 
 ## Create configuration values
 
-In a Pulumi project, you can locally [store and retrieve configuration values](/docs/concepts/config/) using the `pulumi config set <key> [value]` command. To demonstrate, run the following command to create a configuration value with a key of `myEnvironment` and a value of `development`:
+In a Pulumi project, you can locally [store and retrieve configuration values](/docs/iac/concepts/config/) using the `pulumi config set <key> [value]` command. To demonstrate, run the following command to create a configuration value with a key of `myEnvironment` and a value of `development`:
 
 ```bash
 $ pulumi config set myEnvironment development
@@ -112,7 +112,7 @@ development
 
 ## Create secret values
 
-Pulumi supports encrypting specific values as “secrets” for extra protection. Pulumi Cloud transmits and stores state files over a secure connection, but once received the files are viewable in plain-text. By encrypting secrets, Pulumi ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](/docs/concepts/secrets/#configuring-secrets-encryption) instead.
+Pulumi supports encrypting specific values as “secrets” for extra protection. Pulumi Cloud transmits and stores state files over a secure connection, but once received the files are viewable in plain-text. By encrypting secrets, Pulumi ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](/docs/iac/concepts/secrets/#configuring-secrets-encryption) instead.
 
 To encrypt a configuration value before runtime, you will need to run the `pulumi config set <key> [value] --secret` command. To demonstrate how this works, you'll create a configuration value named `myPassword`. Run the CLI command `pulumi config set myPassword <value-of-password>`, making sure to pass the `--secret` flag, and also making sure to replace `<value-of-password>` with an actual value as shown below:
 
@@ -153,7 +153,7 @@ Within your Pulumi program code, configuration values can be retrieved for a giv
 
 {{< notes type="info" >}}
 
-You can learn more about the difference between the `get` and `require` functions by referring to the [Pulumi Configuration concept documentation](/docs/concepts/config/#code).
+You can learn more about the difference between the `get` and `require` functions by referring to the [Pulumi Configuration concept documentation](/docs/iac/concepts/config/#code).
 
 {{< /notes >}}
 

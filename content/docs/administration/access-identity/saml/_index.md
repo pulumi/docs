@@ -26,7 +26,7 @@ Running self-hosted Pulumi Cloud? You'll first need to [configure your self-host
 
 ## Single Sign-On (SSO)
 
-If you're a member of a SAML-based Pulumi organization, you can sign in to [your account](/docs/pulumi-cloud/accounts/) via Single Sign-On. To learn about the important aspects of configuring SSO for your IdP, refer to the [SSO page](sso/).
+If you're a member of a SAML-based Pulumi organization, you can sign in to [your account](/docs/administration/organizations-teams/accounts/) via Single Sign-On. To learn about the important aspects of configuring SSO for your IdP, refer to the [SSO page](sso/).
 
 {{% notes type="info" %}}
 {{< sso-scim-limits-info >}}

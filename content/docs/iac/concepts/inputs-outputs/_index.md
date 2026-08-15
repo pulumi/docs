@@ -241,19 +241,19 @@ Because outputs represent asynchronous values, they must be handled differently 
 
 The Pulumi SDK provides several methods for accessing the plain values of outputs once they are known:
 
-- [Apply](/docs/concepts/inputs-outputs/apply/) allows you to access a single output's plain value
-- [All](/docs/concepts/inputs-outputs/all/) allows you to access multiple outputs' plain values
-- [Helpers](/docs/concepts/inputs-outputs/helpers/) provides convenient shorthand functions for the most common output transformations: building strings from outputs and working with JSON
+- [Apply](/docs/iac/concepts/inputs-outputs/apply/) allows you to access a single output's plain value
+- [All](/docs/iac/concepts/inputs-outputs/all/) allows you to access multiple outputs' plain values
+- [Helpers](/docs/iac/concepts/inputs-outputs/helpers/) provides convenient shorthand functions for the most common output transformations: building strings from outputs and working with JSON
 
 Both `apply` and `all` allow you to return a value, which itself is also a Pulumi output. Transforming output values into other outputs is often useful. For example, you may want to take a DNS name that is the output of a load balancer and transform it into a full URL by appending `https://`. You can do this using `apply`.
 
-In addition to `apply` and `all`, each Pulumi language's SDK provides [helper functions](/docs/concepts/inputs-outputs/helpers/) for the most common output manipulation tasks. For example:
+In addition to `apply` and `all`, each Pulumi language's SDK provides [helper functions](/docs/iac/concepts/inputs-outputs/helpers/) for the most common output manipulation tasks. For example:
 
 - **String interpolation**: `pulumi.interpolate` (TypeScript), `pulumi.Output.format()` (Python), `pulumi.Sprintf()` (Go), `Output.Format()` (.NET), and `Output.format()` (Java) let you construct strings from outputs without calling `apply` directly.
 - **JSON serialization**: `pulumi.jsonStringify()` (TypeScript), `pulumi.Output.json_dumps()` (Python), `pulumi.JSONMarshal()` (Go), and `Output.JsonSerialize()` (.NET) serialize data structures containing outputs to JSON strings.
 - **JSON deserialization**: `pulumi.jsonParse()` (TypeScript), `pulumi.Output.json_loads()` (Python), and `Output.JsonDeserialize<T>()` (.NET) parse JSON string outputs into native objects.
 
-For a complete guide and examples for each language, see [Using output helpers](/docs/concepts/inputs-outputs/helpers/). For the full SDK reference, see:
+For a complete guide and examples for each language, see [Using output helpers](/docs/iac/concepts/inputs-outputs/helpers/). For the full SDK reference, see:
 
 - [TypeScript (Node.js)](/docs/reference/pkg/nodejs/pulumi/pulumi/)
 - [Python](/docs/reference/pkg/python/pulumi/)

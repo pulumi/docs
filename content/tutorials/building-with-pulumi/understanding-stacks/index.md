@@ -10,7 +10,7 @@ aliases:
     - /learn/building-with-pulumi/understanding-stacks/
 ---
 
-Every Pulumi program is deployed to a stack. A stack is an isolated, independently [configurable](/docs/concepts/config/) instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as `development`, `staging`, and `production`) or feature branches (such as `feature-x-dev`).
+Every Pulumi program is deployed to a stack. A stack is an isolated, independently [configurable](/docs/iac/concepts/config/) instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as `development`, `staging`, and `production`) or feature branches (such as `feature-x-dev`).
 
 A [project](/docs/iac/concepts/projects/) --- the directory containing your `Pulumi.yaml` and program --- can have as many stacks as you need. By default, Pulumi creates one for you when you create a new project with `pulumi new`.
 

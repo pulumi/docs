@@ -57,7 +57,7 @@ To enable a broad range of runtime customization, Automation API defines a `Work
 
 ### RemoteWorkspace
 
-`RemoteWorkspace` represents a workspace for running Pulumi operations remotely with [Pulumi Deployments](/docs/pulumi-cloud/deployments/), where the program is located in a remote Git repository.
+`RemoteWorkspace` represents a workspace for running Pulumi operations remotely with [Pulumi Deployments](/docs/deployments/concepts/), where the program is located in a remote Git repository.
 
 ## Stacks
 
@@ -227,8 +227,8 @@ Each language has its own Automation API reference documentation. Follow the lin
 
 |                                                        | API reference                                                           | Status |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ------ |
-| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |
-| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |
+| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/automation.html) | Stable |
+| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/automation.html) | Stable |
 | <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi/#module-pulumi.automation) | Stable |
 | <img src="/logos/tech/dotnet.png" class="h-10" />      | [.NET](/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.html) | Stable |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto?tab=doc) | Stable |

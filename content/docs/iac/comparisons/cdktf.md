@@ -41,7 +41,7 @@ CDK for Terraform (CDKTF) was a HashiCorp project, released in 2020 and [depreca
 | Feature | Pulumi | CDKTF |
 | --- | --- | --- |
 | Language support | {{< pulumi-languages >}} | TypeScript, Python, Go, C#, Java |
-| Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/); [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider, and [Terraform modules](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) can be consumed directly | Terraform providers only, accessed through project-specific SDKs generated on demand by `cdktf get` |
+| Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/); [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider, and [Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) can be consumed directly | Terraform providers only, accessed through project-specific SDKs generated on demand by `cdktf get` |
 | Transpiled to another format? | No — programs run directly in their host language | Yes — programs are synthesized into Terraform JSON and deployed by the Terraform CLI |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Local, remote, or cloud-hosted (the Terraform state model) |
 | Secrets management | [Encrypted in transit and at rest](/docs/iac/concepts/secrets/) in the state file by default, with per-stack encryption keys; pluggable KMS providers (AWS KMS, Azure Key Vault, Google Cloud KMS, HashiCorp Vault) | No built-in secrets primitive |
@@ -62,7 +62,7 @@ Pulumi and CDKTF both let you author infrastructure in general-purpose languages
 
 ### Cloud and service coverage
 
-CDKTF supported Terraform providers through project-specific SDKs generated on demand by `cdktf get`. Pulumi supports the [Pulumi Registry](/registry/) of pre-built providers — including native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated directly from each platform's API schema for same-day coverage of new resources — and can additionally [generate typed SDKs on demand](/docs/iac/get-started/terraform/terraform-providers/) for any Terraform provider. Pulumi also supports referencing [Terraform modules directly](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) without rewriting them, so existing module investment is preserved during migration.
+CDKTF supported Terraform providers through project-specific SDKs generated on demand by `cdktf get`. Pulumi supports the [Pulumi Registry](/registry/) of pre-built providers — including native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated directly from each platform's API schema for same-day coverage of new resources — and can additionally [generate typed SDKs on demand](/docs/iac/get-started/terraform/terraform-providers/) for any Terraform provider. Pulumi also supports referencing [Terraform modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) without rewriting them, so existing module investment is preserved during migration.
 
 ### Execution and rollbacks
 
@@ -103,7 +103,7 @@ The [Automation API](/docs/iac/concepts/automation-api/) lets a host application
 There are several common paths for migrating from CDKTF to Pulumi, and they can be combined:
 
 1. **Use Terraform/CDKTF state alongside Pulumi.** Pulumi can [reference local or remote Terraform state](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) — including the state produced by a CDKTF deployment — from a Pulumi program. This lets you continue managing a subset of your infrastructure with CDKTF (or Terraform) while incrementally moving the rest to Pulumi.
-1. **Consume Terraform modules directly.** Pulumi can [reference Terraform modules directly](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) by generating language-specific SDKs on demand, so existing module investment is preserved.
+1. **Consume Terraform modules directly.** Pulumi can [reference Terraform modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) by generating language-specific SDKs on demand, so existing module investment is preserved.
 1. **Convert with `pulumi convert --from terraform`.** Run `cdktf synth` to produce Terraform JSON, then convert that JSON to Pulumi with `pulumi convert --from terraform`. For state, [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform-migrate) translates Terraform state into Pulumi state.
 1. **Import existing resources.** [`pulumi import`](/docs/iac/guides/migration/import/) and the [`import` resource option](/docs/iac/concepts/resources/options/import/) bring already-provisioned resources under Pulumi management and generate the corresponding code in your chosen language.
 1. **Automated migration with Pulumi Neo (recommended).** [Pulumi Neo](/product/neo/) automates code conversion and state migration, then runs `pulumi preview` to verify zero changes before you commit. See [Migrating from Terraform/CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/).
@@ -130,7 +130,7 @@ Yes. [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terrafor
 
 ### Does Pulumi support Terraform modules and providers?
 
-Yes. Pulumi can [adapt any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) and can [reference Terraform modules directly](/docs/iac/using-pulumi/extending-pulumi/use-terraform-module/) by generating language-specific SDKs on demand. Many of Pulumi's most popular registry providers are also derived from upstream Terraform provider schemas, so resource models often map one-to-one with CDKTF code.
+Yes. Pulumi can [adapt any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) and can [reference Terraform modules directly](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) by generating language-specific SDKs on demand. Many of Pulumi's most popular registry providers are also derived from upstream Terraform provider schemas, so resource models often map one-to-one with CDKTF code.
 
 ### Can Pulumi coexist with existing Terraform or CDKTF deployments?
 
@@ -142,7 +142,7 @@ The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulum
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)
 - [Migrating from Terraform or CDKTF to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)

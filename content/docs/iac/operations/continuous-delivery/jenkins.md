@@ -35,7 +35,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A working Jenkins installation with the [Docker Pipeline](https://plugins.jenkins.io/docker-workflow/) and [Git](https://plugins.jenkins.io/git/) plugins, on an agent that can run Docker containers.
-1. A Pulumi program in a Git repository Jenkins can build. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program in a Git repository Jenkins can build. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Authenticate with Pulumi Cloud
 

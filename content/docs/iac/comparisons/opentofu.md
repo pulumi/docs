@@ -156,7 +156,7 @@ Yes — and this is one of the more common adoption patterns. Pulumi can read ou
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Using any Terraform or OpenTofu provider with Pulumi](/docs/iac/concepts/providers/any-terraform-provider/)
 - [Using Pulumi Cloud as a Terraform or OpenTofu state backend](/docs/iac/get-started/terraform/terraform-state-backend/)

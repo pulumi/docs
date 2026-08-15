@@ -34,7 +34,7 @@ Learn how to:
 
 Ensure you have:
 
-- installed the [Pulumi CLI](/docs/iac/download-install/)
+- installed the [Pulumi CLI](/docs/install/)
 - installed [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/#install-wrangler/)
 - a valid and properly scoped [Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#api-token)
 - a Pulumi Cloud account. You can sign up for an [always-free, individual tier](https://app.pulumi.com/signup)

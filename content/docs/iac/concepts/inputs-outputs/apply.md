@@ -27,7 +27,7 @@ The `apply` method is typically used for:
 For more information about what outputs are and why they are necessary in Pulumi programs, see [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/).
 
 {{% notes type="info" %}}
-The `apply` method is designed for accessing single output values. If you need to access multiple output values across multiple resources, use Pulumi's [`all` method](/docs/concepts/inputs-outputs/all/) instead.
+The `apply` method is designed for accessing single output values. If you need to access multiple output values across multiple resources, use Pulumi's [`all` method](/docs/iac/concepts/inputs-outputs/all/) instead.
 {{% /notes %}}
 
 {{% notes type="warning" %}}

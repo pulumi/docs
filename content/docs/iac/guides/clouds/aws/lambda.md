@@ -63,7 +63,7 @@ resources for you. This lets you focus on your application logic without needing
 confidence that the resulting infrastructure automatically uses AWS best practices.
 
 With Pulumi, event sources are available on all native resource types, including AWS S3, SQS, DynamoDB, CloudWatch,
-Kinesis, and more, in addition to full support for [API Gateway](/docs/clouds/aws/guides/api-gateway/).
+Kinesis, and more, in addition to full support for [API Gateway](/docs/iac/guides/clouds/aws/api-gateway/).
 This improves discoverability of event sources in addition to adding strong typing to the event handler
 inputs and outputs that AWS Lambda will deliver to your code.
 
@@ -133,7 +133,7 @@ defined) or even use functions that already exist, and glue them together with r
 Because Pulumi provisions and manages resources, updating your functions after creating them is easy. Just edit your
 code, run `pulumi up`, and Pulumi will diff and compute the minimal set of changes it can make to upgrade your code,
 without any downtime required. This is as easy to do by hand as it is in
-[CI/CD](/docs/using-pulumi/continuous-delivery/).
+[CI/CD](/docs/iac/operations/continuous-delivery/).
 
 ### Using function serialization
 
@@ -243,7 +243,7 @@ const docsHandlerFunc = new aws.lambda.Function("docsHandlerFunc", {
 // ...
 ```
 
-Using [Pulumi's Asset and Archive classes](/docs/concepts/assets-archives/), you can
+Using [Pulumi's Asset and Archive classes](/docs/iac/concepts/assets-archives/), you can
 fetch code from anywhere --- in-memory, on disk, or even over the network. Pulumi automatically detects changes in the contents
 of these assets and archives so that when you run `pulumi up`, diffs are detected and resources updated accordingly.
 
@@ -553,7 +553,7 @@ Lastly, it's possible to use Pulumi stacks to break out your cloud resources and
 independently deployable pieces. This allows teams to leverage features like RBAC. For instance, it's common for the
 DevOps team to manage the physical cloud resources like queues, topics, and buckets, while the development team
 authors and manages the serverless functions attached to them. For more information and guidance, see
-[Organizing projects and stacks](/docs/using-pulumi/organizing-projects-stacks/).
+[Organizing projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
 
 ## Easy Lambda log consumption
 

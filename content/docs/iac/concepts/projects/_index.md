@@ -151,7 +151,7 @@ resources:
     type: aws:s3:Bucket
 ```
 
-For more information on valid Pulumi project metadata, see the [Pulumi.yaml reference](/docs/reference/pulumi-yaml/).
+For more information on valid Pulumi project metadata, see the [Pulumi.yaml reference](/docs/iac/concepts/projects/project-file/).
 
 ## Project-relative paths
 

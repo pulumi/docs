@@ -37,10 +37,10 @@ Each component can have the following top level sections:
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `inputs` | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Inputs specifies the inputs to the components. |
-| `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that the component will consist of. |
+| `inputs` | [config options](/docs/iac/concepts/projects/project-file/#config-options) | No | No | Inputs specifies the inputs to the components. |
+| `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/iac/concepts/resources/) that the component will consist of. |
 | `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values, the values of variables are expressions that can be re-used. |
-| `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the component. |
+| `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/iac/concepts/stacks/#outputs) of the component. |
 
 In many locations within this schema, values may be expressions which compute a value based on the `inputs`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
 
@@ -51,7 +51,7 @@ The supported expression forms for each of these can be found in the [YAML progr
 
 ### Inputs
 
-`inputs` is a map of config property keys to structured declarations ([see here](/docs/reference/pulumi-yaml/#config-options)).
+`inputs` is a map of config property keys to structured declarations ([see here](/docs/iac/concepts/projects/project-file/#config-options)).
 
 The value of `inputs` is an object whose keys are logical names by which the config input will be referenced in expressions within the program, and whose values are elements of the schema below.  Each item in this object represents an independent input.
 
@@ -59,7 +59,7 @@ The value of `inputs` is an object whose keys are logical names by which the con
 | - | - | - | - | - |
 | `type` | string | No | Yes | Type is the (required) data type for the parameter. It can be one of: `string`, `integer`, `boolean` or `array`. |
 | `default` | any | No | No | Default is a value of the appropriate type for the component to use if no value is specified. |
-| `items` | [config options](/docs/reference/pulumi-yaml/#config-options) | No | No | Required if `type` is `array`. Specifies the type of the array members |
+| `items` | [config options](/docs/iac/concepts/projects/project-file/#config-options) | No | No | Required if `type` is `array`. Specifies the type of the array members |
 
 ### Resources
 

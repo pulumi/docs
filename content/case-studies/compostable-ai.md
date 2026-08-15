@@ -76,7 +76,7 @@ Compostable AI's development model operates on iterative refinement toward corre
 
 Software development agents expand initial specifications by examining the codebase, documentation, and previous deliverables. Other agents then assemble platform components or iterate on the platform itself. Multiple reviewing agents examine the prospective solution from different aspects: performance, functional correctness, and security. They provide feedback that triggers another development round until all agents are satisfied.
 
-Once validated, the solution deploys to staging for manual user acceptance testing and security testing, including automated validation through Pulumi [policy packs](/docs/iac/packages-and-automation/crossguard/). The team uses the standard AWS best practices policy pack, deployed universally. The policy packs automate the implementation of best practices, validate conformance, and simplify the certification journey.
+Once validated, the solution deploys to staging for manual user acceptance testing and security testing, including automated validation through Pulumi [policy packs](/docs/support/faq/policies/). The team uses the standard AWS best practices policy pack, deployed universally. The policy packs automate the implementation of best practices, validate conformance, and simplify the certification journey.
 
 The blast radius is contained at the AWS account level. Agents have access only to staging accounts, and changes are limited to a single customer account for bespoke work.
 

@@ -15,7 +15,7 @@ aliases:
 
 Pulumi ESC (Environments, Secrets, and Configuration) is a centralized secrets and configuration management service. You define collections of configuration values and secrets called [environments](/docs/esc/concepts/environments/), then consume them from your applications, infrastructure, and CI/CD pipelines—without copying secrets between tools or storing them in plaintext.
 
-Pulumi ESC is available as a fully managed service in [Pulumi Cloud](/docs/pulumi-cloud/) and can be [self-hosted](/docs/support/faq/secrets-config/#can-i-self-host-pulumi-esc).
+Pulumi ESC is available as a fully managed service in [Pulumi Cloud](/docs/administration/) and can be [self-hosted](/docs/support/faq/secrets-config/#can-i-self-host-pulumi-esc).
 
 ## Key benefits
 
@@ -88,5 +88,5 @@ Because dynamic values are resolved at open time, the temporary AWS credentials 
 - [Built-in properties](/docs/esc/concepts/builtin-properties/) — the `context`, `environments`, and `imports` values available to every reference.
 - [SDKs](/docs/esc/concepts/sdks/) — work with environments from your own code.
 - [Integrations](/docs/esc/integrations/) — tools with a dedicated ESC integration component.
-- [Access control](/docs/administration/access-identity/rbac/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/administration/customer-managed-keys/) — administer and secure your environments.
+- [Access control](/docs/administration/access-identity/rbac/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/concepts/customer-managed-keys/) — administer and secure your environments.
 - [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/) — the command-line reference.

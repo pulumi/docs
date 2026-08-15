@@ -257,7 +257,7 @@ To enable auto-apply (skip the approval step), set the `terraform:auto-apply` [s
 
 [Preventative policies](/docs/insights/policy/) automatically evaluate against the plan before an apply proceeds. If any mandatory policy violations are found, the apply is blocked.
 
-Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) — add your stack to a [policy group](/docs/insights/policy/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/resources/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
+Policy enforcement for remote execution works the same way as [audit policies for Terraform stacks](/docs/iac/get-started/terraform/terraform-state-backend/#audit-policies) — add your stack to a [policy group](/docs/insights/policy/policy-groups/) and the configured policy packs are evaluated on every run. Policy packs that target [bridged providers](/docs/iac/concepts/providers/) work automatically, since Terraform resources map to their bridged equivalents. Policy packs that target native Pulumi providers (like the Kubernetes provider) do not apply to Terraform stacks, since Terraform does not use those providers.
 
 ## Control execution mode
 
@@ -324,7 +324,7 @@ Not currently. Use environment variables through an [ESC environment](#provide-c
 
 ### Is drift detection available?
 
-Not currently for Terraform-managed stacks. You can run `terraform plan` on a schedule via CI/CD to detect drift manually, or [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) (including [Pulumi HCL](/docs/iac/languages-sdks/hcl/)) and use Pulumi's built-in [drift detection](/docs/pulumi-cloud/deployments/drift/).
+Not currently for Terraform-managed stacks. You can run `terraform plan` on a schedule via CI/CD to detect drift manually, or [convert your Terraform code to Pulumi](/docs/iac/get-started/terraform/convert-hcl/) (including [Pulumi HCL](/docs/iac/languages-sdks/hcl/)) and use Pulumi's built-in [drift detection](/docs/deployments/concepts/drift/).
 
 ### How are resources priced?
 

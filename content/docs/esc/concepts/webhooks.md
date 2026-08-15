@@ -27,7 +27,7 @@ ESC Webhooks can be attached to either an environment or a Pulumi Cloud organiza
 - **Organization webhooks** can be configured to trigger in response to events you specify for _all_ environments in your Pulumi Cloud organization, in addition to other organization-wide events.
 
 {{% notes type="info" %}}
-Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/pulumi-cloud/deployments). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/concepts/webhooks).
+Pulumi Cloud also supports webhooks for events related to Pulumi IaC stacks and [Pulumi Deployments](/docs/deployments/concepts/). For additional information on these types of webhooks, see [Pulumi Cloud Webhooks](/docs/deployments/concepts/webhooks).
 {{% /notes %}}
 
 {{% notes type="info" %}}
@@ -424,4 +424,4 @@ only, so ESC environment and organization webhooks must be redelivered from the 
 ## Additional Resources
 
 - [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
-- [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
+- [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)

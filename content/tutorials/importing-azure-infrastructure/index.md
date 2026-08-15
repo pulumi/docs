@@ -82,7 +82,7 @@ $ pulumi import <type> <name> <id>
 
   ![Import section of API documentation](pulumi-storage-account-import-section.png)
 
-- The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported.
+- The second argument, `name`, is the [resource name](/docs/iac/concepts/resources/names/) to apply to the resource once it's imported.
 
 - The third argument, `id`, corresponds to the value you would use in Pulumi to lookup the resource in the cloud provider. This value should correspond to the designated `lookup property` specified in the **Import** section of the resource's API documentation in the Registry. In the case of an Azure Storage Account, this would be:
 
@@ -222,7 +222,7 @@ The resource is now under management with Pulumi!
 
 {{< notes type="info" >}}
 
-Resources imported with the CLI are marked as __protected__ to guard against accidental deletion. If, for example, you forgot to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the resource. The `protect` property will prevent this from happening, leaving the resource intact. If you ever want to delete this resource, you will have to set the `protect` property to `false` in the code. You can learn more by visiting the [Resource option: protect documentation](/docs/concepts/options/protect/).
+Resources imported with the CLI are marked as __protected__ to guard against accidental deletion. If, for example, you forgot to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the resource. The `protect` property will prevent this from happening, leaving the resource intact. If you ever want to delete this resource, you will have to set the `protect` property to `false` in the code. You can learn more by visiting the [Resource option: protect documentation](/docs/iac/concepts/resources/options/protect/).
 
 {{< /notes >}}
 
@@ -300,7 +300,7 @@ You only need to copy over the resource definitions of the two Storage Accounts 
 
 ### Import using code
 
-The third method to import existing cloud resources into a Pulumi project is by defining the resource code yourself and configuring the [`import` resource option](/docs/iac/concepts/options/import/) in the resource's definition. This approach may be better suited for scenarios that require importing multiple resources of the same type across multiple stacks and/or deployment environments as part of an automation workflow.
+The third method to import existing cloud resources into a Pulumi project is by defining the resource code yourself and configuring the [`import` resource option](/docs/iac/concepts/resources/options/import/) in the resource's definition. This approach may be better suited for scenarios that require importing multiple resources of the same type across multiple stacks and/or deployment environments as part of an automation workflow.
 
 To demonstrate, you will start by creating a simple Resource Group in the Azure portal. Once that is complete, you will need to identify the lookup property of the Resource Group resource. To do so, navigate to the **Import** section of the [Azure Native Resource Group resource page](/registry/packages/azure-native/api-docs/resources/resourcegroup/#import) in the Pulumi documentation. You will notice that the lookup property is the following:
 

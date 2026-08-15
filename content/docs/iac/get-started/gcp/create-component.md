@@ -18,7 +18,7 @@ aliases:
 
 ## Create a component
 
-[**Components**](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate
+[**Components**](/docs/iac/concepts/components/) are infrastructure abstractions that encapsulate
 complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components.
 
 You will now create your first component that packages up your Google Cloud Storage website so you can stamp out

@@ -74,12 +74,12 @@ The most common Kubernetes resources that end up in IaC programs:
 * **Networking.** VPC and subnets, security groups, CNI configuration, NetworkPolicies, Ingress, Service mesh resources (Istio, Linkerd).
 * **Identity and access.** IAM roles for the cluster and workloads (IRSA on EKS, Workload Identity on GKE, Microsoft Entra Workload ID on AKS), Kubernetes RBAC (ClusterRoles, RoleBindings).
 * **Workloads.** Deployments, StatefulSets, DaemonSets, Jobs, CronJobs.
-* **Configuration.** ConfigMaps and Secrets (with the actual secret values pulled from a vault like [Pulumi ESC](/product/esc/), not stored in code).
+* **Configuration.** ConfigMaps and Secrets (with the actual secret values pulled from a vault like [Pulumi ESC](/product/secrets-management/), not stored in code).
 * **Service exposure.** Services, Ingress, Gateway API resources.
 * **Storage.** PersistentVolumes, StorageClasses, PVCs.
 * **Custom resources.** ArgoCD Applications, Flux Kustomizations, cert-manager Certificates, ExternalSecret objects, and any operator-defined CRDs.
 
-Pulumi's Kubernetes provider supports every resource type Kubernetes itself supports, including CRDs through a dynamic provider. See the [Pulumi Kubernetes documentation](/docs/iac/clouds/kubernetes/) for full coverage.
+Pulumi's Kubernetes provider supports every resource type Kubernetes itself supports, including CRDs through a dynamic provider. See the [Pulumi Kubernetes documentation](/docs/integrations/clouds/kubernetes/) for full coverage.
 
 ## How does IaC relate to containers and container orchestration?
 
@@ -156,7 +156,7 @@ The Kubernetes IaC tooling landscape is unusually wide because the community has
 | Workload templating | Helm, Kustomize, jsonnet |
 | GitOps controllers | ArgoCD, Flux |
 | Policy as code | [Pulumi policy as code](/docs/insights/policy/), Kyverno, OPA Gatekeeper |
-| Secrets | [Pulumi ESC](/product/esc/), External Secrets Operator, Sealed Secrets, Vault |
+| Secrets | [Pulumi ESC](/product/secrets-management/), External Secrets Operator, Sealed Secrets, Vault |
 | Cluster security scanning | Trivy, kube-bench, Falco |
 | Service mesh | Istio, Linkerd, Cilium |
 
@@ -168,7 +168,7 @@ Misconfiguration, not exotic exploits, drives most Kubernetes security incidents
 
 * **Scan before merge.** Static scanners like Trivy and Checkov run against rendered manifests in CI and catch known-bad configurations: privileged containers, host-path mounts, missing resource limits. kube-bench complements them at runtime, checking the running cluster against the CIS Kubernetes Benchmark.
 * **Enforce policy in two places.** In CI, [policy as code](/docs/insights/policy/) blocks non-compliant changes from merging at all. In the cluster, admission controllers (Kyverno, OPA Gatekeeper) backstop anything that arrives by another path. The CI check is faster feedback; the admission controller is the last line of defense.
-* **Keep secret material out of code and Git.** The IaC program defines *which* secrets a workload references; the values live in [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager and are pulled at deploy time.
+* **Keep secret material out of code and Git.** The IaC program defines *which* secrets a workload references; the values live in [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, or a cloud secrets manager and are pulled at deploy time.
 * **Use per-workload cloud identity.** IRSA on EKS, Workload Identity on GKE, and Microsoft Entra Workload ID on AKS replace long-lived static credentials with scoped, rotatable, auditable identities, all declared in the same IaC program as the workloads that use them.
 * **Declare RBAC as code.** ClusterRoles and RoleBindings written in IaC get the same least-privilege review as IAM policies. Hand-granted `cluster-admin` stops being invisible.
 * **Watch for drift.** Out-of-band `kubectl` edits and console changes surface as diffs against the declared state, so a quietly weakened NetworkPolicy or a manually widened RBAC grant gets noticed instead of persisting.
@@ -183,7 +183,7 @@ A few patterns that hold up across providers and team sizes:
 * **Avoid naked pods.** A bare `Pod` isn't rescheduled when the node fails. Use Deployments, StatefulSets, or DaemonSets so the workload survives. Enforce this with a policy in CI.
 * **Use IRSA / Workload Identity / Entra Workload ID.** Long-lived static credentials inside Kubernetes are an anti-pattern. The cloud providers all offer per-workload identity that's much easier to scope, rotate, and audit.
 * **Separate production from everything else.** Different clusters, different cloud accounts, different IAM, different secrets backends. Don't rely on namespace boundaries to keep dev workloads out of prod.
-* **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/esc/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time, either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
+* **Pull secrets at runtime.** Don't bake secret values into IaC code or Git history. Store them in a central vault like [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, or a cloud secrets manager, and pull them into Kubernetes at deploy time, either directly through your IaC program or through the External Secrets Operator (which can sync from ESC and other vaults into Kubernetes Secrets).
 * **Codify policy.** No naked pods, no privileged containers, no `:latest` tags in production, mandatory resource requests and limits, mandatory liveness/readiness probes. Enforce in CI with [Pulumi policy as code](/docs/insights/policy/) or in the cluster with Kyverno / OPA Gatekeeper.
 * **Encode dependency ordering.** Some resources have to come up before others (CRDs before the operators that consume them, namespaces before everything in them). An IaC tool that understands resource dependencies prevents the half-converged states a naive `kubectl apply -R` produces.
 * **Test the workloads, not just the YAML.** Helm chart `helm test`, end-to-end smoke tests via the automation API, and chaos exercises against ephemeral clusters all catch problems that template linting misses.
@@ -194,11 +194,11 @@ Pulumi treats Kubernetes the same way it treats every other cloud target: as res
 
 * **Unified cluster + workload programs.** The same Pulumi program creates the EKS / GKE / AKS cluster, sets up IAM, deploys the CNI and ingress controller, and applies the application workloads. Resource dependencies are explicit, so the order is correct without manual sequencing.
 * **Import existing Kubernetes artifacts.** Pulumi exposes dedicated resources for each common source format (`ConfigFile` and `ConfigGroup` for raw Kubernetes YAML manifests, `Chart` for Helm charts, and `Directory` for Kustomize bundles) so adoption can be incremental without re-authoring the source artifacts.
-* **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/iac/clouds/kubernetes/) cover each provider along with Helm and Kustomize support, architecture templates, and ESC integration.
+* **Higher-level components and guides.** For EKS, the [`@pulumi/eks`](https://github.com/pulumi/pulumi-eks) component package bundles sensible networking and IAM defaults so you don't hand-wire VPCs, subnets, and roles. For GKE and AKS, the [Pulumi Kubernetes docs](/docs/integrations/clouds/kubernetes/) cover each provider along with Helm and Kustomize support, architecture templates, and ESC integration.
 * **Strong typing.** Kubernetes API objects come through as typed values in TypeScript, Python, Go, .NET, and Java. In TypeScript, Go, .NET, and Java, misspelled field names fail at compile time rather than at `kubectl apply` time.
 * **Policy as code.** Write Kubernetes-aware policies in the same language as the program. Block naked pods, missing resource limits, or `latest` tags before they merge.
 * **Secrets through Pulumi ESC.** Pull secret values into Kubernetes Secrets at deploy time. No plaintext secrets in code or state.
-* **[Automation API](/docs/iac/automation-api/).** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
+* **[Automation API](/docs/iac/concepts/automation-api/).** Wrap Pulumi programs in software (a service, a CLI, a CI job) so platform teams can offer self-service cluster and workload provisioning through whatever interface they prefer.
 
 [Get started with Pulumi Kubernetes](/docs/iac/get-started/kubernetes/) to manage a cluster and its workloads in TypeScript, Python, Go, .NET, Java, or YAML.
 
@@ -222,7 +222,7 @@ Yes. Pulumi has `ConfigFile` (single manifest), `ConfigGroup` (multiple manifest
 
 ### How do I keep Kubernetes Secrets out of Git?
 
-Don't put secret values in IaC code. Use [Pulumi ESC](/product/esc/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, or the External Secrets Operator to pull secrets at runtime. The IaC defines *what* secret references look like; the secret material lives in the vault.
+Don't put secret values in IaC code. Use [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, or the External Secrets Operator to pull secrets at runtime. The IaC defines *what* secret references look like; the secret material lives in the vault.
 
 ### How do you test Kubernetes IaC?
 
@@ -246,7 +246,7 @@ Start with the simplest thing that gives you a baseline: a Pulumi program that i
 
 ## Learn more
 
-Pulumi turns the cluster, the workloads on it, and the cloud resources around it into one reviewable program in the language your team already uses. Combined with [policy as code](/docs/insights/policy/) and [ESC](/product/esc/) for secrets, that gives you everything Kubernetes can be operated with: the cluster as code, the workloads as code, the policies as code. [Get started today](/docs/iac/get-started/kubernetes/).
+Pulumi turns the cluster, the workloads on it, and the cloud resources around it into one reviewable program in the language your team already uses. Combined with [policy as code](/docs/insights/policy/) and [ESC](/product/secrets-management/) for secrets, that gives you everything Kubernetes can be operated with: the cluster as code, the workloads as code, the policies as code. [Get started today](/docs/iac/get-started/kubernetes/).
 
 Related reading:
 

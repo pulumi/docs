@@ -138,7 +138,7 @@ values:
             secretId: api-key
 ```
 
-The same `login: ${aws.login}` pattern works for the [`aws-parameter-store`](/docs/esc/providers/aws-parameter-store/) provider. For the full set of options each provider accepts, see the [`aws-secrets`](/docs/esc/providers/aws-secrets/) and [`aws-parameter-store`](/docs/esc/providers/aws-parameter-store/) documentation.
+The same `login: ${aws.login}` pattern works for the [`aws-parameter-store`](/docs/esc/providers/secrets/aws-parameter-store/) provider. For the full set of options each provider accepts, see the [`aws-secrets`](/docs/esc/providers/secrets/aws-secrets/) and [`aws-parameter-store`](/docs/esc/providers/secrets/aws-parameter-store/) documentation.
 
 To validate your configuration, open the consuming environment with the `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/):
 

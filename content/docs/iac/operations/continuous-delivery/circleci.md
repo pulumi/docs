@@ -36,7 +36,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A CircleCI account with a project connected to your Git repository.
-1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Add the Pulumi orb
 

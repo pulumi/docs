@@ -537,7 +537,7 @@ Once you have a stack, you can also manage which [ESC environments](/docs/esc/co
 
 Automation API drives the same engine as the CLI, so it downloads any missing provider plugin automatically before an operation---the explicit `installPlugin` call below isn't required for providers published to the [Pulumi Registry](/registry/). It's shown here to pin a specific plugin version; you also need it for [local or parameterized packages](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api). See [Plugins](/docs/iac/concepts/automation-api/#plugins) for details.
 
-The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
+The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/iac/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 {{% choosable language "typescript" %}}

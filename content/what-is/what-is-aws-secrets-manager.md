@@ -70,7 +70,7 @@ $ aws secretsmanager list-secrets
 
 {{< notes type="info" >}}
 
-Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/iac/concepts/secrets/).
 
 {{< /notes >}}
 

@@ -19,7 +19,7 @@ pulumi_cloud_feature: saml-sso
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work
-with [Pulumi Cloud](/docs/pulumi-cloud/).
+with [Pulumi Cloud](/docs/administration/).
 
 {{% notes type="info" %}}
 For examples of setting up SAML SSO with popular identity providers, refer to our [integration guides](/docs/administration/access-identity/saml#integration-guides).

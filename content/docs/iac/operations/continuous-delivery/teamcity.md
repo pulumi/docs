@@ -36,7 +36,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A TeamCity project with a build configuration attached to a [VCS root](https://www.jetbrains.com/help/teamcity/configuring-vcs-roots.html) for your Git repository.
-1. A Pulumi program in that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program in that repository. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Authenticate with Pulumi Cloud
 

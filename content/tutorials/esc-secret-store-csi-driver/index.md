@@ -123,7 +123,7 @@ In the `secrets` section, you can define the secrets you want to retrieve from P
 
 Now, we will create a secret in the Pulumi ESC project and synchronize it into the Kubernetes cluster by creating an `SecretProviderClass`:
 
-Create a new [ESC environment](/docs/esc/get-started/create-environment/)  called `csi-secrets-store-app` in the `esc-secrets-store-csi-driver-demo` project:
+Create a new [ESC environment](/docs/esc/get-started/)  called `csi-secrets-store-app` in the `esc-secrets-store-csi-driver-demo` project:
 
 ```bash
 values:

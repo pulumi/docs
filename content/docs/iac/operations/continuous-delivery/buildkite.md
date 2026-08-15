@@ -18,7 +18,7 @@ menu:
 Because the plugin runs CLI commands, it works with a Pulumi program written in any [supported language](/docs/iac/languages-sdks/), and with [any cloud provider](/registry/) Pulumi supports.
 
 {{% notes type="info" %}}
-This guide assumes [Pulumi Cloud](/docs/pulumi-cloud/) as your backend. Pulumi Cloud isn't required to run Pulumi in CI/CD — Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/) — but the access token, OIDC, and ESC features described here are specific to Pulumi Cloud.
+This guide assumes [Pulumi Cloud](/docs/administration/) as your backend. Pulumi Cloud isn't required to run Pulumi in CI/CD — Pulumi also supports [self-managed backends](/docs/iac/concepts/state-and-backends/) — but the access token, OIDC, and ESC features described here are specific to Pulumi Cloud.
 {{% /notes %}}
 
 {{< pulumi-docker-images-note >}}
@@ -30,7 +30,7 @@ Before you begin, make sure you have:
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A Buildkite account with a [cluster and agent](https://buildkite.com/docs/pipelines/getting-started).
 1. A Git repository connected to a Buildkite pipeline.
-1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Install and configure Pulumi
 

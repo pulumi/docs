@@ -125,13 +125,13 @@ Previewing update (dev):
 
 Child resources always inherit the following resource options from their `parent`:
 
-* [`provider`](/docs/iac/concepts/options/provider): Child resources inherit their parent's provider in order to ensure that child resources are created in the same cloud context (account, region, etc.) as their parent.
+* [`provider`](/docs/iac/concepts/resources/options/provider/): Child resources inherit their parent's provider to ensure that child resources are created in the same cloud context (account, region, etc.) as their parent.
 
-* [`aliases`](/docs/iac/concepts/options/aliases): Aliases are inherited so that changing the type of a parent resource correctly changes the qualified type of a child resource, and changing the name of a parent resource correctly changes the name prefix of child resources.
+* [`aliases`](/docs/iac/concepts/resources/options/aliases/): Aliases are inherited so that changing the type of a parent resource correctly changes the qualified type of a child resource, and changing the name of a parent resource correctly changes the name prefix of child resources.
 
-* [`protect`](/docs/iac/concepts/options/protect): Child resources inherit their parent's protection bit in order to ensure that deletions execute correctly. Children are deleted before their parent, so inheriting protection ensures that if a parent is marked as protected, none of its children will be deleted (because deleting the protected parent would fail).
+* [`protect`](/docs/iac/concepts/resources/options/protect/): Child resources inherit their parent's protection bit to ensure that deletions execute correctly. Children are deleted before their parent, so inheriting protection ensures that if a parent is marked as protected, none of its children will be deleted (because deleting the protected parent would fail).
 
-* [`transforms`](/docs/iac/concepts/options/transforms):  Transforms applied to a parent will run on the parent and on all child resources. This allows a transform to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transforms](/docs/iac/concepts/options/transforms#stack-transforms) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource).
+* [`transforms`](/docs/iac/concepts/resources/options/transforms/):  Transforms applied to a parent will run on the parent and on all child resources. This allows a transform to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transforms](/docs/iac/concepts/resources/options/transforms/#stack-transforms) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource).
 
 * [`transformations`](/docs/iac/concepts/options/transformations):  Transformations applied to a parent will run on the parent and on all child resources. This allows a transformation to be applied to a component to intercept and modify any resources created by its children. As a special case, [Stack transformations](/docs/iac/concepts/options/transformations#stack-transformations) will be applied to *all* resources (since all resources ultimately are parented directly or indirectly by the root stack resource). Prefer `transforms` over `transformations` as the latter is deprecated.
 

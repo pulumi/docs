@@ -98,4 +98,4 @@ In this tutorial, you learned how to authenticate to the Pulumi CLI using the br
   - [Azure Configuration](/docs/iac/get-started/azure/begin/#configure-pulumi-to-access-your-microsoft-azure-account)
   - [Google Cloud Configuration](/docs/iac/get-started/gcp/begin/#configure-pulumi-to-access-your-google-cloud-account)
   - [Kubernetes Configuration](/docs/iac/get-started/kubernetes/begin/#configure-kubernetes)
-- Learn more about the different Pulumi Cloud hosting options in the [Managed Pulumi Cloud vs Self-Hosted Pulumi Cloud documentation](/docs/pulumi-cloud/self-hosted/)
+- Learn more about the different Pulumi Cloud hosting options in the [Managed Pulumi Cloud vs Self-Hosted Pulumi Cloud documentation](/docs/administration/self-hosting/)

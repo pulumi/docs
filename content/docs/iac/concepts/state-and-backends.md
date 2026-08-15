@@ -24,14 +24,14 @@ aliases:
 - /docs/iac/concepts/state
 ---
 
-Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/concepts/stack/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.
+Pulumi stores metadata about your infrastructure so that it can manage your cloud resources. This metadata is called _state_. Each [stack](/docs/iac/concepts/stacks/) has its own state, and state is how Pulumi knows when and how to create, read, delete, or update cloud resources.
 
 Pulumi stores state in a _backend_ of your choosing. A backend is an API and storage endpoint used by the CLI to coordinate updates, and read and write stack state whenever appropriate. Backend options include Pulumi Cloud, an easy-to-use, secure, and reliable hosted application with policies and safeguards to facilitate team collaboration, in addition to simple object storage in AWS S3, Microsoft Azure Blob Storage, Google Cloud Storage, any AWS S3 compatible server such as Minio or Ceph, or a local filesystem.
 
 The default experience is to use the hosted Pulumi Cloud, which takes care of the state and backend details for you. Conversely, when using cloud storage or a local filesystem as your backend, you gain control over where your state is located at the expense of having to handle security, state management, auditing, and other concerns Pulumi Cloud would otherwise handle for you.
 
 {{% notes type="info" %}}
-Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets](/docs/concepts/secrets/).
+Pulumi state does not include your cloud credentials. Credentials are kept local to your client &mdash; wherever the CLI runs &mdash; even when using the managed Pulumi Cloud backend. Pulumi _does_ store configuration and secrets, but encrypts those secrets using your chosen encryption provider. To learn more, see [Configuration and Secrets](/docs/iac/concepts/secrets/).
 
 This page covers the technical details of state management and backend configuration. To understand the benefits and features of Pulumi Cloud versus DIY backends, see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/).
 {{% /notes %}}
@@ -105,7 +105,7 @@ Running `pulumi login` without any argument will log into the default Pulumi Clo
 $ pulumi login
 ```
 
-This will display a prompt that asks for an [access token](/docs/pulumi-cloud/accounts#access-tokens):
+This will display a prompt that asks for an [access token](/docs/administration/access-identity/access-tokens/):
 
 ```
 Manage your Pulumi stacks by logging in.
@@ -126,7 +126,7 @@ $ pulumi login https://pulumi.acmecorp.com
 
 Everything works the same as with the standard Pulumi Cloud, except that Pulumi will target your private instance instead of the shared one hosted at `app.pulumi.com`.
 
-To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/guides/basics/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/).
+To learn how the Pulumi Cloud backend is designed—including why it never needs your cloud credentials—see [Pulumi Cloud architecture](/docs/iac/guides/basics/how-pulumi-works/#pulumi-cloud-architecture). If you are interested in hosting your own instance, see [Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/).
 
 ## Using a DIY backend
 
@@ -134,7 +134,7 @@ You can manage state yourself with a DIY backend that stores state in AWS S3, Az
 
 ## Migrating between state backends
 
-`pulumi stack migrate` requires Pulumi CLI v3.254.0 or later. [Update the Pulumi CLI](/docs/iac/download-install/) before migrating if you use an earlier version.
+`pulumi stack migrate` requires Pulumi CLI v3.254.0 or later. [Update the Pulumi CLI](/docs/install/) before migrating if you use an earlier version.
 
 Use [`pulumi stack migrate`](/docs/iac/cli/commands/pulumi_stack_migrate/) to migrate a stack between different backends. The command migrates the stack to the backend where you are currently logged in and opens the source backend URL directly, so you do not need to log out of the target backend.
 
@@ -215,7 +215,7 @@ Pulumi is designed to abstract state management away from you so that you can op
 
 Pulumi supports importing resources that were already created outside of Pulumi, such as resources created using the cloud console, a cloud CLI or SDK, or even another infrastructure as code tool. Resource metadata is imported into your Pulumi state and source code is generated in your chosen language to match that state.
 
-To learn more about importing existing resources, see [Importing Infrastructure](/docs/using-pulumi/adopting-pulumi/import/).
+To learn more about importing existing resources, see [Importing Infrastructure](/docs/iac/guides/migration/import/).
 
 ### Checkpoints
 
@@ -231,9 +231,9 @@ State is stored in your target backend in the form of checkpoints. In the case o
 
 A Pulumi "secret" can be used to store sensitive configuration values like database passwords and cloud tokens, and will always be handled safely. Pulumi understands the transitive usage of that secret in your state and will ensure everything it touches is encrypted, no matter which backend you've chosen.
 
-A secret can be created one of two ways: passing `--secret` to the `pulumi config set` command, or by [creating one programmatically](/docs/concepts/secrets#secrets). In both cases, the value is encrypted using your stack's chosen encryption provider. By default with Pulumi Cloud, a server-side HSM key is used, but you may customize the encryption provider if you'd like more control over keys, rotation, and so on.
+A secret can be created one of two ways: passing `--secret` to the `pulumi config set` command, or by [creating one programmatically](/docs/iac/concepts/secrets/#secrets). In both cases, the value is encrypted using your stack's chosen encryption provider. By default with Pulumi Cloud, a server-side HSM key is used, but you may customize the encryption provider if you'd like more control over keys, rotation, and so on.
 
-To learn more about available encryption providers and how to customize your stack's, see [Configuring Secrets Encryption](/docs/concepts/secrets#configuring-secrets-encryption).
+To learn more about available encryption providers and how to customize your stack's, see [Configuring Secrets Encryption](/docs/iac/concepts/secrets/#configuring-secrets-encryption).
 
 ### Exporting and Importing State
 

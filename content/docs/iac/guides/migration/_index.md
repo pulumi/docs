@@ -23,12 +23,12 @@ This user guide offers a tour of tried-and-true tools and techniques that can be
 
 Below we will review some basic concepts, but feel free to jump straight to a specific guide:
 
-* [**Importing Infrastructure**](/docs/using-pulumi/adopting-pulumi/import/): for any cloud, no matter how it's provisioned
-* [**From Terraform or CDKTF**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/): coexist with existing workspaces or convert your HCL
-* [**From AWS CloudFormation**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/): coexist with, deploy, or convert your templates and stacks
-* [**From Azure Resource Manager (ARM)**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/): coexist with, deploy, or convert your templates and deployments
-* [**From Kubernetes YAML or Helm**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/): coexist with, deploy, or convert your configuration
-* [**From Serverless Framework**](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-serverless/): coexist with, import, or rewrite your Serverless Framework applications
+* [**Importing Infrastructure**](/docs/iac/guides/migration/import/): for any cloud, no matter how it's provisioned
+* [**From Terraform or CDKTF**](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/): coexist with existing workspaces or convert your HCL
+* [**From AWS CloudFormation**](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/): coexist with, deploy, or convert your templates and stacks
+* [**From Azure Resource Manager (ARM)**](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/): coexist with, deploy, or convert your templates and deployments
+* [**From Kubernetes YAML or Helm**](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/): coexist with, deploy, or convert your configuration
+* [**From Serverless Framework**](/docs/iac/guides/migration/migrating-to-pulumi/from-serverless/): coexist with, import, or rewrite your Serverless Framework applications
 
 ## Concepts
 
@@ -38,11 +38,11 @@ Support for these techniques differs based on how your existing infrastructure w
 
 |                    | [Coexistence](#coexistence) | [Importing](#importing-infrastructure) | [Conversion](#conversion) |
 |--------------------|:-------:|:------:|:-------:|
-| [Terraform](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/) | ✅      | ✅     | ✅      |
-| [AWS CloudFormation](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/) | ✅      | ✅     | ✅       |
-| [Azure ARM](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/)          | ✅      | ✅     | ✅      |
-| [Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/)    | ✅      | ✅     | ✅      |
-| [Serverless Framework](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-serverless/) | ✅      | ✅     | ✅      |
+| [Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/) | ✅      | ✅     | ✅      |
+| [AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/) | ✅      | ✅     | ✅       |
+| [Azure ARM](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/)          | ✅      | ✅     | ✅      |
+| [Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/)    | ✅      | ✅     | ✅      |
+| [Serverless Framework](/docs/iac/guides/migration/migrating-to-pulumi/from-serverless/) | ✅      | ✅     | ✅      |
 | Other              | ✅      | ✅     |         |
 
 ### Coexistence
@@ -55,11 +55,11 @@ Let's say you already have infrastructure provisioned by an existing tool, such 
 
 In these cases, new infrastructure can coexist with old infrastructure in two ways, letting you keep your existing infrastructure as-is while building new infrastructure under Pulumi's management. The following techniques can be used:
 
-* [**Resource Getters**](/docs/concepts/resources#resource-get) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
+* [**Resource Getters**](/docs/iac/concepts/functions/get-functions/) available on every resource let you read all the details for a resource from the cloud provider based just on its ID.
 
-* [**Stack References**](/docs/concepts/stack#stackreferences) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/using-pulumi/organizing-projects-stacks/).
+* [**Stack References**](/docs/iac/concepts/stacks/#stackreferences) let you reference outputs of another Pulumi stack for use as inputs to a stack, which is very useful for [organizing projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
 
-* **External State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/), [AWS CloudFormation stacks](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-aws/), and [Azure Resource Manager (ARM) deployments](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure/).
+* **External State References** let you reference outputs from a non-Pulumi stack for use as inputs to a Pulumi stack. Many infrastructure as code tools have the notion of "outputs," which are values exported for easy consumption. This might be VPC IDs, auto-assigned IP addresses, and so on. Examples include [Terraform state files and workspaces](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), [AWS CloudFormation stacks](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/), and [Azure Resource Manager (ARM) deployments](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/).
 
 Together, these make it easy to reference existing infrastructure regardless of how it was provisioned, without Pulumi taking over control of its ongoing management.
 
@@ -71,7 +71,7 @@ In the above coexistence scenarios, Pulumi _reads_ your existing infrastructure,
 
 Furthermore, Pulumi doesn't care where the infrastructure originally came from. You could have manually provisioned it in your cloud's console UI, from the CLI, using Terraform, your cloud's built-in templating mechanism, and so on. In all cases, after the import process, you'll be left with a working Pulumi program, and all subsequent infrastructure updates can be made with Pulumi. You can then retire the old way of managing your infrastructure. This works even if you've lost the original scripts or templates that created the infrastructure.
 
-To learn more about how to import resources in this manner, refer to the [import guide](/docs/using-pulumi/adopting-pulumi/import/).
+To learn more about how to import resources in this manner, refer to the [import guide](/docs/iac/guides/migration/import/).
 
 ### Conversion
 
@@ -79,4 +79,4 @@ The final approach is to convert an existing infrastructure as code program to P
 
 Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
 
-There are conversion tools available for [Terraform HCL](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure#using-the-next-generation-pulumi-azure-provider).
+There are conversion tools available for [Terraform HCL](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#converting-terraform-hcl-to-pulumi), [Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/#converting-kubernetes-yaml), and [Azure Resource Manager (ARM) templates](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/#convert-arm-templates-to-pulumi).

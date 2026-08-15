@@ -29,7 +29,7 @@ The first step is to create a new OneLogin Application for Pulumi SSO:
 
     ![Finding the SAML Test Connector App](/images/docs/reference/service/saml-onelogin/onelogin-find-app.png)
 
-1. Enter a _Display Name_ and optionally a logo. See [Pulumi Logos](/brand/#logos).
+1. Enter a _Display Name_ and optionally a logo. See [Pulumi Logos](https://brand.pulumi.com/#logos).
 1. Select **Save**.
 
     ![Creating a OneLogin Application example](/images/docs/reference/service/saml-onelogin/onelogin-create-saml-app.png)

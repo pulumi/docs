@@ -39,7 +39,7 @@ flowchart TD
 Keep these constraints in mind when choosing a dynamic provider:
 
 - A dynamic provider can only be used from programs written in the same language as the provider.
-- The `read` method is not currently functional, so [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) and the static [`get` method](/docs/iac/concepts/resources/get/) are not supported. This is tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175).
+- The `read` method is not currently functional, so [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) and the static [`get` method](/docs/iac/concepts/functions/get-functions/) are not supported. This is tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175).
 - Provider methods are serialized to run in a separate process, which limits what code they can capture. See [function serialization](/docs/iac/concepts/functions/function-serialization/).
 
 ## The resource provider interface
@@ -100,7 +100,7 @@ The `delete` method is invoked when the URN exists in the previous state but not
 The `read` method is not currently functional for dynamic providers. Attempting to invoke it — for example, by running `pulumi import` or using the static `get` method on a dynamic resource — results in an unimplemented exception. This is tracked in [pulumi/pulumi#16175](https://github.com/pulumi/pulumi/issues/16175). If your use case requires importing existing resources, implement a [component resource](/docs/iac/concepts/components/) backed by a [native provider](/docs/iac/guides/building-extending/providers/build-a-provider/) instead.
 {{% /notes %}}
 
-When functional, `read` looks up an existing resource by `id` and returns its canonical `id` and output properties. It is intended to support the static [`get` method](/docs/iac/concepts/resources/get/), [`pulumi import`](/docs/iac/cli/commands/pulumi_import/), and [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/).
+When functional, `read` looks up an existing resource by `id` and returns its canonical `id` and output properties. It is intended to support the static [`get` method](/docs/iac/concepts/functions/get-functions/), [`pulumi import`](/docs/iac/cli/commands/pulumi_import/), and [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/).
 
 ## Strongly typed inputs
 

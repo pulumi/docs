@@ -126,7 +126,7 @@ If you are using `pulumi install` to install packages defined in your project fi
 
 Within a Pulumi program, there are two types of providers you can use to declare resources:
 
-- **Default providers** are not declared in your Pulumi program, and use global configuration settings. Resources created with a default provider do not need the [`provider` option](/docs/iac/concepts/options/provider/) set in the [resource's options parameter](/docs/iac/concepts/options/). This is the simplest way to declare Pulumi resources.
+- **Default providers** are not declared in your Pulumi program, and use global configuration settings. Resources created with a default provider do not need the [`provider` option](/docs/iac/concepts/resources/options/provider/) set in the [resource's options parameter](/docs/iac/concepts/resources/options/). This is the simplest way to declare Pulumi resources.
 - **Explicit providers** are explicitly declared in your Pulumi program, and use the configuration values you specify when you declare the provider. Resources created with explicit providers must have the `provider` option set in their resource options. The most common use case for explicit providers are multi-environment deployments of cloud infrastructure in a single stack. Explicit providers are themselves Pulumi resources, and their configuration values are [Pulumi inputs](/docs/iac/concepts/inputs-outputs/).
 
 The following table summarizes the differences between default and explicit providers:
@@ -619,10 +619,10 @@ resources:
 
 ## Disabling default providers
 
-While default providers are enabled by default, they [can be disabled](/docs/concepts/config#special-configuration-options) on a per stack basis. Disabling default providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
+While default providers are enabled by default, they [can be disabled](/docs/iac/concepts/config/#pulumidisable-default-providers) on a per stack basis. Disabling default providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
 
 {{% notes type="tip" %}}
-Disabling default providers will help ensure that the [`provider` resource option](/docs/iac/concepts/options/provider) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.
+Disabling default providers will help ensure that the [`provider` resource option](/docs/iac/concepts/resources/options/provider/) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.
 {{% /notes %}}
 
 ### Using the Pulumi CLI

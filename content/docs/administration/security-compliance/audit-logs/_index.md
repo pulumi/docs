@@ -76,7 +76,7 @@ To export audit logs using the console:
 ### Exporting audit logs using the API
 
 {{% notes type="info" %}}
-See [Pulumi Cloud REST API](/docs/reference/service-rest-api#audit-logs) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
+See [Pulumi Cloud REST API](/docs/reference/service-rest-api/#audit-logs) for full details of the API endpoint to export audit log events. This API is rate-limited and only intended for occasional use, see automated export section above if you need frequent export.
 {{% /notes %}}
 
 ### Supported audit log formats

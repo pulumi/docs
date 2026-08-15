@@ -56,7 +56,7 @@ VCS-backed templates are sourced from GitHub or GitLab repositories that you con
 
 All Pulumi templates require a valid `Pulumi.yaml` file at the root of the template directory. For registry-backed templates, this is the directory you publish. For VCS-backed templates, this can be at the repository root or within a subdirectory.
 
-The `Pulumi.yaml` file must contain a `template` section to be recognized as a valid template. This section typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/concepts/secrets), which ensures values in templated projects will be stored with secure encryption.
+The `Pulumi.yaml` file must contain a `template` section to be recognized as a valid template. This section typically includes a `config` section for specifying required config values for the project. Each config value can have a `description` and a `default` value. Config values can be marked as [`secret`](/docs/iac/concepts/secrets/), which ensures values in templated projects will be stored with secure encryption.
 
 ```yaml
 name: my-aws-project
@@ -197,7 +197,7 @@ By doing publishing organization templates, your organization's members will be 
 
 - Discover template in the [private registry](/docs/idp/concepts/private-registry/).
 - Configure and launch new Pulumi projects from their browser.
-- Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments) to automatically work with new projects.
+- Configure [Pulumi Deployments](/docs/deployments/concepts/) to automatically work with new projects.
 
 ## Configuring VCS-backed Templates
 

@@ -31,7 +31,7 @@ The first step is to create a new OneLogin Application for Pulumi SCIM:
 1. From the OneLogin Administration portal, go to the **Applications** page and select the **Add App** button.
 1. Search for `SCIM Provisioner with SAML (SCIM v2 Core)` and select it.
 
-1. Enter a _Display Name_ and optionally a logo. See [Pulumi Logos](/brand/#logos).
+1. Enter a _Display Name_ and optionally a logo. See [Pulumi Logos](https://brand.pulumi.com/#logos).
 1. Select **Save**.
 
 ### Configuration Settings
