@@ -103,7 +103,7 @@ Teams govern AI infrastructure the same way they govern any production infrastru
 
 ### Guardrails that hold up in production
 
-- **Policy as code** evaluates every proposed change, human or agent-authored, against organizational rules before it can apply. See [what policy as code is](/what-is/what-is-policy-as-code/) and Pulumi's [Pulumi Policies](/docs/insights/policy/) implementation.
+- **Policy as code** evaluates every proposed change, human or agent-authored, against organizational rules before it can apply. See [what policy as code is](/what-is/what-is-policy-as-code/) and [Pulumi Policies](/docs/insights/policy/), Pulumi's implementation.
 - **Secrets and configuration management** keeps credentials out of code and out of an agent's prompt context. See Pulumi's [secrets management](/product/secrets-management/).
 - **Drift detection and inventory** catch infrastructure that diverged from what is declared, whether a person clicked around in a console or an agent applied a change outside the normal path. See Pulumi's [insights and governance](/product/insights-governance/) capabilities.
 - **Human-in-the-loop approval** keeps a person in the decision path for changes above a defined risk threshold, even when an agent generated the change.
