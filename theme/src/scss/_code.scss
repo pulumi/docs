@@ -26,13 +26,13 @@ h6 {
         // 14px is barely over half of the heading's 24px. 0.85em keeps the
         // code chip a clearly distinct, slightly smaller typographic unit
         // without shrinking it into an afterthought. On its own, 0.85em
-        // would still fall below today's 14px for h5/h6 at their smaller
-        // (mobile) sizes, which are 18px and under; the max() floor
-        // guarantees the code chip only ever grows relative to what ships
-        // today.
+        // would still fall below today's 14px whenever the heading itself
+        // is under ~16.5px (h6 at both breakpoints, h5 on mobile); the
+        // max() floor on both font-size and padding guarantees the code
+        // chip never regresses below what ships today, only ever grows.
         font-size: max(0.85em, 14px);
         font-weight: inherit;
-        padding: 0.15em 0.3em;
+        padding: max(0.15em, 3px) max(0.3em, 6px);
     }
 }
 
