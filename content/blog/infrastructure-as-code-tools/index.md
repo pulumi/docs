@@ -1439,7 +1439,7 @@ Very important for long-term strategy:
 
 - Apache 2.0 (Pulumi, CDK) offers maximum flexibility
 - MPL 2.0 (OpenTofu) ensures open-source availability
-- BSL (Terraform) restricts commercial competitors
+- BUSL (Terraform) restricts commercial competitors
 - Proprietary (CloudFormation, ARM) ties you to specific vendors
 
 Choose open-source tools like Pulumi or OpenTofu to avoid vendor lock-in.
