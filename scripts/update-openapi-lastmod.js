@@ -138,8 +138,17 @@ async function main() {
 
     ledger.tags = tagResult.updated;
     ledger.schemas = schemaResult.updated;
-    ledger._meta = ledger._meta || {};
-    ledger._meta.last_checked = today;
+
+    // Deliberately do NOT stamp a "last_checked" (or any other) timestamp into
+    // _meta on every run. This script runs nightly whether or not anything
+    // changed, and _meta is part of the committed file: touching it
+    // unconditionally would make every run's diff non-empty, so the calling
+    // workflow's `git diff --cached --quiet` gate would never see "nothing to
+    // commit" and would open (and auto-merge) a no-op PR every single night.
+    // _meta is left untouched unless a real content change moved it below.
+
+    const totalChanged =
+        tagResult.changed + tagResult.added + tagResult.removed + schemaResult.changed + schemaResult.added + schemaResult.removed;
 
     fs.writeFileSync(LEDGER_FILE, JSON.stringify(ledger, null, 2) + "\n");
 
@@ -151,6 +160,9 @@ async function main() {
         `schemas: ${schemaResult.changed} changed, ${schemaResult.added} added, ${schemaResult.removed} removed ` +
             `(${Object.keys(schemaHashes).length} total)`,
     );
+    if (totalChanged === 0) {
+        console.log("no changes observed \u2014 ledger file is byte-identical to its prior committed state");
+    }
 }
 
 main().catch((err) => {
