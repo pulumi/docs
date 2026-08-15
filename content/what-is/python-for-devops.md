@@ -114,7 +114,7 @@ A typical Python toolchain for DevOps work:
 | Orchestration / pipelines | Airflow, Prefect, Dagster, Argo Workflows |
 | ML / MLOps | PyTorch, TensorFlow, scikit-learn, MLflow, Kubeflow, BentoML |
 | Observability | OpenTelemetry Python SDK, Datadog APM, New Relic, Sentry |
-| Secrets | [Pulumi ESC](/product/esc/) Python SDK, HashiCorp Vault client, AWS Secrets Manager |
+| Secrets | [Pulumi ESC](/product/secrets-management/) Python SDK, HashiCorp Vault client, AWS Secrets Manager |
 
 The toolchain isn't static. Astral's `uv` and `ruff` have displaced a lot of older tools in the last two years; both are dramatic speedups over their predecessors and are now common defaults in new Python projects.
 
@@ -126,7 +126,7 @@ A few patterns that hold up across team sizes:
 * **Enable type hints and run a checker.** mypy or Pyright on every PR. Even partial typing pays off because cloud SDKs have complex shapes.
 * **Use Ruff for linting and formatting.** Combines what Flake8 + Black + isort + pyupgrade used to do, runs orders of magnitude faster, and ships with sensible defaults.
 * **Pin Python versions.** Use `pyproject.toml` to declare a supported Python range, and use `.python-version` (or `tool.uv.python`) to pin a specific local version. Production drift between Python versions is a real source of bugs.
-* **Don't hide secrets in `.env` files.** Use [Pulumi ESC](/product/esc/), Vault, or your cloud's secrets manager and pull them at runtime. Commit `.env.example` if you have to, never `.env`.
+* **Don't hide secrets in `.env` files.** Use [Pulumi ESC](/product/secrets-management/), Vault, or your cloud's secrets manager and pull them at runtime. Commit `.env.example` if you have to, never `.env`.
 * **Test the scripts.** Even short DevOps scripts deserve a pytest run. A test that simulates the `boto3` call with a mock catches the API regressions cloud SDKs introduce.
 * **Containerize CI jobs that depend on system packages.** A Dockerfile beats trying to make a CI image match a developer laptop.
 * **Prefer libraries over invoking subprocesses.** `boto3` over shelling out to `aws`; the `kubernetes` client over `kubectl`. The library calls are easier to test and easier to handle errors from.
@@ -136,13 +136,13 @@ A few patterns that hold up across team sizes:
 Python is a first-class language for Pulumi, supported on par with TypeScript, Go, .NET, and Java.
 
 * **Typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, Datadog, and hundreds of other providers. Generated from each provider's API, including full type hints and docstrings.
-* **`pulumi new python`.** Creates a project with a `Pulumi.yaml`, a virtualenv setup, and a starter program in seconds. See the [Python language guide](/docs/languages-sdks/python/) and [the get-started flow](/docs/get-started/).
+* **`pulumi new python`.** Creates a project with a `Pulumi.yaml`, a virtualenv setup, and a starter program in seconds. See the [Python language guide](/docs/iac/languages-sdks/python/) and [the get-started flow](/docs/get-started/).
 * **Component model.** Reusable [Pulumi components](/docs/iac/concepts/components/) can be distributed as PyPI packages with full type hints, among other formats.
 * **Crosswalk for AWS.** Higher-level abstractions for common AWS patterns wrapped in idiomatic Python.
 * **Unit testing with mocks.** Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) replace cloud calls with canned responses so pytest runs in milliseconds.
-* **Automation API.** The [automation API](/docs/iac/packages-and-automation/automation-api/) lets you call Pulumi from inside another Python application. Build self-service portals, CLIs, or CI jobs that drive `pulumi up` programmatically.
+* **Automation API.** The [automation API](/docs/iac/concepts/automation-api/) lets you call Pulumi from inside another Python application. Build self-service portals, CLIs, or CI jobs that drive `pulumi up` programmatically.
 * **Pulumi policies in Python.** Write [policy as code](/docs/insights/policy/) in the same language as your infrastructure.
-* **Pulumi ESC for secrets.** [Pulumi ESC](/product/esc/) pulls secrets at runtime into Python programs, CI jobs, and applications.
+* **Pulumi ESC for secrets.** [Pulumi ESC](/product/secrets-management/) pulls secrets at runtime into Python programs, CI jobs, and applications.
 
 [Get started with Pulumi and Python](/docs/get-started/) to provision cloud infrastructure with the language your team is already using.
 
@@ -166,7 +166,7 @@ Pick the language your team writes most of its other code in. Both are first-cla
 
 ### How do you test Python IaC?
 
-Use pytest and Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/insights/policy/) in CI, and use the [automation API](/docs/iac/packages-and-automation/automation-api/) to spin up ephemeral stacks for integration tests.
+Use pytest and Pulumi's [Python test mocks](/docs/iac/guides/testing/unit/) for unit tests, run a static scanner like Checkov against the rendered output, run [Pulumi policies](/docs/insights/policy/) in CI, and use the [automation API](/docs/iac/concepts/automation-api/) to spin up ephemeral stacks for integration tests.
 
 ### What's MLOps and how does it relate to DevOps?
 
@@ -182,7 +182,7 @@ Python is better at glue, scripts, IaC, and ML-adjacent work. Go is better at bu
 
 ### How do I handle secrets in a Python DevOps program?
 
-Don't put secrets in source. Use [Pulumi ESC](/product/esc/), HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault. Pull secrets at runtime using the vendor's Python SDK or ESC's pull-at-runtime pattern. Treat `.env` files as developer convenience for local work only; never commit them.
+Don't put secrets in source. Use [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, AWS Secrets Manager, or Azure Key Vault. Pull secrets at runtime using the vendor's Python SDK or ESC's pull-at-runtime pattern. Treat `.env` files as developer convenience for local work only; never commit them.
 
 ### Can I migrate from Ansible to Pulumi?
 

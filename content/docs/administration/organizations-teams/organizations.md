@@ -33,7 +33,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
 | All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Stacks](/docs/iac/concepts/stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/using-pulumi/continuous-delivery/). |
+| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/iac/operations/continuous-delivery/). |
 
 ## Creating an organization
 
@@ -112,7 +112,7 @@ To update your organization's display name:
 
 Updating the display name requires the `organization:rename` permission, which is granted to organization admins.
 
-If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/).
+If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](https://support.pulumi.com/).
 
 ## Transferring stacks
 

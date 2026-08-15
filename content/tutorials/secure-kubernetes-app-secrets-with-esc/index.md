@@ -72,7 +72,7 @@ $ curl -fsSL https://get.pulumi.com/ | sh
 
 {{% /chooser %}}
 
-For more installation options, visit the [Pulumi CLI installation docs](/docs/iac/download-install/).
+For more installation options, visit the [Pulumi CLI installation docs](/docs/install/).
 
 ## Create your first environment
 

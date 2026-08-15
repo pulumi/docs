@@ -428,7 +428,7 @@ The examples above can be written in simplified form as:
 
 Each resource is assigned a [Uniform Resource Name (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that uniquely identifies that resource globally. Unless you are writing a tool, you will seldom need to interact with an URN directly, but it is fundamental to how Pulumi works so it’s good to have a general understanding of it.
 
-The URN is automatically constructed from the project name, stack name, resource name, resource type, and the types of all the parent resources (in the case of [component resources](/docs/iac/concepts/components/)).
+The URN is automatically constructed from the project name, stack name, resource name, resource type, and the types of all the parent resources (for [component resources](/docs/iac/concepts/components/)).
 
 The following is an example of a URN:
 

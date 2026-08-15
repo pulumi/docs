@@ -32,7 +32,7 @@ Pulumi Deployments is a managed service that runs Pulumi operations — `pulumi 
 
 Running infrastructure updates from local machines or hand-built CI pipelines is hard to keep consistent and secure. Every engineer needs cloud credentials, the toolchain has to be installed and version-pinned, and there is no shared record of what ran or who ran it.
 
-Pulumi Deployments moves that work into a managed, isolated environment that already has the Pulumi CLI and language runtimes installed. Cloud credentials and secrets are supplied through [Pulumi ESC](/docs/pulumi-cloud/esc) and OIDC instead of living on laptops or in pipeline configuration, deployments can run automatically from your [version control system](/docs/integrations/version-control/), and every run is recorded in Pulumi Cloud. A stack's [deployment settings](/docs/deployments/concepts/settings/) capture everything a run needs — source location, credentials, environment variables, and build requirements — so the same deployment behaves the same way no matter what triggers it.
+Pulumi Deployments moves that work into a managed, isolated environment that already has the Pulumi CLI and language runtimes installed. Cloud credentials and secrets are supplied through [Pulumi ESC](/docs/esc/) and OIDC instead of living on laptops or in pipeline configuration, deployments can run automatically from your [version control system](/docs/integrations/version-control/), and every run is recorded in Pulumi Cloud. A stack's [deployment settings](/docs/deployments/concepts/settings/) capture everything a run needs — source location, credentials, environment variables, and build requirements — so the same deployment behaves the same way no matter what triggers it.
 
 ## In this section
 

@@ -56,4 +56,4 @@ created, custom, delete, id, modified, module, name, package, parent_urn, pendin
 | properties   | The metadata properties of this resource                                                                    |
 | category     | The category this resource is a part of                                                                        |
 
-See the [API specification](/docs/pulumi-cloud/cloud-rest-api/#data-export) for a more complete description of what these fields represent.
+See the [API specification](/docs/reference/cloud-rest-api/data-export/) for a more complete description of what these fields represent.

@@ -35,7 +35,7 @@ Before you begin, make sure you have:
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A Travis CI account with your repository activated.
 1. A Git repository connected to Travis CI.
-1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Install and configure Pulumi
 
@@ -169,4 +169,4 @@ If commits merge to the main branch in quick succession, Travis can start overla
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.
-- [CI/CD troubleshooting guide](/docs/support/troubleshooting/ci-cd/) — fixes for common failures when running Pulumi in CI/CD.
+- [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/) — fixes for common failures when running Pulumi in CI/CD.

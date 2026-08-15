@@ -80,7 +80,7 @@ The example is a fully valid and self-contained Pulumi project. You only need on
 
 Further examples are given in the [Pulumi YAML GitHub
 repository](https://github.com/pulumi/pulumi-yaml/tree/main/examples). The specification for Pulumi
-YAML documents is in the [Pulumi YAML reference](/docs/languages-sdks/yaml/yaml-language-reference/).
+YAML documents is in the [Pulumi YAML reference](/docs/iac/languages-sdks/yaml/yaml-language-reference/).
 
 ## Templates
 
@@ -103,7 +103,7 @@ code programs using Pulumi. [Concepts](/docs/intro/concepts)
 describes these concepts with examples available in all supported languages, including Pulumi YAML.
 
 To learn how the Pulumi Programming Model is implemented for Pulumi YAML, refer
-to the [Pulumi YAML Reference Guide](/docs/languages-sdks/yaml/yaml-language-reference/).
+to the [Pulumi YAML Reference Guide](/docs/iac/languages-sdks/yaml/yaml-language-reference/).
 
 ## Compiler support
 

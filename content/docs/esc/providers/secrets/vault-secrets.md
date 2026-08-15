@@ -57,7 +57,7 @@ values:
 
 ## Configuring OIDC
 
-To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/pulumi-cloud/oidc/provider/vault/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
+To learn how to configure OpenID Connect (OIDC) between Pulumi Cloud and Vault, see the [OpenID Connect integration](/docs/esc/guides/configuring-oidc/vault/) documentation. Once you have completed these steps, you can validate that your configuration is working by running either of the following:
 
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/iac/cli/commands/pulumi_env_open/)
 * `pulumi env open <org>/<project>/<environment>` command of the [Pulumi CLI](/docs/install/)

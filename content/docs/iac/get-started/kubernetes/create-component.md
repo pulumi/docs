@@ -17,7 +17,7 @@ aliases:
 
 ## Create a component
 
-[**Components**](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate
+[**Components**](/docs/iac/concepts/components/) are infrastructure abstractions that encapsulate
 complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components.
 
 You will now create your first component that packages up your Kubernetes NGINX deployment so you can stamp out
@@ -266,7 +266,7 @@ This defines a component but it doesn't do much yet.
 Next, make three changes:
 
 1. Move all resources from {{< langfile >}} into the component's constructor
-2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
+2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
 3. Assign the service output to the `ip` property of the component
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
@@ -887,7 +887,7 @@ This preview shows you a few things. First, you'll see our `KubernetesNginxServi
 If you're wondering why Pulumi didn't update the resources in place, it's because certain changes -- like
 refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
 properties or moving resources between files are not disruptive like this. In such cases, you can assign
-[aliases](/docs/iac/concepts/options/aliases/) to prevent deletions from happening.
+[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent deletions from happening.
 
 {{% /notes %}}
 

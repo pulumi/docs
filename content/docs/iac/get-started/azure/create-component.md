@@ -18,7 +18,7 @@ aliases:
 
 ## Create a component
 
-[**Components**](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate
+[**Components**](/docs/iac/concepts/components/) are infrastructure abstractions that encapsulate
 complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components.
 
 You will now create your first component that packages up your Azure static website so you can easily stamp out
@@ -258,7 +258,7 @@ This defines a component but it doesn't do much yet.
 Next, make four changes:
 
 1. Move all resources from {{< langfile >}} into the component's constructor
-1. Change each resource to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
+1. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
 1. Generalize the creation of blobs by looping over the list of `files`
 1. Assign the resulting website URL to the `url` property of the component
 
@@ -802,7 +802,7 @@ you'll see that your old resources are being destroyed.
 If you're wondering why Pulumi didn't simply update the resources in place, it's because certain changes -- like
 refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
 properties or moving resources between files are not disruptive like this. In such cases, you can assign
-[aliases](/docs/iac/concepts/options/aliases/) to prevent deletions from happening.
+[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent deletions from happening.
 
 {{% /notes %}}
 

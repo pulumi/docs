@@ -15,7 +15,7 @@ Customer-managed workflow runners let you self-host the compute that runs Pulumi
 
 ## Using customer-managed workflow runners
 
-Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi Github App](/docs/using-pulumi/continuous-delivery/github-app/) and update the [source control settings](/docs/deployments/get-started/) of the stack you want to deploy.
+Before you begin, ensure you have [Docker](https://docs.docker.com/engine/) or [Kubernetes](https://kubernetes.io/docs/home/) installed, which is required for running the workflow runner. If you plan to use workflow runners for **deployments**, you must also install the [Pulumi Github App](/docs/integrations/version-control/github-app/) and update the [source control settings](/docs/deployments/get-started/) of the stack you want to deploy.
 
 1. In the left nav, open the **Settings** dropdown and select **Organization**, then choose the **Workflow Runner Pools** tab
 1. Create a new pool. Copy and save the token

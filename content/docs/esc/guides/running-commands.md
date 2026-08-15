@@ -17,7 +17,7 @@ This guide shows you how to use `pulumi env run` to inject secrets and configura
 
 ## Prerequisites
 
-- [Pulumi CLI](/docs/iac/download-install/) installed
+- [Pulumi CLI](/docs/install/) installed
 - [Pulumi account](https://app.pulumi.com/signup) created
 - An ESC environment with values (see [Environments](/docs/esc/concepts/environments/))
 
