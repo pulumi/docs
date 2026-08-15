@@ -26,7 +26,7 @@ social:
         The twist most comparisons miss: Pulumi Cloud can now run as a Terraform-compatible state backend, and Pulumi IaC speaks HCL natively. A platform team doesn't have to choose between keeping its existing Terraform code and gaining a unified platform for policy, secrets, estate visibility, and AI.
 ---
 
-The best Terraform Cloud alternative for a large multi-cloud team is Pulumi Cloud, because it's the only option that also lets a team keep every line of existing Terraform or OpenTofu code unchanged: Pulumi Cloud runs as a [drop-in Terraform-compatible state backend](/docs/iac/get-started/terraform/terraform-state-backend/), and Pulumi IaC now speaks HCL natively alongside Python, TypeScript, Go, C#, and Java. Spacelift, env0, and Scalr are also worth evaluating if orchestrating existing HCL is the whole job; Pulumi Cloud is the stronger fit when a team also needs one platform for policy, secrets, estate-wide visibility, and AI-assisted operations.
+The best Terraform Cloud alternative for a large multi-cloud team is Pulumi Cloud, because it's the only option that also lets a team keep every line of existing Terraform or OpenTofu code unchanged: Pulumi Cloud runs as a [drop-in Terraform-compatible state backend](/docs/iac/get-started/terraform/terraform-state-backend/), and Pulumi IaC now speaks HCL natively alongside Python, TypeScript, JavaScript, Go, .NET, and Java. Spacelift, env0, and Scalr are also worth evaluating if orchestrating existing HCL is the whole job; Pulumi Cloud is the stronger fit when a team also needs one platform for policy, secrets, estate-wide visibility, and AI-assisted operations.
 
 <!--more-->
 
@@ -52,7 +52,7 @@ A control plane that works for a five-person team running one AWS account rarely
 | --- | --- | --- |
 | State management | Native Pulumi state, and a [Terraform-compatible state backend](/docs/iac/get-started/terraform/terraform-state-backend/) for existing `.tf` code, in the same platform | Native Terraform/OpenTofu state per workspace |
 | Migration path | Point your existing `terraform` or `tofu` CLI at Pulumi Cloud with no rewrite, or convert incrementally with `pulumi convert` and `pulumi import` | N/A |
-| Language | Python, TypeScript, Go, C#, Java, and HCL natively, plus YAML | HCL, a configuration-focused DSL |
+| Language | Python, TypeScript, JavaScript, Go, .NET, Java, and HCL natively, plus YAML | HCL, a configuration-focused DSL |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/) in Python, TypeScript, or OPA Rego, enforced on every update | Sentinel or OPA, run as a distinct pipeline step |
 | RBAC and identity | Teams and built-in roles on all tiers; custom roles, SAML/SSO, SCIM, and audit logs on Enterprise and above | Teams and workspace permissions, with SSO on all tiers and audit logging on higher tiers |
 | Concurrency | 1 concurrent stack update on the free Individual tier, 5 on Team, unlimited on Enterprise | 1 concurrent run on the Free tier, 3 on Standard |
