@@ -23,9 +23,10 @@ h6 {
         // 14px: at a fixed size, code in an h1/h2 reads noticeably smaller
         // than its surrounding text. 0.6em keeps it proportional as headings
         // get larger, but on their own would shrink it *below* today's 14px
-        // for h4/h5/h6 (whose heading sizes are 20px and under), trading one
-        // legibility problem for another; the max() floor guarantees the
-        // code chip only ever grows relative to what ships today.
+        // for h3-h6 at their smaller (mobile) sizes, which are 20px and
+        // under, trading one legibility problem for another; the max()
+        // floor guarantees the code chip only ever grows relative to what
+        // ships today.
         font-size: max(0.6em, 14px);
         font-weight: inherit;
         padding: 0.2em 0.4em;
