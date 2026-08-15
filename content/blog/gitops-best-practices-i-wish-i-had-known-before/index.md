@@ -265,7 +265,7 @@ Reviews are great, but humans make mistakes. Policy-as-code adds an automated la
 * [OPA](https://www.openpolicyagent.org/)/Gatekeeper lets you define policies in Rego that the admission controller enforces at deploy time (e.g., no containers running as root, all deployments must have resource limits).
 * [Kyverno](https://kyverno.io/) is a Kubernetes-native policy engine that uses familiar YAML to define and enforce policies, including mutation and generation.
 * Starting with Kubernetes 1.26+, you can write [CEL](https://cel.dev/)-based [ValidatingAdmissionPolicies](https://kubernetes.io/docs/reference/access-authn-authz/validating-admission-policy/) natively without any external tooling. A lightweight option if you don't need the full feature set of OPA or Kyverno.
-* [Pulumi CrossGuard](/docs/support/faq/policies/) lets you write policy packs in TypeScript or Python that validate infrastructure before it's deployed. If your IaC and GitOps layers are bridged (see the next section), CrossGuard can enforce rules across both.
+* [Pulumi CrossGuard](/docs/insights/policy/) lets you write policy packs in TypeScript or Python that validate infrastructure before it's deployed. If your IaC and GitOps layers are bridged (see the next section), CrossGuard can enforce rules across both.
 * Run policy checks in your CI pipeline so violations are caught during the PR, not after deployment.
 
 {{% notes type="info" %}}

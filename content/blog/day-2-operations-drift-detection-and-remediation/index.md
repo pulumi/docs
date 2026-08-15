@@ -78,7 +78,7 @@ When building a robust platform, you need to think in layers of defense. Your fi
 
 ### Prevention: The First Line of Defense
 
-Prevention is what we've been building throughout this series. You establish code reviews where teammates scrutinize infrastructure changes before they go live. You implement automated testing that validates configurations before deployment. You deploy [CrossGuard policies](/docs/support/faq/policies/) that act as guardrails, blocking misconfigurations before they can cause damage. You create [standardized components](/blog/golden-paths-infrastructure-components-and-templates) that encode best practices, making it easier to do the right thing than the wrong thing.
+Prevention is what we've been building throughout this series. You establish code reviews where teammates scrutinize infrastructure changes before they go live. You implement automated testing that validates configurations before deployment. You deploy [CrossGuard policies](/docs/insights/policy/) that act as guardrails, blocking misconfigurations before they can cause damage. You create [standardized components](/blog/golden-paths-infrastructure-components-and-templates) that encode best practices, making it easier to do the right thing than the wrong thing.
 
 These preventative measures work brilliantly for changes that flow through your normal IaC pipeline. They catch typos, enforce standards, and maintain consistency across your infrastructure. But they have a critical blind spot: they can't see changes that bypass your pipeline entirely.
 

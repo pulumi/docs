@@ -20,7 +20,7 @@ tags:
 category: best-practices
 ---
 
-Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi CrossGuard](/docs/support/faq/policies/) to create deployment guardrails that make self-service infrastructure both powerful and safe.
+Welcome to the third post in our **IDP Best Practices** series, where we explore how to implement **policy as code** with [Pulumi CrossGuard](/docs/insights/policy/) to create deployment guardrails that make self-service infrastructure both powerful and safe.
 
 Platform engineering presents a fundamental tension: we want to enable developer velocity while maintaining security and compliance. Every platform team faces the same question: how do you give teams the freedom to deploy infrastructure quickly without compromising on safety, security, or organizational standards? The answer isn't to choose between speed and safety, but rather to embrace **automated guardrails** powered by policy as code that make both possible simultaneously.
 
@@ -56,7 +56,7 @@ A helpful analogy is to think of guardrails like type checking in programming la
 
 ## Introducing Pulumi CrossGuard: Policy as Code
 
-[Pulumi CrossGuard](/docs/support/faq/policies/) is Pulumi's policy as code framework that brings the same engineering rigor to compliance and security that you apply to your application code. Instead of maintaining policy documents in wikis or relying on manual reviews, you can write policies in familiar programming languages like [Python](/docs/insights/policy/get-started/#writing-policies-in-python), [TypeScript](/docs/insights/policy/get-started/#writing-policies-in-typescript), or Go. These policies then enforce themselves across all your cloud resources and providers, running at different stages of the deployment lifecycle and integrating seamlessly with your CI/CD pipelines for automated enforcement.
+[Pulumi CrossGuard](/docs/insights/policy/) is Pulumi's policy as code framework that brings the same engineering rigor to compliance and security that you apply to your application code. Instead of maintaining policy documents in wikis or relying on manual reviews, you can write policies in familiar programming languages like [Python](/docs/insights/policy/get-started/#writing-policies-in-python), [TypeScript](/docs/insights/policy/get-started/#writing-policies-in-typescript), or Go. These policies then enforce themselves across all your cloud resources and providers, running at different stages of the deployment lifecycle and integrating seamlessly with your CI/CD pipelines for automated enforcement.
 
 ### Key Policy Types
 
@@ -391,7 +391,7 @@ But perhaps the most important lesson is that policy as code isn't about saying 
 
 As you embark on your own journey to implement deployment guardrails, remember that perfection isn't the goal; progress is. Start small, iterate based on feedback, and gradually expand your coverage. Your developers will thank you for the clarity and confidence that comes with well-designed guardrails, and your security team will sleep better knowing that policies are enforced automatically and consistently.
 
-The path from manual reviews to automated guardrails is well-traveled and well-documented. Our [complete policy examples](https://github.com/pulumi/workshops/tree/main/idp-component-policies/demo-policies) provide real-world implementations you can adapt to your needs, while the [CrossGuard documentation](/docs/support/faq/policies/) offers deep technical details for advanced use cases. If you're on AWS, [AWSGuard's pre-built policies](/docs/iac/packages-and-automation/crossguard/awsguard) offer immediate value, and our [compliance-ready policy catalog](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies) addresses specific regulatory requirements.
+The path from manual reviews to automated guardrails is well-traveled and well-documented. Our [complete policy examples](https://github.com/pulumi/workshops/tree/main/idp-component-policies/demo-policies) provide real-world implementations you can adapt to your needs, while the [CrossGuard documentation](/docs/insights/policy/) offers deep technical details for advanced use cases. If you're on AWS, [AWSGuard's pre-built policies](/docs/iac/packages-and-automation/crossguard/awsguard) offer immediate value, and our [compliance-ready policy catalog](/docs/iac/packages-and-automation/crossguard/compliance-ready-policies) addresses specific regulatory requirements.
 
 The future of infrastructure management isn't about choosing between developer autonomy and operational control. It's about using policy as code to achieve both, creating platforms that are simultaneously powerful and safe, flexible and compliant, fast and secure.
 

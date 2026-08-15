@@ -140,7 +140,7 @@ Finally, Pulumi gives you tools to manage your projects and stacks according to 
 
 For example, there could be a base networking and security layer, a data stack and a Kubernetes cluster that consume information from a lower-level layer but are provisioned separately, with applications above that depending on different assortments of all of the above.
 
-Each stack is a unit of security and deployment concurrency. By layering stacks in this manner, we can let different teammates work in isolation from one another, ensure that the most secure and robust parts of our infrastructure are under lock and key, and just generally let different parts of the team go faster without affecting one another. The feature that enables this is called “Stack References,” and you can [read more about how to use them in the documentation](/docs/iac/concepts/stacks/#stackreferences/).
+Each stack is a unit of security and deployment concurrency. By layering stacks in this manner, we can let different teammates work in isolation from one another, ensure that the most secure and robust parts of our infrastructure are under lock and key, and just generally let different parts of the team go faster without affecting one another. The feature that enables this is called “Stack References,” and you can [read more about how to use them in the documentation](/docs/iac/concepts/stacks/#stackreferences).
 
 ## Doing a Deployment
 
