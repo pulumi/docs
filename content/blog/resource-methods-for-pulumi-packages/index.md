@@ -236,7 +236,7 @@ class Message extends pulumi.ComponentResource {
     }
 
     getMessage(recipient: pulumi.Input<string>): pulumi.Output<string> {
-        return pulumi.iterpolate `${recipient}, ${this.message}!`;
+        return pulumi.interpolate `${recipient}, ${this.message}!`;
     }
 }
 ```
