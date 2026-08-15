@@ -19,7 +19,15 @@ h4,
 h5,
 h6 {
     code {
-        font-size: 14px;
+        // Scale relative to the heading instead of pinning to the body's 14px:
+        // at a fixed size, code in an h1/h2 reads noticeably smaller than its
+        // surrounding text, and the body chip's regular weight looks light
+        // against a bold heading. Sizing and weighting relative to the
+        // heading keeps the two feeling like one typographic unit at every
+        // level.
+        font-size: 0.6em;
+        font-weight: inherit;
+        padding: 0.2em 0.4em;
     }
 }
 
