@@ -240,6 +240,16 @@
          same Hugo date-cascade / JSON-LD fabrication risk applies here. */}}
     {{ $dates := dict }}
     {{ with $lastmodData }}
+        {{ if and (gt (len .tags) 0) (not (isset .tags $tag)) }}
+            {{/* Tripwire: the ledger has tag entries but none match this
+                 adapter-derived tag — a sign that deriveTagOperations in
+                 scripts/update-openapi-lastmod.js and this template's
+                 tag-derivation logic (last tag wins; "Foo: Bar" collapses
+                 to "Foo") have drifted apart. Warn once per tag so drift
+                 shows up in build output instead of silently dropping
+                 <lastmod>/dateModified for the affected pages. */}}
+            {{ warnidf (printf "openapi-lastmod-tag-miss-%s" $tag) "openapi: tag %q has no entry in data/openapi_lastmod.json (ledger has %d tags) — this page will render without <lastmod>/dateModified. Check whether deriveTagOperations in scripts/update-openapi-lastmod.js has drifted from this template's tag-derivation rules." $tag (len .tags) }}
+        {{ end }}
         {{ with index .tags $tag }}
             {{ with .lastmod }}
                 {{ $dates = dict "lastmod" (time.AsTime .) }}

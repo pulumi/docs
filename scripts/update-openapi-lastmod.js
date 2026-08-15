@@ -145,7 +145,7 @@ async function main() {
     // unconditionally would make every run's diff non-empty, so the calling
     // workflow's `git diff --cached --quiet` gate would never see "nothing to
     // commit" and would open (and auto-merge) a no-op PR every single night.
-    // _meta is left untouched unless a real content change moved it below.
+    // _meta is only ever edited by hand.
 
     const totalChanged =
         tagResult.changed + tagResult.added + tagResult.removed + schemaResult.changed + schemaResult.added + schemaResult.removed;

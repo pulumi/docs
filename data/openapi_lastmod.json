@@ -4,8 +4,7 @@
     "generator": "scripts/update-openapi-lastmod.js (nightly)",
     "methodology": "Each tag/schema key is hashed (sha256 of canonical JSON: the sorted list of [path, method, operation] triples for a tag, or the schema object itself). A key's lastmod is set/updated to the run date only when its hash differs from the previously recorded hash (i.e. a real content change was observed), or when the key is newly seen. A key with no lastmod means no change has been observed since this ledger started tracking it on the seeded_at date below -- never infer or backfill an earlier date without direct evidence, since an inaccurate site-wide lastmod stamp gets Google's Search Console to distrust lastmod values across the whole sitemap.",
     "seeded_at": "2026-08-15",
-    "seed_note": "Seeded from a single live-spec snapshot only. Historical Wayback Machine snapshots (2026-03-04, 2026-05-13, 2026-08-02) exist for this endpoint but could not be fetched in this run (persistent HTTP 429 from web.archive.org). No lastmod dates were assigned on the seed pass; every tag/schema starts with a hash and no date, and will get an honest lastmod the first time the nightly job observes a hash change.",
-    "last_checked": "2026-08-15"
+    "seed_note": "Seeded from a single live-spec snapshot only. Historical Wayback Machine snapshots (2026-03-04, 2026-05-13, 2026-08-02) exist for this endpoint but could not be fetched in this run (persistent HTTP 429 from web.archive.org). No lastmod dates were assigned on the seed pass; every tag/schema starts with a hash and no date, and will get an honest lastmod the first time the nightly job observes a hash change."
   },
   "tags": {
     "AI": {
