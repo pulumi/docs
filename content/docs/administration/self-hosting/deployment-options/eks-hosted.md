@@ -51,6 +51,8 @@ To this end, you need to set up the following:
 
 See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/eks-hosted/README.md) file provided with the installer package for detailed deployment steps.
 
+{{< self-hosted-first-admin-note />}}
+
 ## EKS-Hosted System Management and Maintenance
 
 ### Pulumi Cloud Updates

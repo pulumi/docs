@@ -53,6 +53,8 @@ To this end, you need to set up the following:
 
 See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/local-docker/README.md) file provided with the installer package for detailed deployment steps.
 
+{{< self-hosted-first-admin-note />}}
+
 ## Local-Docker System Management and Maintenance
 
 ### Pulumi Cloud Updates
