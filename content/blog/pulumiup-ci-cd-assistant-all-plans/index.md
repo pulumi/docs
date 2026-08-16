@@ -40,7 +40,7 @@ The CI/CD Assistant delivers on the Pulumi Cloud Engineering Platform's promise 
 
 If you use a version control or CI/CD provider that's not on this list, you can file a feature request. We'd love to hear from you!
 
-👉 [Request a new version control or CI/CD provider](https://github.com/pulumi/ci-workflow-templates/issues/new?assignees=&labels=&template=ci-cd-request.md&title=%5BNEW+CI+REQUEST%5D)
+👉 [Request a new version control or CI/CD provider](https://github.com/pulumi/pulumi/issues/new/choose)
 
 ## Keep exploring
 
