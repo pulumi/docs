@@ -138,7 +138,7 @@ $ pulumi do <package:module:type> read <provider-resource-id>
 Updates an existing resource. The CLI reads the current state, merges your changes, displays a diff, and prompts for confirmation.
 
 ```bash
-$ pulumi do <package:module:type> patch <provider-resource-id> --input-file <path>
+$ pulumi do <package:module:type> patch <name> --input-file <path>
 ```
 
 ### Delete
