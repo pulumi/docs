@@ -139,7 +139,7 @@ Resources:
   ...
 ```
 
-`--help` works at every level of the command tree, generated from the provider's schema. On a resource, it shows the available operations plus every input and output with its type and documentation:
+`--help` works at every level of the command tree. On a resource, it shows the available operations plus every input and output with its type and documentation:
 
 ```bash
 $ pulumi do aws:s3:Bucket --help
