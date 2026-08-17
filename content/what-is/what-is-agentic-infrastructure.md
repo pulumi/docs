@@ -160,7 +160,7 @@ Traditional DevOps automation executes predefined procedures: scripts, pipelines
 
 ### What programming languages do AI infrastructure agents use?
 
-[Pulumi Neo](/product/neo/) writes and modifies infrastructure in Python, TypeScript, Go, C#, Java, and YAML. Using general-purpose languages means AI agents draw on richer training data and can apply full software engineering patterns (loops, functions, tests, package imports) to infrastructure code.
+[Pulumi Neo](/product/neo/) writes and modifies infrastructure in Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL. Using general-purpose languages means AI agents draw on richer training data and can apply full software engineering patterns (loops, functions, tests, package imports) to infrastructure code.
 
 ### Is agentic infrastructure safe for production environments?
 

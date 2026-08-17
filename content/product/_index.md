@@ -34,7 +34,7 @@ sections:
     description: |
       Build infrastructure like you build software.
 
-      Compose your infrastructure code with the languages and tools your team already uses — TypeScript, Python, Go, C#, or Java. Our Apache 2.0-licensed engine gives you a foundation to scale from small project to large organization.
+      Compose your infrastructure code with the languages and tools your team already uses — TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL. Our Apache 2.0-licensed engine gives you a foundation to scale from small project to large organization.
     cta_text: Explore Pulumi IaC
     cta_link: /product/infrastructure-as-code/
     cards:

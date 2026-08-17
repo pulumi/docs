@@ -68,7 +68,7 @@ The local server's tool names are prefixed to keep them unambiguous inside a hos
 Connected through either transport, an agent can:
 
 - **Inspect your registry and cloud state.** Search Pulumi's registry of resources and providers, look up a resource's exact schema, and read current stack outputs, all without you switching out of your editor to check documentation or the CLI.
-- **Generate infrastructure in your language.** Because Pulumi programs are ordinary TypeScript, Python, Go, C#, Java, or YAML, an agent generates infrastructure the same way it generates application code: reading existing patterns in your repository, following your conventions, and producing a diff you review like any other pull request.
+- **Generate infrastructure in your language.** Because Pulumi programs are ordinary TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL, an agent generates infrastructure the same way it generates application code: reading existing patterns in your repository, following your conventions, and producing a diff you review like any other pull request.
 - **Run a preview before anything changes.** `pulumi-cli-preview` runs the same dry-run Pulumi engineers use manually, showing exactly which resources would be created, updated, or deleted, so the agent's proposal is inspectable before `pulumi-cli-up` executes it.
 - **Delegate multi-step work to Neo.** For tasks that span multiple files or require iterating on a plan, `neo-task-launcher` hands the job to [Neo](/product/neo/), Pulumi's infrastructure engineering agent, which can migrate Terraform to Pulumi, enforce policy, and manage multi-cloud deployments inside your existing workflows.
 
