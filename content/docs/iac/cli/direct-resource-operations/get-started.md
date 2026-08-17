@@ -170,6 +170,8 @@ Pass `--output json` to get machine-readable output for resource operations, whi
 ```bash
 $ pulumi do aws:s3:Bucket create --stateless --yes --output json | jq -r '.id'
 bucket-9f7f27f
+
+$ pulumi do aws:s3:Bucket delete bucket-9f7f27f --stateless --yes
 ```
 
 Keeping this same command shape and output format across all Pulumi providers makes `pulumi do` work especially well for coding agents, too. See [Pulumi CLI for agents](/docs/ai/cli-for-agents/) to learn more.
