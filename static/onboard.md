@@ -45,7 +45,7 @@ Do not guess. The answer decides the path.
 Pulumi creates resources in the user's own cloud account, with credentials
 separate from Pulumi Cloud. Ask the user whether they already have credentials
 for the target cloud and how they are set up, since it varies: a named profile,
-environment variables, an SSO session, or a service account key. If they have
+environment variables, an SSO session, authenticated CLI, or a service account key. If they have
 more than one, ask which to use; if they have none, help them set up
 credentials for that provider. Ask before using credentials rather than
 detecting and choosing them yourself.
