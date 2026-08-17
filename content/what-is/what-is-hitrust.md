@@ -137,7 +137,7 @@ More broadly, Pulumi helps with HITRUST control maturity in concrete ways:
 * **Centralized secrets.** [Pulumi ESC](/product/secrets-management/) keeps secrets out of code and CI logs, with audit trails for every read.
 * **Reusable secure defaults.** Platform teams ship [Pulumi components](/docs/iac/concepts/components/) with HITRUST-aligned settings baked in (encryption, logging, restricted IAM), so product teams consume compliant infrastructure by default.
 
-[Get started with Pulumi](/docs/get-started/) to manage HITRUST-relevant cloud infrastructure as code in TypeScript, Python, Go, C#, Java, or YAML.
+[Get started with Pulumi](/docs/get-started/) to manage HITRUST-relevant cloud infrastructure as code in TypeScript, Python, Go, .NET, Java, YAML, or HCL.
 
 ## Frequently asked questions about HITRUST
 

@@ -120,7 +120,7 @@ Pulumi supports GitOps through several complementary paths, extending the model 
 
 **Drift detection.** Pulumi Deployments can run scheduled [drift detection](/docs/deployments/concepts/drift/), comparing the live state of your infrastructure against what your Pulumi program declares and alerting (or remediating) when they diverge, which is the continuous-reconciliation principle applied to cloud infrastructure.
 
-Because Pulumi programs are written in general-purpose languages (TypeScript, Python, Go, C#, Java, or YAML), the same GitOps workflow covers application config and the cloud infrastructure underneath it, and it interoperates with Argo CD and Flux for teams that already run them for Kubernetes delivery.
+Because Pulumi programs are written in general-purpose languages (TypeScript, Python, Go, .NET, Java, YAML, or HCL), the same GitOps workflow covers application config and the cloud infrastructure underneath it, and it interoperates with Argo CD and Flux for teams that already run them for Kubernetes delivery.
 
 The through-line never changes, whichever tool you reach for: the repository holds the truth, and software keeps production faithful to it.
 
