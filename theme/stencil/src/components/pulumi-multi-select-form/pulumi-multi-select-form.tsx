@@ -49,12 +49,24 @@ export class PulumiMultiSelectForm {
     @State()
     formSubmitted = false;
 
+    // What the visitor had typed into the form they're switching away from, so
+    // changing your mind about why you're writing in doesn't cost you the message
+    // you already wrote. Handed to the incoming form, which fills only the fields
+    // it finds empty.
+    @State()
+    carriedValues: Record<string, string> = {};
+
     // The window event listener used to handle submitting form data to Segment.
     private windowEventHandler: (this: Window, ev: MessageEvent) => any;
 
     // Groups the radios. A page only ever renders one of these, so a constant
     // name is enough.
     private static readonly radioGroupName = "multi-select-form-choice";
+
+    // Fields worth carrying between forms: the ones a visitor types the same way
+    // whichever form they land on. Everything else — consent checkboxes, per-form
+    // custom fields — is left to the new form.
+    private static readonly carryOverFields = ["firstname", "lastname", "email", "company", "message"];
 
     componentWillLoad() {
         if (this.defaultFormId !== "") {
@@ -96,9 +108,34 @@ export class PulumiMultiSelectForm {
         }
     }
 
-    // When the choice changes we need to update the state accordingly.
-    private handleChoiceChange(hubspotFormId: string) {
+    // When the choice changes we need to update the state accordingly, capturing
+    // the outgoing form's values first — switching swaps the embedded form out
+    // entirely, so anything typed is gone once the state changes.
+    private async handleChoiceChange(hubspotFormId: string) {
+        this.carriedValues = await this.captureCarryOverValues();
         this.selectedItem = this.items.find(item => item.hubspotFormId === hubspotFormId);
+    }
+
+    private async captureCarryOverValues(): Promise<Record<string, string>> {
+        const form = this.el.querySelector("pulumi-hubspot-form") as HTMLPulumiHubspotFormElement;
+
+        // No form to read: either nothing has been chosen yet, or the current
+        // choice is one of the CTA-only options. Keep what was captured last so a
+        // detour through the support option doesn't discard it.
+        if (!form || typeof form.getFieldValues !== "function") {
+            return this.carriedValues;
+        }
+
+        const values = await form.getFieldValues();
+        const carried: Record<string, string> = {};
+
+        PulumiMultiSelectForm.carryOverFields.forEach(name => {
+            if (values[name]) {
+                carried[name] = values[name];
+            }
+        });
+
+        return carried;
     }
 
     render() {
@@ -147,7 +184,7 @@ export class PulumiMultiSelectForm {
                     // submit input with .btn-primary .btn-lg.
                     <div class="mt-8"><a class="btn btn-primary btn-lg" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
                 ) : (
-                    <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
+                    <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId} carryOverValues={this.carriedValues}></pulumi-hubspot-form>
                 )}
             </div>
         );

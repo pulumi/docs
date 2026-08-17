@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, h, Prop, State } from "@stencil/core";
+import { Component, Element, Event, EventEmitter, h, Method, Prop, State } from "@stencil/core";
 import { parseCookie, parseUTMCookieString, getQueryVariable } from "../../util/util";
 
 interface UTMData {
@@ -51,6 +51,13 @@ export class HubspotForm {
     // leaves the form untouched.
     @Prop()
     prefill?: string;
+
+    // Field values carried over from a form this one is replacing (the contact
+    // page swaps one embedded form for another when the visitor changes their
+    // reason for writing in). A map of HubSpot field internal name -> value,
+    // applied on onFormReady to whichever of those fields are still empty.
+    @Prop()
+    carryOverValues?: Record<string, string>;
 
     // Emitted once HubSpot confirms the submission, so a page can render its own
     // confirmation UI. `values` holds the submitted values in display form.
@@ -161,6 +168,15 @@ export class HubspotForm {
             // Set the internal ad id.
             this.setInternalAdId();
 
+            // Order matters. HubSpot has already prefilled whatever it knows about
+            // the visitor by the time this fires, so carried-over values fill only
+            // what's still empty and leave that alone. The ?param= prefill then
+            // overwrites either of them — an explicit link is the strongest signal
+            // of intent available.
+            if (this.carryOverValues) {
+                this.applyValues(this.carryOverValues, true);
+            }
+
             this.applyPrefill();
         }
 
@@ -228,28 +244,49 @@ export class HubspotForm {
 
         try {
             const fieldsToParams: Record<string, string> = JSON.parse(this.prefill);
+            const values: Record<string, string> = {};
 
             Object.keys(fieldsToParams).forEach(fieldName => {
                 const value = getQueryVariable(fieldsToParams[fieldName]);
-                if (!value) {
-                    return;
+                if (value) {
+                    values[fieldName] = value;
                 }
-
-                const field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement = this.el.querySelector(`[name="${fieldName}"]`);
-                if (!field) {
-                    return;
-                }
-
-                // HubSpot validates off its own state, so it needs both events to
-                // register the value. `window.Event` because Stencil's `Event`
-                // decorator shadows the global constructor here.
-                field.value = value;
-                field.dispatchEvent(new window.Event("input", { bubbles: true }));
-                field.dispatchEvent(new window.Event("change", { bubbles: true }));
             });
+
+            this.applyValues(values);
         } catch (e) {
             // Malformed prefill map, or a query string getQueryVariable can't parse.
         }
+    }
+
+    // Write a map of field internal name -> value into the rendered form. With
+    // `onlyIfEmpty`, a field that already holds something is left as it is.
+    private applyValues(values: Record<string, string>, onlyIfEmpty = false) {
+        Object.keys(values).forEach(fieldName => {
+            const value = values[fieldName];
+            if (!value) {
+                return;
+            }
+
+            const field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement = this.el.querySelector(`[name="${fieldName}"]`);
+            if (!field || (onlyIfEmpty && field.value)) {
+                return;
+            }
+
+            // HubSpot validates off its own state, so it needs both events to
+            // register the value. `window.Event` because Stencil's `Event`
+            // decorator shadows the global constructor here.
+            field.value = value;
+            field.dispatchEvent(new window.Event("input", { bubbles: true }));
+            field.dispatchEvent(new window.Event("change", { bubbles: true }));
+        });
+    }
+
+    // The form's current field values, for a caller that's about to replace this
+    // form with another one and wants to carry what's been typed across.
+    @Method()
+    async getFieldValues(): Promise<Record<string, string>> {
+        return this.collectFieldValues();
     }
 
     // The form's current values, keyed by field name, in display form.
