@@ -442,8 +442,8 @@ resource "aws_s3_bucket_object" "index-html" {
 }
 ```
 
-HCL resource labels can't contain dots, so the resource is labeled `index-html` and the `key` attribute names the
-object in the bucket.
+A dotted label like `index.html` couldn't be referenced in expressions (and Terraform's grammar doesn't allow
+one), so the resource is labeled `index-html` and the `key` attribute names the object in the bucket.
 
 {{% /choosable %}}
 

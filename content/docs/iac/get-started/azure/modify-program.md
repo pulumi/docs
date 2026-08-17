@@ -348,8 +348,8 @@ resource "azure-native_storage_blob" "index-html" {
 }
 ```
 
-HCL resource labels can't contain dots, so the resource is labeled `index-html` and the `blob_name` attribute names
-the blob in the container.
+A dotted label like `index.html` couldn't be referenced in expressions (and Terraform's grammar doesn't allow
+one), so the resource is labeled `index-html` and the `blob_name` attribute names the blob in the container.
 
 {{% /choosable %}}
 

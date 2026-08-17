@@ -35,12 +35,8 @@ Throughout this guide, we are testing a program that creates a simple AWS EC2-ba
 - Instances must not use an inline `userData` script&mdash;we must use a virtual machine image.
 - Instances must not have SSH open to the Internet.
 
-{{< notes >}}
-Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide.
-{{< /notes >}}
-
 {{% notes type="info" %}}
-Mock-based unit testing requires a general-purpose language runtime. For declarative Pulumi programs written in YAML or HCL, see [integration testing](/docs/iac/guides/testing/integration/).
+Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide. Mock-based unit testing requires a general-purpose language runtime, so for declarative Pulumi programs written in YAML or HCL, see [integration testing](/docs/iac/guides/testing/integration/) instead.
 {{% /notes %}}
 
 {{< example-program path="unit-testing-webserver" languages="typescript,python,go,csharp,java" >}}
