@@ -172,7 +172,7 @@ $ pulumi do aws:s3:Bucket create --stateless --yes --output json | jq -r '.id'
 bucket-9f7f27f
 ```
 
-This same predictable command shape and output contract across every provider is what makes `pulumi do` work well for coding agents too — see [Pulumi CLI for agents](/docs/ai/cli-for-agents/).
+Keeping this same command shape and output format across all Pulumi providers makes `pulumi do` work especially well for coding agents, too. See [Pulumi CLI for agents](/docs/ai/cli-for-agents/) to learn more.
 
 ## Next steps
 
