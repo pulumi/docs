@@ -15,7 +15,7 @@ menu:
 `pulumi do` is in **research preview**. The command interface may change based on feedback.
 {{% /notes %}}
 
-The `pulumi do` command gives you direct create, read, update, delete, and query access to cloud resources from the terminal. It works with every Pulumi provider, so one command shape covers thousands of resource types across every cloud.
+The `pulumi do` command gives you direct create, read, update, delete, and query access to cloud resources from the terminal. It works with every Pulumi provider, so covers thousands of resource types across every cloud.
 
 This guide takes you from zero to your first resource operations, and shows you what you can do with `pulumi do`.
 
