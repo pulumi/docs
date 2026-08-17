@@ -15,7 +15,7 @@ aliases:
 - /docs/iac/adopting-pulumi/converters/
 ---
 
-The `pulumi convert` command allows you to translate supported sources to the [languages that Pulumi supports](/docs/iac/languages-sdks/), such as TypeScript, JavaScript, Go, Python, C#, or Java. Conversion sources are supported via [Pulumi plugins](/docs/iac/concepts/plugins/#converter-plugins), and include the ability to convert code from other IaC tools like Terraform and Azure Bicep. Pulumi YAML programs can also be converted to any other supported Pulumi language.
+The `pulumi convert` command allows you to translate supported sources to the [languages that Pulumi supports](/docs/iac/languages-sdks/), such as {{< pulumi-languages "general-purpose" >}}. Conversion sources are supported via [Pulumi plugins](/docs/iac/concepts/plugins/#converter-plugins), and include the ability to convert code from other IaC tools like Terraform and Azure Bicep. Pulumi YAML programs can also be converted to any other supported Pulumi language.
 
 For the detailed usage of this command and options, refer to the [pulumi convert CLI documentation.](https://www.pulumi.com/docs/iac/cli/commands/pulumi_convert/)
 
