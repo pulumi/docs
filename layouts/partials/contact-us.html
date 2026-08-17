@@ -1,48 +1,51 @@
 <section id="contact" class="py-16 px-4 border-b border-gray-300">
-        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 items-start">
-            <div class="w-full">
-                <div class="card mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white">
-                    <h1 class="heading-1 mb-6">Talk to an expert</h1>
-                    <div class="w-full">
-                        <div class="hs-form hs-form-fg-dark font-normal">
-                            <pulumi-contact-us-form
-                                items="{{ .Params.form | jsonify }}"
-                                label-class="block mb-2 font-normal text-sm text-gray-950"
-                                select-class="form-select form-select-lg"
-                            ></pulumi-contact-us-form>
-                        </div>
-                    </div>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-12 items-start">
+            <div class="card p-10 bg-white">
+                <h1 class="heading-1 mb-6">Talk to an expert</h1>
+                <div class="hs-form hs-form-fg-dark font-normal">
+                    <pulumi-contact-us-form
+                        items="{{ .Params.form | jsonify }}"
+                        label-class="block mb-4 font-normal text-sm text-gray-950"
+                    ></pulumi-contact-us-form>
                 </div>
+            </div>
 
-                <div class="mt-16">
-                    <h2 class="font-overline my-6">Our Address</h2>
-                    <p class="m-0">
+            {{/*
+                Secondary column: self-serve fast paths for visitors who don't need a
+                sales conversation, plus our office address. Deliberately plain — heading,
+                blurb, text link, no cards — so it reads as an aside to the form rather
+                than competing with it for submissions.
+
+                The list is spaced with flex gap, NOT space-y-*: each item needs `m-0` to
+                escape the global `main li { my-2 }`, and Tailwind v4 emits space-y as
+                `:where(.space-y-10 > :not(:last-child))` at zero specificity, so `m-0`
+                silently wins and the gap collapses.
+            */}}
+            <aside class="mt-8 md:mt-0">
+                {{ with .Params.quick_links }}
+                    <h2 class="font-overline-sm mb-6">{{ .title }}</h2>
+                    <ul class="list-none p-0 m-0 flex flex-col gap-10">
+                        {{ range .items }}
+                            <li class="m-0">
+                                <h3 class="heading-5 m-0">{{ .label }}</h3>
+                                <p class="body-sm text-gray-600 my-2 max-w-xs">{{ .description }}</p>
+                                <a href="{{ .url }}"{{ partial "external-link-attrs.html" .url | safeHTMLAttr }} class="btn btn-link">
+                                    {{ .cta_label }}
+                                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                {{ end }}
+
+                <div class="mt-10 pt-10 border-t border-gray-200">
+                    <h2 class="font-overline-sm mb-4">Our office</h2>
+                    <p class="body-sm text-gray-600 m-0">
                         Pulumi Corporation<br />
                         601 Union St., Suite 1415<br />
                         Seattle, WA 98101
                     </p>
                 </div>
-            </div>
-
-            {{/*
-                Narrow sidebar of self-serve options for visitors who don't need
-                a sales conversation. Keep this visually secondary to the form
-                (a slim side column, never a full-width block above it) so it
-                doesn't pull volume away from Contact Us submissions.
-            */}}
-            {{ with .Params.quick_links }}
-            <div class="w-full mt-4 md:mt-10">
-                <p class="font-overline mb-4">{{ .title }}</p>
-                <div class="grid grid-cols-1 gap-4">
-                    {{ range .items }}
-                        <a href="{{ .url }}" class="card block p-6 bg-white hover:shadow-lg transition-shadow">
-                            <h2 class="heading-4 mb-1">{{ .label }}</h2>
-                            <p class="body-sm text-gray-600 mb-4">{{ .description }}</p>
-                            <span class="btn btn-secondary btn-sm">{{ .cta_label }}</span>
-                        </a>
-                    {{ end }}
-                </div>
-            </div>
-            {{ end }}
+            </aside>
         </div>
 </section>

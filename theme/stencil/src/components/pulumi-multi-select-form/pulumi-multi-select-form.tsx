@@ -21,13 +21,9 @@ export class PulumiMultiSelectForm {
     @Element()
     el: Element;
 
-    // The JSON string of the items for the selector.
+    // The items to choose between.
     @Prop()
     items: MultiSelectFormItem[] = [];
-
-    // The class for the select input.
-    @Prop()
-    selectClass?: string;
 
     // The labelClass defines the class for the label.
     @Prop()
@@ -37,8 +33,7 @@ export class PulumiMultiSelectForm {
     @Prop()
     labelText: string;
 
-    // The default key for the selector to set to when rendered. If the key
-    // is blank then the first item in the array will be selected.
+    // The form to pre-select when rendered. Blank falls back to the first item.
     @Prop()
     defaultFormId: string = "";
 
@@ -46,9 +41,8 @@ export class PulumiMultiSelectForm {
     @Prop()
     linkedinConversionId?: number;
 
-    // The currently selected item. Left undefined until the visitor makes a
-    // choice (or arrives via a ?form= deep link that pre-selects one), so the
-    // embedded HubSpot form's extra fields stay hidden until they're relevant.
+    // The currently selected item. Defaults to the first, so the page lands on a
+    // usable form; a ?form= deep link overrides it.
     @State()
     selectedItem: MultiSelectFormItem | undefined;
 
@@ -58,14 +52,23 @@ export class PulumiMultiSelectForm {
     // The window event listener used to handle submitting form data to Segment.
     private windowEventHandler: (this: Window, ev: MessageEvent) => any;
 
-    // When the component loads we need to parse the items string.
+    // Groups the radios. A page only ever renders one of these, so a constant
+    // name is enough.
+    private static readonly radioGroupName = "multi-select-form-choice";
+
     componentWillLoad() {
         if (this.defaultFormId !== "") {
             this.selectedItem = this.items.find(item => item.hubspotFormId === this.defaultFormId);
         }
+
+        // Falls through to the first item when there's no deep link, and also when
+        // a ?form= names a key we don't have.
+        if (!this.selectedItem) {
+            this.selectedItem = this.items[0];
+        }
     }
 
-    // After the form submits we should hide the session selector.
+    // After the form submits we should hide the chooser.
     componentDidLoad() {
         this.windowEventHandler = this.handleWindowMessage.bind(this);
         window.addEventListener("message", this.windowEventHandler);
@@ -93,12 +96,9 @@ export class PulumiMultiSelectForm {
         }
     }
 
-    // When the select input changes we need to update the state accordingly.
-    // An empty value means the visitor is back on the unselected placeholder,
-    // so collapse back to the not-yet-chosen state rather than crashing on a
-    // missing item.
-    private handleSelectChange(hubspotFormId: string) {
-        this.selectedItem = hubspotFormId ? this.items.find(item => item.hubspotFormId === hubspotFormId) : undefined;
+    // When the choice changes we need to update the state accordingly.
+    private handleChoiceChange(hubspotFormId: string) {
+        this.selectedItem = this.items.find(item => item.hubspotFormId === hubspotFormId);
     }
 
     render() {
@@ -107,25 +107,45 @@ export class PulumiMultiSelectForm {
         return (
             <div>
                 {this.formSubmitted ? null : (
-                    <span>
+                    <div>
                         <span class={this.labelClass || ""}>{this.labelText}</span>
-                        <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
-                            <option value="" selected={!selectedFormId} disabled hidden>
-                                Please select
-                            </option>
-                            {this.items.map(item => {
-                                const isSelected = item.hubspotFormId === selectedFormId;
-                                return (
-                                    <option value={item.hubspotFormId} selected={isSelected}>
-                                        {item.label ? item.label : item.key}
-                                    </option>
-                                );
-                            })}
-                        </select>
-                    </span>
+                        {/*
+                            A div with role="radiogroup", NOT a <fieldset>: this renders
+                            inside the page's `.hs-form` wrapper, and _hubspot.scss gates
+                            its "newer HubSpot editor, no fieldset" field-chrome branch on
+                            `:not(:has(fieldset))`. A fieldset here would flip that branch
+                            off and leave the embedded form below with browser-default
+                            inputs.
+                        */}
+                        <div role="radiogroup" aria-label={this.labelText} class="grid grid-cols-1 lg:grid-cols-4 gap-3">
+                            {this.items.map(item => (
+                                // The card is the affordance, so the radio itself is
+                                // sr-only — still focusable and arrow-navigable, with the
+                                // focus treatment drawn on the card via has-[:focus-visible].
+                                // That treatment is the FORM-CONTROL one, not the button
+                                // one: violet-800 border plus a 2px inset ring of the same
+                                // color, merging into one edge ($form-focus-ring in
+                                // shared/_forms.scss). Keep it in step with that token.
+                                <label class="card card-hover flex items-center justify-center p-3 m-0 text-center text-sm font-normal has-[:checked]:border-violet-primary has-[:checked]:bg-violet-50 has-[:checked]:text-violet-primary has-[:focus-visible]:border-violet-800 has-[:focus-visible]:inset-ring-2 has-[:focus-visible]:inset-ring-violet-800">
+                                    <input
+                                        type="radio"
+                                        class="sr-only"
+                                        name={PulumiMultiSelectForm.radioGroupName}
+                                        value={item.hubspotFormId}
+                                        checked={item.hubspotFormId === selectedFormId}
+                                        onInput={(event: any) => this.handleChoiceChange(event.target.value)}
+                                    />
+                                    <span>{item.label ? item.label : item.key}</span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
                 )}
                 {!this.selectedItem ? null : this.selectedItem.cta ? (
-                    <div class="mt-8"><a class="btn btn-secondary" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
+                    // Stands in for the submit button of the form the other choices
+                    // render, so it matches it: _hubspot.scss extends the HubSpot
+                    // submit input with .btn-primary .btn-lg.
+                    <div class="mt-8"><a class="btn btn-primary btn-lg" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
                 ) : (
                     <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
                 )}

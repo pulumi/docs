@@ -10,12 +10,10 @@ describe("pulumi-multi-select-form", () => {
         expect(page.root).toEqualHtml(`
       <pulumi-multi-select-form>
         <div>
-           <span>
+           <div>
              <span></span>
-             <select>
-               <option disabled hidden selected value="">Please select</option>
-             </select>
-           </span>
+             <div class="grid grid-cols-1 lg:grid-cols-4 gap-3" role="radiogroup"></div>
+           </div>
         </div>
       </pulumi-multi-select-form>
     `);

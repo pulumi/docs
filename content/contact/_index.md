@@ -4,14 +4,14 @@ meta_desc: Contact Pulumi for any general inquiries, including requests for pric
 type: page
 layout: contact
 quick_links:
-    title: Looking for something quicker?
+    title: Quick links
     items:
-        - label: Start a trial
+        - label: Ready to try it?
           description: No sales call needed. Create an org and ship infrastructure in minutes.
           cta_label: Start a trial
           url: https://app.pulumi.com/signup?create-organization=1
 
-        - label: See it in action
+        - label: Want to see it first?
           description: Get a guided walkthrough from our team before you commit to anything.
           cta_label: Request a demo
           url: /request-a-demo/
@@ -23,19 +23,19 @@ quick_links:
 
 form:
     - key: general
-      label: I have a general question
+      label: General question
       hubspot_form_id: 71507f4e-e34e-4dc9-9da6-b44953cac811
 
     - key: sales
-      label: I want to talk to someone in Sales
+      label: Talk to sales
       hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
 
     - key: tf-migration
-      label: I need help migrating from Terraform
+      label: Migrate from Terraform
       hubspot_form_id: 123cfbdb-9ce4-4d33-a9b7-c30302463d7a
 
     - key: support
-      label: I need help with Support
+      label: Help from support
       hubspot_form_id: cta1
       cta:
         label: Submit a Request

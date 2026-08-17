@@ -75,8 +75,19 @@
     fieldset {
         @apply block !max-w-none;
 
+        // Gutter between the two columns of a form-columns-2 fieldset (first name /
+        // last name). It's padding on the leading field, so once HubSpot's own
+        // responsive rule stacks the fields to full width the gutter has nothing to
+        // separate and reads as a stray right margin — the stacked first field ends
+        // 1rem short of the second. Drop it at exactly the width HubSpot stacks at:
+        // any other threshold leaves a band where the columns either collide or sit
+        // unevenly. If HubSpot ever moves that breakpoint, this is the number.
         &:not(.form-columns-1)>.field:first-child {
             @apply pr-4;
+
+            @media (max-width: 400px) {
+                @apply pr-0;
+            }
         }
 
         @include hs-form-field-chrome;
@@ -178,8 +189,13 @@
     .hs-error-msgs {
         @apply list-none mt-2 p-0 text-red-600 text-xs;
 
+        // HubSpot marks up each message as a <label>, so it inherits the field-label
+        // chrome from hs-form-field-chrome — including the mt-5 that spaces a real
+        // label off the control above it. On a validation message that lands on top
+        // of this list's own mt-2 and floats the error well clear of its input, so
+        // zero both ends and let the list own the spacing.
         label {
-            @apply mb-0;
+            @apply mt-0 mb-0;
         }
     }
 
