@@ -55,8 +55,8 @@ detecting and choosing them yourself.
 Ask the user for the specifics of what they chose in step 3, then follow the
 `pulumi-overview` skill from step 2:
 
-- New infrastructure: confirm the language (Python, TypeScript, Go, C#, or
-  Java) and what to build, then use `pulumi-overview`, Level 2. Scaffold with
+- New infrastructure: confirm the language (TypeScript, Python, Go, C#, Java,
+  YAML, or HCL) and what to build, then use `pulumi-overview`, Level 2. Scaffold with
   `pulumi new <cloud>-<language>`, then add the resources they asked for,
   whether that is one or several. Keep it minimal if they only want one.
 - Migration: hand it to `pulumi-overview`, which covers migrating from
