@@ -10,17 +10,6 @@
                 </div>
             </div>
 
-            {{/*
-                Secondary column: self-serve fast paths for visitors who don't need a
-                sales conversation, plus our office address. Deliberately plain — heading,
-                blurb, text link, no cards — so it reads as an aside to the form rather
-                than competing with it for submissions.
-
-                The list is spaced with flex gap, NOT space-y-*: each item needs `m-0` to
-                escape the global `main li { my-2 }`, and Tailwind v4 emits space-y as
-                `:where(.space-y-10 > :not(:last-child))` at zero specificity, so `m-0`
-                silently wins and the gap collapses.
-            */}}
             <aside class="mt-8 md:mt-0">
                 {{ with .Params.quick_links }}
                     <h2 class="font-overline-sm mb-6">{{ .title }}</h2>

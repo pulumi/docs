@@ -17,9 +17,7 @@ let hubspotInstanceCount = 0;
 // https://legacydocs.hubspot.com/docs/methods/forms/advanced_form_options
 type HubSpotFormEvent = "onBeforeFormInit" | "onBeforeValidationInit" | "onFormReady" | "onFormSubmit" | "onFormSubmitted" | "onFormDefinitionFetchError";
 
-// Input types that survive being read off one form and written to another by
-// assigning to `value`. Textareas qualify too and are matched by tag instead.
-const CARRY_OVER_INPUT_TYPES = ["text", "email", "tel", "url", "search", "number"];
+const REASSIGNABLE_INPUT_TYPES = ["text", "email", "tel", "url", "search", "number"];
 
 @Component({
     tag: "pulumi-hubspot-form",
@@ -56,10 +54,6 @@ export class HubspotForm {
     @Prop()
     prefill?: string;
 
-    // Field values carried over from a form this one is replacing (the contact
-    // page swaps one embedded form for another when the visitor changes their
-    // reason for writing in). A map of HubSpot field internal name -> value,
-    // applied on onFormReady to whichever of those fields are still empty.
     @Prop()
     carryOverValues?: Record<string, string>;
 
@@ -172,13 +166,8 @@ export class HubspotForm {
             // Set the internal ad id.
             this.setInternalAdId();
 
-            // Order matters. HubSpot has already prefilled whatever it knows about
-            // the visitor by the time this fires, so carried-over values fill only
-            // what's still empty and leave that alone. The ?param= prefill then
-            // overwrites either of them — an explicit link is the strongest signal
-            // of intent available.
             if (this.carryOverValues) {
-                this.applyValues(this.carryOverValues, true);
+                this.fillEmptyFields(this.carryOverValues);
             }
 
             this.applyPrefill();
@@ -263,9 +252,15 @@ export class HubspotForm {
         }
     }
 
-    // Write a map of field internal name -> value into the rendered form. With
-    // `onlyIfEmpty`, a field that already holds something is left as it is.
-    private applyValues(values: Record<string, string>, onlyIfEmpty = false) {
+    private applyValues(values: Record<string, string>) {
+        this.writeFields(values, false);
+    }
+
+    private fillEmptyFields(values: Record<string, string>) {
+        this.writeFields(values, true);
+    }
+
+    private writeFields(values: Record<string, string>, skipFilled: boolean) {
         Object.keys(values).forEach(fieldName => {
             const value = values[fieldName];
             if (!value) {
@@ -273,7 +268,7 @@ export class HubspotForm {
             }
 
             const field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement = this.el.querySelector(`[name="${fieldName}"]`);
-            if (!field || (onlyIfEmpty && field.value)) {
+            if (!field || (skipFilled && field.value)) {
                 return;
             }
 
@@ -286,21 +281,6 @@ export class HubspotForm {
         });
     }
 
-    // What a caller replacing this form with another one should carry across:
-    // free-text fields and selects, keyed by HubSpot internal name. Deliberately
-    // not filtered to a list of known names — the forms carry their own custom
-    // properties (`contact_latest_query`, `web_self_attribution`) and the
-    // receiving form ignores anything it has no field for.
-    //
-    // Note this reads a select's raw `value`, unlike collectFieldValues, which
-    // reports the option's text for the submitted-values event. Text is what a
-    // human wants to read; only the value can be assigned back to a select on
-    // another form.
-    //
-    // Checkboxes and radios are left out: assigning to `value` sets the attribute
-    // rather than checking the control, so consent can't round-trip this way and
-    // shouldn't silently follow someone between forms anyway. Hidden fields are
-    // out too — UTM and ad ids are per-form, and the incoming form sets its own.
     @Method()
     async getCarryOverValues(): Promise<Record<string, string>> {
         const values: Record<string, string> = {};
@@ -310,7 +290,7 @@ export class HubspotForm {
                 return;
             }
 
-            if (field instanceof HTMLInputElement && !CARRY_OVER_INPUT_TYPES.includes(field.type)) {
+            if (field instanceof HTMLInputElement && !REASSIGNABLE_INPUT_TYPES.includes(field.type)) {
                 return;
             }
 
