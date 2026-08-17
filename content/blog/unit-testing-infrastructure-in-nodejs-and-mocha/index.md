@@ -456,7 +456,7 @@ And if we select it, we'll see the complete Mocha test output:
 
 We could even [use webhooks](/docs/pulumi-cloud/webhooks/) to
 fire off a Slack alarm so that nobody misses the issue. This is often very helpful in
-unattended scenarios, like [continuous deployment](/docs/iac/packages-and-automation/continuous-delivery/).
+unattended scenarios, like [continuous deployment](/docs/iac/operations/continuous-delivery/).
 
 Better to catch these things late than never!
 
@@ -509,7 +509,7 @@ a preview, when all of these different states are possible. That has the downsid
 catching problems before they get deployed, however. As with many things, this is a tradeoff.
 
 For a more complete overview of `Output<T>`, please see the
-[Pulumi Programming Model documentation](/docs/concepts/inputs-outputs/).
+[Pulumi Programming Model documentation](/docs/iac/concepts/inputs-outputs/).
 
 ## Next Steps
 

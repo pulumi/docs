@@ -12,7 +12,7 @@ canonical_url: "https://www.pulumi.com/docs/iac/using-pulumi/crossguard/"
 ---
 
 > [!INFO]
-> This post describes an early version of Pulumi CrossGuard (Policy as Code). The API and implementation details may have changed. For the most up-to-date information, please see the [CrossGuard documentation](/docs/using-pulumi/crossguard/).
+> This post describes an early version of Pulumi CrossGuard (Policy as Code). The API and implementation details may have changed. For the most up-to-date information, please see the [CrossGuard documentation](/docs/insights/policy/).
 
 We recently announced [a new policy as code solution, CrossGuard](/blog/announcing-crossguard-preview/) that validates policies at deployment time. Policies are expressed as code and are used to prevent the creation of out-of-compliance resources. This allows an organization to prevent entire classes of security and reliability defects to ensure infrastructure is following best practices. Because policies are written using full-blown programming languages, it's possible to do interesting things such as [combining IAM Access Analyzer and Pulumi CrossGuard](/blog/aws-iam-access-analyzer-and-crossguard/). In this post, we'll take a closer look at the different types of policies that can be written.
 
@@ -155,4 +155,4 @@ With two different ways to write policies, you have more flexibility about how y
 
 In this post, we've seen the different types of CrossGuard policies that can be written.
 
-To give it a try, [download and install Pulumi](/docs/get-started/) and [get started with policy as code](/docs/using-pulumi/crossguard/get-started/). For examples of policies, check out [Pulumi CrossGuard policies for AWS (AWSGuard)](https://github.com/pulumi/pulumi-policy-aws) or our [policy examples](https://github.com/pulumi/examples/tree/master/policy-packs). And as always, if you'd like to share what policies you have come up with on your own you can discuss them on the [Pulumi Community Slack](https://slack.pulumi.com/).
+To give it a try, [download and install Pulumi](/docs/get-started/) and [get started with policy as code](/docs/insights/policy/get-started/). For examples of policies, check out [Pulumi CrossGuard policies for AWS (AWSGuard)](https://github.com/pulumi/pulumi-policy-aws) or our [policy examples](https://github.com/pulumi/examples/tree/master/policy-packs). And as always, if you'd like to share what policies you have come up with on your own you can discuss them on the [Pulumi Community Slack](https://slack.pulumi.com/).

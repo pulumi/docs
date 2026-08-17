@@ -43,7 +43,7 @@ Pulumi now supports Java (in addition to existing support for TypeScript, Python
 
 ![IntelliJ IDE with Pulumi and Java Program](intellij.png)
 
-You can get started with Pulumi using Java today in the [Pulumi Getting Started guide](/docs/get-started/) and the [Pulumi and Java language docs](/docs/languages-sdks/java/).
+You can get started with Pulumi using Java today in the [Pulumi Getting Started guide](/docs/get-started/) and the [Pulumi and Java language docs](/docs/iac/languages-sdks/java/).
 
 👉 Read more in the [Pulumi and Java](/blog/announcing-infrastructure-as-code-with-java-and-pulumi/) blog post.
 
@@ -87,7 +87,7 @@ outputs:
 
 Access to Pulumi packages authored in other Pulumi languages means complexity can be pushed into reusable infrastructure components instead of copy-pasted in YAML. And when complexity does increase, Pulumi YAML supports a new `pulumi convert` command to eject into any other Pulumi programming language to manage the increased complexity via rich software engineering features in those languages.
 
-You can get started with Pulumi YAML today in the [Pulumi Getting Started](/docs/get-started/) guide and the [Pulumi YAML language docs](/docs/languages-sdks/yaml/).
+You can get started with Pulumi YAML today in the [Pulumi Getting Started](/docs/get-started/) guide and the [Pulumi YAML language docs](/docs/iac/languages-sdks/yaml/).
 
 👉 Read more in the [Pulumi YAML blog post](/blog/pulumi-yaml/).
 
@@ -286,7 +286,7 @@ You can get started with Crosswalk for AWS in the [Pulumi Crosswalk for AWS Guid
 
 The AWS Cloud Development Kit (CDK) offers a [large collection](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html) of higher-level libraries ("constructs") for working with the AWS platform, built by service teams at AWS and by the AWS CDK community.  These libraries are available in the same set of general purpose programming languages that Pulumi supports, with the primary difference being that AWS CDK compiles infrastructure programs into CloudFormation, and uses CloudFormation to drive deployments.
 
-With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment.  For developers already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering [improved deployment speed](https://www.pulumi.com/case-studies/panther-labs/#proving-pulumis-advantages), integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code](/docs/using-pulumi/crossguard/), [Audit Logs](/docs/pulumi-cloud/audit-logs/), [Secrets](/docs/concepts/secrets/), and much more). But even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources.  This allows you to work across the >80 cloud and SaaS providers that Pulumi offers access to, while still benefiting from high level libraries from the AWS CDK project.
+With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment.  For developers already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering [improved deployment speed](https://www.pulumi.com/case-studies/panther-labs/#proving-pulumis-advantages), integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code](/docs/insights/policy/), [Audit Logs](/docs/administration/security-compliance/audit-logs/), [Secrets](/docs/iac/concepts/secrets/), and much more). But even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources.  This allows you to work across the >80 cloud and SaaS providers that Pulumi offers access to, while still benefiting from high level libraries from the AWS CDK project.
 
 ```typescript
 import * as fs from 'fs';

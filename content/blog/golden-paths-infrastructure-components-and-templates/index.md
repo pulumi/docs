@@ -45,7 +45,7 @@ This is the foundation: raw cloud resources include VMs, databases, networks, an
 
 ### Layer 2: Platform Layer - Components
 
-This is where the magic happens. [Pulumi Components](/docs/iac/concepts/resources/components/) take those raw resources and package them into higher-level abstractions. Instead of manually configuring 20+ AWS resources for a secure web application, you create a component that handles all that complexity and exposes just the configuration that matters:
+This is where the magic happens. [Pulumi Components](/docs/iac/concepts/components/) take those raw resources and package them into higher-level abstractions. Instead of manually configuring 20+ AWS resources for a secure web application, you create a component that handles all that complexity and exposes just the configuration that matters:
 
 ```typescript
 const app = new SecureWebApplication("my-app", {
@@ -200,7 +200,7 @@ This documentation will help developers understand how to use your component eff
 
 ### Publishing Your Component via Private Registry
 
-Once your component is ready, publish it to your [Pulumi Private Registry](/docs/idp/get-started/private-registry/):
+Once your component is ready, publish it to your [Pulumi Private Registry](/docs/idp/concepts/private-registry/):
 
 ```bash
 # Tag your component version
@@ -587,12 +587,12 @@ pulumi new https://github.com/myorg/go-microservice-boilerplate
 ```
 
 **No-Code Deployment:**
-Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `Deploy with Pulumi` → Configure and launch
+Navigate to [Pulumi IDP](/docs/idp/concepts/no-code-stacks/) → `Templates` → `Deploy with Pulumi` → Configure and launch
 
 ![img_7.png](pulumi_idp_deployment_no_code_view.png)
 
 **Pulumi Deployment:**
-Navigate to [Pulumi IDP](/docs/idp/get-started/workflows/) → `Templates` → `Deploy with Pulumi` → Configure and launch
+Navigate to [Pulumi IDP](/docs/idp/concepts/no-code-stacks/) → `Templates` → `Deploy with Pulumi` → Configure and launch
 
 ![img_6.png](pulumi_idp_deployment_git_view.png)
 
@@ -762,7 +762,7 @@ Start small. Solve one problem well. Expand from there. With the right foundatio
 ### Ready to Build Your Golden Paths?
 
 - **Code examples**: [Explore golden path examples on GitHub](https://github.com/pulumi/workshops/tree/main/golden-paths-infrastructure-components-and-templates)
-- **Build with Components**: [Pulumi Components documentation](/docs/iac/concepts/resources/components/)
+- **Build with Components**: [Pulumi Components documentation](/docs/iac/concepts/components/)
 - **Enable Self-Service**: [Pulumi IDP documentation](/docs/idp/)
 - **Join the Community**: Connect with platform engineers in our [Pulumi Slack](https://slack.pulumi.com)
 

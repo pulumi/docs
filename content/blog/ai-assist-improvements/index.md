@@ -40,7 +40,7 @@ category: product
 # for details, and please remove these comments before submitting for review.
 ---
 
-Pulumi Cloud [Resource Search](/docs/pulumi-cloud/insights/search) AI assist functionality is now generally available to all organizations! In addition we have shipped some improvements to the feature to make it easier to use and more discoverable: a toggle on the search bar, suggested queries and an "I'm Feeling Lucky" button to generate a random query for you.
+Pulumi Cloud [Resource Search](/docs/insights/discovery/search/) AI assist functionality is now generally available to all organizations! In addition we have shipped some improvements to the feature to make it easier to use and more discoverable: a toggle on the search bar, suggested queries and an "I'm Feeling Lucky" button to generate a random query for you.
 
 <!--more-->
 See it in action below!

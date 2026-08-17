@@ -102,4 +102,4 @@ Services also support properties – metadata that adds important context to a s
 
 ## A New Era for Platform Teams
 
-Ready to accelerate your platform engineering journey? [Get started with Pulumi IDP today](/product/internal-developer-platforms/) and explore our comprehensive [documentation](/docs/idp/get-started/) to learn how to build self-service infrastructure workflows, establish golden paths, and boost developer productivity. Join the growing community of platform engineers who are transforming how their organizations deliver and manage cloud infrastructure at scale.
+Ready to accelerate your platform engineering journey? [Get started with Pulumi IDP today](/product/internal-developer-platforms/) and explore our comprehensive [documentation](/docs/idp/concepts/) to learn how to build self-service infrastructure workflows, establish golden paths, and boost developer productivity. Join the growing community of platform engineers who are transforming how their organizations deliver and manage cloud infrastructure at scale.

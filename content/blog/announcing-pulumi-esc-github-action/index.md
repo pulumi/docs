@@ -19,7 +19,7 @@ We’re excited to share our latest addition to the Pulumi Ecosystem: the [Pulum
 
 ## Why we built it
 
-[Secret management](/what-is/what-is-secrets-management/) continues to be a challenge for organizations of all sizes. Storing long-lived credentials in multiple places (e.g., GitHub, third-party CI systems, and internal servers) often leads to “secret sprawl” and potential security gaps. With Pulumi ESC, you can migrate to dynamic credentials, and ensure secrets don’t persist beyond their necessary lifetime. If your process requires longer-lived static credentials, with ESC you can manage credentials in a central place and [rotate them automatically](/docs/esc/environments/rotation).
+[Secret management](/what-is/what-is-secrets-management/) continues to be a challenge for organizations of all sizes. Storing long-lived credentials in multiple places (e.g., GitHub, third-party CI systems, and internal servers) often leads to “secret sprawl” and potential security gaps. With Pulumi ESC, you can migrate to dynamic credentials, and ensure secrets don’t persist beyond their necessary lifetime. If your process requires longer-lived static credentials, with ESC you can manage credentials in a central place and [rotate them automatically](/docs/esc/concepts/rotators/).
 
 By packaging ESC functionality into a GitHub Action, we’re enabling teams to inject secrets and run ESC commands directly within their GitHub workflows. This allows for a streamlined approach to environment management and secrets rotation—without leaving GitHub.
 
@@ -79,7 +79,7 @@ The GitHub Action workflow above does the following:
 
 ## What’s Next?
 
-- Explore More ESC Features: Dive deeper into ESC’s [environment management](/docs/esc/environments/working-with-environments), [secret rotation](/docs/esc/environments/rotation), and [dynamic credentials](/docs/esc/integrations/dynamic-login-credentials).
+- Explore More ESC Features: Dive deeper into ESC’s [environment management](/docs/esc/concepts/environments/), [secret rotation](/docs/esc/concepts/rotators/), and [dynamic credentials](/docs/esc/providers/login/).
 - Contribute to the GitHub Action: The Pulumi ESC GitHub Action is [open source](https://github.com/pulumi/esc-action). Feel free to open issues, submit PRs, or suggest enhancements.
 - Join the Pulumi Community: Connect with other Pulumi users and share best practices in our Community Slack.
 

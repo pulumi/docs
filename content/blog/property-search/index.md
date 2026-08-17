@@ -66,7 +66,7 @@ Before Property Search, using just Resource Search, you were able to find resour
 
 ### AI Assist & properties
 
-Pulumi [AI Assist](/docs/pulumi-cloud/insights/search/#ai-assist) allows you to use natural language to search for resources. AI Assist works by converting natural language to a query in our search syntax. This becomes even more valuable with property search. Resources can have dozens of properties, and remembering exactly how to search for property values can be challenging, especially when they change depending on the provider. AI Assist is going to step in so that you don’t have to remember everything.
+Pulumi [AI Assist](/docs/insights/discovery/search/#ai-assist) allows you to use natural language to search for resources. AI Assist works by converting natural language to a query in our search syntax. This becomes even more valuable with property search. Resources can have dozens of properties, and remembering exactly how to search for property values can be challenging, especially when they change depending on the provider. AI Assist is going to step in so that you don’t have to remember everything.
 
 Here is a list of example natural language queries we have seen customers use and the AI Assist output:
 
@@ -96,9 +96,9 @@ Here are some query examples we have seen customers use:
 
 ### Use the REST API
 
-In addition to searching for resources you can also export them to perform analytics: whether that is something simple like opening it in a spreadsheet or something more sophisticated, like if you want to regularly ingest it to your data warehouse. You can download a CSV from the console or get the data using the [Data Export API](/docs/pulumi-cloud/cloud-rest-api/#data-export).
+In addition to searching for resources you can also export them to perform analytics: whether that is something simple like opening it in a spreadsheet or something more sophisticated, like if you want to regularly ingest it to your data warehouse. You can download a CSV from the console or get the data using the [Data Export API](/docs/reference/cloud-rest-api/#data-export).
 
-But the value of Resource Search is not limited to what you do in the console and for analytics. You can also leverage the [Resource Search API](/docs/pulumi-cloud/cloud-rest-api/#resource-search) to create automation and workflows off of search results. Find below details on how to use the API.
+But the value of Resource Search is not limited to what you do in the console and for analytics. You can also leverage the [Resource Search API](/docs/reference/cloud-rest-api/#resource-search) to create automation and workflows off of search results. Find below details on how to use the API.
 
 {{< chooser language "javascript,typescript,python,go" >}}
 

@@ -21,7 +21,7 @@ We're thrilled to unveil two new features that will empower you to organize your
 
 ## Overview of Pulumi ESC
 
-Pulumi ESC is a developer-first platform designed to simplify the management of secrets and configurations into collections called <i>[environments](/docs/esc/environments/)</i>. As a fully managed solution, it offers [dynamic cloud provider credential](/docs/esc/integrations/dynamic-login-credentials/) resolution, a rich set of [providers](/docs/esc/providers/) to retrieve secrets from external platforms, and the ability to use the secrets and configurations you have defined across any surface, including your applications and infrastructure via [Multi-language SDKs](/docs/esc/sdk/), [REST APIs](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/iac/cli/commands/pulumi_env/), [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/), and [Automation API](/blog/esc-automation-api-pulumi-service-provider-launch/#streamline-automated-workflows-with-automation-api-enhancements). Like all Pulumi functionality, Pulumi ESC focuses on enhancing both agility and security in modern cloud development.
+Pulumi ESC is a developer-first platform designed to simplify the management of secrets and configurations into collections called <i>[environments](/docs/esc/concepts/environments/)</i>. As a fully managed solution, it offers [dynamic cloud provider credential](/docs/esc/providers/login/) resolution, a rich set of [providers](/docs/esc/providers/) to retrieve secrets from external platforms, and the ability to use the secrets and configurations you have defined across any surface, including your applications and infrastructure via [Multi-language SDKs](/docs/esc/languages-sdks/), [REST APIs](/docs/reference/cloud-rest-api/#environments), [CLI](/docs/iac/cli/commands/pulumi_env/), [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/), and [Automation API](/blog/esc-automation-api-pulumi-service-provider-launch/#streamline-automated-workflows-with-automation-api-enhancements). Like all Pulumi functionality, Pulumi ESC focuses on enhancing both agility and security in modern cloud development.
 
 As developers have embraced Pulumi ESC to manage their collections of secrets and configurations across many teams and projects, the demand for more sophisticated organizational tools has increased. To address this growing need for more organized and efficient management of cloud environments, we are introducing Projects and Environment Tags in Pulumi ESC.
 
@@ -37,7 +37,7 @@ We have two additional features as part of this launch:
 - **Environment Clone**: Using the built-in cloning functionality, you can securely copy environments with sensitive information, preserving either the entire version history or just the latest environment state, depending on your needs.
 
 {{% notes "info" %}}
-To use Projects and Environment Tags, please update your [Pulumi CLI](/docs/cli/) and [SDK](/docs/esc/sdk/) to the latest.
+To use Projects and Environment Tags, please update your [Pulumi CLI](/docs/iac/cli/) and [SDK](/docs/esc/languages-sdks/) to the latest.
 {{% /notes %}}
 
 {{% notes "info" %}}
@@ -55,7 +55,7 @@ Moving environments out of the `default` project is as easy as cloning the envir
 
 {{% /notes %}}
 
-We offer numerous ways for you to get started with Projects via the Pulumi Web Console, [SDK](/docs/esc/sdk/), [REST API](/docs/pulumi-cloud/cloud-rest-api/#environments), [CLI](/docs/iac/cli/commands/pulumi_env/) and [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/) - choose what best fits your workflow. Here is one example using the Pulumi CLI to create and list environments within a project:
+We offer numerous ways for you to get started with Projects via the Pulumi Web Console, [SDK](/docs/esc/languages-sdks/), [REST API](/docs/reference/cloud-rest-api/#environments), [CLI](/docs/iac/cli/commands/pulumi_env/) and [Pulumi-Service Provider](/registry/packages/pulumiservice/api-docs/environment/) - choose what best fits your workflow. Here is one example using the Pulumi CLI to create and list environments within a project:
 
  ```bash
   $ pulumi env init cloud-pe/demo
@@ -70,8 +70,8 @@ We offer numerous ways for you to get started with Projects via the Pulumi Web C
 
 With the introduction of Projects, all existing environments part of the `default` project will continue to work without requiring any changes. However, when moving existing environments out of the default project you may notice some differences that we have outlined below.
 
-- If your environment was interpolating the `context.currentEnvironment.name` or `context.rootEnvironment.name` from [Contextual information](/docs/esc/environments/#pulumi-contextual-information), this value will now include the project for any environments outside of the `default` project.
-- If you were using any of the [secrets providers with OIDC](/docs/esc/environments/#using-secrets-providers-and-oidc), you will need to update both the subject and audience if a trust relationship has been set up. The subject will be either `pulumi:environments:org:<organization name>:env:<project name>/<environment name>` if no `subjectAttributes` are specified or if the `currentEnvironment.name` subject attribute is specified it will now resolve to `currentEnvironment.name:<project name>/<environment name>`. The audience will be the provider's platform name (`aws`, `azure`, or `gcp`) followed by the org name of the environment (e.g. `aws:pulumi`).
+- If your environment was interpolating the `context.currentEnvironment.name` or `context.rootEnvironment.name` from [Contextual information](/docs/esc/concepts/environments/#pulumi-contextual-information), this value will now include the project for any environments outside of the `default` project.
+- If you were using any of the [secrets providers with OIDC](/docs/esc/concepts/environments/#using-secrets-providers-and-oidc), you will need to update both the subject and audience if a trust relationship has been set up. The subject will be either `pulumi:environments:org:<organization name>:env:<project name>/<environment name>` if no `subjectAttributes` are specified or if the `currentEnvironment.name` subject attribute is specified it will now resolve to `currentEnvironment.name:<project name>/<environment name>`. The audience will be the provider's platform name (`aws`, `azure`, or `gcp`) followed by the org name of the environment (e.g. `aws:pulumi`).
 
 ## Introducing Environment Tags
 

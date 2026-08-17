@@ -28,8 +28,8 @@ open source contributions and passionate community leaders emerging who are help
 helping us to make Pulumi even better.
 
 **Support for major public, private, and hybrid clouds.** We launched with support for the three major public
-clouds, [AWS](/docs/clouds/aws/), [Azure](/docs/clouds/azure/), and
-[Google Cloud](/docs/clouds/gcp/), and have since added capabilities across all
+clouds, [AWS](/docs/integrations/clouds/aws/), [Azure](/docs/integrations/clouds/azure/), and
+[Google Cloud](/docs/integrations/clouds/gcp/), and have since added capabilities across all
 of them, including adding [serverless](/registry/packages/aws/how-to-guides/rest-api/),
 [containers](https://github.com/pulumi/examples/blob/master/aws-ts-containers/index.ts), and
 [infrastructure](https://github.com/pulumi/examples/blob/master/aws-js-webserver/index.js)

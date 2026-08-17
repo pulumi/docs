@@ -37,8 +37,8 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 
 ### Centralize and Simplify Secrets Management:
 
-- **Unify Your Secrets**: Say goodbye to secrets scattered across systems. Pulumi ESC lets you pull and synchronize secrets from any source—[HashiCorp Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure Key Vault](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), and more—and consume them securely from anywhere.
-- **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/iac/cli/commands/pulumi_env/), [API](/docs/pulumi-cloud/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/development/languages-sdks/). Robust [RBAC](/docs/esc/environments/access-control/) ensures the right people have the right access at all times.
+- **Unify Your Secrets**: Say goodbye to secrets scattered across systems. Pulumi ESC lets you pull and synchronize secrets from any source—[HashiCorp Vault](/docs/esc/providers/secrets/vault-secrets/), [AWS Secrets Manager](/docs/esc/providers/secrets/aws-secrets/), [Azure Key Vault](/docs/esc/providers/secrets/azure-secrets/), [1Password](/docs/esc/providers/secrets/1password-secrets/), and more—and consume them securely from anywhere.
+- **Streamline Access and Control**: Access secrets seamlessly via [CLI](/docs/iac/cli/commands/pulumi_env/), [API](/docs/reference/cloud-rest-api/#environments), [Kubernetes operator](https://external-secrets.io/latest/provider/pulumi/), the intuitive Pulumi Cloud UI, or directly within your code using our TypeScript, Python, and Go [SDKs](/docs/esc/development/languages-sdks/). Robust [RBAC](/docs/administration/access-identity/rbac/) ensures the right people have the right access at all times.
 - **Eliminate .env File Risks**: Stop sharing secrets through insecure channels. Pulumi ESC provides a secure and centralized way to manage and access secrets, eliminating the need for risky .env files.
 
 ![Pulumi ESC Integrations](esc-integrations.png)
@@ -47,7 +47,7 @@ Pulumi ESC is the modern secret management platform designed to streamline and s
 
 - **Empower Developers, Not Slow Them Down**: Pulumi ESC is designed for developer convenience without compromising security. Access secrets programmatically, integrate with your existing workflows, and leverage flexible authoring options: Pulumi Cloud Editor, VS Code Plugin, SDKs, the Pulumi Service Provider, and our REST API - the choice is yours!
 - **Gain Complete Visibility and Control**: Track all secret access and changes with detailed audit logs. Understand the downstream impact of changes and ensure your secrets are used securely and consistently across your organization.
-- **Secrets as Code**: Pulumi ESC supports flexible composition of environments by allowing [imports](/docs/esc/get-started/import-environments/) between one another. Construct hierarchical environments that avoid the need to copy/paste secrets and configurations, ensuring that changes are consistently propagated across all related environments.
+- **Secrets as Code**: Pulumi ESC supports flexible composition of environments by allowing [imports](/docs/esc/concepts/imports/) between one another. Construct hierarchical environments that avoid the need to copy/paste secrets and configurations, ensuring that changes are consistently propagated across all related environments.
 
 ![Pulumi ESC document view](esc-document-editor-view.png)
 
@@ -82,7 +82,7 @@ Since the launch of Pulumi ESC in preview, over the last 11 months, we have laun
 
 - [**SDKs**](/blog/esc-sdk-launch/) for TypeScript, Python, and Go to leverage Pulumi ESC within all your applications
 - [**Versioning**](/blog/esc-versioning-launch/) that maintains full history of the changes you have made to your secrets and configuration and rollback to specific versions when needed
-- [**Version Tags**](/docs/esc/environments/versioning/#tagging-versions) allow you to assign tags and import specific versions by tags within your applications such that moving tags across versions changes the configuration but requires zero changes in your application code
+- [**Version Tags**](/docs/esc/concepts/versioning/#tagging-versions) allow you to assign tags and import specific versions by tags within your applications such that moving tags across versions changes the configuration but requires zero changes in your application code
 - [**Syncing your secrets**](/blog/esc-sync-with-iac/) to several external sources including GitHub and AWS SecretsManager
 - [**Kubernetes secrets operator**](https://external-secrets.io/latest/provider/pulumi/) to use Pulumi ESC within your Kubernetes applications to retrieve secrets and configuration using external secrets operator during runtime
 - [**VS Code Extension**](/blog/pulumi-vscode-extension/) to author and view your environments directly from where you code
@@ -92,9 +92,9 @@ Since the launch of Pulumi ESC in preview, over the last 11 months, we have laun
 - [**1Password integration**](/blog/pulumi-esc-public-preview-for-1password-support/) to pull secrets stored in 1Password during runtime
 - [**In-built Document Editor Enhancements**](/blog/esc-editor-enhancements/) to ease authoring with Pulumi Cloud
 - [**Table Editor**](/blog/esc-key-value-table-editor-launch/) to support users who prefer point-and-click UI-driven method to secrets management
-- [**Pulumi Stack reference provider**](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) offering tighter integration with Pulumi IaC
+- [**Pulumi Stack reference provider**](/docs/esc/providers/iac/pulumi-stacks/) offering tighter integration with Pulumi IaC
 - [**Files**](/blog/esc-kubernetes-cluster-and-app/) support that allows getting Kubernetes credentials dynamically
-- [**Audit logs**](/docs/pulumi-cloud/admin/audit-logs/) to monitor your environments
+- [**Audit logs**](/docs/administration/security-compliance/audit-logs/) to monitor your environments
 
 ## Pricing
 

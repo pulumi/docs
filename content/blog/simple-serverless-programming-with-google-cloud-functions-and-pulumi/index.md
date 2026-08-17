@@ -176,11 +176,11 @@ takes care of that you would normally be responsible for. This includes:
     Function when it finally is triggered.
 8. Figuring out a safe and secure way to encode and access secrets for
     your Cloud Function. Here, we can use Pulumi's
-    [Config Secrets](/docs/concepts/config#secrets) to safely
+    [Config Secrets](/docs/iac/concepts/config/#secrets) to safely
     encrypt and manage secrets for your Cloud Function code.
 
 Not to mention that by doing all of that, you can achieve continuous deployment
-[Pulumi and Google Cloud Build](/docs/iac/packages-and-automation/continuous-delivery/google-cloud-build/).
+[Pulumi and Google Cloud Build](/docs/iac/operations/continuous-delivery/google-cloud-build/).
 
 ## Updating Your Google Functions Code
 

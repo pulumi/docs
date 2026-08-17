@@ -250,9 +250,9 @@ You may need to massage some of the generated output for any `*IAMPolicy` resour
 
 Now that we have our Google Cloud resources under Pulumi management, we might want to consider some additional steps to build upon our IaC solution:
 
-* **Set up a CI/CD pipeline:** By adding our Pulumi code to a delivery pipeline, we can help ensure that all infrastructure changes go through an automated process. Pulumi has helpful integrations and documentation for many popular tools. See [Continuous Delivery](/docs/iac/packages-and-automation/continuous-delivery/) in the Pulumi docs for more information.
+* **Set up a CI/CD pipeline:** By adding our Pulumi code to a delivery pipeline, we can help ensure that all infrastructure changes go through an automated process. Pulumi has helpful integrations and documentation for many popular tools. See [Continuous Delivery](/docs/iac/operations/continuous-delivery/) in the Pulumi docs for more information.
 
-* **Add policy as code:** By adding policy as code to our IaC pipeline, we can ensure that our infrastructure is in compliance with any security or regulatory requirements before it’s ever provisioned in the cloud, as well as checks on any existing Pulumi resources. For more information on Pulumi’s policy as code capabilities, see [CrossGuard (Policy as Code)](/docs/using-pulumi/crossguard/) in the Pulumi docs.
+* **Add policy as code:** By adding policy as code to our IaC pipeline, we can ensure that our infrastructure is in compliance with any security or regulatory requirements before it’s ever provisioned in the cloud, as well as checks on any existing Pulumi resources. For more information on Pulumi’s policy as code capabilities, see [CrossGuard (Policy as Code)](/docs/insights/policy/) in the Pulumi docs.
 
 ## Conclusion
 

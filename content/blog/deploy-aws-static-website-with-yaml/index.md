@@ -106,7 +106,7 @@ To get started, go to the folder that contains your static website project. Then
     │   ├── Pulumi.yaml
     ```
 
-    **Note:** Pulumi will also add some other files to the **infrastructure** directory, such as a file that contains information specific to your Pulumi [stack](/docs/concepts/stack/).
+    **Note:** Pulumi will also add some other files to the **infrastructure** directory, such as a file that contains information specific to your Pulumi [stack](/docs/iac/concepts/stacks/).
 
 1. Copy the resources section and the outputs section from the example and add it to the end of the **Pulumi.yaml** file.
 

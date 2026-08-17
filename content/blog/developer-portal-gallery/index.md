@@ -49,7 +49,7 @@ Late last year [we announced Pulumi for Developer Portals](/blog/building-develo
 
 ## What the Pulumi Cloud New Project Wizard?
 
-The Pulumi Cloud [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard) is the fastest way to get a Pulumi program up and running. The New Project Wizard provides a more turnkey, out-of-the-box alternative to the [Pulumi Backstage Plugin](/docs/pulumi-cloud/developer-portals/backstage) or custom-built integrations.
+The Pulumi Cloud [New Project Wizard](/docs/idp/concepts/new-project-wizard/) is the fastest way to get a Pulumi program up and running. The New Project Wizard provides a more turnkey, out-of-the-box alternative to the [Pulumi Backstage Plugin](/docs/idp/integrations/backstage-plugin/) or custom-built integrations.
 
 By using the wizard, developers can generate Pulumi programs from your Organization Templates, commit and push code to GitHub, and trigger an initial deployment – all in a few clicks and without leaving the browser.
 
@@ -61,7 +61,7 @@ The Pulumi Cloud template gallery is a curated collection of templates designed 
 
 The new template gallery in Pulumi Cloud contains three types of templates:
 
-1. **Organization Templates**: Pulumi Cloud Enterprise and Business Critical editions support registering [your own custom templates for your organization](/docs/pulumi-cloud/developer-portals/templates) which will be made available in the New Project Wizard. This enables platform teams to standardize infrastructure creation and distribute those best practices where developers are already spending their time.
+1. **Organization Templates**: Pulumi Cloud Enterprise and Business Critical editions support registering [your own custom templates for your organization](/docs/idp/concepts/organization-templates/) which will be made available in the New Project Wizard. This enables platform teams to standardize infrastructure creation and distribute those best practices where developers are already spending their time.
 2. **Pulumi Templates**: All Pulumi Cloud organizations get a handful of Pulumi templates included in the gallery, [templates Pulumi has authored](/templates) to cover common architecture patterns.
 3. **AI Generated Templates**: Starting today, you can leverage [Pulumi AI](/ai) to genera†e the templates you need from the template gallery. Pulumi AI is a purpose-built AI assistant that can create cloud infrastructure using Pulumi. If your developers are looking for a template that is not yet created, Pulumi AI can dramatically reduce the time it takes to build their Pulumi program.
 

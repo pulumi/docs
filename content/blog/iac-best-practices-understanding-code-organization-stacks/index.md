@@ -60,7 +60,7 @@ When it comes to answering the question of where to store Pulumi code relative t
 1. **In the same repository as your application code:** This approach has the advantage of being simpler, but may not offer the necessary flexibility when dealing with multiple teams or varying levels of access control.
 2. **In a separate repository from your application code:** Using a separate repository adds some complexity, but does provide greater flexibility to more easily address a variety of organizational requirements and varying levels of access control.
 
-So which approach is best? That will depend on a number of different factors, many of which are outlined in the [organizing projects & stacks documentation](/docs/using-pulumi/organizing-projects-stacks/). Some other factors that users need to take into consideration include:
+So which approach is best? That will depend on a number of different factors, many of which are outlined in the [organizing projects & stacks documentation](/docs/iac/guides/basics/organizing-projects-stacks/). Some other factors that users need to take into consideration include:
 
 * Who is responsible for maintaining the code? If the application code and the Pulumi code are managed by different teams, then using separate repositories may be the best approach.
 * What sort of access controls are needed? If the organization needs different access controls for the application code and the Pulumi code, then separate repositories are generally needed.

@@ -20,7 +20,7 @@ social:
     linkedin: "Terraform State Backend support in Pulumi Cloud is now generally available. Platform teams can now store and manage Terraform state alongside Pulumi stacks — no code changes required. Your team keeps using the Terraform or OpenTofu CLI while you get encrypted state, update history, state locking, RBAC, audit policies, and unified resource visibility through Pulumi Insights. Migration from S3, Azure Blob, or GCS takes minutes. Read more about how it works and how to get started."
 ---
 
-Platform engineering teams managing infrastructure across Terraform and Pulumi now have a way to unify state management without rewriting a single line of HCL. Starting today, Pulumi Cloud can serve as a [Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/), letting you store and manage Terraform state alongside your Pulumi stacks. Your team continues using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: AI-powered infrastructure management with [Pulumi Neo](/docs/ai) — our infrastructure agent — encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/pulumi-cloud/insights/).
+Platform engineering teams managing infrastructure across Terraform and Pulumi now have a way to unify state management without rewriting a single line of HCL. Starting today, Pulumi Cloud can serve as a [Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/), letting you store and manage Terraform state alongside your Pulumi stacks. Your team continues using the Terraform or OpenTofu CLI for day-to-day operations while gaining the benefits of Pulumi Cloud: AI-powered infrastructure management with [Pulumi Neo](/docs/ai/) — our infrastructure agent — encrypted state storage, update history, state locking, role-based access control, audit policies, and unified resource visibility through [Insights](/docs/insights/discovery/).
 
 <!--more-->
 
@@ -38,7 +38,7 @@ When you store Terraform state in Pulumi Cloud, your Terraform-managed resources
 
 **Agentic infrastructure with Neo.** [Neo](/docs/ai/), Pulumi's AI infrastructure agent, works across your entire cloud footprint — Terraform and Pulumi IaC alike. Once your Terraform state is in Pulumi Cloud, you can ask Neo to find resources across both tools, trace dependencies that span Terraform and Pulumi stacks, troubleshoot configuration issues, and generate new infrastructure code informed by your existing resources. This means platform teams get a single AI-powered interface regardless of which IaC tool manages each piece of infrastructure.
 
-**Encrypted state with update history.** State is encrypted in transit and at rest. Every change is tracked as a versioned checkpoint visible in the [stack activity tab](/docs/deployments/projects-and-stacks/#stack-activity), giving you full rollback capability. This is a common concern for teams currently storing state in S3 buckets.
+**Encrypted state with update history.** State is encrypted in transit and at rest. Every change is tracked as a versioned checkpoint visible in the [stack activity tab](/docs/iac/concepts/stacks/#stack-activity), giving you full rollback capability. This is a common concern for teams currently storing state in S3 buckets.
 
 **Automatic state locking.** Pulumi Cloud prevents concurrent Terraform operations from corrupting state, without requiring you to configure DynamoDB tables or other external locking mechanisms.
 
@@ -48,7 +48,7 @@ When you store Terraform state in Pulumi Cloud, your Terraform-managed resources
 
 **Audit policies.** Run [audit (detective) policy packs](/docs/insights/policy/policy-groups/) against your Terraform-managed stacks, including Pulumi's [pre-built compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, PCI, and more. Pulumi Cloud performs a best-effort schema mapping from Terraform resource shapes to Pulumi provider equivalents, so existing policy packs work without modification in most cases.
 
-**Stack outputs and references.** Terraform root module outputs are automatically mapped to Pulumi [stack outputs](/docs/iac/concepts/stacks/#outputs), making them available via [stack references](/docs/iac/concepts/stacks/#stackreferences) and the [`pulumi-stacks` ESC provider](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/). This is useful for sharing foundational infrastructure like VPC IDs or DNS zones between Terraform and Pulumi stacks, and for incremental migrations where legacy infrastructure stays in Terraform while new stacks are written in Pulumi.
+**Stack outputs and references.** Terraform root module outputs are automatically mapped to Pulumi [stack outputs](/docs/iac/concepts/stacks/#outputs), making them available via [stack references](/docs/iac/concepts/stacks/#stackreferences) and the [`pulumi-stacks` ESC provider](/docs/esc/providers/iac/pulumi-stacks/). This is useful for sharing foundational infrastructure like VPC IDs or DNS zones between Terraform and Pulumi stacks, and for incremental migrations where legacy infrastructure stays in Terraform while new stacks are written in Pulumi.
 
 ## How it works
 

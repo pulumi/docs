@@ -31,7 +31,7 @@ social:
         That's because code review isn't just about the code, it's also about context: what's running, where the dependencies are, etc. We built Neo code reviews to bridge the gap.
 ---
 
-Today we're introducing [Pulumi Neo code reviews](/docs/ai/code-reviews/), now in public preview. Neo code reviews analyze pull request changes in conjunction with what Pulumi Cloud knows about your running infrastructure, providing both high-level and code-level feedback.
+Today we're introducing [Pulumi Neo code reviews](/docs/ai/neo/code-reviews/), now in public preview. Neo code reviews analyze pull request changes in conjunction with what Pulumi Cloud knows about your running infrastructure, providing both high-level and code-level feedback.
 
 <!--more-->
 

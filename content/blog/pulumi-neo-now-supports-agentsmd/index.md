@@ -74,7 +74,7 @@ When you point Neo at a repository, it reads any AGENTS.md file it finds and app
 
 If you have a monorepo, you can put AGENTS.md files in subdirectories too. Neo uses the nearest one to wherever it's working, so you can have general instructions at the root and more specific ones in subpackages.
 
-Your instructions in conversation always take precedence, so you can override the file when you need to. If you've also set up [Custom Instructions](/docs/ai/settings/#custom-instructions) at the organization level, Neo applies those first, then AGENTS.md on top.
+Your instructions in conversation always take precedence, so you can override the file when you need to. If you've also set up [Custom Instructions](/docs/ai/neo/settings/#custom-instructions) at the organization level, Neo applies those first, then AGENTS.md on top.
 
 ## Works with the tools you're already using
 
@@ -84,4 +84,4 @@ The format is managed by the Agentic AI Foundation under the Linux Foundation, a
 
 ## Get started
 
-Add an AGENTS.md file to your repository and Neo will start using it on your next task. For more on configuring Neo, including organization-wide Custom Instructions and Slash Commands, see the [Settings documentation](/docs/ai/settings/).
+Add an AGENTS.md file to your repository and Neo will start using it on your next task. For more on configuring Neo, including organization-wide Custom Instructions and Slash Commands, see the [Settings documentation](/docs/ai/neo/settings/).

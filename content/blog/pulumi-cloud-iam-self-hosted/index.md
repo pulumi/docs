@@ -50,9 +50,9 @@ For detailed information about Pulumi IAM capabilities, including step-by-step g
 
 Explore the IAM & RBAC documentation to get started:
 
-* [Overview](/docs/pulumi-cloud/access-management/rbac)
-* [Roles](/docs/pulumi-cloud/access-management/rbac/roles)
-* [Permissions](/docs/pulumi-cloud/access-management/rbac/permissions)
-* [Scopes](/docs/pulumi-cloud/access-management/rbac/scopes)
+* [Overview](/docs/administration/access-identity/rbac/)
+* [Roles](/docs/administration/access-identity/rbac/roles/)
+* [Permissions](/docs/administration/access-identity/rbac/permission-sets/)
+* [Scopes](/docs/administration/access-identity/rbac/scopes/)
 
 We're committed to bringing enterprise-grade security features to all Pulumi deployments, whether in the cloud or on-premises. If you have questions or feedback, please reach out through your account representative or our [GitHub repository](https://github.com/pulumi/pulumi-cloud-requests/issues).

@@ -16,7 +16,7 @@ At Pulumi, our goal is to offer the best Infrastructure as Code experience for a
 From the very beginning, we've believed that the best IaC experience is made possible by combining a great open source SDK and CLI with a great backend management service.
 This is why we built [Pulumi Cloud](/product/pulumi-service/), a rich management platform for your Infrastructure as Code, which includes a forever free option for individuals, a generous free tier for teams, and critical tools for enterprises to manage IaC at scale.
 
-Over the last few years, we've continued to expand the features of the Pulumi Service - with [Deployments](/blog/pulumi-deployments/),  [Audit Logs](/docs/pulumi-cloud/audit-logs/), [SAML SSO](/docs/pulumi-cloud/access-management/saml/) and [SCIM](/docs/pulumi-cloud/access-management/scim/), [Teams](/docs/pulumi-cloud/access-management/teams/), [Stack Transfers](/blog/stack-transfers/), [Favorites](/blog/new-improved-pulumi-service-console/), [Organization](/docs/pulumi-cloud/access-management/organization-access-tokens/) and [Team Access Tokens](/docs/pulumi-cloud/access-management/team-access-tokens/) and much more.
+Over the last few years, we've continued to expand the features of the Pulumi Service - with [Deployments](/blog/pulumi-deployments/),  [Audit Logs](/docs/administration/security-compliance/audit-logs/), [SAML SSO](/docs/administration/access-identity/saml/) and [SCIM](/docs/administration/access-identity/scim/), [Teams](/docs/pulumi-cloud/access-management/teams/), [Stack Transfers](/blog/stack-transfers/), [Favorites](/blog/new-improved-pulumi-service-console/), [Organization](/docs/administration/access-identity/access-tokens/) and [Team Access Tokens](/docs/administration/access-identity/access-tokens/) and much more.
 
 While the majority of Pulumi users do choose to use the Pulumi Service, we also know that there are good reasons why some organizations would prefer to use Pulumi IaC alone without the Pulumi Service.  And so we support and continue to invest in enabling a variety of additional [backends](/docs/iac/concepts/state-and-backends/) that allow the Pulumi CLI to be used with state stored in the local filesystem or in cloud storage like S3, Azure Blob Storage, or Google Cloud Storage.
 
@@ -34,10 +34,10 @@ Feel free to skip ahead to the next section if you're already familiar with this
 
 ### Projects and stacks
 
-Pulumi [*projects*](/docs/concepts/projects/) are a unit of organization.
+Pulumi [*projects*](/docs/iac/concepts/projects/) are a unit of organization.
 A project holds the code and configuration for your infrastructure,
 and can be used to deploy multiple stacks.
-A [*stack*](/docs/concepts/stack/) is a single,
+A [*stack*](/docs/iac/concepts/stacks/) is a single,
 isolated instance of your infrastructure.
 
 For example, you might have an "app" project for your application,

@@ -17,7 +17,7 @@ Today we are excited to announce Pulumi 2.0, the next major stage in our journey
 <!--more-->
 
 <div class="header-hero-actions mt-8 mb-4 text-center">
-    <a class="btn btn-lg mr-2" href="/docs/quickstart">
+    <a class="btn btn-lg mr-2" href="/docs/get-started/">
         Get Started
     </a>
     <a class="btn btn-lg btn-orange ml-2" href="/docs/">
@@ -45,15 +45,15 @@ The main theme of 2.0 is something we've taken to calling "superpowers." This is
 
 After [shipping 1.0 last year](/blog/pulumi-1-0/), we've been hard at work helping customers to succeed at their modern cloud projects. This has taken us beyond the basics to include:
 
-* **Provisioning**. All core language SDKs are now at parity, including all existing languages &mdash; [Node.js (JavaScript, TypeScript)](/docs/languages-sdks/javascript) and [Python](/docs/languages-sdks/python/) &mdash; as well as the new additions to the family &mdash; [.NET (C#, F#, etc)](/docs/languages-sdks/dotnet) and [Go](/docs/languages-sdks/go/). We've also significantly expanded upon the supported cloud resource providers in the [Registry](/registry/), totalling above three dozen, and rolled out [entirely new API documentation](/registry/).
+* **Provisioning**. All core language SDKs are now at parity, including all existing languages &mdash; [Node.js (JavaScript, TypeScript)](/docs/iac/languages-sdks/javascript/) and [Python](/docs/iac/languages-sdks/python/) &mdash; as well as the new additions to the family &mdash; [.NET (C#, F#, etc)](/docs/iac/languages-sdks/dotnet/) and [Go](/docs/iac/languages-sdks/go/). We've also significantly expanded upon the supported cloud resource providers in the [Registry](/registry/), totalling above three dozen, and rolled out [entirely new API documentation](/registry/).
 
-* **Delivery**. As we've worked with customers to go from development to production, we've added [more CI/CD integrations](/docs/iac/packages-and-automation/continuous-delivery/) as well as [environment management capabilities to help at scale](/blog/pulumi-service-improvements_02-2020/), such as [project and stack tagging and filtering](/docs/concepts/stack#stack-tags).
+* **Delivery**. As we've worked with customers to go from development to production, we've added [more CI/CD integrations](/docs/iac/operations/continuous-delivery/) as well as [environment management capabilities to help at scale](/blog/pulumi-service-improvements_02-2020/), such as [project and stack tagging and filtering](/docs/iac/concepts/stacks/#stack-tags).
 
-* **Architecture**. Customers are building their own platforms that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options](/docs/iac/adopting-pulumi/migrating-to-pulumi/) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
+* **Architecture**. Customers are building their own platforms that use abstraction and packaging mechanisms, including our component model, to codify their own best practices. [New coexistence and migration options](/docs/iac/guides/migration/) help to build larger systems out of many component parts, including those you haven't been able to port to Pulumi yet.
 
-* **Policy**. [Our new policy as code framework, CrossGuard](/docs/using-pulumi/crossguard/), lets you define policies using familiar languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs](/docs/using-pulumi/crossguard/configuration/) let you write a single policy and apply it flexibly across your projects.
+* **Policy**. [Our new policy as code framework, CrossGuard](/docs/insights/policy/), lets you define policies using familiar languages and then apply those policies at deployment-time. This prevents mistakes from ever getting out the door, including cost, security, and compliance. [Configurable policy packs](/docs/insights/policy/policy-packs/) let you write a single policy and apply it flexibly across your projects.
 
-* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways](/docs/iac/concepts/testing/). This includes [unit testing using familiar frameworks and new mocking capabilities](/docs/iac/concepts/testing/unit/) through [integration testing for short- and long-lived environments](/docs/iac/concepts/testing/integration/).
+* **Testing**. Many customers are using a spectrum of techniques to [validate their infrastructure in new ways](/docs/iac/concepts/testing/). This includes [unit testing using familiar frameworks and new mocking capabilities](/docs/iac/guides/testing/unit/) through [integration testing for short- and long-lived environments](/docs/iac/guides/testing/integration/).
 
 ## Welcome to the Team, Pulumipus!
 
@@ -67,10 +67,10 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release, and we thank you.
 
-To learn more, join us for our launch event next Wednesday, or just [download Pulumi and give it a try](/docs/get-started/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/migrating-2.0).
+To learn more, join us for our launch event next Wednesday, or just [download Pulumi and give it a try](/docs/get-started/). If you're upgrading from Pulumi 1.0, [please see our migration guide](/docs/install/).
 
 <div class="header-hero-actions mt-8 mb-8 text-center">
-    <a class="btn btn-lg mr-2" href="/docs/quickstart">
+    <a class="btn btn-lg mr-2" href="/docs/get-started/">
         Get Started
     </a>
     <a class="btn btn-lg btn-orange ml-2" href="/docs/">

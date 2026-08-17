@@ -365,7 +365,7 @@ You can use general-purpose languages to define your Kubernetes objects. These i
 - **Abstraction:** You can use the DRY principle in Pulumi. Define reusable functions, classes, and modules in your chosen programming language.
 - **Environment management:** You can manage multiple environments, like development, staging, and production, by defining config variables. This is a more structured way, without needing extra tools.
 - **Kubernetes Helm Support:** Pulumi supports [Helm charts](/registry/packages/kubernetes/api-docs/helm/) out of the box. You can manage Helm charts with Pulumi without needing extra tools or providers.
-- **Programmatic execution of Pulumi:** You can further blend Pulumi code into your projects using the [Pulumi Automation API](/docs/iac/packages-and-automation/automation-api/).
+- **Programmatic execution of Pulumi:** You can further blend Pulumi code into your projects using the [Pulumi Automation API](/docs/iac/concepts/automation-api/).
 
 #### Cons
 

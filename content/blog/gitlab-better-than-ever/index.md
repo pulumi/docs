@@ -70,13 +70,13 @@ This integration makes it easier than ever to standardize infrastructure pattern
 
 ## Coming Soon: Pulumi Deployments for GitLab
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments) will also soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
+[Pulumi Deployments](/docs/deployments/concepts/) will also soon support GitLab, enabling fully automated infrastructure provisioning directly from your GitLab pipelines. This integration will provide:
 
 - Fully managed compute for running Pulumi operations
 - Click to deploy self service workflows in the Pulumi Cloud UI
 - Rich new out of the box functionality like Time to Live Stacks, Drift Detection, Click to Deploy, Git Push to Deploy, Review Stacks and Scheduled Deployments.
 
-All this functionality is available today by specifying the raw git credentials, but we look forward to making the integration frictionless in the future. To learn more about Pulumi Deployments read our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments).
+All this functionality is available today by specifying the raw git credentials, but we look forward to making the integration frictionless in the future. To learn more about Pulumi Deployments read our [Pulumi Deployments documentation](/docs/deployments/concepts/).
 
 ## Getting Started
 
@@ -88,6 +88,6 @@ Ready to try these new GitLab integrations? Here's how to get started:
 
 ## Conclusion
 
-With these enhancements, Pulumi's GitLab integration is better than ever, providing a seamless experience for managing infrastructure as code within your GitLab workflows. Learn more in the [Pulumi GitLab documentation](/docs/iac/using-pulumi/continuous-delivery/gitlab-ci). We're committed to continuing to improve this integration based on your feedback.
+With these enhancements, Pulumi's GitLab integration is better than ever, providing a seamless experience for managing infrastructure as code within your GitLab workflows. Learn more in the [Pulumi GitLab documentation](/docs/iac/operations/continuous-delivery/gitlab-ci/). We're committed to continuing to improve this integration based on your feedback.
 
 Have questions or feedback? Join our [Community Slack](https://slack.pulumi.com/) to connect with the Pulumi team and other users, or open an issue on our [GitHub repository](https://github.com/pulumi/pulumi).

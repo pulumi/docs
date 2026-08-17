@@ -190,7 +190,7 @@ To do so, open the **Actions** menu, select the **Remediate drift** option, and 
 
 ## Automate drift detection
 
-In addition to manually triggering drift detection, you can automate this process by scheduling regular drift detection runs using [deployment schedules](/docs/pulumi-cloud/deployments/schedules/). This ensures that any unexpected changes in your infrastructure are promptly identified and remediated without manual intervention.
+In addition to manually triggering drift detection, you can automate this process by scheduling regular drift detection runs using [deployment schedules](/docs/deployments/concepts/schedules/). This ensures that any unexpected changes in your infrastructure are promptly identified and remediated without manual intervention.
 
 ## Clean up your resources
 

@@ -59,19 +59,19 @@ Pulumi AI Answers, launched late last year, has become a go-to repository, hosti
 
 ### Pulumi ESC Preview
 
-[Pulumi Environment, Secrets and Configuration (ESC)](/docs/esc/) is our answer to the growing needs of our customers to manage secret sprawl and streamline config management. Pulumi ESC allows teams to store and aggregate secrets and configuration from various sources into a composable collection called an environment. You can dynamically generate [OIDC credentials](/docs/esc/environments/configuring-oidc) from all three major cloud providers (AWS, Azure and GCP), and integrate with other [secrets managers](/docs/esc/get-started/retrieve-external-secrets/) like AWS Secrets Manager, Hashicorp Vault, Azure Vault and GCP Secret manager to pull secrets during runtime. Its hierarchical structure simplifies the composition and reuse of configurations, ensuring secure, auditable management and robust access control. With Pulumi ESC, the trend is clear: organizations are choosing its comprehensive approach for managing secrets and configurations, and they are here to stay. [Get started](/docs/esc/get-started/) with Pulumi ESC
+[Pulumi Environment, Secrets and Configuration (ESC)](/docs/esc/) is our answer to the growing needs of our customers to manage secret sprawl and streamline config management. Pulumi ESC allows teams to store and aggregate secrets and configuration from various sources into a composable collection called an environment. You can dynamically generate [OIDC credentials](/docs/esc/guides/configuring-oidc/) from all three major cloud providers (AWS, Azure and GCP), and integrate with other [secrets managers](/docs/esc/providers/secrets/) like AWS Secrets Manager, Hashicorp Vault, Azure Vault and GCP Secret manager to pull secrets during runtime. Its hierarchical structure simplifies the composition and reuse of configurations, ensuring secure, auditable management and robust access control. With Pulumi ESC, the trend is clear: organizations are choosing its comprehensive approach for managing secrets and configurations, and they are here to stay. [Get started](/docs/esc/get-started/) with Pulumi ESC
 
 ![Pulumi ESC Growth](pulumi-esc-growth.png)
 
 ### Developer Portal Gallery
 
-We launched a new template gallery in the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard), supercharging Platform teams to provision and distribute organization templates for their development teams to get up and running fast. Developers can generate Pulumi programs from these templates, commit and push code to GitHub and trigger deployment within the Pulumi Cloud console. The gallery supports three template types: Organization Templates for custom internal projects, Pulumi Templates authored by Pulumi to cover common architectural patterns and AI-Generated Templates created through Pulumi AI. For more information, check out the full [blog post](/blog/developer-portal-gallery/).
+We launched a new template gallery in the [New Project Wizard](/docs/idp/concepts/new-project-wizard/), supercharging Platform teams to provision and distribute organization templates for their development teams to get up and running fast. Developers can generate Pulumi programs from these templates, commit and push code to GitHub and trigger deployment within the Pulumi Cloud console. The gallery supports three template types: Organization Templates for custom internal projects, Pulumi Templates authored by Pulumi to cover common architectural patterns and AI-Generated Templates created through Pulumi AI. For more information, check out the full [blog post](/blog/developer-portal-gallery/).
 
 {{< video title="Pulumi new AI and deploy" src="https://www.pulumi.com/uploads/gallery.mp4" controls="false" autoplay="true" loop="true" >}}
 
 ### Deployments GA
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/iac/packages-and-automation/continuous-delivery/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) and multiple deployment triggers.
+[Pulumi Deployments](/docs/deployments/concepts/) was made [generally available](/blog/deployments-ga) with new improvements such as support for [GitHub Enterprise](/docs/integrations/version-control/github-app/#github-enterprise-server-support). Since launch, Pulumi Deployments has made infrastructure management at scale seamless for our customers, offering out of the box features such as [Review Stacks](/docs/deployments/concepts/review-stacks/) and multiple deployment triggers.
 
 ### Customer Managed Agents
 
@@ -99,12 +99,12 @@ The Pulumi Cloud stack update page now contains the historical resources in the 
 
 ### Import Improvements
 
-We have made several improvements to the [`pulumi import`](/docs/iac/adopting-pulumi/import/#pulumi-import-command) command to make it easier to [bulk import](/docs/iac/adopting-pulumi/import/#bulk-import-operations) resources into complex programs and [components](/docs/concepts/resources/components/). You can now:
+We have made several improvements to the [`pulumi import`](/docs/iac/guides/migration/import/#pulumi-import-command) command to make it easier to [bulk import](/docs/iac/guides/migration/import/#bulk-import-operations) resources into complex programs and [components](/docs/iac/concepts/components/). You can now:
 
 - Import one resource and then use that resource as the parent for another imported resource. Previously, parents could only refer to resources that already existed; i.e., you would have had to do two imports
 - Specify that a resource is a component to be used as the parent of other imported resources via a new `component` property in the import file
 - Specify parents by name without having to include the parent URN in the `nameTable`
-- Specify the [`logicalName`](/docs/concepts/resources/names/#logicalname) of resources
+- Specify the [`logicalName`](/docs/iac/concepts/resources/names/#logicalname) of resources
 - Run `pulumi preview --import-file <file>` on a program to generate a placeholder import file for every resource that would be created as part of the program. The generated file will contain all the names, types, and URNs already filled in, with blank `id` fields that need to be filled in. This is useful when you already have the structure of the resources for your program and only need to fill in the IDs of existing resources
 
 Additionally, the import system no longer renames resources to try and make unique names and no longer generates errors just because two resources of different types have the same name. The rules for uniqueness now match what's valid when writing a Pulumi program. The import system will generate an error if you try to import two resources that would end up with the same URN.

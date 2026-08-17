@@ -99,7 +99,7 @@ To learn more about building and working with custom templates, see [Custom Temp
 ## Pulumi Programming Model
 
 The Pulumi programming model defines the core concepts you will use when creating infrastructure as
-code programs using Pulumi. [Concepts](/docs/intro/concepts)
+code programs using Pulumi. [Concepts](/docs/iac/concepts/)
 describes these concepts with examples available in all supported languages, including Pulumi YAML.
 
 To learn how the Pulumi Programming Model is implemented for Pulumi YAML, refer

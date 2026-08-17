@@ -210,7 +210,7 @@ Observability rests on the three pillars: metrics, logs, and traces. The 2026 de
 
 - Use **app-of-apps** (Argo) or **Kustomization trees** (Flux) to bootstrap whole clusters from a single root.
 - Keep manifests, Helm values, and Pulumi stack references in Git, with environment promotion via PR.
-- Combine GitOps with [Pulumi Deployments](/docs/deployments/deployments/) so cloud infrastructure (VPCs, EKS clusters, IAM, DNS) and the workloads on top promote through the same review pipeline. See [improving GitOps with the Pulumi Operator](/blog/improving-gitops-with-pulumi-operator/) for a worked example.
+- Combine GitOps with [Pulumi Deployments](/docs/deployments/concepts/) so cloud infrastructure (VPCs, EKS clusters, IAM, DNS) and the workloads on top promote through the same review pipeline. See [improving GitOps with the Pulumi Operator](/blog/improving-gitops-with-pulumi-operator/) for a worked example.
 - Configure **automated rollback** on health-check failure, and **drift detection** alerts when someone edits live state.
 
 ## 10. How often should you upgrade Kubernetes?
@@ -321,7 +321,7 @@ Native YAML scales until your team doesn't. Once you have more than a handful of
 
 - **Real languages** — TypeScript, Python, Go, Java, .NET — for [type-safe, testable Kubernetes infrastructure](/docs/iac/languages-sdks/). Loops, conditionals, and unit tests instead of templating.
 - **One stack, full topology** — manage the cloud (EKS/GKE/AKS, VPC, IAM, DNS) and the workloads in it together. See [easily create and manage AWS EKS clusters with Pulumi](/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi/).
-- **Reusable components** — abstract platform patterns into [Pulumi packages](/docs/iac/using-pulumi/pulumi-packages/) other teams `import` instead of copy-pasting.
+- **Reusable components** — abstract platform patterns into [Pulumi packages](/docs/iac/concepts/packages/) other teams `import` instead of copy-pasting.
 - **GitOps reconciliation** — the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) reconciles a cluster to a Pulumi stack on every Git push.
 - **Policy-as-code** built in — [CrossGuard](/docs/insights/policy/) blocks non-compliant changes before `pulumi up`.
 - **Secrets done right** — [Pulumi ESC](/docs/esc/) federates secrets and configuration across stacks, environments, and Kubernetes clusters.

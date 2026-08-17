@@ -107,7 +107,7 @@ $ pulumi new aws-yaml
 
 {{% /choosable %}}
 
-Next, to make our infrastructure setup easy to vary between environments, the code leverages [Pulumi's "configuration" system](/docs/concepts/config) --- not to be confused with configuration management tools --- which just allows you to vary provisioning settings for each stack in case your environments have different needs. For instance, perhaps you have different SSH keys, or want larger instance sizes, in development versus production:
+Next, to make our infrastructure setup easy to vary between environments, the code leverages [Pulumi's "configuration" system](/docs/iac/concepts/config/) --- not to be confused with configuration management tools --- which just allows you to vary provisioning settings for each stack in case your environments have different needs. For instance, perhaps you have different SSH keys, or want larger instance sizes, in development versus production:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 
@@ -361,7 +361,7 @@ variables:
 
 {{% /choosable %}}
 
-Finally, you'll read in the contents of the public and private key files so they're ready to use in the infrastructure declarations that are coming soon. Notice that this code uses [Pulumi's built-in secrets feature](/docs/concepts/secrets) to ensure the private key remains encrypted at all times:
+Finally, you'll read in the contents of the public and private key files so they're ready to use in the infrastructure declarations that are coming soon. Notice that this code uses [Pulumi's built-in secrets feature](/docs/iac/concepts/secrets/) to ensure the private key remains encrypted at all times:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 

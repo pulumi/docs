@@ -24,7 +24,7 @@ aliases:
     - /blog/pulumi-now-supports-azure-devops-and-gitlab/
 ---
 
-Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/version-control/github-app/), [GitHub Enterprise Server](/docs/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/). Every team gets the same [deployment pipelines](/docs/deployments/deployments/), [PR previews](/docs/deployments/deployments/review-stacks/), and [AI-powered change summaries](/docs/ai/) regardless of where their code lives.
+Your version control provider shouldn't limit your infrastructure workflows. Pulumi Cloud now works with [GitHub](/docs/integrations/version-control/github-app/), [GitHub Enterprise Server](/docs/integrations/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/). Every team gets the same [deployment pipelines](/docs/deployments/concepts/), [PR previews](/docs/deployments/concepts/review-stacks/), and [AI-powered change summaries](/docs/ai/) regardless of where their code lives.
 
 <!--more-->
 
@@ -60,7 +60,7 @@ Ask Neo to make infrastructure changes and it opens pull requests directly again
 
 ### Detect and fix drift
 
-Schedule [drift detection](/docs/pulumi-cloud/deployments/drift/) to catch out-of-band changes automatically. When someone modifies infrastructure outside of your Pulumi programs, drift detection flags the difference so your team can remediate before it causes issues.
+Schedule [drift detection](/docs/deployments/concepts/drift/) to catch out-of-band changes automatically. When someone modifies infrastructure outside of your Pulumi programs, drift detection flags the difference so your team can remediate before it causes issues.
 
 ### Secure authentication
 
@@ -78,6 +78,6 @@ The new project wizard discovers your organizations, repositories, and branches 
 1. Authorize with your VCS provider.
 1. Deploy infrastructure with first-class workflows.
 
-For setup details, see the docs for [GitHub](/docs/version-control/github-app/), [GitHub Enterprise Server](/docs/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/version-control/azure-devops-integration/), and [GitLab](/docs/version-control/gitlab/).
+For setup details, see the docs for [GitHub](/docs/integrations/version-control/github-app/), [GitHub Enterprise Server](/docs/integrations/version-control/github-app/#github-enterprise-server-support), [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), and [GitLab](/docs/integrations/version-control/gitlab/).
 
 {{< blog/cta-button "Connect your VCS" "https://app.pulumi.com/signin" "_blank" >}}

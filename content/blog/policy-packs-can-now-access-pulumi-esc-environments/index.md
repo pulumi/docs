@@ -46,7 +46,7 @@ Until now, these values had to be hardcoded in your policy group configuration o
 
 ## What's new
 
-Policy packs can now reference ESC environments, just like [stacks already do](/docs/esc/environments/syntax/reserved-properties/pulumi-config/). When you attach an ESC environment to a policy pack in a policy group, the values from that environment are available to your policies at runtime — whether you're running preventative or audit policies.
+Policy packs can now reference ESC environments, just like [stacks already do](/docs/esc/concepts/outputs/). When you attach an ESC environment to a policy pack in a policy group, the values from that environment are available to your policies at runtime — whether you're running preventative or audit policies.
 
 This means your policy packs can use ESC for:
 
@@ -75,9 +75,9 @@ values:
       apiToken: ${compliance.apiToken}
 ```
 
-The [`policyConfig`](/docs/esc/environments/syntax/reserved-properties/policy-config/) property works just like [`pulumiConfig`](/docs/esc/environments/syntax/reserved-properties/pulumi-config/) does for stacks. Values nested under each policy name are made available as configuration to that policy at runtime. Secrets remain encrypted and are only decrypted when the environment is resolved.
+The [`policyConfig`](/docs/esc/concepts/outputs/) property works just like [`pulumiConfig`](/docs/esc/concepts/outputs/) does for stacks. Values nested under each policy name are made available as configuration to that policy at runtime. Secrets remain encrypted and are only decrypted when the environment is resolved.
 
-You can also use the `environmentVariables` property to inject values as environment variables into the policy runtime, following the same pattern as [stack environment variables](/docs/esc/environments/syntax/reserved-properties/environment-variables/).
+You can also use the `environmentVariables` property to inject values as environment variables into the policy runtime, following the same pattern as [stack environment variables](/docs/esc/concepts/outputs/).
 
 ## Example: compliance API validation
 
@@ -96,13 +96,13 @@ Consider a policy that validates every new resource against an external complian
 
 To start using ESC environments with your policy packs:
 
-1. [Create an ESC environment](/docs/esc/environments/working-with-environments/) with your policy configuration and secrets
+1. [Create an ESC environment](/docs/esc/concepts/environments/) with your policy configuration and secrets
 1. Attach the environment to a policy pack in your policy group through the Pulumi Cloud console
 1. Update your policies to read from the configuration values provided by the environment
 
 To learn more:
 
-- [`policyConfig` reference](/docs/esc/environments/syntax/reserved-properties/policy-config/)
+- [`policyConfig` reference](/docs/esc/concepts/outputs/)
 - [Pulumi ESC documentation](/docs/esc/)
 - [Policy packs documentation](/docs/insights/policy/policy-packs/)
 - [Get started with Pulumi ESC](/docs/esc/get-started/)

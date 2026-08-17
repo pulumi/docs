@@ -19,7 +19,7 @@ Note: This post discusses Pulumi Copilot, which Pulumi Neo has replaced. [Learn 
 {{< /notes >}}
 
 {{% notes type="info" %}}
-You can now get Insights capabilities on all your cloud infrastructure, even resources not managed by Pulumi IaC. [Get started with Insights 2.0](/docs/insights/get-started/)
+You can now get Insights capabilities on all your cloud infrastructure, even resources not managed by Pulumi IaC. [Get started with Insights 2.0](/docs/insights/discovery/get-started/)
 
 There are new intelligent cloud management capabilities available in **Pulumi Copilot**. [Learn More](/blog/pulumi-copilot)
 {{% /notes %}}
@@ -107,7 +107,7 @@ For example, here is a dashboard in Metabase, created by combining Pulumi resour
 
 ![Analytics with Pulumi, Snowflake and Metabase](analytics-dashboard.png)
 
-Pulumi resource Data Export is available today both interactively in the console and via REST API . Learn more about these features in the [Pulumi Data Export](/docs/pulumi-cloud/insights/export/) documentation.
+Pulumi resource Data Export is available today both interactively in the console and via REST API . Learn more about these features in the [Pulumi Data Export](/docs/insights/discovery/data-export/) documentation.
 
 ## Conclusion
 
@@ -118,5 +118,5 @@ To get started with Pulumi Insights today:
 * Sign up or log in to [Pulumi Cloud](https://app.pulumi.com/signin)
 * Try out [Pulumi Neo](/product/neo/)
 * Watch the videos for [Pulumi Insights](https://www.youtube.com/watch?v=MTHGyed3Ef8), [Pulumi AI](https://youtu.be/xdTUEStC8I0) and [Pulumi Search](https://youtu.be/e1u-P9bnEA4)
-* Check out the [Pulumi Insights Documentation](/docs/pulumi-cloud/insights/)
+* Check out the [Pulumi Insights Documentation](/docs/insights/discovery/)
 * Join the [Pulumi Community Slack](https://slack.pulumi.com/)

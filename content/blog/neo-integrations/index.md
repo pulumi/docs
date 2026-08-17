@@ -39,7 +39,7 @@ social:
 
 [Pulumi Neo](/product/neo/) already understands your infrastructure: your code, your stacks, your state. Today we're launching new capabilities that extend Neo's reach in two directions: into the third-party systems your team uses to plan and observe, and out to the cloud CLIs that actually drive your infrastructure.
 
-The first half is MCP integrations: connections to [Atlassian](/docs/ai/integrations/mcp/#atlassian-jira-and-confluence), [Datadog](/docs/ai/integrations/mcp/#datadog), [Honeycomb](/docs/ai/integrations/mcp/#honeycomb), [Linear](/docs/ai/integrations/mcp/#linear), [PagerDuty](/docs/ai/integrations/mcp/#pagerduty), and [Supabase](/docs/ai/integrations/mcp/#supabase) that show up as tools Neo can call during a [task](/docs/ai/tasks/). The second half is CLI integrations: scopable access to [`aws`](/docs/ai/integrations/cli/#supported-clis), [`gcloud`](/docs/ai/integrations/cli/#supported-clis), [`az`](/docs/ai/integrations/cli/#supported-clis), and [`kubectl`](/docs/ai/integrations/cli/#supported-clis). Both are configured once at the org level and available to every Neo task in the organization.
+The first half is MCP integrations: connections to [Atlassian](/docs/ai/neo/integrations/mcp/#atlassian-jira-and-confluence), [Datadog](/docs/ai/neo/integrations/mcp/#datadog), [Honeycomb](/docs/ai/neo/integrations/mcp/#honeycomb), [Linear](/docs/ai/neo/integrations/mcp/#linear), [PagerDuty](/docs/ai/neo/integrations/mcp/#pagerduty), and [Supabase](/docs/ai/neo/integrations/mcp/#supabase) that show up as tools Neo can call during a [task](/docs/ai/neo/tasks/). The second half is CLI integrations: scopable access to [`aws`](/docs/ai/neo/integrations/cli/#supported-clis), [`gcloud`](/docs/ai/neo/integrations/cli/#supported-clis), [`az`](/docs/ai/neo/integrations/cli/#supported-clis), and [`kubectl`](/docs/ai/neo/integrations/cli/#supported-clis). Both are configured once at the org level and available to every Neo task in the organization.
 
 <!--more-->
 
@@ -59,7 +59,7 @@ With three integrations and one conversation, the change is reviewed, shipped, a
 
 ## MCP integrations: context from your existing tools
 
-The launch catalog covers six services that show up most often in infrastructure investigations: [Atlassian](/docs/ai/integrations/mcp/#atlassian-jira-and-confluence) for Jira issues and Confluence runbooks, [Datadog](/docs/ai/integrations/mcp/#datadog) for metrics and logs, [Honeycomb](/docs/ai/integrations/mcp/#honeycomb) for traces, [Linear](/docs/ai/integrations/mcp/#linear) for issue tracking, [PagerDuty](/docs/ai/integrations/mcp/#pagerduty) for incidents and on-call schedules, and [Supabase](/docs/ai/integrations/mcp/#supabase) for managed database changes. Each connects Neo to a remote MCP server hosted by the provider, so the agent has access to the full set of tools the vendor chooses to expose.
+The launch catalog covers six services that show up most often in infrastructure investigations: [Atlassian](/docs/ai/neo/integrations/mcp/#atlassian-jira-and-confluence) for Jira issues and Confluence runbooks, [Datadog](/docs/ai/neo/integrations/mcp/#datadog) for metrics and logs, [Honeycomb](/docs/ai/neo/integrations/mcp/#honeycomb) for traces, [Linear](/docs/ai/neo/integrations/mcp/#linear) for issue tracking, [PagerDuty](/docs/ai/neo/integrations/mcp/#pagerduty) for incidents and on-call schedules, and [Supabase](/docs/ai/neo/integrations/mcp/#supabase) for managed database changes. Each connects Neo to a remote MCP server hosted by the provider, so the agent has access to the full set of tools the vendor chooses to expose.
 
 Integrations can be enabled by organization administrators on the Neo Settings page. Once configured, they're available to every Neo task in your organization.
 
@@ -69,7 +69,7 @@ Integrations can be enabled by organization administrators on the Neo Settings p
 
 CLI integrations cover what MCP doesn't reach: live cloud insights. With AWS, GCP, Azure, or Kubernetes connected, Neo can check live database utilization, look up the current state of a running service, verify a service quota before scaling, or reach into resources that aren't managed by any Pulumi stack.
 
-An admin enables a CLI integration the same way as an MCP one, from your org's Neo settings. Each integration gets a name your team chooses, like `production-aws` or `staging-gcloud`, and tasks reference that name to tell Neo which environment to reach into. You can connect multiple instances of the same CLI (for example, `production-aws` and `staging-aws`) so Neo can investigate staging without touching production. Credentials are backed by [Pulumi ESC](/docs/esc/) environments your org owns; the [CLI integrations docs](/docs/ai/integrations/cli/) walk through setup.
+An admin enables a CLI integration the same way as an MCP one, from your org's Neo settings. Each integration gets a name your team chooses, like `production-aws` or `staging-gcloud`, and tasks reference that name to tell Neo which environment to reach into. You can connect multiple instances of the same CLI (for example, `production-aws` and `staging-aws`) so Neo can investigate staging without touching production. Credentials are backed by [Pulumi ESC](/docs/esc/) environments your org owns; the [CLI integrations docs](/docs/ai/neo/integrations/cli/) walk through setup.
 
 ![Neo Settings CLI tools tab with two connected AWS and Kubernetes integrations and four available CLI types: AWS, Google Cloud, Azure, and Kubernetes](cli-integrations.png)
 
@@ -83,7 +83,7 @@ Failures behave the same way for both. If an integration can't be reached, Neo l
 
 ## Try it out
 
-Both MCP and CLI integrations are available now for Neo-enabled organizations. Open your org's Neo settings, connect the MCP server or CLI of your choice, and let Neo do the next investigation against the tools you already use. The [MCP integrations docs](/docs/ai/integrations/mcp/) and [CLI integrations docs](/docs/ai/integrations/cli/) walk through credential setup for each one, and the [Neo integrations hub](/docs/ai/integrations/) ties it all together.
+Both MCP and CLI integrations are available now for Neo-enabled organizations. Open your org's Neo settings, connect the MCP server or CLI of your choice, and let Neo do the next investigation against the tools you already use. The [MCP integrations docs](/docs/ai/neo/integrations/mcp/) and [CLI integrations docs](/docs/ai/neo/integrations/cli/) walk through credential setup for each one, and the [Neo integrations hub](/docs/ai/neo/integrations/) ties it all together.
 
 Today's launch is part of a [bigger story](/releases/agentic-infrastructure-era/). Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, and the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo's new home in the terminal.
 

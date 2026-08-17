@@ -90,7 +90,7 @@ Before we start, make sure you have the following prerequisites:
 - A [Pulumi Cloud](https://app.pulumi.com/signup) account. If you don't have one, you can create one for free.
 - A Kubernetes cluster (I will be using a local [KinD](https://kind.sigs.k8s.io/) cluster, but you can use any
   Kubernetes cluster)
-- [Pulumi CLI](/docs/iac/download-install/) installed. You can use the
+- [Pulumi CLI](/docs/install/) installed. You can use the
   `pulumi env` commands to manage secrets and configurations.
 - kubectl [CLI installed](https://kubernetes.io/docs/tasks/tools/) for some debugging
 

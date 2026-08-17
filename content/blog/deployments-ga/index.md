@@ -39,7 +39,7 @@ category: product
 
 ---
 
-We are thrilled to announce the general availability (GA) of [Pulumi Deployments](/docs/pulumi-cloud/deployments), a fully managed platform designed to simplify and accelerate your journey from code to cloud. Whether you're an organization just beginning your cloud journey or a platform team supporting thousands of engineers, Pulumi Deployments is your go-to solution for managing infrastructure at scale. With the GA of Pulumi Deployments comes a suite of feature improvements since launch and a pricing model starting November 1st.
+We are thrilled to announce the general availability (GA) of [Pulumi Deployments](/docs/deployments/concepts/), a fully managed platform designed to simplify and accelerate your journey from code to cloud. Whether you're an organization just beginning your cloud journey or a platform team supporting thousands of engineers, Pulumi Deployments is your go-to solution for managing infrastructure at scale. With the GA of Pulumi Deployments comes a suite of feature improvements since launch and a pricing model starting November 1st.
 
 <!--more-->
 
@@ -83,7 +83,7 @@ To sign up for the Customer-managed Deployment Agents preview, submit [the form]
 
 We've expanded our support to include GitHub Enterprise, making it easier for more organizations who use GitHub Enterprise to integrate Pulumi Deployments into their existing infrastructure. The GitHub Enterprise integration is available on the Business Critical edition.
 
-To learn more about setting up Deployments with GitHub Enterprise [read the documentation](/docs/iac/packages-and-automation/continuous-delivery/github-app/#github-enterprise-server-support).
+To learn more about setting up Deployments with GitHub Enterprise [read the documentation](/docs/integrations/version-control/github-app/#github-enterprise-server-support).
 
 ![GitHub Enterprise option in Pulumi Cloud](gh-ent.png)
 
@@ -105,6 +105,6 @@ We also added a Deployments card to the Dashboard. This allows you to see at a g
 
 Pulumi Deployments is now generally available for all. We invite you to experience this next chapter in cloud infrastructure management.
 
-To learn more about Pulumi Deployments or to get started, visit our [official documentation](/docs/pulumi-cloud/deployments) or [contact our sales team](/contact/?form=sales) for a personalized demo.
+To learn more about Pulumi Deployments or to get started, visit our [official documentation](/docs/deployments/concepts/) or [contact our sales team](/contact/?form=sales) for a personalized demo.
 
 We can't wait for you to join us on this exciting journey. Happy building! 🚀🚀🚀

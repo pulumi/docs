@@ -14,7 +14,7 @@ category: product
 
 ---
 
-Pulumi Cloud now supports Bitbucket Cloud as a first-class VCS integration, joining [GitHub](/docs/version-control/github-app/), [GitLab](/docs/version-control/gitlab/), and [Azure DevOps](/docs/version-control/azure-devops-integration/). Connect your Bitbucket workspace to deploy infrastructure on every push, preview changes on pull requests, spin up ephemeral review stacks, and get AI-powered change summaries — all without an external CI/CD pipeline.
+Pulumi Cloud now supports Bitbucket Cloud as a first-class VCS integration, joining [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/). Connect your Bitbucket workspace to deploy infrastructure on every push, preview changes on pull requests, spin up ephemeral review stacks, and get AI-powered change summaries — all without an external CI/CD pipeline.
 
 <!--more-->
 
@@ -43,6 +43,6 @@ The [new project wizard](/docs/idp/concepts/new-project-wizard/) discovers your 
 1. Authorize with Bitbucket using personal OAuth or a workspace token.
 1. Deploy infrastructure with first-class workflows.
 
-For full setup details, see the [Bitbucket integration docs](/docs/version-control/bitbucket/).
+For full setup details, see the [Bitbucket integration docs](/docs/integrations/version-control/bitbucket/).
 
 {{< blog/cta-button "Connect your Bitbucket workspace" "https://app.pulumi.com/signin" "_blank" >}}

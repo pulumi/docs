@@ -13,10 +13,10 @@ Many organizations have years of infrastructure built and managed with Terraform
 Outputs such as VPC IDs, subnet lists, database endpoints, and cluster names are the connective tissue between infrastructure layers.
 Getting those values into other tools and workflows often means manual copy-paste, wrapper scripts, or brittle glue code.
 
-The [`terraform-state` provider](/docs/esc/integrations/infrastructure/terraform/terraform-state/) for Pulumi ESC helps bridge that gap.
+The [`terraform-state` provider](/docs/esc/providers/iac/terraform-state/) for Pulumi ESC helps bridge that gap.
 It reads outputs directly from your Terraform state files and makes them available as first-class values in your ESC environments — no scripts, no duplication, no drift.
 Any output marked as `sensitive` in your Terraform state is automatically treated as a secret in ESC.
-If you've used [`pulumi-stacks`](/docs/esc/integrations/infrastructure/pulumi-iac/pulumi-stacks/) to read outputs from Pulumi stacks, this is the same idea for Terraform.
+If you've used [`pulumi-stacks`](/docs/esc/providers/iac/pulumi-stacks/) to read outputs from Pulumi stacks, this is the same idea for Terraform.
 
 ## How it works
 
@@ -69,6 +69,6 @@ You can point it at any Terraform Cloud-compatible backend by setting the option
 
 ## Get started
 
-Check out the full [`terraform-state` provider documentation](/docs/esc/integrations/infrastructure/terraform/terraform-state/) for the complete reference.
+Check out the full [`terraform-state` provider documentation](/docs/esc/providers/iac/terraform-state/) for the complete reference.
 
 [^1]: You can also consume Terraform outputs directly in a Pulumi program with the [Pulumi Terraform provider](/registry/packages/terraform/).

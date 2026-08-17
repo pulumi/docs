@@ -24,7 +24,7 @@ We are excited to announce a new feature for Pulumi Copilot: System Prompts. Thi
 
 <!--more-->
 
-[Pulumi Copilot](/docs/pulumi-cloud/copilot/) is a conversational chat interface integrated throughout Pulumi Cloud, enabling users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud. [We released Pulumi Copilot in June this year](/blog/pulumi-copilot/), and have seen remarkable uptake across our customer base. We are excited to be announcing enhancements on the Pulumi Copilot experience- keep an eye out for more to come in the near future.
+[Pulumi Copilot](/product/neo/) is a conversational chat interface integrated throughout Pulumi Cloud, enabling users to quickly accomplish a variety of cloud infrastructure management tasks by leveraging the power of large language models plus the rich capabilities of Pulumi Cloud. [We released Pulumi Copilot in June this year](/blog/pulumi-copilot/), and have seen remarkable uptake across our customer base. We are excited to be announcing enhancements on the Pulumi Copilot experience- keep an eye out for more to come in the near future.
 
 System prompts allow organization administrators to set default preferences and guidelines for Pulumi Copilot. By configuring these prompts, you can tailor Pulumi Copilot's behavior to better suit your team's needs and policies. Here are some ways you might use organization system prompts:
 
@@ -43,7 +43,7 @@ Setting up system prompts is straightforward:
 2. Under the settings menu, select "Access Management."
 3. In the Copilot section, you'll find the option to set your system prompts.
 
-Though the system prompt supports 10k characters of context, we recommend keeping it concise to ensure optimal performance. See more information on setting system prompts [in our Pulumi Copilot documentation](/docs/pulumi-cloud/copilot/).
+Though the system prompt supports 10k characters of context, we recommend keeping it concise to ensure optimal performance. See more information on setting system prompts [in our Pulumi Copilot documentation](/product/neo/).
 
 ## Wrapping it up
 

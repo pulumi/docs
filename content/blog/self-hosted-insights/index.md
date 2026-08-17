@@ -14,7 +14,7 @@ tags:
 category: product
 ---
 
-[Pulumi Insights](/docs/insights/) gives you visibility and governance across your entire cloud footprint: **discovery scans** catalog every resource in your cloud accounts, and **policy evaluations** continuously enforce compliance against those resources. Until now, Insights workflows ran exclusively on Pulumi-hosted infrastructure. That works well for many teams, but enterprises with strict data residency requirements, private network constraints, or regulatory obligations need to run this work in their own environments. Today, Pulumi Insights supports [customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents/) for both SaaS Pulumi Cloud and [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) installations.
+[Pulumi Insights](/docs/insights/) gives you visibility and governance across your entire cloud footprint: **discovery scans** catalog every resource in your cloud accounts, and **policy evaluations** continuously enforce compliance against those resources. Until now, Insights workflows ran exclusively on Pulumi-hosted infrastructure. That works well for many teams, but enterprises with strict data residency requirements, private network constraints, or regulatory obligations need to run this work in their own environments. Today, Pulumi Insights supports [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) for both SaaS Pulumi Cloud and [self-hosted Pulumi Cloud](/docs/administration/self-hosting/) installations.
 
 <!--more-->
 
@@ -30,7 +30,7 @@ This enables you to map out your cloud estate, evaluate compliance, and then rem
 
 ## Why self-hosted?
 
-Running Insights on your own infrastructure with [customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents/) gives you:
+Running Insights on your own infrastructure with [customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) gives you:
 
 - **Data residency**: Scan execution and policy evaluation run entirely within your private network.
 - **Private infrastructure access**: Scan resources in VPCs and environments that are not accessible from the public internet.
@@ -52,6 +52,6 @@ If your team already uses customer-managed workflow runners for [Pulumi Deployme
 Self-hosted Insights is available on the Business Critical edition of Pulumi Cloud. To learn more or get set up:
 
 - [Self-hosted Insights documentation](/docs/insights/self-hosted/) — configuration and setup for discovery scans and audit policy evaluations on your own infrastructure
-- [Customer-managed workflow runners](/docs/deployments/deployments/customer-managed-agents/) — runner installation, configuration reference, and pool management
+- [Customer-managed workflow runners](/docs/deployments/concepts/customer-managed-runners/) — runner installation, configuration reference, and pool management
 - [Insights & Governance overview](/docs/insights/) — full documentation for discovery and policy capabilities
 - [Contact sales](/contact/?form=sales) to enable self-hosted Insights for your organization

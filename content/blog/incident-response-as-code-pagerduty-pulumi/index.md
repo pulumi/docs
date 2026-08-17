@@ -61,7 +61,7 @@ Everything on both sides of that diagram is one TypeScript program. If you would
 
 Before getting started, ensure you have:
 
-- [Pulumi CLI](/docs/iac/download-install/) installed and configured
+- [Pulumi CLI](/docs/install/) installed and configured
 - A [Pulumi Cloud account](https://app.pulumi.com/signup)
 - A PagerDuty account with admin access; a [free trial](https://www.pagerduty.com/sign-up/) works fine
 - An [AWS](https://aws.amazon.com/) account for the alarm wiring in the second half

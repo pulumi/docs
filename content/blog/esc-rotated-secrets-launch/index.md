@@ -27,7 +27,7 @@ Traditional secrets management often relies on static, long-lived credentials. T
 - **Inconsistent practices**: Ad-hoc scripts and manual procedures often lead to inconsistent rotation policies, making it difficult to enforce security best practices across the organization.
 - **Compliance headaches**: Many compliance regulations (like SOC 2, GDPR, and HIPAA) require regular secret rotation. Manual processes make it difficult to demonstrate compliance and can lead to costly penalties.
 
-These challenges are amplified in complex, multi-cloud, hybrid, or on-premises environments where secrets are distributed across numerous systems. While Pulumi ESC's [Dynamic Secrets](/docs/esc/integrations/dynamic-login-credentials/) addresses all of these challenges and makes secret management much easier, static secrets remain a reality for many organizations. Legacy applications, compliance mandates, or integration limitations often prevent a full switch to dynamic credentials. In such cases, Rotated Secrets provide a second-best option—automating credential rotation to minimize risk while integrating seamlessly with existing workflows.
+These challenges are amplified in complex, multi-cloud, hybrid, or on-premises environments where secrets are distributed across numerous systems. While Pulumi ESC's [Dynamic Secrets](/docs/esc/providers/login/) addresses all of these challenges and makes secret management much easier, static secrets remain a reality for many organizations. Legacy applications, compliance mandates, or integration limitations often prevent a full switch to dynamic credentials. In such cases, Rotated Secrets provide a second-best option—automating credential rotation to minimize risk while integrating seamlessly with existing workflows.
 
 ## Introducing ESC Rotated Secrets
 
@@ -35,11 +35,11 @@ Pulumi ESC's new Rotated Secrets feature provides an elegant solution to the cha
 
 - **Automated rotation schedules**: Define flexible rotation schedules tailored to your security and operational requirements. This eliminates manual effort and ensures consistent, frequent rotations.
 - **On-demand rotation**: Need to rotate a secret immediately due to a suspected breach or policy change? ESC allows you to trigger rotations on demand, giving you immediate control.
-- **Seamless integration with ESC Environments**: Rotated secrets are seamlessly integrated into your existing ESC environment definitions. This allows you to leverage the power of ESC's [composability](/docs/esc/environments/imports/), allowing you to manage rotated secrets alongside your other configuration values.
+- **Seamless integration with ESC Environments**: Rotated secrets are seamlessly integrated into your existing ESC environment definitions. This allows you to leverage the power of ESC's [composability](/docs/esc/concepts/imports/), allowing you to manage rotated secrets alongside your other configuration values.
 - **Two-secret strategy**: ESC Rotated secrets uses a two-secret strategy in which two secrets are active and valid at any point in time. This is especially useful when multiple instances of an application share a credential but not all instances pull in the latest credential at the same time, allowing you to rotate a secret without worrying about some instances being unavailable due to invalid credentials.
 - **Auditing and tracking**: Gain complete visibility into credential usage, including a full history of generated credentials, active credentials, and the principals accessing them. This enhances governance and simplifies compliance.
 - **Admin and creator control**: Admins and creators/writers of rotated secrets can configure rotations using privileged user credentials and keep those credentials private while ensuring the consumers can still consume the resulting rotated secrets. This provides a clear separation of concern for administration and individual usage.
-- **Configure [webhooks](/docs/esc/environments/webhooks/) for automation**: Notify teams, trigger custom workflows, or trigger a [Pulumi Deployment](/docs/pulumi-cloud/deployments/) to update your [IaC stacks](/docs/iac/concepts/stacks/) whenever rotations occur, ensuring dependent teams and systems are updated on a timely basis
+- **Configure [webhooks](/docs/esc/concepts/webhooks/) for automation**: Notify teams, trigger custom workflows, or trigger a [Pulumi Deployment](/docs/deployments/concepts/) to update your [IaC stacks](/docs/iac/concepts/stacks/) whenever rotations occur, ensuring dependent teams and systems are updated on a timely basis
 
 With today’s launch, we support AWS IAM user credential rotation with many more databases and cloud integrations on the way. Upvote on our [GitHub issues](https://github.com/pulumi/esc/issues?q=is%3Aissue%20state%3Aopen%20rotated%20secrets) to get support for new integrations.
 
@@ -53,7 +53,7 @@ Below are the steps to configure [AWS IAM user](https://docs.aws.amazon.com/IAM/
 
 ### 2. Create a new environment with managing user credentials
 
-In the example environment `credentials/aws-creds` below, we use the ESC's [aws-login provider](/docs/esc/integrations/dynamic-login-credentials/aws-login/) using OIDC. This credential was configured with the privileged access to be able to rotate the IAM user credentials.
+In the example environment `credentials/aws-creds` below, we use the ESC's [aws-login provider](/docs/esc/providers/login/aws-login/) using OIDC. This credential was configured with the privileged access to be able to rotate the IAM user credentials.
 
 The minimal permissions the managing credential requires are IAM List, Create, and DeleteAccessKeys over the IAM user you created.
 
@@ -101,7 +101,7 @@ values:
 
 ### 4. Test the setup with a manual rotation
 
-In the Environment Editor screen,  open the triple-dot menu and select Rotate Secrets. Alternatively, you can perform the rotation from the ‘secrets rotation’ tab or use the rotate CLI command. Every rotation creates a new [revision](/docs/esc/environments/versioning/).
+In the Environment Editor screen,  open the triple-dot menu and select Rotate Secrets. Alternatively, you can perform the rotation from the ‘secrets rotation’ tab or use the rotate CLI command. Every rotation creates a new [revision](/docs/esc/concepts/versioning/).
 
 If you did not provide current or precious credentials in step 3, rotation will generate new credentials automatically.
 
@@ -117,7 +117,7 @@ Now that you've correctly configured your rotated secrets, set up an automated r
 
 ## Rotated Secrets vs. Dynamic Credentials: Choosing the right tool
 
-Pulumi ESC offers both [Dynamic Secrets](/docs/esc/integrations/dynamic-login-credentials/) and Rotated Secrets. While both enhance security, they serve different purposes:
+Pulumi ESC offers both [Dynamic Secrets](/docs/esc/providers/login/) and Rotated Secrets. While both enhance security, they serve different purposes:
 
 - **Dynamic secrets**: These are short-lived, ephemeral credentials with a Time-To-Live (TTL) typically ranging from 1 to 8 hours. A new set of credentials is generated every time the environment is opened. This is ideal for minimizing the impact of compromised credentials, as they quickly become invalid.
 - **Rotated secrets**: These are longer-lived credentials, potentially lasting for days, weeks, or even months. The same latest credential is returned every time the environment is opened until the next scheduled rotation occurs. This provides stability and predictability for applications that need consistent credentials over a longer period.
@@ -145,4 +145,4 @@ Upvote integrations [here](https://github.com/pulumi/esc/issues?q=is%3Aissue%20s
 
 Pulumi ESC's Rotated Secrets feature represents a significant advancement in modern secrets management. By automating a traditionally manual and error-prone process, ESC reduces operational risks, strengthens your security posture, and helps you achieve compliance – all without slowing down development.
 
-We encourage you to explore the [docs](/docs/esc/environments/rotation) and try out Rotated Secrets. Share any feedback or open new issues in our [GitHub repository](https://github.com/pulumi/esc/issues). We're excited to see how you use this powerful new feature to build more secure and resilient applications!
+We encourage you to explore the [docs](/docs/esc/concepts/rotators/) and try out Rotated Secrets. Share any feedback or open new issues in our [GitHub repository](https://github.com/pulumi/esc/issues). We're excited to see how you use this powerful new feature to build more secure and resilient applications!

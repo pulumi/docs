@@ -20,7 +20,7 @@ social:
     bluesky:
 ---
 
-Custom VCS is a new Pulumi Cloud integration that connects any Git or Mercurial version control system to [Pulumi Deployments](/docs/deployments/deployments/) using webhooks and centrally managed credentials. Pulumi Cloud already has native integrations with [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), but if your team uses a self-hosted or third-party VCS, you've been limited to manually configuring credentials per stack with no webhook-driven automation. Custom VCS closes that gap.
+Custom VCS is a new Pulumi Cloud integration that connects any Git or Mercurial version control system to [Pulumi Deployments](/docs/deployments/concepts/) using webhooks and centrally managed credentials. Pulumi Cloud already has native integrations with [GitHub](/docs/integrations/version-control/github-app/), [GitLab](/docs/integrations/version-control/gitlab/), and [Azure DevOps](/docs/integrations/version-control/azure-devops-integration/), but if your team uses a self-hosted or third-party VCS, you've been limited to manually configuring credentials per stack with no webhook-driven automation. Custom VCS closes that gap.
 
 <!--more-->
 
@@ -79,5 +79,5 @@ For the full setup guide including webhook payload format, HMAC signing, and cre
 
 - [Custom VCS documentation](/docs/integrations/version-control/custom-vcs/)
 - [Pulumi ESC](/docs/esc/)
-- [Pulumi Deployments](/docs/deployments/deployments/)
-- [Push-to-deploy](/docs/deployments/deployments/using/triggers/#push-to-deploy)
+- [Pulumi Deployments](/docs/deployments/concepts/)
+- [Push-to-deploy](/docs/deployments/concepts/triggers/#push-to-deploy)

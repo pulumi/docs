@@ -133,7 +133,7 @@ config:
     - snowflake_table_resource
 ```
 
-Depending on your preferences, you can split credentials into separate per-provider environments and compose them with [`imports`](/docs/esc/environments/imports/) and reuse across stacks.
+Depending on your preferences, you can split credentials into separate per-provider environments and compose them with [`imports`](/docs/esc/concepts/imports/) and reuse across stacks.
 
 To set up OIDC trust for each provider, see the [AWS OIDC guide](/docs/esc/guides/configuring-oidc/aws/) and the [Snowflake OIDC login guide](/docs/esc/integrations/dynamic-login-credentials/snowflake-login/). For GitHub authentication options (fine-grained PATs, classic PATs, or GitHub Apps), see the [`pulumi-github` provider docs](/registry/packages/github/#authentication).
 

@@ -24,7 +24,7 @@ In short, our docs are now resource-oriented.  Each resource is presented on a s
 
 API docs for each language are still available and are deep-linked. In general, we will lead with this resource-oriented format throughout our content as a canonical, language-agnostic reference for all Pulumi resources.
 
-We've rolled these out for [AWS](/docs/iac/clouds/aws/), [Azure](/docs/iac/clouds/azure/), and [GCP](/docs/iac/clouds/gcp/), and other cloud providers, including [Kubernetes](/docs/iac/clouds/kubernetes/).
+We've rolled these out for [AWS](/docs/iac/clouds/aws/), [Azure](/docs/integrations/clouds/azure/), and [GCP](/docs/integrations/clouds/gcp/), and other cloud providers, including [Kubernetes](/docs/integrations/clouds/kubernetes/).
 
 We'd love your feedback on the new docs either in [#docs](https://slack.pulumi.com/) or via the {{< icon name="thumbs-up" >}} | {{< icon name="thumbs-down" >}} buttons on the site.
 

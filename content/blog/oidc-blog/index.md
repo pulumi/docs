@@ -52,7 +52,7 @@ For AWS, Azure, and GCP, Pulumi Deployments can automatically exchange its OIDC 
 
 ### Calling the Deployments REST API
 
-You can call the [Deployments REST API](/docs/reference/deployments-rest-api) and use OIDC instead of cloud secrets. Here is an example of how that might look:
+You can call the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/) and use OIDC instead of cloud secrets. Here is an example of how that might look:
 
 ![Deployment REST API payload before and after](deployment-api-payload.png)
 
@@ -67,9 +67,9 @@ In order to use the Git Push to Deploy and Click to Deploy features in the Pulum
 3. Choose the “Deploy” panel.
 4. Under the “OpenID Connect” header, toggle to your cloud provider
 5. Follow the cloud provider specific docs below
-   1. [Configuring OIDC for AWS](/docs/guides/oidc/provider/aws/)
-   2. [Configuring OIDC for Azure](/docs/guides/oidc/provider/azure/)
-   3. [Configuring OIDC for GCP](/docs/guides/oidc/provider/gcp/)
+   1. [Configuring OIDC for AWS](/docs/deployments/guides/oidc/aws/)
+   2. [Configuring OIDC for Azure](/docs/deployments/guides/oidc/azure/)
+   3. [Configuring OIDC for GCP](/docs/deployments/guides/oidc/gcp/)
 
 ### Viewing Deployment logs
 
@@ -82,8 +82,8 @@ Pulumi Deployments is available in preview today. Deployments are free during th
 
 - [Request access](/product/pulumi-deployments) to the Pulumi Deployments preview
 - [Pulumi Deployments examples repo](https://github.com/pulumi/deploy-demos)
-- [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments/)
-- [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api/)
+- [Pulumi Deployments documentation](/docs/deployments/concepts/)
+- [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/)
 - [Automation API examples](https://github.com/pulumi/automation-api-examples)
 
 Please submit an issue in the [Pulumi Service Requests repo](https://github.com/pulumi/pulumi-cloud-requests) if you have feature requests for the Pulumi Service or join our [Slack channel](https://pulumi-community.slack.com)(#pulumi-deployments) if you have questions.

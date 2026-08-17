@@ -99,7 +99,7 @@ Automation API now supports parallel execution of NodeJS inline programs in addi
 
 ### New --remove flag for `pulumi destroy`
 
-A [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
+A [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy/) operation destroys all existing resources in the stack, but not the stack itself. If you then wanted to delete the stack itself, once all the resources were destroyed, you would run a [`pulumi stack rm`]. A community member, [mrod-io](https://github.com/mrod-io) added a flag for `pulumi destroy` for when you want to remove the stack after its resources are destroyed: `pulumi destroy --remove`.
 
 **See it in action below:**
 
@@ -178,8 +178,8 @@ Pulumi Deployments removes the cloud as a bottleneck and unlocks it as an accele
 
 - [Request access](/product/pulumi-deployments) to the Pulumi Deployments preview
 - [The Pulumi Deployments demo video](https://www.youtube.com/watch?v=v48U7CNWutc&ab_channel=PulumiTV)
-- [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments/)
-- [Pulumi Deployments REST API documentation](/docs/reference/deployments-rest-api)
+- [Pulumi Deployments documentation](/docs/deployments/concepts/)
+- [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/)
 - [Automation API examples](https://github.com/pulumi/automation-api-examples)
 
 👉  Learn more in the [Pulumi Deployments launch blog post](/blog/pulumi-deployments).

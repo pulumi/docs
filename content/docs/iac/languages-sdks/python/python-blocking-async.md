@@ -36,7 +36,7 @@ For asynchronous code the coroutine or other awaitable result can also be passed
 
 ## Background
 
-As covered in [Concepts](/docs/intro/concepts), when a Pulumi program is run it creates resources and the dependencies or
+As covered in [Concepts](/docs/iac/concepts/), when a Pulumi program is run it creates resources and the dependencies or
 connections between them. Consider the following example (taken from the Pulumi
 blog article [Programming the Cloud with Python](/blog/programming-the-cloud-with-python)):
 

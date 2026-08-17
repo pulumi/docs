@@ -12,7 +12,7 @@ category: product
 
 ---
 
-We're excited to announce the Pulumi Remote MCP Server—a hosted service that brings AI-powered infrastructure management to any AI assistant that supports the [Model Context Protocol](https://modelcontextprotocol.io). Connect your favorite AI assistant to `https://mcp.ai.pulumi.com/mcp` and instantly access your Pulumi Cloud infrastructure, search resources across stacks, and delegate complex automation tasks to [Pulumi Neo](/docs/pulumi-cloud/neo/).
+We're excited to announce the Pulumi Remote MCP Server—a hosted service that brings AI-powered infrastructure management to any AI assistant that supports the [Model Context Protocol](https://modelcontextprotocol.io). Connect your favorite AI assistant to `https://mcp.ai.pulumi.com/mcp` and instantly access your Pulumi Cloud infrastructure, search resources across stacks, and delegate complex automation tasks to [Pulumi Neo](/docs/ai/neo/).
 
 <!--more-->
 
@@ -38,7 +38,7 @@ Instead of installing npm packages, you simply configure your AI assistant with 
 - **No manual updates** - New features and improvements roll out automatically to all users
 - **Works with any MCP-compatible AI assistant** - Cursor, Claude Code, Windsurf, Claude Desktop, and more
 
-For instructions on how to configure different AI assistants, see [Pulumi MCP Server](/docs/iac/using-pulumi/mcp-server).
+For instructions on how to configure different AI assistants, see [Pulumi MCP Server](/docs/ai/mcp-server/).
 
 ### Centralized authentication & secrets
 
@@ -168,7 +168,7 @@ Here's what a typical session looks like:
 
 ## Getting Started
 
-Ready to try it? Check out our [documentation](/docs/iac/using-pulumi/mcp-server/) for configuration instructions for your AI assistant of choice.
+Ready to try it? Check out our [documentation](/docs/ai/mcp-server/) for configuration instructions for your AI assistant of choice.
 
 Key points:
 
@@ -180,8 +180,8 @@ The Remote MCP Server is available now for all Pulumi users. No installation req
 
 ## Learn More
 
-- [Pulumi MCP Server Documentation](/docs/iac/using-pulumi/mcp-server/)
-- [Pulumi Neo Documentation](/docs/pulumi-cloud/neo/)
+- [Pulumi MCP Server Documentation](/docs/ai/mcp-server/)
+- [Pulumi Neo Documentation](/docs/ai/neo/)
 - [Model Context Protocol](https://modelcontextprotocol.io)
 
 We're excited to see what you build with AI-assisted infrastructure management. Let us know what you think in our [Community Slack](https://slack.pulumi.com)!

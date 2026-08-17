@@ -683,9 +683,9 @@ The integration provides comprehensive support for Pulumi's core features:
 
 As with any new technology integration, there are some current limitations to be aware of:
 
-- [Transforms](/docs/iac/concepts/options/transforms/) resource options are not supported
+- [Transforms](/docs/iac/concepts/resources/options/transforms/) resource options are not supported
 - Targeted operations like `pulumi up --target` are not available
-- The [protect](/docs/iac/concepts/options/protect/) resource option is not supported
+- The [protect](/docs/iac/concepts/resources/options/protect/) resource option is not supported
 - Dependent resources may have limited support in some scenarios
 
 ## Looking Ahead
@@ -706,7 +706,7 @@ With AI developer tools making code conversion easier than ever, we're committed
 
 The Terraform module support is available immediately. [Install the latest Pulumi CLI](/docs/install/) and try it out with your existing Terraform modules. We've prepared comprehensive [examples](https://github.com/pulumi/pulumi-terraform-module/tree/main/examples) showcasing real-world scenarios, from simple VPC deployments to complex multi-module architectures.
 
-For detailed documentation on using Terraform modules in Pulumi, including advanced configuration options, troubleshooting guides, and best practices, see our [comprehensive guide](/docs/iac/extending-pulumi/use-terraform-module/).
+For detailed documentation on using Terraform modules in Pulumi, including advanced configuration options, troubleshooting guides, and best practices, see our [comprehensive guide](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/).
 
 If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/pulumi/pulumi-terraform-module/issues/new/choose) or reach out in our [Community Slack](https://slack.pulumi.com/). Your feedback is invaluable as we continue to evolve this capability.
 

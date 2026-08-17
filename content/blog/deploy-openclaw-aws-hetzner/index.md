@@ -66,7 +66,7 @@ The difference from cloud-hosted AI? OpenClaw runs on your server, not Anthropic
 
 Before getting started, ensure you have:
 
-- [Pulumi CLI](/docs/iac/download-install/) installed and configured
+- [Pulumi CLI](/docs/install/) installed and configured
 - A [Pulumi Cloud account](https://app.pulumi.com/signup)
 - AWS account (for AWS deployment)
 - Hetzner Cloud account (for European deployment)

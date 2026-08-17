@@ -100,7 +100,7 @@ definition, and deployment pipeline in [Pulumi Examples repository](https://git
 ## Bootstrapping a Pulumi Program
 
 The Pulumi development experience is powered by the
-[Pulumi CLI](/docs/cli/). After
+[Pulumi CLI](/docs/iac/cli/). After
 [installing the CLI](/docs/install/), I jump into an empty
 `infra` folder and run `pulumi new azure-typescript` accepting all the
 default answers. The CLI bootstraps a skeleton of a TypeScript NodeJS
@@ -139,7 +139,7 @@ that such an application will run in multiple environments: production,
 staging, development, and so on.
 
 Pulumi comes with a handy concept of
-[stacks](/docs/concepts/stack/)--- isolated,
+[stacks](/docs/iac/concepts/stacks/)--- isolated,
 independently configurable instances of a Pulumi program. A separate
 stack can be designated for each deployment environment.
 
@@ -263,7 +263,7 @@ I'm using Azure SQL Database service.
 Setting up a SQL Server requires a couple of parameter values that might
 change between execution environments, for instance, a username and a
 password for the connection string. Pulumi provides
-[a way to configure](/docs/concepts/config/) the program's
+[a way to configure](/docs/iac/concepts/config/) the program's
 parameters per stack.
 
 The configuration itself will happen in my CI/CD pipeline. For now, I
