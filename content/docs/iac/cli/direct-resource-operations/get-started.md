@@ -147,7 +147,7 @@ $ pulumi do aws:s3:Bucket --help
 
 ## Query the cloud with provider functions
 
-Providers also expose read-only functions for querying cloud APIs. Invoke them directly by name, with inputs as flags or an `--input-file`:
+Providers also expose read-only functions for querying cloud APIs. You can invoke them directly by name, with inputs as flags or with an optional `--input-file`:
 
 ```bash
 $ pulumi do aws:ec2:getVpc --default
