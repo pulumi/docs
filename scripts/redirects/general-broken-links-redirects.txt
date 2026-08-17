@@ -100,3 +100,6 @@ migrate/arm2pulumi/index.html|/docs/iac/guides/migration/migrating-to-pulumi/fro
 # so the social cards that were already shared need these.
 events/neo-in-a-docker-sandbox-eu/meta.png|/events/neo-in-a-docker-sandbox/meta.png
 events/neo-in-a-docker-sandbox-eu/meta-square.png|/events/neo-in-a-docker-sandbox/meta-square.png
+# The "Pulumi Copilot REST API Preview" announcement was removed when the
+# legacy Copilot service (and its REST API) was retired in favor of Pulumi Neo.
+blog/pulumi-copilot-rest/index.html|/docs/ai/
