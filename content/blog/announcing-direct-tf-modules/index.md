@@ -35,7 +35,7 @@ Today, we're excited to announce a major advancement in Pulumi's mission to make
 
 ## The Path to Modern Infrastructure as Code
 
-At Pulumi, we believe the ideal infrastructure as code experience leverages the full power of modern programming languages, AI-assisted development, and cloud-native tooling. Our vision is that every team should be able to write infrastructure code in their preferred language—TypeScript, Python, Go, .NET, Java, or YAML—with full IntelliSense, testing capabilities, and AI-powered assistance.
+At Pulumi, we believe the ideal infrastructure as code experience leverages the full power of modern programming languages, AI-assisted development, and cloud-native tooling. Our vision is that every team should be able to write infrastructure code in their preferred language—TypeScript, Python, Go, .NET, or Java—with full IntelliSense, testing capabilities, and AI-powered assistance.
 
 However, we also understand the reality that many organizations have invested years building extensive Terraform module estates. These modules often contain critical business logic, compliance configurations, and battle-tested patterns that teams can't always rewrite overnight.
 

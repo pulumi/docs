@@ -95,7 +95,7 @@ Here's a list of languages Pulumi commonly uses, along with their licenses:
 
 | **Language** | **License**                               |
 |--------------|-------------------------------------------|
-| .NET         | MIT (.NET Core)                           |
+| .NET         | MIT                                       |
 | Java         | GNU v2.0 (OpenJDK)                        |
 | JavaScript   | MIT (ECMAScript), BSD-style 3-Clause (V8) |
 | Go           | BSD-style 3-Clause                        |

@@ -55,7 +55,7 @@ flowchart LR
     EP -->|"level 2, after 15 min"| Lead["Team lead"]
 ```
 
-Everything on both sides of that diagram is one TypeScript program. If you would rather write Python, JavaScript, Go, .NET, Java, YAML, or HCL, the [Pulumi PagerDuty provider](https://www.pulumi.com/registry/packages/pagerduty/) supports all of them. It is bridged from PagerDuty's official Terraform provider (which started life as a community project by Alexander Hellbom before PagerDuty adopted it), so the resource coverage is identical.
+Everything on both sides of that diagram is one TypeScript program. If you would rather write Python, JavaScript, Go, .NET, Java, or YAML, the [Pulumi PagerDuty provider](https://www.pulumi.com/registry/packages/pagerduty/) supports all of them. It is bridged from PagerDuty's official Terraform provider (which started life as a community project by Alexander Hellbom before PagerDuty adopted it), so the resource coverage is identical.
 
 ## Prerequisites
 
