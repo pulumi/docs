@@ -176,7 +176,7 @@ None of these make modules a poor choice; they're the natural boundaries of a do
 
 ## How does Pulumi handle reuse?
 
-Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that takes a different approach to the same reuse problem. Instead of a configuration language with a module system layered on top, Pulumi lets you define infrastructure in general-purpose programming languages (TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL), so the reuse mechanisms are the ones those languages already provide: functions, classes, and packages.
+Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that takes a different approach to the same reuse problem. Instead of a configuration language with a module system layered on top, Pulumi lets you define infrastructure in general-purpose programming languages — TypeScript, JavaScript, Python, Go, .NET, and Java — so the reuse mechanisms are the ones those languages already provide: functions, classes, and packages.
 
 The closest analog to a Terraform module is a Pulumi **component**. A [component resource](/docs/iac/concepts/components/) is a class that groups multiple child resources behind a constructor, taking typed arguments and exposing typed outputs, the same inputs-in, outputs-out contract a module has, but expressed as a real class in your language:
 
