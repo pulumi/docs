@@ -70,7 +70,7 @@ We often hear from developers who want to setup CI/CD automation for their stack
 The integration assistant guides you with instructions based on your preferred CI/CD service and provides the customized pipeline configuration for CI/CD services that you can add to your Version Control System (VCS) repository.
 
 We are super excited to offer [GitHub Actions](https://github.com/features/actions) support as part of the CI/CD Integration Assistant and other popular tools like Azure Pipelines and more.
-If you’d like to request support for more CI/CD services, please use [this convenient template](https://github.com/pulumi/ci-workflow-templates/issues/new?assignees=&labels=&template=ci-cd-request.md&title=%5BNEW+CI+REQUEST%5D) on the Pulumi GitHub repo.
+If you’d like to request support for more CI/CD services, please [open a feature request](https://github.com/pulumi/pulumi/issues/new/choose) on the `pulumi/pulumi` GitHub repo.
 
 ![Integrations Console](image1.png)
 
