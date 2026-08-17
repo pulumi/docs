@@ -87,7 +87,7 @@ Removing problems is the process side. The other side is tooling. If you want an
 
 We didn't get there first try. Our first IaC tool worked fine when we had a couple of clients. As we added more, accounts drifted, deployments slowed, retries got complicated. We needed something built for where we were heading.
 
-I went looking, and [Pulumi](/) fit. We express infrastructure as type-safe code — TypeScript, in our case, rather than HCL — and agents are good at writing it. Pair that with [Pulumi Neo](/product/neo/) — pre-loaded with domain-specific Pulumi skills — and we ship infrastructure that follows best practices. One of my colleagues put it: "The scary thing about Neo is it just seems to know everything about what we do." Pulumi IaC plus [Pulumi ESC](/docs/pulumi-cloud/esc/) for configuration beats stitching tools together. And TypeScript lets us build higher-level abstractions that keep the AWS account fleet tractable.
+I went looking, and [Pulumi](/) fit. We express infrastructure as type-safe code — TypeScript, in our case, rather than HCL — and agents are good at writing it. Pair that with [Pulumi Neo](/product/neo/) — pre-loaded with domain-specific Pulumi skills — and we ship infrastructure that follows best practices. One of my colleagues put it: "The scary thing about Neo is it just seems to know everything about what we do." Pulumi IaC plus [Pulumi ESC](/docs/esc/) for configuration beats stitching tools together. And TypeScript lets us build higher-level abstractions that keep the AWS account fleet tractable.
 
 {{< pullquote >}}
 "I don't actually care if it's HCL or TypeScript, as long as my software development agents can write it. And they do a better job with TypeScript than HCL."
@@ -202,7 +202,7 @@ Rather than build a shared multi-tenant sandbox, Compostable AI removes the prob
 {{< /details >}}
 
 {{< details "What tools does an AI-native software factory need?" >}}
-Tools your agents can actually drive, anything with a solid API and a clean CLI, rather than click-ops around a web UI. Compostable AI expresses infrastructure as type-safe TypeScript with [Pulumi](/), pairs it with [Pulumi Neo](/product/neo/) for domain-specific infrastructure skills, and uses [Pulumi ESC](/docs/pulumi-cloud/esc/) for configuration. If part of your stack still requires a human to click through a UI, your agents stop there.
+Tools your agents can actually drive, anything with a solid API and a clean CLI, rather than click-ops around a web UI. Compostable AI expresses infrastructure as type-safe TypeScript with [Pulumi](/), pairs it with [Pulumi Neo](/product/neo/) for domain-specific infrastructure skills, and uses [Pulumi ESC](/docs/esc/) for configuration. If part of your stack still requires a human to click through a UI, your agents stop there.
 {{< /details >}}
 
 ---

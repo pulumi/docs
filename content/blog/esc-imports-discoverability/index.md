@@ -16,15 +16,15 @@ tags:
 category: product
 ---
 
-Managing secrets and configuration across multiple environments and stacks can easily become complex, leading to duplicated values, inconsistencies, and security risks. [Pulumi ESC](/product/esc) solves this with composable environments via [imports](/docs/esc/environments/imports/), allowing you to define configuration once and reuse it organization-wide.  Now, with the new capabilities to discover environment imports, you gain unprecedented visibility and control, simplifying the management of even the most complex infrastructure and applications.
+Managing secrets and configuration across multiple environments and stacks can easily become complex, leading to duplicated values, inconsistencies, and security risks. [Pulumi ESC](/product/secrets-management/) solves this with composable environments via [imports](/docs/esc/concepts/imports/), allowing you to define configuration once and reuse it organization-wide.  Now, with the new capabilities to discover environment imports, you gain unprecedented visibility and control, simplifying the management of even the most complex infrastructure and applications.
 
 <!--more-->
 
 ## Understanding Pulumi ESC Imports
 
-Pulumi ESC lets you define secrets and configuration as code collections called [environments](/docs/esc/environments/working-with-environments/). These environments can import other environments, creating a hierarchical structure that promotes reusability, and reduces duplication and sprawl. You can centralize secrets and configuration within ESC and use them across [Pulumi IaC Stacks](/docs/esc/integrations/infrastructure/pulumi-iac/), [Pulumi Insights Accounts](/docs/pulumi-cloud/insights/accounts/), and various other platforms through our [integrations](/docs/esc/integrations/).
+Pulumi ESC lets you define secrets and configuration as code collections called [environments](/docs/esc/concepts/environments/). These environments can import other environments, creating a hierarchical structure that promotes reusability, and reduces duplication and sprawl. You can centralize secrets and configuration within ESC and use them across [Pulumi IaC Stacks](/docs/esc/guides/pulumi-iac/), [Pulumi Insights Accounts](/docs/insights/discovery/accounts/), and various other platforms through our [integrations](/docs/esc/integrations/).
 
-By using [version tags](/docs/esc/environments/versioning/#tagging-versions), imports can target specific versions of an environment. This locks down the configuration used by dependents, ensuring stability and preventing unintended changes from rolling out to your critical environments.
+By using [version tags](/docs/esc/concepts/versioning/#tagging-versions), imports can target specific versions of an environment. This locks down the configuration used by dependents, ensuring stability and preventing unintended changes from rolling out to your critical environments.
 
 ## What's New?
 

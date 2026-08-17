@@ -140,7 +140,7 @@ A stock sandbox image is tuned for application work: language runtimes, a packag
 
 {{< github-card repo="dirien/infrastructure-sandbox-kit" >}}
 
-It comes preloaded with the [Pulumi CLI](/docs/iac/download-install/), [Terraform](https://www.terraform.io/), [OpenTofu](https://opentofu.org/), and the AWS, Azure, and Google Cloud CLIs, every binary installed from SHA256-checksummed releases or GPG-signed vendor repositories, because an agent workspace is the last place to be casual about supply chain. On top of the tools sits the agent-side configuration that makes an agent good at infrastructure: 33 skills, including the official [Pulumi Agent Skills](/docs/ai/skills/), three subagents, and two guardrail hooks. Credentials go in through the sandbox proxy's secret injection, so the Pulumi access token never lands in a file inside the workspace for the agent, or a prompt injection, to read.
+It comes preloaded with the [Pulumi CLI](/docs/install/), [Terraform](https://www.terraform.io/), [OpenTofu](https://opentofu.org/), and the AWS, Azure, and Google Cloud CLIs, every binary installed from SHA256-checksummed releases or GPG-signed vendor repositories, because an agent workspace is the last place to be casual about supply chain. On top of the tools sits the agent-side configuration that makes an agent good at infrastructure: 33 skills, including the official [Pulumi Agent Skills](/docs/ai/skills/), three subagents, and two guardrail hooks. Credentials go in through the sandbox proxy's secret injection, so the Pulumi access token never lands in a file inside the workspace for the agent, or a prompt injection, to read.
 
 You can use it two ways: build the full template image, or apply the kit to the stock Claude image at creation time:
 

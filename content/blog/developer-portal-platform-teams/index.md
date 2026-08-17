@@ -61,7 +61,7 @@ We’ve also added the ability for organizations to provide their own custom set
 
 Together, Organization Templates and the new New Project Wizard offer a foundational developer portal experience directly within the Pulumi Cloud console.  Users can come to Pulumi Cloud, select one of the pre-defined templates set up by their Platform Team, and then in a few clicks have it deployed into a predefined cloud environment.
 
-The New Project wizard is available now for all Pulumi users, and Organization Templates are available to Pulumi Enterprise and Business Critical users.  Check out the [documentation](/docs/pulumi-cloud/developer-portals/templates) to get started.
+The New Project wizard is available now for all Pulumi users, and Organization Templates are available to Pulumi Enterprise and Business Critical users.  Check out the [documentation](/docs/idp/concepts/organization-templates/) to get started.
 
 ### Backstage Plugin
 

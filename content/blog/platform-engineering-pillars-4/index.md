@@ -157,9 +157,9 @@ The result? Faster onboarding, quicker delivery, and happier teams.
 With Pulumi, platform teams can automate consistent environments, implement golden paths, and enable self-service infrastructure that scales with your organization.
 
 - [Organization Templates](/templates/) enables standardized service creation and consistent developer experiences
-- [Stack References](/docs/concepts/stack/#stackreferences) for managing dependencies between environments and services
-- [Pulumi Deployments](/docs/pulumi-cloud/deployments/) to streamline CI/CD workflows and enable self-service infrastructure
-- [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks/) for creating ephemeral, on-demand testing environments
-- [Automation API](/docs/iac/packages-and-automation/automation-api/) for programmatically managing infrastructure and implementing platform workflows
+- [Stack References](/docs/iac/concepts/stacks/#stackreferences) for managing dependencies between environments and services
+- [Pulumi Deployments](/docs/deployments/concepts/) to streamline CI/CD workflows and enable self-service infrastructure
+- [Review Stacks](/docs/deployments/concepts/review-stacks/) for creating ephemeral, on-demand testing environments
+- [Automation API](/docs/iac/concepts/automation-api/) for programmatically managing infrastructure and implementing platform workflows
 
 By prioritizing **developer experience** in your [platform engineering strategy](/blog/idp-strategy-planning-self-service-infrastructure-that-balances-developer-autonomy-with-operational-control/), you empower teams to move faster, build better, and maintain momentum, making your internal developer platform one of the most valuable assets in your organization.

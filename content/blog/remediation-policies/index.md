@@ -284,7 +284,7 @@ For instance, in some settings we may prefer to issue an error to the developer 
 
 In the above example, we hard-coded the set of tags we want to check for. For a simple policy for a very targeted use case, that may be ok. However, if we are writing a more general purpose policy, or one that needs to run across many organizations, this hard-coding can be unfortunate.
 
-[Policy configuration](/docs/using-pulumi/crossguard/configuration), on the other hand, enables us to write rules that are parameterized. If we used policy configuration for this example, we could configure the set of tags to check for independent of the policy itself. This would mean that we could write a single tagging policy, once, and then enable/configure it many times. This is useful for enforcement in different organizations and also within the same organization if, say, if our production tags were different than development.
+[Policy configuration](/docs/insights/policy/policy-packs/), on the other hand, enables us to write rules that are parameterized. If we used policy configuration for this example, we could configure the set of tags to check for independent of the policy itself. This would mean that we could write a single tagging policy, once, and then enable/configure it many times. This is useful for enforcement in different organizations and also within the same organization if, say, if our production tags were different than development.
 
 Here’s a rewritten variant of that policy above which uses policy configuration:
 

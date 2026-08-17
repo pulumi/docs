@@ -15,7 +15,7 @@ category: product
 ---
 
 
-We're excited to announce the launch of the Pulumi Environments, Secrets, and Configurations ([ESC](/product/esc)) Table Editor. At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering a user-friendly interface for managing complex configurations and secrets.
+We're excited to announce the launch of the Pulumi Environments, Secrets, and Configurations ([ESC](/product/secrets-management/)) Table Editor. At Pulumi, we're committed to providing flexible solutions that cater to diverse development needs and practices. This latest addition underscores our dedication to this principle by offering a user-friendly interface for managing complex configurations and secrets.
 
 Pulumi ESC simplifies the management of secrets and configurations by reducing duplication and drift, empowering development teams to focus on building and deploying. The existing YAML-based code editor offers a native way for developers to author and manage configurations.
 
@@ -25,13 +25,13 @@ The Table Editor we are launching today introduces an alternate visual interface
 
 - **CRUD Operations**: Perform Create, Read, Update, and Delete (CRUD) operations on your secrets and  plaintext values
 - **Decrypting Secrets**: Safely decrypt secrets one at a time, directly within the editor
-- **Environment Imports**: [Import environments](/docs/esc/environments/#importing-other-environments) and define the order of imports to suit your project's needs
-- **Variables Projections**: Make variables available as [Pulumi Config](/docs/esc/environments/#using-environments-with-pulumi-iac), [environment variables](/docs/esc/environments/#projecting-environment-variables), and files, streamlining your deployment and runtime configuration.
-- **Interpolations and References**: Add references to existing path-values, or add [interpolations](/docs/esc/environments/#interpolating-values) to dynamically generate values
+- **Environment Imports**: [Import environments](/docs/esc/concepts/environments/#importing-other-environments) and define the order of imports to suit your project's needs
+- **Variables Projections**: Make variables available as [Pulumi Config](/docs/esc/concepts/environments/#using-environments-with-pulumi-iac), [environment variables](/docs/esc/concepts/environments/#projecting-environment-variables), and files, streamlining your deployment and runtime configuration.
+- **Interpolations and References**: Add references to existing path-values, or add [interpolations](/docs/esc/concepts/environments/#interpolating-values) to dynamically generate values
 
 ![Table Editor](esc-key-value-table-editor.png)
 
-In the current release of the Table view, [provider configurations](/docs/esc/integrations) and functions are set to read-only.  
+In the current release of the Table view, [provider configurations](/docs/esc/integrations/) and functions are set to read-only.  
 
 ## What’s Next?
 
@@ -45,4 +45,4 @@ The launch of the Table view marks an important step in our mission to make infr
 
 Your [feedback](https://github.com/pulumi/esc/issues/new/choose) is the cornerstone of our development process. As we look ahead, we're focusing on incorporating your insights to further enhance the Table view. Together, we can continue to refine and advance Pulumi ESC, making it an even more powerful tool for the developer community.
 
-Check out our [documentation](/docs/esc) to learn more about Pulumi ESC.
+Check out our [documentation](/docs/esc/) to learn more about Pulumi ESC.

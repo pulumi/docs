@@ -78,7 +78,7 @@ When building a robust platform, you need to think in layers of defense. Your fi
 
 ### Prevention: The First Line of Defense
 
-Prevention is what we've been building throughout this series. You establish code reviews where teammates scrutinize infrastructure changes before they go live. You implement automated testing that validates configurations before deployment. You deploy [CrossGuard policies](/docs/iac/packages-and-automation/crossguard) that act as guardrails, blocking misconfigurations before they can cause damage. You create [standardized components](/blog/golden-paths-infrastructure-components-and-templates) that encode best practices, making it easier to do the right thing than the wrong thing.
+Prevention is what we've been building throughout this series. You establish code reviews where teammates scrutinize infrastructure changes before they go live. You implement automated testing that validates configurations before deployment. You deploy [CrossGuard policies](/docs/insights/policy/) that act as guardrails, blocking misconfigurations before they can cause damage. You create [standardized components](/blog/golden-paths-infrastructure-components-and-templates) that encode best practices, making it easier to do the right thing than the wrong thing.
 
 These preventative measures work brilliantly for changes that flow through your normal IaC pipeline. They catch typos, enforce standards, and maintain consistency across your infrastructure. But they have a critical blind spot: they can't see changes that bypass your pipeline entirely.
 
@@ -94,7 +94,7 @@ The truth is, no matter how robust your preventative controls, you need detectiv
 
 Infrastructure drift sounds technical, but the concept is surprisingly simple. Drift occurs when your actual infrastructure state doesn't match your declared state in code. It's the gap between intention and reality, between what you coded and what's actually running.
 
-To understand drift properly, you need to grasp three distinct states that Pulumi manages. First, there's the **desired state**, which is what your Pulumi program declares in code. This is your intention, your blueprint for how things should be. Then there's the **current state**, stored in Pulumi's [state file](/docs/iac/concepts/state-and-backends), which tracks what Pulumi believes exists based on its last interaction with your cloud provider. Finally, there's the **actual state**, the ground truth of what really exists in your cloud provider right now.
+To understand drift properly, you need to grasp three distinct states that Pulumi manages. First, there's the **desired state**, which is what your Pulumi program declares in code. This is your intention, your blueprint for how things should be. Then there's the **current state**, stored in Pulumi's [state file](/docs/iac/concepts/state-and-backends/), which tracks what Pulumi believes exists based on its last interaction with your cloud provider. Finally, there's the **actual state**, the ground truth of what really exists in your cloud provider right now.
 
 The journey to drift typically follows a predictable pattern. You start by running `pulumi up` to deploy your resources, and everything is in perfect harmony. Pulumi creates the resources, records their configuration in its state file, and all three states align perfectly. Time passes, and your resources continue running in the cloud, serving traffic and doing their job.
 
@@ -106,7 +106,7 @@ Pulumi provides a complete workflow for handling drift that's both powerful and 
 
 ### 1. Drift Detection with `pulumi refresh`
 
-The foundation of drift detection is the [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh) command. When you run this command, Pulumi springs into action, querying your cloud providers to discover the actual state of your resources. It then compares this reality against what it has recorded in its state file:
+The foundation of drift detection is the [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) command. When you run this command, Pulumi springs into action, querying your cloud providers to discover the actual state of your resources. It then compares this reality against what it has recorded in its state file:
 
 ```bash
 # Run drift detection
@@ -139,7 +139,7 @@ This reconciliation step is crucial. It acknowledges the current reality and upd
 
 ### 3. Drift Remediation with `pulumi up`
 
-With your state file now reflecting reality, you can use [`pulumi up`](/docs/iac/cli/commands/pulumi_up) to remediate the drift. This command compares the updated state against your code and determines what changes are needed to restore your infrastructure to its intended configuration:
+With your state file now reflecting reality, you can use [`pulumi up`](/docs/iac/cli/commands/pulumi_up/) to remediate the drift. This command compares the updated state against your code and determines what changes are needed to restore your infrastructure to its intended configuration:
 
 ```bash
 # Remediate drift - restore to desired state
@@ -155,7 +155,7 @@ This three-step dance of detect, reconcile, and remediate gives you complete con
 
 ## Automating Drift Detection with Pulumi Deployments
 
-Running `pulumi refresh` manually works great for small teams and simple infrastructures, but it doesn't scale. As your platform grows to dozens or hundreds of stacks across multiple environments, manual drift detection becomes impossible. This is where [Pulumi Deployments](/docs/pulumi-cloud/deployments) transforms drift detection from a manual chore into an automated safeguard.
+Running `pulumi refresh` manually works great for small teams and simple infrastructures, but it doesn't scale. As your platform grows to dozens or hundreds of stacks across multiple environments, manual drift detection becomes impossible. This is where [Pulumi Deployments](/docs/deployments/concepts/) transforms drift detection from a manual chore into an automated safeguard.
 
 ### Setting Up Automated Drift Detection
 
@@ -163,15 +163,15 @@ The journey to automated drift detection starts with connecting your infrastruct
 
 #### Step 1: Configure Deployment Settings
 
-Your first step is connecting Pulumi to your source control system using [Deployment Settings](/docs/pulumi-cloud/deployments/get-started). This integration allows Pulumi to access your infrastructure code and run automated operations:
+Your first step is connecting Pulumi to your source control system using [Deployment Settings](/docs/deployments/get-started/). This integration allows Pulumi to access your infrastructure code and run automated operations:
 
 ![img.png](img.png)
 
-Pulumi offers native integrations with all major version control systems. If you're using GitHub, you get full app integration with [PR previews](/docs/pulumi-cloud/deployments/ci-cd-integration-assistant), making it easy to see the impact of changes before merging. GitLab users enjoy similar functionality with merge request automation. For other Git providers or self-hosted solutions, you can use raw Git integration with direct repository access using credentials.
+Pulumi offers native integrations with all major version control systems. If you're using GitHub, you get full app integration with [PR previews](/docs/deployments/concepts/), making it easy to see the impact of changes before merging. GitLab users enjoy similar functionality with merge request automation. For other Git providers or self-hosted solutions, you can use raw Git integration with direct repository access using credentials.
 
 #### Step 2: Create Drift Detection Schedules
 
-With your source control connected, you can now configure [automated drift detection](/docs/pulumi-cloud/deployments/drift) to run on whatever schedule makes sense for your organization. Some teams check hourly for production environments, while others might run daily checks for development stacks:
+With your source control connected, you can now configure [automated drift detection](/docs/deployments/concepts/drift/) to run on whatever schedule makes sense for your organization. Some teams check hourly for production environments, while others might run daily checks for development stacks:
 
 ![img_1.png](img_1.png)
 
@@ -183,7 +183,7 @@ With auto-remediation enabled, Pulumi not only detects drift but automatically r
 
 #### Step 3: Configure Webhooks for Notifications
 
-Detecting drift is only valuable if the right people know about it. Pulumi's [webhook system](/docs/pulumi-cloud/webhooks) ensures your team stays informed when drift occurs:
+Detecting drift is only valuable if the right people know about it. Pulumi's [webhook system](/docs/deployments/concepts/webhooks/) ensures your team stays informed when drift occurs:
 
 ![img_3.png](img_3.png)
 
@@ -278,7 +278,7 @@ Ready to implement drift detection for your IDP? Here's a practical action plan 
 
 Begin with the simplest possible drift detection: a manual check on your production stack. Run `pulumi refresh --preview-only --stack production` to see if you have any existing drift. This takes just 15 minutes and often reveals surprising discrepancies.
 
-Next, invest 30 minutes in setting up automated detection. Configure [Pulumi Deployments](/docs/pulumi-cloud/deployments/get-started), create an hourly detection schedule for your most critical stack, and set up Slack notifications so you'll know immediately when drift occurs.
+Next, invest 30 minutes in setting up automated detection. Configure [Pulumi Deployments](/docs/deployments/get-started/), create an hourly detection schedule for your most critical stack, and set up Slack notifications so you'll know immediately when drift occurs.
 
 Spend the next week monitoring and learning. Review the drift patterns that emerge. Identify common causes. Are certain resources drifting repeatedly? Are changes happening at predictable times? Document which changes are legitimate and which represent problems.
 

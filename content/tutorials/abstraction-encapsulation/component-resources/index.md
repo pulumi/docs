@@ -181,17 +181,17 @@ pulumi.export("bucket_name", bucket1.bucket.id)
 
 {{% /choosable %}}
 
-With the call to `super()`, we pass in a name for the resource, which [we recommend](/docs/concepts/resources/components#authoring-a-new-component-resource) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:Bucket`).
+With the call to `super()`, we pass in a name for the resource, which [we recommend](/docs/iac/concepts/components/#authoring-a-new-component-resource) being of the form `<package>:<module>:<type>` to avoid type conflicts since it's being registered alongside other resources like the Bucket resource we're calling (`aws:s3:Bucket`).
 
 {{% choosable language python %}}
 
-That last call in the init, `self.register_outputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/concepts/resources/components#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
+That last call in the init, `self.register_outputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/iac/concepts/components/#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
 
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
 
-That last call in the init, `this.registerOutputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/concepts/resources/components#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
+That last call in the init, `this.registerOutputs({})`, passes Pulumi the expected outputs so Pulumi can read the results of the creation or update of a component resource just like any other resource, so don't forget that call! You can [register default outputs using this call](/docs/iac/concepts/components/#registering-component-outputs), as well. It's not hard to imagine we will always want the bucket name for our use case, so we pass that in as an always-given output for our component resource.
 
 {{% /choosable %}}
 

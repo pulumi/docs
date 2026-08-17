@@ -191,6 +191,6 @@ These workflows represent just the beginning of what's possible when an AI agent
 
 The outcome is simple: spend less time on operational toil and more time on the architecture and policies that make your organizations successful.
 
-[Get started with Neo](/docs/pulumi-cloud/neo/) and discover what becomes possible when AI truly understands infrastructure.
+[Get started with Neo](/docs/ai/neo/) and discover what becomes possible when AI truly understands infrastructure.
 
 The future of platform engineering isn't about choosing between speed and safety. It's about having tools that help you with both simultaneously.
