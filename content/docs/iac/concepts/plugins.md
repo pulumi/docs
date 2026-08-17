@@ -111,7 +111,7 @@ Use this configuration file when developing custom components or providers to di
 
 | Name | Required | Description | Options |
 | - | - | - | - |
-| `runtime` | required | Installed language runtime used to run the plugin: `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`, or `bun`. | [runtime options](#plugin-runtime-options) |
+| `runtime` | required | Installed language runtime used to run the plugin: `nodejs`, `python`, `go`, `dotnet`, `java`, `yaml`, `hcl`, or `bun`. | [runtime options](#plugin-runtime-options) |
 | `packages` | optional | Additional packages to be used in the plugin. | Same as [`Pulumi.yaml` packages](/docs/iac/concepts/projects/project-file/#packages-options) |
 | `requiredPulumiVersion` | optional | The version range of the Pulumi CLI this plugin requires. | Same as [`Pulumi.yaml` requiredPulumiVersion](/docs/iac/concepts/projects/project-file/#requiredpulumiversion-options) |
 
