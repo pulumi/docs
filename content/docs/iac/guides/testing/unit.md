@@ -612,7 +612,7 @@ class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
     def setUp(self):
         pulumi.runtime.set_mocks(
             MyMocks(),
-            preview=False,
+            preview=False, # Sets the flag `dry_run`, which is true at runtime during a preview.
         )
         # Run the program fresh for each test *after* setting the mocks.
         program = runpy.run_path("__main__.py")
