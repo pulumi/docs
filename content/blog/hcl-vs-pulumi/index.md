@@ -35,7 +35,7 @@ languages can be a double-edged sword:
 
 HashiCorp’s infrastructure as code solution, Terraform, uses a domain-specific language (DSL) to declare cloud
 resources. Pulumi’s infrastructure as code solution, on the other hand, lets you choose from any number of modern
-languages – C#, Java, JavaScript, Go, Python, or TypeScript – or the industry-standard markup language YAML, to declare
+languages – .NET, Java, JavaScript, Go, Python, or TypeScript – or the industry-standard markup language YAML, to declare
 cloud resources. Although both Terraform and Pulumi are declarative infrastructure as code engines at their core, this
 fundamentally different approach to expression languages has significant consequences.
 
@@ -95,7 +95,7 @@ Here's a list of languages Pulumi commonly uses, along with their licenses:
 
 | **Language** | **License**                               |
 |--------------|-------------------------------------------|
-| C#           | MIT (.NET Core)                           |
+| .NET         | MIT (.NET Core)                           |
 | Java         | GNU v2.0 (OpenJDK)                        |
 | JavaScript   | MIT (ECMAScript), BSD-style 3-Clause (V8) |
 | Go           | BSD-style 3-Clause                        |

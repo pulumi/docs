@@ -25,7 +25,7 @@ To start from scratch, follow the [Google Cloud get-started guide](/docs/iac/get
 
 ## Infrastructure as Code
 
-[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
+[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
 
 - [Google Cloud provider](/registry/packages/gcp/) — the default Google Cloud provider. Manages a broad set of Google Cloud resources.
 - [Docker](/registry/packages/docker/) — build and push Docker images to Artifact Registry, Container Registry, or other registries.

@@ -124,7 +124,7 @@ For a complete walkthrough including coexistence patterns and resource adoption,
 
 ### Does Pulumi support Bicep?
 
-Yes. [`pulumi convert --from bicep`](/docs/iac/guides/migration/converters/) translates Bicep files into a Pulumi program in Python, TypeScript, Go, C#, Java, or YAML. The generated program uses the [Azure Native](/registry/packages/azure-native/) provider, which is built from the same Azure Resource Manager REST API specifications that Bicep ultimately deploys to, so the resource model matches what Bicep produces.
+Yes. [`pulumi convert --from bicep`](/docs/iac/guides/migration/converters/) translates Bicep files into a Pulumi program in Python, TypeScript, Go, .NET, Java, or YAML. The generated program uses the [Azure Native](/registry/packages/azure-native/) provider, which is built from the same Azure Resource Manager REST API specifications that Bicep ultimately deploys to, so the resource model matches what Bicep produces.
 
 ### Does Pulumi cover the same Azure resources as ARM Templates?
 
