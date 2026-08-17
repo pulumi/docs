@@ -17,6 +17,10 @@ let hubspotInstanceCount = 0;
 // https://legacydocs.hubspot.com/docs/methods/forms/advanced_form_options
 type HubSpotFormEvent = "onBeforeFormInit" | "onBeforeValidationInit" | "onFormReady" | "onFormSubmit" | "onFormSubmitted" | "onFormDefinitionFetchError";
 
+// Input types that survive being read off one form and written to another by
+// assigning to `value`. Textareas qualify too and are matched by tag instead.
+const CARRY_OVER_INPUT_TYPES = ["text", "email", "tel", "url", "search", "number"];
+
 @Component({
     tag: "pulumi-hubspot-form",
     styleUrl: "hubspot-form.scss",
@@ -282,11 +286,34 @@ export class HubspotForm {
         });
     }
 
-    // The form's current field values, for a caller that's about to replace this
-    // form with another one and wants to carry what's been typed across.
+    // What a caller replacing this form with another one should carry across:
+    // every free-text field, keyed by HubSpot internal name. Deliberately not
+    // filtered to a list of known names — the forms each carry their own custom
+    // properties ("how_can_we_help_you_" and the like), and the receiving form
+    // ignores anything it doesn't have a field for.
+    //
+    // Selects, checkboxes, and radios are left out because they don't survive the
+    // round trip: collectFieldValues reports a select's option text rather than
+    // its value, and a checkbox or radio can't be restored by assigning to
+    // `value`. Hidden fields are excluded as well - UTM and ad ids are set per
+    // form, and the incoming form sets its own.
     @Method()
-    async getFieldValues(): Promise<Record<string, string>> {
-        return this.collectFieldValues();
+    async getCarryOverValues(): Promise<Record<string, string>> {
+        const values: Record<string, string> = {};
+
+        this.el.querySelectorAll("input, textarea").forEach((field: HTMLInputElement | HTMLTextAreaElement) => {
+            if (!field.name) {
+                return;
+            }
+
+            if (field instanceof HTMLInputElement && !CARRY_OVER_INPUT_TYPES.includes(field.type)) {
+                return;
+            }
+
+            values[field.name] = field.value;
+        });
+
+        return values;
     }
 
     // The form's current values, keyed by field name, in display form.

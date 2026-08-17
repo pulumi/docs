@@ -63,11 +63,6 @@ export class PulumiMultiSelectForm {
     // name is enough.
     private static readonly radioGroupName = "multi-select-form-choice";
 
-    // Fields worth carrying between forms: the ones a visitor types the same way
-    // whichever form they land on. Everything else — consent checkboxes, per-form
-    // custom fields — is left to the new form.
-    private static readonly carryOverFields = ["firstname", "lastname", "email", "company", "message"];
-
     componentWillLoad() {
         if (this.defaultFormId !== "") {
             this.selectedItem = this.items.find(item => item.hubspotFormId === this.defaultFormId);
@@ -122,24 +117,21 @@ export class PulumiMultiSelectForm {
         // No form to read: either nothing has been chosen yet, or the current
         // choice is one of the CTA-only options. Keep what was captured last so a
         // detour through the support option doesn't discard it.
-        if (!form || typeof form.getFieldValues !== "function") {
+        if (!form || typeof form.getCarryOverValues !== "function") {
             return this.carriedValues;
         }
 
-        const values = await form.getFieldValues();
+        const values = await form.getCarryOverValues();
 
         // Merged into what's already carried rather than replacing it. The forms
         // don't all ask for the same things, so a message typed on one of them has
         // to survive a detour through one that never had a message field.
         const carried: Record<string, string> = { ...this.carriedValues };
 
-        PulumiMultiSelectForm.carryOverFields.forEach(name => {
-            // Absent from this form entirely: leave whatever an earlier one carried
-            // in. Present but emptied: the visitor cleared it, so drop it.
-            if (!(name in values)) {
-                return;
-            }
-
+        Object.keys(values).forEach(name => {
+            // Present but emptied: the visitor cleared it, so drop it. A field this
+            // form doesn't have simply isn't in `values`, and keeps whatever an
+            // earlier form carried in.
             if (values[name]) {
                 carried[name] = values[name];
             } else {
