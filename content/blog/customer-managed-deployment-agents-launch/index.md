@@ -46,7 +46,7 @@ At Pulumi, we constantly strive to build solutions that not only simplify infras
 
 ## Primer on Pulumi Deployments
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a fully managed platform for managing infrastructure at scale, providing easy-to-use building blocks that can be used as a simple CI/CD platform or to build a sophisticated self-serve platform to support thousands of engineers. [Traditional CI/CD platforms](/docs/pulumi-cloud/deployments/versus) focus on Git-push workflows which fall short when managing infrastructure where the same code base is used to create new infrastructure with no explicit Git-push event.  Pulumi Deployments goes beyond the Git-push based workflows to offer deployment triggers based on the [Pulumi Deployments REST API](/docs/pulumi-cloud/deployments/api), [click to deploy](/docs/pulumi-cloud/deployments/reference/#click-to-deploy) in the Pulumi Cloud console, [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks), [remote Automation API](/docs/using-pulumi/automation-api), and many more features to come.
+[Pulumi Deployments](/docs/deployments/concepts/) is a fully managed platform for managing infrastructure at scale, providing easy-to-use building blocks that can be used as a simple CI/CD platform or to build a sophisticated self-serve platform to support thousands of engineers. [Traditional CI/CD platforms](/docs/deployments/versus/) focus on Git-push workflows which fall short when managing infrastructure where the same code base is used to create new infrastructure with no explicit Git-push event.  Pulumi Deployments goes beyond the Git-push based workflows to offer deployment triggers based on the [Pulumi Deployments REST API](/docs/reference/cloud-rest-api/deployments/), [click to deploy](/docs/deployments/concepts/#click-to-deploy) in the Pulumi Cloud console, [Review Stacks](/docs/deployments/concepts/review-stacks/), [remote Automation API](/docs/iac/concepts/automation-api/), and many more features to come.
 
 Since its launch, Pulumi Deployments has transformed how organizations manage their infrastructure, offloading the execution of Pulumi infrastructure as code (IaC) actions --- such as previews, updates, destroys, and refreshes --- to Pulumi Cloud. Our customers have used it to deploy and manage mission-critical services, driving efficiencies and reducing the operational burden of deploying and managing infrastructure.
 
@@ -74,7 +74,7 @@ Customer-Managed Agents is available on the Business Critical edition of Pulumi 
 
 ## How to get started
 
-Before you begin, ensure you have installed the [Pulumi Github App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) and update the [source control settings](/docs/pulumi-cloud/deployments/get-started). [Docker](https://docs.docker.com/engine/) is a requirement for the agent.
+Before you begin, ensure you have installed the [Pulumi Github App](/docs/integrations/version-control/github-app/) and update the [source control settings](/docs/deployments/get-started/). [Docker](https://docs.docker.com/engine/) is a requirement for the agent.
 
 ### Install and configure the agent
 
@@ -104,7 +104,7 @@ Go to deployment settings, found under the settings tab on a stack under 'Deploy
 
 Ensure that agents have the cloud provider credentials to be able to deploy in your environments. You have two methods:
 
-1. Use [OpenID Connect (OIDC) to generate credentials](/docs/pulumi-cloud/oidc)
+1. Use [OpenID Connect (OIDC) to generate credentials](/docs/deployments/guides/oidc/)
 2. Directly provide credentials to agents through environment variables configured in the host, or passing the environment variables when invoking the binary. Example:
 
    ```bash

@@ -233,8 +233,8 @@ Pulumi Deployments removes the cloud as a bottleneck and unlocks it as an accele
 - [Request access](/product/pulumi-deployments) to the Pulumi Deployments preview
 - [Pulumi Deployments examples repo](https://github.com/pulumi/deploy-demos)
 - [The Pulumi Deployments demo video](https://www.youtube.com/watch?v=v48U7CNWutc&ab_channel=PulumiTV)
-- [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments/)
-- [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api/)
+- [Pulumi Deployments documentation](/docs/deployments/concepts/)
+- [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/)
 - [Automation API examples](https://github.com/pulumi/automation-api-examples)
 
 🚀🚀🚀 Happy building! 🚀🚀🚀

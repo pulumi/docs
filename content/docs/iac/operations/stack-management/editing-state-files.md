@@ -31,7 +31,7 @@ Before manually editing your state file, consider these troubleshooting steps:
 
 1. Run the `pulumi refresh` command.
 1. Update to the latest version of the Pulumi CLI ([installation instructions](/docs/install/)) and attempt your operation again.
-1. If a `pulumi update` failed and a resource was created and shows in your cloud console, but Pulumi is attempting to create the resource again, use the [`pulumi import`](/docs/iac/cli/commands/pulumi_import) command instead of editing your state file.
+1. If a `pulumi update` failed and a resource was created and shows in your cloud console, but Pulumi is attempting to create the resource again, use the [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) command instead of editing your state file.
 1. If you have recently updated the Pulumi CLI, consider downgrading back to the previous known-good version and attempt your operation again.
 1. Update the Pulumi SDK to the version that matches the Pulumi CLI.
 1. If the problem seems to be related to a particular resource type or provider, consider updating your provider dependencies (do this work on a separate git branch so you can easily undo any changes to your Pulumi code).
@@ -76,17 +76,17 @@ To download a state file:
 
 ### 2. Try targeted fixes with the `pulumi state` command
 
-The [`pulumi state`](/docs/iac/cli/commands/pulumi_state) command allows you to make targeted, surgical changes to your state file without the risk of exposing your entire state file in an editor for hand-editing, which can cause additional errors.
+The [`pulumi state`](/docs/iac/cli/commands/pulumi_state/) command allows you to make targeted, surgical changes to your state file without the risk of exposing your entire state file in an editor for hand-editing, which can cause additional errors.
 
 The `pulumi state` command can help with the following scenarios:
 
-- Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair)
-- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_delete)
+- Automatically repairing your state file with [`pulumi state repair`](/docs/iac/cli/commands/pulumi_state_repair/)
+- Deleting resources from your state file with [`pulumi state delete`](/docs/iac/cli/commands/pulumi_state_remove/)
 - [Moving resources between stacks](/docs/iac/operations/stack-management/moving-resources-between-stacks/) with `pulumi state move`
-- Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect)
-- Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint)
+- Unprotecting resources from deletion with [`pulumi state unprotect`](/docs/iac/cli/commands/pulumi_state_unprotect/)
+- Targeting resources for recreation with [`pulumi state taint`](/docs/iac/cli/commands/pulumi_state_taint/)
 
-Refer to [the `pulumi state` reference docs](/docs/iac/cli/commands/pulumi_state) for a complete list of capabilities.
+Refer to [the `pulumi state` reference docs](/docs/iac/cli/commands/pulumi_state/) for a complete list of capabilities.
 
 ### 3. If necessary, export your state file and edit
 

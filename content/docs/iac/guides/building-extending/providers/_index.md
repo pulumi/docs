@@ -23,7 +23,7 @@ A provider package is made up of a schema plus the code that implements it. In p
 - **Functions.** A provider may also expose functions — data-source-style reads that return values without managing a resource lifecycle.
 
 {{% notes type="info" %}}
-Providers do not typically contain [components](/docs/iac/concepts/resources/components/); components typically live in a separate package (and may incorporate resources managed by several different providers). There is no technical limitation on shipping components in a provider.
+Providers do not typically contain [components](/docs/iac/concepts/components/); components typically live in a separate package (and may incorporate resources managed by several different providers). There is no technical limitation on shipping components in a provider.
 {{% /notes %}}
 
 A provider may also be **bridged** from an upstream Terraform or OpenTofu provider, which lets Pulumi reuse the upstream provider's schema and CRUD code rather than reimplementing them. When a provider is not bridged, the schema and CRUD implementations can be generated from an API specification — for some or all resources — or written by hand.

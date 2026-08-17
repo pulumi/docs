@@ -21,9 +21,9 @@ aliases:
 - /docs/iac/concepts/vs/opentofu/
 ---
 
-Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML), or in [HCL](/docs/iac/languages-sdks/hcl/) itself; OpenTofu is a Linux Foundation fork of Terraform 1.6 that uses the HashiCorp Configuration Language (HCL).
+Pulumi and [OpenTofu](https://opentofu.org/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/) itself; OpenTofu is a Linux Foundation fork of Terraform that uses the HashiCorp Configuration Language (HCL).
 
-The two are unusually interoperable. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is fully OpenTofu compatible, and resolves providers against the OpenTofu registry by default. Pulumi Cloud can operate as a managed [OpenTofu backend](/docs/iac/get-started/terraform/terraform-state-backend/) and [remote runner](/docs/iac/get-started/terraform/terraform-remote-execution/) for the `tofu` CLI. Pulumi programs can execute your existing OpenTofu modules. Adopting Pulumi does not require leaving HCL, your modules, or the OpenTofu ecosystem behind.
+The two are unusually interoperable. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) runs valid OpenTofu configurations, with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility), and resolves providers against the OpenTofu registry by default. Pulumi Cloud can operate as a managed [OpenTofu backend](/docs/iac/get-started/terraform/terraform-state-backend/) and [remote runner](/docs/iac/get-started/terraform/terraform-remote-execution/) for the `tofu` CLI. Pulumi programs can execute your existing OpenTofu modules. Adopting Pulumi does not require leaving HCL, your modules, or the OpenTofu ecosystem behind.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of OpenTofu.
 
@@ -33,7 +33,7 @@ This page covers what each tool is, a feature-by-feature comparison, the most im
 
 For users coming from OpenTofu, Pulumi can also consume the existing OpenTofu ecosystem directly: the [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-provider/) feature generates a typed Pulumi SDK from any provider in the OpenTofu or Terraform registry, and Pulumi can [execute existing OpenTofu modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) as components inside a Pulumi program.
 
-Pulumi also runs HCL itself. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language: set `runtime: hcl` in `Pulumi.yaml`, keep your `.tf` files, and providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged automatically, exactly as they are in OpenTofu. The syntax is identical.
+Pulumi also runs HCL itself. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language: set `runtime: hcl` in `Pulumi.yaml`, keep your `.tf` files, and providers resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged automatically, exactly as they are in OpenTofu. The syntax is the same, apart from a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility).
 
 ## What is OpenTofu?
 
@@ -43,7 +43,7 @@ OpenTofu is an open-source, declarative infrastructure as code tool forked from 
 
 | Feature | Pulumi | OpenTofu |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [HCL](/docs/iac/languages-sdks/hcl/), fully OpenTofu compatible and resolves providers against the OpenTofu registry by default | [HashiCorp Configuration Language (HCL)](https://opentofu.org/docs/language/) — a declarative DSL with a fixed set of functions and meta-arguments |
+| Language support | {{< pulumi-languages "general-purpose" >}} — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/), which runs valid OpenTofu configurations with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility) and resolves providers against the OpenTofu registry by default | [HashiCorp Configuration Language (HCL)](https://opentofu.org/docs/language/) — a declarative DSL with a fixed set of functions and meta-arguments |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated from upstream API schemas; [any OpenTofu or Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be generated into a Pulumi SDK with `pulumi package add terraform-provider <name>` | Providers from the [OpenTofu Registry](https://search.opentofu.org/) or the Terraform Registry; community and custom providers are installed and pinned through the `required_providers` block |
 | Transpiled to another format? | No — programs run directly in their host language | No — HCL is interpreted by the OpenTofu CLI |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others; Pulumi Cloud can also [operate as an OpenTofu backend](/docs/iac/get-started/terraform/terraform-state-backend/) | [Self-managed by default](https://opentofu.org/docs/language/state/) (local file); remote backends include S3, GCS, Azure Blob, HTTP, and others; managed offerings available from Pulumi Cloud and third parties (Spacelift, env0, Scalr) |
@@ -63,7 +63,7 @@ OpenTofu is an open-source, declarative infrastructure as code tool forked from 
 
 OpenTofu configurations are written in [HCL](https://opentofu.org/docs/language/), a declarative DSL with a fixed set of [built-in functions](https://opentofu.org/docs/language/functions/) and meta-arguments (`for_each`, `count`, `dynamic`) for shaping resources. HCL is declarative and configuration-focused. General-purpose languages offer a different model, with classes, richer runtime logic, package management, IDE features (autocomplete, type checking, refactoring, go-to-definition), and the testing frameworks that already exist in those ecosystems, so Pulumi lets you choose the approach that fits the project. Pulumi supports HCL natively as well, alongside [YAML](/docs/iac/languages-sdks/yaml/) for users who prefer a markup format.
 
-Pulumi does not require you to give up HCL to get any of this. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class language and a superset of the HCL you already write, with no syntactic differences and full OpenTofu compatibility, down to resolving unqualified provider sources against the [OpenTofu registry](https://opentofu.org/registry/). The practical difference is that on Pulumi the language is a per-project decision you can revisit — an HCL project and a Go project share the same components, modules, state model, and policies — whereas on OpenTofu, HCL is the only option.
+Pulumi does not require you to give up HCL to get any of this. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class language that runs the HCL you already write, with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility), down to resolving unqualified provider sources against the [OpenTofu registry](https://opentofu.org/registry/). The practical difference is that on Pulumi the language is a per-project decision you can revisit — an HCL project and a Go project share the same components, modules, state model, and policies — whereas on OpenTofu, HCL is the only option.
 
 ### Cloud and service coverage
 
@@ -132,7 +132,7 @@ Yes. The [Any Terraform Provider](/docs/iac/concepts/providers/any-terraform-pro
 
 ### Can I write Pulumi programs in HCL?
 
-Yes. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language: set `runtime: hcl` in `Pulumi.yaml` and keep your `.tf` files. It is a superset of the HCL OpenTofu uses, with no syntactic differences, and unqualified provider sources resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged automatically — the same behavior you get from `tofu`. Prefix a source with `pulumi/` to use a native Pulumi provider instead. Requires Pulumi CLI 3.235.0 or later.
+Yes. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language: set `runtime: hcl` in `Pulumi.yaml` and keep your `.tf` files. It runs valid OpenTofu configurations, with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility), and unqualified provider sources resolve against the [OpenTofu registry](https://opentofu.org/registry/) and are bridged automatically — the same behavior you get from `tofu`. Prefix a source with `pulumi/` to use a native Pulumi provider instead. Requires Pulumi CLI 3.256.0 or later.
 
 ### Can I keep running OpenTofu and store state in Pulumi Cloud?
 
@@ -156,7 +156,7 @@ Yes — and this is one of the more common adoption patterns. Pulumi can read ou
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 - [Using any Terraform or OpenTofu provider with Pulumi](/docs/iac/concepts/providers/any-terraform-provider/)
 - [Using Pulumi Cloud as a Terraform or OpenTofu state backend](/docs/iac/get-started/terraform/terraform-state-backend/)

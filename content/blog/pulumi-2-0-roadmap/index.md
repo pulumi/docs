@@ -45,7 +45,7 @@ Expect to see a steady stream of improvements between now and 2.0 being finished
 
 You can write custom policies, or use off-the-shelf policies authored by the community, including our preview [AWS pack](https://github.com/pulumi/pulumi-policy-aws) and [Open Policy Agent (OPA) integration](https://github.com/pulumi/pulumi-policy-opa). Just as you can share your own infrastructure creations using your language's package manager, you can share your policies too.
 
-CrossGuard is 100% open source, enabled by `pulumi up`'s new `--policy-pack` flag, and advanced organization-wide controls are available in the Team and Enterprise Editions. To learn more, [read the CrossGuard user guide](/docs/using-pulumi/crossguard/); or, to dive straight in, try out [the getting started tutorial](/docs/using-pulumi/crossguard/get-started/).
+CrossGuard is 100% open source, enabled by `pulumi up`'s new `--policy-pack` flag, and advanced organization-wide controls are available in the Team and Enterprise Editions. To learn more, [read the CrossGuard user guide](/docs/insights/policy/); or, to dive straight in, try out [the getting started tutorial](/docs/insights/policy/get-started/).
 
 ### Testing
 
@@ -65,7 +65,7 @@ To give watch mode a try, simply run `pulumi watch`. Or, to see a demo of watch 
 
 Although we've worked hard to make the Pulumi service easy and affordable to use by default, we understand that some customers can't depend on a multi-tenanted SaaS website for their infrastructure deployments. For these customers, Pulumi already offers [custom state hosting](/docs/iac/concepts/state-and-backends/) in AWS S3, Azure Blob Storage, GCP Cloud Storage, or even as a manually managed JSON file. However, by hosting the state this way, you lose out on what makes the Pulumi service so great: identity, teams, RBAC, policies, webhooks, and more.
 
-Today we are releasing preview support for the self-hosted Pulumi service. This gives you the full capabilities of the Pulumi Enterprise SaaS, while also giving you the flexibility to run it anywhere. Self-hosted Pulumi Enterprise can run on-premises behind your firewall on a VM or in Kubernetes, in your AWS, Azure, or GCP account &mdash; virtually anywhere that can run VMs or containers. For more information, see the [tutorial about how to configure self-hosted Pulumi Enterprise](/docs/pulumi-cloud/self-hosted/), or [contact us for pricing information and a demo](/contact/).
+Today we are releasing preview support for the self-hosted Pulumi service. This gives you the full capabilities of the Pulumi Enterprise SaaS, while also giving you the flexibility to run it anywhere. Self-hosted Pulumi Enterprise can run on-premises behind your firewall on a VM or in Kubernetes, in your AWS, Azure, or GCP account &mdash; virtually anywhere that can run VMs or containers. For more information, see the [tutorial about how to configure self-hosted Pulumi Enterprise](/docs/administration/self-hosting/), or [contact us for pricing information and a demo](/contact/).
 
 ### A Lot More ...
 
@@ -75,7 +75,7 @@ This is just a sampling of what's already ready to try out. Expect a lot more, i
 
 Pulumi 1.0 gave us a solid foundation of modern infrastructure as code. As we see the things you are building with Pulumi, we understand that challenges don't stop at infrastructure provisioning. Pulumi is also about the applications themselves, as modern cloud architectures demand infrastructure and applications to coexist in harmony and unique ways that Pulumi enables.
 
-In addition to many great features, Pulumi 2.0 will also further advance the [Pulumi Crosswalk family of offerings](/docs/guides/crosswalk/) to bring more of these modern application architecture patterns to your fingertips. This includes support for additional languages beyond JavaScript and TypeScript, improved documentation, interactive tutorials, and more extensive libraries of patterns and practices.
+In addition to many great features, Pulumi 2.0 will also further advance the [Pulumi Crosswalk family of offerings](/docs/iac/guides/clouds/aws/) to bring more of these modern application architecture patterns to your fingertips. This includes support for additional languages beyond JavaScript and TypeScript, improved documentation, interactive tutorials, and more extensive libraries of patterns and practices.
 
 ## Two Asks
 

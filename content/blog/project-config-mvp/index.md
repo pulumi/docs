@@ -21,7 +21,7 @@ Pulumi will now allow you to set configuration values in your `Pulumi.yaml` file
 
 ### How to Use Project-level Configuration
 
-Pulumi has always had the concept of [configuration per stack](/docs/concepts/config/), and the changes for project level configuration haven't fundamentally changed that. You can still set config for stacks via the `pulumi config` CLI command, or by editing the `Pulumi.<stack>.yaml` file. Project level config just gives you the ability to set default values for all stacks in your `Pulumi.yaml`.
+Pulumi has always had the concept of [configuration per stack](/docs/iac/concepts/config/), and the changes for project level configuration haven't fundamentally changed that. You can still set config for stacks via the `pulumi config` CLI command, or by editing the `Pulumi.<stack>.yaml` file. Project level config just gives you the ability to set default values for all stacks in your `Pulumi.yaml`.
 
 A common request we get for this is making sure that all stacks use the same AWS region, or don't have default providers enabled. You can now do this by setting these in your `Pulumi.yaml`.
 

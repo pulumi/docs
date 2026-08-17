@@ -25,13 +25,13 @@ A Pulumi project is any folder that contains a `Pulumi.yaml` project file. At ru
 
 ## The project file (Pulumi.yaml) {#pulumi-yaml}
 
-The project file specifies which runtime to use and determines where to look for the program that should be executed during deployments. Supported runtimes are `nodejs`, `python`, `dotnet`, `go`, `java`, and `yaml`.
+The project file specifies which runtime to use and determines where to look for the program that should be executed during deployments. Supported runtimes are `nodejs`, `python`, `dotnet`, `go`, `java`, `yaml`, and `hcl`.
 
 Project files also contain metadata about your project. The project file must begin with a capital `P`, although either `.yml` or `.yaml` extension will work.
 
 A typical `Pulumi.yaml` file looks like the following. The `runtime` value depends on the language you choose:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" >}}
 
 {{% choosable language typescript %}}
 
@@ -87,10 +87,19 @@ description: A minimal Pulumi program.
 ```
 
 {{% /choosable %}}
+{{% choosable language hcl %}}
+
+```yaml
+name: webserver
+runtime: hcl
+description: A minimal Pulumi program.
+```
+
+{{% /choosable %}}
 
 {{< /chooser >}}
 
-Each language has its own conventions for locating the program's entrypoint. For TypeScript, the working directory should contain a `package.json` file that points to an entrypoint such as `index.ts`. For Python, the presence of a `__main__.py` or `setup.py` file defines the entrypoint. Go, .NET, and Java follow the conventions of their respective build tools.
+Each language has its own conventions for locating the program's entrypoint. For TypeScript, the working directory should contain a `package.json` file that points to an entrypoint such as `index.ts`. For Python, the presence of a `__main__.py` or `setup.py` file defines the entrypoint. Go, .NET, and Java follow the conventions of their respective build tools. For HCL, the working directory should contain one or more `.tf` files.
 
 The following are other examples of `Pulumi.yaml` files that define project configurations for other use cases.
 
@@ -151,7 +160,7 @@ resources:
     type: aws:s3:Bucket
 ```
 
-For more information on valid Pulumi project metadata, see the [Pulumi.yaml reference](/docs/reference/pulumi-yaml/).
+For more information on valid Pulumi project metadata, see the [Pulumi.yaml reference](/docs/iac/concepts/projects/project-file/).
 
 ## Project-relative paths
 

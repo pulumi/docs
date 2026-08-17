@@ -24,19 +24,33 @@
 {{ $currentQuestion := "" }}
 {{ $currentAnswer := slice }}
 {{ $inQuestion := false }}
+{{ $inCodeFence := false }}
 
 {{ range $index, $line := $lines }}
+  {{/* Track fenced code blocks so heading-shaped comment lines inside a
+       code sample (e.g. "# Install the CLI") are never mistaken for a
+       markdown heading or a question. */}}
+  {{ $trimmedForFence := trim $line " \t" }}
+  {{ $isFenceDelim := or (strings.HasPrefix $trimmedForFence "```") (strings.HasPrefix $trimmedForFence "~~~") }}
+  {{ if $isFenceDelim }}
+    {{ $inCodeFence = not $inCodeFence }}
+  {{ end }}
   {{/* Check if this is a question (H2 ending with ? or context-aware H3) */}}
   {{/* Context-aware H3 detection:
        - In FAQ pages (/faq in URL): All H3s are treated as questions
        - Elsewhere: H3 must end with ? to be a question */}}
   {{ $isH3Question := false }}
-  {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
-    {{ $isH3Question = strings.HasPrefix $line "### " }}
-  {{ else }}
-    {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ if and (not $inCodeFence) (not $isFenceDelim) }}
+    {{ if strings.Contains (lower $.RelPermalink) "/faq" }}
+      {{ $isH3Question = strings.HasPrefix $line "### " }}
+    {{ else }}
+      {{ $isH3Question = and (strings.HasPrefix $line "### ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+    {{ end }}
   {{ end }}
-  {{ $isH2Question := and (strings.HasPrefix $line "## ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ $isH2Question := false }}
+  {{ if and (not $inCodeFence) (not $isFenceDelim) }}
+    {{ $isH2Question = and (strings.HasPrefix $line "## ") (strings.HasSuffix (trim $line " \t\n\r") "?") }}
+  {{ end }}
   {{ if or $isH3Question $isH2Question }}
     {{/* Save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
@@ -64,7 +78,14 @@
     {{ $currentQuestion = $line }}
     {{ $currentAnswer = slice }}
     {{ $inQuestion = true }}
-  {{ else if strings.HasPrefix $line "## " }}
+  {{ else if and (not $inCodeFence) (not $isFenceDelim) (findRE "^#{1,6}[ \t]" $trimmedForFence) }}
+    {{/* Any other markdown heading (## section break or a non-question ###/#### sub-heading)
+         ends the current answer too, so narrative sub-headings inside an answer's
+         span don't get swallowed verbatim into acceptedAnswer.text.
+         Requires actual heading syntax (one to six "#" followed by a space) and
+         excludes lines inside fenced code blocks, so a heading-shaped comment
+         (e.g. "# Install the CLI") in a shell/YAML/Python sample is never
+         mistaken for a markdown heading. */}}
     {{/* New section, save previous Q&A if exists */}}
     {{ if and $currentQuestion (gt (len $currentAnswer) 0) }}
       {{ $answerText := trim (delimit $currentAnswer " " | replaceRE "\\s+" " ") " \t\n\r" }}
@@ -130,31 +151,37 @@
   {{/* Add mainEntity with questions */}}
   {{ $schema = merge $schema (dict "mainEntity" $questions) }}
 
-  {{/* Add dates with proper fallback handling */}}
-  {{ $publishDate := .PublishDate }}
-  {{ $modifiedDate := .Lastmod }}
-
-  {{/* Fix invalid dates */}}
-  {{ if or (not $publishDate) (eq ($publishDate.Format "2006-01-02") "0001-01-01") }}
-    {{ if and .GitInfo .GitInfo.AuthorDate }}
-      {{ $publishDate = .GitInfo.AuthorDate }}
-    {{ else }}
-      {{ $publishDate = now }}
-    {{ end }}
+  {{/* Add dates, but only from a real source of truth. datePublished must come
+       from an explicit front-matter date/publishDate — never from git info,
+       since a page's git history reflects when it was last *touched*, not
+       when it was first published, and using it here fabricates a publish
+       date that always equals dateModified. When no explicit front-matter
+       date exists, omit datePublished entirely (a page with only
+       dateModified is valid schema.org). dateModified may fall back to git
+       info, since that's an honest modification signal. Never fall back to
+       `now`: an absent git history (e.g. a shallow CI checkout) would
+       otherwise stamp every page as modified today, which is both wrong and
+       harmful for SEO/AEO. Mirrors schema/collectors/article-entity.html. */}}
+  {{ $publishDate := "" }}
+  {{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") }}
+    {{ $publishDate = .PublishDate }}
   {{ end }}
 
-  {{ if or (not $modifiedDate) (eq ($modifiedDate.Format "2006-01-02") "0001-01-01") }}
-    {{ if and .GitInfo .GitInfo.AuthorDate }}
-      {{ $modifiedDate = .GitInfo.AuthorDate }}
-    {{ else }}
-      {{ $modifiedDate = $publishDate }}
-    {{ end }}
+  {{ $modifiedDate := "" }}
+  {{ if and .Lastmod (ne (.Lastmod.Format "2006-01-02") "0001-01-01") }}
+    {{ $modifiedDate = .Lastmod }}
+  {{ else if and .GitInfo .GitInfo.AuthorDate }}
+    {{ $modifiedDate = .GitInfo.AuthorDate }}
+  {{ else }}
+    {{ $modifiedDate = $publishDate }}
   {{ end }}
 
-  {{ $schema = merge $schema (dict
-    "datePublished" ($publishDate.Format "2006-01-02T15:04:05Z07:00")
-    "dateModified" ($modifiedDate.Format "2006-01-02T15:04:05Z07:00")
-  ) }}
+  {{ with $publishDate }}
+    {{ $schema = merge $schema (dict "datePublished" (.Format "2006-01-02T15:04:05Z07:00")) }}
+  {{ end }}
+  {{ with $modifiedDate }}
+    {{ $schema = merge $schema (dict "dateModified" (.Format "2006-01-02T15:04:05Z07:00")) }}
+  {{ end }}
 
   {{/* Add publisher reference */}}
   {{ $schema = merge $schema (dict

@@ -63,4 +63,4 @@ You can also create your own. In Pulumi Cloud, you define the prompt - no coding
 
 ## Get Started
 
-[Custom Instructions](/docs/ai/settings/#custom-instructions) and [Slash Commands](/docs/ai/settings/#slash-commands) are available now. You can configure Custom Instructions in Neo Settings. Slash Commands come with several built-in options, and you can create custom ones tailored to your workflow.
+[Custom Instructions](/docs/ai/neo/settings/#custom-instructions) and [Slash Commands](/docs/ai/neo/settings/#slash-commands) are available now. You can configure Custom Instructions in Neo Settings. Slash Commands come with several built-in options, and you can create custom ones tailored to your workflow.

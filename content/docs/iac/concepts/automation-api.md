@@ -57,7 +57,7 @@ To enable a broad range of runtime customization, Automation API defines a `Work
 
 ### RemoteWorkspace
 
-`RemoteWorkspace` represents a workspace for running Pulumi operations remotely with [Pulumi Deployments](/docs/pulumi-cloud/deployments/), where the program is located in a remote Git repository.
+`RemoteWorkspace` represents a workspace for running Pulumi operations remotely with [Pulumi Deployments](/docs/deployments/concepts/), where the program is located in a remote Git repository.
 
 ## Stacks
 
@@ -92,6 +92,133 @@ A `Workspace` still exposes an explicit `installPlugin` method (`install_plugin`
 
 For background on plugins and the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin/) CLI commands that manage them, see [Pulumi packages](/docs/iac/concepts/packages/).
 
+## Importing resources
+
+A `Stack` also exposes an import operation, the programmatic equivalent of the [`pulumi import`](/docs/iac/cli/commands/pulumi_import/) CLI command. It brings existing cloud resources under Pulumi management without creating or modifying anything in the target cloud, generates program code for the imported resources, and records them in the stack's state so later updates manage them going forward. This makes it the building block for programmatic brownfield adoption---platforms that migrate teams onto Pulumi Cloud in bulk, rather than one resource at a time from the CLI, drive that migration through this method.
+
+The method takes a list of resources to import, each identified by its Pulumi type token, a logical name, and the cloud provider's own resource ID. If any imported resource specifies a parent or provider, you also need a name table mapping the language names used in the generated program to their corresponding parent and provider URNs. By default, imported resources are protected from deletion and the operation generates program code alongside the import; both behaviors can be turned off.
+
+The method name differs slightly across languages, since `import` is a reserved word in some of them:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import { LocalWorkspace } from "@pulumi/pulumi/automation";
+
+const stack = await LocalWorkspace.createOrSelectStack(args);
+
+const result = await stack.import({
+    resources: [
+        {
+            type: "aws:s3/bucketV2:BucketV2",
+            name: "my-bucket",
+            id: "my-existing-bucket-name",
+        },
+    ],
+    protect: false,
+});
+
+console.log(result.generatedCode);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "python" %}}
+
+```python
+from pulumi import automation as auto
+from pulumi.automation import ImportResource
+
+stack = auto.create_or_select_stack(stack_name=stack_name, work_dir=work_dir)
+
+result = stack.import_resources(
+    resources=[
+        ImportResource(
+            type="aws:s3/bucketV2:BucketV2",
+            name="my-bucket",
+            id="my-existing-bucket-name",
+        ),
+    ],
+    protect=False,
+)
+
+print(result.generated_code)
+```
+
+{{% /choosable %}}
+
+{{% choosable language "go" %}}
+
+```go
+import (
+    "fmt"
+
+    "github.com/pulumi/pulumi/sdk/v3/go/auto"
+    "github.com/pulumi/pulumi/sdk/v3/go/auto/optimport"
+)
+
+stack, err := auto.UpsertStackLocalSource(ctx, stackName, workDir)
+if err != nil {
+    return err
+}
+
+result, err := stack.ImportResources(ctx,
+    optimport.Resources([]*optimport.ImportResource{
+        {
+            Type: "aws:s3/bucketV2:BucketV2",
+            Name: "my-bucket",
+            ID:   "my-existing-bucket-name",
+        },
+    }),
+    optimport.Protect(false),
+)
+if err != nil {
+    return err
+}
+
+fmt.Println(result.GeneratedCode)
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+```csharp
+using Pulumi.Automation;
+
+var stack = await LocalWorkspace.CreateOrSelectStackAsync(args);
+
+var result = await stack.ImportAsync(new ImportOptions
+{
+    Resources = new List<ImportResource>
+    {
+        new ImportResource
+        {
+            Type = "aws:s3/bucketV2:BucketV2",
+            Name = "my-bucket",
+            Id = "my-existing-bucket-name",
+        },
+    },
+    Protect = false,
+});
+
+Console.WriteLine(result.GeneratedCode);
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+The Java Automation API doesn't yet expose a resource-import method; `WorkspaceStack` has no equivalent to the other languages' `import`/`import_resources`/`ImportResources`/`ImportAsync`. Drive `pulumi import` directly through the CLI in the meantime.
+
+{{% /choosable %}}
+
+{{% /chooser %}}
+
+This capability has shipped since Pulumi CLI v3.127.0. If your program [installs the CLI programmatically](/docs/iac/guides/building-extending/automation-api/#install-the-cli-programmatically) rather than relying on a preinstalled copy, make sure it resolves to that version or later.
+
 ## Supported languages
 
 Like the rest of Pulumi, Automation API is available in multiple languages, so you can build applications that use it in TypeScript/JavaScript, Python, Go, .NET, and Java. Automation API also supports cross-language use, where it runs in a program written in a different language than the Pulumi programs it manages.
@@ -100,8 +227,8 @@ Each language has its own Automation API reference documentation. Follow the lin
 
 |                                                        | API reference                                                           | Status |
 | ------------------------------------------------------ | ----------------------------------------------------------------------- | ------ |
-| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |
-| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/automation/) | Stable |
+| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/automation.html) | Stable |
+| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/automation.html) | Stable |
 | <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python](/docs/reference/pkg/python/pulumi/#module-pulumi.automation) | Stable |
 | <img src="/logos/tech/dotnet.png" class="h-10" />      | [.NET](/docs/reference/pkg/dotnet/pulumi.automation/pulumi.automation.html) | Stable |
 | <img src="/logos/tech/logo-golang.png" class="h-10" /> | [Go](https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/auto?tab=doc) | Stable |

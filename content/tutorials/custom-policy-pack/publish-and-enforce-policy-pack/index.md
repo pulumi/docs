@@ -52,6 +52,6 @@ The `latest` parameter indicates that the most recent version of the policy shou
 
 ## Next Steps
 
-Congratulations! Now that you have published your first custom policy pack, all the pieces are in place to enforce compliance across your organization. For more example policy packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [CrossGuard guide](/docs/using-pulumi/crossguard/).
+Congratulations! Now that you have published your first custom policy pack, all the pieces are in place to enforce compliance across your organization. For more example policy packs, you can check out the [examples repo](https://github.com/pulumi/examples/tree/master/policy-packs). You can also find more documentation in the [Pulumi Policies guide](/docs/insights/policy/).
 
 {{< tutorials/stepper >}}

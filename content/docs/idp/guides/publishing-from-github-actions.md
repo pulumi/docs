@@ -19,7 +19,7 @@ This guide walks through setting up automated testing and publishing workflows t
 
 ## Prerequisites
 
-- A Pulumi component authored and working locally (see [Build a Component](/docs/iac/using-pulumi/build-a-component))
+- A Pulumi component authored and working locally (see [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/))
 - A [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) containing your component code
 - Access to a [Pulumi Cloud private registry](/docs/idp/concepts/private-registry)
 - Configure Pulumi and GitHub integrations: [OIDC](/docs/administration/access-identity/oidc-issuers/github/), [GitHub App](/docs/integrations/version-control/github-app/), etc.
@@ -29,7 +29,7 @@ This guide walks through setting up automated testing and publishing workflows t
 
 The recommended workflow for developing and publishing components follows these stages:
 
-1. **Local Development**: Author your component using a [local development workflow](/docs/iac/using-pulumi/build-a-component)
+1. **Local Development**: Author your component using a [local development workflow](/docs/iac/guides/building-extending/components/build-a-component/)
 2. **Repository Setup**: Create a [GitHub repository](https://github.com/pulumi-labs/pulumi-component-lifecycle-example) with proper documentation
 3. **Testing Infrastructure**: Write [comprehensive unit and integration tests](/docs/iac/concepts/components/testing-components)
 4. **Automated Testing**: Set up [GitHub Actions](https://github.com/pulumi-labs/pulumi-component-lifecycle-example/tree/main/.github/workflows/test.yml) for continuous testing
@@ -427,8 +427,8 @@ Once your automated publishing workflow is established, consider these enhanceme
 
 ## Learn More
 
-- [Build a Component](/docs/iac/using-pulumi/build-a-component)
+- [Build a Component](/docs/iac/guides/building-extending/components/build-a-component/)
 - [Testing Components](/docs/iac/concepts/components/testing-components)
 - [Private Registry](/docs/idp/concepts/private-registry)
 - [GitHub Actions for Pulumi](/docs/iac/operations/continuous-delivery/github-actions)
-- [Pulumi Deployments](/docs/pulumi-cloud/deployments)
+- [Pulumi Deployments](/docs/deployments/concepts/)

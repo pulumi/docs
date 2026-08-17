@@ -28,7 +28,7 @@ You will need the following tools to complete this tutorial:
 
 ### Create project and upload to a new GitHub repository
 
-* Create a project by running `pulumi new` with the `random-typescript` template. Passing the template name and `--yes` accepts the default project name (the directory name), description, and stack name without prompting. This template uses the [Pulumi Random provider](/registry/packages/random/) to generate random values, so the deployment runs to completion without any cloud credentials or [OIDC](/docs/pulumi-cloud/oidc/) configuration — letting you see Deployments work end to end before wiring up a real cloud provider.
+* Create a project by running `pulumi new` with the `random-typescript` template. Passing the template name and `--yes` accepts the default project name (the directory name), description, and stack name without prompting. This template uses the [Pulumi Random provider](/registry/packages/random/) to generate random values, so the deployment runs to completion without any cloud credentials or [OIDC](/docs/deployments/guides/oidc/) configuration — letting you see Deployments work end to end before wiring up a real cloud provider.
 
 ```bash
 $ mkdir test_deployments && cd test_deployments
@@ -76,7 +76,7 @@ Now that we have a GitHub repository, we can configure it to use Pulumi Deployme
 
 1. The `random-typescript` template needs no cloud credentials, so you can leave the remaining settings at their defaults. When you later deploy a project that provisions cloud resources, this is where you'd configure things like:
 
-   * [OIDC Connect](/docs/pulumi-cloud/oidc/) for cloud authentication
+   * [OIDC Connect](/docs/deployments/guides/oidc/) for cloud authentication
    * [Environment Variables](/docs/deployments/concepts/settings/environment-variables/)
 
    See [Pulumi Deployment Settings](/docs/deployments/concepts/settings) for more information about the available settings.

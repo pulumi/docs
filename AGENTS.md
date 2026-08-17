@@ -154,6 +154,12 @@ To promote an event or another post from inside a post, embed its card with `{{<
 
 Card layouts live in `layouts/partials/blog/card/` — `medium` (grid tile), `contained` (`medium` boxed in a `.card`), `wide` (text left, square image right; the homepage feed's card view **and** in-body embeds), `small`, `featured`, `series`, `list-row`. Reuse one; don't clone its markup into a new partial. `wide` renders only its wrapper's contents and takes the wrapper's classes as a param, because the homepage row starts `hidden` (the view toggle flips it to flex) while an embed is a boxed `.card`.
 
+### Images and videos in a post body
+
+Post-body images and `{{< video >}}` clips open in a lightbox when — and only when — enlarging them would show the reader more. `theme/src/ts/blog-lightbox.ts` measures each one in `.blog-post-content` against the viewport (intrinsic size vs. rendered size vs. the size the overlay could draw it at) and wraps the ones that qualify in a trigger button; the overlay shell is `layouts/partials/blog/lightbox.html`, rendered by `layouts/blog/single.html`. Nothing about this is author-driven: **do not add a wrapping link, a `figure`, or a per-image opt-in** to make something clickable, and don't hand-roll a second modal. The escape hatch runs the other way — `data-no-lightbox` on the element or any ancestor keeps it plain. A post-body video that already has `controls` is skipped entirely: a wrapping button would swallow clicks meant for the control bar, and those controls already offer fullscreen. (The overlay's own copy of a video always has controls, and is exempt from click-to-close for the same reason.)
+
+The thresholds live at the top of the TypeScript file with the reasoning for each; tune them there rather than special-casing a post. Two of them, `OVERLAY_MARGIN_X`/`OVERLAY_MARGIN_Y`, mirror the overlay's padding and its caption budget — **if you change the spacing in `lightbox.html`, change them to match**, or the script will promise an enlargement the overlay can't deliver.
+
 ### Dates: `updated` vs `lastmod`
 
 When you revise an existing blog post, use **`updated: YYYY-MM-DD`** — not `lastmod`. This is the established convention (the vast majority of revised posts use it) and the one wired to the UI: `layouts/blog/single.html` renders `.Params.updated` as the visible "Updated \<date\>" line beside the publish date. Leave the original `date` unchanged; set `updated` to the revision date. It's the same field documented in `BLOGGING.md`.
@@ -173,6 +179,12 @@ Case studies live at `content/case-studies/<slug>.md` — scaffold a new one wit
 - **`industry`** — required, singular, closed set defined in `data/case_study_industries.yaml` (`make lint` enforces it). That file's header comment is the authoritative reference.
 - **Logo tile** — the cards on `/case-studies/` and the industry term pages render each logo centered on a brand-color tile, driven by optional front matter (`logo_bg_color`, `logo_style: white|dark`, `logo_size: lg`, `card_logo`), all documented in `layouts/partials/case-studies/card.html` and format-checked by `make lint`.
 - **`customer_logo` is not card-only**: it also renders on **light backgrounds** in the case-study page's quote panel (`layouts/case-studies/single.html`) and the template-page partials (`layouts/partials/template-partials/template-case-study-{cards,grid}.html`). Never point it at a white/light asset — put dark-background variants in `card_logo` instead.
+
+---
+
+## Events
+
+Event pages live at `content/events/<slug>/index.md` — a bundle whose content is entirely frontmatter; the schema's source of truth is `archetypes/event/index.md` (its comments are kept current). **Create a new event with the `/create-event` skill** (`.claude/commands/create-event/SKILL.md`): it collects details from the prompt or an interactive wizard, scaffolds the bundle, generates social cards via `/event-meta-image`, files the pulumi/marketing tracking issue from its issue template, and opens the docs PR. It supports `--dry-run` (writes issue/PR previews instead of touching GitHub) and delegates execution to the `event-creator` subagent (`.claude/agents/event-creator.md`). HubSpot form and Salesforce campaign IDs come back from marketing on the tracking issue — never invent them; a gated page carries TODO placeholders until they land, then a rerun of `/create-event <issue-url>` wires them in.
 
 ---
 

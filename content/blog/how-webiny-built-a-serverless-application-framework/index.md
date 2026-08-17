@@ -74,8 +74,8 @@ The key features that we were looking for were the following:
 So, the search began, and soon enough, we discovered Pulumi. And as it turned out, it not only checked all the boxes we had initially listed but much more:
 
 - different options when it comes to storing cloud infrastructure state files: a managed SaaS ([pulumi.com](https://app.pulumi.com/signin)) with a console and self-hosted, (for example [Amazon S3](https://aws.amazon.com/s3/))
-- ability to deploy cloud infrastructure into multiple environments using its concept of [stacks](/docs/concepts/stack/)
-- advanced features like [Policy as Code](/docs/using-pulumi/crossguard/get-started/) and [watch mode](/docs/iac/cli/commands/pulumi_watch/)
+- ability to deploy cloud infrastructure into multiple environments using its concept of [stacks](/docs/iac/concepts/stacks/)
+- advanced features like [Policy as Code](/docs/insights/policy/get-started/) and [watch mode](/docs/iac/cli/commands/pulumi_watch/)
 - great documentation
 - a vibrant community of developers and a responsive team behind the product
 
@@ -109,17 +109,17 @@ As an example, a default Webiny project includes three project applications:
 
 If we were to compare these by the complexity of the necessary cloud infrastructure to deploy, the Admin Area is the simplest. It only relies on a single [Amazon S3](https://aws.amazon.com/s3/) bucket and an [Amazon Cloudfront](https://aws.amazon.com/cloudfront/) distribution. On the other hand, the API project application is the most complex one as it needs to deploy multiple [AWS Lambda](https://aws.amazon.com/lambda/) functions, [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) tables, Amazon S3 buckets, and more.
 
-Ultimately, we decided that each project application should be a [Pulumi project](/docs/concepts/projects/#projects). With this approach, we gave developers the ability to both define and deploy respective cloud infrastructures independently. And, with the concept of [stacks](/docs/concepts/stack/), they are also able to deploy them into multiple environments, which we’ll show in a moment.
+Ultimately, we decided that each project application should be a [Pulumi project](/docs/iac/concepts/projects/#projects). With this approach, we gave developers the ability to both define and deploy respective cloud infrastructures independently. And, with the concept of [stacks](/docs/iac/concepts/stacks/), they are also able to deploy them into multiple environments, which we’ll show in a moment.
 
 ### Pulumi CLI and Webiny CLI
 
-Once we understood how to use Pulumi concepts with Webiny's project organization, the next step was integrating the [Pulumi CLI](/docs/cli/) with the [Webiny CLI](https://www.webiny.com/docs/key-topics/webiny-cli?utm_source=Pulumi&utm_medium=blog-post&utm_campaign=webiny-blog-promotion&utm_content=how-webiny-built-framework-with-pulumi&utm_term=W00650).
+Once we understood how to use Pulumi concepts with Webiny's project organization, the next step was integrating the [Pulumi CLI](/docs/iac/cli/) with the [Webiny CLI](https://www.webiny.com/docs/key-topics/webiny-cli?utm_source=Pulumi&utm_medium=blog-post&utm_campaign=webiny-blog-promotion&utm_content=how-webiny-built-framework-with-pulumi&utm_term=W00650).
 
 And although the Pulumi CLI is great, we still wanted to keep it super simple for the user and make the overall developer experience as straightforward and unified as possible. For starters, we didn’t want our users to install the Pulumi CLI manually. We wanted it to happen automatically.
 
 We’ve created our version of the [Pulumi SDK](https://github.com/webiny/webiny-js/tree/v5.28.0/packages/pulumi-sdk), which lets us use the Pulumi CLI more programmatically. It also enables us to make the Pulumi CLI download experience as smooth as possible. Essentially, whenever a user runs a deployment-related command, all of the necessary Pulumi CLI binaries and plugins are downloaded and stored inside the project’s node_modules folder.
 
-> Although we could’ve saved us some time by using Pulumi’s [Automation API](/docs/using-pulumi/automation-api/) (instead of creating the mentioned Pulumi SDK), at the time, the Automation API was still in preview and not generally available. And since the setup we already had was working well, we decided to keep it and hopefully revisit the Automation API integration in the future.
+> Although we could’ve saved us some time by using Pulumi’s [Automation API](/docs/iac/concepts/automation-api/) (instead of creating the mentioned Pulumi SDK), at the time, the Automation API was still in preview and not generally available. And since the setup we already had was working well, we decided to keep it and hopefully revisit the Automation API integration in the future.
 
 Once we had that in place, we were ready for the next step, exposing a couple of fundamental deployment-related commands via the Webiny CLI. The following examples show us some of the commands users can use:
 
@@ -235,7 +235,7 @@ export = async () => {
 
 Another useful feature is the automatic tagging of the deployed cloud infrastructure resources. In other words, every *taggable* cloud infrastructure resource will be tagged with `WbyProjectName` and `WbyEnvironment` tags. For developers, this makes it much easier to see all of the deployed resources within their Webiny project.
 
-We created a `tagResources` function, which essentially registers a global stack transformation via [`pulumi.runtime.registerStackTransformation`](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#registerStackTransformation) function to achieve this.
+We created a `tagResources` function, which essentially registers a global stack transformation via [`pulumi.runtime.registerStackTransformation`](/docs/reference/pkg/nodejs/pulumi/pulumi/modules/runtime.html#registerStackTransformation) function to achieve this.
 
 It is also applied in the same [`index.ts`](https://github.com/webiny/webiny-js/blob/v5.28.0/packages/cwp-template-aws/template/common/apps/admin/pulumi/index.ts#L6-L11) entrypoint file we saw in the previous section:
 
@@ -255,7 +255,7 @@ export = async () => {
 
 #### Protect Feature
 
-Finally, to protect our users from accidental deletions of mission-critical cloud infrastructure resources, we’ve used Pulumi’s [protect](/docs/concepts/resources/#protect) feature:
+Finally, to protect our users from accidental deletions of mission-critical cloud infrastructure resources, we’ve used Pulumi’s [protect](/docs/iac/concepts/resources/#protect) feature:
 
 > The protect option marks a resource as protected. A protected resource cannot be deleted directly. Instead, you must first set `protect: false` and run `pulumi up`. Then you can delete the resource by removing the line of code or by running `pulumi destroy`. The default is to inherit this value from the parent resource and `false` for resources without a parent.
 

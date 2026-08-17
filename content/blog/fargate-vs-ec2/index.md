@@ -207,9 +207,9 @@ Whether you choose EC2 or Fargate, Pulumi makes it easy to manage in your favori
 With Pulumi, you get:
 
 - [Complete control over EKS cluster configuration](/docs/iac/clouds/aws/guides/eks/), including node types, scaling policies, and networking setup
-- [Built-in support for both EC2 node groups and Fargate profiles](/docs/iac/clouds/kubernetes/guides/worker-nodes/) within the same cluster
+- [Built-in support for both EC2 node groups and Fargate profiles](/docs/integrations/clouds/kubernetes/) within the same cluster
 - [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your cluster configuration before deployment
-- [Automation APIs](/docs/iac/packages-and-automation/automation-api/) for programmatic infrastructure management and custom tooling
+- [Automation APIs](/docs/iac/concepts/automation-api/) for programmatic infrastructure management and custom tooling
 
 Ready to streamline your EKS infrastructure management?
 

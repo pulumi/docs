@@ -10,7 +10,7 @@ authors: ["diana-esteves"]
 
 [CircleCI](https://circleci.com/) is an agile, continuous integration/continuous deployment ([CI/CD](/what-is/what-is-ci-cd/)) platform. It aims to automate software development processes for faster, more reliable releases. CircleCI secrets empower developers to safeguard critical data while streamlining workflows.
 
-## What is a CircleCI secret?
+## CircleCI secrets, defined
 
 CircleCI secrets are sensitive information that must be protected to guarantee the safe and reliable building and deployment of applications within your CI/CD pipeline. They can include API tokens, SSH keys, and environment variables containing credentials. These are to be hidden from the public and protected with access control to maintain security and integrity. In CircleCI, secrets are used within the configuration of continuous integration and delivery pipelines to allow automated processes to interact securely with other services, repositories, and infrastructure. Managing these secrets is crucial to prevent unauthorized access and potential security breaches.
 
@@ -146,7 +146,7 @@ Here are five best practices for managing CircleCI secrets:
 - **Adopt context-based management:** Organize your secrets using [contexts](https://circleci.com/docs/contexts/) in CircleCI. Group related secrets together in a context, making managing access controls and permissions easier. Contexts ensure that only authorized personnel can access specific secrets based on their roles or responsibilities.
 - **Use fine-grained access controls:** Set up fine-grained access controls and permissions for each context to restrict who can manage and utilize the secrets within that context. By carefully assigning permissions, you reduce the risk of unauthorized access to sensitive information, enhancing the overall security of your CI/CD process.
 - **Avoid hardcoding secrets in configuration files:** Refrain from hardcoding secret values directly in your configuration files. Instead, reference secrets using the `$SECRET_NAME` syntax. This approach keeps sensitive information separate from the codebase, minimizing the risk of accidental exposure and making it easier to update or rotate secrets without modifying the code.
-- **Rotate secrets:** Implement a regular rotation schedule for your secrets, especially for long-lived API keys or credentials. CircleCI provides an easy way to update secrets without modifying the configuration files. Note that OIDC can eliminate the need to store long-lived secrets in CircleCI. Learn [how to use OIDC with Pulumi ESC](/docs/esc/environments/configuring-oidc/#configuring-openid-with-your-cloud-provider) to connect to AWS, GCP, ECR, and more.
+- **Rotate secrets:** Implement a regular rotation schedule for your secrets, especially for long-lived API keys or credentials. CircleCI provides an easy way to update secrets without modifying the configuration files. Note that OIDC can eliminate the need to store long-lived secrets in CircleCI. Learn [how to use OIDC with Pulumi ESC](/docs/esc/guides/configuring-oidc/#configuring-openid-with-your-cloud-provider) to connect to AWS, GCP, ECR, and more.
 - **Perform auditing and monitoring:** Implement auditing and monitoring mechanisms to track changes and usage of secrets within your CI/CD pipeline. CircleCI provides tools and logs that enable you to monitor when and how secrets are accessed.
 
 Check out [more security recommendations](https://circleci.com/docs/security-recommendations/) provided by CircleCI.
@@ -161,10 +161,28 @@ Using CircleCI secrets comes with particular challenges and considerations that 
 
 Addressing these challenges and considerations requires a thoughtful approach to [secrets management](/what-is/what-is-secrets-management/), clear communication within the development team, and a commitment to maintaining security best practices throughout the CI/CD pipeline. Regular reviews and updates to your secret management strategy will help ensure a secure and efficient development process.
 
+## Frequently asked questions
+
+### What is a CircleCI secret?
+
+A CircleCI secret is an encrypted environment variable or credential, such as an API token, SSH key, or password, stored in a CircleCI project's or context's settings rather than in code. CircleCI injects it into build jobs at runtime so pipelines can authenticate with external services without exposing the underlying value in configuration files, logs, or version control.
+
+### What is CircleCI used for?
+
+CircleCI is a continuous integration and continuous delivery (CI/CD) platform used to automate the build, test, and deployment stages of the software release process. Teams configure pipelines that trigger on code changes, run automated test suites, and deploy validated builds to staging or production environments, reducing manual effort and catching issues earlier in development.
+
+### What are CircleCI's key features?
+
+CircleCI's headline capabilities include contexts, which let teams share secrets securely across multiple projects and pipelines without duplicating them; orbs, reusable packages of configuration that simplify integrating third-party tools; and parallelism with configurable resource classes, which split test suites across multiple containers to shorten build times on larger codebases.
+
+### How did the CircleCI breach demonstrate the risks of long-lived secrets?
+
+In January 2023, CircleCI disclosed a security incident in which an attacker gained access to its internal systems. CircleCI advised all customers to immediately rotate every secret and token stored in the platform as a precaution. The episode illustrated why static, long-lived secrets are risky: a single compromised store can expose credentials across many pipelines, which is why short-lived, frequently rotated, or dynamically issued secrets are preferable.
+
 ## Conclusion
 
 CircleCI secrets solve storage and access, but they leave you holding long-lived credentials that someone has to track, rotate, and audit as your contexts multiply. The more durable move is to remove the secret from the loop entirely: use OIDC so CircleCI exchanges a short-lived, job-scoped token at runtime instead of reading a stored key. Treat stored secrets as the exception you actively work to eliminate, not the default you accumulate.
 
-To go further, learn how to [use OIDC with Pulumi ESC](/docs/esc/environments/configuring-oidc/#configuring-openid-with-your-cloud-provider) to connect CircleCI to your cloud provider without storing long-lived secrets.
+To go further, learn how to [use OIDC with Pulumi ESC](/docs/esc/guides/configuring-oidc/#configuring-openid-with-your-cloud-provider) to connect CircleCI to your cloud provider without storing long-lived secrets.
 
 The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

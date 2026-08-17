@@ -22,7 +22,7 @@ Learn how to [automate the publication of Pulumi components](/docs/idp/guides/pu
 
 The [best practices section](/docs/idp/guides/best-practices/) introduces the Four Factors framework (templates, components, environments, and policies) and provides [proven architectural patterns](/docs/idp/guides/best-practices/patterns/) for building production-ready internal developer platforms.
 
-## Additional resources
+## Learn more
 
 - [Pulumi IDP Concepts](/docs/idp/concepts/)
 - [Private Registry](/docs/idp/concepts/private-registry/)

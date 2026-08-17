@@ -27,7 +27,7 @@ aliases:
 - /docs/iac/comparisons/cloud-templates/
 ---
 
-Pulumi and [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) are both declarative infrastructure as code tools for AWS. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); AWS CloudFormation uses JSON or YAML templates and provisions only AWS resources.
+Pulumi and [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html) are both declarative infrastructure as code tools for AWS. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and supports any cloud or SaaS provider through the [Pulumi Registry](/registry/); AWS CloudFormation uses JSON or YAML templates and provisions only AWS resources.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of AWS CloudFormation.
 
@@ -45,7 +45,7 @@ AWS CloudFormation is an AWS-managed service for provisioning AWS resources from
 
 | Feature | Pulumi | AWS CloudFormation |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | JSON or YAML templates, with [intrinsic functions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html) (`Fn::Join`, `Fn::If`, `Fn::ForEach`, etc.) for limited dynamic logic |
+| Language support | {{< pulumi-languages "general-purpose" >}} — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | JSON or YAML templates, with [intrinsic functions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html) (`Fn::Join`, `Fn::If`, `Fn::ForEach`, etc.) for limited dynamic logic |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated from upstream API schemas; [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider | AWS services only; third-party resources are supported through [CloudFormation Registry](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html) extensions and [custom resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-custom-resources.html) backed by AWS Lambda |
 | Transpiled to another format? | No — programs run directly in their host language | No — templates are interpreted by the CloudFormation service |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Managed by the CloudFormation service inside the AWS account; no user-accessible state file |
@@ -148,7 +148,7 @@ Yes — and this is one of the more common adoption patterns. Teams keep AWS inf
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Get started with Pulumi and AWS](/docs/iac/get-started/aws/)
 - [Pulumi for AWS](/docs/integrations/clouds/aws/)
 - [Pulumi vs. AWS CDK](/docs/iac/comparisons/aws-cdk/)

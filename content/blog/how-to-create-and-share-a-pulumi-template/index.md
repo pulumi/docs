@@ -49,7 +49,7 @@ As Pulumi template authors, our general goal is twofold:
 
 A good template, in other words, is one that not only takes you from `pulumi new` to `pulumi up` in as few steps as possible, but that also leaves you with an open, extensible program you can use as a foundation to build upon. For us, the goal is to create a template that can be used to provision the minimal set of cloud resources one needs to run a static website on AWS. And done well, our template will also lend itself easily to further development --- custom domains, serverless functions, edge caching, and so on.
 
-To that end, let's start by replacing the contents of `Pulumi.yaml` with the following program, which defines the core resources we need: an [S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) to hold the files of the website and an [S3 bucket object](/registry/packages/aws/api-docs/s3/bucketobject/) (`index.html`) to serve as its home page. We'll also export the computed URL of the website as a Pulumi [stack output](/docs/concepts/stack/#outputs) to give us something to navigate to after deployment:
+To that end, let's start by replacing the contents of `Pulumi.yaml` with the following program, which defines the core resources we need: an [S3 bucket](/registry/packages/aws/api-docs/s3/bucket/) to hold the files of the website and an [S3 bucket object](/registry/packages/aws/api-docs/s3/bucketobject/) (`index.html`) to serve as its home page. We'll also export the computed URL of the website as a Pulumi [stack output](/docs/iac/concepts/stacks/#outputs) to give us something to navigate to after deployment:
 
 ```yaml
 name: my-template-project
@@ -138,7 +138,7 @@ aws:region: The AWS region to deploy into: (us-west-2)
 
 You got this prompt because the authors of the [`aws-yaml` template](https://github.com/pulumi/templates/tree/master/aws-yaml) knew that not every user would want to deploy into the same hard-coded AWS region, so they defined an `aws:region` setting to make it both configurable and optional, falling back to `us-west-2` by default. Users of this template are free to change this value if they like or leave it alone and accept the default.
 
-This is all made possible by the existence of the [`template` block](/docs/reference/pulumi-yaml/#template-options) in `Pulumi.yaml`:
+This is all made possible by the existence of the [`template` block](/docs/iac/concepts/projects/project-file/#template-options) in `Pulumi.yaml`:
 
 ```yaml
 # The `template` block from the aws-yaml template.
@@ -157,7 +157,7 @@ The `template` block defines two properties:
 * An optional `description` property to give new projects created from the template
 * A `config` block that lists the names, descriptions, and default values of any settings that should be configurable for new projects
 
-The `template` block is essentially where all the new-project magic happens. Any settings you define in this block will prompt users for their values and apply those settings to the project's initial stack (for example, the `dev` stack we created in Step 1). By default, these values are captured and applied as plain-text strings, but you can also capture them [as encrypted Pulumi secrets](/docs/reference/pulumi-yaml/#config) by adding `secret: true` --- an appropriate choice for prompting for sensitive data like passwords, API keys, and the like.
+The `template` block is essentially where all the new-project magic happens. Any settings you define in this block will prompt users for their values and apply those settings to the project's initial stack (for example, the `dev` stack we created in Step 1). By default, these values are captured and applied as plain-text strings, but you can also capture them [as encrypted Pulumi secrets](/docs/iac/concepts/projects/project-file/#config) by adding `secret: true` --- an appropriate choice for prompting for sensitive data like passwords, API keys, and the like.
 
 Our super-simple website template doesn't need much in the way of configurability --- but let's define some anyway just to see how it's done. While we're at it, we'll make a few adjustments to make project names and descriptions configurable as well.
 
@@ -283,7 +283,7 @@ Be sure to tidy up as before with `pulumi destroy` when you're done.
 
 ## Bonus step: Add a Deploy with Pulumi button
 
-In addition to the CLI, your users can also create new projects in the Pulumi Service with the [Deploy with Pulumi button](/docs/pulumi-cloud/pulumi-button/). This is a great option for making your project installable from GitHub READMEs and other team docs. Here, for example, is a Deploy button that creates a new project using my version of the gist we created above:
+In addition to the CLI, your users can also create new projects in the Pulumi Service with the [Deploy with Pulumi button](/docs/idp/integrations/pulumi-button/). This is a great option for making your project installable from GitHub READMEs and other team docs. Here, for example, is a Deploy button that creates a new project using my version of the gist we created above:
 
 [![Deploy with Pulumi](/images/deploy-with-pulumi/dark.svg)](https://app.pulumi.com/new?template=https://gist.github.com/cnunciato/b331efae6a4740c237a0364d17fe220f)
 
@@ -313,9 +313,9 @@ As you can see, creating a template is both simple and powerful, and I hope this
 
 * [Pulumi Templates](/templates/)
 * The [pulumi/templates repository](https://github.com/pulumi/templates) on GitHub
-* [Pulumi project file reference](/docs/reference/pulumi-yaml)
+* [Pulumi project file reference](/docs/iac/concepts/projects/project-file/)
 * [`pulumi new` reference](/docs/iac/cli/commands/pulumi_new/)
-* [Deploy with Pulumi button reference](/docs/pulumi-cloud/pulumi-button/)
+* [Deploy with Pulumi button reference](/docs/idp/integrations/pulumi-button/)
 
 And as always, be sure to stop by [Pulumi Community Slack](https://slack.pulumi.com/) to let us know know how it goes.
 

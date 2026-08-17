@@ -23,7 +23,7 @@ Because mocks don't execute any real work, unit tests run very fast. Also, they 
 
 ## Get started
 
-Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/clouds/aws/get-started/) guide to set up a basic Pulumi program in your language of choice.
+Build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/iac/get-started/aws/) guide to set up a basic Pulumi program in your language of choice.
 
 Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 
@@ -204,11 +204,6 @@ class MyMocks(pulumi.runtime.Mocks):
         return [args.name + '_id', args.inputs]
     def call(self, args: pulumi.runtime.MockCallArgs):
         return {}
-
-pulumi.runtime.set_mocks(
-    MyMocks(),
-    preview=False,  # Sets the flag `dry_run`, which is true at runtime during a preview.
-)
 ```
 
 {{% notes type="warning" %}}
@@ -421,8 +416,6 @@ class MyMocks(pulumi.runtime.Mocks):
 
     def call(self, args: pulumi.runtime.MockCallArgs):
         return {}
-
-pulumi.runtime.set_mocks(MyMocks())
 ```
 
 In your program, you can then use a `StackReference` as usual:
@@ -604,21 +597,28 @@ describe("Infrastructure", function() {
 
 {{% /choosable %}}
 {{% choosable language "python" %}}
-The overall structure and scaffolding of our tests will look like any ordinary Python's unittest testing:
+Pulumi's Python runtime requires an asyncio event loop. Subclass `unittest.IsolatedAsyncioTestCase` to create and close a separate event loop for each test. In `setUp`, initialize the mocks and run the Pulumi program:
 
 test_ec2.py:
 
 ```python
+import runpy
 import unittest
 import pulumi
 
 # ... MyMocks as shown above
-pulumi.runtime.set_mocks(MyMocks())
 
-# It's important to import `infra` _after_ the mocks are defined.
-import infra
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    def setUp(self):
+        pulumi.runtime.set_mocks(
+            MyMocks(),
+            preview=False, # Sets the flag `dry_run`, which is true at runtime during a preview.
+        )
+        # Run the program fresh for each test *after* setting the mocks.
+        program = runpy.run_path("__main__.py")
+        self.group = program["group"]
+        self.server = program["server"]
 
-class TestingWithMocks(unittest.TestCase):
     # TODO(check 1): Instances have a Name tag.
     # TODO(check 2): Instances must not use an inline userData script.
     # TODO(check 3): Instances must not have SSH open to the Internet.
@@ -745,15 +745,18 @@ it("must have a name tag", function(done) {
 {{% choosable language "python" %}}
 
 ```python
-# check 1: Instances have a Name tag.
-@pulumi.runtime.test
-def test_server_tags(self):
-    def check_tags(args):
-        urn, tags = args
-        self.assertIsNotNone(tags, f'server {urn} must have tags')
-        self.assertIn('Name', tags, 'server {urn} must have a name tag')
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    # ... setUp as shown above
 
-    return pulumi.Output.all(infra.server.urn, infra.server.tags).apply(check_tags)
+    # check 1: Instances have a Name tag.
+    @pulumi.runtime.test
+    def test_server_tags(self):
+        def check_tags(args):
+            urn, tags = args
+            self.assertIsNotNone(tags, f"server {urn} must have tags")
+            self.assertIn("Name", tags, f"server {urn} must have a name tag")
+
+        return pulumi.Output.all(self.server.urn, self.server.tags).apply(check_tags)
 ```
 
 {{% /choosable %}}
@@ -855,14 +858,17 @@ it("must not use userData (use an AMI instead)", function(done) {
 {{% choosable language "python" %}}
 
 ```python
-# check 2: Instances must not use an inline userData script.
-@pulumi.runtime.test
-def test_server_userdata(self):
-    def check_user_data(args):
-        urn, user_data = args
-        self.assertFalse(user_data, f'illegal use of user_data on server {urn}')
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    # ... setUp as shown above
 
-    return pulumi.Output.all(infra.server.urn, infra.server.user_data).apply(check_user_data)
+    # check 2: Instances must not use an inline userData script.
+    @pulumi.runtime.test
+    def test_server_userdata(self):
+        def check_user_data(args):
+            urn, user_data = args
+            self.assertFalse(user_data, f"illegal use of user_data on server {urn}")
+
+        return pulumi.Output.all(self.server.urn, self.server.user_data).apply(check_user_data)
 ```
 
 {{% /choosable %}}
@@ -953,15 +959,25 @@ it("must not open port 22 (SSH) to the Internet", function(done) {
 {{% choosable language "python" %}}
 
 ```python
-# check 3: Test if port 22 for ssh is exposed.
-@pulumi.runtime.test
-def test_security_group_rules(self):
-    def check_security_group_rules(args):
-        urn, ingress = args
-        ssh_open = any([rule['from_port'] == 22 and any([block == "0.0.0.0/0" for block in rule['cidr_blocks']]) for rule in ingress])
-        self.assertFalse(ssh_open, f'security group {urn} exposes port 22 to the Internet (CIDR 0.0.0.0/0)')
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    # ... setUp as shown above
 
-    return pulumi.Output.all(infra.group.urn, infra.group.ingress).apply(check_security_group_rules)
+    # check 3: Test if port 22 for ssh is exposed.
+    @pulumi.runtime.test
+    def test_security_group_rules(self):
+        def check_security_group_rules(args):
+            urn, ingress = args
+            ssh_open = any(
+                rule["from_port"] == 22
+                and "0.0.0.0/0" in rule["cidr_blocks"]
+                for rule in ingress
+            )
+            self.assertFalse(
+                ssh_open,
+                f"security group {urn} exposes port 22 to the Internet (CIDR 0.0.0.0/0)",
+            )
+
+        return pulumi.Output.all(self.group.urn, self.group.ingress).apply(check_security_group_rules)
 ```
 
 {{% /choosable %}}

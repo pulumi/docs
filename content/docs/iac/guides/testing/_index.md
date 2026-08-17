@@ -28,7 +28,7 @@ Similarly, Pulumi provides multiple testing styles for cloud programs:
 
 The following table summarizes the differences between the three approaches:
 
-|                                | [**Unit Tests**](/docs/iac/guides/testing/unit)    | [**Property Tests**](/docs/iac/guides/testing/property-testing)  | [**Integration Tests**](/docs/iac/guides/testing/integration)  |
+|                                | [**Unit Tests**](/docs/iac/guides/testing/unit)    | [**Property Tests**](/docs/insights/policy/policy-packs/authoring/)  | [**Integration Tests**](/docs/iac/guides/testing/integration)  |
 |--------------------------------|---------------|---------|----------|
 | Provision real infrastructure  | No            | Yes     | Yes      |
 | Require the Pulumi CLI         | No            | Yes     | Yes      |
@@ -46,7 +46,7 @@ Unit tests are authored in the same language as the Pulumi program under test. Y
 
 Because cloud resources are not created, you can't write a test that would evaluate the behavior of infrastructure. For example, you can't make HTTP requests to endpoints, because there's no webserver to serve them.
 
-[**Learn more and get started with Unit Testing**](/docs/using-pulumi/testing/unit).
+[**Learn more and get started with Unit Testing**](/docs/iac/guides/testing/unit/).
 
 ## Property Testing
 
@@ -56,7 +56,7 @@ Property tests run inside the Pulumi CLI before and after infrastructure provisi
 
 Property tests can run against any cloud environment: it can be a persistent "acceptance" stack, an ephemeral cloud environment created for each pull request, or a combination of those.
 
-[**Learn more and get started with Property Testing**](/docs/using-pulumi/testing/property-testing).
+[**Learn more and get started with Property Testing**](/docs/insights/policy/policy-packs/authoring/).
 
 ## Integration Testing
 
@@ -68,7 +68,7 @@ The great advantage of integration tests is the ability to test the actual cloud
 
 Depending on the type of resources and frequency of testing, even short-lived ephemeral environments may incur notable charges from the cloud provider. Be sure to plan accordingly and measure frequently.
 
-[**Learn more and get started with Integration Testing**](/docs/using-pulumi/testing/integration).
+[**Learn more and get started with Integration Testing**](/docs/iac/guides/testing/integration/).
 
 ## Examples
 
