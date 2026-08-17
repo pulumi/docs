@@ -98,7 +98,7 @@ $ aws s3 ls s3://$(pulumi stack output bucketName)
 
 {{% /choosable %}}
 
-{{% choosable language python %}}
+{{% choosable language "python,hcl" %}}
 
 ```bash
 $ aws s3 ls s3://$(pulumi stack output bucket_name)
@@ -118,7 +118,7 @@ $ aws s3 ls ("s3://" + (pulumi stack output bucketName))
 
 {{% /choosable %}}
 
-{{% choosable language python %}}
+{{% choosable language "python,hcl" %}}
 
 ```powershell
 $ aws s3 ls ("s3://" + (pulumi stack output bucket_name))

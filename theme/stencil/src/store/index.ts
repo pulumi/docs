@@ -17,9 +17,13 @@ export const rootReducer = combineReducers({
 });
 
 // Page-scoped languages that are never persisted as the global preference (see the
-// serializer in configureStore). They're only offered on a handful of pages and would
-// break every page that doesn't support them if they lingered.
-const specialPurposeLanguages: string[] = ["hcl", "opa"];
+// serializer in configureStore). OPA is only offered on a handful of policy pages;
+// a lingering preference for it would be useless everywhere else. HCL used to be in
+// this list, but it is now offered across the docs (including the get-started
+// guides, where the selection must survive page navigation), and a chooser that
+// doesn't offer the preferred language falls back to its first option without
+// touching the store.
+const specialPurposeLanguages: string[] = ["opa"];
 
 // The Redux store. See https://redux.js.org/ for general information about Redux and
 // https://stenciljs.com/docs/stencil-redux for details about Stencil's implementation.
@@ -39,11 +43,11 @@ export const configureStore = () => {
 
     const store = createStore(rootReducer, initialState, composeWithDevTools(applyMiddleware(thunk)));
 
-    // HCL and OPA are page-scoped languages: they display while you're on one of the few
-    // pages that offer them, but must never become your persisted preference, or every
-    // other page would inherit a language it can't render. So we never write them to
-    // storage -- while one is selected we keep persisting your last real language, leaving
-    // your actual preference intact across the visit.
+    // OPA is a page-scoped language: it displays while you're on one of the few pages
+    // that offer it, but must never become your persisted preference, or every other
+    // page would inherit a language it can't render. So we never write it to storage --
+    // while it is selected we keep persisting your last real language, leaving your
+    // actual preference intact across the visit.
     let lastRealLanguage = (initialState.preferences && initialState.preferences.language) || "typescript";
 
     // Serialize to localStorage.
@@ -98,7 +102,7 @@ export function normalizeState(persistedState: any): Partial<AppState> {
 
         // state.preferences
         if (persistedState.preferences) {
-            // Coerce a stale special-purpose language (e.g. an HCL preference left over
+            // Coerce a stale special-purpose language (e.g. an OPA preference left over
             // from before we stopped persisting them) back to a real one on load, so it
             // never re-enters the store.
             const persistedLanguage = persistedState.preferences.language;
