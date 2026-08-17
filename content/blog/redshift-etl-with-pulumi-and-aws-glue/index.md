@@ -245,7 +245,7 @@ cluster = redshift.Cluster("cluster", redshift.ClusterArgs(
 
 {{% /choosable %}}
 
-At the top of the program, you'll see that the code assumes you've set several [Pulumi configuration](/docs/concepts/config/) values --- `clusterIdentifier`, `clusterNodeType`, and others --- so take a moment to do that now with the Pulumi CLI as well:
+At the top of the program, you'll see that the code assumes you've set several [Pulumi configuration](/docs/iac/concepts/config/) values --- `clusterIdentifier`, `clusterNodeType`, and others --- so take a moment to do that now with the Pulumi CLI as well:
 
 ```bash
 $ pulumi config set clusterIdentifier my-redshift-cluster

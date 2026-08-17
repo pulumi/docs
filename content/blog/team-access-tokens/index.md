@@ -20,7 +20,7 @@ A few months ago we launched [Organization Access Tokens](/blog/organization-acc
 
 <!--more-->
 
-Since Pulumi Teams are only available on these editions, Team Access Tokens are also only available to customers on the Enterprise and Business Critical editions of the Pulumi Service. See the [Team Access Tokens](/docs/pulumi-cloud/access-management/team-access-tokens/) documentation for more information on how to use the feature.
+Since Pulumi Teams are only available on these editions, Team Access Tokens are also only available to customers on the Enterprise and Business Critical editions of the Pulumi Service. See the [Team Access Tokens](/docs/administration/access-identity/access-tokens/) documentation for more information on how to use the feature.
 
 ## See it in action!
 

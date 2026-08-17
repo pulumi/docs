@@ -16,7 +16,7 @@ Did you know that **80% of unplanned outages aren’t caused by hardware failure
 
 Pulumi ESC already enables safer change management with [our innovative versioning capability](https://www.youtube.com/watch?v=HQN5KOY4asE) which **allows users to track and roll back environment revisions.**
 
-Building on this foundation, we’re excited to announce the release of [**Approvals** in Pulumi ESC](/docs/esc/administration/approvals/)—a new feature that enables organizations to **bring governance and oversight directly into their environment configuration workflows.**
+Building on this foundation, we’re excited to announce the release of [**Approvals** in Pulumi ESC](/docs/esc/concepts/approvals/)—a new feature that enables organizations to **bring governance and oversight directly into their environment configuration workflows.**
 
 With Approvals, teams can require explicit review and sign-off before applying changes to ESC-managed environments, bringing the same rigor to configuration as they already have with infrastructure-as-code and application development.
 

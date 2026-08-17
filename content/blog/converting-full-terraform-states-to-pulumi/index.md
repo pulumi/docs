@@ -17,7 +17,7 @@ In the prior blog post about converting from Terraform we called out that while 
 
 Historically we've shared some AWS specific code for TypeScript and Go to import from `.tfstate` files (previously available in the tf2pulumi repository, now replaced by the [Terraform converter plugin](https://github.com/pulumi/pulumi-converter-terraform)). These have been useful, but they're limited to the AWS provider and either Go or TypeScript programs.
 
-From [v3.87.0](/docs/install) we have extended our converter system to also include state in addition to code. So now it's possible to import resources from other state systems, the first of which is Terraform.
+From [v3.87.0](/docs/install/) we have extended our converter system to also include state in addition to code. So now it's possible to import resources from other state systems, the first of which is Terraform.
 
 ## Converting a Real World Workspace
 

@@ -73,7 +73,7 @@ pulumi up
 **Prerequisites:**
 
 - [Bun](https://bun.sh/docs/installation) 1.3 or later
-- [Pulumi](/docs/iac/download-install/) 3.227.0 or later
+- [Pulumi](/docs/install/) 3.227.0 or later
 
 ## Converting existing Node.js projects
 
@@ -201,7 +201,7 @@ The following Pulumi features are not currently supported when using the Bun run
 
 {{% notes type="warning" %}}
 
-- **[Callback functions (magic lambdas)](/docs/iac/clouds/aws/guides/lambda/)** are not supported. APIs like `aws.lambda.CallbackFunction` and event handler shortcuts (e.g., `bucket.onObjectCreated`) use [function serialization](/docs/iac/concepts/functions/function-serialization/) which requires Node.js `v8` and `inspector` modules that are only partially supported in Bun.
+- **[Callback functions (magic lambdas)](/docs/iac/guides/clouds/aws/lambda/)** are not supported. APIs like `aws.lambda.CallbackFunction` and event handler shortcuts (e.g., `bucket.onObjectCreated`) use [function serialization](/docs/iac/concepts/functions/function-serialization/) which requires Node.js `v8` and `inspector` modules that are only partially supported in Bun.
 - **[Dynamic providers](/docs/iac/concepts/providers/dynamic-providers/)** are not supported. Dynamic providers (`pulumi.dynamic.Resource`) similarly rely on [function serialization](/docs/iac/concepts/functions/function-serialization/).
 
 {{% /notes %}}
@@ -210,7 +210,7 @@ If your project uses any of these features, continue using `runtime: nodejs`. Yo
 
 ## Start using Bun with Pulumi
 
-Bun runtime support is available now in [Pulumi 3.227.0](/docs/iac/download-install/). To get started:
+Bun runtime support is available now in [Pulumi 3.227.0](/docs/install/). To get started:
 
 - Create a new project: `pulumi new bun`
 - Read the docs: [TypeScript (Node.js) SDK](/docs/iac/languages-sdks/javascript/)

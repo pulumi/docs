@@ -42,7 +42,7 @@ The [Pulumi quickstart](/docs/get-started/) experience is for people new to Pulu
 
 ### Cloud get started tutorials
 
-The [Pulumi cloud get started tutorials](/docs/clouds/) are for people who want a more detailed walkthrough when using Pulumi for the first time.
+The [Pulumi cloud get started tutorials](/docs/integrations/clouds/) are for people who want a more detailed walkthrough when using Pulumi for the first time.
 
 ![Pulumi cloud get started tutorials](imgs/get-started.png)
 

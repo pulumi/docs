@@ -197,7 +197,7 @@ The improvements to `pulumi watch` are real and already in the latest Pulumi rel
 
 If you want to get started, simply:
 
-* [Download Pulumi](/docs/iac/download-install/)
+* [Download Pulumi](/docs/install/)
 * [Download the `pulumi-language-ai` host](https://github.com/pulumi/pulumi-language-ai/releases) and ensure it's on your `PATH`
 * Set `OPENAI_API_KEY` to a valid OpenAI key
 * Run [`pulumi watch`](/docs/iac/cli/commands/pulumi_watch/), begin typing, copy and pasting, and vibing
