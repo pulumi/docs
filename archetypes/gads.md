@@ -192,7 +192,7 @@ key_features_below:
               - title: Pulumi IaC
                 icon: code
                 description: |
-                    Utilize open-source IaC in TypeScript, Python, Go, .NET, Java, YAML, and HCL. Build and distribute reusable components for 170+ cloud & SaaS providers.
+                    Utilize open-source IaC in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Build and distribute reusable components for 170+ cloud & SaaS providers.
               - title: Pulumi ESC
                 icon: lock
                 description: |
