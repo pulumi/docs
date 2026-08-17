@@ -1,3 +1,10 @@
+// NOTE: These tests do not run in CI. `make test` only runs the example-program tests,
+// and the pull-request workflow never invokes `stencil test`. Run them by hand when
+// touching this component or the store:
+//
+//     cd theme/stencil && yarn install
+//     npx stencil test --e2e -- src/components/choosable/choosable.e2e.ts
+//
 import { newE2EPage } from "@stencil/core/testing";
 
 describe("pulumi-choosable", () => {
@@ -39,6 +46,19 @@ describe("pulumi-choosable", () => {
         // HCL is offered by none of the three, so the first (typescript) shows itself
         // instead of the reader seeing an empty gap.
         expect(await activeLangs(page)).toEqual(["typescript"]);
+    });
+
+    it("does not fall back for a group that deliberately omits a language the page offers elsewhere", async () => {
+        const page = await newE2EPage();
+        // Mirrors apply.md: a run of per-language asides with no Java member, on a page
+        // that serves Java readers elsewhere. The partial group must stay hidden -- blank
+        // is correct -- rather than show a Java reader its TypeScript member.
+        await page.setContent(
+            setOf(["typescript", "python", "go", "csharp"], "java") +
+                `<h2>A heading breaks the run</h2>` +
+                setOf(["typescript", "python", "go", "csharp", "java"], "java"),
+        );
+        expect(await activeLangs(page)).toEqual(["java"]);
     });
 
     it("does not fall back across a boundary between two separate toggle sets", async () => {

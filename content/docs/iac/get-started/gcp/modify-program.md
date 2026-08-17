@@ -218,6 +218,9 @@ resource "gcp_storage_bucket_object" "index-html" {
 }
 ```
 
+A dotted label like `index.html` couldn't be referenced in expressions (and Terraform's grammar doesn't allow
+one), so the resource is labeled `index-html` and the `name` attribute names the object in the bucket.
+
 {{% /choosable %}}
 
 Notice how you provide the name of the bucket you created earlier as an input for the bucket object. This tells Pulumi which bucket the object should live in.
