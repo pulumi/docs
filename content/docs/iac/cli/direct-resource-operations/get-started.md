@@ -161,7 +161,7 @@ $ pulumi do aws:ec2:getVpc --default
 }
 ```
 
-`--default` isn't a `pulumi do` flag — it's the `default` input of `getVpc`, passed with the same `--<input>` form used for resource inputs.
+`--default` isn't a `pulumi do` flag — it's the `default` input of `getVpc`, passed with the same `--<input>` form used for resource inputs. When passed as CLI inputs in this way, Boolean values like this one are interpreted as `true`. 
 
 ## Use it in scripts
 
