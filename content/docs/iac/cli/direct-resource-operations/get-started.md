@@ -119,7 +119,7 @@ $ pulumi do aws:s3:Bucket delete my-bucket --yes
 
 ## Explore a provider from the terminal
 
-Every `pulumi do` command addresses a resource or function by its type token, in the form `<package:module:type>` — for example, `aws:s3:Bucket` is the `Bucket` resource in the `s3` module of the `aws` package. For single-module packages, you can omit the module segment.
+Every `pulumi do` command addresses a resource or function by its [type token](/docs/iac/concepts/resources/names/#types) in the form `<package:module:type>`. For example, `aws:s3:Bucket` is the `Bucket` resource in the `s3` module of the `aws` package. For single-module packages, you can omit the module segment.
 
 You don't need to know the token up front. Pass a partial token and `pulumi do` lists what's available at that level:
 
