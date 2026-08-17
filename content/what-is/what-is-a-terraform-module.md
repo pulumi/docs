@@ -211,7 +211,7 @@ Pulumi also interoperates with the Terraform ecosystem rather than replacing it.
 
 | Aspect | Terraform module | Pulumi component |
 |---|---|---|
-| Authored in | HCL configuration | TypeScript, Python, Go, .NET, Java, or YAML |
+| Authored in | HCL configuration | TypeScript, JavaScript, Python, Go, .NET, or Java |
 | Reuse unit | Directory of `.tf` files | Class extending `ComponentResource` |
 | Interface | Input variables and outputs | Constructor arguments and class properties |
 | Logic | HCL expressions, `count`/`for_each` | Full language: loops, functions, conditionals |
