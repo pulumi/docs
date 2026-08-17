@@ -84,14 +84,38 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
-Using components here also has the benefit that, as the requirements for S3 websites changes, you can
+{{% choosable language hcl %}}
+
+```hcl
+module "my-website" {
+  source = "./website"
+  files  = ["index.html"]
+}
+```
+
+{{% /choosable %}}
+
+Using components here also has the benefit that, as the requirements for S3 websites change, you can
 update the one component definition and have all uses of it benefit.
 
 ### Define a new component
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 To define a new component, create a class called `AwsS3Website` that derives from `ComponentResource`. It'll have a mostly-empty
 constructor to start with but you will add the AWS S3 resources to it in the next step. You'll also define the inputs for the
 component -- the `files` to add to the website -- and outputs -- a single property with the website `url`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It starts out
+with only its input declared, and you will add the AWS S3 resources to it in the next step. The module's `variable` blocks
+declare the inputs for the component -- the `files` to add to the website -- and its `output` blocks declare the outputs --
+a single website `url`.
+
+{{% /choosable %}}
 
 To get going, create a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
 
@@ -247,16 +271,54 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+# A list of files to serve.
+variable "files" {
+  type = list(string)
+}
+
+# The AWS S3 resources and the website url output will go here next...
+```
+
+{{% /choosable %}}
+
 This defines a component but it doesn't do much yet.
 
 ### Refactor your code into the component
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Next, make four changes:
 
-1. Move all resources from {{< langfile >}} ino the component's constructor
+1. Move all resources from {{< langfile >}} into the component's constructor
 2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
 3. Generalize the creation of bucket objects by looping over the list of `files`
 4. Assign the resulting website URL to the `url` property of the component
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Next, make three changes:
+
+1. Move all resources from {{< langfile >}} into the module
+1. Generalize the creation of bucket objects by looping over the list of `files` with `for_each`
+1. Return the resulting website URL as the module's `url` output
+
+Nothing needs reparenting: everything a module declares is automatically a child of the component resource that
+Pulumi creates for the module instance.
+
+{{% /choosable %}}
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or paste the contents of this into {{< compfile >}}:
@@ -677,6 +739,90 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    aws = {
+      source = "pulumi/aws"
+    }
+  }
+}
+
+# A list of files to serve.
+variable "files" {
+  type = list(string)
+}
+
+# Create an AWS resource (S3 Bucket)
+resource "aws_s3_bucket" "my-bucket" {
+  # A module prefixes the Pulumi names of the resources it contains, so set each
+  # name explicitly (here and below) to keep the names free of that prefix.
+  pulumi {
+    name = "my-bucket"
+  }
+}
+
+# Turn the bucket into a website:
+resource "aws_s3_bucket_website_configuration" "website" {
+  bucket = aws_s3_bucket.my-bucket.id
+  index_document {
+    suffix = "index.html"
+  }
+
+  pulumi {
+    name = "website"
+  }
+}
+
+# Permit access control configuration:
+resource "aws_s3_bucket_ownership_controls" "ownership-controls" {
+  bucket = aws_s3_bucket.my-bucket.id
+  rule {
+    object_ownership = "ObjectWriter"
+  }
+
+  pulumi {
+    name = "ownership-controls"
+  }
+}
+
+# Enable public access to the website:
+resource "aws_s3_bucket_public_access_block" "public-access-block" {
+  bucket            = aws_s3_bucket.my-bucket.id
+  block_public_acls = false
+
+  pulumi {
+    name = "public-access-block"
+  }
+}
+
+# Create an S3 Bucket object for each file:
+resource "aws_s3_bucket_object" "files" {
+  for_each     = toset(var.files)
+  bucket       = aws_s3_bucket.my-bucket.id
+  source       = fileasset(each.value)
+  content_type = "text/html"
+  acl          = "public-read"
+  depends_on = [
+    aws_s3_bucket_ownership_controls.ownership-controls,
+    aws_s3_bucket_public_access_block.public-access-block,
+  ]
+
+  pulumi {
+    name = each.value
+  }
+}
+
+# Capture the URL and make it available as a component output:
+output "url" {
+  value = "http://${aws_s3_bucket_website_configuration.website.website_endpoint}"
+}
+```
+
+{{% /choosable %}}
+
 ### Instantiate the component
 
 Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
@@ -805,9 +951,29 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Instantiate our new component with the same files as before; the source is the
+# directory the module lives in:
+module "my-website" {
+  source = "./website"
+  files  = ["index.html"]
+}
+
+# And export its autoassigned URL:
+output "url" {
+  value = module.my-website.url
+}
+```
+
+{{% /choosable %}}
+
 ### Deploy the component
 
 Now deploy the resulting component instantiation. To do so, run `pulumi up` as usual:
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 ```
 $ pulumi up
@@ -815,8 +981,8 @@ Previewing update (dev)
 
      Type                                       Name                 Plan
      pulumi:pulumi:Stack                        quickstart-dev
- +   ├─ quickstart:index:AwsS3Website           my-site              create
- +   │  ├─ aws:s3:Bucket                      my-bucket            create
+ +   ├─ quickstart:index:AwsS3Website           my-website           create
+ +   │  ├─ aws:s3:Bucket                        my-bucket            create
  +   │  ├─ aws:s3:BucketWebsiteConfiguration    website              create
  +   │  ├─ aws:s3:BucketOwnershipControls       ownership-controls   create
  +   │  ├─ aws:s3:BucketPublicAccessBlock       public-access-block  create
@@ -825,7 +991,7 @@ Previewing update (dev)
  -   ├─ aws:s3:BucketPublicAccessBlock          public-access-block  delete
  -   ├─ aws:s3:BucketOwnershipControls          ownership-controls   delete
  -   ├─ aws:s3:BucketWebsiteConfiguration       website              delete
- -   └─ aws:s3:Bucket                         my-bucket            delete
+ -   └─ aws:s3:Bucket                           my-bucket            delete
 
 Resources:
     + 6 to create
@@ -838,7 +1004,45 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
   details
 ```
 
-This preview shows you a few things. First, you'll see our `AwsS3Website` component with all of its children
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+$ pulumi up
+Previewing update (dev)
+
+     Type                                       Name                 Plan
+     pulumi:pulumi:Stack                        quickstart-dev
+ +   ├─ components:index:Website                my-website           create
+ +   │  ├─ aws:s3:Bucket                        my-bucket            create
+ +   │  ├─ aws:s3:BucketWebsiteConfiguration    website              create
+ +   │  ├─ aws:s3:BucketOwnershipControls       ownership-controls   create
+ +   │  ├─ aws:s3:BucketPublicAccessBlock       public-access-block  create
+ +   │  └─ aws:s3:BucketObject                  index.html           create
+ -   ├─ aws:s3:BucketObject                     index.html           delete
+ -   ├─ aws:s3:BucketPublicAccessBlock          public-access-block  delete
+ -   ├─ aws:s3:BucketOwnershipControls          ownership-controls   delete
+ -   ├─ aws:s3:BucketWebsiteConfiguration       website              delete
+ -   └─ aws:s3:Bucket                           my-bucket            delete
+
+Resources:
+    + 6 to create
+    - 5 to delete
+    11 changes. 1 unchanged
+
+Do you want to perform this update?  [Use arrows to move, type to filter]
+  yes
+> no
+  details
+```
+
+The `Website` segment of the component's type, `components:index:Website`, is the title-cased name of the
+directory the module lives in; the `components:index:` prefix is fixed.
+
+{{% /choosable %}}
+
+This preview shows you a few things. First, you'll see our website component with all of its child
 resources neatly parented underneath it. This helps to see what resources relate to which components. Next,
 you'll see that your old resources are being destroyed.
 
@@ -846,20 +1050,22 @@ you'll see that your old resources are being destroyed.
 
 If you're wondering why Pulumi didn't simply update the resources in place, it's because certain changes -- like
 refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
-properties or moving resources between files are not disruptive like this. It such cases, you can assign
+properties or moving resources between files are not disruptive like this. In such cases, you can assign
 [aliases](/docs/iac/concepts/resources/options/aliases/) to prevent deletions from happening.
 
 {{% /notes %}}
 
 Accept the changes by selecting `yes` and the deployment will occur:
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 ```
 Updating (dev)
 
      Type                                       Name                 Status
-     pulumi:pulumi:Stack                        pu-quickstart-dev
- +   ├─ quickstart:index:AwsS3Website           my-site              created (0.16s)
- +   │  ├─ aws:s3:Bucket                      my-bucket            created (1s)
+     pulumi:pulumi:Stack                        quickstart-dev
+ +   ├─ quickstart:index:AwsS3Website           my-website           created (0.16s)
+ +   │  ├─ aws:s3:Bucket                        my-bucket            created (1s)
  +   │  ├─ aws:s3:BucketWebsiteConfiguration    website              created (0.24s)
  +   │  ├─ aws:s3:BucketPublicAccessBlock       public-access-block  created (0.49s)
  +   │  ├─ aws:s3:BucketOwnershipControls       ownership-controls   created (0.63s)
@@ -868,7 +1074,7 @@ Updating (dev)
  -   ├─ aws:s3:BucketOwnershipControls          ownership-controls   deleted (0.58s)
  -   ├─ aws:s3:BucketPublicAccessBlock          public-access-block  deleted (0.18s)
  -   ├─ aws:s3:BucketWebsiteConfiguration       website              deleted (0.27s)
- -   └─ aws:s3:Bucket                         my-bucket            deleted (0.51s)
+ -   └─ aws:s3:Bucket                           my-bucket            deleted (0.51s)
 
 Outputs:
   ~ url: "http://my-bucket-b531107.s3-website-us-west-2.amazonaws.com" => "http://my-bucket-d05c30a.s3-website-us-west-2.amazonaws.com"
@@ -880,6 +1086,40 @@ Resources:
 
 Duration: 10s
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+Updating (dev)
+
+     Type                                       Name                 Status
+     pulumi:pulumi:Stack                        quickstart-dev
+ +   ├─ components:index:Website                my-website           created (0.16s)
+ +   │  ├─ aws:s3:Bucket                        my-bucket            created (1s)
+ +   │  ├─ aws:s3:BucketWebsiteConfiguration    website              created (0.24s)
+ +   │  ├─ aws:s3:BucketPublicAccessBlock       public-access-block  created (0.49s)
+ +   │  ├─ aws:s3:BucketOwnershipControls       ownership-controls   created (0.63s)
+ +   │  └─ aws:s3:BucketObject                  index.html           created (0.19s)
+ -   ├─ aws:s3:BucketObject                     index.html           deleted (0.18s)
+ -   ├─ aws:s3:BucketOwnershipControls          ownership-controls   deleted (0.58s)
+ -   ├─ aws:s3:BucketPublicAccessBlock          public-access-block  deleted (0.18s)
+ -   ├─ aws:s3:BucketWebsiteConfiguration       website              deleted (0.27s)
+ -   └─ aws:s3:Bucket                           my-bucket            deleted (0.51s)
+
+Outputs:
+  ~ url: "http://my-bucket-b531107.s3-website-us-west-2.amazonaws.com" => "http://my-bucket-d05c30a.s3-website-us-west-2.amazonaws.com"
+
+Resources:
+    + 6 created
+    - 5 deleted
+    11 changes. 1 unchanged
+
+Duration: 10s
+```
+
+{{% /choosable %}}
 
 Now test out your new website -- it works like before, just with a tidier codebase now!
 
