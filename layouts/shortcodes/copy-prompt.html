@@ -6,15 +6,17 @@
     the reader can see what they're about to hand their agent.
 
     Usage:
-        {{< copy-prompt >}}
+        {{< copy-prompt track="docs-copy-onboarding-prompt" >}}
         Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
         {{< /copy-prompt >}}
 
-        {{< copy-prompt label="Copy" track="migrate-prompt" >}}…{{< /copy-prompt >}}
+        {{< copy-prompt label="Copy" track="docs-copy-migrate-prompt" >}}…{{< /copy-prompt >}}
 
     Parameters:
         - label (optional): button text (default: "Copy prompt")
-        - track (optional): data-track value (default: "copy-prompt")
+        - track (optional): names the control in the analytics event copy-text.ts
+          fires on a successful copy (default: "copy-prompt"). Set a specific one
+          per placement so the events are distinguishable.
 
     The button is the generic [data-copy-text] control from
     theme/src/ts/copy-text.ts, registered globally in main.ts — no page-specific

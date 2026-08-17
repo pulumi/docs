@@ -67,7 +67,7 @@ Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optiona
 
 Prefer to have your agent do the setup? Paste this prompt into Claude Code, Codex, Cursor, GitHub Copilot, or whichever agent you already use, and it will install the CLI, help you pick a cloud, and deploy your first stack with you.
 
-{{< copy-prompt >}}
+{{< copy-prompt track="docs-copy-onboarding-prompt" >}}
 Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
 {{< /copy-prompt >}}
 
