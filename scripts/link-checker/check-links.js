@@ -247,6 +247,7 @@ function getDefaultExcludedKeywords() {
         "https://github.com/pulumi/docs/issues/new",
         "https://github.com/pulumi/registry/edit/master",
         "https://github.com/pulumi/registry/issues/new",
+        "https://github.com/pulumi/ci-workflow-templates", // blog/{infrastructure-ci-cd-with-github-actions-and-pulumi,pulumiup-ci-cd-assistant-all-plans}: repo is private + archived, so its issue-template link 404s for readers. Blog prose is historical; tracked in #20911.
         "https://www.linkedin.com/",
         "https://linkedin.com/",
         "https://marketplace.visualstudio.com/items?itemName=pulumi.build-and-release-task",

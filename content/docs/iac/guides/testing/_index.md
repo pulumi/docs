@@ -62,7 +62,7 @@ Property tests can run against any cloud environment: it can be a persistent "ac
 
 Integration testing takes a different approach from unit tests: the tests deploy cloud resources and validate their actual **behavior**.
 
-An integration test invokes the Pulumi command-line interface (CLI) to deploy infrastructure to an [ephemeral environment](https://about.gitlab.com/blog/2020/01/27/kubecon-na-2019-are-you-about-to-break-prod/). When the resources are deployed, the test retrieves endpoints of the infrastructure from the stack outputs: usually, a URL or a public IP address. The test verifies that the infrastructure behaves as expected; for example, it expects a valid HTML document from a health-check endpoint or runs a suite of application-level tests against the public API. When the tests finish, the infrastructure is destroyed.
+An integration test invokes the Pulumi command-line interface (CLI) to deploy infrastructure to an [ephemeral environment](https://about.gitlab.com/blog/kubecon-na-2019-are-you-about-to-break-prod/). When the resources are deployed, the test retrieves endpoints of the infrastructure from the stack outputs: usually, a URL or a public IP address. The test verifies that the infrastructure behaves as expected; for example, it expects a valid HTML document from a health-check endpoint or runs a suite of application-level tests against the public API. When the tests finish, the infrastructure is destroyed.
 
 The great advantage of integration tests is the ability to test the actual cloud infrastructure and its real properties. However, compared to unit tests, integration tests take more time to execute.
 
