@@ -227,6 +227,6 @@ Model your host cluster, vCluster tenants, and guardrails in Pulumi so your plat
 
 By combining Pulumi with EKS Auto Mode and vCluster, you can build a scalable environment factory. This approach provides the isolation developers need while maintaining the speed and cost-efficiency required by platform teams.
 
-The snippets provided here are adapted for illustration. In a production environment, you would likely wrap these resources into a Pulumi [ComponentResource](/docs/iac/concepts/resources/components/) to provide a clean, reusable API for your internal developers. When a feature branch is merged, deleting the Pulumi stack removes the resources managed by that stack, but validate namespace finalizers, persistent volume reclaim policies, and external cloud artifacts as part of cleanup.
+The snippets provided here are adapted for illustration. In a production environment, you would likely wrap these resources into a Pulumi [ComponentResource](/docs/iac/concepts/components/) to provide a clean, reusable API for your internal developers. When a feature branch is merged, deleting the Pulumi stack removes the resources managed by that stack, but validate namespace finalizers, persistent volume reclaim policies, and external cloud artifacts as part of cleanup.
 
-For more on managing EKS with Pulumi, see the [EKS guide](/docs/clouds/aws/guides/eks/).
+For more on managing EKS with Pulumi, see the [EKS guide](/docs/iac/guides/clouds/aws/eks/).

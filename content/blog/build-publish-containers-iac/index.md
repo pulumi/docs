@@ -1874,7 +1874,7 @@ Also note the base and versioned image URLs are exported as stack outputs. These
 
 1. As we see here, the CLI will print them after each deployment.
 2. The CLI can fetch them on-demand, e.g., 'pulumi stack output fullImageName', making it easy to script access to these container images.
-3. The [Pulumi `StackReference` component](/docs/concepts/stack#stackreferences) can be used to depend on this stack from another, allowing us to build higher levels of infrastructure that consume these images.
+3. The [Pulumi `StackReference` component](/docs/iac/concepts/stacks/#stackreferences) can be used to depend on this stack from another, allowing us to build higher levels of infrastructure that consume these images.
 
 As an example of (2) in action, let's run the image locally using the exported image name:
 
@@ -1918,8 +1918,8 @@ The same container image URLs exported above can be used as inputs to other reso
 
 > This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly](/registry/packages/kubernetes/installation-configuration/). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with:
 
-* [AWS Elastic Container Service ECS](/docs/iac/clouds/aws/guides/ecs/),
-* [AWS Elastic Kubernetes Service (EKS)](/docs/iac/clouds/aws/guides/eks),
+* [AWS Elastic Container Service ECS](/docs/iac/guides/clouds/aws/ecs/),
+* [AWS Elastic Kubernetes Service (EKS)](/docs/iac/guides/clouds/aws/eks/),
 * [Azure Kubernetes Service (AKS)](/registry/packages/kubernetes/how-to-guides/aks),
 * [Google Cloud Kubernetes Engine (GKE)](/registry/packages/kubernetes/how-to-guides/gke),
 * [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
@@ -2252,7 +2252,7 @@ And there we go: we have gone from a `Dockerfile` to a published container image
 
 In this article, we've seen how easy it is to build, publish, and use container images in many popular public and private container registry options. We have seen how to provision new registries using infrastructure as code and how easy it is to trigger deployments of application updates by running a single `pulumi up` command.
 
-All of these steps were manually run from a CLI; however, a natural next step is to [wire the entire process up to a CI/CD system](/docs/iac/packages-and-automation/continuous-delivery/) such as [GitHub Actions](/docs/iac/packages-and-automation/continuous-delivery/github-actions/), [GitLab Pipelines](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/), [Jenkins](/docs/iac/packages-and-automation/continuous-delivery/jenkins/), [Spinnaker](/docs/iac/packages-and-automation/continuous-delivery/spinnaker/), or [one of the many available options](/docs/iac/packages-and-automation/continuous-delivery/), so that you can deploy continuously as you merge code. For even more advanced scenarios, we might want to build a custom program such as a CLI that uses the [Automation API](/blog/automation-api/) to perform these actions behind a simpler, purpose-built interface.
+All of these steps were manually run from a CLI; however, a natural next step is to [wire the entire process up to a CI/CD system](/docs/iac/operations/continuous-delivery/) such as [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/), [GitLab Pipelines](/docs/iac/operations/continuous-delivery/gitlab-ci/), [Jenkins](/docs/iac/operations/continuous-delivery/jenkins/), [Spinnaker](/docs/iac/operations/continuous-delivery/), or [one of the many available options](/docs/iac/operations/continuous-delivery/), so that you can deploy continuously as you merge code. For even more advanced scenarios, we might want to build a custom program such as a CLI that uses the [Automation API](/blog/automation-api/) to perform these actions behind a simpler, purpose-built interface.
 
 Although we've shown a very simple set of infrastructure resources, it would be natural to extend these examples by provisioning other ancillary services that your application needs, including databases, pub/sub topics, queues, metrics and dashboards, and more. Using an infrastructure as code approach to building, publishing, and consuming your container images means you can incrementally add on such infrastructure to the base code shown above and reference them from your containers easily with automatic dependency tracking.
 

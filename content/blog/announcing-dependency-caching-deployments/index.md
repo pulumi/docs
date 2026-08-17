@@ -12,7 +12,7 @@ tags:
 category: product
 ---
 
-We’re excited to announce dependency caching for [Pulumi Deployments](/docs/pulumi-cloud/deployments/)! This new feature is designed to significantly speed up deployment times by reducing dependency installation time by up to 80%, ensuring faster and more efficient workflows for every Pulumi user.
+We’re excited to announce dependency caching for [Pulumi Deployments](/docs/deployments/concepts/)! This new feature is designed to significantly speed up deployment times by reducing dependency installation time by up to 80%, ensuring faster and more efficient workflows for every Pulumi user.
 
 When using Pulumi Deployments, installing dependencies can be a time-consuming part of a deployment. With dependency caching, Pulumi can reuse previously installed dependencies, allowing your deployments to skip redundant installation steps and focus on the task at hand. This optimization is especially helpful for frequent deployments, reducing both time and compute resources.
 

@@ -21,7 +21,7 @@ So a while back, after far too much time spent wandering the blogsphere manually
 
 <!--more-->
 
-If you're already comfortable with Pulumi, and you just want to get up and running, [I've set up a GitHub repo](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-miniflux) (complete with a [Deploy with Pulumi button](/docs/pulumi-cloud/pulumi-button/)!) that should have all you need to get going. Just click the button, set a few configs (like your RSS server's administrative password, which will be stored as an [encrypted Pulumi secret](/docs/concepts/config/), and follow the prompts. Your shiny new server should be up and running within minutes.
+If you're already comfortable with Pulumi, and you just want to get up and running, [I've set up a GitHub repo](https://github.com/pulumi/examples/tree/master/aws-ts-pulumi-miniflux) (complete with a [Deploy with Pulumi button](/docs/idp/integrations/pulumi-button/)!) that should have all you need to get going. Just click the button, set a few configs (like your RSS server's administrative password, which will be stored as an [encrypted Pulumi secret](/docs/iac/concepts/config/), and follow the prompts. Your shiny new server should be up and running within minutes.
 
 ## Sketching it Out
 
@@ -36,7 +36,7 @@ As I mentioned, the service is packaged as a Docker container that runs on port 
 * `ADMIN_USERNAME` and `ADMIN_PASSWORD`, which we'll use to sign into the service for the first time, and
 * flags for `CREATE_ADMIN` and `RUN_MIGRATIONS`, which denote whether to create the administrative user and run database migrations on startup.
 
-We'll set these properties in the course of developing our program. The service itself, as a container, can easily be run on [AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html), so we can use the [`@pulumi/awsx`](/docs/reference/pkg/nodejs/pulumi/awsx) package to declare it, and for the database, we'll use [`@pulumi/aws`](/registry/packages/aws/api-docs) to provision a small [RDS instance of PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html). And finally, to make the Miniflux service publicly accessible (initially over HTTP; we'll switch to HTTPS later), we'll use an AWS [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html), since we'll only need to be able to route traffic by ports and protocols.
+We'll set these properties in the course of developing our program. The service itself, as a container, can easily be run on [AWS Fargate](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html), so we can use the [`@pulumi/awsx`](/docs/reference/pkg/nodejs/pulumi/awsx/) package to declare it, and for the database, we'll use [`@pulumi/aws`](/registry/packages/aws/api-docs) to provision a small [RDS instance of PostgreSQL](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html). And finally, to make the Miniflux service publicly accessible (initially over HTTP; we'll switch to HTTPS later), we'll use an AWS [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html), since we'll only need to be able to route traffic by ports and protocols.
 
 Our architecture is therefore shaping up to look something like this:
 
@@ -67,7 +67,7 @@ Now let's define a few configuration values for the project.
 
 ## Configuring the Stack
 
-While we could certainly hard-code all of these values into our program, it'd be better to use Pulumi to set them, since doing so give us the option to vary them by [stack](/docs/concepts/stack/) (say, if we wanted to run this particular app in multiple environments), but more importantly, to set some passwords for the database user and service administrator. So let's do that first, so we'll have them all ready as we develop our program:
+While we could certainly hard-code all of these values into our program, it'd be better to use Pulumi to set them, since doing so give us the option to vary them by [stack](/docs/iac/concepts/stacks/) (say, if we wanted to run this particular app in multiple environments), but more importantly, to set some passwords for the database user and service administrator. So let's do that first, so we'll have them all ready as we develop our program:
 
 ```shell
 $ pulumi config set db_name miniflux
@@ -77,7 +77,7 @@ $ pulumi config set admin_username admin
 $ pulumi config set admin_password anothersupersecretpassword --secret
 ```
 
-You can change any of these values if you like (and you should definitely change the two passwords, of course), but note that the passwords are set with the `--secret` flag, which encrypts their values using Pulumi's [built-in support for secrets](/docs/concepts/config/).
+You can change any of these values if you like (and you should definitely change the two passwords, of course), but note that the passwords are set with the `--secret` flag, which encrypts their values using Pulumi's [built-in support for secrets](/docs/iac/concepts/config/).
 
 Okay. With our configuration set, we're ready to start building.
 
@@ -90,7 +90,7 @@ The Pulumi program we're writing will:
 * create a new instance of PostgreSQL, with minimal settings, placing it into the subnet group and giving it access to your default [ECS Cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_clusters.html);
 * create a new [Network Listener](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-listeners.html) to define a publicly accessible URL for the Miniflux service;
 * create a new Fargate service for the Miniflux app, in your default ECS Cluster, passing it the newly created DB connection and Pulumi config settings; and finally,
-* export the URL as a Pulumi stack [Output](/docs/concepts/inputs-outputs/) so we can navigate to the service.
+* export the URL as a Pulumi stack [Output](/docs/iac/concepts/inputs-outputs/) so we can navigate to the service.
 
 Let's get coding!
 

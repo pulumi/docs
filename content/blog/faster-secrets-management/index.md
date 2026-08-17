@@ -24,7 +24,7 @@ Pulumi now handles [secrets](https://www.pulumi.com/docs/concepts/secrets/) more
 
 ## Secrets Management in Pulumi
 
-Pulumi Infrastructure as Code (IaC)'s built-in secrets management encrypts individual _secrets_ within the stack for fine-grained protection. Pulumi Cloud transmits and stores stack state securely, ensuring that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
+Pulumi Infrastructure as Code (IaC)'s built-in secrets management encrypts individual _secrets_ within the stack for fine-grained protection. Pulumi Cloud transmits and stores stack state securely, ensuring that sensitive information—such as database passwords, API keys, and access tokens—remains protected even if someone gains access to your stack file. For organizations with more complex secrets management needs, Pulumi also offers [Pulumi ESC](/product/secrets-management/) (Environments, Secrets, and Configuration), which provides centralized secrets management with hierarchical environments and dynamic credential generation.
 
 Beyond simple encryption, Pulumi tracks the transitive use of secrets to prevent accidental exposure of sensitive values. This tracking works across your entire infrastructure definition, ensuring secrets remain protected:
 
@@ -86,7 +86,7 @@ By reducing wait times during encryption and decryption operations, we're helpin
 
 ## Beyond Stack Secrets: Pulumi ESC
 
-While these performance improvements enhance Pulumi's built-in secrets management, some organizations require more advanced capabilities. If you need secrets to be centrally managed, composable, and reusable across teams and applications, [Pulumi ESC](/product/esc/) (Environments, Secrets, and Configuration) may be a better fit. Pulumi ESC keeps sensitive information out of source control, supports hierarchical environments, and enables dynamic credential generation. It's designed for organizations that need to share secrets between multiple teams, applications, and infrastructure deployments while maintaining strict access controls and auditability.
+While these performance improvements enhance Pulumi's built-in secrets management, some organizations require more advanced capabilities. If you need secrets to be centrally managed, composable, and reusable across teams and applications, [Pulumi ESC](/product/secrets-management/) (Environments, Secrets, and Configuration) may be a better fit. Pulumi ESC keeps sensitive information out of source control, supports hierarchical environments, and enables dynamic credential generation. It's designed for organizations that need to share secrets between multiple teams, applications, and infrastructure deployments while maintaining strict access controls and auditability.
 
 ### Get Started Today
 

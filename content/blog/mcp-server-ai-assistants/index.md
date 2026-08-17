@@ -37,7 +37,7 @@ Before diving in, you typically need to configure your AI assistant to communica
 
 The assistant can now leverage Pulumi tools seamlessly. These tools are specific actions enabled by the MCP server—like searching the Pulumi Registry or running a `pulumi` command—allowing the assistant to gather information or interact with your Pulumi project.
 
-For detailed setup instructions for Cursor, Claude Code, Windsurf, Claude Desktop, and other AI assistants, see the [Pulumi MCP Server documentation](/docs/iac/using-pulumi/mcp-server/).
+For detailed setup instructions for Cursor, Claude Code, Windsurf, Claude Desktop, and other AI assistants, see the [Pulumi MCP Server documentation](/docs/ai/mcp-server/).
 
 ## The Goal: Provisioning an AKS Cluster
 

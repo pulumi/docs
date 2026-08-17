@@ -25,7 +25,7 @@ As part of the [Pulumi IDP](https://www.pulumi.com/product/internal-developer-pl
 
 ## Codified Security and Compliance
 
-Platform teams use Pulumi's components and templates to standardize how resources and programs are shaped and provisioned. They use [Pulumi ESC](/docs/esc/) to automatically import secret dependencies and lease short-term credentials. They incorporate [Pulumi CrossGuard](/docs/iac/using-pulumi/crossguard/get-started/) policy as code to ensure that provisioned infrastructure remains compliant even when customized by developers. Publishing and consuming packages through the private registry guarantees platform teams can achieve the consistency, security, and compliance their business needs without sacrificing the flexibility their developers need.
+Platform teams use Pulumi's components and templates to standardize how resources and programs are shaped and provisioned. They use [Pulumi ESC](/docs/esc/) to automatically import secret dependencies and lease short-term credentials. They incorporate [Pulumi CrossGuard](/docs/insights/policy/get-started/) policy as code to ensure that provisioned infrastructure remains compliant even when customized by developers. Publishing and consuming packages through the private registry guarantees platform teams can achieve the consistency, security, and compliance their business needs without sacrificing the flexibility their developers need.
 
 ## Streamlined Publishing
 
@@ -45,4 +45,4 @@ Day 2 operations – maintaining, extending, and decommissioning infrastructure 
 
 ## Get Started Today
 
-Pulumi IDP, including the Pulumi Private Registry, is now available in Public Preview for all users. [Sign up for a free account](https://app.pulumi.com/signup?utm_source=idp-private-registry) to get started, [learn more about Pulumi IDP](/docs/idp/get-started/), or [start publishing packages to your private registry](/docs/idp/get-started/private-registry/).
+Pulumi IDP, including the Pulumi Private Registry, is now available in Public Preview for all users. [Sign up for a free account](https://app.pulumi.com/signup?utm_source=idp-private-registry) to get started, [learn more about Pulumi IDP](/docs/idp/concepts/), or [start publishing packages to your private registry](/docs/idp/concepts/private-registry/).

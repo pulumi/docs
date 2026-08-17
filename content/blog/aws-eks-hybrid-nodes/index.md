@@ -26,7 +26,7 @@ Pulumi’s solutions for EKS Anywhere are automatically validated across a varie
 
 ## Automation and Operations
 
-Organizations can leverage Pulumi's CI/CD capabilities within their Hybrid Node environment. [Pulumi Deployments](/docs/pulumi-cloud/deployments/) or the [Pulumi Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) can run directly on Hybrid Nodes, enabling automated infrastructure management from within your on-premises environment. This approach allows for consistent infrastructure automation while respecting network boundaries and security requirements.
+Organizations can leverage Pulumi's CI/CD capabilities within their Hybrid Node environment. [Pulumi Deployments](/docs/deployments/concepts/) or the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) can run directly on Hybrid Nodes, enabling automated infrastructure management from within your on-premises environment. This approach allows for consistent infrastructure automation while respecting network boundaries and security requirements.
 
 ## Summary
 

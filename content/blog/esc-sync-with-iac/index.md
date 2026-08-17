@@ -51,7 +51,7 @@ values:
 
 The `sync` block defines the secrets and configuration values to be synced. In this example, we are syncing values to AWS Secrets Manager. The `value` field contains the actual values to be synced, while the `name` field specifies the name of the secret in AWS Secrets Manager.
 
-To automate the synchronization process, we define a Pulumi program that creates a Pulumi ESC environment, Pulumi IaC stack, and Pulumi [deployment](/docs/pulumi-cloud/deployments/) settings for the target stack. We then define a set of pre-run commands that extract the values from the environment and set them as configuration values in the target stack. The `syncCronSchedule` variable specifies how often the synchronization process should run.
+To automate the synchronization process, we define a Pulumi program that creates a Pulumi ESC environment, Pulumi IaC stack, and Pulumi [deployment](/docs/deployments/concepts/) settings for the target stack. We then define a set of pre-run commands that extract the values from the environment and set them as configuration values in the target stack. The `syncCronSchedule` variable specifies how often the synchronization process should run.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -153,7 +153,7 @@ This pattern allows you to define secrets and configuration values in a single l
 
 ## Webhooks: An Event-Driven Alternative Approach
 
-In addition to the scheduled synchronization approach, Pulumi ESC also supports [webhooks](/docs/esc/environments/webhooks/). Webhooks allow you to respond to events in real-time, such as when a secret is updated in ESC, and take immediate action to sync the new value to an external platform.
+In addition to the scheduled synchronization approach, Pulumi ESC also supports [webhooks](/docs/esc/concepts/webhooks/). Webhooks allow you to respond to events in real-time, such as when a secret is updated in ESC, and take immediate action to sync the new value to an external platform.
 
 In the example below, instead of a scheduled deployment, we define a webhook that triggers when the Pulumi ESC environment is updated. This ensures that the secrets and configuration values are always in sync between Pulumi ESC and the external platform.
 

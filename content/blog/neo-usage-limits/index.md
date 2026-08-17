@@ -51,5 +51,5 @@ Turn on **Enable email notifications** to get a heads-up before you reach the li
 Set your usage limits and stay in control as your organization hands Neo more and more work. Usage limits are available today for organizations on a paid plan, and an **Admin** or **Billing Manager** can set them.
 
 - [Sign in to Pulumi Cloud](https://app.pulumi.com/signin) and set your first organization limit
-- [Read the Neo usage limits documentation](/docs/ai/usage-limits/) for per-member limits, alerts, and enforcement details
+- [Read the Neo usage limits documentation](/docs/ai/neo/usage-limits/) for per-member limits, alerts, and enforcement details
 - [Join the Community Slack](https://slack.pulumi.com/) to share your feedback

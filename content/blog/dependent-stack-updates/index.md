@@ -627,7 +627,7 @@ At Pulumi, we build tools to help you scale your infrastructure footprint with s
 
 Check out these resources to get started today:
 
-- [Check out the Pulumi Deployments documentation](/docs/pulumi-cloud/deployments) and learn about configuring [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) for your stacks.
+- [Check out the Pulumi Deployments documentation](/docs/deployments/concepts/) and learn about configuring [Deployment Settings](/docs/deployments/concepts/#deployment-settings) for your stacks.
 - Get started with the [Pulumi Auto Deploy Package](/registry/packages/auto-deploy).
 - Learn more about [Pulumi Cloud Webhooks](/docs/pulumi-cloud/webhooks/#deployment-webhooks).
 - Join us in the [#pulumi-deployments community slack channel](https://slack.pulumi.com/).

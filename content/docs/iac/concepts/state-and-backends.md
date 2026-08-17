@@ -47,13 +47,13 @@ Pulumi's SDK works with all backends, although some details differ between them.
 
 ## Logging into and out of State Backends
 
-The [`login` command](/docs/iac/cli/commands/pulumi_login) logs you into a backend:
+The [`login` command](/docs/iac/cli/commands/pulumi_login/) logs you into a backend:
 
 ```sh
 $ pulumi login
 ```
 
-The [`logout` command](/docs/iac/cli/commands/pulumi_logout) logs you out of the current backend.
+The [`logout` command](/docs/iac/cli/commands/pulumi_logout/) logs you out of the current backend.
 
 ```sh
 $ pulumi logout
@@ -87,7 +87,7 @@ If you forget to log in, you will be automatically prompted to do so before you 
 
 After logging in, your credentials are recorded in the `~/.pulumi/credentials.json` file, and all subsequent operations will use the chosen backend. From time to time, you will see a helpful URL to your update or stack pages. For example, after an update completes, you will see a link to that update's details. You can always go there to see a full history of updates.
 
-If you ever want to check what user is logged in, use the [`whoami` command](/docs/iac/cli/commands/pulumi_whoami). To additionally see what  backend is currently being used, pass the `--verbose` (or `-v`) flag:
+If you ever want to check what user is logged in, use the [`whoami` command](/docs/iac/cli/commands/pulumi_whoami/). To additionally see what  backend is currently being used, pass the `--verbose` (or `-v`) flag:
 
 ```bash
 $ pulumi whoami -v
@@ -243,4 +243,4 @@ The `pulumi stack export` and `pulumi stack import` commands can be used to expo
 
 Although Pulumi was designed to shield you from manually needing to manage state, there are some circumstances where you will want or need to. This includes certain catastrophic failure scenarios, adding, deleting, renaming resources, and other advanced scenarios.
 
-The Pulumi state file uses a relatively easy to understand JSON format. The precise JSON format these state files use is not documented, but is defined in the [APIType source code](https://github.com/pulumi/pulumi/tree/master/sdk/go/common/apitype/). The [`state` command](/docs/iac/cli/commands/pulumi_state) also includes some helpful commands to edit your state.
+The Pulumi state file uses a relatively easy to understand JSON format. The precise JSON format these state files use is not documented, but is defined in the [APIType source code](https://github.com/pulumi/pulumi/tree/master/sdk/go/common/apitype/). The [`state` command](/docs/iac/cli/commands/pulumi_state/) also includes some helpful commands to edit your state.

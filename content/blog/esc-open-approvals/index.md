@@ -14,7 +14,7 @@ category: product
 
 Many teams live with the fear that a production environment **might be accidentally opened, exposing credentials or sensitive systems before anyone even notices**.
 
-We’re excited to announce a new feature for Pulumi ESC: [Open approvals](/docs/esc/administration/approvals/#open-approvals). A **governance capability that lets organizations require review and sign-off before an environment is opened** (i.e. activated or exposed)
+We’re excited to announce a new feature for Pulumi ESC: [Open approvals](/docs/esc/concepts/approvals/#open-approvals). A **governance capability that lets organizations require review and sign-off before an environment is opened** (i.e. activated or exposed)
 
 <!--more-->
 
@@ -59,4 +59,4 @@ Open approvals expands on Pulumi ESC support for compliance and governance capab
 
 We’re excited about what’s ahead and look forward to building it together with your feedback.
 
-You can learn more about [Approvals in Pulumi ESC Docs](/docs/esc/administration/approvals).
+You can learn more about [Approvals in Pulumi ESC Docs](/docs/esc/concepts/approvals/).
