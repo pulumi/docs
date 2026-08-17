@@ -287,21 +287,25 @@ export class HubspotForm {
     }
 
     // What a caller replacing this form with another one should carry across:
-    // every free-text field, keyed by HubSpot internal name. Deliberately not
-    // filtered to a list of known names — the forms each carry their own custom
-    // properties ("how_can_we_help_you_" and the like), and the receiving form
-    // ignores anything it doesn't have a field for.
+    // free-text fields and selects, keyed by HubSpot internal name. Deliberately
+    // not filtered to a list of known names — the forms carry their own custom
+    // properties (`contact_latest_query`, `web_self_attribution`) and the
+    // receiving form ignores anything it has no field for.
     //
-    // Selects, checkboxes, and radios are left out because they don't survive the
-    // round trip: collectFieldValues reports a select's option text rather than
-    // its value, and a checkbox or radio can't be restored by assigning to
-    // `value`. Hidden fields are excluded as well - UTM and ad ids are set per
-    // form, and the incoming form sets its own.
+    // Note this reads a select's raw `value`, unlike collectFieldValues, which
+    // reports the option's text for the submitted-values event. Text is what a
+    // human wants to read; only the value can be assigned back to a select on
+    // another form.
+    //
+    // Checkboxes and radios are left out: assigning to `value` sets the attribute
+    // rather than checking the control, so consent can't round-trip this way and
+    // shouldn't silently follow someone between forms anyway. Hidden fields are
+    // out too — UTM and ad ids are per-form, and the incoming form sets its own.
     @Method()
     async getCarryOverValues(): Promise<Record<string, string>> {
         const values: Record<string, string> = {};
 
-        this.el.querySelectorAll("input, textarea").forEach((field: HTMLInputElement | HTMLTextAreaElement) => {
+        this.el.querySelectorAll("input, textarea, select").forEach((field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement) => {
             if (!field.name) {
                 return;
             }
