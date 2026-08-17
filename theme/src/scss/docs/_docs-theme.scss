@@ -66,6 +66,8 @@ html[data-theme="dark"] body.section-docs {
     --docs-card-border: var(--color-gray-800);
     --docs-ring: var(--color-violet-300);
 
+    --code-inline-bg: var(--color-gray-900);
+
     // Code chrome — standard brand inversion of the light steps above (100↔900,
     // 200↔800, 300↔700; dots use 300 so they stay visible on the darker chrome).
     --chrome-bg: var(--color-violet-900);
@@ -429,14 +431,9 @@ html[data-theme="dark"] body.section-docs {
         border-color: color-mix(in oklch, var(--color-violet-300) 30%, transparent);
     }
 
-    // --- Prose blockquote + inline code ------------------------------------
+    // --- Prose blockquote ---------------------------------------------------
     main blockquote {
         border-color: var(--docs-border);
-    }
-
-    // Inline <code> only (pre > code is the dark code block, left untouched).
-    :not(pre) > code {
-        background-color: color-mix(in oklch, var(--color-white) 10%, transparent);
     }
 
     // --- Breadcrumbs --------------------------------------------------------
@@ -632,8 +629,8 @@ html[data-theme="dark"] body.section-docs {
 
     // --- Code panels (dark): mirror the light treatment in _code-light.scss —
     //     wash the code surface with the darkest violet step at 50% opacity (the
-    //     page shows through the rest) and give standalone fenced code blocks the
-    //     chooser's --chrome-border, so a lone block reads as a bordered card. The
+    //     page shows through the rest) and give standalone code blocks the chooser's
+    //     --chrome-border, so a lone block reads as a bordered card. The
     //     solid violet-950 surface + Min Dark syntax colors otherwise come from
     //     _code.scss / _chroma.scss. The border shorthand also restores width/style
     //     the unlayered `*` reset (color-only) can't touch. -------------------
@@ -650,7 +647,7 @@ html[data-theme="dark"] body.section-docs {
         background: color-mix(in srgb, var(--color-violet-950) 50%, transparent);
     }
 
-    .highlight:not(pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) pre:not(.mermaid) {
+    pre:not(.mermaid, pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) {
         border: 1px solid var(--chrome-border);
     }
 
