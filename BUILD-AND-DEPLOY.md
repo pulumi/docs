@@ -1224,7 +1224,7 @@ The repository uses 24 GitHub Actions workflows organized into categories. All w
 
 **Tests:** Runs `make test` on ~425 example programs across:
 
-- Languages: TypeScript, Python, Go, C#, Java, YAML
+- Languages: TypeScript, JavaScript, Python, Go, .NET, Java, YAML, HCL
 - Clouds: AWS, GCP, Azure, Kubernetes
 - Scenarios: Simple deployments, complex architectures
 

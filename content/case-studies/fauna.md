@@ -49,7 +49,7 @@ Fauna’s engineers needed a modern, cloud engineering solution that would meet 
 
 ### Why Pulumi?
 
-Fauna chose Pulumi because it would allow its developers to adopt modern, [cloud engineering](/cloud-engineering/) practices out-of-the-box and increase velocity. With Pulumi, developers can build infrastructure as code with standard languages they already know, such as Python, TypeScript/JavaScript, Go, and C#. They can deploy infrastructure changes through existing CI/CD pipelines, just like application code. Finally, they can manage cloud infrastructure and applications with full visibility into every resource, access controls, and Policy as Code.
+Fauna chose Pulumi because it would allow its developers to adopt modern, [cloud engineering](/cloud-engineering/) practices out-of-the-box and increase velocity. With Pulumi, developers can build infrastructure as code with standard languages they already know, such as Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL. They can deploy infrastructure changes through existing CI/CD pipelines, just like application code. Finally, they can manage cloud infrastructure and applications with full visibility into every resource, access controls, and Policy as Code.
 
 ### How Fauna built region groups with Pulumi
 
@@ -83,7 +83,7 @@ Fauna is using Pulumi's [Automation API](/automation/) to manage its quality ass
 
 Pulumi enabled Fauna to develop a crucial new feature, Region Groups, by giving developers the capabilities they needed to build and deploy quickly and safely. The benefits were:
 
-- Reduced time-to-market from weeks to days in spite of a small team because developers could build infrastructure as code with standard languages (Python, TypeScript, Go, C#).
+- Reduced time-to-market from weeks to days in spite of a small team because developers could build infrastructure as code with standard languages (Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL).
 - Increased velocity because developers were more productive building cloud applications with software engineering practices and tools they were already using.
 - Improved the reliability of infrastructure because developers could use safety mechanisms such as unit tests and code reviews against changes.
 - Maintained the security of infrastructure that handled customer data using Pulumi’s security, encryption, and access control features.
