@@ -101,6 +101,8 @@ export class PulumiMultiSelectForm {
         }
 
         const values = await form.getCarryOverValues();
+        // Merged rather than replaced: the forms don't all share fields, so a message
+        // has to survive a detour through one that lacks a message field.
         const carried: Record<string, string> = { ...this.carriedValues };
 
         Object.entries(values).forEach(([name, value]) => {
@@ -122,6 +124,7 @@ export class PulumiMultiSelectForm {
                 {this.formSubmitted ? null : (
                     <div>
                         <span class={this.labelClass || ""}>{this.labelText}</span>
+                        {/* Not a <fieldset>: one here disables the `:not(:has(fieldset))` branch in _hubspot.scss that styles the embedded form's fields. */}
                         <div role="radiogroup" aria-label={this.labelText} class="grid grid-cols-1 lg:grid-cols-4 gap-3">
                             {this.items.map(item => (
                                 <label class="card card-hover flex items-center justify-center p-3 m-0 text-center text-sm font-normal has-[:checked]:border-violet-primary has-[:checked]:bg-violet-50 has-[:checked]:text-violet-primary has-[:focus-visible]:border-violet-800 has-[:focus-visible]:inset-ring-2 has-[:focus-visible]:inset-ring-violet-800">

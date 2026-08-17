@@ -13,6 +13,8 @@
             <aside class="mt-8 md:mt-0">
                 {{ with .Params.quick_links }}
                     <h2 class="font-overline-sm mb-6">{{ .title }}</h2>
+                    {{/* gap, not space-y-*: Tailwind v4 emits space-y at zero specificity, so the
+                         m-0 each item needs to escape `main li { my-2 }` overrides it. */}}
                     <ul class="list-none p-0 m-0 flex flex-col gap-10">
                         {{ range .items }}
                             <li class="m-0">
