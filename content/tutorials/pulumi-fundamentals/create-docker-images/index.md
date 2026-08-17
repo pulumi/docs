@@ -139,7 +139,7 @@ Notice that we're mixing in some Python constructs in here like f-strings (strin
 Run `pulumi up`.
 
 {{% notes type="info" %}}
-Note that it make take a bit before you get any output because Docker is doing a
+Note that it may take a bit before you get any output because Docker is doing a
 lot of work in the background before it connects to Pulumi. Be patient!
 {{% /notes %}}
 

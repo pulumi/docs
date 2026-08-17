@@ -523,7 +523,7 @@ A `variable` block is how a Pulumi HCL program reads [configuration](/docs/iac/c
 
 Our program now creates a service to access the NGINX deployment, and requires a new [config](/docs/iac/concepts/config/) value to indicate whether the program is being deployed to Minikube or not.
 
-The configuration value can be set for the stack using `pulumi config set isMinikube <true|false>` command.
+The configuration value can be set for the stack using the `pulumi config set isMinikube <true|false>` command.
 
 If you are currently using Minikube, set `isMinikube` to `true`, otherwise, set `isMinikube` to `false` as shown in the following command.
 

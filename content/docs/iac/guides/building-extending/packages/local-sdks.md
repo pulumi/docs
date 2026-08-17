@@ -80,7 +80,7 @@ Refer to the [Any Terraform Provider documentation](/docs/iac/using-pulumi/pulum
 
 After adding a local SDK, reference it in your project:
 
-{{< chooser language "typescript,python,go,csharp,yaml" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
 
 ```bash

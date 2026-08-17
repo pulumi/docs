@@ -96,7 +96,7 @@ module "my-website" {
 
 {{% /choosable %}}
 
-Using components here also has the benefit that, as the requirements for Azure static websites changes, you can
+Using components here also has the benefit that, as the requirements for Azure static websites change, you can
 update the one component definition and have all uses of it benefit.
 
 ### Define a new component
@@ -985,7 +985,7 @@ directory the module lives in; the `components:index:` prefix is fixed.
 
 {{% /choosable %}}
 
-This preview shows you a few things. First, you'll see our website component with all of its children
+This preview shows you a few things. First, you'll see our website component with all of its child
 resources neatly parented underneath it. This helps to see what resources relate to which components. Next,
 you'll see that your old resources are being destroyed.
 
