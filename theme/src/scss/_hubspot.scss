@@ -77,6 +77,12 @@
 
         &:not(.form-columns-1)>.field:first-child {
             @apply pr-4;
+
+            // 400px is where HubSpot's own CSS stacks a form-columns-2 fieldset; any
+            // other value leaves a band of widths where the columns collide or sit unevenly.
+            @media (max-width: 400px) {
+                @apply pr-0;
+            }
         }
 
         @include hs-form-field-chrome;
@@ -179,7 +185,7 @@
         @apply list-none mt-2 p-0 text-red-600 text-xs;
 
         label {
-            @apply mb-0;
+            @apply mt-0 mb-0;
         }
     }
 

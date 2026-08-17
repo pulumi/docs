@@ -4,9 +4,22 @@ table tr td:not(:first-child) code {
     word-break: break-word;
 }
 
+body {
+    --code-inline-bg: var(--color-gray-100);
+}
+
+// Table headers are painted with the same value as the inline-code chip in both
+// modes (gray-100 light, --docs-surface/gray-900 dark), so a chip there would be
+// invisible. Step it to the border token — the matching one-step-darker value in
+// both modes — with a literal fallback for non-docs pages, where --docs-* is
+// undefined.
+th {
+    --code-inline-bg: var(--docs-border, var(--color-gray-200));
+}
+
 code {
-    background-color: var(--color-gray-100);
-    border-radius: 2px;
+    background-color: var(--code-inline-bg);
+    border-radius: calc(4em / 14);
     font-size: 14px;
     padding: 3px 6px;
     overflow-wrap: break-word;
@@ -19,7 +32,7 @@ h4,
 h5,
 h6 {
     code {
-        font-size: 14px;
+        @include heading-inline-code;
     }
 }
 

@@ -18,7 +18,7 @@
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 
@@ -35,7 +35,7 @@
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 
@@ -52,7 +52,7 @@
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 
@@ -69,7 +69,7 @@
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 
@@ -86,7 +86,7 @@
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 
@@ -103,7 +103,7 @@
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 
@@ -120,7 +120,7 @@
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 
