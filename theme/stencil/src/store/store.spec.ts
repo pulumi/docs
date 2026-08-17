@@ -1,3 +1,10 @@
+// NOTE: These tests do not run in CI. `make test` only runs the example-program tests,
+// and the pull-request workflow never invokes `stencil test`. Run them by hand when
+// touching the store:
+//
+//     cd theme/stencil && yarn install
+//     npx stencil test --spec -- src/store/store.spec.ts
+//
 import { normalizeState } from "./index";
 
 describe("normalizeState", () => {
