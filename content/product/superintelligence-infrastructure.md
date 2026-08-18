@@ -120,7 +120,7 @@ capabilities:
     description: |
         Infrastructure written in Python, TypeScript, and Go. The same languages your ML engineers already know. 
         
-        Author in Python, TypeScript, Go, or C#, with HCL available when you prefer it.
+        Author in Python, TypeScript, Go, or .NET, with HCL available when you prefer it.
 
 building_blocks:
   title: "Why AI infrastructure requires dynamic orchestration"
