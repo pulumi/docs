@@ -163,6 +163,39 @@
   "https://www.crunchbase.com/organization/pulumi-corporation"
 }}
 
+{{/* Shared SoftwareApplication fields for the Pulumi Platform entity, defined once
+     and reused both by the homepage's full node (below, merged with pricing
+     Offers) and by any non-home page that opts in via `software_application_schema:
+     true` in frontmatter (see the `else` branch further down). Mirrors the
+     $orgDescription/$orgSameAs pattern immediately above: shared fields live in one
+     place so the homepage and per-page nodes cannot drift apart. Pricing/`offers`
+     is deliberately NOT part of this shared core — it stays homepage-only so an
+     explainer page like /what-is/what-is-pulumi/ never has to carry (or risk
+     garbling) price data; see the Team/Enterprise Offers built inline below. */}}
+{{/* This dict matches the homepage's SoftwareApplication node field-for-field as
+     it existed before this refactor, so merging it back in below produces
+     byte-identical homepage JSON-LD. Fields that are new (url,
+     programmingLanguage) are added only on the opted-in non-home path further
+     below, not here, so the homepage's existing output cannot change. */}}
+{{ $softwareCore := dict
+  "@type" "SoftwareApplication"
+  "@id" "https://www.pulumi.com/#pulumi-platform"
+  "name" "Pulumi Infrastructure as Code Platform"
+  "alternateName" "Pulumi"
+  "description" "Open source infrastructure as code SDK with enterprise cloud platform. Deploy cloud resources using TypeScript, Python, Go, C#, Java, or YAML. Manage AWS, Azure, Google Cloud, Kubernetes, and 150+ providers."
+  "applicationCategory" "DeveloperApplication"
+  "applicationSubCategory" "Infrastructure as Code"
+  "operatingSystem" (slice "Windows" "macOS" "Linux")
+  "softwareVersion" (readFile "static/latest-version" | default "3.198.0")
+  "downloadUrl" "https://get.pulumi.com/"
+  "installUrl" "https://www.pulumi.com/docs/install/"
+  "releaseNotes" "https://www.pulumi.com/docs/reference/changelog/"
+  "license" "Apache-2.0"
+  "creator" (dict "@id" "https://www.pulumi.com/#organization")
+  "maintainer" (dict "@id" "https://www.pulumi.com/#organization")
+  "keywords" "infrastructure as code, IaC, cloud, DevOps, automation, platform engineering"
+}}
+
 {{/* For homepage, add Organization, Website and SoftwareApplication schemas */}}
 {{ if .IsHome }}
   {{/* Add Organization entity - only on homepage per Google best practices */}}
@@ -249,21 +282,16 @@
   }}
   {{ $graph = $graph | append $website }}
 
-  {{/* SoftwareApplication schema for Pulumi Platform */}}
-  {{ $software := dict
-    "@type" "SoftwareApplication"
-    "@id" "https://www.pulumi.com/#pulumi-platform"
-    "name" "Pulumi Infrastructure as Code Platform"
-    "alternateName" "Pulumi"
-    "description" "Open source infrastructure as code SDK with enterprise cloud platform. Deploy cloud resources using TypeScript, Python, Go, C#, Java, or YAML. Manage AWS, Azure, Google Cloud, Kubernetes, and 150+ providers."
-    "applicationCategory" "DeveloperApplication"
-    "applicationSubCategory" "Infrastructure as Code"
-    "operatingSystem" (slice "Windows" "macOS" "Linux")
-    "softwareVersion" (readFile "static/latest-version" | default "3.198.0")
-    "downloadUrl" "https://get.pulumi.com/"
-    "installUrl" "https://www.pulumi.com/docs/install/"
-    "releaseNotes" "https://www.pulumi.com/docs/reference/changelog/"
-    "license" "Apache-2.0"
+  {{/* SoftwareApplication schema for Pulumi Platform. Pricing/`offers` stays
+       homepage-only, merged on top of the shared $softwareCore fields defined
+       above; this is the one place pricing data is allowed to appear so it
+       doesn't get duplicated (and risk drifting or garbling) across other
+       pages. `url` and `programmingLanguage` are NOT part of $softwareCore —
+       they're added only on the opted-in non-home path further below, as
+       noted where $softwareCore itself is defined above — so this merge
+       just layers `offers` on top and preserves every field the homepage
+       previously emitted. */}}
+  {{ $software := merge $softwareCore (dict
     "offers" (slice
       (dict
         "@type" "Offer"
@@ -289,10 +317,7 @@
         "url" "https://www.pulumi.com/pricing/"
       )
     )
-    "creator" (dict "@id" "https://www.pulumi.com/#organization")
-    "maintainer" (dict "@id" "https://www.pulumi.com/#organization")
-    "keywords" "infrastructure as code, IaC, cloud, DevOps, automation, platform engineering"
-  }}
+  ) }}
   {{ $graph = $graph | append $software }}
 {{ else }}
   {{/* Add a resolvable Organization node, with identity-defining fields, on
@@ -359,6 +384,37 @@
     "publisher" (dict "@id" "https://www.pulumi.com/#organization")
   }}
   {{ $graph = $graph | append $websiteMinimal }}
+
+  {{/* Opt-in SoftwareApplication node for non-home pages whose entire purpose is
+       defining the Pulumi product entity (e.g. /what-is/what-is-pulumi/). Gated
+       on a front-matter flag rather than .Type or a content path so it survives
+       PR #20595's content/what-is -> content/resources rename (front matter
+       travels with a `git mv`; a .Type or path string does not). Deliberately
+       excludes `offers`/pricing — see the note on $softwareCore above — but adds
+       `url` and `programmingLanguage` as page-appropriate additions that do not
+       touch the homepage's byte-identical node. */}}
+  {{ if .Params.software_application_schema }}
+    {{/* Uses "C#" rather than ".NET" (the prose convention elsewhere on this
+         page): schema.org's `programmingLanguage` expects a language name, and
+         .NET is a runtime/platform, not a language. If a future sweep wants
+         these to match verbatim, change this back to ".NET" and update this
+         comment — either is defensible, but the two should not silently
+         diverge again. */}}
+    {{/* $softwareCore's shared `description` was written for the homepage and
+         is deliberately left untouched above (see $softwareCore's own note)
+         so the homepage node stays byte-identical. This page's prose says
+         JavaScript and 180+ providers, so the JSON-LD would contradict its
+         own prose — and its own programmingLanguage slice just below — if it
+         inherited that string unmodified. Override it here, matching this
+         page's on-page copy, without touching the shared dict other pages
+         (i.e. the homepage) still rely on. */}}
+    {{ $softwarePage := merge $softwareCore (dict
+      "url" "https://www.pulumi.com/"
+      "description" "Open source infrastructure as code SDK with enterprise cloud platform. Deploy cloud resources using TypeScript, Python, JavaScript, Go, .NET, or Java, plus YAML or HCL. Manage AWS, Azure, Google Cloud, Kubernetes, and 180+ providers."
+      "programmingLanguage" (slice "TypeScript" "Python" "JavaScript" "Go" "C#" "Java" "YAML" "HCL")
+    ) }}
+    {{ $graph = $graph | append $softwarePage }}
+  {{ end }}
 {{ end }}
 
 {{/* Add comparison table to graph (collected earlier to wire hasPart into WebPage) */}}

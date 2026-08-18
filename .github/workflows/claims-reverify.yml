@@ -198,6 +198,15 @@ jobs:
         with:
           name: claims-reverify-report
           path: .claims-reverify-report.json
+          # Dotfile: upload-artifact excludes hidden files unless told
+          # otherwise, and hashFiles() has no such exclusion — so without this
+          # the step runs and uploads nothing, with only a warning annotation.
+          # That's exactly what happened on every run before 2026-08. The
+          # hashFiles guard above covers the legitimately-absent report (job
+          # died before the write), so a no-files result here can only be a
+          # regression of the hidden-file kind: fail loudly.
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 90
 
       # Counts only + a run link — the evidence lives in the report artifact
