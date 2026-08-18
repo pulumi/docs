@@ -15,7 +15,6 @@ aliases:
   - /docs/iac/crossguard/faq/
   - /docs/guides/crossguard/faq/
   - /docs/using-pulumi/crossguard/faq/
-  - /docs/iac/packages-and-automation/crossguard/
   - /docs/iac/packages-and-automation/crossguard/faq/
   - /docs/iac/using-pulumi/crossguard/faq/
 ---

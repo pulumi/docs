@@ -1,5 +1,5 @@
 ---
-title_tag: Troubleshooting SCIM | SCIM
+title_tag: Troubleshooting | SCIM
 meta_desc: Troubleshooting guide for SCIM provisioning issues in Pulumi Cloud.
 title: Troubleshooting
 h1: SCIM troubleshooting
@@ -49,7 +49,7 @@ Suggested Resolution: There are three possible solutions. The user can either:
 If the existing account is already managed by SAML SSO in another Pulumi organization, use option 3. Signing in to the new organization directly returns an "Email already in use" screen, and an SSO-managed account cannot clear that screen on its own. Connect the new organization's SAML SSO identity from your account settings instead. See [Connect SAML SSO to an existing account](/docs/administration/access-identity/saml/#connect-saml-sso-to-an-existing-account).
 {{% /notes %}}
 
-### UserName already exists
+### `userName` already exists
 
 ```json
 {
@@ -67,7 +67,7 @@ Cause: The user being provisioned has the same username as an existing account i
 
 Suggested Resolution: Update the username attribute in your identity provider’s console if your identity provider allows, then try reprovisioning the user. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
-### UserName is immutable
+### `userName` is immutable
 
 ```json
 {
