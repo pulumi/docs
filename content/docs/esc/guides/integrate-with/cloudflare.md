@@ -173,7 +173,7 @@ export default {
 } satisfies ExportedHandler<Env>;
 ```
 
-Using Infrastructure as Code (IaC) to manage Workers? See the next section to see how to leverage Pulumi ESC alongside.
+Using infrastructure as code (IaC) to manage Workers? See the next section to see how to leverage Pulumi ESC alongside.
 
 ## Manage Cloudflare Worker Secrets in IaC
 
@@ -222,7 +222,7 @@ values:
 
 ### 2. Add ESC to a Pulumi Stack
 
-You'll create a new stack to test the changes in isolation. Optionally, use an existing Stack.
+You'll create a new stack to test the changes in isolation. Optionally, use an existing stack.
 
 Inside your Pulumi project directory, run:
 
@@ -233,7 +233,7 @@ pulumi config env add ${ESC_ENV}
 
 ### 3. Assign an ESC Secret to a [Worker Secret Binding](https://www.pulumi.com/registry/packages/cloudflare/api-docs/workerscript/#inputs)
 
-With the ESC Environment referenced in the Stack, you'll be able to consume ESC values to assign them to a Secret Binding Input. Here is an example Pulumi program written in TypeScript:
+With the ESC environment referenced in the stack, you'll be able to consume ESC values to assign them to a Secret Binding Input. Here is an example Pulumi program written in TypeScript:
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";

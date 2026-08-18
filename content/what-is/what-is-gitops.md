@@ -88,13 +88,13 @@ Several mature tools implement GitOps, most of them focused on Kubernetes.
 
 **Flux** is a set of continuous delivery and GitOps tools for Kubernetes, also a CNCF graduated project. Flux is built from composable controllers (source, kustomize, helm, notification) and integrates tightly with the Kubernetes API. It emphasizes a toolkit approach, letting platform teams assemble the reconciliation behavior they need.
 
-**Pulumi Kubernetes Operator** brings GitOps to full infrastructure as code, not just Kubernetes manifests. It runs in the cluster, treats a Pulumi Stack as a Kubernetes custom resource, and reconciles cloud infrastructure (across 200+ providers) from a Git repository using a pull-based model.
+**Pulumi Kubernetes Operator** brings GitOps to full infrastructure as code, not just Kubernetes manifests. It runs in the cluster, treats a Pulumi Stack as a Kubernetes custom resource, and reconciles cloud infrastructure (across every provider Pulumi supports) from a Git repository using a pull-based model.
 
 | Tool | Primary scope | Model | Governance |
 |---|---|---|---|
 | Argo CD | Kubernetes application delivery | Pull-based | CNCF graduated |
 | Flux | Kubernetes delivery (composable controllers) | Pull-based | CNCF graduated |
-| Pulumi Kubernetes Operator | Cloud infrastructure as code + Kubernetes (200+ providers) | Pull-based | Open source (Apache 2.0) |
+| Pulumi Kubernetes Operator | Cloud infrastructure as code + Kubernetes (every provider Pulumi supports) | Pull-based | Open source (Apache 2.0) |
 
 Argo CD and Flux focus on reconciling Kubernetes resources. The Pulumi Kubernetes Operator extends the same GitOps discipline to the underlying cloud infrastructure (databases, networks, IAM, serverless) so a single workflow can manage both the cluster and everything it depends on.
 
@@ -112,7 +112,7 @@ Most teams treat pull-based reconciliation as the target state for security-sens
 
 Pulumi supports GitOps through several complementary paths, extending the model beyond Kubernetes manifests to the full breadth of cloud [infrastructure as code](/what-is/what-is-infrastructure-as-code/).
 
-**Pulumi Kubernetes Operator.** The [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) implements pull-based GitOps for infrastructure. It runs inside the cluster and exposes a Pulumi Stack as a first-class Kubernetes custom resource. You point a Stack resource at a Git repository and a branch, and the operator watches that branch, automatically running `pulumi up` whenever new code is pushed. Because it's pull-based, the operator can run in a private network with no inbound access, and it reconciles cloud resources across every provider Pulumi supports, not only Kubernetes objects.
+**Pulumi Kubernetes Operator.** The [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) implements pull-based GitOps for infrastructure. It runs inside the cluster and exposes a Pulumi stack as a first-class Kubernetes custom resource called `Stack`. You point a `Stack` resource at a Git repository and a branch, and the operator watches that branch, automatically running `pulumi up` whenever new code is pushed. Because it's pull-based, the operator can run in a private network with no inbound access, and it reconciles cloud resources across every provider Pulumi supports, not only Kubernetes objects.
 
 **Pulumi Deployments and Git Push to Deploy.** [Pulumi Deployments](/docs/deployments/) provides a managed way to run Pulumi operations in response to Git activity. Git Push to Deploy connects a repository so that a push to a chosen branch drives a deployment for a given project path, and pull-request workflows can preview changes and post the results back to the PR before anything merges.
 

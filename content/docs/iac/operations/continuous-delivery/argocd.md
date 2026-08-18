@@ -330,7 +330,7 @@ For dependencies between Pulumi stacks—for example, creating a cluster before 
 - The operator runs each deployment in a workspace pod. List the pods with `kubectl get pods -n pulumi` and inspect the logs of the one for the failing stack with `kubectl logs <pod-name> -n pulumi`.
 - Verify that the cluster can authenticate to Pulumi Cloud—confirm the OIDC issuer is configured, or that the access token secret exists and has the required permissions.
 
-**Argo CD shows the Stack as `Unknown` or `Progressing`**
+**Argo CD shows the `Stack` as `Unknown` or `Progressing`**
 
 - The operator provides custom health checks for `Stack` resources. A `Progressing` status means the deployment is still in flight; if it persists, check the workspace pod logs.
 - Check whether the `Stack` is waiting on a prerequisite to be satisfied.

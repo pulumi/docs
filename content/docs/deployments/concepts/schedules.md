@@ -26,7 +26,7 @@ In order to set up a deployment schedule in the Pulumi Cloud console, follow the
 
 <!-- markdownlint-disable ol-prefix -->
 1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/settings/)
-2. Navigate to the Stack > Settings > Schedules
+2. Navigate to the stack > Settings > Schedules
 3. Select "Raw operation"
 4. Select from the drop-down the type of operation you would like to schedule
 5. Set the schedule using a cron expression

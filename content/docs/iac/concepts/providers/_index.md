@@ -86,7 +86,7 @@ The generated SDK will include a `.gitignore` so it can be safely committed to v
 #### About provider packages in the project configuration file
 
 {{% notes type="info" %}}
-When using `pulumi package add` with Pulumi version 3.157.0 or later, packages are automatically added to your project configuration file (`Pulumi.yaml`).
+When using `pulumi package add` with Pulumi version 3.163.0 or later, packages are automatically added to your project configuration file (`Pulumi.yaml`).
 {{% /notes %}}
 
 When you run `pulumi package add`, the package is automatically added to your Pulumi project configuration file under the [`packages`](/docs/iac/concepts/projects/project-file/#packages-options) key. For the example in the previous section, the following entry would be added to your `Pulumi.yaml`:

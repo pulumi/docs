@@ -149,4 +149,4 @@ Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Az
 
 ## Get Started with Pulumi
 
-Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
+Pulumi’s infrastructure as code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).

@@ -1,0 +1,62 @@
+# Flags "the Stack"-style generic references to a Pulumi stack capitalized as
+# if "Stack" were a proper noun, per the brand writing-style guide and
+# STYLE-GUIDE.md's Headings section ("use capitalization only for proper
+# nouns... use 'stack' not 'Stack'").
+#
+# An earlier draft of this rule also flagged capitalized mid-sentence
+# "Infrastructure as Code". That token is deliberately NOT included here:
+# hand-testing in isolation (not the tree-wide count, which stayed clean
+# because of a boundary bug -- see the dropped token's own history in git
+# log for the postmortem) showed the true violation surface is 161 hits
+# across 78 files, almost entirely blog posts. That's a real, separate sweep
+# this PR doesn't try to rush under review pressure -- filed as a follow-up
+# rather than shipped half-fixed.
+#
+# This is an existence rule (flag-only), NOT a substitution, and deliberately
+# stays at `warning` rather than joining the `blocker:` list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml: the
+# correct call is context-dependent, the same reason DeprecatedProductNames
+# stays flag-only. "Stack" is a genuine proper noun in several places this
+# rule must not touch -- the Pulumi Kubernetes Operator's `Stack` custom
+# resource (a Kubernetes CRD Kind, like "Pod" or "Deployment"), the Pulumi
+# CDK bridge's `pulumicdk.Stack` class, "Stack Admin"/"Stack Tags" (RBAC and
+# policy feature names) -- and only a human reviewing the sentence can tell
+# the two apart.
+#
+# Tuned empirically against the full content/ tree (2,241 files): the
+# determiner-gated Stack token and the lowercase-preceded IaC token together
+# produced zero false positives once compound proper nouns were excluded via
+# lookahead and a handful of subtrees that are *inherently* about the CRD or
+# the CDK class were opted out in .vale.ini. See the per-path overrides
+# there for the reasoning on each exclusion.
+# `scope: paragraph` is deliberate, not an oversight -- do not widen it to
+# `text` or bare `heading` without re-tuning (the "clean at 2,241 files"
+# result below was measured under paragraph scope). Widening either way
+# would flag correct Title-Case H1s (see Google.Headings's exclusion in
+# .vale.ini and the header comment on HeadingSentenceCase.yml for the wall
+# this repo already hit). If headings ever need coverage, use the enumerated
+# per-level shape HeadingSentenceCase.yml and CrossReferenceHeadings.yml
+# already use (heading.h2 through h6), never scope: text.
+#
+# Confirmed empirically that paragraph scope excludes headings: a minimal
+# repro with the same violating text in both an H2 and a body paragraph only
+# flagged the paragraph. That means the argocd.md opt-out below, whose sole
+# match on that page is an H2, currently covers nothing -- left in place
+# rather than removed on the unconfirmed premise, but noted here so the next
+# person doesn't read it as evidence the opt-out is load-bearing. Tracked
+# alongside the dropped IaC token's scope question in issue #20958.
+extends: existence
+message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (STYLE-GUIDE.md §Headings, 'use capitalization only for proper nouns')."
+link: "https://brand.pulumi.com/voice/writing-style/"
+level: warning
+ignorecase: false
+nonword: false
+scope: paragraph
+tokens:
+  # Excludes a following capitalized word via negative lookahead, so compound
+  # proper nouns -- Stack Admin (an RBAC permission set), Stack API, Stack
+  # Tags, Stack Overflow -- aren't mistaken for the generic concept. Vale
+  # falls back to the regexp2 engine (.NET-compatible) for patterns RE2 can't
+  # compile, which is what makes lookahead usable here; see the precedent in
+  # Pulumi.NarrativeWe ('let us (?!know\b)\w+').
+  - '\b(the|a|an|this|that|your|our|each|every|which|existing|new|current|given|single|specific|same|dependent) Stack\b(?! [A-Z])'

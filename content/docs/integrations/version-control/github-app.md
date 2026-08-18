@@ -160,6 +160,10 @@ The Pulumi GitHub app automatically adds comments to pull requests with the resu
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
 
 {{% notes type="info" %}}
+Pull request comments don't require [Pulumi Deployments](/docs/deployments/). Any `pulumi preview` or `pulumi up` that can read the repository's `.git` directory posts them, whether it runs in GitHub Actions, CircleCI, Jenkins, or on your laptop. [Push-to-deploy](#push-to-deploy) and [review stacks](#review-stacks) do require Deployments.
+{{% /notes %}}
+
+{{% notes type="info" %}}
 When you disable pull request comments in your [integration settings](#integration-settings), the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.
 {{% /notes %}}
 
