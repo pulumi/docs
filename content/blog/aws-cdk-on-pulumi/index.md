@@ -31,7 +31,7 @@ To deploy existing AWS CDK Constructs using Pulumi, simply do the following:
 2. In the constructor, use any AWS CDK constructs from existing libraries such as [`aws-cdk-lib`](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib-readme.html)
 3. Call `this.synth()` to finalize the stack and deploy its resources.
 
-Constructing an instance of this `pulumicdk.Stack` from within your Pulumi program will then deploy all of the infrastructure defined by the CDK constructs in the Stack using Pulumi.
+Constructing an instance of this `pulumicdk.Stack` from within your Pulumi program will then deploy all the infrastructure defined by the CDK constructs in the `Stack` using Pulumi.
 
 For example, the following program deploys two AWS CDK Constructs using Pulumi.
 

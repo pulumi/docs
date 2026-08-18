@@ -103,6 +103,18 @@ def main() -> int:
         check(art["slug"] == "docs-concepts-alpha", f"slug derived (got {art['slug']})")
         check(art["source_pr_number"] == 111, "prior PR pointer carried for the backlog")
         check(art["skipped_findings"] == 5, "banked count carried")
+        check(art["stale_claim_markers"] == [] and art["stale_claims"] == 0,
+              "marker fields present (empty) so record-review's rebuild can't drop them")
+
+        print("stale-claim markers ride the glow-up queue (carry-forward safety)")
+        led_m = tmp / "ledger-markers"
+        marker = {"entity_key": "version/x", "verdict": "contradicted",
+                  "unresolved_reviews": 1}
+        write_ledger(led_m, A, skipped_findings=3, stale_claims=[marker])
+        qm = run_select(repo, tiers, led_m, "--count", "1")
+        check(qm["articles"][0]["stale_claim_markers"] == [marker]
+              and qm["articles"][0]["stale_claims"] == 1,
+              "ledger markers carried in full on the glow-up article")
         q2 = run_select(repo, tiers, led, "--count", "1")
         check(q2["articles"][0]["path"] == A, "selection is deterministic")
 

@@ -31,7 +31,7 @@ Pick any cloud provider, and you will find a cloud SDK in various languages, for
 
 Pulumi reduces the burden of creating and maintaining repeatable and robust deployments by providing the latest language runtimes, concurrency management, support for diffing updates, and maintaining state with robust checkpoints. Your infrastructure will always be in a well-defined and recoverable state.
 
-[Automation API](https://github.com/pulumi/automation-api-examples) takes this one step further by providing an API overlay to Pulumi's Infrastructure as Code engine. A data scientist can build infrastructure programmatically within Jupyter to automate building and creating infrastructure as functions and call them as needed. Let's take a look at an example using a Jupyter notebook.
+[Automation API](https://github.com/pulumi/automation-api-examples) takes this one step further by providing an API overlay to Pulumi's infrastructure as code engine. A data scientist can build infrastructure programmatically within Jupyter to automate building and creating infrastructure as functions and call them as needed. Let's take a look at an example using a Jupyter notebook.
 
 ## Infrastructure as a function
 

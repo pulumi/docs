@@ -399,33 +399,6 @@ def main() -> int:
         check(dpaths[0] == OVERVIEW, "after a fresh completed review the tier-1 page drops below the stale tier-2")
         check(C not in dpaths, "just-reviewed tier-1 leaves the top picks")
 
-        print("stale-claims boost: cooldown after a completed review")
-        marker = [{"entity_key": "version/x", "verdict": "contradicted"}]
-        # Completed review 10 days ago + marker -> the boost applies (the
-        # review evidently didn't clear it; this is real drift).
-        led_old = tmp / "ledger-stale-old"
-        write_ledger(led_old, C, "2026-06-02", status="reviewed", stale_claims=marker)
-        so = scores(run_select(repo, tiers, led_old, "--count", "20"))
-        check(so[C] > 400, "marker on an old completed review keeps the +400 boost")
-        # Completed review 2 days ago + marker -> the claims-index echo of the
-        # fix that just landed; boost suppressed, page scores like any
-        # freshly-reviewed page.
-        led_new = tmp / "ledger-stale-new"
-        write_ledger(led_new, C, "2026-06-10", status="reviewed", stale_claims=marker)
-        sn = scores(run_select(repo, tiers, led_new, "--count", "20"))
-        check(sn[C] < 400, "marker within the cooldown loses the boost")
-        led_plain = tmp / "ledger-stale-plain"
-        write_ledger(led_plain, C, "2026-06-10", status="reviewed")
-        sp = scores(run_select(repo, tiers, led_plain, "--count", "20"))
-        check(sn[C] == sp[C], "suppressed boost means the marker changes nothing")
-        # An incomplete outcome never advances the clock, so it never
-        # suppresses either — the page stays boosted and due.
-        led_incm = tmp / "ledger-stale-incomplete"
-        write_ledger(led_incm, C, "2026-06-10", status="incomplete", attempts=1,
-                     stale_claims=marker)
-        si2 = scores(run_select(repo, tiers, led_incm, "--count", "20"))
-        check(si2[C] > 400, "incomplete review does not suppress the boost")
-
         print("--paths override bypasses scoring")
         q = run_select(repo, tiers, empty, "--paths", TWO)
         check([a["path"] for a in q["articles"]] == [TWO], "explicit path honored")
@@ -461,6 +434,65 @@ def main() -> int:
                 check(entry["tier"] == 0, f"real tiers file marks {label} tier 0")
             else:
                 check("tiers" not in proc.stderr.lower(), "real tiers file parses")
+
+    # --- stale-claim markers ride the queue, and escalation stops the boost ---
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
+        repo = make_repo(tmp)
+        tiers = tmp / "tiers.yaml"
+        tiers.write_text(REPO_TIERS.read_text() if REPO_TIERS.is_file() else "rules: []\n")
+
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  "checked_at": "2026-08-15"}
+
+        led = tmp / "ledger-markers"
+        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
+        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
+        q = run_select(repo, tiers, led)
+        entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
+        check(entry is not None, "marked page is boosted into the queue")
+        if entry:
+            check(entry["stale_claims"] == 1, "count field preserved")
+            check([m["entity_key"] for m in entry.get("stale_claim_markers") or []]
+                  == ["version/pulumi-package"], "queue item carries the marker itself")
+            check((entry["stale_claim_markers"][0].get("evidence") or "")
+                  == "CHANGELOG says 3.163.0", "marker evidence reaches the worker")
+
+        # An escalated marker must still ride in the queue item and still be
+        # counted: record-review.py rebuilds the ledger entry from the queue,
+        # so a marker withheld here is a marker deleted from the ledger the
+        # next time this page is reviewed for any reason.
+        led_mixed = tmp / "ledger-mixed"
+        write_ledger(led_mixed, STACKS, TODAY, stale_claims=[
+            marker,
+            {**marker, "entity_key": "version/old-miss",
+             "unresolved_reviews": 2, "escalated": True},
+        ])
+        q_mixed = run_select(repo, tiers, led_mixed)
+        mixed = next((a for a in q_mixed["articles"] if a["path"] == STACKS), None)
+        check(mixed is not None, "page with one active marker is still boosted")
+        if mixed:
+            keys = [m["entity_key"] for m in mixed.get("stale_claim_markers") or []]
+            check("version/old-miss" in keys,
+                  "escalated marker still travels in the queue item (survives the round-trip)")
+            check(mixed["stale_claims"] == len(mixed["stale_claim_markers"]),
+                  "stale_claims count matches the marker list it describes")
+
+        led_esc = tmp / "ledger-escalated"
+        write_ledger(led_esc, STACKS, TODAY,
+                     stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
+        q_esc = run_select(repo, tiers, led_esc)
+        esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
+        check(esc is None, "an escalated marker alone no longer boosts the page")
+
+        # ...and when such a page is reviewed anyway (staleness, --paths), the
+        # escalated marker must reach record-review.py rather than evaporating.
+        q_paths = run_select(repo, tiers, led_esc, "--paths", STACKS)
+        forced = q_paths["articles"][0]
+        check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
+              == ["version/pulumi-package"],
+              "escalated marker reaches a --paths review instead of being dropped")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0
