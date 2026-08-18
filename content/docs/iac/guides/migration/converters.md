@@ -32,7 +32,7 @@ For the detailed usage of this command and options, refer to the [pulumi convert
 * [TypeScript/Javascript](/docs/iac/languages-sdks/javascript/)
 * [Go](/docs/iac/languages-sdks/go/)
 * [Python](/docs/iac/languages-sdks/python/)
-* [C#](/docs/iac/languages-sdks/dotnet/)
+* [.NET](/docs/iac/languages-sdks/dotnet/)
 * [Java](/docs/iac/languages-sdks/java/)
 * [YAML](/docs/iac/languages-sdks/yaml/)
 
