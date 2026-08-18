@@ -148,8 +148,12 @@ jobs:
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
           # Selection reads git history (staleness clock: creation date and
-          # newest non-bot edit per page), so a shallow clone won't do.
+          # newest non-bot edit per page), so a shallow clone won't do — but
+          # it only needs commits and trees (`git log`), never historical
+          # blobs, so a blobless partial clone keeps the full-history clone
+          # from eating most of this job's hour budget.
           fetch-depth: 0
+          filter: blob:none
       # Lane-2 health probe: the per-article worker's screenshot lane 2
       # verifies UI strings against the Pulumi Cloud Console source — the
       # cmd/console2 app in the private pulumi/pulumi-service repo — using

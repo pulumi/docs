@@ -73,8 +73,12 @@ jobs:
         uses: actions/checkout@v7
         with:
           # The skill reads git history (synthetic diffs, staleness), so a
-          # shallow clone won't do.
+          # shallow clone won't do — but it only needs commits and trees
+          # (`git log`), never historical blobs, so a blobless partial clone
+          # cuts the multi-minute full clone down without losing history.
+          # The HEAD working tree is fully materialized either way.
           fetch-depth: 0
+          filter: blob:none
           # Keep the (read-scoped) token out of .git/config — nothing in
           # this job pushes, and the model's Bash can read that file.
           persist-credentials: false
@@ -287,6 +291,8 @@ jobs:
       # excluded from the export step's staging, so it can never ride the
       # patch.)
       - name: Snapshot guardrail inputs
+        env:
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
         run: |
           SNAP=".review-snapshot"
           mkdir -p "$SNAP"
@@ -302,6 +308,11 @@ jobs:
               echo "::warning::snapshot: $f missing"
             fi
           done
+          # The pre-model article body — the publish job's fix-scope gate
+          # verifies link fixes against this via --article-blob instead of
+          # `git show <base-sha>:<path>`, which its shallow clone can't serve.
+          cp "$ARTICLE_PATH" "$SNAP/article-base.txt" \
+            || { echo "::error::snapshot: failed to copy $ARTICLE_PATH"; exit 1; }
           git rev-parse HEAD > "$SNAP/base-sha.txt"
       - name: Upload guardrail snapshot
         uses: actions/upload-artifact@v7
@@ -468,7 +479,10 @@ jobs:
     # incomplete outcome so the page stays due — but not when the run was
     # cancelled outright.
     if: always() && needs.review.result != 'cancelled'
-    timeout-minutes: 15
+    # Generous relative to the work (a shallow checkout + lint + push), but
+    # the old 15 was killing ~30% of runs mid-checkout back when this job
+    # cloned full history — after the model had already spent its tokens.
+    timeout-minutes: 30
     # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
     # select the environment to resolve it — otherwise `Resolve ledger bucket`
     # runs with --stack "" and the S3 ledger write is silently skipped.
@@ -490,7 +504,13 @@ jobs:
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-          fetch-depth: 0
+          # This job applies a patch on HEAD, lints, and pushes a new branch
+          # — no history needed. The one historical read the guardrails used
+          # to do (`git show <base-sha>:<article>` in verify-fix-scope.py)
+          # now comes from the snapshot artifact via --article-blob, so a
+          # shallow clone is safe and avoids the full-history clone that
+          # regularly outlived this job's timeout.
+          fetch-depth: 1
       - name: Install Node
         uses: actions/setup-node@v7
         with:
@@ -575,6 +595,7 @@ jobs:
             python3 scripts/content-review/verify-fix-scope.py \
               --diff-file .review-changes.u0.diff --base-sha "$BASE_SHA" \
               --article "$ARTICLE_PATH" --verdict .content-review-verdict.json \
+              --article-blob .review-snapshot/article-base.txt \
               --artifacts-dir .review-snapshot --out .fix-scope-report.json \
               || { echo "::error::fix-scope gate failed; report follows"; cat .fix-scope-report.json; exit 1; }
           fi
