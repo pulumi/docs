@@ -1,0 +1,39 @@
+# Flags generic infrastructure-as-code concepts capitalized as if they were
+# proper nouns -- "the Stack" for a Pulumi stack, "Infrastructure as Code" as
+# a mid-sentence common noun -- per the brand writing-style guide and
+# STYLE-GUIDE.md's Headings section ("use capitalization only for proper
+# nouns... use 'stack' not 'Stack'").
+#
+# This is an existence rule (flag-only), NOT a substitution, and deliberately
+# stays at `warning` rather than joining the `blocker:` list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml: the
+# correct call is context-dependent, the same reason DeprecatedProductNames
+# stays flag-only. "Stack" is a genuine proper noun in several places this
+# rule must not touch -- the Pulumi Kubernetes Operator's `Stack` custom
+# resource (a Kubernetes CRD Kind, like "Pod" or "Deployment"), the Pulumi
+# CDK bridge's `pulumicdk.Stack` class, "Stack Admin"/"Stack Tags" (RBAC and
+# policy feature names) -- and only a human reviewing the sentence can tell
+# the two apart.
+#
+# Tuned empirically against the full content/ tree (2,241 files): the
+# determiner-gated Stack token and the lowercase-preceded IaC token together
+# produced zero false positives once compound proper nouns were excluded via
+# lookahead and a handful of subtrees that are *inherently* about the CRD or
+# the CDK class were opted out in .vale.ini. See the per-path overrides
+# there for the reasoning on each exclusion.
+extends: existence
+message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (STYLE-GUIDE.md §Headings, 'use capitalization only for proper nouns')."
+link: "https://brand.pulumi.com/voice/writing-style/"
+level: warning
+ignorecase: false
+nonword: false
+scope: paragraph
+tokens:
+  # Excludes a following capitalized word via negative lookahead, so compound
+  # proper nouns -- Stack Admin (an RBAC permission set), Stack API, Stack
+  # Tags, Stack Overflow -- aren't mistaken for the generic concept. Vale
+  # falls back to the regexp2 engine (.NET-compatible) for patterns RE2 can't
+  # compile, which is what makes lookahead usable here; see the precedent in
+  # Pulumi.NarrativeWe ('let us (?!know\b)\w+').
+  - '\b(the|a|an|this|that|your|our|each|every|which|existing|new|current|given|single|specific|same|dependent) Stack\b(?! [A-Z])'
+  - '[a-z] Infrastructure as Code\b(?! [A-Z])'

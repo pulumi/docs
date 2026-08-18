@@ -102,7 +102,7 @@ Pulumi ESC simplifies how organizations manage secrets and configurations. It is
 - **Connect to cloud providers and secrets stores** via OIDC to generate dynamic, short-lived, auto-expiring credentials.
 - **Set role-based access controls (RBAC)**, making securing secrets and configurations easy by assigning permissions to users based on their roles.
 
-Whether integrated with Pulumi's Infrastructure as Code (IaC) platform or used as a standalone service, Pulumi ESC enables cloud engineers to streamline secrets management with centralized control.
+Whether integrated with Pulumi's infrastructure as code (IaC) platform or used as a standalone service, Pulumi ESC enables cloud engineers to streamline secrets management with centralized control.
 
 ## Key Features of Pulumi ESC
 
