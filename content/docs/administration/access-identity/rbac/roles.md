@@ -85,7 +85,7 @@ The **Environment permissions** dropdown sets the access level that members on t
 
 #### Account permissions
 
-The **Account permissions** dropdown sets the access level that members on the Member role have to all [Pulumi Insights accounts](/docs/insights/):
+The **Account permissions** dropdown sets the access level that members on the Member role have to all [cloud accounts](/docs/insights/):
 
 - **None** — Members have no default access to accounts.
 - **Read** — Members can view accounts, their scan configurations, and scan results.
@@ -94,7 +94,7 @@ The **Account permissions** dropdown sets the access level that members on the M
 
 This group also includes a capability toggle:
 
-- **Allow organization members to create accounts** — When enabled, members on the Member role can create new Insights accounts. When disabled, only members whose role includes the `insights_account:create` scope can do so.
+- **Allow organization members to create accounts** — When enabled, members on the Member role can create new cloud accounts. When disabled, only members whose role includes the `insights_account:create` scope can do so.
 
 #### Team permissions
 
@@ -128,7 +128,7 @@ A custom role can include any combination of the following entity access rule ty
 
 ##### Direct entity access
 
-Direct rules grant a permission set to individually selected entities. Choose the entity type (stack, environment, or insights account), select **Select specific [type]**, then select **Choose [type]** to open a searchable list.
+Direct rules grant a permission set to individually selected entities. Choose the entity type (stack, environment, or cloud account), select **Select specific [type]**, then select **Choose [type]** to open a searchable list.
 
 A dialog lists the entities in your organization. You can search by name to filter the list.
 
@@ -144,13 +144,17 @@ Global rules apply a permission set to all entities of a given type within the o
 
 Tag-based rules (also called ABAC — attribute-based access control) grant a permission set when a resource's tags match defined conditions. Each rule has:
 
-- **Entity type** — Stack, environment, or insights account.
+- **Entity type** — Stack, environment, or cloud account.
 - **Tag conditions** — One or more conditions on resource tags (e.g. tag `env` equals `production`, or tag `team` exists).
 - **Permission set** — The permission set to grant when the conditions match a resource.
 
 **Why use them:** Grant access to many resources at once by tag (e.g. all stacks with `team=platform`) without listing each resource individually. Useful for large organizations.
 
 **How it works:** When evaluating access, Pulumi Cloud checks the user's roles (and the roles of the teams they belong to). For each tag rule in those roles, it evaluates the resource's tags against the rule's conditions. If they match, the rule's permission set is applied to that resource.
+
+{{% notes type="warning" %}}
+Tag-based rules only **grant** access. Like every other rule, they cannot revoke access that a principal already holds through another grant, so a tag rule is not a way to confine a principal to the resources that match it. In particular, a machine token that creates a stack holds a [creator grant](/docs/administration/access-identity/rbac/#creator-grants) of Stack Admin on that stack, and can keep operating on it even though the stack's tags do not match any rule in the token's role.
+{{% /notes %}}
 
 To configure a tag-based rule, choose the entity type and select **Set conditions**, then enter one or more tag key/value conditions and choose a permission set.
 
@@ -187,6 +191,7 @@ When working with roles in Pulumi Cloud, consider these best practices:
 1. **Principle of least privilege**: Assign only the scopes necessary for users to perform their tasks.
 1. **Role reusability**: Design custom roles and permission sets in a way that maps to real-world concepts within your org, allowing for easy reuse.
 1. **Tag-based rules**: Use tag-based rules to grant access to many resources by tag (e.g. `team=platform`) without listing each resource.
+1. **Stack ownership in automation**: When automation creates stacks with a machine token, have the run transfer stack ownership to a break-glass user or team, or remove the automatic [creator grant](/docs/administration/access-identity/rbac/#creator-grants), so a long-lived token does not accumulate Stack Admin on every stack it has created.
 1. **Regular review**: Periodically schedule reviews of role assignments and scopes.
 1. **Documentation**: Document the purpose and scopes of custom roles both internally and within the role's metadata.
 
@@ -194,5 +199,5 @@ When working with roles in Pulumi Cloud, consider these best practices:
 
 - [Scopes](/docs/administration/access-identity/rbac/scopes): The most granular access rights in Pulumi Cloud, written as `object:action`. Each scope belongs to one entity type and is the building block of permission sets.
 - [Permission sets](/docs/administration/access-identity/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.
-- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and Insights accounts), plus the organization-level access that governs org-wide operations.
+- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and cloud accounts), plus the organization-level access that governs org-wide operations.
 - [Teams](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles and entity access. Each member inherits the union of the team's roles on top of their own role.

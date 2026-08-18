@@ -39,7 +39,11 @@ like any outstanding finding, so they ARE outcome-classified.
 This is a telemetry READER, never a gate: unparseable or legacy comment
 formats degrade to `parse_confidence: "low"` (counts-only) or
 `status: "no_review_data"`, and the aggregate reports how often that happened
-so silent degradation stays visible.
+so silent degradation stays visible. One case is NOT a degradation: a comment
+payload where nothing decodes at all means the wire format moved, not that the
+PR went unreviewed. That is `status: "decode_failed"` with its own aggregate
+column (`prs_decode_failed`) — a window scrape still returns every other PR's
+data, and `--pr` exits nonzero.
 
 Usage:
   scrape-review-outcomes.py --pr 20123 [--repo owner/repo]
@@ -148,6 +152,36 @@ def fetch_pr_meta(repo: str, pr: int) -> dict | None:
         return None
 
 
+def _decode_gh_json_line(line: str) -> dict | None:
+    """Decode one line of `gh api --jq '... | @json'` output.
+
+    `gh` emits one SINGLE-encoded JSON object per line. Earlier code here
+    assumed `@json` double-encoded and decoded twice, which raised on every
+    real line. The double-encoded form is still accepted so a fixture or a
+    future `gh` that wraps the value keeps working; anything else returns None
+    for the caller to count.
+    """
+    try:
+        obj = json.loads(line)
+    except json.JSONDecodeError:
+        return None
+    if isinstance(obj, str):          # double-encoded: a JSON string of JSON
+        try:
+            obj = json.loads(obj)
+        except json.JSONDecodeError:
+            return None
+    return obj if isinstance(obj, dict) else None
+
+
+class CommentDecodeError(RuntimeError):
+    """No line of a PR's comment payload decoded — the wire format moved.
+
+    Distinct from "this PR has no pinned review", which is an ordinary,
+    expected result. Raised per PR; `scrape_pr` converts it into a
+    `decode_failed` record so one unreadable PR can't abort a window scrape.
+    """
+
+
 def fetch_pinned_bodies(repo: str, pr: int) -> list[str]:
     """Return the bodies of every CLAUDE_REVIEW N/M comment, ordered by N.
 
@@ -160,21 +194,29 @@ def fetch_pinned_bodies(repo: str, pr: int) -> list[str]:
             "--jq", '.[] | {id: .id, body: .body} | @json',
         ]
     )
-    tagged = []
-    for line in out.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        try:
-            # --jq '@json' double-encodes: each output line is a JSON string
-            # containing a JSON object.
-            obj = json.loads(json.loads(line))
-        except (json.JSONDecodeError, TypeError):
+    tagged, undecodable = [], 0
+    lines = [ln for ln in (l.strip() for l in out.splitlines()) if ln]
+    for line in lines:
+        obj = _decode_gh_json_line(line)
+        if obj is None:
+            undecodable += 1
             continue
         body = obj.get("body") or ""
         m = MARKER_RE.match(body.split("\n", 1)[0])
         if m:
             tagged.append((int(m.group(1)), body))
+    # A PR with no pinned review legitimately yields zero tagged comments. A
+    # payload where NOTHING decoded is a different thing entirely -- the wire
+    # format moved -- and must not be reported as "this PR has no review data".
+    # That conflation is exactly how this went unnoticed: the decoder assumed
+    # the wrong encoding, every line raised, the except clause swallowed it,
+    # and 100% scrape failure rendered as a tidy row of zeros.
+    if lines and undecodable == len(lines):
+        raise CommentDecodeError(
+            f"could not decode any of {len(lines)} comment records for {repo}#{pr}; "
+            f"`gh api --jq '... | @json'` output is not in a recognized form. "
+            f"First line: {lines[0][:120]!r}"
+        )
     tagged.sort(key=lambda t: t[0])
     return [body for _, body in tagged]
 
@@ -372,7 +414,18 @@ def scrape_pr(repo: str, pr: int) -> dict:
         "closed_at": meta.get("mergedAt") or meta.get("closedAt"),
         "author_kind": author_kind(meta),
     }
-    bodies = fetch_pinned_bodies(repo, pr)
+    try:
+        bodies = fetch_pinned_bodies(repo, pr)
+    except CommentDecodeError as exc:
+        # Record it and keep going. A window scrape that aborts on one
+        # unreadable PR loses every record already gathered and mutes the
+        # digest's whole outcomes section -- the same "no data" reading this
+        # status exists to prevent, one level up. `aggregate` counts these in
+        # their own column, and `main` exits nonzero, so the failure is loud
+        # without being fatal to the other 130-odd PRs in the window.
+        record["status"] = "decode_failed"
+        record["detail"] = str(exc)
+        return record
     if not bodies:
         # Short-circuited (review:trivial etc.), comment deleted, or never
         # reviewed. Counted, never rated.
@@ -396,6 +449,7 @@ def aggregate(records: list[dict]) -> dict:
     agg = {
         "prs_scraped": 0,
         "prs_no_review_data": 0,
+        "prs_decode_failed": 0,
         "prs_parse_low": 0,
         "outcomes": {"human": empty_outcomes(), "bot": empty_outcomes()},
         "style_findings": 0,
@@ -404,6 +458,13 @@ def aggregate(records: list[dict]) -> dict:
         "by_verdict": {},
     }
     for rec in records:
+        # A wire-format break gets its own column. Folding it into
+        # prs_no_review_data would re-create the conflation this reader was
+        # just fixed for -- "nobody reviewed these" and "we can't read these"
+        # look identical in the digest but mean opposite things.
+        if rec.get("status") == "decode_failed":
+            agg["prs_decode_failed"] += 1
+            continue
         if rec.get("status") != "scraped":
             agg["prs_no_review_data"] += 1
             continue
@@ -444,7 +505,9 @@ def render_stats(agg: dict, since: str) -> str:
         "",
         f"PRs with scraped reviews: **{agg['prs_scraped']}** "
         f"(+{agg['prs_no_review_data']} with no review data, "
-        f"{agg['prs_parse_low']} parsed at low confidence)",
+        f"{agg['prs_parse_low']} parsed at low confidence"
+        + (f", **{agg['prs_decode_failed']} undecodable**" if agg.get("prs_decode_failed") else "")
+        + ")",
         "",
         "| Author | Fixed | Conceded | Ignored 🚨 | Ignored ⚠️ | Unconfirmed | Abandoned |",
         "| :--- | ---: | ---: | ---: | ---: | ---: | ---: |",
@@ -576,9 +639,11 @@ def self_test() -> int:
         {"status": "scraped", "pr": 1, "author_kind": "human", "parse_confidence": "high",
          **{k: rec[k] for k in ("outcomes", "style_findings", "disputes", "findings")}},
         {"status": "no_review_data", "pr": 2},
+        {"status": "decode_failed", "pr": 3, "detail": "boom"},
     ])
     check("aggregate scraped count", agg["prs_scraped"] == 1)
     check("aggregate no-data count", agg["prs_no_review_data"] == 1)
+    check("aggregate decode-failure column", agg["prs_decode_failed"] == 1)
     check("aggregate human fixed", agg["outcomes"]["human"]["fixed"] == 1)
     check("merged_with_outstanding listed", len(agg["merged_with_outstanding"]) == 1)
     check("by_verdict contradicted", "contradicted" in agg["by_verdict"])
@@ -606,8 +671,14 @@ def main() -> int:
     if args.self_test:
         return self_test()
     if args.pr:
-        json.dump(scrape_pr(args.repo, args.pr), sys.stdout, indent=2, ensure_ascii=False)
+        record = scrape_pr(args.repo, args.pr)
+        json.dump(record, sys.stdout, indent=2, ensure_ascii=False)
         sys.stdout.write("\n")
+        # Single-PR mode has no partial result worth protecting, so a wire-format
+        # break exits nonzero. The record still prints, with `detail`.
+        if record.get("status") == "decode_failed":
+            log(f"decode failure: {record['detail']}")
+            return 1
         return 0
     if args.closed_since:
         try:
@@ -618,6 +689,14 @@ def main() -> int:
         log(f"{len(candidates)} review-labeled PRs closed since {args.closed_since}")
         records = [scrape_pr(args.repo, pr["number"]) for pr in candidates]
         agg = aggregate(records)
+        # Deliberately NOT a nonzero exit: digest.py runs this with check=True
+        # and mutes its whole outcomes section on a failed call, so exiting
+        # here would throw away 130-odd good records to report that one PR was
+        # unreadable. The count rides in the aggregate instead, where the
+        # digest can show it.
+        if agg["prs_decode_failed"]:
+            log(f"WARNING: {agg['prs_decode_failed']} PR(s) had undecodable comment "
+                f"payloads; see prs_decode_failed and the per-PR `detail` fields")
         if args.stats:
             sys.stdout.write(render_stats(agg, args.closed_since))
             return 0

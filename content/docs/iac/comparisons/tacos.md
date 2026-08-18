@@ -23,7 +23,7 @@ aliases:
 
 [Terraform Automation and Collaboration Software](https://scalr.com/learning-center/tacos-terraform-automation-and-collaboration-software/) (TACOS) is the category of platforms that wrap automation, collaboration, and governance around Terraform. [HCP Terraform](https://www.hashicorp.com/products/terraform) (formerly Terraform Cloud), [Spacelift](https://spacelift.io/), [env0](https://www.env0.com/), [Scalr](https://scalr.com/), and the open-source [Atlantis](https://www.runatlantis.io/) all fall under it. They exist because Terraform on its own leaves you to assemble remote state, run automation, policy, drift detection, and access control yourself, and a TACOS bundles that scaffolding into one service.
 
-Pulumi covers the same management ground from a different starting point. Rather than sitting on top of Terraform, Pulumi is a full infrastructure as code platform: you write infrastructure in a general-purpose language (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) or in [HCL](/docs/iac/languages-sdks/hcl/), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) and [Pulumi Deployments](/docs/deployments/) provide the state, policy, RBAC, and Git-driven runs a TACOS is bought for.
+Pulumi covers the same management ground from a different starting point. Rather than sitting on top of Terraform, Pulumi is a full infrastructure as code platform: you write infrastructure in a general-purpose language ({{< pulumi-languages "general-purpose" >}}), in YAML, or in [HCL](/docs/iac/languages-sdks/hcl/), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) and [Pulumi Deployments](/docs/deployments/) provide the state, policy, RBAC, and Git-driven runs a TACOS is bought for.
 
 That used to be an either-or: keep writing HCL and add a platform to manage it, or move to a platform where the language and the management are built together. It isn't anymore. [Pulumi Cloud can hold your Terraform and OpenTofu state directly](/docs/iac/get-started/terraform/terraform-state-backend/), and [run the plans and applies](/docs/iac/get-started/terraform/terraform-remote-execution/) with approval gates on VCS-triggered applies, so you can adopt the management layer without touching the authoring layer — and change the authoring layer later, project by project, if you decide you want to. This page compares the two approaches, shows where they overlap, and covers how teams run them side by side.
 
@@ -44,7 +44,7 @@ The tools don't all cover the same ground. [HCP Terraform](https://www.hashicorp
 | Feature | Pulumi | TACOS |
 | --- | --- | --- |
 | Role in the stack | Full infrastructure as code platform: authors *and* manages infrastructure | A management and automation layer for Terraform, and for some tools other IaC as well |
-| Authoring language | General-purpose languages — Python, TypeScript, JavaScript, Go, C#, Java — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/), a superset of Terraform HCL that is fully OpenTofu compatible | HCL; the platform runs your Terraform, it doesn't change the language |
+| Authoring language | General-purpose languages — {{< pulumi-languages "general-purpose" >}} — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/), which runs valid Terraform and OpenTofu configurations with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility) | HCL; the platform runs your Terraform, it doesn't change the language |
 | IaC tools covered | Pulumi programs; consumes [any Terraform or OpenTofu provider](/docs/iac/concepts/providers/any-terraform-provider/) and [existing Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/); runs HCL natively; and backs Terraform and OpenTofu state for CLI-driven workflows | Terraform and OpenTofu across the category; Spacelift and env0 also run Pulumi, CloudFormation, and Kubernetes, while Scalr and Atlantis stay Terraform- and OpenTofu-focused |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, and Google Cloud Storage; Pulumi Cloud also [manages Terraform and OpenTofu state](/docs/iac/get-started/terraform/terraform-state-backend/) with locking, plus [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) and approval gates | Managed Terraform state with locking, a core feature across the category |
 | Remote execution | [Pulumi Deployments](/docs/deployments/) for Git-driven runs; the [Automation API](/docs/iac/concepts/automation-api/); or the local CLI | Managed runs triggered by version control or pull requests, on hosted or self-hosted runners |
@@ -135,7 +135,7 @@ You can move as little or as much as you want. The smallest step changes no code
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/)
 - [Pulumi Deployments](/docs/deployments/)
 - [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/)

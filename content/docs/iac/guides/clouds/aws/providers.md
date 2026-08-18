@@ -161,7 +161,7 @@ patterns quickly and want Pulumi to handle the low-level resource wiring. They a
 who want sensible defaults without becoming experts in every service's configuration details.
 
 For teams with strong infrastructure opinions or custom requirements — for example, an organization with specific
-VPC design standards — you may prefer to use the AWS provider directly and build your own [Pulumi components](/docs/iac/concepts/resources/components/).
+VPC design standards — you may prefer to use the AWS provider directly and build your own [Pulumi components](/docs/iac/concepts/components/).
 The component libraries and the AWS provider work well alongside one another in the same stack, so you can adopt
 them selectively.
 

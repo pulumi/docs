@@ -255,6 +255,36 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Bucket ...
+
+# Turn the bucket into a website:
+resource "aws_s3_bucket_website_configuration" "website" {
+  bucket = aws_s3_bucket.my-bucket.id
+  index_document {
+    suffix = "index.html"
+  }
+}
+
+# Permit access control configuration:
+resource "aws_s3_bucket_ownership_controls" "ownership-controls" {
+  bucket = aws_s3_bucket.my-bucket.id
+  rule {
+    object_ownership = "ObjectWriter"
+  }
+}
+
+# Enable public access to the website:
+resource "aws_s3_bucket_public_access_block" "public-access-block" {
+  bucket            = aws_s3_bucket.my-bucket.id
+  block_public_acls = false
+}
+```
+
+{{% /choosable %}}
+
 Notice that resources can reference each other, which forms automatic dependencies between them.
 Pulumi uses this information to parallelize deployments safely.
 
@@ -270,7 +300,7 @@ Next, add a new file called `index.html` to your current directory with these co
 </html>
 ```
 
-Then open {{< langfile >}} and create a [`BucketObject`](/registry/packages/aws/api-docs/s3/bucketobject/) after the three other new resources:
+Then open {{< langfile >}} and create a [bucket object](/registry/packages/aws/api-docs/s3/bucketobject/) after the three other new resources:
 
 {{% choosable language "typescript" %}}
 
@@ -393,6 +423,30 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Other resources ...
+
+# Create an S3 Bucket object
+resource "aws_s3_bucket_object" "index-html" {
+  bucket       = aws_s3_bucket.my-bucket.id
+  key          = "index.html"
+  source       = fileasset("index.html")
+  content_type = "text/html"
+  acl          = "public-read"
+  depends_on = [
+    aws_s3_bucket_ownership_controls.ownership-controls,
+    aws_s3_bucket_public_access_block.public-access-block,
+  ]
+}
+```
+
+A dotted label like `index.html` couldn't be referenced in expressions (and Terraform's grammar doesn't allow
+one), so the resource is labeled `index-html` and the `key` attribute names the object in the bucket.
+
+{{% /choosable %}}
+
 This uploads the `index.html` file to your bucket using a Pulumi concept called an [asset](/docs/iac/concepts/assets-archives/#assets).
 
 The bucket object also declares that it [`dependsOn`](/docs/iac/concepts/resources/options/dependson/) the other resources. That is because
@@ -466,7 +520,18 @@ outputs:
 
 {{% /choosable %}}
 
-We prepend `http://` using a helper because `websiteEndpoint` is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
+{{% choosable language hcl %}}
+
+```hcl
+# Export the bucket's autoassigned URL:
+output "url" {
+  value = "http://${aws_s3_bucket_website_configuration.website.website_endpoint}"
+}
+```
+
+{{% /choosable %}}
+
+We prepend `http://` because the bucket's website endpoint is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
 that AWS assigns at deployment time, not a raw string, meaning its value isn't known in advance.
 
 ### Deploy the changes

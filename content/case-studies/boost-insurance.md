@@ -120,7 +120,7 @@ across Boost's multi-project GCP environment using OIDC federation, and Pulumi D
 them automatically when provisioning and destroying environments — keeping the credential lifecycle
 fully automated.
 
-[Pulumi Cloud](/docs/pulumi-cloud/) gives Boost's compliance team the audit records they need
+[Pulumi Cloud](/docs/administration/) gives Boost's compliance team the audit records they need
 without building custom logging infrastructure — exportable logs of every change across the
 platform. It also provides centralized visibility into every active environment, with stacks,
 resources, and update history in one place.

@@ -67,7 +67,7 @@ This is what separates grounded AI from generic LLMs. Neo doesn't just automate 
 
 Grounded AI doesn't replace engineering judgment. Every engineer who's tried to prompt a generic LLM to "write a Pulumi program for me" knows how quickly hallucinations creep in. You still need human context: the judgment to choose the right platform, the discipline to model dependencies, the awareness of compliance and cost.
 
-That's where grounded AI like Neo fits best. It's not a chatbot for infrastructure. [It's an extension of your own reasoning](/docs/ai/get-started/).
+That's where grounded AI like Neo fits best. It's not a chatbot for infrastructure. [It's an extension of your own reasoning](/docs/ai/neo/get-started/).
 
 Neo learns from the same program graph and state data you already manage, drawing from a continuously updated context lake of your infrastructure reality. Its recommendations stay grounded in your environment, not floating in a generic prompt window trained on the public internet.
 
@@ -85,6 +85,6 @@ Grounded AI won't replace engineers. But it will change what engineering means: 
 
 ## Try it yourself
 
-Want to see what infrastructure cognition looks like in practice? [Get started with Neo](/docs/ai/get-started/) and ask it about your infrastructure. Watch it reason through drift detection, generate fix plans, or explain complex resource relationships in plain English. For a wider survey of the category, see our guide to the [best AI infrastructure tools](/blog/ai-infrastructure-tools/).
+Want to see what infrastructure cognition looks like in practice? [Get started with Neo](/docs/ai/neo/get-started/) and ask it about your infrastructure. Watch it reason through drift detection, generate fix plans, or explain complex resource relationships in plain English. For a wider survey of the category, see our guide to the [best AI infrastructure tools](/blog/ai-infrastructure-tools/).
 
 Neo is available today for teams using Pulumi Cloud. The cognitive layer isn't coming. It's already here.

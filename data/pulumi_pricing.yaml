@@ -86,12 +86,44 @@
 #                    row it deep-links to.
 #
 # -----------------------------------------------------------------------------
+# CALCULATOR
+# -----------------------------------------------------------------------------
+# The `calculator:` block holds the *numbers* behind the same prices the
+# comparison rows state in prose ("$0.00025/hour"), so the estimator on
+# /pricing/ and the markdown output can do arithmetic with them. It is a
+# separate block rather than extra keys on the rows because a cell is display
+# copy — it carries "Starting at", a subtext, and a Custom column — and parsing
+# a dollar figure back out of it would make every copy edit a pricing change.
+#
+# When you change a rate, change it in BOTH places: the feature cell a reader
+# reads and the calculator meter the estimator computes with. There is no
+# derivation between them.
+#
+# `calculator.editions` is keyed by edition id and only covers the editions the
+# estimator offers (Individual is free; Business Critical is quoted), so it is
+# deliberately not a full row of the editions list above.
+#
+# The metered rates here are the MONTHLY ones — the figure each comparison cell
+# carries as its subtext — even though billing is hourly. Rounding runs in both
+# directions between the two published forms (an ESC secret is $0.000685/hour
+# and $0.50/month, but 0.000685 x 730 is 0.50005; a Team Insights resource is
+# $0.000025/hour and $0.0185/month, but 0.000025 x 730 is 0.01825), so a
+# calculator that multiplied the hourly rate out would quote figures that
+# contradict the table directly below it. Storing the monthly rate keeps every
+# number on the page identical. The estimator prices whole months and says so;
+# it has no utilization control and no hours constant.
+#
+# -----------------------------------------------------------------------------
 # ADDING OR RENAMING
 # -----------------------------------------------------------------------------
 # Edit this file only. layouts/partials/pricing/data.html expands it and raises
-# every structural error; scripts/lint/lint-markdown.js validates the
-# frontmatter and shortcode values that point at it. Renaming a feature id is a
-# breaking change — grep for `pulumi_cloud_feature:` and `pulumi-cloud "` first.
+# every structural error; layouts/partials/pricing/calculator.html validates the
+# part of the `calculator:` block the estimator reads and
+# layouts/partials/pricing/card-usage.html validates `card_tooltip`, the part
+# only the cards render; scripts/lint/lint-markdown.js
+# validates the frontmatter and shortcode values that point at it. Renaming a
+# feature id is a breaking change — grep for `pulumi_cloud_feature:` and
+# `pulumi-cloud "` first.
 
 editions:
   - id: individual
@@ -122,27 +154,9 @@ editions:
       price: $40
       price_label: /month base
       unit: "**Includes 40 Credits**"
+      # The (i) tooltip on this note lists what a Credit buys per meter; the
+      # rates come from `calculator:` below, keyed by this edition's id.
       note: Up to 500 resources, additional usage billed on demand
-      # What a Credit buys, per meter, for the (i) tooltip on the note above. A
-      # Credit is $1, so these are also the dollar rates — they mirror the
-      # on-demand rows below (iac-on-demand-price, esc-on-demand-price,
-      # insights-on-demand-price, workflow-minutes-price, neo) for this
-      # edition's column, in that order. Change a rate there and change it here.
-      # Not every meter belongs: esc-api-call-price is free to 10K and priced per
-      # 10K rather than per unit, so it stays in the table below.
-      note_tooltip:
-        intro: "Additional usage, in Credits (1 Credit = $1)"
-        rates:
-          - label: 1 IaC resource
-            value: "0.1825/month"
-          - label: 1 managed secret
-            value: "0.50/month"
-          - label: 1 Insights resource
-            value: "0.0185/month"
-          - label: 1 workflow minute
-            value: "0.01"
-          - label: 1M Neo tokens
-            value: "3"
       cta:
         label: Start a free trial
         href: https://app.pulumi.com/signup?create-organization=1
@@ -167,19 +181,6 @@ editions:
       price_label: /month base
       unit: "**Includes 400 Credits**"
       note: Up to 2,000 resources, additional usage billed on demand
-      note_tooltip:
-        intro: "Additional usage, in Credits (1 Credit = $1)"
-        rates:
-          - label: 1 IaC resource
-            value: from 0.365/month
-          - label: 1 managed secret
-            value: "0.75/month"
-          - label: 1 Insights resource
-            value: from 0.0365/month
-          - label: 1 workflow minute
-            value: "0.01"
-          - label: 1M Neo tokens
-            value: "3"
       cta:
         label: Start a free trial
         href: https://app.pulumi.com/signup?create-organization=1
@@ -219,6 +220,67 @@ editions:
         - Volume pricing and invoicing
         - Private Slack and Professional Services
         - 24x7 Enterprise Support available
+
+calculator:
+  # Above this many IaC resources the calculator keeps quoting a price but
+  # flags that volume pricing usually applies at that size, so the list-rate
+  # figure is an upper bound rather than a quote. Counted in resources rather
+  # than dollars because resource count is the number the reader typed and can
+  # reason about; a dollar threshold moves whenever any rate on this page does.
+  contact_sales_resources: 3000
+  # Meters priced the same on every edition the calculator offers.
+  meters:
+    workflow_minute: 0.01
+    neo_tokens_per_million: 3
+  editions:
+    team:
+      base_usd: 40
+      included_credits: 40
+      included_resources: 500
+      iac_resource_month: 0.1825
+      esc_secret_month: 0.50
+      insights_resource_month: 0.0185
+    enterprise:
+      base_usd: 400
+      included_credits: 400
+      included_resources: 2000
+      iac_resource_month: 0.365
+      esc_secret_month: 0.75
+      insights_resource_month: 0.0365
+  # What a Credit buys, per meter, for the (i) tooltip on each card's "additional
+  # usage" note. This is a *view* of the rates above, not a second copy of them:
+  # `key` names one of the per-edition rates or shared meters, and the card
+  # resolves it for its own edition — so an edition gets the tooltip exactly when
+  # the estimator prices it, and there is no number here to fall out of date. A
+  # Credit is $1, so these are also the dollar rates: they still have to match
+  # the monthly subtext on the on-demand rows below (iac-on-demand-price,
+  # esc-on-demand-price, insights-on-demand-price, workflow-minutes-price, neo),
+  # which is the one copy of these figures this file still keeps by hand — but
+  # that agreement is now the estimator's to keep, not the cards'.
+  #
+  # Not every meter belongs: esc-api-call-price is free to 10K and priced per 10K
+  # rather than per unit, so it stays in the comparison table below.
+  #
+  # `from` lists the editions where the rate is a floor rather than the price,
+  # mirroring the "Starting at" in those editions' comparison cells.
+  card_tooltip:
+    intro: "Additional usage, in Credits (1 Credit = $1)"
+    rates:
+      - label: 1 IaC resource
+        key: iac_resource_month
+        suffix: /month
+        from: [enterprise]
+      - label: 1 managed secret
+        key: esc_secret_month
+        suffix: /month
+      - label: 1 Insights resource
+        key: insights_resource_month
+        suffix: /month
+        from: [enterprise]
+      - label: 1 workflow minute
+        key: workflow_minute
+      - label: 1M Neo tokens
+        key: neo_tokens_per_million
 
 groups:
   - id: product
@@ -458,7 +520,7 @@ categories:
         available_from: individual
 
   - id: insights
-    name: Insights & Governance
+    name: Discovery & Governance
     group: product
     icon: custom/pulumi-insights
     features:

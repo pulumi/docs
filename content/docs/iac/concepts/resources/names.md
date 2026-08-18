@@ -28,7 +28,7 @@ The sections below explain each form in detail. For a quick reference on which i
 Pulumi [auto-names](#autonaming) most resources by default, using the logical name and a random suffix to construct a unique physical name for a resource. You can provide explicit names to override this default, and you can [customize or disable auto-naming](#autonaming-configuration) globally, per provider, or per resource type.
 
 {{% notes type="warning" %}}
-Be careful when you change a resource's name because changing the name of a resource will create a new resource and delete the old/original resource. If you'd like to rename a resource without destroying the old one, refer to the [aliases](/docs/concepts/options/aliases/) resource option.
+Be careful when you change a resource's name because changing the name of a resource will create a new resource and delete the old/original resource. If you'd like to rename a resource without destroying the old one, refer to the [aliases](/docs/iac/concepts/resources/options/aliases/) resource option.
 {{% /notes %}}
 
 ## Logical Names {#logicalname}
@@ -393,16 +393,16 @@ config:
 
 Changing the autonaming setting on an existing stack doesn't cause any immediate changes. It will only affect any newly created resources on this stack, including resources being replaced for unrelated reasons. To re-create resources with new names, e.g. on a dev stack, you would need to destroy the stack and update it again.
 
-## Resource Types {#types}
+## Resource Types and Type Tokens {#types}
 
-Each resource is an instance of a specific Pulumi resource type.  This type is specified by a type token in the format `<package>:<module>:<typename>`.  Concrete examples of this format are:
+Each resource is an instance of a specific Pulumi resource type. This type is specified by a _type token_ in the format `<package>:<module>:<typename>`. Concrete examples of this format are:
 
 - `aws:s3/bucket:Bucket`
 - `azure-native:compute:VirtualMachine`
 - `kubernetes:apps/v1:Deployment`
 - `random:index:RandomPassword`
 
-The `<package>` component of the type (e.g. `aws`, `azure-native`, `kubernetes`, `random`) specifies which [Pulumi Package](/docs/using-pulumi/pulumi-packages/) defines the resource.  This is mapped to the package in the [Pulumi Registry](/registry/) and to the underlying [Resource Provider](/docs/concepts/resources/providers/).
+The `<package>` component of the type (e.g. `aws`, `azure-native`, `kubernetes`, `random`) specifies which [Pulumi Package](/docs/iac/concepts/packages/) defines the resource.  This is mapped to the package in the [Pulumi Registry](/registry/) and to the underlying [Resource Provider](/docs/iac/concepts/providers/).
 
 The `<module>` component of the type (e.g. `s3/bucket`, `compute`, `apps/v1`, `index`) is the module path where the resource lives within the package.  It is `/` delimited by component of the path.  Per-language Pulumi SDKs use the module path to emit nested namespaces/modules in a language-specific way to organize all the types defined in a package.  For example, the `Deployment` resource above is available at `kubernetes.apps.v1.Deployment` in TypeScript and in the `github.com/pulumi/pulumi-kubernetes/sdk/v3/go/kubernetes/apps/v1` module in Go.  For historical reasons only, some packages include the type name itself as a final component of the module (e.g. `s3/bucket` for the type name `Bucket`) - in this case, this component is not included in the SDK namespace.  The name `index` indicates that the resource is not nested, and is instead available at the top level of the package.  For example, the `RandomPassword` resource above is available at `random.RandomPassword` in TypeScript.
 
@@ -415,7 +415,7 @@ Note that because of some of the historical details of how `<module>` is defined
 
 This "simplified" type name format is currently used in the following places:
 
-- The [Pulumi YAML](/docs/languages-sdks/yaml/) language allows simple type names to be used as the `type` of a resource.
+- The [Pulumi YAML](/docs/iac/languages-sdks/yaml/) language allows simple type names to be used as the `type` of a resource.
 
 The examples above can be written in simplified form as:
 
@@ -428,7 +428,7 @@ The examples above can be written in simplified form as:
 
 Each resource is assigned a [Uniform Resource Name (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) that uniquely identifies that resource globally. Unless you are writing a tool, you will seldom need to interact with an URN directly, but it is fundamental to how Pulumi works so it’s good to have a general understanding of it.
 
-The URN is automatically constructed from the project name, stack name, resource name, resource type, and the types of all the parent resources (in the case of [component resources](/docs/concepts/resources/components/)).
+The URN is automatically constructed from the project name, stack name, resource name, resource type, and the types of all the parent resources (for [component resources](/docs/iac/concepts/components/)).
 
 The following is an example of a URN:
 
@@ -466,7 +466,7 @@ Unlike the logical name (which you choose) or the URN (which Pulumi derives), th
 Because `id` is an output, it is wrapped in Pulumi's `Output<T>` type and is not known until the resource has been created or updated. You access it just like any other output — by passing it directly to another resource's input or by using `.apply()` when you need to transform the value in code.
 
 {{% notes type="info" %}}
-The physical ID is always stored in plain text in the state file and cannot be encrypted, even with [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/). If a resource places a sensitive value in its ID, see [The resource ID cannot be made secret](/docs/concepts/secrets/#the-resource-id-cannot-be-made-secret).
+The physical ID is always stored in plain text in the state file and cannot be encrypted, even with [`additionalSecretOutputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/). If a resource places a sensitive value in its ID, see [The resource ID cannot be made secret](/docs/iac/concepts/secrets/#the-resource-id-cannot-be-made-secret).
 {{% /notes %}}
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
@@ -581,7 +581,7 @@ The physical ID is particularly important when you want to adopt an existing clo
 existing = aws.s3.Bucket.get("existing-bucket", id="my-bucket-name-abc123")
 ```
 
-See [Importing resources](/docs/iac/adopting-pulumi/import/) for a full discussion of adoption workflows.
+See [Importing resources](/docs/iac/guides/migration/import/) for a full discussion of adoption workflows.
 
 ## Resource identity summary {#identity-summary}
 

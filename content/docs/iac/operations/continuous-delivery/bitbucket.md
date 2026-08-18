@@ -32,7 +32,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A Bitbucket Cloud repository with [Pipelines enabled](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/).
-1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Authenticate with Pulumi Cloud
 

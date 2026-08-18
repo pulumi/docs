@@ -7,7 +7,7 @@ meta_title: Approvals in Pulumi ESC
 menu:
   esc:
     parent: esc-concepts
-    weight: 11
+    weight: 12
   administration:
     name: ESC Approvals
     parent: administration-security-compliance

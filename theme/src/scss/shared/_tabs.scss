@@ -1,0 +1,72 @@
+// Shared underline tab system — the pattern for switching between views of the
+// same thing (an event's Americas and EMEA sessions, a doc's step-by-step and
+// AI-agent paths). A rule runs the full width of the row and the active tab sits
+// on it as a violet segment, so the tabs read as one control rather than a set of
+// loose chips.
+//
+// Underline tabs vs. `.btn` pills: use tabs when picking one option *replaces*
+// what's below them, and the pill row (`.btn.btn-sm.btn-outline`, as on /events/)
+// when the choice filters or toggles a list that stays put. Two different jobs,
+// two different affordances — don't swap one in for the other because it looks
+// nicer in a given spot.
+//
+// Render as:
+//   <nav class="tabs">
+//     <span class="tabs-label">Sessions</span>   {{/* optional */}}
+//     <a class="tab is-active" aria-current="true" href="#a">First</a>
+//     <a class="tab" href="#b">Second</a>
+//   </nav>
+// The active tab takes BOTH `.is-active` and `aria-current` — the class is what
+// client-side code toggles, and the attribute is what tells assistive tech which
+// one is current. `<button>` works in place of `<a>` for JS-driven tabs.
+//
+// `.tabs-label` is an optional overline naming the group ("SESSIONS"), for rows
+// that would otherwise read as loose links rather than a control. Point the
+// row's `aria-labelledby` at it instead of duplicating the text in `aria-label`.
+//
+// Put the tabs in a `<ul>` if the markup calls for it; `.tabs` handles a list by
+// flattening the items, so the rule still spans the row.
+//
+// No dark mode yet: the only consumer is the event page, and docs dark mode is
+// scoped to `body.section-docs`. The colors here come from `@apply`, which the
+// docs dark block can't remap on its own (see AGENTS.md), so the first /docs
+// consumer needs to add a `&.tab` override in docs/_docs-theme.scss.
+
+.tabs {
+    // The rule is on the row, not on each tab, so it spans the full width no
+    // matter how few tabs there are.
+    @apply flex w-full flex-wrap items-stretch gap-6 border-b border-gray-200;
+
+    // Tolerate a <ul> wrapper (or bare <li>s) without a second flex container.
+    ul {
+        @apply m-0 flex flex-1 flex-wrap items-stretch gap-6 p-0 list-none;
+    }
+
+    li {
+        @apply m-0 flex;
+    }
+}
+
+.tab {
+    // -mb-px pulls the tab's own bottom border over the row's, so the active
+    // underline replaces that segment of the rule instead of stacking under it.
+    @apply -mb-px inline-flex items-center gap-2 whitespace-nowrap border-b-2
+        border-transparent bg-transparent px-1 pb-3 font-body text-base
+        font-medium text-gray-600 no-underline transition-colors;
+
+    &:hover {
+        @apply text-gray-950 no-underline;
+    }
+
+    &.is-active {
+        @apply border-violet-primary text-violet-primary;
+    }
+}
+
+// Same box as `.tab` (so it sits on the same baseline and the rule stays
+// unbroken beneath it) but overline type and no interactive state — it names the
+// row, it isn't one of the choices.
+.tabs-label {
+    @apply -mb-px inline-flex items-center border-b-2 border-transparent pb-3
+        font-overline-sm whitespace-nowrap text-gray-600;
+}

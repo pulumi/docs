@@ -14,7 +14,7 @@ tags:
 category: tutorials
 ---
 
-In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/esc/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `pulumi env run` functionality of Pulumi ESC will make that easier.
+In a world where cloud computing is the backbone of modern applications, managing environments and secrets is of the utmost importance. Earlier this month we released a new service called [Pulumi ESC (Environments, Secrets, and Configuration)](/product/secrets-management/), the focus of which is to help alleviate the burden of managing cloud configuration and secrets by providing a centralized way to handle these critical aspects of cloud development. It’s like having a Swiss Army knife in your toolkit, ready to tackle the challenges of cloud infrastructure. This post will highlight the specific challenge of **credentials management**, and we’ll specifically dive into how using the `pulumi env run` functionality of Pulumi ESC will make that easier.
 
 <!--more-->
 
@@ -40,7 +40,7 @@ Now that we've covered the basics of what `pulumi env run` does, let's dive into
 
 ### Step 1: Install and log in to the Pulumi CLI
 
-To begin, you’ll need to [install the Pulumi CLI](/docs/iac/download-install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
+To begin, you’ll need to [install the Pulumi CLI](/docs/install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
 
 ```
 $ pulumi login
@@ -55,7 +55,7 @@ Logged in to pulumi.com as …
 
 Pulumi ESC offers you the ability to [manually set your credentials as secrets](/docs/iac/cli/commands/pulumi_env_set/) in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OIDC between Pulumi and AWS](/docs/pulumi-cloud/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
+This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, you'll need to [configure OIDC between Pulumi and AWS](/docs/esc/providers/#setting-up-oidc). On the AWS side, there are two resources you'll need to create:
 
 - An IAM OIDC provider
 - An IAM Role

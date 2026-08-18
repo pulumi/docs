@@ -171,7 +171,7 @@ The takeaway: **self-hosting wins on data residency, latency, and predictable co
 Before we start, make sure you have the following:
 
 - An [AWS account](https://aws.amazon.com/account/)
-- [Pulumi CLI](/docs/iac/download-install/) installed
+- [Pulumi CLI](/docs/install/) installed
 - [AWS CLI](https://aws.amazon.com/cli/) installed and configured
 - A working understanding of [Ollama](https://ollama.com/)
 

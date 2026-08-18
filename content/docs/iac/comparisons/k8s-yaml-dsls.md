@@ -22,7 +22,7 @@ aliases:
 - /docs/iac/concepts/vs/k8s-yaml-dsls/
 ---
 
-Pulumi and [Kubernetes YAML manifests](https://kubernetes.io/docs/concepts/overview/working-with-objects/) are both declarative ways to define the desired state of infrastructure. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) across any cloud or SaaS provider; Kubernetes YAML manifests are the native configuration format of the Kubernetes API and describe Kubernetes objects only.
+Pulumi and [Kubernetes YAML manifests](https://kubernetes.io/docs/concepts/overview/working-with-objects/) are both declarative ways to define the desired state of infrastructure. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), across any cloud or SaaS provider; Kubernetes YAML manifests are the native configuration format of the Kubernetes API and describe Kubernetes objects only.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Kubernetes YAML manifests.
 
@@ -42,7 +42,7 @@ Kubernetes is an open-source project governed by the [Cloud Native Computing Fou
 
 | Feature | Pulumi | Kubernetes YAML Manifests |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | YAML or JSON documents describing Kubernetes API objects; no loops, conditionals, or variables. [Kustomize](https://kustomize.io/) adds bases and overlays but remains declarative YAML |
+| Language support | {{< pulumi-languages "general-purpose" >}} — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | YAML or JSON documents describing Kubernetes API objects; no loops, conditionals, or variables. [Kustomize](https://kustomize.io/) adds bases and overlays but remains declarative YAML |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated from upstream API schemas; [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider | Kubernetes API objects only, on any conformant cluster (EKS, AKS, GKE, or self-managed); non-Kubernetes cloud resources require separate tooling or an in-cluster operator such as [AWS Controllers for Kubernetes](https://aws-controllers-k8s.github.io/community/) or [Crossplane](https://www.crossplane.io/) |
 | Transpiled to another format? | No — programs run directly in their host language | No — manifests are sent directly to the Kubernetes API server |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | No separate state file; the live cluster (etcd) is the source of truth, and `kubectl apply` records managed fields via [server-side apply](https://kubernetes.io/docs/reference/using-api/server-side-apply/) |
@@ -142,7 +142,7 @@ Yes — and this is a common adoption pattern. Pulumi can deploy existing manife
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Get started with Pulumi on Kubernetes](/docs/iac/get-started/kubernetes/)
 - [Pulumi Kubernetes provider](/registry/packages/kubernetes/)
 - [Migrating from Kubernetes YAML or Helm Charts to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/)

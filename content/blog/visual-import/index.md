@@ -53,7 +53,7 @@ Visual Import is a guided three-step workflow within the Pulumi Cloud Console:
 
 ![Visual Import Code Generation](visual-import.png)
 
-Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual Import docs](/docs/pulumi-cloud/import/).
+Throughout the workflow, you maintain full control. Select what you need, tweak it as required, and integrate on your terms.  You can find full documentation and usage details in the [Visual Import docs](/docs/insights/discovery/visual-import/).
 
 ## Key Benefits
 
@@ -83,7 +83,7 @@ And with built-in support for dependency analysis and cross-account visibility, 
 
 ### Leverage the Full Power of Pulumi Cloud
 
-Once resources are in code, you can take full advantage of Pulumi Cloud's full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through [Pulumi Insights](/docs/insights/), manage state with [ESC's secrets management](/docs/esc/get-started/), and automate workflows through [Pulumi Deployments](/docs/pulumi-cloud/deployments). Together, these features turn your infrastructure into a governed, observable, and continuously deployable system built for modern cloud operations.
+Once resources are in code, you can take full advantage of Pulumi Cloud's full suite of features: define and enforce policies with CrossGuard, gain visibility into your entire infrastructure through [Pulumi Insights](/docs/insights/), manage state with [ESC's secrets management](/docs/esc/get-started/), and automate workflows through [Pulumi Deployments](/docs/deployments/concepts/). Together, these features turn your infrastructure into a governed, observable, and continuously deployable system built for modern cloud operations.
 
 ## Try It Today
 

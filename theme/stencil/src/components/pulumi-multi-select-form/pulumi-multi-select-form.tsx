@@ -21,13 +21,8 @@ export class PulumiMultiSelectForm {
     @Element()
     el: Element;
 
-    // The JSON string of the items for the selector.
     @Prop()
     items: MultiSelectFormItem[] = [];
-
-    // The class for the select input.
-    @Prop()
-    selectClass?: string;
 
     // The labelClass defines the class for the label.
     @Prop()
@@ -37,8 +32,6 @@ export class PulumiMultiSelectForm {
     @Prop()
     labelText: string;
 
-    // The default key for the selector to set to when rendered. If the key
-    // is blank then the first item in the array will be selected.
     @Prop()
     defaultFormId: string = "";
 
@@ -46,30 +39,29 @@ export class PulumiMultiSelectForm {
     @Prop()
     linkedinConversionId?: number;
 
-    // The currently selected item.
     @State()
-    selectedItem: MultiSelectFormItem;
+    selectedItem: MultiSelectFormItem | undefined;
 
     @State()
     formSubmitted = false;
 
+    @State()
+    carriedValues: Record<string, string> = {};
+
     // The window event listener used to handle submitting form data to Segment.
     private windowEventHandler: (this: Window, ev: MessageEvent) => any;
 
-    // When the component loads we need to parse the items string.
+    private static readonly radioGroupName = "multi-select-form-choice";
+
     componentWillLoad() {
         if (this.defaultFormId !== "") {
             this.selectedItem = this.items.find(item => item.hubspotFormId === this.defaultFormId);
-
-            if (this.selectedItem) {
-                return;
-            }
         }
-
-        this.selectedItem = this.items[0];
+        if (!this.selectedItem) {
+            this.selectedItem = this.items[0];
+        }
     }
 
-    // After the form submits we should hide the session selector.
     componentDidLoad() {
         this.windowEventHandler = this.handleWindowMessage.bind(this);
         window.addEventListener("message", this.windowEventHandler);
@@ -97,35 +89,63 @@ export class PulumiMultiSelectForm {
         }
     }
 
-    // When the select input changes we need to update the state accordingly.
-    private handleSelectChange(hubspotFormId: string) {
+    private async handleChoiceChange(hubspotFormId: string) {
+        this.carriedValues = await this.captureCarryOverValues();
         this.selectedItem = this.items.find(item => item.hubspotFormId === hubspotFormId);
     }
 
+    private async captureCarryOverValues(): Promise<Record<string, string>> {
+        const form = this.el.querySelector("pulumi-hubspot-form") as HTMLPulumiHubspotFormElement;
+        if (!form?.getCarryOverValues) {
+            return this.carriedValues;
+        }
+
+        const values = await form.getCarryOverValues();
+        // Merged rather than replaced: the forms don't all share fields, so a message
+        // has to survive a detour through one that lacks a message field.
+        const carried: Record<string, string> = { ...this.carriedValues };
+
+        Object.entries(values).forEach(([name, value]) => {
+            if (value) {
+                carried[name] = value;
+            } else {
+                delete carried[name];
+            }
+        });
+
+        return carried;
+    }
+
     render() {
-        const selectedFormId = this.selectedItem?.hubspotFormId;
+        const selectedFormId = this.selectedItem?.hubspotFormId || "";
 
         return (
             <div>
                 {this.formSubmitted ? null : (
-                    <span>
+                    <div>
                         <span class={this.labelClass || ""}>{this.labelText}</span>
-                        <select class={this.selectClass || ""} onInput={(event: any) => this.handleSelectChange(event.target.value)}>
-                            {this.items.map(item => {
-                                const isSelected = item.hubspotFormId === selectedFormId;
-                                return (
-                                    <option value={item.hubspotFormId} selected={isSelected}>
-                                        {item.label ? item.label : item.key}
-                                    </option>
-                                );
-                            })}
-                        </select>
-                    </span>
+                        {/* Not a <fieldset>: one here disables the `:not(:has(fieldset))` branch in _hubspot.scss that styles the embedded form's fields. */}
+                        <div role="radiogroup" aria-label={this.labelText} class="grid grid-cols-1 lg:grid-cols-4 gap-3">
+                            {this.items.map(item => (
+                                <label class="card card-hover flex items-center justify-center p-3 m-0 text-center text-sm font-normal has-[:checked]:border-violet-primary has-[:checked]:bg-violet-50 has-[:checked]:text-violet-primary has-[:focus-visible]:border-violet-800 has-[:focus-visible]:inset-ring-2 has-[:focus-visible]:inset-ring-violet-800">
+                                    <input
+                                        type="radio"
+                                        class="sr-only"
+                                        name={PulumiMultiSelectForm.radioGroupName}
+                                        value={item.hubspotFormId}
+                                        checked={item.hubspotFormId === selectedFormId}
+                                        onInput={(event: any) => this.handleChoiceChange(event.target.value)}
+                                    />
+                                    <span>{item.label ? item.label : item.key}</span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
                 )}
-                {this.selectedItem.cta ? (
-                    <div class="mt-8"><a class="btn btn-secondary" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
+                {!this.selectedItem ? null : this.selectedItem.cta ? (
+                    <div class="mt-8"><a class="btn btn-primary btn-lg" href={this.selectedItem.cta.url}>{this.selectedItem.cta.label}</a></div>
                 ) : (
-                    <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId}></pulumi-hubspot-form>
+                    <pulumi-hubspot-form key={selectedFormId} form-id={selectedFormId} carryOverValues={this.carriedValues}></pulumi-hubspot-form>
                 )}
             </div>
         );

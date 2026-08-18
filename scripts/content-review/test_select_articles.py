@@ -20,6 +20,7 @@ commits are dated deliberately:
 
 from __future__ import annotations
 
+import ast
 import json
 import os
 import subprocess
@@ -29,6 +30,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SCRIPT = HERE / "select-articles.py"
+COMMON = HERE / "_selector_common.py"
+BLOG_SCRIPT = HERE.parent / "blog-review" / "select-posts.py"
 REPO_TIERS = (
     HERE.parents[1]
     / ".claude/commands/review-existing-content/references/strategic-tiers.yaml"
@@ -38,6 +41,41 @@ TODAY = "2026-06-12"
 
 _failures: list[str] = []
 _passes = 0
+
+
+def _module_assign(path: Path, name: str):
+    """Return a module-level literal assignment's value, or None if absent.
+
+    Parsed from source rather than imported: these filenames are hyphenated
+    (not importable) and run argparse at module scope. Reading the value rather
+    than restating it is the point — the test then covers whatever the constant
+    actually holds.
+    """
+    for node in ast.parse(path.read_text()).body:
+        if isinstance(node, ast.Assign) and any(
+            isinstance(t, ast.Name) and t.id == name for t in node.targets
+        ):
+            try:
+                return ast.literal_eval(node.value)
+            except ValueError:
+                # A non-literal re-declaration (`BOT_AUTHORS = COMMON | {...}`)
+                # is still a re-declaration. Report it as one rather than
+                # letting literal_eval raise out of the test harness.
+                return f"<non-literal assignment in {path.name}>"
+    return None
+
+
+def _bot_authors() -> set[str]:
+    """Read BOT_AUTHORS out of the shared selector module.
+
+    It lives in _selector_common.py, not in either selector, because the two
+    copies drifted once and cost ~65% of content/docs their staleness clock.
+    _check_bot_authors_single_definition below is the guard that keeps it there.
+    """
+    value = _module_assign(COMMON, "BOT_AUTHORS")
+    if value is None:
+        raise AssertionError(f"BOT_AUTHORS not found in {COMMON.name}")
+    return set(value)
 
 
 def check(cond: bool, msg: str) -> None:
@@ -185,6 +223,45 @@ def main() -> int:
         check(s[STACKS] < s[KEEP], "freshly human-edited page falls below stale tier-3 pages")
         check(s[ONE] == s[TWO], "bot-edited page scores identically to its never-edited tier-3 sibling")
         check(s[ONE] > s[STACKS], "bot edit left the page stale (unlike the human-edited one)")
+
+        # Every name in BOT_AUTHORS must suppress the staleness clock, not just
+        # the one the fixture above happens to use. This is the regression guard
+        # for the real defect: "Pulumi Bot" and "workprentice[bot]" were missing
+        # from the set, so their commits looked like human edits and reset the
+        # clock on ~65% of content/docs pages. Driving the assertion off the
+        # constant means the next identity added to the set is covered the day
+        # it lands, and one omitted from it fails here.
+        print("every BOT_AUTHORS identity suppresses the staleness clock")
+        # The set has exactly one home. It used to have two, and the second one
+        # missed the fix — which is the whole reason _selector_common.py exists.
+        # A selector that re-declares it locally shadows the shared set for its
+        # own lane only, silently recreating the divergence.
+        for script in (SCRIPT, BLOG_SCRIPT):
+            check(_module_assign(script, "BOT_AUTHORS") is None,
+                  f"{script.name} re-declares BOT_AUTHORS instead of importing it "
+                  f"from _selector_common.py; the two copies will drift again")
+        bot_names = sorted(_bot_authors())
+        # Identities observed authoring commits in pulumi/docs. A name missing
+        # here can't be caught by the loop below (the loop only iterates what is
+        # already in the set), so the membership assertion is the actual guard —
+        # "Pulumi Bot" and "workprentice[bot]" are precisely what was missing.
+        # Add to this list whenever a new automation starts committing.
+        for required in ("pulumi-bot", "Pulumi Bot", "workprentice[bot]",
+                         "dependabot[bot]", "github-actions[bot]"):
+            check(required in bot_names,
+                  f"{required!r} is missing from BOT_AUTHORS, so its commits "
+                  f"reset the staleness clock as if a human made them")
+        for i, bot in enumerate(bot_names):
+            botdir = tmp / f"botclock{i}"
+            botdir.mkdir()
+            botrepo = make_repo(botdir)
+            (botrepo / "content/docs/misc/two.md").write_text(PAGE + f"\n{bot} touch.\n")
+            git(botrepo, "add", ".")
+            git(botrepo, "commit", "-q", "-m", f"{bot} edit", date="2026-06-11T00:00:00Z",
+                name=bot, email="bot@example.com")
+            sb = scores(run_select(botrepo, tiers, empty, "--count", "20"))
+            check(sb[TWO] == s[TWO],
+                  f"a commit authored by {bot!r} did not reset the clock on {TWO}")
 
         print("multiplicative score: stale tier-2 beats a fresh tier-1")
         check(s[OVERVIEW] > s[STACKS], "importance*staleness lets a very stale tier-2 outrank a fresh tier-1")

@@ -32,7 +32,7 @@ social:
 
 This week, [Pulumi Neo](/blog/pulumi-neo/) started working in two more places: GitHub and Slack. The agent that already runs Pulumi tasks from the Cloud console and the [terminal](/blog/pulumi-neo-cli/) now participates in the threads where your team discusses changes.
 
-Mention `@pulumi-neo` in a [pull request or issue](/docs/ai/code-reviews/) and Neo replies in the thread. Mention `@Neo` in a [Slack channel](/docs/ai/integrations/slack/) and Neo starts a [task](/docs/ai/tasks/), continuing the conversation as you reply.
+Mention `@pulumi-neo` in a [pull request or issue](/docs/ai/neo/code-reviews/) and Neo replies in the thread. Mention `@Neo` in a [Slack channel](/docs/ai/integrations/slack/) and Neo starts a [task](/docs/ai/neo/tasks/), continuing the conversation as you reply.
 
 <!--more-->
 
@@ -72,7 +72,7 @@ Whether the conversation starts in GitHub or Slack, Neo runs with the [RBAC perm
 
 ## Try it out
 
-Both integrations are available now for Neo-enabled organizations. The [Code Reviews docs](/docs/ai/code-reviews/) and [Slack integration docs](/docs/ai/integrations/slack/) cover the one-time setup. From there, every engineer with a linked Pulumi Cloud identity can mention Neo from the threads they already work in.
+Both integrations are available now for Neo-enabled organizations. The [Code Reviews docs](/docs/ai/neo/code-reviews/) and [Slack integration docs](/docs/ai/integrations/slack/) cover the one-time setup. From there, every engineer with a linked Pulumi Cloud identity can mention Neo from the threads they already work in.
 
 Today's launch is part of a [bigger story](/releases/agentic-infrastructure-era/). Read our launch-day piece on [the agentic infrastructure era](/blog/the-agentic-infrastructure-era/) for the broader vision, the [Neo CLI launch post](/blog/pulumi-neo-cli/) for Neo's new home in the terminal, and the [Neo Integrations post](/blog/neo-integrations/) for the MCP servers and cloud CLIs that ship with this release.
 

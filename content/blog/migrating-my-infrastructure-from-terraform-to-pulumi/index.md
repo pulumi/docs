@@ -142,7 +142,7 @@ $ pulumi stack
 
 ```
 
-As you can see I've defined a component called "vt:RedisServer" which I use to group all the resources associated with my Redis server. You'll get a graph representation of your whole infrastructure in the [Pulumi Web Console](/docs/pulumi-cloud/) .
+As you can see I've defined a component called "vt:RedisServer" which I use to group all the resources associated with my Redis server. You'll get a graph representation of your whole infrastructure in the [Pulumi Web Console](/docs/administration/) .
 
 ![image.png](/blog/migrating-my-infrastructure-from-terraform-to-pulumi/graph.jpeg)
 

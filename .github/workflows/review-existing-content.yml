@@ -21,11 +21,18 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 #   unset -> on, 3 articles/run (the default)
 #   '0'   -> off: the whole job is skipped (no runner, no spend)
 #   'N'   -> on, N articles/run
-# Set it from Settings -> Variables to retune or pause with no PR. The job gate
-# below is a plain string compare against '0' (the hard off); the selector also
-# no-ops cleanly on any count<=0, so a stray '00'/'-1' still does no work.
+# Set it from Settings -> Variables to retune or pause with no PR. The selector
+# also no-ops cleanly on any count<=0, so a stray '00'/'-1' still does no work.
 # workflow_dispatch always runs regardless (the testing path; see the
 # dry_run / count / paths inputs).
+#
+# The job gate below wraps the variable in format('{0}', ...) — do not
+# "simplify" it back to a bare `vars.X != '0'`. An unset variable is null, and
+# GitHub coerces a Null-vs-String comparison to numbers (null -> 0, '0' -> 0),
+# so the bare form evaluates 0 != 0 = FALSE and unset silently means OFF —
+# inverting the default documented above. format() forces a string, making the
+# unset case a true '' != '0' string compare. This is not hypothetical: it kept
+# blog-review-index and claims-reverify from ever running on schedule.
 #
 # DEGRADATION HEALTH (issue #20078 §3.4): three inputs degrade gracefully but
 # used to do so silently — the traffic snapshot (selection falls back to
@@ -128,7 +135,7 @@ jobs:
     timeout-minutes: 60
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (vars.CONTENT_REVIEW_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
+      (format('{0}', vars.CONTENT_REVIEW_COUNT) != '0' && needs.holiday-check.outputs.is_holiday != 'true')
     steps:
       # ESC runs before checkout so the bot token can authenticate the
       # checkout — the PRs opened by claude-code-action later then go out
@@ -193,7 +200,6 @@ jobs:
       # stack output, or an absent object all leave selection running on
       # strategic tier + review age alone.
       - name: Configure AWS credentials
-        id: aws-creds
         continue-on-error: true
         uses: aws-actions/configure-aws-credentials@v6
         with:
@@ -300,8 +306,7 @@ jobs:
             || echo "review ledger unavailable; selection proceeds on git staleness alone"
 
       # Deterministic selection: the model never chooses what to review.
-      # Writes has_articles= / halted= / count= to $GITHUB_OUTPUT for the
-      # gates below.
+      # Writes has_articles= / halted= to $GITHUB_OUTPUT for the gates below.
       - name: Select articles
         id: select
         env:

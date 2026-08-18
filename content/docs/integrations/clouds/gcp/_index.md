@@ -1,6 +1,6 @@
 ---
 title_tag: "Google Cloud | Pulumi Integrations"
-meta_desc: Google Cloud integration with Pulumi — providers, packages, architecture templates, ESC integrations, Insights account scanning, and pre-built policy packs.
+meta_desc: Google Cloud integration with Pulumi — providers, packages, architecture templates, ESC integrations, cloud account scanning, and pre-built policy packs.
 title: Google Cloud
 linktitle: Google Cloud
 h1: Google Cloud
@@ -19,13 +19,13 @@ aliases:
 - /docs/clouds/gcp/guides/providers/
 ---
 
-Build, deploy, and manage Google Cloud infrastructure with Pulumi. This page links to every Pulumi capability for Google Cloud: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), Insights account scanning, and policy packs.
+Build, deploy, and manage Google Cloud infrastructure with Pulumi. This page links to every Pulumi capability for Google Cloud: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), cloud account scanning, and policy packs.
 
 To start from scratch, follow the [Google Cloud get-started guide](/docs/iac/get-started/gcp/).
 
 ## Infrastructure as Code
 
-[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, or YAML — with deterministic deployments, a state backend, and a rich ecosystem of packages.
+[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
 
 - [Google Cloud provider](/registry/packages/gcp/) — the default Google Cloud provider. Manages a broad set of Google Cloud resources.
 - [Docker](/registry/packages/docker/) — build and push Docker images to Artifact Registry, Container Registry, or other registries.
@@ -62,7 +62,7 @@ ESC integrates directly with Google Cloud for short-lived credentials and secret
 
 [Pulumi Insights](/docs/insights/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For Google Cloud, Insights connects projects to inventory existing resources, search across projects, and export data. See [Add a Google Cloud account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Insights discovery overview](/docs/insights/discovery/accounts/) for background.
+For Google Cloud, Insights connects projects to inventory existing resources, search across projects, and export data. See [Add a Google Cloud account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/insights/discovery/) for background.
 
 ## Policy packs
 

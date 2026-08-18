@@ -280,4 +280,4 @@ Pulumi can also work with Terraform provider ecosystems, including long-tail pro
 
 If your team is evaluating infrastructure as code options, start with the workflow that creates the most leverage: write infrastructure in the language your team already uses, test shared components, protect critical resources, and migrate one stack at a time.
 
-To go deeper, [get started with Pulumi](/docs/iac/get-started/) or read the [Terraform migration guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/).
+To go deeper, [get started with Pulumi](/docs/get-started/) or read the [Terraform migration guide](https://www.pulumi.com/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform/).

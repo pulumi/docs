@@ -15,7 +15,7 @@ aliases:
 
 Pulumi ESC (Environments, Secrets, and Configuration) is a centralized secrets and configuration management service. You define collections of configuration values and secrets called [environments](/docs/esc/concepts/environments/), then consume them from your applications, infrastructure, and CI/CD pipelines—without copying secrets between tools or storing them in plaintext.
 
-Pulumi ESC is available as a fully managed service in [Pulumi Cloud](/docs/pulumi-cloud/) and can be [self-hosted](/docs/support/faq/secrets-config/#can-i-self-host-pulumi-esc).
+Pulumi ESC is available as a fully managed service in [Pulumi Cloud](/docs/administration/) and can be [self-hosted](/docs/support/faq/secrets-config/#can-i-self-host-pulumi-esc).
 
 ## Key benefits
 
@@ -29,6 +29,7 @@ ESC is built around a small set of concepts, each covered in depth on its own pa
 
 - [**Environments**](/docs/esc/concepts/environments/) — the fundamental unit of organization: YAML documents that hold configuration values and secrets, import other environments, and reference providers. You open an environment to produce its evaluated values.
 - [**Providers**](/docs/esc/concepts/providers/) and [**rotators**](/docs/esc/concepts/rotators/) — the first-party plugins that issue short-lived logins, import secrets from external systems like AWS Secrets Manager and HashiCorp Vault, and rotate credentials on a schedule.
+- [**Built-in properties**](/docs/esc/concepts/builtin-properties/) — the values every environment can reference without defining them: who is opening the environment (`context`), other environments in the organization (`environments`), and imported environments (`imports`).
 - [**SDKs**](/docs/esc/concepts/sdks/) — language libraries for reading and managing environments from your own code, including reading resolved values from workloads at runtime.
 
 ## How Pulumi ESC works
@@ -84,7 +85,8 @@ Because dynamic values are resolved at open time, the temporary AWS credentials 
 
 - [Environments](/docs/esc/concepts/environments/) — define, compose, version, and consume environments.
 - [Providers](/docs/esc/concepts/providers/) and [rotators](/docs/esc/concepts/rotators/) — the plugins that produce and rotate values.
+- [Built-in properties](/docs/esc/concepts/builtin-properties/) — the `context`, `environments`, and `imports` values available to every reference.
 - [SDKs](/docs/esc/concepts/sdks/) — work with environments from your own code.
 - [Integrations](/docs/esc/integrations/) — tools with a dedicated ESC integration component.
-- [Access control](/docs/administration/access-identity/rbac/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/administration/customer-managed-keys/) — administer and secure your environments.
+- [Access control](/docs/administration/access-identity/rbac/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/concepts/customer-managed-keys/) — administer and secure your environments.
 - [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/) — the command-line reference.

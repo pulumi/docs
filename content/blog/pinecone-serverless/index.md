@@ -15,7 +15,7 @@ category: product
 
 ## Hello, Pulumi Pinecone Provider!  👋
 
-The [Pinecone](https://pinecone.io/) integration with [Pulumi](https://www.pulumi.com) offers a native way to manage Pinecone indexes, including the newly-announced serverless indexes. Utilize any of Pulumi's [supported languages](/docs/languages-sdks/) to effortlessly create, update, and remove your Pinecone indexes. This integration facilitates the application of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) principles, helping you to work even more efficiently. Furthermore, this gives you the benefit of tapping into Pulumi's wide range of [providers](/product/), offering you a diverse and powerful set of tools to enhance your development work.
+The [Pinecone](https://pinecone.io/) integration with [Pulumi](https://www.pulumi.com) offers a native way to manage Pinecone indexes, including the newly-announced serverless indexes. Utilize any of Pulumi's [supported languages](/docs/iac/languages-sdks/) to effortlessly create, update, and remove your Pinecone indexes. This integration facilitates the application of [Infrastructure as Code](/what-is/what-is-infrastructure-as-code/) principles, helping you to work even more efficiently. Furthermore, this gives you the benefit of tapping into Pulumi's wide range of [providers](/product/), offering you a diverse and powerful set of tools to enhance your development work.
 
 ## What is Pinecone? 🧐
 
@@ -136,7 +136,7 @@ Be aware that this will also delete all the data stored in the index.
 
 ### Programmatically Creating a Pulumi Pinecone Provider
 
-By default, Pulumi will use the [default provider configuration](/docs/concepts/resources/providers/#default-provider-configuration) for the Pinecone provider. However, there may be situations where you need to use a different configuration. In that case, programmatically creating an explicit Pinecone provider with its own configuration is how to meet that requirement. You might also need to create one or more explicit Pinecone providers if you needed to deploy indexes in multiple Pinecone accounts, for example.
+By default, Pulumi will use the [default provider configuration](/docs/iac/concepts/providers/#default-provider-configuration) for the Pinecone provider. However, there may be situations where you need to use a different configuration. In that case, programmatically creating an explicit Pinecone provider with its own configuration is how to meet that requirement. You might also need to create one or more explicit Pinecone providers if you needed to deploy indexes in multiple Pinecone accounts, for example.
 
 Here is an example on how to programmatically create a Pinecone provider and then pass the provider when creating an index.
 

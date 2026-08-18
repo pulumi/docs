@@ -290,7 +290,7 @@ We hope you will enjoy the increased flexibility of the `pulumi.com/deletionProp
 Check out the following links to learn more about Pulumi Kubernetes today!
 
 * [Getting Started](/docs/iac/get-started/kubernetes/)
-* [Documentation](/docs/clouds/kubernetes/)
+* [Documentation](/docs/integrations/clouds/kubernetes/)
 * [Open Source](https://github.com/pulumi/pulumi-kubernetes)
 * [Community Slack](https://pulumi-community.slack.com/archives/CRFURDVQB)
 

@@ -537,7 +537,7 @@ Once you have a stack, you can also manage which [ESC environments](/docs/esc/co
 
 Automation API drives the same engine as the CLI, so it downloads any missing provider plugin automatically before an operation---the explicit `installPlugin` call below isn't required for providers published to the [Pulumi Registry](/registry/). It's shown here to pin a specific plugin version; you also need it for [local or parameterized packages](/docs/iac/guides/building-extending/automation-api/#using-local-packages-with-automation-api). See [Plugins](/docs/iac/concepts/automation-api/#plugins) for details.
 
-The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
+The AWS plugin also needs configuration. You can provide that configuration just as you would with other Pulumi programs: either through [stack configuration](/docs/iac/concepts/config/) or environment variables. In this tutorial, you'll use the `Stack` object to set the AWS region for the AWS provider plugin.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 {{% choosable language "typescript" %}}
@@ -975,6 +975,83 @@ var result = stack.up(UpOptions.builder().onStandardOutput(System.out::println).
 {{< /chooser >}}
 
 Notice how you can choose to have a callback function for standard output. In addition, the command returns a result of the update, which you can programmatically use to drive decisions within your program. For example, the result includes the stack outputs as well as a summary of the changes. This means you could choose to take different actions if there were no resources updated. Conversely, you could use the stack outputs to drive another Pulumi program within the same Automation program.
+
+### Preview a destroy or refresh without applying it
+
+Sometimes you want to know what a `destroy` or `refresh` would do before committing to it. For example, you might gate an automated teardown behind a manual approval step, or inspect drift without writing it back to the stack's state.
+
+Each language SDK shipped this capability on its own schedule, so the minimum version to check is your language's own Automation API package, not a single Pulumi CLI version:
+
+- TypeScript/JavaScript (`@pulumi/pulumi`): `previewRefresh` requires 3.181.0 or later; `previewDestroy` requires 3.192.0 or later.
+- Python (`pulumi`): `preview_refresh` and `preview_destroy` both require 3.181.0 or later.
+- Go (`github.com/pulumi/pulumi/sdk/v3`): `PreviewRefresh` requires 3.107.0 or later; `PreviewDestroy` requires 3.128.0 or later.
+- C# (`Pulumi.Automation` on NuGet): `RefreshOptions.PreviewOnly` requires 3.75.0 or later; `DestroyOptions.PreviewOnly` requires 3.78.0 or later.
+- Java (`com.pulumi:pulumi`): `RefreshOptions.previewOnly` requires 1.6.0 or later; `DestroyOptions.previewOnly` requires 1.9.0 or later.
+
+If you call one of these before your language SDK supports it, you'll see an error such as `stack.previewDestroy is not a function`, `AttributeError`, or a missing builder method, rather than a clear version message. Upgrade the Automation API package for your language first.
+
+In TypeScript, Python, and Go, this is a dedicated method that returns the same `PreviewResult` shape as `preview`, without ever calling the destroy or refresh engine operation:
+
+{{< chooser language "typescript,python,go,csharp,java" >}}
+{{% choosable language "typescript" %}}
+
+```typescript
+const destroyPreview = await stack.previewDestroy({ onOutput: console.info });
+const refreshPreview = await stack.previewRefresh({ onOutput: console.info });
+```
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+destroy_preview = stack.preview_destroy(on_output=print)
+refresh_preview = stack.preview_refresh(on_output=print)
+```
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+```go
+destroyPreview, err := s.PreviewDestroy(ctx, optdestroy.ProgressStreams(os.Stdout))
+if err != nil {
+  fmt.Printf("Failed to preview destroy: %v\n\n", err)
+  os.Exit(1)
+}
+
+refreshPreview, err := s.PreviewRefresh(ctx, optrefresh.ProgressStreams(os.Stdout))
+if err != nil {
+  fmt.Printf("Failed to preview refresh: %v\n\n", err)
+  os.Exit(1)
+}
+```
+
+{{% /choosable %}}
+
+{{% choosable language "csharp,fsharp,visualbasic" %}}
+
+C# doesn't expose a separate preview method for destroy and refresh. Instead, set `PreviewOnly` on the corresponding options object and call the regular method; the CLI runs the operation in preview mode and returns without changing the stack's state:
+
+```csharp
+var destroyPreview = await stack.DestroyAsync(new DestroyOptions { PreviewOnly = true });
+var refreshPreview = await stack.RefreshAsync(new RefreshOptions { PreviewOnly = true });
+```
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+Java follows the same pattern as C#: set `previewOnly` on the options builder and call the regular method.
+
+```java
+var destroyPreview = stack.destroy(DestroyOptions.builder().previewOnly(true).build());
+var refreshPreview = stack.refresh(RefreshOptions.builder().previewOnly(true).build());
+```
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## Next steps
 

@@ -129,7 +129,7 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 
 | Tool | Language / approach | Clouds supported | State management | Best for |
 |---|---|---|---|---|
-| [Pulumi](#1-pulumi) | Python, TypeScript, Go, C#, Java, or YAML | AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers | Pulumi Cloud (managed, free tier available) or self-managed backend | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
+| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers | Pulumi Cloud (managed, free tier available) or self-managed backend | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
 | [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | State file, self-managed or via HCP Terraform | Teams with existing Terraform expertise and established workflows |
 | [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Delegated to the underlying CloudFormation stack | AWS-focused teams who prefer programming languages over templates |
 | [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Managed entirely by AWS | AWS-only deployments requiring deep service integration |
@@ -147,18 +147,18 @@ Use the table as a map: each tool links to its full breakdown below, where you'l
 License: Apache 2.0  
 Best For: Teams who want flexible, language-agnostic IaC for infrastructure and operations
 
-Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, Go, C#, and Java, plus YAML for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
+Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, JavaScript, Go, .NET, and Java, plus YAML and HCL for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
 
 Pulumi's approach combines the best of both imperative and declarative paradigms: you use imperative programming languages to define your desired infrastructure state, but the Pulumi engine processes this declaratively to determine what changes are needed to achieve your intended outcome.
 
 ### Key Features:
 
-- **Universal language support**: Use Python, TypeScript, Go, C#, Java, or YAML configurations—no new DSL to learn
+- **Universal language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL configurations—no new DSL to learn
 - **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
-- **Built-in testing**: [Unit and integration testing](/docs/using-pulumi/testing/) for infrastructure code
-- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/using-pulumi/crossguard/)
+- **Built-in testing**: [Unit and integration testing](/docs/iac/guides/testing/) for infrastructure code
+- **Policy as Code**: Enforce compliance and security policies with [CrossGuard](/docs/insights/policy/)
 - **Component ecosystem**: Rich library of reusable infrastructure components
 
 Universal Language Code Examples:
@@ -423,7 +423,7 @@ outputs:
 
 Key Features:
 
-- **General-purpose language support**: Use Python, TypeScript, Go, C#, Java, or YAML without learning new DSLs
+- **General-purpose language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
 - **Multi-cloud flexibility**: Native cloud provider SDKs with same-day feature access across [150+ providers](/registry/)
 - **Incremental adoption**: Migration tools and state integration for gradual transitions
@@ -560,7 +560,7 @@ Best For: AWS-only deployments requiring deep service integration
 
 AWS CloudFormation provides the foundation for infrastructure as code on AWS, offering native integration with all AWS services and deep platform-specific features.
 
-Pulumi Integration: Pulumi provides [native AWS providers](/docs/clouds/aws/) that offer the same comprehensive AWS service coverage as CloudFormation, with the added benefit of using general-purpose programming languages. You can also [import existing CloudFormation stacks](/docs/using-pulumi/adopting-pulumi/import/) into Pulumi for gradual migration or hybrid management approaches.
+Pulumi Integration: Pulumi provides [native AWS providers](/docs/integrations/clouds/aws/) that offer the same comprehensive AWS service coverage as CloudFormation, with the added benefit of using general-purpose programming languages. You can also [import existing CloudFormation stacks](/docs/iac/guides/migration/import/) into Pulumi for gradual migration or hybrid management approaches.
 
 Key Features:
 
@@ -599,7 +599,7 @@ Best For: Azure-native deployments requiring comprehensive platform integration
 
 Azure Resource Manager provides the foundational infrastructure as code solution for Microsoft Azure, offering complete support for Azure services through JSON-based ARM templates. As Azure's native IaC solution, ARM templates provide the most comprehensive coverage of Azure services and features.
 
-Pulumi Integration: Pulumi's [native Azure providers](/docs/clouds/azure/) offer equivalent comprehensive Azure service coverage with general-purpose programming languages. ARM templates can be [imported into Pulumi](/docs/using-pulumi/adopting-pulumi/import/), and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
+Pulumi Integration: Pulumi's [native Azure providers](/docs/integrations/clouds/azure/) offer equivalent comprehensive Azure service coverage with general-purpose programming languages. ARM templates can be [imported into Pulumi](/docs/iac/guides/migration/import/), and you can reference ARM deployments from Pulumi programs for hybrid scenarios.
 
 Key Features:
 
@@ -787,7 +787,7 @@ Best For: Kubernetes-first organizations managing multi-cloud infrastructure
 
 Crossplane is a Cloud-Native Framework for Platform Engineering that extends Kubernetes to help organizations build custom infrastructure management platforms, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
 
-Pulumi Integration: Pulumi offers the [Pulumi Kubernetes Operator (PKO)](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) that provides similar Kubernetes-native infrastructure management capabilities, plus support for YAML-based definitions. Teams can also use Pulumi programs to provision the underlying infrastructure that Crossplane manages, creating layered infrastructure management approaches.
+Pulumi Integration: Pulumi offers the [Pulumi Kubernetes Operator (PKO)](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) that provides similar Kubernetes-native infrastructure management capabilities, plus support for YAML-based definitions. Teams can also use Pulumi programs to provision the underlying infrastructure that Crossplane manages, creating layered infrastructure management approaches.
 
 Key Features:
 
@@ -1337,7 +1337,7 @@ Pulumi + Native Cloud Tools:
 
 Pulumi + Kubernetes:
 
-- [Pulumi Kubernetes Operator (PKO)](/docs/using-pulumi/continuous-delivery/pulumi-kubernetes-operator/) for GitOps workflows
+- [Pulumi Kubernetes Operator (PKO)](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) for GitOps workflows
 - Pulumi + Crossplane for layered infrastructure management
 - Pulumi + security scanners like Checkov or Terrascan for compliance
 
@@ -1347,7 +1347,7 @@ Terraform + Pulumi Coexistence:
 - Reference existing Terraform state from Pulumi programs during gradual migration
 - Manage different infrastructure layers with different tools based on team expertise
 
-Pulumi IaC is designed for heterogeneous environments where multiple tools may be in use. For example, you can manage existing Terraform or CloudFormation resources with Pulumi, either using both tools in tandem or for temporary management while migrating to native Pulumi IaC code. Other Pulumi tools, like Pulumi IDP, also enable you to manage IaC self-service workflows like other tools on this list. See what's possible when [migrating to Pulumi](/docs/iac/adopting-pulumi/migrating-to-pulumi/).
+Pulumi IaC is designed for heterogeneous environments where multiple tools may be in use. For example, you can manage existing Terraform or CloudFormation resources with Pulumi, either using both tools in tandem or for temporary management while migrating to native Pulumi IaC code. Other Pulumi tools, like Pulumi IDP, also enable you to manage IaC self-service workflows like other tools on this list. See what's possible when [migrating to Pulumi](/docs/iac/guides/migration/).
 
 ### Which tool has the best learning resources?
 
@@ -1390,7 +1390,7 @@ Proven Migration Success Stories:
 
 Available Migration Tools:
 
-- **Pulumi**: Offers [`pulumi convert`](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/#conversion) for importing from Terraform, ARM, and CloudFormation with state integration
+- **Pulumi**: Offers [`pulumi convert`](/docs/iac/guides/migration/#conversion) for importing from Terraform, ARM, and CloudFormation with state integration
 - **Terraformer**: Can import existing cloud resources into Terraform/OpenTofu
 - **CDK Migrate**: Helps move from CloudFormation to CDK
 - **Manual migration**: Always possible by recreating resources in the new tool

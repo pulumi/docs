@@ -26,7 +26,7 @@ social:
 Today marks an exciting milestone as we announce the General Availability (GA) release of the Pulumi Kubernetes Operator 2.0! This release builds upon the foundation we [laid during the beta phase](/blog/pulumi-kubernetes-operator-2-0/), delivering a production-ready solution that transforms how teams manage their cloud infrastructure.
 <!--more-->
 
-[Learn more about the Pulumi Kubernetes Operator in our documentation](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator)
+[Learn more about the Pulumi Kubernetes Operator in our documentation](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)
 
 ## What Is the Pulumi Kubernetes Operator?
 
@@ -159,6 +159,6 @@ To help you get the most out of Pulumi Kubernetes Operator 2.0, we've prepared c
 
 We are excited to see how you will use these new features to transform your cloud operations. Share your experiences, questions, and insights with us through our community forums or Slack channel.
 
-[Get started with the Pulumi Kubernetes Operator in our documentation](/docs/iac/using-pulumi/continuous-delivery/pulumi-kubernetes-operator)
+[Get started with the Pulumi Kubernetes Operator in our documentation](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)
 
 Happy deploying!

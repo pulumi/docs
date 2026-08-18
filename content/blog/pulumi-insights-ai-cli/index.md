@@ -70,6 +70,6 @@ This opens a browser to a guided Pulumi AI conversation that walks through all t
 
 With these new CLI commands, Pulumi Insights is available at your fingertips in the `pulumi` CLI.  These are just the first steps to bring search and AI into the CLI, expect to see much more in the coming months.  To learn more about the various Pulumi Insights features discussed here, check out the resources below:
 
-* [Pulumi Insights](/docs/pulumi-cloud/insights/)
+* [Pulumi Insights](/docs/insights/discovery/)
 * [Pulumi AI](/ai)
 * [Pulumi CLI](/docs/iac/cli/commands/)

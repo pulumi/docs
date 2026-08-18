@@ -15,13 +15,13 @@ aliases:
 - /docs/clouds/azure/
 ---
 
-Build, deploy, and manage Azure infrastructure with Pulumi. This page links to every Pulumi capability for Azure: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), Insights account scanning, and policy packs.
+Build, deploy, and manage Azure infrastructure with Pulumi. This page links to every Pulumi capability for Azure: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), cloud account scanning, and policy packs.
 
 To start from scratch, follow the [Azure get-started guide](/docs/iac/get-started/azure/).
 
 ## Infrastructure as Code
 
-[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, or YAML — with deterministic deployments, a state backend, and a rich ecosystem of packages.
+[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
 
 Pulumi provides several packages for Azure. For core infrastructure, Azure Native is the recommended choice; Azure Classic is the older alternative. Additional packages cover identity (azuread), Azure DevOps, and static websites. For a deeper comparison, see [Choosing a Pulumi Azure provider](/docs/iac/guides/clouds/azure/).
 
@@ -67,7 +67,7 @@ ESC integrates directly with Azure for short-lived credentials and secret retrie
 
 [Pulumi Insights](/docs/insights/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For Azure, Insights connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Insights discovery overview](/docs/insights/discovery/accounts/) for background.
+For Azure, Insights connects subscriptions to inventory existing resources, search across subscriptions, and export data. See [Add an Azure account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/insights/discovery/) for background.
 
 ## Policy packs
 

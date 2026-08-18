@@ -17,7 +17,7 @@ aliases:
 
 ## Create a component
 
-[**Components**](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate
+[**Components**](/docs/iac/concepts/components/) are infrastructure abstractions that encapsulate
 complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components.
 
 You will now create your first component that packages up your Kubernetes NGINX deployment so you can stamp out
@@ -93,14 +93,42 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+module "my-nginx" {
+  source     = "./website"
+  isMinikube = var.isMinikube
+}
+
+output "ip" {
+  value = module.my-nginx.ip
+}
+```
+
+{{% /choosable %}}
+
 Using components here also has the benefit that, as the requirements for your NGINX service change, you can
 update the one component definition and have all uses of it benefit.
 
 ### Define a new component
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 To define a new component, create a class called `KubernetesNginxService` that derives from `ComponentResource`. It'll have a mostly empty
 constructor to start with but you will add the Kubernetes resources to it in the next step. You'll also define the inputs for the
 component -- the `isMinikube` flag to determine service type -- and outputs -- a single property with the service `ip`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It starts out
+with only its input declared, and you will add the Kubernetes resources to it in the next step. The module's `variable` blocks
+declare the inputs for the component -- the `isMinikube` flag to determine service type -- and its `output` blocks declare
+the outputs -- a single service `ip`.
+
+{{% /choosable %}}
 
 To get going, create a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
 
@@ -259,15 +287,52 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source = "pulumi/kubernetes"
+    }
+  }
+}
+
+# Whether the service is running on minikube.
+variable "isMinikube" {
+  type = bool
+}
+
+# The Kubernetes resources and the service ip output will go here next...
+```
+
+{{% /choosable %}}
+
 This defines a component but it doesn't do much yet.
 
 ### Refactor your code into the component
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 Next, make three changes:
 
 1. Move all resources from {{< langfile >}} into the component's constructor
-2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/options/parent/)
+2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
 3. Assign the service output to the `ip` property of the component
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Next, make two changes:
+
+1. Move all resources from {{< langfile >}} into the module
+1. Return the service address as the module's `ip` output
+
+Nothing needs reparenting: everything a module declares is automatically a child of the component resource that
+Pulumi creates for the module instance.
+
+{{% /choosable %}}
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or paste the contents of this into {{< compfile >}}:
@@ -705,6 +770,89 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    kubernetes = {
+      source = "pulumi/kubernetes"
+    }
+  }
+}
+
+# Whether the service is running on minikube.
+variable "isMinikube" {
+  type = bool
+}
+
+locals {
+  app_labels = {
+    app = "nginx"
+  }
+}
+
+resource "kubernetes_apps_v1_deployment" "nginx" {
+  spec = {
+    selector = {
+      match_labels = local.app_labels
+    }
+    replicas = 1
+    template = {
+      metadata = {
+        labels = local.app_labels
+      }
+      spec = {
+        containers = [{
+          name  = "nginx"
+          image = "nginx"
+        }]
+      }
+    }
+  }
+
+  # A module prefixes the Pulumi names of the resources it contains, so set each
+  # name explicitly (here and below) to keep the names free of that prefix.
+  pulumi {
+    name = "nginx"
+  }
+}
+
+# Allocate an IP to the Deployment.
+resource "kubernetes_core_v1_service" "nginx" {
+  metadata = {
+    labels = local.app_labels
+  }
+  spec = {
+    type     = var.isMinikube ? "ClusterIP" : "LoadBalancer"
+    selector = local.app_labels
+    ports = [{
+      port        = 80
+      target_port = 80
+      protocol    = "TCP"
+    }]
+  }
+
+  pulumi {
+    name = "nginx"
+  }
+}
+
+# When the service is a LoadBalancer, capture its external address; with minikube,
+# capture the cluster IP for use with port forwarding.
+output "ip" {
+  value = var.isMinikube ? kubernetes_core_v1_service.nginx.spec.cluster_ip : coalesce(
+    kubernetes_core_v1_service.nginx.status.load_balancer.ingress[0].ip,
+    kubernetes_core_v1_service.nginx.status.load_balancer.ingress[0].hostname,
+  )
+}
+```
+
+Naming the service explicitly matters here: Kubernetes service names must be DNS labels, and the module-prefixed
+name would contain a dot.
+
+{{% /choosable %}}
+
 ### Instantiate the component
 
 Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
@@ -850,9 +998,33 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Read the configuration value:
+variable "isMinikube" {
+  type = bool
+}
+
+# Instantiate our new component; the source is the directory the module lives in:
+module "my-nginx" {
+  source     = "./website"
+  isMinikube = var.isMinikube
+}
+
+# And export its autoassigned IP:
+output "ip" {
+  value = module.my-nginx.ip
+}
+```
+
+{{% /choosable %}}
+
 ### Deploy the component
 
 Now deploy the resulting component instantiation. To do so, run `pulumi up` as usual:
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 ```
 $ pulumi up
@@ -880,29 +1052,66 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
   details
 ```
 
-This preview shows you a few things. First, you'll see our `KubernetesNginxService` component with all of its children resources neatly parented underneath it. This helps to see what resources relate to which components. Next, you'll see that your old resources are being destroyed.
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+$ pulumi up
+Previewing update (dev)
+
+     Type                                 Name                  Plan
+     pulumi:pulumi:Stack                  quickstart-dev
+ +   ├─ components:index:Website          my-nginx              create
+ +   │  ├─ kubernetes:apps/v1:Deployment  nginx                 create
+ +   │  └─ kubernetes:core/v1:Service     nginx                 create
+ -   ├─ kubernetes:core/v1:Service        nginx                 delete
+ -   └─ kubernetes:apps/v1:Deployment     deployment            delete
+
+Outputs:
+  ~ ip: "10.110.183.208" => "10.96.0.0"
+
+Resources:
+    + 3 to create
+    - 2 to delete
+    5 changes. 1 unchanged
+
+Do you want to perform this update?  [Use arrows to move, type to filter]
+> yes
+  no
+  details
+```
+
+The `Website` segment of the component's type, `components:index:Website`, is the title-cased name of the
+directory the module lives in; the `components:index:` prefix is fixed.
+
+{{% /choosable %}}
+
+This preview shows you a few things. First, you'll see our website component with all of its child resources neatly parented underneath it. This helps to see what resources relate to which components. Next, you'll see that your old resources are being destroyed.
 
 {{% notes type="info" %}}
 
 If you're wondering why Pulumi didn't update the resources in place, it's because certain changes -- like
 refactoring resources into a component -- fundamentally change a resource's identity. Many changes like updating
 properties or moving resources between files are not disruptive like this. In such cases, you can assign
-[aliases](/docs/iac/concepts/options/aliases/) to prevent deletions from happening.
+[aliases](/docs/iac/concepts/resources/options/aliases/) to prevent deletions from happening.
 
 {{% /notes %}}
 
 Accept the changes by selecting `yes` and the deployment will occur:
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 ```
 Updating (dev)
 
-     Type                                       Name                  Status
-     pulumi:pulumi:Stack                        quickstart-dev
- +   ├─ quickstart:index:KubernetesNginxService  my-nginx            created (2s)
- +   │  ├─ kubernetes:apps/v1:Deployment        nginx                 created (1s)
- +   │  └─ kubernetes:core/v1:Service           nginx                 created (9s)
- -   ├─ kubernetes:core/v1:Service              nginx                 deleted (4s)
- -   └─ kubernetes:apps/v1:Deployment           nginx                 deleted (0.92s)
+     Type                                        Name                  Status
+     pulumi:pulumi:Stack                         quickstart-dev
+ +   ├─ quickstart:index:KubernetesNginxService  my-nginx              created (2s)
+ +   │  ├─ kubernetes:apps/v1:Deployment         nginx                 created (1s)
+ +   │  └─ kubernetes:core/v1:Service            nginx                 created (9s)
+ -   ├─ kubernetes:core/v1:Service               nginx                 deleted (4s)
+ -   └─ kubernetes:apps/v1:Deployment            nginx                 deleted (0.92s)
 
 Outputs:
   ~ ip: "10.110.183.208" => "10.103.199.118"
@@ -914,6 +1123,34 @@ Resources:
 
 Duration: 13s
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+Updating (dev)
+
+     Type                                 Name                  Status
+     pulumi:pulumi:Stack                  quickstart-dev
+ +   ├─ components:index:Website          my-nginx              created (2s)
+ +   │  ├─ kubernetes:apps/v1:Deployment  nginx                 created (1s)
+ +   │  └─ kubernetes:core/v1:Service     nginx                 created (9s)
+ -   ├─ kubernetes:core/v1:Service        nginx                 deleted (4s)
+ -   └─ kubernetes:apps/v1:Deployment     deployment            deleted (0.92s)
+
+Outputs:
+  ~ ip: "10.110.183.208" => "10.103.199.118"
+
+Resources:
+    + 3 created
+    - 2 deleted
+    5 changes. 1 unchanged
+
+Duration: 13s
+```
+
+{{% /choosable %}}
 
 Now test out your new NGINX service -- it works like before, just with a tidier codebase now!
 
