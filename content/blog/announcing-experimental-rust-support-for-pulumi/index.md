@@ -57,7 +57,7 @@ Provider SDKs are generated per project from the provider's schema with `pulumi 
 ## What works today
 
 1. **The full language conformance suite.** All of Pulumi's language conformance tests pass.
-1. **SDK generation at real-world scale.** The generated AWS crate is 22,142 types and the azure-native crate is 27,777, tens of megabytes of Rust apiece, and both compile. The scale is the point: some generator defects only exist in aggregate, such as two schema members that collide on a single Rust type name, and no hand-picked subset can surface them. So a nightly job regenerates the complete SDK for all seven providers the examples pin and compiles every one of them whole.
+1. **SDK generation at real-world scale.** The generated AWS and azure-native crates are tens of thousands of types apiece, and a nightly job regenerates and recompiles every provider SDK the examples pin.
 1. **Twenty-two examples that compile.** The repository ports the classic [pulumi/examples](https://github.com/pulumi/examples) scenarios to Rust across AWS, Azure, Google Cloud, Kubernetes, DigitalOcean, and Docker.
 
 Just as important is what a green suite does not prove. The repository keeps an honest [known limitations](https://github.com/pulumi-labs/pulumi-rust/blob/main/docs/known-limitations.md) document recording behaviors that differed from the Go SDK, defects that real provider schemas surfaced in the generator, and what is deliberately left out. Read it before you depend on anything.
