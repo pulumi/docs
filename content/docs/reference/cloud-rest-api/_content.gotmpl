@@ -242,13 +242,18 @@
     {{ with $lastmodData }}
         {{ if and (gt (len .tags) 0) (not (isset .tags $tag)) }}
             {{/* Tripwire: the ledger has tag entries but none match this
-                 adapter-derived tag — a sign that deriveTagOperations in
+                 adapter-derived tag. Two distinct causes trip this same
+                 warning: either the tag is new since the last nightly
+                 ledger update (data/openapi_lastmod.json only catches up
+                 when that job runs, while data/openapi-spec.json is
+                 gitignored and re-downloaded by `make ensure` on every
+                 build), or deriveTagOperations in
                  scripts/update-openapi-lastmod.js and this template's
                  tag-derivation logic (last tag wins; "Foo: Bar" collapses
-                 to "Foo") have drifted apart. Warn once per tag so drift
-                 shows up in build output instead of silently dropping
+                 to "Foo") have drifted apart. Warn once per tag so either
+                 case shows up in build output instead of silently dropping
                  <lastmod>/dateModified for the affected pages. */}}
-            {{ warnidf (printf "openapi-lastmod-tag-miss-%s" $tag) "openapi: tag %q has no entry in data/openapi_lastmod.json (ledger has %d tags) — this page will render without <lastmod>/dateModified. Check whether deriveTagOperations in scripts/update-openapi-lastmod.js has drifted from this template's tag-derivation rules." $tag (len .tags) }}
+            {{ warnidf (printf "openapi-lastmod-tag-miss-%s" $tag) "openapi: tag %q has no entry in data/openapi_lastmod.json (ledger has %d tags) — this page will render without <lastmod>/dateModified. Either the tag is new since the last nightly ledger update, or deriveTagOperations in scripts/update-openapi-lastmod.js has drifted from this template's tag-derivation rules." $tag (len .tags) }}
         {{ end }}
         {{ with index .tags $tag }}
             {{ with .lastmod }}

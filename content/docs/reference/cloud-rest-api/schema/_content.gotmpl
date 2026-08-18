@@ -48,12 +48,18 @@
     {{ with $lastmodData }}
         {{ if and (gt (len .schemas) 0) (not (isset .schemas $name)) }}
             {{/* Tripwire: the ledger has schema entries but none match this
-                 adapter-derived schema name — a sign that
+                 adapter-derived schema name. Two distinct causes trip this
+                 same warning: either the schema is new since the last
+                 nightly ledger update (data/openapi_lastmod.json only
+                 catches up when that job runs, while
+                 data/openapi-spec.json is gitignored and re-downloaded by
+                 `make ensure` on every build), or
                  scripts/update-openapi-lastmod.js and this template have
                  drifted apart on which schema keys exist. Warn once per
-                 name so drift shows up in build output instead of silently
-                 dropping <lastmod>/dateModified for the affected pages. */}}
-            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without <lastmod>/dateModified. Check whether scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
+                 name so either case shows up in build output instead of
+                 silently dropping <lastmod>/dateModified for the affected
+                 pages. */}}
+            {{ warnidf (printf "openapi-lastmod-schema-miss-%s" $name) "openapi: schema %q has no entry in data/openapi_lastmod.json (ledger has %d schemas) — this page will render without <lastmod>/dateModified. Either the schema is new since the last nightly ledger update, or scripts/update-openapi-lastmod.js's schema derivation has drifted from this template's." $name (len .schemas) }}
         {{ end }}
         {{ with index .schemas $name }}
             {{ with .lastmod }}
