@@ -188,9 +188,17 @@
     "publisher" (dict "@id" "https://www.pulumi.com/#organization")
   ) }}
 
-  {{/* Add breadcrumb reference if it exists */}}
+  {{/* Add breadcrumb reference if it exists. Uses the bare "#breadcrumb"
+       fragment, matching how breadcrumb-entity.html actually defines the
+       BreadcrumbList node's own @id and how WebPage.breadcrumb references it
+       elsewhere in graph-builder.html. The previous absolute-permalink form
+       here (printf "%s#breadcrumb" .Permalink) built a URL matching no @id in
+       the page's @graph, so FAQPage.breadcrumb dangled on every page that
+       carries both FAQ and breadcrumb schema — every non-home page reaching
+       this partial, since breadcrumb-entity.html only runs on non-home
+       pages. */}}
   {{ $schema = merge $schema (dict
-    "breadcrumb" (dict "@id" (printf "%s#breadcrumb" .Permalink))
+    "breadcrumb" (dict "@id" "#breadcrumb")
   ) }}
 {{ else }}
   {{/* No questions found, don't generate FAQPage schema */}}

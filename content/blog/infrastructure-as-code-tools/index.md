@@ -1,5 +1,6 @@
 ---
 title: "Best Infrastructure as Code (IaC) Tools for 2026"
+title_tag: "Best Infrastructure as Code Tools in 2026"
 date: 2026-07-05
 draft: false
 meta_desc: "Compare the best infrastructure as code tools of 2026: Terraform, OpenTofu, AWS CDK, CloudFormation, Bicep, Crossplane, and Pulumi, side by side."
