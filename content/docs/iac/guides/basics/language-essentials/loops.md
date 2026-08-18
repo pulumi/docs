@@ -331,8 +331,8 @@ output, or `pulumi.all([...])` to wait on several at once, and iterate inside
 the callback instead, where the values are resolved:
 
 ```typescript
-pulumi.all(buckets.map(b => b.bucket)).apply(names =>
-    names.forEach(name => console.log(name)));
+pulumi.all(subnets.map((subnet) => subnet.id)).apply((ids) =>
+  ids.forEach((id) => console.log(id)));
 ```
 
 See [working with outputs](/docs/iac/concepts/inputs-outputs/apply/) and
