@@ -276,6 +276,12 @@ def load_reader_signals(
             "gsc":      {"source", "period", "pages": {url: {impressions, clicks, position}}},
             "feedback": {"source", "period", "pages": {url: {yes, no}}}}}
 
+    A bare GSC section with no {"signals": ...} envelope is also accepted —
+    that is the shape of the export the data team ships today
+    (pulumi/data#865 phase 2, the Airflow stack's docsTrafficGscLatestS3Uri):
+
+        {"source", "period", "generated", "pages": {url: {clicks, impressions, position}}}
+
     Returns (gsc, feedback, meta). A missing/unreadable/malformed file — or a
     missing section — degrades that signal to unavailable, mirroring
     load_traffic: selection then scores exactly as if the signal never existed.
@@ -298,7 +304,13 @@ def load_reader_signals(
         return gsc, feedback, meta
     sections = data.get("signals")
     if not isinstance(sections, dict):
-        return gsc, feedback, meta
+        # No envelope: accept the bare GSC-only export (pulumi/data#865
+        # phase 2) so the signal activates on what ships today. The full
+        # envelope (adding feedback) supersedes it whenever it lands.
+        if isinstance(data.get("pages"), dict):
+            sections = {"gsc": data}
+        else:
+            return gsc, feedback, meta
 
     def _int(v) -> int:
         try:

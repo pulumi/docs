@@ -263,10 +263,13 @@ jobs:
       # The reader-signals export (Search Console impressions/CTR, docs
       # feedback-widget vote counts, real-404 hits per URL) follows the exact
       # same pattern as the traffic snapshot above: produced weekly by the data
-      # team, latest-object URI published on their Airflow stack. Until that
-      # export ships, this resolve logs the skip and selection scores exactly
-      # as before — the consumer side here is inert-but-ready by design
-      # (pulumi/docs#20078 item 4.5).
+      # team, latest-object URI published on their Airflow stack. The combined
+      # envelope (docsReaderSignalsLatestS3Uri) is not exported yet — until it
+      # is, fall back to the GSC-only export the data team already ships weekly
+      # (docsTrafficGscLatestS3Uri, pulumi/data#865 phase 2);
+      # load_reader_signals() accepts its bare shape directly. With neither
+      # output published, this resolve logs the skip and selection scores
+      # exactly as before (pulumi/docs#20078 item 4.5).
       - name: Resolve reader-signals URI
         id: signals-uri
         continue-on-error: true
@@ -275,6 +278,13 @@ jobs:
         run: |
           URI=$(pulumi stack output docsReaderSignalsLatestS3Uri \
             --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+          if [ -z "$URI" ]; then
+            URI=$(pulumi stack output docsTrafficGscLatestS3Uri \
+              --stack pulumi/dwh-workflows-orchestrate-airflow/production 2>/dev/null || true)
+            if [ -n "$URI" ]; then
+              echo "reader-signals envelope not published; falling back to the GSC-only export"
+            fi
+          fi
           if [ -n "$URI" ]; then
             echo "resolved reader-signals export URI: $URI"
             echo "uri=$URI" >> "$GITHUB_OUTPUT"
