@@ -96,6 +96,41 @@ JUDGMENT_NOTICE = (
     "arms auto-merge only after its own gates pass, or a human merges manually."
 )
 
+# The glow-up lane's notice: these PRs are the product of a whole-page rehab
+# and exist to be human-reviewed. Auto-merge is never armed and the review
+# sweep never stamps them; it assigns the reviewers instead.
+HUMAN_REVIEW_NOTICE = (
+    "> [!IMPORTANT]\n"
+    "> **Glow-up PR — human review required.** Auto-merge is never armed on "
+    "glow-up PRs and the automated PR-review sweep never approves them; it "
+    "assigns the reviewers. Adjudicate the Backlog executed / Backlog declined "
+    "tables below and merge manually."
+)
+
+# Glow-up body sections — keep in lockstep with record-review.py's
+# MODE_PR_SECTIONS["glowup"] (test_compose_pr_body.py cross-imports both).
+GLOWUP_SECTIONS = [
+    "Why this page",
+    "Backlog executed",
+    "Backlog declined",
+    "Secondary sweep",
+    "Screenshot check",
+    "Verification",
+]
+
+# The interactive /glow-up command's improvement taxonomy
+# (.claude/commands/glow-up.md §5) — the secondary sweep the model runs after
+# working the banked backlog.
+GLOWUP_TAXONOMY = [
+    "Style improvements",
+    "Structural fixes",
+    "Code formatting",
+    "Terminology corrections",
+    "Link improvements",
+    "Image and diagram improvements",
+    "Content enhancements",
+]
+
 # Related but distinct: the `blocker:` rule list in
 # .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml drives
 # which Vale findings the PR review renders as 🚨 blockers. This set is keyed
@@ -274,7 +309,9 @@ def render_deferrals(findings: list[dict], path: str) -> str:
         )
     else:
         body = "- _Nothing judgment-level was pre-found. Add any finding you chose not to apply._\n"
-    footer = f"\nFor the judgment-level items above, run `/glow-up {path}`.\n"
+    footer = (f"\nThe items above are banked for the automated glow-up lane, "
+              f"which executes a page's accumulated deferrals under human "
+              f"review — or run `/glow-up {path}` to work them now.\n")
     return head + body + footer
 
 
@@ -430,6 +467,66 @@ def compose(queue: dict, verified, vale, readthrough, frontmatter, gates=None) -
     ])
 
 
+def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
+                   readthrough, frontmatter, gates=None) -> str:
+    """The glow-up PR body draft: banked backlog pre-stubbed, taxonomy sweep
+    stubbed, same assemble-then-judge contract as the fix body."""
+    inv = artifact_inventory(verified, vale, readthrough, frontmatter)
+    _, errors = collect(verified, vale, readthrough, frontmatter)
+
+    try:
+        provenance = _rp.render(queue).rstrip()
+    except Exception:  # noqa: BLE001 — a provenance hiccup must not block the draft
+        provenance = "## Why this page\n\n_Selected by the glow-up backlog score._"
+
+    banked = (backlog or {}).get("banked") or []
+    notes = (backlog or {}).get("notes") or []
+    executed = ["## Backlog executed\n"]
+    executed.append(
+        "<!-- One row per banked finding you executed; move the rest to "
+        "Backlog declined with a one-line reason. Every banked item must land "
+        "in one of the two tables. -->\n")
+    if banked:
+        executed.append("| Banked finding | Source PR | What changed |")
+        executed.append("| --- | --- | --- |")
+        for b in banked:
+            text = str(b.get("text", "")).replace("|", "\\|")
+            executed.append(f"| {text} | #{b.get('source_pr')} | <TODO> |")
+    else:
+        executed.append("_No banked findings reachable"
+                        + (f" ({'; '.join(notes)})" if notes else "")
+                        + " — taxonomy-only glow-up._")
+
+    declined = [
+        "## Backlog declined\n",
+        "<TODO: banked findings you decided against, one line of reasoning each — "
+        'or "None.">',
+    ]
+
+    sweep = ["## Secondary sweep\n"]
+    sweep.append("<!-- The /glow-up taxonomy, applied after the backlog. Note what "
+                 'you changed per category, or "No changes." -->\n')
+    for cat in GLOWUP_TAXONOMY:
+        sweep.append(f"- **{cat}**: <TODO>")
+
+    return "\n".join([
+        HUMAN_REVIEW_NOTICE,
+        "",
+        provenance,
+        "",
+        "\n".join(executed),
+        "",
+        "\n".join(declined),
+        "",
+        "\n".join(sweep),
+        "",
+        render_screenshot(gates).rstrip(),
+        "",
+        render_verification(inv, errors).rstrip(),
+        "",
+    ])
+
+
 def replace_notice(body_file: Path, kind: str) -> int:
     """Swap the composed AUTOMERGE_NOTICE for the class-appropriate notice,
     in place. Deterministic and idempotent: already-swapped bodies no-op, and
@@ -469,6 +566,10 @@ def main() -> int:
                         "this class's notice, then exit (publish-job mode)")
     p.add_argument("--body-file",
                    help="the PR body draft to edit in place (with --replace-notice)")
+    p.add_argument("--mode", choices=["fix", "glowup"], default="fix",
+                   help="body template: the fix lane's (default) or the glow-up lane's")
+    p.add_argument("--backlog", default=".glowup-backlog.json",
+                   help="glow-up backlog JSON (build-glowup-backlog.py output; glowup mode)")
     args = p.parse_args()
 
     if args.replace_notice:
@@ -498,14 +599,25 @@ def main() -> int:
     except OSError:
         gates = None
 
-    body = compose(
-        queue,
-        read_json(root / args.verified_claims),
-        read_json(root / args.vale_findings),
-        read_json(root / args.readthrough),
-        read_json(root / args.frontmatter),
-        gates,
-    )
+    if args.mode == "glowup":
+        body = compose_glowup(
+            queue,
+            read_json(root / args.backlog),
+            read_json(root / args.verified_claims),
+            read_json(root / args.vale_findings),
+            read_json(root / args.readthrough),
+            read_json(root / args.frontmatter),
+            gates,
+        )
+    else:
+        body = compose(
+            queue,
+            read_json(root / args.verified_claims),
+            read_json(root / args.vale_findings),
+            read_json(root / args.readthrough),
+            read_json(root / args.frontmatter),
+            gates,
+        )
     if args.out:
         Path(args.out).write_text(body)
         print(f"compose-pr-body: wrote {args.out}", file=sys.stderr)

@@ -647,7 +647,10 @@ def main() -> int:
     if len(open_branches) >= MAX_OPEN_PRS:
         queue["halted"] = "max_open_prs"
         return finish(queue, args, LANE)
-    open_slugs = {b[len(BRANCH_PREFIX):].removeprefix("retire-") for b in open_branches}
+    open_slugs = {
+        b[len(BRANCH_PREFIX):].removeprefix("retire-").removeprefix("glowup-")
+        for b in open_branches
+    }
 
     newest_non_bot, created = git_history_signals(repo, CONTENT_DIR)
 

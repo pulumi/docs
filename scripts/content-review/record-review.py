@@ -66,16 +66,29 @@ _spec.loader.exec_module(_select)
 slugify = _select.slugify
 BRANCH_PREFIX = _select.BRANCH_PREFIX
 
-# PR-body sections the review skill mandates; the post-create check warns (never
-# blocks) when a fix PR's body is missing one.
-REQUIRED_PR_SECTIONS = [
-    "Why this page",
-    "Fixes applied",
-    "Findings not applied",
-    "Screenshot check",
-    "Rendered content",
-    "Verification",
-]
+# PR-body sections the review skill mandates per mode; the post-create check
+# warns (never blocks) when a PR's body is missing one. Keep the glowup list in
+# lockstep with compose-pr-body.py's GLOWUP_SECTIONS (test_compose_pr_body.py
+# cross-imports both to enforce it).
+MODE_PR_SECTIONS = {
+    "fix": [
+        "Why this page",
+        "Fixes applied",
+        "Findings not applied",
+        "Screenshot check",
+        "Rendered content",
+        "Verification",
+    ],
+    "glowup": [
+        "Why this page",
+        "Backlog executed",
+        "Backlog declined",
+        "Secondary sweep",
+        "Screenshot check",
+        "Verification",
+    ],
+}
+REQUIRED_PR_SECTIONS = MODE_PR_SECTIONS["fix"]  # back-compat alias
 
 
 def log(msg: str) -> None:
@@ -118,6 +131,7 @@ def load_queue_article(queue_path: Path) -> dict:
         "path": path,
         "slug": a.get("slug") or slugify(path),
         "lane": a.get("lane") or "priority",
+        "mode": a.get("mode") or "fix",
         # Prior incomplete-retry count, carried from the ledger by the selector.
         # build_record increments it on another incomplete, resets it on success.
         "attempts": int(a.get("attempts") or 0),
@@ -144,7 +158,9 @@ def load_verdict(verdict_path: Path | None) -> dict | None:
         return None
 
 
-def branch_for(slug: str, retirement: bool) -> str:
+def branch_for(slug: str, retirement: bool, glowup: bool = False) -> str:
+    if glowup:
+        return f"{BRANCH_PREFIX}glowup-{slug}"
     return f"{BRANCH_PREFIX}{'retire-' if retirement else ''}{slug}"
 
 
@@ -193,7 +209,7 @@ def scan_misnamed_sibling(slug: str) -> None:
             head = pr.get("headRefName", "")
             if not head.startswith(BRANCH_PREFIX):
                 continue
-            head_slug = head[len(BRANCH_PREFIX):].removeprefix("retire-")
+            head_slug = head[len(BRANCH_PREFIX):].removeprefix("retire-").removeprefix("glowup-")
             if head_slug == slug:
                 warn(
                     f"PR #{pr.get('number')} ({pr.get('url')}) reviews this page "
@@ -203,10 +219,11 @@ def scan_misnamed_sibling(slug: str) -> None:
         pass
 
 
-def check_pr_body(body: str | None) -> list[str]:
-    """Return the required section headings missing from a fix PR's body."""
+def check_pr_body(body: str | None, mode: str = "fix") -> list[str]:
+    """Return the required section headings missing from a PR's body."""
     text = (body or "").lower()
-    return [s for s in REQUIRED_PR_SECTIONS if s.lower() not in text]
+    sections = MODE_PR_SECTIONS.get(mode, REQUIRED_PR_SECTIONS)
+    return [s for s in sections if s.lower() not in text]
 
 
 def unresolved_draft_markers(body: str | None) -> int:
@@ -229,7 +246,9 @@ def canonical_branch_pushed(slug: str) -> bool:
     returns False, biasing an unknowable case toward clean rather than a
     perpetual incomplete retry.
     """
-    refs = [f"refs/heads/{branch_for(slug, r)}" for r in (False, True)]
+    refs = [f"refs/heads/{branch_for(slug, False)}",
+            f"refs/heads/{branch_for(slug, True)}",
+            f"refs/heads/{branch_for(slug, False, glowup=True)}"]
     try:
         out = subprocess.run(
             ["git", "ls-remote", "--heads", "origin", *refs],
@@ -265,6 +284,7 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "path": article["path"],
         "slug": slug,
         "lane": article["lane"],
+        "mode": article.get("mode") or "fix",
         "status": "incomplete",
         "pr": None,
         "pr_number": 0,
@@ -310,16 +330,20 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         rec["status"] = "skipped"
         rec["note"] = verdict.get("reason") or "skipped by reviewer"
         rec["attempts"] = 0
-    elif v == "fixed":
+    elif v in ("fixed", "glowup"):
         if pr:
-            rec["status"] = "reviewed"
+            # "glowup" is a completed status like "reviewed": it advances the
+            # staleness clock (any non-incomplete status does) and drives the
+            # glow-up selector's cooldown.
+            rec["status"] = "reviewed" if v == "fixed" else "glowup"
             rec["pr"] = pr.get("url")
             rec["pr_number"] = int(pr.get("number") or 0)
             rec["head_sha"] = pr.get("headRefOid") or ""
             rec["attempts"] = 0
         else:
             rec["status"] = "incomplete"
-            rec["note"] = f"verdict 'fixed' but no PR on {branch_for(slug, rec['retirement'])}"
+            branch = branch_for(slug, rec["retirement"], glowup=(v == "glowup"))
+            rec["note"] = f"verdict {v!r} but no PR on {branch}"
     else:
         rec["note"] = f"unrecognized verdict {v!r}"
 
@@ -353,9 +377,10 @@ def run(args) -> int:
     slug = article["slug"]
     verdict = load_verdict(Path(args.verdict) if args.verdict else None)
     retirement = bool(verdict.get("retirement")) if verdict else False
-    branch = branch_for(slug, retirement)
+    glowup = bool(verdict and verdict.get("verdict") == "glowup")
+    branch = branch_for(slug, retirement, glowup=glowup)
 
-    want_pr = bool(verdict) and verdict.get("verdict") == "fixed"
+    want_pr = bool(verdict) and verdict.get("verdict") in ("fixed", "glowup")
     pr = fetch_pr(branch, args.pr_json) if want_pr else None
     if want_pr and not pr and args.pr_json is None:
         scan_misnamed_sibling(slug)
@@ -374,9 +399,9 @@ def run(args) -> int:
                           claude_succeeded=claude_succeeded,
                           branch_exists=branch_exists)
 
-    # PR-body section check (non-blocking) for fix PRs.
-    if record["status"] == "reviewed" and pr is not None:
-        missing = check_pr_body(pr.get("body"))
+    # PR-body section check (non-blocking) for fix and glow-up PRs.
+    if record["status"] in ("reviewed", "glowup") and pr is not None:
+        missing = check_pr_body(pr.get("body"), record.get("mode") or "fix")
         if missing:
             warn(f"PR #{record['pr_number']} body missing sections: {', '.join(missing)}")
             if args.pr_json is None:
@@ -484,10 +509,34 @@ def self_test() -> int:
                            claude_succeeded=False, branch_exists=False)
         check("no-verdict + failed run -> incomplete", rec["status"] == "incomplete")
         check("all canonical fields present", set(rec) == {
-            "path", "slug", "lane", "status", "pr", "pr_number", "head_sha",
+            "path", "slug", "lane", "mode", "status", "pr", "pr_number", "head_sha",
             "fixes", "skipped_findings", "retirement", "note", "attempts",
             "clarity_flag", "tier", "score", "monthly_visits",
             "traffic_available", "signals", "signals_available", "reviewed_at"})
+        check("mode defaults to fix", rec["mode"] == "fix")
+
+        # Glow-up outcomes: a completed glowup advances the clock; PR-less is
+        # incomplete; the branch carries the glowup- prefix.
+        check("glowup branch form",
+              branch_for("docs-x", False, glowup=True) == "content-review/glowup-docs-x")
+        g_article = dict(article, mode="glowup", lane="glowup")
+        g_verdict = {"verdict": "glowup", "reason": "", "fixes": 4,
+                     "skipped_findings": 1, "retirement": False}
+        g_pr = {"number": 77, "url": "https://example.test/77", "headRefOid": "abc"}
+        grec = build_record(g_article, g_verdict, g_pr, g_article["slug"])
+        check("glowup + PR -> status glowup (completed)",
+              grec["status"] == "glowup" and grec["attempts"] == 0
+              and grec["mode"] == "glowup" and grec["pr_number"] == 77)
+        grec2 = build_record(g_article, g_verdict, None, g_article["slug"])
+        check("glowup without PR -> incomplete",
+              grec2["status"] == "incomplete" and "glowup-" in (grec2["note"] or ""))
+        check("glowup body check uses the glowup sections",
+              check_pr_body("## Why this page\n## Backlog executed\n"
+                            "## Backlog declined\n## Secondary sweep\n"
+                            "## Screenshot check\n## Verification\n",
+                            "glowup") == [])
+        check("glowup body check flags missing backlog sections",
+              "Backlog executed" in check_pr_body("## Why this page\n", "glowup"))
         check("no-verdict clarity_flag defaults False", rec["clarity_flag"] is False)
         check("selection signal persisted on the record",
               rec["tier"] == 2 and rec["score"] == 137.5

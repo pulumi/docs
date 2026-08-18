@@ -383,6 +383,66 @@ jobs:
               || echo "::warning::worker dispatch failed for $P"
           done
 
+      # ---- Glow-up lane (one whole-page rehab per working day) ----
+      # Selection is deterministic like the fix lane's, but over the LEDGER:
+      # the page with the largest accumulated backlog of banked judgment
+      # findings (skipped_findings, clarity_flag, low-CTR flag) wins. The
+      # worker runs in mode=glowup and its PR never arms auto-merge — the
+      # PR-review sweep assigns Cam/Josh as reviewers. Backlog cap: at 5 open
+      # glow-up PRs the selector halts (max_open_glowup_prs) and the day's
+      # slot is skipped.
+      #
+      # GLOWUP_COUNT repo variable: unset -> 1/working-day (the default),
+      # '0' -> off, 'N' -> N/day. Same format('{0}', ...) null-coercion trick
+      # as the job gate above — a bare `vars.X != '0'` makes unset mean OFF.
+      # Living inside this job, the lane inherits the weekday cron, the
+      # holiday gate, and the CONTENT_REVIEW_COUNT=0 kill switch (turning the
+      # fix lane off darkens glow-ups too — intended).
+      - name: Select and dispatch glow-up
+        if: >-
+          steps.select.outcome == 'success' &&
+          github.event.inputs.dry_run != 'true' &&
+          format('{0}', vars.GLOWUP_COUNT) != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ARGS=(--count "${{ vars.GLOWUP_COUNT || '1' }}" --out .glowup-queue.json)
+          if [ -d .ledger-cache ]; then
+            ARGS+=(--ledger-dir .ledger-cache)
+          fi
+          if [ -f .traffic-snapshot ]; then
+            ARGS+=(--traffic-file .traffic-snapshot)
+          fi
+          python3 scripts/content-review/select-glowup.py "${ARGS[@]}"
+          echo "--- glow-up queue ---"
+          cat .glowup-queue.json
+          HALTED=$(jq -r '.halted // empty' .glowup-queue.json)
+          if [ -n "$HALTED" ]; then
+            echo "::warning::glow-up selection halted: $HALTED (no glow-up dispatched)"
+            exit 0
+          fi
+          # Same single-article queue_json shape as the fix-lane dispatch
+          # above — keep the two jq fragments in sync, ledger_bucket included
+          # (see that step's comment for why it must ride the queue).
+          TRAFFIC=$(jq -c '.traffic' .glowup-queue.json)
+          GEN=$(jq -r '.generated' .glowup-queue.json)
+          LB="${{ steps.ledger-bucket.outputs.bucket }}"
+          jq -c '.articles[]' .glowup-queue.json | while read -r a; do
+            P=$(echo "$a" | jq -r '.path')
+            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
+              --arg gen "$GEN" --arg lb "$LB" \
+              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: null,
+                ledger_bucket: (if $lb == "" then null else $lb end), articles: [$art]}')
+            echo "dispatching glow-up worker for $P"
+            gh workflow run content-review-article.yml \
+              --repo "${{ github.repository }}" \
+              -f path="$P" \
+              -f lane="glowup" \
+              -f mode="glowup" \
+              -f queue_json="$Q" \
+              || echo "::warning::glow-up worker dispatch failed for $P"
+          done
+
       # Breadcrumb for the ledger-write health signal: what was dispatched
       # today. Next run's signal-health compares these slugs against the
       # synced ledger cache — a dispatched page with no fresh ledger record

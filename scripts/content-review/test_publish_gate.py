@@ -211,6 +211,44 @@ def main() -> int:
         check(code == 0 and out.get("class") == "judgment",
               f"expected class=judgment for retirement, got exit {code}, {out}")
 
+        print("glowup: publishes on its own branch with class glow-up")
+        code, out, _ = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                                patch=small_patch)
+        check(code == 0 and out.get("publish") == "true",
+              f"expected publish=true, got exit {code}, {out}")
+        check(out.get("branch") == f"content-review/glowup-{SLUG}",
+              f"expected glowup branch, got {out}")
+        check(out.get("glowup") == "true" and out.get("class") == "glow-up",
+              f"expected glowup=true class=glow-up, got {out}")
+
+        print("glowup: empty patch is a violation")
+        code, _, err = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"), patch="")
+        check(code == 1 and "empty" in err, f"expected empty-patch violation, got {code}")
+
+        print("glowup: retirement combination is a violation")
+        code, _, err = run_gate(
+            tmp,
+            queue={"articles": [{"path": ARTICLE, "slug": SLUG, "no_retire": False}]},
+            verdict=fixed_verdict(verdict="glowup", retirement=True),
+            patch=small_patch)
+        check(code == 1 and "cannot also propose retirement" in err,
+              f"expected glowup+retirement violation, got {code}")
+
+        print("glowup scope: bundle asset allowed, sibling article and shared source not")
+        bundle_asset = ARTICLE.rsplit("/", 1)[0] + "/diagram.png"
+        code, _, _ = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                              patch=small_patch, paths=[ARTICLE, bundle_asset])
+        check(code == 0, f"bundle asset should pass, got exit {code}")
+        sibling = ARTICLE.rsplit("/", 1)[0] + "/other.md"
+        code, _, err = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                                patch=small_patch, paths=[ARTICLE, sibling])
+        check(code == 1 and "glow-up-PR scope" in err,
+              f"sibling article should fail, got exit {code}")
+        code, _, err = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                                patch=small_patch,
+                                paths=[ARTICLE, "layouts/shortcodes/notes.html"])
+        check(code == 1, f"shared render source should fail for glowup, got exit {code}")
+
         print("scope: fix patch touching a sibling doc is a violation")
         code, _, _ = run_gate(tmp, verdict=fixed_verdict(),
                               patch="diff --git a/x b/x\n",
