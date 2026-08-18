@@ -36,7 +36,7 @@ Pulumi implements a single SCIM 2.0 endpoint. Every identity provider uses the s
 | Group-to-team synchronization | Yes (create, read, update, delete, and membership changes) |
 | `PATCH` | Yes, for both users and groups |
 | Filtering | `userName eq` for users and `displayName eq` for groups, and nothing else. Any other attribute or operator, such as `sw` or `co`, fails with a `400 invalidFilter` response |
-| Pagination | Users only, at a maximum of 100 per page. A request for a larger `count` fails with a `400` response. A group search is unpaginated and returns every match in one response |
+| Pagination | Users only, at most 100 per page. A request for a larger `count` fails with a `400` response. A group search is unpaginated and returns every match in one response |
 
 ## Supported attributes
 
