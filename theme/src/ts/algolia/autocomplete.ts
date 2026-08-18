@@ -60,8 +60,9 @@ function scrollItemClearOfOverlays(item: HTMLElement, container: HTMLElement, ov
     // Start with the container's own (unobstructed) top and bottom, then narrow the visible band
     // for each overlay that actually overlaps the container vertically. Overlays are looked up
     // within the container's own panel (falling back to the whole document if no panel ancestor
-    // exists), so a header or footer belonging to a different, currently inactive source can't be
-    // matched in the first place.
+    // exists), so overlays belonging to another autocomplete instance are never considered; the
+    // vertical-overlap check below is what skips a header or footer from a different, currently
+    // inactive source within this panel.
     let visibleTop = containerRect.top;
     let visibleBottom = containerRect.bottom;
 
