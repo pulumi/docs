@@ -10,8 +10,8 @@ inputs.
 
 Selection algorithm (weighted fair queuing by staleness):
 
-1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths
-   and `draft: true` pages.
+1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths,
+   `draft: true` pages, and `redirect_to:` stubs (tombstones, not content).
 2. Hard filters: pages with an open `content-review/<slug>` bot PR; pages
    whose `incomplete` review has already burned ATTEMPT_CAP retries (they
    back off and are surfaced for a human instead of looping forever).
@@ -24,7 +24,7 @@ Selection algorithm (weighted fair queuing by staleness):
 
        score = importance * staleness + stale_claim_boost
 
-   importance = tier_w * (0.5 + 0.5*traffic_n) * gsc_m * feedback_m
+   importance = tier_w * (0.25 + 0.75*traffic_n) * gsc_m * feedback_m
               = tier_w * gsc_m * feedback_m     tier-only when no traffic
    tier_w     = {1: 1.0, 2: 0.6, 3: 0.3}
    traffic_n  = log1p(visits) / log1p(max_visits); pages missing from the
@@ -448,7 +448,13 @@ def importance(
     if have_traffic and max_visits > 0:
         v = visits if visits is not None else median_visits
         traffic_n = math.log1p(v) / math.log1p(max_visits)
-        return tier_w * (0.5 + 0.5 * traffic_n) * gsc_m * feedback_m
+        # Floor 0.25, not 0.5: with the old floor the log-normalized term
+        # compressed a 7,600x traffic gap into a <1% score difference, so
+        # staleness alone decided the queue across wildly different reader
+        # impact. The floor still guarantees a zero-traffic page a quarter of
+        # full weight (staleness must be able to win eventually), but traffic
+        # now separates same-tier peers by up to 4x instead of 2x.
+        return tier_w * (0.25 + 0.75 * traffic_n) * gsc_m * feedback_m
     return tier_w * gsc_m * feedback_m
 
 
@@ -655,6 +661,8 @@ def main() -> int:
             continue
         if is_draft(repo / path):
             continue
+        if is_redirect_stub(repo / path):
+            continue
         entry = ledger.get(path)
         if entry and entry.get("status") == INCOMPLETE_STATUS \
                 and int(entry.get("attempts", 0)) >= ATTEMPT_CAP:
@@ -713,6 +721,29 @@ def is_draft(file_path: Path) -> bool:
     except yaml.YAMLError:
         return False
     return bool(isinstance(fm, dict) and fm.get("draft"))
+
+
+def is_redirect_stub(file_path: Path) -> bool:
+    """A page whose frontmatter is a `redirect_to:` — a tombstone, not content.
+
+    There is nothing on such a page to review, but with the traffic term
+    floored these stubs scored like real pages and burned queue slots
+    (organizing-stacks-projects.md: 1 visit/month, reviewed twice). The test
+    is the `redirect_to` key specifically — NOT "small file with aliases",
+    which misfires on legitimately tiny pages like reference/glossary.md.
+    """
+    try:
+        head = file_path.read_text(errors="replace")[:4096]
+    except OSError:
+        return False
+    m = FRONTMATTER_RE.match(head)
+    if not m:
+        return False
+    try:
+        fm = yaml.safe_load(m.group(1))
+    except yaml.YAMLError:
+        return False
+    return bool(isinstance(fm, dict) and fm.get("redirect_to"))
 
 
 if __name__ == "__main__":

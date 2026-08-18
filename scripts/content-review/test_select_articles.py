@@ -89,6 +89,7 @@ def check(cond: bool, msg: str) -> None:
 
 PAGE = "---\ntitle: T\n---\n\nBody.\n"
 DRAFT = "---\ntitle: T\ndraft: true\n---\n\nBody.\n"
+STUB = "---\nredirect_to: /docs/misc/one/\n---\n"
 
 TIERS = """\
 tiers:
@@ -139,6 +140,7 @@ def make_repo(tmp: Path) -> Path:
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(PAGE)
     (repo / "content/docs/misc/draft.md").write_text(DRAFT)
+    (repo / "content/docs/misc/stub.md").write_text(STUB)
     git(repo, "add", ".")
     git(repo, "commit", "-q", "-m", "seed", date="2024-01-01T00:00:00Z")
 
@@ -209,6 +211,9 @@ def main() -> int:
         check(len(paths) == 3, f"3 picks (got {paths})")
         check("content/docs/generated/cli.md" not in paths, "tier-0 excluded")
         check("content/docs/misc/draft.md" not in paths, "draft excluded")
+        check("content/docs/misc/stub.md" not in [a["path"] for a in
+              run_select(repo, tiers, empty, "--count", "20")["articles"]],
+              "redirect_to stub excluded")
         check(all(a["lane"] == "priority" for a in q["articles"]), "all picks priority lane")
         check(paths[0] == C, f"most-stale tier-1 tops the queue (got {paths[0]})")
         check(paths[1] == OVERVIEW, f"stale tier-2 outranks stale tier-3 (got {paths[1]})")
