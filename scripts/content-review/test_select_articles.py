@@ -364,6 +364,24 @@ def main() -> int:
         qg2 = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(gscf))
         check(scores(qg2) == sg, "signal-boosted selection is deterministic")
 
+        print("reader signals: bare GSC export (no envelope) parses identically")
+        bare = tmp / "signals-gsc-bare.json"
+        bare.write_text(json.dumps({
+            "source": "fct_google_search_console_metrics",
+            "period": {"start": "2026-03-14", "end": "2026-06-11"},
+            "generated": "2026-06-11T00:00:00Z",
+            "pages": {
+                "/docs/misc/one/": {"impressions": 50000, "clicks": 250},
+                "/docs/misc/two/": {"impressions": 50000, "clicks": 5000},
+                "/docs/misc/protected/keep/": {"impressions": 100, "clicks": 1},
+            }}))
+        qbare = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(bare))
+        check(scores(qbare) == sg, "bare GSC export scores identically to the enveloped one")
+        check(qbare["reader_signals"]["gsc"]["available"] is True,
+              "bare GSC export marked available")
+        check(qbare["reader_signals"]["feedback"]["available"] is False,
+              "bare GSC export leaves feedback unavailable")
+
         print("reader signals: --paths entries carry the signals block")
         qp = run_select(repo, tiers, empty, "--paths", ONE, "--signals-file", str(gscf))
         check(qp["articles"][0]["signals"]["gsc"]["low_ctr_flag"] is True,
