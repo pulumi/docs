@@ -29,6 +29,22 @@
 # lookahead and a handful of subtrees that are *inherently* about the CRD or
 # the CDK class were opted out in .vale.ini. See the per-path overrides
 # there for the reasoning on each exclusion.
+# `scope: paragraph` is deliberate, not an oversight -- do not widen it to
+# `text` or bare `heading` without re-tuning (the "clean at 2,241 files"
+# result below was measured under paragraph scope). Widening either way
+# would flag correct Title-Case H1s (see Google.Headings's exclusion in
+# .vale.ini and the header comment on HeadingSentenceCase.yml for the wall
+# this repo already hit). If headings ever need coverage, use the enumerated
+# per-level shape HeadingSentenceCase.yml and CrossReferenceHeadings.yml
+# already use (heading.h2 through h6), never scope: text.
+#
+# Confirmed empirically that paragraph scope excludes headings: a minimal
+# repro with the same violating text in both an H2 and a body paragraph only
+# flagged the paragraph. That means the argocd.md opt-out below, whose sole
+# match on that page is an H2, currently covers nothing -- left in place
+# rather than removed on the unconfirmed premise, but noted here so the next
+# person doesn't read it as evidence the opt-out is load-bearing. Tracked
+# alongside the dropped IaC token's scope question in issue #20958.
 extends: existence
 message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (STYLE-GUIDE.md §Headings, 'use capitalization only for proper nouns')."
 link: "https://brand.pulumi.com/voice/writing-style/"
