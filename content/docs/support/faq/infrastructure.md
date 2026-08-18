@@ -10,10 +10,8 @@ menu:
         weight: 1
         identifier: support-faq-infrastructure
 aliases:
-    - /docs/support/faq/infrastructure/
     - /docs/reference/faq/
     - /docs/troubleshooting/faq/
-    - /docs/support/faq/
     - /docs/iac/support/faq/
     - /docs/iac/support/version-support/
     - /docs/iac/faq/
