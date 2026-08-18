@@ -4,7 +4,7 @@ date: 2026-08-01
 draft: false
 meta_desc: "How to provision, schedule, and govern GPU capacity on Kubernetes with Pulumi: node pools, Kueue quotas, time-slicing, and cost guardrails."
 authors:
-    - alex-leventer
+    - pulumi-content-team
 tags:
     - kubernetes
     - ai
@@ -47,7 +47,7 @@ Resource quotas and governance policies are exactly where GPU capacity planning 
 
 ## What does a production GPU stack on Kubernetes actually include?
 
-A GPU-ready cluster is more than a node pool with bigger instance types. Each layer below solves a distinct problem, and skipping one usually shows up later as an outage or a surprise bill.
+A GPU-ready cluster is more than a node pool with bigger instance types. Each layer below solves a distinct problem, and skipping one shows up later as an outage or a surprise bill.
 
 | Layer | What it does | Typical Pulumi resource |
 |---|---|---|
@@ -64,7 +64,7 @@ Pulumi provisions every row in that table as ordinary resources in the same prog
 
 The shape is the same across clouds: create (or reference) a cluster, add a node pool that requests GPU-backed instances, taint it so only GPU workloads land there, and install the operator that exposes GPUs to the scheduler.
 
-1. Provision or reference an existing Kubernetes cluster (EKS, GKE, or AKS) with a Pulumi `ManagedCluster`-style resource for your cloud of choice.
+1. Provision or reference an existing Kubernetes cluster with the cluster resource for your cloud of choice — `eks.Cluster` on AWS, `gcp.container.Cluster` on Google Cloud, or `azure-native.containerservice.ManagedCluster` on Azure.
 2. Add a GPU-backed node pool using a GPU instance type or machine type (for example, `g5.xlarge` on AWS, `a2-highgpu-1g` on Google Cloud, or `Standard_NC24ads_A100_v4` on Azure).
 3. Apply a taint to the GPU node pool, such as `nvidia.com/gpu=present:NoSchedule`, so only pods with a matching toleration are scheduled there.
 4. Install the NVIDIA GPU Operator (or cloud-managed device plugin) with a Helm chart so the scheduler can see and allocate `nvidia.com/gpu` as a resource.
@@ -164,15 +164,15 @@ gpu_operator = k8s.helm.v4.Chart(
 )
 ```
 
-Both programs do the same three things: request GPU-backed nodes, taint them so ordinary workloads can't land there by accident, and install the operator that turns physical accelerators into a schedulable Kubernetes resource. Credentials for the cluster follow the same pattern as the rest of your Pulumi stack: pull them from Pulumi ESC rather than hardcoding a kubeconfig. In practice that means an ESC environment (for example `gcp-gke-gpu-cluster`) that resolves a short-lived GKE credential and writes it into the stack's `kubeconfig` config value, which is what `pulumi.Config().require_secret("kubeconfig")` reads above — one more reason to run this stack against [Pulumi Cloud](/product/pulumi-cloud/) rather than a self-managed backend, since ESC and Pulumi Cloud share the same identity and secrets layer.
+Both programs do the same three things: request GPU-backed nodes, taint them so ordinary workloads can't land there by accident, and install the operator that turns physical accelerators into a schedulable Kubernetes resource. Credentials for the cluster follow the same pattern as the rest of your Pulumi stack: pull them from Pulumi ESC rather than hardcoding a kubeconfig. In practice that means an ESC environment whose `pulumiConfig` section supplies the `kubeconfig` value that `pulumi.Config().require_secret("kubeconfig")` reads above; [Kubernetes cluster access with ESC](/docs/esc/guides/integrate-with/kubernetes-cluster-access/) shows the environment definition, including how to build that kubeconfig from a short-lived cloud login rather than a static credential.
 
 ## How do you keep GPU capacity from being wasted or blown through?
 
-A GPU node pool without quotas is a shared resource with no rules, and the first team to notice usually notices by having their job queued indefinitely behind someone else's. A few guardrails make the difference:
+A GPU node pool without quotas is a shared resource with no rules, and the first team to notice finds out by having their job queued indefinitely behind someone else's. A few guardrails make the difference:
 
 - **Per-team quotas.** A Kueue `ClusterQueue` paired with a `ResourceFlavor` scoped to your GPU node pool lets you cap how many GPUs each namespace or team can claim concurrently, with fair-share queuing when demand exceeds supply. A plain Kubernetes `ResourceQuota` on `requests.nvidia.com/gpu` covers simpler cases.
 - **Taints and tolerations, not labels alone.** Labels tell the scheduler what a node *has*; taints tell it what a node *requires*. Use both, so a misconfigured pod without a GPU workload can't accidentally land on (and occupy) an expensive node.
-- **Sharing strategy for partial workloads.** Not every workload needs a full accelerator. Time-slicing lets several pods share one GPU's compute cycles for latency-tolerant workloads; NVIDIA MIG partitions a single GPU into isolated, right-sized instances when workloads need dedicated memory and stronger isolation. Pick MIG when noisy-neighbor effects matter, time-slicing when they don't.
+- **Sharing strategy for partial workloads.** Not every workload needs a full accelerator. Time-slicing lets multiple pods share one GPU's compute cycles for latency-tolerant workloads; NVIDIA MIG partitions a single GPU into isolated, right-sized instances when workloads need dedicated memory and stronger isolation. Pick MIG when noisy-neighbor effects matter, time-slicing when they don't.
 - **Autoscaling floors, not just ceilings.** Set `minSize: 0` on the GPU node pool so idle capacity actually scales to zero between jobs. GPU instances are the line item that makes an unbounded floor expensive fast.
 - **Policy as code for anything else.** Enforcing "no GPU pod without a resource request," "no GPU pod without a namespace label," or "no GPU node pool above N nodes without an approval" is a policy-as-code problem, not a code-review problem, once more than one team shares the cluster.
 
