@@ -24,16 +24,18 @@ social:
     linkedin: |
         Most platform engineering writing about AI agents stops at "agents will use your internal developer platform too." True, but it undersells the change. A developer reading your documentation and an agent calling your API for a golden path are different problems, because one of them can act at machine speed with no one watching the diff scroll by.
 
-        We wrote up the questions a platform team actually has to answer once an agent starts provisioning infrastructure through the platform instead of only reading it: identity and credential scope, where policy evaluates, what replaces code review, blast radius when several agents touch the same environment at once, and what an audit trail needs to contain when no human clicked approve.
+        We wrote up the operational questions a platform team actually has to answer once an agent starts provisioning infrastructure through the platform instead of only reading it, and what changes about identity, policy, review, and audit once nobody's watching the diff scroll by.
     bluesky: |
-        Gartner: 40% of enterprise apps will carry a task-specific AI agent by end of 2026. Platform engineering advice hasn't caught up — most of it still assumes a human is reading the catalog, not an agent calling the API. Here's what actually has to change:
+        Gartner: 40% of enterprise apps will carry a task-specific AI agent by end of 2026. Platform engineering advice hasn't caught up — most of it still assumes a human is reading the catalog, not an agent calling the API.
+
+        Here's what actually has to change:
 ---
 
 Platform engineering in the agentic era means designing your internal developer platform for a caller that can act on its own judgment at machine speed, not only for a person reading documentation. The platform's job shifts from making self-service pleasant to making it safe by construction: scoped identity, policy that evaluates before a change lands, and an audit trail that holds up when no human clicked approve.
 
 <!--more-->
 
-Most of what's been written about AI agents and platform engineering stops at the observation that agents are becoming platform users too. That's true, and it's not new anymore. [What Is Platform Engineering?](/what-is/what-is-platform-engineering/) already treats agents as a platform consumer alongside human developers, [What Is an Internal Developer Platform?](/what-is/what-is-an-internal-developer-platform/) covers how IDPs expose themselves to agents via MCP, and [Red Hat made the same point](https://www.redhat.com/en/blog/why-developer-portals-matter-more-age-ai-agents) about developer portals in May. What none of that writing does is stay long enough to answer the harder question: what does a platform actually have to provide once the agent moves from reading the catalog for context to calling it in order to make a change? This post is about that gap, and it stays specific to the case where the caller writes.
+Most of what's been written about AI agents and platform engineering stops at the observation that agents are becoming platform users too. That's true, and it's not new anymore. [What Is Platform Engineering?](/what-is/what-is-platform-engineering/) already treats agents as a platform consumer alongside human developers, [What Is an Internal Developer Platform?](/what-is/what-is-an-internal-developer-platform/) covers how IDPs expose themselves to agents via MCP, and [Red Hat made the same point](https://www.redhat.com/en/blog/why-developer-portals-matter-more-age-ai-agents) about developer portals. What none of that writing does is stay long enough to answer the harder question: what does a platform actually have to provide once the agent moves from reading the catalog for context to calling it to make a change? This post is about that gap, and it stays specific to the case where the caller writes.
 
 ## What changes when AI agents become your platform's primary users?
 
@@ -75,12 +77,12 @@ Policy as code matters more for agents than for human developers, because a huma
 
 | Stage | What it catches | Who or what runs it |
 | --- | --- | --- |
-| Authoring time | Obviously wrong resource shapes, missing required fields | IDE or agent tooling, before a change is even proposed |
+| Authoring time | Malformed resource shapes, missing required fields | IDE or agent tooling, before a change is even proposed |
 | Preview | The actual diff of what will change, resources added or destroyed | `pulumi preview`, read by the agent or a human before applying |
 | Pre-deploy policy gate | Violations of org rules: no public S3 buckets, required tags, allowed regions, cost ceilings | [Policy as code](/docs/insights/policy/), evaluated automatically and blocking the apply if it fails |
-| Post-deploy scan | Drift, or a resource that slipped through some other path | Continuous [policy and inventory scanning](/docs/insights/policy/policy-findings.md) across the whole estate |
+| Post-deploy scan | Drift, or a resource that slipped through some other path | Continuous [policy and inventory scanning](/docs/insights/policy/policy-findings/) across the whole estate |
 
-A pre-deploy gate is the one that matters most for an unattended agent, because it's the only stage that can stop a bad change before it becomes a bad change instead of just reporting one after the fact. Deterministic policy, evaluated the same way every time regardless of who or what proposed the change, is what lets a platform team say yes to agent self-service without reviewing every request by hand.
+A pre-deploy gate is the one that matters most for an unattended agent, because it's the only stage that can stop a bad change before it becomes one, rather than reporting it after the fact. Deterministic policy, evaluated the same way every time regardless of who or what proposed the change, is what lets a platform team say yes to agent self-service without reviewing every request by hand.
 
 ## Should an agent write infrastructure code, or call an API that writes it for it?
 
@@ -90,7 +92,7 @@ Both are legitimate, and the right choice depends on what the agent is actually 
 
 | | Agent writes code | Agent calls an API or tool |
 | --- | --- | --- |
-| Example | Agent edits a Pulumi program in TypeScript or Python to add a resource | Agent calls a golden-path template or an [Automation API](/docs/iac/concepts/automation-api.md) endpoint to spin up a pre-defined environment |
+| Example | Agent edits a Pulumi program in TypeScript or Python to add a resource | Agent calls a golden-path template, or a service you've built on [Automation API](/docs/iac/concepts/automation-api/), to spin up a pre-defined environment |
 | Correctness check | Preview, tests, and policy run against the actual diff | Correctness is baked into the interface itself; the agent can't ask for something the interface doesn't expose |
 | Best for | Novel or exploratory changes, refactors, anything not covered by an existing template | Repeatable, high-volume requests: a new dev environment, a scoped test database |
 | Failure mode if misused | An agent produces plausible-looking code that's subtly wrong and passes a weak review | An agent is boxed in and can't do the legitimate thing it actually needed to do |
@@ -139,7 +141,7 @@ A golden path built for an agent looks almost exactly like one built for a human
 
 ### Components and templates as the shared surface
 
-A [Pulumi component](/docs/iac/guides/building-extending/components/build-a-component.md) is a good unit for this, because it's callable from any language the platform supports and it can enforce policy internally rather than relying on the caller to get it right:
+A [Pulumi component](/docs/iac/guides/building-extending/components/build-a-component/) is a good unit for this, because it's callable from any language the platform supports and it can bake org defaults into the resource it creates, rather than relying on the caller to get them right:
 
 ```typescript
 // A golden path for a scoped Postgres database, callable by a human
@@ -179,7 +181,7 @@ Yes, and that's the point. The same deterministic policy engine that blocks a hu
 
 ### How is this different from what Backstage or a service catalog already does?
 
-A service catalog is largely a discovery and documentation layer: it helps a developer, or an agent reading it, find the right template. It doesn't typically enforce identity scope, policy evaluation, or audit trails on the infrastructure changes that come out of using a template; those guardrails live in the provisioning layer underneath. An agent-ready platform needs both: a catalog an agent can navigate, and an infrastructure layer that governs what happens after it picks something.
+A service catalog is a discovery and documentation layer: it helps a developer, or an agent reading it, find the right template. It doesn't enforce identity scope, policy evaluation, or audit trails on the infrastructure changes that come out of using a template; those guardrails live in the provisioning layer underneath. An agent-ready platform needs both: a catalog an agent can navigate, and an infrastructure layer that governs what happens after it picks something.
 
 ## Where this goes next
 
