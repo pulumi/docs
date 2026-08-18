@@ -38,9 +38,20 @@
   signal. Never fall back to `now`: an absent git history (e.g. a shallow CI
   checkout) would otherwise stamp every page as modified today, which is both
   wrong and harmful for SEO/AEO.
+
+  no_authored_date: content-adapter pages (_content.gotmpl, e.g. the
+  cloud-rest-api and pre-built-policy-packs pages) set a "dates" map with only
+  "lastmod" so the sitemap gets an honest <lastmod>. Hugo's date cascade then
+  backfills .Date and .PublishDate from that same lastmod value (a zero-time
+  publishDate passed explicitly is indistinguishable from an unset one and
+  gets overwritten by the cascade too), which would otherwise silently
+  reintroduce the fabricated-datePublished bug this file's dateModified
+  fallback comment already warns against. Those adapters set this param
+  explicitly to say "this PublishDate is backfilled, not authored" so it is
+  never mistaken for a real publish date here.
 */}}
 {{ $publishDate := "" }}
-{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") }}
+{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") (not .Params.no_authored_date) }}
   {{ $publishDate = .PublishDate }}
 {{ end }}
 

@@ -7,6 +7,10 @@
 
 {{/* Read pre-downloaded spec from data/openapi-spec.json (fetched by scripts/fetch-openapi-spec.sh) */}}
 {{ $spec := index site.Data "openapi-spec" }}
+{{ $lastmodData := site.Data.openapi_lastmod }}
+{{ if not $lastmodData }}
+    {{ warnf "openapi: data/openapi_lastmod.json not found — sitemap <lastmod> will be omitted for cloud-rest-api tag pages. Run 'node scripts/update-openapi-lastmod.js' to regenerate it." }}
+{{ end }}
 {{ if not $spec }}
     {{ warnf "openapi: data/openapi-spec.json not found — run 'make ensure' to download the spec. Skipping tag page generation." }}
 {{ else }}
@@ -231,11 +235,40 @@
 
     {{ $aliases := index $aliasOverrides $tag | default slice }}
 
+    {{/* lastmod: see the pre-built-policy-packs adapter for why
+         "dates.lastmod" must be paired with "params.no_authored_date" —
+         same Hugo date-cascade / JSON-LD fabrication risk applies here. */}}
+    {{ $dates := dict }}
+    {{ with $lastmodData }}
+        {{ if and (gt (len .tags) 0) (not (isset .tags $tag)) }}
+            {{/* Tripwire: the ledger has tag entries but none match this
+                 adapter-derived tag. Two distinct causes trip this same
+                 warning: either the tag is new since the last nightly
+                 ledger update (data/openapi_lastmod.json only catches up
+                 when that job runs, while data/openapi-spec.json is
+                 gitignored and re-downloaded by `make ensure` on every
+                 build), or deriveTagOperations in
+                 scripts/update-openapi-lastmod.js and this template's
+                 tag-derivation logic (last tag wins; "Foo: Bar" collapses
+                 to "Foo") have drifted apart. Warn once per tag so either
+                 case shows up in build output instead of silently dropping
+                 <lastmod>/dateModified for the affected pages. */}}
+            {{ warnidf (printf "openapi-lastmod-tag-miss-%s" $tag) "openapi: tag %q has no entry in data/openapi_lastmod.json (ledger has %d tags) — this page will render without <lastmod>/dateModified. Either the tag is new since the last nightly ledger update, or deriveTagOperations in scripts/update-openapi-lastmod.js has drifted from this template's tag-derivation rules." $tag (len .tags) }}
+        {{ end }}
+        {{ with index .tags $tag }}
+            {{ with .lastmod }}
+                {{ $dates = dict "lastmod" (time.AsTime .) }}
+                {{ $params = merge $params (dict "no_authored_date" true) }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
     {{ $.AddPage (dict
         "path" $slug
         "title" $display
         "kind" "page"
         "aliases" $aliases
+        "dates" $dates
         "params" $params
         "menus" $menus
     ) }}
