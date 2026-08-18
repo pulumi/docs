@@ -4,7 +4,7 @@ date: 2026-07-25
 meta_desc: "A leaked IAM key and an out-of-order merge both trace to one cause: a self-managed state backend. Here's what a managed backend changes."
 feature_image: feature.png
 authors:
-    - content-team
+    - pulumi-content-team
 tags:
     - infrastructure-as-code
     - security
