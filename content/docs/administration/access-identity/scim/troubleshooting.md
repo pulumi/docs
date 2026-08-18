@@ -124,7 +124,7 @@ The suggested way to resolve this conflict would be to synchronize all the group
 
 ## Managing Pulumi-local teams alongside SCIM
 
-In addition to the SCIM-managed teams, you can also configure and manage Pulumi-local teams in the Pulumi Cloud. See [Teams](/docs/administration/organizations-teams/teams/) for how to configure teams in the Pulumi Cloud.
+Alongside the SCIM-managed teams, you can also configure and manage Pulumi-local teams in the Pulumi Cloud. See [Teams](/docs/administration/organizations-teams/teams/) for how to configure teams in the Pulumi Cloud.
 
 ## Learn more
 
