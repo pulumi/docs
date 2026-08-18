@@ -32,10 +32,35 @@ event_type: workshop
 youtube_url:
 
 # Sortable date. The datetime Hugo will use to sort the events in date order.
+# With sessions below, this is the earliest session's date.
 sortable_date: 2026-09-08T09:00:00.000-07:00
 
 # Duration of the event.
 duration: 90 minutes
+
+# The event runs twice, once per region. Each session gets its own tab on this
+# page, its own card in the event list, and its own registration form.
+sessions:
+    - label: Americas
+      sortable_date: 2026-09-08T09:00:00.000-07:00
+      duration: 90 minutes
+      form:
+          hubspot_form_id: 13e8fea4-356f-42a2-8e6b-50300b49d666
+          salesforce_campaign_id: 701PQ00000zDNF3YAO
+      presenters:
+          - name: Adam Gordon Bell
+            role: Community Engineer, Pulumi
+            photo: /images/team/adam-gordon-bell.jpg
+    - label: EMEA
+      sortable_date: 2026-09-30T10:00:00.000+02:00
+      duration: 60 minutes
+      form:
+          hubspot_form_id: b67462e0-5973-4d0f-ad0a-a401a83cbcc1
+          salesforce_campaign_id: 701PQ00000zDXj2YAG
+      presenters:
+          - name: Engin Diri
+            role: Principal Solutions Architect, Pulumi
+            photo: /images/team/engin-diri.jpg
 
 # "virtual" will be shown under "show virtual events only", otherwise shown as City, State (seattle, wa)
 location: virtual
@@ -54,11 +79,8 @@ learn:
     - How per-task toggles and org-level settings keep the agent's reach under your control.
     - "What's new since launch — CLI integrations in scheduled Automations, and Neo in your editor via the Agent Client Protocol."
 
-# The event presenters
-presenters:
-    - name: Adam Gordon Bell
-      role: Community Engineer, Pulumi
-      photo: /images/team/adam-gordon-bell.jpg
+# No top-level presenters: each session above names its own lineup, and anything
+# that needs "everyone at this event" derives the union from them.
 
 # case-sensitive
 tags:
@@ -66,10 +88,4 @@ tags:
     topics: ["Pulumi Neo", "AI", "DevOps"]
     languages: []
     clouds: []
-
-# The right hand side form section.
-form:
-    # HubSpot form id.
-    hubspot_form_id:
-    salesforce_campaign_id:
 ---
