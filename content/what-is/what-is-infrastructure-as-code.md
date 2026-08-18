@@ -231,7 +231,7 @@ IaC shows up across a lot of cloud workflows, but a few patterns account for mos
 
 ## What are the most popular infrastructure as code tools?
 
-The IaC tooling landscape has grown a lot since CFEngine — released in 1993, and one of the earliest tools in the category. The tools you're most likely to encounter today:
+The IaC tooling landscape has grown a lot since CFEngine — released in 1993 and one of the earliest tools in the category — kicked things off. The tools you're most likely to encounter today:
 
 * **[Pulumi](/)** is declarative IaC written in general-purpose programming languages — TypeScript, JavaScript, Python, Go, .NET, and Java — plus YAML and HCL. It supports [300+ packages in the Pulumi Registry](/registry/), including AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, and Datadog.
 * **Terraform** is HashiCorp's tool. It uses the HashiCorp Configuration Language (HCL) and moved to a source-available BUSL license in 2023.
