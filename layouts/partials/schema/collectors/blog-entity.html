@@ -46,8 +46,9 @@
      (e.g. a shallow CI checkout) would otherwise stamp every page as
      modified today, which is both wrong and harmful for SEO/AEO. Mirrors
      schema/collectors/article-entity.html. */}}
+{{/* no_authored_date guard: see schema/collectors/article-entity.html. */}}
 {{ $publishDate := "" }}
-{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") }}
+{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") (not .Params.no_authored_date) }}
   {{ $publishDate = .PublishDate }}
 {{ end }}
 

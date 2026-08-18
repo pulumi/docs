@@ -168,7 +168,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    When prompting the LLM, provide:
    * Your original `.tf` files
-   * Your target programming language (TypeScript, Python, Go, C#, etc.)
+   * Your target programming language (TypeScript, Python, Go, .NET, etc.)
    * The generated `pulumi-state.json` for context on resource names and structure
    * Ask the agent to iterate on the code changes until `pulumi preview --diff` generates as few diffs as possible. If it fails, prompt it to try again.
 

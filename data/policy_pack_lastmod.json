@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "purpose": "Sitemap <lastmod> and JSON-LD dateModified source for content/docs/reference/pre-built-policy-packs/ pages.",
+    "generator": "scripts/fetch-policy-packs.js (self-stamping diff on each nightly run)",
+    "methodology": "A pack's lastmod is the date its data/policy_pack_policies/<pack>.json last actually changed content (canonicalized diff), not merely the date the file was last committed for an unrelated reason. Seeded 2026-08-15 from the git history of the initial commit that introduced these files (PR #20274); no pack has been republished with different content since, so all seed dates are the introduction commit date. Updated automatically going forward whenever fetch-policy-packs.js detects a real content change.",
+    "seeded_at": "2026-08-15"
+  },
+  "packs": {
+    "cis-aws": "2026-07-16",
+    "cis-azure": "2026-07-16",
+    "cis-google-cloud": "2026-07-16",
+    "cis-kubernetes-aws": "2026-07-16",
+    "cis-kubernetes-azure": "2026-07-16",
+    "cis-kubernetes-gcp": "2026-07-16",
+    "cmmc-aws": "2026-07-16",
+    "hitrust-aws": "2026-07-16",
+    "hitrust-awsnative": "2026-07-16",
+    "hitrust-azure": "2026-07-16",
+    "hitrust-google-cloud": "2026-07-16",
+    "iso-27001-aws": "2026-07-16",
+    "iso-27001-azure": "2026-07-16",
+    "iso-27001-google-cloud": "2026-07-16",
+    "nist-aws": "2026-07-16",
+    "nist-azure": "2026-07-16",
+    "nist-google-cloud": "2026-07-16",
+    "pci-dss-aws": "2026-07-16",
+    "pci-dss-azure": "2026-07-16",
+    "pci-dss-google-cloud": "2026-07-16",
+    "pulumi-best-practices-aws": "2026-07-16",
+    "pulumi-best-practices-azure": "2026-07-16",
+    "pulumi-best-practices-google-cloud": "2026-07-16"
+  }
+}

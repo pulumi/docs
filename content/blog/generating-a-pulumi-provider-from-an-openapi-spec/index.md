@@ -192,7 +192,7 @@ Most of that metadata is auto-derived by a scaffolder, but the editorial layer, 
 
 The `api` namespace already spans most of Pulumi Cloud's resource model.
 
-For resources that have an ancestor under `pulumiservice:index:*`, the mapping lives in [`docs/v0-api-coverage.md`](https://github.com/pulumi/pulumi-pulumiservice/blob/main/docs/v0-api-coverage.md). That file is auto-generated, so it stays in sync. Each `api/*` resource ships hand-maintained per-language examples in TypeScript, Python, Go, C#, Java, and YAML.
+For resources that have an ancestor under `pulumiservice:index:*`, the mapping lives in [`docs/v0-api-coverage.md`](https://github.com/pulumi/pulumi-pulumiservice/blob/main/docs/v0-api-coverage.md). That file is auto-generated, so it stays in sync. Each `api/*` resource ships hand-maintained per-language examples in TypeScript, Python, Go, .NET, Java, and YAML.
 
 ## What to know before adopting the preview
 

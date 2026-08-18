@@ -18,7 +18,7 @@ Converting is not the only way to run Terraform configuration with Pulumi. Pulum
 Which path you take comes down to what you want out of the move:
 
 * **Run your HCL natively** when you want to keep writing HCL and are after Pulumi's engine, state management, secrets, and cloud platform.
-* **Convert** when you want the infrastructure code itself in a general-purpose language, for the testing, abstraction, and IDE support that comes with TypeScript, Python, Go, C#, or Java.
+* **Convert** when you want the infrastructure code itself in a general-purpose language, for the testing, abstraction, and IDE support that comes with TypeScript, JavaScript, Python, Go, .NET, or Java.
 
 The rest of this page covers converting.
 

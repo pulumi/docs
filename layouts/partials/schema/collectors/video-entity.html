@@ -40,8 +40,9 @@
      omitted — when there's no real date we skip emitting the entity entirely
      rather than publish an invalid or fabricated one. Mirrors the date policy
      in schema/collectors/article-entity.html. */}}
+{{/* no_authored_date guard: see schema/collectors/article-entity.html. */}}
 {{ $publishDate := "" }}
-{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") }}
+{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") (not .Params.no_authored_date) }}
   {{ $publishDate = .PublishDate }}
 {{ end }}
 

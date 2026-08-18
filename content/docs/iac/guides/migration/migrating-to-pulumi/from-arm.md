@@ -1,6 +1,6 @@
 ---
 title_tag: "Migrating from Azure Resource Manager"
-meta_desc: Modernize Azure infrastructure by replacing or coexisting with ARM templates using Pulumi in C#, Python, Go, or TypeScript.
+meta_desc: Modernize Azure infrastructure by replacing or coexisting with ARM templates using Pulumi in .NET, Python, Go, or TypeScript.
 title: Azure Resource Manager
 h1: From Azure Resource Manager (ARM) to Pulumi
 menu:
@@ -17,7 +17,7 @@ aliases:
 
 <img src="/logos/tech/azure_arm.png" align="right" class="h-32 px-8 pb-4">
 
-Pulumi offers a flexible, code-first alternative to Azure ARM templates using C#, Python, Go, or TypeScript.
+Pulumi offers a flexible, code-first alternative to Azure ARM templates using .NET, Python, Go, or TypeScript.
 
 If your team has already provisioned Azure infrastructure using ARM (Azure Resource Manager) templates and is looking for a more productive approach, Pulumi provides several paths to move forward:
 
@@ -33,7 +33,7 @@ ARM templates were Azure's original infrastructure as code solution. But they fa
 
 | Feature           | ARM Templates        | Pulumi                        |
 |-------------------|----------------------|-------------------------------|
-| Language          | JSON                 | Code Native, e.g. C#, Python, TS |
+| Language          | JSON                 | Code Native, e.g. .NET, Python, TS |
 | Cloud             | Azure only           | Agnostic + on-prem            |
 | Reuse             | Limited (copy/paste) | Functions, classes, modules   |
 | Logic & Loops     | Complex expressions  | if / for / switch             |
@@ -266,7 +266,7 @@ Let's see how to actually migrate your ARM-managed resources fully to Pulumi. Th
 
 Our example below will result in a Pulumi program that creates a Storage Account equivalent to the ARM template below. The example will also use [import](/docs/iac/guides/migration/import/) to adopt resources on-the-fly from ARM deployments to Pulumi rather than recreating them.
 
-You can convert ARM templates into Pulumi program code using `pulumi convert --from arm`. Simply provide your ARM template and get back a Pulumi program in C#, TypeScript, Python, Go, Java, or YAML.
+You can convert ARM templates into Pulumi program code using `pulumi convert --from arm`. Simply provide your ARM template and get back a Pulumi program in .NET, TypeScript, Python, Go, Java, or YAML.
 
 Let's say you have an existing ARM Template shown below.
 

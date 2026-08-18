@@ -67,7 +67,7 @@ This plugin includes four skills focused on code quality, reusability, and confi
 
 * **Pulumi best practices** encodes the patterns that prevent common mistakes. It covers output handling, component structure, secrets management, safe refactoring with aliases, and deployment workflows. The skill flags anti-patterns that can cause issues with preview, dependencies, and production deployments.
 
-* **Pulumi Component** provides a complete guide for authoring ComponentResource classes. The skill covers designing component interfaces, multi-language support, and distribution. It teaches assistants how to build reusable infrastructure abstractions that work across TypeScript, Python, Go, C#, Java, and YAML.
+* **Pulumi Component** provides a complete guide for authoring ComponentResource classes. The skill covers designing component interfaces, multi-language support, and distribution. It teaches assistants how to build reusable infrastructure abstractions that can be consumed from any Pulumi language.
 
 * **Pulumi Automation API** covers programmatic orchestration of Pulumi operations. The skill explains when to use Automation API versus the CLI, the tradeoffs between local source and inline programs, and patterns for multi-stack deployments.
 

@@ -23,7 +23,7 @@ Here's a list of ESC resources available through Pulumi Service Provider:
 
 If you haven't used Pulumi Service Provider before, see this [installation and configuration guide](https://www.pulumi.com/registry/packages/pulumiservice/installation-configuration/).
 
-Pulumi Service Provider ESC capabilities are available for TypeScript/JavaScript, Go, Python, C#, Java, and YAML. Here are examples of creating environments in TypeScript/JavaScript, Go, and Python:
+Pulumi Service Provider ESC capabilities are available for TypeScript/JavaScript, Go, Python, .NET, Java, and YAML. Here are examples of creating environments in TypeScript/JavaScript, Go, and Python:
 
 {{< chooser language "typescript,python,go" />}}
 
