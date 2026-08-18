@@ -1,8 +1,16 @@
-# Flags generic infrastructure-as-code concepts capitalized as if they were
-# proper nouns -- "the Stack" for a Pulumi stack, "Infrastructure as Code" as
-# a mid-sentence common noun -- per the brand writing-style guide and
+# Flags "the Stack"-style generic references to a Pulumi stack capitalized as
+# if "Stack" were a proper noun, per the brand writing-style guide and
 # STYLE-GUIDE.md's Headings section ("use capitalization only for proper
 # nouns... use 'stack' not 'Stack'").
+#
+# An earlier draft of this rule also flagged capitalized mid-sentence
+# "Infrastructure as Code". That token is deliberately NOT included here:
+# hand-testing in isolation (not the tree-wide count, which stayed clean
+# because of a boundary bug -- see the dropped token's own history in git
+# log for the postmortem) showed the true violation surface is 161 hits
+# across 78 files, almost entirely blog posts. That's a real, separate sweep
+# this PR doesn't try to rush under review pressure -- filed as a follow-up
+# rather than shipped half-fixed.
 #
 # This is an existence rule (flag-only), NOT a substitution, and deliberately
 # stays at `warning` rather than joining the `blocker:` list in
@@ -36,4 +44,3 @@ tokens:
   # compile, which is what makes lookahead usable here; see the precedent in
   # Pulumi.NarrativeWe ('let us (?!know\b)\w+').
   - '\b(the|a|an|this|that|your|our|each|every|which|existing|new|current|given|single|specific|same|dependent) Stack\b(?! [A-Z])'
-  - '[a-z] Infrastructure as Code\b(?! [A-Z])'
