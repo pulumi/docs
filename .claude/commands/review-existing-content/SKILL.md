@@ -323,9 +323,11 @@ flows through the normal pipeline; a trivial fix is short-circuited there). A
 lint failure opens the PR as a draft instead, with a comment for a human; humans
 merge. The sections (each is checked for):
 
-- **Auto-merge notice** (top `> [!IMPORTANT]` block): the re-lint gate arms
-  GitHub auto-merge on the PR, so the body flags that approving merges it.
-  **Leave verbatim** — do not move, reword, or remove it.
+- **Auto-merge notice** (top `> [!IMPORTANT]` block): flags how the PR merges.
+  **Leave verbatim** — do not move, reword, or remove it. The publish job
+  classes the PR from your verdict's `applied[]` categories (deterministic
+  fixes arm auto-merge; judgment fixes don't) and deterministically swaps in
+  the matching notice — that swap keys on the exact composed text.
 - **Why this page**: composed from the selection queue (lane, tier, traffic
   figure + period, Search/Reader-feedback figures when the reader-signals
   export was available, last reviewed). **Leave verbatim** — do not
@@ -333,8 +335,10 @@ merge. The sections (each is checked for):
 - **Fixes applied**: pre-stubbed one row per high-confidence finding. Keep a row
   only for a fix you actually applied (fill its Correction); move the rest down.
 - **Findings not applied**: pre-stubbed with the lower-confidence findings, plus
-  any row you moved down. One line of reasoning each. End the section with: "For
-  the judgment-level items above, run `/glow-up <path>`."
+  any row you moved down. One line of reasoning each. The composed footer notes
+  that these items feed the automated glow-up lane (see §Glow-up mode) — keep
+  it: this section is that lane's input, extracted from the PR body by
+  `build-glowup-backlog.py`, so write rows a later run can act on.
 - **Screenshot check**: per image — current / stale (what differs) /
   unverifiable; note any aging reference screenshots (see
   `references/screenshot-verification.md`).
@@ -407,11 +411,87 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   reconception itself lives in the PR's Findings-not-applied section). Omit when
   there's no reconception to flag.
 
+**Self-check before you finish** (skip for a retirement verdict — the gate
+routes those to the retire veto instead): verify your `applied[]` line ranges
+exactly the way the publish gate will, using the gate's own script. Stage your
+changes the way the export step does, emit a zero-context diff, unstage, and
+run it:
+
+```bash
+git add -A -- ':!.*' ':!.*/**'
+git diff --cached --unified=0 > .self-check.u0.diff
+git reset -q
+python3 scripts/content-review/verify-fix-scope.py \
+    --diff-file .self-check.u0.diff --base-sha HEAD \
+    --article <path> --verdict .content-review-verdict.json \
+    --artifacts-dir . --out .self-check-report.json
+```
+
+Exit 0 (pass or skipped) is required. On exit 2, read `uncovered_hunks` /
+`invalid_applied` in the report and either correct the `applied[]` ranges or
+revert the out-of-range edit; re-run until it passes. This is the pipeline's
+dominant hard-failure mode — a range that doesn't cover its hunk wastes the
+whole run at the publish gate, where there is no retry.
+
 If you exit without writing this file, the workflow records the page as
 `incomplete`. An incomplete outcome does **not** advance the staleness clock, so
 the page stays due and is retried on a later sweep — up to an attempt cap, after
 which it backs off for a human. Always write the sentinel, even for a clean or
 skipped verdict.
+
+## Glow-up mode
+
+When the queue article carries `"mode": "glowup"` (the dispatcher's daily
+glow-up lane), the run is a **whole-page rehab executing the page's banked
+review backlog** — not a high-confidence-fix sweep. Everything above applies
+except as amended here.
+
+**Input**: `.glowup-backlog.json` at the repo root (built by the workflow via
+`scripts/content-review/build-glowup-backlog.py`): the ledger's
+`skipped_findings` / `clarity_flag` counters plus every banked finding
+extracted from the page's prior review PRs' "Findings not applied",
+"Screenshot check", and "Rendered content" sections, each with a stable `id`
+and its `source_pr`. The pre-step artifacts (claims, Vale, readthrough,
+frontmatter) are also present and are your evidence base.
+
+**Procedure**:
+
+1. **Work the backlog first.** Execute every banked finding, or explicitly
+   decline it with one line of reasoning. Every item lands in exactly one of
+   the PR body's two tables — **Backlog executed** (pre-stubbed, one row per
+   item; fill "What changed") or **Backlog declined**. No silent drops.
+1. **Then the secondary sweep**: apply the improvement taxonomy from
+   `.claude/commands/glow-up.md` §5 — style, structural fixes, code
+   formatting, terminology, links, image/diagram flags (flag-only, as ever),
+   content enhancements — and record per-category outcomes under
+   **Secondary sweep**.
+1. **Bounds** (code-enforced by `verify-glowup-scope.py` in the publish job;
+   a violation rejects the whole run): only the queued page and its bundle's
+   non-markdown assets; at most 400 changed lines; never delete the page;
+   never change frontmatter `title`, `aliases`, or `redirect_to`; retirement
+   is never a glow-up outcome. Preserve the page's purpose and technical
+   accuracy — a glow-up reads better, it does not say different things
+   without artifact-backed evidence.
+1. **Validate** with `make lint` as usual, and self-check with the glow-up
+   gate instead of verify-fix-scope: stage/diff/unstage as in step 8's
+   self-check, then run `verify-glowup-scope.py --diff-file
+   .self-check.u0.diff --article <path> --article-blob <pristine-copy> --out
+   .self-check-report.json` (copy the article aside before your first edit).
+1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
+   "skipped_findings": <declined count>, "retirement": false}` — no
+   `applied[]` array; the glow-up gate replaces the per-hunk check. If the
+   queue article carries `stale_claim_markers`, they are must-address
+   findings here exactly as in a fix review: resolve each (fix it, or
+   establish the flag was wrong) and list its `entity_key` in the sentinel's
+   `resolved_claims`, or it carries forward with `unresolved_reviews`
+   incremented.
+
+**What happens downstream**: the publish job derives the branch
+`content-review/glowup-<slug>`, classes the PR `glow-up`, and **never arms
+auto-merge** — the PR opens ready for human review and the PR-review sweep
+assigns the reviewers. The ledger records status `glowup` (a completed
+review: it advances the staleness clock and starts the selector's 90-day
+glow-up cooldown).
 
 ## Retirement proposals
 
