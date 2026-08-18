@@ -69,6 +69,7 @@ languages:
   - go
   - dotnet                # the .NET / C# family
   - java
+  - rust
   - yaml
 
 ai:
