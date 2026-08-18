@@ -35,9 +35,8 @@ Only the secrets from the latest environment revision are counted towards your b
 
 Yes. [Contact sales](/contact/?form=sales) for a demo or trial of self-hosted Pulumi ESC.
 
-## More FAQ
+## Learn more
 
 - [Pulumi IaC FAQ](/docs/support/faq/infrastructure/)
-- [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/support/faq/scim/)
-- [Pulumi Policies FAQ](/docs/support/faq/policies)
+- [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies/)

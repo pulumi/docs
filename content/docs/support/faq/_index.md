@@ -33,14 +33,9 @@ sections:
     link: /docs/support/faq/policies/
     description: Questions about Policy as Code and compliance.
 
-  - icon: arrows-clockwise
-    heading: SCIM FAQ
-    link: /docs/support/faq/scim/
-    description: Questions about SCIM integration and identity management.
-
   - icon: cloud
     heading: Pulumi Cloud FAQ
-    link: /docs/support/pulumi-cloud-faq/
+    link: /docs/support/faq/pulumi-cloud/
     description: Questions about the Pulumi Cloud platform and features.
 
 - type: flat
