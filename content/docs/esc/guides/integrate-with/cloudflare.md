@@ -173,7 +173,7 @@ export default {
 } satisfies ExportedHandler<Env>;
 ```
 
-Using Infrastructure as Code (IaC) to manage Workers? See the next section to see how to leverage Pulumi ESC alongside.
+Using infrastructure as code (IaC) to manage Workers? See the next section to see how to leverage Pulumi ESC alongside.
 
 ## Manage Cloudflare Worker Secrets in IaC
 
