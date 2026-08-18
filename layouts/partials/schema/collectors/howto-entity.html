@@ -305,12 +305,30 @@
 
 {{/* Note: Dates omitted for tutorial pages - they're evergreen content without meaningful publication dates */}}
 
-{{/* Add keywords */}}
-{{ $keywords := "infrastructure as code, cloud, devops, tutorial, pulumi" }}
+{{/* Add keywords. As in schema/collectors/article-entity.html, every
+     tutorial page previously got the same literal "infrastructure as
+     code, cloud, devops, tutorial, pulumi" string regardless of what the
+     tutorial actually walks through, since no tutorial page carries
+     front-matter tags today. Fall back to the tutorial's own headline
+     plus its section ancestors (e.g. "Building with Pulumi", "AWS") so
+     the value names this specific tutorial instead of repeating one
+     generic phrase on every page. */}}
+{{ $keywordTerms := slice }}
 {{ with .Params.tags }}
-  {{ $keywords = delimit . ", " }}
+  {{ $keywordTerms = . }}
+{{ else }}
+  {{ range .Ancestors.Reverse }}
+    {{ if and (not .IsHome) .LinkTitle }}
+      {{ $keywordTerms = $keywordTerms | append .LinkTitle }}
+    {{ end }}
+  {{ end }}
+  {{ if $pageName }}
+    {{ $keywordTerms = $keywordTerms | append $pageName }}
+  {{ end }}
 {{ end }}
-{{ $schema = merge $schema (dict "keywords" $keywords) }}
+{{ if gt (len $keywordTerms) 0 }}
+  {{ $schema = merge $schema (dict "keywords" (delimit (uniq $keywordTerms) ", ")) }}
+{{ end }}
 
 {{/* Add supply/yield (what the tutorial produces) */}}
 {{ $titleLower := lower .Title }}
