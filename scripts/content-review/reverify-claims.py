@@ -200,6 +200,29 @@ def already_marked(key: str, assertions: list[dict], ledger: dict[str, dict]) ->
     return False
 
 
+def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> bool:
+    """True when every asserting page was re-reviewed AFTER its snapshot.
+
+    The claims index records the PRE-fix page, so right after a fix lands the
+    snapshot still asserts the old value — re-checking it would re-flag a
+    claim the merged fix already corrected (the echo that used to buy every
+    stale-claim fix a redundant next-day review). A completed ledger review
+    (status != "incomplete", record-review.py's vocabulary) dated strictly
+    after the snapshot means fresher evidence is on its way: the reviewing
+    worker rewrites the claims snapshot, and the entity re-enters the rotation
+    then. Any page lacking that newer completed review keeps the entity due.
+    """
+    for a in assertions:
+        snap_day = str(a.get("reviewed_at") or "")
+        entry = ledger.get(a["path"]) or {}
+        reviewed = str(entry.get("reviewed_at") or "")
+        completed = bool(reviewed) and entry.get("status") != "incomplete"
+        # ISO dates compare correctly as strings; empty strings fail safe.
+        if not (completed and snap_day and reviewed > snap_day):
+            return False
+    return True
+
+
 def tonight_chunk(keys: list[str], count: int, today: date) -> list[str]:
     """Day-rotated chunk of the sorted entity keys: full coverage every
     ceil(N/count) nights, deterministic from the date alone."""
@@ -345,7 +368,11 @@ def run(args) -> int:
     entities = volatile_entities(snapshots, _load_is_volatile())
     report["meta"]["n_entities"] = len(entities)
 
-    unmarked = sorted(k for k, v in entities.items() if not already_marked(k, v, ledger))
+    superseded = {k for k, v in entities.items()
+                  if not already_marked(k, v, ledger) and superseded_by_review(v, ledger)}
+    unmarked = sorted(k for k, v in entities.items()
+                      if not already_marked(k, v, ledger) and k not in superseded)
+    report["meta"]["n_superseded"] = len(superseded)
     keys = tonight_chunk(unmarked, args.count, today)
     report["meta"]["n_due"] = len(keys)
     if not keys:
@@ -448,6 +475,26 @@ def self_test() -> int:
     check("entity fans out across pages", len(ents["version/pulumi-gcp"]) == 2)
     check("representative is the freshest assertion",
           representative(ents["version/pulumi-gcp"])["text"] == "pulumi-gcp v8.3.0")
+
+    # Supersession: an entity whose every asserting page has a completed
+    # review newer than its snapshot is stale evidence — skip, don't re-check.
+    def entry(path, reviewed_at, status="reviewed"):
+        return {"path": path, "reviewed_at": reviewed_at, "status": status}
+
+    both_newer = {"content/docs/a.md": entry("content/docs/a.md", "2026-07-10"),
+                  "content/docs/b.md": entry("content/docs/b.md", "2026-07-11")}
+    one_stale = {"content/docs/a.md": entry("content/docs/a.md", "2026-07-10"),
+                 "content/docs/b.md": entry("content/docs/b.md", "2026-07-02")}
+    incomplete = {"content/docs/a.md": entry("content/docs/a.md", "2026-07-10"),
+                  "content/docs/b.md": entry("content/docs/b.md", "2026-07-11", "incomplete")}
+    check("superseded when every page re-reviewed after its snapshot",
+          superseded_by_review(ents["version/pulumi-gcp"], both_newer) is True)
+    check("not superseded while any page's snapshot is the freshest evidence",
+          superseded_by_review(ents["version/pulumi-gcp"], one_stale) is False)
+    check("an incomplete review never supersedes",
+          superseded_by_review(ents["version/pulumi-gcp"], incomplete) is False)
+    check("missing ledger entries never supersede",
+          superseded_by_review(ents["version/pulumi-gcp"], {}) is False)
 
     # Re-derived volatility overrides the snapshot's stored flag, so a
     # narrowed policy reaches the whole index the night it ships.

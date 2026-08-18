@@ -63,6 +63,10 @@ Selection algorithm (weighted fair queuing by staleness):
                 reverify-claims.py when a volatile claim the page asserts
                 re-verified contradicted); 0 otherwise. Marked pages jump the
                 queue; the marker clears when the review rewrites the entry.
+                Suppressed while the page's last COMPLETED review is under
+                STALE_BOOST_COOLDOWN_DAYS old — the pre-fix claims snapshot
+                echoes just-fixed claims back as contradictions, and without
+                the cooldown that echo re-reviewed every fixed page next day.
 
    Ties break on path ascending, so runs are reproducible.
 
@@ -152,6 +156,14 @@ TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 # the sweep is never fully starved. The marker vanishes when the page's next
 # review rewrites its ledger entry, so the boost self-clears.
 STALE_CLAIM_BOOST = 400.0
+# ...but not for a page whose review just completed. The claims index
+# snapshots the PRE-fix page, so the nightly reverify re-contradicts a claim
+# the merged fix already corrected and re-marks the page — without this
+# cooldown that echo bought every stale-claim fix one redundant full review
+# the very next day. A marker on a page reviewed >= this many days ago is
+# real (the review evidently didn't clear it); younger completed reviews
+# suppress the boost and let the marker resolve on its own.
+STALE_BOOST_COOLDOWN_DAYS = 5
 
 # Reader-signal boost tuning. Both multipliers floor at exactly 1.0 (see the
 # module docstring); the caps keep the maximum combined boost (~1.63x) well
@@ -363,6 +375,25 @@ def pr_state(pr_url: str, use_gh: bool) -> dict | None:
 
 
 # ---- Scoring -----------------------------------------------------------------
+
+
+def stale_boost_eligible(entry: dict | None, today: date) -> bool:
+    """Whether a page's stale_claims marker should add STALE_CLAIM_BOOST.
+
+    Suppressed when the entry shows a COMPLETED review within
+    STALE_BOOST_COOLDOWN_DAYS — the marker is then almost certainly the
+    claims-index echo of a fix that already landed (see the constant's
+    comment), not a fresh drift. Incomplete outcomes never advance the clock,
+    so they never suppress.
+    """
+    if not entry or not entry.get("stale_claims"):
+        return False
+    if entry.get("status") == INCOMPLETE_STATUS:
+        return True
+    reviewed = parse_day(entry.get("reviewed_at"))
+    if reviewed and (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS:
+        return False
+    return True
 
 
 def gsc_multiplier(
@@ -647,7 +678,7 @@ def main() -> int:
                 effective_last_review(path, ledger.get(path), newest_non_bot, created),
                 today,
                 have_traffic,
-                stale_claims=bool((ledger.get(path) or {}).get("stale_claims")),
+                stale_claims=stale_boost_eligible(ledger.get(path), today),
                 gsc_m=gsc_m,
                 feedback_m=fb_m,
             ),

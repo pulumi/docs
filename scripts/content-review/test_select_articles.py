@@ -392,6 +392,33 @@ def main() -> int:
         check(dpaths[0] == OVERVIEW, "after a fresh completed review the tier-1 page drops below the stale tier-2")
         check(C not in dpaths, "just-reviewed tier-1 leaves the top picks")
 
+        print("stale-claims boost: cooldown after a completed review")
+        marker = [{"entity_key": "version/x", "verdict": "contradicted"}]
+        # Completed review 10 days ago + marker -> the boost applies (the
+        # review evidently didn't clear it; this is real drift).
+        led_old = tmp / "ledger-stale-old"
+        write_ledger(led_old, C, "2026-06-02", status="reviewed", stale_claims=marker)
+        so = scores(run_select(repo, tiers, led_old, "--count", "20"))
+        check(so[C] > 400, "marker on an old completed review keeps the +400 boost")
+        # Completed review 2 days ago + marker -> the claims-index echo of the
+        # fix that just landed; boost suppressed, page scores like any
+        # freshly-reviewed page.
+        led_new = tmp / "ledger-stale-new"
+        write_ledger(led_new, C, "2026-06-10", status="reviewed", stale_claims=marker)
+        sn = scores(run_select(repo, tiers, led_new, "--count", "20"))
+        check(sn[C] < 400, "marker within the cooldown loses the boost")
+        led_plain = tmp / "ledger-stale-plain"
+        write_ledger(led_plain, C, "2026-06-10", status="reviewed")
+        sp = scores(run_select(repo, tiers, led_plain, "--count", "20"))
+        check(sn[C] == sp[C], "suppressed boost means the marker changes nothing")
+        # An incomplete outcome never advances the clock, so it never
+        # suppresses either — the page stays boosted and due.
+        led_incm = tmp / "ledger-stale-incomplete"
+        write_ledger(led_incm, C, "2026-06-10", status="incomplete", attempts=1,
+                     stale_claims=marker)
+        si2 = scores(run_select(repo, tiers, led_incm, "--count", "20"))
+        check(si2[C] > 400, "incomplete review does not suppress the boost")
+
         print("--paths override bypasses scoring")
         q = run_select(repo, tiers, empty, "--paths", TWO)
         check([a["path"] for a in q["articles"]] == [TWO], "explicit path honored")
