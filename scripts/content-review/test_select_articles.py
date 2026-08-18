@@ -428,6 +428,37 @@ def main() -> int:
             else:
                 check("tiers" not in proc.stderr.lower(), "real tiers file parses")
 
+    # --- stale-claim markers ride the queue, and escalation stops the boost ---
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
+        repo = make_repo(tmp)
+        tiers = tmp / "tiers.yaml"
+        tiers.write_text(REPO_TIERS.read_text() if REPO_TIERS.is_file() else "rules: []\n")
+
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  "checked_at": "2026-08-15"}
+
+        led = tmp / "ledger-markers"
+        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
+        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
+        q = run_select(repo, tiers, led)
+        entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
+        check(entry is not None, "marked page is boosted into the queue")
+        if entry:
+            check(entry["stale_claims"] == 1, "count field preserved")
+            check([m["entity_key"] for m in entry.get("stale_claim_markers") or []]
+                  == ["version/pulumi-package"], "queue item carries the marker itself")
+            check((entry["stale_claim_markers"][0].get("evidence") or "")
+                  == "CHANGELOG says 3.163.0", "marker evidence reaches the worker")
+
+        led_esc = tmp / "ledger-escalated"
+        write_ledger(led_esc, STACKS, TODAY,
+                     stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
+        q_esc = run_select(repo, tiers, led_esc)
+        esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
+        check(esc is None, "an escalated marker no longer boosts the page")
+
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0
 

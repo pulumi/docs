@@ -52,6 +52,15 @@ Read `.content-review-queue.json` from the repo root (written by
         "feedback": { "yes": 4, "no": 9, "neg_rate": 0.6923, "multiplier": 1.27 }
       },
       "last_reviewed": null,
+      "stale_claims": 1,
+      "stale_claim_markers": [
+        { "entity_key": "version/pulumi-package",
+          "verdict": "contradicted",
+          "evidence": "CHANGELOG lists \"Save package source to `packages` in Pulumi.yaml on `package add`\" under 3.163.0, not 3.157.0.",
+          "source": "gh api repos/pulumi/pulumi/releases",
+          "checked_at": "2026-08-15",
+          "unresolved_reviews": 0 }
+      ],
       "score": 0.91 }
   ]
 }
@@ -60,8 +69,27 @@ Read `.content-review-queue.json` from the repo root (written by
 - `lane` — `priority` (scored pick) or `manual` (workflow_dispatch override).
 - `stale_claims` (when present) — count of this page's volatile claims the
   nightly re-verification found contradicted (see §Claims index below). A
-  non-zero count is why the page jumped the queue: treat the ledger markers'
-  entity keys and evidence as priority findings to re-check first.
+  non-zero count is why the page jumped the queue.
+- `stale_claim_markers` (when present) — **those findings in full**, each with
+  the `entity_key`, the `verdict`, the `evidence` the nightly verifier
+  recorded, the `source` it reached, and `unresolved_reviews` (how many prior
+  reviews saw this marker and left it unresolved). **These are the highest-
+  priority findings in your queue and you must address every one of them.**
+  The nightly lane has already done the expensive part — it identified the
+  entity, reached an authoritative source, and wrote down what that source
+  says — so start here rather than waiting to see whether your own claim
+  extraction happens to re-derive the same finding. It may not: a page boosted
+  for a contradicted version pin was once reviewed, reported "0 contradicted"
+  across 74 re-extracted claims, and merged an unrelated one-line repair while
+  the flagged bug stayed on master.
+  For each marker, either apply the fix, or establish that the flag was wrong
+  (the nightly verdicts are single-sample and do produce false positives —
+  a synthetic module path for a locally generated SDK was once flagged as a
+  broken import). Then list its `entity_key` in the verdict sentinel's
+  `resolved_claims`. A marker you do not resolve is carried onto the next
+  review with `unresolved_reviews` incremented, and after two such rounds it
+  is escalated for a human — so silently skipping one does not make it go
+  away, it just delays it.
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - `reader_signals` / `signals` — Search Console and feedback-widget figures
@@ -335,6 +363,7 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   "skipped_findings": 2,
   "retirement": false,
   "clarity_flag": true,
+  "resolved_claims": ["version/pulumi-package"],
   "applied": [
     { "category": "claim", "file": "content/docs/iac/concepts/stacks/_index.md",
       "lines": [42, 43], "source": "verified-claims:c3" },
@@ -362,6 +391,12 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   `len(applied)`. The workflow's scope gate cross-checks these against the
   artifacts and the branch diff; for link fixes (which have no artifact) the
   declared lines must actually carry the link in the pre-fix file.
+- `resolved_claims`: optional; the `entity_key` of every
+  `stale_claim_markers` entry you resolved this run — fixed, or shown to be a
+  false positive (say which, in the PR body). Omit or leave empty when the
+  queue item carried no markers. Anything you leave out is carried forward to
+  the next review rather than cleared, so this list is the only way a marker
+  retires.
 - `clarity_flag`: optional; `true` when you flagged a readthrough `reconception`
   for this page. Carries onto the ledger record so the page's structural
   follow-up is durable even when the verdict is `clean` or `fixed` (the
