@@ -171,6 +171,17 @@ function expireCookie(name: string): void {
 }
 
 function clearSegmentUser(): void {
+    // An already-loaded analytics.js (the 401 path) holds the user in memory,
+    // and its stores persist id(null) as a literal "null" — reset first so the
+    // storage clear below removes that write too.
+    try {
+        const analytics = segmentAnalytics();
+        if (analytics && typeof analytics.user === "function") {
+            analytics.user().id(null);
+        }
+    } catch (e) {
+        // Best effort: the storage clear below is the real cleanup.
+    }
     for (const key of SEGMENT_USER_KEYS) {
         try {
             localStorage.removeItem(key);
@@ -178,16 +189,6 @@ function clearSegmentUser(): void {
             // Storage unavailable: the cookie expiry below still applies.
         }
         expireCookie(key);
-    }
-    // An already-loaded analytics.js (the 401 path) holds the user in memory
-    // and would re-persist it on the next event.
-    try {
-        const analytics = segmentAnalytics();
-        if (analytics && typeof analytics.user === "function") {
-            analytics.user().id(null);
-        }
-    } catch (e) {
-        // Best effort: storage is already cleared.
     }
 }
 
