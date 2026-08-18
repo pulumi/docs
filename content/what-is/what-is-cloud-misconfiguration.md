@@ -115,7 +115,7 @@ Infrastructure as code does not, by itself, guarantee secure settings (you can s
 
 ## How does Pulumi help prevent cloud misconfigurations?
 
-Pulumi addresses cloud misconfiguration on two fronts: making configuration reviewable and repeatable through infrastructure as code, and blocking or flagging insecure settings through policy as code. Pulumi is one part of a defense-in-depth strategy (dedicated CSPM platforms and cloud-native controls have their place too), but it closes the highest-leverage gap: catching misconfigurations before a resource is ever created.
+Pulumi addresses cloud misconfiguration on two fronts: making configuration reviewable and repeatable through infrastructure as code, and blocking or flagging insecure settings through policy as code. Pulumi is one part of a defense-in-depth strategy (dedicated CSPM platforms and cloud-native controls have their place too), but it closes the gap that IaC alone leaves: catching misconfigurations before a resource is ever created.
 
 **Infrastructure as code across every provider.** Pulumi lets you define cloud resources in TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL across 200+ providers. Every setting is explicit in code, reviewed through pull requests, and applied consistently across environments, which removes the manual, console-driven changes that produce so many misconfigurations.
 

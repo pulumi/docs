@@ -1,6 +1,6 @@
 # Pulumi
 
-> Infrastructure as code in real programming languages. Define, deploy, and manage cloud infrastructure on AWS, Azure, Google Cloud, Kubernetes, and 150+ providers using TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL.
+> Infrastructure as code in real programming languages. Define, deploy, and manage cloud infrastructure on AWS, Azure, Google Cloud, Kubernetes, and 200+ providers using TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL.
 
 Pulumi is an open source infrastructure as code platform that lets you use familiar programming languages and tools to build, deploy, and manage cloud infrastructure. Pulumi Cloud provides state management, secrets, deployments, and governance for teams.
 
