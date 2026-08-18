@@ -88,13 +88,13 @@ Several mature tools implement GitOps, most of them focused on Kubernetes.
 
 **Flux** is a set of continuous delivery and GitOps tools for Kubernetes, also a CNCF graduated project. Flux is built from composable controllers (source, kustomize, helm, notification) and integrates tightly with the Kubernetes API. It emphasizes a toolkit approach, letting platform teams assemble the reconciliation behavior they need.
 
-**Pulumi Kubernetes Operator** brings GitOps to full infrastructure as code, not just Kubernetes manifests. It runs in the cluster, treats a Pulumi Stack as a Kubernetes custom resource, and reconciles cloud infrastructure (across 200+ providers) from a Git repository using a pull-based model.
+**Pulumi Kubernetes Operator** brings GitOps to full infrastructure as code, not just Kubernetes manifests. It runs in the cluster, treats a Pulumi Stack as a Kubernetes custom resource, and reconciles cloud infrastructure (across every provider Pulumi supports) from a Git repository using a pull-based model.
 
 | Tool | Primary scope | Model | Governance |
 |---|---|---|---|
 | Argo CD | Kubernetes application delivery | Pull-based | CNCF graduated |
 | Flux | Kubernetes delivery (composable controllers) | Pull-based | CNCF graduated |
-| Pulumi Kubernetes Operator | Cloud infrastructure as code + Kubernetes (200+ providers) | Pull-based | Open source (Apache 2.0) |
+| Pulumi Kubernetes Operator | Cloud infrastructure as code + Kubernetes (every provider Pulumi supports) | Pull-based | Open source (Apache 2.0) |
 
 Argo CD and Flux focus on reconciling Kubernetes resources. The Pulumi Kubernetes Operator extends the same GitOps discipline to the underlying cloud infrastructure (databases, networks, IAM, serverless) so a single workflow can manage both the cluster and everything it depends on.
 

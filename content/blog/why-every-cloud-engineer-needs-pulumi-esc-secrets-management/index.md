@@ -158,7 +158,7 @@ Manual secrets management often leads to errors such as expired credentials or o
 
 ### Developer-Friendly Workflows
 
-Tools should make engineers' lives easier, not harder. Pulumi ESC's CLI, SDKs, and API provide intuitive ways to integrate into existing workflows. For cloud engineers leveraging Infrastructure as Code with Pulumi, managing secrets alongside the stack becomes effortless.
+Tools should make engineers' lives easier, not harder. Pulumi ESC's CLI, SDKs, and API provide intuitive ways to integrate into existing workflows. For cloud engineers leveraging infrastructure as code with Pulumi, managing secrets alongside the stack becomes effortless.
 
 {{% notes type="tip" %}}
 Thomas Meckel, Senior Cloud Architect at Ophios GmbH, explains:
