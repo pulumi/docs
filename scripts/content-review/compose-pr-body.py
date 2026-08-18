@@ -82,6 +82,20 @@ AUTOMERGE_NOTICE = (
     "(or convert the PR back to a draft) before approving."
 )
 
+# The body is composed BEFORE the model runs, but the auto-merge class is
+# derived from the verdict at publish time (publish-gate.py `classify`). The
+# publish job swaps the notice above for this one — deterministically, via
+# `--replace-notice judgment` — on judgment-class PRs, so the body never
+# promises an auto-merge the workflow didn't arm. AUTOMERGE_NOTICE therefore
+# describes deterministic-class PRs only.
+JUDGMENT_NOTICE = (
+    "> [!IMPORTANT]\n"
+    "> **This PR requires a human review decision — auto-merge is NOT armed.** "
+    "Its fixes include judgment-class changes (claim corrections, structural "
+    "repairs), so approving does not merge it by itself: the PR-review sweep "
+    "arms auto-merge only after its own gates pass, or a human merges manually."
+)
+
 # Related but distinct: the `blocker:` rule list in
 # .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml drives
 # which Vale findings the PR review renders as 🚨 blockers. This set is keyed
@@ -416,16 +430,53 @@ def compose(queue: dict, verified, vale, readthrough, frontmatter, gates=None) -
     ])
 
 
+def replace_notice(body_file: Path, kind: str) -> int:
+    """Swap the composed AUTOMERGE_NOTICE for the class-appropriate notice,
+    in place. Deterministic and idempotent: already-swapped bodies no-op, and
+    a body carrying neither notice (shouldn't happen — the compose fallback
+    emits AUTOMERGE_NOTICE too) warns without failing the publish."""
+    notices = {"judgment": JUDGMENT_NOTICE}
+    replacement = notices[kind]
+    try:
+        body = body_file.read_text()
+    except OSError as e:
+        print(f"::warning::compose-pr-body: {body_file} unreadable ({e}); "
+              "notice not swapped", file=sys.stderr)
+        return 0
+    if replacement in body:
+        print(f"compose-pr-body: {kind} notice already present; no-op", file=sys.stderr)
+        return 0
+    if AUTOMERGE_NOTICE not in body:
+        print(f"::warning::compose-pr-body: auto-merge notice not found in "
+              f"{body_file}; notice not swapped", file=sys.stderr)
+        return 0
+    body_file.write_text(body.replace(AUTOMERGE_NOTICE, replacement, 1))
+    print(f"compose-pr-body: swapped auto-merge notice -> {kind}", file=sys.stderr)
+    return 0
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
-    p.add_argument("--queue", required=True)
+    p.add_argument("--queue")
     p.add_argument("--out", help="output path (default: stdout)")
     p.add_argument("--verified-claims", default=".verified-claims.json")
     p.add_argument("--vale-findings", default=".vale-findings.json")
     p.add_argument("--readthrough", default=".readthrough-findings.json")
     p.add_argument("--frontmatter", default=".frontmatter-validation.json")
     p.add_argument("--repo-root", default=".")
+    p.add_argument("--replace-notice", choices=["judgment"],
+                   help="swap the composed auto-merge notice in --body-file for "
+                        "this class's notice, then exit (publish-job mode)")
+    p.add_argument("--body-file",
+                   help="the PR body draft to edit in place (with --replace-notice)")
     args = p.parse_args()
+
+    if args.replace_notice:
+        if not args.body_file:
+            p.error("--replace-notice requires --body-file")
+        return replace_notice(Path(args.body_file), args.replace_notice)
+    if not args.queue:
+        p.error("--queue is required (unless --replace-notice)")
 
     root = Path(args.repo_root)
     queue = json.loads(Path(args.queue).read_text())

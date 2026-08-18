@@ -10,11 +10,14 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # strategic tier x traffic, nudged by bounded boost-only reader signals (Search
 # Console impressions/CTR, feedback-widget votes) when their export exists.
 # Each worker reviews
-# exactly one article and, if it finds a fix, opens a draft PR; the re-lint
-# gate promotes it to ready (firing the normal triage -> review chain) and
-# arms GitHub auto-merge. master requires an approving review + the build
-# check, so a human approval is still required to merge — auto-merge only
-# removes the manual merge click after approval.
+# exactly one article and, if it finds a fix, opens a ready PR (draft only on
+# lint failure), firing the normal triage -> review chain. The publish gate
+# classes each PR from its verdict's applied[] categories: deterministic-class
+# PRs (links, Vale-named fixes, frontmatter; small churn) arm GitHub
+# auto-merge — master requires an approving review + the build check, so a
+# human approval is still what merges them; judgment-class PRs (claim
+# corrections, readthrough repairs, retirements) open UN-armed and merge only
+# when the PR-review sweep arms them post-approval or a human merges.
 #
 # SINGLE SWITCH (default-on) — the CONTENT_REVIEW_COUNT repo variable is both
 # the on/off and the cadence knob:

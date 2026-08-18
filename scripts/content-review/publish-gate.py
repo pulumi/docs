@@ -35,6 +35,12 @@ Outputs (to $GITHUB_OUTPUT when set, always echoed):
 - `branch` — the canonical branch name, derived here from the queue slug and
   the verdict's `retirement` flag so the model never chooses it.
 - `retirement` — "true"/"false".
+- `class` — the PR's auto-merge class, derived from the verdict's own
+  `applied[]` categories (see `classify`): "deterministic" (the workflow arms
+  GitHub auto-merge at publish; Robo-Cam's stamp merges it), "judgment" (opens
+  un-armed; the review sweep arms it only when its gates pass), or "none"
+  (nothing publishable). The class also lands on the PR as a
+  `content-review/<class>` label.
 
 Exit codes: 0 = pass (publish may be true or false), 1 = violation.
 """
@@ -66,6 +72,21 @@ RETIRE_PREFIXES = (
     "scripts/redirects/",
 )
 RETIRE_FILES = ("data/docs_menu_sections.yml",)
+
+# Auto-merge classing. A PR is "deterministic" — safe to arm auto-merge at
+# publish, so an approving review (including Robo-Cam's rubber stamp) merges
+# it — only when every applied fix is in a category whose correction the
+# pipeline itself authored (a dead-link path, a Vale-named replacement, a
+# frontmatter repair) AND the diff is small. Claim corrections and
+# readthrough repairs are judgment calls however confident, so they class
+# "judgment": the PR opens un-armed and the review sweep arms it only after
+# its own gate stack passes. Retirements are always "judgment" — a page
+# removal never merges on a bot stamp.
+DETERMINISTIC_CATEGORIES = {"link", "vale", "frontmatter"}
+# Added+deleted lines, counted from the patch. Deterministic fixes are
+# line-scoped replacements; 40 covers a link/Vale sweep across a long page
+# while excluding anything shaped like a rewrite. Tuning knob, not physics.
+DETERMINISTIC_MAX_CHURN = 40
 
 
 def fail(msg: str) -> None:
@@ -140,6 +161,45 @@ def read_paths(paths_file: Path) -> list[str] | None:
         fail(f"paths file {paths_file} is unreadable ({e})")
         return None
     return [p.decode("utf-8") for p in raw.split(b"\0") if p]
+
+
+def patch_churn(patch_path: Path) -> int:
+    """Added + deleted line count from a git patch (context lines excluded)."""
+    try:
+        text = patch_path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return 0
+    churn = 0
+    for line in text.splitlines():
+        if line.startswith(("+++", "---")):
+            continue
+        if line.startswith(("+", "-")):
+            churn += 1
+    return churn
+
+
+def classify(verdict: dict | None, patch_path: Path, publish: bool) -> str:
+    """The PR's auto-merge class — see the constants above for the policy.
+
+    Extension point: a future verdict kind that must never auto-merge (e.g. a
+    whole-page glow-up) adds its own branch here, before the deterministic
+    test.
+    """
+    if not publish or verdict is None:
+        return "none"
+    if verdict.get("retirement"):
+        return "judgment"
+    if verdict.get("clarity_flag"):
+        return "judgment"
+    applied = verdict.get("applied")
+    if not isinstance(applied, list) or not applied:
+        return "judgment"
+    categories = {str(a.get("category")) for a in applied if isinstance(a, dict)}
+    if not categories or not categories <= DETERMINISTIC_CATEGORIES:
+        return "judgment"
+    if patch_churn(patch_path) > DETERMINISTIC_MAX_CHURN:
+        return "judgment"
+    return "deterministic"
 
 
 def check_scope(paths: list[str], article_path: str, retirement: bool) -> bool:
@@ -218,6 +278,7 @@ def main() -> int:
         "publish": "true" if publish else "false",
         "branch": branch,
         "retirement": "true" if retirement else "false",
+        "class": classify(verdict, args.patch, publish),
     })
     return 0
 

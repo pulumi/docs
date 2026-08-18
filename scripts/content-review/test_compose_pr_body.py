@@ -204,6 +204,27 @@ unflagged = c.compose({**FLAGGED_QUEUE, "articles": [{
 }]}, None, None, None, None)
 check("healthy-CTR queue has no Search opportunity row", "Search opportunity" not in unflagged)
 
+# Notice swap (publish-job mode for judgment-class PRs): replaces the
+# composed auto-merge notice, idempotent, and no-ops safely on odd bodies.
+import tempfile
+
+with tempfile.TemporaryDirectory() as _td:
+    _body = Path(_td) / "body.md"
+    _body.write_text(out)
+    check("composed body carries the auto-merge notice", c.AUTOMERGE_NOTICE in out)
+    c.replace_notice(_body, "judgment")
+    swapped = _body.read_text()
+    check("swap replaces the auto-merge notice", c.AUTOMERGE_NOTICE not in swapped)
+    check("swap inserts the judgment notice", c.JUDGMENT_NOTICE in swapped)
+    check("swap keeps the rest of the body", "## Why this page" in swapped)
+    c.replace_notice(_body, "judgment")
+    check("swap is idempotent", _body.read_text() == swapped)
+    _noticeless = Path(_td) / "noticeless.md"
+    _noticeless.write_text("## Why this page\n")
+    c.replace_notice(_noticeless, "judgment")
+    check("swap no-ops without failing when no notice is present",
+          _noticeless.read_text() == "## Why this page\n")
+
 if failures:
     print(f"\n{len(failures)} failure(s)", file=sys.stderr)
     sys.exit(1)

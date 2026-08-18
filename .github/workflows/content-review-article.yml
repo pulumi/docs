@@ -244,8 +244,10 @@ jobs:
       # Degrades to a minimal valid draft so a compose hiccup never blocks the run.
       # The fallback must carry the same two contract-bearing pieces the composer
       # emits (compose-pr-body.py's AUTOMERGE_NOTICE and LINT_PLACEHOLDER): the
-      # auto-merge notice, because the re-lint gate arms auto-merge either way and
-      # a reviewer must not be surprised by it, and the `<!-- LINT-RESULT -->`
+      # auto-merge notice, because deterministic-class PRs arm auto-merge and a
+      # reviewer must not be surprised by it (the publish job swaps in the
+      # judgment notice for judgment-class PRs — keep this text identical to
+      # AUTOMERGE_NOTICE or that swap misses), and the `<!-- LINT-RESULT -->`
       # placeholder, because stamp-lint-result.py silently no-ops without it and
       # the authoritative lint result would never reach the PR body.
       - name: Compose PR body draft
@@ -665,6 +667,15 @@ jobs:
           # Authoritative lint gate: open ready on PASS, draft on FAIL. The
           # result is recorded as a step output so the next step can stamp the
           # body and arm auto-merge / comment without re-running lint.
+          # The body was composed pre-model with the auto-merge notice, but
+          # the class is only known now (gate output, from the verdict's own
+          # applied[] categories). Judgment-class PRs get the un-armed notice
+          # swapped in deterministically before the PR opens.
+          CLASS="${{ steps.gate.outputs.class }}"
+          if [ "$CLASS" = "judgment" ]; then
+            python3 scripts/content-review/compose-pr-body.py \
+              --replace-notice judgment --body-file .pr-body-draft.md
+          fi
           if make lint > .lint.log 2>&1; then
             echo "lint passed on $BRANCH; opening PR ready for review (fires triage → review)"
             echo "lint_result=passed" >> "$GITHUB_OUTPUT"
@@ -676,6 +687,12 @@ jobs:
             gh pr create --draft --title "$TITLE" --body-file .pr-body-draft.md \
               --base master --head "$BRANCH"
           fi
+          # Class label, fail-open: the label routes Robo-Cam's handling but
+          # its absence must never block the PR (the sweep also keys on the
+          # branch prefix). Labels are a one-time repo pre-req:
+          #   gh label create content-review/deterministic ... etc.
+          gh pr edit "$BRANCH" --add-label "content-review/$CLASS" \
+            || echo "::warning::could not add label content-review/$CLASS (missing from repo?)"
 
       # Post-publish bookkeeping. The authoritative `make lint` already ran in
       # the publish step and decided whether the PR opened ready (PASS) or draft
@@ -707,14 +724,19 @@ jobs:
           }
           if [ "${{ steps.publish.outputs.lint_result }}" = "passed" ]; then
             stamp_body passed
-            # Arm auto-merge (squash) on the ready PR. `master` requires 1
-            # approving review AND the "Install deps and build site" check, so
-            # this NEVER merges on its own — the PR merges only once a human
-            # approves and the build is green, which just removes the manual
-            # merge click after the review approves. No-op (warns) if auto-merge
-            # is unavailable or the PR already satisfies all conditions.
-            gh pr merge "$BRANCH" --auto --squash \
-              || echo "::warning::could not enable auto-merge on $BRANCH"
+            # Arm auto-merge (squash) — DETERMINISTIC-CLASS PRs ONLY. For
+            # those, `master` still requires 1 approving review AND the
+            # "Install deps and build site" check, so this never merges on
+            # its own — it removes the manual merge click after approval.
+            # Judgment-class PRs open un-armed: the PR-review sweep arms them
+            # at approve time when its gates pass, or a human merges — an
+            # approval on those is no longer implicitly a merge.
+            if [ "${{ steps.gate.outputs.class }}" = "deterministic" ]; then
+              gh pr merge "$BRANCH" --auto --squash \
+                || echo "::warning::could not enable auto-merge on $BRANCH"
+            else
+              echo "class=${{ steps.gate.outputs.class }}; auto-merge NOT armed (sweep stamp-then-arm or a human merges)"
+            fi
           else
             stamp_body failed
             {

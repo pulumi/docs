@@ -291,9 +291,11 @@ flows through the normal pipeline; a trivial fix is short-circuited there). A
 lint failure opens the PR as a draft instead, with a comment for a human; humans
 merge. The sections (each is checked for):
 
-- **Auto-merge notice** (top `> [!IMPORTANT]` block): the re-lint gate arms
-  GitHub auto-merge on the PR, so the body flags that approving merges it.
-  **Leave verbatim** — do not move, reword, or remove it.
+- **Auto-merge notice** (top `> [!IMPORTANT]` block): flags how the PR merges.
+  **Leave verbatim** — do not move, reword, or remove it. The publish job
+  classes the PR from your verdict's `applied[]` categories (deterministic
+  fixes arm auto-merge; judgment fixes don't) and deterministically swaps in
+  the matching notice — that swap keys on the exact composed text.
 - **Why this page**: composed from the selection queue (lane, tier, traffic
   figure + period, Search/Reader-feedback figures when the reader-signals
   export was available, last reviewed). **Leave verbatim** — do not
