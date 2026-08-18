@@ -32,10 +32,73 @@
         {{ $aliases = $aliases | append (printf "/docs/reference/cloud-rest-api/schema/%s/" $name) }}
     {{ end }}
 
+    {{/* meta_desc: derive an entity-specific description from the component's own
+         OpenAPI description instead of the name-only boilerplate below. Many
+         components declare their real description one allOf/$ref hop away rather
+         than on the component itself (the same composition schema-component.html
+         already resolves for on-page rendering via openapi/resolve-schema.html).
+         A single hop of $ref/allOf resolution is sufficient here: checked against
+         a full-depth reference resolution offline, one hop already recovers a
+         non-empty description for all 800 current components, so this stays a
+         plain lookup rather than needing recursion. */}}
+    {{ $schema := index $schemas $name }}
+    {{ $desc := "" }}
+    {{ if isset $schema "allOf" }}
+        {{ range $schema.allOf }}
+            {{ if eq $desc "" }}
+                {{ if isset . "$ref" }}
+                    {{ $refParts := split (index . "$ref") "/" }}
+                    {{ $refName := index $refParts (sub (len $refParts) 1) }}
+                    {{ with index $schemas $refName }}
+                        {{ if .description }}
+                            {{ $desc = .description }}
+                        {{ else if isset . "allOf" }}
+                            {{ range .allOf }}
+                                {{ if and (eq $desc "") (not (isset . "$ref")) }}
+                                    {{ with .description }}
+                                        {{ $desc = . }}
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ else }}
+                    {{ with .description }}
+                        {{ $desc = . }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        {{ with $schema.description }}
+            {{ $desc = . }}
+        {{ end }}
+    {{ else if isset $schema "$ref" }}
+        {{ $refParts := split (index $schema "$ref") "/" }}
+        {{ $refName := index $refParts (sub (len $refParts) 1) }}
+        {{ with index $schemas $refName }}
+            {{ $desc = .description | default "" }}
+        {{ end }}
+    {{ else }}
+        {{ $desc = $schema.description | default "" }}
+    {{ end }}
+
+    {{ $metaDesc := printf "Schema reference for the %s component in the Pulumi Cloud REST API." $name }}
+    {{ with $desc }}
+        {{ $descClean := trim (replaceRE `\s+` " " .) " \t\n\r" }}
+        {{ if $descClean }}
+            {{/* truncate returns HTML-escaped text (e.g. an apostrophe becomes
+                 "&#39;"); htmlUnescape reverses that so the stored param is plain
+                 text, matching every other param on this page and avoiding a
+                 double-escape (e.g. "&amp;#39;") when head.html renders it. */}}
+            {{ $truncated := truncate 110 $descClean | htmlUnescape }}
+            {{ $metaDesc = printf "%s Pulumi Cloud REST API schema: %s." $truncated $name }}
+        {{ end }}
+    {{ end }}
+
     {{ $params := dict
         "h1" $name
         "title_tag" (printf "Pulumi Cloud REST API schema: %s" $name)
-        "meta_desc" (printf "Schema reference for the %s component in the Pulumi Cloud REST API." $name)
+        "meta_desc" $metaDesc
         "openapi_schema" true
         "schema_name" $name
         "notoc" true
