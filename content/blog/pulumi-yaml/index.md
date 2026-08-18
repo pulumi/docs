@@ -9,11 +9,11 @@ tags:
 category: product
 ---
 
-Since we first launched Pulumi 4 years ago, a core point of differentiation between Pulumi and other Infrastructure as Code offerings has been the ability to use popular general purpose programming languages - and their rich software engineering ecosystems - in order to scale up the complexity and richness of cloud infrastructure workloads. This approach has enabled cloud builders to adopt and embrace modern Infrastructure as Code with Pulumi using a wide variety of languages, including TypeScript, Python, Go, .NET and Java.
+Since we first launched Pulumi 4 years ago, a core point of differentiation between Pulumi and other infrastructure as code offerings has been the ability to use popular general purpose programming languages - and their rich software engineering ecosystems - to scale up the complexity and richness of cloud infrastructure workloads. This approach has enabled cloud builders to adopt and embrace modern infrastructure as code with Pulumi using a wide variety of languages, including TypeScript, Python, Go, .NET and Java.
 
-Our goal though has always been to offer the broadest range of programming language options to empower __*every*__ cloud builder so that they could benefit from the best of Pulumi’s Infrastructure as Code platform.
+Our goal though has always been to offer the broadest range of programming language options to empower __*every*__ cloud builder so that they could benefit from the best of Pulumi’s infrastructure as code platform.
 
-Today, we are excited to launch [Pulumi YAML](/docs/iac/languages-sdks/yaml/), a simple YAML-based interface to the entirety of the Pulumi Infrastructure as Code platform.
+Today, we are excited to launch [Pulumi YAML](/docs/iac/languages-sdks/yaml/), a simple YAML-based interface to the entirety of the Pulumi infrastructure as code platform.
 
 <!--more-->
 
