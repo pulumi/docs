@@ -16,11 +16,23 @@ schema_type: auto
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        Experimental Rust support for Pulumi is now public in Pulumi Labs: write programs in ordinary Rust, build with Cargo, deploy with pulumi up. All 179 language conformance tests pass. Community-supported, and community interest is what graduates it.
+        Rust has been one of the most upvoted requests in Pulumi's history. It now exists: pulumi-rust is public in Pulumi Labs.
+
+        Write an ordinary Rust crate, build it with Cargo, deploy it with pulumi up. Here's what works today.
     linkedin: |
-        Rust language support has been one of the most upvoted requests in Pulumi's issue tracker for years. Today it exists: pulumi-rust, an experimental Rust SDK and language plugin, is public in the Pulumi Labs organization. Programs are ordinary Rust crates built with Cargo, provider SDKs are generated from real provider schemas, and all 179 tests of Pulumi's language conformance suite pass. It is community-supported, with no stability guarantees yet, and community involvement is exactly what can graduate it to full support.
+        Rust has been one of the most upvoted requests in Pulumi's history. Until now the honest answer was "not yet".
+
+        That changed today. pulumi-rust, an experimental Rust SDK and language plugin, is public in the Pulumi Labs organization.
+
+        A Pulumi program in Rust is an ordinary crate. Cargo builds it, pulumi up deploys it, and there is nothing exotic in between.
+
+        Labs means experimental and community-supported, with no stability promises yet. It also means the project graduates on community interest, so the most useful thing you can do is run it and tell us what breaks.
+
+        The setup is one clone and one build.
     bluesky: |
-        Experimental Rust support for Pulumi is now public in Pulumi Labs: ordinary Rust crates, built with Cargo, deployed with pulumi up. All 179 conformance tests pass. Community interest is what graduates it.
+        A Pulumi program in Rust is just a crate. Cargo builds it, pulumi up deploys it, and provider SDKs come from the real provider schemas.
+
+        pulumi-rust is experimental and community-supported, now public in Pulumi Labs. Twenty-two examples are there to try.
 ---
 
 Rust language support is one of the most upvoted requests in Pulumi's history: [pulumi/pulumi#3622](https://github.com/pulumi/pulumi/issues/3622).  Today there is something concrete to point at. [pulumi-rust](https://github.com/pulumi-labs/pulumi-rust) is an experimental Rust SDK and language plugin for Pulumi, now public in the Pulumi Labs organization. You write a Pulumi program as an ordinary Rust crate, build it with Cargo, and deploy it with `pulumi up`.
