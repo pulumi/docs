@@ -322,12 +322,45 @@ def write_outputs(report: dict) -> None:
         fh.write(f"has_stale={'true' if report['meta']['n_stale'] else 'false'}\n")
 
 
+def inconclusive_breakdowns(results: list[dict]) -> tuple[dict, dict]:
+    """Two count maps over the non-decided results, for diagnosing WHY the
+    inconclusive rate is what it is (76% on the night this was added):
+
+    - by_type:   the entity_key's ctype prefix (the part before the first
+                 "/", per entity_key.py) — which kinds of fact can't verify.
+    - by_reason: "demoted" (decided, but only own-corpus evidence), "error"
+                 (verifier crashed), else the raw verdict ("unverifiable",
+                 "no_verdict" for a missing one).
+
+    Instrumentation only — nothing downstream keys on these; the routing
+    fixes they motivate are follow-up work.
+    """
+    by_type: dict[str, int] = {}
+    by_reason: dict[str, int] = {}
+    for r in results:
+        if r.get("verdict") in DECIDED_VERDICTS:
+            continue
+        ctype = str(r.get("entity_key") or "").split("/", 1)[0] or "unknown"
+        by_type[ctype] = by_type.get(ctype, 0) + 1
+        if r.get("demoted_from"):
+            reason = "demoted"
+        elif r.get("error"):
+            reason = "error"
+        else:
+            reason = str(r.get("verdict") or "no_verdict")
+        by_reason[reason] = by_reason.get(reason, 0) + 1
+    return (dict(sorted(by_type.items())), dict(sorted(by_reason.items())))
+
+
 def finish(report: dict, out_path: Path) -> int:
     out_path.write_text(json.dumps(report, indent=2) + "\n")
     m = report["meta"]
     log(f"checked={m['n_checked']} stale={m['n_stale']} fresh={m['n_fresh']} "
         f"inconclusive={m['n_inconclusive']} (of which {m['n_demoted']} demoted for "
         f"own-corpus evidence) (volatile entities={m['n_entities']}) -> {out_path}")
+    for label in ("inconclusive_by_type", "inconclusive_by_reason"):
+        if m.get(label):
+            log(f"{label}: " + " ".join(f"{k}={v}" for k, v in m[label].items()))
     write_outputs(report)
     return 0
 
@@ -420,6 +453,8 @@ def run(args) -> int:
     report["meta"]["n_fresh"] = len(fresh)
     report["meta"]["n_inconclusive"] = len(results) - len(stale) - len(fresh)
     report["meta"]["n_demoted"] = sum(1 for r in results if r["demoted_from"])
+    report["meta"]["inconclusive_by_type"], report["meta"]["inconclusive_by_reason"] = \
+        inconclusive_breakdowns(results)
 
     if stale:
         changed = apply_markers(ledger, stale, today)
@@ -495,6 +530,20 @@ def self_test() -> int:
           superseded_by_review(ents["version/pulumi-gcp"], incomplete) is False)
     check("missing ledger entries never supersede",
           superseded_by_review(ents["version/pulumi-gcp"], {}) is False)
+
+    # Inconclusive breakdowns: decided results excluded, reasons bucketed.
+    mixed = [
+        {"entity_key": "version/a", "verdict": "verified"},
+        {"entity_key": "version/b", "verdict": "unverifiable", "demoted_from": "matches"},
+        {"entity_key": "numerical/c", "verdict": "unverifiable"},
+        {"entity_key": "numerical/d", "verdict": None, "error": "boom"},
+        {"entity_key": None, "verdict": "unverifiable"},
+    ]
+    b_type, b_reason = inconclusive_breakdowns(mixed)
+    check("breakdown by type buckets on the ctype prefix",
+          b_type == {"numerical": 2, "unknown": 1, "version": 1})
+    check("breakdown by reason splits demoted/error/verdict",
+          b_reason == {"demoted": 1, "error": 1, "unverifiable": 2})
 
     # Re-derived volatility overrides the snapshot's stored flag, so a
     # narrowed policy reaches the whole index the night it ships.
