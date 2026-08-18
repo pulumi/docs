@@ -116,9 +116,9 @@ The right alternative depends on what is driving the search. If the pain is Terr
 | Dimension | Terragrunt | Pulumi |
 |---|---|---|
 | What it is | Wrapper over Terraform/OpenTofu | Full IaC platform |
-| Authoring language | HCL + `terragrunt.hcl` | TypeScript, Python, Go, .NET, Java, YAML |
-| DRY mechanism | Config inheritance and generation | Native language features (loops, functions, classes) |
-| State | Backend you configure per module | Managed service or self-hosted backend |
+| Authoring language | HCL + `terragrunt.hcl` | TypeScript, JavaScript, Python, Go, .NET, Java, YAML |
+| DRY mechanism | Config inheritance, remote-state generation, and hooks | Native language features (loops, functions, classes) |
+| State | Root `remote_state` block generating each unit's backend config | Managed service or self-hosted backend |
 | Cross-module wiring | `dependency` blocks and `run --all` | Stack references and stacks |
 | Extra tool required for DRY/orchestration | Yes (Terragrunt itself) | No |
 

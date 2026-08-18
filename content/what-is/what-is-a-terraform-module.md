@@ -248,7 +248,7 @@ The `source` argument supports several locations: a local path in the same repos
 
 ### What is the difference between a Terraform module and a Pulumi component?
 
-Both encapsulate a group of resources behind inputs and outputs. A Terraform module is a directory of HCL files, and a Pulumi component is a class in a general-purpose language (TypeScript, Python, Go, .NET, Java) that extends `ComponentResource`. The practical difference is expressiveness and distribution: components use the host language's loops, functions, and unit-testing tools, and can be packaged as Pulumi Packages for use across multiple languages. Pulumi can also consume existing Terraform modules directly.
+Both encapsulate a group of resources behind inputs and outputs. A Terraform module is a directory of HCL files, and a Pulumi component is a class in a general-purpose language (TypeScript, JavaScript, Python, Go, .NET, Java) that extends `ComponentResource`. The practical difference is expressiveness and distribution: components use the host language's loops, functions, and unit-testing tools, and can be packaged as Pulumi Packages for use across multiple languages. Pulumi can also consume existing Terraform modules directly.
 
 ### Can you use Terraform modules with Pulumi?
 
