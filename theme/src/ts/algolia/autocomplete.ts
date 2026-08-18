@@ -58,16 +58,20 @@ function scrollItemClearOfOverlays(item: HTMLElement, container: HTMLElement, ov
     const containerRect = container.getBoundingClientRect();
 
     // Start with the container's own (unobstructed) top and bottom, then narrow the visible band
-    // for each overlay that actually overlaps the container horizontally and vertically.
+    // for each overlay that actually overlaps the container vertically. Overlays are looked up
+    // within the container's own panel (falling back to the whole document if no panel ancestor
+    // exists), so a header or footer belonging to a different, currently inactive source can't be
+    // matched in the first place.
     let visibleTop = containerRect.top;
     let visibleBottom = containerRect.bottom;
 
+    const overlayScope = container.closest<HTMLElement>(".aa-Panel") ?? document;
+
     for (const selector of overlaySelectors) {
-        document.querySelectorAll<HTMLElement>(selector).forEach(overlay => {
+        overlayScope.querySelectorAll<HTMLElement>(selector).forEach(overlay => {
             const overlayRect = overlay.getBoundingClientRect();
 
-            // Skip overlays that don't overlap this container at all (e.g., a header belonging to
-            // a different, currently inactive source).
+            // Skip overlays that don't overlap this container vertically.
             if (overlayRect.bottom <= containerRect.top || overlayRect.top >= containerRect.bottom) {
                 return;
             }
@@ -95,7 +99,13 @@ function scrollItemClearOfOverlays(item: HTMLElement, container: HTMLElement, ov
     }
 
     if (delta !== 0) {
-        container.scrollBy({ top: delta, behavior: "smooth" });
+        // Scroll to an absolute position rather than a relative one. `onStateChange` fires on
+        // every arrow keypress, so holding the key down can issue a new scroll request while the
+        // previous smooth-scroll animation is still in flight; a relative `scrollBy` would measure
+        // its delta from whatever intermediate position the animation happened to be at, which can
+        // under-scroll and let the active item drift back under an overlay. An absolute `scrollTo`
+        // is immune to that, the same way the native `scrollIntoView` it replaces always was.
+        container.scrollTo({ top: container.scrollTop + delta, behavior: "smooth" });
     }
 }
 
