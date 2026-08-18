@@ -99,19 +99,29 @@
      where they exist; otherwise derive a page-specific value from the
      page's own headline plus its section ancestors, the same trail used
      to build BreadcrumbList, so the keyword set names what this page is
-     actually about instead of repeating one hardcoded phrase everywhere. */}}
+     actually about instead of repeating one hardcoded phrase everywhere.
+     The outermost section ancestor (e.g. "Cloud Engineering Concepts
+     Explained" for every /what-is/ page, "Documentation" for every
+     /docs/ page) is skipped: it is itself a constant repeated across
+     thousands of pages, the exact problem this block exists to remove,
+     so only deeper crumbs plus the headline carry the topic. */}}
 {{ $keywords := slice }}
 {{ with .Params.tags }}
   {{ $keywords = . }}
 {{ else }}
+  {{ $skippedOutermostAncestor := false }}
   {{ range .Ancestors.Reverse }}
     {{ if and (not .IsHome) .LinkTitle }}
-      {{ $keywords = $keywords | append .LinkTitle }}
+      {{ if $skippedOutermostAncestor }}
+        {{ $keywords = $keywords | append .LinkTitle }}
+      {{ else }}
+        {{ $skippedOutermostAncestor = true }}
+      {{ end }}
     {{ end }}
   {{ end }}
   {{ $keywordHeadline := or .Params.title_tag .Title }}
-  {{ $keywordHeadline = replaceRE `(?i)^what is (a |an |the )?` "" $keywordHeadline }}
-  {{ $keywordHeadline = replaceRE `\?\s*$` "" $keywordHeadline }}
+  {{ $keywordHeadline = replaceRE `(?i)^(what (is|are)|is) (a |an |the )?` "" $keywordHeadline }}
+  {{ $keywordHeadline = replaceRE `\?.*$` "" $keywordHeadline }}
   {{ $keywordHeadline = strings.TrimSpace $keywordHeadline }}
   {{ if $keywordHeadline }}
     {{ $keywords = $keywords | append $keywordHeadline }}
