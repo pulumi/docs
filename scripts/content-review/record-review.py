@@ -527,6 +527,28 @@ def self_test() -> int:
               rec_e["stale_claims"][0]["unresolved_reviews"] == 2
               and rec_e["stale_claims"][0]["escalated"] is True)
 
+        # The other half of the round-trip: select-articles.py hands escalated
+        # markers through, so they must survive rather than be filtered out
+        # here — otherwise the ledger loses them and the entity re-enters the
+        # nightly pool.
+        esc_marker = {**marker, "entity_key": "version/old-miss",
+                      "unresolved_reviews": 2, "escalated": True}
+        with_esc = {**article, "stale_claim_markers": [marker, esc_marker]}
+        rec_esc = build_record(with_esc, {"verdict": "clean", "reason": "x"},
+                               None, with_esc["slug"])
+        carried = {m["entity_key"]: m for m in rec_esc["stale_claims"]}
+        check("escalated marker persists through a review",
+              "version/old-miss" in carried)
+        check("escalated marker stays escalated and keeps counting",
+              carried["version/old-miss"]["escalated"] is True
+              and carried["version/old-miss"]["unresolved_reviews"] == 3)
+        check("an escalated marker can still be resolved",
+              "stale_claims" not in build_record(
+                  {**article, "stale_claim_markers": [esc_marker]},
+                  {"verdict": "fixed", "fixes": 1,
+                   "resolved_claims": ["version/old-miss"]},
+                  None, article["slug"]))
+
         rec_none = build_record(article, {"verdict": "clean", "reason": "x"},
                                 None, article["slug"])
         check("no markers -> no stale_claims key", "stale_claims" not in rec_none)

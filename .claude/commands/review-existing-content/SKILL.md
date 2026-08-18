@@ -82,6 +82,10 @@ Read `.content-review-queue.json` from the repo root (written by
   for a contradicted version pin was once reviewed, reported "0 contradicted"
   across 74 re-extracted claims, and merged an unrelated one-line repair while
   the flagged bug stayed on master.
+  A marker carrying `"escalated": true` has already survived two reviews
+  unresolved, so it no longer jumps the page to the front of the queue and a
+  human may be looking at it — but it is still a live finding and still yours
+  to resolve if you can. Treat it like any other marker.
   For each marker, either apply the fix, or establish that the flag was wrong
   (the nightly verdicts are single-sample and do produce false positives —
   a synthetic module path for a locally generated SDK was once flagged as a

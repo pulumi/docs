@@ -164,19 +164,30 @@ STALE_CLAIM_BOOST = 400.0
 MARKER_ESCALATION_CAP = 2
 
 
-def active_markers(entry: dict | None) -> list[dict]:
-    """This entry's stale-claim markers that still warrant priority handling.
+def all_markers(entry: dict | None) -> list[dict]:
+    """Every stale-claim marker on this ledger entry, escalated or not.
 
-    Escalated markers (see MARKER_ESCALATION_CAP) are excluded: they neither
-    boost the page nor ride along in the queue item, because repeated reviews
-    have already failed to act on them and another automated pass is not the
-    remedy.
+    This is what rides in the queue item, and it is deliberately unfiltered.
+    record-review.py rebuilds the ledger entry from the queue and writes back
+    whatever markers survive the review, so a marker withheld here would be
+    dropped from the ledger the next time the page is reviewed for any reason
+    — and `already_marked()` in reverify-claims.py would then let the entity
+    back into the nightly pool, restarting the detect/boost/miss/clear cycle
+    this whole mechanism exists to break.
     """
-    out = []
-    for m in (entry or {}).get("stale_claims") or []:
-        if isinstance(m, dict) and not m.get("escalated"):
-            out.append(m)
-    return out
+    return [m for m in (entry or {}).get("stale_claims") or [] if isinstance(m, dict)]
+
+
+def active_markers(entry: dict | None) -> list[dict]:
+    """The subset of markers that still earn the page a priority boost.
+
+    Escalated markers (see MARKER_ESCALATION_CAP) are excluded *from the
+    boost only*: repeated reviews have already failed to act on them, so
+    another jump to the front of the queue is not the remedy. They still
+    travel in the queue item and still persist on the ledger — see
+    all_markers().
+    """
+    return [m for m in all_markers(entry) if not m.get("escalated")]
 
 # Reader-signal boost tuning. Both multipliers floor at exactly 1.0 (see the
 # module docstring); the caps keep the maximum combined boost (~1.63x) well
@@ -605,7 +616,7 @@ def main() -> int:
             "signals": signal_terms(path)[2],
             "last_reviewed": entry.get("reviewed_at"),
             "attempts": int(entry.get("attempts", 0)),
-            "stale_claims": len(entry.get("stale_claims") or []),
+            "stale_claims": len(all_markers(entry)),
             # The markers themselves, not just how many there are. The nightly
             # re-verification already did the expensive work — it identified the
             # entity, reached an authoritative source, and wrote down the
@@ -615,7 +626,7 @@ def main() -> int:
             # #20927: a page boosted for a contradicted version pin was reviewed,
             # reported "0 contradicted" across 74 re-extracted claims, and merged
             # a one-line unrelated repair while the flagged bug stayed on master).
-            "stale_claim_markers": active_markers(entry),
+            "stale_claim_markers": all_markers(entry),
             "score": score,
         }
 
