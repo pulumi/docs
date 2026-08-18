@@ -21,7 +21,7 @@ To start from scratch, follow the [AWS get-started guide](/docs/iac/get-started/
 
 ## Infrastructure as Code
 
-[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
+[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
 
 Pulumi provides several packages for working with AWS. Most projects combine more than one. For a deeper comparison, see [Choosing a Pulumi AWS provider](/docs/iac/guides/clouds/aws/providers/).
 

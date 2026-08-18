@@ -36,7 +36,7 @@ social:
 
 Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
 
-Pulumi uses general-purpose programming languages to define infrastructure. TypeScript, Python, Go, C#, Java. Every framework that makes AI agents write better TypeScript also makes your `pulumi up` better. After spending a few weeks with each one, I have opinions about when to use which.
+Pulumi uses general-purpose programming languages to define infrastructure. TypeScript, JavaScript, Python, Go, .NET, Java. Every framework that makes AI agents write better TypeScript also makes your `pulumi up` better. After spending a few weeks with each one, I have opinions about when to use which.
 
 <!--more-->
 

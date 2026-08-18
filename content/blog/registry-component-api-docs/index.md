@@ -61,7 +61,7 @@ When you run `pulumi package publish` for your component, we analyze your compon
 
 ### Multi-Language Support Out of the Box
 
-One of Pulumi's core strengths is our [multi-language components](/blog/pulumi-components/): write once in your preferred language, and teams can consume the component in [Python, TypeScript, Go, C#, Java, or YAML](/docs/iac/languages-sdks/). The automatic documentation generation embraces this philosophy.
+One of Pulumi's core strengths is our [multi-language components](/blog/pulumi-components/): write once in your preferred language, and teams can consume the component in [Python, TypeScript, Go, .NET, Java, or YAML](/docs/iac/languages-sdks/). The automatic documentation generation embraces this philosophy.
 
 When you [publish a component](/docs/idp/guides/publishing-from-github-actions/) written in Python, developers using TypeScript can view the TypeScript-specific documentation. The same component shows Go developers idiomatic Go code. This language-specific documentation removes the last barrier to [cross-team component adoption](/docs/idp/guides/best-practices/patterns/components-using-other-components/).
 

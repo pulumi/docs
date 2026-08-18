@@ -66,7 +66,7 @@ Pulumi also offers conversion tools for other popular infrastructure as code sol
 Although the time to migrate existing infrastructure varies wildly based on the size and complexity of your scenario,
 migrating a single cloud environment can often take as little as a few hours. And thanks to Pulumi being multi-language
 at its core, these tools will support you the same no matter which language you choose, JavaScript, TypeScript, Python,
-Go, C#, Java, and YAML alike.
+Go, .NET, Java, and YAML alike.
 
 To learn more about performing your own migration, please
 [read this user guide](/docs/iac/guides/migration/).

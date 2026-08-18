@@ -344,7 +344,7 @@ Because this approach uses untyped references, you'll trade a little type safety
 
 ## Write and run HCL, natively
 
-For as much flexibility as general-purpose languages offer, some teams simply prefer to use HCL. So as of today, HCL is now a first-class language in the Pulumi engine, right alongside TypeScript, Python, Go, C#, Java, and YAML.
+For as much flexibility as general-purpose languages offer, some teams simply prefer to use HCL. So as of today, HCL is now a first-class language in the Pulumi engine, right alongside TypeScript, JavaScript, Python, Go, .NET, Java, and YAML.
 
 The easiest way to get a feel for it is to create a new project from a template:
 
