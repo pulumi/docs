@@ -368,6 +368,28 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   reconception itself lives in the PR's Findings-not-applied section). Omit when
   there's no reconception to flag.
 
+**Self-check before you finish** (skip for a retirement verdict — the gate
+routes those to the retire veto instead): verify your `applied[]` line ranges
+exactly the way the publish gate will, using the gate's own script. Stage your
+changes the way the export step does, emit a zero-context diff, unstage, and
+run it:
+
+```bash
+git add -A -- ':!.*' ':!.*/**'
+git diff --cached --unified=0 > .self-check.u0.diff
+git reset -q
+python3 scripts/content-review/verify-fix-scope.py \
+    --diff-file .self-check.u0.diff --base-sha HEAD \
+    --article <path> --verdict .content-review-verdict.json \
+    --artifacts-dir . --out .self-check-report.json
+```
+
+Exit 0 (pass or skipped) is required. On exit 2, read `uncovered_hunks` /
+`invalid_applied` in the report and either correct the `applied[]` ranges or
+revert the out-of-range edit; re-run until it passes. This is the pipeline's
+dominant hard-failure mode — a range that doesn't cover its hunk wastes the
+whole run at the publish gate, where there is no retry.
+
 If you exit without writing this file, the workflow records the page as
 `incomplete`. An incomplete outcome does **not** advance the staleness clock, so
 the page stays due and is retried on a later sweep — up to an attempt cap, after

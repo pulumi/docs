@@ -424,6 +424,21 @@ jobs:
                pushed. The workflow derives the PR facts and records the S3
                ledger from this; do NOT write a ledger or results file
                yourself.
+
+               Before finishing (unless the verdict is a retirement),
+               SELF-CHECK your line ranges with the gate's own script:
+               `git add -A -- ':!.*' ':!.*/**'`, then
+               `git diff --cached --unified=0 > .self-check.u0.diff`, then
+               `git reset -q`, then run
+               `python3 scripts/content-review/verify-fix-scope.py
+               --diff-file .self-check.u0.diff --base-sha HEAD
+               --article <path> --verdict .content-review-verdict.json
+               --artifacts-dir . --out .self-check-report.json`.
+               Exit 0 is required; on exit 2, fix the `applied[]` ranges (or
+               revert the out-of-range edit) per the report's
+               `uncovered_hunks` / `invalid_applied` and re-run until it
+               passes — a range that doesn't cover its hunk fails the whole
+               run at the publish gate, where there is no retry.
           # Broad Bash is deliberate and is what the job's privilege profile
           # buys: this job holds no push token, no AWS creds, and no
           # production environment, so compound commands (`make ensure &&
