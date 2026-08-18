@@ -428,6 +428,65 @@ def main() -> int:
             else:
                 check("tiers" not in proc.stderr.lower(), "real tiers file parses")
 
+    # --- stale-claim markers ride the queue, and escalation stops the boost ---
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
+        repo = make_repo(tmp)
+        tiers = tmp / "tiers.yaml"
+        tiers.write_text(REPO_TIERS.read_text() if REPO_TIERS.is_file() else "rules: []\n")
+
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  "checked_at": "2026-08-15"}
+
+        led = tmp / "ledger-markers"
+        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
+        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
+        q = run_select(repo, tiers, led)
+        entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
+        check(entry is not None, "marked page is boosted into the queue")
+        if entry:
+            check(entry["stale_claims"] == 1, "count field preserved")
+            check([m["entity_key"] for m in entry.get("stale_claim_markers") or []]
+                  == ["version/pulumi-package"], "queue item carries the marker itself")
+            check((entry["stale_claim_markers"][0].get("evidence") or "")
+                  == "CHANGELOG says 3.163.0", "marker evidence reaches the worker")
+
+        # An escalated marker must still ride in the queue item and still be
+        # counted: record-review.py rebuilds the ledger entry from the queue,
+        # so a marker withheld here is a marker deleted from the ledger the
+        # next time this page is reviewed for any reason.
+        led_mixed = tmp / "ledger-mixed"
+        write_ledger(led_mixed, STACKS, TODAY, stale_claims=[
+            marker,
+            {**marker, "entity_key": "version/old-miss",
+             "unresolved_reviews": 2, "escalated": True},
+        ])
+        q_mixed = run_select(repo, tiers, led_mixed)
+        mixed = next((a for a in q_mixed["articles"] if a["path"] == STACKS), None)
+        check(mixed is not None, "page with one active marker is still boosted")
+        if mixed:
+            keys = [m["entity_key"] for m in mixed.get("stale_claim_markers") or []]
+            check("version/old-miss" in keys,
+                  "escalated marker still travels in the queue item (survives the round-trip)")
+            check(mixed["stale_claims"] == len(mixed["stale_claim_markers"]),
+                  "stale_claims count matches the marker list it describes")
+
+        led_esc = tmp / "ledger-escalated"
+        write_ledger(led_esc, STACKS, TODAY,
+                     stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
+        q_esc = run_select(repo, tiers, led_esc)
+        esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
+        check(esc is None, "an escalated marker alone no longer boosts the page")
+
+        # ...and when such a page is reviewed anyway (staleness, --paths), the
+        # escalated marker must reach record-review.py rather than evaporating.
+        q_paths = run_select(repo, tiers, led_esc, "--paths", STACKS)
+        forced = q_paths["articles"][0]
+        check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
+              == ["version/pulumi-package"],
+              "escalated marker reaches a --paths review instead of being dropped")
+
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0
 
