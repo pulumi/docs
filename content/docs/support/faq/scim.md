@@ -27,10 +27,10 @@ These errors can occur when attempting to create (POST), replace (PUT), or updat
 
 ```json
 {
-    "status": 409,
+    "status": "409",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 409,
+        "status": "409",
         "scimType": "uniqueness",
         "detail": "Email {email} already in use by another Pulumi account."
     }
@@ -53,10 +53,10 @@ If the existing account is already managed by SAML SSO in another Pulumi organiz
 
 ```json
 {
-    "status": 409,
+    "status": "409",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 409,
+        "status": "409",
         "scimType": "uniqueness",
         "detail": "User with userName {userName} already exists."
     }
@@ -71,10 +71,10 @@ Suggested Resolution: Update the username attribute in your identity provider’
 
 ```json
 {
-    "status": 400,
+    "status": "400",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 400,
+        "status": "400",
         "scimType": "immutability",
         "detail": "Attribute 'userName' is immutable."
     }
@@ -89,10 +89,10 @@ Suggested Resolution: Update the attribute mapping in the identity provider so t
 
 ```json
 {
-    "status": 400,
+    "status": "400",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 400,
+        "status": "400",
         "scimType": "invalidPath",
         "detail": "Unknown path: {path}."
     }
