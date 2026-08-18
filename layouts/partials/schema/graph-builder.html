@@ -287,9 +287,10 @@
        above; this is the one place pricing data is allowed to appear so it
        doesn't get duplicated (and risk drifting or garbling) across other
        pages. `url` and `programmingLanguage` are NOT part of $softwareCore —
-       they're added only on the opted-in non-home path further below (see the
-       note at L175-179) — so this merge just layers `offers` on top and
-       preserves every field the homepage previously emitted. */}}
+       they're added only on the opted-in non-home path further below, as
+       noted where $softwareCore itself is defined above — so this merge
+       just layers `offers` on top and preserves every field the homepage
+       previously emitted. */}}
   {{ $software := merge $softwareCore (dict
     "offers" (slice
       (dict
@@ -399,8 +400,17 @@
          these to match verbatim, change this back to ".NET" and update this
          comment — either is defensible, but the two should not silently
          diverge again. */}}
+    {{/* $softwareCore's shared `description` was written for the homepage and
+         is deliberately left untouched above (see $softwareCore's own note)
+         so the homepage node stays byte-identical. This page's prose says
+         JavaScript and 180+ providers, so the JSON-LD would contradict its
+         own prose — and its own programmingLanguage slice just below — if it
+         inherited that string unmodified. Override it here, matching this
+         page's on-page copy, without touching the shared dict other pages
+         (i.e. the homepage) still rely on. */}}
     {{ $softwarePage := merge $softwareCore (dict
       "url" "https://www.pulumi.com/"
+      "description" "Open source infrastructure as code SDK with enterprise cloud platform. Deploy cloud resources using TypeScript, Python, JavaScript, Go, .NET, or Java, plus YAML or HCL. Manage AWS, Azure, Google Cloud, Kubernetes, and 180+ providers."
       "programmingLanguage" (slice "TypeScript" "Python" "JavaScript" "Go" "C#" "Java" "YAML" "HCL")
     ) }}
     {{ $graph = $graph | append $softwarePage }}
