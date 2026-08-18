@@ -636,6 +636,7 @@ pulumi config set --path 'pulumi:disable-default-providers[0]' aws
 Each command adds one entry to the list, so disabling both the `aws` and `kubernetes` default providers means running both commands in sequence — the first sets index `[0]`, and the second sets index `[1]`:
 
 ```sh
+pulumi config set --path 'pulumi:disable-default-providers[0]' aws
 pulumi config set --path 'pulumi:disable-default-providers[1]' kubernetes
 ```
 
