@@ -24,7 +24,7 @@ social:
     linkedin: |
         Most platform engineering writing about AI agents stops at "agents will use your internal developer platform too." True, but it undersells the change. A developer reading your documentation and an agent calling your API for a golden path are different problems, because one of them can act at machine speed with no one watching the diff scroll by.
 
-        We wrote up the operational questions a platform team actually has to answer once an agent starts provisioning infrastructure through the platform instead of only reading it, and what changes about identity, policy, review, and audit once nobody's watching the diff scroll by.
+        We wrote up the operational questions a platform team actually has to answer once an agent starts provisioning infrastructure through the platform instead of only reading it, and what changes about identity, policy, review, and audit when the thing asking can already have acted by the time you notice.
     bluesky: |
         Gartner: 40% of enterprise apps will carry a task-specific AI agent by end of 2026. Platform engineering advice hasn't caught up — most of it still assumes a human is reading the catalog, not an agent calling the API.
 
@@ -97,7 +97,7 @@ Both are legitimate, and the right choice depends on what the agent is actually 
 | Best for | Novel or exploratory changes, refactors, anything not covered by an existing template | Repeatable, high-volume requests: a new dev environment, a scoped test database |
 | Failure mode if misused | An agent produces plausible-looking code that's subtly wrong and passes a weak review | An agent is boxed in and can't do the legitimate thing it actually needed to do |
 
-Real programming languages help here regardless of which shape you pick, because they carry loops, functions, types, and test frameworks that a templating language doesn't, which means an agent's output can be tested the same way a human's pull request would be. That's the same argument [we made about running agent workloads on Kubernetes](/blog/ai-agents-on-kubernetes/): code that an agent produces is only as trustworthy as the tooling that can check it, and a general-purpose language gives that tooling more to work with than a fixed schema does.
+Real programming languages help here regardless of which shape you pick, because they carry loops, functions, types, and test frameworks that a templating language doesn't, which means an agent's output can be tested the same way a human's pull request would be. That's the same argument [we made about running agent workloads on Kubernetes](/blog/ai-agents-on-kubernetes/): once you have a package, whether a Helm chart or a golden-path component, composing it into your specific environment, wiring its secrets, gating its rollout with policy, and testing the whole thing before it ships is software engineering, and a general-purpose language is built for that in a way a templating language isn't.
 
 ## What replaces code review when no human is watching?
 
@@ -189,4 +189,6 @@ None of this is settled. Most organizations giving agents provisioning access to
 
 The platforms that get this right treat an agent's provisioning request exactly like a human's, with the same identity model, the same policy gate, and the same audit trail, and let the difference in who's asking stay invisible to the infrastructure underneath. That's a smaller lift than it sounds like, because it's mostly the platform engineering discipline you already have, applied without an exception carved out for software that happens to make its own decisions.
 
-If you're building that discipline now, [get started with Pulumi](/docs/get-started/) to see identity, policy, and audit working together on real infrastructure, or go straight to [setting up policy as code](/docs/insights/policy/get-started/) if the pre-deploy gate is the piece you're missing.
+{{< blog/cta-card title="Build agent-ready guardrails" label="Get started with Pulumi" href="/docs/get-started/" >}}
+See identity, policy, and audit working together on real infrastructure, or go straight to [setting up policy as code](/docs/insights/policy/get-started/) if the pre-deploy gate is the piece you're missing.
+{{< /blog/cta-card >}}
