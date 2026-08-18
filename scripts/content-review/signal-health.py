@@ -86,6 +86,12 @@ STATE_VERSION = 1
 THRESHOLD_DAYS = 7
 REALERT_DAYS = 7
 
+# Per-signal overrides of THRESHOLD_DAYS. capped-pages alerts on the first
+# observed day: a page only lands there after burning ATTEMPT_CAP failed runs,
+# so the waiting-out period the default threshold exists for already happened.
+# REALERT_DAYS still paces the nag weekly while the state persists.
+SIGNAL_THRESHOLDS = {"capped-pages": 0}
+
 # One line per signal: what broke, for how long, the consequence, and where to
 # look — the consequence is the point (see the module docstring).
 CONSEQUENCES = {
@@ -122,6 +128,13 @@ CONSEQUENCES = {
         "reviews. Check the worker runs' Resolve-ledger-bucket and "
         "Record-review-ledger steps on content-review-article.yml (a "
         "cancelled worker also lands here — that's the point)."
+    ),
+    "capped-pages": (
+        "attempt-capped pages: {detail} — each burned "
+        "the retry cap on incomplete reviews and is now excluded from every "
+        "sweep until a human intervenes. Run `select-articles.py --stats`, "
+        "inspect the pages' ledger entries, and either fix what keeps "
+        "breaking them or review them by hand."
     ),
 }
 
@@ -237,6 +250,30 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     return "ok", "nothing due tonight"
 
 
+def observe_capped(queue_path: Path | None) -> tuple[str, str] | None:
+    """(status, detail) from the queue's capped list, or None.
+
+    select-articles.py stamps `capped` on every scored queue (empty when no
+    page is backed off). A queue without the key (an older queue, or a
+    --paths run, which returns before the candidate scan) yields no
+    observation — the prior state stands.
+    """
+    if queue_path is None or not queue_path.is_file():
+        return None
+    try:
+        queue = json.loads(queue_path.read_text())
+    except (OSError, json.JSONDecodeError) as e:
+        log(f"queue unreadable ({e}); no capped-pages observation")
+        return None
+    capped = queue.get("capped")
+    if not isinstance(capped, list):
+        return None
+    if capped:
+        return "degraded", f"{len(capped)} page(s) stuck at the attempt cap: " + ", ".join(
+            str(p) for p in capped)
+    return "ok", "no capped pages"
+
+
 def observe_ledger(last_dispatch_path: Path | None,
                    ledger_dir: Path | None) -> tuple[str, str] | None:
     """(status, detail) from the previous run's dispatch breadcrumb, or None.
@@ -331,7 +368,7 @@ def apply(state: dict, observations: dict[str, tuple[str, str]], today: date,
         template = CONSEQUENCES.get(name, f"{name}: degraded for {{days}} day(s) ({{detail}})")
         line = template.format(days=days, detail=detail)
         warn(f"{name} degraded since {since.isoformat()} — {line}")
-        if days < threshold_days:
+        if days < SIGNAL_THRESHOLDS.get(name, threshold_days):
             continue
         alerted = parse_day(sig.get("last_alerted"))
         if alerted is None or (today - alerted).days >= realert_days:
@@ -384,6 +421,9 @@ def run(args) -> int:
                          Path(args.ledger_dir) if args.ledger_dir else None)
     if obs:
         observations["ledger-write"] = obs
+    obs = observe_capped(Path(args.queue) if args.queue else None)
+    if obs:
+        observations["capped-pages"] = obs
 
     state, alert = apply(state, observations, today,
                          args.threshold_days, args.realert_days, args.run_url)
@@ -692,6 +732,28 @@ def self_test() -> int:
         check("ledger-write: recovery clears degraded_since",
               st["signals"]["ledger-write"]["status"] == "ok"
               and st["signals"]["ledger-write"]["degraded_since"] is None)
+
+    # ---- capped-pages signal (day-one threshold override) ----
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        q_capped = {"traffic": {"available": False}, "capped": ["content/docs/x.md"]}
+        q_clear = {"traffic": {"available": False}, "capped": []}
+        q_legacy = {"traffic": {"available": False}}
+
+        st, alert = run_once(d, "2026-09-01", queue=q_capped)
+        check("capped: non-empty list degrades",
+              st["signals"]["capped-pages"]["status"] == "degraded")
+        check("capped: alerts on the first observed day (threshold override)",
+              alert is not None and "content/docs/x.md" in alert)
+        st, alert = run_once(d, "2026-09-02", queue=q_capped)
+        check("capped: re-alert still paced by REALERT_DAYS", alert is None)
+        st, alert = run_once(d, "2026-09-03", queue=q_legacy)
+        check("capped: legacy queue without the key leaves prior state untouched",
+              st["signals"]["capped-pages"]["status"] == "degraded")
+        st, alert = run_once(d, "2026-09-04", queue=q_clear)
+        check("capped: empty list recovers the signal",
+              st["signals"]["capped-pages"]["status"] == "ok"
+              and st["signals"]["capped-pages"]["degraded_since"] is None)
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

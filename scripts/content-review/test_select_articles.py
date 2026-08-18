@@ -383,6 +383,8 @@ def main() -> int:
         qcap = run_select(repo, tiers, led_cap, "--count", "20")
         check(TWO not in scores(qcap), "page at the attempt cap is excluded entirely")
         check(ONE in scores(qcap), "non-capped pages still selected")
+        check(qcap.get("capped") == [TWO], "capped pages surfaced on the queue")
+        check(full.get("capped") == [], "no capped pages -> empty list, not a missing key")
 
         print("completed review advances the clock (page is deprioritized)")
         led_done = tmp / "ledger-done"

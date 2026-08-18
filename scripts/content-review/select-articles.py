@@ -567,6 +567,9 @@ def main() -> int:
         "halted": None,
         "traffic": {**traffic_meta, "available": have_traffic},
         "reader_signals": {"available": signals_available, **signals_meta},
+        # Pages backed off at the attempt cap (needing a human). Filled by the
+        # scored path below; signal-health.py's capped-pages signal reads it.
+        "capped": [],
         "articles": [],
     }
 
@@ -659,6 +662,7 @@ def main() -> int:
             continue
         candidates.append(path)
 
+    queue["capped"] = sorted(capped)
     if capped:
         print(
             f"select-articles: {len(capped)} page(s) backed off at the "
