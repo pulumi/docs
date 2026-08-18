@@ -23,13 +23,13 @@ social:
         Experimental Rust support for Pulumi is now public in Pulumi Labs: ordinary Rust crates, built with Cargo, deployed with pulumi up. All 179 conformance tests pass. Community interest is what graduates it.
 ---
 
-Rust language support is one of the most upvoted requests in Pulumi's history: [pulumi/pulumi#3622](https://github.com/pulumi/pulumi/issues/3622) has been open since 2019 and has gathered close to 700 reactions. Today there is something concrete to point at. [pulumi-rust](https://github.com/pulumi-labs/pulumi-rust) is an experimental Rust SDK and language plugin for Pulumi, now public in the Pulumi Labs organization. You write a Pulumi program as an ordinary Rust crate, build it with Cargo, and deploy it with `pulumi up`.
+Rust language support is one of the most upvoted requests in Pulumi's history: [pulumi/pulumi#3622](https://github.com/pulumi/pulumi/issues/3622).  Today there is something concrete to point at. [pulumi-rust](https://github.com/pulumi-labs/pulumi-rust) is an experimental Rust SDK and language plugin for Pulumi, now public in the Pulumi Labs organization. You write a Pulumi program as an ordinary Rust crate, build it with Cargo, and deploy it with `pulumi up`.
 
 <!--more-->
 
 ## What Pulumi Labs means
 
-Pulumi Labs is where we publish experimental, community-supported projects. Labs projects come with no promises of maintenance, stability, or security, and pulumi-rust is not an official Pulumi project. What Labs provides is a public home and a path: if a project earns real community interest, we can graduate it to full support. Community involvement is not just welcome here, it is the mechanism.
+Pulumi Labs is where we publish experimental, community-supported projects. Labs projects come with no promises of maintenance, stability, or security, and pulumi-rust is not an official Pulumi project. What Labs provides is a public home and a path: if a project earns real community interest, we can graduate it to full support. Community involvement is greatly encouraged.
 
 ## Pulumi programs in Rust
 
@@ -56,9 +56,9 @@ Provider SDKs are generated per project from the provider's schema with `pulumi 
 
 ## What works today
 
-1. **The full language conformance suite.** All 179 tests of Pulumi's language conformance suite pass. That covers the program lifecycle, configuration, secrets, stack outputs, invokes, component resources, and provider inheritance, tested against the same suite the official languages run.
-1. **SDK generation against real provider schemas, at full scale.** The generated AWS crate contains 22,142 types and the azure-native crate 27,777, and both compile. This is not a toy subset: a nightly job regenerates the complete SDK for every provider the examples use and recompiles everything against it.
-1. **Twenty-two examples that compile.** The repository ports the classic [pulumi/examples](https://github.com/pulumi/examples) scenarios to Rust across AWS, Azure, Google Cloud, Kubernetes, DigitalOcean, and Docker: EKS, AKS, and GKE clusters, Fargate services, serverless APIs, static websites, and more. Each one is compile-verified against a crate generated from the provider's real published schema, at a pinned version.
+1. **The full language conformance suite.** All of Pulumi's language conformance tests pass.
+1. **SDK generation at real-world scale.** The generated AWS crate is 22,142 types and the azure-native crate is 27,777, tens of megabytes of Rust apiece, and both compile. The scale is the point: some generator defects only exist in aggregate, such as two schema members that collide on a single Rust type name, and no hand-picked subset can surface them. So a nightly job regenerates the complete SDK for all seven providers the examples pin and compiles every one of them whole.
+1. **Twenty-two examples that compile.** The repository ports the classic [pulumi/examples](https://github.com/pulumi/examples) scenarios to Rust across AWS, Azure, Google Cloud, Kubernetes, DigitalOcean, and Docker.
 
 Just as important is what a green suite does not prove. The repository keeps an honest [known limitations](https://github.com/pulumi-labs/pulumi-rust/blob/main/docs/known-limitations.md) document recording behaviors that differed from the Go SDK, defects that real provider schemas surfaced in the generator, and what is deliberately left out. Read it before you depend on anything.
 
