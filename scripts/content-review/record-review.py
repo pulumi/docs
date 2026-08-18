@@ -130,6 +130,9 @@ def load_queue_article(queue_path: Path) -> dict:
         # verbatim from the queue entry; null on a signal-blind run.
         "signals": a.get("signals"),
         "signals_available": bool((data.get("reader_signals") or {}).get("available")),
+        # Stale-claim markers in full (entity_key/verdict/evidence/source/...).
+        # carry_markers() needs them to decide which survive this review.
+        "stale_claim_markers": a.get("stale_claim_markers") or [],
     }
 
 
@@ -243,6 +246,43 @@ def canonical_branch_pushed(slug: str) -> bool:
 # ---- derivation -------------------------------------------------------------
 
 
+# A stale-claim marker survives this many reviews that saw it and did not
+# resolve it; after that it is kept but flagged `escalated`, which stops
+# select-articles.py boosting the page (see MARKER_ESCALATION_CAP there).
+MARKER_ESCALATION_CAP = 2
+
+
+def carry_markers(article: dict, verdict: dict | None) -> list[dict]:
+    """Stale-claim markers that outlive this review, with their retry state.
+
+    The nightly re-verification writes a marker when a volatile claim goes
+    contradicted; the marker boosts the page into this worker's queue. Before
+    this function existed the marker simply vanished when the review's ledger
+    record landed, whether or not anything had been done about it — so a review
+    that missed the finding silently cleared the flag and the entity went back
+    into the pool to be re-flagged, re-boosted, and re-missed on a ~2-day cycle
+    (observed end-to-end in pulumi/docs#20927).
+
+    A marker is retired only when the verdict names its entity in
+    `resolved_claims` — the worker asserting it either fixed the claim or
+    determined the flag was wrong. Everything else is carried forward with
+    `unresolved_reviews` incremented, and flagged `escalated` once that count
+    reaches MARKER_ESCALATION_CAP so a human is the next step rather than
+    another identical pass.
+    """
+    resolved = {str(k) for k in ((verdict or {}).get("resolved_claims") or [])}
+    carried: list[dict] = []
+    for m in article.get("stale_claim_markers") or []:
+        if not isinstance(m, dict):
+            continue
+        if m.get("entity_key") in resolved:
+            continue
+        seen = int(m.get("unresolved_reviews") or 0) + 1
+        carried.append({**m, "unresolved_reviews": seen,
+                        "escalated": seen >= MARKER_ESCALATION_CAP})
+    return carried
+
+
 def build_record(article: dict, verdict: dict | None, pr: dict | None,
                  slug: str, claude_succeeded: bool = False,
                  branch_exists: bool = False) -> dict:
@@ -285,6 +325,9 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "signals_available": bool(article.get("signals_available")),
         "reviewed_at": datetime.now(timezone.utc).date().isoformat(),
     }
+    markers = carry_markers(article, verdict)
+    if markers:
+        rec["stale_claims"] = markers
 
     if verdict is None:
         if claude_succeeded and not branch_exists:
@@ -456,6 +499,64 @@ def self_test() -> int:
         check("signal-blind queue -> signals null, signals_available False",
               blind_article["signals"] is None
               and blind_article["signals_available"] is False)
+        # --- stale-claim marker retention -------------------------------
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  "checked_at": "2026-08-15"}
+        marked = {**article, "stale_claim_markers": [marker]}
+
+        rec_m = build_record(marked, {"verdict": "clean", "reason": "accurate"},
+                             None, marked["slug"])
+        check("a review that resolves nothing carries the marker forward",
+              [m["entity_key"] for m in rec_m["stale_claims"]] == ["version/pulumi-package"])
+        check("carried marker counts the miss",
+              rec_m["stale_claims"][0]["unresolved_reviews"] == 1
+              and rec_m["stale_claims"][0]["escalated"] is False)
+        check("carried marker keeps its evidence",
+              rec_m["stale_claims"][0]["evidence"] == "CHANGELOG says 3.163.0")
+
+        rec_r = build_record(marked, {"verdict": "fixed", "fixes": 1,
+                                      "resolved_claims": ["version/pulumi-package"]},
+                             None, marked["slug"])
+        check("a resolved marker retires", "stale_claims" not in rec_r)
+
+        second = {**article, "stale_claim_markers": [rec_m["stale_claims"][0]]}
+        rec_e = build_record(second, {"verdict": "clean", "reason": "x"},
+                             None, second["slug"])
+        check("second unresolved review escalates the marker",
+              rec_e["stale_claims"][0]["unresolved_reviews"] == 2
+              and rec_e["stale_claims"][0]["escalated"] is True)
+
+        # The other half of the round-trip: select-articles.py hands escalated
+        # markers through, so they must survive rather than be filtered out
+        # here — otherwise the ledger loses them and the entity re-enters the
+        # nightly pool.
+        esc_marker = {**marker, "entity_key": "version/old-miss",
+                      "unresolved_reviews": 2, "escalated": True}
+        with_esc = {**article, "stale_claim_markers": [marker, esc_marker]}
+        rec_esc = build_record(with_esc, {"verdict": "clean", "reason": "x"},
+                               None, with_esc["slug"])
+        carried = {m["entity_key"]: m for m in rec_esc["stale_claims"]}
+        check("escalated marker persists through a review",
+              "version/old-miss" in carried)
+        check("escalated marker stays escalated and keeps counting",
+              carried["version/old-miss"]["escalated"] is True
+              and carried["version/old-miss"]["unresolved_reviews"] == 3)
+        check("an escalated marker can still be resolved",
+              "stale_claims" not in build_record(
+                  {**article, "stale_claim_markers": [esc_marker]},
+                  {"verdict": "fixed", "fixes": 1,
+                   "resolved_claims": ["version/old-miss"]},
+                  None, article["slug"]))
+
+        rec_none = build_record(article, {"verdict": "clean", "reason": "x"},
+                                None, article["slug"])
+        check("no markers -> no stale_claims key", "stale_claims" not in rec_none)
+
+        rec_incomplete = build_record(marked, None, None, marked["slug"])
+        check("marker survives an incomplete run too",
+              rec_incomplete["stale_claims"][0]["unresolved_reviews"] == 1)
+
         blind_rec = build_record(blind_article, None, None, blind_article["slug"])
         check("signal-blind record persists null/false",
               blind_rec["signals"] is None and blind_rec["signals_available"] is False)

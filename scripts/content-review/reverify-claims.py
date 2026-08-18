@@ -233,7 +233,8 @@ def load_ledger(ledger_dir: Path) -> dict[str, dict]:
     return entries
 
 
-def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> dict[str, dict]:
+def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date,
+                  repo_root: Path | None = None) -> dict[str, dict]:
     """Fold stale entity verdicts into the affected pages' ledger entries.
 
     Returns {slug: updated entry (without bookkeeping keys)} for every entry
@@ -243,7 +244,19 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
     not synthesized: every changed entry is uploaded to the same S3 key
     record-review.py owns, so a two-field stub would silently destroy that
     page's status / reviewed_at / attempts / tier / score. The entity simply
-    stays unmarked and comes back around on a later rotation."""
+    stays unmarked and comes back around on a later rotation.
+
+    A page with no markdown source on disk is skipped for a different and more
+    important reason. `select-articles.py` builds its candidate set by globbing
+    `content/docs/**/*.md`, so a page rendered by a Hugo content adapter (the
+    pre-built policy-pack tables, generated from `data/`) can never be selected
+    for review — which means a marker written there can never be cleared, and
+    `already_marked()` would then exclude that entity from re-verification
+    permanently. Three entities were lost that way over five nights before this
+    guard existed. Such a contradiction is real and worth acting on, but the
+    action is upstream of this repo (fix the `data/` source or the product
+    metadata behind it), so the verdict is reported and left in the pool rather
+    than converted into a marker nothing can retire."""
     changed: dict[str, dict] = {}
     for s in stale:
         marker = {
@@ -254,6 +267,12 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
             "checked_at": today.isoformat(),
         }
         for page in s["pages"]:
+            if repo_root is not None and not (repo_root / page["path"]).is_file():
+                warn(
+                    f"{page['path']} has no source file (generated page); reporting "
+                    f"{s['entity_key']} without a marker no review could ever clear"
+                )
+                continue
             entry = ledger.get(page["path"])
             if entry is None:
                 warn(
@@ -395,7 +414,7 @@ def run(args) -> int:
     report["meta"]["n_demoted"] = sum(1 for r in results if r["demoted_from"])
 
     if stale:
-        changed = apply_markers(ledger, stale, today)
+        changed = apply_markers(ledger, stale, today, repo_root)
         uri = os.environ.get("CONTENT_REVIEW_LEDGER_URI", "").strip()
         for slug, entry in sorted(changed.items()):
             local = Path(args.ledger_dir) / f"{slug}.json"
@@ -413,6 +432,7 @@ def run(args) -> int:
 
 
 def self_test() -> int:
+    import tempfile
     failures = []
 
     def check(name, cond):
@@ -514,6 +534,31 @@ def self_test() -> int:
     check("re-marking is idempotent",
           len(changed2["docs-a"]["stale_claims"]) == 1)
 
+    # Generated pages have no markdown source, so select-articles.py can never
+    # queue them and a marker there could never be cleared. Report, don't mark.
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        (root / "content/docs").mkdir(parents=True)
+        (root / "content/docs/a.md").write_text("real page\n")
+        gen = [{"entity_key": "numerical/pack-count", "verdict": "contradicted",
+                "evidence": "", "source": "",
+                "pages": [{"path": "content/docs/reference/generated.md",
+                           "slug": "docs-reference-generated"}]}]
+        led = {"content/docs/reference/generated.md": {
+            "path": "content/docs/reference/generated.md",
+            "slug": "docs-reference-generated", "status": "clean"}}
+        check("sourceless page gets no marker",
+              apply_markers(led, gen, today, root) == {})
+        check("sourceless page's ledger entry is left untouched",
+              "stale_claims" not in led["content/docs/reference/generated.md"])
+        # ...while a page that does exist on disk is still marked normally.
+        led2 = {"content/docs/a.md": {"path": "content/docs/a.md",
+                                      "slug": "docs-a", "status": "clean"}}
+        on_disk = [{**gen[0], "pages": [{"path": "content/docs/a.md",
+                                         "slug": "docs-a"}]}]
+        check("page with a source file is still marked",
+              set(apply_markers(led2, on_disk, today, root)) == {"docs-a"})
+
     check("already_marked sees the marker",
           already_marked("version/pulumi-gcp", ents["version/pulumi-gcp"], ledger))
     check("already_marked ignores other entities",
@@ -522,7 +567,6 @@ def self_test() -> int:
 
     # Health-observation meta: the early-exit paths must say why they stopped
     # (signal-health.py's reverify signal reads these fields).
-    import tempfile
 
     def run_report(d: Path, extra_env_unset: list[str]) -> dict:
         saved = {k: os.environ.pop(k) for k in extra_env_unset if k in os.environ}
