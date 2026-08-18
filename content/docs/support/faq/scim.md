@@ -114,7 +114,7 @@ Suggested Resolution: Update the attribute mappings in the identity provider and
 
 ### A failure occurred when attempting to provision group members.
 
-The creation (POST), update (PATCH), or replacement (PUT) of a group performs member validation prior to running the operation. If any of the members provided are not provisioned into your Pulumi organization, or are not active, the request fails with the following response:
+The creation (POST), update (PATCH), or replacement (PUT) of a group performs member validation before running the operation. If any of the members provided are not provisioned into your Pulumi organization, or are not active, the request fails with the following response:
 
 ```
 Status: 400 BAD REQUEST
