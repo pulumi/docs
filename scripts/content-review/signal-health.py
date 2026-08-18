@@ -115,6 +115,14 @@ CONSEQUENCES = {
         "Otherwise check the claims-index S3 sync, ANTHROPIC_API_KEY, and the "
         "verifier's gh lane on claims-reverify.yml."
     ),
+    "ledger-write": (
+        "ledger writes: {days} day(s) with dispatched pages missing their "
+        "ledger record ({detail}) — those pages' staleness clocks never "
+        "advanced, so they will loop back into selection as duplicate "
+        "reviews. Check the worker runs' Resolve-ledger-bucket and "
+        "Record-review-ledger steps on content-review-article.yml (a "
+        "cancelled worker also lands here — that's the point)."
+    ),
 }
 
 
@@ -229,6 +237,51 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     return "ok", "nothing due tonight"
 
 
+def observe_ledger(last_dispatch_path: Path | None,
+                   ledger_dir: Path | None) -> tuple[str, str] | None:
+    """(status, detail) from the previous run's dispatch breadcrumb, or None.
+
+    The dispatcher records which slugs it dispatched (health/last-dispatch.json)
+    and, on the NEXT run, this compares them against the freshly synced ledger
+    cache: every dispatched page should have a ledger record whose reviewed_at
+    is on or after the dispatch date — any status counts, because the signal
+    watches the write path, not the review outcome. A miss means a worker
+    finished (or died) without landing its record — the silent-duplicate bug.
+
+    A missing breadcrumb or ledger dir is NOT evidence (first run, manual run,
+    or S3 itself down — the other signals cover that) — return None.
+    """
+    if (last_dispatch_path is None or not last_dispatch_path.is_file()
+            or ledger_dir is None or not ledger_dir.is_dir()):
+        return None
+    try:
+        crumb = json.loads(last_dispatch_path.read_text())
+        dispatch_day = parse_day(crumb.get("date"))
+        slugs = [str(s) for s in (crumb.get("slugs") or [])]
+    except (OSError, json.JSONDecodeError) as e:
+        log(f"dispatch breadcrumb unreadable ({e}); no ledger-write observation")
+        return None
+    if not dispatch_day or not slugs:
+        return None
+    missing: list[str] = []
+    for slug in slugs:
+        entry_path = ledger_dir / f"{slug}.json"
+        reviewed = None
+        if entry_path.is_file():
+            try:
+                reviewed = parse_day(json.loads(entry_path.read_text()).get("reviewed_at"))
+            except (OSError, json.JSONDecodeError):
+                reviewed = None
+        if reviewed is None or reviewed < dispatch_day:
+            missing.append(slug)
+    if missing:
+        return "degraded", (
+            f"{len(missing)} of {len(slugs)} pages dispatched {dispatch_day} "
+            f"have no ledger record: {', '.join(sorted(missing))}"
+        )
+    return "ok", f"all {len(slugs)} pages dispatched {dispatch_day} recorded"
+
+
 def observe_flag(value: str | None, mapping: dict[str, str]) -> tuple[str, str] | None:
     """(status, detail) from a workflow-provided status flag, or None if omitted."""
     v = (value or "").strip().lower()
@@ -327,6 +380,10 @@ def run(args) -> int:
     obs = observe_reverify(Path(args.reverify_report) if args.reverify_report else None)
     if obs:
         observations["reverify"] = obs
+    obs = observe_ledger(Path(args.last_dispatch) if args.last_dispatch else None,
+                         Path(args.ledger_dir) if args.ledger_dir else None)
+    if obs:
+        observations["ledger-write"] = obs
 
     state, alert = apply(state, observations, today,
                          args.threshold_days, args.realert_days, args.run_url)
@@ -351,6 +408,10 @@ def build_parser() -> argparse.ArgumentParser:
                    help="holiday feed status: ok|empty|fetch_failed|unconfigured")
     p.add_argument("--reverify-report",
                    help="nightly re-verify report JSON (source of the reverify signal)")
+    p.add_argument("--last-dispatch",
+                   help="previous run's dispatch breadcrumb JSON (source of the ledger-write signal)")
+    p.add_argument("--ledger-dir",
+                   help="synced ledger cache dir the breadcrumb is judged against")
     p.add_argument("--alert-out", default=".health-alert.txt",
                    help="alert message path; only written when an alert is due")
     p.add_argument("--today", help="override today's date YYYY-MM-DD (testing)")
@@ -393,6 +454,7 @@ def self_test() -> int:
 
     def run_once(d: Path, day: str, queue: dict | None = None, console: str | None = None,
                  holiday: str | None = None, reverify: dict | None = None,
+                 last_dispatch: dict | None = None, ledger_dir: Path | None = None,
                  ) -> tuple[dict, str | None]:
         """Drive run() through argparse the way the workflow would."""
         state = d / "state.json"
@@ -412,6 +474,12 @@ def self_test() -> int:
             rp = d / "reverify-report.json"
             rp.write_text(json.dumps(reverify))
             argv += ["--reverify-report", str(rp)]
+        if last_dispatch is not None:
+            lp = d / "last-dispatch.json"
+            lp.write_text(json.dumps(last_dispatch))
+            argv += ["--last-dispatch", str(lp)]
+        if ledger_dir is not None:
+            argv += ["--ledger-dir", str(ledger_dir)]
         args = build_parser().parse_args(argv)
         run(args)
         text = alert.read_text() if alert.exists() else None
@@ -577,6 +645,53 @@ def self_test() -> int:
         check("reverify recovery clears the clocks",
               st["signals"]["reverify"]["status"] == "ok"
               and st["signals"]["reverify"]["degraded_since"] is None)
+
+    # ---- ledger-write signal ----
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        ledger = d / "ledger-cache"
+        ledger.mkdir()
+        crumb = {"date": "2026-08-01", "slugs": ["docs-a", "docs-b"]}
+
+        def write_entry(slug: str, reviewed_at: str | None) -> None:
+            (ledger / f"{slug}.json").write_text(
+                json.dumps({"slug": slug, "reviewed_at": reviewed_at, "status": "clean"}))
+
+        # All dispatched pages recorded (same-day or later) -> ok.
+        write_entry("docs-a", "2026-08-01")
+        write_entry("docs-b", "2026-08-02")
+        st, alert = run_once(d, "2026-08-02", last_dispatch=crumb, ledger_dir=ledger)
+        check("ledger-write: all recorded -> ok",
+              st["signals"]["ledger-write"]["status"] == "ok")
+
+        # One page's record predates the dispatch (write dropped) -> degraded,
+        # slug named in the detail.
+        write_entry("docs-b", "2026-07-20")
+        st, alert = run_once(d, "2026-08-03", last_dispatch=crumb, ledger_dir=ledger)
+        check("ledger-write: stale record -> degraded",
+              st["signals"]["ledger-write"]["status"] == "degraded")
+        check("ledger-write: detail names the missing slug",
+              "docs-b" in st["signals"]["ledger-write"]["detail"]
+              and "docs-a" not in st["signals"]["ledger-write"]["detail"])
+
+        # A missing entry file counts as a miss too.
+        (ledger / "docs-b.json").unlink()
+        st, alert = run_once(d, "2026-08-04", last_dispatch=crumb, ledger_dir=ledger)
+        check("ledger-write: absent record -> degraded",
+              st["signals"]["ledger-write"]["status"] == "degraded")
+
+        # No breadcrumb -> no observation; prior state untouched.
+        st, alert = run_once(d, "2026-08-05", ledger_dir=ledger)
+        check("ledger-write: missing breadcrumb leaves prior state untouched",
+              st["signals"]["ledger-write"]["status"] == "degraded"
+              and st["signals"]["ledger-write"]["degraded_since"] == "2026-08-03")
+
+        # Recovery clears the clocks.
+        write_entry("docs-b", "2026-08-01")
+        st, alert = run_once(d, "2026-08-06", last_dispatch=crumb, ledger_dir=ledger)
+        check("ledger-write: recovery clears degraded_since",
+              st["signals"]["ledger-write"]["status"] == "ok"
+              and st["signals"]["ledger-write"]["degraded_since"] is None)
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

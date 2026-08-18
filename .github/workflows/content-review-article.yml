@@ -739,15 +739,34 @@ jobs:
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
         run: |
-          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
-            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          # Preferred source: the dispatcher resolved the bucket once and
+          # passed it in the queue. Read it from the PRE-MODEL guardrail
+          # snapshot copy — the handoff copy of the queue is model-writable,
+          # and this value directs where the job's AWS creds write.
+          BUCKET=$(jq -r '.ledger_bucket // empty' \
+            .review-snapshot/.content-review-queue.json 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "using dispatcher-provided ledger bucket"
+          else
+            # Fallback (manual dispatch, or the dispatcher itself failed to
+            # resolve): our own stack-output read, retried — a single
+            # transient flake here used to silently drop the ledger record
+            # and loop the page back into selection as a duplicate.
+            for i in 1 2 3; do
+              BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+                --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+              [ -n "$BUCKET" ] && break
+              echo "stack output resolve failed (attempt $i of 3)"
+              sleep $((i * 10))
+            done
+          fi
           if [ -n "$BUCKET" ]; then
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
             # The claims index shares the ledger bucket under its own prefix
             # (one snapshot object per page; see record-claims.py).
             echo "claims_uri=s3://$BUCKET/claims/" >> "$GITHUB_OUTPUT"
           else
-            echo "ledger bucket output unavailable; ledger write will be skipped"
+            echo "::warning::ledger bucket unavailable after retries; ledger write will be skipped"
           fi
 
       # Record the page's outcome to the S3 ledger as one object keyed by slug.

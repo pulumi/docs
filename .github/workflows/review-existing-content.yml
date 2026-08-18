@@ -228,6 +228,10 @@ jobs:
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
             # Degradation-health state lives in the same bucket, own prefix.
             echo "health_uri=s3://$BUCKET/health/" >> "$GITHUB_OUTPUT"
+            # Raw bucket name, handed to each worker via queue_json so a
+            # per-worker `pulumi stack output` flake can't silently drop the
+            # ledger write (the flake that caused duplicate re-reviews).
+            echo "bucket=$BUCKET" >> "$GITHUB_OUTPUT"
           else
             echo "ledger bucket output unavailable; selection proceeds on git staleness alone"
           fi
@@ -354,12 +358,19 @@ jobs:
           TRAFFIC=$(jq -c '.traffic' .content-review-queue.json)
           SIGNALS=$(jq -c '.reader_signals // null' .content-review-queue.json)
           GEN=$(jq -r '.generated' .content-review-queue.json)
+          # ledger_bucket rides the queue so the worker's publish job doesn't
+          # depend on its own (flaky) stack-output resolve. The publish job
+          # reads it from the PRE-MODEL guardrail snapshot copy of the queue,
+          # never the model-writable handoff copy. Keep this jq in sync with
+          # the glow-up dispatch block below, which builds the same shape.
+          LB="${{ steps.ledger-bucket.outputs.bucket }}"
           jq -c '.articles[]' .content-review-queue.json | while read -r a; do
             P=$(echo "$a" | jq -r '.path')
             L=$(echo "$a" | jq -r '.lane')
             Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
-              --argjson signals "$SIGNALS" --arg gen "$GEN" \
-              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: $signals, articles: [$art]}')
+              --argjson signals "$SIGNALS" --arg gen "$GEN" --arg lb "$LB" \
+              '{generated: $gen, count: 1, traffic: $traffic, reader_signals: $signals,
+                ledger_bucket: (if $lb == "" then null else $lb end), articles: [$art]}')
             echo "dispatching worker for $P (lane=$L)"
             gh workflow run content-review-article.yml \
               --repo "${{ github.repository }}" \
@@ -368,6 +379,30 @@ jobs:
               -f queue_json="$Q" \
               || echo "::warning::worker dispatch failed for $P"
           done
+
+      # Breadcrumb for the ledger-write health signal: what was dispatched
+      # today. Next run's signal-health compares these slugs against the
+      # synced ledger cache — a dispatched page with no fresh ledger record
+      # means a worker's write path failed (the silent-duplicate bug).
+      # Schedule-only, like the health-state persist, so test dispatches
+      # don't pollute the observation.
+      - name: Record dispatch breadcrumb
+        if: >-
+          always() && github.event_name == 'schedule' &&
+          steps.select.outputs.has_articles == 'true' &&
+          steps.ledger-bucket.outputs.health_uri != ''
+        continue-on-error: true
+        run: |
+          # Order matters: pull the PREVIOUS run's breadcrumb down first (the
+          # signal-health step below judges it against the ledger cache synced
+          # at the top of this run), then overwrite it with today's dispatch.
+          aws s3 cp "${{ steps.ledger-bucket.outputs.health_uri }}last-dispatch.json" \
+            .last-dispatch.json --quiet \
+            || echo "no prior dispatch breadcrumb (first run or S3 unavailable)"
+          jq -c '{date: (.generated | split("T")[0]), slugs: [.articles[].slug]}' \
+            .content-review-queue.json > .last-dispatch.next.json
+          aws s3 cp .last-dispatch.next.json \
+            "${{ steps.ledger-bucket.outputs.health_uri }}last-dispatch.json" --quiet
 
       # Surface a halted selection (max_open_prs / gh_unavailable) in the run
       # log — the select step already prints the queue JSON, this just makes the
@@ -407,6 +442,8 @@ jobs:
             --queue .content-review-queue.json \
             --console-status "${{ steps.console-probe.outputs.status }}" \
             --holiday-status "${{ needs.holiday-check.outputs.feed_status }}" \
+            --last-dispatch .last-dispatch.json \
+            --ledger-dir .ledger-cache \
             --alert-out .health-alert.txt \
             --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           echo "--- health state ---"
