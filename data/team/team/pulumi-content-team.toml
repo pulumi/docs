@@ -1,3 +1,9 @@
+# The canonical house byline for posts and pages without a named individual
+# author. A second record with the same display name ("Pulumi Content Team",
+# id "content-team") was retired in favor of this one: two ids sharing a
+# display name split the /blog/author/ term pages in two and left authors
+# picking between them at random. Use this id; do not add another generic
+# byline alongside it.
 id = "pulumi-content-team"
 name = "Pulumi Content Team"
 title = "Content Team"
