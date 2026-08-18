@@ -35,8 +35,8 @@ Pulumi implements a single SCIM 2.0 endpoint. Every identity provider uses the s
 | User deprovisioning | Yes, but soft only (see [Deprovisioning never deletes a user](#deprovisioning-never-deletes-a-user)) |
 | Group-to-team synchronization | Yes (create, read, update, delete, and membership changes) |
 | `PATCH` | Yes, for both users and groups |
-| Filtering | `userName eq` for users and `displayName eq` for groups. `eq` is the only supported operator |
-| Pagination | Users only, up to 100 results per page. A group search returns every match in a single response |
+| Filtering | `userName eq` for users and `displayName eq` for groups, and nothing else. Any other attribute or operator, such as `sw` or `co`, fails with a `400 invalidFilter` response |
+| Pagination | Users only, at a maximum of 100 per page. A request for a larger `count` fails with a `400` response. A group search is unpaginated and returns every match in one response |
 
 ## Supported attributes
 
@@ -60,7 +60,7 @@ For groups:
 
 | Feature | Notes |
 |---|---|
-| Roles and administrator status | Pulumi does not implement the `roles` or `entitlements` attributes. A user provisioned through SCIM is always created as an organization member, and a group member is always added to the team as a plain member. Promote users to admin in the Pulumi Cloud console |
+| Roles and administrator status | Pulumi does not implement the `roles` or `entitlements` attributes, so no SCIM request can set one. A user is always created as an organization member, and a group member is always added to the team as a plain member. Change either afterwards in the Pulumi Cloud console; SCIM does not overwrite a role you set there |
 | `externalId` | Accepted on users but never stored, and not part of the group schema at all. Remove any `externalId` mapping for groups in your IdP |
 | Bulk operations | Not supported. Provision resources one request at a time |
 | Sorting | Not supported |
@@ -75,9 +75,20 @@ These apply to every identity provider, regardless of which guide you follow.
 
 ### Deprovisioning never deletes a user
 
-Pulumi has no endpoint for deleting a user through SCIM. Deprovisioning sets `active` to `false`, which removes the user's access to the organization while preserving their account and its history. Configure your IdP to suspend or deactivate users rather than delete them.
+Pulumi has no endpoint for deleting a user through SCIM. Deprovisioning sets `active` to `false`, which removes the user's access to the organization while preserving their account and its history, so the change is reversible by reactivating the user in your IdP. Configure your IdP to suspend or deactivate users rather than delete them.
 
-Teams are different: a group deleted in your IdP does delete the corresponding Pulumi team.
+Teams do not work this way. See [Deleting a group deletes the team](#deleting-a-group-deletes-the-team).
+
+### Deleting a group deletes the team
+
+Unlike users, teams are deleted outright. Deleting a group in your identity provider deletes the corresponding Pulumi team, and the access you granted that team goes with it: the team's roles, and its permissions on stacks and environments. Members themselves are not deleted and remain in your organization.
+
+Two things to plan for:
+
+- The deletion is not recorded in your organization's audit log, because a SCIM request has no acting user to attribute it to.
+- A delete request identifies the team by id, and Pulumi does not check that the id belongs to a SCIM-provisioned team. Any team in the organization can be deleted this way, including one created in the Pulumi Cloud console.
+
+To keep a team while removing its members, empty the group rather than deleting it.
 
 ### Usernames cannot change
 
@@ -87,10 +98,12 @@ A Pulumi username is immutable once the account exists, because it identifies th
 
 Pulumi validates every member of a group before creating or updating the corresponding team. If any member has not yet been provisioned into your organization, or has been deactivated, the entire request fails with a `400` response and no membership changes are applied. Provision users before pushing the groups that contain them.
 
-Member validation reads up to 3000 identities per request, which is a practical ceiling on the size of a SCIM-managed team.
+Member validation reads up to 3000 identities per request. In an organization larger than that, members outside the window are not silently dropped: they fail validation, and the request is rejected with the same `400` response. This is a practical ceiling on the size of a SCIM-managed team.
 
 {{% notes type="warning" %}}
-A group search returns every team in your organization whose display name matches the filter, not only the teams that SCIM created. Pulumi-local teams and teams backed by a GitHub organization appear in the results alongside SCIM-provisioned ones. If your IdP reconciles group state, it may see teams it does not own.
+A group search returns every team in your organization whose display name matches the filter, not only the teams that SCIM created. Teams created in the Pulumi Cloud console and teams backed by a GitHub organization appear alongside SCIM-provisioned ones.
+
+This matters because an identity provider that reconciles group state may treat a team it does not own as one to remove, and a delete request succeeds against any team in the organization. Scope reconciliation to the groups your identity provider provisions, or give SCIM-managed teams a distinct naming convention so the others are easy to exclude.
 {{% /notes %}}
 
 ## Next steps

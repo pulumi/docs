@@ -58,7 +58,7 @@ If you are not yet ready to enable provisioning for Groups, disable that.
 
 ### Adjust User Attribute Mappings
 
-Update the mapping for **userName** so that it applies **Only during object creation**. In the **Mappings** expansion panel, select **Provision Microsoft Entra ID _Users_** and then select the corresponding attribute mapping as shown below.
+Update the mapping for **userName** so that it applies **Only during object creation**. In the **Mappings** expansion panel, select **Provision Microsoft Entra ID _Users_** and then select the corresponding attribute mapping.
 
 In the configuration window, change the value of the **Apply this mapping** drop-down to **Only during object creation**.
 
