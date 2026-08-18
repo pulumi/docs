@@ -286,8 +286,10 @@
        homepage-only, merged on top of the shared $softwareCore fields defined
        above; this is the one place pricing data is allowed to appear so it
        doesn't get duplicated (and risk drifting or garbling) across other
-       pages. `url` and `programmingLanguage` were newly added to $softwareCore;
-       merge below preserves every field the homepage previously emitted. */}}
+       pages. `url` and `programmingLanguage` are NOT part of $softwareCore —
+       they're added only on the opted-in non-home path further below (see the
+       note at L175-179) — so this merge just layers `offers` on top and
+       preserves every field the homepage previously emitted. */}}
   {{ $software := merge $softwareCore (dict
     "offers" (slice
       (dict
@@ -391,9 +393,15 @@
        `url` and `programmingLanguage` as page-appropriate additions that do not
        touch the homepage's byte-identical node. */}}
   {{ if .Params.software_application_schema }}
+    {{/* Uses "C#" rather than ".NET" (the prose convention elsewhere on this
+         page): schema.org's `programmingLanguage` expects a language name, and
+         .NET is a runtime/platform, not a language. If a future sweep wants
+         these to match verbatim, change this back to ".NET" and update this
+         comment — either is defensible, but the two should not silently
+         diverge again. */}}
     {{ $softwarePage := merge $softwareCore (dict
       "url" "https://www.pulumi.com/"
-      "programmingLanguage" (slice "TypeScript" "Python" "Go" "C#" "Java" "YAML" "HCL")
+      "programmingLanguage" (slice "TypeScript" "Python" "JavaScript" "Go" "C#" "Java" "YAML" "HCL")
     ) }}
     {{ $graph = $graph | append $softwarePage }}
   {{ end }}
