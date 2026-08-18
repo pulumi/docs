@@ -218,7 +218,7 @@ Yes. Pulumi provides native providers for AWS, Azure, and Google Cloud, along wi
 
 ### Is Pulumi free?
 
-Pulumi's CLI, SDKs, and providers are free and open source. Pulumi Cloud, the managed platform for state, secrets, and team collaboration, includes a free Individual edition; the Team edition adds organization-managed policy enforcement for growing teams, and the Enterprise and Business Critical editions add role-based access control, advanced policy controls, and premium support for organizations running infrastructure at scale.
+Pulumi's CLI, SDKs, and providers are free and open source. Pulumi Cloud, the managed platform for state, secrets, and team collaboration, includes a free Individual edition; the Team edition adds multi-user collaboration and organization-managed policy enforcement for growing teams, and the Enterprise and Business Critical editions add role-based access control, advanced policy controls, and premium support for organizations running infrastructure at scale.
 
 ### What is Pulumi Cloud?
 
