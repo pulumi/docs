@@ -1,54 +1,50 @@
 ---
-title: "Infrastructure as Code | Pulumi"
-meta_desc: "Infrastructure as Code in Python, TypeScript, Go, or C#. Ship infrastructure 3-5x faster with real programming languages, full IDE support, and testing. Free tier."
+title: "Alternative | Pulumi"
+meta_desc: Infrastructure as Code in Python, TypeScript, Go, or C#. 170+ cloud providers, policy as code, secrets management. Open source. Free tier.
 layout: gads-template
 block_external_search_index: true
 
-heading: "Infrastructure as Code"
+# Optional: override the embedded contact form section (#contact-form) at the
+# bottom of the page. All values default to the ones shown below.
+# contact_form:
+#     headline: Talk to a Pulumi expert
+#     description: |
+#         Have questions about Pulumi, pricing, or migrating from another tool?
+#         Tell us about your use case and our team will get back to you within one business day.
+#     hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
+
+heading: "Competitor Alternative"
 subheading: |
     Pulumi is a free, open source infrastructure as code tool, and works best with Pulumi Cloud to
     make managing infrastructure secure, reliable, and hassle-free.
 
-hide_platform_details: true
-
-customer_quote:
-    text: "When we did it with Terraform, it took two weeks to do infrastructure deployments. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
-    author: "Matt Stephenson"
-    title: "Senior Principal Software Engineer"
-    company: "Starburst"
-    logo: starburst
-    link: /case-studies/starburst
-
 overview:
-    title: Ship infrastructure 3-5x faster<br/>with real programming languages
+    title: Infrastructure as Code<br/>in any Programming Language
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a robust IaC solution</span>? Stop wrestling with YAML and proprietary DSLs. Use TypeScript, Python, Go, or C# to build, test, and deploy cloud infrastructure the way you write application code.
+        Pulumi Cloud is the smartest and easiest way to automate, secure, and manage everything you run in the cloud using programming languages you know and love.
 
 key_features_above:
     items:
-        - title: "Write infrastructure like software"
+        - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
             Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript/JavaScript, Python, Go, C#, Java, and YAML. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
-              - title: AI-powered infrastructure
+              - title: Code faster
                 description: |
-                    Generate Pulumi code from natural language or convert existing Terraform with Neo AI
+                    Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, Java, and YAML using your IDE and any language ecosystem tools.
+                icon: code
+              - title: Ship infrastructure with AI
+                description: |
+                    Pulumi Neo plans and executes infrastructure changes across your stacks. Claude Code, Cursor, and Codex work with Pulumi through the MCP server and Agent Skills.
                 icon: lightning
-                color: yellow
-              - title: Deploy to any cloud in minutes
+              - title: Preview and test changes
                 description: |
-                    170+ providers including AWS, Azure, GCP, Kubernetes, and every major SaaS platform
-                icon: cloud
-                color: yellow
-              - title: Catch errors before deployment
-                description: |
-                    Type-checking, unit tests, and policy validation prevent misconfigurations from reaching production
-                icon: shield
-                color: yellow
-
+                    Test and validate infrastructure with standard unit test frameworks and
+                    integration tests. Preview changes before deploying.
+                icon: eye
+        
 key_features:
-    title: Key features
     items:
         - title: "Build infrastructure faster with reusable components"
           sub_title: "Pulumi Packages"
@@ -146,11 +142,7 @@ key_features:
               - title: Native cloud providers
                 icon: cloud
                 description: |
-                    Full API coverage for AWS, Azure, Google Cloud, and Kubernetes with same-day updates.
-              - title: Crosswalk for AWS
-                icon: abstract-shapes
-                description: |
-                    Adopt well-architected best practices for your infrastructure easily with the Crosswalk library.
+                    Azure Native covers 100% of the Azure Resource Manager API, and the Kubernetes provider reaches any resource in the Kubernetes API.
               - title: Cloud Native support
                 icon: clouds
                 description: |
@@ -176,23 +168,22 @@ key_features:
                     Integrate your CI/CD provider with Pulumi or use GitOps to manage Kubernetes clusters.
 
 stats:
-    title: Trusted by thousands
+    title: "Trusted by thousands of companies"
     description: |
-        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported
-        by an active community. We maintain a public roadmap and welcome feedback and contributions.
+        Pulumi's Infrastructure as Code CLI and SDK is an open-source project that's supported by an active community. We maintain a public roadmap and welcome feedback and contributions.
     community:
         number: "350,000+"
-        description: developers
+        description: "Community members"
     company:
         number: "4,000+"
-        description: organizations
+        description: "Companies in production"
     integration:
         number: "170+"
-        description: Cloud and service integrations
+        description: "Cloud and service integrations"
 
 key_features_below:
     items:
-        - title: "Use Pulumi IaC at scale"
+        - title: "The fastest and easiest way to use Pulumi IaC at scale"
           sub_title: "Pulumi Cloud"
           description: |
              A fully-managed service for Pulumi IaC plus so much more. Manage and store infrastructure state & secrets, collaborate within teams, view and search infrastructure, and manage security and compliance using Pulumi Cloud.
@@ -213,7 +204,7 @@ key_features_below:
               - title: Search and analytics
                 icon: eye
                 description: |
-                    View resources from any cloud in one place. Search for resources across clouds with powerful queries and filters.
+                    View resources from any cloud in one place. Search for resources across clouds with simple queries and filters.
               - title: Pulumi Automation API
                 icon: gear
                 description: |
@@ -221,7 +212,7 @@ key_features_below:
               - title: Developer portals
                 icon: buildings
                 description: |
-                    Create internal developer portals to distribute infrastructure templates using Pulumi or the Backstage-plugin.
+                    Give developers self-service infrastructure templates through Pulumi Cloud, or through the Pulumi plugin for Backstage.
               - title: Identity and access control
                 icon: security
                 description: |
@@ -251,7 +242,7 @@ case_studies:
             Increased developers' agility and speed through platform engineering.
 
         - name: Starburst
-          link: /blog/how-starburst-data-creates-infrastructure-automation-magic-with-code/
+          link: /case-studies/starburst/
           logo: starburst
           description: |
             Increased velocity and speed, with deployments that are up to 3x faster.
