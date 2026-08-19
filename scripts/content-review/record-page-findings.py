@@ -198,10 +198,24 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
     finished work. Re-proposing finished work is what erodes trust in the lane.
 
     The disposition already exists — the model writes the Backlog executed /
-    Backlog declined tables from `.glowup-backlog.json`, whose items carry
-    stable ids — so the sentinel reports those id lists rather than anything
-    being inferred here. Record-sourced backlog ids are `findings-<id>`
-    (build-glowup-backlog.py), which maps straight back onto a finding id.
+    Backlog declined tables from `.glowup-backlog.json` — so the sentinel
+    reports those id lists rather than anything being inferred here.
+
+    The ids locate the backlog ITEM; the finding it refers to is then resolved
+    by CONTENT. Finding ids are positional (`f1`, `f2`, ... in collect() order)
+    and a backlog id encodes the id from the PREVIOUS run's record, built over
+    separately collected artifacts. Any shift between the two — an intervening
+    fix-lane review applying a fix and removing its finding, which is the
+    expected case between glow-ups — renumbers everything after it, so old `f2`
+    is new `f1` and an ordinal map would mark the WRONG finding applied. That
+    is this function's own failure mode pointed backwards: the executed item
+    gets re-banked and an untouched one drops out of the backlog for good.
+    `banked_from_findings` builds each item's text as `label` (plus ` — detail`),
+    so the label is a prefix of the text and the match is exact, not fuzzy.
+
+    An id that resolves to no finding leaves everything deferred and warns.
+    That direction is deliberate: re-proposing finished work is irritating and
+    visible, while marking the wrong item applied loses real work silently.
 
     Returns None when the sentinel carries neither list, so the caller can
     decline to write rather than write an all-false record.
@@ -213,28 +227,40 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
     banked = {str(b.get("id")): b for b in ((backlog or {}).get("banked") or [])
               if isinstance(b, dict)}
 
-    applied_ids: set[str] = set()
-    for bid in executed:
+    labels = [str(f.get("label") or "").strip() for f in findings]
+    applied_idx: set[int] = set()
+    for bid in sorted(executed):
         item = banked.get(bid)
+        if item is None:
+            warn(f"executed id {bid!r} is not in the backlog; leaving the "
+                 "corresponding finding deferred")
+            continue
         # A pr-body-sourced item is prose recovered from a PR description and
         # has no counterpart on this record, so it can never mark a finding.
         # That gap is exactly what the structured record exists to close.
-        if item is not None and item.get("source") != "findings-record":
+        if item.get("source") != "findings-record":
             continue
-        applied_ids.add(bid.removeprefix("findings-"))
+        text = str(item.get("text") or "").strip()
+        hit = next((i for i, lab in enumerate(labels)
+                    if lab and i not in applied_idx and text.startswith(lab)), None)
+        if hit is None:
+            warn(f"executed backlog item {bid!r} matches no finding on this page "
+                 f"({text[:80]!r}); leaving it deferred rather than marking one "
+                 "by position")
+            continue
+        applied_idx.add(hit)
 
     out = []
     for i, f in enumerate(findings):
-        fid = f"f{i + 1}"
         out.append({
-            "id": fid,
+            "id": f"f{i + 1}",
             "label": f.get("label", ""),
             "source": f.get("source", ""),
             "detail": f.get("detail", ""),
             "category": f.get("category", ""),
             "line_range": f.get("line_range", ""),
             "fix_candidate": bool(f.get("fix")),
-            "applied": fid in applied_ids,
+            "applied": i in applied_idx,
         })
     return out
 
@@ -359,9 +385,14 @@ def self_test() -> int:
     # A glow-up has no applied[], so mark_applied would file everything it
     # just executed as still outstanding, and the next glow-up would
     # re-propose finished work.
+    # Item text is what banked_from_findings() actually writes: the finding's
+    # label, plus " — detail" when there is one. Anything else here would be
+    # testing a shape the lane never produces.
     BACKLOG = {"banked": [
-        {"id": "findings-f2", "source": "findings-record", "text": "Vale filler (L48)"},
-        {"id": "findings-f3", "source": "findings-record", "text": "Vale wordiness (L200)"},
+        {"id": "findings-f2", "source": "findings-record",
+         "text": "Vale filler (L48): Don't start with 'There are'."},
+        {"id": "findings-f3", "source": "findings-record",
+         "text": "Vale wordiness (L200): 'all of' is too wordy. — editorial polish"},
         {"id": "pr19885-findings-1", "source": "pr-body", "text": "Claim (c17) — unverifiable"},
     ]}
 
@@ -390,16 +421,53 @@ def self_test() -> int:
           glow(executed_ids=["findings-f99", "nonsense"]) == [False] * 5)
     check("a pr-body-sourced backlog item cannot mark a record finding",
           glow(executed_ids=["pr19885-findings-1"]) == [False] * 5)
-    check("a missing backlog does not crash the id mapping",
+    # Without the backlog there is nothing to resolve `findings-f2` AGAINST,
+    # and the only way to honour it would be to trust the ordinal — the guess
+    # this function stopped making. Deferring everything is the safe direction.
+    check("a missing backlog marks nothing rather than guessing by position",
           [f["applied"] for f in
            mark_from_backlog(F, {"verdict": "glowup", "executed_ids": ["findings-f2"]}, None)]
-          == [False, True, False, False, False])
+          == [False] * 5)
     check("the record shape is identical on both paths",
           set(mark_from_backlog(F, {"verdict": "glowup", "executed_ids": []},
                                 BACKLOG)[0]) == set(mark_applied(F, None)[0]))
     check("a fix verdict still uses line overlap, untouched",
           applied({"category": "vale", "lines": [48, 48], "source": "vale"})
           == [False, True, False, False, False])
+
+    # Finding ids are positional and the backlog's ids come from the PREVIOUS
+    # run's record. If a fix-lane review removed an earlier finding in between,
+    # old f2 is new f1 — and an ordinal map would mark the wrong item applied,
+    # dropping real work out of the backlog for good.
+    SHIFTED = F[1:]  # the intervening review fixed and removed old f1
+    shifted_marks = [f["applied"] for f in
+                     mark_from_backlog(SHIFTED, {"verdict": "glowup",
+                                                 "executed_ids": ["findings-f2"]},
+                                       BACKLOG)]
+    check("a renumbered finding set still marks the right finding",
+          shifted_marks == [True, False, False, False])
+    check("and it is the one whose label the backlog item names",
+          mark_from_backlog(SHIFTED, {"verdict": "glowup",
+                                      "executed_ids": ["findings-f2"]},
+                            BACKLOG)[0]["label"].startswith("Vale filler (L48)"))
+    check("an item whose finding is gone leaves everything deferred",
+          [f["applied"] for f in
+           mark_from_backlog(F[3:], {"verdict": "glowup",
+                                     "executed_ids": ["findings-f2"]}, BACKLOG)]
+          == [False, False])
+    check("an executed id absent from the backlog marks nothing",
+          glow(executed_ids=["findings-f404"]) == [False] * 5)
+    check("the detail suffix does not break the label match",
+          glow(executed_ids=["findings-f3"])
+          == [False, False, True, False, False])
+    check("two executed ids cannot both claim the same finding",
+          sum(mark_from_backlog(
+              F, {"verdict": "glowup",
+                  "executed_ids": ["findings-f2", "findings-dup"]},
+              {"banked": BACKLOG["banked"] + [
+                  {"id": "findings-dup", "source": "findings-record",
+                   "text": "Vale filler (L48): Don't start with 'There are'."}]},
+          )[i]["applied"] for i in range(5)) == 1)
 
     print(f"\n{passes} passed, {len(failures)} failed")
     return 1 if failures else 0
