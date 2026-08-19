@@ -232,10 +232,10 @@ jobs:
         run: |
           TEXT=$(jq -r --arg run "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" '
             (if (.meta.n_upstream_new // 0) > 0 then
-               "Nightly claims re-verify: \(.meta.n_upstream_new) new contradicted claim(s) on GENERATED pages — "
-               + "no page in pulumi/docs to fix, these need an upstream issue:\n"
+               "Nightly claims re-verify: \(.meta.n_upstream_new) new contradicted claim(s) with no fixable page — "
+               + "`generated` needs an upstream issue; `missing` means the claims index outlived the page:\n"
                + ([.meta.upstream_entities[] | select(.issue == null)
-                   | "  • \(.entity_key)  (\(.pages[0]))"] | join("\n")) + "\n"
+                   | "  • [\(.reason // "?")] \(.entity_key)  (\(.pages[0]))"] | join("\n")) + "\n"
              else "" end)
             + (if (.meta.n_upstream_resolved // 0) > 0 then
                "Nightly claims re-verify: \(.meta.n_upstream_resolved) upstream finding(s) now verify clean — "

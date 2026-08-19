@@ -78,6 +78,9 @@ FRESH_VERDICTS = {"verified", "matches"}
 # from outside the docs corpus to mean anything.
 DECIDED_VERDICTS = STALE_VERDICTS | FRESH_VERDICTS
 
+# Lazily-imported select-articles module (tier semantics live there).
+_SELECT = None
+
 
 def log(msg: str) -> None:
     print(f"reverify-claims: {msg}", file=sys.stderr)
@@ -95,6 +98,33 @@ def _load_verify_claims():
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+def _tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
+    """select-articles.tier_for, imported by path so the tier semantics have
+    exactly one definition (same pattern check-retire-veto.py uses)."""
+    global _SELECT
+    if _SELECT is None:
+        spec = importlib.util.spec_from_file_location(
+            "select_articles", Path(__file__).resolve().parent / "select-articles.py")
+        _SELECT = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_SELECT)
+    return _SELECT.tier_for(path, rules)
+
+
+def load_tier_rules(tiers_file: Path | None) -> list[dict]:
+    """Tier rules, or [] when unreadable. Failing to [] means every page looks
+    non-tier-0, i.e. today's file-existence-only behavior — noisier for
+    generated trees, never blinder."""
+    if tiers_file is None or not tiers_file.is_file():
+        return []
+    try:
+        _tier_for("content/docs/x.md", [])  # force the import, surface errors here
+        return _SELECT.load_tiers(tiers_file)
+    except Exception as e:  # noqa: BLE001
+        warn(f"could not load tiers from {tiers_file} ({e}); "
+             f"generated trees will route by file existence alone")
+        return []
 
 
 def _load_is_volatile():
@@ -223,21 +253,49 @@ def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> boo
     return True
 
 
-def has_editable_source(assertions: list[dict], repo_root: Path | None) -> bool:
-    """True when at least one asserting page exists as markdown in the tree.
+def fix_route(assertions: list[dict], repo_root: Path | None,
+              tier_rules: list[dict] | None = None) -> str:
+    """Where a contradicted claim about these pages can actually be fixed.
 
-    A page with no source file is generated — a Hugo content adapter builds it
-    from `data/`, which some other pipeline syncs. Its text is not ours to
-    correct, and `select-articles.py` (which globs `content/docs/**/*.md`) can
-    never pick it for review, so the mark/boost/fix/retire loop has no page to
-    act on at any step.
+    Returns "local", "generated", or "missing". Only "local" may become a
+    marker — the mark/boost/fix/retire loop needs a page a PR can edit, and
+    the other two have none, so a marker there can never be retired and
+    `already_marked()` then drops the entity from the rotation for good.
 
-    `repo_root=None` means "assume editable" so the pure-logic self-tests and
-    any caller without a checkout keep today's behavior.
+    Two distinct ways to have no such page, and the file check alone catches
+    only the first:
+
+    * "missing" — no markdown in the tree. A Hugo content adapter builds the
+      page from `data/` at request time (the pre-built policy packs), or the
+      page was deleted and its claims snapshot outlived it.
+    * "generated" — the markdown exists but is machine-written and clobbered
+      on the next generator run, so an edit to it is thrown away. The CLI
+      command reference is 248 such files. `strategic-tiers.yaml` already
+      states exactly this as tier 0, so that file is the authority rather than
+      a second list to keep in sync.
+
+    A claim asserted on several pages is fixable if ANY of them is, which is
+    the permissive direction: worst case we mark a page and the review finds
+    nothing to do, versus routing a fixable claim away from the lane that
+    would have fixed it.
+
+    `repo_root=None` (and no rules) means "assume local", so pure-logic
+    callers and the self-tests keep today's behavior.
     """
-    if repo_root is None:
-        return True
-    return any((repo_root / a["path"]).is_file() for a in assertions)
+    if repo_root is None and not tier_rules:
+        return "local"
+    reasons: list[str] = []
+    for a in assertions:
+        path = a["path"]
+        tier = None
+        if tier_rules:
+            tier, _ = _tier_for(path, tier_rules)
+        exists = repo_root is None or (repo_root / path).is_file()
+        if exists and tier != 0:
+            return "local"
+        reasons.append("generated" if tier == 0 else "missing")
+    # Prefer the more specific reason when a claim spans both kinds.
+    return "generated" if "generated" in reasons else "missing"
 
 
 def load_known_upstream(path: Path | None) -> dict[str, dict]:
@@ -449,7 +507,8 @@ def finish(report: dict, out_path: Path) -> int:
         log(f"upstream (generated pages, not markable): {m['n_upstream']} "
             f"({m.get('n_upstream_new', 0)} not yet filed)")
         for e in m.get("upstream_entities") or []:
-            log(f"  {e['entity_key']} -> {e.get('issue') or 'NOT YET FILED'}")
+            log(f"  [{e.get('reason', '?')}] {e['entity_key']} "
+                f"-> {e.get('issue') or 'NOT YET FILED'}")
     for k in m.get("upstream_resolved_entities") or []:
         log(f"upstream RESOLVED (now verifies clean, retire its upstream-claims.yaml entry): {k}")
     write_outputs(report)
@@ -521,6 +580,7 @@ def run(args) -> int:
     repo_root = Path(args.repo_root).resolve()
     known_upstream = load_known_upstream(
         Path(args.known_upstream) if args.known_upstream else None)
+    tier_rules = load_tier_rules(Path(args.tiers) if args.tiers else None)
     # A key that matches nothing in the index is a typo, or a claim that has
     # since been re-extracted under a different key — either way it is silently
     # muting nothing while looking like it mutes something. Warn, never fail:
@@ -560,8 +620,9 @@ def run(args) -> int:
     # policy-pack findings did in August.
     contradicted = [r for r in results if r["verdict"] in STALE_VERDICTS]
     for r in results:
-        r["upstream"] = not has_editable_source(
-            [{"path": p["path"]} for p in r["pages"]], repo_root)
+        r["fix_route"] = fix_route(
+            [{"path": p["path"]} for p in r["pages"]], repo_root, tier_rules)
+        r["upstream"] = r["fix_route"] != "local"
     stale = [r for r in contradicted if not r["upstream"]]
     upstream = [r for r in contradicted if r["upstream"]]
     # New = we have not told anyone yet. Resolved = a finding we had filed
@@ -586,7 +647,7 @@ def run(args) -> int:
     report["meta"]["n_upstream_resolved"] = len(upstream_resolved)
     report["meta"]["upstream_entities"] = [
         {"entity_key": r["entity_key"], "issue": r.get("upstream_issue"),
-         "pages": [p["path"] for p in r["pages"]]}
+         "reason": r["fix_route"], "pages": [p["path"] for p in r["pages"]]}
         for r in sorted(upstream, key=lambda x: x["entity_key"])]
     report["meta"]["upstream_resolved_entities"] = sorted(
         r["entity_key"] for r in upstream_resolved)
@@ -756,16 +817,26 @@ def self_test() -> int:
         root = Path(tmp)
         (root / "content/docs").mkdir(parents=True)
         (root / "content/docs/real.md").write_text("# real\n")
-        editable = [{"path": "content/docs/real.md"}]
-        generated = [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]
-        check("a page with a source file is editable",
-              has_editable_source(editable, root) is True)
-        check("a generated page is not editable",
-              has_editable_source(generated, root) is False)
-        check("one editable asserting page is enough",
-              has_editable_source(generated + editable, root) is True)
-        check("no repo root -> assume editable (pure-logic callers)",
-              has_editable_source(generated, None) is True)
+        (root / "content/docs/iac/cli/commands").mkdir(parents=True)
+        (root / "content/docs/iac/cli/commands/pulumi-up.md").write_text("# gen\n")
+        rules = [{"prefix": "content/docs/iac/cli/commands/", "tier": 0}]
+        local = [{"path": "content/docs/real.md"}]
+        absent = [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]
+        gen = [{"path": "content/docs/iac/cli/commands/pulumi-up.md"}]
+        check("an editable page routes local", fix_route(local, root, rules) == "local")
+        check("a page with no source routes missing",
+              fix_route(absent, root, rules) == "missing")
+        # The case the file check alone gets wrong: the markdown is right there,
+        # but the generator overwrites it, so a PR against it is thrown away.
+        check("a tier-0 page with a real file still routes generated",
+              fix_route(gen, root, rules) == "generated")
+        check("one fixable asserting page wins", fix_route(gen + local, root, rules) == "local")
+        check("generated beats missing when a claim spans both",
+              fix_route(gen + absent, root, rules) == "generated")
+        check("no root and no rules -> assume local (pure-logic callers)",
+              fix_route(absent, None, None) == "local")
+        check("unreadable tiers file -> no rules, never fatal",
+              load_tier_rules(root / "nope.yaml") == [])
 
         # The known-upstream file only ever quiets a repeat notification.
         ku = root / "upstream-claims.yaml"
@@ -891,6 +962,10 @@ def build_parser() -> argparse.ArgumentParser:
                    help="entities to re-verify tonight (chunk size of the rotation)")
     p.add_argument("--today", help="override today's date YYYY-MM-DD (testing)")
     p.add_argument("--repo-root", default=str(HERE), help="repo root for the verifier's read_file")
+    p.add_argument("--tiers",
+                   default=str(HERE / ".claude/commands/review-existing-content"
+                                      "/references/strategic-tiers.yaml"),
+                   help="tier rules; tier 0 (generated) routes findings upstream, not to a marker")
     p.add_argument("--known-upstream",
                    default=str(HERE / ".claude/commands/review-existing-content"
                                       "/references/upstream-claims.yaml"),
