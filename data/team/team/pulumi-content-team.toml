@@ -1,7 +1,17 @@
+# The canonical house byline for posts and pages without a named individual
+# author. A second record with the same display name ("Pulumi Content Team",
+# id "content-team") was retired in favor of this one: two ids sharing a
+# display name split the /blog/author/ term pages in two and left authors
+# picking between them at random. Use this id; do not add another generic
+# byline alongside it.
+#
+# status is "active" because this byline is in current use. In this data
+# set "inactive" marks people who have left the company (~46 records);
+# it was wrong on a house byline that is still being assigned.
 id = "pulumi-content-team"
 name = "Pulumi Content Team"
 title = "Content Team"
 company = "Pulumi"
 weight = 1
 
-status = "inactive"
+status = "active"
