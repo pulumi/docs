@@ -84,16 +84,16 @@ These scopes control access to the legacy Pulumi Copilot conversation API, curre
 
 | Value | Description |
 |-------|-------------|
-| `policy_groups:create` | Create a new group of Infrastructure as Code policies. This allows organizing related policies for better management and enforcement.<br><br>**Granted by default roles**: `Admin` |
-| `policy_groups:delete` | Remove an existing group of Infrastructure as Code policies. This permanently deletes the policy group and its configurations.<br><br>**Granted by default roles**: `Admin` |
-| `policy_groups:read` | View Infrastructure as Code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Member`, `Admin` |
-| `policy_groups:update` | Modify Infrastructure as Code policy group settings. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
-| `policy_pack:create` | Create a new Infrastructure as Code policy pack. This allows bundling related policies for deployment and enforcement.<br><br>**Granted by default roles**: `Admin` |
-| `policy_pack:delete` | Remove an existing Infrastructure as Code policy pack. This permanently deletes the policy pack and its configurations.<br><br>**Granted by default roles**: `Admin` |
-| `policy_pack:read` | View Infrastructure as Code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
-| `policy_pack:update` | Modify an existing Infrastructure as Code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
+| `policy_groups:create` | Create a new group of infrastructure as code policies. This allows organizing related policies for better management and enforcement.<br><br>**Granted by default roles**: `Admin` |
+| `policy_groups:delete` | Remove an existing group of infrastructure as code policies. This permanently deletes the policy group and its configurations.<br><br>**Granted by default roles**: `Admin` |
+| `policy_groups:read` | View infrastructure as code policy group configurations. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Member`, `Admin` |
+| `policy_groups:update` | Modify infrastructure as code policy group settings. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:create` | Create a new infrastructure as code policy pack. This allows bundling related policies for deployment and enforcement.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:delete` | Remove an existing infrastructure as code policy pack. This permanently deletes the policy pack and its configurations.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:read` | View infrastructure as code policy pack contents. This includes access to policy definitions and enforcement rules.<br><br>**Granted by default roles**: `Admin` |
+| `policy_pack:update` | Modify an existing infrastructure as code policy pack. This allows updating policy definitions and enforcement parameters.<br><br>**Granted by default roles**: `Admin` |
 | `policy_results:create` | Create policy evaluation results for a cloud account.<br><br>**Granted by default roles**: `Admin` |
-| `policy_results:read` | View results of Infrastructure as Code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
+| `policy_results:read` | View results of infrastructure as code policy evaluations. This provides insights into policy compliance and violations.<br><br>**Granted by default roles**: `Admin` |
 | `policy_results:update` | Update policy evaluation results and compliance data.<br><br>**Granted by default roles**: `Admin` |
 | `policy_results:delete` | Delete policy evaluation results.<br><br>**Granted by default roles**: `Admin` |
 

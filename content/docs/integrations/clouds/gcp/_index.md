@@ -45,7 +45,7 @@ Start new Google Cloud projects from a pre-built template:
 
 ## Guides
 
-Hands-on Infrastructure as Code guides for building on Google Cloud with Pulumi.
+Hands-on infrastructure as code guides for building on Google Cloud with Pulumi.
 
 - [Google Cloud Build CI/CD](/docs/iac/operations/continuous-delivery/google-cloud-build/) — drive Pulumi stack updates from Cloud Build pipelines.
 
