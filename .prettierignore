@@ -80,6 +80,7 @@ static/js
 /.vale-findings.json
 /.content-review-*.json
 /.fix-scope-report.json
+/.glowup-*.json
 /.review-snapshot/
 /.pr-body-draft.md
 /.lint.log
