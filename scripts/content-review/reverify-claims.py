@@ -225,12 +225,28 @@ def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> boo
 
 def tonight_chunk(keys: list[str], count: int, today: date) -> list[str]:
     """Day-rotated chunk of the sorted entity keys: full coverage every
-    ceil(N/count) nights, deterministic from the date alone."""
+    ceil(N/count) nights, deterministic from the date alone.
+
+    The slice is STRIDED (`keys[idx::n_chunks]`), not contiguous. Contiguous
+    slicing gives the last chunk `len(keys) % count` entities, so the nightly
+    workload is a lottery on the pool size: at count=25 a pool of 51 splits
+    25/25/1, and one night in three checks a single entity. That is not a
+    quiet night — it is the same rotation spending 4% of its budget and then
+    reporting a sample of one, which `signal-health.py` reads as a lane-wide
+    verdict (an all-inconclusive n=1 degraded the reverify signal on
+    2026-08-19). Striding gives every chunk floor or ceil of len/n_chunks,
+    so the count only ever varies by one.
+
+    Coverage and determinism are unchanged: the chunks still partition the
+    key list exactly, and the day still picks the chunk. Only the grouping
+    differs — entities that used to travel together now interleave, which
+    nothing downstream depends on (each entity is verified independently).
+    """
     if not keys or count <= 0:
         return []
     n_chunks = -(-len(keys) // count)  # ceil
     idx = today.toordinal() % n_chunks
-    return keys[idx * count:(idx + 1) * count]
+    return keys[idx::n_chunks]
 
 
 def representative(assertions: list[dict]) -> dict:
@@ -376,7 +392,9 @@ def finish(report: dict, out_path: Path) -> int:
     m = report["meta"]
     log(f"checked={m['n_checked']} stale={m['n_stale']} fresh={m['n_fresh']} "
         f"inconclusive={m['n_inconclusive']} (of which {m['n_demoted']} demoted for "
-        f"own-corpus evidence) (volatile entities={m['n_entities']}) -> {out_path}")
+        f"own-corpus evidence) (volatile entities={m['n_entities']}, "
+        f"eligible={m.get('n_eligible', 0)}, marked={m.get('n_marked', 0)}, "
+        f"superseded={m.get('n_superseded', 0)}) -> {out_path}")
     for label in ("inconclusive_by_type", "inconclusive_by_reason"):
         if m.get(label):
             log(f"{label}: " + " ".join(f"{k}={v}" for k, v in m[label].items()))
@@ -397,8 +415,9 @@ def run(args) -> int:
         "schema_version": SCHEMA_VERSION,
         "checked_at": today.isoformat(),
         "entities": [],
-        "meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0, "n_checked": 0,
-                 "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0, "n_demoted": 0},
+        "meta": {"n_snapshots": 0, "n_entities": 0, "n_marked": 0, "n_eligible": 0,
+                 "n_due": 0, "n_checked": 0, "n_stale": 0, "n_fresh": 0,
+                 "n_inconclusive": 0, "n_demoted": 0},
     }
     out_path = Path(args.out)
 
@@ -420,11 +439,18 @@ def run(args) -> int:
     entities = volatile_entities(snapshots, _load_is_volatile())
     report["meta"]["n_entities"] = len(entities)
 
+    marked = {k for k, v in entities.items() if already_marked(k, v, ledger)}
     superseded = {k for k, v in entities.items()
-                  if not already_marked(k, v, ledger) and superseded_by_review(v, ledger)}
-    unmarked = sorted(k for k, v in entities.items()
-                      if not already_marked(k, v, ledger) and k not in superseded)
+                  if k not in marked and superseded_by_review(v, ledger)}
+    unmarked = sorted(k for k in entities if k not in marked and k not in superseded)
+    # n_eligible is the pool the rotation actually divides, and n_marked is
+    # the backlog held out of it. Without both, a small n_due is ambiguous
+    # between "the pool is nearly empty" and "the rotation handed tonight a
+    # short chunk" — the two want opposite responses, and reading the report
+    # for 2026-08-19 (n_due=1) could not tell them apart.
+    report["meta"]["n_marked"] = len(marked)
     report["meta"]["n_superseded"] = len(superseded)
+    report["meta"]["n_eligible"] = len(unmarked)
     keys = tonight_chunk(unmarked, args.count, today)
     report["meta"]["n_due"] = len(keys)
     if not keys:
@@ -606,6 +632,21 @@ def self_test() -> int:
     check("same day -> same chunk", tonight_chunk(keys, 2, d0) == chunks[0])
     check("count of zero -> empty chunk", tonight_chunk(keys, 0, d0) == [])
     check("empty keys -> empty chunk", tonight_chunk([], 3, d0) == [])
+    check("chunks partition the key list (no key checked twice a rotation)",
+          len([k for ch in chunks for k in ch]) == len(keys))
+    # The remainder night: 51 keys at count=25 used to split 25/25/1, so one
+    # night in three checked a single entity. Every chunk is now within one.
+    wide = [f"k{i:03d}" for i in range(51)]
+    sizes = sorted(len(tonight_chunk(wide, 25, date.fromordinal(d0.toordinal() + i)))
+                   for i in range(3))
+    check(f"no starved night in the rotation (sizes={sizes})", max(sizes) - min(sizes) <= 1)
+    check("strided rotation still covers every key",
+          sorted(k for i in range(3)
+                 for k in tonight_chunk(wide, 25, date.fromordinal(d0.toordinal() + i)))
+          == wide)
+    check("chunk never exceeds the requested count",
+          all(len(tonight_chunk(wide, 25, date.fromordinal(d0.toordinal() + i))) <= 25
+              for i in range(3)))
 
     # Markers: fan-out, idempotence, minimal entry for a ledger gap.
     ledger = {"content/docs/a.md": {"path": "content/docs/a.md", "slug": "docs-a",

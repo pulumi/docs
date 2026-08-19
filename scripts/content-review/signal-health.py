@@ -92,6 +92,15 @@ REALERT_DAYS = 7
 # REALERT_DAYS still paces the nag weekly while the state persists.
 SIGNAL_THRESHOLDS = {"capped-pages": 0}
 
+# Smallest all-inconclusive night that counts as evidence the reverify lane is
+# finding nothing. Below it the run is a sample, not a verdict: on 2026-08-19
+# the rotation handed the lane a single entity (a contiguous-chunk remainder,
+# since fixed in reverify-claims.tonight_chunk), that entity came back demoted,
+# and 1-of-1 inconclusive degraded the signal for the whole lane. A short night
+# is now no observation at all, which leaves the prior state standing — the
+# same treatment a missing report already gets.
+MIN_INCONCLUSIVE_SAMPLE = 5
+
 # One line per signal: what broke, for how long, the consequence, and where to
 # look — the consequence is the point (see the module docstring).
 CONSEQUENCES = {
@@ -223,6 +232,11 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     to notice. But the count is carried into the detail so the alert points at
     the verifier's source routing rather than at S3 and API keys — the
     remediation for a demoted night is nothing like the one for a dead lane.
+
+    That inference needs a sample to stand on, so an all-inconclusive night
+    under MIN_INCONCLUSIVE_SAMPLE checks yields no observation rather than a
+    degraded one. `skipped` and `no_snapshots` are unaffected: a lane that
+    could not run says so directly and never depends on the sample size.
     """
     if report_path is None or not report_path.is_file():
         return None
@@ -241,6 +255,11 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     if skipped:
         return "degraded", f"{n_due} entities due but run skipped ({skipped})"
     if n_checked and n_inconclusive == n_checked:
+        if n_checked < MIN_INCONCLUSIVE_SAMPLE:
+            log(f"all {n_checked} check(s) inconclusive, but that is below the "
+                f"{MIN_INCONCLUSIVE_SAMPLE}-check floor for a lane-wide verdict; "
+                f"no reverify observation")
+            return None
         detail = f"all {n_checked} checks inconclusive"
         if n_demoted:
             detail += f", {n_demoted} demoted for citing only our own docs"
@@ -638,6 +657,11 @@ def self_test() -> int:
     rv_nosnaps = {"meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0,
                            "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0,
                            "skipped": "no_snapshots"}}
+    # The 2026-08-19 shape: a one-entity rotation chunk, demoted, which used to
+    # read as a lane-wide "no conclusive results".
+    rv_thin = {"meta": {"n_snapshots": 100, "n_entities": 54, "n_due": 1,
+                        "n_checked": 1, "n_stale": 0, "n_fresh": 0,
+                        "n_inconclusive": 1, "n_demoted": 1}}
 
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
@@ -660,6 +684,14 @@ def self_test() -> int:
         check("skipped run stays degraded with skip detail",
               st["signals"]["reverify"]["status"] == "degraded"
               and "no_api_key" in st["signals"]["reverify"]["detail"])
+
+        # A night too short to generalize from is not evidence either way:
+        # the prior state (degraded, from rv_nokey above) stands untouched
+        # rather than being re-asserted or cleared by a sample of one.
+        prior = dict(st["signals"]["reverify"])
+        st, alert = run_once(d, "2026-09-06", reverify=rv_thin)
+        check("a 1-check all-inconclusive night yields no observation",
+              st["signals"]["reverify"] == prior)
 
         # An all-demoted night is still no drift detection, so it still
         # degrades — but the detail has to name demotion, or the alert sends

@@ -15,8 +15,17 @@ name: "Scheduled jobs: Re-verify volatile claims"
 #   unset -> on, 25 entities/night (the default)
 #   '0'   -> off: the whole job is skipped (no runner, no spend)
 #   'N'   -> on, N entities/night
-# The sweep is a stateless day rotation over the volatile entity set, so all
-# of it is covered every ceil(N_entities/count) nights regardless of the knob.
+# The sweep is a stateless day rotation over the ELIGIBLE entity set (volatile,
+# minus entities already carrying a stale marker or superseded by a newer
+# review), so all of it is covered every ceil(N_eligible/count) nights
+# regardless of the knob. The rotation slices with a stride, not a contiguous
+# window: a contiguous last chunk is whatever the remainder happens to be, so a
+# 51-entity pool at count=25 split 25/25/1 and one night in three checked a
+# single entity. That is what happened on 2026-08-19, and the all-inconclusive
+# n=1 then degraded the reverify health signal for the whole lane. Chunk sizes
+# now differ by at most one, and `meta.n_eligible` / `meta.n_marked` in the
+# report say which pool the rotation divided, so a short night is diagnosable
+# from the artifact alone.
 #
 # The job gate wraps the variable in format('{0}', ...) — do not "simplify" it
 # back to a bare `vars.X != '0'`. An unset variable is null, and GitHub coerces
