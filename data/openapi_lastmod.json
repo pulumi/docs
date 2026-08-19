@@ -32,7 +32,8 @@
       "hash": "37b50a1f2f8416f3ce0ab1dcc7cbc567ef83270c61e7409112df241ce8a14c48"
     },
     "Environments": {
-      "hash": "52c51de7e90e151a9e3f2be8587b024e4809257f6338bd54c683b8eed2d45f94"
+      "hash": "753ed4a40353c70109d706d9206ab52d7ead63a9d6eea41835ffded68656b025",
+      "lastmod": "2026-08-19"
     },
     "InsightsAccounts": {
       "hash": "f9952d2fff9609ea2f973ab6c821d643baf9480ea940304f797888c5a657ec95"
@@ -53,7 +54,8 @@
       "hash": "0e369147c9be7f55fec3f6d282fbccfee6fbdcbe4b29a4bab164a5afb6c53f3e"
     },
     "Organizations": {
-      "hash": "b19f20d4b6739458d0bc9433e71e7440f3e9b5e0f91ac9466bac78cfda51d9af"
+      "hash": "4320677d21c04bdcd393477bbdad046feee0b8aba3945273036f30cb0da18970",
+      "lastmod": "2026-08-19"
     },
     "PolicyGroups": {
       "hash": "ebf4fec5b106236d87ee6f5671ca43c8f1fefb4d215c68bbea184a59b9bab646"
@@ -98,10 +100,12 @@
       "hash": "46ecb987bf91d76ff4985a39b783857299f884ccbcf3bbb5087e277379703748"
     },
     "Users": {
-      "hash": "7253535f46b9f21fe334b3c9d47d966944031c2ea400704118a7b5eeade0a2d4"
+      "hash": "363e44cc36585f276146e22aa3486886ab7c902adcb5591f334f226701bda588",
+      "lastmod": "2026-08-19"
     },
     "VCS Integrations": {
-      "hash": "dad991c47bf22af55dbaa026daab02bfd09a1727f789d25ce951756b7a9fe2be"
+      "hash": "e8d555bfdf1000d31d66b7ca835bec8221ad2900a09ccb494a5027a9476615f5",
+      "lastmod": "2026-08-19"
     },
     "Webhooks": {
       "hash": "fda2095a9c22c0543987a16f6d43dc3ccb2535a8e163f4e38b6b119bb0c29d7d"
@@ -1438,7 +1442,8 @@
       "hash": "6f541fb481b34e8ca3c758c3437f36f9ee69a337eae7e9d266298ea22d54443c"
     },
     "GraphSchemaNodeType": {
-      "hash": "385710d8d477389408e5b41a24cf3709a1b538b3be34d8e4f2177262fb4f55be"
+      "hash": "265945b53efe0194d239e0f1246923127cc8eb03a5445b2733e019d88f9e43bf",
+      "lastmod": "2026-08-19"
     },
     "GraphSchemaResponse": {
       "hash": "237d6b2bb1b29a058808ac8188ce390fb45e9232f1386eddaf41879b27aabf2a"
@@ -2077,7 +2082,8 @@
       "hash": "a1b5662df3c05c8e73943400c87fd899c1edf2b7721947c016ecd5e861cd130a"
     },
     "ResourceResult": {
-      "hash": "5bc703d12ec17d748cbdcf9d9036af8bdecef82b2a50a91e9e6965e789147544"
+      "hash": "d5b3708edbcabcf82dd9876290676e42abb1700378168f37f7bc51c8acbae57f",
+      "lastmod": "2026-08-19"
     },
     "ResourceSearchPagination": {
       "hash": "104976cb3477c6150f06729e4c5697ef7ae35ae28883682f99080783bf72dd08"
