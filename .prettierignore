@@ -88,3 +88,8 @@ static/js
 /.review-changes.paths
 /.applied.paths
 /.review-admin-cache/
+
+# Real-corpus fixture for test_corpus_classifiers.py. Written one claim per
+# line on purpose: pretty-printing it is ~5,700 lines of pure noise in every
+# diff that regenerates it, which is how a review fixture stops getting read.
+scripts/content-review/testdata/
