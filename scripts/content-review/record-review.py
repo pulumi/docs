@@ -30,7 +30,8 @@ genuinely "incomplete" and stays due for retry.
 
 Canonical record (every field always present):
   { path, slug, lane, status, pr, pr_number, last_pr, last_pr_number, head_sha,
-    fixes, skipped_findings, glowup_degraded, retirement, note, attempts,
+    fixes, skipped_findings, glowup_degraded, glowup_degraded_runs, retirement,
+    note, attempts,
     clarity_flag, tier, score, monthly_visits, traffic_available, signals,
     signals_available, reviewed_at }
 
@@ -58,6 +59,7 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -244,7 +246,18 @@ def load_prior(slug: str, uri: str, prior_json: str | None) -> dict | None:
         log("aws CLI not available; no prior ledger record to carry forward")
         return None
     if out.returncode != 0:
-        log(f"no prior ledger record at {key} (first review of this page)")
+        # A missing key and a broken credential both exit non-zero, and only one
+        # of them is benign. Reporting both as "first review" would hide the
+        # case that silently reintroduces the bug this carry-forward fixes — a
+        # page with real history recorded as if it had none — so only a genuine
+        # 404 stays quiet.
+        err = (out.stderr or "").strip()
+        if re.search(r"\b(404|Not Found|NoSuchKey)\b", err, re.I):
+            log(f"no prior ledger record at {key} (first review of this page)")
+        else:
+            warn(f"could not read the prior ledger record at {key}; carrying "
+                 f"nothing forward, which may reset this page's PR pointer and "
+                 f"banked counters: {err[:200]}")
         return None
     try:
         rec = json.loads(out.stdout)
@@ -426,7 +439,10 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         # `pr_number` keeps its original meaning — the PR THIS review opened, 0
         # when it opened none — so the versioned ledger's metrics stay
         # comparable across history. The durable pointer to the page's most
-        # recent review PR is separate, and is what the glow-up backlog reads.
+        # recent review PR is separate, and is read by select-glowup.py
+        # (`source_pr_number`, which the unprivileged worker is handed) and by
+        # build-glowup-backlog.py, which falls back to it when the head-ref
+        # query cannot reach GitHub.
         "last_pr": last_pr_from(prior)[0],
         "last_pr_number": last_pr_from(prior)[1],
         "head_sha": "",
@@ -438,6 +454,12 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         # measured. The selector needs this bit to tell "declined 17" (real
         # adjudication, cool down) from "never saw 17" (still owed).
         "glowup_degraded": False,
+        # Consecutive degraded glow-ups. The selector exempts a degraded page
+        # from the cooldown so an unexecuted backlog isn't buried for 90 days,
+        # but an exemption with no counter is an unbounded loop when the
+        # recovery keeps failing for the same reason. `attempts` can't serve —
+        # the glowup path resets it to 0.
+        "glowup_degraded_runs": 0,
         "retirement": bool(verdict.get("retirement")) if verdict else False,
         "note": None,
         "attempts": prior_attempts + 1,
@@ -503,8 +525,14 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
                 if prior_banked or rec["clarity_flag"]:
                     rec["skipped_findings"] = prior_banked
                     rec["glowup_degraded"] = True
-                    rec["note"] = ("glow-up executed no backlog; prior counters "
-                                   "preserved and the page stays eligible")
+                    # Consecutive, so the selector can stop exempting a page
+                    # whose recovery keeps failing the same way.
+                    rec["glowup_degraded_runs"] = (
+                        int((prior or {}).get("glowup_degraded_runs") or 0) + 1)
+                    rec["note"] = (
+                        "glow-up executed no backlog; prior counters preserved "
+                        f"and the page stays eligible (degraded run "
+                        f"{rec['glowup_degraded_runs']})")
         else:
             rec["status"] = "incomplete"
             branch = branch_for(slug, rec["retirement"], glowup=(v == "glowup"))
@@ -739,7 +767,8 @@ def self_test() -> int:
         check("all canonical fields present", set(rec) == {
             "path", "slug", "lane", "mode", "status", "pr", "pr_number",
             "last_pr", "last_pr_number", "head_sha",
-            "fixes", "skipped_findings", "glowup_degraded", "retirement", "note",
+            "fixes", "skipped_findings", "glowup_degraded", "glowup_degraded_runs",
+            "retirement", "note",
             "attempts", "clarity_flag", "tier", "score", "monthly_visits",
             "traffic_available", "signals", "signals_available", "reviewed_at"})
         check("mode defaults to fix", rec["mode"] == "fix")
@@ -884,6 +913,58 @@ def self_test() -> int:
                          prior={"status": "glowup", "skipped_findings": 0})
         check("an empty glow-up with no prior debt is not degraded",
               r["glowup_degraded"] is False and r["skipped_findings"] == 0)
+
+        # --- the degraded exemption is bounded ------------------------------
+        # A degraded glow-up exempts the page from the cooldown, so without a
+        # counter a page whose recovery keeps failing re-qualifies every run,
+        # forever. `attempts` can't guard it — the glowup path resets it to 0.
+        r1 = build_record(g_article, g_empty, g_pr, g_article["slug"], prior=prior_banked)
+        check("the first degraded glow-up counts as one",
+              r1["glowup_degraded_runs"] == 1)
+        r2 = build_record(g_article, g_empty, g_pr, g_article["slug"],
+                          prior={**prior_banked, "glowup_degraded_runs": 1})
+        check("consecutive degraded glow-ups accrue", r2["glowup_degraded_runs"] == 2)
+        check("the run count is visible in the note", "degraded run 2" in (r2["note"] or ""))
+        r3 = build_record(g_article, g_verdict, g_pr, g_article["slug"],
+                          prior={**prior_banked, "glowup_degraded_runs": 2})
+        check("a glow-up that did work resets the degraded counter",
+              r3["glowup_degraded_runs"] == 0 and r3["glowup_degraded"] is False)
+
+        # --- a failed ledger read is not "first review" ---------------------
+        # Expired credentials and a wrong URI both exit non-zero. Reporting them
+        # as a first review silently reintroduces the bug the carry-forward
+        # fixes: a page with history recorded as if it had none.
+        import contextlib
+        import io
+        import subprocess as _sp
+
+        def _read_prior_with(stderr_text):
+            """load_prior against a stubbed `aws s3 cp` failure; returns its log."""
+            def fake_run(cmd, **kw):
+                return _sp.CompletedProcess(cmd, 1, stdout="", stderr=stderr_text)
+            real_run, buf = _sp.run, io.StringIO()
+            _sp.run = fake_run
+            try:
+                with contextlib.redirect_stderr(buf):
+                    result = load_prior("docs-x", "s3://b/ledger/", None)
+            finally:
+                _sp.run = real_run
+            return result, buf.getvalue()
+
+        missing, missing_log = _read_prior_with(
+            "fatal error: An error occurred (404) when calling the HeadObject "
+            "operation: Not Found")
+        broken, broken_log = _read_prior_with("Unable to locate credentials")
+        check("a genuine 404 reads as the page's first review",
+              missing is None and "first review of this page" in missing_log
+              and "::warning::" not in missing_log)
+        check("a credential failure is NOT reported as a first review",
+              broken is None and "first review of this page" not in broken_log)
+        check("it warns instead, naming what carrying nothing forward costs",
+              "::warning::" in broken_log
+              and "reset this page's PR pointer" in broken_log)
+        check("the underlying aws error is surfaced, not swallowed",
+              "Unable to locate credentials" in broken_log)
 
         # --- clarity_flag is three-state ------------------------------------
         # The glow-up sentinel never carried the key, so every glow-up silently
