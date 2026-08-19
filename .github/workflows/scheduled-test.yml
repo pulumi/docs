@@ -9,10 +9,13 @@ on:
   workflow_dispatch: {}
 
 # Stacked pushes to a PR branch used to leave every superseded run cloning this
-# ~1 GB repo to completion. Collapse them onto the newest head; never cancel a
-# scheduled or manual run, which is the one that actually tests every program.
+# ~1.2 GB repo to completion. Collapse those onto the newest head. The event
+# name is part of the group so the nightly, a manual run and a PR never share
+# one: schedule and workflow_dispatch both resolve to refs/heads/master, and a
+# shared group would queue a dispatch behind the ~3h nightly (and cancel it if
+# a second dispatch arrived while it waited).
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-${{ github.event_name }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
@@ -74,8 +77,19 @@ jobs:
           REPO: ${{ github.repository }}
           PR: ${{ github.event.pull_request.number }}
         run: |
-          changed="$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
-            --jq '.[].filename' | grep '^static/programs/' || true)"
+          # Keep the API call's own failure distinguishable from "the PR
+          # changed nothing": one `|| true` over the whole pipeline would let a
+          # rate-limited or 5xx response look like a content-only PR and skip
+          # every test behind a green required check. If the gate can't tell,
+          # fall back to what this job did before it existed — run the setup and
+          # let test.sh decide from `git diff`, which is authoritative anyway.
+          files="$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
+            --jq '.[].filename')" || {
+            echo "::warning::Could not list the PR's changed files; running the tests rather than assuming there are none."
+            echo "programs=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          }
+          changed="$(printf '%s\n' "$files" | grep '^static/programs/' || true)"
           if [ -n "$changed" ]; then
             echo "programs=true" >> "$GITHUB_OUTPUT"
             echo "Example programs changed:"
