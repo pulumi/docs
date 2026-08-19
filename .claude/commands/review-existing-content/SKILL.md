@@ -486,8 +486,15 @@ frontmatter) are also present and are your evidence base.
    .self-check-report.json` (copy the article aside before your first edit).
 1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
    "skipped_findings": <declined count>, "clarity_flag": <bool>,
-   "retirement": false}` — no `applied[]` array; the glow-up gate replaces
-   the per-hunk check. State `clarity_flag` explicitly: `false` once you have
+   "executed_ids": [...], "declined_ids": [...], "retirement": false}` — no
+   `applied[]` array; the glow-up gate replaces the per-hunk check.
+   `executed_ids` and `declined_ids` are the `id` values from
+   `.glowup-backlog.json` for the rows you put in the Backlog executed and
+   Backlog declined tables — the same partition, reported as data. Every
+   banked id belongs in exactly one of them; both lists are empty only when
+   the backlog itself was empty. Without them the findings record cannot
+   tell what you executed from what you left, so it records nothing at all
+   rather than filing your completed work as still outstanding. State `clarity_flag` explicitly: `false` once you have
    resolved the page's readthrough reconception, `true` while one still
    stands. Omitting it carries the page's existing flag forward unchanged —
    which is the right default, since the flag is usually why the page was

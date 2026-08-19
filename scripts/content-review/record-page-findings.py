@@ -50,6 +50,15 @@ not form a second, looser opinion about it.
 Whole-page snapshot semantics, same as `record-claims.py`: a review sees the
 entire page, so overwriting `<slug>.json` is always correct.
 
+GLOW-UP RUNS are the exception, and take their disposition from the sentinel's
+`executed_ids`/`declined_ids` instead (`--backlog` supplies the id mapping). A
+glow-up carries no `applied[]` by design, so the line-overlap match above finds
+nothing and would file every finding — including everything the glow-up just
+executed — as deferred. A sentinel carrying neither list means NO record is
+written for that run: the previous record then stands, so `reviewed_at` can lag
+the ledger's. That is deliberate. The fix-lane record is the truthful one, and a
+stale-but-true record beats a fresh-but-wrong one that re-proposes finished work.
+
 Usage:
     record-page-findings.py --queue .content-review-queue.json \
         --verdict .content-review-verdict.json --out .page-findings.json \
@@ -176,8 +185,62 @@ def head_commit(repo_root: Path) -> str:
         return ""
 
 
+def mark_from_backlog(findings: list[dict], verdict: dict | None,
+                      backlog: dict | None) -> list[dict] | None:
+    """Flag findings from a GLOW-UP verdict's own disposition, or None.
+
+    A glow-up carries no `applied[]` — the glow-up scope gate replaces the
+    per-hunk check, so there is no line-range attribution to match on, and
+    `mark_applied` therefore flags every finding deferred. That is not a
+    degraded record, it is a WRONG one: the items the glow-up just executed
+    get filed as outstanding, and `build-glowup-backlog.banked_from_findings`
+    banks exactly the `applied: false` items, so the next run re-proposes
+    finished work. Re-proposing finished work is what erodes trust in the lane.
+
+    The disposition already exists — the model writes the Backlog executed /
+    Backlog declined tables from `.glowup-backlog.json`, whose items carry
+    stable ids — so the sentinel reports those id lists rather than anything
+    being inferred here. Record-sourced backlog ids are `findings-<id>`
+    (build-glowup-backlog.py), which maps straight back onto a finding id.
+
+    Returns None when the sentinel carries neither list, so the caller can
+    decline to write rather than write an all-false record.
+    """
+    v = verdict or {}
+    if "executed_ids" not in v and "declined_ids" not in v:
+        return None
+    executed = {str(i) for i in (v.get("executed_ids") or [])}
+    banked = {str(b.get("id")): b for b in ((backlog or {}).get("banked") or [])
+              if isinstance(b, dict)}
+
+    applied_ids: set[str] = set()
+    for bid in executed:
+        item = banked.get(bid)
+        # A pr-body-sourced item is prose recovered from a PR description and
+        # has no counterpart on this record, so it can never mark a finding.
+        # That gap is exactly what the structured record exists to close.
+        if item is not None and item.get("source") != "findings-record":
+            continue
+        applied_ids.add(bid.removeprefix("findings-"))
+
+    out = []
+    for i, f in enumerate(findings):
+        fid = f"f{i + 1}"
+        out.append({
+            "id": fid,
+            "label": f.get("label", ""),
+            "source": f.get("source", ""),
+            "detail": f.get("detail", ""),
+            "category": f.get("category", ""),
+            "line_range": f.get("line_range", ""),
+            "fix_candidate": bool(f.get("fix")),
+            "applied": fid in applied_ids,
+        })
+    return out
+
+
 def build(queue: dict, verdict: dict | None, artifacts: dict,
-          repo_root: Path) -> dict | None:
+          repo_root: Path, backlog: dict | None = None) -> dict | None:
     articles = queue.get("articles") or []
     if not articles:
         warn("queue has no article; nothing to record")
@@ -187,7 +250,19 @@ def build(queue: dict, verdict: dict | None, artifacts: dict,
     findings, _errors = cpb.collect(
         artifacts.get("verified"), artifacts.get("vale"),
         artifacts.get("readthrough"), artifacts.get("frontmatter"))
-    marked = mark_applied(findings, verdict)
+    if (verdict or {}).get("verdict") == "glowup":
+        marked = mark_from_backlog(findings, verdict, backlog)
+        if marked is None:
+            # Writing an all-false record here would file the work the glow-up
+            # just did as still outstanding. Skipping leaves the previous
+            # record standing, which is stale but true; the next fix-lane
+            # review refreshes it from its own artifacts.
+            warn("glow-up verdict carries no executed_ids/declined_ids; "
+                 "skipping the findings write rather than recording every "
+                 "finding as deferred")
+            return None
+    else:
+        marked = mark_applied(findings, verdict)
     n_applied = sum(1 for f in marked if f["applied"])
     return {
         "schema_version": SCHEMA_VERSION,
@@ -280,6 +355,52 @@ def self_test() -> int:
     check("deferred findings are recorded, not dropped",
           len(mark_applied(F, None)) == 5)
 
+    # --- glow-up disposition -------------------------------------------
+    # A glow-up has no applied[], so mark_applied would file everything it
+    # just executed as still outstanding, and the next glow-up would
+    # re-propose finished work.
+    BACKLOG = {"banked": [
+        {"id": "findings-f2", "source": "findings-record", "text": "Vale filler (L48)"},
+        {"id": "findings-f3", "source": "findings-record", "text": "Vale wordiness (L200)"},
+        {"id": "pr19885-findings-1", "source": "pr-body", "text": "Claim (c17) — unverifiable"},
+    ]}
+
+    def glow(**kw):
+        v = {"verdict": "glowup", "fixes": 1, "skipped_findings": 1, **kw}
+        marked = mark_from_backlog(F, v, BACKLOG)
+        return None if marked is None else [f["applied"] for f in marked]
+
+    check("the old line-overlap path would have filed executed work as deferred",
+          [f["applied"] for f in mark_applied(F, {"verdict": "glowup", "fixes": 1})]
+          == [False] * 5)
+    check("executed backlog ids mark their findings applied",
+          glow(executed_ids=["findings-f2"], declined_ids=["findings-f3"])
+          == [False, True, False, False, False])
+    check("declined backlog ids stay deferred",
+          glow(executed_ids=[], declined_ids=["findings-f2", "findings-f3"])
+          == [False] * 5)
+    check("several executed ids all land",
+          glow(executed_ids=["findings-f2", "findings-f3"])
+          == [False, True, True, False, False])
+    check("a sentinel with neither list records nothing at all",
+          glow() is None and mark_from_backlog(F, {"verdict": "glowup"}, BACKLOG) is None)
+    check("an empty backlog is still a disposition, not a missing one",
+          glow(executed_ids=[], declined_ids=[]) == [False] * 5)
+    check("an executed id with no matching finding is ignored, not crashed on",
+          glow(executed_ids=["findings-f99", "nonsense"]) == [False] * 5)
+    check("a pr-body-sourced backlog item cannot mark a record finding",
+          glow(executed_ids=["pr19885-findings-1"]) == [False] * 5)
+    check("a missing backlog does not crash the id mapping",
+          [f["applied"] for f in
+           mark_from_backlog(F, {"verdict": "glowup", "executed_ids": ["findings-f2"]}, None)]
+          == [False, True, False, False, False])
+    check("the record shape is identical on both paths",
+          set(mark_from_backlog(F, {"verdict": "glowup", "executed_ids": []},
+                                BACKLOG)[0]) == set(mark_applied(F, None)[0]))
+    check("a fix verdict still uses line overlap, untouched",
+          applied({"category": "vale", "lines": [48, 48], "source": "vale"})
+          == [False, True, False, False, False])
+
     print(f"\n{passes} passed, {len(failures)} failed")
     return 1 if failures else 0
 
@@ -292,6 +413,9 @@ def main() -> int:
     p.add_argument("--vale-findings", default=".vale-findings.json")
     p.add_argument("--readthrough", default=".readthrough-findings.json")
     p.add_argument("--frontmatter", default=".frontmatter-validation.json")
+    p.add_argument("--backlog", default="",
+                   help="the glow-up work list (.glowup-backlog.json); supplies the "
+                        "id -> finding mapping for a glow-up verdict's disposition")
     p.add_argument("--repo-root", default=".")
     p.add_argument("--out", default=".page-findings.json")
     p.add_argument("--uri", default="", help="s3://bucket/findings/ (skipped when empty)")
@@ -310,7 +434,8 @@ def main() -> int:
          "vale": read_json(Path(args.vale_findings)),
          "readthrough": read_json(Path(args.readthrough)),
          "frontmatter": read_json(Path(args.frontmatter))},
-        Path(args.repo_root))
+        Path(args.repo_root),
+        backlog=read_json(Path(args.backlog)) if args.backlog else None)
     if record is None:
         return 0
     Path(args.out).write_text(json.dumps(record, indent=2) + "\n")
