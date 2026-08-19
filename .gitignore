@@ -138,6 +138,11 @@ _vendor/
 /.applied.paths
 /.fix-scope-report.json
 /.review-snapshot/
+# Glow-up lane equivalents (`.glowup-backlog.json`, the composed work list,
+# and `.glowup-scope-report.json`, the scope gate's report). Both are written
+# to the repo root before the `make lint` re-gate, so an unignored one makes
+# `prettier --check .` fail and strands the PR in draft.
+/.glowup-*.json
 # docs-review pre-computation artifacts the worker generates before the
 # review (claim extraction/verification, Vale, frontmatter, cross-sibling,
 # readthrough).
