@@ -113,7 +113,41 @@ def load_entry(ledger_dir: Path, slug: str) -> dict:
         return {}
 
 
-def build(article: dict, entry: dict, prs: list[dict]) -> dict:
+def banked_from_findings(record: dict | None) -> list[dict]:
+    """Deferred findings from the structured record, if one exists.
+
+    This is the spine: `record-page-findings.py` writes every finding a review
+    produced, with an `applied` flag, next to the ledger. Reading it beats
+    scraping the PR body on every count that matters — it cannot be edited by
+    someone tidying a markdown table, it does not fail silently when a heading
+    is renamed, and it exists for every review rather than only the latest one
+    a reused branch happens to point at.
+
+    Only `applied: false` items are banked. An applied finding is done, and
+    re-proposing finished work is exactly what erodes trust in the lane.
+    """
+    if not isinstance(record, dict):
+        return []
+    out = []
+    for f in record.get("findings") or []:
+        if not isinstance(f, dict) or f.get("applied"):
+            continue
+        text = str(f.get("label") or "").strip()
+        if not text:
+            continue
+        detail = str(f.get("detail") or "").strip()
+        out.append({
+            "id": f"findings-{f.get('id', len(out) + 1)}",
+            "section": "Findings not applied",
+            "source_pr": None,
+            "source": "findings-record",
+            "text": text + (f" — {detail}" if detail else ""),
+        })
+    return out
+
+
+def build(article: dict, entry: dict, prs: list[dict],
+          findings_record: dict | None = None) -> dict:
     backlog = {
         "schema_version": SCHEMA_VERSION,
         "slug": article.get("slug"),
@@ -126,6 +160,21 @@ def build(article: dict, entry: dict, prs: list[dict]) -> dict:
         "banked": [],
         "notes": [],
     }
+    # Structured record first. The PR-body scrape still runs and is still
+    # merged in: it is the only place the model's one-line REASON for deferring
+    # lives, plus the flag-only screenshot and rendered-content observations,
+    # which are prose by nature and have no artifact behind them. So the
+    # record is the spine and the prose is enrichment — strictly more than
+    # before, never less.
+    structured = banked_from_findings(findings_record)
+    if structured:
+        backlog["banked"].extend(structured)
+        backlog["findings_record"] = {
+            "slug": (findings_record or {}).get("slug"),
+            "reviewed_at": (findings_record or {}).get("reviewed_at"),
+            "counts": (findings_record or {}).get("counts"),
+        }
+
     for pr in prs:
         number = int(pr.get("number") or 0)
         backlog["source_prs"].append({"number": number, "url": pr.get("url")})
@@ -136,9 +185,12 @@ def build(article: dict, entry: dict, prs: list[dict]) -> dict:
                     "id": f"pr{number}-{section.lower().split()[0]}-{i}",
                     "section": section,
                     "source_pr": number,
+                    "source": "pr-body",
                     "text": text,
                 })
-    if not prs:
+    if structured and not prs:
+        pass  # the record alone is a complete backlog; no degradation note
+    elif not prs:
         backlog["notes"].append(
             "no prior review PRs reachable; run the taxonomy-only sweep")
     elif not backlog["banked"]:
@@ -175,7 +227,22 @@ def run(args) -> int:
     else:
         prs = [pr for n in numbers if (pr := fetch_pr(n))]
 
-    backlog = build(article, entry, prs)
+    # The queue article carries the record when the dispatcher had S3 access
+    # (select-glowup.py stamps it); --findings-dir covers a dispatcher-side or
+    # manual run that can read the prefix directly.
+    findings_record = article.get("findings_record")
+    if findings_record is None and args.findings_dir:
+        fr = Path(args.findings_dir) / f"{article.get('slug') or ''}.json"
+        if fr.is_file():
+            try:
+                findings_record = json.loads(fr.read_text())
+            except (OSError, json.JSONDecodeError) as e:
+                warn(f"{fr} unreadable ({e}); falling back to the PR-body scrape")
+        else:
+            log(f"no findings record at {fr}; PR-body scrape only "
+                f"(expected for pages last reviewed before the record existed)")
+
+    backlog = build(article, entry, prs, findings_record)
     Path(args.out).write_text(json.dumps(backlog, indent=2) + "\n")
     log(f"{len(backlog['banked'])} banked finding(s) from "
         f"{len(backlog['source_prs'])} PR(s) -> {args.out}")
@@ -242,6 +309,38 @@ def self_test() -> int:
     check("no PRs degrades to a noted empty backlog",
           empty["banked"] == [] and any("taxonomy-only" in n for n in empty["notes"]))
     blank = build(article, entry, [{"number": 5, "url": "u", "body": "## Why this page\nx"}])
+    # The structured record is the spine: it works with no PR at all, which is
+    # the case the PR-body scrape can never cover (reused branches make older
+    # reviews unreachable).
+    rec = {"slug": "docs-x", "reviewed_at": "2026-08-19",
+           "counts": {"total": 3, "applied": 1, "deferred": 2},
+           "findings": [
+               {"id": "f1", "label": "Claim (c1): thing is v7", "detail": "actually v9",
+                "applied": True},
+               {"id": "f2", "label": "Vale filler (L48)", "detail": "", "applied": False},
+               {"id": "f3", "label": "Claim (c9): other thing", "detail": "unverifiable",
+                "applied": False}]}
+    from_rec = build(article, entry, [], rec)
+    check("structured findings bank with no PR at all",
+          len(from_rec["banked"]) == 2)
+    check("an APPLIED finding is never re-banked",
+          all("thing is v7" not in b["text"] for b in from_rec["banked"]))
+    check("the detail rides along for context",
+          any("unverifiable" in b["text"] for b in from_rec["banked"]))
+    check("a record-only backlog carries no degradation note",
+          from_rec["notes"] == [])
+    check("the record's provenance is recorded",
+          from_rec.get("findings_record", {}).get("counts", {}).get("deferred") == 2)
+    both = build(article, entry, [{"number": 7, "url": "u",
+                                   "body": "## Findings not applied\n\n- **Claim (c9)** — judgment call\n"}],
+                 rec)
+    check("record and PR prose merge rather than compete",
+          len(both["banked"]) == 3
+          and {b.get("source") for b in both["banked"]} == {"findings-record", "pr-body"})
+    check("a missing record falls back to the PR scrape cleanly",
+          len(build(article, entry, [{"number": 7, "url": "u",
+                                      "body": "## Findings not applied\n\n- x\n"}], None)["banked"]) == 1)
+
     check("PR without banked sections degrades with a note",
           blank["banked"] == [] and any("taxonomy-only" in n for n in blank["notes"]))
 
@@ -262,6 +361,9 @@ def main() -> int:
     p.add_argument("--pr-json",
                    help="PR view fixtures (JSON list of {number,url,body}; '-' = stdin) "
                         "— replaces gh calls (testing)")
+    p.add_argument("--findings-dir", default="",
+                   help="synced findings/ prefix; the structured spine, "
+                        "preferred over scraping PR bodies")
     p.add_argument("--out", default=".glowup-backlog.json")
     p.add_argument("--self-test", action="store_true", help="run built-in smoke checks")
     args = p.parse_args()

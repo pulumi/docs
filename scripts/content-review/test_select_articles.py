@@ -462,7 +462,11 @@ def main() -> int:
 
         marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
                   "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
-                  "checked_at": "2026-08-15"}
+                  # Before TODAY's review: the review saw this marker and left it
+                  # unresolved, so it is real drift and must keep boosting. (A
+                  # marker dated AFTER the last completed review is the #20970
+                  # echo instead — see boost_suppressed_by_recent_fix.)
+                  "checked_at": "2026-06-10"}
 
         led = tmp / "ledger-markers"
         # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
@@ -511,6 +515,42 @@ def main() -> int:
         check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
               == ["version/pulumi-package"],
               "escalated marker reaches a --paths review instead of being dropped")
+
+        print("stale-claim boost cooldown (#20970's missing half)")
+        import importlib.util
+        from datetime import date as _date
+        _spec = importlib.util.spec_from_file_location("select_articles", SCRIPT)
+        sa = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(sa)
+        _t = _date(2026, 8, 19)
+        def _e(reviewed, checked, status="reviewed"):
+            e = {"status": status, "reviewed_at": reviewed}
+            if checked is not None:
+                e["stale_claims"] = [{"entity_key": "version/x", "checked_at": checked}]
+            return e
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-19"), _t) is True,
+              "marker written AFTER a just-completed review is an echo: suppressed")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-17"), _t) is False,
+              "marker the review SAW and left unresolved is real drift: still boosts")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-01", "2026-08-02"), _t) is False,
+              "past the cooldown, an echo has had time to be real: still boosts")
+        check(sa.boost_suppressed_by_recent_fix(
+                  _e("2026-08-18", "2026-08-19", status="incomplete"), _t) is False,
+              "an incomplete review fixed nothing, so it never suppresses")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", None), _t) is False,
+              "no markers, nothing to suppress")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "garbage"), _t) is False,
+              "an undated marker is not provably an echo, so it keeps its boost")
+        check(sa.boost_suppressed_by_recent_fix(_e("garbage", "2026-08-19"), _t) is False,
+              "an unparseable review date fails open (boosts), never suppresses silently")
+        _edge = str(_date.fromordinal(_t.toordinal() - sa.STALE_BOOST_COOLDOWN_DAYS))
+        check(sa.boost_suppressed_by_recent_fix(_e(_edge, "2026-08-19"), _t) is False,
+              "exactly COOLDOWN days old is outside the window")
+        check(sa.boost_suppressed_by_recent_fix(
+                  {"status": "reviewed", "reviewed_at": "2026-08-18",
+                   "stale_claims": [{"entity_key": "a", "checked_at": "2026-08-19"},
+                                    {"entity_key": "b", "checked_at": "2026-08-17"}]}, _t) is False,
+              "one pre-review marker is enough to keep the boost")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0
