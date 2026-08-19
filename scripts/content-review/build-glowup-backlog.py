@@ -246,7 +246,12 @@ def discover_prs(slug: str, extra_numbers: list[int],
     recovery["prs_found"] = len(prs)
     if prs:
         recovery["state"] = "recovered"
-    elif failed_heads == len(heads):
+    elif failed_heads:
+        # ANY unanswered head, not just all three. Requiring total failure meant
+        # one dead query plus two empty ones reported "no review PR has ever
+        # used <all three heads>" — naming heads that were never successfully
+        # asked. That is the same collapse this block exists to prevent, just
+        # at partial rather than total failure.
         recovery["state"] = "gh_unavailable"
     return prs, recovery
 
@@ -359,7 +364,7 @@ def build(article: dict, entry: dict, prs: list[dict],
                 }
                 if declined:
                     item["declined_by_pr"] = number
-                backlog["banked"].append(item)
+                _bank(backlog["banked"], item)
         if len(backlog["banked"]) == before:
             recovery["prs_without_sections"].append(number)
 
@@ -385,6 +390,54 @@ def build(article: dict, entry: dict, prs: list[dict],
     return backlog
 
 
+def _dedupe_key(text: str) -> str:
+    """A banked line's finding identity, for cross-PR de-duplication.
+
+    Keyed on the LABEL, not the whole row. Every shape the lane produces is
+    "<label> — <reason>": the composer renders `- **<label>** — <why it was
+    deferred>`, and `banked_from_findings` writes `<label> — <detail>`. The
+    label is the finding; the reason is one reviewer's phrasing of why they
+    left it, and it differs between every review of the same page. Keying on
+    the whole row would therefore dedupe almost nothing.
+    """
+    head = re.split(r"\s+(?:—|–|--)\s+", str(text or ""), maxsplit=1)[0]
+    return re.sub(r"[^a-z0-9]+", " ", head.lower()).strip()
+
+
+def _bank(banked: list[dict], item: dict) -> None:
+    """Append `item` unless the same finding is already banked.
+
+    One unresolved finding is now discoverable from several PRs at once, which
+    it never was while only the latest PR was readable. A page reviewed three
+    times carries the same unactioned Vale nag in all three bodies (see
+    content-review/docs-iac-concepts-providers, #20953/#20927/#20503, each
+    deferring `'all of' is too wordy` in its own words), and a glow-up that
+    declines it adds a fourth. Undeduped, the model's execute-or-decline table
+    grows by a row per review for a single piece of debt — an expanding backlog
+    that reads as new findings when nothing new has been found.
+
+    Two preferences on collision. A `glowup-declined` variant always wins: it
+    carries decline history the plain row doesn't, the model needs to know this
+    was already turned down once, and a human needs to be able to see a decline
+    loop forming. Otherwise the later PR wins, so the reason shown is the most
+    recent reviewer's judgment rather than the oldest.
+    """
+    key = _dedupe_key(item.get("text"))
+    if not key:
+        banked.append(item)
+        return
+    for i, existing in enumerate(banked):
+        if _dedupe_key(existing.get("text")) != key:
+            continue
+        was_declined = existing.get("source") == "glowup-declined"
+        is_declined = item.get("source") == "glowup-declined"
+        newer = int(item.get("source_pr") or 0) > int(existing.get("source_pr") or 0)
+        if (is_declined and not was_declined) or (is_declined == was_declined and newer):
+            banked[i] = item
+        return
+    banked.append(item)
+
+
 def _recovery_note(recovery: dict) -> str:
     """One sentence naming which recovery outcome happened.
 
@@ -397,7 +450,11 @@ def _recovery_note(recovery: dict) -> str:
     heads = ", ".join(recovery.get("heads_queried") or []) or "none"
     tail = "; run the taxonomy-only sweep"
     if state == "gh_unavailable":
-        return (f"GitHub would not answer for any of {heads}, so prior review PRs "
+        # Name the heads that actually went unanswered, not every head queried:
+        # the failure can be partial, and a sentence listing branches that WERE
+        # successfully asked is the same untrue-by-collapse note this replaces.
+        unreachable = ", ".join(recovery.get("prs_unreachable") or []) or heads
+        return (f"GitHub would not answer for {unreachable}, so prior review PRs "
                 f"could not be read{tail}")
     if state == "prs_carried_nothing":
         found = ", ".join(f"#{n}" for n in recovery.get("prs_without_sections") or [])
@@ -694,6 +751,49 @@ def self_test() -> int:
           build(article, debt, gpr)["degraded"] is False)
     check("degraded is always present, even on the happy path",
           "degraded" in gback and "recovery" in gback)
+
+    # --- partial head-query failure is still a failure ------------------
+    part = {"heads_queried": heads, "prs_found": 0,
+            "prs_unreachable": ["content-review/glowup-docs-x"],
+            "prs_without_sections": [], "state": "gh_unavailable"}
+    part_note = build(article, {}, [], None, part)["notes"][0]
+    check("a partly-failed query never claims the page was never reviewed",
+          "has ever used" not in part_note)
+    check("the note names only the heads that actually went unanswered",
+          "glowup-docs-x" in part_note
+          and "content-review/retire-docs-x" not in part_note)
+
+    # --- one finding, one row, however many PRs carry it ----------------
+    # A page reviewed three times defers the same Vale nag in all three bodies,
+    # each in its own words; a glow-up declining it adds a fourth. Undeduped
+    # the model gets four rows for one piece of debt.
+    same = "Vale wordiness (L84): 'all of' is too wordy."
+    multi = [
+        {"number": 20503, "url": "u", "headRefName": "content-review/docs-x",
+         "body": f"## Findings not applied\n- **{same}** — Style nag; a prose judgment."},
+        {"number": 20927, "url": "u", "headRefName": "content-review/docs-x",
+         "body": f"## Findings not applied\n- **{same}** — `write-good` heuristic; a style call."},
+        {"number": 20953, "url": "u", "headRefName": "content-review/docs-x",
+         "body": f"## Findings not applied\n- **{same}** — Style nag; reads naturally here."},
+    ]
+    dd = build(article, {}, multi)
+    check("the same finding deferred by three reviews banks once",
+          len(dd["banked"]) == 1)
+    check("and it keeps the most recent reviewer's reason",
+          dd["banked"][0]["source_pr"] == 20953)
+    declined_too = build(article, {}, multi + [
+        {"number": 21000, "url": "u", "headRefName": "content-review/glowup-docs-x",
+         "body": f"## Backlog declined\n- **{same}** — declined: accurate as written."}])
+    check("a later decline replaces the plain row rather than adding one",
+          len(declined_too["banked"]) == 1
+          and declined_too["banked"][0]["source"] == "glowup-declined")
+    check("distinct findings are never collapsed",
+          len(build(article, {}, [{"number": 1, "url": "u",
+                                   "headRefName": "content-review/docs-x",
+                                   "body": "## Findings not applied\n"
+                                           "- **Vale wordiness (L84): 'all of'.** — a\n"
+                                           "- **Vale wordiness (L99): 'all of'.** — b"}]
+                    )["banked"]) == 2)
 
     # The property every test above depends on: fixtures mean zero gh calls.
     import unittest.mock as _mock
