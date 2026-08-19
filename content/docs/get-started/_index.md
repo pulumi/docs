@@ -22,7 +22,7 @@ Pulumi is a modern [infrastructure as code](/what-is/what-is-infrastructure-as-c
 
 Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optionally pairs with [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) to make managing infrastructure secure, reliable, and hassle-free.
 
-Choose a cloud provider to get started:
+## Choose a cloud provider
 
 <section class="docs-home mt-4 mb-12">
     <div class="docs-home-section">
@@ -62,6 +62,16 @@ Choose a cloud provider to get started:
         </div>
     </div>
 </section>
+
+## Or start with a coding agent
+
+Prefer to have your agent do the setup? Paste this prompt into Claude Code, Codex, Cursor, GitHub Copilot, or whichever agent you already use, and it will install the CLI, help you pick a cloud, and deploy your first stack with you.
+
+{{< copy-prompt track="docs-copy-onboarding-prompt" >}}
+Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
+{{< /copy-prompt >}}
+
+To go further with agents, see [Agent Skills](/docs/ai/skills/), the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/docs/ai/neo/), Pulumi's purpose-built infrastructure agent.
 
 ## Learn more
 
