@@ -231,6 +231,9 @@ jobs:
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
             # Degradation-health state lives in the same bucket, own prefix.
             echo "health_uri=s3://$BUCKET/health/" >> "$GITHUB_OUTPUT"
+            # Structured per-page findings (record-page-findings.py), synced so
+            # the glow-up selector can hand each article its own record.
+            echo "findings_uri=s3://$BUCKET/findings/" >> "$GITHUB_OUTPUT"
             # Raw bucket name, handed to each worker via queue_json so a
             # per-worker `pulumi stack output` flake can't silently drop the
             # ledger write (the flake that caused duplicate re-reviews).
@@ -325,6 +328,12 @@ jobs:
           mkdir -p .ledger-cache
           aws s3 sync "${{ steps.ledger-bucket.outputs.uri }}" .ledger-cache/ --quiet \
             || echo "review ledger unavailable; selection proceeds on git staleness alone"
+          # Structured findings live in a sibling prefix; the glow-up selector
+          # hands each selected article its own record, because the worker that
+          # builds the backlog has no AWS credentials.
+          mkdir -p .findings-cache
+          aws s3 sync "${{ steps.ledger-bucket.outputs.findings_uri }}" .findings-cache/ --quiet \
+            || echo "findings records unavailable; glow-up falls back to the PR-body scrape"
 
       # Deterministic selection: the model never chooses what to review.
       # Writes has_articles= / halted= to $GITHUB_OUTPUT for the gates below.
@@ -398,11 +407,12 @@ jobs:
       # the page with the largest accumulated backlog of banked judgment
       # findings (skipped_findings, clarity_flag, low-CTR flag) wins. The
       # worker runs in mode=glowup and its PR never arms auto-merge — the
-      # PR-review sweep assigns Cam/Josh as reviewers. Backlog cap: at 5 open
-      # glow-up PRs the selector halts (max_open_glowup_prs) and the day's
-      # slot is skipped.
+      # PR-review sweep assigns Cam/Josh as reviewers. Backlog cap: at
+      # GLOWUP_MAX_OPEN_PRS (10) open glow-up PRs the selector halts
+      # (max_open_glowup_prs) and the day's slots are skipped.
       #
-      # GLOWUP_COUNT repo variable: unset -> 1/working-day (the default),
+      # GLOWUP_COUNT repo variable: unset -> 1/working-day (the default; set
+      # to '2' in pulumi/docs on 2026-08-19),
       # '0' -> off, 'N' -> N/day. Same format('{0}', ...) null-coercion trick
       # as the job gate above — a bare `vars.X != '0'` makes unset mean OFF.
       # Living inside this job, the lane inherits the weekday cron, the
@@ -419,6 +429,12 @@ jobs:
           ARGS=(--count "${{ vars.GLOWUP_COUNT || '1' }}" --out .glowup-queue.json)
           if [ -d .ledger-cache ]; then
             ARGS+=(--ledger-dir .ledger-cache)
+          fi
+          # Each selected article carries its structured findings record into
+          # the worker: build-glowup-backlog.py runs unprivileged and cannot
+          # read S3 itself (see record-page-findings.py).
+          if [ -d .findings-cache ]; then
+            ARGS+=(--findings-dir .findings-cache)
           fi
           if [ -f .traffic-snapshot ]; then
             ARGS+=(--traffic-file .traffic-snapshot)

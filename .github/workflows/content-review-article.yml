@@ -890,6 +890,10 @@ jobs:
             # The claims index shares the ledger bucket under its own prefix
             # (one snapshot object per page; see record-claims.py).
             echo "claims_uri=s3://$BUCKET/claims/" >> "$GITHUB_OUTPUT"
+            # Structured findings, third prefix in the same bucket. See
+            # record-page-findings.py for why the PR body is no longer the
+            # system of record for what a review found.
+            echo "findings_uri=s3://$BUCKET/findings/" >> "$GITHUB_OUTPUT"
           else
             echo "::warning::ledger bucket unavailable after retries; ledger write will be skipped"
           fi
@@ -939,6 +943,35 @@ jobs:
           python3 scripts/content-review/record-claims.py \
             --queue .review-snapshot/.content-review-queue.json \
             --verified .review-snapshot/.verified-claims.json
+
+      # Structured record of what this review FOUND, applied or not — the
+      # backlog `build-glowup-backlog.py` used to recover by downloading the PR
+      # body and parsing its markdown back into data. That round trip made the
+      # PR body load-bearing (an edit to a table changed what glow-up would act
+      # on), failed silently on a renamed heading, and could only ever recover
+      # the latest PR because branches are reused.
+      #
+      # Inputs are the pre-model guardrail snapshot for the findings themselves
+      # and the model's verdict for the disposition — the same split the claims
+      # index uses. `if: always()` so a review that died still records what the
+      # deterministic pre-steps found.
+      - name: Record page findings
+        if: always() && steps.ledger-bucket.outputs.findings_uri != ''
+        continue-on-error: true
+        run: |
+          if [ ! -f .review-snapshot/.content-review-queue.json ]; then
+            echo "no snapshotted queue; skipping the findings record"
+            exit 0
+          fi
+          python3 scripts/content-review/record-page-findings.py \
+            --queue .review-snapshot/.content-review-queue.json \
+            --verdict .content-review-verdict.json \
+            --verified-claims .review-snapshot/.verified-claims.json \
+            --vale-findings .review-snapshot/.vale-findings.json \
+            --readthrough .review-snapshot/.readthrough-findings.json \
+            --frontmatter .review-snapshot/.frontmatter-validation.json \
+            --out .page-findings.json \
+            --uri "${{ steps.ledger-bucket.outputs.findings_uri }}"
 
       # No explicit review dispatch: a content-review PR that passes re-lint is
       # promoted draft → ready in the step above, and that transition drives the
