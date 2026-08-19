@@ -222,8 +222,12 @@ def main() -> int:
     for path, entry in ledger.items():
         if path not in known:
             continue
-        tier, no_retire = _select.tier_for(path, tier_rules)
-        if tier == 0:
+        policy = _select.policy_for(path, tier_rules)
+        tier, no_retire = policy.tier, policy.no_retire
+        # A glow-up rewrites the page, so this lane asks the editable question,
+        # not the tier one: a generated tree the report lane fact-checks is
+        # still one no PR here may rehab (pulumi/docs#20996).
+        if not policy.editable:
             continue
         if _select.slugify(path) in open_slugs:
             continue

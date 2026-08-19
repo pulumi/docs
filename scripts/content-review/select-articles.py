@@ -10,8 +10,10 @@ inputs.
 
 Selection algorithm (weighted fair queuing by staleness):
 
-1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths,
-   `draft: true` pages, and `redirect_to:` stubs (tombstones, not content).
+1. Enumerate `content/docs/**/*.md`; keep the paths this mode is allowed to
+   touch (`--mode fix`: editable pages; `--mode report`: reviewable pages a
+   generator owns — see MODES below), then drop `draft: true` pages and
+   `redirect_to:` stubs (tombstones, not content).
 2. Hard filters: pages with an open `content-review/<slug>` bot PR; pages
    whose `incomplete` review has already burned ATTEMPT_CAP retries (they
    back off and are surfaced for a human instead of looping forever).
@@ -70,8 +72,23 @@ Selection algorithm (weighted fair queuing by staleness):
 
    Ties break on path ascending, so runs are reproducible.
 
+Two modes, over disjoint halves of the corpus (see `eligible`):
+
+* `--mode fix` (default) — pages a PR may edit. Unchanged: score, queue,
+  dispatch a worker that reviews the page and opens a PR for what it fixed.
+* `--mode report` — pages a PR may NOT edit but whose prose is still ours to
+  check: generated trees, chiefly the 248-page CLI command reference. Same
+  scoring, but the worker records the page's claim list and changes nothing.
+  This exists because "a generator owns this file" and "don't look at this
+  file" were the same flag (tier 0) until pulumi/docs#20996, and selection is
+  the only thing that ever writes a page's claim list — so 30% of
+  `content/docs/` had never been fact-checked once. Contradictions found on
+  these pages route upstream (reverify-claims.py's `fix_route`), never to a
+  marker no PR here could ever retire.
+
 Usage:
     select-articles.py --count 3 --out .content-review-queue.json
+        [--mode fix|report]
         [--traffic-file .traffic-snapshot] [--signals-file .reader-signals.json]
         [--tiers <yaml>] [--ledger-dir scripts/content-review/ledger]
         [--paths content/docs/a.md,content/docs/b/_index.md]
@@ -94,6 +111,7 @@ import subprocess
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
+from typing import NamedTuple
 
 import yaml
 
@@ -138,6 +156,13 @@ LANE = Lane(
 )
 
 BRANCH_PREFIX = "content-review/"
+
+# Worker modes this selector can queue for. `fix` is the original lane: pages a
+# PR may edit. `report` is the fact-check-only lane (pulumi/docs#20996) over the
+# pages a PR may NOT edit — generated trees whose prose is still ours to check.
+FIX_MODE = "fix"
+REPORT_MODE = "report"
+MODES = {FIX_MODE, REPORT_MODE}
 MAX_OPEN_PRS = 9
 # An `incomplete` review (worker exited before recording a verdict, or claimed
 # a fix with no PR) never advances the staleness clock, so the page stays due
@@ -316,14 +341,74 @@ def load_tiers(tiers_file: Path) -> list[dict]:
     return sorted(rules, key=lambda r: len(r.get("prefix", "")), reverse=True)
 
 
-def tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
-    """Longest-prefix match wins. Returns (tier, no_retire)."""
+class PagePolicy(NamedTuple):
+    """What the review pipeline may do with one page.
+
+    `tier`/`no_retire` are the scoring and retirement inputs they always were.
+    The two booleans are the split of what tier 0 used to conflate:
+
+      editable   — may a PR change this file? False for a tree a generator
+                   owns: the generator overwrites any edit, so a fix, a
+                   glow-up, or a snippet sweep there is spend thrown away.
+      reviewable — may the pipeline read this page and record what it claims?
+                   Independent of the above: "a generator owns this file" says
+                   nothing about whether its prose is true.
+
+    Conflating them meant tier 0 read as "never select", and selection is the
+    only thing that ever writes a page's claim list — so 254 pages (30% of
+    content/docs, 248 of them the CLI command reference) had never been
+    fact-checked once. See pulumi/docs#20996.
+    """
+
+    tier: int
+    no_retire: bool
+    editable: bool
+    reviewable: bool
+
+
+def policy_for(path: str, rules: list[dict]) -> PagePolicy:
+    """Longest-prefix match wins; unmatched paths are ordinary tier-3 content.
+
+    `tier: 0` stays valid as shorthand for "neither editable nor reviewable"
+    (the trees we genuinely never want to look at), and explicit `editable:` /
+    `reviewable:` keys override it in either direction.
+    """
     for rule in rules:
         if path.startswith(rule.get("prefix", "")):
             tier = int(rule.get("tier", 3))
-            no_retire = bool(rule.get("no_retire", False)) or tier == 1
-            return tier, no_retire
-    return 3, False
+            editable = bool(rule.get("editable", tier != 0))
+            # A page no PR may edit is a page no PR may retire, so the queue
+            # field agrees with check-retire-veto.py rather than reading
+            # `no_retire: false` on a page nothing could retire anyway.
+            no_retire = bool(rule.get("no_retire", False)) or tier == 1 or not editable
+            return PagePolicy(
+                tier,
+                no_retire,
+                editable,
+                bool(rule.get("reviewable", tier != 0)),
+            )
+    return PagePolicy(3, False, True, True)
+
+
+def tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
+    """(tier, no_retire) — the pre-#20996 shape, for callers that want only
+    the scoring facts. `policy_for` is the full answer."""
+    policy = policy_for(path, rules)
+    return policy.tier, policy.no_retire
+
+
+def eligible(policy: PagePolicy, mode: str) -> bool:
+    """Is this page a candidate for `mode`?
+
+    The two lanes partition the corpus rather than overlapping: a page the fix
+    lane can edit is never queued for report-only (the fix lane already records
+    its claims as a side effect of reviewing it), and a page it cannot edit is
+    never queued for a fix it could not keep. Pages that are neither editable
+    nor reviewable are out of both.
+    """
+    if mode == REPORT_MODE:
+        return policy.reviewable and not policy.editable
+    return policy.editable
 
 
 def load_reader_signals(
@@ -564,7 +649,7 @@ def score_page(
 
 def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
     entries = load_ledger(ledger_dir, LANE)
-    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0,
+    counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0, "reported": 0,
               "incomplete": 0, "capped": 0, "unknown": 0}
     by_lane: dict[str, int] = {}
     for path, entry in sorted(entries.items()):
@@ -579,6 +664,12 @@ def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
         # pre-standardization field still present on older ledger objects.
         if status == "clean" or entry.get("clean"):
             counts["clean"] += 1
+            continue
+        # The report-only lane never opens a PR, so a `pr_state` lookup on it
+        # would book every one of these as "unknown" — and there are 248 pages
+        # in that lane.
+        if status == "reported":
+            counts["reported"] += 1
             continue
         state = pr_state(entry.get("pr", ""), use_gh)
         if state is None:
@@ -607,6 +698,10 @@ def main() -> int:
     p.add_argument("--repo-root", default=str(REPO_ROOT), help=argparse.SUPPRESS)
     p.add_argument("--paths", help="Comma-separated content paths; bypasses scoring (testing)")
     p.add_argument("--lane", help="Override lane for --paths entries (default manual)")
+    p.add_argument("--mode", choices=sorted(MODES), default="fix",
+                   help="fix (default): editable pages, the lane that opens PRs. "
+                        "report: reviewable-but-not-editable pages (generated "
+                        "trees) — record the claim list, change nothing.")
     p.add_argument("--no-gh", action="store_true", help="Skip gh API calls (testing)")
     p.add_argument("--today", help="Override today's date YYYY-MM-DD (testing)")
     p.add_argument("--dry-run", action="store_true", help="Print queue, write nothing")
@@ -616,7 +711,11 @@ def main() -> int:
 
     repo = Path(args.repo_root)
     ledger_dir = Path(args.ledger_dir)
-    use_gh = not args.no_gh
+    mode = args.mode
+    # The report lane opens no branch and no PR, so every gh call the fix lane
+    # makes to dedup against its own open PRs is both pointless and a way for a
+    # gh outage to halt a lane that cannot collide with anything.
+    use_gh = not args.no_gh and mode != REPORT_MODE
 
     if args.stats:
         return cmd_stats(ledger_dir, use_gh)
@@ -649,6 +748,7 @@ def main() -> int:
     queue: dict = {
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "count": 0,
+        "mode": mode,
         "halted": None,
         "traffic": {**traffic_meta, "available": have_traffic},
         "reader_signals": {"available": signals_available, **signals_meta},
@@ -686,15 +786,21 @@ def main() -> int:
         }
 
     def article(path: str, lane: str, score: float | None) -> dict:
-        tier, no_retire = tier_for(path, tier_rules)
+        policy = policy_for(path, tier_rules)
         entry = ledger.get(path, {})
         return {
             "path": path,
             "url": url_for(path),
             "slug": slugify(path),
             "lane": lane,
-            "tier": tier,
-            "no_retire": no_retire,
+            "mode": mode,
+            "tier": policy.tier,
+            "no_retire": policy.no_retire,
+            # Ride the queue so every downstream consumer reads the same
+            # answer this selection was made on, rather than re-deriving it
+            # from a tiers file it may not have (the worker's publish job
+            # reads the queue; only the retire veto re-reads the YAML).
+            "editable": policy.editable,
             "monthly_visits": traffic.get(path),
             "signals": signal_terms(path)[2],
             "last_reviewed": entry.get("reviewed_at"),
@@ -746,8 +852,8 @@ def main() -> int:
     candidates: list[str] = []
     capped: list[str] = []
     for path in all_paths:
-        tier, _ = tier_for(path, tier_rules)
-        if tier == 0:
+        policy = policy_for(path, tier_rules)
+        if not eligible(policy, mode):
             continue
         if slugify(path) in open_slugs:
             continue

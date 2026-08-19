@@ -30,6 +30,7 @@ Read `.content-review-queue.json` from the repo root (written by
 {
   "generated": "2026-06-12T14:00:00+00:00",
   "count": 3,
+  "mode": "fix",
   "halted": null,
   "traffic": { "available": true, "period": "2026-05", "pages_matched": 731 },
   "reader_signals": {
@@ -43,8 +44,10 @@ Read `.content-review-queue.json` from the repo root (written by
       "url": "/docs/iac/concepts/stacks/",
       "slug": "docs-iac-concepts-stacks",
       "lane": "priority",
+      "mode": "fix",
       "tier": 1,
       "no_retire": true,
+      "editable": true,
       "monthly_visits": 12345,
       "signals": {
         "gsc": { "impressions": 15234, "ctr": 0.0205, "opportunity": 0.41,
@@ -67,6 +70,10 @@ Read `.content-review-queue.json` from the repo root (written by
 ```
 
 - `lane` — `priority` (scored pick) or `manual` (workflow_dispatch override).
+- `mode` — `fix` (this procedure), `glowup`, or `report`. A `report` queue
+  never reaches you: that lane runs no model (see §Report-only mode).
+- `editable` — false only on generated trees, which is why they are never in a
+  `fix` queue. Nothing you do should ever need to check it.
 - `stale_claims` (when present) — count of this page's volatile claims the
   nightly re-verification found contradicted (see §Claims index below). A
   non-zero count is why the page jumped the queue.
@@ -493,6 +500,48 @@ assigns the reviewers. The ledger records status `glowup` (a completed
 review: it advances the staleness clock and starts the selector's 90-day
 glow-up cooldown).
 
+## Report-only mode — no model runs
+
+When the queue article carries `"mode": "report"`, **this skill does not run
+and neither do you**. The section is here so the lane is documented where its
+siblings are, and so a future change to the worker doesn't quietly wire a model
+into it.
+
+The report-only lane (pulumi/docs#20996) visits pages a **generator** owns —
+today `content/docs/iac/cli/commands/`, 248 files — where an edit is
+overwritten on the generator's next run. Marking such a tree tier 0 used to say
+"never select it", and selection is the only thing that ever writes a page's
+claim list, so 30% of `content/docs/` had never been fact-checked once. That is
+now two separate questions in `references/strategic-tiers.yaml`: `editable`
+(may a PR change this file?) and `reviewable` (may we read it and record what
+it claims?).
+
+The run is the deterministic claim pipeline and nothing else:
+
+1. The workflow builds the synthetic whole-file diff and runs URL fetch → claim
+   extraction (regex + two LLM passes) → merge → verify. Vale, frontmatter,
+   cross-sibling, and readthrough are **skipped**: they exist to produce fixes
+   for someone to apply, and nothing here applies anything.
+1. The workflow writes the verdict sentinel itself —
+   `{"verdict": "reported", ...}` — and only when verification actually
+   produced verdicts. A degraded verify writes no sentinel, so the ledger
+   records the page `incomplete` and it stays due; stamping it `reported`
+   would advance the staleness clock on a page nothing had checked.
+1. `record-claims.py` persists the claim list to the claims index, which is
+   what puts these pages into the nightly volatile re-verify for the first
+   time.
+1. `report-claims-findings.py` reports the contradictions. They route through
+   the same upstream lane the nightly re-verify uses — never marked (no PR here
+   could retire the marker), always re-checked, and announced to #docs-ops with
+   a prefilled issue against the repo that owns the text, unless
+   `references/upstream-claims.yaml` says a human has already filed it.
+1. The publish gate enforces the rest: a `reported` verdict with a non-empty
+   patch fails closed, and no branch or PR is ever created.
+
+**If you find yourself editing a page in this lane, stop** — the generator will
+overwrite it, and the gate will reject the run before anything is pushed. The
+fix belongs upstream.
+
 ## Retirement proposals
 
 For any article with `"no_retire": false`, retirement is a valid outcome
@@ -544,6 +593,10 @@ at `claims/<slug>.json` in the ledger bucket, written by
 `entity_key` / `volatile` fields stamped by the docs-review pipeline
 (`entity_key.py`), so downstream consumers can join claims across pages by
 the entity they assert something about.
+
+Pages a generator owns reach the index through the **report-only lane**
+described above rather than through a review like yours — same script, same
+snapshot shape, no edits.
 
 The nightly `claims-reverify.yml` workflow re-checks volatile entities
 (version pins, prices, limits) straight from this index

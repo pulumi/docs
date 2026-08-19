@@ -1,16 +1,22 @@
 {{/*
     GADS Feature Grid Partial
 
-    3-col grid of icon + title + description items. Used as the row of
-    sub-features under each feature section.
+    Grid of icon + title + description items. Used as the row of sub-features
+    under each feature section. Three across by default; two across when there
+    are exactly two items, so a short row centers instead of leaving a hole.
+
+    Both column classes are written out as literal strings because Tailwind v4
+    content-scans this file as raw text -- a class assembled with printf is
+    never emitted and the grid silently collapses to one column.
 
     Params:
     - items: Array of {icon, title, description}
 */}}
 
 {{ with .items }}
+{{ $two := eq (len .) 2 }}
 <div class="container mx-auto mt-12 md:mt-12 lg:mt-20">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-16 lg:gap-36">
+    <div class="grid grid-cols-1 gap-8 md:gap-16 {{ if $two }}lg:grid-cols-2 lg:gap-24 lg:max-w-4xl lg:mx-auto{{ else }}lg:grid-cols-3 lg:gap-36{{ end }}">
         {{ range $item := . }}
             <div class="text-left flex flex-col justify-start">
                 {{ with $item.icon }}
