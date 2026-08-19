@@ -30,57 +30,16 @@ env:
   ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: ARM_CLIENT_ID=ARM_CLIENT_ID,ARM_CLIENT_SECRET=ARM_CLIENT_SECRET,ARM_TENANT_ID=ARM_TENANT_ID,ARM_SUBSCRIPTION_ID=ARM_SUBSCRIPTION_ID,PULUMI_ACCESS_TOKEN=PULUMI_ACCESS_TOKEN
 
 jobs:
-  # Checkout-free gate. On a pull request, test.sh only ever tests the programs
-  # under static/programs that the PR touched, so ask the API which files
-  # changed rather than paying for a clone to find out. The vast majority of
-  # PRs here are content-only: without this gate they still spend the job's
-  # whole fixed cost (disk cleanup, a ~1 GB clone, a master fetch, six
-  # toolchains, a KinD cluster) to run zero tests.
-  changes:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    permissions:
-      contents: read
-      pull-requests: read
-    outputs:
-      programs: ${{ steps.filter.outputs.programs }}
-    steps:
-      - name: Check whether the PR touches any example programs
-        id: filter
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-          PR: ${{ github.event.pull_request.number }}
-        run: |
-          changed="$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
-            --jq '.[].filename' | grep '^static/programs/' || true)"
-          if [ -n "$changed" ]; then
-            echo "programs=true" >> "$GITHUB_OUTPUT"
-            echo "Example programs changed:"
-            echo "$changed"
-          else
-            echo "programs=false" >> "$GITHUB_OUTPUT"
-            echo "No example programs changed; skipping the test job."
-          fi
-
   test:
-    needs: [changes]
-    # Skip tests for Dependabot PRs since they don't have access to ESC secrets,
-    # and for PRs that don't touch an example program (nothing to test). The
-    # changes job is skipped for schedule/workflow_dispatch, which always test
-    # every program.
-    if: |
-      !cancelled() && (github.event_name != 'pull_request' || (
-        github.event.pull_request.user.login != 'dependabot[bot]'
-        && needs.changes.outputs.programs == 'true'
-      ))
+    # Skip tests for Dependabot PRs since they don't have access to ESC secrets
+    if: github.event_name != 'pull_request' || github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ${{ matrix.platform }}
     # The nightly full run takes ~3h; anything past 4h is stuck, not slow.
     timeout-minutes: 240
     permissions:
       contents: read
       id-token: write
+      pull-requests: read # for the changed-files gate below
     strategy:
       matrix:
         platform:
@@ -97,7 +56,37 @@ jobs:
           - 11
 
     steps:
+      # test.sh only tests the programs under static/programs that a PR
+      # touched, and the overwhelming majority of PRs here are content-only.
+      # Ask the API which files changed before paying for the rest of this job
+      # — a ~1.2 GB clone, a master fetch, six toolchains and a KinD cluster,
+      # all to run zero tests. Note that the job itself still runs, so the
+      # matrix-expanded check name that branch protection requires is always
+      # reported; only the expensive steps are conditional. Skipping the whole
+      # job would instead report a check named bare "test" — GitHub doesn't
+      # expand the matrix for a skipped job — leaving the required check
+      # unreported and the PR stuck waiting for it.
+      - name: Check whether this PR touches any example programs
+        id: gate
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          changed="$(gh api --paginate "repos/$REPO/pulls/$PR/files" \
+            --jq '.[].filename' | grep '^static/programs/' || true)"
+          if [ -n "$changed" ]; then
+            echo "programs=true" >> "$GITHUB_OUTPUT"
+            echo "Example programs changed:"
+            echo "$changed"
+          else
+            echo "programs=false" >> "$GITHUB_OUTPUT"
+            echo "No example programs changed; nothing to test."
+          fi
+
       - name: Free Disk Space (Ubuntu)
+        if: steps.gate.outputs.programs != 'false'
         uses: jlumbroso/free-disk-space@54081f138730dfa15788a46383842cd2f914a1be # v1.3.1
         with:
           tool-cache: false
@@ -105,19 +94,24 @@ jobs:
           dotnet: false
 
       - name: Fetch secrets from ESC
+        if: steps.gate.outputs.programs != 'false'
         id: esc-secrets
         uses: pulumi/esc-action@v3
 
       - name: Check out the code
+        if: steps.gate.outputs.programs != 'false'
         uses: actions/checkout@v7
 
       # test.sh only needs master's tip to diff the PR against, so fetch one
       # commit instead of the branch's entire history.
       - name: Fetch master branch
-        if: github.ref != 'refs/heads/master'
+        if: |
+          steps.gate.outputs.programs != 'false'
+          && github.ref != 'refs/heads/master'
         run: git fetch --depth=1 origin master:master
 
       - name: Install Node.js
+        if: steps.gate.outputs.programs != 'false'
         uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
@@ -129,38 +123,45 @@ jobs:
             theme/stencil/yarn.lock
 
       - name: Install Python
+        if: steps.gate.outputs.programs != 'false'
         uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: Install Go
+        if: steps.gate.outputs.programs != 'false'
         uses: actions/setup-go@v7
         with:
           go-version: ${{ matrix.go-version }}
 
       - name: Install Java
+        if: steps.gate.outputs.programs != 'false'
         uses: actions/setup-java@v5.6.0
         with:
           distribution: temurin
           java-version: ${{ matrix.java-version }}
 
       - name: Install DotNet
+        if: steps.gate.outputs.programs != 'false'
         uses: actions/setup-dotnet@v6
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
 
       - name: Install Hugo
+        if: steps.gate.outputs.programs != 'false'
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "0.157.0"
           extended: true
 
       - name: Install Pulumi
+        if: steps.gate.outputs.programs != 'false'
         uses: pulumi/actions@v7
         with:
           pulumi-version: latest
 
       - name: Configure AWS Credentials
+        if: steps.gate.outputs.programs != 'false'
         uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -171,16 +172,19 @@ jobs:
           role-to-assume: ${{ steps.esc-secrets.outputs.AWS_CI_ROLE_ARN }}
 
       - name: Authenticate to Google Cloud
+        if: steps.gate.outputs.programs != 'false'
         uses: google-github-actions/auth@v3
         with:
           workload_identity_provider: projects/${{ env.GOOGLE_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_POOL }}/providers/${{ env.GOOGLE_CI_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ env.GOOGLE_CI_SERVICE_ACCOUNT_EMAIL }}
 
       - name: Kubernetes KinD Cluster
+        if: steps.gate.outputs.programs != 'false'
         id: kind
         uses: helm/kind-action@v1
 
       - name: Run the tests
+        if: steps.gate.outputs.programs != 'false'
         run: make test
         env:
           TEST_MODE: ${{ github.event_name }}
