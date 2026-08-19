@@ -56,10 +56,10 @@ glow-up carries no `applied[]` by design, so the line-overlap match above finds
 nothing and would file every finding — including everything the glow-up just
 executed — as deferred. Two states mean NO record is written for that run: a
 sentinel carrying neither list, and one whose executed ids ALL fail to resolve
-to a finding here
-(a missing backlog snapshot, or labels that have drifted). Both are the same
-information state — the disposition is unknown — and the all-False record that
-would otherwise be written re-banks everything the glow-up just finished. A
+to a finding here (a missing backlog snapshot, or labels that have drifted).
+Both are the same information state — the disposition is unknown — and the
+all-False record that would otherwise be written re-banks everything the
+glow-up just finished. A
 PARTIAL resolve still writes; so does a glow-up that executed only pr-body
 items, which have no counterpart on this record and are expected to resolve to
 nothing. When the write is skipped the previous record stands, so `reviewed_at`
@@ -234,6 +234,10 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
     """
     v = verdict or {}
     if "executed_ids" not in v and "declined_ids" not in v:
+        # Every None return from here warns first — the caller's log line defers
+        # to that, so a silent exit leaves it pointing at nothing.
+        warn("glow-up verdict carries neither executed_ids nor declined_ids; "
+             "disposition unknown")
         return None
     executed = {str(i) for i in (v.get("executed_ids") or [])}
     banked = {str(b.get("id")): b for b in ((backlog or {}).get("banked") or [])
@@ -465,6 +469,23 @@ def self_test() -> int:
     # function stopped making. Writing the all-False record that falls out of
     # that would re-bank the work the glow-up just did, so it takes the same
     # exit as a sentinel carrying no lists at all.
+    # build() logs "disposition unknown (see above)" and defers to this
+    # function for WHICH state it was, so a None return that doesn't warn
+    # leaves the operator reading a pointer to nothing.
+    import contextlib
+    import io
+
+    def none_path_warns(verdict):
+        buf = io.StringIO()
+        with contextlib.redirect_stderr(buf):
+            result = mark_from_backlog(F, verdict, BACKLOG)
+        return result is None and "::warning::" in buf.getvalue()
+
+    check("every None return warns first — no id lists at all",
+          none_path_warns({"verdict": "glowup"}))
+    check("every None return warns first — nothing resolved",
+          none_path_warns({"verdict": "glowup", "executed_ids": ["findings-f404"]}))
+
     check("a missing backlog skips the write rather than guessing by position",
           mark_from_backlog(F, {"verdict": "glowup",
                                 "executed_ids": ["findings-f2"]}, None) is None)
