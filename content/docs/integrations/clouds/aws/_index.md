@@ -47,7 +47,7 @@ Start new AWS projects from a pre-built template:
 
 ## Guides
 
-Hands-on Infrastructure as Code guides for building on AWS with Pulumi.
+Hands-on infrastructure as code guides for building on AWS with Pulumi.
 
 - [Pulumi CDK Adapter for AWS](/docs/iac/guides/clouds/aws/cdk/) — use AWS CDK constructs inside a Pulumi program.
 - [AWS Identity & Access Management (IAM)](/docs/iac/guides/clouds/aws/iam/) — model IAM roles, policies, and users in code.

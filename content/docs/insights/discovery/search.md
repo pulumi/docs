@@ -372,7 +372,7 @@ When using the "group by" functionality, a consolidated resource can appear in m
 
 ## Managed by attribute
 
-The **Resources** page in Pulumi Cloud now includes a **Managed By** column, which helps categorize resources based on how they are managed. This column provides insight into whether a resource is defined by Infrastructure as Code (IaC) using Pulumi or discovered by Pulumi's resource discovery engine.
+The **Resources** page in Pulumi Cloud now includes a **Managed By** column, which helps categorize resources based on how they are managed. This column provides insight into whether a resource is defined by infrastructure as code (IaC) using Pulumi or discovered by Pulumi's resource discovery engine.
 
 ### Viewing managed by categories
 
