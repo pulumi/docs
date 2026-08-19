@@ -1088,6 +1088,6 @@ $ curl $(pulumi stack output url)
 
 {{% /choosable %}}
 
-Once you are ready to move on, let's destroy everything we've spun up in this tutorial.
+Once you are ready to move on, destroy everything you've spun up in this tutorial.
 
 {{< get-started-stepper >}}
