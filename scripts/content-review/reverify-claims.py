@@ -321,6 +321,60 @@ def load_known_upstream(path: Path | None) -> dict[str, dict]:
     return out
 
 
+def load_upstream_repos(path: Path | None) -> list[dict]:
+    """[{prefix, repo}, ...] from upstream-claims.yaml, longest prefix first."""
+    if path is None or not path.is_file():
+        return []
+    try:
+        import yaml
+        data = yaml.safe_load(path.read_text()) or {}
+    except Exception:  # noqa: BLE001 - a missing link is not worth a failed run
+        return []
+    rows = [r for r in (data.get("repos") or [])
+            if isinstance(r, dict) and r.get("prefix") and r.get("repo")]
+    return sorted(rows, key=lambda r: len(r["prefix"]), reverse=True)
+
+
+def file_issue_url(finding: dict, claim_text: str, repos: list[dict]) -> str | None:
+    """A prefilled GitHub new-issue URL for an unfiled upstream finding.
+
+    Returns None when no mapping owns the page — the finding still reports and
+    still pages #docs-ops, it just arrives without a one-click filing.
+
+    Everything the reader needs to judge the finding rides in the body, so the
+    human decision is "is this right?" rather than "let me go reconstruct what
+    the bot saw". Fields are truncated because the whole thing travels as a
+    query string; GitHub starts dropping it a few KB in, and a link that
+    silently loses its body is worse than a short one.
+    """
+    page = finding["pages"][0]["path"] if finding.get("pages") else ""
+    repo = next((r["repo"] for r in repos if page.startswith(r["prefix"])), None)
+    if not repo:
+        return None
+
+    def clip(s: str, n: int) -> str:
+        s = " ".join(str(s or "").split())
+        return s if len(s) <= n else s[: n - 1] + "…"
+
+    title = f"Docs claim contradicted: {clip(finding['entity_key'], 90)}"
+    body = (
+        f"Found by the pulumi/docs nightly claims re-verify. The page is generated, "
+        f"so there is nothing to fix in pulumi/docs — the text comes from here.\n\n"
+        f"**Claim as published:** {clip(claim_text, 600)}\n\n"
+        f"**What the check found:** {clip(finding.get('evidence'), 900)}\n\n"
+        f"**Source consulted:** {clip(finding.get('source'), 300)}\n\n"
+        f"**Rendered from:** `{page}`\n"
+        f"**Entity key:** `{finding['entity_key']}`\n\n"
+        f"---\n"
+        f"Filed by a human from a #docs-ops notification; the check is automated, "
+        f"the judgment is not. If this is wrong, say so on the issue — that is a "
+        f"useful signal for the verifier's targeting."
+    )
+    from urllib.parse import urlencode
+    return (f"https://github.com/{repo}/issues/new?"
+            + urlencode({"title": title, "body": body}))
+
+
 def tonight_chunk(keys: list[str], count: int, today: date) -> list[str]:
     """Day-rotated chunk of the sorted entity keys: full coverage every
     ceil(N/count) nights, deterministic from the date alone.
@@ -581,6 +635,8 @@ def run(args) -> int:
     known_upstream = load_known_upstream(
         Path(args.known_upstream) if args.known_upstream else None)
     tier_rules = load_tier_rules(Path(args.tiers) if args.tiers else None)
+    upstream_repos = load_upstream_repos(
+        Path(args.known_upstream) if args.known_upstream else None)
     # A key that matches nothing in the index is a typo, or a claim that has
     # since been re-extracted under a different key — either way it is silently
     # muting nothing while looking like it mutes something. Warn, never fail:
@@ -600,6 +656,7 @@ def run(args) -> int:
             demoted_from, verdict = verdict, "unverifiable"
         return {
             "entity_key": key,
+            "claim_text": claim.get("text") or "",
             "verdict": verdict,
             "demoted_from": demoted_from,
             "confidence": rec.get("confidence"),
@@ -637,6 +694,9 @@ def run(args) -> int:
         entry = known_upstream.get(r["entity_key"])
         if entry:
             r["upstream_issue"] = entry.get("issue")
+        else:
+            r["file_issue_url"] = file_issue_url(
+                r, r.get("claim_text") or "", upstream_repos)
 
     fresh = [r for r in results if r["verdict"] in FRESH_VERDICTS]
     report["entities"] = results
@@ -647,6 +707,7 @@ def run(args) -> int:
     report["meta"]["n_upstream_resolved"] = len(upstream_resolved)
     report["meta"]["upstream_entities"] = [
         {"entity_key": r["entity_key"], "issue": r.get("upstream_issue"),
+         "file_issue_url": r.get("file_issue_url"),
          "reason": r["fix_route"], "pages": [p["path"] for p in r["pages"]]}
         for r in sorted(upstream, key=lambda x: x["entity_key"])]
     report["meta"]["upstream_resolved_entities"] = sorted(
@@ -682,6 +743,7 @@ def run(args) -> int:
 
 def self_test() -> int:
     import tempfile
+    from urllib.parse import unquote_plus
     failures = []
 
     def check(name, cond):
@@ -851,6 +913,37 @@ def self_test() -> int:
         (root / "bad.yaml").write_text("known: [{{{\n")
         check("malformed known-upstream fails open (noisier, never blinder)",
               load_known_upstream(root / "bad.yaml") == {})
+
+    # Prefilled filing links: mapped tree gets one, unmapped tree gets None
+    # (still reported, still paged — just no one-click).
+    repos = [{"prefix": "content/docs/reference/pre-built-policy-packs/",
+              "repo": "pulumi/policy-packs-internal"}]
+    finding = {"entity_key": "numerical/iam-user-unused-credentials-90",
+               "evidence": "AWS Config's rule covers UNUSED credentials, not rotation.",
+               "source": "https://docs.aws.amazon.com/config/latest/developerguide/x.html",
+               "pages": [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]}
+    url = file_issue_url(finding, "The policy ensures credentials are rotated within 90 days.", repos)
+    check("mapped tree yields a filing link",
+          url is not None and url.startswith("https://github.com/pulumi/policy-packs-internal/issues/new?"))
+    check("link carries the claim, the finding, and the source",
+          all(t in unquote_plus(url) for t in
+              ("rotated within 90 days", "UNUSED credentials", "docs.aws.amazon.com")))
+    check("link names the generated page it renders from",
+          "content/docs/reference/pre-built-policy-packs/cis/aws.md" in unquote_plus(url))
+    check("unmapped tree yields no link",
+          file_issue_url({**finding, "pages": [{"path": "content/docs/iac/concepts/x.md"}]},
+                         "t", repos) is None)
+    check("a finding with no pages yields no link",
+          file_issue_url({**finding, "pages": []}, "t", repos) is None)
+    # A body that silently loses its tail is worse than a short one, so the
+    # fields are clipped; guard the total against GitHub's query-string limit.
+    huge = file_issue_url({**finding, "evidence": "E" * 20000, "source": "S" * 20000},
+                          "C" * 20000, repos)
+    check(f"oversized finding still yields a usable URL ({len(huge)} chars)", len(huge) < 8000)
+    check("shipped repo map parses and covers the policy-pack tree",
+          any(r["prefix"] == "content/docs/reference/pre-built-policy-packs/"
+              for r in load_upstream_repos(
+                  HERE / ".claude/commands/review-existing-content/references/upstream-claims.yaml")))
 
     # The shipped file itself: every entry needs a tracking issue, or it is a
     # mute button with nobody behind it. (Key-vs-index validation needs the

@@ -43,6 +43,28 @@
 # re-extracted under a different key, and either way it is muting nothing while
 # looking like it mutes something. It never fails the run.
 
+# Which repo owns the TEXT on each generated tree, so the nightly Slack line
+# can carry a prefilled "file this" link instead of just naming the problem.
+#
+# Deliberately a link and not an automatic filing. The lane has produced six
+# findings total; before #20348/#20349 fixed the verification targeting, 17 of
+# 22 contradicted verdicts were false positives. Six good ones since is not a
+# track record, and the failure modes are not symmetric: a finding that waits a
+# day for a human costs a day, while a stream of confidently wrong bot issues
+# in another team's backlog gets the bot muted and costs the whole channel. The
+# link puts a person's judgment and a person's name on the issue at the cost of
+# one click. Revisit when there is enough volume to measure precision.
+#
+# A tree with no entry still reports and still pages — it just gets no link.
+# `reference/pkg/` is deliberately absent: the SDK API reference is generated
+# per provider, so the owning repo varies page by page and a single prefix
+# cannot name it.
+repos:
+  - prefix: content/docs/reference/pre-built-policy-packs/
+    repo: pulumi/policy-packs-internal
+  - prefix: content/docs/iac/cli/commands/
+    repo: pulumi/pulumi
+
 known:
   - entity_key: numerical/iam-user-unused-credentials-90-policy-ensures-iam-user
     issue: https://github.com/pulumi/policy-packs-internal/issues/204
