@@ -77,6 +77,24 @@ NOISE_LINES = {
     "no images.", "skipped.", "none.", "n/a", "-", "—",
 }
 
+# The same thing, matched as a PREFIX. Exact-line matching was enough while
+# nothing was ever recovered; the first live run against a real page showed why
+# it isn't — the composer's pre-fills and the model's nothing-here lines all
+# CONTINUE past the phrase ("No images. The page source references no
+# screenshots...", "None — the backlog was empty (...)", "Skipped — the page
+# source uses only render-safe chrome..."), so every one of them was banked as
+# a finding for the model to dutifully decline.
+NOISE_PREFIX_RE = re.compile(
+    r"^[-*+_\s|]*(no images|none|n/?a|skipped|"
+    r"nothing judgment-level was pre-found)\b", re.I)
+
+# The composer closes "Findings not applied" with a routing trailer telling a
+# human where the deferrals go. Its wording has changed over the lane's life
+# ("For the judgment-level items above, run ..." became "The items above are
+# banked ..."), so match the invariant rather than either phrasing: it is the
+# line that points at the /glow-up command instead of describing a finding.
+TRAILER_RE = re.compile(r"`?/glow-up\s+content/", re.I)
+
 
 def log(msg: str) -> None:
     print(f"build-glowup-backlog: {msg}", file=sys.stderr)
@@ -124,6 +142,8 @@ def extract_sections(body: str,
         if re.fullmatch(r"\|?[\s|:-]+\|?", line):
             continue
         if line.lower().rstrip("_* ").lstrip("_* ") in NOISE_LINES:
+            continue
+        if NOISE_PREFIX_RE.match(line) or TRAILER_RE.search(line):
             continue
         sections.setdefault(current, []).append(line)
     return sections
@@ -483,6 +503,53 @@ def self_test() -> int:
           not sections.get("Screenshot check") and not sections.get("Rendered content"))
     check("fixes/verification never banked",
           "Fixes applied" not in sections and "Verification" not in sections)
+
+    # --- boilerplate is not a finding ----------------------------------
+    # Exact-line noise matching was enough while nothing was ever recovered.
+    # The first live run against a real page (#19885) banked 5 boilerplate
+    # lines out of 13, each of which the model would have had to execute or
+    # decline in the PR body's tables.
+    real = "- **Vale cliché (L710): avoid clichés like 'a clean slate'.** — Stylistic."
+    noisy = "\n".join([
+        "## Findings not applied",
+        real,
+        "For the judgment-level items above, run "
+        "`/glow-up content/docs/iac/get-started/kubernetes/create-component.md`.",
+        "The items above are banked for the automated glow-up lane, which executes a "
+        "page's accumulated deferrals under human review — or run "
+        "`/glow-up content/docs/x.md` to work them now.",
+        "- _Nothing judgment-level was pre-found. Add any finding you chose not to apply._",
+        "",
+        "## Screenshot check",
+        "No images. The page source references no screenshots, diagrams, or other content "
+        "images (only the generic shared `meta_image` card, if any), so there is nothing "
+        "to verify. _(Determined from the source; the screenshot pass was skipped.)_",
+        "",
+        "## Rendered content",
+        "Skipped — the page source uses only render-safe chrome (`choosable`), so the "
+        "rendered HTML carries no content beyond the source prose. "
+        "_(Determined from the source.)_",
+    ])
+    noisy_sections = extract_sections(noisy)
+    check("the composer's /glow-up routing trailer is not a finding",
+          noisy_sections.get("Findings not applied") == [real])
+    check("both historical trailer phrasings are dropped",
+          not any("glow-up" in t for t in
+                  noisy_sections.get("Findings not applied", [])))
+    check("the empty-deferrals placeholder is not a finding",
+          not any("pre-found" in t for t in
+                  noisy_sections.get("Findings not applied", [])))
+    check("a pre-fill that continues past 'No images.' is still noise",
+          not noisy_sections.get("Screenshot check"))
+    check("a pre-fill that continues past 'Skipped' is still noise",
+          not noisy_sections.get("Rendered content"))
+    check("a glow-up's 'None — the backlog was empty' declines nothing",
+          not extract_sections(
+              "## Backlog declined\nNone — the backlog was empty (`banked: []`).",
+              GLOWUP_BANKED_SECTIONS).get("Backlog declined"))
+    check("a real finding starting with a normal word survives",
+          extract_sections("## Findings not applied\n- **Nonetheless the claim holds**"
+                           )["Findings not applied"] == ["- **Nonetheless the claim holds**"])
 
     article = {"slug": "docs-x", "path": "content/docs/x.md"}
     entry = {"skipped_findings": 2, "clarity_flag": True, "pr_number": 123}
