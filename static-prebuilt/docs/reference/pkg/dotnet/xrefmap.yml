@@ -16957,6 +16957,15 @@ references:
   commentId: T:Pulumi.RegisterPackageRequest
   fullName: Pulumi.RegisterPackageRequest
   nameWithType: RegisterPackageRequest
+- uid: Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization)
+  name: RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, PackageParameterization?)
+  href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest__ctor_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Byte____Pulumi_RegisterPackageRequest_PackageParameterization_
+  commentId: M:Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization)
+  name.vb: New(String, String, String, Dictionary(Of String, Byte()), PackageParameterization)
+  fullName: Pulumi.RegisterPackageRequest.RegisterPackageRequest(string, string, string?, System.Collections.Generic.Dictionary<string, byte[]>?, Pulumi.RegisterPackageRequest.PackageParameterization?)
+  fullName.vb: Pulumi.RegisterPackageRequest.New(String, String, String, System.Collections.Generic.Dictionary(Of String, Byte()), Pulumi.RegisterPackageRequest.PackageParameterization)
+  nameWithType: RegisterPackageRequest.RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, RegisterPackageRequest.PackageParameterization?)
+  nameWithType.vb: RegisterPackageRequest.New(String, String, String, Dictionary(Of String, Byte()), RegisterPackageRequest.PackageParameterization)
 - uid: Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization,Pulumi.RegisterPackageRequest.PackageParameterization)
   name: RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, PackageParameterization?, PackageParameterization?)
   href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest__ctor_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Byte____Pulumi_RegisterPackageRequest_PackageParameterization_Pulumi_RegisterPackageRequest_PackageParameterization_
