@@ -85,7 +85,7 @@ Flags:
   -y, --yes               Automatically approve and perform the move
 ```
 
-Both the `--dest` and `--source` flags can be either stacks in the current project, or stacks in across different projects. The resources being moved have to be specified by their full [Uniform Resource Name (URN)](/docs/concepts/resources/names/#urns), and multiple URNs can be passed at once for scenarios in which you need to move multiple resources at once.
+Both the `--dest` and `--source` flags can be either stacks in the current project, or stacks in across different projects. The resources being moved have to be specified by their full [Uniform Resource Name (URN)](/docs/iac/concepts/resources/names/#urns), and multiple URNs can be passed at once for scenarios in which you need to move multiple resources at once.
 
 {{< notes type="info" >}}
 
@@ -390,5 +390,5 @@ To learn more about creating and managing resources in Pulumi, take a look a the
 
 - Learn more about Pulumi state and backends in the [Managing Pulumi State and Backend Options documentation](/docs/iac/concepts/state-and-backends/).
 - Learn more about the `pulumi state` command and its subcommands in the [Pulumi State CLI documentation](/docs/iac/cli/commands/pulumi_state/).
-- Learn more about Pulumi stacks in the [Stacks concept documentation](/docs/concepts/stack/).
+- Learn more about Pulumi stacks in the [Stacks concept documentation](/docs/iac/concepts/stacks/).
 - Learn more about the `pulumi stack` command and its subcommands in the [Pulumi Stack CLI documentation](https://www.pulumi.com/docs/iac/cli/commands/pulumi_stack/).

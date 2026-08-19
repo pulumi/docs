@@ -169,7 +169,7 @@ The properties inside your `aws.ec2.Instance` resource are:
 | **ami** | tells the provider to create the instance using the `ami-09538990a0c4fe9be` machine image |
 | **user_data** | tells the provider to initialize the instance with the script you have defined |
 
-**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/concepts/options).
+**Options** let you control certain aspects of a resource (such as showing explicit dependencies or importing existing infrastructure). You do not have any options defined for this resource, but you can learn more about options in the [Pulumi documentation](/docs/iac/concepts/resources/options/).
 
 ### Deploy your EC2 instance
 
@@ -302,5 +302,5 @@ In this tutorial, you made an EC2 instance configured as an Nginx webserver and 
 To learn more about creating resources in Pulumi, take a look at the following resources:
 
 - Learn more about stack outputs and references in the [Reference AWS Resources Across Stacks tutorial](/tutorials/stack-outputs-refs-aws/) tutorial.
-- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
-- Learn more about [resource names](/docs/concepts/resources/names/), [options](/docs/concepts/options/), and [providers](/docs/concepts/resources/providers/) in the Pulumi documentation.
+- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/) documentation.
+- Learn more about [resource names](/docs/iac/concepts/resources/names/), [options](/docs/iac/concepts/resources/options/), and [providers](/docs/iac/concepts/providers/) in the Pulumi documentation.
