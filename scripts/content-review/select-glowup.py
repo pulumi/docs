@@ -108,6 +108,13 @@ def low_ctr_flagged(entry: dict) -> bool:
 def glowup_cooldown_active(entry: dict, today) -> bool:
     if entry.get("status") != "glowup":
         return False
+    # A glow-up whose backlog never reached it executed nothing and declined
+    # nothing, so the page is still owed its rehab and must stay selectable.
+    # record-review.py sets this flag precisely because the counters alone
+    # cannot say it: a degraded run CARRIES the prior banked count forward, so
+    # `skipped_findings: 17` reads identically to a run that declined 17. #20984.
+    if entry.get("glowup_degraded"):
+        return False
     reviewed = parse_day(entry.get("reviewed_at"))
     return bool(reviewed and (today - reviewed).days < GLOWUP_COOLDOWN_DAYS)
 
