@@ -85,6 +85,9 @@ jobs:
     permissions:
       contents: read
       id-token: write
+      # build-glowup-backlog.py reads every prior review PR for the page by
+      # head ref. Read-only, and the job still holds no push token.
+      pull-requests: read
     outputs:
       claude_outcome: ${{ steps.claude.outcome }}
     steps:
