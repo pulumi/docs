@@ -100,8 +100,8 @@ def _load_verify_claims():
     return mod
 
 
-def _tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
-    """select-articles.tier_for, imported by path so the tier semantics have
+def _policy_for(path: str, rules: list[dict]):
+    """select-articles.policy_for, imported by path so the tier semantics have
     exactly one definition (same pattern check-retire-veto.py uses)."""
     global _SELECT
     if _SELECT is None:
@@ -109,17 +109,17 @@ def _tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
             "select_articles", Path(__file__).resolve().parent / "select-articles.py")
         _SELECT = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(_SELECT)
-    return _SELECT.tier_for(path, rules)
+    return _SELECT.policy_for(path, rules)
 
 
 def load_tier_rules(tiers_file: Path | None) -> list[dict]:
     """Tier rules, or [] when unreadable. Failing to [] means every page looks
-    non-tier-0, i.e. today's file-existence-only behavior — noisier for
+    editable, i.e. today's file-existence-only behavior — noisier for
     generated trees, never blinder."""
     if tiers_file is None or not tiers_file.is_file():
         return []
     try:
-        _tier_for("content/docs/x.md", [])  # force the import, surface errors here
+        _policy_for("content/docs/x.md", [])  # force the import, surface errors here
         return _SELECT.load_tiers(tiers_file)
     except Exception as e:  # noqa: BLE001
         warn(f"could not load tiers from {tiers_file} ({e}); "
@@ -271,8 +271,11 @@ def fix_route(assertions: list[dict], repo_root: Path | None,
     * "generated" — the markdown exists but is machine-written and clobbered
       on the next generator run, so an edit to it is thrown away. The CLI
       command reference is 248 such files. `strategic-tiers.yaml` already
-      states exactly this as tier 0, so that file is the authority rather than
-      a second list to keep in sync.
+      states exactly this as `editable: false`, so that file is the authority
+      rather than a second list to keep in sync. Note it is the EDITABLE flag,
+      not the tier: since #20996 the CLI tree is tier 3 and `reviewable: true`
+      (the report-only lane records its claims), and those claims must still
+      route upstream rather than to a marker no PR here could retire.
 
     A claim asserted on several pages is fixable if ANY of them is, which is
     the permissive direction: worst case we mark a page and the review finds
@@ -287,13 +290,13 @@ def fix_route(assertions: list[dict], repo_root: Path | None,
     reasons: list[str] = []
     for a in assertions:
         path = a["path"]
-        tier = None
+        editable = True
         if tier_rules:
-            tier, _ = _tier_for(path, tier_rules)
+            editable = _policy_for(path, tier_rules).editable
         exists = repo_root is None or (repo_root / path).is_file()
-        if exists and tier != 0:
+        if exists and editable:
             return "local"
-        reasons.append("generated" if tier == 0 else "missing")
+        reasons.append("generated" if not editable else "missing")
     # Prefer the more specific reason when a claim spans both kinds.
     return "generated" if "generated" in reasons else "missing"
 
@@ -335,11 +338,17 @@ def load_upstream_repos(path: Path | None) -> list[dict]:
     return sorted(rows, key=lambda r: len(r["prefix"]), reverse=True)
 
 
-def file_issue_url(finding: dict, claim_text: str, repos: list[dict]) -> str | None:
+def file_issue_url(finding: dict, claim_text: str, repos: list[dict],
+                   origin: str = "nightly claims re-verify") -> str | None:
     """A prefilled GitHub new-issue URL for an unfiled upstream finding.
 
     Returns None when no mapping owns the page — the finding still reports and
     still pages #docs-ops, it just arrives without a one-click filing.
+
+    `origin` names the lane that found it, because the reader of the issue
+    should know: the nightly re-verify re-checks a claim already in the index,
+    while the report-only lane (pulumi/docs#20996) is the FIRST check that page
+    has ever had.
 
     Everything the reader needs to judge the finding rides in the body, so the
     human decision is "is this right?" rather than "let me go reconstruct what
@@ -358,7 +367,7 @@ def file_issue_url(finding: dict, claim_text: str, repos: list[dict]) -> str | N
 
     title = f"Docs claim contradicted: {clip(finding['entity_key'], 90)}"
     body = (
-        f"Found by the pulumi/docs nightly claims re-verify. The page is generated, "
+        f"Found by the pulumi/docs {origin}. The page is generated, "
         f"so there is nothing to fix in pulumi/docs — the text comes from here.\n\n"
         f"**Claim as published:** {clip(claim_text, 600)}\n\n"
         f"**What the check found:** {clip(finding.get('evidence'), 900)}\n\n"
@@ -901,6 +910,13 @@ def self_test() -> int:
         check("one fixable asserting page wins", fix_route(gen + local, root, rules) == "local")
         check("generated beats missing when a claim spans both",
               fix_route(gen + absent, root, rules) == "generated")
+        # The shape the CLI reference actually carries since #20996: the report
+        # lane reads it (`reviewable: true`) but no PR here may edit it, and it
+        # is `editable`, not the tier, that decides where a finding goes.
+        report_rules = [{"prefix": "content/docs/iac/cli/commands/", "tier": 3,
+                         "editable": False, "reviewable": True}]
+        check("a reviewable-but-not-editable page routes generated, not local",
+              fix_route(gen, root, report_rules) == "generated")
         check("no root and no rules -> assume local (pure-logic callers)",
               fix_route(absent, None, None) == "local")
         check("unreadable tiers file -> no rules, never fatal",

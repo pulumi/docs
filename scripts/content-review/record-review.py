@@ -17,6 +17,7 @@ Outcome derivation:
   * verdict "fixed"  + PR on content-review/<slug>      -> status "reviewed"
   * verdict "clean"                                      -> status "clean"
   * verdict "skipped"                                    -> status "skipped"
+  * verdict "reported"                                   -> status "reported"
   * verdict "fixed"  + no PR on the canonical branch     -> status "incomplete"
   * sentinel absent, run succeeded, no branch pushed     -> status "clean"
   * sentinel absent, run failed OR a branch exists       -> status "incomplete"
@@ -373,6 +374,15 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         rec["status"] = "skipped"
         rec["note"] = verdict.get("reason") or "skipped by reviewer"
         rec["attempts"] = 0
+    elif v == "reported":
+        # The report-only lane (pulumi/docs#20996): the page's claims were
+        # extracted, verified, and written to the claims index, and nothing was
+        # edited because nothing here may be. A completed status like "clean" —
+        # it advances the staleness clock, which is what laps the lane across
+        # the 248-page CLI reference instead of re-reading the same pages.
+        rec["status"] = "reported"
+        rec["note"] = verdict.get("reason") or "claims recorded; no edits (generated page)"
+        rec["attempts"] = 0
     elif v in ("fixed", "glowup"):
         if pr:
             # "glowup" is a completed status like "reviewed": it advances the
@@ -655,6 +665,18 @@ def self_test() -> int:
                            None, article["slug"])
         check("clean verdict -> clean", rec["status"] == "clean" and rec["pr"] is None)
         check("clean resets attempts to 0", rec["attempts"] == 0)
+
+        # Report-only lane (#20996): a completed status with no PR. It must
+        # advance the staleness clock — that is what laps the lane across the
+        # 248-page CLI reference instead of re-reading the same few pages.
+        rec = build_record({**retried, "mode": "report", "lane": "report"},
+                           {"verdict": "reported", "reason": "claims recorded (7 verdict(s))",
+                            "fixes": 0, "skipped_findings": 0, "retirement": False},
+                           None, article["slug"])
+        check("reported verdict -> reported, no PR, attempts reset",
+              rec["status"] == "reported" and rec["pr"] is None and rec["attempts"] == 0)
+        check("reported is not incomplete, so the clock advances",
+              rec["status"] != "incomplete" and rec["mode"] == "report")
 
         # Fixed + PR -> reviewed with derived facts.
         pr = {"number": 19731, "state": "OPEN",

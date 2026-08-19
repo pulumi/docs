@@ -43,6 +43,34 @@ _failures: list[str] = []
 _passes = 0
 
 
+def _load_selector():
+    """select-articles.py imported by path — hyphenated filename, and its
+    main() is guarded so importing has no side effects (the same pattern
+    record-review.py and check-retire-veto.py use). Most of this suite shells
+    out to the CLI; the tier-policy checks below are pure functions, where
+    calling them directly says more than parsing a queue would.
+    """
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("select_articles", SCRIPT)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+selector = _load_selector()
+
+
+def load_repo_tiers():
+    """The shipped strategic-tiers.yaml as rules, or None if it won't parse."""
+    if not REPO_TIERS.is_file():
+        return None
+    try:
+        return selector.load_tiers(REPO_TIERS)
+    except Exception:  # noqa: BLE001 - the caller reports it as a failed check
+        return None
+
+
 def _module_assign(path: Path, name: str):
     """Return a module-level literal assignment's value, or None if absent.
 
@@ -95,6 +123,10 @@ TIERS = """\
 tiers:
   - prefix: content/docs/generated/
     tier: 0
+  - prefix: content/docs/clidocs/
+    tier: 3
+    editable: false
+    reviewable: true
   - prefix: content/docs/concepts/
     tier: 1
   - prefix: content/docs/esc/
@@ -113,7 +145,9 @@ BASE_FILES = [
     "content/docs/misc/one.md",          # tier 3 — later bot-edited (no reset)
     "content/docs/misc/two.md",          # tier 3
     "content/docs/misc/protected/keep.md",  # tier 3, no_retire
-    "content/docs/generated/cli.md",     # tier 0 (excluded)
+    "content/docs/generated/cli.md",     # tier 0 (excluded from both lanes)
+    "content/docs/clidocs/pulumi_up.md",    # generated but reviewable (report lane)
+    "content/docs/clidocs/pulumi_down.md",  # generated but reviewable (report lane)
 ]
 
 
@@ -220,6 +254,43 @@ def main() -> int:
         check(STACKS not in paths, "freshly human-edited tier-1 is NOT in the top picks")
         q2 = run_select(repo, tiers, empty, "--count", "3")
         check([a["path"] for a in q2["articles"]] == paths, "selection is deterministic")
+
+        print("report mode: the other half of the corpus, and only that half")
+        # #20996: `editable: false, reviewable: true` pages are invisible to the
+        # fix lane and are the ONLY pages the report lane sees. Neither lane
+        # touches a tier-0 tree.
+        fix_all = [a["path"] for a in
+                   run_select(repo, tiers, empty, "--count", "50")["articles"]]
+        rq = run_select(repo, tiers, empty, "--mode", "report", "--count", "50")
+        rep_all = [a["path"] for a in rq["articles"]]
+        check(sorted(rep_all) == ["content/docs/clidocs/pulumi_down.md",
+                                  "content/docs/clidocs/pulumi_up.md"],
+              f"report lane sees exactly the reviewable generated pages (got {rep_all})")
+        check(not set(rep_all) & set(fix_all), "the two lanes never overlap")
+        check(not any(p.startswith("content/docs/clidocs/") for p in fix_all),
+              "fix lane never sees a non-editable page")
+        check("content/docs/generated/cli.md" not in rep_all,
+              "tier 0 stays out of the report lane too")
+        check(rq.get("mode") == "report"
+              and all(a["mode"] == "report" for a in rq["articles"]),
+              "the queue and every entry carry the mode the worker runs in")
+        check(all(a["editable"] is False for a in rq["articles"]),
+              "report entries carry editable: false for the downstream gates")
+        check(all(a["no_retire"] is True for a in rq["articles"]),
+              "a page no PR may edit is stamped no_retire, matching check-retire-veto")
+        check(all(a["editable"] is True for a in
+                  run_select(repo, tiers, empty, "--count", "3")["articles"]),
+              "fix entries carry editable: true")
+        check(run_select(repo, tiers, empty, "--count", "3")["mode"] == "fix",
+              "fix is the default mode")
+
+        print("report mode: staleness laps the tree (a recorded page steps aside)")
+        recorded = tmp / "ledger-reported"
+        write_ledger(recorded, "content/docs/clidocs/pulumi_down.md", "2026-06-11",
+                     status="reported")
+        rq2 = run_select(repo, tiers, recorded, "--mode", "report", "--count", "1")
+        check([a["path"] for a in rq2["articles"]] == ["content/docs/clidocs/pulumi_up.md"],
+              "the just-reported page yields to its unreported sibling")
 
         print("human edit resets the clock; a bot edit does not")
         full = run_select(repo, tiers, empty, "--count", "20")
@@ -435,23 +506,29 @@ def main() -> int:
         print("attempts surfaced on queue entries")
         check(all("attempts" in a for a in full["articles"]), "every queue entry carries attempts")
 
-        print("repo strategic-tiers.yaml parses and excludes generated trees")
-        # CLI command reference and SDK API reference are both generated -> tier 0.
-        for gen_path, label in [
-            ("content/docs/iac/cli/commands/pulumi.md", "CLI commands"),
-            ("content/docs/reference/pkg/python/pulumi/_index.md", "SDK API reference"),
-        ]:
-            proc = subprocess.run(
-                [sys.executable, str(SCRIPT), "--no-gh", "--today", TODAY,
-                 "--tiers", str(REPO_TIERS), "--ledger-dir", str(tmp / "empty"),
-                 "--paths", gen_path, "--dry-run"],
-                capture_output=True, text=True,
-            )
-            if proc.returncode == 0:
-                entry = json.loads(proc.stdout)["articles"][0]
-                check(entry["tier"] == 0, f"real tiers file marks {label} tier 0")
-            else:
-                check("tiers" not in proc.stderr.lower(), "real tiers file parses")
+        print("repo strategic-tiers.yaml routes each generated tree to its lane")
+        # Both trees are generated, so NEITHER is editable. They differ on
+        # whether the pipeline may read them (#20996): the CLI reference is
+        # hand-written prose a generator assembles (report-only lane), the SDK
+        # API reference is rendered from the machine-readable API definition
+        # that IS the source of truth (excluded outright).
+        rules = load_repo_tiers()
+        if rules is None:
+            check(False, "real tiers file parses")
+        else:
+            cli = selector.policy_for("content/docs/iac/cli/commands/pulumi.md", rules)
+            check(not cli.editable, "real tiers file marks CLI commands non-editable")
+            check(cli.reviewable, "real tiers file marks CLI commands reviewable")
+            check(selector.eligible(cli, "report") and not selector.eligible(cli, "fix"),
+                  "CLI commands are a report-lane candidate and never a fix-lane one")
+
+            pkg = selector.policy_for(
+                "content/docs/reference/pkg/python/pulumi/_index.md", rules)
+            check(pkg.tier == 0 and not pkg.editable and not pkg.reviewable,
+                  "real tiers file keeps the SDK API reference out of both lanes")
+            check(not selector.eligible(pkg, "report")
+                  and not selector.eligible(pkg, "fix"),
+                  "SDK API reference is a candidate for neither lane")
 
     # --- stale-claim markers ride the queue, and escalation stops the boost ---
     with tempfile.TemporaryDirectory() as td:
