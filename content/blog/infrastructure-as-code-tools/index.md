@@ -35,7 +35,7 @@ itemlist:
     - name: "OpenTofu"
 ---
 
-The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenTofu, AWS CDK, AWS CloudFormation, Azure ARM, Azure Bicep, Google Cloud Infrastructure Manager, Kubernetes YAML, and Crossplane. Each takes a different approach to defining and provisioning infrastructure, from general-purpose programming languages to declarative templates, and each carries distinct licensing, pricing, and AI-agent readiness tradeoffs worth weighing before you commit. As of August 2026, [Pulumi's own package registry](https://www.pulumi.com/registry/packages.md) lists more than 300 packages — first-party providers, bridged Terraform providers, and community components — illustrating how far multi-cloud coverage has expanded across the ecosystem.
+The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenTofu, AWS CDK, AWS CloudFormation, Azure ARM, Azure Bicep, Google Cloud Infrastructure Manager, Kubernetes YAML, and Crossplane. Each takes a different approach to defining and provisioning infrastructure, from general-purpose programming languages to declarative templates, and each carries distinct licensing, pricing, and AI-agent readiness tradeoffs worth weighing before you commit. As of August 2026, [Pulumi's own package registry](https://www.pulumi.com/registry/) lists more than 300 packages — first-party providers, bridged Terraform providers, and community components — illustrating how far multi-cloud coverage has expanded across the ecosystem.
 
 <!--more-->
 
@@ -142,11 +142,11 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 | [Crossplane](#9-crossplane) | YAML / Kubernetes CRDs | Multi-cloud, orchestrated through Kubernetes | Apache-2.0 | v2.3.4 (2026-07-23) | Kubernetes-first organizations managing multi-cloud infrastructure |
 | [OpenTofu](#10-opentofu) | HCL (community-governed Terraform fork) | AWS, Azure, Google Cloud, and the Terraform provider ecosystem | MPL-2.0 | v1.12.6 (2026-08-19) | Teams seeking an open-source Terraform alternative with community governance |
 
-Use the table as a map: each tool links to its full breakdown below, where you'll find licensing, key features, and the tradeoffs behind each "best for." Version and release-date figures were checked against each project's GitHub releases on 2026-07-31.
+Use the table as a map: each tool links to its full breakdown below, where you'll find licensing, key features, and the tradeoffs behind each "best for." Version and release-date figures were checked against each project's GitHub releases on 2026-08-19.
 
 ### Pricing at a glance
 
-Tool cost is rarely the license alone. Here's what each option actually costs to run, based on published pricing as of July 2026:
+Tool cost is rarely the license alone. Here's what each option actually costs to run, based on published pricing as of August 2026:
 
 | Tool | Free tier | Entry paid tier | Enterprise / top tier |
 |---|---|---|---|
