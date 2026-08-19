@@ -65,6 +65,16 @@ repos:
   - prefix: content/docs/iac/cli/commands/
     repo: pulumi/pulumi
 
+# All three entries below cite ONE issue on purpose. policy-packs-internal#204
+# is an umbrella filed for the whole batch, not a placeholder standing in for
+# three issues nobody opened — the three defects share a root (the pack
+# descriptions this repo renders) and one owner. The removal rule still works
+# as the header describes: closing #204 drops all three entries, and any claim
+# that did not actually get fixed re-reports as new on the next rotation.
+#
+# `--self-test` checks only that an entry cites an issue, not that the issue is
+# distinct or open, so the honest statement of what this file guarantees is:
+# "a human has taken responsibility for this finding somewhere."
 known:
   - entity_key: numerical/iam-user-unused-credentials-90-policy-ensures-iam-user
     issue: https://github.com/pulumi/policy-packs-internal/issues/204

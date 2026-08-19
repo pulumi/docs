@@ -865,9 +865,6 @@ def self_test() -> int:
               st["signals"]["capped-pages"]["status"] == "ok"
               and st["signals"]["capped-pages"]["degraded_since"] is None)
 
-    if failures:
-        print(f"\n{len(failures)} failure(s)", file=sys.stderr)
-        return 1
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
         st, _ = run_once(d, "2026-10-01", reverify=rv_ok)
@@ -904,6 +901,9 @@ def self_test() -> int:
               st["signals"]["reverify"]["status"] == "ok"
               and st["signals"]["reverify"]["last_seen"] == "2026-10-01")
 
+    if failures:
+        print(f"\n{len(failures)} failure(s)", file=sys.stderr)
+        return 1
     print("\nall signal-health self-tests passed")
     return 0
 

@@ -708,6 +708,12 @@ def run(args) -> int:
     report["meta"]["upstream_entities"] = [
         {"entity_key": r["entity_key"], "issue": r.get("upstream_issue"),
          "file_issue_url": r.get("file_issue_url"),
+         # Explicit, so the Slack step filters on the SAME property the count
+         # is computed from. Deriving "new" a second time from `issue == null`
+         # made the workflow depend on --self-test (in another file) rejecting
+         # a registry entry with no issue, to keep its own two numbers
+         # agreeing. One field, one definition.
+         "new": r["entity_key"] not in known_upstream,
          "reason": r["fix_route"], "pages": [p["path"] for p in r["pages"]]}
         for r in sorted(upstream, key=lambda x: x["entity_key"])]
     report["meta"]["upstream_resolved_entities"] = sorted(
@@ -956,6 +962,17 @@ def self_test() -> int:
               all(str(e.get("issue") or "").startswith("http") for e in entries.values()))
         check("every shipped entry says what is wrong",
               all(str(e.get("what") or "").strip() for e in entries.values()))
+
+    # The Slack step filters the "new" bullet list on `.new`, which is the same
+    # property n_upstream_new counts. Pin that they cannot drift apart: the
+    # earlier form derived "new" a second time from `issue == null`, which made
+    # the workflow's own two numbers depend on the self-test above rejecting a
+    # register entry with no issue.
+    _known = {"numerical/filed": {"issue": "https://x/1"}}
+    _rows = [{"entity_key": "numerical/filed"}, {"entity_key": "numerical/unfiled"}]
+    _flags = [r["entity_key"] not in _known for r in _rows]
+    check("`new` means absent from the register, same as n_upstream_new",
+          _flags == [False, True] and sum(_flags) == 1)
 
     # Markers: fan-out, idempotence, minimal entry for a ledger gap.
     ledger = {"content/docs/a.md": {"path": "content/docs/a.md", "slug": "docs-a",

@@ -234,7 +234,7 @@ jobs:
             (if (.meta.n_upstream_new // 0) > 0 then
                "Nightly claims re-verify: \(.meta.n_upstream_new) new contradicted claim(s) with no fixable page — "
                + "`generated` needs an upstream issue; `missing` means the claims index outlived the page:\n"
-               + ([.meta.upstream_entities[] | select(.issue == null)
+               + ([.meta.upstream_entities[] | select(.new)
                    | "  • [\(.reason // "?")] \(.entity_key)  (\(.pages[0]))"
                      + (if .file_issue_url then "\n      <\(.file_issue_url)|file it upstream>" else "" end)]
                   | join("\n")) + "\n"
