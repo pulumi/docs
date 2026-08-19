@@ -3,4 +3,4 @@
 set -o errexit -o pipefail
 
 node ./scripts/lint/lint-markdown.js
-yarn prettier --check . --cache
+./scripts/prettier.sh --check . --cache

@@ -2247,6 +2247,15 @@ make format
 
 **Configuration:** `.prettierrc.json`
 
+**Ignore rules:** `.prettierignore`, unioned with `.gitignore`. `make lint`,
+`make format`, and `make ensure` invoke prettier through `scripts/prettier.sh`,
+which concatenates the two lists into a temporary root-level ignore file and
+passes it as `--ignore-path`. Prettier does not read `.gitignore` on its own,
+and `--ignore-path` takes a single file on v2.x, so without this every runtime
+artifact needs an entry in both lists -- and a missed one turns an untracked
+scratch file into a `make lint` failure. **A new generated or scratch file only
+needs a `.gitignore` entry.**
+
 **Version:** Prettier v2.8.8
 
 **Why v2.x Instead of v3.x:**
