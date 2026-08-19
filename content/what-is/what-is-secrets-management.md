@@ -43,7 +43,7 @@ Data breaches are costly, both in terms of financial impact and reputational dam
 
 Secrets management is a key component of a broader security strategy. It reinforces the organization’s commitment to cybersecurity by embedding strong practices into daily operations. This protects individual secrets and strengthens the overall security posture, making the organization more resilient against various cyber threats.
 
-## What are some common types of secrets?
+## Common types of secrets
 
 Secrets are sensitive information used to authenticate, authorize, and secure access to systems and data. In modern IT environments, these secrets are integral to maintaining the security and integrity of applications, services, and infrastructure. Here’s a breakdown of some common types of secrets:
 
@@ -197,7 +197,7 @@ When providing initial access to systems or services, it is a best practice to u
 
 As organizations increasingly rely on multiple cloud platforms, such as AWS, Azure, and Google Cloud Platform (GCP), maintaining consistent security practices across these environments becomes challenging. A centralized secrets management solution that integrates with all relevant cloud platforms allows for consistent policy enforcement and governance. This ensures that secrets are managed uniformly across the organization, regardless of the cloud environment. By using a centralized solution, you can enforce security policies, such as secret rotation, access controls, and auditing, across all platforms, reducing the risk of misconfiguration or inconsistent security practices.
 
-### How should secrets be handled in memory?
+### Handling secrets in memory
 
 Handling secrets securely in memory is a critical aspect of protecting sensitive information during runtime. Improper management of secrets in memory can lead to exposure through various attack vectors, such as memory dumps, buffer overflows, or debugging tools. Here’s how secrets should be handled in memory to minimize these risks:
 
@@ -236,7 +236,7 @@ Reusing the same secrets across multiple services or applications is a risky pra
 
 ## Tools and Technologies
 
-### What are some popular secrets management tools?
+### Popular secrets management tools
 
 Several tools and platforms are designed specifically to facilitate secrets management. Let’s explore a few notable ones.
 
@@ -244,7 +244,7 @@ Several tools and platforms are designed specifically to facilitate secrets mana
 * **[AWS Secrets Manager](/what-is/what-is-aws-secrets-manager)**: As part of the Amazon Web Services (AWS) ecosystem, AWS Secrets Manager is a fully managed service designed to protect and manage sensitive information used by applications.
 * **[Azure Key Vault](/what-is/what-is-azure-key-vault)**: Microsoft’s Azure Key Vault is a cloud service that safeguards cryptographic keys, secrets, and certificates used by cloud applications and services.
 * **[Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager)**: Google Cloud’s Secret Manager offers a secure storage system for API keys, passwords, certificates, and other sensitive data.
-* **[Pulumi ESC](/product/esc)**: Pulumi’s Environments, Secrets, and Configuration (ESC) product offers a platform for storing and controlling access to secrets. Pulumi ESC can also dynamically obtain credentials via OIDC providers and manage configuration information as well as secrets.
+* **[Pulumi ESC](/product/secrets-management/)**: Pulumi’s Environments, Secrets, and Configuration (ESC) product offers a platform for storing and controlling access to secrets. Pulumi ESC can also dynamically obtain credentials via OIDC providers and manage configuration information as well as secrets.
 
 A well-integrated secrets management solution is crucial for usability and centralization, ensuring consistent policy enforcement and governance across various cloud environments.
 
@@ -272,7 +272,7 @@ Secrets management tools can be integrated into CI/CD pipelines to enable automa
 
 ## Cloud Providers and Secrets Management
 
-### What centralized secrets management solution do major cloud providers offer?
+### Centralized secrets management from major cloud providers
 
 Major cloud providers offer specialized secrets management solutions designed to securely store, manage, and access sensitive information such as API keys, passwords, and encryption keys. These solutions are fully integrated with their respective cloud ecosystems, providing seamless management of secrets across various cloud services and applications. Here’s a look at the centralized secrets management solutions offered by the leading cloud providers:
 
@@ -282,7 +282,7 @@ Major cloud providers offer specialized secrets management solutions designed to
 * **Google Cloud Platform (GCP): GCP Secret Manager:** [Google Cloud Secret Manager](/what-is/what-is-google-cloud-secret-manager) is a centralized service for storing, managing, and accessing secrets securely in Google Cloud. It is designed to be highly available, with automatic replication across regions and support for multiple versions of secrets. Secret Manager integrates with Google Cloud's Identity and Access Management (IAM) for fine-grained access control, ensuring that secrets are only accessible by authorized users and services. It also supports automatic rotation of secrets, making it easier to manage the lifecycle of sensitive data.
 * **Microsoft Azure: Azure Key Vault:** [Azure Key Vault](/what-is/what-is-azure-key-vault) is a cloud service for securely storing and managing secrets, keys, and certificates. It is designed to help you safeguard cryptographic keys and secrets used by cloud applications and services. Azure Key Vault provides a unified interface for managing secrets and integrates with Azure's identity and access management services, allowing you to enforce access policies and audit usage. It also supports seamless integration with Azure services, making it easy to use Key Vault secrets in your applications and workloads.
 
-### What is envelope encryption in cloud-based secrets management?
+### Envelope encryption in cloud-based secrets management
 
 Envelope encryption is a widely adopted practice in data security that provides an extra layer of protection by using multiple levels of encryption. This method is particularly useful in cloud environments where sensitive data needs to be securely managed. Here’s how envelope encryption works:
 
@@ -422,7 +422,7 @@ Using short-lived, dynamic secrets is a best practice for securing CI/CD pipelin
 
 ## Future Trends
 
-### What are some emerging trends in secrets management?
+### Emerging trends in secrets management
 
 As security challenges evolve, so too do the approaches and [technologies](/product/secrets-management/) surrounding secrets management. Here are some of the key emerging trends in this area:
 
@@ -434,3 +434,29 @@ As security challenges evolve, so too do the approaches and [technologies](/prod
 * **Implementation of Quantum-Resistant Encryption for Long-Term Secrets Protection:** As quantum computing technology advances, there is growing concern about the potential for quantum computers to break current encryption algorithms. To mitigate this risk, some organizations are exploring quantum-resistant encryption methods for protecting long-term secrets. These encryption techniques are designed to withstand attacks from quantum computers, ensuring that secrets remain secure well into the future. The implementation of quantum-resistant encryption is still in its early stages, but it is expected to become increasingly important as quantum computing capabilities develop.
 
 The thread running through every one of these practices is the same: a secret is safest when it barely exists. Long-lived credentials sitting in a vault are still an exposure waiting to happen, which is why the field keeps moving toward secrets that are generated on demand, scoped to a single task, and revoked the moment that task ends. If you treat secrets management as a storage problem, you will always be guarding a growing pile of standing credentials. Treat it as a lifecycle problem instead, and the goal becomes shrinking the window in which any given secret is valid and reachable at all.
+
+## Frequently asked questions
+
+### What is secrets management?
+
+Secrets management is the practice of securely storing, distributing, and controlling access to sensitive credentials such as passwords, API keys, certificates, and tokens used by applications and infrastructure. It replaces hardcoded or manually shared credentials with centralized, access-controlled, and auditable storage, reducing the risk of unauthorized access or accidental exposure. Pulumi ESC centralizes this kind of secrets and configuration handling across environments.
+
+### What is a secrets management strategy?
+
+A secrets management strategy is the overall approach an organization takes to how secrets are created, stored, rotated, accessed, and eventually retired across its systems. It typically spans storage architecture (vaults or managed services), access control policies, automated rotation schedules, integration with CI/CD pipelines, and auditing practices. A good strategy treats secrets as a lifecycle to be managed, not a one-time storage problem, minimizing the window during which any credential remains valid.
+
+### What is a secrets management policy?
+
+A secrets management policy is the documented set of rules an organization enforces to govern how secrets must be handled, distinct from the broader strategy that describes the overall approach. It typically specifies required storage mechanisms, minimum rotation frequency, who may access which secrets, approval workflows for provisioning new credentials, and consequences for noncompliance. Policies give teams and auditors a concrete standard to check actual practice against.
+
+### What is secrets lifecycle management?
+
+Secrets lifecycle management is the practice of governing a secret from the moment it is created through its distribution, active use, periodic rotation, and eventual revocation or expiration. Rather than treating a secret as something you store once and forget, lifecycle management assumes every credential has a bounded useful life, and it automates rotation and revocation so long-lived, forgotten credentials do not become a standing source of risk.
+
+### What is cloud secrets management?
+
+Cloud secrets management is the practice of storing, distributing, and controlling secrets using a cloud provider's managed service, rather than operating that infrastructure yourself on-premises. It typically integrates natively with the provider's identity and access management, scales automatically, and reduces operational overhead compared with self-hosted vaults. Pulumi ESC extends this cloud-native model further by centralizing secrets and configuration across multiple clouds and providers in one place, rather than locking you into a single vendor's secrets service.
+
+### How does Pulumi help manage secrets securely?
+
+Pulumi helps manage secrets securely through Pulumi ESC (Environments, Secrets, and Configuration), which centralizes secrets and configuration across teams, environments, and clouds with fine-grained access control and audit history. Within Pulumi infrastructure as code itself, stack configuration values marked as secrets are encrypted at rest and in transit, and Pulumi's cloud provider packages support provisioning native secret resources, such as AWS Secrets Manager entries or Azure Key Vault secrets, directly as part of your infrastructure code.

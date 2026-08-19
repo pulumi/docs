@@ -328,6 +328,7 @@ See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Me
   - Always refer to it in the singular form (e.g., "Pulumi Policies enforces compliance").
   - Never refer to it in the plural (e.g., avoid "Pulumi Policies enforce compliance").
 - Use **"public preview"** for pre-GA features, not "public beta." This aligns with Pulumi's release terminology.
+- Don't overcapitalize generic concepts, even Pulumi-specific ones. Only proper nouns are capitalized: "stack" (not "Stack"), "environment" (not "Environment"), "token" (not "Token"), "infrastructure as code" (not "Infrastructure as Code") when used as a common noun mid-sentence. This mirrors the Headings rule above and applies to body prose too. It doesn't apply where the capitalized word is itself a proper noun in context — for example, the Pulumi Kubernetes Operator's `Stack` custom resource (a Kubernetes CRD Kind) or a `pulumicdk.Stack` class identifier.
 
 ---
 
@@ -379,6 +380,20 @@ Exempt: the generated `SEE ALSO` blocks on CLI command pages (`content/docs/iac/
 
 ---
 
+## FAQs
+
+Dedicated FAQ pages have one canonical home: the FAQ hub at [`/docs/support/faq/`](https://www.pulumi.com/docs/support/faq/), under the **Support & Troubleshooting** nav section. This placement is intentional. Readers reach for an FAQ when they're in help-seeking mode, and Support & Troubleshooting is the site-wide help destination; keeping the pages together also avoids re-scattering Q&A across product sections. (The per-product FAQs that once lived at `/docs/esc/faq/`, `/docs/insights/policy/faq/`, `/docs/iac/faq/`, and similar paths were deliberately consolidated here — the aliases on the consolidated pages preserve those URLs.)
+
+Rules:
+
+- **Dedicated FAQ pages live only under `content/docs/support/faq/`**, one page per product area (`infrastructure.md`, `secrets-config.md`, `policies.md`, ...), each listed as a card on the hub's `_index.md` and placed in the `support` menu with `parent: support-faq`. Do not create an `faq.md` inside a product section.
+- **Product sections link in.** Surface a product's FAQ from its landing page or a **Learn more** block (for example, "For common questions, see the [FAQ](/docs/support/faq/policies/)"), not by adding FAQ pages to the product's own nav.
+- **FAQ is not troubleshooting.** "How do I fix this error?" content belongs with the rest of the day-2 material under [IaC Operations](https://www.pulumi.com/docs/iac/operations/) (Troubleshooting, Debugging) — or, for a Pulumi Cloud feature, on a `troubleshooting.md` page inside that feature's own section (the SAML and SCIM sections each have one) — not in an FAQ. FAQ pages answer conceptual and product questions ("Does Pulumi support rollbacks?", "How does Pulumi store state?").
+- **Keep answers canonical.** If an answer needs more than a few paragraphs, the full explanation belongs in the topical docs and the FAQ entry gives the short answer plus a link. Don't let an FAQ become the only place something is documented.
+- **In-page FAQ sections are different.** A "Frequently asked questions" H2 near the end of a what-is page, blog post, or product page is a page-level pattern, not part of the FAQ hub, and stays with its page. See [Headings](#headings) for the question-mark exception that lets the FAQPage JSON-LD collector pick those questions up.
+
+---
+
 ## Tutorials
 
 - End with a **Next steps** or **Learn more** section as appropriate — see [Cross-reference sections](#cross-reference-sections).
@@ -393,4 +408,4 @@ See [BLOGGING.md](BLOGGING.md) for guidance on writing Pulumi blog posts.
 
 ## Automated checks
 
-The rules in this guide are enforced — where mechanically possible — by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` and layer on top of the Google Developer Style Guide and write-good packages. Run locally with `make lint-prose`. Vale findings also surface in the pinned PR review under ⚠️ Low-confidence and never block merges.
+The rules in this guide are enforced — where mechanically possible — by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` and layer on top of the Google Developer Style Guide and write-good packages. Run locally with `make lint-prose`. Vale findings also surface in the pinned PR review in two tiers: a small set of near-zero-false-positive correctness rules (wrong or deprecated product names, banned terms, misspellings, grammatical agreement — the `blocker:` list in `.claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml`) renders under 🚨 Outstanding and must be resolved or refuted before merging; everything else renders under ⚠️ Low-confidence as advisory nags that never block.

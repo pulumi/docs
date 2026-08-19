@@ -18,7 +18,7 @@ tags:
 category: product
 ---
 
-Pulumi’s Infrastructure as Code has included a powerful policy engine from day one. Over the past year, we’ve been enhancing it significantly to provide stronger governance for modern cloud platforms. Until now, these capabilities were limited to our Business Critical tier. Today, we’re excited to announce that [policy guardrails](/docs/insights/policy-as-code/) are now available to all Team and Enterprise customers. Alongside this, we’re launching a redesigned policy management experience and introducing out-of-the-box policy packs that make it easier than ever to secure, govern, and optimize your cloud environments—even when powered by AI agents like [Pulumi Neo](/blog/pulumi-neo/).
+Pulumi’s infrastructure as code has included a powerful policy engine from day one. Over the past year, we’ve been enhancing it significantly to provide stronger governance for modern cloud platforms. Until now, these capabilities were limited to our Business Critical edition. Today, we’re excited to announce that [policy guardrails](/docs/insights/policy/) are now available to all Team and Enterprise customers. Alongside this, we’re launching a redesigned policy management experience and introducing out-of-the-box policy packs that make it easier than ever to secure, govern, and optimize your cloud environments—even when powered by AI agents like [Pulumi Neo](/blog/pulumi-neo/).
 
 <!--more-->
 
@@ -56,7 +56,7 @@ You’ll find:
 
 ### New Pre-Built Policy Packs
 
-To help you establish guardrails immediately, we have authored several [pre-built policy packs](/docs/insights/pre-built-packs/). We are excited to highlight two that are available today:
+To help you establish guardrails immediately, we have authored several [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/). We are excited to highlight two that are available today:
 
 - **Pulumi Best Practices:** A foundational set of recommended governance and security controls that serves as a strong starting point for any organization.
 - **HITRUST CSF v11.5:** Provides predefined controls that help align cloud resources with HITRUST CSF requirements.
@@ -76,13 +76,13 @@ Pulumi Policy supports two complementary approaches to governance.
 - **Preventative policies**: Block non-compliant deployments during `pulumi up`, providing real-time guardrails for developers and AI agents.
 - **Audit policies**: Continuously scan existing resources for ongoing compliance monitoring, giving you a complete picture of your cloud security posture.
 
-This dual approach ensures new deployments meet standards while maintaining visibility across your entire infrastructure. Learn more in our [Preventative vs. Audit Policies](/docs/insights/preventative-vs-audit-policies/) guide.
+This dual approach ensures new deployments meet standards while maintaining visibility across your entire infrastructure. Learn more in our [Preventative vs. Audit Policies](/docs/insights/policy/policy-groups/) guide.
 
 ## How to Get Started
 
 Getting started with the new policy management experience is straightforward:
 
-1. **Browse Policy Packs:** Navigate to the Policies tab in your Pulumi Cloud console to discover pre-built policy packs like Pulumi Best Practices and HITRUST CSF. Learn more about [Policy as Code](/docs/insights/policy-as-code/) configuration and setup.
+1. **Browse Policy Packs:** Navigate to the Policies tab in your Pulumi Cloud console to discover pre-built policy packs like Pulumi Best Practices and HITRUST CSF. Learn more about [Policy as Code](/docs/insights/policy/) configuration and setup.
 ![Policy Packs Browser](policy-management-1.png)
 1. **Choose Your Approach:** Decide whether you need preventative policies (to block non-compliant deployments during `pulumi up`) or audit policies (for continuous compliance monitoring across all cloud resources).
 ![Preventative Policy Overview](policy-management-3.png)

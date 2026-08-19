@@ -242,7 +242,7 @@ With Pulumi, you get:
 
 - [Rich AWS integration](/registry/packages/aws/) for comprehensive cloud resource management
 
-- [Infrastructure automation](/docs/iac/packages-and-automation/automation-api/) to streamline your deployment workflows
+- [Infrastructure automation](/docs/iac/concepts/automation-api/) to streamline your deployment workflows
 
 ```python
 # Create a Lambda function

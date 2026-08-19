@@ -26,7 +26,7 @@ aliases:
 - /docs/intro/pulumi-cloud/projects-and-stacks/
 ---
 
-Every Pulumi program is deployed to a _stack_. A stack is an isolated, independently [configurable](/docs/concepts/config/)
+Every Pulumi program is deployed to a _stack_. A stack is an isolated, independently [configurable](/docs/iac/concepts/config/)
 instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as `development`, `staging`, and `production`) or feature branches (such as `feature-x-dev`).
 
 A project can have as many stacks as you need. By default, Pulumi creates a stack for you when you start a new project using the `pulumi new` command.
@@ -48,9 +48,9 @@ The stack name is specified in one of the following formats:
 1. `orgName/projectName/stackName`: Identifies the stack `stackName` in the organization `orgName` and the project `projectName`.  `projectName` must match the project specified by the nearest `Pulumi.yaml` project file.
 
 {{% notes type="info" %}}
-For [DIY backend](/docs/concepts/state#using-a-diy-backend), the `orgName` portion of the stack name must always be the constant value `organization`.
+For [DIY backend](/docs/iac/concepts/state-and-backends/#using-a-diy-backend), the `orgName` portion of the stack name must always be the constant value `organization`.
 
-Additionally, backends initialized with a Pulumi CLI older than v3.61.0 support only the first format (`stackName`). You can upgrade these to support the other formats with the `pulumi state upgrade` command. See [*State > Scoping*](/docs/concepts/state/#scoping) for more details.
+Additionally, backends initialized with a Pulumi CLI older than v3.61.0 support only the first format (`stackName`). You can upgrade these to support the other formats with the `pulumi state upgrade` command. See [State and Backends](/docs/iac/concepts/state-and-backends/) for more details.
 {{% /notes %}}
 
 Given the stack `my-org/my-project/dev`, the following are  all equivalent if the current organization is `my-org` and the current project is `my-project`:
@@ -64,7 +64,7 @@ dev
 In some contexts, stack names will be presented in their fully qualified format (`orgName/projectName/stackName`) even if provided using shorthand (`stackName` or `orgName/stackName`) as input.
 
 {{% notes type="info" %}}
-While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`](/docs/iac/cli/commands/pulumi_config/). For information on how to populate your stack configuration files, see [Configuration](/docs/concepts/config/).
+While stacks with applied configuration settings will often be accompanied by `Pulumi.<stack-name>.yaml` files, these files are not created by `pulumi stack init`. They are created and managed with [`pulumi config`](/docs/iac/cli/commands/pulumi_config/). For information on how to populate your stack configuration files, see [Configuration](/docs/iac/concepts/config/).
 {{% /notes %}}
 
 ## Listing stacks
@@ -129,7 +129,7 @@ When the new stack name includes a different project name (for example, renaming
     runtime: nodejs
     ```
 
-1. **Update project-namespaced configuration keys.** Pulumi [configuration keys](/docs/concepts/config/) are scoped by project name. Keys set without an explicit namespace are stored with the project name as the prefix, so a key named `database` in a project called `old-project` is recorded as `old-project:database` inside `Pulumi.<stack>.yaml`. After a cross-project rename, those keys still carry the old project prefix and will not be visible to the program running under the new project name.
+1. **Update project-namespaced configuration keys.** Pulumi [configuration keys](/docs/iac/concepts/config/) are scoped by project name. Keys set without an explicit namespace are stored with the project name as the prefix, so a key named `database` in a project called `old-project` is recorded as `old-project:database` inside `Pulumi.<stack>.yaml`. After a cross-project rename, those keys still carry the old project prefix and will not be visible to the program running under the new project name.
 
 {{% notes type="warning" %}}
 If you do not update project-namespaced configuration keys after a cross-project rename, the program will silently see those configuration values as unset and may fail at runtime or use unexpected defaults.
@@ -156,18 +156,18 @@ Keys that include an explicit namespace other than the project name (such as `aw
 ## Generate an update plan
 
 {{% experimental-feature %}}
-[Update plans](/docs/concepts/plans/) only show up in `--help` when the environment variable `PULUMI_EXPERIMENTAL` is set to `true`.
+[Update plans](/docs/iac/operations/stack-management/update-plans/) only show up in `--help` when the environment variable `PULUMI_EXPERIMENTAL` is set to `true`.
 {{% /experimental-feature %}}
 
-To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/concepts/config/) for the active stack.
+To preview an update of the currently selected stack and save that plan run `pulumi preview --save-plan=plan.json`. The operation uses the latest [configuration values](/docs/iac/concepts/config/) for the active stack.
 
-{{% notes type="info"%}}
+{{% notes type="info" %}}
 Your program code can distinguish between execution for `preview` and `update` operations by using [pulumi.runtime.isDryRun()](/docs/reference/pkg/nodejs/pulumi/pulumi/runtime#isDryRun).
 {{% /notes %}}
 
 ## Update a stack
 
-To update the currently selected stack, run `pulumi up`. If you saved a plan from a preview you can pass that in to constrain the update to only doing what was planned with `pulumi up --plan=plan.json`. The operation uses the latest [configuration values](/docs/concepts/config/) for the active stack.
+To update the currently selected stack, run `pulumi up`. If you saved a plan from a preview you can pass that in to constrain the update to only doing what was planned with `pulumi up --plan=plan.json`. The operation uses the latest [configuration values](/docs/iac/concepts/config/) for the active stack.
 
 ## View stack resources
 
@@ -197,17 +197,15 @@ Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
 
 ## Stack tags
 
-Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/iac/cli/commands/pulumi_stack_tag_ls).
+{{< pulumi-cloud />}}
 
-{{% notes "info" %}}
-Stack tags are only supported with the [Pulumi Cloud backend](/docs/concepts/state/).
-{{% /notes %}}
+Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. A set of built-in tags are automatically assigned and updated each time a stack is updated (such as `pulumi:project`, `pulumi:runtime`, `pulumi:description`, `gitHub:owner`, `gitHub:repo`, `vcs:owner`, `vcs:repo`, and `vcs:kind`). To view a stack's tags, run [`pulumi stack tag ls`](/docs/iac/cli/commands/pulumi_stack_tag_list/).
 
-Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
+Custom tags can be assigned to a stack by running [`pulumi stack tag set <name> <value>`](/docs/iac/cli/commands/pulumi_stack_tag_set/) and can be used to customize the grouping of stacks in the [Pulumi Cloud](https://app.pulumi.com/signin). For example, if you have many projects with separate stacks for production, staging, and testing environments, it may be useful to group stacks by environment instead of by project. To do this, you could assign a custom tag named `environment` to each stack. For example, running `pulumi stack tag set environment production` assigns a custom `environment` tag with a value of `production` to the active stack. Once you've assigned an `environment` tag to each stack, you'll be able to group by `Tag: environment` in Pulumi Cloud.
 
 As a best practice, custom tags should not be prefixed with `pulumi:`, `gitHub:`, or `vcs:` to avoid conflicting with built-in tags that are assigned and updated with fresh values each time a stack is updated.
 
-Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_rm). Custom tags can also be created, edited, and deleted from each stack's **Overview** tab in the [Pulumi Cloud](https://app.pulumi.com/signin) UI.
+Tags can be deleted by running [`pulumi stack tag rm <name>`](/docs/iac/cli/commands/pulumi_stack_tag_remove/). Custom tags can also be created, edited, and deleted from each stack's **Overview** tab in the [Pulumi Cloud](https://app.pulumi.com/signin) UI.
 
 ## Stack outputs {#outputs}
 
@@ -281,9 +279,9 @@ outputs:
 
 {{< /chooser >}}
 
-From the CLI, you can then use [`pulumi stack output url`](/docs/iac/cli/commands/pulumi_stack_output) to get the value and incorporate into other scripts or tools.
+From the CLI, you can then use [`pulumi stack output url`](/docs/iac/cli/commands/pulumi_stack_output/) to get the value and incorporate into other scripts or tools.
 
-The value of a stack export can be a regular value, an [Output](/docs/concepts/inputs-outputs/), or a `Promise` (effectively, the same as an [Input](/docs/concepts/inputs-outputs/)). The actual values are resolved after `pulumi up` completes.
+The value of a stack export can be a regular value, an [Output](/docs/iac/concepts/inputs-outputs/), or a `Promise` (effectively, the same as an [Input](/docs/iac/concepts/inputs-outputs/)). The actual values are resolved after `pulumi up` completes.
 
 Stack exports are effectively JSON serialized, though quotes are removed when exporting strings.
 
@@ -382,13 +380,15 @@ $ pulumi stack output --json
 }
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Note: If you export an actual resource, it too will be JSON serialized. This usually isn’t what you want, especially because some resources are quite large. For example, if you only want to export the resource’s ID or name, just export those properties directly.
 {{% /notes %}}
 
 Stack outputs respect secret annotations and are encrypted appropriately. If a stack contains any secret values, their plaintext values will not be shown by default. Instead, they will be displayed as secret in the CLI. Pass `--show-secrets` to `pulumi stack output` to see the plaintext value.
 
 ## Stack README
+
+{{< pulumi-cloud />}}
 
 [Pulumi Cloud](https://app.pulumi.com/signin) renders a per-stack README on each stack's **README** tab from a stack output named `readme`. The README can include links, embedded documentation, and templated values that reference the stack's other outputs.
 
@@ -1019,7 +1019,7 @@ resources:
       key: logs/${infra.outputs["privateIp"]}.log
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Pulumi YAML does not distinguish between `requireOutput` and `getOutput`. Accessing a stack
 reference output via interpolation will fail at deployment time if the named output does not
 exist in the referenced stack.
@@ -1066,7 +1066,7 @@ for more information.
 {{% /choosable %}}
 {{% choosable language python %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 This functionality is not currently supported in Python.
 Progress is tracked on [pulumi/pulumi#12172](https://github.com/pulumi/pulumi/issues/12172)
 if you need this functionality.
@@ -1137,7 +1137,7 @@ infra.outputDetailsAsync("dbHost").thenAccept(dbHostDetails -> {
 {{% /choosable %}}
 {{% choosable language yaml %}}
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 `getOutputDetails` is not supported in Pulumi YAML. To read a stack reference
 output in YAML, use the `outputs` property of a `StackReference` resource, as shown in the
 `requireOutput` example above.
@@ -1151,7 +1151,7 @@ output in YAML, use the `outputs` property of a `StackReference` resource, as sh
 
 A stack can be exported to see the raw data associated with the stack. This is useful when manual changes need to be applied to the stack due to changes made in the target cloud platform that Pulumi is not aware of. The modified stack can then be imported to set the current state of the stack to the new values.
 
-{{% notes "warning"%}}
+{{% notes type="warning" %}}
 This is a powerful capability that subverts the usual way that Pulumi manages resources and ensures immutable and repeatable infrastructure deployments. Importing an incorrect stack specification could lead to the orphaning of cloud resources or the inability to make future updates to the stack. Use care when using the import and export capabilities.
 {{% /notes %}}
 

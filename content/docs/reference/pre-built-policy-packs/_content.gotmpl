@@ -15,6 +15,11 @@
 
 {{ $allowlist := site.Data.policy_packs }}
 {{ $packData := site.Data.policy_pack_policies }}
+{{ $lastmodData := site.Data.policy_pack_lastmod }}
+
+{{ if not $lastmodData }}
+    {{ warnf "policy packs: data/policy_pack_lastmod.json not found — sitemap <lastmod> will be omitted for these pages. Run 'node scripts/fetch-policy-packs.js' to regenerate it." }}
+{{ end }}
 
 {{ if not $packData }}
     {{ warnf "policy packs: data/policy_pack_policies/ not found — run 'node scripts/fetch-policy-packs.js' with PULUMI_ACCESS_TOKEN set. Skipping policy pack page generation." }}
@@ -128,15 +133,34 @@
         {{ end }}
     {{ end }}
 
-    {{/* ---------------------------------------------------------------- */}}
+    {{/* ----------------------------------------------------------------
+         lastmod: these pages have no authored publish date, only a
+         "content last changed" signal from data/policy_pack_lastmod.json
+         (see that file's own _meta for how it's kept honest). Passing
+         "params.no_authored_date" alongside "dates.lastmod" stops Hugo's
+         date cascade (which backfills .PublishDate from .Date from
+         .Lastmod when no explicit date/publishDate is set) from being
+         mistaken for a real datePublished by the JSON-LD/OpenGraph
+         partials -- see layouts/partials/schema/collectors/article-entity.html.
+         ---------------------------------------------------------------- */}}
+    {{ $pageParams := dict
+        "h1" $entry.h1
+        "meta_desc" $entry.metaDesc
+    }}
+    {{ $dates := dict }}
+    {{ with $lastmodData }}
+        {{ with index .packs $entry.pack }}
+            {{ $dates = dict "lastmod" (time.AsTime .) }}
+            {{ $pageParams = merge $pageParams (dict "no_authored_date" true) }}
+        {{ end }}
+    {{ end }}
+
     {{ $.AddPage (dict
         "path" (printf "%s/%s" $section.id $entry.slug)
         "title" $entry.title
         "kind" "page"
-        "params" (dict
-            "h1" $entry.h1
-            "meta_desc" $entry.metaDesc
-        )
+        "dates" $dates
+        "params" $pageParams
         "menus" (dict "reference" (dict
             "parent" $section.menu
             "identifier" (printf "reference-pre-built-policy-packs-%s" $entry.pack)

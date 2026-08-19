@@ -1,3 +1,10 @@
+// NOTE: These tests do not run in CI. `make test` only runs the example-program tests,
+// and the pull-request workflow never invokes `stencil test`. Run them by hand when
+// touching the store:
+//
+//     cd theme/stencil && yarn install
+//     npx stencil test --spec -- src/store/store.spec.ts
+//
 import { normalizeState } from "./index";
 
 describe("normalizeState", () => {
@@ -37,6 +44,20 @@ describe("normalizeState", () => {
                         tfTool: "terraform",
                     },
                 });
+            });
+        });
+
+        describe("with a persisted HCL language preference", () => {
+            it("keeps HCL as the language", () => {
+                const state = normalizeState({ preferences: { language: "hcl" } });
+                expect(state.preferences.language).toBe("hcl");
+            });
+        });
+
+        describe("with a persisted special-purpose language preference", () => {
+            it("coerces OPA back to the default language", () => {
+                const state = normalizeState({ preferences: { language: "opa" } });
+                expect(state.preferences.language).toBe("typescript");
             });
         });
     });

@@ -18,7 +18,7 @@ sections:
     cta_primary_text: Get started
     cta_primary_link: /docs/iac/get-started/kubernetes/
     cta_secondary_text: Request a demo
-    cta_secondary_link: /contact/?form=request-a-demo
+    cta_secondary_link: /request-a-demo/
     video_youtube_id: 2P8JLgAc5QI
     video_title: Watch how easy it is to set up Amazon Elastic Kubernetes Service (EKS) in 5 minutes with Pulumi.
     anchor: hero
@@ -276,7 +276,7 @@ sections:
       - title: Need help with Kubernetes?
         description: Learn how top engineering teams are using Pulumi to manage Kubernetes clusters and workloads across every cloud.
         cta_primary_text: Request a demo
-        cta_primary_link: /contact/?form=request-a-demo
+        cta_primary_link: /request-a-demo/
       - title: Get started with Pulumi and Kubernetes
         description: Spin up your first cluster in minutes. Follow our quickstart guide, or talk to our team about your specific needs.
         cta_primary_text: Get started

@@ -56,6 +56,8 @@ For a complete guide on writing policies, see [write your own policy packs](/doc
 
 ## Pulumi Cloud REST API
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 The Pulumi Cloud REST API provides endpoints for managing policy packs, policy groups, and policy results programmatically. Use these endpoints to integrate policy management into custom tooling and workflows.
 
 ### Policy packs
@@ -83,6 +85,8 @@ View the policy packs and policy groups associated with a specific stack.
 - [Stack Policy API reference](/docs/reference/cloud-rest-api/stack-policy/)
 
 ## Pulumi Service Provider
+
+{{< pulumi-cloud "policy-enforcement" />}}
 
 The [Pulumi Cloud (pulumiservice) provider](/registry/packages/pulumiservice/) includes resources and functions for managing policies programmatically as part of your Pulumi infrastructure code.
 

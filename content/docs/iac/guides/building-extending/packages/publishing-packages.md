@@ -43,7 +43,7 @@ This guide assumes you're using GitHub to host your package's source code and Gi
 {{% /notes %}}
 
 - You need to [install Pulumi](/docs/install/).
-- You should be familiar with the Pulumi [Resource and Component model](/docs/concepts/resources/).
+- You should be familiar with the Pulumi [Resource and Component model](/docs/iac/concepts/resources/).
 - Pulumi Packages are multi-language: you can write your package once in either Go, Python, or TypeScript/JavaScript and then make it available to all Pulumi users, even if they use another language. To develop them, you need to have Git, Go, .NET, Python, and TypeScript installed on your system.
 - To follow the whole guide, you need a GitHub account. However, using GitHub is not a requirement; you may still find this guide useful even if you use another system to store your source code.
 
@@ -85,7 +85,7 @@ Registry listings for dynamically-bridged Terraform providers are generated auto
 
 ## Author your resources or components
 
-See the instructions in your new repository's `README.md` file for specific instructions on how to author your package. We also have guides you can follow for building [components](/docs/iac/concepts/resources/components/) and [providers](/docs/iac/concepts/providers/) without the template repos.
+See the instructions in your new repository's `README.md` file for specific instructions on how to author your package. We also have guides you can follow for building [components](/docs/iac/concepts/components/) and [providers](/docs/iac/concepts/providers/) without the template repos.
 
 ## Write documentation
 
@@ -108,7 +108,7 @@ Although you author these files in your package repository's `docs/` folder, the
 
 ### Package metadata
 
-Metadata for your package is generated from the [`schema.json`](/docs/iac/using-pulumi/extending-pulumi/schema) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
+Metadata for your package is generated from the [`schema.json`](/docs/iac/guides/building-extending/packages/schema/) in your repository. To make sure your package looks great in the Pulumi Registry, don't forget to add metadata like:
 
 - `displayName`: the friendly name for your package displayed on the Registry's browse page; this name should match the title of the `_index.md` file.
 - `description`: a short description of your package; it should include the package name

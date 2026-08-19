@@ -225,6 +225,10 @@ To add images to the body of your post, first place them within the folder conta
 ![The humble platypus](platypus.png)
 ```
 
+Readers can click an image to see it full size in an overlay, but only where that actually helps: an image gets the treatment when the overlay could draw it meaningfully bigger than the post does, so screenshots and other detail-heavy images become clickable while icons, badges, and images already shown at their full size stay plain. That's decided in the browser from the image's own dimensions — there's nothing to add to your Markdown. If you have an image that qualifies but shouldn't be clickable, add `data-no-lightbox` to it (or to a wrapping element) in raw HTML.
+
+The same applies to videos added with the [`video` shortcode](#video) below, which is worth knowing when you record one: a clip shot at 1080p is being squeezed into the ~768px content column, and readers can open it at full size, so record at a comfortably higher resolution than the column rather than at the column's width. The enlarged copy always gets playback controls, even though the clip in the post body has none, so readers can pause and scrub there. Clips you give `controls="true"` are left out of this altogether — their controls already include a fullscreen button.
+
 #### Social ("Meta") and Feature Images
 
 > [!IMPORTANT]
@@ -313,6 +317,21 @@ Manage your clusters with real code — loops, functions, and your IDE, not YAML
 Place the card yourself, wherever it reads best — usually at a natural section break past the middle of the post. There's no auto-insertion; a post gets a card only if you add one.
 
 **When to add one:** the card suits evergreen, search-and-discovery content (comparisons, best-practices guides, how-to tutorials, explainers) of at least ~800 words. Skip it on very short posts, where it overwhelms the content, and on time-bound announcement or news content — funding, partnerships, brand milestones, year-in-review recaps, and `category: company` posts generally — where a "get started" ask is off-topic.
+
+#### Event and Post Cards
+
+To point readers at an event or another blog post, embed its card with the `blog/card` shortcode instead of describing it in a CTA card. Pass one content path:
+
+```plain
+{{< blog/card "/events/neo-in-a-docker-sandbox/" >}}
+{{< blog/card "/blog/pulumi-neo/" >}}
+```
+
+This is the same tile the [events list](/events/) and the blog homepage use, so the card pulls its title, date, location, presenters, and blurb from the target page — nothing to restate and nothing to go stale. An event card also flips its own CTA from "Register" to "Watch" once a recording is added to the event page, so a post that outlives the event still links somewhere useful.
+
+A card is always full width, so it's one card per shortcode — several in a row is simply several shortcodes. The path is the only parameter: there's no title or body copy to set, so anything you want to say about a card goes in the prose around it. Paths must be absolute and resolve to a page under `/events/` or `/blog/` — a typo fails the build rather than dropping the card silently.
+
+Reach for `blog/cta-card` instead when you're linking somewhere without a card (docs, a product page, a signup) or writing a generic get-started ask.
 
 #### Animated GIFs
 

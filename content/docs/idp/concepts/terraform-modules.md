@@ -13,7 +13,7 @@ aliases:
   - /docs/iac/using-pulumi/pulumi-cloud/registry/terraform-modules/
 ---
 
-Pulumi Cloud hosts Terraform modules as a first-class registry resource alongside [packages](/docs/iac/concepts/packages/) and [templates](/docs/idp/concepts/organization-templates/). Teams migrating from HCP Terraform can publish their existing modules to Pulumi Cloud using the same tooling they already use (the [go-tfe](https://github.com/hashicorp/go-tfe) library or the [hashicorp/tfe Terraform provider](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs)) by pointing those tools at `tf.pulumi.com` instead of `app.terraform.io`. Every module version you publish is also converted into a Pulumi package. The module's variables become typed inputs and its outputs become typed outputs, with a generated SDK in TypeScript, Python, Go, C#, Java, or YAML, an API reference on the package's page, and a record of which stacks depend on it. Conversion is additive: existing `.tf` consumers keep resolving the module over the Terraform protocol.
+Pulumi Cloud hosts Terraform modules as a first-class registry resource alongside [packages](/docs/iac/concepts/packages/) and [templates](/docs/idp/concepts/organization-templates/). Teams migrating from HCP Terraform can publish their existing modules to Pulumi Cloud using the same tooling they already use (the [go-tfe](https://github.com/hashicorp/go-tfe) library or the [hashicorp/tfe Terraform provider](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs)) by pointing those tools at `tf.pulumi.com` instead of `app.terraform.io`. Every module version you publish is also converted into a Pulumi package. The module's variables become typed inputs and its outputs become typed outputs, with a generated SDK in TypeScript, JavaScript, Python, Go, .NET, or Java, an API reference on the package's page, and a record of which stacks depend on it. You can also consume it directly from YAML or HCL, without generating an SDK. Conversion is additive: existing `.tf` consumers keep resolving the module over the Terraform protocol.
 
 ## Before you begin
 
@@ -90,14 +90,14 @@ Publishing a module version also converts it into a Pulumi package, with no extr
 
 Conversion runs per version, so a module can have some versions with packages and some without. The package's page in Pulumi Cloud shows which versions have converted and gives you the command to install one.
 
-Under the hood, the conversion job derives the package schema by reading the module through Pulumi's [`hcl`](https://github.com/pulumi/pulumi-hcl) parameterized provider (`pulumi package get-schema hcl module <address>`) and publishes that schema as a package version. SDKs and API documentation come from the schema, the same as for any other package.
+Under the hood, the conversion job derives the package schema by reading the module through the [Any HCL Module](/registry/packages/hcl/) parameterized provider (`pulumi package get-schema hcl module <address>`) and publishes that schema as a package version. SDKs and API documentation come from the schema, the same as for any other package.
 
 ## Consume from a Pulumi program
 
 Once a version has converted, install it by package name:
 
 ```bash
-pulumi package add <name>-<system> [<version>]
+pulumi package add <name>-<system>[@<version>]
 ```
 
 The module is a [multi-language component](https://github.com/pulumi/pulumi-hcl/blob/master/docs/mlc.md): its `variable` blocks become typed inputs, its `output` blocks become typed outputs, and Pulumi generates an SDK in the language your project uses. The version you pass is persisted in `Pulumi.yaml`, so `pulumi install` regenerates the same pinned version.

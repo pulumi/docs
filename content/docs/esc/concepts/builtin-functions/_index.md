@@ -11,7 +11,7 @@ menu:
   esc:
     parent: esc-concepts
     identifier: esc-syntax-builtin-functions
-    weight: 7
+    weight: 8
 ---
 
 ESC provides a number of built-in functions to help perform common value manipulations and to help access information stored outside of ESC.

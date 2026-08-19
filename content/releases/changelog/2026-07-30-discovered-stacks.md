@@ -4,10 +4,10 @@ date: 2026-07-30
 meta_desc: "Pulumi Cloud now discovers your CloudFormation stacks and ARM deployments as Pulumi IaC stacks, with a built-in migration path."
 authors:
     - alejandro-cotroneo
-tiers:
-    - Team
-    - Enterprise
-    - Business Critical
+editions:
+    - team
+    - enterprise
+    - business-critical
 ---
 
 Pulumi Cloud now discovers your AWS CloudFormation stacks and Azure Resource Manager deployments as [discovered stacks](/docs/insights/discovery/discovered-stacks/). When [Pulumi Discovery](/docs/insights/) scans your cloud accounts, every stack and deployment appears with its resources, each mapped to its Pulumi shape and carrying a migration status computed from live state so it never gets stale.

@@ -10,8 +10,8 @@ inputs.
 
 Selection algorithm (weighted fair queuing by staleness):
 
-1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths
-   and `draft: true` pages.
+1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths,
+   `draft: true` pages, and `redirect_to:` stubs (tombstones, not content).
 2. Hard filters: pages with an open `content-review/<slug>` bot PR; pages
    whose `incomplete` review has already burned ATTEMPT_CAP retries (they
    back off and are surfaced for a human instead of looping forever).
@@ -24,7 +24,7 @@ Selection algorithm (weighted fair queuing by staleness):
 
        score = importance * staleness + stale_claim_boost
 
-   importance = tier_w * (0.5 + 0.5*traffic_n) * gsc_m * feedback_m
+   importance = tier_w * (0.25 + 0.75*traffic_n) * gsc_m * feedback_m
               = tier_w * gsc_m * feedback_m     tier-only when no traffic
    tier_w     = {1: 1.0, 2: 0.6, 3: 0.3}
    traffic_n  = log1p(visits) / log1p(max_visits); pages missing from the
@@ -58,11 +58,15 @@ Selection algorithm (weighted fair queuing by staleness):
                 ancient never-reviewed page to the front. A human (non-bot)
                 edit fully resets the clock.
 
-   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry has a
-                non-empty `stale_claims` list (written by the nightly
+   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry carries
+                a non-escalated stale-claim marker (written by the nightly
                 reverify-claims.py when a volatile claim the page asserts
-                re-verified contradicted); 0 otherwise. Marked pages jump the
-                queue; the marker clears when the review rewrites the entry.
+                re-verified contradicted; see active_markers); 0 otherwise.
+                Marked pages jump the queue; a marker retires when a review
+                resolves it (record-review.py `resolved_claims`), and one
+                unresolved through MARKER_ESCALATION_CAP reviews stops
+                boosting (escalated — a human's turn), so the boost is
+                bounded either way.
 
    Ties break on path ascending, so runs are reproducible.
 
@@ -77,24 +81,42 @@ Usage:
 
 `--paths` bypasses scoring entirely (workflow_dispatch testing). `--no-gh`
 and `--today` exist for tests. When `$GITHUB_OUTPUT` is set, the script
-appends `has_articles=`, `halted=`, and `count=` for workflow gating.
+appends `has_articles=` and `halted=` for workflow gating (the queue count is
+read from the queue JSON, which every consumer already has).
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
-import io
 import json
 import math
-import os
-import re
 import subprocess
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
 import yaml
+
+# Infrastructure this selector shares with scripts/blog-review/select-posts.py —
+# see _selector_common.py's docstring for why it is shared rather than copied.
+# The sys.path insert is anchored on this file's own location because the
+# selector is not always run with its directory on the path: scripts/snippet-
+# sweep/sweep.py loads it by path from a different directory.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from _selector_common import (  # noqa: E402  (needs the sys.path insert above)
+    FRONTMATTER_RE,
+    INCOMPLETE_STATUS,
+    Lane,
+    cmd_prune,
+    effective_last_review,
+    finish,
+    git_history_signals,
+    load_ledger,
+    load_traffic,
+    normalize_url_path,
+    parse_day,
+)
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_TIERS = (
@@ -103,6 +125,17 @@ DEFAULT_TIERS = (
 )
 DEFAULT_LEDGER_DIR = REPO_ROOT / "scripts/content-review/ledger"
 CONTENT_DIR = "content/docs"
+
+# How the shared helpers in _selector_common.py address this lane.
+LANE = Lane(
+    prog="select-articles",
+    items_key="articles",
+    corpus_noun="page",
+    item_noun="article",
+    has_output="has_articles",
+    # No `count=`: every consumer of this lane's gate already reads the queue
+    # JSON, which carries the count.
+)
 
 BRANCH_PREFIX = "content-review/"
 MAX_OPEN_PRS = 9
@@ -120,9 +153,103 @@ TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 # — see reverify-claims.py). Sized to outrank a top-importance page that has
 # gone unreviewed for a year (1.0 * 365), so a known-stale fact beats any
 # ordinary staleness — while an ancient never-reviewed page can still win, so
-# the sweep is never fully starved. The marker vanishes when the page's next
-# review rewrites its ledger entry, so the boost self-clears.
+# the sweep is never fully starved. A marker retires when the page's next
+# review resolves it (record-review.py), so the boost self-clears.
 STALE_CLAIM_BOOST = 400.0
+
+# A marker the last MARKER_ESCALATION_CAP reviews each saw and left unresolved
+# stops boosting. Carrying an unresolved marker forward is what keeps a missed
+# finding from evaporating (record-review.py), but an unboundedly boosted page
+# would be re-picked every sweep and starve the rest of the queue, which is the
+# same failure the marker was meant to cure. Past the cap the marker stays on
+# the ledger entry — visible, still reported, still blocking re-verification
+# churn — but it stops jumping the page to the front. That is the signal a
+# human needs to look at it.
+MARKER_ESCALATION_CAP = 2
+
+# A stale-claim marker does not boost while the page's last COMPLETED review is
+# newer than this. The claims index snapshots the PRE-fix page on purpose (the
+# model must not launder its own edits into the index), so the night after a
+# fix merges the marker is still there describing a value the merged PR already
+# corrected — and a +400 boost would drag the just-fixed page straight back to
+# the front of the queue. That echo bought one redundant full review per fix,
+# observed twice in the 2026-08-18 queue alone.
+#
+# reverify-claims.superseded_by_review() is the primary guard and stops the
+# re-check upstream of the marker; this is the second, independent one, on the
+# consumer side, for a marker that is already on the entry when a fix lands.
+# Both were specified in #20970; only the reverify half shipped.
+#
+# An INCOMPLETE review never suppresses — it did not fix anything, so the
+# marker is still live. A marker surviving past the cooldown is real drift and
+# boosts exactly as before.
+STALE_BOOST_COOLDOWN_DAYS = 5
+
+
+def all_markers(entry: dict | None) -> list[dict]:
+    """Every stale-claim marker on this ledger entry, escalated or not.
+
+    This is what rides in the queue item, and it is deliberately unfiltered.
+    record-review.py rebuilds the ledger entry from the queue and writes back
+    whatever markers survive the review, so a marker withheld here would be
+    dropped from the ledger the next time the page is reviewed for any reason
+    — and `already_marked()` in reverify-claims.py would then let the entity
+    back into the nightly pool, restarting the detect/boost/miss/clear cycle
+    this whole mechanism exists to break.
+    """
+    return [m for m in (entry or {}).get("stale_claims") or [] if isinstance(m, dict)]
+
+
+def _day(value) -> date | None:
+    try:
+        return datetime.strptime(str(value), "%Y-%m-%d").date()
+    except (TypeError, ValueError):
+        return None
+
+
+def boost_suppressed_by_recent_fix(entry: dict | None, today: date) -> bool:
+    """True when this page's markers are an ECHO of a fix that already landed.
+
+    See STALE_BOOST_COOLDOWN_DAYS. Three conditions, all required:
+
+    1. The last review COMPLETED (record-review.py's vocabulary: any status
+       but "incomplete"). An incomplete review fixed nothing.
+    2. It is inside the cooldown window.
+    3. EVERY marker on the entry was checked AFTER that review.
+
+    (3) is the one that makes this precise rather than a blunt mute. A marker
+    written after a completed review is the echo #20970 describes: the claims
+    index still holds the PRE-fix snapshot, so that night's re-check re-flags
+    a value the merged PR already corrected. A marker written BEFORE the
+    review is the opposite situation — the review saw it and left it — and
+    that is real, unresolved drift which must keep boosting (and escalates on
+    its own via MARKER_ESCALATION_CAP). Suppressing those would mute the
+    finding the whole mechanism exists to carry.
+    """
+    entry = entry or {}
+    if entry.get("status") == "incomplete":
+        return False
+    reviewed = _day(entry.get("reviewed_at"))
+    if reviewed is None or not (0 <= (today - reviewed).days < STALE_BOOST_COOLDOWN_DAYS):
+        return False
+    markers = all_markers(entry)
+    if not markers:
+        return False
+    # An undated marker is not provably an echo, so it keeps its boost.
+    checked = [_day(m.get("checked_at")) for m in markers]
+    return all(c is not None and c > reviewed for c in checked)
+
+
+def active_markers(entry: dict | None) -> list[dict]:
+    """The subset of markers that still earn the page a priority boost.
+
+    Escalated markers (see MARKER_ESCALATION_CAP) are excluded *from the
+    boost only*: repeated reviews have already failed to act on them, so
+    another jump to the front of the queue is not the remedy. They still
+    travel in the queue item and still persist on the ledger — see
+    all_markers().
+    """
+    return [m for m in all_markers(entry) if not m.get("escalated")]
 
 # Reader-signal boost tuning. Both multipliers floor at exactly 1.0 (see the
 # module docstring); the caps keep the maximum combined boost (~1.63x) well
@@ -138,15 +265,6 @@ FEEDBACK_BOOST_MAX = 0.30  # feedback multiplier in [1.0, 1.30]
 # review PR for a human, so it fires only on unambiguous cases.
 LOW_CTR_FLAG_MIN_IMPRESSIONS = 1000
 LOW_CTR_FLAG_RATIO = 0.5  # flag when ctr <= 0.5 * corpus median CTR
-
-# Statuses a ledger entry can carry (set by record-review.py). Any status other
-# than "incomplete" is a completed review whose date advances the clock; legacy
-# entries predating the field have no `status` and are treated as completed.
-INCOMPLETE_STATUS = "incomplete"
-
-BOT_AUTHORS = {"pulumi-bot", "dependabot[bot]", "github-actions[bot]"}
-
-FRONTMATTER_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
 
 # ---- Path helpers -----------------------------------------------------------
@@ -178,10 +296,7 @@ def url_for(content_path: str) -> str:
 
 def content_path_for_url(url_path: str, known_paths: set[str]) -> str | None:
     """Map a live /docs/... URL path back to its content file, if it exists."""
-    p = url_path.split("#", 1)[0].split("?", 1)[0].strip()
-    if p.startswith("https://"):
-        p = re.sub(r"^https://[^/]+", "", p)
-    p = "/" + p.strip("/")
+    p = normalize_url_path(url_path)
     candidate_leaf = f"content{p}.md"
     candidate_index = f"content{p}/_index.md"
     if candidate_leaf in known_paths:
@@ -211,56 +326,6 @@ def tier_for(path: str, rules: list[dict]) -> tuple[int, bool]:
     return 3, False
 
 
-def load_traffic(traffic_file: Path | None, known_paths: set[str]) -> tuple[dict[str, int], dict]:
-    """Parse the S3 traffic snapshot (JSON or CSV) into {content_path: visits}.
-
-    Returns ({}, meta) when the file is missing/unreadable — selection then
-    drops the traffic term entirely (graceful degradation).
-    """
-    meta = {"source": None, "period": None, "pages_matched": 0}
-    if traffic_file is None or not traffic_file.is_file():
-        return {}, meta
-    raw = traffic_file.read_text(errors="replace").strip()
-    if not raw:
-        return {}, meta
-
-    pages: dict[str, int] = {}
-
-    def record(url_path: str, views) -> None:
-        try:
-            views = int(float(views))
-        except (TypeError, ValueError):
-            return
-        cp = content_path_for_url(str(url_path), known_paths)
-        if cp:
-            # A URL and its aliases may both appear; credit the same file once
-            # with the larger figure rather than double-counting.
-            pages[cp] = max(pages.get(cp, 0), views)
-
-    try:
-        data = json.loads(raw)
-    except json.JSONDecodeError:
-        data = None
-
-    if isinstance(data, dict):
-        meta["source"] = data.get("source")
-        meta["period"] = data.get("period") or data.get("generated")
-        body = data.get("pages", data)
-        if isinstance(body, dict):
-            for url_path, views in body.items():
-                record(url_path, views)
-    elif data is None:
-        # CSV: `path,views` with an optional header row.
-        reader = csv.reader(io.StringIO(raw))
-        for row in reader:
-            if len(row) < 2:
-                continue
-            record(row[0], row[1])
-
-    meta["pages_matched"] = len(pages)
-    return pages, meta
-
-
 def load_reader_signals(
     signals_file: Path | None, known_paths: set[str]
 ) -> tuple[dict[str, dict], dict[str, dict], dict]:
@@ -272,6 +337,12 @@ def load_reader_signals(
         {"version": 1, "generated": ..., "signals": {
             "gsc":      {"source", "period", "pages": {url: {impressions, clicks, position}}},
             "feedback": {"source", "period", "pages": {url: {yes, no}}}}}
+
+    A bare GSC section with no {"signals": ...} envelope is also accepted —
+    that is the shape of the export the data team ships today
+    (pulumi/data#865 phase 2, the Airflow stack's docsTrafficGscLatestS3Uri):
+
+        {"source", "period", "generated", "pages": {url: {clicks, impressions, position}}}
 
     Returns (gsc, feedback, meta). A missing/unreadable/malformed file — or a
     missing section — degrades that signal to unavailable, mirroring
@@ -295,7 +366,13 @@ def load_reader_signals(
         return gsc, feedback, meta
     sections = data.get("signals")
     if not isinstance(sections, dict):
-        return gsc, feedback, meta
+        # No envelope: accept the bare GSC-only export (pulumi/data#865
+        # phase 2) so the signal activates on what ships today. The full
+        # envelope (adding feedback) supersedes it whenever it lands.
+        if isinstance(data.get("pages"), dict):
+            sections = {"gsc": data}
+        else:
+            return gsc, feedback, meta
 
     def _int(v) -> int:
         try:
@@ -362,69 +439,6 @@ def load_reader_signals(
     return gsc, feedback, meta
 
 
-def load_ledger(ledger_dir: Path) -> dict[str, dict]:
-    """Return {content_path: ledger entry} from one-file-per-page JSON."""
-    entries: dict[str, dict] = {}
-    if not ledger_dir.is_dir():
-        return entries
-    for f in sorted(ledger_dir.glob("*.json")):
-        try:
-            entry = json.loads(f.read_text())
-        except (OSError, json.JSONDecodeError):
-            print(f"select-articles: unreadable ledger file {f}", file=sys.stderr)
-            continue
-        path = entry.get("path")
-        if path:
-            entry["_file"] = str(f)
-            entries[path] = entry
-    return entries
-
-
-# ---- Git signals (single-pass, no per-file subprocess fan-out) ---------------
-
-
-def git_history_signals(repo: Path) -> tuple[dict[str, int], dict[str, int]]:
-    """Per-path git timestamps for content/docs, from one history pass.
-
-    Walks history newest-first and returns two maps of unix commit times:
-
-      newest_non_bot : the most recent commit by a *non-bot* author that
-                       touched the path (a human edit — resets the staleness
-                       clock). Absent for pages only ever touched by bots.
-      created        : the oldest commit that touched the path (its creation),
-                       the fallback clock for never-bot-reviewed pages.
-    """
-    out = run_git(repo, ["log", "--name-only", "--format=%x01%ct%x01%an", "--", CONTENT_DIR])
-    newest_non_bot: dict[str, int] = {}
-    created: dict[str, int] = {}
-    current_ct = 0
-    author_is_bot = True
-    for line in out.splitlines():
-        if line.startswith("\x01"):
-            # Header line is "\x01<commit-time>\x01<author-name>".
-            parts = line.split("\x01")
-            ct = parts[1] if len(parts) > 1 else ""
-            an = parts[2] if len(parts) > 2 else ""
-            try:
-                current_ct = int(ct.strip())
-            except ValueError:
-                current_ct = 0
-            author_is_bot = an.strip() in BOT_AUTHORS
-        elif line.strip():
-            path = line.strip()
-            created[path] = current_ct  # last write wins -> oldest commit
-            if not author_is_bot and path not in newest_non_bot:
-                newest_non_bot[path] = current_ct
-    return newest_non_bot, created
-
-
-def run_git(repo: Path, args: list[str]) -> str:
-    proc = subprocess.run(
-        ["git", "-C", str(repo), *args], capture_output=True, text=True, check=False
-    )
-    return proc.stdout
-
-
 # ---- GitHub signals ----------------------------------------------------------
 
 
@@ -459,49 +473,6 @@ def pr_state(pr_url: str, use_gh: bool) -> dict | None:
 
 
 # ---- Scoring -----------------------------------------------------------------
-
-
-def parse_day(s: str | None) -> date | None:
-    if not s:
-        return None
-    try:
-        return datetime.fromisoformat(str(s).replace("Z", "+00:00")).date()
-    except ValueError:
-        try:
-            return datetime.strptime(str(s), "%Y-%m-%d").date()
-        except ValueError:
-            return None
-
-
-def _ts_to_day(ts: int | None) -> date | None:
-    if not ts:
-        return None
-    return datetime.fromtimestamp(ts, tz=timezone.utc).date()
-
-
-def effective_last_review(
-    path: str,
-    entry: dict | None,
-    newest_non_bot: dict[str, int],
-    created: dict[str, int],
-) -> date | None:
-    """The date the staleness clock is measured from.
-
-    max(completed bot review, newest human edit); an `incomplete` review does
-    not count, so the page stays due. Never-bot-reviewed pages fall back to the
-    git creation date. None only when the page has no git history at all.
-    """
-    cands: list[date] = []
-    if entry:
-        reviewed = parse_day(entry.get("reviewed_at"))
-        if reviewed and entry.get("status") != INCOMPLETE_STATUS:
-            cands.append(reviewed)
-    human = _ts_to_day(newest_non_bot.get(path))
-    if human:
-        cands.append(human)
-    if cands:
-        return max(cands)
-    return _ts_to_day(created.get(path))
 
 
 def gsc_multiplier(
@@ -556,7 +527,13 @@ def importance(
     if have_traffic and max_visits > 0:
         v = visits if visits is not None else median_visits
         traffic_n = math.log1p(v) / math.log1p(max_visits)
-        return tier_w * (0.5 + 0.5 * traffic_n) * gsc_m * feedback_m
+        # Floor 0.25, not 0.5: with the old floor the log-normalized term
+        # compressed a 7,600x traffic gap into a <1% score difference, so
+        # staleness alone decided the queue across wildly different reader
+        # impact. The floor still guarantees a zero-traffic page a quarter of
+        # full weight (staleness must be able to win eventually), but traffic
+        # now separates same-tier peers by up to 4x instead of 2x.
+        return tier_w * (0.25 + 0.75 * traffic_n) * gsc_m * feedback_m
     return tier_w * gsc_m * feedback_m
 
 
@@ -586,7 +563,7 @@ def score_page(
 
 
 def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
-    entries = load_ledger(ledger_dir)
+    entries = load_ledger(ledger_dir, LANE)
     counts = {"merged": 0, "closed": 0, "open": 0, "clean": 0,
               "incomplete": 0, "capped": 0, "unknown": 0}
     by_lane: dict[str, int] = {}
@@ -616,31 +593,7 @@ def cmd_stats(ledger_dir: Path, use_gh: bool) -> int:
     return 0
 
 
-def cmd_prune(ledger_dir: Path, repo: Path, dry_run: bool) -> int:
-    pruned = []
-    for path, entry in load_ledger(ledger_dir).items():
-        if not (repo / path).is_file():
-            pruned.append(entry["_file"])
-            if not dry_run:
-                Path(entry["_file"]).unlink()
-    verb = "would prune" if dry_run else "pruned"
-    print(f"select-articles: {verb} {len(pruned)} orphaned ledger file(s)")
-    for f in pruned:
-        print(f"  {f}")
-    return 0
-
-
 # ---- Main ----------------------------------------------------------------------
-
-
-def write_github_output(queue: dict) -> None:
-    gh_out = os.environ.get("GITHUB_OUTPUT")
-    if not gh_out:
-        return
-    with open(gh_out, "a") as fh:
-        fh.write(f"has_articles={'true' if queue['articles'] else 'false'}\n")
-        fh.write(f"halted={queue.get('halted') or ''}\n")
-        fh.write(f"count={len(queue['articles'])}\n")
 
 
 def main() -> int:
@@ -668,20 +621,20 @@ def main() -> int:
     if args.stats:
         return cmd_stats(ledger_dir, use_gh)
     if args.prune:
-        return cmd_prune(ledger_dir, repo, args.dry_run)
+        return cmd_prune(ledger_dir, repo, args.dry_run, LANE)
     if not args.out and not args.dry_run:
         p.error("--out is required (or use --dry-run/--stats/--prune)")
 
     today = parse_day(args.today) or datetime.now(timezone.utc).date()
     tier_rules = load_tiers(Path(args.tiers))
-    ledger = load_ledger(ledger_dir)
+    ledger = load_ledger(ledger_dir, LANE)
 
     all_paths = sorted(
         str(f.relative_to(repo)) for f in (repo / CONTENT_DIR).rglob("*.md")
     )
     known = set(all_paths)
     traffic, traffic_meta = load_traffic(
-        Path(args.traffic_file) if args.traffic_file else None, known
+        Path(args.traffic_file) if args.traffic_file else None, known, content_path_for_url
     )
     have_traffic = bool(traffic)
     visits_known = sorted(traffic.values())
@@ -699,6 +652,9 @@ def main() -> int:
         "halted": None,
         "traffic": {**traffic_meta, "available": have_traffic},
         "reader_signals": {"available": signals_available, **signals_meta},
+        # Pages backed off at the attempt cap (needing a human). Filled by the
+        # scored path below; signal-health.py's capped-pages signal reads it.
+        "capped": [],
         "articles": [],
     }
 
@@ -743,7 +699,17 @@ def main() -> int:
             "signals": signal_terms(path)[2],
             "last_reviewed": entry.get("reviewed_at"),
             "attempts": int(entry.get("attempts", 0)),
-            "stale_claims": len(entry.get("stale_claims") or []),
+            "stale_claims": len(all_markers(entry)),
+            # The markers themselves, not just how many there are. The nightly
+            # re-verification already did the expensive work — it identified the
+            # entity, reached an authoritative source, and wrote down the
+            # evidence — and the review skill is told to treat those as priority
+            # findings. Passing only the count meant the worker had to re-derive
+            # the finding from scratch and could silently miss it (pulumi/docs
+            # #20927: a page boosted for a contradicted version pin was reviewed,
+            # reported "0 contradicted" across 74 re-extracted claims, and merged
+            # a one-line unrelated repair while the flagged bug stayed on master).
+            "stale_claim_markers": all_markers(entry),
             "score": score,
         }
 
@@ -760,19 +726,22 @@ def main() -> int:
                 print(f"select-articles: --paths entry not found: {path}", file=sys.stderr)
                 return 1
             queue["articles"].append(article(path, lane, None))
-        return finish(queue, args)
+        return finish(queue, args, LANE)
 
     open_branches = open_review_branches(use_gh)
     if open_branches is None:
         # Can't dedup against open PRs -> opening more is unsafe. Halt loudly.
         queue["halted"] = "gh_unavailable"
-        return finish(queue, args)
+        return finish(queue, args, LANE)
     if len(open_branches) >= MAX_OPEN_PRS:
         queue["halted"] = "max_open_prs"
-        return finish(queue, args)
-    open_slugs = {b[len(BRANCH_PREFIX):].removeprefix("retire-") for b in open_branches}
+        return finish(queue, args, LANE)
+    open_slugs = {
+        b[len(BRANCH_PREFIX):].removeprefix("retire-").removeprefix("glowup-")
+        for b in open_branches
+    }
 
-    newest_non_bot, created = git_history_signals(repo)
+    newest_non_bot, created = git_history_signals(repo, CONTENT_DIR)
 
     candidates: list[str] = []
     capped: list[str] = []
@@ -784,6 +753,8 @@ def main() -> int:
             continue
         if is_draft(repo / path):
             continue
+        if is_redirect_stub(repo / path):
+            continue
         entry = ledger.get(path)
         if entry and entry.get("status") == INCOMPLETE_STATUS \
                 and int(entry.get("attempts", 0)) >= ATTEMPT_CAP:
@@ -791,6 +762,7 @@ def main() -> int:
             continue
         candidates.append(path)
 
+    queue["capped"] = sorted(capped)
     if capped:
         print(
             f"select-articles: {len(capped)} page(s) backed off at the "
@@ -810,7 +782,9 @@ def main() -> int:
                 effective_last_review(path, ledger.get(path), newest_non_bot, created),
                 today,
                 have_traffic,
-                stale_claims=bool((ledger.get(path) or {}).get("stale_claims")),
+                stale_claims=(bool(active_markers(ledger.get(path)))
+                              and not boost_suppressed_by_recent_fix(
+                                  ledger.get(path), today)),
                 gsc_m=gsc_m,
                 feedback_m=fb_m,
             ),
@@ -825,7 +799,7 @@ def main() -> int:
     for score, path in scored[: max(args.count, 0)]:
         queue["articles"].append(article(path, "priority", score))
 
-    return finish(queue, args)
+    return finish(queue, args, LANE)
 
 
 def is_draft(file_path: Path) -> bool:
@@ -843,23 +817,27 @@ def is_draft(file_path: Path) -> bool:
     return bool(isinstance(fm, dict) and fm.get("draft"))
 
 
-def finish(queue: dict, args) -> int:
-    queue["count"] = len(queue["articles"])
-    body = json.dumps(queue, indent=2)
-    if args.dry_run or not args.out:
-        print(body)
-    else:
-        out = Path(args.out)
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(body + "\n")
-        print(
-            f"select-articles: {queue['count']} article(s)"
-            + (f" (halted: {queue['halted']})" if queue["halted"] else "")
-            + f" → {out}",
-            file=sys.stderr,
-        )
-    write_github_output(queue)
-    return 0
+def is_redirect_stub(file_path: Path) -> bool:
+    """A page whose frontmatter is a `redirect_to:` — a tombstone, not content.
+
+    There is nothing on such a page to review, but with the traffic term
+    floored these stubs scored like real pages and burned queue slots
+    (organizing-stacks-projects.md: 1 visit/month, reviewed twice). The test
+    is the `redirect_to` key specifically — NOT "small file with aliases",
+    which misfires on legitimately tiny pages like reference/glossary.md.
+    """
+    try:
+        head = file_path.read_text(errors="replace")[:4096]
+    except OSError:
+        return False
+    m = FRONTMATTER_RE.match(head)
+    if not m:
+        return False
+    try:
+        fm = yaml.safe_load(m.group(1))
+    except yaml.YAMLError:
+        return False
+    return bool(isinstance(fm, dict) and fm.get("redirect_to"))
 
 
 if __name__ == "__main__":

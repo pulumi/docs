@@ -38,7 +38,7 @@ Converting is not a prerequisite for getting value from Pulumi. Two options let 
 
 [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/), so pointing an existing project at it means adding a standard `backend "remote"` block. Your resource code and day-to-day workflow are unchanged, and the guide covers migrating state from HCP Terraform, Amazon S3, Azure Blob Storage, Google Cloud Storage, and local files.
 
-Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/pulumi-cloud/insights/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default.
+Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/insights/discovery/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default.
 
 ### Writing Pulumi programs in HCL
 
@@ -101,6 +101,8 @@ $ pulumi import --from hcl terraform.tfstate
 ```
 
 This reads a Terraform or OpenTofu state file and imports every managed resource in the root module into your stack. Resources nested inside modules are skipped with a warning; import those [in the usual way](/docs/iac/guides/migration/import/).
+
+`--from hcl` reads your `.tf` files alongside the state file, so run it from the project directory. If you have converted to a general-purpose language and no longer have `.tf` files on disk, use [`--from terraform`](#importing-resources) instead.
 
 ### State-first migration with pulumi-terraform-migrate
 
@@ -166,7 +168,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    When prompting the LLM, provide:
    * Your original `.tf` files
-   * Your target programming language (TypeScript, Python, Go, C#, etc.)
+   * Your target programming language (TypeScript, Python, Go, .NET, etc.)
    * The generated `pulumi-state.json` for context on resource names and structure
    * Ask the agent to iterate on the code changes until `pulumi preview --diff` generates as few diffs as possible. If it fails, prompt it to try again.
 
@@ -280,6 +282,11 @@ pulumi import --from terraform ./terraform.tfstate
 
 Given a path to a valid `.tfstate` file and a target Pulumi stack, Pulumi will import the resources defined in that file into the stack and mark them [protected](/docs/iac/concepts/resources/options/protect/) to allow you to make follow-up changes to their source code safely. You can also import resources individually using the [`import`](https://www.pulumi.com/docs/iac/concepts/resources/options/import/) resource option.
 
+Two converters can read a state file, selected with `--from`, and the choice follows the same rule as it does for [`pulumi convert`](/docs/iac/get-started/terraform/convert-hcl/#automated-conversion-with-pulumi-convert):
+
+* `--from terraform` reads the state file on its own, so it works from a Pulumi project in any language. Reach for it after converting your configuration to a general-purpose language, as above.
+* `--from hcl` parses the `.tf` files in the project directory alongside the state file. Reach for it when you are [running those `.tf` files under `runtime: hcl`](#keep-your-code-in-hcl).
+
 To learn more about importing resources with Pulumi, see [Importing Resources](/docs/iac/guides/migration/import/).
 
 #### Conversion examples
@@ -303,13 +310,13 @@ Pulumi allows you to use existing Terraform modules directly in your Pulumi prog
 To use a Terraform module in Pulumi, you can add it to your project using the `pulumi package add` command:
 
 ```bash
-pulumi package add terraform-module <module-source> [<version>] <pulumi-package-name>
+pulumi package add hcl module <module-source> [<version>]
 ```
 
 For example, to add the AWS VPC module from the Terraform Registry:
 
 ```bash
-pulumi package add terraform-module terraform-aws-modules/vpc/aws 5.19.0 vpc
+pulumi package add hcl module terraform-aws-modules/vpc/aws 5.19.0
 ```
 
 This will generate a local SDK in your programming language that you can import into your Pulumi program. You can then use this module like any other Pulumi package:
@@ -439,7 +446,7 @@ class MyStack : Stack
 This feature also works seamlessly with local Terraform modules:
 
 ```bash
-pulumi package add terraform-module ./path/to/module mylocalmod
+pulumi package add hcl module ./path/to/module
 ```
 
 For more information about using Terraform modules directly in Pulumi, see the [Use a Terraform Module in Pulumi](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/) guide.

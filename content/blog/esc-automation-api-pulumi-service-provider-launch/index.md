@@ -15,7 +15,7 @@ tags:
 category: product
 ---
 
-We're excited to announce two powerful new capabilities for [Pulumi Environments Secrets and Configurations](/product/esc) (ESC) that supercharge how you manage and control your infrastructure and application secrets and configurations:
+We're excited to announce two powerful new capabilities for [Pulumi Environments Secrets and Configurations](/product/secrets-management/) (ESC) that supercharge how you manage and control your infrastructure and application secrets and configurations:
 
 - **Pulumi Service Provider Support for ESC Environments**: Manage your environments as code right alongside your infrastructure including fine-grained access control using [Pulumi Service Provider](/registry/packages/pulumiservice/).
 - **Automation API Enhancements for ESC**: Seamlessly integrate ESC Environments into your [Automation API](/automation/)-based Pulumi projects.
@@ -26,17 +26,17 @@ These updates build upon Pulumi ESC's commitment to simplify and streamline secr
 
 ## Manage ESC Environments as Code with the Pulumi Service Provider
 
-You can now manage your Pulumi ESC [Environments](/docs/esc/environments/) directly within the Pulumi Service using the powerful Pulumi Service Provider. This means you can define environments, add [version tags](/docs/esc/environments/#tagging-versions), and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.
+You can now manage your Pulumi ESC [Environments](/docs/esc/concepts/environments/) directly within the Pulumi Service using the powerful Pulumi Service Provider. This means you can define environments, add [version tags](/docs/esc/concepts/environments/#tagging-versions), and even control access using familiar Infrastructure as Code (IaC) practices ensuring consistency and repeatability across your deployments.
 
 Here's a glimpse of what you can achieve:
 
 - **Programmatically create and manage ESC Environments**: Define environments alongside your infrastructure code for a unified workflow.
 - **Add version tags to environments**: Add tags when you are creating the environment.
-- **Enforce granular team permissions**: Control who can [read, open, or modify](/docs/esc/environments/#organization-wide-permissions) your environments ensuring secure collaboration and preventing unauthorized access.
+- **Enforce granular team permissions**: Control who can [read, open, or modify](/docs/esc/concepts/environments/#organization-wide-permissions) your environments ensuring secure collaboration and preventing unauthorized access.
 
 Bringing Pulumi ESC Environments support into the Pulumi Service Provider empowers you to manage your entire infrastructure and application landscape through a unified approach.
 
-Pulumi Service Provider ESC capabilities are available for TypeScript/JavaScript, Go, Python, C#, Java, and YAML. See our [Environment](/registry/packages/pulumiservice/api-docs/environment/), [Environment Version Tag](/registry/packages/pulumiservice/api-docs/environmentversiontag/), and [Environment Permissions](/registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in TypeScript/JavaScript, Go, and Python:
+Pulumi Service Provider ESC capabilities are available for TypeScript/JavaScript, Go, Python, .NET, Java, and YAML. See our [Environment](/registry/packages/pulumiservice/api-docs/environment/), [Environment Version Tag](/registry/packages/pulumiservice/api-docs/environmentversiontag/), and [Environment Permissions](/registry/packages/pulumiservice/api-docs/teamenvironmentpermission/) Pulumi Service Provider docs. Here are examples of creating environments in TypeScript/JavaScript, Go, and Python:
 
 {{< chooser language "typescript,python,go" />}}
 
@@ -121,7 +121,7 @@ We're expanding the powerful Pulumi Automation API to include new methods for in
 
 The new Automation API methods for ESC include:
 
-- `addEnvironments(...)`: Append environments in order to your Pulumi stack's [import](/docs/esc/environments/#using-environments-with-pulumi-iac) list.
+- `addEnvironments(...)`: Append environments in order to your Pulumi stack's [import](/docs/esc/concepts/environments/#using-environments-with-pulumi-iac) list.
 - `listEnvironments()`: Retrieve a list of environments currently imported into your stack.
 - `removeEnvironment(environment)`: Remove a specific environment from your stack's import list.
 

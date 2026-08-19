@@ -9,21 +9,65 @@
         [description] [speakers]
 
     With form (upcoming):
+        [session tabs — only when the event runs more than once]
         [timing info]
         [description] [form]
         [speakers — full width]
+
+    An event that runs more than once (an Americas slot and an EMEA slot, say)
+    declares a `sessions:` array and is still one page. The parts that differ per
+    session — the timing row, the register card, the speakers — are wrapped in
+    `[data-session-panel="<key>"]` regions, one set per session, with all but the
+    active one `hidden` from the server. The tabs flip which set is visible
+    (event-sessions.ts); everything shared — title, description, learn, the cloud
+    notice, the mobile Register button — is rendered once and never swaps.
+
+    Single-session events (the overwhelming majority) render exactly as they did
+    before sessions existed: no tabs, no panel wrappers, no JS involved.
 
     Parameters: page context (.)
 */}}
 
 {{ $nowUnix := now.UnixMilli }}
-{{ $eventDateUnix := (add (.Params.sortable_date | time.AsTime).UnixMilli (duration "hour" 24).Milliseconds) }}
-{{ $timePassed := gt $nowUnix $eventDateUnix }}
 {{ $showCloud := eq .Params.event_type "workshop" }}
+
+{{/* One entry per session, each tagged with whether it has already run. A
+     session counts as passed a day after it starts, matching the events list, so
+     a session running right now still shows its register card. */}}
+{{ $sessions := slice }}
+{{ range partial "events/sessions.html" . }}
+    {{ $sessions = $sessions | append (merge . (dict
+        "passed" (gt $nowUnix (add .unix (duration "hour" 24).Milliseconds))
+    )) }}
+{{ end }}
+{{ $multi := gt (len $sessions) 1 }}
+
+{{/* Default to the next session that hasn't run yet; once they all have, the
+     last one, so the page settles on the most recent thing that happened. */}}
+{{ $activeKey := "" }}
+{{ $activeLabel := "" }}
+{{ range $sessions }}
+    {{ if and (not .passed) (eq $activeKey "") }}
+        {{ $activeKey = .key }}
+        {{ $activeLabel = .label }}
+    {{ end }}
+{{ end }}
+{{ $timePassed := eq $activeKey "" }}
+{{ if $timePassed }}
+    {{ $activeKey = (index $sessions (sub (len $sessions) 1)).key }}
+{{ end }}
+
+{{/* Presenters can be per-session, so the speakers section renders whenever any
+     session has some — not just when the event carries a top-level list. */}}
+{{ $anyPresenters := false }}
+{{ range $sessions }}{{ if .presenters }}{{ $anyPresenters = true }}{{ end }}{{ end }}
 
 {{ if .Params.youtube_url }}
 
-    {{/* On-demand layout: full-width video, then description + learn side by side, speakers below */}}
+    {{/* On-demand layout: full-width video, then description + learn side by side, speakers below.
+         Sessions don't apply once there's a recording — there's one video and one
+         set of people in it — so the speakers row is everyone who appeared at any
+         session (events/presenters.html). */}}
     <div class="rounded-lg overflow-hidden" style="position: relative; padding-bottom: 56.25%; height: 0;">
         <iframe src="{{ .Params.youtube_url }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen=""></iframe>
     </div>
@@ -45,17 +89,30 @@
         {{ end }}
     </div>
 
-    {{ if .Params.presenters }}
-        <hr class="m-0 h-px border-0 bg-gray-200" />
-        {{ partial "events/speakers-template.html" (dict "presenters" .Params.presenters) }}
+    {{ with partial "events/presenters.html" . }}
+        {{ partial "events/speakers-template.html" (dict "presenters" .) }}
     {{ end }}
 
 {{ else }}
 
-    {{/* Upcoming/gated layout: two-column with details left, form right */}}
+    {{/* Upcoming/gated layout: two-column with details left, form right.
+
+         The `{{ if $multi }}<div …>{{ end }}` wrappers below are deliberately
+         split across the open and close tags: a single-session event then emits
+         no wrapper at all, which keeps 250-odd existing pages byte-for-byte as
+         they were and keeps event-sessions.ts from finding panels on a page that
+         has no tabs to drive them. */}}
+    {{ if $multi }}
+        {{ partial "events/session-tabs.html" (dict "sessions" $sessions "active" $activeKey) }}
+    {{ end }}
+
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
         <div class="w-full lg:w-1/2 flex flex-col gap-8">
-            {{ partial "events/timing-info-template.html" (dict "datetime" .Params.sortable_date "duration" .Params.duration) }}
+            {{ range $sessions }}
+                {{ if $multi }}<div data-session-panel="{{ .key }}"{{ if ne .key $activeKey }} hidden{{ end }}>{{ end }}
+                {{ partial "events/timing-info-template.html" (dict "datetime" .date "duration" .duration) }}
+                {{ if $multi }}</div>{{ end }}
+            {{ end }}
             {{ if and .Params.gated (not $timePassed) }}
                 <a href="#register" class="btn btn-primary btn-lg w-full lg:hidden">{{ partial "icon.html" (dict "name" "calendar-check") }}Register</a>
             {{ end }}
@@ -66,27 +123,46 @@
             {{ end }}
         </div>
 
-        <div class="w-full lg:w-1/2">
-            {{ if and .Params.gated (not $timePassed) }}
-                <div id="register" class="card p-8 scroll-mt-24">
-                    <h3 class="heading-3 mb-4">Register today</h3>
-                    <pulumi-hubspot-form
-                        form-id="{{ .Params.form.hubspot_form_id }}"
-                        salesforce-campaign-id="{{ .Params.form.salesforce_campaign_id }}"
-                        linkedin-conversion-id="24927140"
-                    ></pulumi-hubspot-form>
-                </div>
-            {{ else if $timePassed }}
-                <div class="card p-8 text-center">
-                    <p class="text-gray-950 font-body text-lg mb-0">This event has passed. Check out our <a href="/events/#on-demand">on-demand recordings</a> for more content.</p>
-                </div>
+        {{/* #register sits on the stable column, not on a swappable panel, so the
+             mobile Register button lands here whichever session is showing. */}}
+        <div class="w-full lg:w-1/2 scroll-mt-24" id="register">
+            {{ range $sessions }}
+                {{ if $multi }}<div data-session-panel="{{ .key }}"{{ if ne .key $activeKey }} hidden{{ end }}>{{ end }}
+                {{ if and $.Params.gated (not .passed) }}
+                    <div class="card p-8">
+                        <h3 class="heading-3 mb-4">Register today</h3>
+                        <pulumi-hubspot-form
+                            form-id="{{ .form.hubspot_form_id }}"
+                            salesforce-campaign-id="{{ .form.salesforce_campaign_id }}"
+                            linkedin-conversion-id="24927140"
+                        ></pulumi-hubspot-form>
+                    </div>
+                {{ else if .passed }}
+                    {{ if $timePassed }}
+                        <div class="card p-8 text-center">
+                            <p class="text-gray-950 font-body text-lg mb-0">This event has passed. Check out our <a href="/events/#on-demand">on-demand recordings</a> for more content.</p>
+                        </div>
+                    {{ else }}
+                        {{/* Some other session is still ahead, so send people there
+                             rather than to the on-demand list. */}}
+                        <div class="card p-8 text-center">
+                            <p class="text-gray-950 font-body text-lg mb-0">This session has passed. <a href="#{{ $activeKey }}">Register for the {{ $activeLabel }} session</a> instead.</p>
+                        </div>
+                    {{ end }}
+                {{ end }}
+                {{ if $multi }}</div>{{ end }}
             {{ end }}
         </div>
     </div>
 
-    {{ if .Params.presenters }}
-        <hr class="m-0 h-px border-0 bg-gray-200" />
-        {{ partial "events/speakers-template.html" (dict "presenters" .Params.presenters) }}
+    {{ if $anyPresenters }}
+        {{ range $sessions }}
+            {{ if $multi }}<div data-session-panel="{{ .key }}"{{ if ne .key $activeKey }} hidden{{ end }}>{{ end }}
+            {{ with .presenters }}
+                {{ partial "events/speakers-template.html" (dict "presenters" .) }}
+            {{ end }}
+            {{ if $multi }}</div>{{ end }}
+        {{ end }}
     {{ end }}
 
 {{ end }}

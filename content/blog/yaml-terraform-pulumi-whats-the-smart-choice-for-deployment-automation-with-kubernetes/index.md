@@ -365,7 +365,7 @@ You can use general-purpose languages to define your Kubernetes objects. These i
 - **Abstraction:** You can use the DRY principle in Pulumi. Define reusable functions, classes, and modules in your chosen programming language.
 - **Environment management:** You can manage multiple environments, like development, staging, and production, by defining config variables. This is a more structured way, without needing extra tools.
 - **Kubernetes Helm Support:** Pulumi supports [Helm charts](/registry/packages/kubernetes/api-docs/helm/) out of the box. You can manage Helm charts with Pulumi without needing extra tools or providers.
-- **Programmatic execution of Pulumi:** You can further blend Pulumi code into your projects using the [Pulumi Automation API](/docs/iac/packages-and-automation/automation-api/).
+- **Programmatic execution of Pulumi:** You can further blend Pulumi code into your projects using the [Pulumi Automation API](/docs/iac/concepts/automation-api/).
 
 #### Cons
 
@@ -412,6 +412,8 @@ Now it's time to make a decision. What's the smart choice for deployment automat
 Next time you start a new project, try Pulumi. See for yourself that it's a smart choice. It's an upgrade to your productivity and happiness.
 
 But that's my opinion. What's your opinion? What's your smart choice for deployment automation with Kubernetes?
+
+This post focuses on how you author manifests. If you also want the wider operating picture — provisioning, testing, policy, and where AI agents fit into managing Kubernetes infrastructure day to day — see [Terraform and Kubernetes: A Practical Guide for 2026](/blog/terraform-kubernetes/).
 
 If you want to try out Pulumi or play around to prove [me](/blog/author/engin-diri) wrong, you can start with:
 

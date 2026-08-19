@@ -12,11 +12,7 @@ html:not([data-theme="dark"]) body.section-docs {
         color: #212121;
     }
 
-    // Standalone fenced code blocks (a `.highlight` not inside a chooser,
-    // example-program, terminal chrome, or code-tabbed demo) get the chooser's
-    // chrome border, so the faint-violet panel reads as a bordered card matching
-    // the chooser card treatment.
-    .highlight:not(pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) pre:not(.mermaid) {
+    pre:not(.mermaid, pulumi-chooser *, .example-program *, .code-chrome *, .code-tabbed *) {
         border: 1px solid var(--chrome-border);
     }
 

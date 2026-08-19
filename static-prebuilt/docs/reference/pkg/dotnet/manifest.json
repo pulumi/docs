@@ -1420,11 +1420,11 @@
       "type": "Toc",
       "source_relative_path": "metadata/Pulumi.Automation/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "pulumi.automation/toc.html"
-        },
         ".json": {
           "relative_path": "pulumi.automation/toc.json"
+        },
+        ".html": {
+          "relative_path": "pulumi.automation/toc.html"
         }
       },
       "version": ""
@@ -1750,6 +1750,34 @@
       "IsMRef": true,
       "Title": "Pulumi.DictionaryResourceArgs",
       "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DictionaryResourceArgs.yml\" sourcestartlinenumber=\"1\">A special type of <xref href=\"Pulumi.ResourceArgs\" data-throw-if-not-resolved=\"false\"></xref> with resource inputs represented\nas a loosely-typed dictionary of objects. Normally,\n<xref href=\"Pulumi.DictionaryResourceArgs\" data-throw-if-not-resolved=\"false\"></xref> should not be used by resource providers\nsince it's too low-level and provides low safety. Its target scenario are\nresources with a very dynamic shape of inputs.\nThe input dictionary may only contain objects that are serializable by\nPulumi, i.e only the following types (or pulumi.Output of those types) are allowed:</p>\n<ul><li>Primitive types: <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Double\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"System.Int32\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Boolean\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"Pulumi.Asset\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Pulumi.Archive\" data-throw-if-not-resolved=\"false\"></xref>, or\n<xref href=\"Pulumi.AssetArchive\" data-throw-if-not-resolved=\"false\"></xref></li><li><xref href=\"System.Text.Json.JsonElement\" data-throw-if-not-resolved=\"false\"></xref>\n</li><li>Generic collections of the above:\n<xref href=\"System.Collections.Immutable.ImmutableArray%601\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"System.Collections.Immutable.ImmutableDictionary%602\" data-throw-if-not-resolved=\"false\"></xref>\nwith <xref href=\"System.String\" data-throw-if-not-resolved=\"false\"></xref> keys, <xref href=\"Pulumi.Union%602\" data-throw-if-not-resolved=\"false\"></xref></li></ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DiscriminatedUnionCaseAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.discriminatedunioncaseattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DiscriminatedUnionCaseAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DiscriminatedUnionCaseAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used to declare one member of a discriminated union interface marked with\n<xref href=\"Pulumi.DiscriminatedUnionDiscriminatorAttribute\" data-throw-if-not-resolved=\"false\"></xref>. <xref href=\"Pulumi.DiscriminatedUnionCaseAttribute.Tag\" data-throw-if-not-resolved=\"false\"></xref> is the\ndiscriminator property value that selects this member, and <xref href=\"Pulumi.DiscriminatedUnionCaseAttribute.Type\" data-throw-if-not-resolved=\"false\"></xref> is the\nconcrete <xref href=\"Pulumi.OutputTypeAttribute\" data-throw-if-not-resolved=\"false\"></xref> class to instantiate; it must implement the\nannotated interface.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "metadata/Pulumi/Pulumi.DiscriminatedUnionDiscriminatorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "pulumi/pulumi.discriminateduniondiscriminatorattribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Pulumi.DiscriminatedUnionDiscriminatorAttribute",
+      "Summary": "<p sourcefile=\"metadata/Pulumi/Pulumi.DiscriminatedUnionDiscriminatorAttribute.yml\" sourcestartlinenumber=\"1\">Attribute used to mark an interface that represents a discriminated union of complex\noutput property types. The interface must also carry one\n<xref href=\"Pulumi.DiscriminatedUnionCaseAttribute\" data-throw-if-not-resolved=\"false\"></xref> per union member. When deserializing, the\nPulumi runtime reads the discriminator property named by <xref href=\"Pulumi.DiscriminatedUnionDiscriminatorAttribute.PropertyName\" data-throw-if-not-resolved=\"false\"></xref> from\nthe raw value and instantiates the member whose tag matches.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -3519,11 +3547,11 @@
       "type": "Toc",
       "source_relative_path": "metadata/Pulumi/toc.yml",
       "output": {
-        ".html": {
-          "relative_path": "pulumi/toc.html"
-        },
         ".json": {
           "relative_path": "pulumi/toc.json"
+        },
+        ".html": {
+          "relative_path": "pulumi/toc.html"
         }
       },
       "version": ""

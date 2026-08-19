@@ -31,6 +31,10 @@
                     {{ partial "docs/cli-command-banner.html" . }}
                 {{ end }}
 
+                {{ if not .Params.docs_home }}
+                    {{ partial "docs/cloud-availability.html" . }}
+                {{ end }}
+
                 <div class="docs-table-of-contents docs-toc-mobile">
                     {{ partial "docs/table-of-contents.html" . }}
                 </div>

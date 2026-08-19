@@ -24,10 +24,10 @@ Pulumi supports programs written in YAML or JSON.  In both cases, the programs (
 
 | Property | Type | Required | Expression | Description |
 | - | - | - | - | - |
-| `config` | [config options](#config) | No | No | Config specifies the [Pulumi config](/docs/concepts/config/) inputs to the deployment. |
-| `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/concepts/resources/) that will be deployed and managed by the program |
+| `config` | [config options](#config) | No | No | Config specifies the [Pulumi config](/docs/iac/concepts/config/) inputs to the deployment. |
+| `resources` | map[string]Resource | No | No | Resources declares the [Pulumi resources](/docs/iac/concepts/resources/) that will be deployed and managed by the program |
 | `variables` | map[string]Expression | No | Yes | Variables specifies intermediate values of the program, the values of variables are expressions that can be re-used. |
-| `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/concepts/stack#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
+| `outputs` | map[string]Expression | No | Yes | Outputs specifies the [Pulumi stack outputs](/docs/iac/concepts/stacks/#outputs) of the program and how they are computed from the `resources` is a value of the appropriate type for the template to use if no value is specified. |
 | `pulumi` | map[string]Expression | No | No | Configuration of the Pulumi CLI |
 
 In many locations within this schema, values may be expressions which compute a value based on the `config`, `variables`, or outputs of `resources`.  These expressions can be provided in two ways:
@@ -122,7 +122,7 @@ The value of `resources` is an object whose keys are logical resource names by w
 
 ### Resource options
 
-The value of the `options` property of a Resource is an object whose keys are [resource option names](/docs/concepts/options/) and whose values are elements of the schema below. No resource options are required.
+The value of the `options` property of a Resource is an object whose keys are [resource option names](/docs/iac/concepts/resources/options/) and whose values are elements of the schema below. No resource options are required.
 
 The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions which must use interpolation syntax to reference resources by name. For example:
 
@@ -156,7 +156,7 @@ The `dependsOn`, `parent`, `provider`, and `providers` values permit expressions
 
 ### Resource getter
 
-Supplying a `get` key turns the resource declaration into a [Getter Function](/docs/concepts/resources/get/).
+Supplying a `get` key turns the resource declaration into a [Getter Function](/docs/iac/concepts/functions/get-functions/).
 
 | Property | Type | Required | Description |
 | - | - | - | - |
@@ -251,7 +251,7 @@ resources:
 
 ### Third-party providers
 
-Third party providers may require a `pluginDownloadURL` option for Pulumi to acquire the provider plugin. The publisher of that provider should provide this URL, following our guide for [Authoring & Publishing](/docs/using-pulumi/pulumi-packages/how-to-author/#publish-your-package).
+Third party providers may require a `pluginDownloadURL` option for Pulumi to acquire the provider plugin. The publisher of that provider should provide this URL, following our guide for [Authoring & Publishing](/docs/iac/guides/building-extending/packages/publishing-packages/#publish-your-package).
 
 All of the above examples setting a `version` with a default provider, explicit provider, or on individual resources may be combined with the `pluginDownloadURL` option to use a third party provider.
 
@@ -555,7 +555,7 @@ The expression `${policyVersion}` will have the value `v1.1`.
 
 ### `fn::*Asset` and `fn::*Archive`
 
-[Assets and Archives](/docs/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value.
+[Assets and Archives](/docs/iac/concepts/assets-archives/) are intrinsic types to Pulumi, like strings and numbers, and some resources may take these as inputs or return them as outputs. The built-ins create each kind of asset or archive. Each takes a single string value.
 
 | Built-In | Argument Type | Description |
 | - | - | - |
@@ -589,7 +589,7 @@ variables:
 
 ### `fn::secret`
 
-Constructs a [Secret](/docs/concepts/secrets/) from an existing value.
+Constructs a [Secret](/docs/iac/concepts/secrets/) from an existing value.
 
 ``` yaml
 variables:
@@ -601,7 +601,7 @@ variables:
 
 ### `fn::unsecret`
 
-Unwraps a [Secret](/docs/concepts/secrets/), returning the underlying value with the secret marking removed.
+Unwraps a [Secret](/docs/iac/concepts/secrets/), returning the underlying value with the secret marking removed.
 
 ``` yaml
 variables:
@@ -734,7 +734,7 @@ The expression `${bucketType}` will return `aws:s3/bucketV2:BucketV2`.
 ### `fn::stackReference`
 
 {{% notes type="warning" %}}
-`fn::stackReference` is deprecated. Declare a resource of type [`pulumi:pulumi:StackReference`](/docs/concepts/stack/#stackreferences) instead.
+`fn::stackReference` is deprecated. Declare a resource of type [`pulumi:pulumi:StackReference`](/docs/iac/concepts/stacks/#stackreferences) instead.
 {{% /notes %}}
 
 Reads an output from another Pulumi stack. Arguments are passed as a list, with the first item being the fully qualified stack name and the second item the name of the output to read.

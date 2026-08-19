@@ -27,7 +27,7 @@ Today, we're introducing three new capabilities to help you manage permissions m
 
 ## Why tag-based access control?
 
-With custom roles, you can define granular permissions using [fine-grained scopes](/docs/administration/access-identity/rbac/scopes). However, applying those roles still requires selecting individual stacks, environments, or accounts one by one. For organizations managing a large number of Pulumi entities, this means either granting overly broad access or spending significant time on manual configuration. Tag-based access control solves this problem.
+With custom roles, you can define granular permissions using [fine-grained scopes](/docs/administration/access-identity/rbac/scopes/). However, applying those roles still requires selecting individual stacks, environments, or accounts one by one. For organizations managing a large number of Pulumi entities, this means either granting overly broad access or spending significant time on manual configuration. Tag-based access control solves this problem.
 
 ## What's new?
 
@@ -39,7 +39,7 @@ A single role can include multiple tag-based rules, and they are evaluated with 
 
 ### Team role assignments
 
-Custom roles can now be assigned directly to [teams](/docs/administration/access-identity/rbac/teams) within your Pulumi organization. When an engineer joins a team, whether manually or via [SCIM provisioning](/docs/pulumi-cloud/access-management/scim/), they automatically inherit the permissions defined in the team's assigned roles.
+Custom roles can now be assigned directly to [teams](/docs/administration/access-identity/rbac/teams/) within your Pulumi organization. When an engineer joins a team, whether manually or via [SCIM provisioning](/docs/administration/access-identity/scim/), they automatically inherit the permissions defined in the team's assigned roles.
 
 Teams support both **inline permissions** (ad-hoc access to specific stacks, environments, or accounts) and **role-based permissions** simultaneously. You can assign **multiple roles** to a single team, giving you full flexibility to compose access from reusable building blocks while retaining the ability to grant one-off access where needed. If you have existing workflows built around ad-hoc assignments to teams, those continue to work exactly as before. You can adopt roles incrementally or mix both approaches on the same team.
 
@@ -49,7 +49,7 @@ Team admins (or users with the `team:update` scope) can continue to manage their
 
 ### User role assignments
 
-Custom roles can also be assigned directly to individual organization members. This is useful for users whose responsibilities span multiple teams or require permissions beyond the existing org-level `Admin`, `Member`, and `Billing Manager` [roles](/docs/administration/access-identity/rbac/roles).
+Custom roles can also be assigned directly to individual organization members. This is useful for users whose responsibilities span multiple teams or require permissions beyond the existing org-level `Admin`, `Member`, and `Billing Manager` [roles](/docs/administration/access-identity/rbac/roles/).
 
 ### How permissions work together
 
@@ -99,14 +99,14 @@ Tag-based access control, team role assignments, and user role assignments are a
 
 With custom roles providing fine-grained permissions, tag-based rules enabling dynamic access policies, and the ability to assign roles directly to teams and users, Pulumi IAM now provides everything you need to implement automated, least-privilege access control at scale. We're excited to see how you leverage these new capabilities to secure and streamline your cloud operations.
 
-Explore the [IAM documentation](/docs/administration/access-identity/rbac) to get started, and share your feedback in our [GitHub repository](https://github.com/pulumi/pulumi-cloud-requests/issues).
+Explore the [IAM documentation](/docs/administration/access-identity/rbac/) to get started, and share your feedback in our [GitHub repository](https://github.com/pulumi/pulumi-cloud-requests/issues).
 
 ## Learn more
 
-- [RBAC overview](/docs/administration/access-identity/rbac)
-- [Roles](/docs/administration/access-identity/rbac/roles)
-- [Permission sets](/docs/administration/access-identity/rbac/permission-sets)
-- [Teams](/docs/administration/access-identity/rbac/teams)
-- [Scopes](/docs/administration/access-identity/rbac/scopes)
+- [RBAC overview](/docs/administration/access-identity/rbac/)
+- [Roles](/docs/administration/access-identity/rbac/roles/)
+- [Permission sets](/docs/administration/access-identity/rbac/permission-sets/)
+- [Teams](/docs/administration/access-identity/rbac/teams/)
+- [Scopes](/docs/administration/access-identity/rbac/scopes/)
 - [Pulumi IAM launch blog](/blog/pulumi-cloud-iam-launch/)
 - [Pulumi IAM for self-hosted](/blog/pulumi-cloud-iam-self-hosted/)

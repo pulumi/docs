@@ -18,7 +18,7 @@ aliases:
 
 ## Create a component
 
-[**Components**](/docs/iac/concepts/resources/components/) are infrastructure abstractions that encapsulate
+[**Components**](/docs/iac/concepts/components/) are infrastructure abstractions that encapsulate
 complexity and enable sharing and reuse. Instead of copy-pasting common patterns, you can encode them as components.
 
 You will now create your first component that packages up your Google Cloud Storage website so you can stamp out
@@ -85,14 +85,38 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+module "my-website" {
+  source = "./website"
+  files  = ["index.html"]
+}
+```
+
+{{% /choosable %}}
+
 Using components here also has the benefit that, as the requirements for your static website change, you can
 update the one component definition and have all uses of it benefit.
 
 ### Define a new component
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 To define a new component, create a class called `GcpStorageWebsite` that derives from `ComponentResource`. It'll have a mostly-empty
 constructor to start with but you will add the Google Cloud Storage resources to it in the next step. You'll also define the inputs for the
 component -- the `files` to add to the website -- and outputs -- a single property with the website `url`.
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+In HCL a component is a **module**: a directory of `.tf` files that a program instantiates with a `module` block. It starts out
+with only its input declared, and you will add the Google Cloud Storage resources to it in the next step. The module's
+`variable` blocks declare the inputs for the component -- the `files` to add to the website -- and its `output` blocks
+declare the outputs -- a single website `url`.
+
+{{% /choosable %}}
 
 To get going, create a new file {{< compfile >}} alongside {{< langfile >}} and add the following:
 
@@ -148,7 +172,7 @@ class GcpStorageWebsite(pulumi.ComponentResource):
 package main
 
 import (
-    "github.com/pulumi/pulumi-gcp/sdk/v7/go/gcp/storage"
+    "github.com/pulumi/pulumi-gcp/sdk/v9/go/gcp/storage"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -247,9 +271,32 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    gcp = {
+      source = "pulumi/gcp"
+    }
+  }
+}
+
+# A list of files to serve.
+variable "files" {
+  type = list(string)
+}
+
+# The Google Cloud Storage resources and the website url output will go here next...
+```
+
+{{% /choosable %}}
+
 This defines a component but it doesn't do much yet.
 
 ### Refactor your code into the component
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 Next, make four changes:
 
@@ -257,6 +304,21 @@ Next, make four changes:
 2. Change each resource to use the component [as the `parent`](/docs/iac/concepts/resources/options/parent/)
 3. Generalize the creation of bucket objects by looping over the list of `files`
 4. Assign the resulting website URL to the `url` property of the component
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+Next, make three changes:
+
+1. Move all resources from {{< langfile >}} into the module
+1. Generalize the creation of bucket objects by looping over the list of `files` with `for_each`
+1. Return the resulting website URL as the module's `url` output
+
+Nothing needs reparenting: everything a module declares is automatically a child of the component resource that
+Pulumi creates for the module instance.
+
+{{% /choosable %}}
 
 The resulting {{< compfile >}} file will look like this; you can make each edit one at a time if preferred
 to get a feel for things, or paste the contents of this into {{< compfile >}}:
@@ -372,7 +434,7 @@ class GcpStorageWebsite(pulumi.ComponentResource):
 package main
 
 import (
-    "github.com/pulumi/pulumi-gcp/sdk/v7/go/gcp/storage"
+    "github.com/pulumi/pulumi-gcp/sdk/v9/go/gcp/storage"
     "github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
@@ -589,6 +651,72 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    gcp = {
+      source = "pulumi/gcp"
+    }
+  }
+}
+
+# A list of files to serve.
+variable "files" {
+  type = list(string)
+}
+
+# Create a Google Cloud resource (Storage Bucket) configured for website hosting
+resource "gcp_storage_bucket" "my-bucket" {
+  location                    = "US"
+  uniform_bucket_level_access = true
+  website = {
+    main_page_suffix = "index.html"
+  }
+
+  # A module prefixes the Pulumi names of the resources it contains, so set each
+  # name explicitly (here and below) to keep the names free of that prefix.
+  pulumi {
+    name = "my-bucket"
+  }
+}
+
+# Allow public access to the objects
+resource "gcp_storage_bucket_i_a_m_binding" "my-bucket-binding" {
+  bucket  = gcp_storage_bucket.my-bucket.name
+  role    = "roles/storage.objectViewer"
+  members = ["allUsers"]
+
+  pulumi {
+    name = "my-bucket-binding"
+  }
+}
+
+# Create a Bucket object for each file
+resource "gcp_storage_bucket_object" "files" {
+  for_each   = toset(var.files)
+  bucket     = gcp_storage_bucket.my-bucket.name
+  name       = each.value
+  source     = fileasset(each.value)
+  depends_on = [gcp_storage_bucket_i_a_m_binding.my-bucket-binding]
+
+  pulumi {
+    name = each.value
+  }
+}
+
+# Capture the URL and make it available as a component output:
+output "url" {
+  value = "http://storage.googleapis.com/${gcp_storage_bucket.my-bucket.name}/${var.files[0]}"
+}
+```
+
+Naming the bucket explicitly matters here: a Cloud Storage bucket whose name contains a dot is treated as a
+domain-named bucket and requires domain verification, which the module-prefixed name would trigger.
+
+{{% /choosable %}}
+
 ### Instantiate the component
 
 Now go back to your original file {{< langfile >}}. Now that you have moved all of the resources, you can start over with a clean slate.
@@ -717,9 +845,29 @@ Unfortunately, YAML lacks the language facilities to author components. Feel fre
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Instantiate our new component with the same files as before; the source is the
+# directory the module lives in:
+module "my-website" {
+  source = "./website"
+  files  = ["index.html"]
+}
+
+# And export its autoassigned URL:
+output "url" {
+  value = module.my-website.url
+}
+```
+
+{{% /choosable %}}
+
 ### Deploy the component
 
 Now deploy the resulting component instantiation. To do so, run `pulumi up` as usual:
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 ```
 $ pulumi up
@@ -750,7 +898,45 @@ Do you want to perform this update?  [Use arrows to move, type to filter]
   details
 ```
 
-This preview shows you a few things. First, you'll see our `GcpStorageWebsite` component with all of its children resources neatly parented underneath it. This helps to see what resources relate to which components. Next, you'll see that your old resources are being destroyed.
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+$ pulumi up
+Previewing update (dev)
+
+     Type                                Name                  Plan
+     pulumi:pulumi:Stack                 quickstart-dev
+ +   ├─ components:index:Website         my-website            create
+ +   │  ├─ gcp:storage:Bucket            my-bucket             create
+ +   │  ├─ gcp:storage:BucketObject      index.html            create
+ +   │  └─ gcp:storage:BucketIAMBinding  my-bucket-binding     create
+ -   ├─ gcp:storage:BucketIAMBinding     my-bucket-binding     delete
+ -   ├─ gcp:storage:Bucket               my-bucket             delete
+ -   └─ gcp:storage:BucketObject         index.html            delete
+
+Outputs:
+  - bucket_name: "gs://my-bucket-a2b3c4d"
+  ~ url        : "http://storage.googleapis.com/my-bucket-a2b3c4d/index.html" => "http://storage.googleapis.com/my-bucket-297424e/index.html"
+
+Resources:
+    + 4 to create
+    - 3 to delete
+    7 changes. 1 unchanged
+
+Do you want to perform this update?  [Use arrows to move, type to filter]
+> yes
+  no
+  details
+```
+
+The `Website` segment of the component's type, `components:index:Website`, is the title-cased name of the
+directory the module lives in; the `components:index:` prefix is fixed.
+
+{{% /choosable %}}
+
+This preview shows you a few things. First, you'll see our website component with all of its child resources neatly parented underneath it. This helps to see what resources relate to which components. Next, you'll see that your old resources are being destroyed.
 
 {{% notes type="info" %}}
 
@@ -762,6 +948,8 @@ properties or moving resources between files are not disruptive like this. In su
 {{% /notes %}}
 
 Accept the changes by selecting `yes` and the deployment will occur:
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 ```
 Updating (dev)
@@ -787,6 +975,37 @@ Resources:
 
 Duration: 10s
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```
+Updating (dev)
+
+     Type                                Name                  Status
+     pulumi:pulumi:Stack                 quickstart-dev
+ +   ├─ components:index:Website         my-website            created (3s)
+ +   │  ├─ gcp:storage:Bucket            my-bucket             created (1s)
+ +   │  ├─ gcp:storage:BucketIAMBinding  my-bucket-binding     created (4s)
+ +   │  └─ gcp:storage:BucketObject      index.html            created (0.74s)
+ -   ├─ gcp:storage:BucketIAMBinding     my-bucket-binding     deleted (4s)
+ -   ├─ gcp:storage:BucketObject         index.html            deleted (0.92s)
+ -   └─ gcp:storage:Bucket               my-bucket             deleted (1s)
+
+Outputs:
+  - bucket_name: "gs://my-bucket-a2b3c4d"
+  ~ url        : "http://storage.googleapis.com/my-bucket-a2b3c4d/index.html" => "http://storage.googleapis.com/my-bucket-297424e/index.html"
+
+Resources:
+    + 4 created
+    - 3 deleted
+    7 changes. 1 unchanged
+
+Duration: 10s
+```
+
+{{% /choosable %}}
 
 Now test out your new website -- it works like before, just with a tidier codebase now!
 

@@ -19,12 +19,8 @@ aliases:
 - /docs/intro/console/webhooks/
 - /docs/intro/pulumi-service/webhooks/
 - /docs/intro/pulumi-cloud/webhooks/
+pulumi_cloud_feature: webhooks
 ---
-
-{{% notes "info" %}}
-Pulumi Webhooks is a feature available on the Pulumi Team, Enterprise and Business Critical editions.
-To try it out, start a [trial](https://app.pulumi.com/site/trial) now.
-{{% /notes %}}
 
 Pulumi Webhooks allow you to notify external services of events
 happening within your Pulumi organization. For example,
@@ -45,9 +41,9 @@ stacks.
 
 The Webhooks page is located at **Settings** > **Integrations** > **Webhooks**.
 
-If you are looking for Environment Webhook documentation, it's [here](/docs/esc/webhooks/).
+If you are looking for Environment Webhook documentation, it's [here](/docs/esc/concepts/webhooks/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Webhooks do not guarantee event order. You should not assume events will be received in the order they occurred.
 {{% /notes %}}
 
@@ -55,7 +51,7 @@ Webhooks do not guarantee event order. You should not assume events will be rece
 
 Pulumi Webhooks may be created through the UI using the steps outlined below, by using the
 [Webhook resource](https://www.pulumi.com/registry/packages/pulumiservice/api-docs/webhook/) from the Pulumi provider
-or by [using the API](/docs/pulumi-cloud/cloud-rest-api/#create-webhook) directly.
+or by [using the API](/docs/reference/cloud-rest-api/webhooks/) directly.
 
 {{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
@@ -215,7 +211,7 @@ and optionally choosing which events you want delivered using [event groups and 
 
 ### Deployment Webhooks
 
-The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/concepts/stack/#stackreferences).
+The Deployment webhook destination lets you trigger updates on other stacks via [Pulumi Deployments](/docs/deployments/concepts/), usually in response to `update_succeeded` events. This enables you to keep dependent stacks up to date automatically which is often necessary when using [stack references](/docs/iac/concepts/stacks/#stackreferences).
 
 Deployment webhooks require that your stacks are configured with [Deployment Settings](/docs/deployments/concepts/settings/).
 
@@ -225,7 +221,7 @@ When using generic JSON webhooks, Pulumi will send an HTTP `POST` request to
 all registered webhooks. The webhook can then be used to emit a
 notification, start running integration tests, or even update additional stacks.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 If a secret is provided, webhook deliveries will contain a signature in the HTTP request header that can be used
 to authenticate messages as coming from the Pulumi Cloud.
 {{% /notes %}}
@@ -517,7 +513,7 @@ See the CLI reference for
 and
 [`pulumi stack webhook delivery redeliver`](/docs/iac/cli/commands/pulumi_stack_webhook_delivery_redeliver/).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 The `pulumi stack webhook delivery` commands are experimental and available in recent
 releases of the Pulumi CLI. Listing recent deliveries is also available for organization
 webhooks (`pulumi org webhook delivery list`) and environment webhooks
@@ -529,4 +525,4 @@ environment webhooks from the Pulumi Cloud UI.
 ## Additional Resources
 
 * [Managing Github Webhooks with Pulumi](/blog/managing-github-webhooks-with-pulumi/)
-* [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api/)
+* [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)

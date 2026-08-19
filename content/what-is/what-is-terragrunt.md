@@ -122,7 +122,7 @@ The right alternative depends on what is driving the search. If the pain is Terr
 | Cross-module wiring | `dependency` blocks and `run --all` | Stack references and stacks |
 | Extra tool required for DRY/orchestration | Yes (Terragrunt itself) | No |
 
-None of this makes Terragrunt a poor choice. For teams committed to Terraform or OpenTofu and happy with HCL, Terragrunt is a well-established, pragmatic way to scale a codebase. Pulumi is worth considering when you'd rather get DRY configuration, abstraction, and orchestration from a programming language and a managed platform than from HCL plus a wrapper. If you already have Terraform or Terragrunt code, Pulumi can [convert and adopt it](/migrate/tf2pulumi/), and the two ecosystems interoperate.
+None of this makes Terragrunt a poor choice. For teams committed to Terraform or OpenTofu and happy with HCL, Terragrunt is a well-established, pragmatic way to scale a codebase. Pulumi is worth considering when you'd rather get DRY configuration, abstraction, and orchestration from a programming language and a managed platform than from HCL plus a wrapper. If you already have Terraform or Terragrunt code, Pulumi can [convert and adopt it](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/), and the two ecosystems interoperate.
 
 ## Frequently asked questions about Terragrunt
 
@@ -166,7 +166,7 @@ Related reading:
 
 * [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)
 * [Pulumi vs. OpenTofu](/docs/iac/comparisons/opentofu/)
-* [Convert Terraform to Pulumi](/migrate/tf2pulumi/)
+* [Convert Terraform to Pulumi](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
 * [What is infrastructure as code?](/what-is/what-is-infrastructure-as-code/)
 * [What is Terraform state?](/what-is/what-is-terraform-state/)
 * [What is a Terraform module?](/what-is/what-is-a-terraform-module/)

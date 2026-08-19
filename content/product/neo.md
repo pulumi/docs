@@ -111,7 +111,7 @@ sections:
         cta_primary_text: Start Free
         cta_primary_link: https://app.pulumi.com/signup
         cta_text: Book a Demo
-        cta_link: /contact/?form=request-a-demo
+        cta_link: /request-a-demo/
       - title: Learn more
         description: Watch Neo in action and explore the documentation to understand its full capabilities.
         cta_primary_text: See Neo in Action

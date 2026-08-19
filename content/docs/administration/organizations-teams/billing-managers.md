@@ -13,20 +13,21 @@ aliases:
 - /docs/pulumi-cloud/access-management/billing-managers/
 - /docs/intro/pulumi-service/billing-managers/
 - /docs/intro/pulumi-cloud/billing-managers/
+pulumi_cloud_feature: billing-managers
 ---
 
 The Billing Manager role gives customers the ability to have someone in their Pulumi Organization manage billing operations without granting them any additional permissions to view or modify your stacks, policies, or other organizational settings.
 
 Any Organization Admin can view, invite, and remove Billing Managers from their organization.
 
-Team Editions of the Pulumi Cloud are limited to 1 Billing Manager at a time. Enterprise and Business Critical subscriptions can have unlimited Billing Managers in their organization. Visit our [Pricing page](/pricing) to learn more about Pulumi Cloud Editions.
+The Team edition is limited to 1 Billing Manager at a time; the Enterprise and Business Critical editions allow unlimited Billing Managers.
 
 ## Inviting a Billing Manager to an Organization
 
 Billing Manager invitations work much the same way member invitations do, but they are managed on the Billing and Usage page.
 
-{{% notes "info" %}}
-Billing Managers, like members, must be members of the [organization identity provider](/docs/pulumi-cloud/organizations#organization-identity-providers) in order to gain access to the Pulumi organization.
+{{% notes type="info" %}}
+Billing Managers, like members, must be members of the [organization identity provider](/docs/administration/organizations-teams/organizations/#organization-identity-providers) in order to gain access to the Pulumi organization.
 {{% /notes %}}
 
 To invite a new Billing Manager:

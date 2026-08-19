@@ -22,9 +22,36 @@ The skill loads everything else for itself:
 bash .claude/commands/docs-review/scripts/pinned-comment.sh fetch --pr "$PR_NUMBER"
 # Returns the full body of every CLAUDE_REVIEW N/M comment, in order, separated by markers.
 
-# Diff since the last review
+# Diff since the last review.
+#
+# NOT `gh pr diff --range` — that flag does not exist, so the call failed with
+# "unknown flag" on every invocation and this lane silently re-read the whole
+# PR every time. The compare API also works under CI's shallow checkout, which
+# a local `git diff "$LAST_SHA..HEAD"` would not.
+#
+# Branch on `.status`, NOT on the exit code. A force-pushed-away commit usually
+# still exists in the repo network, so comparing against it returns HTTP 200
+# with status "diverged" — only a SHA GitHub has never seen 404s. Keying the
+# force-push fallback on a non-zero exit would therefore never fire it.
 LAST_SHA=$(bash .claude/commands/docs-review/scripts/pinned-comment.sh last-reviewed-sha --pr "$PR_NUMBER")
-gh pr diff "$PR_NUMBER" --range "$LAST_SHA..HEAD"
+HEAD_SHA=$(gh pr view "$PR_NUMBER" --json headRefOid --jq .headRefOid)
+CMP=$(gh api "repos/{owner}/{repo}/compare/$LAST_SHA...$HEAD_SHA" 2>/dev/null || echo '')
+STATUS=$(printf '%s' "$CMP" | jq -r '.status // empty')
+
+case "$STATUS" in
+  identical)  : ;;   # no new commits — Range-empty case below
+  ahead)
+    # Scope to files the PR itself touches. `compare` is three-dot, so when the
+    # author rebased or merged master forward between reviews the range also
+    # carries master's own commits — reviewing those would raise findings on
+    # files the author never touched.
+    KEEP=$(gh pr view "$PR_NUMBER" --json files --jq '[.files[].path]')
+    printf '%s' "$CMP" | jq -r --argjson keep "$KEEP" '
+      .files[] | select(.filename as $f | $keep | index($f))
+      | "--- \(.filename)\n\(.patch // "(no patch: binary, or file too large)")"'
+    ;;
+  *)          : ;;   # diverged / behind / empty → history rewritten; see fallbacks
+esac
 
 # Current PR state (including draft status)
 gh pr view "$PR_NUMBER" --json title,body,isDraft,labels,files,headRefOid,headRefName
@@ -39,7 +66,7 @@ When `MENTION_AUTHOR` is `auto-refresh`, there is no human mention: the run was 
 **Fallback rules when `last-reviewed-sha` is unusable:**
 
 - **Empty output** (history line missing, comment corrupted): fall back to a full `gh pr diff "$PR_NUMBER"` (no range). Treat the whole PR as new content; this is equivalent to starting over.
-- **SHA unreachable** (author force-pushed and rewrote history, or CI's shallow checkout doesn't have it): `gh pr diff --range "$LAST_SHA..HEAD"` will fail with "unknown revision" or similar. Detect the non-zero exit (and any `git rev-parse --verify` failure) and fall back to full `gh pr diff "$PR_NUMBER"`. Append a 📜 Review history line noting the force-push detection: `<timestamp> — history rewritten since last review; re-reviewed against HEAD (<SHA>)`.
+- **History rewritten** (author force-pushed, so the recorded SHA is no longer an ancestor of HEAD): `.status` comes back `diverged` or `behind` — **not** a 404 and **not** a non-zero exit. GitHub keeps force-pushed-away commits in the repo network, so the compare still succeeds with HTTP 200; only a SHA it has never seen 404s. Fall back to full `gh pr diff "$PR_NUMBER"` and append a 📜 Review history line: `<timestamp> — history rewritten since last review; re-reviewed against HEAD (<SHA>)`. Keying this on the exit code instead of `.status` would mean the fallback never fires and the lane silently reviews a merge-base diff while recording that it reviewed the delta.
 - **Range empty** (`LAST_SHA` points at `HEAD`): no new commits since last review. Treat as Case 3 re-verify with no new content; do not re-extract claims.
 
 ---

@@ -41,13 +41,13 @@ social:
 
 ---
 
-Building and maintaining reusable infrastructure has always been about more than just writing good code. It's about making that code discoverable, understandable, and easy to adopt across your organization. Today, we're excited to announce a new feature that removes significant friction from sharing and consuming [infrastructure components](/docs/concepts/resources/components/): automatic multi-language API documentation in [Pulumi Private Registry](/docs/idp/get-started/private-registry/).
+Building and maintaining reusable infrastructure has always been about more than just writing good code. It's about making that code discoverable, understandable, and easy to adopt across your organization. Today, we're excited to announce a new feature that removes significant friction from sharing and consuming [infrastructure components](/docs/iac/concepts/components/): automatic multi-language API documentation in [Pulumi Private Registry](/docs/idp/concepts/private-registry/).
 
 <!--more-->
 
 ## The Challenge of Sharing Infrastructure at Scale
 
-[Platform teams](/product/internal-developer-platforms/) invest significant effort in creating [reusable infrastructure components](/docs/idp/best-practices/patterns/). But creating the infrastructure is only half the battle. The real challenge comes in making these resources discoverable and usable by development teams across the organization.
+[Platform teams](/product/internal-developer-platforms/) invest significant effort in creating [reusable infrastructure components](/docs/idp/guides/best-practices/patterns/). But creating the infrastructure is only half the battle. The real challenge comes in making these resources discoverable and usable by development teams across the organization.
 
 Until now, platform teams publishing components faced a discovery challenge. While developers get excellent IDE support with autocomplete once they're coding, teams first need to know what components exist, understand their capabilities, and evaluate which one fits their needs. Without browsable API documentation in the registry, developers couldn't easily discover available components or compare versions. Security and compliance teams lacked visibility into what infrastructure patterns were being shared. And platform teams had no central place to showcase their catalog of approved, battle-tested components that encode organizational best practices.
 
@@ -61,9 +61,9 @@ When you run `pulumi package publish` for your component, we analyze your compon
 
 ### Multi-Language Support Out of the Box
 
-One of Pulumi's core strengths is our [multi-language components](/blog/pulumi-components/): write once in your preferred language, and teams can consume the component in [Python, TypeScript, Go, C#, Java, or YAML](/docs/languages-sdks/). The automatic documentation generation embraces this philosophy.
+One of Pulumi's core strengths is our [multi-language components](/blog/pulumi-components/): write once in your preferred language, and teams can consume the component in [Python, TypeScript, Go, .NET, Java, or YAML](/docs/iac/languages-sdks/). The automatic documentation generation embraces this philosophy.
 
-When you [publish a component](/docs/idp/get-started/publishing-from-github-actions/) written in Python, developers using TypeScript can view the TypeScript-specific documentation. The same component shows Go developers idiomatic Go code. This language-specific documentation removes the last barrier to [cross-team component adoption](/docs/idp/best-practices/patterns/components-using-other-components/).
+When you [publish a component](/docs/idp/guides/publishing-from-github-actions/) written in Python, developers using TypeScript can view the TypeScript-specific documentation. The same component shows Go developers idiomatic Go code. This language-specific documentation removes the last barrier to [cross-team component adoption](/docs/idp/guides/best-practices/patterns/components-using-other-components/).
 
 ![Multi-language component support](multi-lang-apis.jpg)
 
@@ -79,12 +79,12 @@ This dramatically reduces the time from component discovery to successful deploy
 
 ## Getting Started
 
-Automatic API docs are available today for all [Pulumi Cloud](/product/pulumi-cloud/) customers with access to private registry. To start generating docs, simply [publish your component](/docs/idp/get-started/private-registry/#publishing-components). Documentation generation happens automatically with no configuration required, and docs will automatically appear for existing components.
+Automatic API docs are available today for all [Pulumi Cloud](/product/pulumi-cloud/) customers with access to private registry. To start generating docs, simply [publish your component](/docs/idp/concepts/private-registry/#publishing-components). Documentation generation happens automatically with no configuration required, and docs will automatically appear for existing components.
 
 ## Looking Ahead
 
-Automatic API docs represent our continued investment in making Pulumi the most productive platform for infrastructure teams. By removing friction from the component lifecycle, we're enabling platform teams to focus on what matters most: building robust, secure, and scalable [infrastructure patterns](/docs/idp/best-practices/patterns/) that accelerate their entire organization.
+Automatic API docs represent our continued investment in making Pulumi the most productive platform for infrastructure teams. By removing friction from the component lifecycle, we're enabling platform teams to focus on what matters most: building robust, secure, and scalable [infrastructure patterns](/docs/idp/guides/best-practices/patterns/) that accelerate their entire organization.
 
 We're excited to see how teams use them to build more effective [internal developer platforms](/blog/announcing-pulumi-idp/). As always, we'd love to hear your feedback and learn about your use cases on our [Pulumi Cloud requests repository](https://github.com/pulumi/pulumi-cloud-requests).
 
-Ready to streamline your infrastructure development workflow? Get started with [Pulumi Cloud](https://app.pulumi.com/signup) or check out our [IDP documentation](/docs/idp/get-started/) to learn more about [building with components](/docs/idp/best-practices/four-factors/) and [workflows](/docs/idp/get-started/workflows/).
+Ready to streamline your infrastructure development workflow? Get started with [Pulumi Cloud](https://app.pulumi.com/signup) or check out our [IDP documentation](/docs/idp/concepts/) to learn more about [building with components](/docs/idp/guides/best-practices/four-factors/) and [workflows](/docs/idp/concepts/no-code-stacks/).

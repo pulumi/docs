@@ -89,7 +89,7 @@ $ pulumi stack output storageAccountName
 
 {{% /choosable %}}
 
-{{% choosable language python %}}
+{{% choosable language "python,hcl" %}}
 
 ```bash
 $ pulumi stack output storage_account_name

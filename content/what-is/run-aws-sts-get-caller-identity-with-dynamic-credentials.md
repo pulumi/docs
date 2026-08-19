@@ -12,7 +12,9 @@ The [`aws sts get-caller-identity` command](https://awscli.amazonaws.com/v2/docu
 
 Using the `aws sts get-caller-identity` command is key in managing access to AWS, providing an easy way to view the details of the entity that was used to make a specific call to AWS. This command is executed in the terminal using the AWS CLI and necessitates proper management of AWS credentials for security. Typically, there are two kinds of credentials used: temporary credentials, offering heightened security but requiring manual updates, and long-term credentials, which are more convenient but pose greater security risks.
 
-With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws sts get-caller-identity`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+With [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/esc/), handling these credentials becomes simpler and more secure. Pulumi ESC facilitates [managing dynamic credentials from AWS using OIDC](/blog/esc-env-run-aws/), ensuring all your AWS CLI commands, including `aws sts get-caller-identity`, are executed seamlessly. This approach eliminates concerns over invalid credentials and reduces the risks associated with manual credential management.
+
+The same dynamic-credentials approach also prevents the AWS CLI credential errors this pattern is built to avoid, `ExpiredToken`, `InvalidAccessKeyId`, `SignatureDoesNotMatch`, and "Unable to locate credentials" among them, and applies to any AWS CLI command, not just this one. See [Fix AWS CLI Credential Errors and Run AWS Commands with Pulumi ESC](/what-is/aws-cli-dynamic-credentials-with-pulumi-esc/) for the full picture.
 
 ## Using Pulumi ESC for dynamic credentials with AWS
 
@@ -40,7 +42,7 @@ But what does this actually mean? If we use AWS as an example, it means that we 
 
 ### Step 1: Install and login to Pulumi ESC
 
-To begin, you’ll need to install the [Pulumi CLI](/docs/iac/download-install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
+To begin, you’ll need to install the [Pulumi CLI](/docs/install/). Once the installation is complete, run the `pulumi login` command and follow the steps to log in to the CLI.
 
 ```bash
 $ pulumi login
@@ -55,7 +57,7 @@ Logged in to pulumi.com as …
 
 Pulumi ESC offers you the ability to manually set your credentials as secrets in your Pulumi ESC environment files. When it comes to something like OIDC configuration, a more secure and efficient alternative is to leverage yet another great feature of Pulumi ESC: dynamic credentials.
 
-This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/environments/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform STS actions.
+This service can dynamically generate credentials on your behalf each time you need to interact with your AWS environments. To do so, follow the steps in the [guide for configuring OIDC between Pulumi and AWS](/docs/esc/guides/configuring-oidc/aws/). Make sure that the IAM role you create has sufficient permissions to perform STS actions.
 
 ### Step 3: Create a new Pulumi ESC environment
 
@@ -107,7 +109,7 @@ pulumi env run <your-pulumi-org-name>/<your-project-name>/<your-environment-name
 Pulumi ESC makes it easier than ever to tame infrastructure complexity, especially when running commands like `aws sts get-caller-identity`. Pulumi ESC supports dynamic credentials using OIDC across AWS, Azure, and Google Cloud. Check out the following links to learn more about Pulumi ESC today.
 
 - Follow the [Getting Started](/docs/pulumi-cloud/esc/get-started) guide.
-- Read the [Documentation](/docs/pulumi-cloud/esc) for all the commands and features available.
+- Read the [Documentation](/docs/esc/) for all the commands and features available.
 - Visit the [Open Source](https://github.com/pulumi/esc) repo for Pulumi ESC.
 
 Feel free to [join the Pulumi community on Slack](https://slack.pulumi.com/) and let us know what you think!

@@ -1,7 +1,7 @@
 ---
 title_tag: "Pulumi vs. Terraform"
 authors: ["joe-duffy"]
-meta_desc: "Pulumi vs. Terraform: compare language support (Pulumi runs Python, TypeScript, Go, .NET, Java, YAML, and HCL), state management, and migration paths."
+meta_desc: "Pulumi vs. Terraform: compare language support (Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and HCL), state management, and migration paths."
 title: Terraform
 h1: Pulumi vs. Terraform
 faq_schema: true
@@ -23,7 +23,7 @@ aliases:
 - /docs/iac/concepts/vs/terraform/
 ---
 
-Pulumi and Terraform are both infrastructure as code tools for provisioning and managing cloud resources declaratively. The core difference is how much choice you get: Pulumi runs programs written in general-purpose languages (Python, TypeScript, Go, .NET, and Java), as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/), while [HashiCorp Terraform](https://developer.hashicorp.com/terraform) uses [HCL](https://developer.hashicorp.com/terraform/language) exclusively. A general-purpose language is the recommended path, because it brings the testing frameworks, package managers, IDE tooling, and AI coding agents that already understand your code. But HCL is a supported language inside Pulumi, so an existing HCL codebase is not a reason to rule Pulumi out.
+Pulumi and Terraform are both infrastructure as code tools for provisioning and managing cloud resources declaratively. The core difference is how much choice you get: Pulumi runs programs written in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), as well as YAML and [HCL](/docs/iac/languages-sdks/hcl/), while [HashiCorp Terraform](https://developer.hashicorp.com/terraform) uses [HCL](https://developer.hashicorp.com/terraform/language) exclusively. A general-purpose language is the recommended path, because it brings the testing frameworks, package managers, IDE tooling, and AI coding agents that already understand your code. If you're coming from HCL and haven't written much general-purpose code, [Language Essentials](/docs/iac/guides/basics/language-essentials/) covers the small set of constructs you need. HCL is also a supported language inside Pulumi, so an existing HCL codebase is not a reason to rule Pulumi out.
 
 This page covers what each tool is, a feature-by-feature comparison, real-world results from teams that have adopted Pulumi, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Terraform.
 
@@ -41,7 +41,7 @@ Terraform is an infrastructure as code tool created by HashiCorp (acquired by IB
 
 | Feature | Pulumi | Terraform |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, and [HCL](/docs/iac/languages-sdks/hcl/) — general-purpose languages bring familiar syntax for loops, conditionals, and abstractions, plus their own test frameworks, package managers, and IDE tooling; choosing HCL inside Pulumi keeps your existing `.tf` syntax and gains Pulumi's engine, state, secrets, and policy, but gives up those language-native ecosystems | HashiCorp Configuration Language (HCL) — a configuration-focused DSL with its own syntax for control flow and dynamic blocks |
+| Language support | {{< pulumi-languages links="true" >}} — general-purpose languages bring familiar syntax for loops, conditionals, and abstractions, plus their own test frameworks, package managers, and IDE tooling; choosing HCL inside Pulumi keeps your existing `.tf` syntax and gains Pulumi's engine, state, secrets, and policy, but gives up those language-native ecosystems | HashiCorp Configuration Language (HCL) — a configuration-focused DSL with its own syntax for control flow and dynamic blocks |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); schema-generated native providers include [Kubernetes](/registry/packages/kubernetes/), [Azure Native](/registry/packages/azure-native/), [AWS Cloud Control](/registry/packages/aws-native/), and [Google Cloud Native](/registry/packages/google-native/); [any Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be adapted into a Pulumi provider | HashiCorp- and community-maintained providers in the [Terraform Registry](https://registry.terraform.io/) |
 | Transpiled to another format? | No — programs run directly in their host language | No — HCL is interpreted directly by the Terraform CLI |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include S3, Azure Blob Storage, Google Cloud Storage, local files, and others; Pulumi Cloud can also act as the [state backend for Terraform and OpenTofu](/docs/iac/get-started/terraform/terraform-state-backend/) | Local files by default; remote backends include S3, Azure Blob Storage, Google Cloud Storage, Consul, and HCP Terraform's [managed state](https://developer.hashicorp.com/terraform/cloud-docs/workspaces/state) |
@@ -81,7 +81,7 @@ Both tools provide a CLI and a managed remote-run service: Pulumi Cloud Deployme
 
 Pulumi Cloud manages state by default — encrypted in transit and at rest, versioned checkpoints, automatic state locking, and role-based access control — and self-managed backends (Amazon S3, Azure Blob Storage, Google Cloud Storage, local files) are supported for teams that want to own the storage.
 
-Pulumi Cloud can also serve as the [state backend for Terraform and OpenTofu](/docs/iac/get-started/terraform/terraform-state-backend/). It implements Terraform's remote backend API, so a team points the Terraform CLI at Pulumi Cloud with a standard `backend "remote"` block and keeps its existing HCL and day-to-day workflow unchanged. In return they get encrypted state, update history, automatic state locking, RBAC, audit policies, and a unified view of Terraform-managed resources alongside Pulumi-managed ones in [Resource Search](/docs/pulumi-cloud/insights/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so other stacks can consume them without extra credentials. This makes Pulumi Cloud a governance and visibility plane you can adopt on its own merits, not only a stepping stone to converting code.
+Pulumi Cloud can also serve as the [state backend for Terraform and OpenTofu](/docs/iac/get-started/terraform/terraform-state-backend/). It implements Terraform's remote backend API, so a team points the Terraform CLI at Pulumi Cloud with a standard `backend "remote"` block and keeps its existing HCL and day-to-day workflow unchanged. In return they get encrypted state, update history, automatic state locking, RBAC, audit policies, and a unified view of Terraform-managed resources alongside Pulumi-managed ones in [Resource Search](/docs/insights/discovery/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so other stacks can consume them without extra credentials. This makes Pulumi Cloud a governance and visibility plane you can adopt on its own merits, not only a stepping stone to converting code.
 
 ### Secrets handling
 
@@ -160,7 +160,7 @@ Yes. [Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform
 
 ### Can I write Pulumi programs in HCL?
 
-Yes. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a supported language: a project with `runtime: hcl` in its `Pulumi.yaml` and ordinary `.tf` files runs on Pulumi's engine, which handles state, secrets, and deployments. Pulumi HCL aims to run valid Terraform configurations without changes, though `backend`, `cloud`, and `required_version` blocks are accepted and ignored because Pulumi manages state itself. Teams that want language-native testing, package management, and stronger AI-agent support should still prefer Python, TypeScript, Go, .NET, or Java.
+Yes. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a supported language: a project with `runtime: hcl` in its `Pulumi.yaml` and ordinary `.tf` files runs on Pulumi's engine, which handles state, secrets, and deployments. Pulumi HCL aims to run valid Terraform configurations without changes, with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility): `backend` and `required_version` in the `terraform` block are accepted but ignored because Pulumi manages state itself, and a `cloud` block is an error, so remove it before running an HCP Terraform configuration on Pulumi. Teams that want language-native testing, package management, and stronger AI-agent support should still prefer a general-purpose language: {{< pulumi-languages "general-purpose" >}}.
 
 ### How does Pulumi handle drift detection?
 
@@ -168,7 +168,7 @@ Yes. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a supported language: a proj
 
 ## Next steps
 
-* [Get started with Pulumi](/docs/iac/get-started/)
+* [Get started with Pulumi](/docs/get-started/)
 * [Pulumi HCL: run Terraform HCL on Pulumi](/docs/iac/languages-sdks/hcl/)
 * [Pulumi terms and command equivalents for Terraform users](/docs/iac/comparisons/terraform/terminology/)
 * [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/)

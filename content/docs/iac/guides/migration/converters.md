@@ -15,26 +15,26 @@ aliases:
 - /docs/iac/adopting-pulumi/converters/
 ---
 
-The `pulumi convert` command allows you to translate supported sources to the various [languages that Pulumi supports](/docs/languages-sdks/), such as TypeScript, JavaScript, Go, Python, C#, or Java. Conversion sources are supported via [Pulumi plugins](/docs/iac/concepts/plugins/#converter-plugins), and include the ability to convert code from other IaC tools like Terraform and Azure Bicep. Pulumi YAML programs can also be converted to any other supported Pulumi language.
+The `pulumi convert` command allows you to translate supported sources to the [languages that Pulumi supports](/docs/iac/languages-sdks/), such as {{< pulumi-languages "general-purpose" >}}. Conversion sources are supported via [Pulumi plugins](/docs/iac/concepts/plugins/#converter-plugins), and include the ability to convert code from other IaC tools like Terraform and Azure Bicep. Pulumi YAML programs can also be converted to any other supported Pulumi language.
 
 For the detailed usage of this command and options, refer to the [pulumi convert CLI documentation.](https://www.pulumi.com/docs/iac/cli/commands/pulumi_convert/)
 
 ### Supported source languages
 
-* [YAML](/docs/languages-sdks/yaml/)
-* [Terraform](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-terraform/)
-* [Kubernetes](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-kubernetes/)
-* [ARM](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure)
-* [Bicep](/docs/using-pulumi/adopting-pulumi/migrating-to-pulumi/from-azure)
+* [YAML](/docs/iac/languages-sdks/yaml/)
+* [Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/)
+* [Kubernetes](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/)
+* [ARM](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/)
+* [Bicep](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/)
 
 ### Supported destination languages
 
-* [TypeScript/Javascript](/docs/languages-sdks/javascript/)
-* [Go](/docs/languages-sdks/go/)
-* [Python](/docs/languages-sdks/python/)
-* [C#](/docs/languages-sdks/dotnet/)
-* [Java](/docs/languages-sdks/java/)
-* [YAML](/docs/languages-sdks/yaml/)
+* [TypeScript/Javascript](/docs/iac/languages-sdks/javascript/)
+* [Go](/docs/iac/languages-sdks/go/)
+* [Python](/docs/iac/languages-sdks/python/)
+* [.NET](/docs/iac/languages-sdks/dotnet/)
+* [Java](/docs/iac/languages-sdks/java/)
+* [YAML](/docs/iac/languages-sdks/yaml/)
 
 ### Use cases for using pulumi convert
 

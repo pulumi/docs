@@ -755,7 +755,12 @@ const ImmutableCachePolicy = new aws.cloudfront.ResponseHeadersPolicy('immutable
 });
 
 // Docs pages add Vary: Accept so downstream caches (browsers, proxies) know the
-// response may differ based on the Accept header (HTML vs markdown).
+// response may differ based on the Accept header (HTML vs markdown). This policy
+// replaces DefaultCachePolicy on the /docs/* behavior (see below), so it must carry
+// its own Cache-Control item too — otherwise docs pages send no Cache-Control header
+// at all and fall back to CloudFront/S3 defaults, unlike every other page on the site.
+// Same value as DefaultCachePolicy, so docs pages get the same browser-caching
+// behavior as the rest of pulumi.com rather than an accidental gap.
 const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs-response-headers', {
     securityHeadersConfig: baseSecurityHeadersConfig,
     customHeadersConfig: {
@@ -763,6 +768,10 @@ const DocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy('docs
             header: "Vary",
             value: "Accept",
             override: false,
+        }, {
+            header: "Cache-Control",
+            value: "max-age=60, stale-while-revalidate=300",
+            override: true,
         }],
     },
 });

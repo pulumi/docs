@@ -14,6 +14,8 @@ Pulumi policies integrate with CI/CD pipelines to automatically enforce complian
 
 ## How policy enforcement works in CI/CD
 
+{{< pulumi-cloud "policy-enforcement" />}}
+
 When your CI/CD pipeline runs Pulumi commands, policy enforcement happens automatically:
 
 1. The pipeline runs `pulumi preview` or `pulumi up`.

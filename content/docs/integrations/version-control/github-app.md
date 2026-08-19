@@ -25,7 +25,7 @@ aliases:
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/concepts/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
 {{% notes type="info" %}}
-The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/concepts/state/#using-a-diy-backend).
+The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
 {{% /notes %}}
 
 ## Installation and configuration
@@ -59,9 +59,13 @@ Mapping a single GitHub organization to multiple Pulumi organizations requires c
 
 ### GitHub Enterprise Server support
 
-GitHub Enterprise Server is supported for [Pulumi Business Critical Edition](https://www.pulumi.com/enterprise/). Only one GitHub Enterprise Server integration is supported per Pulumi organization.
+{{< pulumi-cloud "github-enterprise-server" />}}
+
+Only one GitHub Enterprise Server integration is supported per Pulumi organization.
 
 ### Individual user authentication for GitHub Enterprise Server
+
+{{< pulumi-cloud "github-enterprise-server" />}}
 
 By default, Pulumi performs all GitHub Enterprise Server operations as the shared GitHub app installation. When individual user authentication is enabled, operations that a user initiates run against GitHub Enterprise as that user's own connected account instead. Pull requests, commits, and comments are attributed to the user, operations are limited to the repositories that user can access, and deployments triggered by pushes and pull requests are attributed to the user who triggered them.
 
@@ -138,11 +142,12 @@ After installing the app, you can configure pull request behavior. Toggle these 
 | Setting | Default | Description |
 |---|---|---|
 | Pull request comments | Enabled | Post deployment status and resource changes as comments on GitHub pull requests |
-| Neo code reviews | Enabled | Include Neo's AI-generated review of infrastructure changes in pull request comments (requires [Pulumi Neo](/docs/ai/neo/get-started/#enabling-and-disabling-neo) to be enabled for your organization) |
-| Code access for AI reviews | Enabled | Let Neo read pull request code diffs when generating reviews instead of relying on Pulumi engine output alone |
+| Draft pull request comments | Enabled | Post comments on pull requests that are still in draft. When disabled, comments resume once the pull request is marked ready for review |
 | Detailed diff for pull request comments | Enabled | Show property-level before/after diffs for changed resources in pull request comments |
 
-Changes save automatically. Neo code reviews and detailed diff require pull request comments to be enabled, and code access for AI reviews requires Neo code reviews. Code access for AI reviews is specific to the GitHub app and appears once the capability is enabled for your organization.
+Changes save automatically. Detailed diff requires pull request comments to be enabled. Draft pull request comments is specific to the GitHub app.
+
+[Neo code reviews](/docs/ai/neo/code-reviews/) are configured separately, under **Settings** > **Neo settings** > **Code reviews**, not in the integration settings above.
 
 To remove an integration, see [Uninstallation](#uninstallation).
 
@@ -153,6 +158,10 @@ To remove an integration, see [Uninstallation](#uninstallation).
 The Pulumi GitHub app automatically adds comments to pull requests with the results of any stack changes. This includes a summary of how many resources were created, updated, and/or deleted. This allows you to quickly see the changes caused by your Pulumi program without needing to leave GitHub's pull request view, with a link to the richer details available on [Pulumi Cloud](https://app.pulumi.com/signin).
 
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
+
+{{% notes type="info" %}}
+Pull request comments don't require [Pulumi Deployments](/docs/deployments/). Any `pulumi preview` or `pulumi up` that can read the repository's `.git` directory posts them, whether it runs in GitHub Actions, CircleCI, Jenkins, or on your laptop. [Push-to-deploy](#push-to-deploy) and [review stacks](#review-stacks) do require Deployments.
+{{% /notes %}}
 
 {{% notes type="info" %}}
 When you disable pull request comments in your [integration settings](#integration-settings), the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.

@@ -85,7 +85,7 @@ While Pulumi supports JavaScript and any other language that compiles to JavaScr
 
 Pulumi ships with a bundled version of TypeScript 3.8.3 for backward compatibility. However, Pulumi templates typically include a more recent TypeScript version in their `package.json`, which will take precedence over the bundled version. You can use any TypeScript version from 3.8 up to and including the TypeScript 6 releases (for TypeScript 7, see [Using TypeScript 7](#using-typescript-7)).
 
-The Pulumi SDK is available to Node.js developers as an npm package. To learn more, refer to the [Pulumi SDK reference guide](/docs/reference/pkg/nodejs/pulumi/pulumi).
+The Pulumi SDK is available to Node.js developers as an npm package. To learn more, refer to the [Pulumi SDK reference guide](/docs/reference/pkg/nodejs/pulumi/pulumi/).
 
 ## Getting started
 
@@ -181,7 +181,7 @@ ESM projects can use [top-level `await`](#top-level-await) instead of the export
 Writing a Pulumi program in Node.js involves declaring infrastructure resources using resource constructors. Here are the key concepts:
 
 - **Declare resources**: Create infrastructure resources by instantiating resource classes from provider packages. For example, `new aws.s3.Bucket("my-bucket")` creates an S3 bucket.
-- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation for details.
+- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/) documentation for details.
 - **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
 - **Stack outputs**: Export values from your program to make them accessible from the CLI or to other Pulumi programs. These are defined using module exports as shown in the entrypoint examples above.
 
@@ -386,7 +386,7 @@ To resolve this issue, you can either follow the instructions above to convert y
 
 ### Pulumi SDK
 
-The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
+The [Pulumi SDK (`@pulumi/pulumi`)](/docs/reference/pkg/nodejs/pulumi/pulumi/) contains the core constructs for working with Pulumi, including resources, configuration, stack outputs, and more. You will need to reference it in most Pulumi programs.
 
 ### Provider SDKs
 
@@ -396,7 +396,7 @@ When building component packages, see [Provider package version management](/doc
 
 ### Policy SDK
 
-The [Pulumi Policy SDK (`@pulumi/policy`)](/docs/reference/pkg/nodejs/pulumi/policy) allows you to author Pulumi Policy as Code policies for validating resource configurations.
+The [Pulumi Policy SDK (`@pulumi/policy`)](/docs/reference/pkg/nodejs/pulumi/policy/) allows you to author Pulumi Policy as Code policies for validating resource configurations.
 
 ### Dev versions
 
@@ -416,5 +416,5 @@ For more information on when and how to use dev builds, see [Using dev builds fo
 
 ### Testing
 
-- [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
-- [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
+- [Unit testing](/docs/iac/guides/testing/unit/): Test your infrastructure code in isolation
+- [Integration testing](/docs/iac/guides/testing/integration/): Test your infrastructure deployments end-to-end

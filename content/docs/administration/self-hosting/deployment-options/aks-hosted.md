@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/aks-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/aks-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/aks-hosted/
+pulumi_cloud_feature: self-hosting
 ---
 
 The [AKS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/aks-hosted) installer is used to deploy the self-hosted Pulumi Cloud in Azure Kubernetes Service (AKS)
@@ -33,7 +34,7 @@ This installer uses Pulumi to deploy the Pulumi Cloud. In this case, use the Pul
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Login to Azure Blob Storage Backend](/docs/concepts/state#azure-blob-storage)
+* [Login to Azure Blob Storage Backend](/docs/iac/concepts/state-and-backends/#logging-into-and-out-of-state-backends)
 
 ### Deployment Steps
 

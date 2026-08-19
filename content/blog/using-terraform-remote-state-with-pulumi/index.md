@@ -20,8 +20,8 @@ by different teams. For example, it's common to see an application team
 deploying into a VPC owned and managed by a network operations team.
 
 Pulumi supports
-[this kind of workflow](/docs/concepts/stack#stackreferences)
-natively using the [`StackReference`](/docs/reference/pkg/nodejs/pulumi/pulumi#StackReference)
+[this kind of workflow](/docs/iac/concepts/stacks/#stackreferences)
+natively using the [`StackReference`](/docs/reference/pkg/nodejs/pulumi/pulumi/#StackReference)
 type from the Pulumi SDK. Integration with the most popular
 cloud-specific tools have been supported by Pulumi since the earliest
 days:
@@ -38,7 +38,7 @@ days:
 We recently added similar support for reading the outputs of a Terraform
 state file - both from local `.tfstate` files, and from all of the
 remote state backends supported by Terraform. This is exposed via the
-[`terraform.state.RemoteStateReference`](/docs/reference/pkg/nodejs/pulumi/terraform/state#RemoteStateReference) type in the
+[`terraform.state.RemoteStateReference`](/docs/reference/pkg/nodejs/pulumi/terraform/modules/state.html#RemoteStateReference) type in the
 [`@pulumi/terraform`](https://www.npmjs.com/package/@pulumi/terraform)
 NPM package.
 <!--more-->

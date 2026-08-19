@@ -1,7 +1,7 @@
 ---
-title: What is Google Cloud Secret Manager?
+title: What is Google Cloud Secret Manager? Setup Guide
 meta_desc: |
-     Learn more about what Google Cloud Secret Manager is and how to use it.
+    Google Cloud Secret Manager stores API keys and passwords as encrypted, versioned secrets. Learn to create secrets via the CLI and apply best practices.
 
 type: what-is
 page_title: "What is Google Cloud Secret Manager?"
@@ -71,7 +71,7 @@ test-secret  2023-11-10T09:40:29  automatic           -
 
 {{< notes type="info" >}}
 
-Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/iac/concepts/secrets/).
 
 {{< /notes >}}
 

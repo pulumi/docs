@@ -54,7 +54,7 @@ Neo's access ceiling is the acting user's RBAC. Within that ceiling, Neo reads b
 | Environments and secrets ([ESC](/docs/esc/)) | Any environment the user can open — including decrypting secrets and minting dynamic cloud credentials | Through ESC code changes where the environment is managed in IaC; otherwise Neo edits the environment definition directly. Environments with [update approvals](/docs/esc/concepts/approvals/) force those edits into a draft that a reviewer must approve. |
 | Deployment settings | Settings the user can read | Through code and pull requests where the settings are managed in IaC; otherwise Neo edits them directly through the API. |
 | Policy packs | Packs and results the user can read | No direct management of policy packs. |
-| Insights / discovery (cloud) accounts | Accounts and scan results the user can read | No direct management of accounts. |
+| Cloud accounts | Accounts and scan results the user can read | No direct management of accounts. |
 | Audit logs | Logs, if the user holds an audit-log read permission (typically Admin) | Read-only resource. |
 
 ### ESC, secrets, and downstream cloud access
@@ -125,9 +125,9 @@ Neo's version control writes do not run as you. Neo authenticates as the shared 
 | :--- | :--- | :--- | :--- |
 | GitHub.com | The shared Pulumi GitHub App for all VCS interactions (opening PRs, pushing commits, PR comments, checks); your connected GitHub account for creating repositories | **Required** to create repositories and to trigger [Neo code reviews](/docs/ai/neo/code-reviews/); optional otherwise | When a task needs individual access you don't have connected, Neo posts a nudge prompting you to grant it. |
 | GitHub Enterprise Server | The shared app installation by default; your connected account when individual user authentication is enabled | Enabled per integration by an admin, then connected per user | Business Critical edition. Scheduled Neo tasks and API-created operations always use the shared installation. |
-| Azure DevOps | The org integration handles PR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts PR reviews when enabled (the default). |
-| GitLab | The org integration handles MR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts MR reviews when enabled (the default). |
-| Bitbucket | The org integration handles PR comments and deployments; individual access lets Neo create repositories | Optional | Neo posts PR reviews when enabled (the default). |
+| Azure DevOps | The org integration for repository reads and writes; individual access lets Neo create repositories | Optional | Neo does not comment on Azure DevOps pull requests. [Neo code reviews](/docs/ai/neo/code-reviews/) are GitHub-only, and the integration's pull request comments come from Pulumi Deployments, not Neo. |
+| GitLab | The org integration for repository reads and writes; individual access lets Neo create repositories | Optional | Neo does not comment on GitLab merge requests. [Neo code reviews](/docs/ai/neo/code-reviews/) are GitHub-only, and the integration's merge request comments come from Pulumi Deployments, not Neo. |
+| Bitbucket | The org integration for repository reads and writes; individual access lets Neo create repositories | Optional | Neo does not comment on Bitbucket pull requests. [Neo code reviews](/docs/ai/neo/code-reviews/) are GitHub-only, and the integration's pull request comments come from Pulumi Deployments, not Neo. |
 | [Custom VCS](/docs/integrations/version-control/custom-vcs/) | The credentials from the integration's ESC environment — a shared identity belonging to whoever configured the integration | N/A | Neo can clone and push (Git and Mercurial) but cannot open pull requests or create repositories on Custom VCS servers. |
 
 ## Learn more

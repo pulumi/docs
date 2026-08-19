@@ -36,7 +36,7 @@ The Time-to-Live Stacks feature in Pulumi Cloud is designed to solve these pain 
 
 In order to set up Time-to-Live Stacks in the Pulumi Cloud console, follow these steps:
 
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/pulumi-cloud/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/)
 2. Navigate to the `Stack > Settings > Schedules` page
 3. Select "Time-to-Live"
 4. (Optional) Turn on "Delete After Destroy" if applicable
@@ -66,7 +66,7 @@ Below is an example of setting up Time-To-Live on a stack programmatically:
        https://api.pulumi.com/api/stacks/{organization}/{project}/{stack}/deployments/ttl/schedules
 ```
 
-Refer to the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api) for more details on how to use the REST API to manage Time-to-Live Stacks.
+Refer to the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to use the REST API to manage Time-to-Live Stacks.
 
 ### Setting it up via the Pulumi Service Provider
 

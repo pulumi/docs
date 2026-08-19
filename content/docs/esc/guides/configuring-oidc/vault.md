@@ -72,7 +72,7 @@ $ vault write auth/jwt/config \
 Success! Data written to: auth/jwt/config
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Vault and Pulumi Cloud use the `jwt` path by default.
 {{% /notes %}}
 
@@ -109,7 +109,7 @@ $ vault write auth/jwt/role/<role-name> -<<EOF
 EOF
 ```
 
-{{% notes "warning" %}}
+{{% notes type="warning" %}}
 You must ensure that `role_type` is set to `jwt` and not `oidc`.
 {{% /notes %}}
 
@@ -165,8 +165,8 @@ To configure OIDC for Pulumi ESC, create a new environment in the [Pulumi Cloud 
   6. Replace `<your-vault-url>`, `<your-role-name>`, `<your-namespace>`, and `<path-to-secret>` with the values from the previous steps.
   7. Click **Save**.
 
-{{% notes "info" %}}
-If you configured the Vault JWT auth method to use a different [mount path](https://developer.hashicorp.com/vault/docs/auth#enabling-disabling-auth-methods) than `jwt`, you will need to specify that path using the `mount` option of the [vault-login](/docs/pulumi-cloud/esc/providers/vault-login/) provider.
+{{% notes type="info" %}}
+If you configured the Vault JWT auth method to use a different [mount path](https://developer.hashicorp.com/vault/docs/auth#enabling-disabling-auth-methods) than `jwt`, you will need to specify that path using the `mount` option of the [vault-login](/docs/esc/providers/login/vault-login/) provider.
 {{% /notes %}}
 
 You can validate that your configuration is working by running either of the following:
@@ -204,7 +204,7 @@ $ pulumi env open <my-org>/<my-project>/<my-environment>
 }
 ```
 
-To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [Pulumi ESC providers documentation](/docs/pulumi-cloud/esc/providers/).
+To learn more about how to set up and use the various providers in Pulumi ESC, please refer to the [Pulumi ESC providers documentation](/docs/esc/providers/).
 
 ## Subject claim customization
 

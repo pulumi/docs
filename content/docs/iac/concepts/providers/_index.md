@@ -86,7 +86,7 @@ The generated SDK will include a `.gitignore` so it can be safely committed to v
 #### About provider packages in the project configuration file
 
 {{% notes type="info" %}}
-When using `pulumi package add` with Pulumi version 3.157.0 or later, packages are automatically added to your project configuration file (`Pulumi.yaml`).
+When using `pulumi package add` with Pulumi version 3.163.0 or later, packages are automatically added to your project configuration file (`Pulumi.yaml`).
 {{% /notes %}}
 
 When you run `pulumi package add`, the package is automatically added to your Pulumi project configuration file under the [`packages`](/docs/iac/concepts/projects/project-file/#packages-options) key. For the example in the previous section, the following entry would be added to your `Pulumi.yaml`:
@@ -126,7 +126,7 @@ If you are using `pulumi install` to install packages defined in your project fi
 
 Within a Pulumi program, there are two types of providers you can use to declare resources:
 
-- **Default providers** are not declared in your Pulumi program, and use global configuration settings. Resources created with a default provider do not need the [`provider` option](/docs/iac/concepts/options/provider/) set in the [resource's options parameter](/docs/iac/concepts/options/). This is the simplest way to declare Pulumi resources.
+- **Default providers** are not declared in your Pulumi program, and use global configuration settings. Resources created with a default provider do not need the [`provider` option](/docs/iac/concepts/resources/options/provider/) set in the [resource's options parameter](/docs/iac/concepts/resources/options/). This is the simplest way to declare Pulumi resources.
 - **Explicit providers** are explicitly declared in your Pulumi program, and use the configuration values you specify when you declare the provider. Resources created with explicit providers must have the `provider` option set in their resource options. The most common use case for explicit providers are multi-environment deployments of cloud infrastructure in a single stack. Explicit providers are themselves Pulumi resources, and their configuration values are [Pulumi inputs](/docs/iac/concepts/inputs-outputs/).
 
 The following table summarizes the differences between default and explicit providers:
@@ -147,12 +147,12 @@ The choice (or necessity) to use explicit providers is on a per-cloud basis. For
 
 A default provider's global configuration settings (like credentials, region, or tenancy configuration) can be set explicitly in your stack configuration (so its configuration will be the same no matter where your Pulumi program is run), or implicitly through methods like environment variables or well-known file locations (so its configuration will be dependent on the environment). The precise way a provider reads its implicit global settings depends on the particular provider. The provider's Installation and Configuration page ([example](/registry/packages/aws/installation-configuration/)) in the Pulumi Registry contains the details of how a provider will attempt to read configuration values if not explicitly specified in the stack configuration.
 
-{{< cloud-feature-callout product="esc" title="Issue short-lived credentials per environment instead of storing long-lived ones" href="/docs/esc/" >}}
+{{< pulumi-cloud >}}
 Static credentials in stack config or provider environment variables are long-lived
 and have to be rotated and distributed by hand. [Pulumi ESC](/docs/esc/) can issue
 short-lived credentials to your default or explicit providers via OIDC, scoped to
 each environment, so nothing long-lived ever needs to be stored at all.
-{{< /cloud-feature-callout >}}
+{{< /pulumi-cloud >}}
 
 You may also specify default provider configuration in your [stack config](/docs/iac/concepts/config/). The configuration keys for default provider configuration follow the pattern `<provider name>:<config setting name>`. For example, to configure the `region` on the default AWS provider, you would run the following command:
 
@@ -463,6 +463,18 @@ resources:
 pulumi config set aws:region us-west-2
 ```
 
+{{% notes type="info" %}}
+Explicit providers don't automatically inherit configuration values set on the default
+provider of the same type. In the example above, if `aws:profile`, `aws:assumeRole`, or
+`aws:allowedAccountIds` were set in stack configuration for the default AWS provider, the
+`useast1` explicit provider would still need those same values passed to it directly; it
+starts from an empty configuration rather than copying the default provider's settings.
+If several explicit providers (or an explicit provider and the default provider) need to
+share credentials or account-level settings, read those values once from your stack
+configuration and pass them to each provider explicitly, rather than relying on any
+implicit inheritance.
+{{% /notes %}}
+
 Component resources also accept a set of providers to use with their child resources. For example, the EC2 instance parented to `myResource` in the program below is created in `us-east-1`, and the Kubernetes pod parented to myResource is created in the cluster targeted by the `test-ci` context.
 
 {{< chooser language "typescript,python,go,csharp,java,yaml" >}}
@@ -607,10 +619,10 @@ resources:
 
 ## Disabling default providers
 
-While default providers are enabled by default, they [can be disabled](/docs/concepts/config#special-configuration-options) on a per stack basis. Disabling default providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
+While default providers are enabled by default, they [can be disabled](/docs/iac/concepts/config/#pulumidisable-default-providers) on a per stack basis. Disabling default providers is a good idea if you want to ensure that your providers must be explicitly configured and should never use the default system configuration. (The meaning of "default system configuration" depends on the provider: it may be environment variables which can differ between environments, or a configuration file in a default location, and so on.)
 
 {{% notes type="tip" %}}
-Disabling default providers will help ensure that the [`provider` resource option](/docs/iac/concepts/options/provider) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.
+Disabling default providers will help ensure that the [`provider` resource option](/docs/iac/concepts/resources/options/provider/) _must_ be set on all resources. If the `provider` resource option is not set (a common mistake) the resource will use the default provider, which can result in resources being deployed to the wrong environment.
 {{% /notes %}}
 
 ### Using the Pulumi CLI
@@ -621,9 +633,10 @@ For example, to disable the `aws` provider, you can run:
 pulumi config set --path 'pulumi:disable-default-providers[0]' aws
 ```
 
-If you wanted to also disable the `kubernetes` default provider, as well as the `aws` default provider, you could run:
+Each command adds one entry to the list, so disabling both the `aws` and `kubernetes` default providers means running both commands in sequence — the first sets index `[0]`, and the second sets index `[1]`:
 
 ```sh
+pulumi config set --path 'pulumi:disable-default-providers[0]' aws
 pulumi config set --path 'pulumi:disable-default-providers[1]' kubernetes
 ```
 
@@ -641,7 +654,7 @@ To set the value correctly using Automation API, you must use the `path` paramet
 {{% choosable language typescript %}}
 
 ```typescript
-await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, path: true);
+await stack.setConfig("pulumi:disable-default-providers[0]", { value: "*" }, true);
 ```
 
 {{% /choosable %}}
@@ -655,7 +668,7 @@ await stack.SetConfigAsync("pulumi:disable-default-providers[0]", new ConfigValu
 {{% choosable language python %}}
 
 ```python
-stack.set_config("pulumi:disable-default-providers[0]", auto.ConfigValue(value="*"), True)
+stack.set_config("pulumi:disable-default-providers[0]", auto.ConfigValue(value="*"), path=True)
 ```
 
 {{% /choosable %}}

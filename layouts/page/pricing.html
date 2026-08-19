@@ -1,4 +1,27 @@
 {{ define "main" }}
+{{/* Everything below the hero is a rendering of data/pulumi_pricing.yaml: the
+     cards are the editions, the comparison accordion is groups -> categories ->
+     features. Column order comes from the editions list, so a feature that
+     doesn't name an edition renders blank instead of shifting the row. */}}
+{{ $px := partialCached "pricing/data.html" . "pricing-data" }}
+{{ $editions := $px.editions }}
+{{/* Grid classes must be literal strings — Tailwind v4 content-scans these
+     templates as raw text, so a class assembled with printf is never emitted
+     and the grid silently collapses to one column. */}}
+{{ $n := printf "%d" (len $editions) }}
+{{ $cardGrid := index (dict
+        "3" "grid grid-cols-1 card md:grid-cols-3 xl:grid-cols-3 divide-y md:divide-y-0 md:divide-x"
+        "4" "grid grid-cols-1 card md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x"
+        "5" "grid grid-cols-1 card md:grid-cols-3 xl:grid-cols-5 divide-y md:divide-y-0 md:divide-x") $n }}
+{{ $cols := index (dict "3" "grid-cols-3" "4" "grid-cols-4" "5" "grid-cols-5") $n }}
+{{ $colsMd := index (dict
+        "3" "md:grid-cols-[2fr_1fr_1fr_1fr]"
+        "4" "md:grid-cols-[2fr_1fr_1fr_1fr_1fr]"
+        "5" "md:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr]") $n }}
+{{ $labelSpan := index (dict "3" "col-span-3" "4" "col-span-4" "5" "col-span-5") $n }}
+{{ if or (not $cardGrid) (not $cols) (not $colsMd) (not $labelSpan) }}
+{{ errorf "layouts/page/pricing.html: no grid classes for %s editions. Tailwind needs literal class strings, so add a case to the dicts at the top of this file when data/pulumi_pricing.yaml gains or loses an edition." $n }}
+{{ end }}
 
 <section class="relative overflow-hidden">
     <div aria-hidden="true" class="pointer-events-none absolute -right-20 -top-10 md:top-0 lg:right-0 -z-10 select-none">
@@ -16,45 +39,45 @@
 </section>
 
 <section id="plans" class="container mx-auto relative z-10 px-6">
-    <div class="grid grid-cols-1 card md:grid-cols-2 xl:grid-cols-4 divide-y md:divide-y-0 md:divide-x">
-        {{ range $tier := .Params.tiers.trialed.items }}
+    <div class="{{ $cardGrid }}">
+        {{ range $edition := $editions }}
+        {{ $card := $edition.card }}
         {{ $borderClass := "" }}
-        {{ if $tier.badge }}{{ $borderClass = "rounded-lg border-0 ring ring-[1.5px] relative z-10 ring-offset-4 ring-violet-accent" }}{{ end }}
+        {{ if $card.badge }}{{ $borderClass = "rounded-lg border-0 ring ring-[1.5px] relative z-10 ring-offset-4 ring-violet-accent" }}{{ end }}
         <div>
-            <div class=" p-8 flex flex-col gap-6 bg-white h-full overflow-hidden rounded-lg {{ $borderClass }}">
+            {{/* No overflow-hidden: the note's rate tooltip is absolutely
+                 positioned and wider than the card's content column, so
+                 clipping the card would cut the bubble in half. */}}
+            <div class=" p-8 flex flex-col gap-6 bg-white h-full rounded-lg {{ $borderClass }}">
                 <div>
                     <div class="flex items-center gap-3">
-                        <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $tier.title }}</h2>
-                        {{ with $tier.badge }}
+                        <h2 class="text-2xl font-semibold tracking-tight m-0">{{ $edition.name }}</h2>
+                        {{ with $card.badge }}
                         <span class="badge badge-brand">{{ . }}</span>
                         {{ end }}
                     </div>
-                    <p class="mt-2 text-base text-gray-700 m-0 md:min-h-[3rem] block">{{ $tier.subtitle }}</p>
+                    <p class="mt-2 text-base text-gray-700 m-0 md:min-h-[3rem] block">{{ $card.subtitle }}</p>
                 </div>
 
                 <div>
-                    {{ if $tier.price_label }}
+                    {{ if $card.price_label }}
                     <div class="flex items-baseline gap-2">
-                        <span class="text-5xl font-semibold tracking-tight">{{ $tier.price }}</span>
-                        <span class="text-xl text-gray-500">{{ $tier.price_label }}</span>
+                        <span class="text-5xl font-semibold tracking-tight">{{ $card.price }}</span>
+                        <span class="text-xl text-gray-500">{{ $card.price_label }}</span>
                     </div>
                     {{ else }}
-                    <p class="text-3xl font-semibold tracking-tight m-0">{{ $tier.price }}</p>
+                    <p class="text-3xl font-semibold tracking-tight m-0">{{ $card.price }}</p>
                     {{ end }}
-                    <div class="mt-4 md:min-h-[3rem] text-sm">
-                        {{ with $tier.unit }}
-                        <p class="m-0">{{ . | markdownify }}</p>
-                        {{ end }} {{ with $tier.note }}
-                        <p class="text-gray-700 m-0">{{ . | markdownify }}</p>
-                        {{ end }}
+                    <div class="mt-4 md:min-h-[4rem] text-sm">
+                        {{ partial "pricing/card-usage.html" $edition }}
                     </div>
                 </div>
 
                 <div class="flex flex-col items-stretch gap-2 md:min-h-[6rem]">
-                    {{ with $tier.cta }}
+                    {{ with $card.cta }}
                     <a href="{{ .href }}" class="btn btn-{{ .style }} btn-lg w-full"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
                     {{ end }}
-                    {{ with $tier.cta_secondary }}
+                    {{ with $card.cta_secondary }}
                     <a href="{{ .href }}" class="btn btn-secondary">
                         {{ .label }}
                         {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
@@ -63,11 +86,11 @@
                 </div>
 
                 <div class="flex flex-col gap-3">
-                    {{ with $tier.features_intro }}
+                    {{ with $card.features_intro }}
                     <p class="font-mono uppercase text-xs tracking-wider m-0">{{ . | markdownify }}</p>
                     {{ end }}
                     <ul class="list-none p-0 m-0 flex flex-col gap-2">
-                        {{ range $tier.features }}
+                        {{ range $card.features }}
                         <li class="flex items-start gap-2 text-sm m-0">
                             {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-5 mt-0.5 flex-shrink-0" "weight" "bold") }}
                             <span>{{ . | markdownify }}</span>
@@ -76,6 +99,38 @@
                             end
                         }}
                     </ul>
+                </div>
+
+                {{/* The two ways further down the page, at the foot of every card:
+                     the feature list above is a summary, and the price above it is
+                     a starting point. mt-auto pins them to the bottom of the card
+                     so they line up across the row even though the feature lists
+                     are different lengths.
+
+                     The estimator link renders exactly where the estimator prices
+                     the edition — the same condition the card's rate tooltip uses
+                     (layouts/partials/pricing/card-usage.html) — so it can't appear
+                     on a card the calculator has no toggle for. Its href carries
+                     the edition, and theme/src/ts/pricing-calculator.ts presses the
+                     matching toggle on the way down: from the Enterprise card you
+                     should not land on a Team estimate. */}}
+                {{ $priced := index (site.Data.pulumi_pricing.calculator.editions | default dict) $edition.id }}
+                {{/* Side by side, wrapping to a second line in the narrow cards — the
+                     four-column grid at xl leaves barely enough width for both, and
+                     the labels are long enough that it's a close call either way. The
+                     row gap is smaller than the column gap so a wrapped pair reads as
+                     two lines of one group rather than two separate blocks. */}}
+                <div class="mt-auto pt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                    <a href="#compare" data-track="pricing-card-{{ $edition.id }}-compare" class="inline-flex items-center gap-1.5 text-violet-primary hover:underline">
+                        {{ partial "icon.html" (dict "name" "phosphor/arrow-down" "class" "size-4") }}
+                        View all features
+                    </a>
+                    {{ if $priced }}
+                    <a href="#calculator-{{ $edition.id }}" data-track="pricing-card-{{ $edition.id }}-estimate" class="inline-flex items-center gap-1.5 text-violet-primary hover:underline">
+                        {{ partial "icon.html" (dict "name" "phosphor/calculator" "class" "size-4") }}
+                        Estimate your cost
+                    </a>
+                    {{ end }}
                 </div>
             </div>
         </div>
@@ -109,22 +164,31 @@
     </div>
 </section>
 
-<section id="compare" class="container mx-auto px-6">
+{{/* scroll-mt clears the sticky site nav, so a card's "View all features" link
+     lands the table's own sticky header below it rather than underneath it. */}}
+<section id="compare" class="container mx-auto px-6 scroll-mt-24">
 
     <div class="sticky top-16 z-30 bg-white py-4">
-        <div class="grid grid-cols-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-x-4 items-end">
+        <div class="grid {{ $cols }} {{ $colsMd }} gap-x-4 items-end">
+            {{/* The label column's header cell is otherwise empty, so it carries
+                 the second way into the estimator — on screen for as long as the
+                 reader is scanning features, which is the whole time the question
+                 is live, and without adding a floating element to the viewport.
+                 It's hidden below md along with the column itself; the strip above
+                 the table is what mobile has. */}}
             <div class="hidden md:block"></div>
-            {{ range $tier := .Params.tiers.trialed.items }}
+            {{ range $edition := $editions }}
+            {{ $card := $edition.card }}
             <div class="flex flex-col gap-2 text-center">
                 <div class="flex items-baseline justify-center xl:justify-between gap-1.5">
-                    <span class="text-sm sm:text-base font-semibold leading-tight">{{ $tier.title }}</span>
+                    <span class="text-sm sm:text-base font-semibold leading-tight">{{ $edition.name }}</span>
                     <span class="text-sm whitespace-nowrap hidden xl:block">
-                        <span class="font-semibold">{{ $tier.price }}</span
-                        >{{ with $tier.price_label }} <span class="text-xs">{{ . }}</span
+                        <span class="font-semibold">{{ $card.price }}</span
+                        >{{ with $card.price_label }} <span class="text-xs">{{ . }}</span
                         >{{ end }}
                     </span>
                 </div>
-                {{ with $tier.cta }}
+                {{ with $card.cta }}
                 <a href="{{ .href }}" class="btn btn-{{ .style }} w-full hidden lg:inline-flex"{{ with .data_role }} data-role="{{ . }}"{{ end }}>{{ .label }}</a>
                 {{ end }}
             </div>
@@ -132,9 +196,9 @@
         </div>
     </div>
 
-    {{ range .Params.comparison_table.sections }}
+    {{ range $px.groups }}
     <div>
-        {{ range .tables }}
+        {{ range .categories }}
         <details class="group border-b border-gray-200 overflow-x-hidden" data-pricing-table open>
             <summary class="flex items-center justify-between cursor-pointer py-4 list-none [&::-webkit-details-marker]:hidden">
                 <div class="flex items-center gap-3">
@@ -143,37 +207,46 @@
                         {{ partial "icon.html" (dict "name" .icon "class" "size-6" "weight" (.icon_weight | default "regular")) }}
                     </span>
                     {{ end }}
-                    <h3 class="font-mono uppercase tracking-wider text-sm m-0">{{ .header }}</h3>
+                    <h3 class="font-mono uppercase tracking-wider text-sm m-0">{{ .name }}</h3>
                 </div>
                 {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-4 text-gray-600 transition-transform group-open:rotate-180" "weight" "bold") }}
             </summary>
 
-            {{ range $row := .rows }}
-            <div class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 grid grid-cols-4 gap-x-4 md:grid-cols-[2fr_1fr_1fr_1fr_1fr] md:items-center">
-                <div class="col-span-4 md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
-                    {{ if $row.link }}<a class=" underline-offset-5 underline decoration-dashed decoration-violet-300 hover:text-violet-primary hover:decoration-solid" href="{{ $row.link }}">{{ $row.title }}</a
-                    >{{ else }}{{ $row.title }}{{ end }}
-                    {{ with $row.tooltip }}
+            {{ range $feature := .features }}
+            {{ if not $feature.hidden }}
+            {{/* The feature id doubles as the row's anchor, so an availability
+                 marker in the docs can deep-link to the row it derives from.
+                 The scroll offset clears both sticky headers — the site nav
+                 (64px) plus the edition header above, which grows by the height
+                 of its CTA buttons at lg — otherwise the row lands underneath
+                 them. `target:` tints the row the reader was sent to, so a
+                 deep link doesn't drop them into an anonymous grid. */}}
+            <div id="{{ $feature.id }}" class="text-gray-900 md:ml-12 border-b border-gray-100 last:border-none py-3 scroll-mt-32 lg:scroll-mt-44 target:bg-violet-background target:rounded-md grid {{ $cols }} gap-x-4 {{ $colsMd }} md:items-center">
+                <div class="{{ $labelSpan }} md:col-span-1 text-sm sm:text-base md:text-sm mb-3 md:mb-0">
+                    {{ if $feature.link }}<a class=" underline-offset-5 underline decoration-dashed decoration-violet-300 hover:text-violet-primary hover:decoration-solid" href="{{ $feature.link }}">{{ $feature.name }}</a
+                    >{{ else }}{{ $feature.name }}{{ end }}
+                    {{ with $feature.tooltip }}
                     <pulumi-tooltip class="inline-block">
                         {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-gray-700") }}
                         <span slot="content">{{ . }}</span>
                     </pulumi-tooltip>
                     {{ end }}
                 </div>
-                {{ range $i, $item := $row.items }}
+                {{ range $edition := $editions }}
+                {{ $cell := partial "pricing/value.html" (index $feature.cells $edition.id) }}
                 <div class="flex flex-col items-center text-xs sm:text-sm md:contents">
                     <div class="text-center">
-                        {{ if eq $item.content "_check" }}
+                        {{ if eq $cell.kind "check" }}
                         {{ partial "icon.html" (dict "name" "phosphor/check" "class" "text-green-primary size-6 inline-block") }}
-                        {{ else if eq $item.content "_blank" }}
+                        {{ else if eq $cell.kind "blank" }}
                         <span class="text-gray-300"> {{ partial "icon.html" (dict "name" "phosphor/minus" "class" "text-gray-primary size-6 inline-block") }} </span>
                         {{ else }}
-                        <span>{{ $item.content | markdownify }}</span>
-                        {{ with $item.subtext }}
+                        <span>{{ $cell.content | markdownify }}</span>
+                        {{ with $cell.subtext }}
                         <div class="text-xs text-gray-600 mt-0.5">{{ . | markdownify }}</div>
                         {{ end }}
                         {{ end }}
-                        {{ with $item.tooltip }}
+                        {{ with $cell.tooltip }}
                         <pulumi-tooltip class="inline-block">
                             {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-1 inline text-gray-700") }}
                             <span slot="content">{{ . }}</span>
@@ -184,17 +257,32 @@
                 {{ end }}
             </div>
             {{ end }}
+            {{ end }}
         </details>
         {{ end }}
     </div>
     {{ end }}
 </section>
 
-{{/* Collapse all but the first comparison table on mobile (<md). Desktop keeps them all open. */}}
+{{/* Collapse all but the first comparison table on mobile (<md). Desktop keeps
+     them all open. Docs availability markers deep-link to /pricing/#<feature-id>,
+     and on mobile that row usually sits inside a table this script just
+     collapsed — so re-open whichever table holds the anchor and scroll to it,
+     because the browser already gave up on a hidden target. */}}
 <script>
     (function () {
         var mq = window.matchMedia("(min-width: 768px)");
         var tables = document.querySelectorAll("[data-pricing-table]");
+        function revealHash() {
+            var id = window.location.hash.slice(1);
+            if (!id) return;
+            var target = document.getElementById(decodeURIComponent(id));
+            if (!target) return;
+            var table = target.closest("[data-pricing-table]");
+            if (!table || table.hasAttribute("open")) return;
+            table.setAttribute("open", "");
+            target.scrollIntoView();
+        }
         function sync() {
             if (mq.matches) {
                 tables.forEach(function (t) { t.setAttribute("open", ""); });
@@ -204,11 +292,19 @@
                     else t.removeAttribute("open");
                 });
             }
+            revealHash();
         }
         sync();
         mq.addEventListener("change", sync);
+        window.addEventListener("hashchange", revealHash);
     })();
 </script>
+
+{{/* The estimator sits below the comparison table: it answers "what would this
+     cost me", which is a question a reader only has once they've seen the cards
+     and worked out which edition they'd be on. Entry points above link down to
+     #calculator. */}}
+{{ partial "pricing/calculator.html" . }}
 
 {{ with .Params.testimonial }}
 <section class="container mx-auto px-6 my-24">
@@ -235,7 +331,18 @@
                         <span class="text-sm font-semibold pr-4">{{ $question.question }}</span>
                         {{ partial "icon.html" (dict "name" "phosphor/caret-down" "class" "size-5 text-gray-600 transition-transform group-open:rotate-180 flex-shrink-0") }}
                     </summary>
-                    <div class="pb-5 text-base text-gray-700 prose prose-sm max-w-none">
+                    {{/* markdownify only emits <p> when an answer runs to more than
+                         one paragraph, so an FAQ list renders as a mix of bare text
+                         and real paragraphs. Bare text takes the color here; a <p>
+                         does not, because `p` in shared/_base.scss sets its own
+                         color and margins and an element's own rule beats anything
+                         it would otherwise inherit. Hence the child selectors —
+                         without them the two kinds of answer don't match each other.
+
+                         Zeroing the outer margins rather than restyling them: the
+                         summary's py-5 above and this pb-5 below already space the
+                         answer, and a bare-text answer has no margin to add. */}}
+                    <div class="pb-5 text-base text-gray-700 [&_p]:text-inherit [&>p:first-child]:mt-0 [&>p:last-child]:mb-0">
                         {{ $question.answer | markdownify }}
                     </div>
                 </details>

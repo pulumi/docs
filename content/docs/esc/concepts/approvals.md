@@ -7,7 +7,7 @@ meta_title: Approvals in Pulumi ESC
 menu:
   esc:
     parent: esc-concepts
-    weight: 11
+    weight: 12
   administration:
     name: ESC Approvals
     parent: administration-security-compliance
@@ -15,12 +15,8 @@ menu:
 aliases:
   - /docs/esc/administration/approvals/
   - /docs/esc/operations/approvals/
+pulumi_cloud_feature: esc-change-requests
 ---
-
-{{% notes "info" %}}
-Approvals in Pulumi ESC are available for organizations using the Enterprise and Business Critical editions.
-Learn more about editions on the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## Overview
 

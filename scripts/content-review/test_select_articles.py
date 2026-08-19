@@ -20,6 +20,7 @@ commits are dated deliberately:
 
 from __future__ import annotations
 
+import ast
 import json
 import os
 import subprocess
@@ -29,6 +30,8 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SCRIPT = HERE / "select-articles.py"
+COMMON = HERE / "_selector_common.py"
+BLOG_SCRIPT = HERE.parent / "blog-review" / "select-posts.py"
 REPO_TIERS = (
     HERE.parents[1]
     / ".claude/commands/review-existing-content/references/strategic-tiers.yaml"
@@ -38,6 +41,41 @@ TODAY = "2026-06-12"
 
 _failures: list[str] = []
 _passes = 0
+
+
+def _module_assign(path: Path, name: str):
+    """Return a module-level literal assignment's value, or None if absent.
+
+    Parsed from source rather than imported: these filenames are hyphenated
+    (not importable) and run argparse at module scope. Reading the value rather
+    than restating it is the point — the test then covers whatever the constant
+    actually holds.
+    """
+    for node in ast.parse(path.read_text()).body:
+        if isinstance(node, ast.Assign) and any(
+            isinstance(t, ast.Name) and t.id == name for t in node.targets
+        ):
+            try:
+                return ast.literal_eval(node.value)
+            except ValueError:
+                # A non-literal re-declaration (`BOT_AUTHORS = COMMON | {...}`)
+                # is still a re-declaration. Report it as one rather than
+                # letting literal_eval raise out of the test harness.
+                return f"<non-literal assignment in {path.name}>"
+    return None
+
+
+def _bot_authors() -> set[str]:
+    """Read BOT_AUTHORS out of the shared selector module.
+
+    It lives in _selector_common.py, not in either selector, because the two
+    copies drifted once and cost ~65% of content/docs their staleness clock.
+    _check_bot_authors_single_definition below is the guard that keeps it there.
+    """
+    value = _module_assign(COMMON, "BOT_AUTHORS")
+    if value is None:
+        raise AssertionError(f"BOT_AUTHORS not found in {COMMON.name}")
+    return set(value)
 
 
 def check(cond: bool, msg: str) -> None:
@@ -51,6 +89,7 @@ def check(cond: bool, msg: str) -> None:
 
 PAGE = "---\ntitle: T\n---\n\nBody.\n"
 DRAFT = "---\ntitle: T\ndraft: true\n---\n\nBody.\n"
+STUB = "---\nredirect_to: /docs/misc/one/\n---\n"
 
 TIERS = """\
 tiers:
@@ -101,6 +140,7 @@ def make_repo(tmp: Path) -> Path:
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(PAGE)
     (repo / "content/docs/misc/draft.md").write_text(DRAFT)
+    (repo / "content/docs/misc/stub.md").write_text(STUB)
     git(repo, "add", ".")
     git(repo, "commit", "-q", "-m", "seed", date="2024-01-01T00:00:00Z")
 
@@ -171,6 +211,9 @@ def main() -> int:
         check(len(paths) == 3, f"3 picks (got {paths})")
         check("content/docs/generated/cli.md" not in paths, "tier-0 excluded")
         check("content/docs/misc/draft.md" not in paths, "draft excluded")
+        check("content/docs/misc/stub.md" not in [a["path"] for a in
+              run_select(repo, tiers, empty, "--count", "20")["articles"]],
+              "redirect_to stub excluded")
         check(all(a["lane"] == "priority" for a in q["articles"]), "all picks priority lane")
         check(paths[0] == C, f"most-stale tier-1 tops the queue (got {paths[0]})")
         check(paths[1] == OVERVIEW, f"stale tier-2 outranks stale tier-3 (got {paths[1]})")
@@ -185,6 +228,45 @@ def main() -> int:
         check(s[STACKS] < s[KEEP], "freshly human-edited page falls below stale tier-3 pages")
         check(s[ONE] == s[TWO], "bot-edited page scores identically to its never-edited tier-3 sibling")
         check(s[ONE] > s[STACKS], "bot edit left the page stale (unlike the human-edited one)")
+
+        # Every name in BOT_AUTHORS must suppress the staleness clock, not just
+        # the one the fixture above happens to use. This is the regression guard
+        # for the real defect: "Pulumi Bot" and "workprentice[bot]" were missing
+        # from the set, so their commits looked like human edits and reset the
+        # clock on ~65% of content/docs pages. Driving the assertion off the
+        # constant means the next identity added to the set is covered the day
+        # it lands, and one omitted from it fails here.
+        print("every BOT_AUTHORS identity suppresses the staleness clock")
+        # The set has exactly one home. It used to have two, and the second one
+        # missed the fix — which is the whole reason _selector_common.py exists.
+        # A selector that re-declares it locally shadows the shared set for its
+        # own lane only, silently recreating the divergence.
+        for script in (SCRIPT, BLOG_SCRIPT):
+            check(_module_assign(script, "BOT_AUTHORS") is None,
+                  f"{script.name} re-declares BOT_AUTHORS instead of importing it "
+                  f"from _selector_common.py; the two copies will drift again")
+        bot_names = sorted(_bot_authors())
+        # Identities observed authoring commits in pulumi/docs. A name missing
+        # here can't be caught by the loop below (the loop only iterates what is
+        # already in the set), so the membership assertion is the actual guard —
+        # "Pulumi Bot" and "workprentice[bot]" are precisely what was missing.
+        # Add to this list whenever a new automation starts committing.
+        for required in ("pulumi-bot", "Pulumi Bot", "workprentice[bot]",
+                         "dependabot[bot]", "github-actions[bot]"):
+            check(required in bot_names,
+                  f"{required!r} is missing from BOT_AUTHORS, so its commits "
+                  f"reset the staleness clock as if a human made them")
+        for i, bot in enumerate(bot_names):
+            botdir = tmp / f"botclock{i}"
+            botdir.mkdir()
+            botrepo = make_repo(botdir)
+            (botrepo / "content/docs/misc/two.md").write_text(PAGE + f"\n{bot} touch.\n")
+            git(botrepo, "add", ".")
+            git(botrepo, "commit", "-q", "-m", f"{bot} edit", date="2026-06-11T00:00:00Z",
+                name=bot, email="bot@example.com")
+            sb = scores(run_select(botrepo, tiers, empty, "--count", "20"))
+            check(sb[TWO] == s[TWO],
+                  f"a commit authored by {bot!r} did not reset the clock on {TWO}")
 
         print("multiplicative score: stale tier-2 beats a fresh tier-1")
         check(s[OVERVIEW] > s[STACKS], "importance*staleness lets a very stale tier-2 outrank a fresh tier-1")
@@ -287,6 +369,24 @@ def main() -> int:
         qg2 = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(gscf))
         check(scores(qg2) == sg, "signal-boosted selection is deterministic")
 
+        print("reader signals: bare GSC export (no envelope) parses identically")
+        bare = tmp / "signals-gsc-bare.json"
+        bare.write_text(json.dumps({
+            "source": "fct_google_search_console_metrics",
+            "period": {"start": "2026-03-14", "end": "2026-06-11"},
+            "generated": "2026-06-11T00:00:00Z",
+            "pages": {
+                "/docs/misc/one/": {"impressions": 50000, "clicks": 250},
+                "/docs/misc/two/": {"impressions": 50000, "clicks": 5000},
+                "/docs/misc/protected/keep/": {"impressions": 100, "clicks": 1},
+            }}))
+        qbare = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(bare))
+        check(scores(qbare) == sg, "bare GSC export scores identically to the enveloped one")
+        check(qbare["reader_signals"]["gsc"]["available"] is True,
+              "bare GSC export marked available")
+        check(qbare["reader_signals"]["feedback"]["available"] is False,
+              "bare GSC export leaves feedback unavailable")
+
         print("reader signals: --paths entries carry the signals block")
         qp = run_select(repo, tiers, empty, "--paths", ONE, "--signals-file", str(gscf))
         check(qp["articles"][0]["signals"]["gsc"]["low_ctr_flag"] is True,
@@ -306,6 +406,8 @@ def main() -> int:
         qcap = run_select(repo, tiers, led_cap, "--count", "20")
         check(TWO not in scores(qcap), "page at the attempt cap is excluded entirely")
         check(ONE in scores(qcap), "non-capped pages still selected")
+        check(qcap.get("capped") == [TWO], "capped pages surfaced on the queue")
+        check(full.get("capped") == [], "no capped pages -> empty list, not a missing key")
 
         print("completed review advances the clock (page is deprioritized)")
         led_done = tmp / "ledger-done"
@@ -350,6 +452,105 @@ def main() -> int:
                 check(entry["tier"] == 0, f"real tiers file marks {label} tier 0")
             else:
                 check("tiers" not in proc.stderr.lower(), "real tiers file parses")
+
+    # --- stale-claim markers ride the queue, and escalation stops the boost ---
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
+        repo = make_repo(tmp)
+        tiers = tmp / "tiers.yaml"
+        tiers.write_text(REPO_TIERS.read_text() if REPO_TIERS.is_file() else "rules: []\n")
+
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  # Before TODAY's review: the review saw this marker and left it
+                  # unresolved, so it is real drift and must keep boosting. (A
+                  # marker dated AFTER the last completed review is the #20970
+                  # echo instead — see boost_suppressed_by_recent_fix.)
+                  "checked_at": "2026-06-10"}
+
+        led = tmp / "ledger-markers"
+        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
+        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
+        q = run_select(repo, tiers, led)
+        entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
+        check(entry is not None, "marked page is boosted into the queue")
+        if entry:
+            check(entry["stale_claims"] == 1, "count field preserved")
+            check([m["entity_key"] for m in entry.get("stale_claim_markers") or []]
+                  == ["version/pulumi-package"], "queue item carries the marker itself")
+            check((entry["stale_claim_markers"][0].get("evidence") or "")
+                  == "CHANGELOG says 3.163.0", "marker evidence reaches the worker")
+
+        # An escalated marker must still ride in the queue item and still be
+        # counted: record-review.py rebuilds the ledger entry from the queue,
+        # so a marker withheld here is a marker deleted from the ledger the
+        # next time this page is reviewed for any reason.
+        led_mixed = tmp / "ledger-mixed"
+        write_ledger(led_mixed, STACKS, TODAY, stale_claims=[
+            marker,
+            {**marker, "entity_key": "version/old-miss",
+             "unresolved_reviews": 2, "escalated": True},
+        ])
+        q_mixed = run_select(repo, tiers, led_mixed)
+        mixed = next((a for a in q_mixed["articles"] if a["path"] == STACKS), None)
+        check(mixed is not None, "page with one active marker is still boosted")
+        if mixed:
+            keys = [m["entity_key"] for m in mixed.get("stale_claim_markers") or []]
+            check("version/old-miss" in keys,
+                  "escalated marker still travels in the queue item (survives the round-trip)")
+            check(mixed["stale_claims"] == len(mixed["stale_claim_markers"]),
+                  "stale_claims count matches the marker list it describes")
+
+        led_esc = tmp / "ledger-escalated"
+        write_ledger(led_esc, STACKS, TODAY,
+                     stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
+        q_esc = run_select(repo, tiers, led_esc)
+        esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
+        check(esc is None, "an escalated marker alone no longer boosts the page")
+
+        # ...and when such a page is reviewed anyway (staleness, --paths), the
+        # escalated marker must reach record-review.py rather than evaporating.
+        q_paths = run_select(repo, tiers, led_esc, "--paths", STACKS)
+        forced = q_paths["articles"][0]
+        check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
+              == ["version/pulumi-package"],
+              "escalated marker reaches a --paths review instead of being dropped")
+
+        print("stale-claim boost cooldown (#20970's missing half)")
+        import importlib.util
+        from datetime import date as _date
+        _spec = importlib.util.spec_from_file_location("select_articles", SCRIPT)
+        sa = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(sa)
+        _t = _date(2026, 8, 19)
+        def _e(reviewed, checked, status="reviewed"):
+            e = {"status": status, "reviewed_at": reviewed}
+            if checked is not None:
+                e["stale_claims"] = [{"entity_key": "version/x", "checked_at": checked}]
+            return e
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-19"), _t) is True,
+              "marker written AFTER a just-completed review is an echo: suppressed")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-17"), _t) is False,
+              "marker the review SAW and left unresolved is real drift: still boosts")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-01", "2026-08-02"), _t) is False,
+              "past the cooldown, an echo has had time to be real: still boosts")
+        check(sa.boost_suppressed_by_recent_fix(
+                  _e("2026-08-18", "2026-08-19", status="incomplete"), _t) is False,
+              "an incomplete review fixed nothing, so it never suppresses")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", None), _t) is False,
+              "no markers, nothing to suppress")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "garbage"), _t) is False,
+              "an undated marker is not provably an echo, so it keeps its boost")
+        check(sa.boost_suppressed_by_recent_fix(_e("garbage", "2026-08-19"), _t) is False,
+              "an unparseable review date fails open (boosts), never suppresses silently")
+        _edge = str(_date.fromordinal(_t.toordinal() - sa.STALE_BOOST_COOLDOWN_DAYS))
+        check(sa.boost_suppressed_by_recent_fix(_e(_edge, "2026-08-19"), _t) is False,
+              "exactly COOLDOWN days old is outside the window")
+        check(sa.boost_suppressed_by_recent_fix(
+                  {"status": "reviewed", "reviewed_at": "2026-08-18",
+                   "stale_claims": [{"entity_key": "a", "checked_at": "2026-08-19"},
+                                    {"entity_key": "b", "checked_at": "2026-08-17"}]}, _t) is False,
+              "one pre-review marker is enough to keep the boost")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0

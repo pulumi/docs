@@ -71,7 +71,7 @@ Learn more in the [Google Native v0.25.0 release notes](https://github.com/pulum
 
 ### Kubernetes Operator v1.8.0
 
-In the latest release of the [Pulumi Kubernetes Operator](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/) we have added improvements to metrics collection and better branch detection in branch specifications.
+In the latest release of the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) we have added improvements to metrics collection and better branch detection in branch specifications.
 
 Learn more in the [Kubernetes Operator v1.8.0 release notes](https://github.com/pulumi/pulumi-kubernetes-operator/releases/tag/v1.8.0).
 
@@ -116,7 +116,7 @@ We also made a handful of improvements to `pulumi convert`. See the [v0.5.5 rele
 
 ### Allow `pulumi refresh` to resolve pending creates
 
-[`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh) can be used to bring Pulumi state back inline with external state. If something is changed in the actual state and Pulumi is not made aware of it or if Pulumi is terminated mid-operation you could end up with pending operations. Now when running `pulumi refresh` interactively, it will provide you with new options to deal with the pending operations. These new interactive options are as follows:
+[`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) can be used to bring Pulumi state back inline with external state. If something is changed in the actual state and Pulumi is not made aware of it or if Pulumi is terminated mid-operation you could end up with pending operations. Now when running `pulumi refresh` interactively, it will provide you with new options to deal with the pending operations. These new interactive options are as follows:
 
 - **import**: the flag `--import-pending-creates` has been added to allow scripting to resolve pending creates via `pulumi refresh`. It takes a list of URN IDs to be imported.
 - **clear**: to assist with the use case of removing all pending creates, the flag `--clear-pending-creates` has been added.
@@ -149,7 +149,7 @@ Learn more in the [Add getOrganization merge request](https://github.com/pulumi/
 
 ### Control logging and tracing within Automation API
 
-We have improved [Pulumi Automation API](/docs/using-pulumi/automation-api/) functionality to permit finer control over logging by adding five additional options to the preview, up, refresh, and destroy operations in Automation API.
+We have improved [Pulumi Automation API](/docs/iac/concepts/automation-api/) functionality to permit finer control over logging by adding five additional options to the preview, up, refresh, and destroy operations in Automation API.
 
 Enables Automation API to run with the equivalent of CLI arguments:
 
@@ -163,7 +163,7 @@ Learn more in the [Add options to configure logging and tracing merge request](h
 
 ### Use `pulumi destroy -s <stack>` outside a Pulumi project dir
 
-You can now specify a stack when using [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy) while outside of the project directory.
+You can now specify a stack when using [`pulumi destroy`](/docs/iac/cli/commands/pulumi_destroy/) while outside of the project directory.
 
 Learn more in the [`pulumi destroy -s <stack>` GitHub issue](https://github.com/pulumi/pulumi/issues/2440).
 
@@ -173,13 +173,13 @@ Learn more in the [`pulumi destroy -s <stack>` GitHub issue](https://github.com/
 
 We launched Team Access Tokens, which allow Organization and Team Admins to create access tokens scoped to a Pulumi Team. Pulumi Service customers on the Enterprise and Business Critical editions can use [Pulumi Teams](https://www.pulumi.com/docs/pulumi-cloud/access-management/teams/) to set role-based access controls (RBAC) for stacks by enabling Organization administrators to assign a set of stack permissions to a group of users. Once you have Teams created you can use Team Access Tokens to generate a token scoped to that Team.
 
-Learn more in the [Team Access Tokens blog post](/blog/team-access-tokens/) and the [Team Access Tokens documentation](/docs/pulumi-cloud/access-management/team-access-tokens/).
+Learn more in the [Team Access Tokens blog post](/blog/team-access-tokens/) and the [Team Access Tokens documentation](/docs/administration/access-identity/access-tokens/).
 
 ### Billing Managers
 
 The new Billing Manager role gives the user permissions to access and edit only billing information, with no read or write permissions for stacks. This role is for when you need someone in your Organization to manage billing operations but you do not want them to have any permissions beyond that. Billing Managers can only be invited or added to the Organization by Organization Admins. Once added, the only information a Billing Manager will see is metrics about the Organization and the Billing and Usage page.
 
-Learn more about the permissions in the [Billing Manager blog post](/blog/billing-managers/) and the [Billing Manager documentation](/docs/pulumi-cloud/access-management/billing-managers/).
+Learn more about the permissions in the [Billing Manager blog post](/blog/billing-managers/) and the [Billing Manager documentation](/docs/administration/organizations-teams/billing-managers/).
 
 ### New Pulumi Service console
 

@@ -45,7 +45,7 @@ Last month we announced a new [Pulumi Cloud](/product/pulumi-cloud/) feature ava
 
 Platform and developer teams are spinning up resources across many cloud accounts within multiple cloud providers. A common pain point we have heard from our customers is having a uniform view of resources across them, as every account (by design) is a walled garden. Often to answer key questions about their business, such as "which team has the largest cloud footprint", teams need to combine data across various clouds, cloud accounts, and SaaS tools. This prevents organizations from getting quick answers to operational questions and barriers to build aggregations to derive insights.
 
-[Pulumi Resource Search](/docs/pulumi-cloud/insights/search) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
+[Pulumi Resource Search](/docs/insights/discovery/search/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
 
 When we undertook solving this pain point for our customers we partnered with multiple companies to inform the design. Without the dozens of organizations that participated in the Pulumi Resource Search private beta we would not have been able to release a feature with strong adoption in a short time frame. Today we are announcing two improvements to Resource Search as a result of this feedback: more advanced filtering options and Pulumi Teams support.
 
@@ -59,7 +59,7 @@ Pulumi Resource Search is composed of:
 1. **Query syntax**: Infrastructure can be discovered interactively with a rich, structured query language, for example `package:snowflake`.
 2. **AI Assist**: A natural language query interface that generates the query syntax for you. You can use it to express queries where you might not know the exact syntax, type tokens, or package names. You can [join the waitlist](https://www.pulumi.com/product/private-previews/#preview-assist) for access to this additional functionality for search.
 3. **Search advanced filtering**: Advanced filtering allows you to see aggregations over your data at a glance, such as top stacks, projects, providers, teams and types by resource count. Additionally, if you are searching for something specific they can help you understand the shape of your search results and further refine them.
-4. **Search API**: We understand that console searches aren't the only way our customers want to utilize Resource Search. To meet this need, we're also launching new Resource Search API endpoints, allowing you to integrate Resource Search into your internal systems and workflows. Use the API to add search functionality to your Internal Developer Platform or create automation around search results. API spec details are in the [Pulumi Service REST API documentation](/docs/pulumi-cloud/cloud-rest-api/#resource-search).
+4. **Search API**: We understand that console searches aren't the only way our customers want to utilize Resource Search. To meet this need, we're also launching new Resource Search API endpoints, allowing you to integrate Resource Search into your internal systems and workflows. Use the API to add search functionality to your Internal Developer Platform or create automation around search results. API spec details are in the [Pulumi Service REST API documentation](/docs/reference/cloud-rest-api/#resource-search).
 5. **Data Export**: Export resource data to ingest in your data warehouse. This will be covered in more detail in a future blog post, stay tuned!
 
 ## Query Syntax
@@ -90,7 +90,7 @@ show me all virtual machines across all cloud providers
 
 show me all s3 buckets not tagged in production
 
-```(type:aws:s3/bucket:Bucket -tags.enviornment:production```
+```(type:aws:s3/bucket:Bucket -tags.environment:production```
 
 show azure and azure native security groups
 

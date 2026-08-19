@@ -1,7 +1,7 @@
 ---
-title: What is AWS Secrets Manager?
+title: What is AWS Secrets Manager? Setup & Best Practices
 meta_desc: |
-     Learn more about what AWS Secrets Manager is and how to use it.
+    AWS Secrets Manager stores, rotates, and retrieves credentials without hard-coding them. Learn to create secrets via the CLI and use Pulumi ESC.
 
 type: what-is
 page_title: "What is AWS Secrets Manager?"
@@ -70,7 +70,7 @@ $ aws secretsmanager list-secrets
 
 {{< notes type="info" >}}
 
-Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/iac/concepts/secrets/).
 
 {{< /notes >}}
 
@@ -235,6 +235,6 @@ class MyStack : Stack
 
 {{% /choosable %}}
 
-- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/pulumi-cloud/esc/providers/aws-secrets/).
+- **Advanced secrets management**: For organizations that use more than one secrets manager and/or store configuration data in multiple locations, [Pulumi ESC (Environments, Secrets, and Configurations)](/docs/pulumi-cloud/esc/) offers a centralized solution for managing secrets and configurations across multiple environments. Moreover, Pulumi ESC integrates with OIDC to allow the dynamic generation of credentials, elevating its utility in scenarios where secrets need to be frequently rotated or updated. Dive deeper into how Pulumi ESC can streamline your secrets management workflows by visiting the [Pulumi ESC documentation for the AWS Secrets provider](/docs/esc/providers/secrets/aws-secrets/).
 
 The [Pulumi community on Slack](https://slack.pulumi.com/) is open for questions and discussion.

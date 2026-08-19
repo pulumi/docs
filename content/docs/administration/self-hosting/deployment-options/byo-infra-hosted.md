@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/byo-infra-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/byo-infra-hosted/
+pulumi_cloud_feature: self-hosting
 ---
 
 The [BYO-Infrastructure Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra) installer is used to deploy the self-hosted Pulumi Cloud on your own K8s, MySQL and S3-compatible infrastructure.
@@ -33,7 +34,7 @@ This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses th
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Choose a self-managed storage backend](/docs/concepts/state/)
+* [Choose a self-managed storage backend](/docs/iac/concepts/state-and-backends/)
 
 ### Deployment Steps
 

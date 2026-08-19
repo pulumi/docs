@@ -1,0 +1,347 @@
+{{- /*
+  The /pricing/ cost estimator: sliders for every metered unit, a running
+  monthly total, and — past the resource count where volume pricing usually
+  starts to apply — a note that the figure is an upper bound, not a quote.
+
+  Numbers come from `calculator:` in data/pulumi_pricing.yaml — the same file
+  the cards and the comparison rows render — and are handed to
+  theme/src/ts/pricing-calculator.ts verbatim as JSON. This partial owns the
+  markup and the *presentational* half of each meter (label, help text, range,
+  step, starting value); the TS module owns the arithmetic and which rate a
+  meter is priced at. The meter ids below are the contract between the two, so
+  renaming one means renaming it in both places.
+
+  Per that file's split-by-consumer rule, the parts of the `calculator:` block
+  this partial reads are validated here; `card_tooltip`, which only the pricing
+  cards render, is validated in layouts/partials/pricing/card-usage.html.
+
+  The model the TS module implements, recorded here because that file carries no
+  comments. Everything is denominated in Pulumi Credits (1 credit = $1) drawn
+  from one shared pool, and the monthly base buys the first tranche of it:
+
+      iacCredits = iac_resources <= included_resources
+                     ? iac_resources * (included_credits / included_resources)
+                     : included_credits
+                       + (iac_resources - included_resources) * iac_resource_month
+      credits    = iacCredits
+                   + secrets    * esc_secret_month
+                   + minutes    * workflow_minute
+                   + neoMTokens * neo_tokens_per_million
+                   + insights   * insights_resource_month
+      monthly    = base_usd + max(0, credits - included_credits)
+
+  Everything is priced for a whole month. IaC and Insights resources are really
+  billed by the hour, so a resource that exists for only part of the month costs
+  proportionally less, but there is deliberately no utilization control: it would
+  be a slider nearly every reader leaves where it starts. The disclaimer states
+  the whole-month assumption instead.
+
+  The first branch is what makes the cards true: it prices the opening tranche
+  of resources low enough that $40 covers 500 and $400 covers 2,000, then
+  charges the list rate above that. Team at 500 resources is therefore exactly
+  $40, and at 1,000 it is $131.25.
+*/ -}}
+
+{{- $where := "data/pulumi_pricing.yaml" -}}
+{{- $px := partialCached "pricing/data.html" . "pricing-data" -}}
+{{- $calc := site.Data.pulumi_pricing.calculator -}}
+{{- if not $calc -}}
+  {{- errorf "%s: no `calculator:` block, but layouts/partials/pricing/calculator.html renders one. Add the block or drop the partial from layouts/page/pricing.html." $where -}}
+{{- end -}}
+
+{{- if not $calc.contact_sales_resources -}}
+  {{- errorf "%s: calculator.contact_sales_resources is missing or zero." $where -}}
+{{- end -}}
+{{- range $k := slice "workflow_minute" "neo_tokens_per_million" -}}
+  {{- if not (index ($calc.meters | default dict) $k) -}}
+    {{- errorf "%s: calculator.meters.%s is missing or zero." $where $k -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Edition order comes from editions[] rather than from the calculator map,
+       so the toggle can never disagree with the cards above it. */ -}}
+{{- $editionIds := slice -}}
+{{- range $px.editions -}}{{- $editionIds = $editionIds | append .id -}}{{- end -}}
+{{- $calcEditions := slice -}}
+{{- range $e := $px.editions -}}
+  {{- with index $calc.editions $e.id -}}
+    {{- $ce := . -}}
+    {{- range $k := slice "base_usd" "included_credits" "included_resources" "iac_resource_month" "esc_secret_month" "insights_resource_month" -}}
+      {{- if not (index $ce $k) -}}
+        {{- errorf "%s: calculator.editions.%s.%s is missing or zero. Every calculator edition needs all six." $where $e.id $k -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $calcEditions = $calcEditions | append (dict "id" $e.id "name" $e.name "base_usd" $ce.base_usd "included_credits" $ce.included_credits) -}}
+  {{- end -}}
+{{- end -}}
+{{- range $id, $_ := $calc.editions -}}
+  {{- if not (in $editionIds $id) -}}
+    {{- errorf "%s: calculator.editions has key %q, which is not an edition id (%s)." $where $id (delimit $editionIds ", ") -}}
+  {{- end -}}
+{{- end -}}
+{{- if lt (len $calcEditions) 2 -}}
+  {{- errorf "%s: the calculator needs at least two editions to toggle between; got %d." $where (len $calcEditions) -}}
+{{- end -}}
+
+{{- /* Presentational half of each meter. `id` is the contract with the TS
+       module, and `start` values are chosen so a fresh page shows exactly the
+       edition's base price.
+
+       `max` is the far end of the slider, and it is deliberately set at what one
+       of our largest customers *fully* using that product looks like rather than
+       at what a typical reader will enter. A ceiling sized for the typical reader
+       reads as the ceiling of the product: someone whose fleet is bigger than the
+       slider learns that we don't scale to them, which is the opposite of true.
+       Deployments, Neo, and Insights are the ones this matters most for, because
+       today's usage understates them — most customers have not turned them all
+       the way up yet, and the estimator shouldn't bake that in.
+
+       Nobody is pinned at the end regardless: the number input beside each
+       slider accepts anything up to $numberMaxFactor x these figures, so the
+       slider is for exploring the order of magnitude and the input is for saying
+       the exact number. That is also why one range can serve both editions —
+       there is no max that could move under a reader when they flip the toggle.
+
+       These spans are three to four orders of magnitude, so the slider is a power
+       curve rather than a linear scale; see theme/src/ts/pricing-calculator.ts.
+       `step` is the number input's arrow-key increment only — the slider's
+       granularity comes from the curve. */ -}}
+{{- $numberMaxFactor := 10 -}}
+{{- $meters := slice
+    (dict "id" "iac_resources"
+          "label" "IaC resources"
+          "tooltip" "Every resource declared in a Pulumi program counts, including component resources and stacks. A partial resource hour is billed as a full hour."
+          "min" 0 "max" 250000 "step" 100 "start" 500)
+    (dict "id" "esc_secrets"
+          "label" "ESC secrets"
+          "tooltip" "Static and dynamic secrets in the latest revision of each environment. Plaintext config is free, and secrets are billed for the whole month."
+          "min" 0 "max" 50000 "step" 10 "start" 0)
+    (dict "id" "neo_tokens"
+          "label" "Neo tokens (millions)"
+          "tooltip" "Neo tokens meter Neo-powered features: tasks, pull-request annotations, and natural-language search. Token volume varies with the number and complexity of those activities."
+          "min" 0 "max" 5000 "step" 5 "start" 0)
+    (dict "id" "workflow_minutes"
+          "label" "Workflow minutes"
+          "tooltip" "One shared pool across Pulumi Deployments and Insights: the duration of each deployment, plus time spent on cloud discovery and policy execution."
+          "min" 0 "max" 1000000 "step" 100 "start" 0)
+    (dict "id" "insights_resources"
+          "label" "Insights resources"
+          "tooltip" "Cloud resources discovered by Pulumi Insights, including resources that Pulumi doesn't manage."
+          "min" 0 "max" 2000000 "step" 500 "start" 0)
+-}}
+
+{{/* scroll-mt clears the site nav (64px) with room to spare, so a jump to
+     #calculator lands the card below the header rather than under it. The sticky
+     edition header above belongs to #compare and has stopped at that section's
+     bottom edge by the time this one is at the top of the viewport, so it doesn't
+     add to the offset the way it does for a feature row. */}}
+<section id="calculator" class="container mx-auto px-6 my-16 md:my-24 scroll-mt-28">
+    {{/* No overflow-hidden on the card: a tooltip opens above its label and would
+         be clipped by it. Nothing here has a background of its own to clip. */}}
+    <div class="card grid grid-cols-1 lg:grid-cols-[1fr_22rem] divide-y lg:divide-y-0 lg:divide-x divide-gray-200 bg-white">
+        <div class="p-6 md:p-8 flex flex-col gap-7">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                {{/* An overline that is still the section's heading, so the card isn't
+                     an unnamed landmark in the outline. It links to its own anchor —
+                     the estimator is worth linking to from elsewhere on the page and
+                     from a Slack thread, and a self-link is the conventional way to
+                     hand someone that URL. Inherits the overline's color and only
+                     underlines on hover, so it reads as a heading first. */}}
+                <h2 class="font-overline m-0">
+                    <a href="#calculator" class="no-underline hover:underline">Estimate your monthly cost</a>
+                </h2>
+
+                {{/* Same shape as the /releases/ and blog feed view toggles: a .btn-group
+                     of toggle buttons with the selected one marked aria-pressed, wearing
+                     the blog category filter's active colors. Toggle buttons rather than
+                     sr-only radios because .btn-group joins direct .btn children — radios
+                     interleaved between the labels would break its first/last-child
+                     rounding, and `peer-checked` uses a general sibling combinator that
+                     would light up every later segment. */}}
+                <div role="group" aria-label="Edition" class="btn-group shrink-0">
+                    {{ range $i, $e := $calcEditions }}
+                    <button type="button" data-calc-edition="{{ $e.id }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                            class="btn btn-sm btn-outline text-sm aria-pressed:border-gray-500 aria-pressed:bg-gray-100">{{ $e.name }}</button>
+                    {{ end }}
+                </div>
+            </div>
+
+            {{ range $m := $meters }}
+            <div class="flex flex-col gap-2" data-calc-meter="{{ $m.id }}" data-calc-max="{{ $m.max }}">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                    {{/* The tooltip wraps the label rather than sitting inside it, so the
+                         whole label is the hover target and the bubble centers over it. It
+                         has to be this way round: the component puts aria-labelledby on its
+                         trigger, so a tooltip *inside* the label would fold its own body
+                         into the label's text and rename the input. */}}
+                    <pulumi-tooltip class="inline-block">
+                        <label id="calc-{{ $m.id }}-label" for="calc-{{ $m.id }}-number" class="heading-6 m-0">
+                            {{ $m.label }}
+                            {{ partial "icon.html" (dict "name" "info" "class" "size-4 ml-0.5 inline text-gray-700") }}
+                        </label>
+                        <span slot="content">{{ $m.tooltip }}</span>
+                    </pulumi-tooltip>
+                    {{/* From sm up the rate sits to the left of its input, which is
+                         the roomy layout. On a phone those two plus the label are
+                         wider than the card, so they wrapped onto a line of their own
+                         — and since justify-content aligns each flex line
+                         independently, a line holding one item puts it at the start,
+                         leaving the five inputs at five different left edges (the rate
+                         strings are different widths: $3.00/M tokens against
+                         $0.0185/resource/mo). Stacking the rate under the input below
+                         sm leaves only the label and the input sharing a line, which
+                         fits.
+
+                         row-reverse rather than reordering the markup, so the input
+                         stays first in the DOM and the column keeps its natural order:
+                         the parent row aligns this group by its first baseline, which
+                         needs to be the input's at every width or the label stops
+                         lining up with it.
+
+                         ml-auto for the narrowest phones, where the longest labels can
+                         still push the group down to its own line: an auto margin
+                         belongs to the item rather than to the line, so it holds the
+                         group right whether it wrapped or not, and does nothing where
+                         the row already fits. */}}
+                    <div class="ml-auto flex flex-col items-end gap-1 sm:flex-row-reverse sm:items-center sm:gap-2">
+                        {{/* Wide enough for the seven or eight digits its max allows,
+                             plus the spinner Chrome draws inside the box on hover. */}}
+                        <input type="number" id="calc-{{ $m.id }}-number" class="form-input form-input-sm w-28 text-right tabular-nums"
+                               min="{{ $m.min }}" max="{{ mul $m.max $numberMaxFactor }}" step="{{ $m.step }}" value="{{ $m.start }}"
+                               inputmode="numeric" data-calc-number>
+                        <span class="text-xs text-gray-500 tabular-nums" data-calc-rate></span>
+                    </div>
+                </div>
+                {{/* A position on the curve, not the meter's value — the TS module
+                     converts between the two and writes the result into the number
+                     input above. It also sets the starting position, so this renders
+                     at 0, which is where the unpainted track already reads as being. */}}
+                <input type="range" id="calc-{{ $m.id }}-range" class="form-range" aria-labelledby="calc-{{ $m.id }}-label"
+                       min="0" max="1000" step="1" value="0" data-calc-range>
+            </div>
+            {{ end }}
+        </div>
+
+        {{- /* Every element the TS module shows and hides is a plain wrapper with
+               no display utility on it, because it toggles the `hidden` class:
+               `hidden` and `flex` are both display utilities, and which one wins
+               is generated-stylesheet order, not markup order. Put the flex on an
+               inner element instead of racing the cascade. */ -}}
+        <aside class="p-6 md:p-8 flex flex-col gap-6">
+            {{- /* The starting figures are the first edition's base price, which the
+                   `start` values above are chosen to produce exactly. They keep the
+                   panel from rendering blank before the module runs; every one of
+                   them is replaced on the first recompute. */ -}}
+            {{/* The figure never goes away — it is still the reader's best upper
+                 bound — but past the threshold it greys back and yields prominence
+                 to the note, which is the more useful answer at that size. */}}
+            <div class="relative" aria-live="polite">
+                {{/* Floating only from lg up, where the panel sits beside the sliders
+                     and there is empty card above the figure to float into. Below that
+                     the panel stacks underneath the meters, so an absolutely positioned
+                     popover lands on top of the last slider — it goes back in flow and
+                     simply pushes the figure down instead, at the panel's own width.
+
+                     Floating, it is inset to the panel's outer edges rather than its
+                     content box — 288px of content plus the 32px padding either side —
+                     so it lines up with the results column instead of sitting a step
+                     inside it, and the extra width buys the copy fewer lines.
+
+                     The caret is a rotated square in the same fill, half-buried in the
+                     card's bottom edge, so the two read as one shape; the popover keeps
+                     `relative` at every width so the caret has something to anchor to
+                     once it is no longer absolute itself.
+
+                     The link is violet-300, not violet-primary: violet-primary is a
+                     light-surface colour and would fail against service-black. 300 is
+                     what the docs dark theme remaps violet-primary to, so this is the
+                     same role, read for a dark surface — 7.9:1 here. */}}
+                <div class="hidden relative lg:absolute lg:bottom-full lg:-left-8 lg:-right-8 mb-4 p-4 z-10 rounded-lg bg-service-black" data-calc-volume-note>
+                    <p class="m-0 text-sm text-white">
+                        At this level, volume discounts and annual pricing can reduce your cost.
+                        <a href="/contact/?form=sales" data-track="pricing-calculator-volume-note" class="text-violet-300 hover:underline">Contact us</a>
+                        to learn how we can help you save as you scale.
+                    </p>
+                    <span aria-hidden="true" class="bg-service-black rounded-[2px] absolute left-1/2 -ml-1.5 -bottom-1.5 size-3 rotate-45"></span>
+                </div>
+
+                <p class="font-overline-sm text-gray-600 m-0">Estimated total</p>
+                <p class="mt-2 mb-0">
+                    <span class="heading-1 m-0 tabular-nums transition-colors" data-calc-total-value>${{ (index $calcEditions 0).base_usd }}</span>
+                    <span class="text-gray-500">/month</span>
+                </p>
+            </div>
+
+            <div>
+                <dl class="m-0 flex flex-col gap-2 text-sm border-t border-gray-200 pt-5">
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Credits used</dt>
+                        <dd class="m-0 tabular-nums" data-calc-credits-used>{{ (index $calcEditions 0).included_credits }}</dd>
+                    </div>
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Included with base</dt>
+                        <dd class="m-0 tabular-nums" data-calc-credits-included>{{ (index $calcEditions 0).included_credits }}</dd>
+                    </div>
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Base price</dt>
+                        <dd class="m-0 tabular-nums" data-calc-base>${{ (index $calcEditions 0).base_usd }}</dd>
+                    </div>
+                    <div class="flex items-baseline justify-between gap-3">
+                        <dt class="text-gray-700 m-0">Additional usage</dt>
+                        <dd class="m-0 tabular-nums" data-calc-overage>$0</dd>
+                    </div>
+                </dl>
+                <p class="form-help">One Pulumi Credit costs $1 USD.</p>
+            </div>
+
+            {{/* The two CTA blocks point at the same two destinations, so their
+                 data-track names carry the state they were clicked from — that is the
+                 only way to tell a Contact sales click we prompted from one the reader
+                 chose while looking at a price.
+
+                 mt-auto pins the CTAs and the disclaimer to the bottom of the panel.
+                 The blocks above them change height when the estimate crosses into
+                 contact-sales territory — a taller message replaces the figure and the
+                 usage breakdown disappears — and without this the buttons would jump
+                 up the page mid-drag. */}}
+            <div class="mt-auto flex flex-col gap-6">
+                <div data-calc-cta-default>
+                    <div class="flex flex-col gap-2">
+                        <a href="https://app.pulumi.com/signup?create-organization=1" data-track="pricing-calculator-trial" class="btn btn-primary btn-lg w-full">Start a free trial</a>
+                        <a href="/contact/?form=sales" data-track="pricing-calculator-contact-sales" class="btn btn-secondary w-full">
+                            Contact sales
+                            {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden" data-calc-cta-contact>
+                    <div class="flex flex-col gap-2">
+                        <a href="/contact/?form=sales" data-track="pricing-calculator-contact-sales-above-threshold" class="btn btn-primary btn-lg w-full">Contact sales</a>
+                        <a href="https://app.pulumi.com/signup?create-organization=1" data-track="pricing-calculator-trial-above-threshold" class="btn btn-secondary w-full">
+                            Start a free trial
+                            {{ partial "icon.html" (dict "name" "phosphor/arrow-right" "class" "size-4") }}
+                        </a>
+                    </div>
+                </div>
+
+                <p class="form-help my-0">
+                    A full-month estimate at list prices. Excludes taxes and volume discounts.
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    {{- /* Spelled out rather than dumping `$calc`, so the payload is exactly the
+           CalculatorConfig the TS module declares — `card_tooltip` is the cards'
+           display spec and has no business in the arithmetic.
+
+           safeJS, or Hugo emits the JSON as a quoted JS *string literal* —
+           `"{\"contact_sales_resources\":3000,…}"` — and JSON.parse hands the module a
+           string instead of the config. The block is all numbers, so there is
+           nothing here to escape. */ -}}
+    {{- $config := dict
+        "contact_sales_resources" $calc.contact_sales_resources
+        "meters" $calc.meters
+        "editions" $calc.editions -}}
+    <script type="application/json" id="pricing-calculator-config">{{ $config | jsonify | safeJS }}</script>
+</section>

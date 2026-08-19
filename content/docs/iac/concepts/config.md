@@ -20,9 +20,9 @@ aliases:
 
 In many cases, different stacks for a single project will need differing values. For instance, you may want to use a different size for your AWS EC2 instance, or a different number of servers for your Kubernetes cluster between your development and production stacks.
 
-Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI](/docs/cli/) and the programming model.
+Pulumi offers a configuration system for managing such differences. Instead of hard-coding the differences, you can store and retrieve configuration values using a combination of the [CLI](/docs/iac/cli/) and the programming model.
 
-The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/concepts/projects#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. Stack configuration files should be committed to version control because their values drive the behavior of your Pulumi program.
+The key-value pairs for any given stack are stored in [your project's stack settings file](/docs/iac/concepts/projects/#stack-settings-file), which is automatically named `Pulumi.<stack-name>.yaml`. Stack configuration files should be committed to version control because their values drive the behavior of your Pulumi program.
 
 ## Configuration Options {#config-stack}
 
@@ -35,9 +35,9 @@ You can use both the CLI and the programming model for your Pulumi configuration
 
 ## Configuration Keys
 
-Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name](/docs/concepts/projects#project-name) from `Pulumi.yaml` as the namespace.
+Configuration keys use the format `[<namespace>:]<key-name>`, with a colon delimiting the optional namespace and the actual key name. In cases where a simple name without a colon is used, Pulumi automatically uses the current [project name](/docs/iac/concepts/projects/#pulumi-yaml) from `Pulumi.yaml` as the namespace.
 
-As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components](/docs/concepts/resources#components) to define their own key spaces without risk of conflicting with other components, packages, or projects.
+As an example, this capability allows the AWS package to accept a configuration value for `aws:region` without conflicting with other packages using the common key name `region`. It also allows [custom components](/docs/iac/concepts/components/) to define their own key spaces without risk of conflicting with other components, packages, or projects.
 
 ## Setting and Getting Configuration Values
 
@@ -47,7 +47,7 @@ The `pulumi config` CLI command can get, set, or list configuration key-value pa
 * `pulumi config get <key>` gets an existing configuration value with the key `<key>`.
 * `pulumi config` gets all configuration key-value pairs in the current stack (as JSON if `--json` is passed).
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 When using the `config set` command, any existing values for `<key>` will be overridden without warning.
 {{% /notes %}}
 
@@ -103,7 +103,7 @@ Configuration values can be retrieved for a given stack using either {{< pulumi-
 Configuration values can only be **read** during program execution, not set. To programmatically manage stack configurations (like setting config values or creating stacks dynamically), use [Automation API](/docs/iac/concepts/automation-api/). Automation API provides full programmatic control over Pulumi operations, including writing configuration values to stack files and managing stack lifecycle.
 {{% /notes %}}
 
-For potentially-secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenever serialized (see [secrets](/docs/concepts/secrets/) for more on managing secret values).
+For potentially secret config, use {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}, which will return the config value as an `Output` which carries both the value and the secret-ness of the config value so that it will be encrypted whenever serialized (see [secrets](/docs/iac/concepts/secrets/) for more on managing secret values).
 
 Configuration methods operate on a particular namespace, which by default is the name of the current project. Passing an empty constructor to {{< pulumi-config >}}, as in the following example, sets it up to read values set without an explicit namespace (e.g., `pulumi config set name Joe`):
 
@@ -255,7 +255,7 @@ variables:
 
 {{< /chooser >}}
 
-Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/concepts/resources/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
+Similarly, if you are writing code that will be imported into a broader project, such as your own library of [Pulumi components](/docs/iac/concepts/components/), you should instead pass your library's name to the {{< pulumi-config >}} constructor to limit the scope of the query to values prefixed with the name of your library:
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
@@ -645,7 +645,7 @@ There are cases where configuration for more than one stack in a given project i
 
 Project level configuration is defined inside the project folder's `Pulumi.yaml` file using one's favorite editor.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 At this time, the `pulumi config set` command does not support project level configuration. Therefore the configuration values are entered directly in the `Pulumi.yaml` file. Also, project level configuration only supports clear text configuration. Support for [pulumi config](https://github.com/pulumi/pulumi/issues/12041) and [project-level secrets](https://github.com/pulumi/pulumi/issues/11549) and other features are planned.
 {{% /notes %}}
 
@@ -724,7 +724,7 @@ config:
 
 The stacks will default to using `BroomeLLC` for the name configuration item. And the `pulumi` cli will throw an error if the stack configuration file contains a `name` property set to, say, an integer. Similarly, if the stack configuration file has a `subnets` property and it is not defined as an array of strings, the `pulumi` cli will throw an error.
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 At this time, configuration specifications are not supported for structured configuration.
 {{% /notes %}}
 
@@ -747,7 +747,7 @@ This is a list of configuration keys that the Pulumi CLI is aware of:
 
 ### `pulumi:disable-default-providers`
 
-A list of packages for which [default providers should be disabled](/docs/concepts/resources/providers#disabling-default-providers). `*` disables default providers for all
+A list of packages for which [default providers should be disabled](/docs/iac/concepts/providers/#disabling-default-providers). `*` disables default providers for all
 packages.
 
 In the following example, the default providers for [aws](/registry/packages/aws/) and [kubernetes](/registry/packages/kubernetes/) are disabled.
@@ -761,7 +761,7 @@ config:
 
 ### `pulumi:tags`
 
-A list of [stack tags](/docs/concepts/stack/#stack-tags) which are read by the Pulumi CLI and automatically applied on the stack at
+A list of [stack tags](/docs/iac/concepts/stacks/#stack-tags) which are read by the Pulumi CLI and automatically applied on the stack at
 every `pulumi up` or `pulumi refresh` action.
 
 ```yaml
@@ -778,6 +778,8 @@ Stack tags applied by Pulumi CLI are listed in the `Tags` section of the Overvie
 ![Tags applied by Pulumi CLI](/images/docs/concepts/stack-config-tags.png)
 
 ## Using Pulumi ESC from Pulumi Stack Config
+
+{{< pulumi-cloud />}}
 
 Often there is common configuration and secrets you do not want to duplicate in various stack configuration files. Pulumi ESC can help with that!
 

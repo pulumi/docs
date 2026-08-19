@@ -1,6 +1,6 @@
 ---
 title_tag: "AWS | Pulumi Integrations"
-meta_desc: AWS integration with Pulumi — providers, packages, architecture templates, guides, ESC integrations, Insights account scanning, and pre-built policy packs.
+meta_desc: AWS integration with Pulumi — providers, packages, architecture templates, guides, ESC integrations, cloud account scanning, and pre-built policy packs.
 title: AWS
 linktitle: AWS
 h1: AWS
@@ -15,13 +15,13 @@ aliases:
 - /docs/clouds/aws/
 ---
 
-Build, deploy, and manage AWS infrastructure with Pulumi. This page links to every Pulumi capability for AWS: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), Insights account scanning, and policy packs.
+Build, deploy, and manage AWS infrastructure with Pulumi. This page links to every Pulumi capability for AWS: Infrastructure as Code, Environments, Secrets, and Configuration (ESC), cloud account scanning, and policy packs.
 
 To start from scratch, follow the [AWS get-started guide](/docs/iac/get-started/aws/).
 
 ## Infrastructure as Code
 
-[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, or YAML — with deterministic deployments, a state backend, and a rich ecosystem of packages.
+[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
 
 Pulumi provides several packages for working with AWS. Most projects combine more than one. For a deeper comparison, see [Choosing a Pulumi AWS provider](/docs/iac/guides/clouds/aws/providers/).
 
@@ -47,7 +47,7 @@ Start new AWS projects from a pre-built template:
 
 ## Guides
 
-Hands-on Infrastructure as Code guides for building on AWS with Pulumi.
+Hands-on infrastructure as code guides for building on AWS with Pulumi.
 
 - [Pulumi CDK Adapter for AWS](/docs/iac/guides/clouds/aws/cdk/) — use AWS CDK constructs inside a Pulumi program.
 - [AWS Identity & Access Management (IAM)](/docs/iac/guides/clouds/aws/iam/) — model IAM roles, policies, and users in code.
@@ -76,7 +76,7 @@ ESC integrates directly with AWS for short-lived credentials and secret retrieva
 
 [Pulumi Insights](/docs/insights/) continuously scans your clouds to build a searchable inventory of every resource — whether created by Pulumi or not — so you can find, audit, and govern cloud infrastructure across accounts, regions, and providers.
 
-For AWS, Insights connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Insights discovery overview](/docs/insights/discovery/accounts/) for background.
+For AWS, Insights connects AWS accounts (including AWS Partitions) to inventory existing resources, search across accounts, and export data. See [Add an AWS account](/docs/insights/discovery/get-started/create-accounts/) for a step-by-step setup guide and [Discovery overview](/docs/insights/discovery/) for background.
 
 ## Policy packs
 

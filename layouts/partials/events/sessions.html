@@ -1,0 +1,85 @@
+{{- /*
+    Event Sessions Partial
+
+    The one place that knows how an event's `sessions:` front matter turns into a
+    list of sessions. An event that runs twice — say an Americas slot and an EMEA
+    slot — is a single page with a `sessions:` array; an event that runs once has
+    no `sessions:` key at all. Every consumer (the detail page, the events list,
+    the homepage row, RSS, in-post card embeds, schema.org) ranges over what this
+    returns and never looks at `sessions:` directly, so a single-session event and
+    one session of a multi-session event are the same shape downstream.
+
+    Per-session `duration`, `form`, and `presenters` are optional and fall back to
+    the event's top-level values, so a pair of sessions that differ only in date
+    and registration form says so and nothing else. Everything genuinely shared —
+    title, description, learn, location, tags, meta images — stays top-level and
+    is never per-session.
+
+    Parameters: the event page (.)
+
+    Returns: a date-ascending slice of dicts, one per session:
+      key         DOM/anchor key: "session-<anchorized label>" when the event has
+                  more than one session, "session-1" when it has one (so a lone
+                  session never mints a public anchor nobody links to)
+      label       the session label ("Americas", "EMEA"); "" for single-session
+      date        the session's start time
+      unix        that start as epoch milliseconds. Hugo keeps `sortable_date` a
+                  string, so sorting or comparing the raw value is lexical — fine
+                  within one timezone and wrong the moment two sessions carry
+                  different offsets, which is the whole point of this feature.
+                  Sort and compare on this.
+      duration    per-session, or the event's
+      form        per-session, or the event's
+      presenters  per-session, or the event's
+      index       position after sorting, 0-based
+
+    Returns an empty slice for a page under content/events/ with neither key —
+    a redirect stub, which is still an events-typed page and so still reaches the
+    schema collector. Callers use `range`/`with`, so empty means "nothing to say".
+
+    Pure: depends only on the page's front matter, never on `now`, so "has this
+    session passed" is the caller's business and callers are free to partialCache
+    the result. Top-level `sortable_date` stays authoritative for the event as a
+    whole (it must equal the earliest session's date — see checkEventSessions in
+    scripts/lint/lint-markdown.js), so schema, meta images, and search keep
+    reading it.
+*/ -}}
+
+{{- $page := . -}}
+{{- $raw := $page.Params.sessions -}}
+{{- $sessions := slice -}}
+
+{{- if $raw -}}
+    {{- $multi := gt (len $raw) 1 -}}
+    {{- range $raw -}}
+        {{- $label := cond $multi (string (.label | default "")) "" -}}
+        {{- $sessions = $sessions | append (dict
+            "key" (cond $multi (printf "session-%s" (anchorize $label)) "session-1")
+            "label" $label
+            "date" .sortable_date
+            "unix" (.sortable_date | time.AsTime).UnixMilli
+            "duration" (.duration | default $page.Params.duration)
+            "form" (.form | default $page.Params.form)
+            "presenters" (.presenters | default $page.Params.presenters)
+        ) -}}
+    {{- end -}}
+    {{- $sessions = sort $sessions "unix" "asc" -}}
+{{- else if $page.Params.sortable_date -}}
+    {{- $sessions = slice (dict
+        "key" "session-1"
+        "label" ""
+        "date" $page.Params.sortable_date
+        "unix" ($page.Params.sortable_date | time.AsTime).UnixMilli
+        "duration" $page.Params.duration
+        "form" $page.Params.form
+        "presenters" $page.Params.presenters
+    ) -}}
+{{- end -}}
+
+{{- /* Index after sorting, so it matches the order everything renders in. */ -}}
+{{- $indexed := slice -}}
+{{- range $i, $session := $sessions -}}
+    {{- $indexed = $indexed | append (merge $session (dict "index" $i)) -}}
+{{- end -}}
+
+{{- return $indexed -}}

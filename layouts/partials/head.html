@@ -198,7 +198,10 @@
                 <meta name="author" content="{{ .name }}" />
             {{ end }}
         {{ end }}
-        {{ if not $.PublishDate.IsZero }}
+        {{/* no_authored_date: see layouts/partials/schema/collectors/article-entity.html
+             for why content-adapter pages with only a "lastmod" date map must not
+             have their cascade-backfilled PublishDate treated as a real publish date. */}}
+        {{ if and (not $.PublishDate.IsZero) (not $.Params.no_authored_date) }}
             <meta property="article:published_time" content="{{ $.PublishDate.Format "2006-01-02T15:04:05Z07:00" }}" />
         {{ end }}
         {{ if not $.Lastmod.IsZero }}
@@ -507,9 +510,16 @@
 
     {{- end }}
 
-    <!-- Apply anchor links to headings in the docs, blog and taxonomy pages. -->
+    <!-- Apply anchor links to headings in the docs, blog and taxonomy pages.
+         Self-hosted (static/js/anchor-js.min.js, vendored from anchor-js v4.1.0's anchor.min.js)
+         rather than loaded from cdnjs: this removes a third-party render-relevant dependency and
+         its DNS/TLS/connection setup cost from every docs/tutorials/blog/authors/tags/registry
+         page, and eliminates the single point of failure where a cdnjs slowdown or outage delayed
+         anchors sitewide. The vendored file's SHA-512 matches cdnjs's own published SRI hash for
+         anchor-js@4.1.0/anchor.min.js (sha512-8IXYpHF8LXD5JYo9bhj3ja2uLOJ7QJ/o+F1DSitgu0HmT5W0Vv3vTi+p5nn9jbi/cPnskPO9qT0RY5VAdofRJQ==,
+         per https://api.cdnjs.com/libraries/anchor-js/4.1.0), confirming it is unmodified. -->
     {{ if and (not .IsHome) (.Section) (in "docs tutorials blog authors tags registry" .Section) }}
-        <script async defer src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script async defer src="{{ "js/anchor-js.min.js" | relURL }}"></script>
         <script>
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.
             window.addEventListener("load", function (event) {

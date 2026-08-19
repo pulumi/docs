@@ -304,10 +304,28 @@ jobs:
           # real changes. Retry once after a pause to catch the race
           # before falling through to the empty-diff skip.
           fetch_pr() {
-            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,files,title
+            gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,changedFiles,files,title
           }
-          DATA=$(fetch_pr)
-          if [[ "$(echo "$DATA" | jq -r '.files | length')" == "0" ]]; then
+          # Retry up to 3 times on transient server-side errors (5xx / 503).
+          # The empty-diff retry below is a separate, orthogonal concern.
+          fetch_pr_with_retry() {
+            local attempt delay out
+            for attempt in 1 2 3; do
+              if out=$(fetch_pr 2>&1); then
+                echo "$out"
+                return 0
+              fi
+              if [[ "$attempt" -lt 3 ]]; then
+                delay=$(( (attempt - 1) * 15 ))
+                echo "review: fetch_pr attempt $attempt failed (transient error?), retrying in ${delay}s" >&2
+                sleep "$delay"
+              fi
+            done
+            echo "$out" >&2
+            return 1
+          }
+          DATA=$(fetch_pr_with_retry)
+          if [[ "$(echo "$DATA" | jq -r '.changedFiles')" == "0" ]]; then
             echo "review: pr=$PR file_count=0 on first read, retrying after 30s (likely post-force-push race)"
             sleep 30
             DATA=$(fetch_pr)
@@ -328,8 +346,21 @@ jobs:
           ADDITIONS=$(echo "$DATA" | jq -r '.additions')
           DELETIONS=$(echo "$DATA" | jq -r '.deletions')
           TITLE=$(echo "$DATA" | jq -r '.title')
-          FILE_COUNT=$(echo "$DATA" | jq -r '.files | length')
+          # `.changedFiles` is the true total; `.files` is capped at 100 by the
+          # GraphQL page `gh pr view` requests, so `.files | length` under-reports
+          # (and stalls at 100) on a large PR.
+          FILE_COUNT=$(echo "$DATA" | jq -r '.changedFiles')
           FILES_LIST=$(echo "$DATA" | jq -r '.files[] | "  - \(.path) (+\(.additions)/-\(.deletions))"')
+          if [[ "$FILE_COUNT" =~ ^[0-9]+$ ]] && [ "$FILE_COUNT" -gt 100 ]; then
+            FILES_LIST="$FILES_LIST"$'\n'"  - … and $((FILE_COUNT - 100)) more (list truncated at 100 by the API)"
+          fi
+          # Bare paths, one per line, for path matching. Two reasons this can't
+          # reuse FILES_LIST: that is the human-readable "  - path (+n/-m)" form
+          # rendered into the prompt, whose two-space bullet prefix means an
+          # anchored ^path/ pattern never matches it; and it is capped at 100,
+          # so a templating change sorting past that position would be missed.
+          # The paginated REST endpoint returns every file.
+          FILES_PATHS=$(gh api --paginate "repos/$REPO/pulls/$PR/files" --jq '.[].filename')
 
           # force=true (set by claude-new.yml on #new-review dispatch)
           # bypasses the auto-skip heuristics. The user explicitly asked
@@ -396,7 +427,7 @@ jobs:
           # build-and-deploy workflow runs a real Hugo build on every PR;
           # any templating error there blocks the merge regardless.
           TEMPLATING_CHANGED="false"
-          if printf '%s\n' "$FILES_LIST" | grep -qE '^(assets|config|data|i18n|layouts|styles|theme)/|^(hugo|config)\.(toml|yaml|yml)$'; then
+          if printf '%s\n' "$FILES_PATHS" | grep -qE '^(assets|config|data|i18n|layouts|styles|theme)/|^(hugo|config)\.(toml|yaml|yml)$'; then
             TEMPLATING_CHANGED="true"
           fi
 
@@ -544,7 +575,11 @@ jobs:
       # Other skip paths (trivial / fmonly / draft / bot) never had a prior
       # state label, so they don't need this.
       - name: Clear stale review-state label (oversized skip)
-        if: steps.check-access.outputs.has_write_access == 'true' && steps.pr-context.outputs.skip_reason == 'oversized'
+        # No has_write_access conjunct: the `Check repository write access`
+        # step above only runs when skip_reason is empty, so on the oversized
+        # path its output is always '' and adding it here made this step
+        # unreachable — the stale review:error label was never cleared.
+        if: steps.pr-context.outputs.skip_reason == 'oversized'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -555,10 +590,13 @@ jobs:
             --clear
 
       # Run Vale on PR-changed files in content/docs and content/blog. Findings
-      # are filtered to PR-introduced lines only, capped (10/file, 50 total),
-      # and written to .vale-findings.json for the review skill to consume.
-      # continue-on-error keeps Vale problems from blocking the review --
-      # style nits are nags, not gates.
+      # are filtered to PR-introduced lines only and capped (10/file, 50 total);
+      # blocker-tier findings are exempt from both caps so one is never silently
+      # dropped. Written to .vale-findings.json for the review skill to consume.
+      # continue-on-error keeps a Vale *crash* from blocking the review: no
+      # findings is a degraded review, not a failed one. That is separate from
+      # what the findings mean -- advisory ones are nags, but the blocker tier
+      # lands in 🚨 and drives review:outstanding-issues.
       - name: Run Vale on PR-changed prose
         if: steps.pr-context.outputs.skip_reason == ''
         id: vale
@@ -568,7 +606,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
@@ -587,7 +625,7 @@ jobs:
           # syntax patterns and emits Vale-shaped JSON we merge into the raw
           # findings before filtering. Same `||` fallback discipline.
           python3 .claude/commands/docs-review/scripts/markdown-syntax-findings.py \
-            $CHANGED > .syntax-findings.json 2>/dev/null \
+            $CHANGED > .syntax-findings.json \
             || echo '{}' > .syntax-findings.json
           # Concatenate per-file alert arrays (jq's `*` shallow-merges and would
           # *replace* Vale's array with the script's for any overlapping file).
@@ -596,7 +634,7 @@ jobs:
             && mv .vale-raw.merged.json .vale-raw.json \
             || true
           python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-            --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json \
             || echo '[]' > .vale-findings.json
 
       # Pre-fetch external URLs added by the PR diff. Pass 2 of the External
@@ -615,14 +653,14 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '[]' > .fetched-urls.json
             echo "extract-urls: no in-scope prose files changed; skipping"
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/extract-urls-and-fetch.py \
-            --pr "$PR" --out .fetched-urls.json 2>/dev/null \
+            --pr "$PR" --out .fetched-urls.json \
             || echo '[]' > .fetched-urls.json
 
       # ---- Claim extraction ------------------------------------------------
@@ -695,10 +733,7 @@ jobs:
 
       - name: Merge candidate claims → .candidate-claims.json
         if: steps.pr-context.outputs.skip_reason == ''
-        id: merge-claims
         continue-on-error: true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 .claude/commands/docs-review/scripts/merge-claims.py \
             --regex .candidate-claims-regex.json \
@@ -758,8 +793,8 @@ jobs:
       # verify-claims.py routes every entry in .candidate-claims.json to one of
       # three lanes — Pass 1 (pulumi-internal: `gh` + local reads), Pass 2
       # (external w/ a fetched URL: consult .fetched-urls.json), Pass 3
-      # (external w/o a fetched URL: server-side web_search) — fires ≤8 parallel
-      # Sonnet 4.6 verifiers via direct /v1/messages with a forced `verify_claim`
+      # (external w/o a fetched URL: server-side web_search) — fires ≤16 parallel
+      # Sonnet 5 verifiers via direct /v1/messages with a forced `verify_claim`
       # tool, and emits .verified-claims.json. The main review reads that file as
       # the verdict *source* (it does NOT re-verify); validate-pinned.py's
       # `verified-claims-trail-faithful` rule fails the review if the rendered
@@ -803,7 +838,7 @@ jobs:
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/editorial-balance-detect.py \
-            --pr "$PR" --out .editorial-balance.json 2>/dev/null \
+            --pr "$PR" --out .editorial-balance.json \
             || echo '{"trigger": null, "files": []}' > .editorial-balance.json
 
       # Pre-compute cross-sibling discovery so the model uses a structurally-
@@ -826,7 +861,7 @@ jobs:
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/cross-sibling-discover.py \
-            --pr "$PR" --out .cross-sibling-discovery.json 2>/dev/null \
+            --pr "$PR" --out .cross-sibling-discovery.json \
             || echo '{"files": []}' > .cross-sibling-discovery.json
 
       # Pre-compute frontmatter validation: menu-parent identifier resolution
@@ -850,7 +885,7 @@ jobs:
             exit 0
           fi
           python3 .claude/commands/docs-review/scripts/frontmatter-validate.py \
-            --pr "$PR" --out .frontmatter-validation.json 2>/dev/null \
+            --pr "$PR" --out .frontmatter-validation.json \
             || echo '{"files": [], "global_identifier_map_size": 0, "global_alias_map_size": 0}' > .frontmatter-validation.json
 
       # Pre-compute Hugo build artifact: full `hugo --renderToMemory`
@@ -911,7 +946,7 @@ jobs:
       # pre-step artifacts so the Opus job EDITS rather than ASSEMBLES — the 🔍
       # trail (verbatim from .verified-claims.json), bucket-count table,
       # investigation-log scaffold, 📊 Editorial-balance Tier 1, #### Style
-      # findings block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
+      # suggestions block, 📜 Review-history line, and stub 🚨/⚠️ bullets are laid
       # out; <TODO> tokens mark the parts that are the reviewer's (summary,
       # confidence levels, fix prose, cross-sibling read count). The composer
       # runs validate-pinned.py on its own draft (--skip-rule no-todo-tokens)
@@ -980,7 +1015,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Expose ANTHROPIC_API_KEY in the step env so Bash sub-shells (e.g.
-          # `pinned-comment.sh upsert-validated → validator-fix.py → claude -p
+          # the Step C2 `validator-fix.py → claude -p
           # --bare`) can authenticate without OAuth — OAuth state isn't
           # available in subprocesses spawned by the action. The `with:
           # anthropic_api_key` input below configures the action's own
@@ -1043,12 +1078,12 @@ jobs:
             - the bucket-count table (a *starting point* matching the stub-bullet counts);
             - the 🔍 Verification trail — one line per `.verified-claims.json` verdict, verbatim: verdict word, per-verdict emoji (`verified` ✅ · `matches` 🤝 · `not-a-claim` ➖ · `unverifiable` 🤷 · `contradicted` ❌ · `mismatch` ⚔️ · `framing-drift` 🌀), evidence pointer, source;
             - the 📊 Editorial-balance Tier 1 (blog only — empty form when `trigger=null`, rich form with section-depth stats + outliers otherwise; Tier 2 vendor/FAQ counts are `<TODO>`);
-            - the `#### Style findings` block (from `.vale-findings.json`, with the correct inline-vs-collapse render mode already chosen);
+            - the `#### Style suggestions` block (advisory Vale findings from `.vale-findings.json`, expanded, uncounted) plus any `[style-blocker]` bullets rendered into 🚨 Outstanding (blocker-tier Vale findings, counted);
             - the empty 💡 / ✅ forms;
             - the 📜 Review-history line (timestamp + SHA + `<TODO: one-line summary>`);
-            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + evidence pointer + a `<TODO>` marker.
+            - stub 🚨 / ⚠️ bucket bullets — one `**[L…]**`-prefixed bullet per *promoting* verdict (`contradicted`/`mismatch` → 🚨; `framing-drift`, `unverifiable`, and low-confidence `verified` → ⚠️), each carrying the claim text + the verdict (and its `framing:` note when present) + a `<TODO>` marker. The evidence/source pointer is deliberately NOT repeated in the bullet — it already renders verbatim on that claim's 🔍 trail line, and duplicating it put ~10% of the comment between the claim and the fix. The trail is the evidence record; the bucket bullet is the instruction.
 
-            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote a `framing-drift` ⚠️ stub to 🚨 when the drifted phrasing also rides `social.*` frontmatter (it auto-posts on merge) or materially misleads, promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way; a `turn_cap_exhausted` stub describes a retryable verifier budget failure — never call it out-of-scope); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished) — and if a `> [!WARNING]` automated-fact-checking banner sits between the header and the Summary (the fact-check verifier was degraded this run), preserve it verbatim, keep the pre-filled `facts` row at LOW, and write the Summary in unconfirmed terms; do NOT delete the banner or upgrade `facts` (this `> [!WARNING]` is usable-but-degraded, distinct from the discard-the-draft `> [!CAUTION]`); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (style findings count in ⚠️); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding and `framing-drift` in ⚠️ or 🚨; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
+            **Your job is to EDIT this draft, not rebuild it.** Do NOT re-parse `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` — the draft is the parsed view. Do NOT call `python3 -c` to slice artifacts. Do NOT re-dispatch the claim-finder subagents (extraction already happened). Do NOT WebFetch / re-verify claims (the trail is the verdict source — `verified-claims-trail-faithful` fails the review if you flip a verdict; if you believe one is wrong, render it as recorded and open a follow-up issue). Follow `.claude/commands/docs-review/ci.md` §2–4 for the editorial pass: (a) triage each `<TODO>`-marked stub bucket bullet — remove spurious ones (and decrement the matching count-table cell), write the fix prose / suggestion block for real ones, mirror `framing:` notes (anti-hedge for `⚔️ mismatch`), promote a `framing-drift` ⚠️ stub to 🚨 when the drifted phrasing also rides `social.*` frontmatter (it auto-posts on merge) or materially misleads, promote an `unverifiable` ⚠️ stub to 🚨 if it's a factual blocker (file the author-question line either way; a `turn_cap_exhausted` stub describes a retryable verifier budget failure — never call it out-of-scope); (b) add the findings the composer couldn't pre-stub — Hugo-build errors & link-integrity (from `.hugo-build.json`), frontmatter alias/URL collisions (from `.frontmatter-validation.json`, triaging PR-internal renames), internal-link/shortcode breaks in the content, cross-sibling mismatches (from your in-review sibling-read fan-out), code-examples findings, editorial-balance threshold flags, intuition-flag promotions, domain two-question-test findings — each as its 🔍 trail line (if it's a claim/sibling check) AND its `**[L…]**` bucket bullet, prefixes consistent; (c) replace the cross-sibling investigation-log placeholder with the real `X of N siblings` count; (d) write the Summary paragraph and the Review-confidence levels + notes (add/remove rows per the references you actually applied; don't say HIGH unless the work finished) — and if a `> [!WARNING]` automated-fact-checking banner sits between the header and the Summary (the fact-check verifier was degraded this run), preserve it verbatim, keep the pre-filled `facts` row at LOW, and write the Summary in unconfirmed terms; do NOT delete the banner or upgrade `facts` (this `> [!WARNING]` is usable-but-degraded, distinct from the discard-the-draft `> [!CAUTION]`); (e) fill the Review-history `<TODO: one-line summary>`; (f) fill the Tier-2 editorial-balance `<TODO>`s if the §📊 section is in rich form; (g) keep the body self-consistent — count-table cells == bucket-bullet counts (advisory `[style]` bullets are NOT counted in ⚠️; `[style-blocker]` bullets ARE counted in 🚨); every 🔍 trail line corresponds to a verdict (you may add, may not drop a candidate-claims-floor entry); every `**[L…]**` bucket bullet matches a trail record; `contradicted`/`mismatch` trail verdicts surface in 🚨 Outstanding and `framing-drift` in ⚠️ or 🚨; (h) apply the `docs-review:references:output-format` DO-NOT list. On a re-entrant run, the draft's 📜 history has only the new line and ✅ Resolved is empty — merge in the prior pinned comment's history (append-only) and populate ✅ Resolved per `docs-review:references:update`.
 
             **If `.review-draft.md` is absent, or its first lines are a `> [!CAUTION]` composer-failed banner, ignore the draft entirely** and assemble the review manually per `ci.md` §Fallback (read `.verified-claims.json` / `.candidate-claims.json` / `.vale-findings.json` / `.editorial-balance.json` / `.hugo-build.json` / `.frontmatter-validation.json` / `.cross-sibling-discovery.json` directly and render per `docs-review:references:output-format` — `.candidate-claims.json` is the claim floor whose every entry must surface a verdict line in the trail). That is the pre-composer procedure; it's the safety net, not the normal path.
 
@@ -1056,9 +1091,11 @@ jobs:
 
             The composer already rendered the §📊 Editorial-balance section's Tier 1 form into `.review-draft.md` (empty form when `.editorial-balance.json.trigger=null`, rich form with section-depth count/mean/median/std + outliers otherwise). Don't touch the Tier 1 stats — `editorial-balance-counts-faithful` enforces them against the JSON. Your job: fill the Tier 2 `<TODO>`s (vendor / entity mention counts, FAQ steering ratios) per `docs-review:references:blog` §Priority 2.5, and decide whether the Tier 1 outliers and any Tier 2 threshold trips warrant a ⚠️ bullet — Tier 3 don't-flag exceptions (single-subject post w/ parenthetical competitor mentions; intentionally asymmetric framing) remain your judgment.
 
-            ## Style findings
+            ## Style suggestions
 
-            The composer already rendered the `#### Style findings` block from `.vale-findings.json` (correct inline-vs-collapse render mode, the `category` field never the `rule` field, per-file `<details>` roll-ups in collapse mode). Don't rebuild it. Style findings are nags, not blockers — never put them in 🚨 Outstanding. If you remove a false-positive style bullet, decrement the ⚠️ count-table cell.
+            The composer already split Vale findings into two tiers and rendered both. Don't rebuild either. **Blocker tier** (`[style-blocker]` bullets in 🚨 Outstanding, from the `blocker:` allowlist in `vale-deterministic-fixes.yaml` — wrong or deprecated product names, banned terms, misspellings, agreement errors): these are near-zero-false-positive correctness findings; never delete, demote, or reword them, and leave their 🚨 count intact. **Never author a `[style-blocker]` bullet yourself** — that marker means "the composer put this here from Vale's blocker tier" and it exempts the bullet from trail-matching, so writing one routes an unverified finding into 🚨 behind a check. If you find a real issue Vale missed and it belongs in 🚨, render it as an ordinary `**[L…]**` bullet with a matching 🔍 trail record. The `style-blocker-provenance` validator rule fails the review otherwise. **Advisory tier** (the `#### Style suggestions` block under ⚠️, expanded and grouped per file, the `category` field never the `rule` field): these are nags — they are NOT counted in the ⚠️ count-table cell, so if you remove a false-positive advisory bullet, do NOT decrement any count. **Delete false positives silently.** Do not list them, count them, name the rule that produced them, or add a sentence explaining why they were omitted — a bullet you deleted is one the author never needed to read about, and narrating it just re-adds the noise you removed (DO-NOT list item 1, "no retracted findings").
+
+            **Inline-suggestion sidecar.** As the last act of the editorial pass, triage the ADVISORY style bullets and Write `.style-suggestions.json` (a JSON array; write `[]` if none qualify) for the ones whose rewrite is a clear improvement. Schema per entry: `{"file": "<path>", "line": <n>, "original": "<exact text on that line>", "replacement": "<new text>", "category": "<category>", "note": "<≤10-word reason>"}`. A workflow step validates each entry against the diff and file content and posts them as one-click GitHub `suggestion` comments — you never post them yourself. Convert a finding ONLY when ALL hold: (a) the rewrite preserves meaning exactly — a hedge that is factually load-bearing ("usually completes in five minutes") is NOT a conversion candidate, deleting it would overpromise; (b) the fix is contained on the single flagged line; (c) you are confident the result reads better, not just shorter. Skip false positives entirely (delete their bullets as usual). Cap at 10 — prefer the highest-reader-impact ones. `original` must be the exact substring on that line in the checked-out file, or validation drops the entry. Do NOT remove the corresponding `[style]` bullet — the block stays the complete record; the suggestion is the actionable copy. **Never write the ✏️ mark, and never write the ✏️ banner line under the count table.** The workflow writes both after posting, from the set the GitHub API accepted — you cannot know which entries survive validation (a blocker-line collision, an anchor mismatch, or the cap can drop one), so a mark or a count you author risks promising buttons that aren't there. Any ✏️ you add is stripped and recomputed. The mark is keyed to the **line**, not the finding: one suggestion rewrites a whole line, so if that line carries two style findings both bullets get a ✏️. Marks can therefore outnumber the banner's count — the banner counts buttons, the marks point at the lines they sit on. That is expected; do not "reconcile" it. Blocker findings are never suggestions, and neither is anything sharing a LINE with one — a suggestion replaces the whole line, so it would re-commit the blocking text. The workflow drops those deterministically; don't waste an entry on them.
 
             ## Output
 
@@ -1233,6 +1270,31 @@ jobs:
           python3 .claude/commands/docs-review/scripts/strip-empty-triaged.py \
             --body-file .review-draft.md
 
+      # Post the advisory-style inline suggestions the editorial pass staged
+      # in .style-suggestions.json (one PR review, event=COMMENT, one
+      # ```suggestion block per finding — one-click applyable). The script
+      # validates every entry against the PR diff and the checked-out file
+      # (anti-hallucination), skips lines carrying a blocker finding, deletes
+      # prior suggestion comments first (delete-and-repost, same as
+      # TRIAGE_PROSE), and always exits 0 — suggestions are best-effort
+      # polish, never a pipeline failure.
+      #
+      # This runs BEFORE the pinned upsert on purpose: --annotate-draft marks
+      # the style bullets that actually posted with ✏️, and keying that mark
+      # off the API's accepted set (rather than what the model staged) is what
+      # keeps it from advertising a button that isn't there.
+      - name: Post inline style suggestions (Step D3)
+        if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --vale-findings .vale-findings.json \
+            --annotate-draft .review-draft.md
+
       - name: Upsert pinned comment (Step E)
         if: steps.check-access.outputs.has_write_access == 'true' && steps.claude-review.outcome == 'success'
         env:
@@ -1272,7 +1334,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: claude-execution-pr${{ steps.pr-context.outputs.pr_number }}-run${{ github.run_id }}
-          path: /home/runner/work/_temp/claude-execution-output.json
+          path: ${{ runner.temp }}/claude-execution-output.json
           retention-days: 90
           if-no-files-found: ignore
 
@@ -1290,6 +1352,11 @@ jobs:
             /tmp/validate-pinned.fix-me.md
             /tmp/splicer-fallback.json
             .review-draft.md
+            .style-suggestions.json
+          # .style-suggestions.json is a dotfile; upload-artifact skips hidden
+          # files unless this is set, which silently emptied the sidecar from
+          # the debug bundle on the 2026-08-03 fork run.
+          include-hidden-files: true
           retention-days: 30
           if-no-files-found: ignore
 
@@ -1455,6 +1522,7 @@ jobs:
           OUTCOME="${{ steps.claude-review.outcome }}"
           SKIP_REASON="${{ steps.pr-context.outputs.skip_reason }}"
           TIMED_OUT="${{ steps.outcome.outputs.timed_out }}"
+          HAS_WRITE_ACCESS="${{ steps.check-access.outputs.has_write_access }}"
           if [ "$OUTCOME" = "success" ]; then
             CONCLUSION="success"
             SUMMARY="Pinned review updated. See the PR's pinned comment for findings."
@@ -1467,6 +1535,19 @@ jobs:
           elif [ "$OUTCOME" = "cancelled" ]; then
             CONCLUSION="neutral"
             SUMMARY="Cancelled — superseded by a newer run."
+          elif [ "$OUTCOME" = "skipped" ] && [ "$HAS_WRITE_ACCESS" = "false" ]; then
+            # Deliberate skip — the author can't trigger a review here.
+            # Publishing it as a red ✗ misreads as a broken pipeline.
+            CONCLUSION="skipped"
+            SUMMARY="Review skipped: PR author lacks write access to this repository."
+          elif [ "$OUTCOME" = "skipped" ]; then
+            # Skipped for some other reason: the job was cancelled during the
+            # pre-steps (cancel-in-progress fires before the review step, so
+            # the "cancelled" branch above doesn't catch it), or a pre-step
+            # failed outright. Neither is the author's doing — don't claim a
+            # permissions problem, and don't publish a red ✗ for a supersede.
+            CONCLUSION="neutral"
+            SUMMARY="Review did not run — superseded by a newer run, or a pre-step failed. See workflow logs."
           else
             CONCLUSION="failure"
             SUMMARY="Review failed. See workflow logs."

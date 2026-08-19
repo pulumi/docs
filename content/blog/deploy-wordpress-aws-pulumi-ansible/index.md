@@ -107,7 +107,7 @@ $ pulumi new aws-yaml
 
 {{% /choosable %}}
 
-Next, to make our infrastructure setup easy to vary between environments, the code leverages [Pulumi's "configuration" system](/docs/concepts/config) --- not to be confused with configuration management tools --- which just allows you to vary provisioning settings for each stack in case your environments have different needs. For instance, perhaps you have different SSH keys, or want larger instance sizes, in development versus production:
+Next, to make our infrastructure setup easy to vary between environments, the code leverages [Pulumi's "configuration" system](/docs/iac/concepts/config/) --- not to be confused with configuration management tools --- which just allows you to vary provisioning settings for each stack in case your environments have different needs. For instance, perhaps you have different SSH keys, or want larger instance sizes, in development versus production:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 
@@ -361,7 +361,7 @@ variables:
 
 {{% /choosable %}}
 
-Finally, you'll read in the contents of the public and private key files so they're ready to use in the infrastructure declarations that are coming soon. Notice that this code uses [Pulumi's built-in secrets feature](/docs/concepts/secrets) to ensure the private key remains encrypted at all times:
+Finally, you'll read in the contents of the public and private key files so they're ready to use in the infrastructure declarations that are coming soon. Notice that this code uses [Pulumi's built-in secrets feature](/docs/iac/concepts/secrets/) to ensure the private key remains encrypted at all times:
 
 {{% chooser language "typescript,python,go,csharp,yaml" / %}}
 
@@ -444,7 +444,7 @@ First comes the network. This is the network into which you'll deploy the WordPr
 {{% choosable language typescript %}}
 
 ```typescript
-// Set up a Virtual Private Cloud to deploy our EC2 instance and RDS datbase into.
+// Set up a Virtual Private Cloud to deploy our EC2 instance and RDS database into.
 const prodVpc = new aws.ec2.Vpc("prod-vpc", {
     cidrBlock: "10.192.0.0/16",
     enableDnsSupport: true, // gives you an internal domain name.
@@ -499,7 +499,7 @@ const prodRtaPublicSubnet1 = new aws.ec2.RouteTableAssociation("prod-rta-public-
 {{% choosable language python %}}
 
 ```python
-# Set up a Virtual Private Cloud to deploy our EC2 instance and RDS datbase into.
+# Set up a Virtual Private Cloud to deploy our EC2 instance and RDS database into.
 prod_vpc = aws.ec2.Vpc("prod-vpc",
     cidr_block="10.192.0.0/16",
     enable_dns_support=True, # gives you an internal domain name
@@ -548,7 +548,7 @@ prod_rta_public_subnet1 = aws.ec2.RouteTableAssociation("prod-rta-public-subnet-
 {{% choosable language go %}}
 
 ```go
-// Set up a Virtual Private Cloud to deploy our EC2 instance and RDS datbase into.
+// Set up a Virtual Private Cloud to deploy our EC2 instance and RDS database into.
 prodVpc, err := ec2.NewVpc(ctx, "prod-vpc", &ec2.VpcArgs{
     CidrBlock:          pulumi.String("10.192.0.0/16"),
     EnableDnsSupport:   pulumi.Bool(true), // gives you an internal domain name.
@@ -625,7 +625,7 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-// Set up a Virtual Private Cloud to deploy our EC2 instance and RDS datbase into.
+// Set up a Virtual Private Cloud to deploy our EC2 instance and RDS database into.
 var prodVpc = new Aws.Ec2.Vpc("prod-vpc", new Aws.Ec2.VpcArgs
 {
     CidrBlock = "10.192.0.0/16",
@@ -694,7 +694,7 @@ var prodCrtaPublicSubnet1 = new Aws.Ec2.RouteTableAssociation("prod-crta-public-
 
 ```yaml
 resources:
-  # Set up a Virtual Private Cloud to deploy our EC2 instance and RDS datbase into.
+  # Set up a Virtual Private Cloud to deploy our EC2 instance and RDS database into.
   prod-vpc:
     type: aws:ec2:Vpc
     properties:

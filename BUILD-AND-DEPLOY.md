@@ -382,6 +382,7 @@ make new-example-program
 | `lint` | Run markdown linting and Prettier checks |
 | `format` | Auto-format with Prettier |
 | `test` / `test-programs` | Run example program tests (preview mode) |
+| `test-review-pipeline` | Run the review pipelines' own test suites (pytest + standalone harnesses + every `--self-test`) |
 | `check_links` | Validate all links in production site |
 | `check_search_urls` | Validate search index URLs |
 
@@ -522,7 +523,7 @@ Complete production deployment pipeline.
 1. Build site: `./scripts/build-site.sh`
 2. Sync to S3: `./scripts/sync-and-test-bucket.sh update`
 3. Generate search index
-4. Wait for in-progress operations: `node await-in-progress.js`
+4. Wait for in-progress operations: `node await-in-progress.js` (records the time spent waiting in `.build-queue-wait-seconds`, which `scripts/ci-build-duration-alert.sh` subtracts so a queued run isn't reported as a slow build)
 5. Pulumi infrastructure update: `./scripts/run-pulumi.sh`
 6. Generate S3 redirects: `./scripts/make-s3-redirects.sh`
 

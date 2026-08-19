@@ -1,17 +1,26 @@
 ---
 title: "What is Infrastructure as Code (IaC)?"
 meta_desc: |
-    Infrastructure as code (IaC) provisions cloud infrastructure with code instead of consoles. Learn how IaC works, declarative vs. imperative, and top tools.
+    Infrastructure as code (IaC) provisions cloud infrastructure through versioned, reviewable code. How IaC works, compares to manual setup, and how to start.
 type: what-is
-page_title: "What is Infrastructure as Code (IaC)?"
+page_title: "What is Infrastructure as Code (IaC)? Definition & Comparison"
 aliases:
   - /blog/five-years-of-infrastructure-as-code-part-one/
-authors: ["zack-chase"]
+authors: ["pulumi-content-team"]
 ---
 
-**Infrastructure as code (IaC) is the practice of provisioning and managing computing infrastructure with machine-readable configuration files instead of clicking through a console or running one-off scripts.** You write code that describes the infrastructure you want, check it into Git, and let an IaC engine make the real world match what you've declared.
+**Infrastructure as code (IaC), sometimes written infra as code, is the practice of provisioning and managing computing infrastructure with machine-readable configuration files instead of clicking through a console or running one-off scripts.** You write code that describes the infrastructure you want, check it into Git, and let an IaC engine make the real world match what you've declared.
 
 The idea is to treat infrastructure the way software engineers already treat application code. Version control, code review, testing, and CI/CD all become available to whoever is provisioning a VPC or a Kubernetes cluster. Modern platforms like [Pulumi](/) take it a step further by letting you write that code in TypeScript, Python, Go, C#, Java, or YAML rather than a custom configuration language.
+
+| | |
+| --- | --- |
+| **Also called** | IaC, infra as code |
+| **What it does** | Provisions and manages cloud infrastructure as versioned, reviewable code |
+| **How it works** | You declare the desired state; an engine reconciles reality to match it |
+| **Where state lives** | A state file or backend the IaC engine uses to track managed resources |
+| **Common tools** | Pulumi, Terraform, OpenTofu, AWS CloudFormation/CDK, Azure ARM/Bicep |
+| **Languages** | General-purpose (TypeScript, Python, Go, C#, Java) or DSLs (HCL, YAML, JSON) |
 
 In this article, we'll cover the key questions about infrastructure as code:
 
@@ -110,21 +119,38 @@ pulumi.export("bucket_name", bucket.bucket)
 
 Two properties make this model reliable. Because the engine works from desired state rather than a fixed list of steps, IaC is *idempotent*: applying the same code repeatedly always produces the same result, whether you're deploying into an empty account or reconciling one that already has resources. And because the tool keeps a model of what it manages, it can detect *drift* (changes someone made out of band, such as editing a setting directly in the cloud console) and bring the real world back in line with the code. Without IaC, environments tend to become "snowflakes," each one configured slightly differently by hand and impossible to reproduce reliably.
 
+## Infrastructure as code vs. manual provisioning vs. configuration management
+
+Infrastructure as code is one of three broad ways teams manage cloud resources: clicking through a console by hand, declaring resources as code, or configuring software that already runs on existing machines. The table below compares them across the dimensions that matter most when something needs to change.
+
+| | Infrastructure as code | Manual provisioning (ClickOps) | Configuration management |
+| --- | --- | --- | --- |
+| **What you specify** | The desired end state of a resource | A sequence of clicks or CLI commands | The desired state of software on an existing host |
+| **Unit of work** | Cloud resources (VMs, clusters, databases, networks) | Individual console or CLI actions | Packages, files, and services on a server |
+| **Source of truth** | Code in version control | Whatever's currently deployed (often undocumented) | Playbooks, manifests, or recipes |
+| **Repeatability** | High: the same code produces the same environment | Low: depends on whoever clicked and when | High for server configuration, not for provisioning |
+| **Drift detection** | Built in; the engine compares code against reality | None; drift is invisible until something breaks | Partial; agents reconcile configured state on a schedule |
+| **Review and CI/CD** | Pull requests, previews, and automated pipelines | Rarely reviewable; changes aren't diffable | Reviewable, but scoped to configuration, not provisioning |
+| **Typical tools** | Pulumi, Terraform, OpenTofu, CloudFormation, Bicep | AWS/Azure/GCP consoles, ad hoc CLI use | Ansible, Chef, Puppet, SaltStack |
+| **Best suited for** | Creating, updating, and replacing cloud resources | Quick exploration or one-off experiments | Configuring software inside long-lived servers |
+
+Configuration management tools aren't obsolete: they still do useful work configuring software inside a host once it exists. What's changed is that most of today's infrastructure is provisioned and replaced rather than patched in place, which is squarely the problem IaC was built to solve. See the FAQ below for more on how the two disciplines fit together.
+
+## How does infrastructure as code work with AI coding agents?
+
+AI coding agents can already read, write, and refactor general-purpose languages, so infrastructure written in Python, TypeScript, or Go is something an agent can generate, test, and review the same way it handles application code. That's a structural advantage over infrastructure locked in a proprietary DSL, which agents have to translate rather than reason about directly.
+
+The parts of IaC that make this safe are the same ones that make it useful for humans: a preview step that shows a diff before anything changes, policy as code that blocks a non-compliant change regardless of who or what proposed it, and a pull-request workflow that puts a human in the loop before infrastructure changes land. Agents that operate inside that loop, such as Pulumi's infrastructure agent Neo, can propose changes, run previews, and respond to failures without bypassing the guardrails a team already trusts. For a deeper look at what this style of infrastructure management involves, see [what is agentic infrastructure](/what-is/what-is-agentic-infrastructure/).
+
 ## How did infrastructure as code evolve?
 
 Infrastructure as code didn't emerge all at once. It's the latest step in a long arc of automation maturity, and the patterns that dominate today reflect lessons learned from earlier approaches.
 
 ### From manual clicks to declarative code
 
-Most teams have moved through some or all of the following stages of automation as their infrastructure footprint has grown:
+Most teams have moved through some or all of the following stages of automation as their infrastructure footprint has grown: manual point-and-click in a console, CLI commands or direct API calls, shell scripts, SDK-driven code in a general-purpose language, and finally infrastructure as code, where you declare the state itself and an engine figures out how to get there.
 
-1. **Manual point-and-click in a UI console.** Quick to start with and useful for exploration, but completely manual: every recovery, scale-up, or environment clone repeats the same painful sequence of clicks.
-1. **CLI commands or direct API calls.** Each UI step can be translated into a CLI invocation or HTTP request. Procedures become easier to document, but they remain step-based and brittle.
-1. **Shell scripts.** Capturing those commands in a script is a real jump in repeatability: scripts can be checked into version control. The downside is fragility: a failure halfway through a script often leaves infrastructure in an unknown state, and every upgrade path has to be reasoned about by hand.
-1. **SDK-driven code.** Using a cloud provider's SDK in a general-purpose language adds first-class error handling, logging, and debugging. It still suffers from the same partial-failure and combinatorial-upgrade problems as scripting.
-1. **Infrastructure as code.** Instead of describing the steps required to reach a desired state, you declare the state itself, and an engine figures out how to get there. The engine understands resource lifetime, computes a plan, and reconciles the real world with the declared state, recovering from partial failures along the way.
-
-This last step is what makes IaC qualitatively different from the approaches that came before it. Earlier tools described _how_ to change infrastructure; IaC tools describe _what_ the infrastructure should look like and let a deterministic engine handle the rest.
+Earlier tools described _how_ to change infrastructure, one command or click at a time. IaC tools describe _what_ the infrastructure should look like and let a deterministic engine handle ordering, dependencies, and partial-failure recovery instead.
 
 ### From pets to cattle
 
@@ -174,6 +200,22 @@ Infrastructure as code tames the complexity of cloud infrastructure because it u
 * **Improved productivity**: Most developers have an integrated development environment (IDE) that they use all the time. When infrastructure is code, you can take advantage of all the features that an IDE offers, such as autocompletion and the ability to look up methods and their parameters.
 * **Better alignment among teams**: Infrastructure as code enables infrastructure teams and software development teams to adopt DevOps principles and work together more closely. When infrastructure is code and is integrated into your company's software lifecycle, there's a common language and a common set of practices that stakeholders already understand. That common understanding fosters cross-team collaboration, which is fundamental to DevOps.
 
+These benefits compound as a team's footprint grows. Engineers who've made the switch describe the difference in hours saved, not just in principle:
+
+> "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
+>
+> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](/case-studies/starburst/)
+
+### What infrastructure as code looks like at scale
+
+| Company | Scale | Result |
+| --- | --- | --- |
+| [Wiz](/case-studies/wiz/) | 1M+ cloud resources across 100+ data centers | Hundreds of thousands of stack updates daily |
+| [Supabase](/case-studies/supabase/) | 80,000 resources across 16 regions | Each new region replicates 1,000-1,500 resources automatically |
+| [BMW](/case-studies/bmw/) | 20,000+ cloud resources | Managed with Python-based Pulumi programs |
+| [Atlassian](/case-studies/atlassian/) | Bitbucket infrastructure on Pulumi | 50% reduction in time spent on maintenance |
+| [Spear AI](/case-studies/spear-ai/) | Authorization-to-operate process | Cut from roughly 18 months to about 3 months |
+
 ## What are common use cases for infrastructure as code?
 
 IaC shows up across a lot of cloud workflows, but a few patterns account for most of the adoption:
@@ -191,7 +233,7 @@ IaC shows up across a lot of cloud workflows, but a few patterns account for mos
 
 The IaC tooling landscape has grown a lot since CFEngine kicked off the category back in 1993. The tools you're most likely to encounter today:
 
-* **[Pulumi](/)** is declarative IaC written in general-purpose programming languages: TypeScript, Python, Go, C#, Java, or YAML. It supports [200+ cloud and SaaS providers](/registry/), including AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, and Datadog.
+* **[Pulumi](/)** is declarative IaC written in general-purpose programming languages: TypeScript, Python, Go, C#, Java, or YAML. It supports [300+ packages in the Pulumi Registry](/registry/), including AWS, Azure, Google Cloud, Kubernetes, Cloudflare, Snowflake, and Datadog.
 * **Terraform** is HashiCorp's tool. It uses the HashiCorp Configuration Language (HCL) and moved to a source-available BUSL license in 2023.
 * **OpenTofu** is an open-source fork of Terraform under the Linux Foundation, started in response to that license change.
 * **AWS CloudFormation** is AWS's native IaC service. It's declarative, written in YAML or JSON, and is focused on AWS resources.
@@ -271,6 +313,22 @@ Yes. Every major IaC tool supports importing resources that already exist, so yo
 
 No. IaC works against anything with an API, which includes public cloud (AWS, Azure, Google Cloud), private cloud (VMware vSphere, OpenStack), Kubernetes, and SaaS platforms like Cloudflare, Snowflake, Datadog, or GitHub.
 
+### What does IaC stand for?
+
+IaC stands for infrastructure as code, also written infra as code. It refers to managing cloud infrastructure, such as servers, networks, and databases, by declaring the desired state in code rather than configuring resources by hand through a console or CLI.
+
+### How do you implement infrastructure as code?
+
+Pick a tool that matches your team's languages and clouds, declare a small piece of existing or new infrastructure as code, preview the plan before applying it, and bring that workflow into your CI/CD pipeline so changes get reviewed the same way application code does. See [get started with Pulumi](/docs/get-started/) for a hands-on walkthrough.
+
+### How do you test infrastructure as code?
+
+Treat infrastructure tests like software tests: unit tests validate your program's logic before anything deploys, and integration tests confirm the deployed resources behave correctly. Pulumi supports both directly in your programming language. For a full walkthrough, see [Pulumi's testing guide](/docs/iac/guides/testing/) and [how to test infrastructure as code](/blog/how-to-test-infrastructure-as-code/).
+
+### Is Kubernetes infrastructure as code?
+
+Partly. Kubernetes manifests declare a desired state that the cluster's control plane reconciles, which is the same loop IaC uses, but that reconciliation stops at the cluster boundary. The cluster itself, along with the networks, IAM, and managed databases around it, still needs to be provisioned with IaC. See [is Kubernetes infrastructure as code?](/what-is/is-kubernetes-infrastructure-as-code/) for a closer look.
+
 ## Another look at infrastructure as code
 
 Pulumi's YouTube series, A Quick Bite of Cloud Engineering, tackled the topic of infrastructure as code (IaC) in this video. Have a look!
@@ -283,10 +341,11 @@ With Pulumi, you can create, deploy, and manage infrastructure on any cloud usin
 
 There are many other practices related to infrastructure as code, read more:
 
-* [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops)
-* [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes)
-* [Top Infrastructure as Code Tools](/blog/infrastructure-as-code-tools)
-* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code)
-* [What is Infrastructure as Software?](/what-is/what-is-infrastructure-as-software)
-* [What is Platform Engineering?](/what-is/what-is-platform-engineering)
-* [What is Secrets Management?](/what-is/what-is-secrets-management)
+* [Infrastructure as Code for DevOps](/what-is/infrastructure-as-code-for-devops/)
+* [Infrastructure as Code for Kubernetes](/what-is/infrastructure-as-code-for-kubernetes/)
+* [Top Infrastructure as Code Tools](/blog/infrastructure-as-code-tools/)
+* [How to Test Infrastructure as Code](/blog/how-to-test-infrastructure-as-code/)
+* [What Is Agentic Infrastructure?](/what-is/what-is-agentic-infrastructure/)
+* [What is Infrastructure as Software?](/what-is/what-is-infrastructure-as-software/)
+* [What is Platform Engineering?](/what-is/what-is-platform-engineering/)
+* [What is Secrets Management?](/what-is/what-is-secrets-management/)

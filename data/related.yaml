@@ -52,7 +52,6 @@ tags:
     - pulumi-year-in-review
     - pulumi-esc-aws-parameter-store-support
     - esc-imports-discoverability
-    - pulumi-copilot-rest
 
   pricing:
     - pricing-calculator-blog
@@ -369,7 +368,6 @@ tags:
 
   ai:
     - codegen-learnings
-    - pulumi-copilot-rest
     - copilot-lessons
     - future-cloud-infrastructure-10-trends-shaping-2024-and-beyond
 
@@ -380,7 +378,6 @@ tags:
     - mlops-huggingface-llm-aws-sagemaker-python
 
   llm:
-    - pulumi-copilot-rest
     - the-present-and-future-of-ai-and-iac
     - pulumi-ai-new
     - mlops-huggingface-llm-aws-sagemaker-python
@@ -927,7 +924,6 @@ tags:
 
   copilot:
     - codegen-learnings
-    - pulumi-copilot-rest
     - copilot-lessons
     - pulumi-copilot
 

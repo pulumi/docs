@@ -1,0 +1,75 @@
+{{- /*
+  Builds the Markdown sentence for a Pulumi Cloud availability marker. Returns a
+  Markdown string so the rendered callout and the markdown output format
+  (llms.txt, the .md page renditions) can't drift.
+
+  Expects a dict:
+    feature  optional; a feature id from data/pulumi_pricing.yaml. The edition
+             named in the sentence is derived from that feature's availability,
+             so a feature that moves editions updates the pricing table and
+             every page marked with it in one edit. Empty means the feature is
+             on every edition — only the section-level shortcode uses that,
+             since on a mixed page the reader can't tell whether a section needs
+             Pulumi Cloud at all.
+    where    a human-readable location used in build errors (page path)
+
+  An unknown feature id, and a feature that turns out to be available on the
+  lowest edition (which gates nothing — say nothing instead), are both hard
+  build failures, the same contract resource-option-scope.html uses.
+*/ -}}
+{{- $lead := "This [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature is" -}}
+{{- /* Tripwire for the `edition` -> `feature` rename. The markdown output
+       format passes this dict too, and a stale key there would silently fall
+       through to the "all editions" branch in files nobody reads during
+       review. Safe to delete a release after the rename. */ -}}
+{{- with .edition -}}
+  {{- errorf "cloud-availability-body.html was called with edition: %q (in %s). It takes a feature id from data/pulumi_pricing.yaml now — pass `feature` instead." . $.where -}}
+{{- end -}}
+{{- if not .feature -}}
+  {{- printf "%s available in [all editions](/pricing/)." $lead -}}
+{{- else -}}
+  {{- $id := printf "%v" .feature -}}
+  {{- $px := partialCached "pricing/data.html" "pricing-data" "pricing-data" -}}
+  {{- $f := index $px.features $id -}}
+  {{- if not $f -}}
+    {{- $editionIds := slice -}}
+    {{- range $px.editions -}}{{- $editionIds = $editionIds | append .id -}}{{- end -}}
+    {{- if in $editionIds $id -}}
+      {{- errorf "pulumi_cloud_feature: %q is an edition id, not a feature id (in %s). Markers name the feature (for example `rbac` or `audit-logs`) and the edition is derived from data/pulumi_pricing.yaml, so a feature that moves editions is a one-line edit." $id .where -}}
+    {{- else -}}
+      {{- $near := slice -}}
+      {{- range $px.ids -}}
+        {{- if or (in . $id) (in $id .) -}}{{- $near = $near | append . -}}{{- end -}}
+      {{- end -}}
+      {{- if $near -}}
+        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_pricing.yaml (in %s). Did you mean: %s?" $id .where (delimit $near ", ") -}}
+      {{- else -}}
+        {{- errorf "pulumi_cloud_feature: %q is not a feature in data/pulumi_pricing.yaml (in %s). Add it there — with `hidden: true` if it isn't a marketed line item on /pricing/. Known ids: %s" $id .where (delimit $px.ids ", ") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $min := $f.min_edition -}}
+    {{- if or (not $min) (eq $min $px.first) -}}
+      {{- errorf "pulumi_cloud_feature: %q resolves to the %s edition (in %s), which gates nothing — drop the marker, or set `requires:` on that feature in data/pulumi_pricing.yaml if its lowest column is really a limited variant." $id $px.first .where -}}
+    {{- end -}}
+    {{- $names := slice -}}
+    {{- $seen := false -}}
+    {{- range $e := $px.editions -}}
+      {{- if eq $e.id $min -}}{{- $seen = true -}}{{- end -}}
+      {{- if $seen -}}{{- $names = $names | append $e.name -}}{{- end -}}
+    {{- end -}}
+    {{- $list := "" -}}
+    {{- if eq (len $names) 1 -}}
+      {{- $list = printf "%s edition" (index $names 0) -}}
+    {{- else if eq (len $names) 2 -}}
+      {{- $list = printf "%s and %s editions" (index $names 0) (index $names 1) -}}
+    {{- else -}}
+      {{- $list = printf "%s editions" (delimit $names ", " ", and ") -}}
+    {{- end -}}
+    {{- /* Deep-link to the row this sentence was derived from, unless the
+           feature is hidden and has no row. */ -}}
+    {{- $href := "/pricing/" -}}
+    {{- if not $f.hidden -}}{{- $href = printf "/pricing/#%s" $id -}}{{- end -}}
+    {{- printf "%s available in the [%s](%s)." $lead $list $href -}}
+  {{- end -}}
+{{- end -}}

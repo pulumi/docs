@@ -1,7 +1,7 @@
 ---
-title: What are Docker Configs?
+title: What are Docker Configs? Setup & Best Practices
 meta_desc: |
-     Learn more about what Docker Configs are and how to use them.
+    Docker Configs store non-sensitive data, like config files, and mount it into Swarm containers at runtime. Learn to create and mount Configs via the CLI.
 
 type: what-is
 page_title: "What are Docker Configs?"

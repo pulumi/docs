@@ -9,9 +9,11 @@ menu:
         weight: 8
 aliases:
   - /docs/esc/access-management/
+# The landing page itself lists both gated and ungated features, so it carries no
+# marker; the pages below it are Enterprise-gated unless they say otherwise.
 ---
 
-Pulumi ESC is built upon [Pulumi Cloud](/docs/pulumi-cloud/), our managed cloud service for individuals and teams that allows you to manage and secure infrastructure at scale.
+Pulumi ESC is built upon [Pulumi Cloud](/docs/administration/), our managed cloud service for individuals and teams that allows you to manage and secure infrastructure at scale.
 Learn how to configure organizations, monitor audit logs, bring your own encryption keys, manage identity and access and enable self-hosting.
 
 - [Pulumi Cloud organizations](/docs/administration/organizations-teams/organizations/): Set up and manage organizations for team collaboration and secrets and configuration management.

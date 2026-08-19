@@ -60,7 +60,7 @@ jobs:
           git config --local user.email "bot@pulumi.com"
           git config --local user.name "pulumi-bot"
           git checkout -b policy-packs/${{ github.run_id }}-${{ github.run_number }}
-          git add data/policy_pack_policies
+          git add data/policy_pack_policies data/policy_pack_lastmod.json
           if git diff --cached --quiet; then
             echo "No policy pack changes to commit"
             echo "has_changes=false" >> $GITHUB_OUTPUT

@@ -21,7 +21,7 @@ aliases:
 - /docs/iac/concepts/vs/spacelift/
 ---
 
-Pulumi and [Spacelift](https://spacelift.io/) sit at different layers of the infrastructure stack. Pulumi is an infrastructure as code platform: you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) and [Pulumi Deployments](/docs/deployments/) manage state, enforce policy, and run deployments. Spacelift is a CI/CD and orchestration platform for infrastructure as code: it doesn't author infrastructure itself, but runs and manages the IaC tools you already use — including Pulumi, Terraform, OpenTofu, CloudFormation, Ansible, and Kubernetes — from a single control plane.
+Pulumi and [Spacelift](https://spacelift.io/) sit at different layers of the infrastructure stack. Pulumi is an infrastructure as code platform: you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) and [Pulumi Deployments](/docs/deployments/) manage state, enforce policy, and run deployments. Spacelift is a CI/CD and orchestration platform for infrastructure as code: it doesn't author infrastructure itself, but runs and manages the IaC tools you already use — including Pulumi, Terraform, OpenTofu, CloudFormation, Ansible, and Kubernetes — from a single control plane.
 
 Because Spacelift runs Pulumi as a first-class runtime, the two are frequently used together. Where they genuinely overlap is the management layer: Spacelift's orchestration, policy, and collaboration features cover much the same ground as Pulumi Cloud and Pulumi Deployments. This page covers what each tool is, a feature-by-feature comparison, the key differences in detail, and how Pulumi and Spacelift work together.
 
@@ -44,14 +44,14 @@ Spacelift is proprietary software, though it's built on open-source components s
 | Feature | Pulumi | Spacelift |
 | --- | --- | --- |
 | Role in the stack | Infrastructure as code platform: authors *and* manages infrastructure | Orchestration and CI/CD platform: runs and manages IaC that you author with another tool |
-| Infrastructure authoring | General-purpose languages — Python, TypeScript, JavaScript, Go, C#, Java — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | None of its own; you bring your existing tool (Terraform, OpenTofu, Pulumi, CloudFormation, Ansible, or Kubernetes) |
+| Infrastructure authoring | General-purpose languages — {{< pulumi-languages "general-purpose" >}} — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | None of its own; you bring your existing tool (Terraform, OpenTofu, Pulumi, CloudFormation, Ansible, or Kubernetes) |
 | IaC tools it works with | Runs Pulumi programs; consumes [any Terraform or OpenTofu provider](/docs/iac/concepts/providers/any-terraform-provider/) and [existing Terraform modules](/docs/iac/guides/building-extending/using-existing-tools/use-terraform-module/); runs HCL natively; and can [hold Terraform or OpenTofu state](/docs/iac/get-started/terraform/terraform-state-backend/) for CLI-driven workflows | Orchestrates [Terraform, OpenTofu, Terragrunt, Pulumi, CloudFormation, Kubernetes, and Ansible](https://docs.spacelift.io/) |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, and Google Cloud Storage; Pulumi Cloud also [manages Terraform and OpenTofu state](/docs/iac/get-started/terraform/terraform-state-backend/), with [remote execution](/docs/iac/get-started/terraform/terraform-remote-execution/) and approval gates on VCS-triggered applies | Managed state backend for Terraform and OpenTofu; for Pulumi you configure your own backend, which Spacelift connects to with `pulumi login` |
 | Remote execution | [Pulumi Deployments](/docs/deployments/) for remote, Git-driven runs; the [Automation API](/docs/iac/concepts/automation-api/); or the local CLI | Runs on [public or private worker pools](https://docs.spacelift.io/concepts/worker-pools), triggered by version-control events or the API |
 | Drift detection | [`pulumi refresh`](/docs/iac/cli/commands/pulumi_refresh/) and `pulumi preview --diff`; [scheduled drift detection and remediation](/docs/deployments/concepts/drift/) in Pulumi Deployments | [Scheduled drift detection](https://docs.spacelift.io/concepts/stack/drift-detection) with optional reconciliation (requires private workers and a paid plan) |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/) in Python, TypeScript, or Open Policy Agent Rego; open source, with centralized management and [compliance packs](/docs/insights/policy/policy-packs/pre-built-packs/) in Pulumi Cloud | [Rego policies](https://docs.spacelift.io/concepts/policy/) evaluated at multiple decision points — login, access, approval, plan, push, trigger, and notification |
 | Secrets management | [First-class encrypted secrets](/docs/iac/concepts/secrets/) in state, plus [Pulumi ESC](/docs/esc/) for centralized secrets and configuration | Encrypted environment variables, mounted files, and reusable contexts for configuration and credentials |
-| Access control | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) teams and role-based access control, SAML/SSO, and [audit logs](/docs/pulumi-cloud/audit-logs/) | Spaces plus login and access policies; SSO/SAML on higher tiers |
+| Access control | [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) teams and role-based access control, SAML/SSO, and [audit logs](/docs/administration/security-compliance/audit-logs/) | Spaces plus login and access policies; SSO/SAML on higher tiers |
 | Version control | [GitHub, GitLab, Azure DevOps, and Bitbucket](/docs/deployments/concepts/review-stacks/) | GitHub, GitLab, Bitbucket, and Azure DevOps |
 | Programmatic API | [Automation API](/docs/iac/concepts/automation-api/) to embed provisioning in your own application or platform | GraphQL API and `spacectl` CLI; a Terraform/OpenTofu provider for managing Spacelift itself |
 | Execution location | Local CLI anywhere; managed Pulumi Deployments runners or [self-hosted runners](/docs/deployments/concepts/customer-managed-runners/) | Public workers hosted by Spacelift, or private workers in your own environment; fully self-hosted on the top tier |
@@ -70,7 +70,7 @@ A like-for-like comparison, then, is less "Pulumi vs. Spacelift" than "Pulumi Cl
 
 Pulumi programs are written in general-purpose languages, so you get loops, conditionals, classes, package management, IDE support, and the testing frameworks that already exist in those ecosystems, along with [YAML](/docs/iac/languages-sdks/yaml/) for teams who prefer a markup format. Spacelift has no authoring model of its own; what you write depends on the tool you run on it. If that tool is Terraform, you write HCL; if it's Pulumi, you write a Pulumi program and keep every one of Pulumi's language features. When the question is really about how infrastructure is expressed, then, the comparison is between Pulumi and whichever tool you'd otherwise run, not between Pulumi and Spacelift, which is happy to run Pulumi.
 
-Worth noting for teams running HCL on Spacelift: choosing Pulumi doesn't mean choosing against HCL. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language and a superset of Terraform HCL, so an existing HCL codebase can move onto the Pulumi engine without a rewrite, and teams can adopt a general-purpose language later, project by project, if they want one.
+Worth noting for teams running HCL on Spacelift: choosing Pulumi doesn't mean choosing against HCL. [Pulumi HCL](/docs/iac/languages-sdks/hcl/) is a first-class Pulumi language that runs valid Terraform HCL, with a [short list of documented exceptions](/docs/iac/languages-sdks/hcl/#terraform-compatibility), so an existing HCL codebase can move onto the Pulumi engine without a rewrite, and teams can adopt a general-purpose language later, project by project, if they want one.
 
 ### Execution model, GitOps, and drift
 
@@ -159,7 +159,7 @@ No. Pulumi's CLI, SDKs, and providers are open source under [Apache 2.0](https:/
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Pulumi Deployments](/docs/deployments/)
 - [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)

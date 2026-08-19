@@ -68,7 +68,7 @@ Both describe the desired state of cloud resources. The difference is what's aro
 | Conditional and looped logic | Restricted (`for_each`, `count`) | Native language constructs |
 | Onboarding for software engineers | New language to learn | Same language they already use |
 
-The most consequential row is the second-to-last one. Because IaS programs are ordinary code, the IaC engine can be called from another program, which is the foundation of [Pulumi's automation API](/docs/iac/packages-and-automation/automation-api/) and the reason IaS reaches use cases DSL-based IaC structurally can't.
+The most consequential row is the second-to-last one. Because IaS programs are ordinary code, the IaC engine can be called from another program, which is the foundation of [Pulumi's automation API](/docs/iac/concepts/automation-api/) and the reason IaS reaches use cases DSL-based IaC structurally can't.
 
 ## What engineering capabilities does IaS add?
 
@@ -105,7 +105,7 @@ The automation API is the most distinctive capability that comes with IaS. It ex
 
 Doing any of these on top of a DSL-based IaC tool typically means shelling out to a CLI, parsing text output, and hoping the next CLI release doesn't break the parser. The automation API replaces all of that with a typed function call.
 
-See [the automation API documentation](/docs/iac/packages-and-automation/automation-api/) for the supported languages and patterns.
+See [the automation API documentation](/docs/iac/concepts/automation-api/) for the supported languages and patterns.
 
 ## What are the trade-offs of IaS?
 
@@ -126,9 +126,9 @@ Pulumi was built around the IaS model from day one.
 * **Generated, typed SDKs for every cloud.** AWS, Azure, Google Cloud, Kubernetes, plus hundreds of other providers (Cloudflare, Snowflake, Datadog, GitHub, MongoDB Atlas, etc.). Types are generated from each provider's schema so they reflect the real cloud surface.
 * **Component model.** Reusable [Pulumi components](/docs/iac/concepts/components/) ship as ordinary packages in your language's package manager.
 * **Policy as code.** Write [policies](/docs/insights/policy/) in the same language as the infrastructure. Run them in CI and as a deploy gate.
-* **Secrets with Pulumi ESC.** [Pulumi ESC](/product/esc/) keeps secrets out of code and state, pulled at runtime by IaS programs, CI jobs, and applications. See the [ESC docs](/docs/esc/) for setup and configuration.
+* **Secrets with Pulumi ESC.** [Pulumi ESC](/product/secrets-management/) keeps secrets out of code and state, pulled at runtime by IaS programs, CI jobs, and applications. See the [ESC docs](/docs/esc/) for setup and configuration.
 * **Automation API.** Embed `pulumi up`, `pulumi preview`, and `pulumi destroy` inside any program that needs to provision infrastructure programmatically.
-* **CI/CD-native.** Pulumi runs in every major CI/CD system. The [continuous delivery guide](/docs/iac/guides/continuous-delivery/) covers the common patterns.
+* **CI/CD-native.** Pulumi runs in every major CI/CD system. The [continuous delivery guide](/docs/iac/operations/continuous-delivery/) covers the common patterns.
 
 The dividing line between IaC and IaS isn't syntax preference, it's whether your infrastructure can be called by other code. Once a cloud resource is an ordinary software object, the IaC engine becomes a library, and provisioning stops being a separate operational silo and becomes something you can compose into platforms, products, and pipelines the same way you compose any other function. That reach, not the cleaner loops or the better autocomplete, is what DSL-based IaC can't follow you into.
 
@@ -166,7 +166,7 @@ No, it enables them. A platform engineering team uses IaS to build the component
 
 ### Can I migrate from Terraform to IaS?
 
-Yes. Pulumi can [import existing resources](/docs/iac/adopting-pulumi/import/) without recreating them, and [`pulumi convert`](/docs/iac/guides/migration/converters/) can translate HCL source into a Pulumi program in the language of your choice. Most teams migrate incrementally: new infrastructure starts in IaS, existing HCL stays in place until it changes.
+Yes. Pulumi can [import existing resources](/docs/iac/guides/migration/import/) without recreating them, and [`pulumi convert`](/docs/iac/guides/migration/converters/) can translate HCL source into a Pulumi program in the language of your choice. Most teams migrate incrementally: new infrastructure starts in IaS, existing HCL stays in place until it changes.
 
 ### Does IaS work for multi-cloud?
 

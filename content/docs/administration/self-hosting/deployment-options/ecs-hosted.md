@@ -13,6 +13,7 @@ aliases:
   - /docs/guides/self-hosted/ecs-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/ecs-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/ecs-hosted/
+pulumi_cloud_feature: self-hosting
 ---
 
 The [ECS-Hosted Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/ecs-hosted) is used to deploy the self-hosted Pulumi Cloud in Amazon Elastic Container Service. You can choose between using a TypeScript or Golang installer.
@@ -53,7 +54,7 @@ This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses th
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Login to S3-compatible backend](/docs/concepts/state#aws-s3)
+* [Login to S3-compatible backend](/docs/iac/concepts/state-and-backends/#logging-into-and-out-of-state-backends)
 
 ### Deployment Steps
 

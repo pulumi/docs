@@ -602,7 +602,7 @@ The deployment engine is embedded in the `pulumi` CLI itself.
 
 A resource provider is made up of two different pieces:
 
-1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin) set of commands.
+1. A _resource plugin_ is the binary used by the deployment engine to manage a resource. These plugins are stored in the _plugin cache_ (located in `~/.pulumi/plugins`) and can be managed using the [`pulumi plugin`](/docs/iac/cli/commands/pulumi_plugin/) set of commands.
 2. An _SDK_ which provides bindings for each type of resource the provider can manage.
 
 Like the language runtime itself, the SDKs are available as regular packages. For example, there is a [`@pulumi/aws`](https://www.npmjs.com/package/@pulumi/aws) package for Node available on npm and a [`pulumi_aws`](https://pypi.org/project/pulumi-aws) package for Python available on PyPI.  When these packages are added to your project, they run [`pulumi plugin install`](/docs/iac/cli/commands/pulumi_plugin_install) behind the scenes to download the resource plugin from Pulumi.com.
@@ -615,4 +615,4 @@ Pulumi Cloud comprises two Internet-accessible endpoints—a web application at 
 
 Pulumi Cloud never acquires your cloud credentials and does not communicate with your cloud provider directly. Instead, the CLI coordinates with both Pulumi Cloud's API and your cloud provider's API. This client/server division means your IAM and key management do not need to change when adopting Pulumi: if you run Pulumi from [within a CI/CD environment](/docs/iac/operations/continuous-delivery/), you can rely on the security mechanisms your organization already has in place.
 
-Because the server does not have direct access to your cloud credentials, runtime data, or PII, Pulumi Cloud has been used in organizations with advanced compliance needs, including SOC 2, PCI, ISO 27001, and HIPAA. It is also possible to run your own instance of Pulumi Cloud in a private cloud environment—the architecture is very similar to the hosted version, but does not depend on public Internet access. To learn more, see [Self-Hosted Pulumi Cloud](/docs/pulumi-cloud/self-hosted/).
+Because the server does not have direct access to your cloud credentials, runtime data, or PII, Pulumi Cloud has been used in organizations with advanced compliance needs, including SOC 2, PCI, ISO 27001, and HIPAA. It is also possible to run your own instance of Pulumi Cloud in a private cloud environment—the architecture is very similar to the hosted version, but does not depend on public Internet access. To learn more, see [Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/).

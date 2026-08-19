@@ -48,6 +48,9 @@ sections:
     icon: icon-32-32 hcl-color-32-32
     link: /docs/iac/languages-sdks/hcl/
 - type: flat
+  heading: New to a general-purpose language?
+  description: <p>If you're used to writing Pulumi YAML or Terraform HCL and want the minimum you need to know about variables, conditionals, loops, functions, classes, and packages in a general-purpose language, see the <a href="/docs/iac/guides/basics/language-essentials/">Language Essentials guides</a>.</p>
+- type: flat
   heading: Add a language
-  description: <p>If your favorite language isn't listed, it may be on its way. Pulumi is <a href="https://github.com/pulumi/pulumi">open source</a>, and it's possible to <a href="/docs/support/faq#how-can-i-add-support-for-my-favorite-language">add your own language</a>. <a href="/docs/support/troubleshooting#contact-us">Contact us</a> to let us know what you're looking for.</p>
+  description: <p>If your favorite language isn't listed, it may be on its way. Pulumi is <a href="https://github.com/pulumi/pulumi">open source</a>, and it's possible to add your own language. <a href="/docs/support/getting-support/">Contact us</a> to let us know what you're looking for.</p>
 ---

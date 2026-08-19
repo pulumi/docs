@@ -1,18 +1,19 @@
 ---
 title: Connect Cloud Accounts
-title_tag: Connect Cloud Accounts | Pulumi Insights
-h1: Connect Cloud Accounts to Pulumi Insights
-meta_desc: Use the Connect cloud accounts wizard to onboard AWS, Azure, and Google Cloud accounts to Pulumi Insights in bulk with OIDC authentication.
+title_tag: Connect Cloud Accounts | Discovery & Governance
+h1: Connect Cloud Accounts
+meta_desc: Use the Connect cloud accounts wizard to onboard AWS, Azure, and Google Cloud accounts to Pulumi in bulk with OIDC authentication.
 menu:
   insights:
     name: Connect Cloud Accounts
     parent: insights-discovery
     weight: 15
+pulumi_cloud_feature: insights-discovery
 ---
 
-The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi Insights in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. With the recommended authentication options, no long-lived cloud secrets are stored in Pulumi Cloud.
+The **Connect cloud accounts** wizard onboards one or more cloud accounts to Pulumi in a single guided flow. It discovers the accounts in your AWS organization, Azure tenant, or Google Cloud organization, then sets up everything each account needs: short-lived credentials based on OpenID Connect (OIDC), a [Pulumi ESC (Environments, Secrets, and Configuration)](/docs/esc/) environment, a scheduled discovery scan, and an optional policy pack. With the recommended authentication options, no long-lived cloud secrets are stored in Pulumi Cloud.
 
-The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
+The wizard supports bulk discovery for AWS, Microsoft Azure, and Google Cloud. Kubernetes and Oracle Cloud accounts connect through an existing ESC environment instead; for those providers, or to set up a single account manually, see [Create and manage cloud accounts](/docs/insights/discovery/accounts/).
 
 ## Prerequisites
 
@@ -99,7 +100,7 @@ Alternatively, you can connect using:
 
 ### Choose accounts
 
-The wizard shows how many accounts, subscriptions, or projects it discovered and pre-selects everything that isn't already connected. Select **Edit selected accounts** (the label matches the provider: accounts, subscriptions, or projects) to open the picker, where you can search, select all, or toggle individual accounts. Accounts that are already connected to Insights appear with an **Already onboarded** badge and can't be selected again. You must select at least one account to continue.
+The wizard shows how many accounts, subscriptions, or projects it discovered and pre-selects everything that isn't already connected. Select **Edit selected accounts** (the label matches the provider: accounts, subscriptions, or projects) to open the picker, where you can search, select all, or toggle individual accounts. Accounts that are already connected appear with an **Already onboarded** badge and can't be selected again. You must select at least one account to continue.
 
 ![The account picker showing discovered AWS accounts with checkboxes, a search box, and a select all option](/docs/insights/assets/connect-cloud-accounts-picker.png)
 
@@ -163,13 +164,13 @@ The recommended flows authenticate with OIDC and workload identity federation, s
 
 ### In Pulumi Cloud
 
-- ESC environments in a project named `discover`. AWS and Google Cloud get one environment per account or project, named `discover/<name>-<accountId>-env`. Azure gets one shared environment per tenant, named `discover/azure-<tenantId>-env`, which every subscription's Insights account references.
-- An Insights account for each selected cloud account, subscription, or project, named after the cloud account it represents.
+- ESC environments in a project named `discover`. AWS and Google Cloud get one environment per account or project, named `discover/<name>-<accountId>-env`. Azure gets one shared environment per tenant, named `discover/azure-<tenantId>-env`, which every subscription's cloud account references.
+- A cloud account in Pulumi for each selected provider account, subscription, or project, named after the provider account it represents.
 - The scan schedule and, if enabled, the policy pack you chose.
 
 ## Azure management groups
 
-Pulumi Insights models each Azure subscription as its own Insights account. Insights has no management-group-level account, and a single Insights account can't scan more than one subscription. What is shared across your tenant is the *identity*: the wizard creates one app registration, one federated identity credential, and one service principal for the whole tenant, plus one ESC environment (`discover/azure-<tenantId>-env`) that every subscription's Insights account references. Connecting 40 subscriptions produces 40 Insights accounts, but still only one app registration and one set of credentials.
+Pulumi models each Azure subscription as its own cloud account. No management-group-level account exists, and a single cloud account can't scan more than one subscription. What is shared across your tenant is the *identity*: the wizard creates one app registration, one federated identity credential, and one service principal for the whole tenant, plus one ESC environment (`discover/azure-<tenantId>-env`) that every subscription's cloud account references. Connecting 40 subscriptions produces 40 cloud accounts, but still only one app registration and one set of credentials.
 
 If your subscriptions are organized under management groups, you have two options.
 
@@ -181,7 +182,7 @@ The wizard doesn't detect access that the service principal already inherits fro
 
 ### Grant the role yourself at management-group scope
 
-If your organization prefers to manage RBAC centrally, assign **Reader** or **Contributor** to a service principal once at management-group scope, then connect subscriptions with **Connect using existing ESC credentials** so that Pulumi doesn't create role assignments. Set up the app registration and ESC environment as described in [Create and manage Insights accounts](/docs/insights/discovery/accounts/#azure) and [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/).
+If your organization prefers to manage RBAC centrally, assign **Reader** or **Contributor** to a service principal once at management-group scope, then connect subscriptions with **Connect using existing ESC credentials** so that Pulumi doesn't create role assignments. Set up the app registration and ESC environment as described in [Create and manage cloud accounts](/docs/insights/discovery/accounts/#azure) and [Configuring OpenID Connect for Azure](/docs/esc/guides/configuring-oidc/azure/).
 
 Because the environment carries the subscription ID, this path takes one ESC environment and one wizard run per subscription. Reuse a single app registration across those environments rather than creating one per subscription. Each environment needs its own federated identity credential, because the subject identifier includes the environment path, and Azure limits an app registration to 20 federated identity credentials. If you are onboarding more subscriptions than that, use the wizard's OIDC flow, which shares a single environment and credential across the tenant.
 
@@ -189,7 +190,7 @@ Because the environment carries the subscription ID, this path takes one ESC env
 
 ### Some accounts failed to connect
 
-When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Alternatively, set up the remaining accounts manually by following [Create and manage Insights accounts](/docs/insights/discovery/accounts/).
+When setup is partially complete, the summary lists each failed account with the error returned by Pulumi. Fix the underlying issue and run the wizard again. Accounts that connected successfully are recognized and skipped. Or set up the remaining accounts manually by following [Create and manage cloud accounts](/docs/insights/discovery/accounts/).
 
 ### AWS IAM role creation is denied
 
@@ -207,5 +208,5 @@ Connecting a cloud account creates an ESC environment and a trust role in your c
 
 ## Learn more
 
-- [Get started with Insights Discovery](/docs/insights/discovery/get-started/)
+- [Get started with Discovery](/docs/insights/discovery/get-started/)
 - [Pulumi ESC](/docs/esc/)

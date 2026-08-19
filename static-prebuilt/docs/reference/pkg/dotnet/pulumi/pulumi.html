@@ -199,6 +199,20 @@ Pulumi, i.e only the following types (or pulumi.Output of those types) are allow
 <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutablearray-1">ImmutableArray&lt;T&gt;</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.immutable.immutabledictionary-2">ImmutableDictionary&lt;TKey, TValue&gt;</a>
 with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> keys, <a class="xref" href="pulumi.union-2.html">Union&lt;T0, T1&gt;</a></li></ul>
 </section>
+      <h4><a class="xref" href="pulumi.discriminatedunioncaseattribute.html">DiscriminatedUnionCaseAttribute</a></h4>
+      <section><p>Attribute used to declare one member of a discriminated union interface marked with
+<a class="xref" href="pulumi.discriminateduniondiscriminatorattribute.html">DiscriminatedUnionDiscriminatorAttribute</a>. <a class="xref" href="pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Tag">Tag</a> is the
+discriminator property value that selects this member, and <a class="xref" href="pulumi.discriminatedunioncaseattribute.html#Pulumi_DiscriminatedUnionCaseAttribute_Type">Type</a> is the
+concrete <a class="xref" href="pulumi.outputtypeattribute.html">OutputTypeAttribute</a> class to instantiate; it must implement the
+annotated interface.</p>
+</section>
+      <h4><a class="xref" href="pulumi.discriminateduniondiscriminatorattribute.html">DiscriminatedUnionDiscriminatorAttribute</a></h4>
+      <section><p>Attribute used to mark an interface that represents a discriminated union of complex
+output property types. The interface must also carry one
+<a class="xref" href="pulumi.discriminatedunioncaseattribute.html">DiscriminatedUnionCaseAttribute</a> per union member. When deserializing, the
+Pulumi runtime reads the discriminator property named by <a class="xref" href="pulumi.discriminateduniondiscriminatorattribute.html#Pulumi_DiscriminatedUnionDiscriminatorAttribute_PropertyName">PropertyName</a> from
+the raw value and instantiates the member whose tag matches.</p>
+</section>
       <h4><a class="xref" href="pulumi.enumtypeattribute.html">EnumTypeAttribute</a></h4>
       <section><p>Attribute used by a Pulumi Cloud Provider Package to mark enum types.</p>
 <p>Requirements for a struct-based enum to be (de)serialized are as follows.
@@ -553,7 +567,7 @@ resource will not be transformed.</p>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
-    <p class="sdk-version">Version 3.110.0</p>
+    <p class="sdk-version">Version 3.112.1</p>
               <div class="contribution">
                 <ul class="nav">
                 </ul>

@@ -15,8 +15,43 @@ name: "Scheduled jobs: Re-verify volatile claims"
 #   unset -> on, 25 entities/night (the default)
 #   '0'   -> off: the whole job is skipped (no runner, no spend)
 #   'N'   -> on, N entities/night
-# The sweep is a stateless day rotation over the volatile entity set, so all
-# of it is covered every ceil(N_entities/count) nights regardless of the knob.
+# The sweep is a stateless day rotation over the ELIGIBLE entity set (volatile,
+# minus entities already carrying a stale marker or superseded by a newer
+# review), so all of it is covered every ceil(N_eligible/count) nights
+# regardless of the knob. The rotation slices with a stride, not a contiguous
+# window: a contiguous last chunk is whatever the remainder happens to be, so a
+# 51-entity pool at count=25 split 25/25/1 and one night in three checked a
+# single entity. That is what happened on 2026-08-19, and the all-inconclusive
+# n=1 then degraded the reverify health signal for the whole lane. Chunk sizes
+# now differ by at most one, and `meta.n_eligible` / `meta.n_marked` in the
+# report say which pool the rotation divided, so a short night is diagnosable
+# from the artifact alone.
+#
+# The job gate wraps the variable in format('{0}', ...) — do not "simplify" it
+# back to a bare `vars.X != '0'`. An unset variable is null, and GitHub coerces
+# a Null-vs-String comparison to numbers (null -> 0, '0' -> 0), so the bare
+# form evaluates 0 != 0 = FALSE and unset silently means OFF, inverting the
+# default documented above. That bug kept this lane from ever running on
+# schedule — and because the health signal below only reports from a run that
+# actually happened, a never-started lane never tripped it either.
+#
+# TURNED ON 2026-08-11 with `CLAIMS_REVERIFY_COUNT` set explicitly to '25' in
+# pulumi/docs, so the first live run is a recorded decision rather than an
+# implicit default. At the time there were 63 volatile entities across 86
+# claim snapshots — a full sweep every 3 nights.
+#
+# The first two live sweeps (Aug 11-12, 50 entities, 0 stale) confirmed both
+# of the things that warning called for; pulumi/docs#20851 fixed them:
+#   * 48 of 50 entities were typed `numerical`, and many were counts of the
+#     page's own example output ("the example update creates 3 resources")
+#     rather than version pins or limits. entity_key.py now excludes
+#     self-describing numerical claims from `volatile`, and this lane
+#     re-derives the flag rather than trusting what the snapshot stored.
+#   * 22 of 35 `verified` verdicts cited only Pulumi's own published docs —
+#     16 of them the published copy of the very page making the claim. Those
+#     are demoted to `unverifiable` now: the site is this repo rendered, so
+#     such a check can never detect drift. Expect `fresh` to read far lower
+#     than it did on those two nights; the difference was never real.
 #
 # DEGRADATION HEALTH: this lane only Slacks when it finds STALE entities, so a
 # dead lane (claims index gone, API key missing, every check inconclusive)
@@ -89,7 +124,7 @@ jobs:
     timeout-minutes: 30
     if: >-
       github.event_name == 'workflow_dispatch' ||
-      (vars.CLAIMS_REVERIFY_COUNT != '0' && needs.holiday-check.outputs.is_holiday != 'true')
+      (format('{0}', vars.CLAIMS_REVERIFY_COUNT) != '0' && needs.holiday-check.outputs.is_holiday != 'true')
     steps:
       - name: Fetch secrets from ESC
         id: esc-secrets
@@ -161,6 +196,61 @@ jobs:
           python3 scripts/content-review/reverify-claims.py "${ARGS[@]}"
           echo "--- report ---"
           cat .claims-reverify-report.json
+
+      # The report is the lane's only durable evidence: the run log masks every
+      # occurrence of the org name (so source URLs read as `www.***.com`) and
+      # ages out with the run. Uploaded unconditionally — a run worth debugging
+      # is usually one where the verify step failed.
+      - name: Upload re-verify report
+        if: always() && hashFiles('.claims-reverify-report.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: claims-reverify-report
+          path: .claims-reverify-report.json
+          # Dotfile: upload-artifact excludes hidden files unless told
+          # otherwise, and hashFiles() has no such exclusion — so without this
+          # the step runs and uploads nothing, with only a warning annotation.
+          # That's exactly what happened on every run before 2026-08. The
+          # hashFiles guard above covers the legitimately-absent report (job
+          # died before the write), so a no-files result here can only be a
+          # regression of the hidden-file kind: fail loudly.
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 90
+
+      # Findings on GENERATED pages (no markdown source, so no page to mark,
+      # boost, or fix here) get their own line, because the stale summary below
+      # promises a content-review sweep that cannot happen for them. Fires only
+      # on a change: a finding nobody has filed upstream yet, or one that has
+      # started verifying clean because the upstream fix landed. A known,
+      # still-contradicted finding stays in the report and says nothing here —
+      # see references/upstream-claims.yaml.
+      - name: Post upstream-findings change to Slack
+        if: steps.reverify.outputs.has_upstream_news == 'true'
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+        run: |
+          TEXT=$(jq -r --arg run "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" '
+            (if (.meta.n_upstream_new // 0) > 0 then
+               "Nightly claims re-verify: \(.meta.n_upstream_new) new contradicted claim(s) with no fixable page — "
+               + "`generated` needs an upstream issue; `missing` means the claims index outlived the page:\n"
+               + ([.meta.upstream_entities[] | select(.new)
+                   | "  • [\(.reason // "?")] \(.entity_key)  (\(.pages[0]))"
+                     + (if .file_issue_url then "\n      <\(.file_issue_url)|file it upstream>" else "" end)]
+                  | join("\n")) + "\n"
+             else "" end)
+            + (if (.meta.n_upstream_resolved // 0) > 0 then
+               "Nightly claims re-verify: \(.meta.n_upstream_resolved) upstream finding(s) now verify clean — "
+               + "the fix landed. Retire their entries from upstream-claims.yaml:\n"
+               + ([.meta.upstream_resolved_entities[] | "  • \(.)"] | join("\n")) + "\n"
+             else "" end)
+            + "<\($run)|Run log>"
+          ' .claims-reverify-report.json)
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --arg txt "$TEXT" \
+              '{channel: $ch, text: $txt, unfurl_links: false}')"
 
       # Counts only + a run link — the evidence lives in the report artifact
       # and the ledger markers; the fix arrives as a normal content-review PR.

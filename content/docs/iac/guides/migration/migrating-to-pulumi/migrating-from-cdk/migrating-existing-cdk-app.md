@@ -73,7 +73,7 @@ Before running any tools, it is important to plan your migration strategy. Migra
 How much of your existing code structure do you want to keep?
 
 * **Convert (Lift and Shift)**: Translate your CDK resources 1:1 into Pulumi code, optionally using an automated conversion tool like `cdk2pulumi`. This is the fastest way to get a working program but results in low-level code without the high-level abstractions you might expect (making it a good candidate for refactoring).
-* **Hybrid / Refactor (Recommended)**: Generate a working baseline (manually or via `cdk2pulumi`), then refactor the code into idiomatic Pulumi [Components](/docs/iac/concepts/resources/components/) before or after importing state. This balances speed with long-term maintainability.
+* **Hybrid / Refactor (Recommended)**: Generate a working baseline (manually or via `cdk2pulumi`), then refactor the code into idiomatic Pulumi [Components](/docs/iac/concepts/components/) before or after importing state. This balances speed with long-term maintainability.
 * **Rewrite**: Manually write your Pulumi program from scratch. This is best if your CDK app has significant technical debt or if you want to fundamentally re-architect your infrastructure.
 
 ### Strategy: Import vs. Rehydrate
@@ -254,7 +254,7 @@ my-infrastructure/
 └── dns.ts             # Route53, certificates
 ```
 
-**Preserve structure from your source (Optional)**: If your original CDK constructs had a logical organization, you can optionally preserve it in Pulumi. This migration can also be taken as an opportunity to optimize this structure. Map CDK constructs to [Pulumi components](/docs/iac/concepts/resources/components/)—these are reusable abstractions that encapsulate related resources and can be shared across projects.
+**Preserve structure from your source (Optional)**: If your original CDK constructs had a logical organization, you can optionally preserve it in Pulumi. This migration can also be taken as an opportunity to optimize this structure. Map CDK constructs to [Pulumi components](/docs/iac/concepts/components/)—these are reusable abstractions that encapsulate related resources and can be shared across projects.
 
 #### Converting CDK constructs
 
@@ -482,7 +482,7 @@ Always run `pulumi preview` immediately after import to ensure there are no pend
 Now that your resources are imported and your state matches your code, you can safely refactor. You can move resources into ComponentResources, rename logical IDs, or split files. Refer to [Target Structure](#target-structure) for guidance on organizing your new Pulumi program.
 
 * If you change a resource's name or parent component in your code, Pulumi will see it as a "Create new / Delete old" operation.
-* To prevent this, use [aliases](/docs/iac/concepts/options/aliases/) to tell Pulumi "this new resource is actually that old resource".
+* To prevent this, use [aliases](/docs/iac/concepts/resources/options/aliases/) to tell Pulumi "this new resource is actually that old resource".
 
 ### Approach B: Manual Migration
 

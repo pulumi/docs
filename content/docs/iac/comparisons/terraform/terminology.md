@@ -24,18 +24,18 @@ If you're already familiar with Terraform, learning Pulumi terminology and comma
 
 | Terraform | Pulumi |
 | --------- | ------ |
-| Workspace | [Stack](/docs/concepts/stack/) |
-| Variables | [Stack Config](/docs/concepts/config/) |
-| Directory | [Project](/docs/concepts/projects/) |
-| Module | [Component](/docs/concepts/resources/components/) |
-| Resource | [Resource](/docs/concepts/resources/) |
-| Interpolation | [Interpolation](/docs/concepts/inputs-outputs#outputs-and-strings) |
+| Workspace | [Stack](/docs/iac/concepts/stacks/) |
+| Variables | [Stack Config](/docs/iac/concepts/config/) |
+| Directory | [Project](/docs/iac/concepts/projects/) |
+| Module | [Component](/docs/iac/concepts/components/) |
+| Resource | [Resource](/docs/iac/concepts/resources/) |
+| Interpolation | [Interpolation](/docs/iac/concepts/inputs-outputs/all/#using-string-interpolation) |
 | Run | [Up](/docs/iac/cli/commands/pulumi_up/) |
-| Output Values | [Outputs](/docs/concepts/inputs-outputs/) |
-| State | [State](/docs/concepts/state/) |
-| State Version | [Update Events](/docs/reference/service-rest-api#list-update-events) |
-| Backend | [Backend](/docs/concepts/state/) |
-| Deposed | [Pending Operations](/docs/support/troubleshooting#interrupted-update-recovery) |
+| Output Values | [Outputs](/docs/iac/concepts/inputs-outputs/) |
+| State | [State](/docs/iac/concepts/state-and-backends/) |
+| State Version | [Update Events](/docs/reference/service-rest-api/#list-update-events) |
+| Backend | [Backend](/docs/iac/concepts/state-and-backends/) |
+| Deposed | [Pending Operations](/docs/iac/operations/troubleshooting/interrupted-updates/) |
 
 ## Commands
 

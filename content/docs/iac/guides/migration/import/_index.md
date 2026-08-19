@@ -33,7 +33,7 @@ Both approaches rely on the same underlying mechanics, described in [How resourc
 
 ## How resource import works
 
-Import uses the selected stack's configured [provider](/docs/concepts/resources/providers/) to look up the desired resource in the cloud provider, read its current configuration, and add the resource to the stack to bring it under management by Pulumi from that point forward. For this, it requires two pieces of information:
+Import uses the selected stack's configured [provider](/docs/iac/concepts/providers/) to look up the desired resource in the cloud provider, read its current configuration, and add the resource to the stack to bring it under management by Pulumi from that point forward. For this, it requires two pieces of information:
 
 * The _type_ of cloud resource to import --- either as a type _token_ (a string that uniquely identifies a Pulumi resource type) when using the CLI or as a resource declaration when importing in code. The type token of an Amazon S3 Bucket resource, for example, is `aws:s3/bucket:Bucket`.
 
@@ -63,7 +63,7 @@ $ pulumi import <type> <name> <id>
 
     As mentioned in [Where to find the type token and lookup property](#where-to-find), you'll find the type token for a given resource by navigating to the Import section of the resource's API documentation in the [Pulumi Registry](/registry/). For example, the type token of an [Amazon S3 Bucket](/registry/packages/aws/api-docs/s3/bucket/#import) resource is `aws:s3/bucket:Bucket`.
 
-* The second argument, `name`, is the [resource name](/docs/concepts/resources/names) to apply to the resource once it's imported. The generated code will use this name for the resource's [logical name](/docs/iac/concepts/resources/names/#logicalname), so like all Pulumi resource names, it must be unique among resources of the same type within the containing program. (That is, a program can contain an S3 bucket and a VPC both named `foo`, but it cannot contain two S3 buckets named `foo`.)
+* The second argument, `name`, is the [resource name](/docs/iac/concepts/resources/names/) to apply to the resource once it's imported. The generated code will use this name for the resource's [logical name](/docs/iac/concepts/resources/names/#logicalname), so like all Pulumi resource names, it must be unique among resources of the same type within the containing program. (That is, a program can contain an S3 bucket and a VPC both named `foo`, but it cannot contain two S3 buckets named `foo`.)
 
 * The third argument, `id`, is the value to use for the resource lookup in the cloud provider. This value should correspond to the designated lookup property specified in the Import section of the resource's API documentation in the Registry.
 
@@ -149,7 +149,7 @@ Resources:
 Duration: 2s
 ```
 
-Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/concepts/resources/#protect) documentation to learn more.
+Notice that by default, resources imported with the CLI are marked as _protected_ to guard against accidental deletion. If you forgot, for example, to append the generated code to your program before running another `pulumi up`, Pulumi would first interpret the missing code as an intention to delete the new resource, but then fail on the existence of the `protect` property, leaving the resource intact. See the [`protect`](/docs/iac/concepts/resources/options/protect/) documentation to learn more.
 
 ### Demo
 

@@ -15,6 +15,7 @@ aliases:
 - /docs/console/accounts/saml/gsuite/
 - /docs/guides/saml/gsuite/
 - /docs/pulumi-cloud/access-management/saml/gsuite/
+pulumi_cloud_feature: saml-sso
 ---
 
 This guide walks you through configuring your Google Workspace (formerly known as G Suite) service as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider
@@ -31,7 +32,7 @@ in the upper-left corner and choose **Apps &gt; Web and mobile apps**.
 
     ![Create a new SAML app](/images/docs/reference/service/saml-gsuite/gsuite-apps-empty.png)
 
-1. In the first step, give the SAML app a name (e.g., *Pulumi-SSO*), and optionally add an App Icon, and select **Continue**. [Pulumi Logos](/brand/) has PNG logos available.
+1. In the first step, give the SAML app a name (e.g., *Pulumi-SSO*), and optionally add an App Icon, and select **Continue**. [Pulumi Logos](https://brand.pulumi.com/) has PNG logos available.
 
     ![Step 1: Set up a custom app](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-1.png)
 

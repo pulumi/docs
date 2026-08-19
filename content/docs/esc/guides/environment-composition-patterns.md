@@ -68,7 +68,7 @@ values:
     DATABASE_URL: postgres://${imports["db/checkout-prod"].db.host}:${imports["db/checkout-prod"].db.port}/checkout
 ```
 
-Because `db/checkout-prod` is imported with `merge: false`, its values never appear in the resolved output. They stay reachable through the [`imports` built-in property](/docs/esc/concepts/interpolations-and-references/#imports), which is how `DATABASE_URL` is assembled without exposing the password. The consumer receives a connection string, not the credentials behind it. This is the mechanism that keeps a composed environment from becoming another oversized one.
+Because `db/checkout-prod` is imported with `merge: false`, its values never appear in the resolved output. They stay reachable through the [`imports` built-in property](/docs/esc/concepts/builtin-properties/#imports), which is how `DATABASE_URL` is assembled without exposing the password. The consumer receives a connection string, not the credentials behind it. This is the mechanism that keeps a composed environment from becoming another oversized one.
 
 Note that `db/checkout-prod` is deliberately left unpinned. Pinning is what you want for configuration that should change only when you say so, but a rotated environment gets a new revision on every rotation, and pinning it to a tag would hand consumers a credential that has already been deactivated. Track the latest revision for rotated environments, and pin the rest.
 
@@ -117,6 +117,8 @@ It also means a change to a widely used base environment reaches consumers as so
 Start with direct consumption while you have a few consumers and the base environments are small. Move to centralized composition once you have more consumers than you can repin by hand, or the first time you need a consumer to use a secret without being able to read it.
 
 ## Refactoring an environment without breaking consumers
+
+{{< pulumi-cloud "esc-version-tags" />}}
 
 The contract between an environment and its consumers is its **resolved output**, not its source YAML. As long as the output is unchanged, you can restructure the source freely. That is what makes it possible to split an oversized environment without a coordinated migration.
 

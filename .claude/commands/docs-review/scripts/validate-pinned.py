@@ -105,7 +105,8 @@ Schema version: 19 (v18→v19 adds the `framing-drift` (🌀) fact-check verdict
   summary — so a survivor soft-floors loudly. `validate-pinned.py check`
   takes a `--skip-rule <id>` flag (repeatable) so the composer's self-check
   on its own still-`<TODO>`-laden draft can suppress just this rule; the
-  publish path (`pinned-comment.sh upsert-validated`) does NOT pass it.
+  publish path (the workflow's validate / splice / re-validate / upsert
+  step chain) does NOT pass it.
   v8→v9 added `trail-canonical-verdict-word`: every 🔍 Verification trail
   line's verdict must be EXACTLY one of the six canonical words — `verified` /
   `matches` / `not-a-claim` / `unverifiable` / `contradicted` / `mismatch` —
@@ -132,14 +133,22 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-SCHEMA_VERSION = 19
+SCHEMA_VERSION = 20
 
 DEFAULT_OUTPUT_JSON = "/tmp/validate-pinned.fix-me.json"
 DEFAULT_OUTPUT_MARKDOWN = "/tmp/validate-pinned.fix-me.md"
 
-# Mandatory H3 sections in the order they must appear in any review body. Mirror
-# of `references/output-format.md` L81 — keep these synchronized; the schema-
-# version bump catches drift.
+# Mandatory H3 sections in the order they must appear in any review body.
+# Mirror of `references/output-format.md` §"Mandatory sections render on every
+# review" — keep these synchronized; the schema-version bump catches drift.
+# (Referenced by section, not line number: the old "L81" pointer had already
+# drifted by ~26 lines.)
+#
+# Deliberately PARTIAL: that section also lists `📋 Triaged verifier findings`,
+# which is absent here on purpose. The composer always renders it, but Step D2
+# (`strip-empty-triaged.py`) removes it post-edit when it is still empty, so a
+# published body legitimately may not carry it. Requiring it here would fail
+# every clean review.
 MANDATORY_H3_SECTIONS = [
     "🔍 Verification trail",
     "🚨 Outstanding",
@@ -184,6 +193,12 @@ TEMPORAL_TRIGGERS = {
 # specific detector lives in the record's `type`/`source`. See compose-review.py
 # (same constant) — keep the two in sync.
 TRAIL_VERDICT_WORDS = ("verified", "matches", "not-a-claim", "unverifiable", "contradicted", "mismatch", "flagged", "framing-drift")
+
+# The advisory Vale sub-heading, current spelling first. The block was renamed
+# "Style findings" -> "Style suggestions" on 2026-08-03; both are accepted so a
+# re-entrant review merging a pre-rename body still validates. compose-review.py
+# emits only the current spelling (its STYLE_HEADING) — keep these in sync.
+STYLE_HEADINGS = ("#### Style suggestions", "#### Style findings")
 EXPECTED_TRAIL_EMOJI = {
     "verified": "✅",
     "matches": "🤝",
@@ -308,7 +323,7 @@ class Context:
     # Schema v5: workflow pre-step `extract-urls-and-fetch.py` writes the
     # fetched URLs here. None means the file wasn't present (e.g., local
     # invocation with no PR diff context); empty list means the workflow
-    # ran but the diff had no external URLs in content/(docs|blog|what-is|tutorials|learn)/**/*.md.
+    # ran but the diff had no external URLs in content/(docs|blog|what-is|tutorials)/**/*.md.
     fetched_urls: list[dict] | None = None
     # Schema v5: workflow pre-step `editorial-balance-detect.py` writes
     # Tier 1 stats here (trigger, sections, mean/median/std, outliers).
@@ -329,6 +344,13 @@ class Context:
     # `verdicts` list (possibly empty). Used by `verified-claims-trail-faithful`,
     # `pass-2-fetch-faithfulness` (strengthened), and `pass-3-evidence-faithful`.
     verified_claims: list[dict] | None = None
+    # Schema v20: `.vale-findings.json` from the `vale-findings-filter.py`
+    # pre-step. None means the file wasn't present. Used by
+    # `style-blocker-provenance` to prove every `[style-blocker]` bullet in 🚨
+    # actually came from Vale's blocker tier rather than being authored by the
+    # reviewer -- that marker exempts a bullet from trail-matching, so without
+    # this check it is a forgeable bypass.
+    vale_findings: list[dict] | None = None
 
 
 # ---- Body parsing helpers --------------------------------------------------
@@ -366,9 +388,12 @@ def extract_bucket_bullets(body: str, heading_substring: str) -> list[str]:
     counts every top-level finding paragraph so the count-table check stays
     accurate across format variants.
 
-    Sub-bullets (indented), continuation paragraphs (no leading `**`), and
-    style-finding bullets (`- **line N:**`) are still counted as findings —
-    style findings belong in the ⚠️ count per `references/output-format.md`.
+    Sub-bullets (indented) and continuation paragraphs (no leading `**`) are
+    not counted. Style-finding bullets (`- **line N:**`) ARE returned here —
+    callers that must exclude them from a count (the ⚠️ cell excludes advisory
+    style findings per `references/output-format.md`) filter on that prefix.
+    Blocker-tier style bullets (`[style-blocker]`, rendered in 🚨 with a
+    standard `**[L<n>]**` anchor) count like any other finding.
     """
     span = find_section(body, heading_substring)
     if span is None:
@@ -489,7 +514,14 @@ def check_count_table_matches_bullets(ctx: Context) -> list[Violation]:
         )]
 
     actual_outstanding = len(extract_bucket_bullets(ctx.body, "🚨 Outstanding"))
-    actual_low = len(extract_bucket_bullets(ctx.body, "⚠️ Low-confidence"))
+    # Advisory style findings (`- **line N:**` bullets under #### Style
+    # findings) are excluded from the ⚠️ count — they're collapsed, uncounted
+    # nags kept for rule tuning. Blocker-tier style findings live in 🚨 with a
+    # `**[L<n>]**` anchor and are counted there by the line above.
+    actual_low = len([
+        b for b in extract_bucket_bullets(ctx.body, "⚠️ Low-confidence")
+        if not b.lstrip().startswith("- **line ")
+    ])
     actual_pre = len(extract_bucket_bullets(ctx.body, "💡 Pre-existing"))
     actual_resolved = len(extract_bucket_bullets(ctx.body, "✅ Resolved"))
 
@@ -506,7 +538,7 @@ def check_count_table_matches_bullets(ctx: Context) -> list[Violation]:
                 line_ref=f"<bucket count table — {label}>",
                 expected=f"{label} count = {actual_val} (number of bullets in the section)",
                 actual=f"table shows {table_val}",
-                hint=f"Recount the bullets in the {label} section (including any style findings under #### Style findings for ⚠️) and update the table cell.",
+                hint=f"Recount the bullets in the {label} section (advisory style suggestions under #### Style suggestions are NOT counted in ⚠️; [style-blocker] bullets ARE counted in 🚨) and update the table cell.",
             ))
     return violations
 
@@ -630,59 +662,85 @@ def check_cross_sibling_math(ctx: Context) -> list[Violation]:
 
 
 def check_style_render_mode(ctx: Context) -> list[Violation]:
-    """Style-findings render mode matches the relaxed rule from output-format.md L252-258."""
+    """Style suggestions render EXPANDED — never hidden behind a <details>.
+
+    Inverted on 2026-08-03. They were collapsed while they still counted
+    toward ⚠️; once the count excluded them, the disclosure only cost a click
+    and hid the ✏️ marks that point at one-click suggestions.
+    """
     span = find_section(ctx.body, "⚠️ Low-confidence")
     if span is None:
         return []
     start, end = span
     section_lines = ctx.body_lines[start:end]
-    section_text = "\n".join(section_lines)
 
-    # Locate #### Style findings sub-section.
     style_idx = None
     for i, line in enumerate(section_lines):
-        if line.strip() == "#### Style findings":
+        if line.strip() in STYLE_HEADINGS:
             style_idx = i
             break
     if style_idx is None:
-        return []  # no style findings — render-mode N/A
+        return []  # no style suggestions — render-mode N/A
 
     style_lines = section_lines[style_idx:]
-    # Count bullets and detect <details> blocks.
     bullet_count = sum(1 for ln in style_lines if ln.lstrip().startswith("- **line "))
-    file_count = sum(1 for ln in style_lines if ln.lstrip().startswith("<summary>"))
-    has_details = any("<details>" in ln for ln in style_lines)
-
-    # Determine actual mode.
-    actual_mode = "collapse-all" if has_details else "inline-all"
-
-    # Determine expected mode per the relaxed rule:
-    # inline-all when (a) total ≤5 OR (b) concentrate in one file AND total ≤30
-    # collapse-all when files >1 AND total >5, OR total >30
-    if bullet_count <= 5:
-        expected_mode = "inline-all"
-    elif file_count <= 1 and bullet_count <= 30:
-        expected_mode = "inline-all"
-    elif file_count > 1 and bullet_count > 5:
-        expected_mode = "collapse-all"
-    elif bullet_count > 30:
-        expected_mode = "collapse-all"
-    else:
-        expected_mode = actual_mode  # ambiguous — don't flag
-
-    if actual_mode != expected_mode:
+    if bullet_count and any("<details>" in ln for ln in style_lines):
         return [Violation(
             rule_id="style-render-mode",
-            line_ref="<#### Style findings>",
-            expected=f"{expected_mode} mode (bullets={bullet_count}, files={file_count})",
-            actual=f"{actual_mode} mode rendered",
-            hint=(
-                "Re-render style findings inline (no <details>) — total ≤5 or concentrated in one file."
-                if expected_mode == "inline-all"
-                else "Re-render style findings inside per-file <details> blocks with the per-file roll-up summary."
-            ),
+            line_ref="<#### Style suggestions>",
+            expected=f"expanded (no <details>); bullets={bullet_count}",
+            actual="collapsed inside a <details> block",
+            hint=("Render style suggestions expanded, grouped under an `##### <path>` H5 heading "
+                  "per file. They are uncounted, so they cost no review burden, and collapsing "
+                  "them hides the ✏️ marks that flag one-click suggestions."),
         )]
     return []
+
+
+def check_style_blocker_provenance(ctx: Context) -> list[Violation]:
+    """Every `[style-blocker]` bullet must trace to a blocker entry in `.vale-findings.json`.
+
+    The marker exempts a 🚨 bullet from trail-matching (Vale findings aren't
+    claims and have no trail record). That makes it a bypass the reviewer could
+    self-apply to route any finding into 🚨 without a verification trail --
+    observed on 2026-08-03, when a run authored a `[style-blocker] _misspelling_`
+    bullet for a typo Vale never reported (`misspelling` isn't even an emittable
+    category). The finding was real, but the provenance was not, so the
+    exemption fired on an unverified bullet.
+
+    Real reviewer-discovered findings belong in 🚨 as ordinary `**[L…]**`
+    bullets with a trail record. This rule keeps the marker meaning exactly
+    "the composer put this here from Vale's blocker tier."
+    """
+    if ctx.vale_findings is None:
+        return []  # pre-step didn't run — absence isn't evidence
+    allowed: set[tuple[str, int]] = {
+        (str(f.get("file") or ""), int(f.get("line") or 0))
+        for f in ctx.vale_findings
+        if f.get("blocker")
+    }
+    violations: list[Violation] = []
+    for bullet in extract_bucket_bullets(ctx.body, "🚨 Outstanding"):
+        if "[style-blocker]" not in bullet:
+            continue
+        prefix = extract_bullet_prefix(bullet)  # "L797" / "L12-L20"
+        m = re.match(r"^L(\d+)", prefix or "")
+        line_no = int(m.group(1)) if m else None
+        fm = re.search(r"`([^`]+\.\w+)`", bullet)
+        fname = fm.group(1) if fm else ""
+        if line_no is not None and (fname, line_no) in allowed:
+            continue
+        violations.append(Violation(
+            rule_id="style-blocker-provenance",
+            line_ref=f"<🚨 {prefix or '?'}>",
+            expected="every [style-blocker] bullet matches a blocker entry in .vale-findings.json",
+            actual=f"no blocker finding at {fname or '?'}:{line_no if line_no is not None else '?'}",
+            hint=("The `[style-blocker]` marker is composer-only — it means Vale's blocker tier "
+                  "produced this finding, and it exempts the bullet from trail-matching. Do not "
+                  "author one. If you found this issue yourself and it belongs in 🚨, render it "
+                  "as a normal `**[L…]**` bullet with a matching 🔍 Verification trail record."),
+        ))
+    return violations
 
 
 def check_mandatory_h3_order(ctx: Context) -> list[Violation]:
@@ -768,7 +826,7 @@ def check_external_claim_state_format(ctx: Context) -> list[Violation]:
             line_ref="<investigation log: External claim verification>",
             expected="line uses canonical `X of Y claims verified (N unverifiable, M contradicted)` state form",
             actual=line.strip()[:160],
-            hint="Render the bullet as `X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (...); K cross-specialist corroborations · Pass 1: A verified, B deferred; Pass 2: C verified, D unverifiable.` or as `not run (<reason>)`. Compaction (e.g., `single-pass`, `ran (N claims, ...)`, `N of M verifiable claims verified`) is not permitted.",
+            hint="Render the bullet as `X of Y claims verified (N unverifiable, M contradicted) · 4 specialists (...); K cross-specialist corroborations · routed: I inline, P Pass 1, F Pass 2 (verified V, contradicted C, unverifiable U), S Pass 3 (verified V, contradicted C, unverifiable U).` or as `not run (<reason>)`. Compaction (e.g., `single-pass`, `ran (N claims, ...)`, `N of M verifiable claims verified`) is not permitted.",
         )]
     return []
 
@@ -1408,6 +1466,12 @@ def check_trail_bucket_consistency(ctx: Context) -> list[Violation]:
             if bullet.lstrip().startswith("- **line "):
                 continue
             prefix = extract_bullet_prefix(bullet)
+            # Blocker-tier style findings carry the standard [L<n>] anchor
+            # (auto-refresh-gate.py needs it) but have no verification-trail
+            # record — Vale findings aren't claims. Exempt them from
+            # trail-matching; the prefix mandate above still applies.
+            if prefix is not None and "[style-blocker]" in bullet:
+                continue
             if prefix is None:
                 violations.append(Violation(
                     rule_id="bucket-bullet-line-range-prefix",
@@ -2224,6 +2288,61 @@ def check_no_placeholder_empty_form(ctx: Context) -> list[Violation]:
     return violations
 
 
+TRIAGED_SUMMARY = "I double-checked these and realized they weren't real findings"
+
+
+def check_triaged_details_wrapper(ctx: Context) -> list[Violation]:
+    """📋 Triaged verifier findings keeps its collapsed `<details>` wrapper.
+
+    `compose-review.py:render_triaged` always emits the section inside a
+    `<details>` whose `<summary>` carries the line telling a reader what the
+    section IS — findings the reviewer checked and concluded were verifier
+    noise, not things to act on. The editorial pass then replaces the
+    `_No triaged findings._` placeholder with the real `**Spurious:**` /
+    `**Mis-sourced:**` bullets, and can take the wrapper out with it. The
+    section then renders expanded and unexplained, so triaged NON-findings sit
+    open on the page looking exactly like the real findings above them — the
+    opposite of what the triage was for.
+
+    Nothing else noticed: no rule covered this, `splicer.py`'s canonical block
+    only lands when the section is missing ENTIRELY, and
+    `strip-empty-triaged.py` keys on the placeholder the editorial pass just
+    removed. Rare but real — 1 of 28 published reviews carrying the section
+    (pulumi/docs#20781), and it came from the composer lane's own editorial
+    pass, not from a re-render.
+
+    Fires only when the section exists AND carries bullets. The section is
+    optional and absent from MANDATORY_H3_SECTIONS, and an empty one belongs to
+    `strip-empty-triaged.py`, not to this rule.
+    """
+    span = find_section(ctx.body, "📋 Triaged verifier findings")
+    if span is None:
+        return []
+    start, end = span
+    section = "\n".join(ctx.body_lines[start:end])
+    if not extract_bucket_bullets(ctx.body, "📋 Triaged verifier findings"):
+        return []
+    if TRIAGED_SUMMARY in section and "<details>" in section:
+        return []
+    missing = "<summary>" if "<details>" in section else "<details> wrapper"
+    return [Violation(
+        rule_id="triaged-details-wrapper",
+        line_ref="<### 📋 Triaged verifier findings>",
+        expected=(
+            "the 📋 section's bullets wrapped in `<details>` with "
+            f"`<summary><em>{TRIAGED_SUMMARY} — click to expand</em></summary>`"
+        ),
+        actual=f"section has bullets but no {missing}",
+        hint=(
+            "Re-wrap the bullets: `### 📋 Triaged verifier findings`, blank line, "
+            "`<details>`, `<summary><em>I double-checked these and realized they "
+            "weren't real findings — click to expand</em></summary>`, blank line, the "
+            "bullets, blank line, `</details>`. Keep the bullets exactly as they are — "
+            "only the wrapper is missing."
+        ),
+    )]
+
+
 def check_no_todo_tokens(ctx: Context) -> list[Violation]:
     """No `<TODO: …>` (or bare `<TODO>`) placeholder survives to the published body.
 
@@ -2332,8 +2451,8 @@ def check_outcome_annotation_shapes(ctx: Context) -> list[Violation]:
 RULES = [
     {
         "id": "count-table",
-        "desc": "Bucket-count table numbers match actual bullet count in each section, including style findings in ⚠️ count.",
-        "hint": "Recount bullets in each section (regular + style under #### Style findings) and update the table number row.",
+        "desc": "Bucket-count table numbers match actual bullet count in each section; advisory style findings are excluded from ⚠️, [style-blocker] bullets count in 🚨.",
+        "hint": "Recount bullets in each section (advisory style bullets under #### Style suggestions are uncounted) and update the table number row.",
         "check": check_count_table_matches_bullets,
     },
     {
@@ -2349,9 +2468,15 @@ RULES = [
         "check": check_cross_sibling_math,
     },
     {
+        "id": "style-blocker-provenance",
+        "desc": "Every [style-blocker] bullet in 🚨 traces to a blocker entry in .vale-findings.json (the marker exempts trail-matching, so it must not be forgeable).",
+        "hint": "Do not author [style-blocker] bullets — that marker is composer-only. Render reviewer-found issues as normal **[L…]** bullets with a trail record.",
+        "check": check_style_blocker_provenance,
+    },
+    {
         "id": "style-render-mode",
-        "desc": "Style-findings render mode matches the relaxed inline-vs-collapse rule (output-format.md L252-258).",
-        "hint": "Inline-all when total ≤5 OR concentrated in one file (≤30); collapse-all when multi-file AND total >5, or total >30.",
+        "desc": "Style suggestions render expanded, never hidden behind a <details> block.",
+        "hint": "Render advisory style suggestions expanded — remove the <details> wrapper and group them under an `##### <path>` H5 heading per file.",
         "check": check_style_render_mode,
     },
     {
@@ -2497,6 +2622,12 @@ RULES = [
         "desc": "Schema v11: an explicit-empty-form line (`_No …._`) must be reader-facing — no leftover composer instructions (`per ci.md §`, `surfaced by the composer`, `docs-review:references:`, `pre-stubbed`).",
         "hint": "Replace the placeholder line with the clean reader-facing empty form (e.g. `_No pre-existing issues in touched files._`, `_No items resolved since the last review._`); 'what to add here' guidance belongs in ci.md §3, not the published body.",
         "check": check_no_placeholder_empty_form,
+    },
+    {
+        "id": "triaged-details-wrapper",
+        "desc": "Schema v20: a 📋 Triaged verifier findings section with bullets keeps its collapsed <details> wrapper and the summary line explaining what the section is.",
+        "hint": "Re-wrap the bullets in `<details>` + `<summary><em>I double-checked these and realized they weren't real findings — click to expand</em></summary>`; leave the bullets themselves alone.",
+        "check": check_triaged_details_wrapper,
     },
 ]
 
@@ -2662,6 +2793,24 @@ def load_verified_claims(explicit_path: str | None) -> list[dict] | None:
     return [v for v in verdicts if isinstance(v, dict)]
 
 
+def load_vale_findings(explicit_path: str | None) -> list[dict] | None:
+    """Load `.vale-findings.json` (a flat list) if present, else None.
+
+    None means the pre-step didn't run, which makes `style-blocker-provenance`
+    skip rather than fire -- an absent artifact is not evidence of forgery.
+    """
+    path = Path(explicit_path) if explicit_path else Path.cwd() / ".vale-findings.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, list):
+        return None
+    return [f for f in data if isinstance(f, dict)]
+
+
 def repo_root() -> Path:
     try:
         result = subprocess.run(
@@ -2673,11 +2822,22 @@ def repo_root() -> Path:
         return Path.cwd()
 
 
-def run_checks(ctx: Context, skip_rules: set[str] | None = None) -> list[Violation]:
+def run_checks(ctx: Context, skip_rules: set[str] | None = None,
+               only_rules: set[str] | None = None) -> list[Violation]:
+    """Run every rule, minus `skip_rules`. `only_rules`, when given, narrows the
+    set to exactly those ids (and still honours `skip_rules`).
+
+    `only_rules` exists for lanes that cannot afford the full contract but want
+    one specific guarantee -- e.g. claude-update.yml, which renders its body
+    freehand and would fail most structural rules, running
+    `--only-rule style-blocker-provenance` as a non-blocking warning.
+    """
     skip_rules = skip_rules or set()
     out: list[Violation] = []
     for rule in RULES:
         if rule["id"] in skip_rules:
+            continue
+        if only_rules is not None and rule["id"] not in only_rules:
             continue
         try:
             out.extend(rule["check"](ctx))
@@ -2698,7 +2858,7 @@ def render_markdown(violations: list[Violation]) -> str:
     out = [
         "# validate-pinned.py — fix-me marker",
         "",
-        f"{len(violations)} violation(s) found. Re-render the body addressing each violation below, then call `pinned-comment.sh upsert-validated` once more. If a second validation also fails, fall back to plain `upsert` — the validator's CI annotation will surface the residual to the maintainer.",
+        f"{len(violations)} violation(s) found. Re-render the body addressing each violation below, then re-run `validate-pinned.py check`. If a second validation also fails, the workflow publishes with `pinned-comment.sh upsert --soft-floor` — the validator's CI annotation surfaces the residual to the maintainer.",
         "",
     ]
     for v in violations:
@@ -2750,6 +2910,7 @@ def cmd_check(args: argparse.Namespace) -> int:
     editorial_balance = load_editorial_balance(args.editorial_balance)
     candidate_claims = load_candidate_claims(args.candidate_claims)
     verified_claims = load_verified_claims(args.verified_claims)
+    vale_findings = load_vale_findings(args.vale_findings)
 
     ctx = Context(
         body=body,
@@ -2765,15 +2926,26 @@ def cmd_check(args: argparse.Namespace) -> int:
         editorial_balance=editorial_balance,
         candidate_claims=candidate_claims,
         verified_claims=verified_claims,
+        vale_findings=vale_findings,
     )
 
+    known = {r["id"] for r in RULES}
     skip_rules = set(args.skip_rule or [])
     if skip_rules:
-        unknown = skip_rules - {r["id"] for r in RULES}
+        unknown = skip_rules - known
         if unknown:
             print(f"validate-pinned.py: warning: --skip-rule names unknown rule(s): {sorted(unknown)}",
                   file=sys.stderr)
-    violations = run_checks(ctx, skip_rules=skip_rules)
+    only_rules = set(args.only_rule or []) or None
+    if only_rules:
+        unknown = only_rules - known
+        if unknown:
+            # Unlike --skip-rule, a typo here silently checks NOTHING and exits
+            # 0, which reads as "clean". Fail loudly instead.
+            print(f"validate-pinned.py: --only-rule names unknown rule(s): {sorted(unknown)}",
+                  file=sys.stderr)
+            return 2
+    violations = run_checks(ctx, skip_rules=skip_rules, only_rules=only_rules)
 
     json_path = Path(args.output_json or DEFAULT_OUTPUT_JSON)
     md_path = Path(args.output_markdown or DEFAULT_OUTPUT_MARKDOWN)
@@ -2862,8 +3034,14 @@ def main() -> int:
                          help="Annotation labels as soft-floor (second-failure publish-anyway).")
     p_check.add_argument("--skip-rule", action="append", default=[],
                          help="Rule id to skip (repeatable). Used by compose-review.py's self-check "
-                              "to suppress `no-todo-tokens` on its `<TODO>`-laden draft; the publish "
-                              "path (pinned-comment.sh upsert-validated) does NOT pass this.")
+                              "to suppress `no-todo-tokens` on its `<TODO>`-laden draft; the workflow "
+                              "publish chain does NOT pass this.")
+    p_check.add_argument("--only-rule", action="append", default=[],
+                         help="Run ONLY this rule id (repeatable); everything else is skipped. "
+                              "For lanes that render freehand and cannot satisfy the full "
+                              "contract but want one specific guarantee — e.g. claude-update.yml "
+                              "running `--only-rule style-blocker-provenance` as a warning. "
+                              "An unknown id exits 2 rather than vacuously passing.")
     p_check.add_argument("--fetched-urls",
                          help="Path to `.fetched-urls.json` from the workflow pre-step. "
                               "Defaults to ./.fetched-urls.json. Pass-through to "
@@ -2883,6 +3061,10 @@ def main() -> int:
                               "pre-step. Defaults to ./.verified-claims.json. Pass-through to "
                               "the schema-v8 artifact rules (verified-claims-trail-faithful, "
                               "pass-2-fetch-faithfulness part (b), pass-3-evidence-faithful).")
+    p_check.add_argument("--vale-findings",
+                         help="Path to `.vale-findings.json` from the `vale-findings-filter.py` "
+                              "pre-step. Defaults to ./.vale-findings.json. Pass-through to the "
+                              "style-blocker-provenance rule.")
     p_check.set_defaults(func=cmd_check)
 
     p_rules = sub.add_parser("show-rules", help="Print the rule registry.")

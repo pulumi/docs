@@ -356,7 +356,7 @@ jobs:
           PR: ${{ steps.pr-context.outputs.pr_number }}
         run: |
           CHANGED=$(gh pr diff "$PR" --name-only \
-            | grep -E '^content/(docs|blog|what-is|tutorials|learn)/.*\.md$' || true)
+            | grep -E '^content/(docs|blog|what-is|tutorials)/.*\.md$' || true)
           if [ -z "$CHANGED" ]; then
             echo '{}' > .vale-raw.json
             echo '[]' > .vale-findings.json
@@ -365,8 +365,34 @@ jobs:
           fi
           vale --no-exit --output=JSON $CHANGED > .vale-raw.json 2>/dev/null \
             || echo '{}' > .vale-raw.json
+          # Vale renders markdown to HTML before applying rules, so bracket
+          # constructions (`[here](url)`, `![](url)`) are gone before tokens
+          # match. markdown-syntax-findings.py scans the raw markdown and emits
+          # Vale-shaped JSON, merged in before filtering. This block mirrors
+          # claude-code-review.yml — without it a refresh dropped the two rules
+          # it contributes (Pulumi.EmptyAltText, Pulumi.LinkText) from a review
+          # the initial pass had raised them on.
+          #
+          # This affects the ADVISORY tier only. Neither rule is blocker-tier
+          # (see vale-deterministic-fixes.yaml), so the [style-blocker] set is
+          # byte-identical with and without this merge, and the provenance
+          # check downstream is unaffected. Note Pulumi.LinkText flags *vague*
+          # link text — there is no broken-link detector here.
+          python3 .claude/commands/docs-review/scripts/markdown-syntax-findings.py \
+            $CHANGED > .syntax-findings.json \
+            || echo '{}' > .syntax-findings.json
+          # Concatenate per-file alert arrays (jq's `*` shallow-merges and would
+          # *replace* Vale's array with the script's for any overlapping file).
+          jq -s 'reduce .[] as $o ({}; reduce ($o | keys_unsorted[]) as $k (.; .[$k] = ((.[$k] // []) + $o[$k])))' \
+            .vale-raw.json .syntax-findings.json > .vale-raw.merged.json \
+            && mv .vale-raw.merged.json .vale-raw.json \
+            || true
+          # No 2>/dev/null on the filter: it has no safe_main wrapper, so the
+          # redirect discarded the only trace of a crash. (Vale's own stderr
+          # above is still redirected — it is noisy and exits 0 regardless.)
+          # The `||` fallback still keeps the lane green.
           python3 .claude/commands/docs-review/scripts/vale-findings-filter.py \
-            --pr "$PR" --in .vale-raw.json --out .vale-findings.json 2>/dev/null \
+            --pr "$PR" --in .vale-raw.json --out .vale-findings.json \
             || echo '[]' > .vale-findings.json
 
       # Post a transient <!-- CLAUDE_PROGRESS --> comment so the author
@@ -458,22 +484,144 @@ jobs:
                - If a pinned review **does not exist**, follow `.claude/commands/docs-review/ci.md` to produce an initial review.
             4. Post via `bash .claude/commands/docs-review/scripts/pinned-comment.sh upsert --pr ${{ steps.pr-context.outputs.pr_number }} --body-file <path>`.
 
-            **Style nits.** If `.vale-findings.json` exists and is non-empty, surface each entry under ⚠️ Low-confidence as `- **line N:** [style] _category_ — <message>` (bold the line number, italicize the category). Use the `category` field; never surface the `rule` field. **Group all style findings under a `#### Style findings` H4 sub-heading inside ⚠️ Low-confidence** (single sub-heading; appears once, after any regular low-confidence bullets). Immediately under the heading, render `<sub>Click each filename to expand.</sub>` whenever any file rolls up under `<details>` (skip the hint if every file renders inline). When a single file has more than 5 style findings, collapse them under `<details>` with `<summary><strong>filename</strong> (<strong>N</strong> issues: <strong>X</strong> kind1, <strong>Y</strong> kind2, …)</summary>` — bold every numeral and use the word "issues" (not "nits"). Full render contract: `docs-review:references:output-format`. Style findings are nags, not blockers — never put them in 🚨 Outstanding.
+            **Style suggestions.** If `.vale-findings.json` exists and is non-empty, split entries on the `blocker` field. **Blocker tier** (`"blocker": true` — wrong or deprecated product names, banned terms, misspellings, agreement errors; near-zero false-positive rate): render each in 🚨 Outstanding as `- **[L<n>]** <file-in-backticks> — [style-blocker] _category_ — <message>` (standard `**[L<n>]**` anchor so the auto-refresh gate can match a fix-push; no verification-trail record needed — the validator exempts `[style-blocker]` bullets from trail-matching) and count them in the 🚨 count-table cell. Never author a `[style-blocker]` bullet yourself — it is composer-only and exempts the bullet from trail-matching; reviewer-found issues go in 🚨 as ordinary `**[L…]**` bullets with a trail record. **Advisory tier** (everything else): surface each entry under ⚠️ Low-confidence as `- **line N:** [style] _category_ — <message>` (bold the line number, italicize the category), grouped under a single `#### Style suggestions` H4 sub-heading after any regular low-confidence bullets, **expanded, never behind a `<details>`** — group them under an `##### <path>` H5 heading per file, in line order (an H5, not a bold line — a column-0 `**bold**` line is miscounted as a bucket finding). **Never write a ✏️ mark, and never write the ✏️ banner line under the count table.** This lane re-posts the inline suggestions after you exit, and a workflow step then rewrites both — plus the italic caption under the `#### Style suggestions` heading, which is reconciled to one canonical string, so don't reword it — from the set the GitHub API accepted — so any mark you carry over from the previous pinned comment, or author fresh, is stripped and recomputed. Drop every ✏️ you find in the previous body when you re-render; the step puts back the ones that are real. The mark is keyed to the **line**, not the finding: one suggestion rewrites a whole line, so if that line carries two style findings both bullets get a ✏️. Marks can therefore outnumber the banner's count — the banner counts buttons, the marks point at the lines they sit on. That is expected; do not "reconcile" it. Advisory bullets are NOT counted in the ⚠️ count-table cell. Use the `category` field; never surface the `rule` field. Delete false-positive advisory bullets silently — never list, count, or explain the ones you dropped. Full render contract: `docs-review:references:output-format`.
 
-            Style nits are **not** tracked across reviews. Each `#update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved style nits into ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches only, not `[style]` bullets.
+            **Inline-suggestion sidecar.** After you have published the refreshed review, Write `.style-suggestions.json` at the workspace root (a JSON array; write `[]` if none qualify) staging the ADVISORY style findings whose rewrite is a clear improvement. Schema per entry: `{"file": "<path>", "line": <n>, "original": "<exact text on that line>", "replacement": "<new text>", "category": "<category>", "note": "<≤10-word reason>"}`. A workflow step validates each entry against the diff and file content, posts them as one-click GitHub `suggestion` comments, and reconciles the pinned comment's ✏️ marks — you never post them yourself. Convert a finding ONLY when ALL hold: (a) the rewrite preserves meaning exactly — a hedge that is factually load-bearing ("usually completes in five minutes") is NOT a conversion candidate, deleting it would overpromise; (b) the fix is contained on the single flagged line; (c) you are confident the result reads better, not just shorter. Cap at 10. `original` must be the exact substring on that line in the checked-out file, or validation drops the entry. Do NOT remove the corresponding `[style]` bullet — the block stays the complete record. Blocker findings are never suggestions, and neither is anything sharing a LINE with one — a suggestion replaces the whole line, so it would re-commit the blocking text. **Stage the full qualifying set every run, not just the new ones:** the step deletes the previous run's suggestion comments before posting, so a finding you omit loses its button. **Write `[]` (not nothing) when the answer is none — this is load-bearing, not bookkeeping.** An explicit `[]` is authoritative and clears the previous run's buttons; an absent file means "unknown" and leaves them all standing, so a refresh where you simply forget the sidecar strands stale buttons on findings you no longer report. Writing the file is how you say which one you mean.
 
-          # Effort is deliberately left unset on this lane. A 2026-07-30 fork A/B
-          # found `--effort low` makes the re-entrant path rewrite the pinned
-          # review WITHOUT the 🔍 Verification trail, 📊 Editorial balance, and
-          # investigation-log blocks (2/2 runs; the control kept all three). The
-          # loss is permanent — later updates merge from the prior comment — and
-          # invisible, because this workflow runs only `validate-pinned.py
-          # count-buckets`, never the validate → splice → validator-fix chain.
-          # The 2026-07-24 measurement that motivated the flag compared cost and
-          # latency only, not output completeness. Don't re-add it here without
-          # wiring in full validation first; the composer lane in
-          # claude-code-review.yml is a different case and keeps its low effort.
-          claude_args: '--model claude-sonnet-5 --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash /home/runner/work/pulumi.docs/pulumi.docs/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
+            Advisory style findings are **not** tracked across reviews. Each `#update-review` run generates a fresh `.vale-findings.json` against the current PR head; render those findings each time, drop them silently when they disappear, do NOT move resolved advisory nits into ✅ Resolved. Blocker-tier `[style-blocker]` bullets ARE tracked like regular findings: when a fix-push resolves one, move it to ✅ Resolved. The diff-tracking rules in `update.md` (Case 1 fix-response: move resolved to ✅) apply to human-grade catches and `[style-blocker]` bullets, not advisory `[style]` bullets.
+
+          # Model and effort are set from the 2026-08-10 campaign
+          # (`2026-08-10-update-lane-model-config` in pulumi/docs-review-benchmarks),
+          # a synthetic replay of this lane: 4 arms x 3 reps x 2 chained refreshes,
+          # scored on whether the re-rendered pinned body keeps its evidence spine
+          # (the 🔍 Verification trail's line floor, 📊 Editorial balance, and the
+          # investigation log). opus-5 at medium effort was the only arm intact in
+          # every cell (6/6); sonnet-5 with effort unset — what ran here before —
+          # and opus-5 unset each lost the spine in 1 of 6. It also gets there in
+          # 0.43x the output tokens and 0.64x the turns — but Opus is 2.5x Sonnet
+          # per token, so it costs ~1.25x, about $0.27 more per refresh at the
+          # rate this lane fires. That premium is permanent: Sonnet 5's $2/$10
+          # introductory rate was made its standing price on 2026-08-10, so the
+          # crossover the first cut of this comment predicted never happens.
+          # It buys removing a failure that is unrecoverable (the pinned comment
+          # is the only copy of the trail) and unvalidated on this lane.
+          #
+          # `--effort low` stays OFF this lane. It rewrites the pinned review
+          # without the trail's contents — keeping the heading and replacing 40
+          # claim lines with a "see the full trail in the prior pass" pointer that
+          # dangles, because the prior pass is the comment it just overwrote. One
+          # rep of three collapsed to 11 of 40 lines and held exactly 11 through
+          # the next refresh. The loss is permanent — later updates merge from the
+          # prior comment — and invisible, because this workflow runs only
+          # `validate-pinned.py count-buckets`, never the validate → splice →
+          # validator-fix chain. Don't re-add it without wiring in full validation
+          # first; the composer lane in claude-code-review.yml is a different job
+          # shape and keeps its low effort.
+          claude_args: '--model claude-opus-5 --effort medium --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,WebSearch,Bash(gh pr:*),Bash(gh issue:*),Bash(gh api:*),Bash(gh search:*),Bash(gh release:*),Bash(gh repo view:*),Bash(gh repo list:*),Bash(git:*),Bash(bash .claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(bash ${{ github.workspace }}/.claude/commands/docs-review/scripts/pinned-comment.sh:*),Bash(cd:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(file:*),Bash(stat:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(awk:*),Bash(sed:*),Bash(tr:*),Bash(cut:*),Bash(paste:*),Bash(sort:*),Bash(uniq:*),Bash(diff:*),Bash(jq:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(true:*),Bash(false:*),Bash(test:*),Bash(which:*),Bash(command:*),Bash(curl:*),Bash(wget:*)"'
+
+      # Re-post the one-click style suggestions and reconcile the pinned
+      # comment against what actually landed. Delete-and-repost, exactly like
+      # the initial lane: the previous run's suggestion comments are cleared
+      # first, so a finding the author fixed stops offering a button and a
+      # newly-surfaced one gains one.
+      #
+      # --annotate-pinned instead of --annotate-draft because this lane has no
+      # draft to intercept: the model renders the body and upserts it inside
+      # its own step, so the published comment is the only copy. The script
+      # PATCHes each `<!-- CLAUDE_REVIEW N/M -->` part in place rather than
+      # fetch → concatenate → re-upsert, which would re-run the splitter over
+      # its own continuation-<details> artifacts on every refresh.
+      #
+      # continue-on-error: suggestions are a convenience layer; a failure here
+      # must never mark a successful review as errored.
+      - name: Post inline style suggestions
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 .claude/commands/docs-review/scripts/post-style-suggestions.py \
+            --pr "${{ steps.pr-context.outputs.pr_number }}" \
+            --repo "${{ github.repository }}" \
+            --vale-findings .vale-findings.json \
+            --annotate-pinned
+
+      # Surface the evidence-spine floor's verdict. The floor itself runs inside
+      # `pinned-comment.sh upsert`, which the MODEL calls from its own Bash tool
+      # — and this action does not echo tool output into the job log, so without
+      # this step the check is completely invisible from CI: a run where it held
+      # and a run where it never executed look identical.
+      #
+      # The ::warning:: on a restore is the point, not decoration. Every real
+      # restore is a production instance of the model dropping the review's
+      # evidence spine, which is exactly the rate the 2026-08-10 campaign had to
+      # measure synthetically. Surfaced here, the lane measures it on live
+      # traffic for free — and a run of them is the case for revisiting the
+      # model config rather than leaning harder on the repair.
+      - name: Report evidence-spine floor
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
+        continue-on-error: true
+        run: |
+          if [ ! -f /tmp/splice-spine.json ]; then
+            echo "::warning::No evidence-spine floor report. pinned-comment.sh upsert did not run, or ran without reaching the floor check — the refreshed review published unguarded."
+            exit 0
+          fi
+          echo "evidence-spine floor report:"
+          cat /tmp/splice-spine.json
+          status=$(jq -r '.status // "unknown"' /tmp/splice-spine.json)
+          case "$status" in
+            restored)
+              secs=$(jq -r '[.restored[].section] | join(", ")' /tmp/splice-spine.json)
+              echo "::warning::The refreshed review dropped evidence-spine section(s) — $secs — and they were restored from the previous pinned comment. The published review is correct; the render was not."
+              ;;
+            error)
+              echo "::warning::The evidence-spine floor errored and the review published as rendered: $(jq -r '.error' /tmp/splice-spine.json)"
+              ;;
+          esac
+
+      # Provenance spot-check. The full validate -> splice -> re-validate chain
+      # does not run on this lane (the model renders the body freehand and
+      # would fail most structural rules), but ONE rule earns its keep here:
+      # `[style-blocker]` is what exempts a 🚨 bullet from trail-matching, so an
+      # authored one routes an unverified finding into the blocking bucket
+      # behind a check. `--only-rule` runs exactly that rule and nothing else.
+      #
+      # WARNING-ONLY, deliberately. There is no splice/fix chain here to repair
+      # a violation, and failing the job after the review has already published
+      # would put a red X on work the author can see is fine. The log line is
+      # evidence: if it never fires, the prompt instruction is holding; if it
+      # fires repeatedly, that is the case for either stripping the marker
+      # automatically or bringing real validation to this lane.
+      - name: Warn on forged [style-blocker] provenance
+        if: steps.claude.outcome == 'success' && steps.pr-context.outputs.is_pr == 'true'
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.pr-context.outputs.pr_number }}
+          REPO: ${{ github.repository }}
+        run: |
+          set +e
+          gh api "repos/$REPO/issues/$PR/comments" --paginate \
+            --jq '.[] | select(.body | startswith("<!-- CLAUDE_REVIEW ")) | .body' \
+            > .pinned-body.md 2>/dev/null
+          if [ ! -s .pinned-body.md ]; then
+            echo "provenance check: no pinned review body found; nothing to check."
+            exit 0
+          fi
+          python3 .claude/commands/docs-review/scripts/validate-pinned.py check \
+            --body-file .pinned-body.md \
+            --only-rule style-blocker-provenance \
+            --pr "$PR" --repo "$REPO" \
+            --output-json /tmp/provenance.json \
+            --output-markdown /tmp/provenance.md
+          rc=$?
+          if [ $rc -eq 1 ]; then
+            echo "::warning::A [style-blocker] bullet in the refreshed review has no matching blocker entry in .vale-findings.json. That marker exempts a 🚨 bullet from trail-matching, so an unverified finding may have entered the blocking bucket behind a check. Details below."
+            cat /tmp/provenance.md
+          elif [ $rc -ne 0 ]; then
+            echo "provenance check: validator exited $rc; skipping."
+          fi
+          exit 0
 
       # Runs on success or failure so the transient CLAUDE_PROGRESS
       # comment always reaches a terminal state.

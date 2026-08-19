@@ -12,13 +12,10 @@ aliases:
 - /docs/intro/pulumi-service/scopes/
 - /docs/intro/pulumi-cloud/scopes/
 - /docs/pulumi-cloud/access-management/rbac/scopes/
+pulumi_cloud_feature: rbac
 ---
 
 Scopes are the most granular level of access control in Pulumi Cloud's RBAC system. Each scope represents a specific action that can be performed on a resource, such as reading stack configurations or updating environment settings. Scopes are the building blocks of [permission sets](/docs/administration/access-identity/rbac/permission-sets), which are then bundled into [roles](/docs/administration/access-identity/rbac/roles) to create comprehensive access control configurations.
-
-{{% notes "info" %}}
-Pulumi Cloud's configurable RBAC features are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
-{{% /notes %}}
 
 ## How Scopes Work
 
@@ -28,7 +25,7 @@ Scopes follow a consistent naming pattern: `object:action`. For example:
 - `environment:write` - Allows modifying environment settings
 - `team:create` - Allows creating new teams
 
-Scopes are always associated with a specific [entity type](/docs/administration/access-identity/rbac/entities#entity-types) (like stacks, environments, insights accounts, etc.) and can only be used within permission sets that match that entity type. This ensures that permission sets remain logically grouped and can't mix actions across different types of resources.
+Scopes are always associated with a specific [entity type](/docs/administration/access-identity/rbac/entities#entity-types) (like stacks, environments, cloud accounts, etc.) and can only be used within permission sets that match that entity type. This ensures that permission sets remain logically grouped and can't mix actions across different types of resources.
 
 You can use scopes to build [custom permission sets](/docs/administration/access-identity/rbac/permission-sets#custom-permission-sets), which allow you to combine commonly related scopes to create meaningful access patterns. For example, a "Stack Manager" permission set might include scopes like:
 
@@ -51,12 +48,12 @@ You can view the list of available scopes, organized by entity type:
 
 - [Stacks](stacks)
 - [Environments](environments)
-- [Insights accounts](insights-accounts)
+- [Cloud accounts](insights-accounts)
 - [Organization settings](org-settings)
 
 ## Related resources
 
 - [Permission sets](/docs/administration/access-identity/rbac/permission-sets): Reusable bundles of related scopes for a single entity type. You grant them on entities or use them to set a role's organization access level.
-- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and Insights accounts), plus the organization-level access that governs org-wide operations.
+- [Entities and organization-level access](/docs/administration/access-identity/rbac/entities): The objects that permission sets are granted on (stacks, environments, and cloud accounts), plus the organization-level access that governs org-wide operations.
 - [Roles](/docs/administration/access-identity/rbac/roles): Collections of permission sets applied to entities and combined with an organization access level. You assign a role to users, teams, and machine tokens.
 - [Teams](/docs/administration/access-identity/rbac/teams): Groups of users that can be assigned roles and entity access. Each member inherits the union of the team's roles on top of their own role.

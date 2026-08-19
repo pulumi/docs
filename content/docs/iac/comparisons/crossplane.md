@@ -21,7 +21,7 @@ aliases:
 - /docs/iac/concepts/vs/crossplane/
 ---
 
-Pulumi and [Crossplane](https://www.crossplane.io/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms, but they take different architectural approaches. Pulumi lets you define infrastructure in general-purpose languages (Python, TypeScript, JavaScript, Go, C#, Java, or YAML) and runs through a CLI or an embeddable SDK. Crossplane extends Kubernetes into a control plane: infrastructure is defined as Kubernetes resources in YAML and reconciled continuously by controllers running inside a cluster.
+Pulumi and [Crossplane](https://www.crossplane.io/) are both declarative infrastructure as code tools that provision resources across clouds and SaaS platforms, but they take different architectural approaches. Pulumi lets you define infrastructure in general-purpose languages ({{< pulumi-languages "general-purpose" >}}), plus YAML and [HCL](/docs/iac/languages-sdks/hcl/), and runs through a CLI or an embeddable SDK. Crossplane extends Kubernetes into a control plane: infrastructure is defined as Kubernetes resources in YAML and reconciled continuously by controllers running inside a cluster.
 
 This page covers what each tool is, a feature-by-feature comparison, the most important differences in detail, and the available paths for adopting Pulumi alongside or instead of Crossplane.
 
@@ -43,7 +43,7 @@ With Crossplane, infrastructure is expressed as Kubernetes resources written in 
 
 | Feature | Pulumi | Crossplane |
 | --- | --- | --- |
-| Language support | Python, TypeScript, JavaScript, Go, C#, Java, and YAML — general-purpose languages with familiar syntax for loops, conditionals, and abstractions | [Kubernetes YAML manifests](https://docs.crossplane.io/latest/) for declaring resources; Go is used to build providers and composition functions |
+| Language support | {{< pulumi-languages "general-purpose" >}} — general-purpose languages with familiar syntax for loops, conditionals, and abstractions — plus [YAML](/docs/iac/languages-sdks/yaml/) and [HCL](/docs/iac/languages-sdks/hcl/) | [Kubernetes YAML manifests](https://docs.crossplane.io/latest/) for declaring resources; Go is used to build providers and composition functions |
 | Cloud and service support | [Pulumi Registry](/registry/) of packages, including [bridged, native, parameterized, and dynamic providers](/docs/iac/concepts/providers/#types-of-providers); first-party native providers for [Kubernetes](/registry/packages/kubernetes/) and [Azure Native](/registry/packages/azure-native/) generated from upstream API schemas; [any OpenTofu or Terraform provider](/docs/iac/concepts/providers/any-terraform-provider/) can be generated into a Pulumi SDK with `pulumi package add terraform-provider <name>` | [Crossplane providers](https://docs.crossplane.io/latest/packages/providers/) installed into the cluster as packages; official AWS, Azure, and Google Cloud providers plus community providers, many generated from Terraform providers via [Upjet](https://github.com/crossplane/upjet) |
 | Transpiled to another format? | No — programs run directly in their host language | No — YAML manifests are reconciled directly by Crossplane controllers |
 | State management | [Managed by Pulumi Cloud by default](/docs/iac/concepts/state-and-backends/); self-managed backends include Amazon S3, Azure Blob Storage, Google Cloud Storage, local files, and others | Stored in the Kubernetes cluster's etcd datastore as the status of resource objects; no separate state file |
@@ -150,7 +150,7 @@ The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulum
 
 ## Next steps
 
-- [Get started with Pulumi](/docs/iac/get-started/)
+- [Get started with Pulumi](/docs/get-started/)
 - [Get started with Pulumi and Kubernetes](/docs/iac/get-started/kubernetes/)
 - [Pulumi Kubernetes provider](/registry/packages/kubernetes/)
 - [Pulumi vs. Terraform](/docs/iac/comparisons/terraform/)

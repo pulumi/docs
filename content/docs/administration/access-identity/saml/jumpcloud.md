@@ -12,6 +12,7 @@ menu:
     identifier: pulumi-cloud-access-management-saml-jumpcloud
 aliases:
 - /docs/pulumi-cloud/access-management/saml/jumpcloud/
+pulumi_cloud_feature: saml-sso
 ---
 
 This guide walks you through configuring JumpCloud as a [SAML SSO](/docs/administration/access-identity/saml/) identity provider (IdP) for Pulumi Cloud.
@@ -27,12 +28,12 @@ JumpCloud SAML SSO requires the **SSO Package** or higher, or the SSO add-on fea
 1. Select **+ Add New Application**.
 1. Search for **Pulumi** to use the pre-built connector, or select **Custom Application** if a pre-built connector is not available, then select **Next**.
 1. On the **Select Options** page, choose the applicable options and select **Next**.
-1. On the **Enter General Info** page, enter a display name (for example, _Pulumi Cloud_), an optional description, and a user portal image. See [Pulumi Logos](/brand/#logos) for official artwork.
+1. On the **Enter General Info** page, enter a display name (for example, _Pulumi Cloud_), an optional description, and a user portal image. See [Pulumi Logos](https://brand.pulumi.com/#logos) for official artwork.
 1. Optionally expand **Advanced Settings** to set a custom value for the IdP URL endpoint. JumpCloud uses this to construct your SSO IdP URL in the format `https://sso.jumpcloud.com/saml2/<custom_value>`.
 
-    {{% notes type="warning" %}}
+    {{< notes type="warning" >}}
     The SSO IdP URL cannot be changed after the application is created. Choose the custom value carefully.
-    {{% /notes %}}
+    {{< /notes >}}
 
 1. Select **Save Application**, then **Configure Application**.
 

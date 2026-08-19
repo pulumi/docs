@@ -33,7 +33,7 @@ These specifications apply to Pulumi-managed workflow runners. [Customer-managed
 
 ## Security and isolation
 
-Deployments run on single-use virtual machines; compute and storage are never shared across runs. Security features like OIDC let you fine-tune credential scope, lifetime, and expiration at a per-deployment level. If you require more isolation — for example, running inside your own private network — use [customer-managed runners](/docs/deployments/concepts/customer-managed-runners/). The same isolation applies to every workflow type supported by workflow runners, including [Insights](/docs/insights/) discovery scans and [policy evaluations](/docs/insights/policy/).
+Deployments run on single-use virtual machines; compute and storage are never shared across runs. Security features like OIDC let you fine-tune credential scope, lifetime, and expiration at a per-deployment level. If you require more isolation — for example, running inside your own private network — use [customer-managed runners](/docs/deployments/concepts/customer-managed-runners/). The same isolation applies to every workflow type supported by workflow runners, including [Discovery](/docs/insights/discovery/) scans and [policy evaluations](/docs/insights/policy/).
 
 ## Dependency caching
 

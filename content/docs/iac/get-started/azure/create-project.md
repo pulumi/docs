@@ -171,6 +171,25 @@ $ pulumi new azure-yaml
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ pulumi new azure-hcl
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new azure-hcl
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
 The `pulumi new` command interactively walks through initializing a new project, as well as creating a
 [**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your
 project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
@@ -220,6 +239,12 @@ After the command completes, the project and stack will be ready.
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+After the command completes, the project and stack will be ready.
+
+{{% /choosable %}}
+
 ### Review your new project's contents
 
 If you list the contents of your directory, you'll see some key files:
@@ -230,7 +255,7 @@ If you list the contents of your directory, you'll see some key files:
 
 {{% /choosable %}}
 
-{{% choosable language "typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java,hcl" %}}
 
 - <span>{{< langfile >}}</span> contains your project's main code that declares an Azure resource group and storage account
 
@@ -429,6 +454,40 @@ outputs:
   # Export the storage account name
   storageAccountName: ${sa.name}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    azure-native = {
+      source = "pulumi/azure-native"
+    }
+  }
+}
+
+# Create an Azure Resource Group
+resource "azure-native_resources_resource_group" "resource-group" {}
+
+# Create an Azure Storage Account
+resource "azure-native_storage_storage_account" "sa" {
+  resource_group_name = azure-native_resources_resource_group.resource-group.name
+  kind                = "StorageV2"
+  sku = {
+    name = "Standard_LRS"
+  }
+}
+
+# Export the storage account name
+output "storage_account_name" {
+  value = azure-native_storage_storage_account.sa.name
+}
+```
+
+The `pulumi/azure-native` source selects the Pulumi Azure Native provider, whose resource types follow the Azure
+Resource Manager APIs directly. See [Pulumi HCL](/docs/iac/languages-sdks/hcl/) for how provider sources resolve.
 
 {{% /choosable %}}
 

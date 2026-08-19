@@ -1,8 +1,8 @@
 ---
-title_tag: Using Resource Explorer | Pulumi Insights
-title: Using Insights Resource Explorer
-h1: "Pulumi Insights: Using Resource Explorer"
-meta_desc: This page provides an overview on how to get started with Pulumi Insights Accounts.
+title_tag: Using Resource Explorer | Discovery & Governance
+title: Using Resource Explorer
+h1: Using Resource Explorer
+meta_desc: This page provides an overview on how to explore discovered resources with Resource Explorer.
 weight: 5
 menu:
   insights:
@@ -12,11 +12,12 @@ menu:
     weight: 5
 aliases:
   - /docs/insights/get-started/using-resource-explorer/
+pulumi_cloud_feature: resource-search
 ---
 
 [Pulumi Resource Explorer](/docs/insights/) offers multi-cloud search and analytics across every environment in your organization. You can issue queries that find all of your AWS VPCs, or all of your VPCs in AWS and Azure, or all resources with the “production” tag across all cloud environments. You also have access to statistics about cloud usage, including a breakdown by cloud provider, resource type, and department. Resource search enables you to find the needle within your cloud haystack and visualize cloud consumption trends.
 
-![Insights Account Discovery Scan](/docs/insights/assets/insights-resource-explorer.png)
+![Resource Explorer showing discovered resources](/docs/insights/assets/insights-resource-explorer.png)
 
 Pulumi Resource Explorer is composed of:
 
@@ -38,7 +39,7 @@ Let's look at some common use cases and questions you might have about your infr
 
 `modified:<now-30d`
 
-![Insights Account Discovery Scan](/docs/insights/assets/resource-explorer-filter-30days.png)
+![Resource Explorer filtered to resources modified in the last 30 days](/docs/insights/assets/resource-explorer-filter-30days.png)
 
 You can also filter your search using the most common keywords, such as **Type**, **Project**, **Stack** and more.
 

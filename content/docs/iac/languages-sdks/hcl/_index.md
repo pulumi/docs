@@ -64,7 +64,7 @@ output "pet_name" {
 }
 ```
 
-{{% notes "info" %}}
+{{% notes type="info" %}}
 Providers resolve the same way as OpenTofu: an unqualified source such as `random` (or a fully-qualified `hashicorp/random`) is looked up in the [OpenTofu registry](https://opentofu.org/registry/) and bridged into Pulumi automatically — no `required_providers` entry is required. Prefix a source with `pulumi/` (for example, `pulumi/aws`) to consume a native Pulumi provider instead.
 {{% /notes %}}
 
@@ -76,6 +76,8 @@ $ pulumi up
 ```
 
 Re-run `pulumi install` whenever you change the set of providers your program uses.
+
+`pulumi install` writes descriptor files for each provider to `sdks/<provider>/hcl.sdk.json` in your project directory. You should check these files into version control along with the rest of your program, as they ensure teammates and CI processes resolve provider versions consistently.
 
 Further examples are available in the [Pulumi HCL GitHub repository](https://github.com/pulumi/pulumi-hcl/tree/master/examples). The specification for Pulumi HCL programs is in the [Pulumi HCL reference](/docs/iac/languages-sdks/hcl/hcl-language-reference/).
 
