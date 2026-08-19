@@ -184,7 +184,7 @@ func main() {
 		})
 
 		if err != nil {
-			return fmt.Errorf("Error instantating Kubernetes provider: ", err)
+			return fmt.Errorf("Error instantiating Kubernetes provider: ", err)
 		}
 
 		// Create a namespace
