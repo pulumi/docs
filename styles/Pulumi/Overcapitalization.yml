@@ -79,10 +79,16 @@ tokens:
   # boundary after punctuation (e.g. an apostrophe), not after an ordinary
   # preceding word -- a bare `[a-z]` silently missed the common case in
   # hand-testing (see the postmortem in git log / agent notes on this rule).
-  # The lowercase-word anchor also does the work a branded-phrase carve-out
-  # would otherwise need: "Universal Infrastructure as Code" is preceded by
-  # the capitalized brand word "Universal", not a lowercase one, so it never
-  # matches without a separate exception. Same negative-lookahead guard as
+  # The lowercase-word anchor also does most of the work a branded-phrase
+  # carve-out would otherwise need: "Universal Infrastructure as Code" is
+  # preceded by the capitalized brand word "Universal", not a lowercase one,
+  # so a capitalized brand word directly before the phrase never matches. A
+  # possessive does, though: in "Pulumi's Infrastructure as Code" the `s`
+  # after the apostrophe is its own lowercase word to `\b[a-z]+`, so the
+  # token still fires there. That's acceptable -- the phrase is still the
+  # generic concept in that construction -- but it means this is not a
+  # complete branded-phrase carve-out; a real one (`(?<!'s )`-style guard)
+  # is #20958 territory, not this PR's. Same negative-lookahead guard as
   # the Stack token above, to skip a following proper noun such as a
   # conference or product name built on the phrase.
   - '\b[a-z]+[ -]Infrastructure[ -]as[ -]Code\b(?! [A-Z])'
