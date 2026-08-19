@@ -132,7 +132,7 @@ Here's how the core IaC tools compare at a glance before we go deep on each one:
 | Tool | Language / approach | Clouds supported | License | Latest stable release (Aug 2026) | Best for |
 |---|---|---|---|---|---|
 | [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and 170+ other providers | Apache-2.0 | v3.258.0 (2026-08-17) | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
-| [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | BUSL-1.1 | v1.15.8 (2026-07-08) | Teams with existing Terraform expertise and established workflows |
+| [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | BUSL-1.1 | v1.15.9 (2026-08-19) | Teams with existing Terraform expertise and established workflows |
 | [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Apache-2.0 | v2.265.0 (2026-08-13) | AWS-focused teams who prefer programming languages over templates |
 | [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Proprietary (managed service) | Continuously updated by AWS | AWS-only deployments requiring deep service integration |
 | [Azure ARM](#5-azure-resource-manager-arm) | JSON templates | Azure only | Proprietary (managed service) | Continuously updated by Microsoft | Azure-native deployments requiring comprehensive platform integration |
@@ -170,7 +170,7 @@ For teams weighing long-term risk, licensing model and governance matter as much
 | Tool | License | Governing body | Latest version | Released | GitHub stars |
 |---|---|---|---|---|---|
 | Pulumi | Apache-2.0 | Pulumi Corporation | v3.258.0 | 2026-08-17 | ~25.6k |
-| Terraform | BUSL-1.1 (not OSI-approved) | HashiCorp (an IBM company) | v1.15.8 | 2026-07-08 | ~49.5k |
+| Terraform | BUSL-1.1 (not OSI-approved) | HashiCorp (an IBM company) | v1.15.9 | 2026-08-19 | ~49.5k |
 | AWS CDK | Apache-2.0 | AWS | v2.265.0 | 2026-08-13 | ~12.9k |
 | AWS CloudFormation | Proprietary | AWS | Managed service | Continuous | N/A |
 | Azure ARM | Proprietary | Microsoft | Managed service | Continuous | N/A |
@@ -502,7 +502,7 @@ Organizations moving to programming-language-based IaC report deployment-time re
 ### 2. Terraform
 
 License: Business Source License (BUSL-1.1), not OSI-approved  
-Latest stable release: v1.15.8 (2026-07-08)  
+Latest stable release: v1.15.9 (2026-08-19)  
 Best For: Teams with existing Terraform expertise and established workflows
 
 [Terraform](/docs/iac/comparisons/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BUSL-1.1 (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
