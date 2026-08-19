@@ -223,6 +223,46 @@ def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> boo
     return True
 
 
+def has_editable_source(assertions: list[dict], repo_root: Path | None) -> bool:
+    """True when at least one asserting page exists as markdown in the tree.
+
+    A page with no source file is generated — a Hugo content adapter builds it
+    from `data/`, which some other pipeline syncs. Its text is not ours to
+    correct, and `select-articles.py` (which globs `content/docs/**/*.md`) can
+    never pick it for review, so the mark/boost/fix/retire loop has no page to
+    act on at any step.
+
+    `repo_root=None` means "assume editable" so the pure-logic self-tests and
+    any caller without a checkout keep today's behavior.
+    """
+    if repo_root is None:
+        return True
+    return any((repo_root / a["path"]).is_file() for a in assertions)
+
+
+def load_known_upstream(path: Path | None) -> dict[str, dict]:
+    """{entity_key: entry} from upstream-claims.yaml, or {} when absent.
+
+    Never raises: a malformed or missing file means "nothing is known yet",
+    which costs a duplicate Slack line and never suppresses a real finding.
+    That is the safe direction — this file can only ever quiet a notification,
+    so failing open on it can only make the lane noisier, not blinder.
+    """
+    if path is None or not path.is_file():
+        return {}
+    try:
+        import yaml  # local: only this path needs it
+        data = yaml.safe_load(path.read_text()) or {}
+    except Exception as e:  # noqa: BLE001 - any parse failure is non-fatal
+        warn(f"could not read {path} ({e}); every upstream finding will report as new")
+        return {}
+    out: dict[str, dict] = {}
+    for entry in (data.get("known") or []):
+        if isinstance(entry, dict) and entry.get("entity_key"):
+            out[str(entry["entity_key"])] = entry
+    return out
+
+
 def tonight_chunk(keys: list[str], count: int, today: date) -> list[str]:
     """Day-rotated chunk of the sorted entity keys: full coverage every
     ceil(N/count) nights, deterministic from the date alone.
@@ -352,9 +392,16 @@ def write_outputs(report: dict) -> None:
     if not gh_out:
         return
     with open(gh_out, "a") as fh:
-        # Only the gating flag: claims-reverify.yml reads the counts straight
-        # out of the report JSON for its Slack summary.
-        fh.write(f"has_stale={'true' if report['meta']['n_stale'] else 'false'}\n")
+        # Only the gating flags: claims-reverify.yml reads the counts straight
+        # out of the report JSON for its Slack summaries.
+        m = report["meta"]
+        fh.write(f"has_stale={'true' if m['n_stale'] else 'false'}\n")
+        # Upstream findings page #docs-ops only on a CHANGE — a finding nobody
+        # has filed yet, or one that started verifying clean because the
+        # upstream fix landed. A known finding still coming back contradicted
+        # is in the report and the artifact, and says nothing in Slack.
+        news = bool(m.get("n_upstream_new")) or bool(m.get("n_upstream_resolved"))
+        fh.write(f"has_upstream_news={'true' if news else 'false'}\n")
 
 
 def inconclusive_breakdowns(results: list[dict]) -> tuple[dict, dict]:
@@ -398,6 +445,13 @@ def finish(report: dict, out_path: Path) -> int:
     for label in ("inconclusive_by_type", "inconclusive_by_reason"):
         if m.get(label):
             log(f"{label}: " + " ".join(f"{k}={v}" for k, v in m[label].items()))
+    if m.get("n_upstream"):
+        log(f"upstream (generated pages, not markable): {m['n_upstream']} "
+            f"({m.get('n_upstream_new', 0)} not yet filed)")
+        for e in m.get("upstream_entities") or []:
+            log(f"  {e['entity_key']} -> {e.get('issue') or 'NOT YET FILED'}")
+    for k in m.get("upstream_resolved_entities") or []:
+        log(f"upstream RESOLVED (now verifies clean, retire its upstream-claims.yaml entry): {k}")
     write_outputs(report)
     return 0
 
@@ -465,6 +519,15 @@ def run(args) -> int:
 
     vc = _load_verify_claims()
     repo_root = Path(args.repo_root).resolve()
+    known_upstream = load_known_upstream(
+        Path(args.known_upstream) if args.known_upstream else None)
+    # A key that matches nothing in the index is a typo, or a claim that has
+    # since been re-extracted under a different key — either way it is silently
+    # muting nothing while looking like it mutes something. Warn, never fail:
+    # this file must not be able to break the nightly run.
+    for key in sorted(set(known_upstream) - set(entities)):
+        warn(f"upstream-claims.yaml lists {key}, which matches no volatile entity "
+             f"in the claims index; stale entry or a re-keyed claim")
 
     def check_entity(key: str) -> dict:
         claim = dict(representative(entities[key]))
@@ -490,13 +553,50 @@ def run(args) -> int:
     with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(keys))) as pool:
         results = list(pool.map(check_entity, keys))
 
-    stale = [r for r in results if r["verdict"] in STALE_VERDICTS]
+    # Split contradicted results by whether anything in this repo could act on
+    # them. `upstream` findings are real and stay in the rotation forever: no
+    # marker (nothing could ever retire it), no queue boost (no page to boost),
+    # but reported every run so they never go quiet the way the three
+    # policy-pack findings did in August.
+    contradicted = [r for r in results if r["verdict"] in STALE_VERDICTS]
+    for r in results:
+        r["upstream"] = not has_editable_source(
+            [{"path": p["path"]} for p in r["pages"]], repo_root)
+    stale = [r for r in contradicted if not r["upstream"]]
+    upstream = [r for r in contradicted if r["upstream"]]
+    # New = we have not told anyone yet. Resolved = a finding we had filed
+    # upstream now verifies clean, i.e. the upstream fix landed. The second is
+    # the event the marker scheme structurally could not report, because a
+    # marked entity was never re-checked.
+    upstream_new = [r for r in upstream if r["entity_key"] not in known_upstream]
+    upstream_resolved = [r for r in results
+                         if r["entity_key"] in known_upstream
+                         and r["verdict"] in FRESH_VERDICTS]
+    for r in upstream:
+        entry = known_upstream.get(r["entity_key"])
+        if entry:
+            r["upstream_issue"] = entry.get("issue")
+
     fresh = [r for r in results if r["verdict"] in FRESH_VERDICTS]
     report["entities"] = results
     report["meta"]["n_checked"] = len(results)
     report["meta"]["n_stale"] = len(stale)
+    report["meta"]["n_upstream"] = len(upstream)
+    report["meta"]["n_upstream_new"] = len(upstream_new)
+    report["meta"]["n_upstream_resolved"] = len(upstream_resolved)
+    report["meta"]["upstream_entities"] = [
+        {"entity_key": r["entity_key"], "issue": r.get("upstream_issue"),
+         "pages": [p["path"] for p in r["pages"]]}
+        for r in sorted(upstream, key=lambda x: x["entity_key"])]
+    report["meta"]["upstream_resolved_entities"] = sorted(
+        r["entity_key"] for r in upstream_resolved)
     report["meta"]["n_fresh"] = len(fresh)
-    report["meta"]["n_inconclusive"] = len(results) - len(stale) - len(fresh)
+    # Against `contradicted`, not `stale`: an upstream finding is a decided
+    # verdict that simply routes elsewhere. Subtracting only the markable ones
+    # would book every upstream contradiction as inconclusive, inflating the
+    # rate the health signal watches and eventually degrading the lane for
+    # doing its job.
+    report["meta"]["n_inconclusive"] = len(results) - len(contradicted) - len(fresh)
     report["meta"]["n_demoted"] = sum(1 for r in results if r["demoted_from"])
     report["meta"]["inconclusive_by_type"], report["meta"]["inconclusive_by_reason"] = \
         inconclusive_breakdowns(results)
@@ -648,6 +748,51 @@ def self_test() -> int:
           all(len(tonight_chunk(wide, 25, date.fromordinal(d0.toordinal() + i))) <= 25
               for i in range(3)))
 
+    # Upstream routing: a finding whose every asserting page is generated
+    # (no markdown source) must never become a marker, because nothing could
+    # ever retire it — that is how three real policy-pack findings removed
+    # themselves from the rotation in August 2026.
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "content/docs").mkdir(parents=True)
+        (root / "content/docs/real.md").write_text("# real\n")
+        editable = [{"path": "content/docs/real.md"}]
+        generated = [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]
+        check("a page with a source file is editable",
+              has_editable_source(editable, root) is True)
+        check("a generated page is not editable",
+              has_editable_source(generated, root) is False)
+        check("one editable asserting page is enough",
+              has_editable_source(generated + editable, root) is True)
+        check("no repo root -> assume editable (pure-logic callers)",
+              has_editable_source(generated, None) is True)
+
+        # The known-upstream file only ever quiets a repeat notification.
+        ku = root / "upstream-claims.yaml"
+        ku.write_text(
+            "known:\n"
+            "  - entity_key: numerical/known-one\n"
+            "    issue: https://github.com/pulumi/policy-packs-internal/issues/204\n")
+        loaded = load_known_upstream(ku)
+        check("known-upstream parses to a key map", set(loaded) == {"numerical/known-one"})
+        check("missing known-upstream file is empty, not fatal",
+              load_known_upstream(root / "nope.yaml") == {})
+        (root / "bad.yaml").write_text("known: [{{{\n")
+        check("malformed known-upstream fails open (noisier, never blinder)",
+              load_known_upstream(root / "bad.yaml") == {})
+
+    # The shipped file itself: every entry needs a tracking issue, or it is a
+    # mute button with nobody behind it. (Key-vs-index validation needs the
+    # claims index and so runs at runtime, as a warning.)
+    shipped = HERE / ".claude/commands/review-existing-content/references/upstream-claims.yaml"
+    if shipped.is_file():
+        entries = load_known_upstream(shipped)
+        check("shipped upstream-claims.yaml parses", bool(entries))
+        check("every shipped entry cites an upstream issue",
+              all(str(e.get("issue") or "").startswith("http") for e in entries.values()))
+        check("every shipped entry says what is wrong",
+              all(str(e.get("what") or "").strip() for e in entries.values()))
+
     # Markers: fan-out, idempotence, minimal entry for a ledger gap.
     ledger = {"content/docs/a.md": {"path": "content/docs/a.md", "slug": "docs-a",
                                     "status": "clean", "_file": "x"}}
@@ -746,6 +891,10 @@ def build_parser() -> argparse.ArgumentParser:
                    help="entities to re-verify tonight (chunk size of the rotation)")
     p.add_argument("--today", help="override today's date YYYY-MM-DD (testing)")
     p.add_argument("--repo-root", default=str(HERE), help="repo root for the verifier's read_file")
+    p.add_argument("--known-upstream",
+                   default=str(HERE / ".claude/commands/review-existing-content"
+                                      "/references/upstream-claims.yaml"),
+                   help="findings already filed upstream (suppresses the repeat Slack line only)")
     p.add_argument("--model", default=None, help="verifier model (default: verify-claims.py's)")
     p.add_argument("--out", default=".claims-reverify-report.json")
     p.add_argument("--dry-run", action="store_true",
