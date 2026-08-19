@@ -56,9 +56,9 @@
         {{ partial "gads/stats.html" .Params.stats }}
     </section>
 
-    {{ if not (eq .Params.hide_platform_details true) }}
+    {{ with .Params.key_features_below }}
     <section id="key-features-below">
-        {{ partial "gads/feature-section.html" (dict "items" .Params.key_features_below.items) }}
+        {{ partial "gads/feature-section.html" (dict "items" .items) }}
     </section>
     {{ end }}
 
