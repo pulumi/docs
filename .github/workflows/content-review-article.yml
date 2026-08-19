@@ -445,7 +445,14 @@ jobs:
           # if/else, not `[ -f ] && cp || echo`: the short-circuit form reports a
           # real copy failure as the benign "missing" case, and these are the
           # files the publish job's guardrail gates are judged against.
+          # The two `.candidate-claims-llm-*.json` extraction artifacts are not
+          # gate inputs — they are the other two thirds of the report lane's
+          # per-page cost block. `report-claims-findings.py` reads all three
+          # stages out of `--artifacts-dir .review-snapshot` and scores an
+          # absent file as zero, so leaving them behind would silently bill the
+          # lane for verification only.
           for f in .content-review-queue.json .verified-claims.json \
+                   .candidate-claims-llm-1.json .candidate-claims-llm-2.json \
                    .vale-findings.json .readthrough-findings.json \
                    .frontmatter-validation.json; do
             if [ -f "$f" ]; then
