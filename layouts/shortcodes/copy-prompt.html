@@ -1,0 +1,51 @@
+{{/*
+    Copy Prompt Shortcode
+
+    Renders a prompt in full with a button that copies it, for pasting into a
+    coding agent. The prompt is shown rather than truncated onto the button, so
+    the reader can see what they're about to hand their agent.
+
+    Usage:
+        {{< copy-prompt track="docs-copy-onboarding-prompt" >}}
+        Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
+        {{< /copy-prompt >}}
+
+        {{< copy-prompt label="Copy" track="docs-copy-migrate-prompt" >}}…{{< /copy-prompt >}}
+
+    Parameters:
+        - label (optional): button text (default: "Copy prompt")
+        - track (optional): names the control in the analytics event copy-text.ts
+          fires on a successful copy (default: "copy-prompt"). Set a specific one
+          per placement so the events are distinguishable.
+
+    The button is the generic [data-copy-text] control from
+    theme/src/ts/copy-text.ts, registered globally in main.ts — no page-specific
+    JS. Adapted from the "For agents" half of the /learn page in pulumi/docs#20698.
+*/}}
+
+{{- $prompt := trim .Inner "\n " -}}
+{{- $label := .Get "label" | default "Copy prompt" -}}
+{{- $track := .Get "track" | default "copy-prompt" -}}
+
+{{- if not $prompt -}}
+    {{- errorf "copy-prompt shortcode requires inner content (the prompt): %s" .Position -}}
+{{- end -}}
+
+{{/* The prompt and its copy control share one outlined box, so the pair reads as
+     a single control. The <pre> is repainted light — the site's default is the
+     dark violet-950 code block from _code.scss, far too heavy for a sentence —
+     and squared off, since the wrapper owns the corners. Those element-selector
+     styles lose to these utilities on specificity, so no !important is needed.
+
+     Docs dark mode is explicit: the per-utility color flips were removed from
+     _docs-theme.scss in favor of `dark:` variants at the source. .btn-ghost is
+     the exception — it's @apply-styled, so it carries its own dark skin there. */}}
+<div class="mb-4 overflow-hidden rounded-md border border-gray-300 bg-white dark:border-gray-800 dark:bg-transparent">
+    <pre class="m-0 rounded-none whitespace-pre-wrap break-words text-center bg-gray-50 p-4 dark:bg-gray-900"><code class="font-mono text-sm text-gray-950 dark:text-gray-50">{{ $prompt }}</code></pre>
+    <button type="button" class="btn btn-ghost btn-xl w-full rounded-none" data-copy-text="{{ $prompt }}" data-track="{{ $track }}" aria-label="Copy the prompt to the clipboard">
+        <span data-copy-idle>{{ partial "icon.html" (dict "name" "copy" "class" "size-5") }}</span>
+        <span data-copy-done hidden>{{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-5 text-violet-primary") }}</span>
+        <span data-copy-idle>{{ $label }}</span>
+        <span data-copy-done hidden>Copied!</span>
+    </button>
+</div>
