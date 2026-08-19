@@ -81,7 +81,7 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 - [Projects](/docs/iac/concepts/projects) — Learn how Pulumi projects are organized and configured.
 - [Stacks](/docs/iac/concepts/stacks) — Learn how to create and deploy stacks.
 - [Resources](/docs/iac/concepts/resources) — Learn more about how to use and manage resources in your programs.
-- [Resource options](/docs/iac/concepts/options) — Learn more about how to use and manage resource options in your program.
+- [Resource options](/docs/iac/concepts/resources/options/) — Learn more about how to use and manage resource options in your program.
 - [Inputs and outputs](/docs/iac/concepts/inputs-outputs) — Learn how to use resource properties to handle dependencies between resources.
 
 ### Configuration and state
@@ -89,8 +89,8 @@ Finally, the server's resulting IP address and DNS name are exported as stack ou
 - [Configuration](/docs/iac/concepts/config) — Learn how to configure stacks for different deployment scenarios.
 - [Secrets](/docs/iac/concepts/secrets) — Learn how to handle sensitive data and store secret encrypted settings in Pulumi.
 - [Environments (ESC)](/docs/esc/concepts/) — Learn how to configure your deployment environments with Pulumi ESC.
-- [State and backends](/docs/iac/concepts/state) — Learn how Pulumi stores state and manages concurrency.
-- [Update plans](/docs/iac/concepts/update-plans) — Learn about how to constrain your deployments with update plans.
+- [State and backends](/docs/iac/concepts/state-and-backends/) — Learn how Pulumi stores state and manages concurrency.
+- [Update plans](/docs/iac/operations/stack-management/update-plans/) — Learn about how to constrain your deployments with update plans.
 
 ### Reference
 
