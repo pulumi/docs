@@ -54,10 +54,16 @@ GLOW-UP RUNS are the exception, and take their disposition from the sentinel's
 `executed_ids`/`declined_ids` instead (`--backlog` supplies the id mapping). A
 glow-up carries no `applied[]` by design, so the line-overlap match above finds
 nothing and would file every finding — including everything the glow-up just
-executed — as deferred. A sentinel carrying neither list means NO record is
-written for that run: the previous record then stands, so `reviewed_at` can lag
-the ledger's. That is deliberate. The fix-lane record is the truthful one, and a
-stale-but-true record beats a fresh-but-wrong one that re-proposes finished work.
+executed — as deferred. Two states mean NO record is written for that run: a sentinel carrying neither
+list, and a sentinel whose executed ids ALL fail to resolve to a finding here
+(a missing backlog snapshot, or labels that have drifted). Both are the same
+information state — the disposition is unknown — and the all-False record that
+would otherwise be written re-banks everything the glow-up just finished. A
+PARTIAL resolve still writes; so does a glow-up that executed only pr-body
+items, which have no counterpart on this record and are expected to resolve to
+nothing. When the write is skipped the previous record stands, so `reviewed_at`
+can lag the ledger's. That is deliberate: the fix-lane record is the truthful
+one, and a stale-but-true record beats a fresh-but-wrong one.
 
 Usage:
     record-page-findings.py --queue .content-review-queue.json \
@@ -229,9 +235,17 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
 
     labels = [str(f.get("label") or "").strip() for f in findings]
     applied_idx: set[int] = set()
+    # Executed ids that SHOULD have resolved to a finding on this record —
+    # everything except the pr-body items, which are prose with no counterpart
+    # here and are expected to resolve to nothing. Only these can tell a total
+    # resolution failure from a glow-up that legitimately executed prose.
+    resolvable: set[str] = set()
     for bid in sorted(executed):
         item = banked.get(bid)
         if item is None:
+            # Unknown id: either the backlog is missing entirely or the sentinel
+            # named something that was never banked. Both should have resolved.
+            resolvable.add(bid)
             warn(f"executed id {bid!r} is not in the backlog; leaving the "
                  "corresponding finding deferred")
             continue
@@ -240,6 +254,7 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
         # That gap is exactly what the structured record exists to close.
         if item.get("source") != "findings-record":
             continue
+        resolvable.add(bid)
         text = str(item.get("text") or "").strip()
         hit = next((i for i, lab in enumerate(labels)
                     if lab and i not in applied_idx and text.startswith(lab)), None)
@@ -249,6 +264,21 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
                  "by position")
             continue
         applied_idx.add(hit)
+
+    # The sentinel named executed items and not one of them resolved — the
+    # backlog snapshot is missing or unreadable, or every label has drifted.
+    # That is the same information state as a sentinel carrying no lists at
+    # all, so it takes the same exit: writing the all-False record this would
+    # otherwise produce re-banks everything the glow-up just finished, which
+    # is the failure the whole function exists to prevent. A PARTIAL resolve
+    # still writes — those findings are genuinely known, and the unresolved
+    # ones already warned above.
+    if resolvable and not applied_idx:
+        warn(f"none of the {len(resolvable)} executed id(s) that should map to a "
+             "finding on this record resolved to one; "
+             "skipping the write rather than recording this glow-up's own work "
+             "as still outstanding")
+        return None
 
     out = []
     for i, f in enumerate(findings):
@@ -417,16 +447,30 @@ def self_test() -> int:
           glow() is None and mark_from_backlog(F, {"verdict": "glowup"}, BACKLOG) is None)
     check("an empty backlog is still a disposition, not a missing one",
           glow(executed_ids=[], declined_ids=[]) == [False] * 5)
-    check("an executed id with no matching finding is ignored, not crashed on",
-          glow(executed_ids=["findings-f99", "nonsense"]) == [False] * 5)
+    check("executed ids that resolve to nothing at all skip the write",
+          glow(executed_ids=["findings-f99", "nonsense"]) is None)
     check("a pr-body-sourced backlog item cannot mark a record finding",
           glow(executed_ids=["pr19885-findings-1"]) == [False] * 5)
-    # Without the backlog there is nothing to resolve `findings-f2` AGAINST,
-    # and the only way to honour it would be to trust the ordinal — the guess
-    # this function stopped making. Deferring everything is the safe direction.
-    check("a missing backlog marks nothing rather than guessing by position",
+    # Without the backlog there is nothing to resolve `findings-f2` AGAINST, and
+    # the only way to honour it would be to trust the ordinal — the guess this
+    # function stopped making. Writing the all-False record that falls out of
+    # that would re-bank the work the glow-up just did, so it takes the same
+    # exit as a sentinel carrying no lists at all.
+    check("a missing backlog skips the write rather than guessing by position",
+          mark_from_backlog(F, {"verdict": "glowup",
+                                "executed_ids": ["findings-f2"]}, None) is None)
+    check("...and so does an executed set where nothing resolves",
+          mark_from_backlog(F, {"verdict": "glowup",
+                                "executed_ids": ["findings-f404"]}, BACKLOG) is None)
+    check("a PARTIAL resolve still writes — those findings are genuinely known",
           [f["applied"] for f in
-           mark_from_backlog(F, {"verdict": "glowup", "executed_ids": ["findings-f2"]}, None)]
+           mark_from_backlog(F, {"verdict": "glowup",
+                                 "executed_ids": ["findings-f2", "findings-f404"]},
+                             BACKLOG)] == [False, True, False, False, False])
+    check("declining everything still writes a record, executing nothing",
+          [f["applied"] for f in
+           mark_from_backlog(F, {"verdict": "glowup", "executed_ids": [],
+                                 "declined_ids": ["findings-f2"]}, BACKLOG)]
           == [False] * 5)
     check("the record shape is identical on both paths",
           set(mark_from_backlog(F, {"verdict": "glowup", "executed_ids": []},
@@ -450,13 +494,14 @@ def self_test() -> int:
           mark_from_backlog(SHIFTED, {"verdict": "glowup",
                                       "executed_ids": ["findings-f2"]},
                             BACKLOG)[0]["label"].startswith("Vale filler (L48)"))
-    check("an item whose finding is gone leaves everything deferred",
-          [f["applied"] for f in
-           mark_from_backlog(F[3:], {"verdict": "glowup",
-                                     "executed_ids": ["findings-f2"]}, BACKLOG)]
-          == [False, False])
-    check("an executed id absent from the backlog marks nothing",
-          glow(executed_ids=["findings-f404"]) == [False] * 5)
+    check("an item whose only finding is gone skips the write",
+          mark_from_backlog(F[3:], {"verdict": "glowup",
+                                    "executed_ids": ["findings-f2"]}, BACKLOG) is None)
+    check("an executed id absent from the backlog is not silently ignored",
+          glow(executed_ids=["findings-f404"]) is None)
+    check("a pr-body item alongside a resolving one does not block the write",
+          glow(executed_ids=["findings-f2", "pr19885-findings-1"])
+          == [False, True, False, False, False])
     check("the detail suffix does not break the label match",
           glow(executed_ids=["findings-f3"])
           == [False, False, True, False, False])
