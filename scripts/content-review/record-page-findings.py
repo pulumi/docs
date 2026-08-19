@@ -39,7 +39,13 @@ and `claims/`):
      "commit": ..., "verdict": "fixed|clean|skipped",
      "counts": {"total": N, "applied": N, "deferred": N},
      "findings": [{"id": "f3", "label": ..., "source": ..., "detail": ...,
-                   "fix_candidate": bool, "applied": bool}, ...]}
+                   "category": ..., "line_range": ..., "fix_candidate": bool,
+                   "applied": bool}, ...]}
+
+`applied` is decided by LINE OVERLAP against the verdict's `applied[].lines`,
+using verify-fix-scope.py's own parser and tolerances — the publish gate
+already answers "does this edit fall inside a recorded finding?", so this does
+not form a second, looser opinion about it.
 
 Whole-page snapshot semantics, same as `record-claims.py`: a review sees the
 entire page, so overwriting `<slug>.json` is always correct.
@@ -95,35 +101,66 @@ def read_json(path: Path | None):
         return None
 
 
-def applied_sources(verdict: dict | None) -> list[str]:
-    """The `source` pointer of every applied fix, lowercased for matching."""
-    out: list[str] = []
-    for a in ((verdict or {}).get("applied") or []):
-        if isinstance(a, dict) and a.get("source"):
-            out.append(str(a["source"]).strip().lower())
-    return out
+def _fix_scope():
+    """verify-fix-scope.py by path — the publish gate's line-range parser and
+    tolerances. Matching a finding to an applied fix is the SAME question the
+    gate already answers (does this edit fall inside a recorded finding?), so
+    it gets the same answer here rather than a second, looser opinion."""
+    spec = importlib.util.spec_from_file_location(
+        "verify_fix_scope", HERE / "verify-fix-scope.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
-def mark_applied(findings: list[dict], sources: list[str]) -> list[dict]:
-    """Flag each finding the verdict claims to have fixed.
+def mark_applied(findings: list[dict], verdict: dict | None) -> list[dict]:
+    """Flag each finding the verdict's `applied[]` claims to have fixed.
 
-    Matching is substring-either-way on the finding's `source` and `label`,
-    because `applied[].source` is a human-written pointer ("Claim (c28)",
-    "vale L48") rather than a key. That is loose, and deliberately so: a false
-    POSITIVE drops one item from a glow-up backlog, while a false negative
-    leaves an already-fixed finding in it forever, re-proposing work that is
-    done. Neither is good, but a backlog that cannot be drained is the one
-    that erodes trust in the lane.
+    Matched on LINE OVERLAP, not on text. `applied[].source` is a free-text
+    pointer the model writes ("Claim (c28)", "vale L48"), so substring
+    matching on it is a guess — "vale" alone would swallow every Vale finding
+    on the page, and a pointer phrased differently would match nothing.
+    `applied[].lines` is structured, is already validated by the publish gate
+    (an edit outside a recorded finding fails the build), and carries PRE-FIX
+    numbering, which is exactly the numbering the artifacts use.
+
+    Tolerances come from verify-fix-scope.py so the two cannot disagree about
+    what "inside a finding" means: ±TOL_DEFAULT for claims/vale/frontmatter,
+    ±TOL_READTHROUGH for readthrough, whose repairs legitimately move lines
+    around more.
+
+    A finding with no line range (frontmatter alias collisions) can never be
+    matched positionally, so it falls back to the text pointer — narrow enough
+    to be safe because those labels carry the alias itself.
     """
+    fs = _fix_scope()
+    entries = [a for a in ((verdict or {}).get("applied") or []) if isinstance(a, dict)]
+    spans: list[tuple[int, int]] = []
+    for a in entries:
+        lines = a.get("lines")
+        if isinstance(lines, list) and len(lines) == 2 and all(
+                isinstance(n, int) and n > 0 for n in lines):
+            spans.append((min(lines), max(lines)))
+    pointers = [str(a.get("source") or "").strip().lower() for a in entries]
+
     out = []
     for i, f in enumerate(findings):
-        hay = f"{f.get('source', '')} {f.get('label', '')}".strip().lower()
-        hit = any(s and (s in hay or hay[:80] in s) for s in sources)
+        rng = fs.parse_line_range(str(f.get("line_range") or ""))
+        if rng:
+            tol = (fs.TOL_READTHROUGH if f.get("category") == "readthrough"
+                   else fs.TOL_DEFAULT)
+            lo, hi = max(1, rng[0] - tol), rng[1] + tol
+            hit = any(s <= hi and e >= lo for s, e in spans)
+        else:
+            label = str(f.get("label") or "").strip().lower()
+            hit = any(p and label and (p in label or label[:60] in p) for p in pointers)
         out.append({
             "id": f"f{i + 1}",
             "label": f.get("label", ""),
             "source": f.get("source", ""),
             "detail": f.get("detail", ""),
+            "category": f.get("category", ""),
+            "line_range": f.get("line_range", ""),
             "fix_candidate": bool(f.get("fix")),
             "applied": hit,
         })
@@ -150,7 +187,7 @@ def build(queue: dict, verdict: dict | None, artifacts: dict,
     findings, _errors = cpb.collect(
         artifacts.get("verified"), artifacts.get("vale"),
         artifacts.get("readthrough"), artifacts.get("frontmatter"))
-    marked = mark_applied(findings, applied_sources(verdict))
+    marked = mark_applied(findings, verdict)
     n_applied = sum(1 for f in marked if f["applied"])
     return {
         "schema_version": SCHEMA_VERSION,
@@ -188,30 +225,60 @@ def self_test() -> int:
             failures.append(label)
             print(f"  FAIL: {label}")
 
-    check("applied_sources reads the verdict array",
-          applied_sources({"applied": [{"source": "Claim (c28)"}, {"source": "vale L48"}]})
-          == ["claim (c28)", "vale l48"])
-    check("a verdict with no applied[] yields nothing", applied_sources({}) == [])
-    check("a None verdict is not fatal", applied_sources(None) == [])
-
-    findings = [
-        {"label": "Claim (c28, L89): version is 3.157.0", "source": "gh release view", "fix": True},
-        {"label": "Vale filler (L48): Don't start with 'There are'.", "source": "vale", "fix": False},
-        {"label": "Readthrough missing-step (L636)", "source": "readthrough pass", "fix": True},
+    F = [
+        {"label": "Claim (c28, L89): version is 3.157.0", "source": "gh release view",
+         "category": "claim", "line_range": "L89", "fix": True},
+        {"label": "Vale filler (L48): Don't start with 'There are'.", "source": "vale",
+         "category": "vale", "line_range": "L48", "fix": False},
+        {"label": "Vale wordiness (L200): 'all of' is too wordy.", "source": "vale",
+         "category": "vale", "line_range": "L200", "fix": False},
+        {"label": "Readthrough missing-step (L636-640)", "source": "readthrough pass",
+         "category": "readthrough", "line_range": "L636-640", "fix": True},
+        {"label": "Frontmatter alias collision: `/docs/old-path/`",
+         "source": "`.frontmatter-validation.json`", "category": "frontmatter",
+         "line_range": "", "fix": True},
     ]
-    marked = mark_applied(findings, ["claim (c28, l89): version is 3.157.0"])
-    check("the applied finding is flagged", marked[0]["applied"] is True)
-    check("the others are not", [f["applied"] for f in marked[1:]] == [False, False])
-    check("ids are stable and 1-based", [f["id"] for f in marked] == ["f1", "f2", "f3"])
-    check("fix_candidate survives from collect()",
-          [f["fix_candidate"] for f in marked] == [True, False, True])
-    check("nothing applied -> everything deferred",
-          all(not f["applied"] for f in mark_applied(findings, [])))
 
-    # A deferred finding is the whole point of the record: it must survive
-    # even when the verdict fixed nothing at all.
-    empty = mark_applied(findings, [])
-    check("deferred findings are recorded, not dropped", len(empty) == 3)
+    def applied(*entries):
+        return [f["applied"] for f in mark_applied(F, {"applied": list(entries)})]
+
+    check("an applied fix marks the finding at those lines",
+          applied({"category": "claim", "lines": [89, 89], "source": "c28"})
+          == [True, False, False, False, False])
+    check("nothing applied -> everything deferred", applied() == [False] * 5)
+    check("a None verdict is not fatal",
+          [f["applied"] for f in mark_applied(F, None)] == [False] * 5)
+
+    # THE bug the first cut of this had: `applied[].source` is free text, so
+    # substring matching on it let one Vale fix swallow every Vale finding on
+    # the page. Line overlap keeps them distinct.
+    check("one Vale fix does not swallow the other Vale findings",
+          applied({"category": "vale", "lines": [48, 48], "source": "vale"})
+          == [False, True, False, False, False])
+
+    check("the gate's tolerance applies (L91 is within +/-2 of L89)",
+          applied({"category": "claim", "lines": [91, 91], "source": "x"})[0] is True)
+    check("outside the tolerance does not match (L95 is not)",
+          applied({"category": "claim", "lines": [95, 95], "source": "x"})[0] is False)
+    check("readthrough gets the wider tolerance it needs (L644 vs L636-640)",
+          applied({"category": "readthrough", "lines": [644, 644], "source": "x"})[3] is True)
+    check("a span overlapping the range at all counts",
+          applied({"category": "claim", "lines": [1, 500], "source": "x"})[0] is True)
+
+    # No line range to match on: fall back to the pointer, which for these
+    # carries the alias itself and so is specific enough.
+    check("a rangeless finding falls back to its text pointer",
+          applied({"category": "frontmatter", "lines": [1, 1],
+                   "source": "Frontmatter alias collision: `/docs/old-path/`"})[4] is True)
+    check("a malformed applied entry is ignored, not crashed on",
+          applied({"category": "claim", "lines": "nope", "source": ""}) == [False] * 5)
+    check("ids are stable and 1-based",
+          [f["id"] for f in mark_applied(F, None)] == ["f1", "f2", "f3", "f4", "f5"])
+    check("fix_candidate and location survive onto the record",
+          mark_applied(F, None)[3]["line_range"] == "L636-640"
+          and mark_applied(F, None)[3]["category"] == "readthrough")
+    check("deferred findings are recorded, not dropped",
+          len(mark_applied(F, None)) == 5)
 
     print(f"\n{passes} passed, {len(failures)} failed")
     return 1 if failures else 0
