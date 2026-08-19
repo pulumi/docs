@@ -20,7 +20,7 @@ We launched Pulumi ESC in response to customer feedback about their difficulties
 
 ## What is the pricing of Pulumi ESC?
 
-See our [pricing page](https://www.pulumi.com/pricing/) for details.
+See our [pricing page](/pricing) for details.
 
 ## What counts as a secret towards pricing?
 
