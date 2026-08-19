@@ -1,0 +1,5 @@
+# The "content-team" author record was retired in favor of "pulumi-content-team",
+# which carries the same display name ("Pulumi Content Team") and an avatar.
+# Its taxonomy term page (permalinks.term.authors = /blog/author/:slug/) goes
+# with it. See data/team/team/pulumi-content-team.toml.
+blog/author/content-team/index.html|/blog/author/pulumi-content-team/
