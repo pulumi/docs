@@ -61,7 +61,7 @@ Take a look at this example of creating an ECS service:
 
 ```typescript
 
-let service = new aws.ecs.Serice("api",{ });
+let service = new aws.ecs.Service("api",{ });
 
 ```
 

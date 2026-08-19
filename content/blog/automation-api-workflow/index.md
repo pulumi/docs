@@ -251,7 +251,7 @@ In the original program, the table and data are created as part of the inline pr
             if (error) throw error;
             console.log("rows inserted!")
             console.log('Result: ', JSON.stringify(results));
-            console.log("querying to veryify data...")
+            console.log("querying to verify data...")
         });
 
 
@@ -259,7 +259,7 @@ In the original program, the table and data are created as part of the inline pr
         connection.query(`SELECT COUNT(*) FROM hello_pulumi;`, function (error, results, fields) {
             if (error) throw error;
             console.log('Result: ', JSON.stringify(results));
-            console.log("database, tables, and rows successfuly configured!")
+            console.log("database, tables, and rows successfully configured!")
         });
 
         connection.end();

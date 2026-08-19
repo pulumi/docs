@@ -38,7 +38,7 @@ if isMinikube {
    frontendServiceType = “LoadBalancer”
 }
 
-frontendService, err := corev1.NewService(ctx, “frontent”, &corev1.ServiceArgs{
+frontendService, err := corev1.NewService(ctx, “frontend”, &corev1.ServiceArgs{
    Metadata: &metav1.ObjectMetaArgs{
       Labels: frontendLabels,
       Name: pulumi.String(“frontend”),

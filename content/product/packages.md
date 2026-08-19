@@ -466,7 +466,7 @@ benefits:
             Find everything you need in each package to start building cloud infrastructure and applications, including SDKs, how-to guides, and API references with hundreds of examples.
 
         - title: Build faster and smarter
-          icon: guage
+          icon: gauge
           icon_color: violet
           description: |
             Don’t reinvent the wheel. Use or create infrastructure abstractions that encapsulate cloud architectures and best practices with Pulumi components in your favorite languages.

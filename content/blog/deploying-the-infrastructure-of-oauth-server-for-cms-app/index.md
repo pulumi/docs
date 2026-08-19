@@ -93,7 +93,7 @@ We'll use the [Hello Fargate Example](https://github.com/pulumi/examples/tree/ma
 We set the alb port to 443 to use HTTPS, which is more secure when passing the CMS access token.
 
 ```typescript
-// Define an ec2 application load balancer alb to distribute incomming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones.
+// Define an ec2 application load balancer alb to distribute incoming application traffic across multiple targets, such as EC2 instances, in multiple Availability Zones.
 const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
     "net-lb", { external: true, securityGroups: cluster.securityGroups });
 
