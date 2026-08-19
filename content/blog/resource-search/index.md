@@ -90,7 +90,7 @@ show me all virtual machines across all cloud providers
 
 show me all s3 buckets not tagged in production
 
-```(type:aws:s3/bucket:Bucket -tags.enviornment:production```
+```(type:aws:s3/bucket:Bucket -tags.environment:production```
 
 show azure and azure native security groups
 

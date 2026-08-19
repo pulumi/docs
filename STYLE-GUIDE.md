@@ -328,6 +328,7 @@ See [Hugo diagrams docs](https://gohugo.io/content-management/diagrams/) and [Me
   - Always refer to it in the singular form (e.g., "Pulumi Policies enforces compliance").
   - Never refer to it in the plural (e.g., avoid "Pulumi Policies enforce compliance").
 - Use **"public preview"** for pre-GA features, not "public beta." This aligns with Pulumi's release terminology.
+- Don't overcapitalize generic concepts, even Pulumi-specific ones. Only proper nouns are capitalized: "stack" (not "Stack"), "environment" (not "Environment"), "token" (not "Token"), "infrastructure as code" (not "Infrastructure as Code") when used as a common noun mid-sentence. This mirrors the Headings rule above and applies to body prose too. It doesn't apply where the capitalized word is itself a proper noun in context — for example, the Pulumi Kubernetes Operator's `Stack` custom resource (a Kubernetes CRD Kind) or a `pulumicdk.Stack` class identifier.
 
 ---
 

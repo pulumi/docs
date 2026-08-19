@@ -291,7 +291,7 @@ EOF
 
 #### Run the Program using Workload Identity
 
-Create a Stack object to run the Pulumi program using your service account and with `azure-native:useDefaultAzureCredential` enabled.
+Create a stack object to run the Pulumi program using your service account and with `azure-native:useDefaultAzureCredential` enabled.
 
 ```shell
 cat <<EOF | kubectl apply -f -

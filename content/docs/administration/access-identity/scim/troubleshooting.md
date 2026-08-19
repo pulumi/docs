@@ -27,10 +27,10 @@ These errors can occur when attempting to create (POST), replace (PUT), or updat
 
 ```json
 {
-    "status": 409,
+    "status": "409",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 409,
+        "status": "409",
         "scimType": "uniqueness",
         "detail": "Email {email} already in use by another Pulumi account."
     }
@@ -53,10 +53,10 @@ If the existing account is already managed by SAML SSO in another Pulumi organiz
 
 ```json
 {
-    "status": 409,
+    "status": "409",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 409,
+        "status": "409",
         "scimType": "uniqueness",
         "detail": "User with userName {userName} already exists."
     }
@@ -71,17 +71,17 @@ Suggested Resolution: Update the username attribute in your identity provider’
 
 ```json
 {
-    "status": 400,
+    "status": "400",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 400,
+        "status": "400",
         "scimType": "immutability",
         "detail": "Attribute 'userName' is immutable."
     }
 }
 ```
 
-Cause: Pulumi usernames are immutable and cannot be updated.
+Cause: Pulumi usernames are immutable and cannot be updated. See [Usernames cannot change](/docs/administration/access-identity/scim/#usernames-cannot-change).
 
 Suggested Resolution: Update the attribute mapping in the identity provider so that `userName` is updated only during creation, not creation and update. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
@@ -89,10 +89,10 @@ Suggested Resolution: Update the attribute mapping in the identity provider so t
 
 ```json
 {
-    "status": 400,
+    "status": "400",
     "response": {
         "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
-        "status": 400,
+        "status": "400",
         "scimType": "invalidPath",
         "detail": "Unknown path: {path}."
     }
@@ -103,24 +103,52 @@ Cause: Pulumi only supports adding or updating the following user attributes:
 
 - `userName`
 - `displayName`
-- `givenName`
-- `familyName`
+- `name.givenName`
+- `name.familyName`
+- `emails[type eq "work"].value`
 - `active`
 
-Provisioning jobs that try to add or update any other attribute will fail.
+Provisioning jobs that try to add or update any other attribute fail. For the complete supported surface, including group attributes, see [Supported attributes](/docs/administration/access-identity/scim/#supported-attributes).
 
 Suggested Resolution: Update the attribute mappings in the identity provider and delete all unsupported attributes. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
 ## Group member provisioning failures
 
-The creation (POST), update (PATCH) or replacement (PUT) of a group performs member validation prior running the operation. If any of the members provided are not provisioned into your Pulumi organization or is not active, the request will fail with the following response:
+The creation (POST), update (PATCH), or replacement (PUT) of a group performs member validation before running the operation. If any of the members provided are not provisioned into your Pulumi organization, or are not active, the request fails with the following response:
 
-```
-Status: 400 BAD REQUEST
-Bad Request: Cannot add invalid members to team. Invalid member ids: [comma separated list of invalid member ids]
+```json
+{
+    "status": "400",
+    "response": {
+        "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
+        "status": "400",
+        "scimType": "invalidValue",
+        "detail": "Cannot add invalid members to team. Invalid member ids: {comma separated list of invalid member ids}"
+    }
+}
 ```
 
 The suggested way to resolve this conflict would be to synchronize all the group members to guarantee every member is successfully provisioned and update the user's status. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
+
+## Group provisioning failures
+
+### Display name is too long
+
+```json
+{
+    "status": "400",
+    "response": {
+        "schemas": ["urn:ietf:params:scim:api:messages:2.0:Error"],
+        "status": "400",
+        "scimType": "invalidValue",
+        "detail": "Display name is too long. It must be 100 characters or less"
+    }
+}
+```
+
+Cause: Pulumi team names created through SCIM must be 100 characters or fewer, and the group being pushed has a longer display name.
+
+Suggested Resolution: Rename the group in the identity provider so that its name fits within the limit, then push it again. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
 ## Managing Pulumi-local teams alongside SCIM
 

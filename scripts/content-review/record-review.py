@@ -66,16 +66,29 @@ _spec.loader.exec_module(_select)
 slugify = _select.slugify
 BRANCH_PREFIX = _select.BRANCH_PREFIX
 
-# PR-body sections the review skill mandates; the post-create check warns (never
-# blocks) when a fix PR's body is missing one.
-REQUIRED_PR_SECTIONS = [
-    "Why this page",
-    "Fixes applied",
-    "Findings not applied",
-    "Screenshot check",
-    "Rendered content",
-    "Verification",
-]
+# PR-body sections the review skill mandates per mode; the post-create check
+# warns (never blocks) when a PR's body is missing one. Keep the glowup list in
+# lockstep with compose-pr-body.py's GLOWUP_SECTIONS (test_compose_pr_body.py
+# cross-imports both to enforce it).
+MODE_PR_SECTIONS = {
+    "fix": [
+        "Why this page",
+        "Fixes applied",
+        "Findings not applied",
+        "Screenshot check",
+        "Rendered content",
+        "Verification",
+    ],
+    "glowup": [
+        "Why this page",
+        "Backlog executed",
+        "Backlog declined",
+        "Secondary sweep",
+        "Screenshot check",
+        "Verification",
+    ],
+}
+REQUIRED_PR_SECTIONS = MODE_PR_SECTIONS["fix"]  # back-compat alias
 
 
 def log(msg: str) -> None:
@@ -118,6 +131,7 @@ def load_queue_article(queue_path: Path) -> dict:
         "path": path,
         "slug": a.get("slug") or slugify(path),
         "lane": a.get("lane") or "priority",
+        "mode": a.get("mode") or "fix",
         # Prior incomplete-retry count, carried from the ledger by the selector.
         # build_record increments it on another incomplete, resets it on success.
         "attempts": int(a.get("attempts") or 0),
@@ -130,6 +144,9 @@ def load_queue_article(queue_path: Path) -> dict:
         # verbatim from the queue entry; null on a signal-blind run.
         "signals": a.get("signals"),
         "signals_available": bool((data.get("reader_signals") or {}).get("available")),
+        # Stale-claim markers in full (entity_key/verdict/evidence/source/...).
+        # carry_markers() needs them to decide which survive this review.
+        "stale_claim_markers": a.get("stale_claim_markers") or [],
     }
 
 
@@ -144,7 +161,9 @@ def load_verdict(verdict_path: Path | None) -> dict | None:
         return None
 
 
-def branch_for(slug: str, retirement: bool) -> str:
+def branch_for(slug: str, retirement: bool, glowup: bool = False) -> str:
+    if glowup:
+        return f"{BRANCH_PREFIX}glowup-{slug}"
     return f"{BRANCH_PREFIX}{'retire-' if retirement else ''}{slug}"
 
 
@@ -193,7 +212,7 @@ def scan_misnamed_sibling(slug: str) -> None:
             head = pr.get("headRefName", "")
             if not head.startswith(BRANCH_PREFIX):
                 continue
-            head_slug = head[len(BRANCH_PREFIX):].removeprefix("retire-")
+            head_slug = head[len(BRANCH_PREFIX):].removeprefix("retire-").removeprefix("glowup-")
             if head_slug == slug:
                 warn(
                     f"PR #{pr.get('number')} ({pr.get('url')}) reviews this page "
@@ -203,10 +222,11 @@ def scan_misnamed_sibling(slug: str) -> None:
         pass
 
 
-def check_pr_body(body: str | None) -> list[str]:
-    """Return the required section headings missing from a fix PR's body."""
+def check_pr_body(body: str | None, mode: str = "fix") -> list[str]:
+    """Return the required section headings missing from a PR's body."""
     text = (body or "").lower()
-    return [s for s in REQUIRED_PR_SECTIONS if s.lower() not in text]
+    sections = MODE_PR_SECTIONS.get(mode, REQUIRED_PR_SECTIONS)
+    return [s for s in sections if s.lower() not in text]
 
 
 def unresolved_draft_markers(body: str | None) -> int:
@@ -229,7 +249,9 @@ def canonical_branch_pushed(slug: str) -> bool:
     returns False, biasing an unknowable case toward clean rather than a
     perpetual incomplete retry.
     """
-    refs = [f"refs/heads/{branch_for(slug, r)}" for r in (False, True)]
+    refs = [f"refs/heads/{branch_for(slug, False)}",
+            f"refs/heads/{branch_for(slug, True)}",
+            f"refs/heads/{branch_for(slug, False, glowup=True)}"]
     try:
         out = subprocess.run(
             ["git", "ls-remote", "--heads", "origin", *refs],
@@ -241,6 +263,43 @@ def canonical_branch_pushed(slug: str) -> bool:
 
 
 # ---- derivation -------------------------------------------------------------
+
+
+# A stale-claim marker survives this many reviews that saw it and did not
+# resolve it; after that it is kept but flagged `escalated`, which stops
+# select-articles.py boosting the page (see MARKER_ESCALATION_CAP there).
+MARKER_ESCALATION_CAP = 2
+
+
+def carry_markers(article: dict, verdict: dict | None) -> list[dict]:
+    """Stale-claim markers that outlive this review, with their retry state.
+
+    The nightly re-verification writes a marker when a volatile claim goes
+    contradicted; the marker boosts the page into this worker's queue. Before
+    this function existed the marker simply vanished when the review's ledger
+    record landed, whether or not anything had been done about it — so a review
+    that missed the finding silently cleared the flag and the entity went back
+    into the pool to be re-flagged, re-boosted, and re-missed on a ~2-day cycle
+    (observed end-to-end in pulumi/docs#20927).
+
+    A marker is retired only when the verdict names its entity in
+    `resolved_claims` — the worker asserting it either fixed the claim or
+    determined the flag was wrong. Everything else is carried forward with
+    `unresolved_reviews` incremented, and flagged `escalated` once that count
+    reaches MARKER_ESCALATION_CAP so a human is the next step rather than
+    another identical pass.
+    """
+    resolved = {str(k) for k in ((verdict or {}).get("resolved_claims") or [])}
+    carried: list[dict] = []
+    for m in article.get("stale_claim_markers") or []:
+        if not isinstance(m, dict):
+            continue
+        if m.get("entity_key") in resolved:
+            continue
+        seen = int(m.get("unresolved_reviews") or 0) + 1
+        carried.append({**m, "unresolved_reviews": seen,
+                        "escalated": seen >= MARKER_ESCALATION_CAP})
+    return carried
 
 
 def build_record(article: dict, verdict: dict | None, pr: dict | None,
@@ -265,6 +324,7 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "path": article["path"],
         "slug": slug,
         "lane": article["lane"],
+        "mode": article.get("mode") or "fix",
         "status": "incomplete",
         "pr": None,
         "pr_number": 0,
@@ -285,6 +345,9 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         "signals_available": bool(article.get("signals_available")),
         "reviewed_at": datetime.now(timezone.utc).date().isoformat(),
     }
+    markers = carry_markers(article, verdict)
+    if markers:
+        rec["stale_claims"] = markers
 
     if verdict is None:
         if claude_succeeded and not branch_exists:
@@ -310,16 +373,20 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         rec["status"] = "skipped"
         rec["note"] = verdict.get("reason") or "skipped by reviewer"
         rec["attempts"] = 0
-    elif v == "fixed":
+    elif v in ("fixed", "glowup"):
         if pr:
-            rec["status"] = "reviewed"
+            # "glowup" is a completed status like "reviewed": it advances the
+            # staleness clock (any non-incomplete status does) and drives the
+            # glow-up selector's cooldown.
+            rec["status"] = "reviewed" if v == "fixed" else "glowup"
             rec["pr"] = pr.get("url")
             rec["pr_number"] = int(pr.get("number") or 0)
             rec["head_sha"] = pr.get("headRefOid") or ""
             rec["attempts"] = 0
         else:
             rec["status"] = "incomplete"
-            rec["note"] = f"verdict 'fixed' but no PR on {branch_for(slug, rec['retirement'])}"
+            branch = branch_for(slug, rec["retirement"], glowup=(v == "glowup"))
+            rec["note"] = f"verdict {v!r} but no PR on {branch}"
     else:
         rec["note"] = f"unrecognized verdict {v!r}"
 
@@ -353,9 +420,10 @@ def run(args) -> int:
     slug = article["slug"]
     verdict = load_verdict(Path(args.verdict) if args.verdict else None)
     retirement = bool(verdict.get("retirement")) if verdict else False
-    branch = branch_for(slug, retirement)
+    glowup = bool(verdict and verdict.get("verdict") == "glowup")
+    branch = branch_for(slug, retirement, glowup=glowup)
 
-    want_pr = bool(verdict) and verdict.get("verdict") == "fixed"
+    want_pr = bool(verdict) and verdict.get("verdict") in ("fixed", "glowup")
     pr = fetch_pr(branch, args.pr_json) if want_pr else None
     if want_pr and not pr and args.pr_json is None:
         scan_misnamed_sibling(slug)
@@ -374,9 +442,9 @@ def run(args) -> int:
                           claude_succeeded=claude_succeeded,
                           branch_exists=branch_exists)
 
-    # PR-body section check (non-blocking) for fix PRs.
-    if record["status"] == "reviewed" and pr is not None:
-        missing = check_pr_body(pr.get("body"))
+    # PR-body section check (non-blocking) for fix and glow-up PRs.
+    if record["status"] in ("reviewed", "glowup") and pr is not None:
+        missing = check_pr_body(pr.get("body"), record.get("mode") or "fix")
         if missing:
             warn(f"PR #{record['pr_number']} body missing sections: {', '.join(missing)}")
             if args.pr_json is None:
@@ -456,6 +524,64 @@ def self_test() -> int:
         check("signal-blind queue -> signals null, signals_available False",
               blind_article["signals"] is None
               and blind_article["signals_available"] is False)
+        # --- stale-claim marker retention -------------------------------
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  "checked_at": "2026-08-15"}
+        marked = {**article, "stale_claim_markers": [marker]}
+
+        rec_m = build_record(marked, {"verdict": "clean", "reason": "accurate"},
+                             None, marked["slug"])
+        check("a review that resolves nothing carries the marker forward",
+              [m["entity_key"] for m in rec_m["stale_claims"]] == ["version/pulumi-package"])
+        check("carried marker counts the miss",
+              rec_m["stale_claims"][0]["unresolved_reviews"] == 1
+              and rec_m["stale_claims"][0]["escalated"] is False)
+        check("carried marker keeps its evidence",
+              rec_m["stale_claims"][0]["evidence"] == "CHANGELOG says 3.163.0")
+
+        rec_r = build_record(marked, {"verdict": "fixed", "fixes": 1,
+                                      "resolved_claims": ["version/pulumi-package"]},
+                             None, marked["slug"])
+        check("a resolved marker retires", "stale_claims" not in rec_r)
+
+        second = {**article, "stale_claim_markers": [rec_m["stale_claims"][0]]}
+        rec_e = build_record(second, {"verdict": "clean", "reason": "x"},
+                             None, second["slug"])
+        check("second unresolved review escalates the marker",
+              rec_e["stale_claims"][0]["unresolved_reviews"] == 2
+              and rec_e["stale_claims"][0]["escalated"] is True)
+
+        # The other half of the round-trip: select-articles.py hands escalated
+        # markers through, so they must survive rather than be filtered out
+        # here — otherwise the ledger loses them and the entity re-enters the
+        # nightly pool.
+        esc_marker = {**marker, "entity_key": "version/old-miss",
+                      "unresolved_reviews": 2, "escalated": True}
+        with_esc = {**article, "stale_claim_markers": [marker, esc_marker]}
+        rec_esc = build_record(with_esc, {"verdict": "clean", "reason": "x"},
+                               None, with_esc["slug"])
+        carried = {m["entity_key"]: m for m in rec_esc["stale_claims"]}
+        check("escalated marker persists through a review",
+              "version/old-miss" in carried)
+        check("escalated marker stays escalated and keeps counting",
+              carried["version/old-miss"]["escalated"] is True
+              and carried["version/old-miss"]["unresolved_reviews"] == 3)
+        check("an escalated marker can still be resolved",
+              "stale_claims" not in build_record(
+                  {**article, "stale_claim_markers": [esc_marker]},
+                  {"verdict": "fixed", "fixes": 1,
+                   "resolved_claims": ["version/old-miss"]},
+                  None, article["slug"]))
+
+        rec_none = build_record(article, {"verdict": "clean", "reason": "x"},
+                                None, article["slug"])
+        check("no markers -> no stale_claims key", "stale_claims" not in rec_none)
+
+        rec_incomplete = build_record(marked, None, None, marked["slug"])
+        check("marker survives an incomplete run too",
+              rec_incomplete["stale_claims"][0]["unresolved_reviews"] == 1)
+
         blind_rec = build_record(blind_article, None, None, blind_article["slug"])
         check("signal-blind record persists null/false",
               blind_rec["signals"] is None and blind_rec["signals_available"] is False)
@@ -484,10 +610,34 @@ def self_test() -> int:
                            claude_succeeded=False, branch_exists=False)
         check("no-verdict + failed run -> incomplete", rec["status"] == "incomplete")
         check("all canonical fields present", set(rec) == {
-            "path", "slug", "lane", "status", "pr", "pr_number", "head_sha",
+            "path", "slug", "lane", "mode", "status", "pr", "pr_number", "head_sha",
             "fixes", "skipped_findings", "retirement", "note", "attempts",
             "clarity_flag", "tier", "score", "monthly_visits",
             "traffic_available", "signals", "signals_available", "reviewed_at"})
+        check("mode defaults to fix", rec["mode"] == "fix")
+
+        # Glow-up outcomes: a completed glowup advances the clock; PR-less is
+        # incomplete; the branch carries the glowup- prefix.
+        check("glowup branch form",
+              branch_for("docs-x", False, glowup=True) == "content-review/glowup-docs-x")
+        g_article = dict(article, mode="glowup", lane="glowup")
+        g_verdict = {"verdict": "glowup", "reason": "", "fixes": 4,
+                     "skipped_findings": 1, "retirement": False}
+        g_pr = {"number": 77, "url": "https://example.test/77", "headRefOid": "abc"}
+        grec = build_record(g_article, g_verdict, g_pr, g_article["slug"])
+        check("glowup + PR -> status glowup (completed)",
+              grec["status"] == "glowup" and grec["attempts"] == 0
+              and grec["mode"] == "glowup" and grec["pr_number"] == 77)
+        grec2 = build_record(g_article, g_verdict, None, g_article["slug"])
+        check("glowup without PR -> incomplete",
+              grec2["status"] == "incomplete" and "glowup-" in (grec2["note"] or ""))
+        check("glowup body check uses the glowup sections",
+              check_pr_body("## Why this page\n## Backlog executed\n"
+                            "## Backlog declined\n## Secondary sweep\n"
+                            "## Screenshot check\n## Verification\n",
+                            "glowup") == [])
+        check("glowup body check flags missing backlog sections",
+              "Backlog executed" in check_pr_body("## Why this page\n", "glowup"))
         check("no-verdict clarity_flag defaults False", rec["clarity_flag"] is False)
         check("selection signal persisted on the record",
               rec["tier"] == 2 and rec["score"] == 137.5

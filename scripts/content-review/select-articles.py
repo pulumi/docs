@@ -10,8 +10,8 @@ inputs.
 
 Selection algorithm (weighted fair queuing by staleness):
 
-1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths
-   and `draft: true` pages.
+1. Enumerate `content/docs/**/*.md`; drop tier-0 (generated/synced) paths,
+   `draft: true` pages, and `redirect_to:` stubs (tombstones, not content).
 2. Hard filters: pages with an open `content-review/<slug>` bot PR; pages
    whose `incomplete` review has already burned ATTEMPT_CAP retries (they
    back off and are surfaced for a human instead of looping forever).
@@ -24,7 +24,7 @@ Selection algorithm (weighted fair queuing by staleness):
 
        score = importance * staleness + stale_claim_boost
 
-   importance = tier_w * (0.5 + 0.5*traffic_n) * gsc_m * feedback_m
+   importance = tier_w * (0.25 + 0.75*traffic_n) * gsc_m * feedback_m
               = tier_w * gsc_m * feedback_m     tier-only when no traffic
    tier_w     = {1: 1.0, 2: 0.6, 3: 0.3}
    traffic_n  = log1p(visits) / log1p(max_visits); pages missing from the
@@ -58,11 +58,15 @@ Selection algorithm (weighted fair queuing by staleness):
                 ancient never-reviewed page to the front. A human (non-bot)
                 edit fully resets the clock.
 
-   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry has a
-                non-empty `stale_claims` list (written by the nightly
+   stale_claim_boost = STALE_CLAIM_BOOST when the page's ledger entry carries
+                a non-escalated stale-claim marker (written by the nightly
                 reverify-claims.py when a volatile claim the page asserts
-                re-verified contradicted); 0 otherwise. Marked pages jump the
-                queue; the marker clears when the review rewrites the entry.
+                re-verified contradicted; see active_markers); 0 otherwise.
+                Marked pages jump the queue; a marker retires when a review
+                resolves it (record-review.py `resolved_claims`), and one
+                unresolved through MARKER_ESCALATION_CAP reviews stops
+                boosting (escalated — a human's turn), so the boost is
+                bounded either way.
 
    Ties break on path ascending, so runs are reproducible.
 
@@ -149,9 +153,45 @@ TIER_WEIGHTS = {1: 1.0, 2: 0.6, 3: 0.3}
 # — see reverify-claims.py). Sized to outrank a top-importance page that has
 # gone unreviewed for a year (1.0 * 365), so a known-stale fact beats any
 # ordinary staleness — while an ancient never-reviewed page can still win, so
-# the sweep is never fully starved. The marker vanishes when the page's next
-# review rewrites its ledger entry, so the boost self-clears.
+# the sweep is never fully starved. A marker retires when the page's next
+# review resolves it (record-review.py), so the boost self-clears.
 STALE_CLAIM_BOOST = 400.0
+
+# A marker the last MARKER_ESCALATION_CAP reviews each saw and left unresolved
+# stops boosting. Carrying an unresolved marker forward is what keeps a missed
+# finding from evaporating (record-review.py), but an unboundedly boosted page
+# would be re-picked every sweep and starve the rest of the queue, which is the
+# same failure the marker was meant to cure. Past the cap the marker stays on
+# the ledger entry — visible, still reported, still blocking re-verification
+# churn — but it stops jumping the page to the front. That is the signal a
+# human needs to look at it.
+MARKER_ESCALATION_CAP = 2
+
+
+def all_markers(entry: dict | None) -> list[dict]:
+    """Every stale-claim marker on this ledger entry, escalated or not.
+
+    This is what rides in the queue item, and it is deliberately unfiltered.
+    record-review.py rebuilds the ledger entry from the queue and writes back
+    whatever markers survive the review, so a marker withheld here would be
+    dropped from the ledger the next time the page is reviewed for any reason
+    — and `already_marked()` in reverify-claims.py would then let the entity
+    back into the nightly pool, restarting the detect/boost/miss/clear cycle
+    this whole mechanism exists to break.
+    """
+    return [m for m in (entry or {}).get("stale_claims") or [] if isinstance(m, dict)]
+
+
+def active_markers(entry: dict | None) -> list[dict]:
+    """The subset of markers that still earn the page a priority boost.
+
+    Escalated markers (see MARKER_ESCALATION_CAP) are excluded *from the
+    boost only*: repeated reviews have already failed to act on them, so
+    another jump to the front of the queue is not the remedy. They still
+    travel in the queue item and still persist on the ledger — see
+    all_markers().
+    """
+    return [m for m in all_markers(entry) if not m.get("escalated")]
 
 # Reader-signal boost tuning. Both multipliers floor at exactly 1.0 (see the
 # module docstring); the caps keep the maximum combined boost (~1.63x) well
@@ -240,6 +280,12 @@ def load_reader_signals(
             "gsc":      {"source", "period", "pages": {url: {impressions, clicks, position}}},
             "feedback": {"source", "period", "pages": {url: {yes, no}}}}}
 
+    A bare GSC section with no {"signals": ...} envelope is also accepted —
+    that is the shape of the export the data team ships today
+    (pulumi/data#865 phase 2, the Airflow stack's docsTrafficGscLatestS3Uri):
+
+        {"source", "period", "generated", "pages": {url: {clicks, impressions, position}}}
+
     Returns (gsc, feedback, meta). A missing/unreadable/malformed file — or a
     missing section — degrades that signal to unavailable, mirroring
     load_traffic: selection then scores exactly as if the signal never existed.
@@ -262,7 +308,13 @@ def load_reader_signals(
         return gsc, feedback, meta
     sections = data.get("signals")
     if not isinstance(sections, dict):
-        return gsc, feedback, meta
+        # No envelope: accept the bare GSC-only export (pulumi/data#865
+        # phase 2) so the signal activates on what ships today. The full
+        # envelope (adding feedback) supersedes it whenever it lands.
+        if isinstance(data.get("pages"), dict):
+            sections = {"gsc": data}
+        else:
+            return gsc, feedback, meta
 
     def _int(v) -> int:
         try:
@@ -417,7 +469,13 @@ def importance(
     if have_traffic and max_visits > 0:
         v = visits if visits is not None else median_visits
         traffic_n = math.log1p(v) / math.log1p(max_visits)
-        return tier_w * (0.5 + 0.5 * traffic_n) * gsc_m * feedback_m
+        # Floor 0.25, not 0.5: with the old floor the log-normalized term
+        # compressed a 7,600x traffic gap into a <1% score difference, so
+        # staleness alone decided the queue across wildly different reader
+        # impact. The floor still guarantees a zero-traffic page a quarter of
+        # full weight (staleness must be able to win eventually), but traffic
+        # now separates same-tier peers by up to 4x instead of 2x.
+        return tier_w * (0.25 + 0.75 * traffic_n) * gsc_m * feedback_m
     return tier_w * gsc_m * feedback_m
 
 
@@ -536,6 +594,9 @@ def main() -> int:
         "halted": None,
         "traffic": {**traffic_meta, "available": have_traffic},
         "reader_signals": {"available": signals_available, **signals_meta},
+        # Pages backed off at the attempt cap (needing a human). Filled by the
+        # scored path below; signal-health.py's capped-pages signal reads it.
+        "capped": [],
         "articles": [],
     }
 
@@ -580,7 +641,17 @@ def main() -> int:
             "signals": signal_terms(path)[2],
             "last_reviewed": entry.get("reviewed_at"),
             "attempts": int(entry.get("attempts", 0)),
-            "stale_claims": len(entry.get("stale_claims") or []),
+            "stale_claims": len(all_markers(entry)),
+            # The markers themselves, not just how many there are. The nightly
+            # re-verification already did the expensive work — it identified the
+            # entity, reached an authoritative source, and wrote down the
+            # evidence — and the review skill is told to treat those as priority
+            # findings. Passing only the count meant the worker had to re-derive
+            # the finding from scratch and could silently miss it (pulumi/docs
+            # #20927: a page boosted for a contradicted version pin was reviewed,
+            # reported "0 contradicted" across 74 re-extracted claims, and merged
+            # a one-line unrelated repair while the flagged bug stayed on master).
+            "stale_claim_markers": all_markers(entry),
             "score": score,
         }
 
@@ -607,7 +678,10 @@ def main() -> int:
     if len(open_branches) >= MAX_OPEN_PRS:
         queue["halted"] = "max_open_prs"
         return finish(queue, args, LANE)
-    open_slugs = {b[len(BRANCH_PREFIX):].removeprefix("retire-") for b in open_branches}
+    open_slugs = {
+        b[len(BRANCH_PREFIX):].removeprefix("retire-").removeprefix("glowup-")
+        for b in open_branches
+    }
 
     newest_non_bot, created = git_history_signals(repo, CONTENT_DIR)
 
@@ -621,6 +695,8 @@ def main() -> int:
             continue
         if is_draft(repo / path):
             continue
+        if is_redirect_stub(repo / path):
+            continue
         entry = ledger.get(path)
         if entry and entry.get("status") == INCOMPLETE_STATUS \
                 and int(entry.get("attempts", 0)) >= ATTEMPT_CAP:
@@ -628,6 +704,7 @@ def main() -> int:
             continue
         candidates.append(path)
 
+    queue["capped"] = sorted(capped)
     if capped:
         print(
             f"select-articles: {len(capped)} page(s) backed off at the "
@@ -647,7 +724,7 @@ def main() -> int:
                 effective_last_review(path, ledger.get(path), newest_non_bot, created),
                 today,
                 have_traffic,
-                stale_claims=bool((ledger.get(path) or {}).get("stale_claims")),
+                stale_claims=bool(active_markers(ledger.get(path))),
                 gsc_m=gsc_m,
                 feedback_m=fb_m,
             ),
@@ -678,6 +755,29 @@ def is_draft(file_path: Path) -> bool:
     except yaml.YAMLError:
         return False
     return bool(isinstance(fm, dict) and fm.get("draft"))
+
+
+def is_redirect_stub(file_path: Path) -> bool:
+    """A page whose frontmatter is a `redirect_to:` — a tombstone, not content.
+
+    There is nothing on such a page to review, but with the traffic term
+    floored these stubs scored like real pages and burned queue slots
+    (organizing-stacks-projects.md: 1 visit/month, reviewed twice). The test
+    is the `redirect_to` key specifically — NOT "small file with aliases",
+    which misfires on legitimately tiny pages like reference/glossary.md.
+    """
+    try:
+        head = file_path.read_text(errors="replace")[:4096]
+    except OSError:
+        return False
+    m = FRONTMATTER_RE.match(head)
+    if not m:
+        return False
+    try:
+        fm = yaml.safe_load(m.group(1))
+    except yaml.YAMLError:
+        return False
+    return bool(isinstance(fm, dict) and fm.get("redirect_to"))
 
 
 if __name__ == "__main__":

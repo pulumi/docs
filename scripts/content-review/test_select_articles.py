@@ -89,6 +89,7 @@ def check(cond: bool, msg: str) -> None:
 
 PAGE = "---\ntitle: T\n---\n\nBody.\n"
 DRAFT = "---\ntitle: T\ndraft: true\n---\n\nBody.\n"
+STUB = "---\nredirect_to: /docs/misc/one/\n---\n"
 
 TIERS = """\
 tiers:
@@ -139,6 +140,7 @@ def make_repo(tmp: Path) -> Path:
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(PAGE)
     (repo / "content/docs/misc/draft.md").write_text(DRAFT)
+    (repo / "content/docs/misc/stub.md").write_text(STUB)
     git(repo, "add", ".")
     git(repo, "commit", "-q", "-m", "seed", date="2024-01-01T00:00:00Z")
 
@@ -209,6 +211,9 @@ def main() -> int:
         check(len(paths) == 3, f"3 picks (got {paths})")
         check("content/docs/generated/cli.md" not in paths, "tier-0 excluded")
         check("content/docs/misc/draft.md" not in paths, "draft excluded")
+        check("content/docs/misc/stub.md" not in [a["path"] for a in
+              run_select(repo, tiers, empty, "--count", "20")["articles"]],
+              "redirect_to stub excluded")
         check(all(a["lane"] == "priority" for a in q["articles"]), "all picks priority lane")
         check(paths[0] == C, f"most-stale tier-1 tops the queue (got {paths[0]})")
         check(paths[1] == OVERVIEW, f"stale tier-2 outranks stale tier-3 (got {paths[1]})")
@@ -364,6 +369,24 @@ def main() -> int:
         qg2 = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(gscf))
         check(scores(qg2) == sg, "signal-boosted selection is deterministic")
 
+        print("reader signals: bare GSC export (no envelope) parses identically")
+        bare = tmp / "signals-gsc-bare.json"
+        bare.write_text(json.dumps({
+            "source": "fct_google_search_console_metrics",
+            "period": {"start": "2026-03-14", "end": "2026-06-11"},
+            "generated": "2026-06-11T00:00:00Z",
+            "pages": {
+                "/docs/misc/one/": {"impressions": 50000, "clicks": 250},
+                "/docs/misc/two/": {"impressions": 50000, "clicks": 5000},
+                "/docs/misc/protected/keep/": {"impressions": 100, "clicks": 1},
+            }}))
+        qbare = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(bare))
+        check(scores(qbare) == sg, "bare GSC export scores identically to the enveloped one")
+        check(qbare["reader_signals"]["gsc"]["available"] is True,
+              "bare GSC export marked available")
+        check(qbare["reader_signals"]["feedback"]["available"] is False,
+              "bare GSC export leaves feedback unavailable")
+
         print("reader signals: --paths entries carry the signals block")
         qp = run_select(repo, tiers, empty, "--paths", ONE, "--signals-file", str(gscf))
         check(qp["articles"][0]["signals"]["gsc"]["low_ctr_flag"] is True,
@@ -383,6 +406,8 @@ def main() -> int:
         qcap = run_select(repo, tiers, led_cap, "--count", "20")
         check(TWO not in scores(qcap), "page at the attempt cap is excluded entirely")
         check(ONE in scores(qcap), "non-capped pages still selected")
+        check(qcap.get("capped") == [TWO], "capped pages surfaced on the queue")
+        check(full.get("capped") == [], "no capped pages -> empty list, not a missing key")
 
         print("completed review advances the clock (page is deprioritized)")
         led_done = tmp / "ledger-done"
@@ -427,6 +452,65 @@ def main() -> int:
                 check(entry["tier"] == 0, f"real tiers file marks {label} tier 0")
             else:
                 check("tiers" not in proc.stderr.lower(), "real tiers file parses")
+
+    # --- stale-claim markers ride the queue, and escalation stops the boost ---
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
+        repo = make_repo(tmp)
+        tiers = tmp / "tiers.yaml"
+        tiers.write_text(REPO_TIERS.read_text() if REPO_TIERS.is_file() else "rules: []\n")
+
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  "checked_at": "2026-08-15"}
+
+        led = tmp / "ledger-markers"
+        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
+        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
+        q = run_select(repo, tiers, led)
+        entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
+        check(entry is not None, "marked page is boosted into the queue")
+        if entry:
+            check(entry["stale_claims"] == 1, "count field preserved")
+            check([m["entity_key"] for m in entry.get("stale_claim_markers") or []]
+                  == ["version/pulumi-package"], "queue item carries the marker itself")
+            check((entry["stale_claim_markers"][0].get("evidence") or "")
+                  == "CHANGELOG says 3.163.0", "marker evidence reaches the worker")
+
+        # An escalated marker must still ride in the queue item and still be
+        # counted: record-review.py rebuilds the ledger entry from the queue,
+        # so a marker withheld here is a marker deleted from the ledger the
+        # next time this page is reviewed for any reason.
+        led_mixed = tmp / "ledger-mixed"
+        write_ledger(led_mixed, STACKS, TODAY, stale_claims=[
+            marker,
+            {**marker, "entity_key": "version/old-miss",
+             "unresolved_reviews": 2, "escalated": True},
+        ])
+        q_mixed = run_select(repo, tiers, led_mixed)
+        mixed = next((a for a in q_mixed["articles"] if a["path"] == STACKS), None)
+        check(mixed is not None, "page with one active marker is still boosted")
+        if mixed:
+            keys = [m["entity_key"] for m in mixed.get("stale_claim_markers") or []]
+            check("version/old-miss" in keys,
+                  "escalated marker still travels in the queue item (survives the round-trip)")
+            check(mixed["stale_claims"] == len(mixed["stale_claim_markers"]),
+                  "stale_claims count matches the marker list it describes")
+
+        led_esc = tmp / "ledger-escalated"
+        write_ledger(led_esc, STACKS, TODAY,
+                     stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
+        q_esc = run_select(repo, tiers, led_esc)
+        esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
+        check(esc is None, "an escalated marker alone no longer boosts the page")
+
+        # ...and when such a page is reviewed anyway (staleness, --paths), the
+        # escalated marker must reach record-review.py rather than evaporating.
+        q_paths = run_select(repo, tiers, led_esc, "--paths", STACKS)
+        forced = q_paths["articles"][0]
+        check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
+              == ["version/pulumi-package"],
+              "escalated marker reaches a --paths review instead of being dropped")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0

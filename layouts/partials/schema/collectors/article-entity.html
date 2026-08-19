@@ -100,8 +100,47 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" (slice $image)) }}
 
-{{/* Add keywords */}}
-{{ $schema = merge $schema (dict "keywords" "infrastructure as code, cloud, devops, automation") }}
+{{/* Add keywords. Every article-schema page (docs, what-is, and case
+     studies alike) previously got the same literal "infrastructure as
+     code, cloud, devops, automation" string regardless of topic, so a
+     page like "What is HIPAA?" or "What Is a Terraform Module?" told
+     search engines and LLMs it was about infrastructure as code just
+     like every other page on the site - diluting the entity signal this
+     page's actual topic should carry. Prefer explicit front-matter tags
+     where they exist; otherwise derive a page-specific value from the
+     page's own headline plus its section ancestors, the same trail used
+     to build BreadcrumbList, so the keyword set names what this page is
+     actually about instead of repeating one hardcoded phrase everywhere.
+     The outermost section ancestor (e.g. "Cloud Engineering Concepts
+     Explained" for every /what-is/ page, "Docs" for every /docs/ page)
+     is skipped: it is itself a constant repeated across
+     thousands of pages, the exact problem this block exists to remove,
+     so only deeper crumbs plus the headline carry the topic. */}}
+{{ $keywords := slice }}
+{{ with .Params.tags }}
+  {{ $keywords = . }}
+{{ else }}
+  {{ $skippedOutermostAncestor := false }}
+  {{ range .Ancestors.Reverse }}
+    {{ if and (not .IsHome) .LinkTitle }}
+      {{ if $skippedOutermostAncestor }}
+        {{ $keywords = $keywords | append .LinkTitle }}
+      {{ else }}
+        {{ $skippedOutermostAncestor = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $keywordHeadline := or .Params.title_tag .Title }}
+  {{ $keywordHeadline = replaceRE `(?i)^(what (is|are)|is) (a |an |the )?` "" $keywordHeadline }}
+  {{ $keywordHeadline = replaceRE `\?.*$` "" $keywordHeadline }}
+  {{ $keywordHeadline = strings.TrimSpace $keywordHeadline }}
+  {{ if $keywordHeadline }}
+    {{ $keywords = $keywords | append $keywordHeadline }}
+  {{ end }}
+{{ end }}
+{{ if gt (len $keywords) 0 }}
+  {{ $schema = merge $schema (dict "keywords" (delimit (uniq $keywords) ", ")) }}
+{{ end }}
 
 {{/* Calculate reading time */}}
 {{ $readTime := div $wordCount 200 }}
