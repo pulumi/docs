@@ -64,7 +64,7 @@ from extract import extract_blocks  # noqa: E402
 
 
 def load_selector():
-    """Import load_tiers/tier_for/is_draft from select-articles.py.
+    """Import load_tiers/policy_for/is_draft from select-articles.py.
 
     Reused, not copied, so the sweep can never drift from the selector's
     longest-prefix tier semantics (the hyphenated filename rules out a
@@ -255,8 +255,11 @@ def main() -> int:
     scoped: list[str] = []
     tier_scope = list(range(1, args.max_tier + 1))
     for path in pages:
-        tier, _ = selector.tier_for(path, rules)
-        if tier == 0:
+        policy = selector.policy_for(path, rules)
+        tier = policy.tier
+        # The sweep edits snippets in place, so a page a generator owns is out
+        # of scope however reviewable it is (pulumi/docs#20996).
+        if not policy.editable:
             continue
         if not args.all_tiers and tier > args.max_tier:
             continue

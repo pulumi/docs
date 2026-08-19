@@ -211,6 +211,26 @@ def main() -> int:
         check(code == 0 and out.get("class") == "judgment",
               f"expected class=judgment for retirement, got exit {code}, {out}")
 
+        print("reported: never publishes, and its patch must be empty")
+        reported = {"verdict": "reported", "reason": "claim list recorded",
+                    "fixes": 0, "skipped_findings": 0, "retirement": False}
+        code, out, _ = run_gate(tmp, verdict=reported, patch="")
+        check(code == 0 and out.get("publish") == "false",
+              f"expected publish=false for reported, got exit {code}, {out}")
+        check(out.get("class") == "none", f"expected class=none, got {out}")
+
+        code, _, err = run_gate(tmp, verdict=reported, patch=small_patch)
+        check(code == 1 and "non-empty" in err,
+              f"expected a non-empty-patch violation for reported, got {code}")
+
+        print("reported: retirement combination is a violation")
+        code, _, err = run_gate(
+            tmp,
+            queue={"articles": [{"path": ARTICLE, "slug": SLUG, "no_retire": False}]},
+            verdict={**reported, "retirement": True}, patch="")
+        check(code == 1 and "cannot propose retirement" in err,
+              f"expected reported+retirement violation, got {code}")
+
         print("glowup: publishes on its own branch with class glow-up")
         code, out, _ = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
                                 patch=small_patch)

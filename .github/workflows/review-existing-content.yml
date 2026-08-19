@@ -19,6 +19,13 @@ name: "Scheduled jobs: Review existing content (dispatcher)"
 # corrections, readthrough repairs, retirements) open UN-armed and merge only
 # when the PR-review sweep arms them post-approval or a human merges.
 #
+# THREE LANES live in this dispatcher, all sharing the weekday cron, the
+# holiday gate, and the CONTENT_REVIEW_COUNT kill switch: the fix lane (below),
+# the glow-up lane, and the report-only lane (pulumi/docs#20996) that
+# fact-checks the generated trees the other two must never edit. Each has its
+# own count variable; see the step comments for the report lane's default-off
+# rationale.
+#
 # SINGLE SWITCH (default-on) — the CONTENT_REVIEW_COUNT repo variable is both
 # the on/off and the cadence knob:
 #   unset -> on, 3 articles/run (the default)
@@ -467,6 +474,78 @@ jobs:
               -f mode="glowup" \
               -f queue_json="$Q" \
               || echo "::warning::glow-up worker dispatch failed for $P"
+          done
+
+      # ---- Report-only lane (fact-check the trees nobody may edit) ----
+      # Same selector, same scoring, the OTHER half of the corpus: pages a
+      # generator owns (`editable: false, reviewable: true` in
+      # strategic-tiers.yaml — today the 248-page CLI command reference). The
+      # worker runs in mode=report: it extracts and verifies the page's claims,
+      # writes them to the claims index, and changes nothing. No model turn, no
+      # branch, no PR. Contradictions are reported to #docs-ops with a
+      # prefilled upstream issue; they never become stale-claims markers,
+      # because no PR in this repo could ever retire one.
+      #
+      # Why this lane exists: tier 0 meant "never select", and selection is the
+      # only thing that ever writes a page's claim list — so 254 pages, 30% of
+      # content/docs/, had never been fact-checked once. Not "checked and
+      # fine". pulumi/docs#20996.
+      #
+      # REPORT_REVIEW_COUNT repo variable — DEFAULT-OFF, deliberately inverting
+      # the default-on convention the other lanes use:
+      #   unset -> OFF (no runner, no spend)
+      #   'N'   -> on, N pages/working day
+      # The first pass over 248 never-checked pages is a one-time cost nobody
+      # has measured yet, and #20996 asks for it to be sized before the lane is
+      # committed to. Each run reports its own per-page token usage (the `cost`
+      # block in the report-findings artifact), so turning this on at a small N
+      # for a week produces the real number, and the lap time follows from it:
+      # at N pages/working day the tree laps every ceil(248/N) working days.
+      - name: Select and dispatch report-only reviews
+        if: >-
+          steps.select.outcome == 'success' &&
+          github.event.inputs.dry_run != 'true' &&
+          format('{0}', vars.REPORT_REVIEW_COUNT) != '' &&
+          format('{0}', vars.REPORT_REVIEW_COUNT) != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ARGS=(--mode report --count "${{ vars.REPORT_REVIEW_COUNT }}" --out .report-queue.json)
+          if [ -d .ledger-cache ]; then
+            ARGS+=(--ledger-dir .ledger-cache)
+          fi
+          if [ -f .traffic-snapshot ]; then
+            ARGS+=(--traffic-file .traffic-snapshot)
+          fi
+          if [ -f .reader-signals.json ]; then
+            ARGS+=(--signals-file .reader-signals.json)
+          fi
+          python3 scripts/content-review/select-articles.py "${ARGS[@]}"
+          echo "--- report-only queue ---"
+          cat .report-queue.json
+          # Same single-article queue_json shape as the two dispatch blocks
+          # above — keep all three jq fragments in sync, ledger_bucket included
+          # (the worker's publish job reads the bucket from the queue rather
+          # than from its own flaky stack-output resolve).
+          TRAFFIC=$(jq -c '.traffic' .report-queue.json)
+          SIGNALS=$(jq -c '.reader_signals // null' .report-queue.json)
+          GEN=$(jq -r '.generated' .report-queue.json)
+          LB="${{ steps.ledger-bucket.outputs.bucket }}"
+          jq -c '.articles[]' .report-queue.json | while read -r a; do
+            P=$(echo "$a" | jq -r '.path')
+            Q=$(jq -nc --argjson art "$a" --argjson traffic "$TRAFFIC" \
+              --argjson signals "$SIGNALS" --arg gen "$GEN" --arg lb "$LB" \
+              '{generated: $gen, count: 1, mode: "report", traffic: $traffic,
+                reader_signals: $signals,
+                ledger_bucket: (if $lb == "" then null else $lb end), articles: [$art]}')
+            echo "dispatching report-only worker for $P"
+            gh workflow run content-review-article.yml \
+              --repo "${{ github.repository }}" \
+              -f path="$P" \
+              -f lane="report" \
+              -f mode="report" \
+              -f queue_json="$Q" \
+              || echo "::warning::report-only worker dispatch failed for $P"
           done
 
       # Breadcrumb for the ledger-write health signal: what was dispatched

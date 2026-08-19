@@ -12,8 +12,10 @@ Checks (all deterministic; the gate fails closed):
 
 - The queue parses and carries exactly one article with `path` and `slug`.
 - The verdict sentinel parses, uses the canonical verdict vocabulary, and is
-  consistent with the patch: `fixed` requires a non-empty patch, `clean` and
-  `skipped` require an empty (or absent) one.
+  consistent with the patch: `fixed` requires a non-empty patch, `clean`,
+  `skipped`, and `reported` require an empty (or absent) one.
+- `reported` (the report-only lane) additionally may not propose retirement:
+  it is the verdict for a page this repo cannot edit at all.
 - `no_retire` backstop: a retirement verdict on a page the queue stamps
   `no_retire: true` is a hard failure, regardless of what the model wrote in
   the PR body. A queue entry missing the field counts as `no_retire: true`.
@@ -54,7 +56,12 @@ import sys
 from pathlib import Path
 
 BRANCH_PREFIX = "content-review/"
-VERDICTS = {"fixed", "clean", "skipped", "glowup"}
+# "reported" is the report-only lane's verdict (pulumi/docs#20996): the worker
+# extracted and verified the page's claims, recorded them to the claims index,
+# and changed nothing. It is a NON-PUBLISHING verdict whose patch must be
+# empty — the pages it runs on are generated, so an edit is both out of scope
+# and guaranteed to be overwritten by the generator.
+VERDICTS = {"fixed", "clean", "skipped", "glowup", "reported"}
 
 # Shared render-time sources the skill's rendered-content pass (SKILL.md
 # step 6) may correct on any fix PR, beyond the article itself.
@@ -268,9 +275,13 @@ def main() -> int:
         if glowup and retirement:
             fail("a glowup verdict cannot also propose retirement")
             violations += 1
-    else:  # clean / skipped
+    else:  # clean / skipped / reported
         if not empty:
             fail(f"verdict is '{verdict['verdict']}' but the change patch is non-empty")
+            violations += 1
+        if verdict["verdict"] == "reported" and retirement:
+            fail("a reported verdict cannot propose retirement — the report-only "
+                 "lane runs on pages this repo does not own")
             violations += 1
 
     if retirement:

@@ -27,6 +27,21 @@ name: "Scheduled jobs: Review existing content (one article)"
 #             worst distort the patch — and the gate bounds what a patch
 #             may touch.
 #
+# THREE MODES (the `mode` input). `fix` and `glowup` both run the model and
+# both can open a PR. `report` (pulumi/docs#20996) does neither:
+#
+#   report — the page is one a GENERATOR owns (the 248-page CLI command
+#            reference), so there is nothing here a PR may change. The run is
+#            the deterministic claim pipeline and nothing else: extract, verify,
+#            record to the claims index, report contradictions upstream. The
+#            model step is SKIPPED outright — with no fix to apply and no PR
+#            body to write, an agent turn would buy nothing and could only
+#            produce an edit the gate has to reject. The publish job still runs,
+#            still records the ledger, and enforces that the patch is empty.
+#            This mode exists because tier 0 meant "never select", selection is
+#            the only thing that writes a page's claim list, and 30% of
+#            content/docs/ had therefore never been fact-checked once.
+#
 # This is workflow_dispatch only — the dispatcher invokes it; it is not on a
 # schedule of its own.
 
@@ -45,7 +60,7 @@ on:
         required: false
         default: ''
       mode:
-        description: 'Review mode: fix (default) or glowup (whole-page rehab from the banked findings backlog; never auto-merges)'
+        description: 'Review mode: fix (default), glowup (whole-page rehab from the banked findings backlog; never auto-merges), or report (fact-check only — records the claim list, changes nothing, opens no PR)'
         required: false
         default: 'fix'
 
@@ -141,9 +156,17 @@ jobs:
               || { echo "::warning::queue_json was not valid JSON; rebuilding"; rm -f .content-review-queue.json; }
           fi
           if [ ! -f .content-review-queue.json ]; then
+            SELECT_ARGS=()
+            # report is a selector mode (it picks from the non-editable half of
+            # the corpus), so --paths must be told which half it is rebuilding;
+            # glowup is not — it is stamped onto the entry below.
+            if [ "${{ github.event.inputs.mode }}" = "report" ]; then
+              SELECT_ARGS+=(--mode report)
+            fi
             python3 scripts/content-review/select-articles.py \
               --paths "${{ github.event.inputs.path }}" \
               --lane "${{ github.event.inputs.lane || 'priority' }}" \
+              "${SELECT_ARGS[@]}" \
               --out .content-review-queue.json
             # Manual glow-up dispatch with no queue_json: stamp the mode onto
             # the rebuilt queue so the skill, record, and gates all agree.
@@ -159,8 +182,11 @@ jobs:
       # canonical branch), a previous run is still in flight. Write the
       # skipped verdict here and never spend the pre-compute or review
       # tokens — this used to be a model instruction (SKILL.md step 1).
+      # Report-only runs push no branch and open no PR, so there is nothing for
+      # a second run to collide with and nothing for this check to find.
       - name: Check for an existing open PR
         id: precheck
+        if: github.event.inputs.mode != 'report'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -187,7 +213,7 @@ jobs:
       # command degrades gracefully (`|| stub`) so one pre-step failure never
       # blocks the run; the model notes any missing/errored artifact in the PR.
       - name: Pre-compute review artifacts
-        if: steps.precheck.outputs.skip != 'true'
+        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -246,6 +272,87 @@ jobs:
             .vale-findings.json .frontmatter-validation.json \
             .cross-sibling-discovery.json .readthrough-findings.json 2>/dev/null || true
 
+      # Report-only lane (mode=report): the SAME claim pipeline, and only the
+      # claim pipeline. Vale, frontmatter, cross-sibling, and readthrough all
+      # exist to produce fixes for a model to apply, and this lane applies
+      # nothing — running them would be pure spend (readthrough is itself an
+      # LLM pass). What is left is exactly what the claims index is built from,
+      # which is the whole point of visiting these pages. Same `|| stub`
+      # degradation as the full pipeline above; a degraded verify artifact
+      # makes record-claims.py preserve the page's previous snapshot rather
+      # than overwrite it with silence.
+      - name: Pre-compute claim artifacts (report-only lane)
+        if: github.event.inputs.mode == 'report'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
+        run: |
+          set +e
+          S=.claude/commands/docs-review/scripts
+          git diff --no-index /dev/null "$ARTICLE_PATH" > .synthetic.patch || true
+
+          python3 $S/extract-urls-and-fetch.py \
+            --patch-file .synthetic.patch --out .fetched-urls.json \
+            || echo '[]' > .fetched-urls.json
+          python3 $S/extract-claims.py \
+            --patch-file .synthetic.patch --out .candidate-claims-regex.json \
+            || echo '{"schema_version": 1, "claims": [], "renames": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
+          python3 $S/extract-claims-llm.py \
+            --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
+            --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json \
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+          python3 $S/extract-claims-llm.py \
+            --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
+            --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json \
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+          python3 $S/merge-claims.py \
+            --regex .candidate-claims-regex.json \
+            --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
+            --out .candidate-claims.json \
+            || echo '{"schema_version": 1, "claims": [], "errors": ["merge-claims.py failed to start"], "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "llm_input_tokens": 0, "llm_output_tokens": 0, "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0}}' > .candidate-claims.json
+          python3 $S/verify-claims.py \
+            --in .candidate-claims.json --fetched-urls .fetched-urls.json \
+            --out .verified-claims.json \
+            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+
+          echo "--- pre-compute artifacts (report-only) ---"
+          jq -r '"\((.verdicts // []) | length) verdict(s), \((.errors // []) | length) error(s); tokens in=\(.meta.input_tokens // 0) out=\(.meta.output_tokens // 0)"' \
+            .verified-claims.json || true
+
+      # The verdict sentinel is written by the WORKFLOW here, not by a model:
+      # in this mode there is no model, and 'reported' is a statement about
+      # what the run did (claims recorded, nothing edited) rather than a
+      # judgment anyone had to make. The publish gate enforces the half that
+      # matters — a 'reported' verdict whose patch is non-empty fails closed.
+      #
+      # It is written ONLY when the verify pre-step actually produced verdicts.
+      # A degraded run (zero verdicts WITH errors — the same signal
+      # record-claims.py refuses to overwrite a snapshot on) writes NO sentinel,
+      # which record-review.py records as `incomplete`: the page stays due and
+      # comes back under the attempt cap. Stamping it 'reported' would advance
+      # the staleness clock on a page nothing had checked — the exact
+      # "we looked and it's fine" claim this whole lane exists to stop making.
+      - name: Write the report-only verdict
+        if: github.event.inputs.mode == 'report'
+        run: |
+          N=$(jq '(.verdicts // []) | length' .verified-claims.json 2>/dev/null || echo "")
+          E=$(jq '(.errors // []) | length' .verified-claims.json 2>/dev/null || echo "")
+          if [ -z "$N" ]; then
+            echo "::warning::no readable .verified-claims.json; no verdict written (the page stays due)"
+            exit 0
+          fi
+          if [ "$N" -eq 0 ] && [ "$E" -gt 0 ]; then
+            echo "::warning::claim verification degraded ($E error(s), 0 verdicts); no verdict written (the page stays due)"
+            exit 0
+          fi
+          jq -n --argjson n "$N" \
+            '{verdict: "reported",
+              reason: ("claims recorded (\($n) verdict(s)); generated page, nothing edited"),
+              fixes: 0, skipped_findings: 0, retirement: false}' \
+            > .content-review-verdict.json
+          cat .content-review-verdict.json
+
       # Assemble the ~80%-done PR body from the queue + pre-step artifacts
       # (facts → code, judgment → model), mirroring docs-review's compose-review.
       # The model EDITS .pr-body-draft.md rather than authoring the body from a
@@ -274,8 +381,9 @@ jobs:
           echo "--- glow-up backlog ---"
           cat .glowup-backlog.json
 
+      # No PR body in report-only mode: no PR.
       - name: Compose PR body draft
-        if: steps.precheck.outputs.skip != 'true'
+        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
         run: |
           # Glow-up mode composes its own template and fails HARD on error:
           # the fix-lane fallback body would carry the wrong sections and the
@@ -368,9 +476,13 @@ jobs:
           retention-days: 7
           path: .review-snapshot/
 
+      # Skipped entirely in report-only mode — see the THREE MODES note in the
+      # header. Everything that lane produces (the claim list, the verdict) is
+      # deterministic and already written by the steps above; an agent turn
+      # here could only add spend and the risk of an edit the gate rejects.
       - name: Run Claude Code
         id: claude
-        if: steps.precheck.outputs.skip != 'true'
+        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -943,6 +1055,64 @@ jobs:
           python3 scripts/content-review/record-claims.py \
             --queue .review-snapshot/.content-review-queue.json \
             --verified .review-snapshot/.verified-claims.json
+
+      # Report-only lane: say what the claim check FOUND. Recording to the
+      # index is not enough on a page's first pass, and the first pass is where
+      # the findings are — the nightly re-verify only re-checks *volatile*
+      # entities, and there is no model on this lane to read the verdicts and
+      # act on them. Routing is the nightly lane's own (fix_route +
+      # upstream-claims.yaml), so a finding arrives with a prefilled issue
+      # against the repo that owns the text, and one a human already filed
+      # stays quiet. Inputs are the PRE-MODEL snapshot; the tiers and
+      # upstream registry come from this job's own clean checkout.
+      - name: Report upstream findings (report-only lane)
+        id: report-findings
+        if: always() && github.event.inputs.mode == 'report'
+        continue-on-error: true
+        run: |
+          if [ ! -f .review-snapshot/.verified-claims.json ]; then
+            echo "no snapshotted verified-claims; nothing to report"
+            exit 0
+          fi
+          python3 scripts/content-review/report-claims-findings.py \
+            --queue .review-snapshot/.content-review-queue.json \
+            --verified .review-snapshot/.verified-claims.json \
+            --artifacts-dir .review-snapshot \
+            --out .report-findings.json \
+            --slack-out .report-slack.txt \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+      # The lane's durable evidence, same posture as the nightly re-verify's
+      # report: the run log masks the org name in source URLs and ages out with
+      # the run. Long retention because these are the claim lists for a tree
+      # nobody had ever checked, and the cost sizing is read off them.
+      - name: Upload report findings
+        if: always() && github.event.inputs.mode == 'report' && hashFiles('.report-findings.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: report-findings
+          path: .report-findings.json
+          # Dotfile: upload-artifact excludes hidden files unless told
+          # otherwise, and hashFiles() has no such exclusion — without this the
+          # step runs and uploads nothing, with only a warning annotation.
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 90
+
+      # Only NEW findings page anyone: a contradiction already filed upstream
+      # (references/upstream-claims.yaml) is known, and re-announcing it nightly
+      # is how a channel learns to ignore the bot.
+      - name: Post report findings to Slack
+        if: always() && github.event.inputs.mode == 'report' && hashFiles('.report-slack.txt') != ''
+        continue-on-error: true
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --rawfile txt .report-slack.txt \
+              '{channel: $ch, text: $txt, unfurl_links: false}')"
 
       # Structured record of what this review FOUND, applied or not — the
       # backlog `build-glowup-backlog.py` used to recover by downloading the PR
