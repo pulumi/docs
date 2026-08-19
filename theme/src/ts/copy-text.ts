@@ -3,11 +3,23 @@
 //   [data-copy-text="…"]   click → writes the attribute value to the clipboard
 //   [data-copy-idle]       descendants shown until a copy succeeds
 //   [data-copy-done]       descendants shown for CONFIRM_MS after a copy succeeds
+//   [data-track="…"]       optional; names the control in the analytics event
 //
 // Distinct from copybutton.ts, which scans for rendered code blocks and injects
 // its own button; this one styles nothing and copies a literal string.
 
 const CONFIRM_MS = 2000;
+
+// tracking.ts registers `document.querySelectorAll("a")` only, so a data-track
+// on a button reaches nothing. Fire the event here instead, mirroring how
+// copybutton.ts emits its own "copy-code-block".
+function trackCopy(name: string | null): void {
+    const analytics = (window as any).analytics;
+    if (!name || !analytics || typeof analytics.track !== "function") {
+        return;
+    }
+    analytics.track("copy-text", { name, url: window.location.pathname });
+}
 
 // navigator.clipboard only exists in a secure context, so on the plain-HTTP S3
 // preview builds it is undefined and the modern path is unavailable. Fall back
@@ -64,6 +76,7 @@ function initCopyText() {
             if (!(await copyText(control.getAttribute("data-copy-text") || ""))) {
                 return;
             }
+            trackCopy(control.getAttribute("data-track"));
             idle.forEach(el => el.setAttribute("hidden", ""));
             done.forEach(el => el.removeAttribute("hidden"));
             window.clearTimeout(timer);

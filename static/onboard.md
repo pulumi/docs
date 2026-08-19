@@ -45,7 +45,7 @@ Do not guess. The answer decides the path.
 Pulumi creates resources in the user's own cloud account, with credentials
 separate from Pulumi Cloud. Ask the user whether they already have credentials
 for the target cloud and how they are set up, since it varies: a named profile,
-environment variables, an SSO session, or a service account key. If they have
+environment variables, an SSO session, authenticated CLI, or a service account key. If they have
 more than one, ask which to use; if they have none, help them set up
 credentials for that provider. Ask before using credentials rather than
 detecting and choosing them yourself.
@@ -55,8 +55,8 @@ detecting and choosing them yourself.
 Ask the user for the specifics of what they chose in step 3, then follow the
 `pulumi-overview` skill from step 2:
 
-- New infrastructure: confirm the language (Python, TypeScript, Go, C#, or
-  Java) and what to build, then use `pulumi-overview`, Level 2. Scaffold with
+- New infrastructure: confirm the language (TypeScript, Python, Go, C#, Java,
+  YAML, or HCL) and what to build, then use `pulumi-overview`, Level 2. Scaffold with
   `pulumi new <cloud>-<language>`, then add the resources they asked for,
   whether that is one or several. Keep it minimal if they only want one.
 - Migration: hand it to `pulumi-overview`, which covers migrating from
