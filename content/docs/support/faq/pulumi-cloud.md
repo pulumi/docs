@@ -245,9 +245,8 @@ already signed-in using GitLab at <app.pulumi.com> using your machine's
 your Pulumi account based on your GitLab identity would be automatically
 used.
 
-## More FAQ
+## Learn more
 
 - [Pulumi IaC FAQ](/docs/support/faq/infrastructure/)
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
-- [Pulumi Cloud SCIM FAQ](/docs/support/faq/scim/)
 - [Pulumi Policies FAQ](/docs/support/faq/policies/)

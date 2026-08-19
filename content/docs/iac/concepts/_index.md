@@ -41,7 +41,7 @@ As a multi-language infrastructure as code tool, Pulumi supports many of today's
 - [Pulumi YAML](https://www.pulumi.com/docs/languages-sdks/yaml/)
 
 {{< notes >}}
-If you don't see your favorite language listed, it may be on its way soon. [Pulumi is open source](https://github.com/pulumi/pulumi), and it is possible to [add your own language](https://www.pulumi.com/docs/support/faq/#how-can-i-add-support-for-my-favorite-language). For additional language questions, visit [Pulumi's languages and SDK docs](https://www.pulumi.com/docs/languages-sdks/).
+If you don't see your favorite language listed, it may be on its way soon. [Pulumi is open source](https://github.com/pulumi/pulumi), and it is possible to add your own language. For additional language questions, visit [Pulumi's languages and SDK docs](/docs/iac/languages-sdks/).
 {{< /notes >}}
 
 ## How does Pulumi work?

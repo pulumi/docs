@@ -40,7 +40,7 @@ Pulumi implements a single SCIM 2.0 endpoint. Every identity provider uses the s
 
 ## Supported attributes
 
-The lists below are complete. Pulumi implements the core SCIM 2.0 schemas only, so a request that adds or updates any attribute not listed here fails with a `400 invalidPath` response. See [Unknown path](/docs/support/faq/scim/#unknown-path) in the SCIM FAQ.
+The lists below are complete. Pulumi implements the core SCIM 2.0 schemas only, so a request that adds or updates any attribute not listed here fails with a `400 invalidPath` response. See [Unknown path](/docs/administration/access-identity/scim/troubleshooting/#unknown-path) in the troubleshooting guide.
 
 For users:
 
@@ -114,4 +114,4 @@ To set up synchronization between Pulumi and your SAML 2.0 identity provider, re
 - [Okta](/docs/administration/access-identity/scim/okta/)
 - [OneLogin](/docs/administration/access-identity/scim/onelogin/)
 
-For the provisioning errors you are most likely to hit and how to resolve them, see the [SCIM FAQ](/docs/support/faq/scim/).
+For the provisioning errors you are most likely to hit and how to resolve them, see [Troubleshooting](/docs/administration/access-identity/scim/troubleshooting/).

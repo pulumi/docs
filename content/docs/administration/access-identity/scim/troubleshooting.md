@@ -1,29 +1,29 @@
 ---
-title_tag: Frequently Asked Questions (FAQ) | SCIM
-meta_desc: This page describes how to resolve issues that may occur when configuring SCIM provisioning
-title: SCIM FAQ
-h1: SCIM FAQ
+title_tag: Troubleshooting | SCIM
+meta_desc: Troubleshooting guide for SCIM provisioning issues in Pulumi Cloud.
+title: Troubleshooting
+h1: SCIM troubleshooting
 menu:
-  support:
-    name: SCIM FAQ
-    parent: support-faq
-    weight: 4
-    identifier: support-faq-scim
+  administration:
+    name: Troubleshooting
+    parent: administration-access-identity-scim
+    weight: 80
+    identifier: pulumi-cloud-access-management-scim-troubleshooting
 aliases:
+  - /docs/support/faq/scim/
   - /docs/administration/access-identity/scim/faq/
   - /docs/guides/scim/faq/
   - /docs/pulumi-cloud/access-management/scim/faq/
+pulumi_cloud_feature: scim
 ---
 
-## FAQ
+This page describes how to resolve issues that may occur when configuring SCIM provisioning.
 
-This page contains information on how to resolve issues that may occur when configuring SCIM provisioning.
-
-### A failure occurred when attempting to provision a user
+## User provisioning failures
 
 These errors can occur when attempting to create (POST), replace (PUT), or update (PATCH) a user. If you encounter difficulties resolving these issues, please contact our [customer support](https://support.pulumi.com/) for assistance.
 
-#### Email already in use
+### Email already in use
 
 ```json
 {
@@ -49,7 +49,7 @@ Suggested Resolution: There are three possible solutions. The user can either:
 If the existing account is already managed by SAML SSO in another Pulumi organization, use option 3. Signing in to the new organization directly returns an "Email already in use" screen, and an SSO-managed account cannot clear that screen on its own. Connect the new organization's SAML SSO identity from your account settings instead. See [Connect SAML SSO to an existing account](/docs/administration/access-identity/saml/#connect-saml-sso-to-an-existing-account).
 {{% /notes %}}
 
-#### UserName already exists
+### `userName` already exists
 
 ```json
 {
@@ -67,7 +67,7 @@ Cause: The user being provisioned has the same username as an existing account i
 
 Suggested Resolution: Update the username attribute in your identity provider’s console if your identity provider allows, then try reprovisioning the user. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
-#### UserName is immutable
+### `userName` is immutable
 
 ```json
 {
@@ -85,7 +85,7 @@ Cause: Pulumi usernames are immutable and cannot be updated. See [Usernames cann
 
 Suggested Resolution: Update the attribute mapping in the identity provider so that `userName` is updated only during creation, not creation and update. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
-#### Unknown path
+### Unknown path
 
 ```json
 {
@@ -112,7 +112,7 @@ Provisioning jobs that try to add or update any other attribute fail. For the co
 
 Suggested Resolution: Update the attribute mappings in the identity provider and delete all unsupported attributes. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
-### A failure occurred when attempting to provision group members
+## Group member provisioning failures
 
 The creation (POST), update (PATCH), or replacement (PUT) of a group performs member validation before running the operation. If any of the members provided are not provisioned into your Pulumi organization, or are not active, the request fails with the following response:
 
@@ -130,9 +130,9 @@ The creation (POST), update (PATCH), or replacement (PUT) of a group performs me
 
 The suggested way to resolve this conflict would be to synchronize all the group members to guarantee every member is successfully provisioned and update the user's status. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
-### A failure occurred when attempting to provision a group
+## Group provisioning failures
 
-#### Display name is too long
+### Display name is too long
 
 ```json
 {
@@ -150,13 +150,12 @@ Cause: Pulumi team names created through SCIM must be 100 characters or fewer, a
 
 Suggested Resolution: Rename the group in the identity provider so that its name fits within the limit, then push it again. _This action must be done by an admin on the identity provider side (e.g. Okta)_.
 
-### Can I manage Pulumi-local teams if using SCIM?
+## Managing Pulumi-local teams alongside SCIM
 
-Yes. In addition to the SCIM-managed teams, one can also configure and manage Pulumi-local teams in the Pulumi Cloud. See [Teams](/docs/administration/organizations-teams/teams/) for how to configure teams in the Pulumi Cloud.
+Alongside the SCIM-managed teams, you can also configure and manage Pulumi-local teams in the Pulumi Cloud. See [Teams](/docs/administration/organizations-teams/teams/) for how to configure teams in the Pulumi Cloud.
 
-## More FAQ
+## Learn more
 
-- [Pulumi IaC FAQ](/docs/support/faq/infrastructure/)
-- [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
-- [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
-- [Pulumi Policies FAQ](/docs/support/faq/policies)
+- [SCIM overview](/docs/administration/access-identity/scim/)
+- [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)
+- [Getting support](/docs/support/getting-support/)
