@@ -54,8 +54,9 @@ GLOW-UP RUNS are the exception, and take their disposition from the sentinel's
 `executed_ids`/`declined_ids` instead (`--backlog` supplies the id mapping). A
 glow-up carries no `applied[]` by design, so the line-overlap match above finds
 nothing and would file every finding — including everything the glow-up just
-executed — as deferred. Two states mean NO record is written for that run: a sentinel carrying neither
-list, and a sentinel whose executed ids ALL fail to resolve to a finding here
+executed — as deferred. Two states mean NO record is written for that run: a
+sentinel carrying neither list, and one whose executed ids ALL fail to resolve
+to a finding here
 (a missing backlog snapshot, or labels that have drifted). Both are the same
 information state — the disposition is unknown — and the all-False record that
 would otherwise be written re-banks everything the glow-up just finished. A
@@ -219,12 +220,17 @@ def mark_from_backlog(findings: list[dict], verdict: dict | None,
     `banked_from_findings` builds each item's text as `label` (plus ` — detail`),
     so the label is a prefix of the text and the match is exact, not fuzzy.
 
-    An id that resolves to no finding leaves everything deferred and warns.
+    An id that resolves to no finding leaves everything deferred and warns —
+    unless NONE of the ids that should have resolved did, which is the same
+    information state as a sentinel carrying no lists and takes the same exit.
     That direction is deliberate: re-proposing finished work is irritating and
     visible, while marking the wrong item applied loses real work silently.
 
-    Returns None when the sentinel carries neither list, so the caller can
-    decline to write rather than write an all-false record.
+    Returns None when the disposition is unknown — the sentinel carries neither
+    list, or no executed id that should map to a finding here did — so the
+    caller can decline to write rather than write an all-false record. Ids
+    naming pr-body items don't count towards that: they have no counterpart on
+    this record and are expected to resolve to nothing.
     """
     v = verdict or {}
     if "executed_ids" not in v and "declined_ids" not in v:
@@ -313,9 +319,12 @@ def build(queue: dict, verdict: dict | None, artifacts: dict,
             # just did as still outstanding. Skipping leaves the previous
             # record standing, which is stale but true; the next fix-lane
             # review refreshes it from its own artifacts.
-            warn("glow-up verdict carries no executed_ids/declined_ids; "
-                 "skipping the findings write rather than recording every "
-                 "finding as deferred")
+            # mark_from_backlog already logged WHICH of its two unknown-
+            # disposition states this was; naming one of them here contradicted
+            # the other and sent debugging at the model's sentinel when the real
+            # cause was a missing backlog snapshot.
+            warn("glow-up disposition unknown (see above); skipping the findings "
+                 "write rather than recording every finding as deferred")
             return None
     else:
         marked = mark_applied(findings, verdict)
