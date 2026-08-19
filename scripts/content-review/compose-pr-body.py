@@ -196,6 +196,11 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                     "source": _truncate(v.get("source", ""), 200) or "(no source pointer)",
                     "detail": _truncate(v.get("evidence", "")),
                     "fix": conf == "high",
+                    # Structured location, for consumers that need to match a
+                    # finding to an applied fix (record-page-findings.py). The
+                    # renderers read label/source/detail/fix and ignore these.
+                    "category": "claim",
+                    "line_range": v.get("line_range") or "",
                 })
             elif verdict == "unverifiable":
                 # Distinguish a retryable turn-budget failure from a genuine
@@ -209,6 +214,8 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                     "source": _truncate(v.get("source", ""), 200) or "(verifier did not converge)",
                     "detail": _truncate(v.get("evidence", "")) or "verification did not converge",
                     "fix": False,
+                    "category": "claim",
+                    "line_range": v.get("line_range") or "",
                 })
     elif verified is not None:
         errors.append("verified-claims (unexpected shape)")
@@ -224,6 +231,8 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                 "source": "`STYLE-GUIDE.md` (Vale)",
                 "detail": _truncate(f.get("message", "")),
                 "fix": cat in HIGH_CONF_VALE,
+                "category": "vale",
+                "line_range": f"L{line}" if isinstance(line, int) else "",
             })
     elif vale is not None:
         errors.append("vale-findings (unexpected shape)")
@@ -241,6 +250,8 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                 "source": "readthrough coherence pass",
                 "detail": _truncate(f.get("proposed_fix", "")),
                 "fix": fix_class == "local_repair",
+                "category": "readthrough",
+                "line_range": loc,
             })
     elif readthrough is not None:
         errors.append("readthrough (unexpected shape)")
@@ -255,6 +266,8 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                     "source": "`.frontmatter-validation.json`",
                     "detail": _truncate(json.dumps(col)),
                     "fix": True,
+                    "category": "frontmatter",
+                    "line_range": "",
                 })
             for mp in ffile.get("menu_parents") or []:
                 if mp.get("parent_exists_in_menu") is False:
@@ -264,6 +277,8 @@ def collect(verified, vale, readthrough, frontmatter) -> tuple[list[dict], list[
                         "source": "`.frontmatter-validation.json`",
                         "detail": "parent_exists_in_menu: false — often a legacy secondary-menu pattern; verify before changing",
                         "fix": False,
+                        "category": "frontmatter",
+                        "line_range": "",
                     })
 
     return findings, errors

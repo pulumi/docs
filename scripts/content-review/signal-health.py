@@ -92,6 +92,43 @@ REALERT_DAYS = 7
 # REALERT_DAYS still paces the nag weekly while the state persists.
 SIGNAL_THRESHOLDS = {"capped-pages": 0}
 
+# Smallest all-inconclusive night that counts as evidence the reverify lane is
+# finding nothing. Below it the run is a sample, not a verdict: on 2026-08-19
+# the rotation handed the lane a single entity (a contiguous-chunk remainder,
+# since fixed in reverify-claims.tonight_chunk), that entity came back demoted,
+# and 1-of-1 inconclusive degraded the signal for the whole lane. A short night
+# is now no observation at all, which leaves the prior state standing — the
+# same treatment a missing report already gets.
+MIN_INCONCLUSIVE_SAMPLE = 5
+
+# How long a signal may go unobserved before silence itself is the finding.
+#
+# Every signal is reported BY a job. Nothing reports on a job that never ran,
+# so a lane that stops firing leaves its signal frozen at whatever it last
+# said — and what it last said is usually "ok". Silence reads as health. That
+# is exactly how the `vars.X != '0'` gate kept blog-review and claims-reverify
+# dark on their schedules for weeks with every signal green.
+#
+# So each signal declares the cadence it is observed at, and any run of
+# signal-health (from either workflow — they share the state object) can flag
+# a signal nobody has written to in too long. The reporting job does not have
+# to be the one that notices.
+#
+# Windows are generous on purpose: a false "the lane is dead" is far more
+# corrosive than a day's delay, because it teaches people to ignore the alert.
+# reverify runs daily (3 days = two consecutive misses). The rest ride the
+# weekday dispatcher, where Fri -> Mon is already 3 days, so 6 covers a normal
+# long weekend plus a miss.
+SIGNAL_MAX_SILENCE_DAYS = {
+    "reverify": 3,
+    "traffic": 6,
+    "console-access": 6,
+    "holiday-feed": 6,
+    "capped-pages": 6,
+    "ledger-write": 6,
+}
+DEFAULT_MAX_SILENCE_DAYS = 6
+
 # One line per signal: what broke, for how long, the consequence, and where to
 # look — the consequence is the point (see the module docstring).
 CONSEQUENCES = {
@@ -128,6 +165,14 @@ CONSEQUENCES = {
         "reviews. Check the worker runs' Resolve-ledger-bucket and "
         "Record-review-ledger steps on content-review-article.yml (a "
         "cancelled worker also lands here — that's the point)."
+    ),
+    "silent-signal": (
+        "signal not reported for {days} day(s) ({detail}) — the job that "
+        "observes it has not run, or ran without reaching its observation "
+        "step. Nothing else watches for a lane that simply stops firing, so "
+        "this is the only place it surfaces. Check the workflow's recent runs "
+        "and its `if:` gate (an unset repo variable coerces to 0, which makes "
+        "a bare `vars.X != '0'` mean OFF)."
     ),
     "capped-pages": (
         "attempt-capped pages: {detail} — each burned "
@@ -223,6 +268,11 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     to notice. But the count is carried into the detail so the alert points at
     the verifier's source routing rather than at S3 and API keys — the
     remediation for a demoted night is nothing like the one for a dead lane.
+
+    That inference needs a sample to stand on, so an all-inconclusive night
+    under MIN_INCONCLUSIVE_SAMPLE checks yields no observation rather than a
+    degraded one. `skipped` and `no_snapshots` are unaffected: a lane that
+    could not run says so directly and never depends on the sample size.
     """
     if report_path is None or not report_path.is_file():
         return None
@@ -241,6 +291,11 @@ def observe_reverify(report_path: Path | None) -> tuple[str, str] | None:
     if skipped:
         return "degraded", f"{n_due} entities due but run skipped ({skipped})"
     if n_checked and n_inconclusive == n_checked:
+        if n_checked < MIN_INCONCLUSIVE_SAMPLE:
+            log(f"all {n_checked} check(s) inconclusive, but that is below the "
+                f"{MIN_INCONCLUSIVE_SAMPLE}-check floor for a lane-wide verdict; "
+                f"no reverify observation")
+            return None
         detail = f"all {n_checked} checks inconclusive"
         if n_demoted:
             detail += f", {n_demoted} demoted for citing only our own docs"
@@ -346,6 +401,11 @@ def apply(state: dict, observations: dict[str, tuple[str, str]], today: date,
         sig = signals.setdefault(name, empty_signal())
         sig["status"] = status
         sig["detail"] = detail
+        # Stamped on every observation, degraded included: this tracks whether
+        # anyone is REPORTING, which is a different question from whether the
+        # thing reported is healthy.
+        sig["last_seen"] = today.isoformat()
+        sig.pop("silent", None)
         if status == "ok":
             sig["last_ok"] = today.isoformat()
             sig["degraded_since"] = None
@@ -356,6 +416,36 @@ def apply(state: dict, observations: dict[str, tuple[str, str]], today: date,
         else:  # unconfigured
             sig["degraded_since"] = None
 
+    # Silence pass: a signal nobody has reported within its cadence window is
+    # degraded on that basis alone. Runs before the alert pass so a newly
+    # silent signal alerts on the same schedule as any other.
+    for name, sig in sorted(signals.items()):
+        if name in observations:
+            continue
+        seen = parse_day(sig.get("last_seen"))
+        if seen is None:
+            # Pre-existing state from before last_seen existed, or a signal
+            # this run has never met. Start the clock rather than alarming on
+            # a gap we cannot actually measure.
+            sig["last_seen"] = today.isoformat()
+            continue
+        quiet = (today - seen).days
+        if quiet <= SIGNAL_MAX_SILENCE_DAYS.get(name, DEFAULT_MAX_SILENCE_DAYS):
+            continue
+        if sig.get("status") == "degraded":
+            # Already-degraded and now also unreported: keep the specific
+            # finding. It is more actionable than "nobody reported", it is
+            # already on the alert clock, and overwriting it would swap a
+            # named consequence for a generic one mid-episode. The failure
+            # this pass exists for is a signal sitting at OK that quietly
+            # stops reporting — green and dead is the invisible combination.
+            continue
+        sig["status"] = "degraded"
+        sig["detail"] = f"{name}: no observation in {quiet} day(s)"
+        sig["silent"] = True
+        if not sig.get("degraded_since"):
+            sig["degraded_since"] = today.isoformat()
+
     # Alert pass covers every degraded signal in state, observed this run or
     # not — a signal that stops being observed (e.g. selection died) keeps its
     # standing degradation visible.
@@ -365,7 +455,10 @@ def apply(state: dict, observations: dict[str, tuple[str, str]], today: date,
         since = parse_day(sig.get("degraded_since")) or today
         days = (today - since).days
         detail = sig.get("detail") or "no detail"
-        template = CONSEQUENCES.get(name, f"{name}: degraded for {{days}} day(s) ({{detail}})")
+        # A silent signal's consequence is about the missing REPORTER, not
+        # about whatever the signal normally measures.
+        key = "silent-signal" if sig.get("silent") else name
+        template = CONSEQUENCES.get(key, f"{name}: degraded for {{days}} day(s) ({{detail}})")
         line = template.format(days=days, detail=detail)
         warn(f"{name} degraded since {since.isoformat()} — {line}")
         if days < SIGNAL_THRESHOLDS.get(name, threshold_days):
@@ -638,6 +731,11 @@ def self_test() -> int:
     rv_nosnaps = {"meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0,
                            "n_checked": 0, "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0,
                            "skipped": "no_snapshots"}}
+    # The 2026-08-19 shape: a one-entity rotation chunk, demoted, which used to
+    # read as a lane-wide "no conclusive results".
+    rv_thin = {"meta": {"n_snapshots": 100, "n_entities": 54, "n_due": 1,
+                        "n_checked": 1, "n_stale": 0, "n_fresh": 0,
+                        "n_inconclusive": 1, "n_demoted": 1}}
 
     with tempfile.TemporaryDirectory() as tmp:
         d = Path(tmp)
@@ -661,6 +759,14 @@ def self_test() -> int:
               st["signals"]["reverify"]["status"] == "degraded"
               and "no_api_key" in st["signals"]["reverify"]["detail"])
 
+        # A night too short to generalize from is not evidence either way:
+        # the prior state (degraded, from rv_nokey above) stands untouched
+        # rather than being re-asserted or cleared by a sample of one.
+        prior = dict(st["signals"]["reverify"])
+        st, alert = run_once(d, "2026-09-06", reverify=rv_thin)
+        check("a 1-check all-inconclusive night yields no observation",
+              st["signals"]["reverify"] == prior)
+
         # An all-demoted night is still no drift detection, so it still
         # degrades — but the detail has to name demotion, or the alert sends
         # the on-call after S3 and API keys for a routing problem.
@@ -681,6 +787,10 @@ def self_test() -> int:
         st, alert = run_once(d, "2026-09-12", reverify=rv_nosnaps)
         check("empty claims index degrades with its own detail",
               "claims index" in st["signals"]["reverify"]["detail"])
+        # --- silence detection: the failure nothing else can see -------------
+        # A lane that stops firing reports nothing, and "no observation" means
+        # "prior state stands" — so a dead lane sits at whatever it last said,
+        # usually ok. These pin that silence eventually becomes the finding.
         st, alert = run_once(d, "2026-09-13", reverify=rv_ok)
         check("reverify recovery clears the clocks",
               st["signals"]["reverify"]["status"] == "ok"
@@ -754,6 +864,42 @@ def self_test() -> int:
         check("capped: empty list recovers the signal",
               st["signals"]["capped-pages"]["status"] == "ok"
               and st["signals"]["capped-pages"]["degraded_since"] is None)
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        st, _ = run_once(d, "2026-10-01", reverify=rv_ok)
+        check("an observation stamps last_seen",
+              st["signals"]["reverify"]["last_seen"] == "2026-10-01")
+        st, _ = run_once(d, "2026-10-03", console="ok")
+        check("a lane quiet inside its window stays ok",
+              st["signals"]["reverify"]["status"] == "ok")
+        st, _ = run_once(d, "2026-10-06", console="ok")
+        check("a lane silent past its window degrades",
+              st["signals"]["reverify"]["status"] == "degraded"
+              and st["signals"]["reverify"].get("silent") is True)
+        check("the silent detail says nobody reported, not that the thing broke",
+              "no observation in" in st["signals"]["reverify"]["detail"])
+        st, alert = run_once(d, "2026-10-16", console="ok")
+        check("a silent lane eventually alerts",
+              alert is not None and "signal not reported" in alert)
+        check("the silent alert names the gate bug that caused this before",
+              alert is not None and "vars.X" in alert)
+        st, _ = run_once(d, "2026-10-17", reverify=rv_ok)
+        check("a lane that reports again recovers",
+              st["signals"]["reverify"]["status"] == "ok"
+              and "silent" not in st["signals"]["reverify"])
+
+    with tempfile.TemporaryDirectory() as tmp:
+        d = Path(tmp)
+        (d / "state.json").write_text(json.dumps({
+            "version": 1, "updated": "2026-01-01",
+            "signals": {"reverify": {"status": "ok", "detail": "ok",
+                                     "last_ok": "2026-01-01",
+                                     "degraded_since": None, "last_alerted": None}}}))
+        st, alert = run_once(d, "2026-10-01", console="ok")
+        check("legacy state without last_seen starts the clock, never alarms",
+              st["signals"]["reverify"]["status"] == "ok"
+              and st["signals"]["reverify"]["last_seen"] == "2026-10-01")
 
     if failures:
         print(f"\n{len(failures)} failure(s)", file=sys.stderr)

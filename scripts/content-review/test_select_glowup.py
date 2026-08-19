@@ -18,6 +18,16 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SCRIPT = HERE / "select-glowup.py"
+
+
+def glowup_cap() -> int:
+    """GLOWUP_MAX_OPEN_PRS read from the script under test, so the boundary
+    cases below follow the knob instead of pinning a stale literal."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("select_glowup", SCRIPT)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return int(mod.GLOWUP_MAX_OPEN_PRS)
 TODAY = "2026-08-18"
 
 _failures: list[str] = []
@@ -166,15 +176,19 @@ def main() -> int:
             check([a["path"] for a in q["articles"]] == [C],
                   f"page with open {branch} excluded")
 
-        print("backlog cap: 5 open glow-up PRs halt the lane")
-        five = ",".join(f"content-review/glowup-docs-x{i}" for i in range(5))
-        q = run_select(repo, tiers, led6, "--count", "10", "--open-branches", five)
+        # Driven off the constant, not a literal: the cap is a tuning knob
+        # (5 -> 10 on 2026-08-19) and a hard-coded 5 here silently stops
+        # testing the boundary the moment someone moves it.
+        cap = glowup_cap()
+        print(f"backlog cap: {cap} open glow-up PRs halt the lane")
+        at_cap = ",".join(f"content-review/glowup-docs-x{i}" for i in range(cap))
+        q = run_select(repo, tiers, led6, "--count", "10", "--open-branches", at_cap)
         check(q["halted"] == "max_open_glowup_prs", f"halted (got {q['halted']})")
         check(q["articles"] == [], "halted queue is empty")
-        four = ",".join(f"content-review/glowup-docs-x{i}" for i in range(4))
-        q = run_select(repo, tiers, led6, "--count", "10", "--open-branches", four)
+        under = ",".join(f"content-review/glowup-docs-x{i}" for i in range(cap - 1))
+        q = run_select(repo, tiers, led6, "--count", "10", "--open-branches", under)
         check(q["halted"] is None and len(q["articles"]) == 2,
-              "under the cap the lane runs")
+              "one under the cap the lane runs")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0

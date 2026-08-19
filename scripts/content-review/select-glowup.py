@@ -84,9 +84,12 @@ LANE = Lane(
     has_output="has_articles",
 )
 
-# Backlog cap (Cam): at 5 open glow-up PRs the daily slot is skipped until
-# reviews drain the queue.
-GLOWUP_MAX_OPEN_PRS = 5
+# Backlog cap (Cam): at this many open glow-up PRs the day's slots are skipped
+# until reviews drain the queue. Raised 5 -> 10 alongside GLOWUP_COUNT 1 -> 2
+# (2026-08-19): the cap is review-latency backpressure, so it has to clear at
+# least count x expected-review-days or the lane spends most of its time
+# halted and the nominal rate is fiction.
+GLOWUP_MAX_OPEN_PRS = 10
 # A page glow-upped this recently is not re-selected: the point of the lane
 # is executing an accumulated backlog, and one just was.
 GLOWUP_COOLDOWN_DAYS = 90
@@ -107,6 +110,22 @@ def glowup_cooldown_active(entry: dict, today) -> bool:
         return False
     reviewed = parse_day(entry.get("reviewed_at"))
     return bool(reviewed and (today - reviewed).days < GLOWUP_COOLDOWN_DAYS)
+
+
+def findings_for(findings_dir: Path | None, slug: str) -> dict | None:
+    """This page's structured findings record, or None. Never raises: a
+    missing or malformed record just means the worker falls back to the
+    PR-body scrape, which is what it did before the record existed."""
+    if findings_dir is None or not slug:
+        return None
+    f = findings_dir / f"{slug}.json"
+    if not f.is_file():
+        return None
+    try:
+        rec = json.loads(f.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    return rec if isinstance(rec, dict) else None
 
 
 def score_entry(entry: dict, tier: int, visits: int | None, max_visits: int,
@@ -141,6 +160,9 @@ def open_branches(args) -> set[str] | None:
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     p.add_argument("--count", type=int, default=1)
+    p.add_argument("--findings-dir", default="",
+                   help="synced findings/ prefix; each selected article carries "
+                        "its record into the unprivileged worker")
     p.add_argument("--out", help="Queue JSON output path")
     p.add_argument("--traffic-file", help="S3-fetched traffic snapshot (CSV or JSON)")
     p.add_argument("--tiers", default=str(_select.DEFAULT_TIERS))
@@ -159,6 +181,7 @@ def main() -> int:
     repo = Path(args.repo_root)
     today = parse_day(args.today) or datetime.now(timezone.utc).date()
     tier_rules = _select.load_tiers(Path(args.tiers))
+    findings_dir = Path(args.findings_dir) if args.findings_dir else None
     ledger = load_ledger(Path(args.ledger_dir), LANE)
 
     all_paths = sorted(
@@ -243,6 +266,13 @@ def main() -> int:
             # Carried on the queue because the worker has no ledger cache —
             # build-glowup-backlog.py reads it from here.
             "source_pr_number": int(entry.get("pr_number") or 0) or None,
+            # The structured findings record rides the queue for the same
+            # reason the markers above do: build-glowup-backlog.py runs in the
+            # UNPRIVILEGED review job, which has no AWS credentials and so
+            # cannot read the findings/ prefix itself. The dispatcher can, so
+            # it hands the record over rather than leaving the worker to scrape
+            # the PR body (see record-page-findings.py).
+            "findings_record": findings_for(findings_dir, _select.slugify(path)),
             "score": score,
         })
 

@@ -10,10 +10,8 @@ menu:
         weight: 1
         identifier: support-faq-infrastructure
 aliases:
-    - /docs/support/faq/infrastructure/
     - /docs/reference/faq/
     - /docs/troubleshooting/faq/
-    - /docs/support/faq/
     - /docs/iac/support/faq/
     - /docs/iac/support/version-support/
     - /docs/iac/faq/
@@ -107,9 +105,8 @@ While we do not formally designate older versions for long term support, we are 
 
 **Never be 2 major versions behind, as it is inadvisable to jump a major version due to the number of potential breaking changes across the major versions.** Major versions typically include significant changes which may require some additional migration steps. Each major version of the provider includes migration logic to smooth the upgrade from the immediately previous major version, but these migrations do not always work across multiple major versions. Being two or more major versions behind can accumulate a significant number of changes and may require a multi-step upgrade, making the upgrade process more complex, time-consuming, and prone to errors.
 
-## More FAQ
+## Learn more
 
 - [Pulumi ESC FAQ](/docs/support/faq/secrets-config/)
-- [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/support/faq/scim/)
-- [Pulumi Policies FAQ](/docs/support/faq/policies)
+- [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies/)

@@ -30,8 +30,9 @@ the index), a wrong key is not.
 `volatile` marks the claim types worth cheap nightly re-verification straight
 from the index — assertions whose truth drifts with the outside world even
 when the page doesn't change: version pins, prices/rates/limits, and
-pricing/limit-flavored entity specs. A `numerical` claim about the page's own
-example or tutorial output is excluded: see SELF_DESCRIBING_RE.
+pricing/limit-flavored entity specs. A `numerical` claim whose subject is the
+page's own table, example, or tutorial output is excluded: see
+SELF_DESCRIBING_RE.
 
 No LLM involvement: derivation is pure text normalization, so keys are
 reproducible from the claim record alone. Run the smoke checks with
@@ -53,10 +54,35 @@ KEYED_TYPES = {"version", "numerical", "api-surface", "entity-spec"}
 # "runners run in us-west-2" is stable, "feature Z is on the Enterprise plan"
 # is not.
 ALWAYS_VOLATILE_TYPES = {"version", "numerical"}
+# Types the self-describing escape below applies to — `numerical` only, and
+# deliberately not `version`.
+#
+# The live index carries `version` entities that are plainly not version pins
+# (version/running-git is a `git tag v1.0.0` sequence, version/error-tag is an
+# error message, version/range-matches is a range-syntax explainer), and they
+# do burn nightly calls for nothing. But they are MIS-TYPED by the extractor,
+# not self-describing, and the self-describing regex is the wrong instrument:
+# tuned to catch them it also drops "the Go example imports .../sdk/v7/..."
+# and "requires applying a semver Git tag (for example, v1.2.3)", where the
+# pinned major is a real outside-world fact. Keeping a stray example count in
+# the pool costs one call and a demoted verdict; dropping a real pin means
+# never checking it again — the same asymmetry that governs the veto below.
+# Fixing the `version` type belongs in claim extraction, where the subject is
+# still available (`source_hint` is empty on every version claim in the index,
+# so there is nothing to discriminate on by the time this module sees them).
+SELF_DESCRIBING_ESCAPE_TYPES = {"numerical"}
+# `plans?` carries a negative lookahead because Pulumi's own CLI vocabulary
+# collides with the pricing noun: "`pulumi up` plans to create 2 resources" is
+# a preview transcript, not an edition. Unguarded, that verb sense matched
+# here and vetoed the self-describing exclusion below — which, together with
+# an `output <verb>` list that missed "output has the value", is why the
+# exclusion shipped in #20851 excluded nothing at all from the live index.
+# The noun sense ("on the Team plan", "the Enterprise plan") is never followed
+# by an infinitive, so the lookahead separates them without a parser.
 PRICING_LIMIT_RE = re.compile(
     r"\b(?:price|prices|pricing|priced|cost|costs|fee|fees|billed|billing|"
     r"per[- ](?:month|year|hour|minute|user|seat|resource|credit)|"
-    r"tier|tiers|plan|plans|edition|editions|subscription|"
+    r"tier|tiers|plans?(?!\s+to\b)|edition|editions|subscription|"
     r"limit|limits|limited|quota|quotas|cap|capped|maximum|minimum|"
     r"free|paid|enterprise|business[- ]critical)\b",
     re.IGNORECASE,
@@ -67,9 +93,9 @@ PRICING_LIMIT_RE = re.compile(
 # preview output shows 2 changes". The figure is a property of the prose, not
 # of the world: it can only change when the page changes, so the nightly lane
 # can never find drift in it, and the verifier has nothing to check it against
-# except the page it came from (which is what makes those checks circular —
-# see reverify-claims.py's own-corpus demotion). Excluded from `volatile`;
-# still keyed, still indexed, still re-checked whenever the page is reviewed.
+# except the page it came from (which is what makes those checks circular — see
+# reverify-claims.py's own-corpus demotion). Excluded from `volatile`; still
+# keyed, still indexed, still re-checked whenever the page is reviewed.
 #
 # PRICING_LIMIT_RE vetoes the exclusion, because the two overlap on the one
 # phrasing where this rule would otherwise do damage: "the example stack costs
@@ -77,12 +103,25 @@ PRICING_LIMIT_RE = re.compile(
 # price that drifts on its own. Keeping a stray example count in the nightly
 # pool costs one verifier call and a demoted verdict; dropping a real price
 # means never checking it again.
+#
+# The pattern matches transcript-shaped phrasings — the ones whose subject is
+# a sample the page printed. It deliberately does NOT match on a page-artifact
+# subject ("the table", "this page"), because that does not separate a
+# self-describing claim from a real one: "the table on this page contains
+# exactly 115 policy rows" and "the CIS 8.1 pack contains exactly 115
+# policies" are the same fact, and the policy-pack counts genuinely drift. The
+# self-test below pins that decision ("policy-pack count stays volatile").
+#
+# The `output <verb>` list is broader than it was: the live index carried
+# "the `storageAccountName` output has the value ..." past an alternation
+# that listed only shows/displays/lists/reports/contains/includes.
 SELF_DESCRIBING_RE = re.compile(
     r"\b(?:examples?|samples?|tutorials?|walkthroughs?|screenshots?|"
     r"meta[- ]description|"
     r"(?:preview|update|command|terminal|console)\s+output|"
-    r"output\s+(?:shows|displays|lists|reports|contains|includes)|"
-    r"shown\s+(?:above|below))\b",
+    r"output\s+(?:shows|displays|lists|reports|contains|includes|has|have|"
+    r"is\s+set|reads)|"
+    r"(?:shown|listed|described|pictured)\s+(?:above|below))\b",
     re.IGNORECASE,
 )
 
@@ -172,7 +211,7 @@ def derive(claim: dict) -> tuple[str | None, bool]:
     volatile = ctype in ALWAYS_VOLATILE_TYPES or (
         ctype == "entity-spec" and bool(PRICING_LIMIT_RE.search(text))
     )
-    if (ctype == "numerical" and SELF_DESCRIBING_RE.search(text)
+    if (ctype in SELF_DESCRIBING_ESCAPE_TYPES and SELF_DESCRIBING_RE.search(text)
             and not PRICING_LIMIT_RE.search(text)):
         volatile = False
 
@@ -301,6 +340,27 @@ def self_test() -> int:
                  "The example uses 2 of the 10 seats on the Team plan."):
         k, v = derive({"type": "numerical", "text": text})
         check(f"pricing vetoes the exclusion: {text[:34]}...", v is True)
+
+    # ...but the VERB "plans" must not trigger that veto. `pulumi up plans to
+    # create N resources` is a preview transcript, and reading it as a pricing
+    # noun kept every such claim in the nightly pool (live index, 2026-08-19:
+    # numerical/example-preview-output-pulumi-plans).
+    check("the verb 'plans to' is not a pricing veto",
+          PRICING_LIMIT_RE.search("`pulumi up` plans to create 2 resources") is None)
+    check("the noun 'plan' still vetoes",
+          PRICING_LIMIT_RE.search("Audit logs are on the Enterprise plan.") is not None)
+    _, v = derive({"type": "numerical",
+                   "text": "In the example preview output, `pulumi up` plans to create 2 resources."})
+    check("example preview output is not volatile", v is False)
+
+    # The `output <verb>` alternation has to cover the copulas, not just the
+    # reporting verbs — this phrasing sat in the live index as volatile.
+    _, v = derive({"type": "numerical",
+                   "text": 'After the update, the `storageAccountName` output has the value "sa8deefa78".'})
+    check("'output has the value' is not volatile", v is False)
+    _, v = derive({"type": "numerical",
+                   "text": 'After the update completes, the `bucketName` output is set to "gs://b-daa12be".'})
+    check("'output is set to' is not volatile", v is False)
 
     # is_volatile() re-derives from a persisted record, ignoring its stored flag.
     check("is_volatile re-derives from type/text",
