@@ -1,3 +1,9 @@
+# NOTE: `make lint` and `make format` run prettier through
+# scripts/prettier.sh, which unions this file with .gitignore. A runtime
+# artifact only needs a .gitignore entry -- it does not have to be repeated
+# here. The entries below predate that and are kept as-is so `prettier` run
+# directly (or through lint-staged) behaves the same way.
+
 _vendor
 node_modules
 /resources
