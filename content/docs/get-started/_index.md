@@ -63,16 +63,6 @@ Pulumi IaC is free, [open source](https://github.com/pulumi/pulumi), and optiona
     </div>
 </section>
 
-## Or start with a coding agent
-
-Prefer to have your agent do the setup? Paste this prompt into Claude Code, Codex, Cursor, GitHub Copilot, or whichever agent you already use, and it will install the CLI, help you pick a cloud, and deploy your first stack with you.
-
-{{< copy-prompt track="docs-copy-onboarding-prompt" >}}
-Fetch https://www.pulumi.com/onboard.md and follow its instructions to get me started with Pulumi.
-{{< /copy-prompt >}}
-
-To go further with agents, see [Agent Skills](/docs/ai/skills/), the [Pulumi MCP server](/docs/ai/mcp-server/), and [Pulumi Neo](/docs/ai/neo/), Pulumi's purpose-built infrastructure agent.
-
 ## Learn more
 
 The following sections are also useful when first learning how to use Pulumi:
