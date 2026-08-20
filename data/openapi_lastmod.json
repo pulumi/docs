@@ -1406,7 +1406,8 @@
       "hash": "c78fe2b445e29e2919070d99938c280ed22b10f046633f8f3e53e15ebdbf0045"
     },
     "GraphPageInfo": {
-      "hash": "722fa9fa541241c88cba47f34272abe90beaaacf7b076d17fcb3b8c683c063f6"
+      "hash": "b94db48f9e6d2270b099487fed14fb1610d399a583ffc36cfc21edac10fd96f4",
+      "lastmod": "2026-08-20"
     },
     "GraphPath": {
       "hash": "bd51d5c2d3e46711bfd43ba1a18b213b7c234935cf7b8bb74c3b6acfc831966c"
@@ -1418,7 +1419,8 @@
       "hash": "24d0a6a3942efa7b2e3b25500c0e0a8bceb6bf727cbbe7d708033f910057271e"
     },
     "GraphQueryMeta": {
-      "hash": "1ce63011adce8cce6b936f610ef07a75b10059919933d806eb8537d384a49c70"
+      "hash": "75c4e4cea24570f4b92894df9547c5140984677fef7750d032efcb22701bd4d2",
+      "lastmod": "2026-08-20"
     },
     "GraphQueryPage": {
       "hash": "ae755999cf5423ebec00be4160241f1efb4198f7c62e9837e7f2dd218d0221a5"
@@ -1427,7 +1429,8 @@
       "hash": "aaccf7858bf2e6c86ec43ad1436dc29eede92f0547af430b836659514022e8e8"
     },
     "GraphQueryResponse": {
-      "hash": "674a9ebb8882ed320dbeec45be72426b0960853b427dfece61333e59f68a59c5"
+      "hash": "064f8908649da1540b9da4db49cd441fcca1e7caacb2fa2ca4c4b2e59208ce3c",
+      "lastmod": "2026-08-20"
     },
     "GraphQueryReturn": {
       "hash": "8c4f45c837c0eecb76b1bd97d2c481b01aaa27f484900d108e4491dbf002902d"
