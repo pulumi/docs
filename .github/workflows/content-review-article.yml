@@ -632,11 +632,18 @@ jobs:
               violation and re-run until it passes.
             - Verdict sentinel: `{"verdict": "glowup", "fixes": <executed
               count>, "skipped_findings": <declined count>, "clarity_flag":
-              <bool>, "retirement": false}` — no `applied[]` needed; the
-              glow-up gate replaces the per-hunk check. State `clarity_flag`
+              <bool>, "executed_ids": [...], "declined_ids": [...],
+              "retirement": false}` — no `applied[]` needed; the glow-up
+              gate replaces the per-hunk check. State `clarity_flag`
               explicitly: `false` once you have resolved the page's
-              readthrough reconception, `true` while one still stands.
-              Omitting it carries the page's existing flag forward.
+              readthrough reconception, `true` while one still stands;
+              omitting it carries the page's existing flag forward.
+              `executed_ids`/`declined_ids` are the `id` values from
+              `.glowup-backlog.json` for the rows you put in the Backlog
+              executed and Backlog declined tables — every banked id in
+              exactly one list. Without them the findings record would file
+              the work you just did as still outstanding, so it records
+              nothing for the run instead.
             - Your PR will NOT auto-merge: it opens for human review (the
               sweep assigns reviewers). Write the body tables for that
               reader.
@@ -1150,6 +1157,7 @@ jobs:
             --vale-findings .review-snapshot/.vale-findings.json \
             --readthrough .review-snapshot/.readthrough-findings.json \
             --frontmatter .review-snapshot/.frontmatter-validation.json \
+            --backlog .review-snapshot/.glowup-backlog.json \
             --out .page-findings.json \
             --uri "${{ steps.ledger-bucket.outputs.findings_uri }}"
 
