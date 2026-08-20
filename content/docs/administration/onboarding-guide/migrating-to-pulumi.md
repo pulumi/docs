@@ -11,7 +11,7 @@ menu:
         parent: pulumi-onboarding-guide
         identifier: migrating-to-pulumi
 ---
-Successfully migrating to Pulumi requires strategic decisions about your migration approach. Focus on building momentum with early wins while establishing practices that will scale with your organization.
+Successfully migrating to Pulumi requires strategic decisions on two fronts: how you bring existing infrastructure under Pulumi's management, and how you run the migration itself. This page covers both — the approaches available for migrating existing infrastructure, then the practices that build momentum with early wins and scale with your organization.
 
 ## Migrating existing infrastructure
 
