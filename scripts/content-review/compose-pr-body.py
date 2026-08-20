@@ -506,9 +506,33 @@ def compose_glowup(queue: dict, backlog: dict | None, verified, vale,
         executed.append("| --- | --- | --- |")
         for b in banked:
             text = str(b.get("text", "")).replace("|", "\\|")
-            executed.append(f"| {text} | #{b.get('source_pr')} | <TODO> |")
+            src = f"#{b.get('source_pr')}" if b.get("source_pr") else "findings record"
+            # A previously-declined row is real debt, but the reviewer needs to
+            # see that a glow-up already turned it down once — otherwise a
+            # decline loop looks like fresh work every cycle.
+            if b.get("source") == "glowup-declined":
+                src += " (declined)"
+            executed.append(f"| {text} | {src} | <TODO> |")
+    elif backlog and backlog.get("degraded"):
+        # The counters that selected this page could not be backed by anything.
+        # Saying "taxonomy-only glow-up" here — as this did before — reads as
+        # "the page had nothing outstanding", which is the opposite of true.
+        n = int((backlog or {}).get("skipped_findings") or 0)
+        flag = " and a clarity flag" if (backlog or {}).get("clarity_flag") else ""
+        why = "; ".join(notes) if notes else "no prior review PR could be read"
+        executed.append("> [!WARNING]")
+        executed.append(f"> **Backlog recovery failed.** The ledger records {n} "
+                        f"deferred finding(s){flag} for this page, but none could be "
+                        f"recovered ({why}). This run is a taxonomy sweep only. The "
+                        "backlog is preserved and the page stays eligible for a "
+                        "later glow-up — do not treat this as a clean page.")
+        heads = (backlog.get("recovery") or {}).get("heads_queried") or []
+        if heads:
+            executed.append("")
+            executed.append("_Heads queried: "
+                            + ", ".join(f"`{h}`" for h in heads) + "._")
     else:
-        executed.append("_No banked findings reachable"
+        executed.append("_No banked backlog for this page"
                         + (f" ({'; '.join(notes)})" if notes else "")
                         + " — taxonomy-only glow-up._")
 

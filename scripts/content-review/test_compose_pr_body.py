@@ -245,9 +245,49 @@ check("banked findings pre-stubbed with source PR",
       "needs interpretation" in gout and "#123" in gout)
 check("taxonomy sweep stubbed per category",
       all(f"**{cat}**" in gout for cat in c.GLOWUP_TAXONOMY))
-gempty = c.compose_glowup(QUEUE, {"banked": [], "notes": ["no prior review PRs reachable; run the taxonomy-only sweep"]},
+gempty = c.compose_glowup(QUEUE, {"banked": [], "degraded": False,
+                                  "notes": ["no review PR has ever used "
+                                            "content-review/docs-x; run the "
+                                            "taxonomy-only sweep"]},
                           None, None, None, None)
-check("empty backlog degrades to taxonomy-only note", "taxonomy-only" in gempty)
+check("a genuinely empty backlog still reads as taxonomy-only",
+      "taxonomy-only" in gempty and "WARNING" not in gempty)
+
+# #20984 shipped "No banked findings reachable ... taxonomy-only glow-up" for a
+# page whose ledger recorded 17 deferred findings — which reads as "this page
+# had nothing outstanding", the opposite of true.
+gdeg = c.compose_glowup(QUEUE, {
+    "banked": [], "degraded": True, "skipped_findings": 17, "clarity_flag": True,
+    "recovery": {"state": "no_prior_prs",
+                 "heads_queried": ["content-review/docs-x",
+                                   "content-review/retire-docs-x",
+                                   "content-review/glowup-docs-x"]},
+    "notes": ["no review PR has ever used content-review/docs-x; "
+              "run the taxonomy-only sweep"]}, None, None, None, None)
+check("#20984: a failed recovery renders a warning, not 'nothing to do'",
+      "[!WARNING]" in gdeg and "Backlog recovery failed" in gdeg)
+check("#20984: the warning names the count the ledger recorded",
+      "17 deferred finding(s)" in gdeg and "clarity flag" in gdeg)
+check("#20984: it tells the reader not to read this as a clean page",
+      "do not treat this as a clean page" in gdeg)
+check("#20984: the old misleading sentence is gone",
+      "No banked findings reachable" not in gdeg)
+check("a failed recovery shows its work",
+      all(h in gdeg for h in ("content-review/docs-x",
+                              "content-review/glowup-docs-x")))
+
+gdecl = c.compose_glowup(QUEUE, {"banked": [
+    {"id": "pr20984-backlog-1", "section": "Backlog declined", "source_pr": 20984,
+     "source": "glowup-declined", "declined_by_pr": 20984,
+     "text": "**Claim (c9)** — needs an SME"}], "degraded": False, "notes": []},
+    None, None, None, None)
+check("previously-declined rows are visibly marked as such",
+      "#20984 (declined)" in gdecl and "needs an SME" in gdecl)
+check("a record-sourced row with no PR does not render '#None'",
+      "#None" not in c.compose_glowup(QUEUE, {"banked": [
+          {"id": "findings-f2", "section": "Findings not applied", "source_pr": None,
+           "source": "findings-record", "text": "Vale filler (L48)"}],
+          "degraded": False, "notes": []}, None, None, None, None))
 
 _rr_spec = importlib.util.spec_from_file_location(
     "record_review", Path(__file__).resolve().parent / "record-review.py")

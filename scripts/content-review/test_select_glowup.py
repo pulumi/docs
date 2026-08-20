@@ -149,6 +149,57 @@ def main() -> int:
         paths = [a["path"] for a in q["articles"]]
         check(paths == [C], f"only the eligible page selected (got {paths})")
 
+        print("a degraded glow-up does not start the cooldown (#20984)")
+        # The backlog never reached the model, so nothing was executed and
+        # nothing declined; record-review carried the banked count forward and
+        # flagged it. The page is still owed its rehab.
+        led_deg = tmp / "ledger-glowup-degraded"
+        write_ledger(led_deg, B, skipped_findings=17, clarity_flag=True,
+                     status="glowup", reviewed_at="2026-08-10",
+                     fixes=0, glowup_degraded=True)
+        q = run_select(repo, tiers, led_deg, "--count", "10")
+        check([a["path"] for a in q["articles"]] == [B],
+              "degraded glow-up stays selectable inside the cooldown window")
+
+        print("the degraded exemption is bounded, not an unbounded re-select loop")
+        led_cap = tmp / "ledger-glowup-degraded-capped"
+        write_ledger(led_cap, B, skipped_findings=17, clarity_flag=True,
+                     status="glowup", reviewed_at="2026-08-10",
+                     fixes=0, glowup_degraded=True, glowup_degraded_runs=2)
+        check(run_select(repo, tiers, led_cap, "--count", "10")["articles"] == [],
+              "past the cap a degraded page serves the normal cooldown")
+        led_under = tmp / "ledger-glowup-degraded-under-cap"
+        write_ledger(led_under, B, skipped_findings=17, clarity_flag=True,
+                     status="glowup", reviewed_at="2026-08-10",
+                     fixes=0, glowup_degraded=True, glowup_degraded_runs=1)
+        check([a["path"] for a in
+               run_select(repo, tiers, led_under, "--count", "10")["articles"]] == [B],
+              "under the cap it is still exempt")
+
+        print("the durable PR pointer reaches the worker when pr_number is 0")
+        led_ptr = tmp / "ledger-last-pr"
+        write_ledger(led_ptr, A, skipped_findings=4, pr_number=0, last_pr_number=19885)
+        q = run_select(repo, tiers, led_ptr, "--count", "10")
+        check(q["articles"][0]["source_pr_number"] == 19885,
+              "source_pr_number falls back to last_pr_number")
+        led_both = tmp / "ledger-both-prs"
+        write_ledger(led_both, A, skipped_findings=4, pr_number=222, last_pr_number=111)
+        check(run_select(repo, tiers, led_both, "--count", "10")
+              ["articles"][0]["source_pr_number"] == 222,
+              "this review's own PR still wins when it opened one")
+
+        print("a glow-up that did work still starts the cooldown")
+        led_did = tmp / "ledger-glowup-executed"
+        write_ledger(led_did, B, skipped_findings=1, status="glowup",
+                     reviewed_at="2026-08-10", fixes=4, glowup_degraded=False)
+        check(run_select(repo, tiers, led_did, "--count", "10")["articles"] == [],
+              "executed glow-up excluded by the cooldown")
+        led_dec = tmp / "ledger-glowup-declined"
+        write_ledger(led_dec, B, skipped_findings=3, status="glowup",
+                     reviewed_at="2026-08-10", fixes=0, glowup_degraded=False)
+        check(run_select(repo, tiers, led_dec, "--count", "10")["articles"] == [],
+              "glow-up that declined everything is real work, still cooled down")
+
         print("cooldown expires: an old glowup outcome is selectable again")
         led4 = tmp / "ledger-cooldown-old"
         write_ledger(led4, B, skipped_findings=4, status="glowup",

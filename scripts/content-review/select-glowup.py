@@ -93,6 +93,15 @@ GLOWUP_MAX_OPEN_PRS = 10
 # A page glow-upped this recently is not re-selected: the point of the lane
 # is executing an accumulated backlog, and one just was.
 GLOWUP_COOLDOWN_DAYS = 90
+# ...but a page whose backlog recovery keeps failing must not re-qualify
+# forever. A degraded glow-up executes nothing, re-sets `glowup_degraded`, and
+# would re-qualify on the very next run — an unbounded loop that burns a slot a
+# day and eventually halts the whole lane on GLOWUP_MAX_OPEN_PRS, which is
+# backpressure aimed at the wrong thing. `attempts` cannot guard it: the glowup
+# status path resets it to 0. After this many consecutive degraded runs the
+# page serves the normal cooldown, by which time either a fix-lane review has
+# banked something recoverable or the page genuinely has nothing to recover.
+GLOWUP_DEGRADED_ATTEMPT_CAP = 2
 # Additive signal boosts, in units of weighted findings (the base term is
 # skipped_findings, typically 1-6, times a tier weight <= 1).
 CLARITY_BOOST = 5.0
@@ -107,6 +116,17 @@ def low_ctr_flagged(entry: dict) -> bool:
 
 def glowup_cooldown_active(entry: dict, today) -> bool:
     if entry.get("status") != "glowup":
+        return False
+    # A glow-up whose backlog never reached it executed nothing and declined
+    # nothing, so the page is still owed its rehab and must stay selectable.
+    # record-review.py sets this flag precisely because the counters alone
+    # cannot say it: a degraded run CARRIES the prior banked count forward, so
+    # `skipped_findings: 17` reads identically to a run that declined 17. #20984.
+    # Bounded, though: past the cap the page serves the normal cooldown rather
+    # than looping on a recovery that keeps failing for the same reason.
+    if (entry.get("glowup_degraded")
+            and int(entry.get("glowup_degraded_runs") or 0)
+            < GLOWUP_DEGRADED_ATTEMPT_CAP):
         return False
     reviewed = parse_day(entry.get("reviewed_at"))
     return bool(reviewed and (today - reviewed).days < GLOWUP_COOLDOWN_DAYS)
@@ -269,7 +289,13 @@ def main() -> int:
             # The banked-findings source: the ledger entry's latest review PR.
             # Carried on the queue because the worker has no ledger cache —
             # build-glowup-backlog.py reads it from here.
-            "source_pr_number": int(entry.get("pr_number") or 0) or None,
+            # `pr_number` is only set when the LATEST review opened a PR, and a
+            # review that banks findings without applying any opens none — so
+            # falling back to the durable pointer is the whole point of it
+            # existing. Without this the worker is handed None for exactly the
+            # pages with the largest backlogs. #20984.
+            "source_pr_number": int(entry.get("pr_number")
+                                    or entry.get("last_pr_number") or 0) or None,
             # The structured findings record rides the queue for the same
             # reason the markers above do: build-glowup-backlog.py runs in the
             # UNPRIVILEGED review job, which has no AWS credentials and so
