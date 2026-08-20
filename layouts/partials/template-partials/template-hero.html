@@ -48,6 +48,12 @@
     - cta_tertiary_text: Optional tertiary CTA button text.
     - cta_tertiary_link: Optional tertiary CTA button link.
 
+    Parameters — CTA cards (see partials/hero-ctas.html):
+    - cta_card_label: Optional. Groups the buttons above into a bordered card labeled with this text.
+    - cta_agent_prompt: Optional. Adds a second card holding a button that copies this text to the clipboard.
+    - cta_agent_prompt_label: Optional short text shown on that button instead of the full prompt.
+    - cta_agent_label: Optional label for that second card. Defaults to "For agents".
+
     Right-slot precedence: code_snippets > video_youtube_id > image.
 */}}
 
@@ -62,6 +68,10 @@
 {{ $ctaSecondaryLink := .cta_secondary_link | default site.Params.cta.secondary.href }}
 {{ $ctaTertiaryText := .cta_tertiary_text }}
 {{ $ctaTertiaryLink := .cta_tertiary_link }}
+{{ $ctaCardLabel := .cta_card_label }}
+{{ $ctaAgentLabel := .cta_agent_label }}
+{{ $ctaAgentPrompt := .cta_agent_prompt }}
+{{ $ctaAgentPromptLabel := .cta_agent_prompt_label }}
 {{ $videoYouTubeId := .video_youtube_id }}
 {{ $videoTitle := .video_title | default "Watch video" }}
 {{ $image := .image }}
@@ -102,7 +112,13 @@
 {{ if eq $layout "split" }}
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col xl:flex-row items-center justify-between gap-12">
-        <div class="xl:w-1/2 flex flex-col items-start">
+        {{/* w-full below xl: without it the column is content-sized, so a wide
+             nowrap child (e.g. the agent prompt) widens it past the viewport.
+             min-w-0 at xl: the columns' percentage bases plus the gap overflow the
+             line, so both shrink — and without this the column's min-content size
+             props it back up, making its width depend on its text. That reflows
+             the whole row whenever child text changes. */}}
+        <div class="w-full min-w-0 xl:w-[55%] flex flex-col items-start">
             {{ if or $badgeText $badgeHighlightText }}
             <a href="{{ $badgeLink }}" class="font-overline flex-wrap inline-flex items-center gap-1 border border-violet-300 rounded-full py-3 px-5 no-underline hover:border-violet-500 transition-colors">
                 <span class="text-violet-primary whitespace-nowrap">{{ $badgeHighlightText }}</span>
@@ -146,25 +162,16 @@
             {{ if $description }}
             <p class="product-hero-description mb-10 text-left">{{ $description | markdownify }}</p>
             {{ end }}
-            {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
-            <div class="flex flex-col sm:flex-row flex-wrap items-start gap-4 w-full">
-                {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}"{{ partial "external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full sm:w-auto" data-role="cta-get-started">
-                    {{ $ctaPrimaryText }}
-                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
-                </a>
-                {{ end }}
-                {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto" data-role="cta-secondary">{{ $ctaSecondaryText }}</a>
-                {{ end }}
-                {{ if $ctaTertiaryText }}
-                <a href="{{ $ctaTertiaryLink }}"{{ partial "external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full sm:w-auto">{{ $ctaTertiaryText }}</a>
-                {{ end }}
-            </div>
-            {{ end }}
+            {{ partial "hero-ctas.html" (dict
+                "layout" "split"
+                "cta_primary_text" $ctaPrimaryText "cta_primary_link" $ctaPrimaryLink
+                "cta_secondary_text" $ctaSecondaryText "cta_secondary_link" $ctaSecondaryLink
+                "cta_tertiary_text" $ctaTertiaryText "cta_tertiary_link" $ctaTertiaryLink
+                "cta_card_label" $ctaCardLabel "cta_agent_label" $ctaAgentLabel "cta_agent_prompt" $ctaAgentPrompt
+                "cta_agent_prompt_label" $ctaAgentPromptLabel) }}
         </div>
         {{ if $codeSnippets }}
-        <div class="xl:w-1/2 w-full flex justify-end">
+        <div class="xl:w-[40%] w-full flex justify-end">
             {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>
                 <div class="hero-code-block"{{ with $blockOffsetStyle }} style="{{ . | safeCSS }}"{{ end }}>
@@ -232,22 +239,13 @@
             {{ if $description }}
             <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>
             {{ end }}
-            {{ if or $ctaPrimaryText $ctaSecondaryText $ctaTertiaryText }}
-            <div class="flex flex-col lg:flex-row flex-wrap items-center justify-center gap-4 w-full">
-                {{ if $ctaPrimaryText }}
-                <a href="{{ $ctaPrimaryLink }}"{{ partial "external-link-attrs.html" $ctaPrimaryLink | safeHTMLAttr }} class="btn btn-primary btn-xl w-full lg:w-auto" data-role="cta-get-started">
-                    {{ $ctaPrimaryText }}
-                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
-                </a>
-                {{ end }}
-                {{ if $ctaSecondaryText }}
-                <a href="{{ $ctaSecondaryLink }}"{{ partial "external-link-attrs.html" $ctaSecondaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto" data-role="cta-secondary">{{ $ctaSecondaryText }}</a>
-                {{ end }}
-                {{ if $ctaTertiaryText }}
-                <a href="{{ $ctaTertiaryLink }}"{{ partial "external-link-attrs.html" $ctaTertiaryLink | safeHTMLAttr }} class="btn btn-outline btn-xl w-full lg:w-auto">{{ $ctaTertiaryText }}</a>
-                {{ end }}
-            </div>
-            {{ end }}
+            {{ partial "hero-ctas.html" (dict
+                "layout" "centered"
+                "cta_primary_text" $ctaPrimaryText "cta_primary_link" $ctaPrimaryLink
+                "cta_secondary_text" $ctaSecondaryText "cta_secondary_link" $ctaSecondaryLink
+                "cta_tertiary_text" $ctaTertiaryText "cta_tertiary_link" $ctaTertiaryLink
+                "cta_card_label" $ctaCardLabel "cta_agent_label" $ctaAgentLabel "cta_agent_prompt" $ctaAgentPrompt
+                "cta_agent_prompt_label" $ctaAgentPromptLabel) }}
         </div>
         {{ if $codeSnippets }}
         <div class="product-hero-visual flex justify-center w-full">
