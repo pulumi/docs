@@ -123,7 +123,7 @@
     }
 
     .product-hero-title-secondary {
-        @apply block text-black max-w-lg;
+        @apply block text-black;
     }
 
     .product-hero-title {
@@ -137,86 +137,6 @@
 
     .product-hero-visual {
         @apply w-full;
-    }
-
-    // CTA row (partials/hero-ctas.html). Plain full-width wrapper by default;
-    // --split sets the "for humans" and "for agents" cards side by side above
-    // mobile. The humans card keeps its natural width so its buttons never wrap;
-    // the agents card takes whatever is left and truncates its prompt into it.
-    .hero-ctas {
-        @apply w-full;
-
-        &--split {
-            @apply flex flex-col gap-4;
-
-            // sm → md: the cards have stacked but the buttons are already in a
-            // row, so the humans card spans the full width while its buttons hug
-            // their text. Stretch them to fill it. Below sm they are w-full
-            // already; from md the card is shrink-0 and sized to them.
-            @media (min-width: 640px) and (max-width: 767.98px) {
-                > .hero-cta-group:first-child .btn {
-                    @apply flex-1;
-                }
-            }
-
-            @include screen-md {
-                @apply flex-row items-stretch;
-
-                > .hero-cta-group:first-child {
-                    @apply shrink-0;
-                }
-
-                // The agents card hugs its button too, rather than growing into
-                // the leftover space — the button holds a short label now.
-                > .hero-cta-group:last-child {
-                    @apply shrink-0;
-                }
-            }
-        }
-    }
-
-    // Bordered card with its label straddling the top border. The label's own
-    // white background is what breaks the border line on either side of it, so
-    // this only reads correctly on a white section background.
-    .hero-cta-card {
-        @apply relative rounded-lg border border-violet-300 p-3;
-    }
-
-    .hero-cta-card-label {
-        @apply font-overline-sm absolute -top-2 left-4 px-2 bg-white text-violet-primary;
-    }
-
-    // The agent prompt button: copy icon plus a short label. The prompt itself
-    // lives in the tooltip and the clipboard, not here.
-    //
-    // The min-width holds the button steady when the label swaps to the copied
-    // state, which is otherwise narrower; sized just past the wider of the two
-    // (10.25rem) so neither reflows. Revisit it if either label changes.
-    .hero-cta-copy {
-        @apply w-full min-w-[10.5rem];
-    }
-
-    // pulumi-tooltip is inline by default; the trigger here is a full-width
-    // button, so stretch both to the card. The bubble holds the whole prompt, so
-    // it gets a fixed width wider than both the button and the component's own
-    // w-48 default, and wraps rather than truncating.
-    .hero-cta-copy-tooltip {
-        @apply block w-full;
-
-        .tooltip-target {
-            @apply block w-full;
-        }
-
-        .tooltip-content {
-            @apply w-72 text-left break-words font-mono;
-        }
-    }
-
-    // Safety net for a long cta_agent_prompt_label: min-w-0 lets the span shrink
-    // below its max-content width so the ellipsis renders rather than the text
-    // being flatly clipped by the button.
-    .hero-cta-copy-text {
-        @apply truncate min-w-0;
     }
 }
 
