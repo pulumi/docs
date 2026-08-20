@@ -631,9 +631,12 @@ jobs:
               BEFORE your first edit for the --article-blob input). Fix any
               violation and re-run until it passes.
             - Verdict sentinel: `{"verdict": "glowup", "fixes": <executed
-              count>, "skipped_findings": <declined count>, "retirement":
-              false}` — no `applied[]` needed; the glow-up gate replaces the
-              per-hunk check.
+              count>, "skipped_findings": <declined count>, "clarity_flag":
+              <bool>, "retirement": false}` — no `applied[]` needed; the
+              glow-up gate replaces the per-hunk check. State `clarity_flag`
+              explicitly: `false` once you have resolved the page's
+              readthrough reconception, `true` while one still stands.
+              Omitting it carries the page's existing flag forward.
             - Your PR will NOT auto-merge: it opens for human review (the
               sweep assigns reviewers). Write the body tables for that
               reader.

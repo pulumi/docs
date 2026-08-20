@@ -485,8 +485,13 @@ frontmatter) are also present and are your evidence base.
    .self-check.u0.diff --article <path> --article-blob <pristine-copy> --out
    .self-check-report.json` (copy the article aside before your first edit).
 1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
-   "skipped_findings": <declined count>, "retirement": false}` — no
-   `applied[]` array; the glow-up gate replaces the per-hunk check. If the
+   "skipped_findings": <declined count>, "clarity_flag": <bool>,
+   "retirement": false}` — no `applied[]` array; the glow-up gate replaces
+   the per-hunk check. State `clarity_flag` explicitly: `false` once you have
+   resolved the page's readthrough reconception, `true` while one still
+   stands. Omitting it carries the page's existing flag forward unchanged —
+   which is the right default, since the flag is usually why the page was
+   selected, but it means only you can put it down. If the
    queue article carries `stale_claim_markers`, they are must-address
    findings here exactly as in a fix review: resolve each (fix it, or
    establish the flag was wrong) and list its `entity_key` in the sentinel's
