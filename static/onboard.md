@@ -70,9 +70,9 @@ Ask the user for the specifics of what they chose in step 3, then follow the
   Terraform, CloudFormation, CDK, ARM, or Bicep and routes it from there. Point
   it at where the existing code lives and let it drive.
 
-Everything runs as a real Pulumi project with state, so a single resource is a
-small project rather than a one-off command. Always run `preview` before `up`,
-and confirm with the user before creating anything.
+Do not use `pulumi do` in this onboarding flow. Everything runs as a real
+Pulumi project with state, so even a single resource is a small project. Always
+run `preview` before `up`, and confirm with the user before creating anything.
 
 ## 6. Save the work: surface the claim link
 
