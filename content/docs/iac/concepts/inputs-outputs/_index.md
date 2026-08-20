@@ -23,32 +23,32 @@ search:
         - input
 ---
 
-Pulumi [resources](/docs/iac/concepts/resources) use special types to define their properties, called Inputs and Outputs. These special Pulumi types wrap "plain" values like strings or integers, and are what allow Pulumi to declaratively manage your infrastructure resources.
+Pulumi [resources](/docs/iac/concepts/resources/) use special types to define their properties, called Inputs and Outputs. These special Pulumi types wrap "plain" values like strings or integers, and are what allow Pulumi to declaratively manage your infrastructure resources.
 
 ## What are inputs and outputs?
 
-Pulumi IaC programs use special types called inputs and outputs to keep track of the dependencies between resources. Inputs and outputs, combined with your Pulumi stack's state file, are what allow Pulumi IaC programs to be _declarative_. In other words, you only need to tell Pulumi the desired state of your resources, and Pulumi will figure out what needs to be changed, and in what order those operations need to happen, to turn your declared desired state into the actual state of your resources.
+Pulumi IaC programs use special types called inputs and outputs to keep track of the dependencies between resources. Inputs and outputs, combined with your Pulumi stack's state file, are what allow Pulumi IaC programs to be _declarative_. In other words, you only need to tell Pulumi the desired state of your resources, and Pulumi figures out what needs to change, and in what order those operations need to happen, to turn your declared desired state into the actual state of your resources.
 
-Inputs are values that you _can_ supply to a resource. Inputs may be required or optional: For example, the `vpcId` input is required on the `aws.ec2.Subnet` resource because a subnet must belong to a particular VPC. On the other hand, the `forceDestroy` attribute on an `aws.s3.Bucket` resource (which allows you to delete a bucket that has objects in it) is optional and defaults to `false`.
+Inputs are values that you _can_ supply to a resource. Inputs may be required or optional: For example, the `vpcId` input is required on the `aws.ec2.Subnet` resource because a subnet must belong to a particular VPC. In contrast, the `forceDestroy` attribute on an `aws.s3.Bucket` resource (which allows you to delete a bucket that has objects in it) is optional and defaults to `false`.
 
 When specifying inputs to a Pulumi resource, you can always use the plain version of the type. For example, any input that is defined as `pulumi.Input<string>` will accept a plain `string` value.
 
-Outputs are values that are only known after a resource is created. For example, if you are creating an `aws.ec2.Vpc` resource, the VPC ID is an output - you cannot choose this value, and it is only known after the VPC is created in AWS.
+Outputs are values that are only known after a resource is created. For example, if you are creating an `aws.ec2.Vpc` resource, the VPC ID is an output — you cannot choose this value, and AWS only reports it after the VPC is created.
 
-When authoring Pulumi IaC programs, you will frequently use one resource's output as another resource's input. For example, you might create an `aws.ec2.Vpc` resource and pass its `id` property (an output) to create several `aws.ec2.Subnet` resources (where `vpcId` is a required input). Pulumi uses inputs and outputs to automatically keep track of the dependencies between your resources. Using our example using Pulumi IaC to manage a VPC and its subnets, Pulumi will manage your resources in the following ways:
+When authoring Pulumi IaC programs, you will frequently use one resource's output as another resource's input. For example, you might create an `aws.ec2.Vpc` resource and pass its `id` property (an output) to create several `aws.ec2.Subnet` resources (where `vpcId` is a required input). Pulumi uses inputs and outputs to automatically keep track of the dependencies between your resources. In this example of using Pulumi IaC to manage a VPC and its subnets, Pulumi manages your resources in the following ways:
 
-- When running `pulumi up`, Pulumi will ensure that no subnets are created until the VPC has been created and its VPC ID is known. If you are running your Pulumi program for the first time, this means Pulumi will wait until the VPC is created. If you ran your program before and are now adding an additional subnet, that subnet will be created immediately because the VPC ID is already known. (The value is stored in your Pulumi state file.)
+- When running `pulumi up`, Pulumi ensures that no subnets are created until the VPC has been created and its VPC ID is known. If you are running your Pulumi program for the first time, this means Pulumi waits until the VPC is created. If you ran your program before and are now adding an additional subnet, that subnet will be created immediately because the VPC ID is already known. (The value is stored in your Pulumi state file.)
 - If you were running a `pulumi destroy` command to delete all the resources in your program, Pulumi would ensure that the VPC is not deleted until _all_ subnets in your Pulumi program have been deleted.
 
 {{% notes type="info" %}}
-Most dependencies between resources are automatically tracked by virtue of one resource's output being another resource's input. However, there may be other dependencies between resources that are not defined by this output-to-input relationship. For these cases, you can use the [`dependsOn`](/docs/iac/concepts/resources/options/dependson) resource option to explicitly define a dependency between resources.
+Most dependencies between resources are automatically tracked by virtue of one resource's output being another resource's input. However, there may be other dependencies between resources that are not defined by this output-to-input relationship. For these cases, you can use the [`dependsOn`](/docs/iac/concepts/resources/options/dependson/) resource option to explicitly define a dependency between resources.
 {{% /notes %}}
 
 Input and Output types are defined for each supported Pulumi language in the corresponding Pulumi SDK for that language. For example, in TypeScript, the Pulumi Node SDK has definitions for the types `pulumi.Input<T>` and `pulumi.Output<T>`. The Pulumi SDK is typically imported by default whenever you create a new Pulumi program, e.g. with `pulumi new typescript`, `pulumi new python`, etc.
 
 ## Why are inputs and outputs necessary?
 
-Pulumi inputs and outputs are what allow Pulumi IaC programs to manage your resources declaratively despite being written in imperative general purpose programming languages.
+Pulumi inputs and outputs are what allow Pulumi IaC programs to manage your resources declaratively despite being written in imperative, general-purpose programming languages.
 
 In imperative programming, you write step-by-step instructions telling the computer exactly how to perform a task, in the exact order those steps must occur. For example, in a traditional imperative program, you might write code that says "first create a VPC, wait for it to be created, get its ID, then create a subnet using that ID."
 
@@ -206,7 +206,7 @@ resources:
 In Python, inputs that are objects, that is inputs that group multiple values together, can be represented either as classes or as dictionary literals. The types for the argument classes have the suffix `Args`, whereas the types for the dictionaries have the suffix `ArgsDict`. Both types take the same arguments, but the dictionary types are often more concise.
 
 {{% notes type="info" %}}
-The types with the suffix `ArgsDict` for dictionary literals were introduced in July 2024. You can still use dictionary literals with [providers](/docs/iac/guides/basics/how-pulumi-works/#resource-providers) that have not been updated yet with this change, but you will not benefit from the type checking that the new types provide.
+The types with the suffix `ArgsDict` for dictionary literals were introduced in July 2024. You can still use dictionary literals with [providers](/docs/iac/guides/basics/how-pulumi-works/#resource-providers) that have not been updated yet with this change, but you will not get the type checking that the new types provide.
 {{% /notes %}}
 
 This example shows two ways to create an `ecr.Repository` resource in Python, once using a dictionary literal and once using a class:
@@ -229,17 +229,17 @@ repo2 = aws.ecr.Repository("repo2-with-args",
 
 ## Working with outputs
 
-All resources created by Pulumi will have properties which are returned from the cloud provider API. These values are called outputs.
+All resources created by Pulumi have properties that are returned from the cloud provider API. These values are called outputs.
 
 {{% notes type="info" %}}
 This section is about resource outputs, which are related to, but not the same as [stack outputs](/docs/iac/concepts/stacks/#outputs). A stack output is a value that is exported at the end of a successful update, usually intended for use outside of the Pulumi program context: either from the command line via the `pulumi stack output` command or in another Pulumi program by using a [stack reference](/docs/iac/concepts/stacks/#stackreferences).
 {{% /notes %}}
 
-Outputs are similar to [promises or futures](https://en.wikipedia.org/wiki/Futures_and_promises): They represent values that are not initially known but will become known once an infrastructure resource has completed provisioning. In other words, outputs represent asynchronous values. Outputs are necessary in Pulumi because provisioning resources is an asynchronous operation: It takes time for a cloud provider to finish provisioning a resource (several minutes in some cases).
+Outputs work like [promises or futures](https://en.wikipedia.org/wiki/Futures_and_promises): they represent values that are not initially known but become known once an infrastructure resource has completed provisioning. In other words, outputs represent asynchronous values. Outputs are necessary in Pulumi because provisioning resources is an asynchronous operation: a cloud provider takes time to finish provisioning a resource, and Pulumi cannot know the resulting values until it does.
 
 Because outputs represent asynchronous values, they must be handled differently than plain types like `string`. For example, you cannot directly print the value of an output using your language's string printing function (e.g. `console.log()` in TypeScript, `print` in Python, etc.). Instead, you must use methods supplied in the Pulumi SDK to access the value once it is known.
 
-The Pulumi SDK provides several methods for accessing the plain values of outputs once they are known:
+The Pulumi SDK provides these methods for accessing the plain values of outputs once they are known:
 
 - [Apply](/docs/iac/concepts/inputs-outputs/apply/) allows you to access a single output's plain value
 - [All](/docs/iac/concepts/inputs-outputs/all/) allows you to access multiple outputs' plain values
@@ -264,7 +264,7 @@ For a complete guide and examples for each language, see [Using output helpers](
 
 ## Using inputs and outputs together
 
-In Pulumi programs, you will often use one resource's output as another resource's input. Pulumi will keep track of this dependency behind the scenes to ensure that your resources are changed in the necessary order:
+In Pulumi programs, you will often use one resource's output as another resource's input. Pulumi keeps track of this dependency behind the scenes to ensure that your resources are changed in the necessary order:
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
@@ -374,6 +374,6 @@ var example = new Instance("example", InstanceArgs.builder()
 
 ## Resource identity and inputs
 
-When you pass one resource's output to another resource's input, you are almost always passing the resource's **physical ID** — the provider-assigned identifier that Pulumi exposes as `resource.id`. This is distinct from the resource's URN (which is Pulumi-internal) and the logical name (which is what you write in your code).
+Wiring resources together often means passing one of the identifiers a resource carries. A common case is the **physical ID** — the provider-assigned identifier Pulumi exposes as `resource.id`, such as the `id` of the `aws.ec2.Vpc` in the examples above — but plenty of inputs expect a different property instead, like a bucket ARN, a database endpoint, or an IAM role name. Each of these is an output, so the dependency tracking described above applies the same way in every case.
 
-Understanding which form of resource identity to use in a given context — physical ID vs. URN vs. resource reference — prevents the most common type-mismatch errors when wiring resources together. See [Resource names and identity](/docs/iac/concepts/resources/names/) for a full explanation of all four identity forms and a quick-reference table showing when to use each one.
+Pulumi gives each resource four forms of identity: the logical name you write in your code, the physical name in the provider, the physical ID, and the Pulumi-internal URN. Passing the wrong one is a common source of type-mismatch errors. For what each form is and which to use in a given context, see [Resource names and identity](/docs/iac/concepts/resources/names/) and its [identity summary table](/docs/iac/concepts/resources/names/#identity-summary).
