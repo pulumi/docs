@@ -440,12 +440,11 @@ def build_record(article: dict, verdict: dict | None, pr: dict | None,
         # `pr_number` keeps its original meaning — the PR THIS review opened, 0
         # when it opened none — so the versioned ledger's metrics stay
         # comparable across history. The durable pointer to the page's most
-        # recent review PR is separate, and is read by select-glowup.py, which
-        # folds it into the `source_pr_number` it stamps on the queue — the only
-        # form the unprivileged worker gets it in, and what
-        # build-glowup-backlog.py reads there. That file's own dispatcher-side
-        # ledger read still keys on `pr_number` alone; #21004 teaches it the
-        # same fallback.
+        # recent review PR is separate, and both consumers prefer `pr_number`
+        # and fall back to it: select-glowup.py folds it into the
+        # `source_pr_number` it stamps on the queue — the only form the
+        # unprivileged worker gets it in — and build-glowup-backlog.py takes the
+        # same fallback in its own dispatcher-side ledger read.
         "last_pr": last_pr_from(prior)[0],
         "last_pr_number": last_pr_from(prior)[1],
         "head_sha": "",
