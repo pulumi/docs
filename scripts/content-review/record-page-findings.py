@@ -77,7 +77,9 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import contextlib
 import importlib.util
+import io
 import json
 import subprocess
 import sys
@@ -469,12 +471,16 @@ def self_test() -> int:
     # function stopped making. Writing the all-False record that falls out of
     # that would re-bank the work the glow-up just did, so it takes the same
     # exit as a sentinel carrying no lists at all.
-    # build() logs "disposition unknown (see above)" and defers to this
-    # function for WHICH state it was, so a None return that doesn't warn
-    # leaves the operator reading a pointer to nothing.
-    import contextlib
-    import io
+    check("a missing backlog skips the write rather than guessing by position",
+          mark_from_backlog(F, {"verdict": "glowup",
+                                "executed_ids": ["findings-f2"]}, None) is None)
+    check("...and so does an executed set where nothing resolves",
+          mark_from_backlog(F, {"verdict": "glowup",
+                                "executed_ids": ["findings-f404"]}, BACKLOG) is None)
 
+    # build() logs "disposition unknown (see above)" and defers to this function
+    # for WHICH state it was, so a None return that doesn't warn leaves the
+    # operator reading a pointer to nothing.
     def none_path_warns(verdict):
         buf = io.StringIO()
         with contextlib.redirect_stderr(buf):
@@ -485,13 +491,6 @@ def self_test() -> int:
           none_path_warns({"verdict": "glowup"}))
     check("every None return warns first — nothing resolved",
           none_path_warns({"verdict": "glowup", "executed_ids": ["findings-f404"]}))
-
-    check("a missing backlog skips the write rather than guessing by position",
-          mark_from_backlog(F, {"verdict": "glowup",
-                                "executed_ids": ["findings-f2"]}, None) is None)
-    check("...and so does an executed set where nothing resolves",
-          mark_from_backlog(F, {"verdict": "glowup",
-                                "executed_ids": ["findings-f404"]}, BACKLOG) is None)
     check("a PARTIAL resolve still writes — those findings are genuinely known",
           [f["applied"] for f in
            mark_from_backlog(F, {"verdict": "glowup",
