@@ -40,6 +40,13 @@ Azure, GCP, or another provider):
 
 Do not guess. The answer decides the path.
 
+If the user chooses migration, install the migration skills before continuing:
+
+    npx skills add pulumi/agent-skills/migration --skill '*'
+
+If the migration skill install does not succeed, continue with
+`pulumi-overview` and the Pulumi CLI rather than stopping.
+
 ## 4. Ask how to authenticate to the cloud
 
 Pulumi creates resources in the user's own cloud account, with credentials
