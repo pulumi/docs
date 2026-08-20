@@ -29,7 +29,7 @@ Pulumi [resources](/docs/iac/concepts/resources/) use special types to define th
 
 Pulumi IaC programs use special types called inputs and outputs to keep track of the dependencies between resources. Inputs and outputs, combined with your Pulumi stack's state file, are what allow Pulumi IaC programs to be _declarative_. In other words, you only need to tell Pulumi the desired state of your resources, and Pulumi figures out what needs to change, and in what order those operations need to happen, to turn your declared desired state into the actual state of your resources.
 
-Inputs are values that you _can_ supply to a resource. Inputs may be required or optional: For example, the `vpcId` input is required on the `aws.ec2.Subnet` resource because a subnet must belong to a particular VPC. By contrast, the `forceDestroy` attribute on an `aws.s3.Bucket` resource (which allows you to delete a bucket that has objects in it) is optional and defaults to `false`.
+Inputs are values that you _can_ supply to a resource. Inputs may be required or optional: For example, the `vpcId` input is required on the `aws.ec2.Subnet` resource because a subnet must belong to a particular VPC. In contrast, the `forceDestroy` attribute on an `aws.s3.Bucket` resource (which allows you to delete a bucket that has objects in it) is optional and defaults to `false`.
 
 When specifying inputs to a Pulumi resource, you can always use the plain version of the type. For example, any input that is defined as `pulumi.Input<string>` will accept a plain `string` value.
 
