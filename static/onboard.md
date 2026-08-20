@@ -20,7 +20,7 @@ installer, then re-check. Do not continue until the version command succeeds.
 This prompt hands the real work to Pulumi's `pulumi-overview` skill.
 Install the Pulumi skills now so the steps below have them:
 
-    npx skills add pulumi/agent-skills --skill '*'
+    npx skills add pulumi/agent-skills/pulumi --skill '*'
 
 Follow the `pulumi-overview` skill for the work below, not any stub `pulumi`
 skill that shipped with the CLI. If the install does not succeed, do not stop
