@@ -38,7 +38,7 @@ Designed for larger organizations with mission-critical workloads. These edition
 - **Priority access**: Prioritized bugs and feature requests, plus product roadmap reviews
 - **Custom training**: Tailored onboarding and ongoing training for your team
 
-Contact Pulumi support at [support@pulumi.com](mailto:support@pulumi.com) if you're on the Enterprise or Business Critical edition.
+Access your support through the [support portal](https://support.pulumi.com/hc/en-us) if you're on the Enterprise or Business Critical edition.
 
 {{% notes type="info" %}}
 Learn more about the differences between [the editions](/pricing/).
