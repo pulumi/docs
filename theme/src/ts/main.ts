@@ -34,10 +34,17 @@ import "./redirects";
 // only on pages with a #search element. See assets.html.
 import "./external-links";
 import "./neo-mode";
+<<<<<<< Updated upstream
 import "./console-banner";
 import "./announcement-banner";
 import "./statuspage";
 import "./intercom-identity";
+=======
+import "./support-form";
+
+import "./experiments/terraform-compare";
+import "./experiments/cta-activations-direct-vs-docs";
+>>>>>>> Stashed changes
 
 // Register all Stencil components.
 defineCustomElements();

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="container mx-auto max-w-2xl px-4 py-12">
+    <h1 class="mb-2">{{ .Title }}</h1>
+    <p class="mb-8 text-gray-700">{{ .Params.meta_desc }}</p>
+
+    <form data-support-form class="space-y-4" novalidate>
+        <div>
+            <label for="supportName" class="block mb-1 font-semibold">Name</label>
+            <input id="supportName" name="name" type="text" required class="block w-full p-2 rounded border border-gray-500 outline-none" />
+        </div>
+        <div>
+            <label for="supportEmail" class="block mb-1 font-semibold">Email</label>
+            <input id="supportEmail" name="email" type="email" required class="block w-full p-2 rounded border border-gray-500 outline-none" />
+        </div>
+        <div>
+            <label for="supportOrg" class="block mb-1 font-semibold">Pulumi organization</label>
+            <input id="supportOrg" name="organization" type="text" required class="block w-full p-2 rounded border border-gray-500 outline-none" />
+        </div>
+        <div>
+            <label for="supportDetails" class="block mb-1 font-semibold">Details</label>
+            <textarea id="supportDetails" name="details" rows="6" required class="block w-full p-2 rounded border border-gray-500 outline-none"></textarea>
+        </div>
+
+        <button type="submit" data-support-submit class="btn">Submit request</button>
+
+        <p data-support-status class="hidden text-sm mt-2"></p>
+    </form>
+</div>
+{{ end }}
