@@ -26,9 +26,9 @@ Finalizes your current work by running quality checks, committing changes, pushi
 
 ## Process
 
-**CRITICAL SUCCESS CRITERIA**: Complete all 8 steps in sequence. Every step is mandatory and serves a critical purpose in the workflow. **DO NOT SKIP ANY STEP OR END THE WORKFLOW PREMATURELY!**
+**CRITICAL SUCCESS CRITERIA**: Complete all 9 steps in sequence. Every step is mandatory and serves a critical purpose in the workflow. **DO NOT SKIP ANY STEP OR END THE WORKFLOW PREMATURELY!**
 
-**Step Counter**: Display progress before each step as: **[Step X/8]** followed by the step heading. This helps users track progress through the workflow.
+**Step Counter**: Display progress before each step as: **[Step X/9]** followed by the step heading. This helps users track progress through the workflow.
 
 **References**: This skill uses detailed reference files. Always follow the detailed instructions in these referenced documents when applicable:
 - `shipit:references:quality-checks` - Quality check procedures and code testing
@@ -36,7 +36,7 @@ Finalizes your current work by running quality checks, committing changes, pushi
 
 ---
 
-## **[Step 1/8] Context Gathering**
+## **[Step 1/9] Context Gathering**
 
 **Purpose**: Understand what's changed and check for next steps from previous work.
 
@@ -56,7 +56,7 @@ Finalizes your current work by running quality checks, committing changes, pushi
 
 ---
 
-## **[Step 2/8] Quality Checks**
+## **[Step 2/9] Quality Checks**
 
 Run context-aware quality checks. Scan conversation history to skip redundant checks (lint/build), test inline code snippets in markdown files, and run full tests for program examples.
 
@@ -70,7 +70,7 @@ Display summary and ask user to proceed with `AskUserQuestion`.
 
 ---
 
-## **[Step 3/8] Branch Verification**
+## **[Step 3/9] Branch Verification**
 
 **Purpose**: Prevent accidental commits to master branch.
 
@@ -92,14 +92,14 @@ Display summary and ask user to proceed with `AskUserQuestion`.
         - Exits the skill
 
 3. **If on feature branch**:
-   - Display: "[Step 3/8] Skipped - already on feature branch `{branch-name}`"
+   - Display: "[Step 3/9] Skipped - already on feature branch `{branch-name}`"
    - Continue to Step 4
 
 **Safety**: Always preview destructive operations (like reset --hard) before executing.
 
 ---
 
-## **[Step 4/8] Commit Preparation**
+## **[Step 4/9] Commit Preparation**
 
 Generate 3 meaningful commit message suggestions based on:
 - `git diff --stat` output
@@ -115,7 +115,7 @@ All messages include: `Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
 
 ---
 
-## **[Step 5/8] Commit Preview**
+## **[Step 5/9] Commit Preview**
 
 **Purpose**: Preview exactly what will be committed before execution.
 
@@ -163,7 +163,7 @@ Commands that will run:
 
 ---
 
-## **[Step 6/8] Push Changes**
+## **[Step 6/9] Push Changes**
 
 **Purpose**: Commit and push changes to remote.
 
@@ -219,7 +219,7 @@ Commands that will run:
 
 ---
 
-## **[Step 7/8] Create Pull Request**
+## **[Step 7/9] Create Pull Request**
 
 **Purpose**: Generate and create a pull request with appropriate description.
 
@@ -276,11 +276,13 @@ Commands that will run:
 
 5. **If "Create PR"**:
    ```bash
-   gh pr create --title "{title}" --body "$(cat <<'EOF'
+   gh pr create --draft --title "{title}" --body "$(cat <<'EOF'
    {body}
    EOF
    )"
    ```
+
+   **Draft, always** — per `CONTRIBUTING.md` §Draft-first pull requests. Automated review fires on the ready-for-review transition, so opening ready means the review runs against whatever is pushed at that moment. Step 9 offers to mark it ready once the user is done iterating. The exception CONTRIBUTING allows — a genuinely trivial typo fix opened straight to ready — is the user's call to make, not a default to assume.
 
 **If PR creation fails**:
 - Display error (auth issues, network, etc.)
@@ -290,7 +292,7 @@ Commands that will run:
 
 ---
 
-## **[Step 8/8] Completion Report**
+## **[Step 8/9] Completion Report**
 
 **Purpose**: Confirm successful completion and provide next steps.
 
@@ -324,17 +326,44 @@ Commands that will run:
    🐿️ Ship it! Your changes are ready for review.
    ```
 
+---
+
+## **[Step 9/9] Hand off to the review loop**
+
+**Purpose**: Shipping isn't finished when the PR exists — it's finished when the pre-merge review's findings are. This step makes sure the PR doesn't get opened and forgotten. **Never skip it**, and never end the skill at Step 8.
+
+**Actions**:
+
+1. **If the PR is still a draft** (the normal case): state in one line that automated review fires on the ready-for-review transition, and offer to mark it ready now. A draft gets no review, so there is nothing to watch yet.
+
+2. **Once the PR is ready for review**, offer to watch, with `AskUserQuestion`:
+
+   1. **Watch for the review** (Recommended) — invoke `/address-review {PR} --watch`. Reviews typically post in 5-15 minutes.
+   2. **I'll come back to it** — tell the user the exact command for later: `/address-review {PR}`.
+   3. **Skip the review** — accepted, but say once what it costs: findings that are never dispositioned scrape as ignored and tune the pipeline toward flagging more.
+
+3. **If the user picks watching**, hand control to `/address-review` and follow that skill from its Step 1. Do not re-implement watching or triage here.
+
+4. **Display the closing line**:
+   ```
+   Next: the pre-merge review. I'll work every finding with you — blockers,
+   low-confidence, and style — until each one is fixed, refuted, or explicitly
+   accepted. That's what "done" means on this repo.
+   ```
+
+**Rules**: ask once, take the answer, don't nag. See `AGENTS.md` §PR Lifecycle for AI-Assisted Contributions and `CONTRIBUTING.md` §Working the review to zero for the expectation this step implements.
+
 **End of skill**
 
 ---
 
 ## Critical Workflow Rules
 
-1. **Progress Display**: Always display step number "[Step X/8]" before each heading
+1. **Progress Display**: Always display step number "[Step X/9]" before each heading
 2. **Sequential Execution**: Never skip ahead - complete each step before moving to next
 3. **User Approval**: Get explicit approval before destructive actions (Steps 3, 5, 7)
 4. **Error Handling**: If a step fails, don't proceed - offer retry or cancel
-5. **Skip Display**: If skipping a step, show "[Step X/8] Skipped - {reason}"
+5. **Skip Display**: If skipping a step, show "[Step X/9] Skipped - {reason}" — Step 9 is never skippable
 6. **Context Preservation**: Store decisions from previous steps to avoid re-asking
 
 ## Notes
