@@ -29,7 +29,7 @@ sections:
     description: |
       Govern your cloud automatically.
 
-      Discovery & governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix findings with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
+      Discovery & governance gives you a complete lifecycle for cloud compliance: audit existing infrastructure, fix violations with AI-powered remediation, and prevent future issues with policy as code. Neo closes the loop to keep your infrastructure secure and well-governed automatically.
 
     cards:
       - icon: arrows-clockwise
@@ -72,7 +72,7 @@ sections:
   - type: section_header_with_image
     flip: true
     tag_line: AI-powered remediation
-    title: Automatically generate fixes for policy findings
+    title: Automatically generate fixes for policy violations
     description: |
       Pulumi Neo identifies policy issues and fixes them automatically. For resources created outside your control (manual console changes, unmanaged deployments), Neo finds and fixes compliance violations in a single workflow, eliminating surprise audit findings and cost overruns. Transform hours of manual work into simple review-and-merge processes.
 
@@ -179,9 +179,9 @@ sections:
       - icon: list-checks
         title: "Step 2: Remediate"
         description: |
-          AI generates infrastructure-as-code fixes for policy findings.
+          AI generates infrastructure-as-code fixes for policy violations.
 
-          - AI-powered fixes for policy findings
+          - AI-powered fixes for policy violations
           - Automated pull requests with verified solutions
       - icon: shield-check
         title: "Step 3: Prevent"
