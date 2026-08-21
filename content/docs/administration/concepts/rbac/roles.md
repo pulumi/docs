@@ -172,7 +172,7 @@ Roles can be assigned to organization access tokens, users, and teams. Effective
 
 ### Organization access tokens
 
-[Organization access tokens](/docs/administration/concepts/access-tokens/#organization-access-tokens) can be assigned exactly **one** role (default or custom) that defines the token's permissions across the organization.
+[Organization access tokens](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) can be assigned exactly **one** role (default or custom) that defines the token's permissions across the organization.
 
 Follow the process to [create an organization token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token), then choose a default or custom role to assign to the token. The token's access is limited to the permissions of that role within your organization.
 

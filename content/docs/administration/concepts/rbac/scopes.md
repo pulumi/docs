@@ -18,7 +18,7 @@ pulumi_cloud_feature: rbac
 
 Scopes are the most granular level of access control in Pulumi Cloud's RBAC system. Each scope represents a specific action that can be performed on a resource, such as reading stack configurations or updating environment settings. Scopes are the building blocks of [permission sets](/docs/administration/concepts/rbac/permission-sets), which are then bundled into [roles](/docs/administration/concepts/rbac/roles) to create comprehensive access control configurations.
 
-## How Scopes Work
+## How scopes work
 
 Scopes follow a consistent naming pattern: `object:action`. For example:
 
@@ -35,9 +35,9 @@ You can use scopes to build [custom permission sets](/docs/administration/concep
 - `stack:delete`
 - `stack_deployment:create`
 
-## Default Role Assignments
+## Default role assignments
 
-Many scopes are automatically granted through [default roles](/docs/administration/concepts/rbac/roles#default-roles) in Pulumi Cloud. For example:
+Many scopes are automatically granted through [Pulumi-defined roles](/docs/administration/concepts/rbac/roles#pulumi-defined-roles) in Pulumi Cloud. For example:
 
 - Organization admins have access to all scopes.
 - Regular members have access to basic read and write scopes for common operations.
@@ -45,12 +45,12 @@ Many scopes are automatically granted through [default roles](/docs/administrati
 
 ## Available scopes
 
-You can view the list of available scopes, organized by entity type:
+You can view the [complete catalog of scopes](/docs/administration/reference/rbac-scopes/), organized by entity type:
 
-- [Stacks](stacks)
-- [Environments](environments)
-- [Cloud accounts](insights-accounts)
-- [Organization settings](org-settings)
+- [Stacks](/docs/administration/reference/rbac-scopes/stacks/)
+- [Environments](/docs/administration/reference/rbac-scopes/environments/)
+- [Cloud accounts](/docs/administration/reference/rbac-scopes/insights-accounts/)
+- [Organization settings](/docs/administration/reference/rbac-scopes/org-settings/)
 
 ## Related resources
 

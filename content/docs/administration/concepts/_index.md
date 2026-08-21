@@ -30,4 +30,4 @@ How Pulumi Cloud models your organization and who can do what inside it. Read th
 ## Security and compliance
 
 - [Audit logs](/docs/administration/concepts/audit-logs/) — the record of user and system activity in your organization.
-- [Customer managed keys](/docs/administration/concepts/customer-managed-keys/) — using your own encryption keys to protect data at rest.
+- [Customer managed keys](/docs/administration/concepts/customer-managed-keys/) — using your own encryption keys to protect data at rest, currently for Pulumi ESC with AWS KMS.

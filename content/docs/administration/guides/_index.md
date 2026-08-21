@@ -2,7 +2,7 @@
 title: Guides
 title_tag: Pulumi Cloud Administration Guides
 h1: Guides
-meta_desc: Task-oriented guides for administering Pulumi Cloud — SAML SSO, SCIM provisioning, OIDC issuers, audit log export, and customer-managed keys.
+meta_desc: Task-oriented guides for administering Pulumi Cloud — SAML SSO, SCIM, OIDC issuers, audit log export, customer-managed keys, and least privilege.
 menu:
   administration:
     name: Guides
