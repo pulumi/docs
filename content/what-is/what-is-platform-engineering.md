@@ -2,7 +2,7 @@
 title: What is Platform Engineering?
 allow_long_title: true
 meta_desc: |
-    Platform engineering is the discipline of building internal platforms that let developers self-serve infrastructure. Learn what a platform engineer does and how to get started.
+    Platform engineering is the discipline of building internal platforms that let developers self-serve infrastructure. Learn what a platform engineer does.
 type: what-is
 page_title: What is Platform Engineering?
 lastmod: 2026-08-21
