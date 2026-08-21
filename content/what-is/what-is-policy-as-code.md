@@ -87,7 +87,7 @@ Several mature tools now handle policy as code across different parts of the sta
 | Open Policy Agent (OPA) | Rego | General-purpose: Kubernetes, APIs, CI/CD, Terraform | Open source (Apache 2.0); CNCF graduated Feb 2021 | Created by Styra; donated to CNCF; community maintained |
 | HashiCorp Sentinel | Sentinel (proprietary DSL) | HashiCorp suite (HCP Terraform, HCP Vault Dedicated, HCP Consul, Nomad Enterprise) | Proprietary; requires paid HCP Terraform Standard+ | HashiCorp (now IBM) |
 | Kyverno | YAML + CEL | Kubernetes-native (validate, mutate, generate, cleanup) | Open source; CNCF graduated Mar 2026 | Created by Nirmata; donated to CNCF |
-| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud (200+ providers) during Pulumi deployments; also audit of discovered resources via Discovery | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
+| Pulumi Policies | TypeScript, JavaScript, Python, or Rego | Any cloud (200+ providers) during `pulumi preview` and `pulumi up`; also audit of discovered resources via Discovery | Policy SDK open source (Apache 2.0); org-wide policy group management on paid Pulumi Cloud | Pulumi |
 
 ## How does Pulumi implement policy as code?
 
