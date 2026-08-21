@@ -47,10 +47,11 @@ extract_bucket_bullets, extract_count_table_row, extract_trail_records,
 extract_bullet_prefix) so the comment-format contract keeps exactly one parser —
 same import-by-path pattern as scrape-review-outcomes.py.
 
-Fail-open on inputs, fail-closed on completeness: an unparseable body yields an
-empty worklist with `parse_confidence: "low"` (never a fake all-clear — with
---require-clean a low-confidence parse is itself unresolved), while a parsed
-item with no recorded disposition always counts as remaining.
+Fail-open on inputs, fail-closed on completeness. Three things independently
+block a "clean" verdict, so --require-clean can only pass when the whole list
+was actually seen: an unparseable body (`parse_confidence: "low"`), a failed
+inline-suggestions fetch (`suggestions_ok: false` — distinct from a PR that
+genuinely has none), and any parsed item without a recorded disposition.
 """
 
 from __future__ import annotations
@@ -93,6 +94,10 @@ DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
 # mandatory — otherwise "accepted" becomes an unaudited way to close the loop.
 NOTE_REQUIRED = ("deferred", "accepted", "not-applicable")
 
+# Every bucket's configuration, read by both extraction paths — the plain-H3
+# loop and the ⚠️ split. `low` and `style` share a heading because the style
+# block is an H4 *inside* the ⚠️ Low-confidence H3; _split_low_confidence
+# divides them. Nothing hard-codes a heading string outside this table.
 BUCKETS = {
     # id prefix        heading substring         blocking  optional
     "outstanding": ("🚨 Outstanding", True, False),
@@ -100,6 +105,8 @@ BUCKETS = {
     "style": ("⚠️ Low-confidence", False, False),
     "pre-existing": ("💡 Pre-existing", False, True),
 }
+# Buckets whose bullets sit directly under their own H3, with no H4 split.
+PLAIN_BUCKETS = ("outstanding", "pre-existing")
 
 
 def log(msg: str) -> None:
@@ -124,24 +131,37 @@ def fetch_pinned_body(repo: str, pr: int) -> str:
     return run(["bash", str(HERE / "pinned-comment.sh"), "fetch", "--pr", str(pr), "--repo", repo])
 
 
-def fetch_inline_suggestions(repo: str, pr: int) -> list[dict]:
+def fetch_inline_suggestions(repo: str, pr: int) -> tuple[list[dict], bool]:
+    """Return (suggestions, ok). `ok=False` means the fetch failed.
+
+    The distinction is the whole point: "this PR has no ✏️ suggestions" and "I
+    couldn't ask" both produce an empty list, and only one of them means the
+    worklist is complete. `run()` swallows every gh failure (auth, rate limit,
+    network) into "", so without this flag a --require-clean run could answer
+    "clean" for a PR whose style items were never enumerated.
+    """
     out = run([
         "gh", "api", f"repos/{repo}/pulls/{pr}/comments",
         "--paginate",
         "--jq", f'[.[] | select(.body | startswith("{SUGGESTION_MARKER}"))]',
     ])
+    # `--jq '[...]'` prints at least `[]` per page on success, so silence is failure.
     if not out.strip():
-        return []
+        return [], False
     # --paginate --jq emits one JSON document per page; concatenate the arrays.
     merged: list[dict] = []
+    decoded_any = False
     for chunk in out.strip().splitlines():
         try:
             parsed = json.loads(chunk)
         except json.JSONDecodeError:
             continue
         if isinstance(parsed, list):
+            decoded_any = True
             merged.extend(x for x in parsed if isinstance(x, dict))
-    return merged
+    # Bytes came back but nothing decoded — a format change or a truncated
+    # response, not an empty suggestion set.
+    return merged, decoded_any
 
 
 # ---- body normalization ------------------------------------------------------
@@ -167,8 +187,10 @@ def _split_low_confidence(body: str) -> tuple[list[str], list[str]]:
     The `#### Style suggestions` H4 lives *inside* the ⚠️ Low-confidence H3, and
     its bullets are uncounted advisory polish rather than reviewer burden — so
     they are their own bucket here, not low-confidence findings.
+
+    Returns (low-confidence bullet blocks, raw style-block lines).
     """
-    span = _vp.find_section(body, "⚠️ Low-confidence")
+    span = _vp.find_section(body, BUCKETS["low"][0])
     if span is None:
         return [], []
     start, end = span
@@ -180,12 +202,39 @@ def _split_low_confidence(body: str) -> tuple[list[str], list[str]]:
             break
     head = lines[:style_idx] if style_idx is not None else lines
     style = lines[style_idx:] if style_idx is not None else []
-    bullets = [ln for ln in head if FINDING_START_RE.match(ln) and not STYLE_BULLET_RE.match(ln)]
-    return bullets, style
+    blocks = [b for b in _bullet_blocks(head) if not STYLE_BULLET_RE.match(b[0])]
+    return blocks, style
+
+
+def _bullet_blocks(lines: list[str]) -> list[tuple[str, str]]:
+    """Group each column-0 finding bullet with its continuation lines.
+
+    `extract_bucket_bullets` returns first lines only ("Sub-bullets (indented)
+    and continuation paragraphs (no leading `**`) are not counted"), which is
+    right for counting and wrong for working: a 🚨 bullet's fix prose and
+    suggested patch all live below its first line, and that is the part the
+    author has to act on. One block per bullet, so the count still matches.
+    """
+    blocks: list[list[str]] = []
+    current: list[str] | None = None
+    for line in lines:
+        if FINDING_START_RE.match(line):
+            if current is not None:
+                blocks.append(current)
+            current = [line]
+        elif current is not None:
+            if line.startswith("#"):  # a nested heading ends the block
+                blocks.append(current)
+                current = None
+            else:
+                current.append(line)
+    if current is not None:
+        blocks.append(current)
+    return [(b[0], "\n".join(b).strip()) for b in blocks]
 
 
 def _first_sentence(bullet: str, limit: int = 160) -> str:
-    """A one-line summary for the checklist view; the full bullet rides in JSON."""
+    """A one-line summary for the checklist view; `text` carries the whole bullet."""
     text = re.sub(r"^\s*-\s+", "", bullet).strip()
     text = re.sub(r"\s+", " ", text)
     return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
@@ -212,57 +261,68 @@ def extract_items(body: str, suggestions: list[dict]) -> list[dict]:
         seen.add(item["id"])
         items.append(item)
 
-    for prefix in ("outstanding", "pre-existing"):
+    for prefix in PLAIN_BUCKETS:
         heading, blocking, optional = BUCKETS[prefix]
-        for bullet in _vp.extract_bucket_bullets(body, heading):
-            anchor = _vp.extract_bullet_prefix(bullet) or "L?"
+        span = _vp.find_section(body, heading)
+        section = body.splitlines()[span[0]:span[1]] if span else []
+        for first, full in _bullet_blocks(section):
+            anchor = _vp.extract_bullet_prefix(first) or "L?"
             add({
                 "id": f"{prefix}:{anchor}",
                 "bucket": prefix,
                 "anchor": anchor,
                 "blocking": blocking,
                 "optional": optional,
-                "summary": _first_sentence(bullet),
-                "text": bullet.strip(),
+                "summary": _first_sentence(first),
+                "text": full,
                 "trail": trail.get(anchor, ""),
             })
 
-    low_bullets, style_lines = _split_low_confidence(body)
-    for bullet in low_bullets:
-        anchor = _vp.extract_bullet_prefix(bullet) or "L?"
+    low_blocks, style_lines = _split_low_confidence(body)
+    _, low_blocking, low_optional = BUCKETS["low"]
+    for first, full in low_blocks:
+        anchor = _vp.extract_bullet_prefix(first) or "L?"
         add({
             "id": f"low:{anchor}",
             "bucket": "low",
             "anchor": anchor,
-            "blocking": False,
-            "optional": False,
-            "summary": _first_sentence(bullet),
-            "text": bullet.strip(),
+            "blocking": low_blocking,
+            "optional": low_optional,
+            "summary": _first_sentence(first),
+            "text": full,
             "trail": trail.get(anchor, ""),
         })
 
-    # Style bullets are grouped under an `##### <path>` H5 per file.
+    # Style bullets are grouped under an `##### <path>` H5 per file, so this
+    # walk tracks the heading rather than reusing _bullet_blocks wholesale;
+    # continuation lines still fold into the bullet they belong to.
+    _, style_blocking, style_optional = BUCKETS["style"]
     current_file = ""
+    last: dict | None = None
     for line in style_lines:
         heading = STYLE_FILE_HEADING_RE.match(line.strip())
         if heading:
             current_file = heading.group(1)
+            last = None
             continue
         m = STYLE_BULLET_RE.match(line)
-        if not m:
+        if m:
+            last = {
+                "id": f"style:{current_file or '?'}:L{m.group(1)}",
+                "bucket": "style",
+                "anchor": f"L{m.group(1)}",
+                "file": current_file,
+                "blocking": style_blocking,
+                "optional": style_optional,
+                "one_click": False,
+                "summary": _first_sentence(line),
+                "text": line.strip(),
+                "trail": "",
+            }
+            add(last)
             continue
-        add({
-            "id": f"style:{current_file or '?'}:L{m.group(1)}",
-            "bucket": "style",
-            "anchor": f"L{m.group(1)}",
-            "file": current_file,
-            "blocking": False,
-            "optional": False,
-            "one_click": False,
-            "summary": _first_sentence(line),
-            "text": line.strip(),
-            "trail": "",
-        })
+        if last is not None and line.strip() and not line.startswith("#"):
+            last["text"] += "\n" + line.rstrip()
 
     # Mark the style items that have a live one-click button, and surface any
     # posted suggestion the pinned block doesn't carry (a stale ✏️ annotation
@@ -352,7 +412,7 @@ def apply_state(items: list[dict], state: dict[str, dict]) -> list[dict]:
     return stale
 
 
-def summarize(items: list[dict], parse_confidence: str) -> dict:
+def summarize(items: list[dict], parse_confidence: str, suggestions_ok: bool = True) -> dict:
     remaining = [
         it for it in items
         if not it.get("optional") and (not it.get("disposition") or it.get("problem"))
@@ -366,7 +426,10 @@ def summarize(items: list[dict], parse_confidence: str) -> dict:
         "resolved": sum(1 for it in items if it.get("disposition") and not it.get("problem")),
         "remaining": len(remaining),
         "remaining_ids": [it["id"] for it in remaining],
-        "clean": not remaining and parse_confidence == "high",
+        # Clean means "everything was seen and everything was decided". A body
+        # that didn't parse or a suggestions fetch that failed means the first
+        # half is unproven, whatever the dispositions say.
+        "clean": not remaining and parse_confidence == "high" and suggestions_ok,
     }
 
 
@@ -389,6 +452,10 @@ def render_markdown(report: dict) -> str:
     if report["parse_confidence"] != "high":
         out.append("> **Parse confidence: low.** The pinned review did not parse into buckets; "
                    "work from the comment itself and treat this list as incomplete.")
+        out.append("")
+    if not report.get("suggestions_ok", True):
+        out.append("> **Inline suggestions could not be fetched.** Any ✏️ one-click suggestions on "
+                   "the Files-changed tab are missing from this list — check them by hand.")
         out.append("")
     out.append(f"{s['resolved']} of {s['total']} items dispositioned · "
                f"{s['remaining']} still needing a decision")
@@ -423,6 +490,9 @@ def render_markdown(report: dict) -> str:
 
 def _remaining_label(summary: dict, items: list[dict]) -> str:
     if not summary["clean"]:
+        if not summary["remaining"]:
+            # Everything listed was decided, but the list itself isn't trustworthy.
+            return "every listed item decided — but the list is incomplete"
         return f"{summary['remaining']} item(s) still open"
     untouched_optional = sum(1 for it in items if it.get("optional") and not it.get("disposition"))
     if untouched_optional:
@@ -431,17 +501,18 @@ def _remaining_label(summary: dict, items: list[dict]) -> str:
 
 
 def build_report(body: str, suggestions: list[dict], state: dict[str, dict], pr: int | None,
-                 repo: str) -> dict:
+                 repo: str, suggestions_ok: bool = True) -> dict:
     parse_confidence = "high" if _vp.extract_count_table_row(body) else "low"
     items = extract_items(body, suggestions)
     stale = apply_state(items, state)
-    summary = summarize(items, parse_confidence)
+    summary = summarize(items, parse_confidence, suggestions_ok)
     head = HEAD_SENTINEL_RE.search(body)
     return {
         "pr": pr,
         "repo": repo,
         "reviewed_sha": head.group(1) if head else None,
         "parse_confidence": parse_confidence,
+        "suggestions_ok": suggestions_ok,
         "counts_table": _vp.extract_count_table_row(body),
         "items": items,
         "stale_state": stale,
@@ -475,6 +546,13 @@ _FIXTURE = """<!-- CLAUDE_REVIEW 1/1 -->
 *These must be resolved or refuted before merging.*
 
 - **[L40]** The language count is wrong; the docs say six.
+
+  Suggested fix:
+
+  ```diff
+  - nine languages
+  + six languages
+  ```
 
 ### ⚠️ Low-confidence
 
@@ -524,6 +602,12 @@ def self_test() -> int:
     outstanding = next(i for i in items if i["id"] == "outstanding:L40")
     check("trail attached", "contradicted" in outstanding["trail"])
     check("outstanding blocks", outstanding["blocking"] is True)
+    # The fix prose and patch below a bullet's first line are the part the
+    # author has to act on — they must survive into `text`.
+    check("multi-line bullet captured", "+ six languages" in outstanding["text"])
+    check("summary stays one line", "\n" not in outstanding["summary"])
+    check("block stops at the next bullet",
+          "Unattributed" not in outstanding["text"])
     check("pre-existing optional",
           next(i for i in items if i["bucket"] == "pre-existing")["optional"] is True)
 
@@ -581,6 +665,14 @@ def self_test() -> int:
     check("low parse confidence", r4["parse_confidence"] == "low")
     check("low parse is never clean", r4["summary"]["clean"] is False)
 
+    # Nor may a failed suggestions fetch: every item decided, list unproven.
+    r5 = build_report(body, [], state, 20123, DEFAULT_REPO, suggestions_ok=False)
+    check("failed suggestions fetch blocks clean", r5["summary"]["clean"] is False)
+    check("failed fetch reported", r5["suggestions_ok"] is False)
+    check("label says incomplete, not open",
+          "incomplete" in r5["remaining_label"] and "still open" not in r5["remaining_label"])
+    check("markdown warns about the gap", "could not be fetched" in render_markdown(r5))
+
     check("markdown renders", "🚨 Outstanding" in render_markdown(r1))
 
     for f in failures:
@@ -626,13 +718,18 @@ def main() -> int:
         except (OSError, json.JSONDecodeError) as exc:
             raise SystemExit(f"review-worklist: cannot read {args.suggestions_file}: {exc}")
         suggestions = [x for x in loaded if isinstance(x, dict)] if isinstance(loaded, list) else []
+        suggestions_ok = isinstance(loaded, list)
     elif args.pr:
-        suggestions = fetch_inline_suggestions(args.repo, args.pr)
+        suggestions, suggestions_ok = fetch_inline_suggestions(args.repo, args.pr)
+        if not suggestions_ok:
+            log("warning: could not fetch inline style suggestions — worklist is incomplete")
     else:
-        suggestions = []
+        # --body-file with no --pr: the caller opted out of the suggestions lane
+        # deliberately, so completeness is theirs to assert, not ours to doubt.
+        suggestions, suggestions_ok = [], True
 
     state = load_state(Path(args.state)) if args.state else {}
-    report = build_report(body, suggestions, state, args.pr, args.repo)
+    report = build_report(body, suggestions, state, args.pr, args.repo, suggestions_ok)
 
     if args.format == "json":
         print(json.dumps(report, indent=2, ensure_ascii=False))

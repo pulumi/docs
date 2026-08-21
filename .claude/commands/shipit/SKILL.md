@@ -323,7 +323,7 @@ Commands that will run:
 
 4. **Celebrate**:
    ```
-   🐿️ Ship it! Your changes are ready for review.
+   🐿️ Ship it! Your changes are pushed and the PR is open as a draft.
    ```
 
 ---
