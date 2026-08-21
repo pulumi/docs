@@ -138,7 +138,7 @@ Kubernetes and Pulumi Neo together represent a future of **autonomous infrastruc
 
 ## Operator-First: Kubernetes Deploys Your Cloud
 
-The [Pulumi Kubernetes Operator 2.0 GA](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0-ga/) introduced a Kubernetes-native approach to infrastructure management. Each Pulumi stack becomes a **Kubernetes Custom Resource**, allowing Kubernetes itself to execute Pulumi programs written in any supported language. This enables:
+The [Pulumi Kubernetes Operator 2.0 GA](/blog/pko-2-0-ga/) introduced a Kubernetes-native approach to infrastructure management. Each Pulumi stack becomes a **Kubernetes Custom Resource**, allowing Kubernetes itself to execute Pulumi programs written in any supported language. This enables:
 
 - Management of AWS, Azure, and GCP infrastructure from within the cluster
 - Integration with GitOps systems such as Argo CD and Flux
@@ -151,7 +151,7 @@ With the new [Pulumi Kubernetes Operator 2.3](https://www.pulumi.com/blog/pulumi
 - Better visibility with enhanced events, status reporting, and error surfacing
 - Performance improvements for large-scale environments and parallel stack operations
 
-Documentation: [Using the Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/)
+Documentation: [Using the Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/)
 
 {{< blog/cta-card title="Kubernetes beyond YAML" >}}
 Define clusters, workloads, and policies in TypeScript, Python, or Go, and manage EKS, AKS, and GKE from a single code-first workflow.
@@ -178,7 +178,7 @@ This hybrid approach enables modernization without disrupting existing CI/CD pip
 For teams preparing for the next phase of Kubernetes management in 2026:
 
 1. [Get Started with Kubernetes](https://www.pulumi.com/docs/iac/get-started/kubernetes/) to create your first Pulumi program.
-2. Add the [Pulumi Kubernetes Operator](https://www.pulumi.com/docs/iac/guides/continuous-delivery/pulumi-kubernetes-operator/) to enable infrastructure deployments from within your clusters.
+2. Add the [Pulumi Kubernetes Operator](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/) to enable infrastructure deployments from within your clusters.
 3. Integrate GitOps workflows with Argo CD, Flux, or Jenkins X.
 4. [Apply policy guardrails](https://www.pulumi.com/docs/insights/policy/) to enforce security and compliance automatically.
 5. Refactor infrastructure into [reusable components](https://www.pulumi.com/docs/iac/concepts/components/) for consistent, scalable operations.
