@@ -106,8 +106,8 @@ sections:
     title: See everything, control everything
     description: |
       Search across all clouds from a single pane of glass in Pulumi Cloud. Enforce policies automatically, track compliance, and get AI-powered insights. Know exactly what's running where and why.
-    cta_text: Explore Pulumi Discovery & Governance
-    cta_link: /product/pulumi-insights/
+    cta_text: Explore Discovery & governance
+    cta_link: /product/discovery-governance/
     image: /images/product/overview/overview-governance.svg
     image_alt: Pulumi resource search across clouds
     cards:
@@ -123,7 +123,7 @@ sections:
         title: Complete audit trail
         description: |
           Track every change, every action, and every user. Export to security and event management systems (SIEMs) for compliance reports.
-    anchor: insights
+    anchor: discovery
 
   - type: section_header
     tag_line: Internal developer platform

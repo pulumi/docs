@@ -313,9 +313,9 @@ sections:
         description: |
           Use natural language queries to find managed and unmanaged resources — even across clouds. Enforce policies, track compliance in real-time, and find vulnerabilities before they become incidents.
         image: /images/home/ig-card-image.svg
-        image_alt: Pulumi Discovery & Governance dashboard
-        cta_text: Learn more about discovery & governance
-        cta_link: /product/insights-governance/
+        image_alt: Discovery & governance dashboard
+        cta_text: Learn more about Discovery & governance
+        cta_link: /product/discovery-governance/
       - title: Self-service infrastructure
         description: |
           Define golden paths for approved infrastructure with configurable components and customizable templates that enable developers while keeping platform teams in control.

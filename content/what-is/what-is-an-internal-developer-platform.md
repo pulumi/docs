@@ -169,7 +169,7 @@ No single product is "the IDP"—an IDP is assembled from layers. The ecosystem 
 | Infrastructure provisioning (IaC) | Provisions and manages cloud resources as code | Pulumi, Terraform/OpenTofu, Crossplane |
 | CI/CD & GitOps | Builds and deploys applications | GitHub Actions, GitLab CI, Argo CD, Flux |
 | Observability | Logging, metrics, tracing, alerting | Prometheus, Grafana, OpenTelemetry |
-| Policy & security | Guardrails and compliance as code | Pulumi CrossGuard, OPA, Kyverno |
+| Policy & security | Guardrails and compliance as code | Pulumi Policies, OPA, Kyverno |
 
 Pulumi typically serves as the provisioning and orchestration layer—defining golden paths and infrastructure in general-purpose languages—while integrating with whatever portal, CI/CD, and observability tooling a team already uses.
 
