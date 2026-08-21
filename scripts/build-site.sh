@@ -45,9 +45,12 @@ fi
 
 # --gc prunes cache entries the build no longer references, which is what bounds
 # the growth of the cached resources/ tree (nothing else reclaims superseded
-# entries). Applied on the deploy branches below and only in CI: master's cache
-# is the one PR builds inherit, so pruning there keeps it in check, while a PR
-# build pruning against its own narrower view could evict entries master needs.
+# entries). The guard below is on the non-preview branches, so this covers every
+# non-preview build under CI: the two deploy workflows, plus any CI job that runs
+# `make build` (pulumi-cli-docs.yml does). That is fine because all of them build
+# the full site and so reference the same set of entries. PR preview builds are
+# the ones deliberately excluded -- they share the same cache namespace, and a
+# build pruning against a narrower view could drop entries the others still need.
 hugo_gc=()
 if [ -n "${CI:-}" ]; then
     hugo_gc=(--gc)

@@ -98,10 +98,12 @@ jobs:
         with:
           path: resources
           # The version prefix must match the hugo-version pinned above, and be
-          # identical in pull-request.yml and build-and-deploy.yml or PRs stop
-          # inheriting master's cache. Hugo does not put its own version in the
-          # cache key, so without this a Hugo upgrade keeps serving images
-          # encoded by the previous version indefinitely. Bump both on upgrade.
+          # identical in every workflow that caches resources/ -- pull-request.yml,
+          # build-and-deploy.yml, testing-build-and-deploy.yml, and
+          # pulumi-cli-docs.yml -- or they stop sharing a cache. Hugo does not put
+          # its own version in the cache key, so without this a Hugo upgrade keeps
+          # serving images encoded by the previous version indefinitely. Bump them
+          # together on upgrade.
           key: hugo-resources-0.157.0-${{ github.sha }}
           restore-keys: |
             hugo-resources-0.157.0-
