@@ -27,15 +27,24 @@ printf "Generating meta images...\n\n"
 node scripts/generate-meta-images.mjs
 
 printf "Running Hugo...\n\n"
+# Hugo previously ran under GOGC=3, which collects once the heap grows 3% over
+# live heap. That capped memory but cost 1.7-3x in wall time, since every
+# allocation-heavy operation (image processing above all) drags a full GC behind
+# it. GOMEMLIMIT expresses the actual intent -- "do not exhaust the runner" --
+# as a soft ceiling, letting Go collect at its normal rate until the build
+# approaches the limit. The runner has 16GB; 12GiB leaves room for the Node and
+# Pulumi steps that share it.
+export GOMEMLIMIT=12GiB
+
 if [ "$1" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
-    GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
+    hugo --minify --buildFuture --templateMetrics -e "preview"
 else
     if [ "$DEPLOYMENT_ENVIRONMENT" == "testing" ]; then
         export HUGO_BASEURL="https://www.pulumi-test.io"
-        GOGC=3 hugo --minify --buildFuture --templateMetrics -e "preview"
+        hugo --minify --buildFuture --templateMetrics -e "preview"
     else
-        GOGC=3 hugo --minify --templateMetrics -e "production"
+        hugo --minify --templateMetrics -e "production"
     fi
 fi
 

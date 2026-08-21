@@ -4,6 +4,17 @@ on:
     branches:
       - master
       - 'release/**'
+
+# Only the newest commit on a PR is worth building. Without this, pushing three
+# commits in quick succession runs three full builds to completion, and the two
+# superseded ones just burn a runner and hold up the queue. Each run publishes to
+# a bucket keyed by PR number *and* head sha, so a cancelled run can only orphan
+# its own preview bucket -- pr-closed.yml deletes every *-pr-<num>-* bucket when
+# the PR closes, and bucket-cleanup.yml sweeps daily.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
@@ -90,6 +101,11 @@ jobs:
           restore-keys: |
             hugo-resources-
 
+      # PR runs don't wait on await-in-progress.js the way master deploys do, so
+      # the elapsed time here is build time with no queue wait to subtract.
+      - name: Record build start time
+        run: echo "CI_BUILD_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
+
       - name: Build and deploy
         run: make ci_pull_request
         env:
@@ -103,6 +119,17 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+
+      # The same guardrail build-and-deploy.yml has. PR builds had none, which is
+      # how they drifted to ~17 minutes without anyone being told. 15 minutes
+      # sits a few minutes above the post-fix baseline, so it should stay quiet
+      # unless the build genuinely regresses; tighten it once that baseline settles.
+      - name: Alert on slow build
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          BUILD_DURATION_THRESHOLD_MINUTES: '15'
+        run: ./scripts/ci-build-duration-alert.sh
 
       - name: Archive test results
         uses: actions/upload-artifact@v7
