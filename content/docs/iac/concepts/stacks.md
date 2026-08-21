@@ -739,7 +739,7 @@ func main() {
     kubeConfig := stackRef.GetOutput(pulumi.String("kubeConfig"))
     // ...
     return nil
-  }
+  })
 }
 ```
 

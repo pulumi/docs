@@ -127,7 +127,7 @@ func main() {
             return err
         }
         return nil
-    }
+    })
 }
 ```
 
@@ -380,7 +380,8 @@ func main() {
 
         name := c.Require("name")
         dbPassword := c.RequireSecret("dbPassword")
-    }
+        return nil
+    })
 }
 ```
 

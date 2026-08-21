@@ -148,7 +148,7 @@ func main() {
         }
         secret := conf.RequireSecret("secret")
         return nil
-    }
+    })
 }
 ```
 

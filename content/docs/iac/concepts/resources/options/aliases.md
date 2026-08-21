@@ -131,7 +131,6 @@ db, err := NewDatabase(ctx, "new-name-for-db", &DatabaseArgs{ /*...*/ },
     pulumi.Aliases([]pulumi.Alias{
         {URN: pulumi.URN("urn:pulumi:stackname::projectname::aws:rds/database:Database::old-name-for-db")},
     }))
-)
 ```
 
 {{% /choosable %}}
