@@ -37,7 +37,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 
 ## Obtain a personal access token
 
-To complete the application-configuration portion of the tutorial, you'll also need a Pulumi Cloud [personal access token](/docs/administration/access-identity/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial, copy it into your current shell, an apply it as an environment variable as follows:
+To complete the application-configuration portion of the tutorial, you'll also need a Pulumi Cloud [personal access token](/docs/administration/concepts/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial, copy it into your current shell, an apply it as an environment variable as follows:
 
 ```bash
 export PULUMI_ACCESS_TOKEN="${YOUR_TOKEN_VALUE}"

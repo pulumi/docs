@@ -427,7 +427,7 @@ If `neo-task-launcher` fails to launch tasks:
 ## Learn more
 
 - [Pulumi Agent Skills](/docs/ai/skills/) - teach your agent proven Pulumi workflows
-- [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
+- [Agent accounts](/docs/administration/concepts/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
 - [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/)
 - [Pulumi Neo documentation](/docs/ai/neo/)
 - [Model Context Protocol specification](https://modelcontextprotocol.io)

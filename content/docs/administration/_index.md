@@ -20,33 +20,33 @@ aliases:
 link_buttons:
   primary:
     label: Get Started
-    link: /docs/administration/organizations-teams/
+    link: /docs/administration/get-started/
 
 sections:
 - type: button-cards
   heading: Getting started
   cards:
   - icon: rocket-launch
-    heading: Onboarding Guide
-    link: /docs/administration/onboarding-guide/
-    description: Set up Pulumi for your organization with guidance on subscriptions, security, team structure, and migration.
+    heading: Get Started
+    link: /docs/administration/get-started/
+    description: Set up Pulumi for your organization with guidance on editions, security, team structure, and migration.
 
   - icon: buildings
-    heading: Organizations & Teams
-    link: /docs/administration/organizations-teams/
-    description: Create organizations, manage teams, configure user accounts, and assign billing managers.
+    heading: Concepts
+    link: /docs/administration/concepts/
+    description: Organizations, accounts, access tokens, role-based access control, audit logs, and customer managed keys.
 
-  - icon: lock-key
-    heading: Access & Identity
-    link: /docs/administration/access-identity/
-    description: Configure access tokens, RBAC, SAML SSO, SCIM, and OIDC for authentication.
+  - icon: gear
+    heading: Guides
+    link: /docs/administration/guides/
+    description: Configure SAML SSO, SCIM provisioning, OIDC issuers, audit log export, customer managed keys, and billing.
 
-  - icon: shield-check
-    heading: Security & Compliance
-    link: /docs/administration/security-compliance/
-    description: Set up audit logs and customer managed encryption keys.
+  - icon: books
+    heading: Reference
+    link: /docs/administration/reference/
+    description: Lookup tables, including the complete catalog of RBAC scopes.
 
-  - icon: buildings
+  - icon: cloud
     heading: Self-Hosting
     link: /docs/administration/self-hosting/
     description: Deploy Pulumi Cloud in your own infrastructure with the Business Critical edition.
