@@ -122,10 +122,12 @@
       "hash": "a3f1bd92a24b9c78456f1755d1703400885a8ad1cbae0c14a4f1d3aa8857ac9b"
     },
     "AWSSSOSetupRequest": {
-      "hash": "68e703b8b1af751623b754790ab9b05482250e63c7be92c97fce13179ad851a5"
+      "hash": "d777f5185d62a7c5420ebc0b822ab9b55a5f18d02197656320800d43a6fc25c1",
+      "lastmod": "2026-08-21"
     },
     "AWSSetupRequest": {
-      "hash": "7cbc820617f76817656fde82234603472db1c206030e62f1002912cbd6423514"
+      "hash": "0a32f0435c5fb74f9fa3f00a04be1ee524841db7d3e64104e92d273f83c12506",
+      "lastmod": "2026-08-21"
     },
     "AccessToken": {
       "hash": "4b905c66739c5fb01c6706024b3c8f1cea7d43601e8b71a21aedd9185683b587"
