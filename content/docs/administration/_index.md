@@ -34,12 +34,12 @@ sections:
   - icon: buildings
     heading: Concepts
     link: /docs/administration/concepts/
-    description: Organizations, accounts, access tokens, role-based access control, audit logs, and customer managed keys.
+    description: Organizations, accounts, billing managers, access tokens, role-based access control, audit logs, and customer managed keys.
 
   - icon: gear
     heading: Guides
     link: /docs/administration/guides/
-    description: Configure SAML SSO, SCIM provisioning, OIDC issuers, audit log export, customer managed keys, and billing.
+    description: Configure SAML SSO, SCIM provisioning, OIDC issuers, audit log export, customer managed keys, and least privilege.
 
   - icon: books
     heading: Reference

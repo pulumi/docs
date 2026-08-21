@@ -2,7 +2,7 @@
 title: Guides
 title_tag: Pulumi Cloud Administration Guides
 h1: Guides
-meta_desc: Task-oriented guides for administering Pulumi Cloud — SAML SSO, SCIM, OIDC issuers, audit log export, customer-managed keys, and least privilege.
+meta_desc: Task-oriented guides for administering Pulumi Cloud — SAML SSO, SCIM provisioning, OIDC issuers, audit log export, and customer-managed keys.
 menu:
   administration:
     name: Guides
@@ -24,7 +24,3 @@ Procedures for setting up and running a Pulumi Cloud organization. Each guide is
 - [Export audit logs](/docs/administration/guides/export-audit-logs/) — stream your organization's audit log to AWS S3 or Microsoft Sentinel.
 - [Customer managed keys](/docs/administration/guides/customer-managed-keys/) — bring your own encryption key from an external key management system.
 - [Least privilege](/docs/administration/guides/least-privilege/) — apply least-privilege access across IaC, ESC, and CI/CD.
-
-## Organization management
-
-- [Billing managers](/docs/administration/guides/billing-managers/) — assign the people who manage billing and subscriptions.

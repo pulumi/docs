@@ -203,7 +203,7 @@ For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
 Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
-If you need to delegate billing-only access, see [Billing Managers](/docs/administration/guides/billing-managers/).
+If you need to delegate billing-only access, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
 ## GitLab Support
 

@@ -6,9 +6,8 @@ h1: "Billing managers"
 menu:
   administration:
     name: Billing managers
-    parent: administration-guides
-    weight: 7
-    
+    parent: administration-concepts
+    weight: 4
 aliases:
 - /docs/pulumi-cloud/access-management/billing-managers/
 - /docs/intro/pulumi-service/billing-managers/

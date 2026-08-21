@@ -99,7 +99,7 @@ To update billing information:
 1. Navigate to **Settings** > **Billing & usage**.
 1. Under **Payment methods**, select **Update**.
 
-If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/guides/billing-managers/).
+If you need to delegate billing-only access to a team member without granting full admin rights, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
 ## Changing the company name on invoices
 

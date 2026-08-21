@@ -2,7 +2,7 @@
 title: Concepts
 title_tag: Pulumi Cloud Administration Concepts
 h1: Concepts
-meta_desc: The Pulumi Cloud organization and access model — organizations, accounts, access tokens, role-based access control, audit logs, and customer-managed keys.
+meta_desc: The Pulumi Cloud organization and access model — organizations, accounts, billing managers, access tokens, RBAC, audit logs, and customer-managed keys.
 menu:
   administration:
     name: Concepts
@@ -20,6 +20,7 @@ How Pulumi Cloud models your organization and who can do what inside it. Read th
 - [Organizations](/docs/administration/concepts/organizations/) — the top-level container that owns your stacks, environments, and settings.
 - [Accounts](/docs/administration/concepts/accounts/) — individual user accounts, profiles, and identity providers.
 - [Agent accounts](/docs/administration/concepts/agent-accounts/) — accounts for AI agents and automation acting on your organization's behalf.
+- [Billing managers](/docs/administration/concepts/billing-managers/) — the role that delegates billing access without granting admin rights.
 - [Access tokens](/docs/administration/concepts/access-tokens/) — personal, team, and organization tokens for authenticating the CLI, CI/CD, and the REST API.
 
 ## Access control
