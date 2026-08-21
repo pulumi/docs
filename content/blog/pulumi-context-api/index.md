@@ -106,4 +106,6 @@ If your organization uses [Neo](/product/neo/), skip the steps and just ask it a
 1. Hand it to your favorite agent.
 1. Ask a question: tell your agent in plain English what you want to know, or compose a query from the primer's examples and run it with `pulumi api GraphQuery -F orgName=<your-org> --input query.json`.
 
+The [Context API documentation](/docs/insights/context-api/) covers access, permissions, and worked query recipes if you want more than the primer.
+
 Give it a try today, and share your feedback in the [Pulumi Community Slack](https://slack.pulumi.com/) or through your account team. Your feedback will guide what we prioritize next, especially if there's a question you want answered that the graph doesn't handle yet.

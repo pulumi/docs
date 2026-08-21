@@ -45,6 +45,10 @@ sections:
     heading: Agent Accounts
     link: /docs/administration/organizations-teams/agent-accounts/
     description: Ephemeral Pulumi Cloud accounts provisioned automatically for AI agents.
+  - icon: graph
+    heading: Context API
+    link: /docs/insights/context-api/
+    description: Query IaC state, stack dependencies, and discovered cloud resources as one graph, with a primer any agent can fetch and learn.
 
 - type: button-cards
   heading: Use Pulumi Neo
