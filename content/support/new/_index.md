@@ -34,7 +34,7 @@ form:
                   value: program
                 - label: My Pulumi Cloud
                   value: cloud
-                - label: Pulumi Documentations/Blog
+                - label: Pulumi Documentation/Blog
                   value: docs
         subject:
             label: Subject
