@@ -26,7 +26,7 @@ It's possible to create a new Pulumi project, commit its code, and deploy it ent
 Navigate to the "New Project" tab.
 Select "Use a template" if you'd like to create a fully featured project, or select "Use a starter" if you want to create a bare-bones project with only the minimal necessary boilerplate.
 
-For this guide, select the `random-typescript` template. This template uses the [Pulumi Random provider](/registry/packages/random/) to generate random values, so the deployment runs to completion without any cloud credentials or [OIDC](/docs/pulumi-cloud/oidc/) configuration — letting you see Deployments work end to end before wiring up a real cloud provider.
+For this guide, select the `random-typescript` template. This template uses the [Pulumi Random provider](/registry/packages/random/) to generate random values, so the deployment runs to completion without any cloud credentials or [OIDC](/docs/deployments/guides/oidc/) configuration — letting you see Deployments work end to end before wiring up a real cloud provider.
 
 In order to use templates you will need to authorize Pulumi with your VCS provider so that it can clone private repositories as template sources and commit new code for your projects.
 Click the button and accept the required permissions if you would like to use templates.
@@ -58,7 +58,7 @@ This impacts the `config` stanza in `Pulumi.<stack>.yaml`.
 
 ### Environment
 
-If you've configured [environments](/docs/pulumi-cloud/esc) with your organization, you can specify one to use with the resulting stack.
+If you've configured [environments](/docs/esc/) with your organization, you can specify one to use with the resulting stack.
 
 This enables the resulting stack to use a bundle of pre-configured secrets and configuration values without needing to re-specify all of them during project creation.
 

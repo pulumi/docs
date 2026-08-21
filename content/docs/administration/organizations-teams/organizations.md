@@ -33,7 +33,7 @@ Organizations are a space for you to collaborate on shared projects and stacks.
 | Dashboard | An overview of the organization including recently updated stacks, recent activity, and a resource count graph. |
 | All stacks | A searchable list of organization stacks that you can group by project and tag. For more information, see [Stacks](/docs/iac/concepts/stacks/). |
 | Policies | Lists of organization policies and policy groups. Policies allow you to set guardrails to enforce best practices and compliance. |
-| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/using-pulumi/continuous-delivery/). |
+| Settings | Organization settings including subscription and payment information and history, Billing Managers, stack permissions, and links to Pulumi's [continuous delivery guides](/docs/iac/operations/continuous-delivery/). |
 
 ## Creating an organization
 
@@ -57,7 +57,7 @@ For example, to become a member of a Pulumi organization backed by a GitLab Grou
 you must associate a GitLab identity with your Pulumi account, and also
 be a member of that GitLab group.
 
-For more information, see [How do I link an existing Pulumi account to my company's organization?](/docs/support/pulumi-cloud-faq/#how-do-i-link-an-existing-pulumi-account-to-my-companys-organization)
+For more information, see [How do I link an existing Pulumi account to my company's organization?](/docs/support/faq/pulumi-cloud/#how-do-i-link-an-existing-pulumi-account-to-my-companys-organization)
 
 ## Inviting members to an organization
 
@@ -112,7 +112,7 @@ To update your organization's display name:
 
 Updating the display name requires the `organization:rename` permission, which is granted to organization admins.
 
-If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](/support/).
+If you need a legal entity name on invoices that is different from your organization's product-facing display name, [contact support](https://support.pulumi.com/).
 
 ## Transferring stacks
 
@@ -158,7 +158,7 @@ To delete an organization:
 
 Before deleting an organization, make sure you have transferred any stacks you want to keep to another organization or individual account.
 
-For more information, see [How can I delete a Pulumi organization?](/docs/support/pulumi-cloud-faq/#how-can-i-delete-a-pulumi-organization)
+For more information, see [How can I delete a Pulumi organization?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-a-pulumi-organization)
 
 ## Deleting your account
 
@@ -166,7 +166,7 @@ You can delete your personal Pulumi account from your account settings in [Pulum
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
-For more information, see [How can I delete my Pulumi account?](/docs/support/pulumi-cloud-faq/#how-can-i-delete-my-pulumi-account)
+For more information, see [How can I delete my Pulumi account?](/docs/support/faq/pulumi-cloud/#how-can-i-delete-my-pulumi-account)
 
 ## Organization identity providers
 

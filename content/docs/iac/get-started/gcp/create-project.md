@@ -173,6 +173,25 @@ $ pulumi new gcp-yaml
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+{{% choosable os "linux,macos" %}}
+
+```bash
+$ pulumi new gcp-hcl
+```
+
+{{% /choosable %}}
+{{% choosable os "windows" %}}
+
+```powershell
+> pulumi new gcp-hcl
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
 The `pulumi new` command interactively walks through initializing a new project, as well as creating a
 [**stack**](/docs/iac/concepts/stacks) and [**configuring**](/docs/iac/concepts/config) it. A stack is an instance of your
 project and you may have many of them -- like `dev`, `staging`, and `prod` -- each with different configuration settings.
@@ -222,6 +241,12 @@ After the command completes, the project and stack will be ready.
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+After the command completes, the project and stack will be ready.
+
+{{% /choosable %}}
+
 ### Review your new project's contents
 
 If you list the contents of your directory, you'll see some key files:
@@ -232,7 +257,7 @@ If you list the contents of your directory, you'll see some key files:
 
 {{% /choosable %}}
 
-{{% choosable language "typescript,python,go,csharp,java" %}}
+{{% choosable language "typescript,python,go,csharp,java,hcl" %}}
 
 - <span>{{< langfile >}}</span> contains your project's main code that declares a Google Cloud Storage bucket
 
@@ -380,6 +405,33 @@ outputs:
   # Export the DNS name of the bucket
   bucketName: ${my-bucket.url}
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```hcl
+terraform {
+  required_providers {
+    gcp = {
+      source = "pulumi/gcp"
+    }
+  }
+}
+
+# Create a Google Cloud resource (Storage Bucket)
+resource "gcp_storage_bucket" "my-bucket" {
+  location = "US"
+}
+
+# Export the DNS name of the bucket
+output "bucket_name" {
+  value = gcp_storage_bucket.my-bucket.url
+}
+```
+
+The `pulumi/gcp` source selects the Pulumi Google Cloud provider from the [Pulumi Registry](/registry/). See
+[Pulumi HCL](/docs/iac/languages-sdks/hcl/) for how provider sources resolve.
 
 {{% /choosable %}}
 

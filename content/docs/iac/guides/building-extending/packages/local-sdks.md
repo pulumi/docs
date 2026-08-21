@@ -15,7 +15,7 @@ Pulumi Packages are the core technology that enables cloud infrastructure resour
 
 ## Understanding local SDKs
 
-A local SDK is a Pulumi package SDK generated on your own computer, in the language of your program, instead of being checked into a provider repository and published to the Pulumi Registry. The package's source or executable is often downloaded from a remote source (for example, a registry or a Git repository), but the SDK itself is generated locally. Given a [package schema](/docs/iac/using-pulumi/pulumi-packages/schema/) `pulumi` can generate your package SDK for you. Local SDKs are frequently part of the Pulumi experience in several contexts:
+A local SDK is a Pulumi package SDK generated on your own computer, in the language of your program, instead of being checked into a provider repository and published to the Pulumi Registry. The package's source or executable is often downloaded from a remote source (for example, a registry or a Git repository), but the SDK itself is generated locally. Given a [package schema](/docs/iac/guides/building-extending/packages/schema/) `pulumi` can generate your package SDK for you. Local SDKs are frequently part of the Pulumi experience in these contexts:
 
 - When using parameterized providers like [`terraform-provider`](/registry/packages/terraform-provider/).
 - When working with components as packages.
@@ -25,7 +25,7 @@ A local SDK is a Pulumi package SDK generated on your own computer, in the langu
 Local SDKs allow you to generate SDKs in any Pulumi language for resources or components before they're published.
 
 {{% notes type="info" %}}
-Generating an SDK locally is not the only option. You can also **pre-publish** SDKs to your language's package registry ahead of time, which avoids the local generation step for consumers. See [Publishing Packages](/docs/iac/build-with-pulumi/publishing-packages/) for a comparison of the trade-offs, and [Authoring a component for distribution](/docs/iac/concepts/packages/#authoring-a-component-for-distribution) for guidance on which to choose.
+Generating an SDK locally is not the only option. You can also **pre-publish** SDKs to your language's package registry ahead of time, which avoids the local generation step for consumers. See [Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/) for a comparison of the trade-offs, and [Authoring a component for distribution](/docs/iac/concepts/packages/#authoring-a-component-for-distribution) for guidance on which to choose.
 {{% /notes %}}
 
 ## Adding a local SDK with `pulumi package add`
@@ -58,7 +58,7 @@ This executes the provider binary to extract its package schema, useful when dev
 pulumi package add ./my/schema.json
 ```
 
-This generates an SDK directly from a schema file, which is useful for component resources or when working with pre-defined schema definitions. For details on the structure and syntax of Pulumi package schemas, refer to the [Schema Reference](/docs/iac/using-pulumi/pulumi-packages/schema/).
+This generates an SDK directly from a schema file, which is useful for component resources or when working with pre-defined schema definitions. For details on the structure and syntax of Pulumi package schemas, refer to the [Schema Reference](/docs/iac/guides/building-extending/packages/schema/).
 
 #### From a git repository
 
@@ -74,13 +74,13 @@ This clones the repo and executes the source, enabling you to use packages from 
 pulumi package add terraform-provider hashicorp/random 3.5.1
 ```
 
-Refer to the [Any Terraform Provider documentation](/docs/iac/using-pulumi/pulumi-packages/terraform-provider/) for more details.
+Refer to the [Any Terraform Provider documentation](/docs/iac/get-started/terraform/terraform-providers/) for more details.
 
 ## Using generated SDKs
 
 After adding a local SDK, reference it in your project:
 
-{{< chooser language "typescript,python,go,csharp,yaml" >}}
+{{< chooser language "typescript,python,go,csharp" >}}
 {{% choosable language typescript %}}
 
 ```bash
@@ -298,4 +298,4 @@ For documentation on how to use local SDKs with Pulumi's [Automation API](/docs/
 
 ## See also
 
-For more information about developing and publishing your own packages, see the [Publishing Packages](/docs/iac/build-with-pulumi/publishing-packages/) guide.
+For more information about developing and publishing your own packages, see the [Publishing Packages](/docs/iac/guides/building-extending/packages/publishing-packages/) guide.

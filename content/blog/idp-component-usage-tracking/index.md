@@ -53,4 +53,4 @@ If you're already publishing components to the Pulumi IDP registry, usage tracki
 
 If you haven't published to the registry yet, now is the time to start. Publishing a component is as simple as running `pulumi publish`.
 
-For more information, see the [private registry documentation](/docs/idp/get-started/private-registry/).
+For more information, see the [private registry documentation](/docs/idp/concepts/private-registry/).

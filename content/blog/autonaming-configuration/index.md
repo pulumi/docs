@@ -89,7 +89,7 @@ pulumi:autonaming:
   pattern: ${project}-${stack}-${name}${alphanum(6)}
 ```
 
-See the [auto-naming configuration documentation](/docs/concepts/resources/names/#autonaming-configuration) to see the full list of available expressions.
+See the [auto-naming configuration documentation](/docs/iac/concepts/resources/names/#autonaming-configuration) to see the full list of available expressions.
 
 ## See It In Action
 
@@ -337,7 +337,7 @@ To use the auto-naming configuration feature, you'll need:
 
 Once you have the required versions installed, simply add your desired auto-naming configuration to your Pulumi configuration file.
 
-For complete documentation and advanced usage scenarios, visit our [resource auto-naming documentation](/docs/intro/concepts/resources/names/#auto-naming-configuration).
+For complete documentation and advanced usage scenarios, visit our [resource auto-naming documentation](/docs/iac/concepts/resources/names/#auto-naming-configuration).
 
 ## General Availability
 

@@ -27,7 +27,7 @@ Complete this step-by-step tutorial to deploy a Google Cloud Storage-based websi
 
 Make sure you have the <a href="https://cloud.google.com/sdk/docs/install" target="_blank">gcloud CLI</a> installed and authenticated. Then choose your language and ensure you've performed any prerequisites:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -62,6 +62,13 @@ Make sure you have the <a href="https://cloud.google.com/sdk/docs/install" targe
 {{% choosable language "yaml" %}}
 
 * A text editor
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+* A text editor
+* The [Pulumi CLI](/docs/install/) v3.256.0 or later; [Pulumi HCL](/docs/iac/languages-sdks/hcl/) needs no separate language runtime
 
 {{% /choosable %}}
 

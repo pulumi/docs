@@ -43,6 +43,34 @@ _failures: list[str] = []
 _passes = 0
 
 
+def _load_selector():
+    """select-articles.py imported by path — hyphenated filename, and its
+    main() is guarded so importing has no side effects (the same pattern
+    record-review.py and check-retire-veto.py use). Most of this suite shells
+    out to the CLI; the tier-policy checks below are pure functions, where
+    calling them directly says more than parsing a queue would.
+    """
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("select_articles", SCRIPT)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+selector = _load_selector()
+
+
+def load_repo_tiers():
+    """The shipped strategic-tiers.yaml as rules, or None if it won't parse."""
+    if not REPO_TIERS.is_file():
+        return None
+    try:
+        return selector.load_tiers(REPO_TIERS)
+    except Exception:  # noqa: BLE001 - the caller reports it as a failed check
+        return None
+
+
 def _module_assign(path: Path, name: str):
     """Return a module-level literal assignment's value, or None if absent.
 
@@ -89,11 +117,16 @@ def check(cond: bool, msg: str) -> None:
 
 PAGE = "---\ntitle: T\n---\n\nBody.\n"
 DRAFT = "---\ntitle: T\ndraft: true\n---\n\nBody.\n"
+STUB = "---\nredirect_to: /docs/misc/one/\n---\n"
 
 TIERS = """\
 tiers:
   - prefix: content/docs/generated/
     tier: 0
+  - prefix: content/docs/clidocs/
+    tier: 3
+    editable: false
+    reviewable: true
   - prefix: content/docs/concepts/
     tier: 1
   - prefix: content/docs/esc/
@@ -112,7 +145,9 @@ BASE_FILES = [
     "content/docs/misc/one.md",          # tier 3 — later bot-edited (no reset)
     "content/docs/misc/two.md",          # tier 3
     "content/docs/misc/protected/keep.md",  # tier 3, no_retire
-    "content/docs/generated/cli.md",     # tier 0 (excluded)
+    "content/docs/generated/cli.md",     # tier 0 (excluded from both lanes)
+    "content/docs/clidocs/pulumi_up.md",    # generated but reviewable (report lane)
+    "content/docs/clidocs/pulumi_down.md",  # generated but reviewable (report lane)
 ]
 
 
@@ -139,6 +174,7 @@ def make_repo(tmp: Path) -> Path:
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(PAGE)
     (repo / "content/docs/misc/draft.md").write_text(DRAFT)
+    (repo / "content/docs/misc/stub.md").write_text(STUB)
     git(repo, "add", ".")
     git(repo, "commit", "-q", "-m", "seed", date="2024-01-01T00:00:00Z")
 
@@ -209,12 +245,52 @@ def main() -> int:
         check(len(paths) == 3, f"3 picks (got {paths})")
         check("content/docs/generated/cli.md" not in paths, "tier-0 excluded")
         check("content/docs/misc/draft.md" not in paths, "draft excluded")
+        check("content/docs/misc/stub.md" not in [a["path"] for a in
+              run_select(repo, tiers, empty, "--count", "20")["articles"]],
+              "redirect_to stub excluded")
         check(all(a["lane"] == "priority" for a in q["articles"]), "all picks priority lane")
         check(paths[0] == C, f"most-stale tier-1 tops the queue (got {paths[0]})")
         check(paths[1] == OVERVIEW, f"stale tier-2 outranks stale tier-3 (got {paths[1]})")
         check(STACKS not in paths, "freshly human-edited tier-1 is NOT in the top picks")
         q2 = run_select(repo, tiers, empty, "--count", "3")
         check([a["path"] for a in q2["articles"]] == paths, "selection is deterministic")
+
+        print("report mode: the other half of the corpus, and only that half")
+        # #20996: `editable: false, reviewable: true` pages are invisible to the
+        # fix lane and are the ONLY pages the report lane sees. Neither lane
+        # touches a tier-0 tree.
+        fix_all = [a["path"] for a in
+                   run_select(repo, tiers, empty, "--count", "50")["articles"]]
+        rq = run_select(repo, tiers, empty, "--mode", "report", "--count", "50")
+        rep_all = [a["path"] for a in rq["articles"]]
+        check(sorted(rep_all) == ["content/docs/clidocs/pulumi_down.md",
+                                  "content/docs/clidocs/pulumi_up.md"],
+              f"report lane sees exactly the reviewable generated pages (got {rep_all})")
+        check(not set(rep_all) & set(fix_all), "the two lanes never overlap")
+        check(not any(p.startswith("content/docs/clidocs/") for p in fix_all),
+              "fix lane never sees a non-editable page")
+        check("content/docs/generated/cli.md" not in rep_all,
+              "tier 0 stays out of the report lane too")
+        check(rq.get("mode") == "report"
+              and all(a["mode"] == "report" for a in rq["articles"]),
+              "the queue and every entry carry the mode the worker runs in")
+        check(all(a["editable"] is False for a in rq["articles"]),
+              "report entries carry editable: false for the downstream gates")
+        check(all(a["no_retire"] is True for a in rq["articles"]),
+              "a page no PR may edit is stamped no_retire, matching check-retire-veto")
+        check(all(a["editable"] is True for a in
+                  run_select(repo, tiers, empty, "--count", "3")["articles"]),
+              "fix entries carry editable: true")
+        check(run_select(repo, tiers, empty, "--count", "3")["mode"] == "fix",
+              "fix is the default mode")
+
+        print("report mode: staleness laps the tree (a recorded page steps aside)")
+        recorded = tmp / "ledger-reported"
+        write_ledger(recorded, "content/docs/clidocs/pulumi_down.md", "2026-06-11",
+                     status="reported")
+        rq2 = run_select(repo, tiers, recorded, "--mode", "report", "--count", "1")
+        check([a["path"] for a in rq2["articles"]] == ["content/docs/clidocs/pulumi_up.md"],
+              "the just-reported page yields to its unreported sibling")
 
         print("human edit resets the clock; a bot edit does not")
         full = run_select(repo, tiers, empty, "--count", "20")
@@ -364,6 +440,24 @@ def main() -> int:
         qg2 = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(gscf))
         check(scores(qg2) == sg, "signal-boosted selection is deterministic")
 
+        print("reader signals: bare GSC export (no envelope) parses identically")
+        bare = tmp / "signals-gsc-bare.json"
+        bare.write_text(json.dumps({
+            "source": "fct_google_search_console_metrics",
+            "period": {"start": "2026-03-14", "end": "2026-06-11"},
+            "generated": "2026-06-11T00:00:00Z",
+            "pages": {
+                "/docs/misc/one/": {"impressions": 50000, "clicks": 250},
+                "/docs/misc/two/": {"impressions": 50000, "clicks": 5000},
+                "/docs/misc/protected/keep/": {"impressions": 100, "clicks": 1},
+            }}))
+        qbare = run_select(repo, tiers, empty, "--count", "20", "--signals-file", str(bare))
+        check(scores(qbare) == sg, "bare GSC export scores identically to the enveloped one")
+        check(qbare["reader_signals"]["gsc"]["available"] is True,
+              "bare GSC export marked available")
+        check(qbare["reader_signals"]["feedback"]["available"] is False,
+              "bare GSC export leaves feedback unavailable")
+
         print("reader signals: --paths entries carry the signals block")
         qp = run_select(repo, tiers, empty, "--paths", ONE, "--signals-file", str(gscf))
         check(qp["articles"][0]["signals"]["gsc"]["low_ctr_flag"] is True,
@@ -383,6 +477,8 @@ def main() -> int:
         qcap = run_select(repo, tiers, led_cap, "--count", "20")
         check(TWO not in scores(qcap), "page at the attempt cap is excluded entirely")
         check(ONE in scores(qcap), "non-capped pages still selected")
+        check(qcap.get("capped") == [TWO], "capped pages surfaced on the queue")
+        check(full.get("capped") == [], "no capped pages -> empty list, not a missing key")
 
         print("completed review advances the clock (page is deprioritized)")
         led_done = tmp / "ledger-done"
@@ -410,23 +506,128 @@ def main() -> int:
         print("attempts surfaced on queue entries")
         check(all("attempts" in a for a in full["articles"]), "every queue entry carries attempts")
 
-        print("repo strategic-tiers.yaml parses and excludes generated trees")
-        # CLI command reference and SDK API reference are both generated -> tier 0.
-        for gen_path, label in [
-            ("content/docs/iac/cli/commands/pulumi.md", "CLI commands"),
-            ("content/docs/reference/pkg/python/pulumi/_index.md", "SDK API reference"),
-        ]:
-            proc = subprocess.run(
-                [sys.executable, str(SCRIPT), "--no-gh", "--today", TODAY,
-                 "--tiers", str(REPO_TIERS), "--ledger-dir", str(tmp / "empty"),
-                 "--paths", gen_path, "--dry-run"],
-                capture_output=True, text=True,
-            )
-            if proc.returncode == 0:
-                entry = json.loads(proc.stdout)["articles"][0]
-                check(entry["tier"] == 0, f"real tiers file marks {label} tier 0")
-            else:
-                check("tiers" not in proc.stderr.lower(), "real tiers file parses")
+        print("repo strategic-tiers.yaml routes each generated tree to its lane")
+        # Both trees are generated, so NEITHER is editable. They differ on
+        # whether the pipeline may read them (#20996): the CLI reference is
+        # hand-written prose a generator assembles (report-only lane), the SDK
+        # API reference is rendered from the machine-readable API definition
+        # that IS the source of truth (excluded outright).
+        rules = load_repo_tiers()
+        if rules is None:
+            check(False, "real tiers file parses")
+        else:
+            cli = selector.policy_for("content/docs/iac/cli/commands/pulumi.md", rules)
+            check(not cli.editable, "real tiers file marks CLI commands non-editable")
+            check(cli.reviewable, "real tiers file marks CLI commands reviewable")
+            check(selector.eligible(cli, "report") and not selector.eligible(cli, "fix"),
+                  "CLI commands are a report-lane candidate and never a fix-lane one")
+
+            pkg = selector.policy_for(
+                "content/docs/reference/pkg/python/pulumi/_index.md", rules)
+            check(pkg.tier == 0 and not pkg.editable and not pkg.reviewable,
+                  "real tiers file keeps the SDK API reference out of both lanes")
+            check(not selector.eligible(pkg, "report")
+                  and not selector.eligible(pkg, "fix"),
+                  "SDK API reference is a candidate for neither lane")
+
+    # --- stale-claim markers ride the queue, and escalation stops the boost ---
+    with tempfile.TemporaryDirectory() as td:
+        tmp = Path(td)
+        repo = make_repo(tmp)
+        tiers = tmp / "tiers.yaml"
+        tiers.write_text(REPO_TIERS.read_text() if REPO_TIERS.is_file() else "rules: []\n")
+
+        marker = {"entity_key": "version/pulumi-package", "verdict": "contradicted",
+                  "evidence": "CHANGELOG says 3.163.0", "source": "gh release view",
+                  # Before TODAY's review: the review saw this marker and left it
+                  # unresolved, so it is real drift and must keep boosting. (A
+                  # marker dated AFTER the last completed review is the #20970
+                  # echo instead — see boost_suppressed_by_recent_fix.)
+                  "checked_at": "2026-06-10"}
+
+        led = tmp / "ledger-markers"
+        # STACKS is freshly reviewed, so absent a marker it never reaches the queue.
+        write_ledger(led, STACKS, TODAY, stale_claims=[marker])
+        q = run_select(repo, tiers, led)
+        entry = next((a for a in q["articles"] if a["path"] == STACKS), None)
+        check(entry is not None, "marked page is boosted into the queue")
+        if entry:
+            check(entry["stale_claims"] == 1, "count field preserved")
+            check([m["entity_key"] for m in entry.get("stale_claim_markers") or []]
+                  == ["version/pulumi-package"], "queue item carries the marker itself")
+            check((entry["stale_claim_markers"][0].get("evidence") or "")
+                  == "CHANGELOG says 3.163.0", "marker evidence reaches the worker")
+
+        # An escalated marker must still ride in the queue item and still be
+        # counted: record-review.py rebuilds the ledger entry from the queue,
+        # so a marker withheld here is a marker deleted from the ledger the
+        # next time this page is reviewed for any reason.
+        led_mixed = tmp / "ledger-mixed"
+        write_ledger(led_mixed, STACKS, TODAY, stale_claims=[
+            marker,
+            {**marker, "entity_key": "version/old-miss",
+             "unresolved_reviews": 2, "escalated": True},
+        ])
+        q_mixed = run_select(repo, tiers, led_mixed)
+        mixed = next((a for a in q_mixed["articles"] if a["path"] == STACKS), None)
+        check(mixed is not None, "page with one active marker is still boosted")
+        if mixed:
+            keys = [m["entity_key"] for m in mixed.get("stale_claim_markers") or []]
+            check("version/old-miss" in keys,
+                  "escalated marker still travels in the queue item (survives the round-trip)")
+            check(mixed["stale_claims"] == len(mixed["stale_claim_markers"]),
+                  "stale_claims count matches the marker list it describes")
+
+        led_esc = tmp / "ledger-escalated"
+        write_ledger(led_esc, STACKS, TODAY,
+                     stale_claims=[{**marker, "unresolved_reviews": 2, "escalated": True}])
+        q_esc = run_select(repo, tiers, led_esc)
+        esc = next((a for a in q_esc["articles"] if a["path"] == STACKS), None)
+        check(esc is None, "an escalated marker alone no longer boosts the page")
+
+        # ...and when such a page is reviewed anyway (staleness, --paths), the
+        # escalated marker must reach record-review.py rather than evaporating.
+        q_paths = run_select(repo, tiers, led_esc, "--paths", STACKS)
+        forced = q_paths["articles"][0]
+        check([m["entity_key"] for m in forced.get("stale_claim_markers") or []]
+              == ["version/pulumi-package"],
+              "escalated marker reaches a --paths review instead of being dropped")
+
+        print("stale-claim boost cooldown (#20970's missing half)")
+        import importlib.util
+        from datetime import date as _date
+        _spec = importlib.util.spec_from_file_location("select_articles", SCRIPT)
+        sa = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(sa)
+        _t = _date(2026, 8, 19)
+        def _e(reviewed, checked, status="reviewed"):
+            e = {"status": status, "reviewed_at": reviewed}
+            if checked is not None:
+                e["stale_claims"] = [{"entity_key": "version/x", "checked_at": checked}]
+            return e
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-19"), _t) is True,
+              "marker written AFTER a just-completed review is an echo: suppressed")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "2026-08-17"), _t) is False,
+              "marker the review SAW and left unresolved is real drift: still boosts")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-01", "2026-08-02"), _t) is False,
+              "past the cooldown, an echo has had time to be real: still boosts")
+        check(sa.boost_suppressed_by_recent_fix(
+                  _e("2026-08-18", "2026-08-19", status="incomplete"), _t) is False,
+              "an incomplete review fixed nothing, so it never suppresses")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", None), _t) is False,
+              "no markers, nothing to suppress")
+        check(sa.boost_suppressed_by_recent_fix(_e("2026-08-18", "garbage"), _t) is False,
+              "an undated marker is not provably an echo, so it keeps its boost")
+        check(sa.boost_suppressed_by_recent_fix(_e("garbage", "2026-08-19"), _t) is False,
+              "an unparseable review date fails open (boosts), never suppresses silently")
+        _edge = str(_date.fromordinal(_t.toordinal() - sa.STALE_BOOST_COOLDOWN_DAYS))
+        check(sa.boost_suppressed_by_recent_fix(_e(_edge, "2026-08-19"), _t) is False,
+              "exactly COOLDOWN days old is outside the window")
+        check(sa.boost_suppressed_by_recent_fix(
+                  {"status": "reviewed", "reviewed_at": "2026-08-18",
+                   "stale_claims": [{"entity_key": "a", "checked_at": "2026-08-19"},
+                                    {"entity_key": "b", "checked_at": "2026-08-17"}]}, _t) is False,
+              "one pre-review marker is enough to keep the boost")
 
     print(f"\n{_passes} passed, {len(_failures)} failed")
     return 1 if _failures else 0

@@ -136,11 +136,11 @@ That’s not where configuration ends, however. Some of our configuration may en
 $ pulumi config set dbPassword --secret [redacted]
 ```
 
-Finally, Pulumi gives you tools to manage your projects and stacks according to your own requirements, similar to how git can be used for many different source control philosophies such as monorepos. For a description of the tradeoffs involved, see the [“Organizing Projects and Stacks” user guide](/docs/guides/organizing-projects-stacks/) or the [IaC Recommended Best Practices blog series](/blog/iac-recommended-practices-structuring-pulumi-projects/). For complex systems, we will likely want a separation of concerns between pieces of our infrastructure, which means it is possible for one stack to depend on another.
+Finally, Pulumi gives you tools to manage your projects and stacks according to your own requirements, similar to how git can be used for many different source control philosophies such as monorepos. For a description of the tradeoffs involved, see the [“Organizing Projects and Stacks” user guide](/docs/iac/guides/basics/organizing-projects-stacks/) or the [IaC Recommended Best Practices blog series](/blog/iac-recommended-practices-structuring-pulumi-projects/). For complex systems, we will likely want a separation of concerns between pieces of our infrastructure, which means it is possible for one stack to depend on another.
 
 For example, there could be a base networking and security layer, a data stack and a Kubernetes cluster that consume information from a lower-level layer but are provisioned separately, with applications above that depending on different assortments of all of the above.
 
-Each stack is a unit of security and deployment concurrency. By layering stacks in this manner, we can let different teammates work in isolation from one another, ensure that the most secure and robust parts of our infrastructure are under lock and key, and just generally let different parts of the team go faster without affecting one another. The feature that enables this is called “Stack References,” and you can [read more about how to use them in the documentation](/docs/intro/concepts/stack/#stackreferences/).
+Each stack is a unit of security and deployment concurrency. By layering stacks in this manner, we can let different teammates work in isolation from one another, ensure that the most secure and robust parts of our infrastructure are under lock and key, and just generally let different parts of the team go faster without affecting one another. The feature that enables this is called “Stack References,” and you can [read more about how to use them in the documentation](/docs/iac/concepts/stacks/#stackreferences).
 
 ## Doing a Deployment
 
@@ -271,6 +271,6 @@ After all is said and done, we can `pulumi destroy` our stack, which deletes all
 $ pulumi destroy
 ```
 
-This is clearly a dangerous but necessary operation. Pulumi has two features to help avoid mistakes. First, [protecting a resource](/docs/intro/concepts/resources/options/protect/) ensures extra steps are required to delete it, and second, [the retain-on-delete option](/docs/intro/concepts/resources/options/retainondelete/) keeps the physical resource around even when the logical resource has been removed from your Pulumi stack. These are good to use with critical and precious resources whose destruction might be catastrophic, like databases — better safe than sorry!
+This is clearly a dangerous but necessary operation. Pulumi has two features to help avoid mistakes. First, [protecting a resource](/docs/iac/concepts/resources/options/protect/) ensures extra steps are required to delete it, and second, [the retain-on-delete option](/docs/iac/concepts/resources/options/retainondelete/) keeps the physical resource around even when the logical resource has been removed from your Pulumi stack. These are good to use with critical and precious resources whose destruction might be catastrophic, like databases — better safe than sorry!
 
 In Part 3 of our series, the final installation, we will discuss advanced IaC use cases and how you can use Pulumi Cloud to develop cloud infrastructure with code and tame cloud infrastructure management at scale. We will be using Pulumi Cloud, which is available [here](https://app.pulumi.com/signup).

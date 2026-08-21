@@ -12,7 +12,7 @@ category: best-practices
 ---
 
 {{% notes "info" %}}
-Pulumi ESC now natively supports secrets rotation that makes secrets lifecycle management much easier. Check out the [launch blogpost](/blog/esc-rotated-secrets-launch/) and [docs](/docs/esc/environments/rotation).
+Pulumi ESC now natively supports secrets rotation that makes secrets lifecycle management much easier. Check out the [launch blogpost](/blog/esc-rotated-secrets-launch/) and [docs](/docs/esc/concepts/rotators/).
 {{% /notes %}}
 
 Managing secrets in modern cloud applications can be challenging, particularly when it comes to rotation policies. While dynamic secrets (like AWS IAM temporary credentials) handle this automatically, many systems still rely on static secrets that require periodic rotation.

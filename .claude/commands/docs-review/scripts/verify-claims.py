@@ -258,8 +258,18 @@ READ_FILE_TOOL = {
 }
 
 # Anthropic server-side web search; the API runs the search and returns results
-# inline, so no client round-trip is needed for the search itself.
-WEB_SEARCH_TOOL = {"type": "web_search_20250305", "name": "web_search", "max_uses": 3}
+# inline, so no client round-trip is needed for the search itself. user_location
+# anchors the search to a US/English context — without it the engine can serve
+# localized doc variants (claims-reverify run #36's one contradicted verdict
+# cited docs.aws.amazon.com/zh_tw/... and quoted its evidence in Traditional
+# Chinese, which makes the report hard to audit). Belt and suspenders with the
+# English-sources instruction in the pass3 prompt below.
+WEB_SEARCH_TOOL = {
+    "type": "web_search_20250305",
+    "name": "web_search",
+    "max_uses": 3,
+    "user_location": {"type": "approximate", "country": "US"},
+}
 
 ALLOWED_GH_SUBCOMMANDS = {"search", "api", "release", "issue", "pr"}
 _SHELL_META_RE = re.compile(r"[|;&`$\\]|\$\(")
@@ -299,7 +309,7 @@ Cheapest first. Stop as soon as a source closes the claim.
    - **Linked implementing change** — when the claim is about a NEW pulumi symbol you can't find on the default branch AND this PR cites an implementing change (a "This docs PR cites implementing change(s)" line in the user message, or a `pulumi/<repo>#<n>` / `github.com/pulumi/<repo>/(pull|commit)/...` reference), read it: `gh pr diff <n> -R pulumi/<repo>` or `gh api repos/pulumi/<repo>/commits/<sha>`. Confirmed there, the symbol is `verified`/`medium` ("not yet on default branch / released") — NOT `unverifiable`; "not in the published reference yet" is a lag, not a doubt. Docs shipping alongside a feature are the normal case.
    `gh` results count as `high` confidence when they directly match — they read source-of-truth. Don't loop `issues`/`pulls` for *blind* context discovery (a PR THIS docs PR cites is not blind — see above). Keep your `gh_query` + `read_file` calls under 8 total; if you can't close the claim, return `unverifiable` (or, from a pass1 lane, set `route_escalation: "pass3"` when a public web source plausibly could resolve it).
 3. **Pre-fetched URL** (pass2 lane) — the cited URL's content (HTTP status + body) is in the user message. Do NOT try to fetch it again. Read the body, find the supporting passage, run the framing check. If the status is not 2xx (dead link / soft-404) → `contradicted` with `evidence: "cited URL returns HTTP <status>"` and `source: "<url>"`; do NOT return `unverifiable` for a dead Pass-2 URL — a broken citation is a contradiction the author must fix. If the body is 2xx but doesn't contain the supporting passage → `unverifiable` (note the page was fetched but didn't address the claim).
-4. **Web search** (pass3 lane) — use the `web_search` tool with a query derived from the claim, then read the results. For numerical claims (prices, rates, limits), cross-check the YEAR of any page you rely on — a stale cached price is a `contradicted` when the current figure differs. If no result addresses the claim, return `unverifiable` and set `source` to `WebSearch ran query "<your query>"; top results didn't address the claim`. Reserve `unverifiable` for genuinely unfetchable claims, not "I didn't try".
+4. **Web search** (pass3 lane) — use the `web_search` tool with a query derived from the claim, then read the results. Use English-language sources: major doc sites serve localized variants (`docs.aws.amazon.com/zh_tw/...`, `learn.microsoft.com/ja-jp/...`, `cloud.google.com/...?hl=de`), and evidence quoted from one is hard to audit in an English report. When a result lands on a localized page, treat the English page as canonical — cite the URL with the locale segment removed (`/zh_tw/` dropped, `/ja-jp/` → `/en-us/`, `?hl=` dropped) and quote the evidence passage in English. For numerical claims (prices, rates, limits), cross-check the YEAR of any page you rely on — a stale cached price is a `contradicted` when the current figure differs. If no result addresses the claim, return `unverifiable` and set `source` to `WebSearch ran query "<your query>"; top results didn't address the claim`. Reserve `unverifiable` for genuinely unfetchable claims, not "I didn't try".
 
 # Cited-claim framing check (pass2 and pass3, any claim that cited a source)
 
@@ -336,7 +346,9 @@ ROUTE_HEADERS = {
     "pass2": ("ROUTE: pass2 (external; cited URL pre-fetched). Tools: verify_claim only — the URL's content is in the user "
               "message; do NOT re-fetch. Run the framing check and emit verify_claim. Dead/non-2xx URL → `contradicted`."),
     "pass3": ("ROUTE: pass3 (external; no pre-fetched URL). Tools: web_search, verify_claim. Search, read the results, "
-              "cross-check the YEAR on numerical claims, then emit verify_claim. If the claim turns out to describe "
+              "cross-check the YEAR on numerical claims, then emit verify_claim. Cite English-language doc pages — "
+              "strip locale segments (`/zh_tw/`, `/ja-jp/`, `?hl=`) from cited URLs and quote evidence in English. "
+              "If the claim turns out to describe "
               "Pulumi's own product/CLI behavior (default limits, rotation policies, flag semantics — even when no "
               "pulumi-shaped token appears in the text), web search cannot read product source: emit verify_claim with "
               "`route_escalation: \"pass1\"` instead of `unverifiable`."),

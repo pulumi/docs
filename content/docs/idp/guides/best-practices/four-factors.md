@@ -19,7 +19,7 @@ This guide introduces a framework for building with Pulumi IDP that leverages fo
 
 Key characteristics:
 
-- **User-configurable**: Developers can customize templates through simple parameters
+- **User-configurable**: Developers can customize templates through a small set of parameters
 - **Stack creation**: Each time a template is used it creates one or more new, independent [Pulumi stacks](/docs/iac/concepts/stacks/)
 - **Standardized starting point**: Ensures consistent project structure and configuration
 - **Low barrier to entry**: Enables developers to get started quickly without deep infrastructure knowledge
@@ -32,7 +32,7 @@ Templates abstract away the complexity of initial setup while providing flexibil
 
 Key characteristics:
 
-- **Business logic abstraction**: Hide complex infrastructure patterns behind simple interfaces
+- **Business logic abstraction**: Hide complex infrastructure patterns behind narrow interfaces
 - **Sensible defaults**: Provide secure, compliant defaults out of the box
 - **Limited inputs**: Reduce cognitive load by exposing only necessary configuration options
 - **Company standards**: Encode organizational policies and best practices directly in code
@@ -65,13 +65,13 @@ Key characteristics:
 
 Policies act as a safety net, ensuring that even as infrastructure scales and evolves, it remains compliant with organizational requirements.
 
-## Bringing It All Together
+## Bringing it all together
 
 The power of Pulumi IDP comes from combining these four factors into cohesive developer workflows. Here's how they work together in practice:
 
-### Example: Deploying a Web Site
+### Example: deploying a website
 
-Consider a developer who needs to deploy a new web site hosted in a S3 bucket. Here's how the four factors collaborate:
+Consider a developer who needs to deploy a new website hosted in an S3 bucket. Here's how the four factors collaborate:
 
 - **Template**: The developer starts with a `web-site` template that scaffolds a new project with the necessary structure and dependencies.
 - **Component**: The template uses a custom `TaggedBucket` component that automatically:
@@ -86,7 +86,7 @@ Consider a developer who needs to deploy a new web site hosted in a S3 bucket. H
    - Ensures access policies meet organizational security standards
    - Blocks deployment if compliance requirements aren't met
 
-### Developer Experience
+### Developer experience
 
 From the developer's perspective, they only need to:
 
@@ -98,7 +98,7 @@ Behind the scenes, the four factors work together to apply the correct environme
 
 ### Benefits
 
-This approach delivers several key benefits:
+This approach delivers four key benefits:
 
 - **Reduced complexity**: Developers don't need to understand the intricacies of infrastructure configuration
 - **Consistent compliance**: Policies ensure all deployments meet organizational standards
@@ -111,8 +111,6 @@ By leveraging these four factors together, organizations can create internal dev
 
 To see how these four factors can be used together in some common use cases, check out our [patterns](/docs/idp/guides/best-practices/patterns) library.
 
-### Additional Resources
-
 - [Pulumi IDP Concepts](/docs/idp/concepts)
 - [Private Registry](/docs/idp/concepts/private-registry)
-- [No-code Stacks](/docs/idp/concepts/no-code-stacks)
+- [No-code stacks](/docs/idp/concepts/no-code-stacks)

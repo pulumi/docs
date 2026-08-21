@@ -28,16 +28,31 @@
 }}
 
 {{/*
-  Add dates, but only from a real source of truth — front-matter dates or git
-  commit info. Never fall back to `now`: an absent git history (e.g. a shallow
-  CI checkout) would otherwise stamp every page as modified today, which is both
-  wrong and harmful for SEO/AEO. When no real date exists, omit the fields.
+  Add dates, but only from a real source of truth. datePublished must come from
+  an explicit front-matter date/publishDate — never from git info, since a
+  page's git history reflects when it was last *touched*, not when it was
+  first published, and using it here fabricates a publish date that always
+  equals dateModified. When no explicit front-matter date exists, omit
+  datePublished entirely (a page with only dateModified is valid schema.org).
+  dateModified may fall back to git info, since that's an honest modification
+  signal. Never fall back to `now`: an absent git history (e.g. a shallow CI
+  checkout) would otherwise stamp every page as modified today, which is both
+  wrong and harmful for SEO/AEO.
+
+  no_authored_date: content-adapter pages (_content.gotmpl, e.g. the
+  cloud-rest-api and pre-built-policy-packs pages) set a "dates" map with only
+  "lastmod" so the sitemap gets an honest <lastmod>. Hugo's date cascade then
+  backfills .Date and .PublishDate from that same lastmod value (a zero-time
+  publishDate passed explicitly is indistinguishable from an unset one and
+  gets overwritten by the cascade too), which would otherwise silently
+  reintroduce the fabricated-datePublished bug this file's dateModified
+  fallback comment already warns against. Those adapters set this param
+  explicitly to say "this PublishDate is backfilled, not authored" so it is
+  never mistaken for a real publish date here.
 */}}
 {{ $publishDate := "" }}
-{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") }}
+{{ if and .PublishDate (ne (.PublishDate.Format "2006-01-02") "0001-01-01") (not .Params.no_authored_date) }}
   {{ $publishDate = .PublishDate }}
-{{ else if and .GitInfo .GitInfo.AuthorDate }}
-  {{ $publishDate = .GitInfo.AuthorDate }}
 {{ end }}
 
 {{ $modifiedDate := "" }}
@@ -85,8 +100,47 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" (slice $image)) }}
 
-{{/* Add keywords */}}
-{{ $schema = merge $schema (dict "keywords" "infrastructure as code, cloud, devops, automation") }}
+{{/* Add keywords. Every article-schema page (docs, what-is, and case
+     studies alike) previously got the same literal "infrastructure as
+     code, cloud, devops, automation" string regardless of topic, so a
+     page like "What is HIPAA?" or "What Is a Terraform Module?" told
+     search engines and LLMs it was about infrastructure as code just
+     like every other page on the site - diluting the entity signal this
+     page's actual topic should carry. Prefer explicit front-matter tags
+     where they exist; otherwise derive a page-specific value from the
+     page's own headline plus its section ancestors, the same trail used
+     to build BreadcrumbList, so the keyword set names what this page is
+     actually about instead of repeating one hardcoded phrase everywhere.
+     The outermost section ancestor (e.g. "Cloud Engineering Concepts
+     Explained" for every /what-is/ page, "Docs" for every /docs/ page)
+     is skipped: it is itself a constant repeated across
+     thousands of pages, the exact problem this block exists to remove,
+     so only deeper crumbs plus the headline carry the topic. */}}
+{{ $keywords := slice }}
+{{ with .Params.tags }}
+  {{ $keywords = . }}
+{{ else }}
+  {{ $skippedOutermostAncestor := false }}
+  {{ range .Ancestors.Reverse }}
+    {{ if and (not .IsHome) .LinkTitle }}
+      {{ if $skippedOutermostAncestor }}
+        {{ $keywords = $keywords | append .LinkTitle }}
+      {{ else }}
+        {{ $skippedOutermostAncestor = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $keywordHeadline := or .Params.title_tag .Title }}
+  {{ $keywordHeadline = replaceRE `(?i)^(what (is|are)|is) (a |an |the )?` "" $keywordHeadline }}
+  {{ $keywordHeadline = replaceRE `\?.*$` "" $keywordHeadline }}
+  {{ $keywordHeadline = strings.TrimSpace $keywordHeadline }}
+  {{ if $keywordHeadline }}
+    {{ $keywords = $keywords | append $keywordHeadline }}
+  {{ end }}
+{{ end }}
+{{ if gt (len $keywords) 0 }}
+  {{ $schema = merge $schema (dict "keywords" (delimit (uniq $keywords) ", ")) }}
+{{ end }}
 
 {{/* Calculate reading time */}}
 {{ $readTime := div $wordCount 200 }}

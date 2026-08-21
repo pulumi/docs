@@ -1449,7 +1449,7 @@ The repository includes 10 additional utility workflows for automation and proje
 - **claude.yml**: AI-assisted code analysis and suggestions (triggered by @claude mentions in issues/PRs)
 - **claude-code-review.yml**: AI-powered code review automation for pull requests
 - **claude-social-review.yml**: AI-powered review of social media post copy generated for blog post PRs
-- **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page
+- **review-existing-content.yml** / **content-review-article.yml**: Daily existing-content review — deterministic selection fans out one per-article worker per page. Three lanes, each with its own count variable: `fix` (`CONTENT_REVIEW_COUNT`, unset = 3/run) reviews an editable page and opens a PR for what it fixed; `glowup` (`GLOWUP_COUNT`, unset = 1/run) rehabs one page from its banked findings backlog; `report` (`REPORT_REVIEW_COUNT`, **unset = off**) fact-checks a page a generator owns — it runs the claim pipeline, writes the page's claims to the S3 claims index, and changes nothing. The report lane has no model step at all (nothing to fix, no PR body to write) and its verdict is written by the workflow; contradictions it finds are reported to #docs-ops with a prefilled upstream issue, never as stale-claims markers no PR here could retire. Which lane a page belongs to comes from `editable` / `reviewable` in `strategic-tiers.yaml` (pulumi/docs#20996 — before that split, "a generator owns this file" also meant "never look at it", hiding 30% of `content/docs/` from the fact-check entirely).
 - **blog-review-index.yml**: Daily blog known-issues indexing — deterministic selection (`scripts/blog-review/select-posts.py`), one unprivileged model review per post (matrix), one deterministic record job. FLAG-ONLY: findings land in S3 (`blog-review/` prefix in the content-review ledger bucket: `ledger/`, `index/`, `runs/`, `index/_summary.json`); no content edits, no PRs. On/off/cadence via the `BLOG_REVIEW_COUNT` repo variable (unset = 5/run, `'0'` = off). The index is evidence for a future noindex decision process (`block_external_search_index: true` on rotted, low-value posts).
 
 The first two workflows include a permission check step that verifies the triggering user has write access to the repository before running Claude. Users without write access will see the workflow skip Claude execution. The social review workflow runs only on internal PRs from non-bot authors.
@@ -2246,6 +2246,15 @@ make format
 ```
 
 **Configuration:** `.prettierrc.json`
+
+**Ignore rules:** `.prettierignore`, unioned with `.gitignore`. `make lint`,
+`make format`, and `make ensure` invoke prettier through `scripts/prettier.sh`,
+which concatenates the two lists into a temporary root-level ignore file and
+passes it as `--ignore-path`. Prettier does not read `.gitignore` on its own,
+and `--ignore-path` takes a single file on v2.x, so without this every runtime
+artifact needs an entry in both lists -- and a missed one turns an untracked
+scratch file into a `make lint` failure. **A new generated or scratch file only
+needs a `.gitignore` entry.**
 
 **Version:** Prettier v2.8.8
 

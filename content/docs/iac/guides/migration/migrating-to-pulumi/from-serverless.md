@@ -229,7 +229,7 @@ The following table maps common `serverless.yml` configuration to the equivalent
 | `resources.Resources` (DynamoDB) | [`aws.dynamodb.Table`](/registry/packages/aws/api-docs/dynamodb/table/) |
 | `resources.Resources` (S3) | [`aws.s3.BucketV2`](/registry/packages/aws/api-docs/s3/bucketv2/) |
 | `resources.Resources` (SES) | [`aws.ses.DomainIdentity`](/registry/packages/aws/api-docs/ses/domainidentity/), [`aws.ses.EmailIdentity`](/registry/packages/aws/api-docs/ses/emailidentity/) |
-| Stages (`--stage dev`) | [Pulumi stacks](/docs/concepts/stack/) (`pulumi stack select dev`) |
+| Stages (`--stage dev`) | [Pulumi stacks](/docs/iac/concepts/stacks/) (`pulumi stack select dev`) |
 
 ## Migration example
 
@@ -749,7 +749,7 @@ With Pulumi, you get the full power of a programming language. You can create re
 
 ## Importing existing resources
 
-If you have existing resources created by the Serverless Framework that you want to bring under Pulumi's management without recreating them, use [Pulumi's import feature](/docs/using-pulumi/adopting-pulumi/import/).
+If you have existing resources created by the Serverless Framework that you want to bring under Pulumi's management without recreating them, use [Pulumi's import feature](/docs/iac/guides/migration/import/).
 
 ### Step 1: Identify your resources
 
@@ -854,7 +854,7 @@ For detailed AWS import ID formats and troubleshooting, see [AWS import IDs and 
 
 ## Managing stages with Pulumi stacks
 
-The Serverless Framework uses `--stage` to deploy the same service to multiple environments. In Pulumi, this maps directly to [stacks](/docs/concepts/stack/):
+The Serverless Framework uses `--stage` to deploy the same service to multiple environments. In Pulumi, this maps directly to [stacks](/docs/iac/concepts/stacks/):
 
 ```bash
 # Create stacks for each stage

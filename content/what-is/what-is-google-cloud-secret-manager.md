@@ -71,7 +71,7 @@ test-secret  2023-11-10T09:40:29  automatic           -
 
 {{< notes type="info" >}}
 
-Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/concepts/secrets/).
+Many infrastructure as code platforms, including Pulumi, have support for creating secrets. You can learn more about how to create and manage secrets in Pulumi by taking a look at [Pulumi Secrets documentation](/docs/iac/concepts/secrets/).
 
 {{< /notes >}}
 

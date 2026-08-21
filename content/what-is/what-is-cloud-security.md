@@ -8,7 +8,7 @@ authors: ["cam-soper"]
 
 **Cloud security is the set of policies, controls, technologies, and operational practices that protect cloud workloads, data, identities, and infrastructure from attack and accidental exposure.** It spans every layer of a modern stack, from the cloud provider's physical data centers to your IAM policies, network rules, container images, secrets, and the application code that runs on top.
 
-Cloud security is a partnership: the provider secures the platform, and you secure what you build on it. That division is the shared responsibility model, and the large majority of cloud security incidents are not provider failures. They're customer-side misconfigurations. Modern teams treat cloud security as an engineering problem: configurations live in [infrastructure as code](/what-is/what-is-infrastructure-as-code/), [policies](/docs/insights/policy/) run in CI, secrets are pulled from a [centralized vault](/product/esc/), and every change is reviewed in Git before it touches production.
+Cloud security is a partnership: the provider secures the platform, and you secure what you build on it. That division is the shared responsibility model, and the large majority of cloud security incidents are not provider failures. They're customer-side misconfigurations. Modern teams treat cloud security as an engineering problem: configurations live in [infrastructure as code](/what-is/what-is-infrastructure-as-code/), [policies](/docs/insights/policy/) run in CI, secrets are pulled from a [centralized vault](/product/secrets-management/), and every change is reviewed in Git before it touches production.
 
 In this article, we'll cover the key questions about cloud security:
 
@@ -98,7 +98,7 @@ VPC design, security groups, network ACLs, service mesh policies, private endpoi
 
 ### Application and workload security
 
-SBOM and dependency scanning, container image signing and scanning, runtime protection, API gateways, and secrets injection at runtime via [Pulumi ESC](/product/esc/) or similar tooling.
+SBOM and dependency scanning, container image signing and scanning, runtime protection, API gateways, and secrets injection at runtime via [Pulumi ESC](/product/secrets-management/) or similar tooling.
 
 ### Configuration and posture management
 
@@ -130,7 +130,7 @@ A practical baseline that holds up across providers and team sizes:
 * **Define infrastructure as code.** Replace console clicks with version-controlled [infrastructure as code](/what-is/what-is-infrastructure-as-code/) so every cloud change is reviewable and reproducible.
 * **Enforce policy as code in CI.** Block insecure configurations before they deploy with tools like [Pulumi Policies](/docs/insights/policy/) or Open Policy Agent.
 * **Apply least privilege everywhere.** Default deny; grant the minimum access needed; prefer short-lived, scoped credentials over long-lived keys.
-* **Centralize secrets and configuration.** Keep secrets out of code and CI logs. Pull secrets at runtime from a dedicated store such as HashiCorp Vault or AWS Secrets Manager, and use [Pulumi ESC](/product/esc/) to aggregate and broker access to those stores so applications, CI jobs, and Pulumi programs all see a single, audited interface.
+* **Centralize secrets and configuration.** Keep secrets out of code and CI logs. Pull secrets at runtime from a dedicated store such as HashiCorp Vault or AWS Secrets Manager, and use [Pulumi ESC](/product/secrets-management/) to aggregate and broker access to those stores so applications, CI jobs, and Pulumi programs all see a single, audited interface.
 * **Encrypt by default.** Use provider-managed or customer-managed keys for data at rest and TLS for data in transit. Make the unencrypted path the harder one.
 * **Centralize logging and monitoring.** Ship logs from every account, region, and service to a single store, and define alerts on policy violations, not just on errors.
 * **Patch and rotate continuously.** Rebuild images, rotate keys, and refresh certificates on a schedule rather than on incident.
@@ -145,7 +145,7 @@ With Pulumi:
 
 * **Every change is a pull request.** Security reviewers see exactly what's about to happen before it lands.
 * **Policy as code blocks insecure changes.** [Pulumi Policies](/docs/insights/policy/) run in CI alongside `pulumi preview`, so a public bucket or a `0.0.0.0/0` ingress rule never reaches production.
-* **Secrets are pulled at runtime.** [Pulumi ESC](/product/esc/) holds encrypted secrets and pulls them on demand into Pulumi programs, CI jobs, and applications. No plaintext secrets in code or state files.
+* **Secrets are pulled at runtime.** [Pulumi ESC](/product/secrets-management/) holds encrypted secrets and pulls them on demand into Pulumi programs, CI jobs, and applications. No plaintext secrets in code or state files.
 * **Drift is observable.** When a console click breaks the IaC contract, the next preview surfaces it.
 * **Reuse safe defaults.** Platform teams ship [Pulumi components](/docs/iac/concepts/components/) with the right encryption, logging, and IAM settings baked in, so product teams consume secure infrastructure without having to relearn it every time.
 

@@ -16,7 +16,7 @@ The subject of how to make use of secrets in Lambda Functions comes up a fair bi
 
 ## Getting started
 
-I'm going to assume you've already got Pulumi and AWS set up, you're logged into your backend, and you've already created a project and stack. I'm also using the Pulumi Service as my [secrets provider](/docs/concepts/secrets#configuring-secrets-encryption).
+I'm going to assume you've already got Pulumi and AWS set up, you're logged into your backend, and you've already created a project and stack. I'm also using the Pulumi Service as my [secrets provider](/docs/iac/concepts/secrets/#configuring-secrets-encryption).
 
 {{% notes type="info" %}}
 Although Lambda Functions are free to deploy, and you get a generous allowance as part of AWS' free tier, storing and accessing secrets is not. You can view the cost on the [AWS Secrets Manager Pricing page](https://aws.amazon.com/secrets-manager/pricing/).
@@ -24,7 +24,7 @@ Although Lambda Functions are free to deploy, and you get a generous allowance a
 
 ## Structured configuration
 
-We're going to start by adding settings, both secret and plaintext, to our [stack configuration](/docs/concepts/config/), in a [structured way](/docs/concepts/config#structured-configuration). We're going to add these settings as a dictionary so we can use the names as the variable names in our Lambda Function.
+We're going to start by adding settings, both secret and plaintext, to our [stack configuration](/docs/iac/concepts/config/), in a [structured way](/docs/iac/concepts/config/#structured-configuration). We're going to add these settings as a dictionary so we can use the names as the variable names in our Lambda Function.
 
 First we add two settings in plaintext that are going to be used as environment variables in our lambda:
 
@@ -74,7 +74,7 @@ import * as aws from "@pulumi/aws";
 
 ### A warning about accessing the configuration
 
-Before we continue, it's worth pointing out the following (from the [Pulumi documentation on secrets](/docs/concepts/secrets#a-warning-using-secrets-in-code) ):
+Before we continue, it's worth pointing out the following (from the [Pulumi documentation on secrets](/docs/iac/concepts/secrets/#a-warning-using-secrets-in-code) ):
 
 {{% notes type="warning" %}}
 On `pulumi up`, secret values are decrypted and made available in plaintext at runtime. These may be read through any of the standard `pulumi.Config` getters. While it is possible to read a secret using ordinary non-secret getters, this is almost certainly not what you want. Use the secret variants of the configuration APIs instead since this ensures that all transitive uses of that secret are themselves also marked as secrets.

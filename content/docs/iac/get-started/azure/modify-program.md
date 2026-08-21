@@ -80,7 +80,7 @@ EOT
 
 {{% /choosable %}}
 
-Now open {{< langfile >}} in your editor and enable static website support by adding a [`StorageAccountStaticWebsite`](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account is created:
+Now open {{< langfile >}} in your editor and enable static website support by adding a [static website](/registry/packages/azure-native/api-docs/storage/storageaccountstaticwebsite/) resource right after the storage account is created:
 
 {{% choosable language typescript %}}
 
@@ -213,10 +213,28 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Create an Azure Storage Account
+resource "azure-native_storage_storage_account" "sa" {
+  # existing storage account configuration
+}
+
+# Enable static website support - add this code
+resource "azure-native_storage_storage_account_static_website" "staticWebsite" {
+  account_name        = azure-native_storage_storage_account.sa.name
+  resource_group_name = azure-native_resources_resource_group.resource-group.name
+  index_document      = "index.html"
+}
+```
+
+{{% /choosable %}}
+
 Notice that resources can reference each other, which forms automatic dependencies between them.
 Pulumi uses this information to parallelize deployments safely.
 
-Now use all of these cloud resources and a local `FileAsset` resource to upload `index.html` into your storage container by adding a [`Blob`](/registry/packages/azure-native/api-docs/storage/blob/) at the end of the file (after enabling the static website support):
+Now use all of these cloud resources and a local file asset to upload `index.html` into your storage container by adding a [blob](/registry/packages/azure-native/api-docs/storage/blob/) at the end of the file (after enabling the static website support):
 {{% choosable language typescript %}}
 
 ```typescript
@@ -316,11 +334,30 @@ resources:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Upload the file
+resource "azure-native_storage_blob" "index-html" {
+  resource_group_name = azure-native_resources_resource_group.resource-group.name
+  account_name        = azure-native_storage_storage_account.sa.name
+  container_name      = azure-native_storage_storage_account_static_website.staticWebsite.container_name
+  blob_name           = "index.html"
+  source              = fileasset("index.html")
+  content_type        = "text/html"
+}
+```
+
+A dotted label like `index.html` couldn't be referenced in expressions (and Terraform's grammar doesn't allow
+one), so the resource is labeled `index-html` and the `blob_name` attribute names the blob in the container.
+
+{{% /choosable %}}
+
 This uploads the `index.html` file to your storage container using a Pulumi concept called an [asset](/docs/iac/concepts/assets-archives/#assets).
 
 ### Export the website URL
 
-Now to export the website's URL for easy access, add the `staticEndpoint` export to your return statement as shown in this example:
+Now to export the website's URL for easy access, add a static endpoint export as shown in this example:
 
 {{% choosable language typescript %}}
 
@@ -397,6 +434,22 @@ outputs:
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```hcl
+# Export the storage account name
+output "storage_account_name" {
+  value = azure-native_storage_storage_account.sa.name
+}
+
+# Web endpoint to the website
+output "static_endpoint" {
+  value = azure-native_storage_storage_account.sa.primary_endpoints.web
+}
+```
+
+{{% /choosable %}}
+
 The storage account's endpoint is [an output property](/docs/iac/concepts/inputs-outputs/#outputs)
 that Azure assigns at deployment time, not a raw string, meaning its value is not known in advance.
 
@@ -468,17 +521,41 @@ In just a few seconds, your new website will be ready. Curl the endpoint to see 
 
 {{% choosable os "linux,macos" %}}
 
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
+
 ```bash
 $ curl $(pulumi stack output staticEndpoint)
 ```
 
 {{% /choosable %}}
 
+{{% choosable language hcl %}}
+
+```bash
+$ curl $(pulumi stack output static_endpoint)
+```
+
+{{% /choosable %}}
+
+{{% /choosable %}}
+
 {{% choosable os "windows" %}}
+
+{{% choosable language "typescript,python,go,csharp,java,yaml" %}}
 
 ```powershell
 > curl (pulumi stack output staticEndpoint)
 ```
+
+{{% /choosable %}}
+
+{{% choosable language hcl %}}
+
+```powershell
+> curl (pulumi stack output static_endpoint)
+```
+
+{{% /choosable %}}
 
 {{% /choosable %}}
 

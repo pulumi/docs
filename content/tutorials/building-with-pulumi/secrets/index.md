@@ -12,7 +12,7 @@ aliases:
 
 All resource input and output values are recorded as _state_ and are stored in Pulumi Cloud, a file, or a pluggable provider that you choose. These raw values are usually just server names, configuration settings, and so on. In some cases, however, these values contain sensitive data, such as database passwords or service tokens.
 
-Pulumi Cloud always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as "secrets" for extra protection. Encryption ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud or you can use a [provider of your own choosing](/docs/concepts/secrets#configuring-secrets-encryption)
+Pulumi Cloud always transmits and stores entire state files securely; however, Pulumi also supports encrypting specific values as "secrets" for extra protection. Encryption ensures that these values never appear as plain-text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud or you can use a [provider of your own choosing](/docs/iac/concepts/secrets/#configuring-secrets-encryption)
 instead.
 
 To encrypt a configuration setting before runtime, use the CLI command `pulumi config set` with the `--secret` option. All encrypted values are stored as ciphertext in configuration and state files.

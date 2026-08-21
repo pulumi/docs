@@ -69,7 +69,7 @@ The difference from a cloud-hosted assistant is the usual self-hosting trade: it
 
 Before getting started, ensure you have:
 
-- [Pulumi CLI](/docs/iac/download-install/) installed and configured
+- [Pulumi CLI](/docs/install/) installed and configured
 - A [Pulumi Cloud account](https://app.pulumi.com/signup)
 - A [Render](https://render.com/) account, an API key, and your workspace owner ID
 - A [Modal](https://modal.com/) account and a token pair (token ID and secret)

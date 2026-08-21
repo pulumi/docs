@@ -90,7 +90,7 @@ const service = deployment.createService({
 });
 ```
 
-Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs](/docs/concepts/inputs-outputs/)
+Now, run `pulumi update`, and Pulumi renders these resources to YAML. The update process resolves [Outputs](/docs/iac/concepts/inputs-outputs/)
 as usual, so that the manifests can include other infrastructure configuration specified in your program. The rendered
 manifests are kept in sync with changes to the program on each update.
 

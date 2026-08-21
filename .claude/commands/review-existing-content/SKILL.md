@@ -30,6 +30,7 @@ Read `.content-review-queue.json` from the repo root (written by
 {
   "generated": "2026-06-12T14:00:00+00:00",
   "count": 3,
+  "mode": "fix",
   "halted": null,
   "traffic": { "available": true, "period": "2026-05", "pages_matched": 731 },
   "reader_signals": {
@@ -43,8 +44,10 @@ Read `.content-review-queue.json` from the repo root (written by
       "url": "/docs/iac/concepts/stacks/",
       "slug": "docs-iac-concepts-stacks",
       "lane": "priority",
+      "mode": "fix",
       "tier": 1,
       "no_retire": true,
+      "editable": true,
       "monthly_visits": 12345,
       "signals": {
         "gsc": { "impressions": 15234, "ctr": 0.0205, "opportunity": 0.41,
@@ -52,16 +55,52 @@ Read `.content-review-queue.json` from the repo root (written by
         "feedback": { "yes": 4, "no": 9, "neg_rate": 0.6923, "multiplier": 1.27 }
       },
       "last_reviewed": null,
+      "stale_claims": 1,
+      "stale_claim_markers": [
+        { "entity_key": "version/pulumi-package",
+          "verdict": "contradicted",
+          "evidence": "CHANGELOG lists \"Save package source to `packages` in Pulumi.yaml on `package add`\" under 3.163.0, not 3.157.0.",
+          "source": "gh api repos/pulumi/pulumi/releases",
+          "checked_at": "2026-08-15",
+          "unresolved_reviews": 0 }
+      ],
       "score": 0.91 }
   ]
 }
 ```
 
 - `lane` — `priority` (scored pick) or `manual` (workflow_dispatch override).
+- `mode` — `fix` (this procedure), `glowup`, or `report`. A `report` queue
+  never reaches you: that lane runs no model (see §Report-only mode).
+- `editable` — false only on generated trees, which is why they are never in a
+  `fix` queue. Nothing you do should ever need to check it.
 - `stale_claims` (when present) — count of this page's volatile claims the
   nightly re-verification found contradicted (see §Claims index below). A
-  non-zero count is why the page jumped the queue: treat the ledger markers'
-  entity keys and evidence as priority findings to re-check first.
+  non-zero count is why the page jumped the queue.
+- `stale_claim_markers` (when present) — **those findings in full**, each with
+  the `entity_key`, the `verdict`, the `evidence` the nightly verifier
+  recorded, the `source` it reached, and `unresolved_reviews` (how many prior
+  reviews saw this marker and left it unresolved). **These are the highest-
+  priority findings in your queue and you must address every one of them.**
+  The nightly lane has already done the expensive part — it identified the
+  entity, reached an authoritative source, and wrote down what that source
+  says — so start here rather than waiting to see whether your own claim
+  extraction happens to re-derive the same finding. It may not: a page boosted
+  for a contradicted version pin was once reviewed, reported "0 contradicted"
+  across 74 re-extracted claims, and merged an unrelated one-line repair while
+  the flagged bug stayed on master.
+  A marker carrying `"escalated": true` has already survived two reviews
+  unresolved, so it no longer jumps the page to the front of the queue and a
+  human may be looking at it — but it is still a live finding and still yours
+  to resolve if you can. Treat it like any other marker.
+  For each marker, either apply the fix, or establish that the flag was wrong
+  (the nightly verdicts are single-sample and do produce false positives —
+  a synthetic module path for a locally generated SDK was once flagged as a
+  broken import). Then list its `entity_key` in the verdict sentinel's
+  `resolved_claims`. A marker you do not resolve is carried onto the next
+  review with `unresolved_reviews` incremented, and after two such rounds it
+  is escalated for a human — so silently skipping one does not make it go
+  away, it just delays it.
 - `no_retire` — when true, retirement must never be proposed for this page.
   This is the **hard veto** on retirement — honor it regardless of evidence.
 - `reader_signals` / `signals` — Search Console and feedback-widget figures
@@ -291,9 +330,11 @@ flows through the normal pipeline; a trivial fix is short-circuited there). A
 lint failure opens the PR as a draft instead, with a comment for a human; humans
 merge. The sections (each is checked for):
 
-- **Auto-merge notice** (top `> [!IMPORTANT]` block): the re-lint gate arms
-  GitHub auto-merge on the PR, so the body flags that approving merges it.
-  **Leave verbatim** — do not move, reword, or remove it.
+- **Auto-merge notice** (top `> [!IMPORTANT]` block): flags how the PR merges.
+  **Leave verbatim** — do not move, reword, or remove it. The publish job
+  classes the PR from your verdict's `applied[]` categories (deterministic
+  fixes arm auto-merge; judgment fixes don't) and deterministically swaps in
+  the matching notice — that swap keys on the exact composed text.
 - **Why this page**: composed from the selection queue (lane, tier, traffic
   figure + period, Search/Reader-feedback figures when the reader-signals
   export was available, last reviewed). **Leave verbatim** — do not
@@ -301,8 +342,10 @@ merge. The sections (each is checked for):
 - **Fixes applied**: pre-stubbed one row per high-confidence finding. Keep a row
   only for a fix you actually applied (fill its Correction); move the rest down.
 - **Findings not applied**: pre-stubbed with the lower-confidence findings, plus
-  any row you moved down. One line of reasoning each. End the section with: "For
-  the judgment-level items above, run `/glow-up <path>`."
+  any row you moved down. One line of reasoning each. The composed footer notes
+  that these items feed the automated glow-up lane (see §Glow-up mode) — keep
+  it: this section is that lane's input, extracted from the PR body by
+  `build-glowup-backlog.py`, so write rows a later run can act on.
 - **Screenshot check**: per image — current / stale (what differs) /
   unverifiable; note any aging reference screenshots (see
   `references/screenshot-verification.md`).
@@ -335,6 +378,7 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   "skipped_findings": 2,
   "retirement": false,
   "clarity_flag": true,
+  "resolved_claims": ["version/pulumi-package"],
   "applied": [
     { "category": "claim", "file": "content/docs/iac/concepts/stacks/_index.md",
       "lines": [42, 43], "source": "verified-claims:c3" },
@@ -362,17 +406,153 @@ the canonical ledger record, and uploads it to S3 keyed by slug.
   `len(applied)`. The workflow's scope gate cross-checks these against the
   artifacts and the branch diff; for link fixes (which have no artifact) the
   declared lines must actually carry the link in the pre-fix file.
+- `resolved_claims`: optional; the `entity_key` of every
+  `stale_claim_markers` entry you resolved this run — fixed, or shown to be a
+  false positive (say which, in the PR body). Omit or leave empty when the
+  queue item carried no markers. Anything you leave out is carried forward to
+  the next review rather than cleared, so this list is the only way a marker
+  retires.
 - `clarity_flag`: optional; `true` when you flagged a readthrough `reconception`
   for this page. Carries onto the ledger record so the page's structural
   follow-up is durable even when the verdict is `clean` or `fixed` (the
   reconception itself lives in the PR's Findings-not-applied section). Omit when
   there's no reconception to flag.
 
+**Self-check before you finish** (skip for a retirement verdict — the gate
+routes those to the retire veto instead): verify your `applied[]` line ranges
+exactly the way the publish gate will, using the gate's own script. Stage your
+changes the way the export step does, emit a zero-context diff, unstage, and
+run it:
+
+```bash
+git add -A -- ':!.*' ':!.*/**'
+git diff --cached --unified=0 > .self-check.u0.diff
+git reset -q
+python3 scripts/content-review/verify-fix-scope.py \
+    --diff-file .self-check.u0.diff --base-sha HEAD \
+    --article <path> --verdict .content-review-verdict.json \
+    --artifacts-dir . --out .self-check-report.json
+```
+
+Exit 0 (pass or skipped) is required. On exit 2, read `uncovered_hunks` /
+`invalid_applied` in the report and either correct the `applied[]` ranges or
+revert the out-of-range edit; re-run until it passes. This is the pipeline's
+dominant hard-failure mode — a range that doesn't cover its hunk wastes the
+whole run at the publish gate, where there is no retry.
+
 If you exit without writing this file, the workflow records the page as
 `incomplete`. An incomplete outcome does **not** advance the staleness clock, so
 the page stays due and is retried on a later sweep — up to an attempt cap, after
 which it backs off for a human. Always write the sentinel, even for a clean or
 skipped verdict.
+
+## Glow-up mode
+
+When the queue article carries `"mode": "glowup"` (the dispatcher's daily
+glow-up lane), the run is a **whole-page rehab executing the page's banked
+review backlog** — not a high-confidence-fix sweep. Everything above applies
+except as amended here.
+
+**Input**: `.glowup-backlog.json` at the repo root (built by the workflow via
+`scripts/content-review/build-glowup-backlog.py`): the ledger's
+`skipped_findings` / `clarity_flag` counters plus every banked finding
+extracted from the page's prior review PRs' "Findings not applied",
+"Screenshot check", and "Rendered content" sections, each with a stable `id`
+and its `source_pr`. The pre-step artifacts (claims, Vale, readthrough,
+frontmatter) are also present and are your evidence base.
+
+**Procedure**:
+
+1. **Work the backlog first.** Execute every banked finding, or explicitly
+   decline it with one line of reasoning. Every item lands in exactly one of
+   the PR body's two tables — **Backlog executed** (pre-stubbed, one row per
+   item; fill "What changed") or **Backlog declined**. No silent drops.
+1. **Then the secondary sweep**: apply the improvement taxonomy from
+   `.claude/commands/glow-up.md` §5 — style, structural fixes, code
+   formatting, terminology, links, image/diagram flags (flag-only, as ever),
+   content enhancements — and record per-category outcomes under
+   **Secondary sweep**.
+1. **Bounds** (code-enforced by `verify-glowup-scope.py` in the publish job;
+   a violation rejects the whole run): only the queued page and its bundle's
+   non-markdown assets; at most 400 changed lines; never delete the page;
+   never change frontmatter `title`, `aliases`, or `redirect_to`; retirement
+   is never a glow-up outcome. Preserve the page's purpose and technical
+   accuracy — a glow-up reads better, it does not say different things
+   without artifact-backed evidence.
+1. **Validate** with `make lint` as usual, and self-check with the glow-up
+   gate instead of verify-fix-scope: stage/diff/unstage as in step 8's
+   self-check, then run `verify-glowup-scope.py --diff-file
+   .self-check.u0.diff --article <path> --article-blob <pristine-copy> --out
+   .self-check-report.json` (copy the article aside before your first edit).
+1. **Verdict sentinel**: `{"verdict": "glowup", "fixes": <executed count>,
+   "skipped_findings": <declined count>, "clarity_flag": <bool>,
+   "executed_ids": [...], "declined_ids": [...], "retirement": false}` — no
+   `applied[]` array; the glow-up gate replaces the per-hunk check.
+   `executed_ids` and `declined_ids` are the `id` values from
+   `.glowup-backlog.json` for the rows you put in the Backlog executed and
+   Backlog declined tables — the same partition, reported as data. Every
+   banked id belongs in exactly one of them; both lists are empty only when
+   the backlog itself was empty. Without them the findings record cannot
+   tell what you executed from what you left, so it records nothing at all
+   rather than filing your completed work as still outstanding. State `clarity_flag` explicitly: `false` once you have
+   resolved the page's readthrough reconception, `true` while one still
+   stands. Omitting it carries the page's existing flag forward unchanged —
+   which is the right default, since the flag is usually why the page was
+   selected, but it means only you can put it down. If the
+   queue article carries `stale_claim_markers`, they are must-address
+   findings here exactly as in a fix review: resolve each (fix it, or
+   establish the flag was wrong) and list its `entity_key` in the sentinel's
+   `resolved_claims`, or it carries forward with `unresolved_reviews`
+   incremented.
+
+**What happens downstream**: the publish job derives the branch
+`content-review/glowup-<slug>`, classes the PR `glow-up`, and **never arms
+auto-merge** — the PR opens ready for human review and the PR-review sweep
+assigns the reviewers. The ledger records status `glowup` (a completed
+review: it advances the staleness clock and starts the selector's 90-day
+glow-up cooldown).
+
+## Report-only mode — no model runs
+
+When the queue article carries `"mode": "report"`, **this skill does not run
+and neither do you**. The section is here so the lane is documented where its
+siblings are, and so a future change to the worker doesn't quietly wire a model
+into it.
+
+The report-only lane (pulumi/docs#20996) visits pages a **generator** owns —
+today `content/docs/iac/cli/commands/`, 248 files — where an edit is
+overwritten on the generator's next run. Marking such a tree tier 0 used to say
+"never select it", and selection is the only thing that ever writes a page's
+claim list, so 30% of `content/docs/` had never been fact-checked once. That is
+now two separate questions in `references/strategic-tiers.yaml`: `editable`
+(may a PR change this file?) and `reviewable` (may we read it and record what
+it claims?).
+
+The run is the deterministic claim pipeline and nothing else:
+
+1. The workflow builds the synthetic whole-file diff and runs URL fetch → claim
+   extraction (regex + two LLM passes) → merge → verify. Vale, frontmatter,
+   cross-sibling, and readthrough are **skipped**: they exist to produce fixes
+   for someone to apply, and nothing here applies anything.
+1. The workflow writes the verdict sentinel itself —
+   `{"verdict": "reported", ...}` — and only when verification actually
+   produced verdicts. A degraded verify writes no sentinel, so the ledger
+   records the page `incomplete` and it stays due; stamping it `reported`
+   would advance the staleness clock on a page nothing had checked.
+1. `record-claims.py` persists the claim list to the claims index, which is
+   what puts these pages into the nightly volatile re-verify for the first
+   time.
+1. `report-claims-findings.py` reports the contradictions. They route through
+   the same upstream lane the nightly re-verify uses — never marked (no PR here
+   could retire the marker), always re-checked, and announced to #docs-ops with
+   a prefilled issue against the repo that owns the text, unless
+   `references/upstream-claims.yaml` says a human has already filed it.
+1. The publish gate enforces the rest: a `reported` verdict with a non-empty
+   patch fails closed, and no branch or PR is ever created.
+
+**If you find yourself editing a page in this lane, stop** — the generator will
+overwrite it, and the gate will reject the run before anything is pushed. The
+fix belongs upstream.
 
 ## Retirement proposals
 
@@ -425,6 +605,10 @@ at `claims/<slug>.json` in the ledger bucket, written by
 `entity_key` / `volatile` fields stamped by the docs-review pipeline
 (`entity_key.py`), so downstream consumers can join claims across pages by
 the entity they assert something about.
+
+Pages a generator owns reach the index through the **report-only lane**
+described above rather than through a review like yours — same script, same
+snapshot shape, no edits.
 
 The nightly `claims-reverify.yml` workflow re-checks volatile entities
 (version pins, prices, limits) straight from this index

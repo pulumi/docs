@@ -2,4 +2,4 @@
 
 set -o errexit -o pipefail
 
-yarn prettier --write . --cache
+./scripts/prettier.sh --write . --cache

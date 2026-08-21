@@ -60,8 +60,8 @@ In this comparison of **Backstage vs Pulumi IDP**, we'll explore why choosing th
 The problem isn't whether you choose Backstage or Pulumi IDP.
 The real question is: **Will your platform treat infrastructure as a first-class concern, or as an afterthought?**
 
-According to Gartner, **80% of large enterprises will deploy [internal developer platforms](/docs/pulumi-cloud/developer-platforms) within the next two years**.
-But without a strong [infrastructure foundation](/what-is/what-is-infrastructure-as-code), those platforms risk becoming expensive, hard-to-maintain bottlenecks instead of accelerators.
+According to Gartner, **80% of large enterprises will deploy [internal developer platforms](/docs/idp/concepts/) within the next two years**.
+But without a strong [infrastructure foundation](/what-is/what-is-infrastructure-as-code/), those platforms risk becoming expensive, hard-to-maintain bottlenecks instead of accelerators.
 
 ## Why platform engineering efforts fail: Common mistakes
 
@@ -78,7 +78,7 @@ Platform teams consistently make four critical mistakes:
    Bolting on compliance after launch leads to constant firefighting and [security debt](/blog/devsecops-strategy-security-automation-tivity-health).
 
 4. **Building for Yesterday's Architecture**  
-   Designing general-purpose platforms that can't keep up with [Kubernetes-native workloads](/docs/iac/clouds/kubernetes).
+   Designing general-purpose platforms that can't keep up with [Kubernetes-native workloads](/docs/integrations/clouds/kubernetes/).
 
 ## Portal-first vs infrastructure-first platform engineering
 
@@ -117,13 +117,13 @@ Originally built by Spotify, it excels at unifying tools, services, and document
 
 ## Pulumi IDP: the infrastructure-first platform engineering approach
 
-Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platform-engineering) (IPE)** to the forefront by embedding scalable, secure, cost-aware infrastructure into the platform from day one.
+Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platform-engineering/) (IPE)** to the forefront by embedding scalable, secure, cost-aware infrastructure into the platform from day one.
 
 ### Strengths
 
-- **Infrastructure as a First-Class Concern** with built-in multitenancy, isolation, and [governance](/docs/iac/packages-and-automation/crossguard).
-- **Efficiency & Cost Awareness** through [golden paths](/templates) and [reusable components](/docs/iac/concepts/components) optimized from the start.
-- **Policy-Driven by Design** that enforces security, compliance, and cost [policies](/docs/iac/packages-and-automation/crossguard/get-started) automatically.
+- **Infrastructure as a First-Class Concern** with built-in multitenancy, isolation, and [governance](/docs/insights/policy/).
+- **Efficiency & Cost Awareness** through [golden paths](/templates) and [reusable components](/docs/iac/concepts/components/) optimized from the start.
+- **Policy-Driven by Design** that enforces security, compliance, and cost [policies](/docs/insights/policy/get-started/) automatically.
 - **Cloud-Native Ready** ideal for ephemeral workloads, Kubernetes, and multi-cloud.
 
 ### Considerations
@@ -150,9 +150,9 @@ Pulumi IDP brings **[Infrastructure Platform Engineering](/what-is/what-is-platf
 
 **Choose Pulumi IDP for platform engineering if you:**
 
-- Need [infrastructure governance](/docs/iac/packages-and-automation/crossguard) from day one
-- Want [cost management](/blog/finops-with-pulumi) and [policy automation](/docs/iac/packages-and-automation/crossguard/get-started) built in
-- Must scale efficiently across [Kubernetes](/docs/iac/clouds/kubernetes) and [multi-cloud](/docs/iac/concepts/how-pulumi-works)
+- Need [infrastructure governance](/docs/insights/policy/) from day one
+- Want [cost management](/blog/finops-with-pulumi) and [policy automation](/docs/insights/policy/get-started/) built in
+- Must scale efficiently across [Kubernetes](/docs/integrations/clouds/kubernetes/) and [multi-cloud](/docs/iac/guides/basics/how-pulumi-works/)
 - Prefer to avoid building everything from scratch
 - Need to deploy quickly (hours vs months)
 
@@ -171,7 +171,7 @@ Infrastructure Platform Engineering flips that model, ensuring the platform's fo
 - [Cost-efficient](/blog/finops-with-pulumi)
 - [Secure](/blog/integrating-devops-and-security-for-scalable-platform-engineering)
 
-Hybrid approaches are also possible. Pulumi offers a [Backstage plugin](/docs/pulumi-cloud/developer-platforms) so teams can pair Backstage's portal features with Pulumi IDP's infrastructure power.
+Hybrid approaches are also possible. Pulumi offers a [Backstage plugin](/docs/idp/concepts/) so teams can pair Backstage's portal features with Pulumi IDP's infrastructure power.
 
 ## Bottom line: infrastructure-first wins for platform engineering
 
@@ -191,7 +191,7 @@ Backstage typically requires 12-18 months for full implementation with ongoing m
 
 ### Can I use Backstage and Pulumi IDP together?
 
-Yes, Pulumi offers a [Backstage plugin](/docs/pulumi-cloud/developer-platforms) that allows teams to combine Backstage's portal features with Pulumi IDP's infrastructure capabilities for a hybrid approach.
+Yes, Pulumi offers a [Backstage plugin](/docs/idp/concepts/) that allows teams to combine Backstage's portal features with Pulumi IDP's infrastructure capabilities for a hybrid approach.
 
 ### What are the costs of running Backstage vs Pulumi IDP?
 

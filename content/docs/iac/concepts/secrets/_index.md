@@ -18,7 +18,7 @@ aliases:
 - /secrets/
 ---
 
-All resource input and output values are recorded as stack [_state_](/docs/concepts/state) and stored in Pulumi Cloud, in a state file, or in your DIY backend of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
+All resource input and output values are recorded as stack [_state_](/docs/iac/concepts/state-and-backends/) and stored in Pulumi Cloud, in a state file, or in your DIY backend of choice. These values are usually just plain-text strings, such as configuration settings, computed URLs, or resource identifiers. Sometimes, however, these values contain sensitive data, such as database passwords or service tokens, that must be handled carefully and protected from exposure.
 
 Pulumi Cloud transmits and stores entire state files securely, but Pulumi also supports encrypting individual values as _secrets_ for additional protection. Encryption ensures that these values never appear as plain text in your state file. By default, the encryption method uses automatic, per-stack encryption keys provided by Pulumi Cloud, but you can also use a [provider of your own choosing](#configuring-secrets-encryption) instead.
 
@@ -127,7 +127,7 @@ func main() {
             return err
         }
         return nil
-    }
+    })
 }
 ```
 
@@ -189,8 +189,8 @@ An output can be marked secret in a number of ways:
 
 - By reading a secret from configuration using {{< pulumi-config-getsecret >}} or {{< pulumi-config-requiresecret >}}.
 - By creating a new secret value with {{< pulumi-secret-new >}}, such as when generating a new random password.
-- By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/concepts/inputs-outputs).
-- By computing a secret value by using [`apply`](/docs/concepts/inputs-outputs/#apply) or {{< pulumi-all >}} with another secret value.
+- By marking a resource as having secret properties using [`additionalSecretOutputs`](/docs/iac/concepts/inputs-outputs/).
+- By computing a secret value by using [`apply`](/docs/iac/concepts/inputs-outputs/apply/) or {{< pulumi-all >}} with another secret value.
 
 As soon as an output is marked secret, the Pulumi engine will encrypt it wherever it is stored.
 
@@ -200,7 +200,7 @@ Be careful that you do not pass this plain-text value to code that might expose 
 
 ### Explicitly marking resource outputs as secrets
 
-It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/concepts/resources#additionalsecretoutputs) option.
+It is possible to mark resource outputs as containing secrets. In this case, Pulumi will automatically treat those outputs as secrets and encrypt them in the state file and anywhere they flow to. To do so, use the [`additional secret outputs`](/docs/iac/concepts/resources/options/additionalsecretoutputs/) option.
 
 ### The resource ID cannot be made secret
 
@@ -380,7 +380,10 @@ func main() {
 
         name := c.Require("name")
         dbPassword := c.RequireSecret("dbPassword")
-    }
+        ctx.Export("name", pulumi.String(name))
+        ctx.Export("dbPassword", dbPassword)
+        return nil
+    })
 }
 ```
 
@@ -622,7 +625,7 @@ Which should look like this:
 
 ## Configuring secrets encryption
 
-Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/concepts/state/).
+Pulumi Cloud automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using `--secret` or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Cloud that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored. For more details about the concept of state files and backends, refer to [State and Backends](/docs/iac/concepts/state-and-backends/).
 
 The default encryption mechanism may be insufficient in the following scenarios:
 
@@ -760,6 +763,6 @@ config:
     secure: AAABAIIlW0ewSuZ1FJxw/+Rpw6BNqTUvGJ30O8WkpL2hB4aPyS7UU68=
 ```
 
-Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/access-identity/stack-permissions/) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
+Decrypting this ciphertext requires the encryption key that was used to create it. For stacks managed with Pulumi Cloud, these keys are obtained automatically, but only for users with [read access](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets) to the stack. For DIY backends, the keys must be supplied by the user, either by providing the stack's current passphrase (when using the [`passphrase`](#changing-the-secrets-provider-for-a-stack) provider) or by authenticating with the stack's [encryption provider](#available-encryption-providers).
 
 It's therefore considered safe and good practice to check these files into source control (including the `encryptionSalt`s used with the passphrase provider or `encryptedKey` when one of the other secrets providers), as doing so allows you to version your code and configuration in tandem. If you'd prefer not to check in these files, however, you can easily rebuild them, using the most recently deployed configuration, with [`pulumi config refresh`](/docs/iac/cli/commands/pulumi_config_refresh/).

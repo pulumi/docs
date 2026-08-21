@@ -78,6 +78,9 @@ FRESH_VERDICTS = {"verified", "matches"}
 # from outside the docs corpus to mean anything.
 DECIDED_VERDICTS = STALE_VERDICTS | FRESH_VERDICTS
 
+# Lazily-imported select-articles module (tier semantics live there).
+_SELECT = None
+
 
 def log(msg: str) -> None:
     print(f"reverify-claims: {msg}", file=sys.stderr)
@@ -95,6 +98,33 @@ def _load_verify_claims():
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+def _policy_for(path: str, rules: list[dict]):
+    """select-articles.policy_for, imported by path so the tier semantics have
+    exactly one definition (same pattern check-retire-veto.py uses)."""
+    global _SELECT
+    if _SELECT is None:
+        spec = importlib.util.spec_from_file_location(
+            "select_articles", Path(__file__).resolve().parent / "select-articles.py")
+        _SELECT = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_SELECT)
+    return _SELECT.policy_for(path, rules)
+
+
+def load_tier_rules(tiers_file: Path | None) -> list[dict]:
+    """Tier rules, or [] when unreadable. Failing to [] means every page looks
+    editable, i.e. today's file-existence-only behavior — noisier for
+    generated trees, never blinder."""
+    if tiers_file is None or not tiers_file.is_file():
+        return []
+    try:
+        _policy_for("content/docs/x.md", [])  # force the import, surface errors here
+        return _SELECT.load_tiers(tiers_file)
+    except Exception as e:  # noqa: BLE001
+        warn(f"could not load tiers from {tiers_file} ({e}); "
+             f"generated trees will route by file existence alone")
+        return []
 
 
 def _load_is_volatile():
@@ -200,14 +230,184 @@ def already_marked(key: str, assertions: list[dict], ledger: dict[str, dict]) ->
     return False
 
 
+def superseded_by_review(assertions: list[dict], ledger: dict[str, dict]) -> bool:
+    """True when every asserting page was re-reviewed AFTER its snapshot.
+
+    The claims index records the PRE-fix page, so right after a fix lands the
+    snapshot still asserts the old value — re-checking it would re-flag a
+    claim the merged fix already corrected (the echo that used to buy every
+    stale-claim fix a redundant next-day review). A completed ledger review
+    (status != "incomplete", record-review.py's vocabulary) dated strictly
+    after the snapshot means fresher evidence is on its way: the reviewing
+    worker rewrites the claims snapshot, and the entity re-enters the rotation
+    then. Any page lacking that newer completed review keeps the entity due.
+    """
+    for a in assertions:
+        snap_day = str(a.get("reviewed_at") or "")
+        entry = ledger.get(a["path"]) or {}
+        reviewed = str(entry.get("reviewed_at") or "")
+        completed = bool(reviewed) and entry.get("status") != "incomplete"
+        # ISO dates compare correctly as strings; empty strings fail safe.
+        if not (completed and snap_day and reviewed > snap_day):
+            return False
+    return True
+
+
+def fix_route(assertions: list[dict], repo_root: Path | None,
+              tier_rules: list[dict] | None = None) -> str:
+    """Where a contradicted claim about these pages can actually be fixed.
+
+    Returns "local", "generated", or "missing". Only "local" may become a
+    marker — the mark/boost/fix/retire loop needs a page a PR can edit, and
+    the other two have none, so a marker there can never be retired and
+    `already_marked()` then drops the entity from the rotation for good.
+
+    Two distinct ways to have no such page, and the file check alone catches
+    only the first:
+
+    * "missing" — no markdown in the tree. A Hugo content adapter builds the
+      page from `data/` at request time (the pre-built policy packs), or the
+      page was deleted and its claims snapshot outlived it.
+    * "generated" — the markdown exists but is machine-written and clobbered
+      on the next generator run, so an edit to it is thrown away. The CLI
+      command reference is 248 such files. `strategic-tiers.yaml` already
+      states exactly this as `editable: false`, so that file is the authority
+      rather than a second list to keep in sync. Note it is the EDITABLE flag,
+      not the tier: since #20996 the CLI tree is tier 3 and `reviewable: true`
+      (the report-only lane records its claims), and those claims must still
+      route upstream rather than to a marker no PR here could retire.
+
+    A claim asserted on several pages is fixable if ANY of them is, which is
+    the permissive direction: worst case we mark a page and the review finds
+    nothing to do, versus routing a fixable claim away from the lane that
+    would have fixed it.
+
+    `repo_root=None` (and no rules) means "assume local", so pure-logic
+    callers and the self-tests keep today's behavior.
+    """
+    if repo_root is None and not tier_rules:
+        return "local"
+    reasons: list[str] = []
+    for a in assertions:
+        path = a["path"]
+        editable = True
+        if tier_rules:
+            editable = _policy_for(path, tier_rules).editable
+        exists = repo_root is None or (repo_root / path).is_file()
+        if exists and editable:
+            return "local"
+        reasons.append("generated" if not editable else "missing")
+    # Prefer the more specific reason when a claim spans both kinds.
+    return "generated" if "generated" in reasons else "missing"
+
+
+def load_known_upstream(path: Path | None) -> dict[str, dict]:
+    """{entity_key: entry} from upstream-claims.yaml, or {} when absent.
+
+    Never raises: a malformed or missing file means "nothing is known yet",
+    which costs a duplicate Slack line and never suppresses a real finding.
+    That is the safe direction — this file can only ever quiet a notification,
+    so failing open on it can only make the lane noisier, not blinder.
+    """
+    if path is None or not path.is_file():
+        return {}
+    try:
+        import yaml  # local: only this path needs it
+        data = yaml.safe_load(path.read_text()) or {}
+    except Exception as e:  # noqa: BLE001 - any parse failure is non-fatal
+        warn(f"could not read {path} ({e}); every upstream finding will report as new")
+        return {}
+    out: dict[str, dict] = {}
+    for entry in (data.get("known") or []):
+        if isinstance(entry, dict) and entry.get("entity_key"):
+            out[str(entry["entity_key"])] = entry
+    return out
+
+
+def load_upstream_repos(path: Path | None) -> list[dict]:
+    """[{prefix, repo}, ...] from upstream-claims.yaml, longest prefix first."""
+    if path is None or not path.is_file():
+        return []
+    try:
+        import yaml
+        data = yaml.safe_load(path.read_text()) or {}
+    except Exception:  # noqa: BLE001 - a missing link is not worth a failed run
+        return []
+    rows = [r for r in (data.get("repos") or [])
+            if isinstance(r, dict) and r.get("prefix") and r.get("repo")]
+    return sorted(rows, key=lambda r: len(r["prefix"]), reverse=True)
+
+
+def file_issue_url(finding: dict, claim_text: str, repos: list[dict],
+                   origin: str = "nightly claims re-verify") -> str | None:
+    """A prefilled GitHub new-issue URL for an unfiled upstream finding.
+
+    Returns None when no mapping owns the page — the finding still reports and
+    still pages #docs-ops, it just arrives without a one-click filing.
+
+    `origin` names the lane that found it, because the reader of the issue
+    should know: the nightly re-verify re-checks a claim already in the index,
+    while the report-only lane (pulumi/docs#20996) is the FIRST check that page
+    has ever had.
+
+    Everything the reader needs to judge the finding rides in the body, so the
+    human decision is "is this right?" rather than "let me go reconstruct what
+    the bot saw". Fields are truncated because the whole thing travels as a
+    query string; GitHub starts dropping it a few KB in, and a link that
+    silently loses its body is worse than a short one.
+    """
+    page = finding["pages"][0]["path"] if finding.get("pages") else ""
+    repo = next((r["repo"] for r in repos if page.startswith(r["prefix"])), None)
+    if not repo:
+        return None
+
+    def clip(s: str, n: int) -> str:
+        s = " ".join(str(s or "").split())
+        return s if len(s) <= n else s[: n - 1] + "…"
+
+    title = f"Docs claim contradicted: {clip(finding['entity_key'], 90)}"
+    body = (
+        f"Found by the pulumi/docs {origin}. The page is generated, "
+        f"so there is nothing to fix in pulumi/docs — the text comes from here.\n\n"
+        f"**Claim as published:** {clip(claim_text, 600)}\n\n"
+        f"**What the check found:** {clip(finding.get('evidence'), 900)}\n\n"
+        f"**Source consulted:** {clip(finding.get('source'), 300)}\n\n"
+        f"**Rendered from:** `{page}`\n"
+        f"**Entity key:** `{finding['entity_key']}`\n\n"
+        f"---\n"
+        f"Filed by a human from a #docs-ops notification; the check is automated, "
+        f"the judgment is not. If this is wrong, say so on the issue — that is a "
+        f"useful signal for the verifier's targeting."
+    )
+    from urllib.parse import urlencode
+    return (f"https://github.com/{repo}/issues/new?"
+            + urlencode({"title": title, "body": body}))
+
+
 def tonight_chunk(keys: list[str], count: int, today: date) -> list[str]:
     """Day-rotated chunk of the sorted entity keys: full coverage every
-    ceil(N/count) nights, deterministic from the date alone."""
+    ceil(N/count) nights, deterministic from the date alone.
+
+    The slice is STRIDED (`keys[idx::n_chunks]`), not contiguous. Contiguous
+    slicing gives the last chunk `len(keys) % count` entities, so the nightly
+    workload is a lottery on the pool size: at count=25 a pool of 51 splits
+    25/25/1, and one night in three checks a single entity. That is not a
+    quiet night — it is the same rotation spending 4% of its budget and then
+    reporting a sample of one, which `signal-health.py` reads as a lane-wide
+    verdict (an all-inconclusive n=1 degraded the reverify signal on
+    2026-08-19). Striding gives every chunk floor or ceil of len/n_chunks,
+    so the count only ever varies by one.
+
+    Coverage and determinism are unchanged: the chunks still partition the
+    key list exactly, and the day still picks the chunk. Only the grouping
+    differs — entities that used to travel together now interleave, which
+    nothing downstream depends on (each entity is verified independently).
+    """
     if not keys or count <= 0:
         return []
     n_chunks = -(-len(keys) // count)  # ceil
     idx = today.toordinal() % n_chunks
-    return keys[idx * count:(idx + 1) * count]
+    return keys[idx::n_chunks]
 
 
 def representative(assertions: list[dict]) -> dict:
@@ -233,7 +433,8 @@ def load_ledger(ledger_dir: Path) -> dict[str, dict]:
     return entries
 
 
-def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> dict[str, dict]:
+def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date,
+                  repo_root: Path | None = None) -> dict[str, dict]:
     """Fold stale entity verdicts into the affected pages' ledger entries.
 
     Returns {slug: updated entry (without bookkeeping keys)} for every entry
@@ -243,7 +444,19 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
     not synthesized: every changed entry is uploaded to the same S3 key
     record-review.py owns, so a two-field stub would silently destroy that
     page's status / reviewed_at / attempts / tier / score. The entity simply
-    stays unmarked and comes back around on a later rotation."""
+    stays unmarked and comes back around on a later rotation.
+
+    A page with no markdown source on disk is skipped for a different and more
+    important reason. `select-articles.py` builds its candidate set by globbing
+    `content/docs/**/*.md`, so a page rendered by a Hugo content adapter (the
+    pre-built policy-pack tables, generated from `data/`) can never be selected
+    for review — which means a marker written there can never be cleared, and
+    `already_marked()` would then exclude that entity from re-verification
+    permanently. Three entities were lost that way over five nights before this
+    guard existed. Such a contradiction is real and worth acting on, but the
+    action is upstream of this repo (fix the `data/` source or the product
+    metadata behind it), so the verdict is reported and left in the pool rather
+    than converted into a marker nothing can retire."""
     changed: dict[str, dict] = {}
     for s in stale:
         marker = {
@@ -254,6 +467,12 @@ def apply_markers(ledger: dict[str, dict], stale: list[dict], today: date) -> di
             "checked_at": today.isoformat(),
         }
         for page in s["pages"]:
+            if repo_root is not None and not (repo_root / page["path"]).is_file():
+                warn(
+                    f"{page['path']} has no source file (generated page); reporting "
+                    f"{s['entity_key']} without a marker no review could ever clear"
+                )
+                continue
             entry = ledger.get(page["path"])
             if entry is None:
                 warn(
@@ -294,9 +513,46 @@ def write_outputs(report: dict) -> None:
     if not gh_out:
         return
     with open(gh_out, "a") as fh:
-        # Only the gating flag: claims-reverify.yml reads the counts straight
-        # out of the report JSON for its Slack summary.
-        fh.write(f"has_stale={'true' if report['meta']['n_stale'] else 'false'}\n")
+        # Only the gating flags: claims-reverify.yml reads the counts straight
+        # out of the report JSON for its Slack summaries.
+        m = report["meta"]
+        fh.write(f"has_stale={'true' if m['n_stale'] else 'false'}\n")
+        # Upstream findings page #docs-ops only on a CHANGE — a finding nobody
+        # has filed yet, or one that started verifying clean because the
+        # upstream fix landed. A known finding still coming back contradicted
+        # is in the report and the artifact, and says nothing in Slack.
+        news = bool(m.get("n_upstream_new")) or bool(m.get("n_upstream_resolved"))
+        fh.write(f"has_upstream_news={'true' if news else 'false'}\n")
+
+
+def inconclusive_breakdowns(results: list[dict]) -> tuple[dict, dict]:
+    """Two count maps over the non-decided results, for diagnosing WHY the
+    inconclusive rate is what it is (76% on the night this was added):
+
+    - by_type:   the entity_key's ctype prefix (the part before the first
+                 "/", per entity_key.py) — which kinds of fact can't verify.
+    - by_reason: "demoted" (decided, but only own-corpus evidence), "error"
+                 (verifier crashed), else the raw verdict ("unverifiable",
+                 "no_verdict" for a missing one).
+
+    Instrumentation only — nothing downstream keys on these; the routing
+    fixes they motivate are follow-up work.
+    """
+    by_type: dict[str, int] = {}
+    by_reason: dict[str, int] = {}
+    for r in results:
+        if r.get("verdict") in DECIDED_VERDICTS:
+            continue
+        ctype = str(r.get("entity_key") or "").split("/", 1)[0] or "unknown"
+        by_type[ctype] = by_type.get(ctype, 0) + 1
+        if r.get("demoted_from"):
+            reason = "demoted"
+        elif r.get("error"):
+            reason = "error"
+        else:
+            reason = str(r.get("verdict") or "no_verdict")
+        by_reason[reason] = by_reason.get(reason, 0) + 1
+    return (dict(sorted(by_type.items())), dict(sorted(by_reason.items())))
 
 
 def finish(report: dict, out_path: Path) -> int:
@@ -304,7 +560,20 @@ def finish(report: dict, out_path: Path) -> int:
     m = report["meta"]
     log(f"checked={m['n_checked']} stale={m['n_stale']} fresh={m['n_fresh']} "
         f"inconclusive={m['n_inconclusive']} (of which {m['n_demoted']} demoted for "
-        f"own-corpus evidence) (volatile entities={m['n_entities']}) -> {out_path}")
+        f"own-corpus evidence) (volatile entities={m['n_entities']}, "
+        f"eligible={m.get('n_eligible', 0)}, marked={m.get('n_marked', 0)}, "
+        f"superseded={m.get('n_superseded', 0)}) -> {out_path}")
+    for label in ("inconclusive_by_type", "inconclusive_by_reason"):
+        if m.get(label):
+            log(f"{label}: " + " ".join(f"{k}={v}" for k, v in m[label].items()))
+    if m.get("n_upstream"):
+        log(f"upstream (generated pages, not markable): {m['n_upstream']} "
+            f"({m.get('n_upstream_new', 0)} not yet filed)")
+        for e in m.get("upstream_entities") or []:
+            log(f"  [{e.get('reason', '?')}] {e['entity_key']} "
+                f"-> {e.get('issue') or 'NOT YET FILED'}")
+    for k in m.get("upstream_resolved_entities") or []:
+        log(f"upstream RESOLVED (now verifies clean, retire its upstream-claims.yaml entry): {k}")
     write_outputs(report)
     return 0
 
@@ -322,8 +591,9 @@ def run(args) -> int:
         "schema_version": SCHEMA_VERSION,
         "checked_at": today.isoformat(),
         "entities": [],
-        "meta": {"n_snapshots": 0, "n_entities": 0, "n_due": 0, "n_checked": 0,
-                 "n_stale": 0, "n_fresh": 0, "n_inconclusive": 0, "n_demoted": 0},
+        "meta": {"n_snapshots": 0, "n_entities": 0, "n_marked": 0, "n_eligible": 0,
+                 "n_due": 0, "n_checked": 0, "n_stale": 0, "n_fresh": 0,
+                 "n_inconclusive": 0, "n_demoted": 0},
     }
     out_path = Path(args.out)
 
@@ -345,7 +615,18 @@ def run(args) -> int:
     entities = volatile_entities(snapshots, _load_is_volatile())
     report["meta"]["n_entities"] = len(entities)
 
-    unmarked = sorted(k for k, v in entities.items() if not already_marked(k, v, ledger))
+    marked = {k for k, v in entities.items() if already_marked(k, v, ledger)}
+    superseded = {k for k, v in entities.items()
+                  if k not in marked and superseded_by_review(v, ledger)}
+    unmarked = sorted(k for k in entities if k not in marked and k not in superseded)
+    # n_eligible is the pool the rotation actually divides, and n_marked is
+    # the backlog held out of it. Without both, a small n_due is ambiguous
+    # between "the pool is nearly empty" and "the rotation handed tonight a
+    # short chunk" — the two want opposite responses, and reading the report
+    # for 2026-08-19 (n_due=1) could not tell them apart.
+    report["meta"]["n_marked"] = len(marked)
+    report["meta"]["n_superseded"] = len(superseded)
+    report["meta"]["n_eligible"] = len(unmarked)
     keys = tonight_chunk(unmarked, args.count, today)
     report["meta"]["n_due"] = len(keys)
     if not keys:
@@ -360,6 +641,18 @@ def run(args) -> int:
 
     vc = _load_verify_claims()
     repo_root = Path(args.repo_root).resolve()
+    known_upstream = load_known_upstream(
+        Path(args.known_upstream) if args.known_upstream else None)
+    tier_rules = load_tier_rules(Path(args.tiers) if args.tiers else None)
+    upstream_repos = load_upstream_repos(
+        Path(args.known_upstream) if args.known_upstream else None)
+    # A key that matches nothing in the index is a typo, or a claim that has
+    # since been re-extracted under a different key — either way it is silently
+    # muting nothing while looking like it mutes something. Warn, never fail:
+    # this file must not be able to break the nightly run.
+    for key in sorted(set(known_upstream) - set(entities)):
+        warn(f"upstream-claims.yaml lists {key}, which matches no volatile entity "
+             f"in the claims index; stale entry or a re-keyed claim")
 
     def check_entity(key: str) -> dict:
         claim = dict(representative(entities[key]))
@@ -372,6 +665,7 @@ def run(args) -> int:
             demoted_from, verdict = verdict, "unverifiable"
         return {
             "entity_key": key,
+            "claim_text": claim.get("text") or "",
             "verdict": verdict,
             "demoted_from": demoted_from,
             "confidence": rec.get("confidence"),
@@ -385,17 +679,67 @@ def run(args) -> int:
     with ThreadPoolExecutor(max_workers=min(MAX_CONCURRENCY, len(keys))) as pool:
         results = list(pool.map(check_entity, keys))
 
-    stale = [r for r in results if r["verdict"] in STALE_VERDICTS]
+    # Split contradicted results by whether anything in this repo could act on
+    # them. `upstream` findings are real and stay in the rotation forever: no
+    # marker (nothing could ever retire it), no queue boost (no page to boost),
+    # but reported every run so they never go quiet the way the three
+    # policy-pack findings did in August.
+    contradicted = [r for r in results if r["verdict"] in STALE_VERDICTS]
+    for r in results:
+        r["fix_route"] = fix_route(
+            [{"path": p["path"]} for p in r["pages"]], repo_root, tier_rules)
+        r["upstream"] = r["fix_route"] != "local"
+    stale = [r for r in contradicted if not r["upstream"]]
+    upstream = [r for r in contradicted if r["upstream"]]
+    # New = we have not told anyone yet. Resolved = a finding we had filed
+    # upstream now verifies clean, i.e. the upstream fix landed. The second is
+    # the event the marker scheme structurally could not report, because a
+    # marked entity was never re-checked.
+    upstream_new = [r for r in upstream if r["entity_key"] not in known_upstream]
+    upstream_resolved = [r for r in results
+                         if r["entity_key"] in known_upstream
+                         and r["verdict"] in FRESH_VERDICTS]
+    for r in upstream:
+        entry = known_upstream.get(r["entity_key"])
+        if entry:
+            r["upstream_issue"] = entry.get("issue")
+        else:
+            r["file_issue_url"] = file_issue_url(
+                r, r.get("claim_text") or "", upstream_repos)
+
     fresh = [r for r in results if r["verdict"] in FRESH_VERDICTS]
     report["entities"] = results
     report["meta"]["n_checked"] = len(results)
     report["meta"]["n_stale"] = len(stale)
+    report["meta"]["n_upstream"] = len(upstream)
+    report["meta"]["n_upstream_new"] = len(upstream_new)
+    report["meta"]["n_upstream_resolved"] = len(upstream_resolved)
+    report["meta"]["upstream_entities"] = [
+        {"entity_key": r["entity_key"], "issue": r.get("upstream_issue"),
+         "file_issue_url": r.get("file_issue_url"),
+         # Explicit, so the Slack step filters on the SAME property the count
+         # is computed from. Deriving "new" a second time from `issue == null`
+         # made the workflow depend on --self-test (in another file) rejecting
+         # a registry entry with no issue, to keep its own two numbers
+         # agreeing. One field, one definition.
+         "new": r["entity_key"] not in known_upstream,
+         "reason": r["fix_route"], "pages": [p["path"] for p in r["pages"]]}
+        for r in sorted(upstream, key=lambda x: x["entity_key"])]
+    report["meta"]["upstream_resolved_entities"] = sorted(
+        r["entity_key"] for r in upstream_resolved)
     report["meta"]["n_fresh"] = len(fresh)
-    report["meta"]["n_inconclusive"] = len(results) - len(stale) - len(fresh)
+    # Against `contradicted`, not `stale`: an upstream finding is a decided
+    # verdict that simply routes elsewhere. Subtracting only the markable ones
+    # would book every upstream contradiction as inconclusive, inflating the
+    # rate the health signal watches and eventually degrading the lane for
+    # doing its job.
+    report["meta"]["n_inconclusive"] = len(results) - len(contradicted) - len(fresh)
     report["meta"]["n_demoted"] = sum(1 for r in results if r["demoted_from"])
+    report["meta"]["inconclusive_by_type"], report["meta"]["inconclusive_by_reason"] = \
+        inconclusive_breakdowns(results)
 
     if stale:
-        changed = apply_markers(ledger, stale, today)
+        changed = apply_markers(ledger, stale, today, repo_root)
         uri = os.environ.get("CONTENT_REVIEW_LEDGER_URI", "").strip()
         for slug, entry in sorted(changed.items()):
             local = Path(args.ledger_dir) / f"{slug}.json"
@@ -413,6 +757,8 @@ def run(args) -> int:
 
 
 def self_test() -> int:
+    import tempfile
+    from urllib.parse import unquote_plus
     failures = []
 
     def check(name, cond):
@@ -448,6 +794,40 @@ def self_test() -> int:
     check("entity fans out across pages", len(ents["version/pulumi-gcp"]) == 2)
     check("representative is the freshest assertion",
           representative(ents["version/pulumi-gcp"])["text"] == "pulumi-gcp v8.3.0")
+
+    # Supersession: an entity whose every asserting page has a completed
+    # review newer than its snapshot is stale evidence — skip, don't re-check.
+    def entry(path, reviewed_at, status="reviewed"):
+        return {"path": path, "reviewed_at": reviewed_at, "status": status}
+
+    both_newer = {"content/docs/a.md": entry("content/docs/a.md", "2026-07-10"),
+                  "content/docs/b.md": entry("content/docs/b.md", "2026-07-11")}
+    one_stale = {"content/docs/a.md": entry("content/docs/a.md", "2026-07-10"),
+                 "content/docs/b.md": entry("content/docs/b.md", "2026-07-02")}
+    incomplete = {"content/docs/a.md": entry("content/docs/a.md", "2026-07-10"),
+                  "content/docs/b.md": entry("content/docs/b.md", "2026-07-11", "incomplete")}
+    check("superseded when every page re-reviewed after its snapshot",
+          superseded_by_review(ents["version/pulumi-gcp"], both_newer) is True)
+    check("not superseded while any page's snapshot is the freshest evidence",
+          superseded_by_review(ents["version/pulumi-gcp"], one_stale) is False)
+    check("an incomplete review never supersedes",
+          superseded_by_review(ents["version/pulumi-gcp"], incomplete) is False)
+    check("missing ledger entries never supersede",
+          superseded_by_review(ents["version/pulumi-gcp"], {}) is False)
+
+    # Inconclusive breakdowns: decided results excluded, reasons bucketed.
+    mixed = [
+        {"entity_key": "version/a", "verdict": "verified"},
+        {"entity_key": "version/b", "verdict": "unverifiable", "demoted_from": "matches"},
+        {"entity_key": "numerical/c", "verdict": "unverifiable"},
+        {"entity_key": "numerical/d", "verdict": None, "error": "boom"},
+        {"entity_key": None, "verdict": "unverifiable"},
+    ]
+    b_type, b_reason = inconclusive_breakdowns(mixed)
+    check("breakdown by type buckets on the ctype prefix",
+          b_type == {"numerical": 2, "unknown": 1, "version": 1})
+    check("breakdown by reason splits demoted/error/verdict",
+          b_reason == {"demoted": 1, "error": 1, "unverifiable": 2})
 
     # Re-derived volatility overrides the snapshot's stored flag, so a
     # narrowed policy reaches the whole index the night it ships.
@@ -490,6 +870,125 @@ def self_test() -> int:
     check("same day -> same chunk", tonight_chunk(keys, 2, d0) == chunks[0])
     check("count of zero -> empty chunk", tonight_chunk(keys, 0, d0) == [])
     check("empty keys -> empty chunk", tonight_chunk([], 3, d0) == [])
+    check("chunks partition the key list (no key checked twice a rotation)",
+          len([k for ch in chunks for k in ch]) == len(keys))
+    # The remainder night: 51 keys at count=25 used to split 25/25/1, so one
+    # night in three checked a single entity. Every chunk is now within one.
+    wide = [f"k{i:03d}" for i in range(51)]
+    sizes = sorted(len(tonight_chunk(wide, 25, date.fromordinal(d0.toordinal() + i)))
+                   for i in range(3))
+    check(f"no starved night in the rotation (sizes={sizes})", max(sizes) - min(sizes) <= 1)
+    check("strided rotation still covers every key",
+          sorted(k for i in range(3)
+                 for k in tonight_chunk(wide, 25, date.fromordinal(d0.toordinal() + i)))
+          == wide)
+    check("chunk never exceeds the requested count",
+          all(len(tonight_chunk(wide, 25, date.fromordinal(d0.toordinal() + i))) <= 25
+              for i in range(3)))
+
+    # Upstream routing: a finding whose every asserting page is generated
+    # (no markdown source) must never become a marker, because nothing could
+    # ever retire it — that is how three real policy-pack findings removed
+    # themselves from the rotation in August 2026.
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        (root / "content/docs").mkdir(parents=True)
+        (root / "content/docs/real.md").write_text("# real\n")
+        (root / "content/docs/iac/cli/commands").mkdir(parents=True)
+        (root / "content/docs/iac/cli/commands/pulumi-up.md").write_text("# gen\n")
+        rules = [{"prefix": "content/docs/iac/cli/commands/", "tier": 0}]
+        local = [{"path": "content/docs/real.md"}]
+        absent = [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]
+        gen = [{"path": "content/docs/iac/cli/commands/pulumi-up.md"}]
+        check("an editable page routes local", fix_route(local, root, rules) == "local")
+        check("a page with no source routes missing",
+              fix_route(absent, root, rules) == "missing")
+        # The case the file check alone gets wrong: the markdown is right there,
+        # but the generator overwrites it, so a PR against it is thrown away.
+        check("a tier-0 page with a real file still routes generated",
+              fix_route(gen, root, rules) == "generated")
+        check("one fixable asserting page wins", fix_route(gen + local, root, rules) == "local")
+        check("generated beats missing when a claim spans both",
+              fix_route(gen + absent, root, rules) == "generated")
+        # The shape the CLI reference actually carries since #20996: the report
+        # lane reads it (`reviewable: true`) but no PR here may edit it, and it
+        # is `editable`, not the tier, that decides where a finding goes.
+        report_rules = [{"prefix": "content/docs/iac/cli/commands/", "tier": 3,
+                         "editable": False, "reviewable": True}]
+        check("a reviewable-but-not-editable page routes generated, not local",
+              fix_route(gen, root, report_rules) == "generated")
+        check("no root and no rules -> assume local (pure-logic callers)",
+              fix_route(absent, None, None) == "local")
+        check("unreadable tiers file -> no rules, never fatal",
+              load_tier_rules(root / "nope.yaml") == [])
+
+        # The known-upstream file only ever quiets a repeat notification.
+        ku = root / "upstream-claims.yaml"
+        ku.write_text(
+            "known:\n"
+            "  - entity_key: numerical/known-one\n"
+            "    issue: https://github.com/pulumi/policy-packs-internal/issues/204\n")
+        loaded = load_known_upstream(ku)
+        check("known-upstream parses to a key map", set(loaded) == {"numerical/known-one"})
+        check("missing known-upstream file is empty, not fatal",
+              load_known_upstream(root / "nope.yaml") == {})
+        (root / "bad.yaml").write_text("known: [{{{\n")
+        check("malformed known-upstream fails open (noisier, never blinder)",
+              load_known_upstream(root / "bad.yaml") == {})
+
+    # Prefilled filing links: mapped tree gets one, unmapped tree gets None
+    # (still reported, still paged — just no one-click).
+    repos = [{"prefix": "content/docs/reference/pre-built-policy-packs/",
+              "repo": "pulumi/policy-packs-internal"}]
+    finding = {"entity_key": "numerical/iam-user-unused-credentials-90",
+               "evidence": "AWS Config's rule covers UNUSED credentials, not rotation.",
+               "source": "https://docs.aws.amazon.com/config/latest/developerguide/x.html",
+               "pages": [{"path": "content/docs/reference/pre-built-policy-packs/cis/aws.md"}]}
+    url = file_issue_url(finding, "The policy ensures credentials are rotated within 90 days.", repos)
+    check("mapped tree yields a filing link",
+          url is not None and url.startswith("https://github.com/pulumi/policy-packs-internal/issues/new?"))
+    check("link carries the claim, the finding, and the source",
+          all(t in unquote_plus(url) for t in
+              ("rotated within 90 days", "UNUSED credentials", "docs.aws.amazon.com")))
+    check("link names the generated page it renders from",
+          "content/docs/reference/pre-built-policy-packs/cis/aws.md" in unquote_plus(url))
+    check("unmapped tree yields no link",
+          file_issue_url({**finding, "pages": [{"path": "content/docs/iac/concepts/x.md"}]},
+                         "t", repos) is None)
+    check("a finding with no pages yields no link",
+          file_issue_url({**finding, "pages": []}, "t", repos) is None)
+    # A body that silently loses its tail is worse than a short one, so the
+    # fields are clipped; guard the total against GitHub's query-string limit.
+    huge = file_issue_url({**finding, "evidence": "E" * 20000, "source": "S" * 20000},
+                          "C" * 20000, repos)
+    check(f"oversized finding still yields a usable URL ({len(huge)} chars)", len(huge) < 8000)
+    check("shipped repo map parses and covers the policy-pack tree",
+          any(r["prefix"] == "content/docs/reference/pre-built-policy-packs/"
+              for r in load_upstream_repos(
+                  HERE / ".claude/commands/review-existing-content/references/upstream-claims.yaml")))
+
+    # The shipped file itself: every entry needs a tracking issue, or it is a
+    # mute button with nobody behind it. (Key-vs-index validation needs the
+    # claims index and so runs at runtime, as a warning.)
+    shipped = HERE / ".claude/commands/review-existing-content/references/upstream-claims.yaml"
+    if shipped.is_file():
+        entries = load_known_upstream(shipped)
+        check("shipped upstream-claims.yaml parses", bool(entries))
+        check("every shipped entry cites an upstream issue",
+              all(str(e.get("issue") or "").startswith("http") for e in entries.values()))
+        check("every shipped entry says what is wrong",
+              all(str(e.get("what") or "").strip() for e in entries.values()))
+
+    # The Slack step filters the "new" bullet list on `.new`, which is the same
+    # property n_upstream_new counts. Pin that they cannot drift apart: the
+    # earlier form derived "new" a second time from `issue == null`, which made
+    # the workflow's own two numbers depend on the self-test above rejecting a
+    # register entry with no issue.
+    _known = {"numerical/filed": {"issue": "https://x/1"}}
+    _rows = [{"entity_key": "numerical/filed"}, {"entity_key": "numerical/unfiled"}]
+    _flags = [r["entity_key"] not in _known for r in _rows]
+    check("`new` means absent from the register, same as n_upstream_new",
+          _flags == [False, True] and sum(_flags) == 1)
 
     # Markers: fan-out, idempotence, minimal entry for a ledger gap.
     ledger = {"content/docs/a.md": {"path": "content/docs/a.md", "slug": "docs-a",
@@ -514,6 +1013,31 @@ def self_test() -> int:
     check("re-marking is idempotent",
           len(changed2["docs-a"]["stale_claims"]) == 1)
 
+    # Generated pages have no markdown source, so select-articles.py can never
+    # queue them and a marker there could never be cleared. Report, don't mark.
+    with tempfile.TemporaryDirectory() as td:
+        root = Path(td)
+        (root / "content/docs").mkdir(parents=True)
+        (root / "content/docs/a.md").write_text("real page\n")
+        gen = [{"entity_key": "numerical/pack-count", "verdict": "contradicted",
+                "evidence": "", "source": "",
+                "pages": [{"path": "content/docs/reference/generated.md",
+                           "slug": "docs-reference-generated"}]}]
+        led = {"content/docs/reference/generated.md": {
+            "path": "content/docs/reference/generated.md",
+            "slug": "docs-reference-generated", "status": "clean"}}
+        check("sourceless page gets no marker",
+              apply_markers(led, gen, today, root) == {})
+        check("sourceless page's ledger entry is left untouched",
+              "stale_claims" not in led["content/docs/reference/generated.md"])
+        # ...while a page that does exist on disk is still marked normally.
+        led2 = {"content/docs/a.md": {"path": "content/docs/a.md",
+                                      "slug": "docs-a", "status": "clean"}}
+        on_disk = [{**gen[0], "pages": [{"path": "content/docs/a.md",
+                                         "slug": "docs-a"}]}]
+        check("page with a source file is still marked",
+              set(apply_markers(led2, on_disk, today, root)) == {"docs-a"})
+
     check("already_marked sees the marker",
           already_marked("version/pulumi-gcp", ents["version/pulumi-gcp"], ledger))
     check("already_marked ignores other entities",
@@ -522,7 +1046,6 @@ def self_test() -> int:
 
     # Health-observation meta: the early-exit paths must say why they stopped
     # (signal-health.py's reverify signal reads these fields).
-    import tempfile
 
     def run_report(d: Path, extra_env_unset: list[str]) -> dict:
         saved = {k: os.environ.pop(k) for k in extra_env_unset if k in os.environ}
@@ -565,6 +1088,14 @@ def build_parser() -> argparse.ArgumentParser:
                    help="entities to re-verify tonight (chunk size of the rotation)")
     p.add_argument("--today", help="override today's date YYYY-MM-DD (testing)")
     p.add_argument("--repo-root", default=str(HERE), help="repo root for the verifier's read_file")
+    p.add_argument("--tiers",
+                   default=str(HERE / ".claude/commands/review-existing-content"
+                                      "/references/strategic-tiers.yaml"),
+                   help="tier rules; tier 0 (generated) routes findings upstream, not to a marker")
+    p.add_argument("--known-upstream",
+                   default=str(HERE / ".claude/commands/review-existing-content"
+                                      "/references/upstream-claims.yaml"),
+                   help="findings already filed upstream (suppresses the repeat Slack line only)")
     p.add_argument("--model", default=None, help="verifier model (default: verify-claims.py's)")
     p.add_argument("--out", default=".claims-reverify-report.json")
     p.add_argument("--dry-run", action="store_true",

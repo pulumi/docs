@@ -49,7 +49,7 @@ packages.
 
 [Install pulumi CLI](/docs/get-started/)
 and set up your [AWS credentials](/docs/iac/get-started/aws/).
-Initialize a new [Pulumi project](/docs/concepts/projects/)
+Initialize a new [Pulumi project](/docs/iac/concepts/projects/)
 and [Pulumi stack](/docs/iac/cli/commands/pulumi_stack/) from
 available programming [language
 templates](https://github.com/pulumi/templates). We will use the

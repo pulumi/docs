@@ -20,7 +20,7 @@ This guide will walk you through the process of using existing Terraform modules
 **Prerequisites:**
 
 - The [Pulumi CLI](/docs/install/)
-- One of Pulumi's [supported language runtimes](/docs/languages-sdks/) installed
+- One of Pulumi's [supported language runtimes](/docs/iac/languages-sdks/) installed
 - Access to a cloud provider account for deployment (e.g., AWS, Azure, Google Cloud)
 
 {{< /notes >}}

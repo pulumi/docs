@@ -27,6 +27,21 @@ name: "Scheduled jobs: Review existing content (one article)"
 #             worst distort the patch — and the gate bounds what a patch
 #             may touch.
 #
+# THREE MODES (the `mode` input). `fix` and `glowup` both run the model and
+# both can open a PR. `report` (pulumi/docs#20996) does neither:
+#
+#   report — the page is one a GENERATOR owns (the 248-page CLI command
+#            reference), so there is nothing here a PR may change. The run is
+#            the deterministic claim pipeline and nothing else: extract, verify,
+#            record to the claims index, report contradictions upstream. The
+#            model step is SKIPPED outright — with no fix to apply and no PR
+#            body to write, an agent turn would buy nothing and could only
+#            produce an edit the gate has to reject. The publish job still runs,
+#            still records the ledger, and enforces that the patch is empty.
+#            This mode exists because tier 0 meant "never select", selection is
+#            the only thing that writes a page's claim list, and 30% of
+#            content/docs/ had therefore never been fact-checked once.
+#
 # This is workflow_dispatch only — the dispatcher invokes it; it is not on a
 # schedule of its own.
 
@@ -44,6 +59,10 @@ on:
         description: 'Single-article queue JSON from the dispatcher (carries traffic/score/tier for deterministic provenance). Empty on manual dispatch — the worker falls back to rebuilding a traffic-blind queue from `path`.'
         required: false
         default: ''
+      mode:
+        description: 'Review mode: fix (default), glowup (whole-page rehab from the banked findings backlog; never auto-merges), or report (fact-check only — records the claim list, changes nothing, opens no PR)'
+        required: false
+        default: 'fix'
 
 # One run per article: a second dispatch for the same path queues behind the
 # first rather than racing it onto the same branch.
@@ -66,6 +85,9 @@ jobs:
     permissions:
       contents: read
       id-token: write
+      # build-glowup-backlog.py reads every prior review PR for the page by
+      # head ref. Read-only, and the job still holds no push token.
+      pull-requests: read
     outputs:
       claude_outcome: ${{ steps.claude.outcome }}
     steps:
@@ -73,8 +95,12 @@ jobs:
         uses: actions/checkout@v7
         with:
           # The skill reads git history (synthetic diffs, staleness), so a
-          # shallow clone won't do.
+          # shallow clone won't do — but it only needs commits and trees
+          # (`git log`), never historical blobs, so a blobless partial clone
+          # cuts the multi-minute full clone down without losing history.
+          # The HEAD working tree is fully materialized either way.
           fetch-depth: 0
+          filter: blob:none
           # Keep the (read-scoped) token out of .git/config — nothing in
           # this job pushes, and the model's Bash can read that file.
           persist-credentials: false
@@ -133,10 +159,24 @@ jobs:
               || { echo "::warning::queue_json was not valid JSON; rebuilding"; rm -f .content-review-queue.json; }
           fi
           if [ ! -f .content-review-queue.json ]; then
+            SELECT_ARGS=()
+            # report is a selector mode (it picks from the non-editable half of
+            # the corpus), so --paths must be told which half it is rebuilding;
+            # glowup is not — it is stamped onto the entry below.
+            if [ "${{ github.event.inputs.mode }}" = "report" ]; then
+              SELECT_ARGS+=(--mode report)
+            fi
             python3 scripts/content-review/select-articles.py \
               --paths "${{ github.event.inputs.path }}" \
               --lane "${{ github.event.inputs.lane || 'priority' }}" \
+              "${SELECT_ARGS[@]}" \
               --out .content-review-queue.json
+            # Manual glow-up dispatch with no queue_json: stamp the mode onto
+            # the rebuilt queue so the skill, record, and gates all agree.
+            if [ "${{ github.event.inputs.mode }}" = "glowup" ]; then
+              jq '.articles[0].mode = "glowup" | .articles[0].lane = "glowup"' \
+                .content-review-queue.json > .queue.tmp && mv .queue.tmp .content-review-queue.json
+            fi
           fi
           echo "--- queue ---"
           cat .content-review-queue.json
@@ -145,14 +185,17 @@ jobs:
       # canonical branch), a previous run is still in flight. Write the
       # skipped verdict here and never spend the pre-compute or review
       # tokens — this used to be a model instruction (SKILL.md step 1).
+      # Report-only runs push no branch and open no PR, so there is nothing for
+      # a second run to collide with and nothing for this check to find.
       - name: Check for an existing open PR
         id: precheck
+        if: github.event.inputs.mode != 'report'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           SLUG=$(jq -r '.articles[0].slug' .content-review-queue.json)
           SKIP=false
-          for BRANCH in "content-review/$SLUG" "content-review/retire-$SLUG"; do
+          for BRANCH in "content-review/$SLUG" "content-review/retire-$SLUG" "content-review/glowup-$SLUG"; do
             URL=$(gh pr list --head "$BRANCH" --state open --json url --jq '.[0].url // empty' 2>/dev/null || true)
             if [ -n "$URL" ]; then
               echo "open PR $URL already owns $BRANCH; skipping the review"
@@ -173,7 +216,7 @@ jobs:
       # command degrades gracefully (`|| stub`) so one pre-step failure never
       # blocks the run; the model notes any missing/errored artifact in the PR.
       - name: Pre-compute review artifacts
-        if: steps.precheck.outputs.skip != 'true'
+        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -232,6 +275,87 @@ jobs:
             .vale-findings.json .frontmatter-validation.json \
             .cross-sibling-discovery.json .readthrough-findings.json 2>/dev/null || true
 
+      # Report-only lane (mode=report): the SAME claim pipeline, and only the
+      # claim pipeline. Vale, frontmatter, cross-sibling, and readthrough all
+      # exist to produce fixes for a model to apply, and this lane applies
+      # nothing — running them would be pure spend (readthrough is itself an
+      # LLM pass). What is left is exactly what the claims index is built from,
+      # which is the whole point of visiting these pages. Same `|| stub`
+      # degradation as the full pipeline above; a degraded verify artifact
+      # makes record-claims.py preserve the page's previous snapshot rather
+      # than overwrite it with silence.
+      - name: Pre-compute claim artifacts (report-only lane)
+        if: github.event.inputs.mode == 'report'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
+        run: |
+          set +e
+          S=.claude/commands/docs-review/scripts
+          git diff --no-index /dev/null "$ARTICLE_PATH" > .synthetic.patch || true
+
+          python3 $S/extract-urls-and-fetch.py \
+            --patch-file .synthetic.patch --out .fetched-urls.json \
+            || echo '[]' > .fetched-urls.json
+          python3 $S/extract-claims.py \
+            --patch-file .synthetic.patch --out .candidate-claims-regex.json \
+            || echo '{"schema_version": 1, "claims": [], "renames": [], "errors": ["extract-claims.py failed to start"], "stats": {"claims_count": 0, "files_scanned": 0, "by_type": {}}}' > .candidate-claims-regex.json
+          python3 $S/extract-claims-llm.py \
+            --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
+            --pass atomic --scrutiny standard --out .candidate-claims-llm-1.json \
+            || echo '{"schema_version": 1, "pass": "atomic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-1.json
+          python3 $S/extract-claims-llm.py \
+            --patch-file .synthetic.patch --changed-files "$ARTICLE_PATH" \
+            --pass holistic --scrutiny standard --out .candidate-claims-llm-2.json \
+            || echo '{"schema_version": 1, "pass": "holistic", "model": "claude-sonnet-5", "claims": [], "errors": ["extract-claims-llm.py failed to start"], "meta": {"files": 0, "scrutiny": "unknown", "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .candidate-claims-llm-2.json
+          python3 $S/merge-claims.py \
+            --regex .candidate-claims-regex.json \
+            --llm .candidate-claims-llm-1.json --llm .candidate-claims-llm-2.json \
+            --out .candidate-claims.json \
+            || echo '{"schema_version": 1, "claims": [], "errors": ["merge-claims.py failed to start"], "meta": {"regex_claims": 0, "llm_claims": 0, "merged_claims": 0, "llm_input_tokens": 0, "llm_output_tokens": 0, "llm_cache_read_input_tokens": 0, "llm_cache_creation_input_tokens": 0}}' > .candidate-claims.json
+          python3 $S/verify-claims.py \
+            --in .candidate-claims.json --fetched-urls .fetched-urls.json \
+            --out .verified-claims.json \
+            || echo '{"schema_version": 1, "model": "claude-sonnet-5", "verdicts": [], "errors": ["verify-claims.py failed to start"], "meta": {"n_claims": 0, "n_pass1": 0, "n_pass2": 0, "n_pass3": 0, "input_tokens": 0, "output_tokens": 0, "cache_read_input_tokens": 0, "cache_creation_input_tokens": 0}}' > .verified-claims.json
+
+          echo "--- pre-compute artifacts (report-only) ---"
+          jq -r '"\((.verdicts // []) | length) verdict(s), \((.errors // []) | length) error(s); tokens in=\(.meta.input_tokens // 0) out=\(.meta.output_tokens // 0)"' \
+            .verified-claims.json || true
+
+      # The verdict sentinel is written by the WORKFLOW here, not by a model:
+      # in this mode there is no model, and 'reported' is a statement about
+      # what the run did (claims recorded, nothing edited) rather than a
+      # judgment anyone had to make. The publish gate enforces the half that
+      # matters — a 'reported' verdict whose patch is non-empty fails closed.
+      #
+      # It is written ONLY when the verify pre-step actually produced verdicts.
+      # A degraded run (zero verdicts WITH errors — the same signal
+      # record-claims.py refuses to overwrite a snapshot on) writes NO sentinel,
+      # which record-review.py records as `incomplete`: the page stays due and
+      # comes back under the attempt cap. Stamping it 'reported' would advance
+      # the staleness clock on a page nothing had checked — the exact
+      # "we looked and it's fine" claim this whole lane exists to stop making.
+      - name: Write the report-only verdict
+        if: github.event.inputs.mode == 'report'
+        run: |
+          N=$(jq '(.verdicts // []) | length' .verified-claims.json 2>/dev/null || echo "")
+          E=$(jq '(.errors // []) | length' .verified-claims.json 2>/dev/null || echo "")
+          if [ -z "$N" ]; then
+            echo "::warning::no readable .verified-claims.json; no verdict written (the page stays due)"
+            exit 0
+          fi
+          if [ "$N" -eq 0 ] && [ "$E" -gt 0 ]; then
+            echo "::warning::claim verification degraded ($E error(s), 0 verdicts); no verdict written (the page stays due)"
+            exit 0
+          fi
+          jq -n --argjson n "$N" \
+            '{verdict: "reported",
+              reason: ("claims recorded (\($n) verdict(s)); generated page, nothing edited"),
+              fixes: 0, skipped_findings: 0, retirement: false}' \
+            > .content-review-verdict.json
+          cat .content-review-verdict.json
+
       # Assemble the ~80%-done PR body from the queue + pre-step artifacts
       # (facts → code, judgment → model), mirroring docs-review's compose-review.
       # The model EDITS .pr-body-draft.md rather than authoring the body from a
@@ -240,13 +364,42 @@ jobs:
       # Degrades to a minimal valid draft so a compose hiccup never blocks the run.
       # The fallback must carry the same two contract-bearing pieces the composer
       # emits (compose-pr-body.py's AUTOMERGE_NOTICE and LINT_PLACEHOLDER): the
-      # auto-merge notice, because the re-lint gate arms auto-merge either way and
-      # a reviewer must not be surprised by it, and the `<!-- LINT-RESULT -->`
+      # auto-merge notice, because deterministic-class PRs arm auto-merge and a
+      # reviewer must not be surprised by it (the publish job swaps in the
+      # judgment notice for judgment-class PRs — keep this text identical to
+      # AUTOMERGE_NOTICE or that swap misses), and the `<!-- LINT-RESULT -->`
       # placeholder, because stamp-lint-result.py silently no-ops without it and
       # the authoritative lint result would never reach the PR body.
-      - name: Compose PR body draft
-        if: steps.precheck.outputs.skip != 'true'
+      # Glow-up mode only: assemble the banked-findings backlog (the prior
+      # review PRs' "Findings not applied" / flag sections plus the ledger
+      # counters carried on the queue) BEFORE composing — the glow-up body
+      # pre-stubs one row per banked item. Deterministic, no model.
+      - name: Build glow-up backlog
+        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode == 'glowup'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          python3 scripts/content-review/build-glowup-backlog.py \
+            --queue .content-review-queue.json --out .glowup-backlog.json
+          echo "--- glow-up backlog ---"
+          cat .glowup-backlog.json
+
+      # No PR body in report-only mode: no PR.
+      - name: Compose PR body draft
+        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
+        run: |
+          # Glow-up mode composes its own template and fails HARD on error:
+          # the fix-lane fallback body would carry the wrong sections and the
+          # wrong (auto-merge) notice, so no draft beats a wrong-mode draft.
+          # The ledger step records the page incomplete and it is retried.
+          if [ "${{ github.event.inputs.mode }}" = "glowup" ]; then
+            python3 scripts/content-review/compose-pr-body.py \
+              --queue .content-review-queue.json --mode glowup \
+              --backlog .glowup-backlog.json --out .pr-body-draft.md
+            echo "--- pr body draft ---"
+            cat .pr-body-draft.md
+            exit 0
+          fi
           if ! python3 scripts/content-review/compose-pr-body.py \
               --queue .content-review-queue.json --out .pr-body-draft.md; then
             echo "::warning::compose-pr-body.py failed; writing the minimal fallback draft"
@@ -287,13 +440,22 @@ jobs:
       # excluded from the export step's staging, so it can never ride the
       # patch.)
       - name: Snapshot guardrail inputs
+        env:
+          ARTICLE_PATH: ${{ github.event.inputs.path }}
         run: |
           SNAP=".review-snapshot"
           mkdir -p "$SNAP"
           # if/else, not `[ -f ] && cp || echo`: the short-circuit form reports a
           # real copy failure as the benign "missing" case, and these are the
           # files the publish job's guardrail gates are judged against.
+          # The two `.candidate-claims-llm-*.json` extraction artifacts are not
+          # gate inputs — they are the other two thirds of the report lane's
+          # per-page cost block. `report-claims-findings.py` reads all three
+          # stages out of `--artifacts-dir .review-snapshot` and scores an
+          # absent file as zero, so leaving them behind would silently bill the
+          # lane for verification only.
           for f in .content-review-queue.json .verified-claims.json \
+                   .candidate-claims-llm-1.json .candidate-claims-llm-2.json \
                    .vale-findings.json .readthrough-findings.json \
                    .frontmatter-validation.json; do
             if [ -f "$f" ]; then
@@ -302,6 +464,18 @@ jobs:
               echo "::warning::snapshot: $f missing"
             fi
           done
+          # The pre-model article body — the publish job's fix-scope gate
+          # verifies link fixes against this via --article-blob instead of
+          # `git show <base-sha>:<path>`, which its shallow clone can't serve.
+          # The glow-up gate reads the same snapshot for its frontmatter guard.
+          cp "$ARTICLE_PATH" "$SNAP/article-base.txt" \
+            || { echo "::error::snapshot: failed to copy $ARTICLE_PATH"; exit 1; }
+          # Glow-up runs only: the pre-model backlog, so the publish side and
+          # the ledger see what the model was actually handed.
+          if [ -f .glowup-backlog.json ]; then
+            cp .glowup-backlog.json "$SNAP/" \
+              || { echo "::error::snapshot: failed to copy .glowup-backlog.json"; exit 1; }
+          fi
           git rev-parse HEAD > "$SNAP/base-sha.txt"
       - name: Upload guardrail snapshot
         uses: actions/upload-artifact@v7
@@ -312,9 +486,13 @@ jobs:
           retention-days: 7
           path: .review-snapshot/
 
+      # Skipped entirely in report-only mode — see the THREE MODES note in the
+      # header. Everything that lane produces (the claim list, the verdict) is
+      # deterministic and already written by the steps above; an agent turn
+      # here could only add spend and the risk of an edit the gate rejects.
       - name: Run Claude Code
         id: claude
-        if: steps.precheck.outputs.skip != 'true'
+        if: steps.precheck.outputs.skip != 'true' && github.event.inputs.mode != 'report'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -413,6 +591,65 @@ jobs:
                pushed. The workflow derives the PR facts and records the S3
                ledger from this; do NOT write a ledger or results file
                yourself.
+
+               Before finishing (unless the verdict is a retirement),
+               SELF-CHECK your line ranges with the gate's own script:
+               `git add -A -- ':!.*' ':!.*/**'`, then
+               `git diff --cached --unified=0 > .self-check.u0.diff`, then
+               `git reset -q`, then run
+               `python3 scripts/content-review/verify-fix-scope.py
+               --diff-file .self-check.u0.diff --base-sha HEAD
+               --article <path> --verdict .content-review-verdict.json
+               --artifacts-dir . --out .self-check-report.json`.
+               Exit 0 is required; on exit 2, fix the `applied[]` ranges (or
+               revert the out-of-range edit) per the report's
+               `uncovered_hunks` / `invalid_applied` and re-run until it
+               passes — a range that doesn't cover its hunk fails the whole
+               run at the publish gate, where there is no retry.
+
+            GLOW-UP MODE (only when the queue article carries
+            `"mode": "glowup"` — the dispatcher's glow-up lane; otherwise
+            ignore this block entirely): you are executing the page's BANKED
+            review backlog under the skill's `## Glow-up mode` section, not
+            hunting new high-confidence fixes. Differences from the steps
+            above:
+            - Your work list is `.glowup-backlog.json` (composed for you):
+              execute every banked finding or explicitly decline it with one
+              line of reasoning — every item lands in the PR body's "Backlog
+              executed" or "Backlog declined" table. Then run the secondary
+              sweep per the taxonomy in `.claude/commands/glow-up.md` §5
+              (style, structure, code formatting, terminology, links, image
+              flags, content), filling the "Secondary sweep" section.
+            - Editing bounds (code-enforced by verify-glowup-scope.py in the
+              publish job): the one queued page plus its bundle's non-markdown
+              assets; at most 400 changed lines; never delete the page; never
+              change frontmatter `title`, `aliases`, or `redirect_to`; no
+              retirement. Preserve the page's purpose and technical accuracy.
+            - Self-check with the glow-up gate, NOT verify-fix-scope: stage
+              and diff as above, then run
+              `python3 scripts/content-review/verify-glowup-scope.py
+              --diff-file .self-check.u0.diff --article <path>
+              --article-blob <path-copy-you-made-before-editing>
+              --out .self-check-report.json` (copy the pristine article aside
+              BEFORE your first edit for the --article-blob input). Fix any
+              violation and re-run until it passes.
+            - Verdict sentinel: `{"verdict": "glowup", "fixes": <executed
+              count>, "skipped_findings": <declined count>, "clarity_flag":
+              <bool>, "executed_ids": [...], "declined_ids": [...],
+              "retirement": false}` — no `applied[]` needed; the glow-up
+              gate replaces the per-hunk check. State `clarity_flag`
+              explicitly: `false` once you have resolved the page's
+              readthrough reconception, `true` while one still stands;
+              omitting it carries the page's existing flag forward.
+              `executed_ids`/`declined_ids` are the `id` values from
+              `.glowup-backlog.json` for the rows you put in the Backlog
+              executed and Backlog declined tables — every banked id in
+              exactly one list. Without them the findings record would file
+              the work you just did as still outstanding, so it records
+              nothing for the run instead.
+            - Your PR will NOT auto-merge: it opens for human review (the
+              sweep assigns reviewers). Write the body tables for that
+              reader.
           # Broad Bash is deliberate and is what the job's privilege profile
           # buys: this job holds no push token, no AWS creds, and no
           # production environment, so compound commands (`make ensure &&
@@ -468,7 +705,10 @@ jobs:
     # incomplete outcome so the page stays due — but not when the run was
     # cancelled outright.
     if: always() && needs.review.result != 'cancelled'
-    timeout-minutes: 15
+    # Generous relative to the work (a shallow checkout + lint + push), but
+    # the old 15 was killing ~30% of runs mid-checkout back when this job
+    # cloned full history — after the model had already spent its tokens.
+    timeout-minutes: 30
     # PULUMI_STACK_NAME is an environment-scoped variable, so the job must
     # select the environment to resolve it — otherwise `Resolve ledger bucket`
     # runs with --stack "" and the S3 ledger write is silently skipped.
@@ -490,7 +730,13 @@ jobs:
         uses: actions/checkout@v7
         with:
           token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
-          fetch-depth: 0
+          # This job applies a patch on HEAD, lints, and pushes a new branch
+          # — no history needed. The one historical read the guardrails used
+          # to do (`git show <base-sha>:<article>` in verify-fix-scope.py)
+          # now comes from the snapshot artifact via --article-blob, so a
+          # shallow clone is safe and avoids the full-history clone that
+          # regularly outlived this job's timeout.
+          fetch-depth: 1
       - name: Install Node
         uses: actions/setup-node@v7
         with:
@@ -571,10 +817,20 @@ jobs:
               --path "$ARTICLE_PATH" \
               --tiers .claude/commands/review-existing-content/references/strategic-tiers.yaml \
               || { echo "::error::retire veto: $ARTICLE_PATH is protected (no_retire); nothing will be pushed"; exit 1; }
+          elif [ "${{ steps.gate.outputs.glowup }}" = "true" ]; then
+            # A glow-up is page-wide by design, so the per-hunk fix-scope
+            # check is replaced by the glow-up bounds: one page + its bundle
+            # assets, a churn ceiling, no deletion, protected frontmatter.
+            python3 scripts/content-review/verify-glowup-scope.py \
+              --diff-file .review-changes.u0.diff --article "$ARTICLE_PATH" \
+              --article-blob .review-snapshot/article-base.txt \
+              --out .glowup-scope-report.json \
+              || { echo "::error::glow-up scope gate failed; report follows"; cat .glowup-scope-report.json; exit 1; }
           else
             python3 scripts/content-review/verify-fix-scope.py \
               --diff-file .review-changes.u0.diff --base-sha "$BASE_SHA" \
               --article "$ARTICLE_PATH" --verdict .content-review-verdict.json \
+              --article-blob .review-snapshot/article-base.txt \
               --artifacts-dir .review-snapshot --out .fix-scope-report.json \
               || { echo "::error::fix-scope gate failed; report follows"; cat .fix-scope-report.json; exit 1; }
           fi
@@ -616,6 +872,8 @@ jobs:
           TITLE="Content review: $ARTICLE_PATH"
           if [ "${{ steps.gate.outputs.retirement }}" = "true" ]; then
             TITLE="Content review (retirement): $ARTICLE_PATH"
+          elif [ "${{ steps.gate.outputs.glowup }}" = "true" ]; then
+            TITLE="Content glow-up: $ARTICLE_PATH"
           fi
           git commit -m "$TITLE" -m "Automated existing-content review." \
             -m "Co-Authored-By: Claude <noreply@anthropic.com>"
@@ -629,6 +887,15 @@ jobs:
           # Authoritative lint gate: open ready on PASS, draft on FAIL. The
           # result is recorded as a step output so the next step can stamp the
           # body and arm auto-merge / comment without re-running lint.
+          # The body was composed pre-model with the auto-merge notice, but
+          # the class is only known now (gate output, from the verdict's own
+          # applied[] categories). Judgment-class PRs get the un-armed notice
+          # swapped in deterministically before the PR opens.
+          CLASS="${{ steps.gate.outputs.class }}"
+          if [ "$CLASS" = "judgment" ]; then
+            python3 scripts/content-review/compose-pr-body.py \
+              --replace-notice judgment --body-file .pr-body-draft.md
+          fi
           if make lint > .lint.log 2>&1; then
             echo "lint passed on $BRANCH; opening PR ready for review (fires triage → review)"
             echo "lint_result=passed" >> "$GITHUB_OUTPUT"
@@ -640,6 +907,12 @@ jobs:
             gh pr create --draft --title "$TITLE" --body-file .pr-body-draft.md \
               --base master --head "$BRANCH"
           fi
+          # Class label, fail-open: the label routes Robo-Cam's handling but
+          # its absence must never block the PR (the sweep also keys on the
+          # branch prefix). Labels are a one-time repo pre-req:
+          #   gh label create content-review/deterministic ... etc.
+          gh pr edit "$BRANCH" --add-label "content-review/$CLASS" \
+            || echo "::warning::could not add label content-review/$CLASS (missing from repo?)"
 
       # Post-publish bookkeeping. The authoritative `make lint` already ran in
       # the publish step and decided whether the PR opened ready (PASS) or draft
@@ -671,14 +944,19 @@ jobs:
           }
           if [ "${{ steps.publish.outputs.lint_result }}" = "passed" ]; then
             stamp_body passed
-            # Arm auto-merge (squash) on the ready PR. `master` requires 1
-            # approving review AND the "Install deps and build site" check, so
-            # this NEVER merges on its own — the PR merges only once a human
-            # approves and the build is green, which just removes the manual
-            # merge click after the review approves. No-op (warns) if auto-merge
-            # is unavailable or the PR already satisfies all conditions.
-            gh pr merge "$BRANCH" --auto --squash \
-              || echo "::warning::could not enable auto-merge on $BRANCH"
+            # Arm auto-merge (squash) — DETERMINISTIC-CLASS PRs ONLY. For
+            # those, `master` still requires 1 approving review AND the
+            # "Install deps and build site" check, so this never merges on
+            # its own — it removes the manual merge click after approval.
+            # Judgment-class PRs open un-armed: the PR-review sweep arms them
+            # at approve time when its gates pass, or a human merges — an
+            # approval on those is no longer implicitly a merge.
+            if [ "${{ steps.gate.outputs.class }}" = "deterministic" ]; then
+              gh pr merge "$BRANCH" --auto --squash \
+                || echo "::warning::could not enable auto-merge on $BRANCH"
+            else
+              echo "class=${{ steps.gate.outputs.class }}; auto-merge NOT armed (sweep stamp-then-arm or a human merges)"
+            fi
           else
             stamp_body failed
             {
@@ -718,15 +996,38 @@ jobs:
         env:
           PULUMI_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_ACCESS_TOKEN }}
         run: |
-          BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
-            --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+          # Preferred source: the dispatcher resolved the bucket once and
+          # passed it in the queue. Read it from the PRE-MODEL guardrail
+          # snapshot copy — the handoff copy of the queue is model-writable,
+          # and this value directs where the job's AWS creds write.
+          BUCKET=$(jq -r '.ledger_bucket // empty' \
+            .review-snapshot/.content-review-queue.json 2>/dev/null || true)
+          if [ -n "$BUCKET" ]; then
+            echo "using dispatcher-provided ledger bucket"
+          else
+            # Fallback (manual dispatch, or the dispatcher itself failed to
+            # resolve): our own stack-output read, retried — a single
+            # transient flake here used to silently drop the ledger record
+            # and loop the page back into selection as a duplicate.
+            for i in 1 2 3; do
+              BUCKET=$(pulumi -C infrastructure stack output contentReviewLedgerBucketName \
+                --stack "${{ vars.PULUMI_STACK_NAME }}" 2>/dev/null || true)
+              [ -n "$BUCKET" ] && break
+              echo "stack output resolve failed (attempt $i of 3)"
+              sleep $((i * 10))
+            done
+          fi
           if [ -n "$BUCKET" ]; then
             echo "uri=s3://$BUCKET/ledger/" >> "$GITHUB_OUTPUT"
             # The claims index shares the ledger bucket under its own prefix
             # (one snapshot object per page; see record-claims.py).
             echo "claims_uri=s3://$BUCKET/claims/" >> "$GITHUB_OUTPUT"
+            # Structured findings, third prefix in the same bucket. See
+            # record-page-findings.py for why the PR body is no longer the
+            # system of record for what a review found.
+            echo "findings_uri=s3://$BUCKET/findings/" >> "$GITHUB_OUTPUT"
           else
-            echo "ledger bucket output unavailable; ledger write will be skipped"
+            echo "::warning::ledger bucket unavailable after retries; ledger write will be skipped"
           fi
 
       # Record the page's outcome to the S3 ledger as one object keyed by slug.
@@ -774,6 +1075,94 @@ jobs:
           python3 scripts/content-review/record-claims.py \
             --queue .review-snapshot/.content-review-queue.json \
             --verified .review-snapshot/.verified-claims.json
+
+      # Report-only lane: say what the claim check FOUND. Recording to the
+      # index is not enough on a page's first pass, and the first pass is where
+      # the findings are — the nightly re-verify only re-checks *volatile*
+      # entities, and there is no model on this lane to read the verdicts and
+      # act on them. Routing is the nightly lane's own (fix_route +
+      # upstream-claims.yaml), so a finding arrives with a prefilled issue
+      # against the repo that owns the text, and one a human already filed
+      # stays quiet. Inputs are the PRE-MODEL snapshot; the tiers and
+      # upstream registry come from this job's own clean checkout.
+      - name: Report upstream findings (report-only lane)
+        id: report-findings
+        if: always() && github.event.inputs.mode == 'report'
+        continue-on-error: true
+        run: |
+          if [ ! -f .review-snapshot/.verified-claims.json ]; then
+            echo "no snapshotted verified-claims; nothing to report"
+            exit 0
+          fi
+          python3 scripts/content-review/report-claims-findings.py \
+            --queue .review-snapshot/.content-review-queue.json \
+            --verified .review-snapshot/.verified-claims.json \
+            --artifacts-dir .review-snapshot \
+            --out .report-findings.json \
+            --slack-out .report-slack.txt \
+            --run-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+      # The lane's durable evidence, same posture as the nightly re-verify's
+      # report: the run log masks the org name in source URLs and ages out with
+      # the run. Long retention because these are the claim lists for a tree
+      # nobody had ever checked, and the cost sizing is read off them.
+      - name: Upload report findings
+        if: always() && github.event.inputs.mode == 'report' && hashFiles('.report-findings.json') != ''
+        uses: actions/upload-artifact@v7
+        with:
+          name: report-findings
+          path: .report-findings.json
+          # Dotfile: upload-artifact excludes hidden files unless told
+          # otherwise, and hashFiles() has no such exclusion — without this the
+          # step runs and uploads nothing, with only a warning annotation.
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 90
+
+      # Only NEW findings page anyone: a contradiction already filed upstream
+      # (references/upstream-claims.yaml) is known, and re-announcing it nightly
+      # is how a channel learns to ignore the bot.
+      - name: Post report findings to Slack
+        if: always() && github.event.inputs.mode == 'report' && hashFiles('.report-slack.txt') != ''
+        continue-on-error: true
+        env:
+          SLACK_ACCESS_TOKEN: ${{ steps.esc-secrets.outputs.SLACK_ACCESS_TOKEN }}
+        run: |
+          curl -s -X POST https://slack.com/api/chat.postMessage \
+            -H "Authorization: Bearer ${SLACK_ACCESS_TOKEN}" \
+            -H "Content-type: application/json; charset=utf-8" \
+            --data "$(jq -n --arg ch "#docs-ops" --rawfile txt .report-slack.txt \
+              '{channel: $ch, text: $txt, unfurl_links: false}')"
+
+      # Structured record of what this review FOUND, applied or not — the
+      # backlog `build-glowup-backlog.py` used to recover by downloading the PR
+      # body and parsing its markdown back into data. That round trip made the
+      # PR body load-bearing (an edit to a table changed what glow-up would act
+      # on), failed silently on a renamed heading, and could only ever recover
+      # the latest PR because branches are reused.
+      #
+      # Inputs are the pre-model guardrail snapshot for the findings themselves
+      # and the model's verdict for the disposition — the same split the claims
+      # index uses. `if: always()` so a review that died still records what the
+      # deterministic pre-steps found.
+      - name: Record page findings
+        if: always() && steps.ledger-bucket.outputs.findings_uri != ''
+        continue-on-error: true
+        run: |
+          if [ ! -f .review-snapshot/.content-review-queue.json ]; then
+            echo "no snapshotted queue; skipping the findings record"
+            exit 0
+          fi
+          python3 scripts/content-review/record-page-findings.py \
+            --queue .review-snapshot/.content-review-queue.json \
+            --verdict .content-review-verdict.json \
+            --verified-claims .review-snapshot/.verified-claims.json \
+            --vale-findings .review-snapshot/.vale-findings.json \
+            --readthrough .review-snapshot/.readthrough-findings.json \
+            --frontmatter .review-snapshot/.frontmatter-validation.json \
+            --backlog .review-snapshot/.glowup-backlog.json \
+            --out .page-findings.json \
+            --uri "${{ steps.ledger-bucket.outputs.findings_uri }}"
 
       # No explicit review dispatch: a content-review PR that passes re-lint is
       # promoted draft → ready in the step above, and that transition drives the

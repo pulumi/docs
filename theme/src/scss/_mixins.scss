@@ -10,6 +10,14 @@
     transition: $scope $duration $fn;
 }
 
+@mixin heading-inline-code {
+    font-size: calc(14em / 16);
+    font-weight: inherit;
+    letter-spacing: normal;
+    line-height: 1;
+    padding: 0.15em 0.3em;
+}
+
 @mixin bg-gradient($from-color, $to-color, $radius, $center-x: 50%, $center-y: 50%) {
     background-image: radial-gradient($radius at $center-x $center-y, $from-color, $to-color);
 }

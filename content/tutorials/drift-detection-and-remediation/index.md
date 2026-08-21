@@ -22,11 +22,11 @@ prereqs:
 estimated_time: 15
 ---
 
-[Drift detection and remediation](/docs/pulumi-cloud/deployments/drift/) is a feature of Pulumi Cloud that automates the detection and correction of drift in your cloud environments. It integrates seamlessly with Pulumi Deployments and can be incorporated into CI/CD workflows and tools using the [Pulumi CLI](/docs/cli/) or [Automation API](/docs/using-pulumi/automation-api/). When changes occur outside Pulumi, such as manual updates in the cloud provider's console, Pulumi reports these discrepancies. Auto-remediation can also be configured to refresh your last known desired state, correcting any drift without manual intervention.
+[Drift detection and remediation](/docs/deployments/concepts/drift/) is a feature of Pulumi Cloud that automates the detection and correction of drift in your cloud environments. It integrates seamlessly with Pulumi Deployments and can be incorporated into CI/CD workflows and tools using the [Pulumi CLI](/docs/iac/cli/) or [Automation API](/docs/iac/concepts/automation-api/). When changes occur outside Pulumi, such as manual updates in the cloud provider's console, Pulumi reports these discrepancies. Auto-remediation can also be configured to refresh your last known desired state, correcting any drift without manual intervention.
 
-Using Pulumi Deployments, drift detection can be initiated via the CLI, performed on-demand in Pulumi Cloud with [click-to-deploy](/docs/pulumi-cloud/deployments/#deployment-triggers) actions, or [scheduled](/docs/pulumi-cloud/deployments/schedules/) to run at regular intervals. During each run, Pulumi compares the actual state of your cloud resources with the expected state stored in Pulumi Cloud. Any discrepancies are logged in the Drift tab, which also provides a history of detection runs, details of the drift detected, and triggered notifications. [Notifications](/docs/pulumi-cloud/deployments/drift/#configuring-notifications-for-drift-detection) can be sent via webhooks, Slack, Microsoft Teams, or email and detail the nature and scope of the drift.
+Using Pulumi Deployments, drift detection can be initiated via the CLI, performed on-demand in Pulumi Cloud with [click-to-deploy](/docs/deployments/concepts/#deployment-triggers) actions, or [scheduled](/docs/deployments/concepts/schedules/) to run at regular intervals. During each run, Pulumi compares the actual state of your cloud resources with the expected state stored in Pulumi Cloud. Any discrepancies are logged in the Drift tab, which also provides a history of detection runs, details of the drift detected, and triggered notifications. [Notifications](/docs/deployments/concepts/drift/#configuring-notifications-for-drift-detection) can be sent via webhooks, Slack, Microsoft Teams, or email and detail the nature and scope of the drift.
 
-Drift detection isn’t limited to Pulumi Deployments, you can integrate it into your own CI/CD pipelines using `pulumi refresh`. See [running drift detection from the CLI](/docs/pulumi-cloud/deployments/drift/#running-drift-detection-from-the-cli) for more information.
+Drift detection isn’t limited to Pulumi Deployments, you can integrate it into your own CI/CD pipelines using `pulumi refresh`. See [running drift detection from the CLI](/docs/deployments/concepts/drift/#running-drift-detection-from-the-cli) for more information.
 
 ## Provision infrastructure
 
@@ -190,7 +190,7 @@ To do so, open the **Actions** menu, select the **Remediate drift** option, and 
 
 ## Automate drift detection
 
-In addition to manually triggering drift detection, you can automate this process by scheduling regular drift detection runs using [deployment schedules](/docs/pulumi-cloud/deployments/schedules/). This ensures that any unexpected changes in your infrastructure are promptly identified and remediated without manual intervention.
+In addition to manually triggering drift detection, you can automate this process by scheduling regular drift detection runs using [deployment schedules](/docs/deployments/concepts/schedules/). This ensures that any unexpected changes in your infrastructure are promptly identified and remediated without manual intervention.
 
 ## Clean up your resources
 

@@ -37,7 +37,7 @@ $ tree -d -L 1
 ```
 
 This means all of the work required for the networking components can be in the network project. We can use
-[Stack References](/docs/concepts/stack#stackreferences) in Pulumi
+[Stack References](/docs/iac/concepts/stacks/#stackreferences) in Pulumi
 to expose any required information from the networking layer, to the database and application layers.
 
 Let's create the networking project.

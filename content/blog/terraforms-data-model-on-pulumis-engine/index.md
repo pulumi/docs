@@ -14,6 +14,7 @@ schema_type: auto
 related_posts:
     - bring-your-terraform-estate-into-the-agentic-era
     - terraform-to-pulumi-cloud-hands-on
+    - compatibility-testing-pulumi-hcl
 
 # Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.

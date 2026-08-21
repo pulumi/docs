@@ -38,7 +38,7 @@ The Pulumi Go Provider SDK delivers capabilities that benefit everyone from plat
 - **Functional-Style Components**: Create reusable infrastructure building blocks with a natural, functional programming style
 - **Enterprise-Grade Testing Framework**: Ensure reliability with comprehensive testing capabilities for both resources and components
 
-For a complete technical overview, see our comprehensive [Pulumi Go Provider SDK documentation](/docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/).
+For a complete technical overview, see our comprehensive [Pulumi Go Provider SDK documentation](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/).
 
 ## Defining and Testing a Custom Resource
 
@@ -105,7 +105,7 @@ func (HelloWorld) Create(
 
 This minimal code creates a fully-functional resource that your teams can use in their infrastructure code! The SDK handles all the complex gRPC communication with the Pulumi engine and automatically generates the necessary schema for multi-language support.
 
-For detailed step-by-step instructions on building your own provider, check out our [Build a Provider guide](/docs/iac/using-pulumi/extending-pulumi/build-a-provider/).
+For detailed step-by-step instructions on building your own provider, check out our [Build a Provider guide](/docs/iac/guides/building-extending/providers/build-a-provider/).
 
 ## Confidence Through Comprehensive Testing
 
@@ -141,7 +141,7 @@ func TestHelloWorldLifecycle(t *testing.T) {
 }
 ```
 
-For more information, see [Pulumi Go Provider SDK](/docs/iac/using-pulumi/extending-pulumi/pulumi-provider-sdk/).
+For more information, see [Pulumi Go Provider SDK](/docs/iac/guides/building-extending/packages/pulumi-go-provider-sdk/).
 
 ## Standardize Infrastructure with Powerful Component Resources
 
@@ -204,7 +204,7 @@ func (l *RandomLogin) Annotate(a infer.Annotator) {
 }
 ```
 
-For a deep dive into creating component resources, see our comprehensive [Build a Component guide](/docs/iac/using-pulumi/extending-pulumi/build-a-component/).
+For a deep dive into creating component resources, see our comprehensive [Build a Component guide](/docs/iac/guides/building-extending/components/build-a-component/).
 
 And testing components is equally straightforward:
 
@@ -257,22 +257,22 @@ For more information about component resources, see the blog post [Announcing th
 
 A major advantage of using the Pulumi Go Provider SDK is that your provider, once written in Go, can be used in **any Pulumi program**, in **any supported language** (TypeScript, Python, Go, .NET, Java, or YAML). The SDK's automatic schema generation takes care of creating the necessary language-specific SDKs, enabling **cross-language consumption** without manual effort.
 
-Packaging and publishing your provider for others to use, whether within your organization or publicly, is a key step. Follow our [Publishing Packages guide](/docs/iac/using-pulumi/extending-pulumi/publishing-packages/) for detailed instructions on distributing your custom provider.
+Packaging and publishing your provider for others to use, whether within your organization or publicly, is a key step. Follow our [Publishing Packages guide](/docs/iac/guides/building-extending/packages/publishing-packages/) for detailed instructions on distributing your custom provider.
 
 ## Understanding Provider Schema
 
-The SDK automatically generates a schema for your provider based on the Go types and annotations you define. This schema describes the resources, their inputs and outputs, and documentation. For more details on how schema generation works and how to customize it, check out our [Schema documentation](/docs/iac/using-pulumi/extending-pulumi/schema/).
+The SDK automatically generates a schema for your provider based on the Go types and annotations you define. This schema describes the resources, their inputs and outputs, and documentation. For more details on how schema generation works and how to customize it, check out our [Schema documentation](/docs/iac/guides/building-extending/packages/schema/).
 
 ## Get Started Today!
 
 The release of the Pulumi Go Provider SDK represents a significant step forward in simplifying and accelerating the development of Pulumi providers. By focusing on a code-first approach, automatic schema generation, and providing a robust testing framework, we are empowering engineers to integrate Pulumi with virtually any service or tool.
 
 We encourage you to explore the Pulumi Go Provider SDK, build your own integrations, and contribute to the growing ecosystem of Pulumi providers.
-Start with our [Extending Pulumi overview documentation](/docs/iac/using-pulumi/extending-pulumi/) to get a complete picture of the possibilities.
+Start with our [Extending Pulumi overview documentation](/docs/iac/guides/building-extending/) to get a complete picture of the possibilities.
 
-1. **Explore our documentation** on [Extending Pulumi](/docs/iac/using-pulumi/extending-pulumi/)
+1. **Explore our documentation** on [Extending Pulumi](/docs/iac/guides/building-extending/)
 2. **Review examples** in the [GitHub repository](https://github.com/pulumi/pulumi-go-provider)
-3. **Learn how to build a provider** with our [step-by-step guide](/docs/iac/using-pulumi/extending-pulumi/build-a-provider/)
+3. **Learn how to build a provider** with our [step-by-step guide](/docs/iac/guides/building-extending/providers/build-a-provider/)
 4. **Identify your first integration** - what custom service would provide the most value to your team?
 5. **Join our community** in the [Pulumi Community Slack](https://slack.pulumi.com/) to learn from others building custom providers
 6. Share your feedback with us on the in Slack or by opening an issue in the [pulumi/pulumi-go-provider GitHub repository](https://github.com/pulumi/pulumi-go-provider).

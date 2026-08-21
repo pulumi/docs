@@ -30,7 +30,7 @@ Concept | Pulumi command | Role
 Merge requests pipeline | `pulumi preview` | Preview infrastructure changes to be merged.
 Master branch pipeline | `pulumi up`  | Update your infrastructure with latest changes
 
-Learn how to use [Pulumi in GitLab CI/CD](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci) with merge request pipelines and how to configure the [GitLab project integration with Pulumi](/docs/iac/packages-and-automation/continuous-delivery/gitlab-app/).
+Learn how to use [Pulumi in GitLab CI/CD](/docs/iac/operations/continuous-delivery/gitlab-ci/) with merge request pipelines and how to configure the [GitLab project integration with Pulumi](/docs/integrations/version-control/gitlab/).
 
 ## Already Using Both?
 
@@ -43,7 +43,7 @@ Here's a _preview_ of what that looks like 😉
 
 ![Merge Request Note](/blog/gitlab-project-integration/pulumi_gitlab.png)
 
-Head over to our docs to learn how to [configure the GitLab integration](/docs/iac/packages-and-automation/continuous-delivery/gitlab-app/), whether for
+Head over to our docs to learn how to [configure the GitLab integration](/docs/integrations/version-control/gitlab/), whether for
 a single project or all of the projects under a GitLab Group.
 
 GitLab provides lots of tools for streamlining your application delivery, and the new integration with Pulumi makes things even better.

@@ -751,7 +751,7 @@ metadata:
 ```
 
 {{% notes type="info" %}}
-Use the [retainOnDelete option](/docs/concepts/options/retainondelete/) if you don't want to delete the shared resource when a stack is destroyed.
+Use the [retainOnDelete option](/docs/iac/concepts/resources/options/retainondelete/) if you don't want to delete the shared resource when a stack is destroyed.
 {{% /notes %}}
 
 ## Give it a try!

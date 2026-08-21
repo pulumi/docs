@@ -26,6 +26,12 @@ The `pulumi do` command provides direct operations on cloud resources through th
 - **Provider functions**: Read-only queries against cloud APIs (e.g., looking up a VPC, fetching an AMI).
 - **Resource operations**: Create, read, patch (update), and delete cloud resources.
 
+### Modes
+
+- **Stateful**: This is the default mode for `pulumi do`. Resources created or updated in this mode are recorded as snippets in the state file of your current project, and their lifetime is tracked. Because they live in ordinary Pulumi state, they get the same benefits as program-managed resources: policy enforcement, drift detection with `pulumi refresh`, and references between resources. If you are not currently in a project, they are recorded in a global project named `default-global-project` (stored in your Pulumi home directory, with a stack named `default`) that's created automatically on first use.
+
+- **Stateless**: This mode can be enabled using the `--stateless` flag. In this mode resources are not recorded anywhere, so it's a good fit for one-off operations or testing.
+
 ### Command syntax
 
 ```
@@ -33,8 +39,10 @@ The `pulumi do` command provides direct operations on cloud resources through th
 pulumi do <package:module:function> [flags]
 
 # Resource operations
-pulumi do <package:module:type> <operation> [<id>] [flags]
+pulumi do <package:module:type> <operation> [<name>|<id>] [flags]
 ```
+
+The `create`, `delete` and `patch` operations take the resource's [logical name](/docs/iac/concepts/resources/names), while the `read` operation takes the provider-assigned [physical ID](/docs/iac/concepts/resources/names). With `--stateless`, `create` takes no argument and `delete` and `patch` take the provider-assigned ID instead of the name.
 
 The package, module, and type/function segments come directly from the provider schema. Pass `--help` at any level of the command tree to discover available subcommands.
 
@@ -47,9 +55,9 @@ The package, module, and type/function segments come directly from the provider 
 | Exploring a provider's capabilities | Yes | No |
 | Agent-driven ad-hoc operations | Yes | Better for repeatable workflows |
 | Production infrastructure management | No | Yes |
-| State tracking and drift detection | No (stateless) | Yes |
-| Multi-resource dependency graphs | No | Yes |
-| Policy enforcement and compliance | No | Yes |
+| State tracking and drift detection | Yes (stateful mode) | Yes |
+| Multi-resource dependency graphs | Yes (stateful mode) | Yes |
+| Policy enforcement and compliance | Yes (stateful mode) | Yes |
 | Repeatable, reviewable deployments | No | Yes |
 
 ## Provider functions
@@ -108,10 +116,11 @@ Resource operations let you create, read, update, and delete cloud resources dir
 
 ### Create
 
-Creates a new cloud resource. Pass inputs via an input file. The CLI prompts for confirmation before creating.
+Creates a new cloud resource. Pass inputs via an input file, or set scalar inputs directly with per-input command-line flags. The CLI prompts for confirmation before creating.
 
 ```bash
-$ pulumi do <package:module:type> create --input-file <path>
+$ pulumi do <package:module:type> create <name> --input-file <path>
+$ pulumi do <package:module:type> create <name> --<input-name> <value>
 ```
 
 Output on success is a JSON object with the provider-assigned `id` and all resource properties.
@@ -129,16 +138,18 @@ $ pulumi do <package:module:type> read <provider-resource-id>
 Updates an existing resource. The CLI reads the current state, merges your changes, displays a diff, and prompts for confirmation.
 
 ```bash
-$ pulumi do <package:module:type> patch <provider-resource-id> --input-file <path>
+$ pulumi do <package:module:type> patch <name> --input-file <path>
 ```
 
 ### Delete
 
-Deletes a resource. The CLI prompts for confirmation before destroying.
+Deletes a resource by the name it was created with. The CLI prompts for confirmation before destroying.
 
 ```bash
-$ pulumi do <package:module:type> delete <provider-resource-id>
+$ pulumi do <package:module:type> delete <name>
 ```
+
+With `--stateless`, pass the provider-assigned resource ID instead of the name.
 
 ## Flags
 
@@ -146,15 +157,19 @@ $ pulumi do <package:module:type> delete <provider-resource-id>
 |------|------|---------|-------------|
 | `--input-file` | string | | Path to a file containing function or resource inputs |
 | `--input` | string | `yaml` | Input file format |
+| `--<input-name>` | | | Set a single scalar input directly (one flag per input in the schema) |
 | `--provider-file` | string | | Path to a file containing provider configuration |
-| `--provider-format` | string | `yaml` | Format of the provider configuration file |
 | `--dry-run` | bool | `false` | Run in preview mode (provider returns placeholder values) |
+| `--output` | string | `default` | Output format for resource operation results (`default` or `json`) |
 | `--show-secrets` | bool | `false` | Show secret values in output |
+| `--stateless` | bool | `false` | Run resource operations directly against the provider without recording state |
 | `--yes` | bool | `false` | Auto-approve confirmation prompts |
 
 ## Output format
 
-All `pulumi do` operations write structured JSON to stdout. Progress messages and prompts go to stderr. This separation allows clean piping and scripting:
+All `pulumi do` operations write output to stdout. Progress messages and prompts are written to stderr.
+
+For structured output suitable for piping and scripting, pass `--output json`:
 
 ```bash
 # Pipe function output to jq
@@ -166,7 +181,7 @@ $ pulumi do aws:s3:Bucket read my-bucket > result.json
 
 Secrets appear as `[secret]` in output by default. Use `--show-secrets` to reveal them.
 
-Provider functions return the raw function result as JSON. Resource operations return a JSON object with `id` and `properties` fields.
+Provider functions return the raw function result as JSON. Resource operations return the resource's properties as a flat JSON object that includes the provider-assigned `id`.
 
 ## Provider configuration
 

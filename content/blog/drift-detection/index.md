@@ -52,7 +52,7 @@ To get started with Drift Detection in Pulumi, select which deployment route you
 
 In order to set up Drift Detection and Remediation in the Pulumi Cloud console, follow these steps:
 
-1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/pulumi-cloud/deployments/reference)
+1. Ensure Deployments Settings are configured on the stack [see the docs](/docs/deployments/concepts/)
 2. Navigate to the `Stack > Settings > Schedules` page
 3. Select "Drift"
 4. (Optional) Turn on auto-remediation if applicable
@@ -82,7 +82,7 @@ For those who prefer to automate and script their infrastructure tasks, Drift De
 - Pause or resume a Drift schedule
 - List all schedules (includes raw Pulumi operations and Time-to-Live schedules)
 
-Below is an example of setting up Drift Detection and Remediation on a stack, see the [Pulumi Deployments REST API documentation](/docs/pulumi-cloud/deployments/api) for more details on how to set Drift Detection and Remediation up programmatically.
+Below is an example of setting up Drift Detection and Remediation on a stack, see the [Pulumi Deployments REST API documentation](/docs/reference/cloud-rest-api/deployments/) for more details on how to set Drift Detection and Remediation up programmatically.
 
 **Create a Drift Detection and Remediation schedule:**
 

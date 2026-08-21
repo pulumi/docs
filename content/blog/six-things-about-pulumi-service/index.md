@@ -21,7 +21,7 @@ tags:
 category: product
 ---
 
-As a reader of this blog, you've probably heard of the [Pulumi Service](/product/pulumi-service/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of a number of the Service's key features, like helping you organize your [projects and stacks](/docs/pulumi-cloud/projects-and-stacks/), collaborate with others with the help of [organizations](/docs/pulumi-cloud/admin/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/concepts/secrets/).
+As a reader of this blog, you've probably heard of the [Pulumi Service](/product/pulumi-service/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of a number of the Service's key features, like helping you organize your [projects and stacks](/docs/iac/concepts/stacks/), collaborate with others with the help of [organizations](/docs/administration/organizations-teams/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/concepts/secrets/).
 
 What you might not know, though, is that we're adding new features to the Pulumi Service all the time, and that some of these features can  be fairly easy to miss. So in this post, we'll highlight a handful of the features you might _not_ be aware of, and that we think make it even easier to manage your infrastructure with Pulumi.
 
@@ -29,9 +29,9 @@ Let’s get started!
 
 ## Feature 1: Stack Tags
 
-The first thing we'll cover is the [Pulumi stack tags](/docs/concepts/stack#stack-tags) feature. Stack tags are key/value pairs that are associated with your Pulumi stack. You can use them for any number of purposes, from keeping things organized to even flagging whether or not it's okay for a script to reclaim the stack's resources.
+The first thing we'll cover is the [Pulumi stack tags](/docs/iac/concepts/stacks/#stack-tags) feature. Stack tags are key/value pairs that are associated with your Pulumi stack. You can use them for any number of purposes, from keeping things organized to even flagging whether or not it's okay for a script to reclaim the stack's resources.
 
-While you can create, edit, and remove stack tags using the Pulumi CLI (see [`pulumi stack tag`](/docs/iac/cli/commands/pulumi_stack_tag)), you can also do so in the Pulumi Console:
+While you can create, edit, and remove stack tags using the Pulumi CLI (see [`pulumi stack tag`](/docs/iac/cli/commands/pulumi_stack_tag/)), you can also do so in the Pulumi Console:
 
 ![Adding and removing stack tags in the Service ](https://user-images.githubusercontent.com/274700/150612443-b0b187e1-6329-42ca-816f-01de1bc5d4ff.gif)
 

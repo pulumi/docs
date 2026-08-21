@@ -18,7 +18,7 @@ We've put a new, horizontally scalable architecture in place along with a variet
 
 ## What is the Pulumi Kubernetes Operator?
 
-The Pulumi Kubernetes Operator defines a Kubernetes Custom Resource called `pulumi.com/v1/Stack`, which represents a Pulumi [stack](/docs/concepts/stack/). The Pulumi stack can be authored in any supported Pulumi language (TypeScript, Python, Go, .NET, Java, YAML) and can deploy and manage cloud infrastructure in any supported cloud (AWS, Azure, GCP, Kubernetes and 60+ additional cloud and SaaS providers). The Pulumi Kubernetes Operator triggers cloud deployments based on changes to the `Stack` Custom Resource or the resources it uses.
+The Pulumi Kubernetes Operator defines a Kubernetes Custom Resource called `pulumi.com/v1/Stack`, which represents a Pulumi [stack](/docs/iac/concepts/stacks/). The Pulumi stack can be authored in any supported Pulumi language (TypeScript, Python, Go, .NET, Java, YAML) and can deploy and manage cloud infrastructure in any supported cloud (AWS, Azure, GCP, Kubernetes and 60+ additional cloud and SaaS providers). The Pulumi Kubernetes Operator triggers cloud deployments based on changes to the `Stack` Custom Resource or the resources it uses.
 
 As a result, the Pulumi Kubernetes Operator enables users to specify the desired state of their cloud infrastructure by using resources managed directly in their Kubernetes cluster. Modifying those Kubernetes resources will trigger creation, updates, and deletion of the underlying cloud infrastructure that they manage.
 
@@ -219,7 +219,7 @@ spec:
 ### Install a Pulumi Access Token
 
 Create a `Secret` containing a Pulumi access token to be used by the stack to authenticate to Pulumi Cloud.
-Follow [these instructions](/docs/pulumi-cloud/access-management/access-tokens/) to create a
+Follow [these instructions](/docs/administration/access-identity/access-tokens/) to create a
 personal, organization, or team access token.
 
 Store the access token into a Kubernetes Secret. Here's an easy way to create a Secret named `pulumi-api-secret`.
@@ -432,5 +432,5 @@ spec:
 ## Conclusion
 
 The Pulumi Kubernetes Operator is a great way to deploy and manage cloud infrastructure from within your Kubernetes environment. With the 2.0 release,
-we've solved the scalability and isolation limitations that affected early adopters. You can [get started with the Pulumi Kubernetes Operator today](/docs/iac/packages-and-automation/continuous-delivery/pulumi-kubernetes-operator/). Please join us on the #kubernetes channel of
+we've solved the scalability and isolation limitations that affected early adopters. You can [get started with the Pulumi Kubernetes Operator today](/docs/integrations/clouds/kubernetes/pulumi-kubernetes-operator/). Please join us on the #kubernetes channel of
 the [Pulumi Community Slack workspace](https://slack.pulumi.com) to give feedback, and enjoy!

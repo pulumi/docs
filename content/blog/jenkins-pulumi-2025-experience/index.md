@@ -458,7 +458,7 @@ This approach solves several problems that plagued our old Docker-based setup:
 
 **Tool-Specific Environments**: Different pipelines can use completely different toolchains without conflicts.
 
-For Pulumi deployments, this means we can create specialized agent pods that include exactly the tools we need: [the Pulumi CLI](/docs/cli/), cloud provider SDKs, and any additional dependencies our infrastructure code requires.
+For Pulumi deployments, this means we can create specialized agent pods that include exactly the tools we need: [the Pulumi CLI](/docs/iac/cli/), cloud provider SDKs, and any additional dependencies our infrastructure code requires.
 
 ### A Complete Pulumi Deployment Pipeline
 

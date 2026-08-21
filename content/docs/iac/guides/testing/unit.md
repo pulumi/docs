@@ -15,7 +15,7 @@ aliases:
     - /docs/iac/concepts/testing/unit/
 ---
 
-Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, C# or Java. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.
+Pulumi programs are authored in a general-purpose language like TypeScript, Python, Go, .NET or Java. The full power of each language is available, including access to tools and libraries for that runtime, including testing frameworks.
 
 When running an update, your Pulumi program talks to the Pulumi CLI to orchestrate the deployment. The idea of _unit tests_ is to cut this communication channel and replace the engine with mocks. The mocks respond to the commands from within the same OS process and return dummy data for each call that your Pulumi program makes.
 
@@ -23,7 +23,7 @@ Because mocks don't execute any real work, unit tests run very fast. Also, they 
 
 ## Get started
 
-Let's build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/clouds/aws/get-started/) guide to set up a basic Pulumi program in your language of choice.
+Build a sample test suite. The example uses AWS resources, but the same capabilities and workflow apply to any Pulumi provider. To follow along, complete the [Get Started with AWS](/docs/iac/get-started/aws/) guide to set up a basic Pulumi program in your language of choice.
 
 Note that unit tests are supported in all [existing Pulumi runtimes](https://www.pulumi.com/docs/languages-sdks/).
 
@@ -35,11 +35,11 @@ Throughout this guide, we are testing a program that creates a simple AWS EC2-ba
 - Instances must not use an inline `userData` script&mdash;we must use a virtual machine image.
 - Instances must not have SSH open to the Internet.
 
-{{< notes >}}
-Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide.
-{{< /notes >}}
+{{% notes type="info" %}}
+Choose a language below to adjust the contents of this guide. Your choice is applied throughout the guide. Mock-based unit testing requires a general-purpose language runtime, so for declarative Pulumi programs written in YAML or HCL, see [integration testing](/docs/iac/guides/testing/integration/) instead.
+{{% /notes %}}
 
-{{< example-program path="unit-testing-webserver" >}}
+{{< example-program path="unit-testing-webserver" languages="typescript,python,go,csharp,java" >}}
 
 This basic Pulumi program allocates a security group and an instance. Notice, however, that we are violating all three of the rules stated above&mdash;let's write some tests!
 
@@ -110,11 +110,6 @@ This guide uses [JUnit 5](https://junit.org/junit5/) as the testing framework. A
     <scope>test</scope>
 </dependency>
 ```
-
-{{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not have a general-purpose language runtime, so mock-based unit testing is not applicable. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to validate your Pulumi YAML programs.
 
 {{% /choosable %}}
 
@@ -204,11 +199,6 @@ class MyMocks(pulumi.runtime.Mocks):
         return [args.name + '_id', args.inputs]
     def call(self, args: pulumi.runtime.MockCallArgs):
         return {}
-
-pulumi.runtime.set_mocks(
-    MyMocks(),
-    preview=False,  # Sets the flag `dry_run`, which is true at runtime during a preview.
-)
 ```
 
 {{% notes type="warning" %}}
@@ -339,11 +329,6 @@ class MyMocks implements Mocks {
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to validate your Pulumi YAML programs.
-
-{{% /choosable %}}
 
 The definition of the mocks interface is available at the [runtime API reference page](https://www.pulumi.com/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#Mocks).
 
@@ -421,8 +406,6 @@ class MyMocks(pulumi.runtime.Mocks):
 
     def call(self, args: pulumi.runtime.MockCallArgs):
         return {}
-
-pulumi.runtime.set_mocks(MyMocks())
 ```
 
 In your program, you can then use a `StackReference` as usual:
@@ -560,11 +543,6 @@ var vpcId = networkStack.getOutput(Output.of("vpcId"));
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support stack references in unit test mocks. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test programs that use stack references.
-
-{{% /choosable %}}
 
 This approach lets you test how your program uses outputs from other stacks without needing those stacks to actually exist. You can mock different scenarios by returning different outputs in your test setup.
 
@@ -604,21 +582,28 @@ describe("Infrastructure", function() {
 
 {{% /choosable %}}
 {{% choosable language "python" %}}
-The overall structure and scaffolding of our tests will look like any ordinary Python's unittest testing:
+Pulumi's Python runtime requires an asyncio event loop. Subclass `unittest.IsolatedAsyncioTestCase` to create and close a separate event loop for each test. In `setUp`, initialize the mocks and run the Pulumi program:
 
 test_ec2.py:
 
 ```python
+import runpy
 import unittest
 import pulumi
 
 # ... MyMocks as shown above
-pulumi.runtime.set_mocks(MyMocks())
 
-# It's important to import `infra` _after_ the mocks are defined.
-import infra
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    def setUp(self):
+        pulumi.runtime.set_mocks(
+            MyMocks(),
+            preview=False, # Sets the flag `dry_run`, which is true at runtime during a preview.
+        )
+        # Run the program fresh for each test *after* setting the mocks.
+        program = runpy.run_path("__main__.py")
+        self.group = program["group"]
+        self.server = program["server"]
 
-class TestingWithMocks(unittest.TestCase):
     # TODO(check 1): Instances have a Name tag.
     # TODO(check 2): Instances must not use an inline userData script.
     # TODO(check 3): Instances must not have SSH open to the Internet.
@@ -718,11 +703,6 @@ class Ec2Tests {
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
-
-{{% /choosable %}}
 
 Now let's implement our first test: ensuring that instances have a `Name` tag. To verify this we need to grab hold of the EC2 instance object, and check the relevant property:
 
@@ -745,15 +725,18 @@ it("must have a name tag", function(done) {
 {{% choosable language "python" %}}
 
 ```python
-# check 1: Instances have a Name tag.
-@pulumi.runtime.test
-def test_server_tags(self):
-    def check_tags(args):
-        urn, tags = args
-        self.assertIsNotNone(tags, f'server {urn} must have tags')
-        self.assertIn('Name', tags, 'server {urn} must have a name tag')
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    # ... setUp as shown above
 
-    return pulumi.Output.all(infra.server.urn, infra.server.tags).apply(check_tags)
+    # check 1: Instances have a Name tag.
+    @pulumi.runtime.test
+    def test_server_tags(self):
+        def check_tags(args):
+            urn, tags = args
+            self.assertIsNotNone(tags, f"server {urn} must have tags")
+            self.assertIn("Name", tags, f"server {urn} must have a name tag")
+
+        return pulumi.Output.all(self.server.urn, self.server.tags).apply(check_tags)
 ```
 
 {{% /choosable %}}
@@ -820,11 +803,6 @@ void instanceMustHaveNameTag() {
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
-
-{{% /choosable %}}
 
 This looks like a normal test, with a few noteworthy pieces:
 
@@ -855,14 +833,17 @@ it("must not use userData (use an AMI instead)", function(done) {
 {{% choosable language "python" %}}
 
 ```python
-# check 2: Instances must not use an inline userData script.
-@pulumi.runtime.test
-def test_server_userdata(self):
-    def check_user_data(args):
-        urn, user_data = args
-        self.assertFalse(user_data, f'illegal use of user_data on server {urn}')
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    # ... setUp as shown above
 
-    return pulumi.Output.all(infra.server.urn, infra.server.user_data).apply(check_user_data)
+    # check 2: Instances must not use an inline userData script.
+    @pulumi.runtime.test
+    def test_server_userdata(self):
+        def check_user_data(args):
+            urn, user_data = args
+            self.assertFalse(user_data, f"illegal use of user_data on server {urn}")
+
+        return pulumi.Output.all(self.server.urn, self.server.user_data).apply(check_user_data)
 ```
 
 {{% /choosable %}}
@@ -925,11 +906,6 @@ void instanceMustNotUseInlineUserData() {
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
-
-{{% /choosable %}}
 
 And finally, let's write our third check. It’s a bit more complex because we're searching for ingress rules associated with a security group&mdash;of which there may be many&mdash;and CIDR blocks within those ingress rules&mdash;of which there may also be many. But it's still several lines of code:
 
@@ -953,15 +929,25 @@ it("must not open port 22 (SSH) to the Internet", function(done) {
 {{% choosable language "python" %}}
 
 ```python
-# check 3: Test if port 22 for ssh is exposed.
-@pulumi.runtime.test
-def test_security_group_rules(self):
-    def check_security_group_rules(args):
-        urn, ingress = args
-        ssh_open = any([rule['from_port'] == 22 and any([block == "0.0.0.0/0" for block in rule['cidr_blocks']]) for rule in ingress])
-        self.assertFalse(ssh_open, f'security group {urn} exposes port 22 to the Internet (CIDR 0.0.0.0/0)')
+class TestingWithMocks(unittest.IsolatedAsyncioTestCase):
+    # ... setUp as shown above
 
-    return pulumi.Output.all(infra.group.urn, infra.group.ingress).apply(check_security_group_rules)
+    # check 3: Test if port 22 for ssh is exposed.
+    @pulumi.runtime.test
+    def test_security_group_rules(self):
+        def check_security_group_rules(args):
+            urn, ingress = args
+            ssh_open = any(
+                rule["from_port"] == 22
+                and "0.0.0.0/0" in rule["cidr_blocks"]
+                for rule in ingress
+            )
+            self.assertFalse(
+                ssh_open,
+                f"security group {urn} exposes port 22 to the Internet (CIDR 0.0.0.0/0)",
+            )
+
+        return pulumi.Output.all(self.group.urn, self.group.ingress).apply(check_security_group_rules)
 ```
 
 {{% /choosable %}}
@@ -1047,11 +1033,6 @@ void securityGroupMustNotHaveSshOpenToInternet() {
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
-
-{{% /choosable %}}
 
 That's it&mdash;now let's run the tests.
 
@@ -1098,11 +1079,6 @@ $ mvn test
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
-
-{{% /choosable %}}
 
 Running this will tell us that we have three failing tests, as we had planned.
 
@@ -1115,7 +1091,6 @@ Running this will tell us that we have three failing tests, as we had planned.
       2) must not use userData (use an AMI instead)
     #group
       3) must not open port 22 (SSH) to the Internet
-
 
   0 passing (454ms)
   3 failing
@@ -1194,11 +1169,6 @@ Total tests: 3
 [ERROR] Ec2Tests.securityGroupMustNotHaveSshOpenToInternet -- AssertionFailedError: Illegal SSH port 22 open to the Internet (CIDR 0.0.0.0/0) on group ...
 [ERROR] BUILD FAILURE
 ```
-
-{{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 {{% /choosable %}}
 
@@ -1369,34 +1339,6 @@ public class App {
 ```
 
 {{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-Pulumi.yaml:
-
-```yaml
-name: webserver
-runtime: yaml
-resources:
-  web-secgrp:
-    type: aws:ec2:SecurityGroup
-    properties:
-      ingress:
-        - protocol: tcp
-          fromPort: 80
-          toPort: 80
-          cidrBlocks: ["0.0.0.0/0"]
-  web-server-www:
-    type: aws:ec2:Instance
-    properties:
-      instanceType: t2.micro
-      securityGroups:
-        - ${web-secgrp.name}
-      ami: ami-c55673a0
-      tags:
-        Name: webserver
-```
-
-{{% /choosable %}}
 
 And then rerun our tests:
 
@@ -1409,7 +1351,6 @@ Infrastructure
       ✓ must not use userData (use an AMI instead)
     #group
       ✓ must not open port 22 (SSH) to the Internet
-
 
   3 passing (454ms)
 ```
@@ -1448,11 +1389,6 @@ Total tests: 3
 [INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] BUILD SUCCESS
 ```
-
-{{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 {{% /choosable %}}
 
@@ -1511,13 +1447,6 @@ The full code for this guide is available in the examples repository: [Unit Test
 {{% choosable language "java" %}}
 
 A Java unit testing example is not yet available in the examples repository. Contributions are welcome at [pulumi/examples](https://github.com/pulumi/examples).
-
-&nbsp;
-
-{{% /choosable %}}
-{{% choosable language "yaml" %}}
-
-YAML programs are declarative and do not support mock-based unit testing. See [integration testing](/docs/iac/guides/testing/integration/) to learn how to test your Pulumi YAML programs.
 
 &nbsp;
 

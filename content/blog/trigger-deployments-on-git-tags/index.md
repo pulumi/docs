@@ -27,20 +27,20 @@ A git tag is how many teams mark a release as ready. Pulumi Deployments can now 
 
 ## Why tags?
 
-[Push to Deploy](/docs/deployments/deployments/using/triggers/#push-to-deploy) has long let you preview changes on a pull request and update a stack when commits merge to a branch. That branch-based model is a great fit for continuous delivery to shared development and QA environments, where every merge should flow straight through.
+[Push to Deploy](/docs/deployments/concepts/triggers/#push-to-deploy) has long let you preview changes on a pull request and update a stack when commits merge to a branch. That branch-based model is a great fit for continuous delivery to shared development and QA environments, where every merge should flow straight through.
 
 But promotion to production is often deliberate, not continuous. You merge throughout the day, then decide — separately — that a particular commit is the release. The conventional way to record that decision is a git tag: `v1.2.0`, `2026.06.0`, `release-2026-06-04`. Tagging is already part of most teams' release rituals.
 
-Tag-based triggers connect that ritual to your infrastructure. Instead of wiring up a separate CI job to call the [Pulumi Deployments REST API](/docs/deployments/deployments/using/triggers/#rest-api) on a tag event, you configure the trigger once in your stack's deployment settings and let Pulumi handle the rest.
+Tag-based triggers connect that ritual to your infrastructure. Instead of wiring up a separate CI job to call the [Pulumi Deployments REST API](/docs/deployments/concepts/triggers/#rest-api) on a tag event, you configure the trigger once in your stack's deployment settings and let Pulumi handle the rest.
 
 ## How it works
 
-Tag triggers are controlled by two settings on your stack's [deployment configuration](/docs/deployments/deployments/using/settings/):
+Tag triggers are controlled by two settings on your stack's [deployment configuration](/docs/deployments/concepts/settings/):
 
 - **Run updates for pushed tags** — a toggle that enables running `pulumi up` when a matching tag is pushed.
 - **Tag filters** — a list of glob patterns that decide which tag names qualify.
 
-Tag filters use the same model as the [path filters](/docs/deployments/deployments/using/settings/#path-filtering) you may already know, except the patterns match against the tag name rather than changed file paths. A few examples:
+Tag filters use the same model as the [path filters](/docs/deployments/concepts/settings/#path-filtering) you may already know, except the patterns match against the tag name rather than changed file paths. A few examples:
 
 - `v*` — deploy on any tag beginning with `v`, such as `v1.0.0` and `v2.3.1`.
 - `v*` plus `!*-rc*` — deploy on release tags but skip release candidates like `v1.2.0-rc1`.
@@ -64,4 +64,4 @@ To try it out:
 1. Enable **Run updates for pushed tags** and add a tag filter such as `v*`.
 1. Push a tag — `git tag v1.0.0 && git push origin v1.0.0` — and watch the deployment run.
 
-For the full details, see the [deployment triggers](/docs/deployments/deployments/using/triggers/#deploying-on-git-tags) and [tag filtering](/docs/deployments/deployments/using/settings/#tag-filtering) documentation. We'd love to hear how you put tag-based deployments to work.
+For the full details, see the [deployment triggers](/docs/deployments/concepts/triggers/#deploying-on-git-tags) and [tag filtering](/docs/deployments/concepts/settings/#tag-filtering) documentation. We'd love to hear how you put tag-based deployments to work.

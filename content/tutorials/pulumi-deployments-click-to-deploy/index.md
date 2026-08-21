@@ -23,7 +23,7 @@ allow_long_title: true
 
 ## What is Pulumi Deployments?
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments/) is a fully managed service designed to automate cloud infrastructure. Pulumi Deployments provides the building blocks designed for scaling your cloud infrastructure, with tools to power public and private cloud platforms, APIs, and self-service infrastructure portals. These options provide flexibility to incorporate Pulumi Deployments into your existing workflows.
+[Pulumi Deployments](/docs/deployments/concepts/) is a fully managed service designed to automate cloud infrastructure. Pulumi Deployments provides the building blocks designed for scaling your cloud infrastructure, with tools to power public and private cloud platforms, APIs, and self-service infrastructure portals. These options provide flexibility to incorporate Pulumi Deployments into your existing workflows.
 
 Deployments can be triggered through multiple methods: using the [REST API](/docs/pulumi-cloud/deployments/reference/#deployments-rest-api), integrating with GitHub via [push-to-deploy](/docs/pulumi-cloud/deployments/reference/#github-app-installation), or initiating directly from the [Pulumi Cloud console](/docs/pulumi-cloud/deployments/reference/#pulumi-console).
 
@@ -33,11 +33,11 @@ First sign in to Pulumi Cloud via the [Pulumi sign in page](https://app.pulumi.c
 
 ## Install and configure the GitHub App
 
-Next, the [Pulumi GitHub App](/docs/iac/using-pulumi/continuous-delivery/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/iac/using-pulumi/continuous-delivery/github-app/#installation-and-configuration) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
+Next, the [Pulumi GitHub App](/docs/integrations/version-control/github-app/) is required to enable Pulumi Deployment's [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/) and push-to-deploy functionality. Follow the GitHub app [installation instructions](/docs/integrations/version-control/github-app/#installation-and-configuration) to ensure your Pulumi organization is set up to work seamlessly with Pulumi Deployments.
 
 ## Create a New Project with the New Project Wizard
 
-To create a new Pulumi project, commit its code, and deploy it entirely from your browser, you will use the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/). The wizard allows you to start from one of Pulumi’s public templates, your [Organization Templates](/docs/pulumi-cloud/developer-portals/templates), or even generate a custom project using the cloud resources and your preferred language of choice with [Pulumi AI](/ai).
+To create a new Pulumi project, commit its code, and deploy it entirely from your browser, you will use the [New Project Wizard](/docs/pulumi-cloud/developer-portals/new-project-wizard/). The wizard allows you to start from one of Pulumi’s public templates, your [Organization Templates](/docs/pulumi-cloud/developer-portals/templates), or even generate a custom project using the cloud resources and your preferred language of choice with [Pulumi AI](/product/neo/).
 
 First, navigate to the **New Project** tab in the Pulumi Cloud console. Choose your source template from Pulumi, then you can optionally choose your cloud and language to filter the results or search all templates.
 
@@ -62,7 +62,7 @@ These values populate the `config` section in the `Pulumi.<stack>.yaml` file, sp
 
 ### Environment
 
-If you've configured [environments](/docs/pulumi-cloud/esc) with your organization, you can specify one to use with the resulting stack. Environments enable teams to define and share collections of configuration and secrets across multiple Pulumi projects and stacks, such as your `AWS_SECRET_ACCESS_KEY` which will be needed to configure your deployment settings.
+If you've configured [environments](/docs/esc/) with your organization, you can specify one to use with the resulting stack. Environments enable teams to define and share collections of configuration and secrets across multiple Pulumi projects and stacks, such as your `AWS_SECRET_ACCESS_KEY` which will be needed to configure your deployment settings.
 
 ### Repository
 
@@ -79,7 +79,7 @@ If the GitHub organization you want to write to isn’t the one currently shown,
 Configure the behavior of Deployments, including when to trigger new Deployments and any environment variables required for the Pulumi program to run. Unless you have configured this project to use an Environment, you will need to add variables for `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
 {{% notes type="info" %}}
-Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end-to-end with Pulumi and can be set on each stack. However, by creating an [environment](/docs/pulumi-cloud/esc) with Pulumi ESC, you can centralize secrets and set up OIDC for secure authentication. This allows you to manage and share sensitive configuration data across multiple stacks efficiently.
+Secret environment variables, such as `AWS_SECRET_ACCESS_KEY`, are encrypted end-to-end with Pulumi and can be set on each stack. However, by creating an [environment](/docs/esc/) with Pulumi ESC, you can centralize secrets and set up OIDC for secure authentication. This allows you to manage and share sensitive configuration data across multiple stacks efficiently.
 {{% /notes %}}
 
 A full description of each setting is available on the [deployment settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) docs page.

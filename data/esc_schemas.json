@@ -5,7 +5,7 @@
       "currentEnvironment": {
         "properties": {
           "name": {
-            "description": "The name of the environment currently being evaluated \u2014 the one the reference itself is written in \u2014 as `<project>/<name>`. Inside an imported environment it is the import exactly as written in the importing environment's `imports:` list, so an import written `payments/db` resolves to `payments/db`. Environments in the legacy `default` project may be imported without a project prefix; those resolve as written too, so `db` stays `db` and `default/db` stays `default/db`.",
+            "description": "The name of the environment currently being evaluated \u2014 the one the reference resolves to \u2014 as `<project>/<name>`. Inside an imported environment it is normally the import exactly as written in the importing environment's `imports:` list, so an import written `payments/db` resolves to `payments/db`. When an environment override replaces the import, it is the replacement reference. Environments in the legacy `default` project may be imported without a project prefix; those resolve as written too, so `db` stays `db` and `default/db` stays `default/db`.",
             "type": "string"
           }
         },

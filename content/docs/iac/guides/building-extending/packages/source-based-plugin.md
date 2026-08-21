@@ -1,6 +1,6 @@
 ---
 title: Authoring a Source-Based Plugin Package
-meta_desc: How to author a Pulumi plugin package distributed as source code in TypeScript, Python, Go, C#, or Java so it can be consumed from any Pulumi language.
+meta_desc: How to author a Pulumi plugin package distributed as source code in TypeScript, Python, Go, .NET, or Java so it can be consumed from any Pulumi language.
 menu:
   iac:
     parent: iac-guides-packages
@@ -17,7 +17,7 @@ Source-based packages most commonly contain components, and the rest of this gui
 
 The key wins of the source-based model are:
 
-- **Author in your language of choice, consume in any Pulumi language.** You write the package once in TypeScript, Python, Go, C#, or Java; consumers can use it from any supported Pulumi language, including YAML.
+- **Author in your language of choice, consume in any Pulumi language.** You write the package once in TypeScript, Python, Go, .NET, or Java; consumers can use it from any supported Pulumi language, including YAML.
 - **No pre-publishing required.** You don't have to build, version, and push per-language SDKs to npm, PyPI, NuGet, Maven, and Go module proxies — a git tag (or even a local path) is enough for consumers to use the package.
 
 {{< notes type="info" >}}
@@ -506,8 +506,8 @@ In a future version of Pulumi, TypeScript and Python will emit a warning when a 
 Despite the language-specific mechanics, every source-based plugin follows the same four patterns:
 
 1. **Args are discovered transitively.** You never register an args class separately — it is found by analyzing the component's constructor or struct signature.
-1. **Schema is inferred from type information.** No explicit schema declaration is needed. Python reads annotations, C# and Java use reflection, TypeScript uses the compiler API, and Go uses struct tags.
-1. **Decorators are optional.** Go uses struct tags for metadata; C# and Java offer `[Input]`/`@Import` for fine-grained control but do not require them.
+1. **Schema is inferred from type information.** No explicit schema declaration is needed. Python reads annotations, .NET and Java use reflection, TypeScript uses the compiler API, and Go uses struct tags.
+1. **Decorators are optional.** Go uses struct tags for metadata; .NET and Java offer `[Input]`/`@Import` for fine-grained control but do not require them.
 1. **All-or-nothing export.** Once a component is discoverable, every public property of its args class is automatically included in the generated schema.
 
 ## Distribution
@@ -546,7 +546,7 @@ Pulumi supports private repos in GitHub and GitLab. Pulumi reads standard enviro
 
 {{< pulumi-cloud "private-registry" />}}
 
-A source-based plugin package can be published to the [IDP Private Registry](/docs/idp/concepts/private-registry/) so it shows up alongside the rest of your organization's infrastructure building blocks — the same [components](/docs/iac/concepts/resources/components/) and [templates](/docs/idp/developer-portals/templates/) that power golden path workflows in Pulumi. See the [Pulumi Private Registry guide](/docs/idp/concepts/private-registry/) for publishing instructions.
+A source-based plugin package can be published to the [IDP Private Registry](/docs/idp/concepts/private-registry/) so it shows up alongside the rest of your organization's infrastructure building blocks — the same [components](/docs/iac/concepts/components/) and [templates](/docs/idp/concepts/organization-templates/) that power golden path workflows in Pulumi. See the [Pulumi Private Registry guide](/docs/idp/concepts/private-registry/) for publishing instructions.
 
 ### Pre-publishing language SDKs
 

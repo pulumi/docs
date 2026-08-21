@@ -12,17 +12,17 @@ tags:
 category: product
 ---
 
-We're excited to announce ESC Connect — a new capability that lets you integrate any secret source with [Pulumi ESC](/product/esc/) by building simple HTTPS adapter services. If you've ever needed to pull secrets from a proprietary system, a legacy tool, or a third-party service that doesn't have native ESC support, you no longer have to wait for us to build a provider. You can build your own adapter in an afternoon and start using it immediately.
+We're excited to announce ESC Connect — a new capability that lets you integrate any secret source with [Pulumi ESC](/product/secrets-management/) by building simple HTTPS adapter services. If you've ever needed to pull secrets from a proprietary system, a legacy tool, or a third-party service that doesn't have native ESC support, you no longer have to wait for us to build a provider. You can build your own adapter in an afternoon and start using it immediately.
 
 <!--more-->
 
-Pulumi ESC has [native integrations](/docs/esc/integrations/) with popular secret management systems like [AWS Secrets Manager](/docs/esc/integrations/dynamic-secrets/aws-secrets/), [Azure KeyVault](/docs/esc/integrations/dynamic-secrets/azure-secrets/), [HashiCorp Vault](/docs/esc/integrations/dynamic-secrets/vault-secrets/), [1Password](/docs/esc/integrations/dynamic-secrets/1password-secrets/), and others. But in real-world infrastructure, you often need to work with systems that fall outside this list. Maybe you built a custom secret management system years ago and it's still running in production. Maybe you're using a niche third-party service. Maybe your secrets are locked behind a firewall in a legacy system that predates modern APIs.
+Pulumi ESC has [native integrations](/docs/esc/integrations/) with popular secret management systems like [AWS Secrets Manager](/docs/esc/providers/secrets/aws-secrets/), [Azure KeyVault](/docs/esc/providers/secrets/azure-secrets/), [HashiCorp Vault](/docs/esc/providers/secrets/vault-secrets/), [1Password](/docs/esc/providers/secrets/1password-secrets/), and others. But in real-world infrastructure, you often need to work with systems that fall outside this list. Maybe you built a custom secret management system years ago and it's still running in production. Maybe you're using a niche third-party service. Maybe your secrets are locked behind a firewall in a legacy system that predates modern APIs.
 
-ESC Connect changes this by letting you build simple HTTPS adapter services using the [`external` provider](/docs/esc/integrations/dynamic-secrets/external/). Your adapter handles requests from ESC, fetches secrets from your custom source, and returns them. ESC handles authentication with signed JWT tokens, so you get fine-grained control over access without building a complete security infrastructure.
+ESC Connect changes this by letting you build simple HTTPS adapter services using the [`external` provider](/docs/esc/providers/secrets/external/). Your adapter handles requests from ESC, fetches secrets from your custom source, and returns them. ESC handles authentication with signed JWT tokens, so you get fine-grained control over access without building a complete security infrastructure.
 
 ## Building an adapter
 
-Here's an [ESC environment](/docs/esc/environments/) configuration that uses ESC Connect:
+Here's an [ESC environment](/docs/esc/concepts/environments/) configuration that uses ESC Connect:
 
 ```yaml
 values:
@@ -53,7 +53,7 @@ const handler = async (event) => {
 };
 ```
 
-The [example reference implementation](#try-it-out) includes an `ESCRequestValidator` class that handles JWT verification and request integrity checking for you. See the [documentation](/docs/esc/integrations/dynamic-secrets/external/) for detailed security requirements and examples in other languages.
+The [example reference implementation](#try-it-out) includes an `ESCRequestValidator` class that handles JWT verification and request integrity checking for you. See the [documentation](/docs/esc/providers/secrets/external/) for detailed security requirements and examples in other languages.
 
 ## Automated rotation
 
@@ -70,7 +70,7 @@ values:
           environment: production
 ```
 
-Learn more about [secret rotation in Pulumi ESC](/docs/esc/environments/rotation/) and the [external rotator implementation patterns](/docs/esc/integrations/rotated-secrets/external/).
+Learn more about [secret rotation in Pulumi ESC](/docs/esc/concepts/rotators/) and the [external rotator implementation patterns](/docs/esc/providers/rotators/external/).
 
 ## Try it out
 
@@ -78,6 +78,6 @@ ESC Connect is available now in Pulumi ESC. We've created a [deployable referenc
 
 [![Deploy this example with Pulumi](https://get.pulumi.com/new/button.svg)](https://app.pulumi.com/new?template=https://github.com/pulumi/examples/blob/master/aws-ts-esc-external-adapter-lambda/README.md)
 
-Check out the documentation for the [external provider](/docs/esc/integrations/dynamic-secrets/external/) and [external rotator](/docs/esc/integrations/rotated-secrets/external/) to learn more about building production adapters.
+Check out the documentation for the [external provider](/docs/esc/providers/secrets/external/) and [external rotator](/docs/esc/providers/rotators/external/) to learn more about building production adapters.
 
 To learn more about Pulumi ESC, explore the [ESC documentation](/docs/esc/) or [get started for free](/docs/esc/get-started/). If you build an adapter for a system that others might find useful, share it in the [Pulumi Community Slack](https://slack.pulumi.com) — we'd love to see what you build.

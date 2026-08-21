@@ -64,7 +64,7 @@ Admin Organization Access Tokens can perform many actions that a regular Organiz
 - Add and remove Team Access Tokens
 - Get audit log events
 
-For a full list of all actions that can be performed by each access token type please refer to the [Access Token documentation](/docs/pulumi-cloud/access-management/access-tokens/).
+For a full list of all actions that can be performed by each access token type please refer to the [Access Token documentation](/docs/administration/access-identity/access-tokens/).
 
 ### Wrapping up
 

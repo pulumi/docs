@@ -327,7 +327,7 @@ scalability, and collaboration.
     infrastructure engineer that works inside your existing workflow: it proposes
     changes, runs previews, responds to failures, and opens pull requests in tight
     feedback loops, grounded in the real state of your infrastructure in Pulumi
-    Cloud. Because that infrastructure is defined in Python, TypeScript, Go, C#, or
+    Cloud. Because that infrastructure is defined in Python, TypeScript, Go, .NET, or
     Java rather than a bespoke configuration language, Neo can read, reason about,
     test, and ship it the same way an AI coding agent already handles the rest of
     your codebase. Terraform, by contrast, is defined in HCL, a domain-specific
@@ -354,7 +354,7 @@ scalability, and collaboration.
     self-service of infrastructure whether through custom developer
     platforms or shared infrastructure libraries. To define common
     company-wide components, if you don't want to program can use use YAML; if you
-    do, you can use Python, TypeScript, Golang, C\#, etc. These components can be consumed by
+    do, you can use Python, TypeScript, Golang, .NET, etc. These components can be consumed by
     the development team in their own IaC program in any programming
     language with the development tools they already know. It\'s easy to
     start with YAML and move to other languages when more power is

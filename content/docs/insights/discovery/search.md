@@ -52,7 +52,7 @@ a resource named "foo" in the "bar" stack will be returned, but a resource only 
 The default search behavior is helpful for preliminary exploration but is often too broad for finer analysis.
 To more precisely control _how_ your queries match resources, you can explicitly limit part or all of your query to match specific fields.
 
-For example, searching `name:production` will only return resources that include "production" in their [logical name](/docs/concepts/resources/names/#logicalname).
+For example, searching `name:production` will only return resources that include "production" in their [logical name](/docs/iac/concepts/resources/names/#logicalname).
 
 In general, any column visible in the UI can be queried as a field by taking the lowercase column name and adding a `:` followed by a query term.
 The colon cannot be followed by whitespace.
@@ -98,7 +98,7 @@ Examples: _delete:true_ | _delete:false_
 
 #### dependency
 
-The [URN][urn] of another resource this resource explicitly or implicitly [depends on](/docs/concepts/resources#dependson).
+The [URN][urn] of another resource this resource explicitly or implicitly [depends on](/docs/iac/concepts/resources/options/dependson/).
 
 A resource can have multiple dependencies. When querying, `dependency:foo` returns resources with any dependency with a URN matching `foo`.
 
@@ -109,7 +109,7 @@ Examples:
 
 #### id
 
-The [physical name](/docs/concepts/resources/names/#autonaming) of the resource, as assigned by the resource’s provider. May not be set if the resource is pending creation.
+The [physical name](/docs/iac/concepts/resources/names/#autonaming) of the resource, as assigned by the resource’s provider. May not be set if the resource is pending creation.
 
 Example: _id:my-bucket-d7c2fa0_
 
@@ -129,7 +129,7 @@ Examples:
 
 #### name
 
-The [logical name](/docs/concepts/resources/names/#logicalname) of the resource.
+The [logical name](/docs/iac/concepts/resources/names/#logicalname) of the resource.
 
 Typically the first parameter provided to the resource when it was instantiated.
 
@@ -182,13 +182,13 @@ Example: _project:my-cool-repo_
 
 #### protected
 
-Whether the resource is [protected](/docs/concepts/options/protect) from deletion.
+Whether the resource is [protected](/docs/iac/concepts/resources/options/protect/) from deletion.
 
 Examples: _protected:true_ | _protected:false_
 
 #### provider.urn
 
-The [URN][urn] of the resource's [provider](/docs/concepts/resources/providers/).
+The [URN][urn] of the resource's [provider](/docs/iac/concepts/providers/).
 
 Examples:
 
@@ -286,7 +286,7 @@ For example:
 
 > .instanceType:t3.large
 
-The specific syntax for property names matches the syntax used elsewhere in Pulumi, for example with [`ignoreChanges`](/docs/concepts/options/ignorechanges/). This makes it possible to refer to property values nested inside arrays or objects, or values with special characters.
+The specific syntax for property names matches the syntax used elsewhere in Pulumi, for example with [`ignoreChanges`](/docs/iac/concepts/resources/options/ignorechanges/). This makes it possible to refer to property values nested inside arrays or objects, or values with special characters.
 
 For example, to query for a key containing spaces inside of an output object named `tags` we can write:
 
@@ -372,7 +372,7 @@ When using the "group by" functionality, a consolidated resource can appear in m
 
 ## Managed by attribute
 
-The **Resources** page in Pulumi Cloud now includes a **Managed By** column, which helps categorize resources based on how they are managed. This column provides insight into whether a resource is defined by Infrastructure as Code (IaC) using Pulumi or discovered by Pulumi's resource discovery engine.
+The **Resources** page in Pulumi Cloud now includes a **Managed By** column, which helps categorize resources based on how they are managed. This column provides insight into whether a resource is defined by infrastructure as code (IaC) using Pulumi or discovered by Pulumi's resource discovery engine.
 
 ### Viewing managed by categories
 
@@ -402,7 +402,7 @@ For a complete description of the CSV format returned, see the [Data Export](/do
 
 ## API access
 
-Resources can also be queried programmatically. See the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api#resource-search) for full details of the API endpoint to query resources.
+Resources can also be queried programmatically. See the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/resource-search/) for full details of the API endpoint to query resources.
 
 ## AI assist
 
@@ -436,12 +436,12 @@ You do not need to query AI Assist with English:
 
 ## Access controls
 
-Resource Search is available to all members of an organization, but as a user you are only able to see and query resources that you have [permission](/docs/administration/access-identity/stack-permissions/) to access.
+Resource Search is available to all members of an organization, but as a user you are only able to see and query resources that you have [permission](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets) to access.
 More specifically:
 
 - Organization admins have access to all resources.
 - If an organization has a default permission of read or write, then all users can query all resources.
-- If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/administration/access-identity/stack-permissions/) or [Team](/docs/administration/organizations-teams/teams/#team-permissions) permissions.
+- If an organization has no default permission, then users can only query resources they have access to via [Stack](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets) or [Team](/docs/administration/access-identity/rbac/teams/#team-access-types) permissions.
 
 [types]: /docs/concepts/resources/names/#types
 [urn]: /docs/concepts/resources/names/#urns

@@ -9871,6 +9871,15 @@ references:
   fullName.vb: Pulumi.Config.GetObject(Of T)(String)
   nameWithType: Config.GetObject<T>(string)
   nameWithType.vb: Config.GetObject(Of T)(String)
+- uid: Pulumi.Config.GetObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name: GetObject<T>(string, JsonSerializerOptions)
+  href: pulumi/pulumi.config.html#Pulumi_Config_GetObject__1_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pulumi.Config.GetObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: GetObject(Of T)(String, JsonSerializerOptions)
+  fullName: Pulumi.Config.GetObject<T>(string, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Pulumi.Config.GetObject(Of T)(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Config.GetObject<T>(string, JsonSerializerOptions)
+  nameWithType.vb: Config.GetObject(Of T)(String, JsonSerializerOptions)
 - uid: Pulumi.Config.GetSecret(System.String)
   name: GetSecret(string)
   href: pulumi/pulumi.config.html#Pulumi_Config_GetSecret_System_String_
@@ -9951,6 +9960,15 @@ references:
   fullName.vb: Pulumi.Config.GetSecretObject(Of T)(String)
   nameWithType: Config.GetSecretObject<T>(string)
   nameWithType.vb: Config.GetSecretObject(Of T)(String)
+- uid: Pulumi.Config.GetSecretObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name: GetSecretObject<T>(string, JsonSerializerOptions)
+  href: pulumi/pulumi.config.html#Pulumi_Config_GetSecretObject__1_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pulumi.Config.GetSecretObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: GetSecretObject(Of T)(String, JsonSerializerOptions)
+  fullName: Pulumi.Config.GetSecretObject<T>(string, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Pulumi.Config.GetSecretObject(Of T)(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Config.GetSecretObject<T>(string, JsonSerializerOptions)
+  nameWithType.vb: Config.GetSecretObject(Of T)(String, JsonSerializerOptions)
 - uid: Pulumi.Config.Require(System.String)
   name: Require(string)
   href: pulumi/pulumi.config.html#Pulumi_Config_Require_System_String_
@@ -10031,6 +10049,15 @@ references:
   fullName.vb: Pulumi.Config.RequireObject(Of T)(String)
   nameWithType: Config.RequireObject<T>(string)
   nameWithType.vb: Config.RequireObject(Of T)(String)
+- uid: Pulumi.Config.RequireObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name: RequireObject<T>(string, JsonSerializerOptions)
+  href: pulumi/pulumi.config.html#Pulumi_Config_RequireObject__1_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pulumi.Config.RequireObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: RequireObject(Of T)(String, JsonSerializerOptions)
+  fullName: Pulumi.Config.RequireObject<T>(string, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Pulumi.Config.RequireObject(Of T)(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Config.RequireObject<T>(string, JsonSerializerOptions)
+  nameWithType.vb: Config.RequireObject(Of T)(String, JsonSerializerOptions)
 - uid: Pulumi.Config.RequireSecret(System.String)
   name: RequireSecret(string)
   href: pulumi/pulumi.config.html#Pulumi_Config_RequireSecret_System_String_
@@ -10111,6 +10138,15 @@ references:
   fullName.vb: Pulumi.Config.RequireSecretObject(Of T)(String)
   nameWithType: Config.RequireSecretObject<T>(string)
   nameWithType.vb: Config.RequireSecretObject(Of T)(String)
+- uid: Pulumi.Config.RequireSecretObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name: RequireSecretObject<T>(string, JsonSerializerOptions)
+  href: pulumi/pulumi.config.html#Pulumi_Config_RequireSecretObject__1_System_String_System_Text_Json_JsonSerializerOptions_
+  commentId: M:Pulumi.Config.RequireSecretObject``1(System.String,System.Text.Json.JsonSerializerOptions)
+  name.vb: RequireSecretObject(Of T)(String, JsonSerializerOptions)
+  fullName: Pulumi.Config.RequireSecretObject<T>(string, System.Text.Json.JsonSerializerOptions)
+  fullName.vb: Pulumi.Config.RequireSecretObject(Of T)(String, System.Text.Json.JsonSerializerOptions)
+  nameWithType: Config.RequireSecretObject<T>(string, JsonSerializerOptions)
+  nameWithType.vb: Config.RequireSecretObject(Of T)(String, JsonSerializerOptions)
 - uid: Pulumi.CustomResource
   name: CustomResource
   href: pulumi/pulumi.customresource.html
@@ -16921,6 +16957,15 @@ references:
   commentId: T:Pulumi.RegisterPackageRequest
   fullName: Pulumi.RegisterPackageRequest
   nameWithType: RegisterPackageRequest
+- uid: Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization)
+  name: RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, PackageParameterization?)
+  href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest__ctor_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Byte____Pulumi_RegisterPackageRequest_PackageParameterization_
+  commentId: M:Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization)
+  name.vb: New(String, String, String, Dictionary(Of String, Byte()), PackageParameterization)
+  fullName: Pulumi.RegisterPackageRequest.RegisterPackageRequest(string, string, string?, System.Collections.Generic.Dictionary<string, byte[]>?, Pulumi.RegisterPackageRequest.PackageParameterization?)
+  fullName.vb: Pulumi.RegisterPackageRequest.New(String, String, String, System.Collections.Generic.Dictionary(Of String, Byte()), Pulumi.RegisterPackageRequest.PackageParameterization)
+  nameWithType: RegisterPackageRequest.RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, RegisterPackageRequest.PackageParameterization?)
+  nameWithType.vb: RegisterPackageRequest.New(String, String, String, Dictionary(Of String, Byte()), RegisterPackageRequest.PackageParameterization)
 - uid: Pulumi.RegisterPackageRequest.#ctor(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Byte[]},Pulumi.RegisterPackageRequest.PackageParameterization,Pulumi.RegisterPackageRequest.PackageParameterization)
   name: RegisterPackageRequest(string, string, string?, Dictionary<string, byte[]>?, PackageParameterization?, PackageParameterization?)
   href: pulumi/pulumi.registerpackagerequest.html#Pulumi_RegisterPackageRequest__ctor_System_String_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Byte____Pulumi_RegisterPackageRequest_PackageParameterization_Pulumi_RegisterPackageRequest_PackageParameterization_

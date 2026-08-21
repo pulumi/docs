@@ -33,7 +33,7 @@ This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses th
 To this end, you need to set up the following:
 
 * [Download and install the Pulumi CLI](/docs/install/) on your workstation
-* [Login to Google Cloud Storage Backend](/docs/concepts/state#google-cloud-storage)
+* [Login to Google Cloud Storage Backend](/docs/iac/concepts/state-and-backends/#logging-into-and-out-of-state-backends)
 
 ### Deployment Steps
 

@@ -357,5 +357,5 @@ In this tutorial, you create a virtual machine instance configured as a web serv
 To learn more about creating resources in Pulumi, take a look at the following resources:
 
 - Learn more about stack outputs and references in the [Stack Outputs and References](/tutorials/stack-outputs-and-references/) tutorial.
-- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation.
-- Learn more about [resource names](/docs/concepts/resources/names/), [options](/docs/concepts/options/), and [providers](/docs/concepts/resources/providers/) in the Pulumi documentation.
+- Learn more about inputs and outputs in the [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/) documentation.
+- Learn more about [resource names](/docs/iac/concepts/resources/names/), [options](/docs/iac/concepts/resources/options/), and [providers](/docs/iac/concepts/providers/) in the Pulumi documentation.

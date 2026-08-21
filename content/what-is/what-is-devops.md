@@ -100,9 +100,9 @@ CALMS is useful because it makes clear that DevOps doesn't come out of a single 
 These are the concrete engineering practices that turn the CALMS pillars into day-to-day work.
 
 * **[Infrastructure as code (IaC)](/what-is/what-is-infrastructure-as-code/).** Define cloud resources (networks, clusters, databases, IAM, DNS) as code, check that code into Git, and let a deterministic engine reconcile the real world with what you've declared. With Pulumi, you can write IaC in the same general-purpose languages as your application code, so the same testing, refactoring, and abstraction tools apply on both sides. See [infrastructure as code for DevOps](/what-is/infrastructure-as-code-for-devops/).
-* **[Continuous integration and continuous delivery (CI/CD)](/what-is/what-is-ci-cd/).** CI merges code changes into a shared mainline many times a day, with every merge gated by automated builds and tests. CD takes every CI-passing artifact and prepares it for release, so "is this deployable?" is always answered yes. Pulumi integrates with the major CI/CD systems via [Pulumi's CI/CD integration](/docs/iac/guides/continuous-delivery/).
+* **[Continuous integration and continuous delivery (CI/CD)](/what-is/what-is-ci-cd/).** CI merges code changes into a shared mainline many times a day, with every merge gated by automated builds and tests. CD takes every CI-passing artifact and prepares it for release, so "is this deployable?" is always answered yes. Pulumi integrates with the major CI/CD systems via [Pulumi's CI/CD integration](/docs/iac/operations/continuous-delivery/).
 * **Version control for everything.** Application code, infrastructure code, pipeline definitions, dashboards, runbooks, and policies all live in Git. The platform gets the same review, history, and rollback story as the product.
-* **[Configuration management](/what-is/what-is-configuration-management/) and secrets.** Keep environment-specific configuration and secrets out of code, and manage them centrally with auditing, rotation, and least-privilege access. [Pulumi ESC](/product/esc/) provides hierarchical configuration and dynamic secrets across environments.
+* **[Configuration management](/what-is/what-is-configuration-management/) and secrets.** Keep environment-specific configuration and secrets out of code, and manage them centrally with auditing, rotation, and least-privilege access. [Pulumi ESC](/product/secrets-management/) provides hierarchical configuration and dynamic secrets across environments.
 * **Automated testing.** Beyond unit tests, DevOps teams run integration tests, [infrastructure tests](/docs/iac/guides/testing/), security tests (SAST, DAST, dependency scanning), and load tests in CI so regressions are caught before deploy.
 * **Microservices and containers.** Splitting applications into independently deployable services, packaged in containers and orchestrated by Kubernetes, frees teams from waiting on each other. The tradeoff is needing strong automation to manage the resulting complexity.
 * **Policy as code.** Encode security, compliance, and cost rules as code that runs against every change. [Pulumi Policies](/docs/insights/policy/) can be written in the same language as your infrastructure and enforced in CI.
@@ -145,7 +145,7 @@ There is no single "DevOps tool." A real DevOps toolchain stitches together a to
 | Infrastructure as code | [Pulumi](/), Terraform, OpenTofu, AWS CloudFormation, Bicep |
 | Configuration management | Ansible, Chef, Puppet, SaltStack |
 | Containers and orchestration | Docker, Podman, Kubernetes, Amazon ECS |
-| Secrets and config | [Pulumi ESC](/product/esc/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
+| Secrets and config | [Pulumi ESC](/product/secrets-management/), HashiCorp Vault, AWS Secrets Manager, Azure Key Vault |
 | Policy as code | [Pulumi Policies](/docs/insights/policy/), Open Policy Agent (OPA), HashiCorp Sentinel |
 | Observability | Prometheus, Grafana, Datadog, New Relic, Honeycomb, OpenTelemetry |
 | Incident management | PagerDuty, Opsgenie, FireHydrant, Rootly |

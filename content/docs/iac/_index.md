@@ -10,7 +10,7 @@ menu:
         weight: 1
 meta_desc: Learn how to create, deploy, and manage infrastructure on any cloud using Pulumi's open source infrastructure as code SDK.
 h1: Infrastructure as Code
-description: <p>Define and manage cloud infrastructure using familiar programming languages. Pulumi's <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code SDK supports TypeScript, Python, Go, .NET, Java, and YAML.</p>
+description: <p>Define and manage cloud infrastructure using familiar programming languages. Pulumi's <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> infrastructure as code SDK supports TypeScript, Python, Go, .NET, Java, YAML, and HCL.</p>
 link_buttons:
   primary:
     label: Get Started
@@ -55,6 +55,9 @@ sections:
   - label: YAML
     icon: icon-32-32 yaml-color-32-32
     link: /docs/iac/languages-sdks/yaml/
+  - label: HCL
+    icon: icon-32-32 hcl-color-32-32
+    link: /docs/iac/languages-sdks/hcl/
 - type: button-cards
   heading: Resources
   cards:

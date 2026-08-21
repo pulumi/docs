@@ -16,7 +16,7 @@ aliases:
     - /blog/iac-recommended-practices-using-automation-api/
 ---
 
-Welcome to the sixth post in our series of blog posts focused on Infrastructure as Code (IaC) best practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/using-pulumi/automation-api/concepts-terminology) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->
+Welcome to the sixth post in our series of blog posts focused on Infrastructure as Code (IaC) best practices. So far in this series, you've seen how Zephyr Archaeotech Emporium---the fictional company at the center of this series---uses Pulumi to manage their online retail store. You read how Zephyr's initial use of Pulumi changed to use short-lived per-developer stacks. Later, as Zephyr continued to grow, you saw how Zephyr restructured their Pulumi projects and stacks, incorporated Stack References, and used Pulumi Cloud's role-based access control (RBAC) functionality to control access to their stacks. This post focuses on how Zephyr takes advantage of the [Pulumi Automation API](/docs/iac/concepts/automation-api/) to bring an even greater level of orchestration to the stacks that represent their online store.<!--more-->
 
 The ultimate goal of this series is to discuss best practices for using Pulumi to manage a fairly complex containerized application. These practices have unfolded organically, as a direct response to Zephyr's evolving needs. The aim is to demonstrate that best practices are not set in stone, but are rather "point in time" recommendations that adapt as your company grows.
 
@@ -171,7 +171,7 @@ appStack.SetConfig(ctx, "dataStackName", auto.ConfigValue{Value: env.StackName, 
 
 ```
 
-Among other things, this means you can take your existing Pulumi programs, and---without making any changes---orchestrate them using an Automation API program! Further, in reviewing the code shown above, you can see that the Pulumi Automation API ties into [Pulumi's secrets functionality](/docs/concepts/secrets/).
+Among other things, this means you can take your existing Pulumi programs, and---without making any changes---orchestrate them using an Automation API program! Further, in reviewing the code shown above, you can see that the Pulumi Automation API ties into [Pulumi's secrets functionality](/docs/iac/concepts/secrets/).
 
 In the end, using Pulumi's Automation API enabled Zephyr's platform team to simplify the workflow for standing up the online store application and all of its associated infrastructure into a simple and straightforward process:
 

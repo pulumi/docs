@@ -20,7 +20,7 @@ This guide will walk you through the steps of making a [Pulumi Component](/docs/
 **Prerequisites:**
 
 - The [Pulumi CLI](/docs/install/)
-- One of Pulumi’s [supported language runtimes](/docs/languages-sdks/) installed
+- One of Pulumi’s [supported language runtimes](/docs/iac/languages-sdks/) installed
 - Access to a Git hosting environment *(optional)*
 
 {{< /notes >}}

@@ -17,10 +17,11 @@ pulumi_cloud_feature: scim
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
-Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations](#known-limitations).
+For the capabilities and attributes Pulumi's SCIM implementation supports, see [Pulumi Cloud & SCIM](/docs/administration/access-identity/scim/#capabilities).
 
 ## Prerequisites
 
+* Your organization must already be configured to use [SAML SSO](/docs/administration/access-identity/saml/onelogin/) with Pulumi.
 * You must be an admin of your Pulumi organization.
 * (Optional, but highly recommended) You should have more than one admin for your Pulumi organization.
 
@@ -31,7 +32,7 @@ The first step is to create a new OneLogin Application for Pulumi SCIM:
 1. From the OneLogin Administration portal, go to the **Applications** page and select the **Add App** button.
 1. Search for `SCIM Provisioner with SAML (SCIM v2 Core)` and select it.
 
-1. Enter a _Display Name_ and optionally a logo. See [Pulumi Logos](/brand/#logos).
+1. Enter a _Display Name_ and optionally a logo. See [Pulumi Logos](https://brand.pulumi.com/#logos).
 1. Select **Save**.
 
 ### Configuration Settings
@@ -80,6 +81,10 @@ Be sure to check the *Include in SAML assertion* checkbox for each of the added 
 
 Optionally, you can override the default value for *scimusername* and use the `Macro` setting. For example, `{firstname}{lastname}` as per [OneLogin Macros](https://onelogin.service-now.com/kb_view_customer.do?sysparm_article=KB0010609)
 
+{{% notes type="warning" %}}
+Whatever value you choose for *scimusername*, it must stay stable for the lifetime of the account. Pulumi usernames are immutable, so an update that changes *scimusername* for an existing user fails. See [Usernames cannot change](/docs/administration/access-identity/scim/#usernames-cannot-change).
+{{% /notes %}}
+
 Select **Save** to save the application settings.
 
 ## Configuring Communications Between Pulumi and OneLogin
@@ -116,9 +121,9 @@ At this point, SCIM provisioning of users into the Pulumi organization will work
 
 Beyond managing users, Pulumi's SCIM support enables you to manage Pulumi Teams and team membership. To set this up, Pulumi supports using OneLogin's Role-Group mapping to manage Pulumi teams membership.
 
-    {{% notes type="warning" %}}
- **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your OneLogin group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
-     {{% /notes %}}
+{{% notes type="warning" %}}
+**Team name character limit**: Pulumi team names created via SCIM must be 100 characters or fewer. If your OneLogin group name is longer than that, rename the group before pushing it to Pulumi. Otherwise, provisioning fails.
+{{% /notes %}}
 
 ### Set up OneLogin Application to Manage Groups in Pulumi
 

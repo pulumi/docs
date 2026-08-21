@@ -247,7 +247,7 @@ What if we want to share the API key with others, or run this in some environmen
 Lets get these settings under management. Pulumi ESC to the rescue!
 
 {{% notes type="info" %}}
-**Before you start:** Make sure you have the [Pulumi CLI installed](/docs/iac/download-install/) and a [Pulumi Cloud account](https://app.pulumi.com/signup).
+**Before you start:** Make sure you have the [Pulumi CLI installed](/docs/install/) and a [Pulumi Cloud account](https://app.pulumi.com/signup).
 {{% /notes %}}
 
 ### Step 1: Create an ESC environment for our app
@@ -323,7 +323,7 @@ The next step is to get these ESC environment values accessible to our app. For 
 To do this, we will [edit the YAML definition](/docs/esc/concepts/environments/#managing-environments) of our ESC environment. The `pulumi env edit` subcommand will load the YAML into your default text editor. Editing and saving the file will update it in Pulumi ESC's backend storage.
 
 {{% notes type="info" %}}
-**YAML Schema:** A full description of what Pulumi ESC YAML supports is available in the [ESC YAML Syntax Reference](/docs/esc/reference/).
+**YAML Schema:** A full description of what Pulumi ESC YAML supports is available in the [ESC YAML Syntax Reference](/docs/esc/concepts/environments/).
 {{% /notes %}}
 
 ```bash
@@ -388,7 +388,7 @@ $ pip install pulumi-esc-sdk pyyaml
 
 ### Step 2: Update the ESC environment settings
 
-In order to use the Pulumi ESC SDK from within our Python code, we will need to create an ESC client, and call the `open_and_read_environment` method. The client will need a [Pulumi Cloud access token](/docs/pulumi-cloud/access-management/access-tokens/), and some configuration values defining the organization, project, and environment name to pull our settings from.
+In order to use the Pulumi ESC SDK from within our Python code, we will need to create an ESC client, and call the `open_and_read_environment` method. The client will need a [Pulumi Cloud access token](/docs/administration/access-identity/access-tokens/), and some configuration values defining the organization, project, and environment name to pull our settings from.
 
 First, edit your ESC environment to contain the following YAML code:
 
@@ -431,7 +431,7 @@ $ env | grep PULUMI_ACCESS_TOKEN
 PULUMI_ACCESS_TOKEN=#########
 ```
 
-If this returns nothing, you'll need to [create an access token](/docs/pulumi-cloud/access-management/access-tokens/):
+If this returns nothing, you'll need to [create an access token](/docs/administration/access-identity/access-tokens/):
 
 {{< figure src="pulumi-cloud-create-access-token.png" caption="Figure: Create an access token in Pulumi Cloud">}}
 

@@ -21,8 +21,8 @@ The `pulumi policy` command group provides CLI commands for creating, managing, 
 | [`pulumi policy publish`](/docs/iac/cli/commands/pulumi_policy_publish/) | Publish a policy pack to Pulumi Cloud |
 | [`pulumi policy enable`](/docs/iac/cli/commands/pulumi_policy_enable/) | Enable a policy pack for a Pulumi organization |
 | [`pulumi policy disable`](/docs/iac/cli/commands/pulumi_policy_disable/) | Disable a policy pack for a Pulumi organization |
-| [`pulumi policy ls`](/docs/iac/cli/commands/pulumi_policy_ls/) | List all policy packs for a Pulumi organization |
-| [`pulumi policy rm`](/docs/iac/cli/commands/pulumi_policy_rm/) | Remove a policy pack from a Pulumi organization |
+| [`pulumi policy ls`](/docs/iac/cli/commands/pulumi_policy_list/) | List all policy packs for a Pulumi organization |
+| [`pulumi policy rm`](/docs/iac/cli/commands/pulumi_policy_remove/) | Remove a policy pack from a Pulumi organization |
 | [`pulumi policy validate-config`](/docs/iac/cli/commands/pulumi_policy_validate-config/) | Validate a policy pack configuration against its schema |
 
 ## Policy group commands
@@ -32,7 +32,7 @@ The `pulumi policy` command group provides CLI commands for creating, managing, 
 | Command | Description |
 | --- | --- |
 | [`pulumi policy group`](/docs/iac/cli/commands/pulumi_policy_group/) | Manage policy groups |
-| [`pulumi policy group ls`](/docs/iac/cli/commands/pulumi_policy_group_ls/) | List all policy groups for a Pulumi organization |
+| [`pulumi policy group ls`](/docs/iac/cli/commands/pulumi_policy_group_list/) | List all policy groups for a Pulumi organization |
 
 ## Running policies locally
 

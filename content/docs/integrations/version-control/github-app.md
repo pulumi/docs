@@ -25,7 +25,7 @@ aliases:
 Pulumi's GitHub app displays the results of Pulumi stack update previews in pull requests and enables automatic stack deployments via [Pulumi Deployments](/docs/deployments/concepts/). Once installed and configured, it will show any potential infrastructure changes on pull requests and commit checks. You can also configure workflows to update your stacks whenever a commit is pushed to a configured branch.
 
 {{% notes type="info" %}}
-The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/concepts/state/#using-a-diy-backend).
+The GitHub app requires [Pulumi Cloud](https://app.pulumi.com) as your stack's backend. It does not work with [self-managed backends](/docs/iac/concepts/state-and-backends/#using-a-diy-backend).
 {{% /notes %}}
 
 ## Installation and configuration
@@ -158,6 +158,10 @@ To remove an integration, see [Uninstallation](#uninstallation).
 The Pulumi GitHub app automatically adds comments to pull requests with the results of any stack changes. This includes a summary of how many resources were created, updated, and/or deleted. This allows you to quickly see the changes caused by your Pulumi program without needing to leave GitHub's pull request view, with a link to the richer details available on [Pulumi Cloud](https://app.pulumi.com/signin).
 
 When you run `pulumi preview` or `pulumi up`, the Pulumi CLI examines the closest `.git` directory to extract commit metadata (such as the commit SHA, branch name, and repository information). This metadata is included with the update and sent to Pulumi Cloud, which uses it to identify the associated pull request and post comments.
+
+{{% notes type="info" %}}
+Pull request comments don't require [Pulumi Deployments](/docs/deployments/). Any `pulumi preview` or `pulumi up` that can read the repository's `.git` directory posts them, whether it runs in GitHub Actions, CircleCI, Jenkins, or on your laptop. [Push-to-deploy](#push-to-deploy) and [review stacks](#review-stacks) do require Deployments.
+{{% /notes %}}
 
 {{% notes type="info" %}}
 When you disable pull request comments in your [integration settings](#integration-settings), the GitHub app does not post comments on pull requests. However, it still reports check run statuses via [GitHub's Checks API](#checks), so preview results remain accessible in the pull request's **Checks** tab.

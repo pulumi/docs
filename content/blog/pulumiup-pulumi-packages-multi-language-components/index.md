@@ -17,7 +17,7 @@ In [Pulumi 3.0](/blog/pulumi-3-0/) Pulumi Components can now be authored in a fu
 
 ![A diagram showing how Pulumi Package code can be authored in one language and made available in all other languages supported by Pulumi](img/pulumi-package-overview.png)
 
-👉 Read on to learn more about Pulumi Packages, or jump right in and author your own with the [user guide](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/)
+👉 Read on to learn more about Pulumi Packages, or jump right in and author your own with the [user guide](/docs/iac/guides/building-extending/providers/debugging-providers/)
 
 ## Using Pulumi Packages
 
@@ -72,7 +72,7 @@ There are several different ways to author a Pulumi Package depending on the kin
 
 Together, these options provide a combination of breadth and depth for the kinds of resources and components that can be exposed to Pulumi developers via Pulumi Packages. In the weeks ahead, we have [many improvements](https://github.com/pulumi/pulumi/issues/6804) underway to make the authoring and publishing of packages much easier. We also look forward to your feedback on the overall experience!
 
-👉 [Author your first Pulumi Package](/docs/iac/packages-and-automation/pulumi-packages/debugging-provider-packages/)
+👉 [Author your first Pulumi Package](/docs/iac/guides/building-extending/providers/debugging-providers/)
 
 ## Keep exploring
 

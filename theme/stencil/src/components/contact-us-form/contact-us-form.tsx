@@ -24,10 +24,6 @@ export class ContactUsForm {
     @Prop()
     items: string;
 
-    // The class for the select input.
-    @Prop()
-    selectClass?: string;
-
     // The labelClass defines the class for the label.
     @Prop()
     labelClass?: string;
@@ -64,9 +60,8 @@ export class ContactUsForm {
         return (
             <pulumi-multi-select-form
                 items={this.parsedItems}
-                selectClass={this.selectClass}
                 labelClass={this.labelClass}
-                labelText="Why are you contacting us today?"
+                labelText="What can we help you with?"
                 defaultFormId={this.defaultFormId}
                 linkedinConversionId={24927132}
             />

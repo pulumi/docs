@@ -10,7 +10,7 @@ aliases:
     - /learn/pulumi-fundamentals/configure-and-provision/
 ---
 
-Now that you've created the application's Docker images, you can provision the application's network and containers. You'll start by adding a few configuration settings to the Pulumi program. Pulumi has first-class support for [configuring](/docs/concepts/config/) infrastructure, and that includes being able to configure multiple stacks within the same project with different values.
+Now that you've created the application's Docker images, you can provision the application's network and containers. You'll start by adding a few configuration settings to the Pulumi program. Pulumi has first-class support for [configuring](/docs/iac/concepts/config/) infrastructure, and that includes being able to configure multiple stacks within the same project with different values.
 
 ## Configure the application
 

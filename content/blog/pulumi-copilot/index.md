@@ -74,7 +74,7 @@ We get a hyperlink at the end, enabling us to jump directly to the members page,
 
 ![Pulumi Cloud screenshot with copilot window open. The dashboard depicts the Admins in the Console](/blog/pulumi-copilot/admins-console.png)
 
-Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pulumi ESC](/docs/esc) environments. We can find all of the environments we have that manage access to GitHub through a natural language query, and then ask a follow up question to get a direct link to where each environment is defined.
+Pulumi Copilot has access to everything that Pulumi Cloud manages, including [Pulumi ESC](/docs/esc/) environments. We can find all of the environments we have that manage access to GitHub through a natural language query, and then ask a follow up question to get a direct link to where each environment is defined.
 
 <p align="center"><img src="./environments.png" alt="ESC Environments in Pulumi Copilot window" width="600" /></p>
 
@@ -149,7 +149,7 @@ We’re excited to introduce Pulumi Copilot, the first conversational AI for gen
 * [Open an issue in GitHub](https://github.com/pulumi/pulumi-cloud-requests)
 * [Reach out to schedule a demo](/contact/)
 * [Join the Pulumi Community on Slack](https://slack.pulumi.com/)
-* [Check out the Pulumi Copilot docs](/docs/pulumi-cloud/copilot)
+* [Check out the Pulumi Copilot docs](/product/neo/)
 
 Pulumi Copilot is available now in public beta, and is free while in beta for all organizations in Pulumi Cloud. Organization administrators can turn on Pulumi Copilot for their organization by going to __Settings > Access Management > Pulumi Copilot__ within the Pulumi Cloud console.
 

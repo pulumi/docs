@@ -106,7 +106,7 @@ For other patterns for mixing blocking and asynchronous code in Pulumi programs,
 Writing a Pulumi program in Python involves declaring infrastructure resources using resource constructors. Here are the key concepts:
 
 - **Declare resources**: Create infrastructure resources by instantiating resource classes from provider packages. For example, `aws.s3.Bucket("my-bucket")` creates an S3 bucket.
-- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/concepts/inputs-outputs/) documentation for details.
+- **Inputs and outputs**: The Pulumi programming model uses `Input` and `Output` types to track dependencies between resources. Understanding how to work with inputs and outputs is essential for building infrastructure. See the [Inputs and Outputs](/docs/iac/concepts/inputs-outputs/) documentation for details.
 - **Immutable infrastructure**: Once declared, resource properties are immutable within your program. Changes to resource definitions result in updates during the next deployment.
 - **Stack outputs**: Export values from your program with `pulumi.export(...)`, or by returning a mapping from an [async entrypoint](/docs/iac/languages-sdks/python/#async-entrypoint) registered with `pulumi.run`, to make them accessible from the CLI or to other Pulumi programs.
 
@@ -271,7 +271,7 @@ For managing resources in a Pulumi program, you can find the relevant SDK refere
 
 ### Policy SDK
 
-The [Pulumi Policy SDK (`pulumi_policy`)](/docs/reference/pkg/python/pulumi_policy) allows you to author Pulumi Policy as Code policies for validating resource configurations.
+The [Pulumi Policy SDK (`pulumi_policy`)](/docs/reference/pkg/python/pulumi_policy/) allows you to author Pulumi Policy as Code policies for validating resource configurations.
 
 ### Dev versions
 
@@ -287,5 +287,5 @@ For more information on when and how to use dev builds, see [Using dev builds fo
 
 ### Testing
 
-- [Unit testing](/docs/iac/concepts/testing/unit/): Test your infrastructure code in isolation
-- [Integration testing](/docs/iac/concepts/testing/integration/): Test your infrastructure deployments end-to-end
+- [Unit testing](/docs/iac/guides/testing/unit/): Test your infrastructure code in isolation
+- [Integration testing](/docs/iac/guides/testing/integration/): Test your infrastructure deployments end-to-end

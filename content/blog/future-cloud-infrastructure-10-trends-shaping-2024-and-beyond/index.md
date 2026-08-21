@@ -1,5 +1,6 @@
 ---
 title: "Future of the Cloud: 10 Trends Shaping 2026 and Beyond"
+title_tag: "Future of the Cloud: 10 Trends for 2026"
 
 # The date represents the post's publish date, and by default corresponds with
 # the date and time this file was generated. Dates are used for display and

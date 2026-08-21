@@ -16,6 +16,7 @@ category: tutorials
 related_posts:
     - bring-your-terraform-estate-into-the-agentic-era
     - terraforms-data-model-on-pulumis-engine
+    - compatibility-testing-pulumi-hcl
 ---
 
 [Today's big release](/releases/terraform-state-backend-modules-hcl/) contains a whole new set of features designed for seamless interoperability with the Terraform and OpenTofu ecosystems, and there's a lot there — so much that it can be tough to get your head around all of it. But it generally falls into three major categories:
@@ -343,7 +344,7 @@ Because this approach uses untyped references, you'll trade a little type safety
 
 ## Write and run HCL, natively
 
-For as much flexibility as general-purpose languages offer, some teams simply prefer to use HCL. So as of today, HCL is now a first-class language in the Pulumi engine, right alongside TypeScript, Python, Go, C#, Java, and YAML.
+For as much flexibility as general-purpose languages offer, some teams simply prefer to use HCL. So as of today, HCL is now a first-class language in the Pulumi engine, right alongside TypeScript, JavaScript, Python, Go, .NET, Java, and YAML.
 
 The easiest way to get a feel for it is to create a new project from a template:
 

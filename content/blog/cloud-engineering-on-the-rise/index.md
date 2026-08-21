@@ -44,7 +44,7 @@ Atlassian’s Bitbucket DevSpeed team is responsible for improving developer pro
 - Reduced the time Bitbucket developers spent maintaining their instances from 8 hours per week to fewer than four.
 - Reduced the size and complexity of its infrastructure code compared to its previous infrastructure tool while increasing the code’s clarity.
 
-[Read the full case study→](/case-studies/atlassian)
+[Read the full case study→](/case-studies/atlassian/)
 <br>
 <br>
 
@@ -68,7 +68,7 @@ SANS Institute is the global leader in cybersecurity training. Using Pulumi, the
 - Enabled developers to use familiar programming languages and tools, which also helped make their code cleaner and - more uniform, resulting in streamlined pipelines.
 - Helped to identify opportunities in other SANS departments where Pulumi can streamline operations.
 
-[Read the full case study→](/case-studies/sans-institute)
+[Read the full case study→](/case-studies/sans-institute/)
 <br>
 <br>
 

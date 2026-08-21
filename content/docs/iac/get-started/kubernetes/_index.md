@@ -30,7 +30,7 @@ Complete this step-by-step tutorial to deploy an [NGINX](https://www.nginx.com/)
 
 You need access to a Kubernetes cluster (local or cloud-based) and kubectl installed and configured. Choose your language and ensure you've performed any prerequisites:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -65,6 +65,13 @@ You need access to a Kubernetes cluster (local or cloud-based) and kubectl insta
 {{% choosable language "yaml" %}}
 
 * A text editor
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+* A text editor
+* The [Pulumi CLI](/docs/install/) v3.256.0 or later; [Pulumi HCL](/docs/iac/languages-sdks/hcl/) needs no separate language runtime
 
 {{% /choosable %}}
 

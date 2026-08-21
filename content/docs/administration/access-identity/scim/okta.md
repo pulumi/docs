@@ -17,7 +17,7 @@ pulumi_cloud_feature: scim
 
 This document outlines the steps required to help you configure automatic provisioning/deprovisioning of your users and groups in Pulumi using SCIM 2.0.
 
-Please note that some advanced SCIM features aren't supported yet. For more information, see [Known Limitations](#known-limitations).
+For the capabilities and attributes Pulumi's SCIM implementation supports, see [Pulumi Cloud & SCIM](/docs/administration/access-identity/scim/#capabilities).
 
 ## Prerequisites
 
@@ -29,9 +29,9 @@ Please note that some advanced SCIM features aren't supported yet. For more info
 
 In order to enable SCIM provisioning in Okta, navigate to the Pulumi application configured in your Okta org. Under the **General** tab, in the **App Settings** dialog box, locate the **Provisioning** section and select **SCIM** by clicking **Edit** in the top right corner of the dialog box. Click **Save** to save your changes.
 
-    {{% notes type="warning" %}}
-> **Important:** If you do not see the SCIM option in the **App Settings** under the **General** tab, you may need to email **Okta support** at [support@okta.com](mailto:support@okta.com) and request that they enable `SCIM_PROVISIONING` for your Okta account.
-    {{% /notes %}}
+{{% notes type="warning" %}}
+**Important:** If you do not see the SCIM option in the **App Settings** under the **General** tab, you may need to email **Okta support** at [support@okta.com](mailto:support@okta.com) and request that they enable `SCIM_PROVISIONING` for your Okta account.
+{{% /notes %}}
 
 ![Okta Enabling SCIM](/images/docs/reference/service/scim/okta/general-enable-scim.png)
 
@@ -60,9 +60,10 @@ To configure the SCIM connector, click the **Provisioning** tab, and then select
 
 1. SCIM connector base URL: `https://api.pulumi.com/scim/v2/<orgName>`, where `<orgName>` must be replaced with your organization’s login name (not display name). If you do not know this, navigate to your SAML settings and look at the SSO URL. It will have your organization’s login name in the URL.
 2. Supported provisioning actions: Check **Push New Users** and **Push Profile Updates**.
-    {{% notes type="info" %}}
-If you also want to support pushing existing Okta groups, the steps in [Enabling Group Provisioning](#enablegroupprovisioning) describe how to set that up.
-    {{% /notes %}}
+
+    {{< notes type="info" >}}
+    If you also want to support pushing existing Okta groups, the steps in [Enabling Group Provisioning](#enablegroupprovisioning) describe how to set that up.
+    {{< /notes >}}
 
 3. Unique identifier field for users: Set to `userName`.
 4. Authentication Mode: `HTTP Header`
@@ -70,9 +71,9 @@ If you also want to support pushing existing Okta groups, the steps in [Enabling
 
     To generate a token, navigate to your org in the Pulumi Cloud, click on the **Settings** tab, and then click **Access Management**. Scroll down to the **SCIM** section and generate a new token if you have never generated one for your org, or regenerate it if you have already done so in the past.
 
-    {{% notes type="info" %}}
-Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulumi support can retrieve a token once it's been initially generated. If you lose and need the SCIM token again, you'll have to generate a new token, invalidating any previous tokens for your Pulumi organization.
-    {{% /notes %}}
+    {{< notes type="info" >}}
+    Once you generate the token, save it securely. Neither the Pulumi Cloud nor Pulumi support can retrieve a token once it's been initially generated. If you lose and need the SCIM token again, you'll have to generate a new token, invalidating any previous tokens for your Pulumi organization.
+    {{< /notes >}}
 
 6. Paste the token from the Pulumi Cloud into the Okta **Authorization** field under the **HTTP Header** section.
 
@@ -135,12 +136,12 @@ To set this up, you need to enable Push Groups as a supported provisioning actio
 
 ## Setting up Group Provisioning {#setupgroupprovisioning}
 
-    {{% notes type="warning" %}}
- **Important:** If there are members in a group that are not yet assigned to the Pulumi Cloud application in Okta, they will not be added to the team in the Pulumi Cloud. Ensure that all members in the group have been assigned to the application before pushing the group.
-     {{% /notes %}}
+{{% notes type="warning" %}}
+**Important:** If there are members in a group that are not yet assigned to the Pulumi Cloud application in Okta, they will not be added to the team in the Pulumi Cloud. Ensure that all members in the group have been assigned to the application before pushing the group.
+{{% /notes %}}
 
- {{% notes type="warning" %}}
- **Team name character limit**: Pulumi team names created via SCIM must not exceed 40 characters. If your Okta group name is longer than this limit, you’ll need to rename the group before pushing it to Pulumi. Otherwise, the provisioning will fail.
+{{% notes type="warning" %}}
+**Team name character limit**: Pulumi team names created via SCIM must be 100 characters or fewer. If your Okta group name is longer than that, rename the group before pushing it to Pulumi. Otherwise, provisioning fails.
 {{% /notes %}}
 
 To specify which groups you would like to push with group provisioning, select the **Push Groups** tab in your Pulumi Cloud application in Okta and complete the following steps.
@@ -163,14 +164,6 @@ To confirm that the groups were provisioned correctly, sign in to the Pulumi Clo
 
 Teams provisioned with SCIM will be marked with a blue SSO icon. Select the provisioned team and verify its membership.
 
-    {{% notes type="info" %}}
+{{% notes type="info" %}}
 SCIM provisioned team memberships cannot be altered within the Pulumi Cloud. If any membership changes are needed, they must be done within Okta. This ensures your teams on the Pulumi side will always mirror the groups you have configured in Okta.
-    {{% /notes %}}
-
-## Known Limitations
-
-Some SCIM features are currently not supported:
-
-* Secondary emails
-* Password sync
-* Bulk importing
+{{% /notes %}}

@@ -34,11 +34,11 @@ We're excited to announce a new GitHub Action that simplifies the integration of
 
 ## A Quick Refresher on Pulumi's OIDC Trust
 
-The OIDC Trust feature allows you to configure trusted OIDC identity providers, such as GitHub, GitLab, or Google Cloud, within your Pulumi organization. This feature ensures secure and straightforward integration of [Pulumi Cloud](/docs/pulumi-cloud/) within any OIDC-compliant system. Once set up, you can securely exchange short-lived OIDC tokens from these providers for temporary Pulumi access tokens. These tokens can then be used to authenticate to Pulumi and perform actions such as deploying your infrastructure using Pulumi IaC, retrieving secrets stored in Pulumi ESC, etc. This approach enhances security by eliminating the need to store long-lived sensitive credentials and aligns with best cloud practices.
+The OIDC Trust feature allows you to configure trusted OIDC identity providers, such as GitHub, GitLab, or Google Cloud, within your Pulumi organization. This feature ensures secure and straightforward integration of [Pulumi Cloud](/docs/administration/) within any OIDC-compliant system. Once set up, you can securely exchange short-lived OIDC tokens from these providers for temporary Pulumi access tokens. These tokens can then be used to authenticate to Pulumi and perform actions such as deploying your infrastructure using Pulumi IaC, retrieving secrets stored in Pulumi ESC, etc. This approach enhances security by eliminating the need to store long-lived sensitive credentials and aligns with best cloud practices.
 
 ## Streamlining OIDC Trust with GitHub Actions
 
-Our new GitHub Action makes using OIDC Trust even easier. It automates the secure retrieval of Pulumi access tokens directly within your [GitHub workflows](/docs/iac/packages-and-automation/continuous-delivery/github-actions/), streamlining the authentication process and eliminating manual steps. This automation reduces errors, enhances security by reducing potential token leakage, and improves the maintainability of your workflows, making them cleaner, more readable, and easier to update.
+Our new GitHub Action makes using OIDC Trust even easier. It automates the secure retrieval of Pulumi access tokens directly within your [GitHub workflows](/docs/iac/operations/continuous-delivery/github-actions/), streamlining the authentication process and eliminating manual steps. This automation reduces errors, enhances security by reducing potential token leakage, and improves the maintainability of your workflows, making them cleaner, more readable, and easier to update.
 
 ## Example Usage
 

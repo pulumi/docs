@@ -1,0 +1,110 @@
+# Keeps data/openapi_lastmod.json honest by re-hashing the live OpenAPI spec
+# nightly and advancing a tag/schema's lastmod only when its content actually
+# changed. Read by the cloud-rest-api content adapters
+# (content/docs/reference/cloud-rest-api/_content.gotmpl and
+# content/docs/reference/cloud-rest-api/schema/_content.gotmpl) to set
+# sitemap <lastmod> on the ~833 pages those adapters generate. No secrets
+# needed to hash the spec — the endpoint is public. ESC only supplies the bot
+# token used to push the branch and open the PR.
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false
+
+name: OpenAPI - Update Lastmod Ledger
+on:
+  workflow_dispatch:
+    inputs:
+      skip_auto_merge:
+        description: "Skip enabling auto-merge on the generated PR (for testing)"
+        type: boolean
+        default: false
+  schedule:
+    # Nightly at 06:45 UTC, ahead of the policy-packs job (07:30 UTC) so the
+    # two data-committing workflows don't race on the same runner queue.
+    - cron: "45 6 * * *"
+jobs:
+  update-openapi-lastmod:
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.commit.outputs.has_changes }}
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Update OpenAPI lastmod ledger
+        run: node scripts/update-openapi-lastmod.js
+      - name: git status
+        run: git status && git diff --stat
+      - name: Commit changes
+        id: commit
+        run: |
+          git config --local user.email "bot@pulumi.com"
+          git config --local user.name "pulumi-bot"
+          git checkout -b openapi-lastmod/${{ github.run_id }}-${{ github.run_number }}
+          git add data/openapi_lastmod.json
+          if git diff --cached --quiet; then
+            echo "No lastmod changes to commit"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Update OpenAPI tag/schema lastmod ledger"
+            git push origin openapi-lastmod/${{ github.run_id }}-${{ github.run_number }}
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+  pull-request:
+    runs-on: ubuntu-latest
+    needs: update-openapi-lastmod
+    if: needs.update-openapi-lastmod.outputs.has_changes == 'true'
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Check out the repo
+        uses: actions/checkout@v7
+      - name: Open pull request
+        id: create-pr
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: "openapi-lastmod/${{ github.run_id }}-${{ github.run_number }}"
+          destination_branch: "master"
+          pr_title: "Update OpenAPI tag/schema lastmod ledger"
+          pr_body: "Automated update of `data/openapi_lastmod.json` — advances a tag or schema's recorded lastmod only where its hashed content actually changed since the last run. Feeds sitemap <lastmod> for the cloud-rest-api reference pages."
+          pr_label: "automation/merge"
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      - name: Enable auto-merge
+        if: steps.create-pr.outputs.pr_created == 'true' && github.event.inputs.skip_auto_merge != 'true'
+        run: gh pr merge ${{ steps.create-pr.outputs.pr_number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+  notify:
+    if: failure()
+    name: Send slack notification
+    runs-on: ubuntu-latest
+    needs: [update-openapi-lastmod, pull-request]
+    steps:
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Slack Notification
+        uses: docker://sholung/action-slack-notify:v2.3.0
+        env:
+          SLACK_CHANNEL: docs-ops
+          SLACK_COLOR: "#F54242"
+          SLACK_MESSAGE: "OpenAPI lastmod ledger update failure in pulumi/docs repo :meow_sad:"
+          SLACK_USERNAME: docsbot
+          SLACK_WEBHOOK: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          SLACK_ICON: https://www.pulumi.com/logos/brand/avatar-on-white.png

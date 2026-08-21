@@ -169,7 +169,7 @@ info: 11 changes performed:
 Update duration: 28s
 ```
 
-Once created, we could then see this Stack at [app.pulumi.com](https://app.pulumi.com/signin),
+Once created, we could then see this stack at [app.pulumi.com](https://app.pulumi.com/signin),
 and we could easily use the functionality there to even navigate to
 those resources over at our [AWS Console](https://console.aws.amazon.com). Over there were were able to
 use the console to both send a message to the Queue, verify our Lambda

@@ -27,7 +27,7 @@ Before you begin, make sure you have:
 
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A Harness account with the CI module enabled and a project connected to your Git repository.
-1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Authenticate with Pulumi Cloud
 

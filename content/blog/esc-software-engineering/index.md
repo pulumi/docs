@@ -161,7 +161,7 @@ For more on managing Pulumi ESC Environments using Pulumi IaC, check out the [la
 
 ## Conclusion
 
-[Pulumi ESC](/product/esc/) is a secrets and configuration management offering that provides best-in-class software engineering features for managing secrets and configuration complexity at scale. Today, we are extending this even further with:
+[Pulumi ESC](/product/secrets-management/) is a secrets and configuration management offering that provides best-in-class software engineering features for managing secrets and configuration complexity at scale. Today, we are extending this even further with:
 
 * Rich [versioning](/blog/esc-versioning-launch) support for auditability and controlled configuration change rollout.
 * [SDKs](/blog/esc-sdk-launch) to easily embed ESC at runtime within applications, tools and services.
@@ -171,7 +171,7 @@ Pulumi ESC has already been adopted by thousands of engineers to manage secrets 
 
 You can learn more about Pulumi ESC at:
 
-* [Getting Started](/docs/pulumi-cloud/esc/get-started)
-* [Documentation](/docs/pulumi-cloud/esc)
+* [Getting Started](/docs/esc/get-started/)
+* [Documentation](/docs/esc/)
 * [Open Source](https://github.com/pulumi/esc)
 * [Community Slack](https://slack.pulumi.com/)

@@ -19,7 +19,7 @@ One of our key goals with Pulumi’s Universal Infrastructure as Code platform i
 
 The AWS Cloud Development Kit (CDK) offers a large collection of higher-level libraries (“constructs”) for working with the AWS platform, built by service teams at AWS and by the AWS CDK community. These libraries are available in the same set of general purpose programming languages that Pulumi supports, with the primary difference being that AWS CDK compiles infrastructure programs into CloudFormation. This dependence on CloudFormation limits AWS CDK to being deployed via the CloudFormation deployment service which can slow down deployments and introduce some developer productivity friction due to the impedance mismatch between the program you write and the YAML it gets transpiled into.
 
-With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed, integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code](/docs/using-pulumi/crossguard/), [Audit Logs](/docs/pulumi-cloud/audit-logs/), Secrets, and much more). And for Pulumi users, they are now able to leverage and benefit from the decades of experience AWS teams and the AWS CDK community have invested in designing well-architected infrastructure patterns through these constructs.
+With the new [AWS CDK on Pulumi](https://github.com/pulumi/pulumi-cdk) project, available in public preview today, we are opening up the ability to use AWS CDK constructs from within a Pulumi deployment. For users already using AWS CDK, this provides Pulumi as a new option for orchestrating deployments in place of CloudFormation, offering improved deployment speed, integration with the full set of features of the Pulumi Cloud Engineering Platform (like [Policy as Code](/docs/insights/policy/), [Audit Logs](/docs/administration/security-compliance/audit-logs/), Secrets, and much more). And for Pulumi users, they are now able to leverage and benefit from the decades of experience AWS teams and the AWS CDK community have invested in designing well-architected infrastructure patterns through these constructs.
 
 Even better, you can also now combine AWS CDK and Pulumi resources in a single Pulumi infrastructure as code project - passing outputs from Pulumi resources into AWS CDK constructs, and outputs from AWS CDK constructs into Pulumi resources. This allows you to work across the more than 80 cloud and SaaS providers that Pulumi offers access to, while still benefiting from high level libraries from the AWS CDK project, and without the hassles of a transpiler.
 
@@ -31,7 +31,7 @@ To deploy existing AWS CDK Constructs using Pulumi, simply do the following:
 2. In the constructor, use any AWS CDK constructs from existing libraries such as [`aws-cdk-lib`](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib-readme.html)
 3. Call `this.synth()` to finalize the stack and deploy its resources.
 
-Constructing an instance of this `pulumicdk.Stack` from within your Pulumi program will then deploy all of the infrastructure defined by the CDK constructs in the Stack using Pulumi.
+Constructing an instance of this `pulumicdk.Stack` from within your Pulumi program will then deploy all the infrastructure defined by the CDK constructs in the `Stack` using Pulumi.
 
 For example, the following program deploys two AWS CDK Constructs using Pulumi.
 
@@ -154,7 +154,7 @@ const stack = new LambdaStack('teststack');
 export const ruleArn = stack.ruleArn;
 ```
 
-Note how the `pulumicdk.asString` and `asOutput` functions are used to convert Pulumi [Outputs](/docs/concepts/inputs-outputs/) to AWS CDK [Tokens](https://docs.aws.amazon.com/cdk/v2/guide/tokens.html) and vice-versa to map values out of and into Pulumi.
+Note how the `pulumicdk.asString` and `asOutput` functions are used to convert Pulumi [Outputs](/docs/iac/concepts/inputs-outputs/) to AWS CDK [Tokens](https://docs.aws.amazon.com/cdk/v2/guide/tokens.html) and vice-versa to map values out of and into Pulumi.
 
 ## Building on AWS Native and the AWS Cloud Control API
 

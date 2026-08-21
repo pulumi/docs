@@ -54,22 +54,22 @@ There are two major approaches to this challenge.
 
 Pulumi offers many tools and techniques should you want to perform a migration on your own.
 
-In the most general form, Pulumi provides [an import command](/docs/iac/adopting-pulumi/import)
+In the most general form, Pulumi provides [an import command](/docs/iac/guides/migration/import/)
 which can import any existing infrastructure no matter how it was originally created, click-ops included.
 
 Pulumi also offers conversion tools for other popular infrastructure as code solutions, including
-[HashiCorp Terraform](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-terraform),
-[AWS CloudFormation](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-cloudformation),
-[Azure Resource Manager (ARM)](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-arm), or
-[Kubernetes YAML](/docs/iac/adopting-pulumi/migrating-to-pulumi/from-kubernetes).
+[HashiCorp Terraform](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/),
+[AWS CloudFormation](/docs/iac/guides/migration/migrating-to-pulumi/from-cloudformation/),
+[Azure Resource Manager (ARM)](/docs/iac/guides/migration/migrating-to-pulumi/from-arm/), or
+[Kubernetes YAML](/docs/iac/guides/migration/migrating-to-pulumi/from-kubernetes/).
 
 Although the time to migrate existing infrastructure varies wildly based on the size and complexity of your scenario,
 migrating a single cloud environment can often take as little as a few hours. And thanks to Pulumi being multi-language
 at its core, these tools will support you the same no matter which language you choose, JavaScript, TypeScript, Python,
-Go, C#, Java, and YAML alike.
+Go, .NET, Java, and YAML alike.
 
 To learn more about performing your own migration, please
-[read this user guide](/docs/iac/adopting-pulumi).
+[read this user guide](/docs/iac/guides/migration/).
 
 ### Let Us Help You Out with Expert Services!
 
@@ -100,26 +100,26 @@ to scale up from there depending on your needs.
 Over time, Pulumi is becoming a more comprehensive platform, with new services like
 [Pulumi Deployments](/blog/pulumi-deployments) for multi-cloud deployment workflows and
 [Pulumi Insights](/blog/pulumi-insights) for search, analytics, and AI for your cloud infrastructure.
-Pulumi also offers [policies](/crossguard) and [secrets](/docs/iac/concepts/secrets) as
+Pulumi also offers [policies](/crossguard) and [secrets](/docs/iac/concepts/secrets/) as
 core features of the platform. [Enterprises](/enterprise) are increasingly betting on Pulumi for
 their entire cloud management and platform needs.
 
 By moving to Pulumi's platform, many customers have seen considerable benefits:
 
-_[Atlassian **significantly increased developer velocity**](/case-studies/atlassian)_, increasing
+_[Atlassian **significantly increased developer velocity**](/case-studies/atlassian/)_, increasing
 productivity by more than 2x and substantially decreasing the amount of time spent on maintenance tasks.
 
-_[Mercedes-Benz **got the whole team shipping faster and with more confidence**](/case-studies/mercedes-benz)_ by building a platform that helped developers be self-serve with
+_[Mercedes-Benz **got the whole team shipping faster and with more confidence**](/case-studies/mercedes-benz/)_ by building a platform that helped developers be self-serve with
 infrastructure while scaling up to 100s of Kubernetes clusters worldwide.
 
-_[Snowflake **rapidly improved time to market**](/case-studies/snowflake)_ by betting on Pulumi,
+_[Snowflake **rapidly improved time to market**](/case-studies/snowflake/)_ by betting on Pulumi,
 empowering their engineers, and delivering the Data Cloud. Snowflake ultimately beat their IPO deadlines and knew legacy
 infrastructure as code wouldn't do it.
 
 _[Washington Trust Bank **modernized their cloud infrastructure and practices**](/blog/how-a-bank-modernized-its-software-engineering-with-infrastructure-as-code-automation)_,
 speeding up internal delivery, while also increasing their confidence thanks to policy as code guardrails.
 
-_[Fauna **adopted a born in the cloud mindset**](/case-studies/fauna)_ and was able to build a
+_[Fauna **adopted a born in the cloud mindset**](/case-studies/fauna/)_ and was able to build a
 multi-cloud, highly scalable, modern SaaS application, actually increasing reliability even in the face of growing
 complexity.
 

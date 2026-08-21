@@ -23,6 +23,11 @@ const ALLOWLIST = path.join(ROOT, "data", "policy_packs.yaml");
 // Kept separate from data/policy_packs.yaml: Hugo derives the site.Data key from
 // the basename, so a data/policy_packs/ directory would collide with it.
 const OUTPUT_DIR = path.join(ROOT, "data", "policy_pack_policies");
+// Honest "content last changed" ledger, read by content/docs/reference/pre-built-policy-packs/
+// _content.gotmpl to set each generated page's sitemap <lastmod>. A pack's date only
+// moves forward here when its JSON content actually changes (see the diff check below) —
+// never on every run, and never to "today" just because the script ran.
+const LASTMOD_FILE = path.join(ROOT, "data", "policy_pack_lastmod.json");
 
 if (!TOKEN) {
     console.error("error: PULUMI_ACCESS_TOKEN is not set. This script calls authenticated");
@@ -105,6 +110,26 @@ function sortKeys(value) {
     return value;
 }
 
+function todayUTC() {
+    return new Date().toISOString().slice(0, 10);
+}
+
+function loadLastmodLedger() {
+    if (!fs.existsSync(LASTMOD_FILE)) {
+        return {
+            _meta: {
+                purpose:
+                    "Sitemap <lastmod> and JSON-LD dateModified source for content/docs/reference/pre-built-policy-packs/ pages.",
+                generator: "scripts/fetch-policy-packs.js (self-stamping diff on each nightly run)",
+                methodology:
+                    "A pack's lastmod is the date its data/policy_pack_policies/<pack>.json last actually changed content (canonicalized diff), not merely the date the file was last committed for an unrelated reason.",
+            },
+            packs: {},
+        };
+    }
+    return JSON.parse(fs.readFileSync(LASTMOD_FILE, "utf8"));
+}
+
 async function main() {
     const allowlist = yaml.load(fs.readFileSync(ALLOWLIST, "utf8"));
     const org = allowlist.org;
@@ -133,6 +158,7 @@ async function main() {
 
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
     const warnings = [];
+    const lastmodLedger = loadLastmodLedger();
 
     for (const name of packs) {
         const entry = published.get(name);
@@ -168,10 +194,13 @@ async function main() {
         }
 
         console.log(`  ${name}@${pack.versionTag} (${pack.policies.length} policies)`);
-        fs.writeFileSync(
-            path.join(OUTPUT_DIR, `${name}.json`),
-            JSON.stringify(sortKeys(pack), null, 2) + "\n",
-        );
+        const outPath = path.join(OUTPUT_DIR, `${name}.json`);
+        const newContent = JSON.stringify(sortKeys(pack), null, 2) + "\n";
+        const oldContent = fs.existsSync(outPath) ? fs.readFileSync(outPath, "utf8") : null;
+        if (newContent !== oldContent) {
+            lastmodLedger.packs[name] = todayUTC();
+        }
+        fs.writeFileSync(outPath, newContent);
     }
 
     // Drop data for packs that are no longer in the allowlist.
@@ -182,6 +211,15 @@ async function main() {
             fs.unlinkSync(path.join(OUTPUT_DIR, file));
         }
     }
+    for (const pack of Object.keys(lastmodLedger.packs)) {
+        if (!packs.includes(pack)) delete lastmodLedger.packs[pack];
+    }
+    lastmodLedger.packs = Object.fromEntries(
+        Object.keys(lastmodLedger.packs)
+            .sort()
+            .map((k) => [k, lastmodLedger.packs[k]]),
+    );
+    fs.writeFileSync(LASTMOD_FILE, JSON.stringify(lastmodLedger, null, 2) + "\n");
 
     console.log(`Wrote policy pack data to data/policy_pack_policies/`);
 

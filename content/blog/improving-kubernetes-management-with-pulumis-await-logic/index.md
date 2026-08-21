@@ -29,7 +29,7 @@ We've
 how Pulumi [**tracks the status**](/blog/kubespy-trace-a-real-time-view-into-the-heart-of-a-kubernetes-service)
 of Kubernetes resources to provide fine-grained status messages for both
 your [**infrastructure and applications**](/blog/how-do-kubernetes-deployments-work-an-adversarial-perspective).
-Pulumi [**uses a resource graph**](/docs/concepts/how-pulumi-works)
+Pulumi [**uses a resource graph**](/docs/iac/guides/basics/how-pulumi-works/)
 for orchestration, dependency management, differential updates, and
 cascading rollouts.
 
@@ -48,7 +48,7 @@ Pulumi's sophisticated await logic helps customers with a couple use
 cases:
 
 1) Visualize fine-grained, live, single-view status updates for all of
-the Kubernetes cluster resources belonging to a [**Pulumi stack**](/docs/concepts/stack). Most applications
+the Kubernetes cluster resources belonging to a [**Pulumi stack**](/docs/iac/concepts/stacks/). Most applications
 deployed to Kubernetes have a variety of interacting components,
 including Pods, Deployments, Secrets, Persistent Volumes, Config Maps,
 Ingress and more. Rather than requiring multiple commands like
@@ -60,7 +60,7 @@ stacks of cloud resources, simplifying the process of adding new
 applications, or sharing responsibilities between teams.
 
 2) Reliably integrate with
-[**CI/CD systems**](/docs/iac/packages-and-automation/continuous-delivery/) for infrastructure and
+[**CI/CD systems**](/docs/iac/operations/continuous-delivery/) for infrastructure and
 application deployments without requiring hardcoded timeouts, or
 scripting kubectl and parsing the resulting JSON/YAML to detect errors.
 If errors are encountered, Pulumi automatically surfaces the relevant

@@ -16,6 +16,7 @@ import "./what-is-list";
 import "./case-studies-list";
 import "./details-dropdown";
 import "./copybutton";
+import "./copy-text";
 import "./code-tabbed";
 import "./code-snippets-dropdown";
 import "./resources";

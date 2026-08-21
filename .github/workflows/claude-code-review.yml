@@ -306,7 +306,25 @@ jobs:
           fetch_pr() {
             gh pr view "$PR" --repo "$REPO" --json isDraft,labels,author,headRefName,baseRefName,headRefOid,additions,deletions,changedFiles,files,title
           }
-          DATA=$(fetch_pr)
+          # Retry up to 3 times on transient server-side errors (5xx / 503).
+          # The empty-diff retry below is a separate, orthogonal concern.
+          fetch_pr_with_retry() {
+            local attempt delay out
+            for attempt in 1 2 3; do
+              if out=$(fetch_pr 2>&1); then
+                echo "$out"
+                return 0
+              fi
+              if [[ "$attempt" -lt 3 ]]; then
+                delay=$(( (attempt - 1) * 15 ))
+                echo "review: fetch_pr attempt $attempt failed (transient error?), retrying in ${delay}s" >&2
+                sleep "$delay"
+              fi
+            done
+            echo "$out" >&2
+            return 1
+          }
+          DATA=$(fetch_pr_with_retry)
           if [[ "$(echo "$DATA" | jq -r '.changedFiles')" == "0" ]]; then
             echo "review: pr=$PR file_count=0 on first read, retrying after 30s (likely post-force-push race)"
             sleep 30

@@ -211,7 +211,7 @@ Although we encapsulate the deployment in a single large script, we can improve 
 
 ## Deploying Guestbook as a Component
 
-We can abstract objects, such as Deployments and Services, into components to create our resources. [ComponentResource](/docs/reference/pkg/nodejs/pulumi/pulumi#ComponentResource) is Pulumi construct or resource that can aggregate other resources into a combined resource. Let’s take a look at how we implement the [Guestbook with components](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components).
+We can abstract objects, such as Deployments and Services, into components to create our resources. [ComponentResource](/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource) is Pulumi construct or resource that can aggregate other resources into a combined resource. Let’s take a look at how we implement the [Guestbook with components](https://github.com/pulumi/examples/tree/master/kubernetes-ts-guestbook/components).
 
 The Kubernetes [GuestBook](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/) is a canonical example of a stateless application. It consists of multiple PHP frontend services backed by Redis replicas and a lead Redis database to store guestbook entries. In the previous example, we created a Deployment and a Service for each microservice in the application. Although this is a valid pattern for deploying an application in Kubernetes, it doesn’t take full advantage of the capabilities of infrastructure as code.
 

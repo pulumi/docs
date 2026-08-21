@@ -27,7 +27,7 @@ In this post, we're introducing a powerful new capability in Pulumi Insights tha
 
 Policy as Code (PaC) is a way to define and enforce infrastructure policies using code. Instead of relying on manual processes or static configuration files, PaC enables automated policy enforcement in a consistent, versioned way. Pulumi’s CrossGuard feature allows you to write policies in general purpose programming languages, applying them across various cloud platforms such as AWS, Azure, GCP, and Kubernetes.
 
-You can read more about CrossGuard in [Pulumi’s CrossGuard documentation](/docs/iac/using-pulumi/crossguard/).
+You can read more about CrossGuard in [Pulumi’s CrossGuard documentation](/docs/insights/policy/).
 
 ### Accounts and Insights
 
@@ -75,9 +75,9 @@ To begin securing your cloud infrastructure, here are the steps to take:
 
 This new capability is available for AWS, Azure, OCI, and Kubernetes. Stay tuned for more updates on policy enforcement and discover how you can leverage Pulumi for cloud security and compliance.
 
-**Try it yourself**: Start enforcing policies across your discovered resources in minutes with Pulumi Insights. Check out our [getting started guide](/docs/insights/get-started/) to begin securing your entire cloud environment with policy as code.
+**Try it yourself**: Start enforcing policies across your discovered resources in minutes with Pulumi Insights. Check out our [getting started guide](/docs/insights/discovery/get-started/) to begin securing your entire cloud environment with policy as code.
 
 For more information on getting started with Policy as Code, check out the following resources:
 
-- [CrossGuard Overview](/docs/iac/using-pulumi/crossguard/)
+- [CrossGuard Overview](/docs/insights/policy/)
 - [Getting Started with Policy as Code](/blog/getting-started-with-pac)

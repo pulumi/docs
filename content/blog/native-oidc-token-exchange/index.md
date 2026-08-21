@@ -127,7 +127,7 @@ can adapt the token path for other Kubernetes distributions.
 
 Before using OIDC token exchange with the Pulumi CLI, you need to:
 
-1. [Register your OIDC provider as a trusted issuer in your Pulumi organization settings](/docs/administration/access-identity/oidc-client/#configuring-trust-relationships)
+1. [Register your OIDC provider as a trusted issuer in your Pulumi organization settings](/docs/administration/access-identity/oidc-issuers/#configuring-trust-relationships)
 1. Configure authorization policies that specify which tokens can be exchanged and what permissions they receive
 1. Ensure your CI/CD system or identity provider is configured to issue OIDC tokens with the appropriate audience claim
 
@@ -142,10 +142,10 @@ Native OIDC token exchange is available now in the latest version of the Pulumi 
 For complete documentation, including setup guides for specific identity providers, see:
 
 - [`pulumi login` command reference](/docs/iac/cli/commands/pulumi_login/#oidc-token-exchange)
-- [OIDC client integration guide](/docs/administration/access-identity/oidc-client/)
-- [GitHub OIDC setup](/docs/administration/access-identity/oidc-client/github/)
-- [GKE OIDC setup](/docs/administration/access-identity/oidc-client/kubernetes-gke/)
-- [EKS OIDC setup](/docs/administration/access-identity/oidc-client/kubernetes-eks/)
+- [OIDC client integration guide](/docs/administration/access-identity/oidc-issuers/)
+- [GitHub OIDC setup](/docs/administration/access-identity/oidc-issuers/github/)
+- [GKE OIDC setup](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/)
+- [EKS OIDC setup](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/)
 
 We're excited to see how this feature helps you build more secure infrastructure automation workflows. If you have
 questions or feedback, join us in the [Pulumi Community Slack](https://slack.pulumi.com).

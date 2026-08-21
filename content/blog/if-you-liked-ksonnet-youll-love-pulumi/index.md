@@ -11,7 +11,7 @@ canonical_url: "https://www.pulumi.com/docs/iac/clouds/kubernetes/"
 ---
 
 > [!INFO]
-> This article references ksonnet, which was deprecated in 2019. For the most up-to-date information on using Pulumi with Kubernetes, see our [Kubernetes documentation](/docs/clouds/kubernetes/).
+> This article references ksonnet, which was deprecated in 2019. For the most up-to-date information on using Pulumi with Kubernetes, see our [Kubernetes documentation](/docs/integrations/clouds/kubernetes/).
 
 The Kubernetes landscape is constantly evolving as end users and
 developers search for the right tools, approaches, and abstractions to

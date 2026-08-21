@@ -10,18 +10,17 @@ menu:
     weight: 2
     identifier: support-faq-secrets-config
 aliases:
-  - /docs/support/faq/secrets-config/
   - /docs/pulumi-cloud/esc/faq
   - /docs/esc/faq/
 ---
 
 ## Why did Pulumi launch ESC?
 
-We launched Pulumi ESC in response to customer feedback about their difficulties in managing config and secrets, causing sprawl and duplications across stacks. Pulumi ESC brings the same Pulumi IaC-like software engineering approach to secrets and configuration, allowing [hierarchical](/docs/esc/#configuration-as-code) configurations that eliminate copy/paste. It can be used for all applications and infrastructure - with or without Pulumi IaC.
+We launched Pulumi ESC in response to customer feedback about their difficulties in managing config and secrets, causing sprawl and duplications across stacks. Pulumi ESC brings the same Pulumi IaC-like software engineering approach to secrets and configuration, allowing [hierarchical](/docs/esc/concepts/) configurations that eliminate copy/paste. It can be used for all applications and infrastructure - with or without Pulumi IaC.
 
 ## What is the pricing of Pulumi ESC?
 
-See our [pricing page](https://www.pulumi.com/pricing/) for details.
+See our [pricing page](/pricing) for details.
 
 ## What counts as a secret towards pricing?
 
@@ -35,9 +34,8 @@ Only the secrets from the latest environment revision are counted towards your b
 
 Yes. [Contact sales](/contact/?form=sales) for a demo or trial of self-hosted Pulumi ESC.
 
-## More FAQ
+## Learn more
 
-- [Pulumi IaC FAQ](/docs/iac/support/faq/)
-- [Pulumi Cloud FAQ](/docs/support/pulumi-cloud-faq/)
-- [Pulumi Cloud SCIM FAQ](/docs/administration/access-identity/scim/faq/)
-- [Pulumi Policies FAQ](/docs/support/faq/policies)
+- [Pulumi IaC FAQ](/docs/support/faq/infrastructure/)
+- [Pulumi Cloud FAQ](/docs/support/faq/pulumi-cloud/)
+- [Pulumi Policies FAQ](/docs/support/faq/policies/)

@@ -1128,7 +1128,7 @@ Resource hooks are a powerful new feature that allow you to run custom code at a
 * Running custom scripts such as database migrations as part of your Pulumi workflow.
 
 {{% notes %}}
-Resource hooks require Pulumi to run your program. For `refresh` and `destroy` operations, this means you must use the `--run-program` flag for hooks to work. Read the full [documentation on resource hooks](/docs/iac/concepts/options/hooks/) to learn more.
+Resource hooks require Pulumi to run your program. For `refresh` and `destroy` operations, this means you must use the `--run-program` flag for hooks to work. Read the full [documentation on resource hooks](/docs/iac/concepts/resources/options/hooks/) to learn more.
 {{% /notes %}}
 
 Share any issues with your experience with us on [GitHub](https://github.com/pulumi/pulumi), [X](https://twitter.com/pulumicorp), or our [Community Slack](https://slack.pulumi.com/).

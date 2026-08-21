@@ -36,7 +36,7 @@ social:
 
 Three community frameworks have emerged that fix the specific ways AI coding agents break down on real projects. [Superpowers](https://github.com/obra/superpowers) enforces test-driven development. [GSD](https://github.com/gsd-build/get-shit-done) prevents context rot. [GSTACK](https://github.com/garrytan/gstack) adds role-based governance. All three started with Claude Code but now work across Cursor, Codex, Windsurf, Gemini CLI, and more.
 
-Pulumi uses general-purpose programming languages to define infrastructure. TypeScript, Python, Go, C#, Java. Every framework that makes AI agents write better TypeScript also makes your `pulumi up` better. After spending a few weeks with each one, I have opinions about when to use which.
+Pulumi uses general-purpose programming languages to define infrastructure. TypeScript, JavaScript, Python, Go, .NET, Java. Every framework that makes AI agents write better TypeScript also makes your `pulumi up` better. After spending a few weeks with each one, I have opinions about when to use which.
 
 <!--more-->
 
@@ -48,7 +48,7 @@ AI coding agents are impressive for the first 30 minutes. Then things go sideway
 
 **No test discipline.** Agents write code that looks plausible. Plausible code compiles. Plausible code even runs, for a while. But plausible code without tests is a liability. The agent adds a feature and quietly breaks two others because nothing verified the existing behavior was preserved.
 
-**Scope drift.** You ask for a [VPC with three subnets](/docs/iac/clouds/aws/guides/vpc/). The agent decides you also need a NAT gateway, a transit gateway, a VPN endpoint, and a custom DNS resolver. Helpful in theory. In practice, you now have infrastructure you never requested and barely understand. You will also pay for it monthly.
+**Scope drift.** You ask for a [VPC with three subnets](/docs/iac/guides/clouds/aws/vpc/). The agent decides you also need a NAT gateway, a transit gateway, a VPN endpoint, and a custom DNS resolver. Helpful in theory. In practice, you now have infrastructure you never requested and barely understand. You will also pay for it monthly.
 
 These problems are not specific to Claude Code or any particular agent. They happen with Cursor, Codex, Windsurf, and every other LLM-powered coding tool. The context window does not care which brand name is on the wrapper.
 
@@ -150,7 +150,7 @@ GSTACK works with Claude Code, Codex CLI, OpenCode, Cursor, Factory Droid, Slate
 
 For infrastructure work, GSD's context management matters most. Long Pulumi sessions that provision dozens of resources across multiple stacks are exactly the scenario where context rot bites hardest. GSD's phase-based approach keeps each orchestrator fresh.
 
-Superpowers' TDD workflow maps well to application code where unit tests are straightforward. Infrastructure testing is different. You cannot unit test whether an [IAM policy](/docs/iac/clouds/aws/guides/iam/) actually grants the right permissions. You can test the shape of the policy with [Pulumi's testing frameworks](/docs/iac/guides/testing/), but the real validation happens at [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) and [`pulumi up`](/docs/iac/cli/commands/pulumi_up/). Superpowers still helps here (discipline is discipline), but the TDD cycle is less natural for infra than for app code.
+Superpowers' TDD workflow maps well to application code where unit tests are straightforward. Infrastructure testing is different. You cannot unit test whether an [IAM policy](/docs/iac/guides/clouds/aws/iam/) actually grants the right permissions. You can test the shape of the policy with [Pulumi's testing frameworks](/docs/iac/guides/testing/), but the real validation happens at [`pulumi preview`](/docs/iac/cli/commands/pulumi_preview/) and [`pulumi up`](/docs/iac/cli/commands/pulumi_up/). Superpowers still helps here (discipline is discipline), but the TDD cycle is less natural for infra than for app code.
 
 GSTACK shines when the project has product dimensions. If you are building a SaaS platform where the infrastructure serves a product vision, GSTACK's multi-role governance keeps the product thinking connected to the engineering work. For pure infra provisioning, the extra roles add overhead without much benefit.
 

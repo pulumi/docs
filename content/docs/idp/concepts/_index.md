@@ -19,13 +19,13 @@ An Internal Developer Platform (IDP) is a tool platform teams use to provide sel
 
 Pulumi IDP is a bottom-up approach for platform teams to provide self-service workflows to their users, from Day 0 to Day 2. Unlike an Internal Developer Portal, Pulumi IDP facilitates concrete outcomes, not just information consumption.
 
-Pulumi IDP can facilitate workflows across the Day 0-2 spectrum thanks to powerful features like [Private Registry](/docs/idp/concepts/private-registry/), [Components](/docs/iac/concepts/resources/components/), [Templates](/docs/idp/concepts/organization-templates/), [Services](/docs/idp/concepts/services/), and more. By using a bottom-up approach, platform engineers can codify security, compliance, and operational requirements in their golden paths without additional effort.
+Pulumi IDP can facilitate workflows across the Day 0-2 spectrum thanks to powerful features like [Private Registry](/docs/idp/concepts/private-registry/), [Components](/docs/iac/concepts/components/), [Templates](/docs/idp/concepts/organization-templates/), [Services](/docs/idp/concepts/services/), and more. By using a bottom-up approach, platform engineers can codify security, compliance, and operational requirements in their golden paths without additional effort.
 
 ## Day 0 - Establish a central source of truth for golden paths
 
 Platform engineers and other centralized teams curate an infrastructure source of truth by authoring and publishing components and templates to the private registry. Templates and components are codified with security, compliance, and operational standards to ensure golden paths are hardened from the beginning.
 
-Learn more about [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [Pulumi Components](/docs/iac/concepts/resources/components/), and [Pulumi Templates](/docs/idp/concepts/organization-templates/). You can also learn about securing artifacts with [Pulumi ESC](/docs/esc/) and ensuring compliance and standards with [Pulumi Policies](/docs/insights/get-started/add-policies/).
+Learn more about [Pulumi Private Registry](/docs/idp/concepts/private-registry/), [Pulumi Components](/docs/iac/concepts/components/), and [Pulumi Templates](/docs/idp/concepts/organization-templates/). You can also learn about securing artifacts with [Pulumi ESC](/docs/esc/) and ensuring compliance and standards with [Pulumi Policies](/docs/insights/discovery/get-started/add-policies/).
 
 ## Day 1 - Provision infrastructure through flexible workflows
 

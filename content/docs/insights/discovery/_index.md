@@ -48,7 +48,7 @@ The Resource Search interface provides:
 - **Favorites**: Save and share custom views with your team
 - **AI assist**: Use natural language queries to find resources (e.g., "How many VPCs do I have?")
 
-Resources are displayed in a paginated table showing up to 10,000 results. For larger datasets, use the [Data Export](/docs/insights/discovery/data-export/) feature or the [Pulumi Cloud REST API](/docs/pulumi-cloud/cloud-rest-api#resource-search).
+Resources are displayed in a paginated table showing up to 10,000 results. For larger datasets, use the [Data Export](/docs/insights/discovery/data-export/) feature or the [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/resource-search/).
 
 ### Resource relationships
 
@@ -69,7 +69,7 @@ This helps identify which infrastructure is under IaC management and which could
 
 ## Access controls
 
-Resource search is available to all organization members, but users can only see and query resources they have [permission](/docs/administration/access-identity/stack-permissions/) to access:
+Resource search is available to all organization members, but users can only see and query resources they have [permission](/docs/administration/access-identity/rbac/permission-sets/#stack-permission-sets) to access:
 
 - Organization admins have access to all resources
 - If an organization has a default permission of read or write, all users can query all resources

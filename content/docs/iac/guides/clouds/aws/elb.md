@@ -26,8 +26,8 @@ Availability Zones.
 ## Overview
 
 The AWSx ELB component provides easy APIs for provisioning Application and Network Load Balancers, and
-integrates with functionality for other services, including [API Gateway](/docs/clouds/aws/guides/api-gateway/),
-[Elastic Container Service (ECS)](/docs/clouds/aws/guides/ecs), [Lambda](/docs/clouds/aws/guides/lambda/), and [VPC](/docs/clouds/aws/guides/vpc/), to provide
+integrates with functionality for other services, including [API Gateway](/docs/iac/guides/clouds/aws/api-gateway/),
+[Elastic Container Service (ECS)](/docs/iac/guides/clouds/aws/ecs/), [Lambda](/docs/iac/guides/clouds/aws/lambda/), and [VPC](/docs/iac/guides/clouds/aws/vpc/), to provide
 configurable network accessibility to the different kinds of compute you will run inside of AWS.
 
 Elastic Load Balancing offers multiple types of load balancers that all feature the high availability, automatic

@@ -45,13 +45,13 @@ The most frequent business values that our existing customers experience with Pu
 
 There are speed benefits that customers typically experience across three areas:  the infrastructure platform, developer productivity, and operations. Pulumi Cloud simplifies building and running complex infrastructure automation workflows through the Automation API. It also makes it easy to componentize best practices that can be easily shared and distributed through a centralized repository.
 
-Pulumi Cloud streamlines the software delivery pipeline with [Pulumi Deployments](/product/pulumi-deployments/) and a wide range of 3rd party [CI/CD integrations](/docs/iac/using-pulumi/continuous-delivery/).
+Pulumi Cloud streamlines the software delivery pipeline with [Pulumi Deployments](/product/pulumi-deployments/) and a wide range of 3rd party [CI/CD integrations](/docs/iac/operations/continuous-delivery/).
 
 Pulumi Cloud provides [Pulumi Insights](/product/pulumi-insights/), offering search, analytics, and AI-driven insights over your infrastructure. With Insights, you can instantly search for critical information - such as finding MySQL databases on end-of-life versions across all your cloud assets, reducing the operational time it takes to find needles in haystacks.
 
 ### Scale
 
-Part of building an infrastructure platform is so your organization can scale and make it easy to onboard new developers. Pulumi Cloud integrates seamlessly with various [identity providers](/docs/pulumi-cloud/access-management/oidc/) like Azure ActiveDirectory, Okta, G Suite, or any [SAML/SSO provider](/docs/pulumi-cloud/access-management/saml/), offering deep support for role-based access control (RBAC) and SCIM for automatic synchronization and revocation of access based on identity provider groups. Audit logs keep track of developer activity within an organization, recording what actions were taken, when, and by whom.
+Part of building an infrastructure platform is so your organization can scale and make it easy to onboard new developers. Pulumi Cloud integrates seamlessly with various [identity providers](/docs/administration/access-identity/oidc-issuers/) like Azure ActiveDirectory, Okta, G Suite, or any [SAML/SSO provider](/docs/administration/access-identity/saml/), offering deep support for role-based access control (RBAC) and SCIM for automatic synchronization and revocation of access based on identity provider groups. Audit logs keep track of developer activity within an organization, recording what actions were taken, when, and by whom.
 
 Pulumi Cloud also makes it easy to [build developer portals](/product/internal-developer-platforms/) for developer self-service. Organization Templates can provide a centralized repository for cloud components, best practices and configurations. The New Project Wizard also provides a gallery interface to pick a template and easily walk through configuration and deployment of the infrastructure.
 

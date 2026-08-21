@@ -20,21 +20,21 @@ Paired with the launch of [Drift Detection and Remediation](/blog/drift-detectio
 
 ## Introduction to Pulumi Deployments
 
-[Pulumi Deployments](/docs/pulumi-cloud/deployments) is a fully managed platform designed to empower teams to efficiently manage and scale their cloud infrastructure. Whether you are just getting started in the cloud and want the easiest path to set up secure CI/CD, or are a platform engineer building a self-service platform to support thousands of engineers, Pulumi Deployments provides you with the building blocks that enable you to scale your cloud footprint without scaling your headcount. It offers a fully managed, secure, and elastic compute environment for running infrastructure deployments. It simplifies configuration by centralizing the management of source code, cloud credentials, and other necessities at the stack level. Additionally, the platform supports a variety of deployment triggers such as [REST API](/docs/pulumi-cloud/deployments/api), [Git Push to Deploy](/docs/pulumi-cloud/deployments/reference/#github-push-to-deploy), and [Click to Deploy](/docs/pulumi-cloud/deployments/reference/#click-to-deploy), allowing users to customize and automate their cloud operations beyond the capabilities of traditional CI/CD systems. When a stack is managed with Pulumi Deployments, richer Pulumi Cloud functionality is supported, such as [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) and Click to Deploy templates in the New Project Wizard.
+[Pulumi Deployments](/docs/deployments/concepts/) is a fully managed platform designed to empower teams to efficiently manage and scale their cloud infrastructure. Whether you are just getting started in the cloud and want the easiest path to set up secure CI/CD, or are a platform engineer building a self-service platform to support thousands of engineers, Pulumi Deployments provides you with the building blocks that enable you to scale your cloud footprint without scaling your headcount. It offers a fully managed, secure, and elastic compute environment for running infrastructure deployments. It simplifies configuration by centralizing the management of source code, cloud credentials, and other necessities at the stack level. Additionally, the platform supports a variety of deployment triggers such as [REST API](/docs/reference/cloud-rest-api/deployments/), [Git Push to Deploy](/docs/deployments/concepts/#github-push-to-deploy), and [Click to Deploy](/docs/deployments/concepts/#click-to-deploy), allowing users to customize and automate their cloud operations beyond the capabilities of traditional CI/CD systems. When a stack is managed with Pulumi Deployments, richer Pulumi Cloud functionality is supported, such as [Review Stacks](/docs/deployments/concepts/review-stacks/) and Click to Deploy templates in the New Project Wizard.
 
 ## Exciting New Features
 
 ### Drift Detection
 
-Stay on top of your infrastructure's health with our new [Drift Detection](/docs/pulumi-cloud/deployments/drift) feature. Drift Detection helps you monitor and rectify discrepancies between your desired infrastructure state and the actual state, ensuring consistency and compliance.
+Stay on top of your infrastructure's health with our new [Drift Detection](/docs/deployments/concepts/drift/) feature. Drift Detection helps you monitor and rectify discrepancies between your desired infrastructure state and the actual state, ensuring consistency and compliance.
 
 ### TTL Stacks
 
-Manage resources effectively with [Time to Live (TTL) Stacks](/docs/pulumi-cloud/deployments/ttl). This feature automatically deallocates resources after a set period, perfect for temporary or experimental deployments, reducing costs and manual cleanup efforts.
+Manage resources effectively with [Time to Live (TTL) Stacks](/docs/deployments/concepts/ttl/). This feature automatically deallocates resources after a set period, perfect for temporary or experimental deployments, reducing costs and manual cleanup efforts.
 
 ### Scheduled Deployments
 
-Optimize your deployment strategy with [Scheduled Deployments](/docs/pulumi-cloud/deployments/schedules). This feature allows you to plan and execute deployments at specific times, making it easier to manage updates during off-peak hours, minimizing impact on your services.
+Optimize your deployment strategy with [Scheduled Deployments](/docs/deployments/concepts/schedules/). This feature allows you to plan and execute deployments at specific times, making it easier to manage updates during off-peak hours, minimizing impact on your services.
 
 ## Pulumi Deployments for Everyone
 

@@ -73,7 +73,7 @@ This is where we should acknowledge our obvious bias — but we genuinely belie
 
 Like CDKTF, Pulumi lets you build and manage your infrastructure with general-purpose languages like TypeScript, JavaScript, Python, Go, .NET, and Java, plus YAML and HCL, and it supports organizing your code into higher-level abstractions called [_components_](/docs/iac/concepts/components/), which you can think of like CDKTF constructs. Both organize cloud resources into [_stacks_](/docs/iac/concepts/stacks/) (think `dev`, `prod`), and both track [deployment state](/docs/iac/concepts/state-and-backends/) similarly, with local, remote, and cloud-hosted options available.
 
-Many of Pulumi's most popular [providers](/docs/iac/concepts/resources/providers/) (e.g., the AWS provider) are also built from open-source Terraform schemas, which means their resource models will be nearly identical to what you're used to with CDKTF. Here's what an S3 bucket looks like in Pulumi, for example:
+Many of Pulumi's most popular [providers](/docs/iac/concepts/providers/) (e.g., the AWS provider) are also built from open-source Terraform schemas, which means their resource models will be nearly identical to what you're used to with CDKTF. Here's what an S3 bucket looks like in Pulumi, for example:
 
 ```typescript
 import * as aws from '@pulumi/aws';
@@ -89,7 +89,7 @@ const bucket = new aws.s3.Bucket('my-bucket', {
 
 You can also use [any Terraform provider](/docs/iac/get-started/terraform/terraform-providers/) with Pulumi, and you can even [reference Terraform modules directly](/docs/iac/guides/migration/migrating-to-pulumi/from-terraform/#using-terraform-modules-directly) from within your Pulumi code.
 
-Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly, which is much faster and more flexible. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/concepts/how-pulumi-works/).
+Pulumi is also different from CDKTF in several ways. One is that rather than transpile your source code to a format like JSON as CDKTF does (and then deploying it separately later), Pulumi uses its own declarative deployment engine that resolves the resource graph at runtime and provisions cloud resources directly, which is much faster and more flexible. You can learn more about the deployment model in [How Pulumi Works](/docs/iac/guides/basics/how-pulumi-works/).
 
 Given the API similarities, the support for all Terraform providers and modules, the ability to [coexist](/docs/iac/guides/migration/#coexistence) alongside Terraform-managed projects, and the built-in support for conversion (which we'll cover next), we think Pulumi is the best alternative for most teams looking to migrate.
 

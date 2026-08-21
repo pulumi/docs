@@ -38,7 +38,7 @@ Converting is not a prerequisite for getting value from Pulumi. Two options let 
 
 [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-started/terraform/terraform-state-backend/), so pointing an existing project at it means adding a standard `backend "remote"` block. Your resource code and day-to-day workflow are unchanged, and the guide covers migrating state from HCP Terraform, Amazon S3, Azure Blob Storage, Google Cloud Storage, and local files.
 
-Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/pulumi-cloud/insights/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default.
+Terraform state held in Pulumi Cloud gets encrypted storage, update history, state locking, RBAC, audit policies, and unified visibility in [Resource Search](/docs/insights/discovery/search/). Root module outputs surface as Pulumi [stack outputs](/docs/iac/concepts/stacks/#stackreferences), so Pulumi stacks can consume them directly. Stacks created through the Terraform or OpenTofu CLI also [run their plans and applies on Pulumi Cloud](/docs/iac/get-started/terraform/terraform-remote-execution/) by default.
 
 ### Writing Pulumi programs in HCL
 
@@ -168,7 +168,7 @@ The [`pulumi-terraform-migrate`](https://github.com/pulumi/pulumi-tool-terraform
 
    When prompting the LLM, provide:
    * Your original `.tf` files
-   * Your target programming language (TypeScript, Python, Go, C#, etc.)
+   * Your target programming language (TypeScript, Python, Go, .NET, etc.)
    * The generated `pulumi-state.json` for context on resource names and structure
    * Ask the agent to iterate on the code changes until `pulumi preview --diff` generates as few diffs as possible. If it fails, prompt it to try again.
 

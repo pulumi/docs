@@ -13,7 +13,7 @@ category: product
 
 We are excited to introduce two powerful new features for our Self-Hosted Pulumi Cloud offering: Resource Search and Pulumi Deployments. These two additions are the most significant features added to Pulumi Cloud in the last year and we are thrilled to bring them to our self-hosted customers. Resource Search and Pulumi Deployments both improve the way you can manage and deploy your cloud infrastructure, providing greater visibility, control, and automation.
 
-Alongside these features, we are also introducing today a [Self-Hosted Changelog](/docs/pulumi-cloud/self-hosted/changelog), a log of all relevant changes that self-hosted customers should be aware of.
+Alongside these features, we are also introducing today a [Self-Hosted Changelog](/docs/administration/self-hosting/changelog/), a log of all relevant changes that self-hosted customers should be aware of.
 
 ## Self-Hosted Pulumi Cloud Overview
 
@@ -35,11 +35,11 @@ Pulumi Resource Search offers multi-cloud search and analytics across every reso
 - **Search from the CLI:** Issue resource search queries from within the terminal without needing to change contexts.
 - **Data Export:** Export resource data for further analysis in your data warehouse.
 
-Get more details on these features in our [Resource Search documentation](/docs/pulumi-cloud/insights/#pulumi-insights). For more information on how to enable it in your self-hosted instance read the [self-hosted Resource Search documentation](/docs/pulumi-cloud/self-hosted/components/search).
+Get more details on these features in our [Resource Search documentation](/docs/insights/discovery/#pulumi-insights). For more information on how to enable it in your self-hosted instance read the [self-hosted Resource Search documentation](/docs/administration/self-hosting/components/search/).
 
 ## Pulumi Deployments: Automate and Manage Your Infrastructure with Ease
 
-Pulumi Deployments is engineered to streamline infrastructure management tasks with a focus on scalability, automation, and control. This platform allows cloud engineers and platform teams to execute infrastructure actions such as previews, updates, destroys, and refreshes directly within Pulumi’s managed service. By bundling deployment settings like source code, cloud credentials, and environment variables into a single unit, Pulumi Deployments eliminates the complexities of stack management. Users can trigger deployments via Git events, through the Pulumi Cloud UI or leverage REST APIs for custom workflows, providing the flexibility to efficiently transition from code to cloud. In addition, customers using Pulumi Deployments can set up [Drift Detection and Remediation](/docs/pulumi-cloud/deployments/drift), the ability to get notified when the state of your resources changes unexpectedly and optionally remediate it, as well as [Time to Live Stacks](/docs/pulumi-cloud/deployments/ttl), the ability to set a expiration on a stack when it will be destroyed.
+Pulumi Deployments is engineered to streamline infrastructure management tasks with a focus on scalability, automation, and control. This platform allows cloud engineers and platform teams to execute infrastructure actions such as previews, updates, destroys, and refreshes directly within Pulumi’s managed service. By bundling deployment settings like source code, cloud credentials, and environment variables into a single unit, Pulumi Deployments eliminates the complexities of stack management. Users can trigger deployments via Git events, through the Pulumi Cloud UI or leverage REST APIs for custom workflows, providing the flexibility to efficiently transition from code to cloud. In addition, customers using Pulumi Deployments can set up [Drift Detection and Remediation](/docs/deployments/concepts/drift/), the ability to get notified when the state of your resources changes unexpectedly and optionally remediate it, as well as [Time to Live Stacks](/docs/deployments/concepts/ttl/), the ability to set a expiration on a stack when it will be destroyed.
 
 ![Deployments UI](deploy.png)
 
@@ -54,7 +54,7 @@ Pulumi Deployments is engineered to streamline infrastructure management tasks w
 - **Scheduled Deployments:** Schedule deployments to occur at specific times.
 - **Review Stacks:** Review and approve stack changes before deployment.
 
-Get more details on these features in our [Pulumi Deployments documentation](/docs/pulumi-cloud/deployments). For more information on how to enable it in your self-hosted instance read the [self-hosted Pulumi Deployments documentation](/docs/pulumi-cloud/self-hosted/components/api/#deployments).
+Get more details on these features in our [Pulumi Deployments documentation](/docs/deployments/concepts/). For more information on how to enable it in your self-hosted instance read the [self-hosted Pulumi Deployments documentation](/docs/administration/self-hosting/components/api/#deployments).
 
 ## Self-Hosted Changelog
 
@@ -66,4 +66,4 @@ The addition of Resource Search and Pulumi Deployments to our Self-Hosted Pulumi
 
 As of today, all Pulumi Cloud features that have been made generally available are supported in the self-hosted version. We intend to continue to have parity with Pulumi Cloud features in the self-hosted version within 6 months of making the feature generally available.
 
-Try these new features today and experience the enhanced capabilities of the Self-Hosted Pulumi Cloud. For more information or to start a 30-day trial, contact us or visit our [self-hosting documentation](/docs/pulumi-cloud/self-hosted).
+Try these new features today and experience the enhanced capabilities of the Self-Hosted Pulumi Cloud. For more information or to start a 30-day trial, contact us or visit our [self-hosting documentation](/docs/administration/self-hosting/).

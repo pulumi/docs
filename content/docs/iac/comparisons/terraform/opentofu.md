@@ -79,7 +79,7 @@ Pulumi lets you take advantage of decades of innovation in modern IDEs. These to
 
 With Pulumi, you use general purpose languages to express desired state, and Pulumi’s engine similarly gives you diffs and a way to robustly update your infrastructure. It uses the free [Pulumi Cloud](https://app.pulumi.com/signup) to eliminate concerns around concurrency management requirements and state manually by way of "state files". This makes getting started with Pulumi, and operationalizing it in a team setting, much easier. For advanced use cases, it is possible to [use Pulumi without Pulumi Cloud](/docs/support/faq#can-i-use-pulumi-without-depending-on-the-/pulumi-cloud/), which works a lot more like Terraform, but requires you to manage state and concurrency issues. Pulumi errs on the side of ease-of-use.
 
-For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/concepts/state/).
+For more information on how Pulumi manages state or how to use different backends, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 
 ### Provider Support {#providers}
 
@@ -93,11 +93,11 @@ Pulumi integrates with the cloud native ecosystem. It provides a native Kubernet
 
 ### Dynamic Provider Support {#dynamic-providers}
 
-Pulumi supports dynamic providers, enabling you to create new types of custom resources by directly implementing CRUD operations within your Pulumi program. This allows you to define new resource types and handle complex integrations—such as database migrations or virtual machine configuration management—within the same infrastructure as code workflow. Terraform does not offer a direct equivalent to dynamic providers; implementing custom resources with CRUD operations would require building complex and proprietary modules. To learn more, see [Dynamic Providers](/docs/concepts/resources/dynamic-providers/).
+Pulumi supports dynamic providers, enabling you to create new types of custom resources by directly implementing CRUD operations within your Pulumi program. This allows you to define new resource types and handle complex integrations—such as database migrations or virtual machine configuration management—within the same infrastructure as code workflow. Terraform does not offer a direct equivalent to dynamic providers; implementing custom resources with CRUD operations would require building complex and proprietary modules. To learn more, see [Dynamic Providers](/docs/iac/concepts/providers/dynamic-providers/).
 
 ### Infrastructure Reuse and Modularity {#reuse}
 
-Pulumi promotes creating reusable and modular components which allows standard and well-architected infrastructure building blocks to be templatized and easily reused. With Pulumi, you can reuse functions, classes, and packages. Pulumi also has a built-in component model that lets you abstract and encapsulate complexity with higher-level abstractions. These components have a trackable state, appear in diffs, and use a logical name that tracks the resource identity across deployments. Pulumi also provides Pulumi Packages which allows you to author components in one language and make the component accessible in all the other languages that Pulumi supports. For more information about how to author reusable components, see [Component Resources](/docs/concepts/resources/#components).
+Pulumi promotes creating reusable and modular components which allows standard and well-architected infrastructure building blocks to be templatized and easily reused. With Pulumi, you can reuse functions, classes, and packages. Pulumi also has a built-in component model that lets you abstract and encapsulate complexity with higher-level abstractions. These components have a trackable state, appear in diffs, and use a logical name that tracks the resource identity across deployments. Pulumi also provides Pulumi Packages which allows you to author components in one language and make the component accessible in all the other languages that Pulumi supports. For more information about how to author reusable components, see [Component Resources](/docs/iac/concepts/components/).
 
 Pulumi also provides the [Pulumi Registry](/registry/) which is a searchable collection of Pulumi Packages published by Pulumi and our partners. With Pulumi Registry, you can easily find the package with the resources you need, install that package directly into your project, and start building.
 
@@ -105,11 +105,11 @@ Existing module investments carry over. [Pulumi HCL](/docs/iac/languages-sdks/hc
 
 ### Testing and Validation {#testing}
 
-With Pulumi, you can use native testing frameworks to automate infrastructure testing, thanks to its use of general-purpose programming languages for provisioning cloud resources. Pulumi supports unit tests (fast, in-memory tests that mock external calls), property tests (which run resource-level assertions during deployment), and integration tests (which deploy temporary infrastructure and run external tests against it). For more details on testing with Pulumi, see [Testing](/docs/using-pulumi/testing/).
+With Pulumi, you can use native testing frameworks to automate infrastructure testing, thanks to its use of general-purpose programming languages for provisioning cloud resources. Pulumi supports unit tests (fast, in-memory tests that mock external calls), property tests (which run resource-level assertions during deployment), and integration tests (which deploy temporary infrastructure and run external tests against it). For more details on testing with Pulumi, see [Testing](/docs/iac/guides/testing/).
 
 ### Modes of Execution {#modes}
 
-Pulumi supports command execution through the CLI and offers two APIs for running Pulumi commands. The first is the Automation API, which lets you provision, update, and destroy infrastructure directly from your application code—enabling advanced orchestration workflows and dynamic infrastructure management. The second is the REST API, which provides access to state information, history, and stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/iac/concepts/automation-api/) and [REST API](/docs/pulumi-cloud/cloud-rest-api/).
+Pulumi supports command execution through the CLI and offers two APIs for running Pulumi commands. The first is the Automation API, which lets you provision, update, and destroy infrastructure directly from your application code—enabling advanced orchestration workflows and dynamic infrastructure management. The second is the REST API, which provides access to state information, history, and stack tags when using the Managed Pulumi Cloud. To learn more, see [Automation API](/docs/iac/concepts/automation-api/) and [REST API](/docs/reference/cloud-rest-api/).
 
 ### Embed within Application Code {#embedding}
 
@@ -117,7 +117,7 @@ Pulumi allows you to embed Pulumi programs directly within your application code
 
 ### Third-Party CI/CD Tools Support {#cicd}
 
-Pulumi integrates with existing CI/CD providers, including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, JetBrains TeamCity, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/using-pulumi/continuous-delivery/).
+Pulumi integrates with existing CI/CD providers, including AWS Code Services, Azure DevOps, CircleCI, CodeFresh, GitHub Actions, GitLab Pipelines, Google Cloud Build, Jenkins, Octopus Deploy, JetBrains TeamCity, and Travis. Pulumi allows you to use the same CI/CD system for your infrastructure as your application code. For more information on how to integrate your CI/CD system with Pulumi, see [Continuous Delivery](/docs/iac/operations/continuous-delivery/).
 
 ### Policy as Code {#policy}
 
@@ -125,23 +125,23 @@ Pulumi provides policy as code through Pulumi Policies which acts as programmabl
 
 ### Secrets Management {#secrets}
 
-Pulumi securely transmits and stores full state files at all times. In addition, it supports encrypting sensitive values—such as database passwords, SaaS tokens, and credential files—as secrets for enhanced protection. Secrets are treated as a first-class feature in Pulumi. They are encrypted both in transit and at rest, and any component they interact with—such as CLI outputs, logs, the Pulumi program, or the state file—is marked and encrypted to prevent accidental exposure. Each stack uses its own encryption key, and Pulumi also offers an extensible encryption mechanism that lets you use your own keys managed by a third-party provider. For more information on storing secrets with Pulumi, see [Secrets](/docs/concepts/secrets/).
+Pulumi securely transmits and stores full state files at all times. In addition, it supports encrypting sensitive values—such as database passwords, SaaS tokens, and credential files—as secrets for enhanced protection. Secrets are treated as a first-class feature in Pulumi. They are encrypted both in transit and at rest, and any component they interact with—such as CLI outputs, logs, the Pulumi program, or the state file—is marked and encrypted to prevent accidental exposure. Each stack uses its own encryption key, and Pulumi also offers an extensible encryption mechanism that lets you use your own keys managed by a third-party provider. For more information on storing secrets with Pulumi, see [Secrets](/docs/iac/concepts/secrets/).
 
 ### Audit Capabilities {#auditing}
 
-Pulumi offers audit logs that allow you to monitor user activity within an organization. These logs record the UNIX timestamp of each event, the user who performed the action, the specific event, and the source IP address of the request. Audit logs are immutable and capture all user actions. They are available to organizations on the Enterprise and Business Critical editions. To learn more, see [Audit Logs](/docs/pulumi-cloud/audit-logs/).
+Pulumi offers audit logs that allow you to monitor user activity within an organization. These logs record the UNIX timestamp of each event, the user who performed the action, the specific event, and the source IP address of the request. Audit logs are immutable and capture all user actions. They are available to organizations on the Enterprise and Business Critical editions. To learn more, see [Audit Logs](/docs/administration/security-compliance/audit-logs/).
 
 ### Adopt Existing Resources {#adopting}
 
-Pulumi supports importing existing resources so that they can be managed. Pulumi also allows you to generate code in your language of choice from the existing state, and `pulumi import --from hcl` reads a Terraform or OpenTofu state file to adopt the resources it describes in bulk. To learn more, see [Importing Infrastructure](/docs/using-pulumi/adopting-pulumi/import/) in our Adopting Pulumi user guide.
+Pulumi supports importing existing resources so that they can be managed. Pulumi also allows you to generate code in your language of choice from the existing state, and `pulumi import --from hcl` reads a Terraform or OpenTofu state file to adopt the resources it describes in bulk. To learn more, see [Importing Infrastructure](/docs/iac/guides/migration/import/) in our Adopting Pulumi user guide.
 
 ### Aliases
 
-Aliases help facilitate refactoring by allowing you to modify certain properties of a resource without risk of replacing it. With an alias, you can change the logical name of a given resource, change its parent (i.e., move it from one component to another), change its underlying resource type, or even move it to an entirely different project or stack. Pulumi supports the notion of resource renaming and reparenting, including declaratively changing a resource's underlying type or moving it to another workspace. To learn more, see [Aliases](/docs/concepts/options/aliases/) in the Resource documentation.
+Aliases help facilitate refactoring by allowing you to modify certain properties of a resource without risk of replacing it. With an alias, you can change the logical name of a given resource, change its parent (i.e., move it from one component to another), change its underlying resource type, or even move it to an entirely different project or stack. Pulumi supports the notion of resource renaming and reparenting, including declaratively changing a resource's underlying type or moving it to another workspace. To learn more, see [Aliases](/docs/iac/concepts/resources/options/aliases/) in the Resource documentation.
 
 ### Transformations
 
-Transformations, which are unique to Pulumi, allow you to programmatically set or override the input properties of resources belonging to a particular collection, such as the child resources of a Pulumi component or even all of the resources belonging to a stack. Transformations make it easy to apply consistent settings across your infrastructure without having to manipulate the properties of individual resources. To learn more, see [Transformations](/docs/concepts/options/transformations/) in the Resource documentation.
+Transformations, which are unique to Pulumi, allow you to programmatically set or override the input properties of resources belonging to a particular collection, such as the child resources of a Pulumi component or even all of the resources belonging to a stack. Transformations make it easy to apply consistent settings across your infrastructure without having to manipulate the properties of individual resources. To learn more, see [Transformations](/docs/iac/concepts/resources/options/transformations/) in the Resource documentation.
 
 ### Import Code from Other IaC Tools {#converting}
 
@@ -149,4 +149,4 @@ Pulumi allows you to convert templates by Terraform HCL, Kubernetes YAML, and Az
 
 ## Get Started with Pulumi
 
-Pulumi’s Infrastructure as Code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).
+Pulumi’s infrastructure as code platform supports the widest range of builders, clouds, programming languages, and cloud architectures available today. [Get started today](/docs/get-started/).

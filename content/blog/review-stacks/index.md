@@ -16,7 +16,7 @@ category: product
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VvQcx51YL4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Today we’re excited to announce [Review Stacks](/docs/pulumi-cloud/deployments/review-stacks) -- dedicated cloud environments that get created automatically every time a pull request is opened, all powered by [Pulumi Deployments](/docs/pulumi-cloud/deployments). Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources. It has never been simpler to pick up an unfamiliar codebase, make changes to **both** application *and* infrastructure code, and share a live environment for review with your teammates.
+Today we’re excited to announce [Review Stacks](/docs/deployments/concepts/review-stacks/) -- dedicated cloud environments that get created automatically every time a pull request is opened, all powered by [Pulumi Deployments](/docs/deployments/concepts/). Open a pull request, and Pulumi Deployments will stand up a stack with your changes and the Pulumi GitHub App will add a PR comment with the outputs from your deployment. Merge the PR and Pulumi Deployments will destroy the stack and free up the associated resources. It has never been simpler to pick up an unfamiliar codebase, make changes to **both** application *and* infrastructure code, and share a live environment for review with your teammates.
 
 ![Review Stacks Comment](comment.png)
 
@@ -39,7 +39,7 @@ Review Stacks also provide an avenue for optimizing cloud costs. Rather than kee
 Configuring Review Stacks is a simple three-step process:
 
 1. Create a new stack, by convention named `pr`, and corresponding `Pulumi.pr.yaml` configuration file - this config will be copied into every review stack that gets created, and can even be modified within a PR.
-2. Configure [Deployment Settings](/docs/pulumi-cloud/deployments/reference/#deployment-settings) for the stack - this specifies how to acquire source code, cloud credentials and more when deploying via Pulumi Deployments.
+2. Configure [Deployment Settings](/docs/deployments/concepts/#deployment-settings) for the stack - this specifies how to acquire source code, cloud credentials and more when deploying via Pulumi Deployments.
 3. Set the `pullRequestTemplate` Deployment Setting to true - this indicates that all pull requests against this stack’s branch should reference this stack as a Review Stack template.
 
 You can use an existing stack as a Review Stack template, as long as it has Deployment Settings configured. This will result in Review Stacks being deployed into the same cloud account. If you want to separate the cloud resources in your production stack from the resources created via Review Stacks then you can create a separate stack and template that references a different cloud account (AWS, Azure, GCP, etc).
@@ -54,7 +54,7 @@ It is just one click to turn on Review Stacks via the Pulumi Cloud console.
 
 ### REST API
 
-You can programmatically configure Review Stacks and Deployment Settings at scale across thousands of projects using the [Deployments REST API](/docs/pulumi-cloud/deployments/api/#patch-settings).
+You can programmatically configure Review Stacks and Deployment Settings at scale across thousands of projects using the [Deployments REST API](/docs/reference/cloud-rest-api/deployments/#patch-settings).
 
 ```
 curl -i -XPOST -H "Content-Type: application/json" -H "Authorization: token $PULUMI_ACCESS_TOKEN" \
@@ -100,8 +100,8 @@ We've heard similar stories from hundreds of customers. From startup teams of fi
 
 Check out these resources and get started today:
 
-- [Review Stacks documentation](/docs/pulumi-cloud/deployments/review-stacks)
-- [Learn more about Pulumi Deployments](/docs/pulumi-cloud/deployments)
+- [Review Stacks documentation](/docs/deployments/concepts/review-stacks/)
+- [Learn more about Pulumi Deployments](/docs/deployments/concepts/)
 - Join us in the [#pulumi-deployments community slack channel](https://slack.pulumi.com/)
 
 🚀🚀🚀 Happy building! 🚀🚀🚀

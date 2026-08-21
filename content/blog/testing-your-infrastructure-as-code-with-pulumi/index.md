@@ -550,29 +550,29 @@ domains.
 Pulumi supports your existing CI systems. Here are a few of those
 supported:
 
-- [AWS Code Services](/docs/iac/packages-and-automation/continuous-delivery/aws-code-services/)
-- [Azure DevOps](/docs/iac/packages-and-automation/continuous-delivery/azure-devops/)
-- [CircleCI](/docs/iac/packages-and-automation/continuous-delivery/circleci/)
-- [GitHub Actions](/docs/iac/packages-and-automation/continuous-delivery/github-actions/)
-- [GitLab CI](/docs/iac/packages-and-automation/continuous-delivery/gitlab-ci/)
-- [Google Cloud Build](/docs/iac/packages-and-automation/continuous-delivery/google-cloud-build/)
-- [Travis](/docs/iac/packages-and-automation/continuous-delivery/travis/)
+- [AWS Code Services](/docs/iac/operations/continuous-delivery/aws-code-services/)
+- [Azure DevOps](/docs/iac/operations/continuous-delivery/azure-devops/)
+- [CircleCI](/docs/iac/operations/continuous-delivery/circleci/)
+- [GitHub Actions](/docs/iac/operations/continuous-delivery/github-actions/)
+- [GitLab CI](/docs/iac/operations/continuous-delivery/gitlab-ci/)
+- [Google Cloud Build](/docs/iac/operations/continuous-delivery/google-cloud-build/)
+- [Travis](/docs/iac/operations/continuous-delivery/travis/)
 
 Please refer to the
-[Continuous Delivery documentation](/docs/iac/packages-and-automation/continuous-delivery/) for a more
+[Continuous Delivery documentation](/docs/iac/operations/continuous-delivery/) for a more
 comprehensive guide.
 
 ## Ephemeral Environments
 
 A very powerful capability this unlocks is the ability to spin up
 ephemeral environments solely for purposes of acceptance testing.
-Pulumi's concept of [projects and stacks](/docs/using-pulumi/organizing-projects-stacks/) is
+Pulumi's concept of [projects and stacks](/docs/iac/guides/basics/organizing-projects-stacks/) is
 designed to make it very easy to stand up entirely isolated and
 independent environments, and to tear them down, all in either a few
 easy CLI gestures, or by using the integration testing framework.
 
 If you are using GitHub, Pulumi offers a
-[GitHub App](/docs/iac/packages-and-automation/continuous-delivery/github-app/) that helps to glue
+[GitHub App](/docs/integrations/version-control/github-app/) that helps to glue
 together your Pull Request workflow with this sort of acceptance testing
 run inside of your CI pipelines. Simply install the App into your GitHub
 repos, and Pulumi in your CI, and your Pull Requests will light up with

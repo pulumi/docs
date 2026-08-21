@@ -21,7 +21,7 @@ In this article, we'll do a deep dive into each of these testing methods.
 
 <!--more-->
 
-Cloud engineering testing differs from application testing because multiple dependencies between components can have high latency. Let's examine these dependencies using an [example application](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) composed of an application layer, a database layer, and a network layer. We can visualize these dependencies with Pulumi's resource graph.The graph is constructed from the [inputs](/docs/concepts/inputs-outputs/) needed to create a resource.
+Cloud engineering testing differs from application testing because multiple dependencies between components can have high latency. Let's examine these dependencies using an [example application](https://github.com/pulumi/examples/tree/master/aws-ts-stackreference-architecture) composed of an application layer, a database layer, and a network layer. We can visualize these dependencies with Pulumi's resource graph.The graph is constructed from the [inputs](/docs/iac/concepts/inputs-outputs/) needed to create a resource.
 
 The resource graph for the application layer shows many dependencies. The application deploys containers in AWS Fargate, which are instantiated with an application service that requires a service definition with many inputs.
 
@@ -119,7 +119,7 @@ Because `web-secgrp` has port 22 open to all IP addresses, we can expect it to f
 
 ## Integration testing
 
-Integration testing requires deploying resources in either a test environment or an ephemeral environment. In this [integration testing example](https://github.com/pulumi/examples/tree/master/testing-integration-py), we'll deploy a single resource using Pulumi's [Automation API](/docs/using-pulumi/automation-api/). Spinning up [ephemeral environments](/docs/iac/concepts/testing/integration#ephemeral-environments) for integration testing is an excellent use for the Automation API, which provides a programmatic interface for building infrastructure without a CLI or web-based console.
+Integration testing requires deploying resources in either a test environment or an ephemeral environment. In this [integration testing example](https://github.com/pulumi/examples/tree/master/testing-integration-py), we'll deploy a single resource using Pulumi's [Automation API](/docs/iac/concepts/automation-api/). Spinning up [ephemeral environments](/docs/iac/guides/testing/integration/#ephemeral-environments) for integration testing is an excellent use for the Automation API, which provides a programmatic interface for building infrastructure without a CLI or web-based console.
 
 In this simple example, we'll use Automation API to create an S3 bucket and perform a set of tests that include:
 

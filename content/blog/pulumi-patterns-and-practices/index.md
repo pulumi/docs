@@ -65,7 +65,7 @@ Pulumi can help bring consistency to your software catalog by encoding design pa
   <figcaption><p>Figure: An internal developer portal using custom templates in Pulumi Cloud</p></figcaption>
 </figure>
 
-Beyond that, because Pulumi is [multi-cloud](https://www.pulumi.com/blog/deploy-to-multiple-regions/) (AWS, Azure, Google Cloud, and more) and [multi-language](https://www.pulumi.com/blog/pulumiup-pulumi-packages-multi-language-components/) (JavaScript, Python, Go, C#, Java) you can enjoy the same consistency across all your environments and all your developer teams, regardless of the languages they prefer, or cloud tooling they need.
+Beyond that, because Pulumi is [multi-cloud](https://www.pulumi.com/blog/deploy-to-multiple-regions/) (AWS, Azure, Google Cloud, and more) and [multi-language](https://www.pulumi.com/blog/pulumiup-pulumi-packages-multi-language-components/) (JavaScript, TypeScript, Python, Go, .NET, Java, YAML) you can enjoy the same consistency across all your environments and all your developer teams, regardless of the languages they prefer, or cloud tooling they need.
 
 Another core aspect of consistency is *[drift detection](https://www.pulumi.com/docs/pulumi-cloud/deployments/drift/)*. Pulumi automatically detects and remediates cloud resources that have deviated from the expected state stored in Pulumi Cloud. This tech is better than ibuprofen at getting rid of developer-created headaches.
 

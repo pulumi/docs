@@ -154,4 +154,4 @@ The superintelligence flywheel is spinning fast, and it’s only going to get fa
 
 *Pulumi provides the infrastructure platform for the superintelligence era: infrastructure as code in general-purpose languages, unified multi-cloud management, and Neo for progressive infrastructure autonomy.*
 
-[*Pulumi Neo*](/product/neo) ・ [*Superintelligence Infrastructure*](/product/superintelligence-infrastructure/) ・ [*Case Studies*](/case-studies) ・ [*Contact*](/contact)
+[*Pulumi Neo*](/product/neo) ・ [*Superintelligence Infrastructure*](/product/superintelligence-infrastructure/) ・ [*Case Studies*](/case-studies/) ・ [*Contact*](/contact)

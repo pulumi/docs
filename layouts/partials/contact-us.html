@@ -1,28 +1,42 @@
 <section id="contact" class="py-16 px-4 border-b border-gray-300">
-        <div class="md:max-w-2xl md:mx-auto">
-            <div class="w-full ">
-                <div class="card mt-4 mx-auto md:w-full md:mt-0 p-10 bg-white">
-                    <h1 class="heading-1 mb-6">How can we help you?</h1>
-                    <p class="body-sm text-gray-600 mb-6">Want a guided walkthrough instead? <a href="/request-a-demo/" class="underline">Request a demo</a>.</p>
-                    <div class="w-full">
-                        <div class="hs-form hs-form-fg-dark font-normal">
-                            <pulumi-contact-us-form
-                                items="{{ .Params.form | jsonify }}"
-                                label-class="block mb-2 font-normal text-sm text-gray-950"
-                                select-class="form-select form-select-lg"
-                            ></pulumi-contact-us-form>
-                        </div>
-                    </div>
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-8 md:gap-12 items-start">
+            <div class="card p-10 bg-white">
+                <h1 class="heading-1 mb-6">Talk to an expert</h1>
+                <div class="hs-form hs-form-fg-dark font-normal">
+                    <pulumi-contact-us-form
+                        items="{{ .Params.form | jsonify }}"
+                        label-class="block mb-4 font-normal text-sm text-gray-950"
+                    ></pulumi-contact-us-form>
                 </div>
             </div>
 
-            <div class="mt-16">
-                <h2 class="font-overline my-6">Our Address</h2>
-                <p class="m-0">
-                    Pulumi Corporation<br />
-                    601 Union St., Suite 1415<br />
-                    Seattle, WA 98101
-                </p>
-            </div>
+            <aside class="mt-8 md:mt-0">
+                {{ with .Params.quick_links }}
+                    <h2 class="font-overline-sm mb-6">{{ .title }}</h2>
+                    {{/* gap, not space-y-*: Tailwind v4 emits space-y at zero specificity, so the
+                         m-0 each item needs to escape `main li { my-2 }` overrides it. */}}
+                    <ul class="list-none p-0 m-0 flex flex-col gap-10">
+                        {{ range .items }}
+                            <li class="m-0">
+                                <h3 class="heading-5 m-0">{{ .label }}</h3>
+                                <p class="body-sm text-gray-600 my-2 max-w-xs">{{ .description }}</p>
+                                <a href="{{ .url }}"{{ partial "external-link-attrs.html" .url | safeHTMLAttr }} class="btn btn-link">
+                                    {{ .cta_label }}
+                                    {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                {{ end }}
+
+                <div class="mt-10 pt-10 border-t border-gray-200">
+                    <h2 class="font-overline-sm mb-4">Our office</h2>
+                    <p class="body-sm text-gray-600 m-0">
+                        Pulumi Corporation<br />
+                        601 Union St., Suite 1415<br />
+                        Seattle, WA 98101
+                    </p>
+                </div>
+            </aside>
         </div>
 </section>

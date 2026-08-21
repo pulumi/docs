@@ -52,7 +52,7 @@ Cloud engineering is a central character in the next chapter of how the modern c
 
 Panther Labs helps modern security teams build world-class detection and response pipelines using code and automation, developer-friendly workflows, and big data primitives. Its Platform Team is responsible for a large, complex serverless architecture on AWS. Because of the limitations of its legacy Infrastructure-as-Code (IaC) tool, the team was unable to manage and scale its cloud infrastructure with the speed and automation that the company needed to support its fast-growing business. After comparing different alternatives, Panther Labs decided to migrate to the Pulumi Cloud Engineering Platform. Pulumi increased the company’s deployment speeds by up to 10x, reduced the size of its infrastructure codebase by >50%, and enabled its developers to adopt cloud engineering best practices to deliver its cloud applications faster and more reliably.
 
-[![Pulumi vs. DSL](pulumi_v_cf.png)](/case-studies/panther-labs)
+[![Pulumi vs. DSL](pulumi_v_cf.png)](/case-studies/panther-labs/)
 
 ### Results
 
@@ -62,7 +62,7 @@ Panther Labs helps modern security teams build world-class detection and respons
 - The ability to create reusable components made it easy to replicate and share components that always followed cloud engineering best practices.
 - Central visibility across hundreds of single-tenant customer deployments, including a history of when changes were made and what changed for each account.
 
-[Read the full case study→](/case-studies/panther-labs)
+[Read the full case study→](/case-studies/panther-labs/)
 
 ## WhyLabs
 
@@ -77,7 +77,7 @@ WhyLabs helps organizations run their AI applications with certainty by monitori
 - Pulumi’s integration with GitLab enables WhyLabs to deliver infrastructure through CI/CD pipelines just like with application code, which increases iteration frequency and accelerates time to market.
 - Pulumi’s support for multiple cloud providers will help WhyLabs expand their platform in the future to meet customers’ needs.
 
-[Read the full case study→](/case-studies/whylabs)
+[Read the full case study→](/case-studies/whylabs/)
 
 ## Fauna
 

@@ -136,5 +136,5 @@ foreach (var tag in tags.Tags ?? [])
 
 ## Documentation
 
-* [API Reference Documentation](/docs/reference/pkg/dotnet/esc-sdk/)
+* [API Reference Documentation](/docs/reference/pkg/dotnet/esc-sdk/pulumi.esc.sdk/pulumi.esc.sdk.html)
 * [NuGet package](https://www.nuget.org/packages/Pulumi.Esc.Sdk/)

@@ -30,7 +30,7 @@ Complete this step-by-step tutorial to deploy an Azure Blob Storage-based websit
 
 Make sure you have the <a href="https://learn.microsoft.com/cli/azure/install-azure-cli" target="_blank">Azure CLI</a> installed and signed in to the Azure subscription you plan to use (for example, `az login`). Then choose your language and ensure you've performed any prerequisites:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language "typescript" %}}
 
@@ -65,6 +65,13 @@ Make sure you have the <a href="https://learn.microsoft.com/cli/azure/install-az
 {{% choosable language "yaml" %}}
 
 * A text editor
+
+{{% /choosable %}}
+
+{{% choosable language "hcl" %}}
+
+* A text editor
+* The [Pulumi CLI](/docs/install/) v3.256.0 or later; [Pulumi HCL](/docs/iac/languages-sdks/hcl/) needs no separate language runtime
 
 {{% /choosable %}}
 

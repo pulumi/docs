@@ -75,7 +75,7 @@ One detail here is worth pausing on, and it explains why the Pulumi version come
 
 Before getting started, ensure you have:
 
-- [Pulumi CLI](/docs/iac/download-install/) installed and configured
+- [Pulumi CLI](/docs/install/) installed and configured
 - A [Pulumi Cloud account](https://app.pulumi.com/signup) (ESC and OIDC live here)
 - An account on at least one of [AWS](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/), or [Google Cloud](https://cloud.google.com/), with an OIDC trust set up for Pulumi (covered below)
 - Enough GPU quota in your target region for one T4-class instance; a fresh account often starts at zero, which is the most common reason a first deploy fails, so check it before you run `pulumi up`

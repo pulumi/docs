@@ -1,5 +1,6 @@
 ---
 title: "Self-Verifying AI Agents: Vercel's Agent-Browser in the Ralph Wiggum Loop"
+title_tag: "Self-Verifying AI Agents with Agent-Browser"
 allow_long_title: true
 date: 2026-01-20
 draft: false

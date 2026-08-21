@@ -147,7 +147,7 @@ if [[ "$1" == "preview" ]]; then
             if [[ -f "${build_dir}${url}index.html" ]]; then
                 changed_pages+=("- [${url}](${s3_website_url}${url})")
             fi
-        done < <(echo "$files_json" | jq -r '.[] | select(.status != "removed") | select(.filename | startswith("content/") and endswith(".md")) | .filename')
+        done < <(echo "$files_json" | jq -r 'if type == "array" then .[] else empty end | select(.status != "removed") | select(.filename | startswith("content/") and endswith(".md")) | .filename')
 
         # Stop once we hit a short (final) page, or if the response wasn't an
         # array (e.g. a transient API error), which yields 0 and breaks cleanly.
@@ -171,7 +171,7 @@ if [[ "$1" == "preview" ]]; then
     existing_comment_id=$(curl -s \
         -H "Authorization: token ${PULUMI_BOT_TOKEN}" \
         "$pr_comment_api_url" \
-        | jq -r '[.[] | select(.user.login == "pulumi-bot" and (.body | contains("<!-- preview-link -->")))] | last | .id // empty')
+        | jq -r '[if type == "array" then .[] else empty end | select(.user.login == "pulumi-bot" and (.body | contains("<!-- preview-link -->")))] | last | .id // empty')
 
     if [[ -n "$existing_comment_id" ]]; then
         curl -s \

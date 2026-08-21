@@ -27,7 +27,7 @@ We've launched several new and improved capabilities recently to serve Kubernete
 
 ### Pulumi Kubernetes Operator 2.0
 
-The **Pulumi Kubernetes Operator** automates the deployment and management of infrastructure by running Pulumi programs directly in Kubernetes clusters, enabling teams to manage cloud resources alongside Kubernetes-native resources. The **Pulumi Kubernetes Operator 2.0** is a significant upgrade that introduces dedicated "workspace" pods for each Stack resource, effectively isolating each stack’s compute and memory resources, improving the isolation of secrets, and opening up new customization options. The operator now scales horizontally, enhancing performance and enabling teams to manage complex Kubernetes setups with greater reliability.
+The **Pulumi Kubernetes Operator** automates the deployment and management of infrastructure by running Pulumi programs directly in Kubernetes clusters, enabling teams to manage cloud resources alongside Kubernetes-native resources. The **Pulumi Kubernetes Operator 2.0** is a significant upgrade that introduces dedicated "workspace" pods for each `Stack` resource, effectively isolating each stack’s compute and memory resources, improving the isolation of secrets, and opening up new customization options. The operator now scales horizontally, enhancing performance and enabling teams to manage complex Kubernetes setups with greater reliability.
 
 [Read more about the Pulumi Kubernetes Operator 2.0](https://www.pulumi.com/blog/pulumi-kubernetes-operator-2-0/)
 

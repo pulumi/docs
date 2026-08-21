@@ -99,10 +99,10 @@ By building on top of great AWS building blocks like Lambda, API
 Gateway, IAM and more, we avoid needing to worry about infrastructure,
 pay nearly zero fixed costs, and gain the ability to iterate quickly.
 With just a few more lines of code, we can
-[wire up to our own domain](/docs/iac/clouds/aws/guides/api-gateway#configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm),
-[add authorization](/docs/iac/clouds/aws/guides/api-gateway#controlling-and-managing-access-to-apis),
+[wire up to our own domain](/docs/iac/guides/clouds/aws/api-gateway/#configuring-api-gateway-custom-domains-and-ssl-using-route53-and-acm),
+[add authorization](/docs/iac/guides/clouds/aws/api-gateway/#controlling-and-managing-access-to-apis),
 [provision a database](/registry/packages/aws/api-docs/dynamodb/table/),
-or [chain together a more complex event-driven application](/docs/iac/clouds/aws/guides/lambda#available-aws-services-with-event-sources).
+or [chain together a more complex event-driven application](/docs/iac/guides/clouds/aws/lambda/#available-aws-services-with-event-sources).
 
 ### Containers (ECS, Fargate)
 
@@ -140,9 +140,9 @@ export const url = web.endpoint.hostname;
 Using ECS, Fargate, ECR and ELB, we get a robust production-ready
 container deployment - horizontally scaled out, load-balanced, and
 integrated with a private image repository. With just a few more lines
-of code, we can [add autoscaling](/docs/iac/clouds/aws/guides/ecs#creating-an-auto-scaling-group-for-ecs-cluster-instances),
-[customize our ECS cluster](/docs/iac/clouds/aws/guides/ecs#explicitly-creating-ecs-clusters-for-ec2-or-fargate),
-or [wire through advanced container configuration](/docs/iac/clouds/aws/guides/ecs#ecs-tasks-containers-and-services)
+of code, we can [add autoscaling](/docs/iac/guides/clouds/aws/ecs/#creating-an-auto-scaling-group-for-ecs-cluster-instances),
+[customize our ECS cluster](/docs/iac/guides/clouds/aws/ecs/#explicitly-creating-ecs-clusters-for-ec2-or-fargate),
+or [wire through advanced container configuration](/docs/iac/guides/clouds/aws/ecs/#ecs-tasks-containers-and-services)
 (volumes, environment variables, and more).
 
 ### Networking (VPC)
@@ -171,9 +171,9 @@ design patterns based on [AWS guidance and documentation](https://docs.aws.amazo
 By building in simple defaults for routing, subnet structure, NATs and
 multi-AZ you can get started quickly without having to re-discover these
 best practices. And as your needs grow, you can deeply customize and
-evolve your VPC structure - [defining custom CIDR blocks](/docs/iac/clouds/aws/guides/vpc#configuring-cidr-blocks-for-a-vpc),
-[customizing Internet and NAT Gateways](/docs/iac/clouds/aws/guides/vpc#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc)
-or [additional additional private subnets](/docs/iac/clouds/aws/guides/vpc#configuring-subnets-for-a-vpc).
+evolve your VPC structure - [defining custom CIDR blocks](/docs/iac/guides/clouds/aws/vpc/#configuring-cidr-blocks-for-a-vpc),
+[customizing Internet and NAT Gateways](/docs/iac/guides/clouds/aws/vpc/#configuring-internet-and-nat-gateways-for-subnets-in-a-vpc)
+or [additional additional private subnets](/docs/iac/guides/clouds/aws/vpc/#configuring-subnets-for-a-vpc).
 
 ### Kubernetes (EKS)
 
@@ -207,9 +207,9 @@ export const kubeconfig = cluster.kubeconfig;
 Building on EKS we get all the benefits of managed Kubernetes paired
 with the platform capabilities of AWS. With Crosswalk for AWS, we can
 get started quickly, and then evolve to take advantage of all of these
-platform features, like [customized node groups](/docs/iac/clouds/aws/guides/eks#configuring-your-eks-cluster-s-worker-nodes-and-node-groups),
-[private networking](/docs/iac/clouds/aws/guides/eks#configuring-your-eks-cluster-s-networking),
-and even [deploying Kubernetes YAML and Helm charts](/docs/iac/clouds/aws/guides/eks#deploying-existing-kubernetes-yaml-config-to-your-eks-cluster)
+platform features, like [customized node groups](/docs/iac/guides/clouds/aws/eks/#configuring-your-eks-cluster-s-worker-nodes-and-node-groups),
+[private networking](/docs/iac/guides/clouds/aws/eks/#configuring-your-eks-cluster-s-networking),
+and even [deploying Kubernetes YAML and Helm charts](/docs/iac/guides/clouds/aws/eks/#deploying-existing-kubernetes-yaml-config-to-your-eks-cluster)
 to our cluster.
 
 ### Monitoring (CloudWatch)
@@ -248,9 +248,9 @@ export const dashboardUrl =
 With CloudWatch being deeply integrated into all AWS services, we can
 easily build up robust logging, alerting and dashboarding solutions
 across our AWS infrastructure. With just a few more lines of code we can
-[get logs for our functions and containers](/docs/iac/clouds/aws/guides/cloudwatch#configuring-cloudwatch-logging),
-[create alarms when we cross critical thresholds](/docs/iac/clouds/aws/guides/cloudwatch#creating-cloudwatch-alarms),
-and [create rich dashboard layouts](/docs/iac/clouds/aws/guides/cloudwatch#defining-cloudwatch-dashboards-in-code)
+[get logs for our functions and containers](/docs/iac/guides/clouds/aws/#configuring-cloudwatch-logging),
+[create alarms when we cross critical thresholds](/docs/iac/guides/clouds/aws/#creating-cloudwatch-alarms),
+and [create rich dashboard layouts](/docs/iac/guides/clouds/aws/#defining-cloudwatch-dashboards-in-code)
 all of which will version along with our infrastructure!
 
 ## Early Feedback

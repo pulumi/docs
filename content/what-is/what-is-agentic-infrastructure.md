@@ -106,7 +106,7 @@ Duffy frames it plainly:
 
 The layers Pulumi provides:
 
-**[Policy as code](/what-is/what-is-policy-as-code/).** [Pulumi Policies](/docs/iac/crossguard/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because Pulumi Policies run on the preview output, they apply whether a human or an agent proposed the change.
+**[Policy as code](/what-is/what-is-policy-as-code/).** [Pulumi Policies](/docs/insights/policy/) lets teams define organizational rules as code (no unencrypted storage, required tags, allowed instance types) that run on every `pulumi preview`. Non-compliant changes are blocked before they reach the cloud. Because Pulumi Policies run on the preview output, they apply whether a human or an agent proposed the change.
 
 **RBAC and entitlements.** Neo operates within the Pulumi Cloud RBAC entitlements of the user who initiated the task. It cannot escalate privilege. If a developer cannot delete a production database, Neo cannot either, regardless of what the task requests.
 
@@ -142,7 +142,7 @@ You have two entry points, and they compose: bring the coding agent you already 
 
 **Step 3: Start in Review mode.** Neo's default task mode requires human approval at every step. This is the right starting point: you learn how Neo reasons, build trust in its outputs, and establish your policy baseline before giving it more autonomy.
 
-**Step 4: Define your policies.** Encode your team's standards in [Pulumi Policies](/docs/iac/crossguard/) before expanding Neo's autonomy. Policies run on every preview and block non-compliant changes automatically.
+**Step 4: Define your policies.** Encode your team's standards in [Pulumi Policies](/docs/insights/policy/) before expanding Neo's autonomy. Policies run on every preview and block non-compliant changes automatically.
 
 **Step 5: Connect your CI/CD pipeline.** Neo opens pull requests that flow through your existing GitHub, GitLab, or Bitbucket workflows. No changes to your pipeline are required.
 
@@ -200,4 +200,4 @@ Joe Duffy's CascadiaJS 2026 keynote, "The Last Mile Is Code," covers the in-dist
 
 {{< youtube "SOMEfFNPsew?rel=0" >}}
 
-[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. To equip the coding agent you already use, see [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/). For governance specifics, the [Pulumi Policies](/docs/iac/crossguard/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references.
+[The Agentic Infrastructure Era](/blog/the-agentic-infrastructure-era/) is Duffy's companion essay on where infrastructure is headed. [Grounded AI: Why Neo Knows Your Infrastructure](/blog/grounded-ai-why-neo-knows-your-infrastructure/) explains the context lake approach that makes Neo reliable for production. The [Pulumi Neo product page](/product/neo/) covers capabilities and sign-up, and [10 things you can do with Neo](/blog/10-things-you-can-do-with-neo/) walks through concrete examples. To equip the coding agent you already use, see [Pulumi Agent Skills](/docs/ai/skills/) and the [Pulumi MCP server](/docs/ai/mcp-server/). For governance specifics, the [Pulumi Policies](/docs/insights/policy/) docs and the full [Neo documentation](/docs/ai/) are the authoritative references.

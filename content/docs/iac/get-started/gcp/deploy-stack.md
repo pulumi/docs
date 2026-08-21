@@ -78,7 +78,7 @@ are quick, however, so the update will finish in just a few seconds.
 
 The bucket name is available as a stack output. To view it:
 
-{{< chooser language "typescript,python,go,csharp,java,yaml" / >}}
+{{< chooser language "typescript,python,go,csharp,java,yaml,hcl" / >}}
 
 {{% choosable language typescript %}}
 
@@ -88,7 +88,7 @@ $ pulumi stack output bucketName
 
 {{% /choosable %}}
 
-{{% choosable language python %}}
+{{% choosable language "python,hcl" %}}
 
 ```bash
 $ pulumi stack output bucket_name

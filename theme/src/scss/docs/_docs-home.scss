@@ -136,10 +136,20 @@ section.docs-home {
         }
 
         &.languages a {
-            flex-basis: 32%;
+            // Don't grow. The language count doesn't divide evenly into every
+            // row, and a growing flex item would stretch the leftover card to
+            // the full width of its row. A fixed basis keeps every card the
+            // same size and lets a short final row sit left-aligned instead.
+            // Each basis is sized so a full row still fills the container.
+            flex-basis: 48%;
+            flex-grow: 0;
+
+            @media (min-width: 768px) {
+                flex-basis: 32%;
+            }
 
             @media (min-width: 1240px) {
-                flex-basis: 15%;
+                flex-basis: 13%;
             }
 
             div.card-icon {

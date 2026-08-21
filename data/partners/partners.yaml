@@ -51,7 +51,7 @@
   logo: /logos/pkg/github.svg
 
 - name: GitLab
-  link: https://about.gitlab.com/blog/2024/01/10/managing-gitlab-resources-with-pulumi/
+  link: https://about.gitlab.com/blog/managing-gitlab-resources-with-pulumi/
   logo: /logos/tech/gitlab-text.png
 
 - name: NewRelic

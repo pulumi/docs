@@ -204,6 +204,100 @@ unflagged = c.compose({**FLAGGED_QUEUE, "articles": [{
 }]}, None, None, None, None)
 check("healthy-CTR queue has no Search opportunity row", "Search opportunity" not in unflagged)
 
+# Notice swap (publish-job mode for judgment-class PRs): replaces the
+# composed auto-merge notice, idempotent, and no-ops safely on odd bodies.
+import tempfile
+
+with tempfile.TemporaryDirectory() as _td:
+    _body = Path(_td) / "body.md"
+    _body.write_text(out)
+    check("composed body carries the auto-merge notice", c.AUTOMERGE_NOTICE in out)
+    c.replace_notice(_body, "judgment")
+    swapped = _body.read_text()
+    check("swap replaces the auto-merge notice", c.AUTOMERGE_NOTICE not in swapped)
+    check("swap inserts the judgment notice", c.JUDGMENT_NOTICE in swapped)
+    check("swap keeps the rest of the body", "## Why this page" in swapped)
+    c.replace_notice(_body, "judgment")
+    check("swap is idempotent", _body.read_text() == swapped)
+    _noticeless = Path(_td) / "noticeless.md"
+    _noticeless.write_text("## Why this page\n")
+    c.replace_notice(_noticeless, "judgment")
+    check("swap no-ops without failing when no notice is present",
+          _noticeless.read_text() == "## Why this page\n")
+
+# Glow-up body: banked backlog pre-stubbed, taxonomy sweep stubbed, notice is
+# the human-review one, and the section headings match record-review.py's
+# MODE_PR_SECTIONS["glowup"] exactly (the triplication guard).
+BACKLOG = {
+    "banked": [
+        {"id": "pr123-findings-1", "section": "Findings not applied",
+         "source_pr": 123, "text": "| claim | L42 | needs interpretation |"},
+        {"id": "pr123-findings-2", "section": "Findings not applied",
+         "source_pr": 123, "text": "Consider restructuring the intro"},
+    ],
+    "notes": [],
+}
+gout = c.compose_glowup(QUEUE, BACKLOG, None, None, None, None)
+check("glowup body opens with the human-review notice",
+      gout.startswith(c.HUMAN_REVIEW_NOTICE))
+check("glowup body never carries the auto-merge notice", c.AUTOMERGE_NOTICE not in gout)
+check("banked findings pre-stubbed with source PR",
+      "needs interpretation" in gout and "#123" in gout)
+check("taxonomy sweep stubbed per category",
+      all(f"**{cat}**" in gout for cat in c.GLOWUP_TAXONOMY))
+gempty = c.compose_glowup(QUEUE, {"banked": [], "degraded": False,
+                                  "notes": ["no review PR has ever used "
+                                            "content-review/docs-x; run the "
+                                            "taxonomy-only sweep"]},
+                          None, None, None, None)
+check("a genuinely empty backlog still reads as taxonomy-only",
+      "taxonomy-only" in gempty and "WARNING" not in gempty)
+
+# #20984 shipped "No banked findings reachable ... taxonomy-only glow-up" for a
+# page whose ledger recorded 17 deferred findings — which reads as "this page
+# had nothing outstanding", the opposite of true.
+gdeg = c.compose_glowup(QUEUE, {
+    "banked": [], "degraded": True, "skipped_findings": 17, "clarity_flag": True,
+    "recovery": {"state": "no_prior_prs",
+                 "heads_queried": ["content-review/docs-x",
+                                   "content-review/retire-docs-x",
+                                   "content-review/glowup-docs-x"]},
+    "notes": ["no review PR has ever used content-review/docs-x; "
+              "run the taxonomy-only sweep"]}, None, None, None, None)
+check("#20984: a failed recovery renders a warning, not 'nothing to do'",
+      "[!WARNING]" in gdeg and "Backlog recovery failed" in gdeg)
+check("#20984: the warning names the count the ledger recorded",
+      "17 deferred finding(s)" in gdeg and "clarity flag" in gdeg)
+check("#20984: it tells the reader not to read this as a clean page",
+      "do not treat this as a clean page" in gdeg)
+check("#20984: the old misleading sentence is gone",
+      "No banked findings reachable" not in gdeg)
+check("a failed recovery shows its work",
+      all(h in gdeg for h in ("content-review/docs-x",
+                              "content-review/glowup-docs-x")))
+
+gdecl = c.compose_glowup(QUEUE, {"banked": [
+    {"id": "pr20984-backlog-1", "section": "Backlog declined", "source_pr": 20984,
+     "source": "glowup-declined", "declined_by_pr": 20984,
+     "text": "**Claim (c9)** — needs an SME"}], "degraded": False, "notes": []},
+    None, None, None, None)
+check("previously-declined rows are visibly marked as such",
+      "#20984 (declined)" in gdecl and "needs an SME" in gdecl)
+check("a record-sourced row with no PR does not render '#None'",
+      "#None" not in c.compose_glowup(QUEUE, {"banked": [
+          {"id": "findings-f2", "section": "Findings not applied", "source_pr": None,
+           "source": "findings-record", "text": "Vale filler (L48)"}],
+          "degraded": False, "notes": []}, None, None, None, None))
+
+_rr_spec = importlib.util.spec_from_file_location(
+    "record_review", Path(__file__).resolve().parent / "record-review.py")
+rr = importlib.util.module_from_spec(_rr_spec)
+_rr_spec.loader.exec_module(rr)
+check("glowup sections match record-review's MODE_PR_SECTIONS",
+      c.GLOWUP_SECTIONS == rr.MODE_PR_SECTIONS["glowup"])
+check("every glowup section heading renders in the body",
+      all(f"## {s}" in gout for s in c.GLOWUP_SECTIONS))
+
 if failures:
     print(f"\n{len(failures)} failure(s)", file=sys.stderr)
     sys.exit(1)

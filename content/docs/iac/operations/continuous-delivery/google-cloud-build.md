@@ -35,7 +35,7 @@ Before you begin, make sure you have:
 1. A [Pulumi Cloud](https://app.pulumi.com/signin) account and organization.
 1. A Google Cloud project with the [Cloud Build API](https://cloud.google.com/build/docs/set-up) enabled.
 1. A source repository that Cloud Build can build from. Cloud Build connects to repositories hosted on GitHub, GitLab, or Bitbucket through a [repository connection](https://cloud.google.com/build/docs/repositories). (Cloud Source Repositories, Google's own hosted Git service, has been closed to new customers since June 2024.)
-1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/iac/get-started/) guide.
+1. A Pulumi program committed to that repository. If you don't have one yet, follow a [Get started](/docs/get-started/) guide.
 
 ## Authenticate with Pulumi Cloud
 

@@ -14,7 +14,7 @@ aliases:
   - /docs/iac/concepts/options/additionalsecretoutputs/
 ---
 
-The `additionalSecretOutputs` resource option specifies a list of named output properties that should be treated as [secrets](/docs/concepts/secrets/), which means they will be encrypted. It augments the list of values that Pulumi detects, based on secret inputs to the resource.
+The `additionalSecretOutputs` resource option specifies a list of named output properties that should be treated as [secrets](/docs/iac/concepts/secrets/), which means they will be encrypted. It augments the list of values that Pulumi detects, based on secret inputs to the resource.
 
 {{< resource-option-scope "additionalSecretOutputs" >}}
 
@@ -98,5 +98,5 @@ In HCL, each entry is a bare attribute name (in the provider's `snake_case` form
 Only top-level resource properties can be designated secret. If sensitive data is nested inside of a property, you must mark the entire top-level output property as secret.
 
 {{% notes type="warning" %}}
-A resource's [physical ID](/docs/iac/concepts/resources/names/#physicalid) (the `id` output property) cannot be included in `additionalSecretOutputs`. The `id` is a special property, not a regular output, so it is always stored in plain text in the state file. See [The resource ID cannot be made secret](/docs/concepts/secrets/#the-resource-id-cannot-be-made-secret) for the implications and a workaround.
+A resource's [physical ID](/docs/iac/concepts/resources/names/#physicalid) (the `id` output property) cannot be included in `additionalSecretOutputs`. The `id` is a special property, not a regular output, so it is always stored in plain text in the state file. See [The resource ID cannot be made secret](/docs/iac/concepts/secrets/#the-resource-id-cannot-be-made-secret) for the implications and a workaround.
 {{% /notes %}}

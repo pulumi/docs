@@ -57,6 +57,17 @@ content-API equivalents:
     hub.docker.com/r/<o>/<r>              → hub.docker.com/v2/repositories/<o>/<r>/tags/?page_size=20
     hub.docker.com/_/<r>                  → hub.docker.com/v2/repositories/library/<r>/tags/?page_size=20
 
+Locale normalization: the big cloud-provider doc sites serve localized
+variants that authors (and search engines) sometimes link, which makes the
+verifier quote non-English evidence against English claims. Known-localized
+URLs are rewritten to their English canonical form before fetching, and
+every fetch sends `Accept-Language: en-US,en` for hosts that content-
+negotiate:
+
+    docs.aws.amazon.com/<ll_cc>/<path>    → docs.aws.amazon.com/<path>
+    learn.microsoft.com/<ll-cc>/<path>    → learn.microsoft.com/en-us/<path>
+    cloud.google.com/<path>?hl=<lang>     → cloud.google.com/<path>  (hl= dropped)
+
 The `url` field in the record stays the original (so verifier pattern-
 matching against the diff text still works); a `fetched_url` field appears
 only when normalization changed the target.
@@ -72,6 +83,7 @@ import subprocess
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -102,9 +114,30 @@ DOCKERHUB_LIBRARY_RE = re.compile(
     r"^https://hub\.docker\.com/_/([^/\s#?]+)(?:/[^\s#?]*)?"
 )
 
+# Localized doc variants → English canonical (see module docstring). AWS and
+# Microsoft encode the locale as the first path segment (`zh_tw`, `ja-jp`);
+# Google Cloud uses an `?hl=` query parameter. Anchored to the exact hosts so
+# an unrelated two-letter path segment elsewhere is never touched.
+AWS_LOCALE_RE = re.compile(r"^(https://docs\.aws\.amazon\.com)/[a-z]{2}_[a-z]{2}/(.+)$")
+MSFT_LOCALE_RE = re.compile(
+    r"^(https://learn\.microsoft\.com)/(?!en-us(?:/|$))[a-z]{2}-[a-z]{2}/(.+)$",
+    re.IGNORECASE,
+)
+GCLOUD_HOST = "https://cloud.google.com/"
+
+
+def _strip_gcloud_hl(url: str) -> str:
+    parts = urllib.parse.urlsplit(url)
+    query = [
+        (k, v)
+        for k, v in urllib.parse.parse_qsl(parts.query, keep_blank_values=True)
+        if k != "hl"
+    ]
+    return urllib.parse.urlunsplit(parts._replace(query=urllib.parse.urlencode(query)))
+
 
 def normalize_url(url: str) -> str:
-    """Rewrite known SPA / JS-rendered URLs to content-API equivalents.
+    """Rewrite known SPA / JS-rendered and localized URLs to canonical form.
 
     Returns the URL unchanged if no rewrite applies. See module docstring
     for the full pattern list.
@@ -121,6 +154,14 @@ def normalize_url(url: str) -> str:
     if m:
         (repo,) = m.groups()
         return f"https://hub.docker.com/v2/repositories/library/{repo}/tags/?page_size=20"
+    m = AWS_LOCALE_RE.match(url)
+    if m:
+        return f"{m.group(1)}/{m.group(2)}"
+    m = MSFT_LOCALE_RE.match(url)
+    if m:
+        return f"{m.group(1)}/en-us/{m.group(2)}"
+    if url.startswith(GCLOUD_HOST) and "hl=" in url:
+        return _strip_gcloud_hl(url)
     return url
 
 
@@ -218,7 +259,13 @@ def fetch_one(url: str) -> dict:
     if fetched != url:
         record["fetched_url"] = fetched
     try:
-        req = urllib.request.Request(fetched, headers={"User-Agent": USER_AGENT})
+        req = urllib.request.Request(
+            fetched,
+            # Accept-Language keeps content-negotiating hosts from serving a
+            # localized variant the locale normalization above didn't know
+            # about.
+            headers={"User-Agent": USER_AGENT, "Accept-Language": "en-US,en;q=0.9"},
+        )
         with urllib.request.urlopen(req, timeout=FETCH_TIMEOUT) as resp:
             status = getattr(resp, "status", 200)
             raw = resp.read(CONTENT_TEXT_CAP * 4)  # over-read; HTML-strip below

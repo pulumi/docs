@@ -55,7 +55,7 @@ h6 {
     }
 
     code {
-        letter-spacing: normal;
+        @include heading-inline-code;
     }
 }
 

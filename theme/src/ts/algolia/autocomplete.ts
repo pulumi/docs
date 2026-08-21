@@ -29,6 +29,102 @@ let searchClient: SearchClient;
 // (e.g., data-facets="Docs,Registry").
 let baseTags: Tag[];
 
+// Finds the nearest scrollable ancestor of `el` (the element whose content actually scrolls),
+// walking up the DOM tree rather than assuming a fixed class name, since the Autocomplete
+// theme-classic package puts `overflow-y: auto` on `.aa-PanelLayout`, not `.aa-Panel` itself.
+function findScrollContainer(el: HTMLElement): HTMLElement | null {
+    let node: HTMLElement | null = el.parentElement;
+
+    while (node) {
+        const style = getComputedStyle(node);
+        const overflowY = style.overflowY;
+        const canScrollY = (overflowY === "auto" || overflowY === "scroll") && node.scrollHeight > node.clientHeight;
+
+        if (canScrollY) {
+            return node;
+        }
+
+        node = node.parentElement;
+    }
+
+    return null;
+}
+
+// Scrolls `item` into view within `container`, accounting for any absolutely positioned overlay
+// elements (e.g., the pinned tab header and the "esc to close" footer) that visually cover part
+// of the container's edges but aren't accounted for by the browser's native `scrollIntoView`,
+// which only reasons about the container's geometric clipping rect.
+function scrollItemClearOfOverlays(item: HTMLElement, container: HTMLElement, overlaySelectors: string[]) {
+    const containerRect = container.getBoundingClientRect();
+
+    // Start with the container's own (unobstructed) top and bottom, then narrow the visible band
+    // for each overlay that actually overlaps the container vertically. Overlays are looked up
+    // within the container's own panel (falling back to the whole document if no panel ancestor
+    // exists), so overlays belonging to another autocomplete instance are never considered; the
+    // vertical-overlap check below is what skips a header or footer from a different, currently
+    // inactive source within this panel.
+    let visibleTop = containerRect.top;
+    let visibleBottom = containerRect.bottom;
+
+    const overlayScope = container.closest<HTMLElement>(".aa-Panel") ?? document;
+
+    for (const selector of overlaySelectors) {
+        overlayScope.querySelectorAll<HTMLElement>(selector).forEach(overlay => {
+            const overlayRect = overlay.getBoundingClientRect();
+
+            // Skip overlays that don't overlap this container vertically.
+            if (overlayRect.bottom <= containerRect.top || overlayRect.top >= containerRect.bottom) {
+                return;
+            }
+
+            // An overlay pinned near the top of the container pushes the visible band down;
+            // one pinned near the bottom pulls it up.
+            const distanceFromTop = overlayRect.top - containerRect.top;
+            const distanceFromBottom = containerRect.bottom - overlayRect.bottom;
+
+            if (distanceFromTop <= distanceFromBottom) {
+                visibleTop = Math.max(visibleTop, overlayRect.bottom);
+            } else {
+                visibleBottom = Math.min(visibleBottom, overlayRect.top);
+            }
+        });
+    }
+
+    const itemRect = item.getBoundingClientRect();
+    let delta = 0;
+
+    if (itemRect.top < visibleTop) {
+        delta = itemRect.top - visibleTop;
+    } else if (itemRect.bottom > visibleBottom) {
+        delta = itemRect.bottom - visibleBottom;
+    }
+
+    if (delta !== 0) {
+        // Scroll to an absolute position rather than a relative one. `onStateChange` fires on
+        // every arrow keypress, so holding the key down can issue a new scroll request while the
+        // previous smooth-scroll animation is still in flight; a relative `scrollBy` would measure
+        // its delta from whatever intermediate position the animation happened to be at, which can
+        // under-scroll and let the active item drift back under an overlay. An absolute `scrollTo`
+        // is immune to that, the same way the native `scrollIntoView` it replaces always was.
+        container.scrollTo({ top: container.scrollTop + delta, behavior: "smooth" });
+    }
+}
+
+// Scrolls the active search result item into view, keeping it clear of the pinned source header
+// and footer that overlay the scrollable result list. Falls back to the browser's native
+// `scrollIntoView` if a scroll container can't be found, so behavior never regresses if the
+// Autocomplete control's DOM structure changes.
+function scrollActiveItemIntoView(item: HTMLElement) {
+    const container = findScrollContainer(item);
+
+    if (!container) {
+        item.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        return;
+    }
+
+    scrollItemClearOfOverlays(item, container, [".aa-SourceHeader", ".aa-SourceFooter"]);
+}
+
 // Initialize the autocomplete control.
 function initAutocomplete(el: HTMLElement) {
 
@@ -314,7 +410,7 @@ function initAutocomplete(el: HTMLElement) {
                     const item = items.item(state.activeItemId);
 
                     if (item && keyEventsState.upDownPressed) {
-                        item.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                        scrollActiveItemIntoView(item as HTMLElement);
                     }
                 }
 

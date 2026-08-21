@@ -325,11 +325,11 @@ Whether you choose Cosmos DB, PostgreSQL, or Azure Table Storage Pulumi simplifi
 
 With Pulumi, you get:
 
-- [Rich Azure database provisioning](/docs/iac/clouds/azure/) capabilities for Cosmos DB, PostgreSQL, and Azure SQL
+- [Rich Azure database provisioning](/docs/integrations/clouds/azure/) capabilities for Cosmos DB, PostgreSQL, and Azure SQL
 - [Automated configuration management](/docs/iac/concepts/config/) to handle connection strings and secrets securely
 - [Infrastructure testing capabilities](/docs/iac/concepts/testing/) to validate your database configuration before deployment
-- [Stack references](/docs/concepts/stack/#stackreferences) for managing multiple database environments
-- [Custom components](/docs/concepts/resources/components/) for creating reusable database infrastructure patterns
+- [Stack references](/docs/iac/concepts/stacks/#stackreferences) for managing multiple database environments
+- [Custom components](/docs/iac/concepts/components/) for creating reusable database infrastructure patterns
 
 Ready to streamline your database infrastructure management?
 

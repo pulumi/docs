@@ -157,6 +157,118 @@ def main() -> int:
         check(code == 1, f"expected exit 1, got {code}")
         check("outside the fix-PR scope" in err, "expected a scope error")
 
+        print("class: deterministic-only categories with small churn")
+        small_patch = "diff --git a/x b/x\n" + "-old line\n+new line\n"
+        det_applied = [
+            {"category": "link", "file": ARTICLE, "lines": [10, 10], "source": "dead link"},
+            {"category": "vale", "file": ARTICLE, "lines": [20, 20], "source": "vale:x@L20"},
+            {"category": "frontmatter", "file": ARTICLE, "lines": [2, 2], "source": "fm"},
+        ]
+        code, out, _ = run_gate(tmp, verdict=fixed_verdict(applied=det_applied),
+                                patch=small_patch)
+        check(code == 0 and out.get("class") == "deterministic",
+              f"expected class=deterministic, got {out}")
+
+        print("class: any claim/readthrough category -> judgment")
+        for cat in ("claim", "readthrough"):
+            mixed = det_applied + [{"category": cat, "file": ARTICLE,
+                                    "lines": [30, 31], "source": f"{cat}:x"}]
+            code, out, _ = run_gate(tmp, verdict=fixed_verdict(applied=mixed),
+                                    patch=small_patch)
+            check(code == 0 and out.get("class") == "judgment",
+                  f"expected class=judgment for {cat}, got {out}")
+
+        print("class: clarity_flag -> judgment even with deterministic categories")
+        code, out, _ = run_gate(
+            tmp, verdict=fixed_verdict(applied=det_applied, clarity_flag=True),
+            patch=small_patch)
+        check(out.get("class") == "judgment", f"expected class=judgment, got {out}")
+
+        print("class: churn over the ceiling -> judgment")
+        big_patch = "diff --git a/x b/x\n" + "+line\n" * 41
+        code, out, _ = run_gate(tmp, verdict=fixed_verdict(applied=det_applied),
+                                patch=big_patch)
+        check(out.get("class") == "judgment", f"expected class=judgment, got {out}")
+
+        print("class: empty applied[] -> judgment (nothing to certify)")
+        code, out, _ = run_gate(tmp, verdict=fixed_verdict(applied=[]),
+                                patch=small_patch)
+        check(out.get("class") == "judgment", f"expected class=judgment, got {out}")
+
+        print("class: clean verdict -> none")
+        code, out, _ = run_gate(
+            tmp, verdict={"verdict": "clean", "reason": "no findings",
+                          "fixes": 0, "skipped_findings": 0, "retirement": False},
+            patch="")
+        check(out.get("class") == "none", f"expected class=none, got {out}")
+
+        print("class: retirement -> judgment (never merges on a bot stamp)")
+        code, out, _ = run_gate(
+            tmp,
+            queue={"articles": [{"path": ARTICLE, "slug": SLUG, "no_retire": False}]},
+            verdict=fixed_verdict(retirement=True, applied=det_applied),
+            patch=small_patch)
+        check(code == 0 and out.get("class") == "judgment",
+              f"expected class=judgment for retirement, got exit {code}, {out}")
+
+        print("reported: never publishes, and its patch must be empty")
+        reported = {"verdict": "reported", "reason": "claim list recorded",
+                    "fixes": 0, "skipped_findings": 0, "retirement": False}
+        code, out, _ = run_gate(tmp, verdict=reported, patch="")
+        check(code == 0 and out.get("publish") == "false",
+              f"expected publish=false for reported, got exit {code}, {out}")
+        check(out.get("class") == "none", f"expected class=none, got {out}")
+
+        code, _, err = run_gate(tmp, verdict=reported, patch=small_patch)
+        check(code == 1 and "non-empty" in err,
+              f"expected a non-empty-patch violation for reported, got {code}")
+
+        print("reported: retirement combination is a violation")
+        code, _, err = run_gate(
+            tmp,
+            queue={"articles": [{"path": ARTICLE, "slug": SLUG, "no_retire": False}]},
+            verdict={**reported, "retirement": True}, patch="")
+        check(code == 1 and "cannot propose retirement" in err,
+              f"expected reported+retirement violation, got {code}")
+
+        print("glowup: publishes on its own branch with class glow-up")
+        code, out, _ = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                                patch=small_patch)
+        check(code == 0 and out.get("publish") == "true",
+              f"expected publish=true, got exit {code}, {out}")
+        check(out.get("branch") == f"content-review/glowup-{SLUG}",
+              f"expected glowup branch, got {out}")
+        check(out.get("glowup") == "true" and out.get("class") == "glow-up",
+              f"expected glowup=true class=glow-up, got {out}")
+
+        print("glowup: empty patch is a violation")
+        code, _, err = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"), patch="")
+        check(code == 1 and "empty" in err, f"expected empty-patch violation, got {code}")
+
+        print("glowup: retirement combination is a violation")
+        code, _, err = run_gate(
+            tmp,
+            queue={"articles": [{"path": ARTICLE, "slug": SLUG, "no_retire": False}]},
+            verdict=fixed_verdict(verdict="glowup", retirement=True),
+            patch=small_patch)
+        check(code == 1 and "cannot also propose retirement" in err,
+              f"expected glowup+retirement violation, got {code}")
+
+        print("glowup scope: bundle asset allowed, sibling article and shared source not")
+        bundle_asset = ARTICLE.rsplit("/", 1)[0] + "/diagram.png"
+        code, _, _ = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                              patch=small_patch, paths=[ARTICLE, bundle_asset])
+        check(code == 0, f"bundle asset should pass, got exit {code}")
+        sibling = ARTICLE.rsplit("/", 1)[0] + "/other.md"
+        code, _, err = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                                patch=small_patch, paths=[ARTICLE, sibling])
+        check(code == 1 and "glow-up-PR scope" in err,
+              f"sibling article should fail, got exit {code}")
+        code, _, err = run_gate(tmp, verdict=fixed_verdict(verdict="glowup"),
+                                patch=small_patch,
+                                paths=[ARTICLE, "layouts/shortcodes/notes.html"])
+        check(code == 1, f"shared render source should fail for glowup, got exit {code}")
+
         print("scope: fix patch touching a sibling doc is a violation")
         code, _, _ = run_gate(tmp, verdict=fixed_verdict(),
                               patch="diff --git a/x b/x\n",

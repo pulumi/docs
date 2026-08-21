@@ -21,7 +21,7 @@ To start from scratch, follow the [Kubernetes get-started guide](/docs/iac/get-s
 
 ## Infrastructure as Code
 
-[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, Python, Go, C#, Java, or YAML — with deterministic deployments, a state backend, and a rich ecosystem of packages.
+[Pulumi IaC](/docs/iac/) lets you define cloud infrastructure using TypeScript, JavaScript, Python, Go, .NET, Java, YAML, or HCL — with deterministic deployments, a state backend, and a rich ecosystem of packages.
 
 - [Kubernetes provider](/registry/packages/kubernetes/) — provision any resource available in the Kubernetes API.
 - [Helm charts](/registry/packages/kubernetes/api-docs/helm/v4/chart/) — deploy Helm charts via the Kubernetes provider, with full lifecycle management and value inputs as typed Pulumi resources.
