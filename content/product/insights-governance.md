@@ -15,8 +15,7 @@ aliases:
 
 sections:
   - type: hero
-    title_primary: "Continuous compliance,"
-    title_secondary: "by construction."
+    title: "*Continuous compliance,*<br>by construction."
     description: Audit, remediate, and enforce compliance policies across all your cloud infrastructure automatically.
     image: /images/product/insights-governance/ig-hero.svg
     image_alt: Pulumi Discovery & Governance dashboard showing cloud resource compliance

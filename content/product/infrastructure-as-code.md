@@ -11,8 +11,7 @@ aliases:
 
 sections:
   - type: hero
-    title_primary: Infrastructure as code
-    title_secondary: in any language.
+    title: "*Infrastructure as code*<br>in any language."
     description: |
       Use the programming languages you already know to build infrastructure on AWS, Azure, Google Cloud, Kubernetes, and hundreds more providers.
     anchor: hero

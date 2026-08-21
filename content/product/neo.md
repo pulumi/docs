@@ -20,9 +20,7 @@ include_floqer: true
 
 sections:
   - type: hero
-    title_primary: "AI infrastructure agent."
-    title_secondary: "Meet Neo, your new"
-    title_reversed: true
+    title: "Meet Neo, your new<br>*AI infrastructure agent.*"
     description: Neo provisions, governs, and optimizes your cloud infrastructure — with enterprise controls built in.
     image: /images/product/neo/neo-hero.svg
     image_alt: Neo AI infrastructure agent diagram showing Kubernetes cluster upgrade automation

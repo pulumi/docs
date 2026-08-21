@@ -114,20 +114,19 @@
     }
 
     // Product page widgets
+    //
+    // The headline is a single markdown string in frontmatter: *emphasis* (or
+    // **strong**) marks the run that renders in violet. Color is the only
+    // change — the run keeps the heading's own weight and stays upright.
     .product-hero-heading {
         @include product-hero-heading();
-    }
 
-    .product-hero-title-primary {
-        @apply block text-violet-primary;
-    }
-
-    .product-hero-title-secondary {
-        @apply block text-black;
-    }
-
-    .product-hero-title {
-        @include product-hero-heading();
+        em,
+        strong {
+            @apply text-violet-primary;
+            font-style: inherit;
+            font-weight: inherit;
+        }
     }
 
     .product-hero-description {

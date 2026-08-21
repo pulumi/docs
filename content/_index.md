@@ -13,8 +13,7 @@ sections:
     badge_highlight_text: "Latest release:"
     badge_text: "Full support for Terraform and HCL"
     badge_link: /releases/terraform-state-backend-modules-hcl/
-    title_primary: "Next-level"
-    title_secondary: "infrastructure as code \n for humans and agents."
+    title: "*Next-level*<br>infrastructure as code for humans and agents."
     description: |
       Ship cloud infrastructure at the speed of AI with languages and tools that stay out of your way.
     anchor: hero
