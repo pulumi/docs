@@ -111,9 +111,14 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          key: hugo-resources-${{ github.sha }}
+          # The version prefix must match the hugo-version pinned above, and be
+          # identical in pull-request.yml and build-and-deploy.yml or PRs stop
+          # inheriting master's cache. Hugo does not put its own version in the
+          # cache key, so without this a Hugo upgrade keeps serving images
+          # encoded by the previous version indefinitely. Bump both on upgrade.
+          key: hugo-resources-0.157.0-${{ github.sha }}
           restore-keys: |
-            hugo-resources-
+            hugo-resources-0.157.0-
 
       - name: Record build start time
         run: |

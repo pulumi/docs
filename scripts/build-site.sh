@@ -32,19 +32,36 @@ printf "Running Hugo...\n\n"
 # allocation-heavy operation (image processing above all) drags a full GC behind
 # it. GOMEMLIMIT expresses the actual intent -- "do not exhaust the runner" --
 # as a soft ceiling, letting Go collect at its normal rate until the build
-# approaches the limit. The runner has 16GB; 12GiB leaves room for the Node and
-# Pulumi steps that share it.
-export GOMEMLIMIT=12GiB
+# approaches the limit.
+#
+# CI only: this script is the local build path too (`make build`,
+# scripts/laptop-deploy.sh), and 12GiB is sized for the CI runner's 16GB shared
+# with the Node and Pulumi steps -- on a 16GB laptop it would be no ceiling at
+# all. An explicit GOMEMLIMIT always wins, so a memory-constrained machine can
+# set its own.
+if [ -n "${CI:-}" ]; then
+    export GOMEMLIMIT="${GOMEMLIMIT:-12GiB}"
+fi
 
-if [ "$1" == "preview" ]; then
+# --gc prunes cache entries the build no longer references, which is what bounds
+# the growth of the cached resources/ tree (nothing else reclaims superseded
+# entries). Applied on the deploy branches below and only in CI: master's cache
+# is the one PR builds inherit, so pruning there keeps it in check, while a PR
+# build pruning against its own narrower view could evict entries master needs.
+hugo_gc=()
+if [ -n "${CI:-}" ]; then
+    hugo_gc=(--gc)
+fi
+
+if [ "${1:-}" == "preview" ]; then
     export HUGO_BASEURL="http://$(origin_bucket_prefix)-$(build_identifier).s3-website.$(aws_region).amazonaws.com"
     hugo --minify --buildFuture --templateMetrics -e "preview"
 else
     if [ "$DEPLOYMENT_ENVIRONMENT" == "testing" ]; then
         export HUGO_BASEURL="https://www.pulumi-test.io"
-        hugo --minify --buildFuture --templateMetrics -e "preview"
+        hugo "${hugo_gc[@]}" --minify --buildFuture --templateMetrics -e "preview"
     else
-        hugo --minify --templateMetrics -e "production"
+        hugo "${hugo_gc[@]}" --minify --templateMetrics -e "production"
     fi
 fi
 
