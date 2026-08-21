@@ -4,6 +4,17 @@ on:
     branches:
       - master
       - 'release/**'
+
+# Only the newest commit on a PR is worth building. Without this, pushing three
+# commits in quick succession runs three full builds to completion, and the two
+# superseded ones just burn a runner and hold up the queue. Each run publishes to
+# a bucket keyed by PR number *and* head sha, so a cancelled run can only orphan
+# its own preview bucket -- pr-closed.yml deletes every *-pr-<num>-* bucket when
+# the PR closes, and bucket-cleanup-testing.yml sweeps daily.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 permissions:
       id-token: write # This is required for requesting the JWT
       contents: read # This is required for actions/checkout
@@ -86,9 +97,21 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          key: hugo-resources-${{ github.sha }}
+          # The version prefix must match the hugo-version pinned above, and be
+          # identical in every workflow that caches resources/ -- pull-request.yml,
+          # build-and-deploy.yml, testing-build-and-deploy.yml, and
+          # pulumi-cli-docs.yml -- or they stop sharing a cache. Hugo does not put
+          # its own version in the cache key, so without this a Hugo upgrade keeps
+          # serving images encoded by the previous version indefinitely. Bump them
+          # together on upgrade.
+          key: hugo-resources-0.157.0-${{ github.sha }}
           restore-keys: |
-            hugo-resources-
+            hugo-resources-0.157.0-
+
+      # PR runs don't wait on await-in-progress.js the way master deploys do, so
+      # the elapsed time here is build time with no queue wait to subtract.
+      - name: Record build start time
+        run: echo "CI_BUILD_START_EPOCH=$(date +%s)" >> "$GITHUB_ENV"
 
       - name: Build and deploy
         run: make ci_pull_request
@@ -103,6 +126,17 @@ jobs:
           ALGOLIA_APP_SEARCH_KEY: ${{ vars.ALGOLIA_APP_SEARCH_KEY }}
           ALGOLIA_APP_ADMIN_KEY: ${{  steps.esc-secrets.outputs.ALGOLIA_APP_ADMIN_KEY }}
           NODE_OPTIONS: "--max_old_space_size=8192"
+
+      # The same guardrail build-and-deploy.yml has. PR builds had none, which is
+      # how they drifted to ~17 minutes without anyone being told. 15 minutes
+      # sits a few minutes above the post-fix baseline, so it should stay quiet
+      # unless the build genuinely regresses; tighten it once that baseline settles.
+      - name: Alert on slow build
+        if: success()
+        env:
+          SLACK_WEBHOOK_URL: ${{ steps.esc-secrets.outputs.SLACK_WEBHOOK_URL }}
+          BUILD_DURATION_THRESHOLD_MINUTES: '15'
+        run: ./scripts/ci-build-duration-alert.sh
 
       - name: Archive test results
         uses: actions/upload-artifact@v7
