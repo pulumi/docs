@@ -180,4 +180,4 @@ Keeping this same command shape and output format across all Pulumi providers ma
 
 1. Read the [direct resource operations reference](/docs/iac/cli/direct-resource-operations/) for the full command syntax, flags, and provider configuration options.
 1. Browse the [Pulumi Registry](/registry/) to see the providers and resources you can operate on.
-1. When it's time to collect the resources you've created with `pulumi do` into a new or existing Pulumi [project](docs/iac/concepts/projects/), you can import them using their type tokens and resource IDs. See [Importing resources](/docs/iac/guides/migration/import/) to learn more.
+1. When it's time to collect the resources you've created with `pulumi do` into a new or existing Pulumi [project](/docs/iac/concepts/projects/), you can import them using their type tokens and resource IDs. See [Importing resources](/docs/iac/guides/migration/import/) to learn more.
