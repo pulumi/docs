@@ -43,9 +43,13 @@ Usage:
       Run embedded parse checks (no network).
 
 Parsing reuses validate-pinned.py's body helpers (find_section,
-extract_bucket_bullets, extract_count_table_row, extract_trail_records,
-extract_bullet_prefix) so the comment-format contract keeps exactly one parser —
-same import-by-path pattern as scrape-review-outcomes.py.
+extract_count_table_row, extract_trail_records, extract_bullet_prefix) and its
+exported FINDING_START_RE, so the comment-format contract keeps exactly one
+parser — same import-by-path pattern as scrape-review-outcomes.py. The one
+deliberate extension is `_bullet_blocks`: extract_bucket_bullets returns a
+bullet's first line, which is right for counting and useless for working, so
+this module walks the same sections with the same rule and keeps each bullet's
+continuation lines. Same recognition rule, wider capture — not a second parser.
 
 Fail-open on inputs, fail-closed on completeness. Three things independently
 block a "clean" verdict, so --require-clean can only pass when the whole list
@@ -86,7 +90,10 @@ HEAD_SENTINEL_RE = re.compile(r"<!-- CLAUDE_REVIEW_HEAD ([0-9a-f]{7,40}) -->")
 SUGGESTION_MARKER = "<!-- CLAUDE_STYLE_SUGGESTION -->"
 STYLE_BULLET_RE = re.compile(r"^\s*-\s+\*\*line (\d+):?\*\*\s*(.*)$")
 STYLE_FILE_HEADING_RE = re.compile(r"^#####\s+`?([^`\s]+)`?\s*$")
-FINDING_START_RE = re.compile(r"^(?:- )?\*\*\S")
+# The bullet-recognition rule comes from the shared parser, never a local
+# copy — _bullet_blocks extends what extract_bucket_bullets does with that
+# rule, so the two must agree by construction rather than by vigilance.
+FINDING_START_RE = _vp.FINDING_START_RE
 
 DISPOSITIONS = ("fixed", "refuted", "deferred", "accepted", "not-applicable")
 # Dispositions that are a judgment call rather than a change in the diff. The
@@ -149,19 +156,25 @@ def fetch_inline_suggestions(repo: str, pr: int) -> tuple[list[dict], bool]:
     if not out.strip():
         return [], False
     # --paginate --jq emits one JSON document per page; concatenate the arrays.
+    # Every page must decode: a partial failure (page 1 parses, page 2 is a gh
+    # error object or truncated JSON) yields a genuinely short suggestion set,
+    # which is the same signal loss as a total failure — just quieter.
     merged: list[dict] = []
     decoded_any = False
+    failed_any = False
     for chunk in out.strip().splitlines():
         try:
             parsed = json.loads(chunk)
         except json.JSONDecodeError:
+            failed_any = True
             continue
         if isinstance(parsed, list):
             decoded_any = True
             merged.extend(x for x in parsed if isinstance(x, dict))
-    # Bytes came back but nothing decoded — a format change or a truncated
-    # response, not an empty suggestion set.
-    return merged, decoded_any
+        else:
+            # Valid JSON that isn't a page of results — an error object, say.
+            failed_any = True
+    return merged, decoded_any and not failed_any
 
 
 # ---- body normalization ------------------------------------------------------
@@ -612,6 +625,9 @@ def self_test() -> int:
           next(i for i in items if i["bucket"] == "pre-existing")["optional"] is True)
 
     # Inline suggestion marks its bullet and adds an unlisted one.
+    # The exported bullet rule is the shared one, not a look-alike copy.
+    check("bullet rule is the shared one", FINDING_START_RE is _vp.FINDING_START_RE)
+
     sugs = [
         {"id": 1, "path": "content/docs/a.md", "line": 88, "body": SUGGESTION_MARKER + "\nx"},
         {"id": 2, "path": "content/docs/b.md", "line": 5, "body": SUGGESTION_MARKER + "\ny"},
@@ -644,6 +660,26 @@ def self_test() -> int:
     state["outstanding:L999"] = {"disposition": "fixed", "note": ""}
     r3 = build_report(body, [], state, 20123, DEFAULT_REPO)
     check("stale state reported", [s["id"] for s in r3["stale_state"]] == ["outstanding:L999"])
+
+    # The suggestions fetch reports completeness, not just contents. Stub `run`
+    # rather than gh: fetch_inline_suggestions resolves it from module globals.
+    global run
+    real_run = run
+    try:
+        run = lambda _args: '[]\n[]\n'
+        check("every page decodes → ok", fetch_inline_suggestions("o/r", 1) == ([], True))
+        run = lambda _args: ''
+        check("silent gh failure fails closed", fetch_inline_suggestions("o/r", 1)[1] is False)
+        run = lambda _args: '{"message": "Not Found"}\n'
+        check("error object fails closed", fetch_inline_suggestions("o/r", 1)[1] is False)
+        # The quiet one: page 1 parses, page 2 doesn't. A short list that reads
+        # as complete is the same defect as an empty one that reads as complete.
+        run = lambda _args: '[{"id": 1, "path": "a.md", "line": 3}]\nnot json\n'
+        partial, partial_ok = fetch_inline_suggestions("o/r", 1)
+        check("partial decode failure fails closed", partial_ok is False)
+        check("partial decode still returns what it got", len(partial) == 1)
+    finally:
+        run = real_run
 
     # State-file handling: absent is a first run, shorthand parses, junk is loud.
     check("missing state file is empty", load_state(HERE / "no-such-state-file.json") == {})
