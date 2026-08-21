@@ -147,6 +147,9 @@ func main() {
             lucky = 42
         }
         secret := conf.RequireSecret("secret")
+        ctx.Export("name", pulumi.String(name))
+        ctx.Export("lucky", pulumi.Int(lucky))
+        ctx.Export("secret", secret)
         return nil
     })
 }
