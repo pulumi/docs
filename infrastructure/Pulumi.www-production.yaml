@@ -18,3 +18,4 @@ config:
   www.pulumi.com:enableWaf: "true"
   www.pulumi.com:wafRateLimit: "500"
   www.pulumi.com:enableDataWarehouseAccess: "true"
+  www.pulumi.com:enableSupportForm: "true"
