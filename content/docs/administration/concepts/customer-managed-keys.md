@@ -65,7 +65,7 @@ re-encrypted with the new Customer Managed Key. The encrypted data itself does n
 ### AWS KMS
 
 1. Set up a role in AWS IAM and a key in AWS KMS as
-   described [here](/docs/administration/guides/customer-managed-keys/aws-kms/).
+   described in [Configure AWS KMS](/docs/administration/guides/customer-managed-keys/aws-kms/).
 2. Go to the **Customer Managed Keys** settings page in Pulumi Cloud.
 3. Click **Add Customer Managed Key**.
 4. Enter a unique name for the key.
