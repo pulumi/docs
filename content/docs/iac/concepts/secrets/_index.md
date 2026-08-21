@@ -127,7 +127,7 @@ func main() {
             return err
         }
         return nil
-    }
+    })
 }
 ```
 
@@ -380,7 +380,10 @@ func main() {
 
         name := c.Require("name")
         dbPassword := c.RequireSecret("dbPassword")
-    }
+        ctx.Export("name", pulumi.String(name))
+        ctx.Export("dbPassword", dbPassword)
+        return nil
+    })
 }
 ```
 
