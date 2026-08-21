@@ -725,6 +725,8 @@ service = core.v1.Service(..., ResourceOptions(provider=provider))
 {{% choosable language go %}}
 
 ```go
+package main
+
 import (
   "fmt"
 
@@ -740,7 +742,7 @@ func main() {
     }
 
     kubeConfig := stackRef.GetOutput(pulumi.String("kubeConfig"))
-    // ...
+    ctx.Export("kubeConfig", kubeConfig)
     return nil
   })
 }
