@@ -176,7 +176,7 @@ None of these make modules a poor choice; they're the natural boundaries of a do
 
 ## How does Pulumi handle reuse?
 
-Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that takes a different approach to the same reuse problem. Instead of a configuration language with a module system layered on top, Pulumi lets you define infrastructure in general-purpose programming languages (TypeScript, Python, Go, C#, Java, and YAML), so the reuse mechanisms are the ones those languages already provide: functions, classes, and packages.
+Pulumi is an [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform that takes a different approach to the same reuse problem. Instead of a configuration language with a module system layered on top, Pulumi lets you define infrastructure in general-purpose programming languages — TypeScript, JavaScript, Python, Go, .NET, and Java — so the reuse mechanisms are the ones those languages already provide: functions, classes, and packages.
 
 The closest analog to a Terraform module is a Pulumi **component**. A [component resource](/docs/iac/concepts/components/) is a class that groups multiple child resources behind a constructor, taking typed arguments and exposing typed outputs, the same inputs-in, outputs-out contract a module has, but expressed as a real class in your language:
 
@@ -211,7 +211,7 @@ Pulumi also interoperates with the Terraform ecosystem rather than replacing it.
 
 | Aspect | Terraform module | Pulumi component |
 |---|---|---|
-| Authored in | HCL configuration | TypeScript, Python, Go, C#, Java, or YAML |
+| Authored in | HCL configuration | TypeScript, JavaScript, Python, Go, .NET, or Java |
 | Reuse unit | Directory of `.tf` files | Class extending `ComponentResource` |
 | Interface | Input variables and outputs | Constructor arguments and class properties |
 | Logic | HCL expressions, `count`/`for_each` | Full language: loops, functions, conditionals |
@@ -248,7 +248,7 @@ The `source` argument supports several locations: a local path in the same repos
 
 ### What is the difference between a Terraform module and a Pulumi component?
 
-Both encapsulate a group of resources behind inputs and outputs. A Terraform module is a directory of HCL files, and a Pulumi component is a class in a general-purpose language (TypeScript, Python, Go, C#, Java) that extends `ComponentResource`. The practical difference is expressiveness and distribution: components use the host language's loops, functions, and unit-testing tools, and can be packaged as Pulumi Packages for use across multiple languages. Pulumi can also consume existing Terraform modules directly.
+Both encapsulate a group of resources behind inputs and outputs. A Terraform module is a directory of HCL files, and a Pulumi component is a class in a general-purpose language (TypeScript, JavaScript, Python, Go, .NET, Java) that extends `ComponentResource`. The practical difference is expressiveness and distribution: components use the host language's loops, functions, and unit-testing tools, and can be packaged as Pulumi Packages for use across multiple languages. Pulumi can also consume existing Terraform modules directly.
 
 ### Can you use Terraform modules with Pulumi?
 

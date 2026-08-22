@@ -107,7 +107,7 @@ The right alternative depends on what is driving the search. If the pain is Terr
 
 [Pulumi](/docs/iac/) and Terragrunt address some of the same pains from opposite directions. Terragrunt adds a DRY and orchestration layer *on top of* an HCL tool. Pulumi is a complete [infrastructure as code](/what-is/what-is-infrastructure-as-code/) platform in which the same needs are met by the programming language and the platform itself, so there is no separate wrapper to adopt.
 
-**DRY comes from the language, not a wrapper.** In Pulumi, you write infrastructure in TypeScript, Python, Go, C#, Java, or YAML. Loops, functions, classes, and package imports are native to those languages, so factoring out shared configuration, iterating over environments, and building reusable abstractions ([components](/docs/iac/concepts/components/)) is just ordinary programming. The repetition Terragrunt exists to remove is handled by the same mechanisms you already use to keep application code DRY.
+**DRY comes from the language, not a wrapper.** In Pulumi, you write infrastructure in a general-purpose language — TypeScript, JavaScript, Python, Go, .NET, or Java. Loops, functions, classes, and package imports are native to those languages, so factoring out shared configuration, iterating over environments, and building reusable abstractions ([components](/docs/iac/concepts/components/)) is ordinary programming. The repetition Terragrunt exists to remove is handled by the same mechanisms you already use to keep application code DRY.
 
 **State is a managed service, not a tool you configure.** Pulumi manages [state](/what-is/what-is-terraform-state/) for you through the managed Pulumi Cloud backend, or a self-hosted backend if you prefer (S3, Azure Blob, Google Cloud Storage, or local files). There is no per-module backend block to generate and keep DRY, because backend configuration is not something each project has to declare.
 
@@ -116,9 +116,9 @@ The right alternative depends on what is driving the search. If the pain is Terr
 | Dimension | Terragrunt | Pulumi |
 |---|---|---|
 | What it is | Wrapper over Terraform/OpenTofu | Full IaC platform |
-| Authoring language | HCL + `terragrunt.hcl` | TypeScript, Python, Go, C#, Java, YAML |
-| DRY mechanism | Config inheritance and generation | Native language features (loops, functions, classes) |
-| State | Backend you configure per module | Managed service or self-hosted backend |
+| Authoring language | HCL + `terragrunt.hcl` | TypeScript, JavaScript, Python, Go, .NET, Java, YAML |
+| DRY mechanism | Config inheritance, remote-state generation, and hooks | Native language features (loops, functions, classes) |
+| State | Root `remote_state` block generating each unit's backend config | Managed service or self-hosted backend |
 | Cross-module wiring | `dependency` blocks and `run --all` | Stack references and stacks |
 | Extra tool required for DRY/orchestration | Yes (Terragrunt itself) | No |
 

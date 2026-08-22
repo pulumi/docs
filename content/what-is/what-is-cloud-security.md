@@ -149,7 +149,7 @@ With Pulumi:
 * **Drift is observable.** When a console click breaks the IaC contract, the next preview surfaces it.
 * **Reuse safe defaults.** Platform teams ship [Pulumi components](/docs/iac/concepts/components/) with the right encryption, logging, and IAM settings baked in, so product teams consume secure infrastructure without having to relearn it every time.
 
-[Get started with Pulumi](/docs/get-started/) to manage cloud infrastructure as code in TypeScript, Python, Go, C#, Java, or YAML.
+[Get started with Pulumi](/docs/get-started/) to manage cloud infrastructure as code in TypeScript, Python, Go, .NET, Java, YAML, or HCL.
 
 ## Frequently asked questions about cloud security
 

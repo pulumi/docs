@@ -264,7 +264,7 @@ sections:
       - image: /images/home/languages-card-image.svg
         image_alt: Programming language logos
         title: Real languages
-        description: Write infrastructure code in TypeScript, Python, Go, C#, or Java — the same languages your team already uses to build software.
+        description: Write infrastructure code in TypeScript, JavaScript, Python, Go, .NET, or Java — the same languages your team already uses to build software.
       - image: /images/home/secure-card-image.svg
         image_alt: Security shield illustration
         title: Secure by default
