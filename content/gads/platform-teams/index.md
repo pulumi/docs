@@ -177,7 +177,7 @@ stats:
         number: "4,000+"
         description: organizations
     integration:
-        number: "170+"
+        number: "200+"
         description: Cloud and service integrations
 
 case_studies:

@@ -1,6 +1,6 @@
 ---
 title: "Alternative | Pulumi"
-meta_desc: Infrastructure as Code in Python, TypeScript, Go, or .NET. 170+ cloud providers, policy as code, secrets management. Open source. Free tier.
+meta_desc: Infrastructure as Code in Python, TypeScript, Go, or .NET. 200+ cloud providers, policy as code, secrets management. Open source. Free tier.
 layout: gads-template
 block_external_search_index: true
 

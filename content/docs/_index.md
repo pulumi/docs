@@ -69,7 +69,7 @@ sections:
     link: /docs/administration/
   - icon: package
     heading: Registry ↗
-    description: Browse and search Pulumi packages for 150+ cloud providers and services.
+    description: Browse and search Pulumi packages for 200+ cloud providers and services.
     link: /registry/
   - icon: books
     heading: Reference

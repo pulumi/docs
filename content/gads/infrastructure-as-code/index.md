@@ -1,6 +1,6 @@
 ---
 title: "Infrastructure as Code | Pulumi"
-meta_desc: "Modern infrastructure as code in Python, TypeScript, JavaScript, Go, or .NET. 170+ cloud providers, policy as code, secrets management. Open source. Free tier."
+meta_desc: "Modern infrastructure as code in Python, TypeScript, JavaScript, Go, or .NET. 200+ cloud providers, policy as code, secrets management. Open source. Free tier."
 layout: gads-template
 block_external_search_index: true
 
@@ -174,7 +174,7 @@ key_features:
                 outputs:
                   url: ${my-site.websiteEndpoint}
           features:
-              - title: 170+ cloud providers
+              - title: 200+ cloud providers
                 icon: cloud
                 description: |
                     170+ cloud and SaaS providers, including AWS, Azure, Google Cloud, and Kubernetes. New services are covered as they ship.

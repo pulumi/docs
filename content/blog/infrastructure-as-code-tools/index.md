@@ -481,7 +481,7 @@ Key Features:
 
 - **General-purpose language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
-- **Multi-cloud flexibility**: [170+ providers](/registry/), with native AWS, Azure, Google Cloud, and Kubernetes providers offering same-day access to new cloud features
+- **Multi-cloud flexibility**: [200+ providers](/registry/), with native AWS, Azure, Google Cloud, and Kubernetes providers offering same-day access to new cloud features
 - **Incremental adoption**: Migration tools and state integration for gradual transitions
 - **Open source licensing**: Apache 2.0 ensures long-term freedom and flexibility
 
