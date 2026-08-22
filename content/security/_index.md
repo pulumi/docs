@@ -1,15 +1,34 @@
 ---
 title: Pulumi Security
-meta_desc: A summary of security topics and how they relate to the Pulumi platform.
+meta_desc: Pulumi's security posture — SOC 2 Type II attestation, what we do and don't certify, platform architecture, and how to report a vulnerability.
+aliases:
+  - /trust/
+  - /trust-center/
 ---
 
 Pulumi takes security and privacy matters very seriously. We appreciate that our customers and users place a high degree of confidence and trust in our products and services and we strive to meet those expectations.
 
-## Pulumi Platform Security
+## Certifications and attestations
 
-The Pulumi platform employs industry best practices for security and is SOC 2 Type II certified.
+Pulumi Cloud is covered by an annual **SOC 2 Type II** audit performed by an independent CPA firm against the AICPA Trust Services Criteria. The report is shared under NDA — request it from your account team or email [security@pulumi.com](mailto:security@pulumi.com).
 
-For more details, see our [security whitepaper](/security/pulumi-cloud-security-whitepaper).
+Pulumi does not currently hold ISO 27001, HITRUST, or PCI DSS certification. Customers in regulated industries do run Pulumi under those frameworks, because Pulumi Cloud never receives your cloud credentials and never has standing access to your cloud accounts — the architecture that makes this true is described in the [security whitepaper](/security/pulumi-cloud-security-whitepaper/).
+
+Pulumi also publishes [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) for CIS, ISO/IEC 27001, NIST SP 800-53, CMMC, HITRUST, and PCI DSS. Those help you assess *your* infrastructure against a framework; they are not a statement about Pulumi's own certification status.
+
+## Government and federal programs
+
+Pulumi holds **no FedRAMP authorization**. There is no Pulumi ATO and no listing in the FedRAMP Marketplace. A program that requires a FedRAMP-authorized service cannot use hosted Pulumi Cloud to satisfy that requirement.
+
+[Self-hosted Pulumi Cloud](/product/self-hosted/) changes who owns the boundary. Because you install and operate it in your own environment, it is a software component in your inventory, and the controls that apply to it are yours. It can run fully [air-gapped](/docs/administration/self-hosting/airgapped/), with no egress to the public internet.
+
+## Architecture and controls
+
+The [security whitepaper](/security/pulumi-cloud-security-whitepaper/) is the technical reference for how Pulumi Cloud is built and operated. It covers the service architecture and data storage model, the three-tier encryption key hierarchy and its KMS integration, organizational key isolation and key rotation, transport security, how secrets are handled in stack state, diagnostic log protection, audit logging, monitoring, incident detection and response, vulnerability management, and backup, recovery, and business continuity.
+
+## Data processing
+
+Pulumi's [Privacy Statement](/privacy/) describes what personal data we collect and how it is handled, including transfers out of the EEA under standard contractual clauses. For a Data Processing Addendum, or for questions about data processing in a procurement review, contact [privacy@pulumi.com](mailto:privacy@pulumi.com).
 
 ## Vulnerability Reporting
 

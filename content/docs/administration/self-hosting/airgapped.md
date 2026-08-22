@@ -8,7 +8,7 @@ menu:
         name: Air-Gapped
         parent: administration-self-hosting
         weight: 5
-        identifier: administration-security-compliance-self-hosted-airgapped
+        identifier: administration-self-hosting-airgapped
 aliases:
 - /docs/administration/self-hosting/airgapped/
 - /docs/pulumi-cloud/admin/self-hosted/airgapped/
@@ -19,7 +19,7 @@ pulumi_cloud_feature: self-hosting
 
 For organizations operating in highly regulated industries or environments with strict security requirements, deploying cloud infrastructure in an air-gapped environment is often a requirement. Such environments do not have network connectivity with the outside world, which many of Pulumi's default workflows assume.
 
-Pulumi can be configured to run in air-gapped environments through [self-hosting](/docs/administration/self-hosting/pulumi-cloud), enabling enterprises to manage infrastructure as code securely within their private networks, remaining compliant while gaining the benefits of modern infrastructure automation.
+Pulumi can be configured to run in air-gapped environments through [self-hosting](/docs/administration/self-hosting/), enabling enterprises to manage infrastructure as code securely within their private networks, remaining compliant while gaining the benefits of modern infrastructure automation.
 
 In this guide, we will explore how to deploy Pulumi Self-Hosted in an air-gapped environment, covering the key requirements, setup process, and best practices.
 
@@ -93,8 +93,8 @@ Pulumi Self-Hosted can be installed using Kubernetes, Docker, or virtual machine
 2. Download the [Pulumi Self-Hosted images](/docs/administration/self-hosting/components)
     * Retrieve the necessary installation files and images from a networked machine.
     * Transfer them to your air-gapped environment using an offline medium (USB drive, offline repository, etc.).
-3. Install Pulumi Self-Hosted (for instance, on Kubernetes) per [these instructions](/docs/administration/self-hosting/deployment-options)
-    * Deploy the Pulumi API server, database, and storage backend using Helm or static manifests.
+3. Install Pulumi Self-Hosted (for instance, on Kubernetes) per the [install guide](/docs/administration/self-hosting/install/)
+    * Deploy the Pulumi API server, database, and storage backend with the [bring-your-own-infrastructure installer](/docs/administration/self-hosting/deployment-options/byo-infra-hosted/), which applies Kubernetes manifests to a cluster you already operate.
     * Configure internal object storage (e.g., MinIO or an internal S3-compatible service) for state management.
 4. Configure Authentication and Access Control
     * Integrate with your organization's internal identity provider (OIDC, LDAP, SAML).

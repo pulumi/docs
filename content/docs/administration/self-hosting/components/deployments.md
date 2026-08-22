@@ -6,9 +6,9 @@ h1: Pulumi Cloud self-hosted Deployments
 menu:
   administration:
         name: Pulumi Deployments
-        parent: administration-security-compliance-self-hosted-components
+        parent: administration-self-hosting-components
         weight: 4
-        identifier: administration-security-compliance-self-hosted-components-deployments
+        identifier: administration-self-hosting-components-deployments
 aliases:
   - /docs/guides/self-hosted/components/deployments/
   - /docs/pulumi-cloud/self-hosted/components/deployments/

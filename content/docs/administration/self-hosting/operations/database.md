@@ -6,9 +6,9 @@ h1: Database Best Practices
 menu:
   administration:
     name: Database
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 2
-    identifier: administration-security-compliance-self-hosted-operations-database
+    identifier: administration-self-hosting-operations-database
 pulumi_cloud_feature: self-hosting
 ---
 
@@ -64,11 +64,12 @@ Deploy your database cluster across multiple availability zones with at least on
 
 The self-hosted installers default to the following database instance types:
 
-| Cloud | Default instance type | Notes |
+| Installer | Default instance type | Notes |
 | :-- | :-- | :-- |
-| AWS | db.r5.large (16 GB RAM) | Memory-optimized, recommended for production |
-| Azure | General Purpose D2ads_v5 or equivalent | 2 vCPU / 8 GB RAM |
-| GCP | db-g1-small (1.7 GB RAM) | Minimal; upgrade for production use |
+| AWS EKS | db.r5.large (16 GB RAM) | Memory-optimized, recommended for production. Set via `dbInstanceType` in the `20-database` project |
+| AWS ECS | db.t3.small | Burstable; raise `dbInstanceType` before running production workloads |
+| Azure AKS | General Purpose D2ads_v5 or equivalent | 2 vCPU / 8 GB RAM |
+| GCP GKE | db-g1-small (1.7 GB RAM) | Minimal; upgrade for production use |
 
 For production workloads, start with a memory-optimized instance with at least 16 GB RAM (db.r5.large, db.r6g.large, General Purpose D4s_v3, or equivalent) and scale based on monitoring. Burstable instances (db.t3.*) are acceptable for development and light workloads but may throttle under sustained load.
 

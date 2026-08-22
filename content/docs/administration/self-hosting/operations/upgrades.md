@@ -6,15 +6,17 @@ h1: Upgrade Pipeline
 menu:
   administration:
     name: Upgrades
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 8
-    identifier: administration-security-compliance-self-hosted-operations-upgrades
+    identifier: administration-self-hosting-operations-upgrades
 pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note />}}
 
 This page covers how to safely update your self-hosted Pulumi Cloud deployment. For version-specific changes, see the [Changelog](/docs/administration/self-hosting/changelog/).
+
+{{< self-hosting-schema-v2-note />}}
 
 ## Staged rollouts
 

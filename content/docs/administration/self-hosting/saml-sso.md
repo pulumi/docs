@@ -8,7 +8,7 @@ menu:
         name: SAML SSO
         parent: administration-self-hosting
         weight: 3
-        identifier: administration-security-compliance-self-hosted-saml-sso
+        identifier: administration-self-hosting-saml-sso
 aliases:
   - /docs/guides/self-hosted/saml-sso/
   - /docs/pulumi-cloud/self-hosted/saml-sso/
@@ -16,6 +16,8 @@ aliases:
   - /docs/pulumi-cloud/admin/self-hosted/saml-sso/
 pulumi_cloud_feature: self-hosting
 ---
+
+{{< self-hosting-trial-note />}}
 
 The self-hosted option allows you to control various aspects of Pulumi Cloud including how users will sign in to the [Pulumi Cloud console](/docs/administration/self-hosting/components/console/).
 

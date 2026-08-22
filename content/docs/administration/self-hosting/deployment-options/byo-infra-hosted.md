@@ -6,15 +6,17 @@ h1: Pulumi Cloud self-hosted BYO-infra install
 menu:
   administration:
         name: Bring-your-own infra
-        parent: administration-security-compliance-self-hosted-deployment-options
+        parent: administration-self-hosting-deployment-options
         weight: 7
-        identifier: administration-security-compliance-self-hosted-deployment-options-byo-infra-hosted
+        identifier: administration-self-hosting-deployment-options-byo-infra-hosted
 aliases:
   - /docs/guides/self-hosted/byo-infra-hosted/
   - /docs/pulumi-cloud/self-hosted/deployment-options/byo-infra-hosted/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/byo-infra-hosted/
 pulumi_cloud_feature: self-hosting
 ---
+
+{{< self-hosting-trial-note />}}
 
 The [BYO-Infrastructure Installer](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra) installer is used to deploy the self-hosted Pulumi Cloud on your own K8s, MySQL and S3-compatible infrastructure.
 
@@ -40,9 +42,13 @@ To this end, you need to set up the following:
 
 See the [README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra/README.md) file provided with the installer package for detailed deployment steps.
 
+{{< self-hosted-first-admin-note />}}
+
 ## BYO Infrastructure Hosted System Management and Maintenance
 
 ### Pulumi Cloud Updates
+
+{{< self-hosting-schema-v2-note />}}
 
 When deploying the Pulumi Cloud, it is recommended to pin the image tag to a specific version. See the [installer's README](https://github.com/pulumi/pulumi-self-hosted-installers/tree/master/byo-infra/README.md) file to set the `imageTag` configuration property for the installer to use.
 

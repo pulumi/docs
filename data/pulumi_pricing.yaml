@@ -213,7 +213,7 @@ editions:
         style: primary
       features_intro: "Everything in **Enterprise**, plus:"
       features:
-        - "[Self-hosting available](/product/self-hosted)"
+        - "[Self-hosting available](/product/self-hosted/)"
         - Built-in compliance (NIST, PCI, and more)
         - Automatic group & user sync (SCIM)
         - Audit logs export
