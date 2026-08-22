@@ -1151,7 +1151,7 @@ resources:
       ami: ${amazonLinux.id}
       instanceType: ${instanceType}
       subnetId: ${public.id}
-      vpcSecurityGroupIds: [${web-sg.id}]
+      vpcSecurityGroupIds: ["${web-sg.id}"]
       userData: |
         #!/bin/bash
         yum update -y
