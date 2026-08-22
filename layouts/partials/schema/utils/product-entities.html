@@ -7,7 +7,7 @@
 {{/* Define all Pulumi products with their relationships */}}
 {{ $pulumiCLI := dict
   "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/#pulumi-cli"
+  "@id" "https://www.pulumi.com/product/infrastructure-as-code/#main-content"
   "name" "Pulumi CLI"
   "applicationCategory" "Infrastructure as Code"
   "operatingSystem" (slice "macOS" "Windows" "Linux")
@@ -19,47 +19,47 @@
   )
   "isPartOf" (dict
     "@type" "SoftwareApplication"
-    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "@id" "https://www.pulumi.com/#pulumi-platform"
     "name" "Pulumi Platform"
   )
 }}
 
 {{ $pulumiCloud := dict
   "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/product/#software"
+  "@id" "https://www.pulumi.com/product/#main-content"
   "name" "Pulumi Cloud"
   "applicationCategory" "Cloud Management Platform"
   "url" "https://www.pulumi.com/product/"
   "isPartOf" (dict
     "@type" "SoftwareApplication"
-    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "@id" "https://www.pulumi.com/#pulumi-platform"
     "name" "Pulumi Platform"
   )
 }}
 
 {{ $pulumiESC := dict
   "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/product/esc/#software"
+  "@id" "https://www.pulumi.com/product/secrets-management/#main-content"
   "name" "Pulumi ESC"
   "alternateName" "Pulumi Environments, Secrets, and Configuration"
   "applicationCategory" "Secrets Management"
-  "url" "https://www.pulumi.com/product/esc/"
+  "url" "https://www.pulumi.com/product/secrets-management/"
   "isPartOf" (dict
     "@type" "SoftwareApplication"
-    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "@id" "https://www.pulumi.com/#pulumi-platform"
     "name" "Pulumi Platform"
   )
 }}
 
 {{ $pulumiInsights := dict
   "@type" "SoftwareApplication"
-  "@id" "https://www.pulumi.com/product/pulumi-insights/#software"
+  "@id" "https://www.pulumi.com/product/insights-governance/#main-content"
   "name" "Pulumi Insights"
   "applicationCategory" "Cloud Intelligence Platform"
-  "url" "https://www.pulumi.com/product/pulumi-insights/"
+  "url" "https://www.pulumi.com/product/insights-governance/"
   "isPartOf" (dict
     "@type" "SoftwareApplication"
-    "@id" "https://www.pulumi.com/product/#pulumi-platform"
+    "@id" "https://www.pulumi.com/#pulumi-platform"
     "name" "Pulumi Platform"
   )
 }}
