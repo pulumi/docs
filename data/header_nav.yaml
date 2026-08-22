@@ -59,7 +59,7 @@ items:
             track: header-engineers-docs
           - label: Registry
             href: /registry/
-            description: Browse 170+ cloud providers and packages
+            description: Browse 300+ cloud providers and packages
             icon: package
             track: header-engineers-registry
           - label: Templates

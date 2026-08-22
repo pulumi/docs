@@ -1,6 +1,6 @@
 ---
 title: "Crossplane Alternative | Pulumi"
-meta_desc: "Cloud + Kubernetes in one workflow. Real languages instead of YAML CRDs. No K8s cluster required for cloud provisioning. 170+ providers."
+meta_desc: "Cloud + Kubernetes in one workflow. Real languages instead of YAML CRDs. No K8s cluster required for cloud provisioning. 200+ providers."
 layout: gads-template
 block_external_search_index: true
 
@@ -26,7 +26,7 @@ key_features_above:
         - title: "Author in any language, deploy to any cloud"
           sub_title: "Pulumi Infrastructure as Code Engine"
           description:
-            Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to 170+ providers like AWS, Azure, Google Cloud, and Kubernetes.
+                Author infrastructure as code (IaC) using programming languages you know and love – including TypeScript, JavaScript, Python, Go, .NET, Java, YAML, and HCL. Deploy to 200+ providers like AWS, Azure, Google Cloud, and Kubernetes.
           features:
               - title: Code faster
                 description: |
@@ -34,7 +34,7 @@ key_features_above:
                 icon: code
               - title: Build on any cloud
                 description: |
-                    Access the full breadth of services in AWS, Azure, GCP, and 170+ providers through
+                    Access the full breadth of services in AWS, Azure, GCP, and 200+ providers through
                     a complete and consistent SDK interface.
                 icon: global
               - title: AI-powered infrastructure
@@ -176,7 +176,7 @@ stats:
         number: "4,000+"
         description: "Companies in production"
     integration:
-        number: "170+"
+        number: "200+"
         description: "Cloud and service integrations"
 
 case_studies:
