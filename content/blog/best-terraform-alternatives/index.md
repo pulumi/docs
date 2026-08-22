@@ -1,8 +1,9 @@
 ---
 title: "Best Terraform Alternatives in 2026"
 date: 2026-07-18
+updated: 2026-08-21
 draft: false
-meta_desc: "The best Terraform alternatives for 2026: Pulumi, OpenTofu, AWS CDK, Crossplane, and Bicep, compared on multi-cloud reach, governance, and AI-agent readiness."
+meta_desc: "Terraform alternatives for 2026, updated for CDKTF's sunset and OpenTofu 1.12: Pulumi, AWS CDK, Crossplane, and Bicep compared on reach and governance."
 feature_image: feature.png
 authors:
     - pulumi-content-team
@@ -16,13 +17,15 @@ category: general
 faq_schema: true
 social:
     twitter: |
-        AI coding agents are now part of most infrastructure workflows, reshaping how teams evaluate Terraform alternatives in 2026.
+        Updated for August 2026: CDK for Terraform is archived, OpenTofu is at 1.12, and Pulumi now runs your existing .tf files directly.
 
-        We compared eight options on multi-cloud reach, governance, and how well each works with an agent in the loop.
+        We compared eight Terraform alternatives on multi-cloud reach, governance, and how well each works with an agent in the loop.
     linkedin: |
         Terraform remains a capable, widely used tool. But as AI coding agents become part of everyday infrastructure work, teams are re-evaluating what they need from their IaC platform.
 
         Agents reason best about code they were trained on: real, general-purpose languages with tests, functions, and packages, not a single proprietary DSL. That's prompting a fresh look at the Terraform-alternatives landscape.
+
+        Since we first published this guide, HashiCorp archived CDK for Terraform, OpenTofu shipped its 1.12 release, and Pulumi shipped both native HCL support and a Terraform-compatible state backend, so authoring format and deployment engine no longer have to be the same decision.
 
         We lined up eight alternatives, from a community-governed HCL-compatible fork to Kubernetes-native frameworks to general-purpose-language platforms, against the same three questions: multi-cloud reach, governance, and agent-readiness.
 
@@ -30,10 +33,12 @@ social:
     bluesky: |
         Terraform alternatives in 2026 split into three camps: general-purpose-language platforms, HCL-compatible forks, and cloud-specific tools.
 
-        The one that fits your team increasingly depends on something most comparisons skip: how well it works with an AI coding agent in the loop.
+        Updated for August 2026: CDK for Terraform is now archived, and Pulumi can run your .tf files directly or sit under your existing Terraform CLI as a state backend.
 ---
 
-The strongest Terraform alternatives in 2026 split into three groups: general-purpose-language platforms like Pulumi and AWS CDK, HCL-compatible forks like OpenTofu, and cloud- or platform-specific tools like AWS CloudFormation, Azure Bicep, and Crossplane. (Pulumi also supports HCL directly and can serve as a Terraform-compatible state backend, so teams don't have to choose between staying in HCL and gaining Pulumi Cloud's platform capabilities.) Which one fits depends less on syntax preference than on how well it lets your team, and increasingly your AI coding agents, read, test, and safely change infrastructure code.
+The strongest Terraform alternatives in 2026 fall into three groups: general-purpose-language platforms like Pulumi and AWS CDK, HCL-compatible forks like OpenTofu, and cloud-specific tools like AWS CloudFormation, Azure Bicep, and Crossplane. Which one fits depends less on syntax preference than on how well it lets your team, and your AI coding agents, read, test, and change infrastructure safely.
+
+What's changed since this list was last useful: HashiCorp archived CDK for Terraform in December 2025, OpenTofu shipped its 1.12 release in May 2026, and Pulumi now runs the same HCL files Terraform does, so authoring format and deployment engine are separate decisions.
 
 <!--more-->
 
@@ -48,6 +53,22 @@ The second is the accumulated cost of working in a domain-specific language. HCL
 The third, and the one reshaping the conversation fastest, is agentic AI. Coding agents like GitHub Copilot, Claude, and Pulumi's own Neo are now a standing part of how engineering teams write and review code, and infrastructure is not exempt. These agents were trained on enormous volumes of real Python, TypeScript, Go, and Java, plus their entire testing and tooling ecosystems, but on comparatively little well-formed HCL. When an agent can write and modify infrastructure in a language it already understands deeply, the feedback loop of propose, test, preview, and ship gets tighter. When it has to reason about a purpose-built DSL, that loop lengthens and the agent is more likely to produce configuration nobody would write by hand. That gap doesn't disqualify Terraform, but it does mean "which IaC tool works best with AI agents" is now a first-class question when teams evaluate alternatives, alongside the perennial ones about multi-cloud reach and governance.
 
 None of this is an argument that Terraform is going away. It remains a capable, widely adopted tool with a genuinely large provider catalog. It's an argument that 2026 is a reasonable moment to look at what else exists, honestly, and pick the tool that fits where your infrastructure and your engineering workflow are actually headed. For a broader look at how AI agents are changing infrastructure work generally, see [building for agentic infrastructure](/releases/agentic-infrastructure-era/). For a head-to-head look at Pulumi and Terraform specifically, see our [Pulumi vs. Terraform comparison](/docs/iac/comparisons/terraform/).
+
+## Do you have to leave HCL behind?
+
+No, and that's a meaningful change since this guide was last written. Authoring format and deployment engine used to be a single choice: pick Terraform, and HCL and the Terraform CLI came as a bundle. Two things Pulumi shipped as generally available in August 2026 split that bundle apart.
+
+The first is [Pulumi HCL](/docs/iac/languages-sdks/hcl/), which runs the same `.tf` files you'd write for Terraform or OpenTofu, unmodified, on Pulumi's engine. A project is a `Pulumi.yaml` with `runtime: hcl` and one or more `.tf` files, needs Pulumi CLI 3.256.0 or later, and resolves providers against the OpenTofu registry by default. It isn't a perfect emulation: `backend`, `provider_meta`, `required_version`, and `experiments` blocks are accepted but ignored with a warning, a `cloud` block is an error, existing Terraform state files aren't read directly (bring resources over with `pulumi import --from hcl`), and provisioner `connection` blocks support SSH only.
+
+The second is [Pulumi Cloud as a Terraform and OpenTofu state backend](/docs/iac/get-started/terraform/terraform-state-backend/), which goes the other direction: keep the Terraform or OpenTofu CLI exactly as it is, and point its `backend "remote"` block at `tf.pulumi.com` for encrypted state storage, locking, update history, and Insights visibility. This also has real limits worth stating plainly: drift detection isn't available for Terraform-managed stacks (it requires a Pulumi program), migrating from HCP Terraform state is a manual export and push rather than an automatic switch, and update diffs are derived from state rather than a live `terraform plan`, so they're best-effort.
+
+| If you want to keep... | Change this... |
+|---|---|
+| Your `.tf` files and HCL syntax | Nothing — run them on Pulumi's engine with `runtime: hcl` |
+| Your Terraform or OpenTofu CLI and workflow | Only the backend, pointed at Pulumi Cloud |
+| Neither, and want a general-purpose language | Everything — see the [Pulumi vs. Terraform comparison](/docs/iac/comparisons/terraform/) |
+
+For the mechanics of each path, see [terraform-to-pulumi-cloud-hands-on](/blog/terraform-to-pulumi-cloud-hands-on/), [how Pulumi's engine models Terraform's data model](/blog/terraforms-data-model-on-pulumis-engine/), and [how Pulumi HCL is tested for OpenTofu compatibility](/blog/compatibility-testing-pulumi-hcl/).
 
 ## Pulumi
 
@@ -65,7 +86,9 @@ At scale, Pulumi customers report concrete outcomes. BMW's Software Factory mana
 
 [OpenTofu](/docs/iac/comparisons/terraform/opentofu/) is an open-source fork of Terraform, governed by the Linux Foundation rather than a single vendor. It emerged directly from HashiCorp's August 2023 license change: a group of Terraform users and vendors forked the last MPL-licensed Terraform release and committed to keeping the fork under a permissive open-source license going forward.
 
-The practical pitch is continuity: OpenTofu aims to stay a close drop-in replacement for Terraform, using the same HCL syntax, the same provider ecosystem (most Terraform providers work unmodified), and largely the same workflow, so teams can migrate with minimal rewriting. Since forking, OpenTofu's maintainers have also started adding features HashiCorp hadn't shipped, including state encryption at rest, giving it a case for teams who want to stay in HCL but prioritize community governance over vendor governance.
+The practical pitch is continuity: OpenTofu aims to stay a close drop-in replacement for Terraform, using the same HCL syntax, the same provider ecosystem (most Terraform providers work unmodified), and largely the same workflow, so teams can migrate with minimal rewriting. OpenTofu's own FAQ notes the compatibility boundary directly: it works with state files created by Terraform up through the 1.5.x line, the last release before HashiCorp's license change.
+
+Since forking, OpenTofu's maintainers have also shipped features HashiCorp hasn't, including state encryption, provider-defined functions, `for_each` on provider blocks, OCI registry support for providers and modules, and, in the [1.12 release from May 2026](https://opentofu.org/blog/opentofu-1-12-0/), dynamic `prevent_destroy` values. The project runs under the Linux Foundation and was accepted into the CNCF Sandbox in April 2025; its registry now lists more than 3,900 providers and 23,600 modules. It remains MPL-2.0 licensed.
 
 The tradeoff is that OpenTofu inherits HCL's ceiling along with its familiarity. It solves the licensing and governance concern cleanly, but it doesn't address the testing, composability, or general-purpose-language advantages that come with moving to a platform like Pulumi or AWS CDK, and AI coding agents face the same reasoning gap with OpenTofu's HCL that they do with Terraform's.
 
@@ -79,9 +102,15 @@ The obvious limit is scope: CloudFormation only provisions AWS resources, so any
 
 AWS CDK (Cloud Development Kit) lets you define AWS infrastructure using general-purpose languages including TypeScript, JavaScript, Python, Java, C#, and Go. Under the hood, CDK code compiles down to standard CloudFormation templates, which AWS then deploys the same way it deploys any other CloudFormation stack.
 
-CDK gives AWS-only teams most of the general-purpose-language benefits that Pulumi offers: real loops, functions, tests, and packages, plus the IDE support that comes with a mainstream language. The compile step is the notable difference from a platform like Pulumi, which runs your program directly against cloud provider APIs: CDK synthesizes a CloudFormation template first, then hands that off, which adds a layer between what your code says and what gets deployed, and can slow the feedback loop an AI coding agent depends on when it's proposing and testing changes iteratively. CDK is also AWS-only, so it doesn't help teams who need one consistent authoring model across multiple clouds.
+CDK gives AWS-only teams most of the general-purpose-language benefits that Pulumi offers: real loops, functions, tests, and packages, plus the IDE support that comes with a mainstream language. The compile step is the notable difference from a platform like Pulumi, which runs your program directly against cloud provider APIs: CDK synthesizes a CloudFormation template first, then hands that off, which adds a layer between what your code says and what gets deployed, and can slow the feedback loop an AI coding agent depends on when it's proposing and testing changes iteratively. CDK is also AWS-only, so it doesn't help teams who need one consistent authoring model across multiple clouds. AWS CDK is actively developed and unaffected by HashiCorp's decision to sunset its own, differently named, CDK for Terraform — see the next section.
 
-It's worth distinguishing AWS CDK clearly from HashiCorp's CDK for Terraform (CDKTF), which offered a similar general-purpose-language wrapper around Terraform's HCL engine. HashiCorp sunset and archived CDKTF in December 2025, stating in its own FAQ that the project "did not find product-market fit at scale" and redirecting investment to Terraform core instead. Existing CDKTF code still runs, but the project receives no further commits, fixes, or provider updates, which makes it a poor foundation for new work regardless of language preference.
+## CDK for Terraform (CDKTF) is archived, not an alternative
+
+CDK for Terraform used to appear on lists like this one as a way to write Terraform infrastructure in TypeScript, Python, Java, C#, or Go instead of HCL. That's no longer a live option. HashiCorp [archived the project on December 10, 2025](https://github.com/hashicorp/terraform-cdk), stating in its own sunset notice that CDKTF "did not find product-market fit at scale" and that it would "focus its investments on Terraform core and its broader ecosystem" instead. The GitHub repository is now read-only, and per HashiCorp's FAQ, "no further updates, fixes, or improvements (including compatibility updates) will be made."
+
+CDKTF is MPL-licensed, so existing code keeps running and community forks are technically possible, but there's no maintainer, no security patching, and no provider compatibility work going forward. Teams currently on CDKTF have two realistic paths: move to native HCL with OpenTofu or Terraform, or move to a maintained general-purpose-language platform. Pulumi supports both directions — HCL directly, or Python, TypeScript, Go, C#, and Java for a full migration — and Pulumi's own [teardown of the sunset and what to do next](/blog/cdktf-is-deprecated-whats-next-for-your-team/) covers the migration paths in more depth than fits here.
+
+One disambiguation worth stating plainly, since the two names are easy to confuse: AWS CDK and CDK for Terraform are different, unrelated projects that happened to share the "CDK" name and a general shape. AWS CDK targets CloudFormation, is maintained by AWS, and continues to ship regular releases. Only CDKTF, HashiCorp's Terraform-targeting CDK, is the one that's archived.
 
 ## Crossplane
 
@@ -105,20 +134,33 @@ Ansible is often grouped with Terraform in "IaC tool" comparisons, but the two s
 
 Terragrunt is a thin orchestration wrapper maintained by Gruntwork that sits on top of Terraform or OpenTofu, rather than replacing either one. Its job is keeping multi-environment, multi-module HCL configurations DRY, and coordinating the order in which modules apply across a larger infrastructure codebase.
 
-It's worth being precise about what Terragrunt is not: it doesn't introduce a new language, provider model, or state backend, and it doesn't address HCL's testing or abstraction limitations on its own. Teams considering Terragrunt aren't choosing a Terraform alternative; they're choosing a companion tool that makes Terraform or OpenTofu easier to operate at scale. If the underlying frustration is with HCL itself rather than with configuration sprawl, Terragrunt won't resolve it.
+Terragrunt reached [1.0 in March 2026](https://www.gruntwork.io/blog/terragrunt-1-0-released), with the latest patch, 1.1.3, out in August 2026. The headline of 1.0 wasn't a new feature; it was a formal [backwards-compatibility guarantee](https://terragrunt.gruntwork.io/docs/process/1-0-guarantees) covering CLI flags, HCL config, and command output for the entire 1.x line, aimed at teams who'd been burned by breaking changes in earlier releases. Terragrunt Stacks, which let a single configuration generate multiple units, reached general availability earlier, in version 0.78. One detail worth knowing if you're choosing between forks: Terragrunt now shells out to `tofu` by default rather than `terraform`, reflecting where the community around it has settled; that's overridable via the `terraform_binary` option. It's still MIT licensed.
+
+It's worth being precise about what Terragrunt is not: it doesn't introduce a new language, provider model, or state backend, and it doesn't address HCL's testing or abstraction limitations on its own. Teams considering Terragrunt aren't choosing a Terraform alternative; they're choosing a companion tool that makes Terraform or OpenTofu easier to operate at scale. If the underlying frustration is with HCL itself rather than with configuration sprawl, Terragrunt won't resolve it, and it's worth reading [what Terragrunt is and isn't](/what-is/what-is-terragrunt/) before assuming it solves a language problem.
 
 ## Comparison table
 
 | Tool | Language | Cloud coverage | AI-agent readiness | Governance & policy | Best for |
 |---|---|---|---|---|---|
 | Pulumi | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, HCL | 180+ providers, any cloud | High — real languages agents are trained on; Neo agent built in | Policy as code, ESC secrets, human-in-the-loop approvals | Teams standardizing on AI-native, multi-cloud engineering workflows |
-| OpenTofu | HCL | Same provider ecosystem as Terraform | Same as Terraform — DSL limits agent reasoning | Community-governed; adding features like state encryption | Terraform users prioritizing open governance with minimal migration |
+| OpenTofu | HCL | Same provider ecosystem as Terraform | Same as Terraform — DSL limits agent reasoning | Linux Foundation / CNCF Sandbox; features like state encryption and dynamic `prevent_destroy` | Terraform users prioritizing open governance with minimal migration |
 | AWS CloudFormation | YAML/JSON | AWS only | Low — templated config, no native testing | AWS-managed state and rollback | Teams fully committed to AWS wanting a fully managed native service |
 | AWS CDK | TypeScript, Python, Java, C#, Go | AWS only (compiles to CloudFormation) | Medium — real languages, but a compile step slows feedback | Inherits CloudFormation governance | AWS-only teams wanting general-purpose languages |
+| CDK for Terraform (CDKTF) | TypeScript, Python, Java, C#, Go | Archived Dec. 2025 — not a viable choice | N/A — no further updates of any kind | HashiCorp, unmaintained | Nothing new; existing users should plan a move |
 | Crossplane | Kubernetes YAML/CRDs | Any cloud, via Kubernetes control plane | Medium — benefits from Kubernetes-native agent tooling | RBAC and GitOps via Kubernetes | Platform teams already standardized on Kubernetes |
 | Azure Bicep | Bicep DSL (compiles to ARM) | Azure only | Low — DSL, no general-purpose tooling | Inherits Azure Resource Manager governance | Azure-only teams wanting a cleaner ARM authoring layer |
 | Ansible | YAML playbooks | Any cloud, config-management focused | Low for provisioning; not its design center | Role-based playbooks, limited policy tooling | Day-two configuration management alongside an IaC tool |
 | Terragrunt | HCL (wraps Terraform/OpenTofu) | Same as underlying Terraform/OpenTofu | Same as underlying Terraform/OpenTofu | Same as underlying Terraform/OpenTofu | Keeping large Terraform/OpenTofu codebases DRY, not a language alternative |
+
+### Where each project stands in August 2026
+
+| Project | Latest release | License | Governed by | Status |
+|---|---|---|---|---|
+| Terraform | 1.15.x | Business Source License | HashiCorp, an IBM Company | Actively developed |
+| OpenTofu | 1.12 (May 2026) | MPL-2.0 | Linux Foundation; CNCF Sandbox | Actively developed |
+| Terragrunt | 1.1.3 (Aug. 2026) | MIT | Gruntwork | Actively developed |
+| CDK for Terraform (CDKTF) | Archived at sunset | MPL-2.0 | None — unmaintained | Archived Dec. 10, 2025 |
+| Pulumi | Rolling releases; CLI 3.259.x | Apache 2.0 (SDKs/CLI) | Pulumi Corporation | Actively developed |
 
 ## How to choose
 
@@ -128,7 +170,7 @@ If your team is already running Kubernetes as its platform layer and wants infra
 
 If you're deep in Terraform today, comfortable with HCL, and your primary concern is licensing and governance rather than language or workflow, OpenTofu is the lowest-friction path: same syntax, same providers, community governance instead of vendor governance.
 
-If your team is investing in AI coding agents as part of its engineering workflow, wants multi-cloud reach without maintaining separate tools per provider, and values real testing, packaging, and code review practices for infrastructure the same way it does for application code, Pulumi is built specifically for that combination. It's also the most direct migration path for teams currently on Terraform or CDKTF who want to move to a general-purpose language without changing which clouds they manage.
+If your team is investing in AI coding agents as part of its engineering workflow, wants multi-cloud reach without maintaining separate tools per provider, and values real testing, packaging, and code review practices for infrastructure the same way it does for application code, Pulumi is built specifically for that combination. It's also the most direct path for teams on the now-archived CDKTF who need an actively maintained general-purpose-language platform, and, for teams on Terraform who aren't ready to leave HCL, it's the only option here that lets you keep writing `.tf` files while gaining that platform underneath them.
 
 ## Frequently asked questions
 
@@ -158,8 +200,16 @@ For teams that do want to move off HCL entirely, that's also an option: Pulumi's
 
 OpenTofu tracks Terraform's last open-source release closely and remains compatible with most existing Terraform configurations and providers. Since forking, its Linux Foundation-governed maintainers have also shipped features Terraform hadn't offered, such as state encryption, while newer HashiCorp-only Terraform features naturally won't appear in OpenTofu unless the community implements equivalents independently.
 
+### Is CDK for Terraform (CDKTF) still supported?
+
+No. HashiCorp archived CDKTF on December 10, 2025 and says in its own FAQ that "no further updates, fixes, or improvements (including compatibility updates) will be made." Existing CDKTF code keeps running since the license is MPL, but there's no maintainer behind it. Teams still on CDKTF should move to native HCL on Terraform or OpenTofu, or to a maintained general-purpose-language platform like Pulumi. This is a different project from AWS CDK, which is unaffected and actively developed.
+
+### Is Terragrunt a Terraform alternative?
+
+Not really. Terragrunt is an orchestration wrapper that sits on top of Terraform or OpenTofu to keep large, multi-environment HCL codebases DRY; it doesn't run infrastructure on its own, introduce a new provider model, or change what language you write in. Terragrunt reached 1.0 in March 2026 with a formal backwards-compatibility guarantee for its 1.x line, and now defaults to running OpenTofu's `tofu` binary rather than Terraform's. Teams pick Terragrunt to make Terraform or OpenTofu easier to operate at scale, not as a replacement for either.
+
 For a broader roundup covering the full infrastructure-as-code category rather than Terraform alternatives specifically, see our guide to [the best IaC tools](/what-is/top-iac-tools/).
 
 ## Conclusion
 
-Terraform remains a capable, widely used tool, and for teams with no appetite to change, OpenTofu offers a nearly friction-free path to the same workflow under different governance. But the more interesting question for 2026 isn't whether Terraform still works, it's whether your infrastructure tooling can keep pace with how your engineering organization is actually building software now: with AI coding agents as active participants, not just autocomplete. That question favors platforms built on real, general-purpose languages, tested and reviewed the same way application code is, over any tool, new or established, still built around a purpose-specific configuration syntax. Evaluate honestly against your own cloud footprint, existing platform investment, and how central AI-assisted development already is to your team, and the right alternative, or the right reason to stay put, becomes clear quickly.
+Terraform remains a capable, widely used tool, and for teams with no appetite to change, OpenTofu offers a nearly friction-free path to the same workflow under different governance. The question worth asking for 2026 is whether your infrastructure tooling can keep pace with how your engineering organization actually builds software now, with AI coding agents as active participants rather than autocomplete. That question favors platforms built on real, general-purpose languages, tested and reviewed the same way application code is, over any tool, new or established, still built around a purpose-specific configuration syntax. Evaluate honestly against your own cloud footprint, existing platform investment, and how central AI-assisted development already is to your team, and the right alternative, or the right reason to stay put, becomes clear quickly.
