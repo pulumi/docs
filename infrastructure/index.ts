@@ -6,6 +6,7 @@ import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
 import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { SupportFormApi } from "./supportForm";
 
 const stackConfig = new pulumi.Config();
 
@@ -77,6 +78,13 @@ const config = {
 
     // wafRateLimit is the maximum number of requests per 5-minute window per IP before WAF blocks.
     wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
+
+    // enableSupportForm toggles the /api/support endpoint backing the support-request
+    // form at /support/new/ (see supportForm.ts). The Intercom integration is stubbed
+    // for now; when it lands, its API key becomes a stack secret (pulumi config set
+    // --secret intercomApiKey, or an ESC environment entry) surfaced to the Lambda as
+    // an environment variable — never checked into this repo or shipped to the frontend.
+    enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
 };
 
 // CloudFront Function to lowercase URIs for .NET SDK docs so that
@@ -787,6 +795,20 @@ const VersionedDocsResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPol
     },
 });
 
+// API responses (currently just /api/support*) must never be cached by browsers
+// or intermediaries. DefaultCachePolicy would stamp max-age=60 on them, so this
+// policy overrides Cache-Control to no-store while keeping the security headers.
+const ApiResponseHeadersPolicy = new aws.cloudfront.ResponseHeadersPolicy("api-response-headers", {
+    securityHeadersConfig: baseSecurityHeadersConfig,
+    customHeadersConfig: {
+        items: [permissionsPolicyHeaderItem, {
+            header: "Cache-Control",
+            value: "no-store",
+            override: true,
+        }],
+    },
+});
+
 // baseCacheBehavior holds the fields shared by every behavior. TTLs and
 // cache-key config are NOT set here: each behavior (default or ordered) must
 // attach its own cachePolicyId, or set forwardedValues + minTtl/defaultTtl/maxTtl
@@ -928,6 +950,39 @@ if (config.versionedDocsStack) {
     });
 }
 
+// The support-request form endpoint (see supportForm.ts). Additive and fully
+// optional — dev stacks and PR previews without enableSupportForm get no origin
+// or behavior, and the form's frontend degrades gracefully when POSTs to
+// /api/support fail.
+const supportFormOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const supportFormBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+let supportForm: SupportFormApi | undefined;
+
+if (config.enableSupportForm) {
+    supportForm = new SupportFormApi("support-form");
+
+    supportFormOrigins.push(supportForm.getOrigin());
+
+    supportFormBehaviors.push({
+        ...baseCacheBehavior,
+        targetOriginId: "support-form-api",
+        pathPattern: "/api/support*",
+        // CloudFront's only POST-capable allowedMethods set is all seven; the
+        // handler 405s everything but POST. Only GET/HEAD are cacheable, and
+        // the no-cache policy keeps even those uncached.
+        allowedMethods: ["GET", "HEAD", "OPTIONS", "PUT", "POST", "PATCH", "DELETE"],
+        cachedMethods: ["GET", "HEAD"],
+        cachePolicyId: noCacheKeyPolicy.id,
+        // Forwards Content-Type (and the rest of the viewer request) while
+        // stripping Host, which Function URL origins require.
+        originRequestPolicyId: allViewerExceptHostHeaderId,
+        responseHeadersPolicyId: ApiResponseHeadersPolicy.id,
+        // API traffic gets no edge redirects and no markdown negotiation.
+        lambdaFunctionAssociations: [],
+        functionAssociations: [],
+    });
+}
+
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
 const domainAliases = [];
 
@@ -994,6 +1049,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         ...guidesOrigins,
         ...answersOrigins,
         ...versionedDocsOrigins,
+        ...supportFormOrigins,
     ],
 
     // Default object to serve when no path is given.
@@ -1016,6 +1072,10 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     },
 
     orderedCacheBehaviors: [
+        // The support-form API endpoint. /api/support* overlaps no other
+        // pattern; listed first because it's the only non-content behavior.
+        ...supportFormBehaviors,
+
         ...registryBehaviors,
         ...guidesBehaviors,
         ...answersBehaviors,
@@ -1369,4 +1429,5 @@ export const cloudFrontDistributionId = cdn.id;
 export const websiteDomain = config.websiteDomain;
 export const originS3BucketName = originBucket.bucket;
 export const wafWebAclArn = webAcl?.arn;
+export const supportFormFunctionName = supportForm?.getFunctionName();
 export const readme = fs.readFileSync("./README.md").toString();

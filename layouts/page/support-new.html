@@ -1,0 +1,202 @@
+{{ define "main" }}
+{{/*
+  /support/new — the custom support-request form replacing the Zendesk form at
+  support.pulumi.com/hc/en-us/requests/new as support moves to Intercom. All
+  copy lives in front matter; this layout just renders it.
+
+  Unlike the site's HubSpot-embedded forms, this is a hand-built <form> that
+  POSTs JSON to the same-origin /api/support endpoint (a Lambda behind
+  CloudFront; see infrastructure/supportForm.ts). Field chrome comes from the
+  shared form system (theme/src/scss/shared/_forms.scss) — invalid styling
+  keys off aria-invalid="true"; do not add CSS here.
+
+  Validation, submit flow, and the confirmation swap: theme/src/ts/support-form.ts.
+  That module owns the DOM contract via the data-support-form* attributes below,
+  and mirrors the server's validation rules (infrastructure/support-form/validation.ts).
+
+  The category option values are the API's closed enum — keep the front matter's
+  form.fields.category.options in sync with CATEGORIES in validation.ts.
+*/}}
+
+{{ $overview := .Params.overview }}
+{{ $form := .Params.form }}
+{{ $fields := $form.fields }}
+{{ $confirmation := .Params.confirmation }}
+{{ $helpLinks := .Params.help_links }}
+
+<div class="container mx-auto px-4 py-16 md:py-24" data-support-form-root>
+    <div class="max-w-2xl mx-auto">
+
+        <header class="mb-10">
+            {{ with $overview.eyebrow }}
+                <span class="font-overline text-violet-primary">{{ . }}</span>
+            {{ end }}
+            <h1 class="heading-xl mt-3">{{ $overview.title }}</h1>
+            <p class="body-xl text-gray-600 mt-4 mb-0">{{ $overview.description }}</p>
+        </header>
+
+        <div class="card bg-white p-8 md:p-10" data-support-form-card>
+            <noscript>
+                <p class="body-base text-gray-600">
+                    This form requires JavaScript. You can also open a ticket at
+                    <a href="https://support.pulumi.com/">support.pulumi.com</a>.
+                </p>
+            </noscript>
+
+            <form action="/api/support" method="post" novalidate data-support-form>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-email">{{ $fields.email.label }} <span aria-hidden="true">*</span></label>
+                    <input class="form-input" type="email" id="support-email" name="email"
+                           required maxlength="254" autocomplete="email" aria-describedby="support-email-error">
+                    <p class="form-error" id="support-email-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-name">{{ $fields.name.label }} <span aria-hidden="true">*</span></label>
+                    <input class="form-input" type="text" id="support-name" name="name"
+                           required maxlength="200" autocomplete="name" aria-describedby="support-name-error">
+                    <p class="form-error" id="support-name-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-company">{{ $fields.company.label }}</label>
+                    <input class="form-input" type="text" id="support-company" name="company"
+                           maxlength="200" autocomplete="organization" aria-describedby="support-company-error">
+                    <p class="form-error" id="support-company-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-organization">{{ $fields.organization.label }} <span aria-hidden="true">*</span></label>
+                    {{ with $fields.organization.help }}
+                        <p class="form-help mt-0 mb-1.5" id="support-organization-help">{{ . }}</p>
+                    {{ end }}
+                    <input class="form-input" type="text" id="support-organization" name="organization"
+                           required maxlength="200" autocomplete="off" spellcheck="false"
+                           aria-describedby="support-organization-help support-organization-error">
+                    <p class="form-error" id="support-organization-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-category">{{ $fields.category.label }} <span aria-hidden="true">*</span></label>
+                    {{ with $fields.category.help }}
+                        <p class="form-help mt-0 mb-1.5" id="support-category-help">{{ . }}</p>
+                    {{ end }}
+                    <select class="form-select" id="support-category" name="category" required
+                            aria-describedby="support-category-help support-category-error">
+                        <option value="" selected>{{ $fields.category.placeholder }}</option>
+                        {{ range $fields.category.options }}
+                            <option value="{{ .value }}">{{ .label }}</option>
+                        {{ end }}
+                    </select>
+                    <p class="form-error" id="support-category-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-subject">{{ $fields.subject.label }} <span aria-hidden="true">*</span></label>
+                    <input class="form-input" type="text" id="support-subject" name="subject"
+                           required maxlength="200" aria-describedby="support-subject-error">
+                    <p class="form-error" id="support-subject-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-description">{{ $fields.description.label }} <span aria-hidden="true">*</span></label>
+                    {{ with $fields.description.help }}
+                        <p class="form-help mt-0 mb-1.5" id="support-description-help">{{ . }}</p>
+                    {{ end }}
+                    <textarea class="form-textarea" id="support-description" name="description" rows="8"
+                              required maxlength="20000"
+                              aria-describedby="support-description-help support-description-error"></textarea>
+                    <p class="form-help" data-support-form-counter="support-description" hidden></p>
+                    <p class="form-error" id="support-description-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-pulumi-about">{{ $fields.pulumi_about.label }}</label>
+                    {{ with $fields.pulumi_about.help }}
+                        <p class="form-help mt-0 mb-1.5" id="support-pulumi-about-help">{{ . }}</p>
+                    {{ end }}
+                    <textarea class="form-textarea font-mono" id="support-pulumi-about" name="pulumiAbout" rows="5"
+                              maxlength="20000" spellcheck="false"
+                              aria-describedby="support-pulumi-about-help support-pulumi-about-error"></textarea>
+                    <p class="form-error" id="support-pulumi-about-error" hidden></p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="form-label" for="support-attachments">{{ $fields.attachments.label }}</label>
+                    {{ with $fields.attachments.help }}
+                        <p class="form-help mt-0 mb-1.5" id="support-attachments-help">{{ . }}</p>
+                    {{ end }}
+                    <input class="form-input" type="file" id="support-attachments" name="attachments" multiple
+                           aria-describedby="support-attachments-help support-attachments-error">
+                    <p class="form-error" id="support-attachments-error" hidden></p>
+                </div>
+
+                {{/* Honeypot: invisible to people, filled in by naive bots. The
+                     handler drops any submission that sets it. */}}
+                <div class="sr-only" aria-hidden="true">
+                    <label for="support-website">Website</label>
+                    <input type="text" id="support-website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div role="alert" data-support-form-banner hidden
+                     class="border border-red-800 bg-red-50 text-red-800 rounded-md px-4 py-3 body-sm mb-6">
+                    {{ $form.error_banner }}
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg" data-support-form-submit
+                        data-label="{{ $form.submit }}" data-busy-label="{{ $form.submitting }}">
+                    {{ $form.submit }}
+                </button>
+            </form>
+        </div>
+
+        <div class="card bg-white p-8 md:p-10" data-support-form-confirmation hidden tabindex="-1" role="status">
+            <div class="size-14 rounded-xl bg-violet-100 text-violet-primary flex items-center justify-center mb-6">
+                {{ partial "icon.html" (dict "name" "check" "weight" "bold" "class" "size-8") }}
+            </div>
+
+            <h2 class="heading-3 mt-0">{{ $confirmation.title }}</h2>
+            <p class="body-lg text-gray-600 mb-8">{{ $confirmation.description }}</p>
+
+            {{ with $confirmation.recap }}
+                <dl class="rounded-lg bg-gray-50 border border-gray-200 px-5 py-4 body-sm mb-8">
+                    {{ range . }}
+                        <div class="flex justify-between gap-4 py-1">
+                            <dt class="text-gray-500">{{ .label }}</dt>
+                            <dd class="font-semibold text-right m-0" data-support-form-value="{{ .field }}">&mdash;</dd>
+                        </div>
+                    {{ end }}
+                </dl>
+            {{ end }}
+
+            <ol class="list-none p-0 m-0">
+                {{ range $index, $step := $confirmation.steps }}
+                    <li class="flex gap-3 {{ if ne $index 0 }}mt-4{{ end }}">
+                        <span class="badge badge-brand mt-0.5">{{ add $index 1 }}</span>
+                        <span class="body-base text-gray-600"><strong class="text-gray-950">{{ $step.title }}</strong> {{ $step.description }}</span>
+                    </li>
+                {{ end }}
+            </ol>
+        </div>
+
+        {{ with $helpLinks }}
+            <div class="card-highlight p-8 md:p-10 mt-10">
+                <h2 class="heading-3 mt-0">{{ .title }}</h2>
+                <p class="body-base text-gray-600 mt-0">{{ .description }}</p>
+                <ul class="list-none p-0 m-0 flex flex-col items-start gap-2">
+                    {{ range .links }}
+                        <li class="m-0">
+                            <a href="{{ .url }}">
+                                {{ .label }}
+                                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                            </a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        {{ end }}
+
+    </div>
+</div>
+{{ end }}

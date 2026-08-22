@@ -18,6 +18,10 @@
         "skipLibCheck": true
     },
     "files": [
-        "index.ts"
+        "index.ts",
+        "supportForm.ts",
+        "support-form/validation.ts",
+        "support-form/handler.ts",
+        "support-form/validation.test.ts"
     ]
 }
