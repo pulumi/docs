@@ -75,7 +75,7 @@ This llms.txt covers www.pulumi.com, which includes:
 
 - [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
 - [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud (Individual, Team, Enterprise, Business Critical)
-- [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
+- [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 300+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
 - [Infrastructure AI](https://www.pulumi.com/docs/ai/): Using AI agents with Pulumi — bring your own agent via [Agent Skills](https://www.pulumi.com/docs/ai/skills/) and the [MCP server](https://www.pulumi.com/docs/ai/mcp-server/), or use [Pulumi Neo](https://www.pulumi.com/neo/), Pulumi's purpose-built infrastructure agent
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts
 - [Tutorials](https://www.pulumi.com/tutorials/): Hands-on tutorials for building cloud infrastructure with Pulumi
