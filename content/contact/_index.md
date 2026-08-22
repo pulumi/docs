@@ -16,7 +16,7 @@ quick_links:
           description: Get a guided walkthrough from our team before you commit to anything.
           cta_label: Request a demo
           url: /request-a-demo/
-          qualifier: Best if you want a guided walkthrough before your team commits.
+          qualifier: Best if you're evaluating Pulumi for a team and want your questions answered live.
 
         - label: Already a customer?
           description: File a support ticket for a fast response from our team.
@@ -28,6 +28,7 @@ form:
     - key: general
       label: General question
       hubspot_form_id: 71507f4e-e34e-4dc9-9da6-b44953cac811
+      qualifier: Best if your question doesn't fit any of the other options here.
 
     - key: sales
       label: Talk to sales
@@ -37,10 +38,12 @@ form:
     - key: tf-migration
       label: Migrate from Terraform
       hubspot_form_id: 123cfbdb-9ce4-4d33-a9b7-c30302463d7a
+      qualifier: Best if you already have Terraform or OpenTofu state you need to bring over.
 
     - key: support
       label: Help from support
       hubspot_form_id: cta1
+      qualifier: Best if something's already broken and you need it fixed fast.
       cta:
         label: Submit a Request
         url: https://support.pulumi.com/hc/en-us/requests/new
