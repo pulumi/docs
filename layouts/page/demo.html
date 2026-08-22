@@ -13,6 +13,18 @@
                         {{ end }}
                     </ul>
 
+                    {{ with .Params.self_serve }}
+                        <div class="mt-8 p-6 card bg-gray-50 max-w-lg">
+                            <h3 class="heading-5 m-0">{{ .title }}</h3>
+                            <p class="body-sm text-gray-600 my-2">{{ .description }}</p>
+                            <a href="{{ .cta_url }}"{{ partial "external-link-attrs.html" .cta_url | safeHTMLAttr }} class="btn btn-primary">
+                                {{ .cta_label }}
+                                {{ partial "icon.html" (dict "name" "arrow-right" "weight" "bold" "class" "size-4") }}
+                            </a>
+                            <p class="body-sm text-gray-500 mt-3 mb-0">{{ .qualifier }}</p>
+                        </div>
+                    {{ end }}
+
                     <div class="flex flex-wrap justify-center items-center mt-12 max-w-lg">
                         {{ range $logo := .Params.customer_logos.logos }}
                             <div class="w-1/4 p-3">
@@ -30,7 +42,8 @@
 
                 <div class="p-6 flex items-center">
                     <div class="card mt-10 md:mt-0 p-12 mx-auto">
-                        <h4>Request a demo</h4>
+                        <h4 class="mb-1">{{ .Params.form.title }}</h4>
+                        <p class="body-sm text-gray-600 mb-6">{{ .Params.form.subtitle }}</p>
                         <pulumi-hubspot-form form-id="{{ .Params.form.form_id }}"></pulumi-hubspot-form>
                         <p class="body-sm text-gray-600 mt-4">Have a quick question instead? <a href="/contact/" class="underline">Contact us</a>.</p>
                     </div>
