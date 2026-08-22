@@ -10,16 +10,19 @@ quick_links:
           description: No sales call needed. Create an org and ship infrastructure in minutes.
           cta_label: Start a trial
           url: https://app.pulumi.com/signup?create-organization=1
+          qualifier: Best if you don't need anything from us to get started.
 
         - label: Want to see it first?
           description: Get a guided walkthrough from our team before you commit to anything.
           cta_label: Request a demo
           url: /request-a-demo/
+          qualifier: Best if you want a guided walkthrough before your team commits.
 
         - label: Already a customer?
           description: File a support ticket for a fast response from our team.
           cta_label: Get support
           url: https://support.pulumi.com/hc/en-us/requests/new
+          qualifier: Best if you already have an account and something needs fixing.
 
 form:
     - key: general
@@ -29,6 +32,7 @@ form:
     - key: sales
       label: Talk to sales
       hubspot_form_id: 8381e562-5fdf-4736-bb10-86096705e4ee
+      qualifier: Best if you need custom pricing, invoicing, or a security review.
 
     - key: tf-migration
       label: Migrate from Terraform

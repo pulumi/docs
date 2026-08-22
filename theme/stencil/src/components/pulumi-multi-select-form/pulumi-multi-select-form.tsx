@@ -10,6 +10,7 @@ export interface MultiSelectFormItem {
     label?: string;
     hubspotFormId: string;
     cta?: MultiSelectFormCta;
+    qualifier?: string;
 }
 
 @Component({
@@ -140,6 +141,9 @@ export class PulumiMultiSelectForm {
                                 </label>
                             ))}
                         </div>
+                        {!this.selectedItem?.qualifier ? null : (
+                            <p class="body-sm text-gray-600 mt-4 mb-0">{this.selectedItem.qualifier}</p>
+                        )}
                     </div>
                 )}
                 {!this.selectedItem ? null : this.selectedItem.cta ? (
