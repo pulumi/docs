@@ -2,7 +2,6 @@
 title: "Identity Stack Cookbook: Auth0, Okta, Entra ID, and Keycloak"
 date: 2026-06-18
 meta_desc: "Manage common identity platform patterns with Pulumi across Auth0, Okta, Microsoft Entra ID, and Keycloak, including SSO, apps, and groups."
-meta_image: meta.png
 feature_image: feature.png
 authors:
     - pablo-seibelt
@@ -10,6 +9,7 @@ tags:
     - identity
     - sso
     - tutorial
+category: tutorials
 social:
     twitter: |
         Identity platforms all model apps, groups, roles, and SSO differently.
