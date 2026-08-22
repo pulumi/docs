@@ -1,5 +1,5 @@
 ---
-title: "Two Real-World Incidents That Show the Risk of Managing Your Own State Backend"
+title: "Two Incidents That Expose the Risk of a DIY State Backend"
 date: 2026-07-25
 meta_desc: "A leaked IAM key and an out-of-order merge both trace to one cause: a self-managed state backend. Here's what a managed backend changes."
 feature_image: feature.png
