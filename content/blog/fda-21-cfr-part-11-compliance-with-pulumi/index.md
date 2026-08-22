@@ -1,0 +1,312 @@
+---
+title: "FDA 21 CFR Part 11 Evidence Patterns with Pulumi"
+date: 2026-07-16
+draft: false
+meta_desc: "Map FDA 21 CFR Part 11 expectations to Pulumi workflows for electronic records, audit trails, policy checks, and reviewable infrastructure evidence."
+meta_image: meta.png
+feature_image: feature.png
+authors:
+    - pablo-seibelt
+tags:
+    - compliance
+    - pulumi-neo
+    - life-sciences
+social:
+    twitter: |
+        21 CFR Part 11 work needs evidence, not vague promises.
+
+        Map Pulumi workflows to audit trails, policy checks, and reviewable infrastructure changes.
+    linkedin: |
+        Regulated infrastructure teams need clear evidence for electronic records, signatures, audit trails, and change review.
+
+        This guide maps FDA 21 CFR Part 11 expectations to practical Pulumi workflows without claiming automatic compliance.
+    bluesky: |
+        21 CFR Part 11 needs evidence.
+
+        Map Pulumi workflows to audit trails, policy checks, and reviewable infra changes.
+---
+
+Life sciences organizations operate in a highly regulated environment where the integrity and traceability of data are paramount. The Food and Drug Administration (FDA) 21 CFR Part 11 regulation sets the standard for electronic records and electronic signatures, ensuring they are trustworthy, reliable, and equivalent to paper records.
+
+As infrastructure moves to the cloud, the systems managing that infrastructure must also meet these rigorous standards. Teams in regulated industries need clear documentation on how Pulumi can support an FDA 21 CFR Part 11 compliance program.
+
+In this post, we will map Pulumi features to Part 11 control areas and show how Infrastructure as Code (IaC) can support compliance evidence for regulated workloads.
+
+This post provides compliance documentation support for organizations meeting FDA 21 CFR Part 11 requirements. Note that while Pulumi tools support compliance efforts, they do not provide automated certification or guarantee regulatory approval. You will see patterns for compliance evidence workflows in regulated workloads.
+
+<!--more-->
+
+## Understanding 21 CFR Part 11 in the cloud
+
+FDA 21 CFR Part 11 applies to records in electronic form that are created, modified, maintained, archived, retrieved, or transmitted under any records requirements set forth in agency regulations. For infrastructure, this means the configurations, deployment logs, and state history that define your regulated environments are considered electronic records.
+
+The regulation focuses on several key areas:
+1. **Validation**: Ensuring systems are accurate, reliable, and perform consistently.
+1. **Audit trails**: Computer-generated, time-stamped records of all actions.
+1. **Record protection**: Ensuring records are retained and can be retrieved throughout their retention period.
+1. **Authority checks**: Ensuring only authorized individuals can access the system and perform actions.
+
+## Mapping Pulumi to Part 11 controls
+
+Pulumi provides a suite of features that can help address these requirements, allowing you to treat your infrastructure with the same level of rigor as your application code.
+
+### 1. System validation (11.10(a))
+
+Computer system validation is broader than infrastructure tests, but infrastructure tests can become useful validation evidence. With Pulumi, that evidence starts before a single resource is deployed.
+
+* **[Pulumi Policies](/docs/insights/policy/)**: You can enforce compliance rules across your entire organization. For example, you can require that all S3 buckets have versioning and encryption enabled, or that only approved instance types are used.
+* **Testing**: Pulumi supports unit, property, and integration testing in familiar languages like TypeScript. These tests help verify infrastructure logic before deployment and feed results into the broader validation package.
+
+### 2. Audit trails (11.10(e))
+
+Part 11 requires a computer-generated, time-stamped audit trail that records the date and time of operator entries and actions that create, modify, or delete electronic records.
+
+[Pulumi Cloud](/product/pulumi-cloud/) automatically maintains a comprehensive audit trail for infrastructure changes:
+
+* **Audit Logs**: Every action taken in the Pulumi Cloud console or via the CLI is recorded, including who performed the action, what the action was, and when it occurred.
+* **State History**: Every `pulumi up` creates a new checkpoint in your stack's history. You can see exactly what changed in each deployment, providing a clear lineage of your infrastructure.
+
+Part 11 auditability also depends on the systems you deploy, not only the platform you use to deploy them. Use Pulumi to provision cloud-native audit trails for regulated workloads, such as AWS CloudTrail delivered to encrypted, versioned S3 buckets, integrated with CloudWatch Logs for monitoring and alerting. AWS maps Part 11 controls to capabilities such as CloudTrail log file validation, CloudTrail encryption, CloudWatch Logs integration, and S3 data event logging. Pulumi lets you define those controls as code and review every change before it reaches production.
+
+### 3. Record protection and retrieval (11.10(b) and (c))
+
+Electronic records must be protected to enable their accurate and ready retrieval throughout the records retention period.
+
+* **State Management**: Pulumi Cloud stores your state files securely, with built-in versioning and history.
+* **Human-Readable Exports**: You can export your stack state at any time using `pulumi stack export`, providing a JSON representation of your infrastructure that is both human-readable and suitable for long-term archiving.
+
+### 4. Authority checks (11.10(g))
+
+Access to the system must be limited to authorized individuals.
+
+* **Role-Based Access Control (RBAC)**: Pulumi Cloud allows you to define granular permissions for users and teams, ensuring that only authorized personnel can view or modify specific stacks.
+* **Single Sign-On (SSO)**: Integration with identity providers like Okta or Azure AD ensures that your organization's existing security policies and multi-factor authentication (MFA) are applied to Pulumi.
+
+Apply the same model to the cloud systems that hold regulated records. Pulumi can configure IAM roles, groups, permission boundaries, and service-specific access controls from a central identity provider (IdP) model so that access to audit logs, storage buckets, and application environments follows the same reviewable least-privilege baseline.
+
+## Configuring audit trails for regulated workloads
+
+The following AWS example shows the kind of infrastructure baseline Pulumi can manage for systems that need audit trails. It creates a versioned and encrypted S3 bucket for audit records, a CloudWatch Log Group for near real-time monitoring, and a multi-region CloudTrail trail with log file validation enabled.
+
+```typescript
+import * as aws from "@pulumi/aws";
+import * as pulumi from "@pulumi/pulumi";
+
+const current = aws.getCallerIdentity({});
+const region = aws.getRegion({});
+const trailName = "part11-audit-trail";
+const cloudTrailArn = pulumi.all([current, region]).apply(([identity, selectedRegion]) =>
+    `arn:aws:cloudtrail:${selectedRegion.name}:${identity.accountId}:trail/${trailName}`);
+
+const auditKey = new aws.kms.Key("part11-audit-records-key", {
+    description: "Encrypt Part 11 audit records",
+    enableKeyRotation: true,
+    policy: pulumi.all([current, cloudTrailArn]).apply(([identity, sourceArn]) => JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Sid: "AllowAccountKeyAdministration",
+            Effect: "Allow",
+            Principal: {
+                AWS: `arn:aws:iam::${identity.accountId}:root`,
+            },
+            Action: "kms:*",
+            Resource: "*",
+        }, {
+            Sid: "AllowCloudTrailEncryption",
+            Effect: "Allow",
+            Principal: {
+                Service: "cloudtrail.amazonaws.com",
+            },
+            Action: ["kms:GenerateDataKey*", "kms:DescribeKey"],
+            Resource: "*",
+            Condition: {
+                StringEquals: {
+                    "aws:SourceAccount": identity.accountId,
+                    "aws:SourceArn": sourceArn,
+                },
+            },
+        }],
+    })),
+});
+
+const auditBucket = new aws.s3.Bucket("part11-audit-records");
+
+const auditBucketVersioning = new aws.s3.BucketVersioning("part11-audit-records-versioning", {
+    bucket: auditBucket.id,
+    versioningConfiguration: {
+        status: "Enabled",
+    },
+});
+
+const auditBucketEncryption = new aws.s3.BucketServerSideEncryptionConfiguration("part11-audit-records-encryption", {
+    bucket: auditBucket.id,
+    rules: [{
+        applyServerSideEncryptionByDefault: {
+            kmsMasterKeyId: auditKey.arn,
+            sseAlgorithm: "aws:kms",
+        },
+    }],
+});
+
+const logRetentionDays = 365;
+
+const auditLogGroup = new aws.cloudwatch.LogGroup("part11-cloudtrail-events", {
+    retentionInDays: logRetentionDays,
+});
+
+const auditPublicAccessBlock = new aws.s3.BucketPublicAccessBlock("part11-audit-records-public-access", {
+    bucket: auditBucket.id,
+    blockPublicAcls: true,
+    blockPublicPolicy: true,
+    ignorePublicAcls: true,
+    restrictPublicBuckets: true,
+});
+
+const auditBucketPolicy = new aws.s3.BucketPolicy("part11-audit-records-policy", {
+    bucket: auditBucket.id,
+    policy: pulumi.all([auditBucket.arn, current, cloudTrailArn]).apply(([bucketArn, identity, sourceArn]) => JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Sid: "DenyInsecureTransport",
+            Effect: "Deny",
+            Principal: "*",
+            Action: "s3:*",
+            Resource: [bucketArn, `${bucketArn}/*`],
+            Condition: {
+                Bool: {
+                    "aws:SecureTransport": "false",
+                },
+            },
+        }, {
+            Sid: "AWSCloudTrailAclCheck",
+            Effect: "Allow",
+            Principal: {
+                Service: "cloudtrail.amazonaws.com",
+            },
+            Action: "s3:GetBucketAcl",
+            Resource: bucketArn,
+            Condition: {
+                StringEquals: {
+                    "aws:SourceAccount": identity.accountId,
+                    "aws:SourceArn": sourceArn,
+                },
+            },
+        }, {
+            Sid: "AWSCloudTrailWrite",
+            Effect: "Allow",
+            Principal: {
+                Service: "cloudtrail.amazonaws.com",
+            },
+            Action: "s3:PutObject",
+            Resource: `${bucketArn}/AWSLogs/${identity.accountId}/*`,
+            Condition: {
+                StringEquals: {
+                    "aws:SourceAccount": identity.accountId,
+                    "aws:SourceArn": sourceArn,
+                    "s3:x-amz-acl": "bucket-owner-full-control",
+                },
+            },
+        }],
+    })),
+});
+
+const cloudTrailRole = new aws.iam.Role("part11-cloudtrail-role", {
+    assumeRolePolicy: pulumi.all([current, cloudTrailArn]).apply(([identity, sourceArn]) => JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+            Effect: "Allow",
+            Principal: {
+                Service: "cloudtrail.amazonaws.com",
+            },
+            Action: "sts:AssumeRole",
+            Condition: {
+                StringEquals: {
+                    "aws:SourceAccount": identity.accountId,
+                    "aws:SourceArn": sourceArn,
+                },
+            },
+        }],
+    })),
+});
+
+const cloudTrailRolePolicy = new aws.iam.RolePolicy("part11-cloudtrail-log-delivery", {
+    role: cloudTrailRole.id,
+    policy: pulumi.interpolate`{
+        "Version": "2012-10-17",
+        "Statement": [{
+            "Effect": "Allow",
+            "Action": ["logs:CreateLogStream", "logs:PutLogEvents"],
+            "Resource": "${auditLogGroup.arn}:*"
+        }]
+    }`,
+});
+
+const trail = new aws.cloudtrail.Trail("part11-audit-trail", {
+    name: trailName,
+    s3BucketName: auditBucket.id,
+    includeGlobalServiceEvents: true,
+    isMultiRegionTrail: true,
+    enableLogFileValidation: true,
+    cloudWatchLogsGroupArn: pulumi.interpolate`${auditLogGroup.arn}:*`,
+    cloudWatchLogsRoleArn: cloudTrailRole.arn,
+}, {
+    dependsOn: [auditBucketVersioning, auditBucketEncryption, auditBucketPolicy, cloudTrailRolePolicy],
+});
+```
+
+This does not make an environment compliant by itself. It gives the validation team a concrete, reviewable definition of where audit records are stored, how they are protected, and which services generate them. For regulated workloads, match `logRetentionDays` and any S3 lifecycle rules to your validated records-retention schedule, and add retention controls such as S3 Object Lock, MFA Delete where appropriate, and lifecycle transitions for archival storage.
+
+## Neo-assisted compliance and documentation
+
+[Pulumi Neo](/product/neo/), our AI-powered infrastructure agent, can assist in maintaining and documenting your compliance posture. While Neo does not replace the need for human oversight, it can significantly accelerate the documentation process.
+
+### Generating validation documentation
+
+You can use Neo to generate summaries of your infrastructure state and policy compliance for your validation reports. For example, you might use a prompt like this:
+
+> "Neo, generate a report of all resources in the 'production' stack. Include their encryption status and any active Pulumi policy violations. Format this as a table suitable for a system validation document."
+
+### Continuous compliance and drift detection
+
+Maintaining compliance is not a one-time event. Pulumi's scheduled drift detection can automatically check your environment for changes made outside of Pulumi. When drift is detected, it can trigger an alert or a review workflow, ensuring your "as-built" infrastructure matches your "as-validated" code.
+
+## Enforcing audit trail controls with Pulumi Policies
+
+Once you define an approved audit-trail baseline, use Pulumi Policies to prevent drift from that baseline. For example, the following policy requires CloudTrail resources to use multi-region logging, log file validation, and CloudWatch Logs integration.
+
+```typescript
+import * as aws from "@pulumi/aws";
+import { PolicyPack, validateResourceOfType } from "@pulumi/policy";
+
+new PolicyPack("part11-audit-trail-controls", {
+    policies: [{
+        name: "cloudtrail-audit-controls-required",
+        description: "CloudTrail trails should be multi-region, include global service events, validate logs, and integrate with CloudWatch Logs.",
+        enforcementLevel: "mandatory",
+        validateResource: validateResourceOfType(aws.cloudtrail.Trail, (trail, args, reportViolation) => {
+            if (!trail.isMultiRegionTrail) {
+                reportViolation("CloudTrail must be configured as a multi-region trail.");
+            }
+            if (!trail.includeGlobalServiceEvents) {
+                reportViolation("CloudTrail must include global service events.");
+            }
+            if (!trail.enableLogFileValidation) {
+                reportViolation("CloudTrail log file validation must be enabled.");
+            }
+            if (!trail.cloudWatchLogsGroupArn || !trail.cloudWatchLogsRoleArn) {
+                reportViolation("CloudTrail must stream events to CloudWatch Logs.");
+            }
+        }),
+    }],
+});
+```
+
+Unset values are treated as non-compliant so new trails must explicitly enable validation, global-service events, and multi-region logging. You can combine this with policies for S3 versioning, S3 encryption, S3 public access blocks, object retention, and IAM access patterns. That moves Part 11 support from a manual checklist to a deployment gate: non-compliant infrastructure fails before it is created.
+
+## Conclusion
+
+Pulumi supports infrastructure evidence workflows aligned with FDA 21 CFR Part 11 expectations. By using Infrastructure as Code, Pulumi Policies, IdP-backed access controls, cloud-native audit trails, and the audit capabilities available in Pulumi Cloud, life sciences organizations can configure regulated systems with clearer evidence and stronger deployment guardrails.
+
+{{< blog/cta-button "Explore Pulumi Policies" "/docs/insights/policy/" >}}
+
+*Disclaimer: This post provides implementation guidance and illustrates how Pulumi features can support compliance efforts. It does not constitute legal advice or a formal compliance attestation for FDA 21 CFR Part 11. Organizations are responsible for their own regulatory validation and compliance.*
