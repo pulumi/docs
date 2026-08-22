@@ -154,6 +154,7 @@ No, and you don't have to rewrite anything to start. The smallest possible move 
 
 ## Next steps
 
+* [Best Terraform Cloud Alternative for Large Multi-Cloud Teams](/blog/best-terraform-cloud-alternative/) --- a broader comparison against HCP Terraform, Spacelift, env0, and Scalr
 * [Get started with Pulumi](/docs/get-started/)
 * [Using Pulumi Cloud as a Terraform state backend](/docs/iac/get-started/terraform/terraform-state-backend/)
 * [Using Terraform modules in Pulumi](/docs/iac/get-started/terraform/terraform-modules/)
