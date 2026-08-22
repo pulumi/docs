@@ -14,7 +14,7 @@ overview:
 
 self_serve:
     title: Don't want to wait for a call?
-    description: Most teams don't need a demo to get started. Create an org and start shipping infrastructure in minutes, on the house.
+    description: Most teams don't need a demo to get started. Create an org and start shipping infrastructure, on the house.
     cta_label: Start a free trial
     cta_url: https://app.pulumi.com/signup?create-organization=1
     qualifier: Best if you're ready to try Pulumi with your own code today.
