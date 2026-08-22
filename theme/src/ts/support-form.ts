@@ -1,4 +1,4 @@
-const LAMBDA_URL = "https://2pkfmebdylyd3lhmm3rbmoe2ly0exrbp.lambda-url.us-west-2.on.aws/";
+const SUPPORT_API_URL = "https://frww9npnk6.execute-api.us-west-2.amazonaws.com";
 
 function setSubmitting(button: Element | null, submitting: boolean) {
     if (!(button instanceof HTMLButtonElement)) {
@@ -42,7 +42,7 @@ function initSupportForm() {
 
         setSubmitting(submitButton, true);
 
-        fetch(LAMBDA_URL, {
+        fetch(SUPPORT_API_URL, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -55,8 +55,12 @@ function initSupportForm() {
                 if (!response.ok) {
                     throw new Error(`Request failed with status ${response.status}`);
                 }
+                return response.json().catch(() => ({}));
+            })
+            .then(result => {
                 form.reset();
-                showStatus(status, "Thanks! Your request has been submitted. We'll be in touch soon.", false);
+                const ticketId = result && typeof result.ticketId === "string" ? ` (ticket #${result.ticketId})` : "";
+                showStatus(status, `Thanks! Your request has been submitted${ticketId}. We'll be in touch soon.`, false);
                 setSubmitting(submitButton, false);
             })
             .catch(() => {
