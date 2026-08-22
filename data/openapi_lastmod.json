@@ -97,7 +97,8 @@
       "hash": "b701cdf19fc54c3ee9f3f038c5c75ea5e60496448f3982a5d3ead8ac4ed5379e"
     },
     "Stacks": {
-      "hash": "46ecb987bf91d76ff4985a39b783857299f884ccbcf3bbb5087e277379703748"
+      "hash": "03b5564fead0195e3f1358343fc74073e9f33a85c241ca3fb901cac6b14d2c1b",
+      "lastmod": "2026-08-22"
     },
     "Users": {
       "hash": "363e44cc36585f276146e22aa3486886ab7c902adcb5591f334f226701bda588",
@@ -319,7 +320,8 @@
       "hash": "f135958c6085a3c72b0eb19aa06b553355a07bf4b8ee72a0f112ea1fd14e7430"
     },
     "AppAPICapabilityConfig": {
-      "hash": "5d3620d6175dcc17b4003697e9999845a293b6b0e96376584c431319430f0acb"
+      "hash": "eb74ed375b574971149ab9a9c088d007bf33ffb6667df4509ee82fbc6ed3626f",
+      "lastmod": "2026-08-22"
     },
     "AppAppendUpdateLogEntryRequest": {
       "hash": "8b1cc7cac27407ac0be64b7d6b21873cdcdf4c4595875be408ec26daa9098b9d"
@@ -335,6 +337,12 @@
     },
     "AppBatchEncryptResponse": {
       "hash": "66d0d5b4a42df1bef2253cfe47c860f79abbd05e9b9849e9e74d3a89a3e36945"
+    },
+    "AppBeginUpdateRequest": {
+      "hash": "04dfb99e9a436b320b4314611a36dcf6819020a0e85e79b0677d9dd4a6f255d0"
+    },
+    "AppBeginUpdateResponse": {
+      "hash": "6fd85e0a3f362f1f8bb11b540d02580d59d7a0c2db91cf4f960fd279d5ebc783"
     },
     "AppCLIVersionResponse": {
       "hash": "68e4663bc3a9c11591431deb774af29d1ce67f03c7c690db86c720cb38768473"
@@ -691,7 +699,8 @@
       "hash": "b5be3ba247d287995b589399171b937f6dd0c49f342dcfd625c52da1b1094434"
     },
     "AzureSetupRequest": {
-      "hash": "2a38bf6678ece78b13585d04ad208c4d603263c6786384077b3169a1b5726164"
+      "hash": "5379bf53dc256b28f84407e5b235de81a9c09893d71177b50ce0409ab798ddfb",
+      "lastmod": "2026-08-22"
     },
     "BaseCreateAccessTokenRequest": {
       "hash": "464bad256a6e0743161b19e91596a46928e5c37d2b8dc29f3687e00371130224"
@@ -1418,7 +1427,8 @@
       "hash": "30513ed35a823961d76e7164856326701149588293894f2c334be668645864b1"
     },
     "GraphQueryAnchor": {
-      "hash": "24d0a6a3942efa7b2e3b25500c0e0a8bceb6bf727cbbe7d708033f910057271e"
+      "hash": "01ea3a91735a3e346d7a91a26ebcf03d3d8ac355c3da676441c68830881bb496",
+      "lastmod": "2026-08-22"
     },
     "GraphQueryMeta": {
       "hash": "75c4e4cea24570f4b92894df9547c5140984677fef7750d032efcb22701bd4d2",
@@ -1444,7 +1454,8 @@
       "hash": "eb6af28dcd7c6b248ba69d9bdc1a740e635b4e2b78beb0321f43eed142214e77"
     },
     "GraphSchemaLimits": {
-      "hash": "6f541fb481b34e8ca3c758c3437f36f9ee69a337eae7e9d266298ea22d54443c"
+      "hash": "ccb52274e6b8419a2af0bc7fa47ad8b950b85eb9cd97ccd86b21cc0527b7db06",
+      "lastmod": "2026-08-22"
     },
     "GraphSchemaNodeType": {
       "hash": "265945b53efe0194d239e0f1246923127cc8eb03a5445b2733e019d88f9e43bf",
