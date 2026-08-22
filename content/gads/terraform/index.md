@@ -1,6 +1,6 @@
 ---
 title: "Terraform Alternative | Pulumi"
-meta_desc: "Use Python, TypeScript, Go, or C# — or HCL — for infrastructure as code. Free migration tools, no resource caps on the free tier, 170+ cloud providers."
+meta_desc: "Use Python, TypeScript, Go, or C# — or HCL — for infrastructure as code. Free migration tools, no resource caps on the free tier, 200+ cloud providers."
 layout: gads-template
 block_external_search_index: true
 
@@ -20,7 +20,7 @@ customer_quote:
 overview:
     title: Your Choice of Language. No Resource Caps.<br/>Migrate at Your Pace.
     description: |
-        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources per organization. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 170+ cloud providers. Free migration tooling included: convert your existing Terraform with the Pulumi CLI.
+        Looking for <span id="dki-placeholder" style="font-weight: bold;">a Terraform alternative</span>? HCP Terraform's free tier caps you at 500 managed resources per organization. Pulumi Cloud has no resource caps. Write infrastructure in Python, TypeScript, Go, or C# with full IDE support, testing, and 200+ cloud providers. Free migration tooling included: convert your existing Terraform with the Pulumi CLI.
 
 key_features_above:
     items:

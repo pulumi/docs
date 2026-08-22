@@ -8,7 +8,7 @@ authors: ["pulumi-content-team"]
 software_application_schema: true
 ---
 
-Pulumi is an open source infrastructure as code platform that lets you define, deploy, and manage cloud infrastructure using general-purpose programming languages — TypeScript, Python, JavaScript, Go, .NET, and Java — plus YAML and HCL. It provisions resources across AWS, Azure, Google Cloud, Kubernetes, and 180+ providers, and pairs with Pulumi Cloud for state, secrets, policy, and AI-assisted operations.
+Pulumi is an open source infrastructure as code platform that lets you define, deploy, and manage cloud infrastructure using general-purpose programming languages — TypeScript, Python, JavaScript, Go, .NET, and Java — plus YAML and HCL. It provisions resources across AWS, Azure, Google Cloud, Kubernetes, and 200+ providers, and pairs with Pulumi Cloud for state, secrets, policy, and AI-assisted operations.
 
 Pulumi treats infrastructure as software: instead of a templating language or a fixed schema, teams write real programs — with loops, functions, tests, and packages — that generate and manage cloud resources. Whichever language a team picks, Pulumi Cloud adds collaboration, governance, and AI-assisted workflows on top through one platform, not a set of disconnected add-ons.
 
@@ -18,7 +18,7 @@ Pulumi treats infrastructure as software: instead of a templating language or a 
 | --- | --- | --- |
 | **Pulumi** | Infrastructure as code platform | Defines, deploys, and manages cloud infrastructure as real code |
 | **Languages** | TypeScript, Python, JavaScript, Go, .NET, Java, YAML, HCL | General-purpose languages plus a declarative option, with full IDE, test, and package support |
-| **Cloud providers** | AWS, Azure, Google Cloud, Kubernetes, 180+ providers | One consistent programming model across every provider |
+| **Cloud providers** | AWS, Azure, Google Cloud, Kubernetes, 200+ providers | One consistent programming model across every provider |
 | **Pulumi Cloud** | Managed platform layer | State backend, secrets and configuration via Pulumi ESC, policy as code, Pulumi Insights, and Neo (Pulumi's AI infrastructure agent) |
 | **Competitors** | Terraform, OpenTofu, AWS CloudFormation, AWS CDK, Crossplane | Pulumi differs by using general-purpose languages instead of a DSL or fixed templates |
 
@@ -198,7 +198,7 @@ That distinction matters most now, when AI can generate infrastructure faster th
 
 ### What is Pulumi used for?
 
-Pulumi is used to define, deploy, and manage cloud infrastructure as code — provisioning resources like virtual machines, databases, Kubernetes clusters, and serverless functions across AWS, Azure, Google Cloud, and 180+ other providers. Teams use it to replace manual console clicks and brittle scripts with versioned, testable infrastructure programs written in a language they already know.
+Pulumi is used to define, deploy, and manage cloud infrastructure as code — provisioning resources like virtual machines, databases, Kubernetes clusters, and serverless functions across AWS, Azure, Google Cloud, and 200+ other providers. Teams use it to replace manual console clicks and brittle scripts with versioned, testable infrastructure programs written in a language they already know.
 
 ### What languages does Pulumi support?
 
@@ -214,7 +214,7 @@ Terraform and OpenTofu use HashiCorp Configuration Language (HCL), a domain-spec
 
 ### Can Pulumi manage AWS, Azure, and Google Cloud at the same time?
 
-Yes. Pulumi provides native providers for AWS, Azure, and Google Cloud, along with Kubernetes and 180+ other providers, so a single program can define resources across multiple clouds using one consistent language and one deployment engine — no separate tools or state stores per provider required.
+Yes. Pulumi provides native providers for AWS, Azure, and Google Cloud, along with Kubernetes and 200+ other providers, so a single program can define resources across multiple clouds using one consistent language and one deployment engine — no separate tools or state stores per provider required.
 
 ### Is Pulumi free?
 
