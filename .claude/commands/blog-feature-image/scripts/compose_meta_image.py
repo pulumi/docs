@@ -66,9 +66,6 @@ def _ensure_cairo():
     os.execv(sys.executable, [sys.executable, *sys.argv])
 
 
-_ensure_cairo()
-
-import cairosvg
 import numpy as np
 import yaml
 from PIL import Image, PngImagePlugin
@@ -91,6 +88,12 @@ def find_template(catalog: dict, filename: str) -> dict | None:
 
 def svg_to_png(svg_path: str, width: int, height: int) -> Image.Image:
     """Rasterize an SVG file to a PIL Image fitting within width x height."""
+    # cairosvg (and its native libcairo) is only needed to rasterize SVGs, so
+    # import it lazily here — logo-free templates never load libcairo. The cairo
+    # locator must run before the import (it may re-exec to fix the dylib path).
+    _ensure_cairo()
+    import cairosvg
+
     svg_path = str(svg_path)
     try:
         png_data = cairosvg.svg2png(url=svg_path, output_width=width)
