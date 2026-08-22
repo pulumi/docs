@@ -327,8 +327,9 @@ scalability, and collaboration.
     infrastructure engineer that works inside your existing workflow: it proposes
     changes, runs previews, responds to failures, and opens pull requests in tight
     feedback loops, grounded in the real state of your infrastructure in Pulumi
-    Cloud. Because that infrastructure is defined in Python, TypeScript, Go, .NET, or
-    Java rather than a bespoke configuration language, Neo can read, reason about,
+    Cloud. Because that infrastructure is defined in a [general-purpose
+    programming language](https://www.pulumi.com/docs/iac/languages-sdks/) rather
+    than a bespoke configuration language, Neo can read, reason about,
     test, and ship it the same way an AI coding agent already handles the rest of
     your codebase. Terraform, by contrast, is defined in HCL, a domain-specific
     configuration language that AI agents can generate and reason about less
