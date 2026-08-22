@@ -1,5 +1,5 @@
 ---
-title: "Two Real-World Incidents That Expose the Risk of a DIY State Backend"
+title: "Two Real-World Incidents That Show the Risk of Managing Your Own State Backend"
 date: 2026-07-25
 meta_desc: "A leaked IAM key and an out-of-order merge both trace to one cause: a self-managed state backend. Here's what a managed backend changes."
 feature_image: feature.png
@@ -29,7 +29,7 @@ social:
         Two incidents, one root cause: DIY state management.
 ---
 
-Two publicly documented infrastructure-as-code incidents, a cloud intrusion and a mass cluster deletion, trace back to the same root cause: a self-managed state backend. Neither is a knock on any one tool. Plaintext credentials in object storage and unprotected concurrent writes are risks inherent to running your own state backend, not defects unique to Terraform: Pulumi encrypts values marked as secrets by default even on a self-managed backend, but on a DIY backend neither tool can enforce encryption or locking at the storage layer, so both share the exposure these incidents reveal. A managed backend, like Pulumi Cloud, is purpose-built to close both gaps.
+Two publicly documented infrastructure-as-code incidents, a cloud intrusion and a mass cluster deletion, trace back to the same root cause: managing your own state backend. Neither is a knock on any one tool, and it isn't a knock on Pulumi's own self-managed backends either. Pulumi already improves on this picture versus Terraform by encrypting values marked as secrets by default, on any backend, self-managed included. What neither Pulumi nor Terraform can do on a self-managed backend is protect everything outside that scope: encrypting the state file as a whole, enforcing a lock between concurrent writers, or guaranteeing a clean recovery path. That's the layer a managed backend, like Pulumi Cloud, is purpose-built to close.
 
 ## Incident one: how a single plaintext state file exposed a second AWS account's credentials
 
@@ -54,7 +54,7 @@ In a [2019 KubeCon EU keynote](https://www.youtube.com/watch?v=ix0Tw8uinWs), Spo
 
 **Root cause**: this is a general property of self-managed, serialized state protocols, not a Terraform-specific defect. Whenever two changes race to mutate the same state file without an enforced lock, the outcome depends on merge order and timing rather than intent. Any DIY-backend IaC tool is exposed to this class of failure to the degree its locking is optional or must be stood up separately. Terraform's S3 backend historically required a separate lock service; Pulumi's self-managed backends enable a basic file-based lock by default, though a shared object store still depends on that store honoring the lock.
 
-## The common thread: the DIY state backend
+## The common thread: managing your own state backend
 
 Both incidents map cleanly onto the same underlying gaps in how a self-managed backend handles state:
 
@@ -73,12 +73,12 @@ Neither Spotify nor the SCARLETEEL victim organization did anything unusual. The
 
 | Incident risk | Pulumi Cloud defense |
 | --- | --- |
-| Plaintext secrets in state (SCARLETEEL) | [State is encrypted at rest and in transit by default](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), with engine-level [transitive secret tainting](https://www.pulumi.com/blog/pulumi-state-taint/) that marks any value derived from a secret as sensitive, so it can't leak downstream unnoticed |
+| Plaintext secrets in state (SCARLETEEL) | Pulumi's [transitive secret tainting](https://www.pulumi.com/blog/pulumi-state-taint/) marks any value derived from a secret as sensitive and encrypts it, an engine behavior available on any backend, self-managed included. Pulumi Cloud goes further and [encrypts the entire state file at rest and in transit by default](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), so protection doesn't depend on which individual values a team remembered to mark secret |
 | Long-lived plaintext IAM keys (SCARLETEEL) | [Pulumi ESC](https://www.pulumi.com/docs/esc/) issues short-lived, dynamic credentials via OIDC federation, so there is no durable IAM access key sitting in state or in a config file for an attacker to find |
 | Out-of-order concurrent writes (Spotify) | Automatic stack locking prevents two operations from mutating the same stack's state at once, removing the race condition that let two merges collide |
 | Slow, destructive recovery (Spotify) | A transactional, journaling state backend, with journaling alone [reported to speed up operations by up to 20x](https://www.pulumi.com/blog/journaling-ga/) over Pulumi Cloud's own prior full-snapshot behavior. [Deleted-stack restoration](https://www.pulumi.com/docs/iac/operations/stack-management/restoring-deleted-stacks/) (Enterprise and Business Critical, last 25 deleted stacks) brings back a stack's state file and update history, so a team recovering from a destructive operation is rebuilding from an intact source of truth rather than reconstructing one from scratch, though it does not re-create cloud resources a `destroy` already removed |
 
-A team does not have to rewrite its infrastructure code to get these protections. Teams already on Pulumi get them by pointing their stacks at Pulumi Cloud instead of a self-managed backend. Teams currently on Terraform can [migrate existing state to Pulumi](https://www.pulumi.com/blog/converting-full-terraform-states-to-pulumi/) or, with Pulumi's native Terraform state backend support, connect Pulumi Cloud directly to their existing Terraform-managed state without a rewrite at all.
+A team does not have to rewrite its infrastructure code to get these protections. Teams already on Pulumi get them by pointing their stacks at Pulumi Cloud instead of a self-managed backend. Teams currently on Terraform can [migrate existing state to Pulumi](https://www.pulumi.com/blog/converting-full-terraform-states-to-pulumi/) or, with Pulumi's native Terraform state backend support, connect Pulumi Cloud directly to their existing Terraform-managed state without a rewrite at all. For the fuller picture of what changes as a team scales past a self-managed backend, see [Why Choose Pulumi Cloud Over DIY Backends?](https://www.pulumi.com/blog/why-choose-pulumi-cloud-over-diy-backends/)
 
 ## What the downtime and breach math says
 
@@ -96,7 +96,7 @@ A state backend is where an infrastructure-as-code tool stores the record of wha
 
 ### How does Pulumi Cloud prevent the credential leak that happened in the SCARLETEEL incident?
 
-Pulumi Cloud [encrypts state at rest and in transit by default](https://www.pulumi.com/docs/iac/concepts/state-and-backends/) and applies [transitive secret tainting](https://www.pulumi.com/blog/pulumi-state-taint/) so any value derived from a secret is automatically treated as sensitive. Combined with [Pulumi ESC](https://www.pulumi.com/docs/esc/) issuing short-lived, OIDC-based credentials instead of long-lived IAM keys, there is no durable plaintext key sitting in state for an attacker to extract.
+Pulumi's [transitive secret tainting](https://www.pulumi.com/blog/pulumi-state-taint/) already treats any value derived from a secret as sensitive on any backend, self-managed included. Pulumi Cloud adds [default encryption of the entire state file at rest and in transit](https://www.pulumi.com/docs/iac/concepts/state-and-backends/), so protection isn't limited to the values a team remembered to mark secret. Combined with [Pulumi ESC](https://www.pulumi.com/docs/esc/) issuing short-lived, OIDC-based credentials instead of long-lived IAM keys, there is no durable plaintext key sitting in state for an attacker to extract.
 
 ### How does Pulumi Cloud prevent the kind of out-of-order state conflict that hit Spotify?
 
