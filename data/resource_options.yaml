@@ -52,7 +52,7 @@
 #                           `inherited_by_children` below and `note`).
 #   typed_on                base | custom-options | component-options
 #                           Where the option is declared in the strongly
-#                           typed SDKs (TypeScript, C#, Java). Options on
+#                           typed SDKs (TypeScript, .NET, Java). Options on
 #                           `CustomResourceOptions` or
 #                           `ComponentResourceOptions` are compile-time
 #                           enforced; options on the base `ResourceOptions`
