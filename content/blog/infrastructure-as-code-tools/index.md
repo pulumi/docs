@@ -2,8 +2,9 @@
 title: "Best Infrastructure as Code (IaC) Tools for 2026"
 title_tag: "Best Infrastructure as Code Tools in 2026"
 date: 2026-07-05
+updated: 2026-08-19
 draft: false
-meta_desc: "Compare the best infrastructure as code tools of 2026: Terraform, OpenTofu, AWS CDK, CloudFormation, Bicep, Crossplane, and Pulumi, side by side."
+meta_desc: "Compare 10 IaC tools for 2026 on pricing, licensing, release cadence, and AI-agent readiness: Pulumi, Terraform, OpenTofu, CDK, Bicep, and more."
 authors:
     - asaf-ashirov
     - isaac-harris
@@ -34,7 +35,7 @@ itemlist:
     - name: "OpenTofu"
 ---
 
-Infrastructure as Code (IaC) has evolved beyond simple automation into a fundamental shift toward applying software engineering practices to infrastructure management. In 2026, leading organizations aren't just provisioning infrastructure—they're treating it as software, complete with testing, version control, code reviews, and continuous integration.
+The best infrastructure as code (IaC) tools in 2026 are Pulumi, Terraform, OpenTofu, AWS CDK, AWS CloudFormation, Azure ARM, Azure Bicep, Google Cloud Infrastructure Manager, Kubernetes YAML, and Crossplane. Each takes a different approach to defining and provisioning infrastructure, from general-purpose programming languages to declarative templates, and each carries distinct licensing, pricing, and AI-agent readiness tradeoffs worth weighing before you commit. As of August 2026, [Pulumi's own package registry](https://www.pulumi.com/registry/) lists more than 300 packages — first-party providers, bridged Terraform providers, and community components — illustrating how far multi-cloud coverage has expanded across the ecosystem.
 
 <!--more-->
 
@@ -87,7 +88,7 @@ This guide covers the following infrastructure as code tools and platforms:
 ### 10 Most Used IaC Tools in 2026
 
 1. **[Pulumi IaC](#1-pulumi)** - Modern IaC with general-purpose programming languages
-2. **[Terraform](#2-terraform)** - BSL-licensed IaC from HashiCorp that uses the HCL domain-specific language
+2. **[Terraform](#2-terraform)** - BUSL-licensed IaC from HashiCorp that uses the HCL domain-specific language
 3. **[AWS CDK](#3-aws-cloud-development-kit-cdk)** - Cloud Development Kit for AWS
 4. **[AWS CloudFormation](#4-aws-cloudformation)** - Native AWS integration
 5. **[Azure Resource Manager (ARM)](#5-azure-resource-manager-arm)** - Native Azure JSON templates
@@ -128,24 +129,78 @@ This guide covers the following infrastructure as code tools and platforms:
 
 Here's how the core IaC tools compare at a glance before we go deep on each one:
 
-| Tool | Language / approach | Clouds supported | State management | Best for |
-|---|---|---|---|---|
-| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers | Pulumi Cloud (managed, free tier available) or self-managed backend | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
-| [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | State file, self-managed or via HCP Terraform | Teams with existing Terraform expertise and established workflows |
-| [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Delegated to the underlying CloudFormation stack | AWS-focused teams who prefer programming languages over templates |
-| [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Managed entirely by AWS | AWS-only deployments requiring deep service integration |
-| [Azure ARM](#5-azure-resource-manager-arm) | JSON templates | Azure only | Managed entirely by Azure | Azure-native deployments requiring comprehensive platform integration |
-| [Azure Bicep](#6-azure-bicep) | Bicep DSL (compiles to ARM JSON) | Azure only | Managed entirely by Azure (via ARM) | Azure deployments requiring improved readability and developer experience |
-| [Google Cloud Infrastructure Manager](#7-google-cloud-infrastructure-manager) | HCL (Terraform-based) | Google Cloud | Terraform state, managed by Google | Google Cloud Platform deployments using Terraform |
-| [Kubernetes YAML](#8-kubernetes-yaml) | YAML manifests | Any Kubernetes cluster | Kubernetes cluster state (etcd) | Teams managing container-native applications and cloud-native infrastructure |
-| [Crossplane](#9-crossplane) | YAML / Kubernetes CRDs | Multi-cloud, orchestrated through Kubernetes | Kubernetes cluster state (etcd) | Kubernetes-first organizations managing multi-cloud infrastructure |
-| [OpenTofu](#10-opentofu) | HCL (community-governed Terraform fork) | AWS, Azure, Google Cloud, and the Terraform provider ecosystem | State file, self-managed or via compatible remote backends | Teams seeking an open-source Terraform alternative with community governance |
+| Tool | Language / approach | Clouds supported | License | Latest stable release (Aug 2026) | Best for |
+|---|---|---|---|---|---|
+| [Pulumi](#1-pulumi) | Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL | AWS, Azure, Google Cloud, Kubernetes, and 170+ other providers | Apache-2.0 | v3.259.0 (2026-08-19) | Teams who want flexible, language-agnostic IaC for infrastructure and operations |
+| [Terraform](#2-terraform) | HCL (HashiCorp's DSL) | AWS, Azure, Google Cloud, and hundreds of community providers | BUSL-1.1 | v1.15.9 (2026-08-19) | Teams with existing Terraform expertise and established workflows |
+| [AWS CDK](#3-aws-cloud-development-kit-cdk) | TypeScript, Python, Java, C#, Go (compiles to CloudFormation) | AWS only | Apache-2.0 | v2.266.0 (2026-08-19) | AWS-focused teams who prefer programming languages over templates |
+| [AWS CloudFormation](#4-aws-cloudformation) | JSON/YAML templates | AWS only | Proprietary (managed service) | Continuously updated by AWS | AWS-only deployments requiring deep service integration |
+| [Azure ARM](#5-azure-resource-manager-arm) | JSON templates | Azure only | Proprietary (managed service) | Continuously updated by Microsoft | Azure-native deployments requiring comprehensive platform integration |
+| [Azure Bicep](#6-azure-bicep) | Bicep DSL (compiles to ARM JSON) | Azure only | MIT | v0.46.1 (2026-07-30) | Azure deployments requiring improved readability and developer experience |
+| [Google Cloud Infrastructure Manager](#7-google-cloud-infrastructure-manager) | HCL (Terraform-based) | Google Cloud | Proprietary (managed service) | Continuously updated by Google | Google Cloud Platform deployments using Terraform |
+| [Kubernetes YAML](#8-kubernetes-yaml) | YAML manifests | Any Kubernetes cluster | Apache-2.0 | v1.36.4 (2026-08-20) | Teams managing container-native applications and cloud-native infrastructure |
+| [Crossplane](#9-crossplane) | YAML / Kubernetes CRDs | Multi-cloud, orchestrated through Kubernetes | Apache-2.0 | v2.4.0 (2026-08-20) | Kubernetes-first organizations managing multi-cloud infrastructure |
+| [OpenTofu](#10-opentofu) | HCL (community-governed Terraform fork) | AWS, Azure, Google Cloud, and the Terraform provider ecosystem | MPL-2.0 | v1.12.6 (2026-08-19) | Teams seeking an open-source Terraform alternative with community governance |
 
-Use the table as a map: each tool links to its full breakdown below, where you'll find licensing, key features, and the tradeoffs behind each "best for."
+Use the table as a map: each tool links to its full breakdown below, where you'll find licensing, key features, and the tradeoffs behind each "best for." Version and release-date figures were checked against each project's GitHub releases on 2026-08-22.
+
+### Pricing at a glance
+
+Tool cost is rarely the license alone. Here's what each option actually costs to run, based on published pricing as of August 2026:
+
+| Tool | Free tier | Entry paid tier | Enterprise / top tier |
+|---|---|---|---|
+| Pulumi | Individual: free forever, 1 user, unlimited stacks, 500 workflow min/mo, 5M Pulumi Neo tokens/mo | Team: from $40/mo (≈40 credits, up to 10 users) | Enterprise from $400/mo; Business Critical (custom) |
+| Terraform (HCP Terraform) | Free up to 500 managed resources, 1 concurrent run | Essentials: $0.10/resource/mo | Standard $0.47/resource/mo; Premium $0.99/resource/mo; self-hosted Terraform Enterprise (custom) |
+| AWS CDK | No tool fee — free and open source | N/A | N/A (pay only for provisioned AWS resources) |
+| AWS CloudFormation | No tool fee — included with AWS | N/A | N/A (pay only for provisioned AWS resources) |
+| Azure ARM | No tool fee — included with Azure | N/A | N/A (pay only for provisioned Azure resources) |
+| Azure Bicep | No tool fee — free and open source | N/A | N/A (pay only for provisioned Azure resources) |
+| Google Cloud Infrastructure Manager | No tool fee — included with Google Cloud | N/A | N/A (pay only for provisioned Google Cloud resources) |
+| Kubernetes YAML | Free and open source | N/A (cluster infra costs apply) | N/A |
+| Crossplane | Free and open source | N/A (cluster infra costs apply) | N/A |
+| OpenTofu | Free and open source | N/A | N/A |
+
+Spacelift and env0, two managed CI/CD layers frequently compared against these core tools, publish their own tiers but denominate them differently — per-seat and per-worker rather than per-resource — with quote-based pricing at the top end. Check their pricing pages directly, since the figures change often and don't map cleanly onto the table above.
+
+### License, governance, and release cadence
+
+For teams weighing long-term risk, licensing model and governance matter as much as features. This is the reference table competitors rarely publish in one place:
+
+| Tool | License | Governing body | Latest version | Released | GitHub stars |
+|---|---|---|---|---|---|
+| Pulumi | Apache-2.0 | Pulumi Corporation | v3.259.0 | 2026-08-19 | ~25.6k |
+| Terraform | BUSL-1.1 (not OSI-approved) | HashiCorp (an IBM company) | v1.15.9 | 2026-08-19 | ~49.5k |
+| AWS CDK | Apache-2.0 | AWS | v2.266.0 | 2026-08-19 | ~12.9k |
+| AWS CloudFormation | Proprietary | AWS | Managed service | Continuous | N/A |
+| Azure ARM | Proprietary | Microsoft | Managed service | Continuous | N/A |
+| Azure Bicep | MIT | Microsoft | v0.46.1 | 2026-07-30 | ~3.6k |
+| Google Cloud Infrastructure Manager | Proprietary | Google Cloud | Managed service | Continuous | N/A |
+| Kubernetes | Apache-2.0 | CNCF | v1.36.4 | 2026-08-20 | ~124.9k |
+| Crossplane | Apache-2.0 | CNCF | v2.4.0 | 2026-08-20 | ~12.0k |
+| OpenTofu | MPL-2.0 | Linux Foundation | v1.12.6 | 2026-08-19 | ~29.9k |
+
+Terraform's move to the Business Source License in 2023 is the reason OpenTofu exists at all: OpenTofu forked from Terraform's last MPL-2.0 release and now operates under Linux Foundation governance, which is the deciding factor for teams that require an OSI-approved license.
+
+### Which IaC tool fits your situation?
+
+If you're short on time, start here:
+
+| Your situation | Recommended tool | Why |
+|---|---|---|
+| You want one language across every cloud, plus native testing and packages | Pulumi | Real programming languages (Python, TypeScript, Go, C#, Java) with unit tests, IDE support, and 170+ providers |
+| You have deep existing Terraform/HCL expertise and workflows | Terraform | Largest ecosystem and community knowledge base, despite the BUSL-1.1 licensing tradeoff |
+| You need an open-source, community-governed Terraform-compatible tool | OpenTofu | MPL-2.0, Linux Foundation governance, high HCL compatibility |
+| You're AWS-only and want programming languages instead of templates | AWS CDK | Compiles to CloudFormation, so it inherits native AWS support with a real language on top |
+| You're AWS-only and want a fully managed, zero-tooling option | AWS CloudFormation | No separate tool to install or license; deepest AWS service coverage |
+| You're Azure-only and want better readability than raw ARM JSON | Azure Bicep | MIT-licensed DSL that compiles to ARM, with a much better authoring experience |
+| You're Kubernetes-first and want infrastructure managed via CRDs | Crossplane | Extends the Kubernetes control plane to manage cloud infrastructure declaratively |
+| You're deploying AI agents to manage infrastructure changes | Pulumi | Real languages give agents testable, reviewable code to reason about, rather than HCL diffs, which are harder for an agent to test against — see [Pulumi Neo](/product/neo/) |
 
 ### 1. Pulumi
 
-License: Apache 2.0  
+License: Apache-2.0  
+Latest stable release: v3.259.0 (2026-08-19)  
 Best For: Teams who want flexible, language-agnostic IaC for infrastructure and operations
 
 Pulumi IaC represents a modern approach to infrastructure as code, fundamentally changing how teams approach infrastructure by enabling the use of general-purpose programming languages like Python, TypeScript, JavaScript, Go, .NET, and Java, plus YAML and HCL for simpler configurations. Unlike tools that force teams to learn proprietary domain-specific languages (DSLs), Pulumi leverages familiar languages and software engineering practices, providing unprecedented flexibility, powerful abstractions, and seamless integration with existing development workflows.
@@ -155,7 +210,7 @@ Pulumi's approach combines the best of both imperative and declarative paradigms
 ### Key Features:
 
 - **Universal language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL configurations—no new DSL to learn
-- **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 150+ other providers
+- **Any cloud, any architecture**: Deploy to AWS, Azure, Google Cloud, Kubernetes, and 170+ other providers
 - **Real programming constructs**: Leverage loops, conditionals, functions, classes, packages, and third-party libraries
 - **Superior developer experience**: Full IDE support with IntelliSense, debugging, and refactoring
 - **Built-in testing**: [Unit and integration testing](/docs/iac/guides/testing/) for infrastructure code
@@ -426,9 +481,13 @@ Key Features:
 
 - **General-purpose language support**: Use Python, TypeScript, JavaScript, Go, .NET, Java, YAML, or HCL without learning new DSLs
 - **Software engineering practices**: Full IDE support, comprehensive testing frameworks, debugging capabilities
-- **Multi-cloud flexibility**: Native cloud provider SDKs with same-day feature access across [150+ providers](/registry/)
+- **Multi-cloud flexibility**: [170+ providers](/registry/), with native AWS, Azure, Google Cloud, and Kubernetes providers offering same-day access to new cloud features
 - **Incremental adoption**: Migration tools and state integration for gradual transitions
 - **Open source licensing**: Apache 2.0 ensures long-term freedom and flexibility
+
+> "We use Pulumi widely at Wiz. It enabled our product to support multi-cloud and to scale quickly — scaling and driving hundreds of thousands of infrastructure updates every day."
+>
+> — Yarin Miran, Senior Software Engineer, [Wiz](https://www.pulumi.com/case-studies/wiz/)
 
 Considerations:
 
@@ -436,16 +495,17 @@ Considerations:
 - **Ecosystem maturity**: Smaller community compared to more established tools like Terraform
 - **Tool complexity**: Advanced features may require more setup than simpler template systems
 
-Organizations like Unity, Snowflake, and Starburst have reported significant productivity improvements (80-90% deployment time reductions) when adopting programming language-based approaches. These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
+Organizations moving to programming-language-based IaC report deployment-time reductions ranging from roughly 70% to 99% — SANS at 70%, Unity at 80%, and Starburst at 99% (two weeks down to about three hours). These improvements typically occur when transitioning from manual processes or basic template systems to automated approaches with comprehensive testing, IDE integration, and code reusability. Results vary based on starting point, team expertise, infrastructure complexity, and specific use cases.
 
 > **Ready to get started?** [Experience Pulumi's programming language approach](/docs/get-started/) and see how familiar languages can transform your infrastructure management with comprehensive testing, powerful abstractions, and seamless multi-cloud support.
 
 ### 2. Terraform
 
-License: Business Source License (BSL) 1.1 (Not Open Source)  
+License: Business Source License (BUSL-1.1), not OSI-approved  
+Latest stable release: v1.15.9 (2026-08-19)  
 Best For: Teams with existing Terraform expertise and established workflows
 
-[Terraform](/docs/iac/comparisons/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BSL (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
+[Terraform](/docs/iac/comparisons/terraform/) uses HashiCorp Configuration Language (HCL) to define infrastructure across multiple cloud providers. However, its 2023 licensing change to BUSL-1.1 (no longer open source) and inherent limitations with domain-specific languages create challenges for teams requiring advanced software engineering practices.
 
 Key Features:
 
@@ -495,14 +555,15 @@ resource "aws_subnet" "public" {
 
 ### 3. AWS Cloud Development Kit (CDK)
 
-License: Apache 2.0  
+License: Apache-2.0  
+Latest stable release: v2.266.0 (2026-08-19)  
 Best For: AWS-focused teams who prefer programming languages over templates
 
 AWS CDK allows you to define AWS infrastructure using familiar programming languages, synthesizing CloudFormation templates for deployment while providing higher-level abstractions. CDK addresses many limitations of traditional template-based approaches by enabling general-purpose programming languages.
 
 Key Features:
 
-- **General-purpose programming languages**: TypeScript, Python, Java, C#, JavaScript support with full IDE integration (Go available in Developer Preview)
+- **General-purpose programming languages**: TypeScript, Python, Java, C#, JavaScript, and Go with full IDE integration
 - **AWS-optimized constructs**: High-level components encapsulating AWS best practices
 - **Type safety**: Compile-time checking and IntelliSense support
 - **CloudFormation reliability**: Built on AWS's proven deployment engine
@@ -631,9 +692,14 @@ Code Example:
 }
 ```
 
+## Cloud-Native and Community Declarative Tools
+
+The remaining five tools take a more declarative, cloud- or platform-native approach: four are scoped to a single cloud or a single control plane, and OpenTofu is the exception as a general-purpose, multi-cloud Terraform fork included here for its shared declarative, community-governed lineage. Each trades some of the flexibility of a general-purpose language for tighter integration with the platform it targets, or in OpenTofu's case, for open governance over a widely adopted DSL.
+
 ### 6. Azure Bicep
 
 License: MIT  
+Latest stable release: v0.46.1 (2026-07-30)  
 Best For: Azure deployments requiring improved readability and developer experience
 
 Azure Bicep is a domain-specific language (DSL) that simplifies Azure Resource Manager template authoring. Bicep files compile transparently to ARM templates, providing all the capabilities of ARM with significantly improved syntax and developer experience.
@@ -723,7 +789,8 @@ output "instance_ip" {
 
 ### 8. Kubernetes YAML
 
-License: Apache 2.0  
+License: Apache-2.0  
+Latest stable release: Kubernetes v1.36.4 (2026-08-20)  
 Best For: Teams managing container-native applications and cloud-native infrastructure
 
 Kubernetes YAML manifests represent one of the most widely adopted forms of infrastructure as code, enabling teams to define, version, and manage containerized applications and their supporting infrastructure through declarative configuration files.
@@ -757,7 +824,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: nginx:1.21
+        image: nginx:1.27
         ports:
         - containerPort: 80
         resources:
@@ -783,7 +850,8 @@ spec:
 
 ### 9. Crossplane
 
-License: Apache 2.0  
+License: Apache-2.0  
+Latest stable release: v2.4.0 (2026-08-20)  
 Best For: Kubernetes-first organizations managing multi-cloud infrastructure
 
 Crossplane is a Cloud-Native Framework for Platform Engineering that extends Kubernetes to help organizations build custom infrastructure management platforms, allowing teams to provision and manage cloud resources using Kubernetes APIs and patterns.
@@ -817,6 +885,7 @@ spec:
 ### 10. OpenTofu
 
 License: Mozilla Public License 2.0  
+Latest stable release: v1.12.6 (2026-08-19)  
 Best For: Teams seeking an open-source Terraform alternative with community governance
 
 OpenTofu emerged as a fork of Terraform v1.5.x following HashiCorp's license change, maintained by the Linux Foundation. It provides [high, but not full, compatibility with Terraform](/docs/iac/comparisons/opentofu/) while ensuring long-term open-source availability under MPL 2.0 licensing.
@@ -1055,7 +1124,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.21
+        image: nginx:1.27
         ports:
         - containerPort: 80
 ---
@@ -1218,6 +1287,10 @@ Internal Developer Platform Evolution: Organizations are building sophisticated 
 
 AI-Enhanced Development: Integration of AI tools to help generate, optimize, and troubleshoot infrastructure code, with particular strength in environments that use familiar programming languages where AI assistance is most mature. Emerging technologies like Model Context Protocol (MCP) and AI prompt templates are beginning to enable more sophisticated AI-infrastructure interactions.
 
+> "In under a year, AI has completely reshaped how we build applications. With Pulumi Neo, platform engineering is now catching up."
+>
+> — Joe Duffy, Founder & CEO, [Pulumi](https://www.prnewswire.com/news-releases/introducing-pulumi-neo-the-industrys-first-ai-powered-platform-engineer-302556718.html)
+
 These trends favor tools that embrace software engineering principles from the ground up, rather than attempting to retrofit programming capabilities onto template-based or DSL-limited approaches.
 
 {{< blog/cta-card title="Bring software engineering to IaC" >}}
@@ -1240,9 +1313,13 @@ Hybrid Operations: Use state integration and import tools to reference existing 
 
 Real-world migrations demonstrate that adoption can be remarkably fast with proper tooling:
 
-- **Atlassian Bitbucket**: Complete Terraform to Pulumi migration in 2 days using automated conversion tools. This rapid migration was enabled by existing Python expertise on the team, well-structured Terraform code, and straightforward infrastructure patterns that converted cleanly.
+- **Atlassian Bitbucket**: Converted a Terraform-managed CI/CD pipeline to Pulumi's Python-based IaC in 2 days, using the automatic conversion tool and the team's existing Python experience — because every developer on the team already wrote Python, they could bring existing skills straight to the new infrastructure code.
 - **Enterprise migrations**: Typical team migrations complete in weeks, not months, depending on infrastructure complexity and team preparation
 - **Learning curve**: Teams with programming experience adapt to language-based IaC approaches within days, while those new to programming may require additional training time
+
+> "When we did it with Terraform, it took two weeks to do [infrastructure deployments]. Now we do it in about three hours a day. So that's how much of an improvement Pulumi gave us on our deployment time."
+>
+> — Matt Stephenson, Senior Principal Software Engineer, [Starburst](https://www.pulumi.com/case-studies/starburst/)
 
 ### Migration Tools and Resources
 
@@ -1363,7 +1440,7 @@ Very important for long-term strategy:
 
 - Apache 2.0 (Pulumi, CDK) offers maximum flexibility
 - MPL 2.0 (OpenTofu) ensures open-source availability
-- BSL (Terraform) restricts commercial competitors
+- BUSL (Terraform) restricts commercial competitors
 - Proprietary (CloudFormation, ARM) ties you to specific vendors
 
 Choose open-source tools like Pulumi or OpenTofu to avoid vendor lock-in.
@@ -1385,9 +1462,9 @@ Yes, and many organizations are successfully migrating to overcome limitations i
 
 Proven Migration Success Stories:
 
-- **Atlassian Bitbucket**: Completed migration from Terraform to Pulumi's Python-based IaC in just 2 days using migration tools
+- **Atlassian Bitbucket**: Converted a Terraform-managed CI/CD pipeline to Pulumi's Python-based IaC in 2 days, using the automatic conversion tool and the team's existing Python experience
 - **Starburst**: Achieved 112x faster deployments after incrementally migrating from Terraform
-- **Multiple organizations**: Report 80-90% deployment time reductions after moving to programming language-based approaches
+- **Multiple organizations**: Report deployment-time reductions ranging from roughly 70% to 99% after moving to programming language-based approaches
 
 Available Migration Tools:
 
@@ -1403,6 +1480,22 @@ Migration Strategies:
 - **Zero downtime**: Tools like Pulumi enable seamless migration without service interruption
 
 The key is choosing tools that provide comprehensive migration support and incremental adoption paths rather than requiring "rip and replace" approaches.
+
+### How much do infrastructure as code tools cost in 2026?
+
+Cloud-native tools like AWS CDK, CloudFormation, Azure ARM, Azure Bicep, and Google Cloud Infrastructure Manager carry no separate tool fee: you pay only for the cloud resources you provision. Open-source tools including OpenTofu, Kubernetes, and Crossplane are also free to run, though you still cover your own compute and cluster costs.
+
+Managed platforms price differently. Pulumi Cloud's Individual plan is free forever for one user with unlimited stacks and projects, 500 workflow minutes per month, and 5 million Pulumi Neo tokens per month; Team plans start around $40/month for up to 10 users, and Enterprise starts around $400/month, scaling with the number of managed resources. HCP Terraform is free for up to 500 managed resources with one concurrent run, then moves to per-resource pricing (roughly $0.10 to $0.99 per resource per month depending on tier), with self-hosted Terraform Enterprise available at custom pricing for larger organizations. Figures reflect published pricing as of August 2026 and change periodically, so confirm current rates before budgeting.
+
+### Which infrastructure as code tools work best with AI coding agents?
+
+Tools built on general-purpose programming languages give AI agents the biggest advantage, because agents can read, generate, test, and refactor real code the same way they do application code. Pulumi is explicitly built for this: it lets agents like [Pulumi Neo](/product/neo/) propose changes, run previews, respond to failures, and open pull requests using the same Python, TypeScript, Go, C#, or Java that developers already write and test, rather than reasoning about HCL diffs or templated JSON/YAML that are harder for a language-aware toolchain to test against.
+
+Declarative DSL-based tools such as Terraform and OpenTofu can also be driven by AI coding assistants, and both ship a native test framework (`terraform test` / `tofu test`) plus language servers and editor extensions. What agents don't get in HCL is the depth of the surrounding toolchain — the assertion and mocking libraries, package ecosystem, and refactoring tools that come free with a general-purpose language — so validating an agent-generated change tends to take more bespoke scaffolding. That's a tradeoff, not a hard blocker — plenty of teams drive HCL with agents productively today. It does mean general-purpose-language IaC starts from a stronger position for agent-driven work: AI coding assistants such as Claude Code, Cursor, and Codex reach Pulumi through the same code-first path they already use for application code, with no IaC-specific tooling to bolt on.
+
+### What is the most popular infrastructure as code tool in 2026?
+
+By GitHub stars, Kubernetes leads the broader infrastructure ecosystem at roughly 124,900 stars, reflecting its role as the de facto container orchestration standard rather than a pure IaC tool. Among dedicated IaC tools, Terraform remains the most-starred at roughly 49,500, followed by OpenTofu at roughly 29,900, Pulumi at roughly 25,600, AWS CDK at roughly 12,900, and Crossplane at roughly 12,000 (measured 2026-08-22; star counts change continuously and are one signal among many, not a ranking of technical merit). Terraform's larger community reflects a decade of first-mover adoption, while Pulumi, OpenTofu, and Crossplane have grown fastest among teams prioritizing general-purpose languages, open governance, or Kubernetes-native infrastructure management, respectively.
 
 ## Conclusion: The Evolution of Infrastructure as Code
 
