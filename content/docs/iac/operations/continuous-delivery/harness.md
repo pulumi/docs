@@ -31,11 +31,11 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
-When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/access-identity/access-tokens/) to operate. Add the token as a Harness [secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) and reference it from a step's environment variables — the examples below read it from a secret named `pulumi_access_token` into `PULUMI_ACCESS_TOKEN`. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+When your pipeline uses Pulumi Cloud as its backend, it needs only a single [Pulumi access token](/docs/administration/concepts/access-tokens/) to operate. Add the token as a Harness [secret](https://developer.harness.io/docs/platform/secrets/add-use-text-secrets/) and reference it from a step's environment variables — the examples below read it from a secret named `pulumi_access_token` into `PULUMI_ACCESS_TOKEN`. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Configuration) then supplies cloud credentials, secrets, and configuration to your Pulumi program. Because ESC delivers those values the same way whether the consumer is a Harness pipeline or a developer's machine, a single environment definition works in both places — you don't store separate cloud provider keys as Harness secrets.
 
-To remove the static token entirely, Harness can act as an OIDC issuer, and Pulumi Cloud can register any third-party issuer as a trusted [OIDC Issuer](/docs/administration/access-identity/oidc-issuers/). A pipeline then exchanges a short-lived OIDC token for a Pulumi access token at runtime instead of storing one. See [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) for the Pulumi Cloud side of the setup, and the Harness documentation for issuing OIDC tokens from a pipeline.
+To remove the static token entirely, Harness can act as an OIDC issuer, and Pulumi Cloud can register any third-party issuer as a trusted [OIDC Issuer](/docs/administration/guides/oidc-issuers/). A pipeline then exchanges a short-lived OIDC token for a Pulumi access token at runtime instead of storing one. See [OIDC Issuers](/docs/administration/guides/oidc-issuers/) for the Pulumi Cloud side of the setup, and the Harness documentation for issuing OIDC tokens from a pipeline.
 
 ## Build a trunk-based CI/CD workflow
 
@@ -209,7 +209,7 @@ You can manage Harness itself — projects, environments, services, connectors, 
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC Issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Version Control](/docs/integrations/version-control/) — post infrastructure-change summaries on pull requests.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral per-pull-request environments.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — fixes for common failures when running Pulumi in CI/CD.

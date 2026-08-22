@@ -62,7 +62,7 @@ sections:
         description: |
           Ephemeral Pulumi Cloud accounts allow agents like Claude Code and Codex to spin up Pulumi-managed
           infrastructure without requiring a human in the loop.
-        link: /docs/administration/organizations-teams/agent-accounts/
+        link: /docs/administration/concepts/agent-accounts/
 
       - variant: image-left
         image: /images/releases/may-2026/release-cloud-cli.svg

@@ -44,7 +44,7 @@ The restore window is finite, so the best protection against accidental loss is 
 
 - Prefer `pulumi stack rm` (without `--force`) so the CLI refuses to remove a stack that still has resources tracked in state. Use `pulumi destroy` first, confirm the stack is empty, and then remove it.
 - Reserve `pulumi stack rm --force` for cases where you have intentionally decided to orphan the underlying cloud resources or where you are certain the state file does not need to be preserved.
-- For stacks that should never be removable through routine operations, restrict who has organization-admin or stack-write permissions. See [Teams and RBAC](/docs/administration/organizations-teams/teams/).
+- For stacks that should never be removable through routine operations, restrict who has organization-admin or stack-write permissions. See [Teams and RBAC](/docs/administration/concepts/rbac/teams/).
 
 ## Related
 
