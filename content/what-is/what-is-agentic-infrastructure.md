@@ -84,9 +84,9 @@ What makes this different from a generic coding assistant is that Neo is [ground
 
 ## What about infrastructure for AI agents?
 
-The phrase "agentic infrastructure" is also used to describe a second thing: the compute, networking, and data infrastructure that AI agents themselves run on. GPU clusters, inference endpoints, vector databases, and RAG pipelines: the platform underneath AI workloads.
+The phrase "agentic infrastructure" is also used to describe a second thing: the compute, networking, and data infrastructure that AI agents themselves run on. GPU clusters, inference endpoints, vector databases, and RAG pipelines: the platform underneath AI workloads. That is related to, but distinct from, this page's subject, which is infrastructure *managed by* AI agents.
 
-These two meanings are related but distinct:
+### The two meanings compared
 
 | | Infrastructure *managed by* AI agents | Infrastructure *for* AI agents |
 |---|---|---|
@@ -94,7 +94,7 @@ These two meanings are related but distinct:
 | **Example** | Neo provisions and updates your AWS environment | A GPU cluster running a training job or inference service |
 | **Who manages it** | The AI agent, with human review | Your platform team, often using IaC |
 
-Most organizations will need to think about both. Teams building AI products need the platform layer (infrastructure *for* agents). Those same teams also benefit from AI agents operating that platform (infrastructure *managed by* agents). The two compound: agents that understand infrastructure can also manage the infrastructure their own workloads run on.
+Most organizations need to think about both. Teams building AI products need the platform layer (infrastructure *for* agents), and those same teams also benefit from AI agents operating that platform (infrastructure *managed by* agents). The two compound: agents that understand infrastructure can also manage the infrastructure their own workloads run on.
 
 ## How do you govern and secure agentic infrastructure?
 
