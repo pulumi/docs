@@ -12,6 +12,7 @@ interface ContactUsItem {
     label?: string;
     hubspot_form_id: string;
     cta?: ContactUsCta;
+    qualifier?: string;
 }
 
 @Component({
@@ -41,7 +42,8 @@ export class ContactUsForm {
                 key: item.key,
                 label: item.label ? item.label : item.key.charAt(0).toUpperCase() + item.key.slice(1),
                 hubspotFormId: item.hubspot_form_id,
-                cta: item.cta
+                cta: item.cta,
+                qualifier: item.qualifier
             };
         });
 
