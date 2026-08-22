@@ -85,7 +85,7 @@ kubectl get pods --all-namespaces
 
 ## Deploying a workload with the Pulumi Kubernetes provider
 
-Now that your cluster is provisioned, you can deploy a workload (or any other Kubernetes or Helm resource) using the [Pulumi Kubernetes provider](https://www.pulumi.com/registry/packages/kubernetes/). In order to deploy Kubernetes resources to your cluster, you need to first declare an explicit provider. The explicit provider is needed because you are _creating the cluster and deploying workloads to that cluster in the same Pulumi program_. (For more details on default and explicit providers, see [Resource providers](https://www.pulumi.com/docs/concepts/resources/providers/).) Configure the provider to use the [Kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) of your newly created cluster:
+Now that your cluster is provisioned, you can deploy a workload (or any other Kubernetes or Helm resource) using the [Pulumi Kubernetes provider](https://www.pulumi.com/registry/packages/kubernetes/). In order to deploy Kubernetes resources to your cluster, you need to first declare an explicit provider. The explicit provider is needed because you are _creating the cluster and deploying workloads to that cluster in the same Pulumi program_. (For more details on default and explicit providers, see [Resource providers](https://www.pulumi.com/docs/iac/concepts/providers/).) Configure the provider to use the [Kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) of your newly created cluster:
 
 {{% chooser language "typescript,python" / %}}
 
@@ -110,7 +110,7 @@ k8s_provider = k8s.Provider(
 
 {{% /choosable %}}
 
-You can then add resources to the cluster by specifying your explicit provider as a [resource option](https://www.pulumi.com/docs/concepts/options/):
+You can then add resources to the cluster by specifying your explicit provider as a [resource option](https://www.pulumi.com/docs/iac/concepts/resources/options/):
 
 {{% chooser language "typescript,python" / %}}
 

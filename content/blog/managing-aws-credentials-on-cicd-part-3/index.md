@@ -267,7 +267,7 @@ along with the source code for a stack, so that builds and stack updates are rep
 However, what if those configuration settings contain secrets? Like you need to store an API key
 to use a 3rd party API.
 
-Pulumi supports [encrypting sensitive configuration data](https://www.pulumi.com/docs/concepts/config/#secrets).
+Pulumi supports [encrypting sensitive configuration data](https://www.pulumi.com/docs/iac/concepts/config/#secrets).
 You just need to add the `--secret` flag.
 
 ```bash
@@ -284,7 +284,7 @@ is safe to check into your source tree, since it cannot be copied/decrypted for 
 Pulumi keeps track of your cloud resources in a something called a [checkpoint file](/docs/iac/concepts/state-and-backends/),
 and that too might contain sensitive information. For example, a Pulumi resource might have a `"password"` output property.
 
-Pulumi [has support](/docs/concepts/resources#additionalsecretoutputs) to mark that resource
+Pulumi [has support](/docs/iac/concepts/resources/#additionalsecretoutputs) to mark that resource
 output as "secret" and make sure that it is encrypted within the checkpoint file. (So if you were to look at the checkpoint file
 contents via [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/), you would not be able to recover
 the data.

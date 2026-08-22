@@ -241,7 +241,7 @@ name: s3-writer
 
 ### Export resource values
 
-Now that you have your project resources defined, you can [export the values](/docs/concepts/stack/#outputs) of various resource properties from your program. The `export` syntax is as follows:
+Now that you have your project resources defined, you can [export the values](/docs/iac/concepts/stacks/#outputs) of various resource properties from your program. The `export` syntax is as follows:
 
 {{< chooser language "javascript,typescript,python,go,csharp,yaml" / >}}
 
@@ -429,7 +429,7 @@ The AWS CLI will run AWS commands with the `default` profile by default. If you 
 
 You will want to replace `<bucket_name>` with the actual name of your S3 bucket. While you can manually provide the name of your bucket, you can also programmatically reference your bucket name via the stack outputs.
 
-You'll do this by using the [`pulumi stack output`](/docs/concepts/stack/#outputs) command and provide the name of your desired output as shown below:
+You'll do this by using the [`pulumi stack output`](/docs/iac/concepts/stacks/#outputs) command and provide the name of your desired output as shown below:
 
 ```bash
 aws s3api list-objects-v2 --bucket $(pulumi stack output bucketName)
@@ -485,7 +485,7 @@ For this section, you are going to create a new Pulumi program that will access 
 
 Let's start by making a new Pulumi project in a new directory. In this new program, you need to add the code that will reference the values from your first program.
 
-This can be done using Pulumi's [Stack Reference functionality](/docs/concepts/stack/#stackreferences). You'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/admin/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
+This can be done using Pulumi's [Stack Reference functionality](/docs/iac/concepts/stacks/#stackreferences). You'll need to pass in the fully qualified name of the stack as an argument. This name is comprised of the [organization](/docs/pulumi-cloud/admin/organizations/), project, and stack names in the format of `<organization>/<project>/<stack>`
 
 For example, if the name of your organization is `my-org`, the name of your first program is `my-first-program`, and the name of your stack is `dev`, then your fully qualified name will be `my-org/my-first-program/dev`.
 
@@ -764,5 +764,5 @@ You exported Lambda properties into stack outputs, and referenced those outputs 
 To learn more about creating and managing resources in Pulumi, take a look at the following resources:
 
 - Learn more about creating resources in the [Creating Resources on AWS tutorial](/tutorials/creating-resources-aws/).
-- Learn more about [stack outputs and references](/docs/concepts/stack/#stackreferences) in the Pulumi documentation.
-- Learn more about [Pulumi inputs and outputs](/docs/concepts/inputs-outputs/) in the Pulumi documentation.
+- Learn more about [stack outputs and references](/docs/iac/concepts/stacks/#stackreferences) in the Pulumi documentation.
+- Learn more about [Pulumi inputs and outputs](/docs/iac/concepts/inputs-outputs/) in the Pulumi documentation.

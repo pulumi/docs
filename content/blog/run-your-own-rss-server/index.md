@@ -227,6 +227,6 @@ And with that, you should now be able to browse your RSS server securely:
 
 ## Finishing Up
 
-In this post, we've seen how easy it is to run a container as a service connected to an RDS database with Pulumi, and to expose that container securely on the web. If we wanted, we could go even farther --- we could refactor the program into Pulumi [Components](/docs/concepts/resources#components), perhaps (one for the service, one for the database), package it up for sharing on npm, and so on.
+In this post, we've seen how easy it is to run a container as a service connected to an RDS database with Pulumi, and to expose that container securely on the web. If we wanted, we could go even farther --- we could refactor the program into Pulumi [Components](/docs/iac/concepts/resources/#components), perhaps (one for the service, one for the database), package it up for sharing on npm, and so on.
 
 But we'll leave those improvements for another day. For now, let's enjoy what we've created! And start catching up on all that reading we've missed.

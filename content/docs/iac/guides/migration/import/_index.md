@@ -492,10 +492,10 @@ A `Resource` has the following schema:
 | `id`         | `string`        | Yes      | The provider determined ID for this resource type. This is required unless `component` is `true`.                                                                |
 | `type`       | `Type Token`    | Yes      | The type of the corresponding Pulumi resource.                                                                                                                 |
 | `name`       | `string`        | Yes      | The name of the resource.                                                                                                                                      |
-| `logicalName` | `string`       | No       | The [logical name](/docs/concepts/resources/names/#logicalname) of the resource. The original `name` property is then used just for codegen purposes (i.e. the source name). If either property is not set then the other field is used to fill it in. |
-| `parent`     | `string`        | No       | The name of the [parent](/docs/concepts/options/parent/) resource. The mentioned name must be present in the `nameTable`.                                      |
-| `provider`   | `string`        | No       | The name of the [provider](/docs/concepts/options/provider/) resource. The mentioned name must be present in the `nameTable`. |
-| `version`    | `string`        | No       | The [version](/docs/concepts/options/version/) of the provider to use.                                                        |
+| `logicalName` | `string`       | No       | The [logical name](/docs/iac/concepts/resources/names/#logicalname) of the resource. The original `name` property is then used just for codegen purposes (i.e. the source name). If either property is not set then the other field is used to fill it in. |
+| `parent`     | `string`        | No       | The name of the [parent](/docs/iac/concepts/resources/options/parent/) resource. The mentioned name must be present in the `nameTable`.                                      |
+| `provider`   | `string`        | No       | The name of the [provider](/docs/iac/concepts/resources/options/provider/) resource. The mentioned name must be present in the `nameTable`. |
+| `version`    | `string`        | No       | The [version](/docs/iac/concepts/resources/options/version/) of the provider to use.                                                        |
 | `properties` | `array[string]` | No       | The list of properties to include in the generated code. If unspecified all properties will be included.                                                       |
 | `component`  | `boolean`       | No       | This import should create an empty component resource. `id` must not be set if this is `true`.                                                                 |
 | `remote`     | `boolean`       | No       | This is a component in a [component package](/docs/using-pulumi/pulumi-packages/#types-of-pulumi-packages). `component` must be `true` if this is `true`.      |
@@ -504,7 +504,7 @@ To make it easier to import resources into complex programs, you can run `pulumi
 
 ## The `import` resource option
 
-Before `pulumi preview --import-file` existed, the [`import` resource option](/docs/concepts/options/import/) was the recommended way to import multiple resources across multiple stacks or deployment environments: you added the option to a resource declaration you'd already written, and Pulumi imported the resource on the next update. It's documented here for completeness and because existing programs still use it, but for new work prefer CLI-first import or program-first (bulk) import, described above.
+Before `pulumi preview --import-file` existed, the [`import` resource option](/docs/iac/concepts/resources/options/import/) was the recommended way to import multiple resources across multiple stacks or deployment environments: you added the option to a resource declaration you'd already written, and Pulumi imported the resource on the next update. It's documented here for completeness and because existing programs still use it, but for new work prefer CLI-first import or program-first (bulk) import, described above.
 
 Code-based import also differs from the CLI-based approach in that it doesn't imperatively modify the state of the current stack. Whereas running `pulumi import` with the CLI adds imported resources to your stack state directly, using the `import` resource option delegates that responsibility to the program to be handled as part of the normal infrastructure lifecycle --- for example, on the next `pulumi up`.
 
@@ -624,7 +624,7 @@ error: Preview failed: importing sg-04aeda9a214730248: security group not found
 
 After successfully importing a resource, you can delete the `import` option if you like, then re-run `pulumi up`, and all subsequent operations will now behave as though Pulumi had provisioned the imported resource from the outset.
 
-Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/concepts/options/protect/) resource option.
+Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/iac/concepts/resources/options/protect/) resource option.
 
 ### Mismatched state
 
@@ -672,5 +672,5 @@ To see details on what specifically doesn't match, you can select the `details` 
 After the import completes, Pulumi applies the update to bring the resource's configuration into alignment with your program's desired state. If you want the program to match the existing resource exactly without any updates, correct the mismatched properties in your code before running `pulumi up`.
 
 {{% notes type="info" %}}
-[Auto-named](/docs/concepts/resources/#autonaming) resources import cleanly: Pulumi reads the imported resource's actual name from the cloud provider and uses it before the update checks run, so auto-naming does not produce a name mismatch. That said, if you want subsequent updates to preserve a specific name — for example, to handle naming conflicts across multiple stacks — specify the `name` property explicitly, using [Pulumi configuration](/docs/concepts/config/) where necessary.
+[Auto-named](/docs/iac/concepts/resources/#autonaming) resources import cleanly: Pulumi reads the imported resource's actual name from the cloud provider and uses it before the update checks run, so auto-naming does not produce a name mismatch. That said, if you want subsequent updates to preserve a specific name — for example, to handle naming conflicts across multiple stacks — specify the `name` property explicitly, using [Pulumi configuration](/docs/iac/concepts/config/) where necessary.
 {{% /notes %}}
