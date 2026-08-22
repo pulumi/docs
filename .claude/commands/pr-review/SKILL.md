@@ -177,6 +177,19 @@ This is the **first big user-facing output**. Render in this order, top to botto
 
 Render the whole package in one message.
 
+#### Unresolved-findings check (part of Step 6's output)
+
+Approving is the moment the review's findings stop being actionable, so say what is about to be merged over. Run the enumerator against the pinned comment:
+
+```bash
+python3 .claude/commands/docs-review/scripts/review-worklist.py --pr "$PR_NUMBER" --format json
+```
+
+Anything it lists that the PR thread shows no outcome for — no fix in the diff, no dispute, no filed issue, no stated reason — is being merged over silently. Report it as one line in the Step 6 package (`Merging over: 2 ⚠️ low-confidence, 4 ✏️ style suggestions`) and carry it into the Step 7 recommendation. Two rules:
+
+- **The maintainer decides.** This is disclosure, not a gate. Merging over advisory findings is a legitimate call and 💡 Pre-existing never counts against a PR.
+- **On your own PR, work them first.** When the PR is the maintainer's own (or one you authored in this session), `/address-review $PR_NUMBER` is the right move before adjudication — dispositioning the findings there produces the outcome record the post-merge scrape reads.
+
 ### Step 7: Present action menu
 
 Use AskUserQuestion. Adaptive-scenario selection (which menu fires for which finding shape) and per-scenario options live in `pr-review:references:action-menus`. The Step 7 menu chooses *what* to do; auto-merge is decided in Step 8 via the merge toggle, never as a Step 7 option.
