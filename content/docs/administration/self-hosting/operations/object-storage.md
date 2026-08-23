@@ -6,9 +6,9 @@ h1: Object Storage Best Practices
 menu:
   administration:
     name: Object Storage
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 4
-    identifier: administration-security-compliance-self-hosted-operations-object-storage
+    identifier: administration-self-hosting-operations-object-storage
 pulumi_cloud_feature: self-hosting
 ---
 

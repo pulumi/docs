@@ -7,16 +7,19 @@ menu:
   administration:
     parent: administration-self-hosting
     weight: 1
-    identifier: administration-security-compliance-self-hosted-deployment-options
+    identifier: administration-self-hosting-deployment-options
 aliases:
   - /docs/pulumi-cloud/self-hosted/deployment-options/
   - /docs/administration/self-hosting/pulumi-cloud/deployment-options/
   - /docs/pulumi-cloud/admin/self-hosted/deployment-options/
 pulumi_cloud_feature: self-hosting
 ---
-Pulumi offers a number of deployment options for self-hosting the Pulumi Cloud.
 
-* [Docker Compose](quickstart-docker-compose/)
+{{< self-hosting-trial-note />}}
+
+Pulumi offers a number of deployment options for self-hosting the Pulumi Cloud. To get started, see [Install Self-Hosted Pulumi Cloud](/docs/administration/self-hosting/install/), which walks you through each platform. Use Docker Compose to evaluate on a single host in minutes; the other options are production deployments.
+
+* [Docker Compose](quickstart-docker-compose/) — evaluation and testing
 * [ECS](ecs-hosted/)
 * [EKS](eks-hosted/)
 * [AKS](aks-hosted/)

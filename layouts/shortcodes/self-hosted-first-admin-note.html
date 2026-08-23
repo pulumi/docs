@@ -1,0 +1,15 @@
+{{- /* Applies to every deployment option, so it lives here rather than being
+       restated per page. Sourced from the AKS installer README, which is the
+       only place upstream that spells it out. */ -}}
+<div class="note note-warning">
+    <div class="icon-and-line">
+        {{ partial "icon.html" (dict "name" "warning" "weight" "fill") }}
+        <div class="line"></div>
+    </div>
+    <div class="content">
+        {{ printf "On a fresh installation the **first user to sign up becomes the administrator**, including the SAML administrator. Create the account you intend to own the organization before sharing the console URL. Enabling SAML does not by itself close email and password signup — set `PULUMI_DISABLE_EMAIL_SIGNUP` on the API container to do that, since hiding the option in the console leaves the underlying handler active." | markdownify }}
+        {{- with .Inner }}
+        {{ . | markdownify }}
+        {{- end }}
+    </div>
+</div>

@@ -69,6 +69,10 @@ sections:
     heading: Administration
     description: Manage organizations, access, security, and self-hosting.
     link: /docs/administration/
+  - icon: hard-drives
+    heading: Self-Hosting
+    description: Run the full Pulumi Cloud platform in your own cloud account or data center.
+    link: /docs/administration/self-hosting/
   - icon: package
     heading: Registry ↗
     description: Browse and search Pulumi packages for 150+ cloud providers and services.

@@ -6,9 +6,9 @@ h1: Compute Sizing
 menu:
   administration:
     name: Compute Sizing
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 3
-    identifier: administration-security-compliance-self-hosted-operations-compute-sizing
+    identifier: administration-self-hosting-operations-compute-sizing
 pulumi_cloud_feature: self-hosting
 ---
 

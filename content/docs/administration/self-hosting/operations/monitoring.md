@@ -6,9 +6,9 @@ h1: Monitoring and Alerting
 menu:
   administration:
     name: Monitoring
-    parent: administration-security-compliance-self-hosted-operations
+    parent: administration-self-hosting-operations
     weight: 6
-    identifier: administration-security-compliance-self-hosted-operations-monitoring
+    identifier: administration-self-hosting-operations-monitoring
 pulumi_cloud_feature: self-hosting
 ---
 
@@ -16,7 +16,7 @@ pulumi_cloud_feature: self-hosting
 
 Effective monitoring is critical for maintaining a reliable self-hosted Pulumi Cloud deployment. This page covers a recommended alerting strategy and the key metrics to watch.
 
-The API service exposes Prometheus metrics and supports OpenTelemetry for tracing. See [OpenTelemetry configuration](/docs/administration/self-hosting/components/api/#opentelemetry) for setup details.
+The API service exposes Prometheus metrics and supports OpenTelemetry for tracing. See [Telemetry](/docs/administration/self-hosting/operations/telemetry/) for setup details.
 
 ## Three-tier alerting strategy
 

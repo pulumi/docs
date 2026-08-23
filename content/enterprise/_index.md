@@ -143,7 +143,7 @@ capabilities:
           icon: buildings
           icon_color: blue
           description: |
-            Enterprises that require specific data controls can use the self-hosted Pulumi service in their own cloud or datacenter and maintain complete control over their hosting, network isolation, identity, and data ownership. Deployment options include Kubernetes clusters, VMWare vSphere, virtual private clouds in AWS, Azure, Google Cloud, and many other configurations.
+            Enterprises that require specific data controls can run [self-hosted Pulumi Cloud](/product/self-hosted/) in their own cloud account or data center and maintain complete control over their hosting, network isolation, identity, and data ownership. Supported installations include AWS ECS and EKS, Azure AKS, Google GKE, any conformant Kubernetes cluster, and Docker on your own hosts.
 
         - title: Security
           icon: shield
@@ -165,7 +165,7 @@ support:
 partners:
     title: Cloud Partners
     description: |
-        Pulumi works with the leading cloud providers including AWS, Google Cloud, and Microsoft Azure to ensure best-in-class support of the Pulumi Cloud Engineering Platform across each cloud. Pulumi provides Native Providers which enables same-day support of all new products and features in each cloud. Pulumi is also available for purchase through [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dwn22batkhsyg) with support for additional cloud provider marketplaces coming soon.
+        Pulumi works with the leading cloud providers including AWS, Google Cloud, and Microsoft Azure to ensure best-in-class support of the Pulumi platform across each cloud. Pulumi provides Native Providers which enables same-day support of all new products and features in each cloud. Pulumi is also available for purchase through [AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-dwn22batkhsyg) with support for additional cloud provider marketplaces coming soon.
 
 get_started:
     title: Get Started
@@ -174,9 +174,9 @@ get_started:
           link: https://app.pulumi.com/site/trial/
           link_text: Start Free Trial
 
-        - title: Self-Hosted Pulumi Service
+        - title: Self-Hosted Pulumi Cloud
           link: /product/self-hosted/#self-hosted-trial
-          link_text: Request Free Trial
+          link_text: Request a Proof of Concept
 
         - title: Migration Guide
           link: /docs/iac/guides/migration/
