@@ -18,13 +18,13 @@ talks:
   url: "https://talks.devopsdays.org/dodroxrox26/"
   date: 2026-09-22T09:00:00.000-06:00
 - event: "KCDC 2026"
-  title: "I Built an AI Running Coach (That Actually Remembers My Training)"
-  url: "https://www.kcdc.info/"
-  date: 2026-09-11T09:00:00.000-05:00
-- event: "KCDC 2026"
   title: "Let's Build an Infrastructure-as-Code Tool from Scratch"
   url: "https://www.kcdc.info/"
-  date: 2026-09-10T09:00:00.000-05:00
+  date: 2026-09-11T11:00:00.000-05:00
+- event: "KCDC 2026"
+  title: "I Built an AI Running Coach (That Actually Remembers My Training)"
+  url: "https://www.kcdc.info/"
+  date: 2026-09-10T15:45:00.000-05:00
 - event: "Pinecone Meetup NYC: Scaling AI Infrastructure"
   title: "I Built an AI Running Coach (And Gave It Memory)"
   url: "https://luma.com/pinecone-m9my"
