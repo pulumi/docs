@@ -21,19 +21,19 @@ faq_schema: true
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        New research on AI agents managing cloud infra: Terraform ties for best on day-one provisioning, then drops to 33% success on updates.
+        Recent research on AI agents managing cloud infra: Terraform ties for best on day-one provisioning, then drops to 33% success on updates.
 
         The gap shows up when infrastructure needs to change, not when it's first written:
     linkedin: |
-        A new academic study out of Michigan, Berkeley, and a16z ("Cloud Infrastructure Management in the Age of AI Agents," arXiv:2506.12270) put four kinds of AI agents through the same cloud tasks: an IaC agent writing Terraform, an SDK agent writing Python, a CLI agent, and a browser agent clicking through a console.
+        A recent academic study out of Michigan, Berkeley, and a16z ("Cloud Infrastructure Management in the Age of AI Agents," arXiv:2506.12270) put four kinds of AI agents through the same cloud tasks: an IaC agent writing Terraform, an SDK agent writing Python, a CLI agent, and a browser agent clicking through a console.
 
         The IaC agent tied for the best score on first-time provisioning. Then its success rate fell to 33% on updates and 40% on monitoring, with the authors pointing to hallucinated fields and deprecated methods.
 
-        This isn't a verdict that HCL is bad; the real distinction is Day 1 (write it once, greenfield) versus Day 2 (change it, query it, keep it correct over time), and most real infrastructure work is Day 2. General-purpose languages give an agent leverage that a declarative config file can't: types, tests, refactoring tools, a compiler, and programmatic access to live state.
+        HCL is fine for Day 1: write it once, greenfield. The distinction that matters is Day 1 versus Day 2, changing it, querying it, keeping it correct over time, and most real infrastructure work is Day 2. General-purpose languages give an agent leverage that a declarative config file can't: types, tests, refactoring tools, a compiler, and programmatic access to live state.
 
         We wrote up what the research says, where HCL still wins, and what it means for how you let an agent touch your infrastructure.
     bluesky: |
-        New research: AI agents tie for best on writing Terraform for the first time, then their success rate on changing it later falls to 33%.
+        Recent research: AI agents hit 100% success writing Terraform for the first time, then their success rate on changing it later falls to 33%.
 
         The gap is Day 2, not Day 1, and that's a language problem:
 ---
@@ -76,11 +76,11 @@ General-purpose languages give an agent the same tools a human engineer relies o
 - **Types.** A type error is immediate, mechanical feedback an agent can act on before ever calling a cloud API. A malformed HCL block or a hallucinated field often isn't caught until `apply` fails, or worse, doesn't fail and does the wrong thing.
 - **Tests.** An agent can write and run a unit test against infrastructure code the same way it tests application code, and check its own change before proposing it. `terraform test` exists, but it checks a configuration by standing it up against a real provider, so the feedback loop is a cloud round-trip rather than something an agent can run on every iteration.
 - **Functions and abstraction.** Loops, conditionals, and reusable functions let an agent express "do this for every environment" once, instead of hand-editing N near-duplicate blocks and risking drift between them.
-- **Refactoring tooling.** Rename a variable, extract a component, or restructure a module, and an IDE or language server can verify the change compiles. As Pulumi co-founder and CEO Joe Duffy put it, describing why this matters for infrastructure specifically: outside of dependency updates, it's rare to want to refactor across every application at once, "but it happens all the time for infrastructure" ([The New Stack](https://thenewstack.io/pulumi-infrastructure-agent-era/)).
+- **Refactoring tooling.** Rename a variable, extract a component, or restructure a module, and an IDE or language server can make the change for you and verify that it compiles. Outside of dependency updates, it might be rare to want to refactor across multiple applications at once, but it [happens all the time with infrastructure](https://thenewstack.io/pulumi-infrastructure-agent-era/).
 - **A real package ecosystem.** An agent can pull in a well-tested, versioned component from PyPI or npm instead of re-deriving a pattern from scratch in HCL, where module reuse is comparatively thin.
-- **Programmatic access to live state.** Automation APIs let an agent query and drive infrastructure the same way it would call any other library, which is exactly the capability the SDK and CLI agents used to hold their edge on updates and monitoring in the study above.
+- **Programmatic access to live state.** Interfaces like Pulumi's [Automation API](/docs/iac/concepts/automation-api/) let an agent query and drive infrastructure the same way it would call any other library, which is exactly the capability the SDK and CLI agents used to hold their edge on updates and monitoring in the study above.
 
-Customers who've moved from copy-pasted declarative blocks to a real language describe the same shift. Mike Corsaro, Senior Software Engineer at Atlassian, put it plainly: "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code. If you want to add a new database, add one line, and you're good to go." Dinesh Ramamurthy, Engineering Manager at Mercedes-Benz R&D, framed the same benefit as engineering practice: "What really stands out in Pulumi is the ability to apply program language constructs and best practices to your cloud infrastructure code." Both are describing exactly the leverage — abstraction, reuse, and standard engineering practice — that also happens to be what an agent needs to change infrastructure reliably.
+Customers who've moved from copy-pasted declarative blocks to a real language describe the same shift. Mike Corsaro, Senior Software Engineer at Atlassian, [put it plainly](/case-studies/atlassian/): "With the old tool, spinning up our databases meant we had 20 blocks of code and a lot of copy and pasting. With Pulumi, it's Python. It's five lines of code. If you want to add a new database, add one line, and you're good to go." Dinesh Ramamurthy, Engineering Manager at Mercedes-Benz R&D, [framed the same benefit](/case-studies/mercedes-benz/) as engineering practice: "What really stands out in Pulumi is the ability to apply program language constructs and best practices to your cloud infrastructure code." Both are describing exactly the leverage — abstraction, reuse, and standard engineering practice — that also happens to be what an agent needs to change infrastructure reliably.
 
 ## Where does HCL still make the most sense?
 
