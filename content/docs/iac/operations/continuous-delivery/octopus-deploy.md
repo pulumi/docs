@@ -41,18 +41,18 @@ Before you begin, make sure you have:
 
 Give your deployment process a Pulumi Cloud identity in one of two ways. **Choose one — you don't need both:**
 
-- **A stored access token.** Save a long-lived [Pulumi access token](/docs/administration/access-identity/access-tokens/) as a sensitive Octopus variable. Simple to set up and works on every Octopus version.
+- **A stored access token.** Save a long-lived [Pulumi access token](/docs/administration/concepts/access-tokens/) as a sensitive Octopus variable. Simple to set up and works on every Octopus version.
 - **OpenID Connect (OIDC), recommended where supported.** Exchange a short-lived token issued by Octopus for a temporary Pulumi access token, so no long-lived credential is stored anywhere.
 
 ### Use a stored access token
 
-Pulumi reads its access token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login. Store the token as a **sensitive** Octopus [project variable](https://octopus.com/docs/projects/variables) — or, to reuse it across projects, in a [library variable set](https://octopus.com/docs/projects/variables/library-variable-sets) — named `PULUMI_ACCESS_TOKEN`. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the deployment's identity isn't tied to an individual.
+Pulumi reads its access token from the `PULUMI_ACCESS_TOKEN` environment variable and authenticates without an interactive login. Store the token as a **sensitive** Octopus [project variable](https://octopus.com/docs/projects/variables) — or, to reuse it across projects, in a [library variable set](https://octopus.com/docs/projects/variables/library-variable-sets) — named `PULUMI_ACCESS_TOKEN`. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the deployment's identity isn't tied to an individual.
 
 Marking the variable sensitive keeps its value out of logs and the Octopus UI. Scope it to the environments that should use it.
 
 ### Use OIDC
 
-Octopus Deploy 2025.1 and later can issue a short-lived OIDC token for a deployment run through a [Generic OpenID Connect account](https://octopus.com/docs/infrastructure/accounts/openid-connect). Pulumi Cloud can register Octopus Server as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/), which removes the need to store a static `PULUMI_ACCESS_TOKEN`.
+Octopus Deploy 2025.1 and later can issue a short-lived OIDC token for a deployment run through a [Generic OpenID Connect account](https://octopus.com/docs/infrastructure/accounts/openid-connect). Pulumi Cloud can register Octopus Server as a trusted [OIDC issuer](/docs/administration/guides/oidc-issuers/), which removes the need to store a static `PULUMI_ACCESS_TOKEN`.
 
 The flow is generic:
 
@@ -61,7 +61,7 @@ The flow is generic:
 1. The step exchanges that token for a temporary Pulumi access token with `pulumi login --oidc-token <token> --oidc-org <your-org>`.
 
 {{% notes type="info" %}}
-The OIDC path requires Octopus Deploy 2025.1 or later, and Pulumi Cloud must be able to reach your Octopus Server's OIDC discovery endpoint to validate the token. This works for Octopus Cloud; a firewalled self-hosted server may not be reachable. See [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) for the full configuration reference.
+The OIDC path requires Octopus Deploy 2025.1 or later, and Pulumi Cloud must be able to reach your Octopus Server's OIDC discovery endpoint to validate the token. This works for Octopus Cloud; a firewalled self-hosted server may not be reachable. See [OIDC Issuers](/docs/administration/guides/oidc-issuers/) for the full configuration reference.
 {{% /notes %}}
 
 ## Provide cloud credentials
@@ -135,6 +135,6 @@ Octopus Deploy is not aware of pull requests, but Pulumi Cloud's [version contro
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [CI/CD troubleshooting guide](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to deployments and developers consistently.
-- [OIDC Issuers](/docs/administration/access-identity/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
+- [OIDC Issuers](/docs/administration/guides/oidc-issuers/) — eliminate static tokens with short-lived, exchanged credentials.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments for pull requests.
 - [Version Control](/docs/integrations/version-control/) — connect Pulumi Cloud to your version control system.

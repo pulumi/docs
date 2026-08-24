@@ -9,7 +9,7 @@ link = "/docs/iac/concepts/resources/options/aliases/"
 [[entries]]
 term = "Audit Log"
 description = "An immutable record of user and service activity in a [Pulumi Cloud](#pulumi-cloud) [organization](#organization). Audit logs are available to organization admins and can be exported via the CLI or REST API."
-link = "/docs/administration/security-compliance/audit-logs/"
+link = "/docs/administration/concepts/audit-logs/"
 
 [[entries]]
 term = "Automation API"
@@ -78,7 +78,7 @@ link = "/docs/iac/concepts/resources/options/import/"
 
 [[entries]]
 term = "Internal Developer Platform (IDP)"
-description = "Pulumi's set of building blocks for platform teams to deliver self-service infrastructure to developers: [organization templates](#organization-template), [no-code stacks](#no-code-stacks), [private registries](#private-registry), and [policy](#policy-as-code) enforcement working together as a platform layer on top of Pulumi IaC, ESC, and Cloud."
+description = "Pulumi's set of building blocks for platform teams to deliver self-service infrastructure to developers: [organization templates](#organization-template), [no-code stacks](#no-code-stacks), [private registries](#private-registry), and [policy](#pulumi-policies) enforcement working together as a platform layer on top of Pulumi IaC, ESC, and Cloud."
 link = "/docs/idp/"
 
 [[entries]]
@@ -109,12 +109,12 @@ link = "/docs/idp/concepts/no-code-stacks/"
 [[entries]]
 term = "OIDC"
 description = "OpenID Connect. [Pulumi Cloud](#pulumi-cloud) uses OIDC trust relationships to let workloads in CI systems and clouds (GitHub Actions, GitLab CI, AWS, Azure, Google Cloud, and others) authenticate without long-lived credentials. Pulumi can also act as an OIDC issuer for downstream cloud accounts."
-link = "/docs/administration/access-identity/oidc-issuers/"
+link = "/docs/administration/guides/oidc-issuers/"
 
 [[entries]]
 term = "Organization"
 description = "The primary grouping unit in [Pulumi Cloud](#pulumi-cloud). An organization owns stacks, environments, teams, policy packs, deployment settings, and audit logs, and is where access control and billing are scoped."
-link = "/docs/administration/organizations-teams/organizations/"
+link = "/docs/administration/concepts/organizations/"
 
 [[entries]]
 term = "Organization Template"
@@ -132,8 +132,8 @@ description = "Distributable units of Pulumi code. A [Pulumi package](#pulumi-pa
 link = "/docs/iac/concepts/packages/"
 
 [[entries]]
-term = "Policy as Code"
-description = "Governance rules written as code (in TypeScript, Python, or supported policy languages) that Pulumi enforces against infrastructure. Policies can run during `pulumi preview` and `pulumi up` and against [resources](#resources) discovered by [Pulumi Insights](#pulumi-insights), regardless of how they were created."
+term = "Pulumi Policies"
+description = "Governance rules written as code (in TypeScript, Python, or supported policy languages) that Pulumi enforces against infrastructure. Policies can run during `pulumi preview` and `pulumi up` and against [resources](#resources) discovered by [Pulumi Discovery](#pulumi-discovery), regardless of how they were created."
 link = "/docs/insights/policy/"
 
 [[entries]]
@@ -163,7 +163,7 @@ link = "/docs/iac/concepts/projects/project-file/"
 
 [[entries]]
 term = "Pulumi Cloud"
-description = "The managed SaaS at `app.pulumi.com` that stores [stack](#stack) [state](#state), [secrets](#secrets), environments, deployment settings, policies, audit logs, and Insights data. It is Pulumi's default [backend](#backend) and the host for collaboration, governance, and automation features."
+description = "The managed SaaS at `app.pulumi.com` that stores [stack](#stack) [state](#state), [secrets](#secrets), environments, deployment settings, policies, audit logs, and Discovery data. It is Pulumi's default [backend](#backend) and the host for collaboration, governance, and automation features."
 link = "/product/pulumi-cloud/"
 
 [[entries]]
@@ -177,8 +177,8 @@ description = "Environments, [Secrets](#secrets), and Configuration. A [Pulumi C
 link = "/docs/esc/"
 
 [[entries]]
-term = "Pulumi Insights"
-description = "The Discovery & Governance product in [Pulumi Cloud](#pulumi-cloud). It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable graph, and enforces [policy as code](#policy-as-code) on top of them."
+term = "Pulumi Discovery"
+description = "The discovery half of [Pulumi Cloud](#pulumi-cloud)'s Discovery & governance capabilities. It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable resource graph, and makes them available to [Pulumi Policies](#pulumi-policies) for evaluation."
 link = "/docs/insights/"
 
 [[entries]]
@@ -204,7 +204,7 @@ link = "/docs/iac/concepts/packages/"
 [[entries]]
 term = "RBAC"
 description = "Role-based access control. [Pulumi Cloud](#pulumi-cloud) RBAC lets [organization](#organization) admins assign users and teams to roles whose permissions are defined by reusable permission sets, then scope those roles to specific projects, stacks, environments, or other [resources](#resources)."
-link = "/docs/administration/access-identity/rbac/"
+link = "/docs/administration/concepts/rbac/"
 
 [[entries]]
 term = "Refresh"
@@ -228,7 +228,7 @@ link = "/docs/iac/concepts/providers/"
 
 [[entries]]
 term = "Resource Search"
-description = "The [Pulumi Insights](#pulumi-insights) feature for querying every [resource](#resources) Pulumi knows about across IaC stacks and discovered cloud accounts, using a structured search syntax."
+description = "The [Pulumi Discovery](#pulumi-discovery) feature for querying every [resource](#resources) Pulumi knows about across IaC stacks and discovered cloud accounts, using a structured search syntax."
 link = "/docs/insights/discovery/search/"
 
 [[entries]]
@@ -294,12 +294,12 @@ link = "/docs/iac/concepts/state-and-backends/"
 [[entries]]
 term = "Team"
 description = "A named group of users inside a [Pulumi Cloud](#pulumi-cloud) [organization](#organization). Teams are the unit you assign roles and permissions to, and they can also be granted access to specific stacks, environments, and other [resources](#resources)."
-link = "/docs/administration/access-identity/rbac/teams/"
+link = "/docs/administration/concepts/rbac/teams/"
 
 [[entries]]
 term = "Token"
 description = "A credential used to authenticate to [Pulumi Cloud](#pulumi-cloud) non-interactively. Personal access tokens belong to a user; [organization](#organization) and [team](#team) access tokens belong to the organization and can be scoped to specific permissions."
-link = "/docs/administration/access-identity/access-tokens/"
+link = "/docs/administration/concepts/access-tokens/"
 
 [[entries]]
 term = "Update"
