@@ -388,7 +388,7 @@ docsBucket.onObjectCreated("docsHandler", new aws.lambda.CallbackFunction("docsH
     },
 
     memorySize: 256 /* MB */,
-});
+}));
 ```
 
 ### Adding/removing files from a function bundle
@@ -578,7 +578,7 @@ docsBucket.onObjectCreated("docsHandler", (event: aws.s3.BucketEvent) => {
 });
 
 // Export the bucket name so it's easy to access.
-export docsBucketName = docsBucket.bucketName;
+export const docsBucketName = docsBucket.bucketName;
 ```
 
 After deploying this code, you can run `pulumi logs --follow` to tail the logs:

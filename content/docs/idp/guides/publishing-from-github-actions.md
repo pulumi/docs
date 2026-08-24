@@ -131,7 +131,7 @@ import (
 func TestConstruct(t * testing.T) {
 
     // Configure Mocks: The provider is roughly the same as in our main.go
-    myProvider, err: = infer.NewProviderBuilder().
+    myProvider, err := infer.NewProviderBuilder().
     WithNamespace("example").
     WithComponents(
         infer.ComponentF(NewStaticPage),
@@ -143,7 +143,7 @@ func TestConstruct(t * testing.T) {
     require.NoError(t, err)
 
     // Configure Mocks: The Server catches calls to create resources, and returns mock resources instead.
-    server, err: = integration.NewServer(
+    server, err := integration.NewServer(
         t.Context(),
         "example",
         semver.MustParse("0.1.0"),
@@ -167,7 +167,7 @@ func TestConstruct(t * testing.T) {
     // test the "static-page-component:index:StaticPage" component
     // We try to construct a StaticPage component named "test-static-page"
     // The mock will set the endpoint value
-    resp, err: = server.Construct(p.ConstructRequest {
+    resp, err := server.Construct(p.ConstructRequest {
         Urn: "urn:pulumi:stack::project::static-page-component:index:StaticPage::test-static-page",
         Inputs: property.NewMap(map[string] property.Value {
             "indexContent": property.New("test content"),

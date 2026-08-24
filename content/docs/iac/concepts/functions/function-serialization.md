@@ -161,7 +161,7 @@ Because of this, almost all JavaScript values can be serialized with very few ex
 Pulumi will attempt to reduce the size of a serialized object by removing parts of it that it can prove are not used in a program. For example:
 
 ```typescript
-const obj = { foo() { console.log("foo called"); } bar() { console.log("bar called") } };
+const obj = { foo() { console.log("foo called"); }, bar() { console.log("bar called") } };
 
 const lambda = new aws.lambda.CallbackFunction("mylambda", {
     callback: async e => {
@@ -173,7 +173,7 @@ const lambda = new aws.lambda.CallbackFunction("mylambda", {
 In this code, only the `foo` property is used from `obj`. So Pulumi will serialize a value equivalent to `{ foo() { console.log("foo called"); } }`. However, if the code were:
 
 ```typescript
-const obj = { foo() { console.log("foo called"); this.bar(); } bar() { console.log("bar called") } };
+const obj = { foo() { console.log("foo called"); this.bar(); }, bar() { console.log("bar called") } };
 
 const lambda = new aws.lambda.CallbackFunction("mylambda", {
     callback: async e => {
