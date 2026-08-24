@@ -43,7 +43,7 @@ With Pulumi ESC you can:
 
 Dive into Learn Pulumi for a comprehensive walkthrough of key Pulumi concepts in the context of a real-life application.
 
-{{< get-started-next-step path="/learn/pulumi-fundamentals" label="Learn Pulumi Fundamentals" ref="gs-azure-learn" >}}
+{{< get-started-next-step path="/learn/tutorials/pulumi-fundamentals/" label="Learn Pulumi Fundamentals" ref="gs-azure-learn" >}}
 
 ## Launch a new project with a template
 
