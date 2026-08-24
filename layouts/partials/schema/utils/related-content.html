@@ -7,34 +7,34 @@
   {{ $tutorialTitle := lower .Title }}
   {{ if in $tutorialTitle "aws" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Article"
-      "@id" "https://www.pulumi.com/docs/clouds/aws/get-started/#article"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/docs/iac/get-started/aws/#main-content"
       "name" "AWS Documentation"
     ) }}
   {{ else if in $tutorialTitle "azure" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Article"
-      "@id" "https://www.pulumi.com/docs/clouds/azure/get-started/#article"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/docs/iac/get-started/azure/#main-content"
       "name" "Azure Documentation"
     ) }}
   {{ else if in $tutorialTitle "gcp" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Article"
-      "@id" "https://www.pulumi.com/docs/clouds/gcp/get-started/#article"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/docs/iac/get-started/gcp/#main-content"
       "name" "Google Cloud Documentation"
     ) }}
   {{ else if in $tutorialTitle "kubernetes" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Article"
-      "@id" "https://www.pulumi.com/docs/clouds/kubernetes/#article"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/docs/iac/get-started/kubernetes/#main-content"
       "name" "Kubernetes Documentation"
     ) }}
   {{ end }}
   
   {{/* Link to main getting started */}}
   {{ $relatedContent = $relatedContent | append (dict
-    "@type" "Article"
-    "@id" "https://www.pulumi.com/docs/get-started/#article"
+    "@type" "TechArticle"
+    "@id" "https://www.pulumi.com/docs/get-started/#main-content"
     "name" "Getting Started with Pulumi"
   ) }}
 {{ end }}
@@ -46,7 +46,7 @@
   {{ if in $content "Pulumi Cloud" }}
     {{ $relatedContent = $relatedContent | append (dict
       "@type" "SoftwareApplication"
-      "@id" "https://www.pulumi.com/product/#software"
+      "@id" "https://www.pulumi.com/product/#main-content"
       "name" "Pulumi Cloud"
     ) }}
   {{ end }}
@@ -54,7 +54,7 @@
   {{ if in $content "Pulumi Deployments" }}
     {{ $relatedContent = $relatedContent | append (dict
       "@type" "SoftwareApplication"
-      "@id" "https://www.pulumi.com/product/pulumi-deployments/#software"
+      "@id" "https://www.pulumi.com/product/pulumi-deployments/#main-content"
       "name" "Pulumi Deployments"
     ) }}
   {{ end }}
@@ -62,7 +62,7 @@
   {{ if in $content "Pulumi ESC" }}
     {{ $relatedContent = $relatedContent | append (dict
       "@type" "SoftwareApplication"
-      "@id" "https://www.pulumi.com/product/secrets-management/#software"
+      "@id" "https://www.pulumi.com/product/secrets-management/#main-content"
       "name" "Pulumi ESC"
     ) }}
   {{ end }}
@@ -70,7 +70,7 @@
   {{ if in $content "Pulumi Neo" }}
     {{ $relatedContent = $relatedContent | append (dict
       "@type" "SoftwareApplication"
-      "@id" "https://www.pulumi.com/product/neo/#software"
+      "@id" "https://www.pulumi.com/product/neo/#main-content"
       "name" "Pulumi Neo"
     ) }}
   {{ end }}
@@ -82,26 +82,26 @@
   
   {{ if in $docPath "/aws/" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Course"
-      "@id" "https://www.pulumi.com/tutorials/creating-resources-aws/#course"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-aws/#main-content"
       "name" "Creating AWS Resources Tutorial"
     ) }}
   {{ else if in $docPath "/azure/" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Course"
-      "@id" "https://www.pulumi.com/tutorials/creating-resources-azure/#course"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-azure/#main-content"
       "name" "Creating Azure Resources Tutorial"
     ) }}
   {{ else if in $docPath "/gcp/" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Course"
-      "@id" "https://www.pulumi.com/tutorials/creating-resources-gcp/#course"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-gcp/#main-content"
       "name" "Creating GCP Resources Tutorial"
     ) }}
   {{ else if in $docPath "/kubernetes/" }}
     {{ $relatedContent = $relatedContent | append (dict
-      "@type" "Course"
-      "@id" "https://www.pulumi.com/tutorials/creating-resources-kubernetes/#course"
+      "@type" "TechArticle"
+      "@id" "https://www.pulumi.com/tutorials/creating-resources-kubernetes/#main-content"
       "name" "Creating Kubernetes Resources Tutorial"
     ) }}
   {{ end }}
