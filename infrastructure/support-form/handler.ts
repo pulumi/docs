@@ -8,12 +8,13 @@
 // Requests without the secret are rejected, so the public Function URL can't
 // be used to bypass the CDN's WAF and rate limiting.
 //
-// The Intercom integration is stubbed: accepted submissions are written to
-// CloudWatch Logs as single-line JSON documents (type
-// "support_request_accepted") where they can be observed and, later, replayed
-// against the real ticket API.
+// Accepted submissions are filed as Intercom tickets (see ./intercom.ts) and,
+// either way, written to CloudWatch Logs as single-line JSON documents (type
+// "support_request_accepted" or "support_request_ticket_failed") for
+// observability.
 
 import * as crypto from "crypto";
+import { createSupportTicket } from "./intercom";
 import { MAX_BODY_BYTES, validateSubmission } from "./validation";
 
 // Function URLs invoke with the API Gateway v2 payload shape. Only the pieces
@@ -120,22 +121,33 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
 
     const id = crypto.randomUUID();
 
-    // Observability stub: one JSON document per accepted submission, queryable
-    // in CloudWatch Logs Insights via { $.type = "support_request_accepted" }.
+    let ticketId: string;
+    try {
+        ticketId = await createSupportTicket(result.value);
+    } catch (err) {
+        console.error(
+            JSON.stringify({
+                type: "support_request_ticket_failed",
+                id,
+                error: err instanceof Error ? err.message : String(err),
+                sourceIp: event.requestContext?.http?.sourceIp,
+            }),
+        );
+        return jsonResponse(502, { ok: false, error: "ticket_creation_failed", id });
+    }
+
+    // One JSON document per accepted submission, queryable in CloudWatch Logs
+    // Insights via { $.type = "support_request_accepted" }.
     console.log(
         JSON.stringify({
             type: "support_request_accepted",
             id,
+            ticketId,
             receivedAt: new Date().toISOString(),
             sourceIp: event.requestContext?.http?.sourceIp,
             request: result.value,
         }),
     );
 
-    // TODO(intercom): replace the log line above with a ticket-create call to
-    // the Intercom API once its spec is available. The API key arrives as a
-    // stack secret surfaced through another environment variable — never in
-    // this repo or the frontend.
-
-    return jsonResponse(200, { ok: true, id });
+    return jsonResponse(200, { ok: true, id, ticketId });
 }

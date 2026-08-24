@@ -80,10 +80,9 @@ const config = {
     wafRateLimit: stackConfig.getNumber("wafRateLimit") || 500,
 
     // enableSupportForm toggles the /api/support endpoint backing the support-request
-    // form at /support/new/ (see supportForm.ts). The Intercom integration is stubbed
-    // for now; when it lands, its API key becomes a stack secret (pulumi config set
-    // --secret intercomApiKey, or an ESC environment entry) surfaced to the Lambda as
-    // an environment variable — never checked into this repo or shipped to the frontend.
+    // form at /support/new/ (see supportForm.ts), which files submissions as Intercom
+    // tickets. Requires the intercomApiKey (secret) and intercomTicketTypeId stack
+    // config values — see SupportFormApiArgs in supportForm.ts.
     enableSupportForm: stackConfig.getBoolean("enableSupportForm") || false,
 };
 
@@ -959,7 +958,10 @@ const supportFormBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheB
 let supportForm: SupportFormApi | undefined;
 
 if (config.enableSupportForm) {
-    supportForm = new SupportFormApi("support-form");
+    supportForm = new SupportFormApi("support-form", {
+        intercomApiKey: stackConfig.requireSecret("intercomApiKey"),
+        intercomTicketTypeId: stackConfig.require("intercomTicketTypeId"),
+    });
 
     supportFormOrigins.push(supportForm.getOrigin());
 

@@ -8,9 +8,9 @@ import { supportFormHandler } from "./support-form/handler";
 
 // SupportFormApi is the server side of the support-request form at
 // /support/new/ — a Lambda (fronted by a Function URL) that validates
-// submissions and, for now, stubs the Intercom integration by writing accepted
-// entries to CloudWatch Logs. See support-form/handler.ts for the endpoint's
-// behavior and support-form/validation.ts for the payload contract.
+// submissions and files them as Intercom tickets. See support-form/handler.ts
+// for the endpoint's behavior, support-form/intercom.ts for the ticket-filing
+// client, and support-form/validation.ts for the payload contract.
 //
 // The Function URL uses authorizationType NONE, so it is technically publicly
 // invokable — but the handler rejects any request that doesn't carry the
@@ -20,12 +20,23 @@ import { supportFormHandler } from "./support-form/handler";
 // cryptographically, the upgrade path is authorizationType AWS_IAM plus a
 // CloudFront Origin Access Control — which requires the browser to send
 // x-amz-content-sha256 on every POST, so it needs frontend changes too.
+export interface SupportFormApiArgs {
+    // intercomApiKey is the Intercom access token used to search/create
+    // contacts and file tickets. Passed as a secret stack config value
+    // (pulumi config set --secret intercomApiKey, or an ESC environment
+    // entry) — never checked into this repo or shipped to the frontend.
+    intercomApiKey: pulumi.Input<string>;
+    // intercomTicketTypeId is the Intercom ticket type filed for support
+    // requests.
+    intercomTicketTypeId: pulumi.Input<string>;
+}
+
 export class SupportFormApi extends pulumi.ComponentResource {
     private readonly originSecret: random.RandomPassword;
     private readonly func: aws.lambda.CallbackFunction<any, any>;
     private readonly functionUrl: aws.lambda.FunctionUrl;
 
-    constructor(name: string, opts?: pulumi.ComponentResourceOptions) {
+    constructor(name: string, args: SupportFormApiArgs, opts?: pulumi.ComponentResourceOptions) {
         super("www-pulumi:infrastructure:SupportFormApi", name, undefined, opts);
 
         // The shared secret CloudFront stamps on origin requests. Rotating it
@@ -108,6 +119,8 @@ export class SupportFormApi extends pulumi.ComponentResource {
                 environment: {
                     variables: {
                         SUPPORT_FORM_ORIGIN_SECRET: this.originSecret.result,
+                        INTERCOM_API_KEY: args.intercomApiKey,
+                        INTERCOM_TICKET_TYPE_ID: args.intercomTicketTypeId,
                     },
                 },
             },
