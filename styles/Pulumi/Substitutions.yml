@@ -5,8 +5,16 @@
 # split is what lets the pinned PR review treat Substitutions findings as
 # blockers while WordChoice stays advisory (see the `blocker:` list in
 # .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml).
+#
+# This is an offline mirror of the "Retired and disallowed names" table in the
+# brand guide's Names & terminology section (the source of truth; see
+# styles/Pulumi/BRAND-SYNC.yaml). Only rows with a single fixed replacement
+# belong here; retired names whose replacement is context-dependent (bare
+# "Insights", "Pulumi Service", bare "Copilot") live in
+# DeprecatedProductNames.yml as flag-only findings instead.
 extends: substitution
-message: "Use '%s' instead of '%s' (STYLE-GUIDE.md)."
+message: "Use '%s' instead of '%s' (brand guide: Names & terminology)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: error
 ignorecase: true
 action:
@@ -18,3 +26,10 @@ swap:
   '\blanguage-native package\b': native language package
   '\bPulumi CrossGuard\b': Pulumi Policies
   '\bCrossGuard\b': Pulumi Policies
+  '\bPulumi Copilot\b': Pulumi Neo
+  '\bPulumi Insights\b': Pulumi Discovery
+  '\bInsights account\b': cloud account
+  '\bInsights scan\b': Discovery scan
+  '\bInsights supergraph\b': resource graph
+  '\bInsights resources\b': discovered resources
+  '\bself-managed backend\b': DIY backend

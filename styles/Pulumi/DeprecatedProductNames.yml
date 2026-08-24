@@ -1,26 +1,50 @@
-# Flags the deprecated "Pulumi Service" name (the pre-2022 name for Pulumi Cloud).
+# Flags retired product names whose *replacement is context-dependent* — the
+# dead name is always wrong, but a human (or reviewing model) has to pick the
+# right current name for the sentence, so these are existence (flag-only)
+# findings, never auto-substitutions. Retired names with a single fixed
+# replacement (Pulumi Insights -> Pulumi Discovery, CrossGuard -> Pulumi
+# Policies, ...) live in Substitutions.yml instead.
 #
-# This is an existence rule (flag-only), NOT a substitution: the correct current
-# name is context-dependent. "Pulumi Service" most often resolves to Pulumi
-# Cloud, but in many places it means a more specific product -- e.g. the External
-# Secrets Operator pushes secrets to a *Pulumi ESC environment*, and the "Pulumi
-# Service provider" is now the "Pulumi Cloud provider". An auto-replace would
-# mechanically pick the wrong one, so we surface it for a human to resolve.
+# This is an offline mirror of the "Retired and disallowed names" table in the
+# brand guide's Names & terminology section (the source of truth; see
+# styles/Pulumi/BRAND-SYNC.yaml).
 #
-# Matches "Pulumi Service" / "Pulumi service" / "pulumi service" (ignorecase) but
-# not:
-#   - the plural "Pulumi Services" (the IDP Services concept; "e" to "s" is not
-#     a word boundary, so the base token already excludes this)
-#   - "Pulumi Service Provider" / "Pulumi Service provider", i.e. the
-#     `pulumi-pulumiservice` Terraform/Pulumi provider, which still carries its
-#     historic name upstream (the provider repo, its registry package name
-#     `pulumiservice`, and this site's own provider doc all still say "Pulumi
-#     Service Provider"). Renaming the provider is a product/IA decision with
-#     URL-alias consequences, well outside this lint rule's remit, so the
-#     negative lookahead exempts it rather than flagging false positives.
+# Token notes (the rule is case-sensitive so bare generic words don't flag;
+# character classes cover the common miscasings):
+#
+#   - "Pulumi Service": pre-2022 name of Pulumi Cloud, but resolves to a
+#     different product in different sentences (Pulumi Cloud most often; Pulumi
+#     ESC or Pulumi Deployments where the sentence is about secrets or remote
+#     execution). Excludes the plural "Pulumi Services" (the IDP Services
+#     concept) and "Pulumi Service provider" — the `pulumi-pulumiservice`
+#     provider still carries its historic name upstream (registry package id
+#     `pulumiservice`), and renaming it is a product/IA decision with URL-alias
+#     consequences, outside this lint rule's remit.
+#   - "Insights": retired in favor of Discovery, but bare capitalized Insights
+#     needs a human eye (historical prose is allowed to stand, and the right
+#     replacement may be "Discovery", "Discovery & governance", or a feature
+#     name). Excludes "Pulumi Insights" and the fixed phrases ("Insights
+#     account/scan/supergraph/resources") that Substitutions.yml auto-fixes,
+#     so the same text is never double-flagged. Lowercase "insights" (the
+#     ordinary English noun) never flags.
+#   - "Copilot": retired in favor of Pulumi Neo. Excludes "Pulumi Copilot"
+#     (auto-fixed by Substitutions.yml) and the unrelated GitHub/Microsoft/
+#     VS Code Copilot products, which docs legitimately reference. Known
+#     limitation: a bare "Copilot" in an agent list ("Cursor, Copilot,
+#     Codex") means GitHub's product but still flags — the reviewing model
+#     refutes it from context; the fixed lookbehinds can't.
+#   - "IAS": the retired Insights acronym.
+#   - "Policy Violations": the retired console page name; the page is now
+#     "policy findings" (lowercase "policy violations" is fine in prose for
+#     what a policy check surfaces, and stays unflagged via case sensitivity).
 extends: existence
-message: "'%s' is the former name of Pulumi Cloud. Use the specific current product for this context -- e.g. Pulumi Cloud, Pulumi ESC, or Pulumi Deployments (STYLE-GUIDE.md §Product Names)."
+message: "'%s' is a retired product name. Choose the current name for this context — see the brand guide's Names & terminology page (retired-names table)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: warning
-ignorecase: true
+ignorecase: false
 tokens:
-  - '\bPulumi Service\b(?!s\b)(?!\s+provider\b)'
+  - '\b[Pp]ulumi [Ss]ervice\b(?!s\b)(?!\s+[Pp]rovider\b)'
+  - '(?<!Pulumi )\bInsights\b(?!\s+(?:account|scan|supergraph|resources)\b)'
+  - '(?<!Pulumi )(?<!GitHub )(?<!Microsoft )(?<!VS Code )\bCopilot\b'
+  - '\bIAS\b'
+  - '\bPolicy Violations\b'

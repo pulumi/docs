@@ -19,7 +19,7 @@
 # are opted out per-path in .vale.ini -- narrative voice is the medium in
 # blog posts and out of scope for explainers.
 extends: existence
-message: "Narrative walkthrough voice ('%s') -- prefer imperative second person: 'Create a bucket', not 'Let's create a bucket' (STYLE-GUIDE.md §Grammar and punctuation)."
+message: "Narrative walkthrough voice ('%s') -- prefer imperative second person: 'Create a bucket', not 'Let's create a bucket' (brand guide: writing style)."
 link: "https://brand.pulumi.com/voice/writing-style/"
 level: warning
 ignorecase: true

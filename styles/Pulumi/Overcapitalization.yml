@@ -58,8 +58,8 @@
 # rather than removed on the unconfirmed premise, but noted here so the next
 # person doesn't read it as evidence the opt-out is load-bearing.
 extends: existence
-message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (STYLE-GUIDE.md §Headings, 'use capitalization only for proper nouns')."
-link: "https://brand.pulumi.com/voice/writing-style/"
+message: "'%s' overcapitalizes a generic concept -- use lowercase except at the start of a sentence or heading (brand guide: Names & terminology, general terminology rules)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: warning
 ignorecase: false
 nonword: false

@@ -22,7 +22,7 @@
 # Second-person futures ("you will need an AWS account") never match -- there
 # is no second-person subject in either token.
 extends: existence
-message: "Future tense ('%s') -- prefer present tense for product behavior: 'Neo pauses', not 'Neo will pause' (STYLE-GUIDE.md §Grammar and punctuation)."
+message: "Future tense ('%s') -- prefer present tense for product behavior: 'Neo pauses', not 'Neo will pause' (brand guide: writing style)."
 link: "https://developers.google.com/style/tense"
 level: warning
 ignorecase: false

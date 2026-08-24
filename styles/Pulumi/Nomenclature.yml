@@ -1,5 +1,6 @@
 extends: substitution
-message: "Use Pulumi's canonical spelling: '%s' instead of '%s' (STYLE-GUIDE.md §Product Names)."
+message: "Use Pulumi's canonical spelling: '%s' instead of '%s' (brand guide: Names & terminology)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: error
 ignorecase: false
 action:
@@ -13,7 +14,8 @@ swap:
   '\bpulumi idp\b': Pulumi IDP
   '\bPulumi Idp\b': Pulumi IDP
   '\bpulumi cloud\b': Pulumi Cloud
-  '\bpulumi insights\b': Pulumi Insights
+  '\bpulumi discovery\b': Pulumi Discovery
+  '\bPulumi discovery\b': Pulumi Discovery
   '\bpulumi policies\b': Pulumi Policies
   '\bpulumi policy\b': Pulumi Policies
   '\bpulumi neo\b': Pulumi Neo

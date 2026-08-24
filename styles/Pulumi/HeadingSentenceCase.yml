@@ -1,6 +1,6 @@
 extends: capitalization
 message: "Heading '%s' should use sentence case (capitalize only the first word and proper nouns)."
-link: STYLE-GUIDE.md
+link: "https://brand.pulumi.com/voice/writing-style/"
 level: warning
 # H2+ only. The brand standard is sentence case at every level, page title
 # included, but enforcing it on H1 would flag the large backlog of existing

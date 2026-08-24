@@ -8,7 +8,8 @@
 # Warning, not error: these must still clear MinAlertLevel = warning in
 # .vale.ini to surface as advisory nags at all.
 extends: substitution
-message: "Use '%s' instead of '%s' (STYLE-GUIDE.md)."
+message: "Use '%s' instead of '%s' (brand guide: voice, words and phrases)."
+link: "https://brand.pulumi.com/voice/voice-and-tone/"
 level: warning
 ignorecase: true
 action:
