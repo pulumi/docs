@@ -62,7 +62,7 @@ Our goal is to empower you to use the right tool for the job while maintaining a
 
 The rest of this page is optional reading: patterns to reach for once a basic coexistence setup is working. They depend on your particular needs, so treat them as a general guide to strategies for managing more complex environments rather than as steps to follow in order.
 
-The samples below read Terraform state with `terraform.state.getS3ReferenceOutput` from the `@pulumi/terraform` package — the S3 counterpart of the `getLocalReference` and `getRemoteReference` functions covered in [Reference Terraform State](/docs/iac/get-started/terraform/reference-state/). Each returns an object whose `outputs` map holds the Terraform outputs.
+The samples below read Terraform state with `terraform.state.getS3ReferenceOutput` from the `@pulumi/terraform` package — the S3 counterpart of the `getLocalReference` and `getRemoteReference` functions covered in [Reference Terraform State](/docs/iac/get-started/terraform/reference-state/). Each returns an object with an `outputs` map holding the values the Terraform configuration exports through its `output` blocks, keyed by output name — the same `tfState.outputs["ecs_cluster_name"]` pattern used in that step. Those values arrive as Pulumi [outputs](/docs/iac/concepts/inputs-outputs/), so pass them straight into other resources rather than treating them as plain strings.
 
 ### Multi-stack architectures
 
