@@ -45,7 +45,7 @@ Another helpful thing Pulumi Cloud can do is link the Pulumi stack update to the
 
 ![The stack update header, showing links to GitHub source commit](https://user-images.githubusercontent.com/274700/150612892-f8e84597-2ce2-4687-8acc-236a57f6c6a4.png)
 
-When Pulumi updates a stack, it will store some information about the local machine state, such the current git SHA if the stack resides in a `git` repository. It is with this data that Pulumi Cloud links to relevant services where possible.
+When Pulumi updates a stack, it will store some information about the local machine state, such as the current git SHA if the stack resides in a `git` repository. It is with this data that Pulumi Cloud links to relevant services where possible.
 
 If you're curious to know all of the information Pulumi has for a stack update, you can navigate to the Environment tab for that update:
 

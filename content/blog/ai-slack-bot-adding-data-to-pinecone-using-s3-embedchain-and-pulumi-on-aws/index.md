@@ -281,7 +281,7 @@ app_event_lambda = aws.lambda_.Function(
 )
 ```
 
-If you're new to Pulumi, you might be wondering what's going on with the `lambda_environment`, why isn't `app_bucket.id` referenced directly, and what is [pulumi.Output.all](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/all/)? This tells Pulumi to wait until the bucket is created before trying to use its name in a string we're building. This is an important core feature of Pulumi that happens [by nesting Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/apply/#accessing-nested-output-values). To learn more, see [Inputs & Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/).
+If you're new to Pulumi, you might be wondering what's going on with the `lambda_environment`, why isn't `app_bucket.id` referenced directly, and what is [pulumi.Output.all](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/all/)? This tells Pulumi to wait until the bucket is created before trying to use its name in a string we're building. This is an important core feature of Pulumi that often happens [by nesting Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/apply/#accessing-nested-output-values). To learn more, see [Inputs & Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/).
 
 ## Triggering the data loader
 

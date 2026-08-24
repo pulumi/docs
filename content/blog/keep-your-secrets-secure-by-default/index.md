@@ -31,7 +31,7 @@ Any secret identified by you or by Pulumi is fully protected in the secret stora
 
 ## Integration with other secret stores
 
-For smaller organizations, the secret storage built into Pulumi is enough. In larger organizations however, it’s likely that a centralized secret management system is already in use, like [AWS Key Management System](https://aws.amazon.com/kms/), [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud Key Management](https://cloud.google.com/security-key-management), or [Hashicorp Vault](https://www.vaultproject.io/). Pulumi integrates with each of these systems to [protect secrets](https://www.pulumi.com/docs/iac/concepts/secrets/#initializing-a-stack-with-alternative-encryption) in the way required by the organization.
+For smaller organizations, the secret storage built into Pulumi is often all you need. In larger organizations however, it’s likely that a centralized secret management system is already in use, like [AWS Key Management System](https://aws.amazon.com/kms/), [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud Key Management](https://cloud.google.com/security-key-management), or [Hashicorp Vault](https://www.vaultproject.io/). Pulumi integrates with each of these systems to [protect secrets](https://www.pulumi.com/docs/iac/concepts/secrets/#initializing-a-stack-with-alternative-encryption) in the way required by the organization.
 
 ## Next steps
 
