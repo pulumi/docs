@@ -68,4 +68,4 @@ This data already shows the expected significant improvement in update times, es
 
 While this was an opt-in process using the `PULUMI_ENABLE_JOURNALING` environment variable, this opt-in is no longer required. Just upgrade your Pulumi CLI to v3.225.0+ and use the Pulumi Cloud backend, and journaling will automatically speed up your updates.
 
-If you encounter any issues, reach out on the [Pulumi Community Slack](https://slack.pulumi.com/) or through [Pulumi Support](https://support.pulumi.com/hc/en-us).  You can also set the `PULUMI_DISABLE_JOURNALING=true` env variable to opt out of journaling.
+If you encounter any issues, reach out on the [Pulumi Community Slack](https://slack.pulumi.com/) or through [Pulumi Support](https://pulumi.com/support/new).  You can also set the `PULUMI_DISABLE_JOURNALING=true` env variable to opt out of journaling.

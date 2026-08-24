@@ -101,4 +101,4 @@ name of your Pulumi organization.
 
 Google Workspace SAML troubleshooting: [SAML app error messages](https://support.google.com/a/answer/6301076)
 
-For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).
+For additional help, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://pulumi.com/support/new/).

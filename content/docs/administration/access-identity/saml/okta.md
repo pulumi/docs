@@ -137,4 +137,4 @@ name of your Pulumi organization.
 
 ## Troubleshooting
 
-For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://support.pulumi.com/).
+For help resolving SAML SSO configuration issues, see the [SAML SSO troubleshooting guide](/docs/administration/access-identity/saml/troubleshooting/) or [contact support](https://pulumi.com/support/new/).

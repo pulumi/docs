@@ -284,8 +284,8 @@ function getDefaultExcludedKeywords() {
         "http://localhost:16686/search", // Local Jaeger endpoint presented in troubleshooting guide.
         "https://ceph.io",
         "https://www.pagerduty.com",
-        "https://support.pulumi.com",
-        "https://support.pulumi.com/",
+        "https://pulumi.com/support/new",
+        "https://pulumi.com/support/new/",
         "https://www.pulumi.com/support/",
         "https://pbs.twimg.com/profile_images/",
         "https://linen.dev/",

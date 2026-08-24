@@ -35,7 +35,7 @@ form:
             help: Please enter the details of your request. It always helps to include code snippets, current behavior, and expected behavior when encountering issues. Markdown is welcome.
     submit: Submit
     submitting: Submitting…
-    error_banner: We couldn't send your request just now. Your entries are saved in this browser tab — please try again in a moment, or open a ticket at https://support.pulumi.com/.
+    error_banner: We couldn't send your request just now. Your entries are saved in this browser tab — please try again in a moment, or open a ticket at https://pulumi.com/support/new/.
 
 confirmation:
     title: Request received. We're on it.

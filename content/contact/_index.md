@@ -19,7 +19,7 @@ quick_links:
         - label: Already a customer?
           description: File a support ticket for a fast response from our team.
           cta_label: Get support
-          url: https://support.pulumi.com/hc/en-us/requests/new
+          url: https://pulumi.com/support/new/requests/new
 
 form:
     - key: general
@@ -39,6 +39,6 @@ form:
       hubspot_form_id: cta1
       cta:
         label: Submit a Request
-        url: https://support.pulumi.com/hc/en-us/requests/new
+        url: https://pulumi.com/support/new/requests/new
 
 ---

@@ -62,4 +62,4 @@ curl \
 
 We invite you to try out the new short lived access tokens in Pulumi Cloud. As always, we value your feedback and look forward to hearing how this feature helps streamline your workflows and enhances security.
 
-For more details, check out [our documentation](/docs/administration/access-identity/access-tokens/) and [API reference docs](/docs/reference/cloud-rest-api/). If you have any questions or need assistance, [our support team](https://support.pulumi.com/hc/en-us) is here to help.
+For more details, check out [our documentation](/docs/administration/access-identity/access-tokens/) and [API reference docs](/docs/reference/cloud-rest-api/). If you have any questions or need assistance, [our support team](https://pulumi.com/support/new) is here to help.

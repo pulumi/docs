@@ -80,7 +80,7 @@ If you don't need the full customization of a published package — you just wan
 Popular Terraform providers also surface in the public Pulumi Registry as **dynamically-bridged** listings (for example, [Honeycomb](/registry/packages/honeycombio/) and [Supabase](/registry/packages/supabase/)); consumers still generate the SDK locally with `pulumi package add`. The rest of this guide covers authoring and publishing a full package; if the Any Terraform Provider path fits your needs, follow that guide instead.
 
 {{% notes type="info" %}}
-Registry listings for dynamically-bridged Terraform providers are generated automatically and don't include a logo by default. To have a logo added to your provider's Registry page, reach out to [Pulumi support](https://support.pulumi.com/) with a link to a web-accessible SVG (wordmarks preferred, with all surrounding whitespace removed).
+Registry listings for dynamically-bridged Terraform providers are generated automatically and don't include a logo by default. To have a logo added to your provider's Registry page, reach out to [Pulumi support](https://pulumi.com/support/new/) with a link to a web-accessible SVG (wordmarks preferred, with all surrounding whitespace removed).
 {{% /notes %}}
 
 ## Author your resources or components
