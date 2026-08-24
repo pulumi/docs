@@ -121,7 +121,7 @@ If this fails, delete your account, then accept the organization invite.
 Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
 {{% /notes %}}
 
-For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization).
+For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization) and [Identity providers](/docs/administration/concepts/identity-providers/).
 
 ## Account
 

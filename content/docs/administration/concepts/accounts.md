@@ -7,8 +7,7 @@ menu:
   administration:
         name: Accounts
         parent: administration-concepts
-        weight: 2
-        
+        weight: 3
 aliases:
 - /docs/administration/organizations-teams/accounts/
 - /docs/intro/console/accounts/
@@ -58,15 +57,21 @@ If you signed up using an email address and need to resend the verification emai
 3. Under your email address, you will see the option to resend the verification email.
 ![Resend Verification Email](/images/docs/pulumi-cloud/accounts/resend-verification.png)
 
-### Adding New Identities {#adding-new-identities}
+### Adding new identities {#adding-new-identities}
 
-You can associate your Pulumi account with multiple identities. In addition to the one you have originally configured, you can add your identities with the following third-party providers:
+You can associate your Pulumi account with multiple identities. Besides the one you originally configured, you can add identities from the following third-party providers:
 
 {{< identities >}}
 
-Connecting these additional identities will enable you to join Pulumi organizations that are backed by those systems. Only organization admins can add members to a Pulumi organization.
+To add one:
 
-In order to be invited as a member of a Pulumi organization, you must connect your account with the organization's backing identity provider. Once your account is linked to your third-party identity, you will then show up on the list of users that the organization admin can invite.
+1. Click on your account avatar in the top right corner.
+1. Select **Account settings**.
+1. In the **Identity providers** section, find the provider under **Available identities** and select **Connect**.
+
+Connecting these additional identities lets you join Pulumi organizations that are backed by those systems. Only organization admins can add members to a Pulumi organization.
+
+To be invited as a member of a Pulumi organization, you must connect your account with the organization's backing [identity provider](/docs/administration/concepts/identity-providers/). Once your account is linked to your third-party identity, you show up on the list of users that the organization admin can invite.
 
 ## Password Reset
 

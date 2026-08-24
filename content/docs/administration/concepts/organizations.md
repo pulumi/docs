@@ -51,7 +51,7 @@ To create an organization:
 
 To become a member of a Pulumi organization, you must be invited by an existing Pulumi
 organization administrator or submit a request to the administrator for approval.
-In addition, you also need to be a member of the third-party organization or group backing the Pulumi organization.
+In addition, you also need to be a member of the third-party organization or group backing the Pulumi organization. See [Identity providers](/docs/administration/concepts/identity-providers/).
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
 you must associate a GitLab identity with your Pulumi account, and also
@@ -170,86 +170,6 @@ For more information, see [How can I delete my Pulumi account?](/docs/support/fa
 
 ## Organization identity providers
 
-A Pulumi organization can use the Pulumi identity provider or a third-party identity provider.
-If using a third-party identity provider all members need to belong to the third-party
-identity provider in order to join a Pulumi organization.
+Every Pulumi organization is backed by an identity provider that governs who can be a member: Pulumi itself, a GitHub organization, a GitLab group, a Bitbucket workspace, or a SAML 2.0 identity provider.
 
-For example, if a Pulumi organization, is backed by a GitHub organization, then only members
-of that GitHub organization may be added to the Pulumi organization. As soon as
-someone loses access to the GitHub organization, they will no longer have access to the
-Pulumi organization.
-
-A Pulumi organization can also be backed by a [SAML 2.0 identity provider](/docs/administration/guides/saml/).
-
-### Changing identity providers
-
-Every organization is backed by an identity that governs the membership to your organization.
-By default, when you create a new Pulumi organization, it uses the Pulumi identity provider.
-
-Only organization admins can change the organization identity provider.
-
-Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
-
-To change an organization's identity provider:
-
-1. Navigate to **Settings** > **Access Management**.
-1. Select the **Other** tab.
-1. In the **Membership Requirements** section, select **Change requirements**.
-
-### Disconnecting identity providers
-
-In order to disconnect an identity provider you need to select another identity provider. This is also true for SAML SSO. To remove SAML SSO configuration, select a new identity provider.
-
-Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
-
-1. Navigate to **Settings** > **Access Management**.
-1. Select the **Other** tab.
-1. In the **Membership Requirements** section, select **Change requirements**.
-1. Select a new identity provider.
-
-### GitHub identity provider
-
-[Setting up a GitHub Organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
-
-To add a GitHub organization to Pulumi, an admin of the GitHub organization
-must first grant the Pulumi OAuth app the [`read:org` scope](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f).
-This is required to verify memberships within the GitHub organization.
-Pulumi will not have access to any of the organization's source code, issues, or other data.
-
-### GitLab identity provider
-
-[GitLab Groups](https://docs.gitlab.com/user/group/)
-
-To add a GitLab-backed organization to Pulumi, an admin of the GitLab group
-must add the group to Pulumi, and invite its members to join Pulumi.
-
-GitLab allows group admins to add members with a temporary membership, i.e., with an
-expiration value. In order to invite those members to Pulumi, their membership in the
-GitLab group must still be active. As soon as their GitLab group membership expires,
-those users will lose access to Pulumi organization.
-
-### Bitbucket identity provider
-
-[BitBucket Workspaces](https://support.atlassian.com/bitbucket-cloud/docs/what-is-a-workspace/)
-
-To add a Bitbucket-backed organization to Pulumi, an admin of the Atlassian
-Bitbucket workspace
-must first grant the Pulumi Oauth app [read access](https://confluence.atlassian.com/bitbucket/oauth-on-bitbucket-cloud-238027431.html#OAuthonBitbucketCloud-Scopes)
-to their Bitbucket account and workspace membership information.
-
-Once the Pulumi organization has been created, the admin can see a list of Bitbucket workspace
-members that they can add or invite to the Pulumi organization.
-
-### SAML Single Sign-on (SSO)
-
-{{< pulumi-cloud "saml-sso" />}}
-
-Pulumi Cloud supports any SAML 2.0-based identity provider.
-
-* [SAML-based configuration guide](/docs/administration/guides/saml/)
-* [Microsoft Entra ID](/docs/administration/guides/saml/entra/)
-* [Google Workspace](/docs/administration/guides/saml/gsuite/)
-* [Auth0](/docs/administration/guides/saml/auth0/)
-* [Okta](/docs/administration/guides/saml/okta/)
-
-Members of SSO organizations can login to Pulumi with the organization name auto-filled in the UI by visiting `https://app.pulumi.com/welcome/<organization-name>/sso`.
+See [Identity providers](/docs/administration/concepts/identity-providers/) for the full list of options, how to set each one up, and how to change your organization's provider.

@@ -732,7 +732,7 @@ categories:
 
       - id: identity-providers
         name: Identity providers
-        link: /docs/administration/concepts/accounts/
+        link: /docs/administration/concepts/identity-providers/
         availability:
           individual: GitHub, GitLab, Atlassian
           team: GitHub, GitLab, Atlassian
