@@ -1,0 +1,114 @@
+{{/* Returns a Dataset entity for a page that publishes original data (survey
+     results, benchmark numbers, usage statistics), driven entirely by a
+     `dataset` object in frontmatter so it never needs to parse markdown or
+     guess at what counts as "data" on a page. Opt in per page with:
+
+       dataset:
+         name: "State of IaC 2026 Survey Dataset"
+         description: "Aggregated results from Pulumi's 2026 State of Infrastructure as Code survey."
+         license: "https://creativecommons.org/licenses/by/4.0/"
+         date_published: "2026-09-15"
+         keywords:
+           - "infrastructure as code"
+           - "survey"
+         variable_measured:
+           - "IaC tool adoption"
+           - "team size"
+         temporal_coverage: "2026"
+         is_accessible_for_free: true
+         distribution:
+           - content_url: "https://www.pulumi.com/state-of-iac/2026/data.csv"
+             encoding_format: "text/csv"
+
+     Every field beyond `name` is optional; the collector only emits what the
+     page actually declares. `creator` defaults to the shared Pulumi
+     Organization @id (the same node graph-builder.html already defines on
+     every page) so a dataset page doesn't have to redeclare organization
+     identity, but a page can override it with an explicit
+     `dataset.creator_name` when the data was produced by a named person or
+     third party. Returns an empty dict when `.Params.dataset` or
+     `.Params.dataset.name` is absent, so this is a safe no-op on every page
+     that hasn't opted in \u2014 the same low-false-positive pattern as
+     itemlist-entity.html and faq-entity.html. */}}
+
+{{ $entity := dict }}
+
+{{ if and .Params.dataset .Params.dataset.name }}
+  {{ $d := .Params.dataset }}
+
+  {{ $entity = dict
+    "@type" "Dataset"
+    "name" $d.name
+    "url" .Permalink
+  }}
+
+  {{ with $d.description }}
+    {{ $entity = merge $entity (dict "description" .) }}
+  {{ end }}
+
+  {{ with $d.license }}
+    {{ $entity = merge $entity (dict "license" .) }}
+  {{ end }}
+
+  {{ with $d.date_published }}
+    {{ $entity = merge $entity (dict "datePublished" .) }}
+  {{ end }}
+
+  {{ with $d.date_modified }}
+    {{ $entity = merge $entity (dict "dateModified" .) }}
+  {{ end }}
+
+  {{ with $d.keywords }}
+    {{ $entity = merge $entity (dict "keywords" .) }}
+  {{ end }}
+
+  {{ with $d.variable_measured }}
+    {{ $entity = merge $entity (dict "variableMeasured" .) }}
+  {{ end }}
+
+  {{ with $d.temporal_coverage }}
+    {{ $entity = merge $entity (dict "temporalCoverage" .) }}
+  {{ end }}
+
+  {{ with $d.spatial_coverage }}
+    {{ $entity = merge $entity (dict "spatialCoverage" .) }}
+  {{ end }}
+
+  {{ if isset $d "is_accessible_for_free" }}
+    {{ $entity = merge $entity (dict "isAccessibleForFree" $d.is_accessible_for_free) }}
+  {{ end }}
+
+  {{/* creator: named person/org override takes precedence over the shared
+       Pulumi Organization @id, since a survey dataset is still Pulumi's own
+       work either way \u2014 this only changes who schema.org says produced it. */}}
+  {{ if $d.creator_name }}
+    {{ $entity = merge $entity (dict "creator" (dict "@type" "Organization" "name" $d.creator_name)) }}
+  {{ else }}
+    {{ $entity = merge $entity (dict "creator" (dict "@id" "https://www.pulumi.com/#organization")) }}
+  {{ end }}
+
+  {{/* distribution: each item becomes a DataDownload node. contentUrl is
+       required by schema.org/DataDownload; skip an item entirely if it's
+       missing one rather than emitting a malformed node. */}}
+  {{ with $d.distribution }}
+    {{ $downloads := slice }}
+    {{ range . }}
+      {{ if .content_url }}
+        {{ $download := dict
+          "@type" "DataDownload"
+          "contentUrl" .content_url
+        }}
+        {{ with .encoding_format }}
+          {{ $download = merge $download (dict "encodingFormat" .) }}
+        {{ end }}
+        {{ $downloads = $downloads | append $download }}
+      {{ end }}
+    {{ end }}
+    {{ if gt (len $downloads) 0 }}
+      {{ $entity = merge $entity (dict "distribution" $downloads) }}
+    {{ end }}
+  {{ end }}
+
+{{ end }}
+
+{{ return $entity }}

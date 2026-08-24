@@ -57,6 +57,22 @@
   {{ end }}
 {{ end }}
 
+{{/* Collect Dataset schema for a page publishing original data (survey results,
+     benchmark numbers, usage statistics) before finalizing WebPage so hasPart
+     can be wired. Driven entirely by a `dataset` object in frontmatter (see
+     dataset-entity.html) so it is an explicit per-page opt-in, the same
+     low-false-positive pattern as the `itemlist` block above. dataset-entity.html
+     returns an empty dict when `.Params.dataset.name` is absent, so this is a
+     no-op for every page that hasn't opted in. */}}
+{{ $dataset := dict }}
+{{ if .Params.dataset }}
+  {{ $dataset = partial "schema/collectors/dataset-entity.html" . }}
+  {{ if and $dataset (ne $dataset (dict)) }}
+    {{ $dataset = merge $dataset (dict "@id" "#dataset") }}
+    {{ $webpage = merge $webpage (dict "hasPart" (dict "@id" "#dataset")) }}
+  {{ end }}
+{{ end }}
+
 {{/* What-is and docs pages get Article/TechArticle as their main entity; if the page
      also has a "Frequently asked questions"-style Q&A section, expose it as a
      FAQPage entity in the same graph under its own @id. Pages that are themselves
@@ -425,6 +441,11 @@
 {{/* Add ItemList to graph (collected earlier to wire hasPart into WebPage) */}}
 {{ if and $itemList (ne $itemList (dict)) }}
   {{ $graph = $graph | append $itemList }}
+{{ end }}
+
+{{/* Add Dataset to graph (collected earlier to wire hasPart into WebPage) */}}
+{{ if and $dataset (ne $dataset (dict)) }}
+  {{ $graph = $graph | append $dataset }}
 {{ end }}
 
 {{/* Add video schema if page contains YouTube videos */}}
