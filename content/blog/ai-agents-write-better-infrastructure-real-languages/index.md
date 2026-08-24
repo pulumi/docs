@@ -3,7 +3,7 @@ title: "Why AI Agents Write Better Infrastructure in Real Languages than HCL"
 allow_long_title: true
 date: 2026-08-09
 draft: false
-meta_desc: "New research shows AI agents write infrastructure fine on day one. Day two, changing it, is where HCL falls short and real languages pull ahead."
+meta_desc: "Recent research shows AI agents write infrastructure fine on day one. Day two, changing it, is where HCL falls short and real languages pull ahead."
 feature_image: feature.png
 authors:
     - joe-duffy
@@ -21,7 +21,7 @@ faq_schema: true
 # Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
     twitter: |
-        Recent research on AI agents managing cloud infra: Terraform ties for best on day-one provisioning, then drops to 33% success on updates.
+        Recent research on AI agents managing cloud infra: Terraform hits 100% success on day-one provisioning, then drops to 33% on updates.
 
         The gap shows up when infrastructure needs to change, not when it's first written:
     linkedin: |
@@ -29,7 +29,7 @@ social:
 
         The IaC agent tied for the best score on first-time provisioning. Then its success rate fell to 33% on updates and 40% on monitoring, with the authors pointing to hallucinated fields and deprecated methods.
 
-        HCL is fine for Day 1: write it once, greenfield. The distinction that matters is Day 1 versus Day 2, changing it, querying it, keeping it correct over time, and most real infrastructure work is Day 2. General-purpose languages give an agent leverage that a declarative config file can't: types, tests, refactoring tools, a compiler, and programmatic access to live state.
+        The distinction that matters is Day 1 (write it once, greenfield) versus Day 2 (change it, query it, keep it correct over time). Most real infrastructure work is Day 2. General-purpose languages give an agent leverage that a declarative config file can't: types, tests, refactoring tools, a compiler, and programmatic access to live state.
 
         We wrote up what the research says, where HCL still wins, and what it means for how you let an agent touch your infrastructure.
     bluesky: |
