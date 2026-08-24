@@ -58,7 +58,7 @@ Some providers add a requirement on top of this one. To select a Bitbucket works
 The change takes effect immediately and is recorded in your [audit logs](/docs/administration/concepts/audit-logs/). Admins can change the requirement again at any time.
 
 {{% notes type="info" %}}
-A given GitHub organization, GitLab group, or Bitbucket workspace can back only one Pulumi organization. If it already backs another one, Pulumi rejects the change with the message "That organization is already registered."
+A given GitHub organization, GitLab group, or Bitbucket workspace can back only one Pulumi organization. If it already backs another one, Pulumi rejects the change.
 {{% /notes %}}
 
 The **Membership Requirements** section does not appear for individual accounts or for legacy per-stack organizations, because membership works differently for those.
@@ -70,7 +70,7 @@ A GitHub-backed organization draws its membership from a [GitHub organization](h
 To back your organization with GitHub:
 
 1. Connect a GitHub identity to your Pulumi account under **Account settings** > **Identity providers**.
-1. Make sure the Pulumi OAuth app is authorized for the GitHub organization with the [`read:org` scope](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f), which Pulumi uses to verify who belongs to the organization. Depending on the GitHub organization's third-party application policy, a GitHub organization owner may need to grant or approve this access. Pulumi does not get access to source code, issues, or any other organization data.
+1. Make sure the Pulumi OAuth app is authorized for the GitHub organization with the [`read:org` scope](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/scopes-for-oauth-apps), which Pulumi uses to verify who belongs to the organization. You can review and grant that access on the [Pulumi OAuth app's page in your GitHub settings](https://github.com/settings/connections/applications/7cf9078f3c92b17a5f0f). Depending on the GitHub organization's third-party application policy, a GitHub organization owner may need to grant or approve this access. Pulumi does not get access to source code, issues, or any other organization data.
 1. [Change your organization's identity provider](#changing-your-organizations-identity-provider) and select the GitHub organization.
 
 If the backing GitHub organization enforces its own SAML SSO, each member must also authorize their GitHub credential for that organization. Until they do, GitHub does not report their membership to Pulumi and they cannot access the Pulumi organization.

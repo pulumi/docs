@@ -51,7 +51,7 @@ To create an organization:
 
 To become a member of a Pulumi organization, you must be invited by an existing Pulumi
 organization administrator or submit a request to the administrator for approval.
-In addition, you also need to be a member of the third-party organization or group backing the Pulumi organization. See [Identity providers](/docs/administration/concepts/identity-providers/).
+You also need to be a member of the third-party organization or group backing the Pulumi organization. See [Identity providers](/docs/administration/concepts/identity-providers/).
 
 For example, to become a member of a Pulumi organization backed by a GitLab Group,
 you must associate a GitLab identity with your Pulumi account, and also
