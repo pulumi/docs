@@ -21,11 +21,17 @@ related_posts:
     - aws-eks-auto-mode
 social:
     twitter: |
-        The best way to provision a Kubernetes cluster is with infrastructure as code. Here's one program that creates EKS, AKS, or GKE clusters with real Pulumi code, no YAML templates.
+        The best way to provision a Kubernetes cluster is with infrastructure as code.
+
+        Here's one program that creates EKS, AKS, or GKE clusters with real Pulumi code, no YAML templates.
     linkedin: |
-        A practical, answer-first guide to provisioning managed Kubernetes clusters on AWS, Azure, and Google Cloud with infrastructure as code: real Pulumi examples for EKS, AKS, and GKE, plus how to deploy an application once the cluster exists.
+        A practical, answer-first guide to provisioning managed Kubernetes clusters on AWS, Azure, and Google Cloud with infrastructure as code.
+
+        Real Pulumi examples for EKS, AKS, and GKE, plus how to deploy an application once the cluster exists.
     bluesky: |
-        EKS, AKS, GKE: one infrastructure-as-code approach for all three, with working Pulumi code for each.
+        EKS, AKS, GKE: one infrastructure-as-code approach for all three.
+
+        With working Pulumi code for each.
 ---
 
 The best way to provision a Kubernetes cluster is with infrastructure as code: define the cluster in a real programming language, run one command to create it, and keep that definition in version control so every change is reviewable and repeatable. Pulumi does this for EKS, AKS, and GKE in Python, TypeScript, Go, C#, or Java, no YAML templates required.
