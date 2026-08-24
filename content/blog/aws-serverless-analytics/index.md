@@ -457,7 +457,7 @@ While Lambda’s limits restrict the utility of this method, the concept is powe
 
 Developing software is an activity in seeking a specific state. For functions with simple inputs and outputs, this is a matter of well-factored code and unit test coverage. You can and should write this sort of test in your Pulumi applications. But often, the state that you’re seeking can’t be validated in unit tests. It raises many questions such as, “Am I stitching these cloud services together in a valid way? Will data flow from input service through to output destination? If I try to tighten down this IAM role, will everything still work?”
 
-Our workflow is to make a change, run a pulumi up, and then verify that data ingested into Kinesis is read out the other end by Athena. A simple shell script using [stack outputs](/docs/iac/concepts/stacks/#outputs) and a query in the AWS console are enough to get started here:
+Our workflow is to make a change, run a `pulumi up`, and then verify that data ingested into Kinesis is read out the other end by Athena. A shell script using [stack outputs](/docs/iac/concepts/stacks/#outputs) and a query in the AWS console are enough to get started here:
 
 ```bash
 #/bin/sh

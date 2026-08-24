@@ -143,7 +143,7 @@ Lean more in the [Remove the "yes, using Update Plans" prompt issue](https://git
 
 ### Output methods to serialize and deserialize JSON
 
-Building JSON from values and parsing strings into JSON are two of the most common operations in Pulumi programs. All programming languages have built-in libraries to do so. However, quite often JSON operations need to be combined with Pulumi [Inputs and Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/), which required writing a cumbersome combination of `Apply` and serialization method calls.
+Building JSON from values and parsing strings into JSON are two of the most common operations in Pulumi programs. All programming languages have built-in libraries to do so. However, JSON operations often need to be combined with Pulumi [Inputs and Outputs](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/), which required writing a cumbersome combination of `Apply` and serialization method calls.
 
 To streamline this experience, Pulumi SDKs shipped helper serialization and deserialization functions that understand the type `Output<T>` natively. Here is a simple usage example in Python, where `table.arn` is an output coming from another resource:
 
@@ -167,7 +167,7 @@ policy = iam.Policy(
 
 ### Retrieve stack reference outputs as plain values
 
-You can read outputs from one stack in another stack's program using [Stack References](https://www.pulumi.com/docs/iac/concepts/stacks/#stackreferences). In the past, the resulting values were always wrapped inside an `Output<T>` container in order to preserve secret values (when needed).
+You can read outputs from one stack in another stack's program using [Stack References](https://www.pulumi.com/docs/iac/concepts/stacks/#stackreferences). In the past, the resulting values were always wrapped inside an `Output<T>` container to preserve secret values (when needed).
 
 With recent SDKs, we shipped an alternative method `StackReference.getOutputDetails`. This method returns a plain object with two fields: `value` and `secretValue`. At most one of these fields is set, depending on whether the stack reference output is a secret or not.
 

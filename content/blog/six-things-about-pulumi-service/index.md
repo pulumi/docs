@@ -21,9 +21,9 @@ tags:
 category: product
 ---
 
-As a reader of this blog, you've probably heard of [Pulumi Cloud](/product/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of a number of its key features, like helping you organize your [projects and stacks](/docs/iac/concepts/stacks/), collaborate with others with the help of [organizations](/docs/administration/organizations-teams/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/iac/concepts/secrets/).
+As a reader of this blog, you've probably heard of [Pulumi Cloud](/product/), the default state-management [backend](/docs/iac/concepts/state-and-backends/) of the Pulumi CLI. If that's the case, there's also a good chance you've heard of several of its key features, like helping you organize your [projects and stacks](/docs/iac/concepts/stacks/), collaborate with others with the help of [organizations](/docs/administration/organizations-teams/organizations/), or handle sensitive data securely with built-in support for [encrypted secrets](https://www.pulumi.com/docs/iac/concepts/secrets/).
 
-What you might not know, though, is that we're adding new features to the Pulumi Service all the time, and that some of these features can  be fairly easy to miss. So in this post, we'll highlight a handful of the features you might _not_ be aware of, and that we think make it even easier to manage your infrastructure with Pulumi.
+What you might not know, though, is that we're adding new features to Pulumi Cloud all the time, and that some of these features can  be fairly easy to miss. So in this post, we'll highlight a handful of the features you might _not_ be aware of, and that we think make it even easier to manage your infrastructure with Pulumi.
 
 Let’s get started!
 
@@ -41,11 +41,11 @@ Once set, you can quickly filter stacks on your organization’s Projects tab as
 
 ## Feature 2: Link Updates to your CI/CD pipeline
 
-Another helpful thing the Pulumi Service can do is link the Pulumi stack update to the CI/CD job or run that was used to perform it, as well as to the specific source commit:
+Another helpful thing Pulumi Cloud can do is link the Pulumi stack update to the CI/CD job or run that was used to perform it, as well as to the specific source commit:
 
 ![The stack update header, showing links to GitHub source commit](https://user-images.githubusercontent.com/274700/150612892-f8e84597-2ce2-4687-8acc-236a57f6c6a4.png)
 
-When Pulumi updates a stack, it will store some information about the local machine state, such the current git SHA if the stack resides in a `git` repository. It is with this data that the Pulumi Service links to relevant services where possible.
+When Pulumi updates a stack, it will store some information about the local machine state, such the current git SHA if the stack resides in a `git` repository. It is with this data that Pulumi Cloud links to relevant services where possible.
 
 If you're curious to know all of the information Pulumi has for a stack update, you can navigate to the Environment tab for that update:
 
@@ -65,7 +65,7 @@ $ pulumi up --message "Release the hounds\!"
 
 ## Feature 4: Viewing Resource Changes
 
-Another thing you might have missed is that the Pulumi Service supports multiple views for a stack update's logs.
+Another thing you might have missed is that Pulumi Cloud supports multiple views for a stack update's logs.
 
 The standard view mimics the Pulumi CLI's output. However, you can switch to the _Diff_ or _Diagnostic_ views, too.
 
@@ -79,7 +79,7 @@ The _Diagnostic view_ just outputs so-called “diagnostic” messages from the 
 
 ## Feature 5: Stack Resource Visualization
 
-Another cool feature of the Pulumi Service is being able to visualize a stack’s resources and their relationships to one another. This is a really important feature!
+Another cool feature of Pulumi Cloud is being able to visualize a stack’s resources and their relationships to one another. This is a really important feature!
 
 One of the advantages of using an infrastructure as code tool like Pulumi is that you aren’t just creating a flat list of resources. Instead, by the virtue of how the code and resource graph is structured, you are building a graph of resources.
 
@@ -103,7 +103,7 @@ But you don’t need to just settle for a "top-level view" of your resources. Yo
 
 This allows you to see all of the properties that Pulumi is tracking for that resource. It will also show you any relationships to other resources in the same stack.
 
-The Pulumi Service also links you to the resource’s cloud provider’s console where possible, so you can see even more details.
+Pulumi Cloud also links you to the resource’s cloud provider’s console where possible, so you can see even more details.
 
 ![Linking directly to an ECS Cluster resource in the AWS Console](https://user-images.githubusercontent.com/274700/150620181-be3e7a09-3630-4898-89fa-7c7b775e1d35.png)
 
@@ -111,4 +111,4 @@ The Pulumi Service also links you to the resource’s cloud provider’s console
 Is your resource missing a link to the cloud provider console? With new services being launched from the myriad providers Pulumi supports every day, it’s hard to keep up. So if you would like us to add cloud provider links, please file an issue over in the [pulumi/console-requests](https://github.com/pulumi/console-requests/) GitHub repository so we can update our database.
 {{% /notes %}}
 
-There are plenty of other features to check out in the [Pulumi Service](/product/pulumi-service/), and we have exciting improvements on the way! As always, feel free to stop by the [Pulumi Community Slack](https://slack.pulumi.com) to learn more, ask questions, or share anything cool you’re up to!
+There are plenty of other features to check out in [Pulumi Cloud](/product/), and we have exciting improvements on the way! As always, feel free to stop by the [Pulumi Community Slack](https://slack.pulumi.com) to learn more, ask questions, or share anything cool you’re up to!

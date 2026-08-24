@@ -429,7 +429,7 @@ The AWS CLI will run AWS commands with the `default` profile by default. If you 
 
 You will want to replace `<bucket_name>` with the actual name of your S3 bucket. While you can manually provide the name of your bucket, you can also programmatically reference your bucket name via the stack outputs.
 
-You'll do this by using the [`pulumi stack output`](/docs/iac/concepts/stacks/#outputs) command and provide the name of your desired output as shown below:
+You'll do this by using the [`pulumi stack output`](/docs/iac/concepts/stacks/#outputs) command and provide the name of your desired output:
 
 ```bash
 aws s3api list-objects-v2 --bucket $(pulumi stack output bucketName)

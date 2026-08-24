@@ -247,7 +247,7 @@ for subnet_id in public_subnet_ids:
     )
 ```
 
-You need to create both sets of these routes within an [apply](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#apply) because of the need to access the raw values of each of the subnet ids. Apply can be conceptually difficult for beginners in Pulumi to grasp, but it essentially means "once you know all of the values that needed, pass them on to this function".
+You need to create both sets of these routes within an [apply](https://www.pulumi.com/docs/iac/concepts/inputs-outputs/#apply) because of the need to access the raw values of each of the subnet ids. Apply can be conceptually difficult for beginners in Pulumi to grasp, but it essentially means "once you know all the values that needed, pass them on to this function."
 
 ## Final steps
 

@@ -85,7 +85,7 @@ kubectl get pods --all-namespaces
 
 ## Deploying a workload with the Pulumi Kubernetes provider
 
-Now that your cluster is provisioned, you can deploy a workload (or any other Kubernetes or Helm resource) using the [Pulumi Kubernetes provider](https://www.pulumi.com/registry/packages/kubernetes/). In order to deploy Kubernetes resources to your cluster, you need to first declare an explicit provider. The explicit provider is needed because you are _creating the cluster and deploying workloads to that cluster in the same Pulumi program_. (For more details on default and explicit providers, see [Resource providers](https://www.pulumi.com/docs/iac/concepts/providers/).) Configure the provider to use the [Kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) of your newly created cluster:
+Now that your cluster is provisioned, you can deploy a workload (or any other Kubernetes or Helm resource) using the [Pulumi Kubernetes provider](https://www.pulumi.com/registry/packages/kubernetes/). To deploy Kubernetes resources to your cluster, you need to first declare an explicit provider. The explicit provider is needed because you are _creating the cluster and deploying workloads to that cluster in the same Pulumi program_. (For more details on default and explicit providers, see [Resource providers](https://www.pulumi.com/docs/iac/concepts/providers/).) Configure the provider to use the [Kubeconfig](https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/) of your newly created cluster:
 
 {{% chooser language "typescript,python" / %}}
 

@@ -25,13 +25,13 @@ Pulumi protects all of the [`state`](https://www.pulumi.com/docs/iac/concepts/st
 
 - All Pulumi providers—both native providers like [`azure-native`](https://github.com/pulumi/pulumi-azure-native/) and Terraform-based providers like [Datadog](https://github.com/pulumi/terraform-provider-datadog)—know which of their outputs should be secret and mark them as such. This ensures that you're secure by default  when you start using a new provider. There's no need to pick which outputs are secret or worry that you’ve missed one.
 - You can mark other Pulumi outputs [as secret](https://www.pulumi.com/docs/iac/concepts/secrets/#explicitly-marking-resource-outputs-as-secrets).
-- In addition to Pulumi inputs and outputs, you can also mark Pulumi configuration values [as secret](https://www.pulumi.com/docs/iac/concepts/secrets/#secrets).
+- Besides Pulumi inputs and outputs, you can also mark Pulumi configuration values [as secret](https://www.pulumi.com/docs/iac/concepts/secrets/#secrets).
 
 Any secret identified by you or by Pulumi is fully protected in the secret storage and not stored in plaintext on disk. This prevents leaks of secrets when files are committed to a source code repository or uploaded to a continuous integration and delivery system.
 
 ## Integration with other secret stores
 
-For smaller organizations, the secret storage built into Pulumi is usually sufficient. In larger organizations however, it’s likely that a centralized secret management system is already in use, like [AWS Key Management System](https://aws.amazon.com/kms/), [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud Key Management](https://cloud.google.com/security-key-management), or [Hashicorp Vault](https://www.vaultproject.io/). Pulumi integrates with each of these systems to make it easy to [protect secrets](https://www.pulumi.com/docs/iac/concepts/secrets/#initializing-a-stack-with-alternative-encryption) in the way required by the organization.
+For smaller organizations, the secret storage built into Pulumi is enough. In larger organizations however, it’s likely that a centralized secret management system is already in use, like [AWS Key Management System](https://aws.amazon.com/kms/), [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/), [Google Cloud Key Management](https://cloud.google.com/security-key-management), or [Hashicorp Vault](https://www.vaultproject.io/). Pulumi integrates with each of these systems to [protect secrets](https://www.pulumi.com/docs/iac/concepts/secrets/#initializing-a-stack-with-alternative-encryption) in the way required by the organization.
 
 ## Next steps
 
