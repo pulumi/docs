@@ -1394,25 +1394,206 @@ Total tests: 3
 
 All the tests passed!
 
+## Testing transforms
+
+[Transforms](/docs/iac/concepts/resources/options/transforms/) are executed by the Pulumi engine during a deployment, so the mocks do not run them automatically. Instead, the mocks accept transform registrations and hand the transform functions to your test code. This lets you check that your program registers the transforms you expect, and lets your mocks invoke them against the actual inputs of your resources if you want their effect reflected in the mocked state.
+
+Because only the engine computes the resource options a transform receives, the mocks do not provide them: when your test invokes a transform, pass the resource's real inputs as the properties and construct the options yourself.
+
+{{% choosable language "typescript" %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+
+const stackTransforms: pulumi.ResourceTransform[] = [];
+
+pulumi.runtime.setMocks({
+    newResource: async function(args: pulumi.runtime.MockResourceArgs) {
+        let props = { ...args.inputs };
+        // Run the transforms from the resource's options, then the stack's.
+        for (const transform of [...(args.transforms ?? []), ...stackTransforms]) {
+            const result = await transform({
+                custom: args.custom ?? false,
+                type: args.type,
+                name: args.name,
+                props: props,
+                opts: {},
+            });
+            if (result !== undefined) {
+                props = { ...result.props };
+            }
+        }
+        return { id: `${args.name}_id`, state: props };
+    },
+    call: function(args: pulumi.runtime.MockCallArgs) {
+        return args.inputs;
+    },
+    registerTransform: (transform) => {
+        stackTransforms.push(transform);
+    },
+});
+```
+
+With these mocks, a program that registers an auto-tagging transform sees the tags on the mocked resource state, so your tests can assert on the transformed outputs. Invoke transforms follow the same pattern: implement `registerInvokeTransform` to record them, and apply them to `args.inputs` in your `call` mock.
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+
+```python
+import pulumi
+
+class MyMocks(pulumi.runtime.Mocks):
+    def __init__(self):
+        self.stack_transforms = []
+
+    def register_transform(self, transform):
+        self.stack_transforms.append(transform)
+
+    def new_resource(self, args: pulumi.runtime.MockResourceArgs):
+        props = dict(args.inputs)
+        # Run the transforms from the resource's options, then the stack's.
+        for transform in [*args.transforms, *self.stack_transforms]:
+            result = transform(pulumi.ResourceTransformArgs(
+                custom=args.custom or False,
+                type_=args.typ,
+                name=args.name,
+                props=props,
+                opts=pulumi.ResourceOptions(),
+            ))
+            if result is not None:
+                props = dict(result.props)
+        return [args.name + '_id', props]
+
+    def call(self, args: pulumi.runtime.MockCallArgs):
+        return {}
+```
+
+With these mocks, a program that registers an auto-tagging transform sees the tags on the mocked resource state, so your tests can assert on the transformed outputs. Invoke transforms follow the same pattern: implement `register_invoke_transform` to record them, and apply them to `args.args` in your `call` mock.
+
+To assert on registrations without running them, keep a reference to the mock monitor and use its accessors:
+
+```python
+monitor = pulumi.runtime.mocks.MockMonitor(MyMocks())
+pulumi.runtime.set_mocks(MyMocks(), monitor=monitor)
+
+# ... after the program under test has run:
+assert monitor.get_registered_transforms() == [my_transform]
+assert monitor.get_registered_invoke_transforms() == []
+```
+
+Note that `register_resource_transform` and `register_invoke_transform` must be called while the test's event loop is running, for example from within a function decorated with `@pulumi.runtime.test`.
+
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+Implement the optional `RegisterTransform` and `RegisterInvokeTransform` methods on your mocks to be notified of stack-level registrations; transforms from a resource's options arrive in `args.Transforms`:
+
+```go
+type mocks struct {
+	transforms []pulumi.ResourceTransform
+}
+
+func (m *mocks) RegisterTransform(t pulumi.ResourceTransform) {
+	m.transforms = append(m.transforms, t)
+}
+
+func (m *mocks) RegisterInvokeTransform(t pulumi.InvokeTransform) {}
+
+func (m *mocks) NewResource(args pulumi.MockResourceArgs) (string, resource.PropertyMap, error) {
+	return args.Name + "_id", args.Inputs, nil
+}
+
+func (m *mocks) Call(args pulumi.MockCallArgs) (resource.PropertyMap, error) {
+	return args.Args, nil
+}
+```
+
+A test can then invoke a recorded transform directly to check its behavior:
+
+```go
+result := m.transforms[0](ctx, &pulumi.ResourceTransformArgs{
+	Custom: true,
+	Type:   "aws:ec2/instance:Instance",
+	Name:   "web-server-www",
+	Props:  pulumi.Map{"tags": pulumi.StringMap{"Name": pulumi.String("web-server-www")}},
+	Opts:   pulumi.ResourceOptions{},
+})
+```
+
+Note that the mocks receive inputs as `resource.PropertyMap`, while `ResourceTransformArgs.Props` is a `pulumi.Map`, so applying a transform to a resource's real inputs requires converting the properties you care about.
+
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+
+Implement the optional `RegisterTransform` and `RegisterInvokeTransform` methods of `IMocks` to be notified of stack-level registrations. In .NET, stack transforms are declared via `StackOptions.ResourceTransforms` and delivered when the root stack registers; a resource's own transforms arrive in `MockResourceArgs.Transforms`:
+
+```csharp
+class MyMocks : IMocks
+{
+    private readonly List<ResourceTransform> _stackTransforms = new List<ResourceTransform>();
+
+    public Task RegisterTransform(ResourceTransform transform)
+    {
+        _stackTransforms.Add(transform);
+        return Task.CompletedTask;
+    }
+
+    public async Task<(string? id, object state)> NewResourceAsync(MockResourceArgs args)
+    {
+        var props = args.Inputs.ToImmutableDictionary(kv => kv.Key, kv => (object?)kv.Value);
+        // Run the transforms from the resource's options, then the stack's.
+        foreach (var transform in args.Transforms.Concat(_stackTransforms))
+        {
+            var result = await transform(new ResourceTransformArgs(
+                args.Name!, args.Type!, custom: true, props, new CustomResourceOptions()));
+            if (result != null)
+            {
+                props = result.Value.Args;
+            }
+        }
+        return ($"{args.Name}_id", props);
+    }
+
+    public Task<object> CallAsync(MockCallArgs args)
+    {
+        return Task.FromResult<object>(args.Args);
+    }
+}
+```
+
+With these mocks, a program that registers an auto-tagging transform sees the tags on the mocked resource state, so your tests can assert on the transformed outputs. Invoke transforms follow the same pattern: implement `RegisterInvokeTransform` to record them, and apply them to `args.Args` in your `CallAsync` mock.
+
+{{% /choosable %}}
+
+{{% choosable language "java" %}}
+
+Pulumi Java support for transforms is coming soon.
+
+&nbsp;
+{{% /choosable %}}
+
 ## Limitations
 
 When using mocks for unit testing, it's important to understand that the mock server does not implement the full Pulumi engine. This means certain features that rely on the engine's deployment orchestration will not execute during mock-based tests.
 
 ### Lifecycle hooks and transforms
 
-Lifecycle hooks and resource transforms are not executed in mock tests. While your program can register hooks and transforms with the mock server, they will not actually run during test execution.
+Lifecycle hooks and resource transforms are not executed in mock tests. Your program can register hooks and transforms with the mock server, but the mocks will not run them during test execution.
 
 This limitation exists because implementing full hook and transform support would require reimplementing significant portions of the Pulumi engine in each language SDK. Since mocks are designed to run fast and deterministically without external dependencies, this trade-off is intentional.
 
+Registered transforms are delivered to your mocks so tests can inspect them and invoke them explicitly; see [Testing transforms](#testing-transforms). Hooks are accepted but never called, since they only fire during real resource lifecycle operations.
+
 **How to handle this in tests:**
 
-If your program uses lifecycle hooks or transforms, structure your tests to work around this limitation:
+If your program uses lifecycle hooks, structure your tests to work around this limitation:
 
-1. **Test the logic separately**: Extract the logic from hooks and transforms into standalone functions that can be unit tested independently.
-1. **Mock the expected outcomes**: Configure your mocks to return resource state that reflects what would happen after hooks or transforms execute.
-1. **Use integration tests**: For end-to-end validation of hook and transform behavior, use integration tests that deploy actual resources to a testing environment.
-
-For example, if you have a transform that adds default tags to all resources, your mock's `newResource` function can return resource state that already includes those tags, simulating the transform's effect without actually executing it.
+1. **Test the logic separately**: Extract the logic from hooks into standalone functions that can be unit tested independently.
+1. **Mock the expected outcomes**: Configure your mocks to return resource state that reflects what would happen after hooks execute.
+1. **Use integration tests**: For end-to-end validation of hook behavior, use integration tests that deploy actual resources to a testing environment.
 
 ## Full example
 
