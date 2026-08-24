@@ -130,6 +130,56 @@ function loadLastmodLedger() {
     return JSON.parse(fs.readFileSync(LASTMOD_FILE, "utf8"));
 }
 
+// The `pulumi` org holds two different things under one name: the packs we ship as
+// products, and packs published to the org privately (internal use, experiments,
+// customer one-offs). `/api/orgs/{org}/policypacks` returns both with nothing to tell
+// them apart, which is how the private hitrust-awsnative pack ended up with a public
+// reference page (pulumi/docs#21055).
+//
+// The registry listing does carry the distinction, in `source`. Two real records, from
+// @danbiwer on 2026-08-24:
+//
+//     { "source": "private", "publisher": "pulumi",
+//       "name": "approved-component-versions-bad", "version": "1.0.4", ... }
+//     { "source": "pulumi",  "publisher": "pulumi",
+//       "name": "aws-organizations-tag-policies",  "version": "1.0.0", ... }
+//
+// Note `publisher` is "pulumi" for everything in our org, so it is NOT the discriminator
+// -- do not "improve" this by filtering on it. `source` is, and it is set by an admin
+// command rather than by whoever publishes the pack, so an engineer testing something
+// cannot set it by accident.
+//
+// This fails closed. If the listing cannot be read or does not look the way it did
+// above, the job stops rather than falling back to publishing unverified pages: a
+// broken check should cost us a nightly sync, not put a private pack on the website.
+async function fetchRegistryProducts(org) {
+    const body = await fetchJSON(`/api/registry/policypacks?orgLogin=${encodeURIComponent(org)}`);
+    // The envelope key isn't pinned here -- only the record shape above is confirmed --
+    // so accept a bare array or the usual wrappers.
+    const rows = Array.isArray(body)
+        ? body
+        : Array.isArray(body?.policyPacks)
+          ? body.policyPacks
+          : Array.isArray(body?.items)
+            ? body.items
+            : null;
+    if (!rows || !rows.some((r) => typeof r?.source === "string")) {
+        throw new Error(
+            `could not read the registry policy pack listing for the "${org}" org: expected a list\n` +
+                `       of records carrying "name" and "source". The API shape may have changed --\n` +
+                `       see the comment above fetchRegistryProducts in this file.`,
+        );
+    }
+    const products = new Set();
+    const nonProducts = new Map();
+    for (const row of rows) {
+        if (!row?.name) continue;
+        if (row.source === "pulumi") products.add(row.name);
+        else nonProducts.set(row.name, row.source);
+    }
+    return { products, nonProducts };
+}
+
 async function main() {
     const allowlist = yaml.load(fs.readFileSync(ALLOWLIST, "utf8"));
     const org = allowlist.org;
@@ -150,6 +200,22 @@ async function main() {
     }
 
     const packs = entries.map((e) => e.pack);
+
+    // Gate the allowlist on what the registry says we actually publish as products.
+    const { products, nonProducts } = await fetchRegistryProducts(org);
+    const notProducts = packs.filter((p) => !products.has(p));
+    if (notProducts.length) {
+        const detail = notProducts
+            .map((p) => `${p} (source: ${nonProducts.get(p) ?? "absent from the listing"})`)
+            .join(", ");
+        throw new Error(
+            `these entries in data/policy_packs.yaml are not published Pulumi products: ${detail}\n` +
+                `       Only packs the registry returns with source: "pulumi" may be documented. A pack\n` +
+                `       can be built in policy-packs-internal and resolvable through\n` +
+                `       /api/orgs/${org}/policypacks while still being private to the org.\n` +
+                `       Remove the entry, or publish the pack as a product before documenting it.`,
+        );
+    }
 
     console.log(`Fetching ${packs.length} policy packs from ${API} (org: ${org})...`);
 

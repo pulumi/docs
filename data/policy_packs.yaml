@@ -9,13 +9,24 @@
 # Markdown file is needed.
 #
 # THE RULE: only document packs that are built from the pulumi/policy-packs-internal
-# repo AND are shipped to customers as pre-built compliance packs.
+# repo AND are published as Pulumi products.
 #
 # Both halves matter, and the second is not implied by the first. A pack can be built
-# here, publish cleanly, and be returned by the API while still being private -- that is
-# exactly how hitrust-awsnative got documented in error (see the bottom of this file).
-# Neither this repo nor the API can tell you which packs are customer-facing, so confirm
-# with the policy-packs-internal maintainers before adding an entry.
+# there, publish cleanly, and be returned by /api/orgs/pulumi/policypacks while still
+# being private to the org -- that endpoint lists what the org holds, not what we sell.
+# That is exactly how hitrust-awsnative got a public reference page (pulumi/docs#21055).
+#
+# Both halves are enforced by scripts/fetch-policy-packs.js, so a bad entry fails the
+# nightly job rather than publishing a page:
+#
+#   built there     every entry must carry a `source:` naming its packs/... directory.
+#   a product       the registry listing for the org must return the pack with
+#                   `source: "pulumi"`. Privately published packs come back
+#                   `source: "private"` instead, and a deleted one not at all.
+#
+# Note the pack's own `source:` key below is the repo directory, unrelated to the
+# registry's `source` field. And do not switch that check to `publisher`: every pack in
+# our org is published by pulumi, so it would admit the private ones too.
 #
 # This is why the file is an allowlist rather than "document everything in the org".
 # The `pulumi` org is also where we publish policy packs for our OWN internal use,
@@ -247,12 +258,13 @@ sections:
 #                                   guide, not a policy listing. Stays hand-maintained.
 #   cis-kubernetes-google-cloud     A stale earlier publish, superseded by
 #                                   cis-kubernetes-gcp. See the cis-kubernetes section.
-#   hitrust-awsnative               Built here and resolvable through the API, but NOT a
-#                                   product we ship: it is private to the repo and the org.
-#                                   Removed from this file on 2026-08-24 after @danbiwer
-#                                   flagged that it had been documented in error
-#                                   (pulumi/docs#21055). Do not re-add it on the strength of
-#                                   the API listing it -- see the caveat under THE RULE.
+#   hitrust-awsnative               Built here and resolvable through
+#                                   /api/orgs/pulumi/policypacks, but never a product: it
+#                                   was published privately to the org. Removed on
+#                                   2026-08-24 after @danbiwer flagged that it had been
+#                                   documented in error (pulumi/docs#21055), and since
+#                                   deleted from the org by @jkodroff. The registry check
+#                                   under THE RULE now blocks this class of mistake.
 #
 # The org additionally holds packs this repo does not build — internal, experimental,
 # or customer one-offs. They must NOT be documented:
