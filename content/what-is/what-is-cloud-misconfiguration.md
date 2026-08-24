@@ -123,7 +123,7 @@ Pulumi addresses cloud misconfiguration on two fronts: making configuration revi
 
 **Pre-built compliance packs.** Pulumi publishes ready-to-use [policy packs](/docs/insights/policy/policy-packs/) for standards including CIS Foundations (AWS, Azure, and Google Cloud), NIST SP 800-53, and PCI DSS, so teams can enforce a recognized secure baseline without writing every rule from scratch.
 
-**Audit of existing and discovered resources.** Preventative checks only cover what you deploy through Pulumi. To cover the rest, Pulumi's policy engine integrates with [Pulumi Discovery](/docs/insights/discovery/) to evaluate resources that already exist, including infrastructure provisioned with Terraform, CloudFormation, or directly through cloud consoles. This gives audit-mode visibility into misconfigurations across the whole estate, not just the portion managed with Pulumi.
+**Audit of existing and discovered resources.** Preventative checks only cover what you deploy through Pulumi. To cover the rest, Pulumi's policy engine integrates with [Pulumi Discovery](/docs/insights/discovery/) to evaluate resources that already exist, including infrastructure provisioned with Terraform, CloudFormation, or directly through cloud consoles. This gives audit-mode visibility into misconfigurations across the whole estate, not just the resources managed with Pulumi.
 
 **Drift detection.** Pulumi can run scheduled drift detection, comparing live infrastructure against its declared configuration and alerting when they diverge, so an out-of-band change that reintroduces a misconfiguration is surfaced instead of silently persisting.
 
