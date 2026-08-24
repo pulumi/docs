@@ -51,8 +51,10 @@ sections:
     rules:
       - rule: Pulumi.HeadingSentenceCase
         mirrors: >-
-          "Headings and titles" — sentence case. Deliberately scoped to H2+
-          while the Title Case H1 backlog is migrated.
+          "Headings and titles" — sentence case at every level, H1 included.
+          Front-matter titles are checked through this same rule by
+          scripts/lint/frontmatter-title-case.py, since Vale skips YAML front
+          matter.
       - rule: Pulumi.FutureTense
         mirrors: Present tense for product behavior.
       - rule: Pulumi.NarrativeWe

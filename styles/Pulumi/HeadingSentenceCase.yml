@@ -2,12 +2,18 @@ extends: capitalization
 message: "Heading '%s' should use sentence case (capitalize only the first word and proper nouns)."
 link: "https://brand.pulumi.com/voice/writing-style/"
 level: warning
-# H2+ only. The brand standard is sentence case at every level, page title
-# included, but enforcing it on H1 would flag the large backlog of existing
-# Title Case front-matter titles; Vale's per-level heading scopes let us
-# enforce the subheadings now and migrate H1s separately. (Google.Headings is
-# disabled in .vale.ini because it has no level scope.)
+# All levels, H1 included — the brand standard is sentence case for every
+# heading, page title included ("Pulumi has no title-case convention":
+# brand.pulumi.com/voice/names-and-terminology/). In-body H1s are covered
+# directly by the heading.h1 scope below; the site's usual H1s — front-matter
+# `title:`/`h1:` fields, which Vale never sees — are fed through this same
+# rule by scripts/lint/frontmatter-title-case.py (wired into `make
+# lint-prose`). Both surfaces are advisory and changed-files-scoped, so the
+# Title Case backlog (~1,600 titles at time of writing) migrates one touched
+# page at a time. (Google.Headings stays disabled in .vale.ini; this rule
+# replaces it.)
 scope:
+  - heading.h1
   - heading.h2
   - heading.h3
   - heading.h4

@@ -40,3 +40,12 @@ else
 fi
 
 vale --no-exit "${TARGETS[@]}"
+
+# Front-matter titles are the site's H1s, but Vale skips YAML front matter,
+# so Pulumi.HeadingSentenceCase can't see them directly. This helper feeds
+# each target's title/h1 fields through that same Vale rule (same
+# sentence-case check, same proper-noun exceptions) and maps findings back to
+# the source line. Advisory like everything else here; the changed-files
+# default above means the Title Case backlog surfaces one touched page at a
+# time rather than all at once.
+python3 "$(dirname "$0")/lint/frontmatter-title-case.py" "${TARGETS[@]}"
