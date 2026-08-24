@@ -23,7 +23,7 @@ social:
     twitter: |
         The best way to provision a Kubernetes cluster is with infrastructure as code.
 
-        Here's one program that creates EKS, AKS, or GKE clusters with real Pulumi code, no YAML templates.
+        Here's working Pulumi code for EKS, AKS, and GKE clusters, no YAML templates.
     linkedin: |
         A practical, answer-first guide to provisioning managed Kubernetes clusters on AWS, Azure, and Google Cloud with infrastructure as code.
 
@@ -44,7 +44,7 @@ The best way to provision a Kubernetes cluster is with infrastructure as code, r
 
 ## How to provision a Kubernetes cluster with infrastructure as code
 
-Provisioning a managed Kubernetes cluster with Pulumi follows the same shape regardless of cloud. Before starting, you need a Pulumi CLI installation, an account with the cloud you're targeting (an AWS account, an Azure account, or a Google Cloud account), and either Node.js and npm or Python installed, depending on which language you choose.
+Provisioning a managed Kubernetes cluster with Pulumi follows the same shape regardless of cloud. Before starting, you need a Pulumi CLI installation, an account with the cloud you're targeting (an AWS account, an Azure account, or a Google Cloud account), and the runtime for your chosen language installed — Node.js and npm for the TypeScript examples below, or Python for the Python ones.
 
 1. Install the Pulumi CLI and run `pulumi new` to scaffold a project, choosing the template for your target cloud and language.
 2. Authenticate the Pulumi provider against your cloud account using its normal credential mechanism, such as environment variables or a CLI login.
@@ -266,7 +266,7 @@ For a full walkthrough of deploying a workload onto an existing cluster, includi
 
 - [Best tools for managing Kubernetes infrastructure as code in 2026](/blog/best-kubernetes-iac-tools-2026/) compares Pulumi against Terraform, CDK, and Crossplane for Kubernetes workloads.
 - [Terraform and Kubernetes: a practical guide for 2026](/blog/terraform-kubernetes/) looks at what changes if you're migrating an existing Terraform-managed cluster.
-- [Pulumi's cloud provider guides](/docs/iac/guides/clouds/) cover AWS, Azure, and Google Cloud setup in more depth than fits in one post.
+- [Pulumi's cloud provider guides](/docs/iac/guides/clouds/) cover AWS and Azure setup in more depth than fits in one post.
 - [Deploying to Kubernetes with Pulumi](/docs/iac/get-started/kubernetes/) is the next step once your cluster is running.
 
 ## Frequently asked questions
@@ -285,7 +285,7 @@ Yes. Pulumi projects are not tied to a single cloud, so one program can create a
 
 ### How long does it take to provision a managed Kubernetes cluster?
 
-Provisioning time is set by the cloud provider, not Pulumi: EKS control planes typically take ten to fifteen minutes, AKS around ten minutes, and GKE five to ten minutes, plus a few minutes more for worker nodes to join. `pulumi up` blocks until the cluster and its `kubeconfig` are ready, so the program's own runtime adds negligible overhead beyond the cloud's provisioning time.
+Provisioning time is set by the cloud provider, not Pulumi: EKS control planes typically take around ten minutes, AKS around ten minutes, and GKE five to ten minutes, plus a few minutes more for worker nodes to join. `pulumi up` blocks until the cluster and its `kubeconfig` are ready, so the program's own runtime adds negligible overhead beyond the cloud's provisioning time.
 
 ### Do I need to write YAML to manage Kubernetes with Pulumi?
 
