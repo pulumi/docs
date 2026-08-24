@@ -82,6 +82,8 @@ If **I have a designer-supplied image** is selected:
    ```
 3. Skip straight to Step 4.
 
+> **`make lint` only accepts two PNG `Software` tags**: `Figma` (a designer's Figma export) and `pulumi-blog-feature-image` (this skill's renderer). An **untagged** PNG now fails, because that's what every ad-hoc image writer produces by default. So a designer-supplied file that isn't a straight Figma export — re-saved from another tool, or run through an optimizer that strips metadata — will fail lint even though it's legitimate. **Do not "fix" that by writing a tag onto the file.** Report the failure to the user and ask them for the original Figma export.
+
 ---
 
 ### Question 2: Feature template

@@ -2,6 +2,7 @@
 title: Level up your Azure Platform as a Service Applications
 h1: "Level up your Azure Platform as a Service applications with Pulumi"
 date: "2019-05-06"
+updated: 2026-08-23
 meta_desc: "This post walks through the process of developing Pulumi programs to leverage Azure Platform services."
 authors: ["mikhail-shilkov"]
 tags: [azure]
@@ -54,7 +55,7 @@ the rescue.
 ## A Sample Application
 
 For this walkthrough, I took an existing application from Azure Samples
-GitHub: [.NET Core MVC sample for Azure App Service](https://github.com/azure-samples/dotnetcore-sqldb-tutorial).
+GitHub: [.NET Core MVC sample for Azure App Service](https://web.archive.org/web/20180604133239/https://github.com/Azure-Samples/dotnetcore-sqldb-tutorial).
 Predictably enough, it's a Todo List application, and this time it is a
 web app built with [ASP.NET](https://ASP.NET) Core, Entity Framework Core
 and a SQL database.
@@ -89,7 +90,7 @@ The following snippet shows the essential elements of the solution:
     azure-pipelines.yml      # Azure DevOps pipeline definition
 
 As a first step, I cloned the [Todo List
-app](https://github.com/azure-samples/dotnetcore-sqldb-tutorial) into
+app](https://web.archive.org/web/20180604133239/https://github.com/Azure-Samples/dotnetcore-sqldb-tutorial) into
 the `src` folder. There's nothing specific to Pulumi here: it's just an
 [ASP.NET](https://ASP.NET) Core app. It could be your application
 instead.

@@ -381,8 +381,8 @@ var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs
     Port = 443,
     Protocol = "HTTPS",
     SslPolicy = "ELBSecurityPolicy-2016-08",
-    CertificateArn = cert.arn,
-    DefaultAction: new Aws.Lb.ListenerDefaultAction
+    CertificateArn = cert.Arn,
+    DefaultAction = new Aws.Lb.ListenerDefaultAction
     {
         TargetGroupArn = targetGroupArn,
         Type = "forward",

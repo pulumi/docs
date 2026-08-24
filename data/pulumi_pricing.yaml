@@ -106,7 +106,7 @@
 # The metered rates here are the MONTHLY ones — the figure each comparison cell
 # carries as its subtext — even though billing is hourly. Rounding runs in both
 # directions between the two published forms (an ESC secret is $0.000685/hour
-# and $0.50/month, but 0.000685 x 730 is 0.50005; a Team Insights resource is
+# and $0.50/month, but 0.000685 x 730 is 0.50005; a Team discovered resource is
 # $0.000025/hour and $0.0185/month, but 0.000025 x 730 is 0.01825), so a
 # calculator that multiplied the hourly rate out would quote figures that
 # contradict the table directly below it. Storing the monthly rate keeps every
@@ -273,7 +273,7 @@ calculator:
       - label: 1 managed secret
         key: esc_secret_month
         suffix: /month
-      - label: 1 Insights resource
+      - label: 1 discovered resource
         key: insights_resource_month
         suffix: /month
         from: [enterprise]
@@ -354,7 +354,7 @@ categories:
         available_from: individual
 
   - id: deployments
-    name: Deployments & Workflows
+    name: Deployments & workflows
     group: product
     icon: phosphor/git-pull-request
     features:
@@ -520,7 +520,7 @@ categories:
         available_from: individual
 
   - id: insights
-    name: Discovery & Governance
+    name: Discovery & governance
     group: product
     icon: custom/pulumi-insights
     features:
@@ -624,7 +624,7 @@ categories:
           business-critical: Advisory, Mandatory & Remediation
 
       - id: insights-self-hosted
-        name: Insights on self-hosted Pulumi Cloud
+        name: Discovery on self-hosted Pulumi Cloud
         link: /docs/insights/self-hosted/
         available_from: business-critical
 
@@ -724,7 +724,7 @@ categories:
 
       - id: organizations
         name: Organizations
-        link: /docs/administration/organizations-teams/organizations/
+        link: /docs/administration/concepts/organizations/
         availability:
           team: 1
           enterprise: Multiple supported
@@ -732,7 +732,7 @@ categories:
 
       - id: identity-providers
         name: Identity providers
-        link: /docs/administration/organizations-teams/accounts/
+        link: /docs/administration/concepts/accounts/
         availability:
           individual: GitHub, GitLab, Atlassian
           team: GitHub, GitLab, Atlassian
@@ -741,7 +741,7 @@ categories:
 
       - id: saml-sso
         name: SAML/SSO
-        link: /docs/administration/access-identity/saml/
+        link: /docs/administration/guides/saml/
         available_from: enterprise
         availability:
           enterprise:
@@ -753,7 +753,7 @@ categories:
 
       - id: scim
         name: SCIM integration
-        link: /docs/administration/access-identity/scim/
+        link: /docs/administration/guides/scim/
         available_from: business-critical
 
       - id: oidc
@@ -763,7 +763,7 @@ categories:
 
       - id: teams
         name: Create and manage teams
-        link: /docs/administration/access-identity/rbac/teams/
+        link: /docs/administration/concepts/rbac/teams/
         available_from: enterprise
 
       - id: rbac
@@ -772,12 +772,12 @@ categories:
         # built-in Admin/Member/Billing Manager roles, which are available in
         # every edition. This row is the configurable RBAC that starts at
         # Enterprise, which is what the rbac/ pages cover.
-        link: /docs/administration/access-identity/rbac/
+        link: /docs/administration/concepts/rbac/
         available_from: enterprise
 
       - id: custom-roles
         name: Custom roles
-        link: /docs/administration/access-identity/rbac/roles
+        link: /docs/administration/concepts/rbac/roles
         available_from: enterprise
         availability:
           enterprise: Up to 25
@@ -795,7 +795,7 @@ categories:
 
       - id: org-team-access-tokens
         name: Organization and team access tokens
-        link: /docs/administration/access-identity/access-tokens/
+        link: /docs/administration/concepts/access-tokens/
         tooltip: These are machine access tokens that are scoped to the organization or team level
         available_from: team
         availability:
@@ -805,12 +805,12 @@ categories:
 
       - id: audit-logs
         name: Audit logs
-        link: /docs/administration/security-compliance/audit-logs/
+        link: /docs/administration/concepts/audit-logs/
         available_from: enterprise
 
       - id: audit-log-export
         name: Automated log export to S3
-        link: /docs/administration/security-compliance/audit-logs/aws-s3/
+        link: /docs/administration/guides/export-audit-logs/aws-s3/
         available_from: business-critical
 
   - id: support

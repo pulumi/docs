@@ -78,7 +78,7 @@ or managed manually. Organization owners and administrators can manage
 access to the organization's projects with security and administrative
 features.
 
-For more information, see [Organizations](/docs/administration/organizations-teams/organizations/).
+For more information, see [Organizations](/docs/administration/concepts/organizations/).
 
 ### How do I create a stack inside an Organization instead of my User account?
 
@@ -97,7 +97,7 @@ To transfer a stack from your individual account to an organization, navigate to
 
 From there, select the transfer destination and tick any stacks you'd like to transfer.
 
-To learn more about this process, see [Transferring stacks](/docs/administration/organizations-teams/organizations/#transferring-stacks).
+To learn more about this process, see [Transferring stacks](/docs/administration/concepts/organizations/#transferring-stacks).
 
 ### How can I delete a Pulumi organization?
 
@@ -107,7 +107,7 @@ In [Pulumi Cloud](https://app.pulumi.com/signin), open your organization, naviga
 
 If you don't see this option, confirm you're an organization admin.
 
-For detailed steps, see [Deleting an organization](/docs/administration/organizations-teams/organizations/#deleting-an-organization).
+For detailed steps, see [Deleting an organization](/docs/administration/concepts/organizations/#deleting-an-organization).
 
 ### How do I link an existing Pulumi account to my company's organization?
 
@@ -121,7 +121,7 @@ If this fails, delete your account, then accept the organization invite.
 Note that deleting your account will remove access to any stacks and environments still under the account. Transfer any stacks you want to keep before proceeding.
 {{% /notes %}}
 
-For more about joining organizations, see [Joining an organization](/docs/administration/organizations-teams/organizations/#joining-an-organization).
+For more about joining organizations, see [Joining an organization](/docs/administration/concepts/organizations/#joining-an-organization).
 
 ## Account
 
@@ -131,7 +131,7 @@ You can delete your personal account from your account settings in [Pulumi Cloud
 
 Before deleting your account, make sure you have transferred any stacks you want to keep and that you are no longer required as an admin in any organization.
 
-For more information, see [Deleting your account](/docs/administration/organizations-teams/organizations/#deleting-your-account).
+For more information, see [Deleting your account](/docs/administration/concepts/organizations/#deleting-your-account).
 
 ## Pricing
 
@@ -147,8 +147,8 @@ unlimited projects, stacks, and environments, and unlimited updates and history.
 No. The Individual edition covers a single user, which suits private projects but
 not a team. Organizations — the shared workspace where several engineers work on
 the same projects — start with the Team edition. Enterprise and Business Critical
-add [role-based access control](/docs/administration/access-identity/rbac/) and
-[SAML/SSO](/docs/administration/access-identity/saml/) on top of that.
+add [role-based access control](/docs/administration/concepts/rbac/) and
+[SAML/SSO](/docs/administration/guides/saml/) on top of that.
 
 ### Can I start small and upgrade later?
 
@@ -194,7 +194,7 @@ To discuss that, [contact us](/contact/).
 
 - **Business Critical** adds [self-hosting](/docs/administration/self-hosting/),
   built-in compliance frameworks,
-  [SCIM](/docs/administration/access-identity/scim/) user and group sync, audit
+  [SCIM](/docs/administration/guides/scim/) user and group sync, audit
   log export, and 24x7 support.
 
 For a feature-by-feature comparison, see the [pricing page](/pricing/).
@@ -203,7 +203,7 @@ For a feature-by-feature comparison, see the [pricing page](/pricing/).
 
 Self-serve organization admins and Billing Managers can update payment details from the organization's **Billing & usage** settings in [Pulumi Cloud](https://app.pulumi.com/signin) under **Payment methods**.
 
-If you need to delegate billing-only access, see [Billing Managers](/docs/administration/organizations-teams/billing-managers/).
+If you need to delegate billing-only access, see [Billing Managers](/docs/administration/concepts/billing-managers/).
 
 ## GitLab Support
 

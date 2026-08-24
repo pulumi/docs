@@ -147,8 +147,11 @@ func main() {
             lucky = 42
         }
         secret := conf.RequireSecret("secret")
+        ctx.Export("name", pulumi.String(name))
+        ctx.Export("lucky", pulumi.Int(lucky))
+        ctx.Export("secret", secret)
         return nil
-    }
+    })
 }
 ```
 
@@ -159,7 +162,7 @@ func main() {
 var config = new Pulumi.Config();
 var name = config.Require("name");
 var lucky = config.GetInt32("lucky") ?? 42;
-var secret = config.RequireSecret("secret")
+var secret = config.RequireSecret("secret");
 ```
 
 {{% /choosable %}}

@@ -23,7 +23,7 @@ Pulumi Cloud hosts Terraform modules as a first-class registry resource alongsid
 
 ## Authenticate
 
-Every surface authenticates with a [Pulumi access token](/docs/administration/access-identity/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
+Every surface authenticates with a [Pulumi access token](/docs/administration/concepts/access-tokens/). It is the bearer token for everything Pulumi Cloud exposes over the HashiCorp protocol: the publish API, the state backend, and the module registry.
 
 - Publishing: the go-tfe client and the tfe provider take your Pulumi access token wherever they expect a TFE token today. See [Publish a module](#publish-a-module).
 - Consuming from a Pulumi program: run `pulumi login`. `pulumi package add` passes the token through, so there is no separate registry login.
