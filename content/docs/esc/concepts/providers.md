@@ -38,7 +38,7 @@ Providers fall into two functional categories. For the complete list of plugins 
 - **[Login providers](/docs/esc/providers/login/)** — authenticate to a downstream service and issue short-lived credentials for it, typically through OpenID Connect. See [OIDC setup](/docs/esc/guides/configuring-oidc/) for per-provider trust configuration.
 - **[Secrets and configuration providers](/docs/esc/providers/secrets/)** — pull configuration and secrets from an external system of record into your environment at open time.
 
-If no built-in plugin produces the value you need, a custom adapter lets you plug in your own service.
+If no built-in plugin produces the value you need, the [`external` provider](/docs/esc/providers/secrets/external/) lets you plug in your own service through a custom HTTPS adapter.
 
 ## Evaluation model
 
