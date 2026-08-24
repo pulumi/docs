@@ -67,7 +67,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
       curl https://www.pulumi.com/registry/packages/aws.md
       curl https://www.pulumi.com/registry.md
 
-- **Doing infrastructure work as an agent** — the Pulumi CLI is designed for agents: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/), and get an [ephemeral Pulumi Cloud account provisioned automatically](https://www.pulumi.com/docs/administration/organizations-teams/agent-accounts/) on first use — no signup required. [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/skills/) provide proven Pulumi workflows, and the [Pulumi MCP server](https://www.pulumi.com/docs/ai/mcp-server/) exposes stacks, resource search, and the Registry as MCP tools.
+- **Doing infrastructure work as an agent** — the Pulumi CLI is designed for agents: run any command with `npx pulumi`, perform one-shot resource operations with [`pulumi do`](https://www.pulumi.com/docs/iac/cli/direct-resource-operations/), and get an [ephemeral Pulumi Cloud account provisioned automatically](https://www.pulumi.com/docs/administration/concepts/agent-accounts/) on first use — no signup required. [Pulumi Agent Skills](https://www.pulumi.com/docs/ai/skills/) provide proven Pulumi workflows, and the [Pulumi MCP server](https://www.pulumi.com/docs/ai/mcp-server/) exposes stacks, resource search, and the Registry as MCP tools.
 
 ## Site overview
 
