@@ -9,7 +9,13 @@
 # Markdown file is needed.
 #
 # THE RULE: only document packs that are built from the pulumi/policy-packs-internal
-# repo, i.e. the ones we ship to customers as pre-built compliance packs.
+# repo AND are shipped to customers as pre-built compliance packs.
+#
+# Both halves matter, and the second is not implied by the first. A pack can be built
+# here, publish cleanly, and be returned by the API while still being private -- that is
+# exactly how hitrust-awsnative got documented in error (see the bottom of this file).
+# Neither this repo nor the API can tell you which packs are customer-facing, so confirm
+# with the policy-packs-internal maintainers before adding an entry.
 #
 # This is why the file is an allowlist rather than "document everything in the org".
 # The `pulumi` org is also where we publish policy packs for our OWN internal use,
@@ -128,16 +134,6 @@ sections:
         h1: HITRUST CSF 11.5 - Google Cloud
         metaDesc: Complete list of HITRUST CSF 11.5 compliance policies for Google Cloud.
         weight: 3
-      # Targets the AWS Cloud Control provider (@pulumi/aws-native) rather than the
-      # classic AWS provider. None of its policies carry HITRUST control metadata, so
-      # the whole page renders as an unmapped policy list.
-      - pack: hitrust-awsnative
-        source: packs/hitrust/awsnative
-        slug: aws-native
-        title: AWS Native
-        h1: HITRUST CSF 11.5 - AWS Native
-        metaDesc: Complete list of HITRUST CSF 11.5 compliance policies for the AWS Native provider.
-        weight: 4
 
   - id: iso-27001
     menu: reference-pre-built-policy-packs-iso-27001
@@ -251,6 +247,12 @@ sections:
 #                                   guide, not a policy listing. Stays hand-maintained.
 #   cis-kubernetes-google-cloud     A stale earlier publish, superseded by
 #                                   cis-kubernetes-gcp. See the cis-kubernetes section.
+#   hitrust-awsnative               Built here and resolvable through the API, but NOT a
+#                                   product we ship: it is private to the repo and the org.
+#                                   Removed from this file on 2026-08-24 after @danbiwer
+#                                   flagged that it had been documented in error
+#                                   (pulumi/docs#21055). Do not re-add it on the strength of
+#                                   the API listing it -- see the caveat under THE RULE.
 #
 # The org additionally holds packs this repo does not build — internal, experimental,
 # or customer one-offs. They must NOT be documented:

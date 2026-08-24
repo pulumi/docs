@@ -89,7 +89,6 @@ For AWS:
 - [NIST 800-53 for AWS](/docs/reference/pre-built-policy-packs/nist/aws/)
 - [PCI DSS for AWS](/docs/reference/pre-built-policy-packs/pci-dss/aws/)
 - [HITRUST CSF for AWS](/docs/reference/pre-built-policy-packs/hitrust/aws/)
-- [HITRUST CSF for AWS Native](/docs/reference/pre-built-policy-packs/hitrust/aws-native/) — for the AWS Cloud Control (`aws-native`) provider.
 - [ISO/IEC 27001 for AWS](/docs/reference/pre-built-policy-packs/iso-27001/aws/)
 - [CMMC 2.0 for AWS](/docs/reference/pre-built-policy-packs/cmmc/aws/)
 - [CIS Kubernetes Benchmark on AWS](/docs/reference/pre-built-policy-packs/cis-kubernetes/aws/) — for EKS clusters.
