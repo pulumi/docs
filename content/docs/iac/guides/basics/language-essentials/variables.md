@@ -321,6 +321,20 @@ works, and each language's interpolation helper, such as `pulumi.interpolate`
 in TypeScript or `pulumi.Output.format()` in Python, for building strings out
 of them.
 
+## Frequently asked questions
+
+### What replaces Terraform locals and variables in Pulumi?
+
+An ordinary variable in your programming language plays the role Terraform's `locals` and `variable` blocks play. Per-stack inputs that used to live in a `variable` block instead come from [stack configuration](/docs/iac/concepts/config/), which you read at the top of your program and assign to a regular variable.
+
+### Why doesn't string interpolation work on a resource output?
+
+Because an output value isn't known while your program runs; it only resolves once the resource is created or updated. Standard string interpolation needs a value in hand immediately, so each language SDK provides an [output](/docs/iac/concepts/inputs-outputs/)-aware helper instead: `pulumi.interpolate` in TypeScript, `Output.format()` in Python and Java, `pulumi.Sprintf()` in Go, and `Output.Format()` in C#.
+
+### Do I have to declare a type for every variable?
+
+No. Type inference handles most cases, so you can assign a value and let the compiler work out its type. Declaring a type explicitly still pays off for public function signatures and component inputs, where it gives you IDE completion and catches mismatches at compile time rather than at deployment time.
+
 ## Next steps
 
 Continue to [conditionals](/docs/iac/guides/basics/language-essentials/conditionals/)
