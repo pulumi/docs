@@ -284,7 +284,7 @@ is safe to check into your source tree, since it cannot be copied/decrypted for 
 Pulumi keeps track of your cloud resources in a something called a [checkpoint file](/docs/iac/concepts/state-and-backends/),
 and that too might contain sensitive information. For example, a Pulumi resource might have a `"password"` output property.
 
-Pulumi [has support](/docs/iac/concepts/resources/#additionalsecretoutputs) to mark that resource
+Pulumi [has support](/docs/iac/concepts/resources/options/additionalsecretoutputs/) to mark that resource
 output as "secret" and make sure that it is encrypted within the checkpoint file. (So if you were to look at the checkpoint file
 contents via [`pulumi stack export`](/docs/iac/cli/commands/pulumi_stack_export/), you would not be able to recover
 the data.

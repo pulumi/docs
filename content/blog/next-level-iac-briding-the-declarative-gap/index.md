@@ -177,7 +177,7 @@ The Pulumi Cloud is a fully managed service that helps you adopt Pulumi’s open
 [yaml-wiki]: https://en.wikipedia.org/wiki/YAML
 [fsharp-example]: https://github.com/pulumi/examples/blob/master/aws-fs-s3-folder/Program.fs
 [pulumi-static-website-example]: https://www.pulumi.com/registry/packages/aws/how-to-guides/s3-website/
-[pulumi-declarative-imperative-docs]: https://www.pulumi.com/docs/iac/guides/basics/how-pulumi-works/#declarative-and-imperative-approach
+[pulumi-declarative-imperative-docs]: https://www.pulumi.com/docs/iac/guides/basics/how-pulumi-works/
 [pulumi-program-docs]: https://www.pulumi.com/docs/reference/glossary/#program
 [pulumi-engine-docs]: https://www.pulumi.com/docs/iac/guides/basics/how-pulumi-works/#deployment-engine
 [pulumi-providers-docs]: https://www.pulumi.com/docs/iac/guides/basics/how-pulumi-works/#resource-providers

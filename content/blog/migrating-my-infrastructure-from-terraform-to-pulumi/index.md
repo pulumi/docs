@@ -49,8 +49,8 @@ You might already know a bit of Pulumi, but here's a very quick overview plus so
 - Pulumi allows you to write your IaC using TypeScript, Javascript, Python, Go or C#.
 - You define *resources* which have *inputs* and *outputs*. As an example, a resource could be an RDS database Instance. One of it's inputs would be the database version to use. One of the outputs would be the hostname / address of the server.
 - The outputs are lazily evaluated, and their exact value is often not known until after you've executed your code. I.e. you wouldn't have the `db_instance.address` until the instance had been created. Think of outputs as promises / futures.
-- You can use [component resources](https://www.pulumi.com/docs/iac/concepts/resources/#components) to group your resources into logical groups - similar to how Terraform modules work. If you don't do this there's a high risk you'll end up with a very messy setup further down the line.
-- Read Pulumi's own [overview](https://www.pulumi.com/docs/iac/concepts/) and [naming](https://www.pulumi.com/docs/iac/concepts/resources/#autonaming) docs before attempting to use Pulumi yourself. I'd say that's the most important bit to know about.
+- You can use [component resources](https://www.pulumi.com/docs/iac/concepts/components/) to group your resources into logical groups - similar to how Terraform modules work. If you don't do this there's a high risk you'll end up with a very messy setup further down the line.
+- Read Pulumi's own [overview](https://www.pulumi.com/docs/iac/concepts/) and [naming](https://www.pulumi.com/docs/iac/concepts/resources/names/#autonaming) docs before attempting to use Pulumi yourself. I'd say that's the most important bit to know about.
 - Pulumi are using the [open core](https://en.wikipedia.org/wiki/Open-core_model) model where most features are free, but some extra goodies are on a paid tier. You can use the open source version and do state management yourself, but you miss out on certain features.
 
 So what does Pulumi code look like? Below is a minimal extract of some of the Python code I've written (slightly altered).
@@ -129,7 +129,7 @@ Once I had everything migrated to Pulumi I set up a Gitlab CI/CD flow which allo
 
 #### Use component resources to group resources
 
-When your infrastructure starts growing it becomes hard to manage unless you group your resources. Pulumi's solution to this are the so called [component resources](https://www.pulumi.com/docs/iac/concepts/resources/#components). They are "logical components" which you define yourself.
+When your infrastructure starts growing it becomes hard to manage unless you group your resources. Pulumi's solution to this are the so called [component resources](https://www.pulumi.com/docs/iac/concepts/components/). They are "logical components" which you define yourself.
 
 ```shell
 $ pulumi stack
@@ -150,7 +150,7 @@ It might seem like a small thing, but it *really* helps to have a logical grou
 
 #### Importing a resource that has a parent was a bit confusing at first
 
-Each resource in pulumi has a globally unique [URN](https://www.pulumi.com/docs/iac/concepts/resources/#urns). You can show the URNs for the infrastructure you've codeified in pulumi by issuing `pulumi stack --show-urns`
+Each resource in pulumi has a globally unique [URN](https://www.pulumi.com/docs/iac/concepts/resources/names/#urns). You can show the URNs for the infrastructure you've codeified in pulumi by issuing `pulumi stack --show-urns`
 
 ```shell
 $ pulumi stack --show-urns

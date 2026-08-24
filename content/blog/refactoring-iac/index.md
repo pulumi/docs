@@ -24,7 +24,7 @@ A major difference between refactoring application and infrastructure code is th
 
 In cases where an object’s ID changes -- due to a rename, reparenting to a new component, or otherwise -- Pulumi provides [aliases](/docs/iac/concepts/resources/#aliases). An `Alias` accepts a list of identifiers that can include old `Alias` objects or old resource URNs. When a resource is annotated with an alias, Pulumi can connect the old to the new object state, and the resource can be updated in place.
 
-A similar situation occurs with [`component resources`](/docs/iac/concepts/resources/#components), i.e., a logical grouping of related resources such as `VPC` with subnets pre-configured. When you change a parent resource of a component resource, the identity of the component resource also changes. Pulumi provides a [`parent`](/docs/iac/concepts/resources/#components) option to tie a child resource to the parent resource. The combination of `alias` and `parent` arguments to resources
+A similar situation occurs with [`component resources`](/docs/iac/concepts/components/), i.e., a logical grouping of related resources such as `VPC` with subnets pre-configured. When you change a parent resource of a component resource, the identity of the component resource also changes. Pulumi provides a [`parent`](/docs/iac/concepts/resources/options/parent/) option to tie a child resource to the parent resource. The combination of `alias` and `parent` arguments to resources
 lets you refactor infrastructure while preserving existing resources.
 
 Let's examine how to apply refactoring to infrastructure.

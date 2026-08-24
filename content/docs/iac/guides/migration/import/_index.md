@@ -624,7 +624,7 @@ error: Preview failed: importing sg-04aeda9a214730248: security group not found
 
 After successfully importing a resource, you can delete the `import` option if you like, then re-run `pulumi up`, and all subsequent operations will now behave as though Pulumi had provisioned the imported resource from the outset.
 
-Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/iac/concepts/resources/options/protect/) resource option.
+Be aware this applies to `destroy` operations also. Once an imported resource has been brought under management with Pulumi, destroying its containing stack will delete the imported resource as well in the usual way. If you wish to ensure that an imported resource survives through `pulumi destroy`, consider using the [`retainOnDelete`](/docs/iac/concepts/resources/options/retainondelete/) resource option.
 
 ### Mismatched state
 
@@ -672,5 +672,5 @@ To see details on what specifically doesn't match, you can select the `details` 
 After the import completes, Pulumi applies the update to bring the resource's configuration into alignment with your program's desired state. If you want the program to match the existing resource exactly without any updates, correct the mismatched properties in your code before running `pulumi up`.
 
 {{% notes type="info" %}}
-[Auto-named](/docs/iac/concepts/resources/#autonaming) resources import cleanly: Pulumi reads the imported resource's actual name from the cloud provider and uses it before the update checks run, so auto-naming does not produce a name mismatch. That said, if you want subsequent updates to preserve a specific name — for example, to handle naming conflicts across multiple stacks — specify the `name` property explicitly, using [Pulumi configuration](/docs/iac/concepts/config/) where necessary.
+[Auto-named](/docs/iac/concepts/resources/names/#autonaming) resources import cleanly: Pulumi reads the imported resource's actual name from the cloud provider and uses it before the update checks run, so auto-naming does not produce a name mismatch. That said, if you want subsequent updates to preserve a specific name — for example, to handle naming conflicts across multiple stacks — specify the `name` property explicitly, using [Pulumi configuration](/docs/iac/concepts/config/) where necessary.
 {{% /notes %}}

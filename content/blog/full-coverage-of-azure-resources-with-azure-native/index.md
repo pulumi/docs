@@ -196,7 +196,7 @@ Pass an explicit value to the `resourceGroupName` property if you want to contro
 
 However, suppose you create a sub-resource, e.g., a container under a storage account, a database under a database account, or a slot under a web app. In that case, Pulumi will not append a random suffix because those resources names don’t have to be globally unique.
 
-You can also apply [transformations](https://www.pulumi.com/docs/iac/concepts/resources/#transformations) to define your own naming schemas: see [this example](https://github.com/matwilko/Pulumi.AzureNextGen.Ambient/blob/434c4beccffdd8d1180e385ff5fe298867a285af/AutoNaming.cs) from our community.
+You can also apply [transformations](https://www.pulumi.com/docs/iac/concepts/resources/options/transformations/) to define your own naming schemas: see [this example](https://github.com/matwilko/Pulumi.AzureNextGen.Ambient/blob/434c4beccffdd8d1180e385ff5fe298867a285af/AutoNaming.cs) from our community.
 
 ### Auto-Location
 
