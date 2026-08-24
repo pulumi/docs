@@ -29,7 +29,7 @@ Prerequisites and configuration for the your infrastructure can be found in the 
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a self-managed backend (e.g. S3 storage bucket) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so that you can deploy the Service by running `pulumi up`.
+This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a DIY backend (e.g. S3 storage bucket) to deploy all services listed above to stand up the self-hosted Pulumi Cloud. The installation package includes Pulumi project code so that you can deploy the Service by running `pulumi up`.
 
 To this end, you need to set up the following:
 

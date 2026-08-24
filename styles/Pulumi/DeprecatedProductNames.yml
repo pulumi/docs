@@ -9,42 +9,40 @@
 # brand guide's Names & terminology section (the source of truth; see
 # styles/Pulumi/BRAND-SYNC.yaml).
 #
-# Token notes (the rule is case-sensitive so bare generic words don't flag;
-# character classes cover the common miscasings):
+# NO LOOKBEHINDS. Vale evaluates a token against a scoped substring, and a
+# negative lookbehind at the start of that window is silently dropped, so the
+# same sentence flags or doesn't depending on how much text precedes it. It is
+# reproducible: with these tokens written as `(?<!VS Code )\bCopilot\b`, the
+# line "GitHub Copilot works well. Microsoft Copilot exists. VS Code Copilot
+# too." is clean under an 8-character H1 and flags "VS Code Copilot" under a
+# 17-character one. Lookaheads are evaluated inside the window and are stable
+# across the same sweep, so `Pulumi Service` below keeps its two.
+#
+# Token notes (case-sensitive, so the generic lowercase words never flag):
 #
 #   - "Pulumi Service": pre-2022 name of Pulumi Cloud, but resolves to a
 #     different product in different sentences (Pulumi Cloud most often; Pulumi
 #     ESC or Pulumi Deployments where the sentence is about secrets or remote
-#     execution). Excludes the plural "Pulumi Services" (the IDP Services
-#     concept) and "Pulumi Service provider" — the `pulumi-pulumiservice`
-#     provider still carries its historic name upstream (registry package id
-#     `pulumiservice`), and renaming it is a product/IA decision with URL-alias
-#     consequences, outside this lint rule's remit.
-#   - "Insights": retired in favor of Discovery, but bare capitalized Insights
-#     needs a human eye (historical prose is allowed to stand, and the right
-#     replacement may be "Discovery", "Discovery & governance", or a feature
-#     name). Excludes "Pulumi Insights" and the fixed phrases ("Insights
-#     account/scan/supergraph/resources") that Substitutions.yml auto-fixes,
-#     so the same text is never double-flagged. Lowercase "insights" (the
-#     ordinary English noun) never flags.
-#   - "Copilot": retired in favor of Pulumi Neo. Excludes "Pulumi Copilot"
-#     (auto-fixed by Substitutions.yml) and the unrelated GitHub/Microsoft/
-#     VS Code Copilot products, which docs legitimately reference. Known
-#     limitation: a bare "Copilot" in an agent list ("Cursor, Copilot,
-#     Codex") means GitHub's product but still flags — the reviewing model
-#     refutes it from context; the fixed lookbehinds can't.
+#     execution). The lookaheads exclude the plural "Pulumi Services" (the IDP
+#     Services concept) and "Pulumi Service provider" — the
+#     `pulumi-pulumiservice` provider still carries its historic name upstream
+#     (registry package id `pulumiservice`), and renaming it is a product/IA
+#     decision with URL-alias consequences, outside this lint rule's remit.
 #   - "IAS": the retired Insights acronym.
-#   - "Policy Violations": the retired console page name; the page is now
-#     "policy findings" (lowercase "policy violations" is fine in prose for
-#     what a policy check surfaces, and stays unflagged via case sensitivity).
+#
+# Intentionally NOT mirrored here (see the brand-vale-sync skill's
+# "intentionally unmirrored" rule): bare "Insights" and bare "Copilot". Both
+# would need a lookbehind to avoid double-flagging the "Pulumi Insights" /
+# "Pulumi Copilot" that Substitutions.yml already auto-fixes, and bare
+# "Copilot" collides with the GitHub, Microsoft, and VS Code products this
+# site legitimately references (content/docs/ai/skills/, the RBAC scope
+# tables). Without a reliable lookbehind there is no safe regex for either, so
+# they stay model-review territory rather than becoming a noisy blocker.
 extends: existence
 message: "'%s' is a retired product name. Choose the current name for this context — see the brand guide's Names & terminology page (retired-names table)."
 link: "https://brand.pulumi.com/voice/names-and-terminology/"
 level: warning
 ignorecase: false
 tokens:
-  - '\b[Pp]ulumi [Ss]ervice\b(?!s\b)(?!\s+[Pp]rovider\b)'
-  - '(?<!Pulumi )\bInsights\b(?!\s+(?:account|scan|supergraph|resources)\b)'
-  - '(?<!Pulumi )(?<!GitHub )(?<!Microsoft )(?<!VS Code )\bCopilot\b'
+  - '\bPulumi Service\b(?!s\b)(?!\s+[Pp]rovider\b)'
   - '\bIAS\b'
-  - '\bPolicy Violations\b'

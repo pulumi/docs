@@ -243,12 +243,12 @@ To minimize diff noise, every item in an ordered list begins with `1.` (Markdown
 
 ## Glossary
 
-The [Pulumi glossary](/docs/iac/concepts/glossary/) defines common terms used throughout the documentation.
+The [Pulumi glossary](/docs/reference/glossary/) defines common terms used throughout the documentation.
 
 - When introducing a new concept or Pulumi-specific term, consider adding it to the glossary.
 - The glossary helps both human and AI readers understand Pulumi terminology.
 - To add or update terms, edit `data/glossary.toml`.
-- Link to specific terms using anchor links: `/docs/iac/concepts/glossary/#term-name`.
+- Link to specific terms using anchor links: `/docs/reference/glossary/#term-name`.
 
 For product, feature, and category names — canonical spellings, preferred terms like *Pulumi package* vs. *native language package*, and the retired names never to use again — see the brand guide's [Names & terminology](https://brand.pulumi.com/voice/names-and-terminology/) page (the `terminology` section via the MCP server). It is the single source of truth for naming; this repo's glossary defines *concepts*, not names.
 

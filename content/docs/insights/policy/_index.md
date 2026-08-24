@@ -72,7 +72,7 @@ The open source Pulumi CLI enables local policy execution:
 
 - Apply policies locally using the `--policy-pack path/to/policy-pack` flag with `pulumi preview` or `pulumi up`
 - Run open source policy packs or author your own custom policy packs
-- Use with any backend (including the self-managed backend)
+- Use with any backend (including the DIY backend)
 
 **Limitation:** Policy packs must be present on disk locally where you run Pulumi commands.
 
@@ -98,7 +98,7 @@ Pulumi Cloud extends policy capabilities with centralized management and additio
 - Identify violations across all infrastructure, including resources created with Terraform, CloudFormation, or manually
 - View violations in the [Policy Findings](/docs/insights/policy/policy-findings/) dashboard
 - Monitor compliance trends across your organization
-- Only available with Pulumi Cloud (cannot be used with the self-managed backend)
+- Only available with Pulumi Cloud (cannot be used with the DIY backend)
 
 ## Languages
 

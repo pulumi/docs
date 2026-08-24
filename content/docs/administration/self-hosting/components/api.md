@@ -17,7 +17,7 @@ pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
+To manage your state with a DIY backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
 The Pulumi API is one of the components required for self-hosting the Pulumi Cloud in your organization's environment. It provides the necessary APIs for both the CLI and the [Console](/docs/administration/self-hosting/components/console/).

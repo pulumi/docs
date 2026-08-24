@@ -23,6 +23,7 @@
 # rewrite or a context-dependent choice is deliberately excluded (see below).
 deterministic_fix:
   - Pulumi.Substitutions        # Fixed terminology swaps: public beta->public preview, CrossGuard->Pulumi Policies, ...
+  - Pulumi.RetiredNames         # Renamed products (Pulumi Insights->Pulumi Discovery, ...); the brand table names the replacement, but the swap needs the meaning-preserving check before it's applied.
   - Pulumi.WordChoice           # Fixed word-preference swaps: click->select, go to->navigate to.
   - Pulumi.Nomenclature         # Canonical product-name spellings: pulumi esc->Pulumi ESC, ...
   - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
@@ -45,6 +46,15 @@ blocker:
   - Pulumi.PoliciesSingular     # Grammatical agreement error ("policies is").
   - Google.Spelling             # Unambiguous misspelling.
   - Pulumi.DeprecatedProductNames  # A retired name (Pulumi Service, bare Insights/Copilot, IAS, ...) is always wrong; the replacement is the author's call, but shipping the dead name is not.
+# Pulumi.RetiredNames is deliberately absent from `blocker:` despite naming a
+# retired product name. The brand guide's own preamble carves out two cases a
+# blanket swap gets wrong -- "historical usage is fine" (content/case-studies/
+# unity.md: "Pulumi Neo ... replacing Pulumi Copilot") and "some replacements
+# can't be automated" (Insights = the Discovery product in most sentences, the
+# "Discovery & governance" category in others). Rows graduate to
+# Pulumi.Substitutions, which IS a blocker, once their repo-wide backlog is
+# zero. See styles/Pulumi/RetiredNames.yml.
+#
 # Pulumi.WordChoice (click->select, go to->navigate to) is deliberately absent
 # from `blocker:` despite having a deterministic fix — those swaps are house
 # word preferences, not correctness errors, so they fail this list's admission

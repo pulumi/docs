@@ -36,7 +36,7 @@ The `pulumi policy` command group provides CLI commands for creating, managing, 
 
 ## Running policies locally
 
-You can run policy packs locally during `pulumi preview` or `pulumi up` by using the `--policy-pack` flag. This does not require Pulumi Cloud and works with any backend, including the self-managed backend.
+You can run policy packs locally during `pulumi preview` or `pulumi up` by using the `--policy-pack` flag. This does not require Pulumi Cloud and works with any backend, including the DIY backend.
 
 ```bash
 pulumi preview --policy-pack /path/to/policy-pack

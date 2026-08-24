@@ -27,7 +27,7 @@ To onboard many AWS, Azure, or Google Cloud accounts at once, use the [Connect c
 
 ## Account creation
 
-1. After logging into the Pulumi Cloud Console, navigate to **Management** > **Accounts**.  
+1. After logging into the Pulumi Cloud console, navigate to **Management** > **Accounts**.  
 1. On this page, select the **Connect cloud accounts** button to open the connection wizard.  
 1. Select your provider.
 {{< notes type="info" >}}  

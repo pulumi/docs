@@ -19,6 +19,14 @@
 # CrossReferenceHeadings and CommandBackticks, repo conventions) are owned by
 # this repo and are not part of the sync.
 
+# Tier rule for a retired name, in the order the sync job should try them:
+#   1. Wrong in every context AND zero repo-wide backlog -> Substitutions.yml
+#      (error, blocker).
+#   2. A rename, or any row with a live backlog -> RetiredNames.yml (warning,
+#      advisory). Rows graduate to tier 1 once their backlog reaches zero.
+#   3. No single fixed replacement -> DeprecatedProductNames.yml (flag-only).
+#   4. No safe regex at all -> leave unmirrored and note it in the PR body.
+
 last_synced: "2026-08-24"
 
 sections:
@@ -30,11 +38,16 @@ sections:
           "Retired and disallowed names" rows with a single fixed replacement,
           plus the package-terminology and lifecycle-stage rows
           (public beta -> public preview).
+      - rule: Pulumi.RetiredNames
+        mirrors: >-
+          "Retired and disallowed names" rows for RENAMED products, where the
+          brand table names the replacement but the guide's preamble
+          ("historical usage is fine", "some replacements can't be
+          automated") means it can't be applied blindly. Advisory tier.
       - rule: Pulumi.DeprecatedProductNames
         mirrors: >-
-          "Retired and disallowed names" rows whose replacement is
-          context-dependent (Pulumi Service, bare Insights, bare Copilot, IAS,
-          Policy Violations).
+          "Retired and disallowed names" rows with no fixed replacement at all
+          (Pulumi Service, IAS).
       - rule: Pulumi.Nomenclature
         mirrors: >-
           "Product names" table — canonical casing of every product name.

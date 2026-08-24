@@ -222,7 +222,7 @@ The last thing you need to do in this section is add your cloud account to the p
 
 Now that your policy pack has been deployed and your account has been associated with it, you can evaluate your Terraform-managed AWS resources against the policy. To do so, navigate back to the **Accounts** section and select your account. Click the **Actions** dropdown button, select the **Scan** radio button, and then click **Scan**.
 
-As the scan progresses, you can monitor policy compliance in real-time through the **Policy Violations** page in the Pulumi Cloud Console.
+As the scan progresses, you can monitor policy compliance in real-time through the **Policy Violations** page in the Pulumi Cloud console.
 
 ![Insights Policies - Policy Violations](/tutorials/eval-compliance-terraform/assets/insights-policy-violations.png)
 

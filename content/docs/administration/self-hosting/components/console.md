@@ -17,7 +17,7 @@ pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
+To manage your state with a DIY backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
 The Pulumi Cloud allows users to view the stacks they have created and see any past activities recorded for those stacks. It also allows you to manage RBAC for your users.

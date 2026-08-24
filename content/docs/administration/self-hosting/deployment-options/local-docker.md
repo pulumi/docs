@@ -38,7 +38,7 @@ The customer is required to provide and manage the following:
 
 ### Pulumi deploying Pulumi
 
-This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a self-managed backend (e.g. an s3-compatible object store) from the Docker environment server to deploy the Service containers.
+This installer uses Pulumi to deploy the Pulumi Cloud. In this case, one uses the Pulumi CLI with a DIY backend (e.g. an s3-compatible object store) from the Docker environment server to deploy the Service containers.
 
 To this end, you need to set up the following:
 

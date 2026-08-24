@@ -6,12 +6,16 @@
 # blockers while WordChoice stays advisory (see the `blocker:` list in
 # .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml).
 #
-# This is an offline mirror of the "Retired and disallowed names" table in the
-# brand guide's Names & terminology section (the source of truth; see
-# styles/Pulumi/BRAND-SYNC.yaml). Only rows with a single fixed replacement
-# belong here; retired names whose replacement is context-dependent (bare
-# "Insights", "Pulumi Service", bare "Copilot") live in
-# DeprecatedProductNames.yml as flag-only findings instead.
+# This is an offline mirror of the brand guide's Names & terminology section
+# (the source of truth; see styles/Pulumi/BRAND-SYNC.yaml). Blocker tier, so a
+# row belongs here only when the term is wrong in EVERY context and the
+# repo-wide backlog is zero. Two sibling files hold the rest:
+#
+#   - RetiredNames.yml (advisory) — renamed products, where "Neo replaced
+#     Copilot" is legitimate historical prose and the brand guide's own
+#     preamble warns that "some replacements can't be automated".
+#   - DeprecatedProductNames.yml (flag-only) — retired names with no fixed
+#     replacement at all, like "Pulumi Service".
 extends: substitution
 message: "Use '%s' instead of '%s' (brand guide: Names & terminology)."
 link: "https://brand.pulumi.com/voice/names-and-terminology/"
@@ -23,13 +27,13 @@ swap:
   '\bpublic beta\b': public preview
   '\bcross-language package\b': Pulumi package
   '\bsingle-language package\b': native language package
-  '\blanguage-native package\b': native language package
+  # Lookahead, not a lookbehind (see DeprecatedProductNames.yml on why): every
+  # occurrence of this phrase in content/ is "language-native package managers"
+  # (npm, PyPI, NuGet, Maven, Go modules) — the package *managers* native to each
+  # language, not the retired package-type term. Without the exclusion this row
+  # was a 13-for-13 false positive at blocker tier.
+  '\blanguage-native package\b(?!\s+managers?\b)': native language package
   '\bPulumi CrossGuard\b': Pulumi Policies
   '\bCrossGuard\b': Pulumi Policies
-  '\bPulumi Copilot\b': Pulumi Neo
-  '\bPulumi Insights\b': Pulumi Discovery
-  '\bInsights account\b': cloud account
-  '\bInsights scan\b': Discovery scan
-  '\bInsights supergraph\b': resource graph
-  '\bInsights resources\b': discovered resources
   '\bself-managed backend\b': DIY backend
+  '\bself-managed backends\b': DIY backends

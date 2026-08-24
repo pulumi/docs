@@ -120,7 +120,7 @@ Pulumi also uses state, and for the same fundamental reason: an [infrastructure 
 
 **Secrets encrypted by default, not stored in plaintext.** This is the sharpest difference. Pulumi treats [secrets](/docs/iac/concepts/secrets/) as first-class: values marked secret are encrypted before they are ever written to state, using a per-stack encryption key (managed by Pulumi Cloud, or your own key in AWS KMS, Azure Key Vault, GCP KMS, or HashiCorp Vault). The encrypted ciphertext is what lands in state, so a reader of the state file cannot recover the secret. Rather than relying on the storage layer to protect plaintext, Pulumi encrypts the sensitive values themselves.
 
-**Self-managed backends when you want them.** Teams that prefer to own their storage can point Pulumi at object storage instead: Amazon S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem. The secret-encryption model carries over, so sensitive values stay encrypted regardless of where the state file lives.
+**DIY backends when you want them.** Teams that prefer to own their storage can point Pulumi at object storage instead: Amazon S3, Azure Blob Storage, Google Cloud Storage, or the local filesystem. The secret-encryption model carries over, so sensitive values stay encrypted regardless of where the state file lives.
 
 | Dimension | Terraform state | Pulumi state |
 |---|---|---|

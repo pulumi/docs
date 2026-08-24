@@ -129,7 +129,7 @@ You've created an environment, stored configuration and secrets, and retrieved t
 The most common way to use an ESC environment is to consume it from a Pulumi IaC stack, which centralizes configuration and secrets across all your stacks.
 
 {{< notes type="info" >}}
-**ESC requires the Pulumi Cloud backend.** Importing an ESC environment into a stack works only for Pulumi stacks that use Pulumi Cloud as their [state backend](/docs/iac/concepts/state-and-backends/). Stacks stored in self-managed backends (such as S3, Azure Blob Storage, or the local filesystem) can't reference ESC environments.
+**ESC requires the Pulumi Cloud backend.** Importing an ESC environment into a stack works only for Pulumi stacks that use Pulumi Cloud as their [state backend](/docs/iac/concepts/state-and-backends/). Stacks stored in DIY backends (such as S3, Azure Blob Storage, or the local filesystem) can't reference ESC environments.
 {{< /notes >}}
 
 ### Step 1: Reference your ESC environment

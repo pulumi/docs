@@ -34,7 +34,7 @@ Tag policies must be configured in your AWS Organization to define which tags ar
 
 ### Grant required permissions
 
-The AWS credentials used by your Pulumi stack must have permission to call the AWS Resource Groups Tagging API. Add the following IAM policy to the role or user running Pulumi deployments:
+The AWS credentials used by your Pulumi stack must have permission to call the AWS Resource Groups Tagging API. Add the following IAM policy to the role or user running Pulumi:
 
 ```json
 {

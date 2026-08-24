@@ -17,7 +17,7 @@ pulumi_cloud_feature: self-hosting
 ---
 
 {{< self-hosting-trial-note >}}
-To manage your state with a self-managed backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
+To manage your state with a DIY backend, such as a cloud storage bucket, see [State and Backends](/docs/iac/concepts/state-and-backends/).
 {{< /self-hosting-trial-note >}}
 
 Pulumi Cloud provides resource search features that require an OpenSearch cluster. Self-hosted installations require a compatible OpenSearch cluster and changes to the API container configuration to enable these features.

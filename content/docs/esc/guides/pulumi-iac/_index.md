@@ -50,7 +50,7 @@ Two pieces connect ESC to a Pulumi program:
 Values wrapped in [`fn::secret`](/docs/esc/concepts/builtin-functions/fn-secret/) arrive in your program as [Pulumi IaC secrets](/docs/iac/concepts/secrets/): they're masked in CLI output and encrypted in your stack's state file, exactly as if you'd set them with `pulumi config set --secret`.
 
 {{< notes type="info" >}}
-**ESC requires the Pulumi Cloud backend.** Importing an environment into a stack works only for stacks that use Pulumi Cloud as their [state backend](/docs/iac/concepts/state-and-backends/). Stacks stored in self-managed backends (such as S3, Azure Blob Storage, or the local filesystem) can't reference ESC environments.
+**ESC requires the Pulumi Cloud backend.** Importing an environment into a stack works only for stacks that use Pulumi Cloud as their [state backend](/docs/iac/concepts/state-and-backends/). Stacks stored in DIY backends (such as S3, Azure Blob Storage, or the local filesystem) can't reference ESC environments.
 {{< /notes >}}
 
 ## Guides
