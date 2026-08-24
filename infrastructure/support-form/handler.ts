@@ -131,6 +131,7 @@ export async function supportFormHandler(event: FunctionUrlEvent): Promise<Funct
                 id,
                 error: err instanceof Error ? err.message : String(err),
                 sourceIp: event.requestContext?.http?.sourceIp,
+                request: result.value,
             }),
         );
         return jsonResponse(502, { ok: false, error: "ticket_creation_failed", id });
