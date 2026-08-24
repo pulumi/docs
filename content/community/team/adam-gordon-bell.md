@@ -9,6 +9,10 @@ aliases:
   - /adam
   - /community/community-engineering/adam-gordon-bell/
 talks:
+- event: "KubeCon + CloudNativeCon North America 2026"
+  title: "I Built an AI Running Coach: A Personal kagent Agent in Production"
+  url: "https://kubecon-cloudnativecon-north-america-2026.sessionize.com/session/1246044"
+  date: 2026-11-10T14:50:00.000-07:00
 - event: "DevOpsDays Rockies 2026"
   title: "When AI Agents Touch Real Infrastructure"
   url: "https://talks.devopsdays.org/dodroxrox26/"
@@ -16,7 +20,11 @@ talks:
 - event: "KCDC 2026"
   title: "Let's Build an Infrastructure-as-Code Tool from Scratch"
   url: "https://www.kcdc.info/"
-  date: 2026-09-10T09:00:00.000-05:00
+  date: 2026-09-11T11:00:00.000-05:00
+- event: "KCDC 2026"
+  title: "I Built an AI Running Coach (That Actually Remembers My Training)"
+  url: "https://www.kcdc.info/"
+  date: 2026-09-10T15:45:00.000-05:00
 - event: "Pinecone Meetup NYC: Scaling AI Infrastructure"
   title: "I Built an AI Running Coach (And Gave It Memory)"
   url: "https://luma.com/pinecone-m9my"

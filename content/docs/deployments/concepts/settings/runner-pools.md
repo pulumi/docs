@@ -32,6 +32,6 @@ If no role is selected, the deployment will only have access to the specific sta
 
 By selecting an appropriate role, you provide the deployment with the necessary permissions to access these additional resources. For fine-grained access control, you can create custom roles with specific permissions tailored to what the deployment needs to accomplish.
 
-Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](/docs/administration/access-identity/rbac/roles/).
+Organization roles are managed through the Roles section. For more information on creating and managing roles, see the [Roles documentation](/docs/administration/concepts/rbac/roles/).
 
 For a full explanation of how a deployment's permissions are determined, the default permissions for each trigger, and how to grant additional access, see [Permissions](/docs/deployments/operations/permissions/).

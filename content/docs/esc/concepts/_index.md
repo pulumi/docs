@@ -21,7 +21,7 @@ Pulumi ESC is available as a fully managed service in [Pulumi Cloud](/docs/admin
 
 - **Scales [Pulumi IaC](/docs/esc/guides/pulumi-iac/).** ESC eliminates duplicated secrets and configuration across stacks and makes secure cloud credentials available in every context—local development, CI/CD, and automation—so the same environment can back many stacks instead of each one carrying its own copy.
 - **Secure access from the command line.** [`pulumi env run`](/docs/esc/guides/running-commands/) injects an environment's configuration and secrets into any command, giving developers and pipelines short-lived, scoped access without exporting long-lived credentials into their shells.
-- **Reach third-party secrets without sharing access directly.** Rather than granting every user and pipeline direct access to systems like AWS Secrets Manager or HashiCorp Vault, you grant access to Pulumi Cloud, which reads those secrets on the client's behalf. [Pulumi Cloud RBAC](/docs/administration/access-identity/rbac/) then governs who can read each secret from one central place.
+- **Reach third-party secrets without sharing access directly.** Rather than granting every user and pipeline direct access to systems like AWS Secrets Manager or HashiCorp Vault, you grant access to Pulumi Cloud, which reads those secrets on the client's behalf. [Pulumi Cloud RBAC](/docs/administration/concepts/rbac/) then governs who can read each secret from one central place.
 
 ## Core concepts
 
@@ -34,7 +34,7 @@ ESC is built around a small set of concepts, each covered in depth on its own pa
 
 ## How Pulumi ESC works
 
-Environments are evaluated when they are *opened*, not when they are defined. When a client opens an environment, Pulumi Cloud authenticates the request, authorizes it against [role-based access control](/docs/administration/access-identity/rbac/), resolves any dynamic [providers](/docs/esc/concepts/providers/) on the client's behalf, and returns the fully evaluated result. *External services* here are the third-party systems an environment's providers reach into—cloud identity systems and secret stores such as AWS, Azure, Google Cloud, or HashiCorp Vault. Pulumi Cloud calls them on the client's behalf, so the client never needs direct credentials for them.
+Environments are evaluated when they are *opened*, not when they are defined. When a client opens an environment, Pulumi Cloud authenticates the request, authorizes it against [role-based access control](/docs/administration/concepts/rbac/), resolves any dynamic [providers](/docs/esc/concepts/providers/) on the client's behalf, and returns the fully evaluated result. *External services* here are the third-party systems an environment's providers reach into—cloud identity systems and secret stores such as AWS, Azure, Google Cloud, or HashiCorp Vault. Pulumi Cloud calls them on the client's behalf, so the client never needs direct credentials for them.
 
 Consider an environment that logs into AWS through OIDC, reads one secret from AWS Secrets Manager, projects the login as environment variables, and exposes the secret as Pulumi configuration:
 
@@ -88,5 +88,5 @@ Because dynamic values are resolved at open time, the temporary AWS credentials 
 - [Built-in properties](/docs/esc/concepts/builtin-properties/) — the `context`, `environments`, and `imports` values available to every reference.
 - [SDKs](/docs/esc/concepts/sdks/) — work with environments from your own code.
 - [Integrations](/docs/esc/integrations/) — tools with a dedicated ESC integration component.
-- [Access control](/docs/administration/access-identity/rbac/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/concepts/customer-managed-keys/) — administer and secure your environments.
+- [Access control](/docs/administration/concepts/rbac/), [audit logs](/docs/esc/administration/audit-logs/), and [customer-managed keys](/docs/esc/concepts/customer-managed-keys/) — administer and secure your environments.
 - [Pulumi CLI](/docs/iac/cli/commands/pulumi_env/) — the command-line reference.
