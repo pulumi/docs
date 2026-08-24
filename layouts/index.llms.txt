@@ -1,3 +1,10 @@
+{{- /* Edition names for the site overview below, from the one file that
+       knows them. Hardcoding the list is how it came to name four editions
+       Pulumi had already renamed. */ -}}
+{{- $editionNames := slice -}}
+{{- range (partialCached "pricing/data.html" . "pricing-data").editions -}}
+  {{- $editionNames = $editionNames | append .name -}}
+{{- end -}}
 # Pulumi
 
 > Infrastructure as code in real programming languages. Define, deploy, and manage cloud infrastructure on AWS, Azure, Google Cloud, Kubernetes, and 150+ providers using TypeScript, Python, Go, C#, Java, or YAML.
@@ -74,7 +81,7 @@ If you are an AI agent or programmatic consumer, start with these endpoints. Eac
 This llms.txt covers www.pulumi.com, which includes:
 
 - [Product](https://www.pulumi.com/product/): Pulumi Cloud platform overview and capabilities
-- [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud (Individual, Team, Enterprise, Business Critical)
+- [Pricing](https://www.pulumi.com/pricing/): Plans and pricing for Pulumi Cloud ({{ delimit $editionNames ", " }})
 - [Pulumi Registry](https://www.pulumi.com/registry/): Documentation for 150+ cloud providers and components, available at `https://www.pulumi.com/registry/packages/<name>/`
 - [Infrastructure AI](https://www.pulumi.com/docs/ai/): Using AI agents with Pulumi — bring your own agent via [Agent Skills](https://www.pulumi.com/docs/ai/skills/) and the [MCP server](https://www.pulumi.com/docs/ai/mcp-server/), or use [Pulumi Neo](https://www.pulumi.com/neo/), Pulumi's purpose-built infrastructure agent
 - [Blog](https://www.pulumi.com/blog/): Product announcements, technical guides, and engineering posts

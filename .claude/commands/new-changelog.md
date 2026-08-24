@@ -60,7 +60,7 @@ meta_desc: "One- or two-sentence summary (<= 160 chars)"
 authors:
     - christian-nunciato   # the changelog's usual author — change if someone else wrote it
 # editions:                 # optional — omit unless the feature is edition-gated
-#     - enterprise
+#     - pro
 #     - enterprise-plus
 ---
 ```

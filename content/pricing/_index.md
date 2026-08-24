@@ -99,7 +99,7 @@ faq:
           answer: |
             Workflow minutes represent the total time used across both Discovery and Deployments. All usage draws from a single, shared pool of minutes. For Discovery, workflow minutes measure the time spent on discovery and policy execution. Deployments also consume workflow minutes by measuring the duration of each deployment process.
         - question: Can I prepay for resources, secrets, and secrets API calls?
-          answer: Yes, you can! Please contact us to discuss the Pro and Enterprise+ editions, which include volume pricing for paying in advance.
+          answer: Yes, you can! Please contact us to discuss volume pricing for paying in advance.
 
         - question: What are Neo tokens?
           answer: |

@@ -210,7 +210,7 @@ editions:
         - Custom policy packs
         - Neo scheduled tasks
         - Internal developer platform (IDP)
-        - Audit logs and automated export
+        - Automated audit log export
         - Drift detection and remediation
         - Time-to-live stacks
         - Customer-managed keys
@@ -784,8 +784,8 @@ categories:
         name: Role-based access control (RBAC)
         # Not organizations/#organization-roles: that section documents the
         # built-in Admin/Member/Billing Manager roles, which are available in
-        # every edition. This row is the configurable RBAC that starts at
-        # Enterprise, which is what the rbac/ pages cover.
+        # every edition. This row is the configurable RBAC that starts at Pro,
+        # which is what the rbac/ pages cover.
         link: /docs/administration/concepts/rbac/
         available_from: pro
 
