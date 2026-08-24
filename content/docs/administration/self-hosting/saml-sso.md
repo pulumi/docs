@@ -78,4 +78,4 @@ and restart the service.
 
 ## Next steps
 
-Once your self-hosted infrastructure is configured, complete the SAML SSO setup by configuring your identity provider and Pulumi organization using the [Pulumi Cloud SAML SSO guides](/docs/administration/access-identity/saml/).
+Once your self-hosted infrastructure is configured, complete the SAML SSO setup by configuring your identity provider and Pulumi organization using the [Pulumi Cloud SAML SSO guides](/docs/administration/guides/saml/).

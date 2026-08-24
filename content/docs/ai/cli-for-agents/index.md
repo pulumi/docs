@@ -60,11 +60,11 @@ Every Pulumi change has a [preview](/docs/iac/cli/commands/pulumi_preview/) that
 
 ## Zero-friction accounts
 
-An agent that runs the CLI still needs somewhere to store state. [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) remove that friction: when the CLI detects it is running in an agent context with no Pulumi Cloud credentials, it provisions a free ephemeral account automatically and keeps working, printing a claim link the user can redeem later. No human has to sign up first for the agent to get started.
+An agent that runs the CLI still needs somewhere to store state. [Agent accounts](/docs/administration/concepts/agent-accounts/) remove that friction: when the CLI detects it is running in an agent context with no Pulumi Cloud credentials, it provisions a free ephemeral account automatically and keeps working, printing a claim link the user can redeem later. No human has to sign up first for the agent to get started.
 
 ## Next steps
 
 - [Agent Skills](/docs/ai/skills/) — teach your agent proven Pulumi workflows it can apply on top of the CLI.
 - [Pulumi MCP server](/docs/ai/mcp-server/) — give an MCP-capable agent the same reach over the Model Context Protocol.
-- [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) — ephemeral Pulumi Cloud accounts provisioned automatically for agents.
+- [Agent accounts](/docs/administration/concepts/agent-accounts/) — ephemeral Pulumi Cloud accounts provisioned automatically for agents.
 - [Pulumi CLI reference](/docs/iac/cli/) — the full command set behind everything above.

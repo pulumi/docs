@@ -6,10 +6,10 @@
     or a static image in the right/below slot.
 
     Parameters — hero:
-    - title: Hero title (used when title_primary/title_secondary not set)
-    - title_primary: First part of heading, purple/larger
-    - title_secondary: Second part of heading, black/smaller
-    - title_reversed: Optional bool. When true, renders secondary above primary.
+    - title: Hero headline, authored as a single markdown string. *Emphasis* (or
+             **strong**) renders the enclosed run in violet — same color, same
+             weight, no italics — and <br> forces a line break, e.g.
+             "*Infrastructure as code*<br>in any language."
     - description: Hero description
     - cta_primary_text: Primary CTA button text (defaults to site.Params.cta.primary.label)
     - cta_primary_link: Primary CTA button link (defaults to site.Params.cta.primary.href)
@@ -19,7 +19,6 @@
     - image_alt: Alt text for image (optional)
     - image_max_width: Optional max width for the image (e.g. "800px", "60rem"). Defaults to full width.
     - image_min_width: Optional min width for the image (e.g. "400px", "30rem").
-    - title_reversed: Optional boolean. When true, renders title_secondary (black) above title_primary (purple).
     - layout: Optional string. "split" renders text left / visual right; default is centered.
     - badge_highlight_text: Optional badge text highlighted in purple (split layout only).
     - badge_text: Optional pill badge text displayed above the heading (split layout only).
@@ -52,9 +51,7 @@
 */}}
 
 {{ $title := .title }}
-{{ $titlePrimary := .title_primary }}
-{{ $titleSecondary := .title_secondary }}
-{{ $titleReversed := .title_reversed | default false }}
+{{ $titlePlain := $title | replaceRE `<br\s*/?>` " " | markdownify | plainify | htmlUnescape }}
 {{ $description := .description }}
 {{ $ctaPrimaryText := .cta_primary_text | default site.Params.cta.primary.label }}
 {{ $ctaPrimaryLink := .cta_primary_link | default site.Params.cta.primary.href }}
@@ -65,7 +62,7 @@
 {{ $videoYouTubeId := .video_youtube_id }}
 {{ $videoTitle := .video_title | default "Watch video" }}
 {{ $image := .image }}
-{{ $imageAlt := .image_alt | default $title | default (printf "%s %s" $titlePrimary $titleSecondary) }}
+{{ $imageAlt := .image_alt | default $titlePlain }}
 {{ $imageMaxWidth := .image_max_width }}
 {{ $imageMinWidth := .image_min_width }}
 {{ $imageStyle := "" }}{{ if $imageMaxWidth }}{{ $imageStyle = printf "%smax-width: %s;" $imageStyle $imageMaxWidth }}{{ end }}{{ if $imageMinWidth }}{{ $imageStyle = printf "%smin-width: %s;" $imageStyle $imageMinWidth }}{{ end }}
@@ -114,22 +111,8 @@
                 <span class="hero-tag-line">{{ $tagLine }}</span>
             </div>
             {{ end }}
-            {{ if or $titlePrimary $title }}
-            <h1 class="product-hero-heading text-left">
-                {{ if and $titlePrimary $titleSecondary }}
-                {{ if $titleReversed }}
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                {{ end }}
-                {{ else if $titlePrimary }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title">{{ $title }}</span>
-                {{ end }}
-            </h1>
+            {{ with $title }}
+            <h1 class="product-hero-heading text-left">{{ . | markdownify }}</h1>
             {{ end }}
             {{ if or $dateAndLocation $booth }}
             <p class="hero-event-details mb-8">
@@ -212,22 +195,8 @@
 <section class="template-hero"{{ if $anchor }} id="{{ $anchor }}"{{ end }}>
     <div class="flex flex-col items-center gap-12">
         <div class="flex flex-col items-center text-center w-full max-w-4xl mx-auto">
-            {{ if or $titlePrimary $title }}
-            <h1 class="product-hero-heading">
-                {{ if and $titlePrimary $titleSecondary }}
-                {{ if $titleReversed }}
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                <span class="product-hero-title-secondary">{{ $titleSecondary }}</span>
-                {{ end }}
-                {{ else if $titlePrimary }}
-                <span class="product-hero-title-primary">{{ $titlePrimary }}</span>
-                {{ else }}
-                <span class="product-hero-title">{{ $title }}</span>
-                {{ end }}
-            </h1>
+            {{ with $title }}
+            <h1 class="product-hero-heading">{{ . | markdownify }}</h1>
             {{ end }}
             {{ if $description }}
             <p class="product-hero-description mb-10">{{ $description | markdownify }}</p>
