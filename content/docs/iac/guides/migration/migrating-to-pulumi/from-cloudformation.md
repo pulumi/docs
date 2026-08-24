@@ -342,7 +342,7 @@ const (
             "Value": { "Ref": "myVpc" }
         }
     }
-}
+}`
 )
 
 func main() {
@@ -543,7 +543,7 @@ func main() {
                 },
             },
             pulumi.Import(pulumi.ID("vpc-0e1a74859af1da17f")),
-        })
+        )
         if err != nil {
             return err
         }
