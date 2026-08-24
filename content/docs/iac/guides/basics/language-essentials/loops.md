@@ -339,6 +339,20 @@ See [working with outputs](/docs/iac/concepts/inputs-outputs/apply/) and
 [combining outputs](/docs/iac/concepts/inputs-outputs/all/) for the full
 picture in every language.
 
+## Frequently asked questions
+
+### How do I replace `for_each` when I move from Terraform to Pulumi?
+
+With a normal loop or comprehension over a list or map in your programming language. There's no separate meta-argument to learn: you iterate over the same data structure you'd use anywhere else in your code, and each iteration declares one resource.
+
+### How do I keep resource names stable when I create resources in a loop?
+
+Build each resource's logical name from a stable key drawn from your data, such as an item's identifier, rather than from the loop's iteration order or index. Pulumi tracks resources by their [logical name](/docs/iac/concepts/resources/names/), so changing that name causes Pulumi to replace the resource, and a name derived from iteration order shifts whenever the underlying list is reordered or resized.
+
+### Can I loop over a resource output?
+
+Not directly, since an [output](/docs/iac/concepts/inputs-outputs/) isn't a concrete value while your program runs. Call [`.apply()`](/docs/iac/concepts/inputs-outputs/apply/) on a single output, or [`pulumi.all([...])`](/docs/iac/concepts/inputs-outputs/all/) to combine several, and do the iteration inside the callback once the values are resolved.
+
 ## Next steps
 
 Continue to [functions](/docs/iac/guides/basics/language-essentials/functions/) to

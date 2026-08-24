@@ -183,7 +183,7 @@ var key = new PrivateKey("my-private-key", new PrivateKeyArgs{
 var key = new PrivateKey("my-private-key", PrivateKeyArgs.builder()
     .algorithm("ECDSA") // ECDSA is a plain value
     .build()
-)
+);
 ```
 
 {{% /choosable %}}
