@@ -32,7 +32,7 @@ items:
             icon: custom/pulumi-secrets
             track: header-product-secrets
           - label: Discovery & governance
-            href: /product/insights-governance/
+            href: /product/discovery-governance/
             description: Asset management, compliance remediation, and AI insights over the cloud
             icon: custom/pulumi-insights
             track: header-product-insights

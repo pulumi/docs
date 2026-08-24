@@ -30,7 +30,7 @@
                    + insights   * insights_resource_month
       monthly    = base_usd + max(0, credits - included_credits)
 
-  Everything is priced for a whole month. IaC and Insights resources are really
+  Everything is priced for a whole month. IaC and discovered resources are really
   billed by the hour, so a resource that exists for only part of the month costs
   proportionally less, but there is deliberately no utilization control: it would
   be a slider nearly every reader leaves where it starts. The disclaimer states
@@ -92,7 +92,7 @@
        at what a typical reader will enter. A ceiling sized for the typical reader
        reads as the ceiling of the product: someone whose fleet is bigger than the
        slider learns that we don't scale to them, which is the opposite of true.
-       Deployments, Neo, and Insights are the ones this matters most for, because
+       Deployments, Neo, and Discovery are the ones this matters most for, because
        today's usage understates them — most customers have not turned them all
        the way up yet, and the estimator shouldn't bake that in.
 
@@ -122,11 +122,11 @@
           "min" 0 "max" 5000 "step" 5 "start" 0)
     (dict "id" "workflow_minutes"
           "label" "Workflow minutes"
-          "tooltip" "One shared pool across Pulumi Deployments and Insights: the duration of each deployment, plus time spent on cloud discovery and policy execution."
+          "tooltip" "One shared pool across Pulumi Deployments and Discovery: the duration of each deployment, plus time spent on cloud discovery and policy execution."
           "min" 0 "max" 1000000 "step" 100 "start" 0)
     (dict "id" "insights_resources"
-          "label" "Insights resources"
-          "tooltip" "Cloud resources discovered by Pulumi Insights, including resources that Pulumi doesn't manage."
+          "label" "Discovered resources"
+          "tooltip" "Cloud resources discovered by Pulumi Discovery, including resources that Pulumi doesn't manage."
           "min" 0 "max" 2000000 "step" 500 "start" 0)
 -}}
 

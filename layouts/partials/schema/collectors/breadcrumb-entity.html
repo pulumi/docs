@@ -75,13 +75,13 @@
       "item" "https://www.pulumi.com/docs/iac/"
     ) }}
 
-  {{/* Add Pulumi Insights if in the docs/insights section */}}
+  {{/* Add Pulumi Discovery if in the docs/insights section */}}
   {{ else if in .RelPermalink "/docs/insights/" }}
     {{ $position = add $position 1 }}
     {{ $breadcrumbs = $breadcrumbs | append (dict
       "@type" "ListItem"
       "position" $position
-      "name" "Pulumi Insights"
+      "name" "Pulumi Discovery"
       "item" "https://www.pulumi.com/docs/insights/"
     ) }}
 
@@ -195,7 +195,7 @@
       "item" "https://www.pulumi.com/docs/get-started/"
     ) }}
 
-  {{/* End of main docs sections (IaC, Insights, ESC, Pulumi Cloud, Administration,
+  {{/* End of main docs sections (IaC, Discovery, ESC, Pulumi Cloud, Administration,
        Deployments & Workflows, IDP, Integrations, Infrastructure AI, Reference,
        Support & Troubleshooting, Install, Get Started) */}}
   {{ end }}
