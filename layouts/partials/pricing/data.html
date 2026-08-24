@@ -10,7 +10,7 @@
 
     editions    the editions list, verbatim and in file order
     order       edition id -> ordinal (0-based)
-    names       edition id -> display name ("business-critical" -> "Business Critical")
+    names       edition id -> display name ("enterprise-plus" -> "Enterprise+")
     first       id of the lowest edition (the one that gates nothing)
     groups      the groups list, each with a `categories` slice attached
     categories  the categories list, each with `features` replaced by the
@@ -95,6 +95,18 @@
       {{- end -}}
     {{- end -}}
 
+    {{- /* `requires` is read before the cells are walked because it is also the
+           floor for the monotonicity check below: declaring the cells beneath it
+           to be limited variants is exactly what frees them to say anything,
+           including a blank above a truthy one. Preventative policies is the row
+           that needs it — "Manual" on Free, blank on Essentials, the feature
+           itself from Pro. The semantic checks stay after the walk, where the
+           cells they talk about exist. */ -}}
+    {{- $reqFrom := 0 -}}
+    {{- with $f.requires -}}
+      {{- if in $editionIds . -}}{{- $reqFrom = index $order . -}}{{- end -}}
+    {{- end -}}
+
     {{- $cs := newScratch -}}
     {{- $min := "" -}}
     {{- $seen := false -}}
@@ -108,16 +120,19 @@
       {{- $cs.SetInMap "cells" $e.id $v -}}
       {{- if $v -}}
         {{- if not $seen -}}{{- $seen = true -}}{{- $min = $e.id -}}{{- end -}}
-      {{- else if $seen -}}
-        {{- errorf "%s: feature %q is available on %s but not on %s. Availability has to be monotone — a marker sentence enumerates one edition and everything above it." $where $id $min $e.id -}}
+      {{- else if and $seen (ge $i $reqFrom) -}}
+        {{- errorf "%s: feature %q is available on %s but not on %s. Availability has to be monotone — a marker sentence enumerates one edition and everything above it. Set `requires:` if the lower cells are limited variants rather than the feature." $where $id $min $e.id -}}
       {{- end -}}
     {{- end -}}
 
     {{- /* `requires` only ever *raises* the edition a marker names, for a
            feature whose lowest truthy cell is a limited variant ("Manual"
-           policy enforcement on Individual). Pointing it at or below that cell
+           policy enforcement on Free). Pointing it at or below that cell
            would make every marker contradict the row it deep-links to, and
            pointing it at the lowest edition would make the feature unmarkable.
+           That the feature is really available from there up is covered by the
+           monotonicity check, which runs from this edition rather than from the
+           first truthy cell.
 
            One if/else chain rather than three ifs: `errorf` logs and carries on,
            so an unknown edition id would otherwise fall into the comparisons

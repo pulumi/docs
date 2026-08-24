@@ -981,8 +981,8 @@ function checkChangelogFilename(date, fullPath) {
  * checkChangelogEditions validates the optional `editions:` front matter on
  * individual changelog entries: it must be a YAML array of edition ids from
  * data/pulumi_pricing.yaml. Templates look the ids up to render the display
- * name, so an entry writes `business-critical` and the badge reads "Business
- * Critical". Authors list every edition the feature is available in; since a
+ * name, so an entry writes `enterprise-plus` and the badge reads
+ * "Enterprise+". Authors list every edition the feature is available in; since a
  * lower edition implies the ones above it, that means the lowest applicable
  * edition and all editions above it — checked here as a contiguous suffix of
  * the edition list, not just set membership. Applies only to entry pages, not
@@ -990,7 +990,7 @@ function checkChangelogFilename(date, fullPath) {
  *
  * The legacy `tiers:` array and singular `tier:` scalar are both rejected:
  * "tier" is not a word the product uses, and the old list carried a `Free`
- * value for an edition that doesn't exist (the free edition is Individual).
+ * value from before Pulumi Cloud had editions at all.
  *
  * @param {*} editions The front matter `editions` value.
  * @param {*} tiers The front matter `tiers` value (legacy; rejected if present).
@@ -1029,15 +1029,15 @@ function checkChangelogEditions(editions, tiers, tier, fullPath) {
                 return "'" + e + "'";
             })
             .join(", ");
-        return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'business-critical', not 'Business Critical'.";
+        return "Changelog `editions:` value(s) " + quoted + " not allowed. Use an edition id from data/pulumi_pricing.yaml: " + PRICING.editions.join(", ") + ". Templates render the display name from the id, so write 'enterprise-plus', not 'Enterprise+'.";
     }
     if (editions.length === 0) {
         return "Changelog `editions:` is empty. List every edition the feature is available in — the lowest applicable edition and all editions above it — or drop the key.";
     }
     // A lower edition implies the ones above it, so a valid list is a contiguous
-    // suffix of PRICING.editions. `editions: [enterprise]` on its own lints as
-    // three valid ids but renders a badge that tells Business Critical readers
-    // the feature isn't theirs.
+    // suffix of PRICING.editions. `editions: [pro]` on its own lints as a
+    // valid id but renders a badge that tells Enterprise+ readers the feature
+    // isn't theirs.
     const listed = PRICING.editions.filter(function (e) {
         return editions.includes(e);
     });

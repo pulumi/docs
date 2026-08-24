@@ -5,9 +5,9 @@
         <span class="badge">{{ . }}</span>
       {{ end }}
 
-  Entries author edition *ids* (`business-critical`), matching every other
+  Entries author edition *ids* (`enterprise-plus`), matching every other
   reference to data/pulumi_pricing.yaml; the badge shows the name Pulumi sells
-  it under ("Business Critical"). An id that isn't an edition fails the build,
+  it under ("Enterprise+"). An id that isn't an edition fails the build,
   so a badge can never silently render a slug or nothing at all.
 
   Returns an empty slice when there are no editions, so callers can range

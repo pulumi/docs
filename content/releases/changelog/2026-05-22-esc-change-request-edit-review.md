@@ -7,8 +7,8 @@ meta_desc: Pulumi ESC change requests now separate editing a draft from reviewin
 authors:
     - christian-nunciato
 editions:
-    - enterprise
-    - business-critical
+    - pro
+    - enterprise-plus
 ---
 
 Pulumi ESC change requests now cleanly separate editing a draft from reviewing one. The editor is always where you change the new version, the approval page is a read-only diff, and a banner on the environment lets you flip between the two. Both modes are deep-linkable, so you can send a coworker a URL to review — or co-edit — the same draft before it's approved.

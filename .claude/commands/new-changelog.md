@@ -32,7 +32,7 @@ Ask the user for the following using AskUserQuestion, seeding smart defaults:
   - Replace `{current-date}` with the actual current date in `YYYY-MM-DD`. Validate any custom date matches `YYYY-MM-DD`.
 - **Summary (`meta_desc`)**: Suggest a concise one- or two-sentence summary (max 160 characters) based on the title. Required — the linter fails without it.
 - **Author (`authors`)**: Included by default — the archetype pre-fills the changelog's usual author (`christian-nunciato`). Confirm it, or set a different team id (from `data/team/team`) when someone else wrote the entry. Only drop the field in the rare case the entry should have no byline; opting out is a deliberate choice, not the default.
-- **Editions (optional)**: Ask whether the release is gated to particular Pulumi Cloud editions. The `editions:` field is a YAML array of edition **ids** from the closed set in `data/pulumi_pricing.yaml` (`individual`, `team`, `enterprise`, `business-critical`) — the badge renders the display name from the id. Default is none. If gated, list **every** applicable edition — the lowest one plus all editions above it (e.g. an Enterprise feature lists both `enterprise` and `business-critical`). `make lint` enforces the set and rejects the legacy `tiers:`/`tier:`.
+- **Editions (optional)**: Ask whether the release is gated to particular Pulumi Cloud editions. The `editions:` field is a YAML array of edition **ids** from the closed set in `data/pulumi_pricing.yaml` (`free`, `essentials`, `pro`, `enterprise-plus`) — the badge renders the display name from the id. Default is none. If gated, list **every** applicable edition — the lowest one plus all editions above it (e.g. a Pro feature lists both `pro` and `enterprise-plus`). `make lint` enforces the set and rejects the legacy `tiers:`/`tier:`.
 
 If the user already provided the announcement details or a link to a blog post, use them to draft the body in Step 4 instead of asking again.
 
@@ -61,7 +61,7 @@ authors:
     - christian-nunciato   # the changelog's usual author — change if someone else wrote it
 # editions:                 # optional — omit unless the feature is edition-gated
 #     - enterprise
-#     - business-critical
+#     - enterprise-plus
 ---
 ```
 
