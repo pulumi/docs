@@ -22,9 +22,8 @@ From `AGENTS.md` (lines 83-98):
 **DO NOT update links in**:
 
 - `content/blog/` - Historical blog posts
-- `content/tutorials/` - Historical tutorials
 
-**Why**: Blog posts and tutorials represent a point in time. Aliases handle redirects automatically, preserving historical accuracy.
+**Why**: Blog posts represent a point in time. Aliases handle redirects automatically, preserving historical accuracy.
 
 ## Search Strategy
 

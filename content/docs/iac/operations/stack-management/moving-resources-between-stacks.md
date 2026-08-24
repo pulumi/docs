@@ -16,7 +16,7 @@ As a project grows, you may decide to split a monolithic stack into smaller ones
 `pulumi state move` only modifies the state files of the source and destination stacks. It does not change your program code. After moving resources you still need to add the corresponding resource declarations to the destination stack's program, as described in [Update the destination program](#update-the-destination-program) below.
 {{% /notes %}}
 
-For a complete worked example that provisions resources, moves them between two stacks in different projects, and updates the program code on both sides, see the [Move Resources Between Stacks](/tutorials/move-resources-between-stacks/) tutorial. For the motivation behind splitting a monolithic stack in the first place, see [Organizing projects & stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
+For a complete worked example that provisions resources, moves them between two stacks in different projects, and updates the program code on both sides, see the [Move Resources Between Stacks](/learn/tutorials/move-resources-between-stacks/) tutorial. For the motivation behind splitting a monolithic stack in the first place, see [Organizing projects & stacks](/docs/iac/guides/basics/organizing-projects-stacks/).
 
 ## Identify the resources to move
 
@@ -77,7 +77,7 @@ Once the program changes are in place, run `pulumi preview` on both stacks. A cl
 
 ## Learn more
 
-* [Move Resources Between Stacks](/tutorials/move-resources-between-stacks/) — a full tutorial covering this workflow end to end, including cross-project moves and resolving dependencies with stack references.
+* [Move Resources Between Stacks](/learn/tutorials/move-resources-between-stacks/) — a full tutorial covering this workflow end to end, including cross-project moves and resolving dependencies with stack references.
 * [Refactoring with aliases](/docs/iac/operations/stack-management/refactoring-with-aliases/) — use the `aliases` resource option when a moved resource's identity changes in the destination program.
 * [Organizing projects & stacks](/docs/iac/guides/basics/organizing-projects-stacks/) — the tradeoffs behind splitting a monolithic stack into layered or micro-stacks in the first place.
 * [`pulumi state move` CLI reference](/docs/iac/cli/commands/pulumi_state_move/) — the full command reference, including flags.

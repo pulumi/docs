@@ -97,25 +97,15 @@ outputs:
     - rows
     - RSS
 
-# Collection terms (/tutorials/<slug>/) are the one non-blog taxonomy: no blog
-# post carries `collections`, so the term outputs above would give every
-# tutorials collection an empty "Pulumi Blog: <Term>" RSS feed (which head.html
-# would then advertise for autodiscovery) plus an unused rows fragment. Scope
-# them back to HTML only.
+# The `industry` taxonomy (case-study verticals) is the one non-blog taxonomy:
+# no blog post carries `industry`, so the default `term` outputs above would
+# give every industry an empty "Pulumi Blog: <Industry>" RSS feed (term.rss.xml
+# filters to Section=blog → no items) that head.html would then advertise for
+# autodiscovery, plus an unused `rows` fragment. Hugo also defaults the taxonomy
+# LIST page to HTML+RSS. Scope BOTH kinds back to HTML only so nothing leaks
+# into our feeds. NOTE: cascade `path` matches the page's LOGICAL path (taxonomy
+# plural `/industry/...`), NOT the permalink URL (/case-studies/industry/...).
 cascade:
-  - _target:
-      kind: term
-      path: /collections/**
-    outputs:
-      - HTML
-  # The `industry` taxonomy (case-study verticals) is non-blog, like collections
-  # above: the default `term` outputs would give every industry an empty "Pulumi
-  # Blog: <Industry>" RSS feed (term.rss.xml filters to Section=blog → no items)
-  # that head.html would then advertise, plus an unused `rows` fragment. Hugo
-  # also defaults the taxonomy LIST page to HTML+RSS. Scope BOTH kinds back to
-  # HTML only so nothing leaks into our feeds. NOTE: cascade `path` matches the
-  # page's LOGICAL path (taxonomy plural `/industry/...`), NOT the permalink URL
-  # (/case-studies/industry/...) — same as the /collections/** target above.
   - _target:
       kind: term
       path: /industry/**
@@ -135,7 +125,6 @@ cascade:
 taxonomies:
   tag: tags
   author: authors
-  collection: collections
   # Plural is intentionally "category" (not "categories") so Hugo reads the
   # existing scalar `category:` front matter on blog posts. Hugo casts the
   # scalar value to a one-term list. See layouts/taxonomy/category.html and
@@ -157,7 +146,6 @@ permalinks:
   term:
     authors: /blog/author/:slug/
     tags: /blog/tag/:slug/
-    collections: /tutorials/:slug/
     category: /blog/category/:slug/
     series: /blog/series/:slug/
     industry: /case-studies/industry/:slug/

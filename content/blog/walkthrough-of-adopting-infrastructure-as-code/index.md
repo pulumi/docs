@@ -45,13 +45,13 @@ In this example, we build and publish a Docker image running an NGINX web server
 
 If our chosen cloud is AWS, we will need an Elastic Container Service (ECS) cluster and registry, with a Fargate service and application load balancer in front of it. This enables our service to be accessed over the internet:
 
-![AWS Containers Template](/templates/container-service/aws/architecture.png)
+![AWS Containers Template](/blog/walkthrough-of-adopting-infrastructure-as-code/container-service-aws-architecture.png)
 
 *See the template for AWS [here](/templates/container-service/aws/)*.
 
 If we choose Google Cloud, on the other hand, we can either use Google Kubernetes Engine (GKE) or Google Cloud Run. In this example, we use Cloud Run and the built-in artifact repository, since these services are generally easier to use when just getting started:
 
-![Google Cloud Containers Template](/templates/container-service/gcp/architecture.png)
+![Google Cloud Containers Template](/blog/walkthrough-of-adopting-infrastructure-as-code/container-service-gcp-architecture.png)
 
 In both cases, after deploying the infrastructure, we will have a fully functioning microservice environment with one load-balanced service running the NGINX web server. The Infrastructure as Code tool will give us a URL for the internet-accessible load balancer so we can browse to it.
 
@@ -63,7 +63,7 @@ In this example, we will create a serverless application. Unlike containers, whi
 
 For Azure, we’ll need to create an Azure Blob Storage container to host our code, upload the serverless function bundle, and then configure an Azure Function app that will make our function available over HTTPS:
 
-![Azure Serverless Template](/templates/serverless-application/azure/architecture.png)
+![Azure Serverless Template](/blog/walkthrough-of-adopting-infrastructure-as-code/serverless-application-azure-architecture.png)
 
 *See the template for Azure [here](/templates/serverless-application/azure/)*.
 
@@ -71,7 +71,7 @@ For AWS, although the architecture is in spirit very similar, the details differ
 
 In both cases, after deploying the infrastructure, we get back a web URL to access it. This example is a good reminder that each of the clouds is very different in its details. Infrastructure as Code doesn’t necessarily shield you from those details, although it is possible to build abstractions that do, which is both a strength but also something you’ll need to navigate.
 
-![AWS Serverless Template](/templates/serverless-application/aws/architecture.png)
+![AWS Serverless Template](/blog/walkthrough-of-adopting-infrastructure-as-code/serverless-application-aws-architecture.png)
 
 *See the template for AWS [here](/templates/serverless-application/aws/)*.
 
@@ -81,13 +81,13 @@ For the final example, let’s switch gears and focus on more “foundational”
 
 In the case of Azure’s Kubernetes Service (AKS), the design of the service is fairly chunky. So we can simply spin up a managed cluster with the associated networking infrastructure:
 
-![Azure Kubernetes Template](/templates/kubernetes/azure/architecture.png)
+![Azure Kubernetes Template](/blog/walkthrough-of-adopting-infrastructure-as-code/kubernetes-azure-architecture.png)
 
 *See the template for Azure [here](/templates/kubernetes/azure/)*.
 
 In the case of AWS’s Elastic Kubernetes Service (EKS), on the other hand, the service itself is rather complex to set up, involving many moving parts. That includes the control plane itself, the worker node groups, an autoscaling group, the AWS container network interface plugin to manage pod networking and more:
 
-![AWS Kubernetes Template](/templates/kubernetes/aws/architecture.png)
+![AWS Kubernetes Template](/blog/walkthrough-of-adopting-infrastructure-as-code/kubernetes-aws-architecture.png)
 
 *See the template for AWS [here](/templates/kubernetes/aws/)*.
 

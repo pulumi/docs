@@ -33,15 +33,15 @@ To start from scratch, follow the [Google Cloud get-started guide](/docs/iac/get
 
 ## Architecture templates
 
-[Pulumi templates](/templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
+[Pulumi templates](/learn/official-templates/) are ready-to-deploy starting points for common architectures. Run `pulumi new <template>` to bootstrap a new project.
 
 Start new Google Cloud projects from a pre-built template:
 
-- [Container service on Google Cloud](/templates/container-service/gcp/) — containerized service on Cloud Run.
-- [Serverless application on Google Cloud](/templates/serverless-application/gcp/) — Cloud Functions with supporting resources.
-- [Static website on Google Cloud](/templates/static-website/gcp/) — Cloud Storage static site.
-- [Virtual machine on Google Cloud](/templates/virtual-machine/gcp/) — Compute Engine VM with configurable networking.
-- [Kubernetes cluster on Google Cloud](/templates/kubernetes/gcp/) — Google Kubernetes Engine (GKE) cluster ready for workloads.
+- [Container service on Google Cloud](/learn/official-templates/container-service/gcp/) — containerized service on Cloud Run.
+- [Serverless application on Google Cloud](/learn/official-templates/serverless-application/gcp/) — Cloud Functions with supporting resources.
+- [Static website on Google Cloud](/learn/official-templates/static-website/gcp/) — Cloud Storage static site.
+- [Virtual machine on Google Cloud](/learn/official-templates/virtual-machine/gcp/) — Compute Engine VM with configurable networking.
+- [Kubernetes cluster on Google Cloud](/learn/official-templates/kubernetes/gcp/) — Google Kubernetes Engine (GKE) cluster ready for workloads.
 
 ## Guides
 

@@ -61,7 +61,7 @@ sections:
   - icon: graduation-cap
     heading: Tutorials ↗
     description: Step-by-step guides for building real-world infrastructure with Pulumi.
-    link: /tutorials/
+    link: /learn/tutorials/
 - type: button-cards
   heading: More Documentation
   cards:

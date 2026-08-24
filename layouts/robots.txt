@@ -15,3 +15,14 @@ Disallow: /docs/search/$
 Disallow: /registry/packages/azure-native-v2
 
 Sitemap: https://www.pulumi.com/sitemap-index.xml
+
+# /learn (tutorials, official templates, community examples, glossary) ships from
+# pulumi/marketing-web, not from this site, so it carries its own sitemap index
+# rather than an entry in ours: robots.txt allows more than one Sitemap directive
+# and each may be an index, whereas nesting one index inside another isn't
+# defined by the spec.
+Sitemap: https://www.pulumi.com/learn/sitemap-index.xml
+
+# Learn, for agents:
+#   llms.txt index:    https://www.pulumi.com/learn/llms.txt
+#   Per-page markdown: append `.md` to any /learn detail URL

@@ -54,6 +54,11 @@ const config = {
     // the guides stack to reference to route traffic to for `/guides` routes.
     guidesStack: stackConfig.get("guidesStack"),
 
+    // the Learn stack (pulumi/marketing-web infra/www) to route `/learn` routes
+    // to. Unset (dev stacks, PR previews) = no Learn origin/behavior added, and
+    // /learn 404s rather than proxying somewhere wrong.
+    learnStack: stackConfig.get("learnStack"),
+
     answersStack: stackConfig.get("answersStack"),
 
     // the versioned-docs storage stack (infrastructure/versioned-docs). When set, the
@@ -621,8 +626,8 @@ function cacheKeyPolicy(name: string, ttl: number, cacheKeyHeaders: string[] = [
 // "thirty-minute-cache" and "one-year-cache" names are preserved so Pulumi
 // updates them in place (adding the Brotli/Gzip flags) rather than replacing.
 //
-// thirtyMinuteCachePolicy varies on the Accept header so /registry/* and
-// /guides/* (which proxy to separate CDNs whose viewer-request functions do
+// thirtyMinuteCachePolicy varies on the Accept header so /registry/*, /guides/*,
+// and /learn/* (which proxy to separate CDNs whose viewer-request functions do
 // markdown content negotiation) cache HTML and markdown variants separately
 // at the apex layer. Without this, whichever variant populates the apex cache
 // first is served to every requester until TTL. Fragmentation is bounded to
@@ -891,6 +896,52 @@ if (config.guidesStack) {
     )
 }
 
+// Learn (tutorials, official templates, community examples, glossary) is a static
+// Astro build out of pulumi/marketing-web (apps/www), fronted by its own CloudFront
+// distribution. www.pulumi.com owns the hostname, so /learn is proxied there the
+// same way /registry and /guides are. The Hugo /tutorials/ and /templates/ trees
+// this replaced were deleted; scripts/redirects/learn-redirects.txt 301s their URLs
+// into /learn.
+const learnOrigins: aws.types.input.cloudfront.DistributionOrigin[] = [];
+const learnBehaviors: aws.types.input.cloudfront.DistributionOrderedCacheBehavior[] = [];
+
+if (config.learnStack) {
+    const learnStack = new pulumi.StackReference(config.learnStack);
+    const learnCDN = learnStack.getOutput("cloudFrontDomain");
+
+    learnOrigins.push(
+        {
+            originId: learnCDN,
+            domainName: learnCDN,
+            customOriginConfig: {
+                originProtocolPolicy: "https-only",
+                httpPort: 80,
+                httpsPort: 443,
+                originSslProtocols: ["TLSv1.2"],
+            },
+            // Origin Shield for Learn should be configured in pulumi/marketing-web,
+            // not here, since Learn has its own CloudFront distribution.
+        }
+    );
+    learnBehaviors.push(
+        {
+            ...baseCacheBehavior,
+            targetOriginId: learnCDN,
+            // "/learn*" (no slash) matches /learn, /learn.md, and /learn/... so the
+            // bare path reaches the Learn origin and gets the native trailing-slash
+            // redirect, matching registry's and guides' behavior. Nothing else on
+            // this site has a URL beginning "learn".
+            pathPattern: "/learn*",
+            // Accept is in this policy's cache key, which the Learn origin requires:
+            // its viewer-request function rewrites a page URL to the page's `.md`
+            // twin when the viewer sends `Accept: text/markdown`, so the two
+            // representations must not collide in the apex cache.
+            cachePolicyId: thirtyMinuteCachePolicy.id,
+            originRequestPolicyId: allViewerExceptHostHeaderId,
+        },
+    )
+}
+
 // Versioned SDK & CLI docs: a permanent archive bucket (its own stack) reached as an
 // S3 website endpoint, served under /docs/versioned/*. Additive and fully optional —
 // when versionedDocsStack is unset, nothing here runs and the distribution is unchanged.
@@ -992,6 +1043,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
         },
         ...registryOrigins,
         ...guidesOrigins,
+        ...learnOrigins,
         ...answersOrigins,
         ...versionedDocsOrigins,
     ],
@@ -1018,6 +1070,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
     orderedCacheBehaviors: [
         ...registryBehaviors,
         ...guidesBehaviors,
+        ...learnBehaviors,
         ...answersBehaviors,
 
         // Versioned docs archives. Must come BEFORE /docs/reference/pkg/dotnet/* and

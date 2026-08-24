@@ -10,7 +10,7 @@ Informational signal labels — surfaced for human filterability. Routing in CI 
 
 | Label | Color | Description |
 |---|---|---|
-| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/tutorials/`, `content/what-is/`). |
+| `domain:docs` | `0e8a16` | PR touches technical docs (`content/docs/`, `content/what-is/`). |
 | `domain:blog` | `a2eeef` | PR touches blog posts or customer stories (`content/blog/`, `content/case-studies/`). |
 | `domain:infra` | `d4c5f9` | PR touches workflows, scripts, infrastructure code, Makefile, or build/bundling config. |
 | `domain:programs` | `fbca04` | PR touches example programs under `static/programs/`. |

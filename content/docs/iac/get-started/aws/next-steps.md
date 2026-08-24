@@ -44,13 +44,13 @@ With Pulumi ESC you can:
 
 Let our AWS tutorials guide you through key Pulumi concepts.
 
-{{< get-started-next-step path="/tutorials/" label="Browse tutorials" ref="gs-aws-tutorials" >}}
+{{< get-started-next-step path="/learn/tutorials/" label="Browse tutorials" ref="gs-aws-tutorials" >}}
 
 ## Launch a new project with a template
 
-Easily deploy the most common cloud architectures, from [static websites](/templates/static-website/aws/) to [serverless applications](/templates/serverless-application/aws/), [virtual machines](/templates/virtual-machine/aws/), [container services](/templates/container-service/aws/), and [Kubernetes clusters](/templates/kubernetes/aws/).
+Easily deploy the most common cloud architectures, from [static websites](/learn/official-templates/static-website/aws/) to [serverless applications](/learn/official-templates/serverless-application/aws/), [virtual machines](/learn/official-templates/virtual-machine/aws/), [container services](/learn/official-templates/container-service/aws/), and [Kubernetes clusters](/learn/official-templates/kubernetes/aws/).
 
-{{< get-started-next-step path="/templates/" label="Browse templates" ref="gs-aws-guides" >}}
+{{< get-started-next-step path="/learn/official-templates/" label="Browse templates" ref="gs-aws-guides" >}}
 
 ## Dive into the docs
 

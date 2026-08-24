@@ -63,15 +63,15 @@ items:
             icon: package
             track: header-engineers-registry
           - label: Templates
-            href: /templates/
+            href: /learn/official-templates/
             description: Deploy common architectures on any cloud
             icon: grid-four
             track: header-engineers-templates
-          - label: Tutorials
+          - label: Learn
             href: /learn/
-            description: Get hands-on with Pulumi concepts
+            description: Tutorials, templates, examples, and a glossary
             icon: graduation-cap
-            track: header-engineers-tutorials
+            track: header-engineers-learn
           - label: Events and workshops
             href: /events#upcoming
             description: Live sessions and workshops

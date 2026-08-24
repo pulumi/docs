@@ -8,7 +8,7 @@ The word **"guides"** currently refers to five different things:
 
 1. Docs uses **"Guides"** as a second-level nav heading inside several product sections (`content/docs/esc/guides/`, `content/docs/deployments/guides/`, `content/docs/idp/guides/` all carry `title: Guides`; `content/docs/iac/guides/` holds the same kind of content but has no landing page of its own).
 2. Marketing publishes **pulumi.com/guides** — "End-to-end blueprints for real cloud patterns" plus a library of Neo prompts. That page is **not** served from this repository.
-3. Marketing also publishes **pulumi.com/tutorials**, which are occasionally referred to as guides.
+3. Marketing also publishes the tutorials at **pulumi.com/learn**, which are occasionally referred to as guides.
 4. The Registry currently republishes Pulumi examples and labels them "how-to guides".
 5. Historic docs URLs like `/docs/guides/...` still circulate and are handled by redirects (`scripts/redirects/`).
 
@@ -56,7 +56,7 @@ Teams:
 
 **Definition:** Task-oriented, sequenced, hands-on lessons. The reader follows along end to end and comes out having *built something* and *learned Pulumi*. Tutorials sometimes have time estimates and are occasionally grouped into collections and multi-part modules. 
 
-- **Lives at:** `content/tutorials/` → [pulumi.com/tutorials](https://www.pulumi.com/tutorials/) (also aliased at `/learn`) and `content/docs/*/get-started`
+- **Lives at:** [pulumi.com/learn/tutorials](https://www.pulumi.com/learn/tutorials/) — **not in this repository**; published from pulumi/marketing-web (`apps/www/src/content/tutorials/`) — and `content/docs/*/get-started`
 - **Examples:** IaC Get Started, Deployments Get Started, ESC Get Started, Pulumi Fundamentals (3-part module), "Importing AWS Infrastructure"
 - **Owns:** Marketing
 - **Contributes:** Docs, Eng/Product
@@ -142,14 +142,14 @@ Teams:
 
 **Definition:** Starter kits for generating new Pulumi projects with `pulumi new`.
 
-- **Lives at:** `content/templates/` (sourced from https://github.com/pulumi/templates); includes both starter and architecture templates.
+- **Lives at:** [pulumi.com/learn/official-templates](https://www.pulumi.com/learn/official-templates/) — **not in this repository**; published from pulumi/marketing-web, which syncs the starters from https://github.com/pulumi/templates and authors the architecture-template pages alongside them.
 - **Owns:** Marketing
 - **Contributes:** Eng/Product, Community Eng
 - **Consumes:** Practitioners bootstrapping new projects
 
 ### Example programs
 
-**Definition:** Testable programs designed for embedding into docs and tutorials.
+**Definition:** Testable programs designed for embedding into docs pages.
 
 - **Lives at:** `static/programs/`, tested via `scripts/programs/test.sh`
 - **Owns:** Docs
@@ -162,7 +162,7 @@ Teams:
 |---|---|---|---|---|---|
 | Conceptual docs | Explains how Pulumi works and why | `content/docs/*/concepts/` | Docs | Eng/Product, Community Eng | Practitioners |
 | Guides | Walkthroughs designed for understanding and using Pulumi | `content/docs/*/guides/` | Docs | Eng/Product, Community Eng, community | Practitioners |
-| Tutorials | Sequenced hands-on learning | `content/tutorials/` | Marketing | Docs, Eng/Product | Newcomers, learners |
+| Tutorials | Sequenced hands-on learning | pulumi/marketing-web → `/learn/tutorials/` | Marketing | Docs, Eng/Product | Newcomers, learners |
 | Reference | Exhaustive lookup material | `content/docs/reference/`, generated CLI docs | Docs + Eng/Product | Eng/Product | Practitioners |
 | Topics | Adjacent, industry-relevant educational content ("what is X") | `content/what-is/` | Marketing | Docs, Community Eng | Learners, evaluators |
 | Blog posts | Point-in-time posts; historical | `content/blog/` | Marketing | Everyone | Community |
@@ -170,7 +170,7 @@ Teams:
 | Product/campaign pages | Pages that sell | `content/product/`, `solutions/`, `gads/`, … | Marketing | Eng/Product, Docs | Evaluators, buyers |
 | Events & workshops | Registration/recap pages | `content/events/` | Marketing + Community Eng | — | Community, prospects |
 | Releases & changelog | Dated record of what shipped | `content/releases/` | Marketing | Eng/Product, Docs | Existing and prospective users |
-| Templates | Runnable starting points | `content/templates/` | Marketing | Eng/Product, Community Eng | Practitioners |
+| Templates | Runnable starting points | pulumi/marketing-web → `/learn/official-templates/` | Marketing | Eng/Product, Community Eng | Practitioners |
 | Example programs | Tested, embeddable code | `static/programs/` | Docs | Eng/Product, Community Eng | Practitioners |
 
 ## Naming decisions and open items
@@ -180,18 +180,17 @@ The "guides" collision described at the top of this document has been resolved a
 1. **"Guides" refers *only* to the docs guides** — the ones that live in the docs, generally underneath a given product or feature. These are owned by the Docs team, and each one, in the [Diátaxis](https://diataxis.fr/) sense, can take the form of either a "how-to guide" or an "explanation." These are the *only* things we'll refer to as Guides going forward.
 1. **"Tutorials" refers to either:**
    - The things we currently call "the Getting Started guides" (`content/docs/*/get-started/`). We'll try to call these the Getting Started *tutorials* going forward — that's what they are in the Diátaxis sense.
-   - The things that live at [pulumi.com/tutorials](https://www.pulumi.com/tutorials/). The content at pulumi.com/guides is being folded selectively into these.
-1. **Tutorials are Marketing-owned** (specifically Technical Content Marketing), with contribution from everyone welcome. The commented-out CODEOWNERS mapping of `content/tutorials/` to `@pulumi/docs` doesn't reflect this and should be corrected if CODEOWNERS is ever re-enabled.
-1. **A new hub at `/learn` is in the works** that pulls in all tutorials, templates, and examples — as well as blog posts categorized [as tutorials](https://www.pulumi.com/blog/category/tutorials/). Like the Registry and pulumi.com/guides today, it will most likely be served by a separate web app rather than this repo.
+   - The things that live at [pulumi.com/learn/tutorials](https://www.pulumi.com/learn/tutorials/). The content at pulumi.com/guides is being folded selectively into these.
+1. **Tutorials are Marketing-owned** (specifically Technical Content Marketing), with contribution from everyone welcome.
+1. **The hub at `/learn` has shipped.** It pulls together tutorials, official templates, community examples, and a glossary, alongside blog posts categorized [as tutorials](https://www.pulumi.com/blog/category/tutorials/), series, workshops, and Academy programs. Like the Registry and pulumi.com/guides, it is served by a separate web app (pulumi/marketing-web) rather than this repo; `infrastructure/index.ts` proxies `/learn*` to it.
 
 Open items:
 
 1. **Give `content/docs/iac/guides/` a landing page.** IaC holds the same guide content as the other product sections but has no `_index.md`, so the type is invisible in the IaC nav. Add an introduction page, titled "Guides," to match its siblings.
-1. **Reserve "tutorials" for the two things above.** Don't introduce other "tutorial" sections inside `/docs/`. Note that `/learn` is currently an alias of `/tutorials`, and `content/learn` does not exist as a directory.
+1. **Reserve "tutorials" for the two things above.** Don't introduce other "tutorial" sections inside `/docs/`, and don't recreate `content/tutorials/` here — new tutorials go to pulumi/marketing-web.
 1. **Bring team metadata current.** The team-management repo may need tweaks (at least on the Marketing side) to reflect the ownership described here.
 
 ## Known gaps
 
-- **CODEOWNERS is entirely commented out** (`.github/CODEOWNERS`), so no ownership is enforced — and the commented-out mapping doesn't fully match reality anyway (it assigns `content/tutorials/` to `@pulumi/docs`, while actual ownership sits with Marketing).
-- **Stale `content/learn` reference:** the docs-review criteria (`.claude/commands/docs-review/references/docs.md`) scope includes `content/learn`, which doesn't exist. The `/learn` path itself is slated to be taken over by the new learning-hub web app described above.
+- **CODEOWNERS is entirely commented out** (`.github/CODEOWNERS`), so no ownership is enforced.
 - **Untyped campaign directories:** ~20 one-off landing directories under `content/` (`gads/`, `cjs26/`, `kubecon/`, `reinvent/`, …) carry no declared type in repo metadata beyond falling into the "website" review domain. They are all Marketing-owned and treated here as product/campaign pages.

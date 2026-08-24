@@ -118,8 +118,8 @@
     <!--
         Taxonomy pages (tags, authors, and the bare taxonomy lists) are
         noindexed because they cannibalise core pages that rank for the same
-        terms; curated landing pages (tutorial collections, blog categories,
-        blog series) are carved out. The full policy and its history live in
+        terms; curated landing pages (blog categories, blog series,
+        case-study industries) are carved out. The full policy and its history live in
         partials/taxonomy-indexable.html, which the sitemap shares.
     -->
     {{ if not (partial "taxonomy-indexable.html" .) }}
@@ -513,12 +513,12 @@
     <!-- Apply anchor links to headings in the docs, blog and taxonomy pages.
          Self-hosted (static/js/anchor-js.min.js, vendored from anchor-js v4.1.0's anchor.min.js)
          rather than loaded from cdnjs: this removes a third-party render-relevant dependency and
-         its DNS/TLS/connection setup cost from every docs/tutorials/blog/authors/tags/registry
+         its DNS/TLS/connection setup cost from every docs/blog/authors/tags/registry
          page, and eliminates the single point of failure where a cdnjs slowdown or outage delayed
          anchors sitewide. The vendored file's SHA-512 matches cdnjs's own published SRI hash for
          anchor-js@4.1.0/anchor.min.js (sha512-8IXYpHF8LXD5JYo9bhj3ja2uLOJ7QJ/o+F1DSitgu0HmT5W0Vv3vTi+p5nn9jbi/cPnskPO9qT0RY5VAdofRJQ==,
          per https://api.cdnjs.com/libraries/anchor-js/4.1.0), confirming it is unmodified. -->
-    {{ if and (not .IsHome) (.Section) (in "docs tutorials blog authors tags registry" .Section) }}
+    {{ if and (not .IsHome) (.Section) (in "docs blog authors tags registry" .Section) }}
         <script async defer src="{{ "js/anchor-js.min.js" | relURL }}"></script>
         <script>
             // Wait for the window's `load` event to ensure the deferred anchor.js script has finished loading as well.

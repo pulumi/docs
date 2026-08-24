@@ -21,7 +21,7 @@ The site automatically generates appropriate schema.org markup based on content 
 | `blog` | BlogPosting | Blog posts | `/blog/my-post/` |
 | `article` | TechArticle | Documentation, educational content | `/docs/`, `/what-is/` |
 | `faq` | FAQPage | FAQ pages with Q&A pairs | `/docs/iac/faq/` |
-| `howto` | HowTo | Step-by-step tutorials | `/tutorials/` |
+| `howto` | HowTo | Step-by-step walkthroughs | `/docs/iac/get-started/` |
 | `product` | SoftwareApplication | Product pages | `/product/` |
 | `event` | Event | Webinars, conferences, meetups | `/events/` |
 | `auto` | (various) | Intelligent auto-detection | Default behavior |
@@ -35,7 +35,6 @@ By default (or when `schema_type: auto`), the system automatically determines th
 
 ```
 - type: blog → BlogPosting
-- type: tutorials → HowTo
 - type: webinars → Event
 - type: docs → TechArticle, plus a supplemental FAQPage entity in the same @graph
   if the page has a "Frequently asked questions" section (H3s ending in `?`)
@@ -218,20 +217,21 @@ main:
 ### HowTo Schema
 
 **Best for:**
-- Step-by-step tutorials
+- Step-by-step walkthroughs
 - Procedural guides
 - How-to content
 
 **Auto-extracts:**
 
 - Steps from numbered lists (`1.`, `2.`, ...) in the page body
-- On `layout: template` pages with no numbered list, steps derived from H2 sections instead (see below)
 - Duration if specified
 - Prerequisites
 
-Template pages (the product template gallery under `/templates/`) share a uniform, verified section structure ("Using this template", "Deploying the project", "Customizing the project", "Cleaning up", and similar) but rarely use numbered lists. For these pages only, each `##` heading becomes one `HowToStep`, using the heading as the step name and an excerpt of the section's prose as the step text. This heuristic is scoped to `layout: template` on purpose: the same approach applied to blog posts or tutorials would invent steps out of narrative headings ("Why this matters", "Conclusion") that describe no action. Purely navigational sections ("Learn more", "Related", "See also", "Further reading") are excluded from both extraction passes.
+Purely navigational sections ("Learn more", "Related", "See also", "Further reading") are excluded from step extraction.
 
-If neither extraction pass finds any steps, the page falls back to Article/TechArticle schema rather than emitting a HowTo with no `step` array (see "Smart Fallbacks" above).
+If the extraction finds no steps, the page falls back to Article/TechArticle schema rather than emitting a HowTo with no `step` array (see "Smart Fallbacks" above).
+
+Opt a blog post in additively with `howto_schema: true` — it keeps its BlogPosting entity and gains a HowTo built from its own numbered walkthrough.
 
 [Learn more about HowTo schema](https://schema.org/HowTo)
 

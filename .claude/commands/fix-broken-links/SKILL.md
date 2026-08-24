@@ -111,7 +111,7 @@ Apply the first row that matches.
 |---|---|---|
 | Internal link points at a moved/renamed path, but the destination page still exists at a new path | **Hugo alias** | Add the old path to `aliases:` on the destination page's frontmatter |
 | Internal link to a page that was deleted/restructured, or a non-Hugo path (registry, generated docs) | **S3 redirect** | Add a redirect line to the topic-appropriate file in `scripts/redirects/` |
-| Broken link living in **editable** content (`content/docs`, `content/product`, `content/tutorials`) | **Edit at source** | Fix the link in place; use the full root-relative path (`/docs/...`), never `../` |
+| Broken link living in **editable** content (`content/docs`, `content/product`) | **Edit at source** | Fix the link in place; use the full root-relative path (`/docs/...`), never `../` |
 | Broken link in a **blog** post **and** an equivalent replacement exists (same content, or close enough that the post's meaning is unchanged) | **Edit at source + stamp `lastmod`** | Swap the link; add/update `lastmod:` in that post's frontmatter (leave `date:` alone) |
 | Broken link in a **blog** post with **no** equivalent replacement | **Route around the prose** | Add an alias/redirect so it resolves; if it's a dead external link, add it to the exclusion list. **Do not reword blog prose** |
 | Dead / transient / bot-protected **external** link | **Exclusion list** | Add the URL to `getDefaultExcludedKeywords()` in `check-links.js` with an inline `//` comment naming the reason + blog post/issue. If the page mattered, prefer swapping to a Wayback snapshot |

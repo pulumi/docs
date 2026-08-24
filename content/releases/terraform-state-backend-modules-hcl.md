@@ -125,7 +125,7 @@ sections:
         title: Bootstrap a new project with a template
         description: |
           Use our HCL starter and architecture templates to get a new HCL project up and running in seconds and then make it your own.
-        link: /templates/
+        link: /learn/official-templates/
 
       - variant: text
         icon: cube

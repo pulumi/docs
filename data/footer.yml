@@ -24,11 +24,11 @@ columns:
         href: /registry/
         track: footer-apis
       - label: Templates
-        href: /templates/
+        href: /learn/official-templates/
         track: footer-templates
-      - label: Tutorials
-        href: /tutorials/
-        track: footer-tutorials
+      - label: Learn
+        href: /learn/
+        track: footer-learn
       - label: Guides
         href: /guides/
         track: footer-guides
