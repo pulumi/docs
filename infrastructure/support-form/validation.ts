@@ -9,11 +9,11 @@
 // validation in theme/src/ts/support-form.ts mirrors them for UX, but only
 // this module is authoritative.
 
-// Category ids for the "I need help with:" select. The display labels live in
-// the form's front matter (content/support/new/_index.md); ids and labels must
+// Priority ids for the "Priority" select. The display labels live in the
+// form's front matter (content/support/new/_index.md); ids and labels must
 // stay in sync with it.
-export const CATEGORIES = ["account-sales", "program", "cloud", "docs"] as const;
-export type Category = (typeof CATEGORIES)[number];
+export const PRIORITIES = ["normal", "urgent"] as const;
+export type Priority = (typeof PRIORITIES)[number];
 
 // Maximum accepted request body, enforced before JSON.parse. The field limits
 // below keep legitimate payloads far under this.
@@ -22,16 +22,10 @@ export const MAX_BODY_BYTES = 256 * 1024;
 export const LIMITS = {
     email: 254,
     name: 200,
-    company: 200,
     organization: 40,
     subject: 200,
     descriptionMin: 10,
     description: 20000,
-    pulumiAbout: 20000,
-    attachmentsMax: 5,
-    attachmentFilename: 255,
-    attachmentSizeBytes: 20 * 1024 * 1024,
-    attachmentContentType: 100,
 };
 
 // Pragmatic email shape check: something@something.tld. Full RFC 5322
@@ -43,24 +37,13 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 // underscore, 40 chars max (matches the Pulumi Cloud org-name rules).
 const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]{0,39}$/;
 
-export interface AttachmentMetadata {
-    filename: string;
-    sizeBytes: number;
-    contentType: string;
-}
-
 export interface SupportRequest {
     email: string;
     name: string;
-    company?: string;
     organization: string;
-    category: Category;
+    priority: Priority;
     subject: string;
     description: string;
-    pulumiAbout?: string;
-    // Metadata only: attachment bytes are not uploaded until the Intercom
-    // integration defines where they go.
-    attachments?: AttachmentMetadata[];
 }
 
 export type ValidationResult =
@@ -74,13 +57,10 @@ export type ValidationResult =
 const KNOWN_KEYS = new Set([
     "email",
     "name",
-    "company",
     "organization",
-    "category",
+    "priority",
     "subject",
     "description",
-    "pulumiAbout",
-    "attachments",
     "website",
 ]);
 
@@ -120,54 +100,6 @@ function stringField(
     return value.trim();
 }
 
-function validateAttachments(input: unknown, fields: Record<string, string>): AttachmentMetadata[] | undefined {
-    if (input === undefined || input === null) {
-        return undefined;
-    }
-    if (!Array.isArray(input)) {
-        fields.attachments = "Expected a list of attachment metadata.";
-        return undefined;
-    }
-    if (input.length === 0) {
-        return undefined;
-    }
-    if (input.length > LIMITS.attachmentsMax) {
-        fields.attachments = `Attach up to ${LIMITS.attachmentsMax} files.`;
-        return undefined;
-    }
-    const result: AttachmentMetadata[] = [];
-    for (const item of input) {
-        if (!isRecord(item)) {
-            fields.attachments = "Expected a list of attachment metadata.";
-            return undefined;
-        }
-        const { filename, sizeBytes, contentType } = item;
-        if (
-            typeof filename !== "string" ||
-            filename.trim().length === 0 ||
-            filename.length > LIMITS.attachmentFilename
-        ) {
-            fields.attachments = "Each attachment needs a filename of at most 255 characters.";
-            return undefined;
-        }
-        if (
-            typeof sizeBytes !== "number" ||
-            !Number.isFinite(sizeBytes) ||
-            sizeBytes < 0 ||
-            sizeBytes > LIMITS.attachmentSizeBytes
-        ) {
-            fields.attachments = "Each attachment must be 20 MB or smaller.";
-            return undefined;
-        }
-        if (typeof contentType !== "string" || contentType.length > LIMITS.attachmentContentType) {
-            fields.attachments = "Each attachment needs a content type.";
-            return undefined;
-        }
-        result.push({ filename: filename.trim(), sizeBytes, contentType });
-    }
-    return result;
-}
-
 export function validateSubmission(input: unknown): ValidationResult {
     const fields: Record<string, string> = {};
 
@@ -199,11 +131,6 @@ export function validateSubmission(input: unknown): ValidationResult {
         }
     }
 
-    const company = stringField(input, "company", fields);
-    if (fields.company === undefined && company && company.length > LIMITS.company) {
-        fields.company = `Keep your company name under ${LIMITS.company} characters.`;
-    }
-
     const organizationRaw = stringField(input, "organization", fields);
     let organization: string | undefined;
     if (fields.organization === undefined) {
@@ -217,12 +144,12 @@ export function validateSubmission(input: unknown): ValidationResult {
         }
     }
 
-    const category = stringField(input, "category", fields);
-    if (fields.category === undefined) {
-        if (!category) {
-            fields.category = "Choose the area you need help with.";
-        } else if ((CATEGORIES as readonly string[]).indexOf(category) === -1) {
-            fields.category = "Choose one of the listed areas.";
+    const priority = stringField(input, "priority", fields);
+    if (fields.priority === undefined) {
+        if (!priority) {
+            fields.priority = "Choose a priority.";
+        } else if ((PRIORITIES as readonly string[]).indexOf(priority) === -1) {
+            fields.priority = "Choose one of the listed priorities.";
         }
     }
 
@@ -244,13 +171,6 @@ export function validateSubmission(input: unknown): ValidationResult {
         }
     }
 
-    const pulumiAbout = stringField(input, "pulumiAbout", fields);
-    if (fields.pulumiAbout === undefined && pulumiAbout && pulumiAbout.length > LIMITS.pulumiAbout) {
-        fields.pulumiAbout = `Keep the output under ${LIMITS.pulumiAbout} characters.`;
-    }
-
-    const attachments = validateAttachments(input.attachments, fields);
-
     if (Object.keys(fields).length > 0) {
         return { ok: false, fields };
     }
@@ -259,18 +179,9 @@ export function validateSubmission(input: unknown): ValidationResult {
         email: email as string,
         name: name as string,
         organization: organization as string,
-        category: category as Category,
+        priority: priority as Priority,
         subject: subject as string,
         description: description as string,
     };
-    if (company) {
-        value.company = company;
-    }
-    if (pulumiAbout) {
-        value.pulumiAbout = pulumiAbout;
-    }
-    if (attachments && attachments.length > 0) {
-        value.attachments = attachments;
-    }
     return { ok: true, value };
 }

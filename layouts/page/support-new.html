@@ -14,8 +14,8 @@
   That module owns the DOM contract via the data-support-form* attributes below,
   and mirrors the server's validation rules (infrastructure/support-form/validation.ts).
 
-  The category option values are the API's closed enum — keep the front matter's
-  form.fields.category.options in sync with CATEGORIES in validation.ts.
+  The priority option values are the API's closed enum — keep the front matter's
+  form.fields.priority.options in sync with PRIORITIES in validation.ts.
 */}}
 
 {{ $overview := .Params.overview }}
@@ -60,13 +60,6 @@
                 </div>
 
                 <div class="mb-6">
-                    <label class="form-label" for="support-company">{{ $fields.company.label }}</label>
-                    <input class="form-input" type="text" id="support-company" name="company"
-                           maxlength="200" autocomplete="organization" aria-describedby="support-company-error">
-                    <p class="form-error" id="support-company-error" hidden></p>
-                </div>
-
-                <div class="mb-6">
                     <label class="form-label" for="support-organization">{{ $fields.organization.label }} <span aria-hidden="true">*</span></label>
                     {{ with $fields.organization.help }}
                         <p class="form-help mt-0 mb-1.5" id="support-organization-help">{{ . }}</p>
@@ -78,18 +71,14 @@
                 </div>
 
                 <div class="mb-6">
-                    <label class="form-label" for="support-category">{{ $fields.category.label }} <span aria-hidden="true">*</span></label>
-                    {{ with $fields.category.help }}
-                        <p class="form-help mt-0 mb-1.5" id="support-category-help">{{ . }}</p>
-                    {{ end }}
-                    <select class="form-select" id="support-category" name="category" required
-                            aria-describedby="support-category-help support-category-error">
-                        <option value="" selected>{{ $fields.category.placeholder }}</option>
-                        {{ range $fields.category.options }}
+                    <label class="form-label" for="support-priority">{{ $fields.priority.label }}</label>
+                    <select class="form-select" id="support-priority" name="priority"
+                            aria-describedby="support-priority-error">
+                        {{ range $fields.priority.options }}
                             <option value="{{ .value }}">{{ .label }}</option>
                         {{ end }}
                     </select>
-                    <p class="form-error" id="support-category-error" hidden></p>
+                    <p class="form-error" id="support-priority-error" hidden></p>
                 </div>
 
                 <div class="mb-6">
@@ -109,27 +98,6 @@
                               aria-describedby="support-description-help support-description-error"></textarea>
                     <p class="form-help" data-support-form-counter="support-description" hidden></p>
                     <p class="form-error" id="support-description-error" hidden></p>
-                </div>
-
-                <div class="mb-6">
-                    <label class="form-label" for="support-pulumi-about">{{ $fields.pulumi_about.label }}</label>
-                    {{ with $fields.pulumi_about.help }}
-                        <p class="form-help mt-0 mb-1.5" id="support-pulumi-about-help">{{ . }}</p>
-                    {{ end }}
-                    <textarea class="form-textarea font-mono" id="support-pulumi-about" name="pulumiAbout" rows="5"
-                              maxlength="20000" spellcheck="false"
-                              aria-describedby="support-pulumi-about-help support-pulumi-about-error"></textarea>
-                    <p class="form-error" id="support-pulumi-about-error" hidden></p>
-                </div>
-
-                <div class="mb-6">
-                    <label class="form-label" for="support-attachments">{{ $fields.attachments.label }}</label>
-                    {{ with $fields.attachments.help }}
-                        <p class="form-help mt-0 mb-1.5" id="support-attachments-help">{{ . }}</p>
-                    {{ end }}
-                    <input class="form-input" type="file" id="support-attachments" name="attachments" multiple
-                           aria-describedby="support-attachments-help support-attachments-error">
-                    <p class="form-error" id="support-attachments-error" hidden></p>
                 </div>
 
                 {{/* Honeypot: invisible to people, filled in by naive bots. The

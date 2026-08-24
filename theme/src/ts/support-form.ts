@@ -25,9 +25,6 @@
 const ENDPOINT = "/api/support";
 const DRAFT_KEY = "pulumi-support-form-draft";
 
-const MAX_ATTACHMENTS = 5;
-const MAX_ATTACHMENT_BYTES = 20 * 1024 * 1024;
-
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]{0,39}$/;
 
@@ -35,22 +32,13 @@ const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]{0,39}$/;
 const FIELD_IDS: Record<string, string> = {
     email: "support-email",
     name: "support-name",
-    company: "support-company",
     organization: "support-organization",
-    category: "support-category",
+    priority: "support-priority",
     subject: "support-subject",
     description: "support-description",
-    pulumiAbout: "support-pulumi-about",
-    attachments: "support-attachments",
 };
 
 type FormControl = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
-
-interface AttachmentMetadata {
-    filename: string;
-    sizeBytes: number;
-    contentType: string;
-}
 
 // Strips a pasted console URL down to the bare organization name. Mirrors
 // normalizeOrganization in infrastructure/support-form/validation.ts.
@@ -137,7 +125,6 @@ function init() {
             return null;
         },
         name: value => (value ? null : "Enter your full name."),
-        company: () => null,
         organization: value => {
             if (!value) {
                 return "Enter your Pulumi organization name.";
@@ -147,11 +134,10 @@ function init() {
             }
             return null;
         },
-        category: value => (value ? null : "Choose the area you need help with."),
+        priority: () => null,
         subject: value => (value ? null : "Enter a subject."),
         description: value =>
             value.length >= 10 ? null : "Describe the issue in at least a few words.",
-        pulumiAbout: () => null,
     };
 
     function validateField(field: string): boolean {
@@ -168,33 +154,12 @@ function init() {
         return true;
     }
 
-    function validateAttachments(): boolean {
-        const input = control("attachments") as HTMLInputElement | null;
-        if (!input || !input.files || input.files.length === 0) {
-            clearError("attachments");
-            return true;
-        }
-        if (input.files.length > MAX_ATTACHMENTS) {
-            setError("attachments", `Attach up to ${MAX_ATTACHMENTS} files.`);
-            return false;
-        }
-        for (const file of Array.from(input.files)) {
-            if (file.size > MAX_ATTACHMENT_BYTES) {
-                setError("attachments", `"${file.name}" is larger than 20 MB.`);
-                return false;
-            }
-        }
-        clearError("attachments");
-        return true;
-    }
-
     function validateAll(): boolean {
         let ok = true;
         for (const field of Object.keys(validators)) {
             // Validate every field so all errors show at once, not just the first.
             ok = validateField(field) && ok;
         }
-        ok = validateAttachments() && ok;
         return ok;
     }
 
@@ -230,7 +195,7 @@ function init() {
     // Draft persistence: a failed submit (or an accidental navigation) never
     // loses the user's entries. sessionStorage access can throw (private
     // windows, blocked storage) — degrade to no persistence.
-    const draftFields = ["email", "name", "company", "organization", "category", "subject", "description", "pulumiAbout"];
+    const draftFields = ["email", "name", "organization", "priority", "subject", "description"];
 
     function saveDraft(): void {
         try {
@@ -281,9 +246,9 @@ function init() {
 
     restoreDraft();
 
-    // Query-param prefill, e.g. /support/new/?category=cloud&subject=CLI+crash.
+    // Query-param prefill, e.g. /support/new/?priority=urgent&subject=CLI+crash.
     const params = new URLSearchParams(window.location.search);
-    for (const field of ["category", "subject", "email", "organization"]) {
+    for (const field of ["priority", "subject", "email", "organization"]) {
         const value = params.get(field);
         const input = control(field);
         if (value && input && !input.value) {
@@ -304,10 +269,6 @@ function init() {
             }
         });
     }
-    const attachmentsInput = control("attachments");
-    if (attachmentsInput) {
-        attachmentsInput.addEventListener("change", validateAttachments);
-    }
 
     // --- Submit -----------------------------------------------------------
 
@@ -326,27 +287,10 @@ function init() {
             email: value("email"),
             name: value("name"),
             organization: normalizeOrganization(value("organization")),
-            category: value("category"),
+            priority: value("priority"),
             subject: value("subject"),
             description: value("description"),
         };
-        if (value("company")) {
-            payload.company = value("company");
-        }
-        if (value("pulumiAbout")) {
-            payload.pulumiAbout = value("pulumiAbout");
-        }
-        const files = (control("attachments") as HTMLInputElement | null)?.files;
-        if (files && files.length > 0) {
-            // Metadata only — bytes aren't uploaded until the Intercom
-            // integration defines where they go.
-            const attachments: AttachmentMetadata[] = Array.from(files).map(file => ({
-                filename: file.name,
-                sizeBytes: file.size,
-                contentType: file.type || "application/octet-stream",
-            }));
-            payload.attachments = attachments;
-        }
         // Honeypot travels with the payload so the server can drop bot fills.
         const honeypot = form.querySelector<HTMLInputElement>("#support-website");
         if (honeypot && honeypot.value) {
@@ -399,7 +343,7 @@ function init() {
                 showConfirmation(payload);
                 (window as any).analytics?.track?.("form-submission", {
                     form_id: "support-request",
-                    category: payload.category,
+                    priority: payload.priority,
                 });
                 return;
             }

@@ -18,12 +18,10 @@ function validPayload(): Record<string, unknown> {
     return {
         email: "jane@example.com",
         name: "Jane Doe",
-        company: "Example Corp",
         organization: "example-corp",
-        category: "cloud",
+        priority: "normal",
         subject: "Stack update stuck in progress",
         description: "Running `pulumi up` hangs after the preview completes. Expected the update to apply.",
-        pulumiAbout: "CLI Version 3.100.0",
     };
 }
 
@@ -32,20 +30,7 @@ test("accepts a fully valid payload", () => {
     assert.ok(result.ok);
     if (result.ok) {
         assert.strictEqual(result.value.email, "jane@example.com");
-        assert.strictEqual(result.value.category, "cloud");
-        assert.strictEqual(result.value.company, "Example Corp");
-    }
-});
-
-test("accepts a payload without optional fields", () => {
-    const payload = validPayload();
-    delete payload.company;
-    delete payload.pulumiAbout;
-    const result = validateSubmission(payload);
-    assert.ok(result.ok);
-    if (result.ok) {
-        assert.strictEqual(result.value.company, undefined);
-        assert.strictEqual(result.value.pulumiAbout, undefined);
+        assert.strictEqual(result.value.priority, "normal");
     }
 });
 
@@ -53,10 +38,9 @@ test("flags every missing required field", () => {
     const result = validateSubmission({});
     assert.ok(!result.ok);
     if (!result.ok) {
-        for (const key of ["email", "name", "organization", "category", "subject", "description"]) {
+        for (const key of ["email", "name", "organization", "priority", "subject", "description"]) {
             assert.ok(result.fields[key], `expected an error for ${key}`);
         }
-        assert.strictEqual(result.fields.company, undefined);
     }
 });
 
@@ -96,11 +80,11 @@ test("rejects organization names that fail the naming rules", () => {
     }
 });
 
-test("rejects categories outside the closed set", () => {
-    const result = validateSubmission({ ...validPayload(), category: "everything" });
+test("rejects priorities outside the closed set", () => {
+    const result = validateSubmission({ ...validPayload(), priority: "everything" });
     assert.ok(!result.ok);
     if (!result.ok) {
-        assert.ok(result.fields.category);
+        assert.ok(result.fields.priority);
     }
 });
 
@@ -125,34 +109,6 @@ test("rejects too-short descriptions", () => {
     assert.ok(!result.ok);
     if (!result.ok) {
         assert.ok(result.fields.description);
-    }
-});
-
-test("accepts attachment metadata within limits", () => {
-    const result = validateSubmission({
-        ...validPayload(),
-        attachments: [{ filename: "stack-trace.txt", sizeBytes: 1024, contentType: "text/plain" }],
-    });
-    assert.ok(result.ok);
-    if (result.ok) {
-        assert.strictEqual(result.value.attachments?.length, 1);
-    }
-});
-
-test("rejects attachment metadata outside limits", () => {
-    const tooMany = Array.from({ length: 6 }, (_, i) => ({
-        filename: `file-${i}.txt`,
-        sizeBytes: 1,
-        contentType: "text/plain",
-    }));
-    for (const attachments of [
-        tooMany,
-        [{ filename: "big.bin", sizeBytes: 21 * 1024 * 1024, contentType: "application/octet-stream" }],
-        [{ filename: "", sizeBytes: 1, contentType: "text/plain" }],
-        "not-a-list",
-    ]) {
-        const result = validateSubmission({ ...validPayload(), attachments });
-        assert.ok(!result.ok, `expected ${JSON.stringify(attachments).slice(0, 40)} to be rejected`);
     }
 });
 

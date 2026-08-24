@@ -18,35 +18,21 @@ form:
             label: Your email address
         name:
             label: Full name
-        company:
-            label: Company name
         organization:
             label: Pulumi organization name
             help: https://app.pulumi.com/PULUMI_ORG_NAME
-        category:
-            label: "I need help with:"
-            help: In what area of Pulumi are you encountering issues?
-            placeholder: Choose an area
+        priority:
+            label: Priority
             options:
-                - label: My Pulumi Account/Sales
-                  value: account-sales
-                - label: My Pulumi Program
-                  value: program
-                - label: My Pulumi Cloud
-                  value: cloud
-                - label: Pulumi Documentation/Blog
-                  value: docs
+                - label: Normal
+                  value: normal
+                - label: Urgent
+                  value: urgent
         subject:
             label: Subject
         description:
             label: Description
             help: Please enter the details of your request. It always helps to include code snippets, current behavior, and expected behavior when encountering issues. Markdown is welcome.
-        pulumi_about:
-            label: Please run pulumi about in the directory containing the Pulumi project and share the output.
-            help: This will print information about the Pulumi environment and is helpful for debugging.
-        attachments:
-            label: Attachments
-            help: "Up to 5 files, 20 MB each. File contents aren't uploaded yet: we'll note what you selected and ask for the files by email if we need them."
     submit: Submit
     submitting: Submitting…
     error_banner: We couldn't send your request just now. Your entries are saved in this browser tab — please try again in a moment, or open a ticket at https://support.pulumi.com/.
