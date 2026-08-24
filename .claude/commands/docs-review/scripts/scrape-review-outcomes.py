@@ -101,8 +101,8 @@ STYLE_BULLET_RE = re.compile(r"^\s*-\s+\*\*line \d+:?\*\*|\[style\]")
 # so the SHA shares its parens with prose. Requiring at least one a-f letter
 # keeps pure-digit runs (issue numbers, dates) from matching.
 HISTORY_SHA_RE = re.compile(r"\b(?=[0-9a-f]*[a-f])[0-9a-f]{7,40}\b")
-# Column-0 finding-paragraph start, mirroring extract_bucket_bullets.
-FINDING_START_RE = re.compile(r"^(?:- )?\*\*\S")
+# Column-0 finding-paragraph start — the shared rule, not a mirror of it.
+FINDING_START_RE = _vp.FINDING_START_RE
 # Branch prefixes of the repo's own automation; their PRs' review outcomes are
 # reported separately from human-authored PRs.
 BOT_BRANCH_PREFIXES = ("content-review/", "fix-broken-links")

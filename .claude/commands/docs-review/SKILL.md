@@ -8,6 +8,8 @@ user-invocable: true
 
 Output goes into the conversation. This skill never posts to GitHub.
 
+This is the *pre-push* pass. Once a PR is open and CI has posted its pinned review, `/address-review` is the skill that works those findings to zero with the author.
+
 ## Usage
 
 `/docs-review [PR_NUMBER]`
