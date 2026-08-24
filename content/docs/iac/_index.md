@@ -114,7 +114,7 @@ sections:
   - icon: shield
     heading: Least Privilege
     description: Apply least-privilege security across IaC, ESC, and CI/CD.
-    link: /docs/administration/security-compliance/least-privilege/
+    link: /docs/administration/guides/least-privilege/
 - type: flat
   heading: Have questions?
   description: <p>For questions or feedback, reach out on <a href="https://slack.pulumi.com" target="_blank">community Slack</a>, <a href="https://github.com/pulumi" target="_blank">GitHub</a>, or <a href="/support/">contact support</a>.</p>
