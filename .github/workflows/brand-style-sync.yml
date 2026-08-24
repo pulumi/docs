@@ -1,0 +1,79 @@
+name: "Scheduled jobs: Brand style sync"
+
+# Weekly drift check of the offline Vale mirror (styles/Pulumi/) against the
+# Pulumi brand guide, with retired/deprecated product names as the priority.
+# Vale can't call the brand MCP at lint time, so this job is what keeps the
+# mirror honest: it re-reads the brand sections each mirrored rule tracks
+# (per styles/Pulumi/BRAND-SYNC.yaml) and opens a draft PR when they've
+# drifted. See .claude/commands/brand-vale-sync/SKILL.md for the process.
+on:
+  schedule:
+    # Mondays at 14:00 UTC — after the weekend, before the US work week.
+    - cron: '0 14 * * 1'
+  workflow_dispatch: null
+
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write # Required for ESC OIDC auth
+  actions: read
+
+jobs:
+  sync:
+    name: Check Vale mirror against brand guide
+    runs-on: ubuntu-latest
+    steps:
+      # ESC runs before checkout so the bot token can authenticate the
+      # checkout — the PR opened by claude-code-action then goes out as
+      # pulumi-bot, letting downstream workflows (docs review, etc.) fire.
+      - name: Fetch secrets from ESC
+        id: esc-secrets
+        uses: pulumi/esc-action@v3
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+      # Binary only — the model runs Vale itself against fixtures/changed
+      # files while validating rule edits; there's no repo-wide report here.
+      - name: Install Vale
+        run: |
+          curl -sL https://github.com/errata-ai/vale/releases/download/v3.9.4/vale_3.9.4_Linux_64-bit.tar.gz \
+            | sudo tar xz -C /usr/local/bin vale
+          vale --version
+      - name: Run Claude Code
+        id: claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Bot token so the PR triggers downstream workflows.
+          github_token: ${{ steps.esc-secrets.outputs.PULUMI_BOT_TOKEN }}
+          prompt: |
+            You are running in CI on a schedule.
+
+            Follow `.claude/commands/brand-vale-sync/SKILL.md` exactly: check
+            the offline Vale mirror under `styles/Pulumi/` against the Pulumi
+            brand guide via the `pulumi-brand` MCP server, prioritizing the
+            terminology section's "Retired and disallowed names" table.
+
+            - If the brand MCP server is unreachable, exit non-zero with a
+              clear error. Do not sync from memory.
+            - If the mirror has drifted, fix it and open a **draft** PR on a
+              branch named `vale/brand-sync-<YYYY-MM-DD>` with the auditable
+              body the skill describes.
+            - If nothing drifted, bump `last_synced` in
+              `styles/Pulumi/BRAND-SYNC.yaml` and open the same draft PR with
+              just that change.
+          # The public pulumi-brand MCP server is wired via --mcp-config
+          # (claude-code-action@v1 has no mcp_config input); its tools are in
+          # --allowed-tools. No auth: the server is public.
+          claude_args: |
+            --model claude-opus-5 --effort low
+            --mcp-config '{"mcpServers": {"pulumi-brand": {"type": "http", "url": "https://brand.pulumi.com/mcp"}}}'
+            --allowed-tools "Read,Write,Edit,Glob,Grep,Agent,WebFetch,mcp__pulumi-brand__get_guidelines,mcp__pulumi-brand__search_guidelines,Bash(make lint:*),Bash(make lint-prose:*),Bash(vale:*),Bash(gh pr create:*),Bash(gh pr view:*),Bash(gh pr list:*),Bash(gh search:*),Bash(gh api:*),Bash(git:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(ls:*),Bash(grep:*),Bash(find:*),Bash(rg:*),Bash(sed:*),Bash(awk:*),Bash(jq:*),Bash(diff:*),Bash(echo:*),Bash(printf:*),Bash(tee:*),Bash(date:*),Bash(test:*),Bash(mkdir:*),Bash(python3 -c:*)"
+
+env:
+  ESC_ACTION_OIDC_AUTH: true
+  ESC_ACTION_OIDC_ORGANIZATION: pulumi
+  ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+  ESC_ACTION_ENVIRONMENT: github-secrets/pulumi-docs
+  ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: false

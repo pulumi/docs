@@ -1,0 +1,69 @@
+# Brand-guide sync manifest for the Vale mirror.
+#
+# Vale runs offline in CI and can't call the brand MCP server, so the rules in
+# this directory are a LOCAL MIRROR of the mechanically enforceable subset of
+# the Pulumi brand guide (brand.pulumi.com — the source of truth). This file
+# records which brand section each mirror rule tracks, so drift is detectable
+# mechanically instead of by folklore.
+#
+# The scheduled brand-style-sync workflow (.github/workflows/brand-style-sync.yml,
+# following .claude/commands/brand-vale-sync/SKILL.md) re-reads each listed
+# brand section through the brand MCP server, compares it against the rule it
+# feeds, and opens a PR when they've drifted — e.g. a newly retired product
+# name that Substitutions/DeprecatedProductNames don't know about yet. After a
+# verified sync (drift fixed, or confirmed none), it updates last_synced.
+#
+# When YOU change one of these rules by hand, ask first whether the change
+# belongs upstream in the brand guide; the mirror never leads, it follows.
+# Rules not listed here (AI-drafting tells, Hugo mechanics like
+# CrossReferenceHeadings and CommandBackticks, repo conventions) are owned by
+# this repo and are not part of the sync.
+
+last_synced: "2026-08-24"
+
+sections:
+  # get_guidelines({section: "terminology"}) / brand.pulumi.com/voice/names-and-terminology/
+  terminology:
+    rules:
+      - rule: Pulumi.Substitutions
+        mirrors: >-
+          "Retired and disallowed names" rows with a single fixed replacement,
+          plus the package-terminology and lifecycle-stage rows
+          (public beta -> public preview).
+      - rule: Pulumi.DeprecatedProductNames
+        mirrors: >-
+          "Retired and disallowed names" rows whose replacement is
+          context-dependent (Pulumi Service, bare Insights, bare Copilot, IAS,
+          Policy Violations).
+      - rule: Pulumi.Nomenclature
+        mirrors: >-
+          "Product names" table — canonical casing of every product name.
+      - rule: Pulumi.PoliciesSingular
+        mirrors: >-
+          The "Pulumi Policies is a singular proper noun" rule.
+      - rule: Pulumi.Overcapitalization
+        mirrors: >-
+          "General terminology rules" — don't overcapitalize concepts (stack,
+          environment, token, ...).
+
+  # get_guidelines({section: "writing-style"}) / brand.pulumi.com/voice/writing-style/
+  writing-style:
+    rules:
+      - rule: Pulumi.HeadingSentenceCase
+        mirrors: >-
+          "Headings and titles" — sentence case. Deliberately scoped to H2+
+          while the Title Case H1 backlog is migrated.
+      - rule: Pulumi.FutureTense
+        mirrors: Present tense for product behavior.
+      - rule: Pulumi.NarrativeWe
+        mirrors: Second-person imperative over narrative "we".
+      - rule: Pulumi.BannedWords
+        mirrors: Inclusive-language avoid list.
+
+  # get_guidelines({section: "voice"}) / brand.pulumi.com/voice/voice-and-tone/
+  voice:
+    rules:
+      - rule: Pulumi.WordChoice
+        mirrors: '"Words and phrases" prefer/avoid pairs (click -> select, ...).'
+      - rule: Pulumi.Difficulty
+        mirrors: Avoid difficulty qualifiers (easy, simple, just).

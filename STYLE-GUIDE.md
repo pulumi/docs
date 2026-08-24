@@ -17,11 +17,12 @@ Pulumi's voice and writing rules live in the brand guide, published at [brand.pu
 | For… | See |
 | ---- | --- |
 | Voice and tone | [Voice & tone](https://brand.pulumi.com/voice/voice-and-tone/) |
-| Grammar, punctuation, product names, headings, links, lists, code-sample style | [Writing style](https://brand.pulumi.com/voice/writing-style/) |
+| Grammar, punctuation, headings, links, lists, code-sample style | [Writing style](https://brand.pulumi.com/voice/writing-style/) |
+| Product, feature, and category names — canonical casing, preferred terms, and retired names | [Names & terminology](https://brand.pulumi.com/voice/names-and-terminology/) |
 
 An agent with the brand MCP server configured can pull any of these on its own — the server's instructions route it to the right section.
 
-Key rules the brand guide owns (so you know what *not* to look for here): inclusive language; the Oxford comma; sentence case for headings; Pulumi product-name capitalization; "public preview" over "public beta"; punctuation outside quotation marks; descriptive link text and alt text; and the prose patterns to avoid. The offline [Vale](https://vale.sh) rules in `styles/Pulumi/` mirror the mechanically enforceable subset of these (see [Automated checks](#automated-checks)).
+Key rules the brand guide owns (so you know what *not* to look for here): inclusive language; the Oxford comma; sentence case for headings; Pulumi product-name capitalization and the retired-names table; "public preview" over "public beta"; punctuation outside quotation marks; descriptive link text and alt text; and the prose patterns to avoid. The offline [Vale](https://vale.sh) rules in `styles/Pulumi/` mirror the mechanically enforceable subset of these (see [Automated checks](#automated-checks)).
 
 ---
 
@@ -249,16 +250,7 @@ The [Pulumi glossary](/docs/iac/concepts/glossary/) defines common terms used th
 - To add or update terms, edit `data/glossary.toml`.
 - Link to specific terms using anchor links: `/docs/iac/concepts/glossary/#term-name`.
 
-### Preferred terminology
-
-These terms have precise meanings in Pulumi documentation. Use them consistently:
-
-| Term | Definition |
-| ---- | ---------- |
-| **Native language package** | A component published to a language-specific registry (npm, PyPI, NuGet, Maven, etc.) without a Pulumi plugin. Consumable only in the language in which it was authored. |
-| **Pulumi package** | A component or provider packaged with a Pulumi plugin so Pulumi can generate SDKs for any supported language. Consumable in all Pulumi languages. |
-
-Use **"Pulumi package"** (not "cross-language package") for components or providers distributed with a Pulumi plugin. Use **"native language package"** (not "single-language package" or "language-native package") for components distributed as standard language packages without a Pulumi plugin.
+For product, feature, and category names — canonical spellings, preferred terms like *Pulumi package* vs. *native language package*, and the retired names never to use again — see the brand guide's [Names & terminology](https://brand.pulumi.com/voice/names-and-terminology/) page (the `terminology` section via the MCP server). It is the single source of truth for naming; this repo's glossary defines *concepts*, not names.
 
 ---
 
@@ -308,4 +300,4 @@ See [BLOGGING.md](BLOGGING.md) for the repo mechanics of writing Pulumi blog pos
 
 ## Automated checks
 
-The rules in this guide — and the mechanically enforceable subset of the brand guide's — are enforced by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` (product-name casing, deprecated terms, inclusive language, substitutions, AI-drafting tells) and layer on top of the Google Developer Style Guide and write-good packages. **Vale runs offline in CI and can't call the MCP, so these rules are a local mirror of the brand guidance — keep them in sync with it, treating the brand guide as the source of truth.** Run locally with `make lint-prose`. Vale findings surface in the pinned PR review in two tiers: a small set of near-zero-false-positive correctness rules (wrong or deprecated product names, banned terms, misspellings, grammatical agreement — the `blocker:` list in `.claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml`) renders under 🚨 Outstanding and must be resolved or refuted before merging; everything else renders under ⚠️ Low-confidence as advisory nags that never block.
+The rules in this guide — and the mechanically enforceable subset of the brand guide's — are enforced by [Vale](https://vale.sh) via `.vale.ini` at the repo root. Custom rules live under `styles/Pulumi/` (product-name casing, retired/deprecated terms, inclusive language, substitutions, AI-drafting tells) and layer on top of the Google Developer Style Guide and write-good packages. **Vale runs offline in CI and can't call the MCP, so these rules are a local mirror of the brand guidance — the brand guide is the source of truth, and the mirror only follows it.** `styles/Pulumi/BRAND-SYNC.yaml` records which brand section each mirrored rule tracks, and the weekly `brand-style-sync` workflow re-checks the mirror against the live brand MCP server (retired names first, since renamed products rot fastest) and opens a draft PR when they drift. Run locally with `make lint-prose`. Vale findings surface in the pinned PR review in two tiers: a small set of near-zero-false-positive correctness rules (wrong or deprecated product names, banned terms, misspellings, grammatical agreement — the `blocker:` list in `.claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml`) renders under 🚨 Outstanding and must be resolved or refuted before merging; everything else renders under ⚠️ Low-confidence as advisory nags that never block.

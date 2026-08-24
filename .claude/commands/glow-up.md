@@ -14,7 +14,7 @@ The `file-path` argument is optional. If not provided, the command will attempt 
 
 ## Requires the `pulumi-brand` MCP server
 
-This skill delegates **all** voice, tone, prose, terminology, grammar, and naming judgment to the Pulumi brand guide served by the **`pulumi-brand` MCP server** (`https://brand.pulumi.com/mcp`). It deliberately keeps no local copy of those rules. Before analyzing anything, confirm the server is reachable and load its voice and writing-style guidance. **If you can't reach it, stop and tell the user the brand guide is unavailable — do not fall back to your own notions of Pulumi style.**
+This skill delegates **all** voice, tone, prose, terminology, grammar, and naming judgment to the Pulumi brand guide served by the **`pulumi-brand` MCP server** (`https://brand.pulumi.com/mcp`). It deliberately keeps no local copy of those rules. Before analyzing anything, confirm the server is reachable and load its voice, writing-style, and terminology guidance. **If you can't reach it, stop and tell the user the brand guide is unavailable — do not fall back to your own notions of Pulumi style.**
 
 ---
 
@@ -45,7 +45,7 @@ Read the entire target file and perform comprehensive analysis.
 
 #### Text analysis
 
-Judge the prose against the **brand guide's voice and writing-style sections** (brand.pulumi.com, also exposed through the brand MCP server) — the source of truth for voice and tone, marketing language and superlatives, inclusive language, terminology and product naming, heading case, link text, lists, paragraph length, and grammar. Consult them and flag anything that violates them, quoting the offending line. Don't re-derive those rules here.
+Judge the prose against the **brand guide's voice, writing-style, and terminology sections** (brand.pulumi.com, also exposed through the brand MCP server) — the source of truth for voice and tone, marketing language and superlatives, inclusive language, product/feature naming and the retired-names table, heading case, link text, lists, paragraph length, and grammar. Consult them and flag anything that violates them, quoting the offending line. Don't re-derive those rules here.
 
 Then flag the file-specific issues the brand guide doesn't own:
 
@@ -135,7 +135,7 @@ These references represent current branding standards. Use them to:
 
 Before proposing changes, verify understanding of:
 
-- The brand guide's voice and writing-style sections (brand.pulumi.com, also exposed through the brand MCP server) — voice, prose, terminology, grammar, and naming (the source of truth)
+- The brand guide's voice, writing-style, and terminology sections (brand.pulumi.com, also exposed through the brand MCP server) — voice, prose, grammar, and product/feature naming including retired names (the source of truth)
 - `STYLE-GUIDE.md` — this site's Hugo/repo mechanics (shortcodes, links, code fences, navigation)
 - `AGENTS.md` — Repository conventions and build workflow
 - Google Developer Documentation Style Guide — for topics covered by none of the above
