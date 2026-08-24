@@ -141,6 +141,22 @@ jobs:
           key: meta-images-${{ github.sha }}
           restore-keys: |
             meta-images-
+      # Derive the cache key from the Hugo installed above rather than a literal,
+      # so revving hugo-version updates the key on its own. Fails loudly on an
+      # unparseable version rather than silently collapsing every build into a
+      # single unversioned namespace, which is the bug this exists to prevent.
+      - name: Resolve Hugo version for the cache key
+        id: hugo-version
+        run: |
+          hv="$(hugo version)"
+          # -n/p so a non-match yields empty rather than echoing the input back,
+          # and check before appending -extended so the guard can't see a value
+          # that is only the suffix.
+          ver="$(printf '%s' "$hv" | sed -nE 's/^hugo v([0-9]+\.[0-9]+\.[0-9]+).*/\1/p')"
+          [ -n "$ver" ] || { echo "could not parse hugo version from: $hv" >&2; exit 1; }
+          case "$hv" in *+extended*) ver="$ver-extended" ;; esac
+          echo "version=$ver" >> "$GITHUB_OUTPUT"
+
       # Persist Hugo's processed-image cache (resources/_gen) for the full
       # `make build` below; without it every run re-encodes ~2,400 WebP images
       # from scratch (~4-5 minutes).
@@ -148,16 +164,16 @@ jobs:
         uses: actions/cache@v6
         with:
           path: resources
-          # The version prefix must match the hugo-version pinned above, and be
-          # identical in every workflow that caches resources/ -- pull-request.yml,
-          # build-and-deploy.yml, testing-build-and-deploy.yml, and
-          # pulumi-cli-docs.yml -- or they stop sharing a cache. Hugo does not put
-          # its own version in the cache key, so without this a Hugo upgrade keeps
-          # serving images encoded by the previous version indefinitely. Bump them
-          # together on upgrade.
-          key: hugo-resources-0.157.0-${{ github.sha }}
+          # Keyed on the Hugo resolved above, not a literal, so the four
+          # workflows that share this cache (pull-request.yml,
+          # build-and-deploy.yml, testing-build-and-deploy.yml,
+          # pulumi-cli-docs.yml) stay in step through an upgrade without anyone
+          # remembering to bump them. Hugo does not put its version in its own
+          # cache entries, so without this an upgrade keeps serving images
+          # encoded by the previous version indefinitely.
+          key: hugo-resources-${{ steps.hugo-version.outputs.version }}-${{ github.sha }}
           restore-keys: |
-            hugo-resources-0.157.0-
+            hugo-resources-${{ steps.hugo-version.outputs.version }}-
       - run: make ensure
       - name: clean stale generated command pages
         run: |
