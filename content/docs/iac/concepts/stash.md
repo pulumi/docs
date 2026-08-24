@@ -542,7 +542,7 @@ return await Deployment.RunAsync(() =>
 
 ### Preserving a stable random value
 
-When you need a random value that remains constant across deployments. In these examples, `generatePassword` is your own helper function that produces a fresh value on every run; the stash is what keeps the first value stable.
+Use a stash when you need a random value that remains constant across deployments. In these examples, `generatePassword` is your own helper function that produces a fresh value on every run; the stash is what keeps the first value stable.
 
 {{< chooser language "typescript,python,go,csharp,java" >}}
 
@@ -552,11 +552,11 @@ When you need a random value that remains constant across deployments. In these 
 import * as pulumi from "@pulumi/pulumi";
 
 // Generate a random password once
-const randomPassword = generatePassword()
+const randomPassword = generatePassword();
 
 // Stash it so it doesn't change on subsequent deployments
 const passwordStash = new pulumi.Stash("passwordStash", {
-    input: pulumi.secret(randomPassword.result),
+    input: pulumi.secret(randomPassword),
 });
 
 // Use the stashed password for database configuration
@@ -574,7 +574,7 @@ random_password = generatePassword()
 
 # Stash it so it doesn't change on subsequent deployments
 password_stash = pulumi.Stash("passwordStash",
-    input=pulumi.Output.secret(random_password.result))
+    input=pulumi.Output.secret(random_password))
 
 # Use the stashed password for database configuration
 pulumi.export("dbPassword", password_stash.output)
@@ -591,14 +591,11 @@ import (
 func main() {
     pulumi.Run(func(ctx *pulumi.Context) error {
         // Generate a random password once
-        randomPassword, err := generatePassword()
-        if err != nil {
-            return err
-        }
+        randomPassword := generatePassword()
 
         // Stash it so it doesn't change on subsequent deployments
         passwordStash, err := pulumi.NewStash(ctx, "passwordStash", &pulumi.StashArgs{
-            Input: pulumi.ToSecret(randomPassword.Result),
+            Input: pulumi.ToSecret(randomPassword),
         })
         if err != nil {
             return err
@@ -625,7 +622,7 @@ return await Deployment.RunAsync(() =>
     // Stash it so it doesn't change on subsequent deployments
     var passwordStash = new Stash("passwordStash", new StashArgs
     {
-        Input = Output.CreateSecret(randomPassword.Result),
+        Input = Output.CreateSecret(randomPassword),
     });
 
     // Use the stashed password for database configuration
