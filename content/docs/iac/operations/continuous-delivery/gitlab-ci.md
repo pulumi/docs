@@ -47,13 +47,13 @@ Whichever you choose, [Pulumi ESC](/docs/esc/) (Environments, Secrets, and Confi
 
 ### Authenticate with a stored access token
 
-Your pipeline authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
+Your pipeline authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/concepts/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity isn't tied to an individual.
 
 Add the token as a [CI/CD variable](https://docs.gitlab.com/ci/variables/) named `PULUMI_ACCESS_TOKEN` under your project's **Settings > CI/CD > Variables**. Mark it **Masked** so it doesn't appear in job logs. The Pulumi CLI reads the variable from the environment automatically — no explicit `pulumi login` is required.
 
 ### Authenticate without a stored token using OIDC
 
-You can remove the static token entirely. GitLab CI/CD can issue a short-lived [OpenID Connect (OIDC)](https://docs.gitlab.com/ci/secrets/id_token_authentication/) `id_token` for a job. Register GitLab as a trusted [OIDC issuer](/docs/administration/access-identity/oidc-issuers/gitlab/) in Pulumi Cloud, and the job exchanges that `id_token` for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a CI/CD variable.
+You can remove the static token entirely. GitLab CI/CD can issue a short-lived [OpenID Connect (OIDC)](https://docs.gitlab.com/ci/secrets/id_token_authentication/) `id_token` for a job. Register GitLab as a trusted [OIDC issuer](/docs/administration/guides/oidc-issuers/gitlab/) in Pulumi Cloud, and the job exchanges that `id_token` for a short-lived Pulumi access token at runtime — no long-lived credential is stored as a CI/CD variable.
 
 The trust flows inbound: GitLab issues the `id_token`, and `pulumi login --oidc-token` exchanges it with Pulumi Cloud for an access token. A job requests the token with the `id_tokens` keyword and logs in before running Pulumi. Apply this by adding the `id_tokens` block and the `pulumi login` step to the `.pulumi` hidden job in the [workflow below](#the-trunk-based-development-workflow):
 
@@ -72,7 +72,7 @@ variables:
     - npm ci # replace with your language's dependency-install command
 ```
 
-With OIDC, the pipeline needs no `PULUMI_ACCESS_TOKEN` CI/CD variable. For the full setup — registering the issuer and writing the authorization policy that controls which projects and branches may exchange a token — see [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) and the central [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) reference.
+With OIDC, the pipeline needs no `PULUMI_ACCESS_TOKEN` CI/CD variable. For the full setup — registering the issuer and writing the authorization policy that controls which projects and branches may exchange a token — see [Configuring OpenID Connect for GitLab](/docs/administration/guides/oidc-issuers/gitlab/) and the central [OIDC issuers](/docs/administration/guides/oidc-issuers/) reference.
 
 ## The trunk-based development workflow
 
@@ -433,8 +433,8 @@ You can manage GitLab itself — projects, groups, branch protection rules, and 
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi GitLab integration](/docs/integrations/version-control/gitlab/) — merge request comments, commit statuses, and review stacks from Pulumi Cloud.
-- [Configuring OpenID Connect for GitLab](/docs/administration/access-identity/oidc-issuers/gitlab/) — register GitLab as a trusted OIDC issuer.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [Configuring OpenID Connect for GitLab](/docs/administration/guides/oidc-issuers/gitlab/) — register GitLab as a trusted OIDC issuer.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each merge request.
 - [CI/CD troubleshooting](/docs/iac/operations/continuous-delivery/troubleshooting/) — diagnose common failures when running Pulumi in a pipeline.

@@ -9,7 +9,7 @@ link = "/docs/iac/concepts/resources/options/aliases/"
 [[entries]]
 term = "Audit Log"
 description = "An immutable record of user and service activity in a [Pulumi Cloud](#pulumi-cloud) [organization](#organization). Audit logs are available to organization admins and can be exported via the CLI or REST API."
-link = "/docs/administration/security-compliance/audit-logs/"
+link = "/docs/administration/concepts/audit-logs/"
 
 [[entries]]
 term = "Automation API"
@@ -109,12 +109,12 @@ link = "/docs/idp/concepts/no-code-stacks/"
 [[entries]]
 term = "OIDC"
 description = "OpenID Connect. [Pulumi Cloud](#pulumi-cloud) uses OIDC trust relationships to let workloads in CI systems and clouds (GitHub Actions, GitLab CI, AWS, Azure, Google Cloud, and others) authenticate without long-lived credentials. Pulumi can also act as an OIDC issuer for downstream cloud accounts."
-link = "/docs/administration/access-identity/oidc-issuers/"
+link = "/docs/administration/guides/oidc-issuers/"
 
 [[entries]]
 term = "Organization"
 description = "The primary grouping unit in [Pulumi Cloud](#pulumi-cloud). An organization owns stacks, environments, teams, policy packs, deployment settings, and audit logs, and is where access control and billing are scoped."
-link = "/docs/administration/organizations-teams/organizations/"
+link = "/docs/administration/concepts/organizations/"
 
 [[entries]]
 term = "Organization Template"
@@ -204,7 +204,7 @@ link = "/docs/iac/concepts/packages/"
 [[entries]]
 term = "RBAC"
 description = "Role-based access control. [Pulumi Cloud](#pulumi-cloud) RBAC lets [organization](#organization) admins assign users and teams to roles whose permissions are defined by reusable permission sets, then scope those roles to specific projects, stacks, environments, or other [resources](#resources)."
-link = "/docs/administration/access-identity/rbac/"
+link = "/docs/administration/concepts/rbac/"
 
 [[entries]]
 term = "Refresh"
@@ -294,12 +294,12 @@ link = "/docs/iac/concepts/state-and-backends/"
 [[entries]]
 term = "Team"
 description = "A named group of users inside a [Pulumi Cloud](#pulumi-cloud) [organization](#organization). Teams are the unit you assign roles and permissions to, and they can also be granted access to specific stacks, environments, and other [resources](#resources)."
-link = "/docs/administration/access-identity/rbac/teams/"
+link = "/docs/administration/concepts/rbac/teams/"
 
 [[entries]]
 term = "Token"
 description = "A credential used to authenticate to [Pulumi Cloud](#pulumi-cloud) non-interactively. Personal access tokens belong to a user; [organization](#organization) and [team](#team) access tokens belong to the organization and can be scoped to specific permissions."
-link = "/docs/administration/access-identity/access-tokens/"
+link = "/docs/administration/concepts/access-tokens/"
 
 [[entries]]
 term = "Update"

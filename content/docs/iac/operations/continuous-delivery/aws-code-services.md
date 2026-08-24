@@ -47,7 +47,7 @@ Before you begin, make sure you have:
 
 ## Authenticate with Pulumi Cloud
 
-CodeBuild authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/access-identity/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/access-identity/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
+CodeBuild authenticates to Pulumi Cloud with a single [Pulumi access token](/docs/administration/concepts/access-tokens/), supplied through the `PULUMI_ACCESS_TOKEN` environment variable. Prefer an [organization or team token](/docs/administration/concepts/access-tokens/#creating-an-organization-access-token) over a personal token so the pipeline's identity is not tied to an individual.
 
 Because the token is a sensitive credential, store it in [AWS Systems Manager Parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) (as a `SecureString`) or [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html), and reference it from the CodeBuild project rather than hardcoding it. CodeBuild resolves the value at build time and never persists it in the build definition.
 
@@ -161,7 +161,7 @@ If you operate many pipelines that are similar or identical, package the pattern
 
 - [Continuous delivery](/docs/iac/operations/continuous-delivery/) — overview of running Pulumi in CI/CD.
 - [Pulumi ESC](/docs/esc/) — deliver credentials, secrets, and configuration to pipelines and developers consistently.
-- [OIDC issuers](/docs/administration/access-identity/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
+- [OIDC issuers](/docs/administration/guides/oidc-issuers/) — exchange a CI/CD system's OIDC token for a short-lived Pulumi access token.
 - [AWS provider](/registry/packages/aws/) — manage AWS resources, including the pipeline itself, as code.
 - [Component resources](/docs/iac/concepts/components/) — package a reusable pipeline pattern as a single resource.
 - [Review Stacks](/docs/deployments/concepts/review-stacks/) — ephemeral environments created automatically for each pull request.

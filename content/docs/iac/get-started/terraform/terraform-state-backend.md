@@ -23,7 +23,7 @@ If you are managing Terraform state in S3, Azure Blob Storage, or another DIY ba
 - **Encrypted state** — state is encrypted in transit and at rest, a common concern with S3 backends
 - **Update history and versioning** — every state change is tracked as a versioned checkpoint, visible in the [Pulumi Cloud](https://app.pulumi.com/signin) stack Activity tab
 - **Automatic state locking** — prevents concurrent operations from corrupting state
-- **Role-based access control** — control who can read or modify each stack with [teams and RBAC](/docs/administration/access-identity/rbac/)
+- **Role-based access control** — control who can read or modify each stack with [teams and RBAC](/docs/administration/concepts/rbac/)
 - **Unified resource visibility** — view Terraform-managed resources alongside Pulumi-managed resources in [Resource Search](/docs/insights/discovery/search/)
 - **Platform integration** — root module outputs become Pulumi stack outputs, accessible via [stack references](/docs/iac/concepts/stacks/#stackreferences) from other Pulumi stacks or via the [`pulumi-stacks` ESC provider](/docs/esc/providers/iac/pulumi-stacks/) with no extra tokens or credentials required
 

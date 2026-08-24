@@ -26,7 +26,7 @@ The command is modeled after [`gh api`](https://cli.github.com/manual/gh_api): y
 
 ## Authentication
 
-`pulumi api` uses the same access token as the rest of the Pulumi CLI. Anything that authorizes `pulumi login` — a personal, organization, or team [access token](/docs/administration/access-identity/access-tokens/), `PULUMI_ACCESS_TOKEN`, or an OIDC-issued token — also authorizes API calls.
+`pulumi api` uses the same access token as the rest of the Pulumi CLI. Anything that authorizes `pulumi login` — a personal, organization, or team [access token](/docs/administration/concepts/access-tokens/), `PULUMI_ACCESS_TOKEN`, or an OIDC-issued token — also authorizes API calls.
 
 If a request requires authentication and the CLI is not authenticated, `pulumi api` exits with code `3` and an error envelope identifying the auth failure. A `401` or `403` response from the API maps to the same exit code.
 
@@ -185,5 +185,5 @@ pulumi api CreateOrgToken -F orgName=acme \
 
 * [`pulumi api` command reference](/docs/iac/cli/commands/pulumi_api/)
 * [Pulumi Cloud REST API](/docs/reference/cloud-rest-api/)
-* [Pulumi Cloud access tokens](/docs/administration/access-identity/access-tokens/)
+* [Pulumi Cloud access tokens](/docs/administration/concepts/access-tokens/)
 * [Pulumi CLI exit codes](/docs/iac/cli/exit-codes/)

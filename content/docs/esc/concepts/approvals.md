@@ -8,10 +8,6 @@ menu:
   esc:
     parent: esc-concepts
     weight: 12
-  administration:
-    name: ESC Approvals
-    parent: administration-security-compliance
-    weight: 10
 aliases:
   - /docs/esc/administration/approvals/
   - /docs/esc/operations/approvals/

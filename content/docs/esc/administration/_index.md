@@ -16,14 +16,14 @@ aliases:
 Pulumi ESC is built upon [Pulumi Cloud](/docs/administration/), our managed cloud service for individuals and teams that allows you to manage and secure infrastructure at scale.
 Learn how to configure organizations, monitor audit logs, bring your own encryption keys, manage identity and access and enable self-hosting.
 
-- [Pulumi Cloud organizations](/docs/administration/organizations-teams/organizations/): Set up and manage organizations for team collaboration and secrets and configuration management.
-- [Teams and Role-based access control (RBAC)](/docs/administration/organizations-teams/teams/): Manage permissions at the organization and environment levels.
-- [Access tokens](/docs/administration/access-identity/access-tokens/): Securely authenticate and automate ESC operations.
+- [Pulumi Cloud organizations](/docs/administration/concepts/organizations/): Set up and manage organizations for team collaboration and secrets and configuration management.
+- [Teams and Role-based access control (RBAC)](/docs/administration/concepts/rbac/teams/): Manage permissions at the organization and environment levels.
+- [Access tokens](/docs/administration/concepts/access-tokens/): Securely authenticate and automate ESC operations.
 - [Audit logs](/docs/esc/administration/audit-logs/): Access and configure audit logs to track activities and ensure compliance.
 - [Deletion protection](/docs/esc/administration/deletion-protection/): Prevent accidental deletion of critical environments.
 - [Customer Managed Keys](/docs/esc/concepts/customer-managed-keys/): Bring your own encryption keys for enhanced security and compliance.
-- [Access control](/docs/administration/access-identity/rbac/scopes/environments/): Manage environment permissions with role-based access controls at the organization and team levels.
-- [OpenID Connect (OIDC)](/docs/administration/access-identity/oidc-issuers/): Integrate with trusted third-party identity providers to authenticate users.
-- [SAML single sign-on (SSO)](/docs/administration/access-identity/saml/): Configure SAML-based authentication for centralized access management.
-- [SCIM](/docs/administration/access-identity/scim/): Simplify user provisioning with the SCIM protocol.
+- [Access control](/docs/administration/reference/rbac-scopes/environments/): Manage environment permissions with role-based access controls at the organization and team levels.
+- [OpenID Connect (OIDC)](/docs/administration/guides/oidc-issuers/): Integrate with trusted third-party identity providers to authenticate users.
+- [SAML single sign-on (SSO)](/docs/administration/guides/saml/): Configure SAML-based authentication for centralized access management.
+- [SCIM](/docs/administration/guides/scim/): Simplify user provisioning with the SCIM protocol.
 - [Self-hosting](/docs/administration/self-hosting/): Self-hosted Pulumi Cloud deployments include ESC.

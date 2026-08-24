@@ -77,12 +77,12 @@ An explicit pool assigned to a stack, account, or policy group always takes prec
 
 ### Leveraging OpenID authentication
 
-It is possible to use OpenID authentication to fetch Pulumi Pool tokens dynamically instead of configuring a static token for the workflow runners. You must first register the OpenID provider as a trusted OIDC Issuer in your Pulumi account, as documented in the [OIDC Issuers documentation](/docs/administration/access-identity/oidc-issuers/).
+It is possible to use OpenID authentication to fetch Pulumi Pool tokens dynamically instead of configuring a static token for the workflow runners. You must first register the OpenID provider as a trusted OIDC Issuer in your Pulumi account, as documented in the [OIDC Issuers documentation](/docs/administration/guides/oidc-issuers/).
 
 When running workflow runners on a Kubernetes cluster, see the cluster-specific guides:
 
-- [Configuring OpenID Connect for Amazon EKS](/docs/administration/access-identity/oidc-issuers/kubernetes-eks/)
-- [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/access-identity/oidc-issuers/kubernetes-gke/)
+- [Configuring OpenID Connect for Amazon EKS](/docs/administration/guides/oidc-issuers/kubernetes-eks/)
+- [Configuring OpenID Connect for Google Kubernetes Engine](/docs/administration/guides/oidc-issuers/kubernetes-gke/)
 
 After registering the provider, the workflow runner requires this information:
 

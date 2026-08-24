@@ -7,10 +7,6 @@ menu:
   esc:
     parent: esc-concepts
     weight: 13
-  administration:
-    name: ESC Customer Managed Keys
-    parent: administration-security-compliance
-    weight: 12
 aliases:
   - /docs/esc/administration/customer-managed-keys/
 pulumi_cloud_feature: customer-managed-keys
@@ -47,5 +43,5 @@ This approach enhances data security and aligns with organizational or regulator
 
 ## Customer Managed Keys documentation
 
-See the [Customer Managed Keys](/docs/administration/security-compliance/customer-managed-keys/) documentation for complete usage
+See the [Customer Managed Keys](/docs/administration/concepts/customer-managed-keys/) documentation for complete usage
 instructions.

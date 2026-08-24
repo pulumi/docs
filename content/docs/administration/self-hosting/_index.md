@@ -12,7 +12,7 @@ menu:
   administration:
     name: Self-Hosting
     parent: administration-home
-    weight: 40
+    weight: 50
     identifier: administration-self-hosting
 aliases:
   - /docs/guides/self-hosted/

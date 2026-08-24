@@ -219,5 +219,5 @@ See the [CONTRIBUTING.md](https://github.com/pulumi/agent-skills/blob/main/CONTR
 ## See also
 
 - [Pulumi MCP server](/docs/ai/mcp-server/) - give your agent live access to your Pulumi Cloud resources and the Registry
-- [Agent accounts](/docs/administration/organizations-teams/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
+- [Agent accounts](/docs/administration/concepts/agent-accounts/) - ephemeral Pulumi Cloud accounts provisioned automatically for agents
 - [What is agentic infrastructure?](/what-is/what-is-agentic-infrastructure/) - the broader picture of AI agents operating infrastructure

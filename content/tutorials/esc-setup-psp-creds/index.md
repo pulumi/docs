@@ -40,7 +40,7 @@ Enter your access token from https://app.pulumi.com/account/tokens
 
 ## Obtain a personal access token
 
-Next, you'll also need a Pulumi Cloud [personal access token](/docs/administration/access-identity/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial and copy it into your current shell to login into Pulumi Cloud. Be sure to keep track of this token as you will need it for the next step of the tutorial.
+Next, you'll also need a Pulumi Cloud [personal access token](/docs/administration/concepts/access-tokens/#personal-access-tokens). Create a short-lived access token for this tutorial and copy it into your current shell to login into Pulumi Cloud. Be sure to keep track of this token as you will need it for the next step of the tutorial.
 
 ## Brief Explanation
 

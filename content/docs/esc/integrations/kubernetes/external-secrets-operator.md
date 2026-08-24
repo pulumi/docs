@@ -24,7 +24,7 @@ Since version `0.9.13` External Secrets Operator supports [Pulumi ESC as a secre
 
 ## Authentication
 
-Pulumi [Access Tokens](/docs/administration/access-identity/access-tokens/) are recommended to access Pulumi ESC.
+Pulumi [Access Tokens](/docs/administration/concepts/access-tokens/) are recommended to access Pulumi ESC.
 
 Store the access token in a Kubernetes secret that the `SecretStore` (or `ClusterSecretStore`) can reference:
 

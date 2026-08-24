@@ -37,7 +37,7 @@ Stacks created through the Terraform or OpenTofu CLI [run plans and applies remo
 
 Stacks holding Terraform state are first-class entities in Pulumi Cloud, not read-only imports:
 
-* Govern them with [tag-based access control and team and user role assignments](/docs/administration/access-identity/rbac/).
+* Govern them with [tag-based access control and team and user role assignments](/docs/administration/concepts/rbac/).
 * Keep backend configuration in [Pulumi ESC](/docs/esc/), inject OIDC credentials at apply time, and expose Terraform root module outputs as stack outputs for downstream stacks and services.
 * Run [preventative policies](/docs/insights/policy/) against a Terraform plan on remotely executed stacks, blocking an apply when a resource is non-compliant, and keep scanning with audit policies afterward.
 * Get [Neo code reviews](/docs/ai/neo/code-reviews/) on Terraform and OpenTofu pull requests, informed by what Pulumi Cloud knows about the infrastructure you actually have running.

@@ -125,7 +125,7 @@ The Pulumi Bitbucket integration posts results back to Bitbucket regardless of w
 
 ## OIDC authentication
 
-Use Bitbucket Pipelines' built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as pipeline variables. See [Configuring OpenID Connect for Pulumi](/docs/administration/access-identity/oidc-issuers/) for configuration details.
+Use Bitbucket Pipelines' built-in OIDC tokens to authenticate with Pulumi Cloud without storing long-lived credentials as pipeline variables. See [Configuring OpenID Connect for Pulumi](/docs/administration/guides/oidc-issuers/) for configuration details.
 
 ## Troubleshooting
 

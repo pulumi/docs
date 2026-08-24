@@ -388,7 +388,7 @@ $ pip install pulumi-esc-sdk pyyaml
 
 ### Step 2: Update the ESC environment settings
 
-In order to use the Pulumi ESC SDK from within our Python code, we will need to create an ESC client, and call the `open_and_read_environment` method. The client will need a [Pulumi Cloud access token](/docs/administration/access-identity/access-tokens/), and some configuration values defining the organization, project, and environment name to pull our settings from.
+In order to use the Pulumi ESC SDK from within our Python code, we will need to create an ESC client, and call the `open_and_read_environment` method. The client will need a [Pulumi Cloud access token](/docs/administration/concepts/access-tokens/), and some configuration values defining the organization, project, and environment name to pull our settings from.
 
 First, edit your ESC environment to contain the following YAML code:
 
@@ -431,7 +431,7 @@ $ env | grep PULUMI_ACCESS_TOKEN
 PULUMI_ACCESS_TOKEN=#########
 ```
 
-If this returns nothing, you'll need to [create an access token](/docs/administration/access-identity/access-tokens/):
+If this returns nothing, you'll need to [create an access token](/docs/administration/concepts/access-tokens/):
 
 {{< figure src="pulumi-cloud-create-access-token.png" caption="Figure: Create an access token in Pulumi Cloud">}}
 

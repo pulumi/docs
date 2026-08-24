@@ -30,7 +30,7 @@ aliases:
 You can call any endpoint two ways:
 
 * **From the CLI** — use [`pulumi api`](/docs/iac/cli/api/), which inherits your existing CLI credentials, fills `{orgName}`/`{projectName}`/`{stackName}` from the selected stack, and returns a stable JSON error envelope and exit codes that scripts and agents can rely on. Run `pulumi api list` to browse endpoints and `pulumi api describe <path-or-operation-id>` to inspect a specific operation.
-* **Directly over HTTPS** — pair an [access token](/docs/administration/access-identity/access-tokens/) with the standard `Accept` and `Content-Type` headers and call the endpoint with `curl` or any HTTP client.
+* **Directly over HTTPS** — pair an [access token](/docs/administration/concepts/access-tokens/) with the standard `Accept` and `Content-Type` headers and call the endpoint with `curl` or any HTTP client.
 
 ## API documentation by category
 
