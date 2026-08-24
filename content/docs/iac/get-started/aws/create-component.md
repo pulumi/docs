@@ -235,11 +235,14 @@ public class AwsS3Website : Pulumi.ComponentResource
 package myproject;
 
 import com.pulumi.Pulumi;
+import com.pulumi.core.Output;
 import com.pulumi.aws.s3.Bucket;
 import com.pulumi.resources.ComponentResource;
 import com.pulumi.resources.ComponentResourceOptions;
+import com.pulumi.resources.ResourceArgs;
+import java.util.Map;
 
-public class AwsS3WebsiteArgs {
+public class AwsS3WebsiteArgs extends ResourceArgs {
     public String[] files;
     public AwsS3WebsiteArgs(String[] files) {
         this.files = files;
@@ -543,7 +546,7 @@ func NewAwsS3Website(ctx *pulumi.Context, name string, args AwsS3WebsiteArgs, op
 		return fmt.Sprintf("http://%v", websiteEndpoint), nil
 	}).(pulumi.StringOutput)
 
-	ctx.RegisterResourceOutputs(website, pulumi.Map{"url": self.Url}) // Signal component completion.
+	ctx.RegisterResourceOutputs(self, pulumi.Map{"url": self.Url}) // Signal component completion.
 	return self, nil
 }
 ```
@@ -691,7 +694,7 @@ class AwsS3Website extends ComponentResource {
             .build(), CustomResourceOptions.builder().parent(this).build());
 
         // Permit access control configuration:
-        var ownershipControls = new BucketOwnershipControls("ownershipControls", BucketOwnershipControlsArgs.builder()
+        var ownershipControls = new BucketOwnershipControls("ownership-controls", BucketOwnershipControlsArgs.builder()
             .bucket(bucket.id())
             .rule(BucketOwnershipControlsRuleArgs.builder()
                 .objectOwnership("ObjectWriter")
@@ -699,7 +702,7 @@ class AwsS3Website extends ComponentResource {
             .build(), CustomResourceOptions.builder().parent(this).build());
 
         // Enable public access to the website:
-        var publicAccessBlock = new BucketPublicAccessBlock("publicAccessBlock", BucketPublicAccessBlockArgs.builder()
+        var publicAccessBlock = new BucketPublicAccessBlock("public-access-block", BucketPublicAccessBlockArgs.builder()
             .bucket(bucket.id())
             .blockPublicAcls(false)
             .build(), CustomResourceOptions.builder().parent(this).build());

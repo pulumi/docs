@@ -233,7 +233,7 @@ availability zone, to increase your fault tolerance within a region and control 
 
 By default, the `awsx.ec2.Vpc` class will allocate a public and a private subnet for each availability zone and evenly
 partition traffic amongst each of them. In the event that you do not wish to keep this default, you can override
-the behavior using its constructor's `subnets` argument.
+the behavior using its constructor's `subnetSpecs` argument.
 
 For example, this program replicates the default behavior but with an explicit specification:
 
@@ -306,7 +306,7 @@ This example shows how to deploy an EC2 instance using a VPC and security group 
 
 {{< example-program path="awsx-vpc-sg-ec2" >}}
 
-If we run `pulumi up`, the `aws.ec2.Instance` will be provisioned using the _first_ public subnet from the `awsx.ec2.Vpc` component and the security group provisioned with the `awsx.ec2.SecurityGroup` component:
+If we run `pulumi up`, the `aws.ec2.Instance` will be provisioned using the _first_ public subnet from the `awsx.ec2.Vpc` component and the security group provisioned with the `aws.ec2.SecurityGroup` resource:
 
 ```bash
 $ pulumi up
