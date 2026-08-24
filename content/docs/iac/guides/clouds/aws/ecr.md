@@ -91,7 +91,7 @@ $ docker tag e9ae3c220b23 $REPO_URL:v2.0
 ```
 
 After building and tagging, we then need to authenticate with the ECR registry. Each authentication token lasts 12 hours
-and can be used with any ECR registry your IAM principal has access to. The AWS CLI provides an easy way to do this:
+and can be used with any ECR registry your IAM principal has access to. The AWS CLI can do this for you:
 
 ```bash
 $ aws ecr get-login-password | docker login --username AWS --password-stdin $(echo $REPO_URL | cut -d/ -f1)
