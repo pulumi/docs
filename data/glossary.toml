@@ -178,7 +178,7 @@ link = "/docs/esc/"
 
 [[entries]]
 term = "Pulumi Discovery"
-description = "The discovery half of [Pulumi Cloud](#pulumi-cloud)'s Discovery & governance capabilities. It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable resource graph, and lets [Pulumi Policies](#pulumi-policies) evaluate them."
+description = "The discovery half of [Pulumi Cloud](#pulumi-cloud)'s Discovery & governance capabilities. It discovers [resources](#resources) across all your cloud accounts (including those Pulumi did not create), provides a searchable resource graph, and makes them available to [Pulumi Policies](#pulumi-policies) for evaluation."
 link = "/docs/insights/"
 
 [[entries]]
