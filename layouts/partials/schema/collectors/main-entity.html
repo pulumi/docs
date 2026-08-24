@@ -19,10 +19,6 @@
       {{ if $howToEntity }}
         {{ $entity = $howToEntity }}
       {{ else }}
-        {{/* HowTo page with no extractable steps (numbered list or, for
-             layout=template pages, H2 sections) - fall back to article so
-             the page still gets a valid main entity instead of none at
-             all. */}}
         {{ $entity = partial "schema/collectors/article-entity.html" . }}
       {{ end }}
     {{ else if eq $explicitSchema "product" }}

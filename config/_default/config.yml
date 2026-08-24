@@ -97,14 +97,6 @@ outputs:
     - rows
     - RSS
 
-# The `industry` taxonomy (case-study verticals) is the one non-blog taxonomy:
-# no blog post carries `industry`, so the default `term` outputs above would
-# give every industry an empty "Pulumi Blog: <Industry>" RSS feed (term.rss.xml
-# filters to Section=blog → no items) that head.html would then advertise for
-# autodiscovery, plus an unused `rows` fragment. Hugo also defaults the taxonomy
-# LIST page to HTML+RSS. Scope BOTH kinds back to HTML only so nothing leaks
-# into our feeds. NOTE: cascade `path` matches the page's LOGICAL path (taxonomy
-# plural `/industry/...`), NOT the permalink URL (/case-studies/industry/...).
 cascade:
   - _target:
       kind: term

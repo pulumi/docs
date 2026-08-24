@@ -1111,8 +1111,6 @@ function pulumiCloudValueError(value, label) {
  *
  * The key names the feature because the value does: `pulumi_cloud: rbac` reads
  * as an assertion about Pulumi Cloud, when what it says is which feature the
- * page documents. It is not `cloud_feature` either — on a site that documents
- * AWS, Azure, and GCP, "cloud feature" reads as a PROVIDER feature.
  *
  * @param {*} feature The front matter `pulumi_cloud_feature` value.
  * @param {*} legacy The front matter `pulumi_cloud` value (renamed; rejected).

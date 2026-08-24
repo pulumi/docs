@@ -1,22 +1,6 @@
-# /learn — the Learn catalog (tutorials, official templates, community
-# examples, glossary) moved out of this repo and into pulumi/marketing-web
-# (apps/www), which serves www.pulumi.com/learn from its own origin. See
-# https://github.com/pulumi/marketing-web/pull/82.
-#
-# Hugo's /tutorials/ and /templates/ trees were deleted in the same change, so
-# these are the only thing left standing at those URLs. Slugs are 1:1 for every
-# tutorial and template page; only the section prefix changes.
-#
-# The old /learn/... alias URLs those pages carried (/learn/pulumi-fundamentals/
-# and friends) are NOT here: /learn* is proxied to the Learn origin, so this
-# bucket never sees them. They redirect in marketing-web, from the `aliases`
-# frontmatter the port recorded on each page.
-
-# The section landing pages.
 tutorials/index.html|/learn/tutorials/
 templates/index.html|/learn/official-templates/
 
-# Tutorials — /tutorials/<path>/ → /learn/tutorials/<path>/.
 tutorials/abstraction-encapsulation/index.html|/learn/tutorials/abstraction-encapsulation/
 tutorials/abstraction-encapsulation/abstraction/index.html|/learn/tutorials/abstraction-encapsulation/abstraction/
 tutorials/abstraction-encapsulation/component-resources/index.html|/learn/tutorials/abstraction-encapsulation/component-resources/
@@ -66,7 +50,6 @@ tutorials/stack-outputs-refs-aws/index.html|/learn/tutorials/stack-outputs-refs-
 tutorials/stack-outputs-refs-azure/index.html|/learn/tutorials/stack-outputs-refs-azure/
 tutorials/stack-outputs-refs-gcp/index.html|/learn/tutorials/stack-outputs-refs-gcp/
 
-# Glossary — it leaves the tutorials section for a Learn section of its own.
 tutorials/glossary/index.html|/learn/glossary/
 tutorials/glossary/aws-ecs/index.html|/learn/glossary/aws-ecs/
 tutorials/glossary/aws-eks/index.html|/learn/glossary/aws-eks/
@@ -82,9 +65,6 @@ tutorials/glossary/managed-kubernetes/index.html|/learn/glossary/managed-kuberne
 tutorials/glossary/msft-aks/index.html|/learn/glossary/msft-aks/
 tutorials/glossary/nosql/index.html|/learn/glossary/nosql/
 
-# Tutorial collections (the `collections` taxonomy term pages) become facet
-# landing pages on Learn's browse route. `gcp` is `google-cloud` there — Learn's
-# tag registry uses the pulumi/docs blog vocabulary, which spells it out.
 tutorials/aws/index.html|/learn/browse/cloud/aws/
 tutorials/azure/index.html|/learn/browse/cloud/azure/
 tutorials/gcp/index.html|/learn/browse/cloud/google-cloud/
@@ -92,7 +72,6 @@ tutorials/kubernetes/index.html|/learn/browse/cloud/kubernetes/
 tutorials/learn-pulumi/index.html|/learn/browse/collection/learn-pulumi/
 tutorials/pulumi-esc/index.html|/learn/browse/collection/pulumi-esc/
 
-# Official templates — /templates/<path>/ → /learn/official-templates/<path>/.
 templates/container-service/index.html|/learn/official-templates/container-service/
 templates/container-service/aws/index.html|/learn/official-templates/container-service/aws/
 templates/container-service/azure/index.html|/learn/official-templates/container-service/azure/
@@ -117,8 +96,6 @@ templates/virtual-machine/aws/index.html|/learn/official-templates/virtual-machi
 templates/virtual-machine/azure/index.html|/learn/official-templates/virtual-machine/azure/
 templates/virtual-machine/gcp/index.html|/learn/official-templates/virtual-machine/gcp/
 
-# Aliases the deleted pages carried in frontmatter. Hugo generated these as
-# meta-refresh pages; with the source pages gone they need objects of their own.
 tutorials/define-and-provision-resources/index.html|/learn/tutorials/creating-resources-aws/
 tutorials/stack-outputs-and-references/index.html|/learn/tutorials/stack-outputs-refs-aws/
 tutorials/importing-infrastructure/index.html|/learn/tutorials/importing-aws-infrastructure/

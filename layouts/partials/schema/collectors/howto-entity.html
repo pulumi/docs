@@ -1,5 +1,3 @@
-{{/* Returns HowTo entity for how-to content in @graph */}}
-
 {{/* Get content for analysis */}}
 {{ $content := .Content | plainify }}
 {{ $wordCount := $content | countwords }}
@@ -195,14 +193,6 @@
 {{ end }}
 {{ $schema = merge $schema (dict "image" $image) }}
 
-{{/* Note: Dates omitted - how-to pages are evergreen content without meaningful publication dates */}}
-
-{{/* Add keywords. As in schema/collectors/article-entity.html, a page with
-     no front-matter tags previously got the same literal "infrastructure as
-     code, cloud, devops, tutorial, pulumi" string regardless of what it
-     actually walks through. Fall back to the page's own headline plus its
-     section ancestors so the value names this specific page instead of
-     repeating one generic phrase everywhere. */}}
 {{ $keywordTerms := slice }}
 {{ with .Params.tags }}
   {{ $keywordTerms = . }}
@@ -220,7 +210,6 @@
   {{ $schema = merge $schema (dict "keywords" (delimit (uniq $keywordTerms) ", ")) }}
 {{ end }}
 
-{{/* Add supply/yield (what the walkthrough produces) */}}
 {{ $titleLower := lower .Title }}
 {{ if in $titleLower "creating resources" }}
   {{ $schema = merge $schema (dict "yield" "Cloud infrastructure resources deployed and managed through code") }}
