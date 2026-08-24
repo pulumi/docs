@@ -48,4 +48,4 @@ vale --no-exit "${TARGETS[@]}"
 # the source line. Advisory like everything else here; the changed-files
 # default above means the Title Case backlog surfaces one touched page at a
 # time rather than all at once.
-python3 "$(dirname "$0")/lint/frontmatter-title-case.py" "${TARGETS[@]}"
+python3 "$(dirname "$0")/lint/frontmatter-title-case.py" "${TARGETS[@]}" || true
