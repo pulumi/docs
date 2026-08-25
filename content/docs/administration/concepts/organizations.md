@@ -200,7 +200,7 @@ Only organization admins can change the organization identity provider.
 
 Organization members must first add the new identity provider to their individual accounts before changing the organization identity provider, or members will be locked out of the organization.
 
-Switching an organization to SAML has one further prerequisite: the admin making the change can't belong to other, unrelated Pulumi organizations. Pulumi rejects the change otherwise. Either hand the change to an admin who belongs only to this organization, or leave the other organizations first.
+Switching an organization to SAML has one further prerequisite. {{< saml-conversion-prereq >}}
 
 To change an organization's identity provider:
 
