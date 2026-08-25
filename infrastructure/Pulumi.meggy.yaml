@@ -1,5 +1,0 @@
-config:
-  www.pulumi.com:intercomTicketTypeId: "4573798"
-  www.pulumi.com:intercomApiKey:
-    secure: AAABAA7KQr1JJ9TWlatqOiROnh8sF6s+AouoBkZeUfqg22GlQ9wut4oQZr2BSC5HyY/LS1npuORxPBaKW85gzRePhX6N4M7xYQ/eqgOWRy/hQk/NDZbdC0qRytc=
-  www.pulumi.com:enableSupportForm: "true"
