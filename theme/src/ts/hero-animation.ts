@@ -312,7 +312,10 @@ function init(): void {
 
     function adoptLanguage(): void {
         panelLang.appendChild(langLogos[chosenLang]);
+        const kEnd = iconT.k;
+        iconT.k = kEnd * 0.7;
         applyIconT();
+        gsap.to(iconT, { k: kEnd, duration: 0.35, ease: "back.out(1.7)", onUpdate: applyIconT });
         gsap.fromTo(panelLang, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25 });
     }
 
@@ -391,6 +394,7 @@ function init(): void {
 
         chosenLang = pickWeighted(langWeights);
         layoutLangRow();
+        gsap.killTweensOf(iconT);
         const lb = langLogos[chosenLang].getBBox();
         const lSize = Math.max(lb.width, lb.height);
         iconCenter.x = lb.x + lb.width / 2;
@@ -496,7 +500,7 @@ function init(): void {
         gsap.set(polFiles, { opacity: 0.5, attr: { fill: "#1F1B21" } });
         gsap.set(polChecks, { attr: { fill: "#F49709" }, scale: 1, transformOrigin: "50% 50%" });
 
-        gsap.set(diagram, { autoAlpha: 1 });
+        gsap.set(diagram, { autoAlpha: 1, scale: 1, svgOrigin: "372 240" });
         gsap.set(plate, { autoAlpha: 0, scale: 0.85, svgOrigin: "372 260" });
         gsap.set(plateDetail, { autoAlpha: 0 });
         gsap.set(cubes, { autoAlpha: 0 });
@@ -567,6 +571,7 @@ function init(): void {
     );
     tl.call(() => blink(promptBlink, promptCaret, true), undefined, 1.8);
 
+    tl.call(() => gsap.to(tiles[chosen], { scale: 0.965, duration: 0.12, yoyo: true, repeat: 1, ease: "power1.inOut", transformOrigin: "50% 50%" }), undefined, 1.8);
     tl.set(aStroke, { autoAlpha: 1 }, 1.95);
     tl.to(aStroke, { attr: { "stroke-dashoffset": "0" }, duration: 0.35, ease: "power1.inOut" }, 1.95);
     tl.call(() => dimUnselected(agentPaths, chosen), undefined, 2.0);
@@ -607,7 +612,18 @@ function init(): void {
         2.45,
     );
     tl.call(selectLanguage, undefined, 2.45);
-    tl.fromTo(langRing, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, immediateRender: false }, 2.55);
+    tl.fromTo(
+        langRing,
+        { autoAlpha: 0, attr: { x: () => ringBox.x + 5, y: 413, width: () => ringBox.w - 10, height: 26, rx: 13 } },
+        {
+            autoAlpha: 1,
+            attr: { x: () => ringBox.x, y: 410.5, width: () => ringBox.w, height: 31, rx: 15.5 },
+            duration: 0.3,
+            ease: "power2.out",
+            immediateRender: false,
+        },
+        2.55,
+    );
     tl.call(adoptLanguage, undefined, 2.55);
 
     tl.call(adoptProtagonist, undefined, 3.5);
@@ -651,7 +667,7 @@ function init(): void {
         tl.fromTo(ciChecks[i], { autoAlpha: 0, scale: 0.6, transformOrigin: "50% 50%" }, { autoAlpha: 1, scale: 1, duration: 0.35, ease: "back.out(1.7)" }, at + 0.05);
     });
     const mergedAt = flipsAt + 4 * 0.35 + 0.1;
-    tl.to(ciPr, { autoAlpha: 0, duration: 0.2 }, mergedAt);
+    tl.to(ciPr, { autoAlpha: 0, x: CI_PR_REST_X - 10, duration: 0.2, ease: "power2.in" }, mergedAt);
     tl.fromTo(ciMerge, { autoAlpha: 0, scale: 0.8, transformOrigin: "50% 50%" }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(1.7)" }, mergedAt);
 
     const testsBadgeAt = mergedAt + 0.35;
@@ -746,6 +762,7 @@ function init(): void {
 
     const outAt = cubesAt + 1.1 + 2.0;
     tl.to([diagram, aOuter, bOuter, ciRow, ciMerge, badgeTests, badgePolicy, policyRow, glyph], { autoAlpha: 0, duration: 0.5, ease: "power2.in" }, outAt);
+    tl.to(diagram, { scale: 0.96, svgOrigin: "372 240", duration: 0.5, ease: "power2.in" }, outAt);
     tl.to(root, { autoAlpha: 1, duration: 0.3 }, outAt + 0.5);
 
     root.classList.remove("hal-pending");
