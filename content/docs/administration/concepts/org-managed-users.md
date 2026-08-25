@@ -52,7 +52,7 @@ Migrating an ordinary account to an organization-managed one is permanent and de
 Migrating an account deletes your personal organization, removes you from every organization other than the one taking it over, and deletes every linked identity except the managing organization's SAML identity. Any authentication method that depended on a deleted identity, such as GitHub or Google, stops working. Single sign-on through the managing organization becomes the account's only authentication method.
 {{% /notes %}}
 
-Pulumi rejects the migration unless all of the following are true:
+Pulumi rejects the migration unless all the following are true:
 
 1. Your personal organization has no stacks. [Transfer](/docs/administration/concepts/organizations/#transferring-stacks) or delete them first.
 1. Your personal organization has no environments. Environments can't be transferred, so delete them first.

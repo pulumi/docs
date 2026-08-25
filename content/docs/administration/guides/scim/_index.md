@@ -78,9 +78,9 @@ These apply to every identity provider, regardless of which guide you follow.
 
 An account SCIM creates belongs to your organization, not to the person using it. Such an account can't join unrelated Pulumi organizations, connect additional identity providers, or create organizations of its own. See [Organization-managed users](/docs/administration/concepts/org-managed-users/) for the full set of restrictions.
 
-This mostly doesn't apply retroactively. Someone who already had a Pulumi account and joined your organization by invitation keeps an ordinary account when SCIM starts managing their membership.
+Existing accounts convert in one case only. Someone who already had a Pulumi account and joined your organization by invitation keeps an ordinary account when SCIM starts managing their membership. But the next time your identity provider activates or deactivates such a user, Pulumi checks whether the account can be converted cleanly, and converts it if so. Clean means the user's personal organization holds no stacks and no environments, and they belong to no Pulumi organization other than yours. An account that fails any of those checks stays ordinary, and the activation change applies as normal.
 
-One case converts them. The next time your identity provider activates or deactivates such a user, Pulumi checks whether the account can be converted cleanly, and converts it if so. Clean means the user's personal organization holds no stacks and no environments, and they belong to no Pulumi organization other than yours. An account that fails any of those checks stays ordinary, and the activation change applies as normal. Unlike the [migration a user performs themselves](/docs/administration/concepts/org-managed-users/#migrating-an-existing-account), this conversion isn't opt-in.
+The conversion is the same operation the user would perform themselves, minus the confirmation: it deletes their personal organization and every login method except your organization's single sign-on. Someone who signed in with GitHub or Google signs in through your identity provider from then on. See [Migrating an existing account](/docs/administration/concepts/org-managed-users/#migrating-an-existing-account).
 
 ### Deprovisioning never deletes a user
 
