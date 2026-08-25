@@ -54,7 +54,7 @@ export type ValidationResult =
 // honeypot field: the handler checks it before validation runs, but it is
 // tolerated here so a spam submission that slips through still validates
 // rather than erroring on an unknown key.
-const KNOWN_KEYS = new Set([
+const KNOWN_KEYS = [
     "email",
     "name",
     "organization",
@@ -62,7 +62,7 @@ const KNOWN_KEYS = new Set([
     "subject",
     "description",
     "website",
-]);
+];
 
 // Strips a pasted console URL ("https://app.pulumi.com/my-org/...") or
 // stray slashes down to the bare organization name.
@@ -108,7 +108,7 @@ export function validateSubmission(input: unknown): ValidationResult {
     }
 
     for (const key of Object.keys(input)) {
-        if (!KNOWN_KEYS.has(key)) {
+        if (!KNOWN_KEYS.includes(key)) {
             return { ok: false, fields: { _form: `Unexpected field "${key}".` } };
         }
     }
