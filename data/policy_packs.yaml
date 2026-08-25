@@ -250,14 +250,22 @@ sections:
         metaDesc: Complete list of Pulumi Best Practices compliance policies for Google Cloud.
         weight: 3
 
-# Every pack that policy-packs-internal builds AND publishes to the `pulumi` org now
-# has a page above, with two deliberate exceptions:
-#
-#   aws-organizations-tag-policies  Its page (aws-organizations-tag-policies/aws.md)
-#                                   is hand-written prose pointing at the integration
-#                                   guide, not a policy listing. Stays hand-maintained.
-#   cis-kubernetes-google-cloud     A stale earlier publish, superseded by
-#                                   cis-kubernetes-gcp. See the cis-kubernetes section.
+# Product packs that deliberately get no generated page. The registry check treats any
+# other pack returned with source: "pulumi" as a page we are missing, so a new product
+# either gets an entry above or a reason here -- it cannot be ignored silently.
+undocumented:
+  - pack: aws-organizations-tag-policies
+    why: >-
+      Its page (aws-organizations-tag-policies/aws.md) is hand-written prose pointing at
+      the integration guide, not a policy listing. Stays hand-maintained.
+  - pack: cis-kubernetes-google-cloud
+    why: >-
+      A stale earlier publish, superseded by cis-kubernetes-gcp. See the cis-kubernetes
+      section above.
+
+# Packs the org holds that are NOT products, and so never appear in the registry listing
+# with source: "pulumi". Recorded only so an audit that diffs the repo against the org
+# does not re-add them; the check already keeps them out.
 #   hitrust-awsnative               Built here and resolvable through
 #                                   /api/orgs/pulumi/policypacks, but never a product: it
 #                                   was published privately to the org. Removed on

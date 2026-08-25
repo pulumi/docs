@@ -217,6 +217,24 @@ async function main() {
         );
     }
 
+    // ...and the other way round: a pack we publish as a product but do not document is
+    // the same failure this PR was opened to fix, just pointing the other way. Anything
+    // the registry calls a product needs either an entry above or a line in
+    // `undocumented:` saying why not.
+    const accountedFor = new Set([
+        ...packs,
+        ...(allowlist.undocumented || []).map((e) => e.pack),
+    ]);
+    const undocumentedProducts = [...products].filter((p) => !accountedFor.has(p));
+    if (undocumentedProducts.length) {
+        throw new Error(
+            `these packs are published as Pulumi products but have no reference page:\n` +
+                `       ${undocumentedProducts.join(", ")}\n` +
+                `       Add an entry to data/policy_packs.yaml, or list the pack under\n` +
+                `       "undocumented:" there with the reason it stays unlisted.`,
+        );
+    }
+
     console.log(`Fetching ${packs.length} policy packs from ${API} (org: ${org})...`);
 
     const list = await fetchJSON(`/api/orgs/${org}/policypacks`);
