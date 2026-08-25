@@ -43,7 +43,7 @@ const GLYPH_AT_PLATE = -70; // pushed up by the isometric plate
 const AGENT_WEIGHTS = [66, 15, 8, 3.5, 3.5, 4];
 
 const CUBE_H = 84.752; // vertical edge length of the subnet cubes (extrusion height)
-const TERM_SCROLL_END = -466; // lands the stream on Outputs / Duration
+const TERM_SCROLL_END = -592; // lands the stream on Outputs / Policy Packs / Duration
 const TERM_FOLD_Y = 410; // stream lines with baselines beyond this start below the fold
 
 function q<T extends Element>(root: Element, sel: string): T {
@@ -296,6 +296,9 @@ function init(): void {
     ambient.push(gsap.to(glyphFloat, { y: -2, duration: 1.5, ease: "sine.inOut", yoyo: true, repeat: -1 }));
     ambient.push(gsap.to(plateFill, { opacity: 0.55, duration: 2, ease: "sine.inOut", yoyo: true, repeat: -1 }));
 
+    // Uneven phase offsets keep the pending spinners from reading as one
+    // synchronized ring.
+    const SPIN_PHASE = [0, 137, 244, 71];
     const spin = { a: 0 };
     ambient.push(
         gsap.to(spin, {
@@ -305,7 +308,7 @@ function init(): void {
             repeat: -1,
             onUpdate: () => {
                 for (let i = 0; i < ciArcs.length; i++) {
-                    ciArcs[i].setAttribute("transform", "rotate(" + spin.a + ")");
+                    ciArcs[i].setAttribute("transform", "rotate(" + (spin.a + SPIN_PHASE[i % SPIN_PHASE.length]) + ")");
                 }
             },
         }),
