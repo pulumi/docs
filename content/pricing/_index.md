@@ -46,7 +46,7 @@ faq:
             Pulumi Credits are the single currency for Pulumi Cloud. One Pulumi Credit costs $1 USD, and you can pre-purchase Pulumi Credits as needed to cover expected usage either through a monthly up-front fee or annual agreement. All usage of Pulumi services will draw from the pool of Pulumi Credits at the rates above or as listed on your order form. Once the pool of Pulumi Credits is exhausted, you'll be billed in arrears for additional use at the rates above or as listed on your order form.
         - question: How are IaC resources billed?
           answer: |
-            IaC resources are billed hourly at the rate of $0.00025 for Essentials ($0.1825 per resource per month) and starting at $0.0005 for Pro ($0.365 per resource per month). This is the cost of managing an IaC resource for a full hour.
+            IaC resources are billed hourly at the rate of $0.00025 for Essentials ($0.1825 per resource per month), starting at $0.0005 for Pro ($0.365 per resource per month), and $0.00075 for Enterprise+ ($0.5475 per resource per month, list rate). This is the cost of managing an IaC resource for a full hour.
 
             The Pro and Enterprise+ editions receive volume discounts, so that the more resources you consume, the lower the incremental rate. This is true of self-serve pay-as-you-go plans, although prepaid plans offer more considerable discounts.
 
@@ -121,7 +121,7 @@ faq:
           answer: |
             Yes! There are three ways to use Pulumi for free.
 
-            First, Pulumi Cloud is free to use, now and forever, for individuals. You get all of the convenience of automatic state management, unlimited updates, and many other great features without needing to pay anything at all for it.
+            First, the Pulumi Cloud Free edition costs nothing, for one user and up to 2,000 managed resources. You get the convenience of automatic state management, unlimited projects and stacks, and unlimited updates and history without paying anything at all for it.
 
             Second, Pulumi is an [open-source project](https://github.com/pulumi/pulumi). You can [run Pulumi entirely offline](/docs/iac/concepts/state-and-backends#using-a-diy-backend) without the online service's features, and manage state yourself, instead of using the online service. There are no restrictions — it's all there in the open for you to use freely as you'd like.
 
