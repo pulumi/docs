@@ -33,23 +33,23 @@ social:
         We wrote up the pipeline.
 ---
 
-Migrating a live Terraform workspace to Pulumi sounds simple on paper: rewrite the program, import the resources, done. In practice, the import step is where migrations stall. Import IDs have to be discovered one resource at a time, state files are full of plaintext secrets, some resources can't be imported at all, and the first post-import preview greets you with a wall of diffs. We built [`pulumi-tool-import`](https://github.com/pulumi-proserv/pulumi-tool-import) — and a set of agent skills that drive it — to close those gaps and turn migration into a repeatable, validated pipeline.
+Migrating a live Terraform workspace to Pulumi is very doable — teams do it every day — but the import step has always carried more manual work than it should: discovering import IDs one resource at a time, extracting values from state files full of plaintext secrets, chasing down post-import diffs. None of that is deep or difficult; it's mechanical, which means it can be automated. We built [`pulumi-tool-import`](https://github.com/pulumi-proserv/pulumi-tool-import) — and a set of agent skills that drive it — to do exactly that, turning migration into a repeatable, validated pipeline. One recent customer has used it to migrate more than 4,000 resources entirely on their own.
 
 <!--more-->
 
-## Why migration is harder than it looks
+## The gaps in the import step
 
-Pulumi already ships a capable [`pulumi import`](/docs/iac/guides/migration/import/) command, and for a handful of resources it's all you need. But a real Terraform workspace — hundreds of resources, nested modules, secrets in state, years of drift — exposes gaps that no single command fills:
+Pulumi already ships a capable [`pulumi import`](/docs/iac/guides/migration/import/) command, and for a handful of resources it's all you need. A real Terraform workspace — hundreds of resources, nested modules, secrets in state, years of drift — brings a few well-known gaps along with it that no single command fills:
 
 - **Import IDs don't write themselves.** Every resource needs the right ID in the right format, and composite IDs (a Lambda permission is `FunctionName/StatementId`, Route53 records and security group rules have their own schemes) must be composed from resource attributes. Doing this by hand for a 300-resource stack is slow and error-prone.
 - **Terraform state contains plaintext secrets.** Anything — or anyone, including an AI agent — that reads the state file to extract values sees database passwords and API keys in the clear.
-- **One bad ID fails the whole import.** `pulumi import` commits already-succeeded steps but aborts on the first failure, so a large import becomes a frustrating loop of run, fail, fix one ID, run again.
+- **One bad ID fails the whole import.** `pulumi import` commits already-succeeded steps but aborts on the first failure, so a large import becomes a loop of run, fail, fix one ID, run again.
 - **The cloud API doesn't return everything.** Write-only fields, IaC-only defaults, and asset contents never come back from a provider's Read call, so freshly imported state produces diffs the program didn't cause.
 - **Some resources can't be imported at all.** Association and toggle resources like `aws_iam_policy_attachment` or `aws_vpn_gateway_route_propagation` declare no importer, and `pulumi import` fails on them with a misleading `resource '<id>' does not exist`.
 
 Bridged providers like `aws` (AWS Classic) add one more layer: the Pulumi resource model is translated from the Terraform provider's schema, so property names, nested shapes, and `MaxItems=1` flattening all differ from what's sitting in the Terraform state you're migrating from.
 
-`pulumi-tool-import` addresses each of these directly. It's a Pulumi tool plugin whose commands form a pipeline, and it ships with agent skills that orchestrate the pipeline while an agent (or a human) hand-authors the Pulumi program the migration lands on.
+None of these is a reason to put off migrating. They're mechanical problems with mechanical answers — but without tooling, they're where the hours go. `pulumi-tool-import` addresses each of them directly. It's a Pulumi tool plugin whose commands form a pipeline, and it ships with agent skills that orchestrate the pipeline while an agent (or a human) hand-authors the Pulumi program the migration lands on.
 
 ## The pipeline
 
