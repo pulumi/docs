@@ -165,7 +165,14 @@ async function main() {
     }
 }
 
-main().catch((err) => {
-    console.error(`error: ${err.message}`);
-    process.exit(1);
-});
+if (require.main === module) {
+    main().catch((err) => {
+        console.error(`error: ${err.message}`);
+        process.exit(1);
+    });
+}
+
+// Exported so scripts/backfill-openapi-lastmod.js can reuse the exact same
+// canonicalization and hashing logic instead of reimplementing it (and
+// risking a subtly different hash for the same content).
+module.exports = { canonicalize, sha256, deriveTagOperations, updateSection, HTTP_METHODS, todayUTC };
