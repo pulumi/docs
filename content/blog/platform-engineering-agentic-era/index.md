@@ -86,6 +86,10 @@ Policy as code matters more for agents than for human developers, because a huma
 
 A pre-deploy gate is the one that matters most for an unattended agent, because it's the only stage that can stop a bad change before it becomes one, rather than reporting it after the fact. Deterministic policy, evaluated the same way every time regardless of who or what proposed the change, is what lets a platform team say yes to agent self-service without reviewing every request by hand.
 
+## Do guardrails need to account for the agent being manipulated, not just misconfigured?
+
+Identity and policy answer what an agent is authorized to touch. A separate question is whether the agent can be talked into asking for something it was never supposed to request in the first place, a class of attack generally called prompt injection: a malicious instruction buried in a ticket, a dependency's README, or a document the agent reads mid-task can steer an otherwise well-behaved agent toward a bad request. The identity and policy gates above still contain the outcome, since a scoped credential limits the blast radius and a policy gate blocks the specific violation regardless of why the agent asked, but a platform team should treat "the agent requested this" as attacker-influenced input until it clears policy, not as proof the request is legitimate, and should isolate or sanitize untrusted content in an agent's context wherever it's practical to do so.
+
 ## Should an agent write infrastructure code, or call an API that writes it for it?
 
 Both are legitimate, and the right choice depends on what the agent is actually doing: an agent extending or modifying a stack benefits from writing real code it can test and diff, while an agent performing a bounded, repeatable action is often better served by calling a narrow, pre-built interface that already encodes the guardrails.
@@ -113,7 +117,7 @@ Nothing single-handedly replaces code review, but the combination of a preview, 
 * **Tests** — unit tests against component logic, and property tests that assert invariants ("no bucket is public," "every resource is tagged") regardless of what specific change produced them.
 * **Policy result** — a pass or fail from the same deterministic policy engine that gates human-initiated changes, with the specific rule that failed if it does.
 * **Cost estimate** — a projected cost delta, so an agent's request to "add capacity" doesn't turn into a five-figure surprise before anyone reads the invoice.
-* **A human escalation path** — for anything that fails a check, or that the platform has flagged as consequential enough to require a person regardless of what checks pass.
+* **A human escalation path** — for anything that fails a check, or that the platform has flagged as consequential enough to require a person regardless of what checks pass. [Pulumi Neo's human-in-the-loop approvals](/docs/ai/neo/) are one concrete version of this: the agent proposes and previews, a person approves before anything applies.
 
 ## What breaks when fifty agents change the same environment at once?
 
