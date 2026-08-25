@@ -1,0 +1,36 @@
+# Canonical casing for NON-Pulumi project and vendor names. The brand guide's
+# Names & terminology section, under general terminology rules: "Match each
+# project's own casing for names like Kubernetes, GitHub, and npm."
+#
+# Separate from Nomenclature.yml, which owns the Pulumi product-names table.
+# Blocker tier: each of these is wrong in every context, and the replacement is
+# right in every context -- the canonical form already dominates the corpus in
+# every pair below (GitHub 1786 vs Github 100, TypeScript 1305 vs Typescript
+# 53), so these are slips, not house style.
+#
+# Case-sensitive on purpose: lowercase forms are legitimate in URLs, package
+# names, and paths (github.com, @pulumi/pulumi/nodejs, a typescript/ folder).
+# `\b` also keeps the tokens out of identifiers -- NPM_TOKEN doesn't match
+# \bNPM\b because the underscore is a word character.
+#
+# Deliberately absent: NPM -> npm. The brand guide says a lowercase name that
+# would land at the start of a sentence should be reworded, not just lowercased,
+# so the replacement isn't right in every context and the row would fail this
+# tier's admission test. 59 occurrences are left for a human.
+extends: substitution
+message: "Use '%s' — '%s' isn't how the project spells its own name (brand guide: Names & terminology)."
+link: "https://brand.pulumi.com/voice/names-and-terminology/"
+level: error
+ignorecase: false
+action:
+  name: replace
+swap:
+  '\bGithub\b': GitHub
+  '\bGitlab\b': GitLab
+  '\bJavascript\b': JavaScript
+  '\bTypescript\b': TypeScript
+  '\bCloudformation\b': CloudFormation
+  '\bPostgresql\b': PostgreSQL
+  '\bWordpress\b': WordPress
+  '\bVMWare\b': VMware
+  '\bNodejs\b': Node.js

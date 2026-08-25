@@ -60,6 +60,11 @@ sections:
       - rule: Pulumi.PoliciesSingular
         mirrors: >-
           The "Pulumi Policies is a singular proper noun" rule.
+      - rule: Pulumi.ThirdPartyNames
+        mirrors: >-
+          "General terminology rules" — "match each project's own casing for
+          names like Kubernetes, GitHub, and npm". Non-Pulumi names only;
+          Nomenclature owns the Pulumi product table.
       - rule: Pulumi.Overcapitalization
         mirrors: >-
           "General terminology rules" — don't overcapitalize concepts (stack,
