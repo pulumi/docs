@@ -82,6 +82,10 @@ domain users by selecting the down arrow in the **User access** panel:
 
 ## Configuring your Pulumi organization
 
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
 1. Sign in to Pulumi Cloud and navigate to your organization.
 1. Select **Settings** > **Access Management**.
 1. Select the **Other** tab.

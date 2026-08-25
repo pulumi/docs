@@ -19,6 +19,7 @@ How Pulumi Cloud models your organization and who can do what inside it. Read th
 
 - [Organizations](/docs/administration/concepts/organizations/) — the top-level container that owns your stacks, environments, and settings.
 - [Accounts](/docs/administration/concepts/accounts/) — individual user accounts, profiles, and identity providers.
+- [Organization-managed users](/docs/administration/concepts/org-managed-users/) — accounts an organization creates and controls through SAML or SCIM, and the restrictions that come with them.
 - [Agent accounts](/docs/administration/concepts/agent-accounts/) — accounts for AI agents and automation acting on your organization's behalf.
 - [Billing managers](/docs/administration/concepts/billing-managers/) — the role that delegates billing access without granting admin rights.
 - [Access tokens](/docs/administration/concepts/access-tokens/) — personal, team, and organization tokens for authenticating the CLI, CI/CD, and the REST API.

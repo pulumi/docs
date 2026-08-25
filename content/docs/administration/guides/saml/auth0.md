@@ -48,6 +48,10 @@ the same URL.
 
 ## Configuring your Pulumi organization
 
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
 To configure Pulumi with the SAML metadata:
 
 1. Sign in to Pulumi Cloud and navigate to your organization.
