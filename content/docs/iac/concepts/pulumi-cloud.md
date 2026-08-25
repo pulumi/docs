@@ -25,7 +25,7 @@ On top of state, Pulumi Cloud adds:
 - **[Pulumi Neo](/docs/ai/)**, an AI agent that helps debug deployments, write infrastructure as code, and answer questions about your environment.
 - **Ephemeral environments** such as Review Stacks and TTL Stacks.
 
-Pulumi Cloud is available as a hosted SaaS and as a [self-hosted](/docs/administration/self-hosting/) edition you can run in your own environment. The Individual tier is free. [Sign up for a Pulumi account](https://app.pulumi.com/signup) to get started.
+Pulumi Cloud is available as a hosted SaaS and as a [self-hosted](/docs/administration/self-hosting/) edition you can run in your own environment. The Free edition costs nothing. [Sign up for a Pulumi account](https://app.pulumi.com/signup) to get started.
 
 For a detailed, capability-by-capability comparison of Pulumi Cloud and open source Pulumi, including which features are available with each option and what operational concerns each one entails, see [Pulumi Cloud vs. OSS](/docs/iac/guides/basics/pulumi-cloud-vs-oss/).
 

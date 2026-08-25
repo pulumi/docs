@@ -146,7 +146,7 @@ You have options that can be combined: convert Crossplane YAML manifests with [`
 
 ### Is Pulumi free like Crossplane?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. Crossplane itself is free under Apache 2.0; managed control planes and an enterprise distribution are sold separately by Upbound.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a Free edition and paid editions that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. Crossplane itself is free under Apache 2.0; managed control planes and an enterprise distribution are sold separately by Upbound.
 
 ## Next steps
 

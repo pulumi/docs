@@ -135,7 +135,7 @@ Yes. The [AWS Cloud Control](/registry/packages/aws-native/) provider is generat
 
 ### Is Pulumi free like AWS CDK?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. AWS CDK is open source; the AWS CloudFormation deployment engine it depends on has no usage cost beyond the resources it manages, but is itself a closed-source AWS service.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) has a Free edition and paid editions that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. AWS CDK is open source; the AWS CloudFormation deployment engine it depends on has no usage cost beyond the resources it manages, but is itself a closed-source AWS service.
 
 ### Does Pulumi have automatic rollback like CloudFormation/CDK?
 

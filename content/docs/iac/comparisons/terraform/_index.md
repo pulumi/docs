@@ -148,7 +148,7 @@ You have four options that can be combined: run your existing `.tf` files as-is 
 
 ### Is Pulumi free and open source like Terraform used to be?
 
-The Pulumi CLI and SDKs are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. Note that Terraform is no longer open source: since version 1.6 it has been distributed under the [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE). [OpenTofu](/docs/iac/comparisons/opentofu/) is the MPL-2.0 open source fork maintained by the Linux Foundation.
+The Pulumi CLI and SDKs are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE) and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a Free edition and paid editions that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. Note that Terraform is no longer open source: since version 1.6 it has been distributed under the [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE). [OpenTofu](/docs/iac/comparisons/opentofu/) is the MPL-2.0 open source fork maintained by the Linux Foundation.
 
 ### Does Pulumi support remote state and state locking like Terraform?
 
