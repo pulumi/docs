@@ -36,7 +36,5 @@ swap:
   # language, not the retired package-type term. Without the exclusion this row
   # was a 13-for-13 false positive at blocker tier.
   '\blanguage-native package\b(?!\s+managers?\b)': native language package
-  '\bPulumi CrossGuard\b': Pulumi Policies
-  '\bCrossGuard\b': Pulumi Policies
   '\bself-managed backend\b': DIY backend
   '\bself-managed backends\b': DIY backends

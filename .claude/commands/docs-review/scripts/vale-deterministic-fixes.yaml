@@ -27,7 +27,7 @@ deterministic_fix:
   - Pulumi.WordChoice           # Fixed word-preference swaps: click->select, go to->navigate to.
   - Pulumi.Nomenclature         # Canonical product-name spellings: pulumi esc->Pulumi ESC, ...
   - Pulumi.CrossReferenceHeadings  # Closed-set cross-reference heading rename to Next steps / Learn more.
-  - Google.Spelling             # Single suggested spelling for an unambiguous misspelling.
+  - Google.Spelling             # Fixed British -> American swap (colour -> color); see the note on the blocker list.
 
 # Rules elevated to blocker in the pinned PR review: the composer renders these
 # under 🚨 Outstanding (counted, label-driving, auto-refresh-anchored) instead
@@ -44,7 +44,7 @@ blocker:
   - Pulumi.Substitutions        # Wrong term (dead brand name, misstated lifecycle stage) with a fixed correct replacement.
   - Pulumi.Nomenclature         # Misspelled/miscased Pulumi product name.
   - Pulumi.PoliciesSingular     # Grammatical agreement error ("policies is").
-  - Google.Spelling             # Unambiguous misspelling.
+  - Google.Spelling             # Despite the name this is NOT a spell-checker: it's four tokens for British spellings (colour, labour, centre, *nised). American spelling is the house standard (AGENTS.md), the token set is tiny and unambiguous, so it blocks -- but nothing in this repo checks actual misspellings.
   - Pulumi.RetiredNames         # A renamed product (Pulumi Insights, Pulumi Copilot, ...). Shipping the dead name is a correctness error; that the proposed replacement still needs a meaning check is `deterministic_fix`'s job, not this list's.
   - Pulumi.DeprecatedProductNames  # A retired name with no fixed replacement (Pulumi Service, IAS) is always wrong; choosing the current one is the author's call, but shipping the dead name is not.
 # Pulumi.RetiredNames blocks even though the replacement it proposes isn't

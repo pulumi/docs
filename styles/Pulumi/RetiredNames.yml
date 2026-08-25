@@ -46,10 +46,12 @@ ignorecase: true
 action:
   name: replace
 swap:
+  '\bPulumi CrossGuard\b': Pulumi Policies
+  '\bCrossGuard\b': Pulumi Policies
   '\bPulumi Copilot\b': Pulumi Neo
   '\bPulumi Insights\b': Pulumi Discovery
   '\bInsights account\b': cloud account
   '\bInsights scan\b': Discovery scan
   '\bInsights supergraph\b': resource graph
   '\bInsights resources\b': discovered resources
-  '\bPolicy Violations\b': policy findings
+  '(?-i)\bPolicy Violations\b': policy findings
