@@ -27,8 +27,9 @@ name: Support form tests
 # reaches it by stack reference — `tsc -p tsconfig.json` never compiles a line
 # of it. Without the exclusion this job would run, pass, and report green on a
 # PR it had not examined at all, which is worse than not running: a check that
-# looks like coverage and isn't. (Nothing in CI type-checks that program today;
-# that gap is tracked separately.)
+# looks like coverage and isn't. Nothing in CI type-checks that program today —
+# see pulumi/docs#21136, which is what would make the directory genuinely
+# covered rather than merely matched by a filter.
 on:
   pull_request:
     paths:
