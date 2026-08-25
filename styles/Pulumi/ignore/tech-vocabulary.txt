@@ -159,6 +159,7 @@ Configs
 conformant
 Conformitron
 Conftest
+Conjur
 containerless
 containerservice
 coronavirus
@@ -174,6 +175,7 @@ Cumundi
 Cumundi's
 cutover
 cyber
+CyberArk
 cybersecurity
 Cybersecurity
 Dagster
@@ -696,6 +698,7 @@ substring
 subteam
 subteams
 Supabase
+supergraph
 superlinearly
 superset
 swappable
