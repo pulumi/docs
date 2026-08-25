@@ -97,7 +97,7 @@ The `import` command runs the prepared import file in batches (100 resources by 
 
 After import, `pulumi preview` should be a no-op — but write-only fields (passwords, tokens), IaC-only defaults, and asset sentinels aren't returned by the cloud API, so they show up as phantom diffs. `patch-state tf` patches the exported stack state using a curated per-resource-type fields file that records which fields the API doesn't return and how to fill them: from the digest's attribute for that resource if present, else from the fields file default. It can also read a stack's secret config so secret fields are patched without decrypting anything into the open.
 
-Lambda function code is the archetypal case. `GetFunction` returns a presigned S3 URL that expires in minutes rather than the deployment package itself, so the provider's Read has nothing durable to put in `code` — and every freshly imported function diffs against the program's `FileArchive`. On the Terraform path, `patch-state` writes the matching asset sentinel into state so the hash comparison agrees; on the CloudFormation path, where the code was built by CDK's toolchain and no local artifact exists, `patch-state cfn` downloads each deployed zip through that URL and references it as a local `FileArchive` instead.
+Lambda function code is the archetypal case. `GetFunction` returns a presigned S3 URL that expires in minutes rather than the deployment package itself, so the provider's Read has nothing durable to put in `code` — and every freshly imported function diffs against the program's `FileArchive`. `patch-state` writes the matching asset sentinel into state so the hash comparison agrees, and the diff disappears.
 
 ### State injection: the resources that can't be imported
 
@@ -116,12 +116,6 @@ The result isn't a machine-translated program. It's a hand-authored, idiomatic P
 
 This isn't theoretical: a recent Professional Services customer adopted the tool and has since migrated more than 4,000 resources on their own with it — their team driving the pipeline themselves, without Pulumi engineers in the loop.
 
-## Bonus: CDK and CloudFormation to AWS Classic
-
-The same pipeline has a second front end. `digest cfn` reads a deployed CloudFormation stack — the live template plus stack resources, with intrinsics like `Ref` and `Fn::GetAtt` resolved against the account — and `resolve cfn` / `patch-state cfn` complete the path onto the classic `aws` provider.
-
-We already had tooling for converting CDK and CloudFormation to the [AWS Native provider](/registry/packages/aws-native/), which is the right call for a fast automated lift-and-shift. This path serves a different goal: a hand-authored, component-structured codebase on the mature classic provider, with a provably zero-diff cutover. The [`cdk-to-pulumi-classic`](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/skills/cdk-to-pulumi-classic/SKILL.md) skill encodes the judgment calls that make it work — including using AWS Native selectively for the API Gateway family, where the classic provider's fine-grained model would explode one CloudFormation method into four or more resources.
-
 ## Getting started
 
 Install the plugin from GitHub releases and run any command through the Pulumi plugin runner:
@@ -133,6 +127,6 @@ pulumi plugin install tool import \
 pulumi plugin run import -- digest tf --help
 ```
 
-Then point your agent at the skill matching your source — `pulumi-terraform-workspace-migration` for Terraform/OpenTofu, `cdk-to-pulumi-classic` for CDK/CloudFormation — and let it orchestrate the pipeline. The [README](https://github.com/pulumi-proserv/pulumi-tool-import#readme) documents every command for manual use as well.
+Then point your agent at the [`pulumi-terraform-workspace-migration`](https://github.com/pulumi-proserv/pulumi-tool-import/blob/main/skills/pulumi-terraform-workspace-migration/SKILL.md) skill and let it orchestrate the pipeline. The [README](https://github.com/pulumi-proserv/pulumi-tool-import#readme) documents every command for manual use as well.
 
 A note on what this is: `pulumi-tool-import` is a Pulumi CLI tool plugin built and maintained by Pulumi Professional Services, not part of the core Pulumi product. It runs through the plugin runner and uses the Automation API under the hood, so it requires the Pulumi CLI. It's pre-v1, so pin the version you install and read the changelog before upgrading. If you're planning a larger migration and want help, [Pulumi Professional Services](/proserv/) runs these migrations every day — this tool is how we do it.
