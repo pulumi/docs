@@ -31,7 +31,7 @@ youll_learn:
 # A list of tutorial prerequisites. Markdown is fine. Keep it simple; no need to be exhaustive here.
 prereqs:
     - The [Pulumi CLI](/docs/install/)
-    - A [Pulumi Cloud Team, Enterprise, or Business Critical account](https://app.pulumi.com/signup)
+    - A [Pulumi Cloud Essentials, Pro, or Enterprise+ account](https://app.pulumi.com/signup)
     - An [ESC environment and AWS credentials created and configured](/docs/insights/discovery/accounts/#configure-esc-credentials)
     - A [cloud account connected to Pulumi](/docs/insights/discovery/accounts/)
     - An [Amazon Web Services](https://aws.amazon.com/) account

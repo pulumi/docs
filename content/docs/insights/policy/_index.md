@@ -85,7 +85,7 @@ Pulumi Cloud extends policy capabilities with centralized management and additio
 **Preventative policies:**
 
 - Centralized management via [Policy Groups](/docs/insights/policy/policy-groups/)
-- Access to Pulumi-authored [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) (Pulumi Best Practices on the Team edition and above; compliance-framework packs on the Business Critical edition)
+- Access to Pulumi-authored [pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/) (Pulumi Best Practices on the Essentials edition and above; compliance-framework packs on the Enterprise+ edition)
 - Support for open source policy packs by publishing them to your organization's private registry
 - Automatic policy pack download to local cache
 - No need to specify `--policy-pack` flag for each command

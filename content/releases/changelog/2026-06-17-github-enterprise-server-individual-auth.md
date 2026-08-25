@@ -7,7 +7,7 @@ meta_desc: Self-hosted GitHub Enterprise operations now run as the user who trig
 authors:
     - christian-nunciato
 editions:
-    - business-critical
+    - enterprise-plus
 ---
 
 Self-hosted GitHub Enterprise operations may now be run as the individual user who triggered them, so pull requests, commits, and comments are attributed to that person and respect their permissions.

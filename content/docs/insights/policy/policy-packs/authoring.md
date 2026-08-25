@@ -1075,7 +1075,7 @@ As shorthand, specify enforcement levels directly:
 
 - **advisory** - Issues warnings but allows deployments to proceed
 - **mandatory** - Blocks deployments when violations are detected
-- **remediate** - Automatically fixes violations in place, available in the [Business Critical edition](/pricing/#policy-enforcement-modes); see [Remediating policy violations](#remediating-policy-violations)
+- **remediate** - Automatically fixes violations in place, available in the [Enterprise+ edition](/pricing/#policy-enforcement-modes); see [Remediating policy violations](#remediating-policy-violations)
 - **disabled** - Skips policy evaluation entirely
 
 ### Custom configuration

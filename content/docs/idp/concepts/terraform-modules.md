@@ -17,7 +17,7 @@ Pulumi Cloud hosts Terraform modules as a first-class registry resource alongsid
 
 ## Before you begin
 
-1. You need a [Pulumi Cloud](https://app.pulumi.com) account on the Enterprise or Business Critical plan. Publishing is gated to those tiers; reading and listing modules is available on any plan, so you always keep access to modules you have already published.
+1. You need a [Pulumi Cloud](https://app.pulumi.com) account on the Pro or Enterprise+ edition. Publishing is limited to those editions; reading and listing modules is available on any edition, so you always keep access to modules you have already published.
 1. You need the [Pulumi CLI](/docs/install/) installed if you plan to consume modules from a Pulumi program.
 1. You need OpenTofu or Terraform installed if you plan to consume modules from a `.tf` file with `tofu init` / `terraform init`.
 

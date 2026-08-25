@@ -34,7 +34,7 @@
 #
 # `feature:` is the data/pulumi_pricing.yaml feature id that decides which edition
 # the generated pages' Pulumi Cloud callout names. Pulumi Best Practices is the only
-# section here on Team and above; the compliance frameworks are Business Critical.
+# section here on Essentials and above; the compliance frameworks are Enterprise+.
 
 org: pulumi
 

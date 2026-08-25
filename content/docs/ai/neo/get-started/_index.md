@@ -45,7 +45,7 @@ Read-only is scoped to Pulumi Cloud. It does not, on its own, prevent Neo from o
 
 ### Enable Neo for Your Organization
 
-Neo is included on every current Pulumi plan and is on by default, so there is nothing to turn on. (Organizations still on the legacy Starter, Pro, or per-stack plans need to move to a current plan first — see [pricing](/pricing/).) To access Neo:
+Neo is included on the Essentials, Pro, and Enterprise+ editions and is on by default, so there is nothing to turn on. Organizations on the Free edition, or on the legacy Starter, Pro, or per-stack SKUs that predate the current editions, need to move to a paid edition first — see [pricing](/pricing/). To access Neo:
 
 1. Navigate to [Pulumi Cloud](https://app.pulumi.com/signin)
 2. Click on **Agent Tasks** within the **Neo** section in the left navigation menu

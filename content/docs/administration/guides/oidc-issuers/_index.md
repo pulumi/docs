@@ -46,10 +46,10 @@ You can configure and manage OIDC Issuers in three ways:
 
 The available OIDC token types vary by Pulumi edition:
 
-- **Individual**: `personal`
-- **Team**: `personal`, `organization`
-- **Enterprise**: `personal`, `organization`, `team`
-- **Business Critical**: `personal`, `organization`, `team`, `deployment-runner`
+- **Free**: `personal`
+- **Essentials**: `personal`, `organization`
+- **Pro**: `personal`, `organization`, `team`
+- **Enterprise+**: `personal`, `organization`, `team`, `deployment-runner`
 
 When configuring authorization policies and requesting tokens, ensure you select a token type that is available for your edition.
 

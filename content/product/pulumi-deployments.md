@@ -79,7 +79,7 @@ faq:
 
       - header: Is there a free tier for Pulumi Deployments?
         content: |
-          Individual Edition has 500 deploy minutes/month. Team, Enterprise, and Business Critical Editions all have 3,000 included deploy minutes/month.
+          The Free edition has 500 deploy minutes/month. The Essentials, Pro, and Enterprise+ editions all have 3,000 included deploy minutes/month.
 
       - header: How does drift detection work?
         content: |

@@ -26,8 +26,8 @@ The token you use for `pulumi login` also authorizes the [`pulumi api`](/docs/ia
 Pulumi offers three types of access tokens:
 
 1. **Personal tokens**, which carry the permissions of the individual user who created them. Personal tokens are available to all Pulumi Cloud users.
-1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Team, Enterprise, and Business Critical editions.
-1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Enterprise and Business Critical customers.
+1. **Organization tokens**, which authenticate as the organization itself rather than any individual user. Actions taken with organization tokens appear in audit logs attributed to the organization. Organization tokens are available in the Essentials, Pro, and Enterprise+ editions.
+1. **Team tokens**, which authenticate as a specific team within an organization rather than any individual user. Actions taken with team tokens appear in audit logs attributed to the team. Team tokens are only available to Pro and Enterprise+ customers.
 
 When using tokens, be mindful of the following security best practices:
 

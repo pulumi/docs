@@ -140,7 +140,7 @@ You have several options that can be combined: convert templates with [`pulumi c
 
 ### Is Pulumi free like ARM Templates?
 
-The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. ARM Templates and Bicep have no usage cost beyond the resources they manage.
+The Pulumi CLI and SDKs are open source under Apache 2.0 and free to use. [Pulumi Cloud](/docs/iac/guides/basics/pulumi-cloud-vs-oss/) has a Free edition and paid editions that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. ARM Templates and Bicep have no usage cost beyond the resources they manage.
 
 ### Can Pulumi detect drift like ARM?
 

@@ -24,7 +24,7 @@ Least privilege means giving every person, pipeline, and program only the access
 Over-broad cloud credentials can damage running infrastructure, and over-broad Pulumi Cloud access can expose secrets or delete stacks and their state. This guide works through both, across the three places where you make access decisions: your infrastructure code (IaC), your secrets and configuration (ESC), and your automation ([CI/CD](/docs/iac/operations/continuous-delivery/) and [Pulumi Deployments](/docs/deployments/concepts/), Pulumi Cloud's managed execution service).
 
 {{% notes type="info" %}}
-Pulumi Cloud's configurable RBAC features, including custom roles, permission sets, and team role assignments, are only available in the Pulumi Enterprise or Business Critical editions. To learn more, see the [pricing page](/pricing/).
+Pulumi Cloud's configurable RBAC features, including custom roles, permission sets, and team role assignments, are only available in the Pulumi Pro or Enterprise+ editions. To learn more, see the [pricing page](/pricing/).
 {{% /notes %}}
 
 ## How a Pulumi program gets its privileges
@@ -143,7 +143,7 @@ If you run your own CI/CD, prefer OIDC token exchange over a stored Pulumi token
 - On [GitHub Actions](/docs/administration/guides/oidc-issuers/github/), the `pulumi/auth-actions` action performs the exchange and can request a team-scoped token, so the run acts within a single team's permissions.
 - On [GitLab CI](/docs/administration/guides/oidc-issuers/gitlab/), and any other platform that can mint an OIDC token, `pulumi login --oidc-token` performs the same exchange directly through the CLI.
 
-Scope these tokens as narrowly as the work allows. Team-scoped tokens, which confine a run to one team's permissions, require the Enterprise or Business Critical edition.
+Scope these tokens as narrowly as the work allows. Team-scoped tokens, which confine a run to one team's permissions, require the Pro or Enterprise+ edition.
 
 ### Long-lived access tokens
 

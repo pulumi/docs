@@ -132,7 +132,7 @@ Yes. Pulumi manages AWS Lambda functions, API Gateway, event source mappings, IA
 
 ### Is Pulumi open source?
 
-The Pulumi CLI and SDKs are open source under the Apache 2.0 license. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial product, with a free Individual tier and paid plans that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. The Serverless Framework was MIT-licensed through version 3; version 4 is distributed under a proprietary license.
+The Pulumi CLI and SDKs are open source under the Apache 2.0 license. [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial product, with a Free edition and paid editions that add managed state, RBAC, audit logs, policy management, and other features for running Pulumi at organizational scale. The Serverless Framework was MIT-licensed through version 3; version 4 is distributed under a proprietary license.
 
 ### Can I use Pulumi for non-AWS infrastructure alongside the Serverless Framework?
 

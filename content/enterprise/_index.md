@@ -170,7 +170,7 @@ partners:
 get_started:
     title: Get Started
     items:
-        - title: Business Critical Edition
+        - title: Enterprise+ edition
           link: https://app.pulumi.com/site/trial/
           link_text: Start Free Trial
 

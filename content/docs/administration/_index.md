@@ -49,7 +49,7 @@ sections:
   - icon: cloud
     heading: Self-Hosting
     link: /docs/administration/self-hosting/
-    description: Deploy Pulumi Cloud in your own infrastructure with the Business Critical edition.
+    description: Deploy Pulumi Cloud in your own infrastructure with the Enterprise+ edition.
 
 - type: flat
   heading: Have questions?

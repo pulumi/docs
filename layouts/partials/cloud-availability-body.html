@@ -16,6 +16,12 @@
   An unknown feature id, and a feature that turns out to be available on the
   lowest edition (which gates nothing — say nothing instead), are both hard
   build failures, the same contract resource-option-scope.html uses.
+
+  Both sentences end in `safeHTML` because this is a Markdown string leaving an
+  .html template: Go's HTML escaper turns the `+` in "Enterprise+" into `&#43;`,
+  which the .md renditions and llms.txt would then carry verbatim. Every caller
+  either pipes the result through `markdownify` or writes it into a plain-text
+  output format, so there is no context here to escape for.
 */ -}}
 {{- $lead := "This [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) feature is" -}}
 {{- /* Tripwire for the `edition` -> `feature` rename. The markdown output
@@ -26,7 +32,7 @@
   {{- errorf "cloud-availability-body.html was called with edition: %q (in %s). It takes a feature id from data/pulumi_pricing.yaml now — pass `feature` instead." . $.where -}}
 {{- end -}}
 {{- if not .feature -}}
-  {{- printf "%s available in [all editions](/pricing/)." $lead -}}
+  {{- printf "%s available in [all editions](/pricing/)." $lead | safeHTML -}}
 {{- else -}}
   {{- $id := printf "%v" .feature -}}
   {{- $px := partialCached "pricing/data.html" "pricing-data" "pricing-data" -}}
@@ -70,6 +76,6 @@
            feature is hidden and has no row. */ -}}
     {{- $href := "/pricing/" -}}
     {{- if not $f.hidden -}}{{- $href = printf "/pricing/#%s" $id -}}{{- end -}}
-    {{- printf "%s available in the [%s](%s)." $lead $list $href -}}
+    {{- printf "%s available in the [%s](%s)." $lead $list $href | safeHTML -}}
   {{- end -}}
 {{- end -}}

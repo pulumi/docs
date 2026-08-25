@@ -9,7 +9,7 @@ estimated_time: 5
 ---
 
 {{% notes type="info" %}}
-Server-side enforcement of policy packs across an organization is only available in **Pulumi Business Critical**. See [pricing](/pricing/) for more details.
+Publishing a custom policy pack for server-side enforcement across an organization requires the **Pro** or **Enterprise+** edition. See [pricing](/pricing/) for more details.
 {{% /notes %}}
 
 Now that we've validated the behavior of our custom policy pack, publishing it to Pulumi Cloud will allow the policies to be enforced across your organization. Any time you run `pulumi preview` or `pulumi up` on a stack, Pulumi Cloud will ship the policy to the client to enable policy enforcement. Policy Packs are versioned by the Pulumi Cloud so that updated policies can be published and applied incrementally, and also reverted to previous versions as needed.

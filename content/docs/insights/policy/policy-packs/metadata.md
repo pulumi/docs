@@ -21,7 +21,7 @@ The table below describes all supported metadata fields and their usage:
 |-------|-----------|-------------|
 | `name` | Yes | Unique identifier for the policy within the policy pack. |
 | `description` | Yes | Short summary of what the policy checks or enforces. |
-| `enforcementLevel` | No | Defines how the policy behaves on violation. Options: `advisory` (warn only), `mandatory` (block deployment), `remediate` (auto-fix violations), or `disabled` (turn off policy). The `remediate` level is available in the [Business Critical edition](/pricing/#policy-enforcement-modes). |
+| `enforcementLevel` | No | Defines how the policy behaves on violation. Options: `advisory` (warn only), `mandatory` (block deployment), `remediate` (auto-fix violations), or `disabled` (turn off policy). The `remediate` level is available in the [Enterprise+ edition](/pricing/#policy-enforcement-modes). |
 | `severity` | No | Indicates the seriousness of violations. Valid values: `low`, `medium`, `high`, `critical`. |
 | `displayName` | No | Human-readable name for the policy (used for display instead of `name`). |
 | `remediationSteps` | No | Guidance for how to fix a violation or bring a resource into compliance. |

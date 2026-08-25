@@ -37,7 +37,7 @@ Ensure you have:
 - installed the [Pulumi CLI](/docs/install/)
 - installed [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/#install-wrangler/)
 - a valid and properly scoped [Cloudflare API token](https://developers.cloudflare.com/workers/wrangler/ci-cd/#api-token)
-- a Pulumi Cloud account. You can sign up for an [always-free, individual tier](https://app.pulumi.com/signup)
+- a Pulumi Cloud account. You can sign up for the [Free edition](https://app.pulumi.com/signup)
 
 {{< notes type="info" >}}
 **New to Pulumi ESC?** Complete the [Getting Started tutorial](https://www.pulumi.com/docs/esc/get-started/)

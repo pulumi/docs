@@ -14,7 +14,7 @@ youll_learn:
  - How to remediate drift ensuring your cloud infrastructure matches your desired state
 prereqs:
    - Completion of the [Getting Started](/docs/get-started/) guide or familiarity with the basics of the Pulumi workflow
-   - A [Pulumi Cloud account](https://app.pulumi.com/signup) and organization subscribed to the Enterprise or Business Critical editions
+   - A [Pulumi Cloud account](https://app.pulumi.com/signup) and organization subscribed to the Pro or Enterprise+ editions
    - An [Amazon Web Services](https://aws.amazon.com/) account, access key ID, and secret access key
    - The [AWS CLI](https://aws.amazon.com/cli/)
    - Git installed and a [GitHub account](https://github.com/) with admin rights to a repository or organization

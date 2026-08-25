@@ -1,6 +1,6 @@
 ---
 title_tag: "Self-hosting the Pulumi Cloud"
-meta_desc: Pulumi Business Critical Edition gives you the option to self-host Pulumi within your organization's infrastructure.
+meta_desc: The Pulumi Enterprise+ edition gives you the option to self-host Pulumi within your organization's infrastructure.
 title: Self-hosting
 linktitle: Self-hosting
 docs_home: true
@@ -26,7 +26,7 @@ sections:
 - type: flat
   heading: Overview
   description_md: |
-    Self-hosting is only available with **Pulumi Business Critical**. If you would like to evaluate the self-hosted Pulumi Cloud, [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) or [contact us](/contact/).
+    Self-hosting is only available with **Pulumi Enterprise+**. If you would like to evaluate the self-hosted Pulumi Cloud, [request a Proof of Concept (PoC)](/product/self-hosted/#self-hosted-trial) or [contact us](/contact/).
 
     The self-hosted version provides all the same capabilities as the SaaS offering at [app.pulumi.com](https://app.pulumi.com/signin). You manage data backups, keep the service running, and maintain updates, while gaining full control over the deployment environment.
 

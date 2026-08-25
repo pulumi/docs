@@ -1,6 +1,6 @@
 ---
 title_tag: Deployments | Self-Hosting Pulumi
-meta_desc: Deployments are available on Self-hosting. Self-hosting is available as part of the Pulumi Business Critical Edition.
+meta_desc: Deployments are available on Self-hosting. Self-hosting is available as part of the Pulumi Enterprise+ edition.
 title: Deployments
 h1: Pulumi Cloud self-hosted Deployments
 menu:

@@ -155,7 +155,7 @@ Yes. [Pulumi Cloud implements the Terraform remote backend API](/docs/iac/get-st
 
 ### Is Spacelift open source like Pulumi?
 
-No. Pulumi's CLI, SDKs, and providers are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial offering, with a free Individual tier and paid plans. Spacelift is proprietary, commercial software; it's built on open-source components like Open Policy Agent and Docker, but it isn't an open-source product itself.
+No. Pulumi's CLI, SDKs, and providers are open source under [Apache 2.0](https://github.com/pulumi/pulumi/blob/master/LICENSE), and [Pulumi Cloud](/docs/iac/concepts/pulumi-cloud/) is the commercial offering, with a Free edition and paid editions. Spacelift is proprietary, commercial software; it's built on open-source components like Open Policy Agent and Docker, but it isn't an open-source product itself.
 
 ## Next steps
 
