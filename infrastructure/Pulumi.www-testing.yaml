@@ -14,6 +14,6 @@ config:
   www.pulumi.com:setRootRecord: "true"
   www.pulumi.com:websiteDomain: www.pulumi-test.io
   www.pulumi.com:websiteLogsBucketName: pulumi-test-io-website-logs
-  www.pulumi.com:intercomTicketTypeId: "4573798"
+  www.pulumi.com:intercomTicketTypeId: "3036244"
   www.pulumi.com:intercomApiKey:
-    secure: AAABAJ2bHeR1rJ6zKuK1eW5I83ueGZ3bwh8ELILQeauY3Ca+cnmF+YyaS4GNAgPKN03geZ0mBxEli2g1kSBftGApsV3q3tvw4ImqXTtj7+dckCroD8xx97P+YVc=
+    secure: AAABAPBlaHKD5rxyQNLVCvKl7c7g43ZOjVmIs+rhoEzR8/1c8ns/waPrqY0OVR43ZwmKd8Siv1DYCE57GFGcweUkdSp+PLTiJ1memhq6gGoCW3eoNGA7qDZU+IU=
