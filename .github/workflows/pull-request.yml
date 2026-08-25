@@ -90,8 +90,9 @@ jobs:
           restore-keys: |
             hugo-resources-
 
-      # Node's built-in runner over scripts/*.test.js -- no Hugo, no cluster, no
-      # toolchains, so it runs on every PR. `make test` is gated on static/programs
+      # Node's built-in runner over scripts/*.test.js. Runs before the build because it
+      # needs nothing installed -- `make ensure` begins with `clean`, so anything
+      # installed ahead of it is thrown away. `make test` is gated on static/programs
       # changes in scheduled-test.yml, which would leave this coverage off content PRs.
       - name: Run unit tests
         run: make test-unit

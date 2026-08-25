@@ -14,7 +14,6 @@
 
 const fs = require("fs");
 const path = require("path");
-const yaml = require("js-yaml");
 
 const API = process.env.PULUMI_API || "https://api.pulumi.com";
 const TOKEN = process.env.PULUMI_ACCESS_TOKEN;
@@ -281,6 +280,10 @@ function auditAllowlist({ org, packs, allowlistUndocumented, products, nonProduc
 }
 
 async function main() {
+    // Required here rather than at the top so the pure helpers this module exports stay
+    // importable with no node_modules -- scripts/fetch-policy-packs.test.js runs in CI
+    // before anything is installed. Nothing above main() needs it.
+    const yaml = require("js-yaml");
     const allowlist = yaml.load(fs.readFileSync(ALLOWLIST, "utf8"));
     const org = allowlist.org;
     const entries = allowlist.sections.flatMap((s) => s.packs);
