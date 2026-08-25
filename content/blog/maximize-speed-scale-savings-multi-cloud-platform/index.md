@@ -54,4 +54,4 @@ _"Pulumi lets us manage multi-cluster Kubernetes infrastructure efficiently, all
 
 _– Paul Hemberger, Engineering Manager for Materialize’s cloud team_
 
-Is your team ready to move from a self-managed environment to Pulumi cloud? Explore your options with [these resources](/product/pulumi-cloud/), and [enroll in our workshop](https://info.pulumi.com/pulumi-platform-engineering-immersion-days) series that’s customizable for your cloud and business environment.
+Is your team ready to move from a self-managed environment to Pulumi cloud? Explore your options with [these resources](/product/), and [enroll in our workshop](https://info.pulumi.com/pulumi-platform-engineering-immersion-days) series that’s customizable for your cloud and business environment.
