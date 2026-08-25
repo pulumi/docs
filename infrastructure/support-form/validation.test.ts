@@ -11,7 +11,7 @@
 import * as assert from "assert";
 import { test } from "node:test";
 
-import { FunctionUrlEvent, supportFormHandler } from "./handler";
+import { clientIp, FunctionUrlEvent, supportFormHandler } from "./handler";
 import { LIMITS, normalizeOrganization, validateSubmission } from "./validation";
 
 function validPayload(): Record<string, unknown> {
@@ -235,6 +235,66 @@ test("handler decodes base64-encoded bodies", async () => {
     event.body = Buffer.from(event.body as string, "utf8").toString("base64");
     event.isBase64Encoded = true;
     assert.strictEqual((await supportFormHandler(event)).statusCode, 200);
+});
+
+// --- Client-IP attribution ---
+//
+// requestContext.http.sourceIp is CloudFront's edge node, never the submitter,
+// so these pin the X-Forwarded-For handling that recovers the real address.
+
+const EDGE_IP = "3.172.120.71";
+
+function ipEvent(forwarded?: string): FunctionUrlEvent {
+    return {
+        headers: forwarded === undefined ? {} : { "x-forwarded-for": forwarded },
+        requestContext: { http: { method: "POST", path: "/api/support", sourceIp: EDGE_IP } },
+    };
+}
+
+test("prefers the forwarded viewer address over the CloudFront edge", () => {
+    assert.strictEqual(clientIp(ipEvent("198.51.100.9")), "198.51.100.9");
+});
+
+test("ignores a spoofed X-Forwarded-For prefix", () => {
+    // CloudFront appends the real viewer to whatever the viewer sent, so the
+    // attacker's chosen value is first and the trustworthy one is last. Reading
+    // the first entry here would log "1.2.3.4" and look authentic doing it.
+    assert.strictEqual(clientIp(ipEvent("1.2.3.4, 198.51.100.9")), "198.51.100.9");
+    assert.strictEqual(clientIp(ipEvent("1.2.3.4, 5.6.7.8, 198.51.100.9")), "198.51.100.9");
+});
+
+test("tolerates whitespace and empty entries in X-Forwarded-For", () => {
+    assert.strictEqual(clientIp(ipEvent("  1.2.3.4 ,  198.51.100.9  ")), "198.51.100.9");
+    assert.strictEqual(clientIp(ipEvent("198.51.100.9,")), "198.51.100.9");
+});
+
+test("falls back to the request context when no forwarded address is present", () => {
+    assert.strictEqual(clientIp(ipEvent()), EDGE_IP);
+    assert.strictEqual(clientIp(ipEvent("")), EDGE_IP);
+    assert.strictEqual(clientIp(ipEvent(" , ")), EDGE_IP);
+});
+
+test("returns undefined when neither source is available", () => {
+    assert.strictEqual(clientIp({}), undefined);
+});
+
+test("logs the forwarded address, not the edge, on an accepted submission", async () => {
+    process.env.SUPPORT_FORM_ORIGIN_SECRET = SECRET;
+    const logged: string[] = [];
+    const realLog = console.log;
+    console.log = (msg?: any) => {
+        logged.push(String(msg));
+    };
+    try {
+        const event = postEvent(validPayload());
+        (event.headers as Record<string, string>)["x-forwarded-for"] = `1.2.3.4, 198.51.100.9`;
+        await supportFormHandler(event);
+    } finally {
+        console.log = realLog;
+    }
+    const accepted = logged.map(l => JSON.parse(l)).find(l => l.type === "support_request_accepted");
+    assert.ok(accepted, "expected a support_request_accepted record");
+    assert.strictEqual(accepted.sourceIp, "198.51.100.9");
 });
 
 test("handler rejects an empty body", async () => {
