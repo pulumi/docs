@@ -20,14 +20,16 @@
 # this repo and are not part of the sync.
 
 # Tier rule for a retired name, in the order the sync job should try them:
-#   1. Term wrong in every context AND the replacement right in every context
-#      -> Substitutions.yml (error, blocker). Backlog size is NOT a criterion:
-#      the PR review is diff-scoped, so a blocker fires only on a line an
-#      author is writing today.
-#   2. Replacement needs judgment (a rename that appears in historical prose,
-#      or a name that resolves to more than one current term) ->
-#      RetiredNames.yml (warning, advisory). Outstanding content migrations
-#      are tracked in pulumi/docs#21133.
+# Every retired name blocks -- shipping one is a correctness error. Backlog
+# size is NOT a criterion: the PR review is diff-scoped, so a blocker fires
+# only on a line an author is writing today. What the tiers actually pick is
+# how much the finding's message must hedge:
+#   1. Replacement right in every context -> Substitutions.yml. Message names
+#      the swap outright.
+#   2. Replacement usually right, but the brand guide's carve-outs apply
+#      (historical prose, or a name resolving to more than one current term)
+#      -> RetiredNames.yml. Message asks the reader to confirm it fits.
+#      Outstanding content migrations are tracked in pulumi/docs#21133.
 #   3. No single fixed replacement -> DeprecatedProductNames.yml (flag-only).
 #   4. No safe regex at all -> leave unmirrored and note it in the PR body.
 

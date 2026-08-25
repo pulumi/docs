@@ -1,11 +1,21 @@
 # Retired product names that were RENAMED — the old name is retired, and the
 # brand guide's "Retired and disallowed names" table gives the new one.
 #
-# Advisory (`level: warning`, and deliberately NOT on the `blocker:` list in
-# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml) — not
-# because these names are any less retired, but because the REPLACEMENT this
-# rule proposes isn't reliably right. The brand guide's own preamble names the
-# two cases, and both occur in this repo:
+# BLOCKING (`level: error`, and on the `blocker:` list in
+# .claude/commands/docs-review/scripts/vale-deterministic-fixes.yaml): shipping
+# a retired product name is a correctness error, not a style preference.
+#
+# It blocks even though the replacement this rule names isn't always the right
+# one, because those are separate questions. `blocker` asks whether the finding
+# may ship. `deterministic_fix` asks whether the reviewer must author the
+# correction. The two lists are independent by design -- PoliciesSingular
+# blocks with a fix that needs conjugating, DeprecatedProductNames blocks with
+# no fix at all.
+#
+# What this rule is still separate from Substitutions.yml FOR is the message.
+# The brand guide's preamble carves out two cases a blanket swap gets wrong,
+# and both occur in this repo, so the finding tells the reader to check rather
+# than to apply:
 #
 #   1. "Historical usage is fine. Prose that intentionally describes past
 #      behavior ... is acceptable." content/case-studies/unity.md says "Pulumi
@@ -17,23 +27,21 @@
 #      governance" *category* in others (its own row in the brand table), and
 #      the docs IA still lives under /docs/insights/.
 #
-# A finding whose proposed fix is wrong some of the time can't carry a
-# must-resolve-before-merge gate, so these surface as advisory and a human or
-# reviewing model picks the right name. The fix is still deterministic enough
-# to stay on `deterministic_fix:` — review-existing-content applies it only
-# after confirming the swap preserves meaning, which is exactly the judgment
-# these rows need.
+# Neither case needs the rule demoted. A 🚨 finding is "resolve or refute", so
+# the historical-prose author refutes it in one line; and review-existing-
+# content applies the swap only after confirming it preserves meaning, which is
+# what keeps the automated lane from writing "Neo replacing Neo". Demoting it
+# would instead expose a dead brand name to the per-file advisory cap, which
+# drops findings silently -- blockers bypass both caps.
 #
-# The tier axis is swap safety, NOT backlog size. A retired term whose
-# replacement is always correct belongs in Substitutions.yml at blocker tier
-# even with unmigrated pages behind it, because the PR review is diff-scoped
-# (vale-findings-filter.py --pr intersects findings with PR-added lines), so a
-# blocker only ever fires on a line an author is writing today. Outstanding
-# content migrations are tracked in pulumi/docs#21133.
+# Outstanding content migrations are tracked in pulumi/docs#21133; that backlog
+# is a migration question, not a tiering one, because the PR review is
+# diff-scoped (vale-findings-filter.py --pr intersects findings with the lines
+# a diff added), so a blocker only ever fires on a line an author writes today.
 extends: substitution
 message: 'Use ''%s'' — ''%s'' is a retired name. Confirm the replacement fits this sentence; historical prose ("X replaced Y") and heading anchors are legitimate exceptions.'
 link: "https://brand.pulumi.com/voice/names-and-terminology/"
-level: warning
+level: error
 ignorecase: true
 action:
   name: replace
