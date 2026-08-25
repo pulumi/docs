@@ -1,7 +1,6 @@
 ---
 title: "Filling the Gaps in Terraform-to-Pulumi Migration"
-# TODO: Update this date before publishing! Currently set to far future to prevent premature publication.
-date: 2099-01-01
+date: 2026-08-31
 draft: false
 meta_desc: "pulumi import alone has gaps. See how pulumi-tool-import and its agent skills turn Terraform-to-Pulumi migration into a validated, repeatable workflow."
 feature_image: feature.png
@@ -15,12 +14,23 @@ tags:
 category: engineering
 schema_type: auto
 
-# Social media copy — auto-posted to X, LinkedIn, and Bluesky when merged to master.
-# Character limits: X ~280, Bluesky 300, LinkedIn 3000. Leave blank to skip a platform.
 social:
-    twitter:
-    linkedin:
-    bluesky:
+    twitter: |
+        A Professional Services customer has migrated more than 4,000 resources from Terraform to Pulumi on their own — using a tool we built after hitting the same gaps on every migration.
+
+        Here's the pipeline that made it repeatable.
+    linkedin: |
+        Every Terraform-to-Pulumi migration we ran hit the same walls. State files full of plaintext secrets. Import IDs composed by hand, one resource at a time. A single bad ID failing the whole import. And a class of resources that cannot be imported at all, with an error message that points in the wrong direction.
+
+        We built a tool that turns the import step into a pipeline, and an agent skill that drives it and validates every stage before moving to the next.
+
+        A recent Professional Services customer adopted it and has since migrated more than 4,000 resources on their own, without Pulumi engineers in the loop.
+
+        We wrote up how the pipeline works and the gap each stage closes.
+    bluesky: |
+        Some Terraform resources can't be imported into Pulumi at all, and the error message points in the wrong direction. That's one of five gaps we kept hitting on migrations, so we built a tool that closes them. One customer has migrated 4,000+ resources with it on their own.
+
+        We wrote up the pipeline.
 ---
 
 Migrating a live Terraform workspace to Pulumi sounds simple on paper: rewrite the program, import the resources, done. In practice, the import step is where migrations stall. Import IDs have to be discovered one resource at a time, state files are full of plaintext secrets, some resources can't be imported at all, and the first post-import preview greets you with a wall of diffs. We built [`pulumi-tool-import`](https://github.com/pulumi-proserv/pulumi-tool-import) — and a set of agent skills that drive it — to close those gaps and turn migration into a repeatable, validated pipeline.
@@ -123,4 +133,4 @@ pulumi plugin run import -- digest tf --help
 
 Then point your agent at the skill matching your source — `pulumi-terraform-workspace-migration` for Terraform/OpenTofu, `cdk-to-pulumi-classic` for CDK/CloudFormation — and let it orchestrate the pipeline. The [README](https://github.com/pulumi-proserv/pulumi-tool-import#readme) documents every command for manual use as well.
 
-The tool is pre-v1, so pin the version you install and read the changelog before upgrading. If you're planning a larger migration and want help, [Pulumi Professional Services](/proserv/) runs these migrations every day — this tool is how we do it.
+A note on what this is: `pulumi-tool-import` is a Pulumi CLI tool plugin built and maintained by Pulumi Professional Services, not part of the core Pulumi product. It runs through the plugin runner and uses the Automation API under the hood, so it requires the Pulumi CLI. It's pre-v1, so pin the version you install and read the changelog before upgrading. If you're planning a larger migration and want help, [Pulumi Professional Services](/proserv/) runs these migrations every day — this tool is how we do it.
