@@ -5,7 +5,7 @@
 #     "boto3",
 #     "python-frontmatter",
 #     "requests",
-#     "pulumi-social-core @ git+https://github.com/pulumi/social.git@v0.1.0",
+#     "pulumi-social-core @ git+https://github.com/pulumi/social.git@v0.2.0",
 # ]
 # ///
 
