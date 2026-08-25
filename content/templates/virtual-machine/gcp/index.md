@@ -3,7 +3,7 @@ title_tag: Deploy a Virtual Machine to Google Cloud
 title: Virtual Machine on Google Cloud
 layout: template
 schema_type: howto
-meta_desc: Deploy a Google Cloud virtual machine with Pulumi and Compute Engine in TypeScript, Python, Go, C#, YAML, or HCL.
+meta_desc: Deploy a Google Cloud virtual machine with Pulumi and Compute Engine in TypeScript, Python, Go, .NET, YAML, or HCL.
 meta_image: meta.png
 card_desc: Deploy a virtual machine on Google Cloud with Pulumi and Google Compute Engine.
 template:

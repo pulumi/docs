@@ -3,7 +3,7 @@ title_tag: Deploy a Container Service to Azure
 title: Container Service on Azure
 layout: template
 schema_type: howto
-meta_desc: Deploy a container service on Azure with Pulumi, Azure Container Instances, and Azure Container Registry in TypeScript, Python, Go, C#, or HCL.
+meta_desc: Deploy a container service on Azure with Pulumi, Azure Container Instances, and Azure Container Registry in TypeScript, Python, Go, .NET, or HCL.
 meta_image: meta.png
 card_desc: Deploy a container service on Azure with Pulumi and Azure Container Instances.
 template:
