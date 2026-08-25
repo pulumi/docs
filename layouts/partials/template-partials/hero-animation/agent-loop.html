@@ -1,0 +1,61 @@
+{{/*
+    Animated homepage hero — the agentic loop, as a single GSAP-driven inline SVG.
+
+    The scene is authored in its FINISHED state (storyboard frame 7: the isometric
+    VPC diagram, both summary pills, the agent glyph at rest). That makes the
+    static markup the correct rendering for prefers-reduced-motion and for
+    no-JS readers (unhidden by the <noscript> below). When motion is welcome,
+    theme/src/ts/hero-animation.ts resets everything to the opening state and
+    plays the timeline.
+
+    Geometry throughout is lifted verbatim from the design's storyboard exports
+    (Figma "Storyboards R2", node 752:19223) on a 744x550 canvas. The scene is
+    hidden until the script takes over (`hal-pending`, see _hero-animation.scss)
+    so the finished frame never flashes before the animation starts.
+*/}}
+<div id="hero-agent-loop" class="hero-animation hal-pending" role="img" aria-label="An AI agent — Claude Code, Codex, Cursor, GitHub Copilot, Pulumi Neo, or opencode — takes the prompt “give me a VPC with a subnet in every AZ”, writes Pulumi code, CI checks pass, and a platform agent runs pulumi up under policy checks to create the AWS VPC across three availability zones.">
+    <svg viewBox="0 0 744 550" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        {{ partial "template-partials/hero-animation/_defs.html" . }}
+        <g class="hal-scene" font-family="Monaspace Neon Var, Monaspace Neon, monospace">
+            {{ partial "template-partials/hero-animation/_agents.html" . }}
+
+            {{/* Shell A: the one surface that morphs — Claude Code tile → code
+                 panel → CI summary pill. Authored at its final (pill) state;
+                 the fill surface and the violet "agent is working" stroke are
+                 only visible mid-story. */}}
+            <g data-shell-a>
+                <rect data-a-fill x="112" y="157" width="520" height="257" rx="16" fill="#DEDBFF" fill-opacity="0.25" opacity="0"/>
+                <rect data-a-stroke x="112.5" y="157.5" width="519" height="256" rx="15.5" stroke="#5A30C5" pathLength="1" opacity="0"/>
+                <rect data-a-outer x="104.5" y="479.5" width="535" height="42" rx="21" stroke="#DEDBFF"/>
+            </g>
+
+            {{ partial "template-partials/hero-animation/_editor.html" . }}
+
+            {{/* Shell B: the terminal — unfolds beneath the glyph for pulumi up,
+                 then rolls up into the policy summary pill. */}}
+            <g data-shell-b>
+                <rect data-b-fill x="112" y="157" width="520" height="257" rx="16" fill="#DEDBFF" fill-opacity="0.25" opacity="0"/>
+                <rect data-b-stroke x="112.5" y="157.5" width="519" height="256" rx="15.5" stroke="#5A30C5" pathLength="1" opacity="0"/>
+                <rect data-b-outer x="104.5" y="421.5" width="535" height="42" rx="21" stroke="#DEDBFF"/>
+            </g>
+
+            {{ partial "template-partials/hero-animation/_terminal.html" . }}
+            {{ partial "template-partials/hero-animation/_status.html" . }}
+            {{ partial "template-partials/hero-animation/_diagram.html" . }}
+
+            {{/* The protagonist: the Claude Code pixel-robot glyph. Authored at
+                 its code-panel position (y=100); the translate carries it to the
+                 finished-diagram position (y=30). The inner group is the idle
+                 float layer so ambient motion never fights position tweens. */}}
+            <g data-glyph transform="translate(0 -70)">
+                <g data-glyph-f>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M393.641 114.631H401.024V122.259H393.646V129.706H389.989V136.89H386.268V129.706H382.611V136.89H378.89V129.706H364.134V136.89H360.416V129.706H356.756V136.89H353.035V129.706H349.378V122.257H342V114.633H349.378V100H393.641V114.631ZM356.756 114.631H360.416V107.629H356.756V114.631ZM382.604 114.631H386.268V107.629H382.604V114.631Z" fill="#5A30C5"/>
+                </g>
+            </g>
+        </g>
+    </svg>
+    <noscript>
+        <style>#hero-agent-loop .hal-scene { visibility: visible; }</style>
+    </noscript>
+</div>
+<script src="/js/{{ index site.Data.js_manifest "hero-animation" }}" defer></script>

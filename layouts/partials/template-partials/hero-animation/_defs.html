@@ -1,0 +1,27 @@
+{{/*
+    Clip paths for the hero animation.
+
+    - hal-clip-panel: the code/terminal surface (both shells share the same
+      panel geometry, so one clip serves the editor and the terminal).
+    - hal-clip-above: everything above the panel top edge — used to reveal the
+      ROLE tab by sliding it up from behind the edge rather than fading it.
+    - hal-clip-prompt: typing reveal for the prompt pill text.
+    - hal-lcN: per-line typing reveal clips for the editor (width is animated;
+      authored at 0 so the finished frame shows no code).
+*/}}
+<defs>
+    <clipPath id="hal-clip-panel"><rect x="112" y="157" width="520" height="257" rx="16"/></clipPath>
+    <clipPath id="hal-clip-above"><rect x="0" y="0" width="744" height="149.74"/></clipPath>
+    <clipPath id="hal-clip-prompt"><rect data-prompt-clip x="213" y="112" width="0" height="26"/></clipPath>
+    <clipPath id="hal-lc0"><rect data-lc x="122" y="166" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc1"><rect data-lc x="122" y="184" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc2"><rect data-lc x="122" y="220" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc3"><rect data-lc x="122" y="238" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc4"><rect data-lc x="122" y="274" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc5"><rect data-lc x="122" y="292" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc6"><rect data-lc x="122" y="310" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc7"><rect data-lc x="122" y="328" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc8"><rect data-lc x="122" y="346" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc9"><rect data-lc x="122" y="364" width="0" height="20"/></clipPath>
+    <clipPath id="hal-lc10"><rect data-lc x="122" y="382" width="0" height="20"/></clipPath>
+</defs>

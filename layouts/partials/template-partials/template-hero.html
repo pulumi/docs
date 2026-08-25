@@ -47,7 +47,11 @@
     - cta_tertiary_text: Optional tertiary CTA button text.
     - cta_tertiary_link: Optional tertiary CTA button link.
 
-    Right-slot precedence: code_snippets > video_youtube_id > image.
+    Parameters — hero animation (split layout only):
+    - hero_animation: Name of a scene partial under template-partials/hero-animation/
+                      (e.g. "agent-loop"). Takes the right slot over everything else.
+
+    Right-slot precedence: hero_animation > code_snippets > video_youtube_id > image.
 */}}
 
 {{ $title := .title }}
@@ -75,6 +79,7 @@
 {{ $dateAndLocation := .date_and_location }}
 {{ $booth := .booth }}
 
+{{ $heroAnimation := .hero_animation }}
 {{ $codeSnippets := .code_snippets }}
 {{ $codeTitle := .code_title }}
 {{ $overlayImage := .code_overlay_image }}
@@ -146,7 +151,11 @@
             </div>
             {{ end }}
         </div>
-        {{ if $codeSnippets }}
+        {{ if $heroAnimation }}
+        <div class="xl:w-1/2 w-full flex justify-end">
+            {{ partial (printf "template-partials/hero-animation/%s.html" $heroAnimation) . }}
+        </div>
+        {{ else if $codeSnippets }}
         <div class="xl:w-1/2 w-full flex justify-end">
             {{ if or $codeAspectRatio $overlayImage }}
             <div class="hero-code-visual"{{ with $visualStyle }} style="{{ . | safeCSS }}"{{ end }}>

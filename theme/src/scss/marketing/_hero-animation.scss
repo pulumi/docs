@@ -1,0 +1,24 @@
+// Homepage animated hero (the agent-loop scene). Wrapper sizing and the
+// pre-animation guard only — the inline SVG carries all of its own paint as
+// presentation attributes, and theme/src/ts/hero-animation.ts drives the
+// motion (including the prefers-reduced-motion static fallback).
+
+.hero-animation {
+    width: 100%;
+    max-width: 744px;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+// The scene stays hidden until the script takes over, so the finished frame
+// never flashes before the animation resets to its opening state. The wrapper
+// keeps the SVG's intrinsic aspect ratio, so nothing shifts when it appears.
+// The script removes the class (or, for reduced motion, removes it without
+// animating); a <noscript> style in the partial unhides it for no-JS readers.
+.hero-animation.hal-pending .hal-scene {
+    visibility: hidden;
+}
