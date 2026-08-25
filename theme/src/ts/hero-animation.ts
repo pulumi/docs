@@ -354,7 +354,10 @@ function init(): void {
     tl.to(aOuter, { attr: { height: 310 }, duration: 0.45, ease: "power2.out" }, doneWriting + 0.05);
 
     const ciAt = doneWriting + 0.45; // ~7.15
-    tl.fromTo(ciPr, { autoAlpha: 0, x: -16 }, { autoAlpha: 1, x: 0, duration: 0.35, ease: "power2.out" }, ciAt);
+    // The PR icon rests 10px left of its export position (its authored
+    // translate) — GSAP's x is absolute over that, so the slide-in must land
+    // on -10, not 0.
+    tl.fromTo(ciPr, { autoAlpha: 0, x: -26 }, { autoAlpha: 1, x: -10, duration: 0.35, ease: "power2.out" }, ciAt);
     tl.to(ciSpins, { autoAlpha: 1, scale: 1, duration: 0.3, stagger: 0.06, ease: "back.out(1.7)" }, ciAt + 0.15);
 
     // -- Checks flip one by one, then the PR merges.
@@ -464,9 +467,11 @@ function init(): void {
     //    in flat, then the top face rises while the vertical edges stretch in
     //    lockstep (same ease, both linear in progress, so the corners stay
     //    joined through the overshoot). Each AZ label lands after its cube.
+    // DOM order is paint order (us-east-2b sits behind us-east-2a, so it comes
+    // first in the markup); data-order carries the left-to-right stagger.
     const cubesAt = plateAt + 0.6;
     cubes.forEach((cube, i) => {
-        const at = cubesAt + i * 0.15;
+        const at = cubesAt + parseInt(cube.getAttribute("data-order") || String(i), 10) * 0.15;
         tl.to(cube, { autoAlpha: 1, duration: 0.2 }, at);
         tl.to(qa(cube, "[data-cube-top]"), { y: 0, duration: 0.55, ease: "back.out(1.2)" }, at + 0.1);
         tl.to(qa(cube, "[data-cube-edge]"), { scaleY: 1, duration: 0.55, ease: "back.out(1.2)" }, at + 0.1);
