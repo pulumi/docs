@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
 import { getAIRedirectAndGoneAssociation, getEdgeRedirectAssociation } from "./cloudfrontLambdaAssociations";
-import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation } from "./cloudfrontFunctions";
+import { getMarkdownNegotiationFunctionAssociation, getMarketingMarkdownNegotiationFunctionAssociation, getApiCatalogContentTypeFunctionAssociation, getViewerIpFunctionAssociation } from "./cloudfrontFunctions";
 import { SupportFormApi } from "./supportForm";
 
 const stackConfig = new pulumi.Config();
@@ -979,9 +979,12 @@ if (config.enableSupportForm) {
         // stripping Host, which Function URL origins require.
         originRequestPolicyId: allViewerExceptHostHeaderId,
         responseHeadersPolicyId: ApiResponseHeadersPolicy.id,
-        // API traffic gets no edge redirects and no markdown negotiation.
+        // API traffic gets no edge redirects and no markdown negotiation. The one
+        // function it does carry stamps the viewer's IP as x-viewer-ip, which is
+        // the only way the handler can learn the submitter's address — see
+        // getViewerIpFunctionAssociation.
         lambdaFunctionAssociations: [],
-        functionAssociations: [],
+        functionAssociations: [getViewerIpFunctionAssociation()],
     });
 }
 

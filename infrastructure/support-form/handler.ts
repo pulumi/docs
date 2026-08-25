@@ -39,30 +39,39 @@ export interface FunctionUrlResult {
     body: string;
 }
 
+// Longest value accepted from x-viewer-ip. An IPv6 address with a zone index
+// fits comfortably; anything longer is not an address we stamped.
+const MAX_IP_LENGTH = 64;
+
 // The submitter's IP address, for the abuse trail in the logs below.
 //
 // requestContext.http.sourceIp is NOT it: CloudFront invokes the Function URL,
 // so that field is always the edge node's address (a 3.x CLOUDFRONT_ORIGIN_FACING
 // IP), identical in shape for every submission and useless for tracing anyone.
-// The viewer's address arrives in X-Forwarded-For instead, which reaches us
-// because the /api/support* behavior uses the AllViewerExceptHostHeader origin
-// request policy.
 //
-// Takes the LAST entry, not the conventional first. CloudFront *appends* the
-// viewer's address to whatever X-Forwarded-For the viewer already sent, so a
-// spammer who sets "X-Forwarded-For: 1.2.3.4" produces "1.2.3.4, <their real
-// IP>" at the origin. Reading the first entry would log the value they chose —
-// worse than logging the edge, because it looks authentic. The last entry is
-// the only one CloudFront itself observed.
+// X-Forwarded-For is not the answer either, and this is the trap worth naming.
+// CloudFront *appends* the viewer to whatever X-Forwarded-For the viewer already
+// sent, so the header is partly attacker-authored by the time it leaves the
+// edge; and Lambda Function URLs are documented to truncate it to the leftmost
+// value, which is precisely the part the attacker controls. Reading it would log
+// a forged address that looks authentic — worse than logging the edge.
+//
+// So the address is stamped at the edge instead: a CloudFront Function writes
+// event.viewer.ip (CloudFront's own view of the TCP peer, unforgeable, and
+// overwriting anything the client sent) into x-viewer-ip. See
+// getViewerIpFunctionAssociation in ../cloudfrontFunctions.ts.
+//
+// Trusting that header is only sound because the caller already proved it came
+// through our distribution: supportFormHandler rejects anything without the
+// x-origin-verify shared secret before this is ever called. On a direct Function
+// URL invocation there is no valid secret, so we never reach here — and the
+// requestContext fallback below is the honest AWS-supplied peer anyway.
 export function clientIp(event: FunctionUrlEvent): string | undefined {
-    const forwarded = event.headers?.["x-forwarded-for"];
-    if (forwarded) {
-        const entries = forwarded
-            .split(",")
-            .map(s => s.trim())
-            .filter(s => s.length > 0);
-        if (entries.length > 0) {
-            return entries[entries.length - 1];
+    const stamped = event.headers?.["x-viewer-ip"];
+    if (typeof stamped === "string") {
+        const value = stamped.trim();
+        if (value.length > 0 && value.length <= MAX_IP_LENGTH) {
+            return value;
         }
     }
     return event.requestContext?.http?.sourceIp;

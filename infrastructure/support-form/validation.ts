@@ -130,7 +130,7 @@ export function validateSubmission(input: unknown): ValidationResult {
         if (!name) {
             fields.name = "Enter your full name.";
         } else if (name.length > LIMITS.name) {
-            fields.name = `Keep your name under ${LIMITS.name} characters.`;
+            fields.name = `Keep your name to ${LIMITS.name} characters or fewer.`;
         }
     }
 
@@ -141,7 +141,7 @@ export function validateSubmission(input: unknown): ValidationResult {
         if (!organization) {
             fields.organization = "Enter your Pulumi organization name.";
         } else if (organization.length > LIMITS.organization) {
-            fields.organization = `Keep the organization name under ${LIMITS.organization} characters.`;
+            fields.organization = `Keep the organization name to ${LIMITS.organization} characters or fewer.`;
         } else if (!ORGANIZATION_PATTERN.test(organization)) {
             fields.organization =
                 "Enter just the organization name from https://app.pulumi.com/PULUMI_ORG_NAME " +
@@ -163,7 +163,7 @@ export function validateSubmission(input: unknown): ValidationResult {
         if (!subject) {
             fields.subject = "Enter a subject.";
         } else if (subject.length > LIMITS.subject) {
-            fields.subject = `Keep the subject under ${LIMITS.subject} characters.`;
+            fields.subject = `Keep the subject to ${LIMITS.subject} characters or fewer.`;
         }
     }
 
@@ -172,7 +172,7 @@ export function validateSubmission(input: unknown): ValidationResult {
         if (!description || description.length < LIMITS.descriptionMin) {
             fields.description = "Describe the issue in at least a few words.";
         } else if (description.length > LIMITS.description) {
-            fields.description = `Keep the description under ${LIMITS.description} characters.`;
+            fields.description = `Keep the description to ${LIMITS.description} characters or fewer.`;
         }
     }
 

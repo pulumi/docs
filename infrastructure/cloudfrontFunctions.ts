@@ -133,3 +133,40 @@ export function getApiCatalogContentTypeFunctionAssociation(): aws.types.input.c
         functionArn: apiCatalogContentTypeFunction.arn,
     };
 }
+
+// CloudFront Function that stamps the viewer's IP address onto the origin
+// request as x-viewer-ip, for the abuse trail the /api/support handler writes
+// to CloudWatch.
+//
+// Nothing else reaching the Lambda carries the submitter's address. The Function
+// URL's requestContext.http.sourceIp is the CloudFront edge node, because
+// CloudFront is what invokes it. X-Forwarded-For is not a safe substitute
+// either: CloudFront appends the viewer to whatever the viewer already sent, so
+// the header is partly attacker-authored by the time it leaves the edge, and
+// Lambda Function URLs are documented to truncate it besides.
+//
+// event.viewer.ip is CloudFront's own observation of the TCP peer, so a client
+// cannot forge it. The assignment OVERWRITES any x-viewer-ip the client tried to
+// send, which is what makes the header trustworthy at the origin — and the
+// handler only reads it after the x-origin-verify shared secret has already
+// established that the request came through this distribution.
+const viewerIpFunctionCode = `
+function handler(event) {
+    event.request.headers['x-viewer-ip'] = { value: event.viewer.ip };
+    return event.request;
+}
+`;
+
+const viewerIpFunction = new aws.cloudfront.Function("support-form-viewer-ip", {
+    runtime: "cloudfront-js-2.0",
+    code: viewerIpFunctionCode,
+    comment: "Stamps the viewer's IP as x-viewer-ip on /api/support origin requests.",
+    publish: true,
+});
+
+export function getViewerIpFunctionAssociation(): aws.types.input.cloudfront.DistributionDefaultCacheBehaviorFunctionAssociation {
+    return {
+        eventType: "viewer-request",
+        functionArn: viewerIpFunction.arn,
+    };
+}

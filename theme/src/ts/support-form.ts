@@ -27,12 +27,12 @@ const DRAFT_KEY = "pulumi-support-form-draft";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ORGANIZATION_PATTERN = /^[a-zA-Z0-9][a-zA-Z0-9-_]*$/;
+// Mirrors LIMITS.organization in infrastructure/support-form/validation.ts.
+// Duplicated rather than shared because the two live in different build
+// systems; the server is authoritative, so drift costs a round trip, not
+// correctness — except if this one is ever the SMALLER of the two, which would
+// hard-block a value the API would have accepted.
 const ORGANIZATION_MAX = 40;
-
-// The API's closed priority enum. Mirrors PRIORITIES in
-// infrastructure/support-form/validation.ts, and the option values the layout
-// renders from form.fields.priority.options in the page's front matter.
-const PRIORITIES = ["normal", "urgent"];
 
 // Field keys are the API payload keys; ids are the DOM ids in the layout.
 const FIELD_IDS: Record<string, string> = {
@@ -67,13 +67,21 @@ function normalizeOrganization(raw: string): string {
 // time — which is why both the draft restore and the ?priority= prefill used to
 // silently do nothing. Selects are matched against their own options instead,
 // which doubles as validation: a bogus value is ignored rather than blanking
-// the control. Returns whether the value was applied.
+// the control. Returns whether this call actually changed the control.
 function setControlValue(input: FormControl, value: string): boolean {
     if (input instanceof HTMLSelectElement) {
         if (!Array.from(input.options).some(option => option.value === value)) {
             return false;
         }
     } else if (input.value) {
+        return false;
+    }
+    // Reports false when the control already held this value, so a caller can
+    // tell "the user chose this" from "it was already the default". A <select>
+    // is always in the draft (it always has a value, so saveDraft always stores
+    // it), and treating that as a deliberate choice would let a stale default
+    // silently outrank an explicit ?priority= in the URL.
+    if (input.value === value) {
         return false;
     }
     input.value = value;
@@ -157,14 +165,27 @@ function init() {
             }
             const normalized = normalizeOrganization(value);
             if (normalized.length > ORGANIZATION_MAX) {
-                return `Keep the organization name under ${ORGANIZATION_MAX} characters.`;
+                return `Keep the organization name to ${ORGANIZATION_MAX} characters or fewer.`;
             }
             if (!ORGANIZATION_PATTERN.test(normalized)) {
                 return "Enter just the organization name from https://app.pulumi.com/PULUMI_ORG_NAME (letters, numbers, hyphens, and underscores).";
             }
             return null;
         },
-        priority: value => (PRIORITIES.indexOf(value) !== -1 ? null : "Choose a priority."),
+        // Checked against the options the layout actually rendered, rather than
+        // a hardcoded copy of the enum. A third place to keep in sync would go
+        // stale the first time someone adds a priority to the front matter, and
+        // the failure is nasty: the new option would be permanently
+        // unsubmittable with no server round trip to explain why.
+        priority: value => {
+            const select = control("priority");
+            if (!(select instanceof HTMLSelectElement)) {
+                return null;
+            }
+            return Array.from(select.options).some(option => option.value === value)
+                ? null
+                : "Choose a priority.";
+        },
         subject: value => (value ? null : "Enter a subject."),
         description: value =>
             value.length >= 10 ? null : "Describe the issue in at least a few words.",
@@ -242,8 +263,10 @@ function init() {
         }
     }
 
-    // Returns the fields it actually restored, so the query-param prefill below
-    // doesn't overwrite a recovered draft.
+    // Returns the fields the draft actually changed, so the query-param prefill
+    // below doesn't overwrite the user's own recovered work. A field whose draft
+    // value merely matched what was already there isn't in the set — that's a
+    // default, not a choice.
     function restoreDraft(): Set<string> {
         const restored = new Set<string>();
         try {
