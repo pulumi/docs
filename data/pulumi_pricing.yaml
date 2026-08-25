@@ -232,7 +232,7 @@ editions:
       features_intro: "Everything in **Pro**, plus:"
       features:
         - "[Self-hosting available](/product/self-hosted)"
-        - Conformance packs for NIST, PCI DSS, HITRUST, SOC 2, CIS, and more
+        - Conformance packs for NIST, PCI DSS, HITRUST, SOC 2, ISO 27001, CIS, and more
         - Automatic group & user sync (SCIM)
         - Unlimited custom policy packs
         - Policy remediation
@@ -619,9 +619,19 @@ categories:
         name: Pre-built policy packs
         link: /docs/insights/policy/policy-packs/pre-built-packs/
         availability:
-          essentials: Pulumi Best Practices
-          pro: Pulumi Best Practices
-          enterprise-plus: Pulumi Best Practices, CIS, NIST, HITRUST, PCI DSS
+          essentials: Pulumi Best Practices, AWS Organizations Tag Policies
+          pro: Pulumi Best Practices, AWS Organizations Tag Policies
+          enterprise-plus: Pulumi Best Practices, AWS Organizations Tag Policies, CIS, CIS Kubernetes, CMMC, NIST, HITRUST, PCI DSS, ISO 27001
+
+      # The compliance-framework packs (everything on the pre-built packs page
+      # except Pulumi Best Practices and AWS Organizations Tag Policies). Docs
+      # markers need a separate id because the pre-built-policy-packs row above
+      # resolves to Essentials.
+      - id: compliance-policy-packs
+        name: Compliance policy packs
+        link: /docs/insights/policy/policy-packs/pre-built-packs/
+        available_from: enterprise-plus
+        hidden: true
 
       - id: custom-policy-packs
         name: Custom policy packs

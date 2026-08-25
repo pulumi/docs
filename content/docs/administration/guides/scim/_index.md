@@ -74,6 +74,14 @@ For groups:
 
 These apply to every identity provider, regardless of which guide you follow.
 
+### Provisioned users are managed by your organization
+
+An account SCIM creates belongs to your organization, not to the person using it. Such an account can't join unrelated Pulumi organizations, connect additional identity providers, or create organizations of its own. See [Organization-managed users](/docs/administration/concepts/org-managed-users/) for the full set of restrictions.
+
+Existing accounts convert in one case only. Someone who already had a Pulumi account and joined your organization by invitation keeps an ordinary account when SCIM starts managing their membership. But the next time your identity provider activates or deactivates such a user, Pulumi checks whether the account can be converted cleanly, and converts it if so. Clean means the user's personal organization holds no stacks and no environments, and they belong to no Pulumi organization other than yours. An account that fails any of those checks stays ordinary, and the activation change applies as normal.
+
+The conversion is the same operation the user would perform themselves, minus the confirmation: it deletes their personal organization and every login method except your organization's single sign-on. Someone who signed in with GitHub or Google signs in through your identity provider from then on. See [Migrating an existing account](/docs/administration/concepts/org-managed-users/#migrating-an-existing-account).
+
 ### Deprovisioning never deletes a user
 
 Pulumi has no endpoint for deleting a user through SCIM. Deprovisioning sets `active` to `false`, which removes the user's access to the organization while preserving their account and its history, so the change is reversible by reactivating the user in your IdP. Configure your IdP to suspend or deactivate users rather than delete them.
@@ -106,6 +114,12 @@ A group search returns every team in your organization whose display name matche
 
 This matters because an identity provider that reconciles group state may treat a team it does not own as one to remove, and a delete request succeeds against any team in the organization. Scope reconciliation to the groups your identity provider provisions, or give SCIM-managed teams a distinct naming convention so the others are easy to exclude.
 {{% /notes %}}
+
+### Changing the identity provider revokes the SCIM token
+
+Your organization's SCIM access token is tied to its SAML configuration. If an admin switches the organization to a different [identity provider](/docs/administration/concepts/organizations/#changing-identity-providers), that configuration is discarded along with the SCIM token, the organization's SAML identities, and its SAML member roster.
+
+Switching back to SAML doesn't restore any of it. You have to issue a new SCIM token, point your identity provider at it, and re-provision your users.
 
 ## Next steps
 

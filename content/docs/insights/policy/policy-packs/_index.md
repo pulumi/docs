@@ -24,7 +24,7 @@ A pack does nothing on its own. To enforce it, add it to a [policy group](/docs/
 
 ## Types of policy packs
 
-- <a id="pre-built-policy-packs"></a>**[Pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/)** are written and maintained by Pulumi. They cover common compliance frameworks, including CIS, PCI DSS, HITRUST, and NIST, as well as security, cost, and operational best practices for AWS, Azure, and Google Cloud. You enable them from Pulumi Cloud without writing any code.
+- <a id="pre-built-policy-packs"></a>**[Pre-built policy packs](/docs/insights/policy/policy-packs/pre-built-packs/)** are written and maintained by Pulumi. They cover common compliance frameworks, including CIS, PCI DSS, HITRUST, NIST, and ISO 27001, as well as security, cost, and operational best practices for AWS, Azure, and Google Cloud. You enable them from Pulumi Cloud without writing any code. The Pulumi Best Practices and AWS Organizations Tag Policies packs are included in the Essentials edition and above; the compliance-framework packs require the [Enterprise+ edition](/pricing/#pre-built-policy-packs).
 
 - <a id="custom-policy-packs"></a>**[Custom policy packs](/docs/insights/policy/policy-packs/authoring/)** are the ones you write yourself, in TypeScript, Python, or [OPA (Rego)](/docs/insights/policy/policy-packs/authoring/#opa), to enforce requirements specific to your organization. You can test a custom pack locally with `pulumi preview --policy-pack` before publishing it to Pulumi Cloud.
 

@@ -86,6 +86,10 @@ To assign users or groups to the application, navigate to the **Users** tab in t
 
 ## Configuring your Pulumi organization
 
+{{% notes type="info" %}}
+{{< saml-conversion-prereq >}}
+{{% /notes %}}
+
 To configure Pulumi Cloud with details on your new OneLogin-based SAML application, you need to obtain
 the IdP metadata document from OneLogin and then provide it to Pulumi.
 
